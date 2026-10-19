@@ -40,7 +40,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Parquet lưu bảng dạng nhị phân cùng thông tin kiểu và tổ chức theo cột; bộ đọc có thể bỏ cột không dùng.</p>\n",
+          "html": "<p>Định dạng Parquet lưu trữ dữ liệu dạng nhị phân cùng thông tin kiểu và tổ chức theo cột, do đó bộ đọc có thể bỏ qua các cột không cần sử dụng.</p>\n",
           "explanationHtml": "<p>Phù hợp bảng trung gian. Kích thước/tốc độ còn phụ thuộc dữ liệu và cấu hình.</p>\n"
         },
         {
@@ -80,7 +80,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Requests ghép params vào URL; xem r.url và đối chiếu bảng tham số, không chỉ xem mã HTTP.</p>\n",
+          "html": "<p>Thư viện Requests ghép nối params vào URL, vì vậy cần kiểm tra <code>r.url</code> và đối chiếu với bảng tham số thay vì chỉ quan sát mã trạng thái HTTP.</p>\n",
           "explanationHtml": "<p>R.url cho địa chỉ đã gửi kèm tham số. Mô phỏng không chứng minh dịch vụ thật chấp nhận một tên mới.</p>\n"
         },
         {
@@ -96,7 +96,7 @@
       "id": "B6-004",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Mỗi hàng d là một listing; id chuỗi, gia float USD/đêm, np.nan là chưa có giá:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">80</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> id, gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">>=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 80</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">DESC</span></span></code></pre>\n</div><p>Các id theo thứ tự kết quả là gì?</p>\n",
+      "promptHtml": "<p>Mỗi hàng trong bảng d là một listing, trong đó id là chuỗi ký tự, gia có kiểu số thực tính theo USD/đêm, và giá trị np.nan thể hiện trường hợp chưa có giá:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">80</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> id, gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">>=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 80</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">DESC</span></span></code></pre>\n</div><p>Các id theo thứ tự kết quả là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -130,7 +130,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>In DataFrame,4,1; mỗi listing vẫn một hàng.</p>\n",
+          "html": "<p>In ra DataFrame kích thước (4, 1), trong đó mỗi listing vẫn chiếm một hàng riêng biệt.</p>\n",
           "explanationHtml": "<p>Phương án này nhầm lẫn số hàng nguồn với số hàng kết quả COUNT tổng hợp.</p>\n"
         },
         {
@@ -140,7 +140,7 @@
         },
         {
           "key": "C",
-          "html": "<p>In DataFrame,1,4; DuckDB truy vấn biến d, bảng trả về có một hàng tổng hợp.</p>\n",
+          "html": "<p>In ra DataFrame kích thước (1, 4) do DuckDB truy vấn trực tiếp biến d và bảng trả về có một hàng tổng hợp.</p>\n",
           "explanationHtml": "<p>DuckDB chạy cùng chương trình trong ví dụ, không cần dựng máy chủ riêng. .df() trả <code>DataFrame</code>.</p>\n"
         },
         {
@@ -160,22 +160,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>0 ô thiếu; id đầu là 001.</p>\n",
+          "html": "<p>Gồm 0 ô khuyết thiếu, và mã định danh đầu tiên là <code>'001'</code>.</p>\n",
           "explanationHtml": "<p>Phương án này ngộ nhận rằng dtype str đồng thời tắt nhận diện giá trị thiếu.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>3 ô thiếu; id đầu thành số 1.</p>\n",
+          "html": "<p>Gồm 3 ô khuyết thiếu, và mã định danh đầu tiên bị biến thành số <code>1</code>.</p>\n",
           "explanationHtml": "<p>Phương án này bỏ qua dtype id đã được khai báo.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>3 ô thiếu; id đầu vẫn là chuỗi 001.</p>\n",
+          "html": "<p>Gồm 3 ô khuyết thiếu, và mã định danh đầu tiên vẫn giữ nguyên là chuỗi <code>'001'</code>.</p>\n",
           "explanationHtml": "<p>Dtype chuỗi bảo vệ mã id nhưng không tắt danh sách nhận diện NA,N/A,null mặc định.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>1 ô thiếu; chỉ null mới được nhận diện.</p>\n",
+          "html": "<p>Gồm 1 ô khuyết thiếu vì chỉ có giá trị <code>null</code> mới được nhận diện.</p>\n",
           "explanationHtml": "<p>Phương án này bỏ quên NA,N/A cũng thuộc các dấu hiệu thiếu mặc định trong câu.</p>\n"
         }
       ],
@@ -205,7 +205,7 @@
         },
         {
           "key": "D",
-          "html": "<p>In dict rồi raise_for_status gây HTTPError; không in xong.</p>\n",
+          "html": "<p>In ra từ điển rồi lệnh <code>raise_for_status()</code> phát sinh lỗi <code>HTTPError</code>, khiến chương trình không thể in xong.</p>\n",
           "explanationHtml": "<p>JSON lỗi vẫn giải mã được. Mã 400 vẫn là lỗi HTTP. Nên kiểm HTTP trước xử lý dữ liệu.</p>\n"
         }
       ],
@@ -243,7 +243,7 @@
       "id": "B6-MR01",
       "kind": "quiz",
       "group": "extension",
-      "promptHtml": "<p>File gia.csv có 7 listing, một dòng tiêu đề; không có dòng trống bị bỏ. Xét:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">doc </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.read_csv(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia.csv'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">usecols</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">chunksize</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">3</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div><p>Nếu duyệt doc lần lượt, số hàng của các khối là gì?</p>\n",
+      "promptHtml": "<p>Tệp tin gia.csv gồm 7 listing và một dòng tiêu đề, đồng thời không có dòng trống nào bị bỏ qua. Xét:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">doc </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.read_csv(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia.csv'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">usecols</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">chunksize</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">3</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div><p>Nếu duyệt doc lần lượt, số hàng của các khối là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -257,7 +257,7 @@
         },
         {
           "key": "C",
-          "html": "<p>3,3,1; doc là trình đọc từng khối, không phải một DataFrame 7 hàng đã nạp xong.</p>\n",
+          "html": "<p>Kích thước các khối là 3, 3, 1 do <code>doc</code> là một trình đọc lặp từng khối (chunk reader) chứ không phải một DataFrame 7 hàng đã nạp xong vào bộ nhớ.</p>\n",
           "explanationHtml": "<p>Chunksize giới hạn số hàng mỗi khối, khối cuối có thể ngắn hơn. Không gom các khối thì không cần giữ toàn bảng.</p>\n"
         },
         {
@@ -273,7 +273,7 @@
       "id": "B6-MR02",
       "kind": "quiz",
       "group": "extension",
-      "promptHtml": "<p>Đọc cùng một file theo hai khối. Khối 1 có một giá biết 10 và hai giá thiếu; khối 2 có ba giá biết 30,40,50. Mỗi hàng là một listing, USD/đêm. Mean của toàn bộ giá đã biết là bao nhiêu?</p>\n",
+      "promptHtml": "<p>Đọc cùng một tệp tin theo hai khối: Khối 1 có một mức giá đã biết bằng 10 và hai giá trị thiếu, trong khi khối 2 có ba mức giá đã biết lần lượt là 30, 40, 50. Mỗi hàng đại diện cho một listing tính theo USD/đêm. Giá trị mean của toàn bộ các mức giá đã biết là bao nhiêu?</p>\n",
       "options": [
         {
           "key": "A",
@@ -337,7 +337,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>r có shape (4,2), giữ mã 001, giá 0 và một giá thiếu; cần kiểm cả kiểu logic và giá trị.</p>\n",
+          "html": "<p>Bảng r có kích thước (4, 2), giữ lại mã định danh <code>001</code>, giá trị 0 và một giá trị thiếu, do đó cần kiểm tra cả kiểu dữ liệu logic lẫn giá trị thực tế.</p>\n",
           "explanationHtml": "<p>Parquet lưu schema của d. Kiểm round-trip trên môi trường đang dùng, không suy mọi backend phải có cùng biểu diễn chuỗi.</p>\n"
         },
         {
@@ -363,7 +363,7 @@
       "id": "B6-013",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bảng mô tả trong đề: <code>start_date</code>/end_date giới hạn khoảng ngày lịch sử; daily chọn đại lượng. Người phân tích muốn 01–03/02/2025, nhưng r.url ghi:</p>\n<div class=\"language-text vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">text</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span>https://example.test/archive?start_date=2025-01-01&#x26;end_date=2025-01-03&#x26;daily=temperature_2m_max</span></span></code></pre>\n</div><p>HTTP 200; phản hồi daily có ba ngày tháng 1. Kết luận nào đúng?</p>\n",
+      "promptHtml": "<p>Bảng mô tả trong đề: <code>start_date</code> và end_date giới hạn khoảng ngày lịch sử, còn daily chọn đại lượng. Người phân tích muốn 01–03/02/2025, nhưng r.url ghi:</p>\n<div class=\"language-text vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">text</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span>https://example.test/archive?start_date=2025-01-01&#x26;end_date=2025-01-03&#x26;daily=temperature_2m_max</span></span></code></pre>\n</div><p>Mã phản hồi HTTP 200 và nhánh daily có ba ngày tháng 1. Kết luận nào sau đây là đúng?</p>\n",
       "options": [
         {
           "key": "A",
@@ -382,7 +382,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Yêu cầu gửi đi dùng sai tháng; phải sửa params và kiểm ngày phản hồi, không lấy ba hàng làm bằng chứng đúng khoảng.</p>\n",
+          "html": "<p>Yêu cầu gửi đi đã dùng sai tháng, vì vậy phải sửa lại tham số params và kiểm tra ngày trong phản hồi thay vì chỉ lấy ba hàng làm bằng chứng cho khoảng thời gian đúng.</p>\n",
           "explanationHtml": "<p>URL và nhánh daily cùng cho thấy tháng 1, khác mục tiêu tháng 2 dù số ngày bằng nhau.</p>\n"
         }
       ],
@@ -393,7 +393,7 @@
       "id": "B6-014",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Mỗi hàng d là một listing; gia float USD/đêm:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> id </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">IS NOT NULL</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> id;</span></span></code></pre>\n</div><p>Kết quả chứa id nào?</p>\n",
+      "promptHtml": "<p>Mỗi hàng trong bảng d là một listing, và mức giá gia được tính bằng USD/đêm:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> id </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">IS NOT NULL</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> id;</span></span></code></pre>\n</div><p>Kết quả chứa id nào?</p>\n",
       "options": [
         {
           "key": "A",
@@ -423,7 +423,7 @@
       "id": "B6-015",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bảng l mỗi hàng là một listing; bảng t mỗi hàng là một mức phí theo mã khu (mã khu có thể lặp). Các khóa đều chuỗi, không thiếu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">8</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">3</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">phi</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">LEFT JOIN</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ON</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">khu</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">khu</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">;</span></span></code></pre>\n</div><p>Kết quả có bao nhiêu hàng?</p>\n",
+      "promptHtml": "<p>Mỗi hàng của bảng l là một listing, còn mỗi hàng của bảng t là một mức phí theo mã khu vực (mã khu có thể lặp lại). Các khóa định danh đều ở dạng chuỗi và không bị khuyết thiếu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">8</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">3</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">phi</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">LEFT JOIN</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ON</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">khu</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">khu</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">;</span></span></code></pre>\n</div><p>Kết quả có bao nhiêu hàng?</p>\n",
       "options": [
         {
           "key": "A",
@@ -462,7 +462,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Đọc có thể dừng với ValueError khi ép ? sang float64; cần khai báo na_values cho gia.</p>\n",
+          "html": "<p>Quá trình đọc có thể dừng lại với ngoại lệ <code>ValueError</code> khi cố gắng ép ký tự <code>?</code> sang kiểu <code>float64</code>, do đó cần khai báo tham số <code>na_values</code> cho cột gia.</p>\n",
           "explanationHtml": "<p>Dtype yêu cầu kiểu, không định nghĩa dấu hiệu thiếu mới. Dtype id chuỗi chỉ giữ mã.</p>\n"
         },
         {
@@ -559,7 +559,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Đọc cùng hai cột, kiểm kết quả tương đương, đo lặp và nêu môi trường/cache; đo riêng file trên đĩa và RAM của bảng.</p>\n",
+          "html": "<p>Đọc cùng hai cột, kiểm tra kết quả tương đương, thực hiện đo lặp nhiều lần và ghi rõ môi trường bộ nhớ đệm, đồng thời đo lường riêng biệt kích thước tệp trên đĩa và dung lượng RAM của bảng.</p>\n",
           "explanationHtml": "<p>Giữ cùng công việc và tách ba đại lượng, không suy tỷ lệ từ một lần đo.</p>\n"
         }
       ],
@@ -593,7 +593,7 @@
         },
         {
           "key": "C",
-          "html": "<p>d có 6 hàng và 2 cột; CSV vẫn cần quét/phân tích văn bản, không bảo đảm thời gian còn đúng 2/5.</p>\n",
+          "html": "<p>Bảng d có 6 hàng và 2 cột, nhưng định dạng CSV vẫn cần quét và phân tích văn bản toàn bộ nên không bảo đảm thời gian chạy sẽ giảm còn đúng 2/5.</p>\n",
           "explanationHtml": "<p>Usecols chọn cột đưa vào <code>DataFrame</code>, không lọc hàng hay cam kết tỷ lệ thời gian.</p>\n"
         },
         {
@@ -609,7 +609,7 @@
       "id": "B6-022",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một CSV có id 001 và 01 là hai mã khác nhau. Đọc mặc định làm cả hai thành số 1; sau đó ghi Parquet. Kiểm tra r['id'].dtype là kiểu số và len(r)==2 đều đạt khi đọc lại. Kết luận nào đúng?</p>\n",
+      "promptHtml": "<p>Một tệp CSV chứa hai mã định danh khác nhau là <code>001</code> và <code>01</code>. Việc đọc mặc định làm cả hai bị chuyển thành số 1, sau đó dữ liệu được ghi ra định dạng Parquet. Các phép kiểm tra <code>r['id'].dtype</code> là kiểu số và <code>len(r) == 2</code> đều vượt qua khi đọc lại. Nhận định nào sau đây là đúng?</p>\n",
       "options": [
         {
           "key": "A",
@@ -618,7 +618,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Hai kiểm tra chưa phát hiện hai mã đã bị nhập nhằng; phải đối chiếu mã raw và đọc lại đúng schema.</p>\n",
+          "html": "<p>Hai phép kiểm tra chưa thể phát hiện hiện tượng hai mã định danh bị nhập nhằng, vì vậy bắt buộc phải đối chiếu với mã nguồn ban đầu và đọc lại với đúng cấu trúc schema.</p>\n",
           "explanationHtml": "<p>Parquet giữ hai giá trị số 1. Kiểm số hàng/kiểu số không chứng minh giữ đúng khóa định danh.</p>\n"
         },
         {
@@ -639,7 +639,7 @@
       "id": "B6-023",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Cho phản hồi JSON dưới đây; HTTP 200:</p>\n<div class=\"language-json vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">json</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">{</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"timezone\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"America/Santiago\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"daily_units\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:{</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"temperature_2m_max\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"°C\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">},</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> \"daily\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:{</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"time\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"2025-01-01\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"2025-01-02\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"2025-01-03\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">          \"temperature_2m_max\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">30</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">32</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">35</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]}}</span></span></code></pre>\n</div><p>Sau x=r.json(), cách hiểu nào đúng để mỗi hàng bảng là một ngày?</p>\n",
+      "promptHtml": "<p>Cho phản hồi JSON dưới đây với mã trạng thái HTTP 200:</p>\n<div class=\"language-json vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">json</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">{</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"timezone\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"America/Santiago\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"daily_units\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:{</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"temperature_2m_max\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"°C\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">},</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> \"daily\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:{</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">\"time\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"2025-01-01\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"2025-01-02\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"2025-01-03\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">          \"temperature_2m_max\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">30</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">32</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">35</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]}}</span></span></code></pre>\n</div><p>Sau x=r.json(), cách hiểu nào đúng để mỗi hàng bảng là một ngày?</p>\n",
       "options": [
         {
           "key": "A",
@@ -653,7 +653,7 @@
         },
         {
           "key": "C",
-          "html": "<p>x là dict; x[&quot;daily&quot;][&quot;time&quot;] là list; pd.DataFrame(x[&quot;daily&quot;]) tạo bảng 3 hàng,2 cột.</p>\n",
+          "html": "<p>Biến x là dict, <code>x[\"daily\"][\"time\"]</code> là một danh sách, và <code>pd.DataFrame(x[\"daily\"])</code> tạo ra bảng dữ liệu gồm 3 hàng và 2 cột.</p>\n",
           "explanationHtml": "<p>Object thành dict, array thành list. Nhánh daily chứa các dãy quan sát theo ngày.</p>\n"
         },
         {
@@ -669,7 +669,7 @@
       "id": "B6-024",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Mỗi hàng d là một listing; gia float USD/đêm:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">70</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">90</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6A737D;--shiki-dark:#6A737D\">-- Q1</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">AVG</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(gia) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> tb </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">>=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> GROUP BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu;</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#6A737D;--shiki-dark:#6A737D\">-- Q2</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">AVG</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(gia) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> tb </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">GROUP BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">HAVING</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> AVG</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(gia)</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">>=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu;</span></span></code></pre>\n</div><p>Hai bảng kết quả là gì?</p>\n",
+      "promptHtml": "<p>Mỗi hàng trong bảng d là một listing, và mức giá gia tính bằng USD/đêm:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">70</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">90</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6A737D;--shiki-dark:#6A737D\">-- Q1</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">AVG</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(gia) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> tb </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> gia</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">>=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> GROUP BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu;</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#6A737D;--shiki-dark:#6A737D\">-- Q2</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">AVG</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(gia) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> tb </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">GROUP BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">HAVING</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> AVG</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(gia)</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">>=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> ORDER BY</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> khu;</span></span></code></pre>\n</div><p>Hai bảng kết quả là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -683,12 +683,12 @@
         },
         {
           "key": "C",
-          "html": "<p>Q1 A:100,B:80; Q2 chỉ B:80.</p>\n",
+          "html": "<p>Truy vấn Q1 cho kết quả A: 100, B: 80, còn Q2 chỉ cho kết quả B: 80.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do dùng &gt;60 thay &gt;=60 ở HAVING nên loại nhầm A.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Q1 A:100,B:80; Q2 A:60,B:80.</p>\n",
+          "html": "<p>Truy vấn Q1 cho kết quả A: 100, B: 80, còn Q2 cho kết quả A: 60, B: 80.</p>\n",
           "explanationHtml": "<p>Q1 bỏ giá 20 trước <code>mean</code>. Q2 tính <code>mean</code> A=(20+100)/2 rồi giữ A ở biên 60.</p>\n"
         }
       ],
@@ -699,7 +699,7 @@
       "id": "B6-025",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>l có một hàng mỗi listing, t có tối đa một hàng mỗi id; khóa chuỗi, không thiếu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">LEFT JOIN</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ON</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">phi</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">&#x3C;=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> ORDER BY</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">;</span></span></code></pre>\n</div><p>Những listing nào còn lại?</p>\n",
+      "promptHtml": "<p>Bảng l có một hàng cho mỗi listing, bảng t có tối đa một hàng cho mỗi id, và các khóa định danh đều là chuỗi ký tự không bị khuyết thiếu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">LEFT JOIN</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ON</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">WHERE</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">phi</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">&#x3C;=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> ORDER BY</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">;</span></span></code></pre>\n</div><p>Những listing nào còn lại?</p>\n",
       "options": [
         {
           "key": "A",
@@ -759,7 +759,7 @@
       "id": "B6-027",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>HTTP 200, nhánh daily có bốn ngày; daily_units ghi temperature_2m_max là °F:</p>\n<div class=\"language-text vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">text</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span>ngày:   01/01,02/01,03/01,04/01 năm 2025</span></span>\n<span class=\"line\"><span>giá trị: 95,   86,  104,   68</span></span></code></pre>\n</div><p>Đề cho °C=(°F-32)*5/9. Muốn lấy ngày nhiệt độ từ 35°C trở lên, chọn ngày nào?</p>\n",
+      "promptHtml": "<p>Mã phản hồi HTTP 200, nhánh daily gồm bốn ngày, và trường daily_units ghi nhận đơn vị của temperature_2m_max là °F:</p>\n<div class=\"language-text vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">text</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span>ngày:   01/01,02/01,03/01,04/01 năm 2025</span></span>\n<span class=\"line\"><span>giá trị: 95,   86,  104,   68</span></span></code></pre>\n</div><p>Đề cho °C=(°F-32)*5/9. Muốn lấy ngày nhiệt độ từ 35°C trở lên, chọn ngày nào?</p>\n",
       "options": [
         {
           "key": "A",
@@ -835,7 +835,7 @@
         },
         {
           "key": "D",
-          "html": "<p>p biểu diễn kế hoạch truy vấn; muốn lấy mean phải chạy truy vấn SELECT không có EXPLAIN.</p>\n",
+          "html": "<p>Biến p chỉ biểu diễn kế hoạch thực thi truy vấn, vì vậy nếu muốn lấy giá trị mean thì bắt buộc phải chạy câu lệnh SELECT mà không có từ khóa EXPLAIN.</p>\n",
           "explanationHtml": "<p>EXPLAIN cho biết cách thực hiện dự kiến, không phải bảng thống kê kết quả và không tự là phép đo tốc độ.</p>\n"
         }
       ],
@@ -855,7 +855,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Lấy key từ biến môi trường hoặc Colab Secrets; không chèn key thật vào notebook, prompt hay nội dung chia sẻ.</p>\n",
+          "html": "<p>Lấy khóa API từ biến môi trường hoặc Colab Secrets, tuyệt đối không chèn trực tiếp khóa thật vào notebook, câu lệnh prompt hay nội dung chia sẻ.</p>\n",
           "explanationHtml": "<p>Tách bí mật khỏi mã và chỉ gửi theo cách tài liệu dịch vụ yêu cầu.</p>\n"
         },
         {
@@ -915,12 +915,12 @@
         },
         {
           "key": "B",
-          "html": "<p>d có shape (4,2), giữ id đầu 001; tổ chức theo cột cho phép bộ đọc bỏ khu và host_id.</p>\n",
+          "html": "<p>Bảng d có kích thước (4, 2) và giữ mã đầu tiên là <code>001</code> do cơ chế tổ chức theo cột cho phép bộ đọc bỏ qua cột khu và host_id.</p>\n",
           "explanationHtml": "<p>Columns chọn cột. Không phải yêu cầu chỉ giữ hàng có giá biết.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>d có shape (4,4); hai cột bị bỏ được điền NULL.</p>\n",
+          "html": "<p>Bảng d có kích thước (4, 4), trong đó hai cột bị bỏ qua được điền bằng giá trị NULL.</p>\n",
           "explanationHtml": "<p>Phương án này đọc chọn cột không tạo lại cột không chọn.</p>\n"
         },
         {
@@ -936,7 +936,7 @@
       "id": "B6-033",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Đề cung cấp bảng mô tả dịch vụ: /forecast trả dự báo tính từ thời điểm gọi; /archive nhận start_date,end_date để lấy dữ liệu lịch sử. Hai endpoint nhận latitude,longitude,daily,timezone. Cần nhiệt độ cực đại ngày tại vị trí (vĩ độ -33.45,kinh độ -70.67), 01–03/01/2025, theo ngày địa phương America/Santiago. Lựa chọn nào đúng mục tiêu?</p>\n",
+      "promptHtml": "<p>Bảng mô tả dịch vụ cung cấp: Endpoint <code>/forecast</code> trả về dự báo thời tiết tính từ thời điểm gọi, còn <code>/archive</code> tiếp nhận <code>start_date</code> và <code>end_date</code> để truy xuất dữ liệu lịch sử. Cả hai endpoint đều tiếp nhận các tham số latitude, longitude, daily và timezone. Yêu cầu đặt ra là cần lấy nhiệt độ cực đại hàng ngày tại vị trí (vĩ độ -33.45, kinh độ -70.67) từ ngày 01 đến 03/01/2025 theo múi giờ địa phương America/Santiago. Lựa chọn nào sau đây đáp ứng đúng mục tiêu?</p>\n",
       "options": [
         {
           "key": "A",
@@ -945,7 +945,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Dùng /forecast với forecast_days=3; ba ngày luôn tương đương ba ngày quá khứ đã yêu cầu.</p>\n",
+          "html": "<p>Sử dụng endpoint <code>/forecast</code> với tham số <code>forecast_days=3</code>, vì ba ngày dự báo luôn được giả định tương đương với ba ngày quá khứ đã yêu cầu.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do số ngày bằng nhau không làm dự báo thành dữ liệu lịch sử.</p>\n"
         },
         {
@@ -996,7 +996,7 @@
       "id": "B6-035",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Mỗi hàng l là một listing. Bảng h có một hàng mỗi bản ghi host nhưng host_id H1 bị lặp; các khóa chuỗi không thiếu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host_id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H2'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H3'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">h </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host_id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H2'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'nhom'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'nho'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'lon'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'nho'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span></code></pre>\n</div><p>Sau LEFT JOIN theo host_id, người học đếm COUNT(*)=6 rồi báo “có 6 listing”. Nhận định nào đúng?</p>\n",
+      "promptHtml": "<p>Mỗi hàng của bảng l là một listing. Bảng h có một hàng cho mỗi bản ghi host nhưng mã host_id H1 bị lặp lại, trong đó các khóa chuỗi không bị khuyết thiếu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host_id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H2'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H3'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">h </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host_id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H2'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'nhom'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'nho'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'lon'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'nho'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span></code></pre>\n</div><p>Sau LEFT JOIN theo host_id, người học đếm COUNT(*)=6 rồi báo “có 6 listing”. Nhận định nào đúng?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1005,7 +1005,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Có 6 hàng ghép nhưng chỉ 4 listing nguồn; H1 tạo hai đối ứng cho mỗi A,B nên phép đếm bị nhân.</p>\n",
+          "html": "<p>Bảng ghép gồm 6 hàng nhưng thực tế chỉ có 4 listing nguồn, do mã H1 tạo ra hai bản ghi đối ứng cho mỗi mã A và B khiến phép đếm bị nhân đôi.</p>\n",
           "explanationHtml": "<p>Hai cặp cho A, hai cho B, một cho C và một hàng không khớp cho D. Cần kiểm khóa host trước diễn giải.</p>\n"
         },
         {
@@ -1040,7 +1040,7 @@
         },
         {
           "key": "C",
-          "html": "<p>ValueError vì hai danh sách trong daily khác độ dài; 200 không bảo đảm nhánh dữ liệu tạo bảng được.</p>\n",
+          "html": "<p>Phát sinh ngoại lệ <code>ValueError</code> do hai danh sách trong nhánh daily có độ dài khác nhau, bởi vì mã trạng thái 200 không bảo đảm các nhánh dữ liệu có thể ghép thành bảng hợp lệ.</p>\n",
           "explanationHtml": "<p><code>DataFrame</code> từ dict các list yêu cầu số phần tử tương ứng. Không tự quyết ngày nào thiếu.</p>\n"
         },
         {
@@ -1117,7 +1117,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Kiểm hạn mức/hướng dẫn dịch vụ, dừng gửi dồn và chờ/thử lại theo hướng dẫn; không có thời gian nghỉ chung cho mọi API.</p>\n",
+          "html": "<p>Kiểm tra hạn mức và hướng dẫn dịch vụ, dừng việc gửi yêu cầu dồn dập và thực hiện cơ chế chờ hoặc thử lại theo đúng tài liệu, vì không có khoảng thời gian nghỉ chung cố định cho mọi API.</p>\n",
           "explanationHtml": "<p>429 liên quan giới hạn truy cập. Cách xử lý phụ thuộc dịch vụ và thông tin được cung cấp.</p>\n"
         },
         {
@@ -1156,7 +1156,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Bảng nhận có 8 hàng,3 cột; pandas có thể nhận nén từ đuôi .gz, vẫn có chi phí giải nén và phân tích CSV.</p>\n",
+          "html": "<p>Bảng nhận được gồm 8 hàng và 3 cột do pandas có thể nhận diện dạng nén từ phần mở rộng <code>.gz</code>, tuy nhiên vẫn phải chịu chi phí giải nén và phân tích cấu trúc CSV.</p>\n",
           "explanationHtml": "<p>Ít cột có thể giảm RAM bảng nhưng không chứng minh thời gian hoặc kích thước file giảm còn 3/20.</p>\n"
         },
         {
@@ -1196,7 +1196,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Giữ snapshot raw gốc, ghi bảng đúng schema vào processed Parquet và kiểm đọc lại; chọn cột khi đọc theo nhu cầu.</p>\n",
+          "html": "<p>Lưu giữ bản chụp (snapshot) dữ liệu thô gốc, ghi bảng với schema chuẩn xác vào tệp Parquet đã qua xử lý rồi kiểm tra đọc lại, đồng thời chỉ chọn lọc các cột cần thiết khi đọc dữ liệu.</p>\n",
           "explanationHtml": "<p>Raw giữ bằng chứng đầu vào, processed phục vụ phân tích. Lợi ích cột không là cam kết mọi file nhỏ/nhanh hơn.</p>\n"
         },
         {
@@ -1216,7 +1216,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Bảng vẫn có 3 hàng nhưng gán sai ngày: 01/01 nhận 40 thay vì 20; phải tạo bảng trước rồi sắp cả hàng.</p>\n",
+          "html": "<p>Bảng vẫn có 3 hàng nhưng bị gán sai ngày quan sát (ngày 01/01 nhận giá trị 40 thay vì 20), do đó cần tạo bảng hoàn chỉnh trước khi sắp xếp lại toàn bộ các hàng.</p>\n",
           "explanationHtml": "<p>Các list ghép theo vị trí, không tự khớp nhiệt độ theo giá trị ngày.</p>\n"
         },
         {
@@ -1272,7 +1272,7 @@
       "id": "B6-045",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>l mỗi hàng một listing. t mỗi hàng một ghi nhận phí; rid là khóa chuỗi không NULL của ghi nhận, phi có thể thiếu. Các id ghép là chuỗi:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'rid'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'r1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'r2'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'r3'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">7</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> COUNT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">*</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> a,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">COUNT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">rid</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> b,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">COUNT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">phi</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> c</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">LEFT JOIN</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ON</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">;</span></span></code></pre>\n</div><p>(a,b,c) là gì?</p>\n",
+      "promptHtml": "<p>Bảng l có mỗi hàng là một listing. Bảng t có mỗi hàng là một lần ghi nhận phí, trong đó rid là khóa chuỗi không NULL của bản ghi và phi có thể bị khuyết thiếu. Các mã id dùng để ghép nối đều là chuỗi ký tự:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'D'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'rid'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'r1'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'r2'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'r3'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">7</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span></code></pre>\n</div><div class=\"language-sql vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">sql</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">SELECT</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> COUNT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">*</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> a,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">COUNT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">rid</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> b,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">COUNT</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">phi</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">) </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">AS</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> c</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">FROM</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> l </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">LEFT JOIN</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">ON</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> l</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">t</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">id</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">;</span></span></code></pre>\n</div><p>(a,b,c) là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1302,16 +1302,16 @@
       "id": "B6-046",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Mỗi hàng d là một listing. Dữ liệu khu A có gia [20,100,NaN]; khu B có [70,90]; gia float USD/đêm. Cần “khu có ít nhất hai listing với giá từ 60, cùng mean của chính các giá đạt ngưỡng”. Cách nào đúng?</p>\n",
+      "promptHtml": "<p>Mỗi hàng trong bảng d là một listing. Dữ liệu khu A có giá gồm <code>[20, 100, NaN]</code>, khu B có <code>[70, 90]</code>, và giá gia là số thực tính theo USD/đêm. Yêu cầu bài toán cần tìm: “Khu vực có ít nhất hai listing với mức giá từ 60 trở lên, cùng với giá trị mean của chính các mức giá thỏa mãn ngưỡng đó”. Cách thực hiện nào sau đây là chính xác?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Không WHERE; HAVING AVG(gia)&gt;=60 AND COUNT(*)&gt;=2.</p>\n",
+          "html": "<p>Không sử dụng mệnh đề WHERE, mà dùng <code>HAVING AVG(gia) &gt;= 60 AND COUNT(*) &gt;= 2</code>.</p>\n",
           "explanationHtml": "<p>Phương án này thay đổi câu hỏi sang <code>mean</code> nhóm và tổng hàng, giữ cả A dù chỉ một giá đạt ngưỡng.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Không WHERE; HAVING COUNT(gia)&gt;=2, vì mọi giá biết đều đạt 60.</p>\n",
+          "html": "<p>Không sử dụng mệnh đề WHERE, mà dùng <code>HAVING COUNT(gia) &gt;= 2</code> vì mọi mức giá đã biết đều đạt từ 60 trở lên.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do giá biết không đồng nghĩa giá đạt ngưỡng. A có 20 biết nhưng không đạt.</p>\n"
         },
         {
@@ -1372,7 +1372,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Phần quét Parquet cần cột gia cho phép tổng hợp; không cần đọc các cột id,khu,host_id để tính biểu thức này.</p>\n",
+          "html": "<p>Thao tác quét tệp Parquet chỉ cần đọc cột gia phục vụ tổng hợp dữ liệu, không cần nạp các cột id, khu hay host_id để tính toán biểu thức này.</p>\n",
           "explanationHtml": "<p>Nhận diện lựa chọn cột, không suy toàn bộ định dạng plan hay cam kết thời gian.</p>\n"
         },
         {
@@ -1416,7 +1416,7 @@
         },
         {
           "key": "B",
-          "html": "<p>pandas nhận nén từ tên .gz; cột listing_id giữ 001,001,002,003 và vẫn là mã, không phải số review.</p>\n",
+          "html": "<p>Thư viện pandas nhận diện định dạng nén từ tên tệp <code>.gz</code>, cột listing_id giữ lại đầy đủ các chuỗi <code>001, 001, 002, 003</code> và vẫn là các mã định danh chứ không phải số lượt đánh giá.</p>\n",
           "explanationHtml": "<p>Nén thay cách lưu byte trên đĩa, không làm nội dung CSV tự có schema. Dtype giữ mã lúc đọc.</p>\n"
         },
         {
@@ -1437,11 +1437,11 @@
       "id": "B6-052",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>File l.parquet lưu tám listing với id,khu,gia và nhiều cột khác; gia là số. Cần một bảng nhỏ median gia mỗi khu. Nhận định nào đúng về công cụ và việc đọc?</p>\n",
+      "promptHtml": "<p>Tệp tin <code>l.parquet</code> lưu trữ tám listing gồm các trường id, khu, gia cùng nhiều cột dữ liệu khác, trong đó gia là dữ liệu số. Người phân tích cần tạo một bảng nhỏ chứa giá trị median của gia theo từng khu vực. Nhận định nào sau đây là chính xác về công cụ và phương thức đọc?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Có thể DuckDB SELECT khu,MEDIAN(gia) FROM file GROUP BY khu rồi .df(); không bắt buộc nạp cả bảng vào pandas trước.</p>\n",
+          "html": "<p>Có thể sử dụng DuckDB để thực thi <code>SELECT khu, MEDIAN(gia) FROM file GROUP BY khu</code> rồi chuyển thành DataFrame bằng <code>.df()</code> mà không bắt buộc phải nạp toàn bộ bảng vào pandas từ trước.</p>\n",
           "explanationHtml": "<p>SQL truy vấn trực tiếp Parquet và trả kết quả tổng hợp. Pandas cũng có thể đọc chọn cột, chọn công cụ theo nhu cầu/bộ nhớ.</p>\n"
         },
         {
@@ -1467,7 +1467,7 @@
       "id": "B6-053",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Hôm trước đã lưu raw/w.json bằng r.content, gồm daily, daily_units và timezone. Hôm nay cần chạy lại phân tích với đúng phản hồi ấy; endpoint lịch sử và tham số vẫn như cũ. Cách nào đáp ứng trực tiếp?</p>\n",
+      "promptHtml": "<p>Hôm trước hệ thống đã lưu tệp dữ liệu thô <code>raw/w.json</code> bằng <code>r.content</code>, bao gồm các trường daily, daily_units và timezone. Hôm nay cần chạy lại quy trình phân tích với đúng phản hồi đó, trong khi endpoint lịch sử và các tham số truy vấn vẫn giữ nguyên như cũ. Cách xử lý nào sau đây đáp ứng trực tiếp yêu cầu?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1536,7 +1536,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Phòng chiếm 4/6 review nhưng 1/4 listing; r=0.08 gợi ý liên hệ tuyến tính yếu trong dữ liệu xét, chưa chứng minh nhân quả.</p>\n",
+          "html": "<p>Loại phòng riêng chiếm 4/6 lượt đánh giá nhưng chỉ chiếm 1/4 số lượng listing, và hệ số tương quan <code>r = 0.08</code> cho thấy mối liên hệ tuyến tính rất yếu trong tập dữ liệu khảo sát chứ chưa chứng minh được quan hệ nhân quả.</p>\n",
           "explanationHtml": "<p>Hai tỷ lệ có đơn vị quan sát/mẫu số khác nhau. Review không tự bằng booking và tương quan yếu không loại mọi dạng quan hệ.</p>\n"
         },
         {
@@ -1561,22 +1561,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Nhóm mọi năm rồi HAVING COUNT(*)&gt;=2; được A:4,B:2 nên đúng.</p>\n",
+          "html": "<p>Thực hiện nhóm trên tất cả các năm rồi lọc bằng <code>HAVING COUNT(*) &gt;= 2</code>, thu được kết quả A: 4 và B: 2 nên đây là phương án đúng.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do đã trả lời số review mọi năm, giữ nhầm A.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>WHERE year(date)=2025 rồi bỏ HAVING; được A:1,B:2 nên đúng.</p>\n",
+          "html": "<p>Sử dụng điều kiện <code>WHERE year(date) = 2025</code> rồi bỏ qua mệnh đề HAVING, thu được A: 1 và B: 2 nên đây là phương án đúng.</p>\n",
           "explanationHtml": "<p>Phương án này chưa áp điều kiện ít nhất hai review.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Giữ A vì tổng năm 2024 đủ ba; hiển thị n=1 của năm 2025.</p>\n",
+          "html": "<p>Giữ lại mã A vì tổng số lượt trong năm 2024 đạt ba, và hiển thị n=1 cho năm 2025.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do dùng tập hàng khác cho điều kiện giữ nhóm và số đếm được yêu cầu.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>WHERE year(date)=2025 trước GROUP BY listing_id, HAVING COUNT(*)&gt;=2; được B:2.</p>\n",
+          "html": "<p>Lọc bằng <code>WHERE year(date) = 2025</code> trước khi <code>GROUP BY listing_id</code> và kèm theo <code>HAVING COUNT(*) &gt;= 2</code>, thu được kết quả B: 2.</p>\n",
           "explanationHtml": "<p>Lọc phạm vi năm trước tính n. A không đủ dù có nhiều review cũ.</p>\n"
         }
       ],
@@ -1632,7 +1632,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Tách bước tải và phân tích: Dùng snapshot đã lưu để thử biểu đồ; giữ key ngoài mã chia sẻ, xử lý 429 theo hướng dẫn dịch vụ khi thực sự cần tải mới.</p>\n",
+          "html": "<p>Tách rời bước tải dữ liệu và bước phân tích: Sử dụng bản chụp snapshot đã lưu để thử nghiệm vẽ biểu đồ, lưu giữ khóa API bên ngoài mã nguồn chia sẻ, và xử lý mã lỗi 429 theo hướng dẫn dịch vụ khi thực sự cần tải dữ liệu mới.</p>\n",
           "explanationHtml": "<p>Tránh gọi lại không cần thiết, giữ đầu vào ổn định và không lộ bí mật. Vẫn tôn trọng quota.</p>\n"
         },
         {

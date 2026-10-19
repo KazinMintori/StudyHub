@@ -55,7 +55,7 @@
         },
         {
           "key": "D",
-          "html": "<p><code>y=[4,-6,10,0]</code>, dtype int32; tương đương <code>np.multiply(x,2)</code>.</p>\n",
+          "html": "<p>mảng một chiều có kích thước (12,), kiểu <code>int32</code>, tương đương với <code>x.ravel()</code>.</p>\n",
           "explanationHtml": "<p>Đúng: Mỗi y[i]=x[i]*2, shape (4,), dtype int32.</p>\n"
         }
       ],
@@ -190,22 +190,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Mean 80, median 40; có thể dùng median 40 và vẫn giữ giá 260 hợp lệ.</p>\n",
+          "html": "<p>Giá trị mean bằng 80 và median bằng 40, có thể sử dụng median 40 đồng thời vẫn giữ lại giá 260 hợp lệ.</p>\n",
           "explanationHtml": "<p>Đúng: Tổng 400/5=80, số giữa sau sắp xếp là 40. Median phù hợp mục tiêu đã nêu.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Mean 40, median 80; chọn mean vì ít nhạy với giá cực lớn.</p>\n",
+          "html": "<p>Giá trị mean bằng 40 và median bằng 80, chọn mean vì ít nhạy cảm với các mức giá cực lớn.</p>\n",
           "explanationHtml": "<p>Sai: Đảo mean và median, đồng thời đảo tính nhạy với cực trị.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Mean 80, median 40; bắt buộc xoá 260 vì nó lớn nhất.</p>\n",
+          "html": "<p>Giá trị mean bằng 80 và median bằng 40, bắt buộc phải xóa mức giá 260 vì giá trị này lớn nhất.</p>\n",
           "explanationHtml": "<p>Sai: Độ lớn chưa phải bằng chứng giá sai, và đề xác nhận hợp lệ.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Mean 80, median 260; median là số cuối theo thứ tự thu thập.</p>\n",
+          "html": "<p>Giá trị mean bằng 80 và median bằng 260, trong đó median là số cuối cùng theo thứ tự thu thập.</p>\n",
           "explanationHtml": "<p>Sai: Median không phải phần tử cuối của dãy.</p>\n"
         }
       ],
@@ -257,7 +257,7 @@
         },
         {
           "key": "C",
-          "html": "<p><code>.base</code> có thể trỏ qua a tới goc; <code>np.shares_memory(a,b)</code> là True.</p>\n",
+          "html": "<p>Biến <code>b</code> có thể trỏ qua <code>a</code> tới <code>goc</code>, và kết quả kiểm tra là <code>True</code>.</p>\n",
           "explanationHtml": "<p>Đúng: B dùng chung các ô của a dù .base bỏ qua mảng trung gian.</p>\n"
         },
         {
@@ -277,7 +277,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Phép nhân tạo kết quả tạm; phép cộng đọc kết quả tạm và tạo R.</p>\n",
+          "html": "<p>Phép nhân tạo ra mảng kết quả tạm thời, sau đó phép cộng đọc mảng tạm này và tạo ra mảng <code>R</code>.</p>\n",
           "explanationHtml": "<p>Đúng: Có thể tách t=A*3, R=t+5, tương ứng hai phép tính và các vùng kết quả riêng.</p>\n"
         },
         {
@@ -307,7 +307,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Mảng số hai chiều là một list chứa các list; shape chỉ đếm các list con.</p>\n",
+          "html": "<p>Mảng số hai chiều là một danh sách chứa các danh sách con, trong đó thuộc tính shape chỉ đếm các danh sách con.</p>\n",
           "explanationHtml": "<p>Sai: Ndarray số 2D không phải cấu trúc list lồng nhau.</p>\n"
         },
         {
@@ -317,12 +317,12 @@
         },
         {
           "key": "C",
-          "html": "<p>List lưu tham chiếu; ndarray dtype số lưu giá trị cùng kiểu; dtype=object lưu tham chiếu. Shape/dtype là metadata, không phải các giá trị trong vùng dữ liệu.</p>\n",
+          "html": "<p>List lưu trữ tham chiếu, ndarray kiểu số lưu trực tiếp các giá trị cùng kiểu trên vùng nhớ liên tục, còn dtype=object lưu tham chiếu con trỏ. Thuộc tính shape và dtype là metadata chứ không phải các phần tử trong khối dữ liệu.</p>\n",
           "explanationHtml": "<p>Đúng: Phân biệt nội dung ô và metadata, không áp mô hình mảng số cho object.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Một mảng số C-order lưu hết cột 0 trước rồi mới tới cột 1; metadata được tính vào nbytes.</p>\n",
+          "html": "<p>Một mảng số C-order lưu hết toàn bộ cột 0 trước rồi mới đến cột 1, trong đó phần metadata được tính vào nbytes.</p>\n",
           "explanationHtml": "<p>Sai: C-order đi theo hàng, nbytes không tính metadata.</p>\n"
         }
       ],
@@ -437,7 +437,7 @@
         },
         {
           "key": "C",
-          "html": "<p><code>A+d</code> lỗi do 3 khác 2 ở chiều cuối; <code>A+d[:,None]</code> thực hiện đúng yêu cầu.</p>\n",
+          "html": "<p>Phép toán phát sinh lỗi do kích thước 3 khác 2 ở chiều cuối cùng, trong khi phép biến đổi sau thực hiện đúng yêu cầu.</p>\n",
           "explanationHtml": "<p>Đúng: (2,3)+(2,1)→(2,3), kết quả[i,j]=A[i,j]+d[i].</p>\n"
         },
         {
@@ -549,7 +549,7 @@
         },
         {
           "key": "B",
-          "html": "<p>b có cùng giá trị a; c bằng 100000001; phần tăng nhỏ có thể mất trong float32 ở độ lớn này.</p>\n",
+          "html": "<p>Biến <code>b</code> có cùng giá trị với <code>a</code>, biến <code>c</code> bằng 100000001, trong đó phần tăng nhỏ có thể bị triệt tiêu trong float32 ở bậc độ lớn này.</p>\n",
           "explanationHtml": "<p>Đúng: Phép cộng được làm rồi làm tròn về giá trị float32 biểu diễn được, float64 giữ được 1 ở ví dụ này.</p>\n"
         },
         {
@@ -588,7 +588,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Số byte và giá trị được lưu không đổi; số chữ số hiển thị tăng, không làm số gần đúng chính xác hơn.</p>\n",
+          "html": "<p>Số byte và giá trị thực tế được lưu trữ không thay đổi, số chữ số hiển thị tăng lên không làm cho số gần đúng trở nên chính xác hơn.</p>\n",
           "explanationHtml": "<p>Đúng: Đây là thay đổi cách trình bày, không đổi các bit dữ liệu.</p>\n"
         },
         {
@@ -623,7 +623,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Sai: For vẫn chạy trong Python; x*2 gọi vòng lặp thư viện biên dịch sẵn, chọn cách đọc/tính theo dtype.</p>\n",
+          "html": "<p>Sai: Vòng lặp for vẫn chạy trong môi trường Python thông dịch, trong khi <code>x * 2</code> gọi vòng lặp biên dịch sẵn của thư viện C/Fortran và tối ưu cách đọc theo đúng dtype.</p>\n",
           "explanationHtml": "<p>Đúng: Vẫn phải tính từng số, nhưng nơi xử lý vòng lặp và chi phí đối tượng khác nhau.</p>\n"
         },
         {
@@ -850,17 +850,17 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Mỗi a[i] thuộc {2,3,4}; mỗi b[i] thoả 0&lt;=b[i]&lt;1.</p>\n",
+          "html": "<p>Mỗi phần tử <code>a[i]</code> thuộc tập {2, 3, 4}, và mỗi phần tử <code>b[i]</code> thỏa mãn <code>0 &lt;= b[i] &lt; 1</code>.</p>\n",
           "explanationHtml": "<p>Đúng: Integers loại cận trên, random lấy trong [0,1), cả hai có shape (4,).</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>a có thể chứa 5; b có thể bằng đúng 1.</p>\n",
+          "html": "<p>Mảng <code>a</code> có thể chứa giá trị 5, và <code>b</code> có thể đạt giá trị đúng bằng 1.</p>\n",
           "explanationHtml": "<p>Sai: Đóng cả hai cận trên vốn bị loại trừ.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Mỗi a[i] thuộc {3,4,5}; b luôn lớn hơn 0 và không quá 1.</p>\n",
+          "html": "<p>Mỗi phần tử <code>a[i]</code> thuộc tập {3, 4, 5}, còn <code>b</code> luôn lớn hơn 0 và không vượt quá 1.</p>\n",
           "explanationHtml": "<p>Sai: Mở cận dưới, đóng cận trên trái quy ước.</p>\n"
         },
         {
@@ -880,7 +880,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>a, b, c đều <code>[127,128]</code>; NumPy tự tăng số byte như int Python.</p>\n",
+          "html": "<p>Các biến <code>a</code>, <code>b</code>, <code>c</code> đều tràn số vì NumPy tự động tăng số byte giống như kiểu số nguyên int của Python.</p>\n",
           "explanationHtml": "<p>Sai: Int8 cố định 1 byte, không tự mở rộng như int Python.</p>\n"
         },
         {
@@ -890,12 +890,12 @@
         },
         {
           "key": "C",
-          "html": "<p>a và b đều <code>[127,-128]</code>; c cũng vậy vì int(v) giữ int8.</p>\n",
+          "html": "<p>Các biến <code>a</code> và <code>b</code> đều tràn số, và <code>c</code> cũng vậy vì hàm <code>int(v)</code> vẫn giữ nguyên kiểu <code>int8</code>.</p>\n",
           "explanationHtml": "<p>Sai: Int(v) chuyển sang int Python, phép cộng sau đó không chạy trong int8.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>a và b có giá trị <code>[127,-128]</code>; c là <code>[127,128]</code> vì đã đổi từng scalar sang int Python trước phép cộng.</p>\n",
+          "html": "<p>Các biến <code>a</code> và <code>b</code> bị tràn số mang giá trị âm, còn <code>c</code> đạt giá trị chính xác vì đã ép kiểu từng scalar sang int Python trước phép cộng.</p>\n",
           "explanationHtml": "<p>Đúng: A dtype int8, b/c dtype int16, c đúng giá trị nhưng vẫn dùng vòng lặp Python.</p>\n"
         }
       ],
@@ -915,7 +915,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Một khối được nạp có thể chứa các số sắp đọc; nếu còn trong cache, truy cập tiếp giảm chờ RAM.</p>\n",
+          "html": "<p>Một đường nhớ (cache line) được nạp vào CPU chứa luôn các phần tử liền kề sắp đọc, giúp các truy cập tiếp theo tận dụng bộ nhớ đệm cache và giảm thời gian chờ RAM.</p>\n",
           "explanationHtml": "<p>Đúng: Tận dụng tính gần nhau của dữ liệu, còn phụ thuộc cách duyệt, kích thước và phép tính.</p>\n"
         },
         {
@@ -1035,7 +1035,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Mean đều 40; std của X là 0 và Y là 20; chỉ báo mean sẽ bỏ mất khác biệt phân tán.</p>\n",
+          "html": "<p>Mean của hai tập đều bằng 40, trong khi độ lệch chuẩn std của X là 0 và của Y là 20, do đó nếu chỉ báo cáo mean sẽ làm mất hoàn toàn sự khác biệt về độ phân tán dữ liệu.</p>\n",
           "explanationHtml": "<p>Đúng: Y lệch ±20, phương sai 400 USD² và std 20 USD, X không lệch.</p>\n"
         },
         {
@@ -1127,7 +1127,7 @@
         },
         {
           "key": "C",
-          "html": "<p>50 và 5 là trung bình/độ lệch chuẩn của phân phối sinh mẫu; một mẫu bốn số không buộc có đúng hai thống kê đó.</p>\n",
+          "html": "<p>Hai giá trị 50 và 5 là kỳ vọng và độ lệch chuẩn của phân phối sinh mẫu lý thuyết, một mẫu ngẫu nhiên gồm bốn số không bắt buộc phải có đúng hai giá trị thống kê mẫu đó.</p>\n",
           "explanationHtml": "<p>Đúng: Kích thước đầu ra (4,), thống kê mẫu có dao động, seed chỉ giúp tái lập trong điều kiện đã nêu.</p>\n"
         },
         {
@@ -1156,7 +1156,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Phần dữ liệu lần lượt 24 và 48 byte; float64 thường lưu gần đúng chính xác hơn nhưng không biểu diễn chính xác mọi số thực.</p>\n",
+          "html": "<p>Vùng dữ liệu lần lượt chiếm 24 byte và 48 byte, trong đó kiểu float64 lưu trữ gần đúng với độ chính xác cao hơn nhưng không thể biểu diễn chính xác tuyệt đối mọi số thực.</p>\n",
           "explanationHtml": "<p>Đúng: 6<em>4 và 6</em>8 byte, độ chính xác hữu hạn của cả hai kiểu.</p>\n"
         },
         {
@@ -1182,7 +1182,7 @@
       "id": "B3-042",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một lần quan sát thấy <code>x*2</code> trên mảng số lớn dùng một lõi; <code>A@B</code> trên ma trận float64 lớn dùng nhiều lõi. Cả hai nhanh hơn vòng Python tương ứng. Giải thích nào đúng?</p>\n",
+      "promptHtml": "<p>Trong một thực nghiệm đo lường hiệu năng, thao tác ufunc trên mảng số lớn sử dụng một lõi CPU, trong khi phép nhân ma trận trên mảng float64 lớn lại tận dụng nhiều lõi CPU (cả hai cách đều nhanh hơn nhiều so với vòng lặp Python thuần). Giải thích nào sau đây là chính xác?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1191,7 +1191,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Tất cả phép NumPy phải dùng nhiều luồng; quan sát một lõi luôn là lỗi đo.</p>\n",
+          "html": "<p>Tất cả các phép tính trong NumPy bắt buộc phải sử dụng đa luồng, do đó quan sát thấy một lõi luôn là do lỗi đo đạc.</p>\n",
           "explanationHtml": "<p>Sai: Không có cam kết mọi phép NumPy dùng nhiều luồng.</p>\n"
         },
         {
@@ -1201,7 +1201,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Ufunc có thể chạy một luồng với mã biên dịch sẵn và có thể dùng SIMD; nhân ma trận có thể dùng BLAS nhiều luồng tuỳ cấu hình.</p>\n",
+          "html": "<p>Ufunc mặc định chạy đơn luồng với mã máy biên dịch sẵn và có thể tối ưu hóa bằng tập lệnh SIMD, trong khi phép nhân ma trận tận dụng các thư viện đại số tuyến tính BLAS đa luồng tùy cấu hình hệ thống.</p>\n",
           "explanationHtml": "<p>Đúng: Phân biệt ba cơ chế, không khẳng định mọi dtype, layout, độ dài đều dùng SIMD hoặc luôn nhanh hơn.</p>\n"
         }
       ],
@@ -1321,7 +1321,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Ba vị trí không trùng; các giá trị được lấy vẫn có thể trùng, chẳng hạn 40 ở hai vị trí khác nhau.</p>\n",
+          "html": "<p>Ba vị trí chỉ mục được chọn không trùng nhau, tuy nhiên các giá trị được trích xuất vẫn có thể trùng nhau (chẳng hạn giá trị 40 xuất hiện ở hai vị trí khác nhau).</p>\n",
           "explanationHtml": "<p>Đúng: Ví dụ chỉ mục [0,1,2] cho [40,40,70] mà vẫn không lặp vị trí.</p>\n"
         }
       ],
@@ -1441,12 +1441,12 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Chuẩn bị hai đầu vào tương đương ngoài phần đo, kiểm kết quả bằng nhau, đo lặp ở vài kích thước; báo môi trường và giới hạn kết luận.</p>\n",
+          "html": "<p>Chuẩn bị hai đầu vào tương đương bên ngoài phần đo thời gian, kiểm tra tính đúng đắn của kết quả, thực hiện đo lặp lại ở nhiều kích thước dữ liệu và nêu rõ thông số môi trường cùng giới hạn kết luận.</p>\n",
           "explanationHtml": "<p>Đúng: Tách chuẩn bị dữ liệu, kiểm tính tương đương, giảm nhiễu và tránh kết luận vượt phạm vi đo.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Đo một lần cho NumPy gồm cả tạo mảng, còn for dùng list có sẵn; không cần kiểm kết quả vì nhanh là đủ.</p>\n",
+          "html": "<p>Đo thời gian một lần duy nhất cho NumPy (tính cả thời gian khởi tạo mảng) và dùng vòng for trên list có sẵn, không cần kiểm tra kết quả vì tốc độ nhanh là tiêu chí duy nhất.</p>\n",
           "explanationHtml": "<p>Sai: Hai phần đo chứa công việc khác nhau, tốc độ không chứng minh đúng kết quả.</p>\n"
         },
         {
@@ -1456,7 +1456,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Dùng tỷ lệ nhanh hơn của máy giảng viên làm kết quả cho máy mình; không cần chạy lại vì dtype giống nhau.</p>\n",
+          "html": "<p>Sử dụng tỷ lệ chênh lệch tốc độ đo được trên máy của giảng viên làm kết quả cho máy mình, không cần chạy lại vì kiểu dữ liệu dtype hoàn toàn giống nhau.</p>\n",
           "explanationHtml": "<p>Sai: Hiệu năng phụ thuộc môi trường, kích thước, cấu hình và chi phí gọi, không có tỷ lệ cần học thuộc.</p>\n"
         }
       ],
@@ -1481,7 +1481,7 @@
         },
         {
           "key": "C",
-          "html": "<p>reshape gây ValueError vì cần 8 ô nhưng x chỉ có 6; dòng print không được thực hiện.</p>\n",
+          "html": "<p>Thao tác reshape phát sinh ngoại lệ ValueError vì cần 8 phần tử nhưng mảng x chỉ có 6, do đó dòng lệnh print bên dưới không được thực hiện.</p>\n",
           "explanationHtml": "<p>Đúng: 2*4≠6, ngoại lệ dừng trước dòng print, x không bị sửa.</p>\n"
         },
         {
@@ -1557,7 +1557,7 @@
       "id": "B3-056",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Hai nhóm cùng lấy mẫu hai dòng không hoàn lại từ bảng hợp lệ. Nhóm thứ nhất khởi tạo lại cùng seed trước mỗi lần chạy; nhóm thứ hai đổi seed. Nhận định nào đúng?</p>\n",
+      "promptHtml": "<p>Hai nhóm nghiên cứu cùng thực hiện lấy mẫu hai dòng không hoàn lại từ cùng một bảng dữ liệu hợp lệ. Nhóm thứ nhất khởi tạo lại cùng một giá trị seed trước mỗi lần chạy, trong khi nhóm thứ hai thay đổi seed ngẫu nhiên. Nhận định nào sau đây là chính xác?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1566,12 +1566,12 @@
         },
         {
           "key": "B",
-          "html": "<p>Seed quyết định không trùng vị trí; replace=False chỉ giúp kết quả chạy lại giống nhau.</p>\n",
+          "html": "<p>Giá trị seed quyết định việc không bị trùng vị trí chỉ mục, còn tham số replace=False chỉ giúp kết quả giữa các lần chạy lại giống nhau.</p>\n",
           "explanationHtml": "<p>Sai: Đảo vai trò seed và replace=False.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Cùng seed, môi trường và thứ tự gọi hỗ trợ tái lập; hai seed khác nhau vẫn có thể tình cờ lấy cùng mẫu hữu hạn.</p>\n",
+          "html": "<p>Cùng một giá trị seed trong cùng môi trường và thứ tự gọi hàm sẽ bảo đảm tính tái lập, trong khi hai giá trị seed khác nhau vẫn có thể tình cờ rút ra cùng một mẫu con hữu hạn.</p>\n",
           "explanationHtml": "<p>Đúng: Tái lập có điều kiện, không có ràng buộc ánh xạ một-một từ seed tới mọi mẫu hữu hạn.</p>\n"
         },
         {
@@ -1623,7 +1623,7 @@
       "id": "B3-MR11",
       "kind": "quiz",
       "group": "extension",
-      "promptHtml": "<p><strong>Đọc thêm, không yêu cầu trên lớp.</strong> Câu cung cấp quy ước: Float32 có 1 bit dấu, 8 bit số mũ lưu E=e+127, 23 bit phần trị sau dấu chấm; số chuẩn hoá hiểu ngầm bit 1 trước dấu chấm. Cho <code>−13 = −1.101₂ × 2³</code>. Bộ ba <code>(bit dấu, E thập phân, các bit đầu phần trị)</code> nào đúng? Không yêu cầu nhớ struct hay giải mã giá trị đặc biệt.</p>\n",
+      "promptHtml": "<p>(Đọc thêm) Quy ước chuẩn IEEE 754 đối với kiểu float32 gồm: 1 bit dấu, 8 bit số mũ lưu trữ dưới dạng <code>E = e + 127</code>, và 23 bit phần trị sau dấu chấm (các số chuẩn hóa hiểu ngầm bit 1 đứng trước dấu chấm). Cho giá trị số thực cần biểu diễn. Bộ ba giá trị nào sau đây là chính xác?</p>\n",
       "options": [
         {
           "key": "A",
