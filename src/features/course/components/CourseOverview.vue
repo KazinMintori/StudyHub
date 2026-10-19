@@ -20,7 +20,7 @@ const {
     <p class="course-description">{{ course.description }}</p>
     <div class="course-meta">
       <span>{{ lessons.length }} bài giảng</span>
-      <a :href="studyLink(`/${course.id}/bai-tap`)">Bài tập ôn luyện</a>
+      <a :href="studyLink(`/${course.id}/bai-tap`)">{{ course.problemSets ? 'Problem Set' : 'Bài tập ôn luyện' }}</a>
       <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/on-thi/`)">Ôn thi</a>
       <a :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu</a>
     </div>

@@ -59,6 +59,9 @@ export const course = {
   "name": "Xác suất thống kê",
   "short": "Xác suất thống kê",
   "current": true,
+  problemSets: [
+    { slug: 'problem-set-01', title: 'Problem Set 01: Câu hỏi và dữ liệu' }
+  ],
   "description": "Học theo UC Berkeley STAT 20: Từ câu hỏi nghiên cứu, dữ liệu quan sát, tóm tắt trực quan đến suy rộng thống kê, quan hệ nhân quả và mô hình dự đoán.",
   "foundations": [
   "thong-ke-mo-ta",

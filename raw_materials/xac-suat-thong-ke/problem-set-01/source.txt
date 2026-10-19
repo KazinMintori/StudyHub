@@ -1,0 +1,377 @@
+UET.MAT1052 | Problem Set 01                                                                Tuần 1
+
+
+                                              TUẦN 1
+
+                                     Problem Set 01
+                                  Các câu hỏi và Dữ liệu
+                            UET.MAT1052 — Xác suất thống kê
+
+                                     Giảng viên:Nguyễn Bích Vân
+
+
+
+
+Mục tiêu
+Problem Set 01 luyện chuỗi tư duy của Tuần 01:
+
+                     câu hỏi −→ đơn vị + biến −→ quá trình tạo dữ liệu
+                         −→ khung dữ liệu và mức chi tiết của hàng
+                             −→ phân tích −→ khẳng định hợp lệ.
+
+Sau khi hoàn thành problem set, sinh viên cần có khả năng:
+
+ 1. thực hiện bằng tay các phép biến đổi số học nhỏ để nhìn rõ mẫu số, trọng số, phép gộp và phép
+    đo lặp;
+ 2. phân biệt tóm tắt, tổng quát hóa, dự đoán và khẳng định nhân quả, đồng thời nhận ra khi dữ
+    liệu chỉ hỗ trợ một mối liên hệ;
+ 3. đi ngược từ một khẳng định để hỏi dữ liệu đã được tạo ra/thu thập như thế nào;
+ 4. xác định đơn vị quan sát, biến, giá trị, loại biến và mức chi tiết của mỗi hàng;
+ 5. nhận ra số hàng không đồng nhất với số đơn vị độc lập trong mọi bài toán;
+ 6. đọc cấu trúc cơ bản của một DataFrame và phân biệt loại biến thống kê với dtype của phần mềm.
+
+Yêu cầu chung
+
+• Trả lời bằng lập luận, không chỉ ghi một nhãn như “tóm tắt”, “nhân quả”, “biến phân loại”, . . .
+• Nếu cho rằng dữ liệu không đủ để hỗ trợ một khẳng định, phải chỉ rõ bước suy luận nào vượt quá
+  dữ liệu hoặc quá trình tạo dữ liệu còn thiếu điều gì.
+• Khi gặp dữ liệu có nhiều hàng, phải hỏi: mỗi hàng là gì, đơn vị nào được đo lặp, và câu hỏi đang
+  đếm loại đơn vị nào?
+• Với bài Python ở Phần C, chỉ cần các thao tác đọc cấu trúc đã học ở Week 01: head(), shape,
+  columns, dtypes.
+• Không yêu cầu kiến thức về xác suất hay suy luận thống kê ngoài phạm vi Tuần 01.
+
+
+
+
+Các câu hỏi và Dữ liệu                                                                         1/8
+UET.MAT1052 | Problem Set 01                                                                Tuần 1
+
+
+Phần A — Tính tay
+
+Bài 1 — Từ số đếm đến tỷ lệ: mẫu số làm thay đổi câu chuyện
+
+Một trung tâm dữ liệu sử dụng hai loại máy chủ. Trong một tháng:
+
+                  Loại máy chủ       Số máy đang vận hành       Số máy gặp sự cố
+                  A                                     2.400                      48
+                  B                                       700                      21
+
+Không dùng Python. Hãy ghi đầy đủ các bước tính.
+
+ 1. Nếu chỉ nhìn vào số sự cố, loại nào có nhiều sự cố hơn?
+ 2. Tính tỷ lệ máy gặp sự cố của từng loại dưới dạng:
+     • phân số;
+     • phần trăm;
+     • số sự cố trên 1.000 máy.
+ 3. Sau khi dùng mẫu số thích hợp, loại nào có tỷ lệ sự cố cao hơn?
+ 4. Giải thích bằng một câu vì sao so sánh 48 với 21 trả lời một câu hỏi khác với so sánh hai tỷ lệ
+    vừa tính.
+ 5. Viết một câu tóm tắt được dữ liệu hỗ trợ trực tiếp.
+ 6. Một kỹ sư nói: “Dùng loại B làm tăng nguy cơ sự cố.” Câu này đi xa hơn phép tính ở trên như
+    thế nào?
+
+Bài 2 — Tốt hơn trong từng nhóm, tệ hơn khi gộp
+
+Hai hệ thống A và B được dùng để xử lý hai loại tác vụ: dễ và khó. Kết quả:
+
+                      Loại tác vụ        Hệ thống A             Hệ thống B
+                      Dễ               9 thành công / 10    80 thành công / 100
+                      Khó             20 thành công / 100    1 thành công / 10
+
+Không dùng Python.
+
+ 1. Tính tỷ lệ thành công của A và B trong nhóm tác vụ dễ.
+ 2. Tính tỷ lệ thành công của A và B trong nhóm tác vụ khó.
+ 3. Trong từng nhóm, hệ thống nào có tỷ lệ thành công cao hơn?
+ 4. Gộp hai loại tác vụ lại. Tính:
+     • tổng số tác vụ và tổng số thành công của A;
+     • tổng số tác vụ và tổng số thành công của B;
+     • tỷ lệ thành công chung của mỗi hệ thống.
+ 5. Sau khi gộp, hệ thống nào có tỷ lệ cao hơn? Kết luận có cùng chiều với câu 3 không?
+ 6. Điền hai câu sau bằng số cụ thể:
+    “Trong từng loại tác vụ,         tốt hơn          .”
+    “Khi gộp toàn bộ tác vụ,          lại có tỷ lệ thành công cao hơn         .”
+
+Các câu hỏi và Dữ liệu                                                                         2/8
+UET.MAT1052 | Problem Set 01                                                               Tuần 1
+
+
+ 7. Giải thích bằng mẫu số và trọng số của hai loại tác vụ vì sao có thể xảy ra hiện tượng đảo
+    chiều này.
+ 8. Nếu bảng ban đầu có một hàng cho mỗi hệ thống × loại tác vụ, còn bảng gộp chỉ có một hàng
+    cho mỗi hệ thống, thông tin nào đã bị mất?
+
+Bài 3 — Một trung bình hay hai trung bình? Phép đo lặp và trọng số
+
+Ba bộ pin được đo nhiệt độ trong một thử nghiệm. Do mất dữ liệu, số phép đo còn lại không bằng
+nhau:
+
+                               Bộ pin    Các nhiệt độ còn lại (◦ C)
+                               P1        10, 14
+                               P2        20, 20, 20, 20
+                               P3        30
+
+Không dùng Python.
+
+ 1. Có bao nhiêu bộ pin? Có bao nhiêu hàng/phép đo nếu mỗi giá trị nhiệt độ được lưu thành
+    một hàng?
+ 2. Tính nhiệt độ trung bình riêng của P1, P2 và P3.
+ 3. Tính trung bình của ba trung bình theo pin:
+                                           x̄P 1 + x̄P 2 + x̄P 3
+                                                                 .
+                                                     3
+
+ 4. Bây giờ bỏ qua ranh giới giữa các pin và tính trung bình của toàn bộ 7 phép đo gốc.
+ 5. Hai kết quả ở câu 3 và 4 có bằng nhau không?
+ 6. Trong câu 3, đơn vị nào được cho trọng số bằng nhau: pin hay phép đo? Trong câu 4 thì sao?
+ 7. Vì sao “7 hàng dữ liệu” không đồng nghĩa với “7 bộ pin độc lập”?
+ 8. Nếu câu hỏi nghiên cứu là “nhiệt độ điển hình của một bộ pin”, bạn thấy phép tính nào gần với
+    câu hỏi hơn? Nếu câu hỏi là “nhiệt độ điển hình của một phép đo được ghi lại”, câu trả lời có
+    thể thay đổi thế nào?
+
+Bài 4 — Từ dữ liệu từng sinh viên đến bảng liên hợp bằng tay
+
+Một khảo sát nhỏ có 10 sinh viên. Mỗi hàng là một người trả lời:
+
+                         student_id     season     mts_beach         coding_exp
+                         01             Spring     Beach             No
+                         02             Spring     Mountains         Yes
+                         03             Summer     Beach             No
+                         04             Summer     Beach             Yes
+                         05             Summer     Mountains         No
+                         06             Fall       Mountains         Yes
+                         07             Fall       Mountains         No
+                         08             Winter     Beach             Yes
+                         09             Winter     Mountains         No
+                         10             Winter     Beach             No
+
+
+Các câu hỏi và Dữ liệu                                                                       3/8
+UET.MAT1052 | Problem Set 01                                                                 Tuần 1
+
+
+Không dùng Python.
+
+ 1. Đơn vị quan sát của bảng gốc là gì? Bảng có bao nhiêu observations?
+ 2. Tự lập bằng tay bảng đếm season × mts_beach sau, điền tất cả các ô và tổng hàng/cột:
+
+                                 season     Mountains    Beach   Total
+
+                                 Spring
+                                 Summer
+                                 Fall
+                                 Winter
+
+                                 Total                             10
+
+ 3. Với mỗi mùa, tính tỷ lệ trong hàng chọn Beach.
+ 4. Sau khi chỉ giữ bảng liên hợp ở câu 2, ta còn biết sinh viên 04 có coding_exp = Yes hay không?
+ 5. Có thể khôi phục duy nhất thứ tự 10 sinh viên ban đầu từ bảng đếm không? Vì sao?
+ 6. So sánh mức chi tiết:
+     • bảng gốc: một hàng = ?
+     • bảng tổng hợp: một ô = ?
+ 7. Viết một câu giải thích tại sao gộp dữ liệu không chỉ làm bảng ngắn hơn mà còn thay đổi loại
+    câu hỏi còn có thể trả lời.
+
+
+Phần B — Freedman
+
+Bài 5 — Người vừa bỏ thuốc có vẻ kém khỏe hơn
+
+Một nghiên cứu quan sát so sánh những người đang hút thuốc với những người gần đây đã bỏ thuốc.
+Sau khi xem xét các nhóm tuổi và giới tính, nhóm vừa bỏ thuốc có vẻ có sức khỏe kém hơn.
+Một người kết luận:
+
+      “Bỏ thuốc làm sức khỏe xấu đi.”
+
+ 1. Kết quả được mô tả ở trên cho biết điều gì về mối liên hệ quan sát được giữa tình trạng hút
+    thuốc và sức khỏe?
+ 2. Câu “Bỏ thuốc làm sức khỏe xấu đi” thuộc loại khẳng định nào trong bốn loại của Week 01?
+ 3. Vì sao bước từ câu 1 sang câu 2 không được bảo đảm chỉ bởi bảng dữ liệu quan sát?
+ 4. Hãy mô tả một quá trình tạo dữ liệu hợp lý trong đó sức khỏe kém xuất hiện trước, rồi chính sức
+    khỏe kém làm một số người quyết định bỏ thuốc.
+ 5. Viết lại kết luận thành một câu yếu hơn nhưng phù hợp với dữ liệu đã mô tả.
+ 6. Nếu muốn trả lời câu hỏi “điều gì sẽ xảy ra với sức khỏe nếu một người bỏ thuốc thay vì tiếp tục
+    hút?”, vì sao chỉ thêm nhiều hàng vào cùng kiểu nghiên cứu quan sát chưa chắc giải quyết được
+    vấn đề?
+
+
+
+
+Các câu hỏi và Dữ liệu                                                                          4/8
+UET.MAT1052 | Problem Set 01                                                                Tuần 1
+
+
+Bài 6 — “Cha mẹ nên bớt kiểm soát”?
+
+Một nghiên cứu ở trẻ nhỏ ghi nhận rằng những trẻ có nhiều mỡ cơ thể hơn có xu hướng có mẹ được
+đánh giá là có hành vi kiểm soát nhiều hơn. Một bài báo từ đó đưa ra lời khuyên rằng cha mẹ của trẻ
+thừa cân nên bớt kiểm soát con.
+
+ 1. Phát hiện của nghiên cứu mô tả điều gì về hai biến đang được quan sát?
+ 2. Lời khuyên của bài báo ngầm chứa một khẳng định nhân quả nào?
+ 3. Chỉ ra chính xác bước chuyển từ mối liên hệ quan sát được sang khẳng định nhân quả.
+ 4. Đưa ra hai cơ chế tạo dữ liệu khác nhau cũng có thể tạo ra cùng mối liên hệ quan sát được mà
+    không cần giả định “kiểm soát nhiều −→ tăng mỡ cơ thể”.
+ 5. Viết một tiêu đề/kết luận thay thế không đi xa hơn dữ liệu.
+ 6. Nếu nghiên cứu chỉ gồm các gia đình tự nguyện tham gia tại một địa điểm, câu “mọi trẻ em đều
+    có xu hướng như vậy” còn thêm một bước suy luận nào khác ngoài vấn đề nhân quả?
+
+Bài 7 — Boot camp và tái phạm
+
+Một chương trình cải tạo tù nhân cho phép phạm nhân tự nguyện tham gia một khóa “boot camp”.
+Sau khi ra tù, những người hoàn thành boot camp có tỷ lệ quay lại nhà tù thấp hơn nhóm tù nhân
+còn lại.
+Một phát ngôn viên nói rằng chương trình đã làm giảm tái phạm.
+
+ 1. Viết một câu tóm tắt mà dữ liệu trên trực tiếp hỗ trợ.
+ 2. Phát biểu “boot camp làm giảm tái phạm” thuộc loại khẳng định nào?
+ 3. Vẽ bằng lời chuỗi tạo ra hai nhóm được so sánh: ai có cơ hội tham gia, ai tự chọn tham gia, ai
+    hoàn thành, và ai nằm trong nhóm còn lại.
+ 4. Hai nhóm có thể đã khác nhau trước khi chương trình bắt đầu như thế nào? Nêu ít nhất hai khả
+    năng.
+ 5. Vì sao từ “tự nguyện” và điều kiện “hoàn thành” đặc biệt quan trọng khi đánh giá kết luận?
+ 6. Giả sử thu thập thêm dữ liệu trên 100.000 tù nhân bằng đúng quy trình tự nguyện đó. Số hàng
+    lớn hơn có tự động biến kết luận thành nhân quả không? Giải thích.
+ 7. Viết một kết luận thận trọng hơn mà người phát ngôn viên có thể sử dụng.
+
+
+Phần C — STAT20
+
+Bài 8 — Cùng được lưu bằng số, nhưng không cùng loại biến
+
+Một hệ thống lưu bốn cột sau:
+
+Cột                      Một vài giá trị             Ý nghĩa
+student_id               24001234, 24001235,         mã sinh viên
+                         24001236
+satisfaction             1, 2, 3, 4, 5               từ “rất không hài lòng” đến “rất hài lòng”
+num_siblings             0, 1, 2, 3, . . .           số anh/chị/em ruột
+temperature_c            21.4, 21.9, 22.1, . . .     nhiệt độ đo bằng ◦ C
+
+
+Các câu hỏi và Dữ liệu                                                                         5/8
+UET.MAT1052 | Problem Set 01                                                                  Tuần 1
+
+
+Phần mềm có thể lưu ba cột đầu bằng kiểu số nguyên và cột cuối bằng số thực.
+
+ 1. Phân loại loại biến thống kê của từng cột theo hệ thống Week 01.
+ 2. Với cột nào phép toán chênh lệch giữa hai giá trị có ý nghĩa định lượng tự nhiên? Với cột nào các
+    con số chủ yếu là mã hoặc mức?
+ 3. Có nên tính trung bình của student_id không? Giải thích mà không viện dẫn quy tắc phần
+    mềm.
+ 4. Nếu đổi satisfaction thành các nhãn chữ “very dissatisfied”, . . . , “very satisfied”, loại biến
+    thống kê có thay đổi không?
+ 5. Nếu student_id có dtype = int64, điều đó cho biết gì và không cho biết gì?
+ 6. Viết một quy tắc một câu giúp phân biệt statistical variable type với software dtype.
+
+Bài 9 — Palmer Penguins: đọc cấu trúc trước khi phân tích
+
+STAT20 sử dụng bộ dữ liệu Palmer Penguins để minh họa observational unit, variable type và data
+frame.
+Dữ liệu mở
+Dùng trực tiếp bản CSV công khai của dự án Palmer Penguins:
+https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/penguins.c
+sv
+Đọc bằng Python:
+import pandas as pd
+url = "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/main/inst/extdata/
+    penguins.csv"
+penguins = pd.read_csv(url)
+penguins.head()
+penguins.shape
+penguins.columns
+penguins.dtypes
+
+Chỉ cần bốn đầu ra trên. Không cần tính thống kê mô tả hay vẽ biểu đồ.
+Câu hỏi
+
+ 1. penguins.shape cho biết số hàng và số cột. Vì sao chỉ từ hai con số này ta chưa biết mỗi hàng
+    đại diện cho gì?
+ 2. Dựa vào mô tả bộ dữ liệu và các cột, xác định đơn vị quan sát của một hàng.
+ 3. Phân loại các biến species, island, bill_length_mm, body_mass_g, year.
+ 4. So sánh câu trả lời ở mục 3 với penguins.dtypes. Chọn hai cột minh họa rõ rằng dtype và loại
+    biến thống kê trả lời hai câu hỏi khác nhau.
+ 5. Nếu mã hóa species bằng Adelie = 1, Chinstrap = 2, Gentoo = 3, cột mới có trở thành biến số
+    rời rạc không? Vì sao?
+ 6. Nếu thay bill_length_mm bằng ba mức có thứ tự short < medium < long, hãy nêu:
+     • loại biến mới;
+     • một loại thông tin đã bị mất so với phép đo ban đầu.
+
+
+
+
+Các câu hỏi và Dữ liệu                                                                           6/8
+UET.MAT1052 | Problem Set 01                                                                Tuần 1
+
+
+ 7. Từ file CSV một mình, ta có biết đầy đủ quá trình các chim cánh cụt được chọn và đo hay
+    không? Nêu ít nhất hai câu hỏi về quá trình tạo dữ liệu mà bạn sẽ muốn biết trước khi tổng quát
+    hóa kết quả ra ngoài các cá thể trong file.
+
+Bài 10 — Quốc gia hay quốc gia–năm? Phép đo lặp nằm ở đâu?
+
+STAT20 dùng ngữ cảnh dữ liệu của Hans Rosling để mô tả sự thay đổi theo thời gian của các quốc
+gia. Xét bảng thu nhỏ:
+
+                         country   year   life_expectancy   population   region
+                         Vietnam   2000                                  Asia
+                         Vietnam   2010                                  Asia
+                         Japan     2000                                  Asia
+                         Japan     2010                                  Asia
+                         Kenya     2000                                  Africa
+                         Kenya     2010                                  Africa
+
+Các ô số liệu để trống có chủ ý; bài này hỏi về cấu trúc, không hỏi về giá trị cụ thể.
+
+ 1. Bảng trên có bao nhiêu hàng/observations trong bảng? Đơn vị của một hàng chính xác nhất
+    là gì?
+ 2. Có bao nhiêu quốc gia khác nhau? Quốc gia nào đang được đo lặp?
+ 3. Vì sao “6 hàng” không đồng nghĩa với “6 quốc gia độc lập”?
+ 4. country là đơn vị quan sát hay là một biến trong bảng? Giải thích vì sao hai khái niệm này
+    không đồng nhất.
+ 5. Phân loại year, life_expectancy, population, region.
+ 6. Nếu câu hỏi là “quốc gia nào có tuổi thọ cao nhất năm 2010?”, mức chi tiết country × year có
+    đủ không?
+ 7. Nếu câu hỏi đổi thành “quốc gia nào có tuổi thọ trung bình trong cả giai đoạn cao nhất?”,
+    bạn có thể tạo một bảng một hàng/một quốc gia không? Khi đó thông tin nào bị gộp đi?
+ 8. Nếu câu hỏi là “tuổi thọ thay đổi thế nào theo thời gian trong cùng một quốc gia?”, vì sao
+    gộp sớm thành một hàng/một quốc gia có thể phá hỏng dữ liệu cần thiết?
+ 9. region = Asia lặp lại ở nhiều hàng. Vì sao điều đó không tự động có nghĩa dữ liệu bị duplicate?
+
+
+
+
+Các câu hỏi và Dữ liệu                                                                         7/8
+UET.MAT1052 | Problem Set 01                                                                 Tuần 1
+
+
+Nguồn chính
+ [1] Freedman, D., Pisani, R., & Purves, R. (2007). Statistics (4th ed.). W. W. Norton & Company.
+     ISBN 978-0-393-92972-0.
+     https://wwnorton.com/books/9780393929720/about-the-book
+
+ [2] UC Berkeley STAT20, course materials:
+     https://stat20.berkeley.edu/
+
+ [3] STAT20 — Taxonomy of Data:
+     https://stat20.berkeley.edu/fall-2024/1-questions-and-data/02-taxonomy-of-data/notes.
+     html
+
+ [4] Diez, D. M., Çetinkaya-Rundel, M., & Barr, C. D. OpenIntro Statistics (4th ed.), Chapter 1.
+     https://www.openintro.org/book/os/
+
+ [5] Çetinkaya-Rundel, M., & Hardin, J. Introduction to Modern Statistics (2nd ed.).
+     https://openintrostat.github.io/ims/index.html
+
+ [6] Palmer Penguins open data:
+     https://github.com/allisonhorst/palmerpenguins
+
+
+
+
+Các câu hỏi và Dữ liệu                                                                          8/8
+
