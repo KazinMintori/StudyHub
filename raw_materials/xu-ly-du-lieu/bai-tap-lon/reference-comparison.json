@@ -1,0 +1,179 @@
+{
+  "sourceFile": "airbnb-reference-google-doc.txt",
+  "sourceSha256": "8554d518f39dea76ef431dc5e342a3932504e8d9d7aa0a1890cec1695a44871d",
+  "officialSha256": "1a73cf156d72bbeaa8bed3847fd6d1e11e9e24c5b7ffe27be8a60a0298f0b020",
+  "reviewDate": "2026-10-19",
+  "referenceRole": "User-supplied interpretation note. Extra constraints can be real class-specific instructions but require the corresponding official assignment or sheet; they are not silently promoted to general rules.",
+  "claims": [
+    {
+      "id": "R01",
+      "referenceClaim": "Thành phố Sydney",
+      "classification": "not_stated_in_public_assignment",
+      "pageHandling": "Sydney chưa có trong danh sách 26 thành phố của đề, cần đối chiếu phân công riêng trên Canvas.",
+      "markers": [
+        "Sydney",
+        "Melbourne",
+        "Canvas"
+      ]
+    },
+    {
+      "id": "R02",
+      "referenceClaim": "1.000 chỗ ở và 5.000 review cho mỗi chỗ ở",
+      "classification": "requires_scope_confirmation",
+      "pageHandling": "Đề chung chưa ấn định các số lượng này, cần xác nhận đơn vị và phạm vi trước khi chọn mẫu.",
+      "markers": [
+        "1.000 chỗ ở",
+        "5.000 review của mỗi chỗ ở",
+        "tổng review"
+      ]
+    },
+    {
+      "id": "R03",
+      "referenceClaim": "Mỗi listing có đủ 365 ngày trong calendar",
+      "classification": "verify_actual_data",
+      "pageHandling": "Cần khảo sát khoảng ngày và độ đầy đủ thực tế, không tự tạo hàng để đủ số lượng.",
+      "markers": [
+        "365 ngày",
+        "khoảng ngày thực"
+      ]
+    },
+    {
+      "id": "R04",
+      "referenceClaim": "Tải toàn bộ lịch sử thành phố rồi lọc bốn snapshot",
+      "classification": "distinguish_snapshot_from_event_dates",
+      "pageHandling": "Có thể tải trực tiếp đúng bộ ở từng ngày snapshot; khác với lọc ngày review hoặc ngày lịch bên trong tệp.",
+      "markers": [
+        "mọi phiên bản lịch sử",
+        "ngày snapshot"
+      ]
+    },
+    {
+      "id": "R05",
+      "referenceClaim": "Tạo analysis_area với tám vùng từ tọa độ",
+      "classification": "not_stated_in_public_assignment",
+      "pageHandling": "Cần hướng dẫn bổ sung xác định ranh giới; chưa tự thay yêu cầu theo neighbourhood_cleansed.",
+      "markers": [
+        "analysis_area",
+        "tám vùng",
+        "không tự thay"
+      ]
+    },
+    {
+      "id": "R06",
+      "referenceClaim": "875 Entire home/apt và 125 Private room",
+      "classification": "not_stated_in_public_assignment",
+      "pageHandling": "Cần xác nhận mẫu và phạm vi, không sửa dữ liệu để ép khớp.",
+      "markers": [
+        "875",
+        "125",
+        "Entire home/apt",
+        "Private room"
+      ]
+    },
+    {
+      "id": "R07",
+      "referenceClaim": "Không review theo mốc là 50, 30, 25, 25 và thiếu giá ở mốc 4 là 20",
+      "classification": "not_stated_in_public_assignment",
+      "pageHandling": "Cần nguồn của điều kiện đầu vào và định nghĩa không có review theo từng mốc.",
+      "markers": [
+        "50, 30, 25 và 25",
+        "20 listing không có giá"
+      ]
+    },
+    {
+      "id": "R08",
+      "referenceClaim": "Mỗi vùng có 120–130 listing",
+      "classification": "not_stated_in_public_assignment",
+      "pageHandling": "Cần quy tắc phân vùng và chọn mẫu đã xác nhận, không tạo hàng giả.",
+      "markers": [
+        "120–130",
+        "tạo hàng giả"
+      ]
+    },
+    {
+      "id": "R09",
+      "referenceClaim": "Bắt buộc có một cột index",
+      "classification": "distinguish_position_from_identity",
+      "pageHandling": "Phân biệt chỉ số hàng DataFrame với khóa nhận diện listing.",
+      "markers": [
+        "Mã định danh",
+        "chỉ số hàng",
+        "listing_id"
+      ]
+    },
+    {
+      "id": "R10",
+      "referenceClaim": "Dấu X đánh dấu 1.000 review chạy LLM và 100 review chấm tay",
+      "classification": "requires_external_sheet",
+      "pageHandling": "Chưa được cung cấp bảng đánh dấu; đề chung để nhóm chọn mẫu LLM và yêu cầu ít nhất 100 nhãn tay.",
+      "markers": [
+        "1.000 review được đánh dấu X",
+        "100 trường hợp",
+        "mã review"
+      ]
+    },
+    {
+      "id": "R11",
+      "referenceClaim": "Ngôn ngữ en, vi, fr",
+      "classification": "examples_not_exhaustive",
+      "pageHandling": "Đây là các mã ngôn ngữ ví dụ, không chứng minh mọi review chỉ thuộc ba ngôn ngữ.",
+      "markers": [
+        "en",
+        "vi",
+        "fr",
+        "ba ngôn ngữ"
+      ]
+    },
+    {
+      "id": "R12",
+      "referenceClaim": "LLM phải thắng baseline",
+      "classification": "unsupported_mandatory_outcome",
+      "pageHandling": "Đề yêu cầu đo và giải thích trung thực, không ấn định LLM bắt buộc tốt hơn baseline.",
+      "markers": [
+        "không quy định LLM bắt buộc thắng baseline",
+        "kết quả thật"
+      ]
+    },
+    {
+      "id": "R13",
+      "referenceClaim": "Người chấm đổi thành phố",
+      "classification": "broader_than_public_test_description",
+      "pageHandling": "Đề chung nêu đổi snapshot; thay thành phố cần đối chiếu thông báo bổ sung.",
+      "markers": [
+        "đổi thành phố",
+        "đổi snapshot"
+      ]
+    },
+    {
+      "id": "R14",
+      "referenceClaim": "Repo không được có bất kỳ thư mục dữ liệu nào",
+      "classification": "contradicts_published_repo_structure",
+      "pageHandling": "Raw không commit; samples và processed có trong cấu trúc bàn giao của đề.",
+      "markers": [
+        "không có nghĩa repo phải thiếu mọi thư mục dữ liệu",
+        "data/samples/"
+      ]
+    },
+    {
+      "id": "R15",
+      "referenceClaim": "Để khóa vào .env và dùng khóa của giảng viên khi chấm",
+      "classification": "clarify_environment_loading",
+      "pageHandling": "Python không tự nạp .env; chương trình phải nhận khóa qua biến môi trường, không commit bí mật.",
+      "markers": [
+        "Python không tự đọc mọi tệp `.env`",
+        "biến môi trường"
+      ]
+    }
+  ],
+  "numericChecks": {
+    "roomTypeSum": 1000,
+    "eightRegionsMin": 960,
+    "eightRegionsMax": 1040,
+    "areDataObservations": false
+  },
+  "limitations": [
+    "No assignment spreadsheet or marked review file was supplied in this task.",
+    "Counts reported by a note are not validated observations of any downloaded dataset.",
+    "All existing general assignment requirements remain preserved."
+  ]
+}

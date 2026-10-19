@@ -10,6 +10,16 @@ for(const source of manifest){
  assert.equal(bytes.length,source.bytes)
  assert.equal(createHash('sha256').update(bytes).digest('hex'),source.sha256)
 }
+const reference=JSON.parse(await readFile(`${root}/reference-manifest.json`,'utf8'))
+const referenceBytes=await readFile(`${root}/${reference.file}`)
+assert.equal(referenceBytes.length,reference.bytes)
+assert.equal(createHash('sha256').update(referenceBytes).digest('hex'),reference.sha256)
+const dataSources=JSON.parse(await readFile(`${root}/data-source-manifest.json`,'utf8'))
+for(const source of dataSources){
+ const bytes=await readFile(`${root}/${source.file}`)
+ assert.equal(bytes.length,source.bytes)
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),source.sha256)
+}
 const coverage=JSON.parse(await readFile(`${root}/coverage.json`,'utf8'))
 const brief=await readFile('docs/xu-ly-du-lieu/bai-tap-lon/index.md','utf8')
 assert.equal(coverage.sourceSha256,manifest.find(s=>s.file==='project-airbnb.html').sha256)
@@ -18,6 +28,13 @@ for(const requirement of coverage.requirements){
  assert(requirement.requirement.trim())
  assert(brief.includes(requirement.targetHeading),`${requirement.id}: target heading`)
  for(const marker of requirement.presentMarkers)assert(brief.includes(marker),`${requirement.id}: missing ${marker}`)
+}
+const comparison=JSON.parse(await readFile(`${root}/reference-comparison.json`,'utf8'))
+assert.equal(comparison.sourceSha256,reference.sha256)
+assert.equal(comparison.officialSha256,coverage.sourceSha256)
+for(const claim of comparison.claims){
+ assert(claim.classification)
+ for(const marker of claim.markers)assert(brief.includes(marker),`${claim.id}: missing reference comparison ${marker}`)
 }
 for(const file of ['index.md','thuc-hanh.md']){
  const body=await readFile(`docs/xu-ly-du-lieu/bai-tap-lon/${file}`,'utf8')

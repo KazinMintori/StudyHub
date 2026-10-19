@@ -30,3 +30,15 @@ python .agents/skills/studyhub-lecture/scripts/review_teaching_text.py --format 
 ```
 
 Các kiểm tra liên quan còn gồm bộ câu hỏi ôn thi để xác nhận điều hướng cũ vẫn hoạt động, các kiểm thử chức năng, công cụ bài giảng và mô hình nội dung. Trình duyệt kiểm hai trang, sidebar, font, bảng, mã, thẻ thành phố và chữ hoa sau dấu hai chấm ở 360 px, 375 px và 1280 px, cả sáng lẫn tối. Toàn bộ build và deploy do GitHub Actions thực hiện, không build toàn site cục bộ.
+
+## Bổ sung từ lượt đọc như sinh viên và nguồn tham khảo
+
+Người dùng yêu cầu Antigravity đóng vai sinh viên biết Python cơ bản và mới học môn xử lý dữ liệu. Bản ghi lượt đọc đầu được lưu trước khi cung cấp bản sửa. Đây là mô phỏng vai đọc, không phải khảo sát người học thật. Những nhận xét được đối chiếu lại với đề trước khi bổ sung hướng dẫn. Ví dụ, không nhận đề xuất bỏ yêu cầu KPI trong báo cáo QA hoặc mặc định GeoJSON mọi mốc giống nhau.
+
+`airbnb-reference-google-doc.txt` lưu bản xuất văn bản nguyên vẹn từ Google Docs do người dùng gửi. `reference-manifest.json` ghi nguồn và hash, `reference-comparison.json` ghi 15 điểm đối chiếu. Các số lượng trong ghi chú chưa có trên đề chung được phân biệt rõ với yêu cầu đã xác nhận. Chưa có bảng phân công hoặc tệp đánh dấu X được gửi kèm để kiểm tra những điều kiện riêng ấy.
+
+Đã vào trang Get the Data và Data Assumptions của Inside Airbnb, đồng thời đọc Data Dictionary do trang đó liên kết. Các bản nguồn được lưu và kiểm hash bằng `data-source-manifest.json`. `insideairbnb-santiago-download-links.json` giữ bảy liên kết tại một snapshot. `insideairbnb-file-inspection.json` ghi kết quả đọc hàng tiêu đề sáu bảng và cấu trúc GeoJSON của Santiago ngày 23/09/2026.
+
+Chỉ đọc luồng đến hàng tiêu đề cho các CSV hoặc CSV nén, không tải toàn bộ chúng vào repo. Phần GeoJSON được đọc để xác định cấu trúc và thuộc tính. Không dùng việc đọc cấu trúc để khẳng định số hàng, chất lượng dữ liệu hoặc kết quả kinh doanh. Đặc biệt, calendar được kiểm tra không có cột giá, còn reviews tổng hợp không có comments. Những thay đổi schema đó được nêu rõ để tránh áp dụng một mô tả cũ cho mọi snapshot.
+
+Các giải thích bổ sung gồm bước bắt đầu, tệp nén, khóa nối, hình học khu vực, mẫu nhãn tay, cách chấm đa nhãn, thời điểm hoàn thiện báo cáo QA và phạm vi cache. Chưa viết chương trình thực hành hoặc gọi LLM thật. Ví dụ chấm nhãn nhỏ được tính lại bằng Python, bằng chứng nằm trong `qa/airbnb-student-review-20261019/metric-example.json`.

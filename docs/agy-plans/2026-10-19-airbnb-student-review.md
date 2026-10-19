@@ -1,4 +1,4 @@
-Status: READY_FOR_AGY
+Status: REVIEWED_WITH_TRANSPORT_LIMITATION
 
 # Student comprehension review of the Airbnb assignment
 
@@ -17,3 +17,5 @@ Verification: Read local inputs, optionally inspect the existing page at `http:/
 Output: Incremental `student-first-read.md`, `findings.json`, and `report.md`. Every finding names a passage, the student's unanswered question, why it prevents action, proposed explanation and whether it is a blocker or optional improvement. Report exact input hashes, files written, checks performed, limits and permission errors. Codex reads and adjudicates every finding.
 
 Stop: Preserve worktree on failure or timeout. One initial call plus at most two evidence-based corrections in the same scope. All preexisting files must remain unchanged.
+
+Result: Both calls saved usable first-read and reread artifacts but the bridge returned a NoneType transport error. Codex independently verified reported input hashes, preserved original read artifacts and 48 baseline files. Ten initial concerns yielded nine explained points and one teacher-specific baseline evaluation scope still pending source detail. Report overclaims were rejected. Added complete seven-file Inside Airbnb schema explanations, Google Docs claim comparison and beginner action guidance. Original official assignment coverage (54 mapped groups plus exact26cities/104dates) remains verified. No third call needed.

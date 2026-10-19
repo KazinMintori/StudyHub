@@ -33,3 +33,27 @@ test('Project brief includes required deliverables while worked example remains 
   assert(!practice.includes('```python'))
   assert(!/\|.*\|.*\|.*\|.*\|/.test(brief),'Keep tables narrow for mobile')
 })
+
+test('Reference note quotas stay source-qualified instead of becoming general assignment rules', async () => {
+  const brief=await readFile('docs/xu-ly-du-lieu/bai-tap-lon/index.md','utf8')
+  const comparison=JSON.parse(await readFile('raw_materials/xu-ly-du-lieu/bai-tap-lon/reference-comparison.json','utf8'))
+  assert.equal(comparison.claims.length,15)
+  assert.equal(comparison.claims.find(c=>c.id==='R12').classification,'unsupported_mandatory_outcome')
+  assert(brief.includes('không quy định LLM bắt buộc thắng baseline'))
+  assert(brief.includes('Python không tự đọc mọi tệp `.env`'))
+  assert(brief.includes('Những con số này chưa được quy định trên trang đề công khai'))
+  assert(brief.includes('Dấu hiệu cho thấy đã có thể chuyển sang bước tiếp'))
+})
+
+test('File explanations reflect inspected detailed, summary and spatial file structures', async () => {
+  const inspection=JSON.parse(await readFile('raw_materials/xu-ly-du-lieu/bai-tap-lon/insideairbnb-file-inspection.json','utf8'))
+  const files=new Map(inspection.files.map(f=>[f.text,f]))
+  const brief=await readFile('docs/xu-ly-du-lieu/bai-tap-lon/index.md','utf8')
+  assert.equal(files.size,7)
+  assert(inspection.files.every(f=>!f.error))
+  assert(files.get('reviews.csv.gz').columns.includes('comments'))
+  assert(!files.get('reviews.csv').columns.includes('comments'))
+  assert(!files.get('calendar.csv.gz').columns.includes('price'))
+  assert.equal(files.get('neighbourhoods.geojson').documentType,'FeatureCollection')
+  for(const marker of ['không có cột `price`','không có `comments`','không theo vị trí hàng','MultiPolygon','kinh độ trước, vĩ độ sau','không phải mã listing'])assert(brief.includes(marker),marker)
+})
