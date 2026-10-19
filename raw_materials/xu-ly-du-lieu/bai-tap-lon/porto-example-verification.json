@@ -143,24 +143,24 @@
   ],
   "figures": {
     "01-ban-do.svg": {
-      "sha256": "15b1f39b399a64906f8d22fceae6dcd4f30baaa6fdae2b283e6bdb0e354fbe95",
-      "bytes": 808490
+      "bytes": 808300,
+      "sha256": "16132fc18a6347cb2adf2d58b93abe31ac1a87ce4d5c54d264fed37739a510fb"
     },
     "02-lich-san-co.svg": {
-      "sha256": "8577dbb3b2c26e2cae28226e9aa41bbc32e51a8d9d5f824cb309a73f9a9da597",
-      "bytes": 4051
+      "bytes": 4018,
+      "sha256": "d3063f1567e2474f657ac74ce621fbdb27e7d0e96b2e0a315358c64d256c83dd"
     },
     "03-loai-cho-o.svg": {
-      "sha256": "5be4868acccce66829e57c92cf2a6e4c74dcd32bd32c8a6fc134050cec0bfe72",
-      "bytes": 1314
+      "bytes": 1305,
+      "sha256": "345d258adbd2478a0c2e83e146eb72df56b57599e0d652b4ad892bd627d89cd0"
     },
     "04-phan-bo-gia.svg": {
-      "sha256": "3185bb45e2d846ea2348553043ca2f345f481cecfea00e0e691a009205bb02d5",
-      "bytes": 3349
+      "bytes": 3325,
+      "sha256": "e20af8f799e9b1111664d6e7c3bb721c9f83b6b36b6313c6296da8581c6d67ff"
     },
     "05-review-theo-khu.svg": {
-      "sha256": "cbb12d5758c28e8a8ec64453016c0fcba461e79ff0da51608890a20eaf16fabf",
-      "bytes": 12622
+      "bytes": 12526,
+      "sha256": "997cb68ce4cdfbadc1a2c4553fc4ad3c9e7b31e7a7c5f5428ae6261d0b76c0fa"
     }
   },
   "artifactRepresentation": "Canonical Git blobs; text artifacts use LF line endings"
