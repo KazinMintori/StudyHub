@@ -1,7 +1,6 @@
 <script setup>
 import { course } from '../../../content/courses/triet-hoc-mac-lenin/course.mjs'
 import { studyLink } from '../../../core/routing/links.js'
-import PhilosophyNav from './PhilosophyNav.vue'
 </script>
 
 <template>
@@ -10,7 +9,6 @@ import PhilosophyNav from './PhilosophyNav.vue'
     <p class="philosophy-eyebrow">TRIẾT HỌC · 3 CHƯƠNG</p>
     <h1>Triết học Mác – Lênin</h1>
     <p class="philosophy-lead">Từ những câu hỏi về thế giới và con người đến cách nhìn biện chứng về tự nhiên, nhận thức và đời sống xã hội.</p>
-    <PhilosophyNav />
     <section v-for="chapter in course.lessons" :key="chapter.slug" class="philosophy-chapter">
       <div class="philosophy-chapter-number" aria-hidden="true">0{{ chapter.number }}</div>
       <div class="philosophy-chapter-body">

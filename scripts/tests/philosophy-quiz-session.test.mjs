@@ -282,7 +282,7 @@ test('both published philosophy banks retain every question and remain independe
   }
 })
 
-test('PhilosophyQuiz compiles for client, SSR and scoped CSS without introducing raw HTML rendering', () => {
+test('PhilosophyQuiz uses the shared exam interface and compiles for client and SSR', () => {
   const filename = 'src/features/philosophy/components/PhilosophyQuiz.vue'
   const source = readFileSync(filename, 'utf8')
   const { descriptor, errors } = parse(source, { filename })
@@ -292,8 +292,9 @@ test('PhilosophyQuiz compiles for client, SSR and scoped CSS without introducing
     const template = compileTemplate({ id: 'philosophy-quiz-test', filename, source: descriptor.template.content, ssr, ssrCssVars: [], compilerOptions: { bindingMetadata: script.bindings } })
     assert.deepEqual(template.errors, [])
   }
-  const style = compileStyle({ id: 'philosophy-quiz-test', filename, source: descriptor.styles[0].content, scoped: true })
-  assert.deepEqual(style.errors, [])
+  assert.equal(descriptor.styles.length, 0, 'No independent quiz layout or styling')
+  assert.match(source, /import ExamPractice from/)
+  assert.match(descriptor.template.content, /<ExamPractice/)
   assert.doesNotMatch(source, /v-html/)
   assert.doesNotMatch(descriptor.template.content, /kiểm tra|<form|type="submit"|sourceReference|sourceText|Ghi nhớ và đối chiếu/i)
 })

@@ -50,7 +50,7 @@ const layoutClasses = computed(() => ({
     desktopSidebarCollapsed: desktopSidebarCollapsed.value,
     lecturePart: isPhilosophy.value ? 'notes' : lecturePart.value
   }),
-  'philosophy-layout': isPhilosophy.value,
+  'philosophy-layout': isPhilosophy.value && !frontmatter.value.quizTest,
   'philosophy-exercise-view': isPhilosophy.value && frontmatter.value.section === 'topic' && lecturePart.value === 'bai-tap'
 }))
 </script>

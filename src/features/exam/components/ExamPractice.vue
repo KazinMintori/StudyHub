@@ -1,6 +1,6 @@
 <template>
   <div class="exam-practice vp-doc" :class="{ 'is-empty': !currentQuestion }" @click="copyCode">
-    <a class="exam-course-link" :href="withBase('/xu-ly-du-lieu/on-thi/')">← Chọn bài ôn thi</a>
+    <a class="exam-course-link" :href="withBase(courseLink)">← Chọn bài ôn thi</a>
     <!-- Top Header Bar -->
     <header class="exam-header">
       <div class="exam-header__left">
@@ -24,6 +24,7 @@
             <span class="exam-mode-switch__count">({{ quizQuestions.length }})</span>
           </button>
           <button
+            v-if="essayQuestions.length"
             type="button"
             class="exam-mode-switch__btn"
             :class="{ 'is-active': currentMode === 'essay' }"
@@ -377,6 +378,9 @@ import {
 } from '../services/exam-session.mjs';
 
 const props = defineProps({
+  courseLink: { type: String, default: '/xu-ly-du-lieu/on-thi/' },
+  sessionKey: { type: String, default: '' },
+  restoreState: { type: Function, default: null },
   bank: {
     type: Object,
     required: true,
@@ -387,6 +391,8 @@ const props = defineProps({
     }),
   },
 });
+const emit = defineEmits(['answer', 'navigate']);
+let restoredQuestionId = null;
 
 // Reactive state
 const currentMode = ref('quiz');
@@ -402,6 +408,7 @@ const sessionState = reactive(createExamSessionState());
 
 // Unique storage key per lesson
 const storageKey = computed(() => {
+  if (props.sessionKey) return props.sessionKey;
   const lesson = props.bank?.lesson || 'default';
   return `studyhub_exam_session_lesson_${lesson}`;
 });
@@ -503,6 +510,7 @@ function handleSelect(key) {
   saveStoredAnswers(storageKey.value, sessionState.answers);
 
   if (recorded) {
+    emit('answer', { questionId: currentQuestion.value.id, selectedKey: recorded.selectedKey });
     const isCorrect = recorded.isCorrect;
     liveStatus.value = `Đã chọn đáp án ${key}. Kết quả: ${
       isCorrect ? 'Chính xác' : 'Không chính xác'
@@ -571,6 +579,7 @@ function jumpToQuestion(id) {
 
 function navigateToId(id) {
   currentQuestionId.value = id;
+  emit('navigate', id);
   updateUrlQuery();
   announceQuestion();
   focusHeading();
@@ -633,7 +642,7 @@ function syncFromUrl() {
   currentMode.value = mode;
 
   const list = mode === 'essay' ? essayQuestions.value : quizQuestions.value;
-  const activeIdx = resolveActiveIndex(list, questionId);
+  const activeIdx = resolveActiveIndex(list, questionId || restoredQuestionId);
   if (activeIdx >= 0 && activeIdx < list.length) {
     currentQuestionId.value = list[activeIdx].id;
   } else {
@@ -684,9 +693,12 @@ function onPopstate() {
 
 onMounted(() => {
   // Load persisted session answers safely
+  const restored = props.restoreState?.();
+  restoredQuestionId = restored?.currentQuestionId || null;
   const stored = loadStoredAnswers(storageKey.value);
-  if (stored && typeof stored === 'object') {
-    Object.assign(sessionState.answers, reconcileStoredAnswers(props.bank.questions, stored));
+  const answers = { ...restored?.answers, ...stored };
+  if (answers && typeof answers === 'object') {
+    Object.assign(sessionState.answers, reconcileStoredAnswers(props.bank.questions, answers));
   }
 
   // Sync state from query parameters on client mount

@@ -26,6 +26,7 @@ for (const chapter of catalog.banks) {
     tests.push(test)
     await output(`src/content/courses/${course}/exam/practice/${test.id}.json`, json(practice))
     await output(`docs/${course}/on-thi/${chapter.id}/bai-${test.testNumber}.md`, `---
+layout: page
 title: ${JSON.stringify(test.title)}
 course: ${course}
 section: exam
@@ -33,19 +34,17 @@ quiz: ${chapter.id}
 quizChapter: ${chapter.chapter}
 quizTest: ${test.testNumber}
 outline: false
+sidebar: false
 prev: false
 next: false
 ---
 
 <script setup>
 import PhilosophyQuiz from '../../../../src/features/philosophy/components/PhilosophyQuiz.vue'
-import PhilosophyPracticeLinks from '../../../../src/features/philosophy/components/PhilosophyPracticeLinks.vue'
 import bank from '../../../../src/content/courses/${course}/exam/practice/${test.id}.json'
 </script>
 
 <PhilosophyQuiz :bank="bank" />
-
-<PhilosophyPracticeLinks chapter-id="${chapter.id}" :test-number="${test.testNumber}" />
 `)
   }
 }

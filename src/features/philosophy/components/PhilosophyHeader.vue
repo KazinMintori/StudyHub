@@ -3,7 +3,6 @@ import { computed, onMounted } from 'vue'
 import { useData } from 'vitepress'
 import { findCourse } from '../../../content/catalog.mjs'
 import { studyLink } from '../../../core/routing/links.js'
-import PhilosophyNav from './PhilosophyNav.vue'
 const { frontmatter } = useData()
 const course = computed(() => findCourse(frontmatter.value.course))
 const lesson = computed(() => course.value?.lessons.find(item => item.slug === frontmatter.value.lecture))
@@ -22,7 +21,6 @@ onMounted(() => {
 <template>
   <header class="philosophy-header">
     <nav class="book-breadcrumbs" aria-label="Đường dẫn bài đọc"><a :href="studyLink('/triet-hoc-mac-lenin/')">Triết học Mác – Lênin</a><template v-if="topic"><span>/</span><a :href="studyLink(`/triet-hoc-mac-lenin/bai-giang/${lesson.slug}`)">Chương {{ lesson.number }}</a></template><template v-else-if="exam && frontmatter.quiz"><span>/</span><a :href="studyLink('/triet-hoc-mac-lenin/on-thi/')">Ôn thi</a><template v-if="frontmatter.quizTest"><span>/</span><a :href="studyLink(`/triet-hoc-mac-lenin/on-thi/${frontmatter.quiz}`)">Chương {{ frontmatter.quizChapter === 1 ? 'I' : 'II' }}</a></template></template></nav>
-    <PhilosophyNav :exam="exam" />
     <p v-if="lesson" class="philosophy-kicker">Chương {{ lesson.number }}<template v-if="topic"> · Chủ đề {{ lesson.topics.indexOf(topic) + 1 }}</template></p>
     <h1 :id="topic?.id">{{ topic?.title || lesson?.title || frontmatter.title || 'Ôn thi' }}</h1>
   </header>
