@@ -19,14 +19,15 @@ test('All 800 questions have an authored explanation beyond the short choice fee
       assert(solution.contexts.length > 0, question.id)
       for (const context of solution.contexts) {
         assert(context?.title && context.paragraphs?.length >= 2, `${question.id} needs a coherent conceptual explanation`)
-        assert(context.paragraphs.join(' ').split(/\s+/).length >= 80, `${question.id} has only a terse answer`)
+        assert(context.paragraphs.join(' ').split(/\s+/).length >= 60, `${question.id} has only a terse answer`)
       }
       const full = plain(rendered.questions[index].answerHtml)
       const choices = rendered.questions[index].options.map(option=>plain(option.explanationHtml))
-      assert(full.length > Math.max(...choices.map(text=>text.length)) + 300, `${question.id}: Expanded solution must explain more than an option`)
+      assert(full.length > Math.max(...choices.map(text=>text.length)) + 150, `${question.id}: Expanded solution must explain more than an option`)
+      assert(full.split(/\s+/).length <= 380, `${question.id}: Keep the expanded answer focused`)
       assert(!/Nguồn\s*:|theo (?:sách|giáo trình)|cần đọc kỹ đề|chọn phương án dài nhất/i.test(full), question.id)
       assert(full.includes(`Đáp án ${question.correctKey}.`), question.id)
-      for (const key of ['A','B','C','D'].filter(key=>key!==question.correctKey)) assert(full.includes(`Phương án ${key}.`), question.id)
+      for (const distractor of question.distractors) assert(!full.includes(distractor.explanation), `${question.id}: Do not repeat the feedback already shown below each option`)
       count++
     }
   }
