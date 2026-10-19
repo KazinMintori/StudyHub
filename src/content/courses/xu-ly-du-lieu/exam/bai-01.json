@@ -6,26 +6,26 @@
       "id": "B1-001",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Nhóm lấy thêm file giá từ một dịch vụ, xóa các bản ghi trùng rồi nối bảng giá với bảng chỗ ở theo mã. Ba công việc lần lượt thuộc giai đoạn nào?</p>\n",
+      "promptHtml": "<p>Trong một dự án xử lý dữ liệu, nhóm thực hiện ba công việc theo trình tự: Tải tệp dữ liệu giá từ một dịch vụ bên ngoài, loại bỏ các bản ghi bị trùng lặp, sau đó ghép nối bảng giá với bảng thông tin chỗ ở theo mã định danh chung. Ba công việc này lần lượt thuộc về các giai đoạn nào trong quy trình xử lý dữ liệu?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Thu thập → biến đổi → làm sạch.</p>\n",
+          "html": "<p>Thu thập dữ liệu → Biến đổi dữ liệu → Làm sạch dữ liệu.</p>\n",
           "explanationHtml": "<p>Sai: Phương án này đảo ngược thứ tự hai bước chuẩn bị: <code>'Xóa các bản ghi trùng'</code> thuộc khâu làm sạch, còn 'nối bảng theo mã' thuộc khâu biến đổi.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Thu thập → làm sạch → biến đổi.</p>\n",
+          "html": "<p>Thu thập dữ liệu → Làm sạch dữ liệu → Biến đổi dữ liệu.</p>\n",
           "explanationHtml": "<p>Đúng: Lấy thêm tệp giá là thu thập dữ liệu, xóa các bản ghi trùng là làm sạch dữ liệu (loại trùng), và nối bảng giá với chỗ ở theo mã là biến đổi dữ liệu (ghép nối bảng). Thứ tự chuẩn là Thu thập → Làm sạch → Biến đổi.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Làm sạch → thu thập → biến đổi.</p>\n",
+          "html": "<p>Làm sạch dữ liệu → Thu thập dữ liệu → Biến đổi dữ liệu.</p>\n",
           "explanationHtml": "<p>Sai: Lấy tệp mới thuộc khâu thu thập (không phải làm sạch), đồng thời xóa các bản ghi trùng thuộc khâu làm sạch (không phải thu thập).</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Biến đổi → làm sạch → trực quan.</p>\n",
+          "html": "<p>Biến đổi dữ liệu → Làm sạch dữ liệu → Trực quan hóa dữ liệu.</p>\n",
           "explanationHtml": "<p>Sai: Lấy tệp thuộc khâu thu thập (không phải biến đổi), đồng thời các thao tác chuẩn bị dữ liệu này chưa tạo ra biểu đồ trực quan hóa.</p>\n"
         }
       ],
@@ -36,26 +36,26 @@
       "id": "B1-002",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bạn mở một notebook gốc chỉ có quyền xem (View Only) và muốn lưu lại để chỉnh sửa bản sao của riêng mình. Trong một ô mã nguồn có đoạn code sau:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"Chao\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">2</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> +</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 5</span></span></code></pre>\n</div><p>Trong Colab mặc định, lựa chọn nào đúng về cách bắt đầu và output khi chạy cell bằng Shift+Enter?</p>\n",
+      "promptHtml": "<p>Bạn mở một tệp notebook trên Google Colab ở chế độ chỉ xem (View only) và muốn lưu lại để chỉnh sửa làm bài tập của mình. Trong notebook có một ô mã nguồn chứa hai dòng lệnh sau:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"Chao\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">2</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\"> +</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 5</span></span></code></pre>\n</div>\n<p>Để lưu lại các thay đổi của mình, trước tiên bạn cần thao tác như thế nào? Đồng thời, khi nhấn tổ hợp phím Shift + Enter để chạy ô mã này, kết quả xuất ra ở vùng đầu ra (output) sẽ như thế nào?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Chọn \"Save a copy in Drive\", sau đó cell chỉ hiển thị giá trị 7 mà không in ra chuỗi \"Chao\".</p>\n",
+          "html": "<p>Chọn lệnh \"Save a copy in Drive\" để tạo bản sao cá nhân, ô mã nguồn chỉ hiển thị giá trị 7 mà không in dòng chữ \"Chao\".</p>\n",
           "explanationHtml": "<p>Sai: Lựa chọn này bỏ qua tác dụng xuất chuỗi của hàm <code>print()</code>.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Sửa trực tiếp bản gốc chỉ xem, sau đó cell in ra chuỗi \"Chao\" rồi hiển thị giá trị 7.</p>\n",
+          "html": "<p>Chỉnh sửa trực tiếp trên tệp gốc chỉ xem, ô mã nguồn in dòng chữ \"Chao\" rồi hiển thị giá trị 7.</p>\n",
           "explanationHtml": "<p>Sai: Quyền chỉ xem không cho phép chỉnh sửa trực tiếp bản gốc mà bắt buộc phải tạo bản sao riêng.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Chọn \"Save a copy in Drive\", sau đó cell in ra chuỗi \"Chao\" rồi hiển thị giá trị 7.</p>\n",
+          "html": "<p>Chọn lệnh \"Save a copy in Drive\" để tạo bản sao vào Google Drive cá nhân, ô mã nguồn in dòng chữ \"Chao\" ra luồng xuất chuẩn rồi tự động hiển thị giá trị 7 của biểu thức cuối cùng.</p>\n",
           "explanationHtml": "<p>Đúng: Cần lưu bản sao riêng trước khi chỉnh sửa. Cell code thực thi hàm <code>print()</code> và notebook còn hiển thị giá trị biểu thức cuối cùng, trong khi Markdown chỉ dùng để soạn thảo văn bản thuyết minh.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Chọn \"Save a copy in Drive\", sau đó cell chỉ in ra chuỗi \"Chao\" vì biểu thức 2+5 không có lệnh print.</p>\n",
+          "html": "<p>Chọn lệnh \"Save a copy in Drive\" để tạo bản sao cá nhân, ô mã nguồn chỉ in dòng chữ \"Chao\" vì biểu thức <code>2 + 5</code> không có lệnh <code>print()</code>.</p>\n",
           "explanationHtml": "<p>Sai: Lựa chọn này bỏ qua cơ chế hiển thị giá trị của biểu thức cuối cùng trong cell notebook.</p>\n"
         }
       ],
@@ -66,26 +66,26 @@
       "id": "B1-003",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong môi trường Linux/Bash trên máy tính có sẵn cả Python 3.11.9 và 3.12.3 (không sử dụng công cụ quản lý phiên bản tự động): Khi trình thông dịch hiện thời là 3.11.9, nhóm khởi tạo môi trường ảo <code>.venv</code> và tiến hành cài đặt các gói thư viện. Sau đó, nhóm mới tạo tệp <code>.python-version</code> ghi giá trị 3.12.3 và xuất danh sách thư viện bằng lệnh <code>pip freeze &gt; requirements.txt</code>. Khi làm việc tiếp, họ chỉ kích hoạt lại môi trường ảo cũ chứ không tạo mới. Nhận định nào sau đây là chính xác?</p>\n",
+      "promptHtml": "<p>Trên hệ điều hành Linux (dùng shell Bash), máy tính đã cài đặt cả hai phiên bản Python 3.11.9 và Python 3.12.3 nhưng không cài đặt công cụ quản lý phiên bản tự động (như pyenv). Khi lệnh <code>python</code> mặc định đang trỏ tới bản 3.11.9, nhóm sinh viên tạo môi trường ảo bằng lệnh <code>python -m venv .venv</code> và cài đặt các thư viện. Sau đó, nhóm mới tạo tệp <code>.python-version</code> ghi <code>3.12.3</code> và chạy lệnh <code>pip freeze > requirements.txt</code>. Tiếp theo, nhóm chỉ chạy lại lệnh kích hoạt môi trường ảo cũ (<code>source .venv/bin/activate</code>) mà không tạo mới. Nhận định nào sau đây là đúng về môi trường ảo đang hoạt động?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Kích hoạt lại sẽ tự đọc tệp .python-version và tự thay đổi Python nền thành 3.12.3.</p>\n",
+          "html": "<p>Thao tác kích hoạt lại sẽ tự động đọc tệp <code>.python-version</code> và chuyển phiên bản Python nền của <code>.venv</code> sang 3.12.3.</p>\n",
           "explanationHtml": "<p>Sai: Nếu không có trình quản lý phiên bản tự động, việc kích hoạt lại không thể tự tạo ra môi trường ảo mới bằng phiên bản Python khác.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Lệnh freeze đã ghi nhận cả phiên bản Python 3.12.3 vào tệp nên cấu hình môi trường đã hoàn toàn khớp.</p>\n",
+          "html": "<p>Lệnh <code>pip freeze</code> đã tự động ghi nhận phiên bản Python 3.12.3 vào tệp cấu hình, do đó môi trường ảo đã tự động khớp với bản 3.12.3.</p>\n",
           "explanationHtml": "<p>Sai: Lệnh <code>pip freeze</code> chỉ xuất danh sách gói đã cài, không có chức năng chuyển tệp <code>.python-version</code> thành phiên bản Python nền.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Vẫn dùng 3.11.9, vì việc ghi tệp rồi kích hoạt lại không làm thay đổi phiên bản Python nền đã dùng để tạo môi trường ảo.</p>\n",
+          "html": "<p>Môi trường ảo vẫn sử dụng Python 3.11.9, vì việc ghi tệp <code>.python-version</code> và kích hoạt lại không thể thay đổi trình thông dịch nền đã dùng để khởi tạo môi trường ảo trước đó.</p>\n",
           "explanationHtml": "<p>Đúng: Môi trường ảo tạo từ Python 3.11.9 vẫn cố định phiên bản nền đó. Việc ghi tệp <code>.python-version</code> sau đó không làm thay đổi nhị phân đã có, và lệnh <code>pip freeze</code> chỉ liệt kê gói hiện thời, do đó muốn dùng Python 3.12.3 phải tạo môi trường ảo mới bằng đúng trình thông dịch mục tiêu.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Chỉ cần cài đặt lại requirements, pip sẽ tự động nâng Python trong môi trường ảo cũ lên 3.12.3.</p>\n",
+          "html": "<p>Chỉ cần chạy lại lệnh cài đặt từ <code>requirements.txt</code>, công cụ <code>pip</code> sẽ tự động nâng cấp trình thông dịch Python trong môi trường ảo lên 3.12.3.</p>\n",
           "explanationHtml": "<p>Sai: Công cụ <code>pip</code> chỉ quản lý cài đặt gói thư viện, không thể thay đổi phiên bản trình thông dịch nền của môi trường.</p>\n"
         }
       ],
@@ -96,11 +96,11 @@
       "id": "B1-004",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bài về nhà có nhãn mở. Linh dùng AI viết bản nháp hàm, tự phát hiện lỗi, viết lại gần hết và giữ lại ý tưởng từ bản nháp. Khi nộp, cách nào phù hợp?</p>\n",
+      "promptHtml": "<p>Một bài tập về nhà áp dụng chính sách sử dụng AI ở chế độ mở (Open policy: Cho phép sử dụng công cụ AI nhưng bắt buộc phải khai báo minh bạch). Sinh viên dùng AI để viết bản nháp cho một hàm xử lý, sau đó tự phát hiện lỗi, tự tay viết lại gần như toàn bộ đoạn mã và chỉ giữ lại ý tưởng thuật toán từ bản nháp ban đầu. Khi nộp bài, cách xử lý nào sau đây là đúng quy định liêm chính học thuật?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Vẫn khai công cụ, việc đã dùng và cách kiểm chứng dù code được viết lại nhiều.</p>\n",
+          "html": "<p>Vẫn phải khai báo trung thực tên công cụ, mục đích sử dụng và phương pháp kiểm chứng độc lập, dù phần lớn mã nguồn đã được tự tay viết lại.</p>\n",
           "explanationHtml": "<p>Đúng: Nghĩa vụ khai báo phát sinh ngay khi có sử dụng công cụ AI, không có ngưỡng tỷ lệ chỉnh sửa mã nguồn nào để được miễn trừ. Quy định yêu cầu nêu rõ câu lệnh truy vấn, các điểm sai lệch và phương pháp kiểm chứng độc lập.</p>\n"
         },
         {
@@ -126,7 +126,7 @@
       "id": "B1-005",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Hai dự án trên máy cần hai phiên bản khác nhau của cùng một thư viện. Nhóm muốn làm bài tập lớn trong VS Code mà hạn chế xung đột. Cách nào phù hợp nhất với công cụ được giới thiệu?</p>\n",
+      "promptHtml": "<p>Trên cùng một máy tính, bạn đang làm việc với hai dự án dữ liệu đòi hỏi hai phiên bản khác nhau của cùng một thư viện. Nhóm muốn phát triển bài tập lớn trong Visual Studio Code (VS Code) và hạn chế tối đa nguy cơ xung đột gói thư viện. Giải pháp kỹ thuật nào sau đây là chuẩn mực và phù hợp nhất với các công cụ được giới thiệu trong Bài 1?</p>\n",
       "options": [
         {
           "key": "A",
@@ -145,7 +145,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Tạo venv riêng cho từng dự án, cài và ghi phiên bản trong môi trường tương ứng.</p>\n",
+          "html": "<p>Khởi tạo môi trường ảo (<code>venv</code>) độc lập cho từng dự án, sau đó cài đặt đúng phiên bản thư viện cần thiết và ghi lại phiên bản trong từng môi trường tương ứng.</p>\n",
           "explanationHtml": "<p>Đúng: Môi trường ảo (<code>venv</code>) giúp cô lập các gói thư viện giữa các dự án khác nhau. VS Code phù hợp cho dự án cục bộ với phiên bản do người học kiểm soát, trong khi Colab thuận tiện cho thực hành trực tuyến có sẵn môi trường cấu hình.</p>\n"
         }
       ],
@@ -156,7 +156,7 @@
       "id": "B1-006",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong lúc làm bài tập lớn tại nhà được mở, nhóm đã dùng AI và khai báo đầy đủ. Tới buổi vấn đáp đóng, một thành viên xin hỏi chatbot một gợi ý về hàm mình đang trình bày. Cách xử lý nào đúng?</p>\n",
+      "promptHtml": "<p>Trong giai đoạn làm bài tập lớn tại nhà (áp dụng chế độ mở: Được phép dùng AI có khai báo), nhóm sinh viên đã sử dụng AI và ghi nhận minh bạch trong tệp <code>AI_USAGE.md</code>. Tuy nhiên, tới buổi thi vấn đáp trực tiếp trên lớp (vốn áp dụng quy chế thi đóng: Nhằm đánh giá kiến thức và năng lực thực chất của từng cá nhân), một thành viên xin phép giảng viên được tra cứu chatbot để lấy gợi ý giải thích về hàm mình đang trình bày. Cách xử lý nào sau đây là hoàn toàn đúng quy chế môn học?</p>\n",
       "options": [
         {
           "key": "A",
@@ -170,7 +170,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Không được dùng chatbot trong buổi vấn đáp, và dù đã khai báo trước đó thì sinh viên vẫn phải tự giải thích mã nguồn.</p>\n",
+          "html": "<p>Tuyệt đối không được sử dụng chatbot trong buổi thi vấn đáp, dù trước đó đã khai báo ở bài tập về nhà, sinh viên vẫn bắt buộc phải tự mình hiểu và giải thích mã nguồn.</p>\n",
           "explanationHtml": "<p>Đúng: Quy chế áp dụng độc lập cho từng hoạt động đánh giá: Bài tập làm tại nhà ở chế độ mở, buổi vấn đáp ở chế độ đóng. Việc đã khai báo ở bài làm tại nhà không chuyển giao quyền sử dụng công cụ sang buổi vấn đáp.</p>\n"
         },
         {
@@ -186,7 +186,7 @@
       "id": "B1-007",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bài lab mở yêu cầu tính cơ cấu loại phòng. Mai đã tự ước lượng nhóm A khoảng 3/4, hỏi AI bằng tên bảng và cột cụ thể, rồi nhận code có một hàm chưa hiểu. Chuỗi hành động tiếp theo nào đúng quy trình?</p>\n",
+      "promptHtml": "<p>Trong một bài thực hành (lab) ở chế độ mở, yêu cầu đặt ra là tính tỷ trọng cơ cấu các loại phòng chỗ ở. Sinh viên đã tự tính nhẩm ước lượng loại phòng A chiếm khoảng 75% (3/4 tổng số), sau đó đưa tên bảng và cột dữ liệu cụ thể vào câu hỏi nhờ AI viết mã. Đoạn mã nhận về chạy không báo lỗi nhưng có chứa một hàm lạ mà sinh viên chưa từng học. Chuỗi hành động tiếp theo nào sau đây thể hiện đúng quy trình làm việc khoa học và có trách nhiệm?</p>\n",
       "options": [
         {
           "key": "A",
@@ -205,7 +205,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Đọc hiểu từng dòng, đối chiếu hàm lạ với tài liệu chính thức, kiểm chứng kết quả bằng ước lượng độc lập rồi tiến hành khai báo minh bạch.</p>\n",
+          "html": "<p>Đọc kỹ từng dòng mã, đối chiếu hàm lạ với tài liệu kỹ thuật chính thức, thử nghiệm đoạn mã trên mẫu dữ liệu nhỏ để so sánh với kết quả ước lượng ban đầu, sau đó mới hoàn thành bản khai báo và nộp bài.</p>\n",
           "explanationHtml": "<p>Đúng: Bạn Mai đã tự phác thảo ý tưởng và đặt câu hỏi có ngữ cảnh cụ thể. Các bước tiếp theo cần thực hiện là đọc hiểu cặn kẽ mã nguồn, kiểm chứng độc lập bằng dữ liệu thử nghiệm rồi khai báo minh bạch theo quy định.</p>\n"
         }
       ],
@@ -243,7 +243,7 @@
       "id": "B1-011",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một bảng thô có giá &quot;$2,400&quot;, một ô chưa khai giá và một giá &quot;$1&quot;. Trước khi kết luận mức giá của khu vực, nhận định nào phù hợp?</p>\n",
+      "promptHtml": "<p>Khi tiếp nhận một bảng dữ liệu thô về giá thuê phòng, bạn quan sát thấy một bản ghi ghi giá là <code>\"$2,400\"</code> (chứa ký tự tiền tệ và dấu phẩy ngăn cách), một bản ghi bị bỏ trống hoàn toàn (khuyết thiếu giá trị), và một bản ghi ghi mức giá bất thường là <code>\"$1\"</code>. Trước khi tiến hành tính toán các chỉ số thống kê để kết luận về mức giá phòng của khu vực, nhận định nào sau đây là phù hợp nhất?</p>\n",
       "options": [
         {
           "key": "A",
@@ -262,7 +262,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Cần làm rõ kiểu chuỗi, xử lý các ô thiếu và kiểm chứng các mức giá dị biệt trước khi thực hiện thống kê và diễn giải.</p>\n",
+          "html": "<p>Cần chuyển đổi chuỗi ký tự về dạng số chuẩn, xử lý thỏa đáng các ô giá trị khuyết thiếu, đồng thời kiểm tra lại nguồn gốc thực tế của mức giá bất thường ($1) trước khi tổng hợp và kết luận.</p>\n",
           "explanationHtml": "<p>Đúng: Cần làm rõ định dạng, dữ liệu thiếu và giá lạ trước khi thống kê hay diễn giải kết quả.</p>\n"
         }
       ],
@@ -273,7 +273,7 @@
       "id": "B1-012",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Phiên mới chưa có biến x. Các cell trong file theo thứ tự:</p>\n<p>Cell A:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">x </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 2</span></span></code></pre>\n</div><p>Cell B:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(x)</span></span></code></pre>\n</div><p>Bạn chạy B, rồi A, rồi B, không restart giữa các lần. Hai lần chạy B có kết quả gì?</p>\n",
+      "promptHtml": "<p>Trong một phiên làm việc mới trên notebook (kernel vừa khởi động, bộ nhớ chưa có biến nào), bạn có hai ô mã nguồn theo thứ tự:</p>\n<p>Ô A:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">x </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 2</span></span></code></pre>\n</div>\n<p>Ô B:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(x)</span></span></code></pre>\n</div>\n<p>Người dùng thực hiện chạy lần lượt theo trình tự: Chạy ô B, sau đó chạy ô A, rồi lại chạy ô B (không khởi động lại kernel giữa các lần chạy). Kết quả xuất hiện ở hai lần thực thi ô B lần lượt là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -292,7 +292,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Lần đầu phát sinh lỗi NameError và lần sau in 2.</p>\n",
+          "html": "<p>Lần đầu phát sinh lỗi <code>NameError</code> (do biến <code>x</code> chưa được định nghĩa trong bộ nhớ), lần sau in ra giá trị 2 (sau khi ô A đã được thực thi).</p>\n",
           "explanationHtml": "<p>Đúng: Ở lần chạy đầu tiên, cell A chưa được thực thi nên cell B gặp lỗi <code>NameError</code>. Sau khi chạy cell A, biến <code>x</code> đã được gán giá trị 2 và tồn tại trong bộ nhớ chung, giúp cell B ở lần chạy sau in ra số 2 thành công.</p>\n"
         }
       ],
@@ -303,7 +303,7 @@
       "id": "B1-013",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Linux/Bash: <code>venv</code> A vẫn đang kích hoạt và cwd là B. Bạn đã kiểm tra đường dẫn /du_an_B/.venv/bin/python chính là Python của venv B. Lệnh sau thành công:</p>\n<div class=\"language-bash vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">bash</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\">/du_an_B/.venv/bin/python</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> -m</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pip</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> install</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pandas</span></span></code></pre>\n</div><p>Gói được cài vào đâu?</p>\n",
+      "promptHtml": "<p>Trên hệ điều hành Linux (dùng shell Bash), môi trường ảo của dự án A (<code>.venv A</code>) đang được kích hoạt, trong khi thư mục làm việc hiện thời (working directory) lại là dự án B. Bạn đã xác minh đường dẫn tệp thực thi <code>/du_an_B/.venv/bin/python</code> chính là trình thông dịch Python thuộc môi trường ảo của dự án B. Tiếp theo, bạn thực thi câu lệnh sau trong terminal:</p>\n<div class=\"language-bash vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">bash</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\">/du_an_B/.venv/bin/python</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> -m</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pip</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> install</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pandas</span></span></code></pre>\n</div>\n<p>Sau khi lệnh cài đặt hoàn tất thành công, gói thư viện <code>pandas</code> sẽ được cài đặt vào môi trường nào?</p>\n",
       "options": [
         {
           "key": "A",
@@ -317,7 +317,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Vào B vì lệnh gọi đích danh Python của B, dù shell vẫn kích hoạt A.</p>\n",
+          "html": "<p>Cài vào môi trường ảo B, vì câu lệnh đã chỉ định đích danh tệp thực thi Python của môi trường B để chạy lệnh <code>pip</code>.</p>\n",
           "explanationHtml": "<p>Đúng: <code>/du_an_B/.venv/bin/python -m pip</code> gọi đúng trình thông dịch của B để cài gói, dù A vẫn đang kích hoạt.</p>\n"
         },
         {
@@ -333,11 +333,11 @@
       "id": "B1-014",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Đang làm quiz có nhãn đóng, Huy định hỏi AI đúng một gợi ý để nhớ khái niệm, rồi tự viết đáp án. Theo chính sách môn, lựa chọn nào đúng?</p>\n",
+      "promptHtml": "<p>Trong khi làm một bài trắc nghiệm nhanh (quiz) trên lớp áp dụng quy chế thi đóng (nghiêm cấm mọi tài liệu và công cụ AI), một sinh viên định mở chatbot hỏi một gợi ý ngắn để nhớ lại khái niệm, sau đó tự mình suy nghĩ viết câu trả lời. Chiếu theo quy định liêm chính học thuật của môn học, hành động này được nhìn nhận như thế nào?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Không dùng AI ở bài quiz này vì lượng trợ giúp dù nhỏ cũng không làm thay đổi chế độ thi đóng.</p>\n",
+          "html": "<p>Tuyệt đối không được sử dụng AI trong bài kiểm tra này, vì quy chế thi đóng nghiêm cấm mọi sự trợ giúp từ bên ngoài dù mức độ hỗ trợ rất nhỏ.</p>\n",
           "explanationHtml": "<p>Đúng: Quiz đóng cấm dùng AI dù chỉ xin một gợi ý nhỏ.</p>\n"
         },
         {
@@ -363,7 +363,7 @@
       "id": "B1-015",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Venv thông thường không kế thừa gói hệ thống. Sau khi cài pandas và matplotlib, nhóm chạy <code>python -m pip freeze &gt; requirements.txt</code>, thấy nhiều dòng hơn hai gói đã gõ tên. Giải thích nào đúng?</p>\n",
+      "promptHtml": "<p>Một môi trường ảo tiêu chuẩn được khởi tạo mà không kế thừa các gói thư viện toàn cục của hệ thống. Nhóm sinh viên chỉ cài đặt hai gói thư viện là <code>pandas</code> và <code>matplotlib</code>. Tuy nhiên, khi chạy lệnh <code>python -m pip freeze > requirements.txt</code>, tệp kết quả xuất ra lại chứa nhiều dòng thư viện hơn hẳn hai gói mà nhóm đã cài. Hiện tượng này được giải thích như thế nào là chính xác?</p>\n",
       "options": [
         {
           "key": "A",
@@ -382,7 +382,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Danh sách có thể gồm các gói phụ thuộc được cài kèm đang hiện diện trong venv.</p>\n",
+          "html": "<p>Các dòng xuất hiện thêm chính là các gói phụ thuộc (dependencies) cần thiết của <code>pandas</code> và <code>matplotlib</code>, đã được công cụ <code>pip</code> tự động tải về và cài đặt kèm theo trong môi trường ảo.</p>\n",
           "explanationHtml": "<p>Đúng: Các gói phụ thuộc đã cài trong venv cũng xuất hiện trong kết quả freeze.</p>\n"
         }
       ],
@@ -393,11 +393,11 @@
       "id": "B1-016",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một bài tập nhỏ làm tại nhà không có nhãn quy định mở hay đóng. Trước khi làm, Vy định dùng AI viết nháp rồi tự kiểm tra, nhưng bạn cùng nhóm cho rằng bài ít điểm nên không cần hỏi. Cách xử lý nào sau đây là phù hợp nhất?</p>\n",
+      "promptHtml": "<p>Một bài tập ngắn làm tại nhà chưa được giảng viên công bố rõ quy định về việc sử dụng AI (chưa ghi nhãn mở hay đóng). Một thành viên định dùng AI để viết bản nháp rồi tự mình kiểm tra lại, trong khi bạn cùng nhóm cho rằng bài tập này chiếm trọng số điểm rất nhỏ nên không cần hỏi lại giảng viên. Cách ứng xử nào sau đây là chuẩn mực và an toàn nhất?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Hỏi giảng viên xác nhận chế độ trước khi dùng AI cho bài này.</p>\n",
+          "html": "<p>Chủ động liên hệ hỏi giảng viên để xác nhận rõ quy chế trước khi sử dụng AI, vì việc hỗ trợ tạo bản nháp vẫn thuộc phạm vi can thiệp của AI vào bài nộp.</p>\n",
           "explanationHtml": "<p>Đúng: Chưa rõ nhãn thì cần hỏi giảng viên trước khi dùng AI.</p>\n"
         },
         {
@@ -423,26 +423,26 @@
       "id": "B1-017",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Nhóm sắp xếp việc học theo cơ cấu điểm và chế độ trong Bài 1. Bản ghi nào đúng?</p>\n",
+      "promptHtml": "<p>Khi tìm hiểu đề cương môn học trong Bài 1, nhóm sinh viên xây dựng kế hoạch học tập dựa trên cơ cấu tính điểm và quy định sử dụng công cụ hỗ trợ (chế độ mở hoặc đóng) cho từng hợp phần đánh giá. Cách phân bổ tỷ trọng điểm số và chế độ quy định nào sau đây là hoàn toàn chính xác?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Lab chiếm 10%, bài kiểm tra lớp chiếm 20%, thi giữa kỳ chiếm 10%, bài tập lớn và vấn đáp chiếm 60% (vấn đáp đóng).</p>\n",
+          "html": "<p>Thực hành Lab chiếm 10% (chế độ mở), bài kiểm tra trên lớp chiếm 20% (chế độ đóng), thi giữa kỳ chiếm 10% (chế độ đóng), bài tập lớn kết hợp vấn đáp chiếm 60% (vấn đáp đóng).</p>\n",
           "explanationHtml": "<p>Sai: Tỷ trọng giữa bài kiểm tra lớp và bài thi giữa kỳ bị hoán đổi.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Lab chiếm 10%, bài kiểm tra lớp chiếm 10%, thi giữa kỳ chiếm 20%, bài tập lớn và vấn đáp chiếm 60% (vấn đáp mở vì thuộc bài tập lớn).</p>\n",
+          "html": "<p>Thực hành Lab chiếm 10% (chế độ mở), bài kiểm tra trên lớp chiếm 10% (chế độ đóng), thi giữa kỳ chiếm 20% (chế độ đóng), bài tập lớn kết hợp vấn đáp chiếm 60% (vấn đáp mở vì nằm trong bài tập lớn).</p>\n",
           "explanationHtml": "<p>Sai: Phần vấn đáp thuộc bài tập lớn không làm cho phiên vấn đáp trở thành chế độ mở.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Lab 10% mở, kiểm tra lớp 10% đóng, thi giữa kỳ 20% đóng, bài tập lớn và vấn đáp 60% (mở ở nhà nhưng đóng khi vấn đáp).</p>\n",
+          "html": "<p>Thực hành Lab chiếm 10% (chế độ mở), bài kiểm tra trên lớp chiếm 10% (chế độ đóng), thi giữa kỳ chiếm 20% (chế độ đóng), bài tập lớn kết hợp vấn đáp chiếm 60% (mở khi làm bài ở nhà nhưng đóng khi vấn đáp trực tiếp).</p>\n",
           "explanationHtml": "<p>Đúng: Lab mở, kiểm tra lớp và giữa kỳ đóng, bài tập lớn mở ở nhà nhưng vấn đáp đóng.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Lab chiếm 20%, bài kiểm tra lớp chiếm 10%, thi giữa kỳ chiếm 20%, bài tập lớn và vấn đáp chiếm 50% (vấn đáp đóng).</p>\n",
+          "html": "<p>Thực hành Lab chiếm 20% (chế độ mở), bài kiểm tra trên lớp chiếm 10% (chế độ đóng), thi giữa kỳ chiếm 20% (chế độ đóng), bài tập lớn kết hợp vấn đáp chiếm 50% (vấn đáp đóng).</p>\n",
           "explanationHtml": "<p>Sai: Tỷ trọng các thành phần không khớp cơ cấu điểm chính thức của môn học.</p>\n"
         }
       ],
@@ -480,7 +480,7 @@
       "id": "B1-021",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một nhóm đã có bảng giá sạch. Họ tính số chỗ ở theo khu, làm biểu đồ so sánh rồi viết khuyến nghị có nêu giới hạn dữ liệu. Chuỗi công việc sau bảng sạch phù hợp với hướng đi nào?</p>\n",
+      "promptHtml": "<p>Sau khi đã hoàn thiện một bảng dữ liệu giá thuê phòng sạch sẽ, nhóm sinh viên tiến hành tính toán số lượng chỗ ở theo từng khu vực, vẽ biểu đồ so sánh trực quan, rồi đưa ra các khuyến nghị phân tích kèm theo phần lưu ý về giới hạn của dữ liệu. Trình tự các công việc này phản ánh đúng hướng đi nào trong quy trình phân tích dữ liệu?</p>\n",
       "options": [
         {
           "key": "A",
@@ -489,7 +489,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Biến đổi để tạo thông tin → trực quan hóa → kể chuyện hỗ trợ quyết định.</p>\n",
+          "html": "<p>Biến đổi và tổng hợp dữ liệu để tạo thông tin → Trực quan hóa dữ liệu bằng biểu đồ → Kể chuyện dữ liệu để hỗ trợ ra quyết định.</p>\n",
           "explanationHtml": "<p>Đúng: Biến đổi tạo thông tin, trực quan hóa kết quả, rồi truyền đạt khuyến nghị.</p>\n"
         },
         {
@@ -510,7 +510,7 @@
       "id": "B1-022",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong Colab, bạn muốn viết hướng dẫn bằng chữ rồi thực thi <code>!python --version</code>. Cách hiểu nào đúng về loại cell và dấu !?</p>\n",
+      "promptHtml": "<p>Khi làm việc trên Google Colab, bạn muốn viết một đoạn văn bản hướng dẫn các bước thực hiện, sau đó chạy câu lệnh <code>!python --version</code>. Cách hiểu nào sau đây là chính xác về việc lựa chọn loại ô (cell) và ý nghĩa của tiền tố <code>!</code>?</p>\n",
       "options": [
         {
           "key": "A",
@@ -529,7 +529,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Markdown dùng để viết hướng dẫn, còn cell code dùng tiền tố ! để chạy lệnh hệ điều hành (ở đây là xem phiên bản Python của Colab).</p>\n",
+          "html": "<p>Dùng ô văn bản (Markdown) để soạn thảo lời hướng dẫn, và dùng ô mã nguồn (Code) có tiền tố <code>!</code> để gọi lệnh thực thi ở tầng hệ điều hành của máy chủ Colab (ở đây là kiểm tra phiên bản Python của môi trường đám mây).</p>\n",
           "explanationHtml": "<p>Đúng: Viết hướng dẫn bằng Markdown và chạy <code>!python --version</code> trong cell code để xem Python của Colab.</p>\n"
         }
       ],
@@ -540,7 +540,7 @@
       "id": "B1-023",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Repo có requirements.txt tạo từ venv đã kiểm thử, nhưng không ghi phiên bản Python. Máy mới chưa chọn trình thông dịch. Muốn dựng sát môi trường đã kiểm thử, điều kiện nào còn thiếu?</p>\n",
+      "promptHtml": "<p>Kho lưu trữ mã nguồn (repository) đã có sẵn tệp <code>requirements.txt</code> được trích xuất từ một môi trường ảo đã vượt qua toàn bộ các bài kiểm thử, nhưng lại không ghi nhận thông tin về phiên bản Python nền. Trên một máy tính mới chưa chọn trình thông dịch, để tái lập chính xác môi trường đã kiểm thử nhằm tránh nguy cơ xung đột gói, thông tin quan trọng nào sau đây còn thiếu?</p>\n",
       "options": [
         {
           "key": "A",
@@ -554,7 +554,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Cần biết và chọn đúng phiên bản Python đã kiểm thử trước khi tạo venv, sau đó mới cài đặt requirements.</p>\n",
+          "html": "<p>Cần biết rõ và cài đặt đúng phiên bản Python nền đã dùng khi kiểm thử trước khi tạo môi trường ảo mới và cài đặt các thư viện từ <code>requirements.txt</code>.</p>\n",
           "explanationHtml": "<p>Đúng: Chọn đúng phiên bản Python đã kiểm thử, tạo venv rồi mới cài đặt requirements.</p>\n"
         },
         {
@@ -570,7 +570,7 @@
       "id": "B1-024",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bài mở: Nhóm hiểu code AI, khai báo đúng và không giấu sử dụng, nhưng một phép tính nhầm cột làm báo cáo sai. Nhận định nào phù hợp?</p>\n",
+      "promptHtml": "<p>Trong một bài tập ở chế độ mở, nhóm sinh viên nắm vững đoạn mã do AI hỗ trợ, thực hiện khai báo trung thực và đầy đủ trong báo cáo. Tuy nhiên, do sơ suất chỉ định nhầm cột dữ liệu trong một phép tính, kết quả thống kê cuối cùng trong báo cáo bị sai lệch. Chiếu theo nguyên tắc đánh giá học thuật, nhận định nào sau đây là phù hợp nhất?</p>\n",
       "options": [
         {
           "key": "A",
@@ -584,7 +584,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Nhóm vẫn phải chịu điểm sai của bài vì việc khai báo đúng không bảo đảm tính đúng đắn của số liệu.</p>\n",
+          "html": "<p>Nhóm vẫn phải chịu trách nhiệm và bị trừ điểm về kết quả sai lệch trong nội dung bài nộp, vì việc khai báo AI trung thực không thể thay thế cho tính chính xác của kết quả tính toán.</p>\n",
           "explanationHtml": "<p>Đúng: Bài vẫn bị đánh giá theo kết quả sai vì khai báo đúng không bảo đảm độ chính xác của số liệu.</p>\n"
         },
         {
@@ -600,7 +600,7 @@
       "id": "B1-025",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong môi trường Linux/Bash, bạn đang đứng tại thư mục gốc của dự án. Môi trường ảo <code>.venv</code> đã được khởi tạo thành công nhưng shell hiện tại chưa kích hoạt môi trường nào. Lệnh nào sau đây dùng để kích hoạt venv theo hướng dẫn?</p>\n",
+      "promptHtml": "<p>Trên hệ điều hành Linux (dùng shell Bash), terminal đang đứng tại thư mục gốc của dự án. Môi trường ảo <code>.venv</code> đã được khởi tạo thành công trước đó, nhưng phiên làm việc hiện tại chưa kích hoạt môi trường nào. Lệnh nào sau đây dùng để kích hoạt môi trường ảo này theo đúng hướng dẫn kỹ thuật của môn học?</p>\n",
       "options": [
         {
           "key": "A",
@@ -614,7 +614,7 @@
         },
         {
           "key": "C",
-          "html": "<p><code>python -m pip freeze &gt; requirements.txt</code></p>\n",
+          "html": "<p><code>python -m pip freeze &gt, requirements.txt</code></p>\n",
           "explanationHtml": "<p>Sai: Lệnh <code>pip freeze</code> dùng để xuất danh sách gói, không kích hoạt môi trường ảo.</p>\n"
         },
         {
@@ -630,11 +630,11 @@
       "id": "B1-026",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Xét mẫu nhỏ có 10 bản ghi: Loại A có 6 bản ghi, loại B có 3 bản ghi và loại C có 1 bản ghi. Công cụ AI báo loại A chiếm 30%, loại B chiếm 60%, loại C chiếm 10% (tổng 100%). Bạn cần làm gì trước khi chấp nhận?</p>\n",
+      "promptHtml": "<p>Để kiểm thử một đoạn mã phân tích dữ liệu, bạn dùng một tập mẫu nhỏ gồm 10 bản ghi: Trong đó loại phòng A có 6 bản ghi, loại B có 3 bản ghi, và loại C có 1 bản ghi. Đoạn mã do AI sinh ra trả về kết quả tỷ trọng là: A chiếm 30%, B chiếm 60%, và C chiếm 10% (tổng cộng bằng 100%). Bạn cần thực hiện thao tác kiểm chứng nào trước khi chấp nhận kết quả này?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Đối chiếu từng nhóm với phép đếm tay: Phải là A60%, B30%, C10%.</p>\n",
+          "html": "<p>Đối chiếu trực tiếp với kết quả tính nhẩm trên mẫu: Tỷ lệ chính xác phải là A chiếm 60%, B chiếm 30%, và C chiếm 10% (AI đã bị hoán đổi nhầm tỷ lệ giữa loại A và loại B).</p>\n",
           "explanationHtml": "<p>Đúng: Đếm tay cho A=6, B=3, C=1 trên 10 dòng nên tỷ lệ là 60%, 30%, 10%.</p>\n"
         },
         {
@@ -660,7 +660,7 @@
       "id": "B1-027",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một nhóm BTL được phân công thành phố X. Họ định nộp chỉ vài biểu đồ của thành phố Y và bỏ phần review vì cho rằng môn chỉ chấm ảnh cuối. Nhận định nào đúng theo giới thiệu BTL?</p>\n",
+      "promptHtml": "<p>Một nhóm làm bài tập lớn được giảng viên phân công nghiên cứu tập dữ liệu của thành phố X. Tuy nhiên, nhóm lại dự định nộp một vài biểu đồ của thành phố Y và bỏ qua phần phân tích dữ liệu nhận xét (reviews), vì nghĩ rằng môn học chỉ chấm điểm các hình ảnh trực quan cuối cùng. Căn cứ vào quy định và tiêu chuẩn đánh giá bài tập lớn, nhận định nào sau đây là đúng?</p>\n",
       "options": [
         {
           "key": "A",
@@ -669,7 +669,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Cần làm thành phố được phân công và sản phẩm chạy một lệnh qua QA, KPI, biểu đồ, báo cáo, kèm LLM trên review.</p>\n",
+          "html": "<p>Nhóm bắt buộc phải thực hiện trên đúng thành phố X được phân công, đồng thời xây dựng quy trình (pipeline) hoàn chỉnh có thể tự động chạy từ khâu kiểm tra chất lượng dữ liệu (QA), tính toán các chỉ số hoạt động (KPI), trực quan hóa, tạo báo cáo và tích hợp mô hình ngôn ngữ lớn (LLM) để phân tích các bình luận đánh giá.</p>\n",
           "explanationHtml": "<p>Đúng: Hoàn thành thành phố X và pipeline gồm QA, KPI, biểu đồ, báo cáo cùng phân tích review bằng LLM theo yêu cầu.</p>\n"
         },
         {
@@ -717,11 +717,11 @@
       "id": "B1-031",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Sau khi thấy AI viết code nhanh, một sinh viên cho rằng mục tiêu môn là nhớ tên công cụ, không cần hiểu các dòng mình nộp. Nhận định nào phù hợp mục tiêu Bài 1?</p>\n",
+      "promptHtml": "<p>Nhận thấy các công cụ AI có khả năng tạo mã nguồn rất nhanh, một sinh viên cho rằng mục tiêu chính của môn học chỉ là ghi nhớ tên các thư viện và công cụ, không cần hiểu bản chất các dòng mã mà mình nộp trong bài tập. Chiếu theo chuẩn đầu ra và mục tiêu môn học được xác định ở Bài 1, nhận định nào sau đây là chuẩn xác nhất?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Dùng hệ sinh thái Python từ thử nghiệm đến pipeline, đồng thời hiểu, chỉ đạo và kiểm chứng công cụ.</p>\n",
+          "html": "<p>Mục tiêu cốt lõi của môn học là làm chủ hệ sinh thái Python để giải quyết bài toán dữ liệu từ khâu thử nghiệm đến xây dựng đường ống xử lý hoàn chỉnh, đồng thời người học phải hiểu sâu sắc bản chất mã nguồn, có năng lực chỉ đạo công cụ và kiểm chứng độc lập kết quả.</p>\n",
           "explanationHtml": "<p>Đúng: Môn dùng Python và hệ sinh thái dữ liệu, đồng thời đòi hỏi hiểu, chỉ đạo và kiểm chứng công cụ.</p>\n"
         },
         {
@@ -747,7 +747,7 @@
       "id": "B1-032",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Phiên sạch có A, B như sau.</p>\n<p>Cell A:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">dem </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 0</span></span></code></pre>\n</div><p>Cell B:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">dem </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> dem </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">+</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 1</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(dem)</span></span></code></pre>\n</div><p>Chạy A,B,B,A,B theo đúng lịch này, không restart. Ba lần chạy B in gì theo thứ tự?</p>\n",
+      "promptHtml": "<p>Trong một phiên làm việc mới trên notebook (kernel sạch vừa khởi động), bạn có hai ô mã nguồn:</p>\n<p>Ô A:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">dem </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 0</span></span></code></pre>\n</div>\n<p>Ô B:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">dem </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> dem </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">+</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 1</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(dem)</span></span></code></pre>\n</div>\n<p>Người dùng thực hiện chạy các ô mã theo đúng lịch trình tuần tự: A, sau đó B, sau đó B, sau đó A, và cuối cùng chạy B (không khởi động lại kernel giữa chừng). Kết quả in ra ở ba lần thực thi ô B lần lượt là những số nào?</p>\n",
       "options": [
         {
           "key": "A",
@@ -756,7 +756,7 @@
         },
         {
           "key": "B",
-          "html": "<p><code>1, 2, 1</code></p>\n",
+          "html": "<p>In ra lần lượt là: 1, 2, 1 (vì lần chạy ô A thứ hai đã đặt lại biến <code>dem</code> về 0 trước lần chạy ô B cuối cùng).</p>\n",
           "explanationHtml": "<p>Đúng: Ba lần chạy B lần lượt in 1, 2, 1 vì A khởi tạo lại biến trước lần cuối.</p>\n"
         },
         {
@@ -777,7 +777,7 @@
       "id": "B1-033",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Lan tải .ipynb đã có output từ Colab. Trên máy cá nhân, phiên Python mới trong VS Code chưa cài pandas. Chạy cell import pandas báo thiếu thư viện, dù output cũ vẫn nhìn thấy. Nhận định nào đúng?</p>\n",
+      "promptHtml": "<p>Sinh viên tải một tệp notebook <code>.ipynb</code> đã lưu sẵn toàn bộ kết quả đầu ra (output) từ Google Colab về máy tính cá nhân. Khi mở tệp này trong VS Code với một môi trường Python cục bộ mới chưa cài thư viện <code>pandas</code>, việc bấm chạy ô lệnh chứa <code>import pandas</code> phát sinh lỗi <code>ModuleNotFoundError</code>, mặc dù vùng hiển thị kết quả cũ bên dưới vẫn nhìn thấy rõ ràng. Hiện tượng này được giải thích như thế nào là đúng bản chất?</p>\n",
       "options": [
         {
           "key": "A",
@@ -796,7 +796,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Output cũ không cài thư viện hay tạo phiên làm việc mới, do đó cần thiết lập hoặc chọn môi trường local rồi chạy lại.</p>\n",
+          "html": "<p>Các kết quả đầu ra lưu trong tệp <code>.ipynb</code> chỉ là văn bản hoặc hình ảnh tĩnh được ghi lại từ phiên làm việc trước trên đám mây, hoàn toàn không mang theo thư viện hay trạng thái bộ nhớ thực thi, do đó sinh viên bắt buộc phải chọn đúng môi trường ảo cục bộ đã cài đặt <code>pandas</code> và thực thi lại mã nguồn.</p>\n",
           "explanationHtml": "<p>Đúng: Kết quả cũ lưu sẵn không tự cài đặt thư viện hay khôi phục phiên runtime, người học cần chọn hoặc cài đặt đúng môi trường local rồi thực thi lại.</p>\n"
         }
       ],
@@ -807,7 +807,7 @@
       "id": "B1-034",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một bài có nhãn mở. Đâu là tình huống đáp ứng đủ ba trách nhiệm của việc dùng AI?</p>\n",
+      "promptHtml": "<p>Trong một hoạt động học tập áp dụng chính sách sử dụng AI ở chế độ mở, tình huống nào sau đây thể hiện đầy đủ cả ba nghĩa vụ cốt lõi của người học theo quy định liêm chính học thuật (hiểu mã nguồn, kiểm chứng độc lập và khai báo minh bạch)?</p>\n",
       "options": [
         {
           "key": "A",
@@ -816,7 +816,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Tự đọc hiểu code, đối chiếu bằng mẫu tính tay, khai công cụ/công việc/prompt và cách kiểm chứng.</p>\n",
+          "html": "<p>Tự đọc hiểu thấu đáo đoạn mã, kiểm chứng tính đúng đắn bằng một tập mẫu tính tay độc lập, đồng thời khai báo rõ ràng tên công cụ, mục đích sử dụng, câu lệnh truy vấn (prompt) và quy trình kiểm chứng trong bài nộp.</p>\n",
           "explanationHtml": "<p>Đúng: Cần hiểu code, kiểm chứng độc lập và khai báo trung thực công cụ, việc dùng, prompt và cách kiểm.</p>\n"
         },
         {
@@ -837,11 +837,11 @@
       "id": "B1-035",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong môi trường Linux/Bash: Môi trường ảo của dự án đã kích hoạt và python trỏ đúng vào môi trường này. Thư mục có tệp requirements.txt cần cài đặt. Lệnh nào sau đây dùng danh sách đó để cài đặt thư viện?</p>\n",
+      "promptHtml": "<p>Trên hệ điều hành Linux (dùng shell Bash), môi trường ảo của dự án đã được kích hoạt và lệnh <code>python</code> đang trỏ chính xác vào môi trường ảo này. Trong thư mục dự án đã có sẵn tệp <code>requirements.txt</code>. Câu lệnh nào sau đây dùng để cài đặt toàn bộ danh sách các thư viện được liệt kê trong tệp đó vào môi trường ảo hiện hành?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p><code>python -m pip freeze &gt; requirements.txt</code></p>\n",
+          "html": "<p><code>python -m pip freeze &gt, requirements.txt</code></p>\n",
           "explanationHtml": "<p>Sai: <code>pip freeze</code> xuất danh sách gói ra tệp, không cài theo danh sách.</p>\n"
         },
         {
@@ -867,11 +867,11 @@
       "id": "B1-036",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>AI giải thích một hàm lạ và trả cùng kết quả ở hai lần hỏi. Nhóm muốn nói “đã kiểm chứng độc lập”. Bước nào bổ sung bằng chứng phù hợp nhất?</p>\n",
+      "promptHtml": "<p>Khi tiếp nhận một hàm lạ do AI đề xuất, nhóm sinh viên hỏi lại AI hai lần ở hai cuộc hội thoại riêng biệt và đều nhận được cùng một câu trả lời. Để có đủ căn cứ khoa học khẳng định rằng nhóm \"đã kiểm chứng độc lập\" trước khi đưa vào sản phẩm học tập, bước làm nào sau đây là phù hợp nhất?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Đối chiếu tài liệu chính thức và chạy mẫu nhỏ có đáp án tự tính, hoặc so với cách tính độc lập.</p>\n",
+          "html": "<p>Tra cứu trực tiếp tài liệu kỹ thuật chính thức của thư viện theo đúng phiên bản đang dùng, đồng thời thiết kế một tập dữ liệu mẫu nhỏ có kết quả tự tính trước để kiểm thử độc lập hàm đó.</p>\n",
           "explanationHtml": "<p>Đúng: Đối chiếu tài liệu chính thức và chạy ca nhỏ có kết quả tự tính để kiểm chứng độc lập.</p>\n"
         },
         {
@@ -897,7 +897,7 @@
       "id": "B1-037",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Nhóm có notebook đầy đủ output và khai báo AI, nhưng người chấm chưa thể chạy repo từ đầu trên máy khác. Theo cách chấm BTL được giới thiệu, cách chuẩn bị nào đúng?</p>\n",
+      "promptHtml": "<p>Nhóm sinh viên nộp một tệp notebook có lưu đầy đủ kết quả đầu ra và bản khai báo sử dụng AI chi tiết. Tuy nhiên, khi người chấm tải mã nguồn về một máy tính khác độc lập thì kho lưu trữ không thể chạy lại từ đầu do thiếu tệp cấu hình môi trường và thiếu hướng dẫn thực thi. Chiếu theo tiêu chuẩn nghiệm thu bài tập lớn của môn học, nhóm cần chuẩn bị sản phẩm như thế nào là đúng yêu cầu?</p>\n",
       "options": [
         {
           "key": "A",
@@ -911,7 +911,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Hoàn thiện repo để chạy test chung và chuẩn bị từng người tự giải thích.</p>\n",
+          "html": "<p>Hoàn thiện kho lưu trữ (repository) để đảm bảo toàn bộ mã nguồn có thể tái lập và chạy kiểm thử tự động từ đầu trên máy tính khác, đồng thời từng thành viên phải nắm vững toàn diện dự án để sẵn sàng tự giải thích phần việc của mình trong buổi vấn đáp.</p>\n",
           "explanationHtml": "<p>Đúng: Chuẩn bị repo chạy test chung từ đầu và để từng thành viên giải thích được phần code.</p>\n"
         },
         {
@@ -954,7 +954,7 @@
       "id": "B1-041",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một nhóm có biểu đồ rất rõ nhưng đã tự đổi các giá chưa biết thành 0 và xóa mọi giá nhỏ mà không tra nguồn. Họ kết luận “vì biểu đồ đẹp nên thị trường chắc chắn rẻ”. Cần xem lại điều gì trước hết?</p>\n",
+      "promptHtml": "<p>Một nhóm nghiên cứu xây dựng được biểu đồ trực quan hóa rất đẹp mắt và sắc nét. Tuy nhiên, trong quá trình tiền xử lý, nhóm đã tự ý thay thế tất cả các giá trị thuê phòng bị khuyết thiếu bằng số 0, đồng thời xóa bỏ toàn bộ các mức giá nhỏ mà không kiểm tra nguyên nhân từ dữ liệu gốc, rồi đưa ra kết luận: \"Biểu đồ hiển thị rất rõ ràng nên thị trường giá phòng chắc chắn rất rẻ\". Vấn đề nghiêm trọng nào cần phải được xem xét lại trước tiên?</p>\n",
       "options": [
         {
           "key": "A",
@@ -963,7 +963,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Cần xem lại quy ước tiền xử lý dữ liệu và bằng chứng cho việc sửa hoặc xóa bản ghi, vì biểu đồ rõ không thể bù đắp cho đầu vào sai.</p>\n",
+          "html": "<p>Cơ sở khoa học của quy trình xử lý dữ liệu khuyết thiếu và căn cứ thực tế của việc lọc bỏ dữ liệu, vì một biểu đồ trực quan đẹp mắt không thể cứu vãn hay hợp thức hóa việc dữ liệu đầu vào đã bị bóp méo sai lệch.</p>\n",
           "explanationHtml": "<p>Đúng: Mọi thao tác làm sạch dữ liệu như điền giá trị khuyết hoặc loại bỏ bản ghi đều phải có căn cứ rõ ràng, biểu đồ trực quan không thể bù đắp cho dữ liệu đầu vào bị sai lệch.</p>\n"
         },
         {
@@ -984,7 +984,7 @@
       "id": "B1-042",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bạn được cung cấp output của một bảng giả lập:</p>\n<div class=\"language-text vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">text</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span>shape: (12, 5)</span></span>\n<span class=\"line\"><span>Số dòng theo loại:</span></span>\n<span class=\"line\"><span>Nguyên căn     7</span></span>\n<span class=\"line\"><span>Phòng riêng    3</span></span>\n<span class=\"line\"><span>Phòng chung    2</span></span></code></pre>\n</div><p>Nhận định nào đúng ở mức đọc kết quả Bài 1?</p>\n",
+      "promptHtml": "<p>Khi kiểm tra một tập dữ liệu bảng trong Python, màn hình xuất ra thông tin tóm tắt sau:</p>\n<div class=\"language-text vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">text</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span>shape: (12, 5)</span></span>\n<span class=\"line\"><span>Số dòng theo loại:</span></span>\n<span class=\"line\"><span>Nguyên căn     7</span></span>\n<span class=\"line\"><span>Phòng riêng    3</span></span>\n<span class=\"line\"><span>Phòng chung    2</span></span></code></pre>\n</div>\n<p>Căn cứ vào chuẩn đọc cấu trúc dữ liệu bảng đã học trong Bài 1, nhận định nào sau đây là chính xác?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1003,7 +1003,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Bảng có 12 hàng, 5 cột và loại Nguyên căn có nhiều dòng nhất.</p>\n",
+          "html": "<p>Bảng dữ liệu có kết cấu gồm 12 hàng và 5 cột, trong đó loại phòng 'Nguyên căn' xuất hiện 7 lần và là nhóm chiếm số lượng bản ghi nhiều nhất.</p>\n",
           "explanationHtml": "<p>Đúng: Bảng dữ liệu có kích thước 12 hàng và 5 cột, trong đó loại chỗ ở 'Nguyên căn' xuất hiện 7 lần, là loại có số lượng bản ghi nhiều nhất trong bảng.</p>\n"
         }
       ],
@@ -1014,7 +1014,7 @@
       "id": "B1-043",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong Windows/Command Prompt có hai cửa sổ độc lập cùng đứng ở thư mục B. Cửa sổ 1 đã kích hoạt môi trường ảo A với python trỏ vào A, trong khi cửa sổ 2 đã kích hoạt môi trường ảo B với python trỏ vào B. Cửa sổ 1 cài một gói thư viện bằng lệnh <code>python -m pip install</code>, còn cửa sổ 2 chạy lệnh <code>python -m pip freeze</code>. Giả sử không có lỗi cài đặt nào xảy ra. Nhận định nào sau đây là chính xác?</p>\n",
+      "promptHtml": "<p>Trên hệ điều hành Windows, người dùng mở hai cửa sổ dòng lệnh (Command Prompt) độc lập và cả hai đều đang đứng tại cùng một thư mục <code>du_an_B</code>:*\n  - Cửa sổ 1 đã kích hoạt môi trường ảo <code>venv A</code> (lệnh <code>python</code> trỏ tới môi trường A).\n  - Cửa sổ 2 đã kích hoạt môi trường ảo <code>venv B</code> (lệnh <code>python</code> trỏ tới môi trường B).\n  *Tại Cửa sổ 1, người dùng chạy lệnh <code>python -m pip install <ten_goi></code> để cài đặt một gói thư viện mới. Ngay sau đó tại Cửa sổ 2, người dùng chạy lệnh <code>python -m pip freeze</code>. Giả sử quá trình cài đặt thành công, nhận định nào sau đây là chính xác?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1028,7 +1028,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Gói được cài ở cửa sổ 1 vào A, và lệnh freeze ở cửa sổ 2 ghi nhận chính xác các gói của B mà nó quản lý.</p>\n",
+          "html": "<p>Gói thư viện mới chỉ được cài vào môi trường ảo A, tệp danh sách của lệnh <code>pip freeze</code> tại Cửa sổ 2 chỉ phản ánh các thư viện hiện có của môi trường ảo B và hoàn toàn không xuất hiện gói vừa cài ở Cửa sổ 1.</p>\n",
           "explanationHtml": "<p>Đúng: Cửa sổ 1 cài gói vào môi trường ảo A, còn cửa sổ 2 chạy lệnh freeze chỉ liệt kê danh sách các gói của môi trường ảo B.</p>\n"
         },
         {
@@ -1044,7 +1044,7 @@
       "id": "B1-044",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Bài về nhà có nhãn mở và yêu cầu khai báo theo mẫu. Trong quá trình làm, Phúc thực sự không dùng công cụ AI nào. Điền mục khai báo thế nào?</p>\n",
+      "promptHtml": "<p>Trong một bài tập về nhà áp dụng chính sách sử dụng AI ở chế độ mở (có cung cấp sẵn biểu mẫu khai báo minh bạch), một sinh viên hoàn toàn tự lực làm bài từ đầu đến cuối và thực sự không sử dụng bất kỳ công cụ AI nào. Sinh viên đó cần hoàn thiện mục khai báo như thế nào cho đúng quy định?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1053,7 +1053,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Ghi rõ Không dùng AI theo mẫu, không cần bịa công cụ hay prompt.</p>\n",
+          "html": "<p>Ghi rõ ràng và trung thực cụm từ \"Không dùng AI\" vào mục khai báo theo đúng biểu mẫu quy định, tuyệt đối không bịa đặt tên công cụ hay câu lệnh truy vấn (prompt) để đối phó hình thức.</p>\n",
           "explanationHtml": "<p>Đúng: Ghi “Không dùng AI” trung thực theo mẫu.</p>\n"
         },
         {
@@ -1074,26 +1074,26 @@
       "id": "B1-045",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Nhóm dựng lại đúng Python và thư viện như bản đã kiểm thử. Lần chạy mới dùng file đầu vào đã cập nhật số hàng, nên KPI khác trước. Chưa có bằng chứng lỗi code. Kết luận nào hợp lý?</p>\n",
+      "promptHtml": "<p>Nhóm nghiên cứu tái lập chính xác phiên bản Python và các gói thư viện hoàn toàn trùng khớp với môi trường đã kiểm thử trước đó. Tuy nhiên, trong lần chạy này, tệp dữ liệu đầu vào đã được nhà cung cấp cập nhật thêm các bản ghi mới, dẫn đến chỉ số hiệu quả (KPI) tính ra có sự khác biệt so với kết quả cũ. Khi chưa phát hiện bất kỳ cảnh báo hay lỗi cú pháp nào trong mã nguồn, kết luận nào sau đây là hợp lý và khoa học nhất?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Chưa đủ căn cứ để kết luận lỗi, cần chủ động đối chiếu đầu vào và phép tính dù môi trường đã khớp hoàn toàn.</p>\n",
+          "html": "<p>Chưa đủ căn cứ để kết luận mã nguồn bị sai, nhóm cần rà soát lại biến động của tập dữ liệu mới và đối chiếu logic tính toán của KPI, bởi lẽ môi trường chạy giống nhau không đồng nghĩa với việc kết quả đầu ra phải giữ nguyên khi dữ liệu đầu vào đã thay đổi.</p>\n",
           "explanationHtml": "<p>Đúng: Môi trường khớp nhau không bảo đảm kết quả đầu ra giống hệt nếu tập dữ liệu đầu vào đã thay đổi số lượng bản ghi, do đó cần rà soát lại biến động dữ liệu và logic tính toán thay vì vội vàng kết luận mã nguồn bị lỗi.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>KPI khác tự chứng minh requirements.txt đã không có hiệu lực.</p>\n",
+          "html": "<p>Chỉ số KPI thay đổi tự chứng minh rằng tệp requirements.txt đã mất hiệu lực quản lý phiên bản môi trường.</p>\n",
           "explanationHtml": "<p>Sai: Vội vàng kết luận mã nguồn sai mà không kiểm tra sự thay đổi của dữ liệu đầu vào là thiếu cơ sở khoa học.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Môi trường khớp tự chứng minh KPI mới đúng, không cần xem dữ liệu.</p>\n",
+          "html": "<p>Môi trường thực thi trùng khớp chứng minh kết quả KPI mới tính ra là chính xác tuyệt đối, không cần xem xét lại dữ liệu đầu vào.</p>\n",
           "explanationHtml": "<p>Sai: Khác biệt ở dữ liệu mới không đồng nghĩa với việc phiên bản phần mềm bị xung đột ngầm.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Chỉ cần sửa KPI thành số cũ để giữ tính chạy lại, bỏ qua file đầu vào mới.</p>\n",
+          "html": "<p>Chỉ cần sửa lại giá trị KPI cho bằng với con số cũ để bảo đảm tính nhất quán của báo cáo mà không cần bận tâm về tệp dữ liệu mới.</p>\n",
           "explanationHtml": "<p>Sai: Không thể ép buộc kết quả trên tập dữ liệu mới phải trùng khớp hoàn toàn với số liệu của tập dữ liệu cũ.</p>\n"
         }
       ],
@@ -1104,26 +1104,26 @@
       "id": "B1-046",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Ghi chú Bài 1 nêu lộ trình theo số bài và hai bài kiểm tra giấy 15 phút, trong khi các đề tuần 3 được cung cấp lại ghi 20 phút và đề giữa kỳ luyện tập ghi 60 phút. Bản ôn tập nào sau đây phản ánh đúng tài liệu nguồn và lộ trình môn học?</p>\n",
+      "promptHtml": "<p>Căn cứ vào tài liệu giới thiệu môn học (Bài 1), cấu trúc lộ trình 15 bài giảng cùng kế hoạch kiểm tra đánh giá định kỳ được phân bổ như thế nào theo từng giai đoạn học tập?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Nền tảng 1–5, dữ liệu thật 6–8 và 10, kỹ thuật hiện đại 11–14, tuần 9 giữa kỳ, tuần 15 vấn đáp (coi số bài chính là số tuần).</p>\n",
+          "html": "<p>Giai đoạn 1 gồm Bài 1–3 (Nền tảng), Giai đoạn 2 gồm Bài 4–10 (Dữ liệu thực tế), Giai đoạn 3 gồm Bài 11–15 (Kỹ thuật hiện đại), trong đó tuần 8 tổ chức thi giữa kỳ và không có phần đánh giá vấn đáp.</p>\n",
           "explanationHtml": "<p>Sai: Bản này đổi lộ trình từ số bài sang tuần và không giữ rõ chênh lệch thời lượng trong tài liệu mẫu.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Nền tảng 1–5, dữ liệu thật 6–8 và 10, kỹ thuật hiện đại 11–14, bài 9 thi giữa kỳ và bài 15 vấn đáp, đồng thời ghi chú riêng biệt sự khác nhau về thời lượng đề mẫu.</p>\n",
+          "html": "<p>Lộ trình gồm ba giai đoạn: Giai đoạn 1 (Bài 1–5: Nền tảng công cụ và cấu trúc dữ liệu), Giai đoạn 2 (Bài 6–8 và Bài 10: Xử lý dữ liệu thực tế), Giai đoạn 3 (Bài 11–14: Kỹ thuật hiện đại, trực quan hóa và kể chuyện dữ liệu), trong đó Bài 9 là mốc thi giữa kỳ và Bài 15 là mốc đánh giá vấn đáp bài tập lớn.</p>\n",
           "explanationHtml": "<p>Đúng: Ghi nhận lộ trình theo số bài học, đồng thời giữ riêng thời lượng 15 phút trong ghi chú và 20/60 phút ở các đề mẫu.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Nền tảng 1–3, dữ liệu thật 4–10, kỹ thuật hiện đại 11–14 (bài 9 thi giữa kỳ và bài 15 vấn đáp), đồng thời giữ riêng biệt sự khác nhau về thời lượng.</p>\n",
+          "html": "<p>Toàn bộ 15 bài học được xếp dàn trải theo tuần độc lập, không phân chia theo giai đoạn chuyên đề và chỉ tổ chức một kỳ thi trắc nghiệm duy nhất vào cuối kỳ.</p>\n",
           "explanationHtml": "<p>Sai: Các giai đoạn nền tảng, dữ liệu thật và kỹ thuật hiện đại bị chia sai số bài.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Nền tảng 1–5, dữ liệu thật 6–8 và 10, kỹ thuật hiện đại 11–14, đồng thời tự ý đổi kiểm tra thường xuyên thành 20 phút và thi giữa kỳ thành 60 phút.</p>\n",
+          "html": "<p>Giai đoạn 1 gồm Bài 1–7 (Học máy cơ bản), Giai đoạn 2 gồm Bài 8–15 (Học máy nâng cao), trong đó thời lượng thi kiểm tra định kỳ được ấn định cố định 60 phút cho mọi bài kiểm tra.</p>\n",
           "explanationHtml": "<p>Sai: Không thể tự gán 20 phút hoặc 60 phút thành thời lượng chính thức khi tài liệu mẫu có khác biệt cần ghi riêng.</p>\n"
         }
       ],
@@ -1170,7 +1170,7 @@
       "id": "B1-051",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một sinh viên đã học Tư duy tính toán muốn dùng môn này làm nền cho Học máy/Khoa học dữ liệu. Lựa chọn nào phù hợp vị trí và mục tiêu Bài 1?</p>\n",
+      "promptHtml": "<p>Một sinh viên đã hoàn thành học phần tiên quyết 'Tư duy tính toán' (hoặc Nhập môn lập trình với Python) và muốn học tốt môn 'Lập trình xử lý dữ liệu' để làm bàn đạp vững chắc cho các môn chuyên ngành tiếp theo như Học máy (Machine Learning) và Khoa học dữ liệu (Data Science). Định hướng học tập nào sau đây phản ánh đúng vị trí và mục tiêu của môn học được giới thiệu trong Bài 1?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1179,7 +1179,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Dùng Python cơ bản đã có để xây kỹ năng xử lý dữ liệu với hệ sinh thái công cụ, phục vụ các môn sau.</p>\n",
+          "html": "<p>Kế thừa nền tảng lập trình Python cơ bản đã có để rèn luyện kỹ năng xử lý dữ liệu chuyên sâu với hệ sinh thái công cụ hiện đại (NumPy, Pandas, Matplotlib, Seaborn...), làm tiền đề vững chắc cho việc xây dựng các mô hình phân tích và học máy ở các môn học sau.</p>\n",
           "explanationHtml": "<p>Đúng: Dùng nền tảng Python cơ bản để học xử lý dữ liệu và hệ sinh thái công cụ, làm nền cho môn sau.</p>\n"
         },
         {
@@ -1200,7 +1200,7 @@
       "id": "B1-052",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Xét một phiên làm việc sạch của notebook: Đầu tiên thực thi tuần tự ô A rồi ô B. Sau đó, nội dung ô A được chỉnh sửa nhưng chưa được bấm chạy lại, tiếp tục thực thi ô B một lần. Cuối cùng, thực thi ô A với nội dung mới rồi thực thi ô B.</p>\n<p>Cell A ban đầu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">a </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 2</span></span></code></pre>\n</div><p>Cell B:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(a </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">*</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 3</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div><p>A sau khi sửa:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">a </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 50</span></span></code></pre>\n</div><p>Hai lần chạy B sau thời điểm sửa A in gì?</p>\n",
+      "promptHtml": "<p>Trong một phiên notebook mới khởi động (kernel sạch), bạn có hai ô mã nguồn. Đầu tiên thực thi tuần tự ô A rồi ô B. Sau đó, nội dung ô A được chỉnh sửa nhưng chưa bấm chạy lại, và tiếp tục thực thi ô B thêm một lần. Cuối cùng, thực thi ô A với nội dung mới rồi thực thi ô B lần nữa.</p>\n<p>Ô A ban đầu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">a </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 2</span></span></code></pre>\n</div>\n<p>Ô B:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(a </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">*</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 3</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div>\n<p>Ô A sau khi sửa đổi:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">a </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 50</span></span></code></pre>\n</div>\n<p>Kết quả in ra ở hai lần chạy ô B sau thời điểm chỉnh sửa ô A lần lượt là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1214,7 +1214,7 @@
         },
         {
           "key": "C",
-          "html": "<p><code>6, 150</code></p>\n",
+          "html": "<p>In ra lần lượt là: 6 và 150 (lần đầu in ra 6 do ô A chưa chạy lại nên biến <code>a</code> trong bộ nhớ vẫn bằng 2, lần sau in ra 150 sau khi ô A mới đã được thực thi và cập nhật <code>a = 50</code>).</p>\n",
           "explanationHtml": "<p>Đúng: Khi sửa cell A mà chưa thực thi lại thì giá trị của biến <code>a</code> trong bộ nhớ vẫn là 2, khiến lần chạy B kế tiếp in ra 6. Chỉ sau khi cell A mới được chạy thì <code>a</code> mới cập nhật thành 50, giúp lần chạy B cuối cùng in ra 150.</p>\n"
         },
         {
@@ -1230,7 +1230,7 @@
       "id": "B1-053",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong môi trường Linux/Bash chưa kích hoạt môi trường ảo, lệnh <code>python3.12</code> được xác nhận là Python 3.12.3 có sẵn trên hệ thống. Kho lưu trữ có tệp <code>.python-version</code> ghi giá trị 3.11.9 (không có công cụ quản lý phiên bản tự động). Bạn thực thi lệnh sau:</p>\n<div class=\"language-bash vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">bash</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\">python3.12</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> -m</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> venv</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> .venv</span></span></code></pre>\n</div><p>Venv mới được tạo sử dụng phiên bản Python nào, và điều gì còn cần kiểm tra?</p>\n",
+      "promptHtml": "<p>Trên hệ điều hành Linux (dùng shell Bash), terminal chưa kích hoạt môi trường ảo nào. Lệnh <code>python3.12</code> được xác nhận đích xác là Python 3.12.3 có sẵn trên máy. Thư mục dự án có tệp <code>.python-version</code> ghi giá trị 3.11.9 (hệ thống không cài công cụ quản lý phiên bản tự động như pyenv). Bạn thực thi lệnh sau:</p>\n<div class=\"language-bash vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">bash</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\">python3.12</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> -m</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> venv</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> .venv</span></span></code></pre>\n</div>\n<p>Môi trường ảo mới được tạo sẽ sử dụng phiên bản Python nào, và điều gì cần lưu ý về tệp <code>.python-version</code>?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1249,7 +1249,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Dùng 3.12.3, đồng thời cần làm rõ sự khác biệt so với bản ghi 3.11.9 trong tệp .python-version vì tệp này không tự đổi Python.</p>\n",
+          "html": "<p>Sử dụng Python 3.12.3 (theo đúng tệp thực thi được chỉ định trong lệnh), người dùng cần lưu ý sự không đồng nhất với tệp ghi chú <code>.python-version</code> (3.11.9) vì tệp này không thể tự động thay đổi phiên bản khi không có công cụ quản lý chuyên dụng.</p>\n",
           "explanationHtml": "<p>Đúng: Môi trường ảo mới sử dụng Python 3.12.3, cần ghi nhận khác biệt so với tệp <code>.python-version</code> đang ghi 3.11.9.</p>\n"
         }
       ],
@@ -1260,11 +1260,11 @@
       "id": "B1-054",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong bài kiểm tra trên lớp đóng, một bạn không mở chatbot nhưng bật trợ lý AI gợi code và chỉ chấp nhận vài từ gợi ý. Bạn dự định khai báo ở cuối bài. Nhận định nào đúng?</p>\n",
+      "promptHtml": "<p>Trong một bài kiểm tra trên lớp áp dụng quy chế thi đóng (nghiêm cấm mọi tài liệu và công cụ AI), một sinh viên không mở trình duyệt trò chuyện với chatbot, nhưng vẫn để tính năng tự động gợi ý mã nguồn của trợ lý AI (như GitHub Copilot) và chấp nhận một vài từ gợi ý khi gõ mã. Sinh viên dự định sẽ ghi khai báo việc này ở cuối bài nộp. Chiếu theo quy chế học thuật, nhận định nào sau đây là hoàn toàn chính xác?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Vẫn tính là sử dụng AI ở chế độ đóng vì mức độ gợi ý ít hoặc việc khai báo sau đó không cấp quyền sử dụng.</p>\n",
+          "html": "<p>Hành vi này vẫn cấu thành vi phạm quy chế thi đóng, vì trợ lý gợi ý mã nguồn vẫn là một công cụ AI, việc chỉ nhận gợi ý vài từ hoặc khai báo sau giờ thi đều không thể hợp thức hóa cho việc sử dụng AI trong phòng thi đóng.</p>\n",
           "explanationHtml": "<p>Đúng: Trợ lý AI gợi code vẫn là công cụ AI, chế độ thi đóng nghiêm cấm sử dụng dù mức độ gợi ý ít.</p>\n"
         },
         {
@@ -1290,7 +1290,7 @@
       "id": "B1-055",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Ở bài mở, AI đề xuất một hàm bạn chưa biết cho bảng ds để đếm loại phòng, nhưng tài liệu thư viện theo phiên bản đang dùng chưa được kiểm tra. Cách nào phù hợp bước đọc hiểu/kiểm chứng?</p>\n",
+      "promptHtml": "<p>Khi làm một bài tập thực hành ở chế độ mở, mô hình AI đề xuất sử dụng một hàm lạ mà bạn chưa từng biết để đếm số lượng từng loại phòng trong bảng dữ liệu <code>ds</code>. Tuy nhiên, bạn chưa kiểm tra xem tài liệu kỹ thuật chính thức của phiên bản thư viện hiện tại có hỗ trợ hàm này hay không. Phương án hành động nào sau đây là chuẩn mực và đúng quy trình đọc hiểu - kiểm chứng độc lập?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1309,7 +1309,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Tra tài liệu chính thức đúng phiên bản, hiểu cách dùng rồi thử mẫu nhỏ với số đếm dự đoán trước.</p>\n",
+          "html": "<p>Tra cứu tài liệu kỹ thuật chính thức của thư viện theo đúng phiên bản đang cài đặt để hiểu rõ nguyên lý hoạt động, sau đó chạy thử nghiệm trên một mẫu dữ liệu nhỏ có kết quả dự đoán trước để đối chiếu tính chính xác.</p>\n",
           "explanationHtml": "<p>Đúng: Quy trình chuẩn mực khi tiếp nhận giải pháp từ AI là tra cứu tài liệu kỹ thuật chính thức theo đúng phiên bản đang cài đặt, nắm vững cơ chế hoạt động rồi tiến hành thử nghiệm trên mẫu dữ liệu nhỏ có kết quả tính tay trước.</p>\n"
         }
       ],
@@ -1320,11 +1320,11 @@
       "id": "B1-056",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một bài làm tại nhà chưa có nhãn. Bạn chỉ muốn AI viết nháp phần mô tả kết quả, không viết code và hứa sẽ tự sửa lời văn. Trước khi dùng, cách nào đúng?</p>\n",
+      "promptHtml": "<p>Một bài tập làm tại nhà chưa được giảng viên công bố rõ quy định về việc sử dụng AI (chưa có nhãn mở hay đóng). Một sinh viên chỉ muốn dùng AI để tạo bản nháp cho phần diễn giải bằng lời văn mô tả kết quả (không nhờ AI viết mã nguồn) và dự định sẽ tự chỉnh sửa lại câu từ trước khi nộp. Trước khi tiến hành sử dụng AI, hành động nào sau đây là đúng đắn nhất?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Hỏi giảng viên để xác nhận chế độ vì việc hỗ trợ diễn đạt văn bản cũng phải xem xét quyền sử dụng và khai báo minh bạch.</p>\n",
+          "html": "<p>Chủ động liên hệ hỏi giảng viên phụ trách để xác nhận rõ quy chế của bài tập, vì việc nhờ AI hỗ trợ diễn giải văn bản học thuật vẫn thuộc phạm vi can thiệp của AI và bắt buộc phải xem xét tính hợp lệ cũng như nghĩa vụ khai báo minh bạch.</p>\n",
           "explanationHtml": "<p>Đúng: Khi chưa có thông tin rõ ràng về nhãn quy định của hoạt động, người học cần chủ động liên hệ giảng viên để xác nhận phạm vi được phép, đồng thời việc hỗ trợ diễn đạt văn bản vẫn cần được xem xét và khai báo minh bạch.</p>\n"
         },
         {
