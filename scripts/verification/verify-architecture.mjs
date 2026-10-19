@@ -57,7 +57,10 @@ for await (const file of files(path.join(root, 'src'))) {
   const source = await readFile(file, 'utf8')
   if (relative.endsWith('/content.json')) {
     const manifest = JSON.parse(source)
-    for (const sourceFile of [manifest.notes, manifest.slides, manifest.cheatsheet, ...manifest.topics.map(t => t.source), ...manifest.fragments, ...(manifest.assets || []).filter(a => !a.external).map(a => a.source)]) {
+    // Explicit null means this course omits an optional panel. Missing fields,
+    // unresolved assets and empty paths still fail verification.
+    const panels = [manifest.slides, manifest.cheatsheet].filter(file => file !== null)
+    for (const sourceFile of [manifest.notes, ...panels, ...manifest.topics.map(t => t.source), ...manifest.fragments, ...(manifest.assets || []).filter(a => !a.external).map(a => a.source)]) {
       if (!sourceFile) { errors.push(`${relative}: Unresolved local asset`); continue }
       if (!await exists(path.join(root, sourceFile))) errors.push(`${relative}: Missing content source ${sourceFile}`)
     }

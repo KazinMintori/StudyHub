@@ -64,7 +64,10 @@ async function inspect(file, parents = [], publishedFile = file) {
 }
 
 let count = 0
-for (const course of courseCatalog) {
+const requestedCourse = process.argv.find(arg => arg.startsWith('--course='))?.slice('--course='.length)
+const indexedCourses = requestedCourse ? courseCatalog.filter(course => course.id === requestedCourse) : courseCatalog
+if (requestedCourse && !indexedCourses.length) throw new Error(`Unknown course: ${requestedCourse}`)
+for (const course of indexedCourses) {
   for (const lesson of [...course.lessons, ...(course.review ? [course.review] : [])]) {
     const review = lesson.slug === course.review?.slug
     const notes = review
@@ -84,8 +87,8 @@ for (const course of courseCatalog) {
       course: course.id, lecture: lesson.slug,
       route: review ? `/${course.id}/on-luyen/tong-hop` : `/${course.id}/bai-giang/${lesson.slug}`,
       notes, topics,
-      slides: review ? 'docs/.vitepress/math-ai-review-course.mjs' : course.id.startsWith('vat-ly-') ? 'docs/.vitepress/physics-courses.mjs' : `src/content/courses/${course.id}/lectures/${lesson.slug}/slides.mjs`,
-      cheatsheet: 'docs/.vitepress/cheatsheets.mjs',
+      slides: course.presentation === 'philosophy' ? null : review ? 'docs/.vitepress/math-ai-review-course.mjs' : course.id.startsWith('vat-ly-') ? 'docs/.vitepress/physics-courses.mjs' : `src/content/courses/${course.id}/lectures/${lesson.slug}/slides.mjs`,
+      cheatsheet: course.presentation === 'philosophy' ? null : 'docs/.vitepress/cheatsheets.mjs',
       prerequisites: lesson.prerequisites || [],
       fragments: [...new Set(indexed.fragments)],
       examples: indexed.examples, exercises: indexed.exercises, solutions: indexed.solutions,

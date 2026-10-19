@@ -40,6 +40,7 @@ for (const course of courseCatalog) {
   }
   await writeFile(path.join(dir,'index.md'),`---\nlayout: page\ntitle: ${JSON.stringify(course.name)}\ncourse: ${course.id}\nsection: overview\noutline: false\n---\n\n<CourseOverview />\n`)
   await writeFile(path.join(dir,'notes/index.md'),redirect(`/${course.id}/`))
+  if (course.presentation === 'philosophy') continue
   await writeFile(path.join(dir,'slides.md'),course.id==='xu-ly-du-lieu'
     ? redirect(`/${course.id}/bai-giang/${course.lessons[0].slug}.html#slides`)
     : `---\nlayout: page\nsearch: false\ncourse: ${course.id}\n---\n\n# Slides\n\nSlides not available because the Creator too lazy\n`)

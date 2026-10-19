@@ -68,7 +68,7 @@ const {
           <div class="course-copy">
             <h3>{{ course.name }}</h3>
           </div>
-          <span class="course-end">{{ course.lessons.length }} bài</span>
+          <span class="course-end">{{ course.lessons.length }} {{ course.presentation === 'philosophy' ? 'chương' : 'bài' }}</span>
         </a>
       </div>
       <p v-if="!visibleCourses.length" class="empty-state" role="status">Không tìm thấy học phần. Thử tên môn hoặc chủ đề khác.</p>

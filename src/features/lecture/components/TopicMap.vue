@@ -5,7 +5,7 @@ import { findLecture, lessonTopics, topicPath, topicMinutes } from '../services/
 import { studyLink } from '../../../core/routing/links.js'
 
 // Bản đồ chủ đề đặt trong Notes của trang chương. Dữ liệu lấy từ topicGroups trong catalog.
-const props = defineProps({ group: { type: Number, default: -1 } })
+const props = defineProps({ group: { type: Number, default: -1 }, showReadingTime: { type: Boolean, default: true } })
 const { frontmatter } = useData()
 const lesson = computed(() => findLecture(frontmatter.value.course, frontmatter.value.lecture))
 const numbered = computed(() => lessonTopics(lesson.value))
@@ -17,7 +17,7 @@ const total = computed(() => groups.value.reduce((sum, group) => sum + group.ite
 
 <template>
   <div v-if="lesson && groups.length" class="topic-map">
-    <p v-if="group < 0" class="topic-map-meta">{{ numbered.length }} chủ đề · tổng cộng khoảng {{ total }} phút đọc</p>
+    <p v-if="group < 0 && showReadingTime" class="topic-map-meta">{{ numbered.length }} chủ đề · tổng cộng khoảng {{ total }} phút đọc</p>
     <section v-for="item in groups" :key="item.title" class="topic-map-group">
       <h3 class="topic-map-group-title">{{ item.title }}</h3>
       <p v-if="item.description" class="topic-map-group-description">{{ item.description }}</p>
@@ -28,7 +28,7 @@ const total = computed(() => groups.value.reduce((sum, group) => sum + group.ite
             <span class="topic-map-copy">
               <span class="topic-map-title">{{ topic.title }}</span>
               <span class="topic-map-question">{{ topic.question }}</span>
-              <span class="topic-map-source">Khoảng {{ topicMinutes(frontmatter.course, frontmatter.lecture, topic.slug) }} phút</span>
+              <span v-if="showReadingTime" class="topic-map-source">Khoảng {{ topicMinutes(frontmatter.course, frontmatter.lecture, topic.slug) }} phút</span>
             </span>
           </a>
         </li>

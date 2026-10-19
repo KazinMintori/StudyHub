@@ -1,0 +1,2321 @@
+{
+  "schemaVersion": 1,
+  "id": "chuong-2-bai-2",
+  "parentBankId": "chuong-2",
+  "chapter": 2,
+  "testNumber": 2,
+  "totalTests": 8,
+  "title": "Bài kiểm tra 2",
+  "questions": [
+    {
+      "id": "Q056",
+      "kind": "quiz",
+      "prompt": "Cặp quan niệm nào đúng về nguồn gốc ý thức trong hai hình thức duy tâm?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duy tâm khách quan: ngôn ngữ có trước; duy tâm chủ quan: thế giới vật chất có trước."
+        },
+        {
+          "key": "B",
+          "text": "Duy tâm khách quan: ý niệm có trước; duy tâm chủ quan: lao động có trước."
+        },
+        {
+          "key": "C",
+          "text": "Duy tâm khách quan: ý niệm có trước; duy tâm chủ quan: cảm giác có trước."
+        },
+        {
+          "key": "D",
+          "text": "Duy tâm khách quan: bộ óc có trước; duy tâm chủ quan: cảm giác có trước."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Duy tâm khách quan: Ý niệm có trước. Duy tâm chủ quan: Cảm giác có trước.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Gán sai cả hai cơ sở."
+        },
+        {
+          "key": "B",
+          "explanation": "Lao động thuộc giải thích duy vật biện chứng."
+        },
+        {
+          "key": "D",
+          "explanation": "Bộ óc không là nguyên thể duy tâm khách quan."
+        }
+      ],
+      "takeaway": "Hai dạng duy tâm khác nhau nhưng đều đảo nguồn gốc vật chất của ý thức.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q057",
+      "kind": "quiz",
+      "prompt": "Điểm khác giữa duy vật tầm thường và vật hoạt luận được nguồn nêu là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Một bên vật chất hóa ý thức; một bên coi ý thức là thuộc tính của mọi vật chất."
+        },
+        {
+          "key": "B",
+          "text": "Một bên phủ nhận bộ óc; một bên thừa nhận nguồn gốc xã hội của ý thức."
+        },
+        {
+          "key": "C",
+          "text": "Một bên thừa nhận ngôn ngữ; một bên coi lao động tạo ý thức thuần túy."
+        },
+        {
+          "key": "D",
+          "text": "Một bên coi ý thức là ý niệm; một bên coi ý thức là cảm giác tiên thiên."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Một bên vật chất hóa ý thức. Một bên coi ý thức là thuộc tính của mọi vật chất. Ví dụ óc tiết ý thức khác mở rộng ý thức ra mọi trình độ vật chất.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Gán sai hai nội dung."
+        },
+        {
+          "key": "C",
+          "explanation": "Không phản ánh tiêu chí đang so sánh."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là hai kiểu duy tâm."
+        }
+      ],
+      "takeaway": "Không suy từ nguồn gốc vật chất thành ý thức cũng là vật chất.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q058",
+      "kind": "quiz",
+      "prompt": "Vì sao cả tách rời lẫn đồng nhất ý thức với bộ óc đều sai?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bộ óc sinh học không liên quan quá trình tâm lý của con người."
+        },
+        {
+          "key": "B",
+          "text": "Bộ óc và ý thức đều không tồn tại thực nên không thể so sánh."
+        },
+        {
+          "key": "C",
+          "text": "Bộ óc là cơ quan vật chất; ý thức là chức năng của nó."
+        },
+        {
+          "key": "D",
+          "text": "Ý thức có thể thay bộ óc khi đã tích lũy đủ tri thức xã hội."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Bộ óc là cơ quan vật chất. Ý thức là chức năng của nó. Quan hệ cơ quan và chức năng không phải hai thực thể rời nhau hoặc một vật đồng nhất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phủ nhận cơ sở tự nhiên."
+        },
+        {
+          "key": "B",
+          "explanation": "Cả hai có tồn tại thực theo nghĩa khác nhau."
+        },
+        {
+          "key": "D",
+          "explanation": "Tách ý thức khỏi cơ quan vật chất."
+        }
+      ],
+      "takeaway": "Cơ sở vật chất không đồng nhất với nội dung tinh thần.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q059",
+      "kind": "quiz",
+      "prompt": "Phản ánh theo nguồn có dấu hiệu nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tái tạo đặc điểm hệ này ở hệ khác mà không cần quan hệ tác động."
+        },
+        {
+          "key": "B",
+          "text": "Tạo đặc điểm hệ này bằng ý muốn của hệ khác, không cần căn cứ."
+        },
+        {
+          "key": "C",
+          "text": "Tái tạo đặc điểm hệ này ở hệ khác qua tương tác, mang thông tin."
+        },
+        {
+          "key": "D",
+          "text": "Tạo tri thức trong mọi hệ vật chất nhờ cùng một cơ chế tư duy."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tái tạo đặc điểm hệ này ở hệ khác qua tương tác, mang thông tin. Phản ánh phụ thuộc cả hai hệ. Không phải chỉ ý thức mới phản ánh.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ điều kiện hình thành phản ánh."
+        },
+        {
+          "key": "B",
+          "explanation": "Biến phản ánh thành sáng tạo vô căn cứ."
+        },
+        {
+          "key": "D",
+          "explanation": "Đánh đồng phản ánh với ý thức."
+        }
+      ],
+      "takeaway": "Phản ánh là thuộc tính phổ biến, ý thức là trình độ đặc biệt.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q060",
+      "kind": "quiz",
+      "prompt": "Phân biệt phản ánh vô sinh và sinh học nào đúng theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vô sinh có ngôn ngữ; sinh học có cảm giác độc lập tác động."
+        },
+        {
+          "key": "B",
+          "text": "Vô sinh thụ động, chưa lựa chọn; sinh học có định hướng giúp thích nghi."
+        },
+        {
+          "key": "C",
+          "text": "Vô sinh không có phản ánh; sinh học đều đã có ý thức xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Vô sinh có tư duy trừu tượng; sinh học chỉ tái hiện dấu vết cơ học."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Vô sinh thụ động, chưa lựa chọn. Sinh học có định hướng giúp thích nghi. Khác biệt gắn trình độ tổ chức, không chỉ khác đối tượng bên ngoài.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Gán đặc tính không phù hợp."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ trình độ thấp và nâng quá mức trình độ sinh học."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo mức độ phản ánh."
+        }
+      ],
+      "takeaway": "Tăng trình độ tổ chức vật chất làm xuất hiện phản ánh khác về chất.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q061",
+      "kind": "quiz",
+      "prompt": "Dãy nào khớp cách phân tầng phản ánh sinh học trong giáo trình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thực vật: tâm lý; động vật có thần kinh: kích thích; động vật cao: phản xạ."
+        },
+        {
+          "key": "B",
+          "text": "Thực vật: phản xạ; động vật có thần kinh: ý thức; động vật cao: ngôn ngữ."
+        },
+        {
+          "key": "C",
+          "text": "Thực vật: ý thức; động vật có thần kinh: tâm lý; động vật cao: khái niệm."
+        },
+        {
+          "key": "D",
+          "text": "Thực vật: kích thích; động vật có thần kinh: phản xạ; động vật cao: tâm lý."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Thực vật: Kích thích. Động vật có thần kinh: Phản xạ. Động vật cao: Tâm lý.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo trình độ."
+        },
+        {
+          "key": "B",
+          "explanation": "Nâng phản ánh động vật thành ý thức."
+        },
+        {
+          "key": "C",
+          "explanation": "Gán tư duy trừu tượng sai cấp độ."
+        }
+      ],
+      "takeaway": "Các trình độ phản ánh sinh học gắn với mức độ tổ chức và sự phát triển của cơ quan phản ánh.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q062",
+      "kind": "quiz",
+      "prompt": "Từ việc động vật có phản xạ có điều kiện, có thể suy ra nó có ý thức như người không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không; tâm lý động vật còn mang bản năng, chưa là ý thức xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Không; vì động vật không có bất kỳ hình thức phản ánh nào."
+        },
+        {
+          "key": "C",
+          "text": "Có; mọi hình thức học được đều là ý thức phản ánh sáng tạo."
+        },
+        {
+          "key": "D",
+          "text": "Có; có bộ óc là đã đủ toàn bộ điều kiện hình thành ý thức."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Không. Tâm lý động vật còn mang bản năng, chưa là ý thức xã hội. Phản xạ có điều kiện chưa đủ dấu hiệu thực tiễn xã hội của ý thức.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Kết luận đúng nhưng lý do phủ nhận tâm lý."
+        },
+        {
+          "key": "C",
+          "explanation": "Đánh đồng học được với ý thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ nguồn gốc xã hội."
+        }
+      ],
+      "takeaway": "Không bỏ qua khác biệt về chất giữa tâm lý động vật và ý thức.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q063",
+      "kind": "quiz",
+      "prompt": "Theo mô tả bộ óc ở trang 79 của giáo trình năm 2019, nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bộ óc tồn tại phi vật chất, được nêu có khả năng hoạt động ngoài cơ thể."
+        },
+        {
+          "key": "B",
+          "text": "Bộ óc có cấu trúc đơn giản, được nêu gồm khoảng 14–15 triệu tế bào thần kinh."
+        },
+        {
+          "key": "C",
+          "text": "Bộ óc không phân khu, được nêu chỉ truyền tín hiệu mà không xử lý thông tin."
+        },
+        {
+          "key": "D",
+          "text": "Bộ óc có cấu trúc phức tạp, được nêu gồm khoảng 14–15 tỷ tế bào thần kinh."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Bộ óc có cấu trúc phức tạp, được nêu gồm khoảng 14–15 tỷ tế bào thần kinh. Đây là thông tin bản.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trái cơ sở tự nhiên."
+        },
+        {
+          "key": "B",
+          "explanation": "Sai quy mô và đặc điểm."
+        },
+        {
+          "key": "C",
+          "explanation": "Trái mô tả phân khu và xử lý."
+        }
+      ],
+      "takeaway": "Nhận định khoa học gắn thời điểm xuất bản phải giữ đúng bối cảnh.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q064",
+      "kind": "quiz",
+      "prompt": "Nguồn gốc tự nhiên và xã hội của ý thức giữ vai trò nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tự nhiên và xã hội tạo hai ý thức độc lập rồi ghép vào một người."
+        },
+        {
+          "key": "B",
+          "text": "Tự nhiên tạo đủ ý thức; xã hội chỉ đổi tên cho ý thức có sẵn."
+        },
+        {
+          "key": "C",
+          "text": "Xã hội tạo ý thức không cần bộ óc; tự nhiên chỉ cung cấp môi trường."
+        },
+        {
+          "key": "D",
+          "text": "Tự nhiên tạo tiền đề; thực tiễn xã hội trực tiếp hình thành ý thức."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tự nhiên tạo tiền đề. Thực tiễn xã hội trực tiếp hình thành ý thức. Bộ óc có năng lực phản ánh chưa tự giải thích ý thức. Cần lao động, ngôn ngữ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tách rời quá trình thống nhất."
+        },
+        {
+          "key": "B",
+          "explanation": "Biến nguồn gốc xã hội thành phụ họa."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ điều kiện cần."
+        }
+      ],
+      "takeaway": "Hai nguồn gốc thống nhất, không thay thế nhau.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q065",
+      "kind": "quiz",
+      "prompt": "Lao động góp phần hình thành ý thức qua cơ chế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tạo tri thức sẵn có trong bộ óc trước khi tiếp xúc hiện thực."
+        },
+        {
+          "key": "B",
+          "text": "Loại bỏ thế giới khách quan khỏi quá trình hình thành kinh nghiệm."
+        },
+        {
+          "key": "C",
+          "text": "Thay mọi hoạt động thần kinh bằng động tác cơ học của công cụ."
+        },
+        {
+          "key": "D",
+          "text": "Tác động làm lộ thuộc tính, từ đó phát triển hiểu biết."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tác động làm lộ thuộc tính, từ đó phát triển hiểu biết. Thực tiễn không phải tiếp nhận thụ động. Con người chủ động làm đối tượng bộc lộ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo cơ sở của nội dung."
+        },
+        {
+          "key": "B",
+          "explanation": "Phủ đối tượng phản ánh."
+        },
+        {
+          "key": "C",
+          "explanation": "Quy giản phản ánh thành cơ học."
+        }
+      ],
+      "takeaway": "Lao động là nguồn gốc xã hội trực tiếp, không chỉ tác động cơ bắp.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q066",
+      "kind": "quiz",
+      "prompt": "Theo Ăngghen được dẫn, quan hệ hình thành ngôn ngữ và lao động là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ngôn ngữ hình thành biệt lập, không liên quan trao đổi kinh nghiệm."
+        },
+        {
+          "key": "B",
+          "text": "Ngôn ngữ từ nhu cầu giao tiếp, cùng phát triển với lao động."
+        },
+        {
+          "key": "C",
+          "text": "Ngôn ngữ chỉ xuất hiện khi lao động không còn vai trò với con người."
+        },
+        {
+          "key": "D",
+          "text": "Ngôn ngữ hoàn chỉnh có trước và tự tạo ra lao động xã hội."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ngôn ngữ từ nhu cầu giao tiếp, cùng phát triển với lao động. Lao động nảy sinh nhu cầu trao đổi. Ngôn ngữ cùng thúc đẩy biến đổi bộ óc.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Cắt quan hệ xã hội."
+        },
+        {
+          "key": "C",
+          "explanation": "Trái quan hệ cùng phát triển."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo trình tự và vai trò."
+        }
+      ],
+      "takeaway": "Hai sức kích thích xã hội gắn bó trong sự hình thành ý thức.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q067",
+      "kind": "quiz",
+      "prompt": "Ngôn ngữ là vỏ vật chất của tư duy được hiểu như thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tín hiệu vật chất mang nội dung ý thức, cho tư duy hình thức biểu hiện."
+        },
+        {
+          "key": "B",
+          "text": "Ngôn ngữ là hiện tượng phi vật chất nên không gắn tiếng nói, chữ viết."
+        },
+        {
+          "key": "C",
+          "text": "Tư duy nằm trong đồ vật độc lập với chủ thể sử dụng tín hiệu."
+        },
+        {
+          "key": "D",
+          "text": "Bản thân ý thức là âm thanh nên không có nội dung tinh thần."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Tín hiệu vật chất mang nội dung ý thức, cho tư duy hình thức biểu hiện. Phương tiện có tính vật chất. Nội dung tinh thần không vì thế thành vật thể.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Phủ tính tín hiệu vật chất."
+        },
+        {
+          "key": "C",
+          "explanation": "Vật thể hóa tư duy."
+        },
+        {
+          "key": "D",
+          "explanation": "Đồng nhất phương tiện với nội dung."
+        }
+      ],
+      "takeaway": "Phân biệt vật mang tín hiệu với nội dung được biểu đạt.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q068",
+      "kind": "quiz",
+      "prompt": "Vai trò nào giữ đủ hai phương diện của ngôn ngữ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ghi chép sự kiện và loại bỏ nhu cầu tư duy độc lập."
+        },
+        {
+          "key": "B",
+          "text": "Đặt tên vật thể và tạo ra thuộc tính khách quan bằng tên gọi."
+        },
+        {
+          "key": "C",
+          "text": "Giao tiếp, tư duy trừu tượng và lưu truyền kinh nghiệm xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Truyền cảm xúc và thay thế mọi tác động thực tiễn vào thế giới."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Giao tiếp, tư duy trừu tượng và lưu truyền kinh nghiệm xã hội.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Ngược vai trò công cụ tư duy."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo quan hệ ký hiệu và đối tượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Tuyệt đối hóa khả năng tín hiệu."
+        }
+      ],
+      "takeaway": "Ngôn ngữ hỗ trợ tư duy lẫn tính xã hội lịch sử của ý thức.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q069",
+      "kind": "quiz",
+      "prompt": "Cách dùng điều kiện cần, đủ nào trung thành với giáo trình về nguồn gốc ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xã hội là điều kiện đủ nên có thể có ý thức mà không cần bộ óc người."
+        },
+        {
+          "key": "B",
+          "text": "Tự nhiên là cần; xã hội là đủ trên tiền đề tự nhiên."
+        },
+        {
+          "key": "C",
+          "text": "Hai nguồn gốc đều là điều kiện tùy chọn, chỉ cần một nguồn hình thành."
+        },
+        {
+          "key": "D",
+          "text": "Tự nhiên là điều kiện cần nên tự nó cũng là điều kiện đủ."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tự nhiên là cần. Xã hội là đủ trên tiền đề tự nhiên.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tách đủ khỏi tiền đề cần."
+        },
+        {
+          "key": "C",
+          "explanation": "Biến thống nhất thành thay thế."
+        },
+        {
+          "key": "D",
+          "explanation": "Đánh đồng hai vai trò."
+        }
+      ],
+      "takeaway": "Không suy từ chữ đủ thành độc lập với điều kiện cần.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q070",
+      "kind": "quiz",
+      "prompt": "Cặp sai lầm về bản chất ý thức nào được giáo trình phê phán?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duy tâm thừa nhận hiện thực khách quan; siêu hình đề cao sáng tạo xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Duy tâm thực thể hóa ý thức; siêu hình xem phản ánh thụ động."
+        },
+        {
+          "key": "C",
+          "text": "Duy tâm xem bộ óc là cơ quan; siêu hình coi phản ánh có mục đích."
+        },
+        {
+          "key": "D",
+          "text": "Duy tâm coi ý thức là lao động; siêu hình coi ý thức là ngôn ngữ."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Duy tâm thực thể hóa ý thức. Siêu hình xem phản ánh thụ động. Một bên cường điệu độc lập, bên kia hạ thấp sáng tạo và thực tiễn.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây không phải hai lỗi."
+        },
+        {
+          "key": "C",
+          "explanation": "Hai dấu hiệu không mô tả sai lầm ấy."
+        },
+        {
+          "key": "D",
+          "explanation": "Gán sai căn cứ."
+        }
+      ],
+      "takeaway": "Hiểu bản chất ý thức cần gắn cả phản ánh và thực tiễn.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q071",
+      "kind": "quiz",
+      "prompt": "Ý thức là hiện thực chủ quan có nghĩa gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ý thức tạo nguyên bản vì hình ảnh có thể tác động hoạt động."
+        },
+        {
+          "key": "B",
+          "text": "Hình ảnh có thực trong óc, khác nguyên bản tồn tại khách quan."
+        },
+        {
+          "key": "C",
+          "text": "Ý thức không tồn tại vì chủ quan đồng nghĩa hư vô."
+        },
+        {
+          "key": "D",
+          "text": "Ý thức là vật thể vì bất kỳ cái có thực nào cũng có cùng bản chất."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Hình ảnh có thực trong óc, khác nguyên bản tồn tại khách quan. Có thực không đồng nghĩa vật chất. Hình ảnh khác nguyên bản.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo quan hệ phản ánh."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ sự tồn tại của tinh thần."
+        },
+        {
+          "key": "D",
+          "explanation": "Đồng nhất tồn tại với vật chất."
+        }
+      ],
+      "takeaway": "Chủ quan nói kiểu tồn tại của hình ảnh, không tự nó có nghĩa sai lầm.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q072",
+      "kind": "quiz",
+      "prompt": "Cùng một đối tượng được hai chủ thể phản ánh khác nhau. Giải thích nào phù hợp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nội dung có căn cứ khách quan; kết quả còn phụ thuộc chủ thể."
+        },
+        {
+          "key": "B",
+          "text": "Mọi phản ánh đều đúng ngang nhau vì đều thuộc ý thức chủ quan."
+        },
+        {
+          "key": "C",
+          "text": "Mỗi chủ thể tạo một đối tượng vật chất bằng cảm giác của mình."
+        },
+        {
+          "key": "D",
+          "text": "Đối tượng không khách quan vì kết quả phản ánh chưa đồng nhất."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Nội dung có căn cứ khách quan. Kết quả còn phụ thuộc chủ thể. Khác biệt không xóa nguyên bản.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Bỏ khả năng đúng sai."
+        },
+        {
+          "key": "C",
+          "explanation": "Duy tâm hóa hình ảnh."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ khác hình ảnh phủ tồn tại đối tượng."
+        }
+      ],
+      "takeaway": "Tính chủ quan của hình thức phản ánh không thay tiêu chí khách quan.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q073",
+      "kind": "quiz",
+      "prompt": "Phản ánh và sáng tạo quan hệ thế nào trong ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sáng tạo thay hiện thực làm nguồn nội dung cho mọi phản ánh."
+        },
+        {
+          "key": "B",
+          "text": "Phản ánh là sao chép thụ động nên sáng tạo chỉ thuộc máy móc."
+        },
+        {
+          "key": "C",
+          "text": "Sáng tạo từ hiện thực, trên cơ sở thực tiễn có mục đích."
+        },
+        {
+          "key": "D",
+          "text": "Phản ánh chấm dứt khi sáng tạo bắt đầu vì hai quá trình loại nhau."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Sáng tạo từ hiện thực, trên cơ sở thực tiễn có mục đích. Ý thức chủ động cải biến hình ảnh. Sáng tạo không phải thoát ly căn cứ khách quan.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo căn cứ."
+        },
+        {
+          "key": "B",
+          "explanation": "Phủ đặc trưng ý thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Tách hai mặt bản chất."
+        }
+      ],
+      "takeaway": "Sáng tạo là đặc trưng bản chất nhưng thống nhất với phản ánh.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q074",
+      "kind": "quiz",
+      "prompt": "Khâu trao đổi thông tin của phản ánh ý thức có đặc điểm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hai chiều, tạo thuộc tính khách quan theo mong muốn chủ thể."
+        },
+        {
+          "key": "B",
+          "text": "Một chiều, chỉ truyền từ tư duy ra đối tượng không cần tiếp nhận."
+        },
+        {
+          "key": "C",
+          "text": "Hai chiều, có định hướng và chọn lọc thông tin cần thiết."
+        },
+        {
+          "key": "D",
+          "text": "Một chiều, không định hướng và ghi mọi tác động như nhau."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Hai chiều, có định hướng và chọn lọc thông tin cần thiết. Chủ thể hoạt động với đối tượng. Không tiếp nhận tất cả một cách ngang nhau.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm lựa chọn với tạo hiện thực."
+        },
+        {
+          "key": "B",
+          "explanation": "Bỏ cơ sở thông tin khách quan."
+        },
+        {
+          "key": "D",
+          "explanation": "Mô hình phản ánh thụ động."
+        }
+      ],
+      "takeaway": "Chọn lọc thông tin không đồng nghĩa tùy tiện gán thuộc tính.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q075",
+      "kind": "quiz",
+      "prompt": "Mô hình hóa đối tượng trong quá trình phản ánh sáng tạo là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ghi nguyên mọi dấu vết mà không có xử lý thông tin của chủ thể."
+        },
+        {
+          "key": "B",
+          "text": "Chuyển đối tượng thành mô hình tinh thần để xử lý trong tư duy."
+        },
+        {
+          "key": "C",
+          "text": "Chuyển ý tưởng thành sản phẩm vật chất bằng hành động thực tiễn."
+        },
+        {
+          "key": "D",
+          "text": "Tạo vật thể trong bộ óc có cùng kiểu tồn tại với đối tượng ngoài óc."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Chuyển đối tượng thành mô hình tinh thần để xử lý trong tư duy. Khâu này tạo mô hình ý tưởng. Chưa là sản phẩm vật chất ngoài hiện thực.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ tính tích cực."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là khâu hiện thực hóa."
+        },
+        {
+          "key": "D",
+          "explanation": "Vật thể hóa hình ảnh."
+        }
+      ],
+      "takeaway": "Mô hình tinh thần và thực hiện mô hình là hai khâu khác nhau.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q076",
+      "kind": "quiz",
+      "prompt": "Khâu chuyển mô hình tư duy ra hiện thực đòi hỏi gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ tăng độ rõ của tưởng tượng để mô hình tự thành vật thể."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ công bố mô hình vì lời nói tự làm thay đổi mọi đối tượng."
+        },
+        {
+          "key": "C",
+          "text": "Chờ đối tượng tự phù hợp vì đã nhận thức đúng mô hình."
+        },
+        {
+          "key": "D",
+          "text": "Hoạt động thực tiễn với nội dung, phương pháp, công cụ phù hợp."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Hoạt động thực tiễn với nội dung, phương pháp, công cụ phù hợp. Ý tưởng phi vật chất không tự thành vật. Thực tiễn là khâu trung gian quyết định.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ phương thức thực tiễn."
+        },
+        {
+          "key": "B",
+          "explanation": "Đánh đồng công bố với thực hiện."
+        },
+        {
+          "key": "C",
+          "explanation": "Biến nhận thức đúng thành kết quả tự động."
+        }
+      ],
+      "takeaway": "Sáng tạo tinh thần định hướng nhưng không thay sáng tạo thực tiễn.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q077",
+      "kind": "quiz",
+      "prompt": "Vì sao tri thức được coi là nhân tố cốt lõi của ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vì tri thức tự tạo vật chất mà không cần thực tiễn."
+        },
+        {
+          "key": "B",
+          "text": "Vì có tri thức thì không cần tình cảm, niềm tin hay ý chí."
+        },
+        {
+          "key": "C",
+          "text": "Hiểu biết là nền cải tạo, là cách tồn tại cơ bản của ý thức."
+        },
+        {
+          "key": "D",
+          "text": "Vì mọi tri thức có sẵn từ khi sinh, không cần học tập."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Hiểu biết là nền cải tạo, là cách tồn tại cơ bản của ý thức. Không có hiểu biết, ý thức trở nên trống rỗng. Điều này không xóa yếu tố khác.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo quan hệ cơ bản."
+        },
+        {
+          "key": "B",
+          "explanation": "Tuyệt đối hóa một thành tố."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ quá trình hình thành."
+        }
+      ],
+      "takeaway": "Vai trò cốt lõi không đồng nghĩa bao trùm toàn bộ kết cấu.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q078",
+      "kind": "quiz",
+      "prompt": "Cách phân biệt tri thức và ý thức nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tri thức chỉ có cảm tính; ý thức chỉ có lý tính và niềm tin."
+        },
+        {
+          "key": "B",
+          "text": "Tri thức chỉ thuộc tự nhiên; ý thức chỉ thuộc quan hệ xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Tri thức là cốt lõi; tình cảm, niềm tin, ý chí cũng thuộc ý thức."
+        },
+        {
+          "key": "D",
+          "text": "Tri thức là toàn bộ ý thức; tình cảm nằm ngoài đời sống tinh thần."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tri thức là cốt lõi. Tình cảm, niềm tin, ý chí cũng thuộc ý thức. Quan hệ bộ phận và chỉnh thể. Các lĩnh vực, cấp độ tri thức không thay quan hệ ấy.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trộn kết cấu với cấp độ tri thức."
+        },
+        {
+          "key": "B",
+          "explanation": "Chia sai đối tượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Đồng nhất bộ phận với toàn bộ."
+        }
+      ],
+      "takeaway": "Không đồng nhất các lớp cấu trúc với các cách phân loại tri thức.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q079",
+      "kind": "quiz",
+      "prompt": "Tình cảm trong kết cấu ý thức được hiểu như thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự nỗ lực huy động tiềm năng để trực tiếp vượt mọi trở ngại."
+        },
+        {
+          "key": "B",
+          "text": "Sự hiểu biết thuần khái niệm, không thể tham gia định hướng hoạt động."
+        },
+        {
+          "key": "C",
+          "text": "Sự phản ánh không có đối tượng, tồn tại bên ngoài các quan hệ xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Phản ánh quan hệ với người, thế giới và thúc đẩy hoạt động."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Phản ánh quan hệ với người, thế giới và thúc đẩy hoạt động.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây nghiêng về ý chí."
+        },
+        {
+          "key": "B",
+          "explanation": "Nhầm với tri thức và bỏ động lực."
+        },
+        {
+          "key": "C",
+          "explanation": "Tách khỏi cơ sở phản ánh."
+        }
+      ],
+      "takeaway": "Tình cảm có vai trò động lực, không thay hiểu biết đối tượng.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q080",
+      "kind": "quiz",
+      "prompt": "Niềm tin bền vững trong đoạn kết cấu ý thức hình thành từ đâu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự lặp một mệnh đề đến mức không còn chịu kiểm tra."
+        },
+        {
+          "key": "B",
+          "text": "Sự tuân theo số đông mà không cần tiếp xúc hiện thực."
+        },
+        {
+          "key": "C",
+          "text": "Sự thay thế tri thức bằng cảm xúc mạnh trong một thời điểm."
+        },
+        {
+          "key": "D",
+          "text": "Sự hòa quyện tri thức, tình cảm và trải nghiệm thực tiễn."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Sự hòa quyện tri thức, tình cảm và trải nghiệm thực tiễn. Tin không được mô tả như cảm xúc biệt lập.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm bền vững với bất khả sửa."
+        },
+        {
+          "key": "B",
+          "explanation": "Lấy đồng thuận thay cơ sở."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ nền hiểu biết và trải nghiệm."
+        }
+      ],
+      "takeaway": "Niềm tin có cơ sở khác lòng tin tách tri thức và thực tiễn.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q081",
+      "kind": "quiz",
+      "prompt": "Đặc điểm nào trực tiếp chỉ ý chí theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kỹ năng tiềm tàng tự hoạt động không cần kiểm soát trực tiếp."
+        },
+        {
+          "key": "B",
+          "text": "Hệ thống hiểu biết phản ánh các thuộc tính của đối tượng."
+        },
+        {
+          "key": "C",
+          "text": "Thái độ cảm xúc phản ánh quan hệ với người và thế giới."
+        },
+        {
+          "key": "D",
+          "text": "Nỗ lực huy động tiềm năng vượt trở ngại, đạt mục đích."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Nỗ lực huy động tiềm năng vượt trở ngại, đạt mục đích. Tiêu chí là cố gắng, quyết tâm, huy động năng lực.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là tiềm thức."
+        },
+        {
+          "key": "B",
+          "explanation": "Đây là tri thức."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là tình cảm."
+        }
+      ],
+      "takeaway": "Ý chí cần gắn tri thức và điều kiện, không thay thế chúng.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q082",
+      "kind": "quiz",
+      "prompt": "Nhận rõ quan hệ các lớp cấu trúc ý thức dẫn tới yêu cầu nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Học tập và rèn luyện đồng bộ tri thức, tình cảm, niềm tin, ý chí."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ rèn thói quen vì ý thức không có vai trò điều chỉnh."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ tích lũy thông tin vì mọi yếu tố khác tự xuất hiện đầy đủ."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ tăng nhiệt tình vì hiểu biết có thể thay bằng quyết tâm."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Học tập và rèn luyện đồng bộ tri thức, tình cảm, niềm tin, ý chí. Các thành tố liên hệ. Chỉ tăng một mặt không đáp ứng phát triển kết cấu.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Phủ vai trò ý thức."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa tri thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Tách ý chí, tình cảm khỏi tri thức."
+        }
+      ],
+      "takeaway": "Bồi dưỡng ý thức là phát triển những mặt liên hệ của nó.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q083",
+      "kind": "quiz",
+      "prompt": "Tự ý thức khác ý thức về đối tượng bên ngoài ở điểm nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hướng tới kỹ năng tự động mà không cần đánh giá bản thân."
+        },
+        {
+          "key": "B",
+          "text": "Hướng tới bản thân bằng cách gạt bỏ mọi liên hệ với người khác."
+        },
+        {
+          "key": "C",
+          "text": "Nhận thức bản thân trong quan hệ, tự đánh giá và điều chỉnh."
+        },
+        {
+          "key": "D",
+          "text": "Hướng tới phản ứng bản năng không chịu lý trí kiểm soát."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Nhận thức bản thân trong quan hệ, tự đánh giá và điều chỉnh. Chủ thể nhận biết vị trí, mạnh yếu.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm với tiềm thức."
+        },
+        {
+          "key": "B",
+          "explanation": "Rơi vào cái tôi trừu tượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm với vô thức."
+        }
+      ],
+      "takeaway": "Tự ý thức vẫn là sản phẩm của chủ thể trong quan hệ xã hội.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q084",
+      "kind": "quiz",
+      "prompt": "Phát biểu nào đúng về phạm vi tự ý thức theo giáo trình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cá nhân tự ý thức đầy đủ khi đứng ngoài mọi quan hệ xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Có ở cá nhân lẫn nhóm, về vị trí, lợi ích và lý tưởng."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ cộng đồng có tự ý thức vì cá nhân không thể tự đánh giá."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ cá nhân có tự ý thức vì cộng đồng không có bất kỳ nhận thức nào."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Có ở cá nhân lẫn nhóm, về vị trí, lợi ích và lý tưởng. Không chỉ cái tôi cá nhân.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phủ bản chất xã hội."
+        },
+        {
+          "key": "C",
+          "explanation": "Xóa phạm vi cá nhân."
+        },
+        {
+          "key": "D",
+          "explanation": "Thu hẹp phạm vi."
+        }
+      ],
+      "takeaway": "Không đồng nhất tự ý thức với cái tôi biệt lập.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q085",
+      "kind": "quiz",
+      "prompt": "Dấu hiệu nào phân biệt tiềm thức trong bản nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Một quan điểm được công bố nhưng chưa ai có thể hiểu nội dung."
+        },
+        {
+          "key": "B",
+          "text": "Ý thức đang chủ động tự đánh giá vị trí và năng lực của bản thân."
+        },
+        {
+          "key": "C",
+          "text": "Một hình ảnh sự vật hiện lên do đang trực tiếp tác động giác quan."
+        },
+        {
+          "key": "D",
+          "text": "Tri thức đã có gần thành kỹ năng, hoạt động không cần kiểm soát trực tiếp."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tri thức đã có gần thành kỹ năng, hoạt động không cần kiểm soát trực tiếp. Không chỉ phản ứng bản năng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không phải tiêu chí tiềm thức."
+        },
+        {
+          "key": "B",
+          "explanation": "Đây là tự ý thức."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây thuộc nhận thức cảm tính."
+        }
+      ],
+      "takeaway": "Tiềm thức không phải mọi cái con người chưa biết.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q086",
+      "kind": "quiz",
+      "prompt": "Vai trò tiềm thức trong tư duy khoa học được nguồn giải thích thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giảm quá tải khi lặp thao tác, giữ độ chính xác cần thiết."
+        },
+        {
+          "key": "B",
+          "text": "Chuyển mọi vấn đề mới thành phản xạ không điều kiện có sẵn."
+        },
+        {
+          "key": "C",
+          "text": "Loại bỏ nhu cầu học vì kỹ năng xuất hiện không cần tích lũy."
+        },
+        {
+          "key": "D",
+          "text": "Bảo đảm mọi phán đoán khoa học đúng dù thiếu kiểm nghiệm."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Giảm quá tải khi lặp thao tác, giữ độ chính xác cần thiết. Tri thức đã gần thành kỹ năng hỗ trợ tư duy. Không thay quá trình nghiên cứu.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đồng nhất kỹ năng học được với bản năng."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ lịch sử hình thành tri thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Tuyệt đối hóa độ chính xác."
+        }
+      ],
+      "takeaway": "Tự động hóa thao tác có ích trong giới hạn đã rèn luyện.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q087",
+      "kind": "quiz",
+      "prompt": "Vô thức được nguồn nhận diện bằng dấu hiệu nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mọi hoạt động vật lý ở đồ vật không có bộ óc người."
+        },
+        {
+          "key": "B",
+          "text": "Quyết định có ý thức sau khi so sánh mục đích và phương tiện."
+        },
+        {
+          "key": "C",
+          "text": "Hiện tượng tâm lý ngoài điều khiển lý trí trong một lúc nhất định."
+        },
+        {
+          "key": "D",
+          "text": "Tri thức chưa học nhưng được truyền nguyên vẹn qua ý niệm tuyệt đối."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Hiện tượng tâm lý ngoài điều khiển lý trí trong một lúc nhất định. Dấu hiệu là trạng thái không kiểm soát. Không phải không có đời sống tâm lý.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không thuộc tâm lý con người."
+        },
+        {
+          "key": "B",
+          "explanation": "Trái tiêu chí ngoài lý trí."
+        },
+        {
+          "key": "D",
+          "explanation": "Duy tâm hóa nguồn gốc."
+        }
+      ],
+      "takeaway": "Vô thức vẫn nằm trong đời sống con người xã hội có ý thức.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q088",
+      "kind": "quiz",
+      "prompt": "Theo đoạn vô thức, nhóm nào gồm các biểu hiện và chức năng được nguồn nêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cảm giác, tri giác; bảo đảm mọi nhận thức đã đúng bản chất."
+        },
+        {
+          "key": "B",
+          "text": "Giấc mơ, nói nhịu; giải tỏa ức chế, cân bằng tinh thần."
+        },
+        {
+          "key": "C",
+          "text": "Khái niệm, phán đoán; chứng minh quy luật bằng suy luận lôgíc."
+        },
+        {
+          "key": "D",
+          "text": "Mục tiêu, kế hoạch; chỉ huy có ý thức mọi thao tác thực tiễn."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Giấc mơ và nói nhịu là những ví dụ về vô thức. Việc phân tích vô thức gắn với vấn đề giải tỏa ức chế và cân bằng hoạt động tinh thần, khác với những thao tác tư duy được thực hiện có chủ đích.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trộn giai đoạn và tuyệt đối hóa."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là hình thức lý tính."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là điều chỉnh có chủ đích."
+        }
+      ],
+      "takeaway": "Cần phân biệt hiện tượng tâm lý không được ý thức trực tiếp kiểm soát với sự điều chỉnh có chủ đích.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q089",
+      "kind": "quiz",
+      "prompt": "Thái độ nào đúng với vai trò vô thức theo giáo trình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có tác dụng giáo dục, khoa học, nghệ thuật; ý thức vẫn chủ đạo."
+        },
+        {
+          "key": "B",
+          "text": "Coi vô thức quyết định ý thức vì hoạt động tầng sâu có tác dụng."
+        },
+        {
+          "key": "C",
+          "text": "Coi vô thức biệt lập với xã hội nên không thể điều chỉnh."
+        },
+        {
+          "key": "D",
+          "text": "Coi vô thức vô giá trị vì con người có thể suy nghĩ có chủ đích."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Có tác dụng giáo dục, khoa học, nghệ thuật. Ý thức vẫn chủ đạo. Không trao quyền quyết định cho vô thức.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Từ có vai trò suy thành quyết định."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ quan hệ với ý thức và thế giới."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ nhận vai trò được nêu."
+        }
+      ],
+      "takeaway": "Tôn trọng vai trò không có nghĩa tuyệt đối hóa một cấp độ.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q090",
+      "kind": "quiz",
+      "prompt": "Theo riêng lập luận về trí tuệ nhân tạo trong giáo trình năm 2019, điểm phân biệt được nhấn mạnh là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Máy không hỗ trợ trí óc vì công cụ chỉ có thể thay sức cơ bắp."
+        },
+        {
+          "key": "B",
+          "text": "Máy mô phỏng thao tác; ý thức gắn sáng tạo và thực tiễn xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Máy tạo bộ óc người vì phần mềm tồn tại trước lịch sử tự nhiên."
+        },
+        {
+          "key": "D",
+          "text": "Máy và người cùng bản chất vì đều có thể thực hiện một số thao tác."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Máy mô phỏng thao tác. Ý thức gắn sáng tạo và thực tiễn xã hội.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phủ điều."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo nguồn gốc và lịch sử."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ tương đồng chức năng suy thành đồng nhất bản chất."
+        }
+      ],
+      "takeaway": "Không dùng luận điểm năm 2019 làm tuyên bố thực nghiệm về mọi hệ AI hiện tại.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q091",
+      "kind": "quiz",
+      "prompt": "Vai trò tích cực nào của máy thông minh được giáo trình năm 2019 thừa nhận?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xóa cơ sở sinh học của ý thức vì mô phỏng được thao tác tư duy."
+        },
+        {
+          "key": "B",
+          "text": "Thay toàn bộ thực tiễn xã hội để con người không cần hoạt động."
+        },
+        {
+          "key": "C",
+          "text": "Tạo mọi giá trị mà không có vai trò sáng tạo của con người."
+        },
+        {
+          "key": "D",
+          "text": "Hỗ trợ trí óc, giúp khắc phục một số giới hạn con người."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Hỗ trợ trí óc, giúp khắc phục một số giới hạn con người.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Suy luận vượt nội dung."
+        },
+        {
+          "key": "B",
+          "explanation": "Tuyệt đối hóa khả năng hỗ trợ."
+        },
+        {
+          "key": "C",
+          "explanation": "Xóa chủ thể sáng tạo."
+        }
+      ],
+      "takeaway": "Vai trò công cụ không đồng nghĩa đồng nhất với chủ thể có ý thức.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q092",
+      "kind": "quiz",
+      "prompt": "Vì sao khẳng định vai trò ý thức thực chất là khẳng định vai trò con người?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Con người chỉ là bộ óc tách khỏi lịch sử tự nhiên và xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Con người mang ý thức và thực hiện sáng tạo trong hoạt động."
+        },
+        {
+          "key": "C",
+          "text": "Ý thức tồn tại trước và tạo ra con người để có hình thức vật chất."
+        },
+        {
+          "key": "D",
+          "text": "Con người không cần điều kiện thể chất khi có tinh thần sáng tạo."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Con người mang ý thức và thực hiện sáng tạo trong hoạt động. Ý thức không hoạt động như thực thể rời chủ thể. Sức mạnh biểu hiện qua con người.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thu hẹp chủ thể."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo quan hệ nguồn gốc."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ mặt tự nhiên."
+        }
+      ],
+      "takeaway": "Chăm lo ý thức gắn chăm lo chủ thể con người.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q093",
+      "kind": "quiz",
+      "prompt": "Yêu cầu phát triển con người ở phần kết mục ý thức là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ phát triển tinh thần vì thể chất không thuộc điều kiện ý thức."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ tăng động cơ vì kiến thức có thể hình thành sau mọi hành động."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ phát triển chuyên môn vì phẩm chất không liên quan hoạt động."
+        },
+        {
+          "key": "D",
+          "text": "Chăm lo thể chất, tinh thần và bồi dưỡng người có cả đức, tài."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Chăm lo thể chất, tinh thần và bồi dưỡng người có cả đức, tài.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ cơ sở vật chất của con người."
+        },
+        {
+          "key": "B",
+          "explanation": "Tách quyết tâm khỏi năng lực."
+        },
+        {
+          "key": "C",
+          "explanation": "Cắt một mặt."
+        }
+      ],
+      "takeaway": "Phát triển nhân lực cần xem con người toàn diện.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q094",
+      "kind": "quiz",
+      "prompt": "Trong phần vận dụng ở trang 88, quan hệ nào được giáo trình nhấn mạnh?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đời sống tinh thần tự xây nền kinh tế nên không cần nguồn lực vật chất."
+        },
+        {
+          "key": "B",
+          "text": "Phát triển nhân lực chỉ cần thay tên mô hình tổ chức hiện có."
+        },
+        {
+          "key": "C",
+          "text": "Xây nền tảng kinh tế, môi trường để phát triển tinh thần và con người."
+        },
+        {
+          "key": "D",
+          "text": "Giáo dục lý luận có thể thay mọi hoạt động sản xuất và xây dựng xã hội."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Xây nền tảng kinh tế, môi trường để phát triển tinh thần và con người. Điều kiện hiện thực làm nền phát triển chủ thể.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo và tuyệt đối hóa vai trò tinh thần."
+        },
+        {
+          "key": "B",
+          "explanation": "Hình thức thay thế điều kiện nội dung."
+        },
+        {
+          "key": "D",
+          "explanation": "Đánh tráo vai trò giáo dục."
+        }
+      ],
+      "takeaway": "Giữ vận dụng trong mức luận điểm Chương II đã trình bày.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q095",
+      "kind": "quiz",
+      "prompt": "Sau nhiều tháng tập, Minh gõ bàn phím đúng mà ít phải nhìn từng phím; đồng thời Minh tự nhận ra mình yếu lập luận và đặt kế hoạch sửa. Hai hiện tượng tương ứng là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kỹ năng gõ thuộc tri giác; tự đánh giá thuộc phản xạ không điều kiện."
+        },
+        {
+          "key": "B",
+          "text": "Kỹ năng gõ thuộc vô thức bản năng; tự đánh giá thuộc phản ánh vật lý."
+        },
+        {
+          "key": "C",
+          "text": "Kỹ năng gõ thuộc tiềm thức; tự đánh giá và điều chỉnh thuộc tự ý thức."
+        },
+        {
+          "key": "D",
+          "text": "Kỹ năng gõ thuộc tự ý thức; tự đánh giá và điều chỉnh thuộc tiềm thức."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Kỹ năng gõ thuộc tiềm thức. Tự đánh giá và điều chỉnh thuộc tự ý thức. Kỹ năng từ rèn luyện khác nhận thức hướng vào chính mình. Thông tin phân biệt hai cấp độ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trộn hình thức cảm tính và bản năng."
+        },
+        {
+          "key": "B",
+          "explanation": "Bỏ lịch sử học kỹ năng và vai trò tự nhận thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo hai tiêu chí."
+        }
+      ],
+      "takeaway": "Chọn cấp độ bằng cơ chế hoạt động, không chỉ dấu hiệu tự động.",
+      "group": "C",
+      "groupTitle": "Nguồn gốc, bản chất, kết cấu ý thức"
+    },
+    {
+      "id": "Q096",
+      "kind": "quiz",
+      "prompt": "Hạn chế chung mà Luận cương về Phoiơbắc đặt ra để khắc phục trong quan hệ vật chất–ý thức là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duy vật trực quan đề cao sáng tạo; duy tâm xem bộ óc quyết định ý thức."
+        },
+        {
+          "key": "B",
+          "text": "Duy vật trực quan thiếu thực tiễn; duy tâm phát triển mặt năng động một cách trừu tượng."
+        },
+        {
+          "key": "C",
+          "text": "Duy vật trực quan thiếu vật thể; duy tâm thiếu mọi khái niệm về tinh thần."
+        },
+        {
+          "key": "D",
+          "text": "Duy vật trực quan phủ thế giới; duy tâm xem thực tiễn là cơ sở khách quan."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Duy vật trực quan thiếu thực tiễn. Duy tâm phát triển mặt năng động một cách trừu tượng. Cần gắn hoạt động chủ thể với hiện thực cảm tính.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Gán nội dung duy vật cho duy tâm."
+        },
+        {
+          "key": "C",
+          "explanation": "Gán thiếu sót sai đối tượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo lập trường."
+        }
+      ],
+      "takeaway": "Khắc phục cả trực quan thụ động và năng động thoát ly thực tiễn.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q097",
+      "kind": "quiz",
+      "prompt": "Sai lầm thực tiễn nào phù hợp với lập trường duy tâm ở mục quan hệ vật chất–ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thừa nhận quan hệ hai chiều nhưng phân biệt vai trò của mỗi phía."
+        },
+        {
+          "key": "B",
+          "text": "Cường điệu ý muốn, hành động bất chấp điều kiện và quy luật khách quan."
+        },
+        {
+          "key": "C",
+          "text": "Thừa nhận vật chất có trước nhưng phủ ý thức có tác dụng trở lại."
+        },
+        {
+          "key": "D",
+          "text": "Nhấn điều kiện thực tế và dùng tri thức tìm cách tác động phù hợp."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Cường điệu ý muốn, hành động bất chấp điều kiện và quy luật khách quan. Ý thức bị xem có trước sinh vật chất. Trong hành động dẫn duy ý chí.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là duy vật biện chứng."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là giới hạn duy vật siêu hình."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là kết hợp khách quan và chủ quan."
+        }
+      ],
+      "takeaway": "Phát huy chủ quan phải dựa tiền đề khách quan.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q098",
+      "kind": "quiz",
+      "prompt": "Dấu hiệu nào phân biệt duy vật siêu hình với duy vật biện chứng về ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nhấn vật chất quyết định một chiều, bỏ độc lập tương đối và tác động trở lại."
+        },
+        {
+          "key": "B",
+          "text": "Phân biệt bản chất ý thức với cơ quan vật chất mang ý thức."
+        },
+        {
+          "key": "C",
+          "text": "Đặt ý thức làm nguồn gốc sinh ra thế giới vật chất bên ngoài."
+        },
+        {
+          "key": "D",
+          "text": "Thừa nhận ý thức phản ánh và định hướng thực tiễn trên cơ sở vật chất."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Nhấn vật chất quyết định một chiều, bỏ độc lập tương đối và tác động trở lại. Chỉ thừa nhận có trước chưa đủ. Phép biện chứng khôi phục mặt năng động.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đây là yêu cầu đúng."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là duy tâm."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là quan hệ biện chứng."
+        }
+      ],
+      "takeaway": "Không biến tôn trọng khách quan thành thái độ trông chờ.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q099",
+      "kind": "quiz",
+      "prompt": "Cách diễn đạt nào giữ đúng tính bất đối xứng của quan hệ vật chất–ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vật chất quyết định; ý thức chỉ đi theo và không tham gia biến đổi hiện thực."
+        },
+        {
+          "key": "B",
+          "text": "Ý thức và vật chất cùng quyết định nhau theo cùng một nghĩa nguồn gốc."
+        },
+        {
+          "key": "C",
+          "text": "Vật chất quyết định; ý thức tác động qua thực tiễn, độc lập tương đối."
+        },
+        {
+          "key": "D",
+          "text": "Ý thức quyết định; vật chất chỉ cung cấp hình ảnh cho ý thức có trước."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Vật chất quyết định. Ý thức tác động qua thực tiễn, độc lập tương đối. Hai chiều có vai trò khác nhau. Tác động trở lại không thành tính thứ nhất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ chiều tác động trở lại."
+        },
+        {
+          "key": "B",
+          "explanation": "Xóa khác biệt vai trò."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo quan hệ nguồn gốc."
+        }
+      ],
+      "takeaway": "Quan hệ biện chứng không đồng nghĩa vai trò ngang nhau.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q100",
+      "kind": "quiz",
+      "prompt": "Theo riêng trang 90 của bản giáo trình, cơ sở vật chất quyết định nguồn gốc ý thức được trình bày thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Con người tồn tại ngoài tiến hóa, được nêu cách đây 3–7 nghìn năm."
+        },
+        {
+          "key": "B",
+          "text": "Tiến hóa tự nhiên tạo người, theo nguồn khoảng 3–7 triệu năm; ý thức gắn bộ óc."
+        },
+        {
+          "key": "C",
+          "text": "Con người ra đời do ý thức có trước, được nêu cách đây 3–7 triệu năm."
+        },
+        {
+          "key": "D",
+          "text": "Con người được ngôn ngữ tạo từ hư vô, được nêu cách đây 3–7 trăm năm."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ý thức có cơ sở vật chất ở bộ óc người, còn sự hình thành con người gắn với quá trình tiến hóa tự nhiên. Không thể đảo quan hệ ấy thành ý thức tạo ra bộ óc hay giới tự nhiên.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Sai cơ sở và mốc."
+        },
+        {
+          "key": "C",
+          "explanation": "Giữ số nhưng đảo quan hệ."
+        },
+        {
+          "key": "D",
+          "explanation": "Sai cả nội dung lẫn mốc."
+        }
+      ],
+      "takeaway": "Giải thích nguồn gốc ý thức cần gắn bộ óc người với sự phát triển của giới tự nhiên.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q101",
+      "kind": "quiz",
+      "prompt": "Vật chất quyết định nội dung ý thức thể hiện trực tiếp ở luận điểm nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ý thức là cơ quan vật chất điều khiển trực tiếp quá trình thần kinh."
+        },
+        {
+          "key": "B",
+          "text": "Ý thức thay đổi cùng một tốc độ với mọi thay đổi vật chất."
+        },
+        {
+          "key": "C",
+          "text": "Hiện thực, chủ yếu thực tiễn xã hội, cung cấp nội dung phản ánh."
+        },
+        {
+          "key": "D",
+          "text": "Ý thức không có sáng tạo vì nội dung có nguồn từ hiện thực."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Hiện thực, chủ yếu thực tiễn xã hội, cung cấp nội dung phản ánh. Ý thức là hình ảnh. Sự phong phú của thực tiễn làm phong phú nội dung.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm nội dung với cơ quan."
+        },
+        {
+          "key": "B",
+          "explanation": "Máy móc hóa vận động."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ có nguồn gốc suy sai thành thụ động."
+        }
+      ],
+      "takeaway": "Nội dung có cơ sở khách quan và được chủ thể xử lý sáng tạo.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q102",
+      "kind": "quiz",
+      "prompt": "Vì sao thực tiễn được dùng để giải thích vật chất quyết định bản chất ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hoạt động vật chất cải tạo thế giới làm phản ánh người tự giác, sáng tạo."
+        },
+        {
+          "key": "B",
+          "text": "Thực tiễn xóa vai trò bộ óc nên ý thức không còn cơ sở tự nhiên."
+        },
+        {
+          "key": "C",
+          "text": "Thực tiễn là hoạt động thuần tinh thần khiến ý thức có trước vật chất."
+        },
+        {
+          "key": "D",
+          "text": "Thực tiễn chỉ ghi dấu bên ngoài nên ý thức không xử lý thông tin."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Hoạt động vật chất cải tạo thế giới làm phản ánh người tự giác, sáng tạo. Không giản lược thành sao chụp.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Tách hai nguồn gốc."
+        },
+        {
+          "key": "C",
+          "explanation": "Định nghĩa sai thực tiễn."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ tính chủ động."
+        }
+      ],
+      "takeaway": "Bản chất sáng tạo của ý thức có cơ sở trong hoạt động vật chất xã hội.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q103",
+      "kind": "quiz",
+      "prompt": "Vật chất đổi thì sớm muộn ý thức đổi có cho phép kết luận chúng đổi đồng thời không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không; chiều quyết định không xóa nhịp vận động riêng của ý thức."
+        },
+        {
+          "key": "B",
+          "text": "Không; vì ý thức tự quyết nguồn gốc và không còn phụ thuộc vật chất."
+        },
+        {
+          "key": "C",
+          "text": "Có; ý thức không có quy luật vận động nào của riêng mình."
+        },
+        {
+          "key": "D",
+          "text": "Có; tính quyết định đòi mỗi biến đổi vật chất kèm biến đổi ý thức cùng lúc."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Không. Chiều quyết định không xóa nhịp vận động riêng của ý thức. Từ sớm muộn không suy ra tức khắc. Độc lập tương đối cho phép nhanh, chậm khác nhau.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đúng phủ đồng thời nhưng sai căn cứ."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ độc lập tương đối."
+        },
+        {
+          "key": "D",
+          "explanation": "Đánh đồng quyết định với đồng bộ."
+        }
+      ],
+      "takeaway": "Giữ chiều quyết định và hình thức biểu hiện không máy móc.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q104",
+      "kind": "quiz",
+      "prompt": "Biểu hiện nào được mục này dùng cho vai trò quyết định trong đời sống xã hội?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kinh tế tách chính trị, vật chất tách tinh thần, tồn tại tách ý thức xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Chính trị sinh ra kinh tế, tinh thần sinh ra vật chất, ý thức sinh ra tồn tại xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Kinh tế và tư tưởng có cùng vai trò nguồn gốc vì đều ảnh hưởng xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Kinh tế đối với chính trị, đời sống vật chất đối với tinh thần, tồn tại xã hội đối với ý thức xã hội."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Kinh tế đối với chính trị, đời sống vật chất đối với tinh thần, tồn tại xã hội đối với ý thức xã hội. Không yêu cầu các quy luật chuyên sâu Chương III.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đổi quyết định thành không liên hệ."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo chiều toàn bộ."
+        },
+        {
+          "key": "C",
+          "explanation": "Xóa vai trò khác nhau."
+        }
+      ],
+      "takeaway": "Dùng đúng chiều quan hệ đã nêu trong Chương II.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q105",
+      "kind": "quiz",
+      "prompt": "Ngoài vấn đề cái có trước, quan hệ bộ óc và ý thức minh họa điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự đối lập buộc ý thức tồn tại trước khi hình thành bộ óc."
+        },
+        {
+          "key": "B",
+          "text": "Sự đối lập mất hết ý nghĩa vì ý thức là một loại tế bào thần kinh."
+        },
+        {
+          "key": "C",
+          "text": "Đối lập tương đối giữa thực thể vật chất và thuộc tính của nó."
+        },
+        {
+          "key": "D",
+          "text": "Sự đối lập tuyệt đối chứng minh bộ óc không tham gia ý thức."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Đối lập tương đối giữa thực thể vật chất và thuộc tính của nó. Ý thức khác bản chất nhưng không tách cơ quan vật chất. Không là hai thực thể độc lập.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo nguồn gốc."
+        },
+        {
+          "key": "B",
+          "explanation": "Đồng nhất thuộc tính phản ánh với mô thần kinh."
+        },
+        {
+          "key": "D",
+          "explanation": "Mở rộng tuyệt đối sang mọi quan hệ."
+        }
+      ],
+      "takeaway": "Tính tương đối không phủ vai trò quyết định của vật chất.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q106",
+      "kind": "quiz",
+      "prompt": "Biểu hiện tính độc lập tương đối của ý thức là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có vai trò riêng; có thể trực tiếp tạo vật chất bằng hình ảnh tinh thần."
+        },
+        {
+          "key": "B",
+          "text": "Có quy luật riêng, có thể biến đổi khác nhịp với hiện thực."
+        },
+        {
+          "key": "C",
+          "text": "Có nguồn gốc riêng; có thể tồn tại mà không cần bộ óc và xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Có nội dung riêng; có thể đúng mà không phản ánh đối tượng khách quan."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Có quy luật riêng, có thể biến đổi khác nhịp với hiện thực.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ trung gian thực tiễn."
+        },
+        {
+          "key": "C",
+          "explanation": "Biến tương đối thành tuyệt đối."
+        },
+        {
+          "key": "D",
+          "explanation": "Cắt quan hệ phản ánh."
+        }
+      ],
+      "takeaway": "Độc lập tương đối không có nghĩa độc lập về nguồn gốc.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q107",
+      "kind": "quiz",
+      "prompt": "Lý luận trở thành lực lượng vật chất khi thâm nhập quần chúng được hiểu thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lý luận tạo được mọi kết quả bất kể phương tiện và hoàn cảnh."
+        },
+        {
+          "key": "B",
+          "text": "Lý luận đổi bản chất thành vật thể ngay khi nhiều người biết câu chữ."
+        },
+        {
+          "key": "C",
+          "text": "Lý luận định hướng, động viên hoạt động của con người để biến đổi hiện thực."
+        },
+        {
+          "key": "D",
+          "text": "Lý luận làm hoạt động thực tiễn trở nên không cần thiết khi đã phổ biến."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Lý luận định hướng, động viên hoạt động của con người để biến đổi hiện thực. Quần chúng hành động là lực lượng vật chất. Bản thân ý tưởng không trực tiếp biến vật.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Vượt giới hạn khách quan."
+        },
+        {
+          "key": "B",
+          "explanation": "Vật thể hóa lý luận."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ phương thức tác động."
+        }
+      ],
+      "takeaway": "Ý thức tác động thông qua chủ thể và hoạt động thực tiễn.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q108",
+      "kind": "quiz",
+      "prompt": "Tiêu chí phân biệt tác động tích cực và tiêu cực của ý thức trong đoạn nguồn là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Độ đúng của phản ánh và tác dụng định hướng hành động."
+        },
+        {
+          "key": "B",
+          "text": "Mức phổ biến trong số đông và số lần nhắc lại một quan điểm."
+        },
+        {
+          "key": "C",
+          "text": "Mức cảm xúc của người phát biểu và độ quyết liệt của ngôn từ."
+        },
+        {
+          "key": "D",
+          "text": "Mức độc lập với thực tiễn và khả năng bỏ qua điều kiện."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Độ đúng của phản ánh và tác dụng định hướng hành động. Ý thức định hướng mục tiêu, phương pháp. Sai lệch có thể dẫn thất bại.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Phổ biến không bảo đảm đúng."
+        },
+        {
+          "key": "C",
+          "explanation": "Thái độ không thay nội dung."
+        },
+        {
+          "key": "D",
+          "explanation": "Thoát ly không tạo tác động đúng."
+        }
+      ],
+      "takeaway": "Nhiệt tình phải đi cùng nhận thức đúng và hành động phù hợp.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q109",
+      "kind": "quiz",
+      "prompt": "Vai trò ý thức tăng trong bối cảnh giáo trình có làm nó vượt tiền đề vật chất không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không; sáng tạo vẫn chịu giới hạn điều kiện và năng lực chủ thể."
+        },
+        {
+          "key": "B",
+          "text": "Không; vì ý thức vốn không tham gia hoạt động thực tiễn nào."
+        },
+        {
+          "key": "C",
+          "text": "Có; khi lý luận được chấp nhận thì quy luật khách quan ngừng tác động."
+        },
+        {
+          "key": "D",
+          "text": "Có; tri thức trở nên quan trọng thì có thể bỏ qua nguồn lực hiện có."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Không. Sáng tạo vẫn chịu giới hạn điều kiện và năng lực chủ thể. Vai trò tăng không đảo chiều quyết định. Phải dựa tiền đề xác định.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đúng kết luận nhưng phủ vai trò."
+        },
+        {
+          "key": "C",
+          "explanation": "Đồng thuận không xóa quy luật."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ quan trọng suy thành không giới hạn."
+        }
+      ],
+      "takeaway": "Phân biệt tăng vai trò với thay thế cơ sở vật chất.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q110",
+      "kind": "quiz",
+      "prompt": "Tôn trọng khách quan trước hết yêu cầu gì khi đặt mục tiêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Căn cứ thực tế, tiền đề vật chất hiện có và quy luật của đối tượng."
+        },
+        {
+          "key": "B",
+          "text": "Căn cứ mong muốn, rồi lựa các dữ kiện thuận để hợp thức hóa."
+        },
+        {
+          "key": "C",
+          "text": "Căn cứ khó khăn, rồi bỏ hoạt động vì kết quả do khách quan định sẵn."
+        },
+        {
+          "key": "D",
+          "text": "Căn cứ ý kiến uy tín, rồi xem mọi điều kiện là yếu tố phụ."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Căn cứ thực tế, tiền đề vật chất hiện có và quy luật của đối tượng. Mục tiêu chủ quan phải có cơ sở. Không thể lấy mong muốn làm bằng chứng.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đảo vai trò căn cứ."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm tôn trọng với thụ động."
+        },
+        {
+          "key": "D",
+          "explanation": "Uy tín không thay hiện thực."
+        }
+      ],
+      "takeaway": "Khách quan là cơ sở cho chủ động có căn cứ.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    }
+  ]
+}

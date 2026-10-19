@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "totalQuestions": 800,
+  "files": [
+    {
+      "path": "raw_materials/triet-hoc-mac-lenin/exam/01_Ngan_hang_cau_hoi_Chuong_I (1).md",
+      "sha256": "c7a85969061e39cf2eec3991da58fa39330c7fe03e37fb8928ae5b0a7465f2eb",
+      "bytes": 181373
+    },
+    {
+      "path": "raw_materials/triet-hoc-mac-lenin/exam/02_Dap_an_giai_thich_va_ma_tran_Chuong_I.md",
+      "sha256": "198b0d2814d8acc8cc75eb919524cb04f8760ae1a072fbe7b77775e32056d992",
+      "bytes": 403479
+    },
+    {
+      "path": "raw_materials/triet-hoc-mac-lenin/exam/01_Cau_hoi_Chuong_II.md",
+      "sha256": "0e0646fe2c51ce0dc6dc4d261a71aac2844ff61426a99af3971f20ee6e21ec84",
+      "bytes": 237853
+    },
+    {
+      "path": "raw_materials/triet-hoc-mac-lenin/exam/02_Dap_an_Giai_thich_Ma_tran_Chuong_II.md",
+      "sha256": "c89d3d4d86eb30de4c36e0b928c514a61b3424c9400d077b4ceed06e2c88a79e",
+      "bytes": 547427
+    }
+  ],
+  "validation": {
+    "idsComplete": true,
+    "fourOptionsPerQuestion": true,
+    "detailedAnswersMatchQuickTable": true,
+    "selectedOptionMatchesDetailedAnswer": true,
+    "threeDistractorExplanations": true,
+    "referencesAndTakeawaysPresent": true,
+    "knowledgeMatrixCrossChecked": true,
+    "wordingRewritten": false,
+    "historicalAndFactualClaimsIndependentlyVerified": false
+  },
+  "chapters": [
+    {
+      "id": "chuong-1",
+      "questionCount": 360,
+      "quickAnswerCount": 360,
+      "knowledgeCount": 405,
+      "answerDistribution": {
+        "A": 90,
+        "B": 90,
+        "C": 90,
+        "D": 90
+      },
+      "questionTypes": {
+        "Lý thuyết": 288,
+        "Vận dụng": 72
+      },
+      "levels": {
+        "Nhận biết": 59,
+        "Thông hiểu": 103,
+        "Phân tích": 87,
+        "Vận dụng": 52,
+        "Đánh giá": 39,
+        "Vận dụng cao": 20
+      },
+      "groups": [
+        {
+          "id": "A",
+          "title": "Khái lược triết học và thế giới quan",
+          "count": 68
+        },
+        {
+          "id": "B",
+          "title": "Vấn đề cơ bản và các trường phái",
+          "count": 43
+        },
+        {
+          "id": "C",
+          "title": "Biện chứng và siêu hình",
+          "count": 23
+        },
+        {
+          "id": "D",
+          "title": "Ra đời và phát triển triết học Mác - Lênin",
+          "count": 174
+        },
+        {
+          "id": "E",
+          "title": "Khái niệm, đối tượng và chức năng",
+          "count": 24
+        },
+        {
+          "id": "F",
+          "title": "Vai trò của triết học và sự nghiệp đổi mới",
+          "count": 28
+        }
+      ],
+      "warnings": [],
+      "sourceCaveats": [
+        {
+          "id": "CT01",
+          "section": "II.1.a; II.1.b",
+          "detail": "Tuổi Mác khi bảo vệ luận án",
+          "pages": "29 so với 30–31",
+          "sourceCaveat": "Trang 29 ghi 24 tuổi; trang 30 ghi sinh 5/5/1818, trang 31 nhận bằng 4/1841. Các số không khớp. Không chấm theo tuổi 24; dùng riêng các mốc trực tiếp."
+        },
+        {
+          "id": "CT02",
+          "section": "II.1.d",
+          "detail": "Niên đại tác phẩm Chủ nghĩa đế quốc, giai đoạn tột cùng của chủ nghĩa tư bản",
+          "pages": "44",
+          "sourceCaveat": "Bản in ghi 1913. Chương không có mốc đối chứng độc lập; không tự sửa bằng trí nhớ, không dùng năm này quyết định đáp án. CH172 chỉ kiểm tra đóng góp."
+        },
+        {
+          "id": "CT03",
+          "section": "II.1.d",
+          "detail": "Mốc Nhà nước và cách mạng và quan hệ trước cách mạng",
+          "pages": "44–45",
+          "sourceCaveat": "Trang 44 ghi cuối năm 1917 và nói chuẩn bị cho cuộc cách mạng đang đến gần; trang 45 dùng Cách mạng Tháng Mười 1917 làm ranh giới. Quan hệ thời gian chưa nhất quán; không hỏi mốc cuối năm."
+        },
+        {
+          "id": "CT04",
+          "section": "I.1.a",
+          "detail": "Mệnh đề tất cả tác phẩm Platôn đã thất lạc",
+          "pages": "8",
+          "sourceCaveat": "Văn bản thực có mệnh đề này, đã kiểm tra ảnh trang. Không có đối chứng trong phạm vi chương để xác lập mức độ toàn bộ; để riêng, không dùng chấm điểm. CH280 chỉ kiểm tra giới hạn tư liệu tiền cổ đại."
+        },
+        {
+          "id": "CT05",
+          "section": "II.1.d",
+          "detail": "Quy thuộc riêng từng văn kiện 1930 cho từng tác giả",
+          "pages": "48",
+          "sourceCaveat": "Nguồn ghép Hồ Chí Minh và Đảng, Chính cương vắn tắt và Luận cương năm 1930 trong cùng câu. Cách viết không đủ phân định tác giả từng văn kiện; CH197 chỉ hỏi hướng đường lối và điều kiện vận dụng."
+        },
+        {
+          "id": "CT06",
+          "section": "I.1.c",
+          "detail": "Văn hóa Hy–La là tiêu chuẩn gia nhập Cộng đồng châu Âu",
+          "pages": "11",
+          "sourceCaveat": "Câu chữ không làm rõ tiêu chuẩn văn hóa hay điều kiện gia nhập có tính thể chế. Không có triển khai kiểm chứng trong chương; không dùng làm nhận định thời sự hay căn cứ đáp án."
+        }
+      ]
+    },
+    {
+      "id": "chuong-2",
+      "questionCount": 440,
+      "quickAnswerCount": 440,
+      "knowledgeCount": 580,
+      "answerDistribution": {
+        "A": 110,
+        "B": 110,
+        "C": 110,
+        "D": 110
+      },
+      "questionTypes": {
+        "Lý thuyết": 352,
+        "Vận dụng": 88
+      },
+      "levels": {
+        "Thông hiểu": 215,
+        "Nhận biết": 46,
+        "Phân tích – suy luận": 91,
+        "Vận dụng": 64,
+        "Vận dụng – phân tích": 24
+      },
+      "groups": [
+        {
+          "id": "A",
+          "title": "Phạm trù vật chất",
+          "count": 33
+        },
+        {
+          "id": "B",
+          "title": "Hình thức tồn tại và tính thống nhất vật chất",
+          "count": 29
+        },
+        {
+          "id": "C",
+          "title": "Nguồn gốc, bản chất, kết cấu ý thức",
+          "count": 43
+        },
+        {
+          "id": "D",
+          "title": "Quan hệ vật chất và ý thức",
+          "count": 21
+        },
+        {
+          "id": "E",
+          "title": "Khái quát phép biện chứng duy vật",
+          "count": 17
+        },
+        {
+          "id": "F1",
+          "title": "Nguyên lý mối liên hệ phổ biến",
+          "count": 23
+        },
+        {
+          "id": "F2",
+          "title": "Nguyên lý sự phát triển",
+          "count": 20
+        },
+        {
+          "id": "G0",
+          "title": "Khái quát phạm trù",
+          "count": 7
+        },
+        {
+          "id": "G1",
+          "title": "Cái riêng và cái chung",
+          "count": 16
+        },
+        {
+          "id": "G2",
+          "title": "Nguyên nhân và kết quả",
+          "count": 18
+        },
+        {
+          "id": "G3",
+          "title": "Tất nhiên và ngẫu nhiên",
+          "count": 15
+        },
+        {
+          "id": "G4",
+          "title": "Nội dung và hình thức",
+          "count": 16
+        },
+        {
+          "id": "G5",
+          "title": "Bản chất và hiện tượng",
+          "count": 17
+        },
+        {
+          "id": "G6",
+          "title": "Khả năng và hiện thực",
+          "count": 31
+        },
+        {
+          "id": "H",
+          "title": "Ba quy luật cơ bản",
+          "count": 59
+        },
+        {
+          "id": "I",
+          "title": "Quan niệm và nguyên tắc nhận thức",
+          "count": 21
+        },
+        {
+          "id": "J",
+          "title": "Thực tiễn và vai trò với nhận thức",
+          "count": 21
+        },
+        {
+          "id": "K",
+          "title": "Các giai đoạn nhận thức",
+          "count": 23
+        },
+        {
+          "id": "L",
+          "title": "Chân lý",
+          "count": 10
+        }
+      ],
+      "warnings": [],
+      "sourceCaveats": [
+        {
+          "id": "SOURCE-1",
+          "sourceCaveat": "Giữ cách trình bày riêng của bản nguồn: thực/hình thức phân theo căn cứ tất nhiên/ngẫu nhiên; cụ thể/trừu tượng phân theo điều kiện thực hiện hiện tại. Toàn bộ/cục bộ được nguồn ghi tiêu chí “quy mô và nhịp độ”; tức thời/dần dần theo thời gian và cơ chế. Không thay bằng hệ thuật ngữ từ giáo trình khác."
+        },
+        {
+          "id": "SOURCE-2",
+          "sourceCaveat": "Những dữ kiện gắn thời điểm được đặt trong bối cảnh bản 2019: các mốc ở trang 63, mô tả tế bào thần kinh trang 79, mốc xuất hiện con người trang 90 và quan niệm trí tuệ nhân tạo trang 87. Câu hỏi kiểm tra nội dung giáo trình, không xác nhận các phát biểu ấy là kết luận thực nghiệm cập nhật năm 2026. Ví dụ ête ở trang 65 được dùng đúng dạng mệnh đề có điều kiện, không xem là chứng minh ête tồn tại."
+        },
+        {
+          "id": "SOURCE-3",
+          "sourceCaveat": "Bản này đi thẳng vào định nghĩa phủ định biện chứng ở trang 121, không tách một định nghĩa riêng hoàn chỉnh cho phủ định nói chung. Ngân hàng kiểm tra phân biệt mất đi/phá hủy với phủ định tạo tiền đề phát triển theo chính đoạn đó; không nhập thêm định nghĩa ngoài nguồn. Tính tuyệt đối của chân lý giữ cách trình bày ở trang 141, gồm cả giới hạn giai đoạn và yêu cầu không hiểu là đã nắm trọn mọi hiện thực."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Source files are copied byte for byte. Inline Markdown emphasis is removed from display text only.",
+    "Group metadata comes from the matrix. Primary group follows the first knowledge ID in each detailed answer.",
+    "Source caveats and difficulty labels are supplied author metadata, not independent factual or psychometric verification.",
+    "No chapter III bank was supplied or generated."
+  ]
+}

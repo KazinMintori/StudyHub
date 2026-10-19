@@ -1,0 +1,260 @@
+{
+  "course": "triet-hoc-mac-lenin",
+  "lecture": "chuong-2-chu-nghia-duy-vat-bien-chung",
+  "route": "/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung",
+  "notes": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung.md",
+  "topics": [
+    {
+      "slug": "vat-chat",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat.md"
+    },
+    {
+      "slug": "y-thuc",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/y-thuc.md"
+    },
+    {
+      "slug": "vat-chat-va-y-thuc",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat-va-y-thuc.md"
+    },
+    {
+      "slug": "lien-he-va-phat-trien",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/lien-he-va-phat-trien.md"
+    },
+    {
+      "slug": "sau-cap-pham-tru",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/sau-cap-pham-tru.md"
+    },
+    {
+      "slug": "ba-quy-luat",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/ba-quy-luat.md"
+    },
+    {
+      "slug": "thuc-tien-va-nhan-thuc",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/thuc-tien-va-nhan-thuc.md"
+    },
+    {
+      "slug": "nhan-thuc-va-chan-ly",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/nhan-thuc-va-chan-ly.md"
+    }
+  ],
+  "slides": null,
+  "cheatsheet": null,
+  "prerequisites": [],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat.md",
+      "line": 97,
+      "title": "Bài 2.1. Vật chất và khả năng nhận thức"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat.md",
+      "line": 113,
+      "title": "Bài 2.2. Vận động và đứng im"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat.md",
+      "line": 129,
+      "title": "Bài 2.3. Nội dung của phạm trù vật chất"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/y-thuc.md",
+      "line": 97,
+      "title": "Bài 2.4. Ngôn ngữ và tư duy"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/y-thuc.md",
+      "line": 113,
+      "title": "Bài 2.5. Phân biệt ý thức với sản phẩm sinh lý"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/y-thuc.md",
+      "line": 129,
+      "title": "Bài 2.6. Lao động, ngôn ngữ và sự hình thành ý thức"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat-va-y-thuc.md",
+      "line": 99,
+      "title": "Bài 2.7. Sự tác động trở lại của ý thức"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat-va-y-thuc.md",
+      "line": 120,
+      "title": "Bài 2.8. Nguyên tắc phương pháp luận"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/lien-he-va-phat-trien.md",
+      "line": 103,
+      "title": "Bài 2.9. Tính khách quan của mối liên hệ"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/lien-he-va-phat-trien.md",
+      "line": 124,
+      "title": "Bài 2.10. Phát triển có phải mọi thay đổi về chất?"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/sau-cap-pham-tru.md",
+      "line": 107,
+      "title": "Bài 2.11. Cái chung và cái đơn nhất"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/sau-cap-pham-tru.md",
+      "line": 123,
+      "title": "Bài 2.12. Bản chất và hiện tượng"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/sau-cap-pham-tru.md",
+      "line": 139,
+      "title": "Bài 2.13. Tất nhiên và ngẫu nhiên trong hành động"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/ba-quy-luat.md",
+      "line": 103,
+      "title": "Bài 2.14. Quan hệ giữa lượng và chất"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/ba-quy-luat.md",
+      "line": 119,
+      "title": "Bài 2.15. Mâu thuẫn biện chứng"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/ba-quy-luat.md",
+      "line": 135,
+      "title": "Bài 2.16. Phủ định của phủ định"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/thuc-tien-va-nhan-thuc.md",
+      "line": 101,
+      "title": "Bài 2.17. Thực tiễn và thực tế"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/thuc-tien-va-nhan-thuc.md",
+      "line": 117,
+      "title": "Bài 2.18. Các hình thức thực tiễn"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/thuc-tien-va-nhan-thuc.md",
+      "line": 133,
+      "title": "Bài 2.19. Vai trò của thực tiễn đối với nhận thức"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/nhan-thuc-va-chan-ly.md",
+      "line": 99,
+      "title": "Bài 2.20. Hai giai đoạn của nhận thức"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/nhan-thuc-va-chan-ly.md",
+      "line": 115,
+      "title": "Bài 2.21. Các tính chất của chân lý"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat.md",
+      "line": 103,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat.md",
+      "line": 119,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat.md",
+      "line": 135,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/y-thuc.md",
+      "line": 103,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/y-thuc.md",
+      "line": 119,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/y-thuc.md",
+      "line": 135,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat-va-y-thuc.md",
+      "line": 110,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/vat-chat-va-y-thuc.md",
+      "line": 131,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/lien-he-va-phat-trien.md",
+      "line": 114,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/lien-he-va-phat-trien.md",
+      "line": 130,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/sau-cap-pham-tru.md",
+      "line": 113,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/sau-cap-pham-tru.md",
+      "line": 129,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/sau-cap-pham-tru.md",
+      "line": 145,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/ba-quy-luat.md",
+      "line": 109,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/ba-quy-luat.md",
+      "line": 125,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/ba-quy-luat.md",
+      "line": 141,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/thuc-tien-va-nhan-thuc.md",
+      "line": 107,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/thuc-tien-va-nhan-thuc.md",
+      "line": 123,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/thuc-tien-va-nhan-thuc.md",
+      "line": 144,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/nhan-thuc-va-chan-ly.md",
+      "line": 105,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-2-chu-nghia-duy-vat-bien-chung/nhan-thuc-va-chan-ly.md",
+      "line": 121,
+      "title": "Lời giải: Đáp án và giải thích"
+    }
+  ],
+  "assets": []
+}

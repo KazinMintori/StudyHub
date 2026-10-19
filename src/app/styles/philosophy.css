@@ -1,0 +1,6 @@
+.philosophy-layout .main > .vp-doc { display: block !important; }
+.philosophy-layout .vp-doc h2 { font-family: var(--font-read); text-wrap: balance; }
+.philosophy-layout .vp-doc .custom-block.exercise { margin-top: var(--space-5); }
+.philosophy-layout .vp-doc .custom-block :is(p, li) { overflow-wrap: anywhere; }
+.philosophy-layout .vp-doc details > summary { min-height: 44px; padding-block: var(--space-3); }
+.philosophy-exercise-view .VPDoc .aside { display: none; }

@@ -1,0 +1,148 @@
+{
+  "course": "triet-hoc-mac-lenin",
+  "lecture": "chuong-1-triet-hoc-va-vai-tro",
+  "route": "/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro",
+  "notes": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro.md",
+  "topics": [
+    {
+      "slug": "nguon-goc-triet-hoc",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md"
+    },
+    {
+      "slug": "van-de-co-ban",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md"
+    },
+    {
+      "slug": "bien-chung-va-sieu-hinh",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md"
+    },
+    {
+      "slug": "su-hinh-thanh-va-phat-trien",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md"
+    },
+    {
+      "slug": "doi-tuong-chuc-nang-vai-tro",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md"
+    }
+  ],
+  "slides": null,
+  "cheatsheet": null,
+  "prerequisites": [],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 87,
+      "title": "Bài 1.1. Nguồn gốc của triết học"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 108,
+      "title": "Bài 1.2. Ý nghĩa của triết học trong truyền thống Hy Lạp"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 96,
+      "title": "Bài 1.3. Mặt thứ nhất của vấn đề cơ bản"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 117,
+      "title": "Bài 1.4. Mặt thứ hai của vấn đề cơ bản"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 138,
+      "title": "Bài 1.5. Hai mặt của vấn đề cơ bản"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 92,
+      "title": "Bài 1.6. Nhận diện phương pháp biện chứng"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 113,
+      "title": "Bài 1.7. Các hình thức lịch sử của phép biện chứng"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 103,
+      "title": "Bài 1.8. Kế thừa và cải tạo tư tưởng"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 119,
+      "title": "Bài 1.9. Điều kiện lịch sử và bước chuyển trong triết học"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 91,
+      "title": "Bài 1.10. Hai chức năng cơ bản"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 112,
+      "title": "Bài 1.11. Phạm vi của phương pháp luận"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 98,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc.md",
+      "line": 119,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 107,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 128,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/van-de-co-ban.md",
+      "line": 144,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 103,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/bien-chung-va-sieu-hinh.md",
+      "line": 119,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 109,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/su-hinh-thanh-va-phat-trien.md",
+      "line": 125,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 102,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.md",
+      "line": 123,
+      "title": "Lời giải: Đáp án và giải thích"
+    }
+  ],
+  "assets": []
+}

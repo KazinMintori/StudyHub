@@ -1,0 +1,2321 @@
+{
+  "schemaVersion": 1,
+  "id": "chuong-2-bai-6",
+  "parentBankId": "chuong-2",
+  "chapter": 2,
+  "testNumber": 6,
+  "totalTests": 8,
+  "title": "Bài kiểm tra 6",
+  "questions": [
+    {
+      "id": "Q276",
+      "kind": "quiz",
+      "prompt": "Một quỹ hỗ trợ không cam kết tài trợ; nhóm chỉ có thể được nhận nếu tình cờ có người giới thiệu đúng lúc quỹ còn tiền. Nhóm không có cơ chế bảo đảm sự giới thiệu ấy. Xét trục thực–hình thức, đây là khả năng nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khả năng hình thức có thể được thực hiện hoặc không."
+        },
+        {
+          "key": "B",
+          "text": "Điều không thể vì một khả năng hình thức không bao giờ hiện thực hóa."
+        },
+        {
+          "key": "C",
+          "text": "Khả năng thực vì việc giới thiệu không trái tưởng tượng của nhóm."
+        },
+        {
+          "key": "D",
+          "text": "Khả năng cụ thể vì bất kỳ người quen nào cũng được coi là điều kiện đủ."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Khả năng hình thức có thể được thực hiện hoặc không. Căn cứ ngẫu nhiên. Hình thức. Không đồng nghĩa bất khả thi.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Khả năng hình thức vẫn có thể trở thành hiện thực khi có điều kiện phù hợp."
+        },
+        {
+          "key": "C",
+          "explanation": "Có thể hình dung chưa đủ tiêu chí tất nhiên."
+        },
+        {
+          "key": "D",
+          "explanation": "Chưa có căn cứ đã đủ điều kiện."
+        }
+      ],
+      "takeaway": "Không phủ nhận khả năng xảy ra chỉ vì không dùng nó làm nền kế hoạch.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q277",
+      "kind": "quiz",
+      "prompt": "Nhóm đã có đủ người, địa điểm và phương tiện cần thiết để buổi hướng dẫn được thực hiện ngay; các điều kiện cần đã được kiểm tra. Xét trục điều kiện hiện tại, khả năng này thuộc loại nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khả năng cụ thể vì hiện đã đủ điều kiện thực hiện."
+        },
+        {
+          "key": "B",
+          "text": "Khả năng hình thức chỉ vì vẫn phải có người tham gia hoạt động."
+        },
+        {
+          "key": "C",
+          "text": "Khả năng trừu tượng vì hoạt động vẫn chưa được thực hiện thành sản phẩm."
+        },
+        {
+          "key": "D",
+          "text": "Khả năng thực chỉ vì điều kiện đã sẵn đủ trong hiện tại."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Khả năng cụ thể vì hiện đã đủ điều kiện thực hiện. Đề cho đủ điều kiện cần ở hiện tại. Đúng tiêu chí cụ thể.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Sự tham gia của con người không là căn cứ hình thức."
+        },
+        {
+          "key": "C",
+          "explanation": "Chưa làm không đồng nghĩa chưa có điều kiện."
+        },
+        {
+          "key": "D",
+          "explanation": "Dùng tiêu chí cụ thể thay tiêu chí thực."
+        }
+      ],
+      "takeaway": "Đủ điều kiện hiện tại khác với đã xảy ra.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q278",
+      "kind": "quiz",
+      "prompt": "Nhóm có tiền đề mở lớp trực tuyến nhưng chưa có đường truyền; điều kiện này có thể tạo được khi hạ tầng đạt mức dự kiến. Xét trục điều kiện hiện tại, nên gọi thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khả năng hình thức vì chưa có đường truyền ở thời điểm hiện tại."
+        },
+        {
+          "key": "B",
+          "text": "Khả năng cụ thể vì nhóm có thể nói rõ tên điều kiện đang thiếu."
+        },
+        {
+          "key": "C",
+          "text": "Điều không thể vì chưa có đủ điều kiện thực hiện trong tuần này."
+        },
+        {
+          "key": "D",
+          "text": "Khả năng trừu tượng: điều kiện còn thiếu nhưng có thể hình thành sau."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Khả năng trừu tượng: Điều kiện còn thiếu nhưng có thể hình thành sau. Có tiền đề, điều kiện còn thiếu có thể xuất hiện. Đúng tiêu chí.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đổi trục điều kiện thành tất nhiên–ngẫu nhiên."
+        },
+        {
+          "key": "B",
+          "explanation": "Cụ thể không có nghĩa mô tả chi tiết."
+        },
+        {
+          "key": "C",
+          "explanation": "Chưa có hiện tại không có nghĩa bất khả thi về sau."
+        }
+      ],
+      "takeaway": "Nêu rõ cách tạo điều kiện giúp đánh giá triển vọng của khả năng trừu tượng.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q279",
+      "kind": "quiz",
+      "prompt": "Nhóm có ngân sách chắc chắn và một khoản tài trợ chưa được duyệt. Kế hoạch nào phù hợp quan hệ hiện thực–khả năng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bỏ mọi dự kiến về tài trợ vì chỉ hiện thực mới được xét trong kế hoạch."
+        },
+        {
+          "key": "B",
+          "text": "Cam kết theo nguồn đang có, dự kiến thêm phương án khi tài trợ được duyệt."
+        },
+        {
+          "key": "C",
+          "text": "Chi tiêu như đã nhận đủ tài trợ vì đó là khả năng nhóm mong muốn nhất."
+        },
+        {
+          "key": "D",
+          "text": "Đình chỉ cả phần có đủ nguồn vì một khoản tương lai chưa chắc được duyệt."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Cam kết đang có, dự kiến thêm phương án khi tài trợ được duyệt. Phân biệt đã có/chưa có. Nền hiện thực, có tính tương lai.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đúng nền hiện thực nhưng bỏ yêu cầu tính khả năng."
+        },
+        {
+          "key": "C",
+          "explanation": "Lấy khả năng thay hiện thực."
+        },
+        {
+          "key": "D",
+          "explanation": "Đánh đồng điều kiện của hai phần."
+        }
+      ],
+      "takeaway": "Dựa hiện thực không có nghĩa bỏ dự kiến khả năng.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q280",
+      "kind": "quiz",
+      "prompt": "Muốn dự báo hướng phát triển nhóm, ngoài kỹ năng và tương tác bên trong, cố vấn cần khảo sát thêm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ kỹ năng bên trong vì mọi liên hệ ngoài đều không thuộc cơ sở hình thành khả năng."
+        },
+        {
+          "key": "B",
+          "text": "Các quan hệ với hoàn cảnh ngoài đang tạo hoặc hạn chế tiền đề biến đổi."
+        },
+        {
+          "key": "C",
+          "text": "Các mong muốn không cần tiền đề vì khả năng là phạm vi tưởng tượng rộng nhất."
+        },
+        {
+          "key": "D",
+          "text": "Những khẩu hiệu được nhóm thích vì đồng thuận tự tạo điều kiện tương lai."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Các quan hệ với hoàn cảnh ngoài đang tạo hoặc hạn chế tiền đề biến đổi. Khả năng do cả tác động nội tại và quan hệ với hoàn cảnh bên ngoài nảy sinh.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đúng chú ý nội tại nhưng loại căn cứ ngoài."
+        },
+        {
+          "key": "C",
+          "explanation": "Tách khỏi hiện thực."
+        },
+        {
+          "key": "D",
+          "explanation": "Đồng thuận không thay tiền đề."
+        }
+      ],
+      "takeaway": "Tìm triển vọng trong những quan hệ thực của bản thân đối tượng.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q281",
+      "kind": "quiz",
+      "prompt": "Nhóm chọn ngay phương án đầu tiên nghe hấp dẫn, chưa khảo sát các khả năng phát triển của nhiệm vụ. Bước cần bổ sung là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chờ kết quả rồi mới xác định khả năng nào từng có cơ sở."
+        },
+        {
+          "key": "B",
+          "text": "Thực hiện đồng thời mọi ý tưởng đã nghĩ ra để khỏi bỏ sót."
+        },
+        {
+          "key": "C",
+          "text": "Cam kết mạnh hơn với phương án đầu để nó trở thành khả năng duy nhất."
+        },
+        {
+          "key": "D",
+          "text": "Xác định những khả năng có cơ sở rồi mới so sánh lựa chọn thực hiện."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Xác định những khả năng có cơ sở rồi mới so sánh lựa chọn thực hiện. Thiếu khâu nhận diện. Phải tìm khả năng trước lựa chọn.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không phục vụ lựa chọn có căn cứ trước hành động."
+        },
+        {
+          "key": "B",
+          "explanation": "Tưởng tượng không đồng nghĩa khả năng. Nguồn lực có giới hạn."
+        },
+        {
+          "key": "C",
+          "explanation": "Ý chí không xóa các khả năng khách quan khác."
+        }
+      ],
+      "takeaway": "Lựa chọn phải đặt sau việc nhận diện khả năng có thật.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q282",
+      "kind": "quiz",
+      "prompt": "Sau khi nhóm làm chủ công cụ cơ bản, khả năng tự sản xuất nội dung nâng cao xuất hiện. Cách giải thích nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khả năng nâng cao vốn đã là sản phẩm hoàn chỉnh trước khi học công cụ cơ bản."
+        },
+        {
+          "key": "B",
+          "text": "Khả năng đã thực hiện thì đối tượng hết mọi khả năng phát triển về sau."
+        },
+        {
+          "key": "C",
+          "text": "Hiện thực mới xuất hiện chứng tỏ khả năng không có vai trò chuẩn bị nào."
+        },
+        {
+          "key": "D",
+          "text": "Khả năng cũ được thực hiện tạo hiện thực mới và mở những khả năng tiếp theo."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Khả năng cũ được thực hiện tạo hiện thực mới và mở những khả năng tiếp theo. Năng lực đã có mới trở thành tiền đề cho bước sau. Quá trình nối tiếp.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Xóa khác biệt tiền đề và kết quả."
+        },
+        {
+          "key": "B",
+          "explanation": "Đóng kín quá trình vô tận."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ nhận khâu tiền đề."
+        }
+      ],
+      "takeaway": "Kết quả đạt được cũng là cơ sở cho những triển vọng tiếp theo.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q283",
+      "kind": "quiz",
+      "prompt": "Một sự kiện có thể đông khách, vừa đủ hoặc ít khách tùy điều kiện đang biến động. Sau khi chọn tổ chức, nhóm cần làm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ chuẩn bị nhánh đông khách vì đã chọn tổ chức thì các nhánh khác tự mất."
+        },
+        {
+          "key": "B",
+          "text": "Hủy mục tiêu vì có nhiều khả năng thì không thể lập kế hoạch."
+        },
+        {
+          "key": "C",
+          "text": "Xem mọi khả năng có xác suất bằng nhau vì đều cùng được nêu tên."
+        },
+        {
+          "key": "D",
+          "text": "Chuẩn bị phương án tương ứng cho những khả năng có cơ sở đã nhận diện."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Chuẩn bị phương án tương ứng cho những khả năng có cơ sở đã nhận diện. Nhiều khả năng cùng có cơ sở. Dự kiến nhiều nhánh thích hợp.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lựa chọn hành động không xóa biến động khách quan."
+        },
+        {
+          "key": "B",
+          "explanation": "Nhiều khả năng là lý do lập phương án, không tự hủy hành động."
+        },
+        {
+          "key": "C",
+          "explanation": "Cùng được nêu không chứng minh ngang mức hoặc vai trò."
+        }
+      ],
+      "takeaway": "Kế hoạch có nhánh xử lý dựa khả năng thực, không dựa danh sách tưởng tượng.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q284",
+      "kind": "quiz",
+      "prompt": "Nhóm ban đầu chỉ có thể trao đổi trực tiếp; sau khi có thiết bị kết nối, xuất hiện khả năng phối hợp từ xa. Kết luận nào có căn cứ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Điều kiện mới mở thêm khả năng phối hợp trước đó chưa đủ cơ sở thực hiện."
+        },
+        {
+          "key": "B",
+          "text": "Khả năng mới chứng minh mọi khả năng đều có sẵn đầy đủ từ đầu quá trình."
+        },
+        {
+          "key": "C",
+          "text": "Thiết bị làm khả năng phối hợp từ xa tự trở thành kết quả đã hoàn thành."
+        },
+        {
+          "key": "D",
+          "text": "Khả năng mới chỉ là tên khác của trao đổi trực tiếp vì mục tiêu nhóm không đổi."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Điều kiện mới mở thêm khả năng phối hợp trước đó chưa đủ cơ sở thực hiện. Điều kiện mới. Khả năng mới. Không coi danh mục ban đầu là cố định.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Bỏ vai trò điều kiện mới."
+        },
+        {
+          "key": "C",
+          "explanation": "Có điều kiện không đồng nghĩa đã hoạt động xong."
+        },
+        {
+          "key": "D",
+          "explanation": "Giữ mục tiêu không xóa phương thức mới có cơ sở."
+        }
+      ],
+      "takeaway": "Cập nhật nhận diện khả năng khi điều kiện của đối tượng thay đổi.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q285",
+      "kind": "quiz",
+      "prompt": "Nhóm có hai hướng có cơ sở: một hướng gần và gắn quan hệ tất nhiên, một hướng xa cần nhiều điều kiện bổ sung. Chỉ xét độ dễ chuyển thành hiện thực theo nguồn, nên ưu tiên gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hướng xa vì khó hơn tự chứng minh giá trị cao hơn và dễ thành hiện thực hơn."
+        },
+        {
+          "key": "B",
+          "text": "Hướng gần và tất nhiên đồng thời tiếp tục theo dõi hướng còn lại."
+        },
+        {
+          "key": "C",
+          "text": "Loại hướng xa khỏi mọi xem xét vì chưa gần thì không thể có cơ sở."
+        },
+        {
+          "key": "D",
+          "text": "Chia ưu tiên ngang nhau vì cả hai cùng được gọi là khả năng."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Hướng gần và tất nhiên đồng thời tiếp tục theo dõi hướng còn lại.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Khó không chứng minh dễ thực hiện hay giá trị."
+        },
+        {
+          "key": "C",
+          "explanation": "Xa không đồng nghĩa không có khả năng."
+        },
+        {
+          "key": "D",
+          "explanation": "Các khả năng không ngang vai trò và điều kiện."
+        }
+      ],
+      "takeaway": "Tiêu chí ưu tiên phải đúng câu hỏi: Khả năng chuyển hóa, không phải độ hấp dẫn.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q286",
+      "kind": "quiz",
+      "prompt": "Một hướng thay đổi do liên hệ tất nhiên quy định; điều kiện thực hiện hiện còn thiếu nhưng có thể hình thành ở trình độ sau. Theo lần lượt hai trục thực–hình thức và cụ thể–trừu tượng, nó thuộc loại nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thực và trừu tượng."
+        },
+        {
+          "key": "B",
+          "text": "Hình thức và trừu tượng."
+        },
+        {
+          "key": "C",
+          "text": "Thực và cụ thể."
+        },
+        {
+          "key": "D",
+          "text": "Hình thức và cụ thể."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Thực và trừu tượng. Tất nhiên. Thực. Thiếu điều kiện hiện tại có thể có sau. Trừu tượng.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đúng điều kiện, sai vì căn cứ là tất nhiên."
+        },
+        {
+          "key": "C",
+          "explanation": "Đúng trục đầu, sai vì chưa đủ điều kiện hiện tại."
+        },
+        {
+          "key": "D",
+          "explanation": "Sai cả căn cứ quy định lẫn điều kiện hiện tại."
+        }
+      ],
+      "takeaway": "Hai trục độc lập về tiêu chí, không dùng nhãn ở trục này thay trục kia.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q287",
+      "kind": "quiz",
+      "prompt": "Một hướng thay đổi do liên hệ tất nhiên quy định; điều kiện thực hiện hiện đã có đủ để triển khai. Theo lần lượt hai trục thực–hình thức và cụ thể–trừu tượng, nó thuộc loại nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hình thức và cụ thể."
+        },
+        {
+          "key": "B",
+          "text": "Hình thức và trừu tượng."
+        },
+        {
+          "key": "C",
+          "text": "Thực và trừu tượng."
+        },
+        {
+          "key": "D",
+          "text": "Thực và cụ thể."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Thực và cụ thể. Tất nhiên. Thực. Đủ điều kiện hiện tại. Cụ thể.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đúng trục sau nhưng sai căn cứ tất nhiên."
+        },
+        {
+          "key": "B",
+          "explanation": "Sai cả hai căn cứ đã cho."
+        },
+        {
+          "key": "C",
+          "explanation": "Đúng trục đầu nhưng bỏ thông tin đủ điều kiện hiện tại."
+        }
+      ],
+      "takeaway": "Thay thông tin điều kiện hiện tại đổi nhãn trục sau, không đổi nhãn trục trước.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q288",
+      "kind": "quiz",
+      "prompt": "Một nhóm biết khoản thưởng may mắn có thể nhận được nhưng do liên hệ ngẫu nhiên. Họ không dùng khoản ấy để cam kết chi và vẫn chấp nhận nếu nó đến. Đánh giá nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hợp lý: khả năng hình thức có thể xảy ra nhưng không làm nền cam kết."
+        },
+        {
+          "key": "B",
+          "text": "Sai vì mọi khả năng có thể xảy ra đều cần tính như hiện thực khi cam kết chi."
+        },
+        {
+          "key": "C",
+          "text": "Sai vì khả năng hình thức đã có tên gọi nên có mức chắc chắn như khả năng thực."
+        },
+        {
+          "key": "D",
+          "text": "Mâu thuẫn vì không làm nền kế hoạch đồng nghĩa thừa nhận khoản ấy không thể xuất hiện."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Hợp lý: Khả năng hình thức có thể xảy ra nhưng không làm nền cam kết. Giữ cả khả năng xảy ra và giới hạn sử dụng trong kế hoạch.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Tính dự kiến không phải dùng như đã có."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm tên gọi với căn cứ tất nhiên."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm không đáng làm nền với bất khả thi."
+        }
+      ],
+      "takeaway": "Dự kiến một khả năng không đồng nghĩa dựa cam kết vào nó.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q289",
+      "kind": "quiz",
+      "prompt": "Dự án có tiền đề nhưng thiếu địa điểm bắt buộc. Trưởng nhóm nói quyết tâm đủ mạnh sẽ thay được điều kiện ấy. Theo đoạn kết phạm vi, cần sửa thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phát huy quyết tâm để tìm và tạo điều kiện cần thay vì xem quyết tâm là vật thay thế."
+        },
+        {
+          "key": "B",
+          "text": "Bỏ dự án vì hễ thiếu một điều kiện hiện tại thì không còn khả năng nào."
+        },
+        {
+          "key": "C",
+          "text": "Chờ địa điểm tự xuất hiện vì mọi hành động chủ quan đều cản quá trình khách quan."
+        },
+        {
+          "key": "D",
+          "text": "Giữ lập luận vì nhân tố chủ quan có vai trò thì có thể bù mọi điều kiện khách quan."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Phát huy quyết tâm để tìm và tạo điều kiện cần thay vì xem quyết tâm là vật thay thế. Thiếu điều kiện cần. Tổ chức hoạt động tạo nó. Ý chí không thay điều kiện khách quan.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thiếu hiện tại không chứng minh không thể tạo."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ nhận vai trò hoạt động tạo điều kiện."
+        },
+        {
+          "key": "D",
+          "explanation": "Tuyệt đối hóa vai trò chủ quan."
+        }
+      ],
+      "takeaway": "Vai trò ý chí thể hiện qua hoạt động có căn cứ để tạo điều kiện.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q290",
+      "kind": "quiz",
+      "prompt": "Nguồn lực cho một hoạt động cộng đồng đã đủ nhưng cần người phân công và thực hiện; nhóm lại chờ vì nghĩ điều kiện khách quan đủ sẽ tự tạo kết quả. Cách sửa nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kết luận chưa có khả năng vì chưa có sản phẩm hoàn thành để quan sát."
+        },
+        {
+          "key": "B",
+          "text": "Tiếp tục chờ vì hoạt động có mục đích chỉ là phần trang trí cho kết quả tự có."
+        },
+        {
+          "key": "C",
+          "text": "Tổ chức hành động phù hợp để chuyển những tiền đề sẵn có thành sản phẩm thực tế."
+        },
+        {
+          "key": "D",
+          "text": "Đổi mục tiêu theo cảm hứng vì nguồn lực sẵn có bảo đảm bất kỳ mục tiêu nào cũng thành."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tổ chức hành động phù hợp để chuyển những tiền đề sẵn có thành sản phẩm thực tế. Có điều kiện nhưng thiếu hoạt động cần thiết trong xã hội. Phải phát huy chủ thể.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm chưa hiện thực hóa với không có khả năng."
+        },
+        {
+          "key": "B",
+          "explanation": "Xem thường nhân tố chủ quan."
+        },
+        {
+          "key": "D",
+          "explanation": "Tuyệt đối hóa điều kiện chung và ý muốn."
+        }
+      ],
+      "takeaway": "Đủ nguồn lực không thay thế hoạt động chủ thể cần thiết trong hiện thực hóa.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q291",
+      "kind": "quiz",
+      "prompt": "Theo các dạng khả năng được nguồn nêu, hiện thực hóa các khả năng khác nhau có thể tác động bản chất ra sao?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khả năng nào được hiện thực hóa cũng làm đối tượng đổi toàn bộ bản chất."
+        },
+        {
+          "key": "B",
+          "text": "Khả năng đổi bản chất không thể có cơ sở trong hiện thực đang tồn tại."
+        },
+        {
+          "key": "C",
+          "text": "Khả năng nào giữ bản chất đều không thể gây thay đổi trạng thái của đối tượng."
+        },
+        {
+          "key": "D",
+          "text": "Có khả năng giữ bản chất, có khả năng đòi biến đổi bản chất."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Có khả năng giữ bản chất, có khả năng đòi biến đổi bản chất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đồng nhất mọi biến đổi với đổi bản chất."
+        },
+        {
+          "key": "B",
+          "explanation": "Khả năng mới nảy sinh trong hiện thực cũ."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ biến đổi trong khuôn khổ bản chất."
+        }
+      ],
+      "takeaway": "Không suy đổi bản chất chỉ từ việc một khả năng đã thành kết quả.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q292",
+      "kind": "quiz",
+      "prompt": "Một nhóm có thể nâng năng lực nếu duy trì luyện tập hoặc suy giảm nếu bỏ hoạt động cần thiết. Chỉ xét hướng biến đổi, nhận định nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Các khả năng hiện thực hóa có thể đưa đối tượng lên cao hoặc xuống thấp."
+        },
+        {
+          "key": "B",
+          "text": "Hướng suy giảm chỉ là hiện tượng nên không thể có tiền đề trong hiện thực."
+        },
+        {
+          "key": "C",
+          "text": "Cả hai hướng phải làm nhóm tiến lên vì mọi hiện thực hóa đều là phát triển."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ hướng nâng năng lực là khả năng vì đi xuống không có tương lai."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Các khả năng hiện thực hóa có thể đưa đối tượng lên cao hoặc xuống thấp. Hai hướng có tiền đề. Khả năng không mặc nhiên đồng nghĩa phát triển đi lên.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Gán tên hiện tượng không xóa khả năng có cơ sở."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm biến đổi với phát triển đi lên."
+        },
+        {
+          "key": "D",
+          "explanation": "Sự biến đổi còn có thể theo hướng đi xuống."
+        }
+      ],
+      "takeaway": "Nhận diện khả năng gồm cả hướng thuận lợi lẫn bất lợi.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q293",
+      "kind": "quiz",
+      "prompt": "Phân biệt nào nằm trong các dạng khả năng được trang 111 trình bày?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mọi khả năng đều đổi chất vì nếu chưa đổi chất thì chưa có thay đổi."
+        },
+        {
+          "key": "B",
+          "text": "Khả năng đổi lượng không bao giờ có thể tồn tại cùng khả năng đổi chất trong một hiện thực."
+        },
+        {
+          "key": "C",
+          "text": "Có khả năng liên quan biến đổi về chất và có khả năng liên quan biến đổi về lượng."
+        },
+        {
+          "key": "D",
+          "text": "Mọi khả năng đều chỉ tăng lượng vì chất chỉ thuộc về kết quả đã có."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Có khả năng liên quan biến đổi về chất và có khả năng liên quan biến đổi về lượng. Đây là một căn cứ phân biệt được nêu, chỉ hỏi mức phân biệt trong đoạn.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Xóa biến đổi về lượng."
+        },
+        {
+          "key": "B",
+          "explanation": "Một hiện thực chứa nhiều loại khả năng."
+        },
+        {
+          "key": "D",
+          "explanation": "Giới hạn cách phân loại quá hẹp, bỏ qua việc khả năng có thể gắn với những dạng biến đổi khác nhau."
+        }
+      ],
+      "takeaway": "Có thể phân biệt khả năng theo việc nó liên quan đến biến đổi về chất hay biến đổi về lượng.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q294",
+      "kind": "quiz",
+      "prompt": "Vì sao cặp khả năng–hiện thực giúp liên hệ quá khứ hiện tại và tương lai?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hiện thực chỉ là ảnh của quá khứ nên không thể chứa dấu hiệu hướng tương lai."
+        },
+        {
+          "key": "B",
+          "text": "Khả năng chỉ là ảnh tưởng tượng nên không liên quan các kết quả đã hình thành."
+        },
+        {
+          "key": "C",
+          "text": "Tương lai đã có đầy đủ như hiện tại nên không cần quá trình sinh thành."
+        },
+        {
+          "key": "D",
+          "text": "Hiện thực là kết quả sinh thành, đồng thời chứa tiền đề cho hiện thực tiếp theo."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Hiện thực là kết quả sinh thành, đồng thời chứa tiền đề cho hiện thực tiếp theo. Kết quả quá trình trước, tiền đề quá trình sau. Nối các chiều thời gian.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ khả năng nảy sinh trong hiện thực."
+        },
+        {
+          "key": "B",
+          "explanation": "Phủ nhận tiền đề khách quan."
+        },
+        {
+          "key": "C",
+          "explanation": "Đồng nhất khả năng với sản phẩm đã có."
+        }
+      ],
+      "takeaway": "Nhận diện tương lai có cơ sở bằng tiền đề trong hiện thực.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q295",
+      "kind": "quiz",
+      "prompt": "Ngoài nghĩa cái đang tồn tại, giáo trình còn làm rõ hiện thực của một đối tượng theo cách nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thống nhất bản chất với các hiện tượng tạo tính xác định động trong không gian thời gian cụ thể."
+        },
+        {
+          "key": "B",
+          "text": "Tên gọi cố định gắn cho đối tượng khiến mọi biến đổi không còn thuộc hiện thực."
+        },
+        {
+          "key": "C",
+          "text": "Tập hợp các biểu hiện nhìn thấy, không cần xét liên hệ bản chất bên trong của đối tượng."
+        },
+        {
+          "key": "D",
+          "text": "Bản chất thuần túy tách khỏi biểu hiện để không chịu ảnh hưởng không gian thời gian."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Thống nhất bản chất với các hiện tượng tạo tính xác định động trong không gian thời gian cụ thể. Đúng cách giải thích bản chất hiện thực của đối tượng ở.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thay tồn tại động bằng tên gọi bất biến."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ sự thống nhất bản chất hiện tượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Tách bản chất và xóa tính cụ thể."
+        }
+      ],
+      "takeaway": "Hiện thực không phải bức ảnh bất động hoặc chỉ lớp hiện tượng ngoài.",
+      "group": "G6",
+      "groupTitle": "Khả năng và hiện thực"
+    },
+    {
+      "id": "Q296",
+      "kind": "quiz",
+      "prompt": "Một liên hệ được gọi là quy luật cần những dấu hiệu nào theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phổ biến, khách quan, bề ngoài, nhất thời và không cần điều kiện."
+        },
+        {
+          "key": "B",
+          "text": "Liên hệ phổ biến, khách quan, bản chất, bền vững, tất yếu, có điều kiện."
+        },
+        {
+          "key": "C",
+          "text": "Phổ biến, chủ quan, bản chất, bền vững và do số đông chấp nhận."
+        },
+        {
+          "key": "D",
+          "text": "Đơn nhất, khách quan, bền vững, tình cờ và tác động tùy ý muốn."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Liên hệ phổ biến, khách quan, bản chất, bền vững, tất yếu, có điều kiện. Phải giữ cả tính chất lẫn điều kiện.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ bản chất, bền vững và giới hạn."
+        },
+        {
+          "key": "C",
+          "explanation": "Đổi khách quan thành chủ quan."
+        },
+        {
+          "key": "D",
+          "explanation": "Trộn quy luật với cái đơn nhất, ngẫu nhiên."
+        }
+      ],
+      "takeaway": "Không đồng nhất một liên hệ bất kỳ với quy luật.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q297",
+      "kind": "quiz",
+      "prompt": "Quy luật khoa học quan hệ với quy luật khách quan như thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khái quát trong lý thuyết, chỉ gần đúng quy luật khách quan."
+        },
+        {
+          "key": "B",
+          "text": "Là mệnh lệnh mà khoa học ban hành để tự nhiên vận động theo."
+        },
+        {
+          "key": "C",
+          "text": "Là mô tả đã biết nên trùng khít đầy đủ mọi quy luật của hiện thực."
+        },
+        {
+          "key": "D",
+          "text": "Là quy luật khách quan đổi thành ý thức nên không còn nội dung thực."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Khái quát trong lý thuyết, chỉ gần đúng quy luật khách quan. Cái được phản ánh khác hình thức tri thức. Sửa lý thuyết không tạo hoặc xóa quy luật khách quan.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đảo phản ánh thành quy định đối tượng."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa tri thức khoa học."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm hình thức chủ quan với mất nội dung khách quan."
+        }
+      ],
+      "takeaway": "Phân biệt quy luật trong tồn tại với tri thức về quy luật.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q298",
+      "kind": "quiz",
+      "prompt": "Căn cứ phân quy luật thành riêng, chung và phổ biến trong đoạn nguồn là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lĩnh vực tác động thuộc tự nhiên, xã hội hay tư duy con người."
+        },
+        {
+          "key": "B",
+          "text": "Mức độ phổ biến của liên hệ đối với các phạm vi đối tượng."
+        },
+        {
+          "key": "C",
+          "text": "Mức chính xác thấp, vừa hay cao của lý thuyết đang sử dụng."
+        },
+        {
+          "key": "D",
+          "text": "Thời gian tác động ngắn, trung bình hay kéo dài của liên hệ."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Mức độ phổ biến của liên hệ đối với các phạm vi đối tượng. Đây là trục mức độ chung. Không phải thời gian hay lĩnh vực.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là trục lĩnh vực khác."
+        },
+        {
+          "key": "C",
+          "explanation": "Trộn quy luật khách quan với đánh giá tri thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Đổi tiêu chí."
+        }
+      ],
+      "takeaway": "Các quy luật có phạm vi khác nhau, không phải mọi quy luật đều bao trùm thế giới.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q299",
+      "kind": "quiz",
+      "prompt": "Biết quy luật khách quan cho phép con người làm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ban hành quy luật mới để thay thế các quy luật tự nhiên đang có."
+        },
+        {
+          "key": "B",
+          "text": "Ngừng hành động vì tính tất yếu khiến mọi phương án có cùng kết quả."
+        },
+        {
+          "key": "C",
+          "text": "Dựa quy luật cải biến hiện thực, định hướng nghiên cứu đặc thù."
+        },
+        {
+          "key": "D",
+          "text": "Bỏ nghiên cứu ngành vì quy luật phổ biến đã cho mọi kết luận cụ thể."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Dựa quy luật cải biến hiện thực, định hướng nghiên cứu đặc thù. Không sửa quy luật theo ý muốn. Có thể dựa quy luật thay điều kiện, kết quả.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm vận dụng với sáng tạo quy luật."
+        },
+        {
+          "key": "B",
+          "explanation": "Đồng nhất tất yếu với định mệnh."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy phương pháp chung thay khoa học riêng."
+        }
+      ],
+      "takeaway": "Hiểu quy luật mở khả năng chủ động, không làm con người bất lực.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q300",
+      "kind": "quiz",
+      "prompt": "Quy luật lượng–chất chủ yếu trả lời phương diện nào của phát triển?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khuynh hướng: kế thừa qua phủ định và lặp lại trên cơ sở cao hơn."
+        },
+        {
+          "key": "B",
+          "text": "Nguồn gốc: tác động của các mặt đối lập trong mâu thuẫn."
+        },
+        {
+          "key": "C",
+          "text": "Tiêu chuẩn: kiểm nghiệm tri thức qua hoạt động thực tiễn."
+        },
+        {
+          "key": "D",
+          "text": "Cách thức: tích lũy lượng gắn với chuyển hóa chất qua bước nhảy."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Cách thức: Tích lũy lượng gắn với chuyển hóa chất qua bước nhảy. Cách thức không phải nguồn gốc hay khuynh hướng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là vai trò phủ định của phủ định."
+        },
+        {
+          "key": "B",
+          "explanation": "Đây là vai trò quy luật mâu thuẫn."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây thuộc lý luận nhận thức."
+        }
+      ],
+      "takeaway": "Nhận diện quy luật theo vấn đề lý luận nó làm rõ.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q301",
+      "kind": "quiz",
+      "prompt": "Định nghĩa chất nào đúng ở cấp độ triết học?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quy định khách quan, thống nhất hữu cơ thuộc tính làm sự vật là nó."
+        },
+        {
+          "key": "B",
+          "text": "Số lượng các yếu tố và tốc độ vận động đo được của sự vật."
+        },
+        {
+          "key": "C",
+          "text": "Một thuộc tính bất kỳ xuất hiện khi chủ thể quan sát sự vật."
+        },
+        {
+          "key": "D",
+          "text": "Mức đánh giá tốt xấu do chủ thể đặt cho sự vật theo sở thích."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Quy định khách quan, thống nhất hữu cơ thuộc tính làm sự vật là nó. Chất phân biệt sự vật. Không phải mức tốt xấu hay một thuộc tính tùy chọn.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Nhầm với lượng."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ vai trò hệ thuộc tính cơ bản."
+        },
+        {
+          "key": "D",
+          "explanation": "Dùng nghĩa thông thường thay phạm trù."
+        }
+      ],
+      "takeaway": "Chất thể hiện tính ổn định tương đối của sự vật.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q302",
+      "kind": "quiz",
+      "prompt": "Nói một sự vật có nhiều chất có mâu thuẫn với chất không tách sự vật không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có; một vật chỉ có một chất bất biến trong toàn bộ lịch sử."
+        },
+        {
+          "key": "B",
+          "text": "Không; vì chất chỉ là tên gọi nên đổi tên tạo thêm chất."
+        },
+        {
+          "key": "C",
+          "text": "Có; nhiều chất buộc mỗi chất tồn tại độc lập ngoài cùng một vật."
+        },
+        {
+          "key": "D",
+          "text": "Không; qua các giai đoạn, sự vật có những quy định chất riêng."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Không. Qua các giai đoạn, sự vật có những quy định chất riêng. Hai ý khác phương diện.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phủ phát triển giai đoạn."
+        },
+        {
+          "key": "B",
+          "explanation": "Duy danh hóa tính quy định khách quan."
+        },
+        {
+          "key": "C",
+          "explanation": "Vật thể hóa chất."
+        }
+      ],
+      "takeaway": "Nhiều chất không có nghĩa chất tồn tại như thực thể bên ngoài.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q303",
+      "kind": "quiz",
+      "prompt": "Khi nào một thuộc tính được xem là cơ bản trong phân tích chất?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khi nó được đa số đặt tên nên không cần xét chức năng trong kết cấu."
+        },
+        {
+          "key": "B",
+          "text": "Khi nó xuất hiện sau cùng nên có giá trị hơn thuộc tính trước."
+        },
+        {
+          "key": "C",
+          "text": "Khi nó góp phần quy định sự vật trong mối liên hệ cụ thể đang xét."
+        },
+        {
+          "key": "D",
+          "text": "Khi nó dễ nhìn thấy nhất nên giữ vai trò giống nhau trong mọi quan hệ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Khi nó góp phần quy định sự vật trong mối liên hệ cụ thể đang xét. Đổi quan hệ có thể đổi thuộc tính cơ bản.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy đồng thuận thay khách quan."
+        },
+        {
+          "key": "B",
+          "explanation": "Lấy thời điểm thay tiêu chí."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy độ nổi bật thay vai trò quy định."
+        }
+      ],
+      "takeaway": "Không coi bất kỳ thuộc tính nào cũng biểu hiện chất theo cùng nghĩa.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q304",
+      "kind": "quiz",
+      "prompt": "Hai cấu trúc có cùng các yếu tố nhưng có thể khác chất vì sao?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chất phụ thuộc tên gọi nên yếu tố không có vai trò khách quan."
+        },
+        {
+          "key": "B",
+          "text": "Chất tồn tại bên ngoài các yếu tố nên không cần xét kết cấu."
+        },
+        {
+          "key": "C",
+          "text": "Chất chỉ phụ thuộc số lượng nên hai cấu trúc đã phải cùng chất."
+        },
+        {
+          "key": "D",
+          "text": "Phương thức liên kết cũng quy định chất của chỉnh thể."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Phương thức liên kết cũng quy định chất của chỉnh thể. Thành phần giống chưa bảo đảm kết cấu giống.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Chủ quan hóa chất."
+        },
+        {
+          "key": "B",
+          "explanation": "Tách chất khỏi sự vật."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ phương thức liên kết."
+        }
+      ],
+      "takeaway": "Tác động chất có thể cần đổi cả yếu tố lẫn phương thức liên kết.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q305",
+      "kind": "quiz",
+      "prompt": "Lượng được xác định bằng phương diện nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự thống nhất thuộc tính cơ bản làm đối tượng khác các đối tượng khác."
+        },
+        {
+          "key": "B",
+          "text": "Mối liên hệ bản chất bên trong được tách khỏi mọi quy mô và trình độ."
+        },
+        {
+          "key": "C",
+          "text": "Quy mô, trình độ, số lượng bộ phận, tốc độ và nhịp điệu vận động."
+        },
+        {
+          "key": "D",
+          "text": "Mức tốt xấu của đối tượng theo mong muốn và sở thích của người nhìn."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Quy mô, trình độ, số lượng bộ phận, tốc độ và nhịp điệu vận động. Đây là các quy định vốn có. Lượng có tính khách quan.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là chất."
+        },
+        {
+          "key": "B",
+          "explanation": "Không nêu phương diện lượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy đánh giá chủ quan thay quy định."
+        }
+      ],
+      "takeaway": "Lượng không chỉ là số đếm các vật thể.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q306",
+      "kind": "quiz",
+      "prompt": "Không đo được một phương diện bằng số cụ thể có cho phép kết luận nó không có lượng không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có; lượng chỉ tồn tại khi có phép đo trực tiếp bằng dụng cụ."
+        },
+        {
+          "key": "B",
+          "text": "Không; có lượng chỉ nhận biết qua năng lực trừu tượng hóa."
+        },
+        {
+          "key": "C",
+          "text": "Có; cái không đo được chắc chắn chỉ là hình ảnh chủ quan."
+        },
+        {
+          "key": "D",
+          "text": "Không; vì mọi con số tưởng tượng đều là lượng khách quan của sự vật."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Không. Có lượng chỉ nhận biết qua năng lực trừu tượng hóa. Khách quan không đồng nghĩa sẵn thang số.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy cách nhận biết làm điều kiện tồn tại."
+        },
+        {
+          "key": "C",
+          "explanation": "Không suy được từ thiếu phép đo."
+        },
+        {
+          "key": "D",
+          "explanation": "Đúng phủ kết luận nhưng bỏ căn cứ đối tượng."
+        }
+      ],
+      "takeaway": "Phân biệt tính lượng của đối tượng với khả năng đo của chủ thể.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q307",
+      "kind": "quiz",
+      "prompt": "Tính tương đối của phân biệt chất và lượng yêu cầu gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xác định quan hệ cụ thể trước khi gọi một quy định là chất hay lượng."
+        },
+        {
+          "key": "B",
+          "text": "Coi số đo là lượng trong mọi trường hợp, không cần xét đối tượng."
+        },
+        {
+          "key": "C",
+          "text": "Từ bỏ phân biệt vì chất và lượng chỉ là hai tên của cùng một khái niệm."
+        },
+        {
+          "key": "D",
+          "text": "Coi mọi thuộc tính khó đo là chất bất kể chức năng trong chỉnh thể."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Xác định quan hệ cụ thể trước khi gọi một quy định là chất hay lượng.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Tuyệt đối hóa hình thức biểu thị."
+        },
+        {
+          "key": "C",
+          "explanation": "Tương đối không xóa khác biệt."
+        },
+        {
+          "key": "D",
+          "explanation": "Dùng độ dễ đo thay tiêu chí."
+        }
+      ],
+      "takeaway": "Không chuyển phân biệt tương đối thành tùy tiện thuật ngữ.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q308",
+      "kind": "quiz",
+      "prompt": "Độ khác điểm nút ở dấu hiệu nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Độ là khoảng giới hạn chất được duy trì khi lượng thay đổi."
+        },
+        {
+          "key": "B",
+          "text": "Độ là chất mới tự tạo ra ngoài mọi biến đổi của lượng."
+        },
+        {
+          "key": "C",
+          "text": "Độ là thời điểm bắt đầu chuyển hóa chất khi lượng đạt giới hạn."
+        },
+        {
+          "key": "D",
+          "text": "Độ là giai đoạn đổi chất do lượng tích lũy trước đó gây ra."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Độ là khoảng giới hạn chất được duy trì khi lượng thay đổi. Điểm nút là giới hạn phá độ. Khoảng ổn định khác ranh giới chuyển.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Không phải quan hệ lượng–chất."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là điểm nút."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là bước nhảy."
+        }
+      ],
+      "takeaway": "Độ là sự thống nhất có giới hạn của chất và lượng.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q309",
+      "kind": "quiz",
+      "prompt": "Điểm nút được nhận diện như thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mức lượng do chủ thể tùy chọn mà không cần xét sự vật."
+        },
+        {
+          "key": "B",
+          "text": "Giới hạn lượng phá vỡ độ cũ, tại đó bước nhảy bắt đầu."
+        },
+        {
+          "key": "C",
+          "text": "Toàn bộ giai đoạn chuyển hóa chất từ trạng thái cũ sang mới."
+        },
+        {
+          "key": "D",
+          "text": "Toàn bộ khoảng biến đổi lượng mà chất vẫn còn được duy trì."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Giới hạn lượng phá vỡ độ cũ, tại đó bước nhảy bắt đầu. Điểm nút không phải cả quá trình nhảy.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ tính khách quan."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là bước nhảy."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là độ."
+        }
+      ],
+      "takeaway": "Không đồng nhất ranh giới bắt đầu chuyển chất với giai đoạn chuyển chất.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q310",
+      "kind": "quiz",
+      "prompt": "Vì sao bước nhảy là gián đoạn trong tính liên tục?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nó xảy ra không có tích lũy hay điều kiện khách quan trước đó."
+        },
+        {
+          "key": "B",
+          "text": "Nó chỉ cộng thêm lượng nên chất trước và sau giống hệt nhau."
+        },
+        {
+          "key": "C",
+          "text": "Nó chuyển chất, kết thúc tích lũy cũ và mở giai đoạn mới."
+        },
+        {
+          "key": "D",
+          "text": "Nó kết thúc mọi vận động nên sự vật mới không còn biến đổi."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Nó chuyển chất, kết thúc tích lũy cũ và mở giai đoạn mới. Gián đoạn nói chuyển hóa chất. Không có nghĩa tách khỏi quá trình vận động.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Cắt quan hệ với lượng và điều kiện."
+        },
+        {
+          "key": "B",
+          "explanation": "Bỏ chuyển hóa chất."
+        },
+        {
+          "key": "D",
+          "explanation": "Biến gián đoạn thành chấm dứt vận động."
+        }
+      ],
+      "takeaway": "Bước nhảy nối các giai đoạn bằng sự thay đổi chất.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q311",
+      "kind": "quiz",
+      "prompt": "Lượng thay đổi nhưng vẫn trong độ cho phép kết luận gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lượng chưa thật sự đổi vì chất của sự vật vẫn được duy trì."
+        },
+        {
+          "key": "B",
+          "text": "Chất sẽ không thể đổi về sau vì hiện tại chưa qua điểm nút."
+        },
+        {
+          "key": "C",
+          "text": "Chưa có căn cứ nói chất đã đổi chỉ từ việc lượng thay đổi."
+        },
+        {
+          "key": "D",
+          "text": "Chất đã đổi vì mọi khác biệt số lượng đều tạo một sự vật mới."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Chưa có căn cứ nói chất đã đổi chỉ từ việc lượng thay đổi. Biến đổi lượng không lập tức chuyển chất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phủ biến đổi lượng trong độ."
+        },
+        {
+          "key": "B",
+          "explanation": "Từ hiện tại suy sai sang tương lai."
+        },
+        {
+          "key": "D",
+          "explanation": "Xóa giới hạn độ."
+        }
+      ],
+      "takeaway": "Phải xét lượng trong quan hệ độ và điều kiện chuyển hóa.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q312",
+      "kind": "quiz",
+      "prompt": "Khi chất mới đã hình thành, quan hệ với lượng là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chất mới kết thúc tác dụng của lượng trong vận động tiếp theo."
+        },
+        {
+          "key": "B",
+          "text": "Chất mới thúc đẩy lượng tương ứng và tạo sự thống nhất ở độ mới."
+        },
+        {
+          "key": "C",
+          "text": "Chất mới không quan hệ với điểm nút vì độ cũ đã bị phá vỡ."
+        },
+        {
+          "key": "D",
+          "text": "Chất mới buộc mọi đại lượng giữ nguyên mức trước bước nhảy."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Chất mới thúc đẩy lượng tương ứng và tạo sự thống nhất ở độ mới. Không dừng ở lượng gây chất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ chiều tác động và giai đoạn sau."
+        },
+        {
+          "key": "C",
+          "explanation": "Độ mới vẫn có giới hạn, điểm nút mới."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ sự thống nhất mới."
+        }
+      ],
+      "takeaway": "Quan hệ lượng–chất có hai chiều, liên tục tái lập ở trình độ mới.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q313",
+      "kind": "quiz",
+      "prompt": "Theo đúng cách ghi tiêu chí trong bản nguồn, toàn bộ và cục bộ được phân biệt thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Căn cứ thời gian và cơ chế; toàn bộ đổi nhanh, cục bộ đổi dần."
+        },
+        {
+          "key": "B",
+          "text": "Căn cứ lĩnh vực tồn tại; toàn bộ ở tự nhiên, cục bộ ở xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Theo quy mô, nhịp độ: đổi toàn bộ hoặc một phần sự vật."
+        },
+        {
+          "key": "D",
+          "text": "Căn cứ mức mong muốn; toàn bộ có lợi, cục bộ gây tác dụng bất lợi."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Theo quy mô, nhịp độ: Đổi toàn bộ hoặc một phần sự vật. Nội hàm phân biệt là phạm vi thay đổi.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trộn hai trục phân loại."
+        },
+        {
+          "key": "B",
+          "explanation": "Không phải tiêu chí."
+        },
+        {
+          "key": "D",
+          "explanation": "Trộn phân loại với đánh giá."
+        }
+      ],
+      "takeaway": "Phân biệt tương đối theo phạm vi, không ghép cơ học với tốc độ.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q314",
+      "kind": "quiz",
+      "prompt": "Bước nhảy dần dần có còn là chuyển hóa chất không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có; hình thành chất mới bằng thêm mới, loại cũ dần dần."
+        },
+        {
+          "key": "B",
+          "text": "Không; mọi bước nhảy phải xảy ra tức khắc ở tất cả bộ phận."
+        },
+        {
+          "key": "C",
+          "text": "Không; đã dần dần thì chỉ là biến đổi lượng trong độ."
+        },
+        {
+          "key": "D",
+          "text": "Có; vì bất kỳ quá trình chậm nào cũng tạo ra chất mới."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Có. Hình thành chất mới bằng thêm mới, loại cũ dần dần. Tiêu chí bước nhảy là đổi chất. Dần dần nói thời gian và cơ chế.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Tuyệt đối hóa một hình thức."
+        },
+        {
+          "key": "C",
+          "explanation": "Đồng nhất tốc độ chậm với không đổi chất."
+        },
+        {
+          "key": "D",
+          "explanation": "Khái quát quá mức từ chậm sang đổi chất."
+        }
+      ],
+      "takeaway": "Không đồng nhất dần dần của bước nhảy với tích lũy lượng thuần túy.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q315",
+      "kind": "quiz",
+      "prompt": "Chống nôn nóng theo quy luật lượng–chất cần làm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Liên tục thay chất để tránh mất thời gian cho tích lũy."
+        },
+        {
+          "key": "B",
+          "text": "Chờ thời gian trôi vì lượng tự tăng dù không có hoạt động."
+        },
+        {
+          "key": "C",
+          "text": "Tích lũy lượng, kiểm tra điều kiện rồi thực hiện chuyển chất."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ tăng lượng và tránh bước nhảy ngay cả khi đã chín muồi."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tích lũy lượng, kiểm tra điều kiện rồi thực hiện chuyển chất. Bước nhảy có tiền đề. Quyết tâm không thay tích lũy.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Chính là nôn nóng."
+        },
+        {
+          "key": "B",
+          "explanation": "Đồng nhất tích lũy với chờ đợi."
+        },
+        {
+          "key": "D",
+          "explanation": "Chuyển sang bảo thủ."
+        }
+      ],
+      "takeaway": "Tích lũy phải đúng hướng và gắn điều kiện khách quan.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q316",
+      "kind": "quiz",
+      "prompt": "Chống bảo thủ theo quy luật lượng–chất cần làm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chọn bước nhảy theo khẩu hiệu mà không xét phương thức thực hiện."
+        },
+        {
+          "key": "B",
+          "text": "Duy trì cách cũ vì biến đổi lượng lúc nào cũng an toàn hơn."
+        },
+        {
+          "key": "C",
+          "text": "Chuyển chất khi đạt ngưỡng và đủ điều kiện thực hiện."
+        },
+        {
+          "key": "D",
+          "text": "Chuyển chất ngay từ đầu dù chưa có các điều kiện cần thiết."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Chuyển chất khi đạt ngưỡng và đủ điều kiện thực hiện. Tiền đề đủ làm bước nhảy thành yêu cầu khách quan. Không thể trì hoãn vô căn cứ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thiếu căn cứ khách quan."
+        },
+        {
+          "key": "B",
+          "explanation": "Tuyệt đối hóa tiệm tiến."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là nóng vội."
+        }
+      ],
+      "takeaway": "Không lấy chống nóng vội để biện hộ trì trệ khi đã đủ điều kiện.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q317",
+      "kind": "quiz",
+      "prompt": "Bước nhảy trong lĩnh vực xã hội đòi hỏi kết hợp những gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Điều kiện khách quan với chờ đợi để kết quả xảy ra không cần con người."
+        },
+        {
+          "key": "B",
+          "text": "Quyết tâm chủ quan với khuôn mẫu giống nhau bất kể hoàn cảnh."
+        },
+        {
+          "key": "C",
+          "text": "Thay đổi tên gọi với đánh giá thành công chỉ dựa vào ý định."
+        },
+        {
+          "key": "D",
+          "text": "Khách quan và chủ quan; quy mô, nhịp điệu theo điều kiện cụ thể."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Khách quan và chủ quan. Quy mô, nhịp điệu theo điều kiện cụ thể. Quy luật xã hội qua hoạt động có ý thức. Khách quan không làm chủ thể thừa.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ phương thức xã hội của quy luật."
+        },
+        {
+          "key": "B",
+          "explanation": "Duy ý chí và giáo điều."
+        },
+        {
+          "key": "C",
+          "explanation": "Không bảo đảm chuyển hóa hiện thực."
+        }
+      ],
+      "takeaway": "Xác định bước nhảy khách quan, khoa học và thực hiện khi thời cơ cho phép.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q318",
+      "kind": "quiz",
+      "prompt": "Nếu chất phụ thuộc phương thức liên kết, yêu cầu phương pháp luận là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chọn cách đổi liên kết theo bản chất và quy luật đối tượng."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ tăng số bộ phận vì quan hệ giữa chúng không tạo khác biệt."
+        },
+        {
+          "key": "C",
+          "text": "Đổi liên kết tùy ý vì chất không có tính quy định khách quan."
+        },
+        {
+          "key": "D",
+          "text": "Giữ nguyên liên kết vì mọi thay đổi tổ chức đều phá hủy chất tốt."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Chọn cách đổi liên kết theo bản chất và quy luật đối tượng. Không chỉ tăng số yếu tố. Cần xét tổ chức tương tác.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Bỏ kết cấu."
+        },
+        {
+          "key": "C",
+          "explanation": "Chủ quan hóa phương pháp."
+        },
+        {
+          "key": "D",
+          "explanation": "Bảo thủ và đánh giá ngoài căn cứ."
+        }
+      ],
+      "takeaway": "Cải biến chất có thể thông qua tổ chức lại các yếu tố.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q319",
+      "kind": "quiz",
+      "prompt": "Xét ca dao “Một cây làm chẳng nên non / Ba cây chụm lại nên hòn núi cao” theo nghĩa phối hợp. Cùng ba người, trước làm rời rạc, sau phân vai và kiểm tra chéo nên hoàn thành việc khó. Yếu tố quyết định đang được so sánh là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ý thức thống nhất đã tạo sản phẩm mà không qua hành động."
+        },
+        {
+          "key": "B",
+          "text": "Số lượng thành viên tăng đến điểm nút của nhóm."
+        },
+        {
+          "key": "C",
+          "text": "Phương thức liên kết giữa các thành viên đã thay đổi."
+        },
+        {
+          "key": "D",
+          "text": "Sự xuất hiện sau đủ chứng minh cách tổ chức mới tiến bộ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Phương thức liên kết giữa các thành viên đã thay đổi. Số người giữ nguyên. Thông tin mới là tổ chức phối hợp, phù hợp chất phụ thuộc kết cấu.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ phân vai và kiểm tra chéo thực tế."
+        },
+        {
+          "key": "B",
+          "explanation": "Thông tin cho cùng ba người."
+        },
+        {
+          "key": "D",
+          "explanation": "Phải dùng hiệu quả và quan hệ thực, không chỉ thời điểm."
+        }
+      ],
+      "takeaway": "Không gán quy luật chỉ từ chữ ba. Phải xét thông tin và phương diện so sánh.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q320",
+      "kind": "quiz",
+      "prompt": "Vì sao quy luật thống nhất và đấu tranh của các mặt đối lập là hạt nhân phép biện chứng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nó làm rõ tiêu chuẩn kiểm nghiệm tri thức bằng ý kiến số đông."
+        },
+        {
+          "key": "B",
+          "text": "Nó làm rõ riêng hình thức xoáy ốc của chu kỳ phát triển."
+        },
+        {
+          "key": "C",
+          "text": "Làm rõ nguyên nhân, động lực bên trong của vận động, phát triển."
+        },
+        {
+          "key": "D",
+          "text": "Nó làm rõ riêng tốc độ tích lũy lượng trước khi đổi chất."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Làm rõ nguyên nhân, động lực bên trong của vận động, phát triển. Đây là vấn đề cơ bản quy luật giải thích. Không thay vai trò hai quy luật kia.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Sai cả nội dung lẫn tiêu chuẩn."
+        },
+        {
+          "key": "B",
+          "explanation": "Đó là vai trò phủ định của phủ định."
+        },
+        {
+          "key": "D",
+          "explanation": "Đó thuộc cách thức lượng–chất."
+        }
+      ],
+      "takeaway": "Phân biệt nguồn gốc, cách thức và khuynh hướng phát triển.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q321",
+      "kind": "quiz",
+      "prompt": "Dấu hiệu nào cần có để hai mặt là mặt đối lập theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khác tên gọi và được hai chủ thể dùng trong các lập luận khác nhau."
+        },
+        {
+          "key": "B",
+          "text": "Khuynh hướng biến đổi trái ngược và cùng tồn tại khách quan trong sự vật."
+        },
+        {
+          "key": "C",
+          "text": "Khác vị trí không gian và không có bất kỳ quan hệ tác động nào."
+        },
+        {
+          "key": "D",
+          "text": "Khác mức số lượng và được người quan sát đánh giá tốt, xấu."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Khuynh hướng biến đổi trái ngược và cùng tồn tại khách quan trong sự vật. Khác biệt đơn thuần chưa đủ. Cần quan hệ trong thể thống nhất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Khác tên chưa có đối lập thực."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ thể thống nhất."
+        },
+        {
+          "key": "D",
+          "explanation": "Đánh giá không xác lập mặt đối lập."
+        }
+      ],
+      "takeaway": "Không đồng nhất mọi khác biệt với mặt đối lập.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q322",
+      "kind": "quiz",
+      "prompt": "Mâu thuẫn biện chứng được xác định bằng quan hệ nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vừa tranh cãi, vừa giận dữ giữa bất kỳ hai cá nhân nào."
+        },
+        {
+          "key": "B",
+          "text": "Vừa trùng tên, vừa khác nghĩa giữa những từ được dùng trong câu."
+        },
+        {
+          "key": "C",
+          "text": "Thống nhất, đấu tranh, đòi hỏi, loại trừ và chuyển hóa mặt đối lập."
+        },
+        {
+          "key": "D",
+          "text": "Vừa khác hình dạng, vừa tách rời giữa các vật không có liên hệ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Thống nhất, đấu tranh, đòi hỏi, loại trừ và chuyển hóa mặt đối lập. Không phải mọi bất đồng phát biểu.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Biểu hiện tâm lý chưa đủ cơ sở."
+        },
+        {
+          "key": "B",
+          "explanation": "Đây có thể là vấn đề thuật ngữ."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ quan hệ biện chứng."
+        }
+      ],
+      "takeaway": "Mâu thuẫn là quan hệ khách quan của mặt đối lập trong thể thống nhất.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q323",
+      "kind": "quiz",
+      "prompt": "Thống nhất theo nghĩa các mặt làm tiền đề cho nhau là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mỗi mặt ngừng tác động để không còn khả năng phát sinh biến đổi."
+        },
+        {
+          "key": "B",
+          "text": "Mỗi mặt cần mặt kia để tồn tại trong quan hệ đang xét."
+        },
+        {
+          "key": "C",
+          "text": "Mỗi mặt tồn tại hoàn chỉnh mà không cần quan hệ với mặt kia."
+        },
+        {
+          "key": "D",
+          "text": "Mỗi mặt mất khác biệt để trở thành cùng một mặt của sự vật."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Mỗi mặt cần mặt kia để tồn tại trong quan hệ đang xét. Đối lập không đồng nghĩa tồn tại biệt lập.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Biến thống nhất thành ngừng vận động."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ sự nương tựa."
+        },
+        {
+          "key": "D",
+          "explanation": "Xóa đối lập."
+        }
+      ],
+      "takeaway": "Các mặt đối lập thống nhất trong sự khác biệt của chúng.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q324",
+      "kind": "quiz",
+      "prompt": "Ở phương diện tác động ngang nhau, thống nhất biểu thị trạng thái nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hai mặt đã giống nhau về bản chất nên không cần xét đấu tranh."
+        },
+        {
+          "key": "B",
+          "text": "Cân bằng vĩnh viễn làm sự vật không còn mọi khả năng biến đổi."
+        },
+        {
+          "key": "C",
+          "text": "Cái cũ đã biến mất nên không còn tương tác với cái mới."
+        },
+        {
+          "key": "D",
+          "text": "Cân bằng tương đối khi cái mới hình thành, cái cũ chưa mất."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Cân bằng tương đối khi cái mới hình thành, cái cũ chưa mất. Không suy thành mâu thuẫn biến mất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đồng nhất cân bằng với xóa đối lập."
+        },
+        {
+          "key": "B",
+          "explanation": "Tuyệt đối hóa trạng thái."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ một phía của quan hệ."
+        }
+      ],
+      "takeaway": "Cân bằng là trạng thái có điều kiện, không triệt tiêu đấu tranh.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q325",
+      "kind": "quiz",
+      "prompt": "Đồng nhất giữa các mặt đối lập có cho phép phủ nhận khác biệt không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có; đồng nhất làm mọi mâu thuẫn được giải quyết ngay khi xuất hiện."
+        },
+        {
+          "key": "B",
+          "text": "Không; vì các mặt không có bất kỳ yếu tố tương đồng nào."
+        },
+        {
+          "key": "C",
+          "text": "Có; có yếu tố chung thì mọi khuynh hướng đều phải cùng chiều."
+        },
+        {
+          "key": "D",
+          "text": "Không; tương đồng chứa khác biệt, cho phép chuyển hóa có điều kiện."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Không. Tương đồng chứa khác biệt, cho phép chuyển hóa có điều kiện. Chuyển hóa không diễn ra vô điều kiện.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ điều kiện và quá trình."
+        },
+        {
+          "key": "B",
+          "explanation": "Phủ chính phương diện đồng nhất."
+        },
+        {
+          "key": "C",
+          "explanation": "Từ giống một mặt suy thành giống toàn bộ."
+        }
+      ],
+      "takeaway": "Chuyển hóa cần điều kiện, không chỉ dựa một nét giống nhau.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q326",
+      "kind": "quiz",
+      "prompt": "Đấu tranh của các mặt đối lập là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tiêu diệt vật lý một phía trong mọi quan hệ của mọi sự vật."
+        },
+        {
+          "key": "B",
+          "text": "Tranh cãi bằng lời nói giữa những chủ thể có sở thích khác nhau."
+        },
+        {
+          "key": "C",
+          "text": "Thỏa thuận xóa khác biệt bằng cách ngừng mọi tương tác giữa hai phía."
+        },
+        {
+          "key": "D",
+          "text": "Tác động bài trừ, phủ định lẫn nhau trong cùng thể thống nhất."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tác động bài trừ, phủ định lẫn nhau trong cùng thể thống nhất. Định nghĩa rộng hơn xung đột bạo lực. Hình thức tùy đối tượng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tuyệt đối hóa một hình thức."
+        },
+        {
+          "key": "B",
+          "explanation": "Thu hẹp và không đủ tiêu chí."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ hướng bài trừ và quan hệ thực."
+        }
+      ],
+      "takeaway": "Không hiểu đấu tranh chỉ bằng một biểu hiện xã hội cụ thể.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q327",
+      "kind": "quiz",
+      "prompt": "Tương đối của thống nhất và tuyệt đối của đấu tranh được hiểu thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ổn định và đấu tranh tách nhau, lần lượt thuộc hai thế giới khác nhau."
+        },
+        {
+          "key": "B",
+          "text": "Ổn định không đổi; đấu tranh chỉ do người quan sát tưởng tượng ra."
+        },
+        {
+          "key": "C",
+          "text": "Ổn định có điều kiện; đấu tranh gắn quá trình tự vận động không ngừng."
+        },
+        {
+          "key": "D",
+          "text": "Ổn định là giả tạo; chỉ khi có bạo lực mới có sự vật vận động."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Ổn định có điều kiện. Đấu tranh gắn quá trình tự vận động không ngừng. Tuyệt đối nói vai trò trong vận động, không nói hình thức xung đột giống nhau.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tách hai mặt một mâu thuẫn."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo hai tính chất."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ thống nhất và thu hẹp đấu tranh."
+        }
+      ],
+      "takeaway": "Thống nhất và đấu tranh không loại nhau khỏi cùng một quá trình.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q328",
+      "kind": "quiz",
+      "prompt": "Cách diễn đạt nào giữ đúng tính chất mâu thuẫn được giáo trình trình bày?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khách quan, phổ biến; đa dạng theo mặt đối lập, điều kiện và tổ chức."
+        },
+        {
+          "key": "B",
+          "text": "Khách quan, chỉ trong xã hội; đa dạng theo số bên đang tham gia tranh cãi."
+        },
+        {
+          "key": "C",
+          "text": "Khách quan, phổ biến; cùng hình thức vì không phụ thuộc kết cấu và điều kiện."
+        },
+        {
+          "key": "D",
+          "text": "Chủ quan, phổ biến; đa dạng theo sở thích gọi tên của người nghiên cứu."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Khách quan, phổ biến. Đa dạng theo mặt đối lập, điều kiện và tổ chức.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thu hẹp phạm vi và đồng nhất mâu thuẫn với tranh cãi."
+        },
+        {
+          "key": "C",
+          "explanation": "Thừa nhận hai mặt nhưng xóa tính đa dạng và các căn cứ của nó."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ tính khách quan và thay căn cứ đối tượng bằng sở thích."
+        }
+      ],
+      "takeaway": "Mâu thuẫn khách quan, phổ biến nhưng không cùng hình thức và vai trò.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q329",
+      "kind": "quiz",
+      "prompt": "Phân biệt cơ bản và không cơ bản dựa tiêu chí nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vai trò quy định toàn bộ bản chất hay chỉ một phương diện của sự vật."
+        },
+        {
+          "key": "B",
+          "text": "Vị trí mặt đối lập nằm trong hay ngoài ranh giới đối tượng."
+        },
+        {
+          "key": "C",
+          "text": "Vai trò nổi bật nhất ở một giai đoạn trong quá trình phát triển."
+        },
+        {
+          "key": "D",
+          "text": "Mức đối lập lợi ích cơ bản giữa các lực lượng xã hội."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Vai trò quy định toàn bộ bản chất hay chỉ một phương diện của sự vật. Cơ bản xuyên suốt. Không cơ bản quy định một phương diện và chịu chi phối.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đây là bên trong, bên ngoài."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là chủ yếu, thứ yếu."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là đối kháng, không đối kháng."
+        }
+      ],
+      "takeaway": "Không đồng nhất xuyên suốt bản chất với nổi lên trong một giai đoạn.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    },
+    {
+      "id": "Q330",
+      "kind": "quiz",
+      "prompt": "Một mâu thuẫn chủ yếu có thể thành thứ yếu khi hoàn cảnh đổi không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có; chỉ cần đổi cách gọi là vai trò khách quan thay đổi theo."
+        },
+        {
+          "key": "B",
+          "text": "Có; vai trò được xác định theo từng giai đoạn và điều kiện cụ thể."
+        },
+        {
+          "key": "C",
+          "text": "Không; thứ yếu không có tác động nào nên không thể đổi vị trí."
+        },
+        {
+          "key": "D",
+          "text": "Không; chủ yếu là tên khác của cơ bản nên kéo dài toàn bộ lịch sử."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Có. Vai trò được xác định theo từng giai đoạn và điều kiện cụ thể. Giải quyết chủ yếu tạo điều kiện xử lý mâu thuẫn khác.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Chủ quan hóa chuyển đổi."
+        },
+        {
+          "key": "C",
+          "explanation": "Xóa vai trò và chuyển hóa."
+        },
+        {
+          "key": "D",
+          "explanation": "Đồng nhất hai trục."
+        }
+      ],
+      "takeaway": "Xác định lại mâu thuẫn chủ yếu theo điều kiện thực của từng giai đoạn.",
+      "group": "H",
+      "groupTitle": "Ba quy luật cơ bản"
+    }
+  ]
+}

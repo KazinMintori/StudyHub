@@ -4,11 +4,17 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
     sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
     nav:[
-      {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} bài)`,link:`/${c.id}/`}))},
+      {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} ${c.presentation === 'philosophy' ? 'chương' : 'bài'})`,link:`/${c.id}/`}))},
       {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
     ],
     sidebar:{
-      ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,[
+      ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,course.presentation === 'philosophy' ? [
+        {text:course.name,items:[{text:'Học tập',link:`/${course.id}/`},{text:'Ôn thi',link:`/${course.id}/on-thi/`,items:[{text:'Chương I',link:`/${course.id}/on-thi/chuong-1`},{text:'Chương II',link:`/${course.id}/on-thi/chuong-2`}]}]},
+        ...course.lessons.map(chapter=>({
+          text:`Chương ${chapter.number}. ${chapter.title}`,link:`/${course.id}/bai-giang/${chapter.slug}`,collapsed:true,
+          items:chapter.topics.map(topic=>({text:topic.title,link:`/${course.id}/bai-giang/${chapter.slug}/${topic.slug}`}))
+        }))
+      ] : [
         {text: course.name, items:[
           {text:'Tổng quan môn học',link:`/${course.id}/`},
           ...(!course.review ? [{

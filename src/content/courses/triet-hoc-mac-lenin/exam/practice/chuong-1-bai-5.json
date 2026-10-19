@@ -1,0 +1,2531 @@
+{
+  "schemaVersion": 1,
+  "id": "chuong-1-bai-5",
+  "parentBankId": "chuong-1",
+  "chapter": 1,
+  "testNumber": 5,
+  "totalTests": 6,
+  "title": "Bài kiểm tra 5",
+  "questions": [
+    {
+      "id": "CH241",
+      "kind": "quiz",
+      "prompt": "A nói tinh thần tuyệt đối sinh thế giới và người biết được nó; B nói vật chất có trước nhưng bản chất không thể biết. Ghép nào đúng hai tiêu chí?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A: duy tâm, bất khả tri; B: duy vật, khả tri."
+        },
+        {
+          "key": "B",
+          "text": "A: duy vật, bất khả tri; B: duy tâm, khả tri."
+        },
+        {
+          "key": "C",
+          "text": "A: duy tâm, khả tri; B: duy vật, bất khả tri."
+        },
+        {
+          "key": "D",
+          "text": "A: duy vật, khả tri; B: duy tâm, bất khả tri."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tiêu chí duy tâm là tính thứ nhất của tinh thần. Duy tâm khách quan lấy thực thể tinh thần độc lập con người làm cái có trước. Khả tri: Có thể biết bản chất về nguyên tắc, không phải đã biết hết. Bất khả tri phủ nhận biết bản chất về nguyên tắc, có thể nhận bề ngoài. Tách mặt thứ nhất và thứ hai, không suy chúng đồng nhất.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo kết luận về khả năng biết của cả hai."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo cả hai mặt ở cả hai người."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo lập trường về nguồn gốc của cả hai."
+        }
+      ],
+      "takeaway": "Hai trục phân loại phải được xét độc lập.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH242",
+      "kind": "quiz",
+      "prompt": "A giải thích tự nhiên bằng vật chất nhưng đóng băng quan hệ; B giải thích bằng ý niệm nhưng thấy vận động có hệ thống. Kết luận nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A duy tâm khách quan; B duy vật vì thừa nhận vận động."
+        },
+        {
+          "key": "B",
+          "text": "A duy vật siêu hình; B có biện chứng trên nền duy tâm."
+        },
+        {
+          "key": "C",
+          "text": "A duy vật biện chứng; B duy tâm nên không có biện chứng."
+        },
+        {
+          "key": "D",
+          "text": "A duy vật siêu hình; B duy vật vì phân tích có hệ thống."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiêu chí duy vật là tính thứ nhất và vai trò quyết định của vật chất. Tiêu chí duy tâm là tính thứ nhất của tinh thần. Ảnh hưởng cơ học dẫn cách nhìn cỗ máy biệt lập, tĩnh tại. Biện chứng Đức trình bày có hệ thống trên cơ sở tinh thần. Thông tin buộc phân biệt lập trường với phương pháp.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy phương pháp làm tiêu chí bản nguyên."
+        },
+        {
+          "key": "C",
+          "explanation": "Đồng nhất duy vật với biện chứng, phủ nhận biện chứng duy tâm."
+        },
+        {
+          "key": "D",
+          "explanation": "Đúng A, sai tiêu chí xác định B."
+        }
+      ],
+      "takeaway": "Không dùng một nhãn để suy nhãn ở trục khác.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH243",
+      "kind": "quiz",
+      "prompt": "Người học xếp người có lý tưởng vào duy tâm, người ham tiền vào duy vật; chưa ai phát biểu nguồn gốc thế giới. Đánh giá nào đủ căn cứ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ghép đúng: lý tưởng là tinh thần, tiền là vật chất."
+        },
+        {
+          "key": "B",
+          "text": "Đảo ghép: có lý tưởng là duy vật, ham tiền là duy tâm."
+        },
+        {
+          "key": "C",
+          "text": "Cùng nhị nguyên: mỗi người đều có tài sản và suy nghĩ."
+        },
+        {
+          "key": "D",
+          "text": "Cần biết cách giải quyết quan hệ vật chất–ý thức để phân loại."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tiêu chí duy vật là tính thứ nhất và vai trò quyết định của vật chất. Tiêu chí duy tâm là tính thứ nhất của tinh thần. Hai hành vi không quyết định lập trường triết học.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy đối tượng quan tâm thay tính thứ nhất."
+        },
+        {
+          "key": "B",
+          "explanation": "Vẫn suy từ biểu hiện, chỉ đổi chiều."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm hai hiện tượng với hai bản nguyên."
+        }
+      ],
+      "takeaway": "Không gán quan điểm triết học từ hành vi đơn lẻ.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH244",
+      "kind": "quiz",
+      "prompt": "Khi thử cách học, A giữ các điều kiện khác ổn định trong một buổi rồi xem lại các liên hệ khi kết luận; B dùng kết quả buổi ấy để phủ nhận ảnh hưởng của mọi điều kiện khác. Đánh giá nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A có thao tác hợp lý; B tuyệt đối hóa sự cô lập."
+        },
+        {
+          "key": "B",
+          "text": "A và B cùng biện chứng vì cùng có số liệu đo."
+        },
+        {
+          "key": "C",
+          "text": "A sai vì xét liên hệ; B đúng vì kết quả đo đã đủ."
+        },
+        {
+          "key": "D",
+          "text": "A và B cùng siêu hình vì đều từng giữ biến cố định."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Siêu hình: Cô lập, ranh giới đối lập tuyệt đối. Tạm tách, giữ cố định trong không–thời gian xác định có cơ sở nhận thức. Mở rộng vô điều kiện từ phạm vi hẹp gây sai lầm phương pháp. Một thông tin phạm vi kết luận làm đổi đánh giá phương pháp.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thực nghiệm không bảo đảm cách khái quát."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo giới hạn áp dụng."
+        },
+        {
+          "key": "D",
+          "explanation": "Đồng nhất thao tác với tuyệt đối hóa."
+        }
+      ],
+      "takeaway": "Cần kiểm tra cách khái quát từ thao tác nghiên cứu.",
+      "group": "C",
+      "groupTitle": "Biện chứng và siêu hình"
+    },
+    {
+      "id": "CH245",
+      "kind": "quiz",
+      "prompt": "Cùng xem bảng kết quả học tập hiện tại, A coi đó là một giai đoạn cần đối chiếu quá trình; B coi đó là bằng chứng năng lực của bạn học không thể đổi. Dữ kiện nào quyết định sự khác nhau về phương pháp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Số lần hai người dùng từ khách quan trong báo cáo."
+        },
+        {
+          "key": "B",
+          "text": "Mức thiện cảm mà hai người có với người được chụp."
+        },
+        {
+          "key": "C",
+          "text": "Loại máy ảnh mà hai người dùng để chụp dữ liệu."
+        },
+        {
+          "key": "D",
+          "text": "Cách nối hiện tại với quá trình lịch sử."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Siêu hình: Đồng nhất đối tượng với trạng thái tĩnh nhất thời. Cùng dữ liệu nhưng B tuyệt đối hóa trạng thái tĩnh.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Từ khóa không thay cách lập luận."
+        },
+        {
+          "key": "B",
+          "explanation": "Đề có tiêu chí quá trình, không thái độ cá nhân."
+        },
+        {
+          "key": "C",
+          "explanation": "Thiết bị không quyết định lập luận được nêu."
+        }
+      ],
+      "takeaway": "Phương pháp nằm trong quan hệ suy luận từ thông tin.",
+      "group": "C",
+      "groupTitle": "Biện chứng và siêu hình"
+    },
+    {
+      "id": "CH246",
+      "kind": "quiz",
+      "prompt": "A tạm hoãn tin một bài vì thiếu chứng cứ, sẵn sàng kiểm tra; B phủ nhận khả năng đạt chân lý khách quan. Phân biệt nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A thận trọng kiểm chứng; B hoài nghi thành nguyên tắc."
+        },
+        {
+          "key": "B",
+          "text": "A và B cùng bất khả tri vì đều chưa chấp nhận tin."
+        },
+        {
+          "key": "C",
+          "text": "A là hoài nghi luận; B chỉ thận trọng trước tin chưa kiểm tra."
+        },
+        {
+          "key": "D",
+          "text": "A và B cùng khả tri vì đều đang nêu quan điểm."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Bất khả tri phủ nhận biết bản chất về nguyên tắc, có thể nhận bề ngoài. Hoài nghi luận nâng hoài nghi thành nguyên tắc, phủ nhận đạt chân lý khách quan. Không đồng nhất hoài nghi từng tin với hoài nghi luận.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Nhầm trạng thái chưa tin với giới hạn nguyên tắc."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo nội dung hai lập luận."
+        },
+        {
+          "key": "D",
+          "explanation": "Có quan điểm không chứng minh tin khả năng nhận thức."
+        }
+      ],
+      "takeaway": "Xét hoài nghi về kết quả hay về khả năng chân lý.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH247",
+      "kind": "quiz",
+      "prompt": "Lập kế hoạch sinh hoạt cộng đồng, A dùng nguyên lý chung để đặt câu hỏi rồi khảo sát; B suy ngay số liệu địa bàn từ nguyên lý ấy. Vì sao chỉ cách của A đáp ứng yêu cầu vận dụng trong Chương I?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A dùng định hướng để nghiên cứu, B thay nghiên cứu bằng nguyên lý."
+        },
+        {
+          "key": "B",
+          "text": "Cả hai đúng vì cùng trích một nguyên lý của nguồn."
+        },
+        {
+          "key": "C",
+          "text": "B đúng vì nguyên lý chung chứa mọi số liệu riêng."
+        },
+        {
+          "key": "D",
+          "text": "A đúng vì khảo sát nên không cần nguyên lý nào nữa."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Triết học cung cấp phương pháp luận chung nhất và công cụ phạm trù, quy luật. Hiệu quả cần tri thức khoa học cụ thể và kinh nghiệm thực tiễn cùng triết học. Giá trị định hướng của nguyên lý từ phản ánh thuộc tính, liên hệ phổ biến. Tiêu chí là chức năng định hướng và điều kiện cụ thể.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đúng câu chữ không bảo đảm đúng cách vận dụng."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa triết học."
+        },
+        {
+          "key": "D",
+          "explanation": "Đúng khảo sát nhưng xóa định hướng."
+        }
+      ],
+      "takeaway": "Phân biệt nguyên tắc đặt vấn đề với dữ liệu trả lời.",
+      "group": "E",
+      "groupTitle": "Khái niệm, đối tượng và chức năng"
+    },
+    {
+      "id": "CH248",
+      "kind": "quiz",
+      "prompt": "Sau khảo sát nhu cầu học nhóm, A sửa biện pháp trên cơ sở lý luận và dữ kiện; B đổi theo sở thích rồi gọi đó là sáng tạo. Tiêu chí nào phân biệt hai cách làm?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mức khác biệt ngôn từ so với cách trình bày trước đây."
+        },
+        {
+          "key": "B",
+          "text": "Số người biết tên biện pháp mới qua mạng xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Mức tự tin của người đề nghị thay đổi biện pháp."
+        },
+        {
+          "key": "D",
+          "text": "Thay đổi có căn cứ lý luận và thực tiễn."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Triết học Mác là hệ thống mở, có tính sáng tạo. Nguyên lý là kim chỉ nam, vận dụng theo hoàn cảnh. Phát triển lý luận qua tổng kết, giữ lập trường, chống giáo điều, duy ý chí, xét lại. Không dùng độ mới bề ngoài làm chuẩn sáng tạo.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đổi chữ chưa là phát triển."
+        },
+        {
+          "key": "B",
+          "explanation": "Độ phổ biến không thay tính có căn cứ."
+        },
+        {
+          "key": "C",
+          "explanation": "Trạng thái tâm lý không thay căn cứ."
+        }
+      ],
+      "takeaway": "Sáng tạo cần lý giải được vì sao phải thay đổi.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH249",
+      "kind": "quiz",
+      "prompt": "Một lời giải dùng phát minh tế bào làm nguồn lý luận trực tiếp và dùng Hêghen làm tiền đề tự nhiên. Sửa lỗi mà giữ vai trò cả hai ra sao?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Loại tế bào vì triết học không dùng kết quả tự nhiên."
+        },
+        {
+          "key": "B",
+          "text": "Giữ cách xếp vì mọi điều kiện quan trọng đều cùng loại."
+        },
+        {
+          "key": "C",
+          "text": "Tế bào: tiền đề tự nhiên; Hêghen: nguồn lý luận."
+        },
+        {
+          "key": "D",
+          "text": "Loại Hêghen vì có nền duy tâm nên không có hạt nhân hợp lý."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Triết học Đức là nguồn lý luận trực tiếp của triết học Mác. Kế thừa phép biện chứng Hêghen bằng cải tạo vỏ duy tâm. Thuyết tế bào là tiền đề khoa học tự nhiên. Đổi đúng loại, không phủ nhận ảnh hưởng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Xóa tiền đề khoa học."
+        },
+        {
+          "key": "B",
+          "explanation": "Đồng nhất vai trò quan trọng và bản chất."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ nhận kế thừa phê phán."
+        }
+      ],
+      "takeaway": "Quan trọng như nhau không nghĩa thuộc cùng nhóm căn cứ.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH250",
+      "kind": "quiz",
+      "prompt": "Hai nhóm cùng thất bại khi áp dụng một biện pháp học tập. Dữ liệu mới chỉ cho thấy biện pháp chưa phù hợp điều kiện, chưa bác được nguyên lý chung. A vẫn bác toàn bộ nguyên lý; B sửa cách dùng sau phân tích. Đánh giá nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "B giáo điều vì giữ bất kỳ nền tảng nào đều là bảo thủ."
+        },
+        {
+          "key": "B",
+          "text": "A khoa học hơn vì có một thất bại là đủ bác toàn học thuyết."
+        },
+        {
+          "key": "C",
+          "text": "B tách nguyên lý và cách dùng; A phủ định quá mức."
+        },
+        {
+          "key": "D",
+          "text": "Cả hai đúng vì có dữ liệu là đủ cho mọi suy luận."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Triết học Mác là hệ thống mở, có tính sáng tạo. Nguyên lý là kim chỉ nam, vận dụng theo hoàn cảnh. Khoa học, thực tiễn mới và đổ vỡ mô hình đòi tổng kết phát triển lý luận. Thông tin phải được phân tích, không tự bác mọi nền tảng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đồng nhất kế thừa với đóng kín."
+        },
+        {
+          "key": "B",
+          "explanation": "Đồng nhất mô hình với nguyên lý."
+        },
+        {
+          "key": "D",
+          "explanation": "Dữ liệu cần quan hệ suy luận có căn cứ."
+        }
+      ],
+      "takeaway": "Phê phán phải xác định đúng đối tượng cần sửa.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH251",
+      "kind": "quiz",
+      "prompt": "Một người coi mọi vật chỉ là cảm giác của mình, nhưng khẳng định có thể biết chúng. Ghép nào phù hợp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duy tâm chủ quan và khả tri."
+        },
+        {
+          "key": "B",
+          "text": "Duy tâm khách quan và khả tri."
+        },
+        {
+          "key": "C",
+          "text": "Duy tâm chủ quan và bất khả tri."
+        },
+        {
+          "key": "D",
+          "text": "Duy vật siêu hình và bất khả tri."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Duy tâm chủ quan lấy ý thức cá nhân, phức hợp cảm giác làm cái có trước. Khả tri: Có thể biết bản chất về nguyên tắc, không phải đã biết hết. Hai nhãn dựa hai mệnh đề khác nhau.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Nhầm cảm giác cá nhân với tinh thần độc lập."
+        },
+        {
+          "key": "C",
+          "explanation": "Đề thừa nhận khả năng biết."
+        },
+        {
+          "key": "D",
+          "explanation": "Sai cả bản nguyên lẫn khả năng biết."
+        }
+      ],
+      "takeaway": "Duy tâm không mặc nhiên là bất khả tri.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH252",
+      "kind": "quiz",
+      "prompt": "Một người coi mọi vật biểu hiện tinh thần độc lập con người, nhưng khẳng định có thể biết chúng. Ghép nào phù hợp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duy tâm khách quan và khả tri."
+        },
+        {
+          "key": "B",
+          "text": "Duy tâm khách quan và bất khả tri."
+        },
+        {
+          "key": "C",
+          "text": "Duy vật biện chứng và khả tri."
+        },
+        {
+          "key": "D",
+          "text": "Duy tâm chủ quan và khả tri."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Duy tâm khách quan lấy thực thể tinh thần độc lập con người làm cái có trước. Khả tri: Có thể biết bản chất về nguyên tắc, không phải đã biết hết. Chỉ đổi chủ thể tinh thần so với trường hợp cảm giác cá nhân.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đề thừa nhận khả năng biết."
+        },
+        {
+          "key": "C",
+          "explanation": "Tính độc lập con người của tinh thần chưa là vật chất."
+        },
+        {
+          "key": "D",
+          "explanation": "Không phải ý thức cá nhân là bản nguyên."
+        }
+      ],
+      "takeaway": "Duy tâm khách quan khác thế giới khách quan vật chất.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH253",
+      "kind": "quiz",
+      "prompt": "Người mua coi trọng giá rẻ và giải thích mọi vật do ý niệm độc lập con người sinh ra. Nhãn nào có căn cứ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duy tâm khách quan theo lập luận về nguồn gốc."
+        },
+        {
+          "key": "B",
+          "text": "Duy tâm chủ quan vì lựa chọn là của cá nhân."
+        },
+        {
+          "key": "C",
+          "text": "Duy vật vì đặt lợi ích tiền bạc lên trước."
+        },
+        {
+          "key": "D",
+          "text": "Nhị nguyên vì đồng thời có giá tiền và ý tưởng."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Tiêu chí duy vật là tính thứ nhất và vai trò quyết định của vật chất. Duy tâm khách quan lấy thực thể tinh thần độc lập con người làm cái có trước. Quan tâm tiền không quyết định lập trường.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Quyết định cá nhân không phải bản nguyên cá nhân."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm duy vật với vụ lợi."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm hiện tượng với hai bản nguyên."
+        }
+      ],
+      "takeaway": "Ưu tiên căn cứ lập luận thay đánh giá lối sống.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH254",
+      "kind": "quiz",
+      "prompt": "Người mua coi trọng giá rẻ và giải thích giới tự nhiên có trước, quyết định ý thức. Nhãn nào có căn cứ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Duy tâm chủ quan vì lựa chọn là của cá nhân."
+        },
+        {
+          "key": "B",
+          "text": "Duy vật theo cách giải thích nguồn gốc."
+        },
+        {
+          "key": "C",
+          "text": "Nhị nguyên vì đồng thời có giá tiền và ý tưởng."
+        },
+        {
+          "key": "D",
+          "text": "Duy vật vì đặt lợi ích tiền bạc lên trước."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tiêu chí duy vật là tính thứ nhất và vai trò quyết định của vật chất. Thay đổi lập luận làm đổi đáp án, dù hành vi giống nhau.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Quyết định cá nhân không phải nền tồn tại."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm hai hiện tượng với hai bản nguyên."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhãn tình cờ đúng nhưng lý do sai tiêu chí."
+        }
+      ],
+      "takeaway": "Câu trả lời đúng phải kèm đúng căn cứ phân loại.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH255",
+      "kind": "quiz",
+      "prompt": "Sêlinh và việc chúa truyền của Ăngghen thể hiện thái độ lý luận nào theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phê phán những quan niệm thần bí, phản động của Sêlinh."
+        },
+        {
+          "key": "B",
+          "text": "Đưa định nghĩa hoàn chỉnh giai cấp làm cơ sở phân loại xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Tổng kết Công xã Pari để phát triển lý luận nhà nước."
+        },
+        {
+          "key": "D",
+          "text": "Bảo vệ quan niệm thần bí để chống chủ nghĩa duy vật."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Sêlinh và việc chúa truyền tháng 3/1842 chống quan điểm thần bí.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đây là đóng góp Sáng kiến vĩ đại của Lênin."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là mạch Nội chiến ở Pháp của Mác."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo đối tượng và hướng phê phán."
+        }
+      ],
+      "takeaway": "Phân biệt công trình thời chuyển biến với đóng góp các giai đoạn sau.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH256",
+      "kind": "quiz",
+      "prompt": "Trong buổi đọc tin khoa học, lớp thấy một phát hiện đáng tin cậy vừa đòi sửa mô hình chuyên ngành, vừa đặt vấn đề mới cho quan niệm chung về vận động. Chỉ xét chiều tác động được nêu, quan hệ nào thể hiện?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Khoa học không cần thế giới quan vì đã có mô hình."
+        },
+        {
+          "key": "B",
+          "text": "Khoa học cụ thể đặt vấn đề mới cho khái quát triết học."
+        },
+        {
+          "key": "C",
+          "text": "Triết học cung cấp trước toàn bộ phát hiện của ngành."
+        },
+        {
+          "key": "D",
+          "text": "Triết học và khoa học trùng đối tượng nên không còn phân biệt."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Khoa học cung cấp dữ liệu và vấn đề mới cho triết học. Đề nêu chiều dữ liệu mới dẫn yêu cầu lý luận.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Từ điều chỉnh mô hình suy mất định hướng."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo chiều và tuyệt đối hóa."
+        },
+        {
+          "key": "D",
+          "explanation": "Gắn bó không là đồng nhất."
+        }
+      ],
+      "takeaway": "Khoa học nuôi dưỡng vấn đề mới cho tư duy triết học.",
+      "group": "E",
+      "groupTitle": "Khái niệm, đối tượng và chức năng"
+    },
+    {
+      "id": "CH257",
+      "kind": "quiz",
+      "prompt": "Khi tìm hiểu nhu cầu sinh hoạt của lớp, nhóm đã biết thao tác phỏng vấn nhưng còn hỏi vì sao chọn cách này và khi nào nên phối hợp quan sát. Câu hỏi sau thuộc cấp độ nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phương pháp luận về lựa chọn và sử dụng phương pháp."
+        },
+        {
+          "key": "B",
+          "text": "Nhân sinh quan về mục tiêu sống của người phỏng vấn."
+        },
+        {
+          "key": "C",
+          "text": "Dữ liệu phát biểu của người đã được phỏng vấn."
+        },
+        {
+          "key": "D",
+          "text": "Kỹ thuật ghi âm từng câu nói trong phỏng vấn."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Phương pháp luận: Hệ quan điểm, nguyên tắc chỉ đạo sử dụng phương pháp. Hỏi căn cứ hệ nguyên tắc, không thao tác riêng.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Không trực tiếp trả lời căn cứ lựa chọn phương pháp."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là kết quả thu nhận."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là thao tác riêng."
+        }
+      ],
+      "takeaway": "Phân biệt cách làm với lý luận chỉ đạo cách làm.",
+      "group": "E",
+      "groupTitle": "Khái niệm, đối tượng và chức năng"
+    },
+    {
+      "id": "CH258",
+      "kind": "quiz",
+      "prompt": "Trong bối cảnh bản 2019, một bài suy tình thế bất lợi nghĩa là các phong trào tiến bộ đã biến mất. Dữ kiện nào nguồn nêu bác kết luận ấy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chủ nghĩa xã hội đang chịu khủng hoảng, gây khó khăn cho lực lượng tiến bộ."
+        },
+        {
+          "key": "B",
+          "text": "Các hình thức đấu tranh cần tiếp tục thay đổi trước điều kiện lịch sử mới."
+        },
+        {
+          "key": "C",
+          "text": "Phong trào công nhân, xã hội chủ nghĩa và độc lập dân tộc vẫn tồn tại, phục hồi."
+        },
+        {
+          "key": "D",
+          "text": "Chủ nghĩa đế quốc đang tạm thời ở thế thắng trong tương quan lực lượng."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Khó khăn và thoái trào của chủ nghĩa xã hội không đồng nghĩa các phong trào công nhân, xã hội chủ nghĩa và độc lập dân tộc mất hẳn. Cần phân biệt sự suy giảm với việc chấm dứt tồn tại.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đúng một mặt nhưng chính là thông tin bài đã tuyệt đối hóa."
+        },
+        {
+          "key": "B",
+          "explanation": "Đúng yêu cầu phương pháp nhưng không trực tiếp xác nhận phong trào vẫn tồn tại."
+        },
+        {
+          "key": "D",
+          "explanation": "Đúng bối cảnh nhưng chưa bác kết luận biến mất."
+        }
+      ],
+      "takeaway": "Suy giảm hoặc bất lợi chưa đồng nghĩa không còn tồn tại. Giữ niên cảnh.",
+      "group": "F",
+      "groupTitle": "Vai trò của triết học và sự nghiệp đổi mới"
+    },
+    {
+      "id": "CH259",
+      "kind": "quiz",
+      "prompt": "Trong Hệ tư tưởng Đức, hành vi lịch sử đầu tiên của những cá nhân hiện thực đang sống được xác định là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thiết lập nhà nước trước mọi hoạt động sống."
+        },
+        {
+          "key": "B",
+          "text": "Sản xuất vật chất để duy trì đời sống."
+        },
+        {
+          "key": "C",
+          "text": "Xây hệ ý niệm để sinh ra điều kiện sống."
+        },
+        {
+          "key": "D",
+          "text": "Tạo một chuẩn đạo đức thay hoạt động vật chất."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Sản xuất vật chất là hành vi lịch sử đầu tiên.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đặt thiết chế về sau làm tiền đề đầu tiên."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo hoạt động vật chất và ý niệm."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy nội dung tinh thần thay cơ sở thực tiễn."
+        }
+      ],
+      "takeaway": "Quan niệm lịch sử xuất phát con người sống và sản xuất.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH260",
+      "kind": "quiz",
+      "prompt": "Cặp mốc qua đời nào đúng theo giáo trình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mác: 14/3/1883; Ăngghen: năm 1895."
+        },
+        {
+          "key": "B",
+          "text": "Mác: 14/3/1883; Ăngghen: năm 1924."
+        },
+        {
+          "key": "C",
+          "text": "Mác: 14/3/1895; Ăngghen: năm 1883."
+        },
+        {
+          "key": "D",
+          "text": "Mác: 14/3/1875; Ăngghen: năm 1895."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Mác mất 14/3/1883. Ăngghen sống đến năm 1895. Hai mốc khớp và 36.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đổi năm của Ăngghen sang ranh giới sau Lênin."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo hai năm qua đời."
+        },
+        {
+          "key": "D",
+          "explanation": "Đổi năm Mác mất thành mốc Phê phán Cương lĩnh Gôta."
+        }
+      ],
+      "takeaway": "Đối chiếu mốc người mất với lịch sử tiếp tục hoàn chỉnh tác phẩm.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH261",
+      "kind": "quiz",
+      "prompt": "Một bài dùng sự ra đời nhiều tổ chức quốc tế và khu vực làm dấu hiệu mọi nước đã có lợi ích giống nhau. Theo nguồn, sửa thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đó là chứng cứ các quốc gia đã mất mọi quan hệ phụ thuộc lẫn nhau."
+        },
+        {
+          "key": "B",
+          "text": "Đó là hoạt động tách khỏi toàn cầu hóa vì tổ chức có phạm vi riêng."
+        },
+        {
+          "key": "C",
+          "text": "Đó là chứng cứ liên kết quốc tế đã xóa mọi thách thức của phát triển."
+        },
+        {
+          "key": "D",
+          "text": "Đó là biểu hiện liên hệ toàn cầu tăng, chưa chứng minh lợi ích đồng nhất."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Sự ra đời nhiều tổ chức quốc tế, khu vực biểu hiện tăng liên hệ toàn cầu.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo nội dung tăng liên hệ, phụ thuộc."
+        },
+        {
+          "key": "B",
+          "explanation": "Phân biệt phạm vi không xóa quan hệ với xu thế chung."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa một mặt tích cực."
+        }
+      ],
+      "takeaway": "Tổ chức liên kết thể hiện quan hệ tăng, không tự giải quyết khác biệt lợi ích.",
+      "group": "F",
+      "groupTitle": "Vai trò của triết học và sự nghiệp đổi mới"
+    },
+    {
+      "id": "CH262",
+      "kind": "quiz",
+      "prompt": "Tập I Tư bản được nguồn ghi xuất bản khi nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tháng 9 năm 1871."
+        },
+        {
+          "key": "B",
+          "text": "Tháng 9 năm 1867."
+        },
+        {
+          "key": "C",
+          "text": "Tháng 9 năm 1875."
+        },
+        {
+          "key": "D",
+          "text": "Tháng 9 năm 1859."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tư bản tập I xuất bản tháng 9/1867.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm năm Nội chiến ở Pháp."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm năm Phê phán Cương lĩnh Gôta."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm năm Góp phần phê phán kinh tế chính trị học."
+        }
+      ],
+      "takeaway": "Phân biệt thời điểm xuất bản những công trình trong cùng giai đoạn.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH263",
+      "kind": "quiz",
+      "prompt": "Một đề cương loại bảo vệ Tổ quốc xã hội chủ nghĩa vì cho không thuộc đóng góp lý luận của Lênin. Theo Chương I, phải bổ sung gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lênin giao toàn bộ vấn đề cho khoa học tự nhiên để tránh quan hệ chính trị."
+        },
+        {
+          "key": "B",
+          "text": "Lênin chỉ đề cập kỹ thuật quân sự, không có đóng góp lý luận chiến tranh."
+        },
+        {
+          "key": "C",
+          "text": "Lênin chỉ sao chép học thuyết chiến tranh, không có nội dung phát triển."
+        },
+        {
+          "key": "D",
+          "text": "Lênin soạn học thuyết bảo vệ Tổ quốc xã hội chủ nghĩa, phát triển chiến tranh–quân đội."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Lênin phát triển chiến tranh–hòa bình, quân đội, soạn học thuyết bảo vệ Tổ quốc XHCN.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ sự gắn lý luận cách mạng với vấn đề chiến tranh, hòa bình."
+        },
+        {
+          "key": "B",
+          "explanation": "Trái mức đóng góp."
+        },
+        {
+          "key": "C",
+          "explanation": "Phủ nhận phát triển và đóng góp bảo vệ Tổ quốc XHCN."
+        }
+      ],
+      "takeaway": "Phân biệt đóng góp lý luận về chiến tranh với kỹ thuật quân sự cụ thể.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH264",
+      "kind": "quiz",
+      "prompt": "Cuộc gặp tại Pari dẫn tới cộng tác lâu dài giữa Mác và Ăngghen diễn ra vào mốc nào được nguồn nêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tháng 8 năm 1848."
+        },
+        {
+          "key": "B",
+          "text": "Tháng 8 năm 1844."
+        },
+        {
+          "key": "C",
+          "text": "Tháng 2 năm 1844."
+        },
+        {
+          "key": "D",
+          "text": "Tháng 2 năm 1845."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Cuộc gặp Pari tháng 8/1844.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm thời kỳ Tuyên ngôn với cuộc gặp ban đầu."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm mốc Niên giám Pháp–Đức xuất bản."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm mốc xuất bản Gia đình thần thánh."
+        }
+      ],
+      "takeaway": "Phân biệt hội tụ tư tưởng với các mốc xuất bản liên quan.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH265",
+      "kind": "quiz",
+      "prompt": "Một bảng nói hệ tư tưởng đứng ngoài mọi lập trường xã hội. Đóng góp Lênin nào ở trang 44 yêu cầu sửa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chứng minh hệ tư tưởng không liên hệ đấu tranh xã hội."
+        },
+        {
+          "key": "B",
+          "text": "Làm sáng tỏ tính đảng của hệ tư tưởng."
+        },
+        {
+          "key": "C",
+          "text": "Thay mọi hệ tư tưởng bằng một kỹ thuật đo thực nghiệm."
+        },
+        {
+          "key": "D",
+          "text": "Chứng minh hệ tư tưởng chỉ là phản ứng sinh học cá nhân."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Làm sáng tỏ tính đảng của hệ tư tưởng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lặp sự tách rời đang cần sửa."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm lý luận xã hội với kỹ thuật khoa học ngành."
+        },
+        {
+          "key": "D",
+          "explanation": "Quy giản sinh học là lỗi Lênin phê phán."
+        }
+      ],
+      "takeaway": "Không coi tư tưởng xã hội tách khỏi lập trường và quan hệ xã hội.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH266",
+      "kind": "quiz",
+      "prompt": "Nguồn gắn Bút ký triết học của Lênin với thời gian nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Từ năm 1917 đến năm 1924."
+        },
+        {
+          "key": "B",
+          "text": "Từ năm 1905 đến năm 1907."
+        },
+        {
+          "key": "C",
+          "text": "Từ năm 1914 đến năm 1916."
+        },
+        {
+          "key": "D",
+          "text": "Từ năm 1893 đến năm 1907."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Bút ký triết học thực hiện trong 1914–1916.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là thời kỳ xây dựng Xô viết sau Tháng Mười."
+        },
+        {
+          "key": "B",
+          "explanation": "Đây là mốc cuộc cách mạng thất bại được nêu trước."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là toàn thời kỳ xây đảng, không thời gian Bút ký."
+        }
+      ],
+      "takeaway": "Phân biệt thời gian công trình với thời kỳ hoạt động rộng hơn.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH267",
+      "kind": "quiz",
+      "prompt": "Một người suy hai chức năng cơ bản nghĩa là triết học chỉ có đúng hai chức năng. Nguồn sửa suy luận này bằng điểm nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Còn chức năng nhận thức, giáo dục, dự báo, phê phán."
+        },
+        {
+          "key": "B",
+          "text": "Các chức năng khác chỉ có ở ngành riêng, không ở triết học."
+        },
+        {
+          "key": "C",
+          "text": "Hai chức năng cơ bản loại mọi chức năng khác khỏi triết học."
+        },
+        {
+          "key": "D",
+          "text": "Có thêm chức năng thì thế giới quan không còn là cơ bản."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Ngoài hai chức năng cơ bản còn nhận thức, giáo dục, dự báo, phê phán. Cơ bản nói vai trò trọng tâm, không nói số chức năng tồn tại.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Nhận thức, giáo dục, dự báo và phê phán cũng là các chức năng của triết học Mác–Lênin, dù không phải hai chức năng cơ bản."
+        },
+        {
+          "key": "C",
+          "explanation": "Biến cơ bản thành độc quyền tồn tại."
+        },
+        {
+          "key": "D",
+          "explanation": "Đồng nhất có thêm với thay vai trò trọng tâm."
+        }
+      ],
+      "takeaway": "Phân biệt chức năng cơ bản với danh sách đầy đủ chức năng.",
+      "group": "E",
+      "groupTitle": "Khái niệm, đối tượng và chức năng"
+    },
+    {
+      "id": "CH268",
+      "kind": "quiz",
+      "prompt": "Dãy mốc nào đúng với ba tác phẩm theo Chương I: Tuyên ngôn của Đảng Cộng sản; Góp phần phê phán kinh tế chính trị học; Phê phán Cương lĩnh Gôta?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lần lượt: 1848; 1875; 1859."
+        },
+        {
+          "key": "B",
+          "text": "Lần lượt: 1848; 1859; 1875."
+        },
+        {
+          "key": "C",
+          "text": "Lần lượt: 1859; 1848; 1875."
+        },
+        {
+          "key": "D",
+          "text": "Lần lượt: 1875; 1859; 1848."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Góp phần phê phán kinh tế chính trị học gắn với năm 1859, Tuyên ngôn của Đảng Cộng sản gắn với năm 1848 và Phê phán Cương lĩnh Gôta gắn với năm 1875. Cần phân biệt ba công trình và thời điểm của chúng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Giữ mốc Tuyên ngôn nhưng đảo hai công trình về sau."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo mốc hai tác phẩm đầu, giữ đúng mốc tác phẩm cuối."
+        },
+        {
+          "key": "D",
+          "explanation": "Giữ mốc công trình kinh tế nhưng đảo mốc Tuyên ngôn và Gôta."
+        }
+      ],
+      "takeaway": "Gắn đúng tác phẩm với thời gian. Không lấy một mốc quen để thay tất cả.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH269",
+      "kind": "quiz",
+      "prompt": "Một sơ đồ cho giành chính quyền xong thì không cần đảng lãnh đạo xây dựng xã hội mới. Theo giới thiệu Nhà nước và cách mạng, sửa gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Coi quần chúng đông nên không cần vai trò tổ chức và lãnh đạo."
+        },
+        {
+          "key": "B",
+          "text": "Thay vai trò đảng bằng cơ chế hành chính tự vận hành sau thắng lợi."
+        },
+        {
+          "key": "C",
+          "text": "Giữ vai trò lãnh đạo của đảng cộng sản trong xây dựng xã hội mới."
+        },
+        {
+          "key": "D",
+          "text": "Giữ tên gọi nhà nước, bỏ mọi nội dung lãnh đạo và nhiệm vụ quá độ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Chính đảng tiên phong công nhân lãnh đạo nhà nước, xây dựng xã hội mới.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đồng nhất vai trò quần chúng với bỏ đảng."
+        },
+        {
+          "key": "B",
+          "explanation": "Tách tổ chức lãnh đạo khỏi nhiệm vụ xây dựng."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy hình thức thay quan hệ quyền lực và nhiệm vụ."
+        }
+      ],
+      "takeaway": "Giành chính quyền không kết thúc yêu cầu tổ chức, lãnh đạo xây dựng.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH270",
+      "kind": "quiz",
+      "prompt": "Vì sao phương pháp siêu hình khác hiện tượng siêu nhiên?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Siêu hình chỉ phương pháp tư duy; siêu nhiên chỉ loại hiện tượng."
+        },
+        {
+          "key": "B",
+          "text": "Một bên là lý tưởng; bên kia là mọi điều kiện vật chất."
+        },
+        {
+          "key": "C",
+          "text": "Một bên là kỹ thuật đo; bên kia là mọi suy luận trừu tượng."
+        },
+        {
+          "key": "D",
+          "text": "Một bên là duy vật; bên kia là mọi biểu hiện ý thức."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Nghĩa ban đầu siêu hình: Triết học siêu cảm tính, phi thực nghiệm. Arixtốt. Siêu hình: Cô lập, ranh giới đối lập tuyệt đối.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Nhầm cả hai khái niệm."
+        },
+        {
+          "key": "C",
+          "explanation": "Thu hẹp phương pháp và mở rộng siêu nhiên sai."
+        },
+        {
+          "key": "D",
+          "explanation": "Không phải phân loại hai phạm trù này."
+        }
+      ],
+      "takeaway": "Không phân loại bằng âm siêu trong từ.",
+      "group": "C",
+      "groupTitle": "Biện chứng và siêu hình"
+    },
+    {
+      "id": "CH271",
+      "kind": "quiz",
+      "prompt": "Thuật ngữ thế giới quan được nguồn gắn với mốc nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cantơ, Phê phán năng lực phán đoán, 1869."
+        },
+        {
+          "key": "B",
+          "text": "Cantơ, Phê phán năng lực phán đoán, 1790."
+        },
+        {
+          "key": "C",
+          "text": "Cantơ, Luận cương về Phoiơbắc, 1790."
+        },
+        {
+          "key": "D",
+          "text": "Huxley, Phê phán năng lực phán đoán, 1790."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Cantơ dùng thuật ngữ thế giới quan năm 1790. Thuật ngữ gắn Phê phán năng lực phán đoán. Đúng nhân vật, tác phẩm và năm.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm năm với thuật ngữ bất khả tri."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm tác phẩm và tác giả thực."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm người đặt thuật ngữ bất khả tri."
+        }
+      ],
+      "takeaway": "Không đổi lịch sử một thuật ngữ với thuật ngữ khác.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH272",
+      "kind": "quiz",
+      "prompt": "Schelling bổ sung gì vào cách hiểu thế giới quan theo trang 13?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thế giới quan chỉ là hình ảnh nhìn thấy bằng mắt người."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ có thế giới quan sau khi viết hoàn chỉnh học thuyết."
+        },
+        {
+          "key": "C",
+          "text": "Có sẵn một sơ đồ về thế giới, chưa cần giải thích lý thuyết."
+        },
+        {
+          "key": "D",
+          "text": "Mỗi thế giới quan là tập dữ kiện đo đã được chứng minh đầy đủ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Schelling bổ sung nội dung sơ đồ thế giới có trước giải thích lý thuyết. Giải thích thế giới quan có thể tồn tại trước hệ lý luận tự giác.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Giữ nghĩa cảm nhận mà bỏ nội dung bổ sung."
+        },
+        {
+          "key": "B",
+          "explanation": "Trái ý sơ đồ có sẵn."
+        },
+        {
+          "key": "D",
+          "explanation": "Đổi sơ đồ định hướng thành toàn bộ dữ liệu."
+        }
+      ],
+      "takeaway": "Thế giới quan không đòi chủ thể đã có học thuyết hoàn chỉnh.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH273",
+      "kind": "quiz",
+      "prompt": "Bộ ghép nào đúng với ví dụ thế giới quan ở trang 13?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hêghen–tôn giáo; Goethe–thơ ca; Ranke–đạo đức."
+        },
+        {
+          "key": "B",
+          "text": "Hêghen–đạo đức; Goethe–thơ ca; Ranke–tôn giáo."
+        },
+        {
+          "key": "C",
+          "text": "Hêghen–thơ ca; Goethe–đạo đức; Ranke–tôn giáo."
+        },
+        {
+          "key": "D",
+          "text": "Hêghen–đạo đức; Goethe–tôn giáo; Ranke–thơ ca."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Hêghen dùng ví dụ thế giới quan đạo đức. Goethe dùng ví dụ thế giới quan thơ ca. Ranke dùng ví dụ thế giới quan tôn giáo.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo ví dụ đầu và cuối."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo hai ví dụ đầu."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo hai ví dụ sau."
+        }
+      ],
+      "takeaway": "Các ví dụ thể hiện sự phổ biến nhiều cách dùng thuật ngữ.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH274",
+      "kind": "quiz",
+      "prompt": "Một sinh viên bảo chưa biết hết thế giới thì chưa được có thế giới quan. Nghịch lý nhu cầu–tri thức nào nguồn nêu để sửa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Muốn định hướng phải đợi khoa học hoàn thành toàn bộ tri thức."
+        },
+        {
+          "key": "B",
+          "text": "Tri thức chưa đầy đủ nên mọi định hướng đều có giá trị như nhau."
+        },
+        {
+          "key": "C",
+          "text": "Có niềm tin thì không còn cần tăng tri thức về thế giới."
+        },
+        {
+          "key": "D",
+          "text": "Tri thức hữu hạn vẫn cần định hướng về thế giới."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Nhu cầu hiểu đến tận cùng đối diện tri thức hữu hạn, thúc đẩy định hướng thế giới quan. Thế giới quan đáp nhu cầu hành động dù hiểu biết chưa vô hạn.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đặt yêu cầu phải biết hết thế giới trước khi có thế giới quan, trong khi tri thức hữu hạn vẫn phải đáp ứng nhu cầu định hướng hành động."
+        },
+        {
+          "key": "B",
+          "explanation": "Thiếu toàn tri không dẫn tới tương đối tùy tiện."
+        },
+        {
+          "key": "C",
+          "explanation": "Thay nhu cầu phát triển hiểu biết bằng khép kín."
+        }
+      ],
+      "takeaway": "Không cần toàn tri để hình thành định hướng có căn cứ.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH275",
+      "kind": "quiz",
+      "prompt": "Lớp dùng ca dao “Nhiễu điều phủ lấy giá gương / Người trong một nước phải thương nhau cùng” theo nghĩa tương trợ đồng bào, rồi xây dựng chuẩn giúp bạn khó khăn. Xét việc chuyển giá trị thành chuẩn hành vi, cơ chế nào được Chương I nêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Một quy tắc thi cử thay toàn bộ thế giới quan của mỗi người."
+        },
+        {
+          "key": "B",
+          "text": "Quan điểm thành khuôn mẫu văn hóa điều chỉnh hành vi."
+        },
+        {
+          "key": "C",
+          "text": "Giá trị thành quy luật tự nhiên không phụ thuộc hoạt động người."
+        },
+        {
+          "key": "D",
+          "text": "Một khẩu hiệu được ghi nhớ đủ bảo đảm mọi hành vi trung thực."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Quan điểm thế giới quan lý tưởng hóa thành khuôn mẫu văn hóa điều chỉnh hành vi. Định hướng giá trị có thể thành chuẩn mực văn hóa.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đồng nhất biểu hiện riêng với toàn hệ."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm chuẩn mực văn hóa với định luật tự nhiên."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ chuẩn mực suy kết quả tự động."
+        }
+      ],
+      "takeaway": "Tìm cách giá trị chung đi vào quy tắc ứng xử.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH276",
+      "kind": "quiz",
+      "prompt": "Nguồn cho rằng diễn tả thế giới quan bằng lý luận cần dựa cơ sở nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ viện dẫn niềm tin cá nhân đã có, không cần lịch sử nhận thức."
+        },
+        {
+          "key": "B",
+          "text": "Chỉ đếm số học thuyết, không xét thành tựu và phương pháp."
+        },
+        {
+          "key": "C",
+          "text": "Tổng kết lịch sử khoa học và lịch sử tư tưởng triết học."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ quan sát riêng một sự vật, không cần khái quát quan hệ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Diễn tả thế giới quan lý luận cần tổng kết lịch sử khoa học và tư tưởng triết học. Có cả chất liệu khoa học và kinh nghiệm lý luận.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Cắt căn cứ khái quát."
+        },
+        {
+          "key": "B",
+          "explanation": "Lấy số lượng thay tổng kết."
+        },
+        {
+          "key": "D",
+          "explanation": "Thu hẹp cấp độ lý luận."
+        }
+      ],
+      "takeaway": "Triết học tổng kết cả khoa học và chính lịch sử tư duy.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH277",
+      "kind": "quiz",
+      "prompt": "Tại sao các hiện tượng phức tạp, huyền bí được nhắc ở trang 16 không làm xuất hiện vấn đề cơ bản thứ ba?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vì gọi là huyền bí thì chúng tự thuộc một thế giới ngoài hai phạm trù."
+        },
+        {
+          "key": "B",
+          "text": "Vì có tên khoa học thì tự động không còn quan hệ với ý thức."
+        },
+        {
+          "key": "C",
+          "text": "Vẫn cần xác định chúng trong quan hệ vật chất và ý thức."
+        },
+        {
+          "key": "D",
+          "text": "Vì chưa giải thích được nên có thể miễn mọi yêu cầu lập luận."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Sự phức tạp, huyền bí của hiện tượng không tạo phạm trù thứ ba ngoài vật chất–ý thức.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy chưa rõ làm bản nguyên thứ ba."
+        },
+        {
+          "key": "B",
+          "explanation": "Tên gọi không thay phân tích bản chất."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ thiếu biết suy miễn kiểm tra."
+        }
+      ],
+      "takeaway": "Không lấy sự khó hiểu làm bằng chứng một loại tồn tại thứ ba.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH278",
+      "kind": "quiz",
+      "prompt": "Vì sao quan niệm triết học là khoa học của mọi khoa học được nguồn gọi vừa tích cực vừa tiêu cực?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vì triết học khi ấy đã giải xong mọi câu hỏi của khoa học riêng."
+        },
+        {
+          "key": "B",
+          "text": "Phản ánh dung hợp tri thức lịch sử nhưng có nguy cơ tham vọng thay ngành."
+        },
+        {
+          "key": "C",
+          "text": "Vì khoa học riêng không đóng góp gì cho triết học tự nhiên."
+        },
+        {
+          "key": "D",
+          "text": "Vì mọi hệ thống triết học đều chủ trương bỏ tri thức tự nhiên."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Giá trị dung hợp và giới hạn tham vọng của khoa học các khoa học. Phải phân biệt hoàn cảnh ra đời với mở rộng quyền bao trùm.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Biến dung hợp sơ khai thành toàn tri."
+        },
+        {
+          "key": "C",
+          "explanation": "Cắt nguồn gốc nhận thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Ngược nội dung dung hợp."
+        }
+      ],
+      "takeaway": "Giá trị một quan niệm phải đặt trong giai đoạn của nó.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH279",
+      "kind": "quiz",
+      "prompt": "Một học thuyết mới bị nhiều người đương thời bác bỏ. Có thể suy nó không phải tư tưởng triết học có giá trị không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chưa đủ, nhưng bị bác bỏ tự chứng minh học thuyết ấy đúng."
+        },
+        {
+          "key": "B",
+          "text": "Chưa đủ căn cứ: sự thừa nhận có thể đến nhiều thế hệ sau."
+        },
+        {
+          "key": "C",
+          "text": "Có thể, vì mọi học thuyết phải được nhà nước chấp thuận trước."
+        },
+        {
+          "key": "D",
+          "text": "Có thể, vì xã hội đương thời luôn nhận đúng ngay mọi học thuyết."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Học thuyết từng bị phản đối, có thể chỉ được thừa nhận sau nhiều thế hệ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo độ phổ biến thành bảo đảm chân lý."
+        },
+        {
+          "key": "C",
+          "explanation": "Đặt điều kiện không có."
+        },
+        {
+          "key": "D",
+          "explanation": "Biến thừa nhận thành tiêu chuẩn tự động."
+        }
+      ],
+      "takeaway": "Không thay đánh giá nội dung bằng mức tán thành đương thời.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH280",
+      "kind": "quiz",
+      "prompt": "Nghiên cứu triết học tiền cổ đại chỉ còn câu trích, chú giải và tóm lược đời sau. Thái độ nào phù hợp tình trạng tư liệu nguồn nêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Coi mọi bản tóm lược đời sau là nguyên văn tác giả cổ."
+        },
+        {
+          "key": "B",
+          "text": "Viết đầy phần thất lạc bằng suy đoán rồi trình bày như nguồn gốc."
+        },
+        {
+          "key": "C",
+          "text": "Nêu giới hạn chứng cứ và mức chắc chắn khi phục dựng quan điểm."
+        },
+        {
+          "key": "D",
+          "text": "Loại mọi tư liệu gián tiếp nên khẳng định chưa từng có triết học."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Tư liệu tiền cổ đại thiếu, còn câu trích, chú giải, tóm lược gián tiếp. Không tự lấp khoảng trống bằng phỏng đoán.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đồng nhất các tầng tư liệu."
+        },
+        {
+          "key": "B",
+          "explanation": "Bịa phục dựng không căn cứ."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ chứng cứ thiếu suy không tồn tại."
+        }
+      ],
+      "takeaway": "Thiếu tư liệu đòi minh bạch, không suy tùy tiện.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH281",
+      "kind": "quiz",
+      "prompt": "Quan hệ nào giữa duy vật trước Mác và các yếu tố biện chứng được nguồn khẳng định?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có những luận điểm riêng, nhưng chưa có thống nhất hoàn bị duy vật–biện chứng."
+        },
+        {
+          "key": "B",
+          "text": "Không có luận điểm nào vì duy vật và biện chứng đối lập về bản chất."
+        },
+        {
+          "key": "C",
+          "text": "Có luận điểm riêng nên mọi duy vật trước Mác đều là biện chứng."
+        },
+        {
+          "key": "D",
+          "text": "Đã thống nhất hoàn bị nên Mác chỉ đổi tên học thuyết."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Duy vật trước Mác có yếu tố biện chứng riêng nhưng chưa thống nhất hoàn bị. Phân biệt yếu tố riêng và sự thống nhất hệ thống.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Xóa các yếu tố."
+        },
+        {
+          "key": "C",
+          "explanation": "Từ bộ phận suy toàn hệ thống."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ nhận bước ngoặt."
+        }
+      ],
+      "takeaway": "Đừng đánh đồng mầm yếu tố với hệ thống hoàn bị.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH282",
+      "kind": "quiz",
+      "prompt": "Mâu thuẫn nào trong triết học Hêghen được Mác–Ăngghen chỉ ra theo trang 37?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hệ thống kinh tế học với việc chỉ nghiên cứu kỹ thuật sản xuất."
+        },
+        {
+          "key": "B",
+          "text": "Hệ thống thực nghiệm với việc từ chối mọi hình thức lý luận."
+        },
+        {
+          "key": "C",
+          "text": "Hệ thống duy vật với phương pháp duy tâm không có vận động."
+        },
+        {
+          "key": "D",
+          "text": "Hệ thống bảo thủ với phương pháp biện chứng cách mạng."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Mâu thuẫn hệ thống bảo thủ–phương pháp biện chứng cách mạng ở Hêghen. Đây là cơ sở phân biệt nội dung cần phê phán và kế thừa.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm lĩnh vực hệ thống."
+        },
+        {
+          "key": "B",
+          "explanation": "Không đúng mô tả."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo nền tảng và đặc trưng phương pháp."
+        }
+      ],
+      "takeaway": "Trong cùng một học thuyết có thể có các mặt khác giá trị.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH283",
+      "kind": "quiz",
+      "prompt": "Một bảng đồng nhất Hume và Cantơ vì cùng bất khả tri. Theo trang 20–21, cần giữ khác biệt nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hume phủ nhận thực tại siêu nhiên; Cantơ không phủ nhận theo cách ấy."
+        },
+        {
+          "key": "B",
+          "text": "Hume tin biết bản chất, Cantơ tin con người đã biết hết."
+        },
+        {
+          "key": "C",
+          "text": "Hume chỉ tin ý chí, Cantơ chỉ nghiên cứu cơ học thực nghiệm."
+        },
+        {
+          "key": "D",
+          "text": "Hume và Cantơ đều không thừa nhận có kinh nghiệm giác quan."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Hume và Cantơ là đại biểu bất khả tri. Khác biệt Hume và Cantơ về cách xử lý thực tại siêu nhiên.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Sai lập trường nhận thức cả hai."
+        },
+        {
+          "key": "C",
+          "explanation": "Không đúng căn cứ."
+        },
+        {
+          "key": "D",
+          "explanation": "Bất khả tri không đồng nghĩa phủ nhận kinh nghiệm."
+        }
+      ],
+      "takeaway": "Chung phân loại không xóa khác biệt học thuyết cụ thể.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH284",
+      "kind": "quiz",
+      "prompt": "Một bài cho chỉ người duy vật mới có thể phê phán Vật tự nó của Cantơ. Nhân vật nào nguồn nêu đủ bác chữ chỉ ấy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hêghen phê phán Vật tự nó cùng với Phoiơbắc."
+        },
+        {
+          "key": "B",
+          "text": "Ăngghen, vì lập luận từ thực tiễn tạo hiện tượng."
+        },
+        {
+          "key": "C",
+          "text": "Phoiơbắc, vì được nguồn xác định là nhà duy vật."
+        },
+        {
+          "key": "D",
+          "text": "Mác, vì kế thừa có phê phán duy vật Phoiơbắc."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Phoiơbắc và Hêghen phê phán Vật tự nó. Duy tâm không đồng nhất bất khả tri. Hêghen duy tâm nhưng vẫn phê phán bất khả tri.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Ví dụ duy vật chưa bác chữ chỉ."
+        },
+        {
+          "key": "C",
+          "explanation": "Ví dụ duy vật chưa bác độc quyền duy vật."
+        },
+        {
+          "key": "D",
+          "explanation": "Không cung cấp trường hợp duy tâm phê phán bất khả tri."
+        }
+      ],
+      "takeaway": "Đừng đồng nhất duy tâm với bất khả tri.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH285",
+      "kind": "quiz",
+      "prompt": "Nguồn nhắc Êpiquya (341–270 trước Công nguyên) trước khi nêu thuật ngữ bất khả tri năm 1869. Quan hệ thời gian nào đúng mạch nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quan niệm được nêu có trước thuật ngữ nhiều thế kỷ."
+        },
+        {
+          "key": "B",
+          "text": "Quan niệm và thuật ngữ xuất hiện cùng một năm."
+        },
+        {
+          "key": "C",
+          "text": "Thuật ngữ có trước quan niệm nhiều thế kỷ."
+        },
+        {
+          "key": "D",
+          "text": "Thuật ngữ năm 1869 là tên tác phẩm của Êpiquya."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Quan niệm này được gắn với Êpiquya (341–270 tr.CN), trước thuật ngữ Huxley 1869.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Sai khoảng cách thời gian."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo trình tự."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm tác giả cổ đại với lịch sử thuật ngữ hiện đại."
+        }
+      ],
+      "takeaway": "Phân biệt lịch sử tư tưởng và lịch sử tên gọi.",
+      "group": "B",
+      "groupTitle": "Vấn đề cơ bản và các trường phái"
+    },
+    {
+      "id": "CH286",
+      "kind": "quiz",
+      "prompt": "Nhóm dùng đấu tranh Xilêdi để nói công nhân không thể tổ chức độc lập. Dữ kiện tổ chức nào trong chính trang 25 bác kết luận ấy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự hình thành trường học nghề phục vụ chủ xưởng."
+        },
+        {
+          "key": "B",
+          "text": "Nguồn nối với Đồng minh những người chính nghĩa."
+        },
+        {
+          "key": "C",
+          "text": "Sự phát triển của triết học kinh viện trong thời Trung cổ."
+        },
+        {
+          "key": "D",
+          "text": "Sự có mặt của tầng lớp quý tộc trong xã hội phong kiến."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Đấu tranh Xilêdi gắn với Đồng minh những người chính nghĩa.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không là tổ chức chính trị được hỏi."
+        },
+        {
+          "key": "C",
+          "explanation": "Khác bối cảnh."
+        },
+        {
+          "key": "D",
+          "explanation": "Không trực tiếp chứng minh tổ chức công nhân."
+        }
+      ],
+      "takeaway": "Chọn bằng chứng đúng quan hệ kết luận, không chỉ cùng thời đại.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH287",
+      "kind": "quiz",
+      "prompt": "Tư sản Đức sợ gương Pháp 1789 và phong trào công nhân, muốn biến đổi quân chủ hòa bình. Nguồn dùng điều này giải thích gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vì sao đấu tranh vô sản chỉ còn là tranh chấp tiền công."
+        },
+        {
+          "key": "B",
+          "text": "Vì sao vô sản phải giữ vai trò tiên phong dân chủ, tiến bộ."
+        },
+        {
+          "key": "C",
+          "text": "Vì sao tư sản Đức đã lãnh đạo cách mạng triệt để đến cùng."
+        },
+        {
+          "key": "D",
+          "text": "Vì sao mọi quan hệ xã hội tự cải biến chỉ nhờ mong muốn."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tư sản Đức sợ gương 1789 và công nhân, muốn đổi quân chủ bằng hòa bình. Liên hệ lập trường tư sản với nhiệm vụ chính trị vô sản.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thu hẹp trái vai trò chính trị."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo ý nghĩa thông tin."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy mong muốn hòa bình làm nguyên nhân đủ."
+        }
+      ],
+      "takeaway": "Đặt thái độ lực lượng trong yêu cầu lịch sử cụ thể.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH288",
+      "kind": "quiz",
+      "prompt": "Một tiểu sử cho Mác từ đầu chỉ học triết học và chưa từng học luật. Dữ kiện nào trang 30 yêu cầu sửa?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ông sinh ở Trier năm 1818 và yêu tự do."
+        },
+        {
+          "key": "B",
+          "text": "Ông qua đời năm 1883 và Ăngghen hoàn chỉnh Tư bản."
+        },
+        {
+          "key": "C",
+          "text": "Học luật Bon, Béclin rồi tìm đến triết học."
+        },
+        {
+          "key": "D",
+          "text": "Ông viết Nội chiến ở Pháp năm 1871."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Mác học luật ở Bon rồi Béclin trước khi đến triết học.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đúng tiểu sử nhưng không trực tiếp bác nhận định học tập."
+        },
+        {
+          "key": "B",
+          "explanation": "Không quyết định việc từng học luật."
+        },
+        {
+          "key": "D",
+          "explanation": "Đúng công trình về sau, không trả lời đường học."
+        }
+      ],
+      "takeaway": "Dùng bằng chứng trực tiếp cho chi tiết tiểu sử cần sửa.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH289",
+      "kind": "quiz",
+      "prompt": "Mác trẻ vừa tin triết học Hêghen, vừa có tinh thần dân chủ cách mạng và vô thần. Giải thích nào đúng mâu thuẫn và đường giải quyết trong nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nền duy tâm xung đột tinh thần cách mạng, được giải quyết qua lý luận gắn thực tiễn."
+        },
+        {
+          "key": "B",
+          "text": "Tin biện chứng Hêghen nghĩa là Mác không thể thay đổi nền tảng duy tâm."
+        },
+        {
+          "key": "C",
+          "text": "Đổi lập trường chỉ cần rời câu lạc bộ, không cần nghiên cứu và hoạt động."
+        },
+        {
+          "key": "D",
+          "text": "Dân chủ và vô thần tự đủ chứng minh đã có duy vật lịch sử hoàn chỉnh."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Mâu thuẫn nền duy tâm với dân chủ cách mạng, vô thần ở Mác trẻ. Giải qua lý luận–thực tiễn.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Biến ảnh hưởng thành bất biến."
+        },
+        {
+          "key": "C",
+          "explanation": "Cắt quá trình giải quyết mâu thuẫn."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm phẩm chất với lập trường đã phát triển."
+        }
+      ],
+      "takeaway": "Chuyển biến tư tưởng có mâu thuẫn nội tại và tác động thực tiễn.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH290",
+      "kind": "quiz",
+      "prompt": "Một niên biểu ghi Mác làm biên tập báo Sông Ranh trước khi làm cộng tác viên. Cặp mốc nào sửa đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cộng tác viên 5/1841, biên tập viên 10/1841."
+        },
+        {
+          "key": "B",
+          "text": "Cộng tác viên 10/1842, biên tập viên 5/1842."
+        },
+        {
+          "key": "C",
+          "text": "Cộng tác viên 5/1843, biên tập viên 10/1843."
+        },
+        {
+          "key": "D",
+          "text": "Cộng tác viên 5/1842, biên tập viên 10/1842."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Mác làm cộng tác viên Sông Ranh từ 5/1842. Mác làm biên tập viên Sông Ranh từ 10/1842.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đặt trước khi báo ra đời đầu 1842."
+        },
+        {
+          "key": "B",
+          "explanation": "Giữ lỗi đảo thứ tự."
+        },
+        {
+          "key": "C",
+          "explanation": "Đặt sau ngày báo bị cấm."
+        }
+      ],
+      "takeaway": "Đối chiếu mốc theo chuỗi hoạt động có quan hệ.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH291",
+      "kind": "quiz",
+      "prompt": "Một niên biểu đặt Mác sang Pari trước khi báo Sông Ranh bị cấm. Trật tự nào đúng theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Báo bị cấm 1/4/1843; nghiên cứu phê phán; sang Pari cuối 10/1843."
+        },
+        {
+          "key": "B",
+          "text": "Sang Pari cuối 10/1842; báo bị cấm 1/4/1843; nghiên cứu phê phán."
+        },
+        {
+          "key": "C",
+          "text": "Sang Pari cuối 10/1843; nghiên cứu phê phán; báo bị cấm 1/4/1844."
+        },
+        {
+          "key": "D",
+          "text": "Báo bị cấm 1/4/1844; sang Pari cuối 10/1844; nghiên cứu phê phán."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Mác sang Pari cuối tháng 10/1843. Báo Sông Ranh bị cấm 1/4/1843. Mác nghiên cứu phê phán trước khi sang Pari cuối 10/1843. Đúng chuỗi hoàn cảnh và chuyển hoạt động.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Sai mốc sang Pari."
+        },
+        {
+          "key": "C",
+          "explanation": "Dời mốc cấm và đảo chuỗi."
+        },
+        {
+          "key": "D",
+          "explanation": "Dời cả mốc và sai quan hệ."
+        }
+      ],
+      "takeaway": "Trình tự hoạt động giúp hiểu điều kiện chuyển biến.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH292",
+      "kind": "quiz",
+      "prompt": "Vai trò Ácnôn Rugơ trong Niên giám Pháp–Đức được nguồn nêu là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Người kế thừa Mác hoàn chỉnh hai quyển Tư bản về sau."
+        },
+        {
+          "key": "B",
+          "text": "Nhà chính luận Hêghen trẻ cùng Mác sáng lập, ấn hành."
+        },
+        {
+          "key": "C",
+          "text": "Người xây định nghĩa vật chất trong tác phẩm năm 1908."
+        },
+        {
+          "key": "D",
+          "text": "Người đặt thuật ngữ bất khả tri tại Anh năm 1869."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Ácnôn Rugơ là chính luận gia cấp tiến Hêghen trẻ cùng Mác sáng lập, ấn hành Niên giám. Phân biệt người cộng tác xuất bản với Ăngghen.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là vai trò Ăngghen."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là đóng góp Lênin."
+        },
+        {
+          "key": "D",
+          "explanation": "Đây là vai trò Huxley."
+        }
+      ],
+      "takeaway": "Nhận diện vai trò cụ thể, không suy từ cùng thời đại.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH293",
+      "kind": "quiz",
+      "prompt": "Bộ ghép nào đúng thời gian ở Croixơmắc và hoạt động của Mác theo Chương I?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tháng 5–10/1844: gặp Ăngghen ở Pari, viết chung Tuyên ngôn của Đảng Cộng sản."
+        },
+        {
+          "key": "B",
+          "text": "Tháng 5–10/1844: kết hôn, sống cùng Gienny, nghiên cứu pháp quyền Hêghen."
+        },
+        {
+          "key": "C",
+          "text": "Tháng 5–10/1843: kết hôn, sống cùng Gienny, nghiên cứu pháp quyền Hêghen."
+        },
+        {
+          "key": "D",
+          "text": "Tháng 5–10/1843: gặp Ăngghen ở Pari, viết chung Tuyên ngôn của Đảng Cộng sản."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Thời gian ở Croixơmắc gắn kết hôn Gienny và nghiên cứu pháp quyền Hêghen. Mác ở Croixơmắc trong khoảng tháng 5–10/1843.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Sai năm ở Croixơmắc. Ghép cuộc gặp với Tuyên ngôn khác thời điểm."
+        },
+        {
+          "key": "B",
+          "explanation": "Giữ hoạt động nhưng dời sai một năm, khi ông đã sang Pari."
+        },
+        {
+          "key": "D",
+          "explanation": "Giữ khoảng thời gian nhưng ghép các hoạt động thuộc 1844 và 1848."
+        }
+      ],
+      "takeaway": "Chi tiết tiểu sử phải gắn đúng công việc trong thời đoạn.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH294",
+      "kind": "quiz",
+      "prompt": "Một hồ sơ cho Ăngghen chỉ bắt đầu nghiên cứu triết học ở Manchester. Dữ kiện nào bác mốc khởi đầu ấy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ông viết công trình về gia đình và nhà nước năm 1884."
+        },
+        {
+          "key": "B",
+          "text": "Ông tham gia phong trào Hiến chương trong thời gian ở Anh."
+        },
+        {
+          "key": "C",
+          "text": "Ông gặp Mác tại Pari vào tháng 8 của năm 1844."
+        },
+        {
+          "key": "D",
+          "text": "Nghiên cứu từ văn phòng cha và nghĩa vụ quân sự."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Ăngghen nghiên cứu triết học từ văn phòng cha và thời nghĩa vụ quân sự.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Sự kiện về sau, không trả lời khởi đầu."
+        },
+        {
+          "key": "B",
+          "explanation": "Đúng nhưng không chứng minh đã nghiên cứu trước Anh."
+        },
+        {
+          "key": "C",
+          "explanation": "Sự kiện sau Manchester."
+        }
+      ],
+      "takeaway": "Phân biệt khởi đầu tìm hiểu và bước chuyển căn bản.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH295",
+      "kind": "quiz",
+      "prompt": "Sự kiện năm 17 tuổi nào được nguồn dùng mở con đường cách mạng Lênin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tham gia báo Sông Ranh rồi nhận bằng ở Giênna."
+        },
+        {
+          "key": "B",
+          "text": "Tham gia Hiến chương, sống nghiên cứu tại Manchester."
+        },
+        {
+          "key": "C",
+          "text": "Phong trào sinh viên, bị đuổi Đại học Cadan và bắt giam."
+        },
+        {
+          "key": "D",
+          "text": "Tham gia Công xã Pari rồi viết Nội chiến ở Pháp."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Lênin 17 tuổi tham gia phong trào sinh viên. Bị đuổi Đại học Cadan và bắt giam.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Trộn hoạt động Mác."
+        },
+        {
+          "key": "B",
+          "explanation": "Là bối cảnh Ăngghen."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm sự kiện và nhân vật."
+        }
+      ],
+      "takeaway": "Đọc tiểu sử theo hoạt động cụ thể, không trộn các nhân vật.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH296",
+      "kind": "quiz",
+      "prompt": "Bộ mốc nào đúng với bốn tác phẩm Lênin theo trang 42: Những “người bạn dân”; Nội dung kinh tế của chủ nghĩa dân túy…; Chúng ta từ bỏ di sản nào?; “Làm gì?”",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lần lượt: 1894; 1897; 1894; 1902."
+        },
+        {
+          "key": "B",
+          "text": "Lần lượt: 1894; 1894; 1902; 1897."
+        },
+        {
+          "key": "C",
+          "text": "Lần lượt: 1894; 1894; 1897; 1902."
+        },
+        {
+          "key": "D",
+          "text": "Lần lượt: 1902; 1894; 1897; 1894."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Những “người bạn dân” gắn mốc 1894. Chúng ta từ bỏ di sản nào? Gắn mốc 1897. Làm gì? Gắn mốc 1902. Nội dung kinh tế của chủ nghĩa dân túy và sự phê phán Xtơruvê gắn mốc 1894. Hai công trình đầu cùng ghi năm 1894. Hai công trình sau lần lượt năm 1897 và 1902.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Giữ mốc đầu và cuối nhưng đảo thời gian hai công trình giữa."
+        },
+        {
+          "key": "B",
+          "explanation": "Giữ hai mốc 1894 nhưng đảo Chúng ta từ bỏ di sản nào? Với Làm gì?"
+        },
+        {
+          "key": "D",
+          "explanation": "Giữ mốc hai công trình giữa nhưng đảo tác phẩm đầu và cuối."
+        }
+      ],
+      "takeaway": "Đối chiếu từng nhan đề với mốc. Các tác phẩm cùng thời kỳ vẫn có thời điểm khác nhau.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH297",
+      "kind": "quiz",
+      "prompt": "Một bài công nhận Lênin phát triển triết học nhưng loại kinh tế chính trị và xã hội khoa học khỏi đóng góp. Sửa theo nguồn thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lênin làm phong phú cả ba bộ phận trong thời đại mới."
+        },
+        {
+          "key": "B",
+          "text": "Gộp cả ba thành triết học để không còn phân biệt nhiệm vụ."
+        },
+        {
+          "key": "C",
+          "text": "Giữ giới hạn vì tên triết học Mác–Lênin đã bao hết mọi công trình."
+        },
+        {
+          "key": "D",
+          "text": "Bỏ triết học, chỉ giữ kinh tế vì thực tiễn xây dựng có nhu cầu kinh tế."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Lênin làm phong phú triết học, kinh tế chính trị và chủ nghĩa cộng sản khoa học.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thống nhất không xóa bộ phận."
+        },
+        {
+          "key": "C",
+          "explanation": "Lấy nhãn một bộ phận thay phạm vi."
+        },
+        {
+          "key": "D",
+          "explanation": "Đổi thu hẹp sang thu hẹp khác."
+        }
+      ],
+      "takeaway": "Giữ cấu trúc học thuyết trong sự phát triển liên hệ.",
+      "group": "D",
+      "groupTitle": "Ra đời và phát triển triết học Mác - Lênin"
+    },
+    {
+      "id": "CH298",
+      "kind": "quiz",
+      "prompt": "Trong bối cảnh bản 2019, có hợp tác và tăng tính chỉnh thể thế giới. Vì sao chưa thể suy mọi mâu thuẫn lợi ích đã hết theo trang 58?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có hợp tác nghĩa là mọi mâu thuẫn cũ đã thành khác biệt từ ngữ."
+        },
+        {
+          "key": "B",
+          "text": "Có mâu thuẫn nghĩa là không thể có bất kỳ hợp tác thực tế nào."
+        },
+        {
+          "key": "C",
+          "text": "Tính chỉnh thể nghĩa là mọi lực lượng có lợi ích giống nhau."
+        },
+        {
+          "key": "D",
+          "text": "Hợp tác cùng tồn tại đấu tranh; nguồn còn nêu đối lập lợi ích tư sản–đa số."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tính chỉnh thể và sự hợp tác quốc tế tăng lên không làm mất những mâu thuẫn về lợi ích. Sự liên kết và sự đấu tranh cần được xem xét trong cùng bối cảnh lịch sử.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phủ nhận nội dung mâu thuẫn."
+        },
+        {
+          "key": "B",
+          "explanation": "Đối lập tuyệt đối hợp tác và đấu tranh."
+        },
+        {
+          "key": "C",
+          "explanation": "Đồng nhất liên hệ với đồng nhất lợi ích."
+        }
+      ],
+      "takeaway": "Phân tích thời đại cần xét đồng thời các mối liên hệ hợp tác và những mâu thuẫn lợi ích.",
+      "group": "F",
+      "groupTitle": "Vai trò của triết học và sự nghiệp đổi mới"
+    },
+    {
+      "id": "CH299",
+      "kind": "quiz",
+      "prompt": "Khi đọc tin khoa học, A bác một phát minh chỉ vì tác giả có tín ngưỡng; B chấp nhận chỉ vì tác giả nổi tiếng. Tiêu chí chung nào giúp sửa cả hai cách đánh giá?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xét ngôn từ có giống giáo trình thay cho kiểm nghiệm thực tế."
+        },
+        {
+          "key": "B",
+          "text": "Xét căn cứ lý luận, phương pháp và kết quả kiểm nghiệm của công trình."
+        },
+        {
+          "key": "C",
+          "text": "Xét công trình có được nhiều người chia sẻ trong cộng đồng."
+        },
+        {
+          "key": "D",
+          "text": "Xét tác giả có thiện chí, không cần nội dung đã được kiểm tra."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Trình độ khoa học phụ thuộc đối tượng, tri thức và phương pháp. Tín điều tôn giáo và lý giải phát minh khoa học. Cả hai đã lấy thuộc tính cá nhân thay nội dung khoa học.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Từ khóa không xác nhận kết quả."
+        },
+        {
+          "key": "C",
+          "explanation": "Độ phổ biến không đủ thay chứng cứ."
+        },
+        {
+          "key": "D",
+          "explanation": "Thay tín ngưỡng, uy tín bằng dấu hiệu cá nhân khác."
+        }
+      ],
+      "takeaway": "Đánh giá sản phẩm nhận thức bằng căn cứ của chính nó.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    },
+    {
+      "id": "CH300",
+      "kind": "quiz",
+      "prompt": "Một trường muốn đánh giá người học qua điểm hiện tại; đề án mới thêm tiến bộ, điều kiện học và quan hệ nhóm, nhưng vẫn đòi dữ liệu kiểm tra. Cách hiểu nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Biện chứng mở rộng quan hệ và quá trình mà vẫn cần chứng cứ cụ thể."
+        },
+        {
+          "key": "B",
+          "text": "Có điểm số nghĩa là phương pháp tất yếu siêu hình bất kể cách dùng."
+        },
+        {
+          "key": "C",
+          "text": "Biện chứng nghĩa là cộng mọi ý kiến nên không cần kiểm tra dữ liệu."
+        },
+        {
+          "key": "D",
+          "text": "Xét điều kiện nghĩa là phải bỏ kết quả học tập khỏi mọi đánh giá."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Thế giới quan duy vật biện chứng dựa liên hệ, phát triển và xem xét lịch sử cụ thể. Siêu hình: Đồng nhất đối tượng với trạng thái tĩnh nhất thời. Biện chứng: Các bộ phận ràng buộc, quy định, ảnh hưởng lẫn nhau. Thế giới quan duy vật biện chứng nâng tích cực sáng tạo, nhân sinh quan. Đủ lịch sử, liên hệ, thực tế. Không tùy tiện vì nhiều yếu tố.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Lấy công cụ thay cách lập luận."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm toàn diện với liệt kê tùy tiện."
+        },
+        {
+          "key": "D",
+          "explanation": "Đúng xét điều kiện nhưng cực đoan loại thông tin."
+        }
+      ],
+      "takeaway": "Tư duy biện chứng hỗ trợ đánh giá có căn cứ và có quá trình.",
+      "group": "A",
+      "groupTitle": "Khái lược triết học và thế giới quan"
+    }
+  ]
+}

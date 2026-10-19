@@ -6,6 +6,8 @@ import CourseNav from '../features/course/components/CourseNav.vue'
 import TermPreview from '../features/wiki/components/TermPreview.vue'
 import LectureHeader from '../features/lecture/components/LectureHeader.vue'
 import LecturePanels from '../features/lecture/components/LecturePanels.vue'
+import PhilosophyHeader from '../features/philosophy/components/PhilosophyHeader.vue'
+import PhilosophyTopicNav from '../features/philosophy/components/PhilosophyTopicNav.vue'
 import TopicHeader from '../features/lecture/components/TopicHeader.vue'
 import TopicNav from '../features/lecture/components/TopicNav.vue'
 import WikiFooter from '../features/wiki/components/WikiFooter.vue'
@@ -28,6 +30,7 @@ const { Layout } = DefaultTheme
 const welcomeScreen = ref(null)
 const { hasSidebar } = useSidebar()
 const { frontmatter, page } = useData()
+const isPhilosophy = computed(() => frontmatter.value.course === 'triet-hoc-mac-lenin')
 
 const {
   desktopSidebarCollapsed,
@@ -40,14 +43,16 @@ const hasCourseSidebar = computed(() =>
   resolveHasCourseSidebar(hasSidebar.value, page.value?.relativePath, courseCatalog)
 )
 
-const layoutClasses = computed(() =>
-  resolveLayoutClasses({
+const layoutClasses = computed(() => ({
+  ...resolveLayoutClasses({
     frontmatter: frontmatter.value,
     hasCourseSidebar: hasCourseSidebar.value,
     desktopSidebarCollapsed: desktopSidebarCollapsed.value,
-    lecturePart: lecturePart.value
-  })
-)
+    lecturePart: isPhilosophy.value ? 'notes' : lecturePart.value
+  }),
+  'philosophy-layout': isPhilosophy.value,
+  'philosophy-exercise-view': isPhilosophy.value && frontmatter.value.section === 'topic' && lecturePart.value === 'bai-tap'
+}))
 </script>
 
 <template>
@@ -69,12 +74,13 @@ const layoutClasses = computed(() =>
     </template>
     <template #not-found><main class="course-shell"><h1>Trang này không tồn tại</h1><p>Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
     <template #doc-before>
-      <LectureHeader v-if="frontmatter.section === 'lecture'" />
+      <PhilosophyHeader v-if="isPhilosophy" />
+      <LectureHeader v-else-if="frontmatter.section === 'lecture'" />
       <TopicHeader v-else-if="frontmatter.section === 'topic'" />
       <CourseNav v-else />
-      <LecturePanels v-if="frontmatter.section === 'lecture'" />
+      <LecturePanels v-if="frontmatter.section === 'lecture' && !isPhilosophy" />
     </template>
-    <template #doc-after><LessonActions v-if="frontmatter.section === 'lecture'" /><TopicNav v-if="frontmatter.section === 'topic'" /><WikiFooter v-if="frontmatter.wikiTerm" /></template>
+    <template #doc-after><LessonActions v-if="frontmatter.section === 'lecture' && !isPhilosophy" /><PhilosophyTopicNav v-if="frontmatter.section === 'topic' && isPhilosophy" /><TopicNav v-else-if="frontmatter.section === 'topic'" /><WikiFooter v-if="frontmatter.wikiTerm" /></template>
     <template #layout-bottom>
       <DiagramLightbox />
       <TermPreview />

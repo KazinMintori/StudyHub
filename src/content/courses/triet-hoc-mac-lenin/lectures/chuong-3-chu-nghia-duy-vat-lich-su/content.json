@@ -1,0 +1,182 @@
+{
+  "course": "triet-hoc-mac-lenin",
+  "lecture": "chuong-3-chu-nghia-duy-vat-lich-su",
+  "route": "/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su",
+  "notes": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su.md",
+  "topics": [
+    {
+      "slug": "san-xuat-vat-chat",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/san-xuat-vat-chat.md"
+    },
+    {
+      "slug": "hinh-thai-kinh-te-xa-hoi",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/hinh-thai-kinh-te-xa-hoi.md"
+    },
+    {
+      "slug": "giai-cap-va-dan-toc",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/giai-cap-va-dan-toc.md"
+    },
+    {
+      "slug": "nha-nuoc-va-cach-mang",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/nha-nuoc-va-cach-mang.md"
+    },
+    {
+      "slug": "ton-tai-va-y-thuc-xa-hoi",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/ton-tai-va-y-thuc-xa-hoi.md"
+    },
+    {
+      "slug": "con-nguoi",
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/con-nguoi.md"
+    }
+  ],
+  "slides": null,
+  "cheatsheet": null,
+  "prerequisites": [],
+  "fragments": [],
+  "examples": [],
+  "exercises": [
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/san-xuat-vat-chat.md",
+      "line": 99,
+      "title": "Bài 3.1. Yếu tố quan trọng nhất của lực lượng sản xuất"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/san-xuat-vat-chat.md",
+      "line": 120,
+      "title": "Bài 3.2. Tính khách quan của quan hệ sản xuất"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/hinh-thai-kinh-te-xa-hoi.md",
+      "line": 97,
+      "title": "Bài 3.3. Nghĩa triết học của cơ sở hạ tầng"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/hinh-thai-kinh-te-xa-hoi.md",
+      "line": 118,
+      "title": "Bài 3.4. Tính đa dạng của lịch sử"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/hinh-thai-kinh-te-xa-hoi.md",
+      "line": 134,
+      "title": "Bài 3.5. Quá trình lịch sử - tự nhiên"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/giai-cap-va-dan-toc.md",
+      "line": 103,
+      "title": "Bài 3.6. Nguồn gốc trực tiếp của giai cấp"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/giai-cap-va-dan-toc.md",
+      "line": 124,
+      "title": "Bài 3.7. Dân tộc với tư cách cộng đồng lịch sử"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/nha-nuoc-va-cach-mang.md",
+      "line": 101,
+      "title": "Bài 3.8. Nguyên nhân trực tiếp xuất hiện nhà nước"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/nha-nuoc-va-cach-mang.md",
+      "line": 122,
+      "title": "Bài 3.9. Cách mạng xã hội"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/ton-tai-va-y-thuc-xa-hoi.md",
+      "line": 99,
+      "title": "Bài 3.10. Các yếu tố của tồn tại xã hội"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/ton-tai-va-y-thuc-xa-hoi.md",
+      "line": 120,
+      "title": "Bài 3.11. Sự lạc hậu của một bộ phận ý thức xã hội"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/con-nguoi.md",
+      "line": 117,
+      "title": "Bài 3.12. Con người và hoàn cảnh"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/con-nguoi.md",
+      "line": 133,
+      "title": "Bài 3.13. Quần chúng và cá nhân trong lịch sử"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/con-nguoi.md",
+      "line": 149,
+      "title": "Bài 3.14. Bản chất xã hội của con người"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/san-xuat-vat-chat.md",
+      "line": 110,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/san-xuat-vat-chat.md",
+      "line": 126,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/hinh-thai-kinh-te-xa-hoi.md",
+      "line": 108,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/hinh-thai-kinh-te-xa-hoi.md",
+      "line": 124,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/hinh-thai-kinh-te-xa-hoi.md",
+      "line": 140,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/giai-cap-va-dan-toc.md",
+      "line": 114,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/giai-cap-va-dan-toc.md",
+      "line": 135,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/nha-nuoc-va-cach-mang.md",
+      "line": 112,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/nha-nuoc-va-cach-mang.md",
+      "line": 133,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/ton-tai-va-y-thuc-xa-hoi.md",
+      "line": 110,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/ton-tai-va-y-thuc-xa-hoi.md",
+      "line": 126,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/con-nguoi.md",
+      "line": 123,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/con-nguoi.md",
+      "line": 139,
+      "title": "Lời giải: Đáp án và giải thích"
+    },
+    {
+      "source": "docs/triet-hoc-mac-lenin/bai-giang/chuong-3-chu-nghia-duy-vat-lich-su/con-nguoi.md",
+      "line": 155,
+      "title": "Lời giải: Đáp án và giải thích"
+    }
+  ],
+  "assets": []
+}

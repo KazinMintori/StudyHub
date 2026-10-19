@@ -1,5 +1,6 @@
 <script setup>
 import { useCourseOverview } from '../controllers/useCourseOverview.js'
+import PhilosophyCourse from '../../philosophy/components/PhilosophyCourse.vue'
 const {
   frontmatter,
   course,
@@ -14,7 +15,8 @@ const {
 } = useCourseOverview()
 </script>
 <template>
-  <main v-if="course" class="course-overview course-shell">
+  <PhilosophyCourse v-if="course?.presentation === 'philosophy'" />
+  <main v-else-if="course" class="course-overview course-shell">
     <nav class="book-breadcrumbs" aria-label="Đường dẫn"><a :href="studyLink('/')">Trang chủ</a><span>/</span><span>Học phần</span></nav>
     <h1>{{ course.name }}</h1>
     <p class="course-description">{{ course.description }}</p>

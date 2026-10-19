@@ -1,0 +1,2321 @@
+{
+  "schemaVersion": 1,
+  "id": "chuong-2-bai-3",
+  "parentBankId": "chuong-2",
+  "chapter": 2,
+  "testNumber": 3,
+  "totalTests": 8,
+  "title": "Bài kiểm tra 3",
+  "questions": [
+    {
+      "id": "Q111",
+      "kind": "quiz",
+      "prompt": "Tô hồng và bôi đen cùng vi phạm yêu cầu nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chỉ trình bày mặt bất lợi để bảo đảm đánh giá được coi nghiêm khắc."
+        },
+        {
+          "key": "B",
+          "text": "Phản ánh đúng, tránh gán cho đối tượng thuộc tính nó không có."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ trình bày mặt thuận lợi để thúc đẩy tinh thần của người nghe."
+        },
+        {
+          "key": "D",
+          "text": "Dựa ý định cá nhân để quyết định sự vật nên mang thuộc tính nào."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Phản ánh đúng, tránh gán cho đối tượng thuộc tính nó không có. Hai hướng lệch đều làm sai hiện thực. Sắc thái tích cực hay tiêu cực không đổi lỗi.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là một hướng bôi đen."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là một hướng tô hồng."
+        },
+        {
+          "key": "D",
+          "explanation": "Là nguyên nhân sai lệch, không phải yêu cầu đúng."
+        }
+      ],
+      "takeaway": "Trung thực không đồng nghĩa thiên về khen hoặc chê.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q112",
+      "kind": "quiz",
+      "prompt": "Phát huy tính năng động chủ quan đòi hỏi thái độ nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dùng quyết tâm thay việc tìm hiểu quy luật và điều kiện."
+        },
+        {
+          "key": "B",
+          "text": "Chờ điều kiện khách quan tự chuyển thành kết quả mong muốn."
+        },
+        {
+          "key": "C",
+          "text": "Chủ động học, sáng tạo, hành động dựa trên điều kiện thực tế."
+        },
+        {
+          "key": "D",
+          "text": "Giữ cách làm cũ để tránh mọi thay đổi trong hoạt động."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Chủ động học, sáng tạo, hành động dựa trên điều kiện thực tế. Không cho phép bỏ điều kiện khách quan.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Duy ý chí."
+        },
+        {
+          "key": "B",
+          "explanation": "Khách quan chủ nghĩa thụ động."
+        },
+        {
+          "key": "D",
+          "explanation": "Bảo thủ trì trệ."
+        }
+      ],
+      "takeaway": "Năng động chủ quan là chủ động có hiểu biết và căn cứ.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q113",
+      "kind": "quiz",
+      "prompt": "Vì sao nguồn yêu cầu thống nhất nhiệt tình với tri thức khoa học?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Động lực cần hiểu biết định hướng và phẩm chất đạo đức phù hợp."
+        },
+        {
+          "key": "B",
+          "text": "Nhiệt tình tạo chân lý nên tri thức chỉ cần để diễn đạt cho rõ."
+        },
+        {
+          "key": "C",
+          "text": "Tri thức bảo đảm thành công nên nhiệt tình và đạo đức không còn vai trò."
+        },
+        {
+          "key": "D",
+          "text": "Đạo đức thay năng lực nên không cần tích lũy hiểu biết khoa học."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Động lực cần hiểu biết định hướng và phẩm chất đạo đức phù hợp. Có quyết tâm chưa đủ. Giáo dục tri thức và đạo đức cùng phục vụ hành động.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thay tiêu chí đúng bằng động lực."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa tri thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Đánh đổi các yếu tố."
+        }
+      ],
+      "takeaway": "Không coi một mặt của chủ thể đủ thay mọi mặt còn lại.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q114",
+      "kind": "quiz",
+      "prompt": "Quan hệ lợi ích và động cơ được đặt vào nguyên tắc phương pháp luận thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đặt lợi ích cá nhân làm tiêu chí đúng sai của mọi nhận thức."
+        },
+        {
+          "key": "B",
+          "text": "Tách mọi lợi ích khỏi đời sống để ý thức tồn tại thuần túy."
+        },
+        {
+          "key": "C",
+          "text": "Dùng lợi ích tập thể thay việc kiểm tra tính đúng của quan điểm."
+        },
+        {
+          "key": "D",
+          "text": "Hài hòa các lợi ích, giữ động cơ trong sáng và thái độ khoa học."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Hài hòa các lợi ích, giữ động cơ trong sáng và thái độ khoa học. Khách quan còn cần xử lý động cơ và quan hệ lợi ích.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Chủ quan vụ lợi."
+        },
+        {
+          "key": "B",
+          "explanation": "Không phải yêu cầu khả thi."
+        },
+        {
+          "key": "C",
+          "explanation": "Lợi ích không tự thành chân lý."
+        }
+      ],
+      "takeaway": "Khách quan trong nhận thức liên quan cả thái độ và động cơ chủ thể.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q115",
+      "kind": "quiz",
+      "prompt": "Nhóm nói “Có bột mới gột nên hồ” để kiểm tra kinh phí trước khi mở lớp; sau khi đủ kinh phí, họ vẫn phải phân công và triển khai. Cách đánh giá nào đúng với quan hệ vật chất–ý thức?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có quyết tâm thì không cần kinh phí hay phương tiện đã xác định."
+        },
+        {
+          "key": "B",
+          "text": "Đủ kinh phí thì kết quả tự xuất hiện dù không ai thực hiện."
+        },
+        {
+          "key": "C",
+          "text": "Cần nguồn lực thực và hành động có tổ chức để đạt mục tiêu."
+        },
+        {
+          "key": "D",
+          "text": "Biết câu tục ngữ thì có thể bỏ khảo sát nhu cầu và điều kiện."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Cần nguồn lực thực và hành động có tổ chức để đạt mục tiêu. Kinh phí là tiền đề. Tổ chức thực tiễn mới chuyển mục tiêu thành kết quả.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy ý chí thay điều kiện."
+        },
+        {
+          "key": "B",
+          "explanation": "Bỏ vai trò chủ thể."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy châm ngôn thay nhận thức cụ thể."
+        }
+      ],
+      "takeaway": "Điều kiện khách quan và chủ động thực hiện phải được kết hợp.",
+      "group": "D",
+      "groupTitle": "Quan hệ vật chất và ý thức"
+    },
+    {
+      "id": "Q116",
+      "kind": "quiz",
+      "prompt": "Chức năng phương pháp luận chung nhất của phép biện chứng duy vật được thực hiện theo chiều nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Từ tên các quy luật đến thay thế dữ kiện và phương pháp của khoa học cụ thể."
+        },
+        {
+          "key": "B",
+          "text": "Từ kết luận có trước đến chọn thuật ngữ làm cho kết luận được xem là khoa học."
+        },
+        {
+          "key": "C",
+          "text": "Từ nguyên lý, phạm trù và quy luật đến nguyên tắc định hướng nhận thức, thực tiễn."
+        },
+        {
+          "key": "D",
+          "text": "Từ định nghĩa chung đến đáp án sẵn cho mọi vấn đề cụ thể ở từng ngành."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Từ nguyên lý, phạm trù và quy luật đến nguyên tắc định hướng nhận thức, thực tiễn. Định hướng phải được cụ thể hóa theo đối tượng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lấy triết học thay tri thức ngành."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo chiều căn cứ, hợp thức hóa kết luận."
+        },
+        {
+          "key": "D",
+          "explanation": "Biến định hướng thành công thức thay nghiên cứu."
+        }
+      ],
+      "takeaway": "Phương pháp luận định hướng hoạt động thông qua nguyên tắc có cơ sở.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q117",
+      "kind": "quiz",
+      "prompt": "Cách diễn đạt nào nêu đúng dấu hiệu của cách xem xét biện chứng trong giáo trình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xem sự vật qua sự thay đổi bên ngoài còn quan hệ giữa chúng được giữ ngoài phân tích."
+        },
+        {
+          "key": "B",
+          "text": "Xem sự vật và sự phản ánh của chúng trong liên hệ, vận động, phát sinh và tiêu vong."
+        },
+        {
+          "key": "C",
+          "text": "Xem sự vật qua thuộc tính cố định rồi dùng tư tưởng sắp chúng thành các nhóm tách biệt."
+        },
+        {
+          "key": "D",
+          "text": "Xem sự vật qua từng bộ phận độc lập rồi cộng kết luận để thay cho việc xét toàn thể."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Xem sự vật và sự phản ánh của chúng trong liên hệ, vận động, phát sinh và tiêu vong. Bao gồm cả đối tượng, phản ánh tư tưởng và các quá trình biến đổi liên hệ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Có biến đổi nhưng bỏ mối liên hệ."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa cố định và tách biệt."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ tương tác giữa bộ phận và toàn thể."
+        }
+      ],
+      "takeaway": "Biện chứng kết hợp xem xét liên hệ với vận động và biến đổi.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q118",
+      "kind": "quiz",
+      "prompt": "Biện chứng khách quan chỉ điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Biện chứng của mọi nhận định được nhiều người cùng công nhận là hợp lý."
+        },
+        {
+          "key": "B",
+          "text": "Biện chứng của bản thân thế giới tồn tại độc lập với ý thức con người."
+        },
+        {
+          "key": "C",
+          "text": "Biện chứng của tư duy khi con người chủ động loại bỏ cảm xúc cá nhân."
+        },
+        {
+          "key": "D",
+          "text": "Biện chứng của các quy tắc do con người đặt ra để tổ chức việc quan sát."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Biện chứng của bản thân thế giới tồn tại độc lập với ý thức con người. Tiêu chí là thuộc về thế giới khách quan, không do ý thức đặt ra.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đồng thuận không tạo ra tính khách quan của thế giới."
+        },
+        {
+          "key": "C",
+          "explanation": "Tư duy có căn cứ vẫn thuộc biện chứng chủ quan."
+        },
+        {
+          "key": "D",
+          "explanation": "Quy tắc nhận thức không phải bản thân biện chứng của thế giới."
+        }
+      ],
+      "takeaway": "Phân biệt nơi tồn tại của biện chứng với mức độ đúng của nhận định.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q119",
+      "kind": "quiz",
+      "prompt": "Theo giáo trình, biện chứng chủ quan được hiểu như thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự vận động của các đối tượng vật chất khi chưa được con người nhận thức."
+        },
+        {
+          "key": "B",
+          "text": "Sự biến đổi của thế giới sau khi con người thừa nhận sự biến đổi ấy."
+        },
+        {
+          "key": "C",
+          "text": "Cách mỗi người tùy ý gán quy luật riêng của mình cho đối tượng được xét."
+        },
+        {
+          "key": "D",
+          "text": "Tư duy biện chứng và quá trình phản ánh hiện thực khách quan vào bộ óc người."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tư duy biện chứng và quá trình phản ánh hiện thực khách quan vào bộ óc người.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là bình diện khách quan, không phải chủ quan."
+        },
+        {
+          "key": "B",
+          "explanation": "Nhầm sự tồn tại khách quan với hành vi thừa nhận."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm chủ quan với tùy tiện và duy ý chí."
+        }
+      ],
+      "takeaway": "Chủ quan chỉ bình diện tư duy, không phải quyền tùy tiện giải thích.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q120",
+      "kind": "quiz",
+      "prompt": "Vì sao giáo trình không giới hạn biện chứng chủ quan ở việc sao chép diễn biến bên ngoài?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vì nó thay quy luật khách quan bằng mục đích của chủ thể trong từng hoạt động nhận thức."
+        },
+        {
+          "key": "B",
+          "text": "Vì nó phản ánh thế giới và quy luật tư duy trong thống nhất với lý luận nhận thức."
+        },
+        {
+          "key": "C",
+          "text": "Vì nó tách quy luật tư duy khỏi hiện thực để bảo đảm tính độc lập của nhận thức."
+        },
+        {
+          "key": "D",
+          "text": "Vì nó chủ yếu tạo ra diễn biến của thế giới rồi mới tổ chức việc nhận thức chúng."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Vì nó phản ánh thế giới và quy luật tư duy trong thống nhất với lý luận nhận thức.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Mục đích không thay thế được đối tượng khách quan."
+        },
+        {
+          "key": "C",
+          "explanation": "Tính độc lập tương đối không xóa liên hệ phản ánh."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo vai trò quy định của thế giới."
+        }
+      ],
+      "takeaway": "Tư duy có quy luật và tính sáng tạo nhưng vẫn phản ánh thế giới.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q121",
+      "kind": "quiz",
+      "prompt": "Một người cho rằng quy luật vận động của sự vật phải phù hợp với mô hình mình đã chọn. Cách sửa nào đúng về chiều quy định?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sửa mục tiêu mô hình để các diễn biến thực tế phải thay đổi theo nó."
+        },
+        {
+          "key": "B",
+          "text": "Giữ mô hình rồi chọn những sự kiện thuận lợi cho việc bảo vệ mô hình."
+        },
+        {
+          "key": "C",
+          "text": "Kiểm tra và điều chỉnh mô hình để phản ánh đúng vận động của sự vật."
+        },
+        {
+          "key": "D",
+          "text": "Tách mô hình khỏi đối tượng để hai loại biện chứng không chi phối nhau."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Kiểm tra và điều chỉnh mô hình để phản ánh đúng vận động của sự vật. Khách quan quy định chủ quan, nên mô hình phải chịu kiểm tra bằng đối tượng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm khả năng đặt mục tiêu với quyền quy định khách quan."
+        },
+        {
+          "key": "B",
+          "explanation": "Lựa chứng cứ theo ý muốn thay vì phản ánh đối tượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ nhận quan hệ thống nhất và quy định."
+        }
+      ],
+      "takeaway": "Sửa nhận thức theo đối tượng thay vì buộc đối tượng theo nhận thức.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q122",
+      "kind": "quiz",
+      "prompt": "Việc nhận thức không trùng khít hoàn toàn với đối tượng được giáo trình giải thích bằng căn cứ nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đối tượng chỉ có liên hệ khi được chủ thể biểu đạt bằng một hệ khái niệm."
+        },
+        {
+          "key": "B",
+          "text": "Tư duy còn có quy luật mang tính mục đích và sáng tạo của con người."
+        },
+        {
+          "key": "C",
+          "text": "Thế giới và tư duy là hai quá trình riêng biệt không có cơ sở thống nhất."
+        },
+        {
+          "key": "D",
+          "text": "Nhận thức càng sáng tạo càng ít cần kiểm tra bằng sự vận động của đối tượng."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Tư duy còn có quy luật mang tính mục đích và sáng tạo của con người. Đây là căn cứ được nêu cho tính độc lập tương đối.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm phản ánh với tạo ra đối tượng."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa khác biệt thành tách rời."
+        },
+        {
+          "key": "D",
+          "explanation": "Sáng tạo không loại bỏ yêu cầu phản ánh đúng."
+        }
+      ],
+      "takeaway": "Không trùng khít không đồng nghĩa với không có căn cứ khách quan.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q123",
+      "kind": "quiz",
+      "prompt": "Mô hình X coi nhận thức trùng khít đầy đủ với đối tượng; mô hình Y coi tính sáng tạo cho phép bỏ căn cứ khách quan. Đánh giá nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "X xóa tính độc lập tương đối; Y cắt quan hệ phản ánh; cả hai đều sai."
+        },
+        {
+          "key": "B",
+          "text": "X đúng vì nhận thức không có giới hạn; Y sai vì tư duy không có sáng tạo."
+        },
+        {
+          "key": "C",
+          "text": "X giữ đúng thống nhất; Y giữ đúng sáng tạo; mỗi mô hình đều đầy đủ."
+        },
+        {
+          "key": "D",
+          "text": "X sai vì có phản ánh; Y đúng vì sáng tạo độc lập với hiện thực."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "X xóa tính độc lập tương đối. Y cắt quan hệ phản ánh. Cả hai đều sai. Biện chứng chủ quan vừa phản ánh vừa có quy luật tư duy riêng. Không đồng nhất hay tách tuyệt đối.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Phủ cả giới hạn và năng động."
+        },
+        {
+          "key": "C",
+          "explanation": "Đúng một mặt không cứu sự tuyệt đối hóa."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo tiêu chí phản ánh có căn cứ."
+        }
+      ],
+      "takeaway": "Thống nhất không là trùng khít, sáng tạo không là tùy tiện.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q124",
+      "kind": "quiz",
+      "prompt": "Trong định nghĩa được dẫn từ Chống Đuyrinh, phạm vi của phép biện chứng bao gồm lĩnh vực nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Những quy luật vận động cơ học được dùng làm mẫu cho biến đổi trong xã hội và tư duy."
+        },
+        {
+          "key": "B",
+          "text": "Những quy luật phổ biến của tư duy được áp đặt lên sự biến đổi trong tự nhiên và xã hội."
+        },
+        {
+          "key": "C",
+          "text": "Những quy luật phổ biến của vận động và phát triển trong tự nhiên xã hội và tư duy."
+        },
+        {
+          "key": "D",
+          "text": "Những quy luật chuyên biệt của từng ngành nghiên cứu trong tự nhiên xã hội và tư duy."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Những quy luật phổ biến của vận động và phát triển trong tự nhiên xã hội và tư duy. Đủ ba lĩnh vực và đúng cấp độ phổ biến.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thu hẹp vận động về cơ học."
+        },
+        {
+          "key": "B",
+          "explanation": "Đảo quan hệ phản ánh và quy định."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm cấp độ phổ biến với chuyên biệt."
+        }
+      ],
+      "takeaway": "Phép biện chứng nghiên cứu tính phổ biến xuyên các lĩnh vực.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q125",
+      "kind": "quiz",
+      "prompt": "Một cách định nghĩa khác của Ăngghen được giáo trình dẫn là phép biện chứng là khoa học về điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự liên hệ có tính phổ biến."
+        },
+        {
+          "key": "B",
+          "text": "Sự liên hệ giữa các tên gọi."
+        },
+        {
+          "key": "C",
+          "text": "Sự liên hệ do cảm giác tạo ra."
+        },
+        {
+          "key": "D",
+          "text": "Sự liên hệ riêng của một ngành."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Sự liên hệ có tính phổ biến.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thu hẹp vào ngôn ngữ."
+        },
+        {
+          "key": "C",
+          "explanation": "Thay nền tảng duy vật bằng cảm giác."
+        },
+        {
+          "key": "D",
+          "explanation": "Thu hẹp phạm vi phổ biến."
+        }
+      ],
+      "takeaway": "Các cách định nghĩa nhấn mạnh những phương diện khác nhau của cùng học thuyết.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q126",
+      "kind": "quiz",
+      "prompt": "Cách hiểu nào giữ đúng hai điểm được Lênin nhấn mạnh trong định nghĩa về học thuyết phát triển?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Học thuyết phát triển của tư duy; tính tương đối khiến nhận thức không thể phản ánh vật chất."
+        },
+        {
+          "key": "B",
+          "text": "Học thuyết phát triển sâu sắc không phiến diện; nhận thức tương đối phản ánh vật chất luôn phát triển."
+        },
+        {
+          "key": "C",
+          "text": "Học thuyết phát triển tùy quan điểm; vật chất biến đổi theo cách mỗi người lựa chọn nhận thức."
+        },
+        {
+          "key": "D",
+          "text": "Học thuyết phát triển của vật chất; nhận thức đạt một lần là hoàn tất đối với đối tượng ấy."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Học thuyết phát triển sâu sắc không phiến diện. Nhận thức tương đối phản ánh vật chất luôn phát triển. Giữ cả phát triển của vật chất lẫn tính tương đối của nhận thức.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Biến tương đối thành bất khả tri."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo chiều vật chất và nhận thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ tính tương đối và sự tiếp tục phát triển."
+        }
+      ],
+      "takeaway": "Tính tương đối thúc đẩy hoàn thiện nhận thức, không phủ nhận khả năng phản ánh.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q127",
+      "kind": "quiz",
+      "prompt": "Từ định nghĩa ngắn phép biện chứng là học thuyết về sự thống nhất của các mặt đối lập, kết luận nào đúng với lời lưu ý của Lênin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Định nghĩa chỉ có ích cho tư duy và không liên quan thế giới khách quan."
+        },
+        {
+          "key": "B",
+          "text": "Định nghĩa yêu cầu quy mọi quan hệ về hai sự vật tách biệt nhau."
+        },
+        {
+          "key": "C",
+          "text": "Định nghĩa đã thay thế được mọi trình bày khác về phép biện chứng."
+        },
+        {
+          "key": "D",
+          "text": "Định nghĩa nắm hạt nhân nhưng cần giải thích và phát triển thêm."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Định nghĩa nắm hạt nhân nhưng cần giải thích và phát triển thêm.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thu hẹp sai phạm vi phép biện chứng."
+        },
+        {
+          "key": "B",
+          "explanation": "Nhầm các mặt đối lập với hai vật bất kỳ."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm hạt nhân với toàn bộ nội dung đã hoàn tất."
+        }
+      ],
+      "takeaway": "Nắm hạt nhân không đồng nghĩa với nắm đủ mọi nội dung.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q128",
+      "kind": "quiz",
+      "prompt": "Mô tả nào giữ đủ đặc điểm hình thành của phép biện chứng duy vật được nguồn nêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gắn thế giới quan duy vật với phương pháp biện chứng và lôgíc với nhận thức trên cơ sở khoa học."
+        },
+        {
+          "key": "B",
+          "text": "Gắn thế giới quan duy vật với khoa học rồi xem lôgíc biện chứng là phần riêng không liên quan nhận thức."
+        },
+        {
+          "key": "C",
+          "text": "Gắn phương pháp biện chứng với mọi thế giới quan và xem kinh nghiệm cá nhân là căn cứ xác nhận."
+        },
+        {
+          "key": "D",
+          "text": "Gắn lôgíc với nhận thức nhưng đặt các nguyên lý ra ngoài việc luận giải bằng thành tựu khoa học."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Gắn thế giới quan duy vật với phương pháp biện chứng và lôgíc với nhận thức trên cơ sở khoa học. Ba thành tố đều có trong đoạn đặc điểm. Không thể tách cơ sở duy vật và khoa học.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Giữ cơ sở duy vật nhưng tách lôgíc khỏi lý luận nhận thức."
+        },
+        {
+          "key": "C",
+          "explanation": "Tách phương pháp khỏi thế giới quan duy vật và cơ sở khoa học."
+        },
+        {
+          "key": "D",
+          "explanation": "Giữ một thống nhất nhưng bỏ yêu cầu cơ sở khoa học."
+        }
+      ],
+      "takeaway": "Những thống nhất hữu cơ và cơ sở khoa học cùng tạo nên đặc điểm của học thuyết.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q129",
+      "kind": "quiz",
+      "prompt": "Mô tả nào đúng về trình độ, đối tượng và cấu trúc nội dung phép biện chứng duy vật theo nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tự giác, xét riêng quy luật của tinh thần tuyệt đối; hai nguyên lý, ba cặp phạm trù, sáu quy luật."
+        },
+        {
+          "key": "B",
+          "text": "Tự phát, xét riêng quy luật di chuyển cơ học; hai nguyên lý, sáu cặp phạm trù, ba quy luật."
+        },
+        {
+          "key": "C",
+          "text": "Tự giác, xét trạng thái có tính quy luật phổ biến; ba nguyên lý, sáu cặp phạm trù, hai quy luật."
+        },
+        {
+          "key": "D",
+          "text": "Tự giác, xét trạng thái có tính quy luật phổ biến; hai nguyên lý, sáu cặp phạm trù, ba quy luật."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tự giác, xét trạng thái có tính quy luật phổ biến. Hai nguyên lý, sáu cặp phạm trù, ba quy luật. Không trộn số lượng hay phạm vi.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đổi phạm vi sang duy tâm và tráo danh mục."
+        },
+        {
+          "key": "B",
+          "explanation": "Giữ danh mục nhưng sai trình độ và đối tượng nghiên cứu."
+        },
+        {
+          "key": "C",
+          "explanation": "Giữ trình độ và phạm vi nhưng tráo số nguyên lý với quy luật."
+        }
+      ],
+      "takeaway": "Cấp độ phổ biến giúp định hướng giải thích khoa học, không cung cấp công thức chuyên ngành.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q130",
+      "kind": "quiz",
+      "prompt": "Đâu là đối tượng nghiên cứu được giáo trình xác định cho phép biện chứng duy vật?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cảm nhận cá nhân về tính quan trọng của những sự kiện xảy ra gần đây."
+        },
+        {
+          "key": "B",
+          "text": "Quy trình riêng của từng thiết bị trong mỗi ngành sản xuất cụ thể."
+        },
+        {
+          "key": "C",
+          "text": "Trạng thái tồn tại có tính quy luật phổ biến nhất của sự vật hiện tượng."
+        },
+        {
+          "key": "D",
+          "text": "Tên gọi của mọi sự vật trong một hệ thống phân loại bằng ngôn ngữ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Trạng thái tồn tại có tính quy luật phổ biến nhất của sự vật hiện tượng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thay đối tượng khách quan bằng cảm nhận."
+        },
+        {
+          "key": "B",
+          "explanation": "Thuộc cấp nghiên cứu chuyên biệt."
+        },
+        {
+          "key": "D",
+          "explanation": "Thu hẹp vào từ ngữ và danh mục."
+        }
+      ],
+      "takeaway": "Phân biệt cấp độ phổ biến nhất với tri thức thao tác chuyên biệt.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q131",
+      "kind": "quiz",
+      "prompt": "Vai trò của phép biện chứng duy vật đối với liên hệ giữa các lĩnh vực khoa học là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đặt ranh giới tuyệt đối để các lĩnh vực không còn quan hệ với nhau."
+        },
+        {
+          "key": "B",
+          "text": "Chọn tên gọi chung để coi mọi đối tượng đều có cùng cấu trúc."
+        },
+        {
+          "key": "C",
+          "text": "Định hướng giải thích quan hệ chung và bước quá độ giữa các lĩnh vực nghiên cứu."
+        },
+        {
+          "key": "D",
+          "text": "Cung cấp sẵn mọi kết quả đo lường nên không cần nghiên cứu ngành."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Định hướng giải thích quan hệ chung và bước quá độ giữa các lĩnh vực nghiên cứu. Không thay kết quả chuyên ngành.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Lặp quan điểm siêu hình."
+        },
+        {
+          "key": "B",
+          "explanation": "Đồng nhất khái quát với xóa khác biệt."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy phương pháp chung thay tri thức cụ thể."
+        }
+      ],
+      "takeaway": "Phương pháp chung giúp nghiên cứu quan hệ, không thay chứng minh chuyên ngành.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q132",
+      "kind": "quiz",
+      "prompt": "Theo đoạn vai trò, phép biện chứng duy vật kế thừa và phát triển phép biện chứng theo hướng nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Từ tự phát đến tự giác."
+        },
+        {
+          "key": "B",
+          "text": "Từ khoa học đến cảm tính."
+        },
+        {
+          "key": "C",
+          "text": "Từ liên hệ đến cô lập."
+        },
+        {
+          "key": "D",
+          "text": "Từ tự giác đến tự phát."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Từ tự phát đến tự giác.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Thay đổi sang cặp tiêu chí không."
+        },
+        {
+          "key": "C",
+          "explanation": "Trái phương pháp và vai trò biện chứng."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo chiều bước phát triển."
+        }
+      ],
+      "takeaway": "Tự giác gắn với sự xây dựng và sử dụng có ý thức phương pháp luận.",
+      "group": "E",
+      "groupTitle": "Khái quát phép biện chứng duy vật"
+    },
+    {
+      "id": "Q133",
+      "kind": "quiz",
+      "prompt": "Dấu hiệu nào xác định mối liên hệ theo giáo trình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sự ràng buộc tương hỗ, quy định và ảnh hưởng giữa bộ phận hoặc đối tượng."
+        },
+        {
+          "key": "B",
+          "text": "Sự có mặt cùng lúc của những đối tượng được người quan sát lựa chọn."
+        },
+        {
+          "key": "C",
+          "text": "Sự giống nhau về tên gọi của những đối tượng thuộc các lĩnh vực khác nhau."
+        },
+        {
+          "key": "D",
+          "text": "Sự nối kết những đối tượng thành nhóm theo ý muốn của người nghiên cứu."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Sự ràng buộc tương hỗ, quy định và ảnh hưởng giữa bộ phận hoặc đối tượng. Nêu đúng quan hệ tương tác, không chỉ sự có mặt cùng lúc.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đồng thời tồn tại chưa chứng minh quy định, ảnh hưởng."
+        },
+        {
+          "key": "C",
+          "explanation": "Giống tên không phải tiêu chí tác động."
+        },
+        {
+          "key": "D",
+          "explanation": "Phân nhóm chủ quan không tạo ra liên hệ khách quan."
+        }
+      ],
+      "takeaway": "Cần chỉ ra ràng buộc và ảnh hưởng thay vì dựa vào sự đứng cạnh nhau.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q134",
+      "kind": "quiz",
+      "prompt": "Theo cách mở rộng khái niệm ở trang 97, mối liên hệ phổ biến bao gồm những bình diện nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Giữa các vật hữu hình còn các hình thức tư duy chỉ liên hệ trong ngôn ngữ."
+        },
+        {
+          "key": "B",
+          "text": "Giữa sự vật ở gần nhau còn những vật xa nhau thuộc trạng thái cô lập."
+        },
+        {
+          "key": "C",
+          "text": "Giữa đối tượng vật chất giữa đối tượng tinh thần và giữa hai bình diện ấy."
+        },
+        {
+          "key": "D",
+          "text": "Giữa các ý niệm vì chúng tạo nên liên hệ giữa những sự vật vật chất."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Giữa đối tượng vật chất giữa đối tượng tinh thần và giữa hai bình diện ấy.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ liên hệ thực giữa các hình thức nhận thức và hiện thực."
+        },
+        {
+          "key": "B",
+          "explanation": "Đồng nhất phổ biến với gần trong không gian."
+        },
+        {
+          "key": "D",
+          "explanation": "Thay nền tảng vật chất bằng ý niệm."
+        }
+      ],
+      "takeaway": "Phổ biến không bị giới hạn ở các vật hữu hình hoặc khoảng cách gần.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q135",
+      "kind": "quiz",
+      "prompt": "Một đối tượng liên hệ với đối tượng khác ở phương diện P nhưng biến đổi ở phương diện Q không làm đối tượng kia đổi. Điều này có hợp nguyên lý không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có; vì đã có cô lập ở Q thì hai đối tượng không còn liên hệ ở P."
+        },
+        {
+          "key": "B",
+          "text": "Có; liên hệ và cô lập tương đối thống nhất ở những phương diện cụ thể khác nhau."
+        },
+        {
+          "key": "C",
+          "text": "Không; liên hệ phổ biến đòi mọi thuộc tính của hai vật đổi cùng nhau."
+        },
+        {
+          "key": "D",
+          "text": "Không; có cô lập tương đối chứng minh mọi liên hệ chỉ do tư duy tạo."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Có. Liên hệ và cô lập tương đối thống nhất ở những phương diện cụ thể khác nhau.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đúng kết luận nhưng tự mâu thuẫn thông tin."
+        },
+        {
+          "key": "C",
+          "explanation": "Tuyệt đối hóa phạm vi liên hệ."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ khác phương diện phủ tính khách quan."
+        }
+      ],
+      "takeaway": "Liên hệ phổ biến không phủ tính độc lập tương đối.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q136",
+      "kind": "quiz",
+      "prompt": "Vì sao phép biện chứng duy vật thừa nhận liên hệ phổ biến giữa các đối tượng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vì ý niệm chung kết nối các đối tượng trước khi chúng tồn tại thành vật cụ thể."
+        },
+        {
+          "key": "B",
+          "text": "Vì con người có thể gọi những đối tượng khác nhau bằng cùng một hệ khái niệm."
+        },
+        {
+          "key": "C",
+          "text": "Vì cảm giác của chủ thể nối những đối tượng riêng rẽ thành thế giới được nhận biết."
+        },
+        {
+          "key": "D",
+          "text": "Vì chúng là các dạng tồn tại của một thế giới vật chất thống nhất."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Vì chúng là các dạng tồn tại của một thế giới vật chất thống nhất. Đây là cơ s nêu, khác với ý niệm hay cảm giác.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đặt nền tảng vào ý niệm."
+        },
+        {
+          "key": "B",
+          "explanation": "Ngôn ngữ phản ánh chứ không tạo cơ sở vật chất."
+        },
+        {
+          "key": "C",
+          "explanation": "Đặt nền tảng vào cảm giác của chủ thể."
+        }
+      ],
+      "takeaway": "Cơ sở của liên hệ không phải hành vi chủ thể nhận ra liên hệ.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q137",
+      "kind": "quiz",
+      "prompt": "Một liên hệ tác động trước khi được chủ thể nhận biết chứng tỏ điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tính khách quan: sự tác động không chờ ý thức thừa nhận nó."
+        },
+        {
+          "key": "B",
+          "text": "Tính phổ biến: mọi liên hệ đều đã được con người biết đầy đủ."
+        },
+        {
+          "key": "C",
+          "text": "Tính chủ quan: liên hệ chỉ bắt đầu tồn tại sau khi được diễn đạt."
+        },
+        {
+          "key": "D",
+          "text": "Tính đơn nhất: liên hệ không có cơ sở trong đối tượng thực."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Tính khách quan: Sự tác động không chờ ý thức thừa nhận nó. Nhận biết khác tạo lập liên hệ.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Phổ biến không là biết hết."
+        },
+        {
+          "key": "C",
+          "explanation": "Trái thông tin và tiêu chí."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ căn cứ khách quan."
+        }
+      ],
+      "takeaway": "Phát hiện liên hệ khác làm liên hệ bắt đầu tồn tại.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q138",
+      "kind": "quiz",
+      "prompt": "Kết luận nào đúng từ tính phổ biến của các mối liên hệ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Liên hệ có trong tự nhiên xã hội tư duy và giữa các mặt yếu tố của mỗi đối tượng."
+        },
+        {
+          "key": "B",
+          "text": "Liên hệ có ở mọi nơi nên một vật phải tác động trực tiếp ngang mức lên các vật khác."
+        },
+        {
+          "key": "C",
+          "text": "Liên hệ có ở mọi đối tượng nên không cần xác định những điều kiện tác động cụ thể."
+        },
+        {
+          "key": "D",
+          "text": "Liên hệ có giữa các đối tượng nên các mặt bên trong một vật có thể được xét tách biệt."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Liên hệ có trong tự nhiên xã hội tư duy và giữa các mặt yếu tố của mỗi đối tượng. Đúng cả liên hệ liên đối tượng lẫn nội tại và đủ lĩnh vực.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đánh đồng phổ biến với trực tiếp và ngang nhau."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ tính cụ thể và đa dạng."
+        },
+        {
+          "key": "D",
+          "explanation": "Bỏ liên hệ nội tại."
+        }
+      ],
+      "takeaway": "Phổ biến về phạm vi không đồng nghĩa đồng đều về hình thức và vai trò.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q139",
+      "kind": "quiz",
+      "prompt": "Cách phân loại nào giữ đúng căn cứ được giáo trình nêu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không gian và thời gian xét nguyên nhân; chung và riêng xét mức trực tiếp."
+        },
+        {
+          "key": "B",
+          "text": "Không gian và thời gian xét bình diện liên hệ; chung và riêng xét phạm vi tác động."
+        },
+        {
+          "key": "C",
+          "text": "Không gian và thời gian xét mức quan trọng; chung và riêng xét thứ tự xuất hiện."
+        },
+        {
+          "key": "D",
+          "text": "Không gian và thời gian xét mức phổ biến; chung và riêng xét độ bền của liên hệ."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Không gian và thời gian xét bình diện liên hệ. Chung và riêng xét phạm vi tác động. Hai trục khác nhau, không lấy khoảng cách thay cho mức phổ biến.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thay căn cứ phân loại bằng trục khác."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm cả hai trục phân loại."
+        },
+        {
+          "key": "D",
+          "explanation": "Tráo phạm vi với bình diện tồn tại."
+        }
+      ],
+      "takeaway": "Một liên hệ có thể được phân loại đồng thời theo nhiều căn cứ.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q140",
+      "kind": "quiz",
+      "prompt": "Thông báo đổi lịch được gửi cho lớp trưởng; lớp trưởng báo cho các tổ nên các tổ đổi lịch học. Xét tác động từ thông báo ban đầu đến lịch học của tổ, mô tả nào đúng?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đó là liên hệ gián tiếp qua khâu truyền tin của lớp trưởng."
+        },
+        {
+          "key": "B",
+          "text": "Đó là trạng thái cô lập vì người gửi không gặp từng tổ."
+        },
+        {
+          "key": "C",
+          "text": "Đó là liên hệ trực tiếp vì kết quả xuất hiện ngay trong ngày."
+        },
+        {
+          "key": "D",
+          "text": "Đó là liên hệ không có thực vì được thực hiện bằng thông tin."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Đó là liên hệ gián tiếp qua khâu truyền tin của lớp trưởng. Có khâu trung gian. Phải tính liên hệ gián tiếp.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Không tiếp xúc trực tiếp không đồng nghĩa cô lập."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhanh về thời gian không xóa trung gian."
+        },
+        {
+          "key": "D",
+          "explanation": "Liên hệ không bị giới hạn ở tiếp xúc vật thể."
+        }
+      ],
+      "takeaway": "Xác định trung gian bằng chuỗi tác động, không bằng độ nhanh.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q141",
+      "kind": "quiz",
+      "prompt": "Mô hình phân tích dùng ba tiêu chí: do bản chất và nguyên nhân cơ bản bên trong quy định hay không; có thuộc cấu trúc quy định đối tượng không; có giữ vai trò nổi bật ở giai đoạn xét không. Ba cặp phân loại tương ứng là gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chủ yếu hoặc thứ yếu; tất nhiên hoặc ngẫu nhiên; bản chất hoặc không bản chất."
+        },
+        {
+          "key": "B",
+          "text": "Tất nhiên hoặc ngẫu nhiên; chủ yếu hoặc thứ yếu; bản chất hoặc không bản chất."
+        },
+        {
+          "key": "C",
+          "text": "Bản chất hoặc không bản chất; chủ yếu hoặc thứ yếu; tất nhiên hoặc ngẫu nhiên."
+        },
+        {
+          "key": "D",
+          "text": "Tất nhiên hoặc ngẫu nhiên; bản chất hoặc không bản chất; chủ yếu hoặc thứ yếu."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tất nhiên hoặc ngẫu nhiên. Bản chất hoặc không bản chất. Chủ yếu hoặc thứ yếu. Ba tiêu chí lần lượt xét căn cứ, tính bản chất và vai trò trong quan hệ cụ thể.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tráo vai trò hiện tại với căn cứ và tính bản chất."
+        },
+        {
+          "key": "B",
+          "explanation": "Đúng trục đầu nhưng đổi hai trục còn lại."
+        },
+        {
+          "key": "C",
+          "explanation": "Không khớp thứ tự ba tiêu chí đã cho."
+        }
+      ],
+      "takeaway": "Không gộp các cách phân loại có căn cứ khác nhau thành một.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q142",
+      "kind": "quiz",
+      "prompt": "Liên hệ giữ vai trò chủ yếu ở giai đoạn M nhưng thứ yếu ở giai đoạn N. Kết luận nào phù hợp?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phân loại sai vì vai trò của một liên hệ bất biến trong mọi giai đoạn."
+        },
+        {
+          "key": "B",
+          "text": "Phân loại tùy ý vì mọi liên hệ đều ngang nhau về vị trí."
+        },
+        {
+          "key": "C",
+          "text": "Phân loại tương đối, cần xét vai trò trong hệ quan hệ và giai đoạn cụ thể."
+        },
+        {
+          "key": "D",
+          "text": "Phân loại không cần đối tượng vì tên chủ yếu tự quy định vai trò."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Phân loại tương đối, cần xét vai trò trong hệ quan hệ và giai đoạn cụ thể. Vai trò có thể đổi.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tuyệt đối hóa trục vai trò."
+        },
+        {
+          "key": "B",
+          "explanation": "Từ tương đối suy thành không phân biệt."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy tên gọi thay nội dung."
+        }
+      ],
+      "takeaway": "Tính tương đối không loại căn cứ khách quan của phân loại.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q143",
+      "kind": "quiz",
+      "prompt": "Đặt đối tượng trong chỉnh thể thống nhất đòi hỏi cách xem xét nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tách mỗi bộ phận để kết luận toàn bộ mà không xét cách chúng liên hệ."
+        },
+        {
+          "key": "B",
+          "text": "Xem mọi thuộc tính ngang nhau để tránh phân biệt mặt bản chất."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ chọn mặt nổi bật nhất để thay thế toàn bộ cấu trúc đối tượng."
+        },
+        {
+          "key": "D",
+          "text": "Xét các mặt, yếu tố và tương tác giữa chúng trong toàn bộ đối tượng."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Xét các mặt, yếu tố và tương tác giữa chúng trong toàn bộ đối tượng. Toàn diện không chỉ liệt kê bộ phận mà phải giữ quan hệ tạo chỉnh thể.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phân tích nhưng bỏ tổng thể."
+        },
+        {
+          "key": "B",
+          "explanation": "Dàn trải không trọng tâm."
+        },
+        {
+          "key": "C",
+          "explanation": "Phiến diện."
+        }
+      ],
+      "takeaway": "Chỉnh thể là hệ liên hệ, không chỉ phép cộng các phần.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q144",
+      "kind": "quiz",
+      "prompt": "Sau khi liệt kê nhiều mặt của đối tượng, yêu cầu toàn diện thứ hai cần bổ sung gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chọn mặt dễ mô tả để coi là bản chất thay mọi liên hệ đã biết."
+        },
+        {
+          "key": "B",
+          "text": "Bổ sung thêm thật nhiều thuộc tính mà không cần xét quan hệ giữa chúng."
+        },
+        {
+          "key": "C",
+          "text": "Loại mặt trái với kết luận định trước để giữ hệ quan điểm nhất quán."
+        },
+        {
+          "key": "D",
+          "text": "Rút các mặt, liên hệ tất yếu trong sự thống nhất hữu cơ nội tại."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Rút các mặt, liên hệ tất yếu trong sự thống nhất hữu cơ nội tại. Nhiều thông tin chưa đồng nghĩa hiểu chỉnh thể.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Thay vai trò bằng độ dễ thấy."
+        },
+        {
+          "key": "B",
+          "explanation": "Tiếp tục dàn trải."
+        },
+        {
+          "key": "C",
+          "explanation": "Thiên lệch lựa chọn thông tin."
+        }
+      ],
+      "takeaway": "Toàn diện có trọng tâm và liên hệ nội tại.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q145",
+      "kind": "quiz",
+      "prompt": "Yêu cầu xét đối tượng trong môi trường bao gồm quan hệ trung gian có nghĩa gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mỗi tác động gián tiếp đều quan trọng ngang nhau với tác động bản chất."
+        },
+        {
+          "key": "B",
+          "text": "Không giới hạn khảo sát vào tác động trực tiếp giữa đối tượng và môi trường."
+        },
+        {
+          "key": "C",
+          "text": "Mọi quan hệ giả định đều có thật nếu có thể kể một chuỗi sự kiện."
+        },
+        {
+          "key": "D",
+          "text": "Chỉ quan hệ bên ngoài có giá trị, quan hệ bên trong không cần phân tích."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Không giới hạn khảo sát vào tác động trực tiếp giữa đối tượng và môi trường. Không thể lấy khoảng cách làm bằng chứng không liên hệ.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Xóa phân biệt vai trò."
+        },
+        {
+          "key": "C",
+          "explanation": "Chuỗi tưởng tượng không chứng minh liên hệ."
+        },
+        {
+          "key": "D",
+          "explanation": "Đổi một phiến diện thành phiến diện khác."
+        }
+      ],
+      "takeaway": "Khảo sát quan hệ gián tiếp cần thông tin, không gán ghép.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q146",
+      "kind": "quiz",
+      "prompt": "Xét toàn diện trong không gian, thời gian đòi hỏi gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dùng hiện trạng để suy mọi giai đoạn có cùng quan hệ và vai trò."
+        },
+        {
+          "key": "B",
+          "text": "Xem các giai đoạn không liên hệ vì chúng diễn ra ở những lúc khác nhau."
+        },
+        {
+          "key": "C",
+          "text": "Nghiên cứu quan hệ quá khứ, hiện tại và phán đoán tương lai có căn cứ."
+        },
+        {
+          "key": "D",
+          "text": "Dùng dự định tương lai để thay dữ kiện quá khứ và hiện tại."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Nghiên cứu quan hệ quá khứ, hiện tại và phán đoán tương lai có căn cứ. Phán đoán phải từ quá trình.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ lịch sử biến đổi."
+        },
+        {
+          "key": "B",
+          "explanation": "Tách quá trình."
+        },
+        {
+          "key": "D",
+          "explanation": "Đảo chiều căn cứ."
+        }
+      ],
+      "takeaway": "Phán đoán tương lai phải nối với lịch sử và hiện trạng đối tượng.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q147",
+      "kind": "quiz",
+      "prompt": "Từ một thuộc tính giống nhau giữa hai đối tượng có thể suy chúng giống nhau toàn bộ không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chưa đủ; phải xét các mặt và quan hệ tạo nên từng chỉnh thể."
+        },
+        {
+          "key": "B",
+          "text": "Có; thuộc tính giống nhau làm mọi quan hệ bên trong cũng phải giống nhau."
+        },
+        {
+          "key": "C",
+          "text": "Chưa đủ; vì mọi thuộc tính chung đều chỉ tồn tại trong tưởng tượng."
+        },
+        {
+          "key": "D",
+          "text": "Có; vì nhiều mặt của đối tượng không ảnh hưởng khả năng nhận thức."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Chưa đủ. Phải xét các mặt và quan hệ tạo nên từng chỉnh thể. Một thông tin chung chỉ bao quát một phương diện. Kết luận toàn bộ vượt tiền đề.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Khái quát quá mức."
+        },
+        {
+          "key": "C",
+          "explanation": "Đúng phủ kết luận nhưng rơi duy danh."
+        },
+        {
+          "key": "D",
+          "explanation": "Phủ yêu cầu toàn diện."
+        }
+      ],
+      "takeaway": "Không dùng một mặt thay kết luận về toàn bộ đối tượng.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q148",
+      "kind": "quiz",
+      "prompt": "Quan điểm toàn diện có đòi dành mức tác động ngang nhau cho mọi liên hệ không?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không; cần ưu tiên mặt bản chất, quyết định trong hệ liên hệ đã xác định."
+        },
+        {
+          "key": "B",
+          "text": "Có; nếu phân vai trò thì việc nghiên cứu đã trở thành phiến diện."
+        },
+        {
+          "key": "C",
+          "text": "Không; chỉ cần xét một mặt được ưa thích rồi bỏ các mặt còn lại."
+        },
+        {
+          "key": "D",
+          "text": "Có; vì mọi liên hệ có tính khách quan nên có cùng vai trò."
+        }
+      ],
+      "correctKey": "A",
+      "explanation": "Không. Cần ưu tiên mặt bản chất, quyết định trong hệ liên hệ đã xác định. Ưu tiên có căn cứ không đồng nghĩa bỏ các mặt khác.",
+      "distractors": [
+        {
+          "key": "B",
+          "explanation": "Đồng nhất toàn diện với bình quân."
+        },
+        {
+          "key": "C",
+          "explanation": "Lấy ưu tiên làm lý do phiến diện."
+        },
+        {
+          "key": "D",
+          "explanation": "Từ khách quan suy sai ngang vai."
+        }
+      ],
+      "takeaway": "Toàn diện thống nhất bao quát với xác định trọng tâm.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q149",
+      "kind": "quiz",
+      "prompt": "Lắp ghép vô nguyên tắc các mối liên hệ trái ngược vào một mối liên hệ chung là lỗi gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phiến diện, vì chưa dùng bất kỳ mối liên hệ nào để xem xét."
+        },
+        {
+          "key": "B",
+          "text": "Khách quan, vì mọi mệnh đề được ghép đều tự hợp thức hóa nhau."
+        },
+        {
+          "key": "C",
+          "text": "Toàn diện, vì số mặt được nêu đủ nhiều bất kể nguyên tắc kết hợp."
+        },
+        {
+          "key": "D",
+          "text": "Chiết trung, vì ghép các quan hệ mà thiếu căn cứ thống nhất."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Chiết trung, vì ghép các quan hệ mà thiếu căn cứ thống nhất. Nhiều mặt chưa tự tạo toàn diện.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không đúng thông tin nhiều liên hệ."
+        },
+        {
+          "key": "B",
+          "explanation": "Lấy phép ghép thay kiểm tra."
+        },
+        {
+          "key": "C",
+          "explanation": "Đồng nhất số lượng với hệ thống."
+        }
+      ],
+      "takeaway": "Kết hợp cần nguyên tắc và quan hệ nội tại, không chỉ gom luận điểm.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q150",
+      "kind": "quiz",
+      "prompt": "Cố ý thay liên hệ cơ bản bằng liên hệ không cơ bản để đổi hướng kết luận thuộc lỗi nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Toàn diện, vì đã sử dụng cả liên hệ cơ bản và không cơ bản."
+        },
+        {
+          "key": "B",
+          "text": "Biện chứng, vì vai trò liên hệ có thể tùy chủ thể thay đổi bằng lập luận."
+        },
+        {
+          "key": "C",
+          "text": "Ngụy biện, vì cố ý đánh tráo vai trò của các mối liên hệ."
+        },
+        {
+          "key": "D",
+          "text": "Chiết trung, vì đã đưa mọi quan điểm thành một hệ thống thống nhất có căn cứ."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Ngụy biện, vì cố ý đánh tráo vai trò của các mối liên hệ. Khác liệt kê dàn trải hoặc thiếu thông tin.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Dùng nhiều mặt không cứu sự đánh tráo."
+        },
+        {
+          "key": "B",
+          "explanation": "Chủ quan hóa vai trò khách quan."
+        },
+        {
+          "key": "D",
+          "explanation": "Mô tả không phải lỗi đã cho."
+        }
+      ],
+      "takeaway": "Không dùng tính đa dạng để che thao tác đổi tiêu chí kết luận.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q151",
+      "kind": "quiz",
+      "prompt": "Liên hệ M được xác định từ bản chất và nguyên nhân cơ bản bên trong; liên hệ N từ sự gặp gỡ tình cờ của hoàn cảnh ngoài. Theo căn cứ quy định, nên dùng cặp phân loại nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chủ yếu và thứ yếu."
+        },
+        {
+          "key": "B",
+          "text": "Trực tiếp và gián tiếp."
+        },
+        {
+          "key": "C",
+          "text": "Không gian và thời gian."
+        },
+        {
+          "key": "D",
+          "text": "Tất nhiên và ngẫu nhiên."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Tất nhiên và ngẫu nhiên. Đề giới hạn căn cứ quy định, không hỏi mức chủ yếu của vai trò.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là trục vai trò, không phải căn cứ đang hỏi."
+        },
+        {
+          "key": "B",
+          "explanation": "Đây là trục có hay không trung gian."
+        },
+        {
+          "key": "C",
+          "explanation": "Đây là bình diện tồn tại của liên hệ."
+        }
+      ],
+      "takeaway": "Chọn nhãn theo đúng trục đã được xác định trong đề.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q152",
+      "kind": "quiz",
+      "prompt": "Hai liên hệ khác nhau ở chỗ một thuộc cấu trúc quy định đối tượng, một không thuộc cấu trúc ấy. Đang dùng cách phân loại nào trong danh mục của nguồn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Liên hệ trực tiếp hoặc gián tiếp."
+        },
+        {
+          "key": "B",
+          "text": "Liên hệ chung hoặc liên hệ riêng."
+        },
+        {
+          "key": "C",
+          "text": "Liên hệ không gian hoặc thời gian."
+        },
+        {
+          "key": "D",
+          "text": "Liên hệ bản chất hoặc không bản chất."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Liên hệ bản chất hoặc không bản chất. Tiêu chí là tính bản chất, không phải tầm rộng hoặc trung gian.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phân biệt theo khâu trung gian."
+        },
+        {
+          "key": "B",
+          "explanation": "Phân biệt theo phạm vi tác động."
+        },
+        {
+          "key": "C",
+          "explanation": "Phân biệt bình diện không gian thời gian."
+        }
+      ],
+      "takeaway": "Các trục phân loại cùng tồn tại nhưng không đồng nghĩa.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q153",
+      "kind": "quiz",
+      "prompt": "Ở thời điểm hiện tại, một liên hệ giữ vai trò nổi bật chi phối nhiệm vụ, liên hệ kia có tác động phụ. Chưa có dữ kiện về bản chất lâu dài, nên gọi thế nào theo vai trò đã biết?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bản chất và không bản chất."
+        },
+        {
+          "key": "B",
+          "text": "Tất nhiên và ngẫu nhiên."
+        },
+        {
+          "key": "C",
+          "text": "Trực tiếp và gián tiếp."
+        },
+        {
+          "key": "D",
+          "text": "Chủ yếu và thứ yếu."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Chủ yếu và thứ yếu. Chỉ có thông tin vai trò trong hoàn cảnh hiện tại. Đúng trục này.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nổi bật hiện tại chưa đủ kết luận tính bản chất lâu dài."
+        },
+        {
+          "key": "B",
+          "explanation": "Chưa có thông tin về căn cứ tất nhiên hoặc ngẫu nhiên."
+        },
+        {
+          "key": "C",
+          "explanation": "Không có thông tin về trung gian tác động."
+        }
+      ],
+      "takeaway": "Không suy loại liên hệ ở trục khác từ một mức quan trọng hiện tại.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q154",
+      "kind": "quiz",
+      "prompt": "Theo nguồn, hạn chế nào của khoa học tự nhiên Tây Âu thế kỷ XVII–XVIII góp phần phổ biến quan điểm siêu hình?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Đã nắm đầy đủ mọi quan hệ nhưng từ chối dùng dữ liệu thực nghiệm."
+        },
+        {
+          "key": "B",
+          "text": "Chủ yếu sưu tập tài liệu và nghiên cứu từng bộ phận trong sự tách rời."
+        },
+        {
+          "key": "C",
+          "text": "Chủ yếu nghiên cứu liên ngành đến mức không còn đối tượng riêng biệt."
+        },
+        {
+          "key": "D",
+          "text": "Đã chứng minh mọi đối tượng có cùng một cách phát triển như nhau."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Chủ yếu sưu tập tài liệu và nghiên cứu từng bộ phận trong sự tách rời. Đây là hoàn cảnh và cách nghiên cứu được đoạn lịch sử nêu.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Không đúng tình trạng khoa học."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo đặc điểm tách rời thành hòa lẫn các ngành."
+        },
+        {
+          "key": "D",
+          "explanation": "Không có kết luận này trong đoạn."
+        }
+      ],
+      "takeaway": "Đặt quan điểm nghiên cứu trong điều kiện lịch sử hình thành của nó.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q155",
+      "kind": "quiz",
+      "prompt": "Hai tổ cùng nghiên cứu tác động của lịch học và môi trường gia đình đến việc tự học nhưng cho rằng hai lĩnh vực phải tách hẳn nên không trao đổi kết quả. Cần sửa ở đâu?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Xóa mọi chuyên đề để không còn phân biệt đối tượng nghiên cứu của mỗi tổ."
+        },
+        {
+          "key": "B",
+          "text": "Giữ tách hẳn vì chia chuyên đề đủ chứng minh các yếu tố không tác động qua lại."
+        },
+        {
+          "key": "C",
+          "text": "Chỉ ghép hai bản báo cáo mà không khảo sát liên hệ vì có đủ tài liệu là đã toàn diện."
+        },
+        {
+          "key": "D",
+          "text": "Kiểm tra các liên hệ thực thay vì lấy ranh giới chuyên đề làm ranh giới tuyệt đối của đối tượng."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Kiểm tra các liên hệ thực thay vì lấy ranh giới chuyên đề làm ranh giới tuyệt đối của đối tượng. Có khả năng tương tác. Không dựng ranh giới giả tạo giữa lĩnh vực nghiên cứu.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Phân biệt chuyên đề vẫn hữu ích, lỗi nằm ở tuyệt đối hóa ranh giới."
+        },
+        {
+          "key": "B",
+          "explanation": "Phân chia nghiên cứu không tạo cô lập khách quan."
+        },
+        {
+          "key": "C",
+          "explanation": "Cộng tài liệu không thay phân tích tác động."
+        }
+      ],
+      "takeaway": "Chuyên môn hóa cần đi cùng nghiên cứu liên hệ của chính đối tượng.",
+      "group": "F1",
+      "groupTitle": "Nguyên lý mối liên hệ phổ biến"
+    },
+    {
+      "id": "Q156",
+      "kind": "quiz",
+      "prompt": "Tiêu chí nào phân biệt phát triển với vận động nói chung?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vận động khiến đối tượng khác với chính nó ở bất kỳ phương diện nào."
+        },
+        {
+          "key": "B",
+          "text": "Vận động tạo ra trạng thái xuất hiện muộn hơn trạng thái đang xét."
+        },
+        {
+          "key": "C",
+          "text": "Vận động làm số lượng của đối tượng tăng so với thời điểm trước."
+        },
+        {
+          "key": "D",
+          "text": "Vận động theo khuynh hướng đi lên tới trình độ cao hơn."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Vận động theo khuynh hướng đi lên tới trình độ cao hơn.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Mọi khác biệt chưa đủ mang khuynh hướng đi lên."
+        },
+        {
+          "key": "B",
+          "explanation": "Muộn hơn về thời gian chưa đủ là phát triển."
+        },
+        {
+          "key": "C",
+          "explanation": "Tăng lượng chưa đủ chứng minh trình độ cao hơn."
+        }
+      ],
+      "takeaway": "Phải có căn cứ về trình độ cao hơn để xác định phát triển.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q157",
+      "kind": "quiz",
+      "prompt": "Đặc trưng nào phù hợp với tiến hóa theo đoạn nguồn trang 99?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Một tiêu chí đạo đức dùng để đánh giá mọi sự thay đổi theo mức tích cực đối với cá nhân."
+        },
+        {
+          "key": "B",
+          "text": "Một tên gọi cho mọi thay đổi xã hội dù diễn ra từ từ hay tạo bước chuyển đột ngột."
+        },
+        {
+          "key": "C",
+          "text": "Một quá trình lặp lại trạng thái ban đầu mà không thể tạo trình độ tổ chức cao hơn."
+        },
+        {
+          "key": "D",
+          "text": "Dạng phát triển diễn ra từ từ, thường biến đổi hình thức tồn tại xã hội từ đơn giản đến phức tạp."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Dạng phát triển diễn ra từ từ, thường biến đổi hình thức tồn tại xã hội từ đơn giản đến phức tạp.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm tiến hóa với cách đánh giá giá trị."
+        },
+        {
+          "key": "B",
+          "explanation": "Xóa đặc trưng cách thức từ từ."
+        },
+        {
+          "key": "C",
+          "explanation": "Nhầm tiến hóa với tuần hoàn không phát triển."
+        }
+      ],
+      "takeaway": "Tiến hóa nhấn mạnh cách thức phát triển từ từ, khác với việc đồng nhất mọi biến đổi với sự tiến bộ.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q158",
+      "kind": "quiz",
+      "prompt": "Theo nguồn, điều gì làm khái niệm tiến bộ có nét riêng so với cách nói phát triển nói chung?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nó coi mọi trạng thái xuất hiện sau là tốt hơn vì thời gian bảo đảm tính tích cực."
+        },
+        {
+          "key": "B",
+          "text": "Nó chỉ tính sự gia tăng số lượng mà không xét thực trạng xã hội được cải thiện ra sao."
+        },
+        {
+          "key": "C",
+          "text": "Nó nhấn mạnh giá trị tích cực, cụ thể hóa phát triển thành tiêu chí cải thiện xã hội."
+        },
+        {
+          "key": "D",
+          "text": "Nó loại bỏ việc so sánh với thực trạng ban đầu vì chỉ cần đánh giá ý định thay đổi."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Nó nhấn mạnh giá trị tích cực, cụ thể hóa phát triển thành tiêu chí cải thiện xã hội.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Nhầm thứ tự thời gian với tiêu chí giá trị."
+        },
+        {
+          "key": "B",
+          "explanation": "Bỏ giá trị và mức hoàn thiện."
+        },
+        {
+          "key": "D",
+          "explanation": "Tiến bộ cần đối chiếu mức cải thiện thực tế."
+        }
+      ],
+      "takeaway": "Đánh giá tiến bộ phải nêu tiêu chí và mốc so sánh.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q159",
+      "kind": "quiz",
+      "prompt": "Lập luận nào mang cách hiểu siêu hình về phát triển được giáo trình phê phán?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Quá trình có thể quanh co nhưng vẫn cần xét khuynh hướng đi lên của toàn bộ."
+        },
+        {
+          "key": "B",
+          "text": "Quá trình có bước nhảy và cái mới thay cái cũ từ những mâu thuẫn bên trong."
+        },
+        {
+          "key": "C",
+          "text": "Tác động qua lại và mâu thuẫn bên trong là cơ sở để giải thích vận động."
+        },
+        {
+          "key": "D",
+          "text": "Biến đổi chỉ là tăng giảm và lặp lại, nguồn biến đổi nằm ngoài đối tượng."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Cách hiểu siêu hình giản lược biến đổi thành tăng giảm về lượng hoặc lặp lại, đồng thời đặt nguồn gốc biến đổi ở ngoài đối tượng. Nó bỏ qua biến đổi về chất và động lực nội tại.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đây là cách hiểu đặc điểm phức tạp của phát triển."
+        },
+        {
+          "key": "B",
+          "explanation": "Cách nhìn này thừa nhận vận động và sự chuyển hóa về chất, phù hợp với quan điểm biện chứng."
+        },
+        {
+          "key": "C",
+          "explanation": "Phù hợp quan điểm biện chứng, không phải siêu hình."
+        }
+      ],
+      "takeaway": "Cần phân biệt phát triển về chất với sự lặp lại hoặc tăng giảm đơn thuần.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q160",
+      "kind": "quiz",
+      "prompt": "Quan hệ giữa mâu thuẫn bên trong và tác động qua lại được đoạn nguyên lý trình bày thế nào?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mâu thuẫn bên trong chỉ là biểu hiện; mọi nguồn gốc thực đều ở ngoài sự vật."
+        },
+        {
+          "key": "B",
+          "text": "Mâu thuẫn bên trong là nguồn gốc nên có thể bỏ mọi điều kiện và tác động bên ngoài."
+        },
+        {
+          "key": "C",
+          "text": "Mâu thuẫn bên trong là nguồn gốc; tác động qua lại cũng thuộc cơ sở của vận động phát triển."
+        },
+        {
+          "key": "D",
+          "text": "Tác động qua lại là cơ sở nên sự phát triển phụ thuộc trước hết vào ý thích chủ thể."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Mâu thuẫn bên trong là nguồn gốc. Tác động qua lại cũng thuộc cơ sở của vận động phát triển. Giữ nguồn gốc nội tại và không phủ nhận tác động qua lại.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Đảo nguồn gốc thành thuần bên ngoài."
+        },
+        {
+          "key": "B",
+          "explanation": "Từ vai trò nguồn gốc suy thành cô lập đối tượng."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm tác động khách quan với ý muốn chủ quan."
+        }
+      ],
+      "takeaway": "Ưu tiên nguồn gốc nội tại không đồng nghĩa phủ nhận điều kiện tác động.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q161",
+      "kind": "quiz",
+      "prompt": "Hình ảnh xoáy ốc trong đoạn nguyên lý dùng để làm rõ điều gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Có sự đoạn tuyệt cái cũ nên các giai đoạn không còn yếu tố nối tiếp nhau."
+        },
+        {
+          "key": "B",
+          "text": "Có sự kế thừa và dường như lặp lại nhưng trên cơ sở cao hơn."
+        },
+        {
+          "key": "C",
+          "text": "Có sự đi lên đều đặn nên mọi giai đoạn phải đạt kết quả tốt hơn ngay."
+        },
+        {
+          "key": "D",
+          "text": "Có sự quay về điểm xuất phát nên trình độ sau ngang trình độ trước."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Có sự kế thừa và dường như lặp lại nhưng trên cơ sở cao hơn. Không phải vòng tròn khép kín hay đường thẳng đều đặn.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Bỏ tính kế thừa."
+        },
+        {
+          "key": "C",
+          "explanation": "Bỏ quanh co và bước lùi tương đối."
+        },
+        {
+          "key": "D",
+          "explanation": "Nhầm xoáy ốc với vòng tròn lặp nguyên trạng."
+        }
+      ],
+      "takeaway": "Đọc khuynh hướng theo trình độ và liên hệ kế thừa giữa các giai đoạn.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q162",
+      "kind": "quiz",
+      "prompt": "Phát biểu nào diễn đạt đúng tính phổ biến của phát triển mà không đánh đồng nó với mọi vận động?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Phát triển có trong mọi lĩnh vực nên mỗi biến đổi riêng lẻ đều nâng trình độ đối tượng."
+        },
+        {
+          "key": "B",
+          "text": "Phát triển phổ biến trong tự nhiên, xã hội, tư duy nhưng chỉ khái quát vận động đi lên."
+        },
+        {
+          "key": "C",
+          "text": "Phát triển có trong tư duy nên sự vật chỉ phát triển khi được nhận thức đầy đủ."
+        },
+        {
+          "key": "D",
+          "text": "Phát triển có trong xã hội nên mọi quá trình tự nhiên chỉ lặp lại trạng thái cũ."
+        }
+      ],
+      "correctKey": "B",
+      "explanation": "Phát triển phổ biến trong tự nhiên, xã hội, tư duy nhưng chỉ khái quát vận động đi lên. Đủ phạm vi lĩnh vực và giữ giới hạn khái niệm.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Suy sai từ phạm vi phổ biến sang mọi biến đổi riêng lẻ."
+        },
+        {
+          "key": "C",
+          "explanation": "Đảo quan hệ khách quan và nhận thức."
+        },
+        {
+          "key": "D",
+          "explanation": "Thu hẹp phát triển vào xã hội."
+        }
+      ],
+      "takeaway": "Tính phổ biến và tiêu chí đi lên phải được giữ đồng thời.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q163",
+      "kind": "quiz",
+      "prompt": "Một người tăng số giờ lướt mạng từ hai lên bốn giờ nhưng kỹ năng và chất lượng sinh hoạt không cải thiện. Chỉ từ dữ kiện này có thể kết luận gì về phát triển?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Không có vận động vì đối tượng vẫn đang thực hiện cùng một hoạt động."
+        },
+        {
+          "key": "B",
+          "text": "Có phát triển vì số giờ đã tăng rõ rệt so với thời điểm xuất phát."
+        },
+        {
+          "key": "C",
+          "text": "Có tăng lượng nhưng chưa đủ căn cứ xác định trình độ cao hơn."
+        },
+        {
+          "key": "D",
+          "text": "Có phát triển vì thói quen sau xuất hiện muộn hơn thói quen trước."
+        }
+      ],
+      "correctKey": "C",
+      "explanation": "Có tăng lượng nhưng chưa đủ căn cứ xác định trình độ cao hơn. Giờ tăng. Biến đổi lượng. Thiếu dấu hiệu cao hơn. Chưa kết luận phát triển.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Cùng loại hoạt động vẫn có thay đổi."
+        },
+        {
+          "key": "B",
+          "explanation": "Lấy tăng lượng làm tiêu chí đủ."
+        },
+        {
+          "key": "D",
+          "explanation": "Lấy thứ tự thời gian thay khuynh hướng."
+        }
+      ],
+      "takeaway": "Xác định được thay đổi chưa đồng nghĩa chứng minh được phát triển.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q164",
+      "kind": "quiz",
+      "prompt": "Khi so sánh cách học cũ và mới, nhóm cần chứng minh có phát triển. Hồ sơ nào cung cấp căn cứ phù hợp hơn cả theo tiêu chí trình độ trong điều kiện xác định?",
+      "options": [
+        {
+          "key": "A",
+          "text": "So hai tên phương pháp rồi chọn tên nghe hiện đại hơn làm dấu hiệu trình độ."
+        },
+        {
+          "key": "B",
+          "text": "Đếm số lần đổi cách học rồi dùng số lần thay đổi làm thước đo phát triển."
+        },
+        {
+          "key": "C",
+          "text": "Gom nhận xét ở nhiều năm và nhiều lớp mà không ghi hoàn cảnh thu thập."
+        },
+        {
+          "key": "D",
+          "text": "Theo dõi năng lực qua các giai đoạn, ghi rõ điều kiện học cụ thể."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Theo dõi năng lực qua các giai đoạn, ghi rõ điều kiện học cụ thể. Có mốc thời gian, điều kiện và tiêu chí năng lực. Có căn cứ xét khuynh hướng.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tên gọi không phản ánh quá trình trong điều kiện cụ thể."
+        },
+        {
+          "key": "B",
+          "explanation": "Tần suất đổi không chứng minh trình độ tăng."
+        },
+        {
+          "key": "C",
+          "explanation": "Thiếu tọa độ so sánh làm kết luận thiếu căn cứ."
+        }
+      ],
+      "takeaway": "So sánh phát triển cần điều kiện và quá trình có thể đối chiếu.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    },
+    {
+      "id": "Q165",
+      "kind": "quiz",
+      "prompt": "Một nhóm muốn nâng năng lực nhưng chỉ tuyên bố quyết tâm, không giải quyết những bất cập nội tại đã được xác định. Theo tính khách quan của phát triển, cần làm gì?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tăng mức cam kết để ý muốn mạnh hơn trở thành nguồn trực tiếp của phát triển."
+        },
+        {
+          "key": "B",
+          "text": "Chờ nhóm khác đổi trước vì nguồn phát triển của nhóm nằm ở bên ngoài."
+        },
+        {
+          "key": "C",
+          "text": "Ngừng mọi can thiệp vì khách quan nghĩa là con người không có vai trò trong quá trình."
+        },
+        {
+          "key": "D",
+          "text": "Xử lý bất cập trên cơ sở điều kiện thực tế thay cho chỉ tuyên bố mong muốn."
+        }
+      ],
+      "correctKey": "D",
+      "explanation": "Xử lý bất cập trên cơ sở điều kiện thực tế thay cho chỉ tuyên bố mong muốn. Ý muốn chưa xử lý nguồn gốc bên trong. Phải hành động trên cơ sở khách quan.",
+      "distractors": [
+        {
+          "key": "A",
+          "explanation": "Tuyệt đối hóa ý chí."
+        },
+        {
+          "key": "B",
+          "explanation": "Chuyển nguồn gốc ra ngoài đối tượng."
+        },
+        {
+          "key": "C",
+          "explanation": "Biến khách quan thành thụ động."
+        }
+      ],
+      "takeaway": "Mong muốn có giá trị khi thành hoạt động phù hợp cơ sở khách quan.",
+      "group": "F2",
+      "groupTitle": "Nguyên lý sự phát triển"
+    }
+  ]
+}
