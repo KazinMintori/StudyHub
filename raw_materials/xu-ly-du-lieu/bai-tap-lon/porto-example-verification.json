@@ -38,16 +38,16 @@
       "sha256": "638262e900290fa9f9436b94bc982f87d4a24054285501062f61d4064bf56bb5"
     },
     "ke-hoach-doc-lap.csv": {
-      "bytes": 5489,
-      "sha256": "46762cbe77a279f83b0a67020f8294c39ee5bcbebef98b7102829825efead743"
+      "bytes": 5464,
+      "sha256": "7a37be7216c3908e0071be91410c6fed63012930ea00f23fa93a74c5875f3ad6"
     },
     "kpi-porto.csv": {
-      "bytes": 2818,
-      "sha256": "ceeaace7a85e761f88acd9ba42a903898429d9d1a07b9c86a07da16b62ffff23"
+      "bytes": 2792,
+      "sha256": "396d3f6f3a0e752dddab5505894a3fabb0deaf9f780b2d616c813d8a85fc686f"
     },
     "nguon-porto.json": {
-      "bytes": 3699,
-      "sha256": "a3b2b6d25dba1bf128765a52eab5940b2dc086b4966143f6010dcc21a97dd109"
+      "bytes": 3606,
+      "sha256": "7eacccb7f191727ddd1530db5dd69469a7d4b772485e8a6b49beaf6956bf9bea"
     }
   },
   "checks": {
@@ -162,5 +162,6 @@
       "sha256": "cbb12d5758c28e8a8ec64453016c0fcba461e79ff0da51608890a20eaf16fabf",
       "bytes": 12622
     }
-  }
+  },
+  "artifactRepresentation": "Canonical Git blobs; text artifacts use LF line endings"
 }
