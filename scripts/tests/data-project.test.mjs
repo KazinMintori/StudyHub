@@ -25,12 +25,17 @@ test('City roster preserves every source city, exact path, four dates and monthl
   assert(cities.every(city=>city.snapshots.length===4))
 })
 
-test('Project brief includes required deliverables while worked example remains reserved', async () => {
+test('Project brief retains requirements and the practice page has an independent runnable plan', async () => {
   const brief=await readFile('docs/xu-ly-du-lieu/bai-tap-lon/index.md','utf8')
   const practice=await readFile('docs/xu-ly-du-lieu/bai-tap-lon/thuc-hanh.md','utf8')
   for(const token of ['20/09/2026','22/11/2026','5–8','100','10 trang','50 MB','AI_USAGE.md','requirements.txt','qa_report.csv','neighbourhood_cleansed','accuracy','F1','<ProjectCities />','5000000','3000','seed: 42'])assert(brief.includes(token),token)
-  assert(practice.includes('sẽ được bổ sung'))
-  assert(!practice.includes('```python'))
+  assert(practice.includes('Dự án mẫu: Phân tích Porto'))
+  assert(practice.includes('<ProjectPlan />'))
+  assert(practice.includes('airbnb-porto.zip'))
+  assert(practice.includes('--skip-llm'))
+  assert(brief.includes('<ProjectWorkflow />'))
+  assert(brief.includes('<ProjectReadingControls />'))
+  assert.equal((brief.match(/<details class="project-brief-detail" id="yeu-cau-/g)||[]).length,15)
   assert(!/\|.*\|.*\|.*\|.*\|/.test(brief),'Keep tables narrow for mobile')
 })
 
@@ -41,7 +46,7 @@ test('Assigned input guidance uses fictional examples and preserves source disti
   assert.equal(comparison.claims.find(c=>c.id==='R12').classification,'unsupported_mandatory_outcome')
   assert(brief.includes('không quy định LLM bắt buộc thắng baseline'))
   assert(brief.includes('Python không tự đọc mọi tệp `.env`'))
-  const assigned=brief.slice(brief.indexOf('## 15.'),brief.indexOf('## Tài liệu tham khảo'))
+  const assigned=brief.slice(brief.indexOf('### 15.'),brief.indexOf('## Tài liệu tham khảo'))
   assert(assigned.includes('LST-A')&&assigned.includes('RV-A')&&assigned.includes('Vùng-Mẫu-A'))
   assert(!assigned.includes('docs.google.com'))
   assert(assigned.includes('mẫu LLM')&&assigned.includes('mẫu nhãn tay'))

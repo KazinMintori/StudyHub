@@ -4,13 +4,16 @@ description: "Giải thích đầy đủ yêu cầu, dữ liệu, sản phẩm b
 course: xu-ly-du-lieu
 section: project
 pageClass: data-project-brief
-outline: [2, 3]
+outline: [2, 2]
 prev: false
 next: false
 ---
 
 <script setup>
 import ProjectSections from '../../../src/features/course-project/components/ProjectSections.vue'
+import ProjectOverview from '../../../src/features/course-project/components/ProjectOverview.vue'
+import ProjectWorkflow from '../../../src/features/course-project/components/ProjectWorkflow.vue'
+import ProjectReadingControls from '../../../src/features/course-project/components/ProjectReadingControls.vue'
 import ProjectCities from '../../../src/features/course-project/components/ProjectCities.vue'
 </script>
 
@@ -18,17 +21,42 @@ import ProjectCities from '../../../src/features/course-project/components/Proje
 
 # Đề bài tập lớn: Phân tích thị trường Airbnb
 
-Một bên đặt hàng, chẳng hạn chính quyền thành phố hoặc hiệp hội du lịch, cần hiểu thị trường cho thuê chỗ ở tại một thành phố. Họ muốn biết giá cả khác nhau giữa các khu vực ra sao, thị trường thay đổi thế nào qua các lần thu thập dữ liệu, và khách đang khen hoặc phàn nàn về điều gì. Nhóm của bạn sẽ xây dựng một chương trình để đi từ các tệp dữ liệu đến những câu trả lời có bằng chứng.
+Xây dựng một chương trình đi từ dữ liệu của thành phố được giao đến kết quả có thể giải thích và chạy lại. Hai sản phẩm chính là kho mã nguồn và báo cáo PDF.
 
-Sản phẩm gồm mã nguồn chạy lại được và một báo cáo giải thích quá trình xử lý, kết quả, cùng giới hạn của các kết luận. Người khác phải có thể làm theo hướng dẫn, chạy chương trình và tạo lại các tệp kết quả. Việc chỉ lưu sẵn hình hoặc output trong notebook chưa đáp ứng yêu cầu đó.
+<ProjectOverview />
 
-Đây là bài tập lớn Inside Airbnb của học phần Lập trình xử lý dữ liệu, mã UET.DSE2049, học kì 1 năm học 2026–2027, thuộc Viện Trí tuệ nhân tạo, Trường Đại học Công nghệ, ĐHQGHN. Bài tập lớn và vấn đáp chiếm **60% điểm học phần**. Các mốc, danh sách dữ liệu và điều kiện bàn giao trong trang này được đối chiếu với [đề bài chính thức](https://courses.iaidev.com/programming-for-data-processing/2627-1/projects/project_airbnb.html).
+## Kiến trúc một quy trình hoàn chỉnh
 
-Ngoài đề chung, nhóm còn có thể được giao một bảng hướng dẫn kèm danh sách mã dữ liệu và mẫu đánh giá. [Mục 15](#doi-chieu-ghi-chu) giải thích cách đọc các phần này và dùng chúng để lấy đúng dữ liệu của nhóm. Các bảng minh họa trong mục đó đều dùng dữ liệu giả định.
+<ProjectWorkflow />
 
-Nếu đang chuẩn bị tải dữ liệu, có thể đến ngay phần [phân biệt bảy loại tệp và cách nối các bảng](#cac-tep-du-lieu), rồi quay lại các bước QA và KPI sau khi hiểu đầu vào.
+Dữ liệu thô được giữ nguyên. Mỗi kết quả phải truy ngược được tới bảng, snapshot và quy tắc đã áp dụng. Đây là một cách tổ chức để hình dung công việc, không phải yêu cầu dùng nền tảng đám mây.
 
-## 1. Cần hoàn thành những việc gì?
+## Tiêu chí chấm và bằng chứng cần chuẩn bị
+
+<ProjectOverview variant="rubric" />
+
+Bảng điểm được cung cấp thêm nêu ít nhất 5 hình và có điểm nâng cao. Trước hết, cần hoàn thành phần bắt buộc: Dữ liệu, QA, KPI, LLM, hình, báo cáo và khả năng chạy lại.
+
+::: details Những điểm cần đối chiếu giữa bảng điểm và đề công khai
+
+Bảng điểm trong ảnh nhắc ba snapshot gần nhất và phần trình bày. [Đề công khai](https://courses.iaidev.com/programming-for-data-processing/2627-1/projects/project_airbnb.html) yêu cầu bốn snapshot đã chỉ định và nói buổi vấn đáp không có phần thuyết trình. Giữ đủ bốn mốc, chuẩn bị ít nhất năm hình và xác nhận với giảng viên cách áp dụng bảng điểm cho lớp mình. Không tự bỏ một mốc hoặc tự đổi hình thức thi.
+
+Điểm cơ bản trong ảnh cộng thành 100, phần thưởng tối đa 20. Đề công khai vẫn nêu bốn nhóm tiêu chí, thang 10 và trọng số chi tiết công bố dần. Không tự chuyển bảng điểm trong ảnh thành trọng số chính thức của toàn học phần.
+
+Phần nâng cao trong ảnh là tùy chọn, gồm dự báo, phát hiện bất thường, phân cụm hoặc kiểm thử dữ liệu nâng cao. Chỉ làm khi có câu hỏi rõ, cách đánh giá phù hợp và bản bắt buộc đã chạy ổn. MAE, MAPE, F1 hoặc backtest phải phù hợp bài toán, không phải danh sách cần báo cáo đồng loạt.
+
+:::
+
+## Tra cứu yêu cầu và cách thực hiện
+
+Mỗi mục dưới đây nêu yêu cầu cùng phần giải thích. Mở mục đang cần dùng, hoặc mở tất cả để đọc liền và tìm kiếm trong trang.
+
+<ProjectReadingControls />
+
+<details class="project-brief-detail" id="yeu-cau-1">
+<summary>01. Sản phẩm và bước bắt đầu</summary>
+
+### 1. Cần hoàn thành những việc gì?
 
 Nhóm cần hoàn thành các việc sau như những phần liên kết của cùng một sản phẩm:
 
@@ -43,7 +71,7 @@ Nhóm cần hoàn thành các việc sau như những phần liên kết của c
 
 Phần dưới giải thích từng việc, các tệp cần có và những quyết định nhóm phải tự đưa ra. Các ví dụ giúp làm rõ yêu cầu, không thay cho một phương án bắt buộc áp dụng với mọi thành phố.
 
-### Nếu hôm nay mới bắt đầu, nên làm việc gì trước?
+#### Nếu hôm nay mới bắt đầu, nên làm việc gì trước?
 
 Trước tiên, ghi lại thành phố và bốn snapshot được giao, xác nhận các thông báo bổ sung của giảng viên, rồi tạo repo và môi trường làm việc. Tiếp đó, thử tải và mở một bộ dữ liệu nhỏ để biết các tệp có cột gì và một hàng có ý nghĩa gì. Mục tiêu của buổi đầu là đọc được dữ liệu và hiểu đầu vào, chưa cần viết ngay toàn bộ chương trình.
 
@@ -61,7 +89,12 @@ Khi một bước chạy được, lưu kết quả và nối nó với bước 
 
 Một bước hoàn thành khi kết quả đáp ứng yêu cầu. Chẳng hạn, tải được một tệp nhưng nhầm ngày snapshot thì đầu vào vẫn sai, dù chương trình không báo lỗi. Phần thực hành sau sẽ minh họa một cách xây toàn bộ quy trình, còn tại đây nhóm cần hiểu công việc và cách tự xác nhận kết quả của từng bước.
 
-## 2. Những từ cần hiểu trước khi bắt đầu
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-2">
+<summary>02. Thuật ngữ cần hiểu</summary>
+
+### 2. Những từ cần hiểu trước khi bắt đầu
 
 | Thuật ngữ | Hiểu trong bài tập này |
 | --- | --- |
@@ -79,9 +112,14 @@ Một bước hoàn thành khi kết quả đáp ứng yêu cầu. Chẳng hạn
 | Cache, hay kết quả lưu lại | Kết quả xử lý đã ghi ra tệp để tái sử dụng. Khi dùng lại kết quả LLM, cần xét cả nội dung đánh giá, mô hình và prompt, không chỉ mã review. |
 | Tái lập kết quả | Chạy lại trên cùng đầu vào và môi trường đã ghi nhận để tạo lại các kết quả cần đối chiếu. Với LLM, còn phải lưu thông tin mô hình, prompt và tham số liên quan. |
 
-## 3. Nhóm, người sử dụng báo cáo và kho mã
+</details>
 
-### 3.1. Nhận thành phố và xác định mục tiêu phân tích
+<details class="project-brief-detail" id="yeu-cau-3">
+<summary>03. Nhóm, mục tiêu và GitHub</summary>
+
+### 3. Nhóm, người sử dụng báo cáo và kho mã
+
+#### 3.1. Nhận thành phố và xác định mục tiêu phân tích
 
 Mỗi nhóm có 4–5 sinh viên và được giao một thành phố riêng, không trùng nhóm khác. Phân công chính thức được đăng trên Canvas Portal từ đầu kỳ. Nhóm cần kiểm tra đúng thành phố của mình trước khi tải dữ liệu.
 
@@ -91,7 +129,7 @@ Chẳng hạn, người muốn hiểu sự phân bố chỗ ở giữa các khu 
 
 Mỗi thành viên phải hiểu mã nguồn, số liệu và các quyết định của cả nhóm. Chia việc giúp tổ chức quá trình làm, nhưng không giới hạn trách nhiệm giải thích vào phần một người đã trực tiếp viết.
 
-### 3.2. Tạo và sử dụng GitHub repo
+#### 3.2. Tạo và sử dụng GitHub repo
 
 Tạo một kho mã GitHub riêng tư và mời đủ thành viên cùng tài khoản giảng viên. Tên gợi ý là `2627-LTXLDL-Airbnb-<TenNhom>`. Điền liên kết repo vào bảng tính được yêu cầu trong môn học.
 
@@ -99,7 +137,12 @@ Git lưu lịch sử thay đổi của các tệp. Một commit là một mốc 
 
 Trước mỗi commit, xem lại danh sách tệp được đưa vào. `data/raw/`, `.venv/`, `.env` và mọi tệp chứa khóa API phải nằm trong `.gitignore`. Tệp `.gitignore` chỉ hướng dẫn Git bỏ qua những tệp chưa được theo dõi. Nếu một bí mật đã bị commit, thêm tên vào `.gitignore` không xóa được bí mật khỏi lịch sử.
 
-## 4. Các mốc nộp và cách ghi nhận bản cuối
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-4">
+<summary>04. Mốc nộp và tag cuối</summary>
+
+### 4. Các mốc nộp và cách ghi nhận bản cuối
 
 Đề quy định hạn lúc **23:59 Chủ nhật**, xét theo thời gian commit trên GitHub. Giữ nguyên cách xác định hạn của môn và đối chiếu thông báo chính thức nếu có thay đổi lịch.
 
@@ -118,9 +161,14 @@ git push origin final
 
 Tên tag không thay cho việc kiểm tra nội dung bản nộp. Nhóm cần bảo đảm tag chỉ đến đúng commit, các tệp cần bàn giao đã có trên GitHub và mã commit ghi trong PDF trùng với bản đó. Không tự di chuyển một tag đã nộp nếu chưa có hướng dẫn của giảng viên.
 
-## 5. Dữ liệu phải dùng và cách hiểu bốn mốc chụp
+</details>
 
-### 5.1. Bốn loại tệp
+<details class="project-brief-detail" id="yeu-cau-5">
+<summary>05. Tệp dữ liệu, khóa nối và snapshot</summary>
+
+### 5. Dữ liệu phải dùng và cách hiểu bốn mốc chụp
+
+#### 5.1. Bốn loại tệp
 
 Dữ liệu đến từ [Inside Airbnb](https://insideairbnb.com/get-the-data/), được đề ghi giấy phép CC BY 4.0. Báo cáo cần ghi nguồn và ngày của từng snapshot. Nhóm phải tự khảo sát cấu trúc, kiểu dữ liệu và các điểm bất thường của từng bản chụp, rồi ghi nhận trong QA.
 
@@ -135,7 +183,7 @@ Dữ liệu đến từ [Inside Airbnb](https://insideairbnb.com/get-the-data/),
 
 CSV là tệp văn bản biểu diễn bảng, thường dùng dấu phẩy để ngăn cột. Trước khi đọc, cần xem hàng tiêu đề và quy tắc của tệp. Không suy ý nghĩa một cột chỉ từ việc chương trình đọc được nó thành số hay chuỗi.
 
-### Trên trang Inside Airbnb có bảy tệp, cần phân biệt thế nào? {#cac-tep-du-lieu}
+#### Trên trang Inside Airbnb có bảy tệp, cần phân biệt thế nào? {#cac-tep-du-lieu}
 
 Tại [Get the Data](https://insideairbnb.com/get-the-data/), mỗi khối thành phố và ngày chụp có các liên kết tải. Bốn loại tệp trong bảng trên là đầu vào được đề nêu. Ngoài chúng, trang còn có ba tệp tổng hợp để hỗ trợ khám phá và trực quan hóa. Không chọn tệp chỉ theo phần tên giống nhau.
 
@@ -155,7 +203,7 @@ Tại [Get the Data](https://insideairbnb.com/get-the-data/), mỗi khối thàn
 
 Các mô tả dưới đây được đối chiếu [Data Dictionary của Inside Airbnb](https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit) và đọc thử cấu trúc các tệp Santiago ngày 23/09/2026. Đây là một lần kiểm tra cấu trúc, không thay đổi bốn snapshot bắt buộc của đề. Các cột có thể thay đổi theo phiên bản, nên script phải kiểm tra lại tệp nhóm được giao.
 
-#### `listings.csv.gz`: Thông tin một chỗ ở trong một snapshot
+##### `listings.csv.gz`: Thông tin một chỗ ở trong một snapshot
 
 Mỗi hàng mô tả một listing được ghi nhận trong lần thu thập đó. Các nhóm cột có thể gặp gồm:
 
@@ -172,7 +220,7 @@ Một listing là một mục đăng, có thể cho thuê cả chỗ ở hoặc 
 
 Từ điển nguồn mô tả giá theo tiền tệ địa phương. Ký hiệu tiền trong chuỗi xuất ra không đủ để kết luận đó là USD. Cần xác nhận loại tiền của thành phố, cách đọc giá và ý nghĩa các trường giá trong đúng snapshot.
 
-#### `calendar.csv.gz`: Một chỗ ở tại một ngày trong lịch
+##### `calendar.csv.gz`: Một chỗ ở tại một ngày trong lịch
 
 Một hàng thường gắn với cặp `listing_id` và `date`. Tệp Santiago đã kiểm tra có các cột `listing_id`, `date`, `available`, `minimum_nights`, `maximum_nights`. Nó **không có cột `price`**. Vì vậy, không được viết chương trình mặc định mọi bản calendar đều có giá theo ngày chỉ vì ghi chú hoặc một snapshot cũ có nhắc đến.
 
@@ -182,7 +230,7 @@ Một hàng thường gắn với cặp `listing_id` và `date`. Tệp Santiago 
 
 Calendar có thể lớn vì lặp lại nhiều ngày cho nhiều listing. Hãy đọc thử một phần, chỉ chọn cột cần dùng hoặc xử lý theo khối nếu bộ nhớ không đủ. Tệp nén nhỏ trên đĩa không chứng minh DataFrame sau đọc sẽ nhỏ. Không cần nạp cả bốn snapshot vào RAM cùng lúc mới có thể phân tích.
 
-#### `reviews.csv.gz`: Một đánh giá văn bản của khách
+##### `reviews.csv.gz`: Một đánh giá văn bản của khách
 
 Các cột đã kiểm tra là `listing_id`, `id`, `date`, `reviewer_id`, `reviewer_name`, `comments`. Trong bảng này, `id` là mã review, không phải mã listing. `listing_id` mới là trường dùng để nối sang `listings.id`.
 
@@ -190,7 +238,7 @@ Các cột đã kiểm tra là `listing_id`, `id`, `date`, `reviewer_id`, `revie
 
 Không dùng `reviewer_name` để đoán cảm xúc hoặc ngôn ngữ. Khi tạo mẫu cho LLM và gán nhãn tay, giữ mã review cùng nội dung cần phân tích. Các trường nhận diện cá nhân không phục vụ nhiệm vụ cần được xem xét theo chính sách dữ liệu trước khi gửi ra dịch vụ ngoài.
 
-#### `listings.csv`, `reviews.csv` và `neighbourhoods.csv`: Các bảng tổng hợp
+##### `listings.csv`, `reviews.csv` và `neighbourhoods.csv`: Các bảng tổng hợp
 
 `listings.csv` đã kiểm tra có những cột thuận tiện cho biểu đồ như mã listing, vị trí, loại phòng, giá và một số thống kê review/lịch. Nó không có đầy đủ các trường của `listings.csv.gz`. Cần quay về bản chi tiết khi thiết kế QA hoặc KPI đòi những cột chưa có trong bản tổng hợp.
 
@@ -198,7 +246,7 @@ Không dùng `reviewer_name` để đoán cảm xúc hoặc ngôn ngữ. Khi t�
 
 `neighbourhoods.csv` đã kiểm tra có `neighbourhood_group` và `neighbourhood`. Bảng này giúp xem các tên khu vực, nhưng không chứa các chuỗi tọa độ tạo nên đường biên. Muốn vẽ hình khu vực phải đọc tệp GeoJSON.
 
-#### `neighbourhoods.geojson`: Đường bao để vẽ khu vực trên bản đồ
+##### `neighbourhoods.geojson`: Đường bao để vẽ khu vực trên bản đồ
 
 GeoJSON là JSON có cấu trúc mô tả đối tượng địa lý. Tệp được kiểm tra có kiểu ngoài cùng là `FeatureCollection`, nghĩa là một tập các đối tượng. Danh sách `features` chứa các `Feature`. Mỗi Feature có hai phần cần phân biệt:
 
@@ -213,7 +261,7 @@ Trong GeoJSON theo [RFC 7946](https://datatracker.ietf.org/doc/html/rfc7946), c�
 
 Inside Airbnb cũng nêu rằng vị trí listing được làm mờ để bảo vệ địa chỉ thật. Vì vậy, không diễn giải các điểm đó như tọa độ cửa nhà chính xác, đặc biệt khi kết luận về listing ở sát ranh giới một khu vực.
 
-#### Nối các tệp theo đối tượng, không theo vị trí hàng
+##### Nối các tệp theo đối tượng, không theo vị trí hàng
 
 | Mục đích | Khóa và phạm vi cần kiểm tra |
 | --- | --- |
@@ -224,7 +272,7 @@ Inside Airbnb cũng nêu rằng vị trí listing được làm mờ để bảo
 
 Không nối đồng thời toàn bộ lịch ngày với toàn bộ review chỉ bằng `listing_id` rồi đếm hàng kết quả. Mỗi ngày có thể bị lặp với mỗi review của cùng listing. Hãy tổng hợp từng bảng về đúng đơn vị cần phân tích trước khi ghép kết quả.
 
-#### Đọc tệp nén và lưu từng snapshot
+##### Đọc tệp nén và lưu từng snapshot
 
 Có thể đọc trực tiếp `.csv.gz` bằng `gzip` của Python hoặc `read_csv` có xử lý nén. Không cần giải nén ra một tệp CSV trung gian chỉ để đọc. Khi dùng Python chuẩn, mở nội dung giải nén ở chế độ văn bản và đưa vào `csv.reader` hoặc `csv.DictReader` để xử lý đúng dấu phẩy và dấu ngoặc kép trong văn bản.
 
@@ -240,7 +288,7 @@ Trước khi nối hoặc tổng hợp, cần xác định một hàng của t�
 
 Trạng thái không còn trống trong lịch không tự chứng minh một giao dịch đặt phòng đã xảy ra. Chủ nhà cũng có thể khóa lịch vì lý do khác. Nhóm cần đọc mô tả dữ liệu trước khi gọi một tỷ lệ từ lịch là tỷ lệ đặt phòng thực tế.
 
-### 5.2. Dùng đúng thành phố và đủ bốn mốc
+#### 5.2. Dùng đúng thành phố và đủ bốn mốc
 
 Mỗi thành phố có bốn ngày chụp bắt buộc bên dưới, cách nhau khoảng một quý. Nhóm không tự thay bằng bốn ngày khác cho tiện tải. Với thành phố được đánh dấu có dữ liệu hằng tháng, có thể bổ sung các snapshot khác, nhưng vẫn phải có đủ bốn mốc bắt buộc.
 
@@ -254,7 +302,7 @@ Mã định danh cũng khác với index của DataFrame. `id` hoặc `listing_i
 
 Không coi ngày chụp là ngày phát sinh mọi review hoặc mọi dòng lịch bên trong tệp. Cũng không nối bốn snapshot rồi tuyên bố đã quan sát đầy đủ mọi ngày giữa các mốc. Phạm vi thời gian phải được xác định từ ý nghĩa của các cột và việc thu thập thực tế.
 
-### 5.3. Dựng địa chỉ tải bằng cấu hình
+#### 5.3. Dựng địa chỉ tải bằng cấu hình
 
 Địa chỉ có phần chung là máy chủ `https://data.insideairbnb.com`. Phần còn lại gồm quốc gia, vùng, thành phố, ngày snapshot và tên tệp. Hai dạng đường dẫn là:
 
@@ -269,7 +317,12 @@ Script tải phải tải đủ dữ liệu cho bốn mốc và kiểm tra tệp
 
 Giữ dữ liệu tải nguyên trạng trong `data/raw/` để còn đối chiếu khi sửa quy tắc. Không commit thư mục này. Dữ liệu đã xử lý nằm ở `data/processed/` và chỉ commit khi đáp ứng giới hạn dưới 50 MB được đề nêu. Nếu dữ liệu xử lý lớn, chương trình và hướng dẫn phải cho phép tạo lại.
 
-## 6. “Chạy bằng một lệnh” nghĩa là gì?
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-6">
+<summary>06. Một lệnh chạy toàn bộ quy trình</summary>
+
+### 6. “Chạy bằng một lệnh” nghĩa là gì?
 
 Sau khi cài môi trường theo `README.md`, người sử dụng chạy một lệnh để chương trình thực hiện các bước và ghi kết quả. Đề minh họa cách gọi sau:
 
@@ -296,7 +349,7 @@ Thứ tự chi tiết có thể khác theo thiết kế của nhóm. Điều c�
 
 Thành phố, snapshot và các tham số phải đọc từ cấu hình, không được ghi cố định trong nhiều chỗ của mã. Khi người chấm đổi một snapshot trong cấu hình, chương trình phải dùng giá trị mới thay vì tiếp tục đọc tệp hoặc nhãn ngày cũ.
 
-### Việc người chấm sẽ thực hiện
+#### Việc người chấm sẽ thực hiện
 
 Giảng viên dùng một bộ test chung cho mọi nhóm. Họ dựng môi trường theo README, chạy một lệnh với snapshot do họ chọn rồi kiểm tra các tệp đầu ra. Snapshot đó có thể là một mốc nhóm chưa xử lý trước, chỉ thay trong cấu hình.
 
@@ -308,11 +361,16 @@ Kết quả lưu lại và tùy chọn `--skip-llm` có thể giúp phát triể
 
 Chọn dùng cache mặc định hay chỉ dùng khi có tùy chọn là quyết định thiết kế cần ghi trong README. `--skip-llm` nghĩa là không thực hiện bước gọi LLM trong lần chạy đó, không tự tạo ra kết quả mới. Nếu các bước sau cần kết quả chưa có trong cache, phải báo rõ điều còn thiếu thay vì âm thầm xuất chỉ số giả hoặc coi tập kết quả rỗng là đã phân tích xong.
 
-## 7. QA: Phải phát hiện và xử lý vấn đề dữ liệu ra sao?
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-7">
+<summary>07. Thiết kế QA và ghi tác động</summary>
+
+### 7. QA: Phải phát hiện và xử lý vấn đề dữ liệu ra sao?
 
 QA không chỉ là gọi `dropna()` rồi lưu một bảng mới. Nhóm tự đề xuất các quy tắc phù hợp với dữ liệu và mục tiêu phân tích. Mỗi quy tắc phải có tên, điều kiện phát hiện, lý do và hành động xử lý. Đề ưu tiên gắn cờ để giữ lại dấu vết trước khi quyết định sửa hoặc loại bỏ.
 
-### 7.1. Những dạng vấn đề tối thiểu cần xét
+#### 7.1. Những dạng vấn đề tối thiểu cần xét
 
 - Giá trị thiếu: Phân biệt thiếu dữ liệu với số 0 có ý nghĩa. Nêu cột nào thiếu, thiếu bao nhiêu và việc thiếu ảnh hưởng chỉ số nào.
 - Ngoại lai: Một giá trị rất lớn hoặc rất nhỏ cần được xem xét theo đơn vị và ngữ cảnh. Ngoại lai không tự động là lỗi phải xóa.
@@ -323,7 +381,7 @@ QA không chỉ là gọi `dropna()` rồi lưu một bảng mới. Nhóm tự �
 
 Khi nói một cột đã “sạch”, nhóm cần chỉ ra điều kiện đã kiểm tra. Một chương trình chạy không báo lỗi vẫn có thể dùng sai đơn vị tiền tệ, nối sai khóa hoặc lấy sai mẫu số.
 
-### 7.2. Viết một quy tắc để người khác hiểu được
+#### 7.2. Viết một quy tắc để người khác hiểu được
 
 Với mỗi quy tắc, giải thích đủ bốn ý:
 
@@ -334,7 +392,7 @@ Với mỗi quy tắc, giải thích đủ bốn ý:
 
 Nếu đề xuất ngưỡng giá, nhóm phải nêu tiền tệ và cơ sở chọn ngưỡng. Không lấy một con số ở cấu hình minh họa làm chuẩn chung cho mọi thành phố. Nếu loại một nhóm hàng, cần giải thích những hàng đó sẽ không còn tham gia chỉ số nào.
 
-### 7.3. Ghi tác động vào báo cáo QA
+#### 7.3. Ghi tác động vào báo cáo QA
 
 Tệp bắt buộc là `reports/qa_report.csv`. Tệp này phải ghi tác động của QA, gồm số dòng và KPI trước, sau xử lý. Để đọc được các con số, nên kèm tên quy tắc, snapshot, đối tượng bị tác động và mô tả hành động.
 
@@ -348,13 +406,18 @@ Nếu một KPI chưa xác định được trên dữ liệu trước xử lý,
 
 Giữ mối liên hệ giữa dữ liệu thô, cờ QA và dữ liệu dùng tính KPI để có thể giải thích một giá trị trong báo cáo bắt nguồn từ đâu. Nếu các quy tắc chồng lấn, cần nói rõ số hàng theo từng quy tắc không nhất thiết cộng lại thành tổng số hàng bị loại.
 
-## 8. KPI: Chọn và tính 5–8 chỉ số có ý nghĩa
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-8">
+<summary>08. Chọn và định nghĩa KPI</summary>
+
+### 8. KPI: Chọn và tính 5–8 chỉ số có ý nghĩa
 
 Nhóm phải có 5–8 KPI gắn với bên sử dụng báo cáo. Đề không cho một danh sách chỉ số cố định để sao chép. Mỗi chỉ số phải ghi tên, mục tiêu, công thức, đơn vị và được tính sau QA. Với giá hoặc đại lượng tiền tệ, phải ghi rõ loại tiền.
 
 Trước khi viết công thức, xác định chỉ số nói về đối tượng nào. Trung bình trên listing, trên host, trên review và trên ngày có thể cho kết quả khác nhau. Một chỉ số có mẫu số chưa được giải thích sẽ khó diễn giải, dù phép tính không lỗi.
 
-### Các góc độ bắt buộc phải có
+#### Các góc độ bắt buộc phải có
 
 - Theo khu vực: Có KPI phân tích theo `neighbourhood_cleansed`. Khi gắn với GeoJSON, cần kiểm tra các mã hoặc tên khu vực có khớp giữa hai phía hay không.
 - Theo thời gian: Có KPI phản ánh sự thay đổi hoặc khác biệt theo thời gian. Phải phân biệt so sánh các snapshot với phân tích lịch sử sự kiện bên trong một snapshot.
@@ -366,9 +429,14 @@ Tệp KPI được xuất ở `data/processed/kpi_*.csv`. Dấu `*` chỉ phần
 
 Nếu dùng tỷ lệ, ghi rõ tử số và mẫu số. Nếu chỉ phân tích một mẫu review, không tự gọi tỷ lệ trong mẫu là tỷ lệ đã đo trên toàn bộ khách hoặc toàn bộ thành phố. Khi các mốc có phạm vi thu thập khác nhau, cần giải thích khả năng so sánh trước khi kết luận tăng hay giảm.
 
-## 9. Phần LLM bắt buộc: Đọc review và tự đo chất lượng
+</details>
 
-### 9.1. LLM cần trả về thông tin gì?
+<details class="project-brief-detail" id="yeu-cau-9">
+<summary>09. LLM, nhãn tay và đánh giá</summary>
+
+### 9. Phần LLM bắt buộc: Đọc review và tự đo chất lượng
+
+#### 9.1. LLM cần trả về thông tin gì?
 
 LLM nhận một mẫu review và chuyển nội dung văn bản thành thông tin có cấu trúc. Với mỗi đánh giá được xử lý, cần trích xuất:
 
@@ -382,7 +450,7 @@ LLM nhận một mẫu review và chuyển nội dung văn bản thành thông t
 
 JSON là cách biểu diễn dữ liệu bằng các trường tên và giá trị, có thể chứa danh sách hoặc các đối tượng lồng nhau. Schema là quy tắc mô tả những trường cần có và kiểu giá trị được chấp nhận. Nhờ quy tắc này, chương trình biết phải đọc và kiểm tra kết quả LLM thế nào.
 
-### 9.2. Dùng dịch vụ nào và chọn mẫu ra sao?
+#### 9.2. Dùng dịch vụ nào và chọn mẫu ra sao?
 
 Công cụ được hướng dẫn là Gemini API gói miễn phí. Có thể dùng nhà cung cấp khác nếu nhóm tự chịu chi phí và ghi rõ trong `AI_USAGE.md`. Gói miễn phí vẫn có điều kiện và hạn mức, nên cần xem tài liệu dịch vụ tại thời điểm thực hiện.
 
@@ -390,7 +458,7 @@ Cỡ mẫu và cách chọn mẫu trong đề chung do nhóm quyết định r�
 
 Khi chọn mẫu, cần nói nhóm chọn từ snapshot nào, lọc trùng ra sao và các review đó đại diện cho phạm vi nào. Nếu chỉ lấy review mới nhất hoặc review của một khu vực, cần nêu giới hạn đó trước khi diễn giải KPI.
 
-### 9.3. Tạo ít nhất 100 nhãn tay
+#### 9.3. Tạo ít nhất 100 nhãn tay
 
 Nhóm phải chuẩn bị **ít nhất 100 đánh giá được gán nhãn tay**. Tệp nhãn tham chiếu nằm trong `data/samples/`, giữ được mã review và nhãn để đối chiếu với dự đoán.
 
@@ -402,7 +470,7 @@ Trước khi gán, nên viết hướng dẫn ngắn để các thành viên hi�
 
 Nếu không hiểu ngôn ngữ của review, không đoán nhãn hoặc lấy chính câu trả lời LLM đang chấm làm nhãn chuẩn. Có thể trao đổi cách gán với người hiểu ngôn ngữ đó, hoặc lựa chọn phạm vi mẫu mà nhóm có thể đọc và giải thích. Nếu có tập review được giao cố định, cần xác nhận cách xử lý trường hợp ngoại ngữ với giảng viên trước khi đổi tập. Dùng công cụ dịch để hỗ trợ cũng phải khai báo và kiểm tra lại ý nghĩa.
 
-### 9.4. Có một phương pháp đối chứng không dùng LLM
+#### 9.4. Có một phương pháp đối chứng không dùng LLM
 
 Phương pháp đối chứng thực hiện cùng nhiệm vụ trên dữ liệu cần so sánh. Chẳng hạn, nhóm có thể xây quy tắc từ khóa nếu phù hợp, nhưng đề không bắt buộc baseline phải là từ khóa. Điều bắt buộc là có một cách không dùng LLM và đo chất lượng của nó.
 
@@ -412,7 +480,7 @@ Cần ghi rõ đầu ra nào được đem so sánh. Nếu đang so cảm xúc, 
 
 LLM vẫn phải trích xuất đủ cảm xúc, khía cạnh khen/chê và ngôn ngữ như đề nêu. Đề công khai chưa mô tả hết cách chấm đối chứng cho từng trường, nên không tự kết luận baseline chỉ cần cảm xúc, hoặc mọi trường đều có một cách tính điểm giống nhau. Nhóm cần mô tả rõ phạm vi đánh giá và đối chiếu hướng dẫn chấm bổ sung khi có.
 
-### 9.5. Báo cáo accuracy và F1 cho cả hai phương pháp
+#### 9.5. Báo cáo accuracy và F1 cho cả hai phương pháp
 
 Accuracy là tỷ lệ dự đoán đúng trên số trường hợp đã chấm. Ví dụ dùng để diễn giải một phép đo phải nêu rõ đang đo nhãn cảm xúc, ngôn ngữ hay một đầu ra khác. Không gọi một tỷ lệ chung là chất lượng của mọi phần trích xuất nếu chỉ chấm một trường.
 
@@ -432,7 +500,7 @@ Ví dụ nhỏ chỉ để hiểu cách chấm: Nhãn tay của một review là
 
 Trên nhiều review, cách tính micro cộng các lần đúng, thừa và bỏ sót trước khi tính điểm. Cách tính macro tính điểm cho từng nhãn rồi lấy trung bình đều. Nhóm không bắt buộc chọn cùng một cách trong mọi tình huống, nhưng phải ghi cách đã dùng, xử lý nhãn không xuất hiện ra sao và áp dụng nhất quán cho cả hai phương pháp. Có thể đối chiếu cách tính với [tài liệu F1](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) và [accuracy](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html).
 
-### 9.6. Chi phí, cache và đưa kết quả vào phân tích
+#### 9.6. Chi phí, cache và đưa kết quả vào phân tích
 
 Nhóm phải ước tính chi phí nếu xử lý hết review của thành phố. Cần dựa trên số review, lượng đầu vào/đầu ra dự kiến, cách gọi và mức giá của dịch vụ đang dùng. Phải ghi các giả thiết của ước tính. Yêu cầu ước tính không đồng nghĩa với yêu cầu thực sự gọi API cho toàn bộ thành phố.
 
@@ -442,9 +510,14 @@ Lưu kết quả LLM có thể giảm thời gian và số lần gọi khi phát
 
 Phải có **ít nhất một KPI và một hình sử dụng kết quả LLM**. Chỉ chạy LLM rồi để tệp kết quả nằm riêng chưa đáp ứng yêu cầu tích hợp. Hình và chỉ số phải góp phần trả lời mục tiêu phân tích đã chọn, đồng thời nêu rõ chúng dựa trên mẫu và chất lượng đã đo.
 
-## 10. Hình và báo cáo kỹ thuật cần thể hiện điều gì?
+</details>
 
-### 10.1. Sinh hình bằng chương trình
+<details class="project-brief-detail" id="yeu-cau-10">
+<summary>10. Hình và báo cáo PDF</summary>
+
+### 10. Hình và báo cáo kỹ thuật cần thể hiện điều gì?
+
+#### 10.1. Sinh hình bằng chương trình
 
 Trực quan hóa phải bao quát không gian, thời gian và kết quả LLM. Nhóm tự chọn loại hình phù hợp với câu hỏi. Có thể dùng bản đồ khi cần thể hiện vị trí, nhưng lựa chọn biểu đồ phải xuất phát từ điều cần so sánh và dữ liệu thực có.
 
@@ -452,7 +525,7 @@ Hình được chương trình xuất vào `figures/`. Chạy lại quy trình p
 
 Đề không ấn định một số hình cố định ngoài yêu cầu có ít nhất một hình từ LLM. Nhóm cần đủ hình để phục vụ các góc độ bắt buộc và báo cáo, tránh hiểu một số lượng tự đề xuất là mức tối thiểu của giảng viên.
 
-### 10.2. Báo cáo PDF tối đa 10 trang
+#### 10.2. Báo cáo PDF tối đa 10 trang
 
 Báo cáo kỹ thuật là PDF đặt trong `reports/`, chẳng hạn `reports/report.pdf`, tối đa 10 trang. Định dạng chi tiết sẽ được công bố sau. Không tự đặt thêm font, cỡ chữ, mẫu bìa hoặc cách tính phụ lục rồi gọi đó là quy định đã có của môn.
 
@@ -460,9 +533,14 @@ Một bố cục có thể dùng để chuẩn bị bản nháp gồm mục tiê
 
 Báo cáo cần giúp người đọc nối được kết luận với con số, con số với tệp đầu ra và tệp với cách tính. Ghi rõ nguồn dữ liệu, ngày snapshot, tiền tệ, lựa chọn xử lý và mã commit bản nộp. Tránh biến báo cáo thành danh sách ảnh mà người đọc phải tự đoán ý nghĩa.
 
-## 11. Các tệp phải bàn giao và cách tổ chức repo
+</details>
 
-### 11.1. Môi trường có thể dựng lại
+<details class="project-brief-detail" id="yeu-cau-11">
+<summary>11. Cấu trúc repo và môi trường</summary>
+
+### 11. Các tệp phải bàn giao và cách tổ chức repo
+
+#### 11.1. Môi trường có thể dựng lại
 
 Đề yêu cầu Python 3, nhưng cho phép tự chọn thư viện. Không bắt buộc dùng pandas. Chọn công cụ nào cũng phải hiểu cách hoạt động, giải thích được và kiểm chứng kết quả.
 
@@ -475,7 +553,7 @@ Tệp `.python-version` chỉ ghi nhận phiên bản, không tự cài hoặc t
 
 Ghim phiên bản nghĩa là chỉ rõ phiên bản sẽ cài, thay vì luôn lấy bản mới nhất. Lockfile là tệp do công cụ quản lý môi trường tạo để ghi lại bộ phiên bản đã chọn, thường gồm cả các gói phụ thuộc. Nhóm chỉ cần chọn một cách quản lý đáp ứng yêu cầu và hướng dẫn cách sử dụng trong README.
 
-### 11.2. Cây thư mục và vai trò của từng phần
+#### 11.2. Cây thư mục và vai trò của từng phần
 
 ```text
 .
@@ -529,7 +607,7 @@ Từ điển dữ liệu giúp một người chưa viết chương trình hiể
 
 Có thể đặt từ điển dữ liệu ở một tệp riêng trong `reports/` và ghi đường dẫn trong README để tiện tra cứu. Đây là gợi ý sắp xếp. Nó không tự tạo ra ngoại lệ về số trang hoặc phụ lục của PDF khi format chính thức chưa được công bố.
 
-### 11.3. Đọc đúng cấu hình minh họa
+#### 11.3. Đọc đúng cấu hình minh họa
 
 Đề đưa ví dụ cấu hình Santiago sau. Mọi ngưỡng, cỡ mẫu và lựa chọn trong ví dụ cần được nhóm xem xét lại theo dữ liệu của mình:
 
@@ -575,7 +653,12 @@ seed: 42
 
 Những con số và tên lựa chọn trong cấu hình không phải một phương án thực hành đã hoàn thành. Nhóm cần tự thiết kế, chạy thử và giải thích. Ví dụ thực hành của trang sẽ được xây dựng riêng ở phần 2.
 
-## 12. Dùng AI, khai báo và bảo vệ thông tin
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-12">
+<summary>12. Minh bạch việc dùng AI</summary>
+
+### 12. Dùng AI, khai báo và bảo vệ thông tin
 
 Khi làm ở nhà, bài tập lớn ở chế độ mở. Nhóm được dùng AI nhưng phải hiểu nội dung mình nộp, kiểm chứng kết quả và khai báo trung thực. Buổi vấn đáp ở chế độ đóng, không được dùng AI để trả lời thay.
 
@@ -592,7 +675,12 @@ Không commit khóa API. Chương trình đọc khóa từ biến môi trường
 
 Khi gửi dữ liệu qua công cụ AI, cần tuân thủ [chính sách AI của học phần](https://courses.iaidev.com/programming-for-data-processing/2627-1/ai-policy.html), gồm các quy định liên quan dữ liệu cá nhân và thông tin nhạy cảm. Giấy phép của dữ liệu và quyền sử dụng công cụ không thay cho việc xem xét dữ liệu nào được đưa ra ngoài.
 
-## 13. Cách đánh giá và buổi vấn đáp
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-13">
+<summary>13. Vấn đáp và tiêu chí gốc</summary>
+
+### 13. Cách đánh giá và buổi vấn đáp
 
 Buổi vấn đáp kéo dài khoảng 20 phút cho mỗi nhóm. Không có phần thuyết trình mở đầu. Giảng viên hỏi riêng từng người, có thể chọn bất kỳ đoạn mã hoặc con số nào trong sản phẩm nhóm đã nộp.
 
@@ -609,7 +697,12 @@ Bốn nhóm tiêu chí được công bố là:
 
 Phần LLM còn được đánh giá trên bộ nhãn tay của nhóm. Bên cạnh việc chương trình chạy được, nhóm phải giải thích chất lượng trích xuất, cách đo và các trường hợp kết quả chưa đáng tin cậy. Dùng AI trong buổi vấn đáp là vi phạm chế độ đóng.
 
-## 14. Tự đối chiếu trước khi bàn giao
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-14">
+<summary>14. Danh sách đối chiếu trước khi nộp</summary>
+
+### 14. Tự đối chiếu trước khi bàn giao
 
 Danh sách này giúp kiểm tra các yêu cầu của đề, không thay bộ test hoặc rubric chính thức:
 
@@ -634,13 +727,18 @@ Danh sách này giúp kiểm tra các yêu cầu của đề, không thay bộ t
 
 Clone là tạo một bản sao repo từ GitHub về máy, gồm mã nguồn và lịch sử Git. Việc clone vào thư mục mới và tạo lại kết quả là yêu cầu tự kiểm của đề. Thử thêm một snapshot khác là cách chuẩn bị hữu ích cho tình huống bộ test chung đổi mốc, không phải một mốc nộp thứ tư.
 
-## 15. Đọc và sử dụng thông tin được giao cho nhóm {#doi-chieu-ghi-chu}
+</details>
+
+<details class="project-brief-detail" id="yeu-cau-15">
+<summary>15. Sử dụng đầu vào được giao</summary>
+
+### 15. Đọc và sử dụng thông tin được giao cho nhóm {#doi-chieu-ghi-chu}
 
 Đề chung cho biết sản phẩm cần hoàn thành. Bảng giao dữ liệu cho biết nhóm phải làm trên phần dữ liệu nào. Khi nhận bảng, cần đọc hướng dẫn trước, tìm đúng phần của nhóm, rồi mới tải và lọc dữ liệu. Một tệp tải từ Inside Airbnb thường chứa dữ liệu của cả thành phố, chưa phải ngay tập dữ liệu được giao.
 
 Phần này dùng các mã giả định như `LST-A`, `RV-A` và `Vùng-Mẫu-A` để minh họa. Khi làm bài, hãy thay chúng bằng các mã trong bảng được giao. Các mã minh họa không dùng để tìm dữ liệu thật trên Inside Airbnb.
 
-### 15.1. Những phần cần tìm trong bảng giao dữ liệu
+#### 15.1. Những phần cần tìm trong bảng giao dữ liệu
 
 Thông tin của nhóm có thể được chia thành nhiều trang tính. Hãy tìm theo nội dung và hướng dẫn đi kèm, vì tên trang tính hoặc vị trí cột có thể thay đổi.
 
@@ -657,7 +755,7 @@ Nếu số thứ tự nhóm được dùng lại ở nhiều lớp, lọc chỉ 
 
 Nên giữ một bản đầu vào của nhóm ở trạng thái ban đầu và ghi ngày nhận. Khi cần thêm cột hoặc làm sạch, tạo bản làm việc riêng để còn đối chiếu. Không đưa danh sách thành viên hoặc dữ liệu của nhóm khác vào các tệp kết quả công khai.
 
-### 15.2. Chuyển thông tin phân công thành cấu hình
+#### 15.2. Chuyển thông tin phân công thành cấu hình
 
 Trước khi viết bước tải, cần xác định được thành phố, tiền tệ, các mốc chụp và URL gốc. Kiểm tra URL gốc đã chứa phần nào để ghép đúng đường dẫn. Không nối thêm thành phố lần nữa nếu nó đã có trong URL, hoặc để thiếu dấu `/` giữa ngày và tên thư mục.
 
@@ -674,7 +772,7 @@ Nếu hướng dẫn riêng giới hạn phân tích giá ở một snapshot, ph
 
 Yêu cầu phân tích theo thời gian vẫn có thể được đáp ứng bằng chỉ số khác phù hợp, chẳng hạn tỷ lệ listing chưa có review ở từng snapshot. Trước khi chọn, cần xác định chỉ số đó phục vụ mục tiêu báo cáo và có thể so sánh giữa các mốc.
 
-### 15.3. Dùng danh sách mã để lấy đúng các hàng được giao
+#### 15.3. Dùng danh sách mã để lấy đúng các hàng được giao
 
 Danh sách mã là danh sách để chọn hàng, chưa chứa đủ thông tin phân tích. Nhóm vẫn phải tải các tệp chi tiết rồi tìm những hàng có mã tương ứng. Ví dụ giả định một phần danh sách chỗ ở như sau:
 
@@ -695,7 +793,7 @@ Nên đọc các cột mã dưới dạng chuỗi ký tự để giữ nguyên t
 
 Lặp lại việc đối chiếu ở từng snapshot. Nếu hướng dẫn yêu cầu cùng một tập listing qua các mốc, dùng lại danh sách mã được giao, thay vì tự chọn một tập khác ở mỗi lần tải. Nếu mã nào không tìm thấy, ghi lại mã, bảng và snapshot liên quan để xác minh. Không âm thầm bỏ mã đó khỏi mọi mốc để các tập trông có vẻ khớp nhau.
 
-### 15.4. Phân biệt mẫu chạy LLM với mẫu gán nhãn tay
+#### 15.4. Phân biệt mẫu chạy LLM với mẫu gán nhãn tay
 
 Một review có thể được giữ để phân tích chung nhưng không nằm trong mẫu LLM. Trong mẫu LLM, một phần review còn được đánh dấu để người trong nhóm gán nhãn tay. Các cột đánh dấu vì thế cho biết những công việc khác nhau.
 
@@ -715,7 +813,7 @@ Một review có thể xuất hiện lại trong nhiều snapshot. Nếu đó l�
 
 Đề chung yêu cầu ít nhất 100 nhãn tay và cho nhóm giải thích cách chọn mẫu LLM. Nếu đã được giao một mẫu cụ thể, hãy thực hiện đúng mẫu đó theo hướng dẫn đi kèm. Không bỏ tập được giao để tự chọn các review dễ đọc hơn.
 
-### 15.5. Dùng mã vùng và hiểu ranh giới vùng
+#### 15.5. Dùng mã vùng và hiểu ranh giới vùng
 
 Vùng phân tích có thể được giao bằng mã kèm các giới hạn kinh độ, vĩ độ. Khi vùng được mô tả bằng một hình chữ nhật, hai cặp giới hạn cho biết phần bản đồ từ kinh độ nhỏ nhất đến lớn nhất và từ vĩ độ nhỏ nhất đến lớn nhất. Đây là phạm vi do cách chia vùng xác định, không mặc nhiên là quận, phường hoặc ranh giới hành chính.
 
@@ -731,7 +829,7 @@ Giữ riêng `analysis_area` và `neighbourhood_cleansed`. Một cột có thể
 
 Tệp GeoJSON của Inside Airbnb cũng không tự trở thành ranh giới của các vùng tự chia. Trước khi vẽ, xác định rõ bản đồ đang thể hiện khu vực nào và phép ghép bảng nào được dùng. Hai vùng có cùng tên hoặc mã nhìn giống nhau chưa đủ để kết luận chúng là cùng một đối tượng.
 
-### 15.6. Đối chiếu kết quả lọc trước khi chạy QA
+#### 15.6. Đối chiếu kết quả lọc trước khi chạy QA
 
 Hướng dẫn riêng có thể cho số lượng mong đợi theo bảng, snapshot, loại phòng hoặc vùng, cùng một số điều kiện về giá trị thiếu. Đây là những điều kiện để xác nhận đã lấy đúng đầu vào. Chúng khác với quy tắc QA do nhóm tự đề xuất sau khi khảo sát.
 
@@ -749,7 +847,7 @@ Hãy ghi kết quả đối chiếu trước khi làm sạch. Chẳng hạn, n�
 
 Tệp calendar có thể lớn hơn nhiều so với phần nhóm cần giữ. Có thể đọc theo khối, chỉ lấy cột cần thiết và lọc theo danh sách listing ngay trong từng khối. Cách đọc này giúp giảm lượng dữ liệu giữ trong bộ nhớ, nhưng vẫn phải xử lý đủ các khối cần thiết.
 
-### 15.7. Những yêu cầu vẫn phải hoàn thành sau khi có đầu vào
+#### 15.7. Những yêu cầu vẫn phải hoàn thành sau khi có đầu vào
 
 Nhận được danh sách mã không có nghĩa đã nhận sẵn dữ liệu sạch, KPI, nhãn cảm xúc hoặc lời giải. Sau khi lấy đúng dữ liệu, nhóm vẫn phải đề xuất QA, chọn KPI, làm phần LLM và baseline, chấm bằng nhãn tay, sinh hình và viết báo cáo.
 
@@ -761,6 +859,23 @@ Cuối cùng, giữ khả năng chạy lại theo yêu cầu chấm. Đề công
 
 Python không tự đọc mọi tệp `.env`. Nếu chọn lưu cấu hình cục bộ trong tệp này, phải có cách nạp giá trị vào môi trường chạy và vẫn nhận được khóa API của người chấm như README đã hướng dẫn. Quy định không commit dữ liệu thô không có nghĩa repo phải thiếu mọi thư mục dữ liệu. Cấu trúc bàn giao vẫn có `data/samples/` và phần dữ liệu xử lý đáp ứng giới hạn đã nêu.
 
+</details>
+
+<details class="project-brief-detail">
+<summary>Bối cảnh học phần và thông tin tham khảo</summary>
+
+Một bên đặt hàng, chẳng hạn chính quyền thành phố hoặc hiệp hội du lịch, cần hiểu thị trường cho thuê chỗ ở tại một thành phố. Họ muốn biết giá cả khác nhau giữa các khu vực ra sao, thị trường thay đổi thế nào qua các lần thu thập dữ liệu, và khách đang khen hoặc phàn nàn về điều gì. Nhóm của bạn sẽ xây dựng một chương trình để đi từ các tệp dữ liệu đến những câu trả lời có bằng chứng.
+
+Sản phẩm gồm mã nguồn chạy lại được và một báo cáo giải thích quá trình xử lý, kết quả, cùng giới hạn của các kết luận. Người khác phải có thể làm theo hướng dẫn, chạy chương trình và tạo lại các tệp kết quả. Việc chỉ lưu sẵn hình hoặc output trong notebook chưa đáp ứng yêu cầu đó.
+
+Đây là bài tập lớn Inside Airbnb của học phần Lập trình xử lý dữ liệu, mã UET.DSE2049, học kì 1 năm học 2026–2027, thuộc Viện Trí tuệ nhân tạo, Trường Đại học Công nghệ, ĐHQGHN. Bài tập lớn và vấn đáp chiếm **60% điểm học phần**. Các mốc, danh sách dữ liệu và điều kiện bàn giao trong trang này được đối chiếu với [đề bài chính thức](https://courses.iaidev.com/programming-for-data-processing/2627-1/projects/project_airbnb.html).
+
+Ngoài đề chung, nhóm còn có thể được giao một bảng hướng dẫn kèm danh sách mã dữ liệu và mẫu đánh giá. [Mục 15](#doi-chieu-ghi-chu) giải thích cách đọc các phần này và dùng chúng để lấy đúng dữ liệu của nhóm. Các bảng minh họa trong mục đó đều dùng dữ liệu giả định.
+
+Nếu đang chuẩn bị tải dữ liệu, có thể đến ngay phần [phân biệt bảy loại tệp và cách nối các bảng](#cac-tep-du-lieu), rồi quay lại các bước QA và KPI sau khi hiểu đầu vào.
+
+
+</details>
 
 ## Tài liệu tham khảo
 

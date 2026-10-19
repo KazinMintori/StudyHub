@@ -11,7 +11,7 @@ defineProps({ active: { type: String, default: 'brief' } })
     </a>
     <a :href="withBase('/xu-ly-du-lieu/bai-tap-lon/thuc-hanh.html')" :aria-current="active === 'practice' ? 'page' : undefined">
       <span class="project-section-number">2</span>
-      <span>Ví dụ thực hành <small>Sẽ cập nhật</small></span>
+      <span>Ví dụ thực hành <small>Kế hoạch và dự án Porto</small></span>
     </a>
   </nav>
 </template>
@@ -24,6 +24,10 @@ defineProps({ active: { type: String, default: 'brief' } })
 .project-sections a:focus-visible { outline: 2px solid var(--tim); outline-offset: 3px; }
 .project-section-number { flex: 0 0 auto; font-size: 14px; color: var(--tim); }
 .project-sections small { display: block; font-size: 12px; color: var(--ink-3); font-weight: 400; }
+:global(.project-result-gallery) { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--space-5); align-items: start; margin: var(--space-5) 0; }
+:global(.project-result-gallery .lecture-figure) { margin: 0; min-width: 0; }
+:global(.project-result-gallery img) { width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius-lg); }
+@media (max-width: 767px) { :global(.project-result-gallery) { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .project-sections { grid-template-columns: 1fr; } }
 @media (max-width: 600px) {
   :global(.data-project-brief .vp-doc .study-data-table) {

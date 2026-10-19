@@ -1,0 +1,93 @@
+[
+  {
+    "snapshot_date": "2025-09-21",
+    "file": "listings.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2025-09-21/data/listings.csv.gz",
+    "bytes": 7666894,
+    "sha256": "4fae01c9eb766566e567af2c35cb84e0daf02a7c2ff5e4fa67e2edfdc4378a80"
+  },
+  {
+    "snapshot_date": "2025-09-21",
+    "file": "calendar.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2025-09-21/data/calendar.csv.gz",
+    "bytes": 13539983,
+    "sha256": "72baec4343af34450329cd2ad5d55b9a1ba791c79986017d4a2b1b614104f455"
+  },
+  {
+    "snapshot_date": "2025-09-21",
+    "file": "reviews.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2025-09-21/data/reviews.csv.gz",
+    "bytes": 131570631,
+    "sha256": "701205b2e9ffbe105d3a320e7cb1f6c29383ab1fdf44ad81176757ca84eb07d4"
+  },
+  {
+    "snapshot_date": "2025-12-25",
+    "file": "listings.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2025-12-25/data/listings.csv.gz",
+    "bytes": 6471772,
+    "sha256": "19e3963d466b2648cd148bab8560be010ed2cea3d393ba7b4e34784dd36180a8"
+  },
+  {
+    "snapshot_date": "2025-12-25",
+    "file": "calendar.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2025-12-25/data/calendar.csv.gz",
+    "bytes": 13733778,
+    "sha256": "e2decf6c4759b99c0305ab37fa7cf498e3af04051846cbc68ea6429601104a9e"
+  },
+  {
+    "snapshot_date": "2025-12-25",
+    "file": "reviews.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2025-12-25/data/reviews.csv.gz",
+    "bytes": 137596116,
+    "sha256": "698acc541081167a565e668108587d72368064ca5a86ce2d2833176a12ab849d"
+  },
+  {
+    "snapshot_date": "2026-03-26",
+    "file": "listings.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2026-03-26/data/listings.csv.gz",
+    "bytes": 7904518,
+    "sha256": "e9844b06e244163aa45016789c36f36e59662e86a2d88265ae0c4db965d8f466"
+  },
+  {
+    "snapshot_date": "2026-03-26",
+    "file": "calendar.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2026-03-26/data/calendar.csv.gz",
+    "bytes": 14159010,
+    "sha256": "845d284496f3f3953128a945c44764b653ef9dc61294d3c1633f44069b7f372e"
+  },
+  {
+    "snapshot_date": "2026-03-26",
+    "file": "reviews.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2026-03-26/data/reviews.csv.gz",
+    "bytes": 138286254,
+    "sha256": "b88f85f3b1301c0d4db02f465317c9449db7d1adfb4c1f965aea12ffca35ada8"
+  },
+  {
+    "snapshot_date": "2026-06-23",
+    "file": "listings.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/data/listings.csv.gz",
+    "bytes": 9460410,
+    "sha256": "5fd763ac5529afebe3a530bcc9108f317c4d36d7d5d56579e8b7c157faab8fa2"
+  },
+  {
+    "snapshot_date": "2026-06-23",
+    "file": "calendar.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/data/calendar.csv.gz",
+    "bytes": 14091013,
+    "sha256": "fe44f37b26bf39bae7e8eea37a49faa8ab7f37b8dcb2f9153e33aab7025c4fc4"
+  },
+  {
+    "snapshot_date": "2026-06-23",
+    "file": "reviews.csv.gz",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/data/reviews.csv.gz",
+    "bytes": 143861981,
+    "sha256": "a71dc5e48c5e90f14ab8b6043be7a3e580d25287adfb3c87370c324af42761cc"
+  },
+  {
+    "snapshot_date": "2026-06-23",
+    "file": "neighbourhoods.geojson",
+    "url": "https://data.insideairbnb.com/portugal/norte/porto/2026-06-23/visualisations/neighbourhoods.geojson",
+    "bytes": 2924525,
+    "sha256": "d119ab6b14c152a7754dd47f0bbb663e273ee1d970cc8d5028f20e4d1a04dc6b"
+  }
+]

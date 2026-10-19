@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350" width="360" height="350" role="img"><title>Loại chỗ ở trong mẫu</title><rect width="360" height="350" fill="#fffdf9" rx="12"/>
+<text x="20.00" y="30.00" font-family="Arial, sans-serif" font-size="18" fill="#262139" text-anchor="start" font-weight="700">Loại chỗ ở trong mẫu</text>
+<text x="20.00" y="57.00" font-family="Arial, sans-serif" font-size="14" fill="#625a75" text-anchor="start" font-weight="400">Mốc 2026-06-23 · N = 120</text>
+<text x="20.00" y="110.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">Cả chỗ ở</text>
+<rect x="20.00" y="122.00" width="185.17" height="22.00" fill="#6948af" stroke="none" rx="3"/>
+<text x="250.00" y="140.00" font-family="Arial, sans-serif" font-size="14" fill="#262139" text-anchor="start" font-weight="400">101 (84.2%)</text>
+<text x="20.00" y="195.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">Phòng riêng</text>
+<rect x="20.00" y="207.00" width="34.83" height="22.00" fill="#6948af" stroke="none" rx="3"/>
+<text x="250.00" y="225.00" font-family="Arial, sans-serif" font-size="14" fill="#262139" text-anchor="start" font-weight="400">19 (15.8%)</text>
+</svg>

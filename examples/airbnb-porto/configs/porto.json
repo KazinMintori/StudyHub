@@ -1,0 +1,39 @@
+{
+  "city": "Porto",
+  "country": "Portugal",
+  "region": "Norte",
+  "public_root": "portugal/norte/porto",
+  "base_url": "https://data.insideairbnb.com",
+  "snapshots": [
+    "2025-09-21",
+    "2025-12-25",
+    "2026-03-26",
+    "2026-06-23"
+  ],
+  "latest_snapshot": "2026-06-23",
+  "geojson_path": "visualisations/neighbourhoods.geojson",
+  "cohort_size": 120,
+  "cohort_seed": 20261019,
+  "calendar_window_days": 30,
+  "currency": "EUR",
+  "review_sample_size": 300,
+  "dev_sample_size": 40,
+  "test_sample_size": 120,
+  "paths": {
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed",
+    "figures_dir": "figures",
+    "reports_dir": "reports",
+    "cache_dir": "cache"
+  },
+  "llm_config": {
+    "provider": "generativelanguage.googleapis.com",
+    "model": "",
+    "status": "unverified_until_called",
+    "temperature": 0.0,
+    "max_retries": 3,
+    "retry_backoff_sec": 2.0
+  },
+  "price_decimal": ".",
+  "price_thousands": ","
+}

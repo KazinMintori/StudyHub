@@ -29,7 +29,7 @@
     {
       "id": "P002",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 3.",
+      "targetHeading": "### 3.",
       "type": "choice",
       "requirement": "Nhóm chọn bên đặt hàng và nêu rõ trong báo cáo.",
       "presentMarkers": [
@@ -53,7 +53,7 @@
     {
       "id": "P004",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 3.",
+      "targetHeading": "### 3.",
       "type": "required",
       "requirement": "Mọi thành viên giải thích được toàn bộ mã, số liệu và quyết định.",
       "presentMarkers": [
@@ -64,7 +64,7 @@
     {
       "id": "P005",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 3.",
+      "targetHeading": "### 3.",
       "type": "required",
       "requirement": "Nhóm 4–5 người, một thành phố không trùng, phân công trên Canvas đầu kỳ.",
       "presentMarkers": [
@@ -76,7 +76,7 @@
     {
       "id": "P006",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 3.",
+      "targetHeading": "### 3.",
       "type": "required",
       "requirement": "Repo riêng tư có thành viên và giảng viên, tên repo chỉ là gợi ý.",
       "presentMarkers": [
@@ -88,7 +88,7 @@
     {
       "id": "P007",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 3.",
+      "targetHeading": "### 3.",
       "type": "required",
       "requirement": "Commit và push thường xuyên, điền liên kết repo vào bảng tính.",
       "presentMarkers": [
@@ -101,7 +101,7 @@
     {
       "id": "P008",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 3.",
+      "targetHeading": "### 3.",
       "type": "required",
       "requirement": "Bỏ qua dữ liệu thô trong Git, nộp mốc bằng tag và đẩy tag lên GitHub.",
       "presentMarkers": [
@@ -113,7 +113,7 @@
     {
       "id": "P009",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 4.",
+      "targetHeading": "### 4.",
       "type": "required",
       "requirement": "Hạn 23:59 Chủ nhật theo thời gian commit trên GitHub.",
       "presentMarkers": [
@@ -125,7 +125,7 @@
     {
       "id": "P010",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 4.",
+      "targetHeading": "### 4.",
       "type": "required",
       "requirement": "Mốc 1 ngày 20/09/2026 tuần 2 không cần tag, gồm nhóm, repo, thành phố và liên kết.",
       "presentMarkers": [
@@ -138,7 +138,7 @@
     {
       "id": "P011",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 4.",
+      "targetHeading": "### 4.",
       "type": "required",
       "requirement": "Mốc 2 ngày 22/11/2026 tuần 11 dùng tag final và ghi commit vào báo cáo.",
       "presentMarkers": [
@@ -151,7 +151,7 @@
     {
       "id": "P012",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 4.",
+      "targetHeading": "### 4.",
       "type": "required",
       "requirement": "Mốc 3 theo lịch thi, vấn đáp khoảng 20 phút và hỏi riêng từng người.",
       "presentMarkers": [
@@ -163,7 +163,7 @@
     {
       "id": "P013",
       "sourceSection": "thong-tin-chung",
-      "targetHeading": "## 12.",
+      "targetHeading": "### 12.",
       "type": "required",
       "requirement": "Làm ở nhà mở, vấn đáp đóng, AI_USAGE và phần LLM bắt buộc.",
       "presentMarkers": [
@@ -177,7 +177,7 @@
     {
       "id": "P014",
       "sourceSection": "du-lieu",
-      "targetHeading": "## 5.",
+      "targetHeading": "### 5.",
       "type": "required",
       "requirement": "Nguồn Inside Airbnb, giấy phép CC BY 4.0, ghi ngày snapshot và khảo sát cấu trúc.",
       "presentMarkers": [
@@ -189,7 +189,7 @@
     {
       "id": "P015",
       "sourceSection": "du-lieu",
-      "targetHeading": "## 5.",
+      "targetHeading": "### 5.",
       "type": "required",
       "requirement": "Bốn loại tệp gồm listings, calendar, reviews và GeoJSON ranh giới.",
       "presentMarkers": [
@@ -203,7 +203,7 @@
     {
       "id": "P016",
       "sourceSection": "du-lieu",
-      "targetHeading": "## 5.",
+      "targetHeading": "### 5.",
       "type": "required",
       "requirement": "Hai dạng URL giữ đúng quốc gia, vùng, thành phố, ngày và tên tệp.",
       "presentMarkers": [
@@ -215,7 +215,7 @@
     {
       "id": "P017",
       "sourceSection": "du-lieu",
-      "targetHeading": "## 5.",
+      "targetHeading": "### 5.",
       "type": "required",
       "requirement": "Giữ đủ 26 thành phố, đường dẫn và 104 ngày snapshot chính xác.",
       "presentMarkers": [
@@ -226,7 +226,7 @@
     {
       "id": "P018",
       "sourceSection": "du-lieu",
-      "targetHeading": "## 5.",
+      "targetHeading": "### 5.",
       "type": "required",
       "requirement": "Dùng đủ bốn mốc bắt buộc, thành phố hằng tháng được bổ sung mốc khác.",
       "presentMarkers": [
@@ -238,7 +238,7 @@
     {
       "id": "P019",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 7.",
+      "targetHeading": "### 7.",
       "type": "choice",
       "requirement": "Nhóm tự chọn QA, KPI và cách trình bày rồi bảo vệ lựa chọn.",
       "presentMarkers": [
@@ -250,7 +250,7 @@
     {
       "id": "P020",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 6.",
+      "targetHeading": "### 6.",
       "type": "required",
       "requirement": "Chạy một lệnh sau khi cài môi trường, tham số không ghi cố định trong mã.",
       "presentMarkers": [
@@ -262,7 +262,7 @@
     {
       "id": "P021",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 6.",
+      "targetHeading": "### 6.",
       "type": "required",
       "requirement": "Bộ test chung có thể thay snapshot mới chỉ bằng cấu hình.",
       "presentMarkers": [
@@ -274,7 +274,7 @@
     {
       "id": "P022",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 6.",
+      "targetHeading": "### 6.",
       "type": "required",
       "requirement": "LLM chạy lại thật với khóa giảng viên trong biến môi trường và được chấm bằng nhãn tay.",
       "presentMarkers": [
@@ -287,7 +287,7 @@
     {
       "id": "P023",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 5.",
+      "targetHeading": "### 5.",
       "type": "required",
       "requirement": "Tải đủ bốn snapshot bằng script và xác minh tệp cùng các cột khóa.",
       "presentMarkers": [
@@ -299,7 +299,7 @@
     {
       "id": "P024",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 5.",
+      "targetHeading": "### 5.",
       "type": "required",
       "requirement": "Dữ liệu thô không commit, dữ liệu xử lý chỉ commit khi dưới 50 MB.",
       "presentMarkers": [
@@ -311,7 +311,7 @@
     {
       "id": "P025",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 7.",
+      "targetHeading": "### 7.",
       "type": "required",
       "requirement": "Quy tắc QA có tên, điều kiện, lý do, hành động và ưu tiên gắn cờ.",
       "presentMarkers": [
@@ -325,7 +325,7 @@
     {
       "id": "P026",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 7.",
+      "targetHeading": "### 7.",
       "type": "required",
       "requirement": "QA bao quát thiếu, ngoại lai, trùng trong và giữa snapshot, sai kiểu và lệch danh mục.",
       "presentMarkers": [
@@ -341,7 +341,7 @@
     {
       "id": "P027",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 7.",
+      "targetHeading": "### 7.",
       "type": "required",
       "requirement": "qa_report.csv ghi tác động lên số dòng và KPI trước, sau QA.",
       "presentMarkers": [
@@ -353,7 +353,7 @@
     {
       "id": "P028",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 8.",
+      "targetHeading": "### 8.",
       "type": "required",
       "requirement": "Có 5–8 KPI với mục tiêu, công thức, đơn vị, tiền tệ và tính sau QA.",
       "presentMarkers": [
@@ -366,7 +366,7 @@
     {
       "id": "P029",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 8.",
+      "targetHeading": "### 8.",
       "type": "required",
       "requirement": "KPI bao quát khu vực neighbourhood_cleansed, thời gian và ít nhất một KPI từ LLM.",
       "presentMarkers": [
@@ -379,7 +379,7 @@
     {
       "id": "P030",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 8.",
+      "targetHeading": "### 8.",
       "type": "required",
       "requirement": "Xuất KPI vào data/processed/kpi_*.csv.",
       "presentMarkers": [
@@ -390,7 +390,7 @@
     {
       "id": "P031",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 10.",
+      "targetHeading": "### 10.",
       "type": "required",
       "requirement": "Hình bao quát không gian, thời gian và LLM, được sinh tự động vào figures.",
       "presentMarkers": [
@@ -402,7 +402,7 @@
     {
       "id": "P032",
       "sourceSection": "cong-viec",
-      "targetHeading": "## 10.",
+      "targetHeading": "### 10.",
       "type": "required",
       "requirement": "Báo cáo PDF trong reports tối đa 10 trang, format sẽ công bố sau.",
       "presentMarkers": [
@@ -415,7 +415,7 @@
     {
       "id": "P033",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "required",
       "requirement": "LLM chuyển một mẫu review thành dữ liệu có cấu trúc.",
       "presentMarkers": [
@@ -427,7 +427,7 @@
     {
       "id": "P034",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "required",
       "requirement": "Trích xuất cảm xúc positive/mixed/negative, khía cạnh khen/chê và ngôn ngữ.",
       "presentMarkers": [
@@ -442,7 +442,7 @@
     {
       "id": "P035",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "choice",
       "requirement": "Gemini API miễn phí là hướng dẫn, nhà cung cấp khác được dùng khi tự trả phí và khai báo.",
       "presentMarkers": [
@@ -454,7 +454,7 @@
     {
       "id": "P036",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "choice",
       "requirement": "Nhóm tự chọn và giải thích cỡ mẫu, cách lấy mẫu.",
       "presentMarkers": [
@@ -466,7 +466,7 @@
     {
       "id": "P037",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "required",
       "requirement": "Có phương pháp đối chứng không dùng LLM và ít nhất 100 nhãn tay.",
       "presentMarkers": [
@@ -478,7 +478,7 @@
     {
       "id": "P038",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "required",
       "requirement": "Báo cáo accuracy/F1 của cả hai phương pháp và phân tích lỗi.",
       "presentMarkers": [
@@ -490,7 +490,7 @@
     {
       "id": "P039",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "required",
       "requirement": "Ước tính chi phí xử lý toàn bộ review của thành phố.",
       "presentMarkers": [
@@ -501,7 +501,7 @@
     {
       "id": "P040",
       "sourceSection": "llm",
-      "targetHeading": "## 9.",
+      "targetHeading": "### 9.",
       "type": "required",
       "requirement": "Ít nhất một KPI và một hình sử dụng kết quả LLM.",
       "presentMarkers": [
@@ -512,7 +512,7 @@
     {
       "id": "P041",
       "sourceSection": "minh-bach",
-      "targetHeading": "## 12.",
+      "targetHeading": "### 12.",
       "type": "required",
       "requirement": "AI_USAGE ở gốc repo và được cập nhật trong quá trình làm.",
       "presentMarkers": [
@@ -524,7 +524,7 @@
     {
       "id": "P042",
       "sourceSection": "minh-bach",
-      "targetHeading": "## 12.",
+      "targetHeading": "### 12.",
       "type": "required",
       "requirement": "Khai công cụ, công việc, prompt, bước/tệp liên quan, lỗi thật và cách đối chiếu.",
       "presentMarkers": [
@@ -538,7 +538,7 @@
     {
       "id": "P043",
       "sourceSection": "minh-bach",
-      "targetHeading": "## 12.",
+      "targetHeading": "### 12.",
       "type": "required",
       "requirement": "Khai đầy đủ không bị trừ điểm vì dùng AI, giấu hoặc khai man vi phạm chính sách.",
       "presentMarkers": [
@@ -550,7 +550,7 @@
     {
       "id": "P044",
       "sourceSection": "san-pham",
-      "targetHeading": "## 11.",
+      "targetHeading": "### 11.",
       "type": "choice",
       "requirement": "Python 3 với thư viện tự chọn, không bắt buộc pandas.",
       "presentMarkers": [
@@ -562,7 +562,7 @@
     {
       "id": "P045",
       "sourceSection": "san-pham",
-      "targetHeading": "## 11.",
+      "targetHeading": "### 11.",
       "type": "required",
       "requirement": "Phiên bản Python, khóa phiên bản thư viện và README đủ thông tin cài, chạy, khóa API, kết quả.",
       "presentMarkers": [
@@ -576,7 +576,7 @@
     {
       "id": "P046",
       "sourceSection": "san-pham",
-      "targetHeading": "## 14.",
+      "targetHeading": "### 14.",
       "type": "required",
       "requirement": "Tự clone vào thư mục mới, dựng môi trường và tạo lại số liệu, hình bằng một lệnh.",
       "presentMarkers": [
@@ -588,7 +588,7 @@
     {
       "id": "P047",
       "sourceSection": "san-pham",
-      "targetHeading": "## 11.",
+      "targetHeading": "### 11.",
       "type": "required",
       "requirement": "Giữ đầy đủ nhóm thư mục, tệp môi trường, từ điển dữ liệu và mẫu nhãn tay.",
       "presentMarkers": [
@@ -612,7 +612,7 @@
     {
       "id": "P048",
       "sourceSection": "san-pham",
-      "targetHeading": "## 11.",
+      "targetHeading": "### 11.",
       "type": "example",
       "requirement": "Tên mô-đun Python là gợi ý, có cache/skip LLM và notebook khảo sát tùy chọn.",
       "presentMarkers": [
@@ -630,7 +630,7 @@
     {
       "id": "P049",
       "sourceSection": "san-pham",
-      "targetHeading": "## 11.",
+      "targetHeading": "### 11.",
       "type": "example",
       "requirement": "Cấu hình Santiago giữ đủ khóa, ngày, tiền tệ, ngưỡng, cỡ mẫu, khía cạnh, cache và seed ví dụ.",
       "presentMarkers": [
@@ -649,7 +649,7 @@
     {
       "id": "P050",
       "sourceSection": "san-pham",
-      "targetHeading": "## 12.",
+      "targetHeading": "### 12.",
       "type": "required",
       "requirement": "Không để khóa trong mã/Git, dùng biến môi trường hoặc công cụ bí mật và hỗ trợ khóa của giảng viên.",
       "presentMarkers": [
@@ -661,7 +661,7 @@
     {
       "id": "P051",
       "sourceSection": "cham-diem",
-      "targetHeading": "## 13.",
+      "targetHeading": "### 13.",
       "type": "required",
       "requirement": "Vấn đáp khoảng 20 phút, không thuyết trình, hỏi bất kỳ mã hoặc số liệu của sản phẩm.",
       "presentMarkers": [
@@ -674,7 +674,7 @@
     {
       "id": "P052",
       "sourceSection": "cham-diem",
-      "targetHeading": "## 13.",
+      "targetHeading": "### 13.",
       "type": "required",
       "requirement": "Điểm nhóm là trần, điểm cá nhân điều chỉnh theo khả năng giải thích và không dùng AI khi vấn đáp.",
       "presentMarkers": [
@@ -688,7 +688,7 @@
     {
       "id": "P053",
       "sourceSection": "cham-diem",
-      "targetHeading": "## 13.",
+      "targetHeading": "### 13.",
       "type": "required",
       "requirement": "Bốn nhóm tiêu chí và thang điểm nhóm 10.",
       "presentMarkers": [
@@ -703,7 +703,7 @@
     {
       "id": "P054",
       "sourceSection": "cham-diem",
-      "targetHeading": "## 13.",
+      "targetHeading": "### 13.",
       "type": "pending",
       "requirement": "Trọng số rubric và mô tả mức điểm chưa được công bố đầy đủ.",
       "presentMarkers": [

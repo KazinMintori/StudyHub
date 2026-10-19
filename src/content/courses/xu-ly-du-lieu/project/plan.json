@@ -1,0 +1,325 @@
+{
+  "title": "Dự án độc lập Porto",
+  "status": "Implementation in progress; no invented completion percentage",
+  "city": "Porto",
+  "sampleSize": 120,
+  "seed": 20261019,
+  "stages": [
+    {
+      "id": "01",
+      "title": "Xác định câu hỏi và dựng khung",
+      "window": "Ngày 1–2",
+      "goal": "Có mục tiêu, định nghĩa chỉ số và một lệnh chạy từ đầu.",
+      "tasks": [
+        {
+          "id": "P01",
+          "title": "Giới hạn phạm vi",
+          "action": "Chọn Porto và câu hỏi về nguồn cung, lịch sẵn có, mức giá chào và trải nghiệm khách. Ghi rõ mẫu độc lập không phải phân công của lớp.",
+          "output": "Bản mô tả phạm vi và giới hạn.",
+          "check": "Mỗi câu hỏi có dữ liệu để trả lời, không hứa đo doanh thu thật.",
+          "after": []
+        },
+        {
+          "id": "P02",
+          "title": "Phác thảo bảng kết quả",
+          "action": "Định nghĩa trước bảy KPI, khóa, đơn vị, mẫu số và hình dự kiến. Kiểm khả năng so sánh qua snapshot.",
+          "output": "Danh mục KPI và phác thảo hình.",
+          "check": "Giá chỉ dùng mốc cuối, review lặp không được đếm như ý kiến mới.",
+          "after": [
+            "P01"
+          ]
+        },
+        {
+          "id": "P03",
+          "title": "Dựng chương trình điều phối",
+          "action": "Tạo cấu hình, thư mục, môi trường, README nháp và lệnh chạy. Nối bước dần từ đầu thay vì chờ viết xong mới ghép.",
+          "output": "Khung repo chạy được và ghi trạng thái từng bước.",
+          "check": "Một lệnh đọc cấu hình và báo rõ đầu vào còn thiếu.",
+          "after": [
+            "P01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Tạo đầu vào có thể đối chiếu",
+      "window": "Ngày 2–4",
+      "goal": "Có cùng một tập listing qua bốn snapshot, giữ nguyên nguồn.",
+      "tasks": [
+        {
+          "id": "P04",
+          "title": "Lưu nguồn và dấu vết tải",
+          "action": "Tải CSV nén và GeoJSON, ghi URL, ngày, kích thước, SHA256. Đọc luồng thay vì nạp mọi bảng vào bộ nhớ.",
+          "output": "Tệp thô và manifest.",
+          "check": "Mọi tệp có dấu vết nguồn, tệp tải dở không được dùng.",
+          "after": [
+            "P03"
+          ]
+        },
+        {
+          "id": "P05",
+          "title": "Chọn mẫu độc lập",
+          "action": "Chọn có seed từ giao các listing ID ở bốn mốc. Lưu tập mã và giải thích thiên lệch của nhóm tồn tại qua mọi mốc.",
+          "output": "Danh sách mã mẫu và mô tả cách chọn.",
+          "check": "Đổi thứ tự hàng nguồn không đổi mẫu đã lưu.",
+          "after": [
+            "P04"
+          ]
+        },
+        {
+          "id": "P06",
+          "title": "Giữ đúng đơn vị quan sát",
+          "action": "Lọc listings/calendar theo listing ID. Theo dõi review duy nhất riêng với lần xuất hiện ở snapshot. Chuẩn hóa mã dưới dạng chuỗi.",
+          "output": "Ba bảng đã chọn và các khóa.",
+          "check": "Khóa snapshot–listing, snapshot–listing–ngày và review ID không bị lẫn.",
+          "after": [
+            "P05"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Xây QA theo hành động",
+      "window": "Ngày 4–7",
+      "goal": "Mỗi vấn đề có cờ, quyết định và bằng chứng.",
+      "tasks": [
+        {
+          "id": "P07",
+          "title": "Phân mức và hành động",
+          "action": "Tách lỗi làm sai cấu trúc, cảnh báo cần xem và điều kiện dùng dòng cho từng KPI. Chỉ dừng bước chịu ảnh hưởng khi cần.",
+          "output": "Danh mục quy tắc QA.",
+          "check": "Mỗi quy tắc trả lời được phát hiện gì rồi làm gì.",
+          "after": [
+            "P06"
+          ]
+        },
+        {
+          "id": "P08",
+          "title": "Giữ dữ liệu ngoại lệ",
+          "action": "Giữ giá gốc, cờ chuyển đổi và lý do cách ly. Thiếu giá không làm mất listing khỏi chỉ số đếm.",
+          "output": "Bảng chuẩn hóa và tệp ngoại lệ.",
+          "check": "Không ghi đè raw, không cắt giá về ngưỡng để che ngoại lai.",
+          "after": [
+            "P07"
+          ]
+        },
+        {
+          "id": "P09",
+          "title": "Ghi ảnh hưởng trước/sau",
+          "action": "Đếm dòng và đối chiếu KPI trên cùng định nghĩa, ghi rõ các quy tắc chồng lấn.",
+          "output": "reports/qa_report.csv.",
+          "check": "Mỗi thay đổi được giải thích bằng quy tắc và mẫu số.",
+          "after": [
+            "P08",
+            "P11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Tính và kiểm chứng KPI",
+      "window": "Ngày 6–9",
+      "goal": "Bảng kết quả có thể tính lại độc lập.",
+      "tasks": [
+        {
+          "id": "P10",
+          "title": "Kiểm một trường hợp nhỏ",
+          "action": "Tạo dữ liệu giả định có thiếu giá, giá lớn và khóa lặp. Tính tay hoặc bằng cách độc lập để đối chiếu.",
+          "output": "Bộ kiểm thử công thức và mẫu số.",
+          "check": "Số lượng, tỷ lệ và trung vị đúng ngay cả khi mẫu số bằng 0.",
+          "after": [
+            "P02",
+            "P07"
+          ]
+        },
+        {
+          "id": "P11",
+          "title": "Tổng hợp theo khu vực",
+          "action": "Tính trực tiếp từ các hàng đủ điều kiện theo thành phố mẫu và neighbourhood_cleansed. Không lấy trung bình các tỷ lệ khu khi mẫu số khác nhau.",
+          "output": "kpi_*.csv với giá trị, đơn vị, N và trạng thái.",
+          "check": "Tổng và tỷ lệ khớp phép tính độc lập.",
+          "after": [
+            "P08",
+            "P10"
+          ]
+        },
+        {
+          "id": "P12",
+          "title": "Đối chiếu cửa sổ lịch",
+          "action": "Dùng cùng 30 ngày tính từ mỗi snapshot. Báo số ngày quan sát và mức đầy đủ.",
+          "output": "Chỉ số sẵn có cùng cửa sổ quan sát.",
+          "check": "Không gọi không sẵn có là đã được đặt, không gọi đây là occupancy.",
+          "after": [
+            "P06",
+            "P10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Chuẩn bị và đánh giá LLM",
+      "window": "Ngày 4–12, làm song song với QA/KPI",
+      "goal": "Có nhãn người, baseline và dự đoán cùng cấu trúc để so sánh.",
+      "tasks": [
+        {
+          "id": "P13",
+          "title": "Viết hướng dẫn nhãn",
+          "action": "Chọn mẫu review duy nhất, tạo cột nhãn trống. Người đọc tự gán sentiment, khía cạnh và ngôn ngữ trước khi xem dự đoán.",
+          "output": "Hướng dẫn gán nhãn và nhãn tham chiếu.",
+          "check": "Bộ chấm cuối có ít nhất 100 review do người gán, tách tập chỉnh prompt.",
+          "after": [
+            "P06"
+          ]
+        },
+        {
+          "id": "P14",
+          "title": "Viết hai cách dự đoán",
+          "action": "Chạy baseline từ quy tắc, xây adapter Gemini, kiểm cấu trúc, cache theo nội dung/mô hình/prompt và ghi lỗi có thể thử lại.",
+          "output": "Baseline, adapter, prompt, cache và log.",
+          "check": "Có thể gọi lại bằng khóa môi trường, skip không tạo kết quả giả.",
+          "after": [
+            "P03",
+            "P13"
+          ]
+        },
+        {
+          "id": "P15",
+          "title": "Đánh giá cùng nhiệm vụ",
+          "action": "Chấm cả hai trên cùng nhãn người. Báo accuracy/F1, độ phủ, lỗi thiếu và ví dụ sai.",
+          "output": "evaluation.json và phân tích lỗi.",
+          "check": "Không chỉ chấm phần gọi API thành công, không dùng AI làm nhãn người.",
+          "after": [
+            "P13",
+            "P14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Biến kết quả thành hình",
+      "window": "Ngày 10–14",
+      "goal": "Tối thiểu năm hình có câu hỏi, đơn vị và phạm vi.",
+      "tasks": [
+        {
+          "id": "P16",
+          "title": "Vẽ khu vực",
+          "action": "Ghép KPI theo tên khu với GeoJSON, phân biệt không có dữ liệu với giá trị 0.",
+          "output": "Bản đồ cùng N và chú giải.",
+          "check": "Khóa ghép khớp, không tô vùng thiếu như 0.",
+          "after": [
+            "P11"
+          ]
+        },
+        {
+          "id": "P17",
+          "title": "So sánh thời gian và phân bố",
+          "action": "Vẽ lịch sẵn có, loại phòng, phân bố giá mốc cuối và heatmap review. Dùng nhãn và cùng quy tắc định dạng.",
+          "output": "Bộ hình từ chương trình.",
+          "check": "Không vẽ chuỗi giá bốn mốc khi chỉ được dùng giá cuối.",
+          "after": [
+            "P11",
+            "P12"
+          ]
+        },
+        {
+          "id": "P18",
+          "title": "Tích hợp LLM",
+          "action": "Chỉ sau khi có dự đoán đã đánh giá mới tính KPI và hình theo cảm xúc/khía cạnh.",
+          "output": "KPI LLM và hình có độ phủ, mẫu số.",
+          "check": "Thiếu dự đoán hoặc nhãn đánh giá thì ghi đang chờ, không bịa tỷ lệ.",
+          "after": [
+            "P15",
+            "P11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Viết và kiểm tra bản bàn giao",
+      "window": "Ngày 14–18",
+      "goal": "Báo cáo gắn với tệp và mã nguồn cụ thể.",
+      "tasks": [
+        {
+          "id": "P19",
+          "title": "Viết báo cáo theo bằng chứng",
+          "action": "Giới hạn PDF theo đề. Mỗi kết luận trỏ tới hình/bảng và nêu giới hạn mẫu, QA, LLM.",
+          "output": "PDF, từ điển dữ liệu, AI_USAGE.",
+          "check": "Không gọi kết quả mẫu là toàn thị trường, không gán độ tin cậy chưa đo.",
+          "after": [
+            "P09",
+            "P16",
+            "P17",
+            "P18"
+          ]
+        },
+        {
+          "id": "P20",
+          "title": "Thử dựng lại từ đầu",
+          "action": "Clone vào thư mục mới, dựng Python/thư viện và chạy một lệnh với cấu hình. Kiểm khóa API, tệp đầu ra và chế độ skip.",
+          "output": "Biên bản chạy sạch.",
+          "check": "Người khác làm đúng README sẽ tạo lại các tệp đã nêu.",
+          "after": [
+            "P19",
+            "P14"
+          ]
+        },
+        {
+          "id": "P21",
+          "title": "Kiểm tra rò rỉ và bản nộp",
+          "action": "Soát dữ liệu thô, bí mật, giấy phép, phiên bản và tag. Ghi commit vào báo cáo.",
+          "output": "Danh sách bàn giao và tag.",
+          "check": "Không có API key hoặc dữ liệu nhóm trong kho công khai.",
+          "after": [
+            "P20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Tự bảo vệ lựa chọn và giữ thời gian dự phòng",
+      "window": "Ngày 19–21",
+      "goal": "Mỗi con số đều có người giải thích được cách tạo.",
+      "tasks": [
+        {
+          "id": "P22",
+          "title": "Lần theo một con số",
+          "action": "Chọn ngẫu nhiên kết quả, tìm về công thức, dòng đủ điều kiện, QA và snapshot.",
+          "output": "Ghi chú diễn giải ngắn.",
+          "check": "Giải thích được cả phần không trực tiếp viết.",
+          "after": [
+            "P19"
+          ]
+        },
+        {
+          "id": "P23",
+          "title": "Thử đầu vào thay đổi",
+          "action": "Đổi cấu hình một snapshot hoặc kích thước mẫu để tìm ngày, đường dẫn và ngưỡng còn ghi cứng.",
+          "output": "Kết quả thử cấu hình khác.",
+          "check": "Lỗi đầu vào được báo rõ, không âm thầm tái dùng nhãn/cache sai.",
+          "after": [
+            "P20"
+          ]
+        },
+        {
+          "id": "P24",
+          "title": "Chỉ mở rộng khi phần chính đạt",
+          "action": "Ưu tiên phân tích độ nhạy QA. Chỉ làm dự báo hoặc mô hình occupancy khi có dữ liệu, giả thiết và đánh giá phù hợp.",
+          "output": "Phụ lục tùy chọn hoặc quyết định dừng mở rộng.",
+          "check": "Không đánh đổi phần bắt buộc lấy một mô hình chưa có phép chấm.",
+          "after": [
+            "P21",
+            "P22",
+            "P23"
+          ]
+        }
+      ]
+    }
+  ]
+}

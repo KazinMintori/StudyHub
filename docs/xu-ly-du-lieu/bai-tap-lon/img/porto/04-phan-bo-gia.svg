@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 540" width="360" height="540" role="img"><title>Số listing theo khoảng giá</title><rect width="360" height="540" fill="#fffdf9" rx="12"/>
+<text x="20.00" y="30.00" font-family="Arial, sans-serif" font-size="18" fill="#262139" text-anchor="start" font-weight="700">Số listing theo khoảng giá</text>
+<text x="20.00" y="57.00" font-family="Arial, sans-serif" font-size="14" fill="#625a75" text-anchor="start" font-weight="400">EUR/đêm · 2026-06-23 · N giá hợp lệ =</text>
+<text x="20.00" y="76.00" font-family="Arial, sans-serif" font-size="14" fill="#625a75" text-anchor="start" font-weight="400">111</text>
+<text x="20.00" y="147.00" font-family="Arial, sans-serif" font-size="15" fill="#262139" text-anchor="start" font-weight="400">0–&lt;50</text>
+<rect x="110.00" y="130.00" width="29.62" height="25.00" fill="#267d70" stroke="none" rx="3"/>
+<text x="292.00" y="148.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">7</text>
+<text x="20.00" y="200.00" font-family="Arial, sans-serif" font-size="15" fill="#262139" text-anchor="start" font-weight="400">50–&lt;100</text>
+<rect x="110.00" y="183.00" width="165.00" height="25.00" fill="#267d70" stroke="none" rx="3"/>
+<text x="292.00" y="201.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">39</text>
+<text x="20.00" y="253.00" font-family="Arial, sans-serif" font-size="15" fill="#262139" text-anchor="start" font-weight="400">100–&lt;150</text>
+<rect x="110.00" y="236.00" width="160.77" height="25.00" fill="#267d70" stroke="none" rx="3"/>
+<text x="292.00" y="254.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">38</text>
+<text x="20.00" y="306.00" font-family="Arial, sans-serif" font-size="15" fill="#262139" text-anchor="start" font-weight="400">150–&lt;200</text>
+<rect x="110.00" y="289.00" width="55.00" height="25.00" fill="#267d70" stroke="none" rx="3"/>
+<text x="292.00" y="307.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">13</text>
+<text x="20.00" y="359.00" font-family="Arial, sans-serif" font-size="15" fill="#262139" text-anchor="start" font-weight="400">200–&lt;300</text>
+<rect x="110.00" y="342.00" width="33.85" height="25.00" fill="#267d70" stroke="none" rx="3"/>
+<text x="292.00" y="360.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">8</text>
+<text x="20.00" y="412.00" font-family="Arial, sans-serif" font-size="15" fill="#262139" text-anchor="start" font-weight="400">≥300</text>
+<rect x="110.00" y="395.00" width="25.38" height="25.00" fill="#267d70" stroke="none" rx="3"/>
+<text x="292.00" y="413.00" font-family="Arial, sans-serif" font-size="16" fill="#262139" text-anchor="start" font-weight="400">6</text>
+<text x="20.00" y="495.00" font-family="Arial, sans-serif" font-size="14" fill="#625a75" text-anchor="start" font-weight="400">Mỗi cột là một khoảng giá, không phải</text>
+<text x="20.00" y="514.00" font-family="Arial, sans-serif" font-size="14" fill="#625a75" text-anchor="start" font-weight="400">các khoảng có độ rộng bằng nhau.</text>
+</svg>
