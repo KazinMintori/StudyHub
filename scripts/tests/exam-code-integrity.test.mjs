@@ -18,3 +18,8 @@ test('Entity decoding preserves regex escapes and source comparison permits addi
   assert.equal(htmlCodeText('r&quot;\\.\\s+&lt;=&amp;&quot;'), 'r"\\.\\s+<=&"')
   assertCodePreserved('Dùng `r"\\d+"`.', md.render('Gọi `re` với `r"\\d+"`.'), 'regex')
 })
+test('Rejects damaged HTML entities even in prose without code delimiters', () => {
+  assert.throws(() => assertCodePreserved('So sánh.', '<p>Giá &gt,= 0</p>', 'entity'))
+  assert.throws(() => assertCodePreserved('Chuỗi.', '<p>&quot,A&quot,</p>', 'quote'))
+  assertCodePreserved('HTML.', '<p>Ký tự &lt; và &gt;.</p>', 'valid entities')
+})

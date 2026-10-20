@@ -648,7 +648,7 @@
         },
         {
           "key": "B",
-          "html": "<p>x[&quot,daily&quot,] là chuỗi JSON, phải tách từng ký tự thành hàng.</p>\n",
+          "html": "<p>x[&quot;daily&quot;] là chuỗi JSON, phải tách từng ký tự thành hàng.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do json() đã giải mã object lồng nhau thành dict.</p>\n"
         },
         {
@@ -658,7 +658,7 @@
         },
         {
           "key": "D",
-          "html": "<p>pd.DataFrame(x[&quot,daily_units&quot,]) là bảng nhiệt độ ba ngày.</p>\n",
+          "html": "<p>pd.DataFrame(x[&quot;daily_units&quot;]) là bảng nhiệt độ ba ngày.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do daily_units mô tả đơn vị, không chứa các quan sát ngày.</p>\n"
         }
       ],

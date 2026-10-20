@@ -30,6 +30,7 @@ export function assertCodePreserved(source, rendered, label) {
 }
 export function assertCodeLiteralsPreserved(expected, rendered, label) {
   const actual = renderedCodeLiterals(rendered)
+  assert(!/&(?:quot|amp|lt|gt|apos|nbsp|#\d+|#x[\da-f]+),/i.test(rendered), `${label}: HTML entity terminator changed to comma`)
   assert(!/[<>]\s*,\s*=/.test(htmlCodeText(rendered)), `${label}: comma inserted into comparison operator`)
   assert.deepEqual(actual.blocks, expected.blocks, `${label}: exact fenced code and output`)
   for (const literal of expected.inline) {

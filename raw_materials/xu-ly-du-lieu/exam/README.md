@@ -101,3 +101,5 @@ tài liệu trực tuyến. Các phép kiểm chỉ có ý nghĩa trong phạm v
 `verify-data-exam.mjs` so sánh 12.278 đoạn mã, bao gồm mã nội dòng và mã nhiều dòng. Phép kiểm phát hiện đổi toán tử, dấu phẩy trong chuỗi, thay output hoặc bỏ đoạn mã. Các tên biến bổ sung trong lời giảng vẫn được phép xuất hiện. Kiểm tra trình duyệt đối chiếu tiếp nội dung các thẻ `code` với dữ liệu đã được kiểm chứng.
 
 Mốc rà ngày 20/10/2026 phục hồi các phương án bị chèn dấu phẩy, các literal bị đổi khi sửa câu chữ và các đề còn thiếu hoặc thay đoạn mã. Mã câu hỏi và đáp án chấm điểm được giữ nguyên. Hai trường hợp người dùng chỉ ra còn được chạy bằng Python và đối chiếu giá trị tuple. Đối chiếu ký tự không thay cho kiểm chứng tính đúng của đáp án.
+
+Không áp dụng quy tắc dấu câu trực tiếp lên toàn bộ chuỗi HTML. Thay `;` thành `,` làm hỏng cả `&gt;`, `&lt;` và `&quot;`, khiến dấu phẩy xuất hiện trong toán tử và chuỗi. Phép kiểm từ chối các HTML entity có dấu kết thúc bị đổi, kể cả trong văn xuôi không có thẻ `code`. Mọi biên tập dấu câu phải làm trên token văn bản và giữ nguyên mã, công thức, thuộc tính HTML cùng các entity.
