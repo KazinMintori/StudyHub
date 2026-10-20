@@ -49,12 +49,23 @@ try {
             detailsOpen:document.querySelector('.exam-essay__details')?.open}
         },question)
         assert.equal(before.actual,before.expected,`${question.id}: complete prompt`)
+        const literalCode = await page.evaluate(q => {
+          const expected = document.createElement('div'); expected.innerHTML=q.promptHtml
+          const codes = node => [...node.querySelectorAll('code')].map(n=>n.textContent)
+          return {actual:codes(document.querySelector('.exam-question__prompt')),expected:codes(expected)}
+        }, question)
+        assert.deepEqual(literalCode.actual,literalCode.expected,`${question.id}: every inline and fenced prompt literal`)
         assert.equal((before.actual.match(/\$/g)||[]).length,(raw.promptMarkdown.match(/\$/g)||[]).length,`${question.id}: literal currency/regex dollar signs preserved`)
         const codes=[...raw.promptMarkdown.matchAll(/^```[^\r\n]*\r?\n(.*?)^```[ \t]*$/gms)].map(m=>m[1].replace(/\r\n/g,'\n').trimEnd())
         assert.deepEqual(before.code,codes,`${question.id}: code text and indentation preserved`)
         if(question.kind==='quiz') {
           const optionCodes=raw.options.map(option=>[...option.markdown.matchAll(/^```[^\r\n]*\r?\n(.*?)^```[ \t]*$/gms)].map(m=>m[1].replace(/\r\n/g,'\n').trimEnd()))
           assert.deepEqual(before.optionCodes,optionCodes,`${question.id}: all option code blocks preserved`)
+          const optionLiterals=await page.evaluate(q=>{
+            const codes=n=>[...n.querySelectorAll('code')].map(c=>c.textContent)
+            return {actual:[...document.querySelectorAll('.exam-choice__html')].map(codes),expected:q.options.map(o=>{const n=document.createElement('div');n.innerHTML=o.html;return codes(n)})}
+          },question)
+          assert.deepEqual(optionLiterals.actual,optionLiterals.expected,`${question.id}: every option literal including quotes, commas and operators`)
           assert.equal(before.revealed,0,`${question.id}: no answer before choosing`)
           assert.deepEqual(await page.$$eval('.exam-choice__key-label',nodes=>nodes.map(n=>n.textContent.trim())),['A.','B.','C.','D.'])
           if(question===bank.questions[0]) await page.screenshot({path:`${output}/bai-${lesson}-${width}-quiz.png`})

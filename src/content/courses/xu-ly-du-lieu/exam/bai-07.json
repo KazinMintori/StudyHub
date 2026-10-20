@@ -195,7 +195,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Mẫu rộng chính xác hơn vì 18&gt,14.</p>\n",
+          "html": "<p>Mẫu rộng chính xác hơn vì 18&gt;14.</p>\n",
           "explanationHtml": "<p>Phương án này đồng nhất số khớp với độ chính xác.</p>\n"
         },
         {

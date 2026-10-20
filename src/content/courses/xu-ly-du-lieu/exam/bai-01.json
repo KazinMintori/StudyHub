@@ -303,7 +303,7 @@
       "id": "B1-013",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trên hệ điều hành Linux (dùng shell Bash), môi trường ảo của dự án A (<code>.venv A</code>) đang được kích hoạt, trong khi thư mục làm việc hiện thời (working directory) lại là dự án B. Bạn đã xác minh đường dẫn tệp thực thi <code>/du_an_B/.venv/bin/python</code> chính là trình thông dịch Python thuộc môi trường ảo của dự án B. Tiếp theo, bạn thực thi câu lệnh sau trong terminal:</p>\n<div class=\"language-bash vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">bash</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\">/du_an_B/.venv/bin/python</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> -m</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pip</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> install</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pandas</span></span></code></pre>\n</div>\n<p>Sau khi lệnh cài đặt hoàn tất thành công, gói thư viện <code>pandas</code> sẽ được cài đặt vào môi trường nào?</p>\n",
+      "promptHtml": "<p>Linux/Bash: <code>venv</code> A vẫn đang kích hoạt và cwd là B. Bạn đã kiểm tra đường dẫn /du_an_B/.venv/bin/python chính là Python của venv B. Lệnh sau thành công:</p>\n<div class=\"language-bash vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">bash</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\">/du_an_B/.venv/bin/python</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> -m</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pip</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> install</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> pandas</span></span></code></pre>\n</div><p>Gói được cài vào đâu?</p>\n",
       "options": [
         {
           "key": "A",
@@ -614,7 +614,7 @@
         },
         {
           "key": "C",
-          "html": "<p><code>python -m pip freeze &gt, requirements.txt</code></p>\n",
+          "html": "<p><code>python -m pip freeze &gt; requirements.txt</code></p>\n",
           "explanationHtml": "<p>Sai: Lệnh <code>pip freeze</code> dùng để xuất danh sách gói, không kích hoạt môi trường ảo.</p>\n"
         },
         {
@@ -751,22 +751,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p><code>1, 1, 1</code></p>\n",
+          "html": "<p><code>1; 1; 1</code></p>\n",
           "explanationHtml": "<p>Sai: Lịch chạy có hai lần tăng liên tiếp trước khi A đặt lại dem về 0.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>In ra lần lượt là: 1, 2, 1 (vì lần chạy ô A thứ hai đã đặt lại biến <code>dem</code> về 0 trước lần chạy ô B cuối cùng).</p>\n",
+          "html": "<p><code>1; 2; 1</code></p>\n",
           "explanationHtml": "<p>Đúng: Ba lần chạy B lần lượt in 1, 2, 1 vì A khởi tạo lại biến trước lần cuối.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p><code>1, 2, 3</code></p>\n",
+          "html": "<p><code>1; 2; 3</code></p>\n",
           "explanationHtml": "<p>Sai: Sau lần chạy A thứ hai, dem được đặt lại 0 nên B cuối in 1, không phải 3.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p><code>0, 1, 0</code></p>\n",
+          "html": "<p><code>0; 1; 0</code></p>\n",
           "explanationHtml": "<p>Sai: Lần chạy B đầu tiên đã in 1, và lần B thứ hai in 2 trước khi A đặt lại biến.</p>\n"
         }
       ],
@@ -837,11 +837,11 @@
       "id": "B1-035",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trên hệ điều hành Linux (dùng shell Bash), môi trường ảo của dự án đã được kích hoạt và lệnh <code>python</code> đang trỏ chính xác vào môi trường ảo này. Trong thư mục dự án đã có sẵn tệp <code>requirements.txt</code>. Câu lệnh nào sau đây dùng để cài đặt toàn bộ danh sách các thư viện được liệt kê trong tệp đó vào môi trường ảo hiện hành?</p>\n",
+      "promptHtml": "<p>Linux/Bash: <code>venv</code> dự án đã kích hoạt; python trỏ đúng venv. Có requirements.txt cần cài. Lệnh nào dùng danh sách đó để cài thư viện?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p><code>python -m pip freeze &gt, requirements.txt</code></p>\n",
+          "html": "<p><code>python -m pip freeze &gt; requirements.txt</code></p>\n",
           "explanationHtml": "<p>Sai: <code>pip freeze</code> xuất danh sách gói ra tệp, không cài theo danh sách.</p>\n"
         },
         {
@@ -1204,22 +1204,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p><code>150, 150</code></p>\n",
+          "html": "<p><code>150; 150</code></p>\n",
           "explanationHtml": "<p>Sai: Do cell A sau khi sửa chưa được bấm chạy lại nên biến trong bộ nhớ chưa thể cập nhật ngay thành 50 ở lần chạy B đầu tiên.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p><code>6, 6</code></p>\n",
+          "html": "<p><code>6; 6</code></p>\n",
           "explanationHtml": "<p>Sai: Sau khi cell A mới đã được thực thi thì biến <code>a</code> đã mang giá trị 50, do đó lần chạy B cuối cùng không thể giữ kết quả cũ là 6.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>In ra lần lượt là: 6 và 150 (lần đầu in ra 6 do ô A chưa chạy lại nên biến <code>a</code> trong bộ nhớ vẫn bằng 2, lần sau in ra 150 sau khi ô A mới đã được thực thi và cập nhật <code>a = 50</code>).</p>\n",
+          "html": "<p><code>6; 150</code></p>\n",
           "explanationHtml": "<p>Đúng: Khi sửa cell A mà chưa thực thi lại thì giá trị của biến <code>a</code> trong bộ nhớ vẫn là 2, khiến lần chạy B kế tiếp in ra 6. Chỉ sau khi cell A mới được chạy thì <code>a</code> mới cập nhật thành 50, giúp lần chạy B cuối cùng in ra 150.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p><code>NameError, 150</code></p>\n",
+          "html": "<p><code>NameError; 150</code></p>\n",
           "explanationHtml": "<p>Sai: Biến <code>a</code> đã được định nghĩa từ trước và vẫn tồn tại trong bộ nhớ nên không thể phát sinh lỗi <code>NameError</code>.</p>\n"
         }
       ],

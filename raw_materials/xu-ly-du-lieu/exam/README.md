@@ -93,3 +93,11 @@ Tài liệu kỹ thuật dùng để đối chiếu các điểm phụ thuộc t
 Tài liệu trực tuyến được đọc ngày 18/10/2026. Phiên bản chạy thực tế được
 ghi trong báo cáo QA, không đồng nhất phiên bản cài cục bộ với phiên bản
 tài liệu trực tuyến. Các phép kiểm chỉ có ý nghĩa trong phạm vi đã thực hiện.
+
+## Giữ nguyên mã khi biên tập văn phong
+
+`code-integrity.json` lưu riêng các đoạn mã và output của đề cùng lời giải đã kiểm tra ở commit `e81119de`. Bản tham chiếu này không được tự sinh lại từ HTML vừa sửa chỉ để làm kiểm tra vượt qua. Các phương án còn được đối chiếu trực tiếp với Markdown nguồn, độc lập với hash render.
+
+`verify-data-exam.mjs` so sánh 12.278 đoạn mã, bao gồm mã nội dòng và mã nhiều dòng. Phép kiểm phát hiện đổi toán tử, dấu phẩy trong chuỗi, thay output hoặc bỏ đoạn mã. Các tên biến bổ sung trong lời giảng vẫn được phép xuất hiện. Kiểm tra trình duyệt đối chiếu tiếp nội dung các thẻ `code` với dữ liệu đã được kiểm chứng.
+
+Mốc rà ngày 20/10/2026 phục hồi các phương án bị chèn dấu phẩy, các literal bị đổi khi sửa câu chữ và các đề còn thiếu hoặc thay đoạn mã. Mã câu hỏi và đáp án chấm điểm được giữ nguyên. Hai trường hợp người dùng chỉ ra còn được chạy bằng Python và đối chiếu giá trị tuple. Đối chiếu ký tự không thay cho kiểm chứng tính đúng của đáp án.

@@ -186,7 +186,7 @@
       "id": "B6-007",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Một yêu cầu HTTP gửi tới máy chủ API nhận về mã trạng thái phản hồi HTTP 400 (Bad Request), kèm theo nội dung văn bản JSON thông báo lỗi <code>{\"error\": true, \"reason\": \"invalid date\"}</code>:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">x </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> r.json()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">type</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(x).</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">__name__</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">r.raise_for_status()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'xong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div>\n<p>Điều gì sẽ xảy ra khi lập trình viên gọi phương thức <code>r.raise_for_status()</code> trên đối tượng phản hồi <code>r</code>?</p>\n",
+      "promptHtml": "<p>Cho sẵn r là phản hồi HTTP 400, nội dung JSON hợp lệ <code>{&quot;error&quot;:true,&quot;reason&quot;:&quot;tham số không hợp lệ&quot;}</code>. Không có lỗi mạng:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">x </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> r.json()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">type</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(x).</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">__name__</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">r.raise_for_status()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'xong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div><p>Điều gì xảy ra?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1306,22 +1306,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Không sử dụng mệnh đề WHERE, mà dùng <code>HAVING AVG(gia) &gt,= 60 AND COUNT(*) &gt,= 2</code>.</p>\n",
+          "html": "<p>Không WHERE; HAVING AVG(gia)&gt;=60 AND COUNT(*)&gt;=2.</p>\n",
           "explanationHtml": "<p>Phương án này thay đổi câu hỏi sang <code>mean</code> nhóm và tổng hàng, giữ cả A dù chỉ một giá đạt ngưỡng.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Không sử dụng mệnh đề WHERE, mà dùng <code>HAVING COUNT(gia) &gt,= 2</code> vì mọi mức giá đã biết đều đạt từ 60 trở lên.</p>\n",
+          "html": "<p>Không WHERE; HAVING COUNT(gia)&gt;=2, vì mọi giá biết đều đạt 60.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do giá biết không đồng nghĩa giá đạt ngưỡng. A có 20 biết nhưng không đạt.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>WHERE gia&gt,=60 rồi GROUP BY khu, không HAVING.</p>\n",
+          "html": "<p>WHERE gia&gt;=60 rồi GROUP BY khu, không HAVING.</p>\n",
           "explanationHtml": "<p>Phương án này chưa kiểm ít nhất hai listing, sẽ giữ nhầm A.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>WHERE gia&gt,=60 rồi GROUP BY khu, HAVING COUNT(*)&gt,=2 và AVG(gia).</p>\n",
+          "html": "<p>WHERE gia&gt;=60 rồi GROUP BY khu, HAVING COUNT(*)&gt;=2 và AVG(gia).</p>\n",
           "explanationHtml": "<p>Lọc giá trước đếm/tính <code>mean</code>. A còn một hàng nên bị loại, B hai hàng <code>mean</code> 80.</p>\n"
         }
       ],
@@ -1527,7 +1527,7 @@
       "id": "B6-055",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong phân tích dữ liệu du lịch lưu trú, phân biệt ranh giới thống kê giữa chỉ số 'Tỷ lệ cơ sở lưu trú có điều hòa không khí' (tính trên tập danh mục phòng) và chỉ số 'Tỷ lệ khách thuê đặt phòng có điều hòa' (tính trên tập giao dịch đặt phòng). Sự khác biệt này phản ánh điều gì?</p>\n",
+      "promptHtml": "<p>Snapshot l có một hàng mỗi listing: A,B,C là nguyên căn, D là phòng. Trong cùng phạm vi, bảng review có sáu hàng: <code>listing_id</code> A,B,D,D,D,D. Không có mã lạ. Một phân tích khác đã cho hệ số tương quan giữa nhiệt độ ngày và số review/ngày r=0.08. Nhận định nào đúng?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1561,7 +1561,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Thực hiện nhóm trên tất cả các năm rồi lọc bằng <code>HAVING COUNT(*) &gt,= 2</code>, thu được kết quả A: 4 và B: 2 nên đây là phương án đúng.</p>\n",
+          "html": "<p>Nhóm mọi năm rồi HAVING COUNT(*)&gt;=2; được A:4,B:2 nên đúng.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do đã trả lời số review mọi năm, giữ nhầm A.</p>\n"
         },
         {
@@ -1576,7 +1576,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Lọc bằng <code>WHERE year(date) = 2025</code> trước khi <code>GROUP BY listing_id</code> và kèm theo <code>HAVING COUNT(*) &gt,= 2</code>, thu được kết quả B: 2.</p>\n",
+          "html": "<p>WHERE year(date)=2025 trước GROUP BY listing_id, HAVING COUNT(*)&gt;=2; được B:2.</p>\n",
           "explanationHtml": "<p>Lọc phạm vi năm trước tính n. A không đủ dù có nhiều review cũ.</p>\n"
         }
       ],

@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { buildThemeConfig } from '../src/features/course/services/build-navigation.mjs'
+import { assertCodePreserved, assertCodeLiteralsPreserved } from './build/exam-code-integrity.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const directory = path.join(root, 'raw_materials/xu-ly-du-lieu/exam')
@@ -20,6 +21,8 @@ const expected = [60, 60, 72, 60, 72, 72, 80, 72]
 const coverage = await read(path.join(directory, 'coverage.json'))
 const rendered = await read(path.join(directory, 'render-coverage.json'))
 const context = await read(path.join(directory, 'question-context.json'))
+const codeIntegrity = await read(path.join(directory, 'code-integrity.json'))
+let checkedCodeLiterals = 0
 let total = 0, quiz = 0, essay = 0
 const ids = new Set()
 for (let number = 1; number <= 8; number++) {
@@ -59,6 +62,13 @@ for (let number = 1; number <= 8; number++) {
     assert(!ids.has(question.id), `Duplicate question: ${question.id}`)
     ids.add(question.id)
     const output = compiled.questions[index]
+    const certifiedCode = codeIntegrity.questions[question.id]
+    assert(certifiedCode, `${question.id}: independent code reference exists`)
+    checkedCodeLiterals += assertCodeLiteralsPreserved(certifiedCode.prompt, output.promptHtml, `${question.id}/prompt`)
+    checkedCodeLiterals += assertCodeLiteralsPreserved(certifiedCode.answer, output.answerHtml, `${question.id}/answer`)
+    for (const [optionIndex, option] of question.options.entries()) {
+      checkedCodeLiterals += assertCodePreserved(option.markdown, output.options[optionIndex].html, `${question.id}/${option.key}`)
+    }
     assert(question.promptMarkdown.trim(), `${question.id}: prompt`)
     assert(question.answerMarkdown.trim(), `${question.id}: original answer`)
     assert(output.promptHtml.trim(), `${question.id}: rendered prompt`)
@@ -122,3 +132,4 @@ assert.deepEqual(navigation.sidebar['/xu-ly-du-lieu/'][0].items.map(item=>item.t
 const ordinary = buildThemeConfig({courseCatalog:[{id:'other',name:'Khác',lessons:[]}],wikiGroups:[],concepts:{}})
 assert(!ordinary.sidebar['/other/'][0].items.some(item=>item.text==='Ôn thi'))
 console.log(`PASS ${total} questions: ${quiz} quiz, ${essay} essays; source coverage, IDs, choices and navigation${draft ? ' (review pending)' : ', reviewed-key consistency and explanation structure'}. This structural check does not prove every answer.`)
+console.log(`PASS ${checkedCodeLiterals} code/output literals checked independently of render hashes.`)

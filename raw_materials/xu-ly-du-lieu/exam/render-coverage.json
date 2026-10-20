@@ -127,7 +127,7 @@
     ],
     "inputSha256": "a350e8ccb0b639d944b128080afbe3db90cb7ac1c9c805f9a67457c0f22685ce",
     "reviewed": 60,
-    "contentSha256": "29360e81fcffa3ff9f3334c87b31f6c8784b73de9b15f3afecd32dddf8d2079b"
+    "contentSha256": "fe031819ae500e1ad5e383a5abf6b3951bec94fe8091d6a6196f39e6672533dc"
   },
   {
     "lesson": "02",
@@ -257,7 +257,7 @@
     ],
     "inputSha256": "ae7afc97aa874c8197ca3dd416487b2367b2115bc91acd8bee28a104bf40e42b",
     "reviewed": 60,
-    "contentSha256": "3b3f316d79f6ffdb7833439bcd52f6a73db89f16f576e62997f142d0dfb4e22e"
+    "contentSha256": "f28ce3b92993bade95793c129f06fe58cd449ac39d07db5dbfaf8312f6460831"
   },
   {
     "lesson": "03",
@@ -411,7 +411,7 @@
     ],
     "inputSha256": "1ab112e1b461309a6f3865f1b645a9085f2c580d9691b5cda67e413873f114eb",
     "reviewed": 72,
-    "contentSha256": "aeb37eae49c12d3a82b4169a762c0aebbc5cd5653ccebac55043f3714cf369bd"
+    "contentSha256": "ef3c1df4f6d840ece4de9d1c6cee1a266ebf25f4957006987526c3b421d89013"
   },
   {
     "lesson": "04",
@@ -541,7 +541,7 @@
     ],
     "inputSha256": "4e949f212fb5d7f7beeb7839c9e4b10e0ac0d28f9d00f2a7e4a0021b4f039589",
     "reviewed": 60,
-    "contentSha256": "ae646fb123a4f782afdb2baa0c8e3fbb8e6aa357bf9f66ef11878e8e61bd55e0"
+    "contentSha256": "948acfa406468da946de526ae24f7c7e0c122a2f9e5d366490b022dd157c6061"
   },
   {
     "lesson": "05",
@@ -695,7 +695,7 @@
     ],
     "inputSha256": "3232e595ced5abfb77cf572ddcb8031e4ada0d321931dc159a277eb7ccf43b50",
     "reviewed": 72,
-    "contentSha256": "6008f68066b5bbec1c2cadfb2ac8b7fc79fbb566845d9d4feed6b001f758c16b"
+    "contentSha256": "97d1f8c4be7c41c9f51253e30aeffe8fc8dc9f534bfd41368daebafe5e4b7353"
   },
   {
     "lesson": "06",
@@ -849,7 +849,7 @@
     ],
     "inputSha256": "9ff4c9ecb7f233233237362c94c5b9a5e56c4344075de2273f9e69053b872318",
     "reviewed": 72,
-    "contentSha256": "8ee5c5d9c2bdefb3c469bedc5e490737b2184c19078b90cc79447451c53cdade"
+    "contentSha256": "4daf979a30968c0d7d0a23efd4ad0269d4e62950696d21371f77e14c9c9f5a07"
   },
   {
     "lesson": "07",
@@ -1019,7 +1019,7 @@
     ],
     "inputSha256": "2c3abbd3ee67b2c27603ec58b54e75136f25454130cad598b62a586519ae8e88",
     "reviewed": 80,
-    "contentSha256": "7896c0502783d5f1dd1f8725bb9e067aea690434fac9f12e7f23f6064ae0f5e6"
+    "contentSha256": "40fa87f3e2c672dbf5c4502361e47b829926edf5c7c619392339c9990ad44a14"
   },
   {
     "lesson": "08",
@@ -1173,6 +1173,6 @@
     ],
     "inputSha256": "26bbe4f007d8123986f5ed9314671a5e83f30e0587a89f49852d24bb9b13e223",
     "reviewed": 72,
-    "contentSha256": "18b86654e81dc38e2a61b599c5a48ce8ded9170a19c3fd61d2c161e92090e0c2"
+    "contentSha256": "5e3db71cbd24228428abbfda83ff50615b7166191e0adad0759ee84c632b4d83"
   }
 ]

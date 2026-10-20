@@ -70,22 +70,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Biến <code>df</code> là một DataFrame gồm ba lượt đặt phòng, và giá trị thống kê là số lượt đặt phòng trung bình.</p>\n",
+          "html": "<p><code>df</code> là DataFrame gồm ba lượt đặt phòng; <code>102.0</code> là số lượt đặt trung bình.</p>\n",
           "explanationHtml": "<p>Sai: Đổi chỗ ở thành lượt đặt phòng và diễn giải sai mã.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Biến <code>df</code> là một DataFrame gồm ba chỗ ở, trong đó <code>id</code> là mã định danh, <code>loai</code> là nhãn phân loại, <code>gia</code> là số đo CLP/đêm, và giá trị in ra không phải là giá trung bình.</p>\n",
+          "html": "<p><code>df</code> là DataFrame gồm ba chỗ ở; <code>id</code> là mã, <code>loai</code> là nhãn phân loại, <code>price</code> là số đo CLP/đêm; <code>102.0</code> không phải giá trung bình.</p>\n",
           "explanationHtml": "<p>Đúng: <code>read_csv</code> tạo DataFrame. Ý nghĩa một hàng và đơn vị giá phải theo mô tả nguồn. Số 102 là trung bình các mã số, không phải thống kê giá.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Biến <code>df</code> là một Series gồm ba chỗ ở, trong đó <code>id</code> là mã định danh, <code>loai</code> là nhãn phân loại, và <code>gia</code> là số đo CLP/đêm.</p>\n",
+          "html": "<p><code>df</code> là Series gồm ba chỗ ở; <code>id</code> là mã, <code>loai</code> là nhãn phân loại, <code>price</code> là số đo CLP/đêm.</p>\n",
           "explanationHtml": "<p>Sai: Đọc cả CSV ở đây trả DataFrame, không phải Series.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Biến <code>df</code> là một DataFrame gồm ba chỗ ở, trong đó giá trị in ra là mức giá mỗi đêm điển hình tính bằng CLP.</p>\n",
+          "html": "<p><code>df</code> là DataFrame gồm ba chỗ ở; <code>102.0</code> là mức giá mỗi đêm điển hình, tính bằng CLP.</p>\n",
           "explanationHtml": "<p>Sai: Phép tính dùng cột <code>id</code>, không dùng cột <code>price</code>.</p>\n"
         }
       ],
@@ -96,7 +96,7 @@
       "id": "B4-004",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Theo quy ước của nguồn dữ liệu lưu trú, mức giá <code>0.0</code> là dịch vụ ưu đãi miễn phí hợp lệ, trong khi ô trống (được chuyển thành <code>NaN</code>) thể hiện dữ liệu khuyết thiếu chưa thu thập được. Khi thực hiện các phép đo thống kê trên cột giá bằng hàm <code>len()</code>, phương thức <code>count()</code> và phương thức <code>mean()</code> của Pandas, nhận định nào sau đây là chính xác về cách thức xử lý giá trị <code>0.0</code> và <code>:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">s </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.Series([</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., np.nan, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">50</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.], </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">dtype</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"float64\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">len</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(s), s.count(), (s </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">&#x3C;</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">).mean())</span></span></code></pre>\n</div>\n<p>NaN</code>?</p>",
+      "promptHtml": "<p>Theo quy ước nguồn, <code>0.0</code> là giá miễn phí hợp lệ; <code>np.nan</code> là chưa biết giá.</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">s </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.Series([</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., np.nan, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">50</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.], </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">dtype</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"float64\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">len</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(s), s.count(), (s </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">&#x3C;</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\"> 60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">).mean())</span></span></code></pre>\n</div><p>Dòng cuối in ra gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -190,17 +190,17 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>In ra kết quả, trong đó tệp tin không lưu giữ các mã chỉ mục N1, N2, N3.</p>\n",
+          "html": "<p>In <code>(3, 1) ['gia']</code>; file không giữ các mã N1, N2, N3.</p>\n",
           "explanationHtml": "<p>Đúng: <code>index=False</code> bỏ index dù nó có tên, bảng được xuất chỉ gồm <code>gia</code>.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>In ra kết quả, trong đó do index có tên nên các mã chỉ mục vẫn được ghi lại đầy đủ.</p>\n",
+          "html": "<p>In <code>(3, 2) ['ma', 'gia']</code>; index có tên nên các mã vẫn được ghi.</p>\n",
           "explanationHtml": "<p>Sai: Tên index không làm vô hiệu index=False.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>In ra kết quả, trong đó index được tự động ghi nhận thành một cột phụ trong tệp.</p>\n",
+          "html": "<p>In <code>(3, 2) ['Unnamed: 0', 'gia']</code>; index được ghi thành cột phụ.</p>\n",
           "explanationHtml": "<p>Sai: Code đã yêu cầu bỏ index.</p>\n"
         },
         {
@@ -427,22 +427,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Kích thước (3, 2) và cột <code>loai</code>.</p>\n",
+          "html": "<p><code>4</code>; cột <code>khu</code>.</p>\n",
           "explanationHtml": "<p>Sai: Đếm thiếu như một nhãn thứ tư.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Kích thước (3, 2) và cột <code>gia</code>.</p>\n",
+          "html": "<p><code>3</code>; cột <code>khu</code>.</p>\n",
           "explanationHtml": "<p>Đúng: Các nhãn không thiếu khác nhau là Bắc,Nam,Tây, nunique mặc định bỏ thiếu. khu có nhãn phân loại lặp, id có sáu mã riêng.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Kích thước (2, 3) và cột <code>loai</code>.</p>\n",
+          "html": "<p><code>3</code>; cột <code>id</code>.</p>\n",
           "explanationHtml": "<p>Sai: Chọn khóa riêng từng hàng thay cho nhãn lặp.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Kích thước (2, 3) và cột <code>gia</code>.</p>\n",
+          "html": "<p><code>6</code>; cột <code>khu</code>.</p>\n",
           "explanationHtml": "<p>Sai: Lấy số hàng làm số nhãn khác nhau.</p>\n"
         }
       ],
@@ -664,22 +664,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>In ra kết quả, vì vậy cả ba cặp giá trị id–giá đều trùng khớp hoàn toàn với dữ liệu gốc.</p>\n",
+          "html": "<p>In <code>True True</code>; vì vậy cả ba cặp id–giá đều khớp goc.</p>\n",
           "explanationHtml": "<p>Sai: Shape/tổng là điều kiện chưa đủ để chứng minh đúng từng cặp.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>In ra kết quả, trong khi mức giá của chỗ ở A và C vẫn khác biệt so với bảng gốc.</p>\n",
+          "html": "<p>In <code>True True</code>; giá của A và C vẫn khác goc.</p>\n",
           "explanationHtml": "<p>Đúng: Hai bảng cùng shape (3,2), cùng tổng 70 nhưng A đổi từ 10 sang 40, C từ 40 sang 10. Hai phép kiểm không kiểm quan hệ mã–giá.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>In ra kết quả, trong đó phép tính tổng đã phát hiện được sự hoán đổi mức giá giữa các hàng.</p>\n",
+          "html": "<p>In <code>True False</code>; tổng đã phát hiện việc hoán đổi giá.</p>\n",
           "explanationHtml": "<p>Sai: Hoán đổi không thay tổng.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>In ra kết quả, trong đó số lượng hàng đã phát hiện được sự hoán đổi mức giá giữa các hàng.</p>\n",
+          "html": "<p>In <code>False True</code>; số hàng đã phát hiện việc hoán đổi giá.</p>\n",
           "explanationHtml": "<p>Sai: Hoán đổi không thay số hàng/cột.</p>\n"
         }
       ],
@@ -717,7 +717,7 @@
       "id": "B4-031",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Mỗi hàng trong bảng dữ liệu đại diện cho một cơ sở lưu trú, trong đó cột <code>id</code> là mã số định danh duy nhất (dạng số nguyên), cột <code>loai</code> là phân loại phòng (dạng chuỗi văn bản), và cột <code>gia</code> là mức giá thuê (USD/đêm):</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">df </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"id\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">90</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">50</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"id\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].mean(), df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].mean())</span></span></code></pre>\n</div>\n<p>Chiếu theo thang đo thống kê dữ liệu (nominal, ordinal, interval, ratio), nhận định nào sau đây phân loại đúng bản chất của từng cột?</p>",
+      "promptHtml": "<p>Mỗi hàng là một chỗ ở; id là mã tra cứu, gia tính bằng USD/đêm.</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">df </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"id\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">90</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">50</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">100</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"id\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].mean(), df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].mean())</span></span></code></pre>\n</div><p>Dòng cuối in <code>40.0 70.0</code>. Nhận định nào đúng?</p>\n",
       "options": [
         {
           "key": "A",
@@ -871,22 +871,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p><code>([40.0, 140.0], 140.0)</code></p>\n",
+          "html": "<p><code>([40.0, 140.0]; 140.0)</code></p>\n",
           "explanationHtml": "<p>Sai: Giả định công thức đã được sửa và tự cập nhật.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p><code>([40.0, 180.0], 140.0)</code></p>\n",
+          "html": "<p><code>([40.0, 180.0]; 140.0)</code></p>\n",
           "explanationHtml": "<p>Sai: Giả định tự tính lại biểu thức sai (40+20)*3.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p><code>([40.0, 170.0], 140.0)</code></p>\n",
+          "html": "<p><code>([40.0, 170.0]; 140.0)</code></p>\n",
           "explanationHtml": "<p>Sai: Giả định tổng cũ đã dùng đúng phí một lần: 50*3+20.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p><code>([40.0, 210.0], 140.0)</code></p>\n",
+          "html": "<p><code>([40.0, 210.0]; 140.0)</code></p>\n",
           "explanationHtml": "<p>Đúng: Tong lưu giá trị cũ (50+20)<em>3=210. Tổng đúng theo giá mới là 40</em>3+20=140. Code có cả lỗi nhân phí một lần và chưa tính lại cột.</p>\n"
         }
       ],
@@ -901,22 +901,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p><code>gui.to_csv(&quot,x.csv&quot,, index=False, index_label=&quot,ma&quot,)</code></p>\n",
+          "html": "<p><code>gui.to_csv(&quot;x.csv&quot;, index=False, index_label=&quot;ma&quot;)</code></p>\n",
           "explanationHtml": "<p>Sai: Index=False vẫn loại index, index_label không đưa mã trở lại.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p><code>gui.to_csv(&quot,x.csv&quot,, index=True, index_label=&quot,id&quot,)</code></p>\n",
+          "html": "<p><code>gui.to_csv(&quot;x.csv&quot;, index=True, index_label=&quot;id&quot;)</code></p>\n",
           "explanationHtml": "<p>Sai: Giữ mã nhưng đặt tên id, không đúng yêu cầu tên ma.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p><code>gui.to_csv(&quot,x.csv&quot,, index=False, columns=[&quot,ma&quot,, &quot,gia&quot,])</code></p>\n",
+          "html": "<p><code>gui.to_csv(&quot;x.csv&quot;, index=False, columns=[&quot;ma&quot;, &quot;gia&quot;])</code></p>\n",
           "explanationHtml": "<p>Sai: Ma chưa là cột dữ liệu để chọn bằng columns, phát KeyError. Giữ index hay chuyển nó thành cột đều là cách hợp lệ nếu đáp ứng đúng yêu cầu, nhưng chỉ D trong các lựa chọn này đúng.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p><code>gui.to_csv(&quot,x.csv&quot,, index_label=&quot,ma&quot,)</code></p>\n",
+          "html": "<p><code>gui.to_csv(&quot;x.csv&quot;, index_label=&quot;ma&quot;)</code></p>\n",
           "explanationHtml": "<p>Đúng: Mặc định index=True, index_label đặt tiêu đề ma cho cột chứa A,B,C.</p>\n"
         }
       ],
@@ -954,7 +954,7 @@
       "id": "B4-041",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Mỗi hàng trong bảng chụp dữ liệu (snapshot) giả lập là một cơ sở lưu trú tại một thời điểm khảo sát. Khi thực hiện bước khám phá dữ liệu ban đầu (EDA), kỹ sư dữ liệu quan sát thấy một số cơ sở lưu trú có số lượt đánh giá bằng 0 nhưng cột điểm số đánh giá trung bình lại ghi nhận giá trị <code>NaN</code>:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">df </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"quan\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"A\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"A\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"A\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">                   \"loai\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"PR\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"PR\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"PR\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">                   \"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., np.nan, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">40</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">50</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">70</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df.shape)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df.sample(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">2</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">random_state</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">1</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">))</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">df.info()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].describe())</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"loai\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].value_counts())</span></span></code></pre>\n</div>\n<p>Nhận định nào sau đây giải thích đúng bản chất thống kê của hiện tượng này?</p>",
+      "promptHtml": "<p>Mỗi hàng trong snapshot giả lập là một chỗ ở.</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">df </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"quan\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"A\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"A\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"A\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"B\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">                   \"loai\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"PR\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"PR\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"NC\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"PR\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">                   \"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">: [</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., np.nan, </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">40</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">50</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">70</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df.shape)</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df.sample(</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">2</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">random_state</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">1</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">))</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">df.info()</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"gia\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].describe())</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">print</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(df[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">\"loai\"</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].value_counts())</span></span></code></pre>\n</div><p>Trích kết quả năm bước: <code>shape</code> (7,3); mẫu gồm hàng 6 (B,PR,70) và hàng 2 (A,NC,NaN); gia có 6 non-null; describe có count 6 và trung vị45; value_counts cho NC4, PR3.</p>\n<p>Nhận định nào đúng khi lập hồ sơ cho snapshot này?</p>\n",
       "options": [
         {
           "key": "A",
@@ -988,22 +988,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>In ra kết quả, trong đó mức giá ngoại lai 910 đã kéo giá trị mean lên cao hơn đáng kể so với median.</p>\n",
+          "html": "<p><code>35.0 250.0</code>; giá 910 kéo mean cao hơn median.</p>\n",
           "explanationHtml": "<p>Sai: Đảo mean và median.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>In ra kết quả, trong đó giá trị median luôn luôn là một giá trị có sẵn trong bảng dữ liệu.</p>\n",
+          "html": "<p><code>250.0 40.0</code>; median luôn là một giá có sẵn trong bảng.</p>\n",
           "explanationHtml": "<p>Sai: Median của số lượng chẵn có thể là trung bình hai giá giữa.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>In ra kết quả, và vì mean lớn hơn median nên mức giá 910 chắc chắn là dữ liệu sai lệch cần loại bỏ.</p>\n",
+          "html": "<p><code>250.0 35.0</code>; vì mean lớn hơn median nên giá 910 chắc chắn sai.</p>\n",
           "explanationHtml": "<p>Sai: Chênh lệch hai thống kê không tự chứng minh lỗi dữ liệu.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>In ra kết quả, trong đó mức giá 910 kéo mean tăng lên nhưng chưa đủ căn cứ thực tế để khẳng định mức giá đó là sai.</p>\n",
+          "html": "<p><code>250.0 35.0</code>; giá 910 kéo mean lên, nhưng chưa đủ căn cứ nói giá đó sai.</p>\n",
           "explanationHtml": "<p>Đúng: Tổng 1000/4=250, median=(30+40)/2=35. Một giá rất lớn kéo mean lên mạnh, median phản ánh vị trí giữa. Cần kiểm nguồn trước khi kết luận lỗi.</p>\n"
         }
       ],
@@ -1108,22 +1108,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>In ra kết quả, và thao tác này đã chứng minh toàn bộ các mức giá trong nguồn đều chính xác trên thực tế.</p>\n",
+          "html": "<p><code>(3,2) ['id','gia'] 1 True</code>; đã chứng minh mọi giá nguồn đều đúng thực tế.</p>\n",
           "explanationHtml": "<p>Sai: Suy từ tính nhất quán file thành tính đúng nguồn.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>In ra kết quả, trong đó định dạng CSV đã tự động sửa các mức giá khuyết thiếu thành giá trị 0.</p>\n",
+          "html": "<p><code>(3,2) ['id','gia'] 0 True</code>; CSV đã tự sửa giá thiếu thành 0.</p>\n",
           "explanationHtml": "<p>Sai: Code không có bước điền0.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>In ra kết quả, trong đó các phép kiểm tra này trùng khớp nhưng chưa thể chứng minh mức giá nguồn là đúng tuyệt đối.</p>\n",
+          "html": "<p><code>(3,2) ['id','gia'] 1 True</code>; các kiểm tra này khớp, chưa chứng minh giá nguồn đúng.</p>\n",
           "explanationHtml": "<p>Đúng: Hai cột id,gia được giữ, một giá thiếu vẫn thiếu. Hai sum đều bỏ qua NaN và bằng 100. Đây là kiểm chứng một số bất biến ghi/đọc, chưa xác nhận giá nguồn đúng thực tế hay tự thay thế kiểm từng cặp mã–giá.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>In ra kết quả, trong đó giá trị NaN làm cho tổng đọc lại khác biệt hoàn toàn so với tổng ban đầu.</p>\n",
+          "html": "<p><code>(3,2) ['id','gia'] 1 False</code>; NaN làm tổng đọc lại khác tổng ban đầu.</p>\n",
           "explanationHtml": "<p>Sai: Với dữ liệu này hai sum đều bằng 100.</p>\n"
         }
       ],
@@ -1174,22 +1174,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Cú pháp khởi tạo đúng, và bảng tự động được gán các nhãn hàng K1, K2, K3.</p>\n",
+          "html": "<p><code>pd.DataFrame(du_lieu)</code>; bảng tự có nhãn K1,K2,K3.</p>\n",
           "explanationHtml": "<p>Sai: Không truyền index thì nhãn mặc định0,1,2.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Cú pháp khởi tạo đúng với kích thước (3, 2), hệ chỉ mục index nằm ngoài các cột dữ liệu và cột id đóng vai trò khóa tra cứu.</p>\n",
+          "html": "<p><code>pd.DataFrame(du_lieu, index=nhan)</code>; shape(3,2), index ngoài cột dữ liệu, id là khóa.</p>\n",
           "explanationHtml": "<p>Đúng: Mỗi khóa dict tạo một cột, index=nhan đặt nhãn hàng và không tạo cột thứ ba. id giữ vai trò khóa.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Cú pháp khởi tạo đúng với kích thước (3, 2), trong đó các nhãn hàng được đặt tên là nhan.</p>\n",
+          "html": "<p><code>pd.DataFrame({&quot;ma_hang&quot;: nhan, &quot;id&quot;: du_lieu[&quot;id&quot;], &quot;gia&quot;: du_lieu[&quot;gia&quot;]})</code>; shape(3,2), nhãn hàng là nhan.</p>\n",
           "explanationHtml": "<p>Sai: <code>Ma_hang</code> được tạo thành cột thứ ba, không thành index, shape(3,3).</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Cú pháp khởi tạo đúng, và mức giá trung bình của id bằng 7 là mức giá điển hình của tập dữ liệu.</p>\n",
+          "html": "<p><code>pd.DataFrame(du_lieu, index=nhan)</code>; trung bình id=7 là mức giá điển hình.</p>\n",
           "explanationHtml": "<p>Sai: Cách tạo đúng nhưng diễn giải mean(id) thành giá là sai, giá trung bình ở đây là60.</p>\n"
         }
       ],
@@ -1204,22 +1204,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>In ra kết quả, trong đó mọi phần tử mang giá trị False của phép so sánh nhỏ hơn 50 đều mang giá trị True ở phép so sánh lớn hơn hoặc bằng 50.</p>\n",
+          "html": "<p>In <code>0.25 0.75 1.0</code>; mọi False của &lt;50 đều là True của &gt;=50.</p>\n",
           "explanationHtml": "<p>Sai: <code>False</code> của &lt;50 có cả NaN, không đồng nghĩa biết &gt;=50.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>In ra kết quả, trong đó giá trị khuyết thiếu NaN không thỏa mãn cả hai phép so sánh logic.</p>\n",
+          "html": "<p>In <code>0.25 0.5 0.75</code>; NaN không thỏa cả hai phép so sánh.</p>\n",
           "explanationHtml": "<p>Đúng: &lt;50 là T,F,F,F, &gt;=50 là F,T,T,F. Cả hai mask là bool không thiếu, mẫu số đều4. Tổng tỷ lệ0,75 vì hàng chưa biết không thuộc nhóm so sánh nào.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>In ra kết quả, trong đó hàm mean tự động loại bỏ các hàng NaN trước khi thực hiện so sánh.</p>\n",
+          "html": "<p>In <code>0.3333333333333333 0.6666666666666666 1.0</code>; mean tự loại hàng NaN trước khi so sánh.</p>\n",
           "explanationHtml": "<p>Sai: So sánh diễn ra trước mean, chuyển ô NaN thành False chứ không bỏ hàng.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>In ra kết quả, trong đó mức giá đúng bằng 50 được tính gộp vào cả hai nhóm điều kiện.</p>\n",
+          "html": "<p>In <code>0.5 0.5 1.0</code>; giá 50 được tính vào cả hai nhóm.</p>\n",
           "explanationHtml": "<p>Sai: &lt;50 không bao gồm giá 50.</p>\n"
         }
       ],

@@ -36,7 +36,7 @@
       "id": "B5-002",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Phương thức <code>Series.map()</code> cho phép ánh xạ các giá trị hiện có sang giá trị mới thông qua một bảng tra cứu từ điển:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'loai'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khac'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]},</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">                 index</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'x'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'y'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">])</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">] </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'loai'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].map({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">12</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.})</span></span></code></pre>\n</div>\n<p>Mức phí của chỗ ở mang nhãn chỉ mục <code>'phong'</code> sau khi ánh xạ sẽ nhận giá trị là bao nhiêu?</p>\n",
+      "promptHtml": "<p>Mỗi hàng là một listing:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'loai'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khac'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]},</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">                 index</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'x'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'y'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">])</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phi'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">] </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'loai'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].map({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'can'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">12</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">., </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'phong'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">5</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.})</span></span></code></pre>\n</div><p>Phí của hàng mang nhãn <code>phong</code> là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -307,7 +307,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p><code>[5, 10]</code> vì phương thức to_numpy vẫn giữ lại nhãn để căn chỉnh.</p>\n",
+          "html": "<p><code>[5,10]</code>; to_numpy vẫn giữ nhãn để căn chỉnh.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do ndarray không mang index của s.</p>\n"
         },
         {
@@ -317,12 +317,12 @@
         },
         {
           "key": "C",
-          "html": "<p><code>[10, 5]</code> do không lỗi độ dài nhưng gán sai mã vì ndarray hoạt động theo vị trí.</p>\n",
+          "html": "<p><code>[10,5]</code>; không lỗi độ dài nhưng gán sai mã vì ndarray dùng vị trí.</p>\n",
           "explanationHtml": "<p>B ở vị trí 0 nhận 5, A ở vị trí 1 nhận 10. Đúng nghiệp vụ phải A=5,B=10.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p><code>[NaN, NaN]</code> vì mảng numpy không có index nên không thể thực hiện phép gán.</p>\n",
+          "html": "<p><code>[NaN,NaN]</code>; mảng không có index nên không gán được.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do pandas gán mảng cùng độ dài theo vị trí, không mặc định thêm <code>NaN</code>.</p>\n"
         }
       ],
@@ -352,7 +352,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Biến r nhận danh sách <code>['re', 'trung', 'cao', 'cao']</code>, trong đó giá trị thiếu bị gán nhãn cao mà không xuất hiện cảnh báo lỗi.</p>\n",
+          "html": "<p>r là <code>[re,trung,cao,cao]</code>; giá thiếu bị gán cao mà không báo lỗi.</p>\n",
           "explanationHtml": "<p>Hai so sánh với <code>NaN</code> đều <code>False</code> nên rơi vào else. Phải kiểm pd.isna trước để giữ thiếu.</p>\n"
         }
       ],
@@ -363,7 +363,7 @@
       "id": "B5-013",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Phương thức <code>agg()</code> kết hợp với cú pháp đặt tên cột mới cho phép thực hiện đồng thời nhiều hàm tổng hợp thống kê trên từng nhóm dữ liệu:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">                  'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">30</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d.groupby(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].agg(</span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">tb</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'mean'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">n</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'size'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">co_gia</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'count'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div>\n<p>Bảng kết quả tổng hợp của nhóm khu vực được chọn sẽ hiển thị các giá trị thống kê tương ứng là gì?</p>\n",
+      "promptHtml": "<p>Mỗi hàng là một listing, USD/đêm:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">                  'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">30</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">60</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d.groupby(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">].agg(</span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">tb</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'mean'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">n</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'size'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">, </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">co_gia</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'count'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div><p>Bộ ba <code>(tb,n,co_gia)</code> của khu A là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -472,7 +472,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Hàm nhận từng hàng Series, và r là một Series có chỉ mục R3, R1, R2 với các giá trị <code>[45, NaN, 80]</code>.</p>\n",
+          "html": "<p>Hàm nhận từng hàng Series; r là Series index R3,R1,R2 với giá trị <code>[45,NaN,80]</code>.</p>\n",
           "explanationHtml": "<p>Mỗi scalar trả về cho một lượt ở. Hàng R1 thiếu phí nên chưa tính được tổng.</p>\n"
         }
       ],
@@ -544,22 +544,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Chỉ mục gồm 0, 1, 2 với các giá trị <code>[2, 1, 2]</code>.</p>\n",
+          "html": "<p>Index 0,1,2; giá trị <code>[2,1,2]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do đó là đếm giá biết theo từng hàng, tức axis=1.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Chỉ mục gồm gia, phi với các giá trị <code>[3, 3]</code>.</p>\n",
+          "html": "<p>Index gia,phi; giá trị <code>[3,3]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do dùng len thay <code>count</code> nên tính cả <code>NaN</code>.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Chỉ mục gồm 0, 1 với các giá trị <code>[3, 2]</code>.</p>\n",
+          "html": "<p>Index 0,1; giá trị <code>[3,2]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này bỏ qua nhãn cột khi mô tả <code>Series</code> trả về từ <code>apply</code>.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Chỉ mục gồm gia, phi với các giá trị <code>[3, 2]</code>.</p>\n",
+          "html": "<p>Index gia,phi; giá trị <code>[3,2]</code>.</p>\n",
           "explanationHtml": "<p>Hàm nhận mỗi cột <code>Series</code>. Count tính cả phí 0 và bỏ ô thiếu.</p>\n"
         }
       ],
@@ -618,7 +618,7 @@
         },
         {
           "key": "B",
-          "html": "<p>Cột tong nhận danh sách <code>[40, 105, NaN]</code>, do đó chưa đủ căn cứ khẳng định lượt lưu trú loại la chỉ tốn 60 USD.</p>\n",
+          "html": "<p>tong là <code>[40,105,NaN]</code>; chưa thể khẳng định lượt loại la chỉ tốn 60.</p>\n",
           "explanationHtml": "<p>Phí can được xác nhận bằng 0. Phí la chưa biết và lan truyền thiếu qua công thức.</p>\n"
         },
         {
@@ -643,22 +643,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Giá trị 30 với chỉ mục <code>[8, 2, 10, 5]</code>.</p>\n",
+          "html": "<p>30; index <code>[8,2,10,5]</code>.</p>\n",
           "explanationHtml": "<p>Hàng 2 thiếu giá nhưng vẫn nhận <code>mean</code> A=(10+50)/2=30. Transform giữ index bảng đầu vào.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Giá trị NaN với chỉ mục <code>[8, 2, 10, 5]</code>.</p>\n",
+          "html": "<p>NaN; index <code>[8,2,10,5]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này ngộ nhận rằng giá trị đầu vào thiếu buộc thống kê nhóm gắn về hàng cũng thiếu.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Giá trị 30 với chỉ mục <code>[0, 1, 2, 3]</code>.</p>\n",
+          "html": "<p>30; index <code>[0,1,2,3]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này ngộ nhận rằng <code>transform</code> tự reset index sau lọc.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Giá trị 30 với chỉ mục <code>['A', 'B']</code>.</p>\n",
+          "html": "<p>30; index <code>[A,B]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này nhầm lẫn <code>transform</code> với aggregate <code>mean</code> cấp nhóm.</p>\n"
         }
       ],
@@ -708,17 +708,17 @@
         },
         {
           "key": "B",
-          "html": "<p>Kết quả <code>[15, 25]</code> vì tong luôn sử dụng mức giá gốc thay vì giá của hai đêm.</p>\n",
+          "html": "<p><code>[15,25]</code>; tong luôn dùng gia gốc thay hai.</p>\n",
           "explanationHtml": "<p>Phương án này bỏ qua cột mà biểu thức chỉ rõ.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Kết quả <code>[25, 45]</code>, và hàm callable phía sau tiếp nhận bảng đã có sẵn cột hai vừa được tạo.</p>\n",
+          "html": "<p><code>[25,45]</code>; có, callable sau nhận bảng đang có cột hai vừa thêm.</p>\n",
           "explanationHtml": "<p>Hai=[20,40], cộng phí một lần 5. D vẫn chỉ có gia.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Kết quả <code>[25, 45]</code>, đồng thời bảng d cũng được bổ sung cả hai cột mới là hai và tong.</p>\n",
+          "html": "<p><code>[25,45]</code>; d cũng được thêm cả hai và tong.</p>\n",
           "explanationHtml": "<p>Giá trị r đúng nhưng nhầm <code>assign</code> sửa bảng đầu vào.</p>\n"
         }
       ],
@@ -759,26 +759,26 @@
       "id": "B5-027",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong phân tích dữ liệu thị trường dịch vụ lưu trú, phân biệt rõ đơn vị tổng hợp (unit of analysis) ở cấp độ cơ sở lưu trú (Listing) và cấp độ chủ nhà (Host):</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'K'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'K'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> 'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">40</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'review'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">4</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">6</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d.groupby(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">).agg(</span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">n</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'size'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">), </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">tv</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'median'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">),</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">                         rv</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'review'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'mean'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">))</span></span></code></pre>\n</div>\n<p>Khi tính mức giá trung bình của từng chủ nhà rồi lấy trung bình của các số trung bình đó, con số này khác biệt như thế nào so với mức giá trung bình tính trực tiếp trên toàn bộ các phòng?</p>",
+      "promptHtml": "<p>Mỗi hàng là một listing; gia USD/đêm, review là số đánh giá trong năm:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'H'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'K'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'K'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">],</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\"> 'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">40</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'review'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">0</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">4</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,np.nan,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">6</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">t </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d.groupby(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'host'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">).agg(</span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">n</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'size'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">), </span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">tv</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'gia'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'median'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">),</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">                         rv</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'review'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'mean'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">))</span></span></code></pre>\n</div><p>Bộ ba <code>(n,tv,rv)</code> tại host H là gì và một hàng t đại diện cho gì?</p>\n",
       "options": [
         {
           "key": "A",
-          "html": "<p>Bộ ba <code>(1, 10, 2)</code> cho một host duy nhất.</p>\n",
+          "html": "<p><code>(1,10,2)</code>; một host.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do dùng <code>count</code> trên gia thay size trên id cho cột n. Giá thiếu không làm listing biến mất.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Bộ ba <code>(2, 5, 2)</code> cho một host duy nhất.</p>\n",
+          "html": "<p><code>(2,5,2)</code>; một host.</p>\n",
           "explanationHtml": "<p>Phương án này coi giá <code>NaN</code> của Q là 0 khi lấy <code>median</code>.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Bộ ba <code>(2, 10, 2)</code> cho một host duy nhất.</p>\n",
+          "html": "<p><code>(2,10,2)</code>; một host.</p>\n",
           "explanationHtml": "<p>H có P,Q. Median dùng một giá 10. Mean review dùng cả 0 và 4, mẫu số 2. Review không tự bằng booking.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Bộ ba <code>(2, 10, 4)</code> cho một host duy nhất.</p>\n",
+          "html": "<p><code>(2,10,4)</code>; một host.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do dùng sum review thay <code>mean</code> hoặc loại 0 khỏi mẫu số.</p>\n"
         }
       ],
@@ -850,22 +850,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Mảng boolean <code>[True, True, False, True]</code> và bảng vẫn giữ nguyên 4 hàng.</p>\n",
+          "html": "<p><code>[True,True,False,True]</code>; vẫn 4 hàng.</p>\n",
           "explanationHtml": "<p>Phương án này đánh dấu cả lần đầu như keep=<code>False</code>, trái mặc định đã nêu.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Mảng boolean <code>[False, True, False, True]</code> và bảng chỉ còn lại 2 hàng.</p>\n",
+          "html": "<p><code>[False,True,False,True]</code>; chỉ còn 2 hàng.</p>\n",
           "explanationHtml": "<p>Phương án này ngộ nhận rằng tạo mask duplicated đồng thời xoá hàng.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Mảng boolean <code>[False, True, False, True]</code> và bảng vẫn bảo toàn đủ 4 hàng.</p>\n",
+          "html": "<p><code>[False,True,False,True]</code>; vẫn 4 hàng.</p>\n",
           "explanationHtml": "<p>Duplicated đánh dấu lần lặp sau lần đầu, không xóa dữ liệu. Set_index cho phép lặp.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Mảng boolean <code>[False, False, False, False]</code> vì set_index tự động chuyển đổi id thành duy nhất.</p>\n",
+          "html": "<p><code>[False,False,False,False]</code>; set_index tự làm id duy nhất.</p>\n",
           "explanationHtml": "<p>Phương án này không có bước khử trùng hay kiểm tính duy nhất tự động.</p>\n"
         }
       ],
@@ -910,7 +910,7 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Chuỗi n nhận các giá trị <code>[3, 2, 2]</code> do qcut phân chia theo phân vị, không bắt buộc số lượng phần tử của mỗi nhóm phải bằng nhau tuyệt đối hay khoảng giá phải rộng bằng nhau.</p>\n",
+          "html": "<p>n là <code>[3,2,2]</code>; qcut chia theo phân vị, không bắt buộc số phần tử mỗi nhóm bằng nhau tuyệt đối hay khoảng giá rộng bằng nhau.</p>\n",
           "explanationHtml": "<p>7 không chia đều thành 3 nhóm. Khoảng 6 đến 100 rất lớn nhưng thứ hạng vẫn quyết định phân vị.</p>\n"
         },
         {
@@ -966,7 +966,7 @@
       "id": "B5-034",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Khi thực hiện phép ghép nối <code>merge()</code> giữa hai bảng mà cột khóa ghép nối ở cả hai bảng đều có các giá trị bị lặp lại nhiều lần:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">v </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'vung'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'X'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Y'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Z'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'W'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span></code></pre>\n</div>\n<p>Hiện tượng bùng nổ số lượng hàng (Cartesian product trên từng nhóm khóa trùng) làm thay đổi kích thước bảng kết quả như thế nào?</p>\n",
+      "promptHtml": "<p>Mỗi hàng d là một listing, mỗi hàng v là một bản ghi vùng:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'id'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'P'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Q'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'R'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'S'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'C'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">v </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'khu'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'A'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'B'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">], </span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'vung'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'X'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Y'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'Z'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'W'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]})</span></span></code></pre>\n</div><p>Cặp số hàng của <code>d.merge(v,on='khu',how='left')</code> và <code>d.merge(v,on='khu',how='inner')</code> là gì?</p>\n",
       "options": [
         {
           "key": "A",
@@ -996,7 +996,7 @@
       "id": "B5-035",
       "kind": "quiz",
       "group": "core",
-      "promptHtml": "<p>Trong phương thức <code>assign()</code>, việc truyền vào một hàm ẩn danh <code>lambda df: ...</code> khác biệt cơ bản như thế nào so với việc truyền trực tiếp một Series tĩnh được trích xuất từ trước:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'price'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10000</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20000</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">def</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> nghin</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(t): </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">return</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'price'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">/</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">1000</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">r </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d.assign(</span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">price</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=lambda</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t: t[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'price'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">+</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">1000</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">             gia_nghin</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">____</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div>\n<p>Cách tiếp cận nào bảo đảm tính nhất quán khi chuỗi phương thức (method chaining) có các bước lọc hoặc sắp xếp hàng trước đó?</p>\n",
+      "promptHtml": "<p>Mỗi hàng là một listing, price CLP/đêm. Muốn gia_nghin dùng price mới đã cộng 1000:</p>\n<div class=\"language-python vp-adaptive-theme\"><button title=\"Copy Code\" class=\"copy\"></button><span class=\"lang\">python</span><pre class=\"shiki shiki-themes github-light github-dark vp-code\" tabindex=\"0\" v-pre=\"\"><code><span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">d </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> pd.DataFrame({</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'price'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">:[</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">10000</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.,</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">20000</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">.]})</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">def</span><span style=\"--shiki-light:#6F42C1;--shiki-dark:#B392F0\"> nghin</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">(t): </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">return</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'price'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">/</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">1000</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">r </span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> d.assign(</span><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">price</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=lambda</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\"> t: t[</span><span style=\"--shiki-light:#032F62;--shiki-dark:#9ECBFF\">'price'</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">]</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">+</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">1000</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">,</span></span>\n<span class=\"line\"><span style=\"--shiki-light:#E36209;--shiki-dark:#FFAB70\">             gia_nghin</span><span style=\"--shiki-light:#D73A49;--shiki-dark:#F97583\">=</span><span style=\"--shiki-light:#005CC5;--shiki-dark:#79B8FF\">____</span><span style=\"--shiki-light:#24292E;--shiki-dark:#E1E4E8\">)</span></span></code></pre>\n</div><p>Điền gì để gia_nghin là <code>[11,21]</code>?</p>\n",
       "options": [
         {
           "key": "A",
@@ -1010,7 +1010,7 @@
         },
         {
           "key": "C",
-          "html": "<p><code>&quot,nghin&quot,</code></p>\n",
+          "html": "<p><code>&quot;nghin&quot;</code></p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do chuỗi chỉ là giá trị được gán lặp, không phải tham chiếu đến hàm.</p>\n"
         },
         {
@@ -1040,7 +1040,7 @@
         },
         {
           "key": "C",
-          "html": "<p>Biến r giữ lại 5 hàng gốc với chỉ mục <code>[0, 1, 2, 4, 5]</code> do hàm callable tiếp nhận toàn bộ DataFrame nhóm và trả về giá trị boolean.</p>\n",
+          "html": "<p>r giữ 5 hàng gốc với index <code>[0,1,2,4,5]</code>; hàm nhận cả nhóm DataFrame và trả bool.</p>\n",
           "explanationHtml": "<p>A có ba listing, B hai, C một. Filter giữ mọi hàng của A,B.</p>\n"
         },
         {
@@ -1161,12 +1161,12 @@
         },
         {
           "key": "B",
-          "html": "<p>Bảng d có 3 hàng, và cột phi nhận danh sách giá trị <code>[5, 9, NaN]</code>.</p>\n",
+          "html": "<p>d có 3 hàng; phi là <code>[5,9,NaN]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do gán <code>Series</code> theo vị trí thay nhãn.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Bảng d vẫn có 3 hàng C, A, B, và cột phi theo đúng thứ tự đó nhận các giá trị <code>[NaN, 5, NaN]</code>.</p>\n",
+          "html": "<p>d vẫn có 3 hàng C,A,B; phi theo thứ tự đó là <code>[NaN,5,NaN]</code>.</p>\n",
           "explanationHtml": "<p>Chỉ A có nhãn khớp. D trong s không tự thêm hàng vào <code>DataFrame</code>.</p>\n"
         },
         {
@@ -1291,7 +1291,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Cột tong của bảng r vẫn giữ nguyên các giá trị <code>[20, 40]</code>, do đó cần tính toán lại từ mức giá mới, chẳng hạn bổ sung <code>tong=lambda t: 2*t[\"gia\"]</code> trong lời gọi assign kế tiếp sau cột gia.</p>\n",
+          "html": "<p>tong của r vẫn <code>[20,40]</code>; cần tính lại từ gia mới, ví dụ thêm <code>tong=lambda t:2*t[&quot;gia&quot;]</code> trong assign sau gia.</p>\n",
           "explanationHtml": "<p>Cột phụ thuộc không tự cập nhật khi nguồn thay. Đúng phải [30,50].</p>\n"
         }
       ],
@@ -1411,17 +1411,17 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Kết quả <code>[5, 8]</code> do sự khác biệt về tên của index không cản trở việc ghép nối theo giá trị các nhãn A và B.</p>\n",
+          "html": "<p><code>[5,8]</code>; khác tên index không cản ghép theo giá trị nhãn A,B.</p>\n",
           "explanationHtml": "<p>Tên listing_id/ma_khac là tên của chỉ mục, không phải các nhãn dùng đối chiếu.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Kết quả <code>[NaN, NaN]</code> vì tên của index bắt buộc phải trùng khớp hoàn toàn mới có thể kết hợp.</p>\n",
+          "html": "<p><code>[NaN,NaN]</code>; tên index phải trùng mới khớp.</p>\n",
           "explanationHtml": "<p>Phương án này nhầm lẫn tên của index với giá trị nhãn.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Kết quả <code>[8, 5]</code> do tên chỉ mục khác nhau khiến pandas tự động chuyển sang cơ chế ghép nối theo vị trí.</p>\n",
+          "html": "<p><code>[8,5]</code>; tên khác khiến pandas chuyển sang ghép vị trí.</p>\n",
           "explanationHtml": "<p>Phương án này không có quy tắc tự bỏ alignment vì tên khác.</p>\n"
         },
         {
@@ -1471,22 +1471,22 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Cặp giá trị <code>3, 4</code> vì có ba hàng mang mã H khớp điều kiện.</p>\n",
+          "html": "<p><code>3,4</code>; có ba hàng H khớp.</p>\n",
           "explanationHtml": "<p>Phương án này đếm các hàng không khớp thay vì điều kiện ==.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Cặp giá trị <code>4, 4</code> do phương thức transform tự động đọc và sử dụng cột n_nguon.</p>\n",
+          "html": "<p><code>4,4</code>; transform tự đọc và dùng n_nguon.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do <code>transform</code> size chỉ nhóm các hàng đang có, không tự lấy cột đếm sẵn.</p>\n"
         },
         {
           "key": "C",
-          "html": "<p>Cặp giá trị <code>1, 4</code>, trong đó mã H được đếm 3 lần trong bảng này so với 5 lần từ nguồn, vì vậy cần rà soát phạm vi thu thập thay vì vội vàng kết luận dữ liệu nguồn sai.</p>\n",
+          "html": "<p><code>1,4</code>; H được đếm 3 trong bảng này so với 5 của nguồn; cần kiểm phạm vi, chưa kết luận nguồn sai.</p>\n",
           "explanationHtml": "<p>Chỉ S thuộc K khớp 1. Transform size đếm số hàng của bảng đầu vào hiện tại.</p>\n"
         },
         {
           "key": "D",
-          "html": "<p>Cặp giá trị <code>1, 4</code>, và điều đó khẳng định chắc chắn ba bản ghi H của nhà cung cấp đã bị ghi nhận sai.</p>\n",
+          "html": "<p><code>1,4</code>; điều đó chắc chắn chứng minh ba bản ghi H của nhà cung cấp sai.</p>\n",
           "explanationHtml": "<p>Phương án này đếm đúng nhưng kết luận vượt dữ liệu, bỏ khả năng phạm vi khác.</p>\n"
         }
       ],
@@ -1627,12 +1627,12 @@
       "options": [
         {
           "key": "A",
-          "html": "<p>Chỉ mục gồm k1, k2 với các giá trị <code>[25, 8/3]</code>.</p>\n",
+          "html": "<p>Index k1,k2; giá trị <code>[25,8/3]</code>.</p>\n",
           "explanationHtml": "<p>Apply mặc định axis=0, nhận từng cột <code>Series</code>. Mean k2 dùng 2,6,0, mẫu số 3.</p>\n"
         },
         {
           "key": "B",
-          "html": "<p>Chỉ mục gồm A, B, C, D với các giá trị <code>[6, 20, 18, 20]</code>.</p>\n",
+          "html": "<p>Index A,B,C,D; giá trị <code>[6,20,18,20]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này tính toán <code>mean</code> theo hàng như axis=1, không phải mặc định.</p>\n"
         },
         {
@@ -1642,7 +1642,7 @@
         },
         {
           "key": "D",
-          "html": "<p>Chỉ mục gồm k1, k2 với các giá trị <code>[25, 2]</code>.</p>\n",
+          "html": "<p>Index k1,k2; giá trị <code>[25,2]</code>.</p>\n",
           "explanationHtml": "<p>Phương án này không chính xác do chia tổng k2 bằng 8 cho cả 4 hàng thay vì 3 giá biết.</p>\n"
         }
       ],

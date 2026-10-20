@@ -5,6 +5,7 @@ import path from 'node:path'
 import { createMarkdownRenderer } from 'vitepress'
 import { configureStudyMarkdown } from './markdown-presentation.mjs'
 import { examProsePlugin } from './exam-prose.mjs'
+import { assertCodePreserved } from './exam-code-integrity.mjs'
 
 const root = fileURLToPath(new URL('../../', import.meta.url))
 const source = path.join(root, 'raw_materials/xu-ly-du-lieu/exam')
@@ -82,7 +83,9 @@ for (let number = 1; number <= 8; number++) {
     const options = question.options.map(option => {
       const explanation = checked?.optionExplanations?.[option.key]
       if (!draft && !explanation?.trim()) throw new Error(`Missing explanation ${question.id}/${option.key}`)
-      return { key: option.key, html: render(option.markdown, true), explanationHtml: render(explanation || '', true) }
+      const html = render(option.markdown, true)
+      assertCodePreserved(option.markdown, html, `${question.id}/${option.key}`)
+      return { key: option.key, html, explanationHtml: render(explanation || '', true) }
     })
     const extra = question.kind === 'quiz'
       ? (fullSolutions.get(question.id) || checked?.explanationMarkdown || '')
