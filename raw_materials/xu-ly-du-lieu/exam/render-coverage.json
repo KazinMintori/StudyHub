@@ -257,7 +257,7 @@
     ],
     "inputSha256": "ae7afc97aa874c8197ca3dd416487b2367b2115bc91acd8bee28a104bf40e42b",
     "reviewed": 60,
-    "contentSha256": "f28ce3b92993bade95793c129f06fe58cd449ac39d07db5dbfaf8312f6460831"
+    "contentSha256": "5600861773db0ec2d7ad9096d3704530858dc5efca90e256f87db225dc15a401"
   },
   {
     "lesson": "03",
@@ -411,7 +411,7 @@
     ],
     "inputSha256": "1ab112e1b461309a6f3865f1b645a9085f2c580d9691b5cda67e413873f114eb",
     "reviewed": 72,
-    "contentSha256": "ef3c1df4f6d840ece4de9d1c6cee1a266ebf25f4957006987526c3b421d89013"
+    "contentSha256": "cb97ccd2abfd80e166200d7f1ff5f37463d0bb9c7d75f4af8d4c6c09712ca807"
   },
   {
     "lesson": "04",
@@ -541,7 +541,7 @@
     ],
     "inputSha256": "4e949f212fb5d7f7beeb7839c9e4b10e0ac0d28f9d00f2a7e4a0021b4f039589",
     "reviewed": 60,
-    "contentSha256": "948acfa406468da946de526ae24f7c7e0c122a2f9e5d366490b022dd157c6061"
+    "contentSha256": "2e5797d1102de4d12a92c6b2528898ea0894ecf65b5e99843c880f13b7f85029"
   },
   {
     "lesson": "05",
@@ -695,7 +695,7 @@
     ],
     "inputSha256": "3232e595ced5abfb77cf572ddcb8031e4ada0d321931dc159a277eb7ccf43b50",
     "reviewed": 72,
-    "contentSha256": "97d1f8c4be7c41c9f51253e30aeffe8fc8dc9f534bfd41368daebafe5e4b7353"
+    "contentSha256": "a83e9efb241c078ed8562b64442f34be50faced2ad36da701f8e1b5dd7d6a6f6"
   },
   {
     "lesson": "06",
@@ -849,7 +849,7 @@
     ],
     "inputSha256": "9ff4c9ecb7f233233237362c94c5b9a5e56c4344075de2273f9e69053b872318",
     "reviewed": 72,
-    "contentSha256": "4daf979a30968c0d7d0a23efd4ad0269d4e62950696d21371f77e14c9c9f5a07"
+    "contentSha256": "94c9a9c7b441b1360a36b7f63f345500d77b5b6f300d9c31219d8c1d39c85d83"
   },
   {
     "lesson": "07",
@@ -1173,6 +1173,6 @@
     ],
     "inputSha256": "26bbe4f007d8123986f5ed9314671a5e83f30e0587a89f49852d24bb9b13e223",
     "reviewed": 72,
-    "contentSha256": "5e3db71cbd24228428abbfda83ff50615b7166191e0adad0759ee84c632b4d83"
+    "contentSha256": "fafbeea0e031b0ba3f898105d290cedcae8efa1426b5310c8e355f2eb3dc6a6b"
   }
 ]

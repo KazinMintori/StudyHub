@@ -55,7 +55,7 @@ try {
           return {actual:codes(document.querySelector('.exam-question__prompt')),expected:codes(expected)}
         }, question)
         assert.deepEqual(literalCode.actual,literalCode.expected,`${question.id}: every inline and fenced prompt literal`)
-        assert.equal((before.actual.match(/\$/g)||[]).length,(raw.promptMarkdown.match(/\$/g)||[]).length,`${question.id}: literal currency/regex dollar signs preserved`)
+        assert.equal((before.actual.match(/\$/g)||[]).length,(before.expected.match(/\$/g)||[]).length,`${question.id}: rendered currency/regex dollar signs preserved`)
         const codes=[...raw.promptMarkdown.matchAll(/^```[^\r\n]*\r?\n(.*?)^```[ \t]*$/gms)].map(m=>m[1].replace(/\r\n/g,'\n').trimEnd())
         assert.deepEqual(before.code,codes,`${question.id}: code text and indentation preserved`)
         if(question.kind==='quiz') {
