@@ -1,11 +1,13 @@
 import { physicsConcepts } from './physics-foundations.mjs'
 import { mathAiConcepts } from './math-ai-foundations.mjs'
 import { dataProcessingConcepts } from './data-processing-foundations.mjs'
+import { xstkConcepts } from './xstk-foundations.mjs'
 const term = (name, aliases, definition, example, use, question, answer, meta = {}) => ({ name, aliases: [name, ...aliases], definition, example, use, question, answer, ...meta })
 export const concepts = {
   ...physicsConcepts,
   ...mathAiConcepts,
   ...dataProcessingConcepts,
+  ...xstkConcepts,
   'thong-ke-mo-ta': term('Mô tả dữ liệu', ['mô tả dữ liệu', 'thống kê mô tả'], 'Mô tả dữ liệu dùng con số, đồ thị hoặc lời văn để trình bày một khía cạnh của dữ liệu đã có. Kết luận được giới hạn trong nhóm đối tượng thực sự được quan sát.', 'Ví dụ: 7 trong 10 người trả lời khảo sát chưa từng lập trình, tức 70% trong nhóm trả lời.', 'Xác định dữ liệu đang có nói gì trước khi suy rộng hoặc đưa ra kết luận nhân quả.', 'Câu “70% người trả lời khảo sát chưa từng lập trình” có nói về toàn trường không?', 'Không. Câu chỉ mô tả nhóm đã trả lời khảo sát.'),
   'suy-rong-thong-ke': term('Suy rộng thống kê', ['suy rộng thống kê', 'generalization thống kê'], 'Suy rộng thống kê dùng dữ liệu quan sát để phát biểu về một tập đối tượng rộng hơn tập đã được ghi nhận dữ liệu. Tính đáng tin của bước suy rộng phụ thuộc cách lấy mẫu và các giả định liên quan.', 'Dùng khảo sát một lớp để nói về tỷ lệ sinh viên toàn trường chưa từng lập trình là suy rộng. Kết luận ấy cần được đánh giá về căn cứ.', 'Phân biệt mô tả một mẫu với kết luận về một tổng thể.', 'Chỉ thay “người trả lời khảo sát” bằng “sinh viên toàn trường” có làm thay đổi phạm vi kết luận không?', 'Có. Kết luận đã bao gồm những người chưa được quan sát, nên chuyển sang suy rộng thống kê.'),
   'ket-luan-nhan-qua': term('Kết luận nhân quả', ['kết luận nhân quả', 'phát biểu nhân quả', 'causal claim'], 'Kết luận nhân quả khẳng định rằng thay đổi giá trị của một biến sẽ ảnh hưởng đến giá trị của biến khác. Chỉ quan sát các biến có liên hệ chưa đủ chứng minh tác động của việc thay đổi một biến.', 'Câu “tham gia câu lạc bộ làm điểm tăng” là kết luận nhân quả. Cần phân biệt tác động của việc tham gia với khác biệt có sẵn giữa các nhóm.', 'Nhận diện câu hỏi về can thiệp và đánh giá bước suy luận từ quan sát tới tác động.', 'Người tham gia câu lạc bộ có điểm cao hơn có đủ chứng minh câu lạc bộ làm điểm tăng không?', 'Chưa. Người tham gia có thể đã có nhiều kinh nghiệm hơn trước đó.'),

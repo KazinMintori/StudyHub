@@ -1,8 +1,8 @@
 ---
 title: "Xác suất có điều kiện"
 wikiTerm: xac-suat-co-dieu-kien
-prev: false
-next: false
+prev: False
+next: False
 ---
 
 # Xác suất có điều kiện
@@ -13,11 +13,25 @@ P(A|B) là xác suất A khi biết B đã xảy ra. Với $P(B)>0$, $P(A|B)=\fr
 
 ## Giải thích kỹ thuật
 
-**Định nghĩa và Bayes.** Với $P(B)>0$:
+Với $P(B)>0$, xác suất có điều kiện được xác định bởi
 
-$$P(A\mid B)=\frac{P(A\cap B)}{P(B)},qquad P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}.$$
+$$
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+$$
 
-Mẫu số P(B) bao gồm mọi cách B xảy ra, không chỉ trường hợp A đúng. Nếu A và phần bù của A chia hết miền xét, P(B)=P(B|A)P(A)+P(B|không A)P(không A). Đảo nhầm hai chiều điều kiện hoặc bỏ tỷ lệ ban đầu là hai lỗi phổ biến.
+Công thức Bayes đổi chiều điều kiện nhưng vẫn phải giữ xác suất ban đầu của A.
+
+$$
+P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}.
+$$
+
+Đặt $q=P(B\mid A)$, $r=P(B\mid A^c)$ và $p=P(A)$ khi cả hai điều kiện có xác suất dương. Khi ấy, công thức xác suất toàn phần viết gọn thành
+
+$$
+P(B)=qp+r(1-p).
+$$
+
+Mẫu số bao gồm cả hai cách để B xảy ra. Đảo chiều điều kiện mà giữ nguyên giá trị xác suất sẽ cho kết quả sai nói chung.
 
 ## Ví dụ
 
@@ -27,7 +41,7 @@ Trong 100 người có 20 người đeo kính, trong đó 8 người học lớp
 
 Đọc định lý Bayes, mạng Bayes và suy luận từ quan sát.
 
-## Tự kiểm tra
+## Câu hỏi ôn lại
 
 Nếu $P(A\cap B)=0.1$, $P(B)=0.5$ thì P(A|B) bằng bao nhiêu?
 

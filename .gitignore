@@ -11,6 +11,8 @@ dist/
 /assets/
 .static-export.json
 qa/
+!/scripts/qa/
+!/scripts/qa/**
 
 # Local working material and generated root preview files
 /.agents/

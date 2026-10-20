@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: xac-suat-thong-ke
+redirectTo: "/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.html#slides"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

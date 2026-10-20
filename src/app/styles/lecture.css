@@ -193,6 +193,35 @@
 .slide-example { font-size: 14px; color: var(--ink-2); line-height: 1.9; margin-top: 18px; }
 .slide-controls { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-top: 18px; }
 .slide-controls > span { font-size: 12px; color: var(--ink-2); }
+/* Keep XSTK review cards on the same spacing scale as the reading panels. */
+.Layout.xstk-layout .course-slide { min-width: 0; padding: var(--space-6); }
+.Layout.xstk-layout .course-slide h2 { font-size: var(--fs-h2); line-height: 1.4; margin: var(--space-5) 0; letter-spacing: normal; }
+.Layout.xstk-layout .course-slide li { margin: var(--space-3) 0; }
+.Layout.xstk-layout .slide-formula { margin: var(--space-5) 0; padding: var(--space-3); }
+.Layout.xstk-layout .slide-example { margin-top: var(--space-5); }
+.Layout.xstk-layout .slide-controls { margin-top: var(--space-5); gap: var(--space-3); }
+.Layout.xstk-layout .lecture-caption {
+  margin: var(--space-3) auto var(--space-6);
+  color: var(--ink-2);
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  text-align: center;
+}
+.Layout.xstk-layout .lecture-caption p { margin: 0; }
+.Layout.xstk-layout .lecture-figure-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-5);
+  margin: var(--space-5) 0;
+}
+.Layout.xstk-layout .lecture-figure-pair img { max-width: 100%; height: auto; margin: 0; }
+@media (max-width: 600px) {
+  .Layout.xstk-layout .course-slide { padding: var(--space-3); min-height: 0; }
+  .Layout.xstk-layout .course-slide h2 { font-size: var(--fs-h3); }
+  .Layout.xstk-layout .slide-formula { padding-inline: var(--space-2); }
+}
 .foundations-heading { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); margin-bottom: var(--space-3); }
 .foundations-heading h2 { font-size: var(--fs-h2); font-weight: 600; line-height: 1.3; }
 .foundations-heading span { color: var(--xanh); font-size: var(--fs-small); white-space: nowrap; }

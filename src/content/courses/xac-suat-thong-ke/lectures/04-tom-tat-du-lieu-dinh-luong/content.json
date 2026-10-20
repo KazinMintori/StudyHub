@@ -12,39 +12,39 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 381,
+      "line": 486,
       "title": "Bài tập rèn luyện tư duy thống kê"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 383,
+      "line": 488,
       "title": "Bài tập 1: Quyết định dịch vụ giao đồ ăn và ý nghĩa của độ phân tán"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 415,
+      "line": 538,
       "title": "Bài tập 2: Tác động của điểm ngoại lai lên các thống kê tóm tắt"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 464,
+      "line": 617,
       "title": "Bài tập 3: Đọc hiểu phân phối hai đỉnh (Bimodal Distribution)"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 399,
+      "line": 514,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 432,
+      "line": 560,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 476,
+      "line": 637,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -52,73 +52,73 @@
     {
       "reference": "./img/stat20-04/dotplot-bill-length.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 42,
+      "line": 59,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/dotplot-bill-length.png"
     },
     {
       "reference": "./img/stat20-04/histogram-bill-length.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 58,
+      "line": 77,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/histogram-bill-length.png"
     },
     {
       "reference": "./img/stat20-04/histograms-binwidths.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 72,
+      "line": 95,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/histograms-binwidths.png"
     },
     {
       "reference": "./img/stat20-04/density-plot-bill-length.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 88,
+      "line": 115,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/density-plot-bill-length.png"
     },
     {
       "reference": "./img/stat20-04/density-bandwidths.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 99,
+      "line": 131,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/density-bandwidths.png"
     },
     {
       "reference": "./img/stat20-04/violin-plot-species.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 112,
+      "line": 147,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/violin-plot-species.png"
     },
     {
       "reference": "./img/stat20-04/boxplot-species.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 116,
+      "line": 155,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/boxplot-species.png"
     },
     {
       "reference": "./img/stat20-04/modality.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 139,
+      "line": 187,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/modality.png"
     },
     {
       "reference": "./img/stat20-04/unimodal-vs-bimodal.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 151,
+      "line": 203,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/unimodal-vs-bimodal.png"
     },
     {
       "reference": "./img/stat20-04/skew.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 165,
+      "line": 223,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/skew.png"
     },
     {
       "reference": "./img/stat20-04/income-dist.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 173,
+      "line": 233,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/income-dist.png"
     },
     {
       "reference": "./img/stat20-04/function-machine.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/04-tom-tat-du-lieu-dinh-luong.md",
-      "line": 187,
+      "line": 249,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-04/function-machine.png"
     }
   ]

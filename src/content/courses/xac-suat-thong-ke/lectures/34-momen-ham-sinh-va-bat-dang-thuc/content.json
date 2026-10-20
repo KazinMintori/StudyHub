@@ -1,0 +1,115 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "34-momen-ham-sinh-va-bat-dang-thuc",
+  "route": "/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/34-momen-ham-sinh-va-bat-dang-thuc/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "ky-vong",
+    "phuong-sai"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 178,
+      "title": "Ví dụ 1: Tính mômen của phân phối Chuẩn chuẩn tắc qua MGF"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 269,
+      "title": "Ví dụ 2: Chứng minh tổng của hai biến Poisson độc lập là phân phối Poisson"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 416,
+      "title": "Ví dụ 3: Đánh giá điểm thi bằng Markov và Chebyshev"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 497,
+      "title": "Ví dụ 4: Ứng dụng bất đẳng thức Jensen"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 569,
+      "title": "Bài tập rèn luyện: Momen, hàm sinh và bất đẳng thức xác suất"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 571,
+      "title": "Bài tập 1"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 631,
+      "title": "Bài tập 2"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 662,
+      "title": "Bài tập 3"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 705,
+      "title": "Bài tập 4"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 764,
+      "title": "Bài tập 5"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 574,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 634,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 667,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 716,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 767,
+      "title": "Lời giải"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/hinh-34-1-mgf-derivatives.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 98,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-34-1-mgf-derivatives.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/hinh-34-2-markov-chebyshev-bounds.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 343,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-34-2-markov-chebyshev-bounds.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/hinh-34-3-jensen-inequality-geometric.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/34-momen-ham-sinh-va-bat-dang-thuc.md",
+      "line": 475,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-34-3-jensen-inequality-geometric.svg"
+    }
+  ]
+}

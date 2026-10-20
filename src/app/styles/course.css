@@ -14,6 +14,7 @@
 .lecture-row { display: flex; align-items: center; gap: var(--space-5); padding: var(--space-5) var(--space-3); transition: background var(--motion-fast) var(--ease); }
 .lecture-row:hover { background: var(--canvas); }
 .lesson-number { font-size: var(--fs-read); font-variant-numeric: tabular-nums; color: var(--ink-3); min-width: 24px; }
+#bo-tro-co-dien .lesson-number { flex: 0 0 3rem; }
 .lecture-list-copy { flex: 1; min-width: 0; }
 .lecture-list-copy h3 { font-size: var(--fs-read); line-height: 1.45; font-weight: 600; }
 .lecture-list-copy p { font-size: var(--fs-small); color: var(--ink-3); margin-top: var(--space-2); }

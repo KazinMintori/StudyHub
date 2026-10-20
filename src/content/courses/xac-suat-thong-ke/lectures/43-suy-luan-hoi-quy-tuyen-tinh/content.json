@@ -1,0 +1,92 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "43-suy-luan-hoi-quy-tuyen-tinh",
+  "route": "/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/43-suy-luan-hoi-quy-tuyen-tinh/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "bien-ngau-nhien",
+    "ky-vong",
+    "phuong-sai",
+    "binh-phuong-toi-thieu"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 217,
+      "title": "Tính toán hồi quy và khoảng dự báo trên năm cặp quan sát"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 478,
+      "title": "Bài tập tự luyện"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 480,
+      "title": "Bài tập 1: Sai số chuẩn và khoảng tin cậy cho hệ số chặn"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 519,
+      "title": "Bài tập 2: Tính hệ số xác định và thống kê F của phương trình hồi quy"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 570,
+      "title": "Bài tập 3: Dự báo tại điểm biên ngoại suy"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 609,
+      "title": "Bài tập 4: Ý nghĩa của độ đòn bẩy trong ma trận mũ"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 484,
+      "title": "Lời giải Bài tập 1"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 523,
+      "title": "Lời giải Bài tập 2"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 574,
+      "title": "Lời giải Bài tập 3"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 613,
+      "title": "Lời giải Bài tập 4"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/43-regression-normality-conditional-spread.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 52,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/43-regression-normality-conditional-spread.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/43-confidence-band-vs-prediction-band.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 168,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/43-confidence-band-vs-prediction-band.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/43-residual-diagnostics-four-plots.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/43-suy-luan-hoi-quy-tuyen-tinh.md",
+      "line": 390,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/43-residual-diagnostics-four-plots.svg"
+    }
+  ]
+}

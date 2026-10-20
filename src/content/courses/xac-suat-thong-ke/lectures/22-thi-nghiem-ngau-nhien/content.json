@@ -14,37 +14,53 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
-      "line": 191,
+      "line": 269,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
-      "line": 193,
+      "line": 271,
       "title": "Bài tập 1: Tính toán SMD và đánh giá cân bằng trong thử nghiệm A/B Testing"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
-      "line": 225,
+      "line": 338,
       "title": "Bài tập 2: Cơ chế làm mù đôi và hiệu ứng giả dược trong thử nghiệm y học"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
-      "line": 250,
+      "line": 376,
       "title": "Bài tập 3: Kiểm tra cân bằng hiệp biến để phát hiện sự cố gán nhóm"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
+      "line": 289,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
+      "line": 352,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
+      "line": 398,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-22/unnamed-chunk-3-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
-      "line": 139,
+      "line": 199,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-22/unnamed-chunk-3-1.png"
     },
     {
       "reference": "./img/stat20-22/unnamed-chunk-4-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/22-thi-nghiem-ngau-nhien.md",
-      "line": 160,
+      "line": 229,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-22/unnamed-chunk-4-1.png"
     }
   ]

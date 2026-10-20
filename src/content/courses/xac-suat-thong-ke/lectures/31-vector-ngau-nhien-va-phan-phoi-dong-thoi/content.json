@@ -1,0 +1,110 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "31-vector-ngau-nhien-va-phan-phoi-dong-thoi",
+  "route": "/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/31-vector-ngau-nhien-va-phan-phoi-dong-thoi/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "bien-ngau-nhien",
+    "tich-phan"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 81,
+      "title": "Ví dụ 1: Phân tích nhật ký sự cố hệ thống máy chủ"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 171,
+      "title": "Ví dụ 2: Hàm mật độ trên miền tam giác"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 270,
+      "title": "Ví dụ 3: Kiểm tra tính độc lập"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 305,
+      "title": "Bài tập rèn luyện: Vector ngẫu nhiên và phân phối đồng thời"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 307,
+      "title": "Bài tập 1"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 351,
+      "title": "Bài tập 2"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 384,
+      "title": "Bài tập 3"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 416,
+      "title": "Bài tập 4"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 441,
+      "title": "Bài tập 5"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 313,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 359,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 389,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 423,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 446,
+      "title": "Lời giải"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/hinh-31-1-discrete-joint-pmf.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 28,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-31-1-discrete-joint-pmf.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/hinh-31-2-triangular-support-density.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 169,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-31-2-triangular-support-density.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/hinh-31-3-conditional-distributions.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/31-vector-ngau-nhien-va-phan-phoi-dong-thoi.md",
+      "line": 246,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-31-3-conditional-distributions.svg"
+    }
+  ]
+}

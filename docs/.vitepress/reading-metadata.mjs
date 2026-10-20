@@ -253,19 +253,19 @@ export const readingMetadata = {
     "minutes": 15
   },
   "xac-suat-thong-ke/01-hieu-the-gioi-bang-du-lieu": {
-    "words": 3362,
+    "words": 3392,
     "minutes": 15
   },
   "xac-suat-thong-ke/02-phan-loai-du-lieu": {
-    "words": 3855,
+    "words": 3872,
     "minutes": 20
   },
   "xac-suat-thong-ke/03-tom-tat-du-lieu-dinh-tinh": {
-    "words": 4343,
+    "words": 4431,
     "minutes": 20
   },
   "xac-suat-thong-ke/04-tom-tat-du-lieu-dinh-luong": {
-    "words": 3266,
+    "words": 3394,
     "minutes": 15
   },
   "xac-suat-thong-ke/05-ngu-phap-do-hoa": {
@@ -273,91 +273,91 @@ export const readingMetadata = {
     "minutes": 20
   },
   "xac-suat-thong-ke/06-phan-tich-co-dieu-kien": {
-    "words": 3676,
+    "words": 3679,
     "minutes": 20
   },
   "xac-suat-thong-ke/07-tom-tat-lien-he-bien-so": {
-    "words": 3896,
+    "words": 4000,
     "minutes": 20
   },
   "xac-suat-thong-ke/08-hoi-quy-tuyen-tinh-boi": {
-    "words": 3703,
+    "words": 3817,
     "minutes": 20
   },
   "xac-suat-thong-ke/09-co-so-xac-suat": {
-    "words": 1105,
+    "words": 1137,
     "minutes": 5
   },
   "xac-suat-thong-ke/10-tinh-toan-xac-suat": {
-    "words": 6269,
-    "minutes": 30
+    "words": 6500,
+    "minutes": 35
   },
   "xac-suat-thong-ke/11-phan-phoi-xac-suat": {
-    "words": 4608,
+    "words": 5041,
     "minutes": 25
   },
   "xac-suat-thong-ke/12-bien-ngau-nhien": {
-    "words": 2630,
+    "words": 2567,
     "minutes": 15
   },
   "xac-suat-thong-ke/13-ky-vong-va-sai-so-chuan": {
-    "words": 2767,
-    "minutes": 15
+    "words": 1289,
+    "minutes": 5
   },
   "xac-suat-thong-ke/14-phan-phoi-lien-tuc-va-xap-xi-chuan": {
-    "words": 4417,
-    "minutes": 20
+    "words": 4666,
+    "minutes": 25
   },
   "xac-suat-thong-ke/15-tu-mau-den-tong-the": {
-    "words": 4142,
+    "words": 4130,
     "minutes": 20
   },
   "xac-suat-thong-ke/16-khoang-tin-cay": {
-    "words": 3281,
+    "words": 3467,
     "minutes": 15
   },
   "xac-suat-thong-ke/17-phuong-phap-bootstrapping": {
-    "words": 4157,
+    "words": 4145,
     "minutes": 20
   },
   "xac-suat-thong-ke/18-kiem-dinh-gia-thuyet-1": {
-    "words": 3877,
+    "words": 3905,
     "minutes": 20
   },
   "xac-suat-thong-ke/19-kiem-dinh-gia-thuyet-2": {
-    "words": 3724,
+    "words": 3817,
     "minutes": 20
   },
   "xac-suat-thong-ke/20-sai-lech-do-thiet-ke": {
-    "words": 3830,
-    "minutes": 20
+    "words": 5178,
+    "minutes": 25
   },
   "xac-suat-thong-ke/21-dinh-nghia-nhan-qua": {
-    "words": 5321,
+    "words": 5303,
     "minutes": 25
   },
   "xac-suat-thong-ke/22-thi-nghiem-ngau-nhien": {
-    "words": 2702,
+    "words": 2651,
     "minutes": 15
   },
   "xac-suat-thong-ke/23-tac-dong-nhan-qua-nghien-cuu-quan-sat": {
-    "words": 4474,
-    "minutes": 20
+    "words": 4616,
+    "minutes": 25
   },
   "xac-suat-thong-ke/24-phuong-phap-binh-phuong-be-nhat": {
-    "words": 3720,
+    "words": 3771,
     "minutes": 20
   },
   "xac-suat-thong-ke/25-danh-gia-va-cai-thien-du-doan": {
-    "words": 3469,
-    "minutes": 15
+    "words": 3527,
+    "minutes": 20
   },
   "xac-suat-thong-ke/26-hien-tuong-qua-khop": {
-    "words": 4986,
+    "words": 5098,
     "minutes": 25
   },
   "xac-suat-thong-ke/27-hoi-quy-logistic": {
-    "words": 2792,
+    "words": 2878,
     "minutes": 15
   },
   "xu-ly-du-lieu/bai-01-tong-quan-cong-cu-chinh-sach-ai": {
@@ -1147,5 +1147,77 @@ export const readingMetadata = {
   "discrete-math/graph-theory": {
     "words": 501,
     "minutes": 5
+  },
+  "xac-suat-thong-ke/28-dem-va-xac-suat-co-dien": {
+    "words": 2065,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/29-phan-phoi-roi-rac-mo-rong": {
+    "words": 978,
+    "minutes": 5
+  },
+  "xac-suat-thong-ke/30-phan-phoi-lien-tuc-mo-rong": {
+    "words": 2932,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/31-vector-ngau-nhien-va-phan-phoi-dong-thoi": {
+    "words": 1599,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien": {
+    "words": 1043,
+    "minutes": 5
+  },
+  "xac-suat-thong-ke/33-bien-doi-va-thong-ke-thu-tu": {
+    "words": 1939,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/34-momen-ham-sinh-va-bat-dang-thuc": {
+    "words": 2430,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/35-luat-so-lon-va-dinh-ly-gioi-han": {
+    "words": 1807,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/36-phan-phoi-mau-chinh-xac": {
+    "words": 2446,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai": {
+    "words": 1633,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/38-tinh-du-va-hieu-qua-uoc-luong": {
+    "words": 1807,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/39-khoang-tin-cay-tham-so": {
+    "words": 3066,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/40-kiem-dinh-tham-so-va-cong-suat": {
+    "words": 3247,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/41-kiem-dinh-khi-binh-phuong": {
+    "words": 1626,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/42-phan-tich-phuong-sai": {
+    "words": 3038,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/43-suy-luan-hoi-quy-tuyen-tinh": {
+    "words": 2672,
+    "minutes": 15
+  },
+  "xac-suat-thong-ke/44-phuong-phap-phi-tham-so": {
+    "words": 1666,
+    "minutes": 10
+  },
+  "xac-suat-thong-ke/45-suy-luan-bayes-va-du-doan": {
+    "words": 2613,
+    "minutes": 15
   }
 }

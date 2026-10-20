@@ -1,0 +1,122 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "37-uoc-luong-diem-momen-va-hop-ly-cuc-dai",
+  "route": "/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "bien-ngau-nhien",
+    "ky-vong",
+    "phuong-sai",
+    "likelihood"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 124,
+      "title": "Ước lượng momen cho phân phối Poisson"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 153,
+      "title": "Ước lượng momen cho phân phối Đều"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 253,
+      "title": "Tính toán MLE cho phân phối Exponential"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 321,
+      "title": "So sánh số học giữa MLE và S²"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 385,
+      "title": "Ước lượng cận trên phân phối Đều"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 421,
+      "title": "Bài tập tự luyện"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 423,
+      "title": "1. So sánh MSE của hai ước lượng"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 445,
+      "title": "2. Ước lượng momen cho phân phối Gamma"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 481,
+      "title": "3. Ước lượng MLE cho tỷ lệ Bernoulli"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 527,
+      "title": "4. Hiệu chỉnh không chệch cho ước lượng biên phân phối Đều"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 556,
+      "title": "5. Tính bất biến của ước lượng hợp lý cực đại"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 430,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 449,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 485,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 531,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 560,
+      "title": ""
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/37-bias-variance-mse-tradeoff.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 69,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/37-bias-variance-mse-tradeoff.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/37-mle-log-likelihood-concavity.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 217,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/37-mle-log-likelihood-concavity.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/37-uniform-mle-boundary.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/37-uoc-luong-diem-momen-va-hop-ly-cuc-dai.md",
+      "line": 381,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/37-uniform-mle-boundary.svg"
+    }
+  ]
+}

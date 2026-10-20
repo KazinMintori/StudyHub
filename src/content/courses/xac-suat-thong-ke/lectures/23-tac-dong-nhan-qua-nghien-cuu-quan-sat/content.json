@@ -14,43 +14,59 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 186,
+      "line": 239,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 188,
+      "line": 241,
       "title": "Bài tập 1: Tính toán khoảng cách Euclid và ghép cặp láng giềng gần nhất"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 226,
+      "line": 336,
       "title": "Bài tập 2: Phân tích nghịch lý Simpson trong đánh giá phương pháp giảng dạy"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 276,
+      "line": 422,
       "title": "Bài tập 3: Biến gây nhiễu tiềm ẩn trong nghiên cứu thể thao và tuổi thọ"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
+      "line": 267,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
+      "line": 362,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
+      "line": 438,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-23/nba_foul.jpg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 39,
+      "line": 49,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-23/nba_foul.jpg"
     },
     {
       "reference": "./img/stat20-23/unnamed-chunk-6-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 103,
+      "line": 129,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-23/unnamed-chunk-6-1.png"
     },
     {
       "reference": "./img/stat20-23/unnamed-chunk-7-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 110,
+      "line": 139,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-23/unnamed-chunk-7-1.png"
     }
   ]

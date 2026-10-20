@@ -1,0 +1,97 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "42-phan-tich-phuong-sai",
+  "route": "/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/42-phan-tich-phuong-sai/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "bien-ngau-nhien",
+    "ky-vong",
+    "phuong-sai",
+    "phan-phoi-gauss"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 167,
+      "title": "Phân tích ANOVA một nhân tố đầy đủ"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 316,
+      "title": "Phân tích hậu nghiệm Tukey HSD"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 404,
+      "title": "Bài tập tự luyện"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 406,
+      "title": "Bài tập 1: Tính toán tỷ lệ sai lầm trên toàn họ (FWER)"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 443,
+      "title": "Bài tập 2: Tính kích thước hiệu ứng Eta bình phương"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 462,
+      "title": "Bài tập 3: Khôi phục bảng ANOVA từ thông tin khuyết thiếu"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 496,
+      "title": "Bài tập 4: Bậc tự do trong ANOVA hai nhân tố"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 410,
+      "title": "Lời giải Bài tập 1"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 447,
+      "title": "Lời giải Bài tập 2"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 466,
+      "title": "Lời giải Bài tập 3"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 500,
+      "title": "Lời giải Bài tập 4"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/42-anova-variance-decomposition.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 73,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/42-anova-variance-decomposition.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/42-anova-f-distribution-critical-region.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 152,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/42-anova-f-distribution-critical-region.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/42-two-way-anova-interaction-plot.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/42-phan-tich-phuong-sai.md",
+      "line": 382,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/42-two-way-anova-interaction-plot.svg"
+    }
+  ]
+}

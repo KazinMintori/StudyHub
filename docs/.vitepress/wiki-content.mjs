@@ -4,6 +4,7 @@ import { concepts } from './concepts.mjs'
 
 import { mathAiWikiDetails } from './math-ai-foundations.mjs'
 import { dataProcessingConcepts, dataProcessingWikiDetails } from './data-processing-foundations.mjs'
+import { xstkConcepts, xstkWikiDetails, xstkWikiConnections } from './xstk-foundations.mjs'
 export const wikiGroups = [
   { id:'optimization', name:'Tối ưu hóa', ids:['hessian','ma-tran-psd','he-phuong-trinh','binh-phuong-toi-thieu','tham-so-toan-hoc','tap-loi','ham-loi','mien-kha-thi','infimum','epigraph','noi-long-toi-uu','lagrangian','ham-doi-ngau','doi-ngau-manh','dieu-kien-slater','kkt','tap-affine','noi-tuong-doi','non-loi','sieu-phang','ellipsoid','da-dien','non-doi-ngau','sieu-phang-phan-tach','bat-dang-thuc-tong-quat','tap-muc-duoi','bat-dang-thuc-jensen','log-sum-exp','cuc-tieu-cuc-bo','phep-chieu','bai-toan-tuong-duong','ham-tua-loi','quy-hoach-tuyen-tinh','quy-hoach-toan-phuong','quy-hoach-non-bac-hai','quy-hoach-nua-xac-dinh','quy-hoach-hinh-hoc','phan-bu-schur','toi-uu-pareto','dieu-chuan'] },
   { id:'optimization-algorithms', name:'Thuật toán tối ưu', ids:['tim-kiem-duong','tu-tuong-hop','gradient-ngau-nhien','momentum-nesterov','adagrad','rmsprop','adam','gradient-lien-hop','bfgs'] },
@@ -12,7 +13,7 @@ export const wikiGroups = [
   { id:'algorithms', name:'Giải thuật & cấu trúc dữ liệu', ids:['do-thi','cay','trang-thai','hang-doi','ngan-xep','hang-doi-uu-tien','do-phuc-tap','heuristic','mang','con-tro','de-quy','bam'] },
   { id:'mathematics', name:'Đại số & giải tích', ids:['vector','ma-tran','tich-vo-huong','chuan','gioi-han','do-thi-ham-so','dao-ham','dao-ham-rieng','gradient','tich-phan','quy-tac-chuoi','tri-rieng','to-hop-loi'] },
   { id:'data-analysis', name:'Phân tích & mô tả dữ liệu', ids:['thong-ke-mo-ta','suy-rong-thong-ke','ket-luan-nhan-qua','du-doan-thong-ke','mau-tong-the'] },
-  { id:'probability', name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood'] },
+  { id:'probability', name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood', ...Object.keys(xstkConcepts)] },
   { id:'programming', name:'Python & dữ liệu', ids:['bien-kieu','list','dictionary','ham-lap-trinh','tham-so-lap-trinh','vong-lap','chi-muc','vector-hoa','broadcasting','gia-tri-thieu', ...Object.keys(dataProcessingConcepts)] },
   { id:'physics', name:'Cơ học, nhiệt, điện từ và lượng tử', ids:['dien-tich','luc','cong-nang-luong','dien-the','thong-luong','don-vi','song',...physicsConceptIds] },
   { id:'distributed', name:'Tính toán phân tán', ids:['khoa-gia-tri','phan-tan','ket-hop'] }
@@ -22,7 +23,7 @@ export const courseWikiScopes = {
   'vat-ly-1':['physics','mathematics','probability'],
   'toan-cho-ai':['optimization','optimization-algorithms','planning','mathematics','probability','data-analysis','discrete-math','algorithms','physics'],
   'xu-ly-du-lieu':['programming','data-analysis'],
-  'xac-suat-thong-ke':['probability','data-analysis','mathematics','discrete-math'],
+  'xac-suat-thong-ke':['probability','data-analysis','mathematics','discrete-math','programming'],
   'vat-ly-2':['physics','mathematics'],
   'bieu-dien-tri-thuc':['discrete-math','algorithms','probability'],
   'giai-thuat-du-lieu':['distributed','algorithms','mathematics','probability','data-analysis','programming'],
@@ -45,6 +46,7 @@ export function resolveConceptForCourse(ids, courseId) {
     .sort((a, b) => a.rank - b.rank)[0]?.id || null
 }
 const connections = {
+  ...xstkWikiConnections,
   ...physicsWikiConnections,
   'thong-ke-mo-ta':['mau-tong-the','suy-rong-thong-ke'],
   'suy-rong-thong-ke':['mau-tong-the','thong-ke-mo-ta','ket-luan-nhan-qua'],
@@ -140,6 +142,7 @@ export const wikiDetails = {
   ...physicsWikiDetails,
   ...mathAiWikiDetails,
   ...dataProcessingWikiDetails,
+  ...xstkWikiDetails,
   'thong-ke-mo-ta':'**Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\\%$. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.\n\nMô tả không chỉ gồm phép tính: Bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu.',
   'suy-rong-thong-ke':'**Tập đối tượng trong kết luận rộng hơn tập đã quan sát.** Cùng con số 70%, câu về người trả lời khảo sát là mô tả, còn câu về toàn bộ sinh viên của trường là suy rộng. Muốn đánh giá kết luận sau, cần biết cách chọn mẫu, nhóm nào có cơ hội tham gia và ai được mời nhưng không trả lời.\n\nMột mẫu lớn vẫn có thể khác tổng thể một cách có hệ thống. Nhận diện phát biểu là suy rộng không chứng minh rằng bước suy rộng hợp lệ, và cũng không có nghĩa mọi bước suy rộng đều sai.',
   'ket-luan-nhan-qua':'**Phân biệt quan sát với can thiệp.** Nếu người tham gia câu lạc bộ có điểm cao hơn, dữ liệu mô tả khác biệt giữa các nhóm. Để nói việc tham gia làm điểm tăng, cần căn cứ về tác động của thay đổi này, thay vì chỉ dựa vào khác biệt đã thấy. Những người tham gia có thể đã có nhiều kinh nghiệm hơn từ trước.\n\nThí nghiệm ngẫu nhiên có đối chứng phân người tham gia ngẫu nhiên vào các nhóm để so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc khác biệt có sẵn quyết định ai nhận can thiệp. Kết luận vẫn cần đi cùng thiết kế, cách đo và phạm vi nghiên cứu.',
@@ -174,7 +177,25 @@ export const wikiDetails = {
   'tri-rieng':"**Cách tìm trị riêng.** Từ $Av=\\lambda v$ suy ra $(A-\\lambda I)v=0$. Để có nghiệm $v\\ne 0$ trong hữu hạn chiều, ma trận $A-\\lambda I$ phải suy biến. Do đó $\\det(A-\\lambda I)=0$.\n\nTrị riêng có thể là số phức với ma trận thực. Ma trận đối xứng thực có trị riêng thực và một cơ sở vector riêng trực chuẩn. Không phải mọi ma trận đều có đủ vector riêng độc lập để chéo hóa.",
   'to-hop-loi':"**Nhiều điểm và điều kiện trọng số.** Với $k$ điểm $x_1,\\ldots,x_k$, một tổ hợp lồi có dạng đầy đủ\n\n$$z=\\lambda_1x_1+\\lambda_2x_2+\\cdots+\\lambda_kx_k.$$\n\nMỗi trọng số không âm và tổng trọng số bằng 1:\n\n$$\\lambda_1+\\lambda_2+\\cdots+\\lambda_k=1,\\qquad\\lambda_i\\ge0.$$\n\nViết gọn bằng ký hiệu tổng:\n\n$$z=\\sum_{i=1}^k\\lambda_i x_i,\\qquad\\sum_{i=1}^k\\lambda_i=1.$$\n\nChỉ số $i$ chạy từ 1 đến $k$, qua các điểm đã chọn. Sau khi phạm vi đã rõ, $\\sum_i\\lambda_i=1$ là cách viết tắt cùng điều kiện. Tài liệu có thể dùng $\\theta_i$ thay cho $\\lambda_i$. Cả hai đều là tên của trọng số. Bao lồi là tập tất cả tổ hợp lồi của các điểm đã cho.\n\nVới hai điểm, điều kiện tạo đúng đoạn nối. Nếu bỏ điều kiện không âm nhưng vẫn giữ tổng bằng 1, ta có tổ hợp affine có thể nằm ngoài đoạn. Đây là sự khác nhau cần nhớ khi đọc tập lồi.",
   'khong-gian-mau':"**Đồng khả năng là một giả định.** Chia số kết quả thuận lợi cho tổng số kết quả chỉ đúng khi mọi kết quả cơ bản có cùng xác suất. Với đồng xu lệch, hai kết quả ngửa/sấp không nhất thiết mỗi kết quả xác suất $\\frac{1}{2}$.\n\nKhi tung nhiều lần, chọn kết quả cơ bản đủ chi tiết. Đếm “0,1,2 mặt ngửa” như ba kết quả đồng khả năng là sai: Trường hợp một mặt ngửa có hai cách xảy ra.",
-  'xac-suat-co-dieu-kien':"**Định nghĩa và Bayes.** Với $P(B)>0$:\n\n$$P(A\\mid B)=\\frac{P(A\\cap B)}{P(B)},qquad P(A\\mid B)=\\frac{P(B\\mid A)P(A)}{P(B)}.$$\n\nMẫu số P(B) bao gồm mọi cách B xảy ra, không chỉ trường hợp A đúng. Nếu A và phần bù của A chia hết miền xét, P(B)=P(B|A)P(A)+P(B|không A)P(không A). Đảo nhầm hai chiều điều kiện hoặc bỏ tỷ lệ ban đầu là hai lỗi phổ biến.",
+  'xac-suat-co-dieu-kien': String.raw`Với $P(B)>0$, xác suất có điều kiện được xác định bởi
+
+$$
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+$$
+
+Công thức Bayes đổi chiều điều kiện nhưng vẫn phải giữ xác suất ban đầu của A.
+
+$$
+P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}.
+$$
+
+Đặt $q=P(B\mid A)$, $r=P(B\mid A^c)$ và $p=P(A)$ khi cả hai điều kiện có xác suất dương. Khi ấy, công thức xác suất toàn phần viết gọn thành
+
+$$
+P(B)=qp+r(1-p).
+$$
+
+Mẫu số bao gồm cả hai cách để B xảy ra. Đảo chiều điều kiện mà giữ nguyên giá trị xác suất sẽ cho kết quả sai nói chung.`,
   'doc-lap':"**Độc lập từng đôi khác độc lập toàn bộ.** Với nhiều biến cố, yêu cầu từng cặp độc lập chưa đủ để kết luận mọi nhóm đều có xác suất giao bằng tích xác suất. Cần kiểm tra định nghĩa phù hợp với số biến cố.\n\nĐộc lập cũng không đồng nghĩa không tương quan trong mọi trường hợp. Với biến có phương sai hữu hạn, độc lập kéo theo hiệp phương sai bằng 0. Chiều ngược lại nhìn chung không đúng.",
   'bien-ngau-nhien':"**X là hàm, x là giá trị.** Biến ngẫu nhiên X ánh xạ kết quả $\\omega$ trong không gian mẫu thành số $X(\\omega )$. PMF cho $P(X=x)$ với biến rời rạc. Mật độ PDF cho phép tính xác suất trên khoảng với biến liên tục.\n\nHàm phân phối tích lũy $F(x)=P(X\\le x)$ dùng cho cả hai. Mật độ tại một điểm không phải xác suất tại điểm. Với biến liên tục có mật độ, $P(X=x)=0$.",
   'ky-vong':"**Tồn tại và tuyến tính.** Kỳ vọng cần được kiểm tra tồn tại theo mô hình đang dùng. Với biến liên tục có mật độ, $\\mathbb E[X]=\\int x f(x)\\,dx$ khi tích phân thích hợp tồn tại. Một phân phối có thể không có kỳ vọng hữu hạn.\n\n$\\mathbb E[aX+bY]=aE[X]+bE[Y]$ không cần X,Y độc lập khi các kỳ vọng tồn tại. Nhưng $\\mathbb E[XY]=\\mathbb E[X]\\mathbb E[Y]$ thường cần thêm điều kiện, như độc lập và khả tích thích hợp.",

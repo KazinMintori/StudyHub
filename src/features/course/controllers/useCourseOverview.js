@@ -10,6 +10,8 @@ export function useCourseOverview() {
   const review = computed(() => course.value?.review)
   const view = ref(frontmatter.value.reviewOverview ? 'on-luyen' : 'bai-giang')
   const lessons = computed(() => course.value?.lessons || [])
+  const primaryLessonCount = computed(() => lessons.value.filter(lesson => !lesson.supplementary).length)
+  const supplementCount = computed(() => lessons.value.filter(lesson => lesson.supplementary).length)
   const groups = computed(() => course.value.parts?.length ? course.value.parts.map(p => ({ ...p, entries: p.lessons.map(slug => lessons.value.find(l => l.slug === slug)).filter(Boolean) })).filter(group => group.entries.length) : [{ title: 'Bài giảng', entries: lessons.value }])
   function syncView() { view.value = review.value && (frontmatter.value.reviewOverview || window.location.hash === '#on-luyen') ? 'on-luyen' : 'bai-giang' }
   onMounted(() => {
@@ -23,5 +25,5 @@ export function useCourseOverview() {
   })
   watch(() => frontmatter.value.course, () => { if (typeof window !== 'undefined') syncView() })
 
-  return { frontmatter, course, review, view, lessons, groups, syncView, studyLink, lecturePath, topicPath }
+  return { frontmatter, course, review, view, lessons, primaryLessonCount, supplementCount, groups, syncView, studyLink, lecturePath, topicPath }
 }

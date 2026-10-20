@@ -1,0 +1,109 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "28-dem-va-xac-suat-co-dien",
+  "route": "/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/28-dem-va-xac-suat-co-dien/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "to-hop",
+    "khong-gian-mau"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 105,
+      "title": "Ví dụ 1: Phân phối tài nguyên máy chủ"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 178,
+      "title": "Ví dụ 2: Khảo sát kỹ năng lập trình sinh viên"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 253,
+      "title": "Ví dụ 3: Bài toán cuộc hẹn ngẫu nhiên"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 366,
+      "title": "Ví dụ 4: Ứng dụng tính liên tục để xác định xác suất tại một điểm"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 423,
+      "title": "Bài tập rèn luyện xác suất cổ điển và hình học"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 425,
+      "title": "Bài tập 1: Phân phối đơn hàng tại quầy giải khát"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 443,
+      "title": "Bài tập 2: Hoán vị lặp từ vựng thống kê"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 467,
+      "title": "Bài tập 3: Thí sinh thi tuyển và nguyên lý bù trừ"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 516,
+      "title": "Bài tập 4: Bài toán bẻ gãy que gỗ (Broken Stick Problem)"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 566,
+      "title": "Bài tập 5: Tính liên tục của dãy biến cố thu hẹp"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 428,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 446,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 475,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 519,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 569,
+      "title": "Lời giải"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/hinh-28-1-stars-and-bars.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 85,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-28-1-stars-and-bars.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/hinh-28-2-venn-ba-bien-co.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/28-dem-va-xac-suat-co-dien.md",
+      "line": 155,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-28-2-venn-ba-bien-co.svg"
+    }
+  ]
+}

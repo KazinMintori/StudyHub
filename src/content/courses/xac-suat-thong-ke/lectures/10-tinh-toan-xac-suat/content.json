@@ -16,97 +16,113 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 559,
+      "line": 828,
       "title": "Bài tập rèn luyện tư duy xác suất"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 565,
+      "line": 836,
       "title": "Bài tập 1: Phân tích xác suất và ngụy biện công tố viên trong vụ án Sally Clark"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 620,
+      "line": 914,
       "title": "Bài tập 2: Mô hình hộp rút thăm không hoàn lại và kiểm tra tính độc lập"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 697,
+      "line": 1069,
       "title": "Bài tập 3: Mô hình hóa chuỗi trận chung kết thể thao (Best-of-7 Series)"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
+      "line": 856,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
+      "line": 932,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
+      "line": 1083,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-10/sally-clark.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 18,
+      "line": 27,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/sally-clark.png"
     },
     {
       "reference": "./img/stat20-10/box-red-blue.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 52,
+      "line": 70,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/box-red-blue.jpeg"
     },
     {
       "reference": "./img/stat20-10/rb-box-3-draws.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 68,
+      "line": 103,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/rb-box-3-draws.jpeg"
     },
     {
       "reference": "./img/stat20-10/without-repl-1.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 90,
+      "line": 137,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/without-repl-1.jpeg"
     },
     {
       "reference": "./img/stat20-10/rb-box-3-draws-no-repl.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 99,
+      "line": 151,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/rb-box-3-draws-no-repl.jpeg"
     },
     {
       "reference": "./img/stat20-10/venn-diagram-intersection.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 152,
+      "line": 231,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/venn-diagram-intersection.png"
     },
     {
       "reference": "./img/stat20-10/pab_pba.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 186,
+      "line": 281,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/pab_pba.png"
     },
     {
       "reference": "./img/stat20-10/committee.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 293,
+      "line": 451,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/committee.jpeg"
     },
     {
       "reference": "./img/stat20-10/indep-box.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 326,
+      "line": 496,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/indep-box.jpeg"
     },
     {
       "reference": "./img/stat20-10/box-2-number.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 349,
+      "line": 522,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/box-2-number.jpeg"
     },
     {
       "reference": "./img/stat20-10/box-2-number-cond.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 354,
+      "line": 530,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/box-2-number-cond.jpeg"
     },
     {
       "reference": "./img/stat20-10/incl-excl.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/10-tinh-toan-xac-suat.md",
-      "line": 520,
+      "line": 764,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-10/incl-excl.png"
     }
   ]

@@ -7,6 +7,8 @@ const {
   review,
   view,
   lessons,
+  primaryLessonCount,
+  supplementCount,
   groups,
   syncView,
   studyLink,
@@ -21,7 +23,8 @@ const {
     <h1>{{ course.name }}</h1>
     <p class="course-description">{{ course.description }}</p>
     <div class="course-meta">
-      <span>{{ lessons.length }} bài giảng</span>
+      <span>{{ primaryLessonCount }} bài giảng</span>
+      <span v-if="supplementCount">{{ supplementCount }} chuyên đề bổ trợ</span>
       <a :href="studyLink(`/${course.id}/bai-tap`)">{{ course.problemSets ? 'Problem Set' : 'Bài tập ôn luyện' }}</a>
       <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/on-thi/`)">Ôn thi</a>
       <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/bai-tap-lon/`)">Bài tập lớn</a>
@@ -32,10 +35,10 @@ const {
       <a :href="studyLink(`/${course.id}/on-luyen`)" :aria-current="view === 'on-luyen' ? 'page' : undefined">Ôn luyện</a>
     </nav>
     <div v-if="view === 'bai-giang'" id="bai-giang">
-      <section v-for="group in groups" :key="group.title" class="course-part-section">
-        <header class="part-banner"><h2>{{ group.title }}</h2><p v-if="group.description" class="part-description">{{ group.description }}</p></header>
+      <section v-for="group in groups" :id="group.id" :key="group.title" class="course-part-section">
+        <header class="part-banner"><h2><a v-if="group.link" :href="studyLink(group.link)">{{ group.title }}</a><template v-else>{{ group.title }}</template></h2><p v-if="group.description" class="part-description">{{ group.description }}</p></header>
         <div class="lecture-list"><article v-for="lesson in group.entries" :key="lesson.slug">
-          <a class="lecture-row" :href="studyLink(lecturePath(course.id, lesson.slug))"><span class="lesson-number">{{ lesson.number ?? course.lessons.indexOf(lesson) + 1 }}</span><div class="lecture-list-copy"><h3>{{ lesson.title }}</h3></div><span v-if="lesson.status !== 'ready'" class="lesson-status">Bản nháp</span></a>
+          <a class="lecture-row" :href="studyLink(lecturePath(course.id, lesson.slug))"><span class="lesson-number">{{ lesson.displayNumber ?? lesson.number ?? course.lessons.indexOf(lesson) + 1 }}</span><div class="lecture-list-copy"><h3>{{ lesson.title }}</h3></div><span v-if="lesson.status !== 'ready'" class="lesson-status">Bản nháp</span></a>
         </article></div>
       </section>
     </div>

@@ -1,0 +1,115 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "35-luat-so-lon-va-dinh-ly-gioi-han",
+  "route": "/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/35-luat-so-lon-va-dinh-ly-gioi-han/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "gioi-han",
+    "bien-ngau-nhien"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 366,
+      "title": "Ví dụ 1: Đánh giá cỡ mẫu tối thiểu cho Luật số lớn yếu bằng Chebyshev"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 399,
+      "title": "Ví dụ 2: Hiệu chỉnh liên tục trong xấp xỉ De Moivre-Laplace"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 494,
+      "title": "Ví dụ 3: Đánh giá xấp xỉ Poisson cho biến cố hiếm trong máy chủ mạng"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 543,
+      "title": "Ví dụ 4: Bài toán bảo hiểm và tính an toàn vốn theo CLT"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 656,
+      "title": "Bài tập rèn luyện: Luật số lớn và định lý giới hạn trung tâm"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 658,
+      "title": "Bài tập 1"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 670,
+      "title": "Bài tập 2"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 725,
+      "title": "Bài tập 3"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 785,
+      "title": "Bài tập 4"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 819,
+      "title": "Bài tập 5"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 661,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 683,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 729,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 789,
+      "title": "Lời giải"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 823,
+      "title": "Lời giải"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/hinh-35-1-wlln-convergence.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 111,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-35-1-wlln-convergence.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/hinh-35-2-clt-binomial-continuity-correction.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 257,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-35-2-clt-binomial-continuity-correction.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/hinh-35-3-cauchy-vs-normal-averages.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/35-luat-so-lon-va-dinh-ly-gioi-han.md",
+      "line": 314,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-35-3-cauchy-vs-normal-averages.svg"
+    }
+  ]
+}

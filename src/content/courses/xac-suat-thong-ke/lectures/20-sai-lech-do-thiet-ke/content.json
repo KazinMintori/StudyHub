@@ -15,43 +15,59 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
-      "line": 252,
+      "line": 379,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
-      "line": 254,
+      "line": 381,
       "title": "Bài tập 1: Ma trận sai lầm và lực kiểm định trong kiểm định công nghiệp"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
-      "line": 283,
+      "line": 432,
       "title": "Bài tập 2: Phân tích kiểm định một phía và nguy cơ nhân đôi sai lầm loại I"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
-      "line": 317,
+      "line": 489,
       "title": "Bài tập 3: Vấn nạn so sánh bội trong phân tích hệ gen (Genomics)"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
+      "line": 399,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
+      "line": 444,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
+      "line": 505,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-20/CPR-study-right-tail-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
-      "line": 119,
+      "line": 171,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-20/CPR-study-right-tail-1.png"
     },
     {
       "reference": "./img/stat20-20/CPR-study-p-value-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
-      "line": 126,
+      "line": 179,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-20/CPR-study-p-value-1.png"
     },
     {
       "reference": "./img/stat20-20/type1ErrorDoublingExampleFigure-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/20-sai-lech-do-thiet-ke.md",
-      "line": 146,
+      "line": 207,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-20/type1ErrorDoublingExampleFigure-1.png"
     }
   ]

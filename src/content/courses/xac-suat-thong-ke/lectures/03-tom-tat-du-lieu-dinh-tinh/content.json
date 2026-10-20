@@ -11,56 +11,56 @@
   "examples": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 116,
+      "line": 169,
       "title": "Ví dụ về tỷ lệ đồng thời"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 126,
+      "line": 187,
       "title": "Ví dụ về tỷ lệ biên"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 140,
+      "line": 217,
       "title": "Ví dụ về tỷ lệ có điều kiện"
     }
   ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 269,
+      "line": 404,
       "title": "Bài tập rèn luyện tư duy thống kê"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 271,
+      "line": 406,
       "title": "Bài tập 1: Phân tích khảo sát ban nhạc diễu hành (Marching Band Survey)"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 347,
+      "line": 531,
       "title": "Bài tập 2: Lựa chọn biểu đồ thanh trong khảo sát cử tri"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 371,
+      "line": 567,
       "title": "Bài tập 3: Phân tích nghịch lý toán học trong tỷ lệ nguồn cung năng lượng"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 294,
+      "line": 442,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 359,
+      "line": 549,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 381,
+      "line": 583,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -68,55 +68,55 @@
     {
       "reference": "./img/stat20-03/bar-stacked-counts.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 75,
+      "line": 111,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/bar-stacked-counts.png"
     },
     {
       "reference": "./img/stat20-03/bar-dodged-counts.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 79,
+      "line": 119,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/bar-dodged-counts.png"
     },
     {
       "reference": "./img/stat20-03/two-var.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 91,
+      "line": 137,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/two-var.png"
     },
     {
       "reference": "./img/stat20-03/bar-normalized-by-species.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 166,
+      "line": 260,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/bar-normalized-by-species.png"
     },
     {
       "reference": "./img/stat20-03/bar-normalized-by-island.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 170,
+      "line": 268,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/bar-normalized-by-island.png"
     },
     {
       "reference": "./img/stat20-03/bar-association-real.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 206,
+      "line": 318,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/bar-association-real.png"
     },
     {
       "reference": "./img/stat20-03/bar-association-hypothetical.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 210,
+      "line": 326,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/bar-association-hypothetical.png"
     },
     {
       "reference": "./img/stat20-03/world-energy-supply.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 227,
+      "line": 348,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/world-energy-supply.jpeg"
     },
     {
       "reference": "./img/stat20-03/marching-band-table.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/03-tom-tat-du-lieu-dinh-tinh.md",
-      "line": 275,
+      "line": 412,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-03/marching-band-table.png"
     }
   ]

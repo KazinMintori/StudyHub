@@ -10,76 +10,103 @@
     "bien-ngau-nhien"
   ],
   "fragments": [],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
+      "line": 101,
+      "title": "Ví dụ mô hình hóa: Cò quay Roulette và Biến ngẫu nhiên tiền thắng ròng"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
+      "line": 309,
+      "title": "Ví dụ mô hình hóa: Lựa chọn nhân viên đi đào tạo"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 306,
+      "line": 488,
       "title": "Bài tập dựng CDF từ bảng phân phối:"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 360,
+      "line": 571,
       "title": "Bài tập rèn luyện tư duy xác suất"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 366,
+      "line": 579,
       "title": "Bài tập 1: Đọc hiểu và khai thác hàm phân phối tích lũy CDF"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 442,
+      "line": 712,
       "title": "Bài tập 2: Thử nghiệm lâm sàng thuốc cảm cúm và phân phối Nhị thức"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 488,
+      "line": 775,
       "title": "Bài tập 3: Dòng khách hàng đến cây ATM và phân phối Poisson"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
+      "line": 617,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
+      "line": 724,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
+      "line": 787,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-12/rv-picture.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 20,
+      "line": 29,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-12/rv-picture.png"
     },
     {
       "reference": "./img/stat20-12/roulette-us.jpg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 71,
+      "line": 107,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-12/roulette-us.jpg"
     },
     {
       "reference": "./img/stat20-12/bernoulli.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 149,
+      "line": 224,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-12/bernoulli.png"
     },
     {
       "reference": "./img/stat20-12/unnamed-chunk-7-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 227,
+      "line": 356,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-12/unnamed-chunk-7-1.png"
     },
     {
       "reference": "./img/stat20-12/cdf.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 274,
+      "line": 432,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-12/cdf.png"
     },
     {
       "reference": "./img/stat20-12/cdf-bernoulli.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 281,
+      "line": 446,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-12/cdf-bernoulli.png"
     },
     {
       "reference": "./img/stat20-12/cdf-2.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/12-bien-ngau-nhien.md",
-      "line": 321,
+      "line": 511,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-12/cdf-2.png"
     }
   ]

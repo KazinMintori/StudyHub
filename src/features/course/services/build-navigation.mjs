@@ -39,7 +39,8 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
         ] : []),
         ...(course.parts ? course.parts.map(part=>({
           text: part.title,
-          collapsed: false,
+          ...(part.link ? { link: part.link } : {}),
+          collapsed: part.collapsed ?? false,
           items: part.lessons.map(slug => {
             const lesson = course.lessons.find(l => l.slug === slug)
             if (!lesson) return null

@@ -1,0 +1,112 @@
+{
+  "course": "xac-suat-thong-ke",
+  "lecture": "36-phan-phoi-mau-chinh-xac",
+  "route": "/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac",
+  "notes": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+  "topics": [],
+  "slides": "src/content/courses/xac-suat-thong-ke/lectures/36-phan-phoi-mau-chinh-xac/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [
+    "bien-ngau-nhien",
+    "ky-vong",
+    "phuong-sai",
+    "phan-phoi-gauss"
+  ],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 122,
+      "title": "Tính toán phương sai mẫu không chệch"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 252,
+      "title": "Ứng dụng phân phối Student t"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 285,
+      "title": "Ứng dụng phân phối Fisher F"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 336,
+      "title": "Bài tập tự luyện"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 338,
+      "title": "1. Xác suất của trung bình mẫu"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 370,
+      "title": "2. Tính toán phương sai mẫu từ định nghĩa"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 405,
+      "title": "3. Phân vị phân phối Chi bình phương"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 419,
+      "title": "4. Khoảng đối xứng của phân phối Student t"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 446,
+      "title": "5. Tỷ số hai phương sai mẫu"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 342,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 374,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 409,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 423,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 450,
+      "title": ""
+    }
+  ],
+  "assets": [
+    {
+      "reference": "img/co-dien-refined/36-sampling-distribution-concept.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 59,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/36-sampling-distribution-concept.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/36-chi-square-pdf-degrees-of-freedom.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 184,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/36-chi-square-pdf-degrees-of-freedom.svg"
+    },
+    {
+      "reference": "img/co-dien-refined/36-student-t-vs-normal.svg",
+      "declaredIn": "docs/xac-suat-thong-ke/bai-giang/36-phan-phoi-mau-chinh-xac.md",
+      "line": 223,
+      "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/36-student-t-vs-normal.svg"
+    }
+  ]
+}

@@ -10,47 +10,69 @@
     "ket-luan-nhan-qua"
   ],
   "fragments": [],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
+      "line": 190,
+      "title": "Ví dụ minh họa ước lượng ATE trên mẫu 6 sinh viên"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 235,
+      "line": 365,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 237,
+      "line": 367,
       "title": "Bài tập 1: Đồ thị nhân quả và phân tích phản thực tế"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 274,
+      "line": 431,
       "title": "Bài tập 2: Mô hình kết quả tiềm năng và Đảo ngược dấu hiệu ứng"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 329,
+      "line": 542,
       "title": "Bài tập 3: Thiên lệch lựa chọn trong chương trình đào tạo nghề"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
+      "line": 389,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
+      "line": 457,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
+      "line": 564,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-21/claims-only.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 17,
+      "line": 25,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-21/claims-only.png"
     },
     {
       "reference": "./img/stat20-21/frost.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 99,
+      "line": 131,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-21/frost.png"
     },
     {
       "reference": "./img/stat20-21/the-route-not-taken.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 116,
+      "line": 163,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-21/the-route-not-taken.png"
     }
   ]

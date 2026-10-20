@@ -27,7 +27,7 @@ const {
 <template>
   <div v-if="hasPanelContent" class="lecture-panels">
     <section v-if="part === 'slides'" class="lecture-slides" aria-label="Slides của bài giảng">
-      <template v-if="['vat-ly-2', 'xu-ly-du-lieu'].includes(course.id) && current">
+      <template v-if="['vat-ly-2', 'xu-ly-du-lieu', 'xac-suat-thong-ke'].includes(course.id) && current">
         <article class="course-slide" aria-live="polite">
           <p class="eyebrow">Thẻ ôn tập {{ index + 1 }} / {{ slides.length }}</p>
           <h2>{{ current.title }}</h2>

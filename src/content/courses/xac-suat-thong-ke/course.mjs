@@ -52,6 +52,7 @@ import { slides as slides23 } from './lectures/24-phuong-phap-binh-phuong-be-nha
 import { slides as slides24 } from './lectures/25-danh-gia-va-cai-thien-du-doan/slides.mjs'
 import { slides as slides25 } from './lectures/26-hien-tuong-qua-khop/slides.mjs'
 import { slides as slides26 } from './lectures/27-hoi-quy-logistic/slides.mjs'
+import { classicalLessons, classicalSlides, classicalPart } from './supplement.mjs'
 
 export const course = {
   "id": "xac-suat-thong-ke",
@@ -62,7 +63,7 @@ export const course = {
   problemSets: [
     { slug: 'problem-set-01', title: 'Problem Set 01: Câu hỏi và dữ liệu' }
   ],
-  "description": "Học theo UC Berkeley STAT 20: Từ câu hỏi nghiên cứu, dữ liệu quan sát, tóm tắt trực quan đến suy rộng thống kê, quan hệ nhân quả và mô hình dự đoán.",
+  "description": "Khám phá dữ liệu, xác suất, suy rộng thống kê, quan hệ nhân quả và dự đoán, kèm tuyến bổ trợ xác suất giải tích và thống kê toán.",
   "foundations": [
   "thong-ke-mo-ta",
   "suy-rong-thong-ke",
@@ -137,10 +138,11 @@ export const course = {
       "26-hien-tuong-qua-khop",
       "27-hoi-quy-logistic"
     ]
-  }
+  },
+  classicalPart
 ],
   "illustration": "bayes",
   "contentPolicy": "full-source-translation",
-  lessons: [lesson0, lesson1, lesson2, lesson3, lesson4, lesson5, lesson6, lesson7, lesson8, lesson9, lesson10, lesson11, lesson12, lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23, lesson24, lesson25, lesson26],
-  slides: [...slides0, ...slides1, ...slides2, ...slides3, ...slides4, ...slides5, ...slides6, ...slides7, ...slides8, ...slides9, ...slides10, ...slides11, ...slides12, ...slides13, ...slides14, ...slides15, ...slides16, ...slides17, ...slides18, ...slides19, ...slides20, ...slides21, ...slides22, ...slides23, ...slides24, ...slides25, ...slides26]
+  lessons: [lesson0, lesson1, lesson2, lesson3, lesson4, lesson5, lesson6, lesson7, lesson8, lesson9, lesson10, lesson11, lesson12, lesson13, lesson14, lesson15, lesson16, lesson17, lesson18, lesson19, lesson20, lesson21, lesson22, lesson23, lesson24, lesson25, lesson26, ...classicalLessons],
+  slides: [...slides0, ...slides1, ...slides2, ...slides3, ...slides4, ...slides5, ...slides6, ...slides7, ...slides8, ...slides9, ...slides10, ...slides11, ...slides12, ...slides13, ...slides14, ...slides15, ...slides16, ...slides17, ...slides18, ...slides19, ...slides20, ...slides21, ...slides22, ...slides23, ...slides24, ...slides25, ...slides26, ...classicalSlides]
 }

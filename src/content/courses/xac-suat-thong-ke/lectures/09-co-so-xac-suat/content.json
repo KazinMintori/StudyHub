@@ -11,38 +11,49 @@
     "khong-gian-mau"
   ],
   "fragments": [],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
+      "line": 176,
+      "title": "Ví dụ minh họa: Gieo xúc xắc đồng chất"
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
+      "line": 372,
+      "title": "Ví dụ thực tế: Trò chơi Roulette kiểu Mỹ"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 265,
+      "line": 437,
       "title": "Bài tập 1: Giải mã Chi tiết Nghịch lý Chevalier de Méré"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 327,
+      "line": 567,
       "title": "Bài tập 2: Vấn đề Linda & Ngụy biện Hợp (The Conjunction Fallacy)"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 375,
+      "line": 653,
       "title": "Bài tập 3: Mô hình Hộp & Tính Xác suất trên Tập dữ liệu Palmer Penguins"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 284,
+      "line": 469,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 347,
+      "line": 597,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 395,
+      "line": 685,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -50,49 +61,49 @@
     {
       "reference": "./img/stat20-09/538-pollster-ranking-snippet.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 20,
+      "line": 31,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/538-pollster-ranking-snippet.png"
     },
     {
       "reference": "./img/stat20-09/dice-players-painting.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 34,
+      "line": 47,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/dice-players-painting.jpeg"
     },
     {
       "reference": "./img/stat20-09/us-quarter.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 77,
+      "line": 126,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/us-quarter.png"
     },
     {
       "reference": "./img/stat20-09/venn-disjoint.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 137,
+      "line": 222,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/venn-disjoint.png"
     },
     {
       "reference": "./img/stat20-09/venn-diagram-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 167,
+      "line": 266,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/venn-diagram-1.png"
     },
     {
       "reference": "./img/stat20-09/box-1.jpeg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 197,
+      "line": 319,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/box-1.jpeg"
     },
     {
       "reference": "./img/stat20-09/biased-coin.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 215,
+      "line": 345,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/biased-coin.png"
     },
     {
       "reference": "./img/stat20-09/roulette-us.jpg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/09-co-so-xac-suat.md",
-      "line": 232,
+      "line": 378,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-09/roulette-us.jpg"
     }
   ]

@@ -7,9 +7,12 @@ import { concepts } from '../docs/.vitepress/concepts.mjs'
 import { createWikiArticle } from '../docs/.vitepress/wiki-content.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url)), docs = path.join(root,'docs')
+const requestedCourse = process.argv.find(arg => arg.startsWith('--course='))?.slice('--course='.length)
+const selectedCourses = requestedCourse ? courseCatalog.filter(course => course.id === requestedCourse) : courseCatalog
+if (requestedCourse && !selectedCourses.length) throw new Error(`Unknown course: ${requestedCourse}`)
 const exists = async file => { try { await access(file); return true } catch { return false } }
 const redirect = target => `---\nlayout: page\nsearch: false\nredirectTo: ${JSON.stringify(target)}\n---\n\n<OldCourseLink />\n`
-for (const course of courseCatalog) {
+for (const course of selectedCourses) {
   const dir=path.join(docs,course.id), lectures=path.join(dir,'bai-giang')
   await mkdir(lectures,{recursive:true})
   await mkdir(path.join(dir,'notes'),{recursive:true})
@@ -41,7 +44,7 @@ for (const course of courseCatalog) {
   await writeFile(path.join(dir,'index.md'),`---\nlayout: page\ntitle: ${JSON.stringify(course.name)}\ncourse: ${course.id}\nsection: overview\noutline: false\n---\n\n<CourseOverview />\n`)
   await writeFile(path.join(dir,'notes/index.md'),redirect(`/${course.id}/`))
   if (course.presentation === 'philosophy') continue
-  await writeFile(path.join(dir,'slides.md'),course.id==='xu-ly-du-lieu'
+  await writeFile(path.join(dir,'slides.md'),['xu-ly-du-lieu', 'xac-suat-thong-ke'].includes(course.id)
     ? redirect(`/${course.id}/bai-giang/${course.lessons[0].slug}.html#slides`)
     : `---\nlayout: page\nsearch: false\ncourse: ${course.id}\n---\n\n# Slides\n\nSlides not available because the Creator too lazy\n`)
   await writeFile(path.join(dir,'kien-thuc-can-co.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\nlegacyKind: foundations\n---\n\n<LegacyCourseRoute />\n`)
@@ -52,10 +55,10 @@ for (const id of Object.keys(concepts)) {
   const file=path.join(docs,'wiki',`${id}.md`)
   if (!await exists(file)) await writeFile(file,createWikiArticle(id))
 }
-console.log(`Synced ${courseCatalog.length} courses with lecture bundles and ${Object.keys(concepts).length} Wiki articles.`)
+console.log(`Synced ${selectedCourses.length} courses with lecture bundles and ${Object.keys(concepts).length} Wiki articles.`)
 // Compute metadata from authored text, never a hardcoded per-course estimate.
-const readingMetadata = {}
-for (const course of courseCatalog) {
+const readingMetadata = requestedCourse ? { ...(await import('../docs/.vitepress/reading-metadata.mjs')).readingMetadata } : {}
+for (const course of selectedCourses) {
   for (const lesson of course.lessons) {
     const source = await readMarkdownIncludes(path.join(docs, course.id, 'bai-giang', `${lesson.slug}.md`))
     const text = source.replace(/^---[\s\S]*?---/, '').replace(/```[\s\S]*?```/g, '').replace(/<[^>]*>/g, '').replace(/\$\$[\s\S]*?\$\$/g, '')

@@ -31,6 +31,11 @@ const welcomeScreen = ref(null)
 const { hasSidebar } = useSidebar()
 const { frontmatter, page } = useData()
 const isPhilosophy = computed(() => frontmatter.value.course === 'triet-hoc-mac-lenin')
+// XSTK stores the exercise-panel flag in the lesson catalog. Older Notes may
+// omit its frontmatter copy, so both the layout and panels use the same value.
+const chapterExercises = computed(() => frontmatter.value.course === 'xac-suat-thong-ke'
+  ? courseCatalog.find(course => course.id === frontmatter.value.course)?.lessons.find(lesson => lesson.slug === frontmatter.value.lecture)?.hasChapterExercises ?? frontmatter.value.hasChapterExercises
+  : frontmatter.value.hasChapterExercises)
 
 const {
   desktopSidebarCollapsed,
@@ -45,11 +50,12 @@ const hasCourseSidebar = computed(() =>
 
 const layoutClasses = computed(() => ({
   ...resolveLayoutClasses({
-    frontmatter: frontmatter.value,
+    frontmatter: { ...frontmatter.value, hasChapterExercises: chapterExercises.value },
     hasCourseSidebar: hasCourseSidebar.value,
     desktopSidebarCollapsed: desktopSidebarCollapsed.value,
     lecturePart: isPhilosophy.value ? 'notes' : lecturePart.value
   }),
+  'xstk-layout': frontmatter.value.course === 'xac-suat-thong-ke',
   'philosophy-layout': isPhilosophy.value && !frontmatter.value.quizTest,
   'philosophy-exercise-view': isPhilosophy.value && frontmatter.value.section === 'topic' && lecturePart.value === 'bai-tap'
 }))

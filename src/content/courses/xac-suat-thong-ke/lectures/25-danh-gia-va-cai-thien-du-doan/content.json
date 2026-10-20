@@ -14,61 +14,77 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 181,
+      "line": 284,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 183,
-      "title": "Bài tập 1: Tính toán phân rã phương sai ANOVA và hệ số $R^2$"
+      "line": 286,
+      "title": "Bài tập 1: Tính toán phân rã phương sai ANOVA và hệ số R bình phương"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 243,
+      "line": 395,
       "title": "Bài tập 2: Mô hình biến đổi logarit và độ co giãn trong kinh tế"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 284,
-      "title": "Bài tập 3: Cạm bẫy gia tăng $R^2$ khi thêm biến dự báo ngẫu nhiên"
+      "line": 471,
+      "title": "Bài tập 3: Cạm bẫy gia tăng R bình phương khi thêm biến dự báo ngẫu nhiên"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
+      "line": 314,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
+      "line": 413,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
+      "line": 487,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-25/unnamed-chunk-1-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 20,
+      "line": 31,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-25/unnamed-chunk-1-1.png"
     },
     {
       "reference": "./img/stat20-25/r-squared.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 40,
+      "line": 60,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-25/r-squared.png"
     },
     {
       "reference": "./img/stat20-25/unnamed-chunk-6-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 108,
+      "line": 168,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-25/unnamed-chunk-6-1.png"
     },
     {
       "reference": "./img/stat20-25/unnamed-chunk-9-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 121,
+      "line": 188,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-25/unnamed-chunk-9-1.png"
     },
     {
       "reference": "./img/stat20-25/unnamed-chunk-10-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 129,
+      "line": 200,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-25/unnamed-chunk-10-1.png"
     },
     {
       "reference": "./img/stat20-25/unnamed-chunk-11-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/25-danh-gia-va-cai-thien-du-doan.md",
-      "line": 145,
+      "line": 226,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-25/unnamed-chunk-11-1.png"
     }
   ]

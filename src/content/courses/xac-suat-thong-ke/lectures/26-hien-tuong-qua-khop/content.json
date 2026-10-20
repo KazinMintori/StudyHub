@@ -14,55 +14,71 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 320,
+      "line": 428,
       "title": "Bài tập tự luyện có lời giải chi tiết"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 322,
+      "line": 430,
       "title": "Bài tập 1: Tính toán định lượng sai số MSE và RMSE giữa hai mô hình"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 428,
+      "line": 600,
       "title": "Bài tập 2: Phân tích sự đánh đổi Độ chệch - Phương sai và Hành vi của sai số"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 478,
+      "line": 678,
       "title": "Bài tập 3: Phát hiện lỗi rò rỉ dữ liệu (Data Leakage) và Thiết kế quy trình chuẩn"
     }
   ],
-  "solutions": [],
+  "solutions": [
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
+      "line": 468,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
+      "line": 628,
+      "title": ""
+    },
+    {
+      "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
+      "line": 700,
+      "title": ""
+    }
+  ],
   "assets": [
     {
       "reference": "./img/stat20-26/unnamed-chunk-1-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 19,
+      "line": 27,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-26/unnamed-chunk-1-1.png"
     },
     {
       "reference": "./img/stat20-26/unnamed-chunk-2-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 32,
+      "line": 41,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-26/unnamed-chunk-2-1.png"
     },
     {
       "reference": "./img/stat20-26/unnamed-chunk-3-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 54,
+      "line": 65,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-26/unnamed-chunk-3-1.png"
     },
     {
       "reference": "./img/stat20-26/unnamed-chunk-4-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 66,
+      "line": 79,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-26/unnamed-chunk-4-1.png"
     },
     {
       "reference": "./img/stat20-26/unnamed-chunk-5-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 81,
+      "line": 97,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-26/unnamed-chunk-5-1.png"
     }
   ]
