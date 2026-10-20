@@ -19,7 +19,7 @@ Preserve original 27 lesson slugs and learner progress. New content uses ordinar
 ## Codex track
 
 Worktree: C:/Users/Ai/Documents/StudyHub
-Owns central course.mjs, course overview/navigation, Wiki integration if needed, supplement index/coverage report, final numerical and browser verification. Incorporates reviewed worker files, without overwriting user changes.
+Owns central course.mjs, course overview/navigation, Wiki integration, supplement index/coverage report, final numerical and browser verification. Also authors lesson45-suy-luan-bayes-va-du-doan, its module/slides, co-dien-bayes figures and numerical generation script to close the additional Bayesian-inference gap identified by the audit. This brings the supplement to18 topics. Incorporates reviewed worker files, without overwriting user changes.
 
 ## AGY audit track
 
@@ -44,10 +44,24 @@ Task: Read existing course before writing. Supply nine substantial complementary
 
 ## Permissions and verification
 
+## Refined figures track (Added at the user's explicit request)
+
+User steering: Eliminate text/text and graphic/text collisions, use even spacing, improve fonts, colors and smoothness, then delegate GitHub push after completion.
+
+Worktree: C:/Users/Ai/.codex/worktrees/xstk-figures-20261020
+Branch: codex/xstk-figures-20261020
+Task scope: Redesign51 probability/statistics supplement figures. The3 Bayes figures remain Codex-owned and establish the shared visual direction.
+Owned files: New scripts/generate-xstk-refined-figures.py, scripts/xstk_refined_*.py, docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/*.svg, raw_materials/xac-suat-thong-ke/visual-review-20261020.md. These paths do not overlap any running source worker.
+Read-only inputs: Snapshot copies of lessons28..45, the original probability/statistics figure generators and assets, scripts/xstk_figure_style.py, scripts/qa/xstk-figure-gallery.mjs, the existing numerical verification scripts, and the Be Vietnam Pro font package. Never edit these inputs.
+Shared design: Embedded Be Vietnam Pro through the Codex-owned xstk_figure_style helper, the site's purple ink with teal/copper accents, restrained grid lines, smooth exact-function curves, rounded joins, at least14px source labels, legends outside data regions,20–24px structural gutters, and short wrapped headings. No text clipping, no text/text intersections, no curve/stroke across text. Use existing filenames in the new directory for a deterministic final image-path remap by Codex.
+Verification: Render all51 SVGs, run bounding-box and text/stroke collision inventory, inspect each rendered image, and verify every numerical chart and probability/interval label against its actual generating model. Gallery reports may be written under C:/Users/Ai/.codex/tmp/xstk-refined-qa. Preserve this worktree on tool failure. No Notes, catalog, UI, original generators/assets, commit, push or full build changes in this worker.
+
+The user explicitly authorizes a separate final push task after all reviewed work is committed. That task is limited to a normal fast-forward push of the verified final commit to origin/main, with no force push, deletion or unrelated changes. It is dispatched only after QA and review.
+
 Tool: agy_start with dangerously_skip_permissions=true. Headless execution, no visible terminals. Each track has one initial implementation call and at most two corrections within the same ownership.
 
 Workers run their Python numerical verification and git diff --check, report changed files, counts, exact checks, unresolved issues and permission errors. Codex integrates modules, runs check_lecture for every XSTK lesson, Python skill test_tools.py, relevant repository tests, and browser QA through the local dev server. npm run ci:build and other full-build aliases are forbidden locally.
 
 ## Acceptance and review
 
-Complete reading and gap mapping, corrected existing content, separate visible supplemental group below existing material, 17 coherent supplemental lessons with verified mathematics, figures, examples and solved exercises. Every file stays within ownership. Do not commit worker changes. Codex reviews numerical evidence, source claims, diffs and rendering before accepting files. Retain unverified worktrees on timeout or failure. Cleanup occurs only after reviewed changes are safely integrated.
+Complete reading and gap mapping, corrected existing content, separate visible supplemental group below existing material, 18 coherent supplemental lessons with verified mathematics, figures, examples and solved exercises. Every file stays within ownership. Do not commit worker changes. Codex reviews numerical evidence, source claims, diffs and rendering before accepting files. Retain unverified worktrees on timeout or failure. Cleanup occurs only after reviewed changes are safely integrated.
