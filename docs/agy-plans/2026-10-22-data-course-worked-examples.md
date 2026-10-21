@@ -4,7 +4,7 @@ Status: READY_FOR_AGY
 
 Scope: Enrich all thirteen current data-processing lectures and appendices A/B with runnable worked examples, visible results, practical use, parameter semantics and explanations of misleading interpretations. Preserve every existing exercise, source boundary, URL and question identifier. Do not use labels such as “Bẫy”, “Cạm bẫy”, “Lưu ý quan trọng” to replace an actual explanation.
 
-Codex owns final Notes, executable checks, output tables/figures, integration, publication and all files in the primary checkout. Existing unrelated edits to application styles, Math AI and shared components are outside this task and must remain untouched.
+Codex integrates in `C:/Users/Ai/.codex/worktrees/data-teaching-20261022` on `codex/data-teaching-20261022`. Codex owns final Notes, executable checks, output tables/figures, integration, publication and all files in the primary checkout. Existing unrelated edits to application styles, Math AI and shared components are outside this task and must remain untouched.
 
 Antigravity owns only the following isolated output directories. Inputs and every preexisting file are read-only.
 
