@@ -155,7 +155,7 @@ $$
 \oint\vec E\cdot d\vec\ell=V_{\mathrm{dau}}-V_{\mathrm{cuoi}}=0.
 $$
 
-Việc có nguồn bên trong vòng không làm tích phân đường thành Q/$\varepsilon_0$. Gauss liên hệ Q với **tích phân mặt kín**, là một phép tính khác.
+Việc có nguồn bên trong vòng không làm tích phân đường thành $Q/\varepsilon_0$. Gauss liên hệ Q với **tích phân mặt kín**, là một phép tính khác.
 :::
 
 ::: exercise Q23.10

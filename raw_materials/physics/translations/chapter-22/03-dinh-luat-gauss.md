@@ -43,10 +43,7 @@ Bao mặt cầu bằng một mặt kín có hình dạng không đều. Xét m�
 Trường xuyên tâm có độ lớn E tại vị trí đang xét. Điện thông qua phần mặt không đều bằng E dA cosφ, đúng bằng điện thông qua phần hình chiếu. Chia toàn mặt thành những phần nhỏ, chiếu từng phần và cộng bằng tích phân, ta nhận được cùng điện thông như qua mặt cầu:
 
 $$
-\begin{aligned}
-\Phi_E &= \oint\vec E\cdot d\vec A \\
-&= \frac{q}{\varepsilon_0}.
-\end{aligned} \tag{22.7}
+\Phi_E = \oint\vec E\cdot d\vec A = \frac{q}{\varepsilon_0}. \tag{22.7}
 $$
 
 Vòng tròn trên dấu tích phân nhắc rằng phép tích phân đi trên **toàn một mặt kín**. Các vector diện tích luôn hướng ra ngoài. Nơi trường hướng ra, tích vô hướng dương. Nơi trường hướng vào, tích vô hướng âm.
@@ -71,8 +68,8 @@ Xét trước hai điện tích được bao. Trường tổng là $\vec E_1+\ve
 
 $$
 \begin{aligned}
-Q_{\mathrm{trong}} &= q_1+q_2+\cdots+q_n \\
-&= \sum_{i=1}^{n}q_i.
+Q_{\mathrm{trong}} &= \sum_{i=1}^{n}q_i \\
+&= q_1+q_2+\cdots+q_n.
 \end{aligned}
 $$
 
@@ -81,10 +78,7 @@ Chỉ số i chạy qua từng điện tích nằm bên trong mặt, từ 1 đ�
 > **Định luật Gauss:** Điện thông tổng qua một mặt kín bằng tổng đại số điện tích nằm bên trong mặt đó chia cho hằng số điện $\varepsilon_0$.
 
 $$
-\begin{aligned}
-\Phi_E &= \oint\vec E\cdot d\vec A \\
-&= \frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
-\end{aligned} \tag{22.8}
+\Phi_E = \oint\vec E\cdot d\vec A = \frac{Q_{\mathrm{trong}}}{\varepsilon_0}. \tag{22.8}
 $$
 
 Các cách viết tương đương là:
@@ -144,11 +138,11 @@ Các điện tích được bao, tính bằng µC, là:
 
 $$
 \begin{aligned}
-Q_1 &= 0, \\
-Q_2 &= 9+5-7=7, \\
-Q_3 &= 9+1-10=0, \\
-Q_4 &= 8-7=1, \\
-Q_5 &= 8-7-10+1+9+5=6.
+&Q_1 = 0, \\
+&Q_2 = 9 + 5 - 7 = 7, \\
+&Q_3 = 9 + 1 - 10 = 0, \\
+&Q_4 = 8 - 7 = 1, \\
+&Q_5 = 8 - 7 - 10 + 1 + 9 + 5 = 6.
 \end{aligned}
 $$
 

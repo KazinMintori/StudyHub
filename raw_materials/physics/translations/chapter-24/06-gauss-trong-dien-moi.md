@@ -82,5 +82,5 @@ Một nguồn điểm q dương nằm sâu trong khối điện môi rất lớn
 :::
 
 ::: solution Giải thích
-Chọn (iii). Mặt cầu đồng tâm có KE·4πr² = q/$\varepsilon_0$, nên E = kq/(Kr²). Mô hình khối rất lớn bỏ ảnh hưởng biên. Nếu q âm thì trường hướng vào và độ lớn dùng |q|.
+Chọn (iii). Mặt cầu đồng tâm có $K E\cdot 4\pi r^2 = q/\varepsilon_0$, nên $E = kq/(K r^2)$. Mô hình khối rất lớn bỏ ảnh hưởng biên. Nếu q âm thì trường hướng vào và độ lớn dùng |q|.
 :::

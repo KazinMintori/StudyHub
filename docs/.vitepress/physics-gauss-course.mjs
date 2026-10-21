@@ -13,10 +13,7 @@ export const gaussTopics=[
 export const gaussSlides=[
  {note,title:'Điện thông dùng thành phần trường theo pháp tuyến',bullets:['Với mặt phẳng trong trường đều, điện thông bằng tích vô hướng của trường và vector diện tích.','Góc được đo với pháp tuyến. Trường song song mặt cho điện thông bằng không.','Mặt kín luôn chọn pháp tuyến ra ngoài.'],formula:d(String.raw`\Phi_E=EA\cos\varphi`),example:''},
  {note,title:'Mặt cong hoặc trường không đều cần tích phân mặt',bullets:['Tính trường và pháp tuyến tại từng phần mặt nhỏ.','Cộng các tích vô hướng có dấu để được điện thông tổng.','Chỉ đưa E ra ngoài tích phân khi độ lớn ấy không đổi trên phần mặt đang xét.'],formula:d(String.raw`\Phi_E=\int_A\vec E\cdot d\vec A`),example:''},
- {note,title:'Gauss đếm điện tích tổng được bao',bullets:['Điện tích được cộng với dấu.','Trường trong tích phân là trường của cả nguồn trong và ngoài.','Nguồn ngoài không đóng góp điện thông tổng qua mặt kín.'],formula:d(String.raw`\begin{aligned}
-&\Phi_E = \oint\vec E\cdot d\vec A\\
-&\quad =\frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
-\end{aligned}`),example:''},
+ {note,title:'Gauss đếm điện tích tổng được bao',bullets:['Điện tích được cộng với dấu.','Trường trong tích phân là trường của cả nguồn trong và ngoài.','Nguồn ngoài không đóng góp điện thông tổng qua mặt kín.'],formula:d(String.raw`\Phi_E = \oint\vec E\cdot d\vec A = \frac{Q_{\mathrm{trong}}}{\varepsilon_0}`),example:''},
  {note,title:'Đối xứng của nguồn quyết định mặt Gauss',bullets:['Đối xứng cầu dùng cầu đồng tâm. Đối xứng trụ dùng trụ đồng trục.','Đối xứng phẳng dùng hai đáy song song mặt nguồn.','Điện thông không không buộc điện trường không.'],formula:'',example:''},
  {note,title:'Cầu dẫn và cầu cách điện đều có trường trong khác nhau',bullets:['Trong vật liệu dẫn cân bằng, trường bằng không.','Trong cầu cách điện đều theo thể tích, trường tăng tuyến tính theo bán kính.','Trường ngoài của hai phân bố cầu cùng tổng điện tích giống nhau.'],formula:d(String.raw`\begin{aligned}
 &E_{\mathrm{trong}} = \frac{k|Q|r}{R^3},\quad r<R,\\
@@ -32,8 +29,7 @@ export const gaussCheatsheet={summary:'Định nghĩa, tính chất và công th
  {id:'flux',title:'Điện thông',items:[
   {name:'Mặt phẳng, trường đều',formula:d(String.raw`\begin{aligned}
 &\vec A = A\hat{\mathbf n},\\
-&\Phi_E = EA\cos\varphi\\
-&\quad =\vec E\cdot\vec A.
+&\Phi_E = EA\cos\varphi = \vec E\cdot\vec A.
 \end{aligned}`),variables:[
    String.raw`$\Phi_E$: Điện thông gửi qua bề mặt phẳng $A$ ($\mathrm{N\cdot m^2/C}$ hoặc $\mathrm{V\cdot m}$)`,
    String.raw`$E$: Cường độ điện trường đều ($\mathrm{V/m}$ hoặc $\mathrm{N/C}$)`,
@@ -41,20 +37,15 @@ export const gaussCheatsheet={summary:'Định nghĩa, tính chất và công th
    String.raw`$\hat{\mathbf n}$: Vector pháp tuyến đơn vị của mặt phẳng (Không có đơn vị)`,
    String.raw`$\varphi$: Góc hợp bởi vector điện trường $\vec E$ và vector pháp tuyến $\hat{\mathbf n}$ ($\mathrm{rad}$ hoặc độ)`
   ],description:'φ là góc với pháp tuyến. Đơn vị điện thông là N m²/C. Mặt kín chọn pháp tuyến ra ngoài.'},
-  {name:'Mặt bất kỳ',formula:d(String.raw`\begin{aligned}
-&\Phi_E = \int_A E_\perp\,dA\\
-&\quad =\int_A\vec E\cdot d\vec A.
-\end{aligned}`),variables:[
+  {name:'Mặt bất kỳ',formula:d(String.raw`\Phi_E = \int_A E_\perp\,dA = \int_A\vec E\cdot d\vec A`),variables:[
    String.raw`$\Phi_E$: Điện thông toàn phần gửi qua mặt cong $A$ ($\mathrm{V\cdot m}$)`,
    String.raw`$E_\perp$: Thành phần của điện trường vuông góc với vi phân diện tích $dA$ ($\mathrm{V/m}$)`,
    String.raw`$d\vec A$: Vector vi phân diện tích ($d\vec A = dA\,\hat{\mathbf n}$) ($\mathrm{m^2}$)`
   ],description:'Trường và vector diện tích được xét tại từng điểm mặt.'}]},
  {id:'gauss',title:'Định luật Gauss',items:[
   {name:'Điện tích được bao và điện thông',formula:d(String.raw`\begin{aligned}
-&Q_{\mathrm{trong}} = q_1+q_2+\cdots+q_n\\
-&\quad =\sum_{i=1}^{n}q_i,\\
-&\Phi_E = \oint\vec E\cdot d\vec A\\
-&\quad =\frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
+&Q_{\mathrm{trong}} = \sum_{i=1}^{n}q_i,\\
+&\Phi_E = \oint\vec E\cdot d\vec A = \frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
 \end{aligned}`),variables:[
    String.raw`$\Phi_E$: Điện thông toàn phần qua mặt kín Gauss bất kỳ ($\mathrm{V\cdot m}$)`,
    String.raw`$Q_{\mathrm{trong}}$: Tổng đại số điện tích thực nằm bên trong mặt kín Gauss ($\mathrm{C}$)`,

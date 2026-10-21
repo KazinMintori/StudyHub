@@ -46,7 +46,7 @@ Lập phương tưởng tượng cạnh 5,00 cm có q = +6,00 nC tại tâm. Tí
 
 **Hướng đi:**
 
-- Gauss cho điện thông toàn phần q/$\varepsilon_0$.
+- Gauss cho điện thông toàn phần $q/\varepsilon_0$.
 - Đối xứng chia đều điện thông cho sáu mặt, dù trường không đều trên mỗi mặt.
 
 (a) Φ = +678 N m²/C. (b) Φ/6 = +113 N m²/C. Không được suy từ chia đều điện thông sang trường đều trên từng mặt.
@@ -80,8 +80,8 @@ Cầu bán kính 5,00 cm mang +3,00 nC. Tìm độ lớn trường tại r = 4,0
 
 **Hướng đi:**
 
-- Với cầu cách điện đều, trường trong bằng kQr/R³.
-- Với cầu dẫn, trường trong vật liệu bằng không. Trường ngoài của cả hai cùng kQ/r².
+- Với cầu cách điện đều, trường trong bằng $kQr/R^3$.
+- Với cầu dẫn, trường trong vật liệu bằng không. Trường ngoài của cả hai cùng $kQ/r^2$.
 
 (a) Hai độ lớn tương ứng $8.63\times10^3$ và $7.49\times10^3$ N/C. (b) Tương ứng 0 và $7.49\times10^3$ N/C. Các trường khác không hướng ra.
 :::
@@ -135,11 +135,11 @@ Hai bản dẫn lớn song song mang điện tích trái dấu và cùng độ l
 
 <!-- detailed-solution:VP22.10.4 -->
 ::: solution Chi tiết
-**Tóm tắt đề bài:** F và q cho trường giữa bản E = F/q.
+**Tóm tắt đề bài:** $F$ và $q$ cho trường giữa bản $E = F/q$.
 
 **Hướng đi:**
 
-- Hai mặt đối diện mang điện có trường giữa bản E = |σ|/$\varepsilon_0$.
+- Hai mặt đối diện mang điện có trường giữa bản $E = |\sigma|/\varepsilon_0$.
 - Đây là hai bản dẫn, nên không dùng riêng hệ số 1/(2$\varepsilon_0$) của một mặt cách điện.
 
 $$
@@ -195,9 +195,9 @@ Trong một trình diễn tại Deutsches Museum ở Munich, một người ng�
 **Hướng đi:**
 
 - Che chắn tĩnh điện cho E trong hốc bằng không.
-- Trường ngoài cầu và quan hệ E = |σ|/$\varepsilon_0$ cho hai độ lớn còn lại.
+- Trường ngoài cầu và quan hệ $E = |\sigma|/\varepsilon_0$ cho hai độ lớn còn lại.
 
-(a) E = 0. (b) $|Q|=ER^2/k=2.7\times10^{-5}$ C. (c) $|\sigma|=\varepsilon_0E=2.7\times10^{-6}$ C/m². Dấu điện tích chưa xác định vì chỉ cho độ lớn trường.
+(a) $E = 0$. (b) $|Q| = ER^2/k = 2{,}7\times10^{-5}\,\mathrm{C}$. (c) $|\sigma| = \varepsilon_0 E = 2{,}7\times10^{-6}\,\mathrm{C/m^2}$. Dấu điện tích chưa xác định vì chỉ cho độ lớn trường.
 :::
 
 ::: exercise VP22.12.4
@@ -255,8 +255,8 @@ Bán kính Bohr $a_0=5.29\times10^{-11}$ m. (a) Tìm điện tích tổng của 
 
 $$
 \begin{aligned}
-Q_{\mathrm{trong}}(r) &= Q+4\pi\int_0^r\rho(s)s^2ds \\
-&= Q-\frac{4Q}{a_0^3} \times\int_0^r s^2e^{-2s/a_0}ds.
+Q_{\mathrm{trong}} &= Q + 4\pi\int_0^r\rho(s)s^2ds \\
+&= Q - \frac{4Q}{a_0^3}\int_0^r s^2e^{-2s/a_0}ds.
 \end{aligned}
 $$
 

@@ -49,24 +49,24 @@ Trường hướng ra và tỷ số giảm từ 1 về 0 khi r tăng.
 | 22.21 | Độ lớn mật độ $2.60\times10^{-7}$ C/m³, trường 1960 N/C |
 | 22.23 | $6.56\times10^{-21}$ J, $1.20\times10^5$ m/s |
 | 22.25 | +6,00 nC và −1,00 nC |
-| 22.27 | λ = 2πRσ. Trường ngoài có độ lớn $|\sigma|R/(\varepsilon_0r)$ |
+| 22.27 | $\lambda = 2\pi R\sigma$. Trường ngoài có độ lớn $|\sigma|R/(\varepsilon_0 r)$ |
 | 22.29 | 1,16 km/s |
 | 22.31 | 10,2° |
 | 22.33 | +750 N m²/C, 0, 577 N/C hướng +x. Có nguồn trong và ngoài tấm |
-| 22.35 | Lực ngoài có độ lớn kQq/r² hướng về tâm. Lực trong bằng không |
-| 22.37 | Trường khe và ngoài có độ lớn λ/(2π$\varepsilon_0$r). Mặt trong vỏ −λ, mặt ngoài +λ |
-| 22.39 | Trong trụ E = ρr/(2$\varepsilon_0$). Ngoài E = λ/(2π$\varepsilon_0$r). Hai nhánh bằng nhau tại R |
-| 22.41 | Ba vùng có trường 0, kQ/r² và 2kQ/r², các trường khác không hướng ra |
-| 22.43 | Năm vùng có trường 0, 0, 2kq/r², 0, 6kq/r². Bốn mặt mang 0, +2q, −2q, +6q |
-| 22.45 | Nguồn cần ở tâm q = +2παa², trường hằng α/(2$\varepsilon_0$) |
-| 22.47 | Trường cực đại tại 2R/3, bằng 4kQ/(3R²) |
+| 22.35 | Lực ngoài có độ lớn $kQq/r^2$ hướng về tâm. Lực trong bằng không |
+| 22.37 | Trường khe và ngoài có độ lớn $\lambda/(2\pi\varepsilon_0 r)$. Mặt trong vỏ $-\lambda$, mặt ngoài $+\lambda$ |
+| 22.39 | Trong trụ $E = \rho r/(2\varepsilon_0)$. Ngoài $E = \lambda/(2\pi\varepsilon_0 r)$. Hai nhánh bằng nhau tại $R$ |
+| 22.41 | Ba vùng có trường $0$, $kQ/r^2$ và $2kQ/r^2$, các trường khác không hướng ra |
+| 22.43 | Năm vùng có trường $0$, $0$, $2kq/r^2$, $0$, $6kq/r^2$. Bốn mặt mang $0$, $+2q$, $-2q$, $+6q$ |
+| 22.45 | Nguồn cần ở tâm $q = +2\pi\alpha a^2$, trường hằng $\alpha/(2\varepsilon_0)$ |
+| 22.47 | Trường cực đại tại $2R/3$, bằng $4kQ/(3R^2)$ |
 | 22.49 | Trong trụ $E=\alpha(r/2-r^2/(3R))/\varepsilon_0$. Ngoài trụ $E=\alpha R^2/(6\varepsilon_0r)$ |
-| 22.51 | Trong tấm $E_x=\rho_0x^3/(3\varepsilon_0d^2)$. Ngoài có độ lớn ρ₀d/(3$\varepsilon_0$), hướng ra |
-| 22.53 | Trong hốc cầu $\vec E=\rho\vec b/(3\varepsilon_0)$ |
+| 22.51 | Trong tấm $E_x = \rho_0 x^3/(3\varepsilon_0 d^2)$. Ngoài có độ lớn $\rho_0 d/(3\varepsilon_0)$, hướng ra |
+| 22.53 | Trong hốc cầu $\vec E = \rho\vec b/(3\varepsilon_0)$ |
 | 22.55 | A là dây, B là cầu. Độ lớn λ ≈ $1.50\times10^{-7}$ C/m, ρ ≈ $2.81\times10^{-3}$ C/m³ |
 | 22.57 | Xấp xỉ 377, 653, 274 và 0 N/C |
 | 22.59 | $\lambda=\pi\rho_0R_c^2/3$. Chu kỳ tỷ lệ bán kính quỹ đạo |
-| 22.61 | Điện thông tổng Q/$\varepsilon_0$. Mặt bên và từng đáy có biểu thức bên dưới |
+| 22.61 | Điện thông tổng $Q/\varepsilon_0$. Mặt bên và từng đáy có biểu thức bên dưới |
 | 22.63 | Chọn (a) |
 | 22.65 | Chọn (b) |
 

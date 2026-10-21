@@ -71,16 +71,13 @@ Khi trường thay đổi theo vị trí hoặc mặt bị cong, không thể l�
 Với ba phần nhỏ để hình dung, tổng gần đúng là:
 
 $$
-\Phi_E \approx E_{\perp1}\Delta A_1 +E_{\perp2}\Delta A_2 +E_{\perp3}\Delta A_3.
+\Phi_E \approx \sum_{i=1}^3 E_{\perp i}\Delta A_i.
 $$
 
 Chia ngày càng mịn rồi lấy giới hạn cho tích phân mặt:
 
 $$
-\begin{aligned}
-\Phi_E &= \int_A E_\perp\,dA \\
-&= \int_A\vec E\cdot d\vec A.
-\end{aligned} \tag{22.5}
+\Phi_E = \int_A E_\perp\,dA = \int_A\vec E\cdot d\vec A. \tag{22.5}
 $$
 
 Với $E_\perp=E\cos\varphi$, cách viết thứ ba là tích phân $\int_A E\cos\varphi\,dA$.
@@ -130,10 +127,10 @@ Một mặt lập phương tưởng tượng cạnh L nằm trong điện trư�
 
 $$
 \begin{aligned}
-\Phi_{E1} &= EL^2\cos180^\circ=-EL^2, \\
-\Phi_{E2} &= EL^2\cos0^\circ=+EL^2, \\
-\Phi_{E3} &= \Phi_{E4}=0, \\
-\Phi_{E5} &= \Phi_{E6}=0.
+\Phi_{E1} &= EL^2\cos180^\circ = -EL^2, \\
+\Phi_{E2} &= EL^2\cos0^\circ = +EL^2, \\
+\Phi_{E3} &= \Phi_{E4} = 0, \\
+\Phi_{E5} &= \Phi_{E6} = 0.
 \end{aligned}
 $$
 
@@ -141,8 +138,8 @@ $$
 
 $$
 \begin{aligned}
-\Phi_E &= \Phi_{E1}+\Phi_{E2} +\Phi_{E3}+\Phi_{E4} +\Phi_{E5}+\Phi_{E6} \\
-&= (-EL^2+EL^2) +(0+0)+(0+0) \\
+\Phi_E &= \sum_{i=1}^6 \Phi_{Ei} \\
+&= (-EL^2 + EL^2) + 0 \\
 &= 0.
 \end{aligned}
 $$

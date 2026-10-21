@@ -15,10 +15,7 @@ Nếu hốc không chứa nguồn, điện tích tổng trên thành hốc bằn
 Nếu đặt nguồn q trong hốc, cách điện với thành hốc, mặt Gauss A bao cả q lẫn điện tích thành hốc. Vì tổng phải bằng không:
 
 $$
-\begin{aligned}
-q+Q_{\mathrm{trong}} &= 0, \\
-Q_{\mathrm{trong}} &= -q.
-\end{aligned}
+q + Q_{\mathrm{trong}} = 0 \implies Q_{\mathrm{trong}} = -q.
 $$
 
 Nếu vật dẫn ban đầu trung hòa, tổng điện tích của chính vật dẫn vẫn bằng không. Điện tích −q xuất hiện ở mặt trong buộc điện tích +q xuất hiện ở mặt ngoài. Nó không thể nằm trong khối vật liệu dẫn ở cân bằng.
@@ -49,7 +46,7 @@ Vật dẫn có hốc mang tổng điện tích +7 nC. Trong hốc có nguồn �
 ![Hình 22.24: Mặt Gauss trong vật liệu dẫn bao hốc chứa nguồn âm](../img/young-22/hinh-22-24.png)
 
 ::: solution Chi tiết
-Trường trên mặt Gauss bằng không. Điện tích nguồn là q = −5 nC, nên điện tích mặt trong phải bằng −q = +5 nC để tổng được bao bằng không. Vật dẫn có tổng +7 nC, vì vậy mặt ngoài còn:
+Trường trên mặt Gauss bằng không. Điện tích nguồn là $q = -5\,\mathrm{nC}$, nên điện tích mặt trong phải bằng $-q = +5\,\mathrm{nC}$ để tổng được bao bằng không. Vật dẫn có tổng $+7\,\mathrm{nC}$, vì vậy mặt ngoài còn:
 
 $$
 Q_{\mathrm{ngoai}} = (+7)-(+5) = +2\,\mathrm{nC}.
@@ -97,10 +94,7 @@ Mật độ điện tích mặt σ có thể thay đổi theo vị trí. Tại c
 Chọn hình trụ Gauss rất nhỏ, hai đáy diện tích A. Một đáy trong vật liệu dẫn nên điện thông bằng không. Thành trụ song song trường nên không có điện thông. Đáy ngoài có thành phần trường theo pháp tuyến ra ngoài là $E_\perp$ và bao điện tích σA:
 
 $$
-\begin{aligned}
-E_\perp A &= \frac{\sigma A}{\varepsilon_0}, \\
-E_\perp &= \frac{\sigma}{\varepsilon_0}.
-\end{aligned} \tag{22.10}
+E_\perp A = \frac{\sigma A}{\varepsilon_0} \implies E_\perp = \frac{\sigma}{\varepsilon_0}. \tag{22.10}
 $$
 
 Nếu σ dương, trường hướng ra khỏi vật dẫn. Nếu σ âm, trường hướng vào. Đây là quan hệ tại **ngay ngoài mặt**, không phải công thức trường ở mọi khoảng cách cho vật dẫn có hình dạng bất kỳ.

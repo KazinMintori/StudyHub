@@ -230,7 +230,7 @@ Trường hướng ra. Đồ thị từ không nhảy lên tại a, giảm theo 
 - Dùng Gauss trong từng vùng để đếm điện tích dài được bao.
 - Mặt trong mang −α để trường trong vật liệu bằng không. Bảo toàn điện tích ống cho mặt ngoài +2α.
 
-Trong hốc r < a, $E_r=\alpha/(2\pi\varepsilon_0r)$. Trong vật liệu a < r < b, E = 0. Ngoài ống r > b, $E_r=2\alpha/(2\pi\varepsilon_0r)$. Cả hai trường khác không đều hướng ra. Đồ thị có nhánh 1/r trong hốc, đoạn bằng không trong ống và nhánh 2/r ngoài ống.
+Trong hốc $r < a$, $E_r = \alpha/(2\pi\varepsilon_0 r)$. Trong vật liệu $a < r < b$, $E = 0$. Ngoài ống $r > b$, $E_r = 2\alpha/(2\pi\varepsilon_0 r)$. Cả hai trường khác không đều hướng ra. Đồ thị có nhánh 1/r trong hốc, đoạn bằng không trong ống và nhánh 2/r ngoài ống.
 
 ![Đồ thị trường của dây tích điện trong ống dẫn có điện tích tổng dương](img/young-22/loi-giai-22-38.svg)
 :::
@@ -271,7 +271,7 @@ Cầu dẫn đặc mang q, bán kính a, nằm đồng tâm trong vỏ cầu d�
 
 **Hướng đi:**
 
-- Trong vật liệu dẫn, E = 0. Trong khe và ngoài hệ, dùng mặt cầu Gauss.
+- Trong vật liệu dẫn, $E = 0$. Trong khe và ngoài hệ, dùng mặt cầu Gauss.
 - Mặt trong vỏ có −q để bù q. Mặt ngoài có +q để vỏ trung hòa.
 
 Độ lớn trường lần lượt theo bốn vùng là **0, $k|q|/r^2$, 0, $k|q|/r^2$**. Nếu q dương, trường hướng ra ở hai vùng khác không. Đồ thị nhảy ở a, b, c.
@@ -293,7 +293,7 @@ Cầu dẫn đặc bán kính R mang Q dương, đồng tâm với vỏ cách đ
 
 **Hướng đi:**
 
-- Trong cầu dẫn E = 0. Trong khe, mặt Gauss chỉ bao Q.
+- Trong cầu dẫn $E = 0$. Trong khe, mặt Gauss chỉ bao $Q$.
 - Ngoài cả hai, điện tích được bao là 2Q.
 
 Ba vùng có độ lớn trường lần lượt **0, $kQ/r^2$, $2kQ/r^2$**. Các trường khác không hướng ra. Tại 2R, trường nhảy từ $kQ/(4R^2)$ lên $kQ/(2R^2)$ do mặt mang điện.
@@ -316,12 +316,12 @@ Vỏ cầu dẫn có bán kính trong a, ngoài b, nguồn điểm dương Q t�
 - Gauss trong vật liệu dẫn xác định điện tích mặt trong.
 - Tổng điện tích vỏ xác định mặt ngoài. Sau đó dùng Gauss ở từng vùng.
 
-Trong hốc, E = kQ/r² hướng ra. Trong vật liệu, E = 0. Ngoài vỏ, E = 2kQ/r² hướng vào vì điện tích toàn hệ là −2Q.
+Trong hốc, $E = kQ/r^2$ hướng ra. Trong vật liệu, $E = 0$. Ngoài vỏ, $E = 2kQ/r^2$ hướng vào vì điện tích toàn hệ là $-2Q$.
 
 $$
 \begin{aligned}
-\sigma_a &= -Q/(4\pi a^2), \\
-\sigma_b &= -2Q/(4\pi b^2).
+\sigma_a &= -\frac{Q}{4\pi a^2}, \\
+\sigma_b &= -\frac{2Q}{4\pi b^2}.
 \end{aligned}
 $$
 

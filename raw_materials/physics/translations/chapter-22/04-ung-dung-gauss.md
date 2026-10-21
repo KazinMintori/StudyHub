@@ -41,13 +41,10 @@ Quả cầu dẫn đặc bán kính R mang điện tích tổng dương q. Tìm 
 **Thực hiện.** Với $r>R$, mặt bao toàn bộ q. Trường hướng ra và điện thông bằng diện tích cầu nhân E:
 
 $$
-\begin{aligned}
-E(4\pi r^2) &= \frac{q}{\varepsilon_0}, \\
-E &= \frac{kq}{r^2}.
-\end{aligned}
+E(4\pi r^2) = \frac{q}{\varepsilon_0} \implies E = \frac{kq}{r^2}.
 $$
 
-Ngay sát mặt ngoài, $E(R^+)=\frac{kq}{R^2}$. Với $r<R$, mặt không bao điện tích dư. Kết hợp đối xứng với Gauss cho $E(4\pi r^2)=0$, nên E = 0. Tại tâm, trường cũng bằng không.
+Ngay sát mặt ngoài, $E(R^+)=\frac{kq}{R^2}$. Với $r<R$, mặt không bao điện tích dư. Kết hợp đối xứng với Gauss cho $E(4\pi r^2)=0$, nên $E = 0$. Tại tâm, trường cũng bằng không.
 
 **Đánh giá.** Ngoài cầu, trường giống hệt trường của nguồn điểm q đặt tại tâm. Nếu q âm, trường hướng vào, còn công thức độ lớn dùng |q|. Đồ thị bằng không trong cầu, nhảy tại bề mặt rồi giảm theo $1/r^2$ bên ngoài.
 
@@ -72,10 +69,7 @@ Dây mảnh dài vô hạn có mật độ điện tích dài dương λ. Dùng 
 **Thực hiện.** Trường song song hai đáy nên điện thông qua đáy bằng không. Trên mặt bên, trường vuông góc hướng ra và độ lớn không đổi. Diện tích mặt bên là $2\pi r\ell$, điện tích được bao là $\lambda\ell$:
 
 $$
-\begin{aligned}
-E(2\pi r\ell) &= \frac{\lambda\ell}{\varepsilon_0}, \\
-E &= \frac{\lambda}{2\pi\varepsilon_0r}.
-\end{aligned}
+E(2\pi r\ell) = \frac{\lambda\ell}{\varepsilon_0} \implies E = \frac{\lambda}{2\pi\varepsilon_0r}.
 $$
 
 Nếu λ âm, trường hướng về dây và công thức độ lớn dùng |λ|.
@@ -97,10 +91,7 @@ Mặt phẳng mỏng vô hạn có mật độ điện tích mặt dương σ. T
 **Thực hiện.** Trường tiếp tuyến mặt bên nên điện thông qua đó bằng không. Trên **mỗi** đáy, trường hướng ra khỏi thể tích và có điện thông +EA. Điện tích được bao là σA:
 
 $$
-\begin{aligned}
-2EA &= \frac{\sigma A}{\varepsilon_0}, \\
-E &= \frac{\sigma}{2\varepsilon_0}.
-\end{aligned}
+2EA = \frac{\sigma A}{\varepsilon_0} \implies E = \frac{\sigma}{2\varepsilon_0}.
 $$
 
 Nếu σ âm, trường hướng về mặt, điện thông tổng âm và công thức độ lớn dùng |σ|.
@@ -119,13 +110,10 @@ Hai bản dẫn phẳng lớn song song mang điện tích trái dấu và cùng
 
 Chọn mặt trụ S₁ có một đáy nằm trong vật liệu bản dương và đáy kia ở khoảng giữa. Hai đáy cùng diện tích A.
 
-**Thực hiện.** Đáy trong vật dẫn không có điện thông vì E = 0. Mặt bên song song trường nên không có điện thông. Đáy ở giữa bản có điện thông +EA và mặt trụ bao điện tích +σA:
+**Thực hiện.** Đáy trong vật dẫn không có điện thông vì $E = 0$. Mặt bên song song trường nên không có điện thông. Đáy ở giữa bản có điện thông +EA và mặt trụ bao điện tích +σA:
 
 $$
-\begin{aligned}
-EA &= \frac{\sigma A}{\varepsilon_0}, \\
-E &= \frac{\sigma}{\varepsilon_0}.
-\end{aligned}
+EA = \frac{\sigma A}{\varepsilon_0} \implies E = \frac{\sigma}{\varepsilon_0}.
 $$
 
 Trường hướng từ bản dương sang bản âm. Mặt S₄ cho cùng kết quả. Dùng S₂ và S₃ có một đáy trong vật liệu, đáy kia ở ngoài hệ, điện tích được bao bằng không nên trường ngoài bằng không trong mô hình lý tưởng.
@@ -155,10 +143,7 @@ $$
 Do đó:
 
 $$
-\begin{aligned}
-4\pi r^2E &= \frac Q{\varepsilon_0}\frac{r^3}{R^3}, \\
-E &= k\frac{Qr}{R^3}.
-\end{aligned}
+4\pi r^2E = \frac Q{\varepsilon_0}\frac{r^3}{R^3} \implies E = k\frac{Qr}{R^3}.
 $$
 
 Trường tăng tuyến tính từ không tại tâm đến $\frac{kQ}{R^2}$ ở mặt.
@@ -166,10 +151,7 @@ Trường tăng tuyến tính từ không tại tâm đến $\frac{kQ}{R^2}$ ở
 **Thực hiện ngoài cầu.** Với $r>R$, mặt bao toàn bộ Q:
 
 $$
-\begin{aligned}
-4\pi r^2E &= \frac{Q}{\varepsilon_0}, \\
-E &= \frac{kQ}{r^2}.
-\end{aligned}
+4\pi r^2E = \frac{Q}{\varepsilon_0} \implies E = \frac{kQ}{r^2}.
 $$
 
 Trường ngoài giống nguồn điểm Q đặt tại tâm. Với Q âm, hướng trường đảo vào tâm và công thức độ lớn dùng |Q|.
@@ -204,5 +186,5 @@ Biết điện tích tổng Q, kích thước và hình dạng của vật dẫn
 :::
 
 ::: solution Giải thích
-Không thể làm theo cách rút E ra ngoài tích phân. Một mặt Gauss có hình giống vật dẫn và lớn hơn nó vẫn có điện thông Q/$\varepsilon_0$, nhưng trường không nhất thiết vuông góc mặt và cũng không nhất thiết có cùng độ lớn ở mọi điểm. Biết điện thông chưa xác định được trường tại điểm cần tìm. Tính thuận tiện của Gauss đòi hỏi đối xứng của **phân bố điện tích**, không chỉ hình dạng được chọn cho mặt Gauss.
+Không thể làm theo cách rút E ra ngoài tích phân. Một mặt Gauss có hình giống vật dẫn và lớn hơn nó vẫn có điện thông $Q/\varepsilon_0$, nhưng trường không nhất thiết vuông góc mặt và cũng không nhất thiết có cùng độ lớn ở mọi điểm. Biết điện thông chưa xác định được trường tại điểm cần tìm. Tính thuận tiện của Gauss đòi hỏi đối xứng của **phân bố điện tích**, không chỉ hình dạng được chọn cho mặt Gauss.
 :::

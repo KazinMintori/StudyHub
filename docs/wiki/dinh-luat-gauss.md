@@ -16,10 +16,7 @@ next: False
 Dạng tích phân là:
 
 $$
-\begin{aligned}
-\Phi_E &= \oint\vec E\cdot d\vec A \\
-&= \frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
-\end{aligned}
+\Phi_E = \oint\vec E\cdot d\vec A = \frac{Q_{\mathrm{trong}}}{\varepsilon_0}.
 $$
 
 Nguồn ngoài có thể thay đổi trường tại từng điểm nhưng không đổi điện thông tổng. Chỉ rút E ra ngoài tích phân khi thành phần pháp tuyến không đổi trên phần mặt đang xét.

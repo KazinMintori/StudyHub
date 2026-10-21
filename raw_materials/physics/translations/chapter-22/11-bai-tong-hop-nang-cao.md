@@ -400,12 +400,12 @@ Cầu bán kính R = 6,00 mm có mật độ không đều theo Hình P22.57. T�
 - Lớp từ a đến b có điện tích $4\pi\rho(b^3-a^3)/3$.
 - Sau đó dùng $E_r=kQ_{\mathrm{trong}}/r^2$.
 
-(i) Chỉ có phần lớp đầu: E = 376 N/C. (ii) Bao hết lớp đầu và phần lớp thứ hai đến 3 mm: E = 653 N/C. (iii) Bao hai lớp đầu và phần lớp âm đến 5 mm: E = 274 N/C. Ba trường đều hướng ra.
+(i) Chỉ có phần lớp đầu: $E = 376\,\mathrm{N/C}$. (ii) Bao hết lớp đầu và phần lớp thứ hai đến $3\,\mathrm{mm}$: $E = 653\,\mathrm{N/C}$. (iii) Bao hai lớp đầu và phần lớp âm đến $5\,\mathrm{mm}$: $E = 274\,\mathrm{N/C}$. Ba trường đều hướng ra.
 
 (iv) Điện tích tổng tỷ lệ với:
 
 $$
-10(2^3) +4(4^3-2^3) -2(6^3-4^3)=0.
+10\cdot 8 + 4(56) - 2(152) = 0.
 $$
 
 Vì thế trường ở 7 mm bằng không. Các số trong phép so cuối dùng cùng đơn vị mm và µC/m³, nên chỉ dùng để xác nhận tổng bằng không. Khi tính giá trị trường, đã đổi sang SI.
@@ -515,8 +515,8 @@ Trên mặt bên, khoảng cách đến tâm là $\sqrt{R^2+z^2}$ và thành ph�
 
 $$
 \begin{aligned}
-\Phi_{\mathrm{side}} &= 2\pi kQR^2 \times\int_{-L/2}^{L/2}\frac{dz}{(R^2+z^2)^{3/2}} \\
-&= \frac Q{\varepsilon_0} \frac{L}{\sqrt{L^2+4R^2}}.
+\Phi &= 2\pi kQR^2 \int_{-L/2}^{L/2}\frac{dz}{(R^2+z^2)^{3/2}} \\
+&= \frac{QL}{\varepsilon_0\sqrt{L^2+4R^2}}.
 \end{aligned}
 $$
 
@@ -529,7 +529,7 @@ $$
 \end{aligned}
 $$
 
-Điện thông ở đáy dưới được đo hướng xuống, tức hướng ra ngoài, nên cũng dương. Cộng ba phần được Q/$\varepsilon_0$, đúng Gauss vì trụ bao toàn bộ Q.
+Điện thông ở đáy dưới được đo hướng xuống, tức hướng ra ngoài, nên cũng dương. Cộng ba phần được $Q/\varepsilon_0$, đúng Gauss vì trụ bao toàn bộ Q.
 :::
 
 ::: exercise 22.62 ••• CP CALC
@@ -623,7 +623,7 @@ Chọn (a).
 
 **Hướng đi:**
 
-- Ngoài cầu, E tỷ lệ 1/r².
+- Ngoài cầu, $E$ tỷ lệ với $1/r^2$.
 - Khoảng cách từ 25 m xuống 2,5 m giảm mười lần, nên trường tăng một trăm lần.
 
 $$

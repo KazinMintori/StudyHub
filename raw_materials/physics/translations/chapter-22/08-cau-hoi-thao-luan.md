@@ -15,7 +15,7 @@ Một bóng cao su chứa một điện tích điểm. Điện thông qua bóng 
 - Bóng là mặt kín, nên Gauss liên hệ điện thông với điện tích được bao.
 - Thay đổi hình dạng không thay đổi q.
 
-Điện thông luôn q/$\varepsilon_0$. Trường trên từng phần mặt có thể đổi, nhưng tích phân tổng không đổi nếu điện tích không đi qua mặt bóng.
+Điện thông luôn là $q/\varepsilon_0$. Trường trên từng phần mặt có thể đổi, nhưng tích phân tổng không đổi nếu điện tích không đi qua mặt bóng.
 :::
 
 ::: exercise Q22.2
@@ -30,10 +30,10 @@ Nếu cả hai nguồn trong Hình 22.15 đều dương, điện thông qua A, B
 
 **Hướng đi:**
 
-- Mỗi điện tích được bao đóng góp q/$\varepsilon_0$.
+- Mỗi điện tích được bao đóng góp $q/\varepsilon_0$.
 - Cộng điện tích của cả hai nguồn nếu mặt bao cả hai.
 
-Các điện thông theo A,B,C,D là **q/$\varepsilon_0$, q/$\varepsilon_0$, 2q/$\varepsilon_0$ và 0**.
+Các điện thông theo A,B,C,D là **$q/\varepsilon_0$, $q/\varepsilon_0$, $2q/\varepsilon_0$ và 0**.
 :::
 
 ::: exercise Q22.3
@@ -83,7 +83,7 @@ Mặt Gauss cầu bao điện tích điểm q. Dời q từ tâm đến một v�
 - Trường Coulomb tại điểm phụ thuộc vector nối nguồn đến điểm đó.
 - Điện thông Gauss chỉ phụ thuộc tổng q được bao.
 
-Trường tại một điểm nhìn chung đổi cả độ lớn và hướng. Điện thông vẫn q/$\varepsilon_0$. Khi nguồn lệch tâm, không còn được lấy một độ lớn E chung nhân toàn diện tích mặt cầu.
+Trường tại một điểm nhìn chung đổi cả độ lớn và hướng. Điện thông vẫn là $q/\varepsilon_0$. Khi nguồn lệch tâm, không còn được lấy một độ lớn E chung nhân toàn diện tích mặt cầu.
 :::
 
 ::: exercise Q22.6
@@ -112,7 +112,7 @@ Cầu đồng đặc có điện tích dương đều trên mặt và trường 
 
 **Hướng đi:**
 
-- Tính chất vật dẫn cân bằng vẫn cho E = 0 trong vật liệu và điện tích dư trên mặt.
+- Tính chất vật dẫn cân bằng vẫn cho $E = 0$ trong vật liệu và điện tích dư trên mặt.
 - Nguồn âm hút phần điện tích dương về phía gần nó, nên mật độ không còn đều.
 
 Điện tích dư vẫn trên mặt. Phía gần nguồn âm có mật độ dương lớn hơn, phía xa giảm mật độ dương và có thể mang mật độ âm nếu cảm ứng đủ mạnh. Tổng điện tích của cầu vẫn giữ nguyên nếu không tiếp xúc hay nối đất. Trường trong vật liệu tiếp tục bằng không sau khi điện tích tái phân bố.
@@ -131,7 +131,7 @@ Nếu trường nguồn điểm tỷ lệ 1/r³ thay cho 1/r², định luật G
 - Với nguồn ở tâm, điện thông bằng E nhân 4πr².
 - Xem kết quả còn độc lập bán kính hay không.
 
-Nếu E ∝ 1/r³ thì Φ ∝ 1/r. Điện thông thay đổi khi đổi bán kính dù điện tích được bao không đổi. Vì thế không thể giữ nguyên định luật Gauss dạng Q/$\varepsilon_0$.
+Nếu E ∝ 1/r³ thì Φ ∝ 1/r. Điện thông thay đổi khi đổi bán kính dù điện tích được bao không đổi. Vì thế không thể giữ nguyên định luật Gauss dạng $Q/\varepsilon_0$.
 :::
 
 ::: exercise Q22.9
