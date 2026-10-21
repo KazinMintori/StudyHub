@@ -3,16 +3,21 @@ import { defineAsyncComponent } from 'vue'
 import Layout from './StudyLayout.vue'
 import './styles/index.css'
 import './styles/philosophy.css'
-import CourseOverview from '../features/course/components/CourseOverview.vue'
-import OldCourseLink from '../features/legacy/components/OldCourseLink.vue'
-import CodeIllustration from '../features/illustrations/components/CodeIllustration.vue'
-import WikiIndex from '../features/wiki/components/WikiIndex.vue'
-import LegacyCourseRoute from '../features/legacy/components/LegacyCourseRoute.vue'
-import WikiUsage from '../features/wiki/components/WikiUsage.vue'
-import TopicMap from '../features/lecture/components/TopicMap.vue'
-import PhilosophyTopic from '../features/philosophy/components/PhilosophyTopic.vue'
-import DataDiagram from '../features/illustrations/components/DataDiagram.vue'
-import NotebookExecution from '../features/illustrations/components/NotebookExecution.vue'
+// Components used inside Markdown pages are split into their own chunks.
+// Wiki components read the full concept dictionary, so loading them only on
+// the pages that use them keeps that data out of every other page.
+const pageComponents = {
+  CourseOverview: () => import('../features/course/components/CourseOverview.vue'),
+  OldCourseLink: () => import('../features/legacy/components/OldCourseLink.vue'),
+  CodeIllustration: () => import('../features/illustrations/components/CodeIllustration.vue'),
+  WikiIndex: () => import('../features/wiki/components/WikiIndex.vue'),
+  LegacyCourseRoute: () => import('../features/legacy/components/LegacyCourseRoute.vue'),
+  WikiUsage: () => import('../features/wiki/components/WikiUsage.vue'),
+  TopicMap: () => import('../features/lecture/components/TopicMap.vue'),
+  PhilosophyTopic: () => import('../features/philosophy/components/PhilosophyTopic.vue'),
+  DataDiagram: () => import('../features/illustrations/components/DataDiagram.vue'),
+  NotebookExecution: () => import('../features/illustrations/components/NotebookExecution.vue')
+}
 
 // Mọi mô phỏng tương tác đặt tên dạng <Tên>Lab.vue được đăng ký toàn cục theo đúng tên file,
 // nên Notes có thể viết <AffineLab type="line" /> mà không cần import.
@@ -22,7 +27,7 @@ export default {
   extends: DefaultTheme,
   Layout,
   enhanceApp({ app, router }) {
-    for (const [name, component] of Object.entries({ CourseOverview, OldCourseLink, CodeIllustration, WikiIndex, LegacyCourseRoute, WikiUsage, TopicMap, PhilosophyTopic, DataDiagram, NotebookExecution })) app.component(name, component)
+    for (const [name, load] of Object.entries(pageComponents)) app.component(name, defineAsyncComponent(load))
     for (const [file, load] of Object.entries(labs)) app.component(file.split('/').at(-1).replace(/\.vue$/, ''), defineAsyncComponent(load))
 
     if (typeof window !== 'undefined' && router) {

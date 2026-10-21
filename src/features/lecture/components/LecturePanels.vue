@@ -19,6 +19,9 @@ const {
   printCheatsheet,
   scrollToExercise,
   selectNotes,
+  payloadState,
+  panelReady,
+  retryPayload,
   concepts,
   studyLink,
 } = useLecturePanels()
@@ -26,7 +29,20 @@ const {
 
 <template>
   <div v-if="hasPanelContent" class="lecture-panels">
-    <section v-if="part === 'slides'" class="lecture-slides" aria-label="Slides của bài giảng">
+    <div v-if="!panelReady" class="panel-loading" role="status" aria-live="polite">
+      <template v-if="payloadState === 'error'">
+        <p class="panel-loading-error">Chưa tải được nội dung của mục này. Kiểm tra kết nối mạng rồi thử lại.</p>
+        <button class="study-button" type="button" @click="retryPayload">Thử lại</button>
+      </template>
+      <template v-else>
+        <span class="visually-hidden">Đang tải nội dung bài giảng…</span>
+        <span class="panel-skeleton panel-skeleton-title" aria-hidden="true"></span>
+        <span class="panel-skeleton" aria-hidden="true"></span>
+        <span class="panel-skeleton" aria-hidden="true"></span>
+        <span class="panel-skeleton panel-skeleton-short" aria-hidden="true"></span>
+      </template>
+    </div>
+    <section v-else-if="part === 'slides'" class="lecture-slides" aria-label="Slides của bài giảng">
       <template v-if="['vat-ly-2', 'xu-ly-du-lieu', 'xac-suat-thong-ke'].includes(course.id) && current">
         <article class="course-slide" aria-live="polite">
           <p class="eyebrow">Thẻ ôn tập {{ index + 1 }} / {{ slides.length }}</p>

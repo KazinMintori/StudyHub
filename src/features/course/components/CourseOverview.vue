@@ -1,6 +1,7 @@
 <script setup>
 import { useCourseOverview } from '../controllers/useCourseOverview.js'
 import PhilosophyCourse from '../../philosophy/components/PhilosophyCourse.vue'
+import CourseArt from '../../illustrations/components/CourseArt.vue'
 const {
   frontmatter,
   course,
@@ -20,8 +21,13 @@ const {
   <PhilosophyCourse v-if="course?.presentation === 'philosophy'" />
   <main v-else-if="course" class="course-overview course-shell">
     <nav class="book-breadcrumbs" aria-label="Đường dẫn"><a :href="studyLink('/')">Trang chủ</a><span>/</span><span>Học phần</span></nav>
-    <h1>{{ course.name }}</h1>
-    <p class="course-description">{{ course.description }}</p>
+    <header class="course-hero">
+      <div class="course-hero-copy">
+        <h1>{{ course.name }}</h1>
+        <p class="course-description">{{ course.description }}</p>
+      </div>
+      <div class="course-hero-art"><CourseArt :course="course" /></div>
+    </header>
     <div class="course-meta">
       <span>{{ primaryLessonCount }} bài giảng</span>
       <span v-if="supplementCount">{{ supplementCount }} chuyên đề bổ trợ</span>

@@ -1,0 +1,97 @@
+/* Decorative SVG illustrations. Every colour comes from tokens.css, so the
+   artwork follows the light and dark themes automatically. */
+.course-art, .spot-art, .hero-art { display: block; width: 100%; height: auto; overflow: visible; }
+
+/* Tone: --art-accent is the main colour, --art-soft its tinted background. */
+.tone-tim { --art-accent: var(--tim); --art-soft: var(--tim-soft); }
+.tone-lam { --art-accent: var(--lam); --art-soft: var(--lam-soft); }
+.tone-hong { --art-accent: var(--hong); --art-soft: var(--hong-soft); }
+.tone-ngoc { --art-accent: var(--ngoc); --art-soft: var(--ngoc-soft); }
+.tone-cam { --art-accent: var(--cam); --art-soft: var(--cam-soft); }
+.tone-vang { --art-accent: var(--vang); --art-soft: var(--vang-soft); }
+.tone-xanh { --art-accent: var(--xanh); --art-soft: var(--xanh-soft); }
+.tone-do { --art-accent: var(--do); --art-soft: var(--do-soft); }
+
+:is(.course-art, .spot-art) .art-bg { fill: var(--art-soft); }
+:is(.course-art, .spot-art) .art-dots circle { fill: var(--art-accent); opacity: .22; }
+:is(.course-art, .spot-art) .art-fill { fill: var(--art-accent); }
+:is(.course-art, .spot-art) .art-fill.soft { fill: var(--art-accent); opacity: .38; }
+:is(.course-art, .spot-art) .art-node { fill: var(--paper); stroke: var(--ink-3); stroke-width: 2; }
+:is(.course-art, .spot-art) .art-edge { fill: none; stroke: var(--ink-3); stroke-width: 2; stroke-linecap: round; }
+:is(.course-art, .spot-art) .art-edge.thin { stroke-width: 1.4; opacity: .7; }
+:is(.course-art, .spot-art) .art-edge-head { fill: var(--ink-3); }
+:is(.course-art, .spot-art) .art-path { fill: none; stroke: var(--art-accent); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+:is(.course-art, .spot-art) .art-ring { fill: none; stroke: var(--art-accent); stroke-width: 1.6; stroke-dasharray: 3 3; }
+:is(.course-art, .spot-art) .art-ink { fill: none; stroke: var(--ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+:is(.course-art, .spot-art) .art-ink.thick { stroke-width: 4; }
+:is(.course-art, .spot-art) .art-ink-fill { fill: var(--ink); }
+:is(.course-art, .spot-art) .art-dash { fill: none; stroke: var(--ink-3); stroke-width: 1.6; stroke-dasharray: 4 4; stroke-linecap: round; }
+:is(.course-art, .spot-art) .art-dash-box { fill: var(--paper); stroke: var(--control); stroke-width: 1.6; stroke-dasharray: 5 4; }
+:is(.course-art, .spot-art) .art-contour { fill: none; stroke: var(--art-accent); stroke-width: 1.6; opacity: .5; }
+:is(.course-art, .spot-art) .art-contour.strong { opacity: .8; }
+:is(.course-art, .spot-art) .art-venn { fill: var(--art-accent); opacity: .2; }
+:is(.course-art, .spot-art) .art-venn-line { fill: none; stroke: var(--art-accent); stroke-width: 2; }
+:is(.course-art, .spot-art) .art-on-fill { fill: none; stroke: var(--paper); stroke-width: 2.6; stroke-linecap: round; }
+:is(.course-art, .spot-art) .art-on-ink { fill: none; stroke: var(--paper); stroke-width: 2.6; stroke-linecap: round; }
+.spot-art .art-paper-ring { fill: var(--paper); stroke: var(--ink); stroke-width: 3; }
+.spot-art .art-paper-dot { fill: var(--paper); }
+.spot-art .art-shadow { fill: var(--ink); opacity: .12; }
+.spot-art .art-on-fill-text { fill: var(--paper); font: 700 14px var(--font-ui); }
+.spot-art .art-ink-text { fill: var(--ink-2); font: 700 13px var(--font-ui); }
+
+/* Hero scene */
+.hero-art .hero-blob { fill: var(--tim-soft); }
+.hero-art .hero-dots circle { fill: var(--tim); opacity: .22; }
+.hero-art .hero-card { fill: var(--paper); stroke: var(--rule); stroke-width: 1.5; }
+.hero-art .hero-card.tone-lam { fill: var(--lam-soft); stroke: color-mix(in srgb, var(--lam) 35%, transparent); }
+.hero-art .hero-card-soft { fill: var(--art-soft); stroke: color-mix(in srgb, var(--art-accent) 30%, transparent); stroke-width: 1.5; }
+.hero-art .hero-shadow { fill: var(--tim); opacity: .1; }
+.hero-art .hero-accent { fill: var(--tim); }
+.hero-art .hero-line { fill: var(--grid); }
+.hero-art .hero-panel { fill: var(--canvas); }
+.hero-art .hero-curve { fill: none; stroke: var(--hong); stroke-width: 3; stroke-linecap: round; }
+.hero-art .hero-axis { stroke: var(--ink-3); stroke-width: 1.5; }
+.hero-art .hero-formula { fill: var(--lam); font: 600 26px var(--font-read); font-style: italic; }
+.hero-art .hero-check-bg { fill: var(--art-accent); }
+.hero-art .hero-check { fill: none; stroke: var(--paper); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.hero-art .hero-edge { fill: none; stroke: var(--ink-3); stroke-width: 2; }
+.hero-art .hero-node { fill: var(--art-accent); }
+.hero-art .hero-node-soft { fill: var(--paper); stroke: var(--tim); stroke-width: 2; }
+.hero-art .hero-timer-track { fill: none; stroke: var(--grid); stroke-width: 6; }
+.hero-art .hero-timer { fill: none; stroke: var(--art-accent); stroke-width: 6; stroke-linecap: round; }
+.hero-art .hero-timer-dot { fill: var(--ink); }
+
+/* Gentle floating motion; disabled when the reader prefers reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-art .hero-float { animation: hero-float 7s var(--ease) infinite alternate; transform-box: fill-box; }
+  .hero-art .hero-float-2 { animation-duration: 6s; animation-delay: -2s; }
+  .hero-art .hero-float-3 { animation-duration: 8s; animation-delay: -4s; }
+}
+@keyframes hero-float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+/* Page headers with an illustration beside the title. */
+.course-hero, .page-hero { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); }
+.course-hero-copy, .page-hero > div { min-width: 0; flex: 1; }
+.course-hero-art { flex: 0 0 auto; width: 200px; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-soft); }
+.page-hero > .spot-art { flex: 0 0 auto; width: 150px; }
+.not-found-page { text-align: center; }
+.not-found-page .spot-art { width: min(240px, 70%); margin: 0 auto var(--space-5); }
+.not-found-page .button-row { justify-content: center; }
+@media (max-width: 767px) {
+  .course-hero-art { width: 112px; align-self: flex-start; }
+  .page-hero > .spot-art { width: 96px; }
+}
+@media (max-width: 479px) {
+  .course-hero-art, .page-hero > .spot-art { display: none; }
+}
+
+/* A small course illustration beside the lecture title on wide screens. */
+.lecture-header { position: relative; }
+.lecture-header-art { display: none; }
+@media (min-width: 1180px) {
+  .lecture-header:has(.lecture-header-art) { padding-right: 148px; }
+  .lecture-header-art { display: block; position: absolute; top: 4px; right: 0; width: 124px; border-radius: 14px; overflow: hidden; opacity: .95; }
+}

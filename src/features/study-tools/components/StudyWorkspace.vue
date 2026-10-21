@@ -1,4 +1,5 @@
 <script setup>
+import SpotArt from '../../illustrations/components/SpotArt.vue'
 import { studyLink as withBase } from '../../../core/routing/links.js'
 import FieldSimulation from '../../labs/components/FieldSimulation.vue'
 import { courses as defaultCourses } from '../data/course-options.mjs'
@@ -24,10 +25,13 @@ const {
 
 <template>
   <main class="study-workspace">
-    <header class="workspace-heading">
-      <a class="small text-link" :href="withBase('/')">← Trang chủ</a>
-      <h1>Góc học tập</h1>
-      <p>Flashcard, ghi chú, hẹn giờ và mô phỏng để ôn bài.</p>
+    <header class="workspace-heading page-hero">
+      <div>
+        <a class="small text-link" :href="withBase('/')">← Trang chủ</a>
+        <h1>Góc học tập</h1>
+        <p>Flashcard, ghi chú, hẹn giờ và mô phỏng để ôn bài.</p>
+      </div>
+      <SpotArt name="tools" tone="hong" />
     </header>
     <nav class="workspace-tabs" aria-label="Công cụ học tập">
       <a

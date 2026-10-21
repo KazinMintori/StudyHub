@@ -1,4 +1,4 @@
-.course-shell > h1 { font-size: var(--fs-h1); line-height: 1.2; font-weight: 700; margin: var(--space-5) 0 var(--space-4); }
+.course-shell > h1, .course-shell > .course-hero h1, .course-shell > .page-hero h1 { font-size: var(--fs-h1); line-height: 1.2; font-weight: 700; margin: var(--space-5) 0 var(--space-4); }
 .course-description { font-size: var(--fs-lead); line-height: 1.55; color: var(--ink-2); max-width: 800px; }
 .book-breadcrumbs { display: flex; gap: var(--space-2); color: var(--ink-3); font-size: var(--fs-small); line-height: 1.45; }
 .book-breadcrumbs a:hover { color: var(--tim); }

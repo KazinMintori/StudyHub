@@ -3,6 +3,27 @@ import mathjax from 'markdown-it-mathjax3'
 import { parseAst } from 'rollup/parseAst'
 import { mathSegments } from '../docs/.vitepress/math-text.mjs'
 
+// Exports that only build scripts and server rendering read.
+export const CLIENT_UNUSED_EXPORT = /WikiDetails$/
+
+let sharedRenderer
+// Render every `$…$` / `$$…$$` segment found in the given strings with the
+// same MathJax setup as the data-module transform. Used by build-time modules
+// that synthesise data (for example the lightweight client catalog).
+export function renderMathInStrings(values) {
+  sharedRenderer ??= new MarkdownIt({ html: false }).use(mathjax)
+  const rendered = {}
+  for (const value of values) {
+    for (const segment of mathSegments(value)) {
+      if (!segment.startsWith('$') || segment in rendered) continue
+      const html = segment.startsWith('$$') ? sharedRenderer.render(segment) : sharedRenderer.renderInline(segment)
+      if (/data-mjx-error|<merror/.test(html)) throw new Error(`Invalid math: ${segment}`)
+      rendered[segment] = html
+    }
+  }
+  return rendered
+}
+
 // Compile SVG and assistive MathML at build time, using the Notes renderer.
 // Each data module carries only the expressions it uses.
 export function mathTextPlugin() {
@@ -13,7 +34,11 @@ export function mathTextPlugin() {
     name: 'study-math-text',
     resolveId(source) { if (source === 'virtual:study-math-renderer') return id },
     load(source) { if (source === id) return 'export const renderedMath = {}' },
-    transform(source, file) {
+    transform(source, file, options) {
+      // Wiki article bodies are rendered into Markdown pages at build time; the
+      // browser never reads them from data modules, so the client bundle skips
+      // their pre-rendered SVG.
+      const browser = !options?.ssr
       // Course content can live in dedicated modules, including new subjects and cheatsheets.
       const courseContent = /[/\\]src[/\\]content[/\\]courses[/\\].*\.mjs$/.test(file)
       const cheatsheetService = /[/\\]src[/\\]features[/\\]lecture[/\\]services[/\\]cheatsheet-service\.mjs$/.test(file)
@@ -65,13 +90,31 @@ export function mathTextPlugin() {
             && node.init?.type === 'ArrowFunctionExpression' && node.init.params.length === 1
             && node.init.params[0].type === 'Identifier') helpers.set(node.id.name, node.init)
       })
-      visit(ast, (node, parent) => {
-        if (node.type === 'TemplateLiteral' && parent?.type === 'TaggedTemplateExpression') return
-        const value = stringValue(node)
-        if (value === undefined) return
-        for (const segment of mathSegments(value)) if (segment.startsWith('$')) expressions.add(segment)
-      })
-      const rendered = Object.fromEntries([...expressions].map(expression => {
+      function collect(root, into) {
+        visit(root, (node, parent) => {
+          if (node.type === 'TemplateLiteral' && parent?.type === 'TaggedTemplateExpression') return
+          const value = stringValue(node)
+          if (value === undefined) return
+          for (const segment of mathSegments(value)) if (segment.startsWith('$')) into.add(segment)
+        })
+      }
+      // Attach each exported constant's formulas to that export, so bundles
+      // drop the pre-rendered SVG of exports they never import (for example
+      // Wiki article bodies in the client build). Everything else stays in an
+      // unconditional registration, exactly as before.
+      const scoped = []
+      for (const statement of ast.body) {
+        const declaration = statement.type === 'ExportNamedDeclaration' ? statement.declaration : null
+        if (declaration?.type !== 'VariableDeclaration' || declaration.kind !== 'const') { collect(statement, expressions); continue }
+        for (const declarator of declaration.declarations) {
+          if (!declarator.init) continue
+          if (/FunctionExpression$/.test(declarator.init.type)) { collect(declarator.init, expressions); continue }
+          const own = new Set()
+          collect(declarator.init, own)
+          scoped.push({ init: declarator.init, own, name: declarator.id.name })
+        }
+      }
+      const render = expression => {
         let html = cache.get(expression)
         if (html === undefined) {
           try { html = expression.startsWith('$$') ? md.render(expression) : md.renderInline(expression) }
@@ -80,8 +123,36 @@ export function mathTextPlugin() {
         if (/data-mjx-error|<merror/.test(html)) throw new Error(`Invalid math in ${file}: ${expression}`)
         cache.set(expression, html)
         return [expression, html]
-      }))
-      return { code: `import { renderedMath as studyRenderedMath } from 'virtual:study-math-renderer';\n${source}\nObject.assign(studyRenderedMath, ${JSON.stringify(rendered)});`, map: null }
+      }
+      // An object with spreads (`{...a, ...b}`) counts as a possible getter
+      // side effect, so it is rewritten to the equivalent Object.assign call
+      // that bundlers can drop when the export is unused.
+      const objectSource = init => {
+        if (init.type !== 'ObjectExpression' || !init.properties.some(property => property.type === 'SpreadElement')) return source.slice(init.start, init.end)
+        const parts = []
+        let group = []
+        const flush = () => { if (group.length) parts.push(`{${group.join(',')}}`); group = [] }
+        for (const property of init.properties) {
+          if (property.type === 'SpreadElement') { flush(); parts.push(source.slice(property.argument.start, property.argument.end)) }
+          else group.push(source.slice(property.start, property.end))
+        }
+        flush()
+        return `Object.assign({}, ${parts.join(', ')})`
+      }
+      const edits = []
+      for (const { init, own, name } of scoped) {
+        const serverOnly = browser && CLIENT_UNUSED_EXPORT.test(name || '')
+        const list = serverOnly ? [] : [...own].filter(expression => !expressions.has(expression))
+        const spreads = init.type === 'ObjectExpression' && init.properties.some(property => property.type === 'SpreadElement')
+        if (!list.length && !spreads) continue
+        const math = list.length ? JSON.stringify(Object.fromEntries(list.map(render))) : '{}'
+        edits.push([init.start, init.end, `/*#__PURE__*/__studyWithMath(${objectSource(init)}, ${math})`])
+      }
+      let code = source
+      for (const [start, end, text] of edits.sort((a, b) => b[0] - a[0])) code = code.slice(0, start) + text + code.slice(end)
+      code = `import { renderedMath as studyRenderedMath } from 'virtual:study-math-renderer';\nconst __studyWithMath = (value, math) => (Object.assign(studyRenderedMath, math), value);\n${code}`
+      if (expressions.size) code += `\nObject.assign(studyRenderedMath, ${JSON.stringify(Object.fromEntries([...expressions].map(render)))});`
+      return { code, map: null }
     }
   }
 }

@@ -1,8 +1,7 @@
 import { popoverPosition } from '../services/popover-position.mjs'
 import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute, withBase } from 'vitepress'
-import { concepts } from '../../../../docs/.vitepress/concepts.mjs'
-import { conceptField } from '../../../../docs/.vitepress/wiki-content.mjs'
+import { loadConceptData } from '../services/concept-loader.mjs'
 
 export function useTermPreview() {
   const route = useRoute()
@@ -49,15 +48,33 @@ export function useTermPreview() {
     })
   }
 
+  // The concept dictionary is a separate chunk. It is fetched on the first
+  // hover/focus/tap of a term (or when the browser is idle on hover devices).
+  let conceptData = null
+  let loadToken = 0
+  async function ensureConceptData() {
+    if (!conceptData) conceptData = await loadConceptData()
+    return conceptData
+  }
+
   async function show(link, { persist = false } = {}) {
     clearTimeout(timer)
-    const nextTerm = concepts[link?.dataset.term]
-    if (!link || !nextTerm) return
+    const id = link?.dataset.term
+    if (!link || !id) return
+    if (!conceptData) {
+      const token = ++loadToken
+      try { await ensureConceptData() } catch { return }
+      // Ignore a hover that ended while the data was downloading.
+      if (token !== loadToken || !link.isConnected) return
+      if (!persist && !link.matches(':hover') && !link.matches(':focus-visible')) return
+    }
+    const nextTerm = conceptData.concepts[id]
+    if (!nextTerm) return
 
     if (anchor !== link) clearAnchor()
     anchor = link
     term.value = nextTerm
-    field.value = conceptField(link.dataset.term)
+    field.value = conceptData.conceptField(id)
     wikiHref.value = withBase(link.dataset.wiki)
     pinned.value = persist
     link.setAttribute('aria-expanded', persist ? 'true' : 'false')
@@ -134,6 +151,11 @@ export function useTermPreview() {
   }
 
   onMounted(() => {
+    if (window.matchMedia?.('(hover: hover)').matches && !navigator.connection?.saveData) {
+      const warm = () => { if (document.querySelector('button.study-term')) ensureConceptData().catch(() => {}) }
+      if ('requestIdleCallback' in window) window.requestIdleCallback(warm, { timeout: 4000 })
+      else setTimeout(warm, 2500)
+    }
     document.addEventListener('pointerover', over)
     document.addEventListener('pointerout', out)
     document.addEventListener('focusin', focusIn)

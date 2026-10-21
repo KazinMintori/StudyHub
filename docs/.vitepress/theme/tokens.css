@@ -5,8 +5,13 @@
   --tim: #5a37a8; --tim-hover: #46288a; --tim-soft: #eee9fb;
   --do: #b42318; --do-soft: #fdecea; --vang: #8a5100; --vang-soft: #fbf1df;
   --xanh: #1d6b45; --xanh-soft: #e6f4ec; --grid: #e4e0f0;
+  /* Illustration accents. Text never uses these on their own. */
+  --lam: #2f5fd0; --lam-soft: #e8eefc; --ngoc: #0f7a72; --ngoc-soft: #e2f4f2;
+  --hong: #b4316f; --hong-soft: #fbe9f2; --cam: #c25417; --cam-soft: #fdeee4;
   --printed-paper: #ffffff; --scrim: rgb(23 22 29 / .92);
   --shadow: 0 8px 24px rgb(31 28 43 / .12);
+  --shadow-soft: 0 1px 2px rgb(31 28 43 / .04), 0 4px 14px rgb(31 28 43 / .06);
+  --shadow-lift: 0 2px 4px rgb(31 28 43 / .05), 0 14px 32px rgb(90 55 168 / .13);
   --font-ui: 'Be Vietnam Pro', system-ui, sans-serif;
   --font-read: 'Source Serif 4 Variable', Georgia, serif;
   --font-code: 'JetBrains Mono Variable', ui-monospace, monospace;
@@ -15,8 +20,9 @@
   --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
   --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
   --radius-sm: 4px; --radius: 8px; --radius-lg: 12px;
-  --motion-fast: 120ms; --motion-menu: 180ms; --motion-slide: 200ms;
-  --ease: cubic-bezier(.2, 0, 0, 1);
+  --motion-fast: 120ms; --motion-menu: 180ms; --motion-slide: 200ms; --motion-page: 260ms;
+  --ease: cubic-bezier(.2, 0, 0, 1); --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --radius-xl: 18px;
   --vp-font-family-base: var(--font-ui); --vp-font-family-mono: var(--font-code);
   --vp-c-bg: var(--paper); --vp-c-bg-elv: var(--paper); --vp-c-bg-soft: var(--canvas); --vp-c-bg-alt: var(--canvas);
   --vp-c-text-1: var(--ink); --vp-c-text-2: var(--ink-2); --vp-c-text-3: var(--ink-3);
@@ -36,7 +42,11 @@
   --tim: #b9a5f6; --tim-hover: #cdbefa; --tim-soft: #2c2542;
   --do: #ff958a; --do-soft: #3a1e1f; --vang: #edbb63; --vang-soft: #33281a;
   --xanh: #79d3a1; --xanh-soft: #18302a; --grid: #2a2734;
+  --lam: #8fb0ff; --lam-soft: #1c2440; --ngoc: #6fd6cb; --ngoc-soft: #142e2c;
+  --hong: #f59cc6; --hong-soft: #3a1c2c; --cam: #ffad7a; --cam-soft: #3a2418;
   --shadow: 0 8px 24px rgb(0 0 0 / .5);
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / .3), 0 4px 14px rgb(0 0 0 / .25);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / .3), 0 16px 36px rgb(0 0 0 / .45);
 }
 @media (max-width: 767px) {
   :root { --fs-display: 30px; --fs-h1: 28px; --fs-h2: 22px; --fs-h3: 19px; --fs-read: 17px; }

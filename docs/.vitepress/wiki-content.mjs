@@ -138,11 +138,9 @@ export function relatedConcepts(id) {
   const index=group.ids.indexOf(id)
   return [...new Set([group.ids[(index+1)%group.ids.length],group.ids[(index+group.ids.length-1)%group.ids.length],group.ids[0]])].filter(other=>other!==id)
 }
-export const wikiDetails = {
-  ...physicsWikiDetails,
-  ...mathAiWikiDetails,
-  ...dataProcessingWikiDetails,
-  ...xstkWikiDetails,
+// Object.assign + PURE lets bundlers drop article bodies (and their rendered
+// math) from client pages that only need the concept dictionary.
+export const wikiDetails = /*#__PURE__*/ Object.assign({}, physicsWikiDetails, mathAiWikiDetails, dataProcessingWikiDetails, xstkWikiDetails, {
   'thong-ke-mo-ta':'**Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\\%$. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.\n\nMô tả không chỉ gồm phép tính: Bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu.',
   'suy-rong-thong-ke':'**Tập đối tượng trong kết luận rộng hơn tập đã quan sát.** Cùng con số 70%, câu về người trả lời khảo sát là mô tả, còn câu về toàn bộ sinh viên của trường là suy rộng. Muốn đánh giá kết luận sau, cần biết cách chọn mẫu, nhóm nào có cơ hội tham gia và ai được mời nhưng không trả lời.\n\nMột mẫu lớn vẫn có thể khác tổng thể một cách có hệ thống. Nhận diện phát biểu là suy rộng không chứng minh rằng bước suy rộng hợp lệ, và cũng không có nghĩa mọi bước suy rộng đều sai.',
   'ket-luan-nhan-qua':'**Phân biệt quan sát với can thiệp.** Nếu người tham gia câu lạc bộ có điểm cao hơn, dữ liệu mô tả khác biệt giữa các nhóm. Để nói việc tham gia làm điểm tăng, cần căn cứ về tác động của thay đổi này, thay vì chỉ dựa vào khác biệt đã thấy. Những người tham gia có thể đã có nhiều kinh nghiệm hơn từ trước.\n\nThí nghiệm ngẫu nhiên có đối chứng phân người tham gia ngẫu nhiên vào các nhóm để so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc khác biệt có sẵn quyết định ai nhận can thiệp. Kết luận vẫn cần đi cùng thiết kế, cách đo và phạm vi nghiên cứu.',
@@ -224,7 +222,7 @@ Mẫu số bao gồm cả hai cách để B xảy ra. Đảo chiều điều ki�
   'phan-tan':'**Thời gian và lỗi.** Thời gian của một pha đồng bộ thường bị quyết định bởi tác vụ hoàn thành chậm nhất, không phải trung bình. Chi phí truyền gồm độ trễ khởi tạo và lượng dữ liệu chia băng thông.\n\nThiết kế cần tính khả năng máy lỗi, xử lý lặp và tái lập kết quả. Thêm máy có thể giảm tính toán cục bộ nhưng tăng truyền, nên không bảo đảm tăng tốc tuyến tính.',
   'ket-hop':"**Gom cục bộ cần giữ đủ thông tin.** Tính kết hợp cho phép đổi cách nhóm, còn tính giao hoán cho phép đổi thứ tự. Nối chuỗi kết hợp nhưng không giao hoán. Khi tính trên máy, làm tròn số thực có thể phá kết hợp chính xác của phép cộng.\n\nMuốn tính trung bình phân tán, gửi cặp (tổng,số lượng), cộng hai thành phần rồi chia ở cuối. Trung bình các trung bình không giữ đủ thông tin nếu kích thước nhóm khác nhau.",
   'quan-he':"**Tương đương và thứ tự.** Quan hệ tương đương phản xạ, đối xứng và bắc cầu. Nó chia tập thành các lớp tương đương. Quan hệ thứ tự bộ phận phản xạ, phản đối xứng và bắc cầu.\n\nĐối xứng và phản đối xứng là hai tính chất khác nhau, không phải phủ định đơn giản của nhau. Quan hệ bằng nhau vừa đối xứng vừa phản đối xứng."
-}
+})
 const htmlEscape = text=>text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
 function createBaseWikiArticle(id) {
   const term=concepts[id], related=relatedConcepts(id)

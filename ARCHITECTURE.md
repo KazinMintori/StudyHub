@@ -80,6 +80,19 @@ Một số module trong `docs/.vitepress/` là điểm truy cập tương thích
 
 `ProbabilitySourceReader.vue` cũ không được import, đăng ký hay dùng trong trang công khai, nên đã loại bỏ cùng controller của nó. Bộ 59 tài liệu thống kê tĩnh và dữ liệu thư viện vẫn được giữ, cùng kiểm tra độ phủ và nguồn dẫn.
 
+## Tải dữ liệu theo nhu cầu
+
+Mỗi lần chuyển trang là một lần tải lại tài liệu (xem `src/app/theme.mjs`), nên chunk `theme` được tải ở mọi trang. Chunk này chỉ chứa mã giao diện và danh mục môn học rút gọn, khoảng 280 kB thay vì hơn 25 MB trước đây.
+
+- `scripts/build/lite-catalog-plugin.mjs`: Trong bản build phía trình duyệt, `src/content/catalog.mjs` được thay bằng bản JSON giữ các trường điều hướng và bỏ `slides`. SSR, script Node và máy chủ dev vẫn dùng module gốc.
+- `src/features/lecture/services/lecture-payload.mjs`: Slides, Cheatsheet, Lab và Kiến thức nền chỉ tải khi người đọc mở tab tương ứng. Mỗi môn là một chunk riêng. Tab bắt đầu tải khi con trỏ chạm vào thanh tab.
+- `src/features/lecture/services/cheatsheet-loaders.mjs`: Bản lazy của bảng cheatsheet trong `cheatsheet-service.mjs`. Khi thêm cheatsheet mới, thêm vào cả hai nơi; `scripts/tests/bundle-splitting.test.mjs` kiểm tra hai bảng khớp nhau.
+- `src/features/wiki/services/concept-loader.mjs`: Từ điển khái niệm tải khi người đọc rê chuột, chạm vào thuật ngữ, hoặc khi trình duyệt rảnh trên thiết bị có chuột. Component Wiki được đăng ký bất đồng bộ.
+- `scripts/math-text-plugin.mjs`: Công thức dựng sẵn được gắn vào từng `export const`, nên export nào không được dùng sẽ bị loại cùng SVG của nó. Các export `*WikiDetails` chỉ dùng khi sinh trang Wiki, nên bản trình duyệt không mang SVG của chúng.
+- `docs/.vitepress/config.mjs`: Tắt prefetch chunk JavaScript của VitePress (site không dùng chuyển trang SPA), thêm Speculation Rules để trình duyệt tải trước trang khi con trỏ dừng trên liên kết, và bỏ preload Mermaid ở trang không có sơ đồ.
+
+Không import tĩnh `concepts.mjs`, `wiki-content.mjs`, `cheatsheet-service.mjs` hay module dữ liệu Vật lý từ layout, header hoặc controller dùng chung.
+
 ## Build và giữ QA
 
 `npm run build`, `npm run docs:build` và GitHub Pages đều dùng một đầu ra là `docs/.vitepress/dist/`. `npm run export:static` chỉ dùng khi cần thêm bản `dist/` để chuyển giao. Không xuất HTML vào thư mục gốc repo.

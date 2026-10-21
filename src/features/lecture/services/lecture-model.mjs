@@ -7,7 +7,6 @@ export const lectureParts = [
   { id: 'bai-tap', name: 'Bài tập' },
   { id: 'cheatsheet', name: 'Cheatsheet' }
 ]
-export { getLectureCheatsheet as lectureCheatsheet } from './cheatsheet-service.mjs'
 export const readingMinutes = (courseId, slug) => readingMetadata[`${courseId}/${slug}`]?.minutes || 5
 
 export const lecturePath = (courseId, slug, part = '') => `/${courseId}/${slug === 'on-luyen' ? 'on-luyen/tong-hop' : `bai-giang/${slug}`}${part ? `#${part}` : ''}`

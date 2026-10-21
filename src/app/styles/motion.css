@@ -1,0 +1,77 @@
+/* Motion and perceived-speed polish. Everything here is decorative: the
+   global reduced-motion rule in core/styles/base.css switches it off. */
+
+/* Every page change is a full document load. Browsers with cross-document
+   View Transitions cross-fade the content and keep the bars still. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+.VPNav { view-transition-name: site-nav; }
+.VPSidebar { view-transition-name: site-sidebar; }
+::view-transition-group(site-nav),
+::view-transition-group(site-sidebar) { animation: none; }
+::view-transition-old(root) { animation: page-out 140ms var(--ease) both; }
+::view-transition-new(root) { animation: page-in var(--motion-page) var(--ease-out) both; }
+@keyframes page-out { to { opacity: 0; } }
+@keyframes page-in { from { opacity: 0; transform: translateY(6px); } }
+
+/* Interactive feedback */
+.study-button { transition: background var(--motion-fast) var(--ease), color var(--motion-fast) var(--ease), border-color var(--motion-fast) var(--ease), box-shadow var(--motion-fast) var(--ease), transform var(--motion-fast) var(--ease); }
+.study-button:active:not(:disabled) { transform: translateY(1px) scale(.98); }
+.study-button.primary:hover { box-shadow: 0 6px 16px color-mix(in srgb, var(--tim) 28%, transparent); }
+.study-button:disabled { opacity: .5; cursor: not-allowed; }
+
+.workspace-tabs a, .lecture-tabs a { position: relative; transition: color var(--motion-fast) var(--ease); }
+.workspace-tabs a:hover, .lecture-tabs a:hover { color: var(--ink); }
+.workspace-tabs a::after, .lecture-tabs a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--tim);
+  transform: scaleX(0);
+  transition: transform var(--motion-menu) var(--ease-out);
+}
+.workspace-tabs a[aria-current=page]::after, .lecture-tabs a[aria-current=page]::after { transform: scaleX(1); }
+.workspace-tabs a[aria-current=page], .lecture-tabs a[aria-current=page] { border-color: transparent; }
+
+.VPSidebarItem .link, .VPSidebarItem .text { transition: color var(--motion-fast) var(--ease); }
+.lecture-row, .wiki-entry-list a { transition: background var(--motion-fast) var(--ease), transform var(--motion-menu) var(--ease-out); }
+
+/* Lecture panels: show their content with a short fade, and a skeleton while
+   the course data downloads. */
+@media (prefers-reduced-motion: no-preference) {
+  .lecture-panels > section { animation: panel-in 260ms var(--ease-out) both; }
+  .course-slide { animation: panel-in 220ms var(--ease-out) both; }
+}
+@keyframes panel-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+.panel-loading { display: grid; gap: var(--space-3); padding: var(--space-6) 0; min-height: 220px; align-content: start; }
+.panel-skeleton {
+  display: block;
+  height: 14px;
+  border-radius: 7px;
+  background: linear-gradient(90deg, var(--sunken) 0%, var(--canvas) 45%, var(--sunken) 90%);
+  background-size: 300% 100%;
+  animation: skeleton 1.4s linear infinite;
+}
+.panel-skeleton-title { height: 26px; width: 46%; margin-bottom: var(--space-3); }
+.panel-skeleton-short { width: 62%; }
+.panel-loading-error { margin: 0; color: var(--ink-2); }
+.panel-loading .study-button { justify-self: start; }
+@keyframes skeleton { from { background-position: 100% 0; } to { background-position: -50% 0; } }
+
+/* Details / disclosure blocks open smoothly where supported. */
+@supports (interpolate-size: allow-keywords) {
+  .vp-doc details, .foundation-entry details { interpolate-size: allow-keywords; }
+  .vp-doc details::details-content, .foundation-entry details::details-content {
+    block-size: 0;
+    overflow: hidden;
+    transition: block-size var(--motion-slide) var(--ease-out), content-visibility var(--motion-slide) allow-discrete;
+  }
+  .vp-doc details[open]::details-content, .foundation-entry details[open]::details-content { block-size: auto; }
+}
+
+/* Avoid layout shift from images that arrive late. */
+.vp-doc img { height: auto; }

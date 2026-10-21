@@ -10,13 +10,13 @@ import PhilosophyHeader from '../features/philosophy/components/PhilosophyHeader
 import PhilosophyTopicNav from '../features/philosophy/components/PhilosophyTopicNav.vue'
 import TopicHeader from '../features/lecture/components/TopicHeader.vue'
 import TopicNav from '../features/lecture/components/TopicNav.vue'
-import WikiFooter from '../features/wiki/components/WikiFooter.vue'
 import BuyMeCoffee from '../features/site/components/BuyMeCoffee.vue'
 import WelcomeScreen from '../features/site/components/WelcomeScreen.vue'
 import SiteIntroduction from '../features/site/components/SiteIntroduction.vue'
+import SpotArt from '../features/illustrations/components/SpotArt.vue'
 import ReadingScrollOffset from '../features/navigation/components/ReadingScrollOffset.vue'
 import { useData, withBase } from 'vitepress'
-import { computed, ref } from 'vue'
+import { computed, defineAsyncComponent, ref } from 'vue'
 import { courseCatalog } from '../content/catalog.mjs'
 import {
   useResponsiveSidebar,
@@ -27,6 +27,8 @@ import {
 } from '../features/navigation/index.mjs'
 
 const { Layout } = DefaultTheme
+// Wiki footers read the concept dictionary; load them only on Wiki pages.
+const WikiFooter = defineAsyncComponent(() => import('../features/wiki/components/WikiFooter.vue'))
 const welcomeScreen = ref(null)
 const { hasSidebar } = useSidebar()
 const { frontmatter, page } = useData()
@@ -78,7 +80,7 @@ const layoutClasses = computed(() => ({
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
       </button>
     </template>
-    <template #not-found><main class="course-shell"><h1>Trang này không tồn tại</h1><p>Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
+    <template #not-found><main class="course-shell not-found-page"><SpotArt name="notfound" tone="tim" /><h1>Trang này không tồn tại</h1><p>Có thể đường dẫn đã đổi hoặc bài chưa được xuất bản. Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
     <template #doc-before>
       <PhilosophyHeader v-if="isPhilosophy" />
       <LectureHeader v-else-if="frontmatter.section === 'lecture'" />
