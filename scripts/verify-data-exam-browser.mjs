@@ -9,6 +9,7 @@ const output = process.env.QA_OUTPUT || `${root}/qa/data-exam/browser`
 const widths = (process.env.QA_WIDTHS || '360,1280').split(',').map(Number)
 const draft = process.env.QA_DRAFT === '1'
 const selectedIds = process.env.QA_IDS ? new Set(process.env.QA_IDS.split(',')) : null
+const essayOnly = process.env.QA_ESSAYS_ONLY === '1'
 await mkdir(output, { recursive: true })
 const browser = await puppeteer.launch({headless:true,executablePath:process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe'})
 const report = {pages:[],failures:[],errors:[]}
@@ -22,7 +23,8 @@ try {
       const lesson=String(number).padStart(2,'0')
       const bank=JSON.parse(await readFile(`${root}/src/content/courses/xu-ly-du-lieu/exam/bai-${lesson}.json`,'utf8'))
       const source=JSON.parse(await readFile(`${root}/raw_materials/xu-ly-du-lieu/exam/banks/bai-${lesson}.json`,'utf8'))
-      const selectedQuestions=bank.questions.filter(question=>!selectedIds||selectedIds.has(question.id))
+      const essaySource=JSON.parse(await readFile(`${root}/raw_materials/xu-ly-du-lieu/exam/essay-solutions/bai-${lesson}.json`,'utf8'))
+      const selectedQuestions=bank.questions.filter(question=>(!selectedIds||selectedIds.has(question.id))&&(!essayOnly||question.kind==='essay'))
       if(!selectedQuestions.length) continue
       const response=await page.goto(`${base}/xu-ly-du-lieu/on-thi/bai-${lesson}.html`,{waitUntil:'networkidle2',timeout:60000})
       assert(response.ok())
@@ -85,9 +87,11 @@ try {
           await page.$eval('.exam-essay__details',node=>{node.open=true})
           assert(await page.$eval('.exam-essay__answer',node=>node.getClientRects().length>0),`${question.id}: answer opens`)
           if(question.id===bank.questions.find(q=>q.kind==='essay').id) await page.screenshot({path:`${output}/bai-${lesson}-${width}-essay.png`})
-          const answerCodes=[...raw.answerMarkdown.matchAll(/^```[^\r\n]*\r?\n(.*?)^```[ \t]*$/gms)].map(m=>m[1].replace(/\r\n/g,'\n').trimEnd())
+          const updatedEssay=essaySource.items.find(item=>item.id===question.id)
+          const answerCodes=[...updatedEssay.markdown.matchAll(/^```[^\r\n]*\r?\n(.*?)^```[ \t]*$/gms)].map(m=>m[1].replace(/\r\n/g,'\n').trimEnd())
           const actualCodes=await page.$$eval('.exam-essay__answer pre code',nodes=>nodes.map(node=>node.textContent.trimEnd()))
-          assert.deepEqual(actualCodes.slice(0,answerCodes.length),answerCodes,`${question.id}: full original solution code preserved`)
+          assert.deepEqual(actualCodes.slice(0,answerCodes.length),answerCodes,`${question.id}: full updated solution code preserved`)
+          assert(!await page.$eval('.exam-essay__answer',n=>/Hướng dẫn chấm|Ý cần đạt|Điểm tối đa|Rubric/i.test(n.textContent)),`${question.id}: no grading guide`)
         }
         const layout=await page.evaluate(()=>{
           const visible=node=>Boolean(node.getClientRects().length)

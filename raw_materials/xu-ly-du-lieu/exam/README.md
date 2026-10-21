@@ -1,7 +1,7 @@
 # Ngân hàng Ôn thi xử lý dữ liệu
 
 Nguồn: [Thư mục câu hỏi và đáp án](https://drive.google.com/drive/folders/1OXMdS5xJ57Shd4UrBnpuQz0sLjmyqrA8).
-Đã kiểm kê và tải ngày 18/10/2026.
+Đã kiểm kê và tải ngày 18/10/2026. Ngày 21/10/2026, đọc lại đủ tám thư mục bài và tải thêm tám tệp đáp án mới.
 
 | Bài | Trắc nghiệm | Tự luận | Tổng |
 |---|---:|---:|---:|
@@ -18,10 +18,10 @@ Nguồn: [Thư mục câu hỏi và đáp án](https://drive.google.com/drive/fo
 Giữ đủ 48 câu MR và 20 câu regex B7-R01 đến B7-R20. Các tình huống về
 quy định học tập được giữ nguyên giả thiết của câu hỏi.
 
-`source/` giữ nguyên 18 tệp tải xuống, gồm 16 Markdown và hai PDF Bài 4.
+`source/` giữ nguyên 18 tệp tải xuống ban đầu, gồm 16 Markdown và hai PDF Bài 4. `source/short-answers/` lưu nguyên byte tám tệp `Bai*_Dap_an_rut_gon.md` mới trên Drive.
 Hai PDF là bản xuất của cùng 60 câu và đáp án Bài 4, không phải 60 câu mới.
 `source-manifest.json` ghi kích thước, SHA-256 và liên kết Drive của từng tệp.
-`drive-inventory.json` ghi cây thư mục đã truy cập. Không lưu URL tải có thông
+`essay-source-manifest.json` ghi riêng liên kết, kích thước và hash của tám tệp mới. `drive-inventory.json` ghi cây thư mục được truy cập ở lần nhập đầu. Không lưu URL tải có thông
 tin xác thực trong repository.
 
 `banks/` lưu đề, bốn lựa chọn, lời giải và vị trí trong tệp nguồn. Hai câu
@@ -44,7 +44,9 @@ Trang học sử dụng HTML đã render bằng cùng bộ Markdown, tô màu co
 MathJax của website. Các dòng ghi chú biên soạn như mã mục tiêu, địa chỉ
 đọc lại và tuyên bố kiểm chứng cũ không được đưa vào lời giải hiển thị.
 Nội dung đó vẫn còn nguyên trong tệp nguồn và ngân hàng. Các bước giải,
-code, output và hướng dẫn chấm được giữ lại.
+code và output được giữ lại. Các bảng hướng dẫn chấm không xuất hiện trong lời giải hiển thị.
+
+`essay-solutions/` chứa đủ 184 lời giải từ tám tệp mới. Đây là nguồn chính cho toàn bộ câu tự luận. Bộ nhập đối chiếu từng mã câu với đề hiện có và từ chối nhập nếu thiếu hoặc lặp câu. Toàn bộ phần trả lời mới xuất hiện trước các giải thích được biên soạn thêm, nếu có. Lượt cập nhật này không nối lại đáp án cũ hoặc lời giải phụ trong `reviews/`.
 
 Không có mục quy ước chung trên trang làm bài. `question-context.json` chỉ
 thêm điều kiện vào từng đề khi phiên bản hoặc cách xử lý cảnh báo ảnh hưởng
@@ -58,6 +60,9 @@ Quy trình cập nhật từ thư mục gốc repository:
 python scripts/import-data-exam.py
 # Rà lại reviews nếu nguồn thay đổi.
 node scripts/build/render-data-exam.mjs
+# Khi chỉ cập nhật đáp án tự luận, dùng hai lệnh sau để giữ nguyên đề và trắc nghiệm:
+python scripts/import-data-essay-answers.py
+node scripts/build/render-data-exam.mjs --essays-only
 node scripts/verify-data-exam.mjs
 node --test scripts/tests/data-exam-session.test.mjs
 python scripts/verify-data-exam-01-04.py
@@ -96,9 +101,9 @@ tài liệu trực tuyến. Các phép kiểm chỉ có ý nghĩa trong phạm v
 
 ## Giữ nguyên mã khi biên tập văn phong
 
-`code-integrity.json` lưu riêng các đoạn mã và output của đề cùng lời giải đã kiểm tra ở commit `e81119de`. Bản tham chiếu này không được tự sinh lại từ HTML vừa sửa chỉ để làm kiểm tra vượt qua. Các phương án còn được đối chiếu trực tiếp với Markdown nguồn, độc lập với hash render.
+`code-integrity.json` lưu riêng các đoạn mã và output đã kiểm tra ở commit `e81119de`. Bản tham chiếu này tiếp tục bảo vệ đề cùng lời giải trắc nghiệm. Từ ngày 21/10/2026, mã trong lời giải tự luận được đối chiếu trực tiếp với tám tệp Drive mới. Bản tham chiếu không được tự sinh lại từ HTML vừa sửa chỉ để làm kiểm tra vượt qua. Các phương án cũng được đối chiếu trực tiếp với Markdown nguồn, độc lập với hash render.
 
-`verify-data-exam.mjs` so sánh 12.278 đoạn mã, bao gồm mã nội dòng và mã nhiều dòng. Phép kiểm phát hiện đổi toán tử, dấu phẩy trong chuỗi, thay output hoặc bỏ đoạn mã. Các tên biến bổ sung trong lời giảng vẫn được phép xuất hiện. Kiểm tra trình duyệt đối chiếu tiếp nội dung các thẻ `code` với dữ liệu đã được kiểm chứng.
+`verify-data-exam.mjs` so sánh mã nội dòng và mã nhiều dòng. Phép kiểm phát hiện đổi toán tử, dấu phẩy trong chuỗi, thay output hoặc bỏ đoạn mã. Kiểm tra còn xác nhận toàn bộ đáp án tự luận mới là phần đầu của lời giải và không có bảng hướng dẫn chấm. Các tên biến bổ sung trong lời giảng vẫn được phép xuất hiện. Kiểm tra trình duyệt đối chiếu tiếp nội dung các thẻ `code` với dữ liệu đã được kiểm chứng.
 
 Mốc rà ngày 20/10/2026 phục hồi các phương án bị chèn dấu phẩy, các literal bị đổi khi sửa câu chữ và các đề còn thiếu hoặc thay đoạn mã. Mã câu hỏi và đáp án chấm điểm được giữ nguyên. Hai trường hợp người dùng chỉ ra còn được chạy bằng Python và đối chiếu giá trị tuple. Đối chiếu ký tự không thay cho kiểm chứng tính đúng của đáp án.
 

@@ -1,0 +1,87 @@
+{
+  "lesson": "02",
+  "sourceFile": "source/short-answers/Bai2_Dap_an_rut_gon.md",
+  "sourceSha256": "fdb526be1be0107fcf1bc5ddc54fe5402c73343e44d1808fe4fd7ae5d929449b",
+  "items": [
+    {
+      "id": "B2-008",
+      "markdown": "`[None, 0, 5]`; get chỉ dùng mặc định khi thiếu khóa, không thay None hay 0.\n`c[\"phi\"]` gây KeyError, còn `c.get(\"phi\", 5)` trả 5."
+    },
+    {
+      "id": "B2-009",
+      "markdown": "`float(None)` gây TypeError; sửa `except (ValueError, TypeError):`.\nLọc `[x for x in v if x is not None and x > 0]` được `[8.0]`; \"0\", \"-2\" đổi được số nhưng không hợp lệ."
+    },
+    {
+      "id": "B2-010",
+      "markdown": "In 30.0 vì chia cả 4 phòng thay vì 3 giá đã biết; giữ 0 hợp lệ.\nSửa `tb = sum(co_gia)/len(co_gia) if co_gia else None`, được 40.0; rỗng trả None."
+    },
+    {
+      "id": "B2-018",
+      "markdown": "`|An   | 1,200|`\n`n = 1200`."
+    },
+    {
+      "id": "B2-019",
+      "markdown": "In `4 0 5`: list ngoài riêng, dict còn chung; sửa giá ảnh hưởng a, append chỉ ảnh hưởng b.\nTrước khi sửa, tạo `b = [r.copy() for r in a]` để tách các dict phẳng."
+    },
+    {
+      "id": "B2-020",
+      "markdown": "Code chọn A/B vì đếm mọi phòng; chỉ B có đủ 2 giá hợp lệ, `[40, 80]`.\nSửa bằng hàm lọc giá rồi đếm độ dài:\n\n```python\ndef gia_khu(ten):\n    return [r[\"gia\"] for r in rows if r[\"khu\"] == ten and r[\"gia\"] is not None and r[\"gia\"] > 0]\nchon = sorted(k for k in dem if len(gia_khu(k)) >= 2)\n```"
+    },
+    {
+      "id": "B2-028",
+      "markdown": "In `[15,16]`, là mã mới; sửa `bien_mat = cu - moi` được `[11,12]` sau sắp xếp.\nBiểu thức cuối: `[11,12,15,16]`, gồm các mã chỉ có ở một đợt."
+    },
+    {
+      "id": "B2-029",
+      "markdown": "In `[30.0,-3.0] 13.5`; truthiness bỏ 0 hợp lệ và giữ giá âm.\nLọc `[x for x in v if x is not None and x >= 0]` được `[30.0,0.0]`, mean 15.0; thử \"$0\", \"$-3\"."
+    },
+    {
+      "id": "B2-030",
+      "markdown": "NameError vì chưa nhập tên cleaning; sửa lời gọi thành `clean_price(\"$80\")`, được 80.0.\nModule giúp dùng chung hàm; replace là phương thức của chuỗi s."
+    },
+    {
+      "id": "B2-038",
+      "markdown": "(i) list; (ii) dict; (iii) set; (iv) tuple.\n`lat, lon = (10, 106)` → lat = 10, lon = 106."
+    },
+    {
+      "id": "B2-039",
+      "markdown": "In 30.0, đúng phải 60.0; trả None khi chuyển giá lỗi và chạy lại bước chuyển.\nLọc `[x for x in v if x is not None]`; dùng `sum(g)/len(g) if g else None` với g là list đã lọc."
+    },
+    {
+      "id": "B2-040",
+      "markdown": "In 9 do so chuỗi; sửa `gia = [float(r[\"gia\"]) for r in rows if r[\"gia\"] != \"\"]`.\nMax đúng 100.0, vẫn giữ \"0\"; dùng `max(gia) if gia else None` để xử lý toàn ô trống."
+    },
+    {
+      "id": "B2-047",
+      "markdown": "In `[-4,8] 2.0`; lọc `[x for x in nhiet if x is not None]` được `[-4,0,8]`, mean 4/3 °C.\n`x > 0` loại cả âm và 0 hợp lệ, còn so None với 0 gây TypeError."
+    },
+    {
+      "id": "B2-048",
+      "markdown": "`ids = [\"P2\",\"P4\"]`; `bang = {\"P2\":0,\"P4\":50}`.\n\n```python\nids = [r[\"id\"] for r in rows if r[\"gia\"] is not None and r[\"gia\"] >= 0]\nbang = {r[\"id\"]: r[\"gia\"] for r in rows if r[\"gia\"] is not None and r[\"gia\"] >= 0}\n```"
+    },
+    {
+      "id": "B2-049",
+      "markdown": "TypeError khi lọc None > 0; sửa `pos = [x for x in v if x is not None and x > 0]`, được `[10.0]`.\n`tb = sum(pos)/len(pos) if pos else None` → 10.0, list rỗng trả None."
+    },
+    {
+      "id": "B2-050",
+      "markdown": "In True nhưng so_phong vẫn là chuỗi; trước ghi, sửa `obj[\"so_phong\"] = int(obj[\"so_phong\"])`.\nKiểm `isinstance(doc[\"so_phong\"], int)` và số đếm nguồn; equality chỉ kiểm ghi/đọc khớp."
+    },
+    {
+      "id": "B2-057",
+      "markdown": "`('P3',90)`, kiểu tuple; `[m for m,g in sorted(phong,key=lambda p:p[1])[:2]]` → `[\"P2\",\"P4\"]`.\n`phong[0]` vẫn là `(\"P1\",40)` vì sorted tạo list mới."
+    },
+    {
+      "id": "B2-058",
+      "markdown": "AttributeError tại None.replace; sửa `except (ValueError, AttributeError):`, v = `[10.0,None,0.0,-2.0]`.\nLọc `[x for x in v if x is not None and x > 0]` → `[10.0]`; thử 0/âm để kiểm quy tắc giá dương."
+    },
+    {
+      "id": "B2-059",
+      "markdown": "Đọc lại: nhan = \"Nam, Bắc\", gia = \"0\"; DictWriter giữ dấu phẩy trong một trường.\n`newline=\"\"` để csv quản lý xuống dòng; chế độ w ghi đè:\n\n```python\nimport csv\nwith open(\"phong.csv\", \"w\", encoding=\"utf-8\", newline=\"\") as f:\n    w = csv.DictWriter(f, fieldnames=[\"ma\", \"nhan\", \"gia\"])\n    w.writeheader()\n    w.writerow(row)\n```"
+    },
+    {
+      "id": "B2-060",
+      "markdown": "Hiện in `[('2025',1),('2026',2)]`, đếm phòng theo review gần nhất; sửa được 2025:4, 2026:2.\n2026 mới nửa năm, chưa đủ suy giảm cả năm hay nguyên nhân:\n\n```python\ndem = {}\nfor r in reviews:\n    nam = r[\"date\"][:4]\n    dem[nam] = dem.get(nam, 0) + 1\n```"
+    }
+  ]
+}

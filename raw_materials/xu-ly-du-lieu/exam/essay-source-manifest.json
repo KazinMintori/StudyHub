@@ -1,0 +1,70 @@
+{
+  "retrievedAt": "2026-10-21",
+  "folderUrl": "https://drive.google.com/drive/folders/1OXMdS5xJ57Shd4UrBnpuQz0sLjmyqrA8",
+  "files": [
+    {
+      "lesson": "01",
+      "path": "source/short-answers/Bai1_Dap_an_rut_gon.md",
+      "id": "1wdseYhsLbl4FvWl3NQwtfLGjOIGp2Xf-",
+      "url": "https://drive.google.com/file/d/1wdseYhsLbl4FvWl3NQwtfLGjOIGp2Xf-/view",
+      "bytes": 5535,
+      "sha256": "b1b8c8407878d6bb663d1a8dac8cebb237e4fa6d1de61bbdc0ba52175a060645"
+    },
+    {
+      "lesson": "02",
+      "path": "source/short-answers/Bai2_Dap_an_rut_gon.md",
+      "id": "1iny2Zjiy9E-1v8vtFYT7Q3AdZGUciZuw",
+      "url": "https://drive.google.com/file/d/1iny2Zjiy9E-1v8vtFYT7Q3AdZGUciZuw/view",
+      "bytes": 5337,
+      "sha256": "fdb526be1be0107fcf1bc5ddc54fe5402c73343e44d1808fe4fd7ae5d929449b"
+    },
+    {
+      "lesson": "03",
+      "path": "source/short-answers/Bai3_Dap_an_rut_gon.md",
+      "id": "18C80zGrxmoN1q-nFO89mE8x3xWZnikBN",
+      "url": "https://drive.google.com/file/d/18C80zGrxmoN1q-nFO89mE8x3xWZnikBN/view",
+      "bytes": 6144,
+      "sha256": "8b9dde518dcab7e70670f5f9e50eb1243283ebbaac7ffd50771a3bb1f9b73c39"
+    },
+    {
+      "lesson": "04",
+      "path": "source/short-answers/Bai4_Dap_an_rut_gon.md",
+      "id": "1ZH-kwW4Z_WHasblJda3Z5QFagQ3fnQXn",
+      "url": "https://drive.google.com/file/d/1ZH-kwW4Z_WHasblJda3Z5QFagQ3fnQXn/view",
+      "bytes": 7120,
+      "sha256": "7079c841b97179805e0da0e3be36e4488f84069c7ea5d9be43ffea1f3ead5914"
+    },
+    {
+      "lesson": "05",
+      "path": "source/short-answers/Bai5_Dap_an_rut_gon.md",
+      "id": "10XoWeJn9kziA97-CYJjQ4cpFRmyR--zd",
+      "url": "https://drive.google.com/file/d/10XoWeJn9kziA97-CYJjQ4cpFRmyR--zd/view",
+      "bytes": 7280,
+      "sha256": "88adf1aa3d6dbebb00c233b96382529de1155f38dcae53f1590d4eea3731d3ed"
+    },
+    {
+      "lesson": "06",
+      "path": "source/short-answers/Bai6_Dap_an_rut_gon.md",
+      "id": "1mHwrqUB9vqAU-PR_Tkaq0ZN-iwg6t79K",
+      "url": "https://drive.google.com/file/d/1mHwrqUB9vqAU-PR_Tkaq0ZN-iwg6t79K/view",
+      "bytes": 9772,
+      "sha256": "b6f8f2dc5efbe493b85c25b10219ffe168b3417a20b42257bae54e25c570236f"
+    },
+    {
+      "lesson": "07",
+      "path": "source/short-answers/Bai7_Dap_an_rut_gon.md",
+      "id": "1wDo3-K6wcDaZKM5TXJA5aM2S4CivH3BE",
+      "url": "https://drive.google.com/file/d/1wDo3-K6wcDaZKM5TXJA5aM2S4CivH3BE/view",
+      "bytes": 9777,
+      "sha256": "e6c07a0bd63563f54f8369717353c2f2128bb1e39aa7913428fffe02de2674cf"
+    },
+    {
+      "lesson": "08",
+      "path": "source/short-answers/Bai8_Dap_an_rut_gon.md",
+      "id": "1jhAP8X0yOy7F4iOeBeSXRfJT1aq-OH2m",
+      "url": "https://drive.google.com/file/d/1jhAP8X0yOy7F4iOeBeSXRfJT1aq-OH2m/view",
+      "bytes": 10680,
+      "sha256": "3c4b1377aa626258b5c200cc061dfb8e99c3cf44c164c22f1bdb94105e45e03d"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "lesson": "03",
+  "sourceFile": "source/short-answers/Bai3_Dap_an_rut_gon.md",
+  "sourceSha256": "8b9dde518dcab7e70670f5f9e50eb1243283ebbaac7ffd50771a3bb1f9b73c39",
+  "items": [
+    {
+      "id": "B3-008",
+      "markdown": "V: shape (2,2), strides (32,8) byte, offset đầu 20 byte; `A[3,1] = 90`, offset 52 byte.\n32 chỉ là độ lệch từ đầu V, phải cộng thêm offset đầu V là 20."
+    },
+    {
+      "id": "B3-009",
+      "markdown": "`C[0,1] = 77`; C = `[[16,77],[4,6]]`; A = `[[2,4,6],[8,10,12],[14,16,18]]`.\nChỉ C/W dùng chung: chỉ mục nâng cao tạo C riêng, W là view của C."
+    },
+    {
+      "id": "B3-010",
+      "markdown": "ValueError vì (2,3) không broadcast với (2,); sửa `lech = P - P.mean(axis=1, keepdims=True)`.\nKết quả `[[-6,0,6],[-6,0,6]]`, shape (2,3); kiểm `np.allclose(lech.mean(axis=1), 0)` và hàng đầu tính tay."
+    },
+    {
+      "id": "B3-018",
+      "markdown": "P = `[0,2,4,6,8,10]`, Q = `[1,2,5,6,9,10]`; dùng chung A lần lượt True/False.\nP bước đều 8 byte, Q xen kẽ 4/12 byte; không C-contiguous chưa đủ kết luận reshape luôn copy."
+    },
+    {
+      "id": "B3-019",
+      "markdown": "A không đổi vì `T[[1],:]` tạo bản sao; sửa `T[1,[0,2]] = 0`.\nA = `[[2,0,6],[8,10,12],[14,0,18]]`; đối chiếu toàn A với kết quả này để kiểm đúng hai ô."
+    },
+    {
+      "id": "B3-020",
+      "markdown": "u = `[5,7,9]`, shape (3,), mean theo ngày; v = `[[12],[30]]`, shape (2,1), tổng theo cửa hàng; t = 7, shape ().\nu[1] dùng D[0,1] và D[1,1], mẫu số 2; t dùng cả 6 ô."
+    },
+    {
+      "id": "B3-MR04",
+      "markdown": "Strides (0,4), nbytes 48; dùng chung b, offset V[3,1] = 4 byte, không cấp phát 48 byte phần tử mới.\nV là view chỉ đọc; gán `V[0,0] = 9` gây ValueError."
+    },
+    {
+      "id": "B3-028",
+      "markdown": "shape (2,2); strides (8,32) byte; nbytes 16; offset ô đầu/cuối 4/44 byte.\nĐoạn bao trùm [4,48) dài 44 byte; dữ liệu phần tử mới: 0 byte."
+    },
+    {
+      "id": "B3-029",
+      "markdown": "idx: (2,1)/(1,2); B = `[[-1,-1],[-1,-1]]`; A = `[[0,50,2,60],[4,5,6,7],[8,50,10,60]]`.\nB là copy, gán A[idx] sửa A; RHS lặp [50,60] qua các hàng, còn [50,60,70] gây ValueError."
+    },
+    {
+      "id": "B3-030",
+      "markdown": "Không lỗi; P sai = `[[1/4,1/2],[3/8,3/4]]`, chia hai cột cho 8/12.\nSửa `P = D/D.sum(axis=1, keepdims=True)` → `[[1/4,3/4],[1/4,3/4]]`; kiểm tổng từng hàng bằng 1."
+    },
+    {
+      "id": "B3-038",
+      "markdown": "R = `[[1,99,4],[5,7,8]]`, A = `[[1,4,7],[2,5,8]]`; W[0,0] sửa R[0,1].\nDùng chung theo thứ tự: True/False/True/False; reshape C-order của T đã tách dữ liệu khỏi A."
+    },
+    {
+      "id": "B3-039",
+      "markdown": "m = `[True,False,True]`; v = `[6,20,7]`; x = `[4,6,20,7]`; cộng 5 vào x[1], x[3].\nMask không tự tính lại nên 20 không được cộng; RHS đọc copy, LHS gán vào view v của x."
+    },
+    {
+      "id": "B3-040",
+      "markdown": "Code chạy vì (2,) khớp chiều cột; lech sai = `[[-1,-8],[7,2]]`.\nSửa `lech = P-P.mean(axis=1, keepdims=True)` → `[[-1,1],[-2,2]]`; kiểm mean từng hàng bằng 0."
+    },
+    {
+      "id": "B3-MR08",
+      "markdown": "ddof=0: var = 8/3 USD², std = √(8/3) ≈ 1,632993 USD; ddof=1: var = 4 USD², std = 2 USD.\nKhông mâu thuẫn vì mẫu số lần lượt là 3 và 2."
+    },
+    {
+      "id": "B3-047",
+      "markdown": "c tái lập a; b dùng trạng thái tiếp theo của rng, không khởi tạo lại.\nb có thể tình cờ bằng a; seed không bảo đảm mẫu đại diện hay mean bằng toàn bộ."
+    },
+    {
+      "id": "B3-048",
+      "markdown": "Hàng cuối A = `[50,9,10,11]`; R[1,1] ánh xạ A[2,0]; R dùng chung A, S không dùng chung.\nR có bước đều 8 byte; S xen kẽ 4/12 byte nên reshape này phải copy."
+    },
+    {
+      "id": "B3-049",
+      "markdown": "A = `[20,4,6,8]`; C = `[2,40,6,8]`; A/B cùng đối tượng, A/C độc lập, C/V dùng chung.\nNgay khi copy, A và C bằng giá trị nhưng không chung dữ liệu; kiểm riêng bằng shares_memory."
+    },
+    {
+      "id": "B3-050",
+      "markdown": "Code/assert đều qua; P cũ = `[[1/4,3/4],[1/2,1/2]]`, là tỷ trọng theo hàng.\nSửa `P = D/D.sum(axis=0)` → `[[1/4,1/2],[3/4,1/2]]`; kiểm tổng từng cột bằng 1, tổng chung 2 chưa đủ."
+    },
+    {
+      "id": "B3-MR10",
+      "markdown": "W: shape (2,2), strides (8,16) byte, offset đầu 20; sửa A[2,1] = 99 ở offset 36 byte.\nStride âm là bước dịch ngược từ đầu view, không phải địa chỉ vật lý âm."
+    },
+    {
+      "id": "B3-057",
+      "markdown": "Mean toàn bộ 50, mẫu 15 USD/đêm; báo `gia.mean()`; chọn seed theo kết quả thấp gây thiên lệch.\nĐọc mẫu giúp kiểm bản ghi; 140 đã hợp lệ nên không được tự xóa vì lớn."
+    },
+    {
+      "id": "B3-058",
+      "markdown": "Không thể là view: offset đầu hàng 0,16,36 cho bước 16/20 byte, không có stride hàng cố định.\n`B = A.reshape(-1, order='C')[[0,2,4,6,9,11]].reshape(3,2, order='C')` → `[[0,2],[4,6],[9,11]]`."
+    },
+    {
+      "id": "B3-059",
+      "markdown": "x = `[3,1,5,1]`; y = `[1,1]`; tổng x/y = 10/2.\ny dùng chung x, ánh xạ x[1], x[3]; mask `[False,True,False,True]` không tự tính lại."
+    },
+    {
+      "id": "B3-060",
+      "markdown": "Assert qua nhưng sai thứ tự cột; bỏ bước đảo, dùng `Z = P-P.mean(axis=1, keepdims=True)`.\nZ = `[[-2,2],[-2,2]]`; đối chiếu toàn ma trận hoặc Z[0,0] = -2, vì mean hàng không phát hiện đảo cột."
+    },
+    {
+      "id": "B3-MR12",
+      "markdown": "R = `[[2,3,4],[2,3,4]]`, shape (2,3), int32, 24 byte; dùng chung theo thứ tự True/False/False.\nV.nbytes=24 nhưng dùng lại 12 byte của b; R cấp phát riêng, không mâu thuẫn; kiểm bằng np.shares_memory."
+    }
+  ]
+}

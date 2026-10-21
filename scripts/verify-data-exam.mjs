@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { buildThemeConfig } from '../src/features/course/services/build-navigation.mjs'
 import { assertCodePreserved, assertCodeLiteralsPreserved } from './build/exam-code-integrity.mjs'
+import { loadEssayAnswers } from './build/essay-answers.mjs'
+import { createExamMarkdownRenderer } from './build/exam-markdown.mjs'
 
 const root = fileURLToPath(new URL('../', import.meta.url))
 const directory = path.join(root, 'raw_materials/xu-ly-du-lieu/exam')
@@ -22,6 +24,8 @@ const coverage = await read(path.join(directory, 'coverage.json'))
 const rendered = await read(path.join(directory, 'render-coverage.json'))
 const context = await read(path.join(directory, 'question-context.json'))
 const codeIntegrity = await read(path.join(directory, 'code-integrity.json'))
+const essayAnswers = await loadEssayAnswers(root)
+const renderEssay = await createExamMarkdownRenderer(root)
 let checkedCodeLiterals = 0
 let total = 0, quiz = 0, essay = 0
 const ids = new Set()
@@ -36,6 +40,7 @@ for (let number = 1; number <= 8; number++) {
   assert.deepEqual(rendered[number - 1].sourceQuestionIds, rendered[number - 1].renderedQuestionIds)
   assert.equal(createHash('sha256').update(JSON.stringify(compiled)).digest('hex'), rendered[number - 1].contentSha256, 'Compiled content agrees with render audit')
   assert.deepEqual(compiled.questions.map(q => q.id), bank.questions.map(q => q.id))
+  assert.equal(rendered[number - 1].essayInputSha256, essayAnswers.lessons.get(lesson).inputSha256, `${lesson}: current Drive essay input`)
   // Check the original documents too, independently of the importer's saved
   // coverage report. Every source heading must have exactly one rendered ID.
   const sourceQuestions = await readFile(path.join(directory, 'source', bank.questions[0].source.questionFile), 'utf8')
@@ -65,7 +70,17 @@ for (let number = 1; number <= 8; number++) {
     const certifiedCode = codeIntegrity.questions[question.id]
     assert(certifiedCode, `${question.id}: independent code reference exists`)
     checkedCodeLiterals += assertCodeLiteralsPreserved(certifiedCode.prompt, output.promptHtml, `${question.id}/prompt`)
-    checkedCodeLiterals += assertCodeLiteralsPreserved(certifiedCode.answer, output.answerHtml, `${question.id}/answer`)
+    if (question.kind === 'essay') {
+      const essay = essayAnswers.questions.get(question.id)
+      assert(essay, `${question.id}: current Drive answer exists`)
+      const primaryHtml = renderEssay(essay.markdown, true)
+      assert(output.answerHtml.startsWith(primaryHtml), `${question.id}: complete current source answer comes first`)
+      checkedCodeLiterals += assertCodePreserved(essay.markdown + (essay.supplementMarkdown ? '\n\n'+essay.supplementMarkdown : ''), output.answerHtml, `${question.id}/current answer`)
+      assert(!/Hướng dẫn chấm|Ý cần đạt|Điểm tối đa|Rubric/i.test(output.answerHtml), `${question.id}: grading guide removed`)
+      assert.equal(output.answerHtml, primaryHtml + (essay.supplementMarkdown ? renderEssay(essay.supplementMarkdown, true) : ''), `${question.id}: no old answer or unreviewed appendix`)
+    } else {
+      checkedCodeLiterals += assertCodeLiteralsPreserved(certifiedCode.answer, output.answerHtml, `${question.id}/answer`)
+    }
     for (const [optionIndex, option] of question.options.entries()) {
       checkedCodeLiterals += assertCodePreserved(option.markdown, output.options[optionIndex].html, `${question.id}/${option.key}`)
     }

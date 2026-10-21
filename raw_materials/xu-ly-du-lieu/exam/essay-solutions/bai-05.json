@@ -1,0 +1,103 @@
+{
+  "lesson": "05",
+  "sourceFile": "source/short-answers/Bai5_Dap_an_rut_gon.md",
+  "sourceSha256": "88adf1aa3d6dbebb00c233b96382529de1155f38dcae53f1590d4eea3731d3ed",
+  "items": [
+    {
+      "id": "B5-008",
+      "markdown": "Mean chung 80 USD/đêm, cân theo count 2/4; size tính cả thiếu, mean hai mean cho trọng số khu bằng nhau.\nKhông thể gộp median tương tự vì median/count không đủ tái tạo phân bố giá gốc."
+    },
+    {
+      "id": "B5-009",
+      "markdown": "6 hàng, tổng giá 140: P tạo 2×2 cặp, Q/R mỗi mã 1 cặp.\nignore_index chỉ đặt lại nhãn hàng; id P vẫn lặp giữa hai snapshot."
+    },
+    {
+      "id": "B5-010",
+      "markdown": "Sau chạy lại: `[0.04,0.08]`, không còn giá CLP/đêm gốc vì chia lặp.\n`moi = goc.assign(gia_nghin=goc['price']/1000)`; chạy hai lần từ goc, so bằng nhau và goc vẫn `[40000,80000]`."
+    },
+    {
+      "id": "B5-018",
+      "markdown": "Không lỗi độ dài; lech sai theo A/B/C = `[30,10,10]` vì to_numpy bỏ nhãn.\nSửa `d['lech'] = moi-d['gia']` → `[10,30,10]`; đảo thứ tự hai đầu vào rồi đối chiếu lại theo mã."
+    },
+    {
+      "id": "B5-019",
+      "markdown": "Mask A/B không khớp index hàng gây IndexingError; dùng transform để lọc đúng hàng.\nGiữ index `[10,20,30]`, lech `[-10,10,0]`; đếm id khác nhau theo khu, trừ mean theo listing.\n\n```python\ndu = d.loc[d.groupby('khu')['id'].transform('nunique') >= 2].copy()\ndu['lech'] = du['gia'] - du.groupby('id')['gia'].transform('mean')\n```"
+    },
+    {
+      "id": "B5-020",
+      "markdown": "n_host theo P/R/S = `[2,2,1]`; chạy lại ổn định nhưng H có 3 listing trong nguồn, gồm Q thiếu giá.\nĐếm trước lọc để được `[3,3,1]`:\n\n```python\nday_du = goc.assign(n_host=lambda d: d.groupby('host')['id'].transform('size'))\nco = day_du.loc[day_du['gia'].notna()]\n```"
+    },
+    {
+      "id": "B5-MR04",
+      "markdown": "`d['tb_khu'] = d['khu'].map(tb)` → `[30,20,30,20]` theo index `[7,2,9,5]`.\nGán tb trực tiếp căn nhãn A/B vào index số nên toàn NaN; hàng 5 vẫn nhận mean khu A = 20."
+    },
+    {
+      "id": "B5-028",
+      "markdown": "Inner cho 5 hàng, mất S; sửa `m = d.merge(phi,on='khu',how='left',indicator=True)` được 6 hàng.\n3 phí thiếu nhưng chỉ 1 left_only: P/R khớp A có phí thiếu, S không có khóa đối ứng."
+    },
+    {
+      "id": "B5-029",
+      "markdown": "Lệch cũ `[-40,40,0]`; sửa `x['lech'] = x['gia']-x.groupby('khu')['gia'].transform('mean')`.\nĐúng `[-10,0,10]`; lệch dương chỉ là cao hơn mean khu, chưa chứng minh đắt không hợp lý."
+    },
+    {
+      "id": "B5-030",
+      "markdown": "r: 5 nhãn A–E, 4 thiếu; d vẫn 3 hàng, tong theo A/B/C = `[NaN,21,NaN]`.\nKhông tự thay thiếu bằng 0: chưa biết phí không đồng nghĩa miễn phí."
+    },
+    {
+      "id": "B5-038",
+      "markdown": "Cũ `[re,trung,cao,cao]` sai tại NaN; thêm đầu hàm `if pd.isna(x): return None`, rồi map lại.\nKiểm 50→trung, 100→cao, NaN→thiếu; tương đương `pd.cut(s,[0,50,100,np.inf],labels=['re','trung','cao'],right=False)`."
+    },
+    {
+      "id": "B5-039",
+      "markdown": "Cũ n_host `[2,2,2,2]`, chưa chứng minh nguồn sai; sau đếm toàn nguồn là `[3,3,2,2]`.\nTỷ lệ listing thuộc host chuyên nghiệp đúng 2/4 = 50%, cũ 0%; đếm trước lọc:\n\n```python\nday_du = goc.assign(n_host=lambda d: d.groupby('host')['id'].transform('size'))\nx = day_du.loc[day_du['loai'] == 'can'].copy()\n```"
+    },
+    {
+      "id": "B5-040",
+      "markdown": "5 hàng, tổng 180, chuyen = 4/5; P/Q bị lặp gấp đôi, đúng một hàng/host thì tổng 140 và tỷ lệ 2/3.\nThêm `validate='m:1'` vào merge để phát MergeError; nó không tự sửa h."
+    },
+    {
+      "id": "B5-MR08",
+      "markdown": "Mặc định cao A/B = 1/2, 2/3, mẫu số 2/3 nhãn biết; thêm `dropna=False` cho 1/3, 2/3 trên mọi listing.\n`d.groupby('khu')['phan'].value_counts(normalize=True,dropna=False)`; toàn bảng là 3/6, khác tỷ lệ từng khu."
+    },
+    {
+      "id": "B5-047",
+      "markdown": "tong A/B/C/D = `[65,140,NaN,NaN]`; C thiếu giá, D thiếu phí; kiểm A = 6×10+5, B đúng biên 7 đêm = 140.\n\n```python\nphi_tinh = d['phi'].copy()\nphi_tinh.loc[d['so_dem'] >= 7] = 0\ntong = d['gia'] * d['so_dem'] + phi_tinh\n```"
+    },
+    {
+      "id": "B5-048",
+      "markdown": "Assert qua nhưng có 6 hàng; thêm `validate='m:1'` gây MergeError vì H lặp phí 2/5.\nKhông tự chọn một phí; làm rõ nguồn rồi kiểm khóa, số hàng/id, left_only và thiếu phí riêng."
+    },
+    {
+      "id": "B5-049",
+      "markdown": "r có 6 nhãn, 6 NaN do căn index hàng với nhãn khu; sửa được `[-20,-20,20,20]`.\nLọc mean khu ≥40 giữ index `[7,12]`:\n\n```python\nr = d['gia'] - d.groupby('khu')['gia'].transform('mean')\ndu = d.groupby('khu').filter(lambda nhom: nhom['gia'].mean() >= 40)\n```"
+    },
+    {
+      "id": "B5-050",
+      "markdown": "ValueError do 4 giá trị/3 hàng; cắt còn 3 gán sai theo B/C/A = `[9,5,7]`.\nSửa `d['phi'] = s` → `[3,7,5]`, không thêm D; đảo thứ tự đầu vào rồi kiểm phí từng mã."
+    },
+    {
+      "id": "B5-MR10",
+      "markdown": "File thiếu host vì xuất t với index=False; sửa `u.to_csv('host.csv',index=False)`.\nĐúng hai cột host/tb: H–30, K–80; reset_index tạo u mới, không sửa t."
+    },
+    {
+      "id": "B5-057",
+      "markdown": "cut cũ `[re,re,trung,trung]`, mới `[trung,trung,cao,cao]`; qcut giữ P/Q thấp, R/S cao, mốc 50000→110000.\nĐổi sang nghìn CLP thì bins = `[0,50,100,np.inf]`; đổi tập, thiếu hay quy tắc chia có thể đổi nhóm qcut."
+    },
+    {
+      "id": "B5-058",
+      "markdown": "Pivot re: False=2/True=8; cao: False=2/True=6, ô cao/True chỉ dùng 1 giá biết; mặc định aggfunc vẫn mean.\nMỗi hàng là phân khúc; review chưa là booking hay bằng chứng nhân quả:\n\n```python\npv = d.pivot_table(index='phan', columns='chuyen', values='review', aggfunc='mean')\n```"
+    },
+    {
+      "id": "B5-059",
+      "markdown": "Các kiểm tra đều qua nhưng P/Q sai phí vì khu bị thay bằng host; phí đúng P/Q/R/S = `[20,10,10,20]`.\nBỏ assign, dùng `d.merge(v,on='khu',how='left',validate='m:1',indicator=True)`; kiểm từng mã với khu gốc."
+    },
+    {
+      "id": "B5-060",
+      "markdown": "Lần đầu goc.price = `[40,80]`, assert luôn qua vì or True; chạy lại gia_nghin = `[0.04,0.08]`.\nKhôi phục nguồn, bỏ or True; tạo hai kết quả bằng nhau và kiểm nguồn nguyên vẹn, gia_nghin `[40,80]`:\n\n```python\ndef nghin(d):\n    return d['price']/1000\nmoi = goc.assign(gia_nghin=nghin)\n```"
+    },
+    {
+      "id": "B5-MR12",
+      "markdown": "Sai theo B/A/C/D = `[60,20,NaN,NaN]` vì nhãn listing trùng mã khu; sửa `d['tb_khu'] = d['khu'].map(tb)`.\nĐúng `[20,60,20,60]`; u gồm khu/gia, reset_index không tự sửa cột đã gán trong d."
+    }
+  ]
+}

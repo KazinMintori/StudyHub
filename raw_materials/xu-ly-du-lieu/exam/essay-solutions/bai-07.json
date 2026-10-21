@@ -1,0 +1,119 @@
+{
+  "lesson": "07",
+  "sourceFile": "source/short-answers/Bai7_Dap_an_rut_gon.md",
+  "sourceSha256": "e6c07a0bd63563f54f8369717353c2f2128bb1e39aa7913428fffe02de2674cf",
+  "items": [
+    {
+      "id": "B7-008",
+      "markdown": "parsed A/B/C/D/E = `[2000,NaN,NaN,NaN,0]`; lỗi C/D, thiếu nguồn B.\nKhông fillna(0) vì sẽ lẫn thiếu/lỗi với E có giá 0 thật; giữ raw:\n\n```python\nclean = raw.str.strip().str.replace(r'[$,]', '', regex=True)\nparsed = pd.to_numeric(clean, errors='coerce')\nloi = raw.notna() & parsed.isna()\n```"
+    },
+    {
+      "id": "B7-009",
+      "markdown": "Nhãn 20→'3', 50→'5', kiểu chuỗi; 10/30/40 thiếu.\n`_`, số 2 sau BR và x trước 4 đều cản ranh giới từ; không khớp chưa chứng minh 0 phòng."
+    },
+    {
+      "id": "B7-010",
+      "markdown": "2/4 = 0,5: A/E có wifi, B rỗng vẫn được tính, C chưa biết bị loại.\nĐếm mục sau explode/dropna cho 3/4, trước dropna cho 3/5, đều khác tỷ lệ listing:\n\n```python\nds = raw.dropna().map(json.loads)\nco = ds.map(lambda xs: any(x.strip().lower() == 'wifi' for x in xs))\nty_le = co.mean()\n```"
+    },
+    {
+      "id": "B7-018",
+      "markdown": "m theo 8/2/9/5 = `[True,False,True,False]`, mean 2/4; `m[s.notna()].mean()` = 2/3.\nChứa “metro” chỉ là nhắc từ, có thể là “metros” hoặc phủ định, chưa xác minh gần metro."
+    },
+    {
+      "id": "B7-019",
+      "markdown": "A→'2', B→'3', C/D/E thiếu; C thiếu ranh giới trước 4, D thiếu ranh giới sau bath vì dấu _.\nKết quả còn là chuỗi, không khớp không thay bằng 0:\n\n```python\np = r'\\b([0-9]+)\\s*(?:WC|bathrooms?|baths?)\\b'\nx = s.str.extract(p, flags=re.I, expand=False)\n```"
+    },
+    {
+      "id": "B7-020",
+      "markdown": "stove, gas:1; wifi:2; tv:1; tỷ lệ wifi 2/4, C rỗng vẫn trong mẫu số.\nsplit(',') làm vỡ tên tiện nghi; value_counts đếm lặp wifi của B:\n\n```python\nds = raw.map(json.loads)\nmuc = ds.explode().dropna().str.strip().str.lower()\nbang = muc.to_frame('nhan').reset_index(names='id')\ndem = bang.groupby('nhan')['id'].nunique()\nty_le = dem.get('wifi', 0)/len(ds)\n```"
+    },
+    {
+      "id": "B7-028",
+      "markdown": "tv:2, wifi:2; TV đúng 2/4, cách sai 2/3 vì bỏ B rỗng khỏi mẫu số; A chỉ đếm một listing.\nGiữ ds gốc để đếm đủ listing:\n\n```python\nm = ds.explode().dropna().str.strip().str.lower()\nt = m.to_frame('nhan').reset_index(names='id')\nn = t.groupby('nhan')['id'].nunique()\nty_le_tv = n['tv']/len(ds)\n```"
+    },
+    {
+      "id": "B7-029",
+      "markdown": "Đo cùng dữ liệu/backend, cùng thao tác và phạm vi chuyển kiểu; đối chiếu giá trị, index, vị trí thiếu trước đo.\nĐo lặp, ghi môi trường; một phép đo không chứng minh apply hay .str luôn nhanh hơn."
+    },
+    {
+      "id": "B7-030",
+      "markdown": "`ok = raw.str.strip().str.fullmatch(p, na=False)`; chỉ hàng 1/3 hợp lệ.\ncontains chỉ tìm đoạn; bỏ phẩy rồi chuyển số có thể che tiền tố hoặc phân cách nghìn sai."
+    },
+    {
+      "id": "B7-038",
+      "markdown": "`s_chuan = s.str.strip().str.lower()` → wifi:2, wifi!:1, wi-fi:1, café:1, cafe:1.\nIndex `[9,4,8,1,7,3]` và s gốc giữ nguyên; xóa dấu câu/dấu tiếng vượt quy tắc."
+    },
+    {
+      "id": "B7-039",
+      "markdown": "A/B/C = 46.5/32.5/80 m², D/E thiếu; “80 M2” khớp, “30m2x” thiếu ranh giới cuối.\n\n```python\np = r'\\b([0-9]+(?:[.,][0-9]+)?)\\s*m(?:2|²)\\b'\nx = s.str.extract(p, flags=re.I, expand=False)\narea = pd.to_numeric(x.str.replace(',', '.', regex=False), errors='coerce')\n```"
+    },
+    {
+      "id": "B7-040",
+      "markdown": "e có 5 hàng, B/D là placeholder; dropna còn 3. Mean eq('Wifi') trước/sau = 2/5 và 2/3.\nTỷ lệ listing đúng `ds.map(lambda xs: 'Wifi' in xs).mean()` = 2/4; mỗi listing chỉ một trọng số."
+    },
+    {
+      "id": "B7-047",
+      "markdown": "parsed = `[NaN,0,NaN,NaN,30]`; lỗi hàng 0/2, hàng 3 thiếu nguồn.\nKhông fillna(0) để tránh lẫn với giá 0 hợp lệ; giữ raw và chỉ chuyển chuỗi đúng toàn định dạng:\n\n```python\nc = raw.str.strip()\nok = c.str.fullmatch(p, na=False)\nparsed = pd.to_numeric(c.where(ok).str.replace(r'[$,]', '', regex=True), errors='coerce')\nloi = raw.notna() & ~ok\n```"
+    },
+    {
+      "id": "B7-048",
+      "markdown": "Đã biết: 2/4 = 0,5; quan sát liệt kê trên mọi listing: 2/5 = 0,4, chưa xác minh trạng thái C.\nKiểm co có 4 nhãn, A/E True, B/D False, tổng 2 để bắt bỏ [] hoặc đếm lặp:\n\n```python\nco = ds.dropna().map(lambda xs: 'Wifi' in xs)\nty_le_biet, ty_le_quan_sat = co.mean(), co.sum()/len(ds)\n```"
+    },
+    {
+      "id": "B7-049",
+      "markdown": "x = `['Central','todo','Museo',NaN]`; mẫu chỉ lấy một từ, không xác định đầy đủ tên địa điểm.\nĐặt cột tu_sau_gan, đọc nguyên câu khớp/không khớp; nhắc metro/wifi chưa xác minh khoảng cách/hài lòng."
+    },
+    {
+      "id": "B7-050",
+      "markdown": "a: A='1', B thiếu, C='3'; b shape (3,1): (A,0)='1', (A,1)='2', (C,0)='3'.\nlen(b)=3 đếm cụm khớp, chỉ có 2 listing khớp A/C; không chứng minh số listing thật sự có phòng."
+    },
+    {
+      "id": "B7-057",
+      "markdown": "`lo = s.str.lower()` → `['straße','strasse','café','cafe']`, 4 nhãn; `fold = s.str.casefold()` → 3 nhãn.\nfold = `['strasse','strasse','café','cafe']`; cả hai giữ index `[3,8,2,6]` và s gốc, không xóa dấu café."
+    },
+    {
+      "id": "B7-058",
+      "markdown": "home dùng 100/300, median 200; room dùng 20/1000/40, median 40; mean hoặc điền 0 làm đổi đại lượng/tập giá.\nKiểm raw có 1 thiếu, không lỗi chuyển đổi; d/raw vẫn nguyên:\n\n```python\nt = d.assign(loai_chuan=d['loai'].str.strip().str.lower(),\n    gia=pd.to_numeric(d['raw'].str.replace(r'[$,]', '', regex=True), errors='coerce'))\nkq = t.groupby('loai_chuan')['gia'].median()\n```"
+    },
+    {
+      "id": "B7-059",
+      "markdown": "`t = s.str.replace('<br/>',' ',regex=False)` → `['A B C','<br> X','<BR/>Y','<b>Z</b>']`.\n1 review bị tác động, 2 lần thay, giảm 8 ký tự; bỏ qua hoa thường hoặc gọi là xóa mọi HTML vượt quy tắc."
+    },
+    {
+      "id": "B7-060",
+      "markdown": "Trong cấu hình đã cho, contains trên Arrow dùng ranh giới ASCII, extract và storage Python dùng Python re.\nKhông khái quát mọi backend; ghi phiên bản/storage/flags/phương thức, thử ca Unicode/ASCII/thiếu và đối chiếu re."
+    },
+    {
+      "id": "B7-R04",
+      "markdown": "`False, True, False, False, False`; fullmatch kiểm toàn chuỗi, vẫn strip sẽ nhận nhầm ' Apa'.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'[A-C][n-p][a-c]', text) is not None\n```"
+    },
+    {
+      "id": "B7-R06",
+      "markdown": "Mẫu cũ bỏ 'aac', nhận nhầm 'ab'; a{2,}: ít nhất 2 a, b*: có thể vắng, c+: ít nhất 1 c.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'a{2,}b*c+', text) is not None\n```"
+    },
+    {
+      "id": "B7-R08",
+      "markdown": "`False, True, True, False, False`; đổi * thành + để bắt buộc ít nhất một ký tự trắng, gồm tab/newline.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'[0-9]+\\.\\s+abc', text) is not None\n```"
+    },
+    {
+      "id": "B7-R10",
+      "markdown": "`None, '0', None, '2'`; gom hai đơn vị để cùng bắt buộc số và ranh giới từ.\n2BR2BA vẫn không khớp ranh giới cuối; đúng mẫu chưa bao phủ mọi cách viết thực tế.\n\n```python\np = r'\\b([0-9]+)\\s*(?:BR|bedrooms?)\\b'\ndef lay_so(text):\n    m = None if text is None else re.search(p, text, flags=re.I)\n    return m.group(1) if m is not None else None\n```"
+    },
+    {
+      "id": "B7-R12",
+      "markdown": "`True, False, False, True, False`; sau mỗi phẩy cần 3 số, có e/E thì bắt buộc số mũ.\n\n```python\nI = r'(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)'\nE = r'(?:[eE][+-]?[0-9]+)?'\np = r'[+-]?' + I + r'(?:\\.[0-9]+)?' + E\ndef hop_le(text):\n    return False if text is None else re.fullmatch(p, text) is not None\n```"
+    },
+    {
+      "id": "B7-R14",
+      "markdown": "`'Lan.01', None, None, None`; filter đặt ngoài nhóm bắt tên gốc nhưng vẫn trong mẫu kiểm email.\nRegex chỉ kiểm hình thức giản lược, không xác minh hộp thư tồn tại.\n\n```python\np = '(' + BASE + ')' + FILTER + '@' + DOMAIN\ndef ten_goc(text):\n    m = None if text is None else re.fullmatch(p, text)\n    return m.group(1) if m is not None else None\n```"
+    },
+    {
+      "id": "B7-R16",
+      "markdown": "`('scene.02-night','png'), None, None, None`; đổi nhóm lặp sang không bắt để chỉ trả hai trường.\nfullmatch loại đuôi .jpg.tmp vì không kết thúc bằng mở rộng cho phép.\n\n```python\np = r'([A-Za-z0-9_]+(?:[.-][A-Za-z0-9_]+)*)\\.(jpg|png|gif)'\ndef lay_anh(text):\n    m = None if text is None else re.fullmatch(p, text)\n    return m.groups() if m is not None else None\n```"
+    },
+    {
+      "id": "B7-R17",
+      "markdown": "`'A  B', '', '', None, '\\u00a0X\\u00a0'`; chỉ cắt dấu cách/tab, giữ NBSP và khoảng trắng giữa chuỗi.\n`if result:` làm mất chuỗi rỗng hợp lệ; đổi thành `if result is not None:`.\n\n```python\ndef cat_dau_cuoi(text):\n    if text is None: return None\n    return re.fullmatch(r'[ \\t]*(.*?)[ \\t]*', text).group(1)\n```"
+    }
+  ]
+}

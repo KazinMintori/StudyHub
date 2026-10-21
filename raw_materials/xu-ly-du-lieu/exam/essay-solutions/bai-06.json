@@ -1,0 +1,103 @@
+{
+  "lesson": "06",
+  "sourceFile": "source/short-answers/Bai6_Dap_an_rut_gon.md",
+  "sourceSha256": "b6f8f2dc5efbe493b85c25b10219ffe168b3417a20b42257bae54e25c570236f",
+  "items": [
+    {
+      "id": "B6-008",
+      "markdown": "(a) B:(2,80); (b) A:(2,60), B:(2,80), bỏ WHERE và đổi cả COUNT(*) thành COUNT(gia).\nAVG chia số giá biết; C không có giá, COUNT(*) sẽ đếm nhầm hai hàng thiếu.\n\n```sql\nSELECT khu, COUNT(*) AS n, AVG(gia) AS tb FROM d\nWHERE gia>=60 GROUP BY khu HAVING COUNT(*)>=2 ORDER BY khu;\n```"
+    },
+    {
+      "id": "B6-009",
+      "markdown": "Mean NA=10, TB=15, -=NaN; có 3 giá thiếu, id đầu \"001\", giữ giá 0.\nNA chung làm mất mã khu hợp lệ; chỉ khai thiếu cho cột gia:\n\n```python\nd = pd.read_csv('gia.csv', keep_default_na=False,\n    dtype={'id':'str','khu':'str','gia':'float64'}, na_values={'gia':['?','-','']})\n```"
+    },
+    {
+      "id": "B6-010",
+      "markdown": "id đầu = 1, price đầu = '$12.00'; Parquet giữ dữ liệu đã đọc, không phục hồi \"001\" hay tự chuyển tiền thành số.\nĐọc lại raw với `dtype={'id':'str'}`, xử lý giá theo schema rồi lưu; kiểm mã, kiểu và giá trị sau đọc lại."
+    },
+    {
+      "id": "B6-018",
+      "markdown": "503 là HTTP lỗi; JSON đọc được nhưng không có daily nên code cũ gây KeyError.\nKiểm HTTP trước; với 200 vẫn kiểm đơn vị và ngày/địa điểm/timezone:\n\n```python\nr.raise_for_status()\nx = r.json()\nd = pd.DataFrame(x['daily'])\n```"
+    },
+    {
+      "id": "B6-019",
+      "markdown": "(a) A:2, B:2; (b) chỉ B:2 khi đổi cả COUNT(*) thành COUNT(diem), giữ WHERE năm.\nA năm 2025 chỉ có 1 điểm biết; review 2024 không thuộc phạm vi.\n\n```sql\nSELECT listing_id,COUNT(*) AS n FROM rv\nWHERE year(date)=2025 GROUP BY listing_id\nHAVING COUNT(*)>=2 ORDER BY listing_id;\n```"
+    },
+    {
+      "id": "B6-020",
+      "markdown": "Khu của 101/104 bị thành thiếu; dtype chuỗi không ngăn nhận diện NA chung.\nKiểm khu = `['?','NA','TB','?']`, một gia thiếu và giá cuối 0:\n\n```python\nd = pd.read_csv('d.csv', keep_default_na=False, na_values={'gia':['?']},\n    dtype={'id':'str','khu':'str','gia':'float64'})\n```"
+    },
+    {
+      "id": "B6-MR04",
+      "markdown": "32.5\n\n```python\ns, n = 0.0, 0\nfor c in pd.read_csv('gia.csv', usecols=['gia'], chunksize=3):\n    s += c['gia'].sum()\n    n += c['gia'].count()\ntb = s/n if n else np.nan\n```"
+    },
+    {
+      "id": "B6-028",
+      "markdown": "A:(2,2,0,15), B:(2,1,1,30), C:(2,0,2,NULL); thêm `HAVING COUNT(*)-COUNT(gia)>=1` để giữ B/C.\nWHERE gia IS NULL bỏ giá biết và mất A, làm sai số hàng/mean của báo cáo.\n\n```sql\nSELECT khu,COUNT(*) AS n_hang,COUNT(gia) AS n_biet,\n       COUNT(*)-COUNT(gia) AS n_thieu,AVG(gia) AS tb\nFROM d GROUP BY khu ORDER BY khu;\n```"
+    },
+    {
+      "id": "B6-029",
+      "markdown": "Giữ raw để xử lý lại từ đầu; kiểm round-trip, mã \"001\", shape (4,2), một giá thiếu và giá 0.\nKết quả này không bảo đảm mọi backend biểu diễn dtype chuỗi giống hệt.\n\n```python\nd = pd.read_csv('raw/gia.csv', dtype={'id':'str','gia':'float64'})\nd.to_parquet('processed/gia.parquet', index=False)\nr = pd.read_parquet('processed/gia.parquet')\npd.testing.assert_frame_equal(d, r)\n```"
+    },
+    {
+      "id": "B6-030",
+      "markdown": "Mất A vì đã khớp phí 20, không có hàng đệm NULL để OR giữ lại; chuyển điều kiện phí vào ON.\nKết quả A:NULL, B:NULL, C:5, D:8; A không có đối ứng đạt ngưỡng, C có phí hợp lệ.\n\n```sql\nSELECT l.id,t.phi FROM l\nLEFT JOIN t ON l.id=t.id AND t.phi<10 ORDER BY l.id;\n```"
+    },
+    {
+      "id": "B6-038",
+      "markdown": "Cùng nguồn/tên cột chưa chắc cùng schema; usecols không chuyển tiền tệ thành số.\nKiểm shape (4,2), id \"001\", price '$12.00'; làm rõ đơn vị/thiếu và cùng snapshot trước so mean.\n\n```python\nd = pd.read_csv('ban_day_du.csv.gz', usecols=['id','price'], dtype={'id':'str','price':'str'})\n```"
+    },
+    {
+      "id": "B6-039",
+      "markdown": "(a) phong:2; (b) nguyen_can:3, phong:3 khi đổi cả COUNT(first_review) thành COUNT(*), không lọc ngày thiếu.\nNguồn mỗi hàng một listing; có ngày first_review không cho biết tổng số review.\n\n```sql\nSELECT loai,COUNT(first_review) AS n FROM 'l.parquet'\nGROUP BY loai HAVING COUNT(first_review)>=2 ORDER BY loai;\n```"
+    },
+    {
+      "id": "B6-040",
+      "markdown": "400 là lỗi tham số ngày đã nhận, không chứng minh Timeout; tăng timeout không sửa ngày.\ntimeout=20 không phải hạn cứng cho toàn yêu cầu; 400 khiến raise_for_status phát HTTPError:\n\n```python\nr.raise_for_status()\nx = r.json()\n```"
+    },
+    {
+      "id": "B6-MR08",
+      "markdown": "Không: hai phép đọc khác số cột, chưa tách tác động định dạng; RAM khác kích thước file.\nSo cùng dữ liệu/cột/schema, kiểm kết quả bằng nhau, đo lặp cùng môi trường/cache; báo riêng file/RAM/thời gian."
+    },
+    {
+      "id": "B6-047",
+      "markdown": "Kiểm ngày là datetime, ngày đầu 2025-01-01, 4 hàng, mã đầu \"001\", một điểm thiếu.\nĐọc thành công chưa đủ xác nhận schema hay nội dung:\n\n```python\nd = pd.read_csv('reviews.csv.gz', usecols=['listing_id','date','diem'],\n    dtype={'listing_id':'str','diem':'float64'}, na_values={'diem':['?']}, parse_dates=['date'])\nassert pd.api.types.is_datetime64_any_dtype(d['date'])\nassert len(d)==4 and d.loc[0,'listing_id']=='001'\nassert d.loc[0,'date']==pd.Timestamp('2025-01-01') and d['diem'].isna().sum()==1\n```"
+    },
+    {
+      "id": "B6-048",
+      "markdown": "Đang so °F với 35°C; HTTP/số hàng không kiểm đơn vị. t_c = `[35,30,40]`, giữ 01/02 và 03/02.\nKiểm daily_units và tính tay 95°F = 35°C, giữ đúng biên:\n\n```python\nd['t_c'] = (d['temperature_2m_max']-32)*5/9\nhot = d.loc[d['t_c'] >= 35]\n```"
+    },
+    {
+      "id": "B6-049",
+      "markdown": "SQL có 3 nhóm, pandas mặc định 2 vì bỏ khu thiếu; sửa `d.groupby('khu',dropna=False).agg(n=('gia','size'),tb=('gia','mean'))`.\nA:(2,10), B:(1,30), thiếu khu:(1,20); kết quả khớp chưa chứng minh đúng đối tượng, đơn vị hay mục tiêu."
+    },
+    {
+      "id": "B6-050",
+      "markdown": "Lưu r.content để giữ cả đơn vị/timezone; ghép ngày review theo cùng quy ước địa phương.\nTimestamp theo giây có thể trùng; dùng tên duy nhất, đọc lại kiểm ngày/đơn vị/địa điểm và metadata.\n\n```python\nPath(raw_path).write_bytes(r.content)\nmeta = {'url':r.url, 'downloaded_at':downloaded_at}\nPath(meta_path).write_text(json.dumps(meta), encoding='utf-8')\n```"
+    },
+    {
+      "id": "B6-MR10",
+      "markdown": "Mean 65, tổng 260 trên 4 giá đạt ngưỡng; chia 7 tính cả giá thiếu/ngoài ngưỡng, mean khối không cân số giá.\n\n```python\ns, n = 0.0, 0\nfor c in pd.read_csv('gia.csv', usecols=['gia'], chunksize=3):\n    v = c.loc[c['gia'] >= 30, 'gia']\n    s += v.sum()\n    n += v.count()\ntb = s/n if n else np.nan\n```"
+    },
+    {
+      "id": "B6-057",
+      "markdown": "Đọc mặc định có thể mất 0 đầu mã, biến khu NA thành thiếu, giữ date dạng chuỗi; CSV không lưu schema.\nKiểm round-trip: (4,4), mã/khu, ngày datetime, một diem thiếu và giá 0:\n\n```python\nr = pd.read_csv('review.csv', keep_default_na=False,\n    dtype={'listing_id':'str','khu':'str','diem':'float64'},\n    na_values={'diem':['']}, parse_dates=['date'])\npd.testing.assert_frame_equal(d, r)\n```"
+    },
+    {
+      "id": "B6-058",
+      "markdown": "Kiểm đủ ngày 01–03/07, đúng đại lượng/độ dài dãy, đơn vị °C và timezone/địa điểm yêu cầu.\nLưu raw cùng URL/thời điểm tải; phân tích lại bản đã lưu để giữ đúng dữ liệu từng dùng.\n\n```python\nparams = dict(latitude=-33.45, longitude=-70.67, start_date='2025-07-01',\n    end_date='2025-07-03', daily='temperature_2m_max', timezone='America/Santiago')\n```"
+    },
+    {
+      "id": "B6-059",
+      "markdown": "A:(1,NULL), B:(2,4.5), C/D:(0,NULL); COUNT(*) đếm hàng đệm, COUNT(diem) bỏ review thiếu điểm.\nlen=4 chưa kiểm số review/năm; đối chiếu từng id với r2/r3/r4:\n\n```sql\nSELECT l.id,COUNT(rv.rid) AS n_review,AVG(rv.diem) AS tb\nFROM l LEFT JOIN rv ON l.id=rv.listing_id AND year(rv.date)=2025\nGROUP BY l.id ORDER BY l.id;\n```"
+    },
+    {
+      "id": "B6-060",
+      "markdown": "Làm rõ hai số đo trùng 01/01, thống nhất khóa/ngày địa phương; không tự chọn 30 hay 31.\nĐúng: 01/01:(30,2), 02/01:(32,2), 03/01:(33,NaN); so SQL cùng phạm vi/thiếu; str(1) chưa là \"001\".\n\n```python\nn = rv.assign(time=rv['date'].dt.strftime('%Y-%m-%d')).groupby('time').size().rename('n_review')\nassert w_ok['time'].is_unique\nkq = w_ok.merge(n.reset_index(), on='time', how='left', validate='one_to_one')\n```"
+    },
+    {
+      "id": "B6-MR12",
+      "markdown": "`l = l.assign(id=l['id'].astype('str'))`; quy ước không đệm 0 cho phép đổi này.\nKết quả `('1','An',2), ('2','Binh',2)`; lọc năm 2025 và ưu tiên mã tăng khi đồng hạng.\n\n```sql\nSELECT rv.listing_id,l.name,COUNT(*) AS n FROM rv\nLEFT JOIN l ON rv.listing_id=l.id WHERE year(rv.date)=2025\nGROUP BY rv.listing_id,l.name ORDER BY n DESC,rv.listing_id ASC LIMIT 2;\n```"
+    }
+  ]
+}

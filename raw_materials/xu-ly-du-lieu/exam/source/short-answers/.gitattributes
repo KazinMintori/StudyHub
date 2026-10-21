@@ -1,0 +1,2 @@
+# Keep downloaded files byte-for-byte, including their original CRLF endings.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

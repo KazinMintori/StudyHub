@@ -1,0 +1,103 @@
+{
+  "lesson": "08",
+  "sourceFile": "source/short-answers/Bai8_Dap_an_rut_gon.md",
+  "sourceSha256": "3c4b1377aa626258b5c200cc061dfb8e99c3cf44c164c22f1bdb94105e45e03d",
+  "items": [
+    {
+      "id": "B8-008",
+      "markdown": "Số đêm D1/D2/D3/D4 = `[2,3,NaN,NaN]`; lỗi vào chỉ D3, D4 thiếu nguồn.\nThiếu ngày làm hiệu chưa biết, không đồng nghĩa 0 đêm:\n\n```python\nvao = pd.to_datetime(dat['vao'], format='%d/%m/%Y', errors='coerce')\nra = pd.to_datetime(dat['ra'], format='%d/%m/%Y', errors='coerce')\nso_dem = (ra-vao).dt.days\nloi_vao = dat['vao'].notna() & vao.isna()\n```"
+    },
+    {
+      "id": "B8-009",
+      "markdown": "`(238/200-1)*100` = 19,0%; mẫu số 200 review, trọng số tháng theo 20/200 và 180/200, không ngang nhau.\n55% là mean tỷ lệ tháng; chưa đủ kết luận nguyên nhân quảng cáo."
+    },
+    {
+      "id": "B8-010",
+      "markdown": "Bỏ format có thể đảo ngày/tháng; dùng ME thay M. Tháng 6 mới 12 ngày so với cả tháng 5, chưa kết luận tháng trọn.\nSố đếm `[2,2,2]`; loại tháng 6 khỏi so sánh tháng trọn, không gán ngày chưa thu bằng 0:\n\n```python\nrv['ngay'] = pd.to_datetime(rv['ngay'], format='%d/%m/%Y')\nthang = rv.set_index('ngay').sort_index().resample('ME').size()\ntron = thang.loc[thang.index <= pd.Timestamp('2026-05-31')]\ntang_tron = tron.pct_change(fill_method=None)\n```"
+    },
+    {
+      "id": "B8-MR02",
+      "markdown": "Giữ hàng 1/2, được 2 review; giờ Việt Nam tương ứng 01/07 00:00 và 17:00.\nGắn trực tiếp timezone Việt Nam cho đồng hồ UTC sẽ đổi sai thời điểm thực:\n\n```python\nv = pd.to_datetime(raw, format='%Y-%m-%d %H:%M', utc=True).dt.tz_convert('Asia/Ho_Chi_Minh')\ndau = pd.Timestamp('2026-07-01', tz='Asia/Ho_Chi_Minh')\ncuoi = pd.Timestamp('2026-07-02', tz='Asia/Ho_Chi_Minh')\ngiu = (v >= dau) & (v < cuoi)\nso = int(giu.sum())\n```"
+    },
+    {
+      "id": "B8-018",
+      "markdown": "Giữ 3 hàng id 2/1/3; ngoài phạm vi 1 (id4), lỗi 1 (id6), thiếu nguồn 1 (id5).\nKhông xóa review trùng ngày; ngoài mốc chưa chắc lỗi nhập:\n\n```python\nd = pd.to_datetime(raw['date'], format='%Y-%m-%d', errors='coerce')\nloi = raw['date'].notna() & d.isna()\nngoai = d.notna() & ((d < '2026-06-01') | (d > '2026-06-29'))\ngiu = d.notna() & (d >= '2026-06-01') & (d <= '2026-06-29')\nr = raw.assign(ngay=d).loc[giu].set_index('ngay').sort_index()\n```"
+    },
+    {
+      "id": "B8-019",
+      "markdown": "Bỏ format có thể đảo ngày/tháng, Q đổi QE; số đếm `[3,3]`, tổng 6, chỉ quý I trọn.\nĐã quan sát 90/90 ngày nhưng quý II cần 91; hai số bằng nhau chưa chứng minh xu hướng ổn định.\n\n```python\nrv['ngay'] = pd.to_datetime(rv['ngay'], format='%d/%m/%Y')\nq = rv.set_index('ngay').sort_index().resample('QE').size()\ntron = q.loc[q.index <= pd.Timestamp('2026-06-29')]\nassert q.sum() == len(rv)\n```"
+    },
+    {
+      "id": "B8-020",
+      "markdown": "Chỉ dùng 2024–2025: tổng tháng 1/2 đều 60, mean 12 tổng là 60, hai chỉ số đều 100.\n.month bỏ năm; thêm 2026 làm lệch số năm đóng góp; chỉ số chưa loại xu hướng hay độ dài tháng."
+    },
+    {
+      "id": "B8-027",
+      "markdown": "Ngày thực `[1.50,1.25,NaN]`; .dt.days cho `[1,1,NaN]` vì chỉ lấy phần ngày nguyên.\n\n```python\nvao = pd.to_datetime(dat['vao'], format='%Y-%m-%d %H:%M', errors='coerce')\nra = pd.to_datetime(dat['ra'], format='%Y-%m-%d %H:%M', errors='coerce')\nkhoang = ra-vao\nngay_thuc = khoang.dt.total_seconds()/86400\nngay_nguyen = khoang.dt.days\n```"
+    },
+    {
+      "id": "B8-028",
+      "markdown": "`du = s.reindex(lich,fill_value=0)` → `[0,2,0,4,0]`; `du.mean()` = 1,2 review/ngày trên 5 ngày.\nresample/asfreq chỉ phủ 02–04/06, thiếu hai đầu; 06/06 chưa biết nên không tự điền 0."
+    },
+    {
+      "id": "B8-029",
+      "markdown": "Sáu kết quả đầu NaN; cực đại rolling 07/11, cửa sổ 01–07/11 `[14,0,0,3,4,5,6]`, mean 32/7.\nCực đại gốc 01/11 = 14; trễ 6 ngày chỉ của ví dụ, rolling không tự dự báo hay giải thích nguyên nhân.\n\n```python\ntb7 = s.rolling(7, min_periods=7, center=False).mean()\nngay = tb7.idxmax()\nw = s.loc[ngay-pd.Timedelta(days=6):ngay]\nassert len(w)==7 and abs(w.mean()-tb7.loc[ngay]) < 1e-9\n```"
+    },
+    {
+      "id": "B8-030",
+      "markdown": "`doi = q/q.shift(4)-1`; quý I/2026 so quý I/2025: 50/40−1 = 0,25 = 25%.\nshift(12) là 3 năm, chuỗi này không đủ; kiểm gốc bằng đếm review từ 01/01/2025 đến trước 01/04/2025."
+    },
+    {
+      "id": "B8-MR06",
+      "markdown": "Cuối chuỗi: 3 hàng lấy `[0,NaN,8]` → 4; 3D loại biên trái 02/06 09:00, còn `[NaN,8]` → NaN.\nmin_periods đếm giá trị biết, có tính 0; không suy 03/06 bằng 0:\n\n```python\na = s.rolling(3, min_periods=2, center=False).mean()\nb = s.rolling('3D', min_periods=2, center=False, closed='right').mean()\n```"
+    },
+    {
+      "id": "B8-038",
+      "markdown": "Cũ đọc 08/04→08/07, ra 91 ngày; đúng 04/08→07/08, 3 đêm.\nHiển thị ISO không chứng minh đọc đúng nguồn; cần format DD/MM/YYYY:\n\n```python\nvao = pd.to_datetime(vao_raw, format='%d/%m/%Y')\nra = pd.to_datetime(ra_raw, format='%d/%m/%Y')\nso_dem = (ra-vao).days\n```"
+    },
+    {
+      "id": "B8-039",
+      "markdown": "Sửa format/ME; giữ tháng 6 vì đã thu đủ, số đếm `[2,2,2]`, dem6=2, tổng 6; khớp số chưa chứng minh xu hướng/nhân quả.\nKhai báo AI: ChatGPT hỗ trợ theo định dạng/phạm vi đề, tôi tự kiểm tháng 6 bằng mask và tổng review.\n\n```python\nrv['date'] = pd.to_datetime(rv['date'], format='%d/%m/%Y')\nm = rv.set_index('date').sort_index().resample('ME').size()\nm = m.loc[m.index <= pd.Timestamp('2026-06-30')]\ndem6 = ((rv['date'] >= '2026-06-01') & (rv['date'] < '2026-07-01')).sum()\nassert dem6 == m.loc['2026-06-30'] and m.sum() == len(rv)\n```"
+    },
+    {
+      "id": "B8-040",
+      "markdown": "Cũ 30%, trọng số mỗi tháng bằng nhau; sửa `bao_cao = nay.sum()/goc.sum()-1` → 5,0%, gốc 400 review quý I/2025.\nTháng 3 giảm 10% so tháng 3/2025 không mâu thuẫn tổng quý tăng; in `f'{bao_cao:.1%}'`."
+    },
+    {
+      "id": "B8-048",
+      "markdown": "Cũ giữ 3, đúng giữ hàng 0–3 gồm 4 review; mốc 30/06 00:00 bỏ sót buổi chiều, không chứng minh nguồn thiếu.\nTháng 6 đã trọn; sự kiện 01/07 không chứng minh tháng 7 trọn:\n\n```python\ngiu = (t >= pd.Timestamp('2026-06-01')) & (t < pd.Timestamp('2026-07-01'))\nso = int(giu.sum())\n```"
+    },
+    {
+      "id": "B8-049",
+      "markdown": "`tb = s.rolling(7,min_periods=7,center=False).mean()`; 07/06 và 08/06 đều NaN, không điền 0.\nCửa sổ 02–08/06 `[2,NaN,4,0,6,8,10]`; min_periods=6 cho 5 trên 6 giá biết, chưa là mean đủ 7 ngày."
+    },
+    {
+      "id": "B8-050",
+      "markdown": "Tháng 1: 930/62 = 15/ngày; tháng 2: 860/57 ≈ 15,087719/ngày; tổng giảm 7,5% nhưng mức/ngày tăng 0,6%.\nGộp tổng review/tổng ngày; mean các mức năm không cân số ngày, kỳ gốc phải cùng đại lượng tháng 1.\n\n```python\nngay = pd.Series(m.index.days_in_month, index=m.index)\ntong = m.groupby(m.index.month).sum()\ntb = tong/ngay.groupby(ngay.index.month).sum()\np_tong, p_ngay = tong.loc[2]/tong.loc[1]-1, tb.loc[2]/tb.loc[1]-1\n```"
+    },
+    {
+      "id": "B8-MR10",
+      "markdown": "Giữ hàng 1/2; báo 01/01:2, 02/01:NaN; phạm vi đầy đủ cho 2 review/ngày.\nSự kiện 02/01 00:00 không xác nhận trọn ngày, không dùng làm tổng ngày hoặc tự điền 0.\n\n```python\nv = pd.to_datetime(raw, format='%Y-%m-%d %H:%M', utc=True).dt.tz_convert('Asia/Ho_Chi_Minh')\ndau = pd.Timestamp('2027-01-01', tz='Asia/Ho_Chi_Minh')\ncuoi = pd.Timestamp('2027-01-02', tz='Asia/Ho_Chi_Minh')\ngiu = (v >= dau) & (v < cuoi)\ndem = pd.Series(1, index=pd.DatetimeIndex(v[giu])).resample('D').size()\nbao_cao = dem.reindex(lich)\n```"
+    },
+    {
+      "id": "B8-057",
+      "markdown": "Sai format/M và size đếm hàng thay review; đúng tổng 20/10, tổng chung 30; mức/ngày 20/31 và 10/5 = 2.\nTháng 2 mới 5 ngày, chưa được gọi tổng giảm 50% là biến động tháng trọn; có thể so 01–05 của hai tháng.\n\n```python\ndf['date'] = pd.to_datetime(df['date'], format='%d/%m/%Y')\nm = df.set_index('date')['n'].resample('ME').sum()\ntb1, tb2 = m.loc['2024-01-31']/31, m.loc['2024-02-29']/5\n```"
+    },
+    {
+      "id": "B8-058",
+      "markdown": "Lọc năm trước rolling; 01–06/01 là NaN, 07/01 dùng `[1,1,1,1,1,1,7]`, mean 13/7.\nRolling trước rồi lọc vẫn dùng 31/12/2024 cho 06/01, sai phạm vi chỉ dùng 2025.\n\n```python\nnam = s.loc['2025']\ntb7 = nam.rolling(7, min_periods=7, center=False).mean()\nw = nam.loc['2025-01-01':'2025-01-07']\nassert abs(tb7.loc['2025-01-07']-w.mean()) < 1e-9\n```"
+    },
+    {
+      "id": "B8-059",
+      "markdown": "Chỉ số 150: cao hơn mean 12 tổng tháng 50%, mốc 100 là mean; điều chỉnh 180/120=1,5 và 264/240=1,1.\nTháng 8 tổng cao hơn nhưng tỷ số thấp hơn; chưa loại hết xu hướng/số ngày/mùa hay chứng minh nguyên nhân."
+    },
+    {
+      "id": "B8-060",
+      "markdown": "Giữ hàng 1/2/3, được 3 review/ngày; hàng 2 là 01/01/2027 thứ Sáu, dayofweek=4.\nKhông tự gán UTC cho ngày thuần khi nguồn chưa quy định thời điểm/múi giờ.\n\n```python\nv = pd.to_datetime(raw, format='%Y-%m-%d %H:%M', utc=True).dt.tz_convert('Asia/Ho_Chi_Minh')\ndau = pd.Timestamp('2027-01-01', tz='Asia/Ho_Chi_Minh')\ncuoi = pd.Timestamp('2027-01-02', tz='Asia/Ho_Chi_Minh')\ngiu = (v >= dau) & (v < cuoi)\nso = int(giu.sum())\n```"
+    },
+    {
+      "id": "B8-MR12",
+      "markdown": "(a) 3 sự kiện: 30/06 01:00, 01/07 01:00, 03/07 00:00; (b) ngày 01–03/07: `[1,0,1]`, tổng 2.\nHai cửa sổ khác biên: (30/06 00:00,03/07 00:00] và [01/07 00:00,04/07 00:00), nên không mâu thuẫn.\n\n```python\nv = pd.to_datetime(raw, format='%Y-%m-%d %H:%M', utc=True).tz_convert('Asia/Ho_Chi_Minh')\nev = pd.Series(1, index=v).sort_index()\nt = pd.Timestamp('2026-07-03', tz='Asia/Ho_Chi_Minh')\na = ev.rolling('3D', min_periods=1, closed='right').sum().loc[t]\nd = ev.resample('D').size().reindex(lich, fill_value=0)\nb = d.rolling(3, min_periods=3, center=False).sum().loc[t]\n```"
+    }
+  ]
+}
