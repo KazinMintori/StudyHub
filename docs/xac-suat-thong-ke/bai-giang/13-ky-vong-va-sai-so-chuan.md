@@ -97,9 +97,7 @@ Xét một con xúc xắc bị chế tạo lệch: Xác suất xuất hiện m�
 Bảng phân phối xác suất:
 
 | Mặt $x$ | 1 | 2 | 3 | 4 | 5 | 6 |
-
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-
 | **$f(x)$** | $0{,}1$ | $0{,}3$ | $0{,}1$ | $0{,}2$ | $0{,}1$ | $0{,}2$ |
 
 Tính kỳ vọng của con xúc xắc lệch:
@@ -217,19 +215,12 @@ Tuyệt đối không áp dụng hàm $g$ lên xác suất $f(x)$! Khi tính $E(
 **Minh họa tính $E(X^2)$**: Xét biến ngẫu nhiên $X$ có phân phối:
 
 | Giá trị $x$ | $P(X = x)$ | $x \cdot P(X = x)$ | $x^2$ | $x^2 \cdot P(X = x)$ |
-
 | :---: | :---: | :---: | :---: | :---: |
-
 | $-2$ | $0{,}2$ | $-0{,}4$ | $4$ | $0{,}8$ |
-
 | $-1$ | $0{,}1$ | $-0{,}1$ | $1$ | $0{,}1$ |
-
 | $0$ | $0{,}2$ | $0{,}0$ | $0$ | $0{,}0$ |
-
 | $1$ | $0{,}3$ | $0{,}3$ | $1$ | $0{,}3$ |
-
 | $3$ | $0{,}2$ | $0{,}6$ | $9$ | $1{,}8$ |
-
 | **Tổng** | **$1{,}0$** | **$E(X) = 0{,}4$** | - | **$E(X^2) = 3{,}0$** |
 
 ---
@@ -501,17 +492,11 @@ $$
 ### Bảng tổng kết các đặc trưng số:
 
 | Phân phối | Ký hiệu | Kỳ vọng $E(X)$ | Phương sai $\text{Var}(X)$ | Độ lệch chuẩn $\text{SD}(X)$ |
-
 | :--- | :--- | :---: | :---: | :---: |
-
 | **Đều rời rạc** | $\text{Uniform}(n)$ | $\frac{n+1}{2}$ | $\frac{n^2 - 1}{12}$ | $\sqrt{\frac{n^2 - 1}{12}}$ |
-
 | **Bernoulli** | $\text{Bernoulli}(p)$ | $p$ | $p(1-p)$ | $\sqrt{p(1-p)}$ |
-
 | **Nhị thức** | $\text{Bin}(n, p)$ | $np$ | $np(1-p)$ | $\sqrt{np(1-p)}$ |
-
 | **Siêu bội** | $\text{HG}(N, G, n)$ | $n \frac{G}{N}$ | $n \frac{G}{N}\left(1 - \frac{G}{N}\right)\frac{N-n}{N-1}$ | $\sqrt{\text{Var}(X)}$ |
-
 | **Poisson** | $\text{Poisson}(\lambda)$ | $\lambda$ | $\lambda$ | $\sqrt{\lambda}$ |
 
 ---
@@ -807,9 +792,7 @@ Tập giá trị khả dĩ của $Y$ là $\{0, 1\}$.
 Bảng phân phối xác suất của $Y$:
 
 | Giá trị $y$ | 0 | 1 |
-
 | :---: | :---: | :---: |
-
 | **$P(Y = y)$** | $\frac{1}{3}$ | $\frac{2}{3}$ |
 
 Thực chất $Y \sim \text{Bernoulli}(p = 2/3)$. Do đó:

@@ -91,13 +91,9 @@ Nếu giả định này là đúng, tỉ lệ các ca trực có bệnh nhân t
 Dữ liệu ghi nhận từ $1{,}641$ ca trực được tổng hợp như sau:
 
 | Ca trực | Có tử vong | Không tử vong | Tổng số ca | Tỉ lệ tử vong |
-
 | :--- | :---: | :---: | :---: | :---: |
-
 | **Có mặt Gilbert** | $40$ | $217$ | $257$ | $\hat{p}_1 = \frac{40}{257} \approx 15.56\%$ |
-
 | **Không có Gilbert** | $34$ | $1{,}350$ | $1{,}384$ | $\hat{p}_2 = \frac{34}{1384} \approx 2.46\%$ |
-
 | **Tổng cộng** | $74$ | $1{,}567$ | $1{,}641$ | $\hat{p}_{\text{chung}} \approx 4.51\%$ |
 
 Độ chênh lệch giữa hai tỉ lệ quan sát được:

@@ -134,15 +134,10 @@ Ta xây dựng bốn mô hình hồi quy lồng nhau với số lượng biến 
 Kết quả tính toán giá trị $R^2$ cho từng mô hình như sau:
 
 | Mô hình | Các biến dự báo đưa vào | Không gian hình học | Giá trị $R^2$ |
-
 | :--- | :--- | :--- | :--- |
-
 | **$m_1$** | `food` | Đường thẳng đơn trong không gian 2D | $0.3932$ ($39.3\%$) |
-
 | **$m_2$** | `food + geo` | Hai đường thẳng song song trong 2D | $0.3988$ ($39.9\%$) |
-
 | **$m_3$** | `food + geo + decor` | Hai mặt phẳng song song trong không gian 3D | $0.6279$ ($62.8\%$) |
-
 | **$m_4$** | `food + geo + decor + service` | Hai siêu phẳng song song trong không gian 4D | $0.6279$ ($62.8\%$) |
 
 > [!IMPORTANT] Định lý về tính đơn điệu của $R^2$:
@@ -288,17 +283,11 @@ $$
 Một nhà phân tích dữ liệu xây dựng mô hình hồi quy tuyến tính đơn biến $\hat{y} = 0.2 + 1.6 x$ trên một tập dữ liệu gồm $n = 5$ quan sát. Bảng số liệu thực tế $y_i$, giá trị dự báo $\hat{y}_i$ và phần dư $e_i$ được ghi nhận như sau:
 
 | Quan sát $i$ | $x_i$ | Giá trị thực tế $y_i$ | Giá trị dự báo $\hat{y}_i$ | Phần dư $e_i = y_i - \hat{y}_i$ |
-
 | :--- | :--- | :--- | :--- | :--- |
-
 | **1** | 1 | 2 | 1.8 | $+0.2$ |
-
 | **2** | 2 | 3 | 3.4 | $-0.4$ |
-
 | **3** | 3 | 5 | 5.0 | $0.0$ |
-
 | **4** | 4 | 7 | 6.6 | $+0.4$ |
-
 | **5** | 5 | 8 | 8.2 | $-0.2$ |
 
 **Yêu cầu:**

@@ -69,17 +69,11 @@ Toàn bộ cuộc cách mạng của Trí tuệ nhân tạo (AI) và Học máy 
 Dựa trên bản chất của biến phản hồi $y$ trong phân loại dữ liệu, bài toán dự báo được chia thành hai họ mô hình chính:
 
 | Tiêu chí | Bài toán Hồi quy (Regression) | Bài toán Phân loại (Classification) |
-
 | :--- | :--- | :--- |
-
 | **Bản chất biến phản hồi $y$** | **Biến định lượng liên tục** (Số thực) | **Biến định tính rời rạc** (Nhãn danh mục) |
-
 | **Mục tiêu dự đoán** | Dự đoán một giá trị số đo lường cụ thể | Dự đoán một nhãn danh mục hoặc xác suất thuộc nhóm |
-
 | **Ví dụ thực tế 1** | Dự báo chỉ số CPI hoặc tỉ lệ lạm phát ($y \in \mathbb{R}$) | Dự báo nền kinh tế có rơi vào suy thoái hay không ($y \in \\{\text{Yes}, \text{No}\\}$) |
-
 | **Ví dụ thực tế 2** | Dự báo giá bán của một căn nhà (triệu USD) | Dự báo thư điện tử là thư rác hay thư hợp lệ |
-
 | **Ví dụ thực tế 3** | Dự báo nhiệt độ ngày mai tại Hà Nội ($^\circ\text{C}$) | Xe tự hành phân loại vật thể phía trước là người đi bộ hay chướng ngại vật tĩnh |
 
 Trong phạm vi của môn học, chúng ta tập trung vào hai mô hình chuẩn mực đại diện cho hai họ bài toán này: **Hồi quy Tuyến tính Bình phương bé nhất** cho bài toán hồi quy, và **Hồi quy Logistic** cho bài toán phân loại.
@@ -303,17 +297,11 @@ Hãy phân loại các bài toán ứng dụng sau đây vào hai họ bài toá
 Xét một tập dữ liệu nhỏ gồm $n = 5$ quan sát về thời gian ôn tập ($x$, tính bằng giờ) và điểm kiểm tra ($y$, thang điểm 10):
 
 | Quan sát $i$ | $x_i$ (Giờ ôn tập) | $y_i$ (Điểm kiểm tra) |
-
 | :--- | :--- | :--- |
-
 | **1** | 1 | 2 |
-
 | **2** | 2 | 3 |
-
 | **3** | 3 | 5 |
-
 | **4** | 4 | 7 |
-
 | **5** | 5 | 8 |
 
 **Yêu cầu:**
@@ -357,19 +345,12 @@ $$
 - Ta lập bảng tính các đại lượng độ lệch:
 
 | $i$ | $x_i - \bar{x}$ | $y_i - \bar{y}$ | $(x_i - \bar{x})^2$ | $(x_i - \bar{x})(y_i - \bar{y})$ |
-
 | :--- | :--- | :--- | :--- | :--- |
-
 | **1** | $1 - 3 = -2$ | $2 - 5 = -3$ | $(-2)^2 = 4$ | $(-2) \times (-3) = 6$ |
-
 | **2** | $2 - 3 = -1$ | $3 - 5 = -2$ | $(-1)^2 = 1$ | $(-1) \times (-2) = 2$ |
-
 | **3** | $3 - 3 = 0$ | $5 - 5 = 0$ | $0^2 = 0$ | $0 \times 0 = 0$ |
-
 | **4** | $4 - 3 = +1$ | $7 - 5 = +2$ | $(+1)^2 = 1$ | $(+1) \times (+2) = 2$ |
-
 | **5** | $5 - 3 = +2$ | $8 - 5 = +3$ | $(+2)^2 = 4$ | $(+2) \times (+3) = 6$ |
-
 | **Tổng** | **$0$** | **$0$** | **$10$** | **$16$** |
 
 - Hệ số góc $b_1$:
@@ -404,19 +385,12 @@ $$
 - Bảng phần dư:
 
 | $i$ | $x_i$ | $y_i$ | $\hat{y}_i = 0.2 + 1.6 x_i$ | $e_i = y_i - \hat{y}_i$ | $e_i^2$ |
-
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
 | **1** | 1 | 2 | $0.2 + 1.6(1) = 1.8$ | $2 - 1.8 = +0.2$ | $0.04$ |
-
 | **2** | 2 | 3 | $0.2 + 1.6(2) = 3.4$ | $3 - 3.4 = -0.4$ | $0.16$ |
-
 | **3** | 3 | 5 | $0.2 + 1.6(3) = 5.0$ | $5 - 5.0 = 0.0$ | $0.00$ |
-
 | **4** | 4 | 7 | $0.2 + 1.6(4) = 6.6$ | $7 - 6.6 = +0.4$ | $0.16$ |
-
 | **5** | 5 | 8 | $0.2 + 1.6(5) = 8.2$ | $8 - 8.2 = -0.2$ | $0.04$ |
-
 | **Tổng** | | | | **$0.0$** | **$0.40$** |
 
 - Kiểm chứng tổng phần dư:

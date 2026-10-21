@@ -6,7 +6,7 @@ lecture: 03-tom-tat-du-lieu-dinh-tinh
 
 section: lecture
 
-title: "Tóm tắt dữ liệu định tính & Biểu đồ thanh"
+title: "Tóm tắt dữ liệu định tính & Biểu đồ cột"
 
 prerequisites: []
 
@@ -14,7 +14,7 @@ lessonStatus: ready
 
 hasChapterExercises: true
 
-description: "Bảng tần số chéo, tỷ lệ đồng thời, tỷ lệ biên, tỷ lệ điều kiện, biểu đồ thanh và nhận diện mối liên hệ giữa các biến định tính."
+description: "Bảng tần số chéo, tỷ lệ đồng thời, tỷ lệ biên, tỷ lệ điều kiện, biểu đồ cột và nhận diện mối liên hệ giữa các biến định tính."
 
 ---
 
@@ -28,7 +28,7 @@ Hệ thống công cụ tóm tắt trong thống kê học được chia thành 
 
 2. Các công cụ chuyên dụng dành cho **dữ liệu định lượng (Numerical Data)**.
 
-Trong bài giảng này, ta tập trung vào dữ liệu định tính: Từ bảng dữ liệu thô chuyển thành bảng tần số chéo, và từ bảng tần số chéo chuyển hóa thành các dạng biểu đồ thanh trực quan.
+Trong bài giảng này, ta tập trung vào dữ liệu định tính: Từ bảng dữ liệu thô chuyển thành bảng tần số chéo, và từ bảng tần số chéo chuyển hóa thành các dạng biểu đồ cột trực quan.
 
 ---
 
@@ -37,27 +37,16 @@ Trong bài giảng này, ta tập trung vào dữ liệu định tính: Từ b�
 Trong nghiên cứu sinh thái học tại Nam Cực, Tiến sĩ Kristen Gorman đã thu thập thông tin trên $333$ cá thể chim cánh cụt trưởng thành. Dưới đây là trích đoạn $10$ hàng đầu tiên của tập dữ liệu:
 
 | species | island | bill_length_mm | bill_depth_mm | flipper_length_mm | body_mass_g | sex | year |
-
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-
 | Chinstrap | Dream | 42.4 | 17.3 | 181 | 3600 | female | 2007 |
-
 | Chinstrap | Dream | 52.2 | 18.8 | 197 | 3450 | male | 2009 |
-
 | Chinstrap | Dream | 47.0 | 17.3 | 185 | 3700 | female | 2007 |
-
 | Gentoo | Biscoe | 43.4 | 14.4 | 218 | 4600 | female | 2009 |
-
 | Gentoo | Biscoe | 51.1 | 16.3 | 220 | 6000 | male | 2008 |
-
 | Adelie | Biscoe | 39.6 | 20.7 | 191 | 3900 | female | 2009 |
-
 | Chinstrap | Dream | 46.4 | 17.8 | 191 | 3700 | female | 2008 |
-
 | Adelie | Biscoe | 40.5 | 17.9 | 187 | 3200 | female | 2007 |
-
 | Gentoo | Biscoe | 42.6 | 13.7 | 213 | 4950 | female | 2008 |
-
 | Gentoo | Biscoe | 48.4 | 16.3 | 220 | 5400 | male | 2008 |
 
 Hai cột đầu tiên là các biến định tính danh nghĩa:
@@ -71,15 +60,10 @@ Nếu nhìn vào tập dữ liệu thô gồm $333$ hàng, việc nhận định
 Phương pháp duy nhất và tự nhiên nhất là: Đếm số lượng cá thể xuất hiện ở từng tổ hợp mức (combination of levels) và sắp xếp chúng vào một bảng số liệu hai chiều.
 
 | Loài / Đảo | Biscoe | Dream | Torgersen | **Tổng hàng** |
-
 | :--- | :---: | :---: | :---: | :---: |
-
 | **Adelie** | 44 | 55 | 47 | **146** |
-
 | **Chinstrap** | 0 | 68 | 0 | **68** |
-
 | **Gentoo** | 119 | 0 | 0 | **119** |
-
 | **Tổng cột** | **163** | **123** | **47** | **333** |
 
 Quan sát bảng số liệu này, ba đặc điểm sinh thái quan trọng lập tức lộ diện:
@@ -100,45 +84,45 @@ Bảng số liệu dạng này được gọi là **Bảng tần số chéo (Con
 
 ---
 
-## 2. Biểu diễn đồ họa: Các dạng biểu đồ thanh (Bar Charts)
+## 2. Biểu diễn đồ họa: Các dạng biểu đồ cột (Bar Charts)
 
-Bên cạnh bảng số liệu, ta có thể trực quan hóa số đếm bằng biểu đồ thanh (Bar Chart). Khi biểu diễn đồng thời hai biến định tính, có hai kỹ thuật sắp đặt thanh phổ biến:
+Bên cạnh bảng số liệu, ta có thể trực quan hóa số đếm bằng biểu đồ cột (Bar Chart). Khi biểu diễn đồng thời hai biến định tính, có hai kỹ thuật sắp đặt cột phổ biến:
 
 <div style="display: flex; gap: 16px; margin: 16px 0; justify-content: center; flex-wrap: wrap;">
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-stacked-counts.png" alt="Biểu đồ thanh xếp chồng biểu diễn số lượng cá thể theo loài và đảo." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-stacked-counts.png" alt="Biểu đồ cột xếp chồng biểu diễn số lượng cá thể theo loài và đảo." style="width: 100%; border-radius: 8px;" />
 
-<p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ thanh xếp chồng (Stacked Bar Chart).</p>
+<p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ cột xếp chồng (Stacked Bar Chart).</p>
 
   </div>
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-dodged-counts.png" alt="Biểu đồ thanh ghép cạnh biểu diễn số lượng cá thể phân tách theo đảo." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-dodged-counts.png" alt="Biểu đồ cột ghép biểu diễn số lượng cá thể phân tách theo đảo." style="width: 100%; border-radius: 8px;" />
 
-<p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ thanh ghép cạnh (Dodged / Side-by-Side Bar Chart).</p>
+<p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ cột ghép (Dodged / Side-by-Side Bar Chart).</p>
 
   </div>
 
 </div>
 
-**Hình 3.1:** Hai phương pháp biểu diễn số lượng cá thể của hai biến định tính trên biểu đồ thanh.
+**Hình 3.1:** Hai phương pháp biểu diễn số lượng cá thể của hai biến định tính trên biểu đồ cột.
 
 Mỗi phương pháp phục vụ một mục đích truyền đạt thông tin riêng biệt:
 
-- **Biểu đồ thanh xếp chồng (Stacked Bar Chart)**: Đặt biến loài trên trục hoành và xếp chồng các dải màu đại diện cho hòn đảo lên trục tung. Ưu điểm nổi bật là làm rõ **tổng số lượng quan sát của từng loài** (chiều cao toàn cột Adelie đạt $146$, tương ứng với tổng hàng đầu tiên trong bảng tần số chéo).
+- **Biểu đồ cột xếp chồng (Stacked Bar Chart)**: Đặt biến loài trên trục hoành và xếp chồng các dải màu đại diện cho hòn đảo lên trục tung. Ưu điểm nổi bật là làm rõ **tổng số lượng quan sát của từng loài** (chiều cao toàn cột Adelie đạt $146$, tương ứng với tổng hàng đầu tiên trong bảng tần số chéo).
 
-- **Biểu đồ thanh ghép cạnh (Dodged Bar Chart)**: Đặt các thanh của từng hòn đảo cạnh nhau thay vì xếp chồng. Dạng biểu đồ này làm mờ đi tổng số lượng cá thể của loài, nhưng lại giúp người đọc dễ dàng so sánh quy mô số lượng tương đối giữa các đảo đối với cùng một loài.
+- **Biểu đồ cột ghép (Dodged Bar Chart)**: Đặt các cột của từng hòn đảo cạnh nhau thay vì xếp chồng. Dạng biểu đồ này làm mờ đi tổng số lượng cá thể của loài, nhưng lại giúp người đọc dễ dàng so sánh quy mô số lượng tương đối giữa các đảo đối với cùng một loài.
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-03/two-var.png" alt="Sơ đồ chuyển đổi từ Khung dữ liệu thô sang Bảng tần số chéo và Biểu đồ thanh." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-03/two-var.png" alt="Sơ đồ chuyển đổi từ Khung dữ liệu thô sang Bảng tần số chéo và Biểu đồ cột." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px;" />
 
 </div>
 
-**Hình 3.2:** Sơ đồ quy trình chuyển đổi: Từ Khung dữ liệu thô (Data Frame) $\to$ Bảng tần số chéo (Contingency Table) $\to$ Biểu đồ thanh xếp chồng (Stacked Bar Chart).
+**Hình 3.2:** Sơ đồ quy trình chuyển đổi: Từ Khung dữ liệu thô (Data Frame) $\to$ Bảng tần số chéo (Contingency Table) $\to$ Biểu đồ cột xếp chồng (Stacked Bar Chart).
 
 ---
 
@@ -149,15 +133,10 @@ Số đếm thô phản ánh quy mô tuyệt đối, nhưng khi kích thước c
 Để chuyển đổi, ta chia số đếm ở từng ô cho tổng số quan sát $N = 333$:
 
 | Loài / Đảo | Biscoe | Dream | Torgersen | **Tỷ lệ biên loài** |
-
 | :--- | :---: | :---: | :---: | :---: |
-
 | **Adelie** | 0.132 | 0.165 | 0.141 | **0.438** |
-
 | **Chinstrap** | 0.000 | 0.204 | 0.000 | **0.204** |
-
 | **Gentoo** | 0.357 | 0.000 | 0.000 | **0.357** |
-
 | **Tỷ lệ biên đảo** | **0.489** | **0.369** | **0.141** | **1.000** |
 
 Bảng này chứa hai loại tỷ lệ ở hai vị trí khác nhau: Ở các ô trung tâm và ở đường viền (lề) của bảng. Từ hai loại này, ta thiết lập thêm loại tỷ lệ thứ ba:
@@ -247,9 +226,9 @@ Sự phân biệt ba loại tỷ lệ này có ý nghĩa thực tế sâu sắc,
 
 ---
 
-## 4. Biểu đồ thanh chuẩn hóa (Normalized Stacked Bar Chart)
+## 4. Biểu đồ cột chồng chuẩn hóa (Normalized Stacked Bar Chart)
 
-Khi quan tâm đến cơ cấu thành phần thay vì số lượng tuyệt đối, ta sử dụng **biểu đồ thanh chuẩn hóa (Normalized Stacked Bar Chart)**: Chiều cao của mọi cột được kéo dãn chuẩn hóa về $1.0$ ($100\%$), và trục tung biểu thị các tỷ lệ.
+Khi quan tâm đến cơ cấu thành phần thay vì số lượng tuyệt đối, ta sử dụng **biểu đồ cột chồng chuẩn hóa (Normalized Stacked Bar Chart)**: Chiều cao của mọi cột được kéo dãn chuẩn hóa về $1.0$ ($100\%$), và trục tung biểu thị các tỷ lệ.
 
 Điểm mấu chốt là: Biểu đồ chuẩn hóa luôn hiển thị các **tỷ lệ có điều kiện**. Tùy thuộc vào biến số nào được chọn làm mẫu số (điều kiện hóa), câu chuyện thống kê được truyền tải sẽ hoàn toàn khác biệt:
 
@@ -257,7 +236,7 @@ Khi quan tâm đến cơ cấu thành phần thay vì số lượng tuyệt đ�
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-normalized-by-species.png" alt="Biểu đồ thanh chuẩn hóa theo loài: P(Đảo | Loài)." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-normalized-by-species.png" alt="Biểu đồ cột chuẩn hóa theo loài: P(Đảo | Loài)." style="width: 100%; border-radius: 8px;" />
 
 Chuẩn hóa theo Loài: $P(\text{Island} \mid \text{Species})$.
 
@@ -265,7 +244,7 @@ Chuẩn hóa theo Loài: $P(\text{Island} \mid \text{Species})$.
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-normalized-by-island.png" alt="Biểu đồ thanh chuẩn hóa theo đảo: P(Loài | Đảo)." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-normalized-by-island.png" alt="Biểu đồ cột chuẩn hóa theo đảo: P(Loài | Đảo)." style="width: 100%; border-radius: 8px;" />
 
 Chuẩn hóa theo Đảo: $P(\text{Species} \mid \text{Island})$.
 
@@ -273,7 +252,7 @@ Chuẩn hóa theo Đảo: $P(\text{Species} \mid \text{Island})$.
 
 </div>
 
-**Hình 3.3:** Biểu đồ thanh chuẩn hóa theo loài (trái) và chuẩn hóa theo đảo (phải).
+**Hình 3.3:** Biểu đồ cột chuẩn hóa theo loài (trái) và chuẩn hóa theo đảo (phải).
 
 1. **Biểu đồ bên trái (Chuẩn hóa theo Loài)**:
 
@@ -383,7 +362,7 @@ Dù tử số (sản lượng tái tạo) tăng trưởng thực tế, nhưng m�
 
    - Tỷ lệ có điều kiện (Conditional): Số quan sát ở một tổ hợp mức chia cho tổng số quan sát của biến điều kiện.
 
-3. **Biểu đồ thanh chuẩn hóa**: Luôn biểu diễn các tỷ lệ có điều kiện. Việc lựa chọn biến số nào để điều kiện hóa sẽ quyết định thông điệp và khả năng trả lời các câu hỏi thực tế.
+3. **Biểu đồ cột chuẩn hóa**: Luôn biểu diễn các tỷ lệ có điều kiện. Việc lựa chọn biến số nào để điều kiện hóa sẽ quyết định thông điệp và khả năng trả lời các câu hỏi thực tế.
 
 4. **Mối liên hệ thống kê (Association)**: Xuất hiện khi tỷ lệ có điều kiện biến thiên rõ rệt giữa các mức của biến điều kiện, trái lại hai biến được coi là độc lập khi tỷ lệ này giữ nguyên không đổi.
 
@@ -444,13 +423,9 @@ Hãy trả lời các câu hỏi sau:
 Lập bảng tổng hợp các số đếm hàng và cột:
 
 | Trạng thái / Năm học | Frosh (Năm 1) | Soph (Năm 2) | Junior (Năm 3) | Senior (Năm 4) | **Tổng hàng** |
-
 | :--- | :---: | :---: | :---: | :---: | :---: |
-
 | **Marching band** | 2 | 8 | 2 | 12 | **24** |
-
 | **No marching band** | 3 | 12 | 3 | 18 | **36** |
-
 | **Tổng cột** | **5** | **20** | **5** | **30** | **60** |
 
 Trả lời từng câu hỏi:
@@ -528,13 +503,13 @@ $$
 
 ---
 
-::: exercise Bài tập 2: Lựa chọn biểu đồ thanh trong khảo sát cử tri
+::: exercise Bài tập 2: Lựa chọn biểu đồ cột trong khảo sát cử tri
 
 Một viện nghiên cứu xã hội học tiến hành khảo sát $N = 500$ công dân về mối quan hệ giữa khuynh hướng chính trị (Đảng Dân chủ, Đảng Cộng hòa, Độc lập) và trình độ học vấn (Có bằng đại học, Chưa có bằng đại học).
 
-1. Nếu mục tiêu nghiên cứu là so sánh xem: *“Tỷ lệ cử tri có bằng đại học ở Đảng Dân chủ cao hơn hay thấp hơn so với Đảng Cộng hòa?”*, ta nên lựa chọn dạng biểu đồ thanh nào và chuẩn hóa theo biến số nào?
+1. Nếu mục tiêu nghiên cứu là so sánh xem: *“Tỷ lệ cử tri có bằng đại học ở Đảng Dân chủ cao hơn hay thấp hơn so với Đảng Cộng hòa?”*, ta nên lựa chọn dạng biểu đồ cột nào và chuẩn hóa theo biến số nào?
 
-2. Nếu sử dụng biểu đồ thanh xếp chồng chuẩn hóa theo khuynh hướng chính trị, liệu người đọc có thể xác định được nhóm cử tri nào (ví dụ: Cử tri Đảng Cộng hòa có bằng đại học) có số lượng người đông nhất trong khảo sát hay không? Tại sao?
+2. Nếu sử dụng biểu đồ cột xếp chồng chuẩn hóa theo khuynh hướng chính trị, liệu người đọc có thể xác định được nhóm cử tri nào (ví dụ: Cử tri Đảng Cộng hòa có bằng đại học) có số lượng người đông nhất trong khảo sát hay không? Tại sao?
 
 :::
 
@@ -550,7 +525,7 @@ Một viện nghiên cứu xã hội học tiến hành khảo sát $N = 500$ c�
 
 1. **Lựa chọn biểu đồ**:
 
-   - Ta cần sử dụng **Biểu đồ thanh xếp chồng chuẩn hóa (Normalized Stacked Bar Chart)** và **chuẩn hóa theo biến Khuynh hướng chính trị** (tức đặt biến khuynh hướng chính trị ở trục hoành).
+   - Ta cần sử dụng **Biểu đồ cột xếp chồng chuẩn hóa (Normalized Stacked Bar Chart)** và **chuẩn hóa theo biến Khuynh hướng chính trị** (tức đặt biến khuynh hướng chính trị ở trục hoành).
 
    - Khi đó, mỗi cột đại diện cho một đảng phái chính trị và có chiều cao $100\%$. Phân đoạn màu đại diện cho tỷ lệ cử tri có bằng đại học: $P(\text{College degree} \mid \text{Democrat})$ và $P(\text{College degree} \mid \text{Republican})$. So sánh chiều cao phân đoạn này giữa hai cột sẽ trả lời trực tiếp câu hỏi nghiên cứu.
 
@@ -558,7 +533,7 @@ Một viện nghiên cứu xã hội học tiến hành khảo sát $N = 500$ c�
 
    - Không thể xác định được nhóm nào đông nhất nếu chỉ nhìn vào biểu đồ chuẩn hóa này.
 
-   - Lý do: Biểu đồ chuẩn hóa đã kéo dãn tất cả các cột về cùng độ cao $100\%$, làm triệt tiêu hoàn toàn thông tin về quy mô số lượng tuyệt đối của từng đảng phái. Một đảng nhỏ có tỷ lệ cử tri có bằng đại học cao vẫn có thể có số lượng người ít hơn một đảng lớn có tỷ lệ thấp. Để so sánh số lượng người tuyệt đối, bắt buộc phải dùng biểu đồ thanh đếm số lượng thực tế (Unnormalized Bar Chart) hoặc bảng tần số chéo ban đầu.
+   - Lý do: Biểu đồ chuẩn hóa đã kéo dãn tất cả các cột về cùng độ cao $100\%$, làm triệt tiêu hoàn toàn thông tin về quy mô số lượng tuyệt đối của từng đảng phái. Một đảng nhỏ có tỷ lệ cử tri có bằng đại học cao vẫn có thể có số lượng người ít hơn một đảng lớn có tỷ lệ thấp. Để so sánh số lượng người tuyệt đối, bắt buộc phải dùng biểu đồ cột đếm số lượng thực tế (Unnormalized Bar Chart) hoặc bảng tần số chéo ban đầu.
 
 :::
 

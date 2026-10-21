@@ -43,9 +43,7 @@ Quy tắc chọn lọc này là kim chỉ nam xuyên suốt khi ta xây dựng c
 Trở lại với bộ dữ liệu sinh thái học Palmer Penguins. Một trong các biến định lượng được đo lường trên các cá thể chim cánh cụt là **chiều dài mỏ (bill length)** tính bằng milimet. Dưới đây là giá trị đo đạc trên $16$ cá thể đầu tiên:
 
 | Chỉ số quan sát ($i$) | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
-
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-
 | Chiều dài mỏ (mm) | 39.1 | 39.5 | 40.3 | 36.7 | 39.3 | 38.9 | 39.2 | 41.1 | 38.6 | 34.6 | 36.6 | 38.7 | 42.5 | 34.4 | 46.0 | 37.8 |
 
 Để trực quan hóa dãy số này, ta có nhiều lựa chọn đồ thị khác nhau. Việc chọn dạng đồ thị nào phụ thuộc vào **tiêu chuẩn mong muốn (Desiderata)** mà ta đặt ra cho bản tóm tắt.
@@ -80,7 +78,7 @@ Tuy nhiên, khi kích thước mẫu tăng lên hàng nghìn quan sát, các ch�
 
 **Hình 4.2:** Biểu đồ phân bố tần số (Histogram) chia dữ liệu thành các khoảng gộp đều nhau.
 
-Dù thoạt nhìn giống biểu đồ thanh, Histogram có cơ chế toán học hoàn toàn khác:
+Dù thoạt nhìn giống biểu đồ cột, Histogram có cơ chế toán học hoàn toàn khác:
 
 1. **Phân chia khoảng (Binning)**: Trục giá trị liên tục được chia thành các khoảng con có độ rộng bằng nhau gọi là các **thùng (bins)**.
 
@@ -462,13 +460,9 @@ Dấu trị tuyệt đối $|x_i - \bar{x}|$ giữ cho các độ lệch luôn d
 ## 5. Bảng tổng kết các cặp số đo thống kê
 
 | Thuộc tính phân phối | Số đo tâm | Số đo phân tán | Khi nào nên sử dụng? |
-
 | :--- | :---: | :---: | :--- |
-
 | **Dữ liệu đối xứng, không ngoại lai** | Trung bình ($\bar{x}$) | Độ lệch chuẩn ($s$) | Phân phối chuẩn, dữ liệu đo đạc vật lý chuẩn mực. |
-
 | **Dữ liệu lệch hoặc có ngoại lai** | Trung vị ($M$) | Khoảng tứ phân vị ($\text{IQR}$) | Thu nhập, giá nhà, thời gian phản hồi máy chủ. |
-
 | **Dữ liệu định tính** | Yếu vị ($\text{Mode}$) | Không áp dụng | Khảo sát ý kiến, loài sinh vật, chuyên ngành. |
 
 ---

@@ -138,27 +138,16 @@ Thay vì dồn toàn bộ dữ liệu vào việc khớp mô hình, chúng ta ch
 Sơ đồ phân chia ngẫu nhiên $80\% - 20\%$ trên một bảng dữ liệu gồm $10$ quan sát và $3$ biến dự báo được minh họa cụ thể dưới đây:
 
 | Thứ tự | $y$ (Điểm thi) | $x_1$ (Giờ học) | $x_2$ (Số bài tập) | $x_3$ (Điểm danh) | Phân bổ tập dữ liệu |
-
 | :---: | :---: | :---: | :---: | :---: | :---: |
-
 | 1 | 78 | 4.2 | 12 | 0.95 | **Tập huấn luyện (Train)** |
-
 | 2 | 62 | 2.5 | 8 | 0.80 | **Tập kiểm thử (Test)** |
-
 | 3 | 85 | 5.8 | 15 | 1.00 | **Tập huấn luyện (Train)** |
-
 | 4 | 91 | 7.1 | 18 | 0.90 | **Tập huấn luyện (Train)** |
-
 | 5 | 74 | 3.9 | 11 | 0.85 | **Tập huấn luyện (Train)** |
-
 | 6 | 69 | 3.1 | 9 | 0.75 | **Tập kiểm thử (Test)** |
-
 | 7 | 88 | 6.4 | 16 | 0.95 | **Tập huấn luyện (Train)** |
-
 | 8 | 82 | 5.0 | 14 | 0.90 | **Tập huấn luyện (Train)** |
-
 | 9 | 95 | 8.2 | 20 | 1.00 | **Tập huấn luyện (Train)** |
-
 | 10 | 70 | 3.5 | 10 | 0.85 | **Tập huấn luyện (Train)** |
 
 *Bảng 26.1: Minh họa phân chia tập dữ liệu theo tỷ lệ 8:2. Tám quan sát được phân bổ vào tập Train để huấn luyện hệ số, còn hai quan sát được giữ lại làm tập Test.*
@@ -574,13 +563,9 @@ $$
 Bảng so sánh tổng hợp:
 
 | Chỉ số đánh giá | Mô hình 1 (Tuyến tính) | Mô hình 2 (Đa thức bậc cao) |
-
 | :--- | :---: | :---: |
-
 | $\text{MSE}_{\text{train}}$ | $0.20$ | $\mathbf{0.00}$ |
-
 | $\text{MSE}_{\text{test}}$ | $\mathbf{0.01}$ | $6.25$ |
-
 | $\text{RMSE}_{\text{test}}$ | $\mathbf{0.10}$ | $2.50$ |
 
 **Kết luận**:
@@ -602,17 +587,11 @@ Bảng so sánh tổng hợp:
 Một kỹ sư dữ liệu huấn luyện $5$ mô hình hồi quy với độ phức tạp tăng dần (từ mô hình tuyến tính đơn giản đến các đa thức bậc $2, 4, 8, 16$) trên cùng một tập dữ liệu $1000$ mẫu. Kỹ sư ghi nhận sai số $\text{RMSE}_{\text{train}}$ và $\text{RMSE}_{\text{test}}$ thu được trong bảng sau:
 
 | Mô hình | Bậc đa thức | $\text{RMSE}_{\text{train}}$ | $\text{RMSE}_{\text{test}}$ |
-
 | :---: | :---: | :---: | :---: |
-
 | M1 | 1 | 8.42 | 8.56 |
-
 | M2 | 2 | 5.21 | 5.34 |
-
 | M3 | 4 | 4.85 | 4.98 |
-
 | M4 | 8 | 3.12 | 6.87 |
-
 | M5 | 16 | 1.05 | 15.42 |
 
 **Yêu cầu:**

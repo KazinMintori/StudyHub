@@ -271,17 +271,11 @@ Về số lượng lần tái lấy mẫu: Trong thực hành nghiên cứu chuy
 Xét một mẫu dữ liệu ban đầu gồm $n = 5$ cá thể chim cánh cụt với các thông tin được ghi nhận như sau:
 
 | Mã cá thể | Tên gọi | Loài (Species) | Chiều dài cánh (mm) |
-
 | :---: | :--- | :--- | :---: |
-
 | 1 | Gus | Chinstrap | 50.7 |
-
 | 2 | Luz | Gentoo | 48.5 |
-
 | 3 | Ida | Chinstrap | 52.8 |
-
 | 4 | Ola | Gentoo | 44.5 |
-
 | 5 | Abe | Adelie | 42.0 |
 
 Hãy phân tích và đánh giá xem các mẫu đề xuất dưới đây, mẫu nào là **mẫu Bootstrap hợp lệ** được rút từ mẫu ban đầu trên:

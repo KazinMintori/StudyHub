@@ -119,11 +119,8 @@ Từ nguyên của từ “datum” trong tiếng Latinh mang ý nghĩa là “m
 Hãy hình dung trong một thế giới song song lý tưởng, để kiểm tra xem liệu việc tốt nghiệp đại học danh tiếng (biến can thiệp $T$) có phải là nguyên nhân giúp bạn An tìm được việc làm tốt (biến kết cục $Y$) hay không, ta có thể quan sát bảng dữ liệu sau:
 
 | Cá thể | Tốt nghiệp đại học ($T$) | Có việc làm tốt ($Y$) | Bản chất quan sát |
-
 | :--- | :--- | :--- | :--- |
-
 | **An** | Có ($T=1$) | Có ($Y=1$) | Thế giới thực tế đã diễn ra |
-
 | **An** | Không ($T=0$) | Không ($Y=0$) | Thế giới phản thực tế (chưa từng xảy ra) |
 
 Trong bảng dữ liệu lý tưởng này, hai dòng quan sát thuộc về cùng một người: Có cùng chỉ số IQ, cùng tính cách, cùng hoàn cảnh gia đình, cùng năng lực ban đầu. Sự khác biệt duy nhất là một phiên bản của An đi học đại học, còn phiên bản kia thì không. Khi kết cục việc làm thay đổi giữa hai phiên bản, ta có bằng chứng đanh thép $100\%$ rằng: Tấm bằng đại học chính là nguyên nhân trực tiếp giúp An có việc làm tốt.
@@ -192,19 +189,12 @@ Phát biểu cấp độ quần thể chuyển trọng tâm từ một cá nhân
 Xét dữ liệu của 6 sinh viên, trong đó 3 người tốt nghiệp đại học ($T=1$) và 3 người không tốt nghiệp ($T=0$):
 
 | Sinh viên | Tốt nghiệp đại học ($T$) | Có việc làm tốt ($Y$) |
-
 | :--- | :--- | :--- |
-
 | **An** | Có ($T=1$) | Có ($Y=1$) |
-
 | **Bình** | Có ($T=1$) | Không ($Y=0$) |
-
 | **Chi** | Có ($T=1$) | Có ($Y=1$) |
-
 | **Dũng** | Không ($T=0$) | Không ($Y=0$) |
-
 | **Hà** | Không ($T=0$) | Không ($Y=0$) |
-
 | **Linh** | Không ($T=0$) | Có ($Y=1$) |
 
 Từ bảng dữ liệu quan sát này, ta tính tỉ lệ có việc làm tốt ở mỗi nhóm:
@@ -239,15 +229,10 @@ Hãy xem xét một ví dụ thực tế đầy kịch tính về việc lựa c
 Giả sử trong một thế giới toàn tri, ta biết chính xác thời gian di chuyển (phút) của 4 hành khách dưới cả hai phương án:
 
 | Hành khách | Thời gian đi Xe hơi $Y(0)$ | Thời gian đi Tàu điện $Y(1)$ | Hiệu ứng cá thể $\tau_i = Y(1) - Y(0)$ |
-
 | :--- | :--- | :--- | :--- |
-
 | **Maria** | 35 | 28 | $28 - 35 = -7$ (Tàu nhanh hơn 7 phút) |
-
 | **Phan** | 30 | 32 | $32 - 30 = +2$ (Tàu chậm hơn 2 phút) |
-
 | **An** | 40 | 55 | $55 - 40 = +15$ (Tàu chậm hơn 15 phút) |
-
 | **Minh** | 30 | 40 | $40 - 30 = +10$ (Tàu chậm hơn 10 phút) |
 
 Từ bảng số liệu toàn tri này, ta tính toán các giá trị kỳ vọng thực sự:
@@ -295,15 +280,10 @@ Trong đời sống thực tế, con người luôn hành động có chủ đí
 Dữ liệu thực tế mà nhà phân tích thu thập được trong bảng khảo sát sẽ bị khuyết thiếu các giá trị phản thực tế:
 
 | Hành khách | Thời gian đi Xe hơi quan sát | Thời gian đi Tàu điện quan sát | Phương tiện lựa chọn |
-
 | :--- | :--- | :--- | :--- |
-
 | **Maria** | ? *(Phản thực tế)* | 28 | Tàu điện |
-
 | **Phan** | ? *(Phản thực tế)* | 32 | Tàu điện |
-
 | **An** | 40 | ? *(Phản thực tế)* | Xe hơi |
-
 | **Minh** | 30 | ? *(Phản thực tế)* | Xe hơi |
 
 Nếu một nhà phân tích thiếu kinh nghiệm thực hiện so sánh ngây thơ (Naive Comparison) giữa hai nhóm:
@@ -433,15 +413,10 @@ $$
 Một công ty công nghệ thử nghiệm hai giao diện thanh toán: Giao diện A (truyền thống, $T=0$) và Giao diện B (tinh gọn một chạm, $T=1$). Biến kết cục $Y$ là thời gian hoàn tất đơn hàng (tính bằng giây). Trong một nghiên cứu thử nghiệm trên 4 khách hàng, bảng kết quả tiềm năng toàn tri (biết trước cả hai trạng thái) được ghi nhận như sau:
 
 | Khách hàng | $Y(0)$ (Giao diện A) | $Y(1)$ (Giao diện B) |
-
 | :--- | :--- | :--- |
-
 | **Khách hàng 1** | 45 | 30 |
-
 | **Khách hàng 2** | 50 | 40 |
-
 | **Khách hàng 3** | 60 | 55 |
-
 | **Khách hàng 4** | 70 | 65 |
 
 **Yêu cầu:**

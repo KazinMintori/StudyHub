@@ -180,9 +180,7 @@ Xét ví dụ tung một đồng xu cân bằng 3 lần, gọi $X$ là số mặ
 Ta có thể biểu diễn PMF dưới dạng bảng phân phối:
 
 | Giá trị $x$ | 0 | 1 | 2 | 3 |
-
 | :---: | :---: | :---: | :---: | :---: |
-
 | **$f(x) = P(X = x)$** | $\frac{1}{8}$ | $\frac{3}{8}$ | $\frac{3}{8}$ | $\frac{1}{8}$ |
 
 Hoặc dưới dạng biểu thức hàm từng khúc gọn gàng:
@@ -490,9 +488,7 @@ $$
 Xét biến ngẫu nhiên $X$ có bảng phân phối:
 
 | Giá trị $x$ | -1 | 1 | 2 | 4 |
-
 | :---: | :---: | :---: | :---: | :---: |
-
 | **$P(X = x)$** | $0{,}2$ | $0{,}3$ | $0{,}4$ | $?$ |
 
 Vì tổng xác suất phải bằng 1:
@@ -638,9 +634,7 @@ Kiểm tra: $0{,}15 + 0{,}25 + 0{,}35 + 0{,}25 = 1{,}00$.
 Bảng phân phối xác suất PMF của $X$:
 
 | Giá trị $x$ | 0 | 1 | 2 | 3 |
-
 | :---: | :---: | :---: | :---: | :---: |
-
 | **$f(x) = P(X = x)$** | $0{,}15$ | $0{,}25$ | $0{,}35$ | $0{,}25$ |
 
 **Câu 2: Tính toán các xác suất**:

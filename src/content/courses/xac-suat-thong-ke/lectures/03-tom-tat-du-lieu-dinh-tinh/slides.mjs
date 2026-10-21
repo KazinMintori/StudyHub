@@ -14,12 +14,12 @@ export const slides = [
     "note": "03-tom-tat-du-lieu-dinh-tinh",
     "title": "Trực quan hóa biến định tính",
     "bullets": [
-      "Biểu đồ thanh sử dụng chiều cao để biểu diễn tần số hoặc tỷ lệ.",
-      "Các thanh phải có khoảng cách rời nhau để thể hiện tính rời rạc.",
+      "Biểu đồ cột sử dụng chiều cao để biểu diễn tần số hoặc tỷ lệ.",
+      "Các cột phải có khoảng cách rời nhau để thể hiện tính rời rạc.",
       "Hạn chế sử dụng biểu đồ tròn vì mắt người khó so sánh góc chính xác."
     ],
     "formula": "",
-    "example": "Biểu đồ thanh so sánh số lượng cá thể trên 3 đảo Torgersen, Biscoe và Dream."
+    "example": "Biểu đồ cột so sánh số lượng cá thể trên 3 đảo Torgersen, Biscoe và Dream."
   },
   {
     "note": "03-tom-tat-du-lieu-dinh-tinh",

@@ -137,15 +137,10 @@ Hãy đặt ba khía cạnh của quá trình thống kê này cạnh nhau để
 <p align="center"><em>Hình 16.5: Bộ ba bức tranh thống kê: Phân phối tổng thể (trái), Phân phối thực nghiệm mẫu (giữa) và Phân phối chọn mẫu (phải).</em></p>
 
 | Đặc trưng | Tổng thể (Population) | Dữ liệu mẫu (Empirical Sample) | Phân phối chọn mẫu (Sampling Dist.) |
-
 | :--- | :--- | :--- | :--- |
-
 | **Bản chất** | Toàn bộ $N$ cá thể | $n$ quan sát trong một mẫu | Hàng nghìn thống kê $\bar{x}$ qua các mẫu |
-
 | **Hình dạng** | Lệch trái nặng | Lệch trái (giống tổng thể) | Dạng chuông đối xứng (Chuẩn Gauss) |
-
 | **Tâm (Trung bình)**| $\mu = 87.6$ | $\bar{x} = 86.27$ | $E(\bar{X}) = \mu = 87.6$ |
-
 | **Độ phân tán** | $\sigma = 8.9$ | $s = 9.9$ | $\text{SE}(\bar{x}) = \frac{\sigma}{\sqrt{n}} \approx 0.89$ |
 
 Ba quy luật nền tảng xuất hiện:
@@ -222,13 +217,9 @@ Một câu hỏi thường gặp: Giả sử một nhà nghiên cứu khác kh�
 Hãy quan sát bảng so sánh sai số chuẩn dưới đây:
 
 | Quy mô tổng thể ($N$) | $n = 25$ | $n = 100$ | $n = 400$ |
-
 | :--- | :--- | :--- | :--- |
-
 | **$N = 500$** | $\text{SE} \approx \sigma / 5$ | $\text{SE} \approx \sigma / 10$ | $\text{SE} \approx \sigma / 20$ |
-
 | **$N = 5{,}000$** | $\text{SE} \approx \sigma / 5$ | $\text{SE} \approx \sigma / 10$ | $\text{SE} \approx \sigma / 20$ |
-
 | **$N = 50{,}000$** | $\text{SE} \approx \sigma / 5$ | $\text{SE} \approx \sigma / 10$ | $\text{SE} \approx \sigma / 20$ |
 
 ::: tip Quy luật về quy mô tổng thể và cỡ mẫu

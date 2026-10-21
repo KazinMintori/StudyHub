@@ -131,19 +131,12 @@ Trong câu lệnh trên, biểu thức `name == "Little brown bat"` là điều 
 Phép lọc dơi nâu sử dụng điều kiện so sánh bằng trực diện nhất. Trong thực tế, ta có thể xây dựng đa dạng các phép so sánh số học và phân loại thông qua các toán tử chuẩn sau:
 
 | Toán tử | Ý nghĩa toán học & logic | Ví dụ minh họa |
-
 | :---: | :--- | :--- |
-
 | `==` | Bằng chính xác (Equal to) | `vore == "carni"` |
-
 | `!=` | Khác / Không bằng (Not equal to) | `conservation != "lc"` |
-
 | `<` | Nhỏ hơn (Less than) | `sleep_total < 8` |
-
 | `>` | Lớn hơn (Greater than) | `log_bodywt > 12` |
-
 | `<=` | Nhỏ hơn hoặc bằng (Less than or equal to) | `sleep_total <= 12` |
-
 | `>=` | Lớn hơn hoặc bằng (Greater than or equal to) | `log_bodywt >= 10` |
 
 ::: tip Lưu ý quan trọng: Phân biệt `==` và `=`

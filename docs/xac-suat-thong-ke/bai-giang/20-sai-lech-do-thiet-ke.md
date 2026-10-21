@@ -41,11 +41,8 @@ Trong kiểm định giả thuyết thống kê, ta đặt lên bàn cân hai gi
 Khi đối chiếu quyết định thống kê với chân lý khách quan trong tự nhiên, ta thu được bốn tình huống khả dĩ:
 
 | Chân lý khách quan | Phán quyết: Bác bỏ $H_0$ | Phán quyết: Không bác bỏ $H_0$ |
-
 | :--- | :--- | :--- |
-
 | **$H_0$ thực sự đúng** | **Sai lầm loại I** (Dương tính giả)<br>Xác suất $= \alpha$ | **Quyết định đúng đắn** (Độ đặc hiệu)<br>Xác suất $= 1 - \alpha$ |
-
 | **$H_A$ thực sự đúng** | **Quyết định đúng đắn** (Lực kiểm định)<br>Xác suất $= 1 - \beta$ | **Sai lầm loại II** (Âm tính giả)<br>Xác suất $= \beta$ |
 
 ### Sai lầm loại I (Type I Error / False Positive)
@@ -133,13 +130,9 @@ Thử nghiệm ngẫu nhiên có đối chứng được tiến hành trên $90$
 Biến số kết cục là việc bệnh nhân có sống sót qua 24 giờ đầu tiên hay không. Kết quả ghi nhận tại bệnh viện như sau:
 
 | Phân nhóm bệnh nhân | Tử vong | Sống sót | Tổng số | Tỉ lệ sống sót quan sát ($\hat{p}$) |
-
 | :--- | :--- | :--- | :--- | :--- |
-
 | **Nhóm đối chứng (Control)** | 39 | 11 | 50 | $\hat{p}_C = \frac{11}{50} = 0.22$ ($22\%$) |
-
 | **Nhóm can thiệp (Treatment)** | 26 | 14 | 40 | $\hat{p}_T = \frac{14}{40} = 0.35$ ($35\%$) |
-
 | **Tổng cộng** | 65 | 25 | 90 | $\hat{p}_{\text{chung}} = \frac{25}{90} \approx 0.278$ |
 
 Chênh lệch tỉ lệ sống sót quan sát được giữa hai nhóm là:
@@ -313,19 +306,12 @@ $$
 Hãy nhìn vào bảng số liệu dưới đây:
 
 | Số lượng phép thử ($m$) | Xác suất có ít nhất một dương tính giả |
-
 | :--- | :--- |
-
 | **1** | $1 - 0.95^1 = 5.00\%$ |
-
 | **5** | $1 - 0.95^5 \approx 22.62\%$ |
-
 | **10** | $1 - 0.95^{10} \approx 40.13\%$ |
-
 | **20** | $1 - 0.95^{20} \approx 64.15\%$ |
-
 | **50** | $1 - 0.95^{50} \approx 92.31\%$ |
-
 | **100** | $1 - 0.95^{100} \approx 99.41\%$ |
 
 Chỉ với 20 phép thử độc lập hoàn toàn ngẫu nhiên, xác suất bắt gặp một kết quả "có ý nghĩa thống kê giả mạo" đã lên tới hơn $64\%$! Hiện tượng này được gọi là **vấn nạn so sánh bội** (Multiple Comparisons Problem) hay việc đào bới dữ liệu để săn lùng $p\text{-value}$ (*p-hacking* / *Data Dredging*).

@@ -30,7 +30,7 @@ Bên cạnh khía cạnh kỹ thuật, thống kê học còn sở hữu một p
 
 </div>
 
-**Hình 5.1:** Sự phong phú của các dạng đồ thị thống kê: Từ biểu đồ chấm, phân bố tần số, mật độ đến biểu đồ vĩ cầm, biểu đồ hộp và biểu đồ thanh.
+**Hình 5.1:** Sự phong phú của các dạng đồ thị thống kê: Từ biểu đồ chấm, phân bố tần số, mật độ đến biểu đồ vĩ cầm, biểu đồ hộp và biểu đồ cột.
 
 Sự đa dạng về hình thái của các biểu đồ trên dễ khiến ta ngộ nhận rằng mỗi loại biểu đồ là một cấu trúc hoàn toàn riêng biệt. Tuy nhiên, khi đào sâu bản chất toán học:
 
@@ -91,19 +91,12 @@ Những biến số nào là bắt buộc để vẽ được biểu đồ này?
 Như vậy, tập dữ liệu đầu vào bắt buộc phải là một Khung dữ liệu (Data Frame) chứa đầy đủ ba cột này:
 
 | bill_length_mm | bill_depth_mm | species |
-
 | :---: | :---: | :---: |
-
 | 39.1 | 18.7 | Adelie |
-
 | 39.5 | 17.4 | Adelie |
-
 | 40.3 | 18.0 | Adelie |
-
 | 36.7 | 19.3 | Adelie |
-
 | 39.3 | 20.6 | Adelie |
-
 | ... | ... | ... |
 
 ::: tip Yêu cầu tiên quyết về dữ liệu
@@ -137,21 +130,13 @@ Trong biểu đồ chim cánh cụt ở Hình 5.3:
 Bảng các thuộc tính thẩm mỹ (Aesthetic Attributes) phổ biến nhất trong trực quan hóa dữ liệu:
 
 | Thuộc tính thẩm mỹ | Ý nghĩa thị giác | Kiểu biến số phù hợp nhất |
-
 | :--- | :--- | :--- |
-
 | **`x`** | Tọa độ vị trí theo phương ngang | Định lượng hoặc Định tính |
-
 | **`y`** | Tọa độ vị trí theo phương đứng | Định lượng hoặc Định tính |
-
 | **`color`** | Màu sắc viền của hình khối hoặc điểm | Định tính hoặc Định lượng liên tục |
-
 | **`fill`** | Màu tô đầy bên trong hình khối (thanh bar, diện tích) | Định tính |
-
 | **`size`** | Độ lớn kích thước của điểm hoặc độ dày đường nét | Định lượng |
-
 | **`shape`** | Hình dạng của điểm biểu diễn (tròn, vuông, tam giác) | Định tính danh nghĩa (dưới 6 mức) |
-
 | **`alpha`** | Độ trong suốt của điểm (từ $0$ là trong suốt hoàn toàn đến $1$ là mờ đục) | Định lượng hoặc giải quyết đè điểm (overplotting) |
 
 ---
@@ -195,19 +180,12 @@ Danh mục các hình học cơ bản trong thống kê:
 Để thấy rõ cách tư duy theo Ngữ pháp đồ họa giúp cải tiến việc kể chuyện bằng dữ liệu, hãy xét tập dữ liệu lịch sử ghi nhận số ca sinh tại London, nước Anh trong thế kỷ 17 gồm $82$ quan sát:
 
 | year | total |
-
 | :---: | :---: |
-
 | 1629 | 9901 |
-
 | 1630 | 9315 |
-
 | 1631 | 8524 |
-
 | 1632 | 9584 |
-
 | 1633 | 9997 |
-
 | 1634 | 9855 |
 
 Ta phân rã quy trình tạo biểu đồ chuỗi thời gian:
@@ -309,17 +287,11 @@ Vị trí tọa độ $x$ và $y$ của các bong bóng trong biểu đồ trên
 Bài giảng trực quan hóa huyền thoại của Giáo sư y tế công cộng Hans Rosling mô tả sự biến động về chất lượng sống toàn cầu trong thế kỷ 20 là đỉnh cao của việc ứng dụng Ngữ pháp đồ họa:
 
 | Tín hiệu thị giác (Aesthetic) | Biến số dữ liệu tương ứng | Kiểu biến số |
-
 | :--- | :--- | :--- |
-
 | **Trục hoành ($x$)** | Tỷ lệ sinh sản (Fertility rate) | Định lượng liên tục |
-
 | **Trục tung ($y$)** | Tuổi thọ bình quân (Life expectancy) | Định lượng liên tục |
-
 | **Kích thước ($size$)** | Quy mô dân số (Population) | Định lượng liên tục |
-
 | **Màu sắc ($color$)** | Khu vực địa lý / Châu lục (Region) | Định tính danh nghĩa |
-
 | **Khung hình chuyển động ($time$)** | Năm ghi nhận (Year) | Định lượng rời rạc |
 
 Chỉ với một biểu đồ điểm duy nhất (`geom_point`), việc kết hợp hài hòa năm ánh xạ thẩm mỹ đã kể trọn vẹn câu chuyện biến đổi vĩ mô của nhân loại qua hơn hai thế kỷ mà không cần đến những bảng số liệu khô khan.
@@ -494,7 +466,7 @@ Quan sát biểu đồ bong bóng về tỷ lệ mắc bệnh truyền nhiễm t
 
 2. Tại sao ta không thể đọc được tọa độ số học cụ thể trên hai trục $x$ và $y$ từ biểu đồ này?
 
-3. So sánh ưu điểm và nhược điểm của dạng biểu đồ bong bóng này so với một biểu đồ thanh thông thường có cùng nội dung.
+3. So sánh ưu điểm và nhược điểm của dạng biểu đồ bong bóng này so với một biểu đồ cột thông thường có cùng nội dung.
 
 :::
 
@@ -516,11 +488,11 @@ Quan sát biểu đồ bong bóng về tỷ lệ mắc bệnh truyền nhiễm t
 
    - Biểu đồ hoàn toàn không có trục tọa độ số học $x$ hay $y$. Vị trí của các bong bóng được tính toán bởi thuật toán đóng gói hình tròn (circle packing) để gom các khối tròn nằm khít nhau mà không đè lên nhau. Tọa độ $(x, y)$ của các bong bóng là kết quả của thuật toán đồ họa chứ không ánh xạ từ bất kỳ biến số thực nghiệm nào trong bảng dữ liệu.
 
-3. **So sánh với biểu đồ thanh (Bar Chart)**:
+3. **So sánh với biểu đồ cột (Bar Chart)**:
 
    - **Ưu điểm**: Biểu đồ bong bóng tạo ấn tượng thị giác mạnh mẽ, trực quan, thu hút sự chú ý của công chúng và cho thấy ngay bức tranh tổng thể về tỷ trọng các nhóm bệnh.
 
-   - **Nhược điểm**: Mắt người rất khó ước lượng chính xác tỷ lệ diện tích của các hình tròn (so với việc đối chiếu chiều dài thẳng đứng trên trục số của biểu đồ thanh). Các bệnh có tỷ lệ mắc gần tương đương nhau sẽ rất khó phân biệt thứ hạng hơn kém nếu chỉ nhìn vào kích thước bong bóng.
+   - **Nhược điểm**: Mắt người rất khó ước lượng chính xác tỷ lệ diện tích của các hình tròn (so với việc đối chiếu chiều dài thẳng đứng trên trục số của biểu đồ cột). Các bệnh có tỷ lệ mắc gần tương đương nhau sẽ rất khó phân biệt thứ hạng hơn kém nếu chỉ nhìn vào kích thước bong bóng.
 
 :::
 

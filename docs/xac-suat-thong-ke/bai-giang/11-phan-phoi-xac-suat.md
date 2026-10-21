@@ -72,9 +72,7 @@ Hình 11.1: Chiếc hộp chứa 5 tấm thẻ mang các giá trị $\{1, 2, 2, 
 Nếu ta rút ngẫu nhiên 1 tấm thẻ từ hộp, biến ngẫu nhiên $X$ (con số ghi trên thẻ) có 4 giá trị phân biệt. Bảng phân phối xác suất của $X$ được thiết lập như sau:
 
 | Kết quả khả dĩ ($x$) | 1 | 2 | 3 | 4 | Tổng cộng |
-
 | :---: | :---: | :---: | :---: | :---: | :---: |
-
 | **Xác suất $P(X = x)$** | $\frac{1}{5} = 0{,}2$ | $\frac{2}{5} = 0{,}4$ | $\frac{1}{5} = 0{,}2$ | $\frac{1}{5} = 0{,}2$ | **$1{,}0$** |
 
 Vì tấm thẻ mang số $\fbox{2}$ xuất hiện 2 lần trong hộp, nó có cơ hội được chọn gấp đôi so với các con số còn lại, và do đó nó nhận được phần "bánh" xác suất gấp đôi ($40\%$).
@@ -124,17 +122,11 @@ Biểu đồ trên được suy ra hoàn toàn từ mô hình lý thuyết toán
 Giả sử ta thực hiện $50$ lần rút có hoàn lại từ chiếc hộp trên. Kết quả thực nghiệm thu được như sau:
 
 | Thẻ số | Số lần rút trúng | Tần suất thực nghiệm | Xác suất lý thuyết |
-
 | :---: | :---: | :---: | :---: |
-
 | $\fbox{1}$ | 10 | $\frac{10}{50} = 0{,}20$ | $0{,}20$ |
-
 | $\fbox{2}$ | 24 | $\frac{24}{50} = 0{,}48$ | $0{,}40$ |
-
 | $\fbox{3}$ | 10 | $\frac{10}{50} = 0{,}20$ | $0{,}20$ |
-
 | $\fbox{4}$ | 6 | $\frac{6}{50} = 0{,}12$ | $0{,}20$ |
-
 | **Tổng** | **50** | **$1{,}00$** | **$1{,}00$** |
 
 Dựng biểu đồ biểu diễn các tỷ lệ thực nghiệm này, ta thu được **biểu đồ thực nghiệm** (Empirical Histogram):
@@ -166,11 +158,8 @@ Khi gieo đồng thời 2 con xúc xắc 6 mặt cân bằng, không gian mẫu 
 Bảng phân phối xác suất của $S$:
 
 | Tổng $S$ | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
-
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-
 | **Số cách** | 1 | 2 | 3 | 4 | 5 | 6 | 5 | 4 | 3 | 2 | 1 |
-
 | **$P(S)$** | $\frac{1}{36}$ | $\frac{2}{36}$ | $\frac{3}{36}$ | $\frac{4}{36}$ | $\frac{5}{36}$ | $\frac{6}{36}$ | $\frac{5}{36}$ | $\frac{4}{36}$ | $\frac{3}{36}$ | $\frac{2}{36}$ | $\frac{1}{36}$ |
 
 <div style="text-align: center; margin: 1.5rem 0;">
@@ -477,17 +466,11 @@ $$
 Hiểu rõ ranh giới giữa hai phân phối này là kỹ năng quan trọng nhất để không bao giờ chọn sai mô hình trong nghiên cứu thực nghiệm:
 
 | Đặc tính so sánh | Phân phối Nhị thức $\text{Binomial}(n, p)$ | Phân phối Siêu bội $\text{Hypergeometric}(N, G, n)$ |
-
 | :--- | :--- | :--- |
-
 | **Bản chất phép thử** | Độc lập từng lần thử. | Phụ thuộc lẫn nhau qua từng lần rút. |
-
 | **Cơ chế lấy mẫu** | Lấy mẫu **có hoàn lại** (With replacement). | Lấy mẫu **không hoàn lại** (Without replacement). |
-
 | **Xác suất thành công** | Cố định không đổi ($p = \text{const}$). | Thay đổi liên tục sau mỗi lần rút. |
-
 | **Số tham số** | 2 tham số: $(n, p)$. | 3 tham số: $(N, G, n)$. |
-
 | **Kích thước tổng thể $N$** | Coi như vô hạn hoặc không ảnh hưởng. | Hữu hạn và là tham số cốt lõi. |
 
 ### Khi nào có thể dùng Nhị thức để xấp xỉ Siêu bội?
@@ -806,9 +789,7 @@ $$
 Bảng phân phối xác suất:
 
 | Số người bị sốt ($k$) | 0 | 1 | 2 | 3 | 4 | Tổng |
-
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-
 | **Xác suất $P(Y = k)$** | $0{,}4096$ | $0{,}4096$ | $0{,}1536$ | $0{,}0256$ | $0{,}0016$ | **$1{,}0000$** |
 
 **Câu 2: Xác suất có ít nhất một người bị sốt**:

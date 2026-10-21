@@ -70,11 +70,11 @@ Cùng với biến mục tiêu là hàng loạt biến dự báo tiềm năng gh
 
 ### Phân tích khám phá dữ liệu (EDA)
 
-Liệu sự xuất hiện của từ "winner" có phải là dấu hiệu chắc chắn để nhận diện thư rác? Hãy quan sát biểu đồ thanh chuẩn hóa phân bố tỷ lệ thư rác theo biến `winner`:
+Liệu sự xuất hiện của từ "winner" có phải là dấu hiệu chắc chắn để nhận diện thư rác? Hãy quan sát biểu đồ cột chuẩn hóa phân bố tỷ lệ thư rác theo biến `winner`:
 
 ![Hình 27.1: Tỷ lệ thư rác theo sự xuất hiện của từ khóa winner](./img/stat20-27/unnamed-chunk-2-1.png)
 
-*Hình 27.1: Biểu đồ thanh chuẩn hóa. Khoảng 30% thư chứa từ "winner" là thư rác, trong khi chỉ có khoảng 10% thư không chứa từ này là thư rác.*
+*Hình 27.1: Biểu đồ cột chuẩn hóa. Khoảng 30% thư chứa từ "winner" là thư rác, trong khi chỉ có khoảng 10% thư không chứa từ này là thư rác.*
 
 Quan sát Hình 27.1, ta nhận thấy:
 
@@ -143,21 +143,13 @@ Trong đó đại lượng $z \in (-\infty, +\infty)$ là chỉ số tuyến tí
 ### Bảng trực giác giá trị của hàm Sigmoid:
 
 | $z$ (Chỉ số tuyến tính) | Công thức tính toán | Giá trị $f(z)$ | Trực giác xác suất |
-
 | :---: | :---: | :---: | :---: |
-
 | $-\infty$ | $\frac{1}{1 + e^{\infty}} = \frac{1}{\infty}$ | $0.00$ | Biến cố gần như chắc chắn không xảy ra |
-
 | $-2.0$ | $\frac{1}{1 + e^{2}} = \frac{1}{1 + 7.389}$ | $\approx 0.119$ | Xác suất xảy ra thấp ($11.9\%$) |
-
 | $-1.0$ | $\frac{1}{1 + e^{1}} = \frac{1}{1 + 2.718}$ | $\approx 0.269$ | Xác suất xảy ra tương đối thấp ($26.9\%$) |
-
 | $0.0$ | $\frac{1}{1 + e^{0}} = \frac{1}{1 + 1}$ | $0.500$ | Điểm cân bằng: Hai kết quả có cơ hội ngang nhau |
-
 | $+1.0$ | $\frac{1}{1 + e^{-1}} = \frac{1}{1 + 0.368}$ | $\approx 0.731$ | Xác suất xảy ra cao ($73.1\%$) |
-
 | $+2.0$ | $\frac{1}{1 + e^{-2}} = \frac{1}{1 + 0.135}$ | $\approx 0.881$ | Xác suất xảy ra rất cao ($88.1\%$) |
-
 | $+\infty$ | $\frac{1}{1 + e^{-\infty}} = \frac{1}{1 + 0}$ | $1.00$ | Biến cố gần như chắc chắn xảy ra |
 
 *Bảng 27.1: Bảng giá trị đối chiếu của hàm Sigmoid qua các ngưỡng chỉ số $z$.*
@@ -282,11 +274,8 @@ $$
 Khi đối chiếu giữa nhãn dự báo $\hat{y}$ và nhãn thực tế $y$, ta thu được bảng phân loại $2 \times 2$ gọi là **Ma trận nhầm lẫn (Confusion Matrix)**:
 
 | Nhãn thực tế ($y$) \ Nhãn dự báo ($\hat{y}$) | Dự báo là Dương tính ($\hat{y} = 1$) | Dự báo là Âm tính ($\hat{y} = 0$) |
-
 | :--- | :---: | :---: |
-
 | **Thực tế Dương tính ($y = 1$)** | **Dương tính thật (True Positive - TP)** | **Âm tính giả (False Negative - FN)**<br>*(Sai lầm Loại II)* |
-
 | **Thực tế Âm tính ($y = 0$)** | **Dương tính giả (False Positive - FP)**<br>*(Sai lầm Loại I)* | **Âm tính thật (True Negative - TN)** |
 
 *Bảng 27.2: Cấu trúc của Ma trận nhầm lẫn.*
@@ -737,13 +726,9 @@ Sau đó, ngân hàng thử nghiệm ngưỡng nghiêm ngặt $p^* = 0.8$ nhằm
 **Trường hợp 1: Ngưỡng $p^* = 0.5$**
 
 | Thực tế \ Dự báo | Dự báo Gian lận ($\hat{y} = 1$) | Dự báo Hợp lệ ($\hat{y} = 0$) | Tổng cộng |
-
 | :--- | :---: | :---: | :---: |
-
 | **Gian lận thật ($y = 1$)** | $\text{TP} = 80$ | $\text{FN} = 20$ | $100$ |
-
 | **Hợp lệ thật ($y = 0$)** | $\text{FP} = 50$ | $\text{TN} = 850$ | $900$ |
-
 | **Tổng cộng** | $130$ | $870$ | $1,000$ |
 
 **Trường hợp 2: Ngưỡng $p^* = 0.8$**
@@ -755,13 +740,9 @@ Với ngưỡng $p^* = 0.8$:
 - $\text{FP}=10$, nên $\text{TN}=900-10=890$.
 
 | Thực tế \ Dự báo | Dự báo Gian lận ($\hat{y} = 1$) | Dự báo Hợp lệ ($\hat{y} = 0$) | Tổng cộng |
-
 | :--- | :---: | :---: | :---: |
-
 | **Gian lận thật ($y = 1$)** | $\text{TP} = 60$ | $\text{FN} = 40$ | $100$ |
-
 | **Hợp lệ thật ($y = 0$)** | $\text{FP} = 10$ | $\text{TN} = 890$ | $900$ |
-
 | **Tổng cộng** | $70$ | $930$ | $1,000$ |
 
 **Bước 2: Tính toán các chỉ số đánh giá**
@@ -837,17 +818,11 @@ $$
 Bảng so sánh tổng hợp giữa hai ngưỡng:
 
 | Chỉ số đánh giá | Ngưỡng mặc định ($p^* = 0.5$) | Ngưỡng nghiêm ngặt ($p^* = 0.8$) |
-
 | :--- | :---: | :---: |
-
 | Số ca khóa thẻ oan ($\text{FP}$) | $50$ ca | $\mathbf{10\text{ ca}}$ *(Giảm 80%)* |
-
 | Số ca gian lận lọt lưới ($\text{FN}$) | $\mathbf{20\text{ ca}}$ | $40$ ca |
-
 | Tỷ lệ phân loại sai ($\text{MCR}$) | $7.0\%$ | $\mathbf{5.0\%}$ |
-
 | Độ đặc hiệu ($\text{Specificity}$) | $94.44\%$ | $\mathbf{98.89\%}$ |
-
 | Độ nhạy ($\text{Sensitivity}$) | $\mathbf{80.0\%}$ | $60.0\%$ |
 
 **So sánh tổn thất của hai ngưỡng**:

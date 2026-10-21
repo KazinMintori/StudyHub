@@ -582,13 +582,9 @@ Bản chất của phép biến đổi này gồm hai thao tác hình học:
 Đối với bất kỳ biến ngẫu nhiên nào tuân theo phân phối chuẩn, diện tích dưới đường cong trong các khoảng đối xứng quanh tâm luôn tuân thủ quy tắc thực nghiệm:
 
 | Khoảng giá trị | Độ lệch quanh tâm | Tỉ lệ diện tích (Xác suất) |
-
 | :--- | :--- | :--- |
-
 | $[\mu - \sigma, \mu + \sigma]$ | Trong vòng $1$ độ lệch chuẩn | $\approx 68.27\% \approx 68\%$ |
-
 | $[\mu - 2\sigma, \mu + 2\sigma]$ | Trong vòng $2$ độ lệch chuẩn | $\approx 95.45\% \approx 95\%$ |
-
 | $[\mu - 3\sigma, \mu + 3\sigma]$ | Trong vòng $3$ độ lệch chuẩn | $\approx 99.73\% \approx 99.7\%$ |
 
 ---

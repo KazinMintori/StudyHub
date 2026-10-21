@@ -95,19 +95,12 @@ Trong quá trình thực hiện một nghiên cứu thực nghiệm, ngoài bi�
 Xét dữ liệu của 6 sinh viên tham gia thử nghiệm so sánh hiệu quả định dạng tài liệu học tập (PDF so với Trang web):
 
 | Sinh viên | Nhóm can thiệp | Mức độ hiểu bài ($Y$) | Chuyên ngành | Điểm GPA tích lũy | Ngôn ngữ mẹ đẻ tiếng Anh |
-
 | :--- | :--- | :--- | :--- | :--- | :--- |
-
 | **Evelyn** | PDF | Sâu sắc | Thống kê | 3.81 | Có |
-
 | **Grace** | PDF | Sơ sài | Kinh tế | 3.63 | Không |
-
 | **Juan** | PDF | Sâu sắc | Kinh tế | 3.20 | Có |
-
 | **Alex** | Trang web | Sâu sắc | Thống kê | 2.85 | Không |
-
 | **Monica** | Trang web | Sơ sài | Kinh tế | 3.19 | Có |
-
 | **Sriya** | Trang web | Sơ sài | Thống kê | 3.80 | Có |
 
 Trong bảng dữ liệu này, chuyên ngành học, điểm GPA tích lũy và ngôn ngữ mẹ đẻ đều được xác định trước khi sinh viên bắt đầu đọc tài liệu. Do đó, đây là các **hiệp biến** (Covariates). Trái lại, mức độ hiểu bài sau khóa học là biến kết cục ($Y$).

@@ -204,7 +204,7 @@ Bộ dữ liệu Palmer Penguins là minh chứng tiêu biểu cho thấy: Quy t
 
 Hệ thống phân loại dữ liệu là kim chỉ nam điều hướng toàn bộ quy trình phân tích:
 
-1. **Lựa chọn biểu đồ trực quan phù hợp**: Biến định tính thường được thể hiện bằng biểu đồ thanh (bar plot), trong khi biến định lượng liên tục đòi hỏi biểu đồ phân bố tần số (histogram) hoặc biểu đồ mật độ (density plot). Biểu diễn nhầm một biến thứ bậc thành biến danh nghĩa sẽ làm mất trật tự thông tin quý giá.
+1. **Lựa chọn biểu đồ trực quan phù hợp**: Biến định tính thường được thể hiện bằng biểu đồ cột (bar plot), trong khi biến định lượng liên tục đòi hỏi biểu đồ phân bố tần số (histogram) hoặc biểu đồ mật độ (density plot). Biểu diễn nhầm một biến thứ bậc thành biến danh nghĩa sẽ làm mất trật tự thông tin quý giá.
 
 2. **Lựa chọn tham số thống kê tương ứng**: Ta có thể tính trung bình cộng ($\bar{x}$) và độ lệch chuẩn ($s$) cho biến định lượng, nhưng với biến định tính thì trung vị thứ bậc hoặc tỷ lệ phần trăm các mức mới là đại lượng phản ánh đúng bản chất.
 
@@ -229,23 +229,14 @@ Khi đối diện với hiện tượng thực tế phức tạp, ta hiếm khi 
 Dưới đây là một trích đoạn gồm 8 quan sát từ bộ dữ liệu chim cánh cụt:
 
 | bill_length_mm | bill_depth_mm | species |
-
 | :---: | :---: | :---: |
-
 | 43.5 | 18.1 | Chinstrap |
-
 | 48.1 | 15.1 | Gentoo |
-
 | 49.0 | 19.5 | Chinstrap |
-
 | 45.4 | 18.7 | Chinstrap |
-
 | 34.6 | 21.1 | Adelie |
-
 | 49.8 | 17.3 | Chinstrap |
-
 | 40.9 | 18.9 | Adelie |
-
 | 45.3 | 13.7 | Gentoo |
 
 Dù trông giống một bảng tính thông thường, Data Frame tuân thủ một chuẩn giao tiếp dữ liệu nghiêm ngặt: Mỗi cột đại diện cho duy nhất một biến số, và mỗi hàng đại diện cho duy nhất một đơn vị quan sát.

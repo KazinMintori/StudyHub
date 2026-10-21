@@ -65,19 +65,12 @@ Những ràng buộc hành chính này đồng nghĩa với việc: Sự kết h
 Để đánh giá tính hợp lý của giả thiết phân công trọng tài không liên quan đến đặc trưng trận đấu, nghiên cứu sử dụng kiểm định cân bằng hiệp biến. Không bác bỏ một kiểm định cân bằng không chứng minh tính độc lập. Các giá trị trình bày trong bảng đã được làm tròn:
 
 | Hiệp biến của trận đấu | Giá trị $p\text{-value}$ từ kiểm định cân bằng |
-
 | :--- | :--- |
-
 | **Năm thi đấu (Year)** | $0.00$ |
-
 | **Số cầu thủ da đen xuất phát (Đội chủ nhà)** | $0.75$ |
-
 | **Số cầu thủ da đen xuất phát (Đội khách)** | $0.72$ |
-
 | **Số lượng khán giả đến sân (Attendance)** | $0.49$ |
-
 | **Đội chủ nhà đã hết cơ hội vào Playoff** | $0.94$ |
-
 | **Đội khách đã hết cơ hội vào Playoff** | $0.81$ |
 
 Giá trị ghi 0,00 ở biến năm thi đấu là kết quả làm tròn, không phải xác suất bằng 0. Các kiểm định còn lại chưa cho bằng chứng chống lại giả thuyết cân bằng ở những hiệp biến đã xét. Kết quả ấy không bảo đảm cân bằng ở mọi đặc điểm hoặc loại trừ biến gây nhiễu chưa đo.
@@ -185,13 +178,9 @@ Một nghiên cứu nổi tiếng của Charig và cộng sự (1986) so sánh t
 Dữ liệu quan sát trên 700 bệnh nhân được phân loại theo kích thước sỏi:
 
 | Phân nhóm kích thước sỏi | Phương pháp A (Phẫu thuật mở) | Phương pháp B (Nội soi tán sỏi) | So sánh hiệu quả |
-
 | :--- | :--- | :--- | :--- |
-
 | **Sỏi nhỏ ($< 2\text{ cm}$)** | $\frac{81}{87} \approx 93.1\%$ | $\frac{234}{270} \approx 86.7\%$ | **Phương pháp A vượt trội ($93.1\% > 86.7\%$)** |
-
 | **Sỏi lớn ($\ge 2\text{ cm}$)** | $\frac{192}{263} \approx 73.0\%$ | $\frac{55}{80} \approx 68.8\%$ | **Phương pháp A vượt trội ($73.0\% > 68.8\%$)** |
-
 | **Tổng thể gộp chung** | $\frac{273}{350} \approx 78.0\%$ | $\frac{289}{350} \approx 82.6\%$ | **Phương pháp B vượt trội ($82.6\% > 78.0\%$)!** |
 
 ### Giải mã nghịch lý
@@ -243,15 +232,10 @@ Khi gộp dữ liệu ngây thơ mà không kiểm soát kích thước sỏi, n
 Trong một nghiên cứu quan sát đánh giá tác động của chương trình học bổng tài năng ($T=1$) đối với điểm thi chuẩn hóa sau đại học, nhà nghiên cứu thu thập dữ liệu của một ứng viên nhận học bổng ($T_1$) và ba ứng viên không nhận học bổng ($C_1, C_2, C_3$). Ba hiệp biến chuẩn hóa đo lường trước chương trình gồm: Điểm GPA đại học ($x_1$), Số năm kinh nghiệm làm việc ($x_2$) và Điểm bài kiểm tra tư duy đầu vào ($x_3$):
 
 | Ứng viên | Nhóm | $x_1$ (GPA) | $x_2$ (Số năm kinh nghiệm) | $x_3$ (Điểm tư duy) |
-
 | :--- | :--- | :--- | :--- | :--- |
-
 | **$T_1$** | Nhận học bổng | 3.5 | 2.0 | 80.0 |
-
 | **$C_1$** | Đối chứng | 3.4 | 2.0 | 82.0 |
-
 | **$C_2$** | Đối chứng | 3.0 | 3.0 | 75.0 |
-
 | **$C_3$** | Đối chứng | 3.8 | 1.0 | 90.0 |
 
 **Yêu cầu:**

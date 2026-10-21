@@ -175,15 +175,10 @@ $$
 Hãy lập bảng so sánh đầy đủ xác suất của biến ngẫu nhiên $X$ là "số thẻ đỏ rút được trong 3 lần" giữa hai cơ chế:
 
 | Số thẻ đỏ nhận được ($X$) | Rút có hoàn lại | Rút không hoàn lại |
-
 | :---: | :---: | :---: |
-
 | **0 thẻ đỏ** | $\frac{1}{8} = 0{,}125$ | $0$ (Không thể xảy ra) |
-
 | **1 thẻ đỏ** | $\frac{3}{8} = 0{,}375$ | $\frac{3}{6} = 0{,}500$ |
-
 | **2 thẻ đỏ** | $\frac{3}{8} = 0{,}375$ | $\frac{3}{6} = 0{,}500$ |
-
 | **3 thẻ đỏ** | $\frac{1}{8} = 0{,}125$ | $0$ (Không thể xảy ra) |
 
 Tại sao có sự khác biệt sâu sắc này? Bởi vì khi **rút không hoàn lại**, kết quả của lần rút trước làm thay đổi trực tiếp cơ cấu thành phần của hộp ở lần rút sau. Xác suất rút được thẻ đỏ ở lần thứ hai phụ thuộc chặt chẽ vào việc lần thứ nhất ta đã rút ra thẻ màu gì. Khái niệm này dẫn trực tiếp tới **xác suất có điều kiện**.
@@ -714,15 +709,10 @@ Toán học xác suất lý thuyết giải thích hoàn hảo vì sao con số 
 Có một sự nhầm lẫn vô cùng phổ biến giữa hai khái niệm: **Xung khắc** (Mutually Exclusive) và **Độc lập** (Independent).
 
 | Tiêu chí | Biến cố xung khắc (Rời nhau) | Biến cố độc lập |
-
 | :--- | :--- | :--- |
-
 | **Bản chất** | Không thể cùng xảy ra trong một lần thử. | Việc biến cố này xảy ra không ảnh hưởng đến xác suất của biến cố kia. |
-
 | **Đặc trưng tập hợp** | $A \cap B = \emptyset$ | $A \cap B \neq \emptyset$ (khi cả hai có xác suất dương) |
-
 | **Quy tắc toán học** | $P(A \cap B) = 0$ | $P(A \cap B) = P(A) \cdot P(B)$ |
-
 | **Quy tắc cộng** | $P(A \cup B) = P(A) + P(B)$ | Phải dùng công thức bao hàm - loại trừ. |
 
 ::: tip Định lý liên hệ giữa tính xung khắc và tính độc lập

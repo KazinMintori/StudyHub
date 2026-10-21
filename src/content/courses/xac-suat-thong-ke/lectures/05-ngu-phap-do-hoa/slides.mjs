@@ -5,7 +5,7 @@ export const slides = [
     "bullets": [
       "Dữ liệu là thành phần nền tảng đầu vào của đồ thị.",
       "Ánh xạ thẩm mỹ kết nối biến số với các thuộc tính hình ảnh thị giác.",
-      "Hình học xác định loại biểu đồ hiển thị như điểm, thanh, đường."
+      "Hình học xác định loại biểu đồ hiển thị như điểm, cột, đường."
     ],
     "formula": "",
     "example": "Ánh xạ chiều dài cánh vào trục x, khối lượng cơ thể vào trục y."
