@@ -77,7 +77,8 @@ for (let number = 1; number <= 8; number++) {
       assert(output.answerHtml.startsWith(primaryHtml), `${question.id}: complete current source answer comes first`)
       checkedCodeLiterals += assertCodePreserved(essay.markdown + (essay.supplementMarkdown ? '\n\n'+essay.supplementMarkdown : ''), output.answerHtml, `${question.id}/current answer`)
       assert(!/Hướng dẫn chấm|Ý cần đạt|Điểm tối đa|Rubric/i.test(output.answerHtml), `${question.id}: grading guide removed`)
-      assert.equal(output.answerHtml, primaryHtml + (essay.supplementMarkdown ? renderEssay(essay.supplementMarkdown, true) : ''), `${question.id}: no old answer or unreviewed appendix`)
+      assert(essay.supplementMarkdown?.trim(), `${question.id}: detailed explanation retained`)
+      assert.equal(output.answerHtml, primaryHtml + renderEssay(essay.supplementMarkdown, true), `${question.id}: primary answer followed by reviewed explanation`)
     } else {
       checkedCodeLiterals += assertCodeLiteralsPreserved(certifiedCode.answer, output.answerHtml, `${question.id}/answer`)
     }

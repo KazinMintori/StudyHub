@@ -5,115 +5,255 @@
   "items": [
     {
       "id": "B7-008",
-      "markdown": "parsed A/B/C/D/E = `[2000,NaN,NaN,NaN,0]`; lỗi C/D, thiếu nguồn B.\nKhông fillna(0) vì sẽ lẫn thiếu/lỗi với E có giá 0 thật; giữ raw:\n\n```python\nclean = raw.str.strip().str.replace(r'[$,]', '', regex=True)\nparsed = pd.to_numeric(clean, errors='coerce')\nloi = raw.notna() & parsed.isna()\n```"
+      "markdown": "parsed A/B/C/D/E = `[2000,NaN,NaN,NaN,0]`; lỗi C/D, thiếu nguồn B.\nKhông fillna(0) vì sẽ lẫn thiếu/lỗi với E có giá 0 thật; giữ raw:\n\n```python\nclean = raw.str.strip().str.replace(r'[$,]', '', regex=True)\nparsed = pd.to_numeric(clean, errors='coerce')\nloi = raw.notna() & parsed.isna()\n```",
+      "supplementMarkdown": "A=2000,B/C/D=thiếu,E=0; lỗi C,D, thiếu nguồn chỉ B. Giữ index A–E và raw để truy nguyên. fillna(0) làm B,C,D lẫn E dù E là giá 0 hợp lệ; chưa có quy tắc coi chưa biết/lỗi là miễn phí. Chuyển đổi này chưa kiểm mọi cách viết phân cách nghìn.",
+      "supplementSource": {
+        "answerSha256": "2a52656747a631e715c8889de01c1a06859311bbcaf01d615519d8a08d187b14",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-009",
-      "markdown": "Nhãn 20→'3', 50→'5', kiểu chuỗi; 10/30/40 thiếu.\n`_`, số 2 sau BR và x trước 4 đều cản ranh giới từ; không khớp chưa chứng minh 0 phòng."
+      "markdown": "Nhãn 20→'3', 50→'5', kiểu chuỗi; 10/30/40 thiếu.\n`_`, số 2 sau BR và x trước 4 đều cản ranh giới từ; không khớp chưa chứng minh 0 phòng.",
+      "supplementMarkdown": "20→'3',50→'5', đều chuỗi trong Series x cùng năm nhãn. Nhãn 10: sau BR là _ cũng là ký tự từ; 30: sau BR là số 2; 40: trước 4 là chữ x. Các vị trí đó không có ranh giới từ. Không khớp chỉ nói quy tắc chưa lấy được số, không chứng minh 0 phòng.",
+      "supplementSource": {
+        "answerSha256": "d81d0db3f16690c0c7e79bd818bf63550496116ad5a46e24c92ca880d54338ce",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-010",
-      "markdown": "2/4 = 0,5: A/E có wifi, B rỗng vẫn được tính, C chưa biết bị loại.\nĐếm mục sau explode/dropna cho 3/4, trước dropna cho 3/5, đều khác tỷ lệ listing:\n\n```python\nds = raw.dropna().map(json.loads)\nco = ds.map(lambda xs: any(x.strip().lower() == 'wifi' for x in xs))\nty_le = co.mean()\n```"
+      "markdown": "2/4 = 0,5: A/E có wifi, B rỗng vẫn được tính, C chưa biết bị loại.\nĐếm mục sau explode/dropna cho 3/4, trước dropna cho 3/5, đều khác tỷ lệ listing:\n\n```python\nds = raw.dropna().map(json.loads)\nco = ds.map(lambda xs: any(x.strip().lower() == 'wifi' for x in xs))\nty_le = co.mean()\n```",
+      "supplementMarkdown": "A,E có wifi: 2/4=0.5; B rỗng vẫn trong mẫu số, C chưa biết bị loại theo quy ước. Sau dropna có 4 mục thật, 3 là wifi do A lặp: 3/4 khác tỷ lệ listing. Trước dropna, [] tạo placeholder cho B: 5 hàng; eq('wifi') trên object cho placeholder False nên mean=3/5. Không lấy số mục thay số listing.",
+      "supplementSource": {
+        "answerSha256": "49b3b29ac4da44454feaefc4132c4172852689615b31f2341de842807918154b",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-018",
-      "markdown": "m theo 8/2/9/5 = `[True,False,True,False]`, mean 2/4; `m[s.notna()].mean()` = 2/3.\nChứa “metro” chỉ là nhắc từ, có thể là “metros” hoặc phủ định, chưa xác minh gần metro."
+      "markdown": "m theo 8/2/9/5 = `[True,False,True,False]`, mean 2/4; `m[s.notna()].mean()` = 2/3.\nChứa “metro” chỉ là nhắc từ, có thể là “metros” hoặc phủ định, chưa xác minh gần metro.",
+      "supplementMarkdown": "m theo index 8,2,9,5 là True,False,True,False; mean=2/4=0.5, gồm hàng thiếu tên.\n```python\nty_le_ten_biet = m[s.notna()].mean()\n```\nĐược 2/3. 'metros' cũng chứa đoạn metro; câu nhắc metro có thể phủ định và không cho khoảng cách. None bị mask đặt False chỉ để không chọn hàng, không xác minh listing không gần metro. Có thể đặt cột nhac_metro.",
+      "supplementSource": {
+        "answerSha256": "606ec4ac05b2c2c62fb509dd09a44844b929bea14f4acb7c39f495feafc80c21",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-019",
-      "markdown": "A→'2', B→'3', C/D/E thiếu; C thiếu ranh giới trước 4, D thiếu ranh giới sau bath vì dấu _.\nKết quả còn là chuỗi, không khớp không thay bằng 0:\n\n```python\np = r'\\b([0-9]+)\\s*(?:WC|bathrooms?|baths?)\\b'\nx = s.str.extract(p, flags=re.I, expand=False)\n```"
+      "markdown": "A→'2', B→'3', C/D/E thiếu; C thiếu ranh giới trước 4, D thiếu ranh giới sau bath vì dấu _.\nKết quả còn là chuỗi, không khớp không thay bằng 0:\n\n```python\np = r'\\b([0-9]+)\\s*(?:WC|bathrooms?|baths?)\\b'\nx = s.str.extract(p, flags=re.I, expand=False)\n```",
+      "supplementMarkdown": "A→'2',B→'3',C/D/E thiếu. Trước 4 ở C là chữ a nên không có ranh giới; D sau bath là _ nên không có ranh giới. E không có số. Nhóm đơn vị không bắt, x là Series cùng index, kết quả số còn là chuỗi.",
+      "supplementSource": {
+        "answerSha256": "09e21b909192196cc1382a9ffcd364fece078e7c0dfcb1da51055e0b683397ed",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-020",
-      "markdown": "stove, gas:1; wifi:2; tv:1; tỷ lệ wifi 2/4, C rỗng vẫn trong mẫu số.\nsplit(',') làm vỡ tên tiện nghi; value_counts đếm lặp wifi của B:\n\n```python\nds = raw.map(json.loads)\nmuc = ds.explode().dropna().str.strip().str.lower()\nbang = muc.to_frame('nhan').reset_index(names='id')\ndem = bang.groupby('nhan')['id'].nunique()\nty_le = dem.get('wifi', 0)/len(ds)\n```"
+      "markdown": "stove, gas:1; wifi:2; tv:1; tỷ lệ wifi 2/4, C rỗng vẫn trong mẫu số.\nsplit(',') làm vỡ tên tiện nghi; value_counts đếm lặp wifi của B:\n\n```python\nds = raw.map(json.loads)\nmuc = ds.explode().dropna().str.strip().str.lower()\nbang = muc.to_frame('nhan').reset_index(names='id')\ndem = bang.groupby('nhan')['id'].nunique()\nty_le = dem.get('wifi', 0)/len(ds)\n```",
+      "supplementMarkdown": "stove, gas:1; wifi:2; tv:1. Wifi xuất hiện ba lần nhưng chỉ ở A,B. split phẩy làm vỡ tên Stove, gas; value_counts đếm ba mục wifi thay hai listing. Tỷ lệ=2/4=0.5; C rỗng vẫn là listing đã biết và trong mẫu số. get mặc định 0 ở đây là số listing khớp một nhãn không xuất hiện, không biến dữ liệu chưa biết thành biết rỗng.",
+      "supplementSource": {
+        "answerSha256": "d3f6068a1d4ece2d779c696873500d4214279da75ffe72917d6bb314eb3155f0",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-028",
-      "markdown": "tv:2, wifi:2; TV đúng 2/4, cách sai 2/3 vì bỏ B rỗng khỏi mẫu số; A chỉ đếm một listing.\nGiữ ds gốc để đếm đủ listing:\n\n```python\nm = ds.explode().dropna().str.strip().str.lower()\nt = m.to_frame('nhan').reset_index(names='id')\nn = t.groupby('nhan')['id'].nunique()\nty_le_tv = n['tv']/len(ds)\n```"
+      "markdown": "tv:2, wifi:2; TV đúng 2/4, cách sai 2/3 vì bỏ B rỗng khỏi mẫu số; A chỉ đếm một listing.\nGiữ ds gốc để đếm đủ listing:\n\n```python\nm = ds.explode().dropna().str.strip().str.lower()\nt = m.to_frame('nhan').reset_index(names='id')\nn = t.groupby('nhan')['id'].nunique()\nty_le_tv = n['tv']/len(ds)\n```",
+      "supplementMarkdown": "tv:2 (A,C), wifi:2 (C,D), tỷ lệ TV=2/4. Sau dropna chỉ còn mã A,C,D nên cách sai chia 3 được 2/3; B rỗng là listing đã biết, không được biến mất khỏi mẫu số. A có hai mục tv nhưng chỉ một listing.",
+      "supplementSource": {
+        "answerSha256": "efe7ab138e8c66c176eb3203560ef79a92cffffbc796c1f28461ad290abc830b",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-029",
-      "markdown": "Đo cùng dữ liệu/backend, cùng thao tác và phạm vi chuyển kiểu; đối chiếu giá trị, index, vị trí thiếu trước đo.\nĐo lặp, ghi môi trường; một phép đo không chứng minh apply hay .str luôn nhanh hơn."
+      "markdown": "Đo cùng dữ liệu/backend, cùng thao tác và phạm vi chuyển kiểu; đối chiếu giá trị, index, vị trí thiếu trước đo.\nĐo lặp, ghi môi trường; một phép đo không chứng minh apply hay .str luôn nhanh hơn.",
+      "supplementMarkdown": "Chuẩn bị cùng dữ liệu, cùng cách lưu chuỗi; chuyển dtype ngoài phần đo. Cả hai cách phải chỉ làm cùng việc bỏ hai ký hiệu và tạo kết quả (hoặc cùng gồm to_numeric nếu đã định nghĩa công việc như thế). Trước đo, đối chiếu giá trị, index và vị trí thiếu, ví dụ assert_series_equal(...,check_dtype=False) nếu biểu diễn kiểu kết quả khác. Đo lặp trên môi trường được ghi rõ. Một lần đo với một backend/thao tác không chứng minh apply hoặc .str luôn nhanh hơn; .str cũng không mặc định nhanh hơn mọi hàm Python.",
+      "supplementSource": {
+        "answerSha256": "09b6e244b5a965c6ef584e58daa794d773b96205368dabafed79755413b918eb",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-030",
-      "markdown": "`ok = raw.str.strip().str.fullmatch(p, na=False)`; chỉ hàng 1/3 hợp lệ.\ncontains chỉ tìm đoạn; bỏ phẩy rồi chuyển số có thể che tiền tố hoặc phân cách nghìn sai."
+      "markdown": "`ok = raw.str.strip().str.fullmatch(p, na=False)`; chỉ hàng 1/3 hợp lệ.\ncontains chỉ tìm đoạn; bỏ phẩy rồi chuyển số có thể che tiền tố hoặc phân cách nghìn sai.",
+      "supplementMarkdown": "```python\nok = raw.str.strip().str.fullmatch(p, na=False)\n```\nChỉ hàng 1,3 hợp lệ. Hàng 0 có tiền tố from, hàng 2 đặt phẩy sai. contains có thể tìm được đoạn '$400' trong hàng 0, hoặc một đoạn '$4' trong hàng 2; không kiểm hết chuỗi. Bỏ phẩy hàng 2 thành số 400 che lỗi định dạng gốc. 0 không âm nên hợp lệ.",
+      "supplementSource": {
+        "answerSha256": "670d131c23ffa1a1186a6b11089b4da0f197d0a51a30b76bc6b2d9ef79a0f6a7",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-038",
-      "markdown": "`s_chuan = s.str.strip().str.lower()` → wifi:2, wifi!:1, wi-fi:1, café:1, cafe:1.\nIndex `[9,4,8,1,7,3]` và s gốc giữ nguyên; xóa dấu câu/dấu tiếng vượt quy tắc."
+      "markdown": "`s_chuan = s.str.strip().str.lower()` → wifi:2, wifi!:1, wi-fi:1, café:1, cafe:1.\nIndex `[9,4,8,1,7,3]` và s gốc giữ nguyên; xóa dấu câu/dấu tiếng vượt quy tắc.",
+      "supplementMarkdown": "```python\ns_chuan = s.str.strip().str.lower()\nassert s_chuan.index.equals(s.index)\nassert s.loc[9] == '  Wifi  '\n```\nwifi:2, wifi!:1, wi-fi:1, café:1, cafe:1. Có năm nhãn khác nhau. Xóa dấu câu hoặc dấu tiếng là thêm quy tắc chưa được cho; có thể nhập nhằng các nhãn mà nguồn muốn phân biệt. strip không gộp khoảng trắng bên trong mọi chuỗi.",
+      "supplementSource": {
+        "answerSha256": "809f0c6cc1f1a604cc9514a897aebb4384a1d391d3c758c14544971cf963f7ea",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-039",
-      "markdown": "A/B/C = 46.5/32.5/80 m², D/E thiếu; “80 M2” khớp, “30m2x” thiếu ranh giới cuối.\n\n```python\np = r'\\b([0-9]+(?:[.,][0-9]+)?)\\s*m(?:2|²)\\b'\nx = s.str.extract(p, flags=re.I, expand=False)\narea = pd.to_numeric(x.str.replace(',', '.', regex=False), errors='coerce')\n```"
+      "markdown": "A/B/C = 46.5/32.5/80 m², D/E thiếu; “80 M2” khớp, “30m2x” thiếu ranh giới cuối.\n\n```python\np = r'\\b([0-9]+(?:[.,][0-9]+)?)\\s*m(?:2|²)\\b'\nx = s.str.extract(p, flags=re.I, expand=False)\narea = pd.to_numeric(x.str.replace(',', '.', regex=False), errors='coerce')\n```",
+      "supplementMarkdown": "A=46.5,B=32.5,C=80,D/E thiếu, m². Cờ re.I nhận 80 M2; D có x sau m2 nên thiếu ranh giới cuối. E có số nhưng không đơn vị. s/index giữ nguyên, không khớp không là 0 m². Mẫu được đánh giá theo miền số đã giới hạn, không nhận là parser mọi dạng số.",
+      "supplementSource": {
+        "answerSha256": "ff84901b03846d314c5ada9a9ecc813db53ac789deac73933fa9cd790f23b642",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-040",
-      "markdown": "e có 5 hàng, B/D là placeholder; dropna còn 3. Mean eq('Wifi') trước/sau = 2/5 và 2/3.\nTỷ lệ listing đúng `ds.map(lambda xs: 'Wifi' in xs).mean()` = 2/4; mỗi listing chỉ một trọng số."
+      "markdown": "e có 5 hàng, B/D là placeholder; dropna còn 3. Mean eq('Wifi') trước/sau = 2/5 và 2/3.\nTỷ lệ listing đúng `ds.map(lambda xs: 'Wifi' in xs).mean()` = 2/4; mỗi listing chỉ một trọng số.",
+      "supplementMarkdown": "(a) e có 5 hàng: A một, B một placeholder, C hai, D một placeholder; sau dropna còn 3 mục thật. (b) Trước dropna: 2/5; sau: 2/3. Hai phép mean đo tỷ trọng hàng exploded/mục, không một bool mỗi listing.\n```python\nco = ds.map(lambda xs: 'Wifi' in xs)\nty_le = co.mean()\n```\n(c) A,C True; B,D False nhưng vẫn đã biết: 2/4=0.5. Giữ ds gốc để có đủ mẫu số bốn listing.",
+      "supplementSource": {
+        "answerSha256": "479220f6a841a4707dcd35e1bed3b42bc9f3fa66b13ba76b101a878a0f875046",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-047",
-      "markdown": "parsed = `[NaN,0,NaN,NaN,30]`; lỗi hàng 0/2, hàng 3 thiếu nguồn.\nKhông fillna(0) để tránh lẫn với giá 0 hợp lệ; giữ raw và chỉ chuyển chuỗi đúng toàn định dạng:\n\n```python\nc = raw.str.strip()\nok = c.str.fullmatch(p, na=False)\nparsed = pd.to_numeric(c.where(ok).str.replace(r'[$,]', '', regex=True), errors='coerce')\nloi = raw.notna() & ~ok\n```"
+      "markdown": "parsed = `[NaN,0,NaN,NaN,30]`; lỗi hàng 0/2, hàng 3 thiếu nguồn.\nKhông fillna(0) để tránh lẫn với giá 0 hợp lệ; giữ raw và chỉ chuyển chuỗi đúng toàn định dạng:\n\n```python\nc = raw.str.strip()\nok = c.str.fullmatch(p, na=False)\nparsed = pd.to_numeric(c.where(ok).str.replace(r'[$,]', '', regex=True), errors='coerce')\nloi = raw.notna() & ~ok\n```",
+      "supplementMarkdown": "parsed=[thiếu,0,thiếu,thiếu,30]; lỗi hàng 0,2; hàng 3 thiếu từ nguồn. Đọc ra -10 không thỏa không âm, 120 không chứng minh phẩy ban đầu đúng. Không điền 0 cho thiếu/lỗi vì sẽ lẫn với hàng 1 có giá 0 hợp lệ. Giữ raw để truy nguyên.",
+      "supplementSource": {
+        "answerSha256": "8d105a5a73974297f2dd238a058a5e4d9a606b730d2bc82afa932b3166a821de",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-048",
-      "markdown": "Đã biết: 2/4 = 0,5; quan sát liệt kê trên mọi listing: 2/5 = 0,4, chưa xác minh trạng thái C.\nKiểm co có 4 nhãn, A/E True, B/D False, tổng 2 để bắt bỏ [] hoặc đếm lặp:\n\n```python\nco = ds.dropna().map(lambda xs: 'Wifi' in xs)\nty_le_biet, ty_le_quan_sat = co.mean(), co.sum()/len(ds)\n```"
+      "markdown": "Đã biết: 2/4 = 0,5; quan sát liệt kê trên mọi listing: 2/5 = 0,4, chưa xác minh trạng thái C.\nKiểm co có 4 nhãn, A/E True, B/D False, tổng 2 để bắt bỏ [] hoặc đếm lặp:\n\n```python\nco = ds.dropna().map(lambda xs: 'Wifi' in xs)\nty_le_biet, ty_le_quan_sat = co.mean(), co.sum()/len(ds)\n```",
+      "supplementMarkdown": "```python\nknown = ds.dropna()\nco = known.map(lambda xs: 'Wifi' in xs)\nty_le_biet = co.mean()\nty_le_quan_sat = co.sum()/len(ds)\n```\n(a) 2/4=0.5 gồm A,B,D,E; A chỉ đếm một, B rỗng vẫn trong mẫu số. (b) 2/5=0.4 là tỷ lệ quan sát liệt kê trên năm listing, chưa biết trạng thái C nên không xác nhận tỷ lệ thật sự có Wifi toàn bộ. (c) Kiểm co có bốn nhãn, A/E True, B/D False; tổng 2. Nếu bỏ B hoặc đếm hai mục A, các con số này sai. Không biến None thành [] để suy C chắc không có Wifi.",
+      "supplementSource": {
+        "answerSha256": "bb1421dc035c0e5971f8785737313bc2608183a4260cc3cef478ffa71adcceef",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-049",
-      "markdown": "x = `['Central','todo','Museo',NaN]`; mẫu chỉ lấy một từ, không xác định đầy đủ tên địa điểm.\nĐặt cột tu_sau_gan, đọc nguyên câu khớp/không khớp; nhắc metro/wifi chưa xác minh khoảng cách/hài lòng."
+      "markdown": "x = `['Central','todo','Museo',NaN]`; mẫu chỉ lấy một từ, không xác định đầy đủ tên địa điểm.\nĐặt cột tu_sau_gan, đọc nguyên câu khớp/không khớp; nhắc metro/wifi chưa xác minh khoảng cách/hài lòng.",
+      "supplementMarkdown": "x=['Central','todo','Museo',thiếu]. Mẫu chỉ lấy một từ: không lấy đủ Central Park/Museo Norte; todo nghĩa gần mọi thứ, không phải tên riêng. Nên gọi tu_sau_gan và đọc nguyên văn cả ca khớp/không khớp, bổ sung nhãn kiểm nếu cần xác định địa điểm. Nhắc metro không đo khoảng cách; nhắc wifi/internet không xác minh hài lòng (ví dụ 'internet was slow'). Không chỉ tăng số khớp rồi tuyên bố chính xác hơn.",
+      "supplementSource": {
+        "answerSha256": "aef0a1e8e7701d100e3f0a4a2aa9caa0a0d2af524e3822b30851da826dce2d7a",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-050",
-      "markdown": "a: A='1', B thiếu, C='3'; b shape (3,1): (A,0)='1', (A,1)='2', (C,0)='3'.\nlen(b)=3 đếm cụm khớp, chỉ có 2 listing khớp A/C; không chứng minh số listing thật sự có phòng."
+      "markdown": "a: A='1', B thiếu, C='3'; b shape (3,1): (A,0)='1', (A,1)='2', (C,0)='3'.\nlen(b)=3 đếm cụm khớp, chỉ có 2 listing khớp A/C; không chứng minh số listing thật sự có phòng.",
+      "supplementMarkdown": "a là Series: A='1',B thiếu,C='3', giữ ba nhãn. b là DataFrame (3,1), các cặp (A,0)→'1',(A,1)→'2',(C,0)→'3'. B không có lần khớp nên không xuất hiện trong b. len(b)=3 đếm cụm khớp, chỉ hai listing A,C được quy tắc trích được số; không là số listing thật sự có phòng trong nguồn. Giá trị trích còn là chuỗi.",
+      "supplementSource": {
+        "answerSha256": "70a24258585dc4ebc37abf8b31ed06a467a16d22190cd36750c34164621c2c21",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-057",
-      "markdown": "`lo = s.str.lower()` → `['straße','strasse','café','cafe']`, 4 nhãn; `fold = s.str.casefold()` → 3 nhãn.\nfold = `['strasse','strasse','café','cafe']`; cả hai giữ index `[3,8,2,6]` và s gốc, không xóa dấu café."
+      "markdown": "`lo = s.str.lower()` → `['straße','strasse','café','cafe']`, 4 nhãn; `fold = s.str.casefold()` → 3 nhãn.\nfold = `['strasse','strasse','café','cafe']`; cả hai giữ index `[3,8,2,6]` và s gốc, không xóa dấu café.",
+      "supplementMarkdown": "```python\nlo = s.str.lower()\nfold = s.str.casefold()\n```\nlo=['straße','strasse','café','cafe']: 4 nhãn; fold=['strasse','strasse','café','cafe']: 3 nhãn. Cả hai giữ index [3,8,2,6], s vẫn có Straße. casefold phục vụ so chữ không phân biệt cách viết hoa/thường mạnh hơn lower trong ví dụ này, không tự là quy tắc xóa dấu hay sửa chính tả; café và cafe vẫn khác.",
+      "supplementSource": {
+        "answerSha256": "f093c097aed447bf468c3aae70a275364967b359a76b7aa612c0c6992aec5f44",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-058",
-      "markdown": "home dùng 100/300, median 200; room dùng 20/1000/40, median 40; mean hoặc điền 0 làm đổi đại lượng/tập giá.\nKiểm raw có 1 thiếu, không lỗi chuyển đổi; d/raw vẫn nguyên:\n\n```python\nt = d.assign(loai_chuan=d['loai'].str.strip().str.lower(),\n    gia=pd.to_numeric(d['raw'].str.replace(r'[$,]', '', regex=True), errors='coerce'))\nkq = t.groupby('loai_chuan')['gia'].median()\n```"
+      "markdown": "home dùng 100/300, median 200; room dùng 20/1000/40, median 40; mean hoặc điền 0 làm đổi đại lượng/tập giá.\nKiểm raw có 1 thiếu, không lỗi chuyển đổi; d/raw vẫn nguyên:\n\n```python\nt = d.assign(loai_chuan=d['loai'].str.strip().str.lower(),\n    gia=pd.to_numeric(d['raw'].str.replace(r'[$,]', '', regex=True), errors='coerce'))\nkq = t.groupby('loai_chuan')['gia'].median()\n```",
+      "supplementMarkdown": "home có hai giá biết 100,300→median 200; room có 20,1000,40→median 40, không phải mean 1060/3. Điền thiếu home bằng 0 làm median 100, thay tập giá gốc. Kiểm một raw thiếu, không lỗi chuyển đổi: (t['raw'].notna() & t['gia'].isna()).sum()==0; d/raw không bị ghi đè. Đây là median trên giá biết, không coi giá chưa biết bằng 0.",
+      "supplementSource": {
+        "answerSha256": "b6100ceb095ffcc4f97bfe8cc91eafcf102e9538900e1579d5129104427c912c",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-059",
-      "markdown": "`t = s.str.replace('<br/>',' ',regex=False)` → `['A B C','<br> X','<BR/>Y','<b>Z</b>']`.\n1 review bị tác động, 2 lần thay, giảm 8 ký tự; bỏ qua hoa thường hoặc gọi là xóa mọi HTML vượt quy tắc."
+      "markdown": "`t = s.str.replace('<br/>',' ',regex=False)` → `['A B C','<br> X','<BR/>Y','<b>Z</b>']`.\n1 review bị tác động, 2 lần thay, giảm 8 ký tự; bỏ qua hoa thường hoặc gọi là xóa mọi HTML vượt quy tắc.",
+      "supplementMarkdown": "```python\nt = s.str.replace('<br/>', ' ', regex=False)\nn_review = s.str.contains('<br/>',regex=False,na=False).sum()\n```\nt=['A B C','<br> X','<BR/>Y','<b>Z</b>'], giữ index/bản gốc. Một review bị tác động nhưng hai lần thay; mỗi lần 5 ký tự thành 1 nên tổng giảm 8. Có thể dùng re.sub(`r'<br/>'`,' ',text) tương đương trên mỗi chuỗi. Bỏ qua hoa thường sẽ thay thêm <BR/> trái quy tắc; các thẻ khác vẫn còn nên không phải bộ làm sạch mọi HTML.",
+      "supplementSource": {
+        "answerSha256": "3d35f0a5aae751643768b1dc8140969ac4ff8d39094f4368942a12aa96156c10",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-060",
-      "markdown": "Trong cấu hình đã cho, contains trên Arrow dùng ranh giới ASCII, extract và storage Python dùng Python re.\nKhông khái quát mọi backend; ghi phiên bản/storage/flags/phương thức, thử ca Unicode/ASCII/thiếu và đối chiếu re."
+      "markdown": "Trong cấu hình đã cho, contains trên Arrow dùng ranh giới ASCII, extract và storage Python dùng Python re.\nKhông khái quát mọi backend; ghi phiên bản/storage/flags/phương thức, thử ca Unicode/ASCII/thiếu và đối chiếu re.",
+      "supplementMarkdown": "(a) Các phương thức/backend có thể dùng engine khác. Ở cấu hình này, contains không flags trên Arrow dùng quy ước từ ASCII; ² không là ký tự từ nên không có ranh giới từ ngay sau nó ở cuối chuỗi. extract dùng Python re; Python coi ² là ký tự từ nên lấy được 30m². Storage python dùng Python re cho contains. Đếm Ñuñoa cũng phản ánh khác quy ước ký tự từ.\n(b) Không khái quát Arrow thành quy tắc Python re hoặc mọi backend. (c) Ghi phiên bản, dtype/storage, flags và phương thức; thử đúng ca ASCII/ngoài ASCII, thiếu và gần đúng, đối chiếu re.search/extract trước áp dụng. Output đã cho và ca thực thi chỉ hỗ trợ cấu hình đó, không cam kết mọi phiên bản.",
+      "supplementSource": {
+        "answerSha256": "f05fba50c6691a3917392336d14808c674c545299ce697a366dd5beb274bc6c9",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R04",
-      "markdown": "`False, True, False, False, False`; fullmatch kiểm toàn chuỗi, vẫn strip sẽ nhận nhầm ' Apa'.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'[A-C][n-p][a-c]', text) is not None\n```"
+      "markdown": "`False, True, False, False, False`; fullmatch kiểm toàn chuỗi, vẫn strip sẽ nhận nhầm ' Apa'.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'[A-C][n-p][a-c]', text) is not None\n```",
+      "supplementMarkdown": "```python\ndef hop_le(text):\n    if text is None: return False\n    return re.fullmatch(r'[A-C][n-p][a-c]', text) is not None\n```\nFalse,True,False,False,False. ' Apa' có dấu cách ngoài chuỗi nên sai; strip sẽ biến nó thành Apa và nhận sai. AnaX chỉ có đoạn Ana hợp lệ nhưng cả chuỗi dài hơn ba. D vượt cận A–C. Không tự đổi hoa/thường.",
+      "supplementSource": {
+        "answerSha256": "11349eb2de7070d5bf3fadd2789068d0614ca379d7917b54408e5dc843dfdb77",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R06",
-      "markdown": "Mẫu cũ bỏ 'aac', nhận nhầm 'ab'; a{2,}: ít nhất 2 a, b*: có thể vắng, c+: ít nhất 1 c.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'a{2,}b*c+', text) is not None\n```"
+      "markdown": "Mẫu cũ bỏ 'aac', nhận nhầm 'ab'; a{2,}: ít nhất 2 a, b*: có thể vắng, c+: ít nhất 1 c.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'a{2,}b*c+', text) is not None\n```",
+      "supplementMarkdown": "Cũ bỏ 'aac' vì bắt buộc b; cũ nhận 'ab' dù thiếu a thứ hai và không có c. Mới a{2,}: ít nhất hai a; b*: có thể vắng; c+: ít nhất một c. Cả chuỗi được kiểm, không chỉ đoạn đầu.",
+      "supplementSource": {
+        "answerSha256": "d23e92ac86ad3eaae4f14acd6eb78409abcc2ee79657c56ea5f43a5d81766f7a",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R08",
-      "markdown": "`False, True, True, False, False`; đổi * thành + để bắt buộc ít nhất một ký tự trắng, gồm tab/newline.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'[0-9]+\\.\\s+abc', text) is not None\n```"
+      "markdown": "`False, True, True, False, False`; đổi * thành + để bắt buộc ít nhất một ký tự trắng, gồm tab/newline.\n\n```python\ndef hop_le(text):\n    return False if text is None else re.fullmatch(r'[0-9]+\\.\\s+abc', text) is not None\n```",
+      "supplementMarkdown": "```python\ndef hop_le(text):\n    if text is None: return False\n    return re.fullmatch(r'[0-9]+\\.\\s+abc',text) is not None\n```\nFalse,True,True,False,False. Đổi * thành + ở phần phân cách: cần ít nhất một ký tự trắng. Newline nằm trong s nên được phép ở vị trí này, dù . wildcard mặc định không ăn newline; ở đây \\. là dấu chấm literal. Khoảng trắng cuối ngoài abc không được phép.",
+      "supplementSource": {
+        "answerSha256": "b0c9eca193f807442cf9d518e9fa025018579d12560151dc4b43ac602413bfc6",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R10",
-      "markdown": "`None, '0', None, '2'`; gom hai đơn vị để cùng bắt buộc số và ranh giới từ.\n2BR2BA vẫn không khớp ranh giới cuối; đúng mẫu chưa bao phủ mọi cách viết thực tế.\n\n```python\np = r'\\b([0-9]+)\\s*(?:BR|bedrooms?)\\b'\ndef lay_so(text):\n    m = None if text is None else re.search(p, text, flags=re.I)\n    return m.group(1) if m is not None else None\n```"
+      "markdown": "`None, '0', None, '2'`; gom hai đơn vị để cùng bắt buộc số và ranh giới từ.\n2BR2BA vẫn không khớp ranh giới cuối; đúng mẫu chưa bao phủ mọi cách viết thực tế.\n\n```python\np = r'\\b([0-9]+)\\s*(?:BR|bedrooms?)\\b'\ndef lay_so(text):\n    m = None if text is None else re.search(p, text, flags=re.I)\n    return m.group(1) if m is not None else None\n```",
+      "supplementMarkdown": "```python\np = r'\\b([0-9]+)\\s*(?:BR|bedrooms?)\\b'\ndef lay_so(text):\n    if text is None: return None\n    m = re.search(p,text,flags=re.I)\n    return m.group(1) if m is not None else None\n```\nNone,'0',None,'2'. Ngoặc không bắt buộc phần số áp cho mọi nhánh. 2BR2BA vẫn không khớp vì sau BR là số, không có ranh giới; tuân quy tắc này không chứng minh đã bao phủ mọi cách viết thật. Không chuyển không khớp thành 0; '0' ở A là số ghi rõ.",
+      "supplementSource": {
+        "answerSha256": "795a8348cf04e69ddda725fdadb3d1c6e2423d6317432ccf2ee3898eb407f247",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R12",
-      "markdown": "`True, False, False, True, False`; sau mỗi phẩy cần 3 số, có e/E thì bắt buộc số mũ.\n\n```python\nI = r'(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)'\nE = r'(?:[eE][+-]?[0-9]+)?'\np = r'[+-]?' + I + r'(?:\\.[0-9]+)?' + E\ndef hop_le(text):\n    return False if text is None else re.fullmatch(p, text) is not None\n```"
+      "markdown": "`True, False, False, True, False`; sau mỗi phẩy cần 3 số, có e/E thì bắt buộc số mũ.\n\n```python\nI = r'(?:[0-9]{1,3}(?:,[0-9]{3})+|[0-9]+)'\nE = r'(?:[eE][+-]?[0-9]+)?'\np = r'[+-]?' + I + r'(?:\\.[0-9]+)?' + E\ndef hop_le(text):\n    return False if text is None else re.fullmatch(p, text) is not None\n```",
+      "supplementMarkdown": "True,False,False,True,False. Phẩy không được tùy ý xuất hiện; nhóm sau phẩy cần đúng ba số. Có e/E thì bắt buộc số mũ, nên 1E+ sai. Đây chỉ kiểm định dạng, chưa chuyển giá trị số.",
+      "supplementSource": {
+        "answerSha256": "3b06fe3cd69b87629c3331925c358f029a6023584f861835c55577f48a3b106c",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R14",
-      "markdown": "`'Lan.01', None, None, None`; filter đặt ngoài nhóm bắt tên gốc nhưng vẫn trong mẫu kiểm email.\nRegex chỉ kiểm hình thức giản lược, không xác minh hộp thư tồn tại.\n\n```python\np = '(' + BASE + ')' + FILTER + '@' + DOMAIN\ndef ten_goc(text):\n    m = None if text is None else re.fullmatch(p, text)\n    return m.group(1) if m is not None else None\n```"
+      "markdown": "`'Lan.01', None, None, None`; filter đặt ngoài nhóm bắt tên gốc nhưng vẫn trong mẫu kiểm email.\nRegex chỉ kiểm hình thức giản lược, không xác minh hộp thư tồn tại.\n\n```python\np = '(' + BASE + ')' + FILTER + '@' + DOMAIN\ndef ten_goc(text):\n    m = None if text is None else re.fullmatch(p, text)\n    return m.group(1) if m is not None else None\n```",
+      "supplementMarkdown": "```python\np = '('+BASE+')'+FILTER+'@'+DOMAIN\ndef ten_goc(text):\n    if text is None: return None\n    m = re.fullmatch(p,text)\n    return m.group(1) if m is not None else None\n```\n'Lan.01',None,None,None. Đặt filter ngoài nhóm trả kết quả, nhưng vẫn trong mẫu kiểm toàn email. Không lower nên giữ Lan. Chấm liên tiếp tạo nhóm rỗng; + trống sai. Chỉ kiểm hình thức trong miền giản lược, không kiểm hộp thư tồn tại/nhận thư được.",
+      "supplementSource": {
+        "answerSha256": "a7c632a46728b51ecf6bdfc9790cc2d6ba58a8e47d3502e73d46c69b00c24725",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R16",
-      "markdown": "`('scene.02-night','png'), None, None, None`; đổi nhóm lặp sang không bắt để chỉ trả hai trường.\nfullmatch loại đuôi .jpg.tmp vì không kết thúc bằng mở rộng cho phép.\n\n```python\np = r'([A-Za-z0-9_]+(?:[.-][A-Za-z0-9_]+)*)\\.(jpg|png|gif)'\ndef lay_anh(text):\n    m = None if text is None else re.fullmatch(p, text)\n    return m.groups() if m is not None else None\n```"
+      "markdown": "`('scene.02-night','png'), None, None, None`; đổi nhóm lặp sang không bắt để chỉ trả hai trường.\nfullmatch loại đuôi .jpg.tmp vì không kết thúc bằng mở rộng cho phép.\n\n```python\np = r'([A-Za-z0-9_]+(?:[.-][A-Za-z0-9_]+)*)\\.(jpg|png|gif)'\ndef lay_anh(text):\n    m = None if text is None else re.fullmatch(p, text)\n    return m.groups() if m is not None else None\n```",
+      "supplementMarkdown": "```python\np = r'([A-Za-z0-9_]+(?:[.-][A-Za-z0-9_]+)*)\\.(jpg|png|gif)'\ndef lay_anh(text):\n    if text is None: return None\n    m = re.fullmatch(p,text)\n    return m.groups() if m is not None else None\n```\n('scene.02-night','png'),None,None,None. Nhóm giữa đổi sang không bắt để chỉ còn hai trường; fullmatch loại đuôi tạm .jpg.tmp vì toàn tên không kết thúc bằng mở rộng cho phép. Không tự lower để nhận JPG.",
+      "supplementSource": {
+        "answerSha256": "271954e2dd091b427f7b21c179bfac532562f7467f9e1edeb85ad3982d34fea0",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     },
     {
       "id": "B7-R17",
-      "markdown": "`'A  B', '', '', None, '\\u00a0X\\u00a0'`; chỉ cắt dấu cách/tab, giữ NBSP và khoảng trắng giữa chuỗi.\n`if result:` làm mất chuỗi rỗng hợp lệ; đổi thành `if result is not None:`.\n\n```python\ndef cat_dau_cuoi(text):\n    if text is None: return None\n    return re.fullmatch(r'[ \\t]*(.*?)[ \\t]*', text).group(1)\n```"
+      "markdown": "`'A  B', '', '', None, '\\u00a0X\\u00a0'`; chỉ cắt dấu cách/tab, giữ NBSP và khoảng trắng giữa chuỗi.\n`if result:` làm mất chuỗi rỗng hợp lệ; đổi thành `if result is not None:`.\n\n```python\ndef cat_dau_cuoi(text):\n    if text is None: return None\n    return re.fullmatch(r'[ \\t]*(.*?)[ \\t]*', text).group(1)\n```",
+      "supplementMarkdown": "```python\ndef cat_dau_cuoi(text):\n    if text is None: return None\n    return re.fullmatch(r'[ \\t]*(.*?)[ \\t]*',text).group(1)\n# khi gom: if result is not None:\n```\nKết quả 'A  B','','',None,'\\u00a0X\\u00a0' (NBSP nguyên văn). .*? không tham lam để phần cuối nhận dấu cách/tab; [ \\t] không ăn NBSP/\\v/\\f như \\s. if result bỏ cả hai kết quả rỗng hợp lệ; is not None chỉ bỏ trường hợp thiếu. Không gộp khoảng trắng giữa A,B.",
+      "supplementSource": {
+        "answerSha256": "4da452a27d1df3fbcbf64459932381b2dc9b65e92cbc524b5db3ed5984f2009a",
+        "reviewSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
     }
   ]
 }

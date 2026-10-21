@@ -91,6 +91,12 @@ try {
           const answerCodes=[...updatedEssay.markdown.matchAll(/^```[^\r\n]*\r?\n(.*?)^```[ \t]*$/gms)].map(m=>m[1].replace(/\r\n/g,'\n').trimEnd())
           const actualCodes=await page.$$eval('.exam-essay__answer pre code',nodes=>nodes.map(node=>node.textContent.trimEnd()))
           assert.deepEqual(actualCodes.slice(0,answerCodes.length),answerCodes,`${question.id}: full updated solution code preserved`)
+          const answerLiterals=await page.evaluate(q=>{
+            const expected=document.createElement('div');expected.innerHTML=q.answerHtml
+            const codes=n=>[...n.querySelectorAll('code')].map(c=>c.textContent)
+            return {actual:codes(document.querySelector('.exam-essay__answer')),expected:codes(expected)}
+          },question)
+          assert.deepEqual(answerLiterals.actual,answerLiterals.expected,`${question.id}: primary and detailed explanation code preserved in the browser`)
           assert(!await page.$eval('.exam-essay__answer',n=>/Hướng dẫn chấm|Ý cần đạt|Điểm tối đa|Rubric/i.test(n.textContent)),`${question.id}: no grading guide`)
         }
         const layout=await page.evaluate(()=>{

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import {readFile} from 'node:fs/promises'
 import {createHash} from 'node:crypto'
 import path from 'node:path'
+import {composeLegacySupplement,canonicalPythonBlocks} from './essay-supplements.mjs'
 
 const hash=value=>createHash('sha256').update(value).digest('hex')
 export async function loadEssayAnswers(root) {
@@ -17,12 +18,23 @@ export async function loadEssayAnswers(root) {
     const headings=[...text.matchAll(/^###\s+(B\d+-(?:MR|R)?\d+)\s*$/gm)]
     const expected=headings.map((h,i)=>({id:h[1],markdown:text.slice(h.index+h[0].length,headings[i+1]?.index??text.length).trim()}))
     const authored=JSON.parse(await readFile(path.join(base,`essay-solutions/bai-${source.lesson}.json`),'utf8'))
+    const bank=JSON.parse(await readFile(path.join(base,`banks/bai-${source.lesson}.json`),'utf8'))
+    const reviews=JSON.parse(await readFile(path.join(base,`reviews/bai-${source.lesson}.json`),'utf8'))
+    const codeKeys=canonicalPythonBlocks([...authored.items.map(x=>x.markdown),...bank.questions.filter(q=>q.kind==='essay').map(q=>q.answerMarkdown)])
     assert.equal(authored.sourceSha256,source.sha256)
     assert.deepEqual(authored.items.map(({id,markdown})=>({id,markdown})),expected,`${source.lesson}: complete current source answers`)
     lessons.set(source.lesson,{items:authored.items,inputSha256:hash(JSON.stringify(authored))})
     for(const item of authored.items) {
       assert(!questions.has(item.id),item.id)
       assert(!/Hướng dẫn chấm|Ý cần đạt|Điểm tối đa/i.test(item.markdown),`${item.id}: no grading guide`)
+      if(item.supplementMarkdown){
+        const original=bank.questions.find(q=>q.id===item.id)
+        const review=reviews.items.find(q=>q.id===item.id)?.explanationMarkdown||''
+        assert.equal(item.supplementSource?.answerSha256,hash(original.answerMarkdown),`${item.id}: legacy answer provenance`)
+        assert.equal(item.supplementSource?.reviewSha256,hash(review),`${item.id}: legacy review provenance`)
+        assert.equal(item.supplementMarkdown,composeLegacySupplement(item.markdown,original.answerMarkdown,review,codeKeys),`${item.id}: reviewed explanatory content preserved`)
+        assert(!/Hướng dẫn chấm|Ý cần đạt|Điểm tối đa|\*\*Chấm\s+\d/i.test(item.supplementMarkdown),`${item.id}: no grading guide in explanation`)
+      }
       questions.set(item.id,item)
     }
   }

@@ -127,8 +127,8 @@
     ],
     "inputSha256": "a350e8ccb0b639d944b128080afbe3db90cb7ac1c9c805f9a67457c0f22685ce",
     "reviewed": 60,
-    "contentSha256": "c68f8d90cbbfa3c9b883804859ba7b8bc4a825cd6e2b96960581b1796a94ab07",
-    "essayInputSha256": "ac8c4854b847aed810de856e08f37e307d4ad9fd6b89652ed8ed985affee0cfd"
+    "contentSha256": "c7903dded395fc29da03fca6fa25bac1a375c882af3263012104043529d0c018",
+    "essayInputSha256": "2cdc994d9ae941499df17fe2335a585b10574ed8d94de3ca3578177f66139e00"
   },
   {
     "lesson": "02",
@@ -258,8 +258,8 @@
     ],
     "inputSha256": "ae7afc97aa874c8197ca3dd416487b2367b2115bc91acd8bee28a104bf40e42b",
     "reviewed": 60,
-    "contentSha256": "1b0c5ae2b75d32a801e7e40a102f4223d76d3a46d949d990c0db39c0b1a874d2",
-    "essayInputSha256": "1ea1b46e38de4569c98c3b37a2c677e08151d455844a78818a8c70ae8c44f213"
+    "contentSha256": "98b2bf2ca991794cde32bdb2e760c6839122ed0503580f798db0b8b78b877744",
+    "essayInputSha256": "b26e3438ee1a55f90e74e3fc5d13df9b026c1ac8099f5ec02cac51c1e8aa1c4f"
   },
   {
     "lesson": "03",
@@ -413,8 +413,8 @@
     ],
     "inputSha256": "1ab112e1b461309a6f3865f1b645a9085f2c580d9691b5cda67e413873f114eb",
     "reviewed": 72,
-    "contentSha256": "43d2304e0bacbe232bb1ff579bd6a038ed38d246e427112bcaf4d5b2b787632e",
-    "essayInputSha256": "c63adac70e4fba97d400c3450b8b1f73610611c80cf9dc6f30a908988b25ecd1"
+    "contentSha256": "7eaf36d2df5ff89bc378bf837c8174d7eae04f58781d020e947e879199c1d40b",
+    "essayInputSha256": "9ed6a580e0d8c7021fe61ad051a05ae00b9b11c11bea3c619cdd67045756b2f7"
   },
   {
     "lesson": "04",
@@ -544,8 +544,8 @@
     ],
     "inputSha256": "4e949f212fb5d7f7beeb7839c9e4b10e0ac0d28f9d00f2a7e4a0021b4f039589",
     "reviewed": 60,
-    "contentSha256": "5655f89f1ffd972b0e4f6cb35b040f9c8a0214f03988c6c84e2ac634a9f1d67c",
-    "essayInputSha256": "b080d7f145eba92cd30540990b40aeeb1980c167a9d55e61e340757866fc0079"
+    "contentSha256": "73831551b9e41ebdb43e5300bb8963ce5a12195e1c4dbca605ce59b245c95adc",
+    "essayInputSha256": "0691826b1a8b5644ca812e5079a8314e7ed3d0f711afec0fa615e5d0d9bf2a23"
   },
   {
     "lesson": "05",
@@ -699,8 +699,8 @@
     ],
     "inputSha256": "3232e595ced5abfb77cf572ddcb8031e4ada0d321931dc159a277eb7ccf43b50",
     "reviewed": 72,
-    "contentSha256": "43289c9457ced8be4eb131aa89a125b9b8307ce3845676b78ee5fe512fab9abf",
-    "essayInputSha256": "dfe322c8819873d0f4964fdc7b33ff151060f04cbbea5530a70aa483db16aa09"
+    "contentSha256": "b0a7074c9517ea810ce6eb741d289ec53277a8bbb63ae34510f4511266142ea9",
+    "essayInputSha256": "b18ffe718453f23f0271a02e5abc8f0c93d77cf842ece64a554443958569a319"
   },
   {
     "lesson": "06",
@@ -854,8 +854,8 @@
     ],
     "inputSha256": "9ff4c9ecb7f233233237362c94c5b9a5e56c4344075de2273f9e69053b872318",
     "reviewed": 72,
-    "contentSha256": "04c43f35b1ab2f5e190b1ef96c2f5a4c03ce969b795f10984177b7f3e67fbe47",
-    "essayInputSha256": "eac94c9dbe47a5e3998b7ad24dce0e0e2ba690c75a77f25521ec7ca1cd99feb1"
+    "contentSha256": "51eac00e451b4ebec7201c110e85e6d1eb0ef5b1d2b25c6601b96e46d52dae7d",
+    "essayInputSha256": "61523765ca79d8defb74ef88d13ea1e6d6bf6af34c99bca339682a89fb9466d3"
   },
   {
     "lesson": "07",
@@ -1025,8 +1025,8 @@
     ],
     "inputSha256": "2c3abbd3ee67b2c27603ec58b54e75136f25454130cad598b62a586519ae8e88",
     "reviewed": 80,
-    "contentSha256": "00445b93639238169d20f1f7216b677dc7e7e515e41eebf054661ee1d80171a0",
-    "essayInputSha256": "e53be74a5e105c9ed1d662f1684cc08d6607d77b8598b28535f84b12f75f2826"
+    "contentSha256": "77c3ecd17e35c61a378b561f019ac1d515f2156d07e40e2a35597a4379480b1c",
+    "essayInputSha256": "ccc196f85747733b2738268c083821e3a587f21516e32490deb8498a24ee45dd"
   },
   {
     "lesson": "08",
@@ -1180,7 +1180,7 @@
     ],
     "inputSha256": "26bbe4f007d8123986f5ed9314671a5e83f30e0587a89f49852d24bb9b13e223",
     "reviewed": 72,
-    "contentSha256": "1d762a1cccdbec9b9a463d328f447ca8d5a3422620152e95dd3f88d393bb1e32",
-    "essayInputSha256": "cbe1d38a7c3cfd794e7b2b78dfb990d0a92e2ffb986386e2168a463dc30b3fe3"
+    "contentSha256": "84044faa9402d34cf9fe9571124ebdc8e99b2291eb427c28bdb285d5311efc3f",
+    "essayInputSha256": "2dad5509beb546d4be107710209ce4922738fc128af5b7753a570727d3d1bd53"
   }
 ]

@@ -46,7 +46,7 @@ MathJax của website. Các dòng ghi chú biên soạn như mã mục tiêu, đ
 Nội dung đó vẫn còn nguyên trong tệp nguồn và ngân hàng. Các bước giải,
 code và output được giữ lại. Các bảng hướng dẫn chấm không xuất hiện trong lời giải hiển thị.
 
-`essay-solutions/` chứa đủ 184 lời giải từ tám tệp mới. Đây là nguồn chính cho toàn bộ câu tự luận. Bộ nhập đối chiếu từng mã câu với đề hiện có và từ chối nhập nếu thiếu hoặc lặp câu. Toàn bộ phần trả lời mới xuất hiện trước các giải thích được biên soạn thêm, nếu có. Lượt cập nhật này không nối lại đáp án cũ hoặc lời giải phụ trong `reviews/`.
+`essay-solutions/` chứa đủ 184 lời giải từ tám tệp mới. Đây là nguồn chính cho toàn bộ câu tự luận. Bộ nhập đối chiếu từng mã câu với đề hiện có và từ chối nhập nếu thiếu hoặc lặp câu. Đáp án mới xuất hiện trước. Trường `supplementMarkdown` giữ phần phân tích, mã, output và giải thích của lời giải cũ, sau khi loại hướng dẫn chấm và ghi chú biên soạn. Mã có cùng cấu trúc Python được dùng một lần, kể cả khi chỉ khác dấu nháy hoặc khoảng trắng. Những chú thích chứa thông tin riêng vẫn được giữ. Phần giải thích nối trực tiếp với đáp án, không có nhãn “đáp án cũ” hoặc “kiến thức bổ sung”.
 
 Không có mục quy ước chung trên trang làm bài. `question-context.json` chỉ
 thêm điều kiện vào từng đề khi phiên bản hoặc cách xử lý cảnh báo ảnh hưởng
@@ -62,6 +62,7 @@ python scripts/import-data-exam.py
 node scripts/build/render-data-exam.mjs
 # Khi chỉ cập nhật đáp án tự luận, dùng hai lệnh sau để giữ nguyên đề và trắc nghiệm:
 python scripts/import-data-essay-answers.py
+node scripts/prepare-data-essay-supplements.mjs
 node scripts/build/render-data-exam.mjs --essays-only
 node scripts/verify-data-exam.mjs
 node --test scripts/tests/data-exam-session.test.mjs
@@ -101,7 +102,9 @@ tài liệu trực tuyến. Các phép kiểm chỉ có ý nghĩa trong phạm v
 
 ## Giữ nguyên mã khi biên tập văn phong
 
-`code-integrity.json` lưu riêng các đoạn mã và output đã kiểm tra ở commit `e81119de`. Bản tham chiếu này tiếp tục bảo vệ đề cùng lời giải trắc nghiệm. Từ ngày 21/10/2026, mã trong lời giải tự luận được đối chiếu trực tiếp với tám tệp Drive mới. Bản tham chiếu không được tự sinh lại từ HTML vừa sửa chỉ để làm kiểm tra vượt qua. Các phương án cũng được đối chiếu trực tiếp với Markdown nguồn, độc lập với hash render.
+`code-integrity.json` lưu riêng các đoạn mã và output đã kiểm tra ở commit `e81119de`. Bản tham chiếu này tiếp tục bảo vệ đề cùng lời giải trắc nghiệm. Từ ngày 21/10/2026, mã trong đáp án tự luận chính được đối chiếu trực tiếp với tám tệp Drive mới. Phần giải thích có hash tham chiếu riêng tới lời giải cũ và được kiểm tra sau khi bỏ hướng dẫn chấm. Bản tham chiếu không được tự sinh lại từ HTML vừa sửa chỉ để làm kiểm tra vượt qua. Các phương án cũng được đối chiếu trực tiếp với Markdown nguồn, độc lập với hash render.
+
+Bước loại mã lặp dùng `ast` và `tokenize` của Python, không thực thi mã bài tập. Không cần cài thêm thư viện Python cho bước này.
 
 `verify-data-exam.mjs` so sánh mã nội dòng và mã nhiều dòng. Phép kiểm phát hiện đổi toán tử, dấu phẩy trong chuỗi, thay output hoặc bỏ đoạn mã. Kiểm tra còn xác nhận toàn bộ đáp án tự luận mới là phần đầu của lời giải và không có bảng hướng dẫn chấm. Các tên biến bổ sung trong lời giảng vẫn được phép xuất hiện. Kiểm tra trình duyệt đối chiếu tiếp nội dung các thẻ `code` với dữ liệu đã được kiểm chứng.
 

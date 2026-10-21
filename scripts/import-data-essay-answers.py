@@ -13,13 +13,20 @@ for source in manifest['files']:
     data=path.read_bytes()
     assert len(data)==source['bytes'] and hashlib.sha256(data).hexdigest()==source['sha256'],path
     text=data.decode('utf-8-sig').replace('\r\n','\n').replace('\r','\n')
+    target=output/f'bai-{source["lesson"]}.json'
+    previous={x['id']:x for x in json.loads(target.read_text(encoding='utf-8'))['items']} if target.exists() else {}
     heads=list(re.finditer(r'^###\s+(B\d+-(?:MR|R)?\d+)\s*$',text,re.M))
     items=[]
     for i,m in enumerate(heads):
         end=heads[i+1].start() if i+1<len(heads) else len(text)
         body=text[m.end():end].strip()
         assert body and not re.search(r'Hướng dẫn chấm|Ý cần đạt|Điểm tối đa',body,re.I),m[1]
-        items.append({'id':m[1],'markdown':body})
+        item={'id':m[1],'markdown':body}
+        earlier=previous.get(m[1],{})
+        if earlier.get('supplementMarkdown'):
+            assert earlier['markdown']==body,f'{m[1]}: Review its explanation against the changed primary answer before importing'
+            item.update({k:earlier[k] for k in ('supplementMarkdown','supplementSource')})
+        items.append(item)
     bank=json.loads((BASE/f'banks/bai-{source["lesson"]}.json').read_text(encoding='utf-8'))
     expected=[q['id'] for q in bank['questions'] if q['kind']=='essay']
     assert [x['id'] for x in items]==expected,(source['lesson'],expected,[x['id'] for x in items])
