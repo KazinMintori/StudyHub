@@ -61,7 +61,7 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
         {text:'Wiki học tập',items:[{text:'Tất cả thuật ngữ',link:'/wiki/'}]},
         ...wikiGroups.map(group=>({text:group.name,collapsed:true,items:group.ids.map(id=>({text:concepts[id].name,link:`/wiki/${id}`}))}))
       ],
-      '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'},{text:'Đóng góp nội dung',link:'/guide/contribute'}]}]
+      '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'}]}]
     },
     outline:{level:2,label:'Mục lục'},
     docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},lastUpdated:{text:'Cập nhật lần cuối'},
