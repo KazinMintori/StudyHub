@@ -62,7 +62,7 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts, wikiPeop
         ...(wikiPeople.length ? [{text:'Con người & ý tưởng',collapsed:true,items:wikiPeople.map(person=>({text:person.name,link:`/wiki/nhan-vat/${person.id}`}))}] : []),
         ...wikiGroups.map(group=>({text:group.name,collapsed:true,items:group.ids.map(id=>({text:concepts[id].name,link:`/wiki/${id}`}))}))
       ],
-      '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'},{text:'Đóng góp nội dung',link:'/guide/contribute'}]}]
+      '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'}]}]
     },
     outline:{level:2,label:'Mục lục'},
     docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},
