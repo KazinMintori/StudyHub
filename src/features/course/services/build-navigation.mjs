@@ -4,6 +4,7 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
     sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
     nav:[
+      {text:'Trang chủ',link:'/'},
       {text:'Học phần',items:courseCatalog.map(c=>({text:`${c.name} (${c.lessons.length} ${c.presentation === 'philosophy' ? 'chương' : 'bài'})`,link:`/${c.id}/`}))},
       {text:'Wiki',link:'/wiki/'}, {text:'Góc học tập',link:'/goc-hoc-tap'}, {text:'Hướng dẫn học',link:'/guide/'}
     ],
