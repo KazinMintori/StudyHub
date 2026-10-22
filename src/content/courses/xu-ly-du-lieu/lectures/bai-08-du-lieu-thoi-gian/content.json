@@ -13,21 +13,72 @@
   "fragments": [
     "raw_materials/xu-ly-du-lieu/labs/lab-08.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 108,
+      "title": "Xử lý mốc thời gian không tồn tại khi chuyển sang giờ mùa hè với nonexistent"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 188,
+      "title": "Lọc khung giờ cố định trong ngày bằng between_time và at_time"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 274,
+      "title": "Phát hiện và hợp nhất các mốc thời gian trùng lặp theo phương pháp chọn lọc"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 362,
+      "title": "Chuẩn hóa thời điểm về đầu ngày với tham số normalize"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 445,
+      "title": "Phân biệt dịch chuyển giá trị và dịch chuyển chỉ mục thời gian với freq"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 553,
+      "title": "Biến đổi cột ngày sang chu kỳ kinh doanh với dt.to_period và tổng hợp theo tháng"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 632,
+      "title": "Xác lập ranh giới đóng mở khoảng thời gian khi gom nhóm với closed và label"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 725,
+      "title": "Nội suy theo trọng số khoảng cách thời gian khi dữ liệu ngắt quãng không đều"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 821,
+      "title": "Xử lý chuỗi thời gian không đều đặn với cửa sổ khoảng thời gian và min_periods"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
+      "line": 888,
+      "title": "Điều khiển tốc độ suy giảm trọng số lịch sử qua tham số halflife trong ewm"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
-      "line": 463,
+      "line": 1014,
       "title": "Bài tập 1: Tính số đêm lưu trú và bẫy định dạng"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
-      "line": 493,
+      "line": 1044,
       "title": "Bài tập 2: Tính trung bình số đánh giá mỗi ngày trong tuần"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
-      "line": 522,
+      "line": 1073,
       "title": "Bài tập 3: Nhận diện tháng tăng trưởng đột biến"
     },
     {
@@ -174,17 +225,17 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
-      "line": 476,
+      "line": 1027,
       "title": "Lời giải chi tiết"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
-      "line": 506,
+      "line": 1057,
       "title": "Lời giải chi tiết"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-du-lieu-thoi-gian.md",
-      "line": 535,
+      "line": 1086,
       "title": "Lời giải chi tiết"
     },
     {

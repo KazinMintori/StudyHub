@@ -58,6 +58,49 @@ for ten, bang in bang_nhan_su.groupby("phong_ban"):
     print(bang[["chuc_danh", "luong"]])
 ```
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-1 -->
+
+::: example Trích xuất nhóm thành DataFrame với get_group
+
+Khi đối tượng GroupBy đã được khởi tạo theo phòng ban, ta cần kiểm tra riêng biệt cấu trúc của một nhóm cụ thể như Kỹ thuật để kiểm tra dữ liệu mà không cần lọc thủ công toàn bộ bảng. Phương thức get_group cho phép trích xuất một DataFrame con tương ứng với khóa nhóm mong muốn.
+
+```python
+import pandas as pd
+
+df_nv = pd.DataFrame({
+    "pb": ["KT", "KD", "KT", "KD"],
+    "ten": ["An", "Binh", "Chi", "Dung"],
+    "luong": [15, 20, 18, 25]
+})
+
+nhom_pb = df_nv.groupby("pb")
+df_kt = nhom_pb.get_group("KT")
+print(df_kt)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | pb | ten | luong |
+| --- | --- | --- | --- |
+| 0 | KT | An | 15 |
+| 2 | KT | Chi | 18 |
+
+</div>
+
+Sau khi áp dụng thao tác `groupby('pb')`, pandas tạo ra một đối tượng `DataFrameGroupBy` đại diện cho tập hợp dữ liệu đã được phân tách theo từng giá trị của cột phòng ban.
+
+Phương thức `nhom_pb.get_group('KT')` nhận vào một khóa nhóm và trích xuất toàn bộ các dòng thuộc về khóa đó thành một `DataFrame` con: Nhân viên An và Chi. Chỉ mục ban đầu của các hàng (0 và 2) được bảo tồn nguyên vẹn.
+
+Bên cạnh `get_group`, đối tượng GroupBy hỗ trợ cơ chế lặp (iterable): Khi đặt vào vòng lặp `for ten_nhom, khung_du_lieu in nhom_pb`, mỗi bước lặp trả về một bộ gồm tên khóa nhóm và DataFrame tương ứng của nhóm đó.
+
+Bảng kết quả trích xuất gồm đúng hai nhân sự thuộc phòng Kỹ thuật với đầy đủ các cột dữ liệu gốc, giúp người phân tích cô lập từng phân đoạn dữ liệu để thực hiện các phép xử lý chuyên biệt.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.3. Chọn cột và tập con các cột
 
 - Khi chọn một cột bằng cú pháp ngoặc vuông đơn `df.groupby("phong_ban")["luong"]`, kết quả là một đối tượng `SeriesGroupBy`. Khi tính tổng hợp, nó trả về một Series.
@@ -75,6 +118,48 @@ print(bang_nhan_su.set_index("phong_ban").groupby(anh_xa)["luong"].mean())
 - **Gom nhóm theo tầng chỉ mục (Index Levels)**: Với các DataFrame có chỉ mục phân cấp `MultiIndex`, ta chỉ định tham số `level=0` hoặc `level="ten_tang"` để gom nhóm theo tầng mong muốn.
 
 ---
+
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-2 -->
+
+::: example Gom nhóm chỉ mục bằng ánh xạ từ điển
+
+Các mã hàng hóa trong hệ thống kho P1, P2, P3, P4 được phân loại thành nhóm hàng Nhỏ và Lớn theo một bảng quy ước ngoài. Thay vì phải tạo thêm một cột phân loại mới trong DataFrame, ta truyền trực tiếp một từ điển ánh xạ vào hàm groupby để thực hiện tổng hợp trên chỉ mục hàng.
+
+```python
+import pandas as pd
+
+df_sp = pd.DataFrame({
+    "gia": [5, 12, 8, 3]
+}, index=["P1", "P2", "P3", "P4"])
+
+anh_xa = {"P1": "Nho", "P2": "Lon", "P3": "Lon", "P4": "Nho"}
+df_tong = df_sp.groupby(anh_xa)["gia"].sum().reset_index()
+df_tong.columns = ["loai", "tong"]
+print(df_tong)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| loai | tong |
+| --- | --- |
+| Lon | 20 |
+| Nho | 8 |
+
+</div>
+
+Đối số truyền vào hàm `groupby` không nhất thiết phải là tên cột có sẵn trong bảng: Đối số có thể là một Series, một mảng hoặc một từ điển Python thông thường căn chỉnh theo chỉ mục hàng.
+
+Khi truyền từ điển `anh_xa = {'P1': 'Nho', 'P2': 'Lon', 'P3': 'Lon', 'P4': 'Nho'}`, pandas đối chiếu từng khóa của từ điển với các nhãn chỉ mục hàng của `df_sp`: Các dòng có chỉ mục P1 và P4 được gom vào nhóm `'Nho'`, còn P2 và P3 được gom vào nhóm `'Lon'`.
+
+Toán tử tổng hợp `sum()` được thực thi trên từng nhóm: Nhóm `'Lon'` có tổng giá trị là 12 + 8 = 20, và nhóm `'Nho'` có tổng giá trị là 5 + 3 = 8.
+
+Cơ chế gom nhóm bằng ánh xạ ngoài giúp thực hiện các phép phân nhóm linh hoạt theo danh mục quy ước tạm thời mà không cần can thiệp làm thay đổi cấu trúc cột của bảng ban đầu.
+
+:::
+
+<!-- /worked-example -->
 
 ## 2. Tổng hợp dữ liệu (Data Aggregation)
 
@@ -109,6 +194,52 @@ print(ket_qua_tong_hop)
 assert ket_qua_tong_hop.loc["Kinh doanh", "tong_tien_thuong"] == 1000
 ```
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-3 -->
+
+::: example Tổng hợp nhiều chỉ số đồng thời và đặt tên cột tùy biến với Named Aggregation
+
+Khi lập báo cáo kinh doanh theo vùng, ta cần tính toán đồng thời tổng doanh thu, doanh thu trung bình của từng giao dịch và tổng số đơn hàng đã hoàn tất. Cú pháp Named Aggregation trong phương thức agg cho phép vừa tính toán nhiều hàm trên các cột khác nhau, vừa đặt tên cột đầu ra tường minh mà không sinh ra MultiIndex ở tiêu đề cột.
+
+```python
+import pandas as pd
+
+df_kd = pd.DataFrame({
+    "vung": ["Bac", "Nam", "Bac", "Nam"],
+    "dt": [100, 200, 150, 300],
+    "don": [2, 4, 3, 5]
+})
+
+df_agg = df_kd.groupby("vung").agg(
+    tong_tien=("dt", "sum"),
+    tb_tien=("dt", "mean"),
+    so_don=("don", "sum")
+).reset_index()
+print(df_agg)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| vung | tong&#95;tien | tb&#95;tien | so&#95;don |
+| --- | --- | --- | --- |
+| Bac | 250 | 125.0 | 5 |
+| Nam | 500 | 250.0 | 9 |
+
+</div>
+
+Cách viết tổng hợp truyền thống dùng từ điển `agg({'dt': ['sum', 'mean'], 'don': 'sum'})` thường tạo ra một MultiIndex ở cấp cột (chẳng hạn các cặp `('dt', 'sum')` và `('dt', 'mean')`). Cấu trúc cột phân tầng này đòi hỏi thêm bước xử lý làm phẳng khi xuất bản báo cáo.
+
+Cú pháp Named Aggregation cho phép truyền các đối số có tên theo định dạng `ten_cot_moi=('cot_nguon', 'ham_tinh')`: Tên đối số như `tong_tien` hay `tb_tien` sẽ trở thành tiêu đề cột phẳng duy nhất ngay sau khi tính toán.
+
+Quan sát kết quả ở vùng Bắc: Cột `tong_tien` nhận giá trị 100 + 150 = 250, cột `tb_tien` tính trung bình là 125.0, và cột `so_don` tính tổng là 2 + 3 = 5 đơn. Vùng Nam cũng được tổng hợp tương ứng với các giá trị 500, 250.0 và 9 đơn.
+
+Bảng trả về là một `DataFrame` phẳng hai chiều với các tên cột nghiệp vụ rõ ràng, sẵn sàng để xuất ra tệp hoặc chuyển tiếp sang các giai đoạn phân tích tiếp theo.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.3. Trả về kết quả không có chỉ mục nhóm với `as_index=False`
 
 Mặc định, các khóa nhóm sẽ trở thành chỉ mục hàng của bảng kết quả. Nếu muốn các khóa nhóm tiếp tục nằm ở dạng cột thông thường giống như kết quả của câu lệnh `GROUP BY` trong SQL, ta chỉ định tham số `as_index=False`:
@@ -121,13 +252,54 @@ assert "phong_ban" in df_sql_style.columns
 
 ---
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-4 -->
+
+::: example Xuất bản bảng tổng hợp phẳng với tham số as_index=False
+
+Khi tổng hợp dữ liệu để ghi vào cơ sở dữ liệu quan hệ, bảng đầu ra cần giữ cột phân nhóm như một cột dữ liệu thông thường thay vì đưa vào chỉ mục hàng. Việc thiết lập as_index=False trong groupby giúp tạo trực tiếp bảng kết quả dạng phẳng.
+
+```python
+import pandas as pd
+
+df_chi = pd.DataFrame({
+    "pb": ["HR", "IT", "HR"],
+    "tien": [10, 25, 15]
+})
+
+df_tb = df_chi.groupby("pb", as_index=False)["tien"].mean()
+print(df_tb)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| pb | tien |
+| --- | --- |
+| HR | 12.5 |
+| IT | 25.0 |
+
+</div>
+
+Hành vi mặc định của hàm `groupby` trong pandas là lấy khóa nhóm làm chỉ mục hàng (Index) của `DataFrame` kết quả. Thiết kế này thuận tiện cho việc tra cứu theo nhãn nhưng đòi hỏi phải gọi thêm `.reset_index()` nếu muốn chuyển kết quả về dạng cột phẳng.
+
+Tham số `as_index=False` mô phỏng hành vi của mệnh đề GROUP BY trong ngôn ngữ SQL: Cột phân nhóm `pb` được bảo lưu như một cột dữ liệu bình thường, và chỉ mục hàng được thiết lập bằng dãy số nguyên RangeIndex bắt đầu từ 0.
+
+Phép tính trung bình cột `tien` được áp dụng trên từng nhóm: Phòng HR có trung bình là (10 + 15) / 2 = 12.5, và phòng IT có giá trị là 25.0. Bảng kết quả gồm đúng hai cột `pb` và `tien`.
+
+Việc sử dụng `as_index=False` giúp câu lệnh ngắn gọn hơn và loại bỏ bước tạo lại chỉ mục sau khi tổng hợp.
+
+:::
+
+<!-- /worked-example -->
+
 ## 3. Phép biến đổi nhóm và lọc nhóm (Transforms and Filters)
 
 Trong khi các hàm tổng hợp `agg()` rút gọn mỗi nhóm thành một dòng duy nhất, nhiều bài toán phân tích đòi hỏi phải giữ nguyên toàn bộ số lượng dòng ban đầu.
 
 ### 3.1. Phương thức `transform` và phân bổ kết quả nhóm về từng dòng
 
-Phương thức `transform()` áp dụng một hàm lên từng nhóm nhưng trả về một đối tượng có **kích thước và chỉ mục hoàn toàn trùng khớp với DataFrame ban đầu**. Kết quả tính toán của từng nhóm được gán cùng giá trị cho toàn bộ các hàng thuộc về nhóm đó.
+Phương thức `transform()` tính toán theo nhóm rồi đưa kết quả về đúng từng hàng của dữ liệu đang xét. Với một cột đã chọn, kết quả là Series có cùng chỉ mục với cột đó. Hàm có thể trả một số để lặp lại trong nhóm, như trung bình nhóm, hoặc trả các giá trị tương ứng với từng hàng, như độ lệch so với trung bình.
 
 Ứng dụng kinh điển nhất của `transform` là tính toán độ lệch so với trung bình nhóm hoặc chuẩn hóa Z-score nội bộ nhóm:
 $$
@@ -146,6 +318,52 @@ print(bang_nhan_su[["phong_ban", "chuc_danh", "luong", "chenh_lech_luong"]])
 np.testing.assert_allclose(bang_nhan_su.groupby("phong_ban")["chenh_lech_luong"].sum(), 0.0)
 ```
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-5 -->
+
+::: example Tính trung bình nhóm và căn chỉnh độ lệch bằng transform
+
+Để đánh giá mức lương của một nhân viên so với mức bình quân trong cùng phòng ban, ta cần tính giá trị trung bình của từng phòng rồi phân bổ ngược lại đúng số lượng dòng gốc. Phương thức transform cho phép tính toán và truyền kết quả vô hướng về từng hàng theo đúng chỉ mục ban đầu.
+
+```python
+import pandas as pd
+
+df_nv = pd.DataFrame({
+    "pb": ["A", "A", "B", "B"],
+    "luong": [10.0, 20.0, 30.0, 50.0]
+})
+
+df_nv["tb_pb"] = df_nv.groupby("pb")["luong"].transform("mean")
+df_nv["chenh"] = df_nv["luong"] - df_nv["tb_pb"]
+print(df_nv)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| pb | luong | tb&#95;pb | chenh |
+| --- | --- | --- | --- |
+| A | 10.0 | 15.0 | -5.0 |
+| A | 20.0 | 15.0 | 5.0 |
+| B | 30.0 | 40.0 | -10.0 |
+| B | 50.0 | 40.0 | 10.0 |
+
+</div>
+
+![agg mean tạo một hàng mỗi phòng, transform mean đưa lương trung bình 15 hoặc 40 về từng nhân viên](img/function-examples/groupby-shape.svg)
+
+Với phép tính trung bình này, `agg("mean")` trả một kết quả cho mỗi nhóm, còn `transform("mean")` đưa kết quả về từng hàng ban đầu. Nếu chọn nhiều cột hoặc nhiều hàm tổng hợp, bảng từ `agg` cũng có thể có nhiều cột. Điểm cần phân biệt là mỗi hàng còn đại diện cho nhóm hay cho quan sát ban đầu.
+
+Lời gọi `df_nv.groupby('pb')['luong'].transform('mean')` tính giá trị trung bình cho từng phòng: Phòng A có mức trung bình là (10 + 20) / 2 = 15.0, và phòng B là (30 + 50) / 2 = 40.0. Giá trị vô hướng 15.0 được phát sóng (broadcast) vào cả hai dòng của phòng A, và 40.0 được phát sóng vào cả hai dòng của phòng B.
+
+Nhờ tính chất giữ nguyên chỉ mục và kích thước (same-index output), ta thực hiện phép trừ vector trực tiếp: Biểu thức `df_nv['luong'] - df_nv['tb_pb']` tính toán mức chênh lệch cục bộ giữa lương cá nhân và trung bình phòng.
+
+Cần làm rõ rằng phép biến đổi này chỉ là thao tác dịch tâm dữ liệu (centering data) quanh giá trị trung bình nhóm: Đây không phải là phép tính z-score đầy đủ vì chưa thực hiện chuẩn hóa chia cho độ lệch chuẩn của nhóm.
+
+:::
+
+<!-- /worked-example -->
+
 ### 3.2. Lọc nhóm với `filter`
 
 Phương thức `filter()` nhận vào một hàm trả về giá trị logic `True` hoặc `False`. Hàm này được gọi trên từng nhóm. Nếu nhóm thỏa mãn điều kiện, toàn bộ các hàng của nhóm đó sẽ được giữ lại, còn ngược lại thì toàn bộ nhóm bị loại bỏ khỏi bảng dữ liệu:
@@ -160,9 +378,53 @@ assert set(phong_dong_nguoi["phong_ban"].unique()) == {"Kỹ thuật"}
 
 ---
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-6 -->
+
+::: example Lọc bỏ toàn bộ các nhóm không đạt ngưỡng tổng doanh thu với filter
+
+Trong bài toán quản lý kho bãi, ban quản lý muốn loại bỏ toàn bộ dữ liệu của những kho có tổng giá trị giao dịch dưới 400 triệu đồng để tập trung phân tích các trung tâm có quy mô lớn. Phương thức filter đánh giá điều kiện trên toàn thể từng nhóm và chỉ giữ lại các dòng thuộc về những nhóm thỏa mãn tiêu chí.
+
+```python
+import pandas as pd
+
+df_kho = pd.DataFrame({
+    "kho": ["K1", "K1", "K2", "K2"],
+    "don": [1, 2, 3, 4],
+    "tien": [50, 60, 200, 300]
+})
+
+df_loc = df_kho.groupby("kho").filter(lambda g: g["tien"].sum() >= 400)
+print(df_loc)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | kho | don | tien |
+| --- | --- | --- | --- |
+| 2 | K2 | 3 | 200 |
+| 3 | K2 | 4 | 300 |
+
+</div>
+
+Các phương thức lọc dòng thông thường của pandas đánh giá điều kiện trên từng dòng riêng lẻ. Ngược lại, bài toán lọc nhóm đòi hỏi phải tính toán một chỉ số tổng hợp trên toàn bộ nhóm (chẳng hạn tổng tiền của cả kho) trước khi quyết định giữ lại hay loại bỏ tất cả các dòng của nhóm đó.
+
+Phương thức `groupby('kho').filter(ham_dieu_kien)` nhận một hàm trả về giá trị boolean `True` hoặc `False` cho mỗi nhóm: Nhóm kho K1 có tổng tiền là 50 + 60 = 110, nhỏ hơn 400 nên hàm trả về `False`. Toàn bộ các dòng của K1 bị loại bỏ.
+
+Nhóm kho K2 có tổng tiền là 200 + 300 = 500, lớn hơn ngưỡng 400 nên hàm trả về `True`: Toàn bộ hai bản ghi của kho K2 được giữ nguyên vẹn trong DataFrame kết quả cùng với các cột `don` và `tien` ban đầu.
+
+Khác với `agg` (chỉ trả về một dòng tóm tắt cho mỗi nhóm), `filter` trả về các dòng dữ liệu chi tiết của các nhóm đạt chuẩn, tương tự cơ chế của mệnh đề HAVING trong các truy vấn SQL.
+
+:::
+
+<!-- /worked-example -->
+
 ## 4. Phương thức Apply tổng quát: Tách - Áp dụng - Gộp linh hoạt
 
-Phương thức `apply()` là công cụ tổng quát nhất của đối tượng `groupby`. Trong khi `agg` bắt buộc phải trả về giá trị vô hướng và `transform` bắt buộc phải trả về mảng cùng kích thước, `apply()` cho phép hàm tự do trả về một giá trị vô hướng, một Series, hoặc thậm chí một DataFrame con có kích thước tùy ý.
+Phương thức `apply()` gọi hàm trên từng nhóm và ghép các kết quả lại. Hàm có thể trả một số, Series hoặc DataFrame. Chẳng hạn, lấy hai mặt hàng bán chạy nhất của mỗi cửa hàng tạo ra một bảng con cho từng nhóm.
+
+Khi cần tổng, trung bình hoặc nhiều chỉ tiêu tổng hợp, hãy chọn `agg`. Khi cần giữ kết quả ở từng hàng ban đầu, hãy chọn `transform`. `apply` phù hợp khi cách xử lý hoặc hình dạng đầu ra chưa được hai phương thức đó diễn đạt trực tiếp. Hàm truyền vào `transform` cũng có thể trả một số để pandas phân bổ về các hàng của nhóm.
 
 Pandas sẽ tự động ghép nối các mảnh kết quả này lại với nhau dọc theo trục tương ứng.
 
@@ -183,6 +445,53 @@ assert len(top_1_moi_phong) == 2
 
 Mặc định, `apply()` sẽ gắn thêm tên nhóm vào chỉ mục để tạo thành chỉ mục phân cấp `MultiIndex`. Khi muốn giữ nguyên chỉ mục hàng nguyên bản của bảng dữ liệu, ta thiết lập tham số `group_keys=False`.
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-7 -->
+
+::: example Kiểm soát việc đưa khóa nhóm vào chỉ mục kết quả với group_keys
+
+Khi trích xuất phần tử có giá trị lớn nhất trong mỗi nhóm bằng hàm apply, cấu trúc mặc định sẽ đưa khóa nhóm vào tầng ngoài cùng của chỉ mục. Ta sử dụng tham số group_keys=False và chỉ định rõ include_groups=False để kiểm soát bố cục chỉ mục và tương thích với các phiên bản pandas hiện đại.
+
+```python
+import pandas as pd
+
+df_diem = pd.DataFrame({
+    "nhom": ["X", "X", "Y", "Y"],
+    "ten": ["A", "B", "C", "D"],
+    "val": [10, 30, 20, 50]
+})
+
+def lay_top1(g):
+    return g.nlargest(1, "val")
+
+df_top = df_diem.groupby(
+    "nhom", group_keys=False
+).apply(lay_top1, include_groups=False)
+print(df_top)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| Chỉ mục | ten | val |
+| --- | --- | --- |
+| 1 | B | 30 |
+| 3 | D | 50 |
+
+</div>
+
+Phương thức `apply` là cơ chế tổng quát nhất của mô hình Tách - Áp dụng - Gộp (Split-Apply-Combine), cho phép hàm tùy biến xử lý từng DataFrame con và ghép các kết quả lại với nhau.
+
+Tham số `group_keys=False` chỉ điều khiển bố cục của chỉ mục kết quả (index layout): Nó ngăn không cho pandas chèn thêm các khóa nhóm vào tầng ngoài cùng của MultiIndex, giữ cho chỉ mục kết quả duy trì dạng phẳng theo chỉ mục hàng gốc của các bản ghi được chọn (dòng 1 của B và dòng 3 của D). Tham số này không quyết định việc giữ lại hay loại bỏ cột phân nhóm trong thân bảng.
+
+`include_groups=False` không truyền cột khóa `nhom` vào `lay_top1`. Tham số được hỗ trợ từ pandas 2.2 và là cách xử lý bắt buộc trong pandas 3. Hai hàng chọn được vẫn mang chỉ mục 1 và 3, nhưng bảng đầu ra chỉ còn cột `ten` và `val`.
+
+Cần đối chiếu với các phương thức tích hợp sẵn: Nếu bài toán chỉ đơn thuần là tìm giá trị lớn nhất theo từng nhóm trên một cột số, việc gọi trực tiếp `df_diem.groupby('nhom')['val'].nlargest(1)` hoặc phương thức chuyên dụng thường trực tiếp hơn so với việc định nghĩa một hàm tự tạo qua `apply`.
+
+:::
+
+<!-- /worked-example -->
+
 ### 4.2. Phân tích theo khoảng và tứ phân vị (Bucket Analysis)
 
 Bằng cách kết hợp `pd.qcut` hoặc `pd.cut` với `groupby`, ta có thể phân tích dữ liệu theo các phân khúc thu nhập hoặc nhóm tuổi:
@@ -199,6 +508,51 @@ thong_ke_phan_vi = du_lieu_khach.groupby(phan_vi_chi_tieu, observed=False)["so_l
 print(thong_ke_phan_vi)
 assert len(thong_ke_phan_vi) == 4
 ```
+
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-8 -->
+
+::: example Phân nhóm theo phân vị thu nhập bằng qcut và tổng hợp chi tiêu
+
+Trong bài toán khảo sát hành vi tiêu dùng, khách hàng được chia thành hai nhóm phân vị thu nhập để tính mức chi tiêu bình quân của từng nhóm. Ta kết hợp hàm pd.qcut với q=2 và truyền kết quả phân khoảng này làm tiêu chí gom nhóm cho groupby.
+
+```python
+import pandas as pd
+
+df_kh = pd.DataFrame({
+    "khach": ["K1", "K2", "K3", "K4"],
+    "thu_nhap": [10, 25, 40, 80],
+    "chi_tieu": [5, 12, 18, 35]
+})
+
+nhom_tn = pd.qcut(df_kh["thu_nhap"], q=2, labels=["Thap", "Cao"])
+gb_tn = df_kh.groupby(nhom_tn, observed=False)
+df_pk = gb_tn["chi_tieu"].mean().reset_index()
+df_pk.columns = ["phan_khuc", "chi_tieu_tb"]
+print(df_pk)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| phan&#95;khuc | chi&#95;tieu&#95;tb |
+| --- | --- |
+| Thap | 8.5 |
+| Cao | 26.5 |
+
+</div>
+
+`qcut(..., q=2)` tạo hai nhóm theo trung vị thu nhập. Trong dữ liệu này, trung vị là 32.5 nên K1, K2 thuộc nhóm thấp và K3, K4 thuộc nhóm cao. Đây là hai nửa của mẫu, không phải bốn nhóm tứ phân vị.
+
+Khi làm việc với `pd.qcut` trên các tập dữ liệu có nhiều quan sát trùng lặp ở ngưỡng phân vị, số lượng phần tử ở mỗi nhóm không được bảo đảm hoàn toàn bằng nhau. Nếu các giá trị trùng lặp làm cho các mốc biên giới hạn bị trùng lặp, `qcut` sẽ báo lỗi ngoại lệ trừ khi ta cấu hình tham số loại bỏ điểm cắt trùng.
+
+Tham số `observed=False` trong hàm `groupby` chỉ thị cho pandas xem xét đầy đủ mọi danh mục đã khai báo trong biến phân loại, ngay cả khi có nhóm không xuất hiện quan sát nào trong dữ liệu.
+
+Trung bình chi tiêu của nhóm thấp là `(5 + 12) / 2 = 8.5`, còn nhóm cao là `(18 + 35) / 2 = 26.5`. Hai số mô tả đúng bốn khách trong ví dụ. Muốn suy luận cho một tập khách rộng hơn cần xét cách lấy mẫu và số quan sát, không chỉ cú pháp gom nhóm.
+
+:::
+
+<!-- /worked-example -->
 
 ### 4.3. Bốn ví dụ kỹ thuật chuyên sâu với `apply`
 
@@ -311,6 +665,57 @@ print(bang_pivot)
 assert bang_pivot.loc["Kỹ thuật", "Lập trình viên"] == 2100
 ```
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-9 -->
+
+::: example Tổng hợp đa chiều kèm dòng tổng biên margins với pivot_table
+
+Khi lập báo cáo kinh doanh tổng thể theo vùng địa lý và ngành hàng, bảng tổng hợp cần hiển thị cả số liệu của từng ô giao nhau lẫn các dòng tổng biên (Total/All). Ta sử dụng pd.pivot_table với tham số margins=True và margins_name='Tong' để hiển thị các đường biên tổng hợp.
+
+```python
+import pandas as pd
+
+df_hang = pd.DataFrame({
+    "vung": ["Bac", "Bac", "Nam", "Nam"],
+    "loai": ["Ao", "Quan", "Ao", "Quan"],
+    "tien": [100, 150, 120, 200]
+})
+
+df_pv = pd.pivot_table(
+    df_hang,
+    index="vung",
+    columns="loai",
+    values="tien",
+    aggfunc="sum",
+    margins=True,
+    margins_name="Tong"
+).reset_index()
+print(df_pv)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| vung | Ao | Quan | Tong |
+| --- | --- | --- | --- |
+| Bac | 100 | 150 | 250 |
+| Nam | 120 | 200 | 320 |
+| Tong | 220 | 350 | 570 |
+
+</div>
+
+Hàm `pd.pivot_table` cung cấp giao diện tổng hợp đa chiều: Nó kết hợp việc gom nhóm dữ liệu theo nhiều tiêu chí với việc xoay chuyển bố cục hiển thị thành ma trận hai chiều. Hàm áp dụng hàm tổng hợp được chỉ định trong tham số `aggfunc` (trong ví dụ này là `'sum'`).
+
+Hai tham số `index='vung'` và `columns='loai'` định hình các trục của bảng: Cột `vung` trở thành chỉ mục hàng và các giá trị của cột `loai` trở thành các cột tiêu đề (Ao và Quan).
+
+Tham số `margins=True` bổ sung các hàng và cột tổng biên vào bảng kết quả: Cần lưu ý rằng các đường biên này được tính toán bằng chính hàm tổng hợp đã khai báo trong `aggfunc`. Trong ví dụ này `aggfunc='sum'`, nên dòng và cột biên thể hiện phép tính tổng. Nếu `aggfunc='mean'`, các đường biên sẽ hiển thị giá trị trung bình chứ không phải tổng cộng.
+
+Tham số `margins_name='Tong'` gán nhãn đại diện cho các dòng và cột biên: Dòng biên cho thấy tổng giá trị của miền Bắc là 250, miền Nam là 320, và tổng toàn bộ hai mặt hàng là 570.
+
+:::
+
+<!-- /worked-example -->
+
 ### 5.2. Bảng chéo với `pd.crosstab`
 
 Hàm `pd.crosstab()` là trường hợp đặc biệt của bảng Pivot, được thiết kế chuyên biệt để đếm **tần số xuất hiện đồng thời (Frequency Counts)** giữa hai hoặc nhiều biến phân loại:
@@ -339,6 +744,51 @@ assert bang_tan_so.loc["All", "All"] == 6
 
 ---
 
+<!-- worked-example bai-10-tong-hop-theo-nhom-worked-10 -->
+
+::: example Lập bảng tần suất chéo và chuẩn hóa tỷ lệ theo hàng với crosstab
+
+Trong các nghiên cứu khảo sát xã hội học, việc đếm số lượng người tham gia theo giới tính và mức độ hài lòng cần được quy đổi thành tỷ lệ phân bố theo từng dòng. Ta sử dụng hàm pd.crosstab với tham số normalize='index' để chuẩn hóa tỷ lệ theo hàng.
+
+```python
+import pandas as pd
+
+df_ks = pd.DataFrame({
+    "gioi_tinh": ["Nam", "Nu", "Nam", "Nu"],
+    "hai_long": ["Co", "Co", "Khong", "Co"]
+})
+
+df_ct = pd.crosstab(
+    df_ks["gioi_tinh"],
+    df_ks["hai_long"],
+    normalize="index"
+).reset_index()
+print(df_ct)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| gioi&#95;tinh | Co | Khong |
+| --- | --- | --- |
+| Nam | 0.5 | 0.5 |
+| Nu | 1.0 | 0.0 |
+
+</div>
+
+Bảng chéo (Cross-tabulation hay Crosstab) là trường hợp chuyên biệt của bảng pivot dùng để tính toán tần suất xuất hiện giữa hai hoặc nhiều biến phân loại định tính. Hàm `pd.crosstab` tiếp nhận trực tiếp các đối tượng Series độc lập làm đối số.
+
+Nếu không cấu hình chuẩn hóa, bảng chéo sẽ trả về số lượng đếm thô của từng ô: Trong mẫu khảo sát nhỏ, nhóm Nam có 1 người trả lời `'Co'` và 1 người trả lời `'Khong'`, còn nhóm Nữ có 2 người đều trả lời `'Co'`.
+
+`normalize="index"` chia số đếm mỗi ô cho tổng số của chính hàng đó. Kết quả là tỷ lệ từ 0 đến 1. Muốn hiển thị phần trăm, nhân các cột tỷ lệ với 100, đồng thời giữ nguyên cột nhãn nhóm.
+
+Bảng kết quả cho thấy nhóm Nam có tỷ lệ 0.5 hài lòng và 0.5 không hài lòng, trong khi nhóm Nữ có tỷ lệ 1.0 hài lòng. Cần nhấn mạnh rằng tập dữ liệu giả định gồm 4 người này chỉ phục vụ mục đích minh họa cú pháp hàm, không mang giá trị suy diễn thống kê cho bất kỳ tổng thể xã hội học nào.
+
+:::
+
+<!-- /worked-example -->
+
 ## 7. Tổng kết
 
 1. **Hiểu rõ ba pha Split-Apply-Combine**: Phân biệt rạch ròi giữa việc tách nhóm, áp dụng hàm xử lý và gộp kết quả. Đối tượng `groupby` hoạt động theo cơ chế đánh giá trì hoãn và chỉ tính toán khi được gọi hàm cụ thể.
@@ -351,6 +801,9 @@ assert bang_tan_so.loc["All", "All"] == 6
 ---
 
 ## Tài liệu tham khảo
+
+- [pandas: Phép biến đổi theo nhóm](https://pandas.pydata.org/docs/reference/api/pandas.api.typing.DataFrameGroupBy.transform.html).
+
 
 - Wes McKinney, *Python for Data Analysis* (tái bản lần 3): [Chương 10: Data Aggregation and Group Operations](https://wesmckinney.com/book/data-aggregation).
 - Tài liệu chính thức pandas: [Tài liệu hướng dẫn Group by: Split-apply-combine](https://pandas.pydata.org/docs/user_guide/groupby.html).

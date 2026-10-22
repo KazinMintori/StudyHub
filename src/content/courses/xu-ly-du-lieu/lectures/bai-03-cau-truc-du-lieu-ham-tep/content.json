@@ -13,21 +13,72 @@
   "fragments": [
     "raw_materials/xu-ly-du-lieu/labs/lab-02.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 59,
+      "title": "Giải nén phần tử đầu cuối với toán tử sao"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 114,
+      "title": "Phân biệt tạo danh sách mới bằng toán tử cộng và biến đổi tại chỗ bằng extend"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 197,
+      "title": "Gom nhóm dữ liệu với collections.defaultdict và dict.setdefault"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 269,
+      "title": "Đối soát người dùng hoạt động giữa hai kỳ bằng đại số tập hợp"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 321,
+      "title": "Ghép cặp danh sách song song và đánh số thứ tự với zip và enumerate"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 378,
+      "title": "Làm phẳng và lọc dữ liệu mảng hai chiều bằng list comprehension"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 472,
+      "title": "Áp dụng chuỗi hàm chuẩn hóa văn bản tuần tự"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 559,
+      "title": "Gom nhóm và tính tổng dữ liệu đã sắp xếp với itertools.groupby"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 624,
+      "title": "Bóc tách dòng dữ liệu và xử lý ngoại lệ với try, except và else"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
+      "line": 704,
+      "title": "Đọc và phân tách dòng văn bản với read_text và splitlines"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
-      "line": 313,
+      "line": 774,
       "title": "Bài tập 1: Pipeline làm sạch chuỗi bằng danh sách hàm bậc cao"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
-      "line": 358,
+      "line": 819,
       "title": "Bài tập 2: Xử lý tệp log dạng dòng với Generator và Exception Handling"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
-      "line": 408,
+      "line": 869,
       "title": "Bài tập 3: Gom nhóm dữ liệu và đếm tần suất với defaultdict"
     },
     {
@@ -109,17 +160,17 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
-      "line": 327,
+      "line": 788,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
-      "line": 374,
+      "line": 835,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md",
-      "line": 424,
+      "line": 885,
       "title": "Lời giải"
     },
     {

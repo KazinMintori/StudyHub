@@ -13,11 +13,67 @@
   "fragments": [
     "raw_materials/xu-ly-du-lieu/labs/lab-05-merge.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 72,
+      "title": "Hoán vị thứ tự tầng chỉ mục với swaplevel và sắp xếp tầng với sort_index"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 136,
+      "title": "Chuyển cột thành MultiIndex với set_index và khôi phục cột với reset_index"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 196,
+      "title": "Ghép ngoài theo mã và kiểm tra hàng chưa khớp bằng indicator"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 245,
+      "title": "Hiện tượng bùng nổ hàng trong phép ghép nhiều - nhiều và kiểm soát khóa trùng"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 350,
+      "title": "Xác thực ràng buộc bản số quan hệ với tham số validate"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 394,
+      "title": "Ghép bảng dựa trên chỉ mục với join và phân biệt tên cột bằng hậu tố"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 454,
+      "title": "Đổi axis của concat thì nhãn nào được khớp?"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 504,
+      "title": "Giữ nguồn gốc và phát hiện chỉ mục trùng khi nối tháng"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 580,
+      "title": "Vá dữ liệu khuyết thiếu bằng cách ghép chồng ưu tiên với combine_first"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 680,
+      "title": "Tái cấu trúc bảng từ dạng dài sang dạng rộng bằng pivot"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 756,
+      "title": "Làm phẳng bảng số liệu dạng rộng thành dạng dài với melt"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
-      "line": 321,
+      "line": 834,
       "title": "Bài tập 1: Ghép trái khi khóa lặp ở cả hai bảng"
     },
     {
@@ -34,7 +90,7 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
-      "line": 342,
+      "line": 855,
       "title": "Lời giải"
     },
     {
@@ -43,5 +99,12 @@
       "title": ""
     }
   ],
-  "assets": []
+  "assets": [
+    {
+      "reference": "img/function-examples/concat-alignment.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-08-ghep-bang-chuyen-dang.md",
+      "line": 490,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/concat-alignment.svg"
+    }
+  ]
 }

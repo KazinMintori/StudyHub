@@ -15,36 +15,87 @@
     "raw_materials/xu-ly-du-lieu/labs/lab-10.md",
     "raw_materials/xu-ly-du-lieu/labs/lab-11.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 53,
+      "title": "Lọc bỏ hàng theo ngưỡng số lượng giá trị hợp lệ với tham số thresh"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 106,
+      "title": "Điền dữ liệu thiếu theo từng cột và kiểm soát bước truyền với ffill"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 208,
+      "title": "Nhận diện bản ghi trùng lặp và kiểm soát vị trí lưu giữ với keep"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 295,
+      "title": "Ánh xạ cột với Series.map và biến đổi bảng với DataFrame.map"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 371,
+      "title": "Thay thế nhiều giá trị bằng từ điển và chuẩn hóa tên cột với rename"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 436,
+      "title": "Rời rạc hóa giá trị theo khoảng cố định với cut và theo phân vị với qcut"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 521,
+      "title": "Xác định biên ngoại lai theo khoảng tứ phân vị và nẹp giá trị bằng clip"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 587,
+      "title": "Mã hóa một nóng cho biến định tính với get_dummies"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 682,
+      "title": "Trích xuất nhóm thông tin bằng biểu thức chính quy với str.extract"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
+      "line": 769,
+      "title": "Thiết lập phân loại có thứ tự và biến đổi thang đo định tính"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 376,
+      "line": 895,
       "title": "Bài tập 1: Giá trung vị theo loại chỗ ở"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 414,
+      "line": 933,
       "title": "Bài tập 2: Trích xuất diện tích phòng bằng biểu thức chính quy"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 459,
+      "line": 978,
       "title": "Bài tập 3: Thống kê tần số tiện nghi độc lập"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 510,
+      "line": 1029,
       "title": "Bài tập 4: So sánh giá giữa hai kỳ quan sát"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 550,
+      "line": 1069,
       "title": "Bài tập 5: Phản xạ của bộ kiểm tra ngoại lai trước đợt tăng giá đồng loạt"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 575,
+      "line": 1094,
       "title": "Bài tập 6: Giữ giá cập nhật sau cùng theo từng khóa"
     },
     {
@@ -331,32 +382,32 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 390,
+      "line": 909,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 428,
+      "line": 947,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 472,
+      "line": 991,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 523,
+      "line": 1042,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 556,
+      "line": 1075,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-lam-sach-du-lieu.md",
-      "line": 588,
+      "line": 1107,
       "title": "Lời giải"
     },
     {

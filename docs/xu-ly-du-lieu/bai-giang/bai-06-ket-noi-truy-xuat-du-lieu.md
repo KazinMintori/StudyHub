@@ -50,11 +50,61 @@ print(df_nhan_vien)
 
 Khi tệp chứa các dòng ghi chú hoặc thông tin phiên bản ở đầu tệp, tham số `skiprows` cho phép bỏ qua số dòng tương ứng hoặc truyền vào một danh sách các chỉ số dòng cần loại trừ trước khi phân tích cú pháp.
 
-### 1.2. Kiểm soát giá trị khuyết thiếu và bẫy quy ước quốc tế
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-1 -->
+
+::: example Chỉ định tiêu đề cột và kiểu dữ liệu khi phân tích tệp phân cách bằng tab
+
+Khi tiếp nhận tệp nhật ký ghi nhận nhân sự phân cách bằng tab nhưng không có dòng tiêu đề cột, việc gọi hàm đọc thông thường sẽ lấy nhầm dòng đầu tiên làm tên cột và tự động ép mã nhân viên thành số nguyên. Ta cần chỉ định tham số names, header=None và định rõ dtype để giữ trọn vẹn định dạng chuỗi của mã định danh.
+
+```python
+import io
+import pandas as pd
+
+du_lieu_tab = (
+    "NV01\tAn\t12.5\n"
+    "NV02\tBinh\t18.0\n"
+    "NV03\tChi\t15.2"
+)
+
+df_nv = pd.read_table(
+    io.StringIO(du_lieu_tab),
+    header=None,
+    names=["ma_nv", "ten", "luong"],
+    usecols=["ma_nv", "luong"],
+    dtype={"ma_nv": "string", "luong": "float64"}
+)
+print(df_nv)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| ma&#95;nv | luong |
+| --- | --- |
+| NV01 | 12.5 |
+| NV02 | 18.0 |
+| NV03 | 15.2 |
+
+</div>
+
+Một tình huống thực tế khi xử lý dữ liệu hệ thống là tệp văn bản không có dòng tiêu đề đầu tiên và các trường được phân tách bằng ký tự tab. Nếu gọi `pd.read_csv` theo mặc định mà không cấu hình tham số phân cách, hàm sẽ tìm kiếm dấu phẩy và lấy dòng dữ liệu đầu tiên làm tiêu đề. Hàng dữ liệu đầu tiên do đó bị nhận nhầm thành tên cột, làm mất một quan sát hợp lệ.
+
+Hàm `pd.read_table` được thiết lập với ký tự phân cách mặc định `sep='\t'`. Để tránh lấy dòng đầu làm tiêu đề, ta truyền tham số `header=None` kết hợp với danh sách tên cột tường minh qua tham số `names=['ma_nv', 'ten', 'luong']`. Thao tác này thiết lập cấu trúc cột ngay từ bước đọc tệp.
+
+Tham số `usecols` giới hạn danh sách các cột cần nạp vào bộ nhớ: Cột `ma_nv` và cột `luong`. Việc bỏ qua cột `ten` ngay trong quá trình phân tích cú pháp giúp giảm lượng dữ liệu cần chuyển vào bộ nhớ khi xử lý các bảng có nhiều cột không phục vụ bài toán.
+
+`dtype` chỉ định kiểu của các cột đã chọn. Với mã có số 0 ở đầu như `"0012"`, đặt kiểu chuỗi tránh biến mã thành số 12. Mã `NV01` trong ví dụ vốn đã chứa chữ, nhưng khai báo `string` vẫn làm rõ cách chương trình dự định sử dụng cột này.
+
+:::
+
+<!-- /worked-example -->
+
+### 1.2. Quy ước nhận diện giá trị thiếu trong tệp {#_1-2-kiem-soat-gia-tri-khuyet-thieu-va-bay-quy-uoc-quoc-te}
 
 Mỗi nguồn dữ liệu lại sở hữu một quy ước riêng để đánh dấu ô trống, chẳng hạn `"N/A"`, `"NaN"`, `"NULL"` hoặc `"-999"`. Hàm `read_csv` có sẵn một danh sách các chuỗi mặc định được tự động nhận diện là giá trị khuyết thiếu (`np.nan`).
 
-Tuy nhiên, cơ chế tự động này tiềm ẩn cạm bẫy kỹ thuật nghiêm trọng. Xét bài toán xử lý mã quốc gia theo tiêu chuẩn quốc tế ISO alpha-2: Quốc gia Namibia có mã chính thức là `"NA"`. Nếu nạp dữ liệu một cách mặc định, pandas sẽ tự ý chuyển mã quốc gia `"NA"` của Namibia thành giá trị khuyết thiếu `NaN`.
+Một chuỗi ký tự có thể mang ý nghĩa khác với quy ước nhận diện ô thiếu. Xét mã quốc gia theo ISO alpha-2: Namibia có mã `"NA"`. Khi đọc CSV bằng cấu hình mặc định, pandas nhận chuỗi này là giá trị thiếu. Ta cần chỉ định quy tắc đọc phù hợp với ý nghĩa của từng cột.
 
 Để xử lý chính xác, ta phải làm chủ hai tham số:
 1. `keep_default_na=False`: Vô hiệu hóa toàn bộ danh sách quy ước khuyết thiếu mặc định của thư viện.
@@ -77,6 +127,59 @@ print(df_qg)
 assert df_qg.loc[df_qg["ma_qg"] == "NA", "ten_qg"].iloc[0] == "Namibia"
 assert pd.isna(df_qg.loc[df_qg["ma_qg"] == "NA", "chi_so"].iloc[0])
 ```
+
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-2 -->
+
+::: example Chỉ định giá trị khuyết thiếu theo từng cột và bảo vệ mã phân loại quốc tế
+
+Trong các bảng dữ liệu khu vực quốc tế, mã hai chữ cái NA đại diện cho quốc gia Namibia hoặc khu vực Bắc Mỹ thường bị pandas tự động quy đổi thành giá trị khuyết thiếu NaN. Ta vô hiệu hóa bộ quy tắc nhận diện mặc định và chỉ định cụ thể các ký hiệu được xem là ô trống trên từng cột riêng biệt.
+
+```python
+import io
+import pandas as pd
+
+csv_quoc_gia = (
+    "khu,ma_vung,diem\n"
+    "A,NA,8.5\n"
+    "B,VN,-999\n"
+    "C,NA,\n"
+    "D,US,9.0"
+)
+
+df_vung = pd.read_csv(
+    io.StringIO(csv_quoc_gia),
+    keep_default_na=False,
+    na_values={"diem": ["-999", ""]}
+)
+print(df_vung)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| khu | ma&#95;vung | diem |
+| --- | --- | --- |
+| A | NA | 8.5 |
+| B | VN | (thiếu) |
+| C | NA | (thiếu) |
+| D | US | 9.0 |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Theo mặc định, `read_csv` nhận một số chuỗi như `"NA"`, `"N/A"` và `"null"` là ô thiếu. Trong bảng này, `NA` lại là mã quốc gia Namibia. Nếu giữ mặc định, giá trị mã bị mất ý nghĩa, dù bản ghi vẫn còn trong bảng.
+
+Để xử lý chính xác, ta truyền tham số `keep_default_na=False`: Thao tác này thông báo cho pandas không tự động xem các từ viết tắt mặc định là dữ liệu thiếu. Khi đó, chuỗi `'NA'` ở cột `ma_vung` được giữ nguyên vẹn dưới dạng văn bản đại diện cho quốc gia.
+
+`na_values={"diem": ["-999", ""]}` bổ sung quy ước thiếu riêng cho cột điểm. Vì thế, hai giá trị này được đọc thành ô thiếu ở `diem`, trong khi `NA` ở cột mã vẫn là văn bản. Khi tắt quy ước mặc định, những chuỗi còn lại vẫn được suy diễn kiểu theo nội dung, không nhất thiết đều thành chuỗi.
+
+Kết quả thu được là một `DataFrame` phản ánh đúng thiết kế: Cột `ma_vung` bảo toàn mã chuỗi `'NA'`, trong khi cột `diem` nhận đúng các giá trị số thực và mang giá trị `NaN` ở các dòng thiếu. Cách tiếp cận theo từng cột này bảo vệ tính toàn vẹn của dữ liệu phân loại mà không bỏ sót việc làm sạch dữ liệu số đo lường.
+
+:::
+
+<!-- /worked-example -->
 
 ### 1.3. Đọc dữ liệu phân đoạn với `chunksize` và `nrows`
 
@@ -115,6 +218,90 @@ print("Doanh thu trung bình mỗi đơn:", gia_tri_trung_binh)
 assert gia_tri_trung_binh == 175.0
 ```
 
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-3 -->
+
+::: example Thăm dò dữ liệu và tính toán phân đoạn với TextFileReader
+
+Khi làm việc với tệp nhật ký giao dịch có dung lượng lớn hơn bộ nhớ khả dụng, việc đọc toàn bộ tệp cùng lúc dễ dẫn đến cạn kiệt bộ nhớ. Ta sử dụng tham số chunksize để tạo đối tượng lặp TextFileReader và chủ động lấy từng khối dữ liệu bằng phương thức get_chunk nhằm tích lũy thống kê theo nhóm.
+
+```python
+import io
+import pandas as pd
+
+csv_giao_dich = (
+    "id,nhom,gia\n"
+    "1,A,10\n"
+    "2,B,20\n"
+    "3,A,30\n"
+    "4,B,40\n"
+    "5,A,50"
+)
+
+bo_doc = pd.read_csv(io.StringIO(csv_giao_dich), chunksize=2)
+khoi_1 = bo_doc.get_chunk()
+khoi_2 = bo_doc.get_chunk()
+print(khoi_1)
+print("Tong gia khoi 1:", int(khoi_1["gia"].sum()))
+print(khoi_2)
+print("Tong gia khoi 2:", int(khoi_2["gia"].sum()))
+khoi_3 = bo_doc.get_chunk()
+print(khoi_3)
+print("Tổng giá cả ba khối:", sum(k["gia"].sum() for k in [khoi_1, khoi_2, khoi_3]))
+bo_doc.close()
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| id | nhom | gia |
+| --- | --- | --- |
+| 1 | A | 10 |
+| 2 | B | 20 |
+
+</div>
+
+```text
+Tong gia khoi 1: 30
+```
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | id | nhom | gia |
+| --- | --- | --- | --- |
+| 2 | 3 | A | 30 |
+| 3 | 4 | B | 40 |
+
+</div>
+
+```text
+Tong gia khoi 2: 70
+```
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | id | nhom | gia |
+| --- | --- | --- | --- |
+| 4 | 5 | A | 50 |
+
+</div>
+
+```text
+Tổng giá cả ba khối: 150
+```
+
+Khi nạp toàn bộ tệp lớn vào bộ nhớ bằng một lệnh `pd.read_csv` duy nhất, dung lượng bộ nhớ của tiến trình có thể vượt quá ngưỡng cho phép, dẫn đến lỗi cạn bộ nhớ. Đọc phân đoạn giúp chia nhỏ quá trình xử lý thành các đợt có kích thước xác định.
+
+Tham số `chunksize=2` biến hàm `pd.read_csv` thành cơ chế tạo bộ lặp: Thay vì trả về một `DataFrame` duy nhất, hàm trả về đối tượng `TextFileReader`. Đối tượng này cho phép đọc từng khối bản ghi nối tiếp nhau mà không giữ toàn bộ dữ liệu trong bộ nhớ cùng lúc.
+
+Hai lần `get_chunk()` đầu đọc các cặp dòng có tổng lần lượt 30 và 70. Lần thứ ba chỉ còn một dòng, giá 50. Vì vậy, kích thước khối là giới hạn mỗi lần đọc, không bảo đảm mọi khối đều có đúng hai dòng. Tổng cả tệp là 150.
+
+Ví dụ giữ cả ba khối để đối chiếu. Với tệp lớn, có thể duyệt `for khoi in bo_doc` và chỉ lưu tổng đang tính, thay vì giữ từng DataFrame. Việc chia khối chỉ giảm bộ nhớ nếu chương trình cũng tránh tích lũy toàn bộ các khối lại.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.4. Ghi dữ liệu ra định dạng văn bản
 
 Phương thức `to_csv` cho phép lưu cấu trúc DataFrame xuống đĩa hoặc luồng văn bản. Các tham số kỹ thuật cần kiểm soát:
@@ -122,6 +309,55 @@ Phương thức `to_csv` cho phép lưu cấu trúc DataFrame xuống đĩa ho�
 - `na_rep`: Chuỗi ký tự đại diện cho các ô khuyết thiếu khi ghi ra tệp (ví dụ `na_rep="NULL"`).
 - `index=False`: Bỏ qua cột chỉ mục hàng nếu chỉ mục chỉ là dãy số tự tăng vô nghĩa, tránh tạo thêm cột thừa khi nạp lại.
 - `header=False`: Loại bỏ dòng tiêu đề cột khi cần nối tiếp dữ liệu vào tệp đã có.
+
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-4 -->
+
+::: example Định dạng tệp CSV đầu ra với phân cách tùy biến và giá trị thiếu
+
+Khi chia sẻ bảng dữ liệu với các hệ thống kế toán hoặc cơ sở dữ liệu ngoài, hệ thống đích có thể yêu cầu dấu chấm phẩy làm ký tự phân cách và chuỗi ký tự tường minh đại diện cho ô trống. Phương thức to_csv cung cấp các tham số để kiểm soát định dạng tệp xuất mà không làm biến dạng dữ liệu.
+
+```python
+import io
+import numpy as np
+import pandas as pd
+
+df_kho = pd.DataFrame({
+    "ma": ["X1", "X2", "X3"],
+    "ten": ["Kho A", "Kho B", "Kho C"],
+    "ton": [15, np.nan, 42]
+})
+
+bo_nho = io.StringIO()
+df_kho.to_csv(
+    bo_nho,
+    sep=";",
+    na_rep="NULL",
+    index=False,
+    columns=["ma", "ton"]
+)
+print(bo_nho.getvalue().strip())
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+ma;ton
+X1;15.0
+X2;NULL
+X3;42.0
+```
+
+Sau khi tính toán và làm sạch, nhiệm vụ tiếp theo là lưu trữ kết quả ra tệp văn bản để chuyển giao. Nếu chỉ gọi `df.to_csv` với các thiết lập mặc định, bảng xuất ra sẽ chứa cột chỉ mục số nguyên tự tăng và để trống các ô có giá trị `NaN`. Hệ thống tiếp nhận bên ngoài có thể hiểu nhầm ô trống này là chuỗi rỗng thay vì giá trị khuyết thiếu.
+
+Tham số `sep=';'` thay đổi ký tự phân cách cột từ dấu phẩy mặc định sang dấu chấm phẩy. Đây là quy ước thường gặp tại nhiều hệ thống tài chính vốn dùng dấu phẩy làm dấu ngăn cách phần thập phân của số thực.
+
+`na_rep="NULL"` ghi chuỗi `NULL` tại ô thiếu. Đó chỉ là quy ước xuất văn bản, không khiến mọi hệ thống đọc tự hiểu đây là giá trị thiếu trong SQL. Bên nhận cần được cấu hình cùng quy ước, chẳng hạn dùng `na_values=["NULL"]` khi đọc lại bằng pandas.
+
+Việc thiết lập `index=False` loại bỏ cột chỉ mục hàng mặc định của pandas, ngăn chặn việc sinh ra cột thừa mang tên `Unnamed: 0` khi tệp được nạp lại. Danh sách `columns=['ma', 'ton']` chỉ định chính xác các cột cần lưu, giúp lọc bỏ cột tên kho không cần thiết mà không phải tạo thêm một bản sao `DataFrame` trung gian.
+
+:::
+
+<!-- /worked-example -->
 
 ### 1.5. Xử lý các định dạng phân cách dị biệt với module `csv`
 
@@ -147,6 +383,49 @@ assert cac_dong[0][1] == "Căn hộ cao cấp, trung tâm"
 ```
 
 ---
+
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-5 -->
+
+::: example Bao bọc trường dữ liệu phi số bằng module csv tiêu chuẩn
+
+Khi nội dung các trường văn bản chứa sẵn dấu phẩy hoặc dấu cách, việc ghép chuỗi thủ công rất dễ làm vỡ cấu trúc cột của tệp dữ liệu. Ta sử dụng module csv của thư viện chuẩn cùng quy tắc trích dẫn QUOTE_NONNUMERIC để tự động đặt dấu nháy kép quanh toàn bộ các trường ký tự.
+
+```python
+import csv
+import io
+
+bo_dem = io.StringIO()
+ghi_tep = csv.writer(
+    bo_dem,
+    delimiter=",",
+    quoting=csv.QUOTE_NONNUMERIC
+)
+
+ghi_tep.writerow(["ma_hang", "mo_ta", "gia"])
+ghi_tep.writerow(["H01", "May in, laser 2 mat", 3500])
+ghi_tep.writerow(["H02", "Muc in chinh hang", 450])
+print(bo_dem.getvalue().strip())
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+"ma_hang","mo_ta","gia"
+"H01","May in, laser 2 mat",3500
+"H02","Muc in chinh hang",450
+```
+
+Một tình huống thường gặp khi xuất tệp dữ liệu văn bản là các trường mô tả sản phẩm chứa sẵn dấu phẩy, ví dụ cụm từ `'May in, laser 2 mat'`. Nếu ghi chuỗi bằng cách nối dấu phẩy thông thường, trình phân tích cú pháp khi đọc lại sẽ đếm dấu phẩy này thành dấu phân cách cột, khiến dòng dữ liệu bị tách thành bốn cột thay vì ba cột như thiết kế ban đầu.
+
+Module `csv` tiêu chuẩn của Python cung cấp lớp `csv.writer` hỗ trợ các chế độ trích dẫn: Khi cấu hình `quoting=csv.QUOTE_NONNUMERIC`, trình ghi kiểm tra kiểu của từng phần tử. Mọi trường có kiểu chuỗi được tự động bao bọc bên trong cặp dấu nháy kép, trong khi các trường số thực hoặc số nguyên được giữ nguyên ở dạng số trần.
+
+Quan sát dòng tiêu đề và dòng dữ liệu đầu tiên: Các chuỗi như `'ma_hang'`, `'mo_ta'` và `'May in, laser 2 mat'` đều có cặp dấu nháy kép bao quanh, còn giá trị số 3500 được ghi trực tiếp không có dấu nháy. Trình đọc tiêu chuẩn sẽ nhận ra nội dung nằm giữa hai dấu nháy kép là một trường dữ liệu thống nhất, bỏ qua dấu phẩy phân cách bên trong.
+
+Cơ chế này giúp tệp trao đổi dữ liệu duy trì đúng số lượng cột: Hệ thống tiếp nhận không bị lệch vị trí các trường, đồng thời có thể nhận biết các trường mang số để chuyển đổi sang kiểu dữ liệu tính toán mà không cần bước ép kiểu thủ công.
+
+:::
+
+<!-- /worked-example -->
 
 ## 2. Dữ liệu bán cấu trúc: JSON, XML và HTML
 
@@ -174,6 +453,47 @@ print(df_json)
 assert df_json["doanh_so"].sum() == 430.5
 ```
 
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-6 -->
+
+::: example Làm phẳng đối tượng JSON lồng nhau thành bảng hai chiều với json_normalize
+
+Dữ liệu trả về từ các cổng dịch vụ Web API thường chứa các đối tượng lồng nhau biểu thị quan hệ phân cấp, chẳng hạn thông tin địa chỉ nằm bên trong trường khách hàng. Ta sử dụng hàm pd.json_normalize để làm phẳng các trường lồng này thành các cột độc lập với tên phân cách rõ ràng.
+
+```python
+import pandas as pd
+
+phan_hoi_api = [
+    {"id": 101, "khach": {"ten": "Lan", "tp": "HN"}, "tien": 500},
+    {"id": 102, "khach": {"ten": "Minh", "tp": "DN"}, "tien": 820}
+]
+
+df_don = pd.json_normalize(phan_hoi_api, sep="_")
+print(df_don)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| id | tien | khach&#95;ten | khach&#95;tp |
+| --- | --- | --- | --- |
+| 101 | 500 | Lan | HN |
+| 102 | 820 | Minh | DN |
+
+</div>
+
+Định dạng JSON được xây dựng dựa trên các cấu trúc lồng nhau tùy biến: Một khóa trong đối tượng có thể chứa một từ điển con hoặc một danh sách các bản ghi phụ. Khi đưa cấu trúc này vào hàm `pd.DataFrame` thông thường, trường lồng nhau `khach` sẽ nạp nguyên vẹn dưới dạng một đối tượng từ điển Python trong một ô dữ liệu, gây khó khăn cho việc lọc và tổng hợp.
+
+Hàm `pd.json_normalize` xử lý cấu trúc này bằng cách quét cấu trúc cây JSON và trải phẳng các khóa con thành các cột ngang: Khóa `ten` bên trong từ điển `khach` được trích xuất thành một thuộc tính độc lập của từng hàng dữ liệu.
+
+Tham số `sep='_'` quy định ký tự nối giữa khóa cha và khóa con khi ghép tên cột mới: Hàm sinh ra hai cột mới là `khach_ten` và `khach_tp`. Điều này giúp cấu trúc `DataFrame` giữ được dạng phẳng hai chiều thân thiện với các câu lệnh truy vấn của pandas.
+
+Kết quả trả về là một bảng dữ liệu với bốn cột riêng biệt gồm `id`, `tien`, `khach_ten` và `khach_tp`. Kiểu dữ liệu của các trường số và chuỗi được phân loại rõ ràng, cho phép người phân tích thực hiện các phép lọc theo thành phố hoặc tính tổng doanh thu mà không cần viết các hàm bóc tách từ điển trung gian.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.2. Trích xuất bảng từ trang web với `pd.read_html`
 
 Để thu thập nhanh các bảng dữ liệu được nhúng trên các trang web, hàm `pd.read_html` sử dụng các công cụ phân tích cú pháp HTML như `lxml` hay `BeautifulSoup` để quét toàn bộ văn bản và trích xuất tất cả các khối thẻ `<table>...</table>`.
@@ -198,6 +518,52 @@ df_mon_hoc = danh_sach_bang[0]
 print(df_mon_hoc)
 assert df_mon_hoc["Số tín chỉ"].sum() == 7
 ```
+
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-7 -->
+
+::: example Bóc tách bảng dữ liệu HTML thành danh sách DataFrame với read_html
+
+Khi thu thập dữ liệu công khai từ các báo cáo định dạng trang web, tài liệu HTML thường chứa nhiều bảng dữ liệu. Ta sử dụng hàm pd.read_html để phân tích các thẻ table và chuyển đổi nội dung dạng bảng thành danh sách các đối tượng DataFrame.
+
+```python
+import io
+import pandas as pd
+
+trang_html = """
+<table>
+  <tr><th>ma_kho</th><th>so_luong</th></tr>
+  <tr><td>K01</td><td>120</td></tr>
+  <tr><td>K02</td><td>85</td></tr>
+</table>
+"""
+
+danh_sach_bang = pd.read_html(io.StringIO(trang_html))
+df_kho = danh_sach_bang[0]
+print(df_kho)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| ma&#95;kho | so&#95;luong |
+| --- | --- |
+| K01 | 120 |
+| K02 | 85 |
+
+</div>
+
+Trang web là nguồn cung cấp số liệu phổ biến nhưng cấu trúc tài liệu chứa nhiều thẻ định dạng hiển thị. Thư viện pandas cung cấp hàm `pd.read_html` để tự động tìm kiếm các khối thẻ `table` trên trang và phân tích nội dung bảng.
+
+`read_html` trả danh sách những bảng thỏa điều kiện tìm kiếm. Với HTML mẫu chỉ có một bảng, phần tử đầu là bảng kho cần lấy. Nếu trang có nhiều bảng, có thể dùng `match` hoặc `attrs` để giới hạn bảng phù hợp thay vì luôn lấy phần tử 0.
+
+Khi truyền đối tượng luồng văn bản `io.StringIO(trang_html)`, hàm nhận diện dòng đầu tiên chứa các thẻ `th` làm tiêu đề cột `ma_kho` và `so_luong`. Các dòng tiếp theo chứa thẻ `td` được chuyển thành các hàng dữ liệu tương ứng: Giá trị số 120 và 85 được chuyển đổi thành số nguyên.
+
+Hàm đọc bảng có trong HTML đã được cung cấp, không tự thao tác giao diện hoặc chạy JavaScript để tải thêm dữ liệu. Nó cần một công cụ phân tích HTML như `lxml`. Vì vậy, cần kiểm tra bảng nguồn và thư viện hỗ trợ trước khi dùng cho một trang thực tế.
+
+:::
+
+<!-- /worked-example -->
 
 ### 2.3. Phân tích tài liệu XML bằng `lxml.objectify`
 
@@ -257,6 +623,58 @@ df_doc_lai = so_bang_tinh.parse("NhanVien", index_col="ma_so")
 assert len(df_doc_lai) == 3
 ```
 
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-8 -->
+
+::: example Ghi nhiều trang tính với ExcelWriter và đọc chọn lọc với ExcelFile
+
+Trong các báo cáo nghiệp vụ tài chính, dữ liệu doanh thu và chi phí thường được lưu trữ trên các trang tính khác nhau trong cùng một tệp sổ tính Excel. Ta sử dụng ngữ cảnh pd.ExcelWriter để ghi nhiều bảng vào một tệp và dùng đối tượng pd.ExcelFile để truy xuất danh sách trang tính mà không cần nạp lại tệp nhiều lần.
+
+```python
+import io
+import pandas as pd
+
+bo_dem_excel = io.BytesIO()
+df_thu = pd.DataFrame({"thang": ["T1", "T2"], "tien": [100, 150]})
+df_chi = pd.DataFrame({"khoan": ["Luong", "Dien"], "tien": [60, 25]})
+
+with pd.ExcelWriter(bo_dem_excel, engine="openpyxl") as bo_ghi:
+    df_thu.to_excel(bo_ghi, sheet_name="Thu", index=False)
+    df_chi.to_excel(bo_ghi, sheet_name="Chi", index=False)
+
+bo_dem_excel.seek(0)
+with pd.ExcelFile(bo_dem_excel) as so_tinh:
+    print("Các trang tính:", so_tinh.sheet_names)
+    df_doc_thu = so_tinh.parse("Thu")
+print(df_doc_thu)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Các trang tính: ['Thu', 'Chi']
+```
+
+<div class="data-worked-table">
+
+| thang | tien |
+| --- | --- |
+| T1 | 100 |
+| T2 | 150 |
+
+</div>
+
+Nếu gọi phương thức `df.to_excel` hai lần liên tiếp với cùng một đường dẫn tệp mà không dùng bộ ghi, bảng ghi sau sẽ ghi đè và làm mất dữ liệu của trang tính trước đó. Để tạo ra một sổ tính Excel chứa nhiều trang tính độc lập, ta quản lý tiến trình ghi thông qua lớp đối tượng `pd.ExcelWriter`.
+
+Khi sử dụng khối lệnh `with pd.ExcelWriter(..., engine='openpyxl') as bo_ghi`, đối tượng bộ ghi mở một phiên làm việc: Phương thức `df_thu.to_excel` ghi dữ liệu vào trang `'Thu'`, sau đó `df_chi.to_excel` ghi dữ liệu vào trang `'Chi'`. Khi khối `with` kết thúc, toàn bộ cấu trúc định dạng của sổ tính được đóng gói và lưu hoàn chỉnh.
+
+Ở chiều đọc dữ liệu: Nếu một tệp Excel có dung lượng lớn và chứa nhiều trang tính, việc gọi `pd.read_excel` lặp lại sẽ buộc hệ thống phải mở tệp và giải nén lại cấu trúc từ đầu ở mỗi lần gọi. Lớp `pd.ExcelFile` khắc phục tình trạng này bằng cách nạp cấu trúc sổ tính vào bộ nhớ một lần.
+
+Thuộc tính `sheet_names` của đối tượng `ExcelFile` cung cấp danh sách tên các trang tính có trong tệp, và phương thức `parse('Thu')` trích xuất nội dung của trang tính mong muốn thành `DataFrame`. Cách tiếp cận này giúp giảm chi phí I/O khi xử lý các bảng tính có nhiều trang.
+
+:::
+
+<!-- /worked-example -->
+
 ### 3.2. Định dạng khoa học HDF5
 
 HDF5 (*Hierarchical Data Format 5*) là định dạng lưu trữ nhị phân chuyên dụng trong tính toán khoa học, cho phép lưu trữ hàng tỷ phần tử số học kèm theo cơ chế nén trên đĩa. Điểm nổi trội của HDF5 là tổ chức dữ liệu như một hệ thống tệp thu nhỏ bên trong một tệp duy nhất, chia thành các nhóm (*groups*) và tập dữ liệu (*datasets*).
@@ -293,6 +711,62 @@ Trong kỹ nghệ dữ liệu hiện đại, Apache Parquet là chuẩn mực l�
 1. **Hiệu năng I/O vượt trội nhờ đọc cột chọn lọc**: Khi người dùng chỉ cần phân tích cột `luong`, trình đọc Parquet chỉ đọc đúng các dải byte của cột đó trong từng nhóm hàng (*Row Groups*), bỏ qua các khối dữ liệu của những cột không dùng đến. Điều này giúp giảm đáng kể lượng byte phải đọc từ đĩa so với việc phải duyệt qua toàn bộ các dòng và cột của tệp CSV dạng hàng.
 2. **Khả năng nén tối ưu**: Vì một cột chỉ chứa cùng một kiểu dữ liệu đồng nhất, các thuật toán nén hiện đại (Snappy, Zstd, Dictionary Encoding) có thể nén dữ liệu chặt chẽ hơn nhiều so với việc nén văn bản dòng không đồng nhất.
 3. **Lưu trữ lược đồ kiểu dữ liệu kỹ thuật (Schema Preservation)**: Định dạng Parquet lưu trữ thông tin kiểu dữ liệu chi tiết trong phần siêu dữ liệu ở đuôi tệp (*Metadata Footer*), bao gồm số nguyên, số thực, thời gian có hoặc không gắn múi giờ, kiểu boolean và cấu trúc lồng nhau. Điều này giúp hạn chế tình trạng suy giảm kiểu vốn thường gặp khi đọc lại CSV, mặc dù các kiểu đối tượng Python tùy biến hoặc kiểu mở rộng đặc thù của pandas vẫn cần khai báo lược đồ chuyển đổi tương ứng khi ghi đọc.
+
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-9 -->
+
+::: example Lưu trữ định hướng cột và đọc lọc trực tiếp trên đĩa với Parquet
+
+Định dạng Apache Parquet tổ chức dữ liệu theo cột và lưu trữ siêu dữ liệu thống kê ở phần chân tệp, cho phép đọc lọc một tập con các cột và bỏ qua các bản ghi không thỏa mãn điều kiện ngay từ bước đọc đĩa. Ta thực hiện lưu trữ bảng sang tệp Parquet và nạp lại với tham số columns và filters để giảm lượng dữ liệu đọc.
+
+```python
+import os
+import tempfile
+import pandas as pd
+
+df_hang = pd.DataFrame({
+    "ma": ["P1", "P2", "P3"],
+    "vung": ["Bac", "Nam", "Bac"],
+    "so": [10, 25, 40]
+})
+
+with tempfile.NamedTemporaryFile(suffix=".parquet", delete=False) as tf:
+    duong_dan = tf.name
+
+try:
+    df_hang.to_parquet(duong_dan, engine="pyarrow", index=False)
+    df_doc = pd.read_parquet(
+        duong_dan,
+        columns=["ma", "so"],
+        filters=[("so", ">=", 20)]
+    )
+    print(df_doc)
+finally:
+    if os.path.exists(duong_dan):
+        os.remove(duong_dan)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| ma | so |
+| --- | --- |
+| P2 | 25 |
+| P3 | 40 |
+
+</div>
+
+CSV ghi các trường của một hàng nối tiếp nhau trong văn bản. Khi chỉ cần vài cột, bộ đọc vẫn phải xử lý ranh giới trường. Parquet tổ chức các khối theo cột trong từng nhóm hàng, cho phép công cụ đọc chọn các khối cột cần dùng.
+
+Phương thức `df.to_parquet` sử dụng công cụ `pyarrow` để nén và tuần tự hóa bảng dữ liệu xuống đĩa. Cột `vung` mang kiểu chuỗi và cột `so` mang kiểu số nguyên được mã hóa thành các khối nhị phân độc lập kèm theo phần siêu dữ liệu thống kê ghi lại giá trị nhỏ nhất và lớn nhất của từng khối.
+
+`columns=["ma", "so"]` chọn hai cột đầu ra. `filters=[("so", ">=", 20)]` yêu cầu giữ những hàng đạt điều kiện. Công cụ `pyarrow` có thể bỏ qua các nhóm hàng dựa vào thống kê hoặc thông tin phân vùng. Với tệp nhỏ này, toàn bộ nhóm có thể vẫn phải đọc trước khi lọc.
+
+Kết quả gồm P2 và P3 với số lượng 25 và 40. Ví dụ cần thư viện `pyarrow` để ghi và đọc Parquet. Bộ ba trong `filters` là tên cột, toán tử và giá trị so sánh, còn `index=False` tránh lưu chỉ mục pandas như một cột dữ liệu bổ sung.
+
+:::
+
+<!-- /worked-example -->
 
 ### 3.4. Ranh giới an toàn của Pickle
 
@@ -427,6 +901,58 @@ print(df_loc_sql)
 assert len(df_loc_sql) == 2
 ket_noi.close()
 ```
+
+<!-- worked-example bai-06-ket-noi-truy-xuat-du-lieu-worked-10 -->
+
+::: example Ghi bảng và thực thi truy vấn tham số hóa với SQLite
+
+Khi làm việc với các hệ cơ sở dữ liệu quan hệ, việc lọc dữ liệu trực tiếp trong câu lệnh SQL giúp giảm lượng bản ghi truyền tải về ứng dụng. Ta sử dụng to_sql để nạp bảng và dùng read_sql_query với cơ chế truyền tham số params an toàn nhằm lọc dữ liệu ngay tại nguồn.
+
+```python
+import sqlite3
+import pandas as pd
+
+ket_noi = sqlite3.connect(":memory:")
+
+df_hang = pd.DataFrame({
+    "id": [1, 2, 3],
+    "ten": ["Ao", "Quan", "Mu"],
+    "gia": [150, 220, 80]
+})
+
+df_hang.to_sql("san_pham", ket_noi, index=False)
+
+df_loc = pd.read_sql_query(
+    "SELECT ten, gia FROM san_pham WHERE gia >= ?",
+    ket_noi,
+    params=[100]
+)
+ket_noi.close()
+print(df_loc)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| ten | gia |
+| --- | --- |
+| Ao | 150 |
+| Quan | 220 |
+
+</div>
+
+Trong các hệ thống xử lý dữ liệu, cơ sở dữ liệu quan hệ là nơi lưu trữ tập trung có khả năng đánh chỉ mục và thực hiện các phép lọc dữ liệu hiệu quả. Thay vì nạp toàn bộ một bảng lớn vào bộ nhớ máy tính rồi mới dùng lệnh lọc của pandas, việc đẩy phép toán lọc xuống cơ sở dữ liệu giúp chỉ kéo về những bản ghi thực sự cần thiết.
+
+Phương thức `df.to_sql('san_pham', ket_noi, index=False)` tự động tạo bảng tương ứng trong SQLite dựa trên lược đồ cột của `DataFrame`. Việc thiết lập `index=False` bảo đảm cột chỉ mục số nguyên của pandas không bị ghi thừa vào lược đồ cơ sở dữ liệu.
+
+Khi thực hiện truy vấn với `pd.read_sql_query`, việc tự ý nối chuỗi biến số trực tiếp vào câu lệnh SQL dễ tạo ra lỗ hổng bảo mật. Ta sử dụng ký tự giữ chỗ `?` trong câu lệnh `WHERE gia >= ?` và truyền giá trị cụ thể qua danh sách tham số `params=[100]`.
+
+Động cơ SQLite sẽ phân tích cấu trúc câu truy vấn trước, sau đó mới gắn giá trị tham số vào để thực thi: Hai bản ghi sản phẩm có giá từ 100 trở lên gồm Ao và Quan được trích xuất thành một `DataFrame` mới. Cách làm này bảo đảm an toàn truy vấn và giảm thiểu lượng dữ liệu trung gian.
+
+:::
+
+<!-- /worked-example -->
 
 ### 4.3. Truy vấn dữ liệu phân tích tại chỗ với DuckDB
 

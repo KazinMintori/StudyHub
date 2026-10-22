@@ -16,29 +16,79 @@
   "examples": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
-      "line": 205,
+      "line": 63,
+      "title": "Trích xuất nhóm thành DataFrame với get_group"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 124,
+      "title": "Gom nhóm chỉ mục bằng ánh xạ từ điển"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 199,
+      "title": "Tổng hợp nhiều chỉ số đồng thời và đặt tên cột tùy biến với Named Aggregation"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 257,
+      "title": "Xuất bản bảng tổng hợp phẳng với tham số as_index=False"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 323,
+      "title": "Tính trung bình nhóm và căn chỉnh độ lệch bằng transform"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 383,
+      "title": "Lọc bỏ toàn bộ các nhóm không đạt ngưỡng tổng doanh thu với filter"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 450,
+      "title": "Kiểm soát việc đưa khóa nhóm vào chỉ mục kết quả với group_keys"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 514,
+      "title": "Phân nhóm theo phân vị thu nhập bằng qcut và tổng hợp chi tiêu"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 559,
       "title": "Ví dụ 1: Điền giá trị khuyết thiếu bằng giá trị đặc thù của từng nhóm"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
-      "line": 217,
+      "line": 571,
       "title": "Ví dụ 2: Lấy mẫu ngẫu nhiên độc lập theo từng nhóm"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
-      "line": 224,
+      "line": 578,
       "title": "Ví dụ 3: Giá trị trung bình gia quyền theo nhóm (Group Weighted Average)"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
-      "line": 262,
+      "line": 616,
       "title": "Ví dụ 4: Ước lượng mô hình hồi quy tuyến tính theo từng nhóm"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 670,
+      "title": "Tổng hợp đa chiều kèm dòng tổng biên margins với pivot_table"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 749,
+      "title": "Lập bảng tần suất chéo và chuẩn hóa tỷ lệ theo hàng với crosstab"
     }
   ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
-      "line": 370,
+      "line": 823,
       "title": "Bài tập 1: Tính giá trung bình chung từ thống kê nhóm"
     },
     {
@@ -105,7 +155,7 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
-      "line": 381,
+      "line": 834,
       "title": "Lời giải"
     },
     {
@@ -139,5 +189,12 @@
       "title": ""
     }
   ],
-  "assets": []
+  "assets": [
+    {
+      "reference": "img/function-examples/groupby-shape.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-10-tong-hop-theo-nhom.md",
+      "line": 353,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/groupby-shape.svg"
+    }
+  ]
 }

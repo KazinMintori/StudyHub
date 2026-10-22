@@ -14,16 +14,67 @@
     "raw_materials/xu-ly-du-lieu/practice/aggregation-figure.md",
     "raw_materials/xu-ly-du-lieu/labs/lab-14.md"
   ],
-  "examples": [],
-  "exercises": [
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 53,
+      "title": "Tách thông tin tác tử và chuẩn hóa chuỗi khuyết thiếu bằng str.extract"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 127,
+      "title": "Phân loại điều kiện hệ điều hành bằng np.select"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 221,
+      "title": "Lọc số lượng đánh giá tối thiểu bằng GroupBy.filter trước khi lập bảng xoay chiều"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 288,
+      "title": "Đo lường độ phân tán đánh giá bằng độ lệch chuẩn và khoảng tứ phân vị IQR"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 366,
+      "title": "Xếp hạng mức độ phổ biến theo từng nhóm năm bằng rank"
+    },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
       "line": 420,
+      "title": "Xác định số lượng tên chiếm 50% tổng số trẻ bằng cumsum và searchsorted"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 548,
+      "title": "Phẳng hóa cấu trúc JSON lồng nhau nhiều cấp bằng pd.json_normalize"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 677,
+      "title": "So sánh phân khoảng theo mốc cố định pd.cut và phân khoảng theo phân vị pd.qcut"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 774,
+      "title": "Phân rã biến động bình quân gộp và minh chứng nghịch lý Simpson bằng code"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 849,
+      "title": "Tính toán chênh lệch điểm phần trăm và tỷ lệ thay đổi phần trăm"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
+      "line": 946,
       "title": "Bài tập 1: Đo lường mức độ bất đồng quan điểm trong đánh giá dịch vụ"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
-      "line": 461,
+      "line": 987,
       "title": "Bài tập 2: Thẩm định biến động doanh thu và nhận diện nghịch lý Simpson"
     },
     {
@@ -105,12 +156,12 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
-      "line": 436,
+      "line": 962,
       "title": "Lời giải chi tiết"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md",
-      "line": 473,
+      "line": 999,
       "title": "Lời giải chi tiết"
     },
     {

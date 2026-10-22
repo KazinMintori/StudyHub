@@ -15,7 +15,58 @@
     "raw_materials/xu-ly-du-lieu/labs/lab-12.md",
     "raw_materials/xu-ly-du-lieu/labs/lab-13.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 64,
+      "title": "Khởi tạo hệ thống lưới tọa độ con độc lập với subplots"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 123,
+      "title": "Căn chỉnh khoảng cách đệm giữa các trục tọa độ con với tight_layout"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 182,
+      "title": "Tùy biến phong cách đường nét, màu sắc và điểm đánh dấu trên trục"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 243,
+      "title": "Kiểm soát vị trí vạch chia tọa độ và nhãn chu kỳ quý với set_xticks"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 313,
+      "title": "Tạo mũi tên chú thích điểm cực trị bằng annotate và kẻ đường ngưỡng axhline"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 374,
+      "title": "Xuất bản hình vẽ định dạng vector SVG vào bộ nhớ đệm với savefig"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 462,
+      "title": "Trực quan hóa đa cột trực tiếp từ DataFrame với phương thức plot"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 540,
+      "title": "Khảo sát phân phối mẫu thực nghiệm và đường mật độ nhân KDE với Seaborn"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 624,
+      "title": "Biểu diễn tương quan giữa độ tuổi và thu nhập phân nhóm theo phòng ban"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 742,
+      "title": "Đối chiếu tác động của việc cắt cụt trục tung và phục hồi tỷ lệ trung thực"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",
@@ -296,6 +347,66 @@
     }
   ],
   "assets": [
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-1-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 101,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-1-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-2-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 160,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-2-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-3-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 221,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-3-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-4-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 276,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-4-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-5-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 353,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-5-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-6-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 410,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-6-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-7-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 505,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-7-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-8-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 574,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-8-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-9-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 672,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-9-1.svg"
+    },
+    {
+      "reference": "img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-10-1.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-12-truc-quan-hoa-co-ban.md",
+      "line": 780,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/generated/bai-12-truc-quan-hoa-co-ban-worked-10-1.svg"
+    },
     {
       "reference": "img/lec-12/ban-theo-nhom.svg",
       "declaredIn": "raw_materials/xu-ly-du-lieu/practice/visual-reading.md",

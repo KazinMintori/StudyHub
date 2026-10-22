@@ -51,7 +51,7 @@ range_arr = np.arange(10, 30, 5)  # array([10, 15, 20, 25])
 eye_arr = np.eye(3)
 ```
 
-### 1.3. Kiểu dữ liệu (dtype) và cạm bẫy tràn số nguyên
+### 1.3. Kiểu dữ liệu (dtype) và giới hạn số nguyên {#_1-3-kieu-du-lieu-dtype-va-cam-bay-tran-so-nguyen}
 Mỗi mảng `ndarray` có một thuộc tính `dtype` quy định kiểu dữ liệu đồng nhất của mọi phần tử trong mảng:
 - Kiểu số nguyên có dấu: `int8` ($-128$ đến $127$), `int16`, `int32`, `int64`.
 - Kiểu số nguyên không dấu: `uint8` ($0$ đến $255$), `uint16`, `uint32`, `uint64`.
@@ -64,13 +64,54 @@ arr_float = np.array([1.2, 3.8, -2.5])
 arr_int = arr_float.astype(np.int32)  # array([1, 3, -2]) - cắt bỏ phần thập phân
 ```
 
-> [!WARNING] Cạm bẫy thời điểm ép kiểu và tràn số nguyên
+> [!WARNING] Ép kiểu trước khi tính toán
 > Trong kiểu số nguyên cố định byte (như `int8`), nếu một phép toán vượt ra ngoài giới hạn cho phép, giá trị sẽ bị tràn nhị phân âm thầm mà không ném lỗi. Nếu ta thực hiện phép tính trước rồi mới ép kiểu, kết quả đã bị sai lệch từ trước:
 > ```python
 > x = np.array([50, 100, 120], dtype=np.int8)
 > a = (x * 2).astype(np.int16)  # Sai: Tràn số trong int8 trước khi đổi kiểu!
 > b = x.astype(np.int16) * 2     # Đúng: Đổi kiểu sang int16 rồi mới nhân đôi
 > ```
+
+<!-- worked-example bai-03-numpy-worked-1 -->
+
+::: example Nhận diện hiện tượng tràn số nguyên và nâng kiểu dữ liệu với astype
+
+Một phép đo được lưu bằng `int8`, chỉ biểu diễn số nguyên từ -128 đến 127. Ta cần nhân đôi các giá trị 60, 80 và 100. Ví dụ đối chiếu việc nhân ngay trong `int8` với chuyển sang `int32` trước khi nhân.
+
+```python
+import numpy as np
+
+mang_int8 = np.array([60, 80, 100], dtype=np.int8)
+
+tran_so = mang_int8 * np.int8(2)
+an_toan = mang_int8.astype(np.int32) * 2
+
+print(f"Mảng int8 gốc:               {mang_int8}")
+print(f"Nhân 2 trên int8 (tràn số):  {tran_so}")
+print(f"Nâng lên int32 rồi nhân 2:   {an_toan}")
+print(f"Phần tử 80 biến thành số âm: {tran_so[1] < 0}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Mảng int8 gốc:               [ 60  80 100]
+Nhân 2 trên int8 (tràn số):  [120 -96 -56]
+Nâng lên int32 rồi nhân 2:   [120 160 200]
+Phần tử 80 biến thành số âm: True
+```
+
+Kiểu dữ liệu `np.int8` chỉ sử dụng đúng 8 bit có dấu, do đó miền giá trị của nó bị giới hạn trong khoảng từ -128 đến 127. Khi ta nhân số 80 với 2, kết quả toán học là 160 vượt quá giới hạn trên 127.
+
+NumPy giữ nguyên kích thước 8 bit của mảng kết quả, dẫn đến hiện tượng tràn bit nhị phân vòng ngược thành số âm -96. Hiện tượng này diễn ra âm thầm và không phát sinh ngoại lệ nào, khiến các phép tính tiếp theo nhận số liệu sai lệch.
+
+Nếu nhân trước rồi gọi `astype(np.int32)`, giá trị -96 đã xuất hiện trong mảng trung gian. Ép kiểu sau đó giữ lại giá trị -96 dưới dạng `int32`, không khôi phục được 160. Vì vậy, thời điểm đổi kiểu là một phần của phép tính.
+
+Cách làm đúng là gọi phương thức `astype(np.int32)` ngay từ mảng ban đầu để mở rộng kích thước ô nhớ lên 4 byte trước khi nhân 2. Kết quả `an_toan` giữ trọn vẹn giá trị 160 và 200, bảo đảm tính toàn vẹn của dữ liệu số học.
+
+:::
+
+<!-- /worked-example -->
 
 ### 1.4. Phép toán số học vector hóa trên mảng
 Khi áp dụng các phép toán số học (`+`, `-`, `*`, `/`, `**`) giữa các mảng cùng kích thước hoặc giữa mảng với một số vô hướng, NumPy thực thi phép tính **theo từng phần tử** (*element-wise*):
@@ -143,6 +184,46 @@ np.shares_memory(T, C)  # Trả về False
 > Để kiểm tra hai mảng có dùng chung bộ nhớ hay không, luôn sử dụng hàm `np.shares_memory(arr1, arr2)`. Tuyệt đối không dùng phép so sánh `C.base is A`. Thuộc tính `.base` có thể trỏ tới một đối tượng trung gian hoặc trả về `None`, không phản ánh chính xác trạng thái đệm dữ liệu.
 > Đồng thời, **không khẳng định mọi mảng ndarray đều liên tục trong bộ nhớ**. Các lát cắt có bước nhảy khác một (`A[::2]`) hoặc mảng chuyển vị (`A.T`) là các mảng không liên tục (*non-contiguous*).
 
+<!-- worked-example bai-03-numpy-worked-2 -->
+
+::: example Kiểm tra tính liên tục bộ nhớ và quan hệ dùng chung vùng đệm
+
+Chuyển vị đổi cách các hàng và cột tham chiếu vào vùng dữ liệu. Vùng đệm gốc vẫn có thể được dùng chung, nhưng thứ tự duyệt theo hàng đã khác. Ta dùng `np.shares_memory` để kiểm tra việc chuyển vị và làm phẳng trong một trường hợp cụ thể.
+
+```python
+import numpy as np
+
+A = np.arange(6, dtype=np.int32).reshape(2, 3)
+T = A.T
+C = T.reshape(-1)
+
+print(f"A liên tục theo hàng (C-contiguous): {A.flags['C_CONTIGUOUS']}")
+print(f"T chuyển vị liên tục theo hàng:     {T.flags['C_CONTIGUOUS']}")
+print(f"A và T dùng chung bộ nhớ (View):     {np.shares_memory(A, T)}")
+print(f"T và C dùng chung bộ nhớ:            {np.shares_memory(T, C)}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+A liên tục theo hàng (C-contiguous): True
+T chuyển vị liên tục theo hàng:     False
+A và T dùng chung bộ nhớ (View):     True
+T và C dùng chung bộ nhớ:            False
+```
+
+Mảng ban đầu `A` có kích thước 2 hàng 3 cột với cờ `C_CONTIGUOUS` mang giá trị `True`, chứng tỏ 6 số nguyên từ 0 đến 5 được đặt nối tiếp nhau trong RAM. Mảng chuyển vị `T = A.T` hoán đổi các trục nhưng vẫn dùng chung vùng đệm gốc với bước nhảy `strides` đã biến đổi.
+
+Hàm `np.shares_memory(A, T)` trả về `True`, xác nhận thao tác chuyển vị chỉ thay đổi siêu dữ liệu mà không tốn chi phí sao chép mảng. Tuy nhiên, thuộc tính `C_CONTIGUOUS` của `T` lúc này đã chuyển thành `False` vì các phần tử theo chiều đọc hàng không còn nằm liền kề trong bộ nhớ.
+
+Khi yêu cầu làm phẳng `T` thành mảng một chiều bằng lệnh `T.reshape(-1)`, NumPy nhận thấy bước nhảy chuyển vị không thể biểu diễn trực tiếp thành một mảng một chiều liên tục trên cùng vùng đệm đó. Trình thông dịch buộc phải cấp phát một mảng mới `C` và sao chép dữ liệu sang.
+
+Kết quả kiểm tra `np.shares_memory(T, C)` trả về `False`, chứng minh `C` là một bản sao độc lập. Tuy nhiên, việc `reshape` cấp phát bộ nhớ mới trong ví dụ này không đồng nghĩa mọi phép chuyển vị hoặc thay đổi hình dạng đều tạo bản sao, bởi cơ chế View hay Copy phụ thuộc hoàn toàn vào cấu trúc bước nhảy `strides` của mảng cụ thể.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.7. Chỉ mục boolean
 Chỉ mục boolean cho phép trích xuất các phần tử thỏa mãn một biểu thức điều kiện vị từ:
 ```python
@@ -195,6 +276,56 @@ vung_chon = arr[np.ix_([1, 3], [0, 2])]
 #  [12 14]]
 ```
 
+<!-- worked-example bai-03-numpy-worked-3 -->
+
+::: example Trích xuất phần tử phân tán bằng chỉ mục mảng số nguyên
+
+Khác với cắt lát cơ bản chỉ trích xuất các đoạn phần tử cách đều, chỉ mục mảng số nguyên (fancy indexing) cho phép chọn các hàng hoặc phần tử theo một thứ tự tùy ý bất kỳ. Tuy nhiên, fancy indexing luôn tạo ra một bản sao mới thay vì một khung nhìn, nên các thay đổi trên mảng trích xuất sẽ không phản chiếu vào mảng ban đầu. Ta đối chiếu hành vi này để tránh nhầm lẫn trong quá trình gán giá trị.
+
+```python
+import numpy as np
+
+bang_diem = np.array([
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90],
+    [15, 25, 35],
+])
+
+chi_so_hang = np.array([3, 0, 2])
+trich_xuat = bang_diem[chi_so_hang]
+
+trich_xuat[0, 0] = 999
+
+print("Mảng trích xuất sau khi sửa phần tử [0, 0]:")
+print(trich_xuat)
+print(f"Phần tử gốc tại hàng 3, cột 0:   {bang_diem[3, 0]}")
+print(f"Dùng chung vùng nhớ với bảng gốc: {np.shares_memory(bang_diem, trich_xuat)}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Mảng trích xuất sau khi sửa phần tử [0, 0]:
+[[999  25  35]
+ [ 10  20  30]
+ [ 70  80  90]]
+Phần tử gốc tại hàng 3, cột 0:   15
+Dùng chung vùng nhớ với bảng gốc: False
+```
+
+Mảng `bang_diem` đại diện cho ma trận gồm 4 hàng và 3 cột. Biến `chi_so_hang` chứa mảng số nguyên `[3, 0, 2]` chỉ định thứ tự các hàng cần rút trích.
+
+Cú pháp `bang_diem[chi_so_hang]` trích xuất đồng thời hàng 3, hàng 0 và hàng 2 thành một mảng mới có kích thước 3 hàng 3 cột. Thứ tự các hàng trong mảng kết quả hoàn toàn trùng khớp với thứ tự các chỉ số được truyền vào.
+
+Sau khi trích xuất, ta thử gán giá trị 999 vào phần tử đầu tiên của `trich_xuat`. Khi kiểm tra lại mảng gốc `bang_diem[3, 0]`, giá trị vẫn giữ nguyên là 15 ban đầu chứ không bị biến đổi thành 999.
+
+Hàm `np.shares_memory` trả về `False`, khẳng định fancy indexing luôn sao chép dữ liệu sang vùng nhớ độc lập. Nếu muốn chỉnh sửa trực tiếp trên mảng gốc bằng fancy indexing, ta phải gán trực tiếp vào mảng gốc với cú pháp `bang_diem[chi_so_hang] = gia_tri_moi`.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.9. Chuyển vị mảng và hoán đổi trục
 Chuyển vị là một trường hợp đặc biệt của việc tạo View:
 - Thuộc tính `.T`: Hoán đổi hai trục của mảng 2 chiều.
@@ -230,6 +361,45 @@ Tham số `replace=False` bảo đảm mỗi phần tử chỉ được chọn t
 
 ---
 
+<!-- worked-example bai-03-numpy-worked-4 -->
+
+::: example Sinh dữ liệu phân phối ngẫu nhiên với np.random.default_rng
+
+Trong mô phỏng thống kê và kiểm thử mô hình học máy, các tập dữ liệu ngẫu nhiên cần phải tái lập được để kiểm tra thuật toán. Khung làm việc hiện đại của NumPy khuyến khích sử dụng bộ sinh số default_rng với hạt giống cố định thay vì các hàm toàn cục cũ. Ta sinh mẫu số nguyên và mẫu phân phối chuẩn để theo dõi các đặc trưng thống kê.
+
+```python
+import numpy as np
+
+rng = np.random.default_rng(seed=42)
+
+so_nguyen = rng.integers(low=10, high=50, size=5)
+phan_phoi_chuan = rng.normal(loc=0.0, scale=1.0, size=5)
+
+print(f"Mẫu số nguyên ngẫu nhiên: {so_nguyen}")
+print(f"Mẫu phân phối chuẩn:     {np.round(phan_phoi_chuan, 3)}")
+print(f"Trung bình mẫu:          {np.mean(phan_phoi_chuan):.3f}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Mẫu số nguyên ngẫu nhiên: [13 40 36 27 27]
+Mẫu phân phối chuẩn:     [ 0.941 -1.951 -1.302  0.128 -0.316]
+Trung bình mẫu:          -0.500
+```
+
+Hàm `np.random.default_rng` khởi tạo một đối tượng Generator độc lập sử dụng thuật toán PCG64. Việc cố định tham số `seed=42` bảo đảm chuỗi số ngẫu nhiên sinh ra có thể tái lập được khi chạy lại mã nguồn.
+
+Phương thức `rng.integers(low=10, high=50, size=5)` sinh ra 5 số nguyên ngẫu nhiên trong khoảng nửa mở `[10, 50)`. Điểm chặn trên 50 không bao giờ xuất hiện trong kết quả.
+
+Phương thức `rng.normal(loc=0.0, scale=1.0, size=5)` sinh mẫu gồm 5 số thực tuân theo phân phối chuẩn Gauss với kỳ vọng `loc` bằng không và độ lệch chuẩn `scale` bằng một.
+
+Để chạy lại đúng chuỗi số, cần giữ cùng bộ sinh, trạng thái khởi tạo, thứ tự lời gọi và môi trường tương thích. Chỉ thêm một lệnh lấy số từ `rng` trước `normal` cũng làm kết quả phía sau đổi đi. Seed không phải cam kết rằng mọi phiên bản thư viện tương lai sẽ cho cùng từng bit.
+
+:::
+
+<!-- /worked-example -->
+
 ## 3. Các hàm phổ quát ufunc
 
 Hàm phổ quát (*Universal Function* hay `ufunc`) là một hàm thực thi các phép toán trên từng phần tử của mảng `ndarray`. ufunc được biên dịch trực tiếp bằng C, có khả năng ép kiểu tự động và hỗ trợ phát sóng (*broadcasting*).
@@ -245,6 +415,43 @@ Tiếp nhận một mảng đầu vào và trả về một mảng kết quả c
 - `np.ceil()`, `np.floor()`: Làm tròn lên và làm tròn xuống số nguyên gần nhất.
 - `np.isnan()`: Trả về mảng boolean đánh dấu các giá trị không xác định `NaN` (*Not a Number*).
 - `np.isfinite()`: Kiểm tra các giá trị hữu hạn (không phải `NaN` và không phải dương hoặc âm vô cực).
+
+<!-- worked-example bai-03-numpy-worked-5 -->
+
+::: example Phân tách phần nguyên và phần thập phân của mảng với np.modf
+
+Một tọa độ được ghi bằng độ thập phân. Ta cần tách phần nguyên và phần lẻ để tiếp tục đổi đơn vị. `np.modf` trả cả hai mảng, đồng thời cho thấy cách hàm xử lý tọa độ âm.
+
+```python
+import numpy as np
+
+toa_do = np.array([105.8542, 21.0285, -10.5500], dtype=np.float64)
+phan_thap_phan, phan_nguyen = np.modf(toa_do)
+
+for i in range(len(toa_do)):
+    print(f"Gốc: {toa_do[i]:>9.4f} -> Nguyên: {phan_nguyen[i]:>6.1f}, "
+          f"Thập phân: {phan_thap_phan[i]:>7.4f}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Gốc:  105.8542 -> Nguyên:  105.0, Thập phân:  0.8542
+Gốc:   21.0285 -> Nguyên:   21.0, Thập phân:  0.0285
+Gốc:  -10.5500 -> Nguyên:  -10.0, Thập phân: -0.5500
+```
+
+Hàm ufunc một ngôi `np.modf` nhận vào một mảng số thực và trả về một cặp gồm hai mảng riêng biệt: Mảng thứ nhất chứa phần thập phân và mảng thứ hai chứa phần nguyên.
+
+Cần lưu ý thứ tự trả về của `np.modf`: Mảng phần thập phân được đặt ở vị trí đầu tiên, còn mảng phần nguyên được đặt ở vị trí thứ hai. Dấu của hai thành phần này luôn được bảo lưu đồng nhất với dấu của số gốc ban đầu.
+
+Đối với số âm `-10.55`, hàm bóc tách thành phần nguyên `-10.0` và thành phần thập phân `-0.55`. Đây là điểm khác biệt so với hàm lấy sàn `np.floor` vốn làm tròn về phía âm vô cùng thành `-11.0`.
+
+`np.modf` trả hai kết quả cùng lúc theo thứ tự phần lẻ rồi phần nguyên. Cần giữ đúng thứ tự khi giải nén. Trong ví dụ, cộng lại hai phần của mỗi giá trị sẽ khôi phục tọa độ ban đầu trong giới hạn làm tròn số thực.
+
+:::
+
+<!-- /worked-example -->
 
 ### 3.2. Các hàm ufunc hai ngôi
 Tiếp nhận hai mảng đầu vào và thực hiện phép toán theo từng cặp phần tử:
@@ -271,6 +478,54 @@ Ta cũng có thể truyền mảng số học vào các nhánh để tính toán
 # Nếu điểm dưới 5 thì cộng 1 điểm khuyến khích, ngược lại giữ nguyên
 diem_moi = np.where(diem < 5.0, diem + 1.0, diem)
 ```
+
+<!-- worked-example bai-03-numpy-worked-6 -->
+
+::: example Phân loại dữ liệu theo nhiều điều kiện với np.select
+
+Trong nghiệp vụ định giá hoặc phân loại khách hàng, ta thường phải gán nhãn dựa trên nhiều khoảng giá trị khác nhau. Việc sử dụng hàm np.where lồng nhau qua ba hoặc bốn cấp sẽ khiến biểu thức trở nên rối rắm và khó bảo trì. Hàm np.select cho phép khai báo danh sách các điều kiện logic song song với danh sách kết quả tương ứng một cách mạch lạc.
+
+```python
+import numpy as np
+
+diem_so = np.array([4.5, 6.8, 8.2, 9.5, 7.0])
+
+dieu_kien = [
+    diem_so >= 9.0,
+    diem_so >= 8.0,
+    diem_so >= 6.5,
+    diem_so >= 5.0,
+]
+nhan = ["Xuất sắc", "Giỏi", "Khá", "Trung bình"]
+mac_dinh = "Yếu"
+
+xep_loai = np.select(dieu_kien, nhan, default=mac_dinh)
+
+for d, xl in zip(diem_so, xep_loai):
+    print(f"Điểm {d:>4.1f}: xếp loại {xl}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Điểm  4.5: xếp loại Yếu
+Điểm  6.8: xếp loại Khá
+Điểm  8.2: xếp loại Giỏi
+Điểm  9.5: xếp loại Xuất sắc
+Điểm  7.0: xếp loại Khá
+```
+
+Hàm `np.select` tiếp nhận ba tham số: Danh sách các mảng điều kiện boolean `dieu_kien`, danh sách các nhãn kết quả tương ứng `nhan`, và giá trị mặc định `default` khi không có điều kiện nào thỏa mãn.
+
+Khi thực thi, `np.select` duyệt qua các điều kiện theo thứ tự danh sách và chọn giá trị tương ứng với điều kiện đầu tiên có chân trị `True` cho từng phần tử. Chẳng hạn điểm 9.5 thỏa mãn ngay điều kiện đầu tiên nên nhận nhãn Xuất sắc.
+
+Các mảng điều kiện đã được tính trước khi truyền vào `np.select`. Hàm chọn kết quả theo điều kiện khớp đầu tiên, nhưng không ngăn việc tính các điều kiện phía sau. Nếu một biểu thức chứa phép chia cho không, phép chia vẫn xảy ra và có thể phát sinh cảnh báo hoặc ngoại lệ tùy kiểu dữ liệu.
+
+Kết quả in ra thể hiện sự phân cấp rõ ràng cho từng mức điểm. So với cú pháp `np.where` lồng nhau, `np.select` giúp cấu trúc mã nguồn trong sáng và thuận tiện khi cần bổ sung thêm các bậc phân loại mới.
+
+:::
+
+<!-- /worked-example -->
 
 ### 4.2. Các phương thức toán học và thống kê
 NumPy hỗ trợ các hàm thống kê tổng hợp trên toàn bộ mảng hoặc dọc theo một trục xác định:
@@ -300,6 +555,62 @@ tb_hang = M.mean(axis=1, keepdims=True)
 # shape của tb_hang là (3, 1), cho phép trừ trực tiếp M - tb_hang bằng broadcasting
 ```
 
+<!-- worked-example bai-03-numpy-worked-7 -->
+
+::: example Định tâm mảng dọc theo trục và bảo toàn bậc chiều với keepdims
+
+Ta muốn trừ trung bình từng cột khỏi một bảng số đo. `keepdims=True` giữ lại trục đã tổng hợp với kích thước 1, giúp nhìn rõ chiều mà kết quả sẽ được broadcast. Ví dụ cũng đối chiếu cách giữ chiều khi tính trung bình từng hàng.
+
+```python
+import numpy as np
+
+du_lieu = np.array([
+    [10.0, 20.0, 30.0],
+    [40.0, 50.0, 60.0],
+])
+
+tb_giam = np.mean(du_lieu, axis=0)
+tb_giu = np.mean(du_lieu, axis=0, keepdims=True)
+dinh_tam = du_lieu - tb_giu
+
+print(f"Kích thước mảng gốc:            {du_lieu.shape}")
+print(f"Kích thước trung bình giảm bậc: {tb_giam.shape}")
+print(f"Kích thước trung bình giữ bậc:  {tb_giu.shape}")
+print("Mảng sau khi trừ trung bình (định tâm):")
+print(dinh_tam)
+tb_hang = du_lieu.mean(axis=1, keepdims=True)
+print("Trung bình từng hàng, shape:", tb_hang.shape)
+print("Định tâm theo hàng:")
+print(du_lieu - tb_hang)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Kích thước mảng gốc:            (2, 3)
+Kích thước trung bình giảm bậc: (3,)
+Kích thước trung bình giữ bậc:  (1, 3)
+Mảng sau khi trừ trung bình (định tâm):
+[[-15. -15. -15.]
+ [ 15.  15.  15.]]
+Trung bình từng hàng, shape: (2, 1)
+Định tâm theo hàng:
+[[-10.   0.  10.]
+ [-10.   0.  10.]]
+```
+
+Ma trận `du_lieu` có kích thước 2 hàng 3 cột. Khi tính trung bình theo trục `axis=0`, NumPy thực hiện cộng dồn dọc theo các hàng để thu được giá trị trung bình cho từng cột.
+
+Theo mặc định, mảng `tb_giam` bị giảm bậc thành mảng một chiều có kích thước `(3,)`. Ngược lại, khi truyền thêm tham số `keepdims=True`, mảng `tb_giu` vẫn duy trì đủ 2 chiều với kích thước `(1, 3)`.
+
+Trong phép trừ theo cột này, cả `(3,)` và `(1, 3)` đều broadcast được với `(2, 3)`. Lợi ích của `keepdims` rõ hơn khi tính theo hàng. `axis=1` với `keepdims=True` cho `(2, 1)`, còn nếu bỏ tham số thì chỉ còn `(2,)`, không khớp với chiều cuối bằng 3 của bảng.
+
+Thao tác trừ trung bình này là bước định tâm dữ liệu (centering) quanh mốc không, chứ chưa phải một phép chuẩn hóa Z-score hoàn chỉnh vốn đòi hỏi phải chia tiếp cho độ lệch chuẩn. Kết quả in ra xác nhận mỗi cột đều có giá trị đối xứng [-15.0, 15.0] quanh điểm cân bằng.
+
+:::
+
+<!-- /worked-example -->
+
 ### 4.3. Các phương thức cho mảng boolean
 Trên mảng boolean, các giá trị `True` được coi là $1$ và `False` được coi là $0$:
 - Đếm số lượng phần tử thỏa mãn điều kiện:
@@ -323,6 +634,53 @@ NumPy cung cấp các hàm tập hợp 1 chiều xử lý mảng với tốc đ�
 - `np.setdiff1d(x, y)`: Tìm phần hiệu (các phần tử có trong `x` nhưng không có trong `y`).
 
 ---
+
+<!-- worked-example bai-03-numpy-worked-8 -->
+
+::: example Tìm giá trị duy nhất và kiểm tra thành viên với np.unique và np.isin
+
+Một nhật ký ghi lặp lại các mã HTTP. Ta cần đếm mỗi mã và lấy vị trí của các mã thuộc danh sách cảnh báo. `unique`, `isin` và `where` lần lượt giải quyết ba bước đó trên cùng một mảng.
+
+```python
+import numpy as np
+
+ma_loi = np.array([404, 200, 500, 404, 200, 404, 503])
+canh_bao = np.array([500, 502, 503])
+
+cac_loai, so_lan = np.unique(ma_loi, return_counts=True)
+la_nguy_hiem = np.isin(ma_loi, canh_bao)
+vi_tri_su_co = np.where(la_nguy_hiem)[0]
+
+print("Tần suất xuất hiện của từng mã lỗi:")
+for loai, dem in zip(cac_loai, so_lan):
+    print(f"  Mã {loai}: {dem} lần")
+print(f"Số lượng sự cố thuộc diện cảnh báo: {np.sum(la_nguy_hiem)}")
+print(f"Vị trí chỉ số của các sự cố cảnh báo: {vi_tri_su_co}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Tần suất xuất hiện của từng mã lỗi:
+  Mã 200: 2 lần
+  Mã 404: 3 lần
+  Mã 500: 1 lần
+  Mã 503: 1 lần
+Số lượng sự cố thuộc diện cảnh báo: 2
+Vị trí chỉ số của các sự cố cảnh báo: [2 6]
+```
+
+Hàm `np.unique` duyệt qua mảng `ma_loi` để loại bỏ các phần tử trùng lặp và sắp xếp các giá trị theo thứ tự tăng dần. Tham số `return_counts=True` yêu cầu hàm trả về đồng thời mảng `so_lan` ghi nhận số lần xuất hiện tương ứng của từng mã.
+
+Kết quả cho thấy mã 200 xuất hiện 2 lần, mã 404 xuất hiện 3 lần, mã 500 xuất hiện 1 lần và mã 503 xuất hiện 1 lần. Đây là giải pháp đếm tần suất hiệu quả khi dữ liệu nằm ở dạng mảng số học đồng nhất.
+
+Hàm `np.isin(ma_loi, canh_bao)` kiểm tra từng phần tử của `ma_loi` có thuộc tập danh sách `canh_bao` hay không và trả về mảng boolean có cùng kích thước. Phép tính `np.sum(la_nguy_hiem)` đếm được đúng 2 sự cố thuộc nhóm máy chủ.
+
+Hàm `np.where(la_nguy_hiem)[0]` xác định chính xác vị trí chỉ số của các sự cố là vị trí số 2 và số 6. Quy trình kết hợp này cung cấp công cụ lọc và khoanh vùng sự cố nhanh chóng cho các luồng dữ liệu giám sát hệ thống.
+
+:::
+
+<!-- /worked-example -->
 
 ## 5. Nhập và xuất tệp với mảng
 
@@ -348,6 +706,56 @@ print(du_lieu["b"])
 
 ---
 
+<!-- worked-example bai-03-numpy-worked-9 -->
+
+::: example Đóng gói và nạp nhiều mảng với tệp lưu trữ npz bằng np.savez
+
+Trong các quy trình huấn luyện học máy, ta thường cần lưu trữ đồng thời tập đặc trưng X và nhãn mục tiêu y vào một tệp duy nhất để tiện chia sẻ và lưu trữ. Việc lưu ra nhiều tệp riêng lẻ dễ gây thất lạc hoặc lệch số lượng bản ghi giữa các tập. Hàm np.savez cho phép đóng gói nhiều mảng có nhãn vào một tệp lưu trữ định dạng .npz an toàn.
+
+```python
+import tempfile
+from pathlib import Path
+import numpy as np
+
+X = np.array([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]], dtype=np.float32)
+y = np.array([0, 1, 0], dtype=np.int32)
+
+with tempfile.NamedTemporaryFile(suffix=".npz", delete=False) as f:
+    duong_dan = Path(f.name)
+
+try:
+    np.savez(duong_dan, dac_trung=X, nhan=y)
+    with np.load(duong_dan) as du_lieu_nap:
+        cac_khoa = list(du_lieu_nap.files)
+        X_nap = du_lieu_nap["dac_trung"]
+        y_nap = du_lieu_nap["nhan"]
+        print(f"Các khóa trong tệp: {cac_khoa}")
+        print(f"Khớp mảng X: {np.array_equal(X_nap, X)}, kích thước {X_nap.shape}")
+        print(f"Khớp mảng y: {np.array_equal(y_nap, y)}, kích thước {y_nap.shape}")
+finally:
+    duong_dan.unlink(missing_ok=True)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Các khóa trong tệp: ['dac_trung', 'nhan']
+Khớp mảng X: True, kích thước (3, 2)
+Khớp mảng y: True, kích thước (3,)
+```
+
+Đoạn mã khởi tạo ma trận đặc trưng `X` có kích thước 3 hàng 2 cột và vector nhãn `y` gồm 3 số nguyên. Hàm `tempfile.NamedTemporaryFile` tạo đường dẫn tệp tạm có phần mở rộng `.npz` trên ổ đĩa.
+
+Hàm `np.savez` nhận đường dẫn tệp và các mảng dữ liệu dưới dạng tham số từ khóa `dac_trung=X` và `nhan=y`. Định dạng `.npz` thực chất là một tệp lưu trữ zip không nén chứa các tệp `.npy` riêng lẻ bên trong. Nếu người dùng muốn nén dữ liệu để tiết kiệm dung lượng đĩa, hàm `np.savez_compressed` sẽ là lựa chọn phù hợp.
+
+Khi đọc lại bằng hàm `np.load`, đối tượng trả về hoạt động tương tự như một từ điển. Thuộc tính `files` liệt kê danh sách các khóa đã lưu gồm `dac_trung` và `nhan`. Dữ liệu được nạp theo cơ chế lười biếng, chỉ nạp vào bộ nhớ khi ta truy xuất đến khóa cụ thể.
+
+Hàm `np.array_equal` xác nhận các mảng nạp lại hoàn toàn trùng khớp với dữ liệu gốc ban đầu. Việc giải phóng tệp tạm trong khối `finally` bảo đảm dọn dẹp tài nguyên sau khi kết thúc quá trình kiểm thử.
+
+:::
+
+<!-- /worked-example -->
+
 ## 6. Đại số tuyến tính
 
 Các phép toán ma trận trong NumPy được ủy thác cho thư viện Fortran tiêu chuẩn cao (BLAS/LAPACK):
@@ -372,6 +780,51 @@ tich_ma_tran = X @ Y
 - `numpy.linalg.eig(A)`: Tìm trị riêng và vector riêng.
 
 ---
+
+<!-- worked-example bai-03-numpy-worked-10 -->
+
+::: example Giải hệ phương trình tuyến tính và phân tích QR bằng numpy.linalg
+
+Xét hai phương trình có hai ẩn. Ta cần tìm nghiệm và kiểm tra bằng cách thế vào hệ ban đầu. Sau đó, phép phân tích QR minh họa một cách tách ma trận hệ số thành hai ma trận có cấu trúc rõ hơn.
+
+```python
+import numpy as np
+
+# Hệ phương trình Ax = b:
+#  2x + 1y = 8
+#  1x + 3y = 11
+A = np.array([[2.0, 1.0], [1.0, 3.0]])
+b = np.array([8.0, 11.0])
+
+x = np.linalg.solve(A, b)
+Q, R = np.linalg.qr(A)
+
+print(f"Nghiệm tìm được: x = {x[0]:.4f}, y = {x[1]:.4f}")
+print(f"Kiểm tra lại A @ x = b: {np.allclose(A @ x, b)}")
+print(f"Tích Q @ R khớp với A:  {np.allclose(Q @ R, A)}")
+print(f"R là ma trận tam giác trên: {abs(R[1, 0]) < 1e-12}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Nghiệm tìm được: x = 2.6000, y = 2.8000
+Kiểm tra lại A @ x = b: True
+Tích Q @ R khớp với A:  True
+R là ma trận tam giác trên: True
+```
+
+Đoạn mã thiết lập hệ phương trình tuyến tính hai ẩn số $Ax = b$, trong đó ma trận hệ số $A$ có kích thước 2x2 và vector vế phải $b$ có 2 phần tử. Nghiệm toán học chính xác của hệ là $x = 2.6$ và $y = 2.8$.
+
+Hàm `np.linalg.solve` sử dụng thuật toán phân tích LU kết hợp khử Gauss của thư viện LAPACK để tìm nghiệm trực tiếp. Cả hai phương pháp `solve` và tính nghịch đảo ma trận `inv` đều có chung điều kiện suy biến khi định thức ma trận bằng không. Tuy nhiên, `solve` tránh được việc tính toán tường minh ma trận nghịch đảo, nhờ đó giảm bớt số phép tính số học và hạn chế sự tích lũy sai số dấu phẩy động.
+
+`np.linalg.qr` tách ma trận `A` thành ma trận trực giao `Q` và ma trận tam giác trên `R`. Biểu thức `Q @ R` nhân hai ma trận lại. `np.allclose` kiểm tra các phần tử có gần với `A` trong dung sai cho phép, thay vì đòi từng số thực bằng nhau tuyệt đối.
+
+Kết quả in ra xác nhận nghiệm thu được thỏa mãn phương trình ban đầu và phần tử dưới đường chéo của ma trận $R$ xấp xỉ bằng không. Đây là các công cụ đại số tuyến tính căn bản phục vụ xây dựng các thuật toán phân tích dữ liệu nhiều chiều.
+
+:::
+
+<!-- /worked-example -->
 
 ## 7. Nghiên cứu tình huống: Mô phỏng bước đi ngẫu nhiên
 

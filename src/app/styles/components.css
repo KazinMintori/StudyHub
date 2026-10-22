@@ -31,7 +31,7 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .vp-doc table { display: block; max-width: 100%; overflow-x: auto; font-family: var(--font-ui); font-size: var(--fs-ui); font-variant-numeric: tabular-nums; border-collapse: collapse; margin: var(--space-6) 0; }
 .vp-doc :is(th, td) { border: 0; border-bottom: 1px solid var(--rule); padding: var(--space-3) var(--space-4); }
 .vp-doc th { background: var(--canvas); font-weight: 600; }
-.vp-doc tr { background: var(--paper); border: 0; }
+.vp-doc tr { background: var(--paper); border: 0; transition: none; }
 .vp-doc tr:nth-child(2n) { background: var(--canvas); }
 
 /* Quy chuẩn chống thanh cuộn & mũi tên scrollbar (No Math Scrollbars & Arrows) trên toàn bộ hệ thống */

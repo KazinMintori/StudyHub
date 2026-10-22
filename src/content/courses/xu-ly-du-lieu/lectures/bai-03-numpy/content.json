@@ -16,39 +16,89 @@
   "examples": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 113,
+      "line": 77,
+      "title": "Nhận diện hiện tượng tràn số nguyên và nâng kiểu dữ liệu với astype"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 154,
       "title": "Ví dụ dùng chung bộ nhớ (Sharing Memory - View)"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 126,
+      "line": 167,
       "title": "Ví dụ không dùng chung bộ nhớ (Non-Sharing Memory - Copy)"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 189,
+      "title": "Kiểm tra tính liên tục bộ nhớ và quan hệ dùng chung vùng đệm"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 281,
+      "title": "Trích xuất phần tử phân tán bằng chỉ mục mảng số nguyên"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 366,
+      "title": "Sinh dữ liệu phân phối ngẫu nhiên với np.random.default_rng"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 421,
+      "title": "Phân tách phần nguyên và phần thập phân của mảng với np.modf"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 484,
+      "title": "Phân loại dữ liệu theo nhiều điều kiện với np.select"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 560,
+      "title": "Định tâm mảng dọc theo trục và bảo toàn bậc chiều với keepdims"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 640,
+      "title": "Tìm giá trị duy nhất và kiểm tra thành viên với np.unique và np.isin"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 711,
+      "title": "Đóng gói và nạp nhiều mảng với tệp lưu trữ npz bằng np.savez"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
+      "line": 786,
+      "title": "Giải hệ phương trình tuyến tính và phân tích QR bằng numpy.linalg"
     }
   ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 438,
+      "line": 891,
       "title": "Bài tập 1: Thời điểm đổi kiểu dữ liệu và tràn số nguyên"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 465,
+      "line": 918,
       "title": "Bài tập 2: Thay thế vòng lặp for bằng phép toán mảng vector hóa"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 497,
+      "line": 950,
       "title": "Bài tập 3: Xác định vị trí phần tử trong bộ nhớ từ Strides"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 535,
+      "line": 988,
       "title": "Bài tập 4: Xác định các ô của View và kiểm chứng bộ nhớ dùng chung"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 569,
+      "line": 1022,
       "title": "Bài tập 6: Sửa lỗi phép trừ trung bình hàng do hiểu sai Broadcasting"
     },
     {
@@ -95,27 +145,27 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 450,
+      "line": 903,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 479,
+      "line": 932,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 511,
+      "line": 964,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 550,
+      "line": 1003,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-03-numpy.md",
-      "line": 584,
+      "line": 1037,
       "title": "Lời giải"
     },
     {
