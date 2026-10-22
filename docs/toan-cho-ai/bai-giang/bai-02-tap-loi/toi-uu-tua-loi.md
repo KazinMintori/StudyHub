@@ -33,7 +33,10 @@ Trên trục số, tập mức dưới lồi nghĩa là một khoảng, nên hà
 Tính tựa lồi có một dạng bất đẳng thức Jensen tương ứng: Hàm $f$ tựa lồi khi và chỉ khi miền xác định của nó là tập lồi và
 
 $$
-f(\theta x + (1 - \theta)y) \le \max\{f(x), f(y)\}, \qquad 0 \le \theta \le 1 .
+\begin{aligned}
+&f(\theta x + (1 - \theta)y) \le \max\{f(x), f(y)\}, \qquad\\
+&0 \le \theta \le 1 .
+\end{aligned}
 $$
 
 Giá trị trên một đoạn thẳng không vượt quá giá trị lớn hơn ở hai đầu mút. So với hàm lồi, vế phải là giá trị lớn nhất chứ không phải trung bình có trọng số, nên điều kiện yếu hơn hẳn.
@@ -71,7 +74,11 @@ Hàm $\phi_t = p - tq$ lồi, vì $p$ lồi và $-tq$ lồi khi $t \ge 0$, và n
 Tỉ số khoảng cách cần một họ khác, vì $\|x - a\| - t\|x - b\|$ là hiệu của hai hàm lồi và không lồi. Ta bình phương trước: Với $0 < t < 1$,
 
 $$
-\frac{\|x - a\|_2}{\|x - b\|_2} \le t \iff \phi_t(x) = \|x - a\|_2^2 - t^2\|x - b\|_2^2 \le 0 .
+\begin{aligned}
+\frac{\|x - a\|_2}{\|x - b\|_2} &\le t\\
+&\iff \phi_t(x) = \|x - a\|_2^2 - t^2\|x - b\|_2^2\\
+&\le 0 .
+\end{aligned}
 $$
 
 Phép bình phương hợp lệ vì cả hai vế không âm. Hàm $\phi_t$ là hàm toàn phương với hệ số của $\|x\|^2$ bằng $1 - t^2 > 0$, nên lồi, và nó không tăng theo $t$. Tập $\{\phi_t \le 0\}$ là một hình tròn, giới hạn bởi một đường tròn Apollonius:

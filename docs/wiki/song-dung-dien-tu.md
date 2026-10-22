@@ -16,13 +16,22 @@ Sóng đứng điện từ lý tưởng do hai sóng cùng tần số, cùng bi�
 Chọn một mặt dẫn lý tưởng ở x=0. Hai sóng chạy bằng nhau đi ngược chiều cho trường tổng:
 
 $$
-E_y=-2E_0\sin(kx)\sin(\omega t)\\ B_z=-2B_0\cos(kx)\cos(\omega t)\\ E_0=cB_0.
+\begin{aligned}
+&E_y=-2E_0\sin(kx)\sin(\omega t)\\
+&B_z=-2B_0\cos(kx)\cos(\omega t)\\
+&E_0=cB_0.
+\end{aligned}
 $$
 
 Biên độ ở bụng gấp đôi biên độ mỗi sóng thành phần. Nút điện trường cách nhau λ/2 và nằm giữa các nút từ trường. Hai trường vuông pha theo thời gian, khác quan hệ cùng pha của một sóng chạy.
 
+Đặt $K=E_0B_0/\mu_0$ để tách hệ số không phụ thuộc vị trí và thời gian. Dòng năng lượng là:
+
 $$
-S_x=\frac{E_0B_0}{\mu_0}\\ \quad\times\sin(2kx)\sin(2\omega t)\\ \langle S_x\rangle=0.
+\begin{aligned}
+S_x&=K\sin(2kx)\sin(2\omega t),\\
+\langle S_x\rangle&=0.
+\end{aligned}
 $$
 
 Không có điểm nào trong mode cơ bản có mật độ năng lượng đồng nhất bằng không ở mọi thời điểm. Tuy nhiên, tại một thời điểm riêng, các trường và năng lượng ở một số vị trí có thể đồng thời bằng không.

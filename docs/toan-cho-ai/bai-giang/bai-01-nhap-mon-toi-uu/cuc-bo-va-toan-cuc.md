@@ -17,9 +17,10 @@ Ta định nghĩa một **bài toán tối ưu lồi ở dạng chuẩn** là b�
 
 $$
 \begin{aligned}
-&\quad \text{minimize} \quad f_0(x) \\
-\text{subject to} \quad f_i(x) &\le 0, \quad i = 1, \dots, m, \\
-a_i^T x &= b_i, \quad i = 1, \dots, p,
+&\text{minimize} \quad f_0(x)\\
+&\text{subject to} \quad f_i(x) \le 0, \quad i = 1, \dots, m,\\
+&a_i^T x = b_i, \quad\\
+&i = 1, \dots, p,
 \end{aligned}
 $$
 
@@ -50,7 +51,10 @@ Ngược lại, hàm $0.25x^4 - x^2 + 0.3x$ có hai điểm cực tiểu cục b
 **Chứng minh.** Giả sử $x$ là cực tiểu cục bộ với bán kính $R$, nhưng có một điểm khả thi $y$ với $f_0(y) < f_0(x)$. Điểm $y$ phải nằm xa $x$ hơn $R$, vì trong bán kính $R$ không có điểm nào tốt hơn $x$. Đi từ $x$ về phía $y$ một đoạn bằng $R/2$, tức lấy
 
 $$
-z = (1 - \theta)\, x + \theta\, y, \qquad \theta = \frac{R}{2\|y - x\|_2} \in (0, \tfrac12).
+\begin{aligned}
+&z = (1 - \theta)\, x + \theta\, y, \qquad\\
+&\theta = \frac{R}{2\|y - x\|_2} \in (0, \tfrac12).
+\end{aligned}
 $$
 
 Hai tính lồi lần lượt được dùng ở hai bước:

@@ -16,7 +16,10 @@ Một mặt cầu ngăn hai môi trường có thể tạo ảnh nhờ khúc x�
 Với ánh sáng truyền từ a sang b:
 
 $$
-\frac{n_a}s+\frac{n_b}{s^\prime} =\frac{n_b-n_a}R\\m =-\frac{n_as^\prime}{n_bs}.
+\begin{aligned}
+&\frac{n_a}s+\frac{n_b}{s^\prime} =\frac{n_b-n_a}R\\
+&m =-\frac{n_as^\prime}{n_bs}.
+\end{aligned}
 $$
 
 Giới hạn mặt phẳng cho $s^\prime=-(n_b/n_a)s$ và $m=1$. Với vật thật trong nước nhìn từ không khí, ảnh ảo nông hơn và kích thước ngang cận trục không đổi. Độ sâu biểu kiến thay đổi không đồng nghĩa mọi kích thước đều thu nhỏ.

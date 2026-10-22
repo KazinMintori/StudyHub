@@ -16,7 +16,10 @@ Chọn $i=I\cos\omega t$, điện áp $v=V\cos(\omega t+\phi)$ có góc pha φ s
 Chọn dòng làm mốc:
 
 $$
-i=I\cos\omega t\\ v=V\cos(\omega t+\phi).
+\begin{aligned}
+&i=I\cos\omega t\\
+&v=V\cos(\omega t+\phi).
+\end{aligned}
 $$
 
 Góc $\phi$ được đo từ vector dòng đến vector điện áp theo chiều ngược kim đồng hồ. Góc dương nghĩa điện áp sớm dòng. Nếu mô tả pha dòng so với điện áp, dấu đổi.

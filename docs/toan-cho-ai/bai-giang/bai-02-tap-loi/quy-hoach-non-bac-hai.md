@@ -50,7 +50,10 @@ $$
 với tâm $\bar a_i$ là giá trị danh nghĩa và ma trận $P_i$ mô tả độ bất định. Ta đòi hỏi mỗi ràng buộc đúng với mọi $a_i \in \mathcal{E}_i$. Đây là một điều kiện "với mọi", và cũng như với [tâm Chebyshev](./mo-hinh-lp.md), ta thay nó bằng giá trị lớn nhất:
 
 $$
-\sup\{a_i^Tx : A_i \in \mathcal{E}_i\} = \bar a_i^Tx + \sup\{u^TP_i^Tx : \|u\|_2 \le 1\} = \bar a_i^Tx + \|P_i^Tx\|_2 ,
+\begin{aligned}
+\sup\{a_i^Tx : A_i \in \mathcal{E}_i\} &= \bar a_i^Tx + \sup\{u^TP_i^Tx : \|u\|_2 \le 1\}\\
+&= \bar a_i^Tx + \|P_i^Tx\|_2 ,
+\end{aligned}
 $$
 
 trong đó đẳng thức cuối là bất đẳng thức Cauchy–Schwarz, đạt khi $u$ cùng hướng với $P_i^Tx$. Vậy LP bền vững là SOCP
@@ -91,7 +94,10 @@ Ví dụ một biến: Hàm lượng một chất trong mỗi đơn vị nguyên
 Nhiều ràng buộc không trông giống nón bậc hai vẫn viết lại được thành nón bậc hai. Một đồng nhất thức hữu ích thường dùng để biến đổi: Với $y, z \ge 0$,
 
 $$
-x^Tx \le yz \iff \left\|\begin{bmatrix} 2x \\ y - z \end{bmatrix}\right\|_2 \le y + z .
+\begin{aligned}
+x^Tx &\le yz\\
+&\iff \left\|\begin{bmatrix} 2x \\ y - z \end{bmatrix}\right\|_2 \le y + z .
+\end{aligned}
 $$
 
 Chứng minh chỉ là khai triển. Bình phương vế phải trừ bình phương vế trái là $(y + z)^2 - (y - z)^2 - 4x^Tx$, rút gọn thành $4(yz - x^Tx)$, và cả hai vế đều không âm khi $y, z \ge 0$. Nhờ đó, ràng buộc $\tfrac{\|x\|_2^2}{y} \le t$ với $y > 0$, chẳng hạn khi một hàm mục tiêu chứa tỉ số giữa bình phương sai số và một phương sai cần ước lượng, là một ràng buộc nón bậc hai.

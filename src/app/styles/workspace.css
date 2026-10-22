@@ -6,6 +6,10 @@
 .flashcard-progress { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); margin: var(--space-4) 0 var(--space-5); font-size: var(--fs-ui); color: var(--ink-2); }
 .flashcard-progress progress { flex: 1; height: 8px; min-width: 120px; }
 .flashcard { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); padding: var(--space-6); min-height: 270px; }
+.flashcard-empty { align-items: flex-start; }
+.flashcard-empty > div { min-width: 0; }
+.flashcard-empty h3 { margin-bottom: var(--space-2); font-size: var(--fs-lead); font-weight: 600; color: var(--ink); }
+.flashcard-empty .text-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: var(--space-2); }
 .flashcard-top { display: flex; justify-content: space-between; gap: var(--space-3); font-size: var(--fs-small); color: var(--ink-3); }
 .flashcard-question { font: var(--fs-h2)/1.6 var(--font-read); margin: var(--space-6) 0; }
 .flashcard-answer { border-top: 1px solid var(--rule); padding-top: var(--space-5); }
@@ -42,6 +46,7 @@
 .charge-editor input { width: 100%; min-height: 44px; accent-color: var(--tim); }
 .field-simulation :is(button, select, input):focus-visible { outline: 3px solid var(--tim); outline-offset: 3px; }
 @media (max-width: 767px) {
+  .flashcard-empty { flex-direction: column; }
   .charge-editor { grid-template-columns: 1fr; }
   .field-preset { width: 100%; }
   .field-arrows > g:nth-child(even) { display: none; }

@@ -21,7 +21,9 @@ Có các đạo hàm riêng tại một điểm chưa tự bảo đảm hàm kh�
 
 Với $f(x,y)=x^2+3y$, các đạo hàm riêng là:
 
-$$\frac{\partial f}{\partial x}=2x,\qquad\frac{\partial f}{\partial y}=3.$$
+$$
+\frac{\partial f}{\partial x}=2x,\qquad\frac{\partial f}{\partial y}=3.
+$$
 
 ## Khi nào cần dùng?
 

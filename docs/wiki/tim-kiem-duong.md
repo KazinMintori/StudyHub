@@ -15,7 +15,9 @@ Tìm kiếm đường chọn độ dài t sau khi đã có hướng d. Backtrack
 
 **Điều kiện Armijo trong backtracking.** Với hướng giảm $d$, chọn $0<\alpha<\frac{1}{2}$, $0<\beta<1$ và giảm $t\leftarrow\beta t$ cho tới khi
 
-$$f(x+td)\le f(x)+\alpha t\nabla f(x)^Td.$$
+$$
+f(x+td)\le f(x)+\alpha t\nabla f(x)^Td.
+$$
 
 Nếu hàm có miền hạn chế, phải kiểm $x+td\in\operatorname{dom}f$ trước khi tính giá trị. Backtracking tìm một bước giảm đủ, không tìm minimum chính xác trên đường. Hướng và độ dài bước là hai quyết định riêng. Nguồn: Convex Optimization, §9.2–9.3.
 

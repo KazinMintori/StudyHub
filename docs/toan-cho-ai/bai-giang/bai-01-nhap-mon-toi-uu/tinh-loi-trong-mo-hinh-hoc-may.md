@@ -18,7 +18,10 @@ Rất nhiều hàm mất mát trong học máy không được chọn tùy tiệ
 Xét mô hình đo tuyến tính với $m$ quan sát: Phương trình $y_i = a_i^T x + v_i$ với $i = 1, \dots, m$, trong đó $x \in \mathbb{R}^n$ là vector tham số cần ước lượng và các thành phần nhiễu $v_i$ độc lập, cùng phân phối với hàm mật độ xác suất $p(v)$. Do tính độc lập, hàm hợp lý chung là tích các mật độ $\prod_{i=1}^m p(y_i - a_i^T x)$, dẫn đến log-likelihood có dạng tổng tường minh:
 
 $$
-l(x) = \sum_{i=1}^m \log p(y_i - a_i^T x) = \log p(y_1 - a_1^T x) + \log p(y_2 - a_2^T x) + \dots + \log p(y_m - a_m^T x).
+\begin{aligned}
+l(x) &= \sum_{i=1}^m \log p(y_i - a_i^T x)\\
+&= \log p(y_1 - a_1^T x) + \log p(y_2 - a_2^T x) + \dots + \log p(y_m - a_m^T x).
+\end{aligned}
 $$
 
 Nếu $\log p$ là một hàm lõm (tức mật độ $p$ là **log-lõm**), thì mỗi số hạng $\log p(y_i - a_i^T x)$ là phép hợp của hàm lõm với hàm affine theo $x$, do đó tổng $l(x)$ là hàm lõm và bài toán ước lượng trở thành bài toán lồi. Bài toán cực tiểu hàm mất mát tương đương là cực tiểu $-\log p$ áp lên từng phần dư $r_i = y_i - a_i^T x$. Xét ba trường hợp phân phối nhiễu kinh điển sau:
@@ -64,7 +67,10 @@ Với dữ liệu chồng lấn, mô phỏng cho thấy hàm mất mát là mộ
 Giờ xét một mạng nơ-ron nhỏ nhất có thể: Một đầu vào vô hướng, hai nơ-ron ẩn dùng hàm ReLU, không có hệ số tự do:
 
 $$
-f_\theta(x) = v_1 \max\{0,\ w_1 x\} + v_2 \max\{0,\ w_2 x\}, \qquad \theta = (w_1, v_1, w_2, v_2).
+\begin{aligned}
+&f_\theta(x) = v_1 \max\{0,\ w_1 x\} + v_2 \max\{0,\ w_2 x\}, \qquad\\
+&\theta = (w_1, v_1, w_2, v_2).
+\end{aligned}
 $$
 
 Dữ liệu gồm hai điểm $(x, y) = (-1, 1)$ và $(1, 1)$, và hàm mất mát là sai số bình phương trung bình. Tham số $\theta_A = (1, 1, -1, 1)$ cho $f(x) = \max\{0, x\} + \max\{0, -x\} = |x|$, khớp hoàn hảo cả hai điểm, nên $L(\theta_A) = 0$. Đổi chỗ hai nơ-ron ẩn, tức đổi vai $(w_1, v_1)$ với $(w_2, v_2)$, ta được $\theta_B = (-1, 1, 1, 1)$, vẫn biểu diễn đúng hàm $|x|$, nên $L(\theta_B) = 0$.
@@ -152,7 +158,10 @@ Với mạng và dữ liệu ở mục 3, tính hàm mất mát tại các đi�
 $\theta(t) = (1 - 2t,\ 1,\ -1 + 2t,\ 1)$. Với $t = 0.25$, $\theta = (0.5, 1, -0.5, 1)$, và mạng tính
 
 $$
-f(x) = \max\{0,\ 0.5x\} + \max\{0,\ -0.5x\} = 0.5|x| .
+\begin{aligned}
+f(x) &= \max\{0,\ 0.5x\} + \max\{0,\ -0.5x\}\\
+&= 0.5|x| .
+\end{aligned}
 $$
 
 Tại $x = \pm 1$, $f = 0.5$, sai số bình phương mỗi điểm là $0.25$, nên $L = 0.25$. Với $t = 0.5$, $\theta = (0, 1, 0, 1)$, mạng xuất ra 0, và $L = 1$. Dọc đoạn $\theta_A \to \theta_B$, mạng tính $|1 - 2t| \cdot |x|$, co lại về 0 ở giữa rồi giãn ra lại, nên hàm mất mát có dạng $(1 - |1 - 2t|)^2$: Bằng 0 ở hai đầu và bằng 1 ở giữa.

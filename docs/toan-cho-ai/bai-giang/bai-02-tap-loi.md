@@ -15,7 +15,10 @@ Năng lực cốt lõi của một chuyên gia khoa học dữ liệu và tối 
 Chương này dẫn dắt chúng ta qua phả hệ bao hàm kinh điển của các bài toán tối ưu lồi:
 
 $$
-\text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}.
+\begin{aligned}
+\mathrm{LP}&\subset\mathrm{QP}\subset\mathrm{QCQP} \\
+&\subset\mathrm{SOCP}\subset\mathrm{SDP}.
+\end{aligned}
 $$
 
 Mỗi dạng bài toán kế thừa và mở rộng năng lực biểu diễn hình học của dạng bài toán đứng trước nó: Từ các đa diện phẳng (Quy hoạch tuyến tính - LP), các mặt cong toàn phương (Quy hoạch toàn phương - QP, QCQP), các nón băng Lorentz (Quy hoạch nón bậc hai - SOCP), cho tới nón ma trận nửa xác định dương (Quy hoạch nửa xác định - SDP). Bên cạnh đó là Quy hoạch hình học (GP), ví dụ điển hình của việc đưa một bài toán phi lồi về dạng lồi qua phép đổi biến logarit, lý thuyết Tối ưu hóa đa mục tiêu với đường biên Pareto trong học máy, cùng các ứng dụng khớp hàm và quy hoạch mặt bằng vi mạch.
@@ -125,16 +128,16 @@ $$
 1. **Thiết lập dạng LP**: Đưa vào hai biến phụ $u, v \in \mathbb{R}$ thỏa mãn $u \ge |x - 1|$ và $v \ge |x + 1|$. Bài toán trở thành:
    $$
    \begin{aligned}
-   &\min_{x, u, v} \quad u + 2v\\
-   &\text{s.t.}\quad u \ge x - 1, \quad u \ge 1 - x,\\
-   &\phantom{\text{subject to}\quad } v \ge x + 1, \quad v \ge -x - 1.
+   &\min_{x,u,v}\ u+2v \\
+   &u\ge x-1,\quad u\ge1-x, \\
+   &v\ge x+1,\quad v\ge-x-1.
    \end{aligned}
    $$
    Hàm mục tiêu tuyến tính và cả bốn ràng buộc đều là bất đẳng thức affine. Hai ràng buộc ngầm $u \ge 0$ và $v \ge 0$ được tự động thỏa mãn bởi các bất đẳng thức trên.
 2. **Khảo sát giải tích**: Chia trục số thực thành ba khoảng:
-   - Khi $x < -1$: $f(x) = (1 - x) + 2(-x - 1) = -3x - 1$, hàm nghịch biến.
-   - Khi $-1 \le x \le 1$: $f(x) = (1 - x) + 2(x + 1) = x + 3$, hàm đồng biến.
-   - Khi $x > 1$: $f(x) = (x - 1) + 2(x + 1) = 3x + 1$, hàm đồng biến.
+   - Khi $x < -1$: Hai phần trị tuyệt đối cho $f(x)=-3x-1$, nên hàm nghịch biến.
+   - Khi $-1 \le x \le 1$: $f(x)=x+3$, hàm đồng biến.
+   - Khi $x > 1$: $f(x)=3x+1$, hàm đồng biến.
    
    Hàm số đạt giá trị cực tiểu toàn cục duy nhất tại điểm nối $x^* = -1$, với giá trị tối ưu $p^* = |-1 - 1| + 2|-1 + 1| = 2$. Tại nghiệm tối ưu, các biến phụ nhận giá trị $u^* = 2, v^* = 0$.
 :::
@@ -150,10 +153,22 @@ Xét hàm mất mát ở Bài 00: $f(w) = 7w^2 - 11w + \frac{9}{2}$. Giả sử 
 1. **Cận dưới từ bài toán nới lỏng**: Khi loại bỏ ràng buộc $w \le 0.5$, bài toán không ràng buộc có nghiệm tại điểm dừng $w = \frac{11}{14}$. Giá trị mất mát tương ứng là $f(11/14) = \frac{5}{28} \approx 0.1786$. Vì miền khả thi của bài toán có ràng buộc là tập con của $\mathbb{R}$, giá trị tối ưu $p^*$ chắc chắn bị chặn dưới:
    $$p^* \ge \frac{5}{28}.$$
 2. **Cận trên từ điểm khả thi**: Điểm biên $w = \frac{1}{2}$ thỏa mãn ràng buộc $w \le \frac{1}{2}$. Giá trị hàm số tại đây là:
-   $$f\left(\frac{1}{2}\right) = 7\left(\frac{1}{4}\right) - 11\left(\frac{1}{2}\right) + \frac{9}{2} = \frac{7}{4} - \frac{22}{4} + \frac{18}{4} = \frac{3}{4} = 0.75.$$
+   $$
+   \begin{aligned}
+   f(1/2) &= 7/4-22/4+18/4 \\
+   &=3/4 \\
+   &=0.75.
+   \end{aligned}
+   $$
    Vì điểm này khả thi, ta có cận trên: $p^* \le \frac{3}{4}$. Khoảng cách kẹp nghiệm hiện tại là $\frac{3}{4} - \frac{5}{28} = \frac{16}{28} = \frac{4}{7}$.
 3. **Chứng nhận tối ưu**: Đạo hàm của hàm mục tiêu là $f'(w) = 14w - 11$. Trên toàn bộ miền khả thi $w \le \frac{1}{2}$, ta có:
-   $$f'(w) \le 14\left(\frac{1}{2}\right) - 11 = 7 - 11 = -4 < 0.$$
+   $$
+   \begin{aligned}
+   f\prime(w)&\le14(1/2)-11 \\
+   &=7-11 \\
+   &=-4<0.
+   \end{aligned}
+   $$
    Đạo hàm mang dấu âm ngặt trên toàn miền, chứng tỏ hàm số nghịch biến trên $(-\infty, 0.5]$. Do đó, hàm số đạt giá trị nhỏ nhất tại điểm mút cực phải $w^* = \frac{1}{2}$, với giá trị tối ưu $p^* = \frac{3}{4}$. Ở Bài 03, ta sẽ chứng nhận kết quả này một cách có hệ thống thông qua lý thuyết Đối ngẫu Lagrange.
 :::
 
@@ -187,34 +202,53 @@ Gọi $x_1, x_2 \ge 0$ lần lượt là khối lượng phân bón loại I và
    
    Để chuyển về dạng chuẩn tắc $\min d^T z$ với $Az = b, z \ge 0$, ta đưa vào hai biến bù dư $s_1, s_2 \ge 0$ đại diện cho lượng dinh dưỡng vượt mức tối thiểu:
    $$
-   2x_1 + x_2 - s_1 = 4, \qquad x_1 + 2x_2 - s_2 = 5.
+   \begin{aligned}
+   &2x_1+x_2-s_1=4, \\
+   &x_1+2x_2-s_2=5.
+   \end{aligned}
    $$
    Đặt vector biến mở rộng $z = (x_1, x_2, s_1, s_2)^T \ge 0$, ta thu được hệ ma trận:
    $$
-   A = \begin{bmatrix} 2 & 1 & -1 & 0 \\ 1 & 2 & 0 & -1 \end{bmatrix}, \qquad b = \begin{bmatrix} 4 \\ 5 \end{bmatrix}, \qquad d = \begin{bmatrix} 3 \\ 2 \\ 0 \\ 0 \end{bmatrix}.
+   \begin{aligned}
+   A&=\begin{bmatrix}2&1&-1&0\\1&2&0&-1\end{bmatrix}, \\
+   b&=\begin{bmatrix}4\\5\end{bmatrix},\quad d=\begin{bmatrix}3\\2\\0\\0\end{bmatrix}.
+   \end{aligned}
    $$
 
 2. **Xác định và chứng nhận nghiệm tối ưu**:
    Giao điểm của hai đường biên dinh dưỡng $2x_1 + x_2 = 4$ và $x_1 + 2x_2 = 5$ là nghiệm của hệ phương trình tuyến tính. Nhân phương trình đầu với 2 rồi trừ phương trình sau:
    $$
-   3x_1 = 3 \implies x_1 = 1, \quad x_2 = 2.
+   \begin{aligned}
+   3x_1&=3\implies x_1=1, \\
+   x_2&=2.
+   \end{aligned}
    $$
    Điểm $(1, 2)$ hoàn toàn khả thi vì thỏa mãn $x_1, x_2 \ge 0$, với tổng chi phí $3(1) + 2(2) = 7$.
    
    Để chứng nhận tính tối ưu toàn cục, ta biểu diễn hàm mục tiêu thành tổ hợp tuyến tính hệ số không âm của các vế trái ràng buộc:
+   Đặt $u=2x_1+x_2$ và $v=x_1+2x_2$.
+
    $$
-   3x_1 + 2x_2 = \frac{4}{3}(2x_1 + x_2) + \frac{1}{3}(x_1 + 2x_2).
+   3x_1+2x_2=\tfrac43u+\tfrac13v.
    $$
    Vì hai trọng số $\frac{4}{3} > 0$ và $\frac{1}{3} > 0$ đều không âm, với mọi điểm $(x_1, x_2)$ khả thi bất kỳ, ta luôn có bất đẳng thức:
    $$
-   3x_1 + 2x_2 \ge \frac{4}{3}(4) + \frac{1}{3}(5) = \frac{16 + 5}{3} = 7.
+   \begin{aligned}
+   3x_1+2x_2&\ge\tfrac43(4)+\tfrac13(5) \\
+   &=\tfrac{16+5}{3} \\
+   &=7.
+   \end{aligned}
    $$
    Mọi điểm khả thi đều có chi phí không nhỏ hơn $7$, trong khi phương án $(1, 2)$ đạt đúng giá trị $7$. Do đó $(1, 2)$ là nghiệm tối ưu toàn cục duy nhất, với chi phí $7$ đơn vị (70.000 VNĐ).
 
 3. **Biến thể có trần cung $x_1 \le 0{,}5$**:
    Nghiệm tối ưu cũ $x_1 = 1$ vi phạm trần cung $x_1 \le 0{,}5$. Tại miền mới, ta kết hợp ràng buộc nitơ và trần cung:
    $$
-   3x_1 + 2x_2 = 2(2x_1 + x_2) - x_1 \ge 2(4) - 0{,}5 = 7{,}5.
+   \begin{aligned}
+   3x_1+2x_2&=2(2x_1+x_2)-x_1 \\
+   &\ge2(4)-0.5 \\
+   &=7.5.
+   \end{aligned}
    $$
    Dấu bằng đạt được khi $2x_1 + x_2 = 4$ và $x_1 = 0{,}5$, suy ra $x_2 = 4 - 2(0{,}5) = 3$.
    
@@ -231,7 +265,10 @@ Gọi $x_1, x_2 \ge 0$ lần lượt là khối lượng phân bón loại I và
 ::: exercise 5. So sánh hồi quy sai số tuyệt đối và hồi quy minimax qua cải dạng LP
 Cho tập dữ liệu gồm $5$ quan sát với biến độc lập $u$ và nhãn mục tiêu $y$:
 $$
-u = (-2, -1, 0, 1, 2), \qquad y = (-2, -1, 3, 1, 2)^T.
+\begin{aligned}
+u &= (-2, -1, 0, 1, 2),\\
+y &= (-2, -1, 3, 1, 2)^T.
+\end{aligned}
 $$
 Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w = (a, b)^T$. Vector phần dư dự đoán là $r = Xw - y \in \mathbb{R}^5$, trong đó ma trận dữ liệu $X \in \mathbb{R}^{5 \times 2}$ có hàng thứ $i$ là $(u_i, 1)$.
 1. Thiết lập phép cải dạng chuyển đổi hai bài toán sau về Quy hoạch tuyến tính (LP) bằng cách đưa vào biến phụ:
@@ -249,18 +286,22 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
    - **Hồi quy sai số tuyệt đối (chuẩn L1)**: Đưa vào $5$ biến phụ $t = (t_1, \dots, t_5)^T \in \mathbb{R}^5$:
      $$
      \begin{aligned}
-     &\min_{w, t} \quad \sum_{i=1}^5 t_i\\
-     &\text{s.t.}\quad -t_i \le u_i a + b - y_i \le t_i, \quad \forall i = 1, \dots, 5.
+     &\min_{w,t}\ \sum_{i=1}^5t_i \\
+     &-t_i\le u_i a+b-y_i\le t_i.
      \end{aligned}
      $$
+
+     Hệ ràng buộc áp dụng cho $i=1,\ldots,5$.
      Bài toán có $7$ biến ($2$ biến mô hình và $5$ biến phụ) cùng $10$ ràng buộc bất đẳng thức tuyến tính.
    - **Hồi quy minimax (chuẩn vô cùng)**: Đưa vào $1$ biến phụ vô hướng duy nhất $t \in \mathbb{R}$:
      $$
      \begin{aligned}
-     &\min_{w, t} \quad t\\
-     &\text{s.t.}\quad -t \le u_i a + b - y_i \le t, \quad \forall i = 1, \dots, 5.
+     &\min_{w,t}\ t \\
+     &-t\le u_i a+b-y_i\le t.
      \end{aligned}
      $$
+
+     Hệ ràng buộc áp dụng cho $i=1,\ldots,5$.
      Bài toán có $3$ biến và $10$ ràng buộc bất đẳng thức tuyến tính.
 
 2. **Tính tương đương hai chiều và tính khả vi**:
@@ -271,42 +312,62 @@ Xét mô hình hồi quy tuyến tính $f(u) = au + b$ với vector tham số $w
 3. **Tìm nghiệm giải tích**:
    Phần dư tại từng điểm quan sát có dạng:
    $$
-\begin{aligned}
-r_1 &= -2a + b - (-2) = b - 2(a - 1), \\
-r_2 &= -a + b - (-1) = b - (a - 1), \\
-r_3 &= b - 3, \\
-r_4 &= a + b - 1 = b + (a - 1), \\
-r_5 &= 2a + b - 2 = b + 2(a - 1).
-\end{aligned}
-$$
+   \begin{aligned}
+   r_1&=b-2(a-1), \\
+   r_2&=b-(a-1), \\
+   r_3&=b-3, \\
+   r_4&=b+(a-1), \\
+   r_5&=b+2(a-1).
+   \end{aligned}
+   $$
    Đặt độ lệch hệ số góc $d = a - 1$.
    
    - **Xét bài toán L1**: Dùng bất đẳng thức tam giác cho từng cặp điểm đối xứng:
      $$
-\begin{aligned}
-|b - d| + |b + d| &\ge |(b - d) + (b + d)| = 2|b|, \\
-|b - 2d| + |b + 2d| &\ge |(b - 2d) + (b + 2d)| = 2|b|, \\
-|b - 3| &\ge 3 - |b|.
-\end{aligned}
-$$
-     Cộng các vế lại:
+     \begin{aligned}
+     |b-d|+|b+d|&\ge2|b|, \\
+     |b-2d|+|b+2d|&\ge2|b|, \\
+     |b-3|&\ge3-|b|.
+     \end{aligned}
      $$
-     \sum_{i=1}^5 |r_i| \ge 2|b| + 2|b| + 3 - |b| = 3 + 3|b| \ge 3.
+     Cộng các vế lại:
+     Hai cặp đối xứng đóng góp ít nhất $4|b|$. Cộng với $3-|b|$ từ điểm giữa, ta được:
+
+     $$
+     \begin{aligned}
+     \sum_{i=1}^5|r_i|&\ge3+3|b| \\
+     &\ge3.
+     \end{aligned}
      $$
      Tổng sai số đạt giá trị nhỏ nhất bằng $3$ khi và chỉ khi $b = 0$. Khi $b = 0$, tổng sai số là:
      $$
-     |-d| + |d| + |-2d| + |2d| + |-3| = 6|d| + 3 \ge 3,
+     \begin{aligned}
+     |-d|+|d|&=2|d|, \\
+     |-2d|+|2d|&=4|d|, \\
+     \sum_{i=1}^5|r_i|&=6|d|+3 \\
+     &\ge3.
+     \end{aligned}
      $$
      dấu bằng buộc $d = 0$, suy ra $a = 1$. Vậy nghiệm tối ưu duy nhất là $w^* = (1, 0)$, với vector phần dư $r^* = (0, 0, -3, 0, 0)^T$. Điểm dị biệt tại $u=0$ bị bỏ qua hoàn toàn, tạo nên tính bền vững đặc trưng của chuẩn L1.
    
    - **Xét bài toán minimax**: Điều kiện $|r_i| \le t$ với mọi $i$ dẫn tới:
      $$
-     |b| = \left|\frac{(b - d) + (b + d)}{2}\right| \le \frac{|b - d| + |b + d|}{2} \le t, \qquad |b - 3| \le t.
+     \begin{aligned}
+     b&=\frac{r_2+r_4}{2}, \\
+     |b|&\le\frac{|r_2|+|r_4|}{2}\le t, \\
+     |b-3|&=|r_3|\le t.
+     \end{aligned}
      $$
      Áp dụng bất đẳng thức tam giác:
      $$
-     3 = |b + (3 - b)| \le |b| + |3 - b| \le t + t = 2t \implies t \ge 1{,}5.
+     \begin{aligned}
+     3&=|b+(3-b)| \\
+     &\le|b|+|3-b| \\
+     &\le2t.
+     \end{aligned}
      $$
+
+     Suy ra $t\ge1.5$.
      Giá trị $t = 1{,}5$ đạt được khi $b = 1{,}5$ và $d = 0 \implies a = 1$. Khi đó vector phần dư là $(1{,}5; 1{,}5; -1{,}5; 1{,}5; 1{,}5)$, tất cả đều có giá trị tuyệt đối bằng đúng $1{,}5$. Nghiệm tối ưu duy nhất là $w^* = (1, 1{,}5)$ với sai số cực đại $t^* = 1{,}5$.
 
 4. **Đánh giá sự đánh đổi (Trade-off)**:
@@ -320,9 +381,9 @@ Tiếp tục với bộ dữ liệu ở Bài 5, xét hàm mất mát bình phư�
 $$
 E(w) = \sum_{i=1}^5 (au_i + b - y_i)^2.
 $$
-1. Khai triển và hoàn thành bình phương để chứng minh:
+1. Đặt $A(a)=10(a-1)^2$ và $B(b)=5(b-\frac{3}{5})^2$. Khai triển và hoàn thành bình phương để chứng minh:
    $$
-   E(w) = 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \frac{36}{5}.
+   E(w) = A(a) + B(b) + \frac{36}{5}.
    $$
    Đưa $E(w)$ về dạng chuẩn của Quy hoạch toàn phương (QP): $\frac{1}{2}w^T P w + q^T w + r_0$. Xác định ma trận $P$, vector $q$ và hằng số $r_0$. Chứng minh hàm mục tiêu lồi chặt.
 2. Tìm nghiệm tối ưu không ràng buộc $w_{\text{OLS}}^*$. Sau đó, giả sử có thêm ràng buộc hệ số góc $a \le 0{,}5$, hãy tìm nghiệm tối ưu mới và giải thích tại sao nghiệm nằm trên biên khả thi.
@@ -333,24 +394,38 @@ $$
 1. **Khai triển và hoàn thành bình phương**:
    Tính các tổng thống kê từ dữ liệu:
    $$
-   \sum u_i = 0, \quad \sum u_i^2 = 10, \quad \sum y_i = 3, \quad \sum u_i y_i = 10, \quad \sum y_i^2 = 19.
+   \begin{aligned}
+   \sum_{i=1}^5u_i&=0, \\
+   \sum_{i=1}^5u_i^2&=10, \\
+   \sum_{i=1}^5y_i&=3, \\
+   \sum_{i=1}^5u_i y_i&=10, \\
+   \sum_{i=1}^5y_i^2&=19.
+   \end{aligned}
    $$
    Ma trận Gram $X^T X$ và vector tích chéo $X^T y$:
    $$
-   X^T X = \begin{bmatrix} 10 & 0 \\ 0 & 5 \end{bmatrix}, \qquad X^T y = \begin{bmatrix} 10 \\ 3 \end{bmatrix}.
+   \begin{aligned}
+   X^TX&=\begin{bmatrix}10&0\\0&5\end{bmatrix}, \\
+   X^Ty&=\begin{bmatrix}10\\3\end{bmatrix}.
+   \end{aligned}
    $$
    Hàm mất mát bình phương được khai triển:
+   Viết gọn $G=X^TX$, $h=X^Ty$ và $c=y^Ty=19$. Các hệ số theo từng biến thỏa mãn:
+
    $$
-\begin{aligned}
-E(w) &= w^T (X^T X) w - 2 (X^T y)^T w + y^T y \\
-&= 10a^2 + 5b^2 - 20a - 6b + 19 \\
-&= 10(a^2 - 2a + 1) + 5\left(b^2 - \frac{6}{5}b + \frac{9}{25}\right) + 19 - 10 - \frac{9}{5} \\
-&= 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \frac{36}{5}.
-\end{aligned}
-$$
+   \begin{aligned}
+   E(w)&=w^TGw-2h^Tw+c, \\
+   A(a)&=10a^2-20a+10, \\
+   B(b)&=5b^2-6b+9/5, \\
+   E(w)&=A(a)+B(b)+36/5.
+   \end{aligned}
+   $$
    Dạng chuẩn QP $\frac{1}{2} w^T P w + q^T w + r_0$ có:
    $$
-   P = \begin{bmatrix} 20 & 0 \\ 0 & 10 \end{bmatrix}, \qquad q = \begin{bmatrix} -20 \\ -6 \end{bmatrix}, \qquad r_0 = 19.
+   \begin{aligned}
+   P&=\begin{bmatrix}20&0\\0&10\end{bmatrix}, \\
+   q&=\begin{bmatrix}-20\\-6\end{bmatrix},\quad r_0=19.
+   \end{aligned}
    $$
    Vì các trị riêng của $P$ là $20 > 0$ và $10 > 0$, ma trận $P \succ 0$ (xác định dương). Do đó hàm mục tiêu $E(w)$ lồi chặt trên toàn $\mathbb{R}^2$.
 
@@ -358,47 +433,72 @@ $$
    - Khi không có ràng buộc: Hai số hạng bình phương đạt giá trị cực tiểu bằng $0$ độc lập nhau tại $a^* = 1$ và $b^* = \frac{3}{5} = 0{,}6$. Giá trị mất mát tối ưu là $E(w_{\text{OLS}}^*) = \frac{36}{5} = 7{,}2$.
    - Khi có ràng buộc $a \le 0{,}5$: Số hạng theo $b$ không phụ thuộc vào $a$ nên giá trị tối ưu theo $b$ vẫn giữ nguyên $b^* = 0{,}6$. Đối với biến $a$, trên nửa khoảng $(-\infty, 0{,}5]$, hàm số $10(a - 1)^2$ là hàm nghịch biến vì đạo hàm $20(a - 1) < 0$. Do đó giá trị nhỏ nhất đạt tại cận trên $a^* = 0{,}5$. Nghiệm tối ưu có ràng buộc là $w^* = (0{,}5; 0{,}6)$, với giá trị mất mát:
      $$
-     E(w^*) = 10(0{,}5 - 1)^2 + \frac{36}{5} = 10(0{,}25) + 7{,}2 = 2{,}5 + 7{,}2 = 9{,}7 = \frac{97}{10}.
+     \begin{aligned}
+     E(w^*)&=10(1/4)+36/5 \\
+     &=2.5+7.2 \\
+     &=9.7=97/10.
+     \end{aligned}
      $$
      Nghiệm nằm trên biên vì nghiệm tự do $a=1$ nằm ngoài miền khả thi.
 
 3. **Chính quy hóa Tikhonov (Ridge) với $\lambda = 5$**:
    Hàm mục tiêu có phạt:
    $$
-   J(w) = w^T (X^T X + 5I) w - 2(X^T y)^T w + y^T y.
+   \begin{aligned}
+   G_5&=G+5I, \\
+   J(w)&=w^TG_5w-2h^Tw+c.
+   \end{aligned}
    $$
    Điều kiện dừng đạo hàm bậc nhất:
    $$
-   (X^T X + 5I) w = X^T y \iff \begin{bmatrix} 15 & 0 \\ 0 & 10 \end{bmatrix} \begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 10 \\ 3 \end{bmatrix}.
+   \begin{aligned}
+   (G+5I)w&=h, \\
+   \begin{bmatrix}15&0\\0&10\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}&=\begin{bmatrix}10\\3\end{bmatrix}.
+   \end{aligned}
    $$
    Suy ra nghiệm đóng:
    $$
-   a_{\text{Ridge}}^* = \frac{10}{15} = \frac{2}{3}, \qquad b_{\text{Ridge}}^* = \frac{3}{10} = 0{,}3.
+   \begin{aligned}
+   a_{\mathrm{Ridge}}^*&=10/15=2/3, \\
+   b_{\mathrm{Ridge}}^*&=3/10=0.3.
+   \end{aligned}
    $$
    Tính toán mất mát khớp dữ liệu $E$ tại nghiệm Ridge:
+   Gọi $w_R=w^*_{\mathrm{Ridge}}$. Tính riêng hai phần sai số:
+
    $$
-\begin{aligned}
-E(w_{\text{Ridge}}^*) &= 10\left(\frac{2}{3} - 1\right)^2 + 5\left(\frac{3}{10} - \frac{6}{10}\right)^2 + \frac{36}{5} \\
-&= 10\left(\frac{1}{9}\right) + 5\left(\frac{9}{100}\right) + \frac{36}{5} \\
-&= \frac{10}{9} + \frac{9}{20} + \frac{36}{5} = \frac{200 + 81 + 1296}{180} = \frac{1577}{180} \approx 8{,}76.
-\end{aligned}
-$$
+   \begin{aligned}
+   A(2/3)&=10/9, \\
+   B(3/10)&=9/20, \\
+   E(w_R)&=10/9+9/20+36/5 \\
+   &=\frac{200+81+1296}{180} \\
+   &=\frac{1577}{180}\approx8.76.
+   \end{aligned}
+   $$
    So sánh: Mất mát $E$ tăng từ $7{,}2$ lên $8{,}76$ (kém khớp dữ liệu hơn), nhưng bình phương độ dài tham số giảm rõ rệt:
    $$
-   \|w_{\text{OLS}}^*\|_2^2 = 1^2 + 0{,}6^2 = 1{,}36, \qquad \|w_{\text{Ridge}}^*\|_2^2 = \left(\frac{2}{3}\right)^2 + \left(\frac{3}{10}\right)^2 = \frac{4}{9} + \frac{9}{100} = \frac{481}{900} \approx 0{,}534.
+   \begin{aligned}
+   \|w_{\mathrm{OLS}}^*\|_2^2&=1^2+0.6^2=1.36, \\
+   \|w_R\|_2^2&=(2/3)^2+(3/10)^2 \\
+   &=4/9+9/100 \\
+   &=481/900\approx0.534.
+   \end{aligned}
    $$
    Chính quy hóa Ridge chủ động đánh đổi độ chính xác trên tập huấn luyện để kiểm soát độ lớn trọng số, hạn chế hiện tượng quá khớp (overfitting).
 :::
 
 ::: exercise 7. Ngưỡng triệt tiêu hệ số và tính thưa thớt của Lasso (Chính quy hóa L1)
-Xét bài toán hồi quy Lasso trên bộ dữ liệu ở Bài 5:
+Xét bài toán hồi quy Lasso trên bộ dữ liệu ở Bài 5, với $w=(a,b)^T$ và $\lambda\ge 0$:
 $$
-\min_{w = (a, b)^T} J_\lambda(w) = E(w) + \lambda (|a| + |b|), \qquad \lambda \ge 0,
+\min_w J_\lambda(w) = E(w) + \lambda (|a| + |b|)
 $$
-với hàm mất mát $E(w) = 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \frac{36}{5}$.
+Hàm mất mát $E(w)$ đã được khai triển ở Bài 6.
 1. Nhờ cấu trúc ma trận chéo của $X^T X$, hãy tách bài toán thành hai bài toán tối ưu một chiều độc lập cho $a$ và $b$. Dùng điều kiện dưới vi phân (subgradient) để chứng minh công thức nghiệm giải tích co mềm (soft-thresholding):
    $$
-   a_\lambda = \max\left(1 - \frac{\lambda}{20}, 0\right), \qquad b_\lambda = \max\left(\frac{6 - \lambda}{10}, 0\right).
+   \begin{aligned}
+   a_\lambda &= \max\left(1 - \frac{\lambda}{20}, 0\right),\\
+   b_\lambda &= \max\left(\frac{6 - \lambda}{10}, 0\right).
+   \end{aligned}
    $$
 2. Tính nghiệm cụ thể tại $\lambda = 6$ và $\lambda = 20$. Giải thích tại sao hệ số chặn $b$ bị triệt tiêu về đúng $0$ trước hệ số góc $a$.
 3. Chứng minh rằng với mọi $\lambda > 0$, hàm mục tiêu $J_\lambda(w)$ lồi chặt trên toàn $\mathbb{R}^2$ dù nó không khả vi tại các trục tọa độ.
@@ -408,17 +508,23 @@ với hàm mất mát $E(w) = 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \f
 1. **Tách biến và giải tích dưới vi phân**:
    Vì hàm mất mát $E(w)$ phân tách thành hai bình phương độc lập và hình phạt L1 là tổng tách biệt $|a| + |b|$, bài toán tách thành:
    $$
-   \min_a \Big( 10(a - 1)^2 + \lambda |a| \Big), \qquad \min_b \Big( 5\left(b - \frac{3}{5}\right)^2 + \lambda |b| \Big).
+   \begin{aligned}
+   &\min_a\big(10(a-1)^2+\lambda|a|\big), \\
+   &\min_b\big(5(b-3/5)^2+\lambda|b|\big).
+   \end{aligned}
    $$
    Xét bài toán tổng quát $\min_s \alpha(s - \mu)^2 + \lambda |s|$ với $\alpha > 0, \mu > 0$. Điều kiện tối ưu dưới vi phân là $0 \in \partial f(s)$:
    $$
    0 \in 2\alpha(s - \mu) + \lambda \partial |s|.
    $$
-   - Nếu $s > 0$: $\partial |s| = \{1\}$, phương trình $2\alpha(s - \mu) + \lambda = 0 \implies s^* = \mu - \frac{\lambda}{2\alpha}$. Nghiệm này dương khi và chỉ khi $\lambda < 2\alpha \mu$.
+   - Nếu $s > 0$: $\partial |s| = \{1\}$, nên $2\alpha(s-\mu)+\lambda=0$. Suy ra $s^*=\mu-\frac{\lambda}{2\alpha}$. Nghiệm này dương khi và chỉ khi $\lambda < 2\alpha \mu$.
    - Nếu $s < 0$: $\partial |s| = \{-1\}$, phương trình $2\alpha(s - \mu) - \lambda = 0$ cho $s^* = \mu + \frac{\lambda}{2\alpha} > 0$ (mâu thuẫn với giả thiết $s < 0$).
    - Nếu $s = 0$: $\partial |s| = [-1, 1]$, điều kiện tương đương với:
      $$
-     0 \in -2\alpha \mu + \lambda [-1, 1] \iff \lambda \ge 2\alpha \mu.
+     \begin{aligned}
+     0\in-2\alpha\mu+\lambda[-1,1] \\
+     \iff\lambda\ge2\alpha\mu.
+     \end{aligned}
      $$
    
    Kết hợp lại, ta thu được toán tử co mềm:
@@ -438,28 +544,39 @@ với hàm mất mát $E(w) = 10(a - 1)^2 + 5\left(b - \frac{3}{5}\right)^2 + \f
 2. **Ngưỡng triệt tiêu hệ số**:
    - Khi $\lambda = 6$:
      $$
-     a_6 = 1 - \frac{6}{20} = \frac{7}{10} = 0{,}7, \qquad b_6 = \max\left(\frac{6 - 6}{10}, 0\right) = 0.
+     \begin{aligned}
+     a_6&=1-6/20 \\
+     &=7/10=0.7, \\
+     b_6&=\max(0,0)=0.
+     \end{aligned}
      $$
      Nghiệm là $(0{,}7; 0)$. Hệ số chặn $b$ bị triệt tiêu hoàn toàn về $0$.
    - Khi $\lambda = 20$:
      $$
-     a_{20} = \max\left(1 - \frac{20}{20}, 0\right) = 0, \qquad b_{20} = \max\left(\frac{6 - 20}{10}, 0\right) = 0.
+     \begin{aligned}
+     a_{20}&=\max(0,0)=0, \\
+     b_{20}&=\max(-1.4,0)=0.
+     \end{aligned}
      $$
      Nghiệm là $(0, 0)$. Mô hình trở thành mô hình rỗng triệt để.
    - **Trực giác sư phạm**: Ngưỡng triệt tiêu của $b$ là $\lambda_b^* = 2(5)(0{,}6) = 6$, trong khi ngưỡng của $a$ là $\lambda_a^* = 2(10)(1) = 20$. Hệ số $b$ bị triệt tiêu sớm hơn vì giá trị tự do ban đầu của nó nhỏ hơn ($0{,}6 < 1$) và độ cong của mất mát theo $b$ nhỏ hơn ($5 < 10$), khiến lực ép của hình phạt L1 dễ dàng kéo $b$ về gốc tọa độ.
 
 3. **Tính lồi chặt của hàm mục tiêu**:
    Hàm $E(w)$ lồi chặt vì ma trận Hessian $\nabla^2 E = \operatorname{diag}(20, 10) \succ 0$. Với hai điểm $u \ne v$ và $\theta \in (0, 1)$, ta luôn có bất đẳng thức ngặt:
+   Đặt $z=\theta u+(1-\theta)v$.
+
    $$
-   E(\theta u + (1 - \theta)v) < \theta E(u) + (1 - \theta)E(v).
+   E(z)<\theta E(u)+(1-\theta)E(v).
    $$
    Trong khi đó, hàm chuẩn một $\lambda \|w\|_1$ là hàm lồi thông thường:
    $$
-   \lambda \|\theta u + (1 - \theta)v\|_1 \le \theta \lambda \|u\|_1 + (1 - \theta) \lambda \|v\|_1.
+   \begin{aligned}
+   \|z\|_1&\le\theta\|u\|_1+(1-\theta)\|v\|_1.
+   \end{aligned}
    $$
-   Cộng hai bất đẳng thức lại, ta thu được:
+   Nhân bất đẳng thức chuẩn một với $\lambda>0$ rồi cộng với bất đẳng thức của $E$, ta thu được:
    $$
-   J_\lambda(\theta u + (1 - \theta)v) < \theta J_\lambda(u) + (1 - \theta)J_\lambda(v).
+   J_\lambda(z)<\theta J_\lambda(u)+(1-\theta)J_\lambda(v).
    $$
    Điều này chứng minh $J_\lambda(w)$ lồi chặt trên toàn không gian. Tính không khả vi tại $0$ không hề ảnh hưởng đến tính lồi chặt, và nghiệm tối ưu của bài toán luôn tồn tại duy nhất.
 :::
@@ -483,19 +600,30 @@ trong đó $E(w)$ là hàm mất mát bình phương ở Bài 5, và bán kính 
 2. **Chứng nhận nghiệm tối ưu qua bài toán phạt Tikhonov**:
    Ở Bài 6, ta đã chứng minh $w^* = (\frac{2}{3}, \frac{3}{10})$ là nghiệm cực tiểu toàn cục duy nhất của bài toán không ràng buộc:
    $$
-   \min_w \Big( E(w) + 5 \|w\|_2^2 \Big), \qquad \text{with minimum value} \quad J^* = \frac{343}{30}.
+   \min_w\big(E(w)+5\|w\|_2^2\big),
    $$
+
+   với giá trị nhỏ nhất $J^*=343/30$.
    Kéo theo với mọi $w \in \mathbb{R}^2$:
    $$
    E(w) + 5 \|w\|_2^2 \ge \frac{343}{30}.
    $$
    Với mọi điểm $w$ khả thi đối với bài toán trần cứng, ta có $\|w\|_2^2 \le \frac{481}{900}$. Do đó:
    $$
-   E(w) \ge \frac{343}{30} - 5 \|w\|_2^2 \ge \frac{343}{30} - 5\left(\frac{481}{900}\right) = \frac{2058 - 481}{180} = \frac{1577}{180}.
+   \begin{aligned}
+   E(w)&\ge343/30-5\|w\|_2^2 \\
+   &\ge343/30-5(481/900) \\
+   &=\frac{2058-481}{180} \\
+   &=1577/180.
+   \end{aligned}
    $$
    Mặt khác, tại điểm $w^* = (\frac{2}{3}, \frac{3}{10})$, ta có:
    $$
-   \|w^*\|_2^2 = \left(\frac{2}{3}\right)^2 + \left(\frac{3}{10}\right)^2 = \frac{4}{9} + \frac{9}{100} = \frac{481}{900} = R^2,
+   \begin{aligned}
+   \|w^*\|_2^2&=(2/3)^2+(3/10)^2 \\
+   &=4/9+9/100 \\
+   &=481/900=R^2.
+   \end{aligned}
    $$
    và giá trị mất mát tại đây là $E(w^*) = \frac{1577}{180}$.
    
@@ -507,7 +635,11 @@ trong đó $E(w)$ là hàm mất mát bình phương ở Bài 5, và bán kính 
 4. **Trường hợp bán kính rộng $R^2 \ge \frac{34}{25}$**:
    Chuẩn của nghiệm OLS không ràng buộc $w_{\text{OLS}}^* = (1, 0{,}6)$ là:
    $$
-   \|w_{\text{OLS}}^*\|_2^2 = 1^2 + \left(\frac{3}{5}\right)^2 = 1 + \frac{9}{25} = \frac{34}{25}.
+   \begin{aligned}
+   \|w_{\mathrm{OLS}}^*\|_2^2&=1^2+(3/5)^2 \\
+   &=1+9/25 \\
+   &=34/25.
+   \end{aligned}
    $$
    Khi bán kính $R^2 \ge \frac{34}{25}$, nghiệm OLS tự do hoàn toàn nằm bên trong hình cầu khả thi. Vì nghiệm OLS là cực tiểu toàn cục trên toàn bộ $\mathbb{R}^2$, nó nghiễm nhiên là nghiệm tối ưu trên tập con khả thi. Khi đó ràng buộc trần cứng trở thành không hoạt động (inactive constraint), và nghiệm tối ưu giữ nguyên là $(1, 0{,}6)$ với chi phí $E = 7{,}2$.
 :::
@@ -520,7 +652,10 @@ Quy hoạch hình học (GP) là công cụ tối ưu hóa khi các biến số 
    - Vận dụng bất đẳng thức Cauchy-Schwarz hoặc AM-GM để tìm kích thước tối ưu và diện tích nhỏ nhất.
 2. **Bài toán phân bổ công suất phát không dây**: Hai máy phát cùng truyền tín hiệu với công suất $p_1, p_2 > 0$ dưới tổng ngân sách công suất $p_1 + p_2 \le 6$. Tỷ số tín hiệu trên giao thoa và nhiễu (SINR) của hai máy lần lượt là:
    $$
-   S_1(p) = \frac{p_1}{1 + \frac{1}{4}p_2}, \qquad S_2(p) = \frac{p_2}{1 + \frac{3}{2}p_1}.
+   \begin{aligned}
+   S_1(p) &= \frac{p_1}{1 + \frac{1}{4}p_2},\\
+   S_2(p) &= \frac{p_2}{1 + \frac{3}{2}p_1}.
+   \end{aligned}
    $$
    Mục tiêu là tối đa hóa chất lượng tồi nhất giữa hai kênh: $\max_{p > 0} \min\{S_1(p), S_2(p)\}$ sao cho $p_1 + p_2 \le 6$.
    - Cải dạng bài toán thành GP bằng cách đưa vào ngưỡng chất lượng $t > 0$.
@@ -531,54 +666,84 @@ Quy hoạch hình học (GP) là công cụ tối ưu hóa khi các biến số 
 1. **Bài toán thiết kế hộp kín**:
    - Dạng chuẩn GP:
      $$
-     \min_{a, b, c > 0} \quad 2ab + 2ac + 2bc \quad \text{s.t.} \quad \frac{abc}{27} = 1.
+     \min_{a,b,c>0}(2ab+2ac+2bc)
      $$
+
+     với ràng buộc $abc/27=1$.
      Hàm mục tiêu là một posynomial (tổng ba monomial), và ràng buộc đẳng thức là một monomial bằng 1. Đây đúng là dạng chuẩn của GP. Tuy nhiên theo biến gốc, tập khả thi $abc = 27$ không lồi (ví dụ: hai điểm $(1, 3, 9)$ và $(9, 3, 1)$ đều có tích 27, nhưng trung điểm $(5, 3, 5)$ có tích $75 \ne 27$). Hơn nữa ma trận Hessian của diện tích có các trị riêng âm trên miền dương, do đó hàm mục tiêu phi lồi theo biến gốc.
    - Đổi biến logarit: Đặt $A = \log a, B = \log b, C = \log c$. Khi đó $a = e^A, b = e^B, c = e^C$.
      Ràng buộc đẳng thức trở thành:
      $$
-     \log(abc) - \log 27 = 0 \iff A + B + C = \log 27.
+     \begin{aligned}
+     &\log(abc)-\log27=0 \\
+     &\iff A+B+C=\log27.
+     \end{aligned}
      $$
      Đây là một phương trình affine theo $(A, B, C)$.
      Hàm mục tiêu lấy logarit:
      $$
-     F(A, B, C) = \log\left(2e^{A + B} + 2e^{A + C} + 2e^{B + C}\right).
+     \begin{aligned}
+     u_1&=A+B+\log2, \\
+     u_2&=A+C+\log2, \\
+     u_3&=B+C+\log2, \\
+     F&=\log(e^{u_1}+e^{u_2}+e^{u_3}).
+     \end{aligned}
      $$
      Đây là hàm log-sum-exp của các hàm affine, vốn là một hàm lồi đã được chứng minh ở Bài 01. Tập khả thi là một siêu phẳng affine lồi. Do đó bài toán sau đổi biến là một bài toán tối ưu lồi phẳng hoàn hảo.
    - Tìm nghiệm qua bất đẳng thức AM-GM: Với ba số dương $ab, ac, bc$:
      $$
-     \frac{ab + ac + bc}{3} \ge \sqrt[3]{(ab)(ac)(bc)} = \sqrt[3]{a^2 b^2 c^2} = (abc)^{2/3} = 27^{2/3} = 9.
+     \begin{aligned}
+     s&=ab+ac+bc, \\
+     \frac{s}{3}&\ge\sqrt[3]{(ab)(ac)(bc)} \\
+     &=(abc)^{2/3} \\
+     &=27^{2/3}=9.
+     \end{aligned}
      $$
      Suy ra $ab + ac + bc \ge 27$, dẫn tới diện tích toàn phần:
      $$
-     S = 2(ab + ac + bc) \ge 2(27) = 54\,\text{dm}^2.
+     \begin{aligned}
+     S&=2(ab+ac+bc) \\
+     &\ge2(27) \\
+     &=54\,\mathrm{dm}^2.
+     \end{aligned}
      $$
      Dấu bằng đạt được khi và chỉ khi $ab = ac = bc \iff a = b = c$. Với $abc = 27$, ta có $a^* = b^* = c^* = 3\,\text{dm}$. Hình hộp tối ưu là hình lập phương cạnh $3\,\text{dm}$ với diện tích nhỏ nhất $54\,\text{dm}^2$.
 
 2. **Bài toán phân bổ công suất phát**:
    - Cải dạng về GP: Đặt biến ngưỡng $t > 0$, bài toán tương đương:
+     Với $p_1,p_2,t>0$, nhân chéo điều kiện $S_1(p)\ge t$ rồi chia cho $p_1$ cho ràng buộc thứ nhất dưới đây. Điều kiện $S_2(p)\ge t$ được biến đổi tương tự. Bài toán GP nhận được là:
+
      $$
      \begin{aligned}
-     &\min_{p > 0, t > 0} \quad t^{-1}\\
-     &\text{s.t.}\quad S_1(p) \ge t \iff \frac{t(1 + \frac{1}{4}p_2)}{p_1} \le 1 \iff t p_1^{-1} + \frac{1}{4}t p_1^{-1} p_2 \le 1,\\
-     &\phantom{\text{subject to}\quad } S_2(p) \ge t \iff \frac{t(1 + \frac{3}{2}p_1)}{p_2} \le 1 \iff t p_2^{-1} + \frac{3}{2}t p_1 p_2^{-1} \le 1,\\
-     &\phantom{\text{subject to}\quad } \frac{1}{6}p_1 + \frac{1}{6}p_2 \le 1.
+     &\min_{p>0,t>0}t^{-1} \\
+     &tp_1^{-1}+\tfrac14tp_1^{-1}p_2\le1, \\
+     &tp_2^{-1}+\tfrac32tp_1p_2^{-1}\le1, \\
+     &(p_1+p_2)/6\le1.
      \end{aligned}
      $$
      Hàm mục tiêu $t^{-1}$ là một monomial, các vế trái của cả ba ràng buộc bất đẳng thức đều là các posynomial. Đây chính là dạng chuẩn GP.
    - Tìm nghiệm công suất:
      Giả sử ngưỡng chất lượng đạt được là $t = 1$. Khi đó hai ràng buộc SINR trở thành:
      $$
-     p_1 \ge 1 + \frac{1}{4}p_2, \qquad p_2 \ge 1 + \frac{3}{2}p_1.
+     \begin{aligned}
+     &p_1\ge1+\tfrac14p_2, \\
+     &p_2\ge1+\tfrac32p_1.
+     \end{aligned}
      $$
-     Cộng hai bất đẳng thức:
+     Cộng hai bất đẳng thức rồi chuyển các số hạng chứa $p_1,p_2$ sang một vế:
      $$
-     p_1 + p_2 \ge 2 + \frac{1}{4}p_2 + \frac{3}{2}p_1 \iff \frac{3}{4}p_2 - \frac{1}{2}p_1 \ge 2.
+     \tfrac34p_2-\tfrac12p_1\ge2.
      $$
      Giải hệ phương trình khi cả hai kênh đều đạt dấu bằng $S_1 = S_2 = 1$:
      $$
-     p_1 = 1 + \frac{1}{4}p_2, \qquad p_2 = 1 + \frac{3}{2}\left(1 + \frac{1}{4}p_2\right) = \frac{5}{2} + \frac{3}{8}p_2 \implies \frac{5}{8}p_2 = \frac{5}{2} \implies p_2 = 4.
+     \begin{aligned}
+     p_1&=1+\tfrac14p_2, \\
+     p_2&=1+\tfrac32(1+\tfrac14p_2) \\
+     &=\tfrac52+\tfrac38p_2.
+     \end{aligned}
      $$
+
+     Suy ra $\frac58p_2=\frac52$, tức là $p_2=4$.
      Thay vào tính $p_1$: $p_1 = 1 + \frac{1}{4}(4) = 2$.
      Tổng công suất tiêu thụ là $p_1 + p_2 = 2 + 4 = 6$, vừa khớp khít với ngân sách công suất tối đa.
      Nếu đòi hỏi ngưỡng $t > 1$, ta sẽ có $p_1 > 2$ và $p_2 > 4$, dẫn tới tổng công suất $p_1 + p_2 > 6$, vi phạm ngân sách. Do đó giá trị tối ưu là $t^* = 1$, đạt được tại cấu hình công suất $(p_1^*, p_2^*) = (2, 4)$.
@@ -587,14 +752,21 @@ Quy hoạch hình học (GP) là công cụ tối ưu hóa khi các biến số 
 ::: exercise 10. Hàm mất mát bản lề (Hinge Loss) và nới lỏng lồi trong phân loại SVM
 Cho tập dữ liệu phân loại nhị phân trên đường thẳng với $4$ điểm:
 $$
-u = (-2, -1, 1, 2), \qquad y = (-1, +1, -1, +1).
+\begin{aligned}
+u &= (-2, -1, 1, 2),\\
+y &= (-1, +1, -1, +1).
+\end{aligned}
 $$
 Mô hình bộ phân loại có tham số ngưỡng $\theta \in \mathbb{R}$, gán nhãn dự đoán theo dấu của điểm số $s_\theta(u) = u - \theta$.
 Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i - \theta)$. Điểm bị phân loại sai khi $r_i(\theta) \le 0$.
 1. Xét hàm mất mát thực nghiệm 0-1: $E(\theta) = \sum_{i=1}^4 \ell_{01}(r_i(\theta))$, trong đó $\ell_{01}(r) = 1$ khi $r \le 0$ và bằng $0$ khi $r > 0$. Lập bảng số lỗi theo các khoảng của $\theta$. Chứng minh $E(\theta)$ không phải là hàm lồi.
 2. Để thu được bài toán tối ưu lồi, ta nới lỏng hàm mất mát 0-1 bằng hàm mất mát bản lề (Hinge loss):
    $$
-   H(\theta) = \sum_{i=1}^4 \max\big(0, 1 - y_i(u_i - \theta)\big).
+   \begin{aligned}
+   \ell_i(\theta)&=\max(0,1-r_i), \\
+   r_i&=y_i(u_i-\theta), \\
+   H(\theta)&=\sum_{i=1}^4\ell_i(\theta).
+   \end{aligned}
    $$
    Chứng minh rằng $\ell_{01}(r) \le \max(0, 1 - r)$ với mọi $r \in \mathbb{R}$.
 3. Cải dạng bài toán cực tiểu hóa $H(\theta)$ thành Quy hoạch tuyến tính (LP) bằng cách đưa vào các biến bù $\xi \in \mathbb{R}^4$. Tìm nghiệm tối ưu của $H(\theta)$ và so sánh với tập nghiệm tối ưu của hàm mất mát 0-1 ban đầu.
@@ -604,9 +776,9 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
 1. **Khảo sát hàm mất mát 0-1 và tính phi lồi**:
    Dấu của biên $r_i(\theta) = y_i(u_i - \theta)$ cho từng điểm:
    - Điểm 1: $u_1 = -2, y_1 = -1$, suy ra $r_1 = \theta + 2$. Sai khi $\theta \le -2$.
-   - Điểm 2: $u_2 = -1, y_2 = +1 \implies r_2 = -1 - \theta$. Sai khi $\theta \ge -1$.
+   - Điểm 2: $u_2=-1,\quad y_2=+1$, nên $r_2=-1-\theta$. Sai khi $\theta \ge -1$.
    - Điểm 3: $u_3 = 1, y_3 = -1$, suy ra $r_3 = \theta - 1$. Sai khi $\theta \le 1$.
-   - Điểm 4: $u_4 = 2, y_4 = +1 \implies r_4 = 2 - \theta$. Sai khi $\theta \ge 2$.
+   - Điểm 4: $u_4=2,\quad y_4=+1$, nên $r_4=2-\theta$. Sai khi $\theta \ge 2$.
    
    Tổng số lỗi $E(\theta)$ theo các khoảng:
    - Khi $\theta < -2$: Lỗi tại điểm 1 và điểm 3, $E = 2$.
@@ -618,13 +790,18 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
    Số lỗi nhỏ nhất là $E^* = 1$, đạt được trên hai khoảng rời rạc $(-2, -1) \cup (1, 2)$.
    Tập nghiệm tối ưu không liên thông nên không thể là tập lồi. Hơn nữa, lấy hai điểm $\theta_1 = -1{,}5$ và $\theta_2 = 1{,}5$ đều có $E = 1$, nhưng trung điểm $\theta_0 = 0$ có $E(0) = 2 > 1$. Bất đẳng thức Jensen bị vi phạm:
    $$
-   E\left(\frac{\theta_1 + \theta_2}{2}\right) = 2 > 1 = \frac{E(\theta_1) + E(\theta_2)}{2}.
+   \begin{aligned}
+   E\!\left(\frac{\theta_1+\theta_2}{2}\right)&=2, \\
+   \frac{E(\theta_1)+E(\theta_2)}2&=1.
+   \end{aligned}
    $$
+
+   Giá trị tại trung điểm lớn hơn trung bình hai giá trị đầu mút, nên điều kiện lồi không được thỏa mãn.
    Do đó hàm mất mát 0-1 không lồi.
 
 2. **Bất đẳng thức chặn trên của hàm bản lề**:
-   - Nếu $r \le 0$: Ta có $1 - r \ge 1$, do đó $\max(0, 1 - r) = 1 - r \ge 1 = \ell_{01}(r)$.
-   - Nếu $0 < r < 1$: Ta có $\max(0, 1 - r) = 1 - r > 0 = \ell_{01}(r)$.
+   - Nếu $r \le 0$: Ta có $1 - r \ge 1$, do đó $\max(0,1-r)=1-r\ge1$. Trong trường hợp này $\ell_{01}(r)=1$.
+   - Nếu $0 < r < 1$: Ta có $\max(0,1-r)=1-r>0$, còn $\ell_{01}(r)=0$.
    - Nếu $r \ge 1$: Ta có $\max(0, 1 - r) = 0 = \ell_{01}(r)$.
    
    Trong mọi trường hợp, ta luôn có $\ell_{01}(r) \le \max(0, 1 - r)$. Do đó hàm mất mát bản lề là một hàm chặn trên lồi (convex surrogate upper bound) của hàm mất mát đếm lỗi rời rạc.
@@ -633,24 +810,37 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
    Đặt các biến bù epigraph $\xi_i \ge 0$ đại diện cho mức vi phạm biên tại mỗi điểm:
    $$
    \begin{aligned}
-   &\min_{\theta, \xi} \quad \sum_{i=1}^4 \xi_i\\
-   &\text{s.t.}\quad \xi_i \ge 1 - y_i(u_i - \theta), \quad \forall i = 1, \dots, 4,\\
-   &\phantom{\text{subject to}\quad } \xi_i \ge 0, \quad \forall i = 1, \dots, 4.
+   &\min_{\theta,\xi}\sum_{i=1}^4\xi_i \\
+   &\xi_i\ge1-y_i(u_i-\theta), \\
+   &\xi_i\ge0.
    \end{aligned}
    $$
+
+   Các ràng buộc áp dụng cho $i=1,\ldots,4$.
    Khai triển bốn số hạng của $H(\theta)$:
    $$
-   H(\theta) = \max(0, -1 - \theta) + \max(0, 2 + \theta) + \max(0, 2 - \theta) + \max(0, -1 + \theta).
+   \begin{aligned}
+   h_1&=\max(0,-1-\theta), \\
+   h_2&=\max(0,2+\theta), \\
+   h_3&=\max(0,2-\theta), \\
+   h_4&=\max(0,-1+\theta), \\
+   A(\theta)&=h_1+h_4, \\
+   B(\theta)&=h_2+h_3, \\
+   H(\theta)&=A(\theta)+B(\theta).
+   \end{aligned}
    $$
    Quan sát hai số hạng ở giữa:
    $$
-   \max(0, 2 + \theta) + \max(0, 2 - \theta) \ge (2 + \theta) + (2 - \theta) = 4,
+   \begin{aligned}
+   B(\theta)&\ge(2+\theta)+(2-\theta) \\
+   &=4.
+   \end{aligned}
    $$
    đúng với mọi $\theta \in [-2, 2]$.
    Dấu bằng đạt được khi cả hai đại lượng đều không âm, tức $\theta \in [-2, 2]$.
    Xét hai số hạng biên:
    - Khi $\theta \in [-1, 1]$: $-1 - \theta \le 0$ và $-1 + \theta \le 0$, do đó hai số hạng biên này đều bằng $0$.
-   - Khi đó $H(\theta) = 0 + (2 + \theta) + (2 - \theta) + 0 = 4$.
+   - Khi đó $A(\theta)=0$ và $B(\theta)=4$, nên $H(\theta)=4$.
    - Khi $|\theta| > 1$: Một trong hai số hạng biên sẽ dương, làm $H(\theta) > 4$.
    
    Do đó giá trị nhỏ nhất của hàm mất mát bản lề là $H^* = 4$, đạt được trên toàn bộ đoạn $[-1, 1]$.
@@ -661,7 +851,11 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
 ::: exercise 11. Nới lỏng lồi (Convex Relaxation) cho bài toán chọn tập phủ và giới hạn đặc trưng
 1. **Bài toán chọn gói dịch vụ (Set Cover)**: Một công ty cần chọn các gói dịch vụ điện toán đám mây $x = (x_1, x_2, x_3)^T \in \{0, 1\}^3$ với chi phí lần lượt là $2, 3, 4$ triệu đồng/tháng. Các yêu cầu kỹ thuật buộc phải thỏa mãn:
    $$
-   x_1 + x_3 \ge 1, \qquad x_1 + x_2 \ge 1, \qquad x_2 + x_3 \ge 1.
+   \begin{aligned}
+   &x_1 + x_3 \ge 1,\\
+   &x_1 + x_2 \ge 1,\\
+   &x_2 + x_3 \ge 1.
+   \end{aligned}
    $$
    - Chứng minh tập khả thi nhị phân rời rạc không lồi. Liệt kê các phương án khả thi và xác định nghiệm nguyên tối ưu cùng chi phí nhỏ nhất $p^*$.
    - Nới lỏng điều kiện $x_i \in \{0, 1\}$ thành $x_i \in [0, 1]$. Chứng minh bài toán nới lỏng là LP và tìm nghiệm tối ưu phân số $x^R$ cùng chi phí nới lỏng $d^*$.
@@ -691,35 +885,61 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
      Bài toán trở thành:
      $$
      \begin{aligned}
-     &\min_{x} \quad 2x_1 + 3x_2 + 4x_3\\
-     &\text{s.t.}\quad x_1 + x_3 \ge 1,\\
-     &\phantom{\text{subject to}\quad } x_1 + x_2 \ge 1,\\
-     &\phantom{\text{subject to}\quad } x_2 + x_3 \ge 1,\\
-     &\phantom{\text{subject to}\quad } 0 \le x_i \le 1, \quad \forall i = 1, 2, 3.
+     &\min_x(2x_1+3x_2+4x_3) \\
+     &x_1+x_3\ge1, \\
+     &x_1+x_2\ge1, \\
+     &x_2+x_3\ge1, \\
+     &0\le x_i\le1.
      \end{aligned}
      $$
+
+     Các ràng buộc chặn biến áp dụng cho $i=1,2,3$.
      Cộng ba ràng buộc phủ:
      $$
-     2(x_1 + x_2 + x_3) \ge 3 \implies x_1 + x_2 + x_3 \ge 1{,}5.
+     \begin{aligned}
+     2(x_1+x_2+x_3)&\ge3 \\
+     \implies x_1+x_2+x_3&\ge1.5.
+     \end{aligned}
      $$
      Xét điểm đối xứng $x^R = (0{,}5; 0{,}5; 0{,}5)$: Điểm này hoàn toàn khả thi vì mọi tổng cặp đều bằng $0{,}5 + 0{,}5 = 1 \ge 1$ và $0 \le 0{,}5 \le 1$.
      Chi phí tại $x^R$ là:
+     Tổng chi phí tính theo triệu đồng là:
+
      $$
-     2(0{,}5) + 3(0{,}5) + 4(0{,}5) = 4{,}5\,\times 10^6\text{ VND}.
+     \begin{aligned}
+     C&=2(0.5)+3(0.5)+4(0.5) \\
+     &=4.5.
+     \end{aligned}
      $$
    
    - Chứng nhận cận dưới qua tổ hợp tuyến tính:
      Ta tìm các trọng số không âm $\alpha, \beta, \gamma \ge 0$ sao cho:
      $$
-     \alpha(x_1 + x_3) + \beta(x_1 + x_2) + \gamma(x_2 + x_3) = (\alpha + \beta)x_1 + (\beta + \gamma)x_2 + (\alpha + \gamma)x_3 = 2x_1 + 3x_2 + 4x_3.
+     \begin{aligned}
+     u&=x_1+x_3, \\
+     v&=x_1+x_2, \\
+     w&=x_2+x_3, \\
+     C&=\alpha u+\beta v+\gamma w.
+     \end{aligned}
      $$
      Hệ phương trình:
      $$
-     \begin{cases} \alpha + \beta = 2 \\ \beta + \gamma = 3 \\ \alpha + \gamma = 4 \end{cases} \implies \begin{cases} \alpha = 1{,}5 \\ \beta = 0{,}5 \\ \gamma = 2{,}5 \end{cases}.
+     \begin{aligned}
+     \alpha+\beta&=2, \\
+     \beta+\gamma&=3, \\
+     \alpha+\gamma&=4, \\
+     \alpha&=1.5, \\
+     \beta&=0.5, \\
+     \gamma&=2.5.
+     \end{aligned}
      $$
      Cả ba trọng số đều không âm. Do đó với mọi phương án khả thi bất kỳ:
      $$
-     2x_1 + 3x_2 + 4x_3 \ge 1{,}5(1) + 0{,}5(1) + 2{,}5(1) = 4{,}5.
+     \begin{aligned}
+     C&\ge\alpha+\beta+\gamma \\
+     &=1.5+0.5+2.5 \\
+     &=4.5.
+     \end{aligned}
      $$
      Vì vậy giá trị tối ưu của bài toán nới lỏng là $d^* = 4{,}5$.
      Do tập khả thi nguyên là tập con của tập khả thi nới lỏng, ta luôn có $d^* \le p^*$. Kết hợp với nghiệm nguyên hợp lệ $x = (1, 1, 0)$ có chi phí $5$, ta thiết lập được khung kẹp cận vững chắc:
@@ -740,7 +960,7 @@ Khoảng cách biên có dấu cho điểm thứ $i$ là $r_i(\theta) = y_i(u_i 
 
 ## Tóm tắt cốt lõi
 
-1. **Phả hệ bài toán lồi**: Các họ bài toán $\text{LP} \subset \text{QP} \subset \text{QCQP} \subset \text{SOCP} \subset \text{SDP}$ tạo nên bậc thang biểu diễn hình học từ đa diện phẳng đến nón ma trận nửa xác định dương.
+1. **Phả hệ bài toán lồi**: Các họ bài toán $\mathrm{LP}\subset\mathrm{QP}\subset\mathrm{QCQP}$ tiếp tục được biểu diễn trong SOCP rồi SDP. Chuỗi này tạo nên bậc thang hình học từ đa diện phẳng đến nón ma trận nửa xác định dương.
 2. **Nghệ thuật cải dạng**: Kỹ thuật biến phụ epigraph, đổi biến Charnes-Cooper cho hàm phân tuyến tính, và phép biến đổi logarit cho quy hoạch hình học giúp chuyển hóa nhiều bài toán tưởng như phi lồi về dạng lồi chuẩn tắc.
 3. **Phần bù Schur**: Cầu nối toán học biến các ràng buộc ma trận phi tuyến thành bất đẳng thức ma trận tuyến tính (LMI) trong SDP.
 4. **Tối ưu đa mục tiêu**: Khi các tiêu chí tối ưu xung đột, nghiệm tối ưu là tập hợp các điểm cân bằng Pareto. Phương pháp vô hướng hóa giúp quét toàn bộ đường biên Pareto bằng cách giải một họ bài toán lồi đơn mục tiêu.

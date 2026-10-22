@@ -66,7 +66,10 @@ Nói cách khác, điều kiện $X \succeq 0$ phản ánh rằng ma trận hàn
 Chứng minh mệnh đề này bắt nguồn trực tiếp từ tính chất tuyến tính của dạng toàn phương mà không cần thông qua các trị riêng. Với mọi vector thử $z \in \mathbb{R}^n$:
 
 $$
-z^T (\theta_1 A + \theta_2 B) z = \theta_1\, z^T A z + \theta_2\, z^T B z \ge 0 ,
+\begin{aligned}
+z^T (\theta_1 A + \theta_2 B) z &= \theta_1\, z^T A z + \theta_2\, z^T B z\\
+&\ge 0 ,
+\end{aligned}
 $$
 
 bởi vì $z^T A z \ge 0$ và $z^T B z \ge 0$ theo giả thiết, kết hợp với các trọng số $\theta_1, \theta_2 \ge 0$. Đẳng thức trên chứng minh rằng: Khi cố định vector $z$, ánh xạ $X \mapsto z^T X z$ là một hàm **tuyến tính** theo ma trận $X$.
@@ -74,13 +77,20 @@ bởi vì $z^T A z \ge 0$ và $z^T B z \ge 0$ theo giả thiết, kết hợp v�
 Nhận xét này mang lại một góc nhìn hình học sâu sắc: Với mỗi vector $z \ne 0$ cố định, dạng toàn phương có thể viết qua tích vô hướng Frobenius:
 
 $$
-z^T X z = \operatorname{tr}(z^T X z) = \operatorname{tr}(X z z^T) = \langle z z^T, X \rangle .
+\begin{aligned}
+z^T X z &= \operatorname{tr}(z^T X z)\\
+&= \operatorname{tr}(X z z^T)\\
+&= \langle z z^T, X \rangle .
+\end{aligned}
 $$
 
 Biểu thức $\langle z z^T, X \rangle \ge 0$ xác định một **nửa không gian đóng** đi qua gốc tọa độ trong không gian $\mathbb{S}^n$ với vector pháp tuyến ngoài là ma trận hạng một $-z z^T$. Do đó, nón $\mathbb{S}^n_+$ có thể biểu diễn dưới dạng phần giao:
 
 $$
-\mathbb{S}^n_+ = \bigcap_{z \ne 0} \{X \in \mathbb{S}^n \mid z^T X z \ge 0\} = \bigcap_{z \ne 0} \{X \in \mathbb{S}^n \mid \langle z z^T, X \rangle \ge 0\} .
+\begin{aligned}
+\mathbb{S}^n_+ &= \bigcap_{z \ne 0} \{X \in \mathbb{S}^n \mid z^T X z \ge 0\}\\
+&= \bigcap_{z \ne 0} \{X \in \mathbb{S}^n \mid \langle z z^T, X \rangle \ge 0\} .
+\end{aligned}
 $$
 
 Đây là phần giao của **vô số** nửa không gian đóng. Do đó, $\mathbb{S}^n_+$ tự động là một tập lồi và đóng. Khác với đa diện (vốn chỉ là giao của hữu hạn nửa không gian), biên của nón $\mathbb{S}^n_+$ là một mặt cong trơn từng phần, tạo nên sự phong phú vượt bậc của hình học quy hoạch nửa xác định.
@@ -106,13 +116,23 @@ Cơ sở toán học: Ma trận có hai trị riêng $\lambda_1, \lambda_2$ vớ
 Đường biên của nón được xác định bởi phương trình mặt cong $xz = y^2$ với $x \ge 0, z \ge 0$. Thực hiện phép đổi biến xoay hệ tọa độ 45° trong mặt phẳng $(x, z)$:
 
 $$
-u = \frac{x + z}{\sqrt{2}},\quad w = \frac{x - z}{\sqrt{2}} \iff x = \frac{u + w}{\sqrt{2}},\quad z = \frac{u - w}{\sqrt{2}} .
+\begin{aligned}
+u &= \frac{x + z}{\sqrt{2}},\quad w\\
+&= \frac{x - z}{\sqrt{2}}\\
+&\iff x = \frac{u + w}{\sqrt{2}},\quad z\\
+&= \frac{u - w}{\sqrt{2}} .
+\end{aligned}
 $$
 
 Khi đó, tích tọa độ trở thành:
 
 $$
-xz = \frac{u^2 - w^2}{2} \ge y^2 \iff w^2 + 2y^2 \le u^2 \iff \sqrt{w^2 + 2y^2} \le u .
+\begin{aligned}
+xz &= \frac{u^2 - w^2}{2}\\
+&\ge y^2\\
+&\iff w^2 + 2y^2 \le u^2\\
+&\iff \sqrt{w^2 + 2y^2} \le u .
+\end{aligned}
 $$
 
 Kết hợp với điều kiện $u \ge 0$, bất đẳng thức này mô tả một **nón bậc hai elip** (elliptic second-order cone) trong không gian 3D $(u, w, y)$. Trục đối xứng của nón là tia $u \ge 0, w = 0, y = 0$ (tức đường phân giác $x = z \ge 0, y = 0$, tương ứng với các ma trận vô hướng $x I$). Các lát cắt vuông góc với trục đối xứng (tức tại $u = c > 0$) là những hình ellipse phẳng $w^2 + 2y^2 \le c^2$.
@@ -142,7 +162,11 @@ Khái niệm nửa xác định dương gắn liền với **dạng toàn phươ
 2. **Ma trận PSD hoàn toàn có thể chứa các phần tử âm ngoài đường chéo**:
    Xét ma trận $X = \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix}$. Các phần tử ngoài đường chéo là số âm, nhưng dạng toàn phương:
    $$
-   z^T X z = z_1^2 - 2z_1 z_2 + z_2^2 = (z_1 - z_2)^2 \ge 0
+   \begin{aligned}
+   z^T X z &= z_1^2 - 2z_1 z_2 + z_2^2\\
+   &= (z_1 - z_2)^2\\
+   &\ge 0
+   \end{aligned}
    $$
    với mọi vector $z$. Ma trận này thuộc $\mathbb{S}^2_+$ với hai trị riêng là $0$ và $2$.
 3. **Đường chéo không âm và định thức không âm là chưa đủ khi $n \ge 3$**:
@@ -172,7 +196,11 @@ chính là phương sai của biến ngẫu nhiên vô hướng thu được khi
 Trong các phương pháp kernel (như SVM Kernel, Gaussian Process), ma trận Gram xác định bởi $K_{ij} = k(x_i, x_j) = \phi(x_i)^T \phi(x_j)$ luôn thuộc $\mathbb{S}^m_+$ với mọi tập mẫu dữ liệu. Thật vậy, với mọi vector trọng số $v \in \mathbb{R}^m$:
 
 $$
-v^T K v = \sum_{i=1}^m \sum_{j=1}^m v_i v_j \phi(x_i)^T \phi(x_j) = \left\|\sum_{i=1}^m v_i \phi(x_i)\right\|_2^2 \ge 0 .
+\begin{aligned}
+v^T K v &= \sum_{i=1}^m \sum_{j=1}^m v_i v_j \phi(x_i)^T \phi(x_j)\\
+&= \left\|\sum_{i=1}^m v_i \phi(x_i)\right\|_2^2\\
+&\ge 0 .
+\end{aligned}
 $$
 
 Định lý Mercer khẳng định: Một hàm hai biến $k(x, y)$ là một kernel hợp lệ khi và chỉ khi mọi ma trận Gram sinh ra từ nó đều thuộc nón $\mathbb{S}^m_+$.
@@ -205,7 +233,12 @@ Tích của hai ma trận PSD nói chung không phải là ma trận PSD, thậm
 Áp dụng điều kiện cho ma trận $2 \times 2$: Ta cần $2 \ge 0$, $8 \ge 0$ và định thức không âm:
 
 $$
-16 - t^2 \ge 0 \iff t^2 \le 16 \iff -4 \le t \le 4 .
+\begin{aligned}
+16 - t^2 &\ge 0\\
+&\iff t^2 \le 16\\
+&\iff -4 \le t\\
+&\le 4 .
+\end{aligned}
 $$
 
 Tập hợp các giá trị $t$ hợp lệ là đoạn đóng $[-4, 4]$, một tập lồi trong $\mathbb{R}$. Kết quả này không phải ngẫu nhiên: Ánh xạ $t \mapsto X(t)$ là một ánh xạ affine từ $\mathbb{R}$ vào $\mathbb{S}^2$, và tập các giá trị $t$ chính là ảnh ngược của nón lồi $\mathbb{S}^2_+$ qua ánh xạ affine đó. Ảnh ngược affine của một tập lồi luôn luôn là một tập lồi. Hai đầu mút $t = \pm 4$ ứng với ma trận suy biến nằm trên biên của nón.
@@ -219,7 +252,11 @@ Tập hợp các giá trị $t$ hợp lệ là đoạn đóng $[-4, 4]$, một t
 Khẳng định này hoàn toàn đúng. Với mỗi chỉ số $i$, chọn vector cơ sở đơn vị $e_i$, ta có $e_i^T X e_i = X_{ii} \ge 0$. Với hai chỉ số phân biệt $i$ và $j$, xét ma trận con đối xứng kích thước $2 \times 2$ tạo bởi hai hàng và hai cột đó: $\begin{bmatrix} X_{ii} & X_{ij} \\ X_{ij} & X_{jj} \end{bmatrix}$. Ma trận con này có dạng $W^T X W$ với $W = [e_i \ e_j]$, do đó cũng là ma trận PSD. Áp dụng điều kiện định thức cho ma trận $2 \times 2$ ta thu được:
 
 $$
-X_{ii} X_{jj} - X_{ij}^2 \ge 0 \iff X_{ij}^2 \le X_{ii} X_{jj} \iff |X_{ij}| \le \sqrt{X_{ii} X_{jj}} .
+\begin{aligned}
+X_{ii} X_{jj} - X_{ij}^2 &\ge 0\\
+&\iff X_{ij}^2 \le X_{ii} X_{jj}\\
+&\iff |X_{ij}| \le \sqrt{X_{ii} X_{jj}} .
+\end{aligned}
 $$
 
 Trong thống kê, bất đẳng thức này chính là điều kiện hệ số tương quan tuyến tính luôn nằm trong đoạn $[-1, 1]$.
@@ -247,7 +284,12 @@ $$
 - Với ma trận $B$: Phần tử $B_{11} = 3 > 0$, định thức $\det B = 3 \cdot 2 - (-1)^2 = 5 > 0$. Cả hai điều kiện đều dương chặt, do đó $B \in \mathbb{S}^2_{++}$ (nằm trong phần trong của nón).
 - Với ma trận $C$: Định thức $\det C = 1 \cdot 4 - 3^2 = 4 - 9 = -5 < 0$. Vì định thức âm, ma trận $C$ không thuộc $\mathbb{S}^2_+$. Chọn vector riêng ứng với trị riêng âm, hoặc thử vector $z = (3, -1)$:
   $$
-  z^T C z = 1(3)^2 + 2 \cdot 3(3)(-1) + 4(-1)^2 = 9 - 18 + 4 = -5 < 0 .
+  \begin{aligned}
+  z^T C z &= 1(3)^2 + 2 \cdot 3(3)(-1) + 4(-1)^2\\
+  &= 9 - 18 + 4\\
+  &= -5\\
+  &< 0 .
+  \end{aligned}
   $$
 :::
 
@@ -264,7 +306,10 @@ Tính các ma trận:
 - Ma trận tổ hợp $2A + 3B$:
 
 $$
-2A + 3B = \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix} + \begin{bmatrix} 3 & -3 \\ -3 & 3 \end{bmatrix} = \begin{bmatrix} 5 & -1 \\ -1 & 5 \end{bmatrix} .
+\begin{aligned}
+2A + 3B &= \begin{bmatrix} 2 & 2 \\ 2 & 2 \end{bmatrix} + \begin{bmatrix} 3 & -3 \\ -3 & 3 \end{bmatrix}\\
+&= \begin{bmatrix} 5 & -1 \\ -1 & 5 \end{bmatrix} .
+\end{aligned}
 $$
 
 Cả hai ma trận này đều là tổ hợp nón với hệ số dương của hai ma trận thuộc $\mathbb{S}^2_+$, do đó tự động thuộc $\mathbb{S}^2_+$ theo tính chất nón lồi. Hơn nữa:

@@ -16,7 +16,10 @@ next: false
 Định nghĩa:
 
 $$
-P =1/f\\1\,\mathrm D =1\,\mathrm{m^{-1}}.
+\begin{aligned}
+&P =1/f\\
+&1\,\mathrm D =1\,\mathrm{m^{-1}}.
+\end{aligned}
 $$
 
 Với kính áp tròng, khoảng kính–mắt được bỏ qua. Với kính gọng, cả khoảng vật và khoảng ảnh phải đo từ kính trước khi dùng phương trình. Đơn vị mét là thiết yếu khi chuyển tiêu cự thành đi-ốp.

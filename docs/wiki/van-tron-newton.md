@@ -16,7 +16,10 @@ Vân tròn Newton hình thành bởi giao thoa trong khe mỏng giữa một m�
 Với bán kính cong R và bề dày t tại bán kính r, hình học cầu cho $r^2=2Rt-t^2$. Nếu $t\ll R$, có $r^2\approx2Rt$. Với khe khí tiếp xúc ở tâm:
 
 $$
-r_m^2 \approx m\lambda_0R\\m =0,1,2,\ldots.
+\begin{aligned}
+&r_m^2 \approx m\lambda_0R\\
+&m =0,1,2,\ldots.
+\end{aligned}
 $$
 
 Đây là bán kính các vân tối phản xạ. Bình phương bán kính tăng đều theo bậc, còn bán kính không tăng đều. Khi thay không khí bằng chất lỏng mà giữ hình học và pha phản xạ tương ứng, bước sóng trong khe giảm và các vòng thu nhỏ.

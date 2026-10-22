@@ -105,7 +105,16 @@ $$
 Khi kích thước các khối $(w_i, h_i)$ đã được ấn định, hàm mục tiêu $\Phi_{\text{wire}}$ là tổng của các hàm lồi dạng trị tuyệt đối. Bằng cách đưa vào các biến phụ $u_{ij}, v_{ij} \ge 0$ thỏa mãn:
 
 $$
--u_{ij} \le c_i^{(x)} - c_j^{(x)} \le u_{ij}, \qquad -v_{ij} \le c_i^{(y)} - c_j^{(y)} \le v_{ij},
+\begin{aligned}
+&\begin{aligned}
+-u_{ij} &\le c_i^{(x)} - c_j^{(x)}\\
+&\le u_{ij}, \qquad
+\end{aligned}\\
+&\begin{aligned}
+-v_{ij} &\le c_i^{(y)} - c_j^{(y)}\\
+&\le v_{ij},
+\end{aligned}
+\end{aligned}
 $$
 
 bài toán tối thiểu hóa chiều dài dây nối đưa thẳng về một bài toán **Quy hoạch tuyến tính (LP)**:
@@ -151,17 +160,28 @@ Xét hai khối chức năng được ghép cạnh nhau theo phương ngang (lá
    Đặt $\tilde{w}_i = \log w_i, \tilde{h}_i = \log h_i, \tilde{H} = \log H$.
    Hàm mục tiêu chuyển thành hàm log-sum-exp:
    $$
-   f_0 = \log\big(e^{\tilde{w}_1 + \tilde{H}} + e^{\tilde{w}_2 + \tilde{H}}\big) = \tilde{H} + \log\big(e^{\tilde{w}_1} + e^{\tilde{w}_2}\big).
+   \begin{aligned}
+   f_0 &= \log\big(e^{\tilde{w}_1 + \tilde{H}} + e^{\tilde{w}_2 + \tilde{H}}\big)\\
+   &= \tilde{H} + \log\big(e^{\tilde{w}_1} + e^{\tilde{w}_2}\big).
+   \end{aligned}
    $$
    Các ràng buộc trở thành affine:
    $$
-\begin{aligned}
-\tilde{w}_1 + \tilde{h}_1 &\ge \log 4, \\
-\tilde{w}_2 + \tilde{h}_2 &\ge \log 8, \\
-\tilde{h}_1 &\le \tilde{H}, \quad \tilde{h}_2 \le \tilde{H}, \\
--\log 2 &\le \tilde{h}_1 - \tilde{w}_1 \le \log 2, \quad -\log 2 \le \tilde{h}_2 - \tilde{w}_2 \le \log 2.
-\end{aligned}
-$$
+   \begin{aligned}
+   &\tilde{w}_1 + \tilde{h}_1 \ge \log 4,\\
+   &\tilde{w}_2 + \tilde{h}_2 \ge \log 8,\\
+   &\tilde{h}_1 \le \tilde{H}, \quad\\
+   &\tilde{h}_2 \le \tilde{H},\\
+   &\begin{aligned}
+   -\log 2 &\le \tilde{h}_1 - \tilde{w}_1\\
+   &\le \log 2, \quad
+   \end{aligned}\\
+   &\begin{aligned}
+   -\log 2 &\le \tilde{h}_2 - \tilde{w}_2\\
+   &\le \log 2.
+   \end{aligned}
+   \end{aligned}
+   $$
 
 3. **Tìm nghiệm tối ưu khi $h_1 = h_2 = H$**:
    Để diện tích khung bao $W H = (w_1 + w_2) H = w_1 H + w_2 H$ nhỏ nhất, các ràng buộc diện tích phải đạt chặt:
@@ -199,7 +219,11 @@ Cho ba khối chức năng $A, B, C$ có kích thước cố định $1 \times 1
    - Từ $B$ đến $C$: $|x - 4| + |y - 0| = (4 - x) + y$ (vì $0 \le x \le 4, y \ge 0$).
    Tổng chiều dài có trọng số:
    $$
-   f(x, y) = 2(x + y) + 3\big((4 - x) + y\big) = 2x + 2y + 12 - 3x + 3y = 12 - x + 5y.
+   \begin{aligned}
+   f(x, y) &= 2(x + y) + 3\big((4 - x) + y\big)\\
+   &= 2x + 2y + 12 - 3x + 3y\\
+   &= 12 - x + 5y.
+   \end{aligned}
    $$
 
 2. **Tìm tọa độ tối ưu**:
@@ -216,12 +240,12 @@ Cho ba khối chức năng $A, B, C$ có kích thước cố định $1 \times 1
    Khoảng cách từ $C$ đến $D$: $|x - 2| + |y - 3| = |x - 2| + (3 - y)$ (vì $y \le 3$).
    Hàm mục tiêu mới:
    $$
-\begin{aligned}
-g(x, y) &= 12 - x + 5y + 4\big(|x - 2| + 3 - y\big) \\
-&= 12 - x + 5y + 4|x - 2| + 12 - 4y \\
-&= 24 - x + y + 4|x - 2|.
-\end{aligned}
-$$
+   \begin{aligned}
+   g(x, y) &= 12 - x + 5y + 4\big(|x - 2| + 3 - y\big) \\
+   &= 12 - x + 5y + 4|x - 2| + 12 - 4y \\
+   &= 24 - x + y + 4|x - 2|.
+   \end{aligned}
+   $$
    - Theo phương $y$: Hàm mục tiêu tăng theo $y$ (hệ số $+1$), do đó nghiệm tối ưu tiếp tục là $y^* = 0$.
    - Theo phương $x$: Xét hàm $h(x) = -x + 4|x - 2|$ trên đoạn $[0, 4]$:
      - Khi $x \in [0, 2]$: $h(x) = -x + 4(2 - x) = 8 - 5x$, nghịch biến, đạt cực tiểu tại $x = 2$ với giá trị $h(2) = 8 - 10 = -2$.
@@ -258,14 +282,14 @@ Cho hai khối hình vuông kích thước $2 \times 2$. Ràng buộc không ch�
 2. **Kỹ thuật Big-M trong MILP**:
    Để chọn một trong bốn điều kiện, ta đưa vào bốn biến nhị phân $b_1, b_2, b_3, b_4 \in \{0, 1\}$ và một hằng số đủ lớn $M > 0$:
    $$
-\begin{aligned}
-x_1 - x_2 + 2 &\le M(1 - b_1), \\
-x_2 - x_1 + 2 &\le M(1 - b_2), \\
-y_1 - y_2 + 2 &\le M(1 - b_3), \\
-y_2 - y_1 + 2 &\le M(1 - b_4), \\
-b_1 + b_2 + b_3 + b_4 &\ge 1.
-\end{aligned}
-$$
+   \begin{aligned}
+   x_1 - x_2 + 2 &\le M(1 - b_1), \\
+   x_2 - x_1 + 2 &\le M(1 - b_2), \\
+   y_1 - y_2 + 2 &\le M(1 - b_3), \\
+   y_2 - y_1 + 2 &\le M(1 - b_4), \\
+   b_1 + b_2 + b_3 + b_4 &\ge 1.
+   \end{aligned}
+   $$
    Khi biến nhị phân $b_1 = 1$, vế phải bằng 0 và ràng buộc $x_1 + 2 \le x_2$ có hiệu lực. Các ràng buộc có $b_k = 0$ có vế phải bằng $M$, hoàn toàn bị vô hiệu hóa.
 
 3. **Hiện tượng khi nới lỏng lồi**:

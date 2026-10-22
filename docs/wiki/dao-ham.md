@@ -7,40 +7,58 @@ next: false
 
 # Đạo hàm
 
-Đạo hàm $f'(x)$ là tốc độ thay đổi tức thời của f theo x, được định nghĩa bằng giới hạn tỷ số $[f(x+h)-f(x)]/h$ khi $h \to  0$. Nó là hệ số góc tiếp tuyến. Đạo hàm dương nghĩa là hàm đang tăng tại vùng xét. Âm nghĩa là đang giảm.
+Quãng đường đi được trong một giờ không cho biết tốc độ đúng tại một thời điểm. **Đạo hàm** giải quyết câu hỏi cục bộ đó bằng cách xét tỷ số thay đổi trên những khoảng ngày càng nhỏ.
 
 <WikiUsage />
 
+![Hình 1: Tiếp tuyến ghi lại độ dốc cục bộ, không thay thế toàn bộ đường cong.](./img/atlas/derivative.svg)
+
 ## Giải thích kỹ thuật
 
-**Định nghĩa kỹ thuật.** Với hàm một biến:
+Đạo hàm của $f$ tại $a$ là giới hạn hữu hạn:
 
-$$f\prime(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}.$$
+$$
+f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}h.
+$$
 
-Đạo hàm tại x tồn tại khi giới hạn hữu hạn này tồn tại. Với $f(x)=|x|$ tại $x=0$, hệ số góc từ trái là −1, từ phải là 1 nên đạo hàm không tồn tại. Một điểm có đạo hàm bằng 0 chưa chắc là điểm cực tiểu, chẳng hạn $f(x)=x^3$ tại gốc $0$.
+Tỷ số trong giới hạn là độ dốc dây cung. Khi giới hạn tồn tại, đường thẳng có độ dốc $f'(a)$ đi qua $(a,f(a))$ là tiếp tuyến. Với bước $h$ nhỏ:
 
-## Ví dụ
+$$
+f(a+h)\approx f(a)+f'(a)h.
+$$
 
-$f(x)=x^2$ có $f'(x)=2x$. Tại $x = 3$, tốc độ thay đổi là 6.
+Khả vi tại một điểm kéo theo liên tục tại điểm đó. Chiều ngược lại không đúng: Hàm $|x|$ liên tục tại 0 nhưng có hai độ dốc một phía khác nhau, nên không có đạo hàm tại đó.
 
-## Khi nào cần dùng?
+Đạo hàm bằng 0 chưa đủ để kết luận cực tiểu. Hàm $x^3$ có đạo hàm bằng 0 tại gốc nhưng vẫn tăng qua gốc. Khi tìm cực trị trên một đoạn đóng, cũng phải kiểm tra hai đầu mút.
 
-Đọc điều kiện tối ưu, biến thiên và quan hệ điện thế–điện trường.
+## Ví dụ có lời giải
 
-## Tự kiểm tra
+Với $f(x)=x^2$, tại $a=2$:
 
-Đạo hàm của $3x + 2$ là gì?
+$$
+\begin{aligned}
+\frac{f(2+h)-f(2)}h&=4+h,\\
+f'(2)&=4.
+\end{aligned}
+$$
 
-<details><summary>Xem đáp án</summary>
+Nếu tăng $x$ từ 2 lên $2{,}01$, xấp xỉ tiếp tuyến cho $f(2{,}01)\approx4{,}04$. Giá trị thật là $4{,}0401$. Sai số $0{,}0001$ chính là phần bình phương của bước $h=0{,}01$.
 
-3.
+## Câu hỏi ôn lại
 
-</details>
+Có thể dùng dấu của $f'(a)$ để kết luận hàm tăng trên toàn trục số không?
 
-## Thuật ngữ liên quan
+::: details Xem lời giải
+Không. Dấu tại một điểm là thông tin tại điểm đó. Để suy ra tính đơn điệu trên một khoảng, cần kiểm tra dấu đạo hàm trên khoảng thích hợp và các giả thiết của định lý tương ứng.
+:::
+
+## Đọc tiếp
 
 - [Giới hạn](./gioi-han.md)
-- [Hàm số](./ham-so.md)
+- [Đạo hàm riêng](./dao-ham-rieng.md)
 - [Gradient](./gradient.md)
-- [Tích phân](./tich-phan.md)
 - [Quy tắc chuỗi](./quy-tac-chuoi.md)
+
+## Tài liệu tham khảo
+
+- [OpenStax, Calculus Volume 1, Defining the Derivative](https://openstax.org/books/calculus-volume-1/pages/3-1-defining-the-derivative).

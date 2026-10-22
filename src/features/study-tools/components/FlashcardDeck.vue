@@ -1,6 +1,7 @@
 <script setup>
 import { studyLink as withBase } from '../../../core/routing/links.js'
 import { useFlashcards } from '../controllers/useFlashcards.js'
+import SpotArt from '../../illustrations/components/SpotArt.vue'
 
 const props = defineProps({
   courses: {
@@ -37,7 +38,15 @@ const {
         </select>
       </label>
     </div>
-    <div class="flashcard-progress">
+    <div v-if="!deck.length" class="empty-state empty-state-art flashcard-empty" role="status">
+      <SpotArt name="empty" tone="lam" />
+      <div>
+        <h3>Học phần này chưa có thẻ ôn tập</h3>
+        <p>Chọn một học phần khác hoặc mở bài giảng để tiếp tục học.</p>
+        <a class="text-link" :href="withBase(`/${subject}/`)">Mở bài giảng của học phần →</a>
+      </div>
+    </div>
+    <div v-else class="flashcard-progress">
       <span>{{ knownCount }} / {{ deck.length }} thẻ đã nhớ</span>
       <progress :value="knownCount" :max="deck.length" :aria-label="`${knownCount} trên ${deck.length} thẻ đã nhớ`"></progress>
       <button class="text-link" @click="resetReview">Ôn lại từ đầu</button>
@@ -54,7 +63,7 @@ const {
       </div>
       <button v-else class="study-button primary" @click="revealed = true">Xem đáp án</button>
     </article>
-    <div class="flashcard-actions">
+    <div v-if="current" class="flashcard-actions">
       <button class="study-button" @click="next(-1)">← Thẻ trước</button>
       <div v-if="revealed" class="button-row">
         <button class="study-button" @click="review(false)">Chưa nhớ</button>
@@ -62,6 +71,6 @@ const {
       </div>
       <button class="study-button" @click="next(1)">Thẻ tiếp →</button>
     </div>
-    <p class="small tool-explanation">Thử trả lời bằng lời của mình trước khi mở đáp án. Tiến độ được lưu riêng cho từng thẻ trên trình duyệt này.</p>
+    <p v-if="current" class="small tool-explanation">Thử trả lời bằng lời của mình trước khi mở đáp án. Tiến độ được lưu riêng cho từng thẻ trên trình duyệt này.</p>
   </section>
 </template>

@@ -31,7 +31,10 @@ Trong nhiều biến, gradient gom các đạo hàm riêng. Nếu $f\in C^2$, He
 Qua hai điểm khác nhau $x,y\in\mathbb R^n$, đường thẳng có biểu diễn
 
 $$
-z(t) = x+t(y-x) = (1-t)x+ty, \quad t\in\mathbb R.
+\begin{aligned}
+z(t) &= x+t(y-x)\\
+&= (1-t)x+ty, \quad t\in\mathbb R.
+\end{aligned}
 $$
 
 Giới hạn $0\le t\le1$ tạo đoạn nối hai điểm. Tại $t=0$ ta ở $x$, tại $t=1$ ta ở $y$. Hai trọng số không âm và cộng thành 1, nên điểm tổ hợp không vượt ra ngoài hai đầu mút.

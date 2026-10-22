@@ -7,46 +7,54 @@ next: false
 
 # Chuẩn vector
 
-Chuẩn đo độ lớn của vector. Chuẩn Euclid $\|x\|_{2} = \sqrt{x_1^2+\cdots+x_n^2}$. Khoảng cách giữa hai điểm x, y là $\|x-y\|_{2}$. Chuẩn không âm và chỉ bằng 0 ở vector không.
+Một thuật toán dự đoán sai vector $(3,4)$. Nói sai “bao nhiêu” đòi hỏi chọn cách đo. **Chuẩn** gán một số không âm cho vector và tuân theo các tính chất giúp việc đo độ lớn nhất quán.
 
 <WikiUsage />
 
+![Hình 1: Cùng một tâm nhưng các độ lệch có thể được đánh giá khác nhau.](./img/atlas/variance.svg)
+
 ## Giải thích kỹ thuật
 
-**Các chuẩn thường gặp.** Với vector $x=(x_1,\ldots,x_n)$, chuẩn 1 cộng độ lớn của từng thành phần:
+Với $x=(x_1,x_2)$, ba cách đo thường gặp là:
 
-$$\|x\|_1=|x_1|+\cdots+|x_n|=\sum_{i=1}^n|x_i|.$$
+$$
+\begin{aligned}
+\|x\|_1&=|x_1|+|x_2|,\\
+\|x\|_2&=\sqrt{x_1^2+x_2^2},\\
+\|x\|_\infty&=\max(|x_1|,|x_2|).
+\end{aligned}
+$$
 
-Chuẩn Euclid cộng các bình phương trước khi lấy căn:
+Một chuẩn phải bằng 0 đúng tại vector không, thỏa mãn $\|ax\|=|a|\|x\|$ và bất đẳng thức tam giác $\|x+y\|\le\|x\|+\|y\|$.
 
-$$\|x\|_2=\sqrt{x_1^2+\cdots+x_n^2}=\sqrt{\sum_{i=1}^n x_i^2}.$$
+Khoảng cách sinh bởi chuẩn được định nghĩa là $d(x,y)=\|x-y\|$. Chuẩn đo độ lớn của một vector, còn khoảng cách so sánh hai điểm. Cần phân biệt hai vai trò này dù công thức có liên hệ trực tiếp.
 
-Chỉ số $i$ chạy từ 1 đến $n$, qua tất cả thành phần của vector. Chuẩn cực đại (hay chuẩn Chebyshev) lấy độ lớn lớn nhất: $\|x\|_\infty=\max\{|x_1|,\ldots,|x_n|\}$. Mỗi chuẩn tạo một cách đo khoảng cách $d(x,y)=\|x-y\|$.
+Chuẩn một cộng mọi sai lệch tuyệt đối. Chuẩn vô cùng chỉ nhìn sai lệch lớn nhất. Chuẩn Euclid gắn với hình học tròn quen thuộc. Chọn chuẩn đồng nghĩa chọn loại sai số mà bài toán ưu tiên kiểm soát.
 
-Chuẩn thỏa bất đẳng thức tam giác và tính đồng nhất $\|\alpha x\|=|\alpha|\|x\|$. Đừng nhầm chuẩn vector với chuẩn hóa dữ liệu theo trung bình và độ lệch chuẩn.
+## Ví dụ có lời giải
 
-## Ví dụ
+Với $x=(3,4)$:
 
-Với vector $v=(3,4)$, chuẩn Euclid là:
+$$
+\|x\|_1=7,\quad\|x\|_2=5,\quad\|x\|_\infty=4.
+$$
 
-$$\|v\|_2=\sqrt{3^2+4^2}=\sqrt{9+16}=5.$$
+Không có mâu thuẫn vì ba con số trả lời ba câu hỏi khác nhau. Nếu hai thiết bị có sai số lần lượt là $(0,6)$ và $(4,4)$, chuẩn vô cùng chọn thiết bị thứ hai vì sai số tồi nhất nhỏ hơn. Chuẩn một chọn thiết bị thứ nhất vì tổng sai số nhỏ hơn.
 
-## Khi nào cần dùng?
+## Câu hỏi ôn lại
 
-Hiểu khoảng cách, sai số, hướng đơn vị và điều kiện hội tụ.
+Bình phương chuẩn Euclid có phải một chuẩn không?
 
-## Tự kiểm tra
+::: details Xem lời giải
+Không. Với $x\ne0$, ta có $\|2x\|_2^2=4\|x\|_2^2$, trong khi tính thuần nhất của chuẩn đòi hệ số 2. Bình phương chuẩn rất hữu ích trong tối ưu nhưng không tự trở thành một chuẩn.
+:::
 
-Chuẩn Euclid của $(0, -2)$ là bao nhiêu?
+## Đọc tiếp
 
-<details><summary>Xem đáp án</summary>
-
-2, không phải −2.
-
-</details>
-
-## Thuật ngữ liên quan
-
-- [Giới hạn](./gioi-han.md)
-- [Tích vô hướng](./tich-vo-huong.md)
 - [Vector](./vector.md)
+- [Tích vô hướng](./tich-vo-huong.md)
+- [Bình phương tối thiểu](./binh-phuong-toi-thieu.md)
+
+## Tài liệu tham khảo
+
+- [S. Boyd và L. Vandenberghe, Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/).

@@ -7,35 +7,44 @@ next: false
 
 # Cây
 
-Cây là đồ thị liên thông không có chu trình trong dạng vô hướng. Khi chọn một gốc, mỗi nút khác gốc có một nút cha, còn nút không có con được gọi là lá. Độ sâu là số cạnh từ gốc tới nút. Cây nhị phân có tối đa hai con ở mỗi nút.
+Muốn nối nhiều trạm mà không tạo vòng thừa, ta gặp cấu trúc **cây**. Trong đồ thị vô hướng, cây là đồ thị liên thông và không có chu trình.
 
 <WikiUsage />
 
+![Hình 1: Cây khung nối đủ bốn đỉnh bằng ba cạnh, không chứa chu trình.](./img/atlas/tree.svg)
+
 ## Giải thích kỹ thuật
 
-**Chiều cao và thứ tự.** Chiều cao đo đường dài nhất từ gốc tới lá theo quy ước đã chọn. Với cây nhị phân tìm kiếm có khóa phân biệt, mọi khóa bên trái nhỏ hơn khóa gốc và bên phải lớn hơn. Quy tắc này phải đúng ở mọi cây con.
+Giữa hai đỉnh bất kỳ của cây có đúng một đường đi đơn. Nếu có hai đường khác nhau, chúng sẽ tạo một chu trình. Nếu không có đường nào, đồ thị không liên thông.
 
-Cây nhị phân thông thường không bắt buộc có quy tắc tìm kiếm. Cây lệch có chiều cao gần n, nên các thao tác phụ thuộc chiều cao có thể tốn O(n).
+Với cây hữu hạn có $n\ge1$ đỉnh, số cạnh bằng $n-1$. Tuy nhiên, chỉ đếm đủ $n-1$ cạnh chưa đủ để kết luận một đồ thị tùy ý là cây: Còn cần điều kiện như liên thông.
 
-## Ví dụ
+Khi chọn một đỉnh làm gốc, mỗi đỉnh khác gốc có một cha. Khái niệm cha, con và độ sâu phụ thuộc lựa chọn gốc, còn các cạnh của cây không tự thay đổi.
 
-Gốc A có hai con là B và C. Trong đó, B có thêm con D, nên D là lá ở độ sâu 2.
+Cây nhị phân cho phép mỗi nút có nhiều nhất hai con. Cây tìm kiếm nhị phân còn thêm quy tắc thứ tự khóa. Hai thuật ngữ không đồng nghĩa.
 
-## Khi nào cần dùng?
+## Ví dụ có lời giải
 
-Đọc cây tìm kiếm, đệ quy, cây quyết định và cây nhị phân.
+Từ đồ thị trong [mục Đồ thị](./do-thi.md), giữ ba cạnh A–B, B–C và A–D như hình trên. Bốn đỉnh được nối bằng ba cạnh và không còn chu trình, nên ta được một cây khung.
 
-## Tự kiểm tra
+Thêm lại cạnh D–C tạo chu trình A–B–C–D–A. Bỏ một cạnh bất kỳ khỏi cây ban đầu sẽ làm ít nhất hai phần không còn nối với nhau.
 
-Nút gốc có độ sâu bao nhiêu khi đếm theo số cạnh?
+Trong cây có gốc A, B và D là con của A, còn C là con của B. Độ sâu của C bằng 2 cạnh.
 
-<details><summary>Xem đáp án</summary>
+## Câu hỏi ôn lại
 
-0.
+Một đồ thị gồm một tam giác và một đỉnh cô lập có 4 đỉnh, 3 cạnh. Có phải cây không?
 
-</details>
+::: details Xem lời giải
+Không. Nó vừa có chu trình tam giác vừa không liên thông. Ví dụ chỉ ra vì sao số cạnh bằng số đỉnh trừ một chưa đủ nếu đứng riêng.
+:::
 
-## Thuật ngữ liên quan
+## Đọc tiếp
 
-- [Trạng thái](./trang-thai.md)
 - [Đồ thị](./do-thi.md)
+- [Đệ quy](./de-quy.md)
+- [Hàng đợi](./hang-doi.md)
+
+## Tài liệu tham khảo
+
+- [Princeton, Algorithms, Undirected Graphs](https://algs4.cs.princeton.edu/41graph/).

@@ -16,7 +16,11 @@ Cường độ của một sóng chạy là độ lớn của vector Poynting sa
 Đối với một sóng chạy đều theo một hướng, lấy trung bình qua một số nguyên chu kỳ. Các trường cùng pha nên tích của chúng tỉ lệ cosin bình phương.
 
 $$
-\langle\cos^2\theta\rangle=1/2\\ I=\frac12\varepsilon_0cE_{\max}^2\\ I=\varepsilon_0cE_{\mathrm{rms}}^2.
+\begin{aligned}
+&\langle\cos^2\theta\rangle=1/2\\
+&I=\frac12\varepsilon_0cE_{\max}^2\\
+&I=\varepsilon_0cE_{\mathrm{rms}}^2.
+\end{aligned}
 $$
 
 Trong sóng đứng, Sx đổi dấu và trung bình của nó bằng không. Không được lấy trung bình giá trị tuyệt đối rồi gọi kết quả ấy là dòng năng lượng trung bình có hướng. Khi đo năng lượng hấp thụ trong một vật đặt vào trường, phải xét sự ghép trường với vật nhận.

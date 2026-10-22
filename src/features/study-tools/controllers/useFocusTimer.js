@@ -42,6 +42,10 @@ export function useFocusTimer() {
     }
   }
 
+  function syncVisibleTimer() {
+    if (document.visibilityState === 'visible') tick()
+  }
+
   function toggle() {
     if (running.value) {
       // The deadline may have elapsed before the scheduled interval runs.
@@ -86,10 +90,14 @@ export function useFocusTimer() {
       }
     }
     interval = setInterval(tick, 250)
+    document.addEventListener('visibilitychange', syncVisibleTimer)
+    window.addEventListener('pagehide', save)
   })
 
   onUnmounted(() => {
     save()
+    document.removeEventListener('visibilitychange', syncVisibleTimer)
+    window.removeEventListener('pagehide', save)
     if (interval) {
       clearInterval(interval)
     }

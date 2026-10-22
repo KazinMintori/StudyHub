@@ -25,9 +25,12 @@ Mặc dù các hàm cơ sở $f_j(x)$ có thể phi tuyến đối với biến 
 
 $$
 \begin{aligned}
-&f(x) = a(x)^T \theta , \quad a(x) = \begin{bmatrix} f_1(x)\\ &\vdots\\ &f_k(x) \end{bmatrix},\\
-&f'(x) = a'(x)^T \theta , \quad a'(x) = \begin{bmatrix} f'_1(x)\\ &\vdots\\ &f'_k(x) \end{bmatrix},\\
-&f''(x) = a''(x)^T \theta , \quad a''(x) = \begin{bmatrix} f''_1(x)\\ &\vdots\\ &f''_k(x) \end{bmatrix}.
+&f(x) = a(x)^T \theta , \quad\\
+&a(x) = \begin{bmatrix} f_1(x)\\ &\vdots\\ &f_k(x) \end{bmatrix},\\
+&f'(x) = a'(x)^T \theta , \quad\\
+&a'(x) = \begin{bmatrix} f'_1(x)\\ &\vdots\\ &f'_k(x) \end{bmatrix},\\
+&f''(x) = a''(x)^T \theta , \quad\\
+&a''(x) = \begin{bmatrix} f''_1(x)\\ &\vdots\\ &f''_k(x) \end{bmatrix}.
 \end{aligned}
 $$
 
@@ -139,7 +142,13 @@ Cho tập dữ liệu gồm 4 điểm trên đoạn $[-1, 1]$: $(-1, -2)$, $(-0{
    $$
    Để $f'(x) \ge 0$ với mọi $x \in \mathbb{R}$, tam thức bậc hai này phải có hệ số bậc hai dương và biệt thức $\Delta'$ không dương:
    $$
-   \theta_3 > 0 , \quad \Delta' = \theta_2^2 - 3\theta_1 \theta_3 \le 0.
+   \begin{aligned}
+   &\theta_3 > 0 , \quad\\
+   &\begin{aligned}
+   \Delta' &= \theta_2^2 - 3\theta_1 \theta_3\\
+   &\le 0.
+   \end{aligned}
+   \end{aligned}
    $$
    (Trường hợp suy biến: Nếu $\theta_3 = 0$, ta cần $\theta_2 = 0$ và $\theta_1 \ge 0$).
    Ràng buộc $\theta_2^2 - 3\theta_1 \theta_3 \le 0$ có thể biểu diễn qua nón bậc hai xoay (Rotated Second-Order Cone): $2(\sqrt{3/2}\theta_1)(\sqrt{3/2}\theta_3) \ge \theta_2^2$.
@@ -173,7 +182,10 @@ Xét bài toán làm mượt spline trên $m$ điểm quan sát: Đặt $\min_{v
 1. **Chứng minh tính lồi mạnh**:
    Khai triển hàm mục tiêu:
    $$
-   J(v) = (v - y)^T (v - y) + \lambda v^T K v = v^T (I + \lambda K) v - 2 y^T v + y^T y.
+   \begin{aligned}
+   J(v) &= (v - y)^T (v - y) + \lambda v^T K v\\
+   &= v^T (I + \lambda K) v - 2 y^T v + y^T y.
+   \end{aligned}
    $$
    Ma trận Hessian của $J(v)$ là $\nabla^2 J(v) = 2(I + \lambda K)$.
    Vì $K \succeq 0$ (mọi trị riêng $\lambda_i(K) \ge 0$) và $\lambda > 0$, ta có:
@@ -185,7 +197,11 @@ Xét bài toán làm mượt spline trên $m$ điểm quan sát: Đặt $\min_{v
 2. **Gradient và nghiệm tối ưu**:
    Đặt gradient bằng 0:
    $$
-   \nabla J(v) = 2(I + \lambda K) v - 2y = 0 \implies (I + \lambda K) v = y.
+   \begin{aligned}
+   \nabla J(v) &= 2(I + \lambda K) v - 2y\\
+   &= 0\\
+   &\implies (I + \lambda K) v = y.
+   \end{aligned}
    $$
    Vì $I + \lambda K \succ 0$, ma trận này khả nghịch. Nghiệm tối ưu duy nhất là:
    $$
@@ -223,17 +239,21 @@ Cho 3 điểm dữ liệu một chiều: $(0, 1)$, $(1, 0)$, và $(3, 2)$.
 2. **Chọn nghiệm cụ thể**:
    Ta có thể chọn:
    $$
-   g_0 = -1, \qquad g_1 = 0, \qquad g_2 = 1.
+   \begin{aligned}
+   &g_0 = -1, \qquad\\
+   &g_1 = 0, \qquad\\
+   &g_2 = 1.
+   \end{aligned}
    $$
    Dãy hệ số góc $g_0 \le g_1 \le g_2$ thỏa mãn tính chất đơn điệu tăng của dưới gradient đối với hàm lồi một chiều.
 
 3. **Xây dựng hàm lồi nội suy**:
    $$
-\begin{aligned}
-f_{\text{interp}}(x) &= \max\big\{ 1 + (-1)(x - 0), \; 0 + 0(x - 1), \; 2 + 1(x - 3) \big\} \\
-&= \max\big\{ 1 - x, \; 0, \; x - 1 \big\}.
-\end{aligned}
-$$
+   \begin{aligned}
+   f_{\text{interp}}(x) &= \max\big\{ 1 + (-1)(x - 0), \; 0 + 0(x - 1), \; 2 + 1(x - 3) \big\} \\
+   &= \max\big\{ 1 - x, \; 0, \; x - 1 \big\}.
+   \end{aligned}
+   $$
    Kiểm tra tại các điểm mút:
    - $f_{\text{interp}}(0) = \max\{1, 0, -1\} = 1 = y_0$.
    - $f_{\text{interp}}(1) = \max\{0, 0, 0\} = 0 = y_1$.

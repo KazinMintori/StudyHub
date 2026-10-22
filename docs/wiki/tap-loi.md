@@ -7,36 +7,48 @@ next: false
 
 # Tập lồi
 
-Tập C là lồi khi với mọi x,y thuộc C và mọi $\theta$ trong [0,1], điểm $\theta x+(1-\theta )y$ vẫn thuộc C. Điều kiện phải đúng với mọi đoạn nối. Thử vài điểm chỉ minh họa, không chứng minh tính lồi.
+Hai phương án phân bổ nguồn lực đều hợp lệ. Nếu trộn chúng theo bất kỳ tỷ lệ nào vẫn hợp lệ, miền phương án có một tính chất rất hữu ích: **Tính lồi**.
 
 <WikiUsage />
 
+![Hình 1: Một đoạn nối hai điểm là đối tượng trung tâm trong định nghĩa tính lồi.](./img/atlas/convex.svg)
+
 ## Giải thích kỹ thuật
 
-Tập lồi giữ các tổ hợp có trọng số không âm và tổng bằng 1. Tập affine chỉ đòi tổng trọng số bằng 1, nên cho phép trọng số âm. Nó chứa cả đường thẳng qua hai điểm.
+Tập $C$ là lồi nếu với mọi $x,y\in C$ và mọi $\theta\in[0,1]$, điểm:
 
-Giao các tập lồi là lồi. Ảnh và ảnh ngược qua ánh xạ affine giữ tính lồi, kể cả khi ánh xạ không khả nghịch. Chuẩn, nửa không gian và đa diện là các cách mô tả miền lồi. Nguồn: Convex Optimization, §2.1–2.3.
+$$
+z=\theta x+(1-\theta)y
+$$
 
-## Ví dụ
+cũng thuộc $C$. Khi $\theta=0$, ta nhận $y$. Khi $\theta=1$, ta nhận $x$. Các tỷ lệ ở giữa quét toàn bộ đoạn nối hai điểm.
 
-Hình tròn đặc là tập lồi, trong khi đường tròn không lồi vì trung điểm của hai điểm đối diện là tâm và không nằm trên đường tròn.
+Điều kiện yêu cầu mọi cặp điểm và mọi tỷ lệ, không chỉ một trung điểm được chọn. Thử vài cặp có thể tìm được phản ví dụ, nhưng không chứng minh tính lồi cho toàn tập.
 
-## Khi nào cần dùng?
+Giao của các tập lồi là lồi: Một đoạn nối hai điểm thuộc giao phải nằm trong từng tập thành phần. Ngược lại, hợp của các tập lồi có thể không lồi nếu có khoảng trống giữa chúng.
 
-Nhận diện miền khả thi và dùng tính chất tối ưu cục bộ của bài toán lồi.
+## Ví dụ có lời giải
 
-## Tự kiểm tra
+Miền phân bổ hai nguồn lực $x_1,x_2\ge0$ với $x_1+x_2\le10$ là lồi. Hai phương án $(2,6)$ và $(6,2)$ đều hợp lệ, và mọi trung bình có trọng số của chúng vẫn không vượt ngân sách.
 
-Hợp của hai tập lồi có luôn lồi không?
+Một đường tròn chỉ gồm đường biên không lồi. Hai điểm đối diện có trung điểm ở tâm, mà tâm không nằm trên đường tròn. Hình tròn gồm cả phần bên trong thì lồi.
 
-<details><summary>Xem đáp án</summary>
+Trong tối ưu, miền khả thi lồi giúp đường nối hai phương án không xuyên qua vùng cấm. Điều này khác với giả thiết về hàm mục tiêu lồi, vốn cần kiểm tra riêng.
 
-Không. $[-2,-1]$ hợp [1,2] bỏ mất trung điểm 0 của −1 và 1.
+## Câu hỏi ôn lại
 
-</details>
+Tập gồm đúng hai điểm phân biệt có lồi không?
 
-## Thuật ngữ liên quan
+::: details Xem lời giải
+Không. Trung điểm hai điểm khác cả hai đầu mút nên không thuộc tập. Tập chỉ có một điểm thì lồi vì mọi tổ hợp của điểm đó vẫn là chính nó.
+:::
+
+## Đọc tiếp
 
 - [Tổ hợp lồi](./to-hop-loi.md)
 - [Hàm lồi](./ham-loi.md)
-- [Tập hợp](./tap-hop.md)
+- [Điểm và miền khả thi](./mien-kha-thi.md)
+
+## Tài liệu tham khảo
+
+- [S. Boyd và L. Vandenberghe, Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/).

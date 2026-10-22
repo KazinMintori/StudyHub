@@ -7,36 +7,62 @@ next: false
 
 # Kỳ vọng
 
-Kỳ vọng là trung bình có trọng số theo xác suất. Nếu $X$ nhận hữu hạn giá trị $x_1,\ldots,x_k$ với xác suất $p_i=P(X=x_i)$, thì $\mathbb E[X]=x_1p_1+\cdots+x_kp_k$. Viết gọn, $\mathbb E[X]=\sum_{i=1}^k x_i p_i$, trong đó chỉ số $i$ chạy qua các giá trị có thể nhận. Với vô hạn đếm được, cần kiểm tra điều kiện tồn tại kỳ vọng. Đây là trung bình dài hạn khi điều kiện hội tụ phù hợp. Nó không nhất thiết là kết quả của một lần thử. Kỳ vọng của tổng bằng tổng kỳ vọng nếu các kỳ vọng tồn tại.
+Một trò chơi có nhiều kết quả với xác suất khác nhau. **Kỳ vọng** không hỏi kết quả nào chắc chắn xuất hiện, mà hỏi trung bình có trọng số theo mô hình xác suất là bao nhiêu.
 
 <WikiUsage />
 
+![Hình 1: Biết trung tâm chưa đủ để biết mức độ phân tán.](./img/atlas/variance.svg)
+
 ## Giải thích kỹ thuật
 
-**Tồn tại và tuyến tính.** Kỳ vọng cần được kiểm tra tồn tại theo mô hình đang dùng. Với biến liên tục có mật độ, $\mathbb E[X]=\int x f(x)\,dx$ khi tích phân thích hợp tồn tại. Một phân phối có thể không có kỳ vọng hữu hạn.
+Nếu $X$ nhận các giá trị hữu hạn $x_1,\ldots,x_k$, mỗi giá trị có xác suất $p_i$, thì:
 
-$\mathbb E[aX+bY]=aE[X]+bE[Y]$ không cần X,Y độc lập khi các kỳ vọng tồn tại. Nhưng E[XY]=E[X]E[Y] thường cần thêm điều kiện, như độc lập và khả tích thích hợp.
+$$
+\mathbb E[X]=x_1p_1+\cdots+x_kp_k.
+$$
 
-## Ví dụ
+Viết gọn:
 
-Xúc xắc cân bằng có $\mathbb E[X]=(1+2+3+4+5+6)/6=3.5$ dù không có mặt 3.5.
+$$
+\mathbb E[X]=\sum_{i=1}^k x_ip_i.
+$$
 
-## Khi nào cần dùng?
+Các xác suất không âm và có tổng bằng 1. Chúng là trọng số của phép bình quân, không phải các hệ số tùy chọn.
 
-Hiểu trung bình, chi phí kỳ vọng và mục tiêu thống kê.
+Khi các kỳ vọng liên quan tồn tại hữu hạn, tính tuyến tính cho:
 
-## Tự kiểm tra
+$$
+\mathbb E[aX+bY]=a\mathbb E[X]+b\mathbb E[Y].
+$$
 
-X bằng 0 hoặc 10 với xác suất $\frac{1}{2}$ mỗi giá trị. E[X] là gì?
+Không cần độc lập cho công thức này. Ngược lại, đẳng thức kỳ vọng của tích bằng tích kỳ vọng cần điều kiện riêng. Với phân phối vô hạn, phải kiểm tra tính khả tích, chẳng hạn $\mathbb E[|X|]<\infty$, trước khi tính như một số hữu hạn.
 
-<details><summary>Xem đáp án</summary>
+## Ví dụ có lời giải
 
-5.
+Giả sử $X$ nhận 0, 2, 4 với xác suất tương ứng $1/4,1/2,1/4$. Khi đó:
 
-</details>
+$$
+\mathbb E[X]=0\cdot\tfrac14+2\cdot\tfrac12+4\cdot\tfrac14=2.
+$$
 
-## Thuật ngữ liên quan
+Một xúc xắc cân bằng có kỳ vọng $3{,}5$, dù không có mặt ghi số đó. Vì vậy, kỳ vọng không nhất thiết là kết quả có thể xảy ra trong một lần thử.
+
+Nếu $Y=10-X$, tính tuyến tính cho $\mathbb E[Y]=10-2=8$. Không cần liệt kê lại toàn bộ phân phối của $Y$.
+
+## Câu hỏi ôn lại
+
+Tổng điểm của hai xúc xắc cân bằng có kỳ vọng bao nhiêu? Tính tuyến tính cần hai xúc xắc độc lập không?
+
+::: details Xem lời giải
+Kỳ vọng bằng $3{,}5+3{,}5=7$. Tính tuyến tính không yêu cầu độc lập. Tuy nhiên, nếu muốn tính toàn bộ phân phối của tổng từ hai phân phối riêng, quan hệ phụ thuộc lại rất quan trọng.
+:::
+
+## Đọc tiếp
 
 - [Biến ngẫu nhiên](./bien-ngau-nhien.md)
 - [Phương sai](./phuong-sai.md)
 - [Tích phân](./tich-phan.md)
+
+## Tài liệu tham khảo
+
+- [OpenStax, Introductory Statistics 2e, Mean or Expected Value and Standard Deviation](https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation).

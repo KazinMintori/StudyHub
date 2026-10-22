@@ -16,7 +16,10 @@ Thấu kính mỏng là hệ hai mặt khúc xạ có bề dày nhỏ đến m�
 Phương trình tạo ảnh:
 
 $$
-\frac1s+\frac1{s^\prime} =\frac1f\\m =-s^\prime/s.
+\begin{aligned}
+&\frac1s+\frac1{s^\prime} =\frac1f\\
+&m =-s^\prime/s.
+\end{aligned}
 $$
 
 Ba tia chính là tia tới song song trục, tia qua tâm và tia đi qua hoặc hướng về tiêu điểm vật. Hai tia xác định giao điểm ảnh, tia thứ ba kiểm tra phép dựng. Mọi tia thích hợp khác cũng tham gia tạo ảnh, không chỉ ba tia được chọn để vẽ.

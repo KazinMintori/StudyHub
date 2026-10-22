@@ -20,7 +20,10 @@ Xét hàm mục tiêu khả vi liên tục $f: \mathbb{R}^n \to \mathbb{R}$. Hã
 Quy luật chuyển động tự nhiên nhất để chất điểm luôn lăn xuống dốc theo hướng giảm nhanh nhất của thế năng $f$ là:
 
 $$
-\frac{dx(t)}{dt} = -\nabla f(x(t)), \qquad x(0) = x_0.
+\begin{aligned}
+&\frac{dx(t)}{dt} = -\nabla f(x(t)), \qquad\\
+&x(0) = x_0.
+\end{aligned}
 $$
 
 Phương trình vi phân thường phi tuyến này được gọi là **Dòng chảy gradient (Gradient Flow)**.
@@ -35,7 +38,11 @@ flowchart LR
 Ta kiểm tra tốc độ thay đổi của giá trị hàm số $f(x(t))$ dọc theo quỹ đạo chuyển động bằng quy tắc chuỗi:
 
 $$
-\frac{d}{dt} f(x(t)) = \nabla f(x(t))^T \left( \frac{dx(t)}{dt} \right) = \nabla f(x(t))^T \big( -\nabla f(x(t)) \big) = -\|\nabla f(x(t))\|_2^2.
+\begin{aligned}
+\frac{d}{dt} f(x(t)) &= \nabla f(x(t))^T \left( \frac{dx(t)}{dt} \right)\\
+&= \nabla f(x(t))^T \big( -\nabla f(x(t)) \big)\\
+&= -\|\nabla f(x(t))\|_2^2.
+\end{aligned}
 $$
 
 Vì bình phương chuẩn Euclid luôn không âm, ta có:
@@ -50,7 +57,10 @@ $$
 Nếu ta rời rạc hóa phương trình vi phân trên bằng phương pháp xấp xỉ đạo hàm sai phân Euler thuận với bước thời gian $\eta > 0$:
 
 $$
-\frac{x(t + \eta) - x(t)}{\eta} \approx -\nabla f(x(t)) \implies x(t + \eta) = x(t) - \eta \nabla f(x(t)).
+\begin{aligned}
+\frac{x(t + \eta) - x(t)}{\eta} &\approx -\nabla f(x(t))\\
+&\implies x(t + \eta) = x(t) - \eta \nabla f(x(t)).
+\end{aligned}
 $$
 
 Đặt $x_k = x(k\eta)$, ta thu được chính xác thuật toán **Gradient Descent** quen thuộc:
@@ -108,7 +118,10 @@ Hệ số động lượng $\frac{k-1}{k+2}$ không phải là hằng số, mà 
 Năm 2014, Su, Boyd và Candès đã chứng minh rằng khi bước nhảy $s \to 0$, quỹ đạo của thuật toán Nesterov hội tụ chính xác về một phương trình vi phân cấp hai phi thường:
 
 $$
-\ddot{x}(t) + \frac{3}{t} \dot{x}(t) + \nabla f(x(t)) = 0, \qquad t > 0.
+\begin{aligned}
+&\ddot{x}(t) + \frac{3}{t} \dot{x}(t) + \nabla f(x(t)) = 0, \qquad\\
+&t > 0.
+\end{aligned}
 $$
 
 ```mermaid
@@ -143,13 +156,19 @@ Do đó, năng lượng tại thời điểm $t$ không vượt quá năng lư�
 Suy ra:
 
 $$
-t^2 \big( f(x(t)) - f^* \big) \le \mathcal{E}(t) \le 2 \|x_0 - x^*\|_2^2,
+\begin{aligned}
+t^2 \big( f(x(t)) - f^* \big) &\le \mathcal{E}(t)\\
+&\le 2 \|x_0 - x^*\|_2^2,
+\end{aligned}
 $$
 
 tương đương với:
 
 $$
-f(x(t)) - f^* \le \frac{2 \|x_0 - x^*\|_2^2}{t^2} = \mathcal{O}\left( \frac{1}{t^2} \right).
+\begin{aligned}
+f(x(t)) - f^* &\le \frac{2 \|x_0 - x^*\|_2^2}{t^2}\\
+&= \mathcal{O}\left( \frac{1}{t^2} \right).
+\end{aligned}
 $$
 
 Khi quy đổi thời gian liên tục $t$ sang số bước lặp rời rạc $k$ ($t \sim k \sqrt{s}$), ta thu được chính xác cận hội tụ tối ưu $\mathcal{O}(1/k^2)$ của Nesterov! Bằng cách nhìn qua lăng kính phương trình vi phân, điều bí ẩn kéo dài 30 năm đã được giải thích một cách trong sáng và tự nhiên.

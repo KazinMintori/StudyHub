@@ -24,8 +24,12 @@ Mục tiêu và từng hàng ràng buộc được khai triển thành
 
 $$
 \begin{aligned}
-c^Tx &= c_1x_1+\cdots+c_nx_n, \\
-(Ax)_i &= a_{i1}x_1+\cdots+a_{in}x_n \le b_i,\quad i=1,\ldots,m.
+&c^Tx = c_1x_1+\cdots+c_nx_n,\\
+&\begin{aligned}
+(Ax)_i &= a_{i1}x_1+\cdots+a_{in}x_n\\
+&\le b_i,\quad
+\end{aligned}\\
+&i=1,\ldots,m.
 \end{aligned}
 $$
 

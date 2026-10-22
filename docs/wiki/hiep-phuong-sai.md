@@ -13,10 +13,19 @@ Hiệp phương sai đo trung bình tích hai độ lệch khỏi kỳ vọng. V
 
 ## Giải thích kỹ thuật
 
-Với các moment bậc hai hữu hạn, đặt $\mu_X=E(X)$ và $\mu_Y=E(Y)$.
+Với các moment bậc hai hữu hạn, đặt $\mu_X=E(X)$ và $\mu_Y=E(Y)$. Hai độ lệch được ký hiệu là:
 
 $$
-\operatorname{Cov}(X,Y)=E[(X-\mu_X)(Y-\mu_Y)].
+\begin{aligned}
+U&=X-\mu_X,\\
+V&=Y-\mu_Y.
+\end{aligned}
+$$
+
+Hiệp phương sai là kỳ vọng của tích hai độ lệch:
+
+$$
+\operatorname{Cov}(X,Y)=E[UV].
 $$
 
 Giá trị bằng 0 chỉ loại bỏ liên hệ tuyến tính đo bằng đại lượng này. Nếu cả hai phương sai dương, chia hiệp phương sai cho tích hai độ lệch chuẩn cho hệ số tương quan. Cộng hằng số không đổi hiệp phương sai, còn đổi dấu một biến làm đổi dấu hiệp phương sai.

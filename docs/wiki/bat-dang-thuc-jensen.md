@@ -17,7 +17,13 @@ Với f lồi và biến ngẫu nhiên X nhận giá trị trong miền xác đ�
 
 **Khoảng cách Jensen.** Hiệu $\mathbf E f(X) - f(\mathbf E X)$ đo độ cong của $f$ trên vùng mà $X$ phân tán. Với $f(x) = x^2$, nó bằng phương sai. Khi $X$ ít phân tán, nó xấp xỉ $\tfrac12 f''(\mathbf E X)\operatorname{Var}(X)$.
 
-**ELBO.** Với hàm lõm $\log$, ta có $\log \mathbf E_q[p(x, z)/q(z)] \ge \mathbf E_q[\log(p(x, z)/q(z))]$. Vế phải là cận dưới được tối ưu trong suy luận biến phân, và cận chặt khi $q$ đúng bằng phân phối hậu nghiệm. Nguồn: Convex Optimization, §3.1.8–3.1.9.
+**ELBO.** Giữ $x$ cố định và đặt $R(z)=p(x,z)/q(z)$ tại các điểm có $q(z)>0$. Giả sử $q$ phủ miền có $p(x,z)>0$ và các kỳ vọng liên quan tồn tại. Tính lõm của logarit cho:
+
+$$
+\log\mathbf E_q[R]\ge\mathbf E_q[\log R].
+$$
+
+Khi đó vế trái bằng $\log p(x)$. Vế phải là cận dưới được tối ưu trong suy luận biến phân. Cận chặt khi $q$ bằng phân phối hậu nghiệm. Nguồn: Convex Optimization, §3.1.8–3.1.9.
 
 ## Ví dụ
 

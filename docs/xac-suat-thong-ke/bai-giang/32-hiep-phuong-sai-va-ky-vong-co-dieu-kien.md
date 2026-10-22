@@ -86,7 +86,10 @@ Tính hiệp phương sai $\mathrm{Cov}(X, Y)$ và hệ số tương quan $\rho_
    Tích $XY$ chỉ khác 0 khi cả $X$ và $Y$ đều khác 0:
 
 $$
-\mathbb{E}[XY] = 1(0{,}10) + 2(0{,}10) = 0{,}30.
+\begin{aligned}
+\mathbb{E}[XY] &= 1(0{,}10) + 2(0{,}10)\\
+&= 0{,}30.
+\end{aligned}
 $$
 
 3. Hiệp phương sai:
@@ -152,7 +155,11 @@ $$
    Kỳ vọng tích $XY = X \times X^2 = X^3$:
 
 $$
-\mathbb{E}[XY] = \mathbb{E}[X^3] = \int_{-1}^1 \frac{x^3}{2} \, dx = 0.
+\begin{aligned}
+\mathbb{E}[XY] &= \mathbb{E}[X^3]\\
+&= \int_{-1}^1 \frac{x^3}{2} \, dx\\
+&= 0.
+\end{aligned}
 $$
 
    Hiệp phương sai:
@@ -476,9 +483,10 @@ Thành phần thứ hai (Phương sai của kỳ vọng có điều kiện):
 
 $$
 \begin{aligned}
-\mathrm{Var}(\mathbb{E}[K \mid N]) &= \mathrm{Var}(0{,}5 N) \\
-&= \frac{1}{4} \mathrm{Var}(N) \\
-&= \frac{1}{4} \times \frac{35}{12} = \frac{35}{48}.
+\mathrm{Var}(\mathbb{E}[K \mid N]) &= \mathrm{Var}(0{,}5 N)\\
+&= \frac{1}{4} \mathrm{Var}(N)\\
+&= \frac{1}{4} \times \frac{35}{12}\\
+&= \frac{35}{48}.
 \end{aligned}
 $$
 

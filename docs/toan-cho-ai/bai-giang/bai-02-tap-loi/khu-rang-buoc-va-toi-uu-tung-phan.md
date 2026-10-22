@@ -91,7 +91,10 @@ Bài toán có thêm biến và thêm ràng buộc, nhưng hàm mục tiêu và 
 Với mọi hàm $f$ của hai nhóm biến, ta luôn có
 
 $$
-\inf_{x, y} f(x, y) = \inf_x \tilde f(x), \qquad \tilde f(x) = \inf_y f(x, y).
+\begin{aligned}
+&\inf_{x, y} f(x, y) = \inf_x \tilde f(x), \qquad\\
+&\tilde f(x) = \inf_y f(x, y).
+\end{aligned}
 $$
 
 Nói cách khác, có thể cực tiểu trước theo một nhóm biến, được một hàm của nhóm còn lại, rồi mới cực tiểu hàm đó. Khi các ràng buộc tách riêng theo từng nhóm, phép biến đổi này cho một bài toán tương đương ít biến hơn. Nó đặc biệt có giá trị khi bước cực tiểu theo $y$ có công thức đóng.

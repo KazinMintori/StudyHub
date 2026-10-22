@@ -50,7 +50,7 @@ for (const course of selectedCourses) {
   await writeFile(path.join(dir,'kien-thuc-can-co.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\nlegacyKind: foundations\n---\n\n<LegacyCourseRoute />\n`)
 }
 await mkdir(path.join(docs,'wiki'),{recursive:true})
-await writeFile(path.join(docs,'wiki/index.md'),'---\nlayout: page\ntitle: Wiki thuật ngữ\n---\n\n<WikiIndex />\n')
+await writeFile(path.join(docs,'wiki/index.md'),'---\nlayout: page\ntitle: Wiki học tập\n---\n\n<WikiIndex />\n')
 for (const id of Object.keys(concepts)) {
   const file=path.join(docs,'wiki',`${id}.md`)
   if (!await exists(file)) await writeFile(file,createWikiArticle(id))

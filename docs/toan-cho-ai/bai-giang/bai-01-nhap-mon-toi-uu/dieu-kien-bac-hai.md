@@ -25,7 +25,10 @@ Hai cụm từ "mọi điểm" và "miền lồi" đều có ý nghĩa tiên quy
 Đặt $g(t) = f(x + tv)$, hàm hạn chế của $f$ lên đường thẳng qua $x$ theo hướng $v$. Áp dụng quy tắc dây chuyền hai lần:
 
 $$
-g'(t) = \nabla f(x + tv)^T v, \qquad g''(t) = v^T \nabla^2 f(x + tv)\, v .
+\begin{aligned}
+&g'(t) = \nabla f(x + tv)^T v, \qquad\\
+&g''(t) = v^T \nabla^2 f(x + tv)\, v .
+\end{aligned}
 $$
 
 Tại $t = 0$, ta được $g''(0) = v^T \nabla^2 f(x) v$. Vậy dạng toàn phương của Hessian đo **độ cong của đồ thị khi đi qua $x$ theo hướng $v$**. Điều kiện $\nabla^2 f(x) \succeq 0$ nói rằng không có đường thẳng nào qua $x$ mà dọc theo nó đồ thị cong xuống.
@@ -33,15 +36,25 @@ Tại $t = 0$, ta được $g''(0) = v^T \nabla^2 f(x) v$. Vậy dạng toàn ph
 Phân tích phổ cho thấy độ cong thay đổi thế nào khi xoay hướng. Theo định lý phổ cho ma trận đối xứng thực, ta có thể khai triển tường minh ma trận Hessian thành:
 
 $$
-\nabla^2 f(x) = \sum_{i=1}^n \lambda_i q_i q_i^T = \lambda_1 q_1 q_1^T + \lambda_2 q_2 q_2^T + \dots + \lambda_n q_n q_n^T
+\begin{aligned}
+\nabla^2 f(x) &= \sum_{i=1}^n \lambda_i q_i q_i^T\\
+&= \lambda_1 q_1 q_1^T + \lambda_2 q_2 q_2^T + \dots + \lambda_n q_n q_n^T
+\end{aligned}
 $$
 
 với $\{q_1, q_2, \dots, q_n\}$ là hệ vector riêng trực chuẩn ứng với các trị riêng $\lambda_1 \le \lambda_2 \le \dots \le \lambda_n$. Với vector hướng đơn vị $\|v\|_2 = 1$, ta biểu diễn $v$ qua cơ sở trực chuẩn $v = \sum_{i=1}^n (q_i^T v) q_i$. Khi đó dạng toàn phương trở thành:
 
 $$
 \begin{aligned}
-v^T \nabla^2 f(x)\, v &= \sum_{i=1}^n \lambda_i \,(q_i^T v)^2 = \lambda_1 (q_1^T v)^2 + \dots + \lambda_n (q_n^T v)^2, \\
-\sum_{i=1}^n (q_i^T v)^2 &= (q_1^T v)^2 + \dots + (q_n^T v)^2 = \|v\|_2^2 = 1 .
+&\begin{aligned}
+v^T \nabla^2 f(x)\, v &= \sum_{i=1}^n \lambda_i \,(q_i^T v)^2\\
+&= \lambda_1 (q_1^T v)^2 + \dots + \lambda_n (q_n^T v)^2,
+\end{aligned}\\
+&\begin{aligned}
+\sum_{i=1}^n (q_i^T v)^2 &= (q_1^T v)^2 + \dots + (q_n^T v)^2\\
+&= \|v\|_2^2\\
+&= 1 .
+\end{aligned}
 \end{aligned}
 $$
 
@@ -95,7 +108,10 @@ Thêm điều chuẩn ridge $\lambda \|w\|_2^2$, Hessian trở thành $2(A^T A +
 Hàm hai biến $f(x, y) = x^2 / y$ trên nửa mặt phẳng $y > 0$ đem lại một hình ảnh trực quan rõ nét về ma trận Hessian suy biến. Tính trực tiếp,
 
 $$
-\nabla^2 f(x, y) = \frac{2}{y^3} \begin{bmatrix} y^2 & -xy \\ -xy & x^2 \end{bmatrix} = \frac{2}{y^3} \begin{bmatrix} y \\ -x \end{bmatrix} \begin{bmatrix} y \\ -x \end{bmatrix}^T \succeq 0 .
+\begin{aligned}
+\nabla^2 f(x, y) &= \frac{2}{y^3} \begin{bmatrix} y^2 & -xy \\ -xy & x^2 \end{bmatrix}\\
+&= \frac{2}{y^3} \begin{bmatrix} y \\ -x \end{bmatrix} \begin{bmatrix} y \\ -x \end{bmatrix}^T \succeq 0 .
+\end{aligned}
 $$
 
 Ma trận có dạng $c\,uu^T$ với $c > 0$, nên nửa xác định dương, và hàm lồi. Nhưng hạng của nó bằng 1, và hướng có độ cong bằng 0 là $(x, y)$, vuông góc với $u = (y, -x)$. Hướng $(x, y)$ chính là hướng của tia đi từ gốc qua điểm đang xét. Lý do hình học: Ta có $f(tx, ty) = t\, f(x, y)$ với mọi $t > 0$, nên dọc mỗi tia xuất phát từ gốc tọa độ, hàm số tăng tuyến tính và hoàn toàn không cong. Đồ thị là một cái máng mà đáy máng xoay quanh gốc tọa độ. Trong mô phỏng ở mục 2, chọn hàm $x_1^2/x_2$ và kéo điểm $x$ đi khắp nửa mặt phẳng trên để thấy vạch nét đứt luôn chỉ thẳng về gốc.

@@ -16,94 +16,94 @@
   "exercises": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 714,
+      "line": 749,
       "title": "1. Tính toán hàm liên hợp của hàm Entropy và hàm Log-Sum-Exp"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 753,
+      "line": 796,
       "title": "2. Nới lỏng Đối ngẫu Lagrange cho Quy hoạch Số nguyên Boolean (Boolean LP)"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 794,
+      "line": 837,
       "title": "3. Điểm yên ngựa và Trò chơi Ma trận Hữu hạn"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 836,
+      "line": 882,
       "title": "4. Xác lập Chứng chỉ vô nghiệm bằng Bổ đề Farkas"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 874,
+      "line": 928,
       "title": "5. Bổ đề S-procedure và Điều kiện Bao hàm giữa hai Ellipsoid"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 915,
+      "line": 978,
       "title": "6. Kiểm tra điều kiện Slater khi có ràng buộc đẳng thức và giải hệ KKT"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 983,
+      "line": 1053,
       "title": "7. Giới hạn của định lý đối ngẫu và sự không đạt nghiệm đối ngẫu khi vi phạm Slater"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 1040,
+      "line": 1114,
       "title": "8. Ứng dụng KKT và phân tích độ nhạy trong hồi quy tham số"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 1108,
+      "line": 1194,
       "title": "9. Giải tích đối ngẫu hai chiều và chứng nhận khoảng cách đối ngẫu bằng 0"
     }
   ],
   "solutions": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 718,
+      "line": 753,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 762,
+      "line": 805,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 802,
+      "line": 845,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 848,
+      "line": 894,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 884,
+      "line": 941,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 929,
+      "line": 992,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 994,
+      "line": 1064,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 1054,
+      "line": 1128,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.md",
-      "line": 1119,
+      "line": 1205,
       "title": ""
     }
   ],

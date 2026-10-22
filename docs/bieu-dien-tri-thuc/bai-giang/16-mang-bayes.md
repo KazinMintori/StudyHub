@@ -153,7 +153,10 @@ Hai nguyên nhân độc lập $X$ (Đột nhập) và $Z$ (Động đất) cùn
 
 Nhiệm vụ cốt lõi của một hệ thống chẩn đoán là tính toán phân phối hậu nghiệm của một biến truy vấn $Q$ khi đã quan sát được tập chứng cứ $E = e$:
 $$
-P(Q \mid E = e) = \frac{P(Q, E = e)}{P(E = e)} = \alpha \sum_{H} P(Q, E = e, H)
+\begin{aligned}
+P(Q \mid E = e) &= \frac{P(Q, E = e)}{P(E = e)}\\
+&= \alpha \sum_{H} P(Q, E = e, H)
+\end{aligned}
 $$
 Trong đó $H$ là tập hợp tất cả các biến ẩn (Hidden/Unobserved variables) còn lại trong mạng.
 

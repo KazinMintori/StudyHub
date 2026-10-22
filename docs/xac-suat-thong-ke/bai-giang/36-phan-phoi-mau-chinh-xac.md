@@ -460,7 +460,11 @@ $$
 Giá trị tới hạn đuôi phải mức $5\%$ của phân phối $F(8, 8)$ là:
 
 $$
-c_{0{,}05} = F_{0{,}05}(8, 8) \approx 3{,}4381 \approx 3{,}44
+\begin{aligned}
+c_{0{,}05} &= F_{0{,}05}(8, 8)\\
+&\approx 3{,}4381\\
+&\approx 3{,}44
+\end{aligned}
 $$
 
 Do đó:

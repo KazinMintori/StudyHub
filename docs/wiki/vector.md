@@ -7,35 +7,52 @@ next: false
 
 # Vector
 
-Vector là danh sách có thứ tự các thành phần, thường biểu diễn vị trí, lực hoặc đặc trưng. Cộng hai vector cùng số chiều bằng cách cộng từng thành phần. Nhân với một số bằng cách nhân mọi thành phần. Vector khác đại lượng vô hướng ở chỗ nó có nhiều thành phần hoặc mang cả hướng.
+Một robot đi sang phải 3 mét rồi tiến lên 1 mét. Độ dời không thể được mô tả đầy đủ bằng một số đo độ dài, vì hướng đi cũng cần được giữ lại. **Vector** biểu diễn đồng thời các thành phần của một đại lượng, chẳng hạn vị trí, vận tốc hoặc bộ đặc trưng của một mẫu dữ liệu.
 
 <WikiUsage />
 
+![Hình 1: Hai độ dời tạo cùng một vector tổng theo hai thứ tự.](./img/atlas/vector.svg)
+
 ## Giải thích kỹ thuật
 
-**Thành phần phụ thuộc cơ sở.** Cùng một vector hình học có thể có bộ tọa độ khác nhau trong hai hệ cơ sở. Việc cộng và nhân vô hướng cần thống nhất cơ sở và số chiều.
+Trong mặt phẳng, viết $u=(u_1,u_2)$. Hai thành phần là tọa độ của vector theo hệ trục đã chọn. Cộng vector nghĩa là cộng các thành phần tương ứng:
 
-Vector đơn vị có chuẩn bằng 1. Chuẩn hóa $v\ne 0$ bằng $\frac{v}{\|v\|}$. Không thể chuẩn hóa vector không bằng phép chia này. Vector nhiều chiều cũng có thể chỉ biểu diễn đặc trưng dữ liệu, không nhất thiết là một mũi tên trong không gian vật lý.
+$$
+u+v=(u_1+v_1,u_2+v_2).
+$$
 
-## Ví dụ
+Nhân với số $a$ cho $au=(au_1,au_2)$. Với $a>0$, hướng được giữ nguyên. Với $a<0$, hướng đảo lại. Khi $a=0$, kết quả là vector không.
 
-$u = (1, 2)$, $v = (3, -1)$: $u + v = (4, 1)$. $2u = (2, 4)$.
+Một điểm và một vector có thể dùng cùng dạng tọa độ nhưng giữ vai trò khác nhau. Điểm $P$ nói “ở đâu”, còn vector $\overrightarrow{PQ}$ nói “dịch chuyển thế nào từ $P$ tới $Q$”. Khi đổi gốc tọa độ, tọa độ điểm thay đổi nhưng độ dời giữa hai điểm không thay đổi.
 
-## Khi nào cần dùng?
+Trong học máy, vector đặc trưng có thể chứa tuổi, chiều cao và số lần mua hàng. Các thành phần không nhất thiết có cùng đơn vị. Vì vậy, độ dài Euclid của vector đó chỉ có ý nghĩa sau khi đã chọn thang đo thích hợp.
 
-Hiểu dữ liệu nhiều chiều, gradient, lực và điện trường.
+## Ví dụ có lời giải
 
-## Tự kiểm tra
+Xét $u=(3,1)$ và $v=(1,3)$. Hai đường đi có cùng tổng độ dời:
 
-Với $v = (2, -3)$, −v là gì?
+$$
+u+v=(4,4)=v+u.
+$$
 
-<details><summary>Xem đáp án</summary>
+Hình bình hành minh họa vì sao thứ tự hai độ dời không làm đổi điểm cuối. Tuy nhiên, độ dài của tổng không bằng tổng độ dài nói chung. Hai vector ngược hướng có thể triệt tiêu nhau.
 
-$(-2, 3)$.
+Với $w=(-3,-1)$, ta có $u+w=(0,0)$. Độ dài kết quả bằng 0 dù từng độ dời đều khác 0.
 
-</details>
+## Câu hỏi ôn lại
 
-## Thuật ngữ liên quan
+Cho $u=(2,-1)$ và $v=(-1,4)$. Tính $2u-v$ và giải thích vì sao thứ tự các thành phần không được đổi tùy ý.
+
+::: details Xem lời giải
+Ta được $2u=(4,-2)$, do đó $2u-v=(5,-6)$. Thành phần thứ nhất và thứ hai gắn với hai trục hoặc hai đặc trưng đã xác định. Đổi thứ tự nghĩa là đổi cách mô tả đối tượng, không chỉ đổi cách viết.
+:::
+
+## Đọc tiếp
 
 - [Ma trận](./ma-tran.md)
-- [Tổ hợp lồi](./to-hop-loi.md)
+- [Tích vô hướng](./tich-vo-huong.md)
+- [Chuẩn vector](./chuan.md)
+
+## Tài liệu tham khảo
+
+- [OpenStax, Calculus Volume 3, Vectors in the Plane](https://openstax.org/books/calculus-volume-3/pages/2-1-vectors-in-the-plane).

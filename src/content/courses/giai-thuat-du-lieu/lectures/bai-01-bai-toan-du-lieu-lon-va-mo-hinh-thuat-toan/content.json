@@ -37,17 +37,17 @@
     },
     {
       "source": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 649,
+      "line": 651,
       "title": "Bài tập từ MMDS"
     },
     {
       "source": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 662,
+      "line": 664,
       "title": ""
     },
     {
       "source": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 738,
+      "line": 746,
       "title": ""
     }
   ],
@@ -64,12 +64,12 @@
     },
     {
       "source": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 684,
+      "line": 686,
       "title": ""
     },
     {
       "source": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 754,
+      "line": 762,
       "title": ""
     }
   ],
@@ -305,19 +305,19 @@
     {
       "reference": "img/lec-01/bai-tap-quy-mo.svg",
       "declaredIn": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 720,
+      "line": 728,
       "source": "docs/giai-thuat-du-lieu/bai-giang/img/lec-01/bai-tap-quy-mo.svg"
     },
     {
       "reference": "img/lec-01/bai-tap-ba-ngay.svg",
       "declaredIn": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 724,
+      "line": 732,
       "source": "docs/giai-thuat-du-lieu/bai-giang/img/lec-01/bai-tap-ba-ngay.svg"
     },
     {
       "reference": "img/lec-01/ung-dung-trung-gio-hang.svg",
       "declaredIn": "docs/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md",
-      "line": 748,
+      "line": 756,
       "source": "docs/giai-thuat-du-lieu/bai-giang/img/lec-01/ung-dung-trung-gio-hang.svg"
     }
   ]

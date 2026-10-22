@@ -16,106 +16,116 @@
   "examples": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 44,
+      "line": 47,
       "title": "Theo dõi bước nhảy trên một tọa độ đơn lẻ"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 81,
+      "line": 92,
       "title": "Tính toán bước đầu với RMSProp"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 189,
+      "line": 208,
       "title": "Minh họa CG giải hệ tuyến tính hai chiều"
     }
   ],
   "exercises": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 248,
+      "line": 135,
+      "title": "3.1 Bản chất toán học của Phép Hiệu chỉnh Chệch (Bias Correction)"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
+      "line": 160,
+      "title": "3.2 Từng bước tính toán số học của Adam"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
+      "line": 275,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 250,
+      "line": 277,
       "title": "1. Bản chất của Trung bình bình phương vs Bình phương trung bình"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 262,
+      "line": 289,
       "title": "2. Phân tích bước khởi đầu của Adam"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 281,
+      "line": 316,
       "title": "3. Tại sao Adam không thể thay thế ma trận Hessian đầy đủ?"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 297,
+      "line": 337,
       "title": "4. Phân tích toán học cơ chế hiệu chỉnh chệch (Bias Correction) của Adam"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 363,
+      "line": 424,
       "title": "5. So sánh động lực học suy giảm bước học: AdaGrad vs RMSProp"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 418,
+      "line": 483,
       "title": "6. Phương pháp Gradient liên hợp (Conjugate Gradient) trên hàm toàn phương"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 501,
+      "line": 613,
       "title": "7. Điều kiện cát tuyến và cập nhật xấp xỉ Hessian Quasi-Newton BFGS"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 565,
+      "line": 680,
       "title": "8. Cơ chế làm mượt bề mặt mất mát của Batch Normalization"
     }
   ],
   "solutions": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 255,
+      "line": 282,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 266,
+      "line": 293,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 286,
+      "line": 321,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 313,
+      "line": 356,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 372,
+      "line": 433,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 429,
+      "line": 494,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 513,
+      "line": 628,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
-      "line": 576,
+      "line": 695,
       "title": ""
     }
   ],

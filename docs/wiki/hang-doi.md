@@ -7,36 +7,49 @@ next: false
 
 # Hàng đợi
 
-Hàng đợi lấy phần tử theo thứ tự vào trước, ra trước (FIFO). Thêm ở cuối và lấy ở đầu. Trong BFS, hàng đợi giữ các nút chờ duyệt, nên các nút ở tầng hiện tại được xử lý trước tầng tiếp theo.
+Trong một hàng phục vụ thông thường, người tới trước được xử lý trước. **Hàng đợi** mô tả quy tắc vào trước, ra trước (FIFO), hữu ích cho công việc chờ xử lý và thuật toán tìm kiếm theo chiều rộng.
 
 <WikiUsage />
 
+![Hình 1: Hàng đợi lấy A trước, còn ngăn xếp lấy C trước.](./img/atlas/queue-stack.svg)
+
 ## Giải thích kỹ thuật
 
-**Chi phí cài đặt.** Hàng đợi có thể dùng danh sách liên kết hoặc vùng nhớ vòng. Trong mô hình thích hợp, thêm cuối và lấy đầu đều tốn O(1). Xóa phần tử đầu của một mảng bằng cách dịch toàn bộ phần còn lại có thể tốn O(n).
+Thao tác `enqueue` thêm phần tử vào cuối, còn `dequeue` lấy phần tử ở đầu. Hàng đợi cần lưu thông tin đủ để cả hai thao tác không phải di chuyển toàn bộ dãy sau mỗi lần lấy.
 
-Đây là lý do cần phân biệt cấu trúc trừu tượng hàng đợi với một cách cài đặt cụ thể. Quy tắc FIFO quyết định thứ tự duyệt BFS.
+Trong Python, `collections.deque` hỗ trợ thêm cuối bằng `append` và lấy đầu bằng `popleft`. Dùng `list.pop(0)` cho cùng ý nghĩa thứ tự nhưng có thể phải dời các phần tử còn lại, nên chi phí khác nhau.
 
-## Ví dụ
+FIFO khác hàng đợi ưu tiên. Trong hàng đợi ưu tiên, phần tử được chọn theo khóa ưu tiên chứ không thuần theo thời điểm đến. Hai kiểu dữ liệu giải quyết hai quy tắc lập lịch khác nhau.
 
-Thêm A, rồi B, rồi C: Thứ tự lấy ra là A, B, C.
+## Ví dụ có lời giải
 
-## Khi nào cần dùng?
+Thêm A, B, C rồi phục vụ một phần tử:
 
-Hiểu BFS, xử lý tác vụ và dữ liệu theo thứ tự đến.
+```python
+from collections import deque
 
-## Tự kiểm tra
+queue = deque(["A", "B", "C"])
+assert queue.popleft() == "A"
+queue.append("D")
+assert list(queue) == ["B", "C", "D"]
+```
 
-Thêm 2, 5, 8 vào hàng đợi. Phần tử được lấy đầu tiên là gì?
+Trong BFS trên đồ thị không trọng số, các đỉnh cách nguồn một cạnh được đưa vào hàng đợi trước những đỉnh cách nguồn hai cạnh. Cùng với việc đánh dấu đã thăm đúng lúc, thứ tự này bảo đảm tìm khoảng cách theo số cạnh.
 
-<details><summary>Xem đáp án</summary>
+## Câu hỏi ôn lại
 
-2.
+Tại sao đổi hàng đợi BFS thành ngăn xếp thường làm mất bảo đảm khoảng cách ngắn nhất?
 
-</details>
+::: details Xem lời giải
+Ngăn xếp ưu tiên đỉnh mới được phát hiện, nên có thể đi sâu trên một nhánh trước khi xử lý các đỉnh gần nguồn còn lại. Thứ tự theo từng mức khoảng cách không còn được giữ.
+:::
 
-## Thuật ngữ liên quan
+## Đọc tiếp
 
 - [Ngăn xếp](./ngan-xep.md)
+- [Hàng đợi ưu tiên](./hang-doi-uu-tien.md)
 - [Đồ thị](./do-thi.md)
-- [Trạng thái](./trang-thai.md)
+
+## Tài liệu tham khảo
+
+- [Princeton, Algorithms, Bags, Queues, and Stacks](https://algs4.cs.princeton.edu/13stacks/).

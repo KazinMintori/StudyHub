@@ -14,7 +14,11 @@ Trong phân cực tròn, đầu vectơ điện trường ở một điểm quay 
 ## Giải thích kỹ thuật
 
 $$
-E_y =E_0\cos\psi,\\E_z =E_0\sin\psi,\\E_y^2+E_z^2 =E_0^2.
+\begin{aligned}
+&E_y =E_0\cos\psi,\\
+&E_z =E_0\sin\psi,\\
+&E_y^2+E_z^2 =E_0^2.
+\end{aligned}
 $$
 
 Hai thành phần bằng biên độ và lệch pha một phần tư chu kỳ làm độ lớn điện trường không đổi trong khi hướng quay. Cần nêu hướng nhìn trước khi gọi phân cực phải hoặc trái.

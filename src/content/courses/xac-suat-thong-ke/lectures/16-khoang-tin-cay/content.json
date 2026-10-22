@@ -15,39 +15,39 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 408,
+      "line": 399,
       "title": "Bài tập rèn luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 410,
+      "line": 401,
       "title": "Bài tập 1: Ước lượng thời gian bay bằng khoảng tin cậy 95%"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 489,
+      "line": 480,
       "title": "Bài tập 2: Quy mô tổng thể và chi phí sinh hoạt gia đình"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 570,
+      "line": 561,
       "title": "Bài tập 3: Phân tích các phát biểu ngộ nhận về khoảng tin cậy"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 426,
+      "line": 417,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 505,
+      "line": 496,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 584,
+      "line": 575,
       "title": ""
     }
   ],
@@ -85,25 +85,25 @@
     {
       "reference": "./img/stat20-16/triptych-sample-only.jpg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 169,
+      "line": 164,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-16/triptych-sample-only.jpg"
     },
     {
       "reference": "./img/stat20-16/triptych-subs.jpg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 193,
+      "line": 188,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-16/triptych-subs.jpg"
     },
     {
       "reference": "./img/stat20-16/unnamed-chunk-7-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 307,
+      "line": 298,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-16/unnamed-chunk-7-1.png"
     },
     {
       "reference": "./img/stat20-16/unnamed-chunk-9-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/16-khoang-tin-cay.md",
-      "line": 386,
+      "line": 377,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-16/unnamed-chunk-9-1.png"
     }
   ]

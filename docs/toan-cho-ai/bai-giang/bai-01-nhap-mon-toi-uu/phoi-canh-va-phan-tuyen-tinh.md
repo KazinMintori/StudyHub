@@ -62,7 +62,10 @@ $$
 là tập lồi. Chứng minh dùng đúng lập luận ở mục 2 theo chiều ngược lại: Với $(x, t), (y, s) \in P^{-1}(C)$ và $\theta \in [0, 1]$,
 
 $$
-\frac{\theta x + (1 - \theta) y}{\theta t + (1 - \theta) s} = \mu \frac{x}{t} + (1 - \mu) \frac{y}{s}, \qquad \mu = \frac{\theta t}{\theta t + (1 - \theta) s} \in [0, 1],
+\begin{aligned}
+&\frac{\theta x + (1 - \theta) y}{\theta t + (1 - \theta) s} = \mu \frac{x}{t} + (1 - \mu) \frac{y}{s}, \qquad\\
+&\mu = \frac{\theta t}{\theta t + (1 - \theta) s} \in [0, 1],
+\end{aligned}
 $$
 
 nên điểm này thuộc $C$ vì là tổ hợp lồi của hai điểm thuộc $C$. Một cách hình dung: Tập $P^{-1}(C)$ là hợp của mọi tia từ gốc đi qua tập $C$ đặt ở độ cao $t = 1$, tức là **nón** sinh bởi $C$ (bỏ đi gốc tọa độ). Tập ảnh ngược này sẽ xuất hiện lại khi ta nói về phối cảnh của một hàm ở chủ đề về các phép toán giữ tính lồi của hàm.
@@ -96,7 +99,11 @@ Trong tối ưu hóa, hàm phân tuyến tính giữ vai trò cầu nối trong 
 Một ứng dụng sâu sắc của phép phân tuyến tính xuất hiện trực tiếp trong lý thuyết xác suất và suy diễn thống kê. Gọi $u \in \{1, \dots, n\}$ và $v \in \{1, \dots, m\}$ là hai biến ngẫu nhiên rời rạc, với phân phối xác suất đồng thời là ma trận các phần tử $p_{ij} = \operatorname{prob}(u = i, v = j)$. Khi đó, phân phối xác suất có điều kiện được tính bởi:
 
 $$
-f_{ij} = \operatorname{prob}(u = i \mid v = j) = \frac{p_{ij}}{\sum_{k=1}^{n} p_{kj}} = \frac{p_{ij}}{p_{1j} + p_{2j} + \dots + p_{nj}} .
+\begin{aligned}
+f_{ij} &= \operatorname{prob}(u = i \mid v = j)\\
+&= \frac{p_{ij}}{\sum_{k=1}^{n} p_{kj}}\\
+&= \frac{p_{ij}}{p_{1j} + p_{2j} + \dots + p_{nj}} .
+\end{aligned}
 $$
 
 Tử số $p_{ij}$ là hàm tuyến tính theo $p$, và mẫu số $\sum_{k=1}^n p_{kj}$ cũng là hàm tuyến tính theo $p$, đồng thời mẫu số luôn dương khi $\operatorname{prob}(v = j) > 0$. Như vậy, ánh xạ biến đổi từ phân phối xác suất đồng thời sang phân phối xác suất có điều kiện là một hàm phân tuyến tính.

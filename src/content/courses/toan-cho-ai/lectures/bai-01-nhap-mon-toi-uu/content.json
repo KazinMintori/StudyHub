@@ -118,12 +118,12 @@
   "examples": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 247,
+      "line": 263,
       "title": "Phân biệt điểm đạt yêu cầu, vượt ngưỡng và không khả thi"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 343,
+      "line": 359,
       "title": "Minh họa ràng buộc chặt và ràng buộc không chặt"
     },
     {
@@ -138,27 +138,27 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 208,
+      "line": 224,
       "title": "Thiết lập hệ phương trình tính tọa độ trọng tâm"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 344,
+      "line": 372,
       "title": "Minh họa cụ thể phép tịnh tiến đường thẳng về không gian con"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 426,
+      "line": 474,
       "title": "Giải và tham số hóa tập nghiệm của một siêu phẳng trong không gian 3D"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 512,
+      "line": 566,
       "title": "Phân tích bao affine của các tập hình học tiêu biểu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 555,
+      "line": 609,
       "title": "Minh họa tính bảo toàn tổ hợp affine qua hàm số cụ thể"
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
-      "line": 183,
+      "line": 191,
       "title": "Tính tọa độ trọng tâm và kiểm tra bao lồi tam giác"
     },
     {
@@ -178,7 +178,7 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
-      "line": 201,
+      "line": 214,
       "title": "Kiểm tra nghiệm không âm bằng phương pháp khử đại số"
     },
     {
@@ -188,27 +188,27 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 170,
+      "line": 194,
       "title": "Tính toán khoảng cách có dấu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 282,
+      "line": 322,
       "title": "Kiểm tra quan hệ chứa giữa hai nửa không gian"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 362,
+      "line": 414,
       "title": "Tính toán nửa không gian Voronoi với số liệu cụ thể"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
-      "line": 80,
+      "line": 84,
       "title": "Xác định các bán trục của một ellipse nghiêng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
-      "line": 99,
+      "line": 105,
       "title": "Chuyển đổi biểu diễn tam giác trong mặt phẳng và không gian"
     },
     {
@@ -223,7 +223,7 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
-      "line": 86,
+      "line": 89,
       "title": "Ảnh của một tam giác"
     },
     {
@@ -243,27 +243,27 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
-      "line": 85,
+      "line": 98,
       "title": "Hai đặc trưng cộng tuyến và tác dụng của điều chuẩn ridge"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
-      "line": 133,
+      "line": 158,
       "title": "Log det dọc một đường thẳng cụ thể"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
-      "line": 145,
+      "line": 146,
       "title": "ELBO trên một mô hình hai trạng thái"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
-      "line": 142,
+      "line": 151,
       "title": "Đọc hàm mất mát của hồi quy logistic có điều chuẩn"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
-      "line": 63,
+      "line": 66,
       "title": "Phân bổ một đơn vị với chi phí bình phương"
     }
   ],
@@ -275,87 +275,132 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 139,
+      "line": 150,
       "title": "2. Tập lồi, Phản ví dụ và Ba cấp độ Bảo đảm Tối ưu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 171,
+      "line": 183,
       "title": "3. Bài toán điều khiển tối ưu một bước với giới hạn chấp hành"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 200,
+      "line": 225,
       "title": "4. Hệ phương trình chuẩn tắc và Phân tích hình học phép chiếu OLS"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 248,
+      "line": 297,
       "title": "5. Ma trận thiếu hạng và Cấu trúc Tập nghiệm Affine"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 276,
+      "line": 334,
       "title": "6. Nghịch lý Mất mát Logistic khi Dữ liệu phân tách tuyến tính"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 305,
+      "line": 368,
       "title": "7. Khắc phục bằng Điều chuẩn L2 trong Hồi quy Logistic"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 344,
+      "line": 417,
       "title": "8. Mô hình hóa Hệ thống Phân bố Công suất Chiếu sáng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 376,
+      "line": 456,
       "title": "9. Chuỗi lập luận tối ưu hóa cho hàm Log-Sum-Exp điều quy"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 476,
+      "line": 509,
       "title": "1. Bài toán cứu hộ khi bờ biển có chướng ngại vật"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 498,
+      "line": 534,
       "title": "2. Xác định giá trị tối ưu và tập tối ưu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 512,
+      "line": 548,
       "title": "3. Quy chuẩn hóa về dạng chuẩn tắc"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
-      "line": 219,
+      "line": 16,
+      "title": "1.1 Bài toán và hệ phương trình chuẩn"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 36,
+      "title": "1.2 Bức tranh hình học: Phép chiếu vuông góc"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 61,
+      "title": "1.3 Hai biến thể thường gặp"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 76,
+      "title": "2.1 Bài toán"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 89,
+      "title": "2.2 Bức tranh hình học: Đẩy một đường mức qua một đa giác"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 99,
+      "title": "2.3 Chứng nhận một nghiệm LP mà không cần thử mọi điểm"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 117,
+      "title": "2.4 Biến một bài toán không trơn thành LP"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 231,
       "title": "1. Bình phương tối thiểu bằng tay"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
-      "line": 227,
+      "line": 239,
       "title": "2. Cùng dữ liệu, tiêu chí khác"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
-      "line": 341,
+      "line": 361,
       "title": "3. Viết một LP từ mô tả"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 639,
+      "line": 211,
+      "title": "3.1 Tọa độ trọng tâm (Barycentric Coordinates)"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
+      "line": 508,
+      "title": "6.1 Ứng dụng trong học máy: Hiện tượng thừa tham số (Overparameterization)"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
+      "line": 703,
       "title": "1. Tham số hóa và xác định vị trí tương đối trên đường thẳng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 685,
+      "line": 757,
       "title": "2. Xác định cấu trúc tập nghiệm và số chiều"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 738,
+      "line": 820,
       "title": "3. Khảo sát bao affine và tính chất không gian con"
     },
     {
@@ -370,102 +415,102 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
-      "line": 318,
+      "line": 326,
       "title": "1. Chứng minh hoặc bác bỏ tính lồi của các tập hợp"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
-      "line": 352,
+      "line": 363,
       "title": "2. Tổ hợp lồi của các phân phối xác suất"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
-      "line": 405,
+      "line": 444,
       "title": "3. Chứng minh bao lồi là giao của mọi tập lồi chứa tập hợp ban đầu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
-      "line": 331,
+      "line": 353,
       "title": "1. Nhận diện nón và nón lồi"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
-      "line": 352,
+      "line": 374,
       "title": "2. Biểu diễn vector trong nón sinh bởi ba vector trong không gian"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 482,
+      "line": 542,
       "title": "1. Xác định các tham số hình học của siêu phẳng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 525,
+      "line": 595,
       "title": "2. Khoảng cách giữa hai mặt phẳng song song"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 559,
+      "line": 642,
       "title": "3. Miền Voronoi của ba điểm trong mặt phẳng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
-      "line": 246,
+      "line": 263,
       "title": "1. Xác định hình dạng ellipsoid từ ma trận đường chéo"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
-      "line": 268,
+      "line": 285,
       "title": "2. Chuyển đổi giữa dạng ảnh và dạng ràng buộc"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
-      "line": 306,
+      "line": 327,
       "title": "3. Tính diện tích ellipse và so sánh khoảng cách Mahalanobis"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
-      "line": 228,
+      "line": 260,
       "title": "1. So sánh giá trị các chuẩn"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
-      "line": 250,
+      "line": 286,
       "title": "2. Biểu diễn quả cầu chuẩn ℓ1 qua hệ bất đẳng thức tuyến tính"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
-      "line": 264,
+      "line": 305,
       "title": "3. Ràng buộc nón bậc hai và miền parabol"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
-      "line": 177,
+      "line": 183,
       "title": "1. Tìm đỉnh của đa diện"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
-      "line": 197,
+      "line": 203,
       "title": "2. Đơn hình xác suất dưới dạng chuẩn ma trận"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
-      "line": 209,
+      "line": 215,
       "title": "3. Nhận dạng tập đa diện"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
-      "line": 231,
+      "line": 268,
       "title": "1. Kiểm tra tính chất của ba ma trận đối xứng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
-      "line": 254,
+      "line": 296,
       "title": "2. Tính chất tổ hợp nón và hiện tượng bù trừ"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
-      "line": 277,
+      "line": 322,
       "title": "3. Số chiều và cấu trúc của nón con ma trận đường chéo"
     },
     {
@@ -485,12 +530,12 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
-      "line": 135,
+      "line": 142,
       "title": "1. Tính μ"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
-      "line": 147,
+      "line": 154,
       "title": "2. Ảnh ngược của một nửa không gian qua hàm phân tuyến tính"
     },
     {
@@ -520,17 +565,17 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
-      "line": 129,
+      "line": 132,
       "title": "1. Tính một nón đối ngẫu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
-      "line": 143,
+      "line": 149,
       "title": "2. Chuẩn đối ngẫu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
-      "line": 155,
+      "line": 161,
       "title": "3. Vô hướng hóa trên một tập hữu hạn"
     },
     {
@@ -565,200 +610,300 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
-      "line": 182,
+      "line": 198,
       "title": "1. Kiểm tra bằng Hessian"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
-      "line": 190,
+      "line": 206,
       "title": "2. Một hàm không lồi với hai cực tiểu toàn cục"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
-      "line": 202,
+      "line": 218,
       "title": "3. Hessian của chuẩn Euclid"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
-      "line": 203,
+      "line": 231,
       "title": "1. Phân loại nhanh"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
-      "line": 211,
+      "line": 239,
       "title": "2. Nhiệt độ và độ chính xác của log-sum-exp"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
-      "line": 219,
+      "line": 247,
       "title": "3. Làm mềm nhãn cho entropy chéo"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
-      "line": 217,
+      "line": 225,
       "title": "1. Một tập mức dưới"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
-      "line": 225,
+      "line": 233,
       "title": "2. Epigraph của 1/x như một điều kiện ma trận"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
-      "line": 233,
+      "line": 241,
       "title": "3. Ba khoảng cách Jensen"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
-      "line": 194,
+      "line": 203,
       "title": "1. Đọc tính lồi bằng quy tắc"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
-      "line": 202,
+      "line": 211,
       "title": "2. Khoảng cách tới một đoạn"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
-      "line": 210,
+      "line": 219,
       "title": "3. Huber với ngưỡng tùy ý"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
-      "line": 117,
+      "line": 121,
       "title": "1. Bài toán nào là bài toán lồi ở dạng chuẩn?"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
-      "line": 125,
+      "line": 129,
       "title": "2. Tập nghiệm lồi"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
-      "line": 133,
+      "line": 137,
       "title": "3. Hai giếng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
-      "line": 135,
+      "line": 138,
       "title": "1. Kiểm chứng một nghiệm trên biên"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
-      "line": 149,
+      "line": 156,
       "title": "2. Chiếu lên đơn hình"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
-      "line": 163,
+      "line": 175,
       "title": "3. Điều kiện bù"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
-      "line": 139,
+      "line": 145,
       "title": "1. Hồi quy Poisson"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
-      "line": 147,
+      "line": 153,
       "title": "2. Đối xứng hoán vị bằng số"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
-      "line": 161,
+      "line": 170,
       "title": "3. Đổi biến"
     }
   ],
   "solutions": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 113,
+      "line": 114,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 147,
+      "line": 158,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 181,
+      "line": 196,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 211,
+      "line": 236,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 257,
+      "line": 306,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 286,
+      "line": 344,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 314,
+      "line": 380,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 355,
+      "line": 428,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.md",
-      "line": 383,
+      "line": 463,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 482,
+      "line": 234,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
+      "line": 437,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
+      "line": 446,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
+      "line": 454,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
+      "line": 462,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
+      "line": 469,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
+      "line": 477,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
+      "line": 515,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 505,
+      "line": 541,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 518,
+      "line": 562,
       "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 199,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 207,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 215,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
       "line": 223,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
+      "line": 235,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
-      "line": 245,
+      "line": 257,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.md",
-      "line": 345,
+      "line": 365,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 649,
+      "line": 132,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
+      "line": 654,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
+      "line": 667,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
+      "line": 676,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
+      "line": 686,
+      "title": "Xem phân tích chi tiết"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
+      "line": 713,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 695,
+      "line": 770,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.md",
-      "line": 744,
+      "line": 826,
       "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/noi-tuong-doi.md",
+      "line": 135,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/noi-tuong-doi.md",
+      "line": 143,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/noi-tuong-doi.md",
+      "line": 151,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/noi-tuong-doi.md",
+      "line": 159,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/noi-tuong-doi.md",
@@ -772,103 +917,263 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
+      "line": 278,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
+      "line": 288,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
+      "line": 302,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
+      "line": 316,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
+      "line": 334,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
+      "line": 376,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
+      "line": 451,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
+      "line": 303,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
+      "line": 313,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
+      "line": 327,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
+      "line": 337,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
+      "line": 361,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
+      "line": 387,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
+      "line": 486,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
+      "line": 500,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
+      "line": 516,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
+      "line": 532,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
+      "line": 556,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
+      "line": 610,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
+      "line": 646,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
+      "line": 231,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
+      "line": 239,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
+      "line": 247,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
+      "line": 255,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
+      "line": 273,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
+      "line": 299,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
+      "line": 331,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
+      "line": 228,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
+      "line": 236,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
+      "line": 244,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
+      "line": 252,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
+      "line": 264,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
+      "line": 290,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
+      "line": 315,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
+      "line": 146,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
+      "line": 154,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
+      "line": 162,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
+      "line": 172,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
+      "line": 193,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
+      "line": 207,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
+      "line": 225,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
+      "line": 215,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
+      "line": 223,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
+      "line": 231,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
+      "line": 250,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
+      "line": 277,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
+      "line": 300,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
       "line": 326,
       "title": ""
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
-      "line": 361,
-      "title": ""
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.md",
+      "line": 115,
+      "title": "Xem lời giải thích"
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.md",
-      "line": 412,
-      "title": ""
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.md",
+      "line": 125,
+      "title": "Xem lời giải thích"
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
-      "line": 339,
-      "title": ""
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.md",
+      "line": 133,
+      "title": "Xem lời giải thích"
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-loi.md",
-      "line": 361,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 496,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 537,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-va-nua-khong-gian.md",
-      "line": 563,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
-      "line": 256,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
-      "line": 282,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/qua-cau-va-ellipsoid.md",
-      "line": 310,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
-      "line": 232,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
-      "line": 254,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/chuan-va-non-chuan.md",
-      "line": 274,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
-      "line": 187,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
-      "line": 201,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/da-dien-va-don-hinh.md",
-      "line": 219,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
-      "line": 240,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
-      "line": 258,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-psd.md",
-      "line": 281,
-      "title": ""
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.md",
+      "line": 143,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.md",
@@ -887,13 +1192,48 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
-      "line": 143,
+      "line": 118,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
+      "line": 126,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
+      "line": 134,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
+      "line": 150,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.md",
-      "line": 151,
+      "line": 158,
       "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md",
+      "line": 111,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md",
+      "line": 119,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md",
+      "line": 127,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md",
+      "line": 135,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md",
@@ -904,6 +1244,26 @@
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.md",
       "line": 161,
       "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md",
+      "line": 147,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md",
+      "line": 155,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md",
+      "line": 163,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md",
+      "line": 171,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.md",
@@ -922,18 +1282,53 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
-      "line": 133,
+      "line": 108,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
+      "line": 116,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
+      "line": 124,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
+      "line": 136,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
-      "line": 147,
+      "line": 153,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.md",
-      "line": 159,
+      "line": 165,
       "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/ham-loi.md",
+      "line": 108,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/ham-loi.md",
+      "line": 118,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/ham-loi.md",
+      "line": 130,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/ham-loi.md",
+      "line": 140,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/ham-loi.md",
@@ -952,6 +1347,26 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.md",
+      "line": 180,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.md",
+      "line": 188,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.md",
+      "line": 196,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.md",
+      "line": 210,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.md",
       "line": 222,
       "title": ""
     },
@@ -967,38 +1382,93 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
-      "line": 186,
+      "line": 166,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
+      "line": 174,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
+      "line": 182,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
+      "line": 190,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
+      "line": 202,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
-      "line": 194,
+      "line": 210,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.md",
-      "line": 206,
+      "line": 222,
       "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
+      "line": 199,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
       "line": 207,
-      "title": ""
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
       "line": 215,
-      "title": ""
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
       "line": 223,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
+      "line": 235,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
+      "line": 243,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.md",
+      "line": 251,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
-      "line": 221,
-      "title": ""
+      "line": 193,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
+      "line": 201,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
+      "line": 209,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
+      "line": 217,
+      "title": "Xem lời giải thích"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
@@ -1011,63 +1481,148 @@
       "title": ""
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
-      "line": 198,
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.md",
+      "line": 245,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
-      "line": 206,
+      "line": 171,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
+      "line": 179,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
+      "line": 187,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
+      "line": 195,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
+      "line": 207,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
-      "line": 214,
+      "line": 215,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.md",
+      "line": 223,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "line": 89,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "line": 97,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "line": 105,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "line": 113,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "line": 125,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "line": 133,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "line": 141,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
+      "line": 106,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
+      "line": 114,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
+      "line": 122,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
+      "line": 130,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
+      "line": 142,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
+      "line": 160,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
+      "line": 179,
+      "title": ""
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
+      "line": 113,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
       "line": 121,
-      "title": ""
+      "title": "Xem lời giải thích"
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
       "line": 129,
-      "title": ""
+      "title": "Xem lời giải thích"
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.md",
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
       "line": 137,
-      "title": ""
+      "title": "Xem lời giải thích"
     },
     {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
-      "line": 139,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
-      "line": 153,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.md",
-      "line": 167,
+      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
+      "line": 149,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
-      "line": 143,
+      "line": 157,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
-      "line": 151,
-      "title": ""
-    },
-    {
-      "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.md",
-      "line": 165,
+      "line": 174,
       "title": ""
     }
   ],
@@ -1081,7 +1636,7 @@
     {
       "reference": "../img/lec-01/epsilon-gan-toi-uu.svg",
       "declaredIn": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 250,
+      "line": 266,
       "source": "docs/toan-cho-ai/bai-giang/img/lec-01/epsilon-gan-toi-uu.svg"
     }
   ]

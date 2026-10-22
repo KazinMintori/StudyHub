@@ -45,7 +45,12 @@ Từ góc nhìn hình học này, ta nhận thấy một đặc trưng bản ch�
 Dữ liệu tự đặt gồm ba cặp $(t_i, y_i) = (0, 1), (1, 2), (2, 4)$. Mô hình $y = at + c$ có hai tham số $x = (a, c)$, nên
 
 $$
-A = \begin{bmatrix} 0 & 1 \\ 1 & 1 \\ 2 & 1 \end{bmatrix}, \qquad b = \begin{bmatrix} 1 \\ 2 \\ 4 \end{bmatrix}, \qquad A^T A = \begin{bmatrix} 5 & 3 \\ 3 & 3 \end{bmatrix}, \qquad A^T b = \begin{bmatrix} 10 \\ 7 \end{bmatrix}.
+\begin{aligned}
+&A = \begin{bmatrix} 0 & 1 \\ 1 & 1 \\ 2 & 1 \end{bmatrix}, \qquad\\
+&b = \begin{bmatrix} 1 \\ 2 \\ 4 \end{bmatrix}, \qquad\\
+&A^T A = \begin{bmatrix} 5 & 3 \\ 3 & 3 \end{bmatrix}, \qquad\\
+&A^T b = \begin{bmatrix} 10 \\ 7 \end{bmatrix}.
+\end{aligned}
 $$
 
 Hệ chuẩn là $5a + 3c = 10$ và $3a + 3c = 7$. Lấy phương trình đầu trừ phương trình sau được $2a = 3$, nên $a^\star = \tfrac32$ và $c^\star = \tfrac56$. Vector dự đoán là $Ax^\star = (\tfrac56, \tfrac73, \tfrac{23}{6})$ và phần dư là $r = Ax^\star - b = (-\tfrac16, \tfrac13, -\tfrac16)$.
@@ -98,7 +103,11 @@ Xét bài toán cực đại $5x_1 + 4x_2$ với $x_1 + x_2 \le 6$, $2x_1 + x_2 
 Ý tưởng là cộng các ràng buộc lại với những hệ số không âm. Nhân ràng buộc thứ nhất với 3 và ràng buộc thứ hai với 1 rồi cộng lại:
 
 $$
-3\,(x_1 + x_2) + 1 \cdot (2x_1 + x_2) = 5x_1 + 4x_2 \le 3 \cdot 6 + 1 \cdot 9 = 27 .
+\begin{aligned}
+3\,(x_1 + x_2) + 1 \cdot (2x_1 + x_2) &= 5x_1 + 4x_2\\
+&\le 3 \cdot 6 + 1 \cdot 9\\
+&= 27 .
+\end{aligned}
 $$
 
 Hệ số được chọn sao cho vế trái đúng bằng hàm mục tiêu. Hai hệ số phải không âm, vì nhân một bất đẳng thức với số âm sẽ đảo chiều nó. Vậy với **mọi** điểm khả thi, giá trị mục tiêu không vượt quá 27, và điểm $(3, 3)$ đạt đúng 27, nên nó tối ưu. Cặp hệ số $(3, 1)$ là một **chứng nhận tối ưu**: Ai cũng kiểm tra được nó chỉ bằng vài phép nhân.
@@ -170,7 +179,10 @@ Mặc dù tối ưu phi lồi là một bài toán khó, lý thuyết và thuậ
 2. **Nới lỏng lồi và tính toán chặn dưới toàn cục (Convex relaxation & Global lower bounds)**:
    Bằng cách nới lỏng các ràng buộc rời rạc hoặc phi lồi thành các tập lồi chứa chúng (ví dụ: Ràng buộc nhị phân $x_i \in \{0, 1\}$ được nới lỏng thành đoạn lồi $x_i \in [0, 1]$, hoặc ràng buộc ma trận hạng một được nới lỏng thành nón ma trận nửa xác định dương trong SDP relaxation), ta thu được một bài toán tối ưu lồi nới lỏng. Do tập khả thi của bài toán lồi bao trọn tập khả thi của bài toán phi lồi, giá trị tối ưu của bài toán lồi luôn cung cấp một **ngưỡng chặn dưới toàn cục (global lower bound)** chắc chắn:
    $$
-   p^\star_{\mathrm{convex}} \le p^\star_{\mathrm{nonconvex}} \le f_0(x_{\mathrm{feasible}}).
+   \begin{aligned}
+   p^\star_{\mathrm{convex}} &\le p^\star_{\mathrm{nonconvex}}\\
+   &\le f_0(x_{\mathrm{feasible}}).
+   \end{aligned}
    $$
    Với bất kỳ nghiệm khả thi $x_{\mathrm{feasible}}$ nào tìm được, khoảng cách $f_0(x_{\mathrm{feasible}}) - p^\star_{\mathrm{convex}}$ mang lại một **chứng chỉ giới hạn khoảng cách nghiệm (suboptimality certificate)**: Ta biết chắc chắn giải pháp hiện tại chỉ kém nghiệm toàn cục lý tưởng nhiều nhất là bao nhiêu, mang lại sự tự tin kỹ thuật mà không cần phải giải bài toán phi lồi đầy đủ.
 
@@ -228,11 +240,11 @@ Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4
 Với bốn số liệu $1, 3, 4, 12$, xét bài toán tìm hằng số $c$ theo hai tiêu chuẩn khác nhau:
 1. Cực tiểu hóa tổng sai số tuyệt đối theo chuẩn $\ell_1$:
    $$
-\begin{aligned}
-f(c) &= \sum_{i=1}^4 |c - b_i| \\
-&= |c - 1| + |c - 3| + |c - 4| + |c - 12|.
-\end{aligned}
-$$
+   \begin{aligned}
+   f(c) &= \sum_{i=1}^4 |c - b_i| \\
+   &= |c - 1| + |c - 3| + |c - 4| + |c - 12|.
+   \end{aligned}
+   $$
 2. Cực tiểu hóa sai số lớn nhất theo chuẩn $\ell_\infty$: $\max_{i=1,\dots,4} |c - b_i|$.
 
 Hãy tìm nghiệm tối ưu trong từng trường hợp và so sánh với nghiệm bình phương tối thiểu ở Bài 1.
@@ -256,7 +268,11 @@ Ta áp dụng bất đẳng thức tam giác $|u| + |v| \ge |u - v|$ bằng các
 **Xét cặp ngoài cùng**: Đổi dấu số hạng thứ hai và áp dụng bất đẳng thức tam giác:
 
 $$
-|c - 1| + |c - 12| = |c - 1| + |12 - c| \ge |(c - 1) + (12 - c)| = 11.
+\begin{aligned}
+|c - 1| + |c - 12| &= |c - 1| + |12 - c|\\
+&\ge |(c - 1) + (12 - c)|\\
+&= 11.
+\end{aligned}
 $$
 
 Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0$, tức là $1 \le c \le 12$.
@@ -264,7 +280,11 @@ Dấu bằng xảy ra khi $(c - 1)(12 - c) \ge 0$, tức là $1 \le c \le 12$.
 **Xét cặp bên trong**: Thực hiện tương tự cho hai số hạng ở giữa:
 
 $$
-|c - 3| + |c - 4| = |c - 3| + |4 - c| \ge |(c - 3) + (4 - c)| = 1.
+\begin{aligned}
+|c - 3| + |c - 4| &= |c - 3| + |4 - c|\\
+&\ge |(c - 3) + (4 - c)|\\
+&= 1.
+\end{aligned}
 $$
 
 Dấu bằng xảy ra khi $(c - 3)(4 - c) \ge 0$, tức là $3 \le c \le 4$.
@@ -346,7 +366,11 @@ Một cửa hàng pha hai loại hạt. Loại I giá 4 đơn vị tiền mỗi 
 Bài toán là cực tiểu $4x_1 + 3x_2$ với $3x_1 + x_2 \ge 6$, $x_1 + 2x_2 \ge 7$, $x_1, x_2 \ge 0$. Điểm $(1, 3)$ khả thi vì $3 + 3 = 6$ và $1 + 6 = 7$, với chi phí $13$. Ta tìm hai hệ số $y_1, y_2 \ge 0$ sao cho $y_1(3x_1 + x_2) + y_2(x_1 + 2x_2)$ trùng với $4x_1 + 3x_2$. So sánh hệ số được hệ $3y_1 + y_2 = 4$, $y_1 + 2y_2 = 3$, cho $y_1 = y_2 = 1$, cả hai không âm. Vậy với mọi điểm khả thi,
 
 $$
-4x_1 + 3x_2 = (3x_1 + x_2) + (x_1 + 2x_2) \ge 6 + 7 = 13.
+\begin{aligned}
+4x_1 + 3x_2 &= (3x_1 + x_2) + (x_1 + 2x_2)\\
+&\ge 6 + 7\\
+&= 13.
+\end{aligned}
 $$
 
 Vì $(1, 3)$ đạt đúng 13, nó là nghiệm tối ưu. Lần này các ràng buộc có dạng $\ge$ và ta cực tiểu, nên tổ hợp không âm cho một cận dưới thay vì cận trên.

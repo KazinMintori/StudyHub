@@ -72,7 +72,63 @@
     "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
     "raw_materials/physics/translations/chapter-37/09-newton-va-tuong-doi-rong.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 121,
+      "title": "Ví dụ 37.1: Thời gian sống của muon ở tốc độ 0,990c"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 135,
+      "title": "Ví dụ 37.2: Đồng hồ trên máy bay"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 170,
+      "title": "Ví dụ 37.3: Khi nào một khoảng thời gian là thời gian riêng?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 115,
+      "title": "Ví dụ 37.4: Chiều dài tàu đo từ Trái Đất"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 131,
+      "title": "Ví dụ 37.5: Khoảng cách hai người trên mặt đất đo từ tàu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+      "line": 117,
+      "title": "Ví dụ 37.6: Tin mừng có được phát trước khi về đích không?"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+      "line": 138,
+      "title": "Ví dụ 37.7: Đầu dò và tàu trinh sát"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/06-doppler-dien-tu.md",
+      "line": 60,
+      "title": "Ví dụ 37.8: Luồng vật chất từ tâm thiên hà"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/07-dong-luong-tuong-doi.md",
+      "line": 94,
+      "title": "Ví dụ 37.9: Electron chịu điện trường"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+      "line": 143,
+      "title": "Ví dụ 37.10: Electron được gia tốc qua điện thế"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+      "line": 176,
+      "title": "Ví dụ 37.11: Va chạm tạo pion"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
@@ -627,6 +683,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-37/00-mo-dau.md",
+      "line": 45,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-37/11-luyen-tap-huong-dan.md",
       "line": 17,
       "title": "Lời giải chi tiết"
@@ -1135,6 +1196,41 @@
       "source": "raw_materials/physics/translations/chapter-37/19-mcat.md",
       "line": 115,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/01-bat-bien-dinh-luat.md",
+      "line": 100,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/02-tinh-tuong-doi-dong-thoi.md",
+      "line": 49,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+      "line": 212,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+      "line": 170,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+      "line": 165,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/07-dong-luong-tuong-doi.md",
+      "line": 132,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+      "line": 214,
+      "title": "Xem đáp án và giải thích"
     }
   ],
   "assets": [

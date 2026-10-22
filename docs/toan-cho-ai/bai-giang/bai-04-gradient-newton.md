@@ -53,13 +53,19 @@ Hướng dốc nhất chưa chuẩn hóa (unnormalized steepest descent directio
 Khi sử dụng chuẩn Euclid $\|v\|_2 = \sqrt{v^T v}$, bất đẳng thức Cauchy–Schwarz khẳng định:
 
 $$
-\nabla f(x)^T v \ge -\|\nabla f(x)\|_2 \|v\|_2 = -\|\nabla f(x)\|_2.
+\begin{aligned}
+\nabla f(x)^T v &\ge -\|\nabla f(x)\|_2 \|v\|_2\\
+&= -\|\nabla f(x)\|_2.
+\end{aligned}
 $$
 
 Đẳng thức đạt được khi và chỉ khi $v$ chỉ ngược chiều với gradient:
 
 $$
-\Delta x_{\mathrm{nsd}} = -\frac{\nabla f(x)}{\|\nabla f(x)\|_2}, \qquad \Delta x_{\mathrm{sd}} = -\nabla f(x).
+\begin{aligned}
+&\Delta x_{\mathrm{nsd}} = -\frac{\nabla f(x)}{\|\nabla f(x)\|_2}, \qquad\\
+&\Delta x_{\mathrm{sd}} = -\nabla f(x).
+\end{aligned}
 $$
 
 Đây chính là thuật toán **Gradient Descent**: Di chuyển thẳng theo hướng ngược chiều vector gradient.
@@ -141,13 +147,20 @@ $$
 Cực tiểu hóa mô hình toàn phương này dẫn tới hệ phương trình Newton:
 
 $$
-\nabla_v q(v) = \nabla f(x) + \nabla^2 f(x) v = 0 \iff \boxed{\nabla^2 f(x) \Delta x_{\mathrm{nt}} = -\nabla f(x).}
+\begin{aligned}
+\nabla_v q(v) &= \nabla f(x) + \nabla^2 f(x) v\\
+&= 0\\
+&\iff \boxed{\nabla^2 f(x) \Delta x_{\mathrm{nt}} = -\nabla f(x).}
+\end{aligned}
 $$
 
 Trong phương pháp Newton, đại lượng **Newton decrement** $\lambda(x)$ được định nghĩa là:
 
 $$
-\lambda(x) = \left( \nabla f(x)^T [\nabla^2 f(x)]^{-1} \nabla f(x) \right)^{1/2} = \left( \Delta x_{\mathrm{nt}}^T \nabla^2 f(x) \Delta x_{\mathrm{nt}} \right)^{1/2}.
+\begin{aligned}
+\lambda(x) &= \left( \nabla f(x)^T [\nabla^2 f(x)]^{-1} \nabla f(x) \right)^{1/2}\\
+&= \left( \Delta x_{\mathrm{nt}}^T \nabla^2 f(x) \Delta x_{\mathrm{nt}} \right)^{1/2}.
+\end{aligned}
 $$
 
 Đại lượng này mang ba ý nghĩa toán học đặc biệt:
@@ -188,7 +201,11 @@ $$
 - Hàm toàn phương lồi là tự tương hợp vì đạo hàm bậc ba triệt tiêu: $f''' = 0$.
 - Hàm chắn logarit $f(x) = -\log x$ với $x > 0$ là tự tương hợp vì:
   $$
-  |f'''(x)| = \frac{2}{x^3} = 2 \left(\frac{1}{x^2}\right)^{3/2} = 2 [f''(x)]^{3/2}.
+  \begin{aligned}
+  |f'''(x)| &= \frac{2}{x^3}\\
+  &= 2 \left(\frac{1}{x^2}\right)^{3/2}\\
+  &= 2 [f''(x)]^{3/2}.
+  \end{aligned}
   $$
 
 Lý thuyết tự tương hợp khẳng định rằng: Số bước lặp của phương pháp Newton để giải một bài toán tự tương hợp bị chặn trên bởi một hằng số chỉ phụ thuộc vào độ chính xác $\epsilon$ và giá trị mục tiêu khởi đầu, hoàn toàn độc lập với hệ tọa độ và số chiều biến!
@@ -284,7 +301,10 @@ Giả sử bài toán khả thi ngặt (thỏa mãn điều kiện Slater).
 Ý tưởng của phương pháp là xấp xỉ hàm chỉ thị của miền khả thi bất đẳng thức bằng một hàm số trơn khả vi bên trong miền khả thi ngặt:
 
 $$
-\phi(x) = -\sum_{i=1}^m \log(-f_i(x)), \qquad \operatorname{dom} \phi = \{x \in \mathcal{D} \mid f_i(x) < 0, \, i = 1, \dots, m\}.
+\begin{aligned}
+&\phi(x) = -\sum_{i=1}^m \log(-f_i(x)), \qquad\\
+&\operatorname{dom} \phi = \{x \in \mathcal{D} \mid f_i(x) < 0, \, i = 1, \dots, m\}.
+\end{aligned}
 $$
 
 Gradient và Hessian của hàm chắn logarit:
@@ -320,7 +340,10 @@ $$
 Đặt $\lambda_i^*(t) = -\frac{1}{t f_i(x^*(t))} > 0$ và $\nu^*(t) = \hat \nu / t$. Bộ nhân tử này hoàn toàn thỏa mãn tính khả thi đối ngẫu! Giá trị hàm đối ngẫu tương ứng là:
 
 $$
-g(\lambda^*(t), \nu^*(t)) = f_0(x^*(t)) + \sum_{i=1}^m \lambda_i^*(t) f_i(x^*(t)) = f_0(x^*(t)) - \frac{m}{t}.
+\begin{aligned}
+g(\lambda^*(t), \nu^*(t)) &= f_0(x^*(t)) + \sum_{i=1}^m \lambda_i^*(t) f_i(x^*(t))\\
+&= f_0(x^*(t)) - \frac{m}{t}.
+\end{aligned}
 $$
 
 Hệ quả nền tảng: **Khoảng cách đối ngẫu tại điểm $x^*(t)$ đúng bằng $m/t$**:
@@ -362,21 +385,32 @@ Cho hàm số hai biến $f(x_1, x_2)$ có gradient tại điểm hiện tại l
 1. Chuẩn Euclid của gradient: $\|\nabla f(x)\|_2 = \sqrt{3^2 + (-4)^2} = 5$.
    Hướng dốc nhất theo chuẩn $L_2$:
    $$
-   \Delta x_{\mathrm{nsd}, 2} = -\frac{\nabla f(x)}{\|\nabla f(x)\|_2} = -\frac{1}{5} \begin{bmatrix} 3 \\ -4 \end{bmatrix} = \begin{bmatrix} -0.6 \\ 0.8 \end{bmatrix}.
+   \begin{aligned}
+   \Delta x_{\mathrm{nsd}, 2} &= -\frac{\nabla f(x)}{\|\nabla f(x)\|_2}\\
+   &= -\frac{1}{5} \begin{bmatrix} 3 \\ -4 \end{bmatrix}\\
+   &= \begin{bmatrix} -0.6 \\ 0.8 \end{bmatrix}.
+   \end{aligned}
    $$
 
 2. **Theo chuẩn $L_1$**:
    Tọa độ có trị tuyệt đối gradient lớn nhất là tọa độ thứ hai vì $|-4| = 4 > |3| = 3$.
    Do đó hướng dốc nhất theo chuẩn $L_1$ chỉ di chuyển trên tọa độ thứ hai:
    $$
-   \Delta x_{\mathrm{nsd}, 1} = -\operatorname{sign}(-4) e_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
+   \begin{aligned}
+   \Delta x_{\mathrm{nsd}, 1} &= -\operatorname{sign}(-4) e_2\\
+   &= \begin{bmatrix} 0 \\ 1 \end{bmatrix}.
+   \end{aligned}
    $$
    Tích vô hướng đạt được là $\nabla f(x)^T \Delta x = 3(0) + (-4)(1) = -4$.
 
 3. **Theo chuẩn $L_\infty$**:
    Mọi tọa độ đều nhận giá trị cực biên $\pm 1$:
    $$
-   \Delta x_{\mathrm{nsd}, \infty} = -\operatorname{sign}(\nabla f(x)) = \begin{bmatrix} -\operatorname{sign}(3) \\ -\operatorname{sign}(-4) \end{bmatrix} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}.
+   \begin{aligned}
+   \Delta x_{\mathrm{nsd}, \infty} &= -\operatorname{sign}(\nabla f(x))\\
+   &= \begin{bmatrix} -\operatorname{sign}(3) \\ -\operatorname{sign}(-4) \end{bmatrix}\\
+   &= \begin{bmatrix} -1 \\ 1 \end{bmatrix}.
+   \end{aligned}
    $$
    Tích vô hướng đạt được là $\nabla f(x)^T \Delta x = 3(-1) + (-4)(1) = -7$.
 :::
@@ -394,7 +428,10 @@ với hằng số $c > 0$.
 **Lời giải**:
 1. Ràng buộc chuẩn tắc: $f_1(x) = -x \le 0$. Hàm chắn logarit:
    $$
-   \phi(x) = -\log(-f_1(x)) = -\log(x) , \quad x > 0.
+   \begin{aligned}
+   &\phi(x) = -\log(-f_1(x)) = -\log(x) , \quad\\
+   &x > 0.
+   \end{aligned}
    $$
    Hàm mục tiêu trên đường trung tâm với tham số $t > 0$:
    $$
@@ -403,7 +440,11 @@ với hằng số $c > 0$.
 
 2. Tìm cực tiểu bằng cách đạo hàm theo $x$:
    $$
-   \psi_t'(x) = t c - \frac{1}{x} = 0 \iff x^*(t) = \frac{1}{t c}.
+   \begin{aligned}
+   \psi_t'(x) &= t c - \frac{1}{x}\\
+   &= 0\\
+   &\iff x^*(t) = \frac{1}{t c}.
+   \end{aligned}
    $$
    Đạo hàm bậc hai $\psi_t''(x) = 1/x^2 > 0$, chứng minh $x^*(t) = \frac{1}{tc}$ là nghiệm duy nhất.
    Giá trị hàm mục tiêu gốc tại điểm này là:
@@ -425,11 +466,20 @@ Hỏi sau bao nhiêu bước lặp ngoài thì thuật toán bảo đảm tìm �
 **Lời giải**:
 Khoảng cách đối ngẫu sau $k$ bước lặp ngoài là:
 $$
-\frac{m}{t^{(k)}} = \frac{m}{t^{(0)} \mu^k} = \frac{1000}{1 \cdot 10^k} = \frac{10^3}{10^k} = 10^{3 - k}.
+\begin{aligned}
+\frac{m}{t^{(k)}} &= \frac{m}{t^{(0)} \mu^k}\\
+&= \frac{1000}{1 \cdot 10^k}\\
+&= \frac{10^3}{10^k}\\
+&= 10^{3 - k}.
+\end{aligned}
 $$
 Để bảo đảm sai số không vượt quá $\epsilon = 10^{-6}$, ta cần:
 $$
-10^{3 - k} \le 10^{-6} \iff 3 - k \le -6 \iff k \ge 9.
+\begin{aligned}
+10^{3 - k} &\le 10^{-6}\\
+&\iff 3 - k \le -6\\
+&\iff k \ge 9.
+\end{aligned}
 $$
 Như vậy, chỉ sau đúng **9 bước lặp ngoài**, thuật toán hàm chắn đã đưa sai số mục tiêu từ ngưỡng 1000 ban đầu xuống dưới $10^{-6}$.
 :::
@@ -443,7 +493,10 @@ Khởi tạo từ điểm $x^0 = (2, 4)^T$.
 1. Tính gradient $g = \nabla f(x^0)$ và giá trị hàm số $f(x^0)$. Xét mô hình xấp xỉ tuyến tính có phạt chuẩn $Q_I(d) = f(x^0) + g^T d + \frac{1}{2}\|d\|_2^2$. Chứng minh hướng giảm dốc nhất chuẩn hóa chính là hướng gradient ngược $d_G = -g$.
 2. Với các tham số quay lui Armijo $\alpha = 0{,}1$ và hệ số co bước $\beta = 0{,}5$, ngưỡng chấp nhận bước $t$ là:
    $$
-   f(x^0 + t d_G) \le f(x^0) + \alpha t g^T d_G = 62 - 82t.
+   \begin{aligned}
+   f(x^0 + t d_G) &\le f(x^0) + \alpha t g^T d_G\\
+   &= 62 - 82t.
+   \end{aligned}
    $$
    Kiểm tra tuần tự các bước thử $t = 1$, $t = 0{,}5$, $t = 0{,}25$: Tính tọa độ điểm thử, giá trị hàm số thực tế, so sánh với ngưỡng Armijo và chỉ ra bước nhảy đầu tiên được chấp nhận.
 3. Giải thích tại sao bước dài $t = 1$ làm hàm số tăng vọt (hiện tượng vọt lố qua hẻm núi), và nêu trực giác tại sao điều kiện Armijo kết thúc sau hữu hạn bước co.
@@ -454,11 +507,18 @@ Khởi tạo từ điểm $x^0 = (2, 4)^T$.
    Gradient của hàm số tại điểm bất kỳ là $\nabla f(x) = (3x_1, 7x_2)^T$.
    Tại điểm khởi đầu $x^0 = (2, 4)^T$:
    $$
-   g = \nabla f(x^0) = (3 \times 2, 7 \times 4)^T = (6, 28)^T.
+   \begin{aligned}
+   g &= \nabla f(x^0)\\
+   &= (3 \times 2, 7 \times 4)^T\\
+   &= (6, 28)^T.
+   \end{aligned}
    $$
    Giá trị hàm số:
    $$
-   f(x^0) = \frac{1}{2}(3 \times 2^2 + 7 \times 4^2) = 62.
+   \begin{aligned}
+   f(x^0) &= \frac{1}{2}(3 \times 2^2 + 7 \times 4^2)\\
+   &= 62.
+   \end{aligned}
    $$
    Bình phương độ dài gradient: $\|g\|_2^2 = 6^2 + 28^2 = 36 + 784 = 820$.
    
@@ -468,20 +528,32 @@ Khởi tạo từ điểm $x^0 = (2, 4)^T$.
    $$
    Lấy đạo hàm theo $d$ và giải điều kiện triệt tiêu gradient:
    $$
-   \nabla_d Q_I(d) = g + d = 0 \implies d_G = -g = (-6, -28)^T.
+   \begin{aligned}
+   \nabla_d Q_I(d) &= g + d\\
+   &= 0\\
+   &\implies d_G = -g\\
+   &= (-6, -28)^T.
+   \end{aligned}
    $$
    Vì ma trận đơn vị $I \succ 0$, điểm này là cực tiểu toàn cục duy nhất của mô hình. Tích vô hướng với gradient: $g^T d_G = -\|g\|_2^2 = -820 < 0$, khẳng định $d_G$ là một hướng giảm hợp lệ.
 
 2. **Kiểm tra quy tắc quay lui Armijo**:
    Ngưỡng chấp nhận Armijo:
    $$
-   62 + \alpha t (-820) = 62 - 0{,}1 \times 820 t = 62 - 82t.
+   \begin{aligned}
+   62 + \alpha t (-820) &= 62 - 0{,}1 \times 820 t\\
+   &= 62 - 82t.
+   \end{aligned}
    $$
    - **Thử $t = 1$**:
      Điểm thử là $x = x^0 + d_G = (-4, -24)^T$.
      Giá trị hàm số:
      $$
-     f(-4, -24) = \frac{1}{2}(3 \times 16 + 7 \times 576) = \frac{1}{2}(48 + 4032) = 2040.
+     \begin{aligned}
+     f(-4, -24) &= \frac{1}{2}(3 \times 16 + 7 \times 576)\\
+     &= \frac{1}{2}(48 + 4032)\\
+     &= 2040.
+     \end{aligned}
      $$
      Ngưỡng yêu cầu: $62 - 82(1) = -20$.
      Vì $2040 > -20$, bước $t = 1$ bị từ chối thẳng thừng do vọt lố nghiêm trọng.
@@ -489,7 +561,11 @@ Khởi tạo từ điểm $x^0 = (2, 4)^T$.
      Điểm thử là $x = x^0 + 0{,}5 d_G = (-1, -10)^T$.
      Giá trị hàm số:
      $$
-     f(-1, -10) = \frac{1}{2}(3 \times 1 + 7 \times 100) = \frac{703}{2} = 351{,}5.
+     \begin{aligned}
+     f(-1, -10) &= \frac{1}{2}(3 \times 1 + 7 \times 100)\\
+     &= \frac{703}{2}\\
+     &= 351{,}5.
+     \end{aligned}
      $$
      Ngưỡng yêu cầu: $62 - 82(0{,}5) = 62 - 41 = 21$.
      Vì $351{,}5 > 21$, bước $t = 0{,}5$ tiếp tục bị loại.
@@ -497,7 +573,12 @@ Khởi tạo từ điểm $x^0 = (2, 4)^T$.
      Điểm thử là $x = x^0 + 0{,}25 d_G = (0{,}5; -3)^T$.
      Giá trị hàm số:
      $$
-     f(0{,}5; -3) = \frac{1}{2}(3 \times 0{,}25 + 7 \times 9) = \frac{1}{2}(0{,}75 + 63) = \frac{63{,}75}{2} = 31{,}875.
+     \begin{aligned}
+     f(0{,}5; -3) &= \frac{1}{2}(3 \times 0{,}25 + 7 \times 9)\\
+     &= \frac{1}{2}(0{,}75 + 63)\\
+     &= \frac{63{,}75}{2}\\
+     &= 31{,}875.
+     \end{aligned}
      $$
      Ngưỡng yêu cầu: $62 - 82(0{,}25) = 62 - 20{,}5 = 41{,}5$.
      Vì $31{,}875 \le 41{,}5$, điều kiện Armijo được thỏa mãn.
@@ -547,11 +628,17 @@ với vector gradient $g \ne 0$.
 2. **Nghiệm tối ưu và chuẩn đối ngẫu**:
    Từ phương trình đạo hàm:
    $$
-   2\zeta W v = -g \implies v = -\frac{1}{2\zeta} W^{-1} g.
+   \begin{aligned}
+   2\zeta W v &= -g\\
+   &\implies v = -\frac{1}{2\zeta} W^{-1} g.
+   \end{aligned}
    $$
    Thay vào ràng buộc $v^T W v = 1$:
    $$
-   \left(-\frac{1}{2\zeta} W^{-1} g\right)^T W \left(-\frac{1}{2\zeta} W^{-1} g\right) = \frac{1}{4\zeta^2} g^T W^{-1} g = 1.
+   \begin{aligned}
+   \left(-\frac{1}{2\zeta} W^{-1} g\right)^T W \left(-\frac{1}{2\zeta} W^{-1} g\right) &= \frac{1}{4\zeta^2} g^T W^{-1} g\\
+   &= 1.
+   \end{aligned}
    $$
    Suy ra nhân tử Lagrange tối ưu:
    $$
@@ -559,23 +646,38 @@ với vector gradient $g \ne 0$.
    $$
    Đặt chuẩn đối ngẫu $\|g\|_* = \sqrt{g^T W^{-1} g}$, ta tìm được hướng giảm dốc nhất chuẩn hóa:
    $$
-   v^* = -\frac{W^{-1} g}{\sqrt{g^T W^{-1} g}} = -\frac{W^{-1} g}{\|g\|_*}.
+   \begin{aligned}
+   v^* &= -\frac{W^{-1} g}{\sqrt{g^T W^{-1} g}}\\
+   &= -\frac{W^{-1} g}{\|g\|_*}.
+   \end{aligned}
    $$
    Giá trị hàm mục tiêu tại nghiệm là:
    $$
-   g^T v^* = -\frac{g^T W^{-1} g}{\|g\|_*} = -\frac{\|g\|_*^2}{\|g\|_*} = -\|g\|_* = -\sqrt{g^T W^{-1} g}.
+   \begin{aligned}
+   g^T v^* &= -\frac{g^T W^{-1} g}{\|g\|_*}\\
+   &= -\frac{\|g\|_*^2}{\|g\|_*}\\
+   &= -\|g\|_*\\
+   &= -\sqrt{g^T W^{-1} g}.
+   \end{aligned}
    $$
 
 3. **Mối liên hệ với phương pháp Newton**:
    Khi loại bỏ việc chuẩn hóa độ dài đơn vị và co dãn theo độ lớn gradient chuẩn đối ngẫu:
    $$
-   d = \|g\|_* v^* = \|g\|_* \left(-\frac{W^{-1} g}{\|g\|_*}\right) = -W^{-1} g.
+   \begin{aligned}
+   d &= \|g\|_* v^*\\
+   &= \|g\|_* \left(-\frac{W^{-1} g}{\|g\|_*}\right)\\
+   &= -W^{-1} g.
+   \end{aligned}
    $$
    Vector $d$ nghiệm đúng phương trình ma trận $W d = -g$.
    
    Khi chọn $W = \nabla^2 f(x) \succ 0$ là ma trận Hessian tại điểm hiện tại, phương trình trở thành:
    $$
-   \nabla^2 f(x) d = -\nabla f(x) \implies d_N = -\big[\nabla^2 f(x)\big]^{-1} \nabla f(x).
+   \begin{aligned}
+   \nabla^2 f(x) d &= -\nabla f(x)\\
+   &\implies d_N = -\big[\nabla^2 f(x)\big]^{-1} \nabla f(x).
+   \end{aligned}
    $$
    Đây chính là bước lặp Newton kinh điển.
    
@@ -598,38 +700,73 @@ Xét điểm khởi tạo $s^0 = 0{,}25$.
 1. **Đạo hàm và ma trận Hessian**:
    Đạo hàm bậc một và bậc hai:
    $$
-   \varphi'(s) = 1 - \frac{1}{s}, \qquad \varphi''(s) = \frac{1}{s^2}.
+   \begin{aligned}
+   &\varphi'(s) = 1 - \frac{1}{s}, \qquad\\
+   &\varphi''(s) = \frac{1}{s^2}.
+   \end{aligned}
    $$
    Tại điểm $s^0 = 0{,}25 = \frac{1}{4}$:
    $$
-   g = \varphi'(1/4) = 1 - 4 = -3, \qquad H = \varphi''(1/4) = \frac{1}{(1/4)^2} = 16.
+   \begin{aligned}
+   &g = \varphi'(1/4) = 1 - 4 = -3, \qquad\\
+   &\begin{aligned}
+   H &= \varphi''(1/4)\\
+   &= \frac{1}{(1/4)^2}\\
+   &= 16.
+   \end{aligned}
+   \end{aligned}
    $$
    Vì $H = 16 > 0$, hàm số lồi chặt tại lân cận điểm đang xét.
 
 2. **Mô hình bậc hai và bước lặp Newton**:
    Mô hình xấp xỉ Taylor bậc hai theo độ dời $d$:
    $$
-   Q_H(d) = \varphi(1/4) + g d + \frac{1}{2} H d^2 = \varphi(1/4) - 3d + 8d^2.
+   \begin{aligned}
+   Q_H(d) &= \varphi(1/4) + g d + \frac{1}{2} H d^2\\
+   &= \varphi(1/4) - 3d + 8d^2.
+   \end{aligned}
    $$
    Đạo hàm theo $d$ và giải điều kiện triệt tiêu:
    $$
-   Q_H'(d) = -3 + 16d = 0 \implies d_N = \frac{3}{16} = 0{,}1875.
+   \begin{aligned}
+   Q_H'(d) &= -3 + 16d\\
+   &= 0\\
+   &\implies d_N = \frac{3}{16}\\
+   &= 0{,}1875.
+   \end{aligned}
    $$
    Điểm cập nhật mới sau một bước Newton thuần túy ($t = 1$):
    $$
-   s^1 = s^0 + d_N = \frac{1}{4} + \frac{3}{16} = \frac{7}{16} = 0{,}4375.
+   \begin{aligned}
+   s^1 &= s^0 + d_N\\
+   &= \frac{1}{4} + \frac{3}{16}\\
+   &= \frac{7}{16}\\
+   &= 0{,}4375.
+   \end{aligned}
    $$
    Kiểm tra đạo hàm tại điểm mới: $\varphi'(7/16) = 1 - \frac{16}{7} = -\frac{9}{7} \ne 0$, chứng tỏ điểm $s^1$ tiến gần hơn về nghiệm nhưng chưa phải nghiệm tối ưu.
 
 3. **Newton decrement và mức giảm mô hình**:
    Đại lượng giảm lượng Newton được định nghĩa:
    $$
-   \lambda(s^0) = \sqrt{g^T H^{-1} g} = \sqrt{(-3) \times \frac{1}{16} \times (-3)} = \sqrt{\frac{9}{16}} = \frac{3}{4} = 0{,}75.
+   \begin{aligned}
+   \lambda(s^0) &= \sqrt{g^T H^{-1} g}\\
+   &= \sqrt{(-3) \times \frac{1}{16} \times (-3)}\\
+   &= \sqrt{\frac{9}{16}}\\
+   &= \frac{3}{4}\\
+   &= 0{,}75.
+   \end{aligned}
    $$
    Bình phương của nó: $\lambda(s^0)^2 = \frac{9}{16} = 0{,}5625$.
    Mức giảm giá trị được dự đoán bởi mô hình bậc hai:
    $$
-   Q_H(0) - Q_H(d_N) = -g d_N - \frac{1}{2} H d_N^2 = -(-3)\left(\frac{3}{16}\right) - 8\left(\frac{3}{16}\right)^2 = \frac{9}{16} - \frac{9}{32} = \frac{9}{32} = \frac{1}{2}\lambda(s^0)^2.
+   \begin{aligned}
+   Q_H(0) - Q_H(d_N) &= -g d_N - \frac{1}{2} H d_N^2\\
+   &= -(-3)\left(\frac{3}{16}\right) - 8\left(\frac{3}{16}\right)^2\\
+   &= \frac{9}{16} - \frac{9}{32}\\
+   &= \frac{9}{32}\\
+   &= \frac{1}{2}\lambda(s^0)^2.
+   \end{aligned}
    $$
    Giá trị mức giảm dự đoán là $\frac{9}{32} = 0{,}28125$.
 
@@ -637,15 +774,22 @@ Xét điểm khởi tạo $s^0 = 0{,}25$.
    - Nghiệm tối ưu toàn cục giải tích của $\varphi(s)$ là $s^* = 1$ với giá trị tối ưu $\varphi(1) = 1 - \log 1 = 1$.
    - Sai số tối ưu thực tế tại điểm khởi đầu:
      $$
-     \varphi(s^0) - \varphi(s^*) = \left(\frac{1}{4} - \log\frac{1}{4}\right) - 1 = -\frac{3}{4} + \log 4 \approx -0{,}75 + 1{,}3863 = 0{,}6363.
+     \begin{aligned}
+     \varphi(s^0) - \varphi(s^*) &= \left(\frac{1}{4} - \log\frac{1}{4}\right) - 1\\
+     &= -\frac{3}{4} + \log 4\\
+     &\approx -0{,}75 + 1{,}3863\\
+     &= 0{,}6363.
+     \end{aligned}
      $$
    - Mức giảm thực tế sau một bước lặp:
      $$
-\begin{aligned}
-\varphi(s^0) - \varphi(s^1) &= \left(\frac{1}{4} + \log 4\right) - \left(\frac{7}{16} - \log\frac{7}{16}\right) \\
-&= -\frac{3}{16} + \log\frac{64}{7} \approx -0{,}1875 + 2{,}2130 = 0{,}2933.
-\end{aligned}
-$$
+     \begin{aligned}
+     \varphi(s^0) - \varphi(s^1) &= \left(\frac{1}{4} + \log 4\right) - \left(\frac{7}{16} - \log\frac{7}{16}\right)\\
+     &= -\frac{3}{16} + \log\frac{64}{7}\\
+     &\approx -0{,}1875 + 2{,}2130\\
+     &= 0{,}2933.
+     \end{aligned}
+     $$
    
    **Phân biệt ba đại lượng**:
    - Mức giảm dự đoán $\frac{1}{2}\lambda^2 = 0{,}28125$: Dựa trên mô hình parabol thuần túy.
@@ -671,7 +815,13 @@ $$
 1. **Phương pháp Newton-KKT**:
    Gradient và Hessian của hàm mục tiêu:
    $$
-   \nabla f(x) = \begin{bmatrix} x_1 \\ 2x_2 \\ 3x_3 \end{bmatrix}, \qquad H = \nabla^2 f(x) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}.
+   \begin{aligned}
+   &\nabla f(x) = \begin{bmatrix} x_1 \\ 2x_2 \\ 3x_3 \end{bmatrix}, \qquad\\
+   &\begin{aligned}
+   H &= \nabla^2 f(x)\\
+   &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}.
+   \end{aligned}
+   \end{aligned}
    $$
    Ma trận ràng buộc đẳng thức: $A = \begin{bmatrix} 1 & 1 & 1 \end{bmatrix}$, $b = 1$.
    
@@ -681,38 +831,72 @@ $$
    $$
    Khai triển hệ phương trình:
    $$
-\begin{aligned}
-\Delta x_1 + w &= -1 \implies \Delta x_1 = -1 - w, \\
-2\Delta x_2 + w &= 0 \implies \Delta x_2 = -\frac{w}{2}, \\
-3\Delta x_3 + w &= 0 \implies \Delta x_3 = -\frac{w}{3}.
-\end{aligned}
-$$
+   \begin{aligned}
+   &\begin{aligned}
+   \Delta x_1 + w &= -1\\
+   &\implies \Delta x_1 = -1 - w,
+   \end{aligned}\\
+   &\begin{aligned}
+   2\Delta x_2 + w &= 0\\
+   &\implies \Delta x_2 = -\frac{w}{2},
+   \end{aligned}\\
+   &\begin{aligned}
+   3\Delta x_3 + w &= 0\\
+   &\implies \Delta x_3 = -\frac{w}{3}.
+   \end{aligned}
+   \end{aligned}
+   $$
    Thay vào ràng buộc bảo toàn tính khả thi $A \Delta x = \Delta x_1 + \Delta x_2 + \Delta x_3 = 0$:
    $$
-   (-1 - w) - \frac{w}{2} - \frac{w}{3} = 0 \iff -1 - w\left(1 + \frac{1}{2} + \frac{1}{3}\right) = 0 \iff w\left(\frac{11}{6}\right) = -1 \implies w = -\frac{6}{11}.
+   \begin{aligned}
+   (-1 - w) - \frac{w}{2} - \frac{w}{3} &= 0\\
+   &\iff -1 - w\left(1 + \frac{1}{2} + \frac{1}{3}\right) = 0\\
+   &\iff w\left(\frac{11}{6}\right) = -1\\
+   &\implies w = -\frac{6}{11}.
+   \end{aligned}
    $$
    Tính các thành phần của hướng cập nhật:
    $$
-   \Delta x_1 = -1 - \left(-\frac{6}{11}\right) = -\frac{5}{11}, \quad \Delta x_2 = -\frac{-6/11}{2} = \frac{3}{11}, \quad \Delta x_3 = -\frac{-6/11}{3} = \frac{2}{11}.
+   \begin{aligned}
+   &\begin{aligned}
+   \Delta x_1 &= -1 - \left(-\frac{6}{11}\right)\\
+   &= -\frac{5}{11}, \quad
+   \end{aligned}\\
+   &\begin{aligned}
+   \Delta x_2 &= -\frac{-6/11}{2}\\
+   &= \frac{3}{11}, \quad
+   \end{aligned}\\
+   &\begin{aligned}
+   \Delta x_3 &= -\frac{-6/11}{3}\\
+   &= \frac{2}{11}.
+   \end{aligned}
+   \end{aligned}
    $$
    Cập nhật nghiệm mới:
    $$
-   x^* = x^0 + \Delta x = \begin{bmatrix} 1 - 5/11 \\ 0 + 3/11 \\ 0 + 2/11 \end{bmatrix} = \begin{bmatrix} 6/11 \\ 3/11 \\ 2/11 \end{bmatrix}.
+   \begin{aligned}
+   x^* &= x^0 + \Delta x\\
+   &= \begin{bmatrix} 1 - 5/11 \\ 0 + 3/11 \\ 0 + 2/11 \end{bmatrix}\\
+   &= \begin{bmatrix} 6/11 \\ 3/11 \\ 2/11 \end{bmatrix}.
+   \end{aligned}
    $$
    Vì hàm mục tiêu là hàm toàn phương, phương pháp Newton tìm ra nghiệm tối ưu toàn cục chỉ sau đúng một bước lặp.
 
 2. **Phương pháp khử biến (Elimination)**:
    Thay $x_1 = 1 - x_2 - x_3$ vào hàm mục tiêu:
    $$
-\begin{aligned}
-\tilde{f}(x_2, x_3) &= \frac{1}{2}(1 - x_2 - x_3)^2 + x_2^2 + \frac{3}{2}x_3^2 \\
-&= \frac{1}{2}(1 + x_2^2 + x_3^2 - 2x_2 - 2x_3 + 2x_2 x_3) + x_2^2 + \frac{3}{2}x_3^2 \\
-&= \frac{3}{2}x_2^2 + 2x_3^2 + x_2 x_3 - x_2 - x_3 + \frac{1}{2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   \tilde{f}(x_2, x_3) &= \frac{1}{2}(1 - x_2 - x_3)^2 + x_2^2 + \frac{3}{2}x_3^2 \\
+   &= \frac{1}{2}(1 + x_2^2 + x_3^2 - 2x_2 - 2x_3 + 2x_2 x_3) + x_2^2 + \frac{3}{2}x_3^2 \\
+   &= \frac{3}{2}x_2^2 + 2x_3^2 + x_2 x_3 - x_2 - x_3 + \frac{1}{2}.
+   \end{aligned}
+   $$
    Gradient và Hessian rút gọn:
    $$
-   \nabla \tilde{f} = \begin{bmatrix} 3x_2 + x_3 - 1 \\ x_2 + 4x_3 - 1 \end{bmatrix}, \qquad \tilde{H} = \begin{bmatrix} 3 & 1 \\ 1 & 4 \end{bmatrix}.
+   \begin{aligned}
+   &\nabla \tilde{f} = \begin{bmatrix} 3x_2 + x_3 - 1 \\ x_2 + 4x_3 - 1 \end{bmatrix}, \qquad\\
+   &\tilde{H} = \begin{bmatrix} 3 & 1 \\ 1 & 4 \end{bmatrix}.
+   \end{aligned}
    $$
    Giải phương trình dừng $\nabla \tilde{f} = 0$:
    $$
@@ -740,7 +924,11 @@ $$
 1. **Chứng minh tính tự điều chỉnh của hàm logarit**:
    Tính các cấp đạo hàm của $f(x) = -\log x$:
    $$
-   f'(x) = -\frac{1}{x}, \qquad f''(x) = \frac{1}{x^2}, \qquad f'''(x) = -\frac{2}{x^3}.
+   \begin{aligned}
+   &f'(x) = -\frac{1}{x}, \qquad\\
+   &f''(x) = \frac{1}{x^2}, \qquad\\
+   &f'''(x) = -\frac{2}{x^3}.
+   \end{aligned}
    $$
    Lấy giá trị tuyệt đối của đạo hàm bậc ba:
    $$
@@ -748,7 +936,11 @@ $$
    $$
    Biểu thức vế phải của định nghĩa:
    $$
-   2 \big(f''(x)\big)^{3/2} = 2 \left(\frac{1}{x^2}\right)^{3/2} = 2 \left(\frac{1}{x^3}\right) = \frac{2}{x^3}.
+   \begin{aligned}
+   2 \big(f''(x)\big)^{3/2} &= 2 \left(\frac{1}{x^2}\right)^{3/2}\\
+   &= 2 \left(\frac{1}{x^3}\right)\\
+   &= \frac{2}{x^3}.
+   \end{aligned}
    $$
    Ta thấy $|f'''(x)| = 2 \big(f''(x)\big)^{3/2}$ đạt dấu bằng với mọi $x > 0$.
    Do đó $f(x) = -\log x$ thỏa mãn định nghĩa hàm tự điều chỉnh chuẩn hóa với hằng số $2$.

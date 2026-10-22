@@ -1,9 +1,9 @@
 import { findCourse } from '../../../content/catalog.mjs'
 import { readingMetadata } from '../../../../docs/.vitepress/reading-metadata.mjs'
 export const lectureParts = [
-  { id: 'kien-thuc-can-co', name: 'Kiến thức nền' },
-  { id: 'slides', name: 'Slides' },
   { id: 'notes', name: 'Notes' },
+  { id: 'slides', name: 'Slides' },
+  { id: 'kien-thuc-can-co', name: 'Kiến thức nền' },
   { id: 'bai-tap', name: 'Bài tập' },
   { id: 'cheatsheet', name: 'Cheatsheet' }
 ]

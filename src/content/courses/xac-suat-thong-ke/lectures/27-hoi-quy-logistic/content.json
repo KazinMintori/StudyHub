@@ -14,39 +14,39 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 479,
+      "line": 468,
       "title": "Bài tập tự luyện có lời giải chi tiết"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 481,
+      "line": 470,
       "title": "Bài tập 1: Tính toán xác suất dự báo, Odds và Phân loại theo ngưỡng"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 598,
+      "line": 587,
       "title": "Bài tập 2: Giải thích ý nghĩa của Hệ số hồi quy và Tỷ số cơ hội (Odds Ratio)"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 703,
+      "line": 692,
       "title": "Bài tập 3: Thiết lập Ma trận nhầm lẫn và Tối ưu hóa Ngưỡng quyết định"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 514,
+      "line": 503,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 629,
+      "line": 618,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 733,
+      "line": 722,
       "title": ""
     }
   ],
@@ -78,7 +78,7 @@
     {
       "reference": "./img/stat20-27/log-2.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/27-hoi-quy-logistic.md",
-      "line": 185,
+      "line": 177,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-27/log-2.png"
     }
   ]

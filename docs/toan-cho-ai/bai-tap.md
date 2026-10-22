@@ -51,9 +51,10 @@ $$
 Ta khai triển hàm mục tiêu:
 $$
 \begin{aligned}
-f(w) &= \frac{1}{2} \left[ (1w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right] \\
-&= \frac{1}{2} \left[ (w^2 - 2w + 1) + (4w^2 - 8w + 4) + (9w^2 - 12w + 4) \right] \\
-&= \frac{1}{2} \left( 14w^2 - 22w + 9 \right) = 7w^2 - 11w + \frac{9}{2}.
+f(w) &= \frac{1}{2} \left[ (1w - 1)^2 + (2w - 2)^2 + (3w - 2)^2 \right]\\
+&= \frac{1}{2} \left[ (w^2 - 2w + 1) + (4w^2 - 8w + 4) + (9w^2 - 12w + 4) \right]\\
+&= \frac{1}{2} \left( 14w^2 - 22w + 9 \right)\\
+&= 7w^2 - 11w + \frac{9}{2}.
 \end{aligned}
 $$
 
@@ -65,7 +66,12 @@ Vì đạo hàm bậc hai luôn dương nên hàm mục tiêu $f(w)$ là hàm l�
 ### 2. Nghiệm tối ưu không ràng buộc
 Nếu không có ràng buộc $w \le 1/2$, nghiệm cực tiểu đạt được khi triệt tiêu đạo hàm:
 $$
-f'(w) = 0 \iff 14w - 11 = 0 \implies w_{\mathrm{uncon}} = \frac{11}{14} \approx 0.7857.
+\begin{aligned}
+f'(w) &= 0\\
+&\iff 14w - 11 = 0\\
+&\implies w_{\mathrm{uncon}} = \frac{11}{14}\\
+&\approx 0.7857.
+\end{aligned}
 $$
 Giá trị mất mát không ràng buộc tương ứng là $f(11/14) = \frac{5}{28} \approx 0.1786$.
 
@@ -75,7 +81,10 @@ Tuy nhiên, giá trị $w_{\mathrm{uncon}} = \frac{11}{14} > \frac{1}{2}$, nghĩ
 Viết lại ràng buộc dưới dạng chuẩn: $g(w) = w - \frac{1}{2} \le 0$.
 Hàm Lagrange:
 $$
-\mathcal{L}(w, \lambda) = f(w) + \lambda \left( w - \frac{1}{2} \right) = 7w^2 - 11w + \frac{9}{2} + \lambda \left( w - \frac{1}{2} \right).
+\begin{aligned}
+\mathcal{L}(w, \lambda) &= f(w) + \lambda \left( w - \frac{1}{2} \right)\\
+&= 7w^2 - 11w + \frac{9}{2} + \lambda \left( w - \frac{1}{2} \right).
+\end{aligned}
 $$
 
 Hệ 4 điều kiện KKT:
@@ -84,7 +93,11 @@ Hệ 4 điều kiện KKT:
 3. **Độ bù bổ sung (Complementary Slackness)**: $\lambda \left( w - \frac{1}{2} \right) = 0$.
 4. **Điểm dừng Lagrange (Stationarity)**: 
    $$
-   \nabla_w \mathcal{L}(w, \lambda) = 14w - 11 + \lambda = 0 \iff \lambda = 11 - 14w.
+   \begin{aligned}
+   \nabla_w \mathcal{L}(w, \lambda) &= 14w - 11 + \lambda\\
+   &= 0\\
+   &\iff \lambda = 11 - 14w.
+   \end{aligned}
    $$
 
 Xét hai trường hợp của độ bù bổ sung:
@@ -92,20 +105,34 @@ Xét hai trường hợp của độ bù bổ sung:
 - **Trường hợp $w = \frac{1}{2}$** (ràng buộc hoạt động/chạm biên):
   Thay $w = 1/2$ vào phương trình điểm dừng:
   $$
-  \lambda^* = 11 - 14 \left(\frac{1}{2}\right) = 11 - 7 = 4 > 0.
+  \begin{aligned}
+  \lambda^* &= 11 - 14 \left(\frac{1}{2}\right)\\
+  &= 11 - 7\\
+  &= 4\\
+  &> 0.
+  \end{aligned}
   $$
   Nhân tử $\lambda^* = 4 \ge 0$ thỏa mãn hoàn hảo điều kiện khả thi đối ngẫu!
 
 Nghiệm tối ưu duy nhất của bài toán là $w^* = \frac{1}{2}$ với nhân tử đối ngẫu $\lambda^* = 4$.
 Giá trị hàm mục tiêu tối ưu có ràng buộc là:
 $$
-f\left(\frac{1}{2}\right) = 7\left(\frac{1}{2}\right)^2 - 11\left(\frac{1}{2}\right) + \frac{9}{2} = \frac{7}{4} - \frac{22}{4} + \frac{18}{4} = \frac{3}{4} = 0.75.
+\begin{aligned}
+f\left(\frac{1}{2}\right) &= 7\left(\frac{1}{2}\right)^2 - 11\left(\frac{1}{2}\right) + \frac{9}{2}\\
+&= \frac{7}{4} - \frac{22}{4} + \frac{18}{4}\\
+&= \frac{3}{4}\\
+&= 0.75.
+\end{aligned}
 $$
 
 ### 4. Bản chất của tiêu chí dừng trong tối ưu có ràng buộc
 Tại nghiệm tối ưu $w^* = 1/2$, đạo hàm của hàm mục tiêu gốc là:
 $$
-f'\left(\frac{1}{2}\right) = 14\left(\frac{1}{2}\right) - 11 = -4 \ne 0.
+\begin{aligned}
+f'\left(\frac{1}{2}\right) &= 14\left(\frac{1}{2}\right) - 11\\
+&= -4\\
+&\ne 0.
+\end{aligned}
 $$
 
 Gradient của hàm mục tiêu không hề triệt tiêu! Điều này mang ý nghĩa hình học rất trực quan: 

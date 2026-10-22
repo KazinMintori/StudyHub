@@ -72,7 +72,63 @@
     "raw_materials/physics/translations/chapter-29/07-dong-dien-dich-maxwell.md",
     "raw_materials/physics/translations/chapter-29/08-sieu-dan.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+      "line": 63,
+      "title": "Ví dụ 29.1. Suất điện động và dòng điện cảm ứng trong một vòng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+      "line": 109,
+      "title": "Ví dụ 29.2. Độ lớn và chiều của suất điện động cảm ứng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+      "line": 128,
+      "title": "Ví dụ 29.3. Máy phát xoay chiều đơn giản"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+      "line": 150,
+      "title": "Ví dụ 29.4. Máy phát một chiều và suất phản điện động của động cơ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+      "line": 180,
+      "title": "Ví dụ 29.5. Máy phát thanh trượt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+      "line": 193,
+      "title": "Ví dụ 29.6. Công và công suất trong máy phát thanh trượt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/03-dinh-luat-lenz.md",
+      "line": 27,
+      "title": "Ví dụ khái niệm 29.7. Định luật Lenz trong máy phát thanh trượt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/03-dinh-luat-lenz.md",
+      "line": 31,
+      "title": "Ví dụ khái niệm 29.8. Chiều dòng cảm ứng khi từ trường tăng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/04-suat-dien-dong-chuyen-dong.md",
+      "line": 70,
+      "title": "Ví dụ 29.9. Suất điện động chuyển động trong máy phát thanh trượt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/04-suat-dien-dong-chuyen-dong.md",
+      "line": 102,
+      "title": "Ví dụ 29.10. Đĩa Faraday"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/05-dien-truong-cam-ung.md",
+      "line": 41,
+      "title": "Ví dụ 29.11: Điện trường cảm ứng quanh ống dây"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-29/10-luyen-tap-huong-dan.md",
@@ -623,9 +679,199 @@
       "source": "raw_materials/physics/translations/chapter-29/15-nang-cao-mcat.md",
       "line": 386,
       "title": "29.74"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 29,
+      "title": "29.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 33,
+      "title": "29.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 37,
+      "title": "29.5"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 41,
+      "title": "29.7"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 61,
+      "title": "29.9"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 65,
+      "title": "29.11"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 69,
+      "title": "29.13"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 73,
+      "title": "29.15"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 77,
+      "title": "29.17"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 81,
+      "title": "29.19"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 85,
+      "title": "29.21"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 89,
+      "title": "29.23"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 95,
+      "title": "29.25"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 103,
+      "title": "29.27"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 107,
+      "title": "29.29"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 111,
+      "title": "29.31"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 115,
+      "title": "29.33"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 119,
+      "title": "29.35"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 123,
+      "title": "29.37"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 127,
+      "title": "29.39"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 131,
+      "title": "29.41"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 135,
+      "title": "29.43"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 139,
+      "title": "29.45"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 143,
+      "title": "29.47"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 149,
+      "title": "29.49"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 159,
+      "title": "29.51"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 163,
+      "title": "29.53"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 169,
+      "title": "29.55"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 179,
+      "title": "29.57"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 183,
+      "title": "29.59"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 197,
+      "title": "29.61"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 207,
+      "title": "29.63"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 211,
+      "title": "29.65"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 215,
+      "title": "29.67"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 229,
+      "title": "29.69"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 246,
+      "title": "29.71"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/16-dap-so.md",
+      "line": 250,
+      "title": "29.73"
     }
   ],
   "solutions": [
+    {
+      "source": "raw_materials/physics/translations/chapter-29/00-mo-dau.md",
+      "line": 25,
+      "title": "Xem đáp án và giải thích"
+    },
     {
       "source": "raw_materials/physics/translations/chapter-29/10-luyen-tap-huong-dan.md",
       "line": 15,
@@ -1165,6 +1411,21 @@
       "source": "raw_materials/physics/translations/chapter-29/15-nang-cao-mcat.md",
       "line": 400,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+      "line": 231,
+      "title": "Đáp án"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/03-dinh-luat-lenz.md",
+      "line": 45,
+      "title": "Đáp án"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-29/04-suat-dien-dong-chuyen-dong.md",
+      "line": 131,
+      "title": "Đáp án"
     }
   ],
   "assets": [

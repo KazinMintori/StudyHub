@@ -79,7 +79,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
-      "line": 87,
+      "line": 84,
       "title": "Ví dụ 28.2 Từ trường của một đoạn dây"
     },
     {
@@ -88,9 +88,49 @@
       "title": "Ví dụ 28.3 Tìm khoảng cách đến dây dẫn"
     },
     {
+      "source": "raw_materials/physics/translations/chapter-28/03-day-thang.md",
+      "line": 90,
+      "title": "Ví dụ 28.4: Từ trường của hai dây"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-28/04-luc-hai-day.md",
       "line": 40,
       "title": "Ví dụ 28.5 Lực giữa hai dây siêu dẫn"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/05-vong-day-tron.md",
+      "line": 113,
+      "title": "Ví dụ 28.6: Trường của một cuộn dây nhiều vòng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 39,
+      "title": "Ví dụ 28.7: Trường của dây dẫn thẳng dài"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 52,
+      "title": "Ví dụ 28.8: Dây trụ đặc có dòng phân bố đều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 122,
+      "title": "Ví dụ 28.9: Trường bên trong ống dây dài"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 157,
+      "title": "Ví dụ 28.10: Trường của ống dây hình xuyến"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/08-vat-lieu-tu.md",
+      "line": 121,
+      "title": "Ví dụ 28.11: Năng lượng từ so với năng lượng nhiệt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/08-vat-lieu-tu.md",
+      "line": 203,
+      "title": "Ví dụ 28.12: Từ trường của một nam châm sắt từ"
     }
   ],
   "exercises": [
@@ -1620,13 +1660,13 @@
     {
       "reference": "../img/young-28/ung-dung-tu-truong-hanh-tinh.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
-      "line": 69,
+      "line": 66,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/ung-dung-tu-truong-hanh-tinh.png"
     },
     {
       "reference": "../img/young-28/hinh-28-04.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
-      "line": 90,
+      "line": 87,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-04.png"
     },
     {

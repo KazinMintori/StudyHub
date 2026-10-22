@@ -108,7 +108,10 @@ $$
    - $f_3(x^{(0)}) = -2 - 1 = -3$.
    Độ vi phạm lớn nhất:
    $$
-   \max_{i=1, 2, 3} f_i(x^{(0)}) = \max\{2, -2, -3\} = 2.
+   \begin{aligned}
+   \max_{i=1, 2, 3} f_i(x^{(0)}) &= \max\{2, -2, -3\}\\
+   &= 2.
+   \end{aligned}
    $$
    Để cặp $(x^{(0)}, s^{(0)})$ khả thi ngặt ($f_i(x^{(0)}) < s^{(0)}$ với mọi $i$), ta chỉ cần chọn $s^{(0)} > 2$ (chẳng hạn $s^{(0)} = 2{,}5$ hoặc $s^{(0)} = 3$).
 
@@ -124,11 +127,20 @@ $$
    $$
    Cộng hai bất đẳng thức đầu tiên:
    $$
-   (x_1 + x_2 - 2) + (-x_1 + x_2 - 2) \le 2s \implies 2x_2 - 4 \le 2s \implies x_2 - 2 \le s.
+   \begin{aligned}
+   (x_1 + x_2 - 2) + (-x_1 + x_2 - 2) &\le 2s\\
+   &\implies 2x_2 - 4 \le 2s\\
+   &\implies x_2 - 2 \le s.
+   \end{aligned}
    $$
    Kết hợp với bất đẳng thức thứ ba $-x_2 - 1 \le s$:
    $$
-   (x_2 - 2) + (-x_2 - 1) \le s + s \implies -3 \le 2s \implies s \ge -\frac{3}{2} = -1{,}5.
+   \begin{aligned}
+   (x_2 - 2) + (-x_2 - 1) &\le s + s\\
+   &\implies -3 \le 2s\\
+   &\implies s \ge -\frac{3}{2}\\
+   &= -1{,}5.
+   \end{aligned}
    $$
    Dấu bằng $s^* = -1{,}5$ đạt được khi:
    - Hai hàm đầu bằng nhau: $x_1 + x_2 = -x_1 + x_2$, suy ra $x_1^* = 0$.
@@ -163,7 +175,10 @@ Xét hệ hai bất đẳng thức trên trục số thực: Giả sử $x \ge 3
 2. **Tìm nghiệm tối ưu**:
    Cộng hai bất đẳng thức ràng buộc:
    $$
-   (3 - x) + (x - 1) \le s_1 + s_2 \implies 2 \le s_1 + s_2.
+   \begin{aligned}
+   (3 - x) + (x - 1) &\le s_1 + s_2\\
+   &\implies 2 \le s_1 + s_2.
+   \end{aligned}
    $$
    Do đó tổng độ vi phạm luôn bị chặn dưới bởi 2: $s_1 + s_2 \ge 2$.
    Dấu bằng $s_1 + s_2 = 2$ đạt được tại mọi điểm $x \in [1, 3]$:

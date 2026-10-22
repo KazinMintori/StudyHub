@@ -826,7 +826,9 @@
 }
 
 @media print {
-  .VPNav, .VPSidebar, .lecture-tabs, .cheatsheet-actions, .site-footer {
+  .VPNav, .VPSidebar, .VPLocalNav, .mobile-lecture-nav, .VPDocAsideOutline,
+  .lecture-tabs, .cheatsheet-actions, .site-footer, .site-introduction,
+  .term-preview, .term-preview-scrim, .diagram-dialog, .coffee-dialog {
     display: none !important;
   }
   .lecture-cheatsheet {
@@ -840,7 +842,9 @@
   .cheatsheet-card {
     box-shadow: none !important;
     border: 1px solid var(--rule) !important;
-    page-break-inside: avoid;
+    break-inside: auto;
+    page-break-inside: auto;
     padding: 12px !important;
   }
+  .cheatsheet-card :is(h3, h4) { break-after: avoid; }
 }

@@ -7,45 +7,57 @@ next: false
 
 # Hessian
 
-Với hàm $f$ có đạo hàm bậc hai liên tục, Hessian $H$ có phần tử $H_{ij}=\frac{\partial^2 f}{\partial x_i\,\partial x_j}$. $H$ mô tả độ cong theo hướng $v$ qua số $v^THv$. Hessian khác gradient: Một bên là ma trận, một bên là vector.
+Hai vị trí có cùng độ dốc vẫn có thể cần bước đi khác nhau: Một nơi gần như phẳng, nơi còn lại cong mạnh. **Hessian** mô tả thông tin đạo hàm bậc hai, tức sự thay đổi của gradient theo các hướng.
 
 <WikiUsage />
 
+![Hình 1: Hạn chế hàm lên hai đường qua gốc cho hai dấu độ cong khác nhau.](./img/atlas/hessian.svg)
+
 ## Giải thích kỹ thuật
 
-Với $f:\mathbb R^n\to\mathbb R$ có đạo hàm bậc hai liên tục, $H=\nabla^2f$ đối xứng. Với độ dời nhỏ $d$,
+Với $f$ có đạo hàm bậc hai liên tục trên miền mở, Hessian có phần tử $H_{ij}=\partial^2f/(\partial x_i\partial x_j)$. Khi chỉ có hai biến:
 
-$$f(x+d)=f(x)+\nabla f(x)^Td+\tfrac12d^THd+o(\|d\|_2^2).$$
+$$
+H=\begin{bmatrix}f_{xx}&f_{xy}\\f_{yx}&f_{yy}\end{bmatrix}.
+$$
 
-Ký hiệu $o(\|d\|_2^2)$ là phần dư mà tỉ số với $\|d\|_2^2$ tiến về 0 khi $d$ tiến về 0. Số $d^THd$ đo độ cong theo hướng $d$. Nó không phải một tọa độ riêng của Hessian. Trên miền mở lồi, hàm hai lần khả vi là lồi khi và chỉ khi Hessian PSD ở mọi điểm. Kiểm ở một điểm chưa đủ. Nguồn: Convex Optimization, §A.4.2 và §3.1.4.
+Tính liên tục của đạo hàm bậc hai bảo đảm $f_{xy}=f_{yx}$, nên $H$ đối xứng. Độ cong theo độ dời $d$ được đo bởi dạng toàn phương $d^THd$.
 
-## Ví dụ
+Tại một điểm dừng, Hessian dương xác định bảo đảm cực tiểu địa phương nghiêm ngặt. Hessian không xác định cho điểm yên ngựa. Nếu Hessian chỉ nửa xác định dương, riêng phép thử bậc hai có thể chưa kết luận được.
 
-Với $f(x,y)=x^2+3y^2$, gradient là $(2x,6y)^T$ và
+Muốn chứng minh hàm lồi trên miền mở lồi, phải kiểm tra Hessian nửa xác định dương trên mọi điểm của miền. Kiểm tra tại một điểm không thay thế được điều kiện toàn miền.
 
-$$\nabla^2f=\begin{bmatrix}2&0\\0&6\end{bmatrix}.$$
+## Ví dụ có lời giải
 
-## Khi nào cần dùng?
+Với $f(x,y)=x^2+3y^2$:
 
-Kiểm tính lồi của hàm hai lần khả vi và lập bước Newton.
+$$
+H=\begin{bmatrix}2&0\\0&6\end{bmatrix}.
+$$
 
-## Tự kiểm tra
+Độ cong theo trục dọc lớn hơn theo trục ngang. Với $g(x,y)=x^2+4xy+y^2$, Hessian là:
 
-Hessian của $f(x,y)=(x+y)^{2}$ là gì?
+$$
+H_g=\begin{bmatrix}2&4\\4&2\end{bmatrix}.
+$$
 
-<details><summary>Xem đáp án</summary>
+Theo $u=(1,1)^T$, ta có $u^TH_gu=12$. Theo $v=(1,-1)^T$, kết quả bằng $-4$. Các phần tử trên đường chéo đều dương nhưng ma trận vẫn không xác định. Chỉ nhìn đường chéo là chưa đủ.
 
-Ta có
+## Câu hỏi ôn lại
 
-$$\nabla^2f=\begin{bmatrix}2&2\\2&2\end{bmatrix}.$$
+Với $f(x,y)=x^4+y^4$, Hessian tại gốc bằng 0. Có thể kết luận gốc không phải cực tiểu không?
 
-Các phần tử ngoài đường chéo xuất hiện vì $x$ và $y$ cùng nằm trong một bình phương.
+::: details Xem lời giải
+Không. Ta có $f(x,y)\ge0$ và chỉ bằng 0 tại gốc, nên gốc là cực tiểu toàn cục nghiêm ngặt. Phép thử Hessian tại gốc chỉ không cung cấp đủ thông tin.
+:::
 
-</details>
-
-## Thuật ngữ liên quan
+## Đọc tiếp
 
 - [Gradient](./gradient.md)
 - [Ma trận nửa xác định dương](./ma-tran-psd.md)
-- [Trị riêng &amp; vector riêng](./tri-rieng.md)
-- [Ma trận](./ma-tran.md)
+- [Trị riêng & vector riêng](./tri-rieng.md)
+- [Hàm lồi](./ham-loi.md)
+
+## Tài liệu tham khảo
+
+- [S. Boyd và L. Vandenberghe, Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/).

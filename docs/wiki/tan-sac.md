@@ -14,7 +14,11 @@ Tán sắc là sự phụ thuộc của tốc độ pha, hay chiết suất, và
 ## Giải thích kỹ thuật
 
 $$
-n =n(\lambda_0),\\v =c/n,\\lambda =\lambda_0/n.
+\begin{aligned}
+&n =n(\lambda_0),\\
+&v =c/n,\\
+&\lambda =\lambda_0/n.
+\end{aligned}
 $$
 
 Bước sóng chân không là nhãn tiện lợi cho tần số, vì tại mặt phân cách đứng yên tần số giữ nguyên. Trong miền nhìn thấy của các vật liệu có tán sắc chuẩn, bước sóng ngắn ứng với chiết suất lớn hơn.

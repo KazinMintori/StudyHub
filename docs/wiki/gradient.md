@@ -7,42 +7,57 @@ next: false
 
 # Gradient
 
-Gradient $\nabla f$ là vector các đạo hàm riêng. Tại điểm khả vi, nó chỉ hướng tăng nhanh nhất của f theo khoảng cách Euclid. Hướng $-\nabla f$ là hướng giảm nhanh nhất tại điểm đó. Một bước quá dài theo hướng này vẫn có thể làm giá trị tăng.
+Trên một bản đồ độ cao, biết dốc theo hướng đông và hướng bắc giúp chọn hướng leo nhanh nhất. **Gradient** gom các đạo hàm riêng thành vector để mô tả sự thay đổi cục bộ của một hàm nhiều biến.
 
 <WikiUsage />
 
+![Hình 1: Gradient hướng ra phía đường mức có giá trị lớn hơn.](./img/atlas/gradient.svg)
+
 ## Giải thích kỹ thuật
 
-**Công thức và xấp xỉ cục bộ.** Với hàm khả vi $f:\mathbb{R}^n\to\mathbb{R}$, gradient là:
+Với hàm khả vi $f(x,y)$:
 
-$$\nabla f(x)=\left(\frac{\partial f}{\partial x_1},\ldots,\frac{\partial f}{\partial x_n}\right).$$
+$$
+\nabla f=\begin{bmatrix}\partial f/\partial x\\\partial f/\partial y\end{bmatrix}.
+$$
 
-Với độ dời nhỏ $\Delta x$, ta có $f(x+\Delta x)\approx f(x)+\nabla f(x)\cdot\Delta x$. Đạo hàm theo hướng đơn vị u bằng $\nabla f(x)\cdot u$, lớn nhất khi u cùng hướng gradient nếu gradient khác 0. Khi gradient bằng 0, không có một hướng tăng nhanh nhất được xác định từ công thức này.
+Theo một hướng đơn vị $u=(u_1,u_2)$, tốc độ thay đổi là:
 
-**Gradient Descent** cập nhật $x_{k+1}=x_k-\eta\nabla f(x_k)$. Hướng giảm là thông tin cục bộ. Bước $\eta$ quá dài vẫn có thể làm f tăng. Với hàm $f(x)=x^2$, hệ thức lặp là $x_{k+1}=(1-2\eta)x_k$, trong đó khoảng $0<\eta<1$ làm $|x|$ giảm, $\eta=1$ làm đổi dấu nhưng giữ nguyên độ lớn, còn $\eta>1$ có thể gây phân kỳ.
+$$
+D_uf=\frac{\partial f}{\partial x}u_1+\frac{\partial f}{\partial y}u_2.
+$$
 
-## Ví dụ
+Đây là tích vô hướng $\nabla f\cdot u$. Khi gradient khác không, hướng tăng nhanh nhất là hướng của gradient, còn hướng giảm nhanh nhất là hướng đối diện. Yêu cầu $\|u\|_2=1$ giữ cùng độ dài bước để so sánh các hướng công bằng.
 
-$f(x,y)=x^2+y^2$: $\nabla f=(2x,2y)$. Tại (1, 2), gradient là (2, 4).
+Gradient vuông góc với đường mức tại điểm chính quy. Dọc đường mức, giá trị hàm không đổi nên đạo hàm theo tiếp tuyến bằng 0. Khi gradient bằng 0, kết luận về một hướng tăng nhanh nhất không còn được xác định chỉ từ đạo hàm bậc nhất.
 
-## Khi nào cần dùng?
+## Ví dụ có lời giải
 
-Hiểu Gradient Descent và $\mathbf{E}=-\nabla V$.
+Cho $f(x,y)=x^2+2y^2$. Tại $P=(1,1)$:
 
-## Tự kiểm tra
+$$
+\nabla f(P)=(2,4)^T.
+$$
 
-Gradient của $f(x,y) = x+2y$ là gì?
+Đi ngang với $u=(1,0)$ cho tốc độ tăng bằng 2. Đi dọc với $v=(0,1)$ cho tốc độ tăng bằng 4. Hướng gradient chuẩn hóa cho tốc độ tăng lớn nhất bằng $\sqrt{20}$.
 
-<details><summary>Xem đáp án</summary>
+Một bước hạ gradient với $\eta=0{,}1$ đưa $P$ tới $(0{,}8;0{,}6)$. Giá trị hàm giảm từ 3 xuống $1{,}36$. Nếu dùng $\eta=1$, điểm mới là $(-1,-3)$ và giá trị tăng lên 19. Hướng giảm đúng không bảo đảm mọi độ dài bước đều đúng.
 
-(1, 2).
+## Câu hỏi ôn lại
 
-</details>
+Ở điểm gradient bằng 0, hàm có nhất thiết đạt cực tiểu không?
 
-## Thuật ngữ liên quan
+::: details Xem lời giải
+Không. Hàm $f(x,y)=x^2-y^2$ có gradient bằng 0 tại gốc. Đi theo trục ngang làm hàm tăng, còn theo trục dọc làm hàm giảm. Gốc là điểm yên ngựa.
+:::
 
-- [Đạo hàm riêng](./dao-ham-rieng.md)
-- [Vector](./vector.md)
+## Đọc tiếp
+
 - [Đạo hàm](./dao-ham.md)
-- [Chuẩn vector](./chuan.md)
-- [Điện thế](./dien-the.md)
+- [Tích vô hướng](./tich-vo-huong.md)
+- [Hessian](./hessian.md)
+- [Tìm kiếm đường và backtracking](./tim-kiem-duong.md)
+
+## Tài liệu tham khảo
+
+- [OpenStax, Calculus Volume 3, Directional Derivatives and the Gradient](https://openstax.org/books/calculus-volume-3/pages/4-6-directional-derivatives-and-the-gradient).

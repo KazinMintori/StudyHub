@@ -49,7 +49,43 @@
     "raw_materials/physics/translations/chapter-38/03-compton-tao-cap.md",
     "raw_materials/physics/translations/chapter-38/04-luong-tinh-bat-dinh.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-38/01-quang-dien.md",
+      "line": 178,
+      "title": "Ví dụ 38.1: Các photon phát ra từ bút chỉ laser"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/01-quang-dien.md",
+      "line": 233,
+      "title": "Ví dụ 38.2: Một thí nghiệm về hiệu ứng quang điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/01-quang-dien.md",
+      "line": 275,
+      "title": "Ví dụ 38.3: Xác định công thoát và hằng số Planck bằng thực nghiệm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/02-phat-tia-x.md",
+      "line": 54,
+      "title": "Ví dụ 38.4: Phát tia X"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/03-compton-tao-cap.md",
+      "line": 141,
+      "title": "Ví dụ 38.5: Tán xạ Compton"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/03-compton-tao-cap.md",
+      "line": 256,
+      "title": "Ví dụ 38.6: Sự hủy cặp electron–positron"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/04-luong-tinh-bat-dinh.md",
+      "line": 249,
+      "title": "Ví dụ 38.7: Xung laser siêu ngắn và bất định"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-38/06-luyen-tap-huong-dan.md",
@@ -464,6 +500,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-38/00-mo-dau.md",
+      "line": 35,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-38/06-luyen-tap-huong-dan.md",
       "line": 15,
       "title": "Lời giải chi tiết"
@@ -842,6 +883,26 @@
       "source": "raw_materials/physics/translations/chapter-38/01-quang-dien.md",
       "line": 57,
       "title": "Lời giải thích của Einstein bằng mô hình photon"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/01-quang-dien.md",
+      "line": 362,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/02-phat-tia-x.md",
+      "line": 126,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/03-compton-tao-cap.md",
+      "line": 354,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-38/04-luong-tinh-bat-dinh.md",
+      "line": 337,
+      "title": "Xem đáp án và giải thích"
     }
   ],
   "assets": [

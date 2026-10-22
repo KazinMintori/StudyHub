@@ -16,13 +16,20 @@ Dung kháng tụ lý tưởng là $X_C=1/(\omega C)$, đo bằng ôm. Biên đ�
 Gọi q là điện tích bản mà dòng dương đi vào. Với C không đổi:
 
 $$
-q=Cv_C\\ i=\frac{dq}{dt}\\ \quad=C\frac{dv_C}{dt}.
+\begin{aligned}
+q&=Cv_C\\
+i&=\frac{dq}{dt}\\
+&=C\frac{dv_C}{dt}.
+\end{aligned}
 $$
 
 Với dòng hình sin và không có điện tích một chiều:
 
 $$
-q=\frac I\omega\sin\omega t\\ v_C=\frac I{\omega C}\sin\omega t.
+\begin{aligned}
+&q=\frac I\omega\sin\omega t\\
+&v_C=\frac I{\omega C}\sin\omega t.
+\end{aligned}
 $$
 
 Điện áp trễ dòng một phần tư chu kỳ. Biên độ $V_C=I/(\omega C)$, nên dung kháng bằng $1/(\omega C)$, đo bằng ôm. $C$ đo bằng farad.

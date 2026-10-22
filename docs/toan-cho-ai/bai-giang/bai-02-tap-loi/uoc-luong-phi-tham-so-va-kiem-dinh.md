@@ -72,13 +72,19 @@ $$
 Lấy đạo hàm riêng theo $p_i$ và đặt bằng 0:
 
 $$
-\frac{\partial L}{\partial p_i} = \log p_i + 1 + \nu_0 + \sum_{j=1}^k \nu_j f_j(x_i) = 0.
+\begin{aligned}
+\frac{\partial L}{\partial p_i} &= \log p_i + 1 + \nu_0 + \sum_{j=1}^k \nu_j f_j(x_i)\\
+&= 0.
+\end{aligned}
 $$
 
 Suy ra dạng giải tích của phân phối nghiệm tối ưu:
 
 $$
-p_i^* = \exp\left(-(1 + \nu_0) - \sum_{j=1}^k \nu_j f_j(x_i)\right) = \frac{1}{Z(\nu)} \exp\left(-\sum_{j=1}^k \nu_j f_j(x_i)\right),
+\begin{aligned}
+p_i^* &= \exp\left(-(1 + \nu_0) - \sum_{j=1}^k \nu_j f_j(x_i)\right)\\
+&= \frac{1}{Z(\nu)} \exp\left(-\sum_{j=1}^k \nu_j f_j(x_i)\right),
+\end{aligned}
 $$
 
 trong đó $Z(\nu) = \sum_{i=1}^n \exp\left(-\sum_{j=1}^k \nu_j f_j(x_i)\right)$ là hàm phân giải (partition function). Nghiệm cực đại entropy luôn tự nhiên thuộc **họ hàm mũ (Exponential Family)** hay phân phối Boltzmann–Gibbs, đóng vai trò nền tảng trong vật lý thống kê và mô hình sinh ngẫu nhiên của AI.
@@ -167,36 +173,59 @@ Xét biến ngẫu nhiên rời rạc $X$ nhận các giá trị trong tập $\{
 2. **Dạng nghiệm theo tham số đối ngẫu**:
    Theo lý thuyết phân phối cực đại entropy:
    $$
-   p_i^* \propto \exp(-\nu x_i) \implies p_1 = C e^{\nu}, \quad p_2 = C, \quad p_3 = C e^{-\nu},
+   \begin{aligned}
+   p_i^* \propto \exp(-\nu x_i) &\implies p_1 = C e^{\nu}, \quad p_2\\
+   &= C, \quad p_3\\
+   &= C e^{-\nu},
+   \end{aligned}
    $$
    với hằng số chuẩn hóa $C = \frac{1}{e^\nu + 1 + e^{-\nu}}$.
    Đặt $u = e^{-\nu} > 0$, ta có:
    $$
-   p_1 = \frac{1/u}{u + 1 + 1/u} = \frac{1}{u^2 + u + 1}, \quad p_2 = \frac{u}{u^2 + u + 1}, \quad p_3 = \frac{u^2}{u^2 + u + 1}.
+   \begin{aligned}
+   &\begin{aligned}
+   p_1 &= \frac{1/u}{u + 1 + 1/u}\\
+   &= \frac{1}{u^2 + u + 1}, \quad
+   \end{aligned}\\
+   &p_2 = \frac{u}{u^2 + u + 1}, \quad\\
+   &p_3 = \frac{u^2}{u^2 + u + 1}.
+   \end{aligned}
    $$
 
 3. **Giải tham số $u$**:
    Ràng buộc kỳ vọng: $p_3 - p_1 = 0{,}2 = 1/5$:
    $$
-   \frac{u^2 - 1}{u^2 + u + 1} = \frac{1}{5} \implies 5(u^2 - 1) = u^2 + u + 1 \implies 4u^2 - u - 6 = 0.
+   \begin{aligned}
+   \frac{u^2 - 1}{u^2 + u + 1} &= \frac{1}{5}\\
+   &\implies 5(u^2 - 1) = u^2 + u + 1\\
+   &\implies 4u^2 - u - 6 = 0.
+   \end{aligned}
    $$
    Phương trình bậc hai có biệt thức: $\Delta = (-1)^2 - 4(4)(-6) = 1 + 96 = 97$.
    Vì $u > 0$, ta chọn nghiệm dương:
    $$
-   u = \frac{1 + \sqrt{97}}{8} \approx \frac{1 + 9{,}8489}{8} \approx 1{,}3561.
+   \begin{aligned}
+   u &= \frac{1 + \sqrt{97}}{8}\\
+   &\approx \frac{1 + 9{,}8489}{8}\\
+   &\approx 1{,}3561.
+   \end{aligned}
    $$
    Tính mẫu số:
    $$
-   u^2 + u + 1 \approx (1{,}3561)^2 + 1{,}3561 + 1 \approx 1{,}8390 + 1{,}3561 + 1 = 4{,}1951.
+   \begin{aligned}
+   u^2 + u + 1 &\approx (1{,}3561)^2 + 1{,}3561 + 1\\
+   &\approx 1{,}8390 + 1{,}3561 + 1\\
+   &= 4{,}1951.
+   \end{aligned}
    $$
    Các xác suất tối ưu:
    $$
-\begin{aligned}
-p_1^* &= \frac{1}{4{,}1951} \approx 0{,}2384, \\
-p_2^* &= \frac{1{,}3561}{4{,}1951} \approx 0{,}3233, \\
-p_3^* &= \frac{1{,}8390}{4{,}1951} \approx 0{,}4384.
-\end{aligned}
-$$
+   \begin{aligned}
+   p_1^* &= \frac{1}{4{,}1951} \approx 0{,}2384, \\
+   p_2^* &= \frac{1{,}3561}{4{,}1951} \approx 0{,}3233, \\
+   p_3^* &= \frac{1{,}8390}{4{,}1951} \approx 0{,}4384.
+   \end{aligned}
+   $$
    Kiểm tra: Tổng các xác suất là $p_1 + p_2 + p_3 \approx 1{,}0001 \approx 1$, và độ lệch kỳ vọng là $p_3 - p_1 = 0{,}2000$.
 :::
 
@@ -236,7 +265,11 @@ Mục tiêu là thiết kế bộ phát hiện $T_1 = (T_{11}, T_{12}, T_{13})^T
    - Tiếp tục xét $y = 2$ (tỉ số $0{,}75$):
      - Ta có thể tăng $T_{12}$ cho tới khi chạm trần ngân sách:
      $$
-     0{,}4 T_{12} = 0{,}1 \implies T_{12} = \frac{0{,}1}{0{,}4} = 0{,}25.
+     \begin{aligned}
+     0{,}4 T_{12} &= 0{,}1\\
+     &\implies T_{12} = \frac{0{,}1}{0{,}4}\\
+     &= 0{,}25.
+     \end{aligned}
      $$
    - Khi đó toàn bộ ngân sách báo động giả $0{,}2$ đã cạn kiệt, buộc phải đặt $T_{11} = 0$.
    
@@ -286,17 +319,33 @@ Xét biến ngẫu nhiên nhận giá trị trong $\{1, 2, 3\}$. Quan sát đư�
      Điều kiện đơn điệu: $q \ge 1 - 2q \implies 3q \ge 1 \implies q \ge 1/3$.
      Hàm mục tiêu theo biến $q$:
      $$
-     f(q) = \log q + 5 \log q + 4 \log(1 - 2q) = 6 \log q + 4 \log(1 - 2q).
+     \begin{aligned}
+     f(q) &= \log q + 5 \log q + 4 \log(1 - 2q)\\
+     &= 6 \log q + 4 \log(1 - 2q).
+     \end{aligned}
      $$
      Lấy đạo hàm và cho bằng 0:
      $$
-     f'(q) = \frac{6}{q} - \frac{8}{1 - 2q} = 0 \implies 6(1 - 2q) = 8q \implies 6 - 12q = 8q \implies 20q = 6 \implies q = \frac{3}{10} = 0{,}3.
+     \begin{aligned}
+     f'(q) &= \frac{6}{q} - \frac{8}{1 - 2q}\\
+     &= 0\\
+     &\implies 6(1 - 2q) = 8q\\
+     &\implies 6 - 12q = 8q\\
+     &\implies 20q = 6\\
+     &\implies q = \frac{3}{10}\\
+     &= 0{,}3.
+     \end{aligned}
      $$
      Tuy nhiên, với $q = 0{,}3$, ta có $p_3 = 1 - 2(0{,}3) = 0{,}4$. Khi đó $p_1 = p_2 = 0{,}3 < p_3 = 0{,}4$, lại vi phạm ràng buộc $p_2 \ge p_3$!
    - Như vậy cả hai ràng buộc đều phải chặt: $p_1 = p_2 = p_3$.
      Vì tổng bằng 1, nghiệm duy nhất khả thi trên biên là:
      $$
-     p_1^* = p_2^* = p_3^* = \frac{1}{3} \approx 0{,}3333.
+     \begin{aligned}
+     p_1^* &= p_2^*\\
+     &= p_3^*\\
+     &= \frac{1}{3}\\
+     &\approx 0{,}3333.
+     \end{aligned}
      $$
    - So sánh giá trị mục tiêu với trường hợp biên khác: Mọi cấu hình đơn điệu khác đều cho log-likelihood thấp hơn. Vậy phân phối tối ưu là phân phối đều: $p^* = (1/3, 1/3, 1/3)^T$. Hiện tượng "san bằng" này là đặc trưng kinh điển của hồi quy đẳng trương Grenander khi mẫu số liệu ở đầu quá nhỏ so với các mẫu phía sau.
 :::

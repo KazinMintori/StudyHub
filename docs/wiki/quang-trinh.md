@@ -16,7 +16,10 @@ Quang trình của một đoạn dài L trong môi trường đồng nhất có 
 Hai đoạn liên tiếp có quang trình $n_1L_1+n_2L_2$. Với k đoạn, khai triển và dạng gọn là:
 
 $$
-\mathcal L =n_1L_1+n_2L_2\\ \quad+\cdots+n_kL_k\\ =\sum_{j=1}^{k}n_jL_j.
+\begin{aligned}
+\mathcal L &=n_1L_1+n_2L_2 +\cdots+n_kL_k\\
+&=\sum_{j=1}^{k}n_jL_j.
+\end{aligned}
 $$
 
 Phần pha do truyền là $2\pi\mathcal L/\lambda_0$. Ở màng tới vuông góc, hai tia phản xạ chính có phần đường đi thêm trong màng bằng 2t, nên hiệu quang trình là 2nt. Dùng bước sóng trong màng $\lambda=\lambda_0/n$ cũng cho cùng pha, nhưng không được nhân n thêm lần nữa.

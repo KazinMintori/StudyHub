@@ -91,7 +91,10 @@ flowchart TD
   - Tổng số bước:
 
 $$
-(n-1) + (n-2) + \dots + 1 = \frac{n(n-1)}{2} \implies \mathcal{O}(n^2)
+\begin{aligned}
+(n-1) + (n-2) + \dots + 1 &= \frac{n(n-1)}{2}\\
+&\implies \mathcal{O}(n^2)
+\end{aligned}
 $$
 
 - **Giải pháp khắc phục:** 

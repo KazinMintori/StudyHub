@@ -14,39 +14,39 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 239,
+      "line": 228,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 241,
+      "line": 230,
       "title": "Bài tập 1: Tính toán khoảng cách Euclid và ghép cặp láng giềng gần nhất"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 336,
+      "line": 320,
       "title": "Bài tập 2: Phân tích nghịch lý Simpson trong đánh giá phương pháp giảng dạy"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 422,
+      "line": 406,
       "title": "Bài tập 3: Biến gây nhiễu tiềm ẩn trong nghiên cứu thể thao và tuổi thọ"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 267,
+      "line": 251,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 362,
+      "line": 346,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 438,
+      "line": 422,
       "title": ""
     }
   ],
@@ -60,13 +60,13 @@
     {
       "reference": "./img/stat20-23/unnamed-chunk-6-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 129,
+      "line": 122,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-23/unnamed-chunk-6-1.png"
     },
     {
       "reference": "./img/stat20-23/unnamed-chunk-7-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/23-tac-dong-nhan-qua-nghien-cuu-quan-sat.md",
-      "line": 139,
+      "line": 132,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-23/unnamed-chunk-7-1.png"
     }
   ]

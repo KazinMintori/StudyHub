@@ -106,7 +106,11 @@ $$
 Để tính hàm đối ngẫu $g(\lambda)$, ta xem $\lambda$ là tham số cố định và tìm cực tiểu của $L(x, \lambda)$ theo biến $x$ trên $\mathbb{R}$. Đạo hàm bậc nhất theo $x$:
 
 $$
-\frac{\partial L}{\partial x} = 2(x - 2) + \lambda = 0 \iff x(\lambda) = 2 - \frac{\lambda}{2}.
+\begin{aligned}
+\frac{\partial L}{\partial x} &= 2(x - 2) + \lambda\\
+&= 0\\
+&\iff x(\lambda) = 2 - \frac{\lambda}{2}.
+\end{aligned}
 $$
 
 Đạo hàm bậc hai $\frac{\partial^2 L}{\partial x^2} = 2 > 0$, chứng minh rằng hàm số đạt cực tiểu toàn cục duy nhất tại điểm $x(\lambda) = 2 - \lambda/2$. Thay nghiệm này ngược trở lại vào Lagrangian:
@@ -204,7 +208,11 @@ Một đặc tính quan trọng: Vì $f^*(y)$ là supremum của một họ các
 Từ định nghĩa supremum, với mọi $x \in \operatorname{dom} f$ và mọi $y \in \operatorname{dom} f^*$, ta có bất đẳng thức:
 
 $$
-f^*(y) \ge y^T x - f(x) \quad \Longleftrightarrow \quad x^T y \le f(x) + f^*(y).
+\begin{aligned}
+&f^*(y) \ge y^T x - f(x) \quad\\
+&\Longleftrightarrow \quad\\
+&x^T y \le f(x) + f^*(y).
+\end{aligned}
 $$
 
 Đây chính là **Bất đẳng thức Fenchel–Young**. Đẳng thức xảy ra khi và chỉ khi $y$ thuộc dưới vi phân của $f$ tại $x$: $y \in \partial f(x)$ (nếu $f$ khả vi thì $y = \nabla f(x)$).
@@ -214,11 +222,18 @@ $$
 1. **Hàm toàn phương lồi**: Xét $f(x) = \frac{1}{2} x^T P x$ với ma trận đối xứng xác định dương $P \succ 0$.
    Lấy đạo hàm của $y^T x - \frac{1}{2} x^T P x$ theo $x$:
    $$
-   \nabla_x (y^T x - \frac{1}{2} x^T P x) = y - P x = 0 \implies x = P^{-1} y.
+   \begin{aligned}
+   \nabla_x (y^T x - \frac{1}{2} x^T P x) &= y - P x\\
+   &= 0\\
+   &\implies x = P^{-1} y.
+   \end{aligned}
    $$
    Thay vào định nghĩa:
    $$
-   f^*(y) = y^T (P^{-1} y) - \frac{1}{2} (P^{-1} y)^T P (P^{-1} y) = \frac{1}{2} y^T P^{-1} y.
+   \begin{aligned}
+   f^*(y) &= y^T (P^{-1} y) - \frac{1}{2} (P^{-1} y)^T P (P^{-1} y)\\
+   &= \frac{1}{2} y^T P^{-1} y.
+   \end{aligned}
    $$
 
 2. **Hàm chuẩn Euclid bình phương**: Xét $f(x) = \frac{1}{2} \|x\|_2^2$.
@@ -230,15 +245,19 @@ $$
 3. **Hàm entropy âm**: Xét $f(x) = \sum_{i=1}^n x_i \log x_i$ trên tập $\operatorname{dom} f = \mathbb{R}_{++}^n$.
    Biểu thức cần tối đa: $\sum_{i=1}^n (y_i x_i - x_i \log x_i)$. Vì các biến độc lập, ta đạo hàm theo từng $x_i$:
    $$
-   y_i - \log x_i - 1 = 0 \implies x_i = e^{y_i - 1}.
+   \begin{aligned}
+   y_i - \log x_i - 1 &= 0\\
+   &\implies x_i = e^{y_i - 1}.
+   \end{aligned}
    $$
    Thay vào:
    $$
-\begin{aligned}
-f^*(y) &= \sum_{i=1}^n \left( y_i e^{y_i - 1} - e^{y_i - 1}(y_i - 1) \right) \\
-&= \sum_{i=1}^n e^{y_i - 1} = \frac{1}{e} \sum_{i=1}^n e^{y_i}.
-\end{aligned}
-$$
+   \begin{aligned}
+   f^*(y) &= \sum_{i=1}^n \left( y_i e^{y_i - 1} - e^{y_i - 1}(y_i - 1) \right)\\
+   &= \sum_{i=1}^n e^{y_i - 1}\\
+   &= \frac{1}{e} \sum_{i=1}^n e^{y_i}.
+   \end{aligned}
+   $$
 
 4. **Hàm Log-Sum-Exp**: Xét $f(x) = \log\left(\sum_{i=1}^n e^{x_i}\right)$.
    Hàm liên hợp của hàm này liên quan chặt chẽ đến entropy của phân phối xác suất:
@@ -349,13 +368,19 @@ $$
 Hàm Lagrangian được viết lại thành:
 
 $$
-L(x, \lambda) = f_0(x) + \lambda f_1(x) = t + \lambda u.
+\begin{aligned}
+L(x, \lambda) &= f_0(x) + \lambda f_1(x)\\
+&= t + \lambda u.
+\end{aligned}
 $$
 
 Cận dưới đúng của đại lượng này trên $\mathcal{G}$ chính là giá trị của hàm đối ngẫu:
 
 $$
-g(\lambda) = \inf_{(u, t) \in \mathcal{G}} (\lambda u + t) = \inf_{(u, t) \in \mathcal{A}} (\lambda u + t).
+\begin{aligned}
+g(\lambda) &= \inf_{(u, t) \in \mathcal{G}} (\lambda u + t)\\
+&= \inf_{(u, t) \in \mathcal{A}} (\lambda u + t).
+\end{aligned}
 $$
 
 Về mặt hình học, phương trình $\lambda u + t = g(\lambda)$ định nghĩa một **đường thẳng tựa (supporting line)** đỡ tập $\mathcal{A}$ từ phía dưới. Điểm giao của đường thẳng tựa này với trục tung ($u = 0$) có tọa độ $(0, g(\lambda))$.
@@ -527,7 +552,11 @@ $$
 1. Khả thi gốc: $A x^* = b$.
 2. Triệt tiêu gradient:
    $$
-   \nabla_x L(x^*, \nu^*) = P x^* + q + A^T \nu^* = 0 \iff P x^* + A^T \nu^* = -q.
+   \begin{aligned}
+   \nabla_x L(x^*, \nu^*) &= P x^* + q + A^T \nu^*\\
+   &= 0\\
+   &\iff P x^* + A^T \nu^* = -q.
+   \end{aligned}
    $$
 
 Ghép hai điều kiện này lại thành một hệ phương trình tuyến tính khối duy nhất:
@@ -555,7 +584,10 @@ $$
 Giả sử bài toán lồi thỏa mãn điều kiện Slater và hàm giá trị tối ưu $p^*(u, v)$ khả vi tại gốc $(0, 0)$. Định lý độ nhạy khẳng định mối liên hệ trực tiếp:
 
 $$
-\lambda_i^* = -\frac{\partial p^*(u, v)}{\partial u_i} \Bigg|_{(u, v) = (0, 0)}, \qquad \nu_j^* = -\frac{\partial p^*(u, v)}{\partial v_j} \Bigg|_{(u, v) = (0, 0)}.
+\begin{aligned}
+&\lambda_i^* = -\frac{\partial p^*(u, v)}{\partial u_i} \Bigg|_{(u, v) = (0, 0)}, \qquad\\
+&\nu_j^* = -\frac{\partial p^*(u, v)}{\partial v_j} \Bigg|_{(u, v) = (0, 0)}.
+\end{aligned}
 $$
 
 Ý nghĩa kinh tế học: Nhân tử Lagrange $\lambda_i^*$ đo lường tốc độ suy giảm của chi phí tối ưu khi ta nới lỏng thêm một đơn vị tài nguyên ở ràng buộc thứ $i$ ($u_i$ tăng từ 0 lên $\epsilon$). Nếu $\lambda_i^* = 50$, điều đó có nghĩa là nếu doanh nghiệp bỏ tiền mua thêm 1 đơn vị tài nguyên $i$, chi phí vận hành tối ưu sẽ giảm xấp xỉ 50 đơn vị tiền tệ. Đây chính là khái niệm **giá bóng** (shadow price) trong kinh tế học quản trị và quy hoạch sản xuất.
@@ -699,7 +731,10 @@ $$
 $$
 Để chứng minh hệ thống an toàn tuyệt đối trước mọi nhiễu trong $\mathcal{E}$, ta cần chứng minh:
 $$
-(x - x_0)^T P (x - x_0) - 1 \le 0 \implies x^T A x + 2 b^T x + c \le 0.
+\begin{aligned}
+(x - x_0)^T P (x - x_0) - 1 &\le 0\\
+&\implies x^T A x + 2 b^T x + c \le 0.
+\end{aligned}
 $$
 Áp dụng Bổ đề S-procedure, ta chỉ cần tìm một số thực $\lambda \ge 0$ thỏa mãn bất đẳng thức ma trận:
 $$
@@ -723,12 +758,20 @@ Bằng cách giải bài toán LMI này, ta có được một chứng nhận an
    $$
    Đạo hàm theo $x$:
    $$
-   \frac{d}{dx}(x y - x \log x) = y - \log x - 1 = 0 \iff x = e^{y-1} > 0.
+   \begin{aligned}
+   \frac{d}{dx}(x y - x \log x) &= y - \log x - 1\\
+   &= 0\\
+   &\iff x = e^{y-1}\\
+   &> 0.
+   \end{aligned}
    $$
    Đạo hàm bậc hai là $-1/x < 0$, do đó điểm cực trị là cực đại toàn cục duy nhất.
    Thay $x = e^{y-1}$ vào biểu thức:
    $$
-   f^*(y) = y e^{y-1} - e^{y-1} (y - 1) = e^{y-1}.
+   \begin{aligned}
+   f^*(y) &= y e^{y-1} - e^{y-1} (y - 1)\\
+   &= e^{y-1}.
+   \end{aligned}
    $$
    Miền xác định là toàn bộ trục số thực: $\operatorname{dom} f^* = \mathbb{R}$.
 
@@ -769,11 +812,11 @@ $$
 
 2. Thiết lập hàm Lagrangian với nhân tử $\lambda \in \mathbb{R}^m$ ($\lambda \succeq 0$) và $\nu \in \mathbb{R}^n$:
    $$
-\begin{aligned}
-L(x, \lambda, \nu) &= c^T x + \lambda^T (A x - b) + \sum_{i=1}^n \nu_i (x_i - x_i^2) \\
-&= -b^T \lambda + \sum_{i=1}^n \left( -\nu_i x_i^2 + (c_i + a_i^T \lambda + \nu_i) x_i \right),
-\end{aligned}
-$$
+   \begin{aligned}
+   L(x, \lambda, \nu) &= c^T x + \lambda^T (A x - b) + \sum_{i=1}^n \nu_i (x_i - x_i^2) \\
+   &= -b^T \lambda + \sum_{i=1}^n \left( -\nu_i x_i^2 + (c_i + a_i^T \lambda + \nu_i) x_i \right),
+   \end{aligned}
+   $$
    trong đó $a_i$ là cột thứ $i$ của ma trận $A$.
 
    Để $L(x, \lambda, \nu)$ bị chặn dưới theo $x$, hệ số của $x_i^2$ bắt buộc phải không âm, tức $-\nu_i \ge 0 \implies \nu_i \le 0$.
@@ -818,7 +861,10 @@ Xét trò chơi ma trận hai người có tổng bằng 0 với ma trận thư�
    Đặt biến đối ngẫu $q \in \mathbb{R}^n$ ($q \succeq 0$) cho ràng buộc $A^T p - t \mathbf{1} \preceq 0$, và biến vô hướng $s \in \mathbb{R}$ cho ràng buộc $\mathbf{1}^T p = 1$.
    Lagrangian:
    $$
-   L(p, t, q, s) = t + q^T (A^T p - t \mathbf{1}) + s (1 - \mathbf{1}^T p) = s + t (1 - \mathbf{1}^T q) + p^T (A q - s \mathbf{1}).
+   \begin{aligned}
+   L(p, t, q, s) &= t + q^T (A^T p - t \mathbf{1}) + s (1 - \mathbf{1}^T p)\\
+   &= s + t (1 - \mathbf{1}^T q) + p^T (A q - s \mathbf{1}).
+   \end{aligned}
    $$
    Cận dưới theo $t$ hữu hạn khi và chỉ khi $\mathbf{1}^T q = 1$.
    Cận dưới theo $p \succeq 0$ hữu hạn khi và chỉ khi $A q - s \mathbf{1} \succeq 0 \iff A q \succeq s \mathbf{1}$.
@@ -849,7 +895,10 @@ $$
 **Lời giải**:
 1. Đặt biến $x = (x_1, x_2)^T$. Hệ viết dưới dạng $A x \le b$ với:
    $$
-   A = \begin{bmatrix} 1 & 2 \\ -1 & 1 \\ 0 & -1 \end{bmatrix}, \qquad b = \begin{bmatrix} 1 \\ -2 \\ -1 \end{bmatrix}.
+   \begin{aligned}
+   &A = \begin{bmatrix} 1 & 2 \\ -1 & 1 \\ 0 & -1 \end{bmatrix}, \qquad\\
+   &b = \begin{bmatrix} 1 \\ -2 \\ -1 \end{bmatrix}.
+   \end{aligned}
    $$
 
 2. Theo Bổ đề Farkas, để chứng minh hệ $A x \le b$ vô nghiệm, ta cần tìm vector $\lambda = (\lambda_1, \lambda_2, \lambda_3)^T \ge 0$ thỏa mãn:
@@ -866,7 +915,12 @@ $$
    Chọn $\lambda_1 = 1 > 0$, suy ra $\lambda_2 = 1 > 0$ và $\lambda_3 = 3 > 0$. Vector $\lambda = (1, 1, 3)^T$ hoàn toàn thỏa mãn điều kiện không âm $\lambda \ge 0$.
    Tính tích vô hướng $b^T \lambda$:
    $$
-   b^T \lambda = 1(1) + (-2)(1) + (-1)(3) = 1 - 2 - 3 = -4 < 0.
+   \begin{aligned}
+   b^T \lambda &= 1(1) + (-2)(1) + (-1)(3)\\
+   &= 1 - 2 - 3\\
+   &= -4\\
+   &< 0.
+   \end{aligned}
    $$
    Cả ba điều kiện của Hệ 2 trong Bổ đề Farkas đều được thỏa mãn. Vector $\lambda = (1, 1, 3)^T$ là một chứng chỉ toán học tuyệt đối khẳng định rằng hệ bất đẳng thức ban đầu vô nghiệm.
 :::
@@ -874,7 +928,10 @@ $$
 ::: exercise 5. Bổ đề S-procedure và Điều kiện Bao hàm giữa hai Ellipsoid
 Xét hai ellipsoid trong $\mathbb{R}^n$ có tâm tại gốc tọa độ:
 $$
-\mathcal{E}_1 = \{x \in \mathbb{R}^n \mid x^T A_1 x \le 1\}, \qquad \mathcal{E}_2 = \{x \in \mathbb{R}^n \mid x^T A_2 x \le 1\},
+\begin{aligned}
+&\mathcal{E}_1 = \{x \in \mathbb{R}^n \mid x^T A_1 x \le 1\}, \qquad\\
+&\mathcal{E}_2 = \{x \in \mathbb{R}^n \mid x^T A_2 x \le 1\},
+\end{aligned}
 $$
 với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác định dương.
 1. Hãy viết điều kiện bao hàm $\mathcal{E}_1 \subseteq \mathcal{E}_2$ dưới dạng mệnh đề kéo theo giữa hai bất đẳng thức toàn phương.
@@ -885,7 +942,10 @@ với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác đ�
 **Lời giải**:
 1. Điều kiện $\mathcal{E}_1 \subseteq \mathcal{E}_2$ đồng nghĩa với việc mọi điểm $x \in \mathcal{E}_1$ đều phải thuộc $\mathcal{E}_2$:
    $$
-   x^T A_1 x - 1 \le 0 \implies x^T A_2 x - 1 \le 0.
+   \begin{aligned}
+   x^T A_1 x - 1 &\le 0\\
+   &\implies x^T A_2 x - 1 \le 0.
+   \end{aligned}
    $$
    Đặt $F_1(x) = x^T A_1 x - 1$ và $F_0(x) = x^T A_2 x - 1$. Vì tại gốc tọa độ $x = 0$, ta có $F_1(0) = -1 < 0$, điều kiện Slater ngặt thỏa mãn hoàn toàn.
 
@@ -903,7 +963,10 @@ với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác đ�
 
    Vì $\lambda \le 1$ và $A_1 \succ 0$, ta có:
    $$
-   A_2 \preceq \lambda A_1 \preceq 1 \cdot A_1 = A_1 \implies A_1 \succeq A_2.
+   \begin{aligned}
+   A_2 \preceq \lambda A_1 \preceq 1 \cdot A_1 &= A_1\\
+   &\implies A_1 \succeq A_2.
+   \end{aligned}
    $$
    Ngược lại, nếu $A_1 \succeq A_2$, ta chỉ cần chọn đúng $\lambda = 1 \ge 0$, lúc đó $x^T A_2 x - 1 \le 1 \cdot (x^T A_1 x - 1)$ tự động thỏa mãn với mọi $x$.
    Do đó, điều kiện cần và đủ để $\mathcal{E}_1 \subseteq \mathcal{E}_2$ là $A_1 \succeq A_2$.
@@ -930,7 +993,10 @@ $$
 1. **Dạng chuẩn tắc và điểm Slater**:
    Viết các ràng buộc dưới dạng bất đẳng thức chuẩn tắc $f_i(x) \le 0$:
    $$
-   f_1(x) = -x_1 \le 0, \qquad f_2(x) = -x_2 \le 0,
+   \begin{aligned}
+   &f_1(x) = -x_1 \le 0, \qquad\\
+   &f_2(x) = -x_2 \le 0,
+   \end{aligned}
    $$
    cùng ràng buộc đẳng thức affine $h_1(x) = x_1 + x_2 - 1 = 0$.
    
@@ -960,11 +1026,11 @@ $$
    - Bù trừ (Complementary slackness): $\lambda_1 x_1 = 0$, $\lambda_2 x_2 = 0$.
    - Triệt tiêu đạo hàm:
      $$
-\begin{aligned}
-\frac{\partial L}{\partial x_1} &= 2x_1 - \lambda_1 + \nu = 0, \\
-\frac{\partial L}{\partial x_2} &= 2x_2 - \lambda_2 + \nu = 0.
-\end{aligned}
-$$
+     \begin{aligned}
+     \frac{\partial L}{\partial x_1} &= 2x_1 - \lambda_1 + \nu = 0, \\
+     \frac{\partial L}{\partial x_2} &= 2x_2 - \lambda_2 + \nu = 0.
+     \end{aligned}
+     $$
    
    Xét ứng viên đối xứng $x_1^* = 0{,}5 > 0$ và $x_2^* = 0{,}5 > 0$.
    Theo điều kiện bù trừ, vì $x_1^* > 0$ và $x_2^* > 0$, bắt buộc:
@@ -973,7 +1039,11 @@ $$
    $$
    Thay vào phương trình đạo hàm:
    $$
-   2(0{,}5) - 0 + \nu = 0 \implies 1 + \nu = 0 \implies \nu^* = -1.
+   \begin{aligned}
+   2(0{,}5) - 0 + \nu &= 0\\
+   &\implies 1 + \nu = 0\\
+   &\implies \nu^* = -1.
+   \end{aligned}
    $$
    Lưu ý: Nhân tử Lagrange của ràng buộc đẳng thức $\nu$ được phép nhận giá trị âm tùy ý.
    
@@ -1030,7 +1100,11 @@ $$
 4. **Kiểm tra điều kiện dừng KKT**:
    Điều kiện triệt tiêu đạo hàm KKT tại điểm tối ưu gốc $x^* = 0$:
    $$
-   \nabla_x L(0, \lambda) = 1 + 2\lambda(0) = 1 = 0.
+   \begin{aligned}
+   \nabla_x L(0, \lambda) &= 1 + 2\lambda(0)\\
+   &= 1\\
+   &= 0.
+   \end{aligned}
    $$
    Phương trình $1 = 0$ là vô nghiệm đối với mọi $\lambda \in \mathbb{R}$.
    
@@ -1078,11 +1152,18 @@ $$
      Miền khả thi là $[-\sqrt{\tau}, \sqrt{\tau}]$. Vì $3 > \sqrt{\tau}$, điểm khả thi gần $3$ nhất chính là đầu mút phải $w^*(\tau) = \sqrt{\tau}$.
      Thay vào phương trình đạo hàm $(w - 3) + 2\lambda w = 0$:
      $$
-     (\sqrt{\tau} - 3) + 2\lambda \sqrt{\tau} = 0 \implies \lambda^*(\tau) = \frac{3 - \sqrt{\tau}}{2\sqrt{\tau}} > 0.
+     \begin{aligned}
+     (\sqrt{\tau} - 3) + 2\lambda \sqrt{\tau} &= 0\\
+     &\implies \lambda^*(\tau) = \frac{3 - \sqrt{\tau}}{2\sqrt{\tau}}\\
+     &> 0.
+     \end{aligned}
      $$
      Giá trị mất mát tối ưu là:
      $$
-     p^*(\tau) = \frac{1}{2}(\sqrt{\tau} - 3)^2 = \frac{1}{2}(\tau - 6\sqrt{\tau} + 9).
+     \begin{aligned}
+     p^*(\tau) &= \frac{1}{2}(\sqrt{\tau} - 3)^2\\
+     &= \frac{1}{2}(\tau - 6\sqrt{\tau} + 9).
+     \end{aligned}
      $$
    - **Trường hợp $\tau \ge 9$**:
      Điểm tự do $w = 3$ thỏa mãn $3^2 = 9 \le \tau$ nên khả thi.
@@ -1091,7 +1172,12 @@ $$
 3. **Kiểm chứng định lý độ nhạy vi phân**:
    Với $0 < \tau < 9$, lấy đạo hàm của hàm giá trị tối ưu theo tham số ràng buộc $\tau$:
    $$
-   \frac{\mathrm{d} p^*}{\mathrm{d} \tau} = \frac{\mathrm{d}}{\mathrm{d} \tau}\left[\frac{1}{2}(\tau - 6\tau^{1/2} + 9)\right] = \frac{1}{2}\left(1 - 3\tau^{-1/2}\right) = \frac{1}{2} - \frac{3}{2\sqrt{\tau}} = -\frac{3 - \sqrt{\tau}}{2\sqrt{\tau}}.
+   \begin{aligned}
+   \frac{\mathrm{d} p^*}{\mathrm{d} \tau} &= \frac{\mathrm{d}}{\mathrm{d} \tau}\left[\frac{1}{2}(\tau - 6\tau^{1/2} + 9)\right]\\
+   &= \frac{1}{2}\left(1 - 3\tau^{-1/2}\right)\\
+   &= \frac{1}{2} - \frac{3}{2\sqrt{\tau}}\\
+   &= -\frac{3 - \sqrt{\tau}}{2\sqrt{\tau}}.
+   \end{aligned}
    $$
    Đối chiếu với nhân tử đối ngẫu $\lambda^*(\tau)$:
    $$
@@ -1126,12 +1212,12 @@ $$
 2. **Hàm Lagrangian và hàm đối ngẫu**:
    Hàm Lagrangian với $\lambda \ge 0$:
    $$
-\begin{aligned}
-L(x, \lambda) &= x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2) \\
-&= \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2} \\
-&= \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   L(x, \lambda) &= x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2) \\
+   &= \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2} \\
+   &= \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
+   \end{aligned}
+   $$
    Cực tiểu theo $x$ đạt được tại $x_1(\lambda) = x_2(\lambda) = \frac{\lambda}{2}$.
    Hàm đối ngẫu Lagrange:
    $$
@@ -1161,13 +1247,21 @@ $$
    $$
    Mặt khác, với mọi điểm $x$ khả thi bất kỳ của bài toán gốc ($x_1 + x_2 \ge 1$), ta có:
    $$
-   f_0(x) \ge f_0(x) + 1 \cdot (1 - x_1 - x_2) = L(x, 1) \ge \frac{1}{2}.
+   \begin{aligned}
+   f_0(x) &\ge f_0(x) + 1 \cdot (1 - x_1 - x_2)\\
+   &= L(x, 1)\\
+   &\ge \frac{1}{2}.
+   \end{aligned}
    $$
    Bất đẳng thức này chứng minh rằng *mọi điểm khả thi đều có chi phí không nhỏ hơn $\frac{1}{2}$*.
    
    Xét điểm $x^* = (0{,}5; 0{,}5)$: Điểm này khả thi vì $0{,}5 + 0{,}5 = 1 \ge 1$, và có chi phí đúng bằng:
    $$
-   f_0(x^*) = 0{,}5^2 + 0{,}5^2 = 0{,}25 + 0{,}25 = 0{,}5.
+   \begin{aligned}
+   f_0(x^*) &= 0{,}5^2 + 0{,}5^2\\
+   &= 0{,}25 + 0{,}25\\
+   &= 0{,}5.
+   \end{aligned}
    $$
    Điểm khả thi $x^*$ đạt đúng cận dưới đối ngẫu $d^* = 0{,}5$, chứng minh $p^* = d^* = 0{,}5$ và khoảng cách đối ngẫu bằng 0. Nghiệm tối ưu toàn cục duy nhất là $x^* = (0{,}5; 0{,}5)$.
 :::

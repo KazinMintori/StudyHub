@@ -17,34 +17,34 @@
   "exercises": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md",
-      "line": 292,
+      "line": 319,
       "title": "1. Chuyển đổi bài toán xấp xỉ chuẩn L1 và chuẩn cực đại L-infinity sang Quy hoạch tuyến tính"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md",
-      "line": 329,
+      "line": 356,
       "title": "2. Xác định Tâm Chebyshev của một tam giác trong mặt phẳng"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md",
-      "line": 367,
+      "line": 408,
       "title": "3. Tính toán nghiệm Chuẩn nhỏ nhất cho hệ phương trình thiếu định"
     }
   ],
   "solutions": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md",
-      "line": 300,
+      "line": 327,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md",
-      "line": 337,
+      "line": 368,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.md",
-      "line": 372,
+      "line": 413,
       "title": ""
     }
   ],

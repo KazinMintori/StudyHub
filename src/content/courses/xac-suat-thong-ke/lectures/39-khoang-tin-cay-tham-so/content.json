@@ -26,66 +26,66 @@
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 230,
+      "line": 233,
       "title": "Khoảng tin cậy Welch cho hai kỳ vọng"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 361,
+      "line": 364,
       "title": "So sánh khoảng Wald và khoảng Wilson"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 492,
+      "line": 498,
       "title": "Khoảng tin cậy cho tỷ số phương sai"
     }
   ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 589,
+      "line": 595,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 591,
+      "line": 597,
       "title": "1. Quy hoạch cỡ mẫu ước lượng điểm trung bình"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 616,
+      "line": 622,
       "title": "2. Quy hoạch cỡ mẫu ước lượng tỷ lệ thận trọng"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 643,
+      "line": 649,
       "title": "3. Khoảng tin cậy cho phương sai của phân phối chuẩn"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 678,
+      "line": 684,
       "title": "4. So sánh hai tỷ lệ độc lập"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 595,
+      "line": 601,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 620,
+      "line": 626,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 647,
+      "line": 653,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 682,
+      "line": 688,
       "title": ""
     }
   ],
@@ -99,13 +99,13 @@
     {
       "reference": "img/co-dien-refined/39-wald-vs-wilson-proportion-interval.svg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 325,
+      "line": 328,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/39-wald-vs-wilson-proportion-interval.svg"
     },
     {
       "reference": "img/co-dien-refined/39-chi-square-variance-confidence-interval.svg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/39-khoang-tin-cay-tham-so.md",
-      "line": 455,
+      "line": 461,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/39-chi-square-variance-confidence-interval.svg"
     }
   ]

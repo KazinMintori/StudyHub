@@ -7,7 +7,7 @@ next: false
 
 # Bội giác góc
 
-Bội giác góc là tỉ số góc trông qua dụng cụ với góc trông tham chiếu không dùng dụng cụ. Với kính lúp, góc tham chiếu thường lấy khi nhìn vật ở cự li25cm.
+Bội giác góc là tỉ số góc trông qua dụng cụ với góc trông tham chiếu không dùng dụng cụ. Với kính lúp, góc tham chiếu thường lấy khi nhìn vật ở cự li $25\,\mathrm{cm}$.
 
 <WikiUsage />
 
@@ -16,7 +16,12 @@ Bội giác góc là tỉ số góc trông qua dụng cụ với góc trông tha
 Với góc nhỏ, kính lúp có vật ở tiêu điểm và ảnh ở vô cực:
 
 $$
-\theta \approx y/(25\,\mathrm{cm})\\theta^\prime \approx y/f\\M =\theta^\prime/\theta\\ =(25\,\mathrm{cm})/f.
+\begin{aligned}
+\theta &\approx y/(25\,\mathrm{cm})\\
+\theta^\prime &\approx y/f\\
+M &=\theta^\prime/\theta\\
+&=(25\,\mathrm{cm})/f.
+\end{aligned}
 $$
 
 Kích thước ảnh trên võng mạc phụ thuộc góc trông. Định nghĩa góc tham chiếu cần được giữ rõ khi chuyển từ kính lúp sang kính thiên văn, nơi vật đã ở rất xa.

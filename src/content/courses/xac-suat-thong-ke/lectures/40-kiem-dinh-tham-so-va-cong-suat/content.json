@@ -31,56 +31,56 @@
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 313,
+      "line": 317,
       "title": "Kiểm định so sánh hai tỷ lệ chuyển đổi"
     }
   ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 427,
+      "line": 431,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 429,
+      "line": 433,
       "title": "1. Quy hoạch cỡ mẫu để kiểm định đạt công suất 80%"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 465,
+      "line": 469,
       "title": "2. Kiểm định Chi bình phương cho phương sai"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 497,
+      "line": 501,
       "title": "3. Kiểm định Fisher so sánh hai phương sai"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 518,
+      "line": 522,
       "title": "4. Kiểm định t bắt cặp cho thời gian khởi động"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 433,
+      "line": 437,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 469,
+      "line": 473,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 501,
+      "line": 505,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/40-kiem-dinh-tham-so-va-cong-suat.md",
-      "line": 522,
+      "line": 526,
       "title": ""
     }
   ],

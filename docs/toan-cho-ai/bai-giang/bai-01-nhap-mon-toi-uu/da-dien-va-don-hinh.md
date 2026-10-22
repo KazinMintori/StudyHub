@@ -79,7 +79,13 @@ $$
 Mọi điểm $x$ thuộc đơn hình đều có dạng $x = \theta_0 v_0 + \theta_1 v_1 + \cdots + \theta_k v_k$. Thay thế $\theta_0 = 1 - \sum_{i=1}^k \theta_i$, ta thu được biểu thức tương đương:
 
 $$
-x = v_0 + \sum_{i=1}^k \theta_i (v_i - v_0) = v_0 + By, \qquad y = (\theta_1, \ldots, \theta_k)^T,
+\begin{aligned}
+&\begin{aligned}
+x &= v_0 + \sum_{i=1}^k \theta_i (v_i - v_0)\\
+&= v_0 + By, \qquad
+\end{aligned}\\
+&y = (\theta_1, \ldots, \theta_k)^T,
+\end{aligned}
 $$
 
 với ma trận $B = \begin{bmatrix} v_1 - v_0 & \cdots & v_k - v_0 \end{bmatrix} \in \mathbb{R}^{n \times k}$. Điều kiện đối với vector $\theta$ quy về $y \succeq 0$ và $\mathbf{1}^T y \le 1$ (do $\theta_0 = 1 - \mathbf{1}^T y \ge 0$). Do các điểm độc lập affine, ma trận $B$ có các cột độc lập tuyến tính, tức hạng $\operatorname{rank}(B) = k$. Khi đó tồn tại một ma trận không suy biến $A = \begin{bmatrix} A_1 \\ A_2 \end{bmatrix} \in \mathbb{R}^{n \times n}$ sao cho $AB = \begin{bmatrix} I_k \\ 0 \end{bmatrix}$.

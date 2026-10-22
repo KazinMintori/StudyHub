@@ -14,7 +14,10 @@ Kính phân cực lý tưởng truyền cường độ $I=I_{\rm in}\cos^2\phi$ 
 ## Giải thích kỹ thuật
 
 $$
-E_{\rm out} =E_{\rm in}\cos\phi,\\I_{\rm out} =I_{\rm in}\cos^2\phi.
+\begin{aligned}
+&E_{\rm out} =E_{\rm in}\cos\phi,\\
+&I_{\rm out} =I_{\rm in}\cos^2\phi.
+\end{aligned}
 $$
 
 Định luật xuất phát từ phép chiếu điện trường lên trục truyền. Thành phần vuông góc bị chặn trong mô hình lý tưởng. Đổi trục một góc 180 độ không đổi phương truyền phân cực của kính.

@@ -38,10 +38,12 @@ Giả sử ta thu thập được ba quan sát thực nghiệm sau:
 Thay vì viết ba phương trình rời rạc bằng vòng lặp tuần tự, trong kỹ nghệ AI ta gom toàn bộ đầu vào thành ma trận một cột và đầu ra thành một vector cột:
 
 $$
-A = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad
-b = \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}, \quad
-\widehat b = A w, \quad
-r = A w - b.
+\begin{aligned}
+&A = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad\\
+&b = \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}, \quad\\
+&\widehat b = A w, \quad\\
+&r = A w - b.
+\end{aligned}
 $$
 
 - **Vector** $b, \widehat b, r \in \mathbb{R}^3$ là các danh sách số có thứ tự, trong đó mỗi phần tử đại diện cho một mẫu dữ liệu.
@@ -62,7 +64,10 @@ Làm thế nào để đo lường độ lớn của một vector hoặc kích t
 Với hai vector $u, v \in \mathbb{R}^n$, **tích vô hướng** (inner product) được định nghĩa là:
 
 $$
-u^T v = \sum_{j=1}^n u_j v_j = u_1 v_1 + u_2 v_2 + \dots + u_n v_n.
+\begin{aligned}
+u^T v &= \sum_{j=1}^n u_j v_j\\
+&= u_1 v_1 + u_2 v_2 + \dots + u_n v_n.
+\end{aligned}
 $$
 
 Cần phân biệt rõ: Đại lượng $u^T v$ là một số thực vô hướng (scalar), trong khi tích ngoài $u v^T$ lại tạo ra một ma trận kích thước $n \times n$. Hai cấu trúc này hoàn toàn khác biệt và không được hoán đổi cho nhau.
@@ -74,7 +79,10 @@ Các chuẩn vector thông dụng nhất trong học máy bao gồm:
    $$
 2. **Chuẩn $L_1$ (Manhattan)**: Tổng giá trị tuyệt đối các tọa độ:
    $$
-   \|u\|_1 = \sum_{j=1}^n |u_j| = |u_1| + |u_2| + \dots + |u_n|.
+   \begin{aligned}
+   \|u\|_1 &= \sum_{j=1}^n |u_j|\\
+   &= |u_1| + |u_2| + \dots + |u_n|.
+   \end{aligned}
    $$
    Chuẩn $L_1$ đóng vai trò cốt tử trong hồi quy Lasso và nén tín hiệu nhờ đặc tính thúc đẩy nghiệm thưa (sparse solution).
 3. **Chuẩn cực đại ($L_\infty$)**: Độ lệch lớn nhất trong các thành phần:
@@ -90,7 +98,10 @@ Các chuẩn vector thông dụng nhất trong học máy bao gồm:
 Với ma trận $A \in \mathbb{R}^{m \times n}$, hai chuẩn quan trọng nhất là:
 1. **Chuẩn Frobenius**: Tương đương với chuẩn Euclid coi ma trận như một vector kéo dài:
    $$
-   \|A\|_F = \sqrt{\operatorname{tr}(A^T A)} = \sqrt{\sum_{i=1}^m \sum_{j=1}^n A_{ij}^2}.
+   \begin{aligned}
+   \|A\|_F &= \sqrt{\operatorname{tr}(A^T A)}\\
+   &= \sqrt{\sum_{i=1}^m \sum_{j=1}^n A_{ij}^2}.
+   \end{aligned}
    $$
 2. **Chuẩn phổ (Spectral Norm / Chuẩn cảm sinh $L_2$)**: Đo độ khuếch đại lớn nhất mà ma trận $A$ có thể tác động lên một vector đơn vị:
    $$
@@ -126,11 +137,19 @@ Quy tắc vi phân này là bí quyết giúp ta tìm gradient của các biểu
    $$
 2. **Hàm toàn phương**: Xét $f(w) = \frac{1}{2} w^T P w$ với ma trận đối xứng $P = P^T$. Vi phân:
    $$
-   df = \frac{1}{2} (dw^T P w + w^T P dw) = w^T P dw = (P w)^T dw \implies \nabla_w \left(\frac{1}{2} w^T P w\right) = P w.
+   \begin{aligned}
+   df &= \frac{1}{2} (dw^T P w + w^T P dw)\\
+   &= w^T P dw\\
+   &= (P w)^T dw\\
+   &\implies \nabla_w \left(\frac{1}{2} w^T P w\right) = P w.
+   \end{aligned}
    $$
 3. **Đạo hàm theo vết ma trận (Trace)**:
    $$
-   \nabla_X \operatorname{tr}(A X) = A^T, \qquad \nabla_X \operatorname{tr}(X^T A X) = (A + A^T) X.
+   \begin{aligned}
+   &\nabla_X \operatorname{tr}(A X) = A^T, \qquad\\
+   &\nabla_X \operatorname{tr}(X^T A X) = (A + A^T) X.
+   \end{aligned}
    $$
 4. **Đạo hàm của Logarit Định thức**: Cho ma trận đối xứng dương xác định $X \succ 0$:
    $$
@@ -141,7 +160,10 @@ Quy tắc vi phân này là bí quyết giúp ta tìm gradient của các biểu
 Xét hàm mất mát:
 
 $$
-f(w) = \frac{1}{2} \|A w - b\|_2^2 = \frac{1}{2} (A w - b)^T (A w - b).
+\begin{aligned}
+f(w) &= \frac{1}{2} \|A w - b\|_2^2\\
+&= \frac{1}{2} (A w - b)^T (A w - b).
+\end{aligned}
 $$
 
 Khai triển hàm mất mát:
@@ -153,7 +175,11 @@ $$
 Lấy vi phân theo biến $w$:
 
 $$
-df = w^T A^T A dw - b^T A dw = (A^T A w - A^T b)^T dw = [A^T (A w - b)]^T dw.
+\begin{aligned}
+df &= w^T A^T A dw - b^T A dw\\
+&= (A^T A w - A^T b)^T dw\\
+&= [A^T (A w - b)]^T dw.
+\end{aligned}
 $$
 
 Từ đó, ta thu được công thức gradient chuẩn mực:
@@ -195,7 +221,12 @@ $$
 Dạng toàn phương của ma trận này với mọi vector $d \in \mathbb{R}^n$:
 
 $$
-d^T H d = d^T (A^T A) d = (A d)^T (A d) = \|A d\|_2^2 \ge 0.
+\begin{aligned}
+d^T H d &= d^T (A^T A) d\\
+&= (A d)^T (A d)\\
+&= \|A d\|_2^2\\
+&\ge 0.
+\end{aligned}
 $$
 
 Vì chuẩn Euclid của một vector luôn không âm, ta có $d^T H d \ge 0$ với mọi hướng $d$. Một ma trận đối xứng thỏa mãn điều kiện này được gọi là **ma trận nửa xác định dương** (Positive Semidefinite, ký hiệu $H \succeq 0$). Điều này chứng minh rằng mặt mất mát của bài toán bình phương tối thiểu luôn là một mặt lồi paraboloid hướng lên trên.
@@ -247,7 +278,15 @@ trong đó:
 - $V \in \mathbb{R}^{n \times n}$ là ma trận trực giao ($V^T V = I_n$), các cột của $V$ là các vector kỳ dị phải (right singular vectors).
 - $\Sigma \in \mathbb{R}^{m \times n}$ là ma trận đường chéo chữ nhật chứa các **giá trị kỳ dị** được xếp theo thứ tự giảm dần:
   $$
-  \sigma_1 \ge \sigma_2 \ge \dots \ge \sigma_r > 0 = \sigma_{r+1} = \dots = 0,
+  \begin{aligned}
+  \sigma_1 &\ge \sigma_2\\
+  &\ge \dots\\
+  &\ge \sigma_r\\
+  &> 0\\
+  &= \sigma_{r+1}\\
+  &= \dots\\
+  &= 0,
+  \end{aligned}
   $$
   với $r = \operatorname{rank}(A)$ là hạng của ma trận.
 
@@ -288,11 +327,12 @@ Chi phí tính toán của các thao tác đại số cơ bản:
 Hệ phương trình có ma trận hệ số là ma trận tam giác (dưới hoặc trên) là khối cấu trúc cơ bản nhất của mọi thuật toán đại số tuyến tính số học:
 1. **Thế tiến (Forward substitution)** cho hệ tam giác dưới $L y = b$ (với $L_{ii} \ne 0$):
    $$
-\begin{aligned}
-y_1 &= \frac{b_1}{L_{11}}, \\
-y_i &= \frac{1}{L_{ii}} \left( b_i - \sum_{j=1}^{i-1} L_{ij} y_j \right), \quad i = 2, \dots, n.
-\end{aligned}
-$$
+   \begin{aligned}
+   &y_1 = \frac{b_1}{L_{11}},\\
+   &y_i = \frac{1}{L_{ii}} \left( b_i - \sum_{j=1}^{i-1} L_{ij} y_j \right), \quad\\
+   &i = 2, \dots, n.
+   \end{aligned}
+   $$
    Số phép tính cần thực hiện là $\sum_{i=1}^n (2i - 1) = n^2$ flops.
 2. **Thế lùi (Back substitution)** cho hệ tam giác trên $U x = y$: Hoàn toàn tương tự, giải từ $x_n$ ngược lên $x_1$ với chi phí đúng $n^2$ flops.
 
@@ -449,7 +489,8 @@ Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **L
 
 $$
 \begin{aligned}
-L(w) &= p(b \mid w) = \prod_{i=1}^m p(b_i \mid w) \\
+L(w) &= p(b \mid w)\\
+&= \prod_{i=1}^m p(b_i \mid w)\\
 &= \left( \frac{1}{2\pi\sigma^2} \right)^{m/2} \exp\left[ -\frac{1}{2\sigma^2} \sum_{i=1}^m (a_i^T w - b_i)^2 \right].
 \end{aligned}
 $$
@@ -500,7 +541,11 @@ trong đó $c \in \mathbb{R}$ là tham số thực.
 **Lời giải**:
 1. Phân rã ma trận thành cấu trúc khối:
    $$
-   A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}, \qquad B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \qquad C = [c].
+   \begin{aligned}
+   &A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}, \qquad\\
+   &B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \qquad\\
+   &C = [c].
+   \end{aligned}
    $$
    Khối con $A$ đối xứng, có định thức $\det(A) = 2(2) - 1(1) = 3 > 0$ và phần tử góc $A_{11} = 2 > 0$, do đó $A \succ 0$.
 
@@ -510,7 +555,11 @@ trong đó $c \in \mathbb{R}$ là tham số thực.
    $$
    Tính tích $B^T A^{-1} B$:
    $$
-   B^T A^{-1} B = \begin{bmatrix} 0 & 1 \end{bmatrix} \left( \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \right) \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \frac{1}{3} \begin{bmatrix} -1 & 2 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \frac{2}{3}.
+   \begin{aligned}
+   B^T A^{-1} B &= \begin{bmatrix} 0 & 1 \end{bmatrix} \left( \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \right) \begin{bmatrix} 0 \\ 1 \end{bmatrix}\\
+   &= \frac{1}{3} \begin{bmatrix} -1 & 2 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix}\\
+   &= \frac{2}{3}.
+   \end{aligned}
    $$
    Phần bù Schur là:
    $$
@@ -536,7 +585,10 @@ $$
 **Lời giải**:
 1. Khai triển tích $L L^T$:
    $$
-   L L^T = \begin{bmatrix} l_{11} & 0 \\ l_{21} & l_{22} \end{bmatrix} \begin{bmatrix} l_{11} & l_{21} \\ 0 & l_{22} \end{bmatrix} = \begin{bmatrix} l_{11}^2 & l_{11} l_{21} \\ l_{11} l_{21} & l_{21}^2 + l_{22}^2 \end{bmatrix}.
+   \begin{aligned}
+   L L^T &= \begin{bmatrix} l_{11} & 0 \\ l_{21} & l_{22} \end{bmatrix} \begin{bmatrix} l_{11} & l_{21} \\ 0 & l_{22} \end{bmatrix}\\
+   &= \begin{bmatrix} l_{11}^2 & l_{11} l_{21} \\ l_{11} l_{21} & l_{21}^2 + l_{22}^2 \end{bmatrix}.
+   \end{aligned}
    $$
    Đồng nhất các phần tử với ma trận $H$:
    - $l_{11}^2 = 4 \implies l_{11} = 2$ (chọn phần tử đường chéo dương).
@@ -571,7 +623,10 @@ Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
    Các giá trị riêng của $A^T A$ là $\lambda_1 = 9$ và $\lambda_2 = 4$.
    Các giá trị kỳ dị của $A$ là căn bậc hai của các giá trị riêng này:
    $$
-   \sigma_1 = \sqrt{9} = 3, \qquad \sigma_2 = \sqrt{4} = 2.
+   \begin{aligned}
+   &\sigma_1 = \sqrt{9} = 3, \qquad\\
+   &\sigma_2 = \sqrt{4} = 2.
+   \end{aligned}
    $$
    Số điều kiện của ma trận là:
    $$
@@ -583,7 +638,10 @@ Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
    Đặt $y_1 = 3 x_1 \implies x_1 = y_1/3$ và $y_2 = -2 x_2 \implies x_2 = -y_2/2$.
    Thay vào phương trình quả cầu đơn vị:
    $$
-   \left(\frac{y_1}{3}\right)^2 + \left(-\frac{y_2}{2}\right)^2 = 1 \iff \frac{y_1^2}{3^2} + \frac{y_2^2}{2^2} = 1.
+   \begin{aligned}
+   \left(\frac{y_1}{3}\right)^2 + \left(-\frac{y_2}{2}\right)^2 &= 1\\
+   &\iff \frac{y_1^2}{3^2} + \frac{y_2^2}{2^2} = 1.
+   \end{aligned}
    $$
    Đây chính là phương trình của một hình ellipse trong mặt phẳng với bán trục lớn bằng $\sigma_1 = 3$ dọc theo trục hoành và bán trục nhỏ bằng $\sigma_2 = 2$ dọc theo trục tung. Ánh xạ ma trận $A$ đã kéo giãn quả cầu tròn thành một khối ellipse có kích thước đúng bằng các giá trị kỳ dị.
 :::
@@ -606,11 +664,17 @@ trong đó $H \in \mathbb{S}_{++}^n$ đối xứng xác định dương và $A \
 1. Thuật toán khử ma trận khối Schur:
    - Từ phương trình thứ nhất, biểu diễn $v$ theo $w$:
      $$
-     H v + A^T w = -g \implies v = -H^{-1} g - H^{-1} A^T w.
+     \begin{aligned}
+     H v + A^T w &= -g\\
+     &\implies v = -H^{-1} g - H^{-1} A^T w.
+     \end{aligned}
      $$
    - Thế biểu thức của $v$ vào phương trình thứ hai $A v = -h$:
      $$
-     A (-H^{-1} g - H^{-1} A^T w) = -h \iff (A H^{-1} A^T) w = h - A H^{-1} g.
+     \begin{aligned}
+     A (-H^{-1} g - H^{-1} A^T w) &= -h\\
+     &\iff (A H^{-1} A^T) w = h - A H^{-1} g.
+     \end{aligned}
      $$
    - Đặt $M = A H^{-1} A^T = -S$. Vì $H \succ 0$ và $A$ đủ hạng hàng, ma trận $M \in \mathbb{S}_{++}^p$ đối xứng dương xác định.
    - Sau khi giải tìm được $w$, ta thu hồi $v$ từ phương trình: $H v = -(g + A^T w)$.

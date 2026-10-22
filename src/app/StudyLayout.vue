@@ -22,8 +22,7 @@ import {
   useResponsiveSidebar,
   useLectureNavigation,
   resolveHasCourseSidebar,
-  resolveLayoutClasses,
-  openSearch
+  resolveLayoutClasses
 } from '../features/navigation/index.mjs'
 
 const { Layout } = DefaultTheme
@@ -80,7 +79,7 @@ const layoutClasses = computed(() => ({
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
       </button>
     </template>
-    <template #not-found><main class="course-shell not-found-page"><SpotArt name="notfound" tone="tim" /><h1>Trang này không tồn tại</h1><p>Có thể đường dẫn đã đổi hoặc bài chưa được xuất bản. Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
+    <template #not-found><main class="course-shell not-found-page"><SpotArt name="notfound" tone="tim" /><h1>Trang này không tồn tại</h1><p>Có thể đường dẫn đã đổi hoặc bài chưa được xuất bản. Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><a class="study-button primary" :href="withBase('/#hoc-phan')">Tìm học phần</a><a class="text-link" :href="withBase('/wiki/')">Tra thuật ngữ</a></div></main></template>
     <template #doc-before>
       <PhilosophyHeader v-if="isPhilosophy" />
       <LectureHeader v-else-if="frontmatter.section === 'lecture'" />

@@ -1,4 +1,5 @@
 import { buildThemeConfig } from '../../src/features/course/services/build-navigation.mjs'
+import { wikiPeople } from '../../src/features/wiki/data/atlas.mjs'
 import { configureStudyMarkdown } from '../../scripts/build/markdown-presentation.mjs'
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
@@ -62,5 +63,5 @@ export default withMermaid(defineConfig({
     resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('../../src/core/diagrams/components/StudyMermaid.vue',import.meta.url))}},
     optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}
   },
-  themeConfig:buildThemeConfig({ courseCatalog, wikiGroups, concepts })
+  themeConfig:buildThemeConfig({ courseCatalog, wikiGroups, concepts, wikiPeople })
 }))

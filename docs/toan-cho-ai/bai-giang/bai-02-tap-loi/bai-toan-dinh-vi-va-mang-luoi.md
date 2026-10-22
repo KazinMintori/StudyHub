@@ -69,7 +69,10 @@ $$
 Để tìm nghiệm cực tiểu, ta lấy đạo hàm riêng theo từng tọa độ $x_i$ và cho triệt tiêu:
 
 $$
-\nabla_{x_i} f = 2 \sum_{j=1}^N w_{ij} (x_i - x_j) + 2 \sum_{k=1}^K v_{ik} (x_i - p_k) = 0.
+\begin{aligned}
+\nabla_{x_i} f &= 2 \sum_{j=1}^N w_{ij} (x_i - x_j) + 2 \sum_{k=1}^K v_{ik} (x_i - p_k)\\
+&= 0.
+\end{aligned}
 $$
 
 Tương đương với:
@@ -149,7 +152,11 @@ Ta có thể tối ưu riêng rẽ tọa độ trục $X$, tọa độ trục $Y
 Một công ty vận tải muốn đặt một kho trung chuyển duy nhất $x \in \mathbb{R}^2$ phục vụ ba trung tâm tiêu thụ hàng hóa đặt tại:
 
 $$
-p_1 = \begin{bmatrix} 0 \\ 0 \end{bmatrix}, \qquad p_2 = \begin{bmatrix} 4 \\ 0 \end{bmatrix}, \qquad p_3 = \begin{bmatrix} 0 \\ 4 \end{bmatrix}.
+\begin{aligned}
+&p_1 = \begin{bmatrix} 0 \\ 0 \end{bmatrix}, \qquad\\
+&p_2 = \begin{bmatrix} 4 \\ 0 \end{bmatrix}, \qquad\\
+&p_3 = \begin{bmatrix} 0 \\ 4 \end{bmatrix}.
+\end{aligned}
 $$
 
 Trọng số vận chuyển của ba trung tâm lần lượt là $v_1 = 1$, $v_2 = 1$, $v_3 = 2$.
@@ -164,13 +171,20 @@ $$
 Đạo hàm triệt tiêu:
 
 $$
-2(x - p_1) + 2(x - p_2) + 4(x - p_3) = 0 \iff 8x = 2p_1 + 2p_2 + 4p_3.
+\begin{aligned}
+2(x - p_1) + 2(x - p_2) + 4(x - p_3) &= 0\\
+&\iff 8x = 2p_1 + 2p_2 + 4p_3.
+\end{aligned}
 $$
 
 Tọa độ tối ưu:
 
 $$
-x^* = \frac{1(0,0) + 1(4,0) + 2(0,4)}{1 + 1 + 2} = \frac{(4, 8)}{4} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+\begin{aligned}
+x^* &= \frac{1(0,0) + 1(4,0) + 2(0,4)}{1 + 1 + 2}\\
+&= \frac{(4, 8)}{4}\\
+&= \begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+\end{aligned}
 $$
 
 Kho trung chuyển tối ưu chính là tâm tỉ cự của ba điểm neo.
@@ -179,7 +193,10 @@ Kho trung chuyển tối ưu chính là tâm tỉ cự của ba điểm neo.
 Tách thành hai bài toán một chiều:
 1. **Theo trục $X$**: Hàm số chi phí là:
    $$
-   g(x_1) = 1|x_1 - 0| + 1|x_1 - 4| + 2|x_1 - 0| = 3|x_1| + |x_1 - 4|.
+   \begin{aligned}
+   g(x_1) &= 1|x_1 - 0| + 1|x_1 - 4| + 2|x_1 - 0|\\
+   &= 3|x_1| + |x_1 - 4|.
+   \end{aligned}
    $$
    - Nếu $x_1 < 0$: Độ dốc là $-3 - 1 = -4 < 0$.
    - Nếu $0 < x_1 < 4$: Độ dốc là $3 - 1 = 2 > 0$.
@@ -187,7 +204,10 @@ Tách thành hai bài toán một chiều:
 
 2. **Theo trục $Y$**: Hàm số chi phí là:
    $$
-   h(x_2) = 1|x_2 - 0| + 1|x_2 - 0| + 2|x_2 - 4| = 2|x_2| + 2|x_2 - 4|.
+   \begin{aligned}
+   h(x_2) &= 1|x_2 - 0| + 1|x_2 - 0| + 2|x_2 - 4|\\
+   &= 2|x_2| + 2|x_2 - 4|.
+   \end{aligned}
    $$
    - Nếu $x_2 < 0$: Độ dốc $-2 - 2 = -4$.
    - Nếu $0 \le x_2 \le 4$: Độ dốc $2 - 2 = 0$ (hàm số nằm ngang hằng số!).
@@ -216,11 +236,12 @@ Ngoài ra, vì lý do địa hình, trạm mới phải nằm bên phải đư�
    $$
    Khai triển:
    $$
-\begin{aligned}
-f(x) &= x_1^2 + (x_1^2 + 8x_1 + 16) + (x_1^2 - 8x_1 + 16) + (x_2^2 - 6x_2 + 9) + x_2^2 + x_2^2 \\
-&= 3x_1^2 + 32 + 3x_2^2 - 6x_2 + 9 = 3x_1^2 + 3(x_2 - 1)^2 + 38.
-\end{aligned}
-$$
+   \begin{aligned}
+   f(x) &= x_1^2 + (x_1^2 + 8x_1 + 16) + (x_1^2 - 8x_1 + 16) + (x_2^2 - 6x_2 + 9) + x_2^2 + x_2^2\\
+   &= 3x_1^2 + 32 + 3x_2^2 - 6x_2 + 9\\
+   &= 3x_1^2 + 3(x_2 - 1)^2 + 38.
+   \end{aligned}
+   $$
    Bài toán tối ưu: Cực tiểu hóa $\min f(x_1, x_2)$ sao cho $1 - x_1 \le 0$.
 
 2. **Nghiệm không ràng buộc**:
@@ -233,7 +254,12 @@ $$
    - Với $x_1$: Hàm $3x_1^2$ đồng biến với mọi $x_1 \ge 0$. Do đó trên miền khả thi $x_1 \ge 1$, giá trị nhỏ nhất đạt được tại chính mút biên $x_1^* = 1$.
    Nhân tử Lagrange tương ứng thỏa mãn phương trình:
    $$
-   \nabla_{x_1} f(1) + \lambda(-1) = 6(1) - \lambda = 0 \implies \lambda^* = 6 > 0.
+   \begin{aligned}
+   \nabla_{x_1} f(1) + \lambda(-1) &= 6(1) - \lambda\\
+   &= 0\\
+   &\implies \lambda^* = 6\\
+   &> 0.
+   \end{aligned}
    $$
    Vị trí đặt trạm tối ưu có ràng buộc là $x^* = (1, 1)$.
 :::

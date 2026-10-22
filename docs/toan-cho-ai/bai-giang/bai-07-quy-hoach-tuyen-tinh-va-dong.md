@@ -30,7 +30,12 @@ $$
 thỏa mãn các ràng buộc tài nguyên:
 
 $$
-x + y \le 4, \qquad x \le 2, \qquad x \ge 0, \quad y \ge 0.
+\begin{aligned}
+&x + y \le 4, \qquad\\
+&x \le 2, \qquad\\
+&x \ge 0, \quad\\
+&y \ge 0.
+\end{aligned}
 $$
 
 ### 1.1. Hình học của miền khả thi và các đỉnh cực
@@ -63,11 +68,19 @@ $$
 1. **Đổi mục tiêu**: $\max c^T x \iff \min (-c)^T x$.
 2. **Chuyển bất đẳng thức $\le$ thành đẳng thức**: Thêm **biến bù (slack variable)** $s_i \ge 0$:
    $$
-   a_i^T x \le b_i \iff a_i^T x + s_i = b_i, \quad s_i \ge 0.
+   \begin{aligned}
+   a_i^T x &\le b_i\\
+   &\iff a_i^T x + s_i = b_i, \quad s_i\\
+   &\ge 0.
+   \end{aligned}
    $$
 3. **Chuyển bất đẳng thức $\ge$ thành đẳng thức**: Trừ đi **biến dư (surplus variable)** $e_i \ge 0$:
    $$
-   a_i^T x \ge b_i \iff a_i^T x - e_i = b_i, \quad e_i \ge 0.
+   \begin{aligned}
+   a_i^T x &\ge b_i\\
+   &\iff a_i^T x - e_i = b_i, \quad e_i\\
+   &\ge 0.
+   \end{aligned}
    $$
 4. **Biến tự do không giới hạn dấu**: Nếu một biến $u$ có thể nhận giá trị âm tùy ý, ta tách thành hiệu của hai biến không âm: Đặt $u = u^+ - u^-$ với $u^+, u^- \ge 0$.
 
@@ -239,11 +252,25 @@ Khởi tạo giá trị tại đích $V(T) = 0$ và tính lùi:
 1. **Tại đỉnh $B$**: $V(B) = c(B, T) + V(T) = 1 + 0 = 1$, hành động tối ưu $\pi(B) = T$.
 2. **Tại đỉnh $A$**: 
    $$
-   V(A) = \min \{ c(A, B) + V(B), \, c(A, T) + V(T) \} = \min \{ 2 + 1, \, 5 + 0 \} = 3, \quad \pi(A) = B.
+   \begin{aligned}
+   &\begin{aligned}
+   V(A) &= \min \{ c(A, B) + V(B), \, c(A, T) + V(T) \}\\
+   &= \min \{ 2 + 1, \, 5 + 0 \}\\
+   &= 3, \quad
+   \end{aligned}\\
+   &\pi(A) = B.
+   \end{aligned}
    $$
 3. **Tại đỉnh nguồn $S$**:
    $$
-   V(S) = \min \{ c(S, A) + V(A), \, c(S, B) + V(B) \} = \min \{ 1 + 3, \, 4 + 1 \} = 4, \quad \pi(S) = A.
+   \begin{aligned}
+   &\begin{aligned}
+   V(S) &= \min \{ c(S, A) + V(A), \, c(S, B) + V(B) \}\\
+   &= \min \{ 1 + 3, \, 4 + 1 \}\\
+   &= 4, \quad
+   \end{aligned}\\
+   &\pi(S) = A.
+   \end{aligned}
    $$
 
 Đường đi ngắn nhất thu hồi được là $S \to A \to B \to T$ với tổng chi phí tối ưu đúng bằng $V(S) = 4$.
@@ -329,7 +356,11 @@ $$
 ::: exercise 2. Xác định Tâm Chebyshev của một tam giác trong mặt phẳng
 Xét miền đa diện hai chiều $\mathcal{P}$ giới hạn bởi ba đường thẳng:
 $$
-x_1 \ge 0, \qquad x_2 \ge 0, \qquad x_1 + x_2 \le 1.
+\begin{aligned}
+&x_1 \ge 0, \qquad\\
+&x_2 \ge 0, \qquad\\
+&x_1 + x_2 \le 1.
+\end{aligned}
 $$
 1. Hãy thiết lập bài toán LP tìm tâm Chebyshev và bán kính đường tròn nội tiếp lớn nhất của $\mathcal{P}$.
 2. Giải bài toán để tìm tọa độ tâm $x_c = (x_1, x_2)$ và bán kính $r^*$.
@@ -356,11 +387,21 @@ $$
    Từ hai ràng buộc đầu, ta có $x_1 = r$ và $x_2 = r$.
    Thay vào ràng buộc thứ ba tại biên chặt:
    $$
-   r + r + r \sqrt{2} = 1 \iff r(2 + \sqrt{2}) = 1 \iff r^* = \frac{1}{2 + \sqrt{2}} = \frac{2 - \sqrt{2}}{2} = 1 - \frac{\sqrt{2}}{2} \approx 0.2929.
+   \begin{aligned}
+   r + r + r \sqrt{2} &= 1\\
+   &\iff r(2 + \sqrt{2}) = 1\\
+   &\iff r^* = \frac{1}{2 + \sqrt{2}}\\
+   &= \frac{2 - \sqrt{2}}{2}\\
+   &= 1 - \frac{\sqrt{2}}{2}\\
+   &\approx 0.2929.
+   \end{aligned}
    $$
    Tâm Chebyshev của tam giác là:
    $$
-   x_c^* = \left( 1 - \frac{\sqrt{2}}{2}, \, 1 - \frac{\sqrt{2}}{2} \right) \approx (0.2929, 0.2929).
+   \begin{aligned}
+   x_c^* &= \left( 1 - \frac{\sqrt{2}}{2}, \, 1 - \frac{\sqrt{2}}{2} \right)\\
+   &\approx (0.2929, 0.2929).
+   \end{aligned}
    $$
 :::
 
@@ -385,7 +426,11 @@ Cho ma trận $A = \begin{bmatrix} 1 & 1 & 1 \end{bmatrix}$ và vector $b = [3]$
 2. Với chuẩn $L_1$: Ta muốn tìm $x = (x_1, x_2, x_3)^T$ thỏa mãn $x_1 + x_2 + x_3 = 3$ sao cho $|x_1| + |x_2| + |x_3|$ nhỏ nhất.
    Theo bất đẳng thức tam giác:
    $$
-   |x_1| + |x_2| + |x_3| \ge |x_1 + x_2 + x_3| = |3| = 3.
+   \begin{aligned}
+   |x_1| + |x_2| + |x_3| &\ge |x_1 + x_2 + x_3|\\
+   &= |3|\\
+   &= 3.
+   \end{aligned}
    $$
    Dấu bằng đạt được khi các biến không âm và tổng bằng 3. Chẳng hạn:
    $x_{(1)}^* = (3, 0, 0)^T$, hoặc $x_{(2)}^* = (0, 3, 0)^T$, hoặc $x_{(3)}^* = (0, 0, 3)^T$.

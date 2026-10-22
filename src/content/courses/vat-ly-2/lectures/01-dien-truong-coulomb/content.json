@@ -63,7 +63,78 @@
     "raw_materials/physics/translations/chapter-21/06-duong-suc-dien.md",
     "raw_materials/physics/translations/chapter-21/07-luong-cuc-dien.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-21/03-dinh-luat-coulomb.md",
+      "line": 77,
+      "title": "Ví dụ 21.1: So sánh lực điện và lực hấp dẫn"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/03-dinh-luat-coulomb.md",
+      "line": 144,
+      "title": "Ví dụ 21.2: Lực giữa hai điện tích điểm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/03-dinh-luat-coulomb.md",
+      "line": 178,
+      "title": "Ví dụ 21.3: Cộng lực trên một đường thẳng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/03-dinh-luat-coulomb.md",
+      "line": 212,
+      "title": "Ví dụ 21.4: Cộng lực trong mặt phẳng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/04-dien-truong-luc-dien.md",
+      "line": 95,
+      "title": "Ví dụ 21.5: Độ lớn trường của điện tích điểm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/04-dien-truong-luc-dien.md",
+      "line": 112,
+      "title": "Ví dụ 21.6: Vector trường của điện tích điểm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/04-dien-truong-luc-dien.md",
+      "line": 151,
+      "title": "Ví dụ 21.7: Electron trong điện trường đều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/05-tinh-dien-truong.md",
+      "line": 60,
+      "title": "Ví dụ 21.8: Trường của một lưỡng cực điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/05-tinh-dien-truong.md",
+      "line": 136,
+      "title": "Ví dụ 21.9: Điện trường trên trục vòng tích điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/05-tinh-dien-truong.md",
+      "line": 198,
+      "title": "Ví dụ 21.10: Điện trường trên trung trực đoạn dây tích điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/05-tinh-dien-truong.md",
+      "line": 276,
+      "title": "Ví dụ 21.11: Điện trường trên trục đĩa tích điện đều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/05-tinh-dien-truong.md",
+      "line": 328,
+      "title": "Ví dụ 21.12: Hai mặt phẳng tích điện trái dấu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/07-luong-cuc-dien.md",
+      "line": 98,
+      "title": "Ví dụ 21.13: Lực, mômen lực và thế năng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/07-luong-cuc-dien.md",
+      "line": 157,
+      "title": "Ví dụ 21.14: Trường lưỡng cực ở xa trên trục"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-21/00-mo-dau.md",
@@ -1501,6 +1572,91 @@
       "source": "raw_materials/physics/translations/chapter-21/15-bai-nang-cao-mcat.md",
       "line": 411,
       "title": "Chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 5,
+      "title": "Câu hỏi mở đầu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 11,
+      "title": "VP21.4.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 17,
+      "title": "VP21.4.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 23,
+      "title": "VP21.4.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 29,
+      "title": "VP21.4.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 35,
+      "title": "VP21.10.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 45,
+      "title": "VP21.10.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 55,
+      "title": "VP21.10.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 67,
+      "title": "VP21.10.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 85,
+      "title": "VP21.14.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 91,
+      "title": "VP21.14.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 97,
+      "title": "VP21.14.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 103,
+      "title": "VP21.14.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/16-dap-an-cuoi-chuong.md",
+      "line": 109,
+      "title": "Bài tổng hợp: Nửa vòng tích điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/17-dap-so-bai-le.md",
+      "line": 5,
+      "title": "Đáp số các bài 21.1–21.39"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/17-dap-so-bai-le.md",
+      "line": 32,
+      "title": "Đáp số các bài 21.41–21.77"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-21/17-dap-so-bai-le.md",
+      "line": 82,
+      "title": "Đáp số các bài 21.79–21.101"
     },
     {
       "source": "raw_materials/physics/translations/chapter-21/01-dien-tich.md",

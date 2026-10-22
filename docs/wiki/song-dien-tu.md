@@ -16,7 +16,10 @@ Sóng điện từ là sự lan truyền biến thiên của điện trường v
 Điện trường và từ trường biến thiên liên hệ với nhau qua Faraday và Ampère–Maxwell. Điện trường biến thiên tạo dòng điện dịch, còn từ thông biến thiên tạo điện trường có lưu thông. Trong chân không không có điện tích và dòng dẫn, các trường vẫn có thể thỏa phương trình sóng.
 
 $$
-c=1/\sqrt{\varepsilon_0\mu_0}\\ \partial_x^2E_y=\frac1{c^2}\partial_t^2E_y.
+\begin{aligned}
+&c=1/\sqrt{\varepsilon_0\mu_0}\\
+&\partial_x^2E_y=\frac1{c^2}\partial_t^2E_y.
+\end{aligned}
 $$
 
 Sự tồn tại của sóng không có nghĩa một biến thiên trường được cảm nhận tức thời ở mọi nơi. Mô hình truyền có tốc độ hữu hạn. Điện tích có gia tốc có thể phát bức xạ, còn chuyển động thẳng đều của một điện tích không phát bức xạ trong mô hình chân không.

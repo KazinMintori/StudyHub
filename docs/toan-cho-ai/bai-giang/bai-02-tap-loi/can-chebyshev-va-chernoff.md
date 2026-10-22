@@ -22,13 +22,20 @@ $$
 Bản chất của bất đẳng thức này là một bài toán tìm chặn trên của hàm chỉ thị: Hàm bậc thang $\mathbf{1}_{\{x \ge a\}}$ được chặn trên bởi hàm tuyến tính $f(x) = \frac{x}{a}$ với mọi $x \ge 0$. Do tính chất đơn điệu của kỳ vọng:
 
 $$
-\mathbb{P}(X \ge a) = \mathbb{E}\big[\mathbf{1}_{\{x \ge a\}}\big] \le \mathbb{E}[f(X)] = \frac{\mathbb{E}[X]}{a}.
+\begin{aligned}
+\mathbb{P}(X \ge a) &= \mathbb{E}\big[\mathbf{1}_{\{x \ge a\}}\big]\\
+&\le \mathbb{E}[f(X)]\\
+&= \frac{\mathbb{E}[X]}{a}.
+\end{aligned}
 $$
 
 Tương tự, bất đẳng thức Chebyshev cổ điển áp dụng hàm toàn phương để chặn trên hàm chỉ thị:
 
 $$
-\mathbf{1}_{\{|x - \mu| \ge k \sigma\}} \le \frac{(x - \mu)^2}{k^2 \sigma^2} \implies \mathbb{P}(|X - \mu| \ge k \sigma) \le \frac{1}{k^2}.
+\begin{aligned}
+\mathbf{1}_{\{|x - \mu| \ge k \sigma\}} &\le \frac{(x - \mu)^2}{k^2 \sigma^2}\\
+&\implies \mathbb{P}(|X - \mu| \ge k \sigma) \le \frac{1}{k^2}.
+\end{aligned}
 $$
 
 Dưới lăng kính tối ưu hóa, việc tìm cận xác suất chặt nhất cho một biến cố $X \in \mathcal{C}$ chính là bài toán tìm một hàm chặn trên $f(x) \ge \mathbf{1}_{\mathcal{C}}(x)$ sao cho kỳ vọng $\mathbb{E}[f(X)]$ đạt giá trị nhỏ nhất có thể.
@@ -92,7 +99,11 @@ Khi ta có thêm thông tin về hàm sinh mô-men (Moment Generating Function) 
 Với tham số $\lambda > 0$, áp dụng bất đẳng thức Markov cho biến ngẫu nhiên dương $e^{\lambda X}$:
 
 $$
-\mathbb{P}(X \ge t) = \mathbb{P}(e^{\lambda X} \ge e^{\lambda t}) \le \frac{\mathbb{E}[e^{\lambda X}]}{e^{\lambda t}} = \exp\big(- (\lambda t - \log \mathbb{E}[e^{\lambda X}])\big).
+\begin{aligned}
+\mathbb{P}(X \ge t) &= \mathbb{P}(e^{\lambda X} \ge e^{\lambda t})\\
+&\le \frac{\mathbb{E}[e^{\lambda X}]}{e^{\lambda t}}\\
+&= \exp\big(- (\lambda t - \log \mathbb{E}[e^{\lambda X}])\big).
+\end{aligned}
 $$
 
 Đặt $\psi(\lambda) = \log \mathbb{E}[e^{\lambda X}]$ là hàm sinh mô-men logarit (Cumulant Generating Function). Bất đẳng thức trên đúng với mọi $\lambda > 0$, do đó ta có thể tối ưu hóa tham số $\lambda$ để thu được cận chặt nhất:
@@ -113,7 +124,10 @@ $$
 Hàm liên hợp lồi:
 
 $$
-\psi^*(t) = \sup_{\lambda > 0} \left(\lambda t - \frac{\lambda^2}{2}\right) = \frac{t^2}{2} \quad (\lambda^* = t).
+\begin{aligned}
+\psi^*(t) &= \sup_{\lambda > 0} \left(\lambda t - \frac{\lambda^2}{2}\right)\\
+&= \frac{t^2}{2} \quad (\lambda^* = t).
+\end{aligned}
 $$
 
 Từ đó thu được cận đuôi Chernoff chuẩn mực cho phân phối Gauss:
@@ -135,11 +149,20 @@ Cho biến ngẫu nhiên $X$ tuân theo phân phối Poisson với tham số $\m
 1. **Tính hàm sinh mô-men logarit**:
    Hàm sinh mô-men:
    $$
-   M_X(\lambda) = \mathbb{E}[e^{\lambda X}] = \sum_{k=0}^\infty e^{\lambda k} \frac{\mu^k e^{-\mu}}{k!} = e^{-\mu} \sum_{k=0}^\infty \frac{(\mu e^\lambda)^k}{k!} = e^{-\mu} e^{\mu e^\lambda} = \exp\big(\mu(e^\lambda - 1)\big).
+   \begin{aligned}
+   M_X(\lambda) &= \mathbb{E}[e^{\lambda X}]\\
+   &= \sum_{k=0}^\infty e^{\lambda k} \frac{\mu^k e^{-\mu}}{k!}\\
+   &= e^{-\mu} \sum_{k=0}^\infty \frac{(\mu e^\lambda)^k}{k!}\\
+   &= e^{-\mu} e^{\mu e^\lambda}\\
+   &= \exp\big(\mu(e^\lambda - 1)\big).
+   \end{aligned}
    $$
    Hàm sinh mô-men logarit:
    $$
-   \psi(\lambda) = \log M_X(\lambda) = \mu (e^\lambda - 1).
+   \begin{aligned}
+   \psi(\lambda) &= \log M_X(\lambda)\\
+   &= \mu (e^\lambda - 1).
+   \end{aligned}
    $$
 
 2. **Tìm hàm liên hợp lồi $\psi^*(t)$**:
@@ -149,20 +172,28 @@ Cho biến ngẫu nhiên $X$ tuân theo phân phối Poisson với tham số $\m
    $$
    Lấy đạo hàm theo $\lambda$ và cho bằng 0:
    $$
-   t - \mu e^\lambda = 0 \implies e^\lambda = \frac{t}{\mu} \implies \lambda^* = \log\left(\frac{t}{\mu}\right).
+   \begin{aligned}
+   t - \mu e^\lambda &= 0\\
+   &\implies e^\lambda = \frac{t}{\mu}\\
+   &\implies \lambda^* = \log\left(\frac{t}{\mu}\right).
+   \end{aligned}
    $$
    Vì $t > \mu$, ta có $\lambda^* > 0$. Thay vào biểu thức liên hợp:
    $$
-\begin{aligned}
-\psi^*(t) &= t \log\left(\frac{t}{\mu}\right) - \mu\left(\frac{t}{\mu} - 1\right) \\
-&= t \log\left(\frac{t}{\mu}\right) - t + \mu.
-\end{aligned}
-$$
+   \begin{aligned}
+   \psi^*(t) &= t \log\left(\frac{t}{\mu}\right) - \mu\left(\frac{t}{\mu} - 1\right) \\
+   &= t \log\left(\frac{t}{\mu}\right) - t + \mu.
+   \end{aligned}
+   $$
 
 3. **Thiết lập cận Chernoff**:
    Xác suất đuôi bị chặn bởi:
    $$
-   \mathbb{P}(X \ge t) \le \exp\big(-\psi^*(t)\big) = \exp\left( - \left[t \log\left(\frac{t}{\mu}\right) - t + \mu\right] \right) = \frac{e^{-\mu} (e \mu)^t}{t^t}.
+   \begin{aligned}
+   \mathbb{P}(X \ge t) &\le \exp\big(-\psi^*(t)\big)\\
+   &= \exp\left( - \left[t \log\left(\frac{t}{\mu}\right) - t + \mu\right] \right)\\
+   &= \frac{e^{-\mu} (e \mu)^t}{t^t}.
+   \end{aligned}
    $$
    So sánh: Cận Chebyshev chỉ suy giảm theo bậc hai $\frac{\operatorname{Var}(X)}{(t - \mu)^2} = \frac{\mu}{(t - \mu)^2} = O(t^{-2})$, trong khi cận Chernoff suy giảm theo tốc độ giai thừa / hàm mũ siêu tốc $O((e\mu/t)^t)$, cho độ chính xác vượt trội khi đánh giá các sự kiện hiếm.
 :::
@@ -182,7 +213,10 @@ Cho biến ngẫu nhiên $X$ có $\mathbb{E}[X] = 0$ và $\operatorname{Var}(X) 
 
 2. **Tính kỳ vọng**:
    $$
-   \mathbb{E}[f(X)] = \frac{\mathbb{E}[(X + u)^2]}{(a + u)^2} = \frac{\mathbb{E}[X^2] + 2u\mathbb{E}[X] + u^2}{(a + u)^2}.
+   \begin{aligned}
+   \mathbb{E}[f(X)] &= \frac{\mathbb{E}[(X + u)^2]}{(a + u)^2}\\
+   &= \frac{\mathbb{E}[X^2] + 2u\mathbb{E}[X] + u^2}{(a + u)^2}.
+   \end{aligned}
    $$
    Vì $\mathbb{E}[X] = 0$ và $\mathbb{E}[X^2] = \sigma^2$:
    $$
@@ -192,22 +226,41 @@ Cho biến ngẫu nhiên $X$ có $\mathbb{E}[X] = 0$ và $\operatorname{Var}(X) 
 3. **Cực tiểu hóa theo $u$**:
    Lấy đạo hàm của $g(u)$ theo $u$:
    $$
-   g'(u) = \frac{2u(a + u)^2 - (\sigma^2 + u^2) \cdot 2(a + u)}{(a + u)^4} = \frac{2\big[u(a + u) - (\sigma^2 + u^2)\big]}{(a + u)^3} = \frac{2(a u - \sigma^2)}{(a + u)^3}.
+   \begin{aligned}
+   g'(u) &= \frac{2u(a + u)^2 - (\sigma^2 + u^2) \cdot 2(a + u)}{(a + u)^4}\\
+   &= \frac{2\big[u(a + u) - (\sigma^2 + u^2)\big]}{(a + u)^3}\\
+   &= \frac{2(a u - \sigma^2)}{(a + u)^3}.
+   \end{aligned}
    $$
    Đặt $g'(u) = 0$:
    $$
-   a u - \sigma^2 = 0 \implies u^* = \frac{\sigma^2}{a} > 0.
+   \begin{aligned}
+   a u - \sigma^2 &= 0\\
+   &\implies u^* = \frac{\sigma^2}{a}\\
+   &> 0.
+   \end{aligned}
    $$
    Thay $u^*$ vào biểu thức $g(u)$:
    $$
-\begin{aligned}
-a + u^* &= a + \frac{\sigma^2}{a} = \frac{a^2 + \sigma^2}{a}, \\
-\sigma^2 + (u^*)^2 &= \sigma^2 + \frac{\sigma^4}{a^2} = \sigma^2 \left(1 + \frac{\sigma^2}{a^2}\right) = \frac{\sigma^2(a^2 + \sigma^2)}{a^2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   &\begin{aligned}
+   a + u^* &= a + \frac{\sigma^2}{a}\\
+   &= \frac{a^2 + \sigma^2}{a},
+   \end{aligned}\\
+   &\begin{aligned}
+   \sigma^2 + (u^*)^2 &= \sigma^2 + \frac{\sigma^4}{a^2}\\
+   &= \sigma^2 \left(1 + \frac{\sigma^2}{a^2}\right)\\
+   &= \frac{\sigma^2(a^2 + \sigma^2)}{a^2}.
+   \end{aligned}
+   \end{aligned}
+   $$
    Do đó:
    $$
-   g(u^*) = \frac{\frac{\sigma^2(a^2 + \sigma^2)}{a^2}}{\frac{(a^2 + \sigma^2)^2}{a^2}} = \frac{\sigma^2}{a^2 + \sigma^2} = \frac{\sigma^2}{\sigma^2 + a^2}.
+   \begin{aligned}
+   g(u^*) &= \frac{\frac{\sigma^2(a^2 + \sigma^2)}{a^2}}{\frac{(a^2 + \sigma^2)^2}{a^2}}\\
+   &= \frac{\sigma^2}{a^2 + \sigma^2}\\
+   &= \frac{\sigma^2}{\sigma^2 + a^2}.
+   \end{aligned}
    $$
    Đây chính là bất đẳng thức Cantelli kinh điển. So với Chebyshev hai phía $\frac{\sigma^2}{a^2}$, cận một phía Cantelli luôn chặt hơn vì mẫu số có thêm đại lượng $\sigma^2$.
 :::
@@ -223,15 +276,29 @@ Xét vector tỉ suất sinh lời của hai tài sản $R = (R_1, R_2)^T$ có v
 1. **Tính kỳ vọng và phương sai của danh mục**:
    - Kỳ vọng danh mục:
      $$
-     \mu_p = w^T \mu = 0{,}6(0{,}1) + 0{,}4(0{,}15) = 0{,}06 + 0{,}06 = 0{,}12 \; (12\%).
+     \begin{aligned}
+     \mu_p &= w^T \mu\\
+     &= 0{,}6(0{,}1) + 0{,}4(0{,}15)\\
+     &= 0{,}06 + 0{,}06\\
+     &= 0{,}12 \; (12\%).
+     \end{aligned}
      $$
    - Tích $w^T \Sigma$:
      $$
-     w^T \Sigma = \begin{bmatrix} 0{,}6 & 0{,}4 \end{bmatrix} \begin{bmatrix} 0{,}04 & 0{,}01 \\ 0{,}01 & 0{,}09 \end{bmatrix} = \begin{bmatrix} 0{,}024 + 0{,}004 & 0{,}006 + 0{,}036 \end{bmatrix} = \begin{bmatrix} 0{,}028 & 0{,}042 \end{bmatrix}.
+     \begin{aligned}
+     w^T \Sigma &= \begin{bmatrix} 0{,}6 & 0{,}4 \end{bmatrix} \begin{bmatrix} 0{,}04 & 0{,}01 \\ 0{,}01 & 0{,}09 \end{bmatrix}\\
+     &= \begin{bmatrix} 0{,}024 + 0{,}004 & 0{,}006 + 0{,}036 \end{bmatrix}\\
+     &= \begin{bmatrix} 0{,}028 & 0{,}042 \end{bmatrix}.
+     \end{aligned}
      $$
    - Phương sai danh mục:
      $$
-     \sigma_p^2 = (w^T \Sigma) w = 0{,}028(0{,}6) + 0{,}042(0{,}4) = 0{,}0168 + 0{,}0168 = 0{,}0336.
+     \begin{aligned}
+     \sigma_p^2 &= (w^T \Sigma) w\\
+     &= 0{,}028(0{,}6) + 0{,}042(0{,}4)\\
+     &= 0{,}0168 + 0{,}0168\\
+     &= 0{,}0336.
+     \end{aligned}
      $$
      Độ lệch chuẩn: $\sigma_p = \sqrt{0{,}0336} \approx 0{,}1833 \; (18{,}33\%)$.
 
@@ -240,11 +307,22 @@ Xét vector tỉ suất sinh lời của hai tài sản $R = (R_1, R_2)^T$ có v
    Biến ngẫu nhiên $Y = -R_p$ có kỳ vọng $\mathbb{E}[Y] = -\mu_p = -0{,}12$ và phương sai $\operatorname{Var}(Y) = \sigma_p^2 = 0{,}0336$.
    Khoảng cách lệch khỏi kỳ vọng:
    $$
-   a = 0 - \mathbb{E}[Y] = 0 - (-0{,}12) = 0{,}12.
+   \begin{aligned}
+   a &= 0 - \mathbb{E}[Y]\\
+   &= 0 - (-0{,}12)\\
+   &= 0{,}12.
+   \end{aligned}
    $$
    Áp dụng bất đẳng thức Cantelli cho $Y$:
    $$
-   \mathbb{P}(R_p \le 0) = \mathbb{P}(Y \ge 0) \le \frac{\sigma_p^2}{\sigma_p^2 + a^2} = \frac{0{,}0336}{0{,}0336 + (0{,}12)^2} = \frac{0{,}0336}{0{,}0336 + 0{,}0144} = \frac{0{,}0336}{0{,}0480} = 0{,}70 \; (70\%).
+   \begin{aligned}
+   \mathbb{P}(R_p \le 0) &= \mathbb{P}(Y \ge 0)\\
+   &\le \frac{\sigma_p^2}{\sigma_p^2 + a^2}\\
+   &= \frac{0{,}0336}{0{,}0336 + (0{,}12)^2}\\
+   &= \frac{0{,}0336}{0{,}0336 + 0{,}0144}\\
+   &= \frac{0{,}0336}{0{,}0480}\\
+   &= 0{,}70 \; (70\%).
+   \end{aligned}
    $$
 
 3. **Bài toán phân bổ danh mục tối ưu**:

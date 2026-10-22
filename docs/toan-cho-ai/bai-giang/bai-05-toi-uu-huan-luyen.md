@@ -23,7 +23,10 @@ description: "Phân biệt hàm mục tiêu thực nghiệm với khả năng kh
 Trong học máy có giám sát, ta có một tập huấn luyện gồm $N$ mẫu dữ liệu $D = \{(x_i, y_i)\}_{i=1}^N$. Với vector tham số mô hình $\theta \in \mathbb{R}^d$ và hàm mất mát trên mẫu thứ $i$ là $\ell_i(\theta) = \ell(f_\theta(x_i), y_i)$, hàm mục tiêu huấn luyện được định nghĩa bằng **mất mát thực nghiệm trung bình (Empirical Risk)**:
 
 $$
-J(\theta) = \frac{1}{N} \sum_{i=1}^N \ell_i(\theta) = \frac{\ell_1(\theta) + \ell_2(\theta) + \cdots + \ell_N(\theta)}{N}.
+\begin{aligned}
+J(\theta) &= \frac{1}{N} \sum_{i=1}^N \ell_i(\theta)\\
+&= \frac{\ell_1(\theta) + \ell_2(\theta) + \cdots + \ell_N(\theta)}{N}.
+\end{aligned}
 $$
 
 Nếu áp dụng kỹ thuật điều chuẩn (regularization), ta cộng thêm số hạng phạt độ phức tạp $\rho R(\theta)$ (với hệ số phạt $\rho > 0$). Gradient của hàm mục tiêu theo tham số $\theta$ được tính bằng thuật toán lan truyền ngược (backpropagation), về bản chất là việc áp dụng quy tắc chuỗi giải tích trên đồ thị tính toán của mạng nơ-ron.
@@ -57,7 +60,11 @@ $$
 Nếu các chỉ số $I_j$ được lấy mẫu ngẫu nhiên đều trên tập $\{1, \ldots, N\}$, kỳ vọng có điều kiện của gradient lô nhỏ thỏa mãn:
 
 $$
-\mathbb{E}[g_B(\theta) \mid \theta] = \frac{1}{B} \sum_{j=1}^B \mathbb{E}[\nabla \ell_{I_j}(\theta)] = \frac{1}{B} \sum_{j=1}^B \nabla J(\theta) = \nabla J(\theta).
+\begin{aligned}
+\mathbb{E}[g_B(\theta) \mid \theta] &= \frac{1}{B} \sum_{j=1}^B \mathbb{E}[\nabla \ell_{I_j}(\theta)]\\
+&= \frac{1}{B} \sum_{j=1}^B \nabla J(\theta)\\
+&= \nabla J(\theta).
+\end{aligned}
 $$
 
 Đẳng thức này khẳng định $g_B(\theta)$ là một **ước lượng không chệch (unbiased estimator)** của gradient toàn bộ tập dữ liệu.
@@ -79,8 +86,9 @@ Mô hình đưa ra dự đoán đơn tham số $\theta$ với hàm mất mát b�
 Hàm mục tiêu trên toàn bộ tập dữ liệu là:
 $$
 \begin{aligned}
-J(\theta) &= \frac{1}{2}\left[\frac{1}{2}(\theta - 0)^2 + \frac{1}{2}(\theta - 2)^2\right] \\
-&= \frac{1}{4}(2\theta^2 - 4\theta + 4) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}.
+J(\theta) &= \frac{1}{2}\left[\frac{1}{2}(\theta - 0)^2 + \frac{1}{2}(\theta - 2)^2\right]\\
+&= \frac{1}{4}(2\theta^2 - 4\theta + 4)\\
+&= \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}.
 \end{aligned}
 $$
 
@@ -97,7 +105,13 @@ Gradient toàn phần là $\nabla J(\theta) = \theta - 1$. Nghiệm tối ưu th
 <details><summary>Câu hỏi đào sâu: Tại điểm cực tiểu toàn cục $\theta = 1$, nếu bước cập nhật bốc phải mẫu $b = 0$ với $\eta = 0.1$, hàm mất mát toàn phần sẽ biến thiên ra sao?</summary>
 
 Tại $\theta = 1$, giá trị mất mát toàn phần là $J(1) = 0.5$. Nếu gặp mẫu $b = 0$, gradient là $1 - 0 = 1$, điểm mới trở thành $\theta^+ = 1 - 0.1(1) = 0.9$. Giá trị mất mát mới là:
-$$J(0.9) = \frac{1}{2}(0.9 - 1)^2 + 0.5 = 0.505 > 0.5.$$ 
+$$
+\begin{aligned}
+J(0.9) &= \frac{1}{2}(0.9 - 1)^2 + 0.5\\
+&= 0.505\\
+&> 0.5.
+\end{aligned}
+$$
 
 Mất mát đã **tăng lên**! Điều này cho thấy tính không chệch của gradient chỉ là một bảo đảm về mặt kỳ vọng thống kê. Hệ quả là, nó tuyệt đối không bảo đảm rằng hàm mục tiêu sẽ giảm sau từng bước cập nhật ngẫu nhiên đơn lẻ.
 
@@ -151,14 +165,19 @@ Thuật toán **Momentum** mượn ý tưởng trực quan từ cơ học cổ �
 Khởi tạo vector vận tốc $v_0 = 0$, tại mỗi bước ta cập nhật theo quy tắc:
 
 $$
-v_{t+1} = \mu v_t - \eta g_t, \qquad \theta_{t+1} = \theta_t + v_{t+1},
+\begin{aligned}
+&v_{t+1} = \mu v_t - \eta g_t, \qquad\\
+&\theta_{t+1} = \theta_t + v_{t+1},
+\end{aligned}
 $$
 
 trong đó $\mu \in [0, 1)$ là hệ số ma sát quán tính (thường chọn $\mu = 0.9$).
 
 Ý nghĩa của hệ số $\mu$:
 - Nếu các vector gradient ở các bước liên tiếp cùng hướng, số hạng vận tốc sẽ tích lũy theo cấp số nhân:
-  $$v \approx -\frac{\eta}{1 - \mu} g.$$
+  $$
+  v \approx -\frac{\eta}{1 - \mu} g.
+  $$
   Với $\mu = 0.9$, bước nhảy thực tế dọc theo hướng ổn định sẽ được khuếch đại gấp 10 lần!
 - Nếu các vector gradient liên tục đổi dấu (như dao động giữa hai sườn dốc hẹp), các số hạng sẽ triệt tiêu lẫn nhau trong tổng vận tốc, giúp dập tắt dao động ziczac.
 
@@ -172,7 +191,13 @@ Khởi tạo $\theta_0 = 0$, $v_0 = 0$, tốc độ học $\eta = 0.1$, hệ s�
 - **Bước 2**:
   - Gradient: $g_1 = 0.1 - 1 = -0.9$.
   - Vận tốc mới:
-    $$v_2 = 0.9(0.1) - 0.1(-0.9) = 0.09 + 0.09 = 0.18.$$
+    $$
+    \begin{aligned}
+    v_2 &= 0.9(0.1) - 0.1(-0.9)\\
+    &= 0.09 + 0.09\\
+    &= 0.18.
+    \end{aligned}
+    $$
   - Cập nhật vị trí: $\theta_2 = 0.1 + 0.18 = 0.28$.
 
 Để so sánh: Gradient Descent thuần túy ở bước 2 chỉ đạt tới $\theta_2 = 0.19$. Nhờ tích lũy quán tính từ bước 1 ($0.09$), Momentum đã đẩy vị trí tiến xa hơn đáng kể hướng về phía nghiệm $\theta^* = 1$.
@@ -190,7 +215,12 @@ Quy tắc cập nhật Nesterov:
 1. Dự phóng vị trí tương lai theo quán tính thuần túy: $\widetilde\theta_t = \theta_t + \mu v_t$.
 2. Đo độ dốc địa hình tại điểm dự phóng: $g_t = \nabla J(\widetilde\theta_t)$.
 3. Cập nhật vận tốc và vị trí:
-   $$v_{t+1} = \mu v_t - \eta g_t, \qquad \theta_{t+1} = \theta_t + v_{t+1}.$$
+   $$
+   \begin{aligned}
+   &v_{t+1} = \mu v_t - \eta g_t, \qquad\\
+   &\theta_{t+1} = \theta_t + v_{t+1}.
+   \end{aligned}
+   $$
 
 Sự khác biệt cốt tử giữa Momentum và Nesterov nằm ở **vị trí lấy đạo hàm**:
 - Momentum thông thường: Tính gradient tại điểm đang đứng $\theta_t$, rồi mới cộng quán tính $\mu v_t$.
@@ -203,7 +233,13 @@ Với bài toán $J(\theta) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}$, khởi t
   - Điểm nhìn trước: $\widetilde\theta_1 = \theta_1 + \mu v_1 = 0.1 + 0.9(0.1) = 0.19$.
   - Gradient tại điểm nhìn trước: $g_1 = \nabla J(0.19) = 0.19 - 1 = -0.81$.
   - Vận tốc mới:
-    $$v_2 = 0.9(0.1) - 0.1(-0.81) = 0.09 + 0.081 = 0.171.$$
+    $$
+    \begin{aligned}
+    v_2 &= 0.9(0.1) - 0.1(-0.81)\\
+    &= 0.09 + 0.081\\
+    &= 0.171.
+    \end{aligned}
+    $$
   - Cập nhật vị trí: $\theta_2 = 0.1 + 0.171 = 0.271$.
 
 Ta thấy vận tốc Nesterov ($0.171$) nhỏ hơn một chút so với Momentum thông thường ($0.18$) vì nó đã phát hiện ra rằng quán tính đang đưa điểm tới gần đáy hơn, từ đó tự động hiệu chỉnh bước đi chính xác và mượt mà hơn.
@@ -241,7 +277,10 @@ Xét một nơ-ron tuyến tính tính tổng trọng số $z = \sum_{i=1}^{n_{\
 Phương sai của tổ hợp tuyến tính là:
 
 $$
-\operatorname{Var}(z) = \sum_{i=1}^{n_{\mathrm{in}}} \operatorname{Var}(W_i x_i) = n_{\mathrm{in}} \operatorname{Var}(W) \operatorname{Var}(x).
+\begin{aligned}
+\operatorname{Var}(z) &= \sum_{i=1}^{n_{\mathrm{in}}} \operatorname{Var}(W_i x_i)\\
+&= n_{\mathrm{in}} \operatorname{Var}(W) \operatorname{Var}(x).
+\end{aligned}
 $$
 
 Để phương sai của tín hiệu không bị phóng đại hay triệt tiêu khi truyền xuôi qua tầng ($\operatorname{Var}(z) = \operatorname{Var}(x)$), ta cần:
@@ -265,7 +304,10 @@ $$
 Nếu khởi tạo theo phân phối đều đối xứng $W \sim U[-a, a]$, vì phân phối đều có phương sai $\operatorname{Var}(W) = \frac{a^2}{3}$, ta thu được cận biên độ:
 
 $$
-\frac{a^2}{3} = \frac{2}{n_{\mathrm{in}} + n_{\mathrm{out}}} \implies a = \sqrt{\frac{6}{n_{\mathrm{in}} + n_{\mathrm{out}}}}.
+\begin{aligned}
+\frac{a^2}{3} &= \frac{2}{n_{\mathrm{in}} + n_{\mathrm{out}}}\\
+&\implies a = \sqrt{\frac{6}{n_{\mathrm{in}} + n_{\mathrm{out}}}}.
+\end{aligned}
 $$
 
 Chẳng hạn với một tầng có 4 đầu vào ($n_{\mathrm{in}} = 4$) và 2 đầu ra ($n_{\mathrm{out}} = 2$):
@@ -287,9 +329,21 @@ Tại điểm $\theta = 0.5$:
    - Mẫu 1: $\nabla\ell_1(0.5) = 0.5 - 0 = 0.5$.
    - Mẫu 2: $\nabla\ell_2(0.5) = 0.5 - 2 = -1.5$.
 2. Gradient của lô hai mẫu:
-   $$g_B(0.5) = \frac{0.5 + (-1.5)}{2} = \frac{-1.0}{2} = -0.5.$$
+   $$
+   \begin{aligned}
+   g_B(0.5) &= \frac{0.5 + (-1.5)}{2}\\
+   &= \frac{-1.0}{2}\\
+   &= -0.5.
+   \end{aligned}
+   $$
    Đạo hàm toàn phần:
-   $$J(\theta) = \frac{1}{2}(\theta - 1)^2 + \frac{1}{2} \implies J'(0.5) = 0.5 - 1 = -0.5.$$
+   $$
+   \begin{aligned}
+   J(\theta) &= \frac{1}{2}(\theta - 1)^2 + \frac{1}{2}\\
+   &\implies J'(0.5) = 0.5 - 1\\
+   &= -0.5.
+   \end{aligned}
+   $$
    Hai kết quả trùng khớp hoàn hảo. Chú ý: Nếu cộng các gradient mà quên chia cho kích thước lô $B = 2$, ta sẽ thu được $-1.0$, làm sai lệch thang đo của bước cập nhật.
 :::
 
@@ -299,11 +353,26 @@ Hãy tính toán chi tiết bước lặp thứ 3 với gradient toàn phần, t
 :::
 ::: solution
 - Tính gradient tại vị trí hiện tại $\theta_2 = 0.28$:
-  $$g_2 = \theta_2 - 1 = 0.28 - 1 = -0.72.$$
+  $$
+  g_2 = \theta_2 - 1 = 0.28 - 1 = -0.72.
+  $$
 - Cập nhật vận tốc mới $v_3$:
-  $$v_3 = \mu v_2 - \eta g_2 = 0.9(0.18) - 0.1(-0.72) = 0.162 + 0.072 = 0.234.$$
+  $$
+  \begin{aligned}
+  v_3 &= \mu v_2 - \eta g_2\\
+  &= 0.9(0.18) - 0.1(-0.72)\\
+  &= 0.162 + 0.072\\
+  &= 0.234.
+  \end{aligned}
+  $$
 - Cập nhật vị trí mới $\theta_3$:
-  $$\theta_3 = \theta_2 + v_3 = 0.28 + 0.234 = 0.514.$$
+  $$
+  \begin{aligned}
+  \theta_3 &= \theta_2 + v_3\\
+  &= 0.28 + 0.234\\
+  &= 0.514.
+  \end{aligned}
+  $$
 Vận tốc tiếp tục tăng từ $0.18$ lên $0.234$, giúp đẩy tham số vượt qua mốc giữa đường ($0.5$) chỉ sau 3 bước lặp.
 :::
 
@@ -314,9 +383,25 @@ Một tầng ẩn trong mạng nơ-ron sâu nhận 8 đầu vào ($n_{\mathrm{in
 :::
 ::: solution
 1. Phương sai Glorot chuẩn hóa:
-   $$\operatorname{Var}(W) = \frac{2}{n_{\mathrm{in}} + n_{\mathrm{out}}} = \frac{2}{8 + 4} = \frac{2}{12} = \frac{1}{6} \approx 0.1667.$$
+   $$
+   \begin{aligned}
+   \operatorname{Var}(W) &= \frac{2}{n_{\mathrm{in}} + n_{\mathrm{out}}}\\
+   &= \frac{2}{8 + 4}\\
+   &= \frac{2}{12}\\
+   &= \frac{1}{6}\\
+   &\approx 0.1667.
+   \end{aligned}
+   $$
 2. Biên độ phân phối đều:
-   $$a = \sqrt{\frac{6}{n_{\mathrm{in}} + n_{\mathrm{out}}}} = \sqrt{\frac{6}{12}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} \approx 0.7071.$$
+   $$
+   \begin{aligned}
+   a &= \sqrt{\frac{6}{n_{\mathrm{in}} + n_{\mathrm{out}}}}\\
+   &= \sqrt{\frac{6}{12}}\\
+   &= \sqrt{\frac{1}{2}}\\
+   &= \frac{1}{\sqrt{2}}\\
+   &\approx 0.7071.
+   \end{aligned}
+   $$
 Trọng số của tầng này cần được lấy mẫu ngẫu nhiên từ phân phối $U[-0.7071, 0.7071]$.
 :::
 
@@ -339,7 +424,10 @@ $$
    Đặt biến ngẫu nhiên chỉ thị $I_i = \mathbb{I}(i \in B)$.
    Xác suất để một mẫu thứ $i$ bất kỳ lọt vào lô kích thước $m$ là:
    $$
-   \mathbb{P}(i \in B) = \frac{m}{N} \implies \mathbb{E}[I_i] = \frac{m}{N}.
+   \begin{aligned}
+   \mathbb{P}(i \in B) &= \frac{m}{N}\\
+   &\implies \mathbb{E}[I_i] = \frac{m}{N}.
+   \end{aligned}
    $$
    Gradient mini-batch được viết lại dưới dạng:
    $$
@@ -347,24 +435,25 @@ $$
    $$
    Lấy kỳ vọng toán học theo phân phối chọn mẫu:
    $$
-\begin{aligned}
-\mathbb{E}[g_B(\theta)] &= \frac{1}{m} \sum_{i=1}^N \mathbb{E}[I_i] \nabla \ell(\theta, z_i) \\
-&= \frac{1}{m} \sum_{i=1}^N \left(\frac{m}{N}\right) \nabla \ell(\theta, z_i) \\
-&= \frac{1}{N} \sum_{i=1}^N \nabla \ell(\theta, z_i) = \nabla f(\theta).
-\end{aligned}
-$$
+   \begin{aligned}
+   \mathbb{E}[g_B(\theta)] &= \frac{1}{m} \sum_{i=1}^N \mathbb{E}[I_i] \nabla \ell(\theta, z_i)\\
+   &= \frac{1}{m} \sum_{i=1}^N \left(\frac{m}{N}\right) \nabla \ell(\theta, z_i)\\
+   &= \frac{1}{N} \sum_{i=1}^N \nabla \ell(\theta, z_i)\\
+   &= \nabla f(\theta).
+   \end{aligned}
+   $$
    Đẳng thức này khẳng định $g_B(\theta)$ là một ước lượng không chệch của gradient chân thực.
 
 2. **Ma trận hiệp phương sai của gradient**:
    Khi các mẫu trong lô được rút độc lập có hoàn lại (i.i.d.), các biến ngẫu nhiên $\nabla \ell(\theta, z_i)$ là độc lập cùng phân phối.
    Hiệp phương sai của tổng các biến độc lập bằng tổng các hiệp phương sai:
    $$
-\begin{aligned}
-\operatorname{Cov}\big(g_B(\theta)\big) &= \operatorname{Cov}\left(\frac{1}{m} \sum_{i \in B} \nabla \ell(\theta, z_i)\right) \\
-&= \frac{1}{m^2} \sum_{i \in B} \operatorname{Cov}\big(\nabla \ell(\theta, z_i)\big) \\
-\preceq \frac{1}{m^2} \big(m \sigma^2 I\big) &= \frac{\sigma^2}{m} I.
-\end{aligned}
-$$
+   \begin{aligned}
+   \operatorname{Cov}\big(g_B(\theta)\big) &= \operatorname{Cov}\left(\frac{1}{m} \sum_{i \in B} \nabla \ell(\theta, z_i)\right) \\
+   &= \frac{1}{m^2} \sum_{i \in B} \operatorname{Cov}\big(\nabla \ell(\theta, z_i)\big) \\
+   \preceq \frac{1}{m^2} \big(m \sigma^2 I\big) &= \frac{\sigma^2}{m} I.
+   \end{aligned}
+   $$
    Phương sai của vector gradient tỷ lệ nghịch chính xác với kích thước lô $m$.
 
 3. **Ý nghĩa của tỉ số tín hiệu trên nhiễu (SNR)**:
@@ -407,11 +496,13 @@ $$
    $$
    Áp dụng bất đẳng thức Cauchy-Schwarz và tính chất Lipschitz của gradient:
    $$
-\begin{aligned}
-\left|f(y) - f(x) - \nabla f(x)^T (y - x)\right| &\le \int_0^1 \left\|\nabla f\big(x + \tau(y - x)\big) - \nabla f(x)\right\|_2 \|y - x\|_2 \, \mathrm{d}\tau \\
-&\le \int_0^1 L \tau \|y - x\|_2^2 \, \mathrm{d}\tau = L \|y - x\|_2^2 \left[\frac{\tau^2}{2}\right]_0^1 = \frac{L}{2}\|y - x\|_2^2.
-\end{aligned}
-$$
+   \begin{aligned}
+   \left|f(y) - f(x) - \nabla f(x)^T (y - x)\right| &\le \int_0^1 \left\|\nabla f\big(x + \tau(y - x)\big) - \nabla f(x)\right\|_2 \|y - x\|_2 \, \mathrm{d}\tau\\
+   &\le \int_0^1 L \tau \|y - x\|_2^2 \, \mathrm{d}\tau\\
+   &= L \|y - x\|_2^2 \left[\frac{\tau^2}{2}\right]_0^1\\
+   &= \frac{L}{2}\|y - x\|_2^2.
+   \end{aligned}
+   $$
    Bỏ dấu giá trị tuyệt đối ta thu được bất đẳng thức bước giảm cần chứng minh.
 
 2. **Kỳ vọng bước giảm của SGD**:
@@ -421,11 +512,11 @@ $$
    $$
    Lấy kỳ vọng có điều kiện theo trạng thái hiện tại $\theta_t$:
    $$
-\begin{aligned}
-\mathbb{E}[f(\theta_{t+1}) \mid \theta_t] &\le f(\theta_t) - \eta \nabla f(\theta_t)^T \mathbb{E}[g_t \mid \theta_t] + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t] \\
-&= f(\theta_t) - \eta \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t].
-\end{aligned}
-$$
+   \begin{aligned}
+   \mathbb{E}[f(\theta_{t+1}) \mid \theta_t] &\le f(\theta_t) - \eta \nabla f(\theta_t)^T \mathbb{E}[g_t \mid \theta_t] + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t] \\
+   &= f(\theta_t) - \eta \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L}{2}\mathbb{E}[\|g_t\|_2^2 \mid \theta_t].
+   \end{aligned}
+   $$
    Tách $\mathbb{E}[\|g_t\|_2^2] = \|\nabla f(\theta_t)\|_2^2 + \sigma^2 \le G^2$:
    $$
    \mathbb{E}[f(\theta_{t+1}) \mid \theta_t] \le f(\theta_t) - \eta \left(1 - \frac{\eta L}{2}\right) \|\nabla f(\theta_t)\|_2^2 + \frac{\eta^2 L G^2}{2}.
@@ -436,7 +527,10 @@ $$
    Tuy nhiên, luôn tồn tại số hạng nhiễu dương $\frac{\eta^2 L G^2}{2} > 0$.
    Hàm mục tiêu chỉ được bảo đảm giảm khi:
    $$
-   \eta \left(1 - \frac{\eta L}{2}\right) \|\nabla f(\theta_t)\|_2^2 > \frac{\eta^2 L G^2}{2} \iff \|\nabla f(\theta_t)\|_2^2 > \frac{\eta L G^2}{2 - \eta L}.
+   \begin{aligned}
+   \eta \left(1 - \frac{\eta L}{2}\right) \|\nabla f(\theta_t)\|_2^2 &> \frac{\eta^2 L G^2}{2}\\
+   &\iff \|\nabla f(\theta_t)\|_2^2 > \frac{\eta L G^2}{2 - \eta L}.
+   \end{aligned}
    $$
    Khi mô hình tiến gần tới cực tiểu và gradient triệt tiêu dần, lực giảm của gradient bị áp đảo hoàn toàn bởi nhiễu ngẫu nhiên. Thuật toán không thể đứng yên mà sẽ dao động vĩnh viễn trong một lân cận bán kính $O(\sqrt{\eta G^2})$. Để hội tụ về đúng điểm dừng, ta bắt buộc phải giảm dần tốc độ học theo thời gian (learning rate decay, ví dụ $\eta_t = O(1/\sqrt{t})$).
 :::
@@ -517,11 +611,18 @@ Xét một tầng tuyến tính trong mạng nơ-ron: $y = W x$, trong đó $x \
    Biến đổi qua ReLU: $z_i = \max(0, y_i)$.
    Kỳ vọng bình phương được tính bằng tích phân:
    $$
-   \mathbb{E}[z_i^2] = \int_{-\infty}^{+\infty} \max(0, y)^2 p(y) \, \mathrm{d}y = \int_0^{+\infty} y^2 p(y) \, \mathrm{d}y.
+   \begin{aligned}
+   \mathbb{E}[z_i^2] &= \int_{-\infty}^{+\infty} \max(0, y)^2 p(y) \, \mathrm{d}y\\
+   &= \int_0^{+\infty} y^2 p(y) \, \mathrm{d}y.
+   \end{aligned}
    $$
    Do tính đối xứng của hàm mật độ chuẩn:
    $$
-   \int_0^{+\infty} y^2 p(y) \, \mathrm{d}y = \frac{1}{2} \int_{-\infty}^{+\infty} y^2 p(y) \, \mathrm{d}y = \frac{1}{2}\mathbb{E}[y_i^2] = \frac{1}{2}\sigma_y^2.
+   \begin{aligned}
+   \int_0^{+\infty} y^2 p(y) \, \mathrm{d}y &= \frac{1}{2} \int_{-\infty}^{+\infty} y^2 p(y) \, \mathrm{d}y\\
+   &= \frac{1}{2}\mathbb{E}[y_i^2]\\
+   &= \frac{1}{2}\sigma_y^2.
+   \end{aligned}
    $$
    Hàm kích hoạt ReLU triệt tiêu đúng một nửa năng lượng tín hiệu ở phần âm.
 
@@ -566,11 +667,20 @@ Khi huấn luyện mô hình phân loại trên tập dữ liệu kích thước
    Kỳ vọng của trung bình mẫu là $\mathbb{E}[g_m] = \mu$, và phương sai là $\operatorname{Var}(g_m) = \frac{\sigma^2}{m} = \frac{0{,}25}{m}$.
    Bất đẳng thức Chebyshev phát biểu rằng với mọi $\epsilon > 0$:
    $$
-   \mathbb{P}(|g_m - \mu| \ge \epsilon) \le \frac{\operatorname{Var}(g_m)}{\epsilon^2} = \frac{\sigma^2}{m \epsilon^2}.
+   \begin{aligned}
+   \mathbb{P}(|g_m - \mu| \ge \epsilon) &\le \frac{\operatorname{Var}(g_m)}{\epsilon^2}\\
+   &= \frac{\sigma^2}{m \epsilon^2}.
+   \end{aligned}
    $$
    Yêu cầu xác suất vi phạm không vượt quá $\delta = 0{,}05$:
    $$
-   \frac{0{,}25}{m (0{,}1)^2} \le 0{,}05 \iff \frac{0{,}25}{0{,}01 m} \le 0{,}05 \iff \frac{25}{m} \le 0{,}05 \implies m \ge \frac{25}{0{,}05} = 500.
+   \begin{aligned}
+   \frac{0{,}25}{m (0{,}1)^2} &\le 0{,}05\\
+   &\iff \frac{0{,}25}{0{,}01 m} \le 0{,}05\\
+   &\iff \frac{25}{m} \le 0{,}05\\
+   &\implies m \ge \frac{25}{0{,}05}\\
+   &= 500.
+   \end{aligned}
    $$
    Theo Chebyshev, cần kích thước lô ít nhất $m = 500$ mẫu.
 
@@ -578,15 +688,27 @@ Khi huấn luyện mô hình phân loại trên tập dữ liệu kích thước
    Vì mỗi biến ngẫu nhiên $X_i$ bị chặn trong đoạn $[a_i, b_i] = [-1, 1]$, độ dài khoảng chặn là $b_i - a_i = 1 - (-1) = 2$.
    Bất đẳng thức Hoeffding cho biến ngẫu nhiên độc lập bị chặn:
    $$
-   \mathbb{P}(|g_m - \mu| \ge \epsilon) \le 2 \exp\left(-\frac{2 m^2 \epsilon^2}{\sum_{i=1}^m (b_i - a_i)^2}\right) = 2 \exp\left(-\frac{2 m^2 \epsilon^2}{m \times 2^2}\right) = 2 \exp\left(-\frac{m \epsilon^2}{2}\right).
+   \begin{aligned}
+   \mathbb{P}(|g_m - \mu| \ge \epsilon) &\le 2 \exp\left(-\frac{2 m^2 \epsilon^2}{\sum_{i=1}^m (b_i - a_i)^2}\right)\\
+   &= 2 \exp\left(-\frac{2 m^2 \epsilon^2}{m \times 2^2}\right)\\
+   &= 2 \exp\left(-\frac{m \epsilon^2}{2}\right).
+   \end{aligned}
    $$
    Yêu cầu cận trên không vượt quá $\delta = 0{,}05$:
    $$
-   2 \exp\left(-\frac{m (0{,}1)^2}{2}\right) \le 0{,}05 \iff \exp(-0{,}005 m) \le 0{,}025.
+   \begin{aligned}
+   2 \exp\left(-\frac{m (0{,}1)^2}{2}\right) &\le 0{,}05\\
+   &\iff \exp(-0{,}005 m) \le 0{,}025.
+   \end{aligned}
    $$
    Lấy logarit tự nhiên hai vế:
    $$
-   -0{,}005 m \le \log(0{,}025) \approx -3{,}6889 \implies m \ge \frac{3{,}6889}{0{,}005} \approx 737{,}8.
+   \begin{aligned}
+   -0{,}005 m &\le \log(0{,}025)\\
+   &\approx -3{,}6889\\
+   &\implies m \ge \frac{3{,}6889}{0{,}005}\\
+   &\approx 737{,}8.
+   \end{aligned}
    $$
    Làm tròn lên, ta cần $m \ge 738$ mẫu.
 

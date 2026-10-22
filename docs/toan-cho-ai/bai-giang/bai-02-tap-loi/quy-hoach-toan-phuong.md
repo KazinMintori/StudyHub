@@ -65,7 +65,10 @@ với biến $(x_1, x_2)$. Bài toán bất khả thi khi và chỉ khi một tr
 **Phương sai lớn nhất.** Trở lại bài toán tối ưu trên phân phối xác suất: Xét biến ngẫu nhiên nhận các giá trị $f_1, \ldots, f_n$ với phân phối xác suất $p \succeq 0$, $\sum_{i=1}^n p_i = 1$. Phương sai của $f(x)$ được tính tường minh:
 
 $$
-\operatorname{Var}(f(x)) = \sum_{i=1}^n f_i^2p_i - \left(\sum_{i=1}^n f_ip_i\right)^2 = \mathbb{E}[f(x)^2] - (\mathbb{E}[f(x)])^2,
+\begin{aligned}
+\operatorname{Var}(f(x)) &= \sum_{i=1}^n f_i^2p_i - \left(\sum_{i=1}^n f_ip_i\right)^2\\
+&= \mathbb{E}[f(x)^2] - (\mathbb{E}[f(x)])^2,
+\end{aligned}
 $$
 
 đây là một hàm **lõm** bậc hai của $p$, vì nó là một hàm tuyến tính trừ đi bình phương của một hàm tuyến tính. Cực đại một hàm lõm trên đa diện là một bài toán lồi, và ở đây nó chính là một bài toán QP. Với biến nhận giá trị trong $\{0, 1, 2, 3, 4\}$ và trung bình nằm trong đoạn $[1, 2]$, phương sai lớn nhất có thể là 4, đạt khi dồn một nửa khối lượng vào 0 và nửa kia vào 4. Kết quả khớp với trực giác: Muốn phương sai lớn, hãy đẩy khối lượng xác suất dồn ra hai đầu biên.

@@ -25,10 +25,16 @@ $$
 \omega_d=\sqrt{\frac km-\alpha^2}.
 $$
 
-Nếu thả từ nghỉ tại x₀, nghiệm phải giữ cả hai điều kiện ban đầu:
+Nếu thả từ nghỉ tại $x_0$, nghiệm phải giữ cả vị trí và vận tốc ban đầu. Đặt $r=\alpha/\omega_d$ và hàm phụ:
 
 $$
-x(t) = x_0e^{-\alpha t}\left(\cos\omega_dt + \frac\alpha{\omega_d}\sin\omega_dt\right).
+u(t)=\cos\omega_dt+r\sin\omega_dt.
+$$
+
+Khi đó nghiệm được viết thành:
+
+$$
+x(t)=x_0e^{-\alpha t}u(t).
 $$
 
 Trong thanh trượt nối lò xo, b=B²W²/R. Mất mát cơ năng bằng công suất nhiệt I²R trong mạch. Khi b²≥4mk, không dùng công thức dao động hình sin của miền tắt dần yếu.

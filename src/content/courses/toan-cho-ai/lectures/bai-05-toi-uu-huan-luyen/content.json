@@ -16,106 +16,111 @@
   "examples": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 76,
+      "line": 83,
       "title": "Quan sát nhiễu ngẫu nhiên trên mô hình một tham số"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 165,
+      "line": 184,
       "title": "Tính toán định lượng hai bước lặp Momentum"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 199,
+      "line": 229,
       "title": "Kiểm chứng bước Nesterov trên cùng bài toán"
     }
   ],
   "exercises": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 277,
+      "line": 319,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 279,
+      "line": 321,
       "title": "1. Tính toán gradient lô nhỏ"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 296,
+      "line": 350,
       "title": "2. Thực hiện bước thứ ba của thuật toán Momentum"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 310,
+      "line": 379,
       "title": "3. Tính toán tham số khởi tạo Glorot cho tầng ẩn"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 323,
+      "line": 408,
       "title": "4. Phân tích thống kê: Kỳ vọng, hiệp phương sai và nhiễu của gradient mini-batch"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 382,
+      "line": 471,
       "title": "5. Bất đẳng thức bước giảm (Descent Lemma) và tốc độ hội tụ của SGD"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 444,
+      "line": 538,
       "title": "6. Cơ chế nhìn trước (Look-ahead) của Nesterov Accelerated Gradient (NAG)"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 501,
+      "line": 595,
       "title": "7. Khởi tạo He (Kaiming) cho hàm kích hoạt ReLU và sự bảo toàn phương sai"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 557,
+      "line": 658,
       "title": "8. Bất đẳng thức tập trung Chebyshev và Hoeffding trong kiểm soát sai số mini-batch"
     }
   ],
   "solutions": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 285,
+      "line": 105,
+      "title": "Câu hỏi đào sâu: Tại điểm cực tiểu toàn cục $\\theta = 1$, nếu bước cập nhật bốc phải mẫu $b = 0$ với $\\eta = 0.1$, hàm mất mát toàn phần sẽ biến thiên ra sao?"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
+      "line": 327,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 300,
+      "line": 354,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 315,
+      "line": 384,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 337,
+      "line": 422,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 398,
+      "line": 487,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 460,
+      "line": 554,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 514,
+      "line": 608,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
-      "line": 564,
+      "line": 665,
       "title": ""
     }
   ],

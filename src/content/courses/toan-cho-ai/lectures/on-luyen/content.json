@@ -81,7 +81,7 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/khong-gian-va-ma-tran.md",
-      "line": 149,
+      "line": 152,
       "title": "Đọc hệ số của dạng toàn phương"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/tinh-loi-va-toi-uu.md",
-      "line": 143,
+      "line": 146,
       "title": "Đẳng thức phi tuyến"
     },
     {
@@ -101,12 +101,12 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/quy-hoach-tuyen-tinh.md",
-      "line": 112,
+      "line": 116,
       "title": "Đọc chứng nhận cận dưới"
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/bai-tap-cos.md",
-      "line": 130,
+      "line": 133,
       "title": "Vai trò của thành phần lượng giác"
     },
     {
@@ -116,12 +116,12 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/kkt-co-tham-so.md",
-      "line": 131,
+      "line": 132,
       "title": "Kiểm chứng tại hai giá trị tham số"
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/doi-ngau-lagrange.md",
-      "line": 130,
+      "line": 131,
       "title": "Vì sao một bộ nhân tử chứng nhận được nghiệm?"
     },
     {
@@ -131,22 +131,22 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/bai-tap-rang-buoc.md",
-      "line": 74,
+      "line": 75,
       "title": "Ràng buộc nào chặt tại nghiệm?"
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/bai-tap-rang-buoc.md",
-      "line": 132,
+      "line": 133,
       "title": "Kiểm miền trước khi dùng tính lồi"
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/quy-tac-chuoi-va-taylor.md",
-      "line": 177,
+      "line": 186,
       "title": "Tính dọc đường trước khi dùng ma trận"
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/gradient-backtracking-newton.md",
-      "line": 170,
+      "line": 173,
       "title": "Hướng đúng nhưng bước sai"
     }
   ],
@@ -158,7 +158,7 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/khong-gian-va-ma-tran.md",
-      "line": 153,
+      "line": 156,
       "title": ""
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/tinh-loi-va-toi-uu.md",
-      "line": 147,
+      "line": 150,
       "title": ""
     },
     {
@@ -178,12 +178,12 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/quy-hoach-tuyen-tinh.md",
-      "line": 116,
+      "line": 120,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/bai-tap-cos.md",
-      "line": 134,
+      "line": 137,
       "title": ""
     },
     {
@@ -193,12 +193,12 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/kkt-co-tham-so.md",
-      "line": 135,
+      "line": 136,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/doi-ngau-lagrange.md",
-      "line": 134,
+      "line": 135,
       "title": ""
     },
     {
@@ -208,22 +208,22 @@
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/bai-tap-rang-buoc.md",
-      "line": 88,
+      "line": 89,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/bai-tap-rang-buoc.md",
-      "line": 136,
+      "line": 137,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/quy-tac-chuoi-va-taylor.md",
-      "line": 181,
+      "line": 190,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/on-luyen/gradient-backtracking-newton.md",
-      "line": 174,
+      "line": 177,
       "title": ""
     }
   ],

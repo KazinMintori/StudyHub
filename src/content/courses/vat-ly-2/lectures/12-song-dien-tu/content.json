@@ -61,6 +61,16 @@
   ],
   "examples": [
     {
+      "source": "raw_materials/physics/translations/chapter-32/03-song-hinh-sin.md",
+      "line": 116,
+      "title": "Ví dụ 32.1: Điện trường và từ trường của chùm tia laser"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-32/03-song-hinh-sin.md",
+      "line": 241,
+      "title": "Ví dụ 32.2: Sóng điện từ trong các môi trường vật chất khác nhau"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-32/04-nang-luong-dong-luong.md",
       "line": 203,
       "title": "Ví dụ 32.3: Năng lượng trong sóng phi sin"
@@ -515,6 +525,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-32/00-mo-dau.md",
+      "line": 25,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-32/10-luyen-tap-huong-dan.md",
       "line": 13,
       "title": "Lời giải chi tiết"
@@ -923,6 +938,31 @@
       "source": "raw_materials/physics/translations/chapter-32/15-mcat.md",
       "line": 102,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-32/01-maxwell-song-dien-tu.md",
+      "line": 118,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-32/02-song-phang-van-toc-anh-sang.md",
+      "line": 253,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-32/03-song-hinh-sin.md",
+      "line": 340,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-32/04-nang-luong-dong-luong.md",
+      "line": 367,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-32/05-song-dung-dien-tu.md",
+      "line": 198,
+      "title": "Xem đáp án và giải thích"
     }
   ],
   "assets": [

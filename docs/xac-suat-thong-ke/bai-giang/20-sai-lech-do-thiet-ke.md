@@ -210,7 +210,7 @@ Quan sát Hình 20.3:
 3. Tổng xác suất bác bỏ nhầm $H_0$ khi $H_0$ thực sự đúng trên thực tế sẽ là:
 
 $$
-\\alpha_{\mathrm{actual}} = 5\% + 5\% = 10\%
+\alpha_{\mathrm{actual}} = 5\% + 5\% = 10\%
 $$
 
 > [!CAUTION] Bài học phương pháp luận tối thượng:
@@ -318,7 +318,7 @@ Chỉ với 20 phép thử độc lập hoàn toàn ngẫu nhiên, xác suất b
 
 ### Giải pháp: Hiệu chỉnh Bonferroni (Bonferroni Correction)
 
-Để kiểm soát tỉ lệ sai lầm loại I tích lũy trên toàn bộ họ phép thử ở mức mong muốn $\\alpha_{\mathrm{target}}$ (ví dụ $0.05$), giải pháp cổ điển và khắt khe nhất là chia nhỏ ngưỡng ý nghĩa cho số lượng phép thử $m$:
+Để kiểm soát tỉ lệ sai lầm loại I tích lũy trên toàn bộ họ phép thử ở mức mong muốn $\alpha_{\mathrm{target}}$ (ví dụ $0.05$), giải pháp cổ điển và khắt khe nhất là chia nhỏ ngưỡng ý nghĩa cho số lượng phép thử $m$:
 
 $$
 \alpha_{\text{Bonferroni}} = \frac{\alpha}{m}
@@ -463,7 +463,7 @@ $$
   - Vì hai biến cố này xung khắc nhau, tổng xác suất để nhà nghiên cứu bác bỏ nhầm $H_0$ là:
 
 $$
-\\alpha_{\mathrm{actual}} = 5\% + 5\% = 10\%
+\alpha_{\mathrm{actual}} = 5\% + 5\% = 10\%
 $$
 
 - Kết luận: Việc đổi sang kiểm định một phía sau khi xem dữ liệu đã làm xác suất dương tính giả thực tế tăng gấp đôi so với mức $\alpha = 0.05$ công bố danh nghĩa, vi phạm nghiêm trọng tính minh bạch của phương pháp khoa học.
@@ -529,19 +529,19 @@ $$
 
 **2. Hiệu chỉnh Bonferroni:**
 
-- **Nguyên lý**: Để đảm bảo xác suất xuất hiện ít nhất một sai lầm loại I trên toàn bộ họ 50 phép thử không vượt quá ngưỡng trần $\\alpha_{\mathrm{total}} = 0.05$, phương pháp Bonferroni chia đều ngưỡng ý nghĩa cho tổng số lượng phép thử $m$:
+- **Nguyên lý**: Để đảm bảo xác suất xuất hiện ít nhất một sai lầm loại I trên toàn bộ họ 50 phép thử không vượt quá ngưỡng trần $\alpha_{\mathrm{total}} = 0.05$, phương pháp Bonferroni chia đều ngưỡng ý nghĩa cho tổng số lượng phép thử $m$:
 
 $$
-\alpha_{\text{Bonferroni}} = \frac{\\alpha_{\mathrm{total}}}{m}
+\alpha_{\text{Bonferroni}} = \frac{\alpha_{\mathrm{total}}}{m}
 $$
 
-- **Áp dụng số học**: Với $m = 50$ và $\\alpha_{\mathrm{total}} = 0.05$:
+- **Áp dụng số học**: Với $m = 50$ và $\alpha_{\mathrm{total}} = 0.05$:
 
 $$
 \alpha_{\text{Bonferroni}} = \frac{0.05}{50} = 0.001
 $$
 
-- Kết luận: Một gen chỉ được tuyên bố là có ý nghĩa thống kê nếu giá trị $p\text{-value}$ riêng lẻ của nó nhỏ hơn $0.001$. Kỹ thuật này giúp loại bỏ gần như toàn bộ các phát hiện giả mạo phát sinh từ việc kiểm định đồng thời nhiều biến số.
+- Kết luận: Một gen chỉ được tuyên bố là có ý nghĩa thống kê nếu giá trị $p\text{-value}$ riêng lẻ của nó nhỏ hơn $0.001$. Nếu từng phép thử có mức sai lầm loại I hợp lệ, Bonferroni bảo đảm xác suất có ít nhất một bác bỏ nhầm trong cả họ không vượt quá 0,05. Bảo đảm này không đòi hỏi các phép thử độc lập và không khẳng định mọi phát hiện được giữ lại đều đúng.
 
 :::
 

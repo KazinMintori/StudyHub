@@ -124,7 +124,11 @@ Tham số rào chắn của nón ma trận này bằng đúng số chiều ma tr
    $$
    Dạng toàn phương Hessian áp dụng lên $H$:
    $$
-   \operatorname{tr}\big(H \nabla^2 \psi(X)[H]\big) = \operatorname{tr}\big(H X^{-1} H X^{-1}\big) = \|X^{-1/2} H X^{-1/2}\|_F^2 \ge 0.
+   \begin{aligned}
+   \operatorname{tr}\big(H \nabla^2 \psi(X)[H]\big) &= \operatorname{tr}\big(H X^{-1} H X^{-1}\big)\\
+   &= \|X^{-1/2} H X^{-1/2}\|_F^2\\
+   &\ge 0.
+   \end{aligned}
    $$
 
 Dạng toàn phương này triệt tiêu khi và chỉ khi $H = 0$, chứng minh rằng hàm chắn ma trận $-\log\det(X)$ là lồi ngặt trên toàn bộ nón $\mathbb{S}_{++}^k$.
@@ -148,7 +152,11 @@ Một bài toán Quy hoạch tuyến tính (LP) có $m = 200$ ràng buộc bất
 2. **Số bước lặp ngoài với $\mu = 10$**:
    Tỷ số thu hẹp khoảng cách đối ngẫu:
    $$
-   \frac{m}{t^{(0)} \epsilon} = \frac{200}{1 \times 10^{-6}} = 200 \times 10^6 = 2 \times 10^8.
+   \begin{aligned}
+   \frac{m}{t^{(0)} \epsilon} &= \frac{200}{1 \times 10^{-6}}\\
+   &= 200 \times 10^6\\
+   &= 2 \times 10^8.
+   \end{aligned}
    $$
    Số bước lặp ngoài:
    $$
@@ -176,12 +184,21 @@ Cho nón Lorentz trong $\mathbb{R}^3$: $K = \{(x_1, x_2, t) \mid x_1^2 + x_2^2 \
    Đặt $u = t^2 - x_1^2 - x_2^2 > 0$ trên phần trong của nón. Khi đó $\psi = -\log u$.
    Đạo hàm riêng theo các biến:
    $$
-\begin{aligned}
-\frac{\partial \psi}{\partial x_1} &= -\frac{1}{u} (-2x_1) = \frac{2x_1}{t^2 - x_1^2 - x_2^2}, \\
-\frac{\partial \psi}{\partial x_2} &= -\frac{1}{u} (-2x_2) = \frac{2x_2}{t^2 - x_1^2 - x_2^2}, \\
-\frac{\partial \psi}{\partial t} &= -\frac{1}{u} (2t) = -\frac{2t}{t^2 - x_1^2 - x_2^2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   &\begin{aligned}
+   \frac{\partial \psi}{\partial x_1} &= -\frac{1}{u} (-2x_1)\\
+   &= \frac{2x_1}{t^2 - x_1^2 - x_2^2},
+   \end{aligned}\\
+   &\begin{aligned}
+   \frac{\partial \psi}{\partial x_2} &= -\frac{1}{u} (-2x_2)\\
+   &= \frac{2x_2}{t^2 - x_1^2 - x_2^2},
+   \end{aligned}\\
+   &\begin{aligned}
+   \frac{\partial \psi}{\partial t} &= -\frac{1}{u} (2t)\\
+   &= -\frac{2t}{t^2 - x_1^2 - x_2^2}.
+   \end{aligned}
+   \end{aligned}
+   $$
    Vector gradient:
    $$
    \nabla \psi(x, t) = \frac{2}{t^2 - \|x\|_2^2} \begin{bmatrix} x_1 \\ x_2 \\ -t \end{bmatrix}.
@@ -190,13 +207,13 @@ $$
 2. **Kiểm tra đẳng thức tỷ lệ**:
    Với $s > 0$:
    $$
-\begin{aligned}
-\psi(s x, s t) &= -\log\big((s t)^2 - (s x_1)^2 - (s x_2)^2\big) \\
-&= -\log\big(s^2 (t^2 - x_1^2 - x_2^2)\big) \\
-&= -\log(s^2) - \log(t^2 - x_1^2 - x_2^2) \\
-&= -2 \log s + \psi(x, t).
-\end{aligned}
-$$
+   \begin{aligned}
+   \psi(s x, s t) &= -\log\big((s t)^2 - (s x_1)^2 - (s x_2)^2\big) \\
+   &= -\log\big(s^2 (t^2 - x_1^2 - x_2^2)\big) \\
+   &= -\log(s^2) - \log(t^2 - x_1^2 - x_2^2) \\
+   &= -2 \log s + \psi(x, t).
+   \end{aligned}
+   $$
 
 3. **Kết luận về tham số $\nu$**:
    Đối chiếu với định nghĩa tổng quát $\psi(s u) = \psi(u) - \nu \log s$, ta kết luận tham số rào chắn của nón Lorentz là:

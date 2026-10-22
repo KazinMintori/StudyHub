@@ -16,7 +16,10 @@ Với điện áp và dòng hình sin cùng tần số, hệ số công suất b
 Với điện áp và dòng hình sin cùng tần số:
 
 $$
-P_{\mathrm{av}}=\frac12VI\cos\phi\\ \quad=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.
+\begin{aligned}
+P_{\mathrm{av}}&=\frac12VI\cos\phi\\
+&=V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.
+\end{aligned}
 $$
 
 Hệ số cos φ không có đơn vị. Nó biểu diễn phần điện áp cùng pha dòng. Với mạch thụ động đang xét, hệ số từ 0 đến 1.

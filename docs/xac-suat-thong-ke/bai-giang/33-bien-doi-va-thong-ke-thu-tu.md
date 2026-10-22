@@ -79,10 +79,13 @@ $$
 
 $$
 \begin{aligned}
-f_Y(y) &= \frac{d}{dy} F_Y(y) \\
-&= 2 \frac{d}{dy} \Phi(\sqrt{y}) \\
-&= 2 \left[ \frac{1}{\sqrt{2\pi}} e^{-y / 2} \times \frac{1}{2\sqrt{y}} \right] \\
-&= \frac{1}{\sqrt{2\pi}} y^{-1/2} e^{-y / 2}, \quad y > 0.
+&\begin{aligned}
+f_Y(y) &= \frac{d}{dy} F_Y(y)\\
+&= 2 \frac{d}{dy} \Phi(\sqrt{y})\\
+&= 2 \left[ \frac{1}{\sqrt{2\pi}} e^{-y / 2} \times \frac{1}{2\sqrt{y}} \right]\\
+&= \frac{1}{\sqrt{2\pi}} y^{-1/2} e^{-y / 2}, \quad
+\end{aligned}\\
+&y > 0.
 \end{aligned}
 $$
 
@@ -245,7 +248,10 @@ $$
 
 
 $$
-J = \begin{pmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{pmatrix} = \begin{pmatrix} v & u \\ 1 - v & -u \end{pmatrix}.
+\begin{aligned}
+J &= \begin{pmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \end{pmatrix}\\
+&= \begin{pmatrix} v & u \\ 1 - v & -u \end{pmatrix}.
+\end{aligned}
 $$
 
 

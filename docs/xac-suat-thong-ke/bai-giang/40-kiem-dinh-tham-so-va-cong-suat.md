@@ -264,7 +264,11 @@ Bậc tự do $\nu = n - 1 = 10 - 1 = 9$.
 Sai số chuẩn của trung bình mẫu:
 
 $$
-\mathrm{SE} = \frac{s}{\sqrt{n}} = \frac{2{,}5}{\sqrt{10}} \approx 0{,}79057\,\mathrm{MB}
+\begin{aligned}
+\mathrm{SE} &= \frac{s}{\sqrt{n}}\\
+&= \frac{2{,}5}{\sqrt{10}}\\
+&\approx 0{,}79057\,\mathrm{MB}
+\end{aligned}
 $$
 
 Giá trị thống kê $t$ quan sát:

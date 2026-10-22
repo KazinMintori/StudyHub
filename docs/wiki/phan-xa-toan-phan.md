@@ -14,7 +14,11 @@ Tại mặt phân cách lý tưởng từ môi trường có chiết suất lớ
 ## Giải thích kỹ thuật
 
 $$
-n_a >n_b,\\\sin\theta_c =n_b/n_a,\\\theta_a >\theta_c.
+\begin{aligned}
+&n_a >n_b,\\
+&\sin\theta_c =n_b/n_a,\\
+&\theta_a >\theta_c.
+\end{aligned}
 $$
 
 Tại ngưỡng, Snell cho góc khúc xạ bằng 90 độ. Vượt ngưỡng, không có góc thực cho một tia khúc xạ chạy trong môi trường thứ hai. Trong mô hình mặt phân cách không hấp thụ, toàn bộ công suất pháp tuyến được phản xạ.

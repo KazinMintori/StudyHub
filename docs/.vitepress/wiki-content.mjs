@@ -1,6 +1,7 @@
 import { physicsConceptIds, physicsWikiDetails, physicsWikiConnections } from './physics-foundations.mjs'
 import { formatWikiMath } from '../../scripts/wiki-math.mjs'
 import { concepts } from './concepts.mjs'
+import { atlasConnections } from '../../src/features/wiki/data/atlas.mjs'
 
 import { mathAiWikiDetails } from './math-ai-foundations.mjs'
 import { dataProcessingConcepts, dataProcessingWikiDetails } from './data-processing-foundations.mjs'
@@ -133,8 +134,10 @@ const connections = {
   'tri-rieng':['ma-tran','vector','chuan']
 }
 export function relatedConcepts(id) {
+  if(atlasConnections[id])return atlasConnections[id]
   if(connections[id])return connections[id]
   const group=wikiGroups.find(group=>group.ids.includes(id))
+  if(!group)return []
   const index=group.ids.indexOf(id)
   return [...new Set([group.ids[(index+1)%group.ids.length],group.ids[(index+group.ids.length-1)%group.ids.length],group.ids[0]])].filter(other=>other!==id)
 }

@@ -61,7 +61,10 @@ Thử vào phương trình xác định tập hợp: $0^2 + 0^2 = 0 \ne 1$. Do �
 **Ví dụ 2: Miền quyết định rời rạc trong học máy.** Xét tập hợp các biến nhị phân trong $\mathbb{R}^2$:
 
 $$
-D = \{0, 1\}^2 = \{(0, 0), (0, 1), (1, 0), (1, 1)\}
+\begin{aligned}
+D &= \{0, 1\}^2\\
+&= \{(0, 0), (0, 1), (1, 0), (1, 1)\}
+\end{aligned}
 $$
 
 Tập này thường xuất hiện khi mô hình học máy cần lựa chọn bật hoặc tắt các đặc trưng (feature selection). Tập $D$ không lồi: Điểm $(0, 0) \in D$ và điểm $(1, 1) \in D$, nhưng trung điểm $(\tfrac{1}{2}, \tfrac{1}{2})$ rõ ràng không thuộc $D$. Các bài toán tối ưu với biến nguyên hoặc biến nhị phân rất khó giải quyết trong lý thuyết độ phức tạp tính toán chính vì miền khả thi của chúng thiếu tính lồi, buộc các nhà nghiên cứu phải tìm đến kỹ thuật nới lỏng lồi.
@@ -150,7 +153,12 @@ Chiều đảo là hiển nhiên vì đoạn thẳng nối hai điểm chính l�
   1. Vì $\theta_i \ge 0$ và $1 - \theta_k > 0$, ta có $\mu_i \ge 0$ với mọi $i = 1, \dots, k - 1$.
   2. Tổng các hệ số:
      $$
-     \sum_{i=1}^{k-1} \mu_i = \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} = \frac{1}{1 - \theta_k} \sum_{i=1}^{k-1} \theta_i = \frac{1 - \theta_k}{1 - \theta_k} = 1
+     \begin{aligned}
+     \sum_{i=1}^{k-1} \mu_i &= \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k}\\
+     &= \frac{1}{1 - \theta_k} \sum_{i=1}^{k-1} \theta_i\\
+     &= \frac{1 - \theta_k}{1 - \theta_k}\\
+     &= 1
+     \end{aligned}
      $$
   Như vậy điểm $z$ là một tổ hợp lồi của $k - 1$ điểm $x_1, \dots, x_{k-1} \in C$. Theo giả thiết quy nạp, ta có $z \in C$.
   
@@ -326,11 +334,11 @@ Trong không gian mặt phẳng $\mathbb{R}^2$, hãy chứng minh tập hợp l�
 ::: solution
 1. **Tập $S_1$ là tập lồi**: Đây là quả cầu đóng đơn vị theo chuẩn $\ell_1$. Lấy hai điểm $x, y \in S_1$ và $\theta \in [0, 1]$. Áp dụng bất đẳng thức tam giác cho từng tọa độ:
    $$
-\begin{aligned}
-|\theta x_1 + (1 - \theta) y_1| + |\theta x_2 + (1 - \theta) y_2| &\le \theta(|x_1| + |x_2|) + (1 - \theta)(|y_1| + |y_2|) \\
-&\le \theta(1) + (1 - \theta)(1) = 1
-\end{aligned}
-$$
+   \begin{aligned}
+   |\theta x_1 + (1 - \theta) y_1| + |\theta x_2 + (1 - \theta) y_2| &\le \theta(|x_1| + |x_2|) + (1 - \theta)(|y_1| + |y_2|) \\
+   &\le \theta(1) + (1 - \theta)(1) = 1
+   \end{aligned}
+   $$
    Do đó tổ hợp lồi thuộc $S_1$.
 2. **Tập $S_2$ là tập lồi**: Lấy $x, y \in S_2$ thỏa $x_2 \ge x_1^2$ và $y_2 \ge y_1^2$. Với $\theta \in [0, 1]$:
    $$
@@ -338,7 +346,10 @@ $$
    $$
    Mặt khác, xét hiệu:
    $$
-   [\theta x_1^2 + (1 - \theta) y_1^2] - (\theta x_1 + (1 - \theta) y_1)^2 = \theta(1 - \theta)(x_1 - y_1)^2 \ge 0
+   \begin{aligned}
+   [\theta x_1^2 + (1 - \theta) y_1^2] - (\theta x_1 + (1 - \theta) y_1)^2 &= \theta(1 - \theta)(x_1 - y_1)^2\\
+   &\ge 0
+   \end{aligned}
    $$
    Vì $\theta \ge 0, 1 - \theta \ge 0$ và bình phương không âm, ta suy ra:
    $$
@@ -352,7 +363,11 @@ $$
 ::: exercise 2. Tổ hợp lồi của các phân phối xác suất
 Cho ba phân phối xác suất rời rạc trên ba biến cố:
 $$
-p = (0.5, 0.3, 0.2), \quad q = (0.1, 0.1, 0.8), \quad r = (0.2, 0.6, 0.2)
+\begin{aligned}
+&p = (0.5, 0.3, 0.2), \quad\\
+&q = (0.1, 0.1, 0.8), \quad\\
+&r = (0.2, 0.6, 0.2)
+\end{aligned}
 $$
 1. Tính phân phối tổ hợp lồi $u = \tfrac{1}{2} p + \tfrac{1}{4} q + \tfrac{1}{4} r$ và kiểm tra xem $u$ có phải là một phân phối xác suất hợp lệ không.
 2. Có tồn tại bộ ba trọng số không âm $\alpha, \beta, \gamma \ge 0$ với $\alpha + \beta + \gamma = 1$ sao cho tổ hợp $\alpha p + \beta q + \gamma r$ tạo thành phân phối đều $d = (\tfrac{1}{3}, \tfrac{1}{3}, \tfrac{1}{3})$ không?
@@ -361,25 +376,38 @@ $$
 ::: solution
 1. Tính từng thành phần tọa độ của $u$:
    $$
-\begin{aligned}
-u_1 &= 0.5(0.5) + 0.25(0.1) + 0.25(0.2) = 0.325 \\
-u_2 &= 0.5(0.3) + 0.25(0.1) + 0.25(0.6) = 0.325 \\
-u_3 &= 0.5(0.2) + 0.25(0.8) + 0.25(0.2) = 0.350
-\end{aligned}
-$$
+   \begin{aligned}
+   &\begin{aligned}
+   u_1 &= 0.5(0.5) + 0.25(0.1) + 0.25(0.2)\\
+   &= 0.325
+   \end{aligned}\\
+   &\begin{aligned}
+   u_2 &= 0.5(0.3) + 0.25(0.1) + 0.25(0.6)\\
+   &= 0.325
+   \end{aligned}\\
+   &\begin{aligned}
+   u_3 &= 0.5(0.2) + 0.25(0.8) + 0.25(0.2)\\
+   &= 0.350
+   \end{aligned}
+   \end{aligned}
+   $$
    
    Kiểm tra: Các thành phần đều không âm ($u_i \ge 0$) và tổng bằng $0.325 + 0.325 + 0.350 = 1$. Do đó $u$ là một phân phối xác suất hợp lệ.
 2. Để tìm $\alpha, \beta, \gamma$, ta thiết lập hệ phương trình tuyến tính:
    $$
-\begin{aligned}
-0.5 \alpha + 0.1 \beta + 0.2 \gamma &= \frac{1}{3} \\
-0.3 \alpha + 0.1 \beta + 0.6 \gamma &= \frac{1}{3} \\
-\alpha + \beta + \gamma &= 1
-\end{aligned}
-$$
+   \begin{aligned}
+   0.5 \alpha + 0.1 \beta + 0.2 \gamma &= \frac{1}{3} \\
+   0.3 \alpha + 0.1 \beta + 0.6 \gamma &= \frac{1}{3} \\
+   \alpha + \beta + \gamma &= 1
+   \end{aligned}
+   $$
    Lấy phương trình thứ nhất trừ phương trình thứ hai:
    $$
-   (0.5 - 0.3)\alpha + (0.1 - 0.1)\beta + (0.2 - 0.6)\gamma = 0 \iff 0.2 \alpha - 0.4 \gamma = 0 \iff \alpha = 2\gamma
+   \begin{aligned}
+   (0.5 - 0.3)\alpha + (0.1 - 0.1)\beta + (0.2 - 0.6)\gamma &= 0\\
+   &\iff 0.2 \alpha - 0.4 \gamma = 0\\
+   &\iff \alpha = 2\gamma
+   \end{aligned}
    $$
    Thay $\beta = 1 - \alpha - \gamma = 1 - 3\gamma$ vào phương trình thứ nhất:
    $$
@@ -387,7 +415,11 @@ $$
    $$
    Rút gọn:
    $$
-   \gamma + 0.1 - 0.3\gamma + 0.2\gamma = \frac{1}{3} \iff 0.9 \gamma = \frac{1}{3} - \frac{1}{10} = \frac{7}{30}
+   \begin{aligned}
+   \gamma + 0.1 - 0.3\gamma + 0.2\gamma &= \frac{1}{3}\\
+   &\iff 0.9 \gamma = \frac{1}{3} - \frac{1}{10}\\
+   &= \frac{7}{30}
+   \end{aligned}
    $$
    Do đó:
    $$
@@ -395,7 +427,14 @@ $$
    $$
    Suy ra:
    $$
-   \alpha = 2\gamma = \frac{14}{27}, \quad \beta = 1 - 3\left(\frac{7}{27}\right) = 1 - \frac{21}{27} = \frac{6}{27}
+   \begin{aligned}
+   &\alpha = 2\gamma = \frac{14}{27}, \quad\\
+   &\begin{aligned}
+   \beta &= 1 - 3\left(\frac{7}{27}\right)\\
+   &= 1 - \frac{21}{27}\\
+   &= \frac{6}{27}
+   \end{aligned}
+   \end{aligned}
    $$
    Cả ba trọng số đều thỏa mãn điều kiện không âm: $\alpha = \tfrac{14}{27} > 0$, $\beta = \tfrac{6}{27} > 0$, $\gamma = \tfrac{7}{27} > 0$.
    

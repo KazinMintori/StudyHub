@@ -13,7 +13,16 @@ next: false
 
 ## Giải thích kỹ thuật
 
-**Khả thi được kiểm trước tối ưu.** Với bài có miền chung $D$, bất đẳng thức $f_i(x)\le0$ và đẳng thức $h_j(x)=0$, miền khả thi là $D\cap\bigcap_i\{x:f_i(x)\le0\}\cap\bigcap_j\{x:h_j(x)=0\}$. Chỉ cần một điều kiện sai là điểm không khả thi.
+**Khả thi được kiểm trước tối ưu.** Với miền chung $D$, mỗi bất đẳng thức và đẳng thức xác định một tập điểm hợp lệ:
+
+$$
+\begin{aligned}
+F_i&=\{x\in D:f_i(x)\le0\},\\
+H_j&=\{x\in D:h_j(x)=0\}.
+\end{aligned}
+$$
+
+Chỉ số $i$ chạy từ 1 đến số bất đẳng thức $m$, còn $j$ chạy từ 1 đến số đẳng thức $p$. Miền khả thi gồm các điểm của $D$ thuộc đồng thời mọi $F_i$ và mọi $H_j$. Chỉ cần một điều kiện sai là điểm không khả thi. Nếu không có ràng buộc, miền khả thi là $D$.
 
 Miền khả thi rỗng làm bài toán vô nghiệm. Miền khác rỗng nhưng không đóng hoặc không bị chặn có thể khiến infimum không đạt. Vì thế “tìm được một giá trị mục tiêu nhỏ” và “tìm được một nghiệm của bài toán” là hai phát biểu khác nhau. Nguồn: Convex Optimization, §4.1.
 

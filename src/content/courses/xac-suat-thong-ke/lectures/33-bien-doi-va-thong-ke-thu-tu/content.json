@@ -19,76 +19,76 @@
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 125,
+      "line": 128,
       "title": "Ví dụ 2: Biến đổi tuyến tính của biến Exponential"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 204,
+      "line": 207,
       "title": "Ví dụ 3: Đổi biến tỷ lệ và tổng của hai biến Exponential độc lập"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 458,
+      "line": 464,
       "title": "Ví dụ 4: Độ tin cậy hệ thống gồm 5 linh kiện"
     }
   ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 549,
+      "line": 555,
       "title": "Bài tập rèn luyện: Biến đổi biến ngẫu nhiên, tích chập và thống kê thứ tự"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 551,
+      "line": 557,
       "title": "Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 618,
+      "line": 624,
       "title": "Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 654,
+      "line": 660,
       "title": "Bài tập 3"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 698,
+      "line": 704,
       "title": "Bài tập 4"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 734,
+      "line": 740,
       "title": "Bài tập 5"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 562,
+      "line": 568,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 621,
+      "line": 627,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 659,
+      "line": 665,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 701,
+      "line": 707,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 739,
+      "line": 745,
       "title": "Lời giải"
     }
   ],
@@ -102,13 +102,13 @@
     {
       "reference": "img/co-dien-refined/hinh-33-2-convolution-uniform.svg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 301,
+      "line": 307,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-33-2-convolution-uniform.svg"
     },
     {
       "reference": "img/co-dien-refined/hinh-33-3-order-statistics-densities.svg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/33-bien-doi-va-thong-ke-thu-tu.md",
-      "line": 379,
+      "line": 385,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-33-3-order-statistics-densities.svg"
     }
   ]

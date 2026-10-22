@@ -29,7 +29,10 @@ Trong mô phỏng, vùng đỏ là tập các điểm khả thi $y$ với $\nabl
 **Điều kiện đủ.** Giả sử $x \in X$ thỏa tiêu chuẩn. Với mọi $y \in X$, điều kiện bậc nhất của hàm lồi cho
 
 $$
-f_0(y) \ge f_0(x) + \nabla f_0(x)^T (y - x) \ge f_0(x).
+\begin{aligned}
+f_0(y) &\ge f_0(x) + \nabla f_0(x)^T (y - x)\\
+&\ge f_0(x).
+\end{aligned}
 $$
 
 Vậy $x$ tối ưu. Chiều này chỉ dùng tính lồi của $f_0$.
@@ -140,7 +143,11 @@ Cực tiểu $f_0(x) = (x_1 - 2)^2 + (x_2 - 0.5)^2$ trên hình vuông $[0, 1]^2
 (a) Không ràng buộc, nghiệm là $(2, 0.5)$, nằm ngoài hình vuông về phía phải. Điểm gần nhất của hình vuông là $x = (1, 0.5)$. (b) Gradient tại $x$ là $\big(2(1 - 2),\ 2(0.5 - 0.5)\big) = (-2,\ 0)$. Với mọi $y \in [0, 1]^2$,
 
 $$
-\nabla f_0(x)^T (y - x) = -2(y_1 - 1) = 2(1 - y_1) \ge 0
+\begin{aligned}
+\nabla f_0(x)^T (y - x) &= -2(y_1 - 1)\\
+&= 2(1 - y_1)\\
+&\ge 0
+\end{aligned}
 $$
 
 vì $y_1 \le 1$. Tiêu chuẩn thỏa, nên $x$ tối ưu. (c) $x - 0.3\nabla f_0(x) = (1.6,\ 0.5)$. Chiếu lên hình vuông bằng cách kẹp từng tọa độ vào $[0, 1]$ được $(1,\ 0.5) = x$. Điểm bất động, đúng như dự báo.
@@ -154,7 +161,12 @@ Tìm điểm của đoạn $\{x \in \mathbb{R}^2 : x \succeq 0,\ x_1 + x_2 = 1\}
 Cực tiểu $(x_1 - 1)^2 + (x_2 - 0.6)^2$ trên đoạn. Thay $x_2 = 1 - x_1$ được $(x_1 - 1)^2 + (0.4 - x_1)^2$, nhỏ nhất khi $x_1 = 0.7$, nên $x = (0.7,\ 0.3)$, nằm trong đoạn. Kiểm chứng: $\nabla f_0(x) = 2(x - c) = (-0.6,\ -0.6)$. Với mọi $y$ trên đoạn,
 
 $$
-\nabla f_0(x)^T (y - x) = -0.6\big((y_1 + y_2) - (x_1 + x_2)\big) = -0.6\,(1 - 1) = 0 \ge 0 .
+\begin{aligned}
+\nabla f_0(x)^T (y - x) &= -0.6\big((y_1 + y_2) - (x_1 + x_2)\big)\\
+&= -0.6\,(1 - 1)\\
+&= 0\\
+&\ge 0 .
+\end{aligned}
 $$
 
 Gradient vuông góc với đoạn, đúng như trường hợp ràng buộc đẳng thức, vì nghiệm không chạm hai đầu mút.

@@ -81,13 +81,20 @@ Nếu các vector được phân bố sao cho gốc tọa độ $O$ nằm trọn
 Trong mặt phẳng $\mathbb{R}^2$, xét ba vector:
 
 $$
-v_1 = (1, 0), \quad v_2 = (-1, 1), \quad v_3 = (-1, -1)
+\begin{aligned}
+&v_1 = (1, 0), \quad\\
+&v_2 = (-1, 1), \quad\\
+&v_3 = (-1, -1)
+\end{aligned}
 $$
 
 Gốc tọa độ $O = (0, 0)$ là một tổ hợp lồi của ba vector này:
 
 $$
-\frac{1}{2} v_1 + \frac{1}{4} v_2 + \frac{1}{4} v_3 = \frac{1}{2}(1, 0) + \frac{1}{4}(-1, 1) + \frac{1}{4}(-1, -1) = (0, 0)
+\begin{aligned}
+\frac{1}{2} v_1 + \frac{1}{4} v_2 + \frac{1}{4} v_3 &= \frac{1}{2}(1, 0) + \frac{1}{4}(-1, 1) + \frac{1}{4}(-1, -1)\\
+&= (0, 0)
+\end{aligned}
 $$
 
 với các trọng số không âm $\theta_1 = 0.5$, $\theta_2 = 0.25$, $\theta_3 = 0.25$ có tổng bằng 1.
@@ -156,7 +163,10 @@ Chứng minh tính lồi và tính nón của $C$:
 - Tính chất nón: Nếu $\|x\| \le t$ và $\theta \ge 0$, thì $\|\theta x\| = \theta \|x\| \le \theta t$, do đó $\theta(x, t) \in C$.
 - Tính lồi: Lấy $(x_1, t_1), (x_2, t_2) \in C$ và $\theta \in [0, 1]$. Theo bất đẳng thức tam giác:
   $$
-  \|\theta x_1 + (1 - \theta) x_2\| \le \theta \|x_1\| + (1 - \theta) \|x_2\| \le \theta t_1 + (1 - \theta) t_2
+  \begin{aligned}
+  \|\theta x_1 + (1 - \theta) x_2\| &\le \theta \|x_1\| + (1 - \theta) \|x_2\|\\
+  &\le \theta t_1 + (1 - \theta) t_2
+  \end{aligned}
   $$
   Do đó tổ hợp lồi thuộc $C$.
 
@@ -179,7 +189,10 @@ $$
 tạo thành một nón lồi có số chiều $\tfrac{n(n+1)}{2}$. Nếu $A, B \in \mathbb{S}^n_+$ và $\theta_1, \theta_2 \ge 0$, thì với mọi $z \in \mathbb{R}^n$:
 
 $$
-z^T (\theta_1 A + \theta_2 B) z = \theta_1 (z^T A z) + \theta_2 (z^T B z) \ge 0
+\begin{aligned}
+z^T (\theta_1 A + \theta_2 B) z &= \theta_1 (z^T A z) + \theta_2 (z^T B z)\\
+&\ge 0
+\end{aligned}
 $$
 
 Nón này là trái tim của quy hoạch nửa xác định dương (SDP).
@@ -205,28 +218,37 @@ Ta kiểm tra hai vector truy vấn $b = (4, 7)$ và $b' = (4, -1)$:
 1. **Khảo sát vector $b = (4, 7)$**:
    Thiết lập hệ phương trình $\theta_1(2, 1) + \theta_2(1, 3) = (4, 7)$:
    $$
-\begin{aligned}
-2\theta_1 + \theta_2 &= 4 \\
-\theta_1 + 3\theta_2 &= 7
-\end{aligned}
-$$
+   \begin{aligned}
+   2\theta_1 + \theta_2 &= 4 \\
+   \theta_1 + 3\theta_2 &= 7
+   \end{aligned}
+   $$
    Nhân phương trình thứ hai với 2 rồi trừ đi phương trình thứ nhất:
    $$
-   2(\theta_1 + 3\theta_2) - (2\theta_1 + \theta_2) = 14 - 4 \iff 5\theta_2 = 10 \iff \theta_2 = 2
+   \begin{aligned}
+   2(\theta_1 + 3\theta_2) - (2\theta_1 + \theta_2) &= 14 - 4\\
+   &\iff 5\theta_2 = 10\\
+   &\iff \theta_2 = 2
+   \end{aligned}
    $$
    Thay ngược lại vào phương trình thứ nhất: $2\theta_1 + 2 = 4 \implies \theta_1 = 1$.
    Cả hai hệ số đều không âm: Cụ thể là $\theta_1 = 1 \ge 0$ và $\theta_2 = 2 \ge 0$. Do đó $b$ thuộc bao nón của $a_1, a_2$.
 2. **Khảo sát vector $b' = (4, -1)$**:
    Thiết lập hệ phương trình:
    $$
-\begin{aligned}
-2\theta_1 + \theta_2 &= 4 \\
-\theta_1 + 3\theta_2 &= -1
-\end{aligned}
-$$
+   \begin{aligned}
+   2\theta_1 + \theta_2 &= 4 \\
+   \theta_1 + 3\theta_2 &= -1
+   \end{aligned}
+   $$
    Nhân phương trình thứ hai với 2 rồi trừ phương trình thứ nhất:
    $$
-   5\theta_2 = -2 - 4 = -6 \iff \theta_2 = -\frac{6}{5} = -1.2
+   \begin{aligned}
+   5\theta_2 &= -2 - 4\\
+   &= -6\\
+   &\iff \theta_2 = -\frac{6}{5}\\
+   &= -1.2
+   \end{aligned}
    $$
    Vì $a_1$ và $a_2$ độc lập tuyến tính ($\det = 2 \cdot 3 - 1 \cdot 1 = 5 \ne 0$), hệ phương trình có nghiệm duy nhất. Nghiệm duy nhất này có $\theta_2 = -1.2 < 0$, vi phạm điều kiện không âm. Do đó $b'$ không thuộc bao nón.
 :::
@@ -352,7 +374,11 @@ Trong các tập hợp sau đây, tập hợp nào là nón, tập hợp nào l�
 ::: exercise 2. Biểu diễn vector trong nón sinh bởi ba vector trong không gian
 Trong không gian ba chiều $\mathbb{R}^3$, cho ba vector:
 $$
-a_1 = (1, 0, 1), \quad a_2 = (0, 1, 1), \quad a_3 = (1, 1, 0)
+\begin{aligned}
+&a_1 = (1, 0, 1), \quad\\
+&a_2 = (0, 1, 1), \quad\\
+&a_3 = (1, 1, 0)
+\end{aligned}
 $$
 1. Vector $b = (3, 1, 2)$ có thuộc bao nón $\operatorname{cone}\{a_1, a_2, a_3\}$ không?
 2. Vector $b' = (2, 0, 0)$ có thuộc bao nón $\operatorname{cone}\{a_1, a_2, a_3\}$ không?
@@ -362,15 +388,19 @@ $$
 1. **Khảo sát vector $b = (3, 1, 2)$**:
    Thiết lập hệ phương trình $\theta_1 a_1 + \theta_2 a_2 + \theta_3 a_3 = b$:
    $$
-\begin{aligned}
-\theta_1 + \theta_3 &= 3 \\
-\theta_2 + \theta_3 &= 1 \\
-\theta_1 + \theta_2 &= 2
-\end{aligned}
-$$
+   \begin{aligned}
+   \theta_1 + \theta_3 &= 3 \\
+   \theta_2 + \theta_3 &= 1 \\
+   \theta_1 + \theta_2 &= 2
+   \end{aligned}
+   $$
    Cộng cả ba phương trình lại với nhau:
    $$
-   2(\theta_1 + \theta_2 + \theta_3) = 3 + 1 + 2 = 6 \implies \theta_1 + \theta_2 + \theta_3 = 3
+   \begin{aligned}
+   2(\theta_1 + \theta_2 + \theta_3) &= 3 + 1 + 2\\
+   &= 6\\
+   &\implies \theta_1 + \theta_2 + \theta_3 = 3
+   \end{aligned}
    $$
    Từ đó suy ra từng ẩn số:
    - $\theta_2 = 3 - (\theta_1 + \theta_3) = 3 - 3 = 0$.
@@ -381,15 +411,18 @@ $$
 2. **Khảo sát vector $b' = (2, 0, 0)$**:
    Thiết lập hệ phương trình:
    $$
-\begin{aligned}
-\theta_1 + \theta_3 &= 2 \\
-\theta_2 + \theta_3 &= 0 \\
-\theta_1 + \theta_2 &= 0
-\end{aligned}
-$$
+   \begin{aligned}
+   \theta_1 + \theta_3 &= 2 \\
+   \theta_2 + \theta_3 &= 0 \\
+   \theta_1 + \theta_2 &= 0
+   \end{aligned}
+   $$
    Cộng cả ba phương trình:
    $$
-   2(\theta_1 + \theta_2 + \theta_3) = 2 \implies \theta_1 + \theta_2 + \theta_3 = 1
+   \begin{aligned}
+   2(\theta_1 + \theta_2 + \theta_3) &= 2\\
+   &\implies \theta_1 + \theta_2 + \theta_3 = 1
+   \end{aligned}
    $$
    Suy ra:
    - $\theta_2 = 1 - (\theta_1 + \theta_3) = 1 - 2 = -1$.

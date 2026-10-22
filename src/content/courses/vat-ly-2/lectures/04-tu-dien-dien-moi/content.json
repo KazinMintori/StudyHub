@@ -57,7 +57,68 @@
     "raw_materials/physics/translations/chapter-24/05-mo-hinh-phan-tu.md",
     "raw_materials/physics/translations/chapter-24/06-gauss-trong-dien-moi.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-24/01-tu-dien-dien-dung.md",
+      "line": 83,
+      "title": "Ví dụ 24.1: Kích thước của tụ 1 F"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/01-tu-dien-dien-dung.md",
+      "line": 116,
+      "title": "Ví dụ 24.2: Điện dung, điện tích và điện trường"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/01-tu-dien-dien-dung.md",
+      "line": 141,
+      "title": "Ví dụ 24.3: Tụ cầu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/01-tu-dien-dien-dung.md",
+      "line": 165,
+      "title": "Ví dụ 24.4: Tụ trụ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/02-mac-tu-dien.md",
+      "line": 90,
+      "title": "Ví dụ 24.5: Cùng hai tụ, hai cách mắc"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/02-mac-tu-dien.md",
+      "line": 135,
+      "title": "Ví dụ 24.6: Mạng năm tụ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/03-nang-luong-tu-dien.md",
+      "line": 80,
+      "title": "Ví dụ 24.7: Chia sẻ điện tích giữa hai tụ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/03-nang-luong-tu-dien.md",
+      "line": 117,
+      "title": "Ví dụ 24.8: Năng lượng trên mỗi mét khối"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/03-nang-luong-tu-dien.md",
+      "line": 133,
+      "title": "Ví dụ 24.9: Hai cách tìm năng lượng tụ cầu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/04-dien-moi.md",
+      "line": 137,
+      "title": "Ví dụ 24.10: Tụ trước và sau khi thêm điện môi"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/04-dien-moi.md",
+      "line": 172,
+      "title": "Ví dụ 24.11: Năng lượng khi giữ điện tích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-24/06-gauss-trong-dien-moi.md",
+      "line": 51,
+      "title": "Ví dụ 24.12: Tụ cầu được lấp bằng dầu cách điện"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-24/00-mo-dau.md",

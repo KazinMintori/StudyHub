@@ -105,7 +105,10 @@ Nghiệm của đa thức là các trị riêng của $A$. Với $A$ đối xứ
 Một hàm vô hướng affine có dạng
 
 $$
-\ell(x) = a_1x_1 + \dots + a_nx_n + b = a^Tx + b.
+\begin{aligned}
+\ell(x) &= a_1x_1 + \dots + a_nx_n + b\\
+&= a^Tx + b.
+\end{aligned}
 $$
 
 Nếu $b=0$, đây là ánh xạ tuyến tính. Phân biệt này giúp đọc mô hình hồi quy có hệ số chặn và các ràng buộc đẳng thức của bài toán lồi.

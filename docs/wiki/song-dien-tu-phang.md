@@ -16,7 +16,11 @@ Trong sóng phẳng, các trường có cùng giá trị trên mỗi mặt phẳ
 Chọn hướng truyền theo x. Các trường chỉ phụ thuộc x và t, không đổi theo y và z trên mỗi mặt phẳng ngang. Trong vùng không có điện tích, hai định luật Gauss cùng các điều kiện trước mặt sóng dẫn đến các trường ngang trong mô hình đang xét.
 
 $$
-\vec E\perp\vec B\\ \vec E,\vec B\perp\vec k\\ E=cB.
+\begin{aligned}
+&\vec E\perp\vec B\\
+&\vec E,\vec B\perp\vec k\\
+&E=cB.
+\end{aligned}
 $$
 
 Các quan hệ này thuộc một sóng chạy duy nhất. Một nguồn thực có mặt sóng cong, nhưng ở vùng quan sát nhỏ so với bán kính cong có thể dùng gần đúng sóng phẳng. Trường tổng của nhiều hướng không nhất thiết giữ quan hệ độ lớn $E=cB$.

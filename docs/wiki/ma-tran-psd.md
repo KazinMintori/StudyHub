@@ -21,7 +21,9 @@ Ví dụ ma trận $\begin{bmatrix}1&-1\\-1&1\end{bmatrix}$ là PSD dù có ph�
 
 Ma trận
 
-$$P=\begin{bmatrix}1&2\\2&1\end{bmatrix}$$
+$$
+P=\begin{bmatrix}1&2\\2&1\end{bmatrix}
+$$
 
 không PSD: Với $v=(1,-1)^T$, ta được $v^TPv=-2$. Ngược lại, $A^TA$ luôn PSD vì $v^TA^TAv=\|Av\|_2^2\ge0$.
 

@@ -16,7 +16,10 @@ next: false
 Ở tới vuông góc, gọi t là bề dày, n là chiết suất màng và $\lambda_0$ là bước sóng chân không. Khi đúng một trong hai phản xạ đổi pha pi:
 
 $$
-2nt =(m+1/2)\lambda_0\\2nt =m\lambda_0.
+\begin{aligned}
+&2nt =(m+1/2)\lambda_0\\
+&2nt =m\lambda_0.
+\end{aligned}
 $$
 
 Dòng đầu cho tăng cường phản xạ, dòng sau cho triệt giảm phản xạ. Khi hai phản xạ cùng đổi pha hoặc cùng không đổi pha, hai vai trò đổi chỗ. Các điều kiện pha chưa bảo đảm triệt tiêu hoàn toàn, vì còn cần biên độ bằng nhau. Với màng không hấp thụ, phản xạ tăng được bù bằng truyền qua giảm.

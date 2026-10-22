@@ -606,9 +606,11 @@ Kỳ vọng là giá trị trung bình theo mô hình qua các lần sinh dữ l
 Tính tuyến tính kỳ vọng cho:
 
 $$
-\mathbb E[X]=\binom P2\binom T2p^2
-=\binom{10^9}{2}\binom{1000}{2}10^{-18}
-=249\,749{,}99975025.
+\begin{aligned}
+\mathbb E[X]&=\binom P2\binom T2p^2\\
+&=\binom{10^9}{2}\binom{1000}{2}10^{-18}\\
+&=249\,749{,}99975025.
+\end{aligned}
 $$
 
 Làm tròn được $249\,750$. MMDS dùng $\binom n2\approx \frac{n^2}{2}$ và được khoảng $250\,000$.
@@ -687,8 +689,10 @@ Cơ sở là $249\,749{,}99975025$ biến cố. Sách làm tròn bằng xấp x�
 **(a)** Chỉ thay $T=2000$:
 
 $$
-\mathbb E[X_a]=\binom{10^9}{2}\binom{2000}{2}10^{-18}
-=999\,499{,}9990005\approx999\,500.
+\begin{aligned}
+\mathbb E[X_a]&=\binom{10^9}{2}\binom{2000}{2}10^{-18}\\
+&=999\,499{,}9990005\approx999\,500.
+\end{aligned}
 $$
 
 Tỷ lệ so cơ sở là $\binom{2000}{2}/\binom{1000}{2}=\frac{3998}{999}$, gần 4 nhưng không đúng bằng 4. Xấp xỉ $\binom T2\approx \frac{T^2}{2}$ của sách cho khoảng $1\,000\,000$.
@@ -696,9 +700,11 @@ Tỷ lệ so cơ sở là $\binom{2000}{2}/\binom{1000}{2}=\frac{3998}{999}$, g�
 **(b)** Thay $P=2\times10^9$, $H=2\times10^5$:
 
 $$
-\mathbb E[X_b]=\binom{2\times10^9}{2}\binom{1000}{2}
-\left(5\times10^{-10}\right)^2
-=249\,749{,}999875125\approx249\,750.
+\begin{aligned}
+\mathbb E[X_b]&=\binom{2\times10^9}{2}\binom{1000}{2}
+\left(5\times10^{-10}\right)^2\\
+&=249\,749{,}999875125\approx249\,750.
+\end{aligned}
 $$
 
 Số cặp người gần gấp 4, còn xác suất trùng trong hai ngày giảm đúng 4 lần. Kỳ vọng gần như không đổi. Xấp xỉ của sách cho khoảng $250\,000$. Giá trị dùng tổ hợp không hoàn toàn bằng cơ sở.
@@ -706,8 +712,10 @@ Số cặp người gần gấp 4, còn xác suất trùng trong hai ngày giả
 **(c)** Giữ quy mô gốc, chọn bộ ba ngày:
 
 $$
-\mathbb E[X_c]=\binom{10^9}{2}\binom{1000}{3}10^{-27}
-=0{,}0830834999169165\approx0{,}0831.
+\begin{aligned}
+\mathbb E[X_c]&=\binom{10^9}{2}\binom{1000}{3}10^{-27}\\
+&=0{,}0830834999169165\approx0{,}0831.
+\end{aligned}
 $$
 
 Yêu cầu ba ngày làm kỳ vọng trùng ngẫu nhiên xuống dưới 1 trong mô hình. Điều đó không có nghĩa không thể xuất hiện trùng và không chứng minh danh tính của một cặp. Xấp xỉ $\binom T3\approx \frac{T^3}{6}$ cho khoảng $0{,}0833$.

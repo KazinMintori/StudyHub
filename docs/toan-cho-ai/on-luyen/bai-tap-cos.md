@@ -120,7 +120,10 @@ $$
 Vì vậy
 
 $$
-f(x,y,z) \ge 1+\frac38x^2+(y+x)^2+2(z+x/4)^2 \ge 1.
+\begin{aligned}
+f(x,y,z) &\ge 1+\frac38x^2+(y+x)^2+2(z+x/4)^2\\
+&\ge 1.
+\end{aligned}
 $$
 
 Đẳng thức buộc $x=0$, rồi $y=z=0$. Cận này đồng thời chứng minh giá trị tối ưu, sự đạt nghiệm và tính duy nhất.

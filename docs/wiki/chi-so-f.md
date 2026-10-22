@@ -16,7 +16,11 @@ Chỉ số f của ống kính là tỉ số $N=f/D$, với f là tiêu cự và
 Độ phơi sáng H là năng lượng tới trên một đơn vị diện tích cảm biến:
 
 $$
-I \propto1/N^2\\H \propto I\Delta t\\ \propto\Delta t/N^2.
+\begin{aligned}
+I &\propto1/N^2\\
+H &\propto I\Delta t\\
+&\propto\Delta t/N^2.
+\end{aligned}
 $$
 
 Dãy nấc f danh định thay đổi theo hệ số căn hai, tương ứng cường độ thay đổi khoảng hai lần. Các nhãn như 5,6 là giá trị làm tròn. So các ống kính cần giữ rõ bối cảnh diện tích cảm biến và điều kiện truyền sáng.

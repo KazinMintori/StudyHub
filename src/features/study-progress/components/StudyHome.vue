@@ -117,7 +117,7 @@ const tools = [
     </section>
 
     <section class="home-tools" aria-labelledby="tools-heading">
-      <h2 id="tools-heading">Công cụ đi kèm</h2>
+      <h2 id="tools-heading">Góc học tập</h2>
       <div class="home-tool-grid">
         <a v-for="tool in tools" :key="tool.name" class="home-tool" :href="studyLink(tool.href)">
           <SpotArt :name="tool.name" :tone="tool.tone" />

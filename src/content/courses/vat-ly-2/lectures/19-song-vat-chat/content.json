@@ -63,7 +63,58 @@
     "raw_materials/physics/translations/chapter-39/05-pho-lien-tuc.md",
     "raw_materials/physics/translations/chapter-39/06-bat-dinh-vat-chat.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-39/01-song-electron.md",
+      "line": 92,
+      "title": "Ví dụ 39.1: Thí nghiệm nhiễu xạ electron"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/01-song-electron.md",
+      "line": 134,
+      "title": "Ví dụ 39.2: Năng lượng của neutron nhiệt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/01-song-electron.md",
+      "line": 230,
+      "title": "Ví dụ 39.3: Kính hiển vi electron"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/02-nguyen-tu-hat-nhan-pho.md",
+      "line": 75,
+      "title": "Ví dụ 39.4: Thí nghiệm của Rutherford"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/03-muc-nang-luong-bohr.md",
+      "line": 54,
+      "title": "Ví dụ 39.5: Quang phổ phát xạ và hấp thụ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/03-muc-nang-luong-bohr.md",
+      "line": 338,
+      "title": "Ví dụ 39.6: Khám phá mô hình Bohr"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/05-pho-lien-tuc.md",
+      "line": 181,
+      "title": "Ví dụ 39.7: Ánh sáng từ Mặt Trời"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/05-pho-lien-tuc.md",
+      "line": 217,
+      "title": "Ví dụ 39.8: Một khoảng hẹp trong phổ Mặt Trời"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/06-bat-dinh-vat-chat.md",
+      "line": 49,
+      "title": "Ví dụ 39.9: Bất định vị trí và động lượng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/06-bat-dinh-vat-chat.md",
+      "line": 94,
+      "title": "Ví dụ 39.10: Thời gian sống và độ rộng vạch"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-39/07-luyen-tap-huong-dan.md",
@@ -743,6 +794,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-39/00-mo-dau.md",
+      "line": 36,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-39/07-luyen-tap-huong-dan.md",
       "line": 22,
       "title": "Lời giải chi tiết"
@@ -1371,6 +1427,16 @@
       "source": "raw_materials/physics/translations/chapter-39/16-bai-tap-cau-noi.md",
       "line": 15,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/05-pho-lien-tuc.md",
+      "line": 255,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-39/06-bat-dinh-vat-chat.md",
+      "line": 164,
+      "title": "Xem đáp án và giải thích"
     }
   ],
   "assets": [

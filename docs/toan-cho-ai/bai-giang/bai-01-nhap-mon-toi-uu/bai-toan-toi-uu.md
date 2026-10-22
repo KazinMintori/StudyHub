@@ -50,8 +50,13 @@ Giả sử trong mỗi môi trường, người cứu hộ chuyển động theo
 Tổng thời gian di chuyển là một hàm số theo biến $x$:
 
 $$
-T(x) = \frac{\sqrt{40^2 + x^2}}{5} + \frac{\sqrt{30^2 + (60 - x)^2}}{1.5}, \qquad 0 \le x \le 60.
+\begin{aligned}
+T(x) &= T_1(x) + T_2(x),\\
+T_1(x) &= \frac{\sqrt{40^2 + x^2}}{5},\\
+T_2(x) &= \frac{\sqrt{30^2 + (60 - x)^2}}{1.5}.
+\end{aligned}
 $$
+Miền xét là $0\le x\le 60$. Hai hàm $T_1$ và $T_2$ lần lượt biểu diễn thời gian chạy và thời gian bơi.
 
 Trong đó:
 - Số hạng thứ nhất $\frac{\sqrt{40^2 + x^2}}{5} = \frac{|AP|}{v_1}$ là thời gian chạy trên cát từ $A$ tới $P$.
@@ -86,7 +91,11 @@ Một phương án chỉ được khẳng định chắc chắn là **tối ưu 
 Đạo hàm bậc nhất của hàm thời gian $T(x)$ theo $x$ là:
 
 $$
-T'(x) = \frac{x}{5\sqrt{40^2 + x^2}} - \frac{60 - x}{1.5\sqrt{30^2 + (60 - x)^2}}.
+\begin{aligned}
+T'(x) &= T_1'(x) + T_2'(x),\\
+T_1'(x) &= \frac{x}{5\sqrt{40^2 + x^2}},\\
+T_2'(x) &= -\frac{60 - x}{1.5\sqrt{30^2 + (60 - x)^2}}.
+\end{aligned}
 $$
 
 Quan sát các tam giác vuông trong Hình 1.1:
@@ -96,7 +105,10 @@ Quan sát các tam giác vuông trong Hình 1.1:
 Khi triệt tiêu đạo hàm $T'(x) = 0$, ta thu được một phương trình đẹp đẽ:
 
 $$
-\frac{\sin\theta_1}{5} = \frac{\sin\theta_2}{1.5} \iff \frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}.
+\begin{aligned}
+\frac{\sin\theta_1}{5}&=\frac{\sin\theta_2}{1.5}, \\
+\frac{\sin\theta_1}{v_1}&=\frac{\sin\theta_2}{v_2}.
+\end{aligned}
 $$
 
 Biểu thức này chính là dạng toán học kinh điển của [Định luật khúc xạ Snell](/wiki/dinh-luat-snell.md) trong quang học. Trong hiện tượng khúc xạ ánh sáng, tia sáng truyền giữa hai môi trường trong suốt với vận tốc truyền sóng khác nhau. Theo **Nguyên lý thời gian cực tiểu của Fermat**, tia sáng luôn tự động chọn đường đi sao cho thời gian truyền là nhỏ nhất. Tỉ số vận tốc chạy và bơi $5 / 1.5$ trong bài toán cứu hộ đóng vai trò hoàn toàn tương tự tỉ số vận tốc ánh sáng giữa hai môi trường.
@@ -126,9 +138,9 @@ Trong lý thuyết tối ưu hóa toán học, một bài toán tối ưu tổng
 
 $$
 \begin{aligned}
-&\text{minimize}\quad f_0(x)\\
-&\text{subject to}\quad f_i(x) \le 0, \quad i = 1, \ldots, m,\\
-&\phantom{\text{subject to}\quad } h_i(x) = 0, \quad i = 1, \ldots, p.
+&\min_x f_0(x) \\
+&f_i(x)\le0,\quad i=1,\ldots,m, \\
+&h_i(x)=0,\quad i=1,\ldots,p.
 \end{aligned}
 $$
 
@@ -175,7 +187,11 @@ Trong học máy, ranh giới này biến chuyển linh hoạt theo ngữ cảnh
 
 Miền xác định của toàn bộ bài toán là giao của miền xác định của hàm mục tiêu và tất cả các hàm ràng buộc:
 $$
-\mathcal{D} = \operatorname{dom} f_0 \cap \left( \bigcap_{i=1}^m \operatorname{dom} f_i \right) \cap \left( \bigcap_{i=1}^p \operatorname{dom} h_i \right).
+\begin{aligned}
+\mathcal{D}_f &= \bigcap_{i=0}^m \operatorname{dom} f_i,\\
+\mathcal{D}_h &= \bigcap_{i=1}^p \operatorname{dom} h_i,\\
+\mathcal{D} &= \mathcal{D}_f\cap\mathcal{D}_h.
+\end{aligned}
 $$
 
 ---
@@ -290,31 +306,31 @@ Do đó $\ell = 28\text{ s}$ là một chặn dưới hợp lệ của $p^\star$
 
 Trong bài toán tối ưu tổng quát, ta cần phân biệt rạch ròi hai cấp độ tối ưu:
 - **Tối ưu toàn cục (Global optimum)**: Điểm $x^\star \in \mathcal{X}$ thỏa mãn $f_0(x^\star) \le f_0(z)$ với **mọi** $z \in \mathcal{X}$.
-- **Tối ưu cục bộ (Local optimum)**: Điểm $x \in \mathcal{X}$ chỉ tốt hơn các phương án khả thi nằm trong một lân cận bán kính $R > 0$ quanh nó:
+- **Tối ưu cục bộ (Local optimum)**: Điểm $x \in \mathcal{X}$ chỉ tốt hơn các phương án khả thi nằm trong một lân cận bán kính $R > 0$ quanh nó. Với mọi $z\in\mathcal{X}$ thỏa mãn $\|z-x\|_2\le R$, ta có:
   $$
-  f_0(x) \le f_0(z) \qquad \forall z \in \mathcal{X}, \quad \|z - x\|_2 \le R.
+  f_0(x) \le f_0(z).
   $$
 
 Trong toàn bộ môn học này, khi dùng từ "nghiệm tối ưu" mà không kèm định ngữ, ta luôn mặc định hiểu là **nghiệm tối ưu toàn cục**.
 
 <div class="studyhub-figure" style="margin: 20px 0; text-align: center;">
-<svg viewBox="0 0 600 220" width="100%" height="auto" style="max-width: 600px; background: var(--vp-c-bg-soft, #f8fafc); border-radius: 8px; border: 1px solid var(--vp-c-divider, #e2e8f0);">
+<svg viewBox="0 0 600 260" width="100%" height="auto" role="img" aria-label="Cực trị của một hàm không lồi" style="max-width: 600px; background: var(--canvas); border-radius: 8px; border: 1px solid var(--rule); font-family: var(--font-ui);">
   <!-- Đồ thị hàm số hai thung lũng -->
-  <path d="M 50 40 C 100 20, 130 190, 190 190 C 250 190, 290 80, 360 80 C 430 80, 470 140, 520 140 C 550 140, 570 60, 580 40" fill="none" stroke="#2563eb" stroke-width="2.5" />
+  <path d="M 50 40 C 100 20, 130 190, 190 190 C 250 190, 290 80, 360 80 C 430 80, 470 140, 520 140 C 550 140, 570 60, 580 40" fill="none" stroke="var(--lam)" stroke-width="2.5" />
   
   <!-- Cực tiểu toàn cục -->
-  <circle cx="190" cy="190" r="5" fill="#16a34a" />
-  <line x1="190" y1="190" x2="190" y2="20" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="3,3" />
-  <text x="130" y="210" font-size="12" font-weight="700" fill="#16a34a">Cực tiểu toàn cục (x*)</text>
+  <circle cx="190" cy="190" r="5" fill="var(--xanh)" />
+  <line x1="190" y1="190" x2="190" y2="20" stroke="var(--xanh)" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="190" y="218" text-anchor="middle" font-size="26" font-weight="600" fill="var(--xanh)"><tspan x="190">Cực tiểu</tspan><tspan x="190" dy="28">toàn cục</tspan></text>
   
   <!-- Cực đại cục bộ -->
-  <circle cx="360" cy="80" r="4" fill="#dc2626" />
-  <text x="325" y="70" font-size="12" font-weight="600" fill="#dc2626">Cực đại cục bộ</text>
+  <circle cx="360" cy="80" r="4" fill="var(--do)" />
+  <text x="360" y="26" text-anchor="middle" font-size="26" font-weight="600" fill="var(--do)"><tspan x="360">Cực đại</tspan><tspan x="360" dy="28">cục bộ</tspan></text>
   
   <!-- Cực tiểu cục bộ -->
-  <circle cx="520" cy="140" r="5" fill="#d97706" />
-  <line x1="520" y1="140" x2="520" y2="20" stroke="#d97706" stroke-width="1.2" stroke-dasharray="3,3" />
-  <text x="460" y="165" font-size="12" font-weight="700" fill="#d97706">Cực tiểu cục bộ (Bẫy)</text>
+  <circle cx="520" cy="140" r="5" fill="var(--vang)" />
+  <line x1="520" y1="140" x2="520" y2="20" stroke="var(--vang)" stroke-width="1.2" stroke-dasharray="3,3" />
+  <text x="520" y="177" text-anchor="middle" font-size="26" font-weight="600" fill="var(--vang)"><tspan x="520">Cực tiểu</tspan><tspan x="520" dy="28">cục bộ</tspan></text>
 </svg>
 <div style="font-size: 13px; color: var(--vp-c-text-2, #64748b); margin-top: 6px;">
   <strong>Hình 1.2:</strong> Đồ thị hàm không lồi với hai lòng máng cực tiểu. Thuật toán leo đồi hoặc hạ gradient cục bộ có thể bị giữ chân và hội tụ nhầm tại cực tiểu cục bộ bên phải.
@@ -341,9 +357,9 @@ Tại một điểm khả thi $x \in \mathcal{X}$:
 *Ý nghĩa hình học*: Ràng buộc chặt là ràng buộc mà điểm nghiệm đang chạm trực tiếp vào đường biên giới hạn của nó. Trong khi đó, ràng buộc không chặt vẫn còn một khoảng hở an toàn.
 
 ::: example Minh họa ràng buộc chặt và ràng buộc không chặt
-Xét bài toán tìm giá trị vô hướng $c$ khớp với ba số thực $1, 5, 6$:
+Xét bài toán cực tiểu hóa tổng bình phương sai số khi khớp giá trị vô hướng $c$ với ba số thực $1, 5, 6$. Khai triển tổng ba bình phương, ta được hàm mục tiêu:
 $$
-\min_c\ (c - 1)^2 + (c - 5)^2 + (c - 6)^2.
+F(c)=3c^2-24c+62.
 $$
 - Khi chưa có ràng buộc: Đạo hàm $6c - 24 = 0 \implies c = 4$ (trung bình cộng), hàm mục tiêu đạt giá trị $14$.
 - Nếu bổ sung ràng buộc $c \le 3$: Điểm $c = 4$ không còn khả thi. Trên miền $c \le 3$, hàm mục tiêu nghịch biến nên nghiệm bị đẩy về biên $c^\star = 3$, giá trị mục tiêu tăng lên $17$. Ràng buộc $c \le 3$ **chặt** tại nghiệm và nó trực tiếp định hình nghiệm tối ưu.
@@ -361,9 +377,8 @@ Bài toán khi đó được gọi là **Bài toán khả thi**:
 
 $$
 \begin{aligned}
-&\text{find}\quad x\\
-&\text{subject to}\quad f_i(x) \le 0, \quad i = 1, \ldots, m,\\
-&\phantom{\text{subject to}\quad } h_i(x) = 0, \quad i = 1, \ldots, p.
+&f_i(x)\le0,\quad i=1,\ldots,m, \\
+&h_i(x)=0,\quad i=1,\ldots,p.
 \end{aligned}
 $$
 
@@ -386,7 +401,14 @@ $$
 
 Trong học máy, phép biến đổi này được áp dụng liên tục: Thay vì cực đại hóa hàm hợp lý của mô hình trên tập dữ liệu (Maximum Likelihood Estimation - MLE), người ta cực tiểu hóa hàm đối số âm log-likelihood (Negative Log-Likelihood - NLL):
 $$
-\max_\theta \prod_{i=1}^N P(y_i \mid x_i; \theta) \iff \min_\theta \sum_{i=1}^N -\log P(y_i \mid x_i; \theta).
+\begin{aligned}
+L(\theta) &= \prod_{i=1}^N P(y_i \mid x_i; \theta),\\
+\max_\theta L(\theta) &\iff \min_\theta\big[-\log L(\theta)\big].
+\end{aligned}
+$$
+Trong đó:
+$$
+-\log L(\theta)=\sum_{i=1}^N-\log P(y_i\mid x_i;\theta).
 $$
 Phép lấy logarit biến tích thành tổng và bảo toàn nguyên vẹn vị trí cực trị nhờ tính đồng biến ngặt của hàm $\log$.
 
@@ -454,13 +476,24 @@ Xét bài toán $\min f_0(x) = \max\{0, |x| - 1\}$ trên $\mathbb{R}$. Hàm số
 
 <details><summary>Xem phân tích chi tiết</summary>
 
-Áp dụng bất đẳng thức cho từng số hạng của $T(x)$ với hai góc $\varphi_1, \varphi_2 \in [0, \pi/2]$:
+Áp dụng bất đẳng thức cho từng số hạng của $T(x)$ với hai góc $\varphi_1, \varphi_2 \in [0, \pi/2]$. Đặt các hệ số:
 $$
-T(x) \ge \frac{40\cos\varphi_1 + x\sin\varphi_1}{5} + \frac{30\cos\varphi_2 + (60 - x)\sin\varphi_2}{1.5}.
+\begin{aligned}
+s_1 &= \frac{\sin\varphi_1}{5},\\
+s_2 &= \frac{\sin\varphi_2}{1.5},\\
+c &= 8\cos\varphi_1+20\cos\varphi_2.
+\end{aligned}
+$$
+Hai thời gian thành phần lần lượt thỏa mãn:
+$$
+\begin{aligned}
+T_1(x) &\ge 8\cos\varphi_1+xs_1,\\
+T_2(x) &\ge 20\cos\varphi_2+(60-x)s_2.
+\end{aligned}
 $$
 Gom các số hạng chứa biến $x$:
 $$
-T(x) \ge 8\cos\varphi_1 + 20\cos\varphi_2 + 40\sin\varphi_2 + x\left( \frac{\sin\varphi_1}{5} - \frac{\sin\varphi_2}{1.5} \right).
+T(x) \ge c+60s_2+x(s_1-s_2).
 $$
 Để cận dưới hoàn toàn độc lập với biến $x$ (đúng với mọi vị trí tiếp nước), hệ số của $x$ bắt buộc phải triệt tiêu:
 $$
@@ -482,14 +515,17 @@ Trở lại bài toán người cứu hộ ở Mục 1, nhưng giả sử đoạ
 ::: solution
 1. Bài toán dạng chuẩn tắc:
    $$
-   \min T(x) \qquad \text{satisfying} \quad -x \le 0, \quad x - 45 \le 0.
+   \min_{0\le x\le45} T(x).
    $$
    (Ràng buộc cũ $x \le 60$ trở thành ràng buộc thừa vì đã có $x \le 45$).
 2. Nghiệm tối ưu không ràng buộc $x \approx 52.6\text{ m}$ bị vi phạm vì nằm ngoài miền khả thi mới $[0, 45]$.
    Tính đạo hàm tại biên: Giá trị $T'(45) \approx -0.149 < 0$. Vì đạo hàm cấp hai $T''(x) > 0$ trên toàn miền, $T'(x)$ là hàm tăng ngặt. Do đó $T'(x) < 0$ với mọi $x \in [0, 45]$. Hàm thời gian $T(x)$ nghịch biến trên toàn bộ miền khả thi $[0, 45]$.
    Nghiệm tối ưu mới bắt buộc nằm tại mút biên phải:
    $$
-   x^\star = 45\text{ m}, \qquad T(45) \approx 34.40\text{ s}.
+   \begin{aligned}
+   x^\star&=45\,\mathrm m, \\
+   T(45)&\approx34.40\,\mathrm s.
+   \end{aligned}
    $$
    Ràng buộc $x \le 45$ chặt tại nghiệm.
 3. Tại nghiệm, $T'(45) \approx -0.149 \ne 0$. Đạo hàm không triệt tiêu vì nghiệm nằm tại biên của miền khả thi, nơi người cứu hộ muốn tiếp tục dịch sang phải để bơi ít hơn nhưng rào cản bãi đá đã chặn đứng chuyển động này. Phương trình $T'(x) = 0$ có nghiệm tại $x \approx 52.6\text{ m}$, hoàn toàn nằm ngoài miền khả thi!
@@ -512,20 +548,29 @@ Xác định miền khả thi, giá trị tối ưu $p^\star$ và tập tối ư
 ::: exercise 3. Quy chuẩn hóa về dạng chuẩn tắc
 Đưa bài toán tối ưu sau về dạng chuẩn tắc:
 $$
-\max_{x_1, x_2} 5x_1 + 4x_2 \qquad \text{satisfying} \quad x_1 + x_2 \le 6, \quad 2x_1 + x_2 \le 9, \quad x_1 \ge 0, \quad x_2 \ge 0.
+\max_{x_1, x_2} (5x_1 + 4x_2)
+$$
+với các ràng buộc:
+$$
+\begin{aligned}
+&x_1 + x_2 \le 6,\\
+&2x_1 + x_2 \le 9,\\
+&x_1 \ge 0,\quad x_2 \ge 0.
+\end{aligned}
 $$
 :::
 ::: solution
 Chuyển bài toán cực đại thành bài toán cực tiểu hàm đối số âm, chuyển các ràng buộc về dạng vế phải bằng 0:
 $$
 \begin{aligned}
-&\text{minimize}\quad f_0(x_1, x_2) = -5x_1 - 4x_2\\
-&\text{subject to}\quad f_1(x_1, x_2) = x_1 + x_2 - 6 \le 0,\\
-&\phantom{\text{subject to}\quad } f_2(x_1, x_2) = 2x_1 + x_2 - 9 \le 0,\\
-&\phantom{\text{subject to}\quad } f_3(x_1, x_2) = -x_1 \le 0,\\
-&\phantom{\text{subject to}\quad } f_4(x_1, x_2) = -x_2 \le 0.
+f_0(x_1,x_2) &= -5x_1-4x_2,\\
+f_1(x_1,x_2) &= x_1+x_2-6,\\
+f_2(x_1,x_2) &= 2x_1+x_2-9,\\
+f_3(x_1,x_2) &= -x_1,\\
+f_4(x_1,x_2) &= -x_2.
 \end{aligned}
 $$
+Bài toán dạng chuẩn là cực tiểu hóa $f_0$ với $f_i(x_1,x_2)\le0$ cho $i=1,\ldots,4$.
 Bài toán có 4 ràng buộc bất đẳng thức và 0 ràng buộc đẳng thức. Giá trị tối ưu của bài toán cực đại ban đầu bằng $-p^\star$ của bài toán chuẩn tắc. (Đây là một bài toán quy hoạch tuyến tính kinh điển với nghiệm tối ưu tại đỉnh $(x_1^\star, x_2^\star) = (3, 3)$ và giá trị cực đại bằng $27$).
 :::
 

@@ -36,7 +36,10 @@ Hai hàm tiếp theo không khả vi ở mọi nơi, nên điều kiện bậc h
 **Mọi chuẩn đều lồi.** Với chuẩn $\|\cdot\|$ và $0 \le \theta \le 1$, bất đẳng thức tam giác rồi tính thuần nhất cho
 
 $$
-\|\theta x + (1-\theta) y\| \le \|\theta x\| + \|(1-\theta) y\| = \theta \|x\| + (1 - \theta)\|y\|.
+\begin{aligned}
+\|\theta x + (1-\theta) y\| &\le \|\theta x\| + \|(1-\theta) y\|\\
+&= \theta \|x\| + (1 - \theta)\|y\|.
+\end{aligned}
 $$
 
 **Hàm max lồi.** Với $f(x) = \max_i x_i$, mỗi thành phần $\theta x_i + (1-\theta) y_i$ không vượt quá $\theta \max_j x_j + (1 - \theta) \max_j y_j$. Lấy max theo $i$ ở vế trái, ta được $f(\theta x + (1-\theta)y) \le \theta f(x) + (1-\theta) f(y)$.
@@ -48,13 +51,19 @@ Hai lập luận này cho thấy một quy luật: Khi hàm được định ngh
 Hàm max có các góc nhọn tại những điểm có từ hai thành phần bằng nhau trở lên, và những điểm góc nhọn không khả vi này gây trở ngại cho các thuật toán tối ưu dựa trên đạo hàm. Hàm **log-sum-exp**
 
 $$
-f(x) = \log\Big(\sum_{i=1}^n e^{x_i}\Big) = \log\big(e^{x_1} + e^{x_2} + \cdots + e^{x_n}\big)
+\begin{aligned}
+f(x) &= \log\Big(\sum_{i=1}^n e^{x_i}\Big)\\
+&= \log\big(e^{x_1} + e^{x_2} + \cdots + e^{x_n}\big)
+\end{aligned}
 $$
 
 được xem là một phiên bản làm trơn (smooth approximation) của hàm max. Do bất đẳng thức kép hiển nhiên $e^{\max_i x_i} \le \sum_{i=1}^n e^{x_i} \le n\, e^{\max_i x_i}$, lấy logarit tự nhiên ba vế ta thu được:
 
 $$
-\max_i x_i \ \le\ f(x) \ \le\ \max_i x_i + \log n .
+\begin{aligned}
+\max_i x_i \ &\le\ f(x) \\\
+&\le\ \max_i x_i + \log n .
+\end{aligned}
 $$
 
 Bất đẳng thức bên phải đạt dấu bằng khi và chỉ khi mọi thành phần bằng nhau. Với $x = (2, 2, 2)$, $f(x) = 2 + \log 3 \approx 3.099$. Khi có một thành phần vượt trội, $f(x)$ tiến sát về giá trị cực đại: Chẳng hạn với $x = (3, 1, 0)$, $f(x) \approx 3.170$, chỉ chênh lệch nhẹ so với $\max_i x_i = 3$.
@@ -62,13 +71,22 @@ Bất đẳng thức bên phải đạt dấu bằng khi và chỉ khi mọi th�
 Để điều chỉnh linh hoạt độ trơn, ta đưa thêm tham số **nhiệt độ nghịch đảo** $\beta > 0$:
 
 $$
-f_\beta(x) = \frac{1}{\beta}\log\Big(\sum_{i=1}^n e^{\beta x_i}\Big), \qquad \max_i x_i \le f_\beta(x) \le \max_i x_i + \frac{\log n}{\beta}.
+\begin{aligned}
+&f_\beta(x) = \frac{1}{\beta}\log\Big(\sum_{i=1}^n e^{\beta x_i}\Big), \qquad\\
+&\begin{aligned}
+\max_i x_i &\le f_\beta(x)\\
+&\le \max_i x_i + \frac{\log n}{\beta}.
+\end{aligned}
+\end{aligned}
 $$
 
 Với $x = (3, 1, 0)$, khoảng cách $f_\beta(x) - 3$ bằng khoảng $0.170$ khi $\beta = 1$, giảm xuống $0.0103$ khi $\beta = 2$ và chỉ còn dưới $10^{-5}$ khi $\beta = 5$. Gradient của $f_\beta$ là một vector xác suất quen thuộc:
 
 $$
-\frac{\partial f_\beta}{\partial x_i} = \frac{e^{\beta x_i}}{\sum_{j=1}^n e^{\beta x_j}} = \operatorname{softmax}(\beta x)_i .
+\begin{aligned}
+\frac{\partial f_\beta}{\partial x_i} &= \frac{e^{\beta x_i}}{\sum_{j=1}^n e^{\beta x_j}}\\
+&= \operatorname{softmax}(\beta x)_i .
+\end{aligned}
 $$
 
 Mỗi thành phần của gradient đều không âm và tổng của chúng đúng bằng 1. Khi $\beta \to \infty$, phân phối softmax sẽ tập trung hầu hết trọng số vào thành phần lớn nhất, hoàn toàn khớp với dưới đạo hàm của hàm max.
@@ -85,8 +103,9 @@ Với mọi vector hướng $v \in \mathbb{R}^n$, dạng toàn phương tương 
 
 $$
 \begin{aligned}
-v^T \nabla^2 f(x)\, v &= \sum_{i=1}^n p_i v_i^2 - \Big(\sum_{i=1}^n p_i v_i\Big)^2 \\
-&= \sum_{i=1}^n p_i \Big(v_i - \sum_{j=1}^n p_j v_j\Big)^2 \ge 0 .
+v^T \nabla^2 f(x)\, v &= \sum_{i=1}^n p_i v_i^2 - \Big(\sum_{i=1}^n p_i v_i\Big)^2\\
+&= \sum_{i=1}^n p_i \Big(v_i - \sum_{j=1}^n p_j v_j\Big)^2\\
+&\ge 0 .
 \end{aligned}
 $$
 
@@ -95,7 +114,10 @@ Vế phải chính là **phương sai** của một biến ngẫu nhiên rời r
 **Liên hệ với hàm mất mát entropy chéo.** Một mô hình phân loại $n$ lớp xuất ra vector logit $z$. Với mẫu có nhãn đúng là lớp $y$, hàm mất mát entropy chéo (cross-entropy loss) được định nghĩa:
 
 $$
-L(z) = -\log \operatorname{softmax}(z)_y = \log \sum_{j=1}^n e^{z_j} - z_y .
+\begin{aligned}
+L(z) &= -\log \operatorname{softmax}(z)_y\\
+&= \log \sum_{j=1}^n e^{z_j} - z_y .
+\end{aligned}
 $$
 
 Biểu thức này chính là hàm log-sum-exp trừ đi một hàm tuyến tính $z_y$, do đó $L$ lồi theo vector logit $z$. Gradient của nó bằng $\operatorname{softmax}(z) - e_y$. Chẳng hạn với $z = (2, 1, -1)$ và nhãn đúng là lớp thứ nhất ($y = 1$), ta tính được $L \approx 0.349$ và $\operatorname{softmax}(z) \approx (0.705,\ 0.260,\ 0.035)$. Thành phần thứ $y$ của gradient bằng $p_y - 1$, luôn âm vì $p_y < 1$, nên gradient không bao giờ triệt tiêu hoàn toàn và $L$ không đạt điểm cực tiểu tại hữu hạn: Tăng logit $z_y$ thêm 10 sẽ kéo $L$ xuống khoảng $1.9 \times 10^{-5}$, nhưng không bao giờ đạt đúng 0.
@@ -119,7 +141,10 @@ chính là một hệ quả trực tiếp của tính lõm của hàm $\log$. V�
 Hàm $f(X) = \log\det X$ trên tập các ma trận đối xứng xác định dương $\mathbb{S}^n_{++}$ là hàm lõm. Do việc tính toán ma trận Hessian của hàm theo biến ma trận rất phức tạp, ta vận dụng công cụ hạn chế hàm lên một đường thẳng $X = Z + tV$ với $Z \succ 0$ và $V$ là ma trận đối xứng. Đặt $g(t) = \log\det(Z + tV)$ và phân tích $Z = Z^{1/2} Z^{1/2}$:
 
 $$
-g(t) = \log\det\Big(Z^{1/2}\big(I + t\, Z^{-1/2} V Z^{-1/2}\big) Z^{1/2}\Big) = \log\det Z + \sum_{i=1}^n \log(1 + t\lambda_i),
+\begin{aligned}
+g(t) &= \log\det\Big(Z^{1/2}\big(I + t\, Z^{-1/2} V Z^{-1/2}\big) Z^{1/2}\Big)\\
+&= \log\det Z + \sum_{i=1}^n \log(1 + t\lambda_i),
+\end{aligned}
 $$
 
 trong đó $\lambda_i$ là các trị riêng của ma trận đối xứng $Z^{-1/2} V Z^{-1/2}$. Bước biến đổi này sử dụng hai tính chất đại số cơ bản: Định thức của tích bằng tích các định thức, và ma trận $I + tW$ có các trị riêng là $1 + t\lambda_i$ khi $W$ có các trị riêng $\lambda_i$. Khi đó $g(t)$ là tổng của các hàm logarit một biến, và:
@@ -134,7 +159,10 @@ Do $g''(t) \le 0$ trên mọi đường thẳng, hàm $\log\det$ là hàm lõm. 
 Lấy $Z = I$ cỡ $2 \times 2$ và $V = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$, ma trận có hai trị riêng $\pm\sqrt2$. Khi đó:
 
 $$
-g(t) = \log(1 + \sqrt2\, t) + \log(1 - \sqrt2\, t) = \log(1 - 2t^2),
+\begin{aligned}
+g(t) &= \log(1 + \sqrt2\, t) + \log(1 - \sqrt2\, t)\\
+&= \log(1 - 2t^2),
+\end{aligned}
 $$
 
 xác định khi $|t| < 1/\sqrt2 \approx 0.707$, đúng bằng khoảng mà ma trận $I + tV$ còn giữ được tính xác định dương. Tại $t = \pm 0.5$, $g(t) = \log 0.5 \approx -0.693$, còn tại trung điểm $t = 0$, $g(0) = 0 \ge -0.693$, thỏa mãn đúng chiều của hàm lõm. Độ cong tại 0 là $g''(0) = -\sum_i \lambda_i^2 = -4$.

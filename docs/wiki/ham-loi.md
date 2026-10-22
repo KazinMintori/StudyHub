@@ -7,38 +7,62 @@ next: false
 
 # Hàm lồi
 
-Hàm f trên miền lồi là lồi nếu $f(\theta x+(1-\theta )y)\le \theta f(x)+(1-\theta )f(y)$ với mọi x,y trong miền và $\theta$ trong [0,1]. Với hàm khả vi trên miền mở lồi, mặt phẳng tiếp tuyến luôn nằm dưới hàm.
+Giả sử ta trộn hai phương án sản xuất. Nếu chi phí tại phương án trộn không vượt trung bình có trọng số của hai chi phí ban đầu, hàm chi phí có thể mang **tính lồi**. Tính chất này phải đúng trên toàn miền lồi đang xét.
 
 <WikiUsage />
 
+![Hình 1: Dây cung nằm phía trên đồ thị của hàm lồi.](./img/atlas/convex.svg)
+
 ## Giải thích kỹ thuật
 
-Trên miền mở lồi, nếu $f$ khả vi thì tính lồi tương đương
+Với $x,y$ trong miền lồi và $\theta\in[0,1]$, đặt $z=\theta x+(1-\theta)y$. Hàm $f$ là lồi khi:
 
-$$f(y)\ge f(x)+\nabla f(x)^T(y-x).$$
+$$
+f(z)\le\theta f(x)+(1-\theta)f(y).
+$$
 
-Với $f$ hai lần khả vi, có thể kiểm $\nabla^2f(x)\succeq0$ ở mọi điểm. Hàm lồi có thể không khả vi, chẳng hạn $|x|$ ở 0. Lồi nghiêm dùng dấu nhỏ hơn với $x\ne y$, $0<\theta<1$. Nó không tự bảo đảm đạt nghiệm. Nguồn: Convex Optimization, §3.1.
+Hình học của điều kiện này là đồ thị nằm không cao hơn dây cung nối hai điểm trên đồ thị. Nếu bất đẳng thức nghiêm với mọi hai điểm phân biệt và $0<\theta<1$, hàm là lồi nghiêm.
 
-## Ví dụ
+Với hàm khả vi trên miền mở lồi, một điều kiện tương đương là mặt phẳng tiếp tuyến luôn nằm dưới đồ thị:
 
-$f(x)=x^2$: Tại $x=-1$, $y=2$, $\theta =\frac{1}{2}$, giá trị ở trung điểm là $\frac{1}{4}$, còn trung bình hai giá trị là $\frac{5}{2}$.
+$$
+f(y)\ge f(x)+\nabla f(x)^T(y-x).
+$$
 
-## Khi nào cần dùng?
+Với hàm có đạo hàm bậc hai liên tục, tính lồi tương đương Hessian nửa xác định dương ở mọi điểm. Điều kiện này không chỉ nói Hessian có các phần tử dương.
 
-Chứng nhận tối ưu toàn cục và kiểm dạng chuẩn của mô hình tối ưu.
+Trong bài toán cực tiểu hàm lồi trên miền khả thi lồi, mọi cực tiểu địa phương là cực tiểu toàn cục. Tuy nhiên, nghiệm chưa chắc tồn tại. Hàm $e^x$ trên toàn trục số có cận dưới 0 nhưng không đạt giá trị đó.
 
-## Tự kiểm tra
+## Ví dụ có lời giải
 
-Hàm lồi có luôn duy nhất một nghiệm cực tiểu không?
+Lấy $f(x)=x^2$, hai điểm $x=-1$, $y=2$ và $\theta=1/2$. Trung điểm là $z=1/2$. Khi đó:
 
-<details><summary>Xem đáp án</summary>
+$$
+\begin{aligned}
+f(z)&=1/4,\\
+\tfrac12f(x)+\tfrac12f(y)&=5/2.
+\end{aligned}
+$$
 
-Không. Hàm hằng có mọi điểm trong miền là nghiệm. Lồi nghiêm bảo đảm nhiều nhất một nghiệm trên miền khả thi lồi.
+Đồ thị tại trung điểm nằm dưới dây cung. Để chứng minh cho mọi cặp, dùng đạo hàm bậc hai $f''(x)=2>0$, không dựa riêng vào ví dụ số này.
 
-</details>
+Một hàm tuyến tính vừa lồi vừa lõm. Lồi không có nghĩa đồ thị phải cong hoặc phải có đúng một đáy.
 
-## Thuật ngữ liên quan
+## Câu hỏi ôn lại
+
+Tính lồi nghiêm có tự bảo đảm tồn tại đúng một nghiệm tối ưu không?
+
+::: details Xem lời giải
+Không. Nó bảo đảm nhiều nhất một nghiệm trên miền khả thi lồi. Muốn có đúng một nghiệm, cần thêm điều kiện bảo đảm nghiệm đạt được, chẳng hạn tính liên tục trên tập compact khác rỗng.
+:::
+
+## Đọc tiếp
 
 - [Tập lồi](./tap-loi.md)
 - [Gradient](./gradient.md)
 - [Hessian](./hessian.md)
+- [Cực tiểu cục bộ và toàn cục](./cuc-tieu-cuc-bo.md)
+
+## Tài liệu tham khảo
+
+- [S. Boyd và L. Vandenberghe, Convex Optimization](https://web.stanford.edu/~boyd/cvxbook/).

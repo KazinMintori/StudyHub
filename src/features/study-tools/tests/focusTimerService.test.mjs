@@ -165,3 +165,30 @@ test('focusTimerService: getTimerButtonLabel provides contextual user action tex
   assert.equal(getTimerButtonLabel(false, 1000, 25), 'Tiếp tục')
   assert.equal(getTimerButtonLabel(false, 1500, 25), 'Bắt đầu')
 })
+
+test('restoring browser storage normalizes numbers and rejects a false string flag', () => {
+  const restored = restoreTimerState({ minutes: '5', remaining: 800.2, sessions: -2, deadline: Infinity, running: 'false' })
+  assert.equal(restored.minutes, 5)
+  assert.equal(restored.remaining, 300)
+  assert.equal(restored.sessions, 0)
+  assert.equal(restored.running, false)
+  assert.equal(restored.deadline, 0)
+  assert.equal(resetTimer('25').minutes, 25)
+})
+
+test('corrupt deadlines cannot show NaN or award a completed session', () => {
+  assert.equal(calculateRemainingSeconds(Infinity, 1000), 0)
+  assert.equal(calculateRemainingSeconds('broken', 1000), 0)
+  assert.deepEqual(tickTimer(Infinity, Infinity, 1000), { remaining: 0, running: false, sessions: 0, finished: false })
+  const restored = restoreTimerState({ minutes: 5, remaining: 120, sessions: 1.7, running: true, deadline: Infinity }, 1000)
+  assert.equal(restored.sessions, 1)
+  assert.equal(restored.finished, false)
+  assert.equal(restored.remaining, 120)
+})
+
+test('restored deadlines keep fractional seconds and clamp an impossible long session', () => {
+  const state = { minutes: 5, remaining: 300, running: true, deadline: 101001, sessions: 0 }
+  assert.equal(restoreTimerState(state, 100000).deadline, 101001)
+  assert.equal(restoreTimerState({ ...state, deadline: 900000 }, 100000).deadline, 400000)
+  assert.equal(startTimer('5', 500, '1000').deadline, 301000)
+})

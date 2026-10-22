@@ -15,17 +15,23 @@ Tổ hợp lồi là tổng có trọng số không âm và tổng trọng số 
 
 **Nhiều điểm và điều kiện trọng số.** Với $k$ điểm $x_1,\ldots,x_k$, một tổ hợp lồi được biểu diễn dưới dạng tường minh:
 
-$$z = \lambda_1 x_1 + \lambda_2 x_2 + \cdots + \lambda_k x_k = \sum_{i=1}^k \lambda_i x_i.$$
+$$
+\begin{aligned}
+z&=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_kx_k\\
+&=\sum_{i=1}^k\lambda_i x_i.
+\end{aligned}
+$$
 
 Mỗi trọng số không âm và tổng toàn bộ các trọng số bằng 1:
 
-$$\sum_{i=1}^k \lambda_i = \lambda_1 + \lambda_2 + \cdots + \lambda_k = 1 \quad (\lambda_i \ge 0, \; \forall i = 1, \dots, k).$$
-
-Về mặt bản chất, đây là một **phép bình quân gia quyền** hay **pha trộn tỉ lệ phần trăm** (tổng bằng 100% và không có thành phần âm):
-
 $$
-z = \sum_{i=1}^k \lambda_i x_i, \qquad \sum_{i=1}^k \lambda_i = 1, \qquad \lambda_i \ge 0 \quad (\forall i = 1, \dots, k)
+\begin{aligned}
+\lambda_1+\lambda_2+\cdots+\lambda_k&=1,\\
+\sum_{i=1}^k\lambda_i&=1.
+\end{aligned}
 $$
+
+Điều kiện $\lambda_i\ge0$ áp dụng cho mọi chỉ số $i=1,\ldots,k$. Đây là phép bình quân gia quyền: Các trọng số phân bổ đủ 100% và không có phần âm.
 
 Chỉ số $i$ chạy từ 1 đến $k$, qua các điểm đã chọn. Khi phạm vi ngữ cảnh đã hoàn toàn rõ ràng, tài liệu có thể viết vắn tắt là $\sum_i \lambda_i = 1$ (hoặc dùng ký hiệu $\theta_i$ thay cho $\lambda_i$). 
 

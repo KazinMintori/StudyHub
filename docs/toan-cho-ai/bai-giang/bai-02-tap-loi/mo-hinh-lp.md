@@ -76,7 +76,10 @@ Ví dụ một biến: Xét hàm $f(x) = \max\{-x + 3,\ 0.5x,\ 2x - 5\}$. LP tư
 Đây là một bài toán rất thú vị trong xác suất thống kê. Giả sử biến ngẫu nhiên $x$ chỉ nhận các giá trị rời rạc $u_1, \ldots, u_n$ đã biết, nhưng phân phối xác suất $p_i = \operatorname{prob}(x = u_i)$ thì chưa biết cụ thể. Vector phân phối $p$ chỉ cần thỏa mãn $p \succeq 0$ và điều kiện chuẩn hóa $\sum_{i=1}^n p_i = p_1 + p_2 + \dots + p_n = 1$. Điểm mấu chốt là mọi kỳ vọng:
 
 $$
-\mathbb{E}[f(x)] = \sum_{i=1}^n p_i f(u_i) = p_1 f(u_1) + \dots + p_n f(u_n)
+\begin{aligned}
+\mathbb{E}[f(x)] &= \sum_{i=1}^n p_i f(u_i)\\
+&= p_1 f(u_1) + \dots + p_n f(u_n)
+\end{aligned}
 $$
 
 và mọi xác suất $\operatorname{prob}(x \in S) = \sum_{u_i \in S} p_i$ đều là **hàm tuyến tính của vector xác suất $p$**. Vì vậy những hiểu biết có sẵn, chẳng hạn cận trên và cận dưới của một vài kỳ vọng, là những ràng buộc tuyến tính trên $p$. Cận nhỏ nhất và lớn nhất có thể của một kỳ vọng khác chính là nghiệm của hai bài toán LP theo biến $p$.

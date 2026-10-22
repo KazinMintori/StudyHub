@@ -16,13 +16,19 @@ Bài giảng này thiết lập nền tảng lý thuyết cho GP: Khái niệm m
 Một hàm $f : \mathbb{R}^n_{++} \to \mathbb{R}$ có dạng
 
 $$
-f(x) = c\,x_1^{a_1}x_2^{a_2}\cdots x_n^{a_n}, \qquad c > 0,\ a_i \in \mathbb{R},
+\begin{aligned}
+&f(x) = c\,x_1^{a_1}x_2^{a_2}\cdots x_n^{a_n}, \qquad\\
+&c > 0,\ a_i \in \mathbb{R},
+\end{aligned}
 $$
 
 được gọi là một **monomial**. Số mũ có thể là số thực bất kỳ, kể cả phân số hay số âm, nhưng hệ số $c$ phải dương. Đây là điểm khác với khái niệm "đơn thức" trong đại số cổ điển, nơi số mũ phải là số nguyên không âm. Cần đặc biệt chú ý quy ước mở rộng này. Một tổng hữu hạn các monomial,
 
 $$
-f(x) = \sum_{k=1}^K c_k\,x_1^{a_{1k}}x_2^{a_{2k}}\cdots x_n^{a_{nk}}, \qquad c_k > 0,
+\begin{aligned}
+&f(x) = \sum_{k=1}^K c_k\,x_1^{a_{1k}}x_2^{a_{2k}}\cdots x_n^{a_{nk}}, \qquad\\
+&c_k > 0,
+\end{aligned}
 $$
 
 được gọi là một **posynomial**. Chẳng hạn $3x_1^{0.5}x_2^{-1}$ là monomial, $x_1 + 2x_1x_2 + x_2^{-1}$ là posynomial, còn $x_1 - x_2$ không phải posynomial vì có hệ số âm.
@@ -59,7 +65,10 @@ $$
 GP không lồi trong biến $x$: Một posynomial như $\sqrt{x_1} + \sqrt{x_2}$ là hàm lõm, và tập $\{x : \sqrt{x_1} + \sqrt{x_2} \le 2\}$ không lồi. Đổi biến $y_i = \log x_i$, tức $x_i = e^{y_i}$. Một monomial trở thành
 
 $$
-c\,e^{a_1y_1}\cdots e^{a_ny_n} = e^{a^Ty + b}, \qquad b = \log c,
+\begin{aligned}
+&c\,e^{a_1y_1}\cdots e^{a_ny_n} = e^{a^Ty + b}, \qquad\\
+&b = \log c,
+\end{aligned}
 $$
 
 hàm mũ của một hàm affine, và một posynomial trở thành tổng các hàm mũ của những hàm affine, $\sum_k e^{a_k^Ty + b_k}$. Bước thứ hai là lấy logarit của hàm mục tiêu và của mỗi ràng buộc, một phép biến đổi tăng ngặt nên giữ nguyên tập nghiệm và giữ đúng chiều bất đẳng thức. Ta được **GP dạng lồi**

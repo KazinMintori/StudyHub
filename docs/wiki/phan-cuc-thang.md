@@ -16,7 +16,10 @@ Một sóng phân cực thẳng có điện trường dao động theo một ph�
 Phân cực mô tả hướng điện trường trong mặt phẳng ngang. Trong phân cực thẳng, vector điện trường có thể tăng, giảm và đổi dấu mà vẫn dọc cùng một phương.
 
 $$
-\vec E=\hat{\mathbf y}E_0\cos\theta\\ \theta=kx-\omega t.
+\begin{aligned}
+&\vec E=\hat{\mathbf y}E_0\cos\theta\\
+&\theta=kx-\omega t.
+\end{aligned}
 $$
 
 Không nhầm phương phân cực với hướng truyền. Sóng trên có điện trường dọc y nhưng truyền dọc x. Anten dây ghép mạnh với thành phần điện trường dọc dây. Sóng âm dọc trong chất lưu không có tự do phương ngang như vậy.

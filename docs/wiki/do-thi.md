@@ -7,37 +7,45 @@ next: false
 
 # Đồ thị
 
-Đồ thị $G = (V, E)$ gồm tập đỉnh V và tập cạnh E nối các đỉnh. Đồ thị có hướng phân biệt $u \to  v$ với $v \to  u$. Đồ thị vô hướng thì không. Trọng số là số gắn trên cạnh, thường biểu diễn khoảng cách hoặc chi phí. Đường đi là chuỗi cạnh liên tiếp.
+Một mạng đường đi, các trang web liên kết và quan hệ phụ thuộc giữa công việc đều có thể được mô tả bằng **đồ thị**. Mỗi đối tượng là một đỉnh, còn mối nối được quan tâm là một cạnh.
 
 <WikiUsage />
 
+![Hình 1: Ít cạnh hơn không đồng nghĩa tổng chi phí nhỏ hơn.](./img/atlas/graph.svg)
+
 ## Giải thích kỹ thuật
 
-**Biểu diễn đồ thị.** Danh sách kề lưu láng giềng của từng đỉnh và thường cần $O(|V|+|E|)$ bộ nhớ. Ma trận kề dùng bảng |$V|\times |V|$, thuận tiện kiểm tra cạnh nhưng cần $O(|V|^{2})$ bộ nhớ.
+Đồ thị viết là $G=(V,E)$, với tập đỉnh $V$ và tập cạnh $E$. Đồ thị có hướng phân biệt cạnh từ A tới B với cạnh từ B tới A. Đồ thị vô hướng không phân biệt hai chiều này.
 
-BFS và DFS duyệt danh sách kề trong $O(|V|+|E|)$ nếu mỗi đỉnh chỉ được xử lý một lần. Một đường đi ngắn nhất theo số cạnh có thể khác đường có tổng trọng số nhỏ nhất.
+Trọng số trên cạnh có thể mô tả khoảng cách, thời gian hoặc chi phí. Phải chọn đơn vị và ý nghĩa trước khi cộng trọng số trên một đường đi. Bài toán ít cạnh nhất khác bài toán tổng trọng số nhỏ nhất.
 
-## Ví dụ
+Danh sách kề lưu láng giềng của từng đỉnh. Với biểu diễn thích hợp, bộ nhớ có độ lớn $O(|V|+|E|)$. Ma trận kề dùng $|V|^2$ ô, thuận tiện kiểm tra một cạnh nhưng có thể tốn hơn nhiều trên đồ thị thưa.
 
-$V = \{A, B, C\}$, cạnh $A \to  B$ giá 2 và $B \to  C$ giá 3: Đường $A \to  B \to  C$ có tổng chi phí 5.
+BFS tìm đường ngắn nhất theo số cạnh trên đồ thị không trọng số. Với trọng số không âm khác nhau, cần thuật toán phù hợp như Dijkstra. Không giữ nguyên kết luận về khoảng cách nếu chỉ đổi nhãn cạnh thành các chi phí bất kỳ.
 
-## Khi nào cần dùng?
+## Ví dụ có lời giải
 
-Mô hình hóa không gian tìm kiếm, mạng liên kết và bài toán đường đi.
+Trong hình, cạnh trực tiếp A–C có chi phí 9. Đường A–B–C gồm hai cạnh, mỗi cạnh chi phí 1, nên tổng chỉ bằng 2. Đường A–D–C có chi phí $2+3=5$.
 
-## Tự kiểm tra
+Vì vậy, đường ít cạnh nhất là A–C nhưng đường rẻ nhất là A–B–C. Mô hình “mỗi cạnh bằng nhau” và mô hình có trọng số trả lời hai câu hỏi khác nhau.
 
-Hai đường có cùng số cạnh có nhất thiết cùng chi phí không?
+Nếu biểu diễn bằng danh sách kề, A có các láng giềng B, C, D. Trong đồ thị vô hướng, mỗi cạnh phải xuất hiện ở danh sách của cả hai đầu mút.
 
-<details><summary>Xem đáp án</summary>
+## Câu hỏi ôn lại
 
-Không. Trọng số các cạnh có thể khác nhau.
+Nếu có đường đi từ A tới B trong đồ thị có hướng, có chắc có đường đi từ B về A không?
 
-</details>
+::: details Xem lời giải
+Không. Một cạnh duy nhất A tới B đã là phản ví dụ. Phải kiểm tra tính đạt tới theo từng hướng, hoặc điều kiện liên thông mạnh nếu cần cả hai chiều.
+:::
 
-## Thuật ngữ liên quan
+## Đọc tiếp
 
 - [Cây](./cay.md)
-- [Trạng thái](./trang-thai.md)
 - [Hàng đợi](./hang-doi.md)
 - [Ngăn xếp](./ngan-xep.md)
+- [Trạng thái](./trang-thai.md)
+
+## Tài liệu tham khảo
+
+- [Princeton, Algorithms, Undirected Graphs](https://algs4.cs.princeton.edu/41graph/).

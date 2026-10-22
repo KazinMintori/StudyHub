@@ -40,9 +40,10 @@ Thay vì giải trực tiếp điều kiện bù trừ rời rạc $\lambda_i f_
 
 $$
 \begin{aligned}
-\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu &= 0, \\
--\lambda_i f_i(x) &= \eta, \quad i = 1, \dots, m, \\
-A x &= b,
+&\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu = 0,\\
+&-\lambda_i f_i(x) = \eta, \quad\\
+&i = 1, \dots, m,\\
+&A x = b,
 \end{aligned}
 $$
 với điều kiện $f_i(x) < 0$ và $\lambda_i > 0$ cho mọi $i = 1, \dots, m$.
@@ -54,7 +55,10 @@ Khi $\eta \to 0$ (tương đương $t \to \infty$), nghiệm $(x^*(\eta), \lambd
 Tại một điểm bất kỳ $(x, \lambda, \nu)$ thỏa mãn điều kiện miền trong $f_i(x) < 0$ và $\lambda_i > 0$, điểm này có thể chưa thỏa mãn ràng buộc đẳng thức $Ax = b$ hoặc chưa cân bằng gradient đối ngẫu. Do đó, khoảng cách đối ngẫu lý thuyết chuẩn có thể chưa xác định. Ta định nghĩa **độ lệch đối ngẫu đại diện**:
 
 $$
-\hat{\eta}(x, \lambda) = -\frac{1}{m} \sum_{i=1}^m \lambda_i f_i(x) = -\frac{1}{m} \lambda^T f(x).
+\begin{aligned}
+\hat{\eta}(x, \lambda) &= -\frac{1}{m} \sum_{i=1}^m \lambda_i f_i(x)\\
+&= -\frac{1}{m} \lambda^T f(x).
+\end{aligned}
 $$
 
 Khai triển tường minh:
@@ -106,7 +110,10 @@ Hệ phương trình KKT bị xáo trộn tương đương với phương trình
 Để tìm bước cập nhật $(\Delta x, \Delta \lambda, \Delta \nu)$, ta áp dụng xấp xỉ tuyến tính Taylor bậc nhất cho hệ phi tuyến $r(x + \Delta x, \lambda + \Delta \lambda, \nu + \Delta \nu) = 0$:
 
 $$
-r(x + \Delta x, \lambda + \Delta \lambda, \nu + \Delta \nu) \approx r(x, \lambda, \nu) + \nabla r(x, \lambda, \nu) \begin{bmatrix} \Delta x \\ \Delta \lambda \\ \Delta \nu \end{bmatrix} = 0.
+\begin{aligned}
+r(x + \Delta x, \lambda + \Delta \lambda, \nu + \Delta \nu) &\approx r(x, \lambda, \nu) + \nabla r(x, \lambda, \nu) \begin{bmatrix} \Delta x \\ \Delta \lambda \\ \Delta \nu \end{bmatrix}\\
+&= 0.
+\end{aligned}
 $$
 
 Lấy đạo hàm từng khối của $r$ theo $(x, \lambda, \nu)$, ta thu được hệ phương trình ma trận tuyến tính KKT khối:
@@ -303,23 +310,24 @@ với $A \in \mathbb{R}^{p \times n}$ có hạng đủ $\operatorname{rank}(A) =
 
    Hệ điều kiện KKT bị xáo trộn:
    $$
-\begin{aligned}
-c - s + A^T \nu &= 0 \quad (\text{Dual feasible}), \\
-X S \mathbf{1} &= \eta \mathbf{1} \quad (\text{Centering}), \\
-A x &= b \quad (\text{Primal feasible}), \\
-&x > 0, \quad s > 0,
-\end{aligned}
-$$
+   \begin{aligned}
+   &c - s + A^T \nu = 0 \quad (\text{Dual feasible}),\\
+   &X S \mathbf{1} = \eta \mathbf{1} \quad (\text{Centering}),\\
+   &A x = b \quad (\text{Primal feasible}),\\
+   &x > 0, \quad\\
+   &s > 0,
+   \end{aligned}
+   $$
    trong đó $X = \operatorname{diag}(x_1, \dots, x_n)$ và $S = \operatorname{diag}(s_1, \dots, s_n)$.
 
 2. Các vector phần dư tại điểm hiện tại $(x, s, \nu)$:
    $$
-\begin{aligned}
-r_{\text{dual}} &= c - s + A^T \nu, \\
-r_{\text{cent}} &= X S \mathbf{1} - \eta \mathbf{1}, \\
-r_{\text{pri}} &= A x - b.
-\end{aligned}
-$$
+   \begin{aligned}
+   r_{\text{dual}} &= c - s + A^T \nu, \\
+   r_{\text{cent}} &= X S \mathbf{1} - \eta \mathbf{1}, \\
+   r_{\text{pri}} &= A x - b.
+   \end{aligned}
+   $$
 
    Tuyến tính hóa hệ phương trình tại bước lặp hiện tại:
    $$
@@ -401,7 +409,11 @@ với $P \in \mathbb{S}_+^n$ và $G \in \mathbb{R}^{m \times n}$.
 
    Vì $D$ là ma trận đường chéo với các phần tử dương nghiêm ngặt $D_{ii} > 0$, đặt $w = G v \in \mathbb{R}^m$, ta có:
    $$
-   v^T G^T D G v = w^T D w = \sum_{i=1}^m D_{ii} w_i^2 \ge 0.
+   \begin{aligned}
+   v^T G^T D G v &= w^T D w\\
+   &= \sum_{i=1}^m D_{ii} w_i^2\\
+   &\ge 0.
+   \end{aligned}
    $$
 
    Do đó $v^T H_{\text{eff}} v \ge 0$.
@@ -515,11 +527,11 @@ Tại bước lặp hiện tại, nghiệm thử là $x = 2$ và nhân tử đ�
    
    Cập nhật với bước $s = 0.8$:
    $$
-\begin{aligned}
-x_{\text{new}} &= x + s \Delta x = 2 + 0.8(-1) = 1.2, \\
-\lambda_{\text{new}} &= \lambda + s \Delta \lambda = 1 + 0.8(0) = 1.
-\end{aligned}
-$$
+   \begin{aligned}
+   x_{\text{new}} &= x + s \Delta x = 2 + 0.8(-1) = 1.2, \\
+   \lambda_{\text{new}} &= \lambda + s \Delta \lambda = 1 + 0.8(0) = 1.
+   \end{aligned}
+   $$
 
    Kiểm tra độ lệch đối ngẫu đại diện mới:
    $$

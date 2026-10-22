@@ -112,8 +112,9 @@ Xét min $x_1^2+x_2^2$ với $x_1+x_2\ge1$. Dùng ký hiệu $s\ge0$ cho nhân t
 
 $$
 \begin{aligned}
-L(x_1,x_2,s) &= x_1^2+x_2^2+s(1-x_1-x_2), \\
-2x_1-s &= 0,\quad2x_2-s=0.
+&L(x_1,x_2,s) = x_1^2+x_2^2+s(1-x_1-x_2),\\
+&2x_1-s = 0,\\
+&\quad2x_2-s=0.
 \end{aligned}
 $$
 
@@ -135,7 +136,10 @@ Trong ví dụ hai biến, hãy viết một đẳng thức hoàn thành bình p
 Ta có
 
 $$
-L(x_1,x_2,1) = (x_1-1/2)^2+(x_2-1/2)^2+1/2 \ge 1/2.
+\begin{aligned}
+L(x_1,x_2,1) &= (x_1-1/2)^2+(x_2-1/2)^2+1/2\\
+&\ge 1/2.
+\end{aligned}
 $$
 
 Tại điểm khả thi, $L\le f$. Vì vậy $f\ge1/2$. Điểm $(1/2,1/2)$ đạt cận nên tối ưu.

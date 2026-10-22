@@ -14,39 +14,39 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 428,
+      "line": 417,
       "title": "Bài tập tự luyện có lời giải chi tiết"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 430,
+      "line": 419,
       "title": "Bài tập 1: Tính toán định lượng sai số MSE và RMSE giữa hai mô hình"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 600,
+      "line": 585,
       "title": "Bài tập 2: Phân tích sự đánh đổi Độ chệch - Phương sai và Hành vi của sai số"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 678,
+      "line": 657,
       "title": "Bài tập 3: Phát hiện lỗi rò rỉ dữ liệu (Data Leakage) và Thiết kế quy trình chuẩn"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 468,
+      "line": 457,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 628,
+      "line": 607,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/26-hien-tuong-qua-khop.md",
-      "line": 700,
+      "line": 679,
       "title": ""
     }
   ],

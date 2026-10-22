@@ -184,7 +184,10 @@ Với $n - 1 = 5$ bậc tự do và $\alpha = 0{,}05$, tra bảng phân vị Stu
 Biên độ sai số:
 
 $$
-E = 2{,}5706 \times 0{,}5774 \approx 1{,}4841\,\mathrm{W}
+\begin{aligned}
+E &= 2{,}5706 \times 0{,}5774\\
+&\approx 1{,}4841\,\mathrm{W}
+\end{aligned}
 $$
 
 Khoảng tin cậy $95\%$ cho mức tiết kiệm trung bình $\mu_D$:
@@ -432,8 +435,11 @@ Hai đầu mút của khoảng Wilson:
 
 $$
 \begin{aligned}
-L_w &= 0{,}18067 - 0{,}11006 \approx 0{,}0706, \\
-U_w &= 0{,}18067 + 0{,}11006 \approx 0{,}2907
+&\begin{aligned}
+L_w &= 0{,}18067 - 0{,}11006\\
+&\approx 0{,}0706,
+\end{aligned}\\
+&U_w = 0{,}18067 + 0{,}11006 \approx 0{,}2907
 \end{aligned}
 $$
 

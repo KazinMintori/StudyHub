@@ -33,39 +33,39 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 419,
+      "line": 410,
       "title": "Bài tập rèn luyện tư duy thống kê"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 421,
+      "line": 412,
       "title": "Bài tập 1: Phân loại đa chiều biến số tuổi tác (Age)"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 465,
+      "line": 456,
       "title": "Bài tập 2: Dự đoán hành vi và quy tắc ép kiểu dữ liệu trong R"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 541,
+      "line": 532,
       "title": "Bài tập 3: Cấu trúc hóa tập dữ liệu hình ảnh vào Data Frame"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 439,
+      "line": 430,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 499,
+      "line": 490,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 565,
+      "line": 556,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -109,43 +109,43 @@
     {
       "reference": "./img/stat20-02/alien-contingency-table.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 269,
+      "line": 260,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-02/alien-contingency-table.png"
     },
     {
       "reference": "./img/stat20-02/shoebill-1.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 295,
+      "line": 286,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-02/shoebill-1.png"
     },
     {
       "reference": "./img/stat20-02/shoebill-1-grayscale.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 323,
+      "line": 314,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-02/shoebill-1-grayscale.png"
     },
     {
       "reference": "./img/stat20-02/shoebill-1-gray8.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 331,
+      "line": 322,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-02/shoebill-1-gray8.png"
     },
     {
       "reference": "./img/stat20-02/shoebill-1-gray8.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 357,
+      "line": 348,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-02/shoebill-1-gray8.png"
     },
     {
       "reference": "./img/stat20-02/shoebill-2-gray8.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 365,
+      "line": 356,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-02/shoebill-2-gray8.png"
     },
     {
       "reference": "./img/stat20-02/shoebill-3-gray8.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/02-phan-loai-du-lieu.md",
-      "line": 373,
+      "line": 364,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-02/shoebill-3-gray8.png"
     }
   ]

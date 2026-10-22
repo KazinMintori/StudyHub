@@ -64,7 +64,10 @@ Dijkstra tìm đường đi ngắn nhất từ một đỉnh nguồn $S$ đến 
 3. Thử "thư giãn" (Relaxation) tất cả các cạnh kề $(u, v)$ với trọng số $w$:
    Nếu điều kiện sau thỏa mãn:
    $$
-   dist[u] + w < dist[v] \implies dist[v] = dist[u] + w
+   \begin{aligned}
+   dist[u] + w &< dist[v]\\
+   &\implies dist[v] = dist[u] + w
+   \end{aligned}
    $$
 4. Lặp lại cho đến khi xét hết mọi đỉnh.
 

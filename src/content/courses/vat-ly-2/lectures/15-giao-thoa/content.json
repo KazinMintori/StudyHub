@@ -54,7 +54,43 @@
     "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
     "raw_materials/physics/translations/chapter-35/05-giao-thoa-ke-michelson.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-35/02-giao-thoa-hai-nguon.md",
+      "line": 92,
+      "title": "Ví dụ 35.1: Giao thoa hai khe Young"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/02-giao-thoa-hai-nguon.md",
+      "line": 129,
+      "title": "Ví dụ 35.2: Giản đồ phát sóng của đài phát thanh"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/03-cuong-do-giao-thoa.md",
+      "line": 154,
+      "title": "Ví dụ 35.3: Hệ anten phát sóng định hướng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+      "line": 95,
+      "title": "Ví dụ 35.4: Giao thoa trên màng mỏng I"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+      "line": 163,
+      "title": "Ví dụ 35.5: Giao thoa trên màng mỏng II"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+      "line": 219,
+      "title": "Ví dụ 35.6: Giao thoa trên màng mỏng III"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+      "line": 300,
+      "title": "Ví dụ 35.7: Lớp phủ khử phản xạ"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-35/10-luyen-tap-huong-dan.md",
@@ -539,6 +575,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-35/00-mo-dau.md",
+      "line": 37,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-35/10-luyen-tap-huong-dan.md",
       "line": 9,
       "title": "Lời giải chi tiết"
@@ -992,6 +1033,36 @@
       "source": "raw_materials/physics/translations/chapter-35/17-mcat.md",
       "line": 97,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/01-giao-thoa-nguon-ket-hop.md",
+      "line": 84,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/02-giao-thoa-hai-nguon.md",
+      "line": 190,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/03-cuong-do-giao-thoa.md",
+      "line": 267,
+      "title": "Xem các góc bổ sung và kiểm tra"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/03-cuong-do-giao-thoa.md",
+      "line": 301,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+      "line": 198,
+      "title": "Xem lập luận và bề dày cần dùng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+      "line": 254,
+      "title": "Xem phân tích hai mặt phản xạ"
     }
   ],
   "assets": [

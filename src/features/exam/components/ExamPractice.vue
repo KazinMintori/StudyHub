@@ -1537,10 +1537,11 @@ onUnmounted(() => {
   .exam-header__right {
     justify-content: space-between;
     gap: 8px;
+    flex-wrap: wrap;
   }
-  .exam-mode-switch { flex: 1; }
-  .exam-mode-switch__btn { flex: 1; justify-content: center; padding-inline: 8px; white-space: nowrap; }
-  .exam-jump-trigger { padding-inline: 12px; }
+  .exam-mode-switch { flex: 1; min-width: 0; max-width: 100%; }
+  .exam-mode-switch__btn { flex: 1; min-width: 0; justify-content: center; padding-inline: 8px; white-space: normal; }
+  .exam-jump-trigger { padding-inline: 12px; margin-left: auto; }
   .exam-jump-trigger__text { display: none; }
 
   .exam-progress-row {

@@ -70,7 +70,11 @@ $$
 Đặt $y = Q^T(x - x_c)$ là tọa độ của vector sai lệch $x - x_c$ trong hệ cơ sở trực chuẩn gồm các vector riêng $q_1, \dots, q_n$. Điều kiện xác định ellipsoid trở thành:
 
 $$
-y^T \Lambda^{-1} y = \sum_{i=1}^n \frac{y_i^2}{\lambda_i} = \frac{y_1^2}{\lambda_i} + \frac{y_2^2}{\lambda_2} + \dots + \frac{y_n^2}{\lambda_n} \le 1 .
+\begin{aligned}
+y^T \Lambda^{-1} y &= \sum_{i=1}^n \frac{y_i^2}{\lambda_i}\\
+&= \frac{y_1^2}{\lambda_i} + \frac{y_2^2}{\lambda_2} + \dots + \frac{y_n^2}{\lambda_n}\\
+&\le 1 .
+\end{aligned}
 $$
 
 Biểu thức này chính là phương trình chuẩn tắc của một ellipsoid quen thuộc trong hình học giải tích. Từ đây ta rút ra kết luận hình học căn bản: **Bán trục thứ $i$ của ellipsoid nằm dọc theo phương của vector riêng $q_i$ và có độ dài bằng $\sqrt{\lambda_i}$**. Trị riêng lớn ứng với bán trục dài, còn trị riêng nhỏ ứng với bán trục ngắn. Phép biến đổi tọa độ $y = Q^T(x - x_c)$ chỉ gồm hai thao tác hình học bảo toàn khoảng cách: Tịnh tiến tâm về gốc tọa độ và xoay hệ trục theo ma trận trực giao $Q$.
@@ -87,7 +91,11 @@ $$
 Đa thức đặc trưng của ma trận:
 
 $$
-\det(P - \lambda I) = (5 - \lambda)^2 - 9 = \lambda^2 - 10\lambda + 16 = 0 ,
+\begin{aligned}
+\det(P - \lambda I) &= (5 - \lambda)^2 - 9\\
+&= \lambda^2 - 10\lambda + 16\\
+&= 0 ,
+\end{aligned}
 $$
 
 cho hai trị riêng $\lambda_1 = 8$ và $\lambda_2 = 2$. Các vector riêng đơn vị tương ứng là $q_1 = \tfrac{1}{\sqrt2}(1, 1)$ và $q_2 = \tfrac{1}{\sqrt2}(-1, 1)$.
@@ -107,13 +115,21 @@ $$
 Để kiểm tra bằng định nghĩa, ma trận nghịch đảo là $P^{-1} = \tfrac{1}{16}\begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix}$. Đỉnh của bán trục lớn là:
 
 $$
-x = x_c + a q_1 = (1, -1) + 2\sqrt{2} \cdot \tfrac{1}{\sqrt2}(1, 1) = (3, 1) .
+\begin{aligned}
+x &= x_c + a q_1\\
+&= (1, -1) + 2\sqrt{2} \cdot \tfrac{1}{\sqrt2}(1, 1)\\
+&= (3, 1) .
+\end{aligned}
 $$
 
 Vector độ lệch là $x - x_c = (2, 2)$, và giá trị dạng toàn phương là:
 
 $$
-(x - x_c)^T P^{-1} (x - x_c) = \begin{bmatrix} 2 & 2 \end{bmatrix} \left(\frac{1}{16}\begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix}\right) \begin{bmatrix} 2 \\ 2 \end{bmatrix} = \frac{1}{16}(20 - 12 - 12 + 20) = 1 ,
+\begin{aligned}
+(x - x_c)^T P^{-1} (x - x_c) &= \begin{bmatrix} 2 & 2 \end{bmatrix} \left(\frac{1}{16}\begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix}\right) \begin{bmatrix} 2 \\ 2 \end{bmatrix}\\
+&= \frac{1}{16}(20 - 12 - 12 + 20)\\
+&= 1 ,
+\end{aligned}
 $$
 
 chứng minh điểm này nằm chính xác trên biên của ellipse.
@@ -160,10 +176,11 @@ Biểu diễn tham số $\mathcal{E} = x_c + A\,B(0, 1)$ mang lại một công 
 
 $$
 \begin{aligned}
-\operatorname{vol}(\mathcal{E}) &= |\det A| \cdot \operatorname{vol}(B(0, 1)) \\
-&= \sqrt{\det(AA^T)} \cdot \operatorname{vol}(B(0, 1)) \\
-&= \sqrt{\det P} \cdot \operatorname{vol}(B(0, 1)) \\
-&= \left(\prod_{i=1}^n \lambda_i\right)^{1/2} \cdot \operatorname{vol}(B(0, 1)) = \sqrt{\lambda_1 \lambda_2 \dots \lambda_n} \cdot \operatorname{vol}(B(0, 1)) .
+\operatorname{vol}(\mathcal{E}) &= |\det A| \cdot \operatorname{vol}(B(0, 1))\\
+&= \sqrt{\det(AA^T)} \cdot \operatorname{vol}(B(0, 1))\\
+&= \sqrt{\det P} \cdot \operatorname{vol}(B(0, 1))\\
+&= \left(\prod_{i=1}^n \lambda_i\right)^{1/2} \cdot \operatorname{vol}(B(0, 1))\\
+&= \sqrt{\lambda_1 \lambda_2 \dots \lambda_n} \cdot \operatorname{vol}(B(0, 1)) .
 \end{aligned}
 $$
 
@@ -283,7 +300,11 @@ Tính ma trận tích $P = AA^T$. Tìm vector $u$ thỏa mãn phương trình $A
 Ma trận định hình là:
 
 $$
-P = AA^T = \begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 4 & 2 \\ 2 & 2 \end{bmatrix} .
+\begin{aligned}
+P &= AA^T\\
+&= \begin{bmatrix} 2 & 0 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 2 & 1 \\ 0 & 1 \end{bmatrix}\\
+&= \begin{bmatrix} 4 & 2 \\ 2 & 2 \end{bmatrix} .
+\end{aligned}
 $$
 
 Định thức của $P$ là $\det P = 4 \cdot 2 - 2^2 = 4 > 0$. Với điểm $x = (3, 1)$, vector sai lệch từ tâm là $x - x_c = (3, 1) - (1, 0) = (2, 1)$. Hệ phương trình $Au = x - x_c$ tương đương:
@@ -317,11 +338,21 @@ $$
 Ma trận nghịch đảo là $\Sigma^{-1} = \tfrac{1}{16}\begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix}$.
 - Với điểm $x_A = (2, 2)$:
   $$
-  d_M^2(x_A, 0) = \frac{1}{16} \begin{bmatrix} 2 & 2 \end{bmatrix} \begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix} \begin{bmatrix} 2 \\ 2 \end{bmatrix} = \frac{1}{16}(20 - 12 - 12 + 20) = 1 \implies d_M(x_A, 0) = 1 .
+  \begin{aligned}
+  d_M^2(x_A, 0) &= \frac{1}{16} \begin{bmatrix} 2 & 2 \end{bmatrix} \begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix} \begin{bmatrix} 2 \\ 2 \end{bmatrix}\\
+  &= \frac{1}{16}(20 - 12 - 12 + 20)\\
+  &= 1\\
+  &\implies d_M(x_A, 0) = 1 .
+  \end{aligned}
   $$
 - Với điểm $x_B = (1, -1)$:
   $$
-  d_M^2(x_B, 0) = \frac{1}{16} \begin{bmatrix} 1 & -1 \end{bmatrix} \begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix} = \frac{1}{16}(5 + 3 + 3 + 5) = 1 \implies d_M(x_B, 0) = 1 .
+  \begin{aligned}
+  d_M^2(x_B, 0) &= \frac{1}{16} \begin{bmatrix} 1 & -1 \end{bmatrix} \begin{bmatrix} 5 & -3 \\ -3 & 5 \end{bmatrix} \begin{bmatrix} 1 \\ -1 \end{bmatrix}\\
+  &= \frac{1}{16}(5 + 3 + 3 + 5)\\
+  &= 1\\
+  &\implies d_M(x_B, 0) = 1 .
+  \end{aligned}
   $$
 
 Khoảng cách Euclid thông thường từ gốc tới hai điểm lần lượt là $\|x_A\|_2 = \sqrt{2^2 + 2^2} = 2\sqrt{2} \approx 2.83$ và $\|x_B\|_2 = \sqrt{1^2 + (-1)^2} = \sqrt{2} \approx 1.41$. Tuy nhiên, xét theo khoảng cách Mahalanobis, hai điểm này có khoảng cách hoàn toàn bằng nhau (đều bằng 1), vì điểm $x_A$ nằm dọc theo phương có độ phân tán lớn ($\sigma_1 = \sqrt{8}$), trong khi điểm $x_B$ nằm dọc theo phương có độ phân tán nhỏ ($\sigma_2 = \sqrt{2}$).

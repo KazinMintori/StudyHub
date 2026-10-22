@@ -9,6 +9,7 @@ const {
   popover,
   closeButton,
   pinned,
+  modal,
   field,
   anchor,
   timer,
@@ -31,7 +32,7 @@ const {
 
 <template>
   <Teleport to="body">
-    <button v-if="term && pinned" type="button" class="term-preview-scrim" aria-label="Đóng ghi chú nhanh" @click="close({ restoreFocus: true })"></button>
+    <button v-if="term && pinned && modal" type="button" class="term-preview-scrim" tabindex="-1" aria-label="Đóng ghi chú nhanh" @click="close({ restoreFocus: true })"></button>
     <aside
       v-if="term"
       id="study-term-preview"
@@ -40,6 +41,8 @@ const {
       :class="{ 'is-pinned': pinned }"
       :style="position"
       :role="pinned ? 'dialog' : 'tooltip'"
+      :aria-modal="pinned && modal ? 'true' : undefined"
+      tabindex="-1"
       :aria-labelledby="pinned ? 'study-term-preview-title' : undefined"
       @pointerenter="keepOpen"
       @pointerleave="leavePopover"

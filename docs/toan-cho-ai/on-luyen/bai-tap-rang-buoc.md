@@ -36,12 +36,13 @@ Hệ KKT là
 
 $$
 \begin{aligned}
-3x_i^2+2\mu x_i+\lambda &= 0, \\
-x_1^2+x_2^2+x_3^2 &\le 4, \\
-x_1+x_2+x_3 &\le 1, \\
-\mu(x_1^2+x_2^2+x_3^2-4) &= 0, \\
-\lambda(x_1+x_2+x_3-1) &= 0, \\
-\mu &\ge 0,\quad\lambda \ge 0.
+&3x_i^2+2\mu x_i+\lambda = 0,\\
+&x_1^2+x_2^2+x_3^2 \le 4,\\
+&x_1+x_2+x_3 \le 1,\\
+&\mu(x_1^2+x_2^2+x_3^2-4) = 0,\\
+&\lambda(x_1+x_2+x_3-1) = 0,\\
+&\mu \ge 0,\quad\\
+&\lambda \ge 0.
 \end{aligned}
 $$
 

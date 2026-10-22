@@ -7,36 +7,48 @@ next: false
 
 # Ngăn xếp
 
-Ngăn xếp lấy phần tử theo thứ tự vào sau, ra trước (LIFO). Thao tác push đặt phần tử lên đỉnh, còn pop lấy phần tử trên đỉnh ra. Ngăn xếp lời gọi lưu các hàm đang chờ kết quả, nhờ đó giúp ta theo dõi hoạt động của đệ quy.
+Khi bấm Hoàn tác trong trình soạn thảo, thao tác được thực hiện gần nhất thường phải được đảo ngược trước. **Ngăn xếp** lưu phần tử theo quy tắc vào sau, ra trước (LIFO).
 
 <WikiUsage />
 
+![Hình 1: Cùng thứ tự thêm nhưng ngăn xếp lấy phần tử mới nhất trước.](./img/atlas/queue-stack.svg)
+
 ## Giải thích kỹ thuật
 
-**Ngăn xếp lời gọi.** Khi hàm A gọi B, thông tin để tiếp tục A được giữ lại. B hoàn tất trước khi A tiếp tục, phù hợp thứ tự LIFO. Với đệ quy, mỗi lời gọi thường tạo một khung ngăn xếp mới.
+Hai thao tác cơ bản là `push`, thêm phần tử lên đỉnh, và `pop`, lấy phần tử ở đỉnh ra. Thao tác `peek` chỉ xem đỉnh mà không xóa. Không được lấy phần tử từ một ngăn xếp rỗng nếu chưa quy định cách báo lỗi.
 
-Ngăn xếp trừu tượng không tự bảo đảm chương trình kết thúc. Điều kiện dừng của thuật toán phải được kiểm tra riêng.
+Ngăn xếp là kiểu dữ liệu trừu tượng, không đồng nhất với một cách cài đặt. Có thể dùng mảng động hoặc danh sách liên kết. Với mảng động, thêm ở cuối thường có chi phí hằng số theo phân tích khấu hao, nhưng một lần mở rộng mảng có thể cần sao chép nhiều phần tử.
 
-## Ví dụ
+Ngăn xếp lời gọi hàm lưu ngữ cảnh của những lời gọi chưa hoàn tất. Đệ quy sâu có thể làm cạn vùng nhớ dành cho ngăn xếp. Thay đệ quy bằng vòng lặp chỉ an toàn khi vẫn giữ đầy đủ trạng thái cần quay lại.
 
-Đặt A, B, C lần lượt lên ngăn xếp: Lấy ra C trước, rồi B, A.
+## Ví dụ có lời giải
 
-## Khi nào cần dùng?
+Thêm lần lượt A, B, C, rồi lấy ra một phần tử:
 
-Hiểu DFS, quay lui, lời gọi hàm và kiểm tra dấu ngoặc.
+```python
+stack = []
+for item in ["A", "B", "C"]:
+    stack.append(item)
+assert stack.pop() == "C"
+assert stack == ["A", "B"]
+```
 
-## Tự kiểm tra
+Để kiểm tra chuỗi ngoặc, mỗi dấu mở được đẩy lên ngăn xếp. Khi gặp dấu đóng, ta đối chiếu với dấu mở gần nhất chưa được ghép. Chuỗi `([])` hợp lệ nhưng `([)]` không hợp lệ, dù số lượng dấu mở và đóng bằng nhau.
 
-Sau push(A), push(B), pop(), đỉnh còn lại là gì?
+## Câu hỏi ôn lại
 
-<details><summary>Xem đáp án</summary>
+Sau `push(A)`, `push(B)`, `pop()`, `push(C)`, phần tử tiếp theo được lấy ra là gì?
 
-A.
+::: details Xem lời giải
+Là C. Lần pop trước đã bỏ B, nên ngăn xếp đi từ [A, B] về [A], rồi thành [A, C].
+:::
 
-</details>
-
-## Thuật ngữ liên quan
+## Đọc tiếp
 
 - [Hàng đợi](./hang-doi.md)
 - [Đệ quy](./de-quy.md)
-- [Cây](./cay.md)
+- [Trạng thái](./trang-thai.md)
+
+## Tài liệu tham khảo
+
+- [Princeton, Algorithms, Bags, Queues, and Stacks](https://algs4.cs.princeton.edu/13stacks/).

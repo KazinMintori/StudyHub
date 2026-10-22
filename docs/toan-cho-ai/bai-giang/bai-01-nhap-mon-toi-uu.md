@@ -101,8 +101,9 @@ flowchart TD
 ::: exercise 1. Nhận diện bốn thành phần và Cải dạng bài toán tối ưu
 1. Một robot tự hành cần lựa chọn vận tốc di chuyển $v \in \mathbb{R}$ sao cho tiến gần nhất tới vận tốc tham chiếu $v_{\mathrm{ref}}$, đồng thời tiết kiệm năng lượng và không vượt quá giới hạn an toàn động cơ:
    $$
-   \min_{v} (v - v_{\mathrm{ref}})^2 + \lambda v^2 \quad \text{s.t.} \quad |v| \le v_{\max},
+   \min_{v} \big((v - v_{\mathrm{ref}})^2 + \lambda v^2\big)
    $$
+   với ràng buộc $|v| \le v_{\max}$,
    với $\lambda > 0$ và $v_{\max} > 0$. Hãy xác định tường minh: Dữ kiện bài toán, vector biến quyết định, hàm mục tiêu và miền khả thi. Xác định nghiệm tối ưu giải tích $v^*$ theo các tham số.
 2. Xét ba bài toán tối ưu sau, phân tích xem bài toán nào là bài toán lồi hoặc có thể đưa về bài toán lồi:
    - Bài toán A: Cực tiểu hóa $\min_x \|Ax - b\|_1 + \|x\|_2^2$ với điều kiện $x \succeq 0$.
@@ -116,7 +117,11 @@ flowchart TD
    - **Biến quyết định (Optimization variable)**: Vận tốc $v \in \mathbb{R}$ (vô hướng 1 chiều).
    - **Hàm mục tiêu (Objective function)**:
      $$
-     f(v) = (v - v_{\mathrm{ref}})^2 + \lambda v^2 = (1 + \lambda)v^2 - 2v_{\mathrm{ref}}v + v_{\mathrm{ref}}^2.
+     \begin{aligned}
+     \alpha&=1+\lambda,\quad \beta=2v_{\mathrm{ref}}, \\
+     f(v)&=(v-v_{\mathrm{ref}})^2+\lambda v^2 \\
+     &=\alpha v^2-\beta v+v_{\mathrm{ref}}^2.
+     \end{aligned}
      $$
    - **Miền khả thi (Feasible set)**: Đoạn đóng $\mathcal{C} = [-v_{\max}, v_{\max}]$, là một tập lồi compact khác rỗng.
    
@@ -127,8 +132,14 @@ flowchart TD
    $$
    Vì $f''(v) = 2(1 + \lambda) > 0$, hàm số lồi ngặt trên $\mathbb{R}$. Nghiệm tối ưu có ràng buộc là hình chiếu của $v_{\mathrm{free}}$ lên đoạn $[-v_{\max}, v_{\max}]$:
    $$
-   v^* = \operatorname{clip}\left(\frac{v_{\mathrm{ref}}}{1 + \lambda}, -v_{\max}, v_{\max}\right) = \begin{cases} -v_{\max} & \text{if } \frac{v_{\mathrm{ref}}}{1 + \lambda} < -v_{\max}, \\ \frac{v_{\mathrm{ref}}}{1 + \lambda} & \text{if } \left|\frac{v_{\mathrm{ref}}}{1 + \lambda}\right| \le v_{\max}, \\ v_{\max} & \text{if } \frac{v_{\mathrm{ref}}}{1 + \lambda} > v_{\max}. \end{cases}
+   v^*=\begin{cases}
+   -v_{\max} & v_{\mathrm{free}}<-v_{\max},\\
+   v_{\mathrm{free}} & |v_{\mathrm{free}}|\le v_{\max},\\
+   v_{\max} & v_{\mathrm{free}}>v_{\max}.
+   \end{cases}
    $$
+
+   Đây chính là phép chặn $v_{\mathrm{free}}$ vào đoạn $[-v_{\max},v_{\max}]$.
 
 2. **Cải dạng bài toán**:
    - **Bài toán A**: Là bài toán lồi chính tắc do hàm mục tiêu là tổng của hàm lồi $\|Ax - b\|_1$ và hàm lồi ngặt $\|x\|_2^2$, trên nón không âm $x \succeq 0$ (tập lồi).
@@ -154,11 +165,12 @@ flowchart TD
      Ta có $\|m\|_2 = 0 \ne 1$, suy ra $m \notin C_2$.
    - $C_3$ là tập lồi vì là một siêu phẳng (tập affine). Với mọi $x, y \in C_3$ và $\theta \in [0, 1]$, tổ hợp lồi thỏa mãn:
      $$
-\begin{aligned}
-(\theta x_1 + (1-\theta)y_1) + (\theta x_2 + (1-\theta)y_2) &= \theta(x_1 + x_2) + (1-\theta)(y_1 + y_2) \\
-&= \theta(1) + (1-\theta)(1) = 1.
-\end{aligned}
-$$
+     \begin{aligned}
+     z_1 &= \theta x_1+(1-\theta)y_1, \\
+     z_2 &= \theta x_2+(1-\theta)y_2, \\
+     z_1+z_2 &= \theta+(1-\theta)=1.
+     \end{aligned}
+     $$
 
 2. **Ba cấp độ bảo đảm**:
    - **Bảo đảm tồn tại nghiệm (Existence)**: Dựa trên Định lý Weierstrass: Hàm mục tiêu liên tục trên miền khả thi đóng và bị chặn (compact) khác rỗng thì luôn đạt giá trị nhỏ nhất toàn cục.
@@ -171,7 +183,10 @@ $$
 ::: exercise 3. Bài toán điều khiển tối ưu một bước với giới hạn chấp hành
 Xét bài toán điều khiển một bước cho xe tự hành: Trạng thái hiện tại là $s = 2$. Sau khi áp dụng lực điều khiển $u$, trạng thái tiếp theo trở thành $s + u$. Ta muốn triệt tiêu độ lệch trạng thái về 0 nhưng đồng thời phải tiết kiệm năng lượng, và cơ cấu chấp hành có giới hạn vật lý:
 $$
-\min_u \frac{1}{2} (2 + u)^2 + \frac{1}{2} u^2 \quad \text{s.t.} \quad |u| \le 0.5.
+\begin{aligned}
+&\min_u\big(\tfrac12(2+u)^2+\tfrac12u^2\big) \\
+&|u|\le0.5.
+\end{aligned}
 $$
 1. Chứng minh bài toán trên là bài toán tối ưu lồi.
 2. Tìm nghiệm tối ưu $u^*$ và kiểm chứng bằng điều kiện tối ưu bậc nhất trên miền lồi.
@@ -181,20 +196,30 @@ $$
 ::: solution
 1. **Tính lồi**: Hàm mục tiêu:
    $$
-   f(u) = \frac{1}{2}(2 + u)^2 + \frac{1}{2}u^2 = u^2 + 2u + 2
+   \begin{aligned}
+   f(u) &= \tfrac12(2+u)^2+\tfrac12u^2 \\
+   &= u^2+2u+2.
+   \end{aligned}
    $$
    có đạo hàm bậc hai $f''(u) = 2 > 0$, do đó lồi ngặt trên $\mathbb{R}$. Miền khả thi là đoạn thẳng $\mathcal{C} = [-0.5, 0.5]$, là một tập lồi đóng. Do đó đây là bài toán tối ưu lồi.
 2. **Tìm nghiệm và kiểm chứng**: Đạo hàm bậc nhất là $f'(u) = 2u + 2$. Trên đoạn $[-0.5, 0.5]$, ta thấy $f'(u) \ge 2(-0.5) + 2 = 1 > 0$, nghĩa là hàm số đồng biến trên toàn bộ miền khả thi. Do đó, hàm số đạt giá trị nhỏ nhất tại điểm mút bên trái: $u^* = -0.5$. Giá trị mất mát tối ưu là:
    $$
-   f(-0.5) = \frac{1}{2}(1.5)^2 + \frac{1}{2}(-0.5)^2 = 1.125 + 0.125 = 1.25.
+   \begin{aligned}
+   f(-0.5) &= \tfrac12(1.5)^2+\tfrac12(-0.5)^2 \\
+   &= 1.125+0.125 \\
+   &= 1.25.
+   \end{aligned}
    $$
    
    Kiểm chứng qua điều kiện tối ưu bậc nhất trên miền lồi: Ta cần chỉ ra $\nabla f(u^*)^T (y - u^*) \ge 0$ với mọi $y \in \mathcal{C}$. Tại $u^* = -0.5$, ta có $f'(-0.5) = 1$. Với mọi $y \in [-0.5, 0.5]$, ta có:
    $$
-   f'(u^*) (y - u^*) = 1 \cdot (y - (-0.5)) = y + 0.5 \ge 0.
+   \begin{aligned}
+   f\prime(u^*)(y-u^*) &= y+0.5 \\
+   &\ge 0.
+   \end{aligned}
    $$
    Bất đẳng thức nghiệm đúng với mọi $y \in \mathcal{C}$. Điều này chứng minh chặt chẽ rằng $u^* = -0.5$ là nghiệm tối ưu toàn cục, dù đạo hàm tại đó khác 0 do nghiệm nằm trên biên ràng buộc.
-3. **Khi không có giới hạn**: Ta giải phương trình đạo hàm triệt tiêu: $f'(u) = 2u + 2 = 0 \iff u = -1$. Lúc này giá trị mất mát tối ưu là $f(-1) = \frac{1}{2}(1)^2 + \frac{1}{2}(-1)^2 = 1.0 < 1.25$. Giới hạn vật lý $|u| \le 0.5$ đã kích hoạt (ràng buộc chặt) và làm dịch chuyển điểm cân bằng tối ưu của hệ thống.
+3. **Khi không có giới hạn**: Ta giải phương trình đạo hàm triệt tiêu: $f'(u) = 2u + 2 = 0 \iff u = -1$. Lúc này giá trị mất mát tối ưu là $f(-1)=1<1{,}25$. Giới hạn vật lý $|u| \le 0.5$ đã kích hoạt (ràng buộc chặt) và làm dịch chuyển điểm cân bằng tối ưu của hệ thống.
 :::
 
 ::: exercise 4. Hệ phương trình chuẩn tắc và Phân tích hình học phép chiếu OLS
@@ -211,11 +236,13 @@ $$
 ::: solution
 1. **Thiết lập các đại lượng**:
    $$
-\begin{aligned}
-X^TX &= \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \end{bmatrix} = \begin{bmatrix} 3 & 3 \\ 3 & 5 \end{bmatrix}, \\
-X^Ty &= \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \\ 3 \end{bmatrix} = \begin{bmatrix} 4 \\ 7 \end{bmatrix}.
-\end{aligned}
-$$
+   \begin{aligned}
+   X^TX &= \begin{bmatrix}1&1&1\\0&1&2\end{bmatrix}\begin{bmatrix}1&0\\1&1\\1&2\end{bmatrix} \\
+   &= \begin{bmatrix}3&3\\3&5\end{bmatrix}, \\
+   X^Ty &= \begin{bmatrix}1&1&1\\0&1&2\end{bmatrix}\begin{bmatrix}0\\1\\3\end{bmatrix} \\
+   &= \begin{bmatrix}4\\7\end{bmatrix}.
+   \end{aligned}
+   $$
 2. **Giải hệ phương trình chuẩn tắc**:
    Định thức $\det(X^TX) = 15 - 9 = 6 \ne 0$. Ma trận khả nghịch:
    $$
@@ -223,25 +250,47 @@ $$
    $$
    Nghiệm tối ưu duy nhất là:
    $$
-   w^* = (X^TX)^{-1} X^Ty = \frac{1}{6} \begin{bmatrix} 5 \cdot 4 - 3 \cdot 7 \\ -3 \cdot 4 + 3 \cdot 7 \end{bmatrix} = \frac{1}{6} \begin{bmatrix} -1 \\ 9 \end{bmatrix} = \begin{bmatrix} -1/6 \\ 3/2 \end{bmatrix}.
+   \begin{aligned}
+   w^* &= (X^TX)^{-1}X^Ty \\
+   &= \frac16\begin{bmatrix}5\cdot4-3\cdot7\\-3\cdot4+3\cdot7\end{bmatrix} \\
+   &= \frac16\begin{bmatrix}-1\\9\end{bmatrix} \\
+   &= \begin{bmatrix}-1/6\\3/2\end{bmatrix}.
+   \end{aligned}
    $$
 3. **Dự đoán, phần dư và kiểm chứng trực giao**:
    Vector dự đoán tối ưu:
    $$
-   \hat{y} = Xw^* = \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} -1/6 \\ 3/2 \end{bmatrix} = \begin{bmatrix} -1/6 \\ 4/3 \\ 17/6 \end{bmatrix}.
+   \begin{aligned}
+   \hat y &= Xw^* \\
+   &= \begin{bmatrix}1&0\\1&1\\1&2\end{bmatrix}\begin{bmatrix}-1/6\\3/2\end{bmatrix} \\
+   &= \begin{bmatrix}-1/6\\4/3\\17/6\end{bmatrix}.
+   \end{aligned}
    $$
    Vector phần dư:
    $$
-   r = y - \hat{y} = \begin{bmatrix} 0 - (-1/6) \\ 1 - 4/3 \\ 3 - 17/6 \end{bmatrix} = \begin{bmatrix} 1/6 \\ -1/3 \\ 1/6 \end{bmatrix} = \frac{1}{6} \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix}.
+   \begin{aligned}
+   r &= y-\hat y \\
+   &= \begin{bmatrix}0-(-1/6)\\1-4/3\\3-17/6\end{bmatrix} \\
+   &= \begin{bmatrix}1/6\\-1/3\\1/6\end{bmatrix} \\
+   &= \frac16\begin{bmatrix}1\\-2\\1\end{bmatrix}.
+   \end{aligned}
    $$
    Kiểm chứng tính trực giao:
    $$
-   X^Tr = \frac{1}{6} \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \end{bmatrix} \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} = \frac{1}{6} \begin{bmatrix} 1 - 2 + 1 \\ 0 - 2 + 2 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+   \begin{aligned}
+   X^Tr &= \frac16\begin{bmatrix}1&1&1\\0&1&2\end{bmatrix}\begin{bmatrix}1\\-2\\1\end{bmatrix} \\
+   &= \frac16\begin{bmatrix}1-2+1\\0-2+2\end{bmatrix} \\
+   &= \begin{bmatrix}0\\0\end{bmatrix}.
+   \end{aligned}
    $$
    Hệ thức $X^Tr = 0$ được thỏa mãn tuyệt đối, minh chứng hình học rằng $\hat{y}$ chính là hình chiếu trực giao của $y$ lên không gian con $\operatorname{col}(X)$.
 4. **Tổng bình phương sai số**:
    $$
-   \|r\|_2^2 = \left(\frac{1}{6}\right)^2 + \left(-\frac{2}{6}\right)^2 + \left(\frac{1}{6}\right)^2 = \frac{1 + 4 + 1}{36} = \frac{6}{36} = \frac{1}{6}.
+   \begin{aligned}
+   \|r\|_2^2&=\frac{1^2+(-2)^2+1^2}{36} \\
+   &=\frac{1+4+1}{36} \\
+   &=\frac16.
+   \end{aligned}
    $$
 :::
 
@@ -257,13 +306,22 @@ $$
 ::: solution
 1. **Mô tả tập nghiệm**:
    Ta nhận thấy cột 2 của $X$ trùng với cột 1, do đó $Xw = (w_1 + w_2) \begin{bmatrix} 1 \\ 2 \end{bmatrix}$. Biểu thức phần dư trở thành:
+   Viết gọn $c=w_1+w_2-1$.
+
    $$
-   \|Xw - y\|_2^2 = \left\| (w_1 + w_2 - 1) \begin{bmatrix} 1 \\ 2 \end{bmatrix} \right\|_2^2 = 5 (w_1 + w_2 - 1)^2.
+   \begin{aligned}
+   \|Xw-y\|_2^2 &= c^2\left\|\begin{bmatrix}1\\2\end{bmatrix}\right\|_2^2 \\
+   &=5c^2, \\
+   c &= w_1+w_2-1.
+   \end{aligned}
    $$
    Giá trị nhỏ nhất là $0$, đạt được khi và chỉ khi $w_1 + w_2 = 1$.
    Do đó, tập nghiệm tối ưu là một đường thẳng affine một chiều trong $\mathbb{R}^2$:
    $$
-   \mathcal{S} = \{ (t, 1 - t)^T \mid t \in \mathbb{R} \} = \begin{bmatrix} 0 \\ 1 \end{bmatrix} + \operatorname{span}\left( \begin{bmatrix} -1 \\ 1 \end{bmatrix} \right).
+   \begin{aligned}
+   \mathcal S &= \{(t,1-t)^T:t\in\mathbb R\} \\
+   &= \begin{bmatrix}0\\1\end{bmatrix}+\operatorname{span}\!\left(\begin{bmatrix}-1\\1\end{bmatrix}\right).
+   \end{aligned}
    $$
 2. **Bản chất giải tích**:
    Ma trận $X$ có cỡ $2 \times 2$ nhưng chỉ có hạng bằng 1 ($\operatorname{rank}(X) = 1 < 2$). Do đó:
@@ -286,16 +344,21 @@ $$
 ::: solution
 1. **Tính đạo hàm và chứng minh lồi ngặt**:
    $$
-\begin{aligned}
-L'(w) &= 2 \cdot \frac{-e^{-w}}{1 + e^{-w}} = -\frac{2}{1 + e^w} < 0 \quad \forall w \in \mathbb{R}. \\
-L''(w) &= -2 \cdot \frac{-(e^w)}{(1 + e^w)^2} = \frac{2e^w}{(1 + e^w)^2} > 0 \quad \forall w \in \mathbb{R}.
-\end{aligned}
-$$
+   \begin{aligned}
+   L\prime(w) &= -\frac{2}{1+e^w}<0, \\
+   L\prime\prime(w) &= \frac{2e^w}{(1+e^w)^2}>0.
+   \end{aligned}
+   $$
+
+   Hai bất đẳng thức đúng với mọi $w\in\mathbb R$.
    Vì $L''(w) > 0$ với mọi $w \in \mathbb{R}$, hàm mất mát $L(w)$ lồi ngặt (strictly convex) trên toàn trục số.
 2. **Giá trị tối ưu và sự vắng mặt của nghiệm**:
    Vì $L'(w) < 0$ khắp nơi, hàm số nghịch biến nghiêm ngặt. Khi $w \to +\infty$:
    $$
-   \lim_{w \to +\infty} L(w) = \lim_{w \to +\infty} 2 \log(1 + e^{-w}) = 2 \log(1) = 0.
+   \begin{aligned}
+   \lim_{w\to+\infty}L(w) &= 2\log(1+0) \\
+   &=0.
+   \end{aligned}
    $$
    Mặt khác, với mọi $w$ hữu hạn, ta luôn có $1 + e^{-w} > 1$, dẫn đến $L(w) > 0$. Do đó, giá trị cận dưới đúng là $\inf_{w \in \mathbb{R}} L(w) = 0$, nhưng không tồn tại bất kỳ điểm $w^* \in \mathbb{R}$ nào để $L(w^*) = 0$. Tập nghiệm tối ưu hoàn toàn rỗng ($\mathcal{X}^* = \emptyset$).
 3. **Ý nghĩa sư phạm trong AI**:
@@ -303,9 +366,12 @@ $$
 :::
 
 ::: exercise 7. Khắc phục bằng Điều chuẩn L2 trong Hồi quy Logistic
-Xét bài toán hồi quy logistic có số hạng điều chuẩn trọng số $L_2$:
+Xét bài toán hồi quy logistic có số hạng điều chuẩn trọng số $L_2$, với $\mu > 0$ và $w \in \mathbb{R}^d$. Viết phần mất mát là $\ell(w)$:
 $$
-L_\mu(w) = \sum_{i=1}^n \log(1 + e^{-y_i a_i^T w}) + \frac{\mu}{2} \|w\|_2^2 , \quad \mu > 0, \; w \in \mathbb{R}^d.
+\begin{aligned}
+\ell(w) &= \sum_{i=1}^n \log(1 + e^{-y_i a_i^T w}),\\
+L_\mu(w) &= \ell(w) + \frac{\mu}{2}\|w\|_2^2.
+\end{aligned}
 $$
 1. Tính ma trận Hessian $\nabla^2 L_\mu(w)$ và chứng minh $L_\mu(w)$ lồi mạnh (strongly convex).
 2. Chứng minh rằng bài toán luôn luôn tồn tại nghiệm tối ưu duy nhất trên $\mathbb{R}^d$.
@@ -315,15 +381,22 @@ $$
 1. **Tính ma trận Hessian và lồi mạnh**:
    Đặt $z_i = -y_i a_i^T w$. Đạo hàm của hàm thành phần $\ell_i(w) = \log(1 + e^{-y_i a_i^T w})$ cho ma trận Hessian:
    $$
-   \nabla^2 \ell_i(w) = \frac{e^{-y_i a_i^T w}}{(1 + e^{-y_i a_i^T w})^2} a_i a_i^T = d_i a_i a_i^T,
+   \begin{aligned}
+   d_i &= \frac{e^{-y_i a_i^Tw}}{(1+e^{-y_i a_i^Tw})^2}, \\
+   \nabla^2\ell_i(w) &= d_i a_i a_i^T.
+   \end{aligned}
    $$
-   với $d_i = \sigma(y_i a_i^T w)(1 - \sigma(y_i a_i^T w)) > 0$. Vì $a_i a_i^T \succeq 0$, ma trận Hessian của phần mất mát dữ liệu luôn nửa xác định dương:
+   Đặt $s_i=\sigma(y_i a_i^Tw)$, khi đó $d_i=s_i(1-s_i)>0$. Vì $a_i a_i^T \succeq 0$, ma trận Hessian của phần mất mát dữ liệu luôn nửa xác định dương:
    $$
    \sum_{i=1}^n \nabla^2 \ell_i(w) \succeq 0.
    $$
    Thành phần điều chuẩn $\frac{\mu}{2}\|w\|_2^2$ có Hessian bằng $\mu I$. Do đó:
    $$
-   \nabla^2 L_\mu(w) = \sum_{i=1}^n d_i a_i a_i^T + \mu I \succeq \mu I \succ 0.
+   \begin{aligned}
+   \nabla^2L_\mu(w) &= \sum_{i=1}^n d_i a_i a_i^T+\mu I \\
+   &\succeq\mu I \\
+   &\succ0.
+   \end{aligned}
    $$
    Điều này chứng minh hàm số $L_\mu(w)$ lồi mạnh với tham số $m = \mu > 0$.
 2. **Chứng minh nghiệm tồn tại và duy nhất**:
@@ -334,7 +407,7 @@ $$
      $$
      Khi $\|w\|_2 \to \infty$, ta có $L_\mu(w) \to \infty$. Do đó, tập mức dưới:
      $$
-     \mathcal{S} = \{ w \in \mathbb{R}^d \mid L_\mu(w) \le L_\mu(0) \}
+     \mathcal S=\{w:L_\mu(w)\le L_\mu(0)\}
      $$
      là một tập đóng và bị chặn (compact) trong $\mathbb{R}^d$. Theo Định lý Weierstrass, hàm liên tục $L_\mu$ đạt giá trị nhỏ nhất trên tập compact $\mathcal{S}$. Mọi điểm ngoài $\mathcal{S}$ đều có giá trị lớn hơn $L_\mu(0)$, do đó điểm đạt giá trị nhỏ nhất trên $\mathcal{S}$ cũng chính là cực tiểu toàn cục trên toàn không gian $\mathbb{R}^d$.
    
@@ -356,15 +429,22 @@ Mục tiêu là điều chỉnh công suất $p$ sao cho độ rọi thực tế
 1. **Thiết lập mô hình**:
    $$
    \begin{aligned}
-   &\text{minimize}\quad \|Ap - I_{\mathrm{des}}\|_2^2\\
-   &\text{subject to}\quad 0 \le p_j \le p_{\max}, \quad j = 1, \dots, m,\\
-   &\phantom{\text{subject to}\quad } \sum_{j=1}^m p_j \le P_{\mathrm{total}}.
+   &\min_p\ \|Ap-I_{\mathrm{des}}\|_2^2 \\
+   &0\le p_j\le p_{\max}, \\
+   &\sum_{j=1}^m p_j\le P_{\mathrm{total}}.
    \end{aligned}
    $$
+
+   Ràng buộc theo từng đèn áp dụng cho $j=1,\ldots,m$.
 2. **Chứng nhận tính lồi**:
    - **Hàm mục tiêu**: Khai triển dạng toàn phương:
      $$
-     f_0(p) = \|Ap - I_{\mathrm{des}}\|_2^2 = p^T(A^TA)p - 2(A^T I_{\mathrm{des}})^T p + \|I_{\mathrm{des}}\|_2^2.
+     \begin{aligned}
+     G &= A^TA,\quad h=A^TI_{\mathrm{des}}, \\
+     c &= \|I_{\mathrm{des}}\|_2^2, \\
+     f_0(p) &= \|Ap-I_{\mathrm{des}}\|_2^2 \\
+     &= p^TGp-2h^Tp+c.
+     \end{aligned}
      $$
      Ma trận Hessian là $\nabla^2 f_0(p) = 2A^TA \succeq 0$, do đó hàm mục tiêu là hàm toàn phương lồi.
    - **Miền khả thi**: Là giao của hộp siêu lập phương $[0, p_{\max}]^m$ (giao của $2m$ nửa không gian) và nửa không gian tổng công suất $\{p \mid \mathbf{1}^T p \le P_{\mathrm{total}}\}$. Do giao của các tập lồi là tập lồi, miền khả thi là một đa diện lồi compact (đóng và bị chặn).
@@ -384,15 +464,27 @@ Xét hàm số $f(x) = \log(e^{x_1} + e^{x_2}) + \frac{1}{2}\|x\|_2^2$ xác đ�
 1. **Chứng minh lồi mạnh**: Hàm Softmax Log-Sum-Exp $g(x) = \log(e^{x_1} + e^{x_2})$ có ma trận Hessian nửa xác định dương $\nabla^2 g(x) \succeq 0$ trên toàn không gian $\mathbb{R}^2$. Thành phần điều quy $\frac{1}{2}\|x\|_2^2$ có ma trận Hessian đúng bằng ma trận đơn vị $I$. Do đó, ma trận Hessian của tổng là $\nabla^2 f(x) = \nabla^2 g(x) + I \succeq I$. Điều này chứng minh hàm số $f(x)$ lồi mạnh với tham số $m = 1$.
 2. **Dự đoán và kiểm chứng**: Do vai trò của hai biến $x_1$ và $x_2$ hoàn toàn bình đẳng và hàm số đối xứng qua đường phân giác $x_1 = x_2$, ta dự đoán nghiệm tối ưu thỏa mãn $x_1^* = x_2^* = t$. Khi đó hàm số trở thành hàm một biến:
    $$
-   h(t) = \log(2e^t) + \frac{1}{2}(2t^2) = \log 2 + t + t^2.
+   \begin{aligned}
+   h(t) &= \log(2e^t)+\tfrac12(2t^2) \\
+   &= \log2+t+t^2.
+   \end{aligned}
    $$
-   Đạo hàm $h'(t) = 1 + 2t = 0 \iff t = -0.5$. Ta kiểm chứng lại trên không gian hai chiều: Gradient của hàm số là:
+   Đạo hàm $h'(t)=1+2t=0$ cho $t=-0{,}5$. Ta kiểm chứng lại trên không gian hai chiều: Gradient của hàm số là:
    $$
-   \nabla f(x) = \begin{bmatrix} \frac{e^{x_1}}{e^{x_1} + e^{x_2}} + x_1 \\ \frac{e^{x_2}}{e^{x_1} + e^{x_2}} + x_2 \end{bmatrix} = \operatorname{softmax}(x) + x.
+   \begin{aligned}
+   s_i(x) &= \frac{e^{x_i}}{e^{x_1}+e^{x_2}}, \\
+   \nabla f(x) &= \begin{bmatrix}s_1(x)+x_1\\s_2(x)+x_2\end{bmatrix} \\
+   &=\operatorname{softmax}(x)+x.
+   \end{aligned}
    $$
+
+   Công thức $s_i$ áp dụng cho $i=1,2$.
    Tại điểm $x^* = (-0.5, -0.5)^T$, ta có $\operatorname{softmax}(x^*) = (0.5, 0.5)^T$, do đó:
    $$
-   \nabla f(x^*) = \begin{bmatrix} 0.5 \\ 0.5 \end{bmatrix} + \begin{bmatrix} -0.5 \\ -0.5 \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+   \begin{aligned}
+   \nabla f(x^*)&=\begin{bmatrix}0.5\\0.5\end{bmatrix}+\begin{bmatrix}-0.5\\-0.5\end{bmatrix} \\
+   &=\begin{bmatrix}0\\0\end{bmatrix}.
+   \end{aligned}
    $$
    Điểm dự đoán thỏa mãn chính xác phương trình đạo hàm triệt tiêu. Giá trị nhỏ nhất tương ứng là $f(x^*) = \log 2 - 0.25 \approx 0.4431$.
 3. **Tính duy nhất toàn cục**: Vì $f(x)$ là hàm lồi khả vi trên toàn bộ không gian $\mathbb{R}^2$, điểm có gradient triệt tiêu $\nabla f(x^*) = 0$ tự động là điểm cực tiểu toàn cục. Hơn nữa, do $f(x)$ lồi mạnh nên ma trận Hessian dương xác định khắp nơi ($\nabla^2 f(x) \succ 0$), suy ra hàm số lồi ngặt và điểm cực tiểu toàn cục là duy nhất.

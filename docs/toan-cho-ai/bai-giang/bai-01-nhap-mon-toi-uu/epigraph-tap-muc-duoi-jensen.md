@@ -19,8 +19,9 @@ Nếu $f$ lồi thì mọi tập mức dưới đều lồi, với mọi $\alpha
 
 $$
 \begin{aligned}
-f(\theta x + (1-\theta) y) &\le \theta f(x) + (1-\theta) f(y) \\
-&\le \theta\alpha + (1 - \theta)\alpha = \alpha .
+f(\theta x + (1-\theta) y) &\le \theta f(x) + (1-\theta) f(y)\\
+&\le \theta\alpha + (1 - \theta)\alpha\\
+&= \alpha .
 \end{aligned}
 $$
 
@@ -159,7 +160,11 @@ $$
 và lấy mũ hai vế được bất đẳng thức giữa trung bình nhân và trung bình cộng:
 
 $$
-\left(\prod_{i=1}^n x_i\right)^{1/n} = (x_1 x_2 \dots x_n)^{1/n} \le \frac{x_1 + x_2 + \dots + x_n}{n} = \frac{1}{n}\sum_{i=1}^n x_i.
+\begin{aligned}
+\left(\prod_{i=1}^n x_i\right)^{1/n} &= (x_1 x_2 \dots x_n)^{1/n}\\
+&\le \frac{x_1 + x_2 + \dots + x_n}{n}\\
+&= \frac{1}{n}\sum_{i=1}^n x_i.
+\end{aligned}
 $$
 
 Với biến ngẫu nhiên $X$ phân phối đều trên $\{1, 2, 3, 4\}$, trung bình nhân xấp xỉ $2.213$ trong khi trung bình cộng bằng $2.5$. Với bộ trọng số tùy ý, cùng lập luận trên cho dạng tổng quát có trọng số:
@@ -171,7 +176,10 @@ $$
 **Hölder.** Với các số thực $p, q > 1$ thỏa mãn điều kiện liên hợp $1/p + 1/q = 1$, ta có bất đẳng thức:
 
 $$
-\sum_{i=1}^n |x_i y_i| = |x_1 y_1| + \dots + |x_n y_n| \le \left(\sum_{i=1}^n |x_i|^p\right)^{1/p} \left(\sum_{i=1}^n |y_i|^q\right)^{1/q}.
+\begin{aligned}
+\sum_{i=1}^n |x_i y_i| &= |x_1 y_1| + \dots + |x_n y_n|\\
+&\le \left(\sum_{i=1}^n |x_i|^p\right)^{1/p} \left(\sum_{i=1}^n |y_i|^q\right)^{1/q}.
+\end{aligned}
 $$
 
 Phép chứng minh bất đẳng thức này quy về việc áp dụng AM–GM có trọng số với cách chuẩn hóa khéo léo: Đặt $a_i = |x_i|^p / \sum_{j=1}^n |x_j|^p$, $b_i = |y_i|^q / \sum_{j=1}^n |y_j|^q$, chọn trọng số $\theta = 1/p$, rồi lấy tổng theo chỉ số $i$. Do $1/p + 1/q = 1$, vế phải sau khi lấy tổng bằng đúng 1, và bất đẳng thức Hölder lập tức xuất hiện. Khi $p = q = 2$, ta thu được bất đẳng thức Cauchy–Schwarz quen thuộc. Kiểm tra bằng số với $x = (1, 2, 3)$, $y = (3, 1, 2)$, $p = 3$, $q = 1.5$: Vế trái bằng $11$, vế phải xấp xỉ $3.302 \times 4.335 \approx 14.31$. Với trường hợp $p = q = 2$, vế phải bằng $\sqrt{14} \cdot \sqrt{14} = 14$.

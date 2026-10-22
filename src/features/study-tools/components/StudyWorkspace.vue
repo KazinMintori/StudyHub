@@ -8,6 +8,7 @@ import { useWorkspaceTabs } from '../controllers/useWorkspaceTabs.js'
 import FlashcardDeck from './FlashcardDeck.vue'
 import StudyNotebook from './StudyNotebook.vue'
 import FocusTimer from './FocusTimer.vue'
+import { useActiveTabVisibility } from '../../navigation/controllers/use-active-tab-visibility.mjs'
 
 const props = defineProps({
   courses: {
@@ -21,6 +22,7 @@ const {
   active,
   changeTab
 } = useWorkspaceTabs()
+const tabList = useActiveTabVisibility(active)
 </script>
 
 <template>
@@ -33,7 +35,7 @@ const {
       </div>
       <SpotArt name="tools" tone="hong" />
     </header>
-    <nav class="workspace-tabs" aria-label="Công cụ học tập">
+    <nav ref="tabList" class="workspace-tabs" aria-label="Công cụ học tập">
       <a
         v-for="tab in tabs"
         :key="tab.id"

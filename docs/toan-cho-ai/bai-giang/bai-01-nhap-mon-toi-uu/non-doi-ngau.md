@@ -28,7 +28,10 @@ Mỗi vector $y \in K^*$ tạo với mọi vector thuộc $K$ một góc không 
 Một cách người ta hay dùng trong thực tế để tìm nón đối ngẫu của nón đa diện là kiểm tra trực tiếp trên các vector sinh. Nếu $K = \operatorname{cone}\{v_1, \ldots, v_k\}$ thì $y \in K^*$ khi và chỉ khi $y^T v_i \ge 0$ với mọi chỉ số $i = 1, \dots, k$, bởi vì mọi phần tử của $K$ đều là tổ hợp hình nón (tổ hợp tuyến tính với hệ số không âm) của các $v_i$. Chẳng hạn với $K = \operatorname{cone}\{(2, 1), (1, 3)\}$, ta xác định được:
 
 $$
-K^* = \{y \mid 2y_1 + y_2 \ge 0, \ y_1 + 3y_2 \ge 0\} = \operatorname{cone}\{(-1, 2), \ (3, -1)\}.
+\begin{aligned}
+K^* &= \{y \mid 2y_1 + y_2 \ge 0, \ y_1 + 3y_2 \ge 0\}\\
+&= \operatorname{cone}\{(-1, 2), \ (3, -1)\}.
+\end{aligned}
 $$
 
 Hai vector sinh của $K^*$ trực giao với hai vector sinh biên của $K$: Vector $(-1, 2)$ vuông góc với $(2, 1)$, còn vector $(3, -1)$ vuông góc với $(1, 3)$. Đây là quy tắc hình học mẫu mực trong mặt phẳng: Mỗi tia biên của $K^*$ vuông góc với một tia biên tương ứng của $K$, và hướng vào phía bên trong của $K$.
@@ -134,7 +137,10 @@ Tìm nón đối ngẫu của nón $K = \operatorname{cone}\{(1, 0), (1, 2)\}$ t
 Vector $y \in K^*$ khi và chỉ khi $y^T(1, 0) = y_1 \ge 0$ và $y^T(1, 2) = y_1 + 2y_2 \ge 0$. Từ đó ta xác định:
 
 $$
-K^* = \{y \in \mathbb{R}^2 \mid y_1 \ge 0, \ y_1 + 2y_2 \ge 0\} = \operatorname{cone}\{(0, 1), (2, -1)\}.
+\begin{aligned}
+K^* &= \{y \in \mathbb{R}^2 \mid y_1 \ge 0, \ y_1 + 2y_2 \ge 0\}\\
+&= \operatorname{cone}\{(0, 1), (2, -1)\}.
+\end{aligned}
 $$
 
 Với vector $y = (1, -0.4)$: Ta có $y_1 = 1 \ge 0$ và $y_1 + 2y_2 = 1 - 0.8 = 0.2 \ge 0$, do đó $y \in K^*$.

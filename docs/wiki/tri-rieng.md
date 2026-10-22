@@ -21,7 +21,9 @@ Trị riêng có thể là số phức với ma trận thực. Ma trận đối 
 
 Với
 
-$$A=\begin{bmatrix}2&0\\0&3\end{bmatrix},$$
+$$
+A=\begin{bmatrix}2&0\\0&3\end{bmatrix},
+$$
 
 vector $(1,0)^T$ có trị riêng 2, còn vector $(0,1)^T$ có trị riêng 3.
 

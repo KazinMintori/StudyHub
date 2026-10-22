@@ -4,7 +4,13 @@ const dialog = ref(null), svg = ref(''), image = ref(''), scale = ref(1)
 let observer, previousFocus
 async function open(node) {
   previousFocus = document.activeElement
-  svg.value = node.tagName.toLowerCase() === 'svg' ? node.outerHTML : ''
+  if (node.tagName.toLowerCase() === 'svg') {
+    const clone = node.cloneNode(true)
+    clone.removeAttribute('tabindex')
+    if (clone.getAttribute('role') === 'button') clone.setAttribute('role', 'img')
+    clone.setAttribute('aria-label', 'Sơ đồ được phóng to')
+    svg.value = clone.outerHTML
+  } else svg.value = ''
   image.value = svg.value ? '' : node.src
   scale.value = 1
   await nextTick(); dialog.value.showModal(); document.body.style.overflow = 'hidden'
@@ -23,6 +29,21 @@ function attach() {
     img.dataset.zoomBound = 'true'; img.style.cursor = 'zoom-in'; img.tabIndex = 0; img.setAttribute('role', 'button'); img.setAttribute('aria-label', `Phóng to: ${img.alt || 'ảnh tài liệu'}`)
     img.onclick = () => open(img)
     img.onkeydown = event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(img) } }
+  }
+  // Static inline figures share the image viewer; interactive Labs and math keep their own controls.
+  for (const figure of document.querySelectorAll('.vp-doc .studyhub-figure > svg:not(.no-zoom)')) {
+    if (figure.dataset.zoomBound) continue
+    figure.dataset.zoomBound = 'true'
+    figure.setAttribute('tabindex', '0')
+    figure.setAttribute('role', 'button')
+    figure.setAttribute('aria-label', 'Phóng to sơ đồ')
+    figure.style.cursor = 'zoom-in'
+    figure.onclick = () => open(figure)
+    figure.onkeydown = event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(figure) } }
+    const button = document.createElement('button')
+    button.type = 'button'; button.className = 'study-button figure-zoom-btn'; button.textContent = 'Phóng to sơ đồ'
+    button.onclick = () => open(figure)
+    figure.insertAdjacentElement('afterend', button)
   }
 }
 onMounted(() => { attach(); observer = new MutationObserver(attach); observer.observe(document.querySelector('.VPContent') || document.body, { childList: true, subtree: true }) })
@@ -44,5 +65,7 @@ onUnmounted(() => { observer?.disconnect(); document.body.style.overflow = '' })
 .diagram-media { margin: auto; }
 .diagram-media svg { width: 100% !important; height: auto !important; max-width: none !important; }
 .diagram-media img { width: 100%; height: auto; }
+.studyhub-figure .figure-zoom-btn { margin: var(--space-3) auto; }
+@media print { .figure-zoom-btn { display: none !important; } }
 @media (max-width: 600px) { .diagram-toolbar > span { display: none; }.diagram-dialog { padding: 12px; }.diagram-toolbar .study-button { padding: 7px 10px; font-size: var(--fs-small); } }
 </style>

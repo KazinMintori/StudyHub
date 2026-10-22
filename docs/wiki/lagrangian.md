@@ -16,12 +16,25 @@ Lagrangian cộng mục tiêu với các ràng buộc đã nhân bởi các nhâ
 **Vai trò của quy ước dấu.** Với bài cực tiểu $f_0(x)$ có $m$ bất đẳng thức $f_i(x)\le0$ và $p$ đẳng thức $h_j(x)=0$, mỗi ràng buộc góp một số hạng vào Lagrangian:
 
 $$
-L(x,\lambda,\nu) = f_0(x) + \lambda_1 f_1(x) + \cdots + \lambda_m f_m(x) + \nu_1 h_1(x) + \cdots + \nu_p h_p(x).
+u_i=\lambda_i f_i(x),\quad v_j=\nu_j h_j(x).
 $$
 
-Viết gọn:
+Nhóm các đóng góp của bất đẳng thức vào $U$ và của đẳng thức vào $V$:
 
-$$L=f_0+\sum_{i=1}^m\lambda_i f_i+\sum_{j=1}^p\nu_j h_j.$$
+$$
+\begin{aligned}
+U&=u_1+u_2+\cdots+u_m\\
+&=\sum_{i=1}^m\lambda_i f_i(x),\\
+V&=v_1+v_2+\cdots+v_p\\
+&=\sum_{j=1}^p\nu_j h_j(x).
+\end{aligned}
+$$
+
+Lagrangian cộng mục tiêu với hai nhóm này:
+
+$$
+L(x,\lambda,\nu)=f_0(x)+U+V.
+$$
 
 $i$ chạy qua các bất đẳng thức, $j$ chạy qua các đẳng thức. Tổng của nhóm rỗng bằng 0. Các nhân tử $\lambda_i\ge0$, còn $\nu_j\in\mathbb R$. Tại điểm khả thi, $L\le f_0$. Nếu viết bất đẳng thức theo chiều ngược, quy ước dấu của nhân tử cũng phải đổi.
 

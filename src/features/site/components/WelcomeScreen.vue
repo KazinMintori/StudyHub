@@ -7,6 +7,7 @@ const route = useRoute()
 
 const dialog = ref(null)
 const startButton = ref(null)
+const welcomeHeading = ref(null)
 const storageKey = 'studyhub_welcome_seen'
 let previousFocus
 let previousOverflow
@@ -33,6 +34,8 @@ function show() {
   previousFocus = document.activeElement
   previousOverflow = document.documentElement.style.overflow
   dialog.value.showModal()
+  welcomeHeading.value?.focus({ preventScroll: true })
+  dialog.value.scrollTop = 0
   document.documentElement.style.overflow = 'hidden'
 }
 
@@ -98,14 +101,14 @@ defineExpose({ show })
       <div class="welcome-content">
         <img :src="withBase('/uet-polytechnic.png')" alt="UET Education — UET Polytechnic" class="welcome-logo" width="2109" height="746" fetchpriority="high" />
         <p class="welcome-eyebrow">Không gian tự học dành cho sinh viên UET</p>
-        <h2 id="welcome-title">Chào mừng đến với UETệ</h2>
+        <h2 id="welcome-title" ref="welcomeHeading" tabindex="-1">Chào mừng đến với UETệ</h2>
         <p id="welcome-description" class="welcome-description">Tìm bài giảng theo học phần, hiểu lại những kiến thức nền và ôn tập theo nhịp học của bạn.</p>
         <dl class="welcome-features">
           <div><dt>Bài giảng</dt><dd>Đọc Notes, ôn nhanh với Slides và luyện tập qua các bài có lời giải.</dd></div>
           <div><dt>Wiki kiến thức</dt><dd>Tra cứu thuật ngữ và bổ sung kiến thức nền ngay khi cần.</dd></div>
           <div><dt>Góc học tập</dt><dd>Ôn bằng flashcard, lưu ghi chú và hẹn giờ tập trung.</dd></div>
         </dl>
-        <button ref="startButton" class="study-button primary welcome-start" autofocus @click="dismiss">Bắt đầu học <span aria-hidden="true">→</span></button>
+        <button ref="startButton" class="study-button primary welcome-start" @click="dismiss">Bắt đầu học <span aria-hidden="true">→</span></button>
         <p class="welcome-hint">Bạn có thể xem lại phần giới thiệu ở cuối trang.</p>
       </div>
     </dialog>

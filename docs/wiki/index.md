@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Wiki thuật ngữ
+title: Wiki học tập
 ---
 
 <WikiIndex />

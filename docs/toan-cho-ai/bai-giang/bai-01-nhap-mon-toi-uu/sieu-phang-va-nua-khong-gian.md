@@ -42,7 +42,11 @@ Xét phương trình đường thẳng $3x_1 + 4x_2 = 10$ trong mặt phẳng $\
 Độ dài chuẩn Euclid của vector pháp tuyến là:
 
 $$
-\|a\|_2 = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = 5
+\begin{aligned}
+\|a\|_2 &= \sqrt{3^2 + 4^2}\\
+&= \sqrt{9 + 16}\\
+&= 5
+\end{aligned}
 $$
 
 Khoảng cách từ gốc tọa độ $O = (0, 0)$ tới đường thẳng là:
@@ -54,7 +58,12 @@ $$
 Điểm $x_0$ nằm trên đường thẳng và gần gốc tọa độ nhất chính là hình chiếu vuông góc của gốc tọa độ lên đường thẳng:
 
 $$
-x_0 = \frac{b}{\|a\|_2^2}\, a = \frac{10}{25} (3, 4) = \frac{2}{5} (3, 4) = (1.2,\ 1.6)
+\begin{aligned}
+x_0 &= \frac{b}{\|a\|_2^2}\, a\\
+&= \frac{10}{25} (3, 4)\\
+&= \frac{2}{5} (3, 4)\\
+&= (1.2,\ 1.6)
+\end{aligned}
 $$
 
 Thử lại phương trình đường thẳng: $3(1.2) + 4(1.6) = 3.6 + 6.4 = 10$, hoàn toàn chính xác. Khoảng cách từ gốc tọa độ tới điểm $x_0$ là $\sqrt{1.2^2 + 1.6^2} = \sqrt{1.44 + 2.56} = 2$.
@@ -69,7 +78,11 @@ Góc nhìn thứ hai làm sáng tỏ cấu trúc affine của siêu phẳng bằ
 Lấy một điểm tùy ý $x_0$ thuộc siêu phẳng $H$, nghĩa là thỏa mãn $a^T x_0 = b$. Khi đó, với mọi điểm $x \in \mathbb{R}^n$, ta có chuỗi biến đổi tương đương:
 
 $$
-a^T x = b \iff a^T x = a^T x_0 \iff a^T(x - x_0) = 0
+\begin{aligned}
+a^T x &= b\\
+&\iff a^T x = a^T x_0\\
+&\iff a^T(x - x_0) = 0
+\end{aligned}
 $$
 
 Đẳng thức cuối cùng phát biểu rằng: Vector hiệu $x - x_0$, nối từ điểm mốc $x_0$ tới điểm $x$, phải vuông góc với vector pháp tuyến $a$.
@@ -83,7 +96,10 @@ $$
 Vì $a \ne 0$, tập hợp $a^\perp$ là một không gian con vector của $\mathbb{R}^n$ có số chiều đúng bằng $n - 1$. Từ đó ta thu được biểu diễn hình học tương đương của siêu phẳng:
 
 $$
-\{x \in \mathbb{R}^n \mid a^T x = b\} = x_0 + a^\perp = \{x_0 + v \mid v \in a^\perp\}
+\begin{aligned}
+\{x \in \mathbb{R}^n \mid a^T x = b\} &= x_0 + a^\perp\\
+&= \{x_0 + v \mid v \in a^\perp\}
+\end{aligned}
 $$
 
 Biểu diễn này khẳng định cấu trúc chuẩn tắc của một tập affine: Siêu phẳng chính là không gian con vector $a^\perp$ có số chiều $n - 1$ được tịnh tiến đi một đoạn bằng vector $x_0$. Dù ta chọn điểm mốc $x_0$ nào trên siêu phẳng, không gian con dẫn xuất $a^\perp$ vẫn hoàn toàn duy nhất.
@@ -118,7 +134,11 @@ Tại sao vector $a$ được gọi là **pháp tuyến hướng ra ngoài** (ou
 Hãy quan sát chiều biến thiên của hàm tuyến tính $f(x) = a^T x$. Bắt đầu từ một điểm $x$ nằm trên biên của nửa không gian (tức $a^T x = b$), nếu ta di chuyển theo phương vector $a$ một đoạn có độ dài $t > 0$, điểm mới là $x + t a$. Giá trị của hàm số tại điểm mới trở thành:
 
 $$
-a^T(x + t a) = a^T x + t a^T a = b + t \|a\|_2^2 > b
+\begin{aligned}
+a^T(x + t a) &= a^T x + t a^T a\\
+&= b + t \|a\|_2^2\\
+&> b
+\end{aligned}
 $$
 
 Bởi vì $\|a\|_2^2 > 0$, giá trị tăng ngặt và điểm mới lập tức vi phạm điều kiện $a^T x \le b$, nghĩa là rơi ra ngoài nửa không gian. Ngược lại, nếu di chuyển theo hướng đối nghịch $-a$, giá trị giảm xuống $b - t \|a\|_2^2 < b$, điểm lặn sâu hơn vào miền trong của nửa không gian. Như vậy, vector $a$ luôn chỉ thẳng từ miền trong ra miền ngoài, do đó mang tên gọi pháp tuyến hướng ra ngoài.
@@ -156,7 +176,11 @@ $$
 Nhân vô hướng hai vế với vector đơn vị pháp tuyến $\tfrac{a}{\|a\|_2}$:
 
 $$
-\frac{a^T(x - x_0)}{\|a\|_2} = \frac{a^T v_\parallel}{\|a\|_2} + \lambda \frac{a^T a}{\|a\|_2^2} = 0 + \lambda = \lambda
+\begin{aligned}
+\frac{a^T(x - x_0)}{\|a\|_2} &= \frac{a^T v_\parallel}{\|a\|_2} + \lambda \frac{a^T a}{\|a\|_2^2}\\
+&= 0 + \lambda\\
+&= \lambda
+\end{aligned}
 $$
 
 Do $a^T x_0 = b$, hệ số độ dài $\lambda$ chính là:
@@ -192,7 +216,10 @@ Xét lại siêu phẳng $3x_1 + 4x_2 = 10$ với $a = (3, 4)$, $b = 10$, $\|a\|
 Cho hai siêu phẳng song song có cùng vector pháp tuyến $a$:
 
 $$
-H_1 = \{x \mid a^T x = b_1\} , \quad H_2 = \{x \mid a^T x = b_2\}
+\begin{aligned}
+&H_1 = \{x \mid a^T x = b_1\} , \quad\\
+&H_2 = \{x \mid a^T x = b_2\}
+\end{aligned}
 $$
 
 Lấy một điểm $x_1 \in H_1$, khoảng cách có dấu từ $x_1$ tới $H_2$ là $\tfrac{a^T x_1 - b_2}{\|a\|_2} = \tfrac{b_1 - b_2}{\|a\|_2}$. Từ đó suy ra khoảng cách hình học giữa hai siêu phẳng song song là:
@@ -252,7 +279,12 @@ Ta chứng minh mệnh đề theo hai chiều suy luận chặt chẽ:
 **Chiều thuận ($\Leftarrow$):** Giả sử tồn tại $\lambda > 0$ thỏa mãn $\tilde{a} = \lambda a$ và $\tilde{b} \ge \lambda b$. Với mọi điểm $x$ thuộc nửa không gian thứ nhất, ta có $a^T x \le b$. Nhân hai vế với số dương $\lambda > 0$, chiều bất đẳng thức được giữ nguyên:
 
 $$
-\lambda (a^T x) \le \lambda b \implies (\lambda a)^T x \le \lambda b \implies \tilde{a}^T x \le \lambda b \le \tilde{b}
+\begin{aligned}
+\lambda (a^T x) &\le \lambda b\\
+&\implies (\lambda a)^T x \le \lambda b\\
+&\implies \tilde{a}^T x \le \lambda b\\
+&\le \tilde{b}
+\end{aligned}
 $$
 
 Như vậy $\tilde{a}^T x \le \tilde{b}$, chứng tỏ $x$ thuộc nửa không gian thứ hai.
@@ -270,11 +302,19 @@ Như vậy $\tilde{a}^T x \le \tilde{b}$, chứng tỏ $x$ thuộc nửa không 
    Vì $\tilde{a}^T d > 0$, khi cho $t \to +\infty$, giá trị $\tilde{a}^T x_t$ tăng vô hạn và sẽ vượt quá ngưỡng $\tilde{b}$. Điều này dẫn tới tồn tại điểm thuộc nửa không gian thứ nhất nhưng không thuộc nửa không gian thứ hai, mâu thuẫn với giả thiết bao hàm. Do đó bắt buộc phải có $\tilde{a} = \lambda a$ với một số thực $\lambda \ne 0$.
 2. **Hệ số $\lambda$ phải mang dấu dương ($\lambda > 0$)**: Giả sử $\lambda < 0$. Chọn một điểm $x_0$ trên biên và xét đường đi $x_t = x_0 - t a$ với $t \ge 0$. Ta có:
    $$
-   a^T x_t = a^T x_0 - t \|a\|_2^2 = b - t \|a\|_2^2 \le b
+   \begin{aligned}
+   a^T x_t &= a^T x_0 - t \|a\|_2^2\\
+   &= b - t \|a\|_2^2\\
+   &\le b
+   \end{aligned}
    $$
    nghĩa là $x_t$ luôn thuộc nửa không gian thứ nhất. Thế nhưng giá trị ở nửa không gian thứ hai là:
    $$
-   \tilde{a}^T x_t = \lambda a^T x_t = \lambda (b - t \|a\|_2^2) = \lambda b + t (-\lambda) \|a\|_2^2
+   \begin{aligned}
+   \tilde{a}^T x_t &= \lambda a^T x_t\\
+   &= \lambda (b - t \|a\|_2^2)\\
+   &= \lambda b + t (-\lambda) \|a\|_2^2
+   \end{aligned}
    $$
    Vì $\lambda < 0$, đại lượng $-\lambda > 0$, do đó khi $t \to +\infty$ thì biểu thức này tiến tới $+\infty$, vượt qua ngưỡng $\tilde{b}$. Mâu thuẫn này khẳng định $\lambda > 0$.
 3. **Ngưỡng biên phải thỏa mãn $\tilde{b} \ge \lambda b$**: Vì $\tilde{a} = \lambda a$ với $\lambda > 0$, giá trị lớn nhất của hàm mục tiêu $\tilde{a}^T x = \lambda a^T x$ trên nửa không gian $\{x \mid a^T x \le b\}$ đạt được chính xác tại biên $a^T x = b$, với giá trị cực đại bằng $\lambda b$. Để mọi điểm trong miền này thỏa mãn $\tilde{a}^T x \le \tilde{b}$, giá trị cực đại đó bắt buộc phải không vượt quá $\tilde{b}$, nghĩa là $\lambda b \le \tilde{b}$.
@@ -283,7 +323,10 @@ Như vậy $\tilde{a}^T x \le \tilde{b}$, chứng tỏ $x$ thuộc nửa không 
 Xét hai nửa không gian trong $\mathbb{R}^2$:
 
 $$
-H_1 = \{x \in \mathbb{R}^2 \mid 2x_1 + 3x_2 \le 6\} , \quad H_2 = \{x \in \mathbb{R}^2 \mid 4x_1 + 6x_2 \le 15\}
+\begin{aligned}
+&H_1 = \{x \in \mathbb{R}^2 \mid 2x_1 + 3x_2 \le 6\} , \quad\\
+&H_2 = \{x \in \mathbb{R}^2 \mid 4x_1 + 6x_2 \le 15\}
+\end{aligned}
 $$
 
 Ở đây ta có $a = (2, 3)$, $b = 6$ và $\tilde{a} = (4, 6)$, $\tilde{b} = 15$.
@@ -297,7 +340,11 @@ $$
 Cả hai điều kiện đều được thỏa mãn, do đó $H_1 \subseteq H_2$. Biên của $H_2$ là đường thẳng song song với biên của $H_1$ nhưng bị tịnh tiến lùi xa ra phía ngoài một khoảng hình học:
 
 $$
-\frac{\tilde{b} - \lambda b}{\|\tilde{a}\|_2} = \frac{15 - 12}{\sqrt{4^2 + 6^2}} = \frac{3}{\sqrt{52}} \approx 0.416
+\begin{aligned}
+\frac{\tilde{b} - \lambda b}{\|\tilde{a}\|_2} &= \frac{15 - 12}{\sqrt{4^2 + 6^2}}\\
+&= \frac{3}{\sqrt{52}}\\
+&\approx 0.416
+\end{aligned}
 $$
 :::
 
@@ -354,7 +401,12 @@ $$
 Biên của nửa không gian này là siêu phẳng $(q - p)^T z = \tfrac{\|q\|_2^2 - \|p\|_2^2}{2}$. Ta kiểm tra xem trung điểm $m = \tfrac{p + q}{2}$ của đoạn thẳng nối $p$ và $q$ có thuộc siêu phẳng này không:
 
 $$
-(q - p)^T m = (q - p)^T \left( \frac{p + q}{2} \right) = \frac{(q - p)^T (q + p)}{2} = \frac{q^T q - p^T p}{2} = \frac{\|q\|_2^2 - \|p\|_2^2}{2}
+\begin{aligned}
+(q - p)^T m &= (q - p)^T \left( \frac{p + q}{2} \right)\\
+&= \frac{(q - p)^T (q + p)}{2}\\
+&= \frac{q^T q - p^T p}{2}\\
+&= \frac{\|q\|_2^2 - \|p\|_2^2}{2}
+\end{aligned}
 $$
 
 Như vậy siêu phẳng biên chính là **siêu phẳng trung trực** của đoạn thẳng $pq$: Đi qua trung điểm $m$ và vuông góc với đoạn nối hai điểm.
@@ -379,11 +431,19 @@ Thử một điểm kiểm tra $z = (2, 1)$:
 - Giá trị vế trái: $2 + 1 = 3 \le 7$, thỏa mãn bất đẳng thức.
 - Khoảng cách tới $p$:
   $$
-  \|z - p\|_2 = \sqrt{(2-1)^2 + (1-2)^2} = \sqrt{2} \approx 1.414
+  \begin{aligned}
+  \|z - p\|_2 &= \sqrt{(2-1)^2 + (1-2)^2}\\
+  &= \sqrt{2}\\
+  &\approx 1.414
+  \end{aligned}
   $$
 - Khoảng cách tới $q$:
   $$
-  \|z - q\|_2 = \sqrt{(2-5)^2 + (1-6)^2} = \sqrt{34} \approx 5.831
+  \begin{aligned}
+  \|z - q\|_2 &= \sqrt{(2-5)^2 + (1-6)^2}\\
+  &= \sqrt{34}\\
+  &\approx 5.831
+  \end{aligned}
   $$
 - So sánh: $\sqrt{2} < \sqrt{34}$, điểm $z$ quả thật nằm gần $p$ hơn $q$.
 :::
@@ -496,7 +556,12 @@ Hãy tìm:
 ::: solution
 1. Vector pháp tuyến là $a = (1, -2, 2)$. Độ dài chuẩn Euclid:
    $$
-   \|a\|_2 = \sqrt{1^2 + (-2)^2 + 2^2} = \sqrt{1 + 4 + 4} = \sqrt{9} = 3
+   \begin{aligned}
+   \|a\|_2 &= \sqrt{1^2 + (-2)^2 + 2^2}\\
+   &= \sqrt{1 + 4 + 4}\\
+   &= \sqrt{9}\\
+   &= 3
+   \end{aligned}
    $$
    Vector pháp tuyến đơn vị là:
    $$
@@ -508,7 +573,12 @@ Hãy tìm:
    $$
 3. Điểm gần gốc tọa độ nhất trên siêu phẳng là hình chiếu của gốc tọa độ:
    $$
-   x_0 = \frac{b}{\|a\|_2^2}\, a = \frac{6}{9} (1, -2, 2) = \frac{2}{3} (1, -2, 2) = \left(\frac{2}{3},\ -\frac{4}{3},\ \frac{4}{3}\right)
+   \begin{aligned}
+   x_0 &= \frac{b}{\|a\|_2^2}\, a\\
+   &= \frac{6}{9} (1, -2, 2)\\
+   &= \frac{2}{3} (1, -2, 2)\\
+   &= \left(\frac{2}{3},\ -\frac{4}{3},\ \frac{4}{3}\right)
+   \end{aligned}
    $$
    Kiểm tra phương trình: $\tfrac{2}{3} - 2(-\tfrac{4}{3}) + 2(\tfrac{4}{3}) = \tfrac{2 + 8 + 8}{3} = \tfrac{18}{3} = 6$.
 4. Với điểm $P = (1, 1, 1)$, ta tính giá trị tích vô hướng:
@@ -526,7 +596,10 @@ Hãy tìm:
 Tính khoảng cách hình học giữa hai siêu phẳng song song trong $\mathbb{R}^3$:
 
 $$
-H_1: 2x_1 + x_2 - 2x_3 = 4 , \quad H_2: -4x_1 - 2x_2 + 4x_3 = 10
+\begin{aligned}
+&H_1: 2x_1 + x_2 - 2x_3 = 4 , \quad\\
+&H_2: -4x_1 - 2x_2 + 4x_3 = 10
+\end{aligned}
 $$
 :::
 
@@ -546,13 +619,23 @@ Bây giờ hai siêu phẳng đã có cùng vector pháp tuyến $a = (2, 1, -2)
 Tính độ dài chuẩn của vector pháp tuyến:
 
 $$
-\|a\|_2 = \sqrt{2^2 + 1^2 + (-2)^2} = \sqrt{4 + 1 + 4} = \sqrt{9} = 3
+\begin{aligned}
+\|a\|_2 &= \sqrt{2^2 + 1^2 + (-2)^2}\\
+&= \sqrt{4 + 1 + 4}\\
+&= \sqrt{9}\\
+&= 3
+\end{aligned}
 $$
 
 Khoảng cách giữa hai siêu phẳng song song là:
 
 $$
-\operatorname{dist}(H_1, H_2) = \frac{|b_1 - b_2|}{\|a\|_2} = \frac{|4 - (-5)|}{3} = \frac{9}{3} = 3
+\begin{aligned}
+\operatorname{dist}(H_1, H_2) &= \frac{|b_1 - b_2|}{\|a\|_2}\\
+&= \frac{|4 - (-5)|}{3}\\
+&= \frac{9}{3}\\
+&= 3
+\end{aligned}
 $$
 :::
 
@@ -569,7 +652,11 @@ Trong mặt phẳng $\mathbb{R}^2$, cho ba điểm: $x_0 = (0, 0)$, $x_1 = (2, 0
    $$
    Với $x_1 - x_0 = (2, 0)$, $\|x_1\|_2^2 = 4$, $\|x_0\|_2^2 = 0$, ta có:
    $$
-   2z_1 + 0z_2 \le \frac{4 - 0}{2} = 2 \iff z_1 \le 1
+   \begin{aligned}
+   2z_1 + 0z_2 &\le \frac{4 - 0}{2}\\
+   &= 2\\
+   &\iff z_1 \le 1
+   \end{aligned}
    $$
 2. **Điều kiện gần $x_0$ hơn $x_2$**:
    $$
@@ -577,7 +664,11 @@ Trong mặt phẳng $\mathbb{R}^2$, cho ba điểm: $x_0 = (0, 0)$, $x_1 = (2, 0
    $$
    Với $x_2 - x_0 = (0, 2)$, $\|x_2\|_2^2 = 4$, $\|x_0\|_2^2 = 0$, ta có:
    $$
-   0z_1 + 2z_2 \le \frac{4 - 0}{2} = 2 \iff z_2 \le 1
+   \begin{aligned}
+   0z_1 + 2z_2 &\le \frac{4 - 0}{2}\\
+   &= 2\\
+   &\iff z_2 \le 1
+   \end{aligned}
    $$
 
 Kết hợp hai điều kiện, ô Voronoi $V(x_0)$ là tập hợp:

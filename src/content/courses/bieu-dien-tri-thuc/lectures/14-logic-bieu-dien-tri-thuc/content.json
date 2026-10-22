@@ -12,7 +12,13 @@
     "tap-hop"
   ],
   "fragments": [],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/bieu-dien-tri-thuc/bai-giang/14-logic-bieu-dien-tri-thuc.md",
+      "line": 159,
+      "title": "Ví dụ hợp nhất hóa"
+    }
+  ],
   "exercises": [],
   "solutions": [],
   "assets": []

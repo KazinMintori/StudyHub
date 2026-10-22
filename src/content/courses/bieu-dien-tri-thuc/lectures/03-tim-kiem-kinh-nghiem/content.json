@@ -13,7 +13,13 @@
     "do-phuc-tap"
   ],
   "fragments": [],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem.md",
+      "line": 254,
+      "title": "Ví dụ kinh điển: Trò chơi 8-Puzzle (Xếp số 8 ô)"
+    }
+  ],
   "exercises": [],
   "solutions": [],
   "assets": []

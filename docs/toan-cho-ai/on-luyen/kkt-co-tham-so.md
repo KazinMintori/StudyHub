@@ -36,12 +36,13 @@ Hệ KKT gồm
 
 $$
 \begin{aligned}
-x_1-\mu_1+\lambda &= 0, \\
-x_2-\mu_2+\lambda &= 0, \\
-1+x_3-\mu_3+\lambda &= 0, \\
-\mu_1x_1 &= \mu_2x_2=\mu_3x_3 = 0, \\
-x_1+x_2+x_3 &= r, \\
-x_i &\ge 0,\quad\mu_i \ge 0.
+&x_1-\mu_1+\lambda = 0,\\
+&x_2-\mu_2+\lambda = 0,\\
+&1+x_3-\mu_3+\lambda = 0,\\
+&\mu_1x_1 = \mu_2x_2=\mu_3x_3 = 0,\\
+&x_1+x_2+x_3 = r,\\
+&x_i \ge 0,\quad\\
+&\mu_i \ge 0.
 \end{aligned}
 $$
 

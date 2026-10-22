@@ -26,7 +26,10 @@ trong đó $w$ là nhiễu đo lường ngẫu nhiên độc lập có phân ph�
 Giả sử ta thực hiện phép thử thứ $i$ đúng $m_i$ lần ($m_i \in \{0, 1, 2, \dots\}$), với tổng ngân sách đo lường cố định là $m$:
 
 $$
-\sum_{i=1}^p m_i = m_1 + m_2 + \dots + m_p = m.
+\begin{aligned}
+\sum_{i=1}^p m_i &= m_1 + m_2 + \dots + m_p\\
+&= m.
+\end{aligned}
 $$
 
 Sau khi hoàn tất toàn bộ $m$ phép đo, ước lượng bình phương tối thiểu (cũng là ước lượng hợp lý cực đại - MLE) của vector tham số $x$ có ma trận hiệp phương sai sai số là:
@@ -38,7 +41,10 @@ $$
 Đại lượng trung tâm quyết định độ chuẩn xác của ước lượng chính là **Ma trận thông tin Fisher (Fisher Information Matrix)**:
 
 $$
-M = \sum_{i=1}^p m_i v_i v_i^T = m_1 v_1 v_1^T + m_2 v_2 v_2^T + \dots + m_p v_p v_p^T.
+\begin{aligned}
+M &= \sum_{i=1}^p m_i v_i v_i^T\\
+&= m_1 v_1 v_1^T + m_2 v_2 v_2^T + \dots + m_p v_p v_p^T.
+\end{aligned}
 $$
 
 Ma trận $M \in \mathbb{S}_+^n$ là một ma trận đối xứng nửa xác định dương. Để vector tham số $x$ có thể ước lượng được (hệ xác định duy nhất), ma trận $M$ bắt buộc phải khả nghịch, tức là đối xứng xác định dương $M \succ 0$. Khi đó, ellipsoid tin cậy của sai số ước lượng $\hat{x} - x$ tại mức ý nghĩa thống kê tỷ lệ thuận với ma trận nghịch đảo:
@@ -68,7 +74,10 @@ $$
 Ma trận thông tin Fisher chuẩn hóa trở thành một hàm affine theo vector phân bổ $\lambda$:
 
 $$
-M(\lambda) = \sum_{i=1}^p \lambda_i v_i v_i^T = \lambda_1 v_1 v_1^T + \lambda_2 v_2 v_2^T + \dots + \lambda_p v_p v_p^T.
+\begin{aligned}
+M(\lambda) &= \sum_{i=1}^p \lambda_i v_i v_i^T\\
+&= \lambda_1 v_1 v_1^T + \lambda_2 v_2 v_2^T + \dots + \lambda_p v_p v_p^T.
+\end{aligned}
 $$
 
 Vì $M(\lambda)$ là tổ hợp lồi của các ma trận hạng một $v_i v_i^T \succeq 0$, ánh xạ $\lambda \mapsto M(\lambda)$ là ánh xạ affine, bảo toàn trọn vẹn tính lồi của các hàm tiêu chuẩn tiếp theo.
@@ -168,7 +177,11 @@ Sau khi tìm được nghiệm liên tục tối ưu $\lambda^*$, ta cần khôi
 Xét bài toán ước lượng vector tham số hai chiều $x \in \mathbb{R}^2$ ($n = 2$) với ngân sách đo lường $m = 100$. Ta có $p = 3$ phép thử ứng viên:
 
 $$
-v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \qquad v_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \qquad v_3 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+\begin{aligned}
+&v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \qquad\\
+&v_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \qquad\\
+&v_3 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+\end{aligned}
 $$
 
 Ta phân bổ tỷ lệ đo $\lambda = (\lambda_1, \lambda_2, \lambda_3)$ với $\lambda_1 + \lambda_2 + \lambda_3 = 1$ và $\lambda_i \ge 0$.
@@ -176,7 +189,11 @@ Ta phân bổ tỷ lệ đo $\lambda = (\lambda_1, \lambda_2, \lambda_3)$ với 
 Các ma trận hạng một tương ứng:
 
 $$
-v_1 v_1^T = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \qquad v_2 v_2^T = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}, \qquad v_3 v_3^T = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}.
+\begin{aligned}
+&v_1 v_1^T = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \qquad\\
+&v_2 v_2^T = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}, \qquad\\
+&v_3 v_3^T = \begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}.
+\end{aligned}
 $$
 
 Ma trận thông tin Fisher:
@@ -188,7 +205,10 @@ $$
 Định thức của ma trận:
 
 $$
-\det M(\lambda) = (\lambda_1 + \lambda_3)(\lambda_2 + \lambda_3) - \lambda_3^2 = \lambda_1 \lambda_2 + \lambda_1 \lambda_3 + \lambda_2 \lambda_3.
+\begin{aligned}
+\det M(\lambda) &= (\lambda_1 + \lambda_3)(\lambda_2 + \lambda_3) - \lambda_3^2\\
+&= \lambda_1 \lambda_2 + \lambda_1 \lambda_3 + \lambda_2 \lambda_3.
+\end{aligned}
 $$
 
 Để áp dụng tiêu chuẩn $D$-optimal, ta cực đại hóa định thức này với điều kiện $\lambda_1 + \lambda_2 + \lambda_3 = 1$:
@@ -196,7 +216,10 @@ $$
 Theo bất đẳng thức đại số quen thuộc:
 
 $$
-\lambda_1 \lambda_2 + \lambda_1 \lambda_3 + \lambda_2 \lambda_3 \le \frac{1}{3} (\lambda_1 + \lambda_2 + \lambda_3)^2 = \frac{1}{3}.
+\begin{aligned}
+\lambda_1 \lambda_2 + \lambda_1 \lambda_3 + \lambda_2 \lambda_3 &\le \frac{1}{3} (\lambda_1 + \lambda_2 + \lambda_3)^2\\
+&= \frac{1}{3}.
+\end{aligned}
 $$
 
 Dấu bằng đạt được khi và chỉ khi:
@@ -213,7 +236,12 @@ Nghiệm $D$-optimal khuyến nghị phân bổ đồng đều ngân sách cho c
 Một trạm quan trắc cần ước lượng vị trí nguồn phát tín hiệu $x \in \mathbb{R}^2$. Trạm có thể kích hoạt 4 cảm biến đặt tại các góc đo:
 
 $$
-v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad v_2 = \begin{bmatrix} -1 \\ 0 \end{bmatrix}, \quad v_3 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad v_4 = \begin{bmatrix} 0 \\ -1 \end{bmatrix}.
+\begin{aligned}
+&v_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad\\
+&v_2 = \begin{bmatrix} -1 \\ 0 \end{bmatrix}, \quad\\
+&v_3 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad\\
+&v_4 = \begin{bmatrix} 0 \\ -1 \end{bmatrix}.
+\end{aligned}
 $$
 
 1. Chứng minh rằng $v_1 v_1^T = v_2 v_2^T$ và $v_3 v_3^T = v_4 v_4^T$.
@@ -224,7 +252,16 @@ $$
 ::: solution
 1. **Tính các ma trận hạng một**:
    $$
-   v_1 v_1^T = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \qquad v_2 v_2^T = \begin{bmatrix} -1 \\ 0 \end{bmatrix} \begin{bmatrix} -1 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}.
+   \begin{aligned}
+   &\begin{aligned}
+   v_1 v_1^T &= \begin{bmatrix} 1 \\ 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \end{bmatrix}\\
+   &= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \qquad
+   \end{aligned}\\
+   &\begin{aligned}
+   v_2 v_2^T &= \begin{bmatrix} -1 \\ 0 \end{bmatrix} \begin{bmatrix} -1 & 0 \end{bmatrix}\\
+   &= \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}.
+   \end{aligned}
+   \end{aligned}
    $$
    Tương tự:
    $$

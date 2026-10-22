@@ -32,7 +32,10 @@ $$
 Nếu $x_0$ là một nghiệm riêng bất kỳ, thì toàn bộ tập nghiệm có dạng:
 
 $$
-\mathcal{S} = x_0 + \ker(A) = \{ x_0 + z \mid z \in \mathbb{R}^n, A z = 0 \}.
+\begin{aligned}
+\mathcal{S} &= x_0 + \ker(A)\\
+&= \{ x_0 + z \mid z \in \mathbb{R}^n, A z = 0 \}.
+\end{aligned}
 $$
 
 Vì số chiều của không gian hạt nhân $\dim(\ker(A)) = n - m > 0$, hệ có vô số nghiệm.
@@ -64,15 +67,22 @@ $$
 
 $$
 \begin{aligned}
-\nabla_x L(x^*, \nu^*) &= x^* + A^T \nu^* = 0 \implies x^* = -A^T \nu^*, \\
-\nabla_\nu L(x^*, \nu^*) &= A x^* - b = 0.
+&\begin{aligned}
+\nabla_x L(x^*, \nu^*) &= x^* + A^T \nu^*\\
+&= 0\\
+&\implies x^* = -A^T \nu^*,
+\end{aligned}\\
+&\nabla_\nu L(x^*, \nu^*) = A x^* - b = 0.
 \end{aligned}
 $$
 
 Thế biểu thức $x^* = -A^T \nu^*$ vào ràng buộc đẳng thức:
 
 $$
-A (-A^T \nu^*) = b \implies (A A^T) (-\nu^*) = b.
+\begin{aligned}
+A (-A^T \nu^*) &= b\\
+&\implies (A A^T) (-\nu^*) = b.
+\end{aligned}
 $$
 
 Vì ma trận $A$ có hạng hàng đủ $\operatorname{rank}(A) = m$, ma trận Gram $A A^T \in \mathbb{R}^{m \times m}$ đối xứng và xác định dương nghiêm ngặt ($A A^T \succ 0$), do đó khả nghịch hoàn toàn. Ta suy ra:
@@ -263,7 +273,11 @@ $$
 
 1. Tính ma trận tích $A A^T$:
    $$
-   A A^T = \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix} = \begin{bmatrix} 1+1+0 & 0+1+0 \\ 0+1+0 & 0+1+1 \end{bmatrix} = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}.
+   \begin{aligned}
+   A A^T &= \begin{bmatrix} 1 & 1 & 0 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 1 & 1 \\ 0 & 1 \end{bmatrix}\\
+   &= \begin{bmatrix} 1+1+0 & 0+1+0 \\ 0+1+0 & 0+1+1 \end{bmatrix}\\
+   &= \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}.
+   \end{aligned}
    $$
 
    Định thức: $\det(A A^T) = 2 \times 2 - 1 \times 1 = 3 \ne 0$.
@@ -275,7 +289,12 @@ $$
 
 2. Tính vector trung gian $w = (A A^T)^{-1} b$:
    $$
-   w = \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \begin{bmatrix} 2 \\ 4 \end{bmatrix} = \frac{1}{3} \begin{bmatrix} 4 - 4 \\ -2 + 8 \end{bmatrix} = \frac{1}{3} \begin{bmatrix} 0 \\ 6 \end{bmatrix} = \begin{bmatrix} 0 \\ 2 \end{bmatrix}.
+   \begin{aligned}
+   w &= \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \begin{bmatrix} 2 \\ 4 \end{bmatrix}\\
+   &= \frac{1}{3} \begin{bmatrix} 4 - 4 \\ -2 + 8 \end{bmatrix}\\
+   &= \frac{1}{3} \begin{bmatrix} 0 \\ 6 \end{bmatrix}\\
+   &= \begin{bmatrix} 0 \\ 2 \end{bmatrix}.
+   \end{aligned}
    $$
 
    Nghiệm chuẩn nhỏ nhất:
@@ -292,7 +311,12 @@ $$
 
 3. Tìm hạt nhân $\ker(A)$:
    $$
-   A z = 0 \iff \begin{cases} z_1 + z_2 = 0 \\ z_2 + z_3 = 0 \end{cases} \iff z_1 = -z_2 = z_3.
+   \begin{aligned}
+   A z &= 0\\
+   &\iff \begin{cases} z_1 + z_2 = 0 \\ z_2 + z_3 = 0 \end{cases}\\
+   &\iff z_1 = -z_2\\
+   &= z_3.
+   \end{aligned}
    $$
 
    Chọn $z_2 = -1 \implies z_1 = 1, z_3 = 1$. Cơ sở của $\ker(A)$ là $v = (1, -1, 1)^T$.
@@ -339,7 +363,12 @@ với $V \succ 0$ là ma trận khả nghịch đã biết trước nghịch đ�
    
    Đại lượng vô hướng $\gamma$:
    $$
-   \gamma = 1 + a^T I_2 a = 1 + (1^2 + 2^2) = 1 + 5 = 6.
+   \begin{aligned}
+   \gamma &= 1 + a^T I_2 a\\
+   &= 1 + (1^2 + 2^2)\\
+   &= 1 + 5\\
+   &= 6.
+   \end{aligned}
    $$
 
    Tích ngoài $q q^T$:
@@ -404,7 +433,11 @@ trong đó $S \in \mathbb{S}_{++}^n$ là ma trận đối xứng xác định d�
 
    Điều kiện KKT triệt tiêu gradient ma trận:
    $$
-   \nabla_X L(X^*, \nu^*) = -(X^*)^{-1} + \nu^* S = 0 \implies (X^*)^{-1} = \nu^* S.
+   \begin{aligned}
+   \nabla_X L(X^*, \nu^*) &= -(X^*)^{-1} + \nu^* S\\
+   &= 0\\
+   &\implies (X^*)^{-1} = \nu^* S.
+   \end{aligned}
    $$
 
    Nghịch đảo cả hai vế (với điều kiện $\nu^* > 0$):
@@ -414,7 +447,10 @@ trong đó $S \in \mathbb{S}_{++}^n$ là ma trận đối xứng xác định d�
 
 3. Xác định nhân tử $\nu^*$ bằng cách thế $X^*$ vào ràng buộc đẳng thức $\operatorname{tr}(S X^*) = n$:
    $$
-   \operatorname{tr}\left( S \left( \frac{1}{\nu^*} S^{-1} \right) \right) = n \implies \frac{1}{\nu^*} \operatorname{tr}(I_n) = n.
+   \begin{aligned}
+   \operatorname{tr}\left( S \left( \frac{1}{\nu^*} S^{-1} \right) \right) &= n\\
+   &\implies \frac{1}{\nu^*} \operatorname{tr}(I_n) = n.
+   \end{aligned}
    $$
 
    Vì $\operatorname{tr}(I_n) = n$, ta có:

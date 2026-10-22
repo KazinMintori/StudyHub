@@ -94,7 +94,10 @@ trong đó:
 Khi truyền xuôi (Forward Pass), với vector đầu vào $h \in \mathbb{R}^k$, đầu ra được tính toán theo công thức:
 
 $$
-y = W_0 h + \Delta W h = W_0 h + \frac{\alpha}{r} B (A h),
+\begin{aligned}
+y &= W_0 h + \Delta W h\\
+&= W_0 h + \frac{\alpha}{r} B (A h),
+\end{aligned}
 $$
 
 trong đó:

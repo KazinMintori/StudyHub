@@ -27,21 +27,33 @@ Ba tính chất đầu tiên xác lập hành vi tự nhiên của một thướ
 Các chuẩn xuất hiện phổ biến nhất trong tối ưu hóa thuộc họ chuẩn $\ell_p$ với tham số $p \ge 1$:
 
 $$
-\|x\|_p = \left(\sum_{i=1}^n |x_i|^p\right)^{1/p} = \left(|x_1|^p + |x_2|^p + \dots + |x_n|^p\right)^{1/p} ,
+\begin{aligned}
+\|x\|_p &= \left(\sum_{i=1}^n |x_i|^p\right)^{1/p}\\
+&= \left(|x_1|^p + |x_2|^p + \dots + |x_n|^p\right)^{1/p} ,
+\end{aligned}
 $$
 
 trong đó ba trường hợp đặc biệt được ứng dụng rộng rãi nhất gồm:
 - **Chuẩn $\ell_1$** (tổng khoảng cách Manhattan):
   $$
-  \|x\|_1 = \sum_{i=1}^n |x_i| = |x_1| + |x_2| + \dots + |x_n| .
+  \begin{aligned}
+  \|x\|_1 &= \sum_{i=1}^n |x_i|\\
+  &= |x_1| + |x_2| + \dots + |x_n| .
+  \end{aligned}
   $$
 - **Chuẩn Euclid $\ell_2$**:
   $$
-  \|x\|_2 = \sqrt{\sum_{i=1}^n x_i^2} = \sqrt{x_1^2 + x_2^2 + \dots + x_n^2} .
+  \begin{aligned}
+  \|x\|_2 &= \sqrt{\sum_{i=1}^n x_i^2}\\
+  &= \sqrt{x_1^2 + x_2^2 + \dots + x_n^2} .
+  \end{aligned}
   $$
 - **Chuẩn cực đại $\ell_\infty$** (chuẩn Chebyshev, ứng với giới hạn khi $p \to \infty$):
   $$
-  \|x\|_\infty = \max_{1 \le i \le n} |x_i| = \max\{|x_1|, |x_2|, \dots, |x_n|\} .
+  \begin{aligned}
+  \|x\|_\infty &= \max_{1 \le i \le n} |x_i|\\
+  &= \max\{|x_1|, |x_2|, \dots, |x_n|\} .
+  \end{aligned}
   $$
 
 Xét vector $x = (1, -2, 2) \in \mathbb{R}^3$, các chuẩn tương ứng cho kết quả cụ thể: $\|x\|_1 = |1| + |-2| + |2| = 5$, $\|x\|_2 = \sqrt{1^2 + (-2)^2 + 2^2} = \sqrt{9} = 3$, và $\|x\|_\infty = \max\{1, 2, 2\} = 2$.
@@ -99,13 +111,23 @@ Biểu thức đại số $\left(\sum_{i=1}^n |x_i|^p\right)^{1/p}$ vẫn hoàn 
 Khi giảm giá trị $p$ xuống dưới 1 trong mô phỏng, trực giác hình học bộc lộ ngay nguyên nhân: Các cạnh của quả cầu bị uốn cong lõm vào phía trong, khiến quả cầu **mất hoàn toàn tính lồi**. Với $p = \tfrac12$, xét hai điểm đơn vị $x = (1, 0)$ và $y = (0, 1)$: Hai điểm này có "độ dài" theo công thức bằng 1, nhưng trung điểm của chúng là $(\tfrac12, \tfrac12)$ lại có giá trị:
 
 $$
-\left(\sqrt{0.5} + \sqrt{0.5}\right)^2 = \left(2\sqrt{0.5}\right)^2 = 4 \cdot 0.5 = 2 > 1 .
+\begin{aligned}
+\left(\sqrt{0.5} + \sqrt{0.5}\right)^2 &= \left(2\sqrt{0.5}\right)^2\\
+&= 4 \cdot 0.5\\
+&= 2\\
+&> 1 .
+\end{aligned}
 $$
 
 Trung điểm bị bật ra ngoài quả cầu, chứng minh tập hợp không lồi. Đồng thời, công thức này vi phạm nghiêm trọng bất đẳng thức tam giác:
 
 $$
-\|x + y\|_{1/2} = \|(1, 1)\|_{1/2} = 4 > 2 = \|(1, 0)\|_{1/2} + \|(0, 1)\|_{1/2} .
+\begin{aligned}
+\|x + y\|_{1/2} &= \|(1, 1)\|_{1/2}\\
+&= 4\\
+&> 2\\
+&= \|(1, 0)\|_{1/2} + \|(0, 1)\|_{1/2} .
+\end{aligned}
 $$
 
 Hiện tượng quả cầu không lồi và sự vi phạm bất đẳng thức tam giác là hai mặt tương đương của cùng một quy luật toán học:
@@ -121,7 +143,10 @@ $$
 Vì điểm này thuộc $B$, chuẩn của nó không vượt quá 1:
 
 $$
-\left\|\frac{x + y}{\|x\| + \|y\|}\right\| \le 1 \iff \|x + y\| \le \|x\| + \|y\| .
+\begin{aligned}
+\left\|\frac{x + y}{\|x\| + \|y\|}\right\| &\le 1\\
+&\iff \|x + y\| \le \|x\| + \|y\| .
+\end{aligned}
 $$
 
 Chiều đảo lại được bảo đảm thông qua lý thuyết **hàm phiếm hàm Minkowski**: Mỗi tập hợp đóng, bị chặn, lồi, đối xứng qua gốc tọa độ và chứa gốc tọa độ trong phần trong đều xác định duy nhất một chuẩn thông qua biểu thức $\|x\| = \inf\{t > 0 \mid x/t \in B\}$.
@@ -141,7 +166,11 @@ $$
 
 - Với quả cầu Euclid $\|x\|_2 \le 1$, nghiệm tối ưu là điểm chiếu vuông góc:
   $$
-  x^* = \frac{y}{\|y\|_2} = \left(\frac{2}{\sqrt5}, \frac{1}{\sqrt5}\right) \approx (0.894, 0.447) ,
+  \begin{aligned}
+  x^* &= \frac{y}{\|y\|_2}\\
+  &= \left(\frac{2}{\sqrt5}, \frac{1}{\sqrt5}\right)\\
+  &\approx (0.894, 0.447) ,
+  \end{aligned}
   $$
   trong đó cả hai tọa độ đều khác 0 (nghiệm đặc).
 - Với quả cầu $\ell_1$, tức $|x_1| + |x_2| \le 1$, nghiệm tối ưu lại rơi chính xác vào đỉnh nhọn $x^* = (1, 0)$, nơi tọa độ thứ hai **triệt tiêu hoàn toàn về 0** (nghiệm thưa).
@@ -163,7 +192,10 @@ $C$ là một nón lồi thực sự:
 - Tính chất nón: Nếu $(x, t) \in C$ và $\alpha \ge 0$, tính thuần nhất cho $\|\alpha x\| = \alpha \|x\| \le \alpha t$, do đó $\alpha(x, t) \in C$.
 - Tính lồi: Với hai điểm $(x, t), (y, s) \in C$ và hệ số $\theta \in [0, 1]$, bất đẳng thức tam giác cho:
   $$
-  \|\theta x + (1-\theta) y\| \le \theta \|x\| + (1-\theta)\|y\| \le \theta t + (1-\theta)s .
+  \begin{aligned}
+  \|\theta x + (1-\theta) y\| &\le \theta \|x\| + (1-\theta)\|y\|\\
+  &\le \theta t + (1-\theta)s .
+  \end{aligned}
   $$
 
 Lát cắt ngang của nón tại mỗi độ cao $t = c \ge 0$ chính là quả cầu chuẩn bán kính $c$. Nón chuẩn là phép chồng xếp liên tục của các quả cầu chuẩn có kích thước giãn nở tịnh tiến theo độ cao $t$.
@@ -234,7 +266,11 @@ Ta tính trực tiếp từng chuẩn:
 - Chuẩn $\ell_1$: $\|x\|_1 = |2| + |-1| + |0| + |2| = 5$.
 - Chuẩn $\ell_2$:
   $$
-  \|x\|_2 = \sqrt{2^2 + (-1)^2 + 0^2 + 2^2} = \sqrt{4 + 1 + 0 + 4} = 3 .
+  \begin{aligned}
+  \|x\|_2 &= \sqrt{2^2 + (-1)^2 + 0^2 + 2^2}\\
+  &= \sqrt{4 + 1 + 0 + 4}\\
+  &= 3 .
+  \end{aligned}
   $$
 - Chuẩn $\ell_\infty$: $\|x\|_\infty = \max\{|2|, |-1|, |0|, |2|\} = 2$.
 
@@ -255,7 +291,12 @@ Viết quả cầu đơn vị $\{x \in \mathbb{R}^2 \mid \|x\|_1 \le 1\}$ dướ
 Điều kiện $|x_1| + |x_2| \le 1$ tương đương với hệ bốn bất đẳng thức tuyến tính:
 
 $$
-x_1 + x_2 \le 1,\quad x_1 - x_2 \le 1,\quad -x_1 + x_2 \le 1,\quad -x_1 - x_2 \le 1 .
+\begin{aligned}
+&x_1 + x_2 \le 1,\quad\\
+&x_1 - x_2 \le 1,\quad\\
+&-x_1 + x_2 \le 1,\quad\\
+&-x_1 - x_2 \le 1 .
+\end{aligned}
 $$
 
 Tổng quát trong $\mathbb{R}^n$, biểu thức chuẩn $\ell_1$ là $\max_{s \in \{-1, 1\}^n} s^T x \le 1$. Do đó cần $2^n$ bất đẳng thức tuyến tính để mô tả quả cầu $\ell_1$. Ngược lại, quả cầu $\ell_\infty$ trong $\mathbb{R}^n$ chỉ cần $2n$ bất đẳng thức tuyến tính độc lập ($-1 \le x_i \le 1$ với $i = 1, \dots, n$).
@@ -284,7 +325,11 @@ $$
 Với điều kiện $x_1 + 1 \ge 0$, bình phương hai vế cho:
 
 $$
-(x_1 - 1)^2 + x_2^2 \le (x_1 + 1)^2 \iff x_1^2 - 2x_1 + 1 + x_2^2 \le x_1^2 + 2x_1 + 1 \iff x_2^2 \le 4x_1 ,
+\begin{aligned}
+(x_1 - 1)^2 + x_2^2 &\le (x_1 + 1)^2\\
+&\iff x_1^2 - 2x_1 + 1 + x_2^2 \le x_1^2 + 2x_1 + 1\\
+&\iff x_2^2 \le 4x_1 ,
+\end{aligned}
 $$
 
 chính là miền lồi giới hạn bởi đường parabol $x_1 \ge \tfrac{1}{4}x_2^2$.

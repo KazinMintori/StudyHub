@@ -35,7 +35,10 @@ với các ràng buộc: Ràng buộc yêu cầu sản xuất ít nhất một �
 Tập mức $\{x : f(x) = t\}$ trong miền xác định là tập các điểm thỏa $c^Tx + d = t(e^Tx + f)$, tức
 
 $$
-(c - te)^Tx + (d - tf) = 0, \qquad e^Tx + f > 0 .
+\begin{aligned}
+&(c - te)^Tx + (d - tf) = 0, \qquad\\
+&e^Tx + f > 0 .
+\end{aligned}
 $$
 
 Phương trình thứ nhất là một siêu phẳng, nên mọi tập mức đều phẳng, đúng với tính tựa tuyến tính. Nhưng khác với LP, các siêu phẳng ấy không song song với nhau. Mọi điểm làm cả tử số lẫn mẫu số bằng 0 đều thỏa phương trình với mọi $t$. Trong mặt phẳng, tử số và mẫu số bằng 0 tại một điểm chung $P$, và mọi đường mức đều đi qua $P$. Tập mức thật sự chỉ là nửa đường thẳng nằm trong miền $e^Tx + f > 0$, tức một **tia xuất phát từ $P$**. Khi $t$ thay đổi, tia quay quanh $P$.

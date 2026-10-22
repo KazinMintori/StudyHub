@@ -224,7 +224,12 @@ Bất đẳng thức này phản ánh cấu trúc của **bất đẳng thức t
 #### Hệ quả thực hành của tính nhất quán
 Nếu $h(n)$ nhất quán, giá trị $f(n)$ dọc theo bất kỳ đường đi nào sẽ **không bao giờ giảm**:
 $$
-f(n') = g(n') + h(n') = g(n) + c(n, a, n') + h(n') \ge g(n) + h(n) = f(n)
+\begin{aligned}
+f(n') &= g(n') + h(n')\\
+&= g(n) + c(n, a, n') + h(n')\\
+&\ge g(n) + h(n)\\
+&= f(n)
+\end{aligned}
 $$
 
 Hệ quả toán học then chốt:

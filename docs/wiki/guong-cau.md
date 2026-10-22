@@ -16,7 +16,10 @@ Gương cầu có mặt phản xạ là một phần mặt cầu. Trong gần đ
 Phương trình gương và độ phóng đại ngang:
 
 $$
-\frac1s+\frac1{s^\prime} =\frac1f\\m =-\frac{s^\prime}s.
+\begin{aligned}
+&\frac1s+\frac1{s^\prime} =\frac1f\\
+&m =-\frac{s^\prime}s.
+\end{aligned}
 $$
 
 Gương lõm tạo ảnh thật ngược chiều khi vật thật ở ngoài tiêu cự. Vật ở tiêu điểm cho chùm phản xạ song song. Vật trong tiêu cự cho ảnh ảo cùng chiều. Khi che một phần mặt gương, phần còn lại vẫn tạo toàn bộ ảnh nhưng nhận ít năng lượng hơn.

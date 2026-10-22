@@ -7,35 +7,52 @@ next: false
 
 # Hàm băm
 
-Hàm băm chuyển dữ liệu thành một giá trị trong miền đích hữu hạn. Đầu vào khác nhau có thể trùng giá trị băm: Đó là va chạm. Hàm băm cần phù hợp với mục tiêu: Tra cứu, chia phân vùng hay bảo mật có các yêu cầu khác nhau.
+Một từ điển cần tìm nhanh giá trị ứng với một khóa. **Hàm băm** chuyển khóa thành một giá trị hữu hạn để chọn vùng lưu trữ. Nó giúp khoanh vùng tìm kiếm, nhưng không thay thế việc kiểm tra khóa.
 
 <WikiUsage />
 
+![Hình 1: Hai khóa khác nhau cùng vùng băm nhưng vẫn được giữ riêng.](./img/atlas/hash.svg)
+
 ## Giải thích kỹ thuật
 
-**Va chạm cần xử lý.** Bảng băm phải có cách phân biệt các khóa rơi vào cùng vùng, chẳng hạn liên kết danh sách hoặc tìm vị trí khác. Một hash hữu hạn không thể đảm bảo không va chạm cho miền đầu vào vô hạn.
+Nếu miền đầu vào có nhiều phần tử hơn miền giá trị băm, ít nhất hai đầu vào phải trùng kết quả. Đó là va chạm, một hệ quả của nguyên lý Dirichlet chứ không tự là lỗi cài đặt.
 
-Hàm băm dùng để chia phân vùng không tự đáp ứng yêu cầu bảo mật. Kiểm tra mục đích, phân bố dữ liệu và chi phí tính trước khi lựa chọn.
+Bảng băm có thể xử lý va chạm bằng cách lưu nhiều khóa trong cùng một vùng hoặc thăm dò các vị trí khác. Sau khi chọn vùng, vẫn phải so sánh khóa đầy đủ để xác định đúng phần tử.
 
-## Ví dụ
+Chi phí kỳ vọng hằng số cần các giả thiết về hàm băm, phân bố khóa và hệ số tải. Trong trường hợp xấu, nhiều khóa cùng vùng có thể làm tra cứu chậm đi đáng kể.
 
-$h(x)=x$ mod 4: 2 và 6 đều băm thành 2. Không thể suy ra hai đầu vào bằng nhau chỉ vì hash bằng nhau.
+Hàm băm phục vụ tra cứu không tự có tính chất bảo mật. Chống tìm đầu vào từ kết quả băm, chống va chạm có chủ đích và phân bố đều là những yêu cầu khác nhau.
 
-## Khi nào cần dùng?
+## Ví dụ có lời giải
 
-Hiểu bảng băm, phân vùng dữ liệu và Shuffle.
+Xét quy tắc đơn giản $h(k)=k\bmod4$. Ta có $h(2)=h(6)=2$, còn $h(9)=1$.
 
-## Tự kiểm tra
+Nếu tìm khóa 6, bảng đi tới vùng 2 rồi đối chiếu lần lượt với các khóa trong vùng. Gặp khóa 2 chưa đủ để kết luận đã tìm thấy, dù giá trị băm giống nhau.
 
-Hash giống nhau có chứng minh dữ liệu giống nhau không?
+```python
+buckets = [[] for _ in range(4)]
+for key in [2, 6, 9]:
+    buckets[key % 4].append(key)
+assert buckets[2] == [2, 6]
+assert 6 in buckets[6 % 4]
+```
 
-<details><summary>Xem đáp án</summary>
+Đây là minh họa xử lý va chạm bằng nhóm khóa, không phải hàm băm thích hợp cho mọi dữ liệu.
 
-Không, vì có thể có va chạm.
+## Câu hỏi ôn lại
 
-</details>
+Hai file có cùng giá trị băm có chứng minh chúng giống nhau tuyệt đối không?
 
-## Thuật ngữ liên quan
+::: details Xem lời giải
+Không. Miền kết quả hữu hạn vẫn cho phép va chạm. Trong các ứng dụng bảo mật, mức độ khó tạo va chạm có chủ đích là một thuộc tính phải được phân tích riêng.
+:::
 
-- [Đồ thị](./do-thi.md)
-- [Đệ quy](./de-quy.md)
+## Đọc tiếp
+
+- [Dictionary](./dictionary.md)
+- [Cặp khóa–giá trị](./khoa-gia-tri.md)
+- [Độ phức tạp](./do-phuc-tap.md)
+
+## Tài liệu tham khảo
+
+- [Princeton, Algorithms, Hash Tables](https://algs4.cs.princeton.edu/34hash/).

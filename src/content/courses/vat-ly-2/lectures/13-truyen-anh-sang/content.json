@@ -64,6 +64,26 @@
   ],
   "examples": [
     {
+      "source": "raw_materials/physics/translations/chapter-33/02-phan-xa-khuc-xa.md",
+      "line": 167,
+      "title": "Ví dụ 33.1: Phản xạ và khúc xạ tại mặt phân cách nước - thủy tinh"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/02-phan-xa-khuc-xa.md",
+      "line": 210,
+      "title": "Ví dụ 33.2: Chiết suất của thủy dịch trong mắt người"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/02-phan-xa-khuc-xa.md",
+      "line": 262,
+      "title": "Ví dụ 33.3: Tia sáng phản xạ liên tiếp qua hai gương vuông góc"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/03-phan-xa-toan-phan.md",
+      "line": 95,
+      "title": "Ví dụ 33.4: Kính tiềm vọng bị rò rỉ nước"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-33/05-phan-cuc.md",
       "line": 116,
       "title": "Ví dụ 33.5: Hai kính phân cực đặt kết hợp"
@@ -608,6 +628,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-33/00-mo-dau.md",
+      "line": 25,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-33/10-luyen-tap-huong-dan.md",
       "line": 11,
       "title": "Lời giải chi tiết"
@@ -1116,6 +1141,41 @@
       "source": "raw_materials/physics/translations/chapter-33/15-mcat.md",
       "line": 68,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/01-ban-chat-anh-sang.md",
+      "line": 65,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/02-phan-xa-khuc-xa.md",
+      "line": 321,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/03-phan-xa-toan-phan.md",
+      "line": 134,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/05-phan-cuc.md",
+      "line": 269,
+      "title": "Xem giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/05-phan-cuc.md",
+      "line": 344,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/05-phan-cuc.md",
+      "line": 382,
+      "title": "Xem đáp án và giải thích chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-33/07-nguyen-ly-huygens.md",
+      "line": 133,
+      "title": "Xem đáp án và giải thích chi tiết"
     }
   ],
   "assets": [

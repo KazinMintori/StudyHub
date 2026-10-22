@@ -13,9 +13,11 @@ Phân phối Gauss một biến được xác định bởi kỳ vọng $\mu$ v�
 
 ## Giải thích kỹ thuật
 
-**Mật độ một và nhiều chiều.** Với $Z\sim\mathcal N(\mu,\sigma^2)$,
+**Mật độ một và nhiều chiều.** Với $Z\sim\mathcal N(\mu,\sigma^2)$ và $\sigma>0$, đặt độ lệch chuẩn hóa $u=(z-\mu)/\sigma$. Mật độ là:
 
-$$p(z)=\frac1{\sqrt{2\pi\sigma^2}}\exp\left[-\frac{(z-\mu)^2}{2\sigma^2}\right],\qquad\sigma^2>0.$$
+$$
+p(z)=\frac{e^{-u^2/2}}{\sigma\sqrt{2\pi}}.
+$$
 
 Trong nhiều chiều, vector Gauss dùng kỳ vọng $\mu$ và ma trận hiệp phương sai $\Sigma\succ0$. Trường hợp $\Sigma=\sigma^2I$ mô tả các thành phần độc lập cùng phương sai. Nếu $\Sigma$ suy biến, công thức mật độ thông thường trên toàn $\mathbb R^m$ không áp dụng trực tiếp. Nguồn: Convex Optimization, §7.1.
 

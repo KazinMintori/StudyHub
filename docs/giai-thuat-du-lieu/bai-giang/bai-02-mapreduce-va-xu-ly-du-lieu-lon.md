@@ -50,7 +50,12 @@ Ban giám đốc muốn biết tổng số chai nước trong cả chuỗi. Thay
 Tính $S = a_1 + \cdots + a_6$ trên ba máy, mỗi máy giữ hai số:
 
 $$
-s_1 = a_1 + a_4,\quad s_2 = a_2 + a_5,\quad s_3 = a_3 + a_6,\qquad S = s_1 + s_2 + s_3
+\begin{aligned}
+&s_1 = a_1 + a_4,\quad\\
+&s_2 = a_2 + a_5,\quad\\
+&s_3 = a_3 + a_6,\qquad\\
+&S = s_1 + s_2 + s_3
+\end{aligned}
 $$
 
 Cách làm đúng nhờ hai tính chất của phép cộng:
@@ -84,7 +89,10 @@ Khối A có 3 bản sao **không** có nghĩa dữ liệu của A được cộ
 **Đặc tả.** Cho $n \ge 1$ văn bản $d_1, \ldots, d_n$ đã tách từ theo cùng một quy tắc, $d_i = (w_{i1}, \ldots, w_{im_i})$. Gọi $V$ là tập các từ xuất hiện. Với mỗi $w \in V$:
 
 $$
-c_i(w) = \bigl\lvert \lbrace j \in \lbrace 1, \ldots, m_i \rbrace : W_{ij} = w \rbrace \bigr\rvert, \qquad c(w) = \sum_{i=1}^{n} c_i(w)
+\begin{aligned}
+&c_i(w) = \bigl\lvert \lbrace j \in \lbrace 1, \ldots, m_i \rbrace : W_{ij} = w \rbrace \bigr\rvert, \qquad\\
+&c(w) = \sum_{i=1}^{n} c_i(w)
+\end{aligned}
 $$
 
 $c_i(w)$ đếm số lần từ $w$ xuất hiện trong văn bản thứ $i$. $c(w)$ cộng kết quả qua mọi văn bản. Viết đầy đủ, $c(w)=c_1(w)+c_2(w)+\cdots+c_n(w)$. Trong $\sum_{i=1}^n$, chỉ số $i$ chạy qua các văn bản, không chạy qua các từ bên trong một văn bản. Còn dấu $|\{\cdots\}|$ đếm số vị trí $j$ thỏa điều kiện. Các lần xuất hiện lặp của một từ đều được đếm.
@@ -918,10 +926,14 @@ Dry-run 7: câu hỏi kiểm tra
 | Cộng $n$ số trên $P$ máy | $T_P = (n/P - 1)\tau + (P-1)\tau$, tối ưu gần $P = \sqrt{n}$ |
 | Chi phí MMDS | $C = I + H$ |
 | Thời gian truyền | $T \approx \lambda + V/B$, dùng chung: $T \ge V/B$ |
-| Toàn công việc | $$
-T_P = T_{\mathrm{coord}} + T_{\text{Map}} + T_{\mathrm{comm}} + T_{\text{Reduce}}
-$$ |
+| Toàn công việc | Tổng thời gian điều phối, Map, truyền dữ liệu và Reduce, khi các pha được tính nối tiếp |
 | Mức tăng tốc | $S_P = T_1 / T_P$ |
 | Từ khóa | khóa–giá trị, shuffle, combiner, InputSplit, cục bộ hóa, replication, Master, chạy lại, bản dự phòng |
+
+Trong mô hình cộng thời gian các pha, đặt $T_1=T_{\mathrm{coord}}$, $T_2=T_{\text{Map}}$, $T_3=T_{\mathrm{comm}}$ và $T_4=T_{\text{Reduce}}$. Tổng thời gian là:
+
+$$
+T_P=T_1+T_2+T_3+T_4.
+$$
 
 ← [Bài trước](/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.md) · [Mục lục](/giai-thuat-du-lieu/index.md) · [Bài tiếp theo →](/giai-thuat-du-lieu/bai-giang/bai-03-pagerank-mo-hinh-va-tinh-toan.md)

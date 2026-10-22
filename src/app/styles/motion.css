@@ -72,6 +72,9 @@
   }
   .vp-doc details[open]::details-content, .foundation-entry details[open]::details-content { block-size: auto; }
 }
+@media (prefers-reduced-motion: reduce) {
+  .vp-doc details::details-content, .foundation-entry details::details-content { transition: none !important; }
+}
 
 /* Avoid layout shift from images that arrive late. */
 .vp-doc img { height: auto; }

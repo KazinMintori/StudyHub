@@ -48,7 +48,68 @@
     "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
     "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
+      "line": 87,
+      "title": "Ví dụ 22.1: Điện thông qua một đĩa"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
+      "line": 117,
+      "title": "Ví dụ 22.2: Điện thông qua một lập phương"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
+      "line": 162,
+      "title": "Ví dụ 22.3: Điện thông qua một mặt cầu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
+      "line": 109,
+      "title": "Ví dụ 22.4: Điện thông và điện tích được bao"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
+      "line": 30,
+      "title": "Ví dụ 22.5: Quả cầu dẫn mang điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
+      "line": 60,
+      "title": "Ví dụ 22.6: Dây dài vô hạn tích điện đều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
+      "line": 82,
+      "title": "Ví dụ 22.7: Mặt phẳng vô hạn tích điện đều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
+      "line": 102,
+      "title": "Ví dụ 22.8: Hai bản dẫn song song trái dấu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
+      "line": 124,
+      "title": "Ví dụ 22.9: Quả cầu cách điện tích điện đều theo thể tích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
+      "line": 164,
+      "title": "Ví dụ 22.10: Suy ra điện tích trên vỏ cầu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
+      "line": 42,
+      "title": "Ví dụ 22.11: Vật dẫn có hốc"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
+      "line": 110,
+      "title": "Ví dụ 22.12: Điện trường của Trái Đất"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-22/00-mo-dau.md",
@@ -317,32 +378,32 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 448,
+      "line": 452,
       "title": "22.23 •• CP"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 472,
+      "line": 476,
       "title": "22.24 ••"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 494,
+      "line": 498,
       "title": "22.25 •"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 512,
+      "line": 516,
       "title": "22.26 •"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 529,
+      "line": 533,
       "title": "22.27 •"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 553,
+      "line": 557,
       "title": "22.28 •"
     },
     {
@@ -557,27 +618,27 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 188,
+      "line": 185,
       "title": "Câu hỏi ôn lại mục 22.2"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
-      "line": 136,
+      "line": 130,
       "title": "Câu hỏi ôn lại mục 22.3"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 59,
+      "line": 56,
       "title": "Câu hỏi ngay sau Ví dụ 22.5"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 202,
+      "line": 184,
       "title": "Câu hỏi ôn lại mục 22.4"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 139,
+      "line": 133,
       "title": "Câu hỏi ôn lại mục 22.5"
     }
   ],
@@ -839,32 +900,32 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 453,
+      "line": 457,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 477,
+      "line": 481,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 501,
+      "line": 505,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 517,
+      "line": 521,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 534,
+      "line": 538,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 560,
+      "line": 564,
       "title": "Chi tiết"
     },
     {
@@ -1074,32 +1135,32 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 96,
+      "line": 93,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 126,
+      "line": 123,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 171,
+      "line": 168,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 197,
+      "line": 194,
       "title": "Giải thích"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
-      "line": 121,
+      "line": 115,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
-      "line": 142,
+      "line": 136,
       "title": "Giải thích"
     },
     {
@@ -1109,47 +1170,47 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 69,
+      "line": 66,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 94,
+      "line": 88,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 117,
+      "line": 108,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 142,
+      "line": 130,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 186,
+      "line": 168,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 206,
+      "line": 188,
       "title": "Giải thích"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 51,
+      "line": 48,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 120,
+      "line": 114,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 143,
+      "line": 137,
       "title": "Giải thích"
     }
   ],
@@ -1169,7 +1230,7 @@
     {
       "reference": "img/young-22/tom-tat-gauss.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/06-tom-tat.md",
-      "line": 23,
+      "line": 22,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/tom-tat-gauss.png"
     },
     {
@@ -1223,13 +1284,13 @@
     {
       "reference": "img/young-22/hinh-22-23.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 498,
+      "line": 502,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-23.png"
     },
     {
       "reference": "img/young-22/hinh-e22-28.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/09-bai-tap-01-28.md",
-      "line": 557,
+      "line": 561,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-e22-28.png"
     },
     {
@@ -1403,25 +1464,25 @@
     {
       "reference": "../img/young-22/hinh-22-7.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 94,
+      "line": 91,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-7.png"
     },
     {
       "reference": "../img/young-22/ung-dung-ca-nham.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 118,
+      "line": 115,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/ung-dung-ca-nham.png"
     },
     {
       "reference": "../img/young-22/hinh-22-8.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 124,
+      "line": 121,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-8.png"
     },
     {
       "reference": "../img/young-22/hinh-22-9.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
-      "line": 169,
+      "line": 166,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-9.png"
     },
     {
@@ -1445,25 +1506,25 @@
     {
       "reference": "../img/young-22/hinh-22-13.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
-      "line": 58,
+      "line": 55,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-13.png"
     },
     {
       "reference": "../img/young-22/hinh-22-14.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
-      "line": 105,
+      "line": 99,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-14.png"
     },
     {
       "reference": "../img/young-22/hinh-22-15.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
-      "line": 119,
+      "line": 113,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-15.png"
     },
     {
       "reference": "../img/young-22/hinh-22-16.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
-      "line": 139,
+      "line": 133,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-16.png"
     },
     {
@@ -1481,25 +1542,25 @@
     {
       "reference": "../img/young-22/hinh-22-19.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 67,
+      "line": 64,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-19.png"
     },
     {
       "reference": "../img/young-22/hinh-22-20.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 92,
+      "line": 86,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-20.png"
     },
     {
       "reference": "../img/young-22/hinh-22-21.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 115,
+      "line": 106,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-21.png"
     },
     {
       "reference": "../img/young-22/hinh-22-22.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
-      "line": 140,
+      "line": 128,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-22.png"
     },
     {
@@ -1511,43 +1572,43 @@
     {
       "reference": "../img/young-22/ung-dung-neuron.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 43,
+      "line": 40,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/ung-dung-neuron.png"
     },
     {
       "reference": "../img/young-22/hinh-22-24.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 49,
+      "line": 46,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-24.png"
     },
     {
       "reference": "../img/young-22/hinh-22-25.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 63,
+      "line": 60,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-25.png"
     },
     {
       "reference": "../img/young-22/hinh-22-26.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 73,
+      "line": 70,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-26.png"
     },
     {
       "reference": "../img/young-22/hinh-22-27.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 83,
+      "line": 80,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-27.png"
     },
     {
       "reference": "../img/young-22/hinh-22-28.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 95,
+      "line": 92,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-28.png"
     },
     {
       "reference": "../img/young-22/ung-dung-set.png",
       "declaredIn": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
-      "line": 114,
+      "line": 108,
       "source": "docs/vat-ly-2/bai-giang/img/young-22/ung-dung-set.png"
     }
   ]

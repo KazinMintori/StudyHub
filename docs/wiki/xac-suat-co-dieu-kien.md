@@ -1,58 +1,79 @@
 ---
 title: "Xác suất có điều kiện"
 wikiTerm: xac-suat-co-dieu-kien
-prev: False
-next: False
+prev: false
+next: false
 ---
 
 # Xác suất có điều kiện
 
-P(A|B) là xác suất A khi biết B đã xảy ra. Với $P(B)>0$, $P(A|B)=\frac{P(A\cap B)}{P(B)}$: Thu hẹp miền xét về B rồi tính phần của A trong miền đó. P(A|B) nhìn chung khác P(B|A).
+Một bộ lọc báo “đạt” cho một mẫu. Muốn đoán mẫu thuộc nhóm nào, ta phải đổi tập đối tượng đang xét: Chỉ nhìn những mẫu đã đạt. **Xác suất có điều kiện** mô tả phép thu hẹp không gian xét ấy.
 
 <WikiUsage />
 
+![Hình 1: Đổi mẫu số từ 100 mẫu sang 34 mẫu đã đạt.](./img/atlas/bayes.svg)
+
 ## Giải thích kỹ thuật
 
-Với $P(B)>0$, xác suất có điều kiện được xác định bởi
+Với biến cố $B$ có $P(B)>0$:
 
 $$
 P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
 $$
 
-Công thức Bayes đổi chiều điều kiện nhưng vẫn phải giữ xác suất ban đầu của A.
+Mẫu số đổi từ toàn bộ không gian sang phần $B$. Vì vậy, $P(A\mid B)$ và $P(B\mid A)$ không có lý do bằng nhau.
+
+Công thức Bayes đổi chiều điều kiện:
 
 $$
 P(A\mid B)=\frac{P(B\mid A)P(A)}{P(B)}.
 $$
 
-Đặt $q=P(B\mid A)$, $r=P(B\mid A^c)$ và $p=P(A)$ khi cả hai điều kiện có xác suất dương. Khi ấy, công thức xác suất toàn phần viết gọn thành
+Tử số tính xác suất vừa thuộc $A$ vừa xảy ra $B$. Đặt $C=A^c$. Hai biến cố $A$ và $C$ chia toàn bộ không gian thành hai phần rời nhau, nên:
 
 $$
-P(B)=qp+r(1-p).
+P(B)=P(A\cap B)+P(C\cap B).
 $$
 
-Mẫu số bao gồm cả hai cách để B xảy ra. Đảo chiều điều kiện mà giữ nguyên giá trị xác suất sẽ cho kết quả sai nói chung.
+Khi $P(A)>0$ và $P(C)>0$, từng phần được tính bằng:
 
-## Ví dụ
+$$
+\begin{aligned}
+&P(A\cap B)=P(B\mid A)P(A),\\
+&P(C\cap B)=P(B\mid C)P(C).
+\end{aligned}
+$$
 
-Trong 100 người có 20 người đeo kính, trong đó 8 người học lớp X. P(lớp X | đeo kính)=$\frac{8}{20}=0.4$.
+Cộng hai phần này cho mẫu số của công thức Bayes.
 
-## Khi nào cần dùng?
+Công thức này không cho phép suy luận nhân quả chỉ từ sự liên hệ xác suất. Thấy kết quả rồi suy ngược nguyên nhân vẫn cần mô hình và các giả thiết bổ sung.
 
-Đọc định lý Bayes, mạng Bayes và suy luận từ quan sát.
+## Ví dụ có lời giải
+
+Trong 100 mẫu, 20 mẫu thuộc nhóm $A$ và 80 mẫu thuộc nhóm còn lại. Bộ lọc báo đạt cho 18 mẫu nhóm $A$ và 16 mẫu nhóm còn lại.
+
+Trong nhóm đạt có tổng cộng 34 mẫu. Do đó:
+
+$$
+P(A\mid\text{đạt})=\frac{18}{34}=\frac9{17}.
+$$
+
+Giá trị xấp xỉ $52{,}94\%$, trong khi $P(\text{đạt}\mid A)=18/20=90\%$. Hai mẫu số khác nhau tạo hai câu trả lời khác nhau. Cách đếm bằng tần số tự nhiên giúp nhìn rõ mẫu số trước khi dùng công thức.
 
 ## Câu hỏi ôn lại
 
-Nếu $P(A\cap B)=0.1$, $P(B)=0.5$ thì P(A|B) bằng bao nhiêu?
+Nếu nhóm A vẫn có tỷ lệ đạt 90% nhưng rất ít mẫu thuộc A, tỷ lệ mẫu A trong nhóm đạt có nhất thiết gần 90% không?
 
-<details><summary>Xem đáp án</summary>
+::: details Xem lời giải
+Không. Còn phải tính số mẫu đạt đến từ nhóm khác. Tỷ lệ ban đầu của A và khả năng đạt trong các nhóm còn lại cùng tham gia vào mẫu số Bayes.
+:::
 
-0.2.
+## Đọc tiếp
 
-</details>
-
-## Thuật ngữ liên quan
-
-- [Không gian mẫu](./khong-gian-mau.md)
 - [Độc lập](./doc-lap.md)
-- [Biến ngẫu nhiên](./bien-ngau-nhien.md)
+- [Likelihood](./likelihood.md)
+- [Không gian mẫu](./khong-gian-mau.md)
+
+## Tài liệu tham khảo
+
+- [OpenStax, Introductory Statistics 2e, Independent and Mutually Exclusive Events](https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events).

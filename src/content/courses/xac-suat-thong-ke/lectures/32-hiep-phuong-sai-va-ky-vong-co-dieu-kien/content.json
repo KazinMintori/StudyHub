@@ -19,71 +19,71 @@
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 138,
+      "line": 141,
       "title": "Ví dụ 2: Phụ thuộc phi tuyến có hệ số tương quan bằng 0"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 212,
+      "line": 219,
       "title": "Ví dụ 3: Định lý Adam và Eve cho tổng ngẫu nhiên các biến ngẫu nhiên"
     }
   ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 372,
+      "line": 379,
       "title": "Bài tập rèn luyện: Hiệp phương sai, tương quan và kỳ vọng có điều kiện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 374,
+      "line": 381,
       "title": "Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 395,
+      "line": 402,
       "title": "Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 430,
+      "line": 437,
       "title": "Bài tập 3"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 498,
+      "line": 506,
       "title": "Bài tập 4"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 555,
+      "line": 563,
       "title": "Bài tập 5"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 377,
+      "line": 384,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 400,
+      "line": 407,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 435,
+      "line": 442,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 507,
+      "line": 515,
       "title": "Lời giải"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 561,
+      "line": 569,
       "title": "Lời giải"
     }
   ],
@@ -97,13 +97,13 @@
     {
       "reference": "img/co-dien-refined/hinh-32-2-total-expectation-tree.svg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 196,
+      "line": 203,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-32-2-total-expectation-tree.svg"
     },
     {
       "reference": "img/co-dien-refined/hinh-32-3-mmse-projection.svg",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/32-hiep-phuong-sai-va-ky-vong-co-dieu-kien.md",
-      "line": 306,
+      "line": 313,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/co-dien-refined/hinh-32-3-mmse-projection.svg"
     }
   ]

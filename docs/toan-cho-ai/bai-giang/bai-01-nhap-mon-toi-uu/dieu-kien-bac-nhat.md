@@ -239,13 +239,20 @@ Cho $f(x) = \log(1 + e^x)$, hàm softplus thường dùng như một phiên bả
 (a) $f'(x) = e^x / (1 + e^x)$, chia cả tử và mẫu cho $e^x$ được $1/(e^{-x} + 1) = \sigma(x)$. (b) $\sigma$ tăng vì $e^{-x}$ giảm. Với $y > x$, ta có $\sigma(t) \ge \sigma(x)$ trên đoạn từ $x$ tới $y$, nên
 
 $$
-f(y) - f(x) = \int_x^y \sigma(t)\,dt \ge \sigma(x)(y - x).
+\begin{aligned}
+f(y) - f(x) &= \int_x^y \sigma(t)\,dt\\
+&\ge \sigma(x)(y - x).
+\end{aligned}
 $$
 
 Với $y < x$, ta có $\sigma(t) \le \sigma(x)$ trên đoạn từ $y$ tới $x$, nên
 
 $$
-f(y) - f(x) = -\int_y^x \sigma(t)\,dt \ge -\sigma(x)(x - y) = \sigma(x)(y - x).
+\begin{aligned}
+f(y) - f(x) &= -\int_y^x \sigma(t)\,dt\\
+&\ge -\sigma(x)(x - y)\\
+&= \sigma(x)(y - x).
+\end{aligned}
 $$
 
 Cả hai trường hợp cho $f(y) \ge f(x) + f'(x)(y - x)$, nên $f$ lồi. Hàm mất mát của hồi quy logistic được ghép từ chính những hàm này, như chủ đề cuối của chương sẽ chỉ ra.

@@ -111,7 +111,10 @@ $$
 Trong $n$ chiều, công thức là
 
 $$
-\frac{d}{dt}f(\varphi(t)) = \sum_{i=1}^{n}f_{x_i}(\varphi(t))\varphi_i'(t) = \nabla f(\varphi(t))^T\varphi'(t).
+\begin{aligned}
+\frac{d}{dt}f(\varphi(t)) &= \sum_{i=1}^{n}f_{x_i}(\varphi(t))\varphi_i'(t)\\
+&= \nabla f(\varphi(t))^T\varphi'(t).
+\end{aligned}
 $$
 
 Gradient đo mức nhạy của mục tiêu với từng tọa độ, còn $\varphi_i'$ đo tốc độ thay đổi của tọa độ ấy. Tổng các đóng góp cho tốc độ thay đổi mục tiêu dọc đường.
@@ -130,13 +133,19 @@ $$
 Các tọa độ của đường là $x_i+th_i$ và đạo hàm của chúng bằng $h_i$. Do đó
 
 $$
-g'(t) = \sum_{i=1}^{n}f_{x_i}(x+th)h_i = \nabla f(x+th)^Th.
+\begin{aligned}
+g'(t) &= \sum_{i=1}^{n}f_{x_i}(x+th)h_i\\
+&= \nabla f(x+th)^Th.
+\end{aligned}
 $$
 
 Nếu $f\in C^2$, lấy đạo hàm lần nữa được
 
 $$
-g''(t) = \sum_{i=1}^{n}\sum_{j=1}^{n} f_{x_jx_i}(x+th)h_ih_j = h^T\nabla^2f(x+th)h.
+\begin{aligned}
+g''(t) &= \sum_{i=1}^{n}\sum_{j=1}^{n} f_{x_jx_i}(x+th)h_ih_j\\
+&= h^T\nabla^2f(x+th)h.
+\end{aligned}
 $$
 
 Để thấy rõ tổng kép, trong hai chiều nó gồm bốn số hạng:

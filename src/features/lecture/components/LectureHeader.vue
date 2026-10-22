@@ -6,11 +6,11 @@ import { lecturePath, lectureConceptIds, lectureParts } from '../services/lectur
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
 import CourseArt from '../../illustrations/components/CourseArt.vue'
+import { useActiveTabVisibility } from '../../navigation/controllers/use-active-tab-visibility.mjs'
 const { course, lesson, part } = useLecture(), router = useRouter(), { page } = useData()
+const tabList = useActiveTabVisibility(part)
 const currentPart = computed(() => course.value?.parts?.find(p => p.lessons.includes(lesson.value?.slug)))
-const orderedParts = computed(() => course.value?.id === 'xac-suat-thong-ke'
-  ? ['notes', 'slides', 'kien-thuc-can-co', 'bai-tap', 'cheatsheet'].map(id => lectureParts.find(item => item.id === id))
-  : lectureParts)
+const orderedParts = lectureParts
 const updated = computed(() => page.value.lastUpdated ? new Date(page.value.lastUpdated).toLocaleDateString('vi-VN', { timeZone: 'Asia/Bangkok' }) : '')
 const mobileOutline = ref(null)
 const articleHeadings = ref([])
@@ -27,5 +27,5 @@ function select(id) { lecturePart.value = id; router.go(studyLink(lecturePath(co
 <template>
   <nav v-if="course && lesson" class="mobile-lecture-nav" aria-label="Điều hướng bài học"><button aria-label="Mở danh sách bài giảng" @click="openSidebar"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.5" /></svg></button><a :href="studyLink(`/${course.id}/`)">{{ course.short }}</a><details v-if="part === 'notes'" ref="mobileOutline"><summary>Mục lục</summary><nav aria-label="Mục lục bài viết"><a v-for="heading in articleHeadings" :key="heading.slug" :href="`#${heading.slug}`" @click="closeOutline">{{ heading.title }}</a></nav></details></nav>
   <header v-if="course && lesson" class="lecture-header book-header"><div class="lecture-header-art"><CourseArt :course="course" /></div><nav class="book-breadcrumbs" aria-label="Đường dẫn bài đọc"><a :href="studyLink(`/${course.id}/`)">{{ course.name }}</a><template v-if="currentPart"><span class="part-crumb">/</span><span class="part-crumb">{{ currentPart.title }}</span></template></nav><h1>{{ lesson.title }}</h1><div class="lecture-meta"><span v-if="lesson.supplementary">Chuyên đề bổ trợ {{ lesson.supplementNumber }}</span><span v-else>Bài {{ lesson.number ?? course.lessons.indexOf(lesson) + 1 }}</span><span v-if="updated" class="updated-date">Cập nhật {{ updated }}</span><a :href="studyLink('/goc-hoc-tap#notes')">Ghi chú của bạn</a></div><p v-if="lesson.status !== 'ready'" class="draft-notice">Bài đang được soạn. Kiến thức nền đã đọc được.</p></header>
-  <nav v-if="course && lesson" class="course-tabs lecture-tabs" aria-label="Các phần của bài giảng" @pointerenter.once="warmPanels" @focusin.once="warmPanels" @touchstart.once.passive="warmPanels"><a v-for="item in orderedParts" :key="item.id" :href="studyLink(lecturePath(course.id, lesson.slug, item.id))" :aria-current="part === item.id ? 'page' : undefined" @click.prevent="select(item.id)">{{ item.name }}<span v-if="item.id === 'kien-thuc-can-co'" class="tab-count">{{ lectureConceptIds(lesson).length }}</span></a></nav>
+  <nav v-if="course && lesson" ref="tabList" class="course-tabs lecture-tabs" aria-label="Các phần của bài giảng" @pointerenter.once="warmPanels" @focusin.once="warmPanels" @touchstart.once.passive="warmPanels"><a v-for="item in orderedParts" :key="item.id" :href="studyLink(lecturePath(course.id, lesson.slug, item.id))" :aria-current="part === item.id ? 'page' : undefined" @click.prevent="select(item.id)">{{ item.name }}<span v-if="item.id === 'kien-thuc-can-co'" class="tab-count">{{ lectureConceptIds(lesson).length }}</span></a></nav>
 </template>

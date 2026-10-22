@@ -13,46 +13,46 @@
   "examples": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 190,
+      "line": 187,
       "title": "Ví dụ minh họa ước lượng ATE trên mẫu 6 sinh viên"
     }
   ],
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 365,
+      "line": 345,
       "title": "Bài tập tự luyện"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 367,
+      "line": 347,
       "title": "Bài tập 1: Đồ thị nhân quả và phân tích phản thực tế"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 431,
+      "line": 411,
       "title": "Bài tập 2: Mô hình kết quả tiềm năng và Đảo ngược dấu hiệu ứng"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 542,
+      "line": 517,
       "title": "Bài tập 3: Thiên lệch lựa chọn trong chương trình đào tạo nghề"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 389,
+      "line": 369,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 457,
+      "line": 432,
       "title": ""
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 564,
+      "line": 539,
       "title": ""
     }
   ],
@@ -66,13 +66,13 @@
     {
       "reference": "./img/stat20-21/frost.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 131,
+      "line": 128,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-21/frost.png"
     },
     {
       "reference": "./img/stat20-21/the-route-not-taken.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/21-dinh-nghia-nhan-qua.md",
-      "line": 163,
+      "line": 160,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-21/the-route-not-taken.png"
     }
   ]

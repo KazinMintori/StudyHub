@@ -109,7 +109,10 @@ $$
 Lấy giá trị lớn nhất theo $u$ trên quả cầu đơn vị:
 
 $$
-\sup_{\|u\|_2 \le 1} a_i^T (Bu + d) = a_i^T d + \sup_{\|u\|_2 \le 1} (B a_i)^T u = a_i^T d + \|B a_i\|_2.
+\begin{aligned}
+\sup_{\|u\|_2 \le 1} a_i^T (Bu + d) &= a_i^T d + \sup_{\|u\|_2 \le 1} (B a_i)^T u\\
+&= a_i^T d + \|B a_i\|_2.
+\end{aligned}
 $$
 
 Do đó, điều kiện hình học phức tạp được rút gọn thành một hệ bất đẳng thức nón bậc hai rất gọn gàng:
@@ -140,7 +143,10 @@ Tâm Chebyshev là tâm của quả cầu Euclid lớn nhất nội tiếp bên 
 Nếu quả cầu có tâm $x_c \in \mathbb{R}^n$ và bán kính $r \ge 0$, điều kiện quả cầu nằm trong $\mathcal{P}$ tương ứng với trường hợp $B = r I_n$ ở mục trước:
 
 $$
-\|r I_n a_i\|_2 + a_i^T x_c \le b_i \iff a_i^T x_c + r \|a_i\|_2 \le b_i.
+\begin{aligned}
+\|r I_n a_i\|_2 + a_i^T x_c &\le b_i\\
+&\iff a_i^T x_c + r \|a_i\|_2 \le b_i.
+\end{aligned}
 $$
 
 Cực đại hóa bán kính $r$ dẫn trực tiếp tới một **Quy hoạch tuyến tính (LP)**:
@@ -159,7 +165,10 @@ Bán kính tối ưu $r^*$ chính là khoảng cách từ tâm Chebyshev tới m
 Tâm giải tích là điểm cực tiểu hóa hàm chắn logarit (Logarithmic Barrier) của toàn bộ các mặt biên:
 
 $$
-x_{\mathrm{ac}} = \arg\min_{x \in \operatorname{int}(\mathcal{P})} \phi(x) = -\sum_{i=1}^m \log(b_i - a_i^T x).
+\begin{aligned}
+x_{\mathrm{ac}} &= \arg\min_{x \in \operatorname{int}(\mathcal{P})} \phi(x)\\
+&= -\sum_{i=1}^m \log(b_i - a_i^T x).
+\end{aligned}
 $$
 
 Hàm số $\phi(x)$ là hàm lồi ngặt và tiến ra $+\infty$ khi $x$ tiến tới bất kỳ mặt biên nào. Đạo hàm của hàm chắn tại tâm giải tích triệt tiêu:
@@ -192,13 +201,22 @@ Các ràng buộc bán kính trở thành:
 Để cực đại hóa $r$, ta chọn $x_1 = x_2 = r$. Thay vào bất đẳng thức thứ ba:
 
 $$
-2r + r\sqrt{2} \le 1 \iff r(2 + \sqrt{2}) \le 1 \implies r^* = \frac{1}{2 + \sqrt{2}} = 1 - \frac{\sqrt{2}}{2} \approx 0{,}2929.
+\begin{aligned}
+2r + r\sqrt{2} &\le 1\\
+&\iff r(2 + \sqrt{2}) \le 1\\
+&\implies r^* = \frac{1}{2 + \sqrt{2}}\\
+&= 1 - \frac{\sqrt{2}}{2}\\
+&\approx 0{,}2929.
+\end{aligned}
 $$
 
 Tâm Chebyshev tương ứng:
 
 $$
-x_c^* = \left(1 - \frac{\sqrt{2}}{2}, 1 - \frac{\sqrt{2}}{2}\right) \approx (0{,}2929, 0{,}2929).
+\begin{aligned}
+x_c^* &= \left(1 - \frac{\sqrt{2}}{2}, 1 - \frac{\sqrt{2}}{2}\right)\\
+&\approx (0{,}2929, 0{,}2929).
+\end{aligned}
 $$
 
 Đây chính là tâm đường tròn nội tiếp tam giác vuông cân đơn vị.
@@ -220,11 +238,11 @@ $$
 ::: solution
 1. **Tính đạo hàm riêng**:
    $$
-\begin{aligned}
-\frac{\partial \phi}{\partial x_1} &= -\frac{1}{x_1} + \frac{1}{1 - x_1 - x_2}, \\
-\frac{\partial \phi}{\partial x_2} &= -\frac{1}{x_2} + \frac{1}{1 - x_1 - x_2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   \frac{\partial \phi}{\partial x_1} &= -\frac{1}{x_1} + \frac{1}{1 - x_1 - x_2}, \\
+   \frac{\partial \phi}{\partial x_2} &= -\frac{1}{x_2} + \frac{1}{1 - x_1 - x_2}.
+   \end{aligned}
+   $$
 
 2. **Tìm nghiệm triệt tiêu gradient**:
    Cho $\nabla \phi(x) = 0$:
@@ -233,14 +251,22 @@ $$
    $$
    Suy ra $x_1 = x_2$. Đặt $x_1 = x_2 = u$, ta có:
    $$
-   \frac{1}{u} = \frac{1}{1 - 2u} \iff 1 - 2u = u \iff 3u = 1 \implies u = \frac{1}{3}.
+   \begin{aligned}
+   \frac{1}{u} &= \frac{1}{1 - 2u}\\
+   &\iff 1 - 2u = u\\
+   &\iff 3u = 1\\
+   &\implies u = \frac{1}{3}.
+   \end{aligned}
    $$
    Vậy tâm giải tích là điểm $x_{\mathrm{ac}} = (1/3, 1/3)$.
 
 3. **Bình luận so sánh**:
    - Trọng tâm hình học tam giác:
      $$
-     x_{\mathrm{centroid}} = \frac{1}{3}(0,0) + \frac{1}{3}(1,0) + \frac{1}{3}(0,1) = \left(\frac{1}{3}, \frac{1}{3}\right).
+     \begin{aligned}
+     x_{\mathrm{centroid}} &= \frac{1}{3}(0,0) + \frac{1}{3}(1,0) + \frac{1}{3}(0,1)\\
+     &= \left(\frac{1}{3}, \frac{1}{3}\right).
+     \end{aligned}
      $$
      Trong trường hợp đơn hình chuẩn, tâm giải tích trùng khớp hoàn toàn với trọng tâm.
    - Tâm Chebyshev: Điểm $x_c \approx (0{,}2929, 0{,}2929)$ nằm gần gốc tọa độ hơn một chút do chịu lực cản bởi mặt cạnh huyền dốc $\sqrt{2}$.

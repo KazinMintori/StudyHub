@@ -12,34 +12,34 @@
   "exercises": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 695,
+      "line": 688,
       "title": "Bài tập 1: Bản chất vector logic & Phân rã lỗi trong đường ống dữ liệu"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 787,
+      "line": 780,
       "title": "Bài tập 2: So sánh lực lượng tập hợp & Phân nhóm đa biến"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 871,
+      "line": 864,
       "title": "Bài tập 3: Thiết kế đường ống phân tích giấc ngủ động vật theo nhóm dinh dưỡng"
     }
   ],
   "solutions": [
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 731,
+      "line": 724,
       "title": "Lời giải chi tiết Bài tập 1"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 839,
+      "line": 832,
       "title": "Lời giải chi tiết Bài tập 2"
     },
     {
       "source": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 907,
+      "line": 900,
       "title": "Lời giải chi tiết Bài tập 3"
     }
   ],
@@ -53,25 +53,25 @@
     {
       "reference": "./img/stat20-06/venn-and-or.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 305,
+      "line": 298,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-06/venn-and-or.png"
     },
     {
       "reference": "./img/stat20-06/pipeline-2.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 439,
+      "line": 432,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-06/pipeline-2.png"
     },
     {
       "reference": "./img/stat20-06/line-christenings.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 567,
+      "line": 560,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-06/line-christenings.png"
     },
     {
       "reference": "./img/stat20-06/group-by.png",
       "declaredIn": "docs/xac-suat-thong-ke/bai-giang/06-phan-tich-co-dieu-kien.md",
-      "line": 641,
+      "line": 634,
       "source": "docs/xac-suat-thong-ke/bai-giang/img/stat20-06/group-by.png"
     }
   ]

@@ -16,7 +16,10 @@ Tuy nhiên, khác với đạo hàm, không phải phép toán thông thường 
 **Tổng có trọng số không âm**: Nếu các hàm $f_1, \dots, f_m$ đều lồi và các trọng số $w_1, \dots, w_m \ge 0$, thì tổ hợp tuyến tính không âm:
 
 $$
-f(x) = \sum_{i=1}^m w_i f_i(x) = w_1 f_1(x) + w_2 f_2(x) + \dots + w_m f_m(x)
+\begin{aligned}
+f(x) &= \sum_{i=1}^m w_i f_i(x)\\
+&= w_1 f_1(x) + w_2 f_2(x) + \dots + w_m f_m(x)
+\end{aligned}
 $$
 
 là một hàm lồi. Nói cách khác, tập hợp các hàm lồi tạo thành một **nón lồi** (convex cone). Quy tắc này mở rộng tự nhiên sang tổng vô hạn và tích phân: Nếu $f(x, y)$ lồi theo biến $x$ với mỗi $y$, và hàm trọng số $w(y) \ge 0$, thì tích phân $\int w(y) f(x, y)\,dy$ vẫn lồi theo $x$. Đây chính là lý do vì sao **kỳ vọng toán học** của một hàm mất mát lồi lấy theo phân phối dữ liệu vẫn giữ nguyên tính lồi theo tham số mô hình.
@@ -100,7 +103,10 @@ Ba ví dụ ứng dụng quen thuộc:
 - **Hàm mất mát Huber**: Cực tiểu hóa theo biến phụ $s$ của hàm lồi đồng thời $\tfrac12 (r - s)^2 + |s|$ cho:
 
 $$
-\phi(r) = \min_s \Big( \tfrac12 (r - s)^2 + |s| \Big) = \begin{cases} \tfrac12 r^2 & |r| \le 1, \\ |r| - \tfrac12 & |r| > 1. \end{cases}
+\begin{aligned}
+\phi(r) &= \min_s \Big( \tfrac12 (r - s)^2 + |s| \Big)\\
+&= \begin{cases} \tfrac12 r^2 & |r| \le 1, \\ |r| - \tfrac12 & |r| > 1. \end{cases}
+\end{aligned}
 $$
 
 Đây là hàm phạt Huber nổi tiếng trong hồi quy bền vững: Phạt bình phương với sai số nhỏ và phạt tuyến tính với sai số lớn, nhờ đó các điểm dị biệt (outlier) không làm lệch nghiệm tối ưu. Ta khẳng định ngay hàm Huber lồi mà không cần khảo sát đạo hàm trên từng nhánh. Cách hiểu biến phụ $s$ cũng rất trực quan: Biến $s$ là phần sai số được "tha" cho mức phạt tuyến tính nhẹ hơn, còn phần còn lại $r - s$ chịu mức phạt bình phương. Kiểm tra bằng số: Tại $r = 3$, giá trị nhỏ nhất bằng $2.5$, đạt được tại $s = 2$.
@@ -115,7 +121,10 @@ Hai ứng dụng tiêu biểu làm nổi bật sức mạnh của phép toán ph
 - Phối cảnh của hàm $-\log x$ là $t\log(t/x)$, đại lượng này được gọi là **entropy tương đối** (relative entropy), lồi đồng thời theo cặp biến $(x, t)$ trên miền $x > 0, t > 0$. Lấy tổng theo từng tọa độ, độ phân kỳ Kullback–Leibler (KL divergence) giữa hai phân phối xác suất rời rạc:
 
 $$
-D_{\mathrm{kl}}(p, q) = \sum_{i=1}^n p_i \log\frac{p_i}{q_i} = p_1 \log\frac{p_1}{q_1} + p_2 \log\frac{p_2}{q_2} + \dots + p_n \log\frac{p_n}{q_n}
+\begin{aligned}
+D_{\mathrm{kl}}(p, q) &= \sum_{i=1}^n p_i \log\frac{p_i}{q_i}\\
+&= p_1 \log\frac{p_1}{q_1} + p_2 \log\frac{p_2}{q_2} + \dots + p_n \log\frac{p_n}{q_n}
+\end{aligned}
 $$
 
 là một hàm lồi **đồng thời** theo cặp $(p, q)$. Chẳng hạn với $p_1 = (0.7, 0.3)$, $q_1 = (0.4, 0.6)$ và $p_2 = (0.2, 0.8)$, $q_2 = (0.5, 0.5)$, trung bình hai giá trị KL xấp xỉ $0.188$, trong khi tại cặp trung bình $(\bar p, \bar q)$ có $\bar p = \bar q = (0.45, 0.55)$ thì KL bằng 0, hoàn toàn phù hợp với tính lồi.

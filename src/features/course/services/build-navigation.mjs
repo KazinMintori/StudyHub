@@ -1,5 +1,5 @@
 // Pure build-time navigation model. The VitePress adapter supplies content.
-export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
+export function buildThemeConfig({ courseCatalog, wikiGroups, concepts, wikiPeople = [] }) {
   return {
     sidebarMenuLabel:'Bài giảng',returnToTopLabel:'Về đầu bài',outlineTitle:'Mục lục',
     siteTitle:'UETệ', darkModeSwitchLabel:'Giao diện', lightModeSwitchTitle:'Chuyển sang giao diện sáng', darkModeSwitchTitle:'Chuyển sang giao diện tối',
@@ -59,11 +59,13 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
       ]])),
       '/wiki/':[
         {text:'Wiki học tập',items:[{text:'Tất cả thuật ngữ',link:'/wiki/'}]},
+        ...(wikiPeople.length ? [{text:'Con người & ý tưởng',collapsed:true,items:wikiPeople.map(person=>({text:person.name,link:`/wiki/nhan-vat/${person.id}`}))}] : []),
         ...wikiGroups.map(group=>({text:group.name,collapsed:true,items:group.ids.map(id=>({text:concepts[id].name,link:`/wiki/${id}`}))}))
       ],
       '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'},{text:'Đóng góp nội dung',link:'/guide/contribute'}]}]
     },
     outline:{level:2,label:'Mục lục'},
-    docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},lastUpdated:{text:'Cập nhật lần cuối'},
+    docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},
+    lastUpdated:{text:'Cập nhật lần cuối',formatOptions:{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Ho_Chi_Minh',forceLocale:true}},
   }
 }

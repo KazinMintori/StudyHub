@@ -23,7 +23,10 @@ Thuật toán **AdaGrad** (Duchi et al., 2011) khởi xướng ý tưởng: Các
 Khởi tạo bộ tích lũy $s_0 = 0$, tại mỗi bước $t$, AdaGrad cập nhật:
 
 $$
-s_t = s_{t-1} + g_t \odot g_t, \qquad \theta_{t+1} = \theta_t - \eta \frac{g_t}{\sqrt{s_t} + \varepsilon},
+\begin{aligned}
+&s_t = s_{t-1} + g_t \odot g_t, \qquad\\
+&\theta_{t+1} = \theta_t - \eta \frac{g_t}{\sqrt{s_t} + \varepsilon},
+\end{aligned}
 $$
 
 trong đó:
@@ -50,7 +53,12 @@ Xét một tham số nhận chuỗi gradient thử nghiệm $g_1 = 2$, $g_2 = 2$
   - Tích lũy: $s_2 = 4 + 2^2 = 8$.
   - Bước cập nhật:
     $$
-    \Delta\theta_2 = -0.1 \cdot \frac{2}{\sqrt{8}} = -0.1 \cdot \frac{2}{2\sqrt{2}} = -\frac{0.1}{\sqrt{2}} \approx -0.07071.
+    \begin{aligned}
+    \Delta\theta_2 &= -0.1 \cdot \frac{2}{\sqrt{8}}\\
+    &= -0.1 \cdot \frac{2}{2\sqrt{2}}\\
+    &= -\frac{0.1}{\sqrt{2}}\\
+    &\approx -0.07071.
+    \end{aligned}
     $$
 
 Bước nhảy đã tự động giảm từ $0.1$ xuống xấp xỉ $0.07071$ dù gradient ở hai bước là hoàn toàn như nhau.
@@ -67,7 +75,10 @@ Bước nhảy đã tự động giảm từ $0.1$ xuống xấp xỉ $0.07071$ 
 Thay vì cộng dồn toàn bộ lịch sử từ thuở sơ khai, RMSProp chỉ ghi nhớ quá khứ gần thông qua **trung bình trượt hàm mũ (Exponential Moving Average - EMA)**:
 
 $$
-v_t = \beta v_{t-1} + (1 - \beta) g_t \odot g_t, \qquad \theta_{t+1} = \theta_t - \eta \frac{g_t}{\sqrt{v_t} + \varepsilon},
+\begin{aligned}
+&v_t = \beta v_{t-1} + (1 - \beta) g_t \odot g_t, \qquad\\
+&\theta_{t+1} = \theta_t - \eta \frac{g_t}{\sqrt{v_t} + \varepsilon},
+\end{aligned}
 $$
 
 với hệ số suy giảm thường chọn $\beta = 0.9$.
@@ -83,7 +94,11 @@ Khởi tạo $v_0 = 0$, gặp gradient $g_1 = 2$, hệ số $\beta = 0.9$, $\eta
 - $v_1 = 0.9(0) + (1 - 0.9)(2^2) = 0.4$.
 - Bước cập nhật:
   $$
-  \Delta\theta_1 = -0.1 \cdot \frac{2}{\sqrt{0.4}} \approx -0.1 \cdot \frac{2}{0.63245} \approx -0.31623.
+  \begin{aligned}
+  \Delta\theta_1 &= -0.1 \cdot \frac{2}{\sqrt{0.4}}\\
+  &\approx -0.1 \cdot \frac{2}{0.63245}\\
+  &\approx -0.31623.
+  \end{aligned}
   $$
 Bước nhảy ban đầu này lớn hơn so với AdaGrad ($-0.1$) vì trạng thái khởi tạo $v_1 = 0.4$ còn nhỏ.
 :::
@@ -127,7 +142,11 @@ m_t = (1 - \beta_1) \sum_{i=1}^t \beta_1^{t-i} g_i.
 $$
 Lấy kỳ vọng hai vế (giả sử kỳ vọng của gradient là hằng số $\mathbb{E}[g_i] = \mathbb{E}[g]$):
 $$
-\mathbb{E}[m_t] = \mathbb{E}[g] (1 - \beta_1) \sum_{i=1}^t \beta_1^{t-i} = \mathbb{E}[g] (1 - \beta_1) \frac{1 - \beta_1^t}{1 - \beta_1} = \mathbb{E}[g] (1 - \beta_1^t).
+\begin{aligned}
+\mathbb{E}[m_t] &= \mathbb{E}[g] (1 - \beta_1) \sum_{i=1}^t \beta_1^{t-i}\\
+&= \mathbb{E}[g] (1 - \beta_1) \frac{1 - \beta_1^t}{1 - \beta_1}\\
+&= \mathbb{E}[g] (1 - \beta_1^t).
+\end{aligned}
 $$
 
 Rõ ràng $\mathbb{E}[m_t] \ne \mathbb{E}[g]$ do tồn tại thừa số $(1 - \beta_1^t) < 1$. Đặc biệt với $\beta_2 = 0.999$, tại bước $t = 1$, thừa số này chỉ bằng $1 - 0.999 = 0.001$, khiến $v_1$ nhỏ hơn giá trị thực tế tới 1000 lần! 
@@ -195,12 +214,20 @@ Cho $H = \begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}$ và $b = \begin{bmatrix} 
   Vị trí mới: $z_1 = z_0 + \alpha_0 p_0 = \left(\frac{2}{3}, \frac{2}{3}\right)^T$.
   Phần dư mới:
   $$
-  r_1 = r_0 - \alpha_0 H p_0 = \begin{bmatrix} 1 \\ 1 \end{bmatrix} - \frac{2}{3}\begin{bmatrix} 1 \\ 2 \end{bmatrix} = \left(\frac{1}{3}, -\frac{1}{3}\right)^T.
+  \begin{aligned}
+  r_1 &= r_0 - \alpha_0 H p_0\\
+  &= \begin{bmatrix} 1 \\ 1 \end{bmatrix} - \frac{2}{3}\begin{bmatrix} 1 \\ 2 \end{bmatrix}\\
+  &= \left(\frac{1}{3}, -\frac{1}{3}\right)^T.
+  \end{aligned}
   $$
 - Hệ số góc Gram-Schmidt: $\gamma_0 = \frac{r_1^T r_1}{r_0^T r_0} = \frac{2/9}{2} = \frac{1}{9}$.
   Hướng liên hợp mới:
   $$
-  p_1 = r_1 + \gamma_0 p_0 = \begin{bmatrix} 1/3 \\ -1/3 \end{bmatrix} + \frac{1}{9}\begin{bmatrix} 1 \\ 1 \end{bmatrix} = \left(\frac{4}{9}, -\frac{2}{9}\right)^T.
+  \begin{aligned}
+  p_1 &= r_1 + \gamma_0 p_0\\
+  &= \begin{bmatrix} 1/3 \\ -1/3 \end{bmatrix} + \frac{1}{9}\begin{bmatrix} 1 \\ 1 \end{bmatrix}\\
+  &= \left(\frac{4}{9}, -\frac{2}{9}\right)^T.
+  \end{aligned}
   $$
   Kiểm tra tính liên hợp: $p_0^T H p_1 = \begin{bmatrix}1 & 1\end{bmatrix} \begin{bmatrix} 4/9 \\ -4/9 \end{bmatrix} = 0$ (liên hợp hoàn hảo!).
 - Bước 2: $\alpha_1 = \frac{3}{4}$, vị trí mới đạt đúng nghiệm: $z_2 = \left(1, \frac{1}{2}\right)^T$, thỏa mãn $H z_2 = b$.
@@ -268,13 +295,21 @@ Hãy tính toán các trạng thái $m_1, v_1, \widehat m_1, \widehat v_1$ và x
 - $v_1 = (1 - \beta_2) g_1^2 = 0.001(9) = 0.009$.
 - Hiệu chỉnh chệch:
   $$
-\begin{aligned}
-\widehat m_1 &= \frac{m_1}{1 - \beta_1^1} = \frac{-0.3}{0.1} = -3. \\
-\widehat v_1 &= \frac{v_1}{1 - \beta_2^1} = \frac{0.009}{0.001} = 9.
-\end{aligned}
-$$
+  \begin{aligned}
+  \widehat m_1 &= \frac{m_1}{1 - \beta_1^1} = \frac{-0.3}{0.1} = -3. \\
+  \widehat v_1 &= \frac{v_1}{1 - \beta_2^1} = \frac{0.009}{0.001} = 9.
+  \end{aligned}
+  $$
 - Bước cập nhật:
-  $$\Delta\theta_1 = -\eta \frac{\widehat m_1}{\sqrt{\widehat v_1} + \varepsilon} \approx -0.1 \cdot \frac{-3}{\sqrt{9}} = -0.1 \cdot \frac{-3}{3} = +0.1 > 0.$$
+  $$
+  \begin{aligned}
+  \Delta\theta_1 &= -\eta \frac{\widehat m_1}{\sqrt{\widehat v_1} + \varepsilon}\\
+  &\approx -0.1 \cdot \frac{-3}{\sqrt{9}}\\
+  &= -0.1 \cdot \frac{-3}{3}\\
+  &= +0.1\\
+  &> 0.
+  \end{aligned}
+  $$
 Dấu của gradient âm được lưu giữ hoàn hảo trong $m_1$, giúp tham số di chuyển theo chiều dương để hạ thấp hàm mất mát.
 :::
 
@@ -285,11 +320,16 @@ Cho hàm số có ma trận Hessian đầy đủ chứa tương quan chéo: $H =
 :::
 ::: solution
 1. Hướng Newton chính xác: Giải hệ phương trình:
-   $$\begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} d_1 \\ d_2 \end{bmatrix} = \begin{bmatrix} -1 \\ 0 \end{bmatrix} \iff \begin{cases} 2d_1 + d_2 = -1 \\ d_1 + 2d_2 = 0 \end{cases} \implies \begin{cases} d_1 = -2/3 \\ d_2 = 1/3 \end{cases}.$$
+   $$
+   \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} d_1 \\ d_2 \end{bmatrix} = \begin{bmatrix} -1 \\ 0 \end{bmatrix} \iff \begin{cases} 2d_1 + d_2 = -1 \\ d_1 + 2d_2 = 0 \end{cases} \implies \begin{cases} d_1 = -2/3 \\ d_2 = 1/3 \end{cases}.
+   $$
    Hướng Newton là $d = \left(-\frac{2}{3}, \frac{1}{3}\right)^T$. Tọa độ thứ hai được điều chỉnh một lượng dương $+1/3$ nhờ thông tin tương quan chéo $H_{12} = 1$.
 2. Nếu chỉ co giãn theo đường chéo: Vector bước đi là:
    $$
-   -\operatorname{diag}(H)^{-1} g = \begin{bmatrix} -1/2 & 0 \\ 0 & -1/2 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} -1/2 \\ 0 \end{bmatrix}.
+   \begin{aligned}
+   -\operatorname{diag}(H)^{-1} g &= \begin{bmatrix} -1/2 & 0 \\ 0 & -1/2 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix}\\
+   &= \begin{bmatrix} -1/2 \\ 0 \end{bmatrix}.
+   \end{aligned}
    $$
    Tọa độ thứ hai hoàn toàn không được cập nhật ($d_2 = 0$). Điều này chứng minh rằng các thuật toán thích nghi từng tọa độ như Adam hay RMSProp chỉ xấp xỉ đường chéo của Hessian, hoàn toàn không thể nắm bắt được tương quan xoay trục giữa các biến trong không gian tham số.
 :::
@@ -298,7 +338,10 @@ Cho hàm số có ma trận Hessian đầy đủ chứa tương quan chéo: $H =
 Thuật toán Adam khởi tạo các vector moment bậc nhất và bậc hai bằng $0$: $m_0 = 0$, $v_0 = 0$.
 Quy tắc cập nhật trung bình trượt hàm mũ tại bước $t \ge 1$:
 $$
-m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t, \qquad v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2,
+\begin{aligned}
+&m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t, \qquad\\
+&v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2,
+\end{aligned}
 $$
 với $\beta_1 = 0{,}9$, $\beta_2 = 0{,}999$.
 1. Khai triển đệ quy để biểu diễn $m_t$ thành tổ hợp tuyến tính của các gradient quá khứ $\{g_1, \dots, g_t\}$.
@@ -315,7 +358,10 @@ với $\beta_1 = 0{,}9$, $\beta_2 = 0{,}999$.
    Tại bước $t = 1$: $m_1 = (1 - \beta_1) g_1$.
    Tại bước $t = 2$:
    $$
-   m_2 = \beta_1 m_1 + (1 - \beta_1) g_2 = \beta_1(1 - \beta_1) g_1 + (1 - \beta_1) g_2.
+   \begin{aligned}
+   m_2 &= \beta_1 m_1 + (1 - \beta_1) g_2\\
+   &= \beta_1(1 - \beta_1) g_1 + (1 - \beta_1) g_2.
+   \end{aligned}
    $$
    Bằng quy nạp toán học, tại bước $t$ bất kỳ:
    $$
@@ -325,18 +371,24 @@ với $\beta_1 = 0{,}9$, $\beta_2 = 0{,}999$.
 2. **Kỳ vọng toán học và cơ chế hiệu chỉnh**:
    Lấy kỳ vọng toán học hai vế với giả thiết $\mathbb{E}[g_i] = \mu$:
    $$
-\begin{aligned}
-\mathbb{E}[m_t] &= (1 - \beta_1) \sum_{i=1}^t \beta_1^{t - i} \mathbb{E}[g_i] \\
-&= (1 - \beta_1) \mu \sum_{i=1}^t \beta_1^{t - i}.
-\end{aligned}
-$$
+   \begin{aligned}
+   \mathbb{E}[m_t] &= (1 - \beta_1) \sum_{i=1}^t \beta_1^{t - i} \mathbb{E}[g_i] \\
+   &= (1 - \beta_1) \mu \sum_{i=1}^t \beta_1^{t - i}.
+   \end{aligned}
+   $$
    Tổng cấp số nhân với công bội $\beta_1$:
    $$
-   \sum_{i=1}^t \beta_1^{t - i} = 1 + \beta_1 + \beta_1^2 + \dots + \beta_1^{t-1} = \frac{1 - \beta_1^t}{1 - \beta_1}.
+   \begin{aligned}
+   \sum_{i=1}^t \beta_1^{t - i} &= 1 + \beta_1 + \beta_1^2 + \dots + \beta_1^{t-1}\\
+   &= \frac{1 - \beta_1^t}{1 - \beta_1}.
+   \end{aligned}
    $$
    Thay vào biểu thức kỳ vọng:
    $$
-   \mathbb{E}[m_t] = (1 - \beta_1) \mu \left(\frac{1 - \beta_1^t}{1 - \beta_1}\right) = (1 - \beta_1^t) \mu.
+   \begin{aligned}
+   \mathbb{E}[m_t] &= (1 - \beta_1) \mu \left(\frac{1 - \beta_1^t}{1 - \beta_1}\right)\\
+   &= (1 - \beta_1^t) \mu.
+   \end{aligned}
    $$
    Vì $\beta_1 < 1$, ta có $1 - \beta_1^t < 1$, chứng minh rằng $m_t$ bị chệch nghiêm trọng về phía gốc tọa độ $0$.
    Để thu được một ước lượng không chệch ($\mathbb{E}[\widehat{m}_t] = \mu$), ta chia $m_t$ cho đúng hệ số co cụm $1 - \beta_1^t$:
@@ -351,11 +403,20 @@ $$
    
    Tỉ số cập nhật của Adam khi không hiệu chỉnh:
    $$
-   \frac{m_1}{\sqrt{v_1}} = \frac{0{,}1 g_1}{\sqrt{0{,}001 g_1^2}} = \frac{0{,}1}{\sqrt{0{,}001}} \frac{g_1}{|g_1|} = \frac{0{,}1}{0{,}0316} \operatorname{sgn}(g_1) \approx 3{,}16 \operatorname{sgn}(g_1).
+   \begin{aligned}
+   \frac{m_1}{\sqrt{v_1}} &= \frac{0{,}1 g_1}{\sqrt{0{,}001 g_1^2}}\\
+   &= \frac{0{,}1}{\sqrt{0{,}001}} \frac{g_1}{|g_1|}\\
+   &= \frac{0{,}1}{0{,}0316} \operatorname{sgn}(g_1)\\
+   &\approx 3{,}16 \operatorname{sgn}(g_1).
+   \end{aligned}
    $$
    Trong khi tỉ số đã hiệu chỉnh:
    $$
-   \frac{\widehat{m}_1}{\sqrt{\widehat{v}_1}} = \frac{g_1}{\sqrt{g_1^2}} = \operatorname{sgn}(g_1) = 1 \operatorname{sgn}(g_1).
+   \begin{aligned}
+   \frac{\widehat{m}_1}{\sqrt{\widehat{v}_1}} &= \frac{g_1}{\sqrt{g_1^2}}\\
+   &= \operatorname{sgn}(g_1)\\
+   &= 1 \operatorname{sgn}(g_1).
+   \end{aligned}
    $$
    Nếu không có hiệu chỉnh chệch, độ lệch giữa bậc một và bậc hai làm biến dạng thang đo bước nhảy ban đầu. Đặc biệt trong các tầng sâu khi gradient rất nhỏ, $v_t$ bị kéo sát về 0 làm mẫu số mất ổn định số học, hoặc ngược lại làm các bước lặp đầu bị co giật mạnh trước khi bước vào quỹ đạo ổn định.
 :::
@@ -385,7 +446,10 @@ Xét bài toán tối ưu với một tham số có gradient không đổi tại
    $$
    Theo định lý tích phân so sánh:
    $$
-   \int_1^T \frac{1}{\sqrt{t}} \, \mathrm{d}t = \big[2\sqrt{t}\big]_1^T = 2\sqrt{T} - 2.
+   \begin{aligned}
+   \int_1^T \frac{1}{\sqrt{t}} \, \mathrm{d}t &= \big[2\sqrt{t}\big]_1^T\\
+   &= 2\sqrt{T} - 2.
+   \end{aligned}
    $$
    Do đó $S_T = O(\sqrt{T})$.
    Độ dài bước nhảy suy giảm theo $1/\sqrt{t} \to 0$. Khi $T$ lớn, bước nhảy trở nên nhỏ tới mức gần như đóng băng hoàn toàn. Nếu mô hình gặp một vùng đồi dốc ở giai đoạn đầu, $G_t$ tích lũy quá lớn khiến thuật toán kiệt sức và không bao giờ thoát ra được các thung lũng phẳng sau đó.
@@ -393,11 +457,12 @@ Xét bài toán tối ưu với một tham số có gradient không đổi tại
 2. **Động lực học của RMSProp**:
    Khai triển đệ quy với $g_i^2 = c^2$:
    $$
-\begin{aligned}
-v_t &= (1 - \beta) c^2 \sum_{i=1}^t \beta^{t - i} \\
-&= (1 - \beta) c^2 \left(\frac{1 - \beta^t}{1 - \beta}\right) = (1 - \beta^t) c^2.
-\end{aligned}
-$$
+   \begin{aligned}
+   v_t &= (1 - \beta) c^2 \sum_{i=1}^t \beta^{t - i}\\
+   &= (1 - \beta) c^2 \left(\frac{1 - \beta^t}{1 - \beta}\right)\\
+   &= (1 - \beta^t) c^2.
+   \end{aligned}
+   $$
    Khi $t \to \infty$, vì $\beta \in (0, 1)$, số hạng $\beta^t \to 0$. Do đó:
    $$
    \lim_{t \to \infty} v_t = c^2.
@@ -439,11 +504,19 @@ với ma trận đối xứng xác định dương $A = \begin{bmatrix} 3 & 1 \\
    $$
    Tích vô hướng với ma trận $A$:
    $$
-   A p^0 = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 5 \end{bmatrix} = \begin{bmatrix} 15 + 5 \\ 5 + 10 \end{bmatrix} = \begin{bmatrix} 20 \\ 15 \end{bmatrix}.
+   \begin{aligned}
+   A p^0 &= \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} 5 \\ 5 \end{bmatrix}\\
+   &= \begin{bmatrix} 15 + 5 \\ 5 + 10 \end{bmatrix}\\
+   &= \begin{bmatrix} 20 \\ 15 \end{bmatrix}.
+   \end{aligned}
    $$
    Mẫu số:
    $$
-   (p^0)^T A p^0 = 5(20) + 5(15) = 100 + 75 = 175.
+   \begin{aligned}
+   (p^0)^T A p^0 &= 5(20) + 5(15)\\
+   &= 100 + 75\\
+   &= 175.
+   \end{aligned}
    $$
    Tử số: $(p^0)^T (-g^0) = \|p^0\|_2^2 = 5^2 + 5^2 = 50$.
    Độ dài bước nhảy tối ưu:
@@ -452,44 +525,83 @@ với ma trận đối xứng xác định dương $A = \begin{bmatrix} 3 & 1 \\
    $$
    Cập nhật điểm mới:
    $$
-   x^1 = x^0 + \alpha_0 p^0 = \begin{bmatrix} 0 \\ 0 \end{bmatrix} + \frac{2}{7} \begin{bmatrix} 5 \\ 5 \end{bmatrix} = \begin{bmatrix} 10/7 \\ 10/7 \end{bmatrix}.
+   \begin{aligned}
+   x^1 &= x^0 + \alpha_0 p^0\\
+   &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} + \frac{2}{7} \begin{bmatrix} 5 \\ 5 \end{bmatrix}\\
+   &= \begin{bmatrix} 10/7 \\ 10/7 \end{bmatrix}.
+   \end{aligned}
    $$
 
 2. **Bước 2: Xây dựng hướng liên hợp**:
    Tính gradient tại điểm mới $x^1$:
    $$
-   g^1 = A x^1 - b = \frac{10}{7} \begin{bmatrix} 4 \\ 3 \end{bmatrix} - \begin{bmatrix} 5 \\ 5 \end{bmatrix} = \begin{bmatrix} 40/7 - 35/7 \\ 30/7 - 35/7 \end{bmatrix} = \begin{bmatrix} 5/7 \\ -5/7 \end{bmatrix}.
+   \begin{aligned}
+   g^1 &= A x^1 - b\\
+   &= \frac{10}{7} \begin{bmatrix} 4 \\ 3 \end{bmatrix} - \begin{bmatrix} 5 \\ 5 \end{bmatrix}\\
+   &= \begin{bmatrix} 40/7 - 35/7 \\ 30/7 - 35/7 \end{bmatrix}\\
+   &= \begin{bmatrix} 5/7 \\ -5/7 \end{bmatrix}.
+   \end{aligned}
    $$
    Tích vô hướng của $g^1$ với $p^0$: $(g^1)^T p^0 = \frac{5}{7}(5) + \left(-\frac{5}{7}\right)(5) = 0$ (gradient mới trực giao hoàn hảo với hướng trước).
    
    Xác định hệ số liên hợp $\beta_1$ theo công thức Polak-Ribière hoặc Fletcher-Reeves:
    $$
-   \beta_1 = \frac{\|g^1\|_2^2}{\|g^0\|_2^2} = \frac{(5/7)^2 + (-5/7)^2}{5^2 + 5^2} = \frac{50/49}{50} = \frac{1}{49}.
+   \begin{aligned}
+   \beta_1 &= \frac{\|g^1\|_2^2}{\|g^0\|_2^2}\\
+   &= \frac{(5/7)^2 + (-5/7)^2}{5^2 + 5^2}\\
+   &= \frac{50/49}{50}\\
+   &= \frac{1}{49}.
+   \end{aligned}
    $$
    Hướng liên hợp mới:
    $$
-   p^1 = -g^1 + \beta_1 p^0 = \begin{bmatrix} -5/7 \\ 5/7 \end{bmatrix} + \frac{1}{49} \begin{bmatrix} 5 \\ 5 \end{bmatrix} = \begin{bmatrix} -35/49 + 5/49 \\ 35/49 + 5/49 \end{bmatrix} = \begin{bmatrix} -30/49 \\ 40/49 \end{bmatrix}.
+   \begin{aligned}
+   p^1 &= -g^1 + \beta_1 p^0\\
+   &= \begin{bmatrix} -5/7 \\ 5/7 \end{bmatrix} + \frac{1}{49} \begin{bmatrix} 5 \\ 5 \end{bmatrix}\\
+   &= \begin{bmatrix} -35/49 + 5/49 \\ 35/49 + 5/49 \end{bmatrix}\\
+   &= \begin{bmatrix} -30/49 \\ 40/49 \end{bmatrix}.
+   \end{aligned}
    $$
    Rút gọn tỉ lệ bằng cách nhân với $\frac{49}{10}$: Chọn vector hướng tương đương $p^1 = \begin{bmatrix} -3 \\ 4 \end{bmatrix}$.
 
 3. **Kiểm tra tính liên hợp và bước nhảy cuối**:
    Kiểm tra tính liên hợp $A$-trực giao:
    $$
-   A p^1 = \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} -3 \\ 4 \end{bmatrix} = \begin{bmatrix} -9 + 4 \\ -3 + 8 \end{bmatrix} = \begin{bmatrix} -5 \\ 5 \end{bmatrix}.
+   \begin{aligned}
+   A p^1 &= \begin{bmatrix} 3 & 1 \\ 1 & 2 \end{bmatrix} \begin{bmatrix} -3 \\ 4 \end{bmatrix}\\
+   &= \begin{bmatrix} -9 + 4 \\ -3 + 8 \end{bmatrix}\\
+   &= \begin{bmatrix} -5 \\ 5 \end{bmatrix}.
+   \end{aligned}
    $$
    Tích vô hướng:
    $$
-   (p^0)^T A p^1 = \begin{bmatrix} 5 & 5 \end{bmatrix} \begin{bmatrix} -5 \\ 5 \end{bmatrix} = -25 + 25 = 0.
+   \begin{aligned}
+   (p^0)^T A p^1 &= \begin{bmatrix} 5 & 5 \end{bmatrix} \begin{bmatrix} -5 \\ 5 \end{bmatrix}\\
+   &= -25 + 25\\
+   &= 0.
+   \end{aligned}
    $$
    Tính chất liên hợp được nghiệm đúng hoàn toàn.
    
    Bước nhảy $\alpha_1$:
    $$
-   \alpha_1 = -\frac{(g^1)^T p^1}{(p^1)^T A p^1} = -\frac{\frac{5}{7}(-3) + \left(-\frac{5}{7}\right)(4)}{(-3)(-5) + 4(5)} = -\frac{-35/7}{15 + 20} = -\frac{-5}{35} = \frac{1}{7}.
+   \begin{aligned}
+   \alpha_1 &= -\frac{(g^1)^T p^1}{(p^1)^T A p^1}\\
+   &= -\frac{\frac{5}{7}(-3) + \left(-\frac{5}{7}\right)(4)}{(-3)(-5) + 4(5)}\\
+   &= -\frac{-35/7}{15 + 20}\\
+   &= -\frac{-5}{35}\\
+   &= \frac{1}{7}.
+   \end{aligned}
    $$
    Cập nhật nghiệm $x^2$:
    $$
-   x^2 = x^1 + \alpha_1 p^1 = \begin{bmatrix} 10/7 \\ 10/7 \end{bmatrix} + \frac{1}{7} \begin{bmatrix} -3 \\ 4 \end{bmatrix} = \begin{bmatrix} 10/7 - 3/7 \\ 10/7 + 4/7 \end{bmatrix} = \begin{bmatrix} 7/7 \\ 14/7 \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+   \begin{aligned}
+   x^2 &= x^1 + \alpha_1 p^1\\
+   &= \begin{bmatrix} 10/7 \\ 10/7 \end{bmatrix} + \frac{1}{7} \begin{bmatrix} -3 \\ 4 \end{bmatrix}\\
+   &= \begin{bmatrix} 10/7 - 3/7 \\ 10/7 + 4/7 \end{bmatrix}\\
+   &= \begin{bmatrix} 7/7 \\ 14/7 \end{bmatrix}\\
+   &= \begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+   \end{aligned}
    $$
    Kiểm tra nghiệm giải tích của hệ phương trình tuyến tính $A x = b$:
    $$
@@ -505,7 +617,10 @@ Các phương pháp Quasi-Newton xấp xỉ ma trận Hessian nghịch đảo $H
 2. Điều kiện độ cong (Curvature Condition): Chứng minh rằng để ma trận xấp xỉ $B_{k+1}$ xác định dương ($B_{k+1} \succ 0$), điều kiện cần là $s_k^T y_k > 0$.
 3. Công thức cập nhật BFGS cho nghịch đảo Hessian:
    $$
-   H_{k+1} = (I - \rho_k s_k y_k^T) H_k (I - \rho_k y_k s_k^T) + \rho_k s_k s_k^T, \qquad \rho_k = \frac{1}{y_k^T s_k}.
+   \begin{aligned}
+   &H_{k+1} = (I - \rho_k s_k y_k^T) H_k (I - \rho_k y_k s_k^T) + \rho_k s_k s_k^T, \qquad\\
+   &\rho_k = \frac{1}{y_k^T s_k}.
+   \end{aligned}
    $$
    Chứng minh rằng nếu $H_k \succ 0$ và $y_k^T s_k > 0$, thì ma trận mới $H_{k+1}$ luôn tự động xác định dương ($H_{k+1} \succ 0$).
 :::
@@ -565,7 +680,11 @@ Các phương pháp Quasi-Newton xấp xỉ ma trận Hessian nghịch đảo $H
 ::: exercise 8. Cơ chế làm mượt bề mặt mất mát của Batch Normalization
 Trong mạng nơ-ron sâu, Batch Normalization (BN) chuẩn hóa một tập hợp các kích hoạt tiền phi tuyến $\{x_1, \dots, x_m\}$ trong một lô nhỏ kích thước $m$:
 $$
-\mu_B = \frac{1}{m} \sum_{i=1}^m x_i, \qquad \sigma_B^2 = \frac{1}{m} \sum_{i=1}^m (x_i - \mu_B)^2, \qquad \widehat{x}_i = \frac{x_i - \mu_B}{\sqrt{\sigma_B^2 + \varepsilon}}.
+\begin{aligned}
+&\mu_B = \frac{1}{m} \sum_{i=1}^m x_i, \qquad\\
+&\sigma_B^2 = \frac{1}{m} \sum_{i=1}^m (x_i - \mu_B)^2, \qquad\\
+&\widehat{x}_i = \frac{x_i - \mu_B}{\sqrt{\sigma_B^2 + \varepsilon}}.
+\end{aligned}
 $$
 Đầu ra cuối cùng được co dãn và dịch chuyển qua hai tham số học được $\gamma$ và $\beta$: $y_i = \gamma \widehat{x}_i + \beta$.
 1. Chứng minh rằng đầu ra chuẩn hóa có kỳ vọng mẫu bằng $0$ và phương sai mẫu xấp xỉ bằng $1$: Biểu thức $\frac{1}{m}\sum_{i=1}^m \widehat{x}_i = 0$ và $\frac{1}{m}\sum_{i=1}^m \widehat{x}_i^2 = \frac{\sigma_B^2}{\sigma_B^2 + \varepsilon} \approx 1$.
@@ -577,11 +696,21 @@ $$
 1. **Kiểm tra kỳ vọng và phương sai mẫu**:
    - Kỳ vọng mẫu của $\widehat{x}_i$:
      $$
-     \frac{1}{m} \sum_{i=1}^m \widehat{x}_i = \frac{1}{m} \sum_{i=1}^m \frac{x_i - \mu_B}{\sqrt{\sigma_B^2 + \varepsilon}} = \frac{1}{\sqrt{\sigma_B^2 + \varepsilon}} \left(\frac{1}{m} \sum_{i=1}^m x_i - \mu_B\right) = \frac{\mu_B - \mu_B}{\sqrt{\sigma_B^2 + \varepsilon}} = 0.
+     \begin{aligned}
+     \frac{1}{m} \sum_{i=1}^m \widehat{x}_i &= \frac{1}{m} \sum_{i=1}^m \frac{x_i - \mu_B}{\sqrt{\sigma_B^2 + \varepsilon}}\\
+     &= \frac{1}{\sqrt{\sigma_B^2 + \varepsilon}} \left(\frac{1}{m} \sum_{i=1}^m x_i - \mu_B\right)\\
+     &= \frac{\mu_B - \mu_B}{\sqrt{\sigma_B^2 + \varepsilon}}\\
+     &= 0.
+     \end{aligned}
      $$
    - Phương sai mẫu của $\widehat{x}_i$:
      $$
-     \frac{1}{m} \sum_{i=1}^m \widehat{x}_i^2 = \frac{1}{m} \sum_{i=1}^m \frac{(x_i - \mu_B)^2}{\sigma_B^2 + \varepsilon} = \frac{\frac{1}{m}\sum_{i=1}^m (x_i - \mu_B)^2}{\sigma_B^2 + \varepsilon} = \frac{\sigma_B^2}{\sigma_B^2 + \varepsilon} \approx 1.
+     \begin{aligned}
+     \frac{1}{m} \sum_{i=1}^m \widehat{x}_i^2 &= \frac{1}{m} \sum_{i=1}^m \frac{(x_i - \mu_B)^2}{\sigma_B^2 + \varepsilon}\\
+     &= \frac{\frac{1}{m}\sum_{i=1}^m (x_i - \mu_B)^2}{\sigma_B^2 + \varepsilon}\\
+     &= \frac{\sigma_B^2}{\sigma_B^2 + \varepsilon}\\
+     &\approx 1.
+     \end{aligned}
      $$
 
 2. **Tính bất biến đối với phép co dãn trọng số**:
@@ -592,11 +721,19 @@ $$
      $$
    - Phương sai mẫu mới:
      $$
-     {\sigma'_B}^2 = \frac{1}{m} \sum_{i=1}^m (\alpha x_i - \alpha \mu_B)^2 = \alpha^2 \sigma_B^2.
+     \begin{aligned}
+     {\sigma'_B}^2 &= \frac{1}{m} \sum_{i=1}^m (\alpha x_i - \alpha \mu_B)^2\\
+     &= \alpha^2 \sigma_B^2.
+     \end{aligned}
      $$
    - Đầu ra chuẩn hóa mới (bỏ qua $\varepsilon$ rất nhỏ):
      $$
-     \widehat{x}'_i = \frac{\alpha x_i - \alpha \mu_B}{\sqrt{\alpha^2 \sigma_B^2}} = \frac{\alpha (x_i - \mu_B)}{\alpha \sigma_B} = \frac{x_i - \mu_B}{\sigma_B} = \widehat{x}_i.
+     \begin{aligned}
+     \widehat{x}'_i &= \frac{\alpha x_i - \alpha \mu_B}{\sqrt{\alpha^2 \sigma_B^2}}\\
+     &= \frac{\alpha (x_i - \mu_B)}{\alpha \sigma_B}\\
+     &= \frac{x_i - \mu_B}{\sigma_B}\\
+     &= \widehat{x}_i.
+     \end{aligned}
      $$
    Đầu ra của tầng BN hoàn toàn bất biến đối với độ lớn của ma trận trọng số $W$.
 

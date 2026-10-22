@@ -13,7 +13,19 @@ Quy hoạch động tách quyết định hiện tại khỏi phần bài toán 
 
 ## Giải thích kỹ thuật
 
-**Nguyên lý tối ưu và trạng thái đủ.** Với thời hạn hữu hạn tất định, $V_t(s)=\min_a\{c_t(s,a)+V_{t+1}(T_t(s,a))\}$. Nếu phần còn lại của một phương án tối ưu không tối ưu từ trạng thái kế tiếp, thay nó bằng phần tốt hơn sẽ giảm tổng chi phí, tạo mâu thuẫn.
+**Nguyên lý tối ưu và trạng thái đủ.** Với thời hạn hữu hạn tất định, hành động $a$ đưa trạng thái $s$ tới $s'=T_t(s,a)$. Tổng chi phí hiện tại và giá trị của phần còn lại là:
+
+$$
+Q_t(s,a)=c_t(s,a)+V_{t+1}(s').
+$$
+
+Phương trình Bellman chọn hành động hợp lệ có tổng này nhỏ nhất:
+
+$$
+V_t(s)=\min_a Q_t(s,a).
+$$
+
+Nếu phần còn lại của một phương án tối ưu không tối ưu từ trạng thái kế tiếp, thay nó bằng phần tốt hơn sẽ giảm tổng chi phí, tạo mâu thuẫn.
 
 Lập luận phụ thuộc trạng thái chứa đủ thông tin quyết định các lựa chọn và chi phí tương lai. Với bài ngẫu nhiên, số hạng tương lai thường trở thành kỳ vọng có điều kiện. Với đồ thị có chu trình, không thể tự dùng một lượt tính ngược theo thứ tự DAG. Nguồn: Convex Optimization, §8.7 cho một đệ quy đường dài nhất và biến thể đường ngắn nhất trong Notes được tự biên soạn.
 

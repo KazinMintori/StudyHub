@@ -16,7 +16,10 @@ next: false
 Mạng tuyến tính trong trạng thái hình sin ổn định có độ lớn trở kháng:
 
 $$
-Z=V/I\\ V_{\mathrm{rms}}=I_{\mathrm{rms}}Z.
+\begin{aligned}
+&Z=V/I\\
+&V_{\mathrm{rms}}=I_{\mathrm{rms}}Z.
+\end{aligned}
 $$
 
 $V,I$ là biên độ, $Z$ đo bằng ôm. Ký hiệu $Z$ ở đây chỉ độ lớn. Trở kháng phức trong cách biểu diễn số phức còn chứa thông tin pha, nên cần phân biệt hai cách dùng ký hiệu.

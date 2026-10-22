@@ -158,7 +158,10 @@ $$
 Dạng biểu thức là $d=-H^{-1}\nabla f(x)$. Trong triển khai, giải hệ tuyến tính thay vì tính ma trận nghịch đảo. Với gradient khác không,
 
 $$
-\nabla f(x)^Td=-\nabla f(x)^TH^{-1}\nabla f(x)<0,
+\begin{aligned}
+\nabla f(x)^Td&=-\nabla f(x)^TH^{-1}\nabla f(x)\\
+&<0,
+\end{aligned}
 $$
 
 nên hướng Newton là hướng giảm. Với Hessian không PD, tính khả nghịch riêng nó chưa đủ bảo đảm tính giảm.

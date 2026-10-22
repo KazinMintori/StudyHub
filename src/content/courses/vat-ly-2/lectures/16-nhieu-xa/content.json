@@ -71,7 +71,23 @@
     "raw_materials/physics/translations/chapter-36/07-khau-do-tron-phan-giai.md",
     "raw_materials/physics/translations/chapter-36/08-anh-toan-ky.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-36/02-nhieu-xa-mot-khe.md",
+      "line": 107,
+      "title": "Ví dụ 36.1: Xác định bề rộng khe hẹp từ hệ vân nhiễu xạ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/03-cuong-do-nhieu-xa-mot-khe.md",
+      "line": 166,
+      "title": "Ví dụ 36.2: Xác định cường độ sáng và bề rộng khe từ độ lệch pha"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/03-cuong-do-nhieu-xa-mot-khe.md",
+      "line": 231,
+      "title": "Ví dụ 36.3: Tính cường độ sáng tại một điểm trên màn quan sát"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-36/10-luyen-tap-huong-dan.md",
@@ -621,6 +637,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-36/00-mo-dau.md",
+      "line": 44,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-36/10-luyen-tap-huong-dan.md",
       "line": 9,
       "title": "Lời giải chi tiết"
@@ -1134,6 +1155,46 @@
       "source": "raw_materials/physics/translations/chapter-36/18-mcat.md",
       "line": 81,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/01-nhieu-xa-fresnel-fraunhofer.md",
+      "line": 45,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/02-nhieu-xa-mot-khe.md",
+      "line": 149,
+      "title": "Xem lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/02-nhieu-xa-mot-khe.md",
+      "line": 184,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/03-cuong-do-nhieu-xa-mot-khe.md",
+      "line": 222,
+      "title": "Xem phân tích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/03-cuong-do-nhieu-xa-mot-khe.md",
+      "line": 291,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/04-nhieu-khe.md",
+      "line": 79,
+      "title": "Xem chứng minh bậc khuyết tổng quát"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/04-nhieu-khe.md",
+      "line": 124,
+      "title": "Xem chứng minh"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-36/04-nhieu-khe.md",
+      "line": 171,
+      "title": "Xem đáp án và giải thích"
     }
   ],
   "assets": [
