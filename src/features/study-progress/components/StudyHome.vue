@@ -7,11 +7,16 @@ import SpotArt from '../../illustrations/components/SpotArt.vue'
 
 const {
   query,
+  selectedCategory,
+  courseCategories,
   visibleCourses,
   catalog,
   resume,
   activeResume,
   activeResumeLink,
+  activeResumeCheatsheetLink,
+  getCategoryCount,
+  getCourseCategoryLabel,
   getLessonChapter,
   getLessonDetailTitle
 } = useStudyHome()
@@ -66,10 +71,24 @@ const tools = [
             </div>
 
             <div class="resume-action">
-              <a class="study-button primary resume-cta-btn" :href="studyLink(activeResumeLink)">
-                <span>{{ resume ? 'Tiếp tục học' : 'Học bài đầu tiên' }}</span>
-                <span class="cta-arrow" aria-hidden="true">→</span>
-              </a>
+              <div class="resume-btn-group">
+                <a
+                  v-if="activeResumeCheatsheetLink"
+                  class="study-button resume-secondary-btn"
+                  :href="studyLink(activeResumeCheatsheetLink)"
+                  title="Tra nhanh bảng công thức của bài học này"
+                >
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                  </svg>
+                  <span>Cheatsheet</span>
+                </a>
+                <a class="study-button primary resume-cta-btn" :href="studyLink(activeResumeLink)">
+                  <span>{{ resume ? 'Tiếp tục học' : 'Học bài đầu tiên' }}</span>
+                  <span class="cta-arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -91,6 +110,22 @@ const tools = [
           </span>
         </label>
       </div>
+
+      <nav class="course-category-tabs" aria-label="Phân loại môn học">
+        <button
+          v-for="cat in courseCategories"
+          :key="cat.id"
+          type="button"
+          class="category-tab-btn"
+          :class="{ active: selectedCategory === cat.id }"
+          :aria-pressed="selectedCategory === cat.id"
+          @click="selectedCategory = cat.id"
+        >
+          <span>{{ cat.label }}</span>
+          <span class="category-count">{{ getCategoryCount(cat.id) }}</span>
+        </button>
+      </nav>
+
       <div class="course-list">
         <a
           v-for="(course, index) in visibleCourses"
@@ -105,7 +140,8 @@ const tools = [
             <p v-if="course.description" class="course-summary">{{ course.description }}</p>
           </div>
           <span class="course-end">
-            <span>{{ course.lessons.length }} {{ course.presentation === 'philosophy' ? 'chương' : 'bài' }}</span>
+            <span class="course-tag-pill">{{ getCourseCategoryLabel(course.id) }}</span>
+            <span class="course-lesson-count">{{ course.lessons.length }} {{ course.presentation === 'philosophy' ? 'chương' : 'bài' }}</span>
             <span class="course-open" aria-hidden="true">→</span>
           </span>
         </a>

@@ -138,7 +138,7 @@
 .lecture-header h1 { font-size: var(--fs-h1); line-height: 1.2; font-weight: 700; margin: var(--space-3) 0; }
 .lecture-meta { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-4); font-size: var(--fs-small); color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .lecture-meta a { color: var(--tim); }
-.lecture-tabs { position: sticky; top: var(--vp-nav-height); z-index: 20; background: var(--paper); margin: 0 0 var(--space-5); }
+.lecture-tabs { position: sticky; top: var(--vp-nav-height); z-index: 20; background: color-mix(in srgb, var(--paper) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); margin: 0 0 var(--space-5); }
 .lecture-tabs .tab-count { font-size: var(--fs-small); margin-left: var(--space-2); color: var(--ink-3); }
 .draft-notice { color: var(--vang); font-size: var(--fs-ui); margin: var(--space-3) 0; }
 /* Plain reading keeps examples and exercises aligned with the article text. */

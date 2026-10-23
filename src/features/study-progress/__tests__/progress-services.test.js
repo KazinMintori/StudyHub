@@ -37,6 +37,13 @@ import {
   buildLastLessonPayload
 } from '../services/heading-bookmark.js'
 
+import {
+  COURSE_CATEGORIES,
+  COURSE_CATEGORY_MAP,
+  getCourseCategoryLabel,
+  useStudyHome
+} from '../controllers/useStudyHome.js'
+
 // Mock course catalog for pure testing
 const mockCourses = [
   {
@@ -311,4 +318,35 @@ test('buildLastLessonPayload constructs record preserving previous fields', () =
     heading: 'sec-2',
     headingTitle: 'Mục 2'
   })
+})
+
+test('COURSE_CATEGORIES defines standard categories with labels', () => {
+  assert.ok(Array.isArray(COURSE_CATEGORIES))
+  assert.ok(COURSE_CATEGORIES.some(c => c.id === 'all'))
+  assert.ok(COURSE_CATEGORIES.some(c => c.id === 'toan'))
+  assert.ok(COURSE_CATEGORIES.some(c => c.id === 'ai-cs'))
+})
+
+test('getCourseCategoryLabel returns mapped category or fallback', () => {
+  assert.strictEqual(getCourseCategoryLabel('toan-cho-ai'), 'Toán & Cơ sở ngành')
+  assert.strictEqual(getCourseCategoryLabel('unknown-course'), 'Học phần')
+})
+
+test('useStudyHome filters courses by category and query together', () => {
+  const customCatalog = [
+    { id: 'toan-cho-ai', name: 'Cơ sở toán cho AI', description: 'Toán', lessons: [] },
+    { id: 'vat-ly-1', name: 'Vật lý 1', description: 'Cơ nhiệt', lessons: [] },
+    { id: 'dsa', name: 'DSA', description: 'Cấu trúc dữ liệu', lessons: [] }
+  ]
+  const home = useStudyHome({ catalog: customCatalog, lastLesson: { value: null } })
+  assert.strictEqual(home.visibleCourses.value.length, 3)
+
+  home.selectedCategory.value = 'toan'
+  assert.strictEqual(home.visibleCourses.value.length, 1)
+  assert.strictEqual(home.visibleCourses.value[0].id, 'toan-cho-ai')
+
+  home.selectedCategory.value = 'all'
+  home.query.value = 'vật lý'
+  assert.strictEqual(home.visibleCourses.value.length, 1)
+  assert.strictEqual(home.visibleCourses.value[0].id, 'vat-ly-1')
 })

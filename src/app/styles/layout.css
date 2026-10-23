@@ -2,6 +2,7 @@
 .VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-ui); }
 .VPNavBar .VPNavBarSearch { display: none !important; }
 .VPNavBar .content-body { background: var(--paper); }
+.nav-extra-tools { display: inline-flex; align-items: center; gap: var(--space-2); margin-left: var(--space-3); }
 .course-sidebar-toggle { display: none; }
 @media (min-width: 960px) {
   .course-sidebar-toggle {
@@ -116,4 +117,13 @@
   .lecture-layout .VPDoc { padding: var(--space-3) 20px var(--space-7); }
   .lecture-layout .VPDoc.has-sidebar .content { padding: 0; }
   .lecture-layout .VPLocalNav { display: none; }
+}
+
+@media (min-width: 960px) {
+  html.study-zen-mode .VPSidebar { display: none !important; }
+  html.study-zen-mode .VPContent.has-sidebar { padding-left: 0 !important; margin-left: 0 !important; }
+  html.study-zen-mode .VPDoc.has-aside .aside { display: none !important; }
+  html.study-zen-mode .VPDoc .container { justify-content: center !important; }
+  html.study-zen-mode .Layout .VPDoc .content-container,
+  html.study-zen-mode .Layout .VPDoc.has-aside .content-container { max-width: 780px !important; margin-inline: auto !important; }
 }

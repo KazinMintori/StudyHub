@@ -15,6 +15,8 @@ import WelcomeScreen from '../features/site/components/WelcomeScreen.vue'
 import SiteIntroduction from '../features/site/components/SiteIntroduction.vue'
 import SpotArt from '../features/illustrations/components/SpotArt.vue'
 import ReadingScrollOffset from '../features/navigation/components/ReadingScrollOffset.vue'
+import ZenModeToggle from '../features/navigation/components/ZenModeToggle.vue'
+import StudyUtilityWidget from '../features/study-tools/components/StudyUtilityWidget.vue'
 import { useData, withBase } from 'vitepress'
 import { computed, defineAsyncComponent, ref } from 'vue'
 import { courseCatalog } from '../content/catalog.mjs'
@@ -79,6 +81,12 @@ const layoutClasses = computed(() => ({
       >
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
       </button>
+    </template>
+    <template #nav-bar-content-after>
+      <div class="nav-extra-tools">
+        <StudyUtilityWidget />
+        <ZenModeToggle />
+      </div>
     </template>
     <template #not-found><main class="course-shell not-found-page"><SpotArt name="notfound" tone="tim" /><h1>Trang này không tồn tại</h1><p>Có thể đường dẫn đã đổi hoặc bài chưa được xuất bản. Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
     <template #doc-before>
