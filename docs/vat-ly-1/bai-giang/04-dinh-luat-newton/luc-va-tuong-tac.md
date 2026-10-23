@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "04-dinh-luat-newton"
-section: "topic"
 topic: "luc-va-tuong-tac"
+section: "topic"
 title: "Lực và tương tác"
 description: "Làm thế nào mô tả và tổng hợp các lực tác dụng lên một vật?"
 ---
@@ -11,4 +11,4 @@ description: "Làm thế nào mô tả và tổng hợp các lực tác dụng l
 
 ## Tài liệu tham khảo
 
-Young & Freedman, *University Physics with Modern Physics*, ấn bản15, mục 4.1.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 4.1.

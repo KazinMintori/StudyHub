@@ -3,17 +3,283 @@
   "lecture": "19-nguyen-ly-thu-nhat",
   "route": "/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat",
   "notes": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat.md",
-  "topics": [],
+  "topics": [
+    {
+      "slug": "he-nhiet-dong",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/he-nhiet-dong.md"
+    },
+    {
+      "slug": "cong-khi-the-tich-thay-doi",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/cong-khi-the-tich-thay-doi.md"
+    },
+    {
+      "slug": "duong-di-giua-cac-trang-thai",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/duong-di-giua-cac-trang-thai.md"
+    },
+    {
+      "slug": "noi-nang-va-nguyen-ly-thu-nhat",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/noi-nang-va-nguyen-ly-thu-nhat.md"
+    },
+    {
+      "slug": "cac-qua-trinh-nhiet-dong",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/cac-qua-trinh-nhiet-dong.md"
+    },
+    {
+      "slug": "noi-nang-khi-ly-tuong",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/noi-nang-khi-ly-tuong.md"
+    },
+    {
+      "slug": "nhiet-dung-khi-ly-tuong",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/nhiet-dung-khi-ly-tuong.md"
+    },
+    {
+      "slug": "qua-trinh-doan-nhiet-khi-ly-tuong",
+      "source": "docs/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat/qua-trinh-doan-nhiet-khi-ly-tuong.md"
+    }
+  ],
   "slides": "docs/.vitepress/physics-courses.mjs",
   "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
   "prerequisites": [
     "khi-ly-tuong",
     "tich-phan",
-    "nhiet-do-tuyet-doi"
+    "nhiet-do-tuyet-doi",
+    "cong-nang-luong"
   ],
-  "fragments": [],
+  "fragments": [
+    "raw_materials/physics/translations/chapter-19/00-mo-dau.md",
+    "raw_materials/physics/translations/chapter-19/17-tom-tat.md",
+    "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+    "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+    "raw_materials/physics/translations/chapter-19/03-duong-di-giua-cac-trang-thai.md",
+    "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+    "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+    "raw_materials/physics/translations/chapter-19/06-noi-nang-khi-ly-tuong.md",
+    "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
+    "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md"
+  ],
   "examples": [],
   "exercises": [],
-  "solutions": [],
-  "assets": []
+  "solutions": [
+    {
+      "source": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+      "line": 43,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+      "line": 123,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/03-duong-di-giua-cac-trang-thai.md",
+      "line": 50,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 242,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 481,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+      "line": 125,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/06-noi-nang-khi-ly-tuong.md",
+      "line": 69,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
+      "line": 262,
+      "title": "Xem lời giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md",
+      "line": 244,
+      "title": "Xem lời giải thích"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "./img/young-19/a-mo-chuong.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/00-mo-dau.md",
+      "line": 5,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-mo-chuong.png"
+    },
+    {
+      "reference": "./img/young-19/b-tom-tat-19-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/17-tom-tat.md",
+      "line": 19,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-tom-tat-19-01.png"
+    },
+    {
+      "reference": "./img/young-19/b-tom-tat-19-02.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/17-tom-tat.md",
+      "line": 41,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-tom-tat-19-02.png"
+    },
+    {
+      "reference": "./img/young-19/b-tom-tat-19-03.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/17-tom-tat.md",
+      "line": 54,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-tom-tat-19-03.png"
+    },
+    {
+      "reference": "./img/young-19/b-tom-tat-19-04.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/17-tom-tat.md",
+      "line": 84,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-tom-tat-19-04.png"
+    },
+    {
+      "reference": "./img/young-19/b-tom-tat-19-05.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/17-tom-tat.md",
+      "line": 119,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-tom-tat-19-05.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+      "line": 11,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-01.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-02.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+      "line": 21,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-02.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-03.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+      "line": 27,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-03.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-04.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+      "line": 18,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-04.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-05.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+      "line": 26,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-05.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-06.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+      "line": 52,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-06.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-07.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/03-duong-di-giua-cac-trang-thai.md",
+      "line": 13,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-07.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-08.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/03-duong-di-giua-cac-trang-thai.md",
+      "line": 32,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-08.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-09.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 37,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-09.png"
+    },
+    {
+      "reference": "../img/young-19/a-ung-dung-tap-the-duc.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 67,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-ung-dung-tap-the-duc.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-10.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 91,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-10.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-11.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 113,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-11.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-12.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 209,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-12.png"
+    },
+    {
+      "reference": "../img/young-19/a-hinh-19-13.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 258,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/a-hinh-19-13.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-14.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+      "line": 26,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-14.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-15.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+      "line": 66,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-15.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-16.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+      "line": 96,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-16.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-17.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+      "line": 107,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-17.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-18.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
+      "line": 21,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-18.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-19.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
+      "line": 63,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-19.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-20.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md",
+      "line": 104,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-20.png"
+    },
+    {
+      "reference": "../img/young-19/b-ung-dung-01.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md",
+      "line": 150,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-ung-dung-01.png"
+    },
+    {
+      "reference": "../img/young-19/b-hinh-19-21.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md",
+      "line": 165,
+      "source": "docs/vat-ly-1/bai-giang/img/young-19/b-hinh-19-21.png"
+    }
+  ]
 }

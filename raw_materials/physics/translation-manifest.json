@@ -589,22 +589,95 @@
           "page": 119
         }
       ],
-      "status": "pending",
-      "fragments": [],
-      "pendingSourceUnits": [
-        "chapter-opening",
-        "4.1",
-        "4.2",
-        "4.3",
-        "4.4",
-        "4.5",
-        "4.6",
-        "all-original-figures-and-captions",
-        "chapter-summary",
-        "guided-practice",
-        "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+      "status": "complete",
+      "fragments": [
+        {
+          "sourceUnit": "parent-00-mo-dau",
+          "file": "raw_materials/physics/translations/chapter-04/parent-00-mo-dau.md",
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "4.1",
+          "file": "raw_materials/physics/translations/chapter-04/parent-01-luc-va-tuong-tac.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "4.2",
+          "file": "raw_materials/physics/translations/chapter-04/parent-02-dinh-luat-thu-nhat.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "4.3",
+          "file": "raw_materials/physics/translations/chapter-04/parent-03-dinh-luat-thu-hai.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "4.4",
+          "file": "raw_materials/physics/translations/chapter-04/parent-04-khoi-luong-trong-luong.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "4.5",
+          "file": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "4.6",
+          "file": "raw_materials/physics/translations/chapter-04/parent-06-so-do-luc.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-17-tom-tat",
+          "file": "raw_materials/physics/translations/chapter-04/parent-17-tom-tat.md",
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-09-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-04/parent-09-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-10-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-04/parent-10-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-11-bai-tap-001-030",
+          "file": "raw_materials/physics/translations/chapter-04/parent-11-bai-tap-001-030.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-12-bai-tap-031-060",
+          "file": "raw_materials/physics/translations/chapter-04/parent-12-bai-tap-031-060.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-04/parent-16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-18-dap-so-luyen-tap",
+          "file": "raw_materials/physics/translations/chapter-04/parent-18-dap-so-luyen-tap.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        }
+      ],
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-04-review.json"
     },
     {
       "chapter": 5,

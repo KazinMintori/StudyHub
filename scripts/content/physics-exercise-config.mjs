@@ -1,5 +1,12 @@
-export const publishedPhysicsExerciseChapters = [9,10,11,17,18,19,20]
+export const publishedPhysicsExerciseChapters = [4,9,10,11,17,18,19,20]
 export const physicsExerciseConfigs = {
+ 4:{numbered:60,total:111,guided:12,discussion:38,half:30,files:[
+  ['guided','parent-09-luyen-tap-huong-dan.md'],
+  ['discussion','parent-10-cau-hoi-thao-luan.md'],
+  ['numbered-a','parent-11-bai-tap-001-030.md'],
+  ['numbered-b','parent-12-bai-tap-031-060.md'],
+  ['bridge','parent-16-bai-tap-cau-noi.md']
+ ]},
  9:{numbered:95,total:130,guided:12,discussion:22,half:48},
  10:{numbered:97,total:140,guided:12,discussion:30,half:75},
  11:{numbered:95,total:133,guided:12,discussion:25,half:48},
@@ -11,6 +18,7 @@ export const physicsExerciseConfigs = {
 export function physicsExerciseFiles(chapter) {
  const config=physicsExerciseConfigs[chapter]
  if(!config)throw Error('Unconfigured exercise chapter: '+chapter)
+ if(config.files)return config.files
  const pad=value=>String(value).padStart(3,'0')
  return [
   ['guided','09-luyen-tap-huong-dan.md'],

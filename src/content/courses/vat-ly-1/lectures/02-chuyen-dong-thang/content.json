@@ -28,7 +28,53 @@
     "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
     "raw_materials/physics/translations/chapter-02/15-dap-so-bai-le.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-02/02-van-toc-tuc-thoi.md",
+      "line": 52,
+      "title": "Ví dụ 2.1 — Vận tốc trung bình và tức thời"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/03-gia-toc.md",
+      "line": 25,
+      "title": "Ví dụ 2.2 — Gia tốc trung bình"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/03-gia-toc.md",
+      "line": 87,
+      "title": "Ví dụ 2.3 — Gia tốc trung bình và tức thời"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
+      "line": 161,
+      "title": "Ví dụ 2.4 — Tính toán với gia tốc không đổi"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
+      "line": 241,
+      "title": "Ví dụ 2.5 — Bài toán đuổi bắt giữa hai xe có gia tốc khác nhau"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
+      "line": 60,
+      "title": "Ví dụ 2.6 — Đồng xu rơi tự do từ tháp nghiêng Pisa"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
+      "line": 133,
+      "title": "Ví dụ 2.7 — Chuyển động hai giai đoạn: Đi lên và rơi xuống"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
+      "line": 258,
+      "title": "Ví dụ 2.8 — Giải thích ý nghĩa vật lý của các nghiệm trong phương trình bậc hai"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
+      "line": 111,
+      "title": "Ví dụ 2.9 — Chuyển động với gia tốc biến thiên tuyến tính"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-02/00-mo-dau.md",
@@ -841,6 +887,71 @@
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
       "line": 236,
       "title": "Lời giải & Phân tích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 13,
+      "title": "Bài tập biến thể VP2.5.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 20,
+      "title": "Bài tập biến thể VP2.5.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 27,
+      "title": "Bài tập biến thể VP2.5.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 35,
+      "title": "Bài tập biến thể VP2.5.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 42,
+      "title": "Bài tập biến thể VP2.7.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 49,
+      "title": "Bài tập biến thể VP2.7.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 56,
+      "title": "Bài tập biến thể VP2.7.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 63,
+      "title": "Bài tập biến thể VP2.7.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 71,
+      "title": "Bài tập biến thể VP2.8.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 78,
+      "title": "Bài tập biến thể VP2.8.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 84,
+      "title": "Bài tập biến thể VP2.8.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 91,
+      "title": "Bài tập biến thể VP2.8.4"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
+      "line": 102,
+      "title": "Chiều cao tòa nhà trong bài toán Green Lantern rơi tự do"
     }
   ],
   "assets": [

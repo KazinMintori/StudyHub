@@ -5,7 +5,8 @@ import mathjax from 'markdown-it-mathjax3'
 import {staticMathPlugin} from '../static-math-plugin.mjs'
 import {splitPhysicsExercises} from '../content/physics-exercise-groups.mjs'
 import {exerciseAssetPath,resolveExerciseHtml} from '../../src/features/lecture/services/chapter-exercises.mjs'
-import {physicsExerciseFiles,validatePhysicsExerciseIds,publishedPhysicsExerciseChapters} from '../content/physics-exercise-config.mjs'
+import {physicsExerciseFiles,validatePhysicsExerciseIds,publishedPhysicsExerciseChapters,physicsExerciseConfigs} from '../content/physics-exercise-config.mjs'
+import {physics1Course} from '../../docs/.vitepress/physics-courses.mjs'
 const problem=id=>'### '+id+'\n\nĐề bài đầy đủ.\n\n<details><summary>Xem lời giải chi tiết</summary>\n\nLời giải.\n\n</details>\n'
 test('Grouping retains each prompt with its entire closed solution',()=>{
  const source='## Bài tập\n\n'+[1,2,3,4,5,6,7].map(n=>problem('9.'+n)).join('\n')
@@ -58,7 +59,7 @@ test('Chapter18 grouping retains exactly its actual130 source prompts',()=>{
  assert.throws(()=>validatePhysicsExerciseIds(18,[{ids:ids.filter(id=>id!=='Q18.30')}]),/discussion/)
  assert.throws(()=>validatePhysicsExerciseIds(18,[{ids:[...ids,'VP18.8.4']}]),/guided/)
  assert.throws(()=>physicsExerciseFiles(45),/Unconfigured/)
- assert.deepEqual(publishedPhysicsExerciseChapters,[9,10,11,17,18,19,20])
+ for(const chapter of [9,10,11,17,18,19,20])assert(publishedPhysicsExerciseChapters.includes(chapter))
 })
 test('Exercise assets reject traversal and preserve the GitHub Pages base',()=>{
  assert.equal(exerciseAssetPath(9,'numbered-a-01.json'),'/physics-exercises/ch09/numbered-a-01.json')
@@ -66,6 +67,23 @@ test('Exercise assets reject traversal and preserve the GitHub Pages base',()=>{
  assert.throws(()=>exerciseAssetPath(NaN))
  const html='<img src="/vat-ly-1/x.png"><a href="/wiki/x.html">X</a><a href="https://example.com">Y</a>'
  assert.equal(resolveExerciseHtml(html,'/StudyHub/'),'<img src="/StudyHub/vat-ly-1/x.png"><a href="/StudyHub/wiki/x.html">X</a><a href="https://example.com">Y</a>')
+})
+
+test('Ready Physics1 chapters have their exercise data enabled for GitHub generation',()=>{
+ for(const lesson of physics1Course.lessons){
+  if(lesson.status==='ready'&&physicsExerciseConfigs[lesson.sourceChapter]){
+   assert(publishedPhysicsExerciseChapters.includes(lesson.sourceChapter),'Missing generated exercises for '+lesson.slug)
+  }
+ }
+ assert.equal(physicsExerciseFiles(4)[0][1],'parent-09-luyen-tap-huong-dan.md')
+ const ids=[
+  ...[1,4,5].flatMap(section=>[1,2,3,4].map(n=>'VP4.'+section+'.'+n)),
+  ...Array.from({length:38},(_,i)=>'Q4.'+(i+1)),
+  ...Array.from({length:60},(_,i)=>'4.'+(i+1)),
+  'Bài tập cầu nối'
+ ]
+ assert.equal(validatePhysicsExerciseIds(4,[{ids}]),111)
+ assert.throws(()=>validatePhysicsExerciseIds(4,[{ids:ids.filter(id=>id!=='4.60')}]),/numbered/)
 })
 test('Pre-rendered groups contain real SVG math; ordinary pages retain Vue bindings',()=>{
  const make=option=>{const md=new MarkdownIt().use(mathjax);md.use(staticMathPlugin,option);return md}

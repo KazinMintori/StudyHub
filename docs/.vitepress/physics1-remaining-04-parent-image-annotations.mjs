@@ -138,5 +138,12 @@ export const physics1RemainingChapter4ParentImageAnnotations={
  'young-04/parent-tom-tat-can-bang':[['Không đổi','constant']],
  'young-04/parent-tom-tat-dinh-luat-hai':[['Khối lượng m','Mass m']],
  'young-04/parent-tom-tat-trong-luong':[['Khối lượng m','Mass m']],
- 'young-04/parent-tom-tat-dinh-luat-ba':[]
+ 'young-04/parent-tom-tat-dinh-luat-ba':[],
+ 'young-04/parent-ex-hinh-e4-26':[['Mặt bàn ngang','Horizontal table'],['Lực kéo','Pull']],
+ 'young-04/parent-ex-hinh-p4-35':[],
+ 'young-04/parent-ex-hinh-p4-37':[],
+ 'young-04/parent-ex-hinh-p4-38':[],
+ 'young-04/parent-ex-hinh-p4-45':[],
+ 'young-04/parent-ex-hinh-p4-46':[],
+ 'young-04/parent-ex-hinh-p4-60':[['Lực, đo bằng newton','Force (N)'],['Thời gian, đo bằng giây','Time (s)']]
 }

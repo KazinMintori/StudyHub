@@ -1,5 +1,6 @@
 import {physics1PriorityCourseData} from '../../../../docs/.vitepress/physics1-priority-course.mjs'
-import {physics1RemainingChapter4Parent} from '../../../../docs/.vitepress/physics1-remaining-ch04-parent.mjs'
+import {physics1RemainingChapter4Parent} from '../../../../docs/.vitepress/physics1-remaining-ch04-course.mjs'
+import {physics1RemainingChapter3Parent} from '../../../../docs/.vitepress/physics1-remaining-ch03-course.mjs'
 import {particlesCosmologyCheatsheet} from '../../../../docs/.vitepress/physics-particles-cosmology-course.mjs'
 import {nuclearCheatsheet} from '../../../../docs/.vitepress/physics-nuclear-course.mjs'
 import {moleculesCheatsheet} from '../../../../docs/.vitepress/physics-molecules-course.mjs'
@@ -31,7 +32,6 @@ import { mathAiReviewCheatsheet } from '../../../content/courses/toan-cho-ai/lec
 
 import {
   unitsVectorsCheatsheet,
-  motion3dCheatsheet,
   newtonApplicationsCheatsheet,
   workEnergyCheatsheet,
   potentialEnergyCheatsheet,
@@ -58,7 +58,7 @@ export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/1
   'vat-ly-2/23-vat-ly-hat-nhan': nuclearCheatsheet,
   'vat-ly-2/24-hat-co-ban-vu-tru': particlesCosmologyCheatsheet,
   'vat-ly-1/01-don-vi-vector': unitsVectorsCheatsheet,
-  'vat-ly-1/03-chuyen-dong-khong-gian': motion3dCheatsheet,
+  'vat-ly-1/03-chuyen-dong-khong-gian': physics1RemainingChapter3Parent.cheatsheet,
   'vat-ly-1/04-dinh-luat-newton': physics1RemainingChapter4Parent.cheatsheet,
   'vat-ly-1/05-ung-dung-newton': newtonApplicationsCheatsheet,
   'vat-ly-1/06-cong-dong-nang': workEnergyCheatsheet,

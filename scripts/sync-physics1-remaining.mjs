@@ -5,6 +5,7 @@ import {parseAst} from 'rollup/parseAst'
 import assert from 'node:assert/strict'
 import {physics1Course} from '../docs/.vitepress/physics-courses.mjs'
 import {concepts} from '../docs/.vitepress/concepts.mjs'
+import {publishedPhysicsExerciseChapters} from './content/physics-exercise-config.mjs'
 
 const chapters=process.argv.slice(2).filter(x=>/^\d+$/.test(x)).map(Number)
 assert(chapters.length,'Pass explicit chapter numbers')
@@ -33,9 +34,12 @@ for(const n of chapters){
  const exercise=coverage.exerciseConfig
  assert(exercise&&exercise.files?.length&&exercise.numbered>0,'Parent must record reconciled exerciseConfig in coverage before integration')
  const topicFiles=data.topics.map(t=>t.file)
- const files=['00-mo-dau.md',...topicFiles,n===1?'11-tom-tat.md':'17-tom-tat.md',...exercise.files.map(([,f])=>f)]
+ const openingFile=data.openingFile||'00-mo-dau.md'
+ const summaryFile=data.summaryFile||(n===1?'11-tom-tat.md':'17-tom-tat.md')
+ const files=[openingFile,...topicFiles,summaryFile,...exercise.files.map(([,f])=>f),...(data.answerFile?[data.answerFile]:[])]
  const contents=await Promise.all(files.map(f=>readFile(raw+'/'+f,'utf8')))
  if(complete){
+  assert(publishedPhysicsExerciseChapters.includes(n),'GitHub must generate this chapter exercise index before marking ready')
   const gate=JSON.parse(await readFile(`qa/physics1-remaining/ch${nn}/completion-gate.json`,'utf8'))
   assert(gate.status==='passed'&&gate.sourceReviewed===true&&gate.numericReview==='passed'&&gate.browserReview==='passed','All independent review gates required')
   for(const [i,file]of files.entries())assert.equal(createHash('sha256').update(contents[i]).digest('hex'),gate.reviewedFileHashes[raw+'/'+file],'File changed after review: '+file)
@@ -56,11 +60,11 @@ for(const n of chapters){
  }
  const inc=file=>`<!--@include: ../../../${raw}/${file}-->\n\n`
  let main=front({course:'vat-ly-1',lecture:old.slug,section:'lecture',title:old.title,prerequisites:lesson.prerequisites,lessonStatus:lesson.status,hasChapterExercises:true,sourceTranslation:'full',description:data.topics.map(t=>t.title).join(', ')+'.'})
- main+='<div class="lecture-notes-content">\n\n'+inc('00-mo-dau.md')+'<TopicMap />\n\n'+inc(n===1?'11-tom-tat.md':'17-tom-tat.md')+'## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương '+n+'.\n\n</div>\n\n'
- main+='<div class="lecture-exercises-content" aria-label="Bài tập cuối chương '+old.title+'">\n\n<ChapterExercises :chapter="'+n+'" />\n\n## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương '+n+'.\n\n</div>\n'
+ main+='<div class="lecture-notes-content">\n\n'+inc(openingFile)+'<TopicMap />\n\n'+inc(summaryFile)+'## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương '+n+'.\n\n</div>\n\n'
+ main+='<div class="lecture-exercises-content" aria-label="Bài tập cuối chương '+old.title+'">\n\n<ChapterExercises :chapter="'+n+'" />\n\n'+(data.answerFile?inc(data.answerFile):'')+'## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương '+n+'.\n\n</div>\n'
  await writeFile(directory+'.md',main)
  entry.status=complete?'complete':'authored-under-review'
- entry.fragments=files.map(file=>({sourceUnit:data.topics.find(t=>t.file===file)?.source??file.replace(/\.md$/,''),file:raw+'/'+file,destination:exercise.files.some(([,f])=>f===file)?'bai-tap':topicFiles.includes(file)?'topic':'notes',status:complete?'source-reviewed-and-render-verified':'draft-under-review'}))
+ entry.fragments=files.map(file=>({sourceUnit:data.topics.find(t=>t.file===file)?.source??file.replace(/\.md$/,''),file:raw+'/'+file,destination:exercise.files.some(([,f])=>f===file)||file===data.answerFile?'bai-tap':topicFiles.includes(file)?'topic':'notes',status:complete?'source-reviewed-and-render-verified':'draft-under-review'}))
  entry.pendingSourceUnits=complete?[]:['independent-source-numeric-and-browser-review']
  if(complete)entry.completionReview=`raw_materials/physics/chapter-${nn}-review.json`
  console.log('Integrated chapter',n,'as',lesson.status)

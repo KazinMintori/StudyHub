@@ -39,6 +39,7 @@
   "fragments": [
     "raw_materials/physics/translations/chapter-04/parent-00-mo-dau.md",
     "raw_materials/physics/translations/chapter-04/parent-17-tom-tat.md",
+    "raw_materials/physics/translations/chapter-04/parent-18-dap-so-luyen-tap.md",
     "raw_materials/physics/translations/chapter-04/parent-01-luc-va-tuong-tac.md",
     "raw_materials/physics/translations/chapter-04/parent-02-dinh-luat-thu-nhat.md",
     "raw_materials/physics/translations/chapter-04/parent-03-dinh-luat-thu-hai.md",
@@ -84,22 +85,22 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 47,
+      "line": 49,
       "title": "Ví dụ định tính 4.8: Lực nào lớn hơn?"
     },
     {
       "source": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 62,
+      "line": 64,
       "title": "Ví dụ định tính 4.9: Cặp lực khi quả táo nằm yên"
     },
     {
       "source": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 93,
+      "line": 95,
       "title": "Ví dụ định tính 4.10: Cặp lực khi kéo vật bằng dây"
     },
     {
       "source": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 130,
+      "line": 132,
       "title": "Ví dụ định tính 4.11: Có mâu thuẫn với định luật thứ ba không?"
     }
   ],
@@ -127,7 +128,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 153,
+      "line": 155,
       "title": "Xem đáp án và giải thích"
     },
     {
@@ -326,25 +327,25 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-04/parent-ung-dung-va-cham.png",
       "declaredIn": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 45,
+      "line": 47,
       "source": "docs/vat-ly-1/bai-giang/img/young-04/parent-ung-dung-va-cham.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-25.png",
       "declaredIn": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 66,
+      "line": 68,
       "source": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-25.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-26.png",
       "declaredIn": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 97,
+      "line": 99,
       "source": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-26.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-27.png",
       "declaredIn": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
-      "line": 134,
+      "line": 136,
       "source": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-27.png"
     },
     {

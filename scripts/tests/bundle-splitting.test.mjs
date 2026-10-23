@@ -109,6 +109,23 @@ test('client bundles skip rendered math for server-only Wiki article bodies', as
   }
 })
 
+test('new Physics1 chapter modules compile every formula and variable legend', async () => {
+  for (const chapter of [3,4]) {
+    const nn=String(chapter).padStart(2,'0')
+    const {module,math}=await evaluateTransformed('docs/.vitepress/physics1-remaining-ch'+nn+'-course.mjs',false)
+    const data=module['physics1RemainingChapter'+chapter+'Parent']
+    let checked=0
+    for(const section of data.cheatsheet.sections)for(const item of section.items){
+      const values=[...(item.formulaRows||[]).map(row=>row.formula),...(item.variables||[])]
+      for(const value of values)for(const segment of mathSegments(value).filter(part=>part.startsWith('$'))){
+        assert(math[segment]?.includes('<mjx-container'),'Chapter '+chapter+': Uncompiled '+segment)
+        checked++
+      }
+    }
+    assert(checked>=20,'Each new chapter must contain its full formula sheet')
+  }
+})
+
 test('theme entry does not statically import data-heavy modules', async () => {
   const theme = await readFile(path.join(root, 'src/app/theme.mjs'), 'utf8')
   const layout = await readFile(path.join(root, 'src/app/StudyLayout.vue'), 'utf8')

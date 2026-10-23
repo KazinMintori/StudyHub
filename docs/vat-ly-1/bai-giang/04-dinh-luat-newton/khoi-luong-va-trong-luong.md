@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "04-dinh-luat-newton"
-section: "topic"
 topic: "khoi-luong-va-trong-luong"
+section: "topic"
 title: "Khối lượng và trọng lượng"
 description: "Vì sao khối lượng không đổi khi chuyển nơi nhưng trọng lượng có thể đổi?"
 ---
@@ -11,4 +11,4 @@ description: "Vì sao khối lượng không đổi khi chuyển nơi nhưng tr�
 
 ## Tài liệu tham khảo
 
-Young & Freedman, *University Physics with Modern Physics*, ấn bản15, mục 4.4.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 4.4.

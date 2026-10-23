@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "04-dinh-luat-newton"
-section: "topic"
 topic: "dinh-luat-thu-hai-newton"
+section: "topic"
 title: "Định luật thứ hai của Newton"
 description: "Tổng ngoại lực và khối lượng xác định gia tốc ra sao?"
 ---
@@ -11,4 +11,4 @@ description: "Tổng ngoại lực và khối lượng xác định gia tốc ra
 
 ## Tài liệu tham khảo
 
-Young & Freedman, *University Physics with Modern Physics*, ấn bản15, mục 4.3.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 4.3.

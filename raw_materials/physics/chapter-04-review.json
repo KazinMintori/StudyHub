@@ -1,0 +1,49 @@
+{
+  "chapter": 4,
+  "status": "content-complete",
+  "theorySections": 6,
+  "examples": 11,
+  "selfChecks": 6,
+  "numberedFigures": 29,
+  "sourceFigureAssets": 51,
+  "supplementarySolutionPlots": 12,
+  "exercises": 60,
+  "discussionQuestions": 38,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 111,
+  "exerciseGroups": 20,
+  "renderReview": "passed",
+  "renderViewports": [
+    320,
+    375,
+    768,
+    1440
+  ],
+  "sourceReview": "raw_materials/physics/reviews/ch04-parent-final-20261024.md",
+  "numericScripts": [
+    "raw_materials/physics/verify_chapter04_parent_opening.py",
+    "raw_materials/physics/verify_chapter04_early_exercises_parent.py",
+    "raw_materials/physics/verify_chapter04_late_exercises_parent.py",
+    "raw_materials/physics/verify_chapter04_guided_parent.py",
+    "raw_materials/physics/verify_chapter04_discussion_parent.py"
+  ],
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-04/parent-00-mo-dau.md": "bd2f95e12f0e236db76d051eddba1588a6a5632e9680a7fabe0c23a0679fd91d",
+    "raw_materials/physics/translations/chapter-04/parent-01-luc-va-tuong-tac.md": "3ab5c991b8c85cc49eed15acd426f578243ca6d507409ddf75400f7190127b41",
+    "raw_materials/physics/translations/chapter-04/parent-02-dinh-luat-thu-nhat.md": "4b8aa911b3889dc879a45abb4ea45ee0302f7c2c4903ebbe259aa10892419aca",
+    "raw_materials/physics/translations/chapter-04/parent-03-dinh-luat-thu-hai.md": "f2f7012494b0f5863e1eec6fe8f8c353177c231a5726454455f5d9ca7c9377d3",
+    "raw_materials/physics/translations/chapter-04/parent-04-khoi-luong-trong-luong.md": "f70958a4a5111534bd31ea2ecab240d8ec0065f0590434bb8bec786dc1007cbc",
+    "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md": "e79b6904fda6e74d935d034e359c6207edf1db7df40d5bc11cdd93f66fc80af9",
+    "raw_materials/physics/translations/chapter-04/parent-06-so-do-luc.md": "aba7478acde652f92210e13098a39ec630f81d2acb536857585cfec1de50b495",
+    "raw_materials/physics/translations/chapter-04/parent-09-luyen-tap-huong-dan.md": "cfda45e9f130a1f7d0c51c443080bb92849159f3a641c3faaea536322bb739ae",
+    "raw_materials/physics/translations/chapter-04/parent-10-cau-hoi-thao-luan.md": "6e321db0e29ec5710c7a78b3021097e843a029ffd919da6adc20d0861888a4df",
+    "raw_materials/physics/translations/chapter-04/parent-11-bai-tap-001-030.md": "6d5aee39b1eeb00fd67275277747c83ad727065abd8dfd01f017c4b78617734a",
+    "raw_materials/physics/translations/chapter-04/parent-12-bai-tap-031-060.md": "dda142f5fcc99fe7efdaa070d2aa28be3c77e941e15950b1fa5f8fff16ec98f2",
+    "raw_materials/physics/translations/chapter-04/parent-16-bai-tap-cau-noi.md": "20c19475252f22c409aa11681f2ec3ee74ebc830ef44445c08bc459f6ab2fc28",
+    "raw_materials/physics/translations/chapter-04/parent-17-tom-tat.md": "9bfa52f37db4e0df0058b33bae61368326eeb85b654066c35de2682ad45f03c4",
+    "raw_materials/physics/translations/chapter-04/parent-18-dap-so-luyen-tap.md": "e2a222db72f2081e2b4449142684f6e7218eb3b3466b1f1ac887a6fcc937e300"
+  },
+  "fullBuild": "GitHub Actions only",
+  "publication": "Reviewed locally, awaiting GitHub build and deployment"
+}

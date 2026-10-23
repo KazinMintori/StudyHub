@@ -12,13 +12,13 @@ const data=(await import(`../../docs/.vitepress/physics1-remaining-ch${nn}.mjs`)
 const coverage=JSON.parse(await readFile(`raw_materials/physics/reviews/ch${nn}-remaining-exercises-coverage.json`,'utf8'))
 assert(data?.topics?.length===inventory.sections.length,'Missing source section')
 assert(coverage.exerciseConfig?.files,'Reconcile original exercise inventory first')
-const files=['00-mo-dau.md',...data.topics.map(t=>t.file),chapter===1?'11-tom-tat.md':'17-tom-tat.md',...coverage.exerciseConfig.files.map(([,file])=>file)]
+const files=[data.openingFile||'00-mo-dau.md',...data.topics.map(t=>t.file),data.summaryFile||(chapter===1?'11-tom-tat.md':'17-tom-tat.md'),...coverage.exerciseConfig.files.map(([,file])=>file),...(data.answerFile?[data.answerFile]:[])]
 const text=await Promise.all(files.map(file=>readFile(raw+'/'+file,'utf8')))
 const joined=text.join('\n')
 const findings=[]
 const check=(condition,kind,details)=>{if(!condition)findings.push({kind,details})}
 for(const section of inventory.sections)check(data.topics.some(t=>t.source===section.id),'missing-section',section.id)
-for(const id of inventory.examples)check(new RegExp('Ví dụ\\s+'+id.replace('.','\\.')+'(?=\\D|$)','i').test(joined),'missing-teaching-example',id)
+for(const id of inventory.examples)check(new RegExp('^(?:::: example |#{2,6} )Ví dụ(?:\\s+(?:định tính|khái niệm))?\\s+'+id.replace('.','\\.')+'(?=\\D|$)','mi').test(joined),'missing-teaching-example',id)
 const exerciseIds=[]
 for(const [kind,file]of coverage.exerciseConfig.files){
  const source=await readFile(raw+'/'+file,'utf8')

@@ -111,20 +111,63 @@ export const physics1Course = {
       "hasChapterExercises": true
     },
     {
-      "slug": "03-chuyen-dong-khong-gian",
+  "slug": "03-chuyen-dong-khong-gian",
+  "title": "Chuyển động trong hai hoặc ba chiều",
+  "prerequisites": [
+    "vector",
+    "thanh-phan-vector",
+    "dao-ham",
+    "gia-toc"
+  ],
+  "supportingConcepts": [
+    "vector-vi-tri",
+    "gia-toc-huong-tam",
+    "chuyen-dong-nem",
+    "van-toc-tuong-doi",
+    "van-toc-vat-ly",
+    "toc-do-chuyen-dong"
+  ],
+  "status": "draft",
+  "number": 3,
+  "sourceChapter": 3,
+  "topicGroups": [
+    {
       "title": "Chuyển động trong hai hoặc ba chiều",
-      "prerequisites": [
-        "vector",
-        "dao-ham",
-        "don-vi"
-      ],
-      "supportingConcepts": [
-        "luc"
-      ],
-      "status": "draft",
-      "number": 3,
-      "sourceChapter": 3
-    },
+      "topics": [
+        {
+          "slug": "vector-vi-tri-va-van-toc",
+          "title": "Vector vị trí và vector vận tốc",
+          "question": "Làm thế nào xác định vị trí và chiều chuyển động của chất điểm trong không gian?",
+          "source": "3.1"
+        },
+        {
+          "slug": "vector-gia-toc",
+          "title": "Vector gia tốc",
+          "question": "Vì sao vật chuyển động với tốc độ không đổi trên đường cong vẫn có gia tốc?",
+          "source": "3.2"
+        },
+        {
+          "slug": "chuyen-dong-nem",
+          "title": "Chuyển động ném",
+          "question": "Các chuyển động theo phương ngang và phương thẳng đứng độc lập với nhau thế nào?",
+          "source": "3.3"
+        },
+        {
+          "slug": "chuyen-dong-tron",
+          "title": "Chuyển động tròn",
+          "question": "Điều gì quyết định độ lớn và phương hướng của gia tốc trong chuyển động tròn?",
+          "source": "3.4"
+        },
+        {
+          "slug": "van-toc-tuong-doi",
+          "title": "Vận tốc tương đối",
+          "question": "Làm thế nào liên hệ kết quả đo vận tốc giữa các hệ quy chiếu chuyển động đối với nhau?",
+          "source": "3.5"
+        }
+      ]
+    }
+  ]
+},
     {
   "slug": "04-dinh-luat-newton",
   "title": "Các định luật chuyển động của Newton",
@@ -141,7 +184,7 @@ export const physics1Course = {
     "ma-sat-truot",
     "don-vi"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 4,
   "sourceChapter": 4,
   "topicGroups": [
@@ -186,7 +229,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
       "slug": "05-ung-dung-newton",
@@ -1393,6 +1437,52 @@ export const physics1Course = {
       "Entropy cộng được khi số trạng thái vi mô của hai hệ độc lập nhân với nhau."
     ],
     "formula": "$$\nS=k_B\\ln\\Omega\n$$"
+  },
+  {
+    "note": "04-dinh-luat-newton",
+    "title": "Lực và hợp lực",
+    "bullets": [
+      "Đại lượng vector định lượng tương tác. Lực pháp tuyến vuông góc mặt tiếp xúc, ma sát song song mặt tiếp xúc, lực căng kéo dọc dây. Trọng lực có thể tác dụng không qua tiếp xúc.",
+      "Tổng vector của mọi ngoại lực tác dụng lên cùng vật. Tổng thành phần theo mỗi trục được tính đại số, giữ đúng dấu."
+    ],
+    "formula": "$$\n\\vec R=\\vec F_1+\\vec F_2+\\vec F_3\n$$"
+  },
+  {
+    "note": "04-dinh-luat-newton",
+    "title": "Hệ quán tính và định luật thứ nhất",
+    "bullets": [
+      "Hệ mà định luật thứ nhất đúng. Một hệ chuyển động tịnh tiến với vận tốc không đổi so với một hệ quán tính cũng là hệ quán tính.",
+      "Vận tốc không đổi, có thể bằng không, khi tổng ngoại lực bằng không. Điều kiện này không tự thay thế điều kiện cân bằng quay của vật rắn."
+    ],
+    "formula": "$$\n\\sum_{i=1}^{n}\\vec F_i=\\vec0\n$$"
+  },
+  {
+    "note": "04-dinh-luat-newton",
+    "title": "Khối lượng và định luật thứ hai",
+    "bullets": [
+      "Đại lượng đo quán tính, có tính cộng trong cơ học Newton. Cùng một hợp lực tạo gia tốc tỉ lệ nghịch khối lượng.",
+      "Dạng dưới đây áp dụng trong hệ quán tính khi khối lượng vật hoặc hệ không đổi. Chỉ ngoại lực lên hệ đã chọn được đưa vào tổng.",
+      "Trong hệ SI, khối lượng dùng kilôgam và gia tốc dùng mét trên giây bình phương."
+    ],
+    "formula": "$$\nm_2/m_1=a_1/a_2\n$$"
+  },
+  {
+    "note": "04-dinh-luat-newton",
+    "title": "Trọng lượng",
+    "bullets": [
+      "Lực hấp dẫn tác dụng lên vật. Giá trị phụ thuộc trường trọng lực tại vị trí vật, còn khối lượng không đổi khi chỉ chuyển vật đến nơi khác."
+    ],
+    "formula": "$$\nw=mg\n$$"
+  },
+  {
+    "note": "04-dinh-luat-newton",
+    "title": "Cặp lực tương tác và sơ đồ lực",
+    "bullets": [
+      "Hai lực của cùng tương tác có cùng độ lớn, ngược hướng và tác dụng lên hai vật khác nhau. Ký hiệu A/B chỉ lực do A tác dụng lên B.",
+      "Trong mô hình dây thẳng không khối lượng, chỉ chịu các lực dọc dây ở hai đầu, lực căng ở hai đầu bằng nhau. Kết quả cũng đúng cho dây cân bằng khi không có lực phân bố dọc dây.",
+      "Biểu diễn riêng mọi ngoại lực tác dụng lên vật đã chọn. Không đưa lực vật tác dụng lên môi trường vào sơ đồ ấy. Các vật khác nhau có sơ đồ riêng."
+    ],
+    "formula": "$$\n\\vec F_{A/B}=-\\vec F_{B/A}\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"
