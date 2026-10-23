@@ -26,22 +26,39 @@ $$
 \end{aligned}
 $$
 
-Miền xác định của bài toán là giao của các miền xác định thành phần:
-
-$$
-\mathcal{D} = \operatorname{dom} f_0 \cap \left( \bigcap_{i=1}^m \operatorname{dom} f_i \right) \cap \left( \bigcap_{j=1}^p \operatorname{dom} h_j \right).
-$$
-
-Ý tưởng nền tảng của phương pháp là nới lỏng các ràng buộc bằng cách đưa chúng trực tiếp vào hàm mục tiêu thông qua phép tổ hợp tuyến tính. Hàm **Lagrangian** $L: \mathbb{R}^n \times \mathbb{R}^m \times \mathbb{R}^p \to \mathbb{R}$ được định nghĩa là:
+Đặt $\mathcal D_0=\operatorname{dom}f_0$. Gọi $\mathcal D_f$ và $\mathcal D_h$ lần lượt là miền xác định chung của các hàm ràng buộc bất đẳng thức và đẳng thức:
 
 $$
 \begin{aligned}
-L(x, \lambda, \nu) &= f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \\
-&= f_0(x) + \lambda_1 f_1(x) + \dots + \lambda_m f_m(x) + \nu_1 h_1(x) + \dots + \nu_p h_p(x),
+\mathcal D_f &= \bigcap_{i=1}^m\operatorname{dom}f_i,\\
+\mathcal D_h &= \bigcap_{j=1}^p\operatorname{dom}h_j.
 \end{aligned}
 $$
 
-trong đó:
+Như vậy, $\mathcal D_f$ gồm những điểm mà cả $f_1,\dots,f_m$ đều xác định. Miền $\mathcal D_h$ được hiểu tương tự. Miền xác định của toàn bài toán là:
+
+$$
+\mathcal D=\mathcal D_0\cap\mathcal D_f\cap\mathcal D_h.
+$$
+
+Ý tưởng nền tảng của phương pháp là đưa các ràng buộc vào hàm mục tiêu thông qua phép tổ hợp tuyến tính. Với các nhân tử $\lambda_i$ và $\nu_j$, đặt hai khoản điều chỉnh:
+
+$$
+\begin{aligned}
+F_\lambda(x)&=\sum_{i=1}^m\lambda_i f_i(x)\\
+&=\lambda_1f_1(x)+\dots+\lambda_mf_m(x),\\
+H_\nu(x)&=\sum_{j=1}^p\nu_jh_j(x)\\
+&=\nu_1h_1(x)+\dots+\nu_ph_p(x).
+\end{aligned}
+$$
+
+Hàm **Lagrangian** là tổng của chi phí gốc và hai khoản điều chỉnh trên:
+
+$$
+L(x,\lambda,\nu)=f_0(x)+F_\lambda(x)+H_\nu(x).
+$$
+
+Trong đó:
 - Vector $\lambda = (\lambda_1, \dots, \lambda_m)^T \in \mathbb{R}^m$ là vector **nhân tử Lagrange** gắn với các ràng buộc bất đẳng thức.
 - Vector $\nu = (\nu_1, \dots, \nu_p)^T \in \mathbb{R}^p$ là vector **nhân tử Lagrange** gắn với các ràng buộc đẳng thức.
 
@@ -51,13 +68,10 @@ Một câu hỏi tự nhiên xuất hiện: Vì sao ta bắt buộc phải áp �
 - Điểm $\widetilde x$ thỏa mãn $f_i(\widetilde x) \le 0$ với mọi $i = 1, \dots, m$. Khi ta chọn $\lambda_i \ge 0$, tích $\lambda_i f_i(\widetilde x)$ là tích của một số không âm với một số không dương, do đó luôn không dương: $\lambda_i f_i(\widetilde x) \le 0$.
 - Đồng thời $\widetilde x$ thỏa mãn $h_j(\widetilde x) = 0$ với mọi $j = 1, \dots, p$, vì vậy số hạng $\nu_j h_j(\widetilde x) = 0$ triệt tiêu hoàn toàn bất kể dấu của $\nu_j$.
 
-Cộng tất cả các thành phần lại, với mọi điểm khả thi $\widetilde x$ và mọi bộ nhân tử thỏa mãn $\lambda \succeq 0$, ta thu được bất đẳng thức:
+Cộng các số hạng, ta có $F_\lambda(\widetilde x)\le0$ và $H_\nu(\widetilde x)=0$. Vì vậy, với mọi điểm khả thi $\widetilde x$ và mọi bộ nhân tử thỏa mãn $\lambda \succeq 0$:
 
 $$
-\begin{aligned}
-L(\widetilde x, \lambda, \nu) &= f_0(\widetilde x) + \sum_{i=1}^m \underbrace{\lambda_i f_i(\widetilde x)}_{\le 0} + \sum_{j=1}^p \underbrace{\nu_j h_j(\widetilde x)}_{= 0} \\
-&\le f_0(\widetilde x).
-\end{aligned}
+L(\widetilde x,\lambda,\nu)\le f_0(\widetilde x).
 $$
 
 Như vậy, trên toàn bộ miền khả thi của bài toán gốc, hàm Lagrangian luôn đánh giá thấp hơn hoặc bằng giá trị chi phí thực tế. 
@@ -65,10 +79,7 @@ Như vậy, trên toàn bộ miền khả thi của bài toán gốc, hàm Lagra
 Từ quan sát cốt lõi này, ta định nghĩa **hàm đối ngẫu Lagrange** $g: \mathbb{R}^m \times \mathbb{R}^p \to \mathbb{R} \cup \{-\infty\}$ bằng cách lấy cận dưới đúng (infimum) của hàm Lagrangian theo toàn bộ không gian biến $x \in \mathcal{D}$:
 
 $$
-\begin{aligned}
-g(\lambda, \nu) &= \inf_{x \in \mathcal{D}} L(x, \lambda, \nu) \\
-&= \inf_{x \in \mathcal{D}} \left( f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x) \right).
-\end{aligned}
+g(\lambda,\nu)=\inf_{x\in\mathcal D}L(x,\lambda,\nu).
 $$
 
 Phép lấy infimum ở đây được thực hiện trên toàn bộ miền $\mathcal{D}$ mà không cần giữ lại bất kỳ ràng buộc nào của bài toán gốc. Do giá trị nhỏ nhất của một hàm trên toàn không gian luôn nhỏ hơn hoặc bằng giá trị của nó tại một điểm khả thi cụ thể $\widetilde x$, ta có chuỗi bất đẳng thức:
@@ -106,15 +117,14 @@ $$
 Để tính hàm đối ngẫu $g(\lambda)$, ta xem $\lambda$ là tham số cố định và tìm cực tiểu của $L(x, \lambda)$ theo biến $x$ trên $\mathbb{R}$. Đạo hàm bậc nhất theo $x$:
 
 $$
-\frac{\partial L}{\partial x} = 2(x - 2) + \lambda = 0 \iff x(\lambda) = 2 - \frac{\lambda}{2}.
+\frac{\partial L}{\partial x}=2(x-2)+\lambda=0.
 $$
 
-Đạo hàm bậc hai $\frac{\partial^2 L}{\partial x^2} = 2 > 0$, chứng minh rằng hàm số đạt cực tiểu toàn cục duy nhất tại điểm $x(\lambda) = 2 - \lambda/2$. Thay nghiệm này ngược trở lại vào Lagrangian:
+Giải phương trình trên được $x(\lambda)=2-\lambda/2$. Đạo hàm bậc hai $\frac{\partial^2 L}{\partial x^2} = 2 > 0$, nên đây là điểm cực tiểu toàn cục duy nhất. Khi thay nghiệm vào Lagrangian, hai hiệu lần lượt là $x(\lambda)-2=-\lambda/2$ và $x(\lambda)-1=1-\lambda/2$:
 
 $$
 \begin{aligned}
-g(\lambda) &= \left(2 - \frac{\lambda}{2} - 2\right)^2 + \lambda\left(2 - \frac{\lambda}{2} - 1\right) \\
-&= \frac{\lambda^2}{4} + \lambda\left(1 - \frac{\lambda}{2}\right) \\
+g(\lambda)&=\frac{\lambda^2}{4}+\lambda\left(1-\frac{\lambda}{2}\right)\\
 &= \lambda - \frac{\lambda^2}{4}.
 \end{aligned}
 $$
@@ -151,25 +161,29 @@ Một tính chất đẹp đẽ và sâu sắc của lý thuyết đối ngẫu 
 Bản chất của điều này xuất phát từ cấu trúc của Lagrangian: Với mỗi điểm $x$ cố định, ánh xạ
 
 $$
-(\lambda, \nu) \mapsto L(x, \lambda, \nu) = f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) + \sum_{j=1}^p \nu_j h_j(x)
+(\lambda,\nu)\mapsto L(x,\lambda,\nu)
 $$
 
 là một hàm affine theo cặp biến $(\lambda, \nu)$. 
 
 Hàm đối ngẫu $g(\lambda, \nu) = \inf_{x \in \mathcal{D}} L(x, \lambda, \nu)$ chính là cận dưới đúng (infimum) của một họ các hàm affine. Vì mỗi hàm affine đều vừa lồi vừa lõm, infimum của một họ tùy ý các hàm affine luôn tạo thành một **hàm lõm**.
 
-Ta kiểm chứng điều này bằng định nghĩa hàm lõm: Với hai bộ nhân tử tùy ý $u = (\lambda_1, \nu_1)$, $v = (\lambda_2, \nu_2)$ và số thực $\theta \in [0, 1]$:
+Ta kiểm chứng điều này bằng định nghĩa hàm lõm. Với hai bộ nhân tử $u$, $v$ và $\theta\in[0,1]$, đặt $w=\theta u+(1-\theta)v$. Tại mỗi $x$, viết gọn $A_x=L(x,u)$ và $B_x=L(x,v)$. Tính affine cho:
 
 $$
 \begin{aligned}
-g(\theta u + (1 - \theta) v) &= \inf_{x \in \mathcal{D}} L(x, \theta u + (1 - \theta) v) \\
-&= \inf_{x \in \mathcal{D}} \left[ \theta L(x, u) + (1 - \theta) L(x, v) \right] \\
-&\ge \theta \inf_{x \in \mathcal{D}} L(x, u) + (1 - \theta) \inf_{x \in \mathcal{D}} L(x, v) \\
-&= \theta g(u) + (1 - \theta) g(v).
+L(x,w)&=\theta A_x+(1-\theta)B_x\\
+&\ge\theta g(u)+(1-\theta)g(v).
 \end{aligned}
 $$
 
-Bất đẳng thức trên khẳng định tính lõm của $g$. Hệ quả thực tiễn quan trọng:
+Bước bất đẳng thức dùng $A_x\ge g(u)$, $B_x\ge g(v)$ và các trọng số không âm. Lấy infimum theo $x$ ở vế trái được:
+
+$$
+g(w)\ge\theta g(u)+(1-\theta)g(v).
+$$
+
+Đây chính là tính lõm của $g$. Hệ quả thực tiễn quan trọng:
 
 > Bài toán đối ngẫu Lagrange:
 > $$
@@ -204,7 +218,13 @@ Một đặc tính quan trọng: Vì $f^*(y)$ là supremum của một họ các
 Từ định nghĩa supremum, với mọi $x \in \operatorname{dom} f$ và mọi $y \in \operatorname{dom} f^*$, ta có bất đẳng thức:
 
 $$
-f^*(y) \ge y^T x - f(x) \quad \Longleftrightarrow \quad x^T y \le f(x) + f^*(y).
+f^*(y)\ge y^Tx-f(x).
+$$
+
+Chuyển vế và dùng $y^Tx=x^Ty$:
+
+$$
+x^Ty\le f(x)+f^*(y).
 $$
 
 Đây chính là **Bất đẳng thức Fenchel–Young**. Đẳng thức xảy ra khi và chỉ khi $y$ thuộc dưới vi phân của $f$ tại $x$: $y \in \partial f(x)$ (nếu $f$ khả vi thì $y = \nabla f(x)$).
@@ -214,11 +234,14 @@ $$
 1. **Hàm toàn phương lồi**: Xét $f(x) = \frac{1}{2} x^T P x$ với ma trận đối xứng xác định dương $P \succ 0$.
    Lấy đạo hàm của $y^T x - \frac{1}{2} x^T P x$ theo $x$:
    $$
-   \nabla_x (y^T x - \frac{1}{2} x^T P x) = y - P x = 0 \implies x = P^{-1} y.
+   y-Px=0\implies x=P^{-1}y.
    $$
-   Thay vào định nghĩa:
+   Đặt $z=P^{-1}y$, nên $Pz=y$. Thay vào định nghĩa:
    $$
-   f^*(y) = y^T (P^{-1} y) - \frac{1}{2} (P^{-1} y)^T P (P^{-1} y) = \frac{1}{2} y^T P^{-1} y.
+   \begin{aligned}
+   f^*(y)&=y^Tz-\frac12z^TPz\\
+   &=\frac12y^Tz=\frac12y^TP^{-1}y.
+   \end{aligned}
    $$
 
 2. **Hàm chuẩn Euclid bình phương**: Xét $f(x) = \frac{1}{2} \|x\|_2^2$.
@@ -234,41 +257,57 @@ $$
    $$
    Thay vào:
    $$
-\begin{aligned}
-f^*(y) &= \sum_{i=1}^n \left( y_i e^{y_i - 1} - e^{y_i - 1}(y_i - 1) \right) \\
-&= \sum_{i=1}^n e^{y_i - 1} = \frac{1}{e} \sum_{i=1}^n e^{y_i}.
-\end{aligned}
-$$
+   \begin{aligned}
+   f^*(y)&=\sum_{i=1}^ne^{y_i-1}[y_i-(y_i-1)]\\
+   &= \sum_{i=1}^n e^{y_i - 1} = \frac{1}{e} \sum_{i=1}^n e^{y_i}.
+   \end{aligned}
+   $$
 
 4. **Hàm Log-Sum-Exp**: Xét $f(x) = \log\left(\sum_{i=1}^n e^{x_i}\right)$.
-   Hàm liên hợp của hàm này liên quan chặt chẽ đến entropy của phân phối xác suất:
+   Gọi $\Delta_n$ là tập các vector xác suất $y\succeq0$ có tổng các thành phần bằng 1:
    $$
-   f^*(y) = \begin{cases} \sum_{i=1}^n y_i \log y_i & \text{if } y \succeq 0 \text{ and } \sum_{i=1}^n y_i = 1, \\ +\infty & \text{otherwise.} \end{cases}
+   \sum_{i=1}^ny_i=y_1+\dots+y_n=1.
+   $$
+   Hàm liên hợp liên quan đến entropy của phân phối xác suất. Với quy ước $0\log0=0$:
+   $$
+   f^*(y)=\begin{cases}
+   \sum_{i=1}^ny_i\log y_i,&y\in\Delta_n,\\
+   +\infty,&y\notin\Delta_n.
+   \end{cases}
    $$
 
 ### 4.4. Mối liên hệ mật thiết giữa Hàm liên hợp và Đối ngẫu Lagrange
 Xét bài toán tối ưu với ràng buộc tuyến tính:
 
 $$
-\min_x \quad f_0(x) \quad \text{s.t.} \quad A x \le b, \quad C x = d.
-$$
-
-Hàm Lagrangian với $\lambda \succeq 0$ và $\nu \in \mathbb{R}^p$:
-
-$$
 \begin{aligned}
-L(x, \lambda, \nu) &= f_0(x) + \lambda^T (A x - b) + \nu^T (C x - d) \\
-&= -b^T \lambda - d^T \nu + f_0(x) + (A^T \lambda + C^T \nu)^T x.
+&\min_x f_0(x)\\
+&Ax\le b,\quad Cx=d.
 \end{aligned}
 $$
 
-Lấy cận dưới đúng theo $x$:
+Với $\lambda\succeq0$ và $\nu\in\mathbb R^p$, đặt:
 
 $$
 \begin{aligned}
-g(\lambda, \nu) &= -b^T \lambda - d^T \nu + \inf_x \left[ f_0(x) - (-A^T \lambda - C^T \nu)^T x \right] \\
-&= -b^T \lambda - d^T \nu - \sup_x \left[ (-A^T \lambda - C^T \nu)^T x - f_0(x) \right] \\
-&= -b^T \lambda - d^T \nu - f_0^*(-A^T \lambda - C^T \nu).
+q&=-A^T\lambda-C^T\nu,\\
+c&=b^T\lambda+d^T\nu.
+\end{aligned}
+$$
+
+Khi khai triển các tích và gom những số hạng chứa $x$, hàm Lagrangian trở thành:
+
+$$
+L(x,\lambda,\nu)=f_0(x)-q^Tx-c.
+$$
+
+Lấy infimum theo $x$, trong đó $q$ và $c$ được giữ cố định:
+
+$$
+\begin{aligned}
+g(\lambda,\nu)+c&=\inf_x[f_0(x)-q^Tx]\\
+&=-\sup_x[q^Tx-f_0(x)]\\
+&=-f_0^*(q).
 \end{aligned}
 $$
 
@@ -281,10 +320,10 @@ Công thức trên cho thấy: Việc tính hàm đối ngẫu Lagrange của b�
 ### 5.1. Hàm Log-lồi và Log-lõm
 Một hàm số $f: \mathbb{R}^n \to \mathbb{R}_{++}$ nhận giá trị dương được gọi là **log-lồi (log-convex)** nếu hàm số $\log f(x)$ là hàm lồi. Tương tự, $f$ được gọi là **log-lõm (log-concave)** nếu $\log f(x)$ là hàm lõm.
 
-Điều kiện tương đương qua vi phân bậc hai: Nếu $f$ khả vi hai lần, ta có Hessian của $\log f(x)$ là:
+Điều kiện tương đương qua vi phân bậc hai: Tại điểm $x$, viết gọn $a=f(x)>0$, $v=\nabla f(x)$ và $H=\nabla^2f(x)$. Nếu $f$ khả vi hai lần, Hessian của $\log f$ là:
 
 $$
-\nabla^2 \log f(x) = \frac{1}{f(x)} \nabla^2 f(x) - \frac{1}{f(x)^2} \nabla f(x) \nabla f(x)^T.
+\nabla^2\log f(x)=\frac Ha-\frac{vv^T}{a^2}.
 $$
 
 Do đó:
@@ -292,9 +331,13 @@ Do đó:
 - Hàm $f$ log-lõm khi và chỉ khi: $f(x) \nabla^2 f(x) \preceq \nabla f(x) \nabla f(x)^T$.
 
 Một số tính chất và ứng dụng quan trọng trong học máy:
-1. **Phân phối chuẩn nhiều chiều**: Hàm mật độ xác suất Gauss:
+1. **Phân phối chuẩn nhiều chiều**: Với $\Sigma\succ0$, đặt $z=x-\mu$ và hằng số chuẩn hóa:
    $$
-   p(x) = \frac{1}{(2\pi)^{n/2} |\Sigma|^{1/2}} \exp\left(-\frac{1}{2} (x - \mu)^T \Sigma^{-1} (x - \mu)\right)
+   C=\frac1{(2\pi)^{n/2}|\Sigma|^{1/2}}.
+   $$
+   Hàm mật độ xác suất Gauss là:
+   $$
+   p(x)=C\exp\left(-\frac12z^T\Sigma^{-1}z\right).
    $$
    có logarit là một hàm toàn phương lõm, do đó hàm mật độ chuẩn là **log-lõm**.
 2. **Hàm tích chập bảo toàn tính log-lõm**: Định lý Prékopa–Leindler khẳng định rằng tích chập của hai hàm log-lõm tiếp tục là một hàm log-lõm. Tính chất này bảo đảm tính đơn đỉnh của nhiều phân phối xác suất hợp thành trong thống kê.
@@ -303,10 +346,10 @@ Một số tính chất và ứng dụng quan trọng trong học máy:
 ### 5.2. Tính lồi theo Bất đẳng thức tổng quát (Nón lồi)
 Cho $K \subseteq \mathbb{R}^m$ là một nón lồi chính quy (proper cone). Ta định nghĩa thứ tự riêng phần theo nón: $x \preceq_K y \iff y - x \in K$.
 
-Một hàm vector $f: \mathbb{R}^n \to \mathbb{R}^m$ được gọi là **lồi theo nón $K$ (K-convex)** nếu với mọi $x, y \in \operatorname{dom} f$ và $\theta \in [0, 1]$:
+Một hàm vector $f: \mathbb{R}^n \to \mathbb{R}^m$ được gọi là **lồi theo nón $K$ (K-convex)** nếu với mọi $x, y \in \operatorname{dom} f$ và $\theta \in [0, 1]$, đặt $z=\theta x+(1-\theta)y$ thì:
 
 $$
-f(\theta x + (1 - \theta) y) \preceq_K \theta f(x) + (1 - \theta) f(y).
+f(z)\preceq_K\theta f(x)+(1-\theta)f(y).
 $$
 
 Tính chất này cho phép mở rộng lý thuyết đối ngẫu từ các ràng buộc bất đẳng thức từng tọa độ sang các ràng buộc ma trận bán xác định dương (SDP) với nón $\mathbb{S}_+^n$ hoặc nón Lorentz bậc hai (SOCP).
@@ -331,10 +374,10 @@ Trong mặt phẳng tọa độ $(u, t)$ với $u = f_1(x)$ và $t = f_0(x)$:
   p^* = \inf \{ t \mid (u, t) \in \mathcal{G}, \, u \le 0 \}.
   $$
 
-Ta mở rộng $\mathcal{G}$ thành tập trên $\mathcal{A} = \mathcal{G} + (\mathbb{R}_+ \times \mathbb{R}_+)$:
+Ta mở rộng $\mathcal{G}$ thành tập trên $\mathcal{A} = \mathcal{G} + (\mathbb{R}_+ \times \mathbb{R}_+)$. Một cặp $(u,t)$ thuộc $\mathcal A$ khi tồn tại $x\in\mathcal D$ thỏa mãn đồng thời:
 
 $$
-\mathcal{A} = \{ (u, t) \mid \exists x \in \mathcal{D}: f_1(x) \le u, \, f_0(x) \le t \}.
+f_1(x)\le u,\qquad f_0(x)\le t.
 $$
 
 Nếu bài toán gốc là bài toán lồi, thì tập $\mathcal{A}$ luôn là một **tập lồi** trong $\mathbb{R}^2$.
@@ -355,7 +398,10 @@ $$
 Cận dưới đúng của đại lượng này trên $\mathcal{G}$ chính là giá trị của hàm đối ngẫu:
 
 $$
-g(\lambda) = \inf_{(u, t) \in \mathcal{G}} (\lambda u + t) = \inf_{(u, t) \in \mathcal{A}} (\lambda u + t).
+\begin{aligned}
+g(\lambda)&=\inf_{(u,t)\in\mathcal G}(\lambda u+t)\\
+&=\inf_{(u,t)\in\mathcal A}(\lambda u+t).
+\end{aligned}
 $$
 
 Về mặt hình học, phương trình $\lambda u + t = g(\lambda)$ định nghĩa một **đường thẳng tựa (supporting line)** đỡ tập $\mathcal{A}$ từ phía dưới. Điểm giao của đường thẳng tựa này với trục tung ($u = 0$) có tọa độ $(0, g(\lambda))$.
@@ -409,9 +455,12 @@ Khi $\Delta = 0$, tức $p^* = d^*$, bài toán thỏa mãn **Đối ngẫu mạ
 
 > **Định lý Slater**: Xét bài toán tối ưu lồi dạng chuẩn (hàm mục tiêu $f_0$ và các ràng buộc bất đẳng thức $f_i$ đều lồi, ràng buộc đẳng thức là affine $Ax = b$). Nếu tồn tại một điểm $\bar x$ thuộc phần trong tương đối của miền xác định ($\bar x \in \operatorname{relint}\mathcal{D}$) thỏa mãn chặt các bất đẳng thức:
 > $$
-> f_i(\bar x) < 0 \quad \forall i = 1, \dots, m, \qquad A\bar x = b,
+> \begin{aligned}
+> &f_i(\bar x)<0,\quad i=1,\dots,m,\\
+> &A\bar x=b,
+> \end{aligned}
 > $$
-> thì bài toán đạt đối ngẫu mạnh ($p^* = d^*$). Hơn nữa, nếu giá trị tối ưu $p^*$ hữu hạn, tập nghiệm đối ngẫu là khác rỗng và bị chặn (tồn tại $(\lambda^*, \nu^*)$ đạt cận).
+> thì bài toán đạt đối ngẫu mạnh ($p^* = d^*$). Hơn nữa, nếu giá trị tối ưu $p^*$ hữu hạn, tồn tại bộ nhân tử $(\lambda^*,\nu^*)$ đạt giá trị tối ưu đối ngẫu.
 
 Một điểm $\bar x$ thỏa mãn $f_i(\bar x) < 0$ được gọi là một **điểm khả thi ngặt (strictly feasible point)**.
 
@@ -427,10 +476,10 @@ Lý thuyết đối ngẫu Lagrange có mối giao thoa sâu sắc với lý thu
 Giả sử bài toán gốc không có ràng buộc đẳng thức để đơn giản hóa ký hiệu. Xét hàm mục tiêu cực đại hóa vô hạn:
 
 $$
-\sup_{\lambda \succeq 0} L(x, \lambda) = \sup_{\lambda \succeq 0} \left( f_0(x) + \sum_{i=1}^m \lambda_i f_i(x) \right).
+\sup_{\lambda\succeq0}L(x,\lambda).
 $$
 
-Hãy quan sát:
+Ở đây $L(x,\lambda)=f_0(x)+F_\lambda(x)$, với $F_\lambda$ là tổng có trọng số đã định nghĩa ở mục 1. Hãy quan sát:
 - Nếu $x$ vi phạm ràng buộc, tức tồn tại một chỉ số $k$ sao cho $f_k(x) > 0$: Ta có thể cho $\lambda_k \to +\infty$ để đẩy giá trị biểu thức lên $+\infty$.
 - Nếu $x$ khả thi, tức $f_i(x) \le 0$ với mọi $i$: Số hạng $\sum \lambda_i f_i(x)$ luôn $\le 0$. Giá trị lớn nhất đạt được khi ta chọn $\lambda_i = 0$ cho các ràng buộc không chặt, khi đó tổng bằng 0 và giá trị cực đại đúng bằng $f_0(x)$.
 
@@ -512,23 +561,27 @@ Giả sử các hàm mục tiêu và ràng buộc đều khả vi. Hệ điều 
 Xét bài toán Quy hoạch toàn phương với ràng buộc đẳng thức affine:
 
 $$
-\min_{x \in \mathbb{R}^n} \quad \frac{1}{2} x^T P x + q^T x \quad \text{s.t.} \quad A x = b,
+\begin{aligned}
+&\min_{x\in\mathbb R^n}f_0(x),\\
+&Ax=b,
+\end{aligned}
 $$
 
-với ma trận $P \in \mathbb{S}_+^n$ bán xác định dương và $A \in \mathbb{R}^{p \times n}$ có các hàng độc lập tuyến tính.
+với $f_0(x)=\frac12x^TPx+q^Tx$. Ma trận $P \in \mathbb{S}_+^n$ bán xác định dương và $A \in \mathbb{R}^{p \times n}$ có các hàng độc lập tuyến tính.
 
 Hàm Lagrangian với vector nhân tử $\nu \in \mathbb{R}^p$:
 
 $$
-L(x, \nu) = \frac{1}{2} x^T P x + q^T x + \nu^T (A x - b).
+L(x,\nu)=f_0(x)+\nu^T(Ax-b).
 $$
 
 Áp dụng hệ điều kiện KKT:
 1. Khả thi gốc: $A x^* = b$.
 2. Triệt tiêu gradient:
    $$
-   \nabla_x L(x^*, \nu^*) = P x^* + q + A^T \nu^* = 0 \iff P x^* + A^T \nu^* = -q.
+   Px^*+q+A^T\nu^*=0.
    $$
+   Chuyển $q$ sang vế phải được $Px^*+A^T\nu^*=-q$.
 
 Ghép hai điều kiện này lại thành một hệ phương trình tuyến tính khối duy nhất:
 
@@ -547,16 +600,21 @@ Xét bài toán tối ưu bị nhiễu bởi vector thông số tài nguyên $u 
 $$
 \begin{aligned}
 &p^*(u, v) = \min_{x} \quad f_0(x)\\
-&\text{s.t.}\quad f_i(x) \le u_i, \quad i = 1, \dots, m,\\
-&\phantom{\text{subject to}\quad } h_j(x) = v_j, \quad j = 1, \dots, p.
+&f_i(x)\le u_i,\quad i=1,\dots,m,\\
+&h_j(x)=v_j,\quad j=1,\dots,p.
 \end{aligned}
 $$
 
 Giả sử bài toán lồi thỏa mãn điều kiện Slater và hàm giá trị tối ưu $p^*(u, v)$ khả vi tại gốc $(0, 0)$. Định lý độ nhạy khẳng định mối liên hệ trực tiếp:
 
 $$
-\lambda_i^* = -\frac{\partial p^*(u, v)}{\partial u_i} \Bigg|_{(u, v) = (0, 0)}, \qquad \nu_j^* = -\frac{\partial p^*(u, v)}{\partial v_j} \Bigg|_{(u, v) = (0, 0)}.
+\begin{aligned}
+\lambda_i^*&=-\partial_{u_i}p^*(0,0),\\
+\nu_j^*&=-\partial_{v_j}p^*(0,0).
+\end{aligned}
 $$
+
+Ký hiệu $\partial_{u_i}$ và $\partial_{v_j}$ chỉ đạo hàm riêng theo từng thành phần tương ứng.
 
 Ý nghĩa kinh tế học: Nhân tử Lagrange $\lambda_i^*$ đo lường tốc độ suy giảm của chi phí tối ưu khi ta nới lỏng thêm một đơn vị tài nguyên ở ràng buộc thứ $i$ ($u_i$ tăng từ 0 lên $\epsilon$). Nếu $\lambda_i^* = 50$, điều đó có nghĩa là nếu doanh nghiệp bỏ tiền mua thêm 1 đơn vị tài nguyên $i$, chi phí vận hành tối ưu sẽ giảm xấp xỉ 50 đơn vị tiền tệ. Đây chính là khái niệm **giá bóng** (shadow price) trong kinh tế học quản trị và quy hoạch sản xuất.
 
@@ -599,53 +657,70 @@ Xét bài toán tối ưu với biến $x \in \mathbb{R}^n$:
 
 $$
 \begin{aligned}
-&\min_{x \in \mathbb{R}^n} \quad f_0(x) = x^T A_0 x + 2 b_0^T x + c_0\\
-&\text{s.t.}\quad f_1(x) = x^T A_1 x + 2 b_1^T x + c_1 \le 0,
+&\min_{x\in\mathbb R^n}f_0(x),\\
+&f_1(x)\le0,
 \end{aligned}
 $$
 
-trong đó $A_0, A_1 \in \mathbb{S}^n$ là các ma trận đối xứng thực tùy ý.
+trong đó, với $k=0,1$:
+
+$$
+f_k(x)=x^TA_kx+2b_k^Tx+c_k.
+$$
+
+Các ma trận $A_0,A_1\in\mathbb S^n$ đối xứng thực tùy ý.
 Điểm đáng chú ý ở đây là: Các ma trận $A_0, A_1$ **hoàn toàn không cần xác định dương**. Do đó, bài toán này nhìn chung là **phi lồi**: Hàm mục tiêu có thể có dạng yên ngựa, và miền ràng buộc có thể là phần ngoài của một hyperboloid.
 
-Hàm Lagrangian của bài toán:
+Để viết gọn các hệ số của Lagrangian, đặt:
 $$
-L(x, \lambda) = x^T (A_0 + \lambda A_1) x + 2 (b_0 + \lambda b_1)^T x + (c_0 + \lambda c_1).
+\begin{aligned}
+P_\lambda&=A_0+\lambda A_1,\\
+q_\lambda&=b_0+\lambda b_1,\\
+r_\lambda&=c_0+\lambda c_1.
+\end{aligned}
 $$
 
-Để hàm Lagrangian bị chặn dưới theo $x$, điều kiện cần và đủ là ma trận liên kết phải nửa xác định dương: $A_0 + \lambda A_1 \succeq 0$.
-Khi $A_0 + \lambda A_1 \succ 0$, điểm cực tiểu duy nhất của $L(x, \lambda)$ theo $x$ là:
+Khi đó:
 $$
-x^*(\lambda) = -(A_0 + \lambda A_1)^{-1} (b_0 + \lambda b_1).
+L(x,\lambda)=x^TP_\lambda x+2q_\lambda^Tx+r_\lambda.
+$$
+
+Hàm này bị chặn dưới theo $x$ khi và chỉ khi $P_\lambda\succeq0$ và $q_\lambda$ thuộc không gian ảnh của $P_\lambda$. Điều kiện thứ hai loại bỏ thành phần tuyến tính khác 0 trên không gian hạt nhân của ma trận.
+
+Khi $P_\lambda\succ0$, điểm cực tiểu duy nhất là:
+$$
+x^*(\lambda)=-P_\lambda^{-1}q_\lambda.
 $$
 Thay nghiệm này vào, ta thu được hàm đối ngẫu Lagrange:
 $$
-g(\lambda) = c_0 + \lambda c_1 - (b_0 + \lambda b_1)^T (A_0 + \lambda A_1)^{-1} (b_0 + \lambda b_1).
+g(\lambda)=r_\lambda-q_\lambda^TP_\lambda^{-1}q_\lambda.
 $$
 
 Sử dụng Bổ đề phần bù Schur, bài toán đối ngẫu Lagrange $\max_{\lambda \ge 0} g(\lambda)$ được viết tương đương dưới dạng một bài toán Quy hoạch nửa xác định (SDP):
 
 $$
 \begin{aligned}
-&\max_{\lambda \ge 0, \, \gamma \in \mathbb{R}} \quad \gamma\\
-&\text{s.t.}\quad \begin{bmatrix} A_0 + \lambda A_1 & b_0 + \lambda b_1\\ &(b_0 + \lambda b_1)^T c_0 + \lambda c_1 - \gamma \end{bmatrix} \succeq 0.
+&\max_{\lambda\ge0,\,\gamma\in\mathbb R}\gamma,\\
+&\begin{bmatrix}P_\lambda&q_\lambda\\q_\lambda^T&r_\lambda-\gamma\end{bmatrix}\succeq0.
 \end{aligned}
 $$
 
 ### 13.2. Định lý Dines và Cội nguồn của Đối ngẫu mạnh Phi lồi
-Một câu hỏi nền tảng đặt ra: Tại sao bài toán này phi lồi nhưng đối ngẫu mạnh $d^* = p^*$ vẫn luôn được bảo đảm?
+Một câu hỏi đặt ra: Vì sao bài toán phi lồi với một ràng buộc toàn phương vẫn đạt đối ngẫu mạnh khi có điểm Slater và giá trị tối ưu hữu hạn?
 
-Câu trả lời nằm ở một định lý hình học sâu sắc của nhà toán học L. L. Dines (1941):
-> **Định lý Dines**: Cho hai hàm toàn phương tùy ý $f_0(x), f_1(x)$ trên $\mathbb{R}^n$. Tập ảnh của không gian $\mathbb{R}^n$ qua cặp hàm số:
-> $$
-> \mathcal{A} = \left\{ (f_1(x), f_0(x)) \in \mathbb{R}^2 \mid x \in \mathbb{R}^n \right\}
-> $$
-> luôn là một **tập lồi** trong mặt phẳng $\mathbb{R}^2$.
+Một công cụ hình học để chứng minh kết quả này là định lý Dines cho hai dạng toàn phương **thuần nhất**. Với hai ma trận đối xứng $Q_0,Q_1$, đặt:
 
-Mặc dù hàm số phi tuyến và phi lồi, sự tương tác đồng thời giữa đúng hai hàm toàn phương không bao giờ tạo ra các chỗ "lõm" trong không gian ảnh hai chiều!
-Vì tập ảnh $\mathcal{A}$ là một tập lồi, tập trên (epigraph) tương ứng $\mathcal{A} + \mathbb{R}_+^2$ cũng là tập lồi.
-Khi tồn tại điểm Slater ngặt $\bar{x}$ sao cho $f_1(\bar{x}) < 0$, ta có thể áp dụng Định lý siêu phẳng tách để kẻ một tiếp tuyến phân tách điểm tối ưu $(0, p^*)$ khỏi tập lồi này. Pháp tuyến của siêu phẳng tách chính là nhân tử Lagrange tối ưu $\lambda^* \ge 0$, và sự tồn tại của tiếp tuyến bảo đảm rằng:
 $$
-p^* = d^* \quad (\text{Zero duality gap}).
+\Phi(z)=(z^TQ_1z,\,z^TQ_0z).
+$$
+
+> **Định lý Dines**: Tập $\{\Phi(z)\mid z\in\mathbb R^N\}$ là một nón lồi trong $\mathbb R^2$.
+
+Điều kiện thuần nhất có nghĩa là không có số hạng tuyến tính hoặc hằng số. Không được suy rộng phát biểu này thành tính lồi của tập ảnh của hai hàm toàn phương affine tùy ý.
+
+Các số hạng affine có thể được đưa vào dạng thuần nhất bằng cách thêm một tọa độ. Kết hợp kỹ thuật này với định lý tách dẫn tới bổ đề S-procedure ở mục tiếp theo. Với điểm Slater ngặt và giá trị tối ưu hữu hạn, kết quả bảo đảm:
+$$
+p^*=d^*.
 $$
 
 ### 13.3. Bổ đề S-procedure
@@ -673,7 +748,7 @@ $$
 > \begin{bmatrix} A_0 & b_0 \\ b_0^T & c_0 \end{bmatrix} \preceq \lambda \begin{bmatrix} A_1 & b_1 \\ b_1^T & c_1 \end{bmatrix}.
 > $$
 
-**Ý nghĩa phương pháp**: Thay vì phải giải một bài toán kiểm thử trên vô hạn điểm $x \in \mathbb{R}^n$, S-procedure chuyển đổi bài toán thành một bất đẳng thức ma trận tuyến tính (LMI) chỉ theo một biến số thực duy nhất $\lambda \ge 0$. Ta có thể kiểm tra điều này bằng thuật toán phân tích Cholesky chỉ trong vài micro-giây!
+**Ý nghĩa phương pháp**: S-procedure chuyển điều kiện đúng trên mọi điểm $x\in\mathbb R^n$ thành một bất đẳng thức ma trận tuyến tính (LMI) theo biến vô hướng $\lambda\ge0$.
 
 ### 13.4. Bổ đề Finsler (Finsler's Lemma)
 Một biến thể thuần nhất kinh điển của S-procedure là **Bổ đề Finsler**:
@@ -693,23 +768,28 @@ Kết quả này cho phép chuyển đổi bài toán kiểm tra độ cong dư�
 Trong học máy an toàn, ta cần bảo đảm rằng một mô hình mạng nơ-ron hoặc bộ phân loại không bị đánh lừa bởi các nhiễu đối kháng (adversarial perturbations).
 
 Giả sử biên phân chia quyết định của mô hình trong không gian đặc trưng cục bộ được xấp xỉ bằng một hàm bậc hai $q(x) = x^T A x + 2 b^T x + c$. Vùng an toàn của hệ thống là $q(x) \le 0$.
-Tập hợp các nhiễu vật lý hoặc sai số cảm biến được mô hình hóa bằng một ellipsoid bất định:
+Tập hợp các nhiễu vật lý hoặc sai số cảm biến được mô hình hóa bằng một ellipsoid bất định. Đặt $z=x-x_0$ và giả sử $P\succ0$:
 $$
-\mathcal{E} = \left\{ x \in \mathbb{R}^n \mid (x - x_0)^T P (x - x_0) \le 1 \right\} \quad (P \succ 0).
+\mathcal E=\{x\in\mathbb R^n\mid z^TPz\le1\}.
 $$
 Để chứng minh hệ thống an toàn tuyệt đối trước mọi nhiễu trong $\mathcal{E}$, ta cần chứng minh:
 $$
-(x - x_0)^T P (x - x_0) - 1 \le 0 \implies x^T A x + 2 b^T x + c \le 0.
+z^TPz\le1\implies q(x)\le0.
 $$
-Áp dụng Bổ đề S-procedure, ta chỉ cần tìm một số thực $\lambda \ge 0$ thỏa mãn bất đẳng thức ma trận:
+Đặt $v=Px_0$ và $\delta=x_0^TPx_0-1$. Hai ma trận hệ số là:
 $$
-\begin{bmatrix} A & b \\ b^T & c \end{bmatrix} \preceq \lambda \begin{bmatrix} P & -P x_0 \\ -x_0^T P & x_0^T P x_0 - 1 \end{bmatrix}.
+M=\begin{bmatrix}A&b\\b^T&c\end{bmatrix},\qquad
+N=\begin{bmatrix}P&-v\\-v^T&\delta\end{bmatrix}.
+$$
+Áp dụng bổ đề S-procedure, ta chỉ cần tìm $\lambda\ge0$ sao cho:
+$$
+M\preceq\lambda N.
 $$
 Bằng cách giải bài toán LMI này, ta có được một chứng nhận an toàn toán học nghiêm ngặt cho mô hình AI mà không cần phải thực hiện bất kỳ phép đo thử nghiệm ngẫu nhiên nào.
 
 ---
 
-## 14. Hệ thống Bài tập Tự luyện Chuyên sâu
+## 14. Hệ thống Bài tập Tự luyện Chuyên sâu {#bai-tap-tu-luyen}
 
 ::: exercise 1. Tính toán hàm liên hợp của hàm Entropy và hàm Log-Sum-Exp
 1. Cho hàm entropy âm một chiều $f(x) = x \log x$ với miền xác định $x > 0$. Hãy tính hàm liên hợp $f^*(y)$ và xác định miền xác định $\operatorname{dom} f^*$.
@@ -721,39 +801,51 @@ Bằng cách giải bài toán LMI này, ta có được một chứng nhận an
    $$
    f^*(y) = \sup_{x > 0} (x y - x \log x).
    $$
-   Đạo hàm theo $x$:
+   Với $y$ cố định, đặt $\phi_y(x)=xy-x\log x$. Điều kiện đạo hàm theo $x$ là:
    $$
-   \frac{d}{dx}(x y - x \log x) = y - \log x - 1 = 0 \iff x = e^{y-1} > 0.
+   \phi_y'(x)=y-\log x-1=0.
    $$
+   Suy ra $x=e^{y-1}>0$.
    Đạo hàm bậc hai là $-1/x < 0$, do đó điểm cực trị là cực đại toàn cục duy nhất.
    Thay $x = e^{y-1}$ vào biểu thức:
    $$
-   f^*(y) = y e^{y-1} - e^{y-1} (y - 1) = e^{y-1}.
+   \begin{aligned}
+   f^*(y)&=e^{y-1}[y-(y-1)]\\
+   &=e^{y-1}.
+   \end{aligned}
    $$
    Miền xác định là toàn bộ trục số thực: $\operatorname{dom} f^* = \mathbb{R}$.
 
 2. Với $f(x_1, x_2) = \log(e^{x_1} + e^{x_2})$:
    Biểu thức $y_1 x_1 + y_2 x_2 - \log(e^{x_1} + e^{x_2})$.
    - Nếu $y_1 < 0$, ta cho $x_1 \to -\infty$ và giữ $x_2$ cố định, biểu thức sẽ tiến tới $+\infty$. Tương tự với $y_2 < 0$. Do đó bắt buộc $y_1 \ge 0, y_2 \ge 0$.
-   - Khi chọn $x_1 = x_2 = t$, biểu thức trở thành:
+   - Khi chọn $x_1=x_2=t$, đặt $s=y_1+y_2$. Biểu thức trở thành hàm $h(t)$:
      $$
-     (y_1 + y_2) t - \log(2 e^t) = (y_1 + y_2 - 1) t - \log 2.
+     \begin{aligned}
+     h(t)&=st-\log(2e^t)\\
+     &=(s-1)t-\log2.
+     \end{aligned}
      $$
      Để biểu thức bị chặn trên khi $t \to \pm\infty$, ta bắt buộc phải có $y_1 + y_2 = 1$.
-   - Khi $y_1 \ge 0, y_2 \ge 0$ và $y_1 + y_2 = 1$: Đặt $p_1 = y_1, p_2 = y_2$. Ta có:
+   - Khi $y_1 \ge 0, y_2 \ge 0$ và $y_1 + y_2 = 1$: Đặt $Z=e^{x_1}+e^{x_2}$ và $H(y)=y_1\log y_1+y_2\log y_2$. Bất đẳng thức log-sum cho:
      $$
-     y_1 x_1 + y_2 x_2 - \log(e^{x_1} + e^{x_2}) \le y_1 \log y_1 + y_2 \log y_2.
+     y_1x_1+y_2x_2-\log Z\le H(y).
      $$
-   Do đó:
+   Với $y_1,y_2>0$, dấu bằng đạt được khi $x_i=\log y_i$. Ở biên, giá trị này được tiến tới bằng giới hạn. Vì vậy, với quy ước $0\log0=0$, trên đơn hình $\Delta_2$ ta có:
    $$
-   f^*(y_1, y_2) = \begin{cases} y_1 \log y_1 + y_2 \log y_2 & \text{if } y_1 \ge 0, y_2 \ge 0 \text{ and } y_1 + y_2 = 1, \\ +\infty & \text{otherwise.} \end{cases}
+   f^*(y)=H(y).
    $$
+   Ngoài $\Delta_2$, ta có $f^*(y)=+\infty$.
 :::
 
 ::: exercise 2. Nới lỏng Đối ngẫu Lagrange cho Quy hoạch Số nguyên Boolean (Boolean LP)
 Xét bài toán quy hoạch số nguyên nhị phân:
 $$
-\min_{x \in \mathbb{R}^n} \quad c^T x \quad \text{s.t.} \quad A x \preceq b, \quad x_i \in \{0, 1\}, \quad i = 1, \dots, n.
+\begin{aligned}
+&\min_{x\in\mathbb R^n}c^Tx,\\
+&Ax\preceq b,\\
+&x_i\in\{0,1\},\quad i=1,\dots,n.
+\end{aligned}
 $$
 1. Hãy viết lại ràng buộc $x_i \in \{0, 1\}$ dưới dạng đẳng thức toàn phương liên tục.
 2. Thiết lập hàm Lagrangian và xây dựng bài toán đối ngẫu Lagrange.
@@ -764,29 +856,38 @@ $$
 1. Điều kiện $x_i \in \{0, 1\}$ tương đương với phương trình bậc hai: $x_i(1 - x_i) = 0$, tức là $x_i - x_i^2 = 0$ với mọi $i = 1, \dots, n$.
    Bài toán trở thành:
    $$
-   \min_x \quad c^T x \quad \text{s.t.} \quad A x - b \preceq 0, \quad x_i - x_i^2 = 0, \quad i = 1, \dots, n.
+   \begin{aligned}
+   &\min_x c^Tx,\\
+   &Ax-b\preceq0,\\
+   &x_i-x_i^2=0,\quad i=1,\dots,n.
+   \end{aligned}
    $$
 
-2. Thiết lập hàm Lagrangian với nhân tử $\lambda \in \mathbb{R}^m$ ($\lambda \succeq 0$) và $\nu \in \mathbb{R}^n$:
+2. Thiết lập hàm Lagrangian với nhân tử $\lambda \in \mathbb{R}^m$ ($\lambda \succeq 0$) và $\nu \in \mathbb{R}^n$. Gọi $a_i$ là cột thứ $i$ của $A$ và đặt $r_i=c_i+a_i^T\lambda+\nu_i$. Khi gom các số hạng theo từng biến:
    $$
-\begin{aligned}
-L(x, \lambda, \nu) &= c^T x + \lambda^T (A x - b) + \sum_{i=1}^n \nu_i (x_i - x_i^2) \\
-&= -b^T \lambda + \sum_{i=1}^n \left( -\nu_i x_i^2 + (c_i + a_i^T \lambda + \nu_i) x_i \right),
-\end{aligned}
-$$
-   trong đó $a_i$ là cột thứ $i$ của ma trận $A$.
+   \begin{aligned}
+   L(x,\lambda,\nu)&=-b^T\lambda+\sum_{i=1}^n\ell_i(x_i),\\
+   \ell_i(x_i)&=-\nu_ix_i^2+r_ix_i.
+   \end{aligned}
+   $$
 
    Để $L(x, \lambda, \nu)$ bị chặn dưới theo $x$, hệ số của $x_i^2$ bắt buộc phải không âm, tức $-\nu_i \ge 0 \implies \nu_i \le 0$.
-   - Nếu $\nu_i < 0$: Đỉnh parabol đạt cực tiểu tại $x_i = \frac{c_i + a_i^T \lambda + \nu_i}{2 \nu_i}$.
-     Giá trị cực tiểu theo $x_i$ là $-\frac{(c_i + a_i^T \lambda + \nu_i)^2}{4 \nu_i}$.
-   - Hàm đối ngẫu thu được:
+   - Nếu $\nu_i<0$: Đỉnh parabol đạt cực tiểu tại $x_i=r_i/(2\nu_i)$, với giá trị $r_i^2/(4\nu_i)$.
+   - Nếu $\nu_i=0$: Hàm $\ell_i$ bị chặn dưới khi và chỉ khi $r_i=0$, khi đó giá trị cực tiểu bằng 0.
+   - Nếu $\nu_i>0$, hoặc $\nu_i=0$ nhưng $r_i\ne0$: Ta có $g(\lambda,\nu)=-\infty$.
+
+   Đặt $I_- = \{i\mid\nu_i<0\}$. Trên miền hữu hạn vừa nêu, hàm đối ngẫu là:
      $$
-     g(\lambda, \nu) = -b^T \lambda - \sum_{i=1}^n \frac{(c_i + a_i^T \lambda + \nu_i)^2}{4 \nu_i} , \quad \nu \prec 0, \, \lambda \succeq 0.
+     g(\lambda,\nu)=-b^T\lambda+\sum_{i\in I_-}\frac{r_i^2}{4\nu_i}.
      $$
 
 3. Bài toán đối ngẫu Lagrange:
    $$
-   \max_{\lambda \succeq 0, \, \nu \prec 0} \quad g(\lambda, \nu).
+   \begin{aligned}
+   &\max_{\lambda,\nu}g(\lambda,\nu),\\
+   &\lambda\succeq0,\quad\nu\preceq0,\\
+   &r_i=0\quad\text{khi }\nu_i=0.
+   \end{aligned}
    $$
    Theo định lý đối ngẫu yếu, với mọi cặp nhân tử khả thi $(\lambda, \nu)$, ta luôn có $g(\lambda, \nu) \le p^*$. Do đó, việc giải bài toán đối ngẫu lồi này cung cấp một cận dưới hữu hiệu cho bài toán quy hoạch số nguyên NP-khó gốc. Đây chính là kỹ thuật nới lỏng đối ngẫu Lagrange (Lagrangian Relaxation) được áp dụng phổ biến trong tối ưu tổ hợp.
 :::
@@ -811,26 +912,41 @@ Xét trò chơi ma trận hai người có tổng bằng 0 với ma trận thư�
    $$
    Bài toán trở thành bài toán quy hoạch tuyến tính:
    $$
-   \min_{p, t} \quad t \quad \text{s.t.} \quad A^T p \preceq t \mathbf{1}, \quad \mathbf{1}^T p = 1, \quad p \succeq 0.
+   \begin{aligned}
+   &\min_{p,t}t,\\
+   &A^Tp\preceq t\mathbf1,\\
+   &\mathbf1^Tp=1,\quad p\succeq0.
+   \end{aligned}
    $$
 
 2. Thiết lập bài toán đối ngẫu của bài toán LP trên:
    Đặt biến đối ngẫu $q \in \mathbb{R}^n$ ($q \succeq 0$) cho ràng buộc $A^T p - t \mathbf{1} \preceq 0$, và biến vô hướng $s \in \mathbb{R}$ cho ràng buộc $\mathbf{1}^T p = 1$.
-   Lagrangian:
+   Đặt $u=A^Tp-t\mathbf1$ và $v=1-\mathbf1^Tp$. Lagrangian là:
    $$
-   L(p, t, q, s) = t + q^T (A^T p - t \mathbf{1}) + s (1 - \mathbf{1}^T p) = s + t (1 - \mathbf{1}^T q) + p^T (A q - s \mathbf{1}).
+   L=t+q^Tu+sv.
+   $$
+   Gom theo hai biến gốc $t,p$, đặt $a=1-\mathbf1^Tq$ và $b=Aq-s\mathbf1$, ta được:
+   $$
+   L=s+ta+p^Tb.
    $$
    Cận dưới theo $t$ hữu hạn khi và chỉ khi $\mathbf{1}^T q = 1$.
    Cận dưới theo $p \succeq 0$ hữu hạn khi và chỉ khi $A q - s \mathbf{1} \succeq 0 \iff A q \succeq s \mathbf{1}$.
    Bài toán đối ngẫu là:
    $$
-   \max_{q, s} \quad s \quad \text{s.t.} \quad A q \succeq s \mathbf{1}, \quad \mathbf{1}^T q = 1, \quad q \succeq 0,
+   \begin{aligned}
+   &\max_{q,s}s,\\
+   &Aq\succeq s\mathbf1,\\
+   &\mathbf1^Tq=1,\quad q\succeq0,
+   \end{aligned}
    $$
-   tương đương với:
+   Gọi $V$ là giá trị tối ưu này. Với mỗi $q$, giá trị nhỏ nhất của $p^TAq$ trên $\Delta_m$ bằng thành phần nhỏ nhất của $Aq$. Vì vậy:
    $$
-   \max_{q \in \Delta_n} \min_{i=1,\dots,m} (A q)_i = \max_{q \in \Delta_n} \min_{p \in \Delta_m} p^T A q.
+   \begin{aligned}
+   V&=\max_{q\in\Delta_n}\min_{i=1,\dots,m}(Aq)_i\\
+   &=\max_{q\in\Delta_n}\min_{p\in\Delta_m}p^TAq.
+   \end{aligned}
    $$
-   Vì miền khả thi của cả hai bài toán LP đều khác rỗng và bị chặn (đơn hình xác suất), theo định lý đối ngẫu mạnh của quy hoạch tuyến tính, giá trị tối ưu của bài toán gốc và đối ngẫu bằng nhau. Điều này chứng minh trọn vẹn Định lý Minimax của von Neumann.
+   Các đơn hình xác suất đều khác rỗng và compact, nên chi phí kỳ vọng bị chặn và hai bài toán LP đều có giá trị tối ưu hữu hạn. Theo đối ngẫu mạnh của quy hoạch tuyến tính, hai giá trị này bằng nhau. Điều này chứng minh Định lý Minimax của von Neumann.
 :::
 
 ::: exercise 4. Xác lập Chứng chỉ vô nghiệm bằng Bổ đề Farkas
@@ -849,7 +965,10 @@ $$
 **Lời giải**:
 1. Đặt biến $x = (x_1, x_2)^T$. Hệ viết dưới dạng $A x \le b$ với:
    $$
-   A = \begin{bmatrix} 1 & 2 \\ -1 & 1 \\ 0 & -1 \end{bmatrix}, \qquad b = \begin{bmatrix} 1 \\ -2 \\ -1 \end{bmatrix}.
+   \begin{aligned}
+   A&=\begin{bmatrix}1&2\\-1&1\\0&-1\end{bmatrix},\\
+   b&=\begin{bmatrix}1\\-2\\-1\end{bmatrix}.
+   \end{aligned}
    $$
 
 2. Theo Bổ đề Farkas, để chứng minh hệ $A x \le b$ vô nghiệm, ta cần tìm vector $\lambda = (\lambda_1, \lambda_2, \lambda_3)^T \ge 0$ thỏa mãn:
@@ -858,15 +977,19 @@ $$
    $$
    Khai triển hệ phương trình $A^T \lambda = 0$:
    $$
-   \begin{cases}
-   \lambda_1 - \lambda_2 = 0 \implies \lambda_1 = \lambda_2 \\
-   2 \lambda_1 + \lambda_2 - \lambda_3 = 0 \implies \lambda_3 = 2 \lambda_1 + \lambda_2 = 3 \lambda_1
-   \end{cases}
+   \begin{aligned}
+   &\lambda_1-\lambda_2=0,\\
+   &2\lambda_1+\lambda_2-\lambda_3=0.
+   \end{aligned}
    $$
+   Phương trình đầu cho $\lambda_2=\lambda_1$. Thế vào phương trình sau, ta được $\lambda_3=3\lambda_1$.
    Chọn $\lambda_1 = 1 > 0$, suy ra $\lambda_2 = 1 > 0$ và $\lambda_3 = 3 > 0$. Vector $\lambda = (1, 1, 3)^T$ hoàn toàn thỏa mãn điều kiện không âm $\lambda \ge 0$.
    Tính tích vô hướng $b^T \lambda$:
    $$
-   b^T \lambda = 1(1) + (-2)(1) + (-1)(3) = 1 - 2 - 3 = -4 < 0.
+   \begin{aligned}
+   b^T\lambda&=1-2-3\\
+   &=-4<0.
+   \end{aligned}
    $$
    Cả ba điều kiện của Hệ 2 trong Bổ đề Farkas đều được thỏa mãn. Vector $\lambda = (1, 1, 3)^T$ là một chứng chỉ toán học tuyệt đối khẳng định rằng hệ bất đẳng thức ban đầu vô nghiệm.
 :::
@@ -874,28 +997,28 @@ $$
 ::: exercise 5. Bổ đề S-procedure và Điều kiện Bao hàm giữa hai Ellipsoid
 Xét hai ellipsoid trong $\mathbb{R}^n$ có tâm tại gốc tọa độ:
 $$
-\mathcal{E}_1 = \{x \in \mathbb{R}^n \mid x^T A_1 x \le 1\}, \qquad \mathcal{E}_2 = \{x \in \mathbb{R}^n \mid x^T A_2 x \le 1\},
+\mathcal E_k=\{x\in\mathbb R^n\mid x^TA_kx\le1\},
 $$
-với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác định dương.
+với $k=1,2$ và $A_1,A_2\in\mathbb S_{++}^n$ là các ma trận đối xứng xác định dương.
 1. Hãy viết điều kiện bao hàm $\mathcal{E}_1 \subseteq \mathcal{E}_2$ dưới dạng mệnh đề kéo theo giữa hai bất đẳng thức toàn phương.
 2. Áp dụng Bổ đề S-procedure để thiết lập điều kiện ma trận tương đương cho mệnh đề bao hàm trên, và chứng minh rằng $\mathcal{E}_1 \subseteq \mathcal{E}_2 \iff A_1 \succeq A_2$.
 3. Giải thích ý nghĩa hình học của kết quả này trong bài toán xấp xỉ bao bọc tập dữ liệu học máy.
 :::
 ::: solution
 **Lời giải**:
-1. Điều kiện $\mathcal{E}_1 \subseteq \mathcal{E}_2$ đồng nghĩa với việc mọi điểm $x \in \mathcal{E}_1$ đều phải thuộc $\mathcal{E}_2$:
+1. Đặt $F_1(x)=x^TA_1x-1$ và $F_0(x)=x^TA_2x-1$. Điều kiện $\mathcal E_1\subseteq\mathcal E_2$ đồng nghĩa với việc mọi điểm của ellipsoid thứ nhất đều thuộc ellipsoid thứ hai:
    $$
-   x^T A_1 x - 1 \le 0 \implies x^T A_2 x - 1 \le 0.
+   F_1(x)\le0\implies F_0(x)\le0.
    $$
-   Đặt $F_1(x) = x^T A_1 x - 1$ và $F_0(x) = x^T A_2 x - 1$. Vì tại gốc tọa độ $x = 0$, ta có $F_1(0) = -1 < 0$, điều kiện Slater ngặt thỏa mãn hoàn toàn.
+   Vì tại gốc tọa độ $x=0$, ta có $F_1(0)=-1<0$, điều kiện Slater ngặt được thỏa mãn.
 
 2. Áp dụng Bổ đề S-procedure: Mệnh đề $F_1(x) \le 0 \implies F_0(x) \le 0$ đúng khi và chỉ khi tồn tại $\lambda \ge 0$ sao cho:
    $$
    F_0(x) \le \lambda F_1(x) \quad \forall x \in \mathbb{R}^n.
    $$
-   Thay biểu thức của $F_0, F_1$:
+   Đặt $B=\lambda A_1-A_2$. Chuyển các số hạng sang cùng một vế, điều kiện trên tương đương với:
    $$
-   x^T A_2 x - 1 \le \lambda (x^T A_1 x - 1) \iff x^T (\lambda A_1 - A_2) x + (1 - \lambda) \ge 0 \quad \forall x \in \mathbb{R}^n.
+   x^TBx+1-\lambda\ge0\quad\forall x\in\mathbb R^n.
    $$
    Bất đẳng thức này nghiệm đúng với mọi $x \in \mathbb{R}^n$ khi và chỉ khi:
    - Hệ số tự do không âm: $1 - \lambda \ge 0 \implies \lambda \le 1$.
@@ -903,13 +1026,13 @@ với $A_1, A_2 \in \mathbb{S}_{++}^n$ là các ma trận đối xứng xác đ�
 
    Vì $\lambda \le 1$ và $A_1 \succ 0$, ta có:
    $$
-   A_2 \preceq \lambda A_1 \preceq 1 \cdot A_1 = A_1 \implies A_1 \succeq A_2.
+   A_2\preceq\lambda A_1\preceq A_1.
    $$
    Ngược lại, nếu $A_1 \succeq A_2$, ta chỉ cần chọn đúng $\lambda = 1 \ge 0$, lúc đó $x^T A_2 x - 1 \le 1 \cdot (x^T A_1 x - 1)$ tự động thỏa mãn với mọi $x$.
    Do đó, điều kiện cần và đủ để $\mathcal{E}_1 \subseteq \mathcal{E}_2$ là $A_1 \succeq A_2$.
 
 3. Ý nghĩa hình học:
-   Độ dài các bán trục của ellipsoid $\mathcal{E}$ tỷ lệ nghịch với căn bậc hai của các giá trị riêng của ma trận định hình ($r_i = 1/\sqrt{\lambda_i(A)}$). Điều kiện $A_1 \succeq A_2$ đồng nghĩa với việc mọi giá trị riêng của $A_1$ đều lớn hơn hoặc bằng giá trị riêng tương ứng của $A_2$ ($\lambda_i(A_1) \ge \lambda_i(A_2)$), kéo theo mọi bán trục của $\mathcal{E}_1$ đều ngắn hơn hoặc bằng bán trục của $\mathcal{E}_2$ trên mọi phương hướng không gian.
+   Trên mỗi hướng đơn vị $u$, bán kính của ellipsoid $\mathcal E_k$ là $r_k(u)=1/\sqrt{u^TA_ku}$. Điều kiện $A_1\succeq A_2$ có nghĩa là $u^TA_1u\ge u^TA_2u$ trên mọi hướng. Vì vậy, $r_1(u)\le r_2(u)$ và ellipsoid thứ nhất nằm trong ellipsoid thứ hai. Các trục chính của hai ellipsoid có thể khác hướng, nên chỉ so sánh độ dài bán trục là chưa đủ để kết luận bao hàm.
 :::
 
 ::: exercise 6. Kiểm tra điều kiện Slater khi có ràng buộc đẳng thức và giải hệ KKT
@@ -930,7 +1053,7 @@ $$
 1. **Dạng chuẩn tắc và điểm Slater**:
    Viết các ràng buộc dưới dạng bất đẳng thức chuẩn tắc $f_i(x) \le 0$:
    $$
-   f_1(x) = -x_1 \le 0, \qquad f_2(x) = -x_2 \le 0,
+   f_i(x)=-x_i\le0,\quad i=1,2,
    $$
    cùng ràng buộc đẳng thức affine $h_1(x) = x_1 + x_2 - 1 = 0$.
    
@@ -950,9 +1073,9 @@ $$
    - Nghiệm của bài toán đối ngẫu $(\lambda^*, \nu^*)$ chắc chắn tồn tại và đạt được giá trị cực đại hữu hạn.
 
 3. **Thiết lập Lagrangian và giải hệ KKT**:
-   Hàm Lagrangian với $\lambda_1, \lambda_2 \ge 0$ và $\nu \in \mathbb{R}$:
+   Với $\lambda_1,\lambda_2\ge0$ và $\nu\in\mathbb R$, đặt $\ell_i(x_i)=x_i^2+(\nu-\lambda_i)x_i$ cho $i=1,2$. Hàm Lagrangian là:
    $$
-   L(x, \lambda, \nu) = x_1^2 + x_2^2 - \lambda_1 x_1 - \lambda_2 x_2 + \nu(x_1 + x_2 - 1).
+   L=\ell_1(x_1)+\ell_2(x_2)-\nu.
    $$
    Hệ điều kiện KKT gồm:
    - Khả thi gốc: $x_1 + x_2 = 1$, $x_1 \ge 0$, $x_2 \ge 0$.
@@ -960,11 +1083,11 @@ $$
    - Bù trừ (Complementary slackness): $\lambda_1 x_1 = 0$, $\lambda_2 x_2 = 0$.
    - Triệt tiêu đạo hàm:
      $$
-\begin{aligned}
-\frac{\partial L}{\partial x_1} &= 2x_1 - \lambda_1 + \nu = 0, \\
-\frac{\partial L}{\partial x_2} &= 2x_2 - \lambda_2 + \nu = 0.
-\end{aligned}
-$$
+     \begin{aligned}
+     \frac{\partial L}{\partial x_1} &= 2x_1 - \lambda_1 + \nu = 0, \\
+     \frac{\partial L}{\partial x_2} &= 2x_2 - \lambda_2 + \nu = 0.
+     \end{aligned}
+     $$
    
    Xét ứng viên đối xứng $x_1^* = 0{,}5 > 0$ và $x_2^* = 0{,}5 > 0$.
    Theo điều kiện bù trừ, vì $x_1^* > 0$ và $x_2^* > 0$, bắt buộc:
@@ -973,7 +1096,7 @@ $$
    $$
    Thay vào phương trình đạo hàm:
    $$
-   2(0{,}5) - 0 + \nu = 0 \implies 1 + \nu = 0 \implies \nu^* = -1.
+   1+\nu=0\implies\nu^*=-1.
    $$
    Lưu ý: Nhân tử Lagrange của ràng buộc đẳng thức $\nu$ được phép nhận giá trị âm tùy ý.
    
@@ -1007,9 +1130,9 @@ $$
      $$
      g(0) = \inf_{x \in \mathbb{R}} x = -\infty.
      $$
-   - Khi $\lambda > 0$: Biểu thức $L(x, \lambda) = \lambda x^2 + x$ là tam thức bậc hai có bề lõm hướng lên. Hoàn thành bình phương:
+   - Khi $\lambda>0$: Biểu thức $L(x,\lambda)=\lambda x^2+x$ là tam thức bậc hai có hệ số bậc hai dương. Đặt $z=x+1/(2\lambda)$, phép hoàn thành bình phương cho:
      $$
-     L(x, \lambda) = \lambda\left(x + \frac{1}{2\lambda}\right)^2 - \frac{1}{4\lambda}.
+     L(x,\lambda)=\lambda z^2-\frac1{4\lambda}.
      $$
      Do đó cực tiểu đạt tại $x = -\frac{1}{2\lambda}$, cho giá trị hàm đối ngẫu:
      $$
@@ -1030,9 +1153,9 @@ $$
 4. **Kiểm tra điều kiện dừng KKT**:
    Điều kiện triệt tiêu đạo hàm KKT tại điểm tối ưu gốc $x^* = 0$:
    $$
-   \nabla_x L(0, \lambda) = 1 + 2\lambda(0) = 1 = 0.
+   \nabla_xL(0,\lambda)=1\ne0.
    $$
-   Phương trình $1 = 0$ là vô nghiệm đối với mọi $\lambda \in \mathbb{R}$.
+   Vì vậy, điều kiện dừng không thể thỏa mãn với bất kỳ $\lambda\in\mathbb R$ nào.
    
    **Nhận xét sâu sắc**: Điểm $x^* = 0$ là nghiệm tối ưu toàn cục duy nhất của một bài toán lồi trơn, nhưng không tồn tại bất kỳ nhân tử Lagrange KKT nào đi kèm. Điều này chứng minh rằng điều kiện cần KKT chỉ có hiệu lực khi bài toán thỏa mãn một điều kiện chính quy (chẳng hạn như điều kiện Slater). Khi vi phạm Slater, siêu phẳng tựa của tập giá trị trở thành siêu phẳng thẳng đứng, khiến nhân tử đối ngẫu bị đẩy ra vô hạn.
 :::
@@ -1053,9 +1176,9 @@ $$
 
 ::: solution
 1. **Giải KKT khi $\tau = 1$**:
-   Hàm Lagrangian:
+   Đặt $a=w-3$ và $b=w^2-1$. Hàm Lagrangian là:
    $$
-   L(w, \lambda) = \frac{1}{2}(w - 3)^2 + \lambda(w^2 - 1).
+   L(w,\lambda)=\frac12a^2+\lambda b.
    $$
    Hệ điều kiện KKT:
    - Khả thi gốc: $w^2 \le 1 \iff -1 \le w \le 1$.
@@ -1078,11 +1201,14 @@ $$
      Miền khả thi là $[-\sqrt{\tau}, \sqrt{\tau}]$. Vì $3 > \sqrt{\tau}$, điểm khả thi gần $3$ nhất chính là đầu mút phải $w^*(\tau) = \sqrt{\tau}$.
      Thay vào phương trình đạo hàm $(w - 3) + 2\lambda w = 0$:
      $$
-     (\sqrt{\tau} - 3) + 2\lambda \sqrt{\tau} = 0 \implies \lambda^*(\tau) = \frac{3 - \sqrt{\tau}}{2\sqrt{\tau}} > 0.
+     \lambda^*(\tau)=\frac{3-\sqrt\tau}{2\sqrt\tau}>0.
      $$
      Giá trị mất mát tối ưu là:
      $$
-     p^*(\tau) = \frac{1}{2}(\sqrt{\tau} - 3)^2 = \frac{1}{2}(\tau - 6\sqrt{\tau} + 9).
+     \begin{aligned}
+     p^*(\tau)&=\frac12(\sqrt\tau-3)^2\\
+     &=\frac12(\tau-6\sqrt\tau+9).
+     \end{aligned}
      $$
    - **Trường hợp $\tau \ge 9$**:
      Điểm tự do $w = 3$ thỏa mãn $3^2 = 9 \le \tau$ nên khả thi.
@@ -1091,7 +1217,11 @@ $$
 3. **Kiểm chứng định lý độ nhạy vi phân**:
    Với $0 < \tau < 9$, lấy đạo hàm của hàm giá trị tối ưu theo tham số ràng buộc $\tau$:
    $$
-   \frac{\mathrm{d} p^*}{\mathrm{d} \tau} = \frac{\mathrm{d}}{\mathrm{d} \tau}\left[\frac{1}{2}(\tau - 6\tau^{1/2} + 9)\right] = \frac{1}{2}\left(1 - 3\tau^{-1/2}\right) = \frac{1}{2} - \frac{3}{2\sqrt{\tau}} = -\frac{3 - \sqrt{\tau}}{2\sqrt{\tau}}.
+   \begin{aligned}
+   \frac{\mathrm dp^*}{\mathrm d\tau}&=\frac12(1-3\tau^{-1/2})\\
+   &=\frac12-\frac3{2\sqrt\tau}\\
+   &=-\frac{3-\sqrt\tau}{2\sqrt\tau}.
+   \end{aligned}
    $$
    Đối chiếu với nhân tử đối ngẫu $\lambda^*(\tau)$:
    $$
@@ -1124,14 +1254,17 @@ $$
    Vì $x_1^2 + x_2^2 \ge 0$ và có điểm khả thi hữu hạn (chẳng hạn $(1, 0)$ có chi phí 1), giá trị tối ưu $p^*$ là hữu hạn và thỏa mãn $0 \le p^* \le 1$.
 
 2. **Hàm Lagrangian và hàm đối ngẫu**:
-   Hàm Lagrangian với $\lambda \ge 0$:
+   Với $\lambda\ge0$, đặt $u_i=x_i-\lambda/2$ cho $i=1,2$. Hoàn thành bình phương từng biến:
    $$
-\begin{aligned}
-L(x, \lambda) &= x_1^2 + x_2^2 + \lambda(1 - x_1 - x_2) \\
-&= \left(x_1^2 - \lambda x_1 + \frac{\lambda^2}{4}\right) + \left(x_2^2 - \lambda x_2 + \frac{\lambda^2}{4}\right) + \lambda - \frac{\lambda^2}{2} \\
-&= \left(x_1 - \frac{\lambda}{2}\right)^2 + \left(x_2 - \frac{\lambda}{2}\right)^2 + \lambda - \frac{\lambda^2}{2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   x_i^2-\lambda x_i&=\left(x_i-\frac\lambda2\right)^2-\frac{\lambda^2}4\\
+   &=u_i^2-\frac{\lambda^2}4.
+   \end{aligned}
+   $$
+   Do $L=x_1^2+x_2^2+\lambda(1-x_1-x_2)$, suy ra:
+   $$
+   L(x,\lambda)=u_1^2+u_2^2+\lambda-\frac{\lambda^2}2.
+   $$
    Cực tiểu theo $x$ đạt được tại $x_1(\lambda) = x_2(\lambda) = \frac{\lambda}{2}$.
    Hàm đối ngẫu Lagrange:
    $$
@@ -1153,21 +1286,26 @@ $$
 4. **Chứng nhận khoảng cách đối ngẫu bằng 0**:
    Tại nhân tử đối ngẫu tối ưu $\lambda^* = 1$, Lagrangian trở thành:
    $$
-   L(x, 1) = \left(x_1 - \frac{1}{2}\right)^2 + \left(x_2 - \frac{1}{2}\right)^2 + \frac{1}{2}.
+   L(x,1)=u_1^2+u_2^2+\frac12,
    $$
+   trong đó $u_i=x_i-1/2$.
    Vì tổng hai bình phương luôn không âm với mọi $x \in \mathbb{R}^2$, ta có:
    $$
    L(x, 1) \ge \frac{1}{2} \quad \forall x \in \mathbb{R}^2.
    $$
    Mặt khác, với mọi điểm $x$ khả thi bất kỳ của bài toán gốc ($x_1 + x_2 \ge 1$), ta có:
    $$
-   f_0(x) \ge f_0(x) + 1 \cdot (1 - x_1 - x_2) = L(x, 1) \ge \frac{1}{2}.
+   f_0(x)\ge L(x,1)\ge\frac12.
    $$
    Bất đẳng thức này chứng minh rằng *mọi điểm khả thi đều có chi phí không nhỏ hơn $\frac{1}{2}$*.
    
    Xét điểm $x^* = (0{,}5; 0{,}5)$: Điểm này khả thi vì $0{,}5 + 0{,}5 = 1 \ge 1$, và có chi phí đúng bằng:
    $$
-   f_0(x^*) = 0{,}5^2 + 0{,}5^2 = 0{,}25 + 0{,}25 = 0{,}5.
+   \begin{aligned}
+   f_0(x^*)&=0{,}5^2+0{,}5^2\\
+   &=0{,}25+0{,}25\\
+   &=0{,}5.
+   \end{aligned}
    $$
    Điểm khả thi $x^*$ đạt đúng cận dưới đối ngẫu $d^* = 0{,}5$, chứng minh $p^* = d^* = 0{,}5$ và khoảng cách đối ngẫu bằng 0. Nghiệm tối ưu toàn cục duy nhất là $x^* = (0{,}5; 0{,}5)$.
 :::
@@ -1184,7 +1322,7 @@ $$
 5. **Điểm yên ngựa Minimax**: Điểm tối ưu của bài toán đối ngẫu mạnh chính là điểm yên ngựa của hàm Lagrangian, tương ứng với trạng thái cân bằng trong lý thuyết trò chơi và huấn luyện đối kháng (GANs).
 6. **Hệ điều kiện KKT**: Bốn nhóm điều kiện (Khả thi gốc, Khả thi đối ngẫu, Bù trừ, Triệt tiêu gradient) xác lập tiêu chuẩn cần và đủ cho tính tối ưu toàn cục của các bài toán lồi khả vi.
 7. **Chứng chỉ vô nghiệm và Bổ đề Farkas**: Đối ngẫu cung cấp cơ chế nhị phân kiểm tra tính khả thi của hệ thống ràng buộc mà không cần thử nghiệm từng điểm.
-8. **Hai hàm toàn phương và Bổ đề S-procedure**: Mặc dù phi lồi, bài toán cực tiểu hóa hàm toàn phương với một ràng buộc toàn phương luôn đạt đối ngẫu mạnh nhờ tính lồi của tập ảnh Dines trong $\mathbb{R}^2$. S-procedure đưa điều kiện kiểm thử an toàn phi tuyến về một bất đẳng thức ma trận tuyến tính (LMI) hiệu quả.
+8. **Hai hàm toàn phương và Bổ đề S-procedure**: Bài toán cực tiểu hóa hàm toàn phương với một ràng buộc toàn phương đạt đối ngẫu mạnh khi có điểm Slater ngặt và giá trị tối ưu hữu hạn. Định lý Dines cho hai dạng toàn phương thuần nhất là một công cụ hình học trong chứng minh. S-procedure chuyển điều kiện kéo theo giữa hai bất đẳng thức toàn phương thành một bất đẳng thức ma trận tuyến tính (LMI).
 
 ---
 

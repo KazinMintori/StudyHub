@@ -236,10 +236,12 @@ flowchart TD
 | 4 | **C** | $4$ | Đến $G$ qua $C$ tốn $4+3=7$.<br/>Hàng đợi: $[(G, 7)]$ | $\{S, A, B, C\}$ |
 | 5 | **G** | $7$ | Lấy $G$ ra khỏi hàng đợi $\to$ **DỪNG** | $\{S, A, B, C, G\}$ |
 
-Kết quả đường đi:
+Đường đi tối ưu là:
 $$
-S \to A \to B \to C \to G, \quad \text{Cost} = 7 \quad (\text{Optimal})
+S \to A \to B \to C \to G.
 $$
+
+Tổng chi phí của đường đi này bằng $7$.
 
 ### Quy tắc vàng khi cài đặt UCS: Điều kiện dừng chuẩn xác
 
@@ -305,9 +307,15 @@ Trong một cây tìm kiếm với hệ số rẽ nhánh $b$:
 - Tầng $d-1$ có $b^{d-1}$ nút.
 - Tổng số nút ở tất cả các tầng phía trên gộp lại chỉ xấp xỉ $\frac{b^d}{b-1}$.
 
-Số lần một nút ở độ sâu $i$ được duyệt trong IDS là $(d - i + 1)$. Tổng số lần duyệt nút trên toàn cây là:
+Số lần một nút ở độ sâu $i$ được duyệt trong IDS là $(d - i + 1)$. Chẳng hạn, khi $d=2$, tổng số lần duyệt là:
 $$
-N_{\text{IDS}} = (d+1) \cdot 1 + d \cdot b + (d-1) \cdot b^2 + \cdots + 1 \cdot b^d
+N_{\text{IDS}} = 3 + 2b + b^2.
+$$
+
+Trong trường hợp tổng quát, cộng đóng góp của từng tầng từ $i=0$ đến $i=d$ cho ta:
+
+$$
+N_{\text{IDS}} = \sum_{i=0}^d (d-i+1)b^i.
 $$
 
 Khi $b > 1$ (ví dụ thực tế $b = 10$ và $d = 5$):

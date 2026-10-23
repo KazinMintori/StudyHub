@@ -153,11 +153,11 @@ Cho biến ngẫu nhiên $X$ tuân theo phân phối Poisson với tham số $\m
    $$
    Vì $t > \mu$, ta có $\lambda^* > 0$. Thay vào biểu thức liên hợp:
    $$
-\begin{aligned}
-\psi^*(t) &= t \log\left(\frac{t}{\mu}\right) - \mu\left(\frac{t}{\mu} - 1\right) \\
-&= t \log\left(\frac{t}{\mu}\right) - t + \mu.
-\end{aligned}
-$$
+   \begin{aligned}
+   \psi^*(t) &= t \log\left(\frac{t}{\mu}\right) - \mu\left(\frac{t}{\mu} - 1\right) \\
+   &= t \log\left(\frac{t}{\mu}\right) - t + \mu.
+   \end{aligned}
+   $$
 
 3. **Thiết lập cận Chernoff**:
    Xác suất đuôi bị chặn bởi:
@@ -200,11 +200,11 @@ Cho biến ngẫu nhiên $X$ có $\mathbb{E}[X] = 0$ và $\operatorname{Var}(X) 
    $$
    Thay $u^*$ vào biểu thức $g(u)$:
    $$
-\begin{aligned}
-a + u^* &= a + \frac{\sigma^2}{a} = \frac{a^2 + \sigma^2}{a}, \\
-\sigma^2 + (u^*)^2 &= \sigma^2 + \frac{\sigma^4}{a^2} = \sigma^2 \left(1 + \frac{\sigma^2}{a^2}\right) = \frac{\sigma^2(a^2 + \sigma^2)}{a^2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   a + u^* &= a + \frac{\sigma^2}{a} = \frac{a^2 + \sigma^2}{a}, \\
+   \sigma^2 + (u^*)^2 &= \sigma^2 + \frac{\sigma^4}{a^2} = \sigma^2 \left(1 + \frac{\sigma^2}{a^2}\right) = \frac{\sigma^2(a^2 + \sigma^2)}{a^2}.
+   \end{aligned}
+   $$
    Do đó:
    $$
    g(u^*) = \frac{\frac{\sigma^2(a^2 + \sigma^2)}{a^2}}{\frac{(a^2 + \sigma^2)^2}{a^2}} = \frac{\sigma^2}{a^2 + \sigma^2} = \frac{\sigma^2}{\sigma^2 + a^2}.

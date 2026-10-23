@@ -21,22 +21,22 @@
   "exercises": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 489,
+      "line": 577,
       "title": "1. Kiểm tra tính xác định dương và Phần bù Schur cho ma trận khối"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 527,
+      "line": 625,
       "title": "2. Thực hiện phân tích Cholesky và Giải hệ phương trình chuẩn tắc"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 563,
+      "line": 667,
       "title": "3. Phân tích SVD và Độ co giãn của ma trận dữ liệu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 591,
+      "line": 698,
       "title": "4. So sánh chi phí Flops và Thuật toán Khử khối Schur cho Hệ KKT"
     },
     {
@@ -58,22 +58,22 @@
   "solutions": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 499,
+      "line": 587,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 535,
+      "line": 633,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 568,
+      "line": 672,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md",
-      "line": 604,
+      "line": 711,
       "title": ""
     },
     {

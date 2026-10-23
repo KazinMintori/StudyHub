@@ -1,7 +1,8 @@
-import { ref, computed, watch, onMounted } from 'vue'
-import { readStored, writeStored } from '../../../core/storage/index.js'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+import { getStorage, writeStored } from '../../../core/storage/index.js'
 import {
   filterCardsByCourse,
+  getCardKey,
   countKnownCards,
   getCardByIndex,
   getNextCardIndex,
@@ -18,6 +19,7 @@ export function useFlashcards(options = {}) {
   const index = ref(0)
   const revealed = ref(false)
   const remembered = ref({})
+  let pendingReviews = {}
 
   const deck = computed(() => filterCardsByCourse(allCards, subject.value))
   const current = computed(() => getCardByIndex(deck.value, index.value))
@@ -35,8 +37,11 @@ export function useFlashcards(options = {}) {
 
   function review(known) {
     if (!current.value) return
-    remembered.value = recordCardReview(remembered.value, current.value, known)
-    writeStored('studyhub_flashcards', remembered.value)
+    // Read before modifying too: A storage event from another tab can still be
+    // queued when the learner reviews a card or resets a course.
+    remembered.value = recordCardReview(readReviews(), current.value, known)
+    pendingReviews[getCardKey(current.value)] = Boolean(known)
+    saveReviews()
     index.value = getNextCardIndex(index.value, 1, deck.value.length)
     revealed.value = false
   }
@@ -47,14 +52,50 @@ export function useFlashcards(options = {}) {
   }
 
   function resetReview() {
-    remembered.value = resetCardReviews(remembered.value, deck.value)
-    writeStored('studyhub_flashcards', remembered.value)
+    remembered.value = resetCardReviews(readReviews(), deck.value)
+    for (const card of deck.value) pendingReviews[getCardKey(card)] = null
+    saveReviews()
     index.value = 0
     revealed.value = false
   }
 
+  function readReviews() {
+    const storage = getStorage()
+    if (!storage) return remembered.value
+    try {
+      const raw = storage.getItem('studyhub_flashcards')
+      const reviews = raw === null ? {} : JSON.parse(raw) || {}
+      // A quota error can leave older data readable. Keep only the unsaved
+      // local changes on top so independent reviews from other tabs survive.
+      for (const [key, value] of Object.entries(pendingReviews)) {
+        if (value === null) delete reviews[key]
+        else reviews[key] = value
+      }
+      return reviews
+    } catch {
+      return remembered.value
+    }
+  }
+
+  function saveReviews() {
+    if (writeStored('studyhub_flashcards', remembered.value)) pendingReviews = {}
+  }
+
+  function handleStorage(event) {
+    if (event.storageArea && event.storageArea !== getStorage()) return
+    if (event.key === 'studyhub_flashcards' || event.key === null) {
+      if (event.newValue === null) pendingReviews = {}
+      remembered.value = readReviews()
+    }
+  }
+
   onMounted(() => {
-    remembered.value = readStored('studyhub_flashcards', {}) || {}
+    remembered.value = readReviews()
+    window.addEventListener('storage', handleStorage)
+  })
+
+  onUnmounted(() => {
+    window.removeEventListener('storage', handleStorage)
   })
 
   return {

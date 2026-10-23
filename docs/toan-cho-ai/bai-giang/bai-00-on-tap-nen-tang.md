@@ -38,10 +38,14 @@ Giả sử ta thu thập được ba quan sát thực nghiệm sau:
 Thay vì viết ba phương trình rời rạc bằng vòng lặp tuần tự, trong kỹ nghệ AI ta gom toàn bộ đầu vào thành ma trận một cột và đầu ra thành một vector cột:
 
 $$
-A = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \quad
-b = \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}, \quad
-\widehat b = A w, \quad
-r = A w - b.
+A = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}, \qquad
+b = \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}.
+$$
+
+Các vector dự đoán và phần dư được tính bởi:
+
+$$
+\widehat b = A w, \qquad r = A w - b.
 $$
 
 - **Vector** $b, \widehat b, r \in \mathbb{R}^3$ là các danh sách số có thứ tự, trong đó mỗi phần tử đại diện cho một mẫu dữ liệu.
@@ -62,7 +66,10 @@ Làm thế nào để đo lường độ lớn của một vector hoặc kích t
 Với hai vector $u, v \in \mathbb{R}^n$, **tích vô hướng** (inner product) được định nghĩa là:
 
 $$
-u^T v = \sum_{j=1}^n u_j v_j = u_1 v_1 + u_2 v_2 + \dots + u_n v_n.
+\begin{aligned}
+u^T v &= \sum_{j=1}^n u_j v_j \\
+&= u_1 v_1 + u_2 v_2 + \dots + u_n v_n.
+\end{aligned}
 $$
 
 Cần phân biệt rõ: Đại lượng $u^T v$ là một số thực vô hướng (scalar), trong khi tích ngoài $u v^T$ lại tạo ra một ma trận kích thước $n \times n$. Hai cấu trúc này hoàn toàn khác biệt và không được hoán đổi cho nhau.
@@ -74,7 +81,10 @@ Các chuẩn vector thông dụng nhất trong học máy bao gồm:
    $$
 2. **Chuẩn $L_1$ (Manhattan)**: Tổng giá trị tuyệt đối các tọa độ:
    $$
-   \|u\|_1 = \sum_{j=1}^n |u_j| = |u_1| + |u_2| + \dots + |u_n|.
+   \begin{aligned}
+   \|u\|_1 &= \sum_{j=1}^n |u_j| \\
+   &= |u_1| + |u_2| + \dots + |u_n|.
+   \end{aligned}
    $$
    Chuẩn $L_1$ đóng vai trò cốt tử trong hồi quy Lasso và nén tín hiệu nhờ đặc tính thúc đẩy nghiệm thưa (sparse solution).
 3. **Chuẩn cực đại ($L_\infty$)**: Độ lệch lớn nhất trong các thành phần:
@@ -90,7 +100,10 @@ Các chuẩn vector thông dụng nhất trong học máy bao gồm:
 Với ma trận $A \in \mathbb{R}^{m \times n}$, hai chuẩn quan trọng nhất là:
 1. **Chuẩn Frobenius**: Tương đương với chuẩn Euclid coi ma trận như một vector kéo dài:
    $$
-   \|A\|_F = \sqrt{\operatorname{tr}(A^T A)} = \sqrt{\sum_{i=1}^m \sum_{j=1}^n A_{ij}^2}.
+   \begin{aligned}
+   \|A\|_F &= \sqrt{\operatorname{tr}(A^T A)} \\
+   &= \sqrt{\sum_{i=1}^m \sum_{j=1}^n A_{ij}^2}.
+   \end{aligned}
    $$
 2. **Chuẩn phổ (Spectral Norm / Chuẩn cảm sinh $L_2$)**: Đo độ khuếch đại lớn nhất mà ma trận $A$ có thể tác động lên một vector đơn vị:
    $$
@@ -126,11 +139,23 @@ Quy tắc vi phân này là bí quyết giúp ta tìm gradient của các biểu
    $$
 2. **Hàm toàn phương**: Xét $f(w) = \frac{1}{2} w^T P w$ với ma trận đối xứng $P = P^T$. Vi phân:
    $$
-   df = \frac{1}{2} (dw^T P w + w^T P dw) = w^T P dw = (P w)^T dw \implies \nabla_w \left(\frac{1}{2} w^T P w\right) = P w.
+   \begin{aligned}
+   df &= \frac{1}{2} (dw^T P w + w^T P dw) \\
+   &= w^T P dw \\
+   &= (P w)^T dw.
+   \end{aligned}
+   $$
+   Vì $P = P^T$, hai số hạng trong ngoặc bằng nhau. Do đó:
+   $$
+   \nabla_w \left(\frac{1}{2} w^T P w\right) = P w.
    $$
 3. **Đạo hàm theo vết ma trận (Trace)**:
    $$
-   \nabla_X \operatorname{tr}(A X) = A^T, \qquad \nabla_X \operatorname{tr}(X^T A X) = (A + A^T) X.
+   \nabla_X \operatorname{tr}(A X) = A^T.
+   $$
+   Với biểu thức toàn phương theo ma trận, ta có:
+   $$
+   \nabla_X \operatorname{tr}(X^T A X) = (A + A^T) X.
    $$
 4. **Đạo hàm của Logarit Định thức**: Cho ma trận đối xứng dương xác định $X \succ 0$:
    $$
@@ -141,7 +166,10 @@ Quy tắc vi phân này là bí quyết giúp ta tìm gradient của các biểu
 Xét hàm mất mát:
 
 $$
-f(w) = \frac{1}{2} \|A w - b\|_2^2 = \frac{1}{2} (A w - b)^T (A w - b).
+\begin{aligned}
+f(w) &= \frac{1}{2} \|A w - b\|_2^2 \\
+&= \frac{1}{2} (A w - b)^T (A w - b).
+\end{aligned}
 $$
 
 Khai triển hàm mất mát:
@@ -153,7 +181,11 @@ $$
 Lấy vi phân theo biến $w$:
 
 $$
-df = w^T A^T A dw - b^T A dw = (A^T A w - A^T b)^T dw = [A^T (A w - b)]^T dw.
+\begin{aligned}
+df &= w^T A^T A dw - b^T A dw \\
+&= (A^T A w - A^T b)^T dw \\
+&= [A^T (A w - b)]^T dw.
+\end{aligned}
 $$
 
 Từ đó, ta thu được công thức gradient chuẩn mực:
@@ -175,10 +207,16 @@ $$
 H_{ij} = \frac{\partial^2 f}{\partial w_i \partial w_j}.
 $$
 
-Hessian phản ánh độ cong địa hình của hàm mục tiêu qua khai triển Taylor bậc hai quanh điểm $w$:
+Hessian phản ánh độ cong của hàm mục tiêu qua khai triển Taylor bậc hai quanh điểm $w$. Đặt phần biến thiên bậc hai theo hướng $d$ là:
 
 $$
-f(w + d) \approx f(w) + \nabla f(w)^T d + \frac{1}{2} d^T H d.
+q(d) = \nabla f(w)^T d + \frac{1}{2} d^T H d.
+$$
+
+Khi đó, giá trị tại điểm dịch chuyển được xấp xỉ bởi:
+
+$$
+f(w + d) \approx f(w) + q(d).
 $$
 
 Độ cong của hàm số theo hướng dịch chuyển $d \in \mathbb{R}^n$ được định đoạt bởi dạng toàn phương $d^T H d$:
@@ -195,7 +233,12 @@ $$
 Dạng toàn phương của ma trận này với mọi vector $d \in \mathbb{R}^n$:
 
 $$
-d^T H d = d^T (A^T A) d = (A d)^T (A d) = \|A d\|_2^2 \ge 0.
+\begin{aligned}
+d^T H d &= d^T (A^T A) d \\
+&= (A d)^T (A d) \\
+&= \|A d\|_2^2 \\
+&\ge 0.
+\end{aligned}
 $$
 
 Vì chuẩn Euclid của một vector luôn không âm, ta có $d^T H d \ge 0$ với mọi hướng $d$. Một ma trận đối xứng thỏa mãn điều kiện này được gọi là **ma trận nửa xác định dương** (Positive Semidefinite, ký hiệu $H \succeq 0$). Điều này chứng minh rằng mặt mất mát của bài toán bình phương tối thiểu luôn là một mặt lồi paraboloid hướng lên trên.
@@ -245,11 +288,14 @@ $$
 trong đó:
 - $U \in \mathbb{R}^{m \times m}$ là ma trận trực giao ($U^T U = I_m$), các cột của $U$ là các vector kỳ dị trái (left singular vectors).
 - $V \in \mathbb{R}^{n \times n}$ là ma trận trực giao ($V^T V = I_n$), các cột của $V$ là các vector kỳ dị phải (right singular vectors).
-- $\Sigma \in \mathbb{R}^{m \times n}$ là ma trận đường chéo chữ nhật chứa các **giá trị kỳ dị** được xếp theo thứ tự giảm dần:
+- $\Sigma \in \mathbb{R}^{m \times n}$ là ma trận đường chéo chữ nhật chứa các **giá trị kỳ dị**. Đặt $q = \min(m,n)$ và $r = \operatorname{rank}(A)$. Nếu $r > 0$, các giá trị kỳ dị dương được xếp theo thứ tự:
   $$
-  \sigma_1 \ge \sigma_2 \ge \dots \ge \sigma_r > 0 = \sigma_{r+1} = \dots = 0,
+  \sigma_1 \ge \sigma_2 \ge \dots \ge \sigma_r > 0.
   $$
-  với $r = \operatorname{rank}(A)$ là hạng của ma trận.
+  Nếu $r < q$, các giá trị kỳ dị còn lại đều bằng không:
+  $$
+  \sigma_{r+1} = \dots = \sigma_q = 0.
+  $$
 
 ### 5.1. Ý nghĩa hình học của SVD
 Phép nhân ma trận $x \mapsto A x$ có thể phân rã thành ba bước hình học cơ bản:
@@ -288,11 +334,12 @@ Chi phí tính toán của các thao tác đại số cơ bản:
 Hệ phương trình có ma trận hệ số là ma trận tam giác (dưới hoặc trên) là khối cấu trúc cơ bản nhất của mọi thuật toán đại số tuyến tính số học:
 1. **Thế tiến (Forward substitution)** cho hệ tam giác dưới $L y = b$ (với $L_{ii} \ne 0$):
    $$
-\begin{aligned}
-y_1 &= \frac{b_1}{L_{11}}, \\
-y_i &= \frac{1}{L_{ii}} \left( b_i - \sum_{j=1}^{i-1} L_{ij} y_j \right), \quad i = 2, \dots, n.
-\end{aligned}
-$$
+   y_1 = \frac{b_1}{L_{11}}.
+   $$
+   Sau đó, với từng chỉ số $i = 2,\dots,n$, ta tính:
+   $$
+   y_i = \frac{1}{L_{ii}} \left( b_i - \sum_{j=1}^{i-1} L_{ij} y_j \right).
+   $$
    Số phép tính cần thực hiện là $\sum_{i=1}^n (2i - 1) = n^2$ flops.
 2. **Thế lùi (Back substitution)** cho hệ tam giác trên $U x = y$: Hoàn toàn tương tự, giải từ $x_n$ ngược lên $x_1$ với chi phí đúng $n^2$ flops.
 
@@ -380,11 +427,21 @@ Phương pháp này rất hiệu quả khi $n_2 \ll n_1$ hoặc khi khối $A_{1
 ### 6.7. Công thức cập nhật Sherman–Morrison–Woodbury
 Khi giải một chuỗi các hệ phương trình tuyến tính mà ma trận hệ số chỉ bị biến đổi bởi một số hạng hạng thấp (low-rank perturbation):
 
+Với $A \in \mathbb{R}^{n \times n}$ và $C \in \mathbb{R}^{p \times p}$ khả nghịch, đặt các ma trận trung gian:
+
 $$
-(A + U C V)^{-1} = A^{-1} - A^{-1} U (C^{-1} + V A^{-1} U)^{-1} V A^{-1},
+\begin{aligned}
+M &= A + UCV, \\
+Z &= A^{-1}U, \\
+T &= C^{-1} + VZ,
+\end{aligned}
 $$
 
-với $A \in \mathbb{R}^{n \times n}$, $U \in \mathbb{R}^{n \times p}$, $C \in \mathbb{R}^{p \times p}$ và $V \in \mathbb{R}^{p \times n}$.
+trong đó $U \in \mathbb{R}^{n \times p}$ và $V \in \mathbb{R}^{p \times n}$. Nếu $T$ cũng khả nghịch, công thức cập nhật là:
+
+$$
+M^{-1} = A^{-1} - ZT^{-1}VA^{-1}.
+$$
 - Khi $p \ll n$, thay vì phải tính nghịch đảo ma trận $n \times n$ với chi phí $O(n^3)$, ta chỉ cần nghịch đảo ma trận kích thước nhỏ $p \times p$ với chi phí $O(p^3)$ cộng với các phép nhân ma trận.
 - Công thức này là nền tảng của bộ lọc Kalman, thuật toán cập nhật Quasi-Newton (BFGS, DFP, SR1), và các mô hình học trực tuyến (Online Learning).
 
@@ -417,8 +474,20 @@ $$
 
 Khi mở rộng sang vector ngẫu nhiên $Z \in \mathbb{R}^m$ với vector kỳ vọng $\mu \in \mathbb{R}^m$ và ma trận hiệp phương sai đối xứng dương xác định $\Sigma \succ 0$, hàm mật độ Gauss đa biến có dạng:
 
+Đặt dạng toàn phương đo độ lệch có trọng số và hệ số chuẩn hóa lần lượt là:
+
 $$
-p(z) = \frac{1}{(2\pi)^{m/2} \sqrt{\det\Sigma}} \exp\left[ -\frac{1}{2} (z - \mu)^T \Sigma^{-1} (z - \mu) \right].
+q(z) = (z - \mu)^T \Sigma^{-1} (z - \mu),
+$$
+
+$$
+c_\Sigma = \frac{1}{(2\pi)^{m/2} \sqrt{\det\Sigma}}.
+$$
+
+Hàm mật độ được viết gọn thành:
+
+$$
+p(z) = c_\Sigma \exp\left[-\frac{q(z)}{2}\right].
 $$
 
 - Ma trận hiệp phương sai $\Sigma$ lưu giữ phương sai của từng thành phần trên đường chéo chính ($\Sigma_{ii} = \sigma_i^2$) và mức độ tương quan tuyến tính giữa các cặp thành phần ở các vị trí ngoài đường chéo ($\Sigma_{ij} = \operatorname{Cov}(Z_i, Z_j)$).
@@ -439,37 +508,56 @@ $$
 
 Nghĩa là nhãn thực tế $b_i$ là một biến ngẫu nhiên có kỳ vọng đúng bằng giá trị mô hình dự đoán $\mathbb{E}[b_i] = a_i^T w$, và bị sai lệch bởi một nhiễu ngẫu nhiên Gauss $\varepsilon_i$ không thiên vị với phương sai $\sigma^2$.
 
-Theo mô hình này, mật độ xác suất có điều kiện của nhãn $b_i$ khi biết tham số $w$ là:
+Với phần dư $r_i = a_i^T w - b_i$, đặt hệ số chuẩn hóa $c_\sigma = (2\pi\sigma^2)^{-1/2}$. Mật độ xác suất có điều kiện của nhãn $b_i$ khi biết tham số $w$ là:
 
 $$
-p(b_i \mid w) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left[ -\frac{(b_i - a_i^T w)^2}{2\sigma^2} \right].
+p(b_i \mid w) = c_\sigma \exp\left[ -\frac{r_i^2}{2\sigma^2} \right].
 $$
 
 Vì các quan sát độc lập với nhau, xác suất đồng thời (hàm **Likelihood**, tức hàm hợp lý) của toàn bộ tập dữ liệu $b = (b_1, \dots, b_m)^T$ bằng tích các mật độ thành phần:
 
 $$
 \begin{aligned}
-L(w) &= p(b \mid w) = \prod_{i=1}^m p(b_i \mid w) \\
-&= \left( \frac{1}{2\pi\sigma^2} \right)^{m/2} \exp\left[ -\frac{1}{2\sigma^2} \sum_{i=1}^m (a_i^T w - b_i)^2 \right].
+L(w) &= p(b \mid w) \\
+&= \prod_{i=1}^m p(b_i \mid w) \\
+&= p(b_1 \mid w)\cdots p(b_m \mid w).
 \end{aligned}
+$$
+
+Với vector phần dư $r = Aw-b$, tổng bình phương của các thành phần bằng $\|r\|_2^2$. Do đó:
+
+$$
+L(w) = c_\sigma^m \exp\left[-\frac{\|r\|_2^2}{2\sigma^2}\right].
 $$
 
 Triết lý ước lượng hợp lý cực đại (**Maximum Likelihood Estimation - MLE**): Ta muốn tìm bộ tham số $w$ sao cho khả năng quan sát được tập dữ liệu hiện có trong thực tế là lớn nhất.
 
 Để cực đại hóa một tích các hàm mũ, trong toán tối ưu người ta dùng phép biến đổi lấy **âm logarit tự nhiên** (Negative Log-Likelihood - NLL). Do hàm logarit đơn điệu tăng ngặt, việc cực đại hóa $L(w)$ hoàn toàn tương đương với việc cực tiểu hóa $-\log L(w)$:
 
+Đặt hằng số chuẩn hóa sau khi lấy logarit là:
+
 $$
--\log p(b \mid w) = \frac{m}{2} \log(2\pi\sigma^2) + \frac{1}{2\sigma^2} \|Aw - b\|_2^2.
+C = \frac{m}{2}\log(2\pi\sigma^2).
+$$
+
+Khi đó, với hàm mất mát $f(w)$ đã định nghĩa ở phần 3.3, ta có:
+
+$$
+-\log L(w) = C + \frac{f(w)}{\sigma^2}.
 $$
 
 Quan sát biểu thức trên:
-- Số hạng đầu tiên $\frac{m}{2}\log(2\pi\sigma^2)$ là một hằng số độc lập với tham số $w$.
-- Hệ số $\frac{1}{2\sigma^2}$ là một số dương cố định.
+- Số hạng $C$ độc lập với tham số $w$.
+- Hệ số $1/\sigma^2$ là một số dương cố định.
 
-Do đó, bài toán tìm tham số $w$ để cực đại hóa hàm hợp lý Likelihood quy về chính xác:
+Ký hiệu $\arg\max$ chỉ tập tham số đạt giá trị lớn nhất của hàm, còn $\arg\min$ chỉ tập tham số đạt giá trị nhỏ nhất. Gọi $W_*$ là tập tham số ước lượng. Ba cách xác định tập này hoàn toàn tương đương:
 
 $$
-\arg\min_w \left[ -\log p(b \mid w) \right] \equiv \arg\min_w \frac{1}{2} \|Aw - b\|_2^2.
+\begin{aligned}
+W_* &= \arg\max_{w\in\mathbb R^n} L(w) \\
+&= \arg\min_{w\in\mathbb R^n} [-\log L(w)] \\
+&= \arg\min_{w\in\mathbb R^n} f(w).
+\end{aligned}
 $$
 
 Tiêu chuẩn bình phương tối thiểu không phải là một công thức cảm tính được chọn ngẫu nhiên. Nó là hệ quả toán học trực tiếp của nguyên lý cực đại hóa hàm hợp lý dưới giả thiết sai số quan sát tuân theo phân phối chuẩn Gauss độc lập.
@@ -484,7 +572,7 @@ Mỗi quan sát có phương sai lớn sẽ tự động bị ma trận $\Sigma^
 
 ---
 
-## 9. Hệ thống Bài tập Tự luyện Chuyên sâu
+## 9. Hệ thống Bài tập Tự luyện Chuyên sâu {#bai-tap-tu-luyen}
 
 ::: exercise 1. Kiểm tra tính xác định dương và Phần bù Schur cho ma trận khối
 Xét ma trận khối đối xứng:
@@ -500,7 +588,10 @@ trong đó $c \in \mathbb{R}$ là tham số thực.
 **Lời giải**:
 1. Phân rã ma trận thành cấu trúc khối:
    $$
-   A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}, \qquad B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \qquad C = [c].
+   \begin{aligned}
+   &A = \begin{bmatrix} 2 & 1 \\ 1 & 2 \end{bmatrix}, \\
+   &B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \qquad C = [c].
+   \end{aligned}
    $$
    Khối con $A$ đối xứng, có định thức $\det(A) = 2(2) - 1(1) = 3 > 0$ và phần tử góc $A_{11} = 2 > 0$, do đó $A \succ 0$.
 
@@ -508,9 +599,16 @@ trong đó $c \in \mathbb{R}$ là tham số thực.
    $$
    A^{-1} = \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix}.
    $$
-   Tính tích $B^T A^{-1} B$:
+   Đặt $z = A^{-1}B$. Phép nhân với vector $B$ chọn cột thứ hai của ma trận nghịch đảo:
    $$
-   B^T A^{-1} B = \begin{bmatrix} 0 & 1 \end{bmatrix} \left( \frac{1}{3} \begin{bmatrix} 2 & -1 \\ -1 & 2 \end{bmatrix} \right) \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \frac{1}{3} \begin{bmatrix} -1 & 2 \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \frac{2}{3}.
+   z = \frac{1}{3}\begin{bmatrix} -1 \\ 2 \end{bmatrix}.
+   $$
+   Tiếp theo, phép nhân vô hướng với $B^T$ chọn thành phần thứ hai của $z$:
+   $$
+   \begin{aligned}
+   B^T z &= 0z_1+1z_2 \\
+   &= \frac{2}{3}.
+   \end{aligned}
    $$
    Phần bù Schur là:
    $$
@@ -536,7 +634,7 @@ $$
 **Lời giải**:
 1. Khai triển tích $L L^T$:
    $$
-   L L^T = \begin{bmatrix} l_{11} & 0 \\ l_{21} & l_{22} \end{bmatrix} \begin{bmatrix} l_{11} & l_{21} \\ 0 & l_{22} \end{bmatrix} = \begin{bmatrix} l_{11}^2 & l_{11} l_{21} \\ l_{11} l_{21} & l_{21}^2 + l_{22}^2 \end{bmatrix}.
+   L L^T = \begin{bmatrix} l_{11}^2 & l_{11} l_{21} \\ l_{11} l_{21} & l_{21}^2 + l_{22}^2 \end{bmatrix}.
    $$
    Đồng nhất các phần tử với ma trận $H$:
    - $l_{11}^2 = 4 \implies l_{11} = 2$ (chọn phần tử đường chéo dương).
@@ -550,12 +648,18 @@ $$
 2. Giải hệ phương trình $H x = b$ qua hai bước:
    - **Bước 1 (Thế tiến $L y = b$)**:
      $$
-     \begin{bmatrix} 2 & 0 \\ 1 & 3 \end{bmatrix} \begin{bmatrix} y_1 \\ y_2 \end{bmatrix} = \begin{bmatrix} 8 \\ 16 \end{bmatrix} \implies \begin{cases} 2 y_1 = 8 \implies y_1 = 4, \\ 1(4) + 3 y_2 = 16 \implies 3 y_2 = 12 \implies y_2 = 4. \end{cases}
+     \begin{aligned}
+     y_1 &= \frac{8}{2}=4, \\
+     y_2 &= \frac{16-y_1}{3}=4.
+     \end{aligned}
      $$
      Suy ra $y = \begin{bmatrix} 4 \\ 4 \end{bmatrix}$.
    - **Bước 2 (Thế lùi $L^T x = y$)**:
      $$
-     \begin{bmatrix} 2 & 1 \\ 0 & 3 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 4 \\ 4 \end{bmatrix} \implies \begin{cases} 3 x_2 = 4 \implies x_2 = \frac{4}{3}, \\ 2 x_1 + \frac{4}{3} = 4 \implies 2 x_1 = \frac{8}{3} \implies x_1 = \frac{4}{3}. \end{cases}
+     \begin{aligned}
+     x_2 &= \frac{4}{3}, \\
+     x_1 &= \frac{4-x_2}{2}=\frac{4}{3}.
+     \end{aligned}
      $$
      Nghiệm duy nhất của hệ là $x = \begin{bmatrix} 4/3 \\ 4/3 \end{bmatrix}$.
 :::
@@ -571,7 +675,10 @@ Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
    Các giá trị riêng của $A^T A$ là $\lambda_1 = 9$ và $\lambda_2 = 4$.
    Các giá trị kỳ dị của $A$ là căn bậc hai của các giá trị riêng này:
    $$
-   \sigma_1 = \sqrt{9} = 3, \qquad \sigma_2 = \sqrt{4} = 2.
+   \begin{aligned}
+   \sigma_1 &= \sqrt{9} = 3, \\
+   \sigma_2 &= \sqrt{4} = 2.
+   \end{aligned}
    $$
    Số điều kiện của ma trận là:
    $$
@@ -581,9 +688,9 @@ Cho ma trận $A = \begin{bmatrix} 3 & 0 \\ 0 & -2 \end{bmatrix}$.
 2. Xét điểm $x = (x_1, x_2)^T$ nằm trên biên của quả cầu đơn vị: $x_1^2 + x_2^2 = 1$.
    Ảnh của $x$ qua ánh xạ $A$ là $y = A x = (3 x_1, -2 x_2)^T$.
    Đặt $y_1 = 3 x_1 \implies x_1 = y_1/3$ và $y_2 = -2 x_2 \implies x_2 = -y_2/2$.
-   Thay vào phương trình quả cầu đơn vị:
+   Thay vào phương trình quả cầu đơn vị rồi bình phương hai tọa độ:
    $$
-   \left(\frac{y_1}{3}\right)^2 + \left(-\frac{y_2}{2}\right)^2 = 1 \iff \frac{y_1^2}{3^2} + \frac{y_2^2}{2^2} = 1.
+   \frac{y_1^2}{3^2} + \frac{y_2^2}{2^2} = 1.
    $$
    Đây chính là phương trình của một hình ellipse trong mặt phẳng với bán trục lớn bằng $\sigma_1 = 3$ dọc theo trục hoành và bán trục nhỏ bằng $\sigma_2 = 2$ dọc theo trục tung. Ánh xạ ma trận $A$ đã kéo giãn quả cầu tròn thành một khối ellipse có kích thước đúng bằng các giá trị kỳ dị.
 :::
@@ -604,36 +711,45 @@ trong đó $H \in \mathbb{S}_{++}^n$ đối xứng xác định dương và $A \
 ::: solution
 **Lời giải**:
 1. Thuật toán khử ma trận khối Schur:
-   - Từ phương trình thứ nhất, biểu diễn $v$ theo $w$:
+   - Đặt các nghiệm trung gian $z$ và $Z$ bằng cách giải:
      $$
-     H v + A^T w = -g \implies v = -H^{-1} g - H^{-1} A^T w.
+     Hz=g, \qquad HZ=A^T.
      $$
-   - Thế biểu thức của $v$ vào phương trình thứ hai $A v = -h$:
+     Từ phương trình thứ nhất, biểu diễn $v$ theo $w$:
      $$
-     A (-H^{-1} g - H^{-1} A^T w) = -h \iff (A H^{-1} A^T) w = h - A H^{-1} g.
+     v=-z-Zw.
      $$
-   - Đặt $M = A H^{-1} A^T = -S$. Vì $H \succ 0$ và $A$ đủ hạng hàng, ma trận $M \in \mathbb{S}_{++}^p$ đối xứng dương xác định.
-   - Sau khi giải tìm được $w$, ta thu hồi $v$ từ phương trình: $H v = -(g + A^T w)$.
+   - Đặt $M=AZ=AH^{-1}A^T=-S$. Vì $H \succ 0$ và $A$ đủ hạng hàng, ma trận $M \in \mathbb{S}_{++}^p$ đối xứng dương xác định. Thế biểu thức của $v$ vào phương trình thứ hai $Av=-h$, ta được:
+     $$
+     \begin{aligned}
+     -Az-Mw &= -h, \\
+     Mw &= h-Az.
+     \end{aligned}
+     $$
+   - Giải hệ trên để tìm $w$, sau đó thu hồi nghiệm nguyên thủy bằng $v=-z-Zw$.
 
 2. Phân tích chi phí Flops theo từng công đoạn:
    - Phân tích Cholesky $H = L L^T$: Tốn $\frac{1}{3} n^3$ flops.
    - Tính $H^{-1} A^T$: Giải $p$ hệ phương trình $H Z = A^T$ (với $Z = H^{-1} A^T \in \mathbb{R}^{n \times p}$) bằng hai lần thế tam giác qua $L$ và $L^T$. Mỗi vector cột tốn $2n^2$ flops, tổng cộng tốn $2p n^2$ flops.
    - Tính tích ma trận $M = A Z = A H^{-1} A^T$: Nhân ma trận $p \times n$ với ma trận $n \times p$, tận dụng tính đối xứng chỉ cần tính nửa tam giác, tốn khoảng $p^2 n$ flops.
    - Phân tích Cholesky ma trận kích thước nhỏ $M$ ($p \times p$): Tốn $\frac{1}{3} p^3$ flops.
-   - Giải tìm $w$ và thu hồi $v$: Tốn thêm $2p^2 + 2n^2$ flops (các số hạng bậc hai nhỏ).
-   - Tổng chi phí chủ đạo của phương pháp khử khối là:
+   - Tính $z$, lập vế phải, giải tìm $w$ và thu hồi $v$: Tốn thêm $2n^2+2p^2+O(np)$ flops. Đây là các số hạng bậc hai khi $n$ và $p$ cùng tăng.
+   - Đặt $C_0=(n^3+p^3)/3$ là tổng chi phí chủ đạo của hai phép phân tích Cholesky. Khi bỏ qua các số hạng bậc thấp, tổng chi phí khử khối là:
      $$
-     \frac{1}{3} n^3 + 2 p n^2 + p^2 n + \frac{1}{3} p^3 \text{ flops}.
+     C_{\mathrm{khử}}=C_0+2pn^2+p^2n.
      $$
 
 3. So sánh hiệu năng:
    - Nếu giải trực tiếp toàn bộ hệ kích thước $(n+p) \times (n+p)$ bằng phân tích $LDL^T$, chi phí tính toán là:
      $$
-     \frac{1}{3} (n + p)^3 = \frac{1}{3} n^3 + p n^2 + p^2 n + \frac{1}{3} p^3 \text{ flops}.
+     \begin{aligned}
+     C_{\mathrm{trực}} &= \frac{1}{3}(n+p)^3 \\
+     &= C_0+pn^2+p^2n.
+     \end{aligned}
      $$
    - Khi $p \ll n$ (số ràng buộc đẳng thức rất ít so với số chiều biến tối ưu, chẳng hạn $n = 10000, p = 10$):
      Chi phí của cả hai phương pháp đều bị chi phối bởi số hạng $\frac{1}{3} n^3$ flops của phân tích ma trận Hessian. Tuy nhiên, phương pháp khử khối cho phép tận dụng trực tiếp tính xác định dương của $H$ để chạy thuật toán Cholesky nhanh nhất và ổn định nhất, không cần theo dõi chiến lược chọn trục (pivoting) phức tạp của $LDL^T$.
-   - Đặc biệt, nếu Hessian $H$ có cấu trúc thưa hoặc đường chéo (như trong phương pháp điểm trong), việc tính $H^{-1} A^T$ chỉ tốn $O(p n)$ flops thay vì $2pn^2$, đưa tổng chi phí của phương pháp khử khối xuống chỉ còn $O(n) + O(p^3)$ flops, nhanh hơn hàng trăm lần so với giải hệ ma trận đầy đủ!
+   - Nếu $H$ là ma trận đường chéo dương, việc tính $Z=H^{-1}A^T$ chỉ tốn $O(np)$ phép tính. Với $A$ đặc, bước lập $M=AZ$ vẫn cần $O(np^2)$ phép tính. Tổng chi phí khi đó là $O(np^2+p^3)$ và trở thành tuyến tính theo $n$ khi $p$ được giữ cố định. Với $H$ thưa tổng quát, chi phí còn phụ thuộc mẫu phần tử khác không và hiện tượng điền thêm phần tử trong phép phân tích.
 :::
 
 ---

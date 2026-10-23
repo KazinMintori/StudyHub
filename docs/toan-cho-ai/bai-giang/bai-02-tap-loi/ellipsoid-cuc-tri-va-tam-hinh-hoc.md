@@ -220,11 +220,11 @@ $$
 ::: solution
 1. **Tính đạo hàm riêng**:
    $$
-\begin{aligned}
-\frac{\partial \phi}{\partial x_1} &= -\frac{1}{x_1} + \frac{1}{1 - x_1 - x_2}, \\
-\frac{\partial \phi}{\partial x_2} &= -\frac{1}{x_2} + \frac{1}{1 - x_1 - x_2}.
-\end{aligned}
-$$
+   \begin{aligned}
+   \frac{\partial \phi}{\partial x_1} &= -\frac{1}{x_1} + \frac{1}{1 - x_1 - x_2}, \\
+   \frac{\partial \phi}{\partial x_2} &= -\frac{1}{x_2} + \frac{1}{1 - x_1 - x_2}.
+   \end{aligned}
+   $$
 
 2. **Tìm nghiệm triệt tiêu gradient**:
    Cho $\nabla \phi(x) = 0$:

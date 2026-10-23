@@ -7,9 +7,9 @@ title: "Phương pháp Điểm trong Primal-Dual"
 description: "Lý thuyết và thuật toán phương pháp điểm trong nguyên thủy - đối ngẫu (Primal-Dual Interior-Point), phần dư KKT, hướng tìm kiếm kết hợp và kỹ thuật giải hệ tuyến tính khối KKT hiệu năng cao."
 ---
 
-Trong các bài học trước về phương pháp hàm chắn logarit (Barrier Method), ta đã thấy quy trình tối ưu hóa giải bài toán lồi có ràng buộc bất đẳng thức thông qua một chuỗi các bài toán không ràng buộc xấp xỉ. Tuy nhiên, Barrier Method bộc lộ hai hạn chế lớn trong thực tế: Thứ nhất, thuật toán đòi hỏi nghiệm xuất phát phải khả thi nghiêm ngặt, hoặc phải giải một bài toán Pha I riêng biệt rất tốn kém. Thứ hai, mỗi bước lặp ngoài đòi hỏi giải gần như chính xác bài toán định tâm bên trong bằng phương pháp Newton, khiến tổng chi phí tính toán tăng cao.
+Trong phương pháp hàm chắn logarit (Barrier Method), mỗi giá trị của tham số chắn dẫn đến một bài toán định tâm. Ta phải chọn độ chính xác của bài toán này trước khi tăng tham số và giải tiếp. Có thể cập nhật cả nghiệm và các nhân tử Lagrange trong cùng một bước Newton hay không?
 
-Phương pháp điểm trong nguyên thủy - đối ngẫu (**Primal-Dual Interior-Point Method**) khắc phục triệt để các nhược điểm này. Đây là thuật toán tiêu chuẩn công nghiệp được triển khai trong hầu hết các bộ giải tối ưu hóa hiện đại như MOSEK, SDPT3, SeDuMi, OSQP hay Ipopt. Thuật toán cập nhật đồng thời biến nguyên thủy $x$ và các nhân tử đối ngẫu $\lambda, \nu$ tại mỗi bước lặp, không yêu cầu điểm lặp phải khả thi nghiêm ngặt (Infeasible Start), và đạt tốc độ hội tụ siêu tuyến tính ở lân cận nghiệm tối ưu.
+Phương pháp điểm trong nguyên thủy - đối ngẫu (**Primal-Dual Interior-Point Method**) thực hiện ý tưởng đó. Thuật toán cập nhật đồng thời biến nguyên thủy $x$ và các nhân tử đối ngẫu $\lambda, \nu$ bằng cách tuyến tính hóa hệ điều kiện KKT. Với dạng trình bày trong bài này, điểm xuất phát vẫn cần $f_i(x)<0$ và $\lambda_i>0$. Tuy nhiên, nó có thể chưa thỏa mãn ràng buộc đẳng thức hoặc điều kiện triệt tiêu gradient Lagrange.
 
 ---
 
@@ -27,7 +27,7 @@ $$
 
 trong đó $f_0, f_1, \dots, f_m: \mathbb{R}^n \to \mathbb{R}$ là các hàm lồi khả vi liên tục hai lần, và ma trận $A \in \mathbb{R}^{p \times n}$ có hạng đủ $\operatorname{rank}(A) = p$.
 
-Hệ điều kiện tối ưu KKT của bài toán gồm bốn nhóm:
+Hệ điều kiện KKT của bài toán gồm bốn nhóm dưới đây. Với bài toán lồi, một điểm thỏa mãn hệ này là nghiệm tối ưu. Chiều ngược lại cần điều kiện chính quy thích hợp, chẳng hạn điều kiện Slater.
 
 1. **Khả thi nguyên thủy**: Biểu thức $f_i(x^*) \le 0$ với mọi $i = 1, \dots, m$ và $A x^* = b$.
 2. **Khả thi đối ngẫu**: Điều kiện $\lambda_i^* \ge 0$ với mọi $i = 1, \dots, m$.
@@ -36,34 +36,50 @@ Hệ điều kiện tối ưu KKT của bài toán gồm bốn nhóm:
 
 ### Hệ KKT bị xáo trộn (Perturbed KKT Conditions)
 
-Thay vì giải trực tiếp điều kiện bù trừ rời rạc $\lambda_i f_i(x) = 0$, ta nới lỏng tích này về một đại lượng dương $\eta = 1/t > 0$:
+Thay vì giải trực tiếp điều kiện bù trừ $\lambda_i f_i(x) = 0$, ta đặt tích $-\lambda_i f_i(x)$ bằng một đại lượng dương $\eta = 1/t > 0$.
+
+Đặt $h$ là tổng có trọng số của các gradient ràng buộc:
+
+$$
+h = \sum_{i=1}^m \lambda_i \nabla f_i(x).
+$$
+
+Để thấy rõ phép cộng này, đặt $v_i=\lambda_i\nabla f_i(x)$. Khi có hai ràng buộc, $h=v_1+v_2$. Trong trường hợp tổng quát:
+
+$$
+h = v_1+v_2+\dots+v_m.
+$$
 
 $$
 \begin{aligned}
-\nabla f_0(x) + \sum_{i=1}^m \lambda_i \nabla f_i(x) + A^T \nu &= 0, \\
--\lambda_i f_i(x) &= \eta, \quad i = 1, \dots, m, \\
-A x &= b,
+&\nabla f_0(x) + h + A^T \nu = 0, \\
+&-\lambda_i f_i(x) = \eta, \\
+&A x = b.
 \end{aligned}
 $$
-với điều kiện $f_i(x) < 0$ và $\lambda_i > 0$ cho mọi $i = 1, \dots, m$.
+Phương trình bù trừ được áp dụng với mọi $i = 1, \dots, m$, đồng thời $f_i(x) < 0$ và $\lambda_i > 0$.
 
-Khi $\eta \to 0$ (tương đương $t \to \infty$), nghiệm $(x^*(\eta), \lambda^*(\eta), \nu^*(\eta))$ của hệ phương trình trên sẽ hội tụ chính xác về nghiệm tối ưu $(x^*, \lambda^*, \nu^*)$ của bài toán gốc. Tập hợp các nghiệm $(x^*(\eta), \lambda^*(\eta), \nu^*(\eta))$ khi $\eta > 0$ thay đổi quét nên **đường trung tâm nguyên thủy - đối ngẫu** (Primal-Dual Central Path).
+Họ nghiệm của hệ này, khi tồn tại và $\eta>0$ thay đổi, tạo thành **đường trung tâm nguyên thủy - đối ngẫu** (Primal-Dual Central Path). Mỗi điểm trên đường trung tâm có khoảng cách đối ngẫu bằng $m\eta$. Khi $\eta\to0$, khoảng cách đó tiến về $0$. Nếu họ nghiệm có điểm tụ hữu hạn, mỗi điểm tụ thỏa mãn hệ KKT và cho nghiệm tối ưu của bài toán gốc.
 
 ### Độ lệch đối ngẫu đại diện (Surrogate Duality Gap)
 
-Tại một điểm bất kỳ $(x, \lambda, \nu)$ thỏa mãn điều kiện miền trong $f_i(x) < 0$ và $\lambda_i > 0$, điểm này có thể chưa thỏa mãn ràng buộc đẳng thức $Ax = b$ hoặc chưa cân bằng gradient đối ngẫu. Do đó, khoảng cách đối ngẫu lý thuyết chuẩn có thể chưa xác định. Ta định nghĩa **độ lệch đối ngẫu đại diện**:
+Một điểm $(x, \lambda, \nu)$ thỏa mãn $f_i(x)<0$ và $\lambda_i>0$ có thể chưa thỏa mãn $Ax=b$ hoặc điều kiện triệt tiêu gradient Lagrange. Khi đó, tổng các tích bù trừ chưa chắc bằng khoảng cách đối ngẫu. Ta dùng giá trị trung bình của chúng làm **độ lệch đối ngẫu đại diện**:
 
 $$
-\hat{\eta}(x, \lambda) = -\frac{1}{m} \sum_{i=1}^m \lambda_i f_i(x) = -\frac{1}{m} \lambda^T f(x).
+\begin{aligned}
+\hat{\eta}(x, \lambda)
+&= -\frac{1}{m} \sum_{i=1}^m \lambda_i f_i(x) \\
+&= -\frac{1}{m} \lambda^T f(x).
+\end{aligned}
 $$
 
-Khai triển tường minh:
+Đặt $u_i = -\lambda_i f_i(x)$ là tích bù trừ dương của ràng buộc thứ $i$. Khi có hai ràng buộc, $2\hat{\eta} = u_1 + u_2$. Với $m$ ràng buộc, khai triển tường minh cho ta:
 
 $$
-\hat{\eta}(x, \lambda) = \frac{1}{m} \left( -\lambda_1 f_1(x) - \lambda_2 f_2(x) - \dots - \lambda_m f_m(x) \right).
+m\hat{\eta} = u_1 + u_2 + \dots + u_m.
 $$
 
-Đại lượng $\hat{\eta}(x, \lambda)$ đo lường mức độ vi phạm trung bình của điều kiện bù trừ tương hỗ. Nếu điểm $(x, \lambda, \nu)$ đồng thời khả thi nguyên thủy và đối ngẫu, thì tổng khoảng cách đối ngẫu chính bằng $m \hat{\eta}(x, \lambda)$.
+Đại lượng $\hat{\eta}(x, \lambda)$ đo lường mức độ vi phạm trung bình của điều kiện bù trừ tương hỗ. Nếu điểm đang xét khả thi nguyên thủy và thỏa mãn điều kiện triệt tiêu gradient Lagrange, khoảng cách đối ngẫu bằng $m\hat{\eta}(x,\lambda)$. Điều kiện gradient bảo đảm $x$ đạt giá trị nhỏ nhất của hàm Lagrange vì hàm này lồi theo $x$.
 
 ---
 
@@ -71,30 +87,43 @@ $$
 
 Để đo lường mức độ thỏa mãn hệ điều kiện KKT bị xáo trộn tại điểm hiện tại $(x, \lambda, \nu)$, ta chia sai số thành ba thành phần phần dư:
 
+Ký hiệu $J = Df(x)$ là ma trận Jacobi, gồm các gradient ràng buộc viết theo hàng:
+
+$$
+J = \begin{bmatrix}
+\nabla f_1(x)^T \\
+\vdots \\
+\nabla f_m(x)^T
+\end{bmatrix}.
+$$
+
+Ta có $J \in \mathbb{R}^{m \times n}$. Đồng thời, đặt $\Lambda = \operatorname{diag}(\lambda)$ và $\eta = 1/t$ để viết gọn các biểu thức dưới đây.
+
 1. **Phần dư đối ngẫu (Dual residual)**:
    $$
-   r_{\text{dual}}(x, \lambda, \nu) = \nabla f_0(x) + Df(x)^T \lambda + A^T \nu \in \mathbb{R}^n,
+   r_d = \nabla f_0(x) + J^T \lambda + A^T \nu,
    $$
-   trong đó ma trận Jacobi $Df(x) = \begin{bmatrix} \nabla f_1(x)^T \\ \vdots \\ \nabla f_m(x)^T \end{bmatrix} \in \mathbb{R}^{m \times n}$.
+   trong đó $r_d$ viết tắt cho $r_{\text{dual}}(x, \lambda, \nu)$ và $r_d \in \mathbb{R}^n$.
 
 2. **Phần dư bù trừ trung tâm (Centering residual)**:
    $$
-   r_{\text{cent}}(x, \lambda) = -\operatorname{diag}(\lambda) f(x) - \frac{1}{t} \mathbf{1} \in \mathbb{R}^m,
+   r_c = -\Lambda f(x) - \eta\mathbf{1},
    $$
-   trong đó $\operatorname{diag}(\lambda) = \operatorname{diag}(\lambda_1, \dots, \lambda_m)$ và $\mathbf{1} = (1, \dots, 1)^T$. Thành phần thứ $i$ của vector này là:
+   trong đó $r_c$ viết tắt cho $r_{\text{cent}}(x, \lambda)$ và $r_c \in \mathbb{R}^m$. Ma trận $\Lambda$ có các phần tử đường chéo $\lambda_1, \dots, \lambda_m$, còn $\mathbf{1} = (1, \dots, 1)^T$. Thành phần thứ $i$ của vector này là:
    $$
-   (r_{\text{cent}})_i = -\lambda_i f_i(x) - \frac{1}{t}.
+   (r_c)_i = -\lambda_i f_i(x) - \eta.
    $$
 
 3. **Phần dư nguyên thủy (Primal residual)**:
    $$
-   r_{\text{pri}}(x) = A x - b \in \mathbb{R}^p.
+   r_p = A x - b.
    $$
+   Ký hiệu $r_p$ viết tắt cho $r_{\text{pri}}(x)$ và $r_p \in \mathbb{R}^p$.
 
 Gộp ba phần dư thành vector tổng thể $r(x, \lambda, \nu) \in \mathbb{R}^{n + m + p}$:
 
 $$
-r(x, \lambda, \nu) = \begin{bmatrix} r_{\text{dual}}(x, \lambda, \nu) \\ r_{\text{cent}}(x, \lambda) \\ r_{\text{pri}}(x) \end{bmatrix}.
+r(x, \lambda, \nu) = \begin{bmatrix} r_d \\ r_c \\ r_p \end{bmatrix}.
 $$
 
 Hệ phương trình KKT bị xáo trộn tương đương với phương trình phi tuyến $r(x, \lambda, \nu) = 0$.
@@ -103,31 +132,40 @@ Hệ phương trình KKT bị xáo trộn tương đương với phương trình
 
 ## 3. Hướng Tìm Kiếm Primal-Dual và Phương Pháp Newton
 
-Để tìm bước cập nhật $(\Delta x, \Delta \lambda, \Delta \nu)$, ta áp dụng xấp xỉ tuyến tính Taylor bậc nhất cho hệ phi tuyến $r(x + \Delta x, \lambda + \Delta \lambda, \nu + \Delta \nu) = 0$:
+Để tìm bước cập nhật, gom các biến vào vector $z = (x, \lambda, \nu)$ và đặt:
 
 $$
-r(x + \Delta x, \lambda + \Delta \lambda, \nu + \Delta \nu) \approx r(x, \lambda, \nu) + \nabla r(x, \lambda, \nu) \begin{bmatrix} \Delta x \\ \Delta \lambda \\ \Delta \nu \end{bmatrix} = 0.
-$$
-
-Lấy đạo hàm từng khối của $r$ theo $(x, \lambda, \nu)$, ta thu được hệ phương trình ma trận tuyến tính KKT khối:
-
-$$
-\begin{bmatrix}
-H & Df(x)^T & A^T \\
--\operatorname{diag}(\lambda) Df(x) & -\operatorname{diag}(f(x)) & 0 \\
-A & 0 & 0
-\end{bmatrix}
-\begin{bmatrix}
+\Delta z = \begin{bmatrix}
 \Delta x \\
 \Delta \lambda \\
 \Delta \nu
-\end{bmatrix}
-=
--\begin{bmatrix}
-r_{\text{dual}} \\
-r_{\text{cent}} \\
-r_{\text{pri}}
-\end{bmatrix},
+\end{bmatrix}.
+$$
+
+Ta áp dụng xấp xỉ tuyến tính Taylor bậc nhất cho hệ phi tuyến $r(z + \Delta z) = 0$:
+
+$$
+\begin{aligned}
+r(z + \Delta z)
+&\approx r(z) + \nabla r(z)\Delta z \\
+&= 0.
+\end{aligned}
+$$
+
+Đặt $F = \operatorname{diag}(f(x))$. Lấy đạo hàm từng khối của $r$ theo $(x, \lambda, \nu)$, ta thu được ma trận KKT khối:
+
+$$
+K = \begin{bmatrix}
+H & J^T & A^T \\
+-\Lambda J & -F & 0 \\
+A & 0 & 0
+\end{bmatrix}.
+$$
+
+Hướng tìm kiếm là nghiệm của hệ tuyến tính:
+
+$$
+K\Delta z = -r(z),
 $$
 
 trong đó ma trận Hessian kết hợp $H \in \mathbb{R}^{n \times n}$ được xác định bởi:
@@ -136,15 +174,15 @@ $$
 H = \nabla^2 f_0(x) + \sum_{i=1}^m \lambda_i \nabla^2 f_i(x).
 $$
 
-Do tính lồi của các hàm $f_i$ và điều kiện $\lambda_i > 0$, ma trận $H$ luôn nửa xác định dương (và xác định dương nếu ít nhất một hàm là lồi nghiêm ngặt).
+Do tính lồi của các hàm $f_i$ và điều kiện $\lambda_i > 0$, ma trận $H$ luôn nửa xác định dương. Nếu một Hessian thành phần xác định dương tại điểm đang xét và có hệ số dương, thì $H$ xác định dương tại điểm đó.
 
 ### Phân rã hướng Affine-Scaling và Hướng Centering
 
 Trong thực tế, ta thường chọn tham số đích $1/t = \sigma \hat{\eta}$, với $\sigma \in [0, 1]$ được gọi là **tham số định tâm** (Centering parameter):
 
 - Khi $\sigma = 0$: Tham số $1/t = 0$, hướng tìm kiếm thuần túy nhằm triệt tiêu phần dư và giảm khoảng cách đối ngẫu về 0. Hướng này gọi là **hướng affine-scaling** (Affine-scaling direction).
-- Khi $\sigma = 1$: Thuật toán tập trung kéo điểm lặp về trục đối xứng của đường trung tâm.
-- Thuật toán nổi tiếng **Mehrotra Predictor-Corrector** giải hệ trên hai lần trong mỗi bước lặp: Lần đầu tính hướng dự đoán affine-scaling $(\Delta x_{\text{aff}}, \Delta \lambda_{\text{aff}})$, xác định bước nhảy tối đa cho phép, từ đó tính độ giảm khoảng cách đối ngẫu để chọn $\sigma$ thích nghi, rồi giải lần hai có bổ sung số hạng hiệu chỉnh phi tuyến bậc hai $(\Delta \lambda_{\text{aff}})_i (\Delta x_{\text{aff}})_i$.
+- Khi $\sigma = 1$: Giá trị đích của từng tích bù trừ bằng giá trị trung bình hiện tại. Hướng Newton vì vậy điều chỉnh sự chênh lệch giữa các tích này, đồng thời giảm các phần dư còn lại.
+- Trong quy hoạch tuyến tính, thuật toán **Mehrotra Predictor-Corrector** tính hướng dự đoán affine-scaling rồi dùng bước dự đoán để chọn $\sigma$. Lần giải hệ tiếp theo bổ sung số hạng hiệu chỉnh bậc hai. Số hạng này đến từ tích các biến thiên của nhân tử đối ngẫu và biến bù tương ứng, không phải tích hai thành phần bất kỳ của $\Delta\lambda$ và $\Delta x$.
 
 ---
 
@@ -158,17 +196,29 @@ Sau khi tính được hướng tìm kiếm $(\Delta x, \Delta \lambda, \Delta \
 
 ### Xác định cận trên bước nhảy $s_{\max}$
 
-Đầu tiên, ta chặn bước nhảy đối ngẫu để đảm bảo $\lambda_i + s \Delta \lambda_i > 0$:
+Đầu tiên, ta chặn bước nhảy đối ngẫu để đảm bảo $\lambda_i + s \Delta \lambda_i > 0$. Đặt tập các bước vẫn giữ được tính không âm:
 
 $$
-s_{\max}^{\text{dual}} = \sup \{ s \in [0, 1] \mid \lambda + s \Delta \lambda \ge 0 \} = \min \left( 1, \min_{i: \Delta \lambda_i < 0} \left( -\frac{\lambda_i}{\Delta \lambda_i} \right) \right).
+\mathcal S = \{s \in [0,1] \mid \lambda + s\Delta\lambda \ge 0\}.
+$$
+
+Chỉ những thành phần đang giảm mới chặn bước. Ký hiệu $I_d$ là tập các chỉ số có $\Delta\lambda_i < 0$, khi đó:
+
+$$
+\begin{aligned}
+s_{\max}^{\text{dual}}
+&= \sup\mathcal S \\
+&= \min\left(1,\min_{i\in I_d}\frac{-\lambda_i}{\Delta\lambda_i}\right).
+\end{aligned}
 $$
 
 Tương tự, với các hàm ràng buộc bất đẳng thức (nếu là hàm tuyến tính $f_i(x) = a_i^T x - b_i$), ta có thể tính chính xác:
 
 $$
-s_{\max}^{\text{pri}} = \min \left( 1, \min_{i: a_i^T \Delta x > 0} \left( -\frac{f_i(x)}{a_i^T \Delta x} \right) \right).
+s_{\max}^{\text{pri}} = \min\left(1,\min_{i\in I_p}\frac{-f_i(x)}{a_i^T\Delta x}\right).
 $$
+
+Ở đây $I_p$ gồm các chỉ số có $a_i^T\Delta x > 0$. Nếu $I_d$ hoặc $I_p$ rỗng, lấy giá trị phép lấy min bên trong tương ứng bằng $+\infty$, vì không có thành phần nào chặn bước.
 
 Để tránh điểm chạm vào biên quá sớm, ta đặt cận bước khởi tạo:
 
@@ -183,9 +233,11 @@ Bắt đầu với $s = s_{\max}$, ta thực hiện co bước $s := \beta s$ ($
 1. Tính khả thi miền trong: Điểm $x + s \Delta x \in \mathbf{dom} f_0$ và $f_i(x + s \Delta x) < 0$ với mọi $i = 1, \dots, m$.
 2. Điều kiện giảm chuẩn phần dư Armijo:
    $$
-   \|r(x + s \Delta x, \lambda + s \Delta \lambda, \nu + s \Delta \nu)\|_2 \le (1 - \alpha s) \|r(x, \lambda, \nu)\|_2,
+   \|r(z + s\Delta z)\|_2 \le (1 - \alpha s)\|r(z)\|_2,
    $$
    với tham số $\alpha \in (0.01, 0.1)$.
+
+Trong quá trình tìm bước này, tham số đích $\eta$ được giữ cố định để hai chuẩn phần dư đo cùng một hệ phương trình.
 
 ---
 
@@ -198,46 +250,74 @@ Hệ phương trình KKT ở Mục 3 có kích thước lớn $(n + m + p) \time
 Từ phương trình thứ hai trong hệ KKT:
 
 $$
--\operatorname{diag}(\lambda) Df(x) \Delta x - \operatorname{diag}(f(x)) \Delta \lambda = -r_{\text{cent}}.
+-\Lambda J\Delta x - F\Delta\lambda = -r_c.
 $$
 
-Vì $f_i(x) < 0$ với mọi $i$, ma trận đường chéo $\operatorname{diag}(f(x))$ khả nghịch hoàn toàn. Rút $\Delta \lambda$ theo $\Delta x$:
+Vì $f_i(x) < 0$ với mọi $i$, ma trận đường chéo $F$ khả nghịch. Chuyển vế rồi nhân với $F^{-1}$, ta rút được $\Delta\lambda$ theo $\Delta x$:
 
 $$
-\Delta \lambda = -\operatorname{diag}(f(x))^{-1} \left( r_{\text{cent}} + \operatorname{diag}(\lambda) Df(x) \Delta x \right).
+\Delta\lambda = F^{-1}(r_c - \Lambda J\Delta x).
 $$
 
-Khai triển cho từng tọa độ:
+Khai triển cho từng tọa độ, đặt $d_i = \nabla f_i(x)^T\Delta x$ là biến thiên tuyến tính của ràng buộc thứ $i$:
 
 $$
-\Delta \lambda_i = -\frac{(r_{\text{cent}})_i + \lambda_i \nabla f_i(x)^T \Delta x}{f_i(x)} = -\frac{-\lambda_i f_i(x) - 1/t + \lambda_i \nabla f_i(x)^T \Delta x}{f_i(x)}.
+\begin{aligned}
+\Delta\lambda_i
+&= \frac{(r_c)_i - \lambda_i d_i}{f_i(x)} \\
+&= \frac{-\lambda_i f_i(x) - \eta - \lambda_i d_i}{f_i(x)}.
+\end{aligned}
 $$
 
 ### Hệ KKT rút gọn đối xứng
 
-Thế biểu thức $\Delta \lambda$ vào phương trình thứ nhất:
+Đặt vector trung gian $u$ và ma trận trọng số đường chéo $D$ như sau:
 
 $$
-H \Delta x + Df(x)^T \left[ -\operatorname{diag}(f(x))^{-1} \left( r_{\text{cent}} + \operatorname{diag}(\lambda) Df(x) \Delta x \right) \right] + A^T \Delta \nu = -r_{\text{dual}}.
+u = F^{-1}r_c, \qquad D = -F^{-1}\Lambda.
 $$
 
-Gộp các số hạng chứa $\Delta x$:
-
-$$
-\left( H + Df(x)^T \operatorname{diag}\left(-\frac{\lambda}{f(x)}\right) Df(x) \right) \Delta x + A^T \Delta \nu = -r_{\text{dual}} + Df(x)^T \operatorname{diag}(f(x))^{-1} r_{\text{cent}}.
-$$
-
-Đặt ma trận trọng số đường chéo $D = \operatorname{diag}\left(-\frac{\lambda_1}{f_1(x)}, \dots, -\frac{\lambda_m}{f_m(x)}\right)$. Vì $\lambda_i > 0$ và $f_i(x) < 0$, mọi phần tử trên đường chéo của $D$ đều dương nghiêm ngặt:
+Các phần tử trên đường chéo của $D$ được xác định bởi:
 
 $$
 D_{ii} = -\frac{\lambda_i}{f_i(x)} > 0.
 $$
 
-Đặt ma trận Hessian tương đương:
+Tính dương này đến từ $\lambda_i > 0$ và $f_i(x) < 0$. Biểu thức vừa rút cho hướng đối ngẫu trở thành:
 
 $$
-H_{\text{eff}} = H + Df(x)^T D Df(x) \succ 0.
+\Delta\lambda = u + DJ\Delta x.
 $$
+
+Để thế vào phương trình thứ nhất mà vẫn nhìn rõ từng khối, đặt $v = J^T\Delta\lambda$. Khi đó:
+
+$$
+v = J^Tu + J^TDJ\Delta x.
+$$
+
+Phương trình thứ nhất là:
+
+$$
+H\Delta x + v + A^T\Delta\nu = -r_d.
+$$
+
+Gộp các số hạng chứa $\Delta x$, ta đặt ma trận Hessian hiệu dụng và vector vế phải:
+
+$$
+H_{\text{eff}} = H + J^TDJ,
+$$
+
+$$
+g = r_d + J^Tu.
+$$
+
+Như vậy, phương trình sau khi khử là:
+
+$$
+H_{\text{eff}}\Delta x + A^T\Delta\nu = -g.
+$$
+
+Ta luôn có $H_{\text{eff}}\succeq0$. Để bảo đảm $H_{\text{eff}}\succ0$, cần thêm điều kiện $\ker(H)\cap\ker(J)=\{0\}$, chẳng hạn $H\succ0$ hoặc $J$ có hạng cột đầy đủ. Bài tập 2 chứng minh điều kiện này trong trường hợp toàn phương.
 
 Hệ tuyến tính rút gọn chỉ còn ẩn $(\Delta x, \Delta \nu)$ với kích thước $(n + p) \times (n + p)$:
 
@@ -252,16 +332,23 @@ A & 0
 \end{bmatrix}
 =
 -\begin{bmatrix}
-r_{\text{dual}} - Df(x)^T \operatorname{diag}(f(x))^{-1} r_{\text{cent}} \\
-r_{\text{pri}}
+g \\
+r_p
 \end{bmatrix}.
 $$
 
 Hệ phương trình này là hệ KKT đối xứng kinh điển, có thể giải bằng một trong hai phương án hiệu năng cao:
 
-1. **Khử khối ma trận Schur**: Khi $p$ nhỏ hơn nhiều so với $n$, ta tính phân tích Cholesky của $H_{\text{eff}} = L L^T$, sau đó giải hệ bù Schur kích thước $p \times p$:
+1. **Khử khối ma trận Schur**: Khi $H_{\text{eff}}\succ0$ và $p$ nhỏ hơn nhiều so với $n$, ta tính phân tích Cholesky $H_{\text{eff}} = L L^T$. Đặt ma trận bù Schur và vector vế phải:
    $$
-   (A H_{\text{eff}}^{-1} A^T) \Delta \nu = A H_{\text{eff}}^{-1} g - r_{\text{pri}}.
+   S_A = A H_{\text{eff}}^{-1} A^T,
+   $$
+   $$
+   b_A = r_p - A H_{\text{eff}}^{-1}g.
+   $$
+   Sau đó giải hệ kích thước $p\times p$:
+   $$
+   S_A\Delta\nu = b_A.
    $$
 2. **Phân tích $LDL^T$ không xác định đối xứng**: Khi ma trận $A$ có cấu trúc thưa lớn, ta giải trực tiếp hệ khối $(n + p) \times (n + p)$ bằng thuật toán $LDL^T$ với kỹ thuật xoay trục đường chéo (Bunch-Kaufman pivoting).
 
@@ -273,11 +360,11 @@ Bảng dưới đây tổng kết sự khác biệt cốt lõi giữa hai họ p
 
 | Tiêu chí | Phương pháp Hàm chắn (Barrier Method) | Phương pháp Primal-Dual |
 | :--- | :--- | :--- |
-| **Khởi tạo nghiệm** | Bắt buộc khả thi nghiêm ngặt (cần chạy Pha I) | Cho phép khởi đầu phi khả thi (Infeasible Start) |
+| **Khởi tạo nghiệm** | Dạng cơ bản cần khả thi nghiêm ngặt, có thể tìm bằng Pha I | Dạng trong bài vẫn cần $f_i(x)<0$, nhưng cho phép phần dư đẳng thức và đối ngẫu khác $0$ |
 | **Số vòng lặp** | Hai tầng (vòng lặp ngoài cập nhật $t$, vòng lặp trong chạy Newton) | Một tầng duy nhất (cập nhật đồng thời $x, \lambda, \nu$) |
-| **Tốc độ hội tụ** | Tuyến tính theo tham số $t$ | Siêu tuyến tính (Superlinear) ở lân cận nghiệm |
-| **Độ nhạy tham số** | Phụ thuộc vào việc chọn tham số nhân $\mu \approx 10 - 20$ | Rất linh hoạt, tham số $\sigma$ tự thích nghi |
-| **Độ chính xác** | Đạt $10^{-6}$ ổn định, khó đạt $10^{-10}$ do Hessian suy biến | Dễ dàng đạt $10^{-10}$ đến $10^{-14}$ |
+| **Cơ chế giảm sai số** | Giải bài toán định tâm theo từng giá trị $t$ | Tính hướng Newton cho đồng thời các phần dư KKT |
+| **Tham số điều khiển** | Hệ số tăng $t$ và độ chính xác của bước định tâm | Tham số định tâm $\sigma$ và quy tắc chọn bước |
+| **Ổn định số** | Hessian có thể kém điều kiện khi tiến gần biên | Hệ KKT cũng có thể kém điều kiện và cần xử lý số thích hợp |
 
 ---
 
@@ -303,62 +390,64 @@ với $A \in \mathbb{R}^{p \times n}$ có hạng đủ $\operatorname{rank}(A) =
 
    Hệ điều kiện KKT bị xáo trộn:
    $$
-\begin{aligned}
-c - s + A^T \nu &= 0 \quad (\text{Dual feasible}), \\
-X S \mathbf{1} &= \eta \mathbf{1} \quad (\text{Centering}), \\
-A x &= b \quad (\text{Primal feasible}), \\
-&x > 0, \quad s > 0,
-\end{aligned}
-$$
-   trong đó $X = \operatorname{diag}(x_1, \dots, x_n)$ và $S = \operatorname{diag}(s_1, \dots, s_n)$.
+   \begin{aligned}
+   &c - s + A^T\nu = 0, \\
+   &XS\mathbf{1} = \eta\mathbf{1}, \\
+   &Ax = b, \\
+   &x > 0, \quad s > 0.
+   \end{aligned}
+   $$
+   Ba phương trình lần lượt thể hiện tính khả thi đối ngẫu, điều kiện định tâm và tính khả thi nguyên thủy. Ở đây $X = \operatorname{diag}(x)$ và $S = \operatorname{diag}(s)$, với các phần tử đường chéo tương ứng là $x_1,\dots,x_n$ và $s_1,\dots,s_n$.
 
 2. Các vector phần dư tại điểm hiện tại $(x, s, \nu)$:
    $$
-\begin{aligned}
-r_{\text{dual}} &= c - s + A^T \nu, \\
-r_{\text{cent}} &= X S \mathbf{1} - \eta \mathbf{1}, \\
-r_{\text{pri}} &= A x - b.
-\end{aligned}
-$$
-
-   Tuyến tính hóa hệ phương trình tại bước lặp hiện tại:
+   \begin{aligned}
+   r_d &= c - s + A^T \nu, \\
+   r_c &= X S \mathbf{1} - \eta \mathbf{1}, \\
+   r_p &= A x - b.
+   \end{aligned}
    $$
-   \begin{bmatrix}
+
+   Ta tiếp tục dùng $r_d$, $r_c$, $r_p$ cho ba phần dư tương ứng. Tuyến tính hóa hệ phương trình tại bước lặp hiện tại, ta được ma trận khối:
+   $$
+   K_{\mathrm{LP}} = \begin{bmatrix}
    0 & -I & A^T \\
    S & X & 0 \\
    A & 0 & 0
-   \end{bmatrix}
-   \begin{bmatrix}
-   \Delta x \\
-   \Delta s \\
-   \Delta \nu
-   \end{bmatrix}
-   =
-   -\begin{bmatrix}
-   r_{\text{dual}} \\
-   r_{\text{cent}} \\
-   r_{\text{pri}}
+   \end{bmatrix}.
+   $$
+   Đặt $\Delta z_{\mathrm{LP}} = (\Delta x,\Delta s,\Delta\nu)$. Hệ xác định hướng là:
+   $$
+   K_{\mathrm{LP}}\Delta z_{\mathrm{LP}}
+   = -\begin{bmatrix}
+   r_d \\
+   r_c \\
+   r_p
    \end{bmatrix}.
    $$
 
-3. Từ phương trình thứ hai: $S \Delta x + X \Delta s = -r_{\text{cent}}$. Vì $x_i > 0$, ma trận $X$ khả nghịch hoàn toàn, suy ra:
+3. Từ phương trình thứ hai: $S\Delta x + X\Delta s = -r_c$. Vì $x_i > 0$, ma trận $X$ khả nghịch hoàn toàn, suy ra:
    $$
-   \Delta s = -X^{-1} r_{\text{cent}} - X^{-1} S \Delta x.
+   \Delta s = -X^{-1}r_c - X^{-1}S\Delta x.
    $$
 
    Thế $\Delta s$ vào phương trình thứ nhất:
    $$
-   -\Delta s + A^T \Delta \nu = -r_{\text{dual}} \implies X^{-1} S \Delta x + A^T \Delta \nu = -r_{\text{dual}} - X^{-1} r_{\text{cent}}.
+   -\Delta s + A^T\Delta\nu = -r_d.
+   $$
+   Sau phép thế, phương trình tương đương là:
+   $$
+   X^{-1}S\Delta x + A^T\Delta\nu = -r_d - X^{-1}r_c.
    $$
 
    Đặt ma trận đường chéo $\Theta = S^{-1} X \succ 0$ với $\Theta_{ii} = x_i / s_i$. Nhân cả hai vế với $\Theta$:
    $$
-   \Delta x + \Theta A^T \Delta \nu = -\Theta r_{\text{dual}} - S^{-1} r_{\text{cent}}.
+   \Delta x + \Theta A^T\Delta\nu = -\Theta r_d - S^{-1}r_c.
    $$
 
-   Nhân ma trận $A$ vào hai vế và kết hợp với phương trình thứ ba $A \Delta x = -r_{\text{pri}}$, ta thu được phương trình chuẩn xác định $\Delta \nu$:
+   Đặt $q = \Theta r_d + S^{-1}r_c$. Nhân ma trận $A$ vào hai vế và kết hợp với phương trình thứ ba $A\Delta x = -r_p$, ta thu được phương trình chuẩn xác định $\Delta\nu$:
    $$
-   (A \Theta A^T) \Delta \nu = -r_{\text{pri}} + A \left( \Theta r_{\text{dual}} + S^{-1} r_{\text{cent}} \right).
+   (A\Theta A^T)\Delta\nu = r_p - Aq.
    $$
 
    Ma trận $A \Theta A^T \in \mathbb{R}^{p \times p}$ là ma trận đối xứng xác định dương, giải được bằng phân tích Cholesky với chi phí $O(p^3) + O(p^2 n)$. Sau khi có $\Delta \nu$, ta tính ngược lại $\Delta x$ và $\Delta s$ hoàn toàn bằng các phép nhân ma trận - vector.
@@ -388,7 +477,10 @@ với $P \in \mathbb{S}_+^n$ và $G \in \mathbb{R}^{m \times n}$.
    $$
    H_{\text{eff}} = P + G^T D G,
    $$
-   trong đó $D = \operatorname{diag}\left(-\frac{\lambda_1}{g_1^T x - h_1}, \dots, -\frac{\lambda_m}{g_m^T x - h_m}\right)$.
+   trong đó $D$ là ma trận đường chéo với:
+   $$
+   D_{ii} = -\frac{\lambda_i}{g_i^Tx-h_i}.
+   $$
 
    Do tính khả thi miền trong, ta luôn có $\lambda_i > 0$ và $g_i^T x - h_i < 0$, dẫn đến $D_{ii} > 0$ với mọi $i = 1, \dots, m$.
 
@@ -401,7 +493,11 @@ với $P \in \mathbb{S}_+^n$ và $G \in \mathbb{R}^{m \times n}$.
 
    Vì $D$ là ma trận đường chéo với các phần tử dương nghiêm ngặt $D_{ii} > 0$, đặt $w = G v \in \mathbb{R}^m$, ta có:
    $$
-   v^T G^T D G v = w^T D w = \sum_{i=1}^m D_{ii} w_i^2 \ge 0.
+   \begin{aligned}
+   v^TG^TDGv &= w^TDw \\
+   &= \sum_{i=1}^m D_{ii}w_i^2 \\
+   &\ge 0.
+   \end{aligned}
    $$
 
    Do đó $v^T H_{\text{eff}} v \ge 0$.
@@ -459,35 +555,37 @@ Tại bước lặp hiện tại, nghiệm thử là $x = 2$ và nhân tử đ�
    Tính các vector phần dư (trong bài toán 1 chiều, chúng là các số thực):
    - Phần dư đối ngẫu:
      $$
-     r_{\text{dual}} = f_0'(x) + \lambda f_1'(x) = 1 + (1)(-1) = 0.
+     \begin{aligned}
+     r_d &= f_0'(x) + \lambda f_1'(x) \\
+     &= 1 + (1)(-1) \\
+     &= 0.
+     \end{aligned}
      $$
      (Điểm hiện tại đã thỏa mãn cân bằng đối ngẫu).
    - Phần dư bù trừ trung tâm:
      $$
-     r_{\text{cent}} = -\lambda f_1(x) - \eta = -(1)(-2) - 1 = 2 - 1 = 1.
+     \begin{aligned}
+     r_c &= -\lambda f_1(x) - \eta \\
+     &= -(1)(-2) - 1 \\
+     &= 2 - 1 = 1.
+     \end{aligned}
      $$
-   - Phần dư nguyên thủy: Không có ràng buộc đẳng thức nên $r_{\text{pri}} = 0$.
+   - Phần dư nguyên thủy: Không có ràng buộc đẳng thức nên $r_p = 0$.
 
 3. Thiết lập hệ phương trình KKT:
    - Hessian $H = f_0''(x) + \lambda f_1''(x) = 0 + 0 = 0$.
    - Ma trận Jacobi $Df(x) = [-1]$.
    
-   Hệ phương trình tìm $(\Delta x, \Delta \lambda)$:
+   Thay các giá trị vào ma trận hệ số:
    $$
-   \begin{bmatrix}
+   K = \begin{bmatrix}
    0 & -1 \\
    -(1)(-1) & -(-2)
-   \end{bmatrix}
-   \begin{bmatrix}
-   \Delta x \\
-   \Delta \lambda
-   \end{bmatrix}
-   =
-   -\begin{bmatrix}
-   0 \\
-   1
-   \end{bmatrix}
-   \iff
+   \end{bmatrix}.
+   $$
+
+   Rút gọn các hệ số, ta thu được hệ tương đương:
+   $$
    \begin{bmatrix}
    0 & -1 \\
    1 & 2
@@ -511,19 +609,25 @@ Tại bước lặp hiện tại, nghiệm thử là $x = 2$ và nhân tử đ�
 
 4. Đánh giá bước nhảy:
    - Vì $\Delta \lambda = 0$, nhân tử đối ngẫu không đổi nên $s_{\max}^{\text{dual}} = 1$.
-   - Với biến nguyên thủy: Ta cần $x + s \Delta x = 2 - s > 0 \iff s < 2$. Do đó bước nhảy bị chặn bởi 1, tức là $s_{\max} = 1$.
+   - Với biến nguyên thủy: Điều kiện miền trong là $2-s>0$, tương đương $s<2$. Kết hợp với giới hạn $s\le1$, ta có $s_{\max}^{\text{pri}}=1$.
+   - Theo hệ số an toàn ở Mục 4, bước khởi tạo là $s_{\max}=0.99$. Bước $s=0.8$ nhỏ hơn cận này và giữ được tính dương của cả hai biến.
    
    Cập nhật với bước $s = 0.8$:
    $$
-\begin{aligned}
-x_{\text{new}} &= x + s \Delta x = 2 + 0.8(-1) = 1.2, \\
-\lambda_{\text{new}} &= \lambda + s \Delta \lambda = 1 + 0.8(0) = 1.
-\end{aligned}
-$$
+   \begin{aligned}
+   x_{\text{new}} &= x + s\Delta x \\
+   &= 2 + 0.8(-1) = 1.2, \\
+   \lambda_{\text{new}} &= \lambda + s\Delta\lambda \\
+   &= 1 + 0.8(0) = 1.
+   \end{aligned}
+   $$
 
    Kiểm tra độ lệch đối ngẫu đại diện mới:
    $$
-   \hat{\eta}_{\text{new}} = -\lambda_{\text{new}} f_1(x_{\text{new}}) = -(1)(-1.2) = 1.2.
+   \begin{aligned}
+   \hat{\eta}_{\text{new}} &= -\lambda_{\text{new}}f_1(x_{\text{new}}) \\
+   &= -(1)(-1.2) = 1.2.
+   \end{aligned}
    $$
 
    Khoảng cách đối ngẫu đã giảm từ $2$ xuống còn $1.2$, đưa điểm lặp tiến gần hơn về nghiệm tối ưu $x^* = 0$.

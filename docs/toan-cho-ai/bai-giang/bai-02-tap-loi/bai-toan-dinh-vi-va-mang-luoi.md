@@ -216,11 +216,11 @@ Ngoài ra, vì lý do địa hình, trạm mới phải nằm bên phải đư�
    $$
    Khai triển:
    $$
-\begin{aligned}
-f(x) &= x_1^2 + (x_1^2 + 8x_1 + 16) + (x_1^2 - 8x_1 + 16) + (x_2^2 - 6x_2 + 9) + x_2^2 + x_2^2 \\
-&= 3x_1^2 + 32 + 3x_2^2 - 6x_2 + 9 = 3x_1^2 + 3(x_2 - 1)^2 + 38.
-\end{aligned}
-$$
+   \begin{aligned}
+   f(x) &= x_1^2 + (x_1^2 + 8x_1 + 16) + (x_1^2 - 8x_1 + 16) + (x_2^2 - 6x_2 + 9) + x_2^2 + x_2^2 \\
+   &= 3x_1^2 + 32 + 3x_2^2 - 6x_2 + 9 = 3x_1^2 + 3(x_2 - 1)^2 + 38.
+   \end{aligned}
+   $$
    Bài toán tối ưu: Cực tiểu hóa $\min f(x_1, x_2)$ sao cho $1 - x_1 \le 0$.
 
 2. **Nghiệm không ràng buộc**:

@@ -5,6 +5,7 @@ section: lecture
 title: "Thuật toán sắp xếp"
 prerequisites: ["mang","de-quy","do-phuc-tap"]
 lessonStatus: ready
+description: "So sánh các thuật toán sắp xếp, phân tích MergeSort và QuickSort theo thời gian, bộ nhớ và tính ổn định."
 ---
 
 

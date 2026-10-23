@@ -1,5 +1,5 @@
 <template>
-  <div class="exam-practice vp-doc" :class="{ 'is-empty': !currentQuestion }" @click="copyCode">
+  <div ref="examRootRef" class="exam-practice vp-doc" :class="{ 'is-empty': !currentQuestion }" @click="copyCode">
     <a class="exam-course-link" :href="withBase(courseLink)">← Chọn bài ôn thi</a>
     <!-- Top Header Bar -->
     <header class="exam-header">
@@ -359,7 +359,7 @@
 </template>
 
 <script setup>
-import { ref, computed, reactive, onMounted, onUnmounted, nextTick } from 'vue';
+import { ref, computed, reactive, watch, onMounted, onUnmounted, nextTick } from 'vue';
 import { withBase } from 'vitepress';
 import {
   normalizeMode,
@@ -399,9 +399,27 @@ const currentMode = ref('quiz');
 const currentQuestionId = ref(null);
 const showJumpModal = ref(false);
 const liveStatus = ref('');
+const examRootRef = ref(null);
 const questionHeadingRef = ref(null);
 const jumpTriggerRef = ref(null);
 const modalRef = ref(null);
+let previousPageOverflow;
+
+function restorePageScroll() {
+  if (previousPageOverflow === undefined || typeof document === 'undefined') return;
+  document.documentElement.style.overflow = previousPageOverflow;
+  previousPageOverflow = undefined;
+}
+
+watch(showJumpModal, (open) => {
+  if (typeof document === 'undefined') return;
+  if (open) {
+    previousPageOverflow = document.documentElement.style.overflow;
+    document.documentElement.style.overflow = 'hidden';
+  } else {
+    restorePageScroll();
+  }
+});
 
 // In-memory session state (preserves answers during current session)
 const sessionState = reactive(createExamSessionState());
@@ -653,9 +671,11 @@ function syncFromUrl() {
 
 // Keyboard shortcuts for full exam page navigation
 function onGlobalKeydown(event) {
-  if (showJumpModal.value || event.ctrlKey || event.altKey || event.metaKey) return;
+  if (showJumpModal.value || event.defaultPrevented || event.isComposing || event.ctrlKey || event.altKey || event.metaKey) return;
 
   const target = event.target;
+  // Header controls and other dialogs keep their own keyboard interactions.
+  if (target && target !== document.body && !examRootRef.value?.contains(target)) return;
   if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT' || target.closest('pre') || target.isContentEditable)) {
     return;
   }
@@ -710,6 +730,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
+  restorePageScroll();
   if (typeof window !== 'undefined') {
     window.removeEventListener('popstate', onPopstate);
     window.removeEventListener('keydown', onGlobalKeydown);
@@ -1344,6 +1365,7 @@ onUnmounted(() => {
 .exam-modal__grid {
   flex: 1;
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 16px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));

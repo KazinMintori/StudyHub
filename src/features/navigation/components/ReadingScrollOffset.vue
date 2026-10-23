@@ -1,10 +1,12 @@
 <script setup>
 import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { onContentUpdated, useData } from 'vitepress'
+import { stabilizeInitialHeading } from '../services/initial-heading-stabilizer.mjs'
 
 const { frontmatter } = useData()
 const height = ref(134)
 let observer
+let initialHeading
 let disposed = false
 
 function measure() {
@@ -33,29 +35,17 @@ function observe() {
 onMounted(() => {
   observe()
   window.addEventListener('resize', measure)
-  // On a statically rendered deep link, VitePress can calculate the initial
-  // offset before hydration. Correct a covered heading once the chrome exists.
-  const initialHash = window.location.hash
-  nextTick(async () => {
-    await document.fonts.ready
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-    if (disposed || window.location.hash !== initialHash || !initialHash) return
-    let target
-    try { target = document.getElementById(decodeURIComponent(initialHash.slice(1))) } catch { return }
-    if (!target?.matches('h2, h3, h4')) return
-    measure()
-    const top = target.getBoundingClientRect().top
-    if (top >= 0 && top < height.value) window.scrollTo({ top: window.scrollY + top - height.value, behavior: 'instant' })
-    }))
-  })
+  initialHeading = stabilizeInitialHeading({ getOffset() { measure(); return height.value } })
 })
 onContentUpdated(async () => {
   await nextTick()
   observe()
+  initialHeading?.refresh()
 })
 onUnmounted(() => {
   disposed = true
   observer?.disconnect()
+  initialHeading?.stop()
   window.removeEventListener('resize', measure)
 })
 </script>

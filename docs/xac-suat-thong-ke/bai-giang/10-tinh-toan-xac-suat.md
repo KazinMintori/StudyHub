@@ -267,7 +267,7 @@ Rõ ràng, việc biết hay không biết thông tin về lần rút thứ nh�
 
 ### Cảnh báo phương pháp luận: Khác biệt bản chất giữa hai xác suất có điều kiện đảo chiều
 
-Một trong những sai sót phổ biến nhất là hoán đổi vị trí của điều kiện: Coi $P(A \mid B)$ tương đương với $P(B \mid A)$.
+Hoán đổi vị trí của điều kiện làm thay đổi xác suất đang xét: $P(A \mid B)$ và $P(B \mid A)$ dùng hai không gian điều kiện khác nhau nên không thể đồng nhất.
 
 Quan sát biểu đồ Venn dưới đây:
 

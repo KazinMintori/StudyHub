@@ -11,6 +11,7 @@ import PhilosophyTopicNav from '../features/philosophy/components/PhilosophyTopi
 import TopicHeader from '../features/lecture/components/TopicHeader.vue'
 import TopicNav from '../features/lecture/components/TopicNav.vue'
 import BuyMeCoffee from '../features/site/components/BuyMeCoffee.vue'
+import FeedbackWidget from '../features/site/components/FeedbackWidget.vue'
 import WelcomeScreen from '../features/site/components/WelcomeScreen.vue'
 import SiteIntroduction from '../features/site/components/SiteIntroduction.vue'
 import SpotArt from '../features/illustrations/components/SpotArt.vue'
@@ -24,8 +25,7 @@ import {
   useResponsiveSidebar,
   useLectureNavigation,
   resolveHasCourseSidebar,
-  resolveLayoutClasses,
-  openSearch
+  resolveLayoutClasses
 } from '../features/navigation/index.mjs'
 
 const { Layout } = DefaultTheme
@@ -92,7 +92,7 @@ const layoutClasses = computed(() => ({
         <ZenModeToggle />
       </div>
     </template>
-    <template #not-found><main class="course-shell not-found-page"><SpotArt name="notfound" tone="tim" /><h1>Trang này không tồn tại</h1><p>Có thể đường dẫn đã đổi hoặc bài chưa được xuất bản. Tìm bài giảng hoặc thuật ngữ để tiếp tục học.</p><div class="button-row"><button class="study-button primary" @click="openSearch">Tìm bài, thuật ngữ</button><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
+    <template #not-found><main class="course-shell not-found-page"><SpotArt name="notfound" tone="tim" /><h1>Trang này không tồn tại</h1><p>Có thể đường dẫn đã đổi hoặc bài chưa được xuất bản. Tra cứu thuật ngữ trong Wiki hoặc chọn học phần để tiếp tục học.</p><div class="button-row"><a class="study-button primary" :href="withBase('/wiki/')">Tra cứu Wiki</a><a class="text-link" :href="withBase('/')">Danh sách học phần</a></div></main></template>
     <template #doc-before>
       <PhilosophyHeader v-if="isPhilosophy" />
       <LectureHeader v-else-if="frontmatter.section === 'lecture'" />
@@ -107,6 +107,7 @@ const layoutClasses = computed(() => ({
       <SiteIntroduction @show-introduction="welcomeScreen?.show()" />
       <WelcomeScreen ref="welcomeScreen" />
       <BuyMeCoffee />
+      <FeedbackWidget :page-title="frontmatter.title || page.title" :course-name="currentCourse?.name || ''" />
     </template>
   </Layout>
 </template>

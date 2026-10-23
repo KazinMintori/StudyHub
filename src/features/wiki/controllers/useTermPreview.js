@@ -16,6 +16,7 @@ export function useTermPreview() {
   let anchor
   let timer
   let suppressFocus = false
+  let pendingRequest = null
 
   function clearAnchor(link = anchor) {
     link?.removeAttribute('aria-describedby')
@@ -24,6 +25,8 @@ export function useTermPreview() {
 
   function close({ restoreFocus = false } = {}) {
     clearTimeout(timer)
+    loadToken++
+    pendingRequest = null
     const previousAnchor = anchor
     clearAnchor(previousAnchor)
     term.value = null
@@ -40,11 +43,13 @@ export function useTermPreview() {
 
   function updatePosition() {
     if (!anchor || !term.value) return
-    position.value = popoverPosition({
+    const preview = popover.value
+    // Pinned notes use their responsive CSS layout rather than the anchor.
+    position.value = pinned.value ? {} : popoverPosition({
       viewportWidth: window.innerWidth,
       viewportHeight: window.innerHeight,
       anchor: anchor.getBoundingClientRect(),
-      height: popover.value?.getBoundingClientRect().height || 280
+      height: preview ? preview.scrollHeight + preview.offsetHeight - preview.clientHeight : 280
     })
   }
 
@@ -61,11 +66,18 @@ export function useTermPreview() {
     clearTimeout(timer)
     const id = link?.dataset.term
     if (!link || !id) return
+    const token = ++loadToken
+    pendingRequest = null
     if (!conceptData) {
-      const token = ++loadToken
-      try { await ensureConceptData() } catch { return }
+      pendingRequest = { persist }
+      try { await ensureConceptData() } catch {
+        if (token === loadToken) pendingRequest = null
+        return
+      }
       // Ignore a hover that ended while the data was downloading.
-      if (token !== loadToken || !link.isConnected) return
+      if (token !== loadToken) return
+      pendingRequest = null
+      if (!link.isConnected) return
       if (!persist && !link.matches(':hover') && !link.matches(':focus-visible')) return
     }
     const nextTerm = conceptData.concepts[id]
@@ -117,7 +129,10 @@ export function useTermPreview() {
   function click(event) {
     const link = event.target.closest?.('button.study-term')
     if (!link) {
-      if (pinned.value && !popover.value?.contains(event.target)) close()
+      // The scrim's own handler restores focus. Let it run before clearing
+      // the anchor instead of dismissing it in this capture listener.
+      if (event.target.closest?.('.term-preview-scrim')) return
+      if ((pinned.value || pendingRequest?.persist) && !popover.value?.contains(event.target)) close()
       return
     }
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
@@ -127,7 +142,7 @@ export function useTermPreview() {
   }
 
   function key(event) {
-    if (event.key === 'Escape' && term.value) {
+    if (event.key === 'Escape' && (term.value || pendingRequest)) {
       event.preventDefault()
       event.stopPropagation()
       close({ restoreFocus: pinned.value })

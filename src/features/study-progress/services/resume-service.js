@@ -1,27 +1,37 @@
 import { canonicalLesson as defaultCanonicalLesson } from './progress-migration.js'
 import { calculateProgressKey } from './progress-key.js'
+import { lecturePath, lessonTopics, topicPath } from '../../lecture/services/lecture-model.mjs'
 
 export function resolveResumeLesson(savedLastLesson, catalog = [], options = {}) {
-  if (!savedLastLesson || !savedLastLesson.path) return null
+  if (typeof savedLastLesson?.path !== 'string' || !savedLastLesson.path) return null
   const canonicalFn = options.canonicalLesson || defaultCanonicalLesson
   const keyFn = options.progressKey || calculateProgressKey
 
   const path = canonicalFn(savedLastLesson.path)
-  const course = catalog.find(c =>
-    c.lessons?.some(l => l.status === 'ready' && keyFn(c, l) === path)
-  )
-  if (!course) return null
+  if (typeof path !== 'string') return null
+  const routePath = path.replace(/\/$/, '').replace(/\.html$/, '')
 
-  const lesson = course.lessons?.find(l => keyFn(course, l) === path)
-  if (!lesson) return null
+  for (const course of catalog) {
+    const lessons = [...(course.lessons || []), ...(course.review ? [course.review] : [])]
+    for (const lesson of lessons) {
+      if (lesson.status !== 'ready') continue
+      const topics = lessonTopics(lesson)
+      const availableTopics = topics.length ? topics : (lesson.topics || [])
+      const matchesLesson = lecturePath(course.id, lesson.slug) === routePath ||
+        keyFn(course, lesson) === path
+      const matchesTopic = availableTopics.some(topic => topicPath(course.id, lesson.slug, topic.slug) === routePath)
+      if (!matchesLesson && !matchesTopic) continue
 
-  return {
-    course,
-    lesson,
-    path,
-    heading: typeof savedLastLesson.heading === 'string' ? savedLastLesson.heading : '',
-    headingTitle: typeof savedLastLesson.headingTitle === 'string' ? savedLastLesson.headingTitle : ''
+      return {
+        course,
+        lesson,
+        path,
+        heading: typeof savedLastLesson.heading === 'string' ? savedLastLesson.heading : '',
+        headingTitle: typeof savedLastLesson.headingTitle === 'string' ? savedLastLesson.headingTitle : ''
+      }
+    }
   }
+  return null
 }
 
 export function resolveResumeLink(resume) {
@@ -36,7 +46,7 @@ export function resolveDefaultReadyLesson(catalog = []) {
       return {
         course,
         lesson,
-        path: `/${course.id}/bai-giang/${lesson.slug}`,
+        path: lecturePath(course.id, lesson.slug),
         heading: '',
         headingTitle: ''
       }

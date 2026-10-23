@@ -33,6 +33,16 @@
   "exercises": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
+      "line": 120,
+      "title": "3.1 Bản chất toán học của Phép Hiệu chỉnh Chệch (Bias Correction)"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
+      "line": 141,
+      "title": "3.2 Từng bước tính toán số học của Adam"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.md",
       "line": 248,
       "title": "Bài tập tự luyện"
     },

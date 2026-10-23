@@ -13,7 +13,12 @@ Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thi�
 
 ### Bài 1.1: Chứng minh quy nạp toán học
 1. Chứng minh bằng phương pháp quy nạp toán học rằng với mọi số nguyên dương $n \ge 1$:
-   $$1^2 + 2^2 + 3^2 + \dots + n^2 = \frac{n(n+1)(2n+1)}{6}$$
+   $$
+   \begin{aligned}
+   S_n &= 1^2 + 2^2 + \dots + n^2, \\
+   S_n &= \frac{n(n+1)(2n+1)}{6}.
+   \end{aligned}
+   $$
 2. Chứng minh rằng với mọi số nguyên dương $n \ge 1$, biểu thức $4^n - 1$ luôn chia hết cho $3$.
 
 #### Lời giải gợi ý
@@ -24,23 +29,29 @@ Tài liệu cung cấp hệ thống bài tập cho môn Toán rời rạc, thi�
      Đẳng thức đúng với $n = 1$.
    - **Bước quy nạp:**
      Giả sử mệnh đề đúng với số nguyên dương $k \ge 1$, tức là:
-     $$1^2 + 2^2 + \dots + k^2 = \frac{k(k+1)(2k+1)}{6}$$
+     $$
+     S_k = \frac{k(k+1)(2k+1)}{6}.
+     $$
      Ta cần chứng minh mệnh đề đúng với $n = k + 1$, tức là:
      $$
-\begin{aligned}
-1^2 + 2^2 + \dots + k^2 + (k+1)^2 &= \frac{(k+1)((k+1)+1)(2(k+1)+1)}{6} \\
-&= \frac{(k+1)(k+2)(2k+3)}{6}.
-\end{aligned}
-$$
-     Thật vậy:
+     S_{k+1} = \frac{(k+1)(k+2)(2k+3)}{6}.
      $$
-\begin{aligned}
-\text{VT} &= \frac{k(k+1)(2k+1)}{6} + (k+1)^2 \\
-&= (k+1) \left[ \frac{k(2k+1) + 6(k+1)}{6} \right] \\
-&= (k+1) \left[ \frac{2k^2 + 7k + 6}{6} \right] \\
-&= \frac{(k+1)(k+2)(2k+3)}{6} = \text{VP}.
-\end{aligned}
-$$
+     Đặt tử số còn lại sau khi đưa thừa số $(k+1)$ ra ngoài là $Q$:
+     $$
+     \begin{aligned}
+     Q &= k(2k+1)+6(k+1) \\
+     &= 2k^2+7k+6 \\
+     &= (k+2)(2k+3).
+     \end{aligned}
+     $$
+     Từ $S_{k+1}=S_k+(k+1)^2$ và giả thiết quy nạp, ta có:
+     $$
+     \begin{aligned}
+     6S_{k+1} &= 6S_k+6(k+1)^2 \\
+     &= (k+1)Q.
+     \end{aligned}
+     $$
+     Thay biểu thức của $Q$ rồi chia hai vế cho $6$, ta thu được đúng công thức cần chứng minh.
      Theo nguyên lý quy nạp toán học, đẳng thức đúng với mọi $n \ge 1$.
 
 2. Chứng minh $4^n - 1$ chia hết cho 3:
@@ -48,11 +59,14 @@ $$
    - Giả sử khẳng định đúng với $n = k$, tức là $4^k - 1 = 3m$ ($m \in \mathbb{Z}$).
    - Với $n = k + 1$:
      $$
-\begin{aligned}
-4^{k+1} - 1 &= 4 \cdot 4^k - 1 = 4(3m + 1) - 1 \\
-&= 12m + 4 - 1 = 12m + 3 = 3(4m + 1),
-\end{aligned}
-$$
+     \begin{aligned}
+     4^{k+1} - 1 &= 4 \cdot 4^k - 1 \\
+     &= 4(3m + 1) - 1 \\
+     &= 12m + 4 - 1 \\
+     &= 12m + 3 \\
+     &= 3(4m + 1),
+     \end{aligned}
+     $$
      chia hết cho 3. Điều phải chứng minh.
 
 ---
@@ -61,7 +75,10 @@ $$
 
 ### Bài 2.1: Quan hệ tương đương và Lớp tương đương
 Xét tập hợp các số nguyên $\mathbb{Z}$. Định nghĩa quan hệ hai ngôi $R$ trên $\mathbb{Z}$ như sau:
-$$a \, R \, b \iff a \equiv b \pmod 5 \quad (5 \mid (a - b))$$
+$$
+a \, R \, b \iff a \equiv b \pmod 5.
+$$
+Nói cách khác, $a \, R \, b$ khi và chỉ khi $a-b$ chia hết cho $5$.
 
 1. Chứng minh rằng $R$ là một quan hệ tương đương (thỏa mãn 3 tính chất: Phản xạ, đối xứng và bắc cầu).
 2. Xác định các lớp tương đương rời nhau phân hoạch tập $\mathbb{Z}$. Chỉ ra các phần tử tiêu biểu.
@@ -75,15 +92,22 @@ $$a \, R \, b \iff a \equiv b \pmod 5 \quad (5 \mid (a - b))$$
 
 2. Các lớp tương đương chính là các lớp đồng dư modulo 5:
    $$
-\begin{aligned}
-[0] &= \{\dots, -10, -5, 0, 5, 10, \dots\} = \{5k \mid k \in \mathbb{Z}\} \\
-[1] &= \{\dots, -9, -4, 1, 6, 11, \dots\} = \{5k + 1 \mid k \in \mathbb{Z}\} \\
-[2] &= \{\dots, -8, -3, 2, 7, 12, \dots\} = \{5k + 2 \mid k \in \mathbb{Z}\} \\
-[3] &= \{\dots, -7, -2, 3, 8, 13, \dots\} = \{5k + 3 \mid k \in \mathbb{Z}\} \\
-[4] &= \{\dots, -6, -1, 4, 9, 14, \dots\} = \{5k + 4 \mid k \in \mathbb{Z}\}
-\end{aligned}
-$$
-   Tập thương $\mathbb{Z}/R = \{[0], [1], [2], [3], [4]\}$.
+   \begin{aligned}
+   [0] &= \{\dots, -5, 0, 5, \dots\}, \\
+   [1] &= \{\dots, -4, 1, 6, \dots\}, \\
+   [2] &= \{\dots, -3, 2, 7, \dots\}, \\
+   [3] &= \{\dots, -2, 3, 8, \dots\}, \\
+   [4] &= \{\dots, -1, 4, 9, \dots\}.
+   \end{aligned}
+   $$
+   Với mỗi đại diện $r \in \{0,1,2,3,4\}$, dạng tổng quát của lớp tương đương là:
+   $$
+   [r] = \{5k+r \mid k\in\mathbb Z\}.
+   $$
+   Tập thương gồm đúng năm lớp:
+   $$
+   \mathbb{Z}/R = \{[0], [1], [2], [3], [4]\}.
+   $$
 
 ---
 
@@ -91,7 +115,9 @@ $$
 
 ### Bài 3.1: Giải hệ thức truy hồi tuyến tính thuần nhất
 Cho dãy số $(a_n)$ thỏa mãn hệ thức truy hồi tuyến tính cấp 2:
-$$a_n = 5a_{n-1} - 6a_{n-2}, \quad \forall n \ge 2$$
+$$
+a_n = 5a_{n-1} - 6a_{n-2}, \quad \forall n \ge 2.
+$$
 với các điều kiện đầu: $a_0 = 1, a_1 = 4$.
 
 1. Viết phương trình đặc trưng của hệ thức truy hồi.
@@ -100,21 +126,36 @@ với các điều kiện đầu: $a_0 = 1, a_1 = 4$.
 
 #### Lời giải gợi ý
 1. Phương trình đặc trưng:
-   $$r^2 - 5r + 6 = 0$$
+   $$
+   r^2 - 5r + 6 = 0.
+   $$
 
 2. Giải phương trình:
-   $$(r - 2)(r - 3) = 0 \implies r_1 = 2, \quad r_2 = 3$$
+   $$
+   (r - 2)(r - 3) = 0.
+   $$
+   Hai nghiệm đặc trưng là $r_1 = 2$ và $r_2 = 3$.
 
 3. Nghiệm tổng quát có dạng:
-   $$a_n = C_1 \cdot 2^n + C_2 \cdot 3^n$$
+   $$
+   a_n = C_1 \cdot 2^n + C_2 \cdot 3^n.
+   $$
    Thay điều kiện đầu:
    - Với $n = 0$: $a_0 = C_1 + C_2 = 1 \implies C_2 = 1 - C_1$.
    - Với $n = 1$: $a_1 = 2C_1 + 3C_2 = 4$.
    Thay $C_2$ vào:
-   $$2C_1 + 3(1 - C_1) = 4 \iff 3 - C_1 = 4 \implies C_1 = -1$$
+   $$
+   \begin{aligned}
+   2C_1 + 3(1 - C_1) &= 4, \\
+   3 - C_1 &= 4, \\
+   C_1 &= -1.
+   \end{aligned}
+   $$
    Suy ra $C_2 = 1 - (-1) = 2$.
    Vậy công thức tường minh của dãy số:
-   $$a_n = 2 \cdot 3^n - 2^n$$
+   $$
+   a_n = 2 \cdot 3^n - 2^n.
+   $$
 
 ---
 
@@ -127,17 +168,33 @@ với các điều kiện đầu: $a_0 = 1, a_1 = 4$.
 
 #### Lời giải gợi ý
 1. Bổ đề bắt tay: Trong đồ thị vô hướng $G = (V, E)$, tổng bậc của tất cả các đỉnh bằng hai lần số cạnh:
-   $$\sum_{v \in V} \deg(v) = 2|E|$$
+   $$
+   \sum_{v \in V} \deg(v) = 2|E|.
+   $$
 
    Với $V=\{v_1,\ldots,v_n\}$, vế trái là $\deg(v_1)+\cdots+\deg(v_n)$: Cộng bậc của từng đỉnh. $|E|$ là số cạnh.
    Vì $2|E|$ luôn là số chẵn, nên tổng bậc của các đỉnh có bậc lẻ phải là một số chẵn. Điều này chỉ xảy ra khi số lượng các đỉnh có bậc lẻ là một số chẵn.
 
 2. Áp dụng công thức Euler cho đồ thị phẳng liên thông:
-   $$V - E + F = 2 \iff 6 - E + 8 = 2 \iff 14 - E = 2 \implies E = 12$$
+   $$
+   \begin{aligned}
+   V - E + F &= 2, \\
+   6 - E + 8 &= 2, \\
+   14 - E &= 2, \\
+   E &= 12.
+   \end{aligned}
+   $$
 
-3. Trong đồ thị lưỡng phân, không có chu trình độ dài 3 (mọi chu trình đều có độ dài chẵn $\ge 4$). Do đó mỗi miền được bao bởi ít nhất 4 cạnh: $2E \ge 4F \implies F \le E/2$.
-   Theo công thức Euler: $V - E + F = 2 \implies 2 = V - E + F \le V - E + E/2 = V - E/2$.
+3. Giả sử $K_{3,3}$ phẳng. Đồ thị này không có cầu, và mọi chu trình của nó đều có độ dài chẵn, ít nhất bằng $4$. Do đó mỗi miền được bao bởi ít nhất $4$ cạnh. Đếm mỗi cạnh ở hai phía cho $2E \ge 4F$, tức $F \le E/2$.
+   Theo công thức Euler:
+   $$
+   \begin{aligned}
+   2 &= V-E+F \\
+   &\le V-E+E/2 \\
+   &= V-E/2.
+   \end{aligned}
+   $$
    Suy ra $E \le 2V - 4$.
    Với $K_{3,3}$, ta có $V = 6, E = 3 \times 3 = 9$.
    Thế vào bất đẳng thức: $9 \le 2(6) - 4 = 8$ (Vô lý!).
-   Vậy $K_{3,3}$ không thể là đồ thị phẳng (theo định lý Kuratowski).
+   Mâu thuẫn chứng tỏ $K_{3,3}$ không thể là đồ thị phẳng.

@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref, nextTick, onMounted, onUnmounted } from 'vue'
 import { useRouter, useData, onContentUpdated } from 'vitepress'
-import { useLecture, lecturePart } from '../../navigation/index.mjs'
+import { useLecture, lecturePart, shouldIgnoreNavigationClick } from '../../navigation/index.mjs'
 import { lecturePath, lectureParts } from '../services/lecture-model.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
@@ -26,7 +26,12 @@ function openSidebar() { document.querySelector('.VPLocalNav .menu')?.click() }
 function closeOutline() { if (mobileOutline.value) mobileOutline.value.open = false }
 // Start downloading panel data as soon as the reader reaches for a tab.
 function warmPanels() { loadLecturePayload(course.value, lesson.value).catch(() => {}) }
-function select(id) { lecturePart.value = id; router.go(studyLink(lecturePath(course.value.id, lesson.value.slug, id))) }
+function select(id, event) {
+  if (shouldIgnoreNavigationClick(event)) return
+  event?.preventDefault()
+  lecturePart.value = id
+  router.go(studyLink(lecturePath(course.value.id, lesson.value.slug, id)))
+}
 
 function handleKeydown(e) {
   if (typeof window === 'undefined') return
@@ -102,7 +107,7 @@ onUnmounted(() => {
         :href="studyLink(lecturePath(course.id, lesson.slug, item.id))"
         :aria-current="part === item.id ? 'page' : undefined"
         :title="`Phím tắt: Alt + ${index + 1}`"
-        @click.prevent="select(item.id)"
+        @click="select(item.id, $event)"
       >
         {{ item.name }}
       </a>
