@@ -4,7 +4,7 @@ lecture: "10-dong-luc-hoc-quay"
 section: "lecture"
 title: "Động lực học chuyển động quay"
 prerequisites: ["vector","luc","momen-quan-tinh","cong-nang-luong","dong-luong-vat-ly"]
-lessonStatus: "draft"
+lessonStatus: "ready"
 hasChapterExercises: true
 sourceTranslation: "full"
 description: "Mômen lực, Mômen lực và gia tốc góc, Vật rắn quay quanh trục chuyển động, Công và công suất trong chuyển động quay, Mômen động lượng, Bảo toàn mômen động lượng, Con quay và tiến động."

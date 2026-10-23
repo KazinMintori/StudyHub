@@ -5,6 +5,7 @@ Verification suite for Physics 1 Chapter 20 Theory B.
 Verifies all numerical examples, self-checks, derivations, and image assets.
 """
 
+from pathlib import Path
 import math
 import os
 import sys
@@ -34,9 +35,9 @@ def verify_math_measurements():
         "raw_materials/physics/translations/chapter-20/08-giai-thich-vi-mo-entropy.md",
         "raw_materials/physics/translations/chapter-20/17-tom-tat.md",
     ]
-    script = "C:/Users/Ai/.codex/worktrees/physics1-priority-20261022/StudyHub/qa/physics1-priority/measure-math.mjs"
+    script = str(Path(__file__).resolve().parents[2] / "scripts/verification/measure-physics-math.mjs")
     cmd = ["node", script, "."] + files
-    res = subprocess.run(cmd, capture_output=True, text=True)
+    res = subprocess.run(cmd, cwd=Path(__file__).resolve().parents[2], capture_output=True, text=True, encoding="utf-8")
     out = res.stdout
     start = out.find("{")
     end = out.rfind("}")

@@ -4,7 +4,7 @@ lecture: "17-nhiet-do-nhiet-luong"
 section: "lecture"
 title: "Nhiệt độ và nhiệt"
 prerequisites: ["don-vi","cong-nang-luong","luc"]
-lessonStatus: "draft"
+lessonStatus: "ready"
 hasChapterExercises: true
 sourceTranslation: "full"
 description: "Nhiệt độ và cân bằng nhiệt, Nhiệt kế và các thang nhiệt độ, Nhiệt kế khí và thang Kelvin, Sự nở vì nhiệt, Nhiệt lượng và nhiệt dung, Nhiệt lượng kế và chuyển pha, Các cơ chế truyền nhiệt."

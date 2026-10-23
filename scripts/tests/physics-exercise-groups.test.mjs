@@ -58,7 +58,7 @@ test('Chapter18 grouping retains exactly its actual130 source prompts',()=>{
  assert.throws(()=>validatePhysicsExerciseIds(18,[{ids:ids.filter(id=>id!=='Q18.30')}]),/discussion/)
  assert.throws(()=>validatePhysicsExerciseIds(18,[{ids:[...ids,'VP18.8.4']}]),/guided/)
  assert.throws(()=>physicsExerciseFiles(45),/Unconfigured/)
- assert.deepEqual(publishedPhysicsExerciseChapters,[9,18,19])
+ assert.deepEqual(publishedPhysicsExerciseChapters,[9,10,11,17,18,19,20])
 })
 test('Exercise assets reject traversal and preserve the GitHub Pages base',()=>{
  assert.equal(exerciseAssetPath(9,'numbered-a-01.json'),'/physics-exercises/ch09/numbered-a-01.json')

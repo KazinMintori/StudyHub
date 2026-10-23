@@ -4,7 +4,7 @@ lecture: "11-can-bang-dan-hoi"
 section: "lecture"
 title: "Cân bằng và đàn hồi"
 prerequisites: ["luc","momen-luc","don-vi"]
-lessonStatus: "draft"
+lessonStatus: "ready"
 hasChapterExercises: true
 sourceTranslation: "full"
 description: "Điều kiện cân bằng, Trọng tâm, Giải bài toán cân bằng vật rắn, Ứng suất, biến dạng và môđun đàn hồi, Đàn hồi và dẻo."

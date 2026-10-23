@@ -340,12 +340,12 @@ def test_markdown_prose():
 
 def test_math_measure():
     print("[5/5] Running measure-math.mjs helper on all 4 markdown files...")
-    measure_script = Path("C:/Users/Ai/.codex/worktrees/physics1-priority-20261022/StudyHub/qa/physics1-priority/measure-math.mjs")
+    measure_script = ROOT / "scripts/verification/measure-physics-math.mjs"
     assert measure_script.is_file(), f"measure-math.mjs missing at {measure_script}"
 
     rel_files = [str(f.relative_to(ROOT)).replace("\\", "/") for f in MD_FILES]
     cmd = ["node", str(measure_script), "."] + rel_files
-    res = subprocess.run(cmd, capture_output=True, text=True)
+    res = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
 
     # Parse stdout JSON
     stdout = res.stdout.strip()

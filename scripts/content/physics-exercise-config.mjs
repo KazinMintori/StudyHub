@@ -1,4 +1,4 @@
-export const publishedPhysicsExerciseChapters = [9,18,19]
+export const publishedPhysicsExerciseChapters = [9,10,11,17,18,19,20]
 export const physicsExerciseConfigs = {
  9:{numbered:95,total:130,guided:12,discussion:22,half:48},
  10:{numbered:97,total:140,guided:12,discussion:30,half:75},

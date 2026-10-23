@@ -78,32 +78,7 @@ export const physics1Chapter20TheoryAImageAnnotations = {
     ]
   ],
   "young-20/a-ung-dung-01": [],
-  "young-20/a-hinh-20-04": [
-    [
-      "Nguồn nóng",
-      "Hot reservoir"
-    ],
-    [
-      "Nguồn lạnh",
-      "Cold reservoir"
-    ],
-    [
-      "Động cơ",
-      "Engine"
-    ],
-    [
-      "Nhiệt lượng nhận vào QH = 10.000 J",
-      "QH = 10,000 J"
-    ],
-    [
-      "Nhiệt lượng thải ra QC = -8.000 J",
-      "QC = -8000 J"
-    ],
-    [
-      "Công sinh ra W = 2.000 J",
-      "W = 2000 J"
-    ]
-  ],
+  "young-20/a-hinh-20-04": [],
   "young-20/a-hinh-20-05": [
     [
       "Cả hai van đều đóng",

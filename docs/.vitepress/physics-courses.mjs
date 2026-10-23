@@ -278,7 +278,7 @@ export const physics1Course = {
     "lan-khong-truot",
     "con-quay-tien-dong"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 10,
   "sourceChapter": 10,
   "topicGroups": [
@@ -350,7 +350,7 @@ export const physics1Course = {
     "modun-truot",
     "gioi-han-dan-hoi"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 11,
   "sourceChapter": 11,
   "topicGroups": [
@@ -487,7 +487,7 @@ export const physics1Course = {
     "doi-luu-nhiet",
     "buc-xa-nhiet"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 17,
   "sourceChapter": 17,
   "topicGroups": [
@@ -701,7 +701,7 @@ export const physics1Course = {
     "qua-trinh-thuan-nghich",
     "so-trang-thai-vi-mo"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 20,
   "sourceChapter": 20,
   "topicGroups": [

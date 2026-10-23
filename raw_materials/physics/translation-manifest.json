@@ -979,96 +979,95 @@
           "page": 322
         }
       ],
-      "status": "authored-under-review",
+      "status": "complete",
       "fragments": [
         {
           "sourceUnit": "00-mo-dau",
           "file": "raw_materials/physics/translations/chapter-10/00-mo-dau.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10.1",
           "file": "raw_materials/physics/translations/chapter-10/01-momen-luc.md",
           "destination": "topic:momen-luc",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10.2",
           "file": "raw_materials/physics/translations/chapter-10/02-momen-luc-va-gia-toc-goc.md",
           "destination": "topic:momen-luc-va-gia-toc-goc",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10.3",
           "file": "raw_materials/physics/translations/chapter-10/03-quay-quanh-truc-chuyen-dong.md",
           "destination": "topic:quay-quanh-truc-chuyen-dong",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10.4",
           "file": "raw_materials/physics/translations/chapter-10/04-cong-va-cong-suat-quay.md",
           "destination": "topic:cong-va-cong-suat-quay",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10.5",
           "file": "raw_materials/physics/translations/chapter-10/05-momen-dong-luong.md",
           "destination": "topic:momen-dong-luong",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10.6",
           "file": "raw_materials/physics/translations/chapter-10/06-bao-toan-momen-dong-luong.md",
           "destination": "topic:bao-toan-momen-dong-luong",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10.7",
           "file": "raw_materials/physics/translations/chapter-10/07-con-quay-va-tien-dong.md",
           "destination": "topic:con-quay-va-tien-dong",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17-tom-tat",
           "file": "raw_materials/physics/translations/chapter-10/17-tom-tat.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "09-luyen-tap-huong-dan",
           "file": "raw_materials/physics/translations/chapter-10/09-luyen-tap-huong-dan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10-cau-hoi-thao-luan",
           "file": "raw_materials/physics/translations/chapter-10/10-cau-hoi-thao-luan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11-bai-tap-001-075",
           "file": "raw_materials/physics/translations/chapter-10/11-bai-tap-001-075.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "12-bai-tap-076-097",
           "file": "raw_materials/physics/translations/chapter-10/12-bai-tap-076-097.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "16-bai-tap-cau-noi",
           "file": "raw_materials/physics/translations/chapter-10/16-bai-tap-cau-noi.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "independent-source-numeric-and-browser-review"
-      ]
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-10-review.json"
     },
     {
       "chapter": 11,
@@ -1105,84 +1104,83 @@
           "page": 351
         }
       ],
-      "status": "authored-under-review",
+      "status": "complete",
       "fragments": [
         {
           "sourceUnit": "00-mo-dau",
           "file": "raw_materials/physics/translations/chapter-11/00-mo-dau.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11.1",
           "file": "raw_materials/physics/translations/chapter-11/01-dieu-kien-can-bang.md",
           "destination": "topic:dieu-kien-can-bang",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11.2",
           "file": "raw_materials/physics/translations/chapter-11/02-trong-tam.md",
           "destination": "topic:trong-tam",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11.3",
           "file": "raw_materials/physics/translations/chapter-11/03-giai-bai-toan-can-bang-vat-ran.md",
           "destination": "topic:giai-bai-toan-can-bang-vat-ran",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11.4",
           "file": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
           "destination": "topic:ung-suat-bien-dang-modun",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11.5",
           "file": "raw_materials/physics/translations/chapter-11/05-dan-hoi-va-deo.md",
           "destination": "topic:dan-hoi-va-deo",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17-tom-tat",
           "file": "raw_materials/physics/translations/chapter-11/17-tom-tat.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "09-luyen-tap-huong-dan",
           "file": "raw_materials/physics/translations/chapter-11/09-luyen-tap-huong-dan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10-cau-hoi-thao-luan",
           "file": "raw_materials/physics/translations/chapter-11/10-cau-hoi-thao-luan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11-bai-tap-001-048",
           "file": "raw_materials/physics/translations/chapter-11/11-bai-tap-001-048.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "12-bai-tap-049-095",
           "file": "raw_materials/physics/translations/chapter-11/12-bai-tap-049-095.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "16-bai-tap-cau-noi",
           "file": "raw_materials/physics/translations/chapter-11/16-bai-tap-cau-noi.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "independent-source-numeric-and-browser-review"
-      ]
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-11-review.json"
     },
     {
       "chapter": 12,
@@ -1568,96 +1566,95 @@
           "page": 561
         }
       ],
-      "status": "authored-under-review",
+      "status": "complete",
       "fragments": [
         {
           "sourceUnit": "00-mo-dau",
           "file": "raw_materials/physics/translations/chapter-17/00-mo-dau.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17.1",
           "file": "raw_materials/physics/translations/chapter-17/01-nhiet-do-va-can-bang-nhiet.md",
           "destination": "topic:nhiet-do-va-can-bang-nhiet",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17.2",
           "file": "raw_materials/physics/translations/chapter-17/02-nhiet-ke-va-thang-nhiet-do.md",
           "destination": "topic:nhiet-ke-va-thang-nhiet-do",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17.3",
           "file": "raw_materials/physics/translations/chapter-17/03-nhiet-ke-khi-va-thang-kelvin.md",
           "destination": "topic:nhiet-ke-khi-va-thang-kelvin",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17.4",
           "file": "raw_materials/physics/translations/chapter-17/04-su-no-vi-nhiet.md",
           "destination": "topic:su-no-vi-nhiet",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17.5",
           "file": "raw_materials/physics/translations/chapter-17/05-nhiet-luong.md",
           "destination": "topic:nhiet-luong",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17.6",
           "file": "raw_materials/physics/translations/chapter-17/06-nhiet-luong-ke-va-chuyen-pha.md",
           "destination": "topic:nhiet-luong-ke-va-chuyen-pha",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17.7",
           "file": "raw_materials/physics/translations/chapter-17/07-cac-co-che-truyen-nhiet.md",
           "destination": "topic:cac-co-che-truyen-nhiet",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17-tom-tat",
           "file": "raw_materials/physics/translations/chapter-17/17-tom-tat.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "09-luyen-tap-huong-dan",
           "file": "raw_materials/physics/translations/chapter-17/09-luyen-tap-huong-dan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10-cau-hoi-thao-luan",
           "file": "raw_materials/physics/translations/chapter-17/10-cau-hoi-thao-luan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11-bai-tap-001-060",
           "file": "raw_materials/physics/translations/chapter-17/11-bai-tap-001-060.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "12-bai-tap-061-119",
           "file": "raw_materials/physics/translations/chapter-17/12-bai-tap-061-119.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "16-bai-tap-cau-noi",
           "file": "raw_materials/physics/translations/chapter-17/16-bai-tap-cau-noi.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "independent-source-numeric-and-browser-review"
-      ]
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-17-review.json"
     },
     {
       "chapter": 18,
@@ -1979,102 +1976,101 @@
           "page": 665
         }
       ],
-      "status": "authored-under-review",
+      "status": "complete",
       "fragments": [
         {
           "sourceUnit": "00-mo-dau",
           "file": "raw_materials/physics/translations/chapter-20/00-mo-dau.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.1",
           "file": "raw_materials/physics/translations/chapter-20/01-chieu-cua-qua-trinh-nhiet-dong.md",
           "destination": "topic:chieu-cua-qua-trinh-nhiet-dong",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.2",
           "file": "raw_materials/physics/translations/chapter-20/02-dong-co-nhiet.md",
           "destination": "topic:dong-co-nhiet",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.3",
           "file": "raw_materials/physics/translations/chapter-20/03-dong-co-dot-trong.md",
           "destination": "topic:dong-co-dot-trong",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.4",
           "file": "raw_materials/physics/translations/chapter-20/04-may-lanh.md",
           "destination": "topic:may-lanh",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.5",
           "file": "raw_materials/physics/translations/chapter-20/05-nguyen-ly-thu-hai.md",
           "destination": "topic:nguyen-ly-thu-hai",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.6",
           "file": "raw_materials/physics/translations/chapter-20/06-chu-trinh-carnot.md",
           "destination": "topic:chu-trinh-carnot",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.7",
           "file": "raw_materials/physics/translations/chapter-20/07-entropy.md",
           "destination": "topic:entropy",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "20.8",
           "file": "raw_materials/physics/translations/chapter-20/08-giai-thich-vi-mo-entropy.md",
           "destination": "topic:giai-thich-vi-mo-entropy",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "17-tom-tat",
           "file": "raw_materials/physics/translations/chapter-20/17-tom-tat.md",
           "destination": "notes",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "09-luyen-tap-huong-dan",
           "file": "raw_materials/physics/translations/chapter-20/09-luyen-tap-huong-dan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "10-cau-hoi-thao-luan",
           "file": "raw_materials/physics/translations/chapter-20/10-cau-hoi-thao-luan.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "11-bai-tap-001-031",
           "file": "raw_materials/physics/translations/chapter-20/11-bai-tap-001-031.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "12-bai-tap-032-062",
           "file": "raw_materials/physics/translations/chapter-20/12-bai-tap-032-062.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "16-bai-tap-cau-noi",
           "file": "raw_materials/physics/translations/chapter-20/16-bai-tap-cau-noi.md",
           "destination": "bai-tap",
-          "status": "draft-under-review"
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "independent-source-numeric-and-browser-review"
-      ]
+      "pendingSourceUnits": [],
+      "completionReview": "raw_materials/physics/chapter-20-review.json"
     },
     {
       "chapter": 21,

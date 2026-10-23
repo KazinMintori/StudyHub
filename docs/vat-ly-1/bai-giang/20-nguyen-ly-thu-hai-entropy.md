@@ -4,7 +4,7 @@ lecture: "20-nguyen-ly-thu-hai-entropy"
 section: "lecture"
 title: "Nguyên lý thứ hai của nhiệt động lực học"
 prerequisites: ["noi-nang","khi-ly-tuong","nhiet-do-tuyet-doi","tich-phan"]
-lessonStatus: "draft"
+lessonStatus: "ready"
 hasChapterExercises: true
 sourceTranslation: "full"
 description: "Chiều của quá trình nhiệt động, Động cơ nhiệt, Động cơ đốt trong, Máy lạnh và bơm nhiệt, Nguyên lý thứ hai, Chu trình Carnot, Entropy, Giải thích vi mô của entropy."

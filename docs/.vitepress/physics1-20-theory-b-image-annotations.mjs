@@ -45,14 +45,7 @@ export const physics1Chapter20TheoryBImageAnnotations = {
     ["Trạng thái 3 (hay c)", "3"],
     ["Trạng thái 4 (hay d)", "4"],
   ],
-  "young-20/b-hinh-20-14": [
-    ["Nguồn nóng, TH = 500 K", "Hot reservoir, TH = 500 K"],
-    ["Nguồn lạnh, TC = 350 K", "Cold reservoir, TC = 350 K"],
-    ["Động cơ Carnot", "Carnot engine"],
-    ["Nhiệt lượng nhận QH = 2000 J", "QH = 2000 J"],
-    ["Nhiệt lượng nhả QC = -1400 J", "QC = -1400 J"],
-    ["Công sinh ra W = 600 J", "W = 600 J"],
-  ],
+  "young-20/b-hinh-20-14": [],
   "young-20/b-hinh-20-15": [
     ["Nếu có thể tạo ra động cơ siêu hiệu suất, ta có thể ghép nó với một máy lạnh Carnot để tạo thành động cơ có hiệu suất 100%.", "If a superefficient engine were possible, it could be used in conjunction with a Carnot refrigerator to form a 100%-efficient engine."],
     ["Máy lạnh Carnot", "Carnot refrigerator"],

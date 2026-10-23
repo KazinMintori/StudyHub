@@ -1,0 +1,68 @@
+{
+  "chapter": 11,
+  "status": "content-complete",
+  "theorySections": 5,
+  "examples": 7,
+  "numberedExercises": 95,
+  "guidedExercises": 12,
+  "discussionQuestions": 25,
+  "bridgeProblems": 1,
+  "closedSolutions": 133,
+  "exerciseGroups": 24,
+  "originalSourceImageAssets": 79,
+  "supplementarySolutionDiagrams": 5,
+  "browser": {
+    "topics": {
+      "cases": 24,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    },
+    "support": {
+      "cases": 28,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    },
+    "exercises": {
+      "cases": 96,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ],
+      "scope": "Actual chapter exercise group UI",
+      "artifact": "qa/physics1-priority/ch11-exercise-browser/results.json"
+    }
+  },
+  "browserChecks": 148,
+  "sourceReview": "raw_materials/physics/reviews/ch11-parent-final-review.md",
+  "sourceHashes": {
+    "raw_materials/physics/translations/chapter-11/00-mo-dau.md": "d99583691690011eb1db26f9992ecb4fec49a46a6ce60ff70f5d9046b750a6eb",
+    "raw_materials/physics/translations/chapter-11/01-dieu-kien-can-bang.md": "5745334c05ac22a45f917081d28b19990660bca45f3d3a16c3601a099ca279ee",
+    "raw_materials/physics/translations/chapter-11/02-trong-tam.md": "a17b00ac302062b8df815cd44d367979047c9a84db827db04d493c202a316346",
+    "raw_materials/physics/translations/chapter-11/03-giai-bai-toan-can-bang-vat-ran.md": "248511db9d01fb44e41afa70f8315c0a7aa7453039f4f0e315010e92b27479db",
+    "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md": "6fdd1507a5d749d9a159aae258747cea7de29a35db710cb2fe68b32ab48db6c0",
+    "raw_materials/physics/translations/chapter-11/05-dan-hoi-va-deo.md": "4bd4f9964c6e20d9850fbb60a4797ea71defcadf7f6065dbd18cf0c63f40d1be",
+    "raw_materials/physics/translations/chapter-11/09-luyen-tap-huong-dan.md": "aa712770db058b203f6dd1fbcc478ea7c5b306265060201c1bbd9d62d21c069b",
+    "raw_materials/physics/translations/chapter-11/10-cau-hoi-thao-luan.md": "7197248e8c9b27b1108c7d553587cb7914709e618d67916b79264545f96fcd42",
+    "raw_materials/physics/translations/chapter-11/11-bai-tap-001-048.md": "278bd3ab16bbe3d7e5ecdf01a3938dab155592e67791ed1792a7ddff34d5e00e",
+    "raw_materials/physics/translations/chapter-11/12-bai-tap-049-095.md": "ca2afe7aa7b0e5df6f3fc1d5cad3ba2f0e1b06638e993a7bba2a3346dca80d83",
+    "raw_materials/physics/translations/chapter-11/16-bai-tap-cau-noi.md": "5323e49609cacf0290c7dd8ecee2d05912191801ee4e06d0a5a2f4c40f54f838",
+    "raw_materials/physics/translations/chapter-11/17-tom-tat.md": "4ed1e396f994664e6062d34af43ce1c9a49ac1c1deda2023966b5a88d47ace11"
+  },
+  "publication": "reviewed-in-isolated-worktree",
+  "fullBuild": "GitHub Actions only",
+  "limitations": [
+    "No absolute error-free percentage is claimed.",
+    "A browser payload check does not by itself prove scientific correctness. Numeric and source reviews are recorded separately.",
+    "GitHub build and public deployment have not yet run for this content batch."
+  ]
+}

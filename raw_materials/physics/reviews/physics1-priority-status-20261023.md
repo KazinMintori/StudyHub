@@ -1,37 +1,27 @@
-# Trạng thái biên tập Vật lý đại cương 1, ngày 23/10/2026
+# Trạng thái Vật lý đại cương1, ngày23/10/2026
 
-## Phần đã hoàn tất trong worktree riêng
+Bảy chương ưu tiên đã hoàn tất biên tập nội dung và rà soát cục bộ:9,10,11 về quay và cân bằng vật rắn, cùng17–20 về nhiệt học và nhiệt động lực học. Trạng thái xuất bản vẫn phải xác nhận bằng lượt GitHub Actions của chính commit được push.
 
-Chương 9 và chương 18 đã hoàn tất lượt đối chiếu, tính lại và kiểm tra trình bày. Đây là trạng thái nội dung cục bộ, chưa xác nhận triển khai công khai.
+| Chương | Mục lý thuyết | Ví dụ | Luyện tập | Thảo luận | Bài đánh số | Cầu nối | Lời giải gập |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 9 | 6 | 11 | 12 | 22 | 95 | 1 | 130 |
+| 10 | 7 | 13 | 12 | 30 | 97 | 1 | 140 |
+| 11 | 5 | 7 | 12 | 25 | 95 | 1 | 133 |
+| 17 | 7 | 15 | 12 | 28 | 119 | 1 | 160 |
+| 18 | 6 | 8 | 12 | 30 | 87 | 1 | 130 |
+| 19 | 8 | 7 | 12 | 24 | 66 | 1 | 103 |
+| 20 | 8 | 11 | 12 | 23 | 62 | 1 | 98 |
 
-Chương 18 có sáu mục, tám ví dụ, 12 bài luyện tập hướng dẫn, 30 câu thảo luận, 87 bài đánh số và một bài cầu nối. Tổng cộng 130 đề với lời giải gập, chia thành 24 nhóm. 52 ảnh PNG đối chiếu lại byte RGB với PDF, kèm hai hình lời giải bổ sung. Trình duyệt kiểm tra 156 trường hợp ở 320, 360, 375 và 1440 px.
+Tổng có47 mục, 82 ví dụ và894 đề cuối chương với lời giải gập, chia162 nhóm. Các ví dụ và câu tự kiểm xuất hiện trong mạch giảng vẫn ở Notes. Bài tập cuối chương có đề, hình tương ứng, tóm tắt, hướng đi giải thích cách chọn công thức và các bước giải.
 
-Chương 9 đã kiểm tra lại 14 chỗ ngắt dòng làm tách vế trái của một phương trình mới khỏi dấu quan hệ. Đồng thời, 12 công thức chỉ có một dòng được bỏ môi trường căn lề thừa. Sau sửa, 130 đề trong 23 nhóm được kiểm tra lại trên bốn kích thước màn hình, cùng Notes, sáu chủ đề, Slides và Cheatsheet. Tổng cộng 168 trường hợp trình duyệt đạt.
+Các bản nghiệm thu chi tiết ởchapter-09-review.json, chapter-10-review.json, chapter-11-review.json, chapter-17-review.json, chapter-18-review.json, chapter-19-review.json vàchapter-20-review.json trong thư mục cha. Những sai khác dữ kiện, cách đọc hình và giả thiết mô hình có hồ sơ riêng.
 
-Bổ sung bộ kiểm tra trước khi tạo nhóm bài tập để chặn kiểu ngắt dòng này và trường hợp xuống dòng ngay sau dấu bằng. Không dùng việc công thức vừa màn hình làm bằng chứng duy nhất rằng bố cục đúng.
+Đã chạy kiểm tra cấu trúc từng chương và đo độ rộng toàn bộ công thức. Rà trình duyệt ở320,360,375,1440 px gồm Notes, các chủ đề, Slides, Cheatsheet và nhóm bài tập. Chương17 và20 có thêm phép kiểm HTML nhóm xuất bản trong bộ xem thử tĩnh dùng CSS và phông chữ dự án. Phép kiểm bổ sung đó không thay cho việc kiểm chứng vật lý hoặc kiểm lại toàn bộ điều hướngVue.
 
-## Chương 19 đang rà
+Bộ kiểm thử dự án146 ca, công cụ bài giảng39 ca và tính năng112 ca đã đạt sau khi tích hợp các cập nhật giao diện từmain. Kết quả cuối trước push cần ghi ở hồ sơ xuất bản của đợt này. Không có build toàn cục nào chạy trên máy người dùng.
 
-Đã nhận đủ 15 tệp thô, gồm tám mục lý thuyết, lời mở, tổng kết và các tệp bài tập. Việc có đủ tệp hoặc đủ mã bài không đồng nghĩa với hoàn tất nghiệm thu.
+Hai deploy giao diện cũ39910661772 và39908565361 thất bại ở kiểm tra mã màu. Đã sửa13 dòng bằng biến thiết kế và push riêng commit40a8a0f5. Lượt39922770906 đang được theo dõi. Không sửa lịch sử để biến các lượt cũ thành thành công.
 
-Đã sửa các dấu xuống dòng viết thành ký tự khiến 31 tiêu đề không được nhận diện. Đã phục hồi đoạn đọc và đầy đủ lựa chọn cho 19.63–19.66. Bài 19.66 phải cộng áp suất khí quyển vào áp suất đo, nên kết quả khoảng 0,211 m³, chọn (a). Bản soạn trước chọn (b) không đúng.
+Dọn tệp đã qua một tác vụAntigravity riêng. Hai hồ sơ cũ được chuyển vàoarchive, công cụ đo công thức được lưu chính thức ởscripts/verification/measure-physics-math.mjs, hai verifier bỏ phụ thuộc đường dẫn worktree riêng. Tư liệu nguồn, ảnh, lời giải, công cụ tái lập và bằng chứng rà soát đều được giữ.
 
-Đã sửa việc đọc mốc áp suất tại điểm c trong Hình P19.38. Áp suất ở a và b là 8,0 × 10⁵ Pa, không phải 2,0 × 10⁵ Pa. Đã tính lại nhiệt độ, nhiệt lượng và độ biến thiên nội năng tương ứng. Các sửa chữa này là lỗi biên soạn, không quy cho tài liệu nguồn.
-
-Đã sửa tọa độ đọc từ Hình E19.4. Việc dời cả bốn đỉnh không làm đổi diện tích nhưng đã làm sai số mol cực đại. Dùng tọa độ thật cho số mol cực đại khoảng 0,0590 mol. Lời giải diện tích được trình bày lại bằng các tích chéo, không ngắt giữa các số hạng.
-
-Đã thêm tám đồ thị lời giải cho 19.1, 19.17–19.19, 19.29, 19.52, 19.60 và 19.62. Mỗi đồ thị được tạo bằng Python, có dữ kiện hoặc giả thiết biểu diễn rõ ràng. Giữ riêng các ảnh trích từ PDF. 18 ảnh cuối chương so khớp lại RGB, đồng thời giảm chú giải xuống đúng chữ tiếng Anh thực sự xuất hiện.
-
-Lý thuyết, phần C và phần D đã qua kiểm tra độ rộng nghiêm ngặt trong lượt gần nhất. Phần E vẫn còn 103 khối hiển thị và 50 biểu thức nội dòng vượt ngưỡng rà chặt hoặc cần xem lại cách hiển thị. Chương 19 vẫn là bản nháp, cần rà từng dữ kiện, đủ ý hỏi, các bước giải, hình và bố cục trước khi nghiệm thu.
-
-## Các phần còn lại
-
-Chương 10, 11, 17 và 20 vẫn có nội dung hoặc bài tập cần hoàn thiện. Không thay đổi trạng thái thành hoàn tất chỉ dựa trên báo cáo của tác vụ Antigravity.
-
-Các kết quả công cụ Antigravity không tìm thấy sau khi cầu nối khởi động lại đã được bảo toàn và kiểm tra ranh giới tệp. Tác vụ cuối của phần E chương 11 báo hết tín dụng, RESOURCE_EXHAUSTED 429, mã thoát 3. Mọi tác vụ đã dùng hết ba lượt được dừng đúng giới hạn và giữ worktree, không mở lượt thứ tư dưới tên mới.
-
-## Kiểm tra dự án
-
-146 kiểm thử dự án, 108 kiểm thử tính năng và 39 kiểm thử công cụ bài giảng đạt. Kiểm tra mô hình nội dung, ranh giới kiến trúc và các hộp lời giải đạt. Ba thẻ ôn tập được đăng ký cho chương 2 đã có trạng thái sẵn sàng, để bổ sung liên kết Slides còn thiếu khi môn Vật lý 1 bắt đầu có bộ thẻ ôn tập.
-
-Không chạy build toàn cục tại máy người dùng. Máy chủ xem thử phục vụ kiểm tra đã được dừng sau khi dùng. Chưa commit hoặc push các thay đổi của đợt biên tập này. Nhánh từ xa có cập nhật ở học phần khác, cần tích hợp cẩn thận trước khi xuất bản.
+Báo cáo củaAntigravity là đầu vào thẩm định. Các kết luận sai về hình10.1, đường dẫn ảnh và dữ kiện20.44 đã được đối chiếu lại, không áp dụng máy móc. Lỗi đọc hình11.10 được xác nhận và sửa. Không cam kết một phần trăm độ chính xác tuyệt đối.
