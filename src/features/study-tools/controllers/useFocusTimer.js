@@ -1,5 +1,5 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { readStored, writeStored } from '../../../core/storage/index.js'
+import { getStorage, readStored, writeStored } from '../../../core/storage/index.js'
 import {
   formatTimerDisplay,
   restoreTimerState,
@@ -74,25 +74,34 @@ export function useFocusTimer() {
     return true
   }
 
-  onMounted(() => {
-    const state = readStored('studyhub_focus', null)
-    if (state) {
-      const restored = restoreTimerState(state)
-      minutes.value = restored.minutes
-      remaining.value = restored.remaining
-      sessions.value = restored.sessions
-      deadline = restored.deadline
-      running.value = restored.running
-      finished.value = restored.finished
-      if (restored.finished) {
-        save()
-      }
+  function load() {
+    const restored = restoreTimerState(readStored('studyhub_focus', null))
+    minutes.value = restored.minutes
+    remaining.value = restored.remaining
+    sessions.value = restored.sessions
+    deadline = restored.deadline
+    running.value = restored.running
+    finished.value = restored.finished
+    if (restored.finished) {
+      save()
     }
+  }
+
+  function handleStorage(event) {
+    if (event.storageArea && event.storageArea !== getStorage()) return
+    if (event.key === 'studyhub_focus' || event.key === null) load()
+  }
+
+  onMounted(() => {
+    load()
+    window.addEventListener('storage', handleStorage)
     interval = setInterval(tick, 250)
   })
 
   onUnmounted(() => {
-    save()
+    // Every state transition is already saved. Saving here could overwrite a
+    // newer session from another tab before its storage event is delivered.
+    window.removeEventListener('storage', handleStorage)
     if (interval) {
       clearInterval(interval)
     }

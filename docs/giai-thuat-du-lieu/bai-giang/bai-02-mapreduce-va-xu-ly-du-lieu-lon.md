@@ -5,6 +5,7 @@ section: lecture
 title: "MapReduce & xử lý dữ liệu lớn"
 prerequisites: ["khoa-gia-tri","phan-tan","ket-hop","ma-tran"]
 lessonStatus: ready
+description: "Mô hình MapReduce, các phép xử lý theo khóa, chi phí truyền dữ liệu và thực hành Hadoop."
 ---
 
 

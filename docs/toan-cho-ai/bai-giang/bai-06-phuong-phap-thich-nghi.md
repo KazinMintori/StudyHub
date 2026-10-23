@@ -268,11 +268,11 @@ Hãy tính toán các trạng thái $m_1, v_1, \widehat m_1, \widehat v_1$ và x
 - $v_1 = (1 - \beta_2) g_1^2 = 0.001(9) = 0.009$.
 - Hiệu chỉnh chệch:
   $$
-\begin{aligned}
-\widehat m_1 &= \frac{m_1}{1 - \beta_1^1} = \frac{-0.3}{0.1} = -3. \\
-\widehat v_1 &= \frac{v_1}{1 - \beta_2^1} = \frac{0.009}{0.001} = 9.
-\end{aligned}
-$$
+  \begin{aligned}
+  \widehat m_1 &= \frac{m_1}{1 - \beta_1^1} = \frac{-0.3}{0.1} = -3. \\
+  \widehat v_1 &= \frac{v_1}{1 - \beta_2^1} = \frac{0.009}{0.001} = 9.
+  \end{aligned}
+  $$
 - Bước cập nhật:
   $$\Delta\theta_1 = -\eta \frac{\widehat m_1}{\sqrt{\widehat v_1} + \varepsilon} \approx -0.1 \cdot \frac{-3}{\sqrt{9}} = -0.1 \cdot \frac{-3}{3} = +0.1 > 0.$$
 Dấu của gradient âm được lưu giữ hoàn hảo trong $m_1$, giúp tham số di chuyển theo chiều dương để hạ thấp hàm mất mát.
@@ -325,11 +325,11 @@ với $\beta_1 = 0{,}9$, $\beta_2 = 0{,}999$.
 2. **Kỳ vọng toán học và cơ chế hiệu chỉnh**:
    Lấy kỳ vọng toán học hai vế với giả thiết $\mathbb{E}[g_i] = \mu$:
    $$
-\begin{aligned}
-\mathbb{E}[m_t] &= (1 - \beta_1) \sum_{i=1}^t \beta_1^{t - i} \mathbb{E}[g_i] \\
-&= (1 - \beta_1) \mu \sum_{i=1}^t \beta_1^{t - i}.
-\end{aligned}
-$$
+   \begin{aligned}
+   \mathbb{E}[m_t] &= (1 - \beta_1) \sum_{i=1}^t \beta_1^{t - i} \mathbb{E}[g_i] \\
+   &= (1 - \beta_1) \mu \sum_{i=1}^t \beta_1^{t - i}.
+   \end{aligned}
+   $$
    Tổng cấp số nhân với công bội $\beta_1$:
    $$
    \sum_{i=1}^t \beta_1^{t - i} = 1 + \beta_1 + \beta_1^2 + \dots + \beta_1^{t-1} = \frac{1 - \beta_1^t}{1 - \beta_1}.
@@ -393,11 +393,11 @@ Xét bài toán tối ưu với một tham số có gradient không đổi tại
 2. **Động lực học của RMSProp**:
    Khai triển đệ quy với $g_i^2 = c^2$:
    $$
-\begin{aligned}
-v_t &= (1 - \beta) c^2 \sum_{i=1}^t \beta^{t - i} \\
-&= (1 - \beta) c^2 \left(\frac{1 - \beta^t}{1 - \beta}\right) = (1 - \beta^t) c^2.
-\end{aligned}
-$$
+   \begin{aligned}
+   v_t &= (1 - \beta) c^2 \sum_{i=1}^t \beta^{t - i} \\
+   &= (1 - \beta) c^2 \left(\frac{1 - \beta^t}{1 - \beta}\right) = (1 - \beta^t) c^2.
+   \end{aligned}
+   $$
    Khi $t \to \infty$, vì $\beta \in (0, 1)$, số hạng $\beta^t \to 0$. Do đó:
    $$
    \lim_{t \to \infty} v_t = c^2.

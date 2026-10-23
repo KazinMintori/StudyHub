@@ -5,6 +5,7 @@ section: lecture
 title: "Phân tích độ phức tạp"
 prerequisites: ["do-phuc-tap","quy-nap"]
 lessonStatus: ready
+description: "Phân tích thời gian và bộ nhớ của thuật toán bằng ký hiệu Big-O, các tốc độ tăng trưởng và ví dụ vòng lặp."
 ---
 
 

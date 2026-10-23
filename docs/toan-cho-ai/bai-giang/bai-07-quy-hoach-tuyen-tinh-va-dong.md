@@ -287,7 +287,7 @@ Bộ nghiệm thế năng của bài toán quy hoạch tuyến tính trùng kh�
 
 ---
 
-## 9. Hệ thống Bài tập Tự luyện Chuyên sâu
+## 9. Hệ thống Bài tập Tự luyện Chuyên sâu {#bai-tap-tu-luyen}
 
 ::: exercise 1. Chuyển đổi bài toán xấp xỉ chuẩn L1 và chuẩn cực đại L-infinity sang Quy hoạch tuyến tính
 Cho hệ phương trình dữ liệu với 3 quan sát và 2 tham số:

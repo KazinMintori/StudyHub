@@ -6,7 +6,7 @@ Website **UETệ** được xây dựng nhằm mục đích giúp bạn và bạ
 
 ## Các phần trong mỗi bài giảng
 
-- **Notes:** Giải thích chi tiết, ví dụ và minh họa chạy bằng code. Các thuật ngữ có gạch chân chấm dẫn tới Wiki. Rê chuột hoặc dùng Tab để xem giải thích nhanh, nhấn để đọc bài viết đầy đủ.
+- **Notes:** Giải thích chi tiết, ví dụ và minh họa chạy bằng code. Rê chuột hoặc dùng Tab trên thuật ngữ có gạch chân chấm để xem ghi chú nhanh. Nhấn thuật ngữ để ghim ghi chú, rồi chọn “Đọc bài Wiki đầy đủ” trong thẻ để mở bài viết.
 - **Bài tập:** Đề bài và lời giải chi tiết để bạn tự luyện.
 - **Cheatsheet:** Định nghĩa, tính chất và công thức tra cứu nhanh.
 - **Kiến thức nền:** Nền tảng riêng của bài đang học, gồm định nghĩa, ví dụ và câu hỏi tự kiểm tra.
@@ -17,16 +17,16 @@ Từ trang môn học, chọn một bài giảng. Các phần nằm trong cùng 
 
 Mở [Wiki](/wiki/) để tìm một khái niệm. Mỗi thuật ngữ có bài viết riêng, gồm giải thích kỹ thuật, ví dụ, câu hỏi tự kiểm tra và các liên kết sang thuật ngữ khác. Có thể đi từ Gradient sang Đạo hàm riêng, rồi Đạo hàm hoặc Vector mà vẫn ở trong Wiki. Cuối trang có danh sách bài giảng dùng khái niệm đó để quay lại việc học.
 
-Các bài “đang biên soạn” mới là khung nội dung. Tìm kiếm toàn trang hỗ trợ cả bài giảng và thuật ngữ nền tảng.
+Các bài “đang biên soạn” mới là khung nội dung. Dùng ô “Tìm học phần” trên trang chủ để lọc môn học, hoặc ô tìm kiếm trong Wiki để tra thuật ngữ.
 
 ## Công cụ học tập cá nhân
 
 Mở [Góc học tập](/goc-hoc-tap) để dùng các công cụ:
 
-- **Flashcard:** chọn học phần, tự trả lời rồi mở lời giải. Đánh dấu “Đã nhớ” hoặc “Cần ôn lại” để theo dõi việc ôn tập.
-- **Ghi chú Markdown:** mỗi học phần có một sổ riêng, tự lưu khi viết. Dùng “Xem trước” để đọc và “Tải .md” để sao lưu.
-- **Mô phỏng điện trường:** đặt điện tích dương hoặc âm để quan sát hướng điện trường tổng hợp. Các nút thêm và xóa cũng dùng được bằng bàn phím.
-- **Pomodoro:** chọn 25 hoặc 50 phút tập trung, 5 phút nghỉ. Đồng hồ giữ thời gian khi chuyển trang hoặc tải lại.
+- **Flashcard:** Chọn học phần, tự trả lời rồi mở lời giải. Đánh dấu “Đã nhớ” hoặc “Cần ôn lại” để theo dõi việc ôn tập.
+- **Ghi chú Markdown:** Mỗi học phần có một sổ riêng, tự lưu khi viết. Dùng “Xem trước” để đọc và “Tải .md” để sao lưu.
+- **Mô phỏng điện trường:** Đặt điện tích dương hoặc âm để quan sát hướng điện trường tổng hợp. Các nút thêm và xóa cũng dùng được bằng bàn phím.
+- **Pomodoro:** Chọn 25 hoặc 50 phút tập trung, 5 phút nghỉ. Đồng hồ giữ thời gian khi chuyển trang hoặc tải lại.
 
 Ghi chú được lưu cục bộ trên trình duyệt hiện tại, chưa đồng bộ giữa các thiết bị. Hãy tải ghi chú trước khi xóa dữ liệu trình duyệt.
 

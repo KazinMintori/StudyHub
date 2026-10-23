@@ -5,6 +5,7 @@ section: lecture
 title: "Thuật toán tìm kiếm"
 prerequisites: ["mang","do-phuc-tap"]
 lessonStatus: ready
+description: "Tìm kiếm tuyến tính, tìm kiếm nhị phân và các điều kiện để lựa chọn, cài đặt thuật toán tìm kiếm."
 ---
 
 

@@ -16,7 +16,7 @@ const total = computed(() => groups.value.reduce((sum, group) => sum + group.ite
 </script>
 
 <template>
-  <div v-if="lesson && groups.length" class="topic-map">
+  <div v-if="lesson && groups.length" class="topic-map" :class="{ 'topic-map-framed': frontmatter.course === 'triet-hoc-mac-lenin' }">
     <p v-if="group < 0 && showReadingTime" class="topic-map-meta">{{ numbered.length }} chủ đề · tổng cộng khoảng {{ total }} phút đọc</p>
     <section v-for="item in groups" :key="item.title" class="topic-map-group">
       <h3 class="topic-map-group-title">{{ item.title }}</h3>

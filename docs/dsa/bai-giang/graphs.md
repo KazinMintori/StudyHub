@@ -5,6 +5,7 @@ section: lecture
 title: "Đồ thị & thuật toán duyệt"
 prerequisites: ["do-thi","hang-doi","ngan-xep"]
 lessonStatus: ready
+description: "Biểu diễn đồ thị bằng ma trận kề, danh sách kề và duyệt đồ thị bằng BFS, DFS."
 ---
 
 

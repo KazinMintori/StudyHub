@@ -118,12 +118,12 @@
   "examples": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 247,
+      "line": 266,
       "title": "Phân biệt điểm đạt yêu cầu, vượt ngưỡng và không khả thi"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 343,
+      "line": 362,
       "title": "Minh họa ràng buộc chặt và ràng buộc không chặt"
     },
     {
@@ -315,17 +315,17 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 476,
+      "line": 518,
       "title": "1. Bài toán cứu hộ khi bờ biển có chướng ngại vật"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 498,
+      "line": 547,
       "title": "2. Xác định giá trị tối ưu và tập tối ưu"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 512,
+      "line": 561,
       "title": "3. Quy chuẩn hóa về dạng chuẩn tắc"
     },
     {
@@ -762,52 +762,52 @@
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 218,
+      "line": 237,
       "title": "Xem phân tích chi tiết"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 415,
+      "line": 441,
       "title": "Xem phân tích chi tiết"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 424,
+      "line": 450,
       "title": "Xem phân tích chi tiết"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 432,
+      "line": 458,
       "title": "Xem phân tích chi tiết"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 440,
+      "line": 466,
       "title": "Xem phân tích chi tiết"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 447,
+      "line": 473,
       "title": "Xem phân tích chi tiết"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 455,
+      "line": 481,
       "title": "Xem phân tích chi tiết"
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 482,
+      "line": 524,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 505,
+      "line": 554,
       "title": ""
     },
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 518,
+      "line": 577,
       "title": ""
     },
     {
@@ -1636,7 +1636,7 @@
     {
       "reference": "../img/lec-01/epsilon-gan-toi-uu.svg",
       "declaredIn": "docs/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bai-toan-toi-uu.md",
-      "line": 250,
+      "line": 269,
       "source": "docs/toan-cho-ai/bai-giang/img/lec-01/epsilon-gan-toi-uu.svg"
     }
   ]

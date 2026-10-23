@@ -1,5 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import { courseCatalog } from '../../../content/catalog.mjs'
 
 import {
   canonicalLesson,
@@ -149,6 +150,35 @@ test('calculateProgressKey generates correct canonical lesson key', () => {
   assert.strictEqual(progressKey(null, null), '')
 })
 
+test('review bookmarks and progress keys point to the published review hub', () => {
+  const course = courseCatalog.find(course => course.id === 'toan-cho-ai')
+  const path = calculateProgressKey(course, course.review)
+  assert.equal(path, '/toan-cho-ai/on-luyen/tong-hop.html')
+  const home = useStudyHome({ catalog: courseCatalog, lastLesson: { value: { path } } })
+  assert.equal(home.activeResume.value?.lesson, course.review)
+  assert.equal(home.activeResumeLink.value, `${path}#notes`)
+})
+
+test('old review progress and saved headings migrate to the published hub without losing completion', () => {
+  const oldPath = '/toan-cho-ai/bai-giang/on-luyen.html'
+  const path = '/toan-cho-ai/on-luyen/tong-hop.html'
+  const saved = { path: oldPath, heading: 'on-luyen-1', headingTitle: 'Ôn luyện 1' }
+  const store = {
+    studyhub_completed: { [oldPath]: true, [path]: false },
+    studyhub_last_lesson: saved
+  }
+
+  // The home page may load before the storage migration runs.
+  assert.equal(resolveActiveResume(saved, courseCatalog).activeResumeLink, `${path}#on-luyen-1`)
+  migrateProgress({
+    read: (key, fallback) => store[key] ?? fallback,
+    write: (key, value) => { store[key] = value }
+  })
+  assert.deepEqual(store.studyhub_completed, { [path]: true })
+  assert.deepEqual(store.studyhub_last_lesson, { ...saved, path })
+  assert.equal(resolveActiveResume(store.studyhub_last_lesson, courseCatalog).activeResumeLink, `${path}#on-luyen-1`)
+})
+
 // 3. Lesson Labels
 test('getLessonChapter uses mathAiChapters mapping for toan-cho-ai', () => {
   const course = mockCourses[0]
@@ -216,6 +246,59 @@ test('resolveResumeLesson ignores non-ready draft lessons', () => {
 test('resolveResumeLesson returns null for null or missing path', () => {
   assert.strictEqual(resolveResumeLesson(null, mockCourses), null)
   assert.strictEqual(resolveResumeLesson({}, mockCourses), null)
+})
+
+test('the home page resumes the actual topic URL instead of falling back to another course', () => {
+  const path = '/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.html'
+  const home = useStudyHome({
+    catalog: courseCatalog,
+    lastLesson: { value: { path, heading: 'giai-tich-ma-tran', headingTitle: 'Giải tích ma trận' } }
+  })
+
+  assert.equal(home.resume.value?.course.id, 'toan-cho-ai')
+  assert.equal(home.resume.value?.lesson.slug, 'bai-00-on-tap-nen-tang')
+  assert.equal(home.activeResumeLink.value, `${path}#giai-tich-ma-tran`)
+  assert.equal(home.resume.value?.headingTitle, 'Giải tích ma trận')
+})
+
+test('resume recognizes the review hub and its own topics outside course.lessons', () => {
+  for (const path of [
+    '/toan-cho-ai/on-luyen/tong-hop.html',
+    '/toan-cho-ai/on-luyen/gradient-backtracking-newton.html'
+  ]) {
+    const active = resolveActiveResume({ path }, courseCatalog)
+    assert.equal(active.resume?.course.id, 'toan-cho-ai')
+    assert.equal(active.resume?.lesson.slug, 'on-luyen')
+    assert.equal(active.defaultStarter, null)
+    assert.equal(active.activeResumeLink, `${path}#notes`)
+  }
+})
+
+test('resume recognizes philosophy topics and trailing-slash topic URLs', () => {
+  const base = '/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/nguon-goc-triet-hoc'
+  for (const path of [`${base}.html`, `${base}/`]) {
+    const resume = resolveResumeLesson({ path }, courseCatalog)
+    assert.equal(resume?.course.id, 'triet-hoc-mac-lenin')
+    assert.equal(resume?.lesson.slug, 'chuong-1-triet-hoc-va-vai-tro')
+    assert.equal(resume?.path, path)
+  }
+})
+
+test('resume rejects unlisted topics, unknown review routes and malformed stored paths', () => {
+  for (const path of [
+    '/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/khong-ton-tai.html',
+    '/toan-cho-ai/on-luyen/khong-ton-tai.html',
+    123, {}, [], false
+  ]) {
+    assert.equal(resolveResumeLesson({ path }, courseCatalog), null)
+  }
+})
+
+test('resume does not make a draft lesson readable just because it has topics', () => {
+  const catalog = [{ id: 'draft-course', lessons: [{
+    slug: 'draft', status: 'draft', topics: [{ slug: 'topic' }]
+  }] }]
+  assert.equal(resolveResumeLesson({ path: '/draft-course/bai-giang/draft/topic.html' }, catalog), null)
 })
 
 test('resolveResumeLink builds hash anchor correctly', () => {

@@ -12,6 +12,7 @@ import { mathTextPlugin } from '../../scripts/math-text-plugin.mjs'
 import { generateFontPreloads } from '../../scripts/build/font-preloads.mjs'
 import { liteCatalogPlugin } from '../../scripts/build/lite-catalog-plugin.mjs'
 import { dropUnusedPreloads } from '../../scripts/build/page-preloads.mjs'
+import { physicsExercisesDevPlugin } from '../../scripts/build/physics-exercises-dev.mjs'
 
 const tokenSource = readFileSync(new URL('./theme/tokens.css', import.meta.url), 'utf8')
 const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`))[1].trim()
@@ -58,7 +59,7 @@ export default withMermaid(defineConfig({
         maxParallelFileOps: 2
       }
     },
-    plugins:[liteCatalogPlugin(),mathTextPlugin(),{name:'ensure-dist-chunks-dir',apply:'build',generateBundle(outputOptions){if(outputOptions.dir){mkdirSync(resolve(outputOptions.dir,'assets/chunks'),{recursive:true})}}}],
+    plugins:[physicsExercisesDevPlugin({base,root:fileURLToPath(new URL('../../',import.meta.url))}),liteCatalogPlugin(),mathTextPlugin(),{name:'ensure-dist-chunks-dir',apply:'build',generateBundle(outputOptions){if(outputOptions.dir){mkdirSync(resolve(outputOptions.dir,'assets/chunks'),{recursive:true})}}}],
     resolve:{alias:{'vitepress-plugin-mermaid/Mermaid.vue':fileURLToPath(new URL('../../src/core/diagrams/components/StudyMermaid.vue',import.meta.url))}},
     optimizeDeps:{include:['mermaid','fastdom','fastdom/extensions/fastdom-promised.js']}
   },

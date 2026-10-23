@@ -5,6 +5,7 @@ section: lecture
 title: "Cây & cây nhị phân"
 prerequisites: ["cay","con-tro","de-quy"]
 lessonStatus: ready
+description: "Cây nhị phân tìm kiếm, các phép duyệt cây và thao tác tìm kiếm, chèn, xóa trên cấu trúc cây."
 ---
 
 

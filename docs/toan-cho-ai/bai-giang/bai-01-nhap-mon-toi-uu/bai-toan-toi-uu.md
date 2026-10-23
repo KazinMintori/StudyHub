@@ -47,15 +47,24 @@ Chọn hệ trục tọa độ với trục hoành $Ox$ trùng với đường b
 
 Giả sử trong mỗi môi trường, người cứu hộ chuyển động theo đường thẳng với vận tốc không đổi. Khi đó, toàn bộ lộ trình được xác định duy nhất bởi hoành độ $x$ của vị trí tiếp nước $P(x, 0)$. 
 
-Tổng thời gian di chuyển là một hàm số theo biến $x$:
+Với $0 \le x \le 60$, ký hiệu hai quãng đường chạy và bơi lần lượt là:
 
 $$
-T(x) = \frac{\sqrt{40^2 + x^2}}{5} + \frac{\sqrt{30^2 + (60 - x)^2}}{1.5}, \qquad 0 \le x \le 60.
+\begin{aligned}
+d_1(x) &= \sqrt{40^2 + x^2}, \\
+d_2(x) &= \sqrt{30^2 + (60 - x)^2}.
+\end{aligned}
+$$
+
+Tổng thời gian di chuyển là:
+
+$$
+T(x) = \frac{d_1(x)}{5} + \frac{d_2(x)}{1.5}.
 $$
 
 Trong đó:
-- Số hạng thứ nhất $\frac{\sqrt{40^2 + x^2}}{5} = \frac{|AP|}{v_1}$ là thời gian chạy trên cát từ $A$ tới $P$.
-- Số hạng thứ hai $\frac{\sqrt{30^2 + (60 - x)^2}}{1.5} = \frac{|PB|}{v_2}$ là thời gian bơi dưới nước từ $P$ tới $B$.
+- Số hạng thứ nhất $d_1(x)/5 = |AP|/v_1$ là thời gian chạy trên cát từ $A$ tới $P$.
+- Số hạng thứ hai $d_2(x)/1.5 = |PB|/v_2$ là thời gian bơi dưới nước từ $P$ tới $B$.
 
 Khi $x$ tăng lên, quãng đường chạy trên cát dài thêm nhưng quãng đường bơi dưới nước ngắn lại. Hai số hạng tạo ra một lực giằng co đối nghịch theo biến $x$, và nghiệm tối ưu chính là điểm cân bằng lý tưởng của cuộc giằng co này.
 
@@ -86,17 +95,17 @@ Một phương án chỉ được khẳng định chắc chắn là **tối ưu 
 Đạo hàm bậc nhất của hàm thời gian $T(x)$ theo $x$ là:
 
 $$
-T'(x) = \frac{x}{5\sqrt{40^2 + x^2}} - \frac{60 - x}{1.5\sqrt{30^2 + (60 - x)^2}}.
+T'(x) = \frac{x}{5d_1(x)} - \frac{60 - x}{1.5d_2(x)}.
 $$
 
 Quan sát các tam giác vuông trong Hình 1.1:
 - Gọi $\theta_1$ là góc giữa đoạn chạy $AP$ và pháp tuyến của bờ biển: $\sin\theta_1 = \frac{x}{\sqrt{40^2 + x^2}}$.
 - Gọi $\theta_2$ là góc giữa đoạn bơi $PB$ và pháp tuyến của bờ biển: $\sin\theta_2 = \frac{60 - x}{\sqrt{30^2 + (60 - x)^2}}$.
 
-Khi triệt tiêu đạo hàm $T'(x) = 0$, ta thu được một phương trình đẹp đẽ:
+Với vận tốc chạy $v_1=5$ và vận tốc bơi $v_2=1.5$ đã chọn, điều kiện $T'(x) = 0$ trở thành:
 
 $$
-\frac{\sin\theta_1}{5} = \frac{\sin\theta_2}{1.5} \iff \frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}.
+\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}.
 $$
 
 Biểu thức này chính là dạng toán học kinh điển của [Định luật khúc xạ Snell](/wiki/dinh-luat-snell.md) trong quang học. Trong hiện tượng khúc xạ ánh sáng, tia sáng truyền giữa hai môi trường trong suốt với vận tốc truyền sóng khác nhau. Theo **Nguyên lý thời gian cực tiểu của Fermat**, tia sáng luôn tự động chọn đường đi sao cho thời gian truyền là nhỏ nhất. Tỉ số vận tốc chạy và bơi $5 / 1.5$ trong bài toán cứu hộ đóng vai trò hoàn toàn tương tự tỉ số vận tốc ánh sáng giữa hai môi trường.
@@ -173,9 +182,19 @@ Trong học máy, ranh giới này biến chuyển linh hoạt theo ngữ cảnh
 - Trong **pha huấn luyện (training phase)**: Vector trọng số mô hình $w$ là biến quyết định cần tối ưu, còn tập dữ liệu huấn luyện đóng vai trò là tham số cố định.
 - Trong **pha suy luận (inference phase)**: Bộ trọng số $w$ đã được đóng băng cố định thành tham số, và vector đầu vào $x$ là dữ liệu mới cần xử lý.
 
-Miền xác định của toàn bộ bài toán là giao của miền xác định của hàm mục tiêu và tất cả các hàm ràng buộc:
+Miền xác định của toàn bộ bài toán là giao của miền xác định của hàm mục tiêu và tất cả các hàm ràng buộc. Đặt:
+
 $$
-\mathcal{D} = \operatorname{dom} f_0 \cap \left( \bigcap_{i=1}^m \operatorname{dom} f_i \right) \cap \left( \bigcap_{i=1}^p \operatorname{dom} h_i \right).
+\begin{aligned}
+D_f &= \bigcap_{i=0}^m \operatorname{dom} f_i, \\
+D_h &= \bigcap_{i=1}^p \operatorname{dom} h_i.
+\end{aligned}
+$$
+
+Khi đó:
+
+$$
+\mathcal{D} = D_f \cap D_h.
 $$
 
 ---
@@ -290,9 +309,9 @@ Do đó $\ell = 28\text{ s}$ là một chặn dưới hợp lệ của $p^\star$
 
 Trong bài toán tối ưu tổng quát, ta cần phân biệt rạch ròi hai cấp độ tối ưu:
 - **Tối ưu toàn cục (Global optimum)**: Điểm $x^\star \in \mathcal{X}$ thỏa mãn $f_0(x^\star) \le f_0(z)$ với **mọi** $z \in \mathcal{X}$.
-- **Tối ưu cục bộ (Local optimum)**: Điểm $x \in \mathcal{X}$ chỉ tốt hơn các phương án khả thi nằm trong một lân cận bán kính $R > 0$ quanh nó:
+- **Tối ưu cục bộ (Local optimum)**: Có một bán kính $R > 0$ sao cho với mọi điểm $z \in \mathcal{X}$ thỏa mãn $\|z - x\|_2 \le R$, điểm $x \in \mathcal{X}$ thỏa mãn:
   $$
-  f_0(x) \le f_0(z) \qquad \forall z \in \mathcal{X}, \quad \|z - x\|_2 \le R.
+  f_0(x) \le f_0(z).
   $$
 
 Trong toàn bộ môn học này, khi dùng từ "nghiệm tối ưu" mà không kèm định ngữ, ta luôn mặc định hiểu là **nghiệm tối ưu toàn cục**.
@@ -341,9 +360,9 @@ Tại một điểm khả thi $x \in \mathcal{X}$:
 *Ý nghĩa hình học*: Ràng buộc chặt là ràng buộc mà điểm nghiệm đang chạm trực tiếp vào đường biên giới hạn của nó. Trong khi đó, ràng buộc không chặt vẫn còn một khoảng hở an toàn.
 
 ::: example Minh họa ràng buộc chặt và ràng buộc không chặt
-Xét bài toán tìm giá trị vô hướng $c$ khớp với ba số thực $1, 5, 6$:
+Xét bài toán tìm giá trị vô hướng $c$ khớp với ba số thực $1, 5, 6$. Tổng bình phương sai số gồm ba số hạng $(c-1)^2$, $(c-5)^2$ và $(c-6)^2$. Thu gọn tổng này cho bài toán:
 $$
-\min_c\ (c - 1)^2 + (c - 5)^2 + (c - 6)^2.
+\min_c\ (3c^2 - 24c + 62).
 $$
 - Khi chưa có ràng buộc: Đạo hàm $6c - 24 = 0 \implies c = 4$ (trung bình cộng), hàm mục tiêu đạt giá trị $14$.
 - Nếu bổ sung ràng buộc $c \le 3$: Điểm $c = 4$ không còn khả thi. Trên miền $c \le 3$, hàm mục tiêu nghịch biến nên nghiệm bị đẩy về biên $c^\star = 3$, giá trị mục tiêu tăng lên $17$. Ràng buộc $c \le 3$ **chặt** tại nghiệm và nó trực tiếp định hình nghiệm tối ưu.
@@ -386,9 +405,16 @@ $$
 
 Trong học máy, phép biến đổi này được áp dụng liên tục: Thay vì cực đại hóa hàm hợp lý của mô hình trên tập dữ liệu (Maximum Likelihood Estimation - MLE), người ta cực tiểu hóa hàm đối số âm log-likelihood (Negative Log-Likelihood - NLL):
 $$
-\max_\theta \prod_{i=1}^N P(y_i \mid x_i; \theta) \iff \min_\theta \sum_{i=1}^N -\log P(y_i \mid x_i; \theta).
+\max_\theta \prod_{i=1}^N P(y_i \mid x_i; \theta).
 $$
-Phép lấy logarit biến tích thành tổng và bảo toàn nguyên vẹn vị trí cực trị nhờ tính đồng biến ngặt của hàm $\log$.
+
+Khi các xác suất trong tích đều dương, lấy logarit rồi đổi dấu cho bài toán tương đương:
+
+$$
+\min_\theta \sum_{i=1}^N -\log P(y_i \mid x_i; \theta).
+$$
+
+Phép lấy logarit biến tích thành tổng và giữ nguyên nghiệm nhờ tính đồng biến ngặt. Phép đổi dấu sau đó chuyển cực đại thành cực tiểu.
 
 ---
 
@@ -454,15 +480,31 @@ Xét bài toán $\min f_0(x) = \max\{0, |x| - 1\}$ trên $\mathbb{R}$. Hàm số
 
 <details><summary>Xem phân tích chi tiết</summary>
 
-Áp dụng bất đẳng thức cho từng số hạng của $T(x)$ với hai góc $\varphi_1, \varphi_2 \in [0, \pi/2]$:
+Chọn hai góc $\varphi_1, \varphi_2 \in [0, \pi/2]$ và đặt các hệ số:
+
 $$
-T(x) \ge \frac{40\cos\varphi_1 + x\sin\varphi_1}{5} + \frac{30\cos\varphi_2 + (60 - x)\sin\varphi_2}{1.5}.
+\begin{aligned}
+a_1 &= 8\cos\varphi_1, & b_1 &= \frac{\sin\varphi_1}{5}, \\
+a_2 &= 20\cos\varphi_2, & b_2 &= \frac{\sin\varphi_2}{1.5}.
+\end{aligned}
 $$
-Gom các số hạng chứa biến $x$:
+
+Áp dụng Cauchy–Schwarz cho từng quãng đường $d_1(x)$ và $d_2(x)$ đã định nghĩa ở Mục 1:
+
 $$
-T(x) \ge 8\cos\varphi_1 + 20\cos\varphi_2 + 40\sin\varphi_2 + x\left( \frac{\sin\varphi_1}{5} - \frac{\sin\varphi_2}{1.5} \right).
+\begin{aligned}
+\frac{d_1(x)}{5} &\ge a_1+b_1x, \\
+\frac{d_2(x)}{1.5} &\ge a_2+b_2(60-x).
+\end{aligned}
 $$
-Để cận dưới hoàn toàn độc lập với biến $x$ (đúng với mọi vị trí tiếp nước), hệ số của $x$ bắt buộc phải triệt tiêu:
+
+Đặt $a=a_1+a_2+60b_2$ và $b=b_1-b_2$. Cộng hai bất đẳng thức rồi gom các số hạng chứa $x$ cho cận dưới affine:
+
+$$
+T(x) \ge a+bx.
+$$
+
+Để cận dưới này không phụ thuộc vào vị trí tiếp nước, ta chọn $b=0$, tức là:
 $$
 \frac{\sin\varphi_1}{5} = \frac{\sin\varphi_2}{1.5}.
 $$
@@ -482,14 +524,21 @@ Trở lại bài toán người cứu hộ ở Mục 1, nhưng giả sử đoạ
 ::: solution
 1. Bài toán dạng chuẩn tắc:
    $$
-   \min T(x) \qquad \text{satisfying} \quad -x \le 0, \quad x - 45 \le 0.
+   \begin{aligned}
+   &\min_x T(x) \\
+   &-x \le 0, \\
+   &x - 45 \le 0.
+   \end{aligned}
    $$
    (Ràng buộc cũ $x \le 60$ trở thành ràng buộc thừa vì đã có $x \le 45$).
 2. Nghiệm tối ưu không ràng buộc $x \approx 52.6\text{ m}$ bị vi phạm vì nằm ngoài miền khả thi mới $[0, 45]$.
    Tính đạo hàm tại biên: Giá trị $T'(45) \approx -0.149 < 0$. Vì đạo hàm cấp hai $T''(x) > 0$ trên toàn miền, $T'(x)$ là hàm tăng ngặt. Do đó $T'(x) < 0$ với mọi $x \in [0, 45]$. Hàm thời gian $T(x)$ nghịch biến trên toàn bộ miền khả thi $[0, 45]$.
    Nghiệm tối ưu mới bắt buộc nằm tại mút biên phải:
    $$
-   x^\star = 45\text{ m}, \qquad T(45) \approx 34.40\text{ s}.
+   \begin{aligned}
+   &x^\star = 45\text{ m}, \\
+   &T(45) \approx 34.40\text{ s}.
+   \end{aligned}
    $$
    Ràng buộc $x \le 45$ chặt tại nghiệm.
 3. Tại nghiệm, $T'(45) \approx -0.149 \ne 0$. Đạo hàm không triệt tiêu vì nghiệm nằm tại biên của miền khả thi, nơi người cứu hộ muốn tiếp tục dịch sang phải để bơi ít hơn nhưng rào cản bãi đá đã chặn đứng chuyển động này. Phương trình $T'(x) = 0$ có nghiệm tại $x \approx 52.6\text{ m}$, hoàn toàn nằm ngoài miền khả thi!
@@ -512,18 +561,28 @@ Xác định miền khả thi, giá trị tối ưu $p^\star$ và tập tối ư
 ::: exercise 3. Quy chuẩn hóa về dạng chuẩn tắc
 Đưa bài toán tối ưu sau về dạng chuẩn tắc:
 $$
-\max_{x_1, x_2} 5x_1 + 4x_2 \qquad \text{satisfying} \quad x_1 + x_2 \le 6, \quad 2x_1 + x_2 \le 9, \quad x_1 \ge 0, \quad x_2 \ge 0.
+\max_{x_1, x_2} 5x_1 + 4x_2.
+$$
+
+Các ràng buộc là:
+
+$$
+\begin{aligned}
+x_1 + x_2 &\le 6, \\
+2x_1 + x_2 &\le 9, \\
+x_1, x_2 &\ge 0.
+\end{aligned}
 $$
 :::
 ::: solution
-Chuyển bài toán cực đại thành bài toán cực tiểu hàm đối số âm, chuyển các ràng buộc về dạng vế phải bằng 0:
+Viết $x=(x_1,x_2)$. Chuyển bài toán cực đại thành cực tiểu hàm đối số âm, rồi chuyển các ràng buộc về dạng vế phải bằng 0. Ta cần cực tiểu hóa $f_0(x)$ với các điều kiện $f_i(x)\le0$, trong đó $i=1,\dots,4$:
 $$
 \begin{aligned}
-&\text{minimize}\quad f_0(x_1, x_2) = -5x_1 - 4x_2\\
-&\text{subject to}\quad f_1(x_1, x_2) = x_1 + x_2 - 6 \le 0,\\
-&\phantom{\text{subject to}\quad } f_2(x_1, x_2) = 2x_1 + x_2 - 9 \le 0,\\
-&\phantom{\text{subject to}\quad } f_3(x_1, x_2) = -x_1 \le 0,\\
-&\phantom{\text{subject to}\quad } f_4(x_1, x_2) = -x_2 \le 0.
+f_0(x) &= -5x_1-4x_2, \\
+f_1(x) &= x_1+x_2-6, \\
+f_2(x) &= 2x_1+x_2-9, \\
+f_3(x) &= -x_1, \\
+f_4(x) &= -x_2.
 \end{aligned}
 $$
 Bài toán có 4 ràng buộc bất đẳng thức và 0 ràng buộc đẳng thức. Giá trị tối ưu của bài toán cực đại ban đầu bằng $-p^\star$ của bài toán chuẩn tắc. (Đây là một bài toán quy hoạch tuyến tính kinh điển với nghiệm tối ưu tại đỉnh $(x_1^\star, x_2^\star) = (3, 3)$ và giá trị cực đại bằng $27$).

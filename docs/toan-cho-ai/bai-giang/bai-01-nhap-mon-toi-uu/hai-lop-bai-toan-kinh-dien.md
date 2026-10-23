@@ -228,11 +228,11 @@ Mô hình chỉ có một tham số, nên $A = (1, 1, 1, 1)^T$ và $b = (1, 3, 4
 Với bốn số liệu $1, 3, 4, 12$, xét bài toán tìm hằng số $c$ theo hai tiêu chuẩn khác nhau:
 1. Cực tiểu hóa tổng sai số tuyệt đối theo chuẩn $\ell_1$:
    $$
-\begin{aligned}
-f(c) &= \sum_{i=1}^4 |c - b_i| \\
-&= |c - 1| + |c - 3| + |c - 4| + |c - 12|.
-\end{aligned}
-$$
+   \begin{aligned}
+   f(c) &= \sum_{i=1}^4 |c - b_i| \\
+   &= |c - 1| + |c - 3| + |c - 4| + |c - 12|.
+   \end{aligned}
+   $$
 2. Cực tiểu hóa sai số lớn nhất theo chuẩn $\ell_\infty$: $\max_{i=1,\dots,4} |c - b_i|$.
 
 Hãy tìm nghiệm tối ưu trong từng trường hợp và so sánh với nghiệm bình phương tối thiểu ở Bài 1.

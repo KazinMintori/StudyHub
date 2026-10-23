@@ -191,12 +191,12 @@ Xét biến ngẫu nhiên rời rạc $X$ nhận các giá trị trong tập $\{
    $$
    Các xác suất tối ưu:
    $$
-\begin{aligned}
-p_1^* &= \frac{1}{4{,}1951} \approx 0{,}2384, \\
-p_2^* &= \frac{1{,}3561}{4{,}1951} \approx 0{,}3233, \\
-p_3^* &= \frac{1{,}8390}{4{,}1951} \approx 0{,}4384.
-\end{aligned}
-$$
+   \begin{aligned}
+   p_1^* &= \frac{1}{4{,}1951} \approx 0{,}2384, \\
+   p_2^* &= \frac{1{,}3561}{4{,}1951} \approx 0{,}3233, \\
+   p_3^* &= \frac{1{,}8390}{4{,}1951} \approx 0{,}4384.
+   \end{aligned}
+   $$
    Kiểm tra: Tổng các xác suất là $p_1 + p_2 + p_3 \approx 1{,}0001 \approx 1$, và độ lệch kỳ vọng là $p_3 - p_1 = 0{,}2000$.
 :::
 

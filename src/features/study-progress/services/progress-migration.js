@@ -1,5 +1,6 @@
 import { findCourse as defaultFindCourse } from '../../../content/catalog.mjs'
 import { readStored, writeStored } from '../../../core/storage/local-storage.js'
+import { lecturePath } from '../../lecture/services/lecture-model.mjs'
 
 export function canonicalLesson(path, findCourse = defaultFindCourse) {
   if (typeof path !== 'string') return path
@@ -7,16 +8,17 @@ export function canonicalLesson(path, findCourse = defaultFindCourse) {
   if (!parts.length) return path
 
   const course = typeof findCourse === 'function' ? findCourse(parts[0]) : null
-  if (course && parts.length === 2 && course.lessons?.some(lesson => lesson.slug === parts[1])) {
-    return `/${course.id}/bai-giang/${parts[1]}.html`
+  const hasLesson = slug => course?.lessons?.some(lesson => lesson.slug === slug) || course?.review?.slug === slug
+  if (course && parts.length === 2 && hasLesson(parts[1])) {
+    return `${lecturePath(course.id, parts[1])}.html`
   }
   if (
     course &&
     ['notes', 'bai-giang'].includes(parts[1]) &&
     parts.length === 3 &&
-    course.lessons?.some(lesson => lesson.slug === parts[2])
+    hasLesson(parts[2])
   ) {
-    return `/${course.id}/bai-giang/${parts[2]}.html`
+    return `${lecturePath(course.id, parts[2])}.html`
   }
   return path
 }

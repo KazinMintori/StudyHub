@@ -80,6 +80,11 @@
   "solutions": [
     {
       "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
+      "line": 97,
+      "title": "Câu hỏi đào sâu: Tại điểm cực tiểu toàn cục $\\theta = 1$, nếu bước cập nhật bốc phải mẫu $b = 0$ với $\\eta = 0.1$, hàm mất mát toàn phần sẽ biến thiên ra sao?"
+    },
+    {
+      "source": "docs/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.md",
       "line": 285,
       "title": ""
     },

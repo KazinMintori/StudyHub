@@ -1,0 +1,24 @@
+name: Notify StudyHub maintainer of new issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  assign-maintainer:
+    if: github.repository == 'KazinMintori/StudyHub'
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Assign new issue to KazinMintori
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh api --method POST "repos/$GH_REPO/issues/$ISSUE_NUMBER/assignees" \
+            -f 'assignees[]=KazinMintori' \
+            --jq '.["assignees"] | map(.login) | if index("KazinMintori") then "Assigned to KazinMintori" else error("Maintainer assignment failed") end'

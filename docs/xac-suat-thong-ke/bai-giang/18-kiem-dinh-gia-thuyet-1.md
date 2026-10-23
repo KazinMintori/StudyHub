@@ -226,13 +226,13 @@ Trong mô phỏng vụ án Gilbert: Trong 500 lần rút, số lần đạt giá
 
 ---
 
-## Giải mã ba ngộ nhận tai hại về p-value
+## Phân biệt ba cách diễn giải p-value
 
-$p$-value được mệnh danh là công cụ được sử dụng nhiều nhất nhưng cũng bị hiểu sai và lạm dụng nhiều nhất trong toàn bộ lịch sử khoa học. Dưới đây là ba ngộ nhận nghiêm trọng nhất:
+$p$-value chỉ có ý nghĩa khi được đọc cùng giả thuyết không và cách lấy mẫu. Ba cách diễn giải dưới đây làm rõ những kết luận có thể rút ra từ đại lượng này.
 
 ### Ngộ nhận 1: Nhầm lẫn p-value với xác suất giả thuyết không là đúng
 
-Đây là lỗi tư duy phổ biến nhất:
+Hai cách diễn giải sau khác nhau về ý nghĩa:
 
 - Về mặt toán học: $p$-value là xác suất có điều kiện $P(\text{Extreme data} \mid H_0 \text{ is true})$.
 
