@@ -22,7 +22,7 @@ Thời lượng có hai lựa chọn nhanh 25 và 50 phút, đồng thời cho n
 | Công cụ trên điện thoại | Chỉ có nút mở, không bày đồng hồ và ô nháp ra trang học phần. |
 | Build toàn bộ | Chỉ chạy bằng GitHub Actions. |
 
-Kiểm chứng trước khi push: 148 kiểm thử dự án, 113 kiểm thử tính năng và 39 kiểm thử công cụ đạt. Kiểm tra mã màu và kiến trúc đạt. Kiểm tra khôi phục trang chủ ở năm độ rộng 320–1440 px đạt. Khung công cụ đạt 21 trường hợp trình duyệt, gồm nhập thời gian sai/đúng, tải lại, bắt đầu, tạm dừng, đặt lại, lưu ghi chú riêng từng trang, Escape, tiêu điểm và đóng khi bấm bên ngoài.
+Kiểm chứng trước khi push: 148 kiểm thử dự án, 113 kiểm thử tính năng và 39 kiểm thử công cụ đạt. Kiểm tra mã màu và kiến trúc đạt. Kiểm tra khôi phục trang chủ ở năm độ rộng 320–1440 px đạt. Khung công cụ đạt 22 trường hợp trình duyệt, gồm nhập thời gian sai/đúng, chọn lại thời lượng có sẵn, tải lại, bắt đầu, tạm dừng, đặt lại, lưu ghi chú riêng từng trang, Escape, tiêu điểm và đóng khi bấm bên ngoài. Bố cục điện thoại dọc và ngang cũng được kiểm ở cả giao diện sáng và tối.
 
 Phạm vi kiểm chứng không đồng nghĩa đã xem thủ công từng công thức và từng câu hỏi của toàn bộ website. Bài chủ đề Toán cho AI có công thức cũ tràn đã được sửa riêng, giữ các bước tính chi tiết. Khi mở mọi chứng minh, lời giải và tra cứu, trang đạt kiểm tra chiều rộng ở 320, 375 và 1440 px. Xem math-topic-layout-20261023.md. Không coi kết quả kiểm tra điều khiển là chứng nhận toàn bộ nội dung môn học.
 

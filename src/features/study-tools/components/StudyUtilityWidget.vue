@@ -24,6 +24,13 @@ function applyDuration() {
   customMinutes.value = String(minutes.value)
   durationError.value = ''
 }
+function selectPreset(value) {
+  if (running.value) return
+  if (selectMinutes(value)) {
+    customMinutes.value = String(value)
+    durationError.value = ''
+  }
+}
 const storageStatusText = computed(() => storageError.value
   ? 'Chưa lưu được. Bộ nhớ trình duyệt bị chặn hoặc đầy.'
   : hasNote.value ? 'Đã lưu trên trình duyệt này' : 'Ghi chú được lưu tự động trên trình duyệt này')
@@ -100,7 +107,7 @@ onUnmounted(() => {
             <div><h3 id="focus-tool-title">Hẹn giờ tập trung</h3><p>{{ finished ? 'Đã hoàn thành phiên học' : running ? 'Đang trong phiên học' : 'Dành một khoảng riêng để học' }}</p></div>
           </div>
           <div class="timer-presets" aria-label="Thời lượng phiên học">
-            <button v-for="duration in [25, 50]" :key="duration" type="button" :aria-pressed="minutes === duration" :disabled="running" @click="selectMinutes(duration)">{{ duration }} phút</button>
+            <button v-for="duration in [25, 50]" :key="duration" type="button" :aria-pressed="minutes === duration" :disabled="running" @click="selectPreset(duration)">{{ duration }} phút</button>
           </div>
           <form class="custom-timer-form" novalidate @submit.prevent="applyDuration">
             <label for="custom-focus-minutes">Thời gian tùy chọn (phút)</label>
