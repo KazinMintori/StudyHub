@@ -251,6 +251,10 @@ def verify_example_3_15():
     return True
 
 def verify_self_checks():
+    # Source Figure3.34 numerical walkthrough and the0.30c/0.90c illustration.
+    assert math.isclose(math.hypot(3.,1.),3.1622776602,abs_tol=1e-9)
+    assert math.isclose(math.degrees(math.atan(1/3)),18.43494882,abs_tol=1e-8)
+    assert math.isclose((.30+.90)/(1+.30*.90),.9448818898,abs_tol=1e-9)
     # Source3.1 compares average VECTOR velocity to finalinstantaneousvelocity.
     # It is(iii), straight motion with constant speed.
     # Source3.2 changes from slowing to speeding at crest: a_t=0, a_n downward7.

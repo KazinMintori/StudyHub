@@ -106,7 +106,7 @@ export const physics1RemainingChapter3Parent={
                 "formula": "$$\nv = \\sqrt{v_x^2 + v_y^2}\n$$"
               },
               {
-                "label": "Hướng vận tốc",
+                "label": "Hướng vận tốc khi thành phần ngang khác không",
                 "formula": "$$\n\\tan\\alpha = \\frac{v_y}{v_x}\n$$"
               }
             ],

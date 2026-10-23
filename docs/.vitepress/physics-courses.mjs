@@ -182,7 +182,9 @@ export const physics1Course = {
     "luc-phap-tuyen",
     "ma-sat-nghi",
     "ma-sat-truot",
-    "don-vi"
+    "don-vi",
+    "dao-ham",
+    "tich-phan"
   ],
   "status": "ready",
   "number": 4,

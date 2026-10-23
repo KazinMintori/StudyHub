@@ -8,6 +8,8 @@ Phạm vi: Trang in 100–128 của Young & Freedman, University Physics with Mo
 
 Phần bài tập có 12 bài luyện tập biến thể, 38 câu thảo luận, 60 bài đánh số và một bài cầu nối. Bài cầu nối giữ đủ chín bước hướng dẫn, kể cả trường hợp lực kéo 7,35 N. Tổng cộng 111 đề có 111 khối lời giải đóng sẵn, đầy đủ tóm tắt, hướng đi và lời giải. Chúng được chia thành 20 nhóm trong tab Bài tập. Các ví dụ và câu tự kiểm của phần giảng vẫn nằm ở Notes.
 
+Mức độ và các nhãn CP, CALC, DATA, BIO được đối chiếu trực tiếp từng tiêu đề bài gốc. Bài 4.31 giữ yêu cầu tra cứu, với dẫn liệu khối lượng bóng của Luật MLB 2019 và tốc độ tham khảo trong bảng thuật ngữ MLB. Quãng đường tay tăng tốc được nêu riêng là giả thiết ước lượng.
+
 Đã sửa các bản thảo đổi câu hỏi Q4.32, thiếu phép phân biệt tình huống ở Q4.9, thiếu phụ thuộc tốc độ trước va chạm ở Q4.27 và bỏ dữ kiện 0,80c ở Q4.38. Bài 4.18 dùng đúng microgam. Đồ thị bài 4.60 được đọc tại 0,4 s, không nhầm với giai đoạn cất chân. Các số ước lượng ở 4.20 và 4.31 được nêu là giả thiết, không gọi là thống kê thực nghiệm.
 
 Sai khác số học trong ví dụ 4.7 và đáp số bài 4.11 được ghi riêng ở chapter-04-source-errata.md. Trang học trình bày lời giải nhất quán, không đưa nhật ký kiểm chứng vào bài.

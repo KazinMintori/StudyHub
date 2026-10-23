@@ -11,7 +11,9 @@ export const physics1RemainingChapter4Parent={
     "luc-phap-tuyen",
     "ma-sat-nghi",
     "ma-sat-truot",
-    "don-vi"
+    "don-vi",
+    "dao-ham",
+    "tich-phan"
   ],
   "topics": [
     {

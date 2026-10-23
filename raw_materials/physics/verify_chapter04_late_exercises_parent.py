@@ -7,7 +7,10 @@ from math import sin,cos,radians,sqrt,hypot,isclose
 import json
 g=9.8
 out={}
-out['4.31']={'type':'Estimate','formula_force_N':'m*v^2/(2*d)','restriction':'Mass, speed and acceleration distance must be stated assumptions or sourced measurements. No unique exact force is given.'}
+out['4.31']={'type':'Estimate','formula_force_N':'m*v^2/(2*d)','mass_range_kg':[5*.028349523125,5.25*.028349523125],'reference_94mph_m_s':94*.44704,'chosen_mass_kg':.145,'chosen_speed_m_s':42.,'assumed_acceleration_distance_m':1.,'force_N':.145*42**2/2,'force_lb':(.145*42**2/2)/4.448221615260,'restriction':'Mass from MLB2019Rule3.01, representative speed from MLBglossary, acceleration distance explicitly assumed. No unique exact force is given.'}
+assert out['4.31']['mass_range_kg'][0]<.145<out['4.31']['mass_range_kg'][1]
+assert isclose(out['4.31']['force_N'],127.89)
+assert 28.7<out['4.31']['force_lb']<28.8
 gx=2*10/3.40**2
 out['4.32']={'planet_g_m_s2':gx,'weight_N':.100*gx}
 amax=75/5.60-g

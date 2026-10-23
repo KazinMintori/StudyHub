@@ -2,7 +2,9 @@
 
 ### 4.31: Ước lượng lực khi ném bóng chày
 
-Ước lượng lực trung bình mà một vận động viên bóng chày chuyên nghiệp tác dụng lên bóng khi ném bóng nhanh. Biểu diễn kết quả bằng pound lực. Liệt kê các đại lượng phải ước lượng và các giả thiết. Có thể tra cứu dữ liệu để lựa chọn các giá trị ước lượng.
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
+
+Ước lượng lực trung bình mà một vận động viên bóng chày chuyên nghiệp tác dụng lên bóng khi ném bóng nhanh. Biểu diễn kết quả bằng pound lực. Liệt kê các đại lượng phải ước lượng và các giả thiết. Tra cứu trên mạng để hỗ trợ lựa chọn các giá trị ước lượng.
 
 <details>
 <summary>Xem lời giải chi tiết</summary>
@@ -29,25 +31,29 @@ $$
 F=\frac{mv^2}{2d}.
 $$
 
-Để có một ước lượng cụ thể, giả sử $m=0{,}145\,\mathrm{kg}$, $v=40\,\mathrm{m/s}$ và $d=1{,}0\,\mathrm m$. Các giá trị này là lựa chọn ước lượng của lời giải, không phải dữ kiện đã cho.
+[Luật MLB 2019, mục 3.01](https://img.mlbstatic.com/mlb-images/image/upload/mlb/ub08blsefk8wkkd2oemz.pdf#page=17) quy định khối lượng bóng từ $5$ đến $5{,}25$ ounce, tương ứng khoảng $142$–$149\,\mathrm g$. Chọn $m=0{,}145\,\mathrm{kg}$ trong khoảng này.
+
+[MLB ghi tốc độ fastball bốn đường chỉ khoảng 94 mph](https://www.mlb.com/glossary/pitch-types/four-seam-fastball). Dùng $v\approx42\,\mathrm{m/s}$ và giả sử quãng đường tăng tốc $d=1{,}0\,\mathrm m$. Quãng đường này là giả thiết ước lượng, không phải một số đo được cung cấp trong đề.
 
 $$
 \begin{aligned}
-F&=\frac{(0{,}145)(40)^2}{2(1{,}0)}\\
-&\approx116\,\mathrm N.
+F&=\frac{(0{,}145)(42)^2}{2(1{,}0)}\\
+&\approx1{,}3\times10^2\,\mathrm N.
 \end{aligned}
 $$
 
 Dùng $1\,\mathrm{lb}\approx4{,}448\,\mathrm N$:
 
 $$
-F\approx26\,\mathrm{lb}.
+F\approx29\,\mathrm{lb}.
 $$
 
 Lực này là giá trị trung bình theo hướng ném trong mô hình. Lực tức thời của bàn tay biến thiên trong động tác. Ước lượng thay đổi theo bình phương tốc độ và tỷ lệ nghịch quãng đường tăng tốc, vì vậy cần nêu rõ giả thiết khi so sánh các kết quả.
 </details>
 
 ### 4.32: Trọng lượng trên hành tinh X
+
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
 
 Bạn vừa đặt chân tới hành tinh X. Một quả bóng khối lượng $100\,\mathrm g$ được thả từ trạng thái nghỉ ở độ cao $10{,}0\,\mathrm m$ và chạm đất sau $3{,}40\,\mathrm s$. Bỏ qua tác dụng của khí quyển. Quả bóng nặng bao nhiêu tại bề mặt hành tinh?
 
@@ -86,6 +92,8 @@ Khối lượng quả bóng vẫn là $0{,}100\,\mathrm{kg}$. Gia tốc trọng 
 </details>
 
 ### 4.33: Kéo gầu nước mà không làm đứt dây
+
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
 
 Một gầu nước khối lượng $5{,}60\,\mathrm{kg}$ được kéo thẳng đứng lên bằng dây có khối lượng không đáng kể. Dây chịu được lực căng lớn nhất $75{,}0\,\mathrm N$. Gầu bắt đầu từ trạng thái nghỉ. Thời gian ngắn nhất để nâng gầu lên $12{,}0\,\mathrm m$ mà không đứt dây là bao nhiêu?
 
@@ -131,6 +139,8 @@ Tại thời điểm đạt độ cao ấy, gầu vẫn đang đi lên. Nếu y�
 </details>
 
 ### 4.34: Hai khối có gia tốc khác nhau
+
+*Độ khó: Mức 2.*
 
 Khối $A$ nằm trên khối $B$ như Hình E4.26. Bàn không có ma sát, nhưng có ma sát giữa hai khối. Khối $B$ có khối lượng $6{,}00\,\mathrm{kg}$, khối $A$ có khối lượng $2{,}00\,\mathrm{kg}$. Khi kéo $B$ bằng lực ngang $12{,}0\,\mathrm N$, gia tốc của $B$ bằng $1{,}80\,\mathrm{m/s^2}$. Tìm gia tốc của $A$.
 
@@ -178,6 +188,8 @@ Hai gia tốc khác nhau, nên $A$ trượt tương đối so với $B$. Tính h
 </details>
 
 ### 4.35: Lực đẩy nhỏ nhất của em bé
+
+*Độ khó: Mức 2.*
 
 Hai người lớn và một em bé muốn đẩy xe theo chiều $+x$ trong Hình P4.35. Hai người lớn tác dụng các lực ngang $F_1=100\,\mathrm N$ và $F_2=140\,\mathrm N$ theo các hướng trên hình.
 
@@ -249,6 +261,8 @@ $$
 
 ### 4.36: Dừng ô tô trên chiều dài bằng đường kính đồng xu
 
+*Độ khó: Mức 3. Tổng hợp kiến thức trước (CP).*
+
 Một quảng cáo nói rằng ô tô có thể dừng trên chiều dài chỉ bằng đường kính đồng xu. Cần hợp lực bằng bao nhiêu để dừng một xe khối lượng $850\,\mathrm{kg}$, đang chạy với tốc độ $45{,}0\,\mathrm{km/h}$, trong quãng đường $1{,}8\,\mathrm{cm}$?
 
 <details>
@@ -282,6 +296,8 @@ $$
 </details>
 
 ### 4.37: Hai thùng trên mặt hồ đóng băng
+
+*Độ khó: Mức 1.*
 
 Hai thùng khối lượng $4{,}00\,\mathrm{kg}$ và $6{,}00\,\mathrm{kg}$ nằm trên mặt hồ không ma sát, nối với nhau bằng dây nhẹ. Một người mang giày golf để bám mặt băng kéo thùng $6{,}00\,\mathrm{kg}$ bằng lực ngang $F$, tạo gia tốc $2{,}50\,\mathrm{m/s^2}$.
 
@@ -340,6 +356,8 @@ Các lực do dây tác dụng lên hai thùng không phải một cặp lực t
 
 ### 4.38: Tìm khối lượng thùng còn lại
 
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
+
 Hai khối nối bằng dây nhẹ nằm yên trên mặt ngang không ma sát. Khối $A$ có khối lượng $15{,}0\,\mathrm{kg}$, khối $B$ có khối lượng $m$. Một lực ngang không đổi $F=60{,}0\,\mathrm N$ kéo khối $A$ như Hình P4.38. Trong $5{,}00\,\mathrm s$ đầu tiên, khối $A$ đi sang phải $18{,}0\,\mathrm m$.
 
 (a) Tìm lực căng dây khi hai khối đang chuyển động.
@@ -393,6 +411,8 @@ Kiểm tra bằng toàn hệ cho cùng gia tốc khi lấy $60{,}0\,\mathrm N$ c
 </details>
 
 ### 4.39: Súng thử va chạm giữa chim và máy bay
+
+*Độ khó: Mức 1. Dùng giải tích (CALC).*
 
 Để nghiên cứu hư hỏng khi máy bay va chạm chim lớn, bạn thiết kế một súng thử gia tốc các vật có kích thước tương đương con gà. Độ dời trong nòng là:
 
@@ -466,6 +486,8 @@ Hai giá trị đều hướng theo chiều chuyển động trong nòng. Gia t�
 
 ### 4.40: Lực đẩy để tên lửa đạt độ cao đã định
 
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
+
 Một tên lửa khối lượng $400\,\mathrm{kg}$ được phóng từ mặt đất. Động cơ tạo lực đẩy không đổi hướng lên cho tới khi tên lửa lên cao $100\,\mathrm m$, rồi tắt. Muốn tên lửa đạt độ cao cực đại $400\,\mathrm m$, lực đẩy $F$ phải bằng bao nhiêu? Coi biến thiên khối lượng không đáng kể.
 
 <details>
@@ -513,6 +535,8 @@ Lực đẩy bằng bốn lần trọng lượng tên lửa. Khi động cơ t�
 </details>
 
 ### 4.41: Số chỉ cân trong thang máy
+
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
 
 Sau khi khám sức khỏe, bạn rời phòng khám, nơi cân cho trọng lượng của bạn là $683\,\mathrm N$. Bạn bước vào thang máy có một chiếc cân. Tìm độ lớn và hướng gia tốc thang máy nếu cân chỉ (a) $725\,\mathrm N$ và (b) $595\,\mathrm N$.
 
@@ -567,6 +591,8 @@ Gia tốc hướng xuống. Số chỉ cân nhỏ hơn trọng lượng vì lự
 
 ### 4.42: Giới hạn gia tốc thang máy
 
+*Độ khó: Mức 1.*
+
 Thang máy và tải có tổng khối lượng $2200\,\mathrm{kg}$. Cáp đã mòn chỉ chịu được lực căng tối đa $28\,000\,\mathrm N$.
 
 (a) Vẽ sơ đồ lực của thang máy. Viết hợp lực theo các lực trên sơ đồ và dùng định luật thứ hai để tìm gia tốc hướng lên lớn nhất mà cáp không đứt.
@@ -618,6 +644,8 @@ Trọng lượng nhỏ hơn nên với cùng lực căng giới hạn, phần h�
 
 ### 4.43: Lực trung bình của gậy lên bóng
 
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
+
 Quả bóng chày khối lượng $0{,}145\,\mathrm{kg}$ đang bay ngang về phía người đánh với tốc độ $40{,}0\,\mathrm{m/s}$. Sau khi bị đánh, bóng bay ngang theo chiều ngược lại với tốc độ $50{,}0\,\mathrm{m/s}$. Gậy tiếp xúc bóng trong $8{,}00\,\mathrm{ms}$. Tìm lực trung bình mà gậy tác dụng lên bóng.
 
 <details>
@@ -663,6 +691,8 @@ Lực hướng theo chiều bóng rời gậy. Lấy hiệu hai tốc độ $50-
 
 ### 4.44: Hợp lực từ phương trình tọa độ
 
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP). Dùng giải tích (CALC).*
+
 Vật khối lượng $m$ chuyển động trên trục $x$ theo:
 
 $$
@@ -701,6 +731,8 @@ Kết quả cũng đúng tại $t=0$. Hệ số $b$ quyết định vận tốc 
 </details>
 
 ### 4.45: Hai hộp đang đi xuống
+
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
 
 Hai hộp $A$ và $B$ nối với nhau bằng dây nhẹ thẳng đứng như Hình P4.45. Lực không đổi $F=80{,}0\,\mathrm N$ kéo hộp $A$ lên. Từ trạng thái nghỉ, hộp $B$ đi xuống $12{,}0\,\mathrm m$ trong $4{,}00\,\mathrm s$. Lực căng dây nối hai hộp là $36{,}0\,\mathrm N$. Tìm khối lượng (a) hộp $B$ và (b) hộp $A$.
 
@@ -760,6 +792,8 @@ Trọng lượng toàn hệ lớn hơn lực kéo ngoài, phù hợp với gia t
 </details>
 
 ### 4.46: Dây nối có khối lượng
+
+*Độ khó: Mức 2.*
 
 Hai khối trong Hình P4.46 nối bằng dây đồng chất có khối lượng $4{,}00\,\mathrm{kg}$. Lực $200\,\mathrm N$ kéo khối trên lên.
 
@@ -827,6 +861,8 @@ $$
 
 ### 4.47: Hạ cánh mềm cho tên lửa
 
+*Độ khó: Mức 3. Tổng hợp kiến thức trước (CP).*
+
 Một tên lửa nhỏ khối lượng $20{,}0\,\mathrm{kg}$ đang rơi tự do về Trái Đất. Bỏ qua lực cản không khí. Khi ở độ cao $80{,}0\,\mathrm m$, tên lửa đang đi xuống với tốc độ $30{,}0\,\mathrm{m/s}$. Đúng lúc ấy động cơ bật, tạo lực hướng lên không đổi $F$. Coi khối lượng không đổi. Tìm $F$ để tốc độ tên lửa bằng không đúng lúc tới mặt đất.
 
 <details>
@@ -864,6 +900,8 @@ Tên lửa vẫn đi xuống trong giai đoạn hãm nhưng gia tốc hướng l
 </details>
 
 ### 4.48: Trọng lượng dụng cụ trên Newtonia
+
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
 
 Bạn hạ cánh xuống hành tinh chưa biết tên Newtonia và muốn xác định trọng lượng của các vật ở đó. Trên mặt ngang không ma sát, lực $12{,}0\,\mathrm N$ đẩy một dụng cụ bắt đầu từ nghỉ đi được $16{,}0\,\mathrm m$ trong $2{,}00\,\mathrm s$. Khi thả dụng cụ từ nghỉ ở độ cao $10{,}0\,\mathrm m$, nó chạm đất sau $2{,}58\,\mathrm s$. Dụng cụ nặng bao nhiêu trên Newtonia và trên Trái Đất?
 
@@ -920,6 +958,8 @@ $$
 
 ### 4.49: Lực tăng tuyến tính theo thời gian
 
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP). Dùng giải tích (CALC).*
+
 Một vật bí ẩn có động cơ tên lửa, khối lượng $45{,}0\,\mathrm{kg}$, ban đầu nằm yên giữa mặt hồ đóng băng nằm ngang không ma sát. Từ lúc $t=0$, lực hướng đông tác dụng lên vật có độ lớn:
 
 $$
@@ -973,6 +1013,8 @@ $$
 
 ### 4.50: Gấp đôi lực, so sánh hai điều kiện
 
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
+
 Từ $t=0$, hợp lực tác dụng lên vật đang đứng yên.
 
 (a) Khi hợp lực không đổi $F_1$ tác dụng trong quãng đường $d$, tốc độ cuối là $v_1$. Nếu hợp lực tăng thành $F_2=2F_1$ nhưng vật vẫn đi cùng quãng đường $d$, tốc độ cuối $v_2$ theo $v_1$ bằng bao nhiêu?
@@ -1018,6 +1060,8 @@ Hai kết quả khác nhau vì giữ cùng quãng đường không đồng nghĩ
 </details>
 
 ### 4.51: So sánh lực tăng tốc của các ô tô
+
+*Độ khó: Mức 2. Phân tích số liệu (DATA).*
 
 Bảng sau cho khối lượng và thời gian tăng tốc từ nghỉ đến $60\,\mathrm{mph}$ của một số xe.
 
@@ -1102,6 +1146,8 @@ $$
 
 ### 4.52: Hợp lực lên trực thăng thử nghiệm
 
+*Độ khó: Mức 3. Dùng giải tích (CALC).*
+
 Một trực thăng huấn luyện có trọng lượng $2{,}75\times10^5\,\mathrm N$. Trong chuyến thử, tọa độ của nó thỏa mãn:
 
 $$
@@ -1165,6 +1211,8 @@ Vector hợp lực có thành phần theo $+x$ và $-z$, không có thành phầ
 </details>
 
 ### 4.53: Đo khối lượng và trọng trường trên hành tinh khác
+
+*Độ khó: Mức 2. Phân tích số liệu (DATA).*
 
 Bạn là thuyền trưởng Starfleet và tới một hành tinh xa. Trong phòng thử nghiệm, một dây ngắn nhẹ buộc vào đầu trên khối có khối lượng $m$. Lực hướng lên không đổi $F$ tác dụng ở đầu tự do. Khối bắt đầu từ nghỉ. Thời gian đi lên $8{,}00\,\mathrm m$ được đo khi thay đổi lực:
 
@@ -1240,6 +1288,8 @@ Giá trị đọc từ đường thẳng vẽ tay có thể khác đôi chút. V
 </details>
 
 ### 4.54: Lực cản khi hộp trượt chậm dần
+
+*Độ khó: Mức 2. Phân tích số liệu (DATA).*
 
 Một hộp khối lượng $8{,}00\,\mathrm{kg}$ nằm trên sàn ngang. Sau cú đẩy nhanh, hộp trượt $8{,}22\,\mathrm m$ trong $2{,}8\,\mathrm s$ rồi dừng.
 
@@ -1325,6 +1375,8 @@ Nếu cho phép tung độ gốc tự do, kết quả khoảng $-0{,}041\,\mathr
 </details>
 
 ### 4.55: Lực đổi dấu và vị trí xa nhất
+
+*Độ khó: Mức 3. Tổng hợp kiến thức trước (CP). Dùng giải tích (CALC). Bài tập thử thách.*
 
 Khối $2{,}00\,\mathrm{kg}$ ban đầu đứng yên tại $x=0$ trên mặt ngang không ma sát. Từ $t=0$, lực ngang tác dụng là:
 
@@ -1413,6 +1465,8 @@ Tốc độ lúc trở về gốc bằng $2{,}00\,\mathrm{m/s}$, chuyển độn
 
 ### 4.56: Lực ngang phụ thuộc tọa độ đứng
 
+*Độ khó: Mức 3. Dùng giải tích (CALC). Bài tập thử thách.*
+
 Một vật khối lượng $m$ ban đầu đứng yên, cân bằng tại gốc tọa độ. Từ $t=0$, một lực mới có các thành phần:
 
 $$
@@ -1479,6 +1533,8 @@ Các thành phần ở trên cho đầy đủ biểu thức của hai vector. Đ
 </details>
 
 ## Đọc hiểu khoa học: Lực lên cơ thể vũ công
+
+*Nhóm câu hỏi kiểu MCAT. Ứng dụng sinh học.*
 
 Vũ công chịu những lực lớn khi nhảy và tiếp đất. Chẳng hạn, khi tiếp đất sau cú nhảy thẳng đứng, lực cổ tác dụng lên đầu phải vượt trọng lượng đầu để làm đầu chậm lại và dừng. Khối lượng đầu chiếm khoảng $9{,}4\%$ khối lượng cơ thể. Phân tích video một vũ công khối lượng $65\,\mathrm{kg}$ cho thấy khi tiếp đất, đầu giảm tốc từ $4{,}0\,\mathrm{m/s}$ xuống không trong $0{,}20\,\mathrm s$.
 

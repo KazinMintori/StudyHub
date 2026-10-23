@@ -4,6 +4,8 @@
 
 ### 4.1: Hợp lực của hai chú chó kéo cọc
 
+*Độ khó: Mức 2.*
+
 Hai chú chó kéo hai sợi dây nằm ngang buộc vào một chiếc cọc; góc giữa hai sợi dây là $60{,}0^\circ$. Nếu chú chó Rover tác dụng một lực $270\,\mathrm N$ và chú chó Fido tác dụng một lực $300\,\mathrm N$, hãy tìm độ lớn của hợp lực tác dụng lên cọc và góc hợp bởi hợp lực với sợi dây của Rover.
 
 <details>
@@ -80,6 +82,8 @@ Kết luận: Hợp lực tác dụng lên chiếc cọc có độ lớn $494\,\
 ---
 
 ### 4.2: Ba lực kéo cứu hộ xe ô tô bị sa lầy
+
+*Độ khó: Mức 1.*
 
 Để kéo một chiếc xe SUV bị sa lầy trong bùn, các công nhân sử dụng ba sợi dây nằm ngang tạo ra các vector lực như mô tả trên Hình E4.2.
 (a) Tìm các thành phần $x$ và $y$ của mỗi lực kéo trong ba lực kéo này.
@@ -194,6 +198,8 @@ $$
 
 ### 4.3: Đai cố định xương hàm
 
+*Độ khó: Mức 1. Ứng dụng sinh học (BIO).*
+
 Do bị chấn thương ở hàm, một bệnh nhân phải đeo đai cố định (Hình E4.3) tạo ra lực tổng hợp hướng thẳng đứng lên trên có độ lớn $5{,}00\,\mathrm N$ tác dụng vào cằm. Lực căng là như nhau dọc theo toàn bộ sợi dây đai. Cần điều chỉnh lực căng của đai đến giá trị bằng bao nhiêu để tạo ra đúng lực nâng cần thiết này?
 
 ![Hình E4.3: Đai cố định hỗ trợ hàm dưới của bệnh nhân.](/vat-ly-1/bai-giang/img/young-04/r-exercises-e4-3.png)
@@ -243,6 +249,8 @@ Kết luận: Lực căng của đai cần được điều chỉnh ở mức $3
 ---
 
 ### 4.4: Kéo hòm hàng lên cầu dốc xe tải
+
+*Độ khó: Mức 1.*
 
 Một người đàn ông đang kéo một chiếc hòm lớn lên cầu dốc của xe tải chở đồ. Cầu dốc có góc nghiêng $20{,}0^\circ$ so với mặt đất nằm ngang, và người đàn ông kéo lên với một lực $\vec F$ có hướng hợp một góc $30{,}0^\circ$ so với mặt phẳng cầu dốc (Hình E4.4).
 (a) Độ lớn lực kéo $F$ cần phải bằng bao nhiêu để thành phần lực $F_x$ song song với cầu dốc đạt giá trị $90{,}0\,\mathrm N$?
@@ -305,6 +313,8 @@ Kết luận: Độ lớn lực kéo cần tác dụng là $104\,\mathrm N$, và
 ---
 
 ### 4.5: Hợp lực của hai lực đồng quy trên mặt phẳng
+
+*Độ khó: Mức 1.*
 
 Hai lực $\vec F_1$ và $\vec F_2$ cùng tác dụng vào một điểm. Độ lớn của lực $\vec F_1$ là $9{,}00\,\mathrm N$, có hướng ở góc phần tư thứ II và hợp một góc $60{,}0^\circ$ phía trên trục $x$. Độ lớn của lực $\vec F_2$ là $6{,}00\,\mathrm N$, có hướng ở góc phần tư thứ III và hợp một góc $53{,}1^\circ$ phía dưới trục $x$.
 (a) Các thành phần $x$ và $y$ của hợp lực bằng bao nhiêu?
@@ -391,6 +401,8 @@ Kết luận: Hợp lực có các thành phần $R_x = -8{,}10\,\mathrm N$, $R_
 
 ### 4.6: Chuyển động của electron trong đèn hình tivi
 
+*Độ khó: Mức 1.*
+
 Một electron (khối lượng $m = 9{,}11 \times 10^{-31}\,\mathrm{kg}$) rời một đầu của ống đèn hình tivi với vận tốc ban đầu bằng không và chuyển động thẳng tới lưới gia tốc cách đó $1{,}80\,\mathrm{cm}$. Electron tới lưới gia tốc với tốc độ $3{,}00 \times 10^6\,\mathrm{m/s}$. Giả sử lực gia tốc là không đổi, hãy tính:
 (a) Gia tốc của electron.
 (b) Thời gian để electron bay tới lưới gia tốc.
@@ -464,6 +476,8 @@ Kết luận: Gia tốc của electron là $2{,}50 \times 10^{14}\,\mathrm{m/s^2
 
 ### 4.7: Lực ma sát hãm người trượt băng
 
+*Độ khó: Mức 2.*
+
 Một vận động viên trượt băng có khối lượng $68{,}5\,\mathrm{kg}$ đang chuyển động với vận tốc ban đầu $2{,}40\,\mathrm{m/s}$ trên mặt băng nằm ngang gồ ghề thì dừng lại đều sau khoảng thời gian $3{,}52\,\mathrm s$ do ma sát từ mặt băng. Hỏi lực ma sát mà mặt băng tác dụng lên người trượt băng có độ lớn bằng bao nhiêu và có hướng như thế nào?
 
 <details>
@@ -514,6 +528,8 @@ Kết luận: Lực ma sát có độ lớn $46{,}7\,\mathrm N$ và có hướng
 ---
 
 ### 4.8: Cân trọng lượng và sức căng dây trong thang máy chuyển động
+
+*Độ khó: Mức 2.*
 
 Bạn bước vào một thang máy, đứng lên một chiếc cân và bấm nút đi lên. Bạn nhớ rằng trọng lượng bình thường của mình khi đứng yên là $625\,\mathrm N$. Hãy vẽ sơ đồ lực cho người và gói hàng.
 (a) Khi thang máy chuyển động với gia tốc hướng lên trên có độ lớn $2{,}50\,\mathrm{m/s^2}$, chiếc cân sẽ chỉ giá trị bằng bao nhiêu?
@@ -587,6 +603,8 @@ Kết luận: Chiếc cân sẽ chỉ $784\,\mathrm N$, và lực căng trong s�
 
 ### 4.9: Kéo thùng hàng trên mặt ao đóng băng
 
+*Độ khó: Mức 1.*
+
 Một chiếc thùng nằm yên trên mặt ao đóng băng, đóng vai trò như một bề mặt nằm ngang không có ma sát. Nếu một người đánh cá tác dụng một lực nằm ngang có độ lớn $48{,}0\,\mathrm N$ vào chiếc thùng và làm cho nó thu được một gia tốc có độ lớn $2{,}20\,\mathrm{m/s^2}$, hãy tính khối lượng của chiếc thùng đó.
 
 <details>
@@ -621,6 +639,8 @@ Kết luận: Khối lượng của chiếc thùng là $21{,}8\,\mathrm{kg}$.
 ---
 
 ### 4.10: Đẩy khối băng trên sàn nhẵn
+
+*Độ khó: Mức 2.*
 
 Một công nhân bến tàu tác dụng một lực nằm ngang không đổi bằng $80{,}0\,\mathrm N$ vào một khối băng trên một mặt sàn nằm ngang nhẵn bóng. Có thể bỏ qua lực ma sát. Khối băng bắt đầu chuyển động từ trạng thái nghỉ và đi được quãng đường $11{,}0\,\mathrm m$ trong $5{,}00\,\mathrm s$.
 (a) Khối lượng của khối băng là bao nhiêu?
@@ -688,6 +708,8 @@ Kết luận: Khối lượng của khối băng là $90{,}9\,\mathrm{kg}$, và 
 ---
 
 ### 4.11: Đẩy đĩa khúc côn cầu theo từng giai đoạn
+
+*Độ khó: Mức 1.*
 
 Một đĩa khúc côn cầu trên băng có khối lượng $0{,}160\,\mathrm{kg}$ đang đứng yên tại gốc tọa độ ($x = 0$) trên mặt sân băng nằm ngang không có ma sát. Tại thời điểm $t = 0$, một cầu thủ tác dụng một lực $0{,}250\,\mathrm N$ song song với trục $x$ lên đĩa; cô tiếp tục duy trì lực này cho đến thời điểm $t = 2{,}00\,\mathrm s$.
 (a) Vị trí và tốc độ của đĩa tại thời điểm $t = 2{,}00\,\mathrm s$ bằng bao nhiêu?
@@ -768,6 +790,8 @@ Kết luận: Tại $t = 2{,}00\,\mathrm s$, vị trí là $3{,}12\,\mathrm m$ v
 
 ### 4.12: Kéo kiện hàng trên sàn nhà kho
 
+*Độ khó: Mức 1.*
+
 Một kiện hàng có khối lượng $32{,}5\,\mathrm{kg}$ ban đầu đứng yên trên sàn nhà kho chịu tác dụng của một hợp lực nằm ngang có độ lớn $14{,}0\,\mathrm N$.
 (a) Gia tốc được tạo ra bằng bao nhiêu?
 (b) Kiện hàng đi được quãng đường bao xa trong thời gian $10{,}0\,\mathrm s$?
@@ -815,6 +839,8 @@ Kết luận: Gia tốc là $0{,}431\,\mathrm{m/s^2}$, quãng đường đi đư
 ---
 
 ### 4.13: Phân tích đồ thị gia tốc theo thời gian của xe đẩy thí nghiệm
+
+*Độ khó: Mức 1.*
 
 Một chiếc xe đẩy thí nghiệm có khối lượng $4{,}50\,\mathrm{kg}$ chuyển động thẳng dọc theo trục $x$. Đồ thị trên Hình E4.13 biểu diễn gia tốc của xe theo hàm của thời gian.
 (a) Tìm hợp lực cực đại tác dụng lên xe đẩy. Hợp lực cực đại này xuất hiện trong khoảng thời gian nào?
@@ -872,6 +898,8 @@ Kết luận:
 ---
 
 ### 4.14: Xác định lực tác dụng lên chú mèo từ đồ thị vận tốc
+
+*Độ khó: Mức 1.*
 
 Một chú mèo khối lượng $2{,}75\,\mathrm{kg}$ chuyển động thẳng dọc theo trục $x$. Hình E4.14 biểu diễn thành phần vận tốc $v_x$ của chú mèo theo thời gian.
 (a) Tìm hợp lực cực đại tác dụng lên chú mèo. Lực này xuất hiện trong khoảng thời gian nào?
@@ -943,6 +971,8 @@ $$
 ---
 
 ### 4.15: Động cơ tên lửa nhỏ phụ thuộc thời gian
+
+*Độ khó: Mức 1.*
 
 Một tên lửa nhỏ khối lượng $8{,}00\,\mathrm{kg}$ đốt cháy nhiên liệu tạo ra lực đẩy hướng thẳng đứng lên trên phụ thuộc vào thời gian (giả thiết khối lượng tên lửa giảm không đáng kể và được coi như hằng số) khi tên lửa bay lên khỏi bệ phóng. Lực đẩy này tuân theo phương trình $F = A + B t^2$. Các phép đo thực nghiệm cho thấy tại $t = 0$, lực đẩy là $100{,}0\,\mathrm N$, và sau $2{,}00\,\mathrm s$ đầu tiên, lực đẩy đạt $150{,}0\,\mathrm N$.
 (a) Tìm các hằng số $A$ và $B$, bao gồm cả đơn vị SI chuẩn của chúng.
@@ -1050,6 +1080,8 @@ $$
 
 ### 4.16: Balo dụng cụ của nhà du hành vũ trụ
 
+*Độ khó: Mức 1.*
+
 Chiếc balo dụng cụ của một nhà du hành vũ trụ có trọng lượng $17{,}5\,\mathrm N$ khi ở trên Trái Đất, nhưng chỉ nặng $3{,}24\,\mathrm N$ khi ở trên bề mặt của một mặt trăng.
 (a) Gia tốc rơi tự do do trọng lực trên bề mặt mặt trăng này bằng bao nhiêu?
 (b) Khối lượng của chiếc balo khi ở trên mặt trăng này bằng bao nhiêu?
@@ -1099,6 +1131,8 @@ Kết luận: Gia tốc rơi tự do trên mặt trăng là $1{,}81\,\mathrm{m/s
 
 ### 4.17: Siêu nhân ném tảng đá lớn
 
+*Độ khó: Mức 1.*
+
 Siêu nhân ném một tảng đá có trọng lượng $2400\,\mathrm N$ vào đối thủ. Siêu nhân phải tác dụng một lực nằm ngang bằng bao nhiêu để truyền cho tảng đá một gia tốc nằm ngang bằng $12{,}0\,\mathrm{m/s^2}$?
 
 <details>
@@ -1134,6 +1168,8 @@ Kết luận: Siêu nhân phải tác dụng một lực nằm ngang có độ l
 ---
 
 ### 4.18: So sánh khối lượng và trọng lượng của sinh vật
+
+*Độ khó: Mức 1. Ứng dụng sinh học (BIO).*
 
 (a) Một con bọ chét thông thường có khối lượng $210\,\mu\mathrm g$. Nó có trọng lượng bằng bao nhiêu newton?
 (b) Khối lượng của một con rầy bọt (froghopper) điển hình là $12{,}3\,\mathrm{mg}$. Nó có trọng lượng bằng bao nhiêu newton?
@@ -1203,6 +1239,8 @@ Kết luận:
 
 ### 4.19: Trọng lượng của quả dưa hấu trên mặt trăng Io của Sao Mộc
 
+*Độ khó: Mức 1.*
+
 Trên bề mặt mặt trăng Io của Sao Mộc, gia tốc do trọng lực là $g_{\mathrm{Io}} = 1{,}81\,\mathrm{m/s^2}$. Một quả dưa hấu có trọng lượng $44{,}0\,\mathrm N$ trên bề mặt Trái Đất.
 (a) Khối lượng của quả dưa hấu trên bề mặt Trái Đất bằng bao nhiêu?
 (b) Khối lượng và trọng lượng của quả dưa hấu trên bề mặt mặt trăng Io sẽ bằng bao nhiêu?
@@ -1250,6 +1288,8 @@ Kết luận: Khối lượng trên Trái Đất là $4{,}49\,\mathrm{kg}$. Trê
 ## Mục 4.5: Định luật III Newton
 
 ### 4.20: Ước lượng khối lượng võ sĩ Sumo
+
+*Độ khó: Mức 1.*
 
 Hãy ước tính khối lượng theo kilôgam và trọng lượng theo pound của một võ sĩ Sumo điển hình. Các ước tính này so với ước tính về khối lượng và trọng lượng trung bình của sinh viên trong lớp học của bạn như thế nào? Liệt kê các giá trị bạn giả định trong bài giải.
 
@@ -1299,6 +1339,8 @@ Với hai khối lượng đã giả định, võ sĩ nặng gấp khoảng $2{,
 
 ### 4.21: Xuất phát của vận động viên chạy nước rút
 
+*Độ khó: Mức 1. Ứng dụng sinh học (BIO).*
+
 Các vận động viên chạy nước rút đẳng cấp thế giới có thể bứt tốc rời bàn đạp xuất phát với gia tốc gần như nằm ngang có độ lớn lên tới $15\,\mathrm{m/s^2}$. Một vận động viên có khối lượng $55\,\mathrm{kg}$ phải tác dụng một lực nằm ngang bằng bao nhiêu lên bàn đạp xuất phát để tạo ra gia tốc này? Vật nào tác dụng lực trực tiếp đẩy vận động viên tiến về phía trước: bàn đạp hay chính bản thân vận động viên?
 
 <details>
@@ -1339,6 +1381,8 @@ Kết luận: Lực tác dụng lên bàn đạp có độ lớn $825\,\mathrm N
 
 ### 4.22: Ô tô đẩy xe tải chết máy
 
+*Độ khó: Mức 1.*
+
 Một chiếc ô tô con có khối lượng $380\,\mathrm{kg}$ đang đẩy một chiếc xe tải lớn có khối lượng $900\,\mathrm{kg}$ di chuyển về hướng Đông trên một đoạn đường bằng phẳng nằm ngang. Chiếc ô tô tác dụng một lực nằm ngang có độ lớn $1600\,\mathrm N$ lên xe tải. Hỏi độ lớn của lực mà xe tải tác dụng ngược lại lên chiếc ô tô bằng bao nhiêu?
 
 <details>
@@ -1373,6 +1417,8 @@ Kết luận: Độ lớn của lực mà xe tải tác dụng lên ô tô là $
 ---
 
 ### 4.23: Hai khối hộp tiếp xúc trên mặt sàn nằm ngang
+
+*Độ khó: Mức 2.*
 
 Hai chiếc hộp A và B tiếp xúc nhau trên một mặt phẳng nằm ngang không có ma sát (Hình E4.23). Hộp A có khối lượng $20{,}0\,\mathrm{kg}$ và hộp B có khối lượng $5{,}0\,\mathrm{kg}$. Một lực nằm ngang có độ lớn $250\,\mathrm N$ được tác dụng vào hộp A. Hỏi độ lớn của lực mà hộp A tác dụng lên hộp B bằng bao nhiêu?
 
@@ -1423,6 +1469,8 @@ Kết luận: Độ lớn của lực mà hộp A tác dụng lên hộp B là $
 ---
 
 ### 4.24: Phản lực pháp tuyến và gia tốc của hành khách trong thang máy
+
+*Độ khó: Mức 2.*
 
 Lực nâng pháp tuyến do sàn thang máy tác dụng lên một hành khách nặng $650\,\mathrm N$ có độ lớn bằng $620\,\mathrm N$.
 (a) Các phản lực đối ứng (reaction forces) theo định luật III Newton của hai lực này là những lực nào?
@@ -1476,6 +1524,8 @@ Kết luận: Hành khách đang gia tốc hướng xuống dưới với độ 
 
 ### 4.25: Trái Đất gia tốc về phía người nhảy cầu
 
+*Độ khó: Mức 2.*
+
 Một học sinh có khối lượng $45\,\mathrm{kg}$ nhảy từ một ván nhảy cầu trên cao xuống nước. Gia tốc của Trái Đất tiến về phía cô bé bằng bao nhiêu khi cô bé đang rơi tự do về phía Trái Đất với gia tốc $9{,}8\,\mathrm{m/s^2}$? Sử dụng giá trị khối lượng của Trái Đất là $6{,}0 \times 10^{24}\,\mathrm{kg}$, và giả sử hợp lực duy nhất tác dụng lên Trái Đất là lực hấp dẫn do cô bé tác dụng lên nó.
 
 <details>
@@ -1518,6 +1568,8 @@ Kết luận: Gia tốc của Trái Đất tiến về phía học sinh là $7{,
 ## Mục 4.6: Sơ đồ lực
 
 ### 4.26: Sơ đồ lực cho hai khối hộp xếp chồng
+
+*Độ khó: Mức 2.*
 
 Bạn dùng tay kéo nằm ngang một lực lên khối hộp B trên Hình E4.26, làm cho cả hai khối hộp chuyển động cùng nhau như một khối thống nhất sang bên phải. Đối với hệ chuyển động này, hãy vẽ sơ đồ lực có chú thích cẩn thận cho khối hộp A nếu:
 (a) Mặt bàn hoàn toàn không có ma sát.
@@ -1576,6 +1628,8 @@ Các lực tác dụng lên khối hộp A chỉ gồm hai lực theo phương t
 ---
 
 ### 4.27: Hai kiện hàng đặt cạnh nhau trên sàn không ma sát
+
+*Độ khó: Mức 2.*
 
 Hai kiện hàng A và B nằm yên cạnh nhau trên một bề mặt nằm ngang không có ma sát. Chúng có khối lượng lần lượt là $m_A$ và $m_B$. Khi một lực nằm ngang $\vec F$ được tác dụng vào kiện hàng A đẩy sang phải, cả hai kiện hàng cùng chuyển động sang phải.
 (a) Vẽ sơ đồ lực có chú thích rõ ràng cho kiện hàng A và kiện hàng B. Chỉ ra những cặp lực nào (nếu có) là cặp lực trực đối theo định luật III Newton.
@@ -1636,6 +1690,8 @@ Bất kỳ một lực nằm ngang $F>0$ nào, dù nhỏ đến đâu và dù nh
 ---
 
 ### 4.28: Viên đạn súng trường găm vào thân cây
+
+*Độ khó: Mức 2. Tổng hợp kiến thức trước (CP).*
 
 Một viên đạn súng trường cỡ .22 bay với tốc độ $350\,\mathrm{m/s}$ cắm vào một thân cây lớn và xuyên sâu vào trong gỗ một đoạn $0{,}130\,\mathrm m$ trước khi dừng lại. Khối lượng của viên đạn là $1{,}80\,\mathrm g$. Giả sử lực cản của gỗ là không đổi.
 (a) Cần khoảng thời gian bao lâu để viên đạn dừng lại hoàn toàn?
@@ -1710,6 +1766,8 @@ Kết luận: Thời gian dừng của viên đạn là $7{,}43 \times 10^{-4}\,
 
 ### 4.29: Quả cầu treo trên trần toa tàu hỏa
 
+*Độ khó: Mức 1.*
+
 Một quả cầu nhỏ được treo bằng một sợi dây dài gắn vào trần của một toa tàu hỏa đang chạy về hướng Đông trên đường ray nằm ngang. Một người quan sát bên trong toa tàu thấy quả cầu nằm yên bất động so với toa tàu. Hãy vẽ sơ đồ lực có chú thích rõ ràng cho quả cầu nếu:
 (a) Con tàu chuyển động thẳng đều với vận tốc không đổi.
 (b) Con tàu đang tăng tốc đều về phía trước.
@@ -1773,6 +1831,8 @@ Kết luận: Hợp lực bằng không ở trường hợp (a), và khác khôn
 ---
 
 ### 4.30: Đẩy chiếc ghế trượt trên sàn nhà
+
+*Độ khó: Mức 2.*
 
 Một chiếc ghế có khối lượng $12{,}0\,\mathrm{kg}$ đặt trên mặt sàn nằm ngang; mặt sàn này không nhẵn (có ma sát). Bạn dùng tay đẩy chiếc ghế bằng một lực $F = 40{,}0\,\mathrm N$ hướng chếch xuống dưới một góc $37{,}0^\circ$ so với phương nằm ngang, làm cho chiếc ghế trượt dọc theo mặt sàn.
 (a) Hãy vẽ sơ đồ lực có chú thích rõ ràng cho chiếc ghế.
