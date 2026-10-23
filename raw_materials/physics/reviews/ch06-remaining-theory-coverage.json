@@ -1,0 +1,524 @@
+{
+  "chapter": 6,
+  "status": "theory-reviewed-exercises-incomplete",
+  "sourcePDFPages": [
+    191,
+    210
+  ],
+  "sections": [
+    {
+      "file": "raw_materials/physics/translations/chapter-06/00-mo-dau.md",
+      "sha256": "96f98525de44e906e076e81bb67359d9386777c234bc9f63c74c85c5c82b4f86",
+      "sourceEquations": [],
+      "figureAssets": [
+        "r-theory-mo-dau"
+      ],
+      "status": "theory-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-06/01-muc-01.md",
+      "sha256": "23da9d703264c10e6d9da87b0f0522ac02a5ff264263bfae53e75636274ff318",
+      "sourceEquations": [
+        "6.1",
+        "6.2",
+        "6.3"
+      ],
+      "figureAssets": [
+        "r-theory-06-01",
+        "r-theory-06-02",
+        "r-theory-06-03",
+        "r-theory-app-running",
+        "r-theory-06-04",
+        "r-theory-06-05",
+        "r-theory-06-06",
+        "r-theory-06-07"
+      ],
+      "status": "theory-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-06/02-muc-02.md",
+      "sha256": "68f6c3d276c62161cbac20e5552a81af44a18d52f1ca3010bcd86c5205326e1c",
+      "sourceEquations": [
+        "6.4",
+        "6.5",
+        "6.6"
+      ],
+      "figureAssets": [
+        "r-theory-06-08",
+        "r-theory-06-09",
+        "r-theory-06-10",
+        "r-theory-06-11",
+        "r-theory-06-12",
+        "r-theory-06-13",
+        "r-theory-06-14",
+        "r-theory-06-15"
+      ],
+      "status": "theory-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-06/03-muc-03.md",
+      "sha256": "e311fcfe20037f4727534d666648d9d393090cc64a0552cf6e21eb62d0903d31",
+      "sourceEquations": [
+        "6.7",
+        "6.8",
+        "6.9",
+        "6.10",
+        "6.11",
+        "6.12",
+        "6.13",
+        "6.14"
+      ],
+      "figureAssets": [
+        "r-theory-06-16",
+        "r-theory-06-17",
+        "r-theory-06-18",
+        "r-theory-06-19",
+        "r-theory-06-20",
+        "r-theory-06-21",
+        "r-theory-app-tendons",
+        "r-theory-06-22",
+        "r-theory-06-23",
+        "r-theory-06-24"
+      ],
+      "status": "theory-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-06/04-muc-04.md",
+      "sha256": "ecf469fcda4e8126ca24c10e55486dcf5828135eb406e7268f5d7f1e518ee923",
+      "sourceEquations": [
+        "6.15",
+        "6.16",
+        "6.17",
+        "6.18",
+        "6.19"
+      ],
+      "figureAssets": [
+        "r-theory-06-25",
+        "r-theory-06-26",
+        "r-theory-app-muscle",
+        "r-theory-06-27",
+        "r-theory-06-28"
+      ],
+      "status": "theory-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-06/17-tom-tat.md",
+      "sha256": "a60d5a8d23a4d2dfef43a6cdd8b64e6e56aab437fb42e954a3e26619f2339ca9",
+      "sourceEquations": [],
+      "figureAssets": [
+        "r-theory-summary-01",
+        "r-theory-summary-02",
+        "r-theory-summary-03",
+        "r-theory-summary-04",
+        "r-theory-summary-05"
+      ],
+      "status": "theory-reviewed"
+    }
+  ],
+  "examples": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4",
+    "6.5",
+    "6.6",
+    "6.7",
+    "6.8",
+    "6.9",
+    "6.10"
+  ],
+  "selfChecks": [
+    "6.1",
+    "6.2",
+    "6.3",
+    "6.4"
+  ],
+  "openingQuestion": "Restored actual baseball question and independently calculated answer",
+  "figures": [
+    {
+      "asset": "r-theory-mo-dau",
+      "pdfPage": 191,
+      "rectangle": [
+        0.0,
+        0.0,
+        439.0,
+        246.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-01",
+      "pdfPage": 192,
+      "rectangle": [
+        35.0,
+        96.0,
+        193.0,
+        214.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-02",
+      "pdfPage": 192,
+      "rectangle": [
+        35.0,
+        335.0,
+        195.0,
+        452.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-03",
+      "pdfPage": 192,
+      "rectangle": [
+        90.0,
+        666.0,
+        572.0,
+        745.0
+      ]
+    },
+    {
+      "asset": "r-theory-app-running",
+      "pdfPage": 193,
+      "rectangle": [
+        450.0,
+        196.0,
+        648.0,
+        365.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-04",
+      "pdfPage": 194,
+      "rectangle": [
+        74.0,
+        80.0,
+        570.0,
+        274.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-05",
+      "pdfPage": 194,
+      "rectangle": [
+        35.0,
+        330.0,
+        195.0,
+        432.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-06",
+      "pdfPage": 194,
+      "rectangle": [
+        100.0,
+        610.0,
+        570.0,
+        741.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-07",
+      "pdfPage": 195,
+      "rectangle": [
+        76.0,
+        578.0,
+        344.0,
+        725.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-08",
+      "pdfPage": 196,
+      "rectangle": [
+        68.0,
+        551.0,
+        568.0,
+        752.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-09",
+      "pdfPage": 197,
+      "rectangle": [
+        455.0,
+        89.0,
+        611.0,
+        144.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-10",
+      "pdfPage": 197,
+      "rectangle": [
+        454.0,
+        327.0,
+        614.0,
+        548.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-11",
+      "pdfPage": 198,
+      "rectangle": [
+        55.0,
+        678.0,
+        276.0,
+        737.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-12",
+      "pdfPage": 199,
+      "rectangle": [
+        150.0,
+        544.0,
+        563.0,
+        738.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-13",
+      "pdfPage": 200,
+      "rectangle": [
+        35.0,
+        87.0,
+        195.0,
+        268.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-14",
+      "pdfPage": 200,
+      "rectangle": [
+        80.0,
+        516.0,
+        250.0,
+        624.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-15",
+      "pdfPage": 201,
+      "rectangle": [
+        469.0,
+        106.0,
+        595.0,
+        272.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-16",
+      "pdfPage": 201,
+      "rectangle": [
+        454.0,
+        427.0,
+        616.0,
+        747.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-17",
+      "pdfPage": 202,
+      "rectangle": [
+        44.0,
+        213.0,
+        195.0,
+        365.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-18",
+      "pdfPage": 202,
+      "rectangle": [
+        44.0,
+        437.0,
+        185.0,
+        503.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-19",
+      "pdfPage": 202,
+      "rectangle": [
+        35.0,
+        566.0,
+        195.0,
+        719.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-20",
+      "pdfPage": 203,
+      "rectangle": [
+        455.0,
+        96.0,
+        614.0,
+        321.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-21",
+      "pdfPage": 203,
+      "rectangle": [
+        89.0,
+        528.0,
+        315.0,
+        650.0
+      ]
+    },
+    {
+      "asset": "r-theory-app-tendons",
+      "pdfPage": 204,
+      "rectangle": [
+        35.0,
+        245.0,
+        194.0,
+        528.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-22",
+      "pdfPage": 204,
+      "rectangle": [
+        315.0,
+        599.0,
+        565.0,
+        716.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-23",
+      "pdfPage": 205,
+      "rectangle": [
+        454.0,
+        503.0,
+        614.0,
+        745.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-24",
+      "pdfPage": 206,
+      "rectangle": [
+        45.0,
+        582.0,
+        285.0,
+        741.0
+      ]
+    },
+    {
+      "asset": "r-theory-app-muscle",
+      "pdfPage": 207,
+      "rectangle": [
+        450.0,
+        634.0,
+        615.0,
+        742.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-25",
+      "pdfPage": 208,
+      "rectangle": [
+        44.0,
+        96.0,
+        193.0,
+        331.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-26",
+      "pdfPage": 208,
+      "rectangle": [
+        35.0,
+        369.0,
+        195.0,
+        492.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-27",
+      "pdfPage": 208,
+      "rectangle": [
+        317.0,
+        576.0,
+        565.0,
+        668.0
+      ]
+    },
+    {
+      "asset": "r-theory-06-28",
+      "pdfPage": 209,
+      "rectangle": [
+        82.0,
+        333.0,
+        329.0,
+        493.0
+      ]
+    },
+    {
+      "asset": "r-theory-summary-01",
+      "pdfPage": 210,
+      "rectangle": [
+        446.0,
+        88.0,
+        563.0,
+        135.0
+      ]
+    },
+    {
+      "asset": "r-theory-summary-02",
+      "pdfPage": 210,
+      "rectangle": [
+        447.0,
+        193.0,
+        598.0,
+        294.0
+      ]
+    },
+    {
+      "asset": "r-theory-summary-03",
+      "pdfPage": 210,
+      "rectangle": [
+        447.0,
+        318.0,
+        615.0,
+        400.0
+      ]
+    },
+    {
+      "asset": "r-theory-summary-04",
+      "pdfPage": 210,
+      "rectangle": [
+        447.0,
+        428.0,
+        573.0,
+        508.0
+      ]
+    },
+    {
+      "asset": "r-theory-summary-05",
+      "pdfPage": 210,
+      "rectangle": [
+        445.0,
+        552.0,
+        603.0,
+        636.0
+      ]
+    }
+  ],
+  "numericVerifier": "raw_materials/physics/verify_chapter06_remaining_theory.py",
+  "mathCounts": {
+    "display": 135,
+    "inline": 577,
+    "findings": 0
+  },
+  "renderViewports": [
+    320,
+    375,
+    1440
+  ],
+  "renderCases": 18,
+  "browserStatus": "passed",
+  "completionBlocker": "Original end-of-chapter exercises are incomplete and remain outside these theory pages. Chapter stays draft.",
+  "fullBuild": "GitHub Actions only"
+}

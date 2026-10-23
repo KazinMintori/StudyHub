@@ -1,0 +1,455 @@
+{
+  "chapter": 7,
+  "status": "theory-reviewed-exercises-incomplete",
+  "sourcePDFPages": [
+    221,
+    244
+  ],
+  "fragments": [
+    {
+      "file": "raw_materials/physics/translations/chapter-07/00-mo-dau.md",
+      "sha256": "596871d780b4b5a4fd30e1aa9b0df676a7aa7ce123bcd4a5279be6c3c26532c6"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-07/01-muc-01.md",
+      "sha256": "721cbef581d8bca24d582d84c641118ed9e0924097595f6ca39ecddbc0d8b098"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-07/02-muc-02.md",
+      "sha256": "c489367d0aa7f0099d4e3e340e43d29b0af26cb1b966ed72d92a57bcd2d7eb50"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-07/03-muc-03.md",
+      "sha256": "b482a2958a47fa6eaa4a3c6bc575fbb9ab2ad3c93f084f9b7e2ed8a0851c197c"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-07/04-muc-04.md",
+      "sha256": "587f1bded9cb30ebd45deb13310fa2aed57e7c60a9a4c46013892d6f24b1bc3a"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-07/05-muc-05.md",
+      "sha256": "219f87252245c0e45aacc7cff13bed8ba555706ec07190daa40d62c2475b8b65"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-07/17-tom-tat.md",
+      "sha256": "93dc3be473dd3d1a67c09c669ac52b6c66fdf7941d78a7a3f52fc77db79ca3b3"
+    }
+  ],
+  "sections": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+  ],
+  "examples": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5",
+    "7.6",
+    "7.7",
+    "7.8",
+    "7.9",
+    "7.10",
+    "7.11",
+    "7.12",
+    "7.13",
+    "7.14"
+  ],
+  "selfChecks": [
+    "7.1",
+    "7.2",
+    "7.3",
+    "7.4",
+    "7.5"
+  ],
+  "figures": [
+    {
+      "asset": "r-theory-mo-dau",
+      "pdfPage": 221,
+      "rectangle": [
+        0.0,
+        0.0,
+        440.0,
+        246.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-01",
+      "pdfPage": 222,
+      "rectangle": [
+        35.0,
+        126.0,
+        195.0,
+        265.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-02",
+      "pdfPage": 222,
+      "rectangle": [
+        35.0,
+        390.0,
+        195.0,
+        745.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-03",
+      "pdfPage": 223,
+      "rectangle": [
+        78.0,
+        640.0,
+        440.0,
+        747.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-04",
+      "pdfPage": 224,
+      "rectangle": [
+        35.0,
+        502.0,
+        280.0,
+        660.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-05",
+      "pdfPage": 225,
+      "rectangle": [
+        455.0,
+        169.0,
+        648.0,
+        365.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-06",
+      "pdfPage": 226,
+      "rectangle": [
+        35.0,
+        84.0,
+        300.0,
+        320.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-07",
+      "pdfPage": 227,
+      "rectangle": [
+        455.0,
+        93.0,
+        616.0,
+        345.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-08",
+      "pdfPage": 227,
+      "rectangle": [
+        350.0,
+        400.0,
+        612.0,
+        560.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-09",
+      "pdfPage": 228,
+      "rectangle": [
+        35.0,
+        85.0,
+        572.0,
+        238.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-10",
+      "pdfPage": 228,
+      "rectangle": [
+        312.0,
+        574.0,
+        572.0,
+        742.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-11",
+      "pdfPage": 229,
+      "rectangle": [
+        78.0,
+        488.0,
+        335.0,
+        742.0
+      ]
+    },
+    {
+      "asset": "r-theory-tyu-7-01",
+      "pdfPage": 230,
+      "rectangle": [
+        250.0,
+        108.0,
+        530.0,
+        185.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-12",
+      "pdfPage": 230,
+      "rectangle": [
+        36.0,
+        424.0,
+        193.0,
+        639.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-13",
+      "pdfPage": 231,
+      "rectangle": [
+        455.0,
+        108.0,
+        616.0,
+        458.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-14",
+      "pdfPage": 231,
+      "rectangle": [
+        455.0,
+        636.0,
+        616.0,
+        745.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-15",
+      "pdfPage": 232,
+      "rectangle": [
+        36.0,
+        502.0,
+        194.0,
+        742.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-16",
+      "pdfPage": 233,
+      "rectangle": [
+        78.0,
+        385.0,
+        335.0,
+        510.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-17",
+      "pdfPage": 234,
+      "rectangle": [
+        36.0,
+        540.0,
+        290.0,
+        742.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-18",
+      "pdfPage": 235,
+      "rectangle": [
+        455.0,
+        605.0,
+        615.0,
+        742.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-19",
+      "pdfPage": 236,
+      "rectangle": [
+        378.0,
+        571.0,
+        506.0,
+        675.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-20",
+      "pdfPage": 237,
+      "rectangle": [
+        78.0,
+        562.0,
+        326.0,
+        742.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-21",
+      "pdfPage": 238,
+      "rectangle": [
+        0.0,
+        473.0,
+        193.0,
+        604.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-22",
+      "pdfPage": 240,
+      "rectangle": [
+        75.0,
+        74.0,
+        575.0,
+        195.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-23",
+      "pdfPage": 242,
+      "rectangle": [
+        35.0,
+        276.0,
+        194.0,
+        509.0
+      ]
+    },
+    {
+      "asset": "r-theory-hinh-7-24",
+      "pdfPage": 243,
+      "rectangle": [
+        75.0,
+        85.0,
+        440.0,
+        398.0
+      ]
+    },
+    {
+      "asset": "r-theory-ung-dung-7-01",
+      "pdfPage": 243,
+      "rectangle": [
+        455.0,
+        492.0,
+        612.0,
+        598.0
+      ]
+    },
+    {
+      "asset": "r-theory-tom-tat-01",
+      "pdfPage": 244,
+      "rectangle": [
+        449.0,
+        98.0,
+        573.0,
+        186.0
+      ]
+    },
+    {
+      "asset": "r-theory-tom-tat-02",
+      "pdfPage": 244,
+      "rectangle": [
+        449.0,
+        224.0,
+        574.0,
+        288.0
+      ]
+    },
+    {
+      "asset": "r-theory-tom-tat-03",
+      "pdfPage": 244,
+      "rectangle": [
+        448.0,
+        323.0,
+        574.0,
+        405.0
+      ]
+    },
+    {
+      "asset": "r-theory-tom-tat-04",
+      "pdfPage": 244,
+      "rectangle": [
+        448.0,
+        440.0,
+        584.0,
+        510.0
+      ]
+    },
+    {
+      "asset": "r-theory-tom-tat-05",
+      "pdfPage": 244,
+      "rectangle": [
+        449.0,
+        582.0,
+        574.0,
+        653.0
+      ]
+    },
+    {
+      "asset": "r-theory-ung-dung-chim-boi-ca",
+      "pdfPage": 223,
+      "rectangle": [
+        455.0,
+        191.0,
+        613.0,
+        395.0
+      ]
+    },
+    {
+      "asset": "r-theory-ung-dung-bao-ghe-pa",
+      "pdfPage": 232,
+      "rectangle": [
+        0.0,
+        180.0,
+        193.0,
+        354.0
+      ]
+    },
+    {
+      "asset": "r-theory-ung-dung-lop-xe",
+      "pdfPage": 238,
+      "rectangle": [
+        0.0,
+        207.0,
+        193.0,
+        353.0
+      ]
+    },
+    {
+      "asset": "r-theory-ung-dung-dia-hinh",
+      "pdfPage": 241,
+      "rectangle": [
+        450.0,
+        257.0,
+        648.0,
+        403.0
+      ]
+    },
+    {
+      "asset": "r-theory-tyu-7-02",
+      "pdfPage": 235,
+      "rectangle": [
+        119.0,
+        320.0,
+        441.0,
+        362.0
+      ]
+    }
+  ],
+  "numericVerifier": "raw_materials/physics/verify_chapter07_remaining_theory.py",
+  "sourceReview": "raw_materials/physics/reviews/ch07-parent-theory-20261024.md",
+  "mathCounts": {
+    "display": 158,
+    "inline": 651,
+    "findings": 0
+  },
+  "renderCases": 21,
+  "renderViewports": [
+    320,
+    375,
+    1440
+  ],
+  "browserStatus": "passed",
+  "completionBlocker": "Original end-of-chapter exercise solutions still need source and numerical review. Chapter remains draft."
+}

@@ -248,34 +248,108 @@ export const physics1Course = {
       "sourceChapter": 5
     },
     {
-      "slug": "06-cong-dong-nang",
-      "title": "Công và động năng",
-      "prerequisites": [
-        "tich-vo-huong",
-        "tich-phan",
-        "luc"
-      ],
-      "supportingConcepts": [
-        "cong-nang-luong"
-      ],
-      "status": "draft",
-      "number": 6,
-      "sourceChapter": 6
-    },
+  "slug": "06-cong-dong-nang",
+  "title": "Công và động năng",
+  "prerequisites": [
+    "vector",
+    "luc",
+    "tich-vo-huong",
+    "dao-ham",
+    "tich-phan"
+  ],
+  "supportingConcepts": [
+    "cong-nang-luong"
+  ],
+  "status": "draft",
+  "number": 6,
+  "sourceChapter": 6,
+  "topicGroups": [
     {
-      "slug": "07-the-nang-bao-toan-co-nang",
+      "title": "Công và động năng",
+      "topics": [
+        {
+          "slug": "cong-co-hoc",
+          "title": "Công cơ học",
+          "question": "Làm thế nào để đo lường tác dụng truyền năng lượng của một lực khi làm vật dịch chuyển?",
+          "source": "6.1"
+        },
+        {
+          "slug": "dong-nang-va-dinh-ly-cong-dong-nang",
+          "title": "Động năng và định lý công–động năng",
+          "question": "Công toàn phần tác dụng lên chất điểm làm thay đổi trạng thái chuyển động của nó như thế nào?",
+          "source": "6.2"
+        },
+        {
+          "slug": "cong-va-nang-luong-voi-luc-bien-doi",
+          "title": "Công và năng lượng với lực biến đổi",
+          "question": "Tính công thế nào khi lực thay đổi theo tọa độ hoặc tác dụng dọc theo một quỹ đạo cong?",
+          "source": "6.3"
+        },
+        {
+          "slug": "cong-suat",
+          "title": "Công suất",
+          "question": "Tốc độ sinh công hoặc tiêu thụ năng lượng theo thời gian được định lượng ra sao?",
+          "source": "6.4"
+        }
+      ]
+    }
+  ]
+},
+    {
+  "slug": "07-the-nang-bao-toan-co-nang",
+  "title": "Thế năng và bảo toàn năng lượng",
+  "prerequisites": [
+    "luc",
+    "cong-nang-luong",
+    "dao-ham",
+    "tich-phan"
+  ],
+  "supportingConcepts": [
+    "can-bang-co-hoc",
+    "gia-toc",
+    "vector"
+  ],
+  "status": "draft",
+  "number": 7,
+  "sourceChapter": 7,
+  "topicGroups": [
+    {
       "title": "Thế năng và bảo toàn năng lượng",
-      "prerequisites": [
-        "cong-nang-luong",
-        "dao-ham"
-      ],
-      "supportingConcepts": [
-        "luc"
-      ],
-      "status": "draft",
-      "number": 7,
-      "sourceChapter": 7
-    },
+      "topics": [
+        {
+          "slug": "the-nang-trong-truong",
+          "title": "Thế năng trọng trường",
+          "question": "Thế năng trọng trường được định nghĩa thế nào và khi nào cơ năng được bảo toàn trong chuyển động thẳng đứng?",
+          "source": "7.1"
+        },
+        {
+          "slug": "the-nang-dan-hoi",
+          "title": "Thế năng đàn hồi",
+          "question": "Năng lượng tích trữ trong lò xo biến dạng phụ thuộc vào độ biến dạng ra sao?",
+          "source": "7.2"
+        },
+        {
+          "slug": "luc-bao-toan-va-khong-bao-toan",
+          "title": "Lực bảo toàn và lực không bảo toàn",
+          "question": "Dấu hiệu phân biệt lực bảo toàn với lực không bảo toàn và định luật bảo toàn năng lượng tổng quát là gì?",
+          "source": "7.3"
+        },
+        {
+          "slug": "luc-va-the-nang",
+          "title": "Lực và thế năng",
+          "question": "Làm thế nào xác định lực tác dụng khi biết hàm thế năng của hệ?",
+          "source": "7.4"
+        },
+        {
+          "slug": "do-thi-nang-luong",
+          "title": "Đồ thị năng lượng",
+          "question": "Đồ thị thế năng cho biết gì về giới hạn chuyển động và các vị trí cân bằng bền, không bền?",
+          "source": "7.5"
+        }
+      ]
+    }
+  ]
+},
     {
       "slug": "08-dong-luong-va-cham",
       "title": "Động lượng, xung lượng và va chạm",

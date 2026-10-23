@@ -1,28 +1,20 @@
 ---
-course: vat-ly-1
-lecture: 07-the-nang-bao-toan-co-nang
-section: lecture
+course: "vat-ly-1"
+lecture: "07-the-nang-bao-toan-co-nang"
+section: "lecture"
 title: "Thế năng và bảo toàn năng lượng"
-prerequisites: ["cong-nang-luong","dao-ham"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Thế năng và bảo toàn năng lượng."
+prerequisites: ["luc","cong-nang-luong","dao-ham","tich-phan"]
+lessonStatus: "draft"
+sourceTranslation: "full"
+description: "Thế năng trọng trường, Thế năng đàn hồi, Lực bảo toàn và lực không bảo toàn, Lực và thế năng, Đồ thị năng lượng."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<!--@include: ../../../raw_materials/physics/translations/chapter-07/00-mo-dau.md-->
 
-## Đề cương chi tiết bài giảng
+<TopicMap />
 
-- Lời mở đầu và mục tiêu học tập.
-- 7.1 — Gravitational Potential Energy (từ trang 201).
-- 7.2 — Elastic Potential Energy (từ trang 210).
-- 7.3 — Conservative and Nonconservative Forces (từ trang 215).
-- 7.4 — Force and Potential Energy (từ trang 219).
-- 7.5 — Energy Diagrams (từ trang 222).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<!--@include: ../../../raw_materials/physics/translations/chapter-07/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 7.

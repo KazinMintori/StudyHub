@@ -1,27 +1,20 @@
 ---
-course: vat-ly-1
-lecture: 06-cong-dong-nang
-section: lecture
+course: "vat-ly-1"
+lecture: "06-cong-dong-nang"
+section: "lecture"
 title: "Công và động năng"
-prerequisites: ["tich-vo-huong","tich-phan","luc"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Công và động năng."
+prerequisites: ["vector","luc","tich-vo-huong","dao-ham","tich-phan"]
+lessonStatus: "draft"
+sourceTranslation: "full"
+description: "Công cơ học, Động năng và định lý công–động năng, Công và năng lượng với lực biến đổi, Công suất."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<!--@include: ../../../raw_materials/physics/translations/chapter-06/00-mo-dau.md-->
 
-## Đề cương chi tiết bài giảng
+<TopicMap />
 
-- Lời mở đầu và mục tiêu học tập.
-- 6.1 — Work (từ trang 171).
-- 6.2 — Kinetic Energy and the Work–Energy Theorem (từ trang 176).
-- 6.3 — Work and Energy with Varying Forces (từ trang 181).
-- 6.4 — Power (từ trang 187).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<!--@include: ../../../raw_materials/physics/translations/chapter-06/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 6.

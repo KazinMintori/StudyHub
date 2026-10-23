@@ -1,3 +1,5 @@
+import {physics1RemainingChapter7Parent} from '../../../../docs/.vitepress/physics1-remaining-ch07-course.mjs'
+import {physics1RemainingChapter6Parent} from '../../../../docs/.vitepress/physics1-remaining-ch06-course.mjs'
 import {physics1PriorityCourseData} from '../../../../docs/.vitepress/physics1-priority-course.mjs'
 import {physics1RemainingChapter4Parent} from '../../../../docs/.vitepress/physics1-remaining-ch04-course.mjs'
 import {physics1RemainingChapter3Parent} from '../../../../docs/.vitepress/physics1-remaining-ch03-course.mjs'
@@ -61,8 +63,8 @@ export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/1
   'vat-ly-1/03-chuyen-dong-khong-gian': physics1RemainingChapter3Parent.cheatsheet,
   'vat-ly-1/04-dinh-luat-newton': physics1RemainingChapter4Parent.cheatsheet,
   'vat-ly-1/05-ung-dung-newton': newtonApplicationsCheatsheet,
-  'vat-ly-1/06-cong-dong-nang': workEnergyCheatsheet,
-  'vat-ly-1/07-the-nang-bao-toan-co-nang': potentialEnergyCheatsheet,
+  'vat-ly-1/06-cong-dong-nang': physics1RemainingChapter6Parent.cheatsheet,
+  'vat-ly-1/07-the-nang-bao-toan-co-nang': physics1RemainingChapter7Parent.cheatsheet,
   'vat-ly-1/08-dong-luong-va-cham': momentumCheatsheet,
   'vat-ly-1/09-dong-hoc-vat-ran': physics1PriorityCourseData[9].cheatsheet,
   'vat-ly-1/10-dong-luc-hoc-quay': physics1PriorityCourseData[10].cheatsheet,

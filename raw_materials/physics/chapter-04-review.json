@@ -45,5 +45,11 @@
     "raw_materials/physics/translations/chapter-04/parent-18-dap-so-luyen-tap.md": "e2a222db72f2081e2b4449142684f6e7218eb3b3466b1f1ac887a6fcc937e300"
   },
   "fullBuild": "GitHub Actions only",
-  "publication": "Reviewed locally, awaiting GitHub build and deployment"
+  "publication": "Deployed successfully by GitHub Actions run40004528249, commit d07f686bf1560a20d4350635d953b85a6494c002",
+  "publicExerciseVerification": {
+    "total": 111,
+    "groups": 20,
+    "sourceGitBlobHashes": "passed",
+    "url": "https://kazinmintori.github.io/StudyHub/physics-exercises/ch04/index.json?revision=d07f686b"
+  }
 }
