@@ -26,3 +26,10 @@ Kiểm tra đã thực hiện:
 Hai tác vụAntigravity làm trong worktree riêng. Cầu nối trả lỗiNoneType khi kết thúc, nhưng thay đổi và báo cáo được lưu lại. Parent kiểmtraHEAD, phạmvi tệp và chỉ lấy phần đã rà. Bố cục cuối cùng doParent hoàn thiện sau yêu cầu mới bỏSlides. Không coi lỗi cầu nối là một lượt thựcthi thành công.
 
 Không chạy build toàn bộ tại máy người dùng. Bản giao diện phải đượcGitHub Actions build và deploy trước khi xác nhận đã xuất bản.
+
+Bổ sung khi tích hợp cuối:
+
+- Chín địa chỉSlides cấp môn được đổi thành đường dẫn chuyển tớiNotes có thật. Kịch bảnsync-courses.mjs cũng được sửa để build không tái tạo trangplaceholder hoặc liên kết#slides.
+- Tra cứu được gắn thêm ởTopicHeader cho các trang chủ đề con, dùng chung trạng thái tìm kiếm và điều khiển.
+- Tách công thức hàm vàHessian thành hai khối ngắn trong ghi chú khái niệm. Ma trận minh họa không đổi và đã tính lại các đạo hàm sai phân bằngPython.
+- Phần tra cứu tại một trang chủ đềToán choAI đã được kiểm ở320,375,1440 px và không tràn. Nội dung thân bài cũ của trang đó vẫn có công thức rộng vượt màn hình hẹp. Đây là vấn đề biên tập có trước, được ghi riêng trongtopic-lookup-results.json, không dùng kết quả tra cứu để chứng nhận toàn bộ công thức thân bài đã đạt.

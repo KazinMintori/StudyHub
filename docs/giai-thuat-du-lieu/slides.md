@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: giai-thuat-du-lieu
+redirectTo: "/giai-thuat-du-lieu/bai-giang/bai-01-bai-toan-du-lieu-lon-va-mo-hinh-thuat-toan.html"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

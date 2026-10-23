@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: vat-ly-2
+redirectTo: "/vat-ly-2/bai-giang/01-dien-truong-coulomb.html"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

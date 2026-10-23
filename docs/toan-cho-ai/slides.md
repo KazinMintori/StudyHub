@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: toan-cho-ai
+redirectTo: "/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.html"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

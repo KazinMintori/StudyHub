@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: bieu-dien-tri-thuc
+redirectTo: "/bieu-dien-tri-thuc/bai-giang/02-tim-kiem-mu.html"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

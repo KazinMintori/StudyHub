@@ -44,9 +44,8 @@ for (const course of selectedCourses) {
   await writeFile(path.join(dir,'index.md'),`---\nlayout: page\ntitle: ${JSON.stringify(course.name)}\ncourse: ${course.id}\nsection: overview\noutline: false\n---\n\n<CourseOverview />\n`)
   await writeFile(path.join(dir,'notes/index.md'),redirect(`/${course.id}/`))
   if (course.presentation === 'philosophy') continue
-  await writeFile(path.join(dir,'slides.md'),['xu-ly-du-lieu', 'xac-suat-thong-ke'].includes(course.id)
-    ? redirect(`/${course.id}/bai-giang/${course.lessons[0].slug}.html#slides`)
-    : `---\nlayout: page\nsearch: false\ncourse: ${course.id}\n---\n\n# Slides\n\nSlides not available because the Creator too lazy\n`)
+  const firstReadable = course.lessons.find(lesson => lesson.status === 'ready') || course.lessons[0]
+  await writeFile(path.join(dir,'slides.md'),redirect('/' + course.id + '/bai-giang/' + firstReadable.slug + '.html'))
   await writeFile(path.join(dir,'kien-thuc-can-co.md'),`---\nlayout: page\nsearch: false\ncourse: ${course.id}\nlegacyKind: foundations\n---\n\n<LegacyCourseRoute />\n`)
 }
 await mkdir(path.join(docs,'wiki'),{recursive:true})

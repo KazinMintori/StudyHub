@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: discrete-math
+redirectTo: "/discrete-math/bai-giang/logic.html"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

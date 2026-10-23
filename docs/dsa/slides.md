@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: dsa
+redirectTo: "/dsa/bai-giang/complexity.html"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />

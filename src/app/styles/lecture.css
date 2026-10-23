@@ -910,6 +910,7 @@
   white-space: nowrap;
 }
 .lecture-split-tool { margin-block: var(--space-2); }
+.topic-lookup-tool { margin-top:var(--space-4); }
 @media (max-width:479px) {
  .Layout .lecture-tabs-wrapper .lecture-tabs {
   display:grid;

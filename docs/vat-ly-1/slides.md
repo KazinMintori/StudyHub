@@ -1,9 +1,7 @@
 ---
 layout: page
 search: false
-course: vat-ly-1
+redirectTo: "/vat-ly-1/bai-giang/02-chuyen-dong-thang.html"
 ---
 
-# Slides
-
-Slides not available because the Creator too lazy
+<OldCourseLink />
