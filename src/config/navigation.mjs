@@ -9,14 +9,12 @@ export const NAVIGATION_BREAKPOINTS = {
 
 export const LECTURE_PART_IDS = [
   'kien-thuc-can-co',
-  'slides',
   'notes',
   'bai-tap',
   'cheatsheet'
 ]
 
 export const LECTURE_PART_HASHES = [
-  '#slides',
   '#notes',
   '#cheatsheet',
   '#kien-thuc-can-co',

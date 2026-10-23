@@ -55,7 +55,7 @@ watch(() => route.path, remember)
           </li>
         </ol>
       </div>
-      <a class="text-link" :href="studyLink(lecturePath(course.id, lesson.slug))">Về trang chương: bản đồ, Slides và Kiến thức nền</a>
+      <a class="text-link" :href="studyLink(lecturePath(course.id, lesson.slug))">Về trang chương và Kiến thức nền</a>
     </details>
   </section>
 </template>

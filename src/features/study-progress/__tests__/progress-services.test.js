@@ -358,7 +358,7 @@ test('getCourseQuickLinks generates correct links for standard and philosophy co
   }
   const stdLinks = getCourseQuickLinks(stdCourse)
   assert.strictEqual(stdLinks.notes, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu')
-  assert.strictEqual(stdLinks.slides, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#slides')
+  assert.strictEqual(stdLinks.slides, undefined)
   assert.strictEqual(stdLinks.cheatsheet, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#cheatsheet')
   assert.strictEqual(stdLinks.exercises, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#bai-tap')
 

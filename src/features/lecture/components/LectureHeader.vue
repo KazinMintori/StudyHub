@@ -2,16 +2,15 @@
 import { computed, ref, nextTick, onMounted, onUnmounted } from 'vue'
 import { useRouter, useData, onContentUpdated } from 'vitepress'
 import { useLecture, lecturePart } from '../../navigation/index.mjs'
-import { lecturePath, lectureConceptIds, lectureParts } from '../services/lecture-model.mjs'
+import { lecturePath, lectureParts } from '../services/lecture-model.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
-import CourseArt from '../../illustrations/components/CourseArt.vue'
 import SplitCheatsheetDrawer from './SplitCheatsheetDrawer.vue'
 
 const { course, lesson, part } = useLecture(), router = useRouter(), { page } = useData()
 const currentPart = computed(() => course.value?.parts?.find(p => p.lessons.includes(lesson.value?.slug)))
 const orderedParts = computed(() => course.value?.id === 'xac-suat-thong-ke'
-  ? ['notes', 'slides', 'kien-thuc-can-co', 'bai-tap', 'cheatsheet'].map(id => lectureParts.find(item => item.id === id))
+  ? ['notes', 'kien-thuc-can-co', 'bai-tap', 'cheatsheet'].map(id => lectureParts.find(item => item.id === id))
   : lectureParts)
 const updated = computed(() => page.value.lastUpdated ? new Date(page.value.lastUpdated).toLocaleDateString('vi-VN', { timeZone: 'Asia/Bangkok' }) : '')
 const mobileOutline = ref(null)
@@ -32,7 +31,7 @@ function handleKeydown(e) {
   if (typeof window === 'undefined') return
   const target = e.target
   if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target?.tagName) || target?.isContentEditable) return
-  if (e.altKey && ['1', '2', '3', '4', '5'].includes(e.key)) {
+  if (e.altKey && ['1', '2', '3', '4'].includes(e.key)) {
     const idx = parseInt(e.key, 10) - 1
     const targetPart = orderedParts.value[idx]
     if (targetPart && course.value && lesson.value) {
@@ -70,7 +69,6 @@ onUnmounted(() => {
   </nav>
 
   <header v-if="course && lesson" class="lecture-header book-header">
-    <div class="lecture-header-art"><CourseArt :course="course" /></div>
     <nav class="book-breadcrumbs" aria-label="Đường dẫn bài đọc">
       <a :href="studyLink(`/${course.id}/`)">{{ course.name }}</a>
       <template v-if="currentPart">
@@ -105,7 +103,6 @@ onUnmounted(() => {
         @click.prevent="select(item.id)"
       >
         {{ item.name }}
-        <span v-if="item.id === 'kien-thuc-can-co'" class="tab-count">{{ lectureConceptIds(lesson).length }}</span>
       </a>
     </nav>
     <SplitCheatsheetDrawer class="lecture-split-tool" />

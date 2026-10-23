@@ -10,7 +10,7 @@
 input:not([type=checkbox]):not([type=range]), select, textarea { min-width: 0; max-width: 100%; min-height: 44px; border: 1px solid var(--control); border-radius: var(--radius); padding: var(--space-2) var(--space-3); background: var(--paper); color: var(--ink); font-size: var(--fs-ui); }
 input::placeholder, textarea::placeholder { color: var(--ink-3); opacity: 1; }
 input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
-.workspace-tabs, .lecture-tabs { display: flex; overflow-x: auto; gap: var(--space-5); border-bottom: 1px solid var(--rule); }
+.workspace-tabs, .lecture-tabs { display: flex; flex-wrap: wrap; min-width: 0; overflow: visible; gap: 0 var(--space-4); border-bottom: 1px solid var(--rule); }
 .workspace-tabs a, .lecture-tabs a { display: inline-flex; align-items: center; flex-shrink: 0; min-height: 44px; padding: var(--space-2) var(--space-1); font-size: var(--fs-ui); border-bottom: 2px solid transparent; color: var(--ink-2); text-decoration: none; }
 .workspace-tabs a[aria-current=page], .lecture-tabs a[aria-current=page] { color: var(--ink); border-color: var(--tim); font-weight: 600; }
 .vp-doc .custom-block { font-family: var(--font-read); font-size: var(--fs-lead); padding: var(--space-3) var(--space-4); margin: 28px 0; border: 0; border-left: 3px solid var(--ink-3); border-radius: 0 var(--radius) var(--radius) 0; background: transparent; color: var(--ink); }
@@ -267,9 +267,9 @@ details.proof,
 .custom-block.details.proof {
   margin: var(--space-5) 0;
   padding: var(--space-4) var(--space-5);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
   background-color: var(--canvas);
-  border-left: 3px solid var(--tim);
+  border-left: 3px solid var(--proof-accent);
   transition: all 0.2s ease;
 }
 
@@ -277,7 +277,7 @@ details.proof > summary,
 .custom-block.details.proof > summary {
   cursor: pointer;
   font-weight: 600;
-  font-size: var(--fs-body);
+  font-size: var(--fs-ui);
   color: var(--tim);
   user-select: none;
   display: flex;
@@ -312,12 +312,41 @@ details.proof[open] > summary,
 }
 
 /* Ký hiệu kết thúc chứng minh Q.E.D (∎) tự động ở cuối khối */
-details.proof > :last-child::after,
-.custom-block.details.proof > :last-child::after {
-  content: ' \220E';
-  float: right;
+details.proof[open]::after,
+.custom-block.details.proof[open]::after {
+  content: '\220E';
+  display: block;
+  clear: both;
+  text-align: right;
   color: var(--tim);
   font-size: 1.15rem;
   line-height: 1;
   margin-left: var(--space-3);
+}
+
+:is(details.proof, .custom-block.details.proof) > summary { min-height: 44px; overflow: visible; }
+:is(details.proof, .custom-block.details.proof) > summary::marker { content: ""; }
+:is(details.proof, .custom-block.details.proof).proof-has-qed::after { content:none; }
+@media (prefers-reduced-motion: reduce) {
+  :is(details.proof, .custom-block.details.proof),
+  :is(details.proof, .custom-block.details.proof) > summary::before { transition: none; }
+}
+
+/* Native controls must not become tiny nested scroll areas. */
+:is(.study-button,.lecture-tabs a,.workspace-tabs a,.split-cheatsheet-trigger,.drawer-close-btn) {
+ overflow:visible!important;
+ scrollbar-width:none;
+}
+:is(.study-button,.lecture-tabs a,.workspace-tabs a,.split-cheatsheet-trigger,.drawer-close-btn)::-webkit-scrollbar {
+ display:none;width:0;height:0;
+}
+.lecture-reading-plain .main > .vp-doc :is(details.proof,.custom-block.details.proof) {
+ border:1px solid var(--rule);
+ border-inline-start:3px solid var(--proof-accent);
+ border-radius:var(--radius);
+ background:var(--canvas);
+ padding:var(--space-3) var(--space-4);
+}
+.lecture-reading-plain .main > .vp-doc :is(details.proof,.custom-block.details.proof) > summary {
+ min-height:44px;color:var(--tim);
 }

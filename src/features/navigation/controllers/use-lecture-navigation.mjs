@@ -21,7 +21,11 @@ export const lecturePart = ref('notes')
  */
 export function syncLecturePart() {
   if (typeof window === 'undefined') return
-  const rawHash = window.location.hash
+  let rawHash = window.location.hash
+  if (rawHash === '#slides') {
+    rawHash = '#notes'
+    window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search + rawHash)
+  }
   lecturePart.value = classifyLectureHash(rawHash, {
     allowedParts: lectureParts,
     isExerciseAnchor: (anchorId) => {

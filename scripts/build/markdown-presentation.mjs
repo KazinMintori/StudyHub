@@ -2,6 +2,7 @@ import { staticMathPlugin } from '../static-math-plugin.mjs'
 import { termLinks } from '../../docs/.vitepress/term-links.mjs'
 import { physicsImageLabels } from '../../docs/.vitepress/physics-image-labels.mjs'
 import { responsiveTablesPlugin } from './responsive-tables.mjs'
+import { setupProofRenderer } from './proof-containers.mjs'
 import { normalizeExerciseContainers, setupExerciseRenderer } from './exercise-containers.mjs'
 
 const HTML_TOKEN_RE = /<!--[\s\S]*?(?:-->|$)|<script\b(?:[^>"']|"[^"]*"|'[^']*')*(?:\/>|>[\s\S]*?(?:<\/script\s*>|$))|<style\b(?:[^>"']|"[^"]*"|'[^']*')*(?:\/>|>[\s\S]*?(?:<\/style\s*>|$))|(<img\b)((?:[^>"']|"[^"]*"|'[^']*')*?)(\s*\/?>)/gi
@@ -87,13 +88,17 @@ export function configureStudyMarkdown(md, { base, vueBinding = true }) {
       md.use(responsiveTablesPlugin)
       md.use(staticMathPlugin, { vueBinding })
       setupExerciseRenderer(md)
+      setupProofRenderer(md)
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
         state.src = normalizeExerciseContainers(state.src)
         state.src = state.src
           .replace(/^## Tự kiểm tra$/gm, '## Câu hỏi ôn lại')
           // A container title ends on the same line; never consume the next paragraph.
           .replace(/^[ \t]*::: example(?:[\t ]+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
-          .replace(/^[ \t]*::: proof(?:[\t ]+(.*))?$/gm, (_, title) => `::: details Chứng minh${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: proof(?:[\t ]+(.*))?$/gm, (_, title) => {
+            const label = title?.trim()
+            return '::: details ' + (label && /^Chứng minh\b/u.test(label) ? label : 'Chứng minh' + (label ? ': ' + label : ''))
+          })
           .replace(/^[ \t]*::: solution(?:[\t ]+(.*))?$/gm, (_, title) => {
             const label = title?.trim()
             const heading = label && /^Lời giải\b/i.test(label)

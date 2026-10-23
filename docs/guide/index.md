@@ -1,22 +1,23 @@
-# Hướng Dẫn Ôn Tập Hiệu Quả 
+# Hướng Dẫn Ôn Tập Hiệu Quả
 
 Website **UETệ** được xây dựng nhằm mục đích giúp bạn và bạn bè vượt qua các kỳ thi môn học một cách nhẹ nhàng nhất, với phương châm: **"Hiểu bản chất thay vì học vẹt"**.
 
 ---
 
-## Ba phần trong mỗi bài giảng
+## Các phần trong mỗi bài giảng
 
-- **Slides:** nắm ý chính, công thức và trọng tâm của các bài đã có nội dung. Dùng nút hoặc phím mũi tên trái/phải để chuyển slide.
-- **Notes:** giải thích chi tiết, ví dụ và minh họa chạy bằng code. Các thuật ngữ có gạch chân chấm dẫn tới Wiki. Rê chuột hoặc dùng Tab để xem giải thích nhanh, nhấn để đọc bài viết đầy đủ.
-- **Kiến thức nền:** nền tảng riêng của bài đang học, gồm định nghĩa, ví dụ và câu hỏi tự kiểm tra.
+- **Notes:** Giải thích chi tiết, ví dụ và minh họa chạy bằng code. Các thuật ngữ có gạch chân chấm dẫn tới Wiki. Rê chuột hoặc dùng Tab để xem giải thích nhanh, nhấn để đọc bài viết đầy đủ.
+- **Bài tập:** Đề bài và lời giải chi tiết để bạn tự luyện.
+- **Cheatsheet:** Định nghĩa, tính chất và công thức tra cứu nhanh.
+- **Kiến thức nền:** Nền tảng riêng của bài đang học, gồm định nghĩa, ví dụ và câu hỏi tự kiểm tra.
 
-Từ trang môn học, chọn một bài giảng. Ba phần nằm trong cùng bài. Khi đổi phần, tiêu đề và tiến độ vẫn thuộc bài đó. Nếu chưa chắc nền tảng, bắt đầu ở Kiến thức nền. Sau đó xem Slides để định hướng và đọc Notes để học sâu.
+Từ trang môn học, chọn một bài giảng. Các phần nằm trong cùng bài. Khi đổi phần, tiêu đề và tiến độ vẫn thuộc bài đó. Nếu chưa chắc nền tảng, bắt đầu ở Kiến thức nền. Sau đó đọc Notes, tự làm bài tập và dùng Cheatsheet để tra cứu.
 
 ## Wiki thuật ngữ
 
 Mở [Wiki](/wiki/) để tìm một khái niệm. Mỗi thuật ngữ có bài viết riêng, gồm giải thích kỹ thuật, ví dụ, câu hỏi tự kiểm tra và các liên kết sang thuật ngữ khác. Có thể đi từ Gradient sang Đạo hàm riêng, rồi Đạo hàm hoặc Vector mà vẫn ở trong Wiki. Cuối trang có danh sách bài giảng dùng khái niệm đó để quay lại việc học.
 
-Các bài “đang biên soạn” mới là khung nội dung. Slides chỉ tóm tắt những Notes đã có nội dung. Tìm kiếm toàn trang hỗ trợ cả bài giảng và thuật ngữ nền tảng.
+Các bài “đang biên soạn” mới là khung nội dung. Tìm kiếm toàn trang hỗ trợ cả bài giảng và thuật ngữ nền tảng.
 
 ## Công cụ học tập cá nhân
 

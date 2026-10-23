@@ -2,7 +2,7 @@
 .VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-ui); }
 .VPNavBar .VPNavBarSearch { display: none !important; }
 .VPNavBar .content-body { background: var(--paper); }
-.nav-extra-tools { display: inline-flex; align-items: center; gap: var(--space-2); margin-left: var(--space-3); }
+.nav-extra-tools { display: inline-flex; flex: 0 0 auto; min-width: 0; align-items: center; gap: var(--space-2); margin-left: var(--space-3); }
 .course-sidebar-toggle { display: none; }
 @media (min-width: 960px) {
   .course-sidebar-toggle {
@@ -126,4 +126,20 @@
   html.study-zen-mode .VPDoc .container { justify-content: center !important; }
   html.study-zen-mode .Layout .VPDoc .content-container,
   html.study-zen-mode .Layout .VPDoc.has-aside .content-container { max-width: 780px !important; margin-inline: auto !important; }
+}
+
+/* The reference pane gets its own space; it never covers the reading column. */
+@media (min-width:1280px) {
+ html.study-lookup-open .Layout .VPContent { padding-right:472px; }
+ html.study-lookup-open .Layout .VPDoc .aside { display:none; }
+ html.study-lookup-open .Layout .VPDoc .content,
+ html.study-lookup-open .Layout .VPDoc .content-container { min-width:0;max-width:100%; }
+}
+@media (max-width:1279px) {
+ html.study-lookup-open .Layout .VPContent { padding-bottom:calc(48dvh + var(--space-5)); }
+}
+@media (max-width:767px) {
+ .nav-extra-tools { position:fixed;top:var(--vp-nav-height);inset-inline:0;height:52px;box-sizing:border-box;justify-content:flex-end;margin:0;padding:var(--space-1) 16px;gap:var(--space-2);background:var(--paper);border-bottom:1px solid var(--rule); }
+ .Layout .VPContent { padding-top:calc(var(--vp-nav-height) + 52px); }
+ .VPNavBar:has(.VPNavBarHamburger[aria-expanded=true]) .nav-extra-tools { visibility:hidden; }
 }

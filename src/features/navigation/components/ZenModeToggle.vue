@@ -24,9 +24,11 @@ function toggleZen() {
 
 function handleKeydown(e) {
   if (frontmatter.value?.layout === 'home') return
-  const target = e.target
-  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target?.tagName) || target?.isContentEditable) return
+  if (e.isComposing) return
   if (e.metaKey || e.ctrlKey || e.altKey) return
+
+  const target = e.target
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target?.tagName) || target?.isContentEditable || Boolean(target?.closest?.('[contenteditable="true"]'))) return
 
   if (e.key && e.key.toLowerCase() === 'f') {
     e.preventDefault()
@@ -66,9 +68,6 @@ onUnmounted(() => {
     :aria-pressed="isZen"
     @click="toggleZen"
   >
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-    </svg>
     <span>{{ isZen ? 'Thoát Zen' : 'Zen (F)' }}</span>
   </button>
 </template>
@@ -77,12 +76,13 @@ onUnmounted(() => {
 .zen-toggle-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  min-height: 32px;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm, 6px);
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 var(--space-3, 12px);
+  border-radius: var(--radius-sm, 4px);
   font-family: var(--font-ui);
-  font-size: var(--fs-small, 13px);
+  font-size: var(--fs-small, 14px);
   font-weight: 500;
   color: var(--ink-2);
   background: var(--canvas);
@@ -90,11 +90,16 @@ onUnmounted(() => {
   cursor: pointer;
   transition: all var(--motion-fast, 120ms) var(--ease);
   white-space: nowrap;
+  box-sizing: border-box;
 }
 .zen-toggle-btn:hover {
   background: var(--sunken);
   color: var(--tim);
   border-color: var(--control);
+}
+.zen-toggle-btn:focus-visible {
+  outline: 2px solid var(--tim);
+  outline-offset: 2px;
 }
 .zen-toggle-btn.is-active {
   color: var(--tim);

@@ -1,10 +1,9 @@
 import { loadConceptData } from '../../wiki/services/concept-loader.mjs'
 import { buildLectureCheatsheet } from './cheatsheet-builder.mjs'
 import { cheatsheetLoaders } from './cheatsheet-loaders.mjs'
-import { lectureSlides } from './lecture-model.mjs'
 import { foundationGroupsFor } from './panel-rules.mjs'
 
-// Slides, cheatsheets, labs and concept notes are only shown after a reader
+// Cheatsheets, labs and concept notes are only shown after a reader
 // opens a lecture tab, and none of them is part of the server-rendered page.
 // Each course module becomes its own chunk, so a lecture downloads only its
 // course data instead of every subject's slides on every page.
@@ -28,7 +27,6 @@ async function loadPayload(course, lesson) {
   const { concepts } = conceptData
   return {
     concepts,
-    slides: lectureSlides(sourceCourse, lesson),
     cheatsheet: buildLectureCheatsheet(sourceCourse, lesson, { explicit, concepts }),
     foundationGroups: foundationGroupsFor(lesson, concepts),
     lab: labs.getCourseLab(course, lesson)

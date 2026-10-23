@@ -101,7 +101,7 @@ defineExpose({ show })
         <h2 id="welcome-title">Chào mừng đến với UETệ</h2>
         <p id="welcome-description" class="welcome-description">Tìm bài giảng theo học phần, hiểu lại những kiến thức nền và ôn tập theo nhịp học của bạn.</p>
         <dl class="welcome-features">
-          <div><dt>Bài giảng</dt><dd>Đọc Notes, ôn nhanh với Slides và luyện tập qua các bài có lời giải.</dd></div>
+          <div><dt>Bài giảng</dt><dd>Đọc bài giảng, tra công thức và luyện tập qua các bài có lời giải.</dd></div>
           <div><dt>Wiki kiến thức</dt><dd>Tra cứu thuật ngữ và bổ sung kiến thức nền ngay khi cần.</dd></div>
           <div><dt>Góc học tập</dt><dd>Ôn bằng flashcard, lưu ghi chú và hẹn giờ tập trung.</dd></div>
         </dl>

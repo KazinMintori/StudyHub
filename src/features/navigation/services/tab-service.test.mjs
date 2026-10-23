@@ -40,7 +40,7 @@ describe('tab-service: normalizeHash', () => {
 
 describe('tab-service: isValidLecturePartId', () => {
   test('validates string array and object array of allowed parts', () => {
-    assert.equal(isValidLecturePartId('slides', LECTURE_PART_IDS), true)
+    assert.equal(isValidLecturePartId('slides', LECTURE_PART_IDS), false)
     assert.equal(isValidLecturePartId('notes', LECTURE_PART_IDS), true)
     assert.equal(isValidLecturePartId('bai-tap', LECTURE_PART_IDS), true)
     assert.equal(isValidLecturePartId('kien-thuc-can-co', LECTURE_PART_IDS), true)
@@ -60,7 +60,7 @@ describe('tab-service: isValidLecturePartId', () => {
 
 describe('tab-service: classifyLectureHash', () => {
   test('classifies direct tab hashes correctly', () => {
-    assert.equal(classifyLectureHash('#slides'), 'slides')
+    assert.equal(classifyLectureHash('#slides'), 'notes')
     assert.equal(classifyLectureHash('#notes'), 'notes')
     assert.equal(classifyLectureHash('#cheatsheet'), 'cheatsheet')
     assert.equal(classifyLectureHash('#kien-thuc-can-co'), 'kien-thuc-can-co')
@@ -68,7 +68,7 @@ describe('tab-service: classifyLectureHash', () => {
   })
 
   test('classifies hashes without leading hash prefix', () => {
-    assert.equal(classifyLectureHash('slides'), 'slides')
+    assert.equal(classifyLectureHash('slides'), 'notes')
     assert.equal(classifyLectureHash('cheatsheet'), 'cheatsheet')
   })
 
@@ -117,7 +117,7 @@ describe('tab-service: isSamePageLectureLink', () => {
       'https://studyhub.uet.vnu.edu.vn/toan-ai/bai-giang/gioi-thieu#slides',
       currentHref
     )
-    assert.deepEqual(result1, { isMatch: true, part: 'slides' })
+    assert.deepEqual(result1, { isMatch: false, part: null })
 
     const result2 = isSamePageLectureLink('#cheatsheet', currentHref)
     assert.deepEqual(result2, { isMatch: true, part: 'cheatsheet' })

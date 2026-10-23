@@ -2,7 +2,6 @@ import { findCourse } from '../../../content/catalog.mjs'
 import { readingMetadata } from '../../../../docs/.vitepress/reading-metadata.mjs'
 export const lectureParts = [
   { id: 'kien-thuc-can-co', name: 'Kiến thức nền' },
-  { id: 'slides', name: 'Slides' },
   { id: 'notes', name: 'Notes' },
   { id: 'bai-tap', name: 'Bài tập' },
   { id: 'cheatsheet', name: 'Cheatsheet' }
@@ -16,7 +15,7 @@ export function findLecture(courseId, slug) {
   return course?.lessons.find(lesson => lesson.slug === slug) || (course?.review?.slug === slug ? course.review : undefined)
 }
 
-// A long lecture can be split into topic pages. The lecture page stays the chapter hub (Notes, Slides,
+// A long lecture can be split into topic pages. The lecture page stays the chapter hub (Notes, Cheatsheet,
 // Kiến thức nền); each topic lives at /<course>/bai-giang/<lecture>/<topic> and is read in catalog order.
 export const lessonTopics = lesson => (lesson?.topicGroups || []).flatMap((group, groupIndex) =>
   group.topics.map(topic => ({ ...topic, group: group.title, groupIndex })))

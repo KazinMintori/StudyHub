@@ -49,9 +49,9 @@ onUnmounted(() => { observer?.disconnect(); document.body.style.overflow = '' })
           title="Đổi màu nền hiển thị ảnh/sơ đồ (hữu ích cho sơ đồ PNG trong suốt)"
           @click="cycleBg"
         >
-          <span v-if="canvasBg === 'auto'">🌗 Nền: Tự động</span>
-          <span v-else-if="canvasBg === 'light'">☀️ Nền: Sáng</span>
-          <span v-else>🌙 Nền: Tối</span>
+          <span v-if="canvasBg === 'auto'">Nền: Tự động</span>
+          <span v-else-if="canvasBg === 'light'">Nền: Sáng</span>
+          <span v-else>Nền: Tối</span>
         </button>
         <button class="study-button" aria-label="Thu nhỏ" @click="scale = Math.max(.5, scale - .25)">−</button>
         <span class="small">{{ Math.round(scale * 100) }}%</span>
@@ -79,9 +79,12 @@ onUnmounted(() => { observer?.disconnect(); document.body.style.overflow = '' })
 <style>
 .diagram-dialog { width: min(1100px, 94vw); max-width: 94vw; height: 88vh; max-height: 88vh; margin: auto; padding: 20px; border: 1px solid var(--vp-c-border); border-radius: 10px; background: var(--vp-c-bg); color: var(--vp-c-text-1); }
 .diagram-dialog::backdrop { background: var(--scrim); }
-.diagram-toolbar { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); font-size: var(--fs-small); padding-bottom: var(--space-4); border-bottom: 1px solid var(--vp-c-divider); }
-.diagram-scroll { overflow: auto; height: calc(100% - 75px); padding-top: 25px; }
-.diagram-media { margin: auto; transition: background-color var(--motion-fast, 120ms) var(--ease); }
+.diagram-toolbar { display: flex; flex-wrap:wrap; justify-content: space-between; align-items: center; gap: var(--space-2); font-size: var(--fs-small); padding-bottom: var(--space-3); border-bottom: 1px solid var(--vp-c-divider); }
+.diagram-dialog { display:none;flex-direction:column; }
+.diagram-dialog[open] { display:flex; }
+.diagram-scroll { overflow: auto; flex:1;min-height:0; padding-top:var(--space-4);scrollbar-width:none; }
+.diagram-scroll::-webkit-scrollbar { display:none;width:0;height:0; }
+.diagram-media { margin: auto; }
 .diagram-media.force-light-bg {
   background-color: var(--printed-paper) !important;
   color: var(--diagram-light-ink) !important;

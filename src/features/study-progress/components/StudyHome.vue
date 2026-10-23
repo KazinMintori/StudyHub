@@ -1,12 +1,7 @@
 <script setup>
-import { useRouter } from 'vitepress'
 import { useStudyHome } from '../controllers/useStudyHome.js'
 import { studyLink } from '../../../core/routing/links.js'
-import CourseArt from '../../illustrations/components/CourseArt.vue'
-import HeroArt from '../../illustrations/components/HeroArt.vue'
-import SpotArt from '../../illustrations/components/SpotArt.vue'
 
-const router = useRouter()
 const {
   query,
   selectedCategory,
@@ -28,14 +23,8 @@ const totalLessons = catalog.reduce((sum, course) => sum + course.lessons.length
 const tools = [
   { name: 'wiki', tone: 'lam', title: 'Wiki thuật ngữ', text: 'Tra định nghĩa, ví dụ và câu hỏi ôn lại của từng khái niệm nền.', href: '/wiki/' },
   { name: 'tools', tone: 'hong', title: 'Góc học tập', text: 'Flashcard, sổ ghi chú và hẹn giờ tập trung trong một chỗ.', href: '/goc-hoc-tap' },
-  { name: 'guide', tone: 'ngoc', title: 'Hướng dẫn học', text: 'Cách đọc một bài: Notes, Slides, Kiến thức nền và Bài tập.', href: '/guide/' }
+  { name: 'guide', tone: 'ngoc', title: 'Hướng dẫn học', text: 'Cách đọc một bài: Notes, Cheatsheet, Kiến thức nền và Bài tập.', href: '/guide/' }
 ]
-
-function goToQuickLink(href) {
-  if (href) {
-    router.go(studyLink(href))
-  }
-}
 </script>
 
 <template>
@@ -46,7 +35,7 @@ function goToQuickLink(href) {
           <p class="home-eyebrow">Không gian tự học cho sinh viên UET</p>
           <h1 id="home-title">Bài giảng ôn tập cho sinh viên UET</h1>
           <p class="home-lead">
-            {{ catalog.length }} học phần, {{ totalLessons }} bài giảng có Notes, Slides, Kiến thức nền và bài tập có lời giải.
+            {{ catalog.length }} học phần, {{ totalLessons }} bài giảng có Notes, Cheatsheet, Kiến thức nền và bài tập có lời giải.
           </p>
         </header>
 
@@ -55,13 +44,8 @@ function goToQuickLink(href) {
             <div class="resume-copy">
               <div class="resume-header-row">
                 <span class="resume-kicker">
-                  <svg class="resume-kicker-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
-                  </svg>
                   <span>{{ resume ? 'Tiếp tục bài giảng' : 'Bắt đầu học' }}</span>
                 </span>
-                <span class="resume-top-divider" aria-hidden="true">·</span>
                 <span class="course-badge">{{ activeResume.course.name }}</span>
                 <template v-if="getLessonChapter(activeResume.course, activeResume.lesson)">
                   <span class="resume-path-sep" aria-hidden="true">/</span>
@@ -102,7 +86,6 @@ function goToQuickLink(href) {
           </div>
         </section>
       </div>
-      <div class="home-hero-art"><HeroArt /></div>
     </section>
 
     <section id="hoc-phan" aria-labelledby="course-heading">
@@ -136,65 +119,57 @@ function goToQuickLink(href) {
       </nav>
 
       <div class="course-list">
-        <a
+        <article
           v-for="(course, index) in visibleCourses"
           :key="course.id"
           class="course-row"
           :style="{ '--card-index': index }"
-          :href="studyLink(`/${course.id}/`)"
         >
-          <div class="course-card-art"><CourseArt :course="course" /></div>
-          <div class="course-copy">
-            <h3>{{ course.name }}</h3>
-            <p v-if="course.description" class="course-summary">{{ course.description }}</p>
-            <div class="course-quick-actions" @click.stop>
-              <button
-                v-if="getCourseQuickLinks(course).notes"
-                type="button"
-                class="action-pill"
-                title="Đọc bài giảng chi tiết (Notes)"
-                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).notes)"
-              >
-                📖 Bài học
-              </button>
-              <button
-                v-if="getCourseQuickLinks(course).slides"
-                type="button"
-                class="action-pill"
-                title="Xem bộ thẻ ôn tập (Slides)"
-                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).slides)"
-              >
-                ⚡ Slides
-              </button>
-              <button
-                v-if="getCourseQuickLinks(course).cheatsheet"
-                type="button"
-                class="action-pill highlight"
-                title="Mở tờ tra cứu công thức (Cheatsheet)"
-                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).cheatsheet)"
-              >
-                📐 Cheatsheet
-              </button>
-              <button
-                v-if="getCourseQuickLinks(course).exercises"
-                type="button"
-                class="action-pill"
-                title="Làm bài tập tự luyện"
-                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).exercises)"
-              >
-                ✍️ Bài tập
-              </button>
+          <div class="course-card-content">
+            <div class="course-copy">
+              <div class="course-meta course-end">
+                <span class="course-tag-pill">{{ getCourseCategoryLabel(course.id) }}</span>
+                <span class="course-lesson-count">{{ course.lessons.length }}&nbsp;{{ course.presentation === 'philosophy' ? 'chương' : 'bài' }}</span>
+              </div>
+              <h3 class="course-title">
+                <a :href="studyLink(`/${course.id}/`)" class="course-title-link">
+                  <span>{{ course.name }}</span>
+                  <span class="course-open" aria-hidden="true">→</span>
+                </a>
+              </h3>
+              <p v-if="course.description" class="course-summary">{{ course.description }}</p>
             </div>
           </div>
-          <span class="course-end">
-            <span class="course-tag-pill">{{ getCourseCategoryLabel(course.id) }}</span>
-            <span class="course-lesson-count">{{ course.lessons.length }} {{ course.presentation === 'philosophy' ? 'chương' : 'bài' }}</span>
-            <span class="course-open" aria-hidden="true">→</span>
-          </span>
-        </a>
+
+          <div class="course-quick-actions" aria-label="Lối tắt học phần">
+            <a
+              v-if="getCourseQuickLinks(course).notes"
+              class="action-pill"
+              :href="studyLink(getCourseQuickLinks(course).notes)"
+              title="Đọc bài giảng chi tiết (Notes)"
+            >
+              Bài học
+            </a>
+            <a
+              v-if="getCourseQuickLinks(course).cheatsheet"
+              class="action-pill"
+              :href="studyLink(getCourseQuickLinks(course).cheatsheet)"
+              title="Tra cứu bảng công thức (Cheatsheet)"
+            >
+              Cheatsheet
+            </a>
+            <a
+              v-if="getCourseQuickLinks(course).exercises"
+              class="action-pill"
+              :href="studyLink(getCourseQuickLinks(course).exercises)"
+              title="Làm bài tập tự luyện"
+            >
+              Bài tập
+            </a>
+          </div>
+        </article>
       </div>
       <div v-if="!visibleCourses.length" class="empty-state empty-state-art" role="status">
-        <SpotArt name="empty" />
         <p>Không tìm thấy học phần. Thử tên môn hoặc chủ đề khác.</p>
       </div>
     </section>
@@ -203,7 +178,6 @@ function goToQuickLink(href) {
       <h2 id="tools-heading">Công cụ đi kèm</h2>
       <div class="home-tool-grid">
         <a v-for="tool in tools" :key="tool.name" class="home-tool" :href="studyLink(tool.href)">
-          <SpotArt :name="tool.name" :tone="tool.tone" />
           <span class="home-tool-copy">
             <strong>{{ tool.title }}</strong>
             <span>{{ tool.text }}</span>

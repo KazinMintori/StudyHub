@@ -514,10 +514,10 @@
   color: var(--ink);
   overflow: visible;
   position: relative;
-  padding-left: 14px;
+  padding-left: 0;
 }
 .variables-list li::before {
-  content: "•";
+  content: none;
   position: absolute;
   left: 2px;
   color: var(--tim);
@@ -866,12 +866,10 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-  position: sticky;
-  top: var(--vp-nav-height);
-  z-index: 20;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  flex-wrap: wrap;
+  min-width: 0;
+  background: var(--paper);
   border-bottom: 1px solid var(--rule);
   margin: 0 0 var(--space-5);
 }
@@ -893,62 +891,32 @@
   }
 }
 
+.next-lesson-nav { display: flex; justify-content: flex-end; margin-top: var(--space-5); }
+.next-lesson-link { min-width: 0; overflow-wrap: anywhere; }
 
-/* Micro-Checkpoints & Progress on Sidebar */
-.lesson-checkpoint-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.lecture-tabs-wrapper .lecture-tabs {
+  flex: 1 1 480px;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  min-width: 0;
+  overflow: visible;
+  margin-inline: 0;
+  padding-inline: 0;
+  gap: 0 var(--space-3);
 }
-
-.checkpoint-toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  font-size: var(--fs-ui, 14px);
-  font-weight: 600;
-  border-radius: var(--radius);
-  background: var(--canvas);
-  color: var(--ink-2);
-  border: 1px solid var(--rule);
-  cursor: pointer;
-  transition: all var(--motion-fast) var(--ease);
+.lecture-tabs-wrapper .lecture-tabs a {
+  min-width: 0;
+  min-height: 44px;
+  overflow: visible;
+  white-space: nowrap;
 }
-
-.checkpoint-toggle-btn:hover {
-  background: var(--sunken);
-  color: var(--tim);
-  border-color: var(--control);
-}
-
-.checkpoint-toggle-btn.is-completed {
-  background: var(--xanh-soft);
-  color: var(--xanh);
-  border-color: var(--xanh);
-}
-
-.checkpoint-toggle-btn.is-completed .checkpoint-icon {
-  font-weight: 700;
-}
-
-.next-lesson-nav {
-  margin-left: auto;
-}
-
-.next-lesson-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 500;
-}
-
-/* Biểu tượng tích xanh hoàn thành trên Sidebar của VitePress */
-.VPSidebar a.link.is-lecture-completed .text::after {
-  content: ' ✓';
-  color: var(--xanh);
-  font-weight: 700;
-  margin-left: 0.35rem;
+.lecture-split-tool { margin-block: var(--space-2); }
+@media (max-width:479px) {
+ .Layout .lecture-tabs-wrapper .lecture-tabs {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  width:100%;
+  flex-basis:100%;
+  gap:0 var(--space-2);
+ }
+ .Layout .lecture-tabs-wrapper .lecture-tabs a { justify-content:center;white-space:nowrap; }
 }

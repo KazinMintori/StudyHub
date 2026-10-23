@@ -10,6 +10,7 @@
   --hong: #b4316f; --hong-soft: #fbe9f2; --cam: #c25417; --cam-soft: #fdeee4;
   --printed-paper: #ffffff; --scrim: rgb(23 22 29 / .92);
   --math-ink: var(--ink);
+  --proof-accent: #6366f1;
   --diagram-light-ink: #1e293b; --diagram-dark-paper: #0f141c; --diagram-dark-ink: #f8fafc;
   --diagram-shadow: 0 4px 20px rgb(0 0 0 / .25);
   --pomodoro-progress-start: #6366f1; --pomodoro-progress-end: #10b981;

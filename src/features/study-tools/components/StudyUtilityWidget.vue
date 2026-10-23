@@ -4,7 +4,7 @@ import { useRoute } from 'vitepress'
 import { useFocusTimer } from '../controllers/useFocusTimer.js'
 
 const route = useRoute()
-const { display, running, toggle, reset, remaining, minutes } = useFocusTimer()
+const { display, running, toggle, reset, remaining, minutes, finished } = useFocusTimer()
 
 const progressPercent = computed(() => {
   const total = (minutes?.value || 25) * 60
@@ -13,8 +13,11 @@ const progressPercent = computed(() => {
   return Math.min(100, Math.max(0, ((total - rem) / total) * 100))
 })
 
+const showTopBar = computed(() => running?.value || progressPercent.value > 0)
+
 const showScratchpad = ref(false)
 const noteContent = ref('')
+const storageError = ref(false)
 const widgetRef = ref(null)
 
 const storageKey = computed(() => {
@@ -22,12 +25,26 @@ const storageKey = computed(() => {
   return `studyhub:scratchpad:${p.replace(/\.html$/, '')}`
 })
 
+const hasNote = computed(() => Boolean(noteContent.value && noteContent.value.trim().length > 0))
+
+const storageStatusText = computed(() => {
+  if (storageError.value) {
+    return 'Không thể lưu (Bộ nhớ trình duyệt bị chặn hoặc đầy)'
+  }
+  if (hasNote.value) {
+    return 'Đã lưu tự động trên trình duyệt'
+  }
+  return 'Tự động lưu vào trình duyệt'
+})
+
 function loadNote() {
   if (typeof window === 'undefined') return
   try {
     noteContent.value = localStorage.getItem(storageKey.value) || ''
+    storageError.value = false
   } catch {
     noteContent.value = ''
+    storageError.value = true
   }
 }
 
@@ -41,8 +58,9 @@ watch(noteContent, (val) => {
     } else {
       localStorage.removeItem(storageKey.value)
     }
+    storageError.value = false
   } catch {
-    // Ignore storage quota errors
+    storageError.value = true
   }
 })
 
@@ -54,6 +72,7 @@ function handleClickOutside(e) {
 
 function handleKeydown(e) {
   if (e.key === 'Escape' && showScratchpad.value) {
+    e.stopPropagation()
     showScratchpad.value = false
   }
 }
@@ -76,60 +95,53 @@ onUnmounted(() => {
 
 <template>
   <div ref="widgetRef" class="study-utility-widget">
-    <!-- Top-edge Ambient Pomodoro Bar -->
+    <!-- Top-edge Ambient Pomodoro Bar: exactly 2px, subdued token singlecolor, no glow, no pointer interception -->
     <Teleport to="body">
       <div
-        v-if="running || (progressPercent > 0 && progressPercent < 100)"
+        v-if="showTopBar"
         class="studyhub-pomodoro-top-bar"
         :style="{ width: `${progressPercent}%` }"
         aria-hidden="true"
       />
     </Teleport>
 
-    <!-- Ambient Pomodoro Pill -->
-    <div class="pomodoro-pill" :class="{ 'is-running': running }">
+    <!-- Ambient Pomodoro Pill with clear compact text labels, 44px targets -->
+    <div class="pomodoro-pill" :class="{ 'is-running': running, 'is-finished': finished }">
       <button
         type="button"
         class="pomo-toggle"
-        :title="running ? 'Tạm dừng Pomodoro' : 'Bắt đầu phiên học tập trung'"
+        :title="running ? 'Tạm dừng Pomodoro' : 'Bắt đầu Pomodoro'"
         :aria-label="running ? 'Tạm dừng Pomodoro' : 'Bắt đầu Pomodoro'"
         @click="toggle"
       >
-        <span class="pomo-dot" aria-hidden="true" />
+        <span class="pomo-label">{{ running ? 'Dừng' : 'Học' }}</span>
         <span class="pomo-time">{{ display }}</span>
       </button>
       <button
         type="button"
         class="pomo-reset"
-        title="Đặt lại đồng hồ"
+        title="Đặt lại Pomodoro"
         aria-label="Đặt lại Pomodoro"
         @click="reset"
       >
-        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polyline points="1 4 1 10 7 10" />
-          <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
-        </svg>
+        Đặt lại
       </button>
     </div>
 
-    <!-- Contextual Scratchpad Button -->
+    <!-- Contextual Scratchpad Button: clear compact text label 'Nháp', 44px target -->
     <button
       type="button"
       class="scratchpad-toggle-btn"
-      :class="{ 'has-note': noteContent.trim().length > 0, 'is-active': showScratchpad }"
-      title="Sổ nháp cho bài này (Tự động lưu)"
-      :aria-label="showScratchpad ? 'Đóng sổ nháp' : 'Mở sổ nháp'"
+      :class="{ 'has-note': hasNote, 'is-active': showScratchpad }"
+      :title="showScratchpad ? 'Đóng sổ nháp' : 'Sổ nháp cho bài này'"
+      :aria-label="showScratchpad ? 'Đóng sổ nháp' : (hasNote ? 'Mở sổ nháp (đang có ghi chú)' : 'Mở sổ nháp')"
       :aria-expanded="showScratchpad"
       @click="showScratchpad = !showScratchpad"
     >
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M12 20h9" />
-        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-      </svg>
-      <span v-if="noteContent.trim().length > 0" class="note-indicator" aria-hidden="true" />
+      <span>Nháp</span>
     </button>
 
-    <!-- Contextual Scratchpad Popover -->
+    <!-- Contextual Scratchpad Popover: honest storage status, 44px close target -->
     <div v-if="showScratchpad" class="scratchpad-popover" role="dialog" aria-label="Sổ nháp bài học">
       <div class="scratchpad-header">
         <span class="scratchpad-title">Ghi chú nháp cho bài này</span>
@@ -137,9 +149,10 @@ onUnmounted(() => {
           type="button"
           class="scratchpad-close-btn"
           aria-label="Đóng sổ nháp"
+          title="Đóng sổ nháp"
           @click="showScratchpad = false"
         >
-          ✕
+          Đóng
         </button>
       </div>
       <textarea
@@ -150,7 +163,9 @@ onUnmounted(() => {
         aria-label="Nội dung ghi chú nháp"
       />
       <div class="scratchpad-footer">
-        <span class="scratchpad-hint">Đã lưu tự động trên trình duyệt</span>
+        <span class="scratchpad-hint" :class="{ 'is-error': storageError }">
+          {{ storageStatusText }}
+        </span>
       </div>
     </div>
   </div>
@@ -162,67 +177,99 @@ onUnmounted(() => {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2, 8px);
-  margin-inline: var(--space-2, 8px);
+  flex-shrink: 0;
 }
 
 .pomodoro-pill {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  min-height: 32px;
-  padding: 3px 8px;
-  border-radius: 999px;
+  gap: var(--space-1, 4px);
+  min-height: 44px;
+  padding: 0 4px;
+  border-radius: var(--radius-sm, 4px);
   background: var(--canvas);
   border: 1px solid var(--rule);
   font-variant-numeric: tabular-nums;
   font-family: var(--font-ui);
-  font-size: var(--fs-small, 13px);
-  transition: all var(--motion-fast, 120ms) var(--ease);
+  font-size: var(--fs-small, 14px);
+  box-sizing: border-box;
+  transition: border-color var(--motion-fast, 120ms) var(--ease),
+              background-color var(--motion-fast, 120ms) var(--ease);
 }
 .pomodoro-pill.is-running {
   border-color: var(--xanh);
   background: var(--xanh-soft);
 }
+.pomodoro-pill.is-finished {
+  border-color: var(--vang);
+  background: var(--vang-soft);
+}
 
 .pomo-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: var(--space-1, 4px);
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 var(--space-2, 8px);
   border: none;
   background: transparent;
   color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--fs-small, 14px);
   font-weight: 500;
   cursor: pointer;
-  padding: 0;
+  border-radius: var(--radius-sm, 4px);
+  box-sizing: border-box;
+  transition: background-color var(--motion-fast, 120ms) var(--ease),
+              color var(--motion-fast, 120ms) var(--ease);
+  white-space: nowrap;
 }
-.pomo-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--ink-3);
-  transition: all var(--motion-fast, 120ms) var(--ease);
+.pomo-toggle:hover {
+  background: var(--sunken);
+  color: var(--tim);
 }
-.pomodoro-pill.is-running .pomo-dot {
-  background: var(--xanh);
-  box-shadow: 0 0 6px var(--xanh);
+.pomo-toggle:focus-visible {
+  outline: 2px solid var(--tim);
+  outline-offset: -2px;
+}
+
+.pomo-label {
+  font-weight: 600;
+}
+
+.pomo-time {
+  font-variant-numeric: tabular-nums;
 }
 
 .pomo-reset {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 var(--space-2, 8px);
   border: none;
   background: transparent;
   color: var(--ink-3);
+  font-family: var(--font-ui);
+  font-size: var(--fs-meta, 13px);
+  font-weight: 500;
   cursor: pointer;
-  padding: 0;
-  border-radius: 50%;
-  transition: color var(--motion-fast, 120ms) var(--ease);
+  border-radius: var(--radius-sm, 4px);
+  box-sizing: border-box;
+  transition: background-color var(--motion-fast, 120ms) var(--ease),
+              color var(--motion-fast, 120ms) var(--ease);
+  white-space: nowrap;
 }
 .pomo-reset:hover {
+  background: var(--sunken);
   color: var(--tim);
+}
+.pomo-reset:focus-visible {
+  outline: 2px solid var(--tim);
+  outline-offset: -2px;
 }
 
 .scratchpad-toggle-btn {
@@ -230,15 +277,20 @@ onUnmounted(() => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 32px;
-  min-height: 32px;
-  padding: 4px;
-  border-radius: var(--radius-sm, 6px);
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 var(--space-3, 12px);
+  border-radius: var(--radius-sm, 4px);
   background: var(--canvas);
   border: 1px solid var(--rule);
   color: var(--ink-2);
+  font-family: var(--font-ui);
+  font-size: var(--fs-small, 14px);
+  font-weight: 500;
   cursor: pointer;
+  box-sizing: border-box;
   transition: all var(--motion-fast, 120ms) var(--ease);
+  white-space: nowrap;
 }
 .scratchpad-toggle-btn:hover,
 .scratchpad-toggle-btn.is-active {
@@ -246,75 +298,102 @@ onUnmounted(() => {
   color: var(--tim);
   border-color: var(--control);
 }
-.note-indicator {
-  position: absolute;
-  top: 3px;
-  right: 3px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--tim);
+.scratchpad-toggle-btn:focus-visible {
+  outline: 2px solid var(--tim);
+  outline-offset: 2px;
+}
+.scratchpad-toggle-btn.has-note {
+  color: var(--tim);
+  border-color: var(--tim);
+  font-weight: 600;
 }
 
 .scratchpad-popover {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + var(--space-2, 8px));
   right: 0;
-  width: min(320px, calc(100vw - 32px));
+  width: min(320px, calc(100vw - 24px));
   padding: var(--space-4, 16px);
   background: var(--paper);
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg, 12px);
   box-shadow: var(--shadow);
   z-index: 100;
+  box-sizing: border-box;
 }
 .scratchpad-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-2, 8px);
   margin-bottom: var(--space-2, 8px);
 }
 .scratchpad-title {
   font-family: var(--font-ui);
-  font-size: var(--fs-meta, 12px);
+  font-size: var(--fs-meta, 13px);
   font-weight: 600;
   color: var(--ink-2);
 }
 .scratchpad-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
   background: transparent;
-  border: none;
+  border: 1px solid transparent;
   color: var(--ink-3);
-  font-size: 14px;
+  font-family: var(--font-ui);
+  font-size: var(--fs-meta, 13px);
+  font-weight: 500;
   cursor: pointer;
-  padding: 2px 6px;
-  border-radius: 4px;
+  padding: 0 var(--space-2, 8px);
+  border-radius: var(--radius-sm, 4px);
+  box-sizing: border-box;
+  transition: all var(--motion-fast, 120ms) var(--ease);
 }
 .scratchpad-close-btn:hover {
   background: var(--sunken);
   color: var(--ink);
+  border-color: var(--rule);
 }
+.scratchpad-close-btn:focus-visible {
+  outline: 2px solid var(--tim);
+  outline-offset: 2px;
+}
+
 .scratchpad-textarea {
   width: 100%;
-  min-height: 110px;
+  min-height: 120px;
   padding: var(--space-2, 8px);
   border: 1px solid var(--rule);
-  border-radius: var(--radius-sm, 6px);
+  border-radius: var(--radius-sm, 4px);
   background: var(--canvas);
   color: var(--ink);
   font-family: var(--font-ui);
-  font-size: var(--fs-small, 13px);
+  font-size: var(--fs-small, 14px);
   line-height: 1.5;
   resize: vertical;
+  box-sizing: border-box;
 }
+.scratchpad-textarea:focus {
+  border-color: var(--tim);
+  outline: 1px solid var(--tim);
+}
+
 .scratchpad-footer {
   margin-top: var(--space-2, 8px);
-  font-size: 11px;
+  font-size: var(--fs-meta, 13px);
   color: var(--ink-3);
   text-align: right;
 }
+.scratchpad-hint.is-error {
+  color: var(--do);
+  font-weight: 500;
+}
 
-@media (max-width: 600px) {
-  .pomo-time {
+@media (max-width: 480px) {
+  .pomo-label {
     display: none;
   }
 }
@@ -326,11 +405,14 @@ onUnmounted(() => {
   position: fixed;
   top: 0;
   left: 0;
-  height: 2.5px;
-  background: linear-gradient(90deg, var(--pomodoro-progress-start), var(--pomodoro-progress-end));
-  box-shadow: var(--pomodoro-progress-glow);
+  height: 2px;
+  background: var(--tim);
+  box-shadow: none;
   z-index: 99999;
-  transition: width 0.35s ease;
+  transition: width var(--motion-fast, 120ms) var(--ease);
   pointer-events: none;
+}
+@media (prefers-reduced-motion:reduce) {
+ .studyhub-pomodoro-top-bar { transition:none; }
 }
 </style>

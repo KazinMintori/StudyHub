@@ -7,15 +7,9 @@ const {
   part,
   cheatsheet,
   lab,
-  index,
-  slides,
-  current,
   foundationGroups,
   allFoundations,
   hasPanelContent,
-  load,
-  next,
-  keyboard,
   printCheatsheet,
   scrollToExercise,
   selectNotes,
@@ -42,28 +36,10 @@ const {
         <span class="panel-skeleton panel-skeleton-short" aria-hidden="true"></span>
       </template>
     </div>
-    <section v-else-if="part === 'slides'" class="lecture-slides" aria-label="Slides của bài giảng">
-      <template v-if="['vat-ly-1', 'vat-ly-2', 'xu-ly-du-lieu', 'xac-suat-thong-ke'].includes(course.id) && current">
-        <article class="course-slide" aria-live="polite">
-          <p class="eyebrow">Thẻ ôn tập {{ index + 1 }} / {{ slides.length }}</p>
-          <h2>{{ current.title }}</h2>
-          <ul><li v-for="(bullet, bulletIndex) in current.bullets" :key="bulletIndex"><MathText :text="bullet" /></li></ul>
-          <div v-if="current.formula" class="slide-formula"><MathText as="div" :text="current.formula" /></div>
-          <p v-if="current.example" class="slide-example"><MathText :text="current.example" /></p>
-        </article>
-        <nav class="slide-controls" aria-label="Chuyển thẻ ôn tập">
-          <button class="study-button" :disabled="index === 0" @click="next(-1)">Thẻ trước</button>
-          <span>{{ index + 1 }} / {{ slides.length }}</span>
-          <button class="study-button" :disabled="index === slides.length - 1" @click="next(1)">Thẻ sau</button>
-        </nav>
-      </template>
-      <p v-else class="empty-state">Bộ thẻ ôn tập đang được biên soạn.</p>
-    </section>
-
     <section v-else-if="part === 'cheatsheet'" class="lecture-cheatsheet" aria-label="Cheatsheet tra cứu nhanh của bài giảng">
       <div class="cheatsheet-heading">
         <div class="cheatsheet-title-group">
-          <p class="eyebrow">TỜ TRA CỨU NHANH · CẨM NANG ÔN TẬP</p>
+          <p class="eyebrow">TỜ TRA CỨU NHANH</p>
           <h2>Cheatsheet: {{ lesson.title }}</h2>
         </div>
         <div class="cheatsheet-actions">

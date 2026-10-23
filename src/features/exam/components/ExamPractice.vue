@@ -258,7 +258,7 @@
       <!-- Bottom Navigation matching screenshot -->
       <footer class="exam-nav-footer">
         <div class="exam-nav-footer__info">
-          <span class="exam-nav-footer__hint">Phím tắt: [←] Trước &bull; [→] Tiếp theo</span>
+          <span class="exam-nav-footer__hint">Phím tắt: <kbd>←</kbd> Trước, <kbd>→</kbd> Tiếp theo</span>
         </div>
 
         <div class="exam-nav-footer__actions">

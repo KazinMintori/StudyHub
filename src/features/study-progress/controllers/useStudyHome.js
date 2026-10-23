@@ -55,7 +55,6 @@ export function getCourseQuickLinks(course) {
   return {
     overview: `/${course.id}/`,
     notes: baseLink,
-    slides: `${baseLink}#slides`,
     cheatsheet: `${baseLink}#cheatsheet`,
     exercises: `${baseLink}#bai-tap`
   }
