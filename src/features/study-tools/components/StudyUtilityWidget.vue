@@ -180,8 +180,8 @@ onUnmounted(() => {
   transition: all var(--motion-fast, 120ms) var(--ease);
 }
 .pomodoro-pill.is-running {
-  border-color: var(--xanh, #1d6b45);
-  background: var(--xanh-soft, #e6f4ec);
+  border-color: var(--xanh);
+  background: var(--xanh-soft);
 }
 
 .pomo-toggle {
@@ -203,8 +203,8 @@ onUnmounted(() => {
   transition: all var(--motion-fast, 120ms) var(--ease);
 }
 .pomodoro-pill.is-running .pomo-dot {
-  background: var(--xanh, #1d6b45);
-  box-shadow: 0 0 6px var(--xanh, #1d6b45);
+  background: var(--xanh);
+  box-shadow: 0 0 6px var(--xanh);
 }
 
 .pomo-reset {
@@ -327,8 +327,8 @@ onUnmounted(() => {
   top: 0;
   left: 0;
   height: 2.5px;
-  background: linear-gradient(90deg, #6366f1, #10b981);
-  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+  background: linear-gradient(90deg, var(--pomodoro-progress-start), var(--pomodoro-progress-end));
+  box-shadow: var(--pomodoro-progress-glow);
   z-index: 99999;
   transition: width 0.35s ease;
   pointer-events: none;

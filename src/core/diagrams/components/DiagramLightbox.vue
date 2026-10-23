@@ -83,17 +83,17 @@ onUnmounted(() => { observer?.disconnect(); document.body.style.overflow = '' })
 .diagram-scroll { overflow: auto; height: calc(100% - 75px); padding-top: 25px; }
 .diagram-media { margin: auto; transition: background-color var(--motion-fast, 120ms) var(--ease); }
 .diagram-media.force-light-bg {
-  background-color: #ffffff !important;
-  color: #1e293b !important;
+  background-color: var(--printed-paper) !important;
+  color: var(--diagram-light-ink) !important;
   padding: var(--space-4);
-  border-radius: var(--radius-md);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius);
+  box-shadow: var(--diagram-shadow);
 }
 .diagram-media.force-dark-bg {
-  background-color: #0f141c !important;
-  color: #f8fafc !important;
+  background-color: var(--diagram-dark-paper) !important;
+  color: var(--diagram-dark-ink) !important;
   padding: var(--space-4);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
 }
 .diagram-media svg { width: 100% !important; height: auto !important; max-width: none !important; }
 .diagram-media img { width: 100%; height: auto; }
