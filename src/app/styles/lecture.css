@@ -844,3 +844,97 @@
     padding: 12px !important;
   }
 }
+
+
+/* Split-Screen Cheatsheet Drawer & Tabs Wrapper */
+.lecture-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  position: sticky;
+  top: var(--vp-nav-height);
+  z-index: 20;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+  margin: 0 0 var(--space-5);
+}
+.lecture-tabs-wrapper .lecture-tabs {
+  position: static;
+  margin: 0;
+  border-bottom: none;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.lecture-split-tool {
+  flex-shrink: 0;
+}
+@media (max-width: 639px) {
+  .lecture-tabs-wrapper {
+    flex-wrap: wrap;
+    padding-bottom: var(--space-2);
+  }
+}
+
+
+/* Micro-Checkpoints & Progress on Sidebar */
+.lesson-checkpoint-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.checkpoint-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  font-size: var(--fs-ui, 14px);
+  font-weight: 600;
+  border-radius: var(--radius);
+  background: var(--canvas);
+  color: var(--ink-2);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  transition: all var(--motion-fast) var(--ease);
+}
+
+.checkpoint-toggle-btn:hover {
+  background: var(--sunken);
+  color: var(--tim);
+  border-color: var(--control);
+}
+
+.checkpoint-toggle-btn.is-completed {
+  background: var(--xanh-soft, #e6f4ec);
+  color: var(--xanh, #1d6b45);
+  border-color: var(--xanh);
+}
+
+.checkpoint-toggle-btn.is-completed .checkpoint-icon {
+  font-weight: 700;
+}
+
+.next-lesson-nav {
+  margin-left: auto;
+}
+
+.next-lesson-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+/* Biểu tượng tích xanh hoàn thành trên Sidebar của VitePress */
+.VPSidebar a.link.is-lecture-completed .text::after {
+  content: ' ✓';
+  color: var(--xanh, #10b981);
+  font-weight: 700;
+  margin-left: 0.35rem;
+}

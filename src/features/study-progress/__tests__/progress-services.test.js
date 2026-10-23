@@ -41,6 +41,7 @@ import {
   COURSE_CATEGORIES,
   COURSE_CATEGORY_MAP,
   getCourseCategoryLabel,
+  getCourseQuickLinks,
   useStudyHome
 } from '../controllers/useStudyHome.js'
 
@@ -349,4 +350,24 @@ test('useStudyHome filters courses by category and query together', () => {
   home.query.value = 'vật lý'
   assert.strictEqual(home.visibleCourses.value.length, 1)
   assert.strictEqual(home.visibleCourses.value[0].id, 'vat-ly-1')
+})
+test('getCourseQuickLinks generates correct links for standard and philosophy courses', () => {
+  const stdCourse = {
+    id: 'toan-cho-ai',
+    lessons: [{ slug: 'bai-01-nhap-mon-toi-uu', status: 'ready' }]
+  }
+  const stdLinks = getCourseQuickLinks(stdCourse)
+  assert.strictEqual(stdLinks.notes, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu')
+  assert.strictEqual(stdLinks.slides, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#slides')
+  assert.strictEqual(stdLinks.cheatsheet, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#cheatsheet')
+  assert.strictEqual(stdLinks.exercises, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#bai-tap')
+
+  const philCourse = {
+    id: 'triet-hoc-mac-lenin',
+    presentation: 'philosophy',
+    lessons: [{ slug: 'chuong-01-khai-luan', status: 'ready' }]
+  }
+  const philLinks = getCourseQuickLinks(philCourse)
+  assert.strictEqual(philLinks.notes, '/triet-hoc-mac-lenin/chuong-01-khai-luan/')
+  assert.strictEqual(philLinks.exercises, '/triet-hoc-mac-lenin/chuong-01-khai-luan/#bai-tap')
 })

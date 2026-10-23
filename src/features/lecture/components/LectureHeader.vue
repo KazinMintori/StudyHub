@@ -6,6 +6,7 @@ import { lecturePath, lectureConceptIds, lectureParts } from '../services/lectur
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
 import CourseArt from '../../illustrations/components/CourseArt.vue'
+import SplitCheatsheetDrawer from './SplitCheatsheetDrawer.vue'
 
 const { course, lesson, part } = useLecture(), router = useRouter(), { page } = useData()
 const currentPart = computed(() => course.value?.parts?.find(p => p.lessons.includes(lesson.value?.slug)))
@@ -87,24 +88,26 @@ onUnmounted(() => {
     <p v-if="lesson.status !== 'ready'" class="draft-notice">Bài đang được soạn. Kiến thức nền đã đọc được.</p>
   </header>
 
-  <nav
-    v-if="course && lesson"
-    class="course-tabs lecture-tabs"
-    aria-label="Các phần của bài giảng"
-    @pointerenter.once="warmPanels"
-    @focusin.once="warmPanels"
-    @touchstart.once.passive="warmPanels"
-  >
-    <a
-      v-for="(item, index) in orderedParts"
-      :key="item.id"
-      :href="studyLink(lecturePath(course.id, lesson.slug, item.id))"
-      :aria-current="part === item.id ? 'page' : undefined"
-      :title="`Phím tắt: Alt + ${index + 1}`"
-      @click.prevent="select(item.id)"
+  <div v-if="course && lesson" class="lecture-tabs-wrapper">
+    <nav
+      class="course-tabs lecture-tabs"
+      aria-label="Các phần của bài giảng"
+      @pointerenter.once="warmPanels"
+      @focusin.once="warmPanels"
+      @touchstart.once.passive="warmPanels"
     >
-      {{ item.name }}
-      <span v-if="item.id === 'kien-thuc-can-co'" class="tab-count">{{ lectureConceptIds(lesson).length }}</span>
-    </a>
-  </nav>
+      <a
+        v-for="(item, index) in orderedParts"
+        :key="item.id"
+        :href="studyLink(lecturePath(course.id, lesson.slug, item.id))"
+        :aria-current="part === item.id ? 'page' : undefined"
+        :title="`Phím tắt: Alt + ${index + 1}`"
+        @click.prevent="select(item.id)"
+      >
+        {{ item.name }}
+        <span v-if="item.id === 'kien-thuc-can-co'" class="tab-count">{{ lectureConceptIds(lesson).length }}</span>
+      </a>
+    </nav>
+    <SplitCheatsheetDrawer class="lecture-split-tool" />
+  </div>
 </template>

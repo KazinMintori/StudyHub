@@ -4,7 +4,14 @@ import { useRoute } from 'vitepress'
 import { useFocusTimer } from '../controllers/useFocusTimer.js'
 
 const route = useRoute()
-const { display, running, toggle, reset } = useFocusTimer()
+const { display, running, toggle, reset, remaining, minutes } = useFocusTimer()
+
+const progressPercent = computed(() => {
+  const total = (minutes?.value || 25) * 60
+  if (!total) return 0
+  const rem = remaining?.value ?? total
+  return Math.min(100, Math.max(0, ((total - rem) / total) * 100))
+})
 
 const showScratchpad = ref(false)
 const noteContent = ref('')
@@ -69,6 +76,16 @@ onUnmounted(() => {
 
 <template>
   <div ref="widgetRef" class="study-utility-widget">
+    <!-- Top-edge Ambient Pomodoro Bar -->
+    <Teleport to="body">
+      <div
+        v-if="running || (progressPercent > 0 && progressPercent < 100)"
+        class="studyhub-pomodoro-top-bar"
+        :style="{ width: `${progressPercent}%` }"
+        aria-hidden="true"
+      />
+    </Teleport>
+
     <!-- Ambient Pomodoro Pill -->
     <div class="pomodoro-pill" :class="{ 'is-running': running }">
       <button
@@ -300,5 +317,20 @@ onUnmounted(() => {
   .pomo-time {
     display: none;
   }
+}
+</style>
+
+<style>
+/* Global top-bar running on top edge of window */
+.studyhub-pomodoro-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #6366f1, #10b981);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+  z-index: 99999;
+  transition: width 0.35s ease;
+  pointer-events: none;
 }
 </style>

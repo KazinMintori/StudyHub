@@ -1,10 +1,12 @@
 <script setup>
+import { useRouter } from 'vitepress'
 import { useStudyHome } from '../controllers/useStudyHome.js'
 import { studyLink } from '../../../core/routing/links.js'
 import CourseArt from '../../illustrations/components/CourseArt.vue'
 import HeroArt from '../../illustrations/components/HeroArt.vue'
 import SpotArt from '../../illustrations/components/SpotArt.vue'
 
+const router = useRouter()
 const {
   query,
   selectedCategory,
@@ -17,6 +19,7 @@ const {
   activeResumeCheatsheetLink,
   getCategoryCount,
   getCourseCategoryLabel,
+  getCourseQuickLinks,
   getLessonChapter,
   getLessonDetailTitle
 } = useStudyHome()
@@ -27,6 +30,12 @@ const tools = [
   { name: 'tools', tone: 'hong', title: 'Góc học tập', text: 'Flashcard, sổ ghi chú và hẹn giờ tập trung trong một chỗ.', href: '/goc-hoc-tap' },
   { name: 'guide', tone: 'ngoc', title: 'Hướng dẫn học', text: 'Cách đọc một bài: Notes, Slides, Kiến thức nền và Bài tập.', href: '/guide/' }
 ]
+
+function goToQuickLink(href) {
+  if (href) {
+    router.go(studyLink(href))
+  }
+}
 </script>
 
 <template>
@@ -138,6 +147,44 @@ const tools = [
           <div class="course-copy">
             <h3>{{ course.name }}</h3>
             <p v-if="course.description" class="course-summary">{{ course.description }}</p>
+            <div class="course-quick-actions" @click.stop>
+              <button
+                v-if="getCourseQuickLinks(course).notes"
+                type="button"
+                class="action-pill"
+                title="Đọc bài giảng chi tiết (Notes)"
+                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).notes)"
+              >
+                📖 Bài học
+              </button>
+              <button
+                v-if="getCourseQuickLinks(course).slides"
+                type="button"
+                class="action-pill"
+                title="Xem bộ thẻ ôn tập (Slides)"
+                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).slides)"
+              >
+                ⚡ Slides
+              </button>
+              <button
+                v-if="getCourseQuickLinks(course).cheatsheet"
+                type="button"
+                class="action-pill highlight"
+                title="Mở tờ tra cứu công thức (Cheatsheet)"
+                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).cheatsheet)"
+              >
+                📐 Cheatsheet
+              </button>
+              <button
+                v-if="getCourseQuickLinks(course).exercises"
+                type="button"
+                class="action-pill"
+                title="Làm bài tập tự luyện"
+                @click.stop.prevent="goToQuickLink(getCourseQuickLinks(course).exercises)"
+              >
+                ✍️ Bài tập
+              </button>
+            </div>
           </div>
           <span class="course-end">
             <span class="course-tag-pill">{{ getCourseCategoryLabel(course.id) }}</span>

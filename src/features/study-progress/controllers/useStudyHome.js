@@ -36,6 +36,31 @@ export function getCourseCategoryLabel(courseId) {
   return cat ? cat.label : 'Học phần'
 }
 
+export function getCourseQuickLinks(course) {
+  if (!course?.id) return {}
+  const firstReady = course.lessons?.find(l => l.status === 'ready') || course.lessons?.[0]
+  if (!firstReady) return { overview: `/${course.id}/` }
+
+  if (course.presentation === 'philosophy') {
+    return {
+      overview: `/${course.id}/`,
+      notes: `/${course.id}/${firstReady.slug}/`,
+      exercises: `/${course.id}/${firstReady.slug}/#bai-tap`
+    }
+  }
+
+  const baseSlug = firstReady.slug === 'on-luyen' ? 'on-luyen/tong-hop' : `bai-giang/${firstReady.slug}`
+  const baseLink = `/${course.id}/${baseSlug}`
+
+  return {
+    overview: `/${course.id}/`,
+    notes: baseLink,
+    slides: `${baseLink}#slides`,
+    cheatsheet: `${baseLink}#cheatsheet`,
+    exercises: `${baseLink}#bai-tap`
+  }
+}
+
 export function useStudyHome(options = {}) {
   const catalog = options.catalog || defaultCatalog
   const query = ref('')
@@ -92,6 +117,7 @@ export function useStudyHome(options = {}) {
     activeResumeCheatsheetLink,
     getCategoryCount,
     getCourseCategoryLabel,
+    getCourseQuickLinks,
     getLessonChapter,
     getLessonDetailTitle
   }

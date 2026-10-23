@@ -260,3 +260,64 @@ mjx-container[display=true]::-webkit-scrollbar,
 .map-output span { font: var(--fs-small) var(--font-code); background: var(--paper); border: 1px solid var(--rule); padding: var(--space-2); }
 .illustration-code pre { overflow-x: auto; padding: var(--space-4); font-size: var(--fs-small); }
 .code-illustration figcaption { font-size: var(--fs-small); color: var(--ink-3); margin-top: var(--space-4); }
+
+
+/* Proof Accordion chuyên biệt cho chứng minh toán học */
+details.proof,
+.custom-block.details.proof {
+  margin: var(--space-5) 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background-color: var(--canvas);
+  border-left: 3px solid var(--tim);
+  transition: all 0.2s ease;
+}
+
+details.proof > summary,
+.custom-block.details.proof > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fs-body);
+  color: var(--tim);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+details.proof > summary::-webkit-details-marker,
+.custom-block.details.proof > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.proof > summary::before,
+.custom-block.details.proof > summary::before {
+  content: '▸';
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 1.1rem;
+}
+
+details.proof[open] > summary::before,
+.custom-block.details.proof[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+details.proof[open] > summary,
+.custom-block.details.proof[open] > summary {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px dashed var(--rule);
+}
+
+/* Ký hiệu kết thúc chứng minh Q.E.D (∎) tự động ở cuối khối */
+details.proof > :last-child::after,
+.custom-block.details.proof > :last-child::after {
+  content: ' \220E';
+  float: right;
+  color: var(--tim);
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-left: var(--space-3);
+}
