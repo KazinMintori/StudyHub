@@ -1,0 +1,56 @@
+{
+  "chapter": 9,
+  "status": "content-complete",
+  "theorySections": 6,
+  "examples": 11,
+  "selfChecks": 6,
+  "numberedFigures": 25,
+  "sourceFigureAssets": 56,
+  "supplementarySolutionPlots": 3,
+  "exercises": 95,
+  "discussionQuestions": 22,
+  "variationProblems": 12,
+  "bridgingProblems": 1,
+  "detailedSolutionBoxes": 130,
+  "exerciseGroups": 23,
+  "renderReview": "passed",
+  "renderViewports": [
+    320,
+    360,
+    375,
+    1440
+  ],
+  "browserChecks": 168,
+  "sourceReview": "raw_materials/physics/reviews/ch09-parent-final-review.md",
+  "sourceImageIntegrity": "qa/physics1-priority/ch09-all-crop-pixels.json",
+  "numericEvidence": [
+    "qa/physics1-priority/actual-ch09-ch17-numerical-ledger.json",
+    "qa/physics1-priority/ch09-end-d-verification.json",
+    "qa/physics1-priority/ch09-end-e-numerical-ledger.json"
+  ],
+  "skillTests": 39,
+  "repositoryTests": 146,
+  "publication": "reviewed-in-isolated-worktree",
+  "fullBuild": "GitHub Actions only",
+  "limitations": [
+    "No claim of a quantified error-free percentage.",
+    "GitHub build and public deployment have not run for these changes.",
+    "Chapters10,11,17,19,20 still need their remaining source/content checks and exercises."
+  ],
+  "reviewedFileHashes": {
+    "raw_materials\\physics\\translations\\chapter-09\\00-mo-dau.md": "285bd3175d8227f6dd7861ba1742a11f1e3ff65d340308626d228edbaab04061",
+    "raw_materials\\physics\\translations\\chapter-09\\01-van-toc-va-gia-toc-goc.md": "f0d9f5927bc149c7fe71e0c8528563fc518770808ec3a1e8bc3ae5dac768c9a3",
+    "raw_materials\\physics\\translations\\chapter-09\\02-quay-gia-toc-goc-khong-doi.md": "310ed12492e94e71631c352a883235e72bce808e1d89b41386a37aeaff666ab9",
+    "raw_materials\\physics\\translations\\chapter-09\\03-lien-he-dai-luong-dai-va-goc.md": "b457ab5b392d3f83327686a84a60030717cae5f58bcc19875217c27b1c97658f",
+    "raw_materials\\physics\\translations\\chapter-09\\04-dong-nang-va-momen-quan-tinh.md": "9639eabe19a94b0599b4c77949d24306230a00cf17092bd25a227771af6dbbca",
+    "raw_materials\\physics\\translations\\chapter-09\\05-dinh-ly-truc-song-song.md": "e439f41c6aa49ae83af778f8ad535d0f4072af8567dfaa63d427118098db9d6f",
+    "raw_materials\\physics\\translations\\chapter-09\\06-tinh-momen-quan-tinh.md": "b1816b77a1b44b06bb21670900893b2949a5f68d7c05e08c036a91af5dce4d2b",
+    "raw_materials\\physics\\translations\\chapter-09\\09-luyen-tap-huong-dan.md": "0e914a6834e8355ebbf822d830b2ef1d9fb1a29a664e1cce67f6b001f7b8e8c6",
+    "raw_materials\\physics\\translations\\chapter-09\\10-cau-hoi-thao-luan.md": "02b4720adc19817cc5bafbb34f2bf0f338586d58f5723201bb3ac52e138a9b90",
+    "raw_materials\\physics\\translations\\chapter-09\\11-bai-tap-001-048.md": "2c4a767860851623fc905e47fefc1ff547b7b4bea894e6938fc1bf8cc4f498db",
+    "raw_materials\\physics\\translations\\chapter-09\\12-bai-tap-049-095.md": "31ff175398eb9a54bc97537fbf25417975243b01be763da499e2ee9c9ebc1161",
+    "raw_materials\\physics\\translations\\chapter-09\\16-bai-tap-cau-noi.md": "c9975b5fdf028cc15c81c8d0ead0af62f207c0c7a595237cf2feb60627065ba7",
+    "raw_materials\\physics\\translations\\chapter-09\\17-tom-tat.md": "e88945ced3603780d5a7d57bf48c08bc3cbe052bbc11fffe19ed8fbfccf637e5"
+  },
+  "mathLayoutRegressionChecks": "14 dangling secondary left sides repaired;12 single-row aligned blocks simplified; generation now rejects malformed relation breaks."
+}

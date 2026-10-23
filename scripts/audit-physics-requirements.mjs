@@ -5,6 +5,8 @@ import {concepts} from '../docs/.vitepress/concepts.mjs'
 import {cheatsheets} from '../docs/.vitepress/cheatsheets.mjs'
 import {lectureParts} from '../docs/.vitepress/lecture-model.mjs'
 import {courseCatalog} from '../docs/.vitepress/course-catalog.mjs'
+import {numberedExerciseIds} from './verification/physics-source-exercises.mjs'
+import {physicsExerciseFiles} from './content/physics-exercise-config.mjs'
 
 const manifest=JSON.parse(await readFile('raw_materials/physics/translation-manifest.json','utf8'))
 const exists=async f=>{try{await access(f);return true}catch{return false}}
@@ -12,6 +14,13 @@ async function expand(file,seen=new Set()) {
  if(seen.has(file))return ''
  seen.add(file)
  let text=(await readFile(file,'utf8')).replace(/^::: exercise (Q|VP)\s+(?=\d+\.)/gm,'::: exercise $1')
+ for(const component of [...text.matchAll(/<ChapterExercises :chapter="(\d+)" \/>/g)]){
+  const chapter=Number(component[1])
+  const raw='raw_materials/physics/translations/chapter-'+String(chapter).padStart(2,'0')+'/'
+  const fragments=physicsExerciseFiles(chapter).map(([,file])=>file)
+  const expanded=await Promise.all(fragments.map(f=>expand(raw+f,seen)))
+  text=text.replace(component[0],expanded.join('\n'))
+ }
  for(const m of [...text.matchAll(/<!--@include:\s*([^>]+?)\s*-->/g)]) {
   const f=path.normalize(path.join(path.dirname(file),m[1]))
   text=text.replace(m[0],await exists(f)?await expand(f,seen):'MISSING_INCLUDE:'+f)
@@ -31,15 +40,14 @@ for(const course of [physics1Course,physics2Course])for(const lesson of course.l
  for(let p=ch.pdfStart;p<=ch.pdfEnd;p++)source+=await readFile(`qa/physics/full-source/pdf-${String(p).padStart(4,'0')}.txt`,'utf8')+'\n'
  const exercisesStart=source.search(/^EXERCISES\s*$/m)
  const endSource=exercisesStart>=0?source.slice(exercisesStart):source
- // Extracted PDF columns may put a problem number in the middle of a line.
- const sourceNumbers=[...endSource.matchAll(new RegExp(`(?<![\\w.])${ch.chapter}\\.(\\d{1,3})(?!\\d)`,'g'))].map(m=>Number(m[1])).filter(n=>n<=500)
+ const sourceNumbers=numberedExerciseIds(endSource,ch.chapter)
  const expectedExercises=Math.max(0,...sourceNumbers)
  const prompts=[...all.matchAll(new RegExp(`^::: exercise ${ch.chapter}\\.(\\d+)(?:\\s|\\.|$)`,'gm'))].map(m=>Number(m[1]))
  const solutionBlocks=[...all.matchAll(/<!-- detailed-solution:([^>]+) -->\s*::: solution[^\n]*\n([\s\S]*?)\n:::/g)].map(m=>({id:m[1],body:m[2]}))
  // A valid collapsed solution does not require an invisible authoring marker.
  // Also inspect actual details containers following each numbered prompt.
  const exerciseText=main.includes('<div class="lecture-exercises-content"')?main.split('<div class="lecture-exercises-content"')[1]:all
- const htmlPromptPattern=new RegExp(`^### ((?:Q|VP)?${ch.chapter}\\.\\d+(?:\\.\\d+)?|Bài tập cầu nối)(?=\\s|$)[^\\n]*\\n`,'gm')
+ const htmlPromptPattern=new RegExp(`^### ((?:Q|VP)?${ch.chapter}\\.\\d+(?:\\.\\d+)?|Bài tập cầu nối)(?=\\s|:|$)[^\\n]*\\n`,'gm')
  const htmlPrompts=[...exerciseText.matchAll(htmlPromptPattern)]
  for(let i=0;i<htmlPrompts.length;i++){
   const prompt=htmlPrompts[i]

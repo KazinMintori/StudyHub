@@ -35,16 +35,16 @@ export const cheatsheetLoaders = {
   'vat-ly-1/06-cong-dong-nang': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.workEnergyCheatsheet),
   'vat-ly-1/07-the-nang-bao-toan-co-nang': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.potentialEnergyCheatsheet),
   'vat-ly-1/08-dong-luong-va-cham': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.momentumCheatsheet),
-  'vat-ly-1/09-dong-hoc-vat-ran': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.rotationKinematicsCheatsheet),
-  'vat-ly-1/10-dong-luc-hoc-quay': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.rotationDynamicsCheatsheet),
-  'vat-ly-1/11-can-bang-dan-hoi': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.equilibriumElasticityCheatsheet),
+  'vat-ly-1/09-dong-hoc-vat-ran': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[9].cheatsheet),
+  'vat-ly-1/10-dong-luc-hoc-quay': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[10].cheatsheet),
+  'vat-ly-1/11-can-bang-dan-hoi': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[11].cheatsheet),
   'vat-ly-1/12-co-hoc-chat-luu': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.fluidMechanicsCheatsheet),
   'vat-ly-1/13-hap-dan': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.gravitationCheatsheet),
   'vat-ly-1/14-dao-dong': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.oscillationsCheatsheet),
   'vat-ly-1/15-song-co': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.mechanicalWavesCheatsheet),
   'vat-ly-1/16-am-hoc': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.acousticsCheatsheet),
-  'vat-ly-1/17-nhiet-do-nhiet-luong': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.temperatureHeatCheatsheet),
-  'vat-ly-1/18-thuyet-dong-hoc-chat-khi': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.kineticTheoryCheatsheet),
-  'vat-ly-1/19-nguyen-ly-thu-nhat': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.firstLawThermoCheatsheet),
-  'vat-ly-1/20-nguyen-ly-thu-hai-entropy': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.secondLawEntropyCheatsheet)
+  'vat-ly-1/17-nhiet-do-nhiet-luong': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[17].cheatsheet),
+  'vat-ly-1/18-thuyet-dong-hoc-chat-khi': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[18].cheatsheet),
+  'vat-ly-1/19-nguyen-ly-thu-nhat': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[19].cheatsheet),
+  'vat-ly-1/20-nguyen-ly-thu-hai-entropy': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[20].cheatsheet)
 }

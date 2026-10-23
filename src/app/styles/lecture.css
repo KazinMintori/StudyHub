@@ -1,4 +1,18 @@
 .lecture-header { margin-bottom: var(--space-5); }
+/* Dense numerical tables retain every value. On narrow screens each row
+   repeats its column labels instead of putting its formulas in a scroller. */
+.vp-doc .lecture-data-table { min-width: 0; margin: var(--space-5) 0; }
+.vp-doc .lecture-data-table table { display: table; width: 100%; table-layout: fixed; overflow: visible; }
+.vp-doc .lecture-data-table :is(th, td) { min-width: 0; white-space: normal; overflow-wrap: normal; padding: var(--space-2); }
+.vp-doc .lecture-data-table .table-cell-label { display: none; }
+@media (max-width: 960px) {
+  .vp-doc .lecture-data-table :is(table, tbody, tr, td) { display: block; width: auto; }
+  .vp-doc .lecture-data-table thead { display: none; }
+  .vp-doc .lecture-data-table tr { margin: var(--space-4) 0; border: 1px solid var(--rule); border-radius: var(--radius); }
+  .vp-doc .lecture-data-table td { border: 0; padding: var(--space-3); }
+  .vp-doc .lecture-data-table td + td { border-top: 1px solid var(--rule); }
+  .vp-doc .lecture-data-table .table-cell-label { display: block; margin-bottom: var(--space-1); color: var(--ink-2); font-weight: 600; }
+}
 .has-chapter-exercises .lecture-exercises-content { display: none; }
 .Layout.lecture-exercises-layout .main > .vp-doc { display: block; }
 .lecture-exercises-layout .lecture-notes-content { display: none; }

@@ -1,12 +1,13 @@
 // Keep MathJax's exact SVG/MathML output in a single Vue HTML binding. Parsing
 // every SVG path as a Vue node makes textbook-sized pages consume gigabytes.
-export function staticMathPlugin(md) {
+export function staticMathPlugin(md, { vueBinding = true } = {}) {
  const cache=new Map()
  for(const [rule,tag] of [['math_inline','span'],['math_block','div']]){
   const render=md.renderer.rules[rule]
   if(!render)throw new Error(`Math renderer missing: ${rule}`)
   md.renderer.rules[rule]=(...args)=>{
    const [tokens,index,,env]=args,token=tokens[index]
+   if(!vueBinding)return render(...args)
    const cachedRender=()=>{
     // Explicit labels and references may depend on other equations.
     if(/\\(?:label|ref|eqref)\b/.test(token.content))return render(...args)

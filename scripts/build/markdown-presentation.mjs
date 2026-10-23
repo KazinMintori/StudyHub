@@ -83,9 +83,9 @@ function renderFigureCaption(md, image, env) {
   }).join('')
 }
 
-export function configureStudyMarkdown(md, { base }) {
+export function configureStudyMarkdown(md, { base, vueBinding = true }) {
       md.use(responsiveTablesPlugin)
-      md.use(staticMathPlugin)
+      md.use(staticMathPlugin, { vueBinding })
       setupExerciseRenderer(md)
       md.core.ruler.before('block', 'normalize_custom_containers', state => {
         state.src = normalizeExerciseContainers(state.src)

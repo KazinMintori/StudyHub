@@ -1,0 +1,71 @@
+{
+  "chapter": 18,
+  "status": "content-complete",
+  "theorySections": 6,
+  "examples": 8,
+  "numberedExercises": 87,
+  "guidedExercises": 12,
+  "discussionQuestions": 30,
+  "bridgeProblems": 1,
+  "closedSolutions": 130,
+  "exerciseGroups": 24,
+  "originalSourceImageAssets": 52,
+  "supplementarySolutionIllustrations": 2,
+  "browser": {
+    "topics": {
+      "cases": 28,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    },
+    "support": {
+      "cases": 32,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    },
+    "exercises": {
+      "cases": 96,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    }
+  },
+  "browserChecks": 156,
+  "sourceReview": "raw_materials/physics/reviews/ch18-parent-final-review.md",
+  "sourceErrata": "raw_materials/physics/chapter-18-source-errata.md",
+  "reviewedFileHashes": {
+    "raw_materials\\physics\\translations\\chapter-18\\00-mo-dau.md": "70d2ce5159c38c6ea3f77074df8c8eda0138913f14558603e1053ca259ebcc14",
+    "raw_materials\\physics\\translations\\chapter-18\\01-phuong-trinh-trang-thai.md": "d35c5d2195d71ea156bde133f8779351b5a2f971270f3ea72b4ff44d8d0f6acd",
+    "raw_materials\\physics\\translations\\chapter-18\\02-tinh-chat-phan-tu-vat-chat.md": "3fa87b20e33f618ea6736cfb45f557f62146c636a996ed1f347b2251560d7da9",
+    "raw_materials\\physics\\translations\\chapter-18\\03-mo-hinh-dong-hoc-khi-ly-tuong.md": "7d9ccea5c98ebf10a319b062359a426e3024d655e328d73ad083ec2e81822bd0",
+    "raw_materials\\physics\\translations\\chapter-18\\04-nhiet-dung.md": "13e9c1f7891406b0135d9da36c0e1e68c6a5754772f44cbfaea1aa6309c6d1d7",
+    "raw_materials\\physics\\translations\\chapter-18\\05-toc-do-phan-tu.md": "a5991534a0f3f2f26d9d15cd45efc3dfaef7e4ad07617e8d4ea825755330ec59",
+    "raw_materials\\physics\\translations\\chapter-18\\06-cac-pha-cua-vat-chat.md": "85fdf48997e7a7be690445dc4941615ec81c87aa4fe1ff1b575d99d627a1a5d8",
+    "raw_materials\\physics\\translations\\chapter-18\\09-luyen-tap-huong-dan.md": "4be81727b15779f86042898d63cf3f94550ad75b54e3406f726f9e741963dd79",
+    "raw_materials\\physics\\translations\\chapter-18\\10-cau-hoi-thao-luan.md": "f5716c508d505901ef156c4b3aba9cae519399aec748f7c6fd96340728b2d31c",
+    "raw_materials\\physics\\translations\\chapter-18\\11-bai-tap-001-044.md": "dc91d06bf0882ca8bf84f244a8c01f5e29146dcb01b44f2c3be85e1dc8bff6d8",
+    "raw_materials\\physics\\translations\\chapter-18\\12-bai-tap-045-087.md": "5d09836acc17e33daabc01d9a71ac82577be495e8efd3cdd76d30aefca7e6909",
+    "raw_materials\\physics\\translations\\chapter-18\\16-bai-tap-cau-noi.md": "b5c51d4bc6c23cb76054498fbae51ba0e18a310c39e17745b6b460c3e3270653",
+    "raw_materials\\physics\\translations\\chapter-18\\17-tom-tat.md": "df0dafe141ce40887d207b7e8ba972343dba5ced00271be85dfb068fd2bcbfdd"
+  },
+  "publication": "reviewed-in-isolated-worktree",
+  "fullBuild": "GitHub Actions only",
+  "limitations": [
+    "No quantified error-free percentage is claimed.",
+    "Local browser and numerical checks do not confirm GitHub build or public deployment.",
+    "Other priority chapters still have separate unfinished reviews."
+  ],
+  "repositoryTests": 146,
+  "featureTests": 108,
+  "skillTests": 39
+}

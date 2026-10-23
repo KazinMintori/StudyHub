@@ -10,6 +10,7 @@ import { courseCatalog } from '../../src/content/catalog.mjs'
 import { liteCourse, renderLiteCatalogModule, HEAVY_COURSE_FIELDS } from '../build/lite-catalog-plugin.mjs'
 import { dropUnusedPreloads } from '../build/page-preloads.mjs'
 import { mathTextPlugin, CLIENT_UNUSED_EXPORT } from '../math-text-plugin.mjs'
+import { mathSegments } from '../../src/core/math/services/math-text.mjs'
 
 const root = path.resolve(fileURLToPath(new URL('../../', import.meta.url)))
 
@@ -67,6 +68,22 @@ test('export-scoped math keeps module data identical', async () => {
     }
     assert.match(code, /\/\*#__PURE__\*\/__studyWithMath\(/)
   }
+})
+
+test('every generated Physics1 cheatsheet formula has a compiled math entry', async () => {
+  const { module, math } = await evaluateTransformed('docs/.vitepress/physics1-priority-course.mjs', false)
+  let checked = 0
+  for (const [chapter, course] of Object.entries(module.physics1PriorityCourseData)) {
+    const formulas = course.cheatsheet.sections.flatMap(section =>
+      section.items.flatMap(item => (item.formulaRows || []).map(row => row.formula)))
+    for (const formula of formulas) {
+      for (const segment of mathSegments(formula).filter(part => part.startsWith('$'))) {
+        assert(math[segment]?.includes('<mjx-container'), 'Chapter '+chapter+': Missing compiled '+segment)
+        checked++
+      }
+    }
+  }
+  assert(checked > 100, 'The check must cover all seven chapter cheatsheets')
 })
 
 test('client bundles skip rendered math for server-only Wiki article bodies', async () => {

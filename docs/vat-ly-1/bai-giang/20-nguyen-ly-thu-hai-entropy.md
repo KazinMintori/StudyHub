@@ -1,31 +1,35 @@
 ---
-course: vat-ly-1
-lecture: 20-nguyen-ly-thu-hai-entropy
-section: lecture
+course: "vat-ly-1"
+lecture: "20-nguyen-ly-thu-hai-entropy"
+section: "lecture"
 title: "Nguyên lý thứ hai của nhiệt động lực học"
 prerequisites: ["noi-nang","khi-ly-tuong","nhiet-do-tuyet-doi","tich-phan"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Nguyên lý thứ hai của nhiệt động lực học."
+lessonStatus: "draft"
+hasChapterExercises: true
+sourceTranslation: "full"
+description: "Chiều của quá trình nhiệt động, Động cơ nhiệt, Động cơ đốt trong, Máy lạnh và bơm nhiệt, Nguyên lý thứ hai, Chu trình Carnot, Entropy, Giải thích vi mô của entropy."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-20/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 20.1 — Directions of Thermodynamic Processes (từ trang 642).
-- 20.2 — Heat Engines (từ trang 644).
-- 20.3 — Internal-Combustion Engines (từ trang 647).
-- 20.4 — Refrigerators (từ trang 649).
-- 20.5 — The Second Law of Thermodynamics (từ trang 651).
-- 20.6 — The Carnot Cycle (từ trang 653).
-- 20.7 — Entropy (từ trang 659).
-- 20.8 — Microscopic Interpretation of Entropy (từ trang 665).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-20/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 20.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Nguyên lý thứ hai của nhiệt động lực học">
+
+<ChapterExercises :chapter="20" />
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 20.
+
+</div>

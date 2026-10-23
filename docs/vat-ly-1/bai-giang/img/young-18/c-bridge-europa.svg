@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" role="img" aria-labelledby="title desc">
+<title id="title">Phân tử bay thẳng đứng từ Europa</title>
+<desc id="desc">Bình khí có lỗ rò gần mặt đất. Phân tử bay lên với tốc độ đầu v0, đạt độ cao hmax khi tốc độ bằng không. Gia tốc trọng trường hướng xuống.</desc>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#6945a0"/></marker></defs>
+<rect width="720" height="440" rx="16" fill="#fff"/>
+<g font-family="Arial,sans-serif" font-size="20" fill="#252335">
+<path d="M45 365H675" stroke="#5d6572" stroke-width="3"/><text x="465" y="402">Bề mặt Europa</text>
+<rect x="95" y="258" width="140" height="108" rx="15" fill="#e5dff0" stroke="#5d6572" stroke-width="2"/>
+<ellipse cx="165" cy="258" rx="70" ry="13" fill="#efeaf7" stroke="#5d6572" stroke-width="2"/>
+<text x="115" y="317">Bình khí</text>
+<path d="M235 350H320" stroke="#5d6572" stroke-width="3"/>
+<circle cx="320" cy="350" r="6" fill="#6945a0"/>
+<path d="M320 333V240" stroke="#6945a0" stroke-width="3" marker-end="url(#a)"/>
+<path d="M320 228V90" stroke="#6945a0" stroke-width="2" stroke-dasharray="7 7"/>
+<circle cx="320" cy="80" r="7" fill="#6945a0"/>
+<text x="345" y="87">Điểm cao nhất: v = 0</text>
+<text x="340" y="277">v₀ = vᵣₘₛ</text>
+<text x="245" y="391">Lỗ rò</text>
+<path d="M600 350V80M589 80H611M589 350H611" stroke="#5d6572" stroke-width="2"/>
+<text x="615" y="220">hₘₐₓ</text>
+<path d="M130 100V180" stroke="#6945a0" stroke-width="3" marker-end="url(#a)"/>
+<text x="150" y="150">g</text>
+<path d="M330 350H585M330 80H585" stroke="#aaa5b3" stroke-width="1.5" stroke-dasharray="5 6"/>
+</g></svg>

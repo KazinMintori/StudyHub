@@ -1,0 +1,70 @@
+{
+  "chapter": 19,
+  "status": "content-complete",
+  "theorySections": 8,
+  "examples": 7,
+  "numberedExercises": 66,
+  "guidedExercises": 12,
+  "discussionQuestions": 24,
+  "bridgeProblems": 1,
+  "closedSolutions": 103,
+  "exerciseGroups": 19,
+  "originalSourceImageAssets": 47,
+  "supplementarySolutionDiagrams": 8,
+  "browser": {
+    "topics": {
+      "cases": 36,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    },
+    "support": {
+      "cases": 32,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    },
+    "exercises": {
+      "cases": 76,
+      "viewports": [
+        320,
+        360,
+        375,
+        1440
+      ]
+    }
+  },
+  "browserChecks": 144,
+  "sourceReview": "raw_materials/physics/reviews/ch19-parent-final-review.md",
+  "sourceErrata": "raw_materials/physics/chapter-19-source-errata.md",
+  "reviewedFileHashes": {
+    "raw_materials\\physics\\translations\\chapter-19\\00-mo-dau.md": "478d8fb6f869c016f4d5e7c297bde1835f44a8114b0e1539eb771d194e87b870",
+    "raw_materials\\physics\\translations\\chapter-19\\01-he-nhiet-dong.md": "c26f48ded7142681115e1d1f8c7ebc1209ebcd56d636f2aa2b018c46bfea07c7",
+    "raw_materials\\physics\\translations\\chapter-19\\02-cong-khi-the-tich-thay-doi.md": "8702bf87e426f7b21d1d49046dc3527f0ca70937d1547683f29e75ed048e6166",
+    "raw_materials\\physics\\translations\\chapter-19\\03-duong-di-giua-cac-trang-thai.md": "62838c436090a9ad6e0d75b051e1b4659609114f6e1cc9f7bf0921c3b0317d20",
+    "raw_materials\\physics\\translations\\chapter-19\\04-noi-nang-va-nguyen-ly-thu-nhat.md": "1ebd2e77323293bb32715a5a74d56c4cb4766657fb73ac2c69ce1a0c345aecdc",
+    "raw_materials\\physics\\translations\\chapter-19\\05-cac-qua-trinh-nhiet-dong.md": "280631cb6edaf5c7565ab6379f2c926454487b3c38d272c501358e3623d31e63",
+    "raw_materials\\physics\\translations\\chapter-19\\06-noi-nang-khi-ly-tuong.md": "1ea1c53aab2c1cfa4e0ce6ab0e2fe6782f27cb4772f815ee310852c3895d4b01",
+    "raw_materials\\physics\\translations\\chapter-19\\07-nhiet-dung-khi-ly-tuong.md": "2b968a9ee39a8818a3fb62c5899c7f2871a8d24884c474471ef7f903a25965f9",
+    "raw_materials\\physics\\translations\\chapter-19\\08-qua-trinh-doan-nhiet-khi-ly-tuong.md": "6cc5a84c803282afaa96cd64c9deeb0358dc2fdaed1ef655a5f28343cf66ddd4",
+    "raw_materials\\physics\\translations\\chapter-19\\09-luyen-tap-huong-dan.md": "f9f835e90ad32a39af9d7af0b4d026721bf57dfa2df8a2e6002db3bf6059c876",
+    "raw_materials\\physics\\translations\\chapter-19\\10-cau-hoi-thao-luan.md": "9ab82b3f2c1f86fc42f039672e4c389578c5893fa34028b277de64386a56411c",
+    "raw_materials\\physics\\translations\\chapter-19\\11-bai-tap-001-033.md": "fc5310df324e813df6587b2ca4420a9054a0e2caef91c5424e2ad99e2dfac91e",
+    "raw_materials\\physics\\translations\\chapter-19\\12-bai-tap-034-066.md": "73ae2f5b02936ee31c263aacd54aa80eae81135fc18f40a8a9191264d949885e",
+    "raw_materials\\physics\\translations\\chapter-19\\16-bai-tap-cau-noi.md": "a751b936c7e7503fb6c6a290a3397bb125f237d0ab6d4f9dba1776fab7b02b13",
+    "raw_materials\\physics\\translations\\chapter-19\\17-tom-tat.md": "037bba5cb5297279c76209053849bc471d3a00ede1d2674be75e3a420033f7ed"
+  },
+  "publication": "reviewed-in-isolated-worktree",
+  "fullBuild": "GitHub Actions only",
+  "limitations": [
+    "No absolute error-free percentage is claimed.",
+    "A tiny unrelated continuation-mark fragment remains at the corner of source figure19.12; all artwork and labels are retained.",
+    "GitHub build and public deployment have not run for these changes."
+  ]
+}

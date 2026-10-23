@@ -1,3 +1,37 @@
+import {physics1Chapter20ExercisesCImageAnnotations} from './physics1-20-exercises-c-image-annotations.mjs'
+import {physics1Chapter20ExercisesDImageAnnotations} from './physics1-20-exercises-d-image-annotations.mjs'
+import {physics1Chapter20ExercisesEImageAnnotations} from './physics1-20-exercises-e-image-annotations.mjs'
+import {physics1Chapter17ExercisesEImageAnnotations} from './physics1-17-exercises-e-image-annotations.mjs'
+import {physics1Chapter17ExercisesDImageAnnotations} from './physics1-17-exercises-d-image-annotations.mjs'
+import {physics1Chapter11ExercisesDImageAnnotations} from './physics1-11-exercises-d-image-annotations.mjs'
+import {physics1Chapter11ExercisesEImageAnnotations} from './physics1-11-exercises-e-image-annotations.mjs'
+import {physics1Chapter11ExercisesCImageAnnotations} from './physics1-11-exercises-c-image-annotations.mjs'
+import {physics1Chapter10ExercisesEImageAnnotations} from './physics1-10-exercises-e-image-annotations.mjs'
+import {physics1Chapter10ExercisesDImageAnnotations} from './physics1-10-exercises-d-image-annotations.mjs'
+import {physics1Chapter10ExercisesCImageAnnotations} from './physics1-10-exercises-c-image-annotations.mjs'
+import {physics1Chapter9TheoryAImageAnnotations} from './physics1-09-theory-a-image-annotations.mjs'
+import {physics1Chapter10TheoryAImageAnnotations} from './physics1-10-theory-a-image-annotations.mjs'
+import {physics1Chapter10TheoryBImageAnnotations} from './physics1-10-theory-b-image-annotations.mjs'
+import {physics1Chapter9TheoryBImageAnnotations} from './physics1-09-theory-b-image-annotations.mjs'
+import {physics1Chapter17TheoryBImageAnnotations} from './physics1-17-theory-b-image-annotations.mjs'
+import {physics1Chapter17TheoryAImageAnnotations} from './physics1-17-theory-a-image-annotations.mjs'
+import {physics1Chapter9ExercisesCImageAnnotations} from './physics1-09-exercises-c-image-annotations.mjs'
+import {physics1Chapter9ExercisesDImageAnnotations} from './physics1-09-exercises-d-image-annotations.mjs'
+import {physics1Chapter9ExercisesEImageAnnotations} from './physics1-09-exercises-e-image-annotations.mjs'
+import {physics1Chapter11TheoryAImageAnnotations} from './physics1-11-theory-a-image-annotations.mjs'
+import {physics1Chapter11TheoryBImageAnnotations} from './physics1-11-theory-b-image-annotations.mjs'
+import {physics1Chapter20TheoryAImageAnnotations} from './physics1-20-theory-a-image-annotations.mjs'
+import {physics1Chapter20TheoryBImageAnnotations} from './physics1-20-theory-b-image-annotations.mjs'
+import {physics1Chapter18TheoryAImageAnnotations} from './physics1-18-theory-a-image-annotations.mjs'
+import {physics1Chapter18TheoryBImageAnnotations} from './physics1-18-theory-b-image-annotations.mjs'
+import {physics1Chapter19TheoryAImageAnnotations} from './physics1-19-theory-a-image-annotations.mjs'
+import {physics1Chapter19TheoryBImageAnnotations} from './physics1-19-theory-b-image-annotations.mjs'
+import {physics1Chapter18ExercisesCImageAnnotations} from './physics1-18-exercises-c-image-annotations.mjs'
+import {physics1Chapter18ExercisesDImageAnnotations} from './physics1-18-exercises-d-image-annotations.mjs'
+import {physics1Chapter18ExercisesEImageAnnotations} from './physics1-18-exercises-e-image-annotations.mjs'
+import {physics1Chapter19ExercisesCImageAnnotations} from './physics1-19-exercises-c-image-annotations.mjs'
+import {physics1Chapter19ExercisesDImageAnnotations} from './physics1-19-exercises-d-image-annotations.mjs'
+import {physics1Chapter19ExercisesEImageAnnotations} from './physics1-19-exercises-e-image-annotations.mjs'
 import {physics43ExercisesCImageAnnotations} from './physics43-exercises-c-image-annotations.mjs'
 import {physics43ExercisesDImageAnnotations} from './physics43-exercises-d-image-annotations.mjs'
 import {physics44ExercisesCImageAnnotations} from './physics44-exercises-c-image-annotations.mjs'
@@ -209,6 +243,40 @@ const originalLabels={
  ...capacitanceImageAnnotations,...physics25ImageAnnotations
 }
 export const physicsImageLabels={
+ ...physics1Chapter20ExercisesCImageAnnotations,
+ ...physics1Chapter20ExercisesDImageAnnotations,
+ ...physics1Chapter20ExercisesEImageAnnotations,
+ ...physics1Chapter17ExercisesEImageAnnotations,
+ ...physics1Chapter17ExercisesDImageAnnotations,
+ ...physics1Chapter11ExercisesDImageAnnotations,
+ ...physics1Chapter11ExercisesEImageAnnotations,
+ ...physics1Chapter11ExercisesCImageAnnotations,
+ ...physics1Chapter10ExercisesEImageAnnotations,
+ ...physics1Chapter10ExercisesDImageAnnotations,
+ ...physics1Chapter10ExercisesCImageAnnotations,
+ ...physics1Chapter9TheoryAImageAnnotations,
+ ...physics1Chapter10TheoryAImageAnnotations,
+ ...physics1Chapter10TheoryBImageAnnotations,
+ ...physics1Chapter9TheoryBImageAnnotations,
+ ...physics1Chapter17TheoryBImageAnnotations,
+ ...physics1Chapter17TheoryAImageAnnotations,
+ ...physics1Chapter9ExercisesCImageAnnotations,
+ ...physics1Chapter9ExercisesDImageAnnotations,
+ ...physics1Chapter9ExercisesEImageAnnotations,
+ ...physics1Chapter11TheoryAImageAnnotations,
+ ...physics1Chapter11TheoryBImageAnnotations,
+ ...physics1Chapter20TheoryAImageAnnotations,
+ ...physics1Chapter20TheoryBImageAnnotations,
+ ...physics1Chapter18TheoryAImageAnnotations,
+ ...physics1Chapter18TheoryBImageAnnotations,
+ ...physics1Chapter19TheoryAImageAnnotations,
+ ...physics1Chapter19TheoryBImageAnnotations,
+ ...physics1Chapter18ExercisesCImageAnnotations,
+ ...physics1Chapter18ExercisesDImageAnnotations,
+ ...physics1Chapter18ExercisesEImageAnnotations,
+ ...physics1Chapter19ExercisesCImageAnnotations,
+ ...physics1Chapter19ExercisesDImageAnnotations,
+ ...physics1Chapter19ExercisesEImageAnnotations,
  ...physics43ExercisesCImageAnnotations,...physics43ExercisesDImageAnnotations,
  ...physics44ExercisesCImageAnnotations,...physics44ExercisesDImageAnnotations,
  ...physics44ParentImageAnnotations,

@@ -54,6 +54,7 @@ await acquireLock()
 let runDirectory
 try {
   await run(['scripts/sync-courses.mjs'])
+  await run(['scripts/content/generate-physics-exercises.mjs'])
   const cache = path.join(root, 'docs/.vitepress/cache')
   await mkdir(cache, { recursive: true })
   runDirectory = await mkdtemp(path.join(cache, 'studyhub-build-'))

@@ -1,3 +1,4 @@
+import {physics1PriorityCourseData} from '../../../../docs/.vitepress/physics1-priority-course.mjs'
 import {particlesCosmologyCheatsheet} from '../../../../docs/.vitepress/physics-particles-cosmology-course.mjs'
 import {nuclearCheatsheet} from '../../../../docs/.vitepress/physics-nuclear-course.mjs'
 import {moleculesCheatsheet} from '../../../../docs/.vitepress/physics-molecules-course.mjs'
@@ -63,18 +64,18 @@ export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/1
   'vat-ly-1/06-cong-dong-nang': workEnergyCheatsheet,
   'vat-ly-1/07-the-nang-bao-toan-co-nang': potentialEnergyCheatsheet,
   'vat-ly-1/08-dong-luong-va-cham': momentumCheatsheet,
-  'vat-ly-1/09-dong-hoc-vat-ran': rotationKinematicsCheatsheet,
-  'vat-ly-1/10-dong-luc-hoc-quay': rotationDynamicsCheatsheet,
-  'vat-ly-1/11-can-bang-dan-hoi': equilibriumElasticityCheatsheet,
+  'vat-ly-1/09-dong-hoc-vat-ran': physics1PriorityCourseData[9].cheatsheet,
+  'vat-ly-1/10-dong-luc-hoc-quay': physics1PriorityCourseData[10].cheatsheet,
+  'vat-ly-1/11-can-bang-dan-hoi': physics1PriorityCourseData[11].cheatsheet,
   'vat-ly-1/12-co-hoc-chat-luu': fluidMechanicsCheatsheet,
   'vat-ly-1/13-hap-dan': gravitationCheatsheet,
   'vat-ly-1/14-dao-dong': oscillationsCheatsheet,
   'vat-ly-1/15-song-co': mechanicalWavesCheatsheet,
   'vat-ly-1/16-am-hoc': acousticsCheatsheet,
-  'vat-ly-1/17-nhiet-do-nhiet-luong': temperatureHeatCheatsheet,
-  'vat-ly-1/18-thuyet-dong-hoc-chat-khi': kineticTheoryCheatsheet,
-  'vat-ly-1/19-nguyen-ly-thu-nhat': firstLawThermoCheatsheet,
-  'vat-ly-1/20-nguyen-ly-thu-hai-entropy': secondLawEntropyCheatsheet,
+  'vat-ly-1/17-nhiet-do-nhiet-luong': physics1PriorityCourseData[17].cheatsheet,
+  'vat-ly-1/18-thuyet-dong-hoc-chat-khi': physics1PriorityCourseData[18].cheatsheet,
+  'vat-ly-1/19-nguyen-ly-thu-nhat': physics1PriorityCourseData[19].cheatsheet,
+  'vat-ly-1/20-nguyen-ly-thu-hai-entropy': physics1PriorityCourseData[20].cheatsheet,
 }
 
 export function getLectureCheatsheet(course, lesson) {

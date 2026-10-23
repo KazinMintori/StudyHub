@@ -1,28 +1,35 @@
 ---
-course: vat-ly-1
-lecture: 11-can-bang-dan-hoi
-section: lecture
+course: "vat-ly-1"
+lecture: "11-can-bang-dan-hoi"
+section: "lecture"
 title: "Cân bằng và đàn hồi"
 prerequisites: ["luc","momen-luc","don-vi"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Cân bằng và đàn hồi."
+lessonStatus: "draft"
+hasChapterExercises: true
+sourceTranslation: "full"
+description: "Điều kiện cân bằng, Trọng tâm, Giải bài toán cân bằng vật rắn, Ứng suất, biến dạng và môđun đàn hồi, Đàn hồi và dẻo."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-11/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 11.1 — Conditions for Equilibrium (từ trang 337).
-- 11.2 — Center of Gravity (từ trang 338).
-- 11.3 — Solving Rigid-Body Equilibrium Problems (từ trang 341).
-- 11.4 — Stress, Strain, and Elastic Moduli (từ trang 345).
-- 11.5 — Elasticity and Plasticity (từ trang 351).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-11/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 11.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Cân bằng và đàn hồi">
+
+<ChapterExercises :chapter="11" />
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 11.
+
+</div>

@@ -1,30 +1,35 @@
 ---
-course: vat-ly-1
-lecture: 17-nhiet-do-nhiet-luong
-section: lecture
+course: "vat-ly-1"
+lecture: "17-nhiet-do-nhiet-luong"
+section: "lecture"
 title: "Nhiệt độ và nhiệt"
-prerequisites: ["cong-nang-luong","don-vi"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Nhiệt độ và nhiệt."
+prerequisites: ["don-vi","cong-nang-luong","luc"]
+lessonStatus: "draft"
+hasChapterExercises: true
+sourceTranslation: "full"
+description: "Nhiệt độ và cân bằng nhiệt, Nhiệt kế và các thang nhiệt độ, Nhiệt kế khí và thang Kelvin, Sự nở vì nhiệt, Nhiệt lượng và nhiệt dung, Nhiệt lượng kế và chuyển pha, Các cơ chế truyền nhiệt."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<div class="lecture-notes-content">
 
-## Đề cương chi tiết bài giảng
+<!--@include: ../../../raw_materials/physics/translations/chapter-17/00-mo-dau.md-->
 
-- Lời mở đầu và mục tiêu học tập.
-- 17.1 — Temperature and Thermal Equilibrium (từ trang 541).
-- 17.2 — Thermometers and Temperature Scales (từ trang 543).
-- 17.3 — Gas Thermometers and the Kelvin Scale (từ trang 545).
-- 17.4 — Thermal Expansion (từ trang 547).
-- 17.5 — Quantity of Heat (từ trang 552).
-- 17.6 — Calorimetry and Phase Changes (từ trang 555).
-- 17.7 — Mechanisms of Heat Transfer (từ trang 561).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<TopicMap />
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-17/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 17.
+
+</div>
+
+<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Nhiệt độ và nhiệt">
+
+<ChapterExercises :chapter="17" />
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 17.
+
+</div>

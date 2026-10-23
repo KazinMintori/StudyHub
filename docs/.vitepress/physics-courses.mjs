@@ -198,50 +198,200 @@ export const physics1Course = {
       "sourceChapter": 8
     },
     {
-      "slug": "09-dong-hoc-vat-ran",
-      "title": "Chuyển động quay của vật rắn",
-      "prerequisites": [
-        "dao-ham",
-        "tich-phan",
-        "cong-nang-luong"
-      ],
-      "supportingConcepts": [
-        "momen-quan-tinh"
-      ],
-      "status": "draft",
-      "number": 9,
-      "sourceChapter": 9
-    },
+  "slug": "09-dong-hoc-vat-ran",
+  "title": "Chuyển động quay của vật rắn",
+  "prerequisites": [
+    "dao-ham",
+    "tich-phan",
+    "vector",
+    "cong-nang-luong"
+  ],
+  "supportingConcepts": [
+    "toa-do-goc",
+    "van-toc-goc",
+    "gia-toc-goc",
+    "momen-quan-tinh",
+    "dinh-ly-truc-song-song",
+    "ban-kinh-quan-tinh"
+  ],
+  "status": "ready",
+  "number": 9,
+  "sourceChapter": 9,
+  "topicGroups": [
     {
-      "slug": "10-dong-luc-hoc-quay",
-      "title": "Động lực học chuyển động quay",
-      "prerequisites": [
-        "vector",
-        "tich-vo-huong",
-        "momen-quan-tinh",
-        "cong-nang-luong"
-      ],
-      "supportingConcepts": [
-        "momen-luc",
-        "dong-luong-vat-ly"
-      ],
-      "status": "draft",
-      "number": 10,
-      "sourceChapter": 10
-    },
+      "title": "Chuyển động quay và vật rắn",
+      "topics": [
+        {
+          "slug": "van-toc-va-gia-toc-goc",
+          "title": "Vận tốc góc và gia tốc góc",
+          "question": "Làm thế nào mô tả vị trí và chiều quay của toàn bộ vật rắn?",
+          "source": "9.1"
+        },
+        {
+          "slug": "quay-gia-toc-goc-khong-doi",
+          "title": "Quay với gia tốc góc không đổi",
+          "question": "Khi nào dùng được các phương trình quay tương tự chuyển động thẳng?",
+          "source": "9.2"
+        },
+        {
+          "slug": "lien-he-dai-luong-dai-va-goc",
+          "title": "Liên hệ đại lượng dài và đại lượng góc",
+          "question": "Vì sao các điểm trên cùng vật có cùng vận tốc góc nhưng khác tốc độ dài?",
+          "source": "9.3"
+        },
+        {
+          "slug": "dong-nang-va-momen-quan-tinh",
+          "title": "Động năng quay và mômen quán tính",
+          "question": "Sự phân bố khối lượng quanh trục quyết định động năng quay thế nào?",
+          "source": "9.4"
+        },
+        {
+          "slug": "dinh-ly-truc-song-song",
+          "title": "Định lý trục song song",
+          "question": "Đổi trục quay song song làm mômen quán tính thay đổi ra sao?",
+          "source": "9.5"
+        },
+        {
+          "slug": "tinh-momen-quan-tinh",
+          "title": "Tính mômen quán tính bằng tích phân",
+          "question": "Chọn phần tử khối lượng nào để tính mômen quán tính của một vật liên tục?",
+          "source": "9.6"
+        }
+      ]
+    }
+  ],
+  "hasChapterExercises": true
+},
     {
-      "slug": "11-can-bang-dan-hoi",
-      "title": "Cân bằng và đàn hồi",
-      "prerequisites": [
-        "luc",
-        "momen-luc",
-        "don-vi"
-      ],
-      "supportingConcepts": [],
-      "status": "draft",
-      "number": 11,
-      "sourceChapter": 11
-    },
+  "slug": "10-dong-luc-hoc-quay",
+  "title": "Động lực học chuyển động quay",
+  "prerequisites": [
+    "vector",
+    "luc",
+    "momen-quan-tinh",
+    "cong-nang-luong",
+    "dong-luong-vat-ly"
+  ],
+  "supportingConcepts": [
+    "momen-luc",
+    "momen-dong-luong",
+    "lan-khong-truot",
+    "con-quay-tien-dong"
+  ],
+  "status": "draft",
+  "number": 10,
+  "sourceChapter": 10,
+  "topicGroups": [
+    {
+      "title": "Chuyển động quay và vật rắn",
+      "topics": [
+        {
+          "slug": "momen-luc",
+          "title": "Mômen lực",
+          "question": "Lực tác dụng ở đâu và theo hướng nào tạo ra tác dụng quay?",
+          "source": "10.1"
+        },
+        {
+          "slug": "momen-luc-va-gia-toc-goc",
+          "title": "Mômen lực và gia tốc góc",
+          "question": "Tổng mômen lực quyết định gia tốc quay quanh trục cố định thế nào?",
+          "source": "10.2"
+        },
+        {
+          "slug": "quay-quanh-truc-chuyen-dong",
+          "title": "Vật rắn quay quanh trục chuyển động",
+          "question": "Kết hợp chuyển động khối tâm và chuyển động quay trong bài toán lăn ra sao?",
+          "source": "10.3"
+        },
+        {
+          "slug": "cong-va-cong-suat-quay",
+          "title": "Công và công suất trong chuyển động quay",
+          "question": "Lực làm vật quay truyền năng lượng với tốc độ nào?",
+          "source": "10.4"
+        },
+        {
+          "slug": "momen-dong-luong",
+          "title": "Mômen động lượng",
+          "question": "Mômen động lượng phụ thuộc gốc và phân bố vận tốc như thế nào?",
+          "source": "10.5"
+        },
+        {
+          "slug": "bao-toan-momen-dong-luong",
+          "title": "Bảo toàn mômen động lượng",
+          "question": "Khi nào thay đổi cấu hình làm vận tốc quay thay đổi mà mômen động lượng vẫn giữ nguyên?",
+          "source": "10.6"
+        },
+        {
+          "slug": "con-quay-va-tien-dong",
+          "title": "Con quay và tiến động",
+          "question": "Vì sao mômen trọng lực có thể đổi hướng trục quay thay vì làm con quay đổ ngay?",
+          "source": "10.7"
+        }
+      ]
+    }
+  ],
+  "hasChapterExercises": true
+},
+    {
+  "slug": "11-can-bang-dan-hoi",
+  "title": "Cân bằng và đàn hồi",
+  "prerequisites": [
+    "luc",
+    "momen-luc",
+    "don-vi"
+  ],
+  "supportingConcepts": [
+    "can-bang-co-hoc",
+    "trong-tam-vat-ran",
+    "ung-suat",
+    "bien-dang-tuong-doi",
+    "modun-young",
+    "modun-khoi",
+    "modun-truot",
+    "gioi-han-dan-hoi"
+  ],
+  "status": "draft",
+  "number": 11,
+  "sourceChapter": 11,
+  "topicGroups": [
+    {
+      "title": "Chuyển động quay và vật rắn",
+      "topics": [
+        {
+          "slug": "dieu-kien-can-bang",
+          "title": "Điều kiện cân bằng",
+          "question": "Vì sao cân bằng lực chưa đủ để giữ vật rắn đứng yên?",
+          "source": "11.1"
+        },
+        {
+          "slug": "trong-tam",
+          "title": "Trọng tâm",
+          "question": "Khi nào có thể thay trọng lực phân bố bằng một lực đặt tại trọng tâm?",
+          "source": "11.2"
+        },
+        {
+          "slug": "giai-bai-toan-can-bang-vat-ran",
+          "title": "Giải bài toán cân bằng vật rắn",
+          "question": "Chọn vật, điểm tính mômen và lực liên kết như thế nào?",
+          "source": "11.3"
+        },
+        {
+          "slug": "ung-suat-bien-dang-modun",
+          "title": "Ứng suất, biến dạng và môđun đàn hồi",
+          "question": "Lực phân bố trên diện tích và sự biến dạng liên hệ ra sao?",
+          "source": "11.4"
+        },
+        {
+          "slug": "dan-hoi-va-deo",
+          "title": "Đàn hồi và dẻo",
+          "question": "Giới hạn tỉ lệ khác giới hạn đàn hồi thế nào?",
+          "source": "11.5"
+        }
+      ]
+    }
+  ],
+  "hasChapterExercises": true
+},
     {
       "slug": "12-co-hoc-chat-luu",
       "title": "Cơ học chất lưu",
@@ -317,69 +467,886 @@ export const physics1Course = {
       "sourceChapter": 16
     },
     {
-      "slug": "17-nhiet-do-nhiet-luong",
-      "title": "Nhiệt độ và nhiệt",
-      "prerequisites": [
-        "cong-nang-luong",
-        "don-vi"
-      ],
-      "supportingConcepts": [
-        "nhiet-do-tuyet-doi",
-        "noi-nang"
-      ],
-      "status": "draft",
-      "number": 17,
-      "sourceChapter": 17
-    },
+  "slug": "17-nhiet-do-nhiet-luong",
+  "title": "Nhiệt độ và nhiệt",
+  "prerequisites": [
+    "don-vi",
+    "cong-nang-luong",
+    "luc"
+  ],
+  "supportingConcepts": [
+    "can-bang-nhiet",
+    "nguyen-ly-khong-nhiet-dong",
+    "nhiet-do-tuyet-doi",
+    "su-no-vi-nhiet",
+    "nhiet-luong",
+    "nhiet-dung-rieng",
+    "nhiet-an-chuyen-pha",
+    "dan-nhiet",
+    "nhiet-tro",
+    "doi-luu-nhiet",
+    "buc-xa-nhiet"
+  ],
+  "status": "draft",
+  "number": 17,
+  "sourceChapter": 17,
+  "topicGroups": [
     {
-      "slug": "18-thuyet-dong-hoc-chat-khi",
-      "title": "Tính chất nhiệt của vật chất",
-      "prerequisites": [
-        "nhiet-do-tuyet-doi",
-        "cong-nang-luong",
-        "ky-vong"
-      ],
-      "supportingConcepts": [
-        "khi-ly-tuong",
-        "noi-nang"
-      ],
-      "status": "draft",
-      "number": 18,
-      "sourceChapter": 18
-    },
-    {
-      "slug": "19-nguyen-ly-thu-nhat",
-      "title": "Nguyên lý thứ nhất của nhiệt động lực học",
-      "prerequisites": [
-        "khi-ly-tuong",
-        "tich-phan",
-        "nhiet-do-tuyet-doi"
-      ],
-      "supportingConcepts": [
-        "noi-nang"
-      ],
-      "status": "draft",
-      "number": 19,
-      "sourceChapter": 19
-    },
-    {
-      "slug": "20-nguyen-ly-thu-hai-entropy",
-      "title": "Nguyên lý thứ hai của nhiệt động lực học",
-      "prerequisites": [
-        "noi-nang",
-        "khi-ly-tuong",
-        "nhiet-do-tuyet-doi",
-        "tich-phan"
-      ],
-      "supportingConcepts": [
-        "entropy-nhiet-dong"
-      ],
-      "status": "draft",
-      "number": 20,
-      "sourceChapter": 20
+      "title": "Nhiệt học và nhiệt động lực học",
+      "topics": [
+        {
+          "slug": "nhiet-do-va-can-bang-nhiet",
+          "title": "Nhiệt độ và cân bằng nhiệt",
+          "question": "Nhiệt kế đo đại lượng nào khi đạt cân bằng với vật?",
+          "source": "17.1"
+        },
+        {
+          "slug": "nhiet-ke-va-thang-nhiet-do",
+          "title": "Nhiệt kế và các thang nhiệt độ",
+          "question": "Các tính chất vật lý được dùng để xây dựng thang nhiệt độ thế nào?",
+          "source": "17.2"
+        },
+        {
+          "slug": "nhiet-ke-khi-va-thang-kelvin",
+          "title": "Nhiệt kế khí và thang Kelvin",
+          "question": "Giới hạn khí loãng dẫn tới thang nhiệt độ tuyệt đối ra sao?",
+          "source": "17.3"
+        },
+        {
+          "slug": "su-no-vi-nhiet",
+          "title": "Sự nở vì nhiệt",
+          "question": "Vì sao thay đổi nhiệt độ làm thay đổi kích thước và tạo ứng suất?",
+          "source": "17.4"
+        },
+        {
+          "slug": "nhiet-luong",
+          "title": "Nhiệt lượng và nhiệt dung",
+          "question": "Nhiệt lượng khác nhiệt độ và năng lượng chứa trong vật như thế nào?",
+          "source": "17.5"
+        },
+        {
+          "slug": "nhiet-luong-ke-va-chuyen-pha",
+          "title": "Nhiệt lượng kế và chuyển pha",
+          "question": "Cân bằng năng lượng thế nào khi các vật đổi nhiệt độ hoặc đổi pha?",
+          "source": "17.6"
+        },
+        {
+          "slug": "cac-co-che-truyen-nhiet",
+          "title": "Các cơ chế truyền nhiệt",
+          "question": "Dẫn nhiệt, đối lưu và bức xạ truyền năng lượng bằng cơ chế nào?",
+          "source": "17.7"
+        }
+      ]
     }
   ],
-  "slides": [],
+  "hasChapterExercises": true
+},
+    {
+  "slug": "18-thuyet-dong-hoc-chat-khi",
+  "title": "Tính chất nhiệt của vật chất",
+  "prerequisites": [
+    "nhiet-do-tuyet-doi",
+    "cong-nang-luong",
+    "dong-luong-vat-ly"
+  ],
+  "supportingConcepts": [
+    "khi-ly-tuong",
+    "phuong-trinh-van-der-waals",
+    "phan-bo-maxwell",
+    "nguyen-ly-phan-bo-deu-nang-luong",
+    "quang-duong-tu-do-trung-binh",
+    "diem-ba",
+    "diem-toi-han-chat"
+  ],
+  "status": "ready",
+  "number": 18,
+  "sourceChapter": 18,
+  "topicGroups": [
+    {
+      "title": "Nhiệt học và nhiệt động lực học",
+      "topics": [
+        {
+          "slug": "phuong-trinh-trang-thai",
+          "title": "Phương trình trạng thái",
+          "question": "Áp suất, thể tích và nhiệt độ của chất khí được ràng buộc ra sao?",
+          "source": "18.1"
+        },
+        {
+          "slug": "tinh-chat-phan-tu-vat-chat",
+          "title": "Tính chất phân tử của vật chất",
+          "question": "Kích thước, tương tác và lượng chất liên hệ với đại lượng vĩ mô thế nào?",
+          "source": "18.2"
+        },
+        {
+          "slug": "mo-hinh-dong-hoc-khi-ly-tuong",
+          "title": "Mô hình động học phân tử của khí lý tưởng",
+          "question": "Va chạm phân tử tạo áp suất và nối nhiệt độ với động năng ra sao?",
+          "source": "18.3"
+        },
+        {
+          "slug": "nhiet-dung",
+          "title": "Nhiệt dung và các bậc tự do",
+          "question": "Vì sao nhiệt dung khí phụ thuộc cấu trúc phân tử và nhiệt độ?",
+          "source": "18.4"
+        },
+        {
+          "slug": "toc-do-phan-tu",
+          "title": "Tốc độ phân tử",
+          "question": "Tốc độ trung bình, hiệu dụng và có xác suất lớn nhất khác nhau thế nào?",
+          "source": "18.5"
+        },
+        {
+          "slug": "cac-pha-cua-vat-chat",
+          "title": "Các pha của vật chất",
+          "question": "Giản đồ pha cho biết gì về điểm ba và điểm tới hạn?",
+          "source": "18.6"
+        }
+      ]
+    }
+  ],
+  "hasChapterExercises": true
+},
+    {
+  "slug": "19-nguyen-ly-thu-nhat",
+  "title": "Nguyên lý thứ nhất của nhiệt động lực học",
+  "prerequisites": [
+    "khi-ly-tuong",
+    "tich-phan",
+    "nhiet-do-tuyet-doi",
+    "cong-nang-luong"
+  ],
+  "supportingConcepts": [
+    "he-nhiet-dong",
+    "noi-nang",
+    "cong-nhiet-dong",
+    "qua-trinh-dang-nhiet",
+    "qua-trinh-doan-nhiet",
+    "nhiet-dung-dang-tich-dang-ap"
+  ],
+  "status": "ready",
+  "number": 19,
+  "sourceChapter": 19,
+  "topicGroups": [
+    {
+      "title": "Nhiệt học và nhiệt động lực học",
+      "topics": [
+        {
+          "slug": "he-nhiet-dong",
+          "title": "Hệ nhiệt động",
+          "question": "Chọn hệ và quy ước dấu cho năng lượng trao đổi thế nào?",
+          "source": "19.1"
+        },
+        {
+          "slug": "cong-khi-the-tich-thay-doi",
+          "title": "Công khi thể tích thay đổi",
+          "question": "Diện tích dưới đường quá trình trên đồ thị p–V biểu diễn đại lượng gì?",
+          "source": "19.2"
+        },
+        {
+          "slug": "duong-di-giua-cac-trang-thai",
+          "title": "Đường đi giữa các trạng thái",
+          "question": "Vì sao cùng hai trạng thái đầu cuối có thể cho công và nhiệt lượng khác nhau?",
+          "source": "19.3"
+        },
+        {
+          "slug": "noi-nang-va-nguyen-ly-thu-nhat",
+          "title": "Nội năng và nguyên lý thứ nhất",
+          "question": "Bảo toàn năng lượng được viết thế nào theo nội năng, nhiệt lượng và công?",
+          "source": "19.4"
+        },
+        {
+          "slug": "cac-qua-trinh-nhiet-dong",
+          "title": "Các quá trình nhiệt động",
+          "question": "Đẳng tích, đẳng áp, đẳng nhiệt và đoạn nhiệt khác nhau ở điều kiện nào?",
+          "source": "19.5"
+        },
+        {
+          "slug": "noi-nang-khi-ly-tuong",
+          "title": "Nội năng của khí lý tưởng",
+          "question": "Vì sao nội năng khí lý tưởng chỉ phụ thuộc nhiệt độ?",
+          "source": "19.6"
+        },
+        {
+          "slug": "nhiet-dung-khi-ly-tuong",
+          "title": "Nhiệt dung của khí lý tưởng",
+          "question": "Vì sao đun đẳng áp cần nhiều nhiệt lượng hơn đun đẳng tích?",
+          "source": "19.7"
+        },
+        {
+          "slug": "qua-trinh-doan-nhiet-khi-ly-tuong",
+          "title": "Quá trình đoạn nhiệt của khí lý tưởng",
+          "question": "Trong điều kiện nào áp suất và thể tích tuân theo định luật lũy thừa?",
+          "source": "19.8"
+        }
+      ]
+    }
+  ],
+  "hasChapterExercises": true
+},
+    {
+  "slug": "20-nguyen-ly-thu-hai-entropy",
+  "title": "Nguyên lý thứ hai của nhiệt động lực học",
+  "prerequisites": [
+    "noi-nang",
+    "khi-ly-tuong",
+    "nhiet-do-tuyet-doi",
+    "tich-phan"
+  ],
+  "supportingConcepts": [
+    "dong-co-nhiet",
+    "hieu-suat-nhiet",
+    "he-so-lam-lanh",
+    "chu-trinh-carnot",
+    "entropy-nhiet-dong",
+    "qua-trinh-thuan-nghich",
+    "so-trang-thai-vi-mo"
+  ],
+  "status": "draft",
+  "number": 20,
+  "sourceChapter": 20,
+  "topicGroups": [
+    {
+      "title": "Nhiệt học và nhiệt động lực học",
+      "topics": [
+        {
+          "slug": "chieu-cua-qua-trinh-nhiet-dong",
+          "title": "Chiều của quá trình nhiệt động",
+          "question": "Vì sao bảo toàn năng lượng chưa xác định được chiều diễn biến?",
+          "source": "20.1"
+        },
+        {
+          "slug": "dong-co-nhiet",
+          "title": "Động cơ nhiệt",
+          "question": "Động cơ nhận nhiệt, sinh công và thải nhiệt trong một chu trình ra sao?",
+          "source": "20.2"
+        },
+        {
+          "slug": "dong-co-dot-trong",
+          "title": "Động cơ đốt trong",
+          "question": "Mô hình Otto và Diesel liên hệ các quá trình nhiệt động như thế nào?",
+          "source": "20.3"
+        },
+        {
+          "slug": "may-lanh",
+          "title": "Máy lạnh và bơm nhiệt",
+          "question": "Công cấp vào giúp chuyển nhiệt từ nguồn lạnh lên nguồn nóng thế nào?",
+          "source": "20.4"
+        },
+        {
+          "slug": "nguyen-ly-thu-hai",
+          "title": "Nguyên lý thứ hai",
+          "question": "Các phát biểu Kelvin–Planck và Clausius tương đương về giới hạn nào?",
+          "source": "20.5"
+        },
+        {
+          "slug": "chu-trinh-carnot",
+          "title": "Chu trình Carnot",
+          "question": "Vì sao nhiệt độ hai nguồn đặt giới hạn cho hiệu suất?",
+          "source": "20.6"
+        },
+        {
+          "slug": "entropy",
+          "title": "Entropy",
+          "question": "Làm thế nào tính độ biến thiên entropy của một quá trình không thuận nghịch?",
+          "source": "20.7"
+        },
+        {
+          "slug": "giai-thich-vi-mo-entropy",
+          "title": "Giải thích vi mô của entropy",
+          "question": "Số trạng thái vi mô liên hệ với entropy và chiều diễn biến thế nào?",
+          "source": "20.8"
+        }
+      ]
+    }
+  ],
+  "hasChapterExercises": true
+}
+  ],
+  "slides": [
+  {
+    "note": "02-chuyen-dong-thang",
+    "title": "Vận tốc biểu diễn sự thay đổi vị trí",
+    "bullets": [
+      "Độ dời có dấu, phụ thuộc vị trí đầu và vị trí cuối.",
+      "Vận tốc tức thời là đạo hàm của tọa độ theo thời gian.",
+      "Tốc độ tức thời là độ lớn vận tốc."
+    ],
+    "formula": "$$\nv_x=\\frac{dx}{dt}\n$$"
+  },
+  {
+    "note": "02-chuyen-dong-thang",
+    "title": "Gia tốc không đổi cho các hệ thức động học",
+    "bullets": [
+      "Gia tốc là đạo hàm của vận tốc theo thời gian.",
+      "Dùng hệ thức dưới đây khi gia tốc không đổi trong toàn bộ khoảng xét, với thời điểm đầu bằng không.",
+      "Đối với rơi tự do, phải chọn chiều trục và dấu gia tốc trọng trường nhất quán."
+    ],
+    "formula": "$$\nx=x_0+v_{0x}t+\\tfrac12a_xt^2\n$$"
+  },
+  {
+    "note": "02-chuyen-dong-thang",
+    "title": "Tích phân khôi phục độ dời từ vận tốc",
+    "bullets": [
+      "Độ dời bằng tích phân có dấu của vận tốc theo thời gian.",
+      "Diện tích dưới đồ thị vận tốc có thể dương hoặc âm.",
+      "Khi gia tốc thay đổi, tích phân gia tốc để tìm độ biến thiên vận tốc trước khi tìm vị trí."
+    ],
+    "formula": "$$\nx_2-x_1=\\int_{t_1}^{t_2}v_x(t)\\,dt\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Tọa độ góc và độ dời góc",
+    "bullets": [
+      "Góc tính bằng radian.",
+      "Độ dời góc là đại lượng có dấu, còn quãng đường trên cung tròn không âm."
+    ],
+    "formula": "$$\n\\Delta\\theta=\\theta_2-\\theta_1\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Vận tốc góc",
+    "bullets": [
+      "Chọn chiều dương quanh trục trước khi xác định dấu.",
+      "Tốc độ góc là độ lớn vận tốc góc."
+    ],
+    "formula": "$$\n\\omega_{\\mathrm{av},z}=\\Delta\\theta/\\Delta t\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Gia tốc góc",
+    "bullets": [
+      "Gia tốc góc biểu diễn sự thay đổi vận tốc góc.",
+      "Đơn vị là rad/s²."
+    ],
+    "formula": "$$\n\\alpha_z=d\\omega_z/dt\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Gia tốc góc không đổi",
+    "bullets": [
+      "Các hệ thức sau áp dụng trong cùng một khoảng có gia tốc góc không đổi.",
+      "Thời điểm đầu lấy bằng không."
+    ],
+    "formula": "$$\n\\omega_z=\\omega_{0z}+\\alpha_zt\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Vận tốc và gia tốc",
+    "bullets": [
+      "Khoảng r là khoảng cách vuông góc từ điểm đến trục cố định.",
+      "Hai thành phần gia tốc tiếp tuyến và hướng tâm vuông góc nhau."
+    ],
+    "formula": "$$\nv=r|\\omega_z|\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Mômen quán tính",
+    "bullets": [
+      "Mômen quán tính phụ thuộc vật và trục.",
+      "Các rᵢ là khoảng cách đến trục, không nhất thiết là khoảng cách đến gốc."
+    ],
+    "formula": "$$\nI=m_1r_1^2+m_2r_2^2+m_3r_3^2\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Động năng quay",
+    "bullets": [
+      "Vật rắn quay quanh trục cố định, với mọi điểm có cùng vận tốc góc.",
+      "Bán kính quán tính:\n\n$$\nk=\\sqrt{I/M}\n$$"
+    ],
+    "formula": "$$\nK=\\tfrac12I\\omega_z^2\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Định lý trục song song",
+    "bullets": [
+      "Một trục phải đi qua khối tâm.",
+      "Trục thứ hai song song và cách nó một khoảng d."
+    ],
+    "formula": "$$\nI=I_{\\mathrm{cm}}+Md^2\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Thanh mảnh đồng chất",
+    "bullets": [
+      "Trục vuông góc chiều dài L.",
+      "M là khối lượng thanh."
+    ],
+    "formula": "$$\nI_{\\mathrm{cm}}=ML^2/12\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Các vật tròn đối xứng",
+    "bullets": [
+      "Trục qua tâm và là trục đối xứng tương ứng.",
+      "Các vật đồng chất."
+    ],
+    "formula": "$$\nI=MR^2\n$$"
+  },
+  {
+    "note": "09-dong-hoc-vat-ran",
+    "title": "Tấm chữ nhật đồng chất",
+    "bullets": [
+      "Trục qua tâm, vuông góc mặt tấm cạnh a và b.",
+      "Nếu đổi vị trí hoặc hướng của trục, phải tính lại mômen quán tính theo trục mới."
+    ],
+    "formula": "$$\nI=M(a^2+b^2)/12\n$$"
+  },
+  {
+    "note": "18-thuyet-dong-hoc-chat-khi",
+    "title": "Khí lý tưởng",
+    "bullets": [
+      "Các phân tử có thể coi là chất điểm, tương tác giữa các va chạm được bỏ qua. n là số mol, N là số phân tử.",
+      "Liên hệ lượng chất:\n\n$$\nN=nN_A\n$$"
+    ],
+    "formula": "$$\npV=nRT\n$$"
+  },
+  {
+    "note": "18-thuyet-dong-hoc-chat-khi",
+    "title": "Khí thực theo van der Waals",
+    "bullets": [
+      "a và b là các hằng số đặc trưng cho chất khí trong mô hình hiệu dụng. p* là áp suất đã hiệu chỉnh lực hút, V* là thể tích đã hiệu chỉnh kích thước phân tử.",
+      "Phương trình trạng thái:\n\n$$\np_*V_*=nRT\n$$"
+    ],
+    "formula": "$$\np_*=p+an^2/V^2\n$$"
+  },
+  {
+    "note": "18-thuyet-dong-hoc-chat-khi",
+    "title": "Động năng tịnh tiến",
+    "bullets": [
+      "Cân bằng nhiệt, khí cổ điển lý tưởng và chuyển động đẳng hướng. m là khối lượng một phân tử.",
+      "Áp suất động học:\n\n$$\npV=\\tfrac13Nm\\langle v^2\\rangle\n$$"
+    ],
+    "formula": "$$\n\\langle K_{\\mathrm{tr}}\\rangle=\\tfrac32k_BT\n$$"
+  },
+  {
+    "note": "18-thuyet-dong-hoc-chat-khi",
+    "title": "Phân bố đều năng lượng",
+    "bullets": [
+      "Mỗi số hạng bậc hai độc lập đang hoạt động trong giới hạn cổ điển đóng góp năng lượng trung bình bằng một nửa kBT trên mỗi phân tử.",
+      "Lượng tử hóa có thể làm một số bậc tự do quay hoặc dao động chưa đóng góp theo giá trị cổ điển."
+    ],
+    "formula": "$$\nC_V=fR/2\n$$"
+  },
+  {
+    "note": "18-thuyet-dong-hoc-chat-khi",
+    "title": "Quãng đường tự do trung bình",
+    "bullets": [
+      "Mô hình các phân tử cầu cứng đường kính d, khí loãng có mật độ số nN.",
+      "Quãng đường tự do:\n\n$$\n\\ell=1/(\\sqrt2\\pi d^2n_N)\n$$"
+    ],
+    "formula": "$$\nn_N=N/V\n$$"
+  },
+  {
+    "note": "18-thuyet-dong-hoc-chat-khi",
+    "title": "Các tốc độ đặc trưng",
+    "bullets": [
+      "Khí lý tưởng có phân bố Maxwell ở cân bằng nhiệt.",
+      "Khối lượng m là của một phân tử."
+    ],
+    "formula": "$$\nv_{\\mathrm{mp}}=\\sqrt{2k_BT/m}\n$$"
+  },
+  {
+    "note": "18-thuyet-dong-hoc-chat-khi",
+    "title": "Phân bố Maxwell",
+    "bullets": [
+      "f(v)dv là phần phân tử có tốc độ trong khoảng từ v đến v+dv, với v không âm.",
+      "Các ký hiệu C và b được định nghĩa trong các dòng dưới."
+    ],
+    "formula": "$$\nC=4\\pi[m/(2\\pi k_BT)]^{3/2}\n$$"
+  },
+  {
+    "note": "19-nguyen-ly-thu-nhat",
+    "title": "Quy ước dấu",
+    "bullets": [
+      "Q dương khi hệ nhận nhiệt.",
+      "W dương khi hệ thực hiện công lên môi trường."
+    ],
+    "formula": "$$\n\\Delta U=Q-W\n$$"
+  },
+  {
+    "note": "19-nguyen-ly-thu-nhat",
+    "title": "Công biến đổi thể tích",
+    "bullets": [
+      "Quá trình đủ chậm để dùng áp suất cân bằng p của hệ cho công biên.",
+      "Khi giãn nở không cân bằng, phải xét áp suất ngoài phù hợp."
+    ],
+    "formula": "$$\nW=\\int_{V_1}^{V_2}p\\,dV\n$$"
+  },
+  {
+    "note": "19-nguyen-ly-thu-nhat",
+    "title": "Điều kiện quá trình",
+    "bullets": [
+      "Đẳng tích giữ V không đổi.",
+      "Đẳng áp giữ p không đổi.",
+      "Đẳng nhiệt giữ T không đổi.",
+      "Đoạn nhiệt không trao đổi nhiệt."
+    ],
+    "formula": "$$\nW=0\n$$"
+  },
+  {
+    "note": "19-nguyen-ly-thu-nhat",
+    "title": "Nội năng khí lý tưởng",
+    "bullets": [
+      "Lượng khí và thành phần không đổi.",
+      "CV có thể coi không đổi trên khoảng nhiệt độ đang xét."
+    ],
+    "formula": "$$\n\\Delta U=nC_V\\Delta T\n$$"
+  },
+  {
+    "note": "19-nguyen-ly-thu-nhat",
+    "title": "Nhiệt dung mol",
+    "bullets": [
+      "Khí lý tưởng có cùng thành phần, trong cùng miền nhiệt độ xét.",
+      "Tỉ số nhiệt dung:\n\n$$\n\\gamma=C_p/C_V\n$$"
+    ],
+    "formula": "$$\nC_p-C_V=R\n$$"
+  },
+  {
+    "note": "19-nguyen-ly-thu-nhat",
+    "title": "Giãn nở đẳng nhiệt khí lý tưởng",
+    "bullets": [
+      "Quá trình thuận nghịch hoặc gần tĩnh, T không đổi và lượng khí không đổi.",
+      "Biến thiên nội năng:\n\n$$\n\\Delta U=0\n$$"
+    ],
+    "formula": "$$\nW=nRT\\ln(V_2/V_1)\n$$"
+  },
+  {
+    "note": "19-nguyen-ly-thu-nhat",
+    "title": "Định luật đoạn nhiệt",
+    "bullets": [
+      "Chỉ áp dụng cho khí lý tưởng, quá trình đoạn nhiệt thuận nghịch hoặc gần tĩnh phù hợp, với nhiệt dung và gamma coi không đổi.",
+      "Công do khí thực hiện:\n\n$$\nW=\\frac{p_1V_1-p_2V_2}{\\gamma-1}\n$$"
+    ],
+    "formula": "$$\npV^\\gamma=\\mathrm{const}\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Mômen lực",
+    "bullets": [
+      "Vector vị trí tính từ gốc đã chọn đến điểm đặt lực.",
+      "Cánh tay đòn là khoảng cách từ gốc đến giá lực."
+    ],
+    "formula": "$$\n\\vec\\tau=\\vec r\\times\\vec F\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Vật rắn quay quanh trục cố định",
+    "bullets": [
+      "Dùng thành phần mômen ngoại lực và mômen quán tính đối với cùng trục cố định trong hệ quán tính.",
+      "Dấu của gia tốc góc theo trục được quyết định bởi tổng mômen lực có dấu theo chính trục đó."
+    ],
+    "formula": "$$\n\\sum\\tau_z=I_z\\alpha_z\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Động năng vật rắn",
+    "bullets": [
+      "Tách động năng chuyển động của khối tâm và động năng quay quanh trục qua khối tâm.",
+      "Vận tốc khối tâm và vận tốc góc mô tả hai phần của cùng chuyển động vật rắn."
+    ],
+    "formula": "$$\nK=\\tfrac12Mv_{\\mathrm{cm}}^2+\\tfrac12I_{\\mathrm{cm}}\\omega^2\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Lăn không trượt",
+    "bullets": [
+      "Quan hệ độ lớn này áp dụng tại tiếp xúc với mặt phẳng đứng yên.",
+      "Dấu các thành phần phụ thuộc quy ước trục."
+    ],
+    "formula": "$$\nv_{\\mathrm{cm}}=R\\omega\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Lăn xuống mặt nghiêng",
+    "bullets": [
+      "Vật tròn lăn không trượt dưới trọng lực, không có lực hay mômen ngoài bổ sung.",
+      "Ma sát phải đủ giữ điều kiện lăn."
+    ],
+    "formula": "$$\na_{\\mathrm{cm}}=\\frac{g\\sin\\beta}{1+I_{\\mathrm{cm}}/(MR^2)}\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Công và công suất quay",
+    "bullets": [
+      "Trục cố định.",
+      "Công phụ thuộc góc và mômen lực tác dụng trong suốt quá trình."
+    ],
+    "formula": "$$\nW=\\int_{\\theta_1}^{\\theta_2}\\tau_z\\,d\\theta\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Mômen động lượng",
+    "bullets": [
+      "Gốc tính mômen phải được xác định.",
+      "Với gốc cố định trong hệ quán tính, tổng mômen ngoại lực bằng tốc độ đổi mômen động lượng."
+    ],
+    "formula": "$$\n\\vec L=\\vec r\\times\\vec p\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Bảo toàn mômen động lượng",
+    "bullets": [
+      "Tổng mômen ngoại lực đối với gốc xét bằng không.",
+      "Bảo toàn mômen động lượng không kéo theo bảo toàn động năng."
+    ],
+    "formula": "$$\n\\vec L_i=\\vec L_f\n$$"
+  },
+  {
+    "note": "10-dong-luc-hoc-quay",
+    "title": "Tiến động đều chậm",
+    "bullets": [
+      "Con quay đối xứng quay nhanh, trục nghiêng và đầu tựa cố định.",
+      "Hệ thức là gần đúng khi mômen động lượng chủ yếu do quay quanh trục đối xứng."
+    ],
+    "formula": "$$\n\\Omega=Mgr/(I\\omega)\n$$"
+  },
+  {
+    "note": "11-can-bang-dan-hoi",
+    "title": "Điều kiện cân bằng tĩnh",
+    "bullets": [
+      "Vật ban đầu đứng yên trong hệ quán tính.",
+      "Hợp lực và tổng mômen ngoại lực cùng bằng không."
+    ],
+    "formula": "$$\n\\sum\\vec F=\\vec0\n$$"
+  },
+  {
+    "note": "11-can-bang-dan-hoi",
+    "title": "Trọng tâm trong trường đều",
+    "bullets": [
+      "Khi gia tốc trọng trường cùng hướng và cùng độ lớn trong toàn vật, trọng tâm trùng khối tâm.",
+      "Trong trường không đều, cần phân biệt khối tâm với điểm đặt tương đương của trọng lực."
+    ],
+    "formula": "$$\nx_{\\mathrm{cm}}=\\frac{\\sum_{i=1}^{n}m_ix_i}{M}\n$$"
+  },
+  {
+    "note": "11-can-bang-dan-hoi",
+    "title": "Ma sát nghỉ",
+    "bullets": [
+      "Lực ma sát tự điều chỉnh trong giới hạn.",
+      "Chỉ đạt dấu bằng ở ngưỡng trượt."
+    ],
+    "formula": "$$\nf_s\\le\\mu_sN\n$$"
+  },
+  {
+    "note": "11-can-bang-dan-hoi",
+    "title": "Kéo và nén",
+    "bullets": [
+      "F⊥ là độ lớn lực pháp tuyến trên tiết diện A.",
+      "Công thức môđun áp dụng trong miền tỉ lệ tuyến tính."
+    ],
+    "formula": "$$\n\\sigma=F_\\perp/A\n$$"
+  },
+  {
+    "note": "11-can-bang-dan-hoi",
+    "title": "Nén thể tích",
+    "bullets": [
+      "Áp suất tăng làm thể tích giảm đối với vật liệu ổn định thông thường.",
+      "Dấu trừ làm môđun khối dương."
+    ],
+    "formula": "$$\nB=-\\Delta p/(\\Delta V/V_0)\n$$"
+  },
+  {
+    "note": "11-can-bang-dan-hoi",
+    "title": "Trượt",
+    "bullets": [
+      "Lực tiếp tuyến phân bố trên diện tích A làm hai mặt lệch nhau. x/h là biến dạng trượt góc nhỏ.",
+      "Biến dạng trượt mô tả thay đổi hình dạng, còn nén đều từ mọi phía mô tả biến đổi thể tích."
+    ],
+    "formula": "$$\nS=\\frac{F_\\parallel/A}{x/h}\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Nguyên lý không",
+    "bullets": [
+      "Nếu hai hệ cùng cân bằng nhiệt với một hệ thứ ba thì chúng cân bằng nhiệt với nhau.",
+      "Nhiệt độ là đại lượng xác định điều kiện cân bằng nhiệt."
+    ],
+    "formula": ""
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Đổi thang nhiệt độ",
+    "bullets": [
+      "Trong các công thức sau, tF và tC là các số đo theo độ Fahrenheit và độ Celsius.",
+      "T là số đo theo kelvin."
+    ],
+    "formula": "$$\nt_F=\\tfrac95t_C+32\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Thang Kelvin",
+    "bullets": [
+      "Kelvin là đơn vị nhiệt độ nhiệt động lực học.",
+      "Nhiệt kế khí thể tích không đổi trong giới hạn khí loãng cho quan hệ áp suất tỉ lệ nhiệt độ tuyệt đối."
+    ],
+    "formula": "$$\nT_2/T_1=p_2/p_1\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Nở dài và nở thể tích",
+    "bullets": [
+      "Biến thiên nhiệt độ đủ nhỏ để hệ số nở có thể coi không đổi.",
+      "Vật nở tự do, không chịu cản trở cơ học."
+    ],
+    "formula": "$$\n\\Delta L=\\alpha L_0\\Delta T\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Ứng suất nhiệt",
+    "bullets": [
+      "Thanh bị giữ không đổi chiều dài trong miền đàn hồi tuyến tính.",
+      "Dấu ứng suất theo quy ước kéo dương."
+    ],
+    "formula": "$$\n\\sigma=-Y\\alpha\\Delta T\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Nhiệt lượng khi đổi nhiệt độ",
+    "bullets": [
+      "Không chuyển pha. c hoặc C có thể coi không đổi trong khoảng khảo sát.",
+      "Nhiệt lượng dương khi hệ nhận năng lượng bằng truyền nhiệt."
+    ],
+    "formula": "$$\nQ=mc\\Delta T\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Ẩn nhiệt",
+    "bullets": [
+      "Chuyển pha ở điều kiện xác định.",
+      "L là ẩn nhiệt trên một đơn vị khối lượng.",
+      "Dấu Q phụ thuộc chiều chuyển pha."
+    ],
+    "formula": "$$\n|Q|=mL\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Nhiệt lượng kế cách nhiệt",
+    "bullets": [
+      "Chọn toàn bộ các vật trao đổi nhiệt làm hệ.",
+      "Không có công ngoài đáng kể và không thất thoát nhiệt ra môi trường."
+    ],
+    "formula": "$$\nQ_1+Q_2+\\cdots+Q_n=0\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Dẫn nhiệt ổn định qua bản phẳng",
+    "bullets": [
+      "Vật đồng nhất, tiết diện A, chiều dài dẫn L.",
+      "Hai đầu giữ ở nhiệt độ Th lớn hơn Tc.",
+      "H là độ lớn dòng nhiệt."
+    ],
+    "formula": "$$\nH=kA(T_h-T_c)/L\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Các lớp nối tiếp",
+    "bullets": [
+      "Dòng nhiệt ổn định đi qua lần lượt các lớp, không có nguồn nhiệt ở nút nối và không thất thoát ngang.",
+      "Chênh lệch nhiệt độ của từng lớp tỉ lệ nhiệt trở của lớp khi các lớp truyền cùng dòng nhiệt."
+    ],
+    "formula": "$$\nR=R_1+R_2+\\cdots+R_n\n$$"
+  },
+  {
+    "note": "17-nhiet-do-nhiet-luong",
+    "title": "Bức xạ nhiệt",
+    "bullets": [
+      "Nhiệt độ tính bằng kelvin. e là hệ số phát xạ.",
+      "Hệ thức trao đổi ròng xét vật nhỏ trong môi trường bao quanh lớn ở nhiệt độ Ts."
+    ],
+    "formula": "$$\nP=e\\sigma AT^4\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Cân bằng một chu trình động cơ",
+    "bullets": [
+      "Qh là nhiệt nhận từ nguồn nóng, Qc là độ lớn nhiệt thải cho nguồn lạnh.",
+      "W là công có ích trong một chu trình."
+    ],
+    "formula": "$$\nW=Q_h-Q_c\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Máy lạnh",
+    "bullets": [
+      "Qc là nhiệt lấy từ nguồn lạnh, W là công cấp vào, Qh là nhiệt tỏa cho nguồn nóng.",
+      "Hệ số bơm nhiệt:\n\n$$\nK_h=Q_h/W\n$$"
+    ],
+    "formula": "$$\nQ_h=Q_c+W\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Chu trình Otto lý tưởng",
+    "bullets": [
+      "Khí lý tưởng với gamma không đổi. r là tỉ số thể tích lớn nhất trên thể tích nhỏ nhất.",
+      "Tỉ số nén là một tham số của mô hình chu trình, còn gamma phụ thuộc mô hình nhiệt dung của môi chất."
+    ],
+    "formula": "$$\ne=1-r^{1-\\gamma}\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Nguyên lý thứ hai",
+    "bullets": [
+      "Không có động cơ tuần hoàn chỉ nhận nhiệt từ một nguồn rồi biến toàn bộ thành công.",
+      "Không có quá trình mà kết quả duy nhất là chuyển nhiệt từ vật lạnh sang vật nóng."
+    ],
+    "formula": ""
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Động cơ thuận nghịch hai nguồn",
+    "bullets": [
+      "Th lớn hơn Tc và cả hai là nhiệt độ tuyệt đối.",
+      "Nguồn có nhiệt độ không đổi."
+    ],
+    "formula": "$$\nQ_c/Q_h=T_c/T_h\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Máy lạnh Carnot",
+    "bullets": [
+      "Máy lạnh thuận nghịch làm việc giữa đúng hai nguồn ở nhiệt độ tuyệt đối Th và Tc.",
+      "Chênh lệch nhiệt độ hai nguồn càng nhỏ thì hệ số làm lạnh thuận nghịch càng lớn."
+    ],
+    "formula": "$$\nK_C=T_c/(T_h-T_c)\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Độ biến thiên entropy",
+    "bullets": [
+      "Tính theo một đường thuận nghịch nối cùng hai trạng thái cân bằng.",
+      "Không thay nhiệt thực của một đường không thuận nghịch vào công thức này."
+    ],
+    "formula": "$$\n\\Delta S=\\int_i^f\\frac{\\delta Q_{\\mathrm{rev}}}{T}\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Hệ cô lập và toàn thể",
+    "bullets": [
+      "Tổng entropy của hệ cô lập không giảm.",
+      "Dấu bằng ứng với quá trình thuận nghịch trong mô hình xét."
+    ],
+    "formula": "$$\n\\Delta S_{\\mathrm{tot}}\\ge0\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Khí lý tưởng",
+    "bullets": [
+      "Lượng khí không đổi, CV có thể coi không đổi.",
+      "Hai dòng đóng góp cộng lại thành độ biến thiên entropy."
+    ],
+    "formula": "$$\n\\Delta S_T=nC_V\\ln(T_2/T_1)\n$$"
+  },
+  {
+    "note": "20-nguyen-ly-thu-hai-entropy",
+    "title": "Diễn giải thống kê",
+    "bullets": [
+      "Omega là số trạng thái vi mô tương thích với trạng thái vĩ mô trong mô hình các trạng thái vi mô đồng xác suất.",
+      "Entropy cộng được khi số trạng thái vi mô của hai hệ độc lập nhân với nhau."
+    ],
+    "formula": "$$\nS=k_B\\ln\\Omega\n$$"
+  }
+],
   "contentPolicy": "full-source-translation"
 }
 

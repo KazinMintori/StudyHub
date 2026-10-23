@@ -14,6 +14,7 @@ const pageComponents = {
   LegacyCourseRoute: () => import('../features/legacy/components/LegacyCourseRoute.vue'),
   WikiUsage: () => import('../features/wiki/components/WikiUsage.vue'),
   TopicMap: () => import('../features/lecture/components/TopicMap.vue'),
+  ChapterExercises: () => import('../features/lecture/components/ChapterExercises.vue'),
   PhilosophyTopic: () => import('../features/philosophy/components/PhilosophyTopic.vue'),
   DataDiagram: () => import('../features/illustrations/components/DataDiagram.vue'),
   NotebookExecution: () => import('../features/illustrations/components/NotebookExecution.vue')
