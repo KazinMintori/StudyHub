@@ -8,38 +8,89 @@
   "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
   "prerequisites": [],
   "fragments": [],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 82,
+      "title": "Tra cứu chữ ký hàm và tham số mặc định bằng inspect.signature"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 133,
+      "title": "Kiểm tra kích thước bộ nhớ nông của các đối tượng với sys.getsizeof"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 196,
+      "title": "Phân biệt sao chép nông và sao chép sâu khi sao chép danh sách lồng nhau"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 258,
+      "title": "Kiểm tra khả năng lặp và lọc dữ liệu số theo Duck Typing"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 320,
+      "title": "Kiểm tra tính băm được của đối tượng để làm khóa từ điển"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 377,
+      "title": "So sánh số thực với khoảng dung sai math.isclose"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 430,
+      "title": "Căn chỉnh độ rộng cột và phân cách hàng nghìn bằng f-string"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 491,
+      "title": "Loại bỏ tiền tố Byte Order Mark bằng chuẩn giải mã utf-8-sig"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 554,
+      "title": "Phân biệt giá trị số không và dữ liệu khuyết thiếu None"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
+      "line": 618,
+      "title": "Chuyển đổi chuỗi thời gian và tính toán khoảng cách với datetime"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
-      "line": 287,
+      "line": 726,
       "title": "Bài tập 1: Tham chiếu đối tượng, tính đột biến và sao chép nông"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
-      "line": 317,
+      "line": 756,
       "title": "Bài tập 2: Xử lý chuỗi byte và Unicode khi làm sạch dữ liệu"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
-      "line": 354,
+      "line": 793,
       "title": "Bài tập 3: Tính toán khoảng thời gian và lọc dữ liệu với datetime"
     }
   ],
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
-      "line": 302,
+      "line": 741,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
-      "line": 327,
+      "line": 766,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md",
-      "line": 369,
+      "line": 808,
       "title": "Lời giải"
     }
   ],

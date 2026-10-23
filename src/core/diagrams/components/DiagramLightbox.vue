@@ -1,12 +1,21 @@
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 const dialog = ref(null), svg = ref(''), image = ref(''), scale = ref(1)
+const canvasBg = ref('auto') // 'auto' | 'light' | 'dark'
 let observer, previousFocus
+
+function cycleBg() {
+  const modes = ['auto', 'light', 'dark']
+  const next = (modes.indexOf(canvasBg.value) + 1) % modes.length
+  canvasBg.value = modes[next]
+}
+
 async function open(node) {
   previousFocus = document.activeElement
   svg.value = node.tagName.toLowerCase() === 'svg' ? node.outerHTML : ''
   image.value = svg.value ? '' : node.src
   scale.value = 1
+  canvasBg.value = 'auto'
   await nextTick(); dialog.value.showModal(); document.body.style.overflow = 'hidden'
 }
 function close() { dialog.value.close(); document.body.style.overflow = ''; previousFocus?.focus?.() }
@@ -31,8 +40,39 @@ onUnmounted(() => { observer?.disconnect(); document.body.style.overflow = '' })
 
 <template>
   <dialog ref="dialog" class="diagram-dialog" aria-label="Xem sơ đồ và ảnh tài liệu" @cancel.prevent="close" @click="event => { if (event.target === dialog) close() }">
-    <div class="diagram-toolbar"><span>Ảnh & sơ đồ</span><div class="button-row"><button class="study-button" aria-label="Thu nhỏ" @click="scale = Math.max(.5, scale - .25)">−</button><span class="small">{{ Math.round(scale * 100) }}%</span><button class="study-button" aria-label="Phóng to" @click="scale = Math.min(4, scale + .25)">+</button><button class="study-button" @click="scale = 1">Đặt lại</button><button class="study-button primary" @click="close">Đóng</button></div></div>
-    <div class="diagram-scroll"><div class="diagram-media" :style="{ width: `${scale * 100}%` }"><div v-if="svg" v-html="svg"></div><img v-else :src="image" alt="Ảnh tài liệu được phóng to"></div></div>
+    <div class="diagram-toolbar">
+      <span>Ảnh & sơ đồ</span>
+      <div class="button-row">
+        <button
+          type="button"
+          class="study-button lightbox-bg-btn"
+          title="Đổi màu nền hiển thị ảnh/sơ đồ (hữu ích cho sơ đồ PNG trong suốt)"
+          @click="cycleBg"
+        >
+          <span v-if="canvasBg === 'auto'">🌗 Nền: Tự động</span>
+          <span v-else-if="canvasBg === 'light'">☀️ Nền: Sáng</span>
+          <span v-else>🌙 Nền: Tối</span>
+        </button>
+        <button class="study-button" aria-label="Thu nhỏ" @click="scale = Math.max(.5, scale - .25)">−</button>
+        <span class="small">{{ Math.round(scale * 100) }}%</span>
+        <button class="study-button" aria-label="Phóng to" @click="scale = Math.min(4, scale + .25)">+</button>
+        <button class="study-button" @click="scale = 1">Đặt lại</button>
+        <button class="study-button primary" @click="close">Đóng</button>
+      </div>
+    </div>
+    <div class="diagram-scroll">
+      <div
+        class="diagram-media"
+        :class="{
+          'force-light-bg': canvasBg === 'light',
+          'force-dark-bg': canvasBg === 'dark'
+        }"
+        :style="{ width: `${scale * 100}%` }"
+      >
+        <div v-if="svg" v-html="svg"></div>
+        <img v-else :src="image" alt="Ảnh tài liệu được phóng to">
+      </div>
+    </div>
   </dialog>
 </template>
 
@@ -41,7 +81,20 @@ onUnmounted(() => { observer?.disconnect(); document.body.style.overflow = '' })
 .diagram-dialog::backdrop { background: var(--scrim); }
 .diagram-toolbar { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); font-size: var(--fs-small); padding-bottom: var(--space-4); border-bottom: 1px solid var(--vp-c-divider); }
 .diagram-scroll { overflow: auto; height: calc(100% - 75px); padding-top: 25px; }
-.diagram-media { margin: auto; }
+.diagram-media { margin: auto; transition: background-color var(--motion-fast, 120ms) var(--ease); }
+.diagram-media.force-light-bg {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+.diagram-media.force-dark-bg {
+  background-color: #0f141c !important;
+  color: #f8fafc !important;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
 .diagram-media svg { width: 100% !important; height: auto !important; max-width: none !important; }
 .diagram-media img { width: 100%; height: auto; }
 @media (max-width: 600px) { .diagram-toolbar > span { display: none; }.diagram-dialog { padding: 12px; }.diagram-toolbar .study-button { padding: 7px 10px; font-size: var(--fs-small); } }

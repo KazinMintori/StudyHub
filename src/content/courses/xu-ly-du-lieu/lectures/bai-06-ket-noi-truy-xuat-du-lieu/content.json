@@ -13,21 +13,72 @@
   "fragments": [
     "raw_materials/xu-ly-du-lieu/labs/lab-06.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 55,
+      "title": "Chỉ định tiêu đề cột và kiểu dữ liệu khi phân tích tệp phân cách bằng tab"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 133,
+      "title": "Chỉ định giá trị khuyết thiếu theo từng cột và bảo vệ mã phân loại quốc tế"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 223,
+      "title": "Thăm dò dữ liệu và tính toán phân đoạn với TextFileReader"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 315,
+      "title": "Định dạng tệp CSV đầu ra với phân cách tùy biến và giá trị thiếu"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 389,
+      "title": "Bao bọc trường dữ liệu phi số bằng module csv tiêu chuẩn"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 458,
+      "title": "Làm phẳng đối tượng JSON lồng nhau thành bảng hai chiều với json_normalize"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 524,
+      "title": "Bóc tách bảng dữ liệu HTML thành danh sách DataFrame với read_html"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 628,
+      "title": "Ghi nhiều trang tính với ExcelWriter và đọc chọn lọc với ExcelFile"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 717,
+      "title": "Lưu trữ định hướng cột và đọc lọc trực tiếp trên đĩa với Parquet"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
+      "line": 907,
+      "title": "Ghi bảng và thực thi truy vấn tham số hóa với SQLite"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
-      "line": 468,
+      "line": 994,
       "title": "Bài tập 1: Đọc bảng giá có mã khu đặc biệt"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
-      "line": 513,
+      "line": 1039,
       "title": "Bài tập 2: Lọc ngày nóng từ dữ liệu API thời tiết"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
-      "line": 565,
+      "line": 1091,
       "title": "Bài tập 3: Đếm số chỗ ở thiếu giá theo từng khu bằng SQL"
     },
     {
@@ -94,17 +145,17 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
-      "line": 482,
+      "line": 1008,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
-      "line": 534,
+      "line": 1060,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-06-ket-noi-truy-xuat-du-lieu.md",
-      "line": 579,
+      "line": 1105,
       "title": "Lời giải"
     },
     {

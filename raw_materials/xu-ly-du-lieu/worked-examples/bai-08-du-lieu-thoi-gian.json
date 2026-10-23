@@ -1,0 +1,193 @@
+{
+  "slug": "bai-08-du-lieu-thoi-gian",
+  "sections": [
+    {
+      "anchor": "## 2. Quản trị múi giờ: Phân biệt localize và convert",
+      "title": "Xử lý mốc thời gian không tồn tại khi chuyển sang giờ mùa hè với nonexistent",
+      "purpose": "Nhật ký sau được ghi bằng giờ địa phương New York, chưa gắn múi giờ. Ngày 08/03/2026, đồng hồ chuyển từ 01:59:59 sang 03:00:00 nên nhãn 02:30 không có thời điểm tương ứng. Ta chọn một cách xử lý nhãn đó rồi đổi các thời điểm hợp lệ sang UTC.",
+      "code": "import pandas as pd\n\n# Giờ New York nhảy qua 02:00 sáng ngày 08/03/2026 khi đổi sang giờ mùa hè\nchuoi_thoi_gian = pd.Series([\n    \"2026-03-08 01:30:00\",\n    \"2026-03-08 02:30:00\",\n    \"2026-03-08 03:30:00\",\n])\ndt_chua_mui = pd.to_datetime(chuoi_thoi_gian)\n\n# nonexistent=\"shift_forward\" đưa mốc không tồn tại sang mốc hợp lệ kế tiếp\ndt_da_gan = dt_chua_mui.dt.tz_localize(\n    \"America/New_York\", nonexistent=\"shift_forward\"\n)\ndt_utc = dt_da_gan.dt.tz_convert(\"UTC\")\n\nket_qua = pd.DataFrame({\n    \"goc\": chuoi_thoi_gian,\n    \"ny_tz\": dt_da_gan.dt.strftime(\"%Y-%m-%d %H:%M %Z\"),\n    \"utc\": dt_utc.dt.strftime(\"%Y-%m-%d %H:%M %Z\"),\n})\nprint(ket_qua)",
+      "explanation": [
+        "`pd.to_datetime` đọc các chuỗi thành thời gian chưa gắn múi giờ. `tz_localize(\"America/New_York\")` gắn quy tắc của New York vào nhãn giờ. Nếu giữ mặc định, nhãn 02:30 không tồn tại trong ngày chuyển giờ sẽ gây lỗi. Tham số `nonexistent=\"shift_forward\"` đưa nó tới mốc hợp lệ đầu tiên là 03:00 EDT, không phải cộng một giờ để thành 03:30.",
+        "`tz_convert(\"UTC\")` đổi cách biểu diễn nhưng giữ cùng thời điểm. Kết quả lần lượt là 06:30, 07:00 và 07:30 UTC. Hai nhãn đầu và cuối được giữ nguyên giờ địa phương khi gắn múi giờ, còn nhãn giữa đã được điều chỉnh theo lựa chọn `nonexistent`.",
+        "Dùng ngay `pd.to_datetime(..., utc=True)` trên các chuỗi chưa có múi giờ sẽ coi chúng vốn là giờ UTC. Với dữ liệu địa phương này, cách đó đọc sai thời điểm. Nếu không có căn cứ để dịch nhãn 02:30, có thể chọn `nonexistent=\"NaT\"` để giữ lại tình trạng chưa xác định thay vì tạo một thời điểm thay thế."
+      ],
+      "covered": [
+        "Series.dt.tz_localize",
+        "Series.dt.tz_convert",
+        "pd.to_datetime"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-1"
+    },
+    {
+      "anchor": "## 3. Chỉ mục thời gian `DatetimeIndex` và kỹ thuật cắt lát chuỗi ký tự",
+      "title": "Lọc khung giờ cố định trong ngày bằng between_time và at_time",
+      "purpose": "Trong các hệ thống phân tích phiên giao dịch chứng khoán hoặc lưu lượng mạng viễn thông, người phân tích cần trích xuất các bản ghi diễn ra trong đúng khung giờ hành chính mỗi ngày, ví dụ từ 09:00 đến 11:00. Thay vì phải tách trường giờ và trường phút ra các cột phụ rồi ghép điều kiện lọc, DatetimeIndex cung cấp phương thức between_time để lọc trực tiếp trên toàn bộ các ngày quan sát.",
+      "code": "import pandas as pd\n\n# Giả lập chuỗi ghi nhận giao dịch mỗi 30 phút trong hai ngày làm việc\nidx = pd.date_range(\"2026-03-02 08:30\", \"2026-03-03 12:30\", freq=\"30min\")\nts = pd.Series(range(100, 100 + len(idx)), index=idx, name=\"lenh\")\n\n# Lọc các giao dịch trong khung giờ khớp lệnh liên tục từ 09:00 đến 11:00\nkhung_sang = ts.between_time(\"09:00\", \"11:00\", inclusive=\"both\")\nbang_kq = pd.DataFrame({\n    \"thoi_diem\": khung_sang.index.strftime(\"%Y-%m-%d %H:%M\"),\n    \"so_lenh\": khung_sang.values,\n})\nprint(bang_kq)\nprint(\"Chỉ các mốc đúng 11 giờ:\")\nprint(ts.at_time(\"11:00\"))",
+      "explanation": [
+        "`between_time(\"09:00\", \"11:00\", inclusive=\"both\")` lọc phần giờ trong `DatetimeIndex` cho mọi ngày. Hai biên đều được giữ. Vì vậy, kết quả có các mốc 09:00, 09:30, 10:00, 10:30 và 11:00 ở cả hai ngày. Đây khác với lát cắt có ghi ngày cụ thể, vốn chỉ lấy khoảng của ngày đó.",
+        "`at_time(\"11:00\")` chỉ lấy những bản ghi đúng 11 giờ, gồm một bản ghi mỗi ngày trong dữ liệu mẫu. Nó không chọn giá trị gần 11 giờ nhất. Cả hai phương thức cần chỉ mục thời gian, nên cần chuyển cột thời gian và đặt làm chỉ mục trước nếu bảng vẫn dùng chỉ mục số.",
+        "Nếu giờ bắt đầu lớn hơn giờ kết thúc, như 22:00 đến 04:00, `between_time` chọn các giờ nằm ngoài khoảng ban ngày. Kết quả vẫn giữ nhãn ngày gốc của từng bản ghi, không tự gán ngày 04:00 về cùng một ca với 22:00 hôm trước. Muốn thống kê theo ca cần thêm quy tắc xác định ca."
+      ],
+      "covered": [
+        "Series.between_time",
+        "Series.at_time",
+        "pd.date_range"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-2"
+    },
+    {
+      "anchor": "### Xử lý chuỗi thời gian có chỉ mục trùng lặp",
+      "title": "Phát hiện và hợp nhất các mốc thời gian trùng lặp theo phương pháp chọn lọc",
+      "purpose": "Trong các hệ thống nhật ký cảm biến hoặc máy chủ phân tán, nhiều bản ghi có thể phát sinh tại cùng một mốc giây do đo đạc song song. Chỉ mục chứa khóa trùng lặp khiến các thao tác truy vấn trả về cấu trúc không đồng nhất và làm sai lệch các phép lấy mẫu lại. Ta cần kiểm tra tính đơn nhất và gom nhóm chỉ mục để thu gọn dữ liệu về trạng thái sạch.",
+      "code": "import pandas as pd\n\nidx = pd.to_datetime([\n    \"2026-03-01 10:00:00\",\n    \"2026-03-01 10:00:00\",\n    \"2026-03-01 10:00:01\",\n    \"2026-03-01 10:00:02\",\n])\ns = pd.Series([25.4, 25.6, 26.0, 25.9], index=idx, name=\"nhiet_do\")\n\n# Hợp nhất bằng cách lấy giá trị trung bình tại mốc trùng lặp\ns_tb = s.groupby(level=0).mean()\ns_dem = s.groupby(level=0).count()\n\nbang_kq = pd.DataFrame({\n    \"thoi_diem\": s_tb.index.strftime(\"%H:%M:%S\"),\n    \"so_mau\": s_dem.values,\n    \"nhiet_do\": s_tb.round(2).values,\n})\nprint(bang_kq)",
+      "explanation": [
+        "Khi làm việc với chuỗi thời gian trong pandas, giả định thuận lợi nhất là mỗi mốc thời gian chỉ xuất hiện đúng một lần, tức thuộc tính s.index.is_unique trả về True. Tuy nhiên, khi gộp dữ liệu từ nhiều nguồn đo độc lập, tình trạng trùng lặp chỉ mục có thể xảy ra. Nếu chỉ mục bị trùng, thao tác truy vấn s.loc['2026-03-01 10:00:00'] sẽ không trả về một giá trị vô hướng đơn lẻ mà trả về một Series gồm nhiều phần tử, làm gián đoạn các phép tính tiếp theo vốn kỳ vọng một số đơn.",
+        "`s.groupby(level=0)` gom các quan sát có cùng nhãn thời gian. `.mean()` tính nhiệt độ trung bình, còn `.count()` đếm các giá trị không thiếu. Nếu muốn đếm cả bản ghi có giá trị thiếu, dùng `.size()`. Chọn tổng, trung bình hay một quan sát đại diện tùy ý nghĩa đại lượng, không chỉ để chỉ mục hết trùng.",
+        "Hai nhiệt độ 25.4 và 25.6 lúc 10:00:00 cho trung bình 25.5 với số mẫu bằng 2. Hai mốc sau có một mẫu mỗi mốc. Chỉ mục đầu ra có đúng một nhãn mỗi nhóm. Thao tác này thay đổi đơn vị quan sát từ từng mẫu đo sang từng thời điểm.",
+        "Một hướng tiếp cận dễ nhầm lẫn là gọi phương thức drop_duplicates() trên Series mà không kiểm tra chỉ mục. Phương thức drop_duplicates() theo mặc định chỉ kiểm tra sự trùng lặp trên các giá trị dữ liệu chứ không kiểm tra sự trùng lặp trên nhãn chỉ mục thời gian. Nếu hai thời điểm khác nhau tình cờ ghi nhận cùng một nhiệt độ, drop_duplicates() sẽ loại bỏ một mốc thời gian hợp lệ mà không giải quyết được sự cố trùng khóa thời gian ban đầu."
+      ],
+      "covered": [
+        "Index.is_unique",
+        "Index.duplicated",
+        "Series.groupby"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-3"
+    },
+    {
+      "anchor": "### Sinh dải ngày bằng `pd.date_range` và mã tần số hiện đại",
+      "title": "Chuẩn hóa thời điểm về đầu ngày với tham số normalize",
+      "purpose": "Một mốc bắt đầu mang theo giờ 14:25. Ta cần tạo ba ngày liên tiếp để ghép với một bảng thống kê theo ngày ở lúc 00:00. Tham số `normalize` cho thấy phần giờ được giữ lại hoặc đưa về đầu ngày như thế nào.",
+      "code": "import pandas as pd\n\n# Mốc bắt đầu phát sinh lúc 14:25 chiều\nbat_dau = pd.Timestamp(\"2026-03-01 14:25:00\")\n\n# Sinh dải ngày giữ nguyên giờ lẻ so với sinh dải ngày đã chuẩn hóa\ndr_le = pd.date_range(bat_dau, periods=3, freq=\"D\")\ndr_chuan = pd.date_range(bat_dau, periods=3, freq=\"D\", normalize=True)\n\nbang_kq = pd.DataFrame({\n    \"giu_gio\": dr_le.strftime(\"%Y-%m-%d %H:%M\"),\n    \"chuan_hoa\": dr_chuan.strftime(\"%Y-%m-%d %H:%M\"),\n})\nprint(bang_kq)",
+      "explanation": [
+        "Hàm pd.date_range là công cụ tạo trục thời gian phổ biến trong pandas, nhận mốc bắt đầu, mốc kết thúc, tần số hoặc số lượng chu kỳ. Một trường hợp thường gặp trong thực tế là mốc bắt đầu được lấy trực tiếp từ thời gian hiện tại của hệ thống hoặc từ một dòng nhật ký cụ thể, mang theo thành phần giờ và phút lẻ như 14:25:00. Khi truyền mốc này vào pd.date_range với tần số freq='D', dải thời gian sinh ra sẽ giữ nguyên thành phần giờ lẻ 14:25:00 qua tất cả các ngày tiếp theo.",
+        "Cần lưu ý rằng tần số freq='D' thể hiện bước nhảy một ngày theo lịch, và không phải lúc nào cũng tương đương đúng 24 giờ trôi qua trên thang đo thời gian thực: Khi đi qua ngày chuyển đổi giờ mùa hè (Daylight Saving Time), một ngày theo lịch có thể chỉ kéo dài 23 giờ vào mùa xuân hoặc kéo dài 25 giờ vào mùa thu. Do đó, việc hiểu bước nhảy lịch là rất quan trọng khi phân tích dữ liệu đa múi giờ.",
+        "Nếu giữ lại giờ lẻ, khi thực hiện phép nối bảng dữ liệu theo chỉ mục với một bảng khác vốn có chỉ mục ngày được sinh từ mốc nửa đêm '2026-03-01 00:00:00', các dòng mang nhãn 14:25:00 sẽ không khớp được với nhãn 00:00:00. Phép nối sẽ không thể ghép cặp các dòng này và tạo ra giá trị NaN ở những vị trí lệch nhãn, dù các dòng khác nếu trùng khớp thì vẫn được kết nối bình thường.",
+        "Tham số normalize=True trong pd.date_range giải quyết sự lệch nhãn này bằng cách đưa phần giờ, phút, giây về đúng 00:00:00 trước khi áp dụng quy tắc tần số. Bảng kết quả so sánh làm rõ sự khác biệt: Dãy thứ nhất duy trì mốc 14:25, trong khi dãy thứ hai được chuẩn hóa thành chuỗi ngày bắt đầu từ nửa đêm. Tuy nhiên, cần nhớ rằng normalize chỉ làm sạch thành phần giờ trong ngày, chứ không thể tự động xử lý hay triệt tiêu sự bất đồng về múi giờ nếu hai bảng dữ liệu thuộc hai múi giờ khác nhau."
+      ],
+      "covered": [
+        "pd.date_range",
+        "pd.Timestamp",
+        "DatetimeIndex.strftime"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-4"
+    },
+    {
+      "anchor": "### Dịch chuỗi khi dữ liệu thiếu tháng {#dich-chuoi-va-cam-bay-thieu-thang}",
+      "title": "Phân biệt dịch chuyển giá trị và dịch chuyển chỉ mục thời gian với freq",
+      "purpose": "Trong phân tích chuỗi thời gian kinh tế, người phân tích cần tính tỷ lệ tăng trưởng so với kỳ trước hoặc căn chỉnh các chuỗi dữ liệu có độ trễ. Phương thức shift mặc định dịch chuyển giá trị dữ liệu theo số hàng và để lại giá trị khuyết thiếu ở đầu chuỗi. Ngược lại, khi truyền thêm tham số freq, phương thức này giữ nguyên toàn bộ mảng giá trị và chỉ tịnh tiến các mốc thời gian trên trục chỉ mục.",
+      "code": "import pandas as pd\n\nidx = pd.date_range(\"2026-01-31\", periods=3, freq=\"ME\")\nts = pd.Series([120, 150, 180], index=idx, name=\"goc\")\n\n# Dịch chuyển giá trị: giữ nguyên nhãn ngày, đưa giá trị hàng trước xuống hàng kế tiếp\ns_val = ts.shift(1)\n\n# Dịch chuyển chỉ mục: giữ nguyên giá trị, đẩy nhãn ngày tiến 1 tháng\ns_freq = ts.shift(1, freq=\"ME\")\n\n# Kết hợp thành bảng theo dõi để quan sát sự khác biệt\nbang_kq = pd.DataFrame({\n    \"ngay_goc\": ts.index.strftime(\"%Y-%m-%d\"),\n    \"gia_tri\": ts.values,\n    \"shift_val\": s_val.values,\n    \"ngay_moi\": s_freq.index.strftime(\"%Y-%m-%d\"),\n    \"shift_freq\": s_freq.values,\n})\nbang_kq = bang_kq.astype(object).where(pd.notna(bang_kq), None)\nprint(bang_kq)",
+      "explanation": [
+        "Phương thức Series.shift là công cụ tạo biến trễ cơ bản khi làm việc với chuỗi thời gian. Khi gọi ts.shift(1) không kèm tham số tần số, pandas giữ cố định toàn bộ chỉ mục thời gian ban đầu và dịch chuyển các giá trị dọc theo hàng: Mỗi quan sát nhận giá trị của hàng liền trước đó trong bảng dữ liệu. Dòng đầu tiên tại mốc 2026-01-31 nhận giá trị khuyết thiếu NaN vì không có hàng nào đứng trước nó, trong khi giá trị 120 của tháng 1 được chuyển xuống dòng ngày 2026-02-28.",
+        "Trái lại, khi truyền thêm tham số tần số như ts.shift(1, freq='ME'), cơ chế thực thi thay đổi: Toàn bộ mảng giá trị [120, 150, 180] được giữ nguyên vẹn và không xuất hiện giá trị khuyết thiếu. Thay vào đó, toàn bộ các mốc thời gian trên trục chỉ mục bị tịnh tiến thêm một chu kỳ tần số cuối tháng, biến tập chỉ mục ban đầu thành [28/02, 31/03, 30/04].",
+        "Sự phân biệt giữa hai hình thức dịch chuyển này gắn liền với mục tiêu phân tích: Dịch chuyển giá trị dùng để tính toán mức chênh lệch giữa hai thời điểm trên cùng một bảng dữ liệu cố định (ví dụ ts - ts.shift(1)), còn dịch chuyển chỉ mục dùng để dời toàn bộ chuỗi quan sát về tương lai nhằm đóng vai trò biến dự báo cho mốc thời gian tiếp theo.",
+        "Cần lưu ý rằng việc gọi ts.shift(1) không kèm freq dịch chuyển thuần túy theo vị trí hàng quan sát: Nếu dữ liệu bị ngắt quãng hoặc thiếu tháng, hàng liền trước có thể cách xa hai hoặc ba tháng trước đó. Trong nhiều bài toán tài chính, việc dịch chuyển theo hàng giao dịch thực tế là hành vi được mong muốn có chủ đích. Tuy nhiên, nếu mục tiêu là so sánh đúng độ dài thời gian theo lịch, việc căn chỉnh chuỗi về lưới lịch đều đặn bằng asfreq hoặc resample là một lựa chọn thiết kế cần được cân nhắc kỹ lưỡng."
+      ],
+      "covered": [
+        "Series.shift",
+        "pd.date_range",
+        "DataFrame.where"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-5"
+    },
+    {
+      "anchor": "### Chuyển đổi giữa Timestamp và Period",
+      "title": "Biến đổi cột ngày sang chu kỳ kinh doanh với dt.to_period và tổng hợp theo tháng",
+      "purpose": "Trong các báo cáo quản trị doanh nghiệp, các giao dịch phát sinh rải rác vào các ngày giờ ngẫu nhiên trong tháng cần được phân loại về chu kỳ kế toán tương ứng, chẳng hạn tháng 1 hoặc tháng 2 năm 2026. Nếu sử dụng chuỗi ký tự cắt lát để gom nhóm, dữ liệu sẽ mất đi trật tự thời gian và khả năng tính toán số học trên chu kỳ. Ta sử dụng thuộc tính dt.to_period để quy đổi các mốc thời gian sang đối tượng Period.",
+      "code": "import pandas as pd\n\ndf_don = pd.DataFrame({\n    \"ma\": [\"DH01\", \"DH02\", \"DH03\", \"DH04\"],\n    \"ngay\": pd.to_datetime([\n        \"2026-01-12 09:30\",\n        \"2026-01-28 14:15\",\n        \"2026-02-05 11:00\",\n        \"2026-02-20 16:45\",\n    ]),\n    \"doanh_thu\": [250, 180, 310, 420],\n})\n\n# Chuyển đổi Timestamp sang Period chu kỳ tháng\ndf_don[\"ky_thang\"] = df_don[\"ngay\"].dt.to_period(\"M\")\n\n# Tổng hợp doanh thu theo từng chu kỳ tháng\ntong_hop = df_don.groupby(\"ky_thang\")[\"doanh_thu\"].agg(\n    tong=\"sum\", so_don=\"count\"\n).reset_index()\n\n# Chuyển đổi kỳ sang chuỗi hiển thị gọn gàng\nbang_kq = pd.DataFrame({\n    \"ky\": tong_hop[\"ky_thang\"].astype(str),\n    \"tong\": tong_hop[\"tong\"],\n    \"so_don\": tong_hop[\"so_don\"],\n})\nprint(bang_kq)",
+      "explanation": [
+        "Cột `ngay` ghi từng thời điểm giao dịch. Khi báo cáo theo tháng, ta cần nhận biết các ngày thuộc cùng kỳ mà vẫn giữ một kiểu có thể tính toán theo lịch. `dt.to_period(\"M\")` chuyển mỗi thời điểm sang kỳ tháng như `2026-01` hoặc `2026-02`.",
+        "Một `Period` mang cả giá trị kỳ và tần số. Cộng 1 vào kỳ tháng sẽ sang tháng kế tiếp, dù các tháng có số ngày khác nhau. Nếu thời gian ban đầu có múi giờ, cần xác định tháng đang xét theo múi giờ nào trước khi chuyển, vì kỳ không giữ thông tin múi giờ đó.",
+        "Sau khi có cột chu kỳ Period, phép gom nhóm df.groupby('ky_thang') cho phép tính toán các chỉ số tổng hợp như tổng doanh thu và số lượng đơn hàng cho từng tháng. Khi cần chuyển đổi ngược lại thành các mốc thời gian để vẽ đồ thị hoặc lưu trữ vào cơ sở dữ liệu quan hệ, phương thức to_timestamp(how='start') hoặc to_timestamp(how='end') sẽ tự động xác định ngày đầu tiên hoặc ngày cuối cùng của chu kỳ đó.",
+        "Hai ngày của tháng 1 cho tổng doanh thu 430, còn hai ngày của tháng 2 cho 730. `count` ở đây đếm giá trị doanh thu không thiếu. Nếu mục tiêu là đếm mọi đơn dù chưa có doanh thu, hãy dùng `size` cho số bản ghi hoặc đếm một mã đơn bắt buộc có giá trị."
+      ],
+      "covered": [
+        "Series.dt.to_period",
+        "DataFrame.groupby",
+        "PeriodIndex.to_timestamp"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-6"
+    },
+    {
+      "anchor": "### Lấy mẫu giảm tần số (Downsampling) và quy tắc biên `closed`, `label`",
+      "title": "Xác lập ranh giới đóng mở khoảng thời gian khi gom nhóm với closed và label",
+      "purpose": "Khi gom nhóm chuỗi thời gian tần số cao về các khung cửa sổ định kỳ (chẳng hạn mỗi 10 phút), các giao dịch phát sinh đúng tại mốc ranh giới như 10:10:00 sẽ được tính vào khung giờ trước hay khung giờ sau? Sự khác biệt giữa tham số closed và tham số label quyết định việc phân chia dữ liệu và nhãn hiển thị thời gian. Ta so sánh hai cấu hình biên để nắm rõ quy luật gán nhãn của pandas.",
+      "code": "import pandas as pd\n\n# Giả lập 4 giao dịch tại các mốc phút liền kề\nidx = pd.to_datetime([\n    \"2026-03-01 10:00:00\",\n    \"2026-03-01 10:05:00\",\n    \"2026-03-01 10:10:00\",\n    \"2026-03-01 10:15:00\",\n])\ns = pd.Series([10, 20, 30, 40], index=idx)\n\n# So sánh hai cấu hình biên phổ biến trong resample 10 phút\nrs_left = s.resample(\"10min\", closed=\"left\", label=\"left\").sum()\nrs_right = s.resample(\"10min\", closed=\"right\", label=\"right\").sum()\n\ndf_cmp = pd.concat([\n    rs_left.rename(\"left_sum\"),\n    rs_right.rename(\"right_sum\"),\n], axis=1)\ndf_cmp[\"thoi_diem\"] = df_cmp.index.strftime(\"%H:%M\")\nbang_kq = df_cmp[[\"thoi_diem\", \"left_sum\", \"right_sum\"]].reset_index(drop=True)\nprint(bang_kq)",
+      "explanation": [
+        "Phương thức Series.resample là phiên bản chuyên biệt của groupby trên trục thời gian, thực hiện phân chia chuỗi dữ liệu liên tục thành các khối khoảng thời gian đều đặn. Khi chia khoảng, một câu hỏi kỹ thuật cơ bản phát sinh: Một giá trị nằm đúng tại mốc ranh giới (ví dụ 10:10:00) sẽ thuộc về khoảng nào? Tham số closed='left' quy định khoảng thời gian có dạng nửa mở nửa đóng [10:00, 10:10), nghĩa là nhận mốc 10:00 nhưng loại trừ mốc 10:10 để đưa sang khoảng kế tiếp. Ngược lại, closed='right' quy định khoảng có dạng (10:00, 10:10], nghĩa là nhận mốc 10:10 vào khoảng hiện tại.",
+        "Đi kèm với việc phân định ranh giới là việc chọn nhãn đại diện thông qua tham số label. Khi gom nhóm các sự kiện xảy ra trong 10 phút, người lập trình có thể dùng thời điểm bắt đầu của khoảng làm nhãn (label='left') hoặc dùng thời điểm kết thúc làm nhãn (label='right'). Trong thực tế, quy ước phổ biến là closed='left', label='left' cho các khung thời gian trong ngày (như phút hoặc giờ), trong khi các tần số theo tháng hoặc quý (như 'ME', 'QE') lại mặc định dùng closed='right', label='right'.",
+        "Với biên trái và nhãn trái, khoảng `[10:00, 10:10)` chứa 10 và 20 nên tổng tại nhãn 10:00 là 30. Khoảng `[10:10, 10:20)` chứa 30 và 40 nên cho 70. Với biên phải và nhãn phải, khoảng `(09:50, 10:00]` cho 10, còn `(10:00, 10:10]` cho 50.",
+        "Cấu hình phải còn một khoảng kết thúc lúc 10:20, chứa giá trị 40. Cấu hình trái không có nhãn 10:20 trong kết quả nên khi `concat` căn hai Series, ô bên trái tại đó là thiếu. Giữ ô thiếu giúp phân biệt một khoảng chưa có trong kết quả với một tổng thật sự bằng 0. Tham số `label` chỉ chọn nhãn, còn `closed` mới quyết định một điểm biên thuộc khoảng nào."
+      ],
+      "covered": [
+        "Series.resample",
+        "pd.date_range",
+        "pd.concat"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-7"
+    },
+    {
+      "anchor": "### Lấy mẫu tăng tần số (Upsampling) và các phương pháp nội suy",
+      "title": "Nội suy theo trọng số khoảng cách thời gian khi dữ liệu ngắt quãng không đều",
+      "purpose": "Khi chuỗi thời gian có khoảng cách quan sát ngắt quãng không đều đặn, phương pháp nội suy tuyến tính thông thường sẽ coi khoảng cách giữa các hàng là đồng đều. Phương thức interpolate với method='time' tính toán tỷ lệ nội suy dựa trên khoảng cách thời gian thực tế giữa các mốc DatetimeIndex.",
+      "code": "import pandas as pd\n\n# Ba mốc quan sát ngắt quãng không đều: 01/03, 02/03 và 10/03\nidx = pd.to_datetime([\"2026-03-01\", \"2026-03-02\", \"2026-03-10\"])\ns = pd.Series([10.0, None, 100.0], index=idx)\n\n# So sánh nội suy tuyến tính theo hàng và nội suy theo khoảng cách thời gian\ns_linear = s.interpolate(method=\"linear\")\ns_time = s.interpolate(method=\"time\")\n\nbang_kq = pd.DataFrame({\n    \"ngay\": idx.strftime(\"%Y-%m-%d\"),\n    \"goc\": s.values,\n    \"linear\": s_linear.values,\n    \"time\": s_time.values,\n})\nbang_kq = bang_kq.astype(object).where(pd.notna(bang_kq), None)\nprint(bang_kq)",
+      "explanation": [
+        "Trong xử lý chuỗi thời gian, việc xuất hiện các giá trị khuyết thiếu do ngắt quãng đo đạc là tình huống thường gặp. Để lấp đầy các khoảng trống này, pandas cung cấp phương thức interpolate() với nhiều cơ chế xấp xỉ toán học khác nhau. Hai phương thức phổ biến là method='linear' (mặc định) và method='time'.",
+        "Khi các mốc quan sát nằm trên một lưới thời gian đều đặn (chẳng hạn mỗi ngày một mốc), cả hai phương thức linear và time đều cho kết quả hoàn toàn giống nhau vì khoảng cách hàng trùng khớp với khoảng cách thời gian. Sự khác biệt chỉ thực sự xuất hiện khi chuỗi thời gian có khoảng cách đo không đều đặn. Phương thức linear coi các dòng dữ liệu có khoảng cách số nguyên đồng đều (vị trí 0, 1, 2) bất chấp giá trị của chỉ mục thời gian, do đó giá trị tại dòng ở giữa được tính bằng trung bình cộng đơn giản của hai đầu mút: (10.0 + 100.0) / 2 = 55.0.",
+        "Từ 01/03 đến 10/03 có 9 ngày, hai giá trị đầu cuối lệch 90. Nếu nội suy tuyến tính theo thời gian, mỗi ngày tăng 10 đơn vị nên 02/03 nhận `10 + 90 × 1/9 = 20`. Đây là giá trị ước lượng dưới giả định tuyến tính, không phải phép đo được khôi phục chắc chắn.",
+        "Nội suy dùng cả hai đầu mút đã biết. Với dự báo tại 02/03, dữ liệu ngày 10/03 chưa có ở thời điểm đó nên không được dùng để tiền xử lý tập đánh giá tương lai. Với phân tích hồi cứu, có thể sử dụng khi giả định biến thiên tuyến tính phù hợp và ghi nhận rõ giá trị nào đã được ước lượng."
+      ],
+      "covered": [
+        "Series.interpolate",
+        "pd.to_datetime",
+        "DataFrame.where"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-8"
+    },
+    {
+      "anchor": "### Cửa sổ trượt (Rolling Windows)",
+      "title": "Xử lý chuỗi thời gian không đều đặn với cửa sổ khoảng thời gian và min_periods",
+      "purpose": "Khi chuỗi thời gian có khoảng cách quan sát không đều đặn (như các giao dịch phát sinh vào ngày làm việc và ngắt quãng vào cuối tuần), cửa sổ trượt theo số lượng hàng cố định sẽ gom các quan sát thuộc các khoảng thời gian xa nhau. Pandas cho phép truyền chuỗi khoảng thời gian như '2D' vào phương thức rolling để tính toán trên đúng độ dài thời gian thực tế.",
+      "code": "import pandas as pd\n\n# 4 giao dịch không đều ngày: 01/03, 02/03, 05/03 và 06/03\nidx = pd.to_datetime([\"2026-03-01\", \"2026-03-02\", \"2026-03-05\", \"2026-03-06\"])\ns = pd.Series([10.0, 20.0, 30.0, 40.0], index=idx)\n\n# Cửa sổ 2 hàng cố định so với cửa sổ 2 ngày thời gian thực\ntb_hang = s.rolling(2).mean()\ntb_thoi_gian = s.rolling(\"2D\").mean()\n\nbang_kq = pd.DataFrame({\n    \"ngay\": s.index.strftime(\"%Y-%m-%d\"),\n    \"gia_tri\": s.values,\n    \"tb_2_hang\": tb_hang.values,\n    \"tb_2_ngay\": tb_thoi_gian.values,\n})\nbang_kq = bang_kq.astype(object).where(pd.notna(bang_kq), None)\nprint(bang_kq)",
+      "explanation": [
+        "Kỹ thuật cửa sổ trượt (Rolling Windows) giúp làm mượt các dao động ngắn hạn để làm lộ rõ xu hướng vận động chính của chuỗi thời gian. Cú pháp cơ bản s.rolling(2).mean() xác lập một cửa sổ gồm 2 hàng quan sát liên tiếp. Phép tính trượt theo số lượng hàng này hoàn toàn có ý nghĩa khi mục tiêu là làm mượt qua 2 sự kiện giao dịch gần nhất, bất kể hai sự kiện đó diễn ra cách nhau bao lâu.",
+        "Tuy nhiên, nếu mục tiêu là đánh giá mức biến động trong một khoảng thời gian cố định theo lịch, việc trượt theo số hàng có thể dẫn đến việc gom các quan sát thuộc các tuần lễ khác nhau. Quan sát ngày 2026-03-05: Hàng liền trước nó là ngày 2026-03-02, cách xa 3 ngày. Phép tính s.rolling(2) gom giá trị 20.0 của ngày 02/03 với 30.0 của ngày 05/03 để tính trung bình ra 25.0.",
+        "Trái lại, khi truyền tham số chuỗi thời gian s.rolling('2D'), pandas xác định cửa sổ trượt tại mỗi dòng là khoảng thời gian kéo dài đúng 2 ngày kết thúc tại mốc quan sát hiện tại. Với mốc 05/03 lúc 00:00:00, khoảng cửa sổ 2 ngày mặc định là nửa mở nửa đóng (03/03 00:00, 05/03 00:00]. Vì ngày 02/03 nằm ngoài khoảng thời gian này, cửa sổ '2D' tại ngày 05/03 chỉ chứa duy nhất điểm dữ liệu của chính nó và trả về giá trị trung bình là 30.0. Đến ngày 06/03, khoảng 2 ngày (04/03 00:00, 06/03 00:00] chứa cả 05/03 và 06/03 nên trung bình trả về là (30 + 40) / 2 = 35.0.",
+        "Cửa sổ số nguyên 2 mặc định cần đủ 2 giá trị không thiếu, còn cửa sổ thời gian `\"2D\"` mặc định chỉ cần 1. Do đó, hàng đầu của hai phép tính khác nhau. Có thể đặt `min_periods` tường minh để yêu cầu một số mẫu tối thiểu. Đây là số quan sát hợp lệ, không phải độ dài thời gian."
+      ],
+      "covered": [
+        "Series.rolling",
+        "Rolling.mean",
+        "DataFrame.where"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-9"
+    },
+    {
+      "anchor": "### Làm mượt theo hàm mũ (Exponentially Weighted Moving)",
+      "title": "Điều khiển tốc độ suy giảm trọng số lịch sử qua tham số halflife trong ewm",
+      "purpose": "Khi làm mượt dữ liệu bằng trung bình trượt hàm mũ, tham số halflife quy định độ dài thời gian mà sau đó mức độ ảnh hưởng của một quan sát trong quá khứ bị suy giảm đi một nửa. Ta so sánh phản ứng của đường xu hướng trước một biến động đột ngột với hai mức halflife khác nhau.",
+      "code": "import pandas as pd\n\n# Giả lập một biến động nhảy vọt từ 10 lên 50 tại thời điểm t=1\nidx = pd.date_range(\"2026-03-01\", periods=5, freq=\"D\")\ns = pd.Series([10.0, 50.0, 10.0, 10.0, 10.0], index=idx)\n\n# So sánh làm mượt với halflife ngắn (1 ngày) và halflife dài (3 ngày)\newm_nhanh = s.ewm(halflife=\"1D\", times=idx).mean()\newm_cham = s.ewm(halflife=\"3D\", times=idx).mean()\n\nbang_kq = pd.DataFrame({\n    \"ngay\": idx.strftime(\"%Y-%m-%d\"),\n    \"tin_hieu\": s.values,\n    \"ewm_hl1\": ewm_nhanh.round(2).values,\n    \"ewm_hl3\": ewm_cham.round(2).values,\n})\nprint(bang_kq)",
+      "explanation": [
+        "Khác với phương pháp cửa sổ trượt thông thường vốn phân bổ trọng số bằng nhau cho mọi quan sát trong cửa sổ rồi đột ngột bỏ qua các quan sát bên ngoài, phương pháp làm mượt hàm mũ (Exponentially Weighted Moving - EWM) gán trọng số suy giảm liên tục theo quy luật hàm mũ khi lùi dần về quá khứ. Điều này giúp đường làm mượt phản ứng nhanh nhạy trước các biến động mới nhất trong khi vẫn duy trì ảnh hưởng giảm dần của lịch sử.",
+        "Mặc định `adjust=True`, kết quả là tổng có trọng số chia cho tổng trọng số. Ở ngày thứ hai với chu kỳ bán rã 1 ngày, quan sát cũ có trọng số 0.5 và quan sát mới có trọng số 1. Giá trị là `(10 × 0.5 + 50) / 1.5`, xấp xỉ 36.67.",
+        "Trong các cách đặc tả hệ số suy giảm của pandas, tham số halflife kết hợp với times=idx mang lại ý nghĩa trực quan khi xử lý chuỗi thời gian: Với halflife='1D', cứ sau mỗi ngày trôi qua, trọng số ảnh hưởng của một quan sát trong quá khứ lại giảm đi một nửa. Với halflife='3D', phải sau 3 ngày thì trọng số của biến động mới giảm 50%, đồng nghĩa đường cong có độ trễ lớn hơn và duy trì ảnh hưởng quá khứ lâu hơn.",
+        "Chu kỳ bán rã 1 ngày cho 36.67 ở đỉnh rồi về 12.58 vào ngày cuối. Chu kỳ 3 ngày cho đỉnh 32.30 và giá trị cuối 16.02. Kết quả thể hiện mức độ phản ứng với chuỗi mẫu này. Cần chọn độ làm mượt theo khoảng thời gian và mục tiêu phân tích, không chỉ chọn đường nhìn ít dao động hơn."
+      ],
+      "covered": [
+        "Series.ewm",
+        "ExponentialMovingWindow.mean",
+        "pd.date_range"
+      ],
+      "outputKind": "table",
+      "id": "bai-08-du-lieu-thoi-gian-worked-10"
+    }
+  ]
+}

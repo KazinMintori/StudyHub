@@ -107,6 +107,31 @@
 .resume-action {
   flex-shrink: 0;
 }
+.resume-btn-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.resume-secondary-btn {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--fs-ui);
+  font-weight: 500;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--canvas);
+  color: var(--ink-2);
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  transition: all var(--motion-fast) var(--ease);
+}
+.resume-secondary-btn:hover {
+  background: var(--sunken);
+  color: var(--tim);
+  border-color: var(--control);
+}
 .resume-cta-btn {
   padding: var(--space-3) var(--space-5);
   font-size: var(--fs-ui);
@@ -135,6 +160,68 @@
 .course-search-field { position: relative; display: block; }
 .course-search-field svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--ink-3); pointer-events: none; }
 .course-search .course-search-field input { width: 100%; padding-left: 38px; }
+
+.course-category-tabs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  overflow-x: auto;
+  padding-bottom: var(--space-1);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.course-category-tabs::-webkit-scrollbar {
+  display: none;
+}
+.category-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  background: var(--canvas);
+  color: var(--ink-2);
+  font-family: var(--font-ui);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--motion-fast) var(--ease);
+}
+.category-tab-btn:hover {
+  background: var(--sunken);
+  color: var(--ink);
+  border-color: var(--control);
+}
+.category-tab-btn.active {
+  background: var(--tim);
+  border-color: var(--tim);
+  color: var(--paper);
+  font-weight: 600;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--tim) 30%, transparent);
+}
+.category-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 14%, transparent);
+}
+.course-tag-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--tim);
+  background: var(--tim-soft);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
 
 /* Course cards. `.course-row` and `.course-list` are kept for existing tests. */
 .course-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: var(--space-4); }
@@ -193,10 +280,53 @@
   .resume-card-inner { flex-direction: column; align-items: stretch; gap: var(--space-4); }
   .resume-header-row { gap: var(--space-1) var(--space-2); }
   .resume-title { font-size: 19px; }
+  .resume-btn-group { flex-direction: column-reverse; width: 100%; gap: var(--space-2); }
+  .resume-action .resume-secondary-btn,
   .resume-action .resume-cta-btn { width: 100%; justify-content: center; min-height: 44px; }
   .course-row { grid-template-columns: 84px minmax(0, 1fr); padding: var(--space-3); column-gap: var(--space-3); }
   .course-card-art { width: 84px; }
   .course-summary { -webkit-line-clamp: 2; }
   .section-heading { align-items: stretch; }
   .home-tools { padding-top: var(--space-7); }
+}
+
+
+/* Quick-Action Pills trên từng Course Card ở Trang Chủ */
+.course-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-ui);
+  font-size: var(--fs-meta, 12px);
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink-2);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--motion-fast) var(--ease);
+}
+
+.action-pill:hover {
+  background: var(--sunken);
+  color: var(--tim);
+  border-color: var(--control);
+  transform: translateY(-1px);
+}
+
+.action-pill.highlight {
+  color: var(--tim);
+  border-color: var(--tim-soft);
+  background: var(--tim-soft);
 }

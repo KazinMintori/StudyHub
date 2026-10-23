@@ -110,6 +110,54 @@ Trong dữ liệu chuỗi thời gian, ta có thể nội suy các giá trị th
 - `method="ffill"` (*forward fill*): Điền tiếp giá trị của quan sát trước đó về phía sau.
 - `method="bfill"` (*backward fill*): Lấy giá trị của quan sát liền sau điền ngược về trước.
 
+<!-- worked-example bai-04-lam-quen-pandas-worked-1 -->
+
+::: example Tái lập chỉ mục nhãn với giá trị lấp đầy và phương pháp ffill
+
+Khi đồng bộ hóa dữ liệu từ nhiều nguồn thời gian không liên tục, ta cần đưa các chuỗi quan sát về một hệ chỉ mục thời gian chuẩn chung. Nếu một mốc thời gian bị khuyết trong dữ liệu gốc, phương thức reindex cho phép ta lựa chọn điền hằng số hoặc truyền tiếp giá trị trước đó. Ta đối chiếu hai chiến lược lấp đầy để chuẩn bị chuỗi thời gian sạch.
+
+```python
+import pandas as pd
+
+s_goc = pd.Series([100, 105, 110], index=["T1", "T2", "T4"])
+chi_so_moi = ["T1", "T2", "T3", "T4", "T5"]
+
+s_fill_0 = s_goc.reindex(chi_so_moi, fill_value=0)
+s_ffill = s_goc.reindex(chi_so_moi, method="ffill")
+
+df_so_sanh = pd.DataFrame({
+    "fill_0": s_fill_0,
+    "ffill": s_ffill,
+})
+print(df_so_sanh)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| Chỉ mục | fill&#95;0 | ffill |
+| --- | --- | --- |
+| T1 | 100 | 100 |
+| T2 | 105 | 105 |
+| T3 | 0 | 105 |
+| T4 | 110 | 110 |
+| T5 | 0 | 110 |
+
+</div>
+
+Phương thức `reindex` tạo ra một đối tượng `Series` mới bằng cách sắp xếp lại dữ liệu theo danh sách nhãn mới `chi_so_moi`. Đối với các nhãn đã có sẵn như `T1`, `T2` và `T4`, giá trị ban đầu được bảo lưu nguyên vẹn.
+
+Tại các nhãn mới xuất hiện như `T3` và `T5`, nếu không chỉ định tham số lấp đầy, pandas sẽ điền giá trị khuyết thiếu `NaN`. Khi thiết lập `fill_value=0`, các vị trí này nhận ngay giá trị số không, thích hợp cho các bài toán tính số lượng phát sinh. `fill_value` chỉ dùng cho nhãn mới, không thay các ô thiếu vốn đã có trong Series gốc.
+
+Ngược lại, tham số `method='ffill'` (forward fill) thực hiện truyền tiếp giá trị hợp lệ gần nhất về phía sau. Tại mốc `T3`, giá trị 105 của mốc `T2` được mang sang, và tại mốc `T5`, giá trị 110 của `T4` được giữ lại.
+
+`method="ffill"` cần chỉ mục gốc tăng hoặc giảm đơn điệu. Nó dựa vào thứ tự nhãn, nên T1, T2 và T4 ở đây chỉ là nhãn minh họa đã được sắp. Chỉ chọn 0 khi ô vắng thực sự có nghĩa là không phát sinh, và chỉ truyền giá trị trước khi có cơ sở cho rằng trạng thái vẫn giữ nguyên.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.2. Loại bỏ dòng và cột với drop
 Phương thức `.drop()` loại bỏ các nhãn chỉ định khỏi một trục và trả về một đối tượng mới:
 ```python
@@ -146,7 +194,7 @@ gia_tri = df.iloc[0, 2]
 lat_cat_iloc = df.iloc[0:2, 1:3]
 ```
 
-#### Cạm bẫy chỉ mục số nguyên
+#### Nhãn số nguyên và vị trí trong dãy {#cam-bay-chi-muc-so-nguyen}
 Xét Series có nhãn nguyên nhưng thứ tự nhãn khác vị trí:
 
 ```python
@@ -157,7 +205,69 @@ assert s.iloc[1] == 20
 
 Trong trường hợp này, `s[1]` tìm nhãn 1 chứ không lấy phần tử thứ hai. `s[-1]` báo `KeyError` vì không có nhãn -1. Viết `.loc` và `.iloc` giúp thể hiện rõ ý định chọn theo nhãn hay vị trí.
 
-#### Cạm bẫy gán chuỗi và cơ chế Copy-on-Write
+<!-- worked-example bai-04-lam-quen-pandas-worked-2 -->
+
+::: example Phân biệt truy xuất theo nhãn số nguyên và vị trí với loc và iloc
+
+Khi một Series mang chỉ mục nhãn là các số nguyên không liên tục hoặc bị xáo trộn, việc sử dụng cú pháp ngoặc vuông thông thường rất dễ gây nhầm lẫn giữa nhãn danh nghĩa và vị trí vật lý. Để loại bỏ sự mơ hồ này, pandas cung cấp hai toán tử riêng biệt là loc và iloc. Ta đối chiếu kết quả truy xuất trên một chuỗi có nhãn nguyên đảo lộn.
+
+```python
+import pandas as pd
+
+s = pd.Series([10, 20, 30, 40], index=[3, 1, 0, 2])
+
+print(f"Truy xuất s.loc[0] (theo nhãn):   {s.loc[0]}")
+print(f"Truy xuất s.iloc[0] (theo vị trí): {s.iloc[0]}")
+print("Cắt lát s.loc[3:0] (theo nhãn 3 đến 0):")
+print(s.loc[3:0])
+print("Cắt lát s.iloc[0:2] (theo vị trí 0 đến trước 2):")
+print(s.iloc[0:2])
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Truy xuất s.loc[0] (theo nhãn):   30
+Truy xuất s.iloc[0] (theo vị trí): 10
+Cắt lát s.loc[3:0] (theo nhãn 3 đến 0):
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | Giá trị |
+| --- | --- |
+| 3 | 10 |
+| 1 | 20 |
+| 0 | 30 |
+
+</div>
+
+```text
+Cắt lát s.iloc[0:2] (theo vị trí 0 đến trước 2):
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | Giá trị |
+| --- | --- |
+| 3 | 10 |
+| 1 | 20 |
+
+</div>
+
+Series `s` chứa các giá trị `[10, 20, 30, 40]` với nhãn tương ứng `[3, 1, 0, 2]`. `s.loc[0]` tìm nhãn 0 nên trả 30. `s.iloc[0]` tìm vị trí đầu tiên nên trả 10. Cùng một số 0 nhưng ý nghĩa đối số khác nhau.
+
+Sự khác biệt bộc lộ rõ khi thực hiện cắt lát: Biểu thức `s.loc[3:0]` tìm kiếm các phần tử từ nhãn 3 đến nhãn 0 theo thứ tự xuất hiện, bao gồm cả điểm kết thúc nhãn 0, thu được ba phần tử `[10, 20, 30]`.
+
+Ngược lại, `s.iloc[0:2]` thực hiện cắt lát theo quy ước chỉ số Python truyền thống từ vị trí số 0 đến trước vị trí số 2 (không bao gồm vị trí 2), thu được hai phần tử đầu tiên là `[10, 20]`.
+
+Trong pandas hiện hành, chỉ số nguyên đơn lẻ của Series được hiểu là nhãn, còn lát cắt số nguyên thông thường có thể mang nghĩa vị trí. Dùng `loc` và `iloc` giúp nói rõ ý định ngay tại chỗ truy cập. Với nhãn trùng hoặc thiếu nhãn biên, cần kiểm tra chỉ mục trước khi dùng cách cắt lát theo nhãn của ví dụ này.
+
+:::
+
+<!-- /worked-example -->
+
+#### Gán dữ liệu với cơ chế Copy-on-Write {#cam-bay-gan-chuoi-va-co-che-copy-on-write}
 Một thao tác dễ gây lỗi logic là viết câu lệnh gán hai lần ngoặc vuông (*chained indexing*):
 ```pycon
 >>> phong_demo["gia"][phong_demo["gia"] < 50] = 50
@@ -171,6 +281,48 @@ Với `phong_demo` là DataFrame có cột `gia`, lần chọn đầu lấy mộ
 > phong_demo.loc[phong_demo["gia"] < 50, "gia"] = 50
 > assert phong_demo["gia"].tolist() == [50.0, 70.0]
 > ```
+
+<!-- worked-example bai-04-lam-quen-pandas-worked-3 -->
+
+::: example Gán giá trị có điều kiện an toàn với loc trong cơ chế Copy-on-Write
+
+Trong pandas 3, cơ chế Copy-on-Write được kích hoạt mặc định nhằm ngăn chặn việc sửa đổi dữ liệu ngoài ý muốn trên các khung nhìn trung gian. Cú pháp gán chuỗi hai lần ngoặc vuông sẽ bị cảnh báo hoặc không thể cập nhật ngược vào bảng dữ liệu gốc. Ta sử dụng cú pháp loc đồng thời trên hàng và cột để thực hiện phép gán giá trị hợp lệ.
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "ma": ["P01", "P02", "P03"],
+    "gia": [40.0, 75.0, 30.0],
+})
+
+df.loc[df["gia"] < 50.0, "gia"] = 50.0
+print(df)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| ma | gia |
+| --- | --- |
+| P01 | 50.0 |
+| P02 | 75.0 |
+| P03 | 50.0 |
+
+</div>
+
+Đoạn mã khởi tạo bảng dữ liệu giá phòng `df` gồm cột mã phòng `ma` và cột đơn giá `gia`. Ta cần áp dụng chính sách giá sàn: Mọi phòng có giá dưới 50.0 phải được điều chỉnh tăng lên mức 50.0.
+
+Cách viết `df["gia"][df["gia"] < 50.0] = 50.0` gán qua một Series trung gian. Với Copy-on-Write mặc định trong pandas 3, thao tác đó không cập nhật bảng `df` như mong muốn và có thể phát cảnh báo `ChainedAssignmentError`. Một phép gán trực tiếp bằng `loc` xác định rõ bảng cần sửa.
+
+Cú pháp chuẩn xác là sử dụng toán tử `loc` với đầy đủ hai chiều: Chiều hàng nhận biểu thức điều kiện `df['gia'] < 50.0`, và chiều cột nhận tên cột `'gia'`. Thao tác này thông báo trực tiếp cho DataFrame vị trí các ô cần cập nhật trong một bước duy nhất.
+
+Bảng kết quả in ra cho thấy hai phòng `P01` (40.0) và `P03` (30.0) đã được nâng lên 50.0 thành công, trong khi phòng `P02` giữ nguyên 75.0. Kỹ thuật này bảo đảm tính toàn vẹn dữ liệu và tuân thủ đúng ngữ nghĩa của pandas 3.
+
+:::
+
+<!-- /worked-example -->
 
 ### 2.4. Số học và căn chỉnh dữ liệu tự động
 Khi thực hiện các phép tính số học giữa hai đối tượng Series hoặc DataFrame, pandas tự động **căn chỉnh dữ liệu theo nhãn**:
@@ -195,6 +347,54 @@ s_tong = s1.add(s2, fill_value=0)
 # c    40.0
 ```
 
+<!-- worked-example bai-04-lam-quen-pandas-worked-4 -->
+
+::: example Căn chỉnh nhãn tự động trong phép cộng hai Series và bù khuyết với add
+
+Khi tổng hợp doanh thu từ hai chi nhánh kinh doanh có danh mục hàng hóa không hoàn toàn trùng khớp, phép cộng số học thông thường giữa hai Series sẽ sinh ra giá trị NaN tại mọi vị trí nhãn bị lệch. Để bảo toàn doanh thu của những mặt hàng chỉ bán được ở một chi nhánh, ta sử dụng phương thức add kết hợp tham số fill_value. Ta so sánh trực tiếp hai cách tính này.
+
+```python
+import pandas as pd
+
+cn1 = pd.Series([100, 200], index=["Áo", "Quần"])
+cn2 = pd.Series([50, 80], index=["Quần", "Giày"])
+
+tong_thong_thuong = cn1 + cn2
+tong_co_fill = cn1.add(cn2, fill_value=0)
+
+df_kq = pd.DataFrame({
+    "thong_thuong": tong_thong_thuong,
+    "bu_khuyet": tong_co_fill,
+})
+print(df_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| Chỉ mục | thong&#95;thuong | bu&#95;khuyet |
+| --- | --- | --- |
+| Giày | (thiếu) | 80.0 |
+| Quần | 250.0 | 250.0 |
+| Áo | (thiếu) | 100.0 |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Series `cn1` chứa các nhãn `['Áo', 'Quần']` và `cn2` chứa các nhãn `['Quần', 'Giày']`. Khi thực hiện phép cộng `cn1 + cn2`, pandas tự động lấy hợp của các nhãn thành `['Giày', 'Quần', 'Áo']`.
+
+Vì nhãn `'Áo'` khuyết ở `cn2` và `'Giày'` khuyết ở `cn1`, phép toán thông thường coi đó là phép cộng với `NaN` và trả về `NaN` cho cả hai mặt hàng. Chỉ duy nhất mặt hàng `'Quần'` có mặt ở hai bên mới cho kết quả số học 250.0.
+
+Phương thức `cn1.add(cn2, fill_value=0)` giải quyết vấn đề này: Trước khi thực hiện phép cộng, nếu một nhãn bị thiếu ở một trong hai bên, giá trị tại bên thiếu đó sẽ được thay thế tạm thời bằng 0. Do đó, `'Áo'` nhận 100 + 0 = 100 và `'Giày'` nhận 0 + 80 = 80. Nếu cả hai phía đều thiếu tại một nhãn, kết quả ở nhãn đó vẫn thiếu. Việc dùng 0 cần dựa trên cách hiểu số liệu, không phải quy tắc bắt buộc của mọi phép cộng.
+
+Bảng kết quả đối chiếu minh họa rõ: Cách cộng bù khuyết bảo toàn đầy đủ số liệu của các mặt hàng độc quyền ở từng chi nhánh, tránh làm thất thoát doanh thu trong báo cáo tổng hợp.
+
+:::
+
+<!-- /worked-example -->
+
 #### Phép toán giữa DataFrame và Series (Broadcasting)
 Theo mặc định, phép toán giữa DataFrame và Series khớp nhãn Series với tên cột rồi dùng lại các giá trị đó cho mỗi hàng. Muốn khớp với nhãn hàng, hãy chỉ định `axis="index"` hoặc `axis=0`:
 ```python
@@ -204,7 +404,88 @@ df_tru = bang_so.sub(s_theo_hang, axis="index")
 np.testing.assert_array_equal(df_tru.to_numpy(), [[9, 29], [18, 38]])
 ```
 
+<!-- worked-example bai-04-lam-quen-pandas-worked-5 -->
+
+::: example Trừ một Series theo cột hoặc hàng bằng sub
+
+Khi chuẩn hóa bảng dữ liệu, ta có thể cần trừ đi giá trị trung bình của từng cột hoặc trừ đi mức sàn chi phí của từng hàng quan sát. Phép trừ mặc định giữa DataFrame và Series luôn gióng hàng theo tên cột, nên nếu muốn trừ theo từng hàng, ta bắt buộc phải chỉ định rõ tham số axis='index'. Ta thực hiện cả hai chiều phát sóng để thấy rõ sự khác biệt.
+
+```python
+import pandas as pd
+
+bang = pd.DataFrame({
+    "A": [10.0, 20.0],
+    "B": [30.0, 40.0],
+}, index=["H1", "H2"])
+
+tru_cot = pd.Series([5.0, 10.0], index=["A", "B"])
+tru_hang = pd.Series([1.0, 2.0], index=["H1", "H2"])
+
+print("Bảng dữ liệu gốc:")
+print(bang)
+print("Trừ theo từng cột (axis='columns'):")
+print(bang.sub(tru_cot, axis="columns"))
+print("Trừ theo từng hàng (axis='index'):")
+print(bang.sub(tru_hang, axis="index"))
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Bảng dữ liệu gốc:
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | A | B |
+| --- | --- | --- |
+| H1 | 10.0 | 30.0 |
+| H2 | 20.0 | 40.0 |
+
+</div>
+
+```text
+Trừ theo từng cột (axis='columns'):
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | A | B |
+| --- | --- | --- |
+| H1 | 5.0 | 20.0 |
+| H2 | 15.0 | 30.0 |
+
+</div>
+
+```text
+Trừ theo từng hàng (axis='index'):
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | A | B |
+| --- | --- | --- |
+| H1 | 9.0 | 29.0 |
+| H2 | 18.0 | 38.0 |
+
+</div>
+
+Bảng dữ liệu `bang` có kích thước 2 hàng (`H1`, `H2`) và 2 cột (`A`, `B`). Phép toán `bang.sub(tru_cot, axis='columns')` gióng các nhãn `A` và `B` của Series với các cột tương ứng của DataFrame và trừ đi 5.0 ở cột `A`, 10.0 ở cột `B` cho mọi hàng.
+
+Sau phép trừ theo cột, hàng `H1` là `[5.0, 20.0]`, còn `H2` là `[15.0, 30.0]`. Cách căn nhãn này cũng được dùng khi viết `bang - tru_cot`. Với `axis="columns"`, các nhãn của Series phải được hiểu là tên cột.
+
+Khi muốn trừ theo từng hàng quan sát, ta sử dụng Series `tru_hang` có nhãn là `H1` và `H2`, đồng thời chỉ định tường minh `axis='index'` (hoặc `axis=0`). Lúc này, mọi phần tử ở hàng `H1` bị trừ 1.0 và mọi phần tử ở hàng `H2` bị trừ 2.0.
+
+Kết quả theo hàng thu được tại `H1` là `[9.0, 29.0]` và `H2` là `[18.0, 38.0]`. Việc nắm vững tham số `axis` giúp người phân tích thực hiện chính xác các phép chuẩn hóa dữ liệu theo chiều dọc hoặc chiều ngang mà không bị nhầm trục.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.5. Áp dụng hàm và ánh xạ
+
+Một bảng đặt phòng có thể cần tra phí theo mã phòng, tính tổng tiền từ nhiều cột hoặc định dạng từng giá trị để in báo cáo. Ba việc này đòi hỏi hàm nhận đầu vào khác nhau. Trước khi chọn phương thức, hãy xác định hàm cần một giá trị, một hàng hay một cột.
+
 - `df.apply(ham, axis=0)`: Áp dụng một hàm số lên từng cột (hoặc từng hàng nếu `axis=1`). Thường dùng cho các hàm tổng hợp hoặc biến đổi phức tạp.
 - `ser.map(anh_xa)`: Ánh xạ từng phần tử của Series thông qua một từ điển tra cứu hoặc một hàm một đối số.
 - `df.map(ham)`: Áp dụng một hàm lên từng ô đơn lẻ của toàn bộ DataFrame (thay thế phương thức `applymap` cũ).
@@ -217,6 +498,253 @@ phong_phi["phi"] = phong_phi["loai"].map(bang_phi)
 assert phong_phi["phi"].tolist() == [20, 10]
 ```
 
+<!-- worked-example bai-04-lam-quen-pandas-method-1 -->
+
+::: example Tra phí từ mã phòng bằng Series.map
+
+Một bảng đặt phòng chỉ lưu mã loại chỗ ở. Bảng giá phụ quy định phí cho hai mã đã biết. Ta cần đưa phí về đúng từng hàng mà không đổi thứ tự đặt phòng.
+
+```python
+import pandas as pd
+phong = pd.DataFrame({"loai": ["NC", "PR", "X", None]},
+                     index=["P1", "P2", "P3", "P4"])
+phi = {"NC": 20, "PR": 10}
+ket_qua = phong.assign(phi=phong["loai"].map(phi))
+print(ket_qua)
+assert ket_qua.loc["P1", "phi"] == 20
+assert ket_qua.loc[["P3", "P4"], "phi"].isna().all()
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| Chỉ mục | loai | phi |
+| --- | --- | --- |
+| P1 | NC | 20.0 |
+| P2 | PR | 10.0 |
+| P3 | X | (thiếu) |
+| P4 | (thiếu) | (thiếu) |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+![Tra phí theo từng mã, giữ nhãn và nhận ô thiếu khi chưa có kết quả](img/function-examples/series-map.svg)
+
+`phong['loai']` là một Series có nhãn `P1` đến `P4`. Khi nhận từ điển `phi`, phương thức `map` lấy từng giá trị của Series làm khóa tra cứu, rồi đặt kết quả ở đúng nhãn ban đầu. Nó không coi khóa `NC` và `PR` là nhãn hàng. Kết quả vẫn có bốn phần tử, kể cả khi một lần tra không tìm thấy khóa.
+
+`P1` nhận 20 và `P2` nhận 10. `P3` có mã `X` không nằm trong bảng tra, còn `P4` chưa có mã, nên cả hai nhận giá trị thiếu `NaN`. Hai ô thiếu có cùng cách hiển thị nhưng khác nguyên nhân. Khi cần báo nguyên nhân, có thể kiểm tra `phong['loai'].notna()` cùng với `ket_qua['phi'].isna()` để tìm mã đã được cung cấp nhưng chưa có trong bảng giá.
+
+Điền ngay hai ô này bằng 0 sẽ biến việc chưa biết phí thành khẳng định miễn phí. Chỉ làm vậy khi quy định nghiệp vụ thực sự coi mã ngoài danh sách là phí 0. Nếu mục tiêu chỉ là thay vài nhãn và giữ nguyên các nhãn còn lại, phương thức `replace` phù hợp hơn một phép tra cứu đầy đủ bằng `map`.
+
+:::
+
+<!-- /worked-example -->
+
+<!-- worked-example bai-04-lam-quen-pandas-method-2 -->
+
+::: example Hàm trong map nhận một giá trị, không nhận cả hàng
+
+Tên khu vực được nhập với khoảng trắng và cách viết khác nhau. Ta muốn chuẩn hóa những tên đã biết, đồng thời giữ nguyên trạng thái thiếu của các hàng chưa được nhập.
+
+```python
+import pandas as pd
+ten = pd.Series(["  Đông ", None, "TÂY"],
+                index=["A", "B", "C"], dtype="object")
+def chuan_hoa(value):
+    return value.strip().casefold()
+chuan = ten.map(chuan_hoa, na_action="ignore")
+ket_qua = pd.DataFrame({"goc": ten, "chuan": chuan})
+print(ket_qua)
+assert chuan.loc["A"] == "đông"
+assert pd.isna(chuan.loc["B"])
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| Chỉ mục | goc | chuan |
+| --- | --- | --- |
+| A |   Đông  | đông |
+| B | (thiếu) | (thiếu) |
+| C | TÂY | tây |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Hàm `chuan_hoa` được viết để nhận một chuỗi và trả về một chuỗi mới. Với hàng `A`, đối số là `'  Đông '`, không phải Series `A` và cũng không phải toàn bộ cột. Phương thức `strip()` bỏ khoảng trắng hai đầu, còn `casefold()` chuẩn hóa cách viết hoa, viết thường phục vụ so sánh nhãn.
+
+Tham số `na_action='ignore'` giữ nguyên ô thiếu và không truyền nó vào hàm. Nếu bỏ tham số này, hàm có thể nhận `None`, trong khi `None` không có phương thức `strip`. Chuyển mọi đối số thành chuỗi để tránh lỗi lại tạo nhãn `'None'`, khiến một giá trị chưa biết trông như dữ liệu hợp lệ.
+
+Với đúng hai thao tác chuỗi này, có thể viết ngắn gọn bằng `ten.str.strip().str.casefold()`. Phương thức `map` hữu ích khi quy tắc của từng giá trị cần một hàm riêng, chẳng hạn chuẩn hóa theo nhiều điều kiện hoặc dùng một thư viện ngoài. Việc chọn cách viết không tự chứng minh cách nào nhanh hơn trên mọi bộ dữ liệu.
+
+:::
+
+<!-- /worked-example -->
+
+<!-- worked-example bai-04-lam-quen-pandas-method-3 -->
+
+::: example Theo dõi đối số của DataFrame.apply qua từng trục
+
+Một cửa hàng có số bán của hai mặt hàng trong hai ngày. Cùng một hàm tính độ chênh giữa số lớn nhất và nhỏ nhất sẽ trả lời hai câu hỏi khác nhau khi đổi trục.
+
+```python
+import pandas as pd
+ban = pd.DataFrame({"ban": [2, 5], "ghe": [8, 11]},
+                   index=["T2", "T3"])
+def do_chenh(s):
+    return s.max() - s.min()
+theo_cot = ban.apply(do_chenh, axis=0)
+theo_hang = ban.apply(do_chenh, axis=1)
+print("Dữ liệu:")
+print(ban)
+print("Giữa hai ngày của từng mặt hàng:")
+print(theo_cot)
+print("Giữa hai mặt hàng trong từng ngày:")
+print(theo_hang)
+assert theo_cot.to_list() == [3, 3]
+assert theo_hang.to_list() == [6, 6]
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Dữ liệu:
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | ban | ghe |
+| --- | --- | --- |
+| T2 | 2 | 8 |
+| T3 | 5 | 11 |
+
+</div>
+
+```text
+Giữa hai ngày của từng mặt hàng:
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | Giá trị |
+| --- | --- |
+| ban | 3 |
+| ghe | 3 |
+
+</div>
+
+```text
+Giữa hai mặt hàng trong từng ngày:
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | Giá trị |
+| --- | --- |
+| T2 | 6 |
+| T3 | 6 |
+
+</div>
+
+![apply axis=0 nhận từng cột, còn axis=1 nhận từng hàng của bảng bán hàng](img/function-examples/dataframe-apply.svg)
+
+Với `axis=0`, lần gọi đầu nhận Series `[2, 5]` mang tên `ban`, có nhãn `T2` và `T3`. Lần gọi tiếp nhận `[8, 11]` mang tên `ghe`. Mỗi lần hàm trả một số nên kết quả là Series có hai nhãn là tên cột. Hai giá trị 3 mô tả mức thay đổi giữa hai ngày của từng mặt hàng.
+
+Với `axis=1`, hàm nhận lần lượt hàng `T2` gồm `[2, 8]` và hàng `T3` gồm `[5, 11]`. Nhãn bên trong đối số lúc này là `ban` và `ghe`, còn nhãn kết quả là `T2` và `T3`. Hai số 6 mô tả độ lệch giữa hai mặt hàng trong cùng ngày, không phải mức tăng qua thời gian.
+
+Tham số `axis` cho biết hướng của những phần tử mà hàm xử lý cùng nhau. Nó không có nghĩa rằng kết quả luôn còn nguyên trục đó. Hình dạng kết quả còn phụ thuộc hàm trả về một số, Series hay danh sách. Với phép tổng hợp đã có sẵn, biểu thức `ban.max() - ban.min()` thể hiện trực tiếp cùng câu hỏi theo cột.
+
+Mặc định `raw=False`, đối số là Series nên có thể đọc theo tên cột. Đặt `raw=True` thì hàm nhận mảng NumPy và không còn nhãn. Chỉ đổi tham số này khi hàm thực sự được viết để nhận mảng và thứ tự cột đã được kiểm soát. Không sửa trực tiếp đối số bên trong hàm rồi trông chờ bảng gốc được cập nhật.
+
+:::
+
+<!-- /worked-example -->
+
+<!-- worked-example bai-04-lam-quen-pandas-method-4 -->
+
+::: example Một hàng có thể tạo ra nhiều cột kết quả
+
+Báo giá cho một lần lưu trú cần giá mỗi đêm, số đêm và phí một lần. Vì ba giá trị thuộc cùng một hàng, ta có thể viết một hàm nhận hàng để tách tiền phòng và tổng tiền.
+
+```python
+import pandas as pd
+dat = pd.DataFrame({"gia": [80, 100], "dem": [2, 3],
+                    "phi": [20, 0]}, index=["A", "B"])
+def tinh_tien(row):
+    phong = row["gia"] * row["dem"]
+    return [phong, phong + row["phi"]]
+tien = dat.apply(tinh_tien, axis=1, result_type="expand")
+tien.columns = ["tien_phong", "tong"]
+print(tien)
+truc_tiep = dat["gia"] * dat["dem"] + dat["phi"]
+assert tien["tong"].equals(truc_tiep.rename("tong"))
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| Chỉ mục | tien&#95;phong | tong |
+| --- | --- | --- |
+| A | 160 | 180 |
+| B | 300 | 300 |
+
+</div>
+
+Hàm `tinh_tien` đọc ba trường của một hàng và trả về danh sách hai phần tử. Tham số `result_type='expand'` mở danh sách thành hai cột của DataFrame kết quả. Sau khi đặt tên cột, hàng `A` có tiền phòng 160 và tổng 180, còn hàng `B` có tiền phòng và tổng cùng bằng 300. Kết quả giữ nguyên nhãn `A`, `B` để có thể gióng hàng trở lại bảng đặt chỗ ban đầu.
+
+Nếu giữ `result_type=None`, danh sách có thể được giữ như một đối tượng trong mỗi phần tử của Series thay vì mở thành hai cột. Một cách viết khác là trả về một `pd.Series({'tien_phong': phong, 'tong': tong})` để vừa nêu giá trị vừa nêu tên cột trực tiếp.
+
+Trong ví dụ này, công thức tổng tiền có thể được viết trực tiếp bằng phép toán vector hóa trên cột `dat['gia'] * dat['dem'] + dat['phi']`. Cách viết đó làm lộ rõ đơn vị của từng đại lượng và tránh gọi hàm lặp qua từng hàng. Phương thức `apply` phù hợp khi quy tắc tính toán phức tạp hơn hoặc cần gọi một hàm không hỗ trợ giao diện cột.
+
+:::
+
+<!-- /worked-example -->
+
+<!-- worked-example bai-04-lam-quen-pandas-method-5 -->
+
+::: example DataFrame.map giữ từng ô độc lập
+
+Hai cột số đang lưu diện tích cần một bước làm tròn đồng nhất. Mỗi kết quả chỉ phụ thuộc đúng một ô, nên không cần truyền cả hàng hoặc cả cột vào hàm.
+
+```python
+import pandas as pd
+so = pd.DataFrame({"phong": [12.45, None],
+                   "ban_cong": [3.16, 4.04]})
+ket_qua = so.map(round, ndigits=1, na_action="ignore")
+print(ket_qua)
+assert ket_qua.shape == so.shape
+assert ket_qua.loc[0, "phong"] == 12.4
+assert pd.isna(ket_qua.loc[1, "phong"])
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| phong | ban&#95;cong |
+| --- | --- |
+| 12.4 | 3.2 |
+| (thiếu) | 4.0 |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Phương thức `DataFrame.map` gọi hàm nhận một giá trị vô hướng trên từng ô đơn lẻ của bảng. Ở đây `round` nhận từng số riêng biệt và nhận thêm đối số `ndigits=1`. Kích thước hai chiều, chỉ mục hàng và tên cột của bảng kết quả được bảo lưu nguyên vẹn. Ô thiếu tiếp tục là thiếu vì có `na_action='ignore'`.
+
+Hàm không biết ô đang thuộc cột nào hoặc các ô khác của cùng hàng. Nếu muốn nhân giá với số đêm, cần phép toán giữa hai cột hoặc một hàm xử lý hàng, chứ không thể dùng `DataFrame.map`. Nếu các cột có đơn vị đo lường hoặc quy tắc khác nhau, áp dụng cùng một hàm cho cả bảng cũng có thể không đúng mục tiêu phân tích.
+
+Đối với việc làm tròn, phương thức chuyên dụng `so.round(1)` diễn đạt yêu cầu ngắn gọn hơn. Chọn phương thức chuyên dụng khi nó đã biểu đạt đúng phép tính, còn `map` dành cho các biến đổi từng ô cần hàm xử lý riêng biệt. Trong pandas hiện hành, tên phương thức là `map`, thay thế cho tên `applymap` trong các phiên bản cũ.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.6. Sắp xếp và xếp hạng
 - Sắp xếp theo chỉ mục nhãn: `df.sort_index(ascending=True)`.
 - Sắp xếp theo giá trị cột: `df.sort_values(by="doanh_thu", ascending=False)`.
@@ -228,6 +756,51 @@ assert phong_phi["phi"].tolist() == [20, 10]
   - `"dense"`: Tăng thứ hạng liền kề mà không bỏ qua bậc (hạng 1, hạng 1, tiếp theo là hạng 2).
 
 ---
+
+<!-- worked-example bai-04-lam-quen-pandas-worked-11 -->
+
+::: example Xếp hạng các giá trị bằng nhau với rank
+
+Khi đánh giá hiệu suất của các chi nhánh hoặc nhân viên, nhiều quan sát có thể đạt thành tích bằng nhau. Tham số method trong phương thức rank quyết định cách thức phân bổ thứ hạng cho các trường hợp hòa vị như lấy trung bình, lấy hạng nhỏ nhất hoặc xếp hạng dày. Ta so sánh các phương thức xếp hạng trên một mảng điểm có giá trị trùng lặp.
+
+```python
+import pandas as pd
+
+diem = pd.Series([80, 90, 80, 100], index=["A", "B", "C", "D"])
+
+df_rank = pd.DataFrame({
+    "diem": diem,
+    "average": diem.rank(method="average"),
+    "min": diem.rank(method="min"),
+    "dense": diem.rank(method="dense"),
+})
+print(df_rank)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | diem | average | min | dense |
+| --- | --- | --- | --- | --- |
+| A | 80.0 | 1.5 | 1.0 | 1.0 |
+| B | 90.0 | 3.0 | 3.0 | 2.0 |
+| C | 80.0 | 1.5 | 1.0 | 1.0 |
+| D | 100.0 | 4.0 | 4.0 | 3.0 |
+
+</div>
+
+Chuỗi dữ liệu `diem` chứa hai học viên `A` và `C` cùng đạt mức điểm 80, trong khi `B` đạt 90 và `D` đạt 100. Phương thức `rank` mặc định sắp xếp theo thứ tự tăng dần (`ascending=True`), trong đó điểm thấp nhất nhận thứ hạng nhỏ nhất.
+
+Phương thức `method='average'` (mặc định) lấy trung bình cộng của các thứ hạng mà nhóm đồng hạng chiếm giữ. Vì hai điểm 80 đứng ở vị trí 1 và 2, thứ hạng của cả `A` và `C` là `(1 + 2) / 2 = 1.5`, sau đó điểm 90 nhận hạng 3.0.
+
+`method="min"` gán thứ hạng nhỏ nhất của nhóm đồng hạng cho tất cả phần tử trong nhóm. A và C cùng nhận 1.0, còn B nhận 3.0. Hai quan sát đã chiếm vị trí thứ nhất và thứ hai, nên thứ hạng tiếp theo là 3.
+
+Phương thức `method='dense'` cũng gán hạng nhỏ nhất 1.0 cho `A` và `C`, nhưng không để lại khoảng trống ở bậc tiếp theo: Điểm 90 nhận ngay hạng 2.0 và điểm 100 nhận hạng 3.0. Bảng kết quả cung cấp căn cứ để lựa chọn phương án xếp hạng phù hợp với quy chế đánh giá.
+
+:::
+
+<!-- /worked-example -->
 
 ## 3. Thống kê mô tả và tóm tắt dữ liệu
 
@@ -246,10 +819,136 @@ print(s_trong.sum())               # 0.0 (Nguy cơ gây hiểu lầm)
 print(s_trong.sum(min_count=1))    # NaN (Phản ánh đúng dữ liệu khuyết)
 ```
 
+<!-- worked-example bai-04-lam-quen-pandas-worked-12 -->
+
+::: example Tính tổng cột thiếu dữ liệu với min_count
+
+Phương thức sum của pandas mặc định bỏ qua toàn bộ giá trị khuyết thiếu và trả về 0.0 nếu một cột hoàn toàn là NaN. Kết quả 0.0 này có thể khiến báo cáo hiểu lầm rằng doanh thu bằng không thay vì dữ liệu bị mất tín hiệu thu thập. Tham số min_count=1 giúp bảo đảm phép tính chỉ trả về kết quả số khi có ít nhất một quan sát hợp lệ.
+
+```python
+import numpy as np
+import pandas as pd
+
+df = pd.DataFrame({
+    "co_so": [10.0, np.nan, 20.0],
+    "toan_nan": [np.nan, np.nan, np.nan],
+})
+
+print("Tổng mặc định (skipna=True):")
+print(df.sum(skipna=True))
+print("Tổng với min_count=1:")
+print(df.sum(min_count=1))
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Tổng mặc định (skipna=True):
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | Giá trị |
+| --- | --- |
+| co&#95;so | 30.0 |
+| toan&#95;nan | 0.0 |
+
+</div>
+
+```text
+Tổng với min_count=1:
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | Giá trị |
+| --- | --- |
+| co&#95;so | 30.0 |
+| toan&#95;nan | (thiếu) |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Bảng dữ liệu `df` chứa cột `co_so` có hai giá trị thực kèm một giá trị khuyết thiếu `NaN`, và cột `toan_nan` chứa toàn bộ các giá trị `NaN`. Phép tính tổng mặc định `df.sum()` kích hoạt `skipna=True` để tự động bỏ qua các ô trống.
+
+Ở cột `toan_nan`, vì không có bất kỳ số thực nào, pandas trả về giá trị phần tử trung hòa của phép cộng là 0.0. Nếu người lập trình không để ý, con số 0.0 này sẽ bị ghi nhận vào báo cáo như một mức doanh thu hợp lệ bằng không.
+
+Bằng cách bổ sung tham số `min_count=1`, ta yêu cầu phép tính phải có ít nhất một giá trị số thực hợp lệ mới được sinh ra tổng. Cột `co_so` có 2 giá trị hợp lệ nên vẫn trả về 30.0 chính xác, trong khi cột `toan_nan` không đủ điều kiện và được giữ nguyên là `NaN`.
+
+Kết quả in ra cho thấy vai trò của `min_count=1` trong việc ngăn ngừa sai lệch báo cáo. Kỹ thuật này giúp phân biệt rõ ràng giữa một cửa hàng có doanh thu bằng không với một cửa hàng chưa gửi dữ liệu về máy chủ.
+
+:::
+
+<!-- /worked-example -->
+
 ### 3.2. Tương quan và hiệp phương sai
 - `s1.corr(s2)`: Tính hệ số tương quan Pearson giữa hai Series.
 - `df.corr()`: Ma trận tương quan giữa tất cả các cặp cột số học.
 - `df.corrwith(s1)`: Tính tương quan giữa từng cột của DataFrame với một Series chỉ định.
+
+<!-- worked-example bai-04-lam-quen-pandas-worked-13 -->
+
+::: example Tính toán ma trận tương quan giữa các chỉ số bằng corr và corrwith
+
+Trong phân tích kinh tế lượng và quản trị rủi ro danh mục đầu tư, ta cần đo lường mức độ đồng biến thiên tuyến tính giữa các chuỗi số liệu tài chính. Hệ số tương quan Pearson chuẩn hóa mức độ liên hệ về khoảng [-1, 1]. Ta tính toán ma trận tương quan giữa doanh thu, chi phí quảng cáo và số đơn hàng.
+
+```python
+import pandas as pd
+
+du_lieu = pd.DataFrame({
+    "dt": [100.0, 120.0, 140.0, 180.0],
+    "qc": [10.0, 12.0, 15.0, 20.0],
+    "don": [50.0, 58.0, 72.0, 85.0],
+})
+
+print("Ma trận tương quan Pearson:")
+print(du_lieu.corr().round(3))
+print("Tương quan riêng với doanh thu dt:")
+print(du_lieu.corrwith(du_lieu["dt"]).round(3))
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Ma trận tương quan Pearson:
+```
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | dt | qc | don |
+| --- | --- | --- | --- |
+| dt | 1.0 | 0.998 | 0.988 |
+| qc | 0.998 | 1.0 | 0.99 |
+| don | 0.988 | 0.99 | 1.0 |
+
+</div>
+
+```text
+Tương quan riêng với doanh thu dt:
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | Giá trị |
+| --- | --- |
+| dt | 1.0 |
+| qc | 0.998 |
+| don | 0.988 |
+
+</div>
+
+Bảng `du_lieu` lưu trữ ba biến số kinh doanh gồm doanh thu `dt`, chi phí quảng cáo `qc` và số lượng đơn hàng `don` qua bốn kỳ khảo sát. Phương thức `corr()` tính toán ma trận hệ số tương quan Pearson giữa tất cả các cặp biến số.
+
+Hệ số tương quan giữa `dt` và `qc` đạt 0.998 và giữa `dt` và `don` đạt 0.988, cho thấy mối liên hệ đồng biến thiên tuyến tính mạnh trong tập mẫu quan sát giữa chi phí tiếp thị và doanh số thu về.
+
+`corrwith(du_lieu["dt"])` trả Series chứa tương quan giữa từng cột và cột `dt`, bao gồm cả `dt` với chính nó. Chỉ tiêu tự tương quan này bằng 1 trong ví dụ vì cột có biến thiên. Cột hằng hoặc không đủ cặp quan sát hợp lệ có thể cho kết quả thiếu.
+
+Cần nhấn mạnh nguyên tắc căn bản: Hệ số tương quan cao chỉ phản ánh hai biến số biến thiên cùng chiều trong mẫu quan sát, chứ tương quan không đồng nghĩa với quan hệ nhân quả. Để khẳng định quan hệ nhân quả, ta cần có các giả thiết bổ sung, mô hình can thiệp hoặc thử nghiệm ngẫu nhiên có kiểm soát.
+
+:::
+
+<!-- /worked-example -->
 
 ### 3.3. Giá trị duy nhất, đếm tần suất và kiểm tra thành viên
 - `ser.unique()`: Trả về một mảng NumPy chứa các giá trị phân biệt theo thứ tự xuất hiện.
@@ -258,7 +957,76 @@ print(s_trong.sum(min_count=1))    # NaN (Phản ánh đúng dữ liệu khuyế
 
 ---
 
+<!-- worked-example bai-04-lam-quen-pandas-worked-14 -->
+
+::: example Thống kê tần suất xuất hiện và tỷ lệ phần trăm với value_counts
+
+Khi phân tích các trường dữ liệu định tính hoặc phân loại khách hàng, ta cần biết các giá trị phân biệt xuất hiện bao nhiêu lần và tỷ lệ phần trăm tương ứng của chúng trong tổng thể. Ta xây dựng bảng phân phối tần suất cho các khu vực kinh doanh bằng phương thức value_counts.
+
+```python
+import pandas as pd
+
+khu_vuc = pd.Series(["Bắc", "Trung", "Nam", "Bắc", "Bắc", "Nam", None])
+
+dem_so = khu_vuc.value_counts()
+ty_le = (khu_vuc.value_counts(normalize=True) * 100).round(1)
+
+df_phan_phoi = pd.DataFrame({
+    "so_luong": dem_so,
+    "ty_le_pt": ty_le,
+})
+print(df_phan_phoi)
+print("Tỷ lệ khi tính cả ô thiếu (%):")
+print(khu_vuc.value_counts(dropna=False, normalize=True).mul(100).round(1))
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| Chỉ mục | so&#95;luong | ty&#95;le&#95;pt |
+| --- | --- | --- |
+| Bắc | 3.0 | 50.0 |
+| Nam | 2.0 | 33.3 |
+| Trung | 1.0 | 16.7 |
+
+</div>
+
+```text
+Tỷ lệ khi tính cả ô thiếu (%):
+```
+
+<div class="data-worked-table">
+
+| Chỉ mục | proportion |
+| --- | --- |
+| Bắc | 42.9 |
+| Nam | 28.6 |
+| Trung | 14.3 |
+| (thiếu) | 14.3 |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Phương thức `value_counts()` đếm số lần xuất hiện của từng giá trị phân biệt trong Series `khu_vuc` và sắp xếp kết quả giảm dần theo số lượng. Khu vực 'Bắc' đứng đầu với 3 lần, 'Nam' có 2 lần và 'Trung' có 1 lần.
+
+Mặc định `dropna=True`, các ô thiếu không được đếm. Vì thế, `normalize=True` chia cho tổng 6 giá trị đã biết. Nhân 100 rồi làm tròn cho Bắc 50.0%, Nam 33.3% và Trung 16.7%, dù danh sách gốc có 7 phần tử.
+
+Cấu trúc kết quả của `value_counts()` là một Series có chỉ mục nhãn chính là các giá trị phân biệt và giá trị mảng là số đếm tương ứng. Ta kết hợp hai Series thành bảng DataFrame hai cột để trình bày số liệu.
+
+Lệnh cuối đặt `dropna=False` để tính cả ô thiếu thành một nhóm. Mẫu số khi đó là 7 nên tỷ lệ Bắc trở thành khoảng 42.9%. Hai bảng trả lời hai câu hỏi khác nhau. Khi viết báo cáo, cần xác định tỷ lệ đang tính trong số quan sát đã biết hay trong toàn bộ bản ghi.
+
+:::
+
+<!-- /worked-example -->
+
 ## Tài liệu tham khảo
+
+- [pandas: Series.map](https://pandas.pydata.org/docs/reference/api/pandas.Series.map.html).
+- [pandas: DataFrame.apply](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html).
+- [pandas: DataFrame.map](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.map.html).
+
 
 - Wes McKinney. *Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter*, tái bản lần 3. O'Reilly Media, 2022. Chương 5: Getting Started with pandas.
 - The pandas Development Team. *pandas documentation: Indexing and selecting data & Copy-on-Write*. https://pandas.pydata.org/docs/user_guide/indexing.html

@@ -50,6 +50,66 @@ Lệnh `%run <ten_tep.py>` thực thi trực tiếp tệp mã nguồn Python bê
 ```
 Khác với việc chạy `python thong_ke_doanh_thu.py` từ terminal ngoài, lệnh `%run` bảo lưu toàn bộ các biến, hàm và đối tượng vừa được định nghĩa trong tệp vào không gian tên hiện tại của IPython. Nhờ đó, sau khi chạy kịch bản, bạn có thể kiểm tra ngay giá trị của các biến trong RAM hoặc gọi tiếp các hàm mà không cần nạp lại dữ liệu.
 
+<!-- worked-example phu-luc-b-ipython-worked-1 -->
+
+::: example Thực thi tệp kịch bản và lưu giữ biến trong không gian tên với %run
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import io
+import os
+import tempfile
+from contextlib import redirect_stdout
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+# Khởi tạo phiên làm việc IPython độc lập
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+
+# Tạo tệp kịch bản tạm tính toán giá trị đơn hàng
+with tempfile.NamedTemporaryFile("w", suffix=".py", delete=False) as f:
+    f.write("gia_tri = [120, 250, 310]\ntong_cong = sum(gia_tri)\n")
+    tep_tam = f.name
+
+try:
+    # Thực thi tệp kịch bản bằng lệnh ma thuật run
+    with redirect_stdout(io.StringIO()):
+        shell.run_line_magic("run", tep_tam)
+    bang_kq = pd.DataFrame([{
+        "bien": "tong_cong",
+        "gia_tri": shell.user_ns["tong_cong"],
+        "so_phan_tu": len(shell.user_ns["gia_tri"]),
+    }])
+    print(bang_kq)
+finally:
+    if os.path.exists(tep_tam):
+        os.remove(tep_tam)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| bien | gia&#95;tri | so&#95;phan&#95;tu |
+| --- | --- | --- |
+| tong&#95;cong | 680 | 3 |
+
+</div>
+
+Trong IPython, `%run ten_tep.py` chạy tệp như một chương trình rồi đưa các biến đã tạo về phiên tương tác. Ví dụ tạo một tệp tạm chứa danh sách `[120, 250, 310]` và phép tính tổng. `run_line_magic("run", tep_tam)` là cách gọi cùng lệnh đó từ chương trình Python.
+
+Mặc định `%run` thực thi tệp trong một không gian tên riêng trước khi cập nhật các tên vào phiên IPython. Nó không mặc nhiên đọc mọi biến bạn đang có trong phiên. Nếu cần dùng không gian tên hiện tại để chạy tệp, `%run -i` là một lựa chọn khác. Những tên trùng được đưa về sau khi chạy có thể thay giá trị trong phiên.
+
+Sau khi chạy, `shell.user_ns` có `gia_tri` gồm 3 phần tử và `tong_cong` bằng 680. Đây là trạng thái của phiên mô phỏng. Tệp tạm được đóng trước khi chạy và được xóa ở cuối, còn notebook thực tế cần giữ các tệp nguồn mà phân tích phụ thuộc.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.2. Dán mã nguồn với %paste và %cpaste
 Khi sao chép mã nguồn từ các trang web hoặc tài liệu có nhiều cấp thụt lề phức tạp, việc dán trực tiếp vào terminal thông thường có thể khiến trình thông dịch hiểu nhầm dấu cách và báo lỗi cú pháp.
 - `%paste`: Tự động lấy văn bản từ clipboard của hệ điều hành, chuẩn hóa lại thụt lề và thực thi an toàn.
@@ -60,6 +120,56 @@ Khi sao chép mã nguồn từ các trang web hoặc tài liệu có nhiều c�
 - `%quickref`: Bảng tra cứu tóm tắt các cú pháp dòng lệnh, phím tắt và tiện ích thường dùng nhất.
 
 ---
+
+<!-- worked-example phu-luc-b-ipython-worked-2 -->
+
+::: example Kiểm tra các lệnh ma thuật đã có trong phiên
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+line_magics = shell.magics_manager.magics["line"]
+
+# Kiểm tra các lệnh ma thuật thường dùng trong phân tích dữ liệu
+cac_lenh = ["run", "timeit", "prun", "pwd", "cd"]
+bang_kq = pd.DataFrame([{
+    "lenh": f"%{m}",
+    "loai": "line",
+    "san_sang": m in line_magics,
+} for m in cac_lenh])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| lenh | loai | san&#95;sang |
+| --- | --- | --- |
+| %run | line | `True` |
+| %timeit | line | `True` |
+| %prun | line | `True` |
+| %pwd | line | `True` |
+| %cd | line | `True` |
+
+</div>
+
+IPython có lệnh dòng bắt đầu bằng `%` và lệnh ô bắt đầu bằng `%%`. Ví dụ, `%timeit` đo một biểu thức, còn `%%timeit` đo phần thân của cả ô. Đây là cú pháp IPython, không phải câu lệnh Python thông thường trong tệp `.py`.
+
+Ví dụ đọc danh mục lệnh dòng mà phiên mô phỏng đã đăng ký. Các lệnh `run`, `timeit`, `prun`, `pwd` và `cd` đều được tìm theo tên không có dấu `%`. Cột `san_sang` cho biết tên có nằm trong danh mục, không thực thi những lệnh này.
+
+Khi dùng trực tiếp, `%lsmagic` liệt kê lệnh đang có, còn `%quickref` mở bảng tra cứu ngắn. Có thể gõ `%timeit?` để xem trợ giúp của riêng lệnh đó. Những phần mở rộng như `line_profiler` chỉ cung cấp thêm lệnh sau khi đã được cài và nạp.
+
+:::
+
+<!-- /worked-example -->
 
 ## 3. Quản lý lịch sử lệnh và biến đầu vào đầu ra
 
@@ -76,12 +186,119 @@ In [2]: _ + 50000
 Out[2]: 650000
 ```
 
+<!-- worked-example phu-luc-b-ipython-worked-3 -->
+
+::: example Tái sử dụng kết quả tính toán gần nhất với biến gạch dưới _ và __
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import io
+from contextlib import redirect_stdout
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+
+# Thực thi hai biểu thức tính toán liên tiếp
+with redirect_stdout(io.StringIO()):
+    shell.run_cell("150000 * 4", store_history=True)
+    shell.run_cell("_ + 50000", store_history=True)
+
+bang_kq = pd.DataFrame([{
+    "buoc": "Ket_qua_vua_tinh (_)",
+    "gia_tri": shell.user_ns["_"],
+}, {
+    "buoc": "Ket_qua_truoc_do (__)",
+    "gia_tri": shell.user_ns["__"],
+}])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| buoc | gia&#95;tri |
+| --- | --- |
+| Ket&#95;qua&#95;vua&#95;tinh (&#95;) | 650000 |
+| Ket&#95;qua&#95;truoc&#95;do (&#95;&#95;) | 600000 |
+
+</div>
+
+Trong phiên tương tác, biểu thức `150000 * 4` hiển thị 600000. Biến `_` giữ kết quả được hiển thị gần nhất, nên `_ + 50000` cho 650000 ở lượt sau. Khi đó, `_` là 650000 và `__` là 600000.
+
+Lịch sử đầu ra chỉ đổi khi một biểu thức thật sự được hiển thị. Lệnh gán như `x = 10` và lời gọi `print(x)` không tạo đầu ra đối tượng mới để thay `_` theo cách này. Dấu chấm phẩy cuối biểu thức cũng có thể tắt việc hiển thị và lưu kết quả.
+
+Cách gọi `run_cell` trong ví dụ tạo đúng hai lượt tương tác trong một phiên mới. Khi viết một quy trình cần chạy lại ổn định, nên gán tên rõ ràng cho các kết quả quan trọng. `_` và `__` phụ thuộc các lượt vừa chạy nên phù hợp hơn cho bước kiểm tra nhanh.
+
+:::
+
+<!-- /worked-example -->
+
 ### 3.2. Danh sách In và từ điển Out
 Mỗi lượt tương tác được đánh số thứ tự $n$:
 - `_i<n>` hoặc `In[n]`: Lưu chuỗi mã nguồn đầu vào của lượt thực thi thứ $n$.
 - `_o<n>` hoặc `Out[n]`: Lưu trữ đối tượng kết quả trả về của biểu thức ở lượt thực thi thứ $n$.
 
 Lưu ý: Chỉ những biểu thức có sinh ra giá trị đầu ra (như phép tính, lời gọi hàm trả về dữ liệu) mới được lưu vào `Out`. Các câu lệnh không trả về giá trị (như `x = 10` hoặc lệnh `print()`) sẽ không có mục tương ứng trong `Out`.
+
+<!-- worked-example phu-luc-b-ipython-worked-4 -->
+
+::: example Truy xuất lịch sử câu lệnh và kết quả đầu ra qua In và Out
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import io
+from contextlib import redirect_stdout
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+
+# Lượt 1: Câu lệnh gán biến (không tạo mục trong Out)
+# Lượt 2: Biểu thức có giá trị trả về
+with redirect_stdout(io.StringIO()):
+    shell.run_cell("x = 25", store_history=True)
+    shell.run_cell("x * 4", store_history=True)
+
+in_list = shell.user_ns["In"]
+out_dict = shell.user_ns["Out"]
+
+bang_kq = pd.DataFrame([
+    {"luot": 1, "ma_lenh": in_list[1], "co_out": 1 in out_dict, "gia_tri": out_dict.get(1, "Khong_co")},
+    {"luot": 2, "ma_lenh": in_list[2], "co_out": 2 in out_dict, "gia_tri": str(out_dict.get(2, "Khong_co"))},
+])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| luot | ma&#95;lenh | co&#95;out | gia&#95;tri |
+| --- | --- | --- | --- |
+| 1 | x = 25 | `False` | Khong&#95;co |
+| 2 | x &#42; 4 | `True` | 100 |
+
+</div>
+
+Danh sách `In` lưu chuỗi mã đã chạy theo số lượt, còn từ điển `Out` lưu những kết quả đã hiển thị. Trong ví dụ, lượt 1 chạy `x = 25`, lượt 2 chạy `x * 4`. Cả hai có trong `In`, nhưng chỉ lượt 2 cho mục đầu ra 100.
+
+`Out[2]` lấy lại đối tượng kết quả của lượt 2 mà không tính lại biểu thức. Nó giữ tham chiếu tới đối tượng, không phải bản sao lịch sử bất biến. Nếu kết quả là một danh sách rồi bạn sửa danh sách đó, nội dung nhìn qua `Out` có thể đổi theo.
+
+Giữ tham chiếu trong `Out` cũng có thể giữ một mảng lớn trong bộ nhớ. Xóa biến đã đặt tên chưa chắc giải phóng mảng nếu còn tham chiếu trong lịch sử đầu ra. Khi cần dọn bộ nhớ, nên xét cả biến đang dùng và các mục lịch sử liên quan.
+
+:::
+
+<!-- /worked-example -->
 
 ### 3.3. Xem lịch sử với %history
 Lệnh `%history` cho phép xem lại các câu lệnh đã chạy:
@@ -90,6 +307,58 @@ Lệnh `%history` cho phép xem lại các câu lệnh đã chạy:
 ```
 
 ---
+
+<!-- worked-example phu-luc-b-ipython-worked-5 -->
+
+::: example Trích xuất và kiểm tra chuỗi câu lệnh đã thực thi với danh sách lịch sử
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import io
+from contextlib import redirect_stdout
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+
+# Thực thi chuỗi 3 câu lệnh tính toán mẫu
+with redirect_stdout(io.StringIO()):
+    shell.run_cell("a = 10", store_history=True)
+    shell.run_cell("b = 20", store_history=True)
+    shell.run_cell("c = a + b", store_history=True)
+
+bang_kq = pd.DataFrame([{
+    "so_thu_tu": i,
+    "cau_lenh": shell.user_ns["In"][i],
+} for i in range(1, 4)])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| so&#95;thu&#95;tu | cau&#95;lenh |
+| --- | --- |
+| 1 | a = 10 |
+| 2 | b = 20 |
+| 3 | c = a + b |
+
+</div>
+
+Ba lượt trong ví dụ lần lượt gán `a`, gán `b` và tính `c = a + b`. Đọc các mục 1 đến 3 trong `In` cho đúng thứ tự thực thi, khác với thứ tự các ô có thể đã được kéo lại trên màn hình notebook.
+
+Trong phiên thật, `%history -n 1-3` hiển thị cùng dải lượt kèm số thứ tự. Tùy chọn `-f ten_tep.py` ghi lịch sử được chọn vào tệp. Trước khi chạy lại tệp đó, cần đọc và bỏ các lệnh thử chưa đúng hoặc những lệnh phụ thuộc trạng thái cũ.
+
+Lịch sử ghi mọi lệnh đã thực hiện trong phạm vi được lưu, không tự chọn ra một quy trình đúng. Muốn tạo mã chạy lại được, cần giữ các bước chuẩn bị dữ liệu, khai báo biến và kiểm tra kết quả. Sau đó thử từ một phiên mới thay vì dựa vào việc biến còn tồn tại.
+
+:::
+
+<!-- /worked-example -->
 
 ## 4. Tương tác trực tiếp với hệ điều hành
 
@@ -117,6 +386,70 @@ Biến `danh_sach_tep` là một đối tượng danh sách đặc biệt của 
 - `%pwd`: In ra đường dẫn của thư mục làm việc hiện hành (*print working directory*).
 - `%cd <duong_dan>`: Chuyển đổi thư mục làm việc hiện tại.
 - `%dhist`: In ra toàn bộ lịch sử các thư mục mà phiên làm việc đã từng điều hướng qua.
+
+<!-- worked-example phu-luc-b-ipython-worked-6 -->
+
+::: example Quản lý thư mục làm việc và theo dõi lịch sử điều hướng với %pwd và %dhist
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import io
+import os
+import tempfile
+from contextlib import redirect_stdout
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+
+# Tạo một thư mục tạm có tên xác định
+tam = tempfile.TemporaryDirectory(prefix="studyhub-")
+thu_muc_tam = tam.name
+
+with redirect_stdout(io.StringIO()):
+    pwd_goc = shell.run_line_magic("pwd", "")
+
+try:
+    # Chuyển tới thư mục tạm rồi quay về thư mục gốc
+    with redirect_stdout(io.StringIO()):
+        shell.run_line_magic("cd", thu_muc_tam)
+        shell.run_line_magic("cd", pwd_goc)
+    lich_su = list(shell.user_ns["_dh"])
+    bang_kq = pd.DataFrame([{
+        "buoc": idx + 1,
+        "thu_muc": "Thư mục tạm" if duong_dan == thu_muc_tam else "Thư mục ban đầu",
+    } for idx, duong_dan in enumerate(lich_su[-2:])])
+    print(bang_kq)
+finally:
+    with redirect_stdout(io.StringIO()):
+        shell.run_line_magic("cd", pwd_goc)
+    tam.cleanup()
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| buoc | thu&#95;muc |
+| --- | --- |
+| 1 | Thư mục ban đầu |
+| 2 | Thư mục ban đầu |
+
+</div>
+
+`%pwd` trả thư mục làm việc hiện tại. Đường dẫn tương đối trong lệnh đọc tệp được tính từ thư mục này, nên `data.csv` có thể chỉ tới một tệp khác nếu trước đó bạn đã đổi thư mục bằng `%cd`.
+
+Phiên mô phỏng tạo một thư mục tạm riêng, chuyển vào đó rồi quay về vị trí ban đầu. `_dh` là lịch sử các thư mục đã chuyển qua. Trong IPython, `%dhist` hiển thị lịch sử này mà không cần truy cập biến nội bộ.
+
+Bảng chỉ dùng hai nhãn “Thư mục tạm” và “Thư mục ban đầu” để không phụ thuộc tên thư mục trên từng máy. Khối `finally` quay lại vị trí cũ trước khi dọn thư mục tạm. Khi làm notebook thật, cần xác nhận thư mục hiện tại trước các thao tác đọc và ghi.
+
+:::
+
+<!-- /worked-example -->
 
 ### 4.3. Hệ thống đánh dấu thư mục với %bookmark
 Khi thường xuyên phải làm việc với các đường dẫn thư mục sâu trong ổ đĩa, bạn có thể tạo các điểm đánh dấu ghi nhớ:
@@ -160,6 +493,56 @@ Ngoài ra, bạn có thể đặt điểm dừng chủ động trong mã nguồn
 # 52.3 µs ± 1.1 µs per loop (mean ± std. dev. of 7 runs, 10,000 loops each)
 ```
 
+<!-- worked-example phu-luc-b-ipython-worked-7 -->
+
+::: example Đo lường thời gian thực thi thuật toán với lệnh ma thuật %timeit
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import io
+from contextlib import redirect_stdout
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+
+# Thực hiện đo lường với số vòng lặp và số lần lặp lại được kiểm soát
+with redirect_stdout(io.StringIO()):
+    kq_do = shell.run_line_magic("timeit", "-n 50 -r 3 -o sum(range(1000))")
+
+bang_kq = pd.DataFrame([{
+    "phep_tinh": "sum(range(1000))",
+    "so_vong_lap": kq_do.loops,
+    "so_lan_lap_lai": kq_do.repeat,
+    "da_hoan_thanh": len(kq_do.all_runs) == 3,
+}])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| phep&#95;tinh | so&#95;vong&#95;lap | so&#95;lan&#95;lap&#95;lai | da&#95;hoan&#95;thanh |
+| --- | --- | --- | --- |
+| sum(range(1000)) | 50 | 3 | `True` |
+
+</div>
+
+Trong IPython, `%timeit -n 50 -r 3 -o sum(range(1000))` thực hiện ba lượt đo, mỗi lượt lặp biểu thức 50 lần. `-o` trả đối tượng kết quả thay vì chỉ hiển thị một dòng báo thời gian.
+
+`loops` xác nhận số lần lặp trong mỗi lượt, còn `repeat` và `all_runs` cho biết số lượt đo. Bảng chỉ hiển thị các tham số này vì thời gian cụ thể thay đổi theo máy và tác vụ đang chạy. Lặp nhiều lần giúp quan sát độ biến thiên, không loại bỏ mọi ảnh hưởng của môi trường.
+
+Khi so hai cách xử lý, cần dùng cùng đầu vào và xác định có tính cả chi phí chuẩn bị dữ liệu hay không. Một phép đo tại một kích thước không chứng minh độ phức tạp tính toán tổng quát. Đặc biệt, biểu thức có tác dụng phụ sẽ được chạy nhiều lần, nên cần chuẩn bị lại trạng thái nếu phép tính thay đổi dữ liệu.
+
+:::
+
+<!-- /worked-example -->
+
 ### 5.3. Đo đạc hiệu năng hàm với %prun
 Khi một chương trình chạy chậm, việc đoán mò nguyên nhân thường dẫn đến tối ưu hóa sai chỗ. Lệnh ma thuật `%prun` sử dụng mô-đun `cProfile` để đo đạc chính xác thời gian tiêu tốn trong từng hàm:
 ```ipython
@@ -170,6 +553,66 @@ Bảng kết quả thống kê các cột:
 - `tottime`: Tổng thời gian thực thi bên trong bản thân hàm đó (không tính thời gian gọi các hàm con).
 - `percall`: Thời gian trung bình cho mỗi lần gọi hàm (`tottime / ncalls`).
 - `cumtime`: Thời gian tích lũy tiêu tốn trong hàm đó và toàn bộ các hàm con mà nó gọi.
+
+<!-- worked-example phu-luc-b-ipython-worked-8 -->
+
+::: example Đo đạc số lần gọi hàm và cấu trúc thực thi bằng lệnh ma thuật %prun
+
+Ví dụ sau mô phỏng một phiên IPython riêng để có thể chạy lại bằng Python. Khi đang dùng IPython hoặc Jupyter, bạn có thể thực hiện các lệnh tương ứng trực tiếp trong ô mã. Phiên mô phỏng lưu lịch sử trong bộ nhớ và không đọc lịch sử làm việc của bạn.
+
+```python
+import io
+from contextlib import redirect_stdout
+import pandas as pd
+from IPython.core.interactiveshell import InteractiveShell
+
+from traitlets.config import Config
+config = Config()
+config.HistoryManager.hist_file = ":memory:"
+shell = InteractiveShell(config=config, user_ns={})
+
+# Định nghĩa hàm tính toán có quan hệ gọi hàm con
+def ham_con(n):
+    return sum(i for i in range(n))
+
+def ham_chinh():
+    return [ham_con(100) for _ in range(50)]
+
+shell.user_ns["ham_chinh"] = ham_chinh
+
+with redirect_stdout(io.StringIO()):
+    stats = shell.run_line_magic("prun", "-r -q ham_chinh()")
+
+k_chinh = [k for k in stats.stats if k[2] == "ham_chinh"][0]
+k_con = [k for k in stats.stats if k[2] == "ham_con"][0]
+
+bang_kq = pd.DataFrame([
+    {"ham": "ham_chinh", "so_lan_goi": stats.stats[k_chinh][1]},
+    {"ham": "ham_con", "so_lan_goi": stats.stats[k_con][1]},
+])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| ham | so&#95;lan&#95;goi |
+| --- | --- |
+| ham&#95;chinh | 1 |
+| ham&#95;con | 50 |
+
+</div>
+
+`%prun` dùng bộ đo cProfile để ghi số lần gọi và thời gian của từng hàm. Trong ví dụ, `ham_chinh` gọi `ham_con(100)` 50 lần. Cờ `-r` trả đối tượng thống kê, còn `-q` không in bảng báo cáo mặc định.
+
+Khóa trong `stats.stats` có tên tệp, dòng và tên hàm. Ví dụ tìm hai hàm mình vừa định nghĩa rồi đọc số lần gọi từ thống kê. Kết quả là `ham_chinh` được gọi 1 lần và `ham_con` được gọi 50 lần.
+
+Số lần gọi giúp nhận ra một thao tác đang bị lặp, nhưng chưa cho biết đó có phải điểm tốn thời gian nhất hay không. Muốn chọn phần cần cải tiến, cần xem thêm thời gian riêng của hàm và thời gian tính cả các hàm con. Bản thân việc đo cũng tạo chi phí, nên cần đánh giá lại sau khi sửa.
+
+:::
+
+<!-- /worked-example -->
 
 ### 5.4. Đo đạc hiệu năng từng dòng lệnh với %lprun
 Để biết chính xác dòng lệnh nào trong một hàm chiếm nhiều thời gian nhất, ta sử dụng thư viện `line_profiler` qua lệnh ma thuật `%lprun`:

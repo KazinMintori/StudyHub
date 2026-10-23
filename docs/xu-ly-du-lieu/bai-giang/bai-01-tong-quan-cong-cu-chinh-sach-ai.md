@@ -28,6 +28,52 @@ Dữ liệu trong phân tích hiện đại thường phân bố ở bốn nhóm
 3. **Mảng nhiều chiều và ma trận số học**: Cấu trúc số học đồng nhất nhiều chiều dùng trong xử lý hình ảnh, tín hiệu số, hoặc làm đầu vào cho các thuật toán học máy.
 4. **Các bảng liên kết (Relational tables)**: Nhiều bảng dữ liệu độc lập nhưng liên kết với nhau thông qua các trường khóa chung, cần các phép ghép nối (*join*, *merge*) để tạo thành tập dữ liệu phân tích hoàn chỉnh.
 
+<!-- worked-example bai-01-tong-quan-cong-cu-chinh-sach-ai-worked-1 -->
+
+::: example Đối chiếu bản ghi giữa danh mục đơn hàng và nhật ký thanh toán
+
+Một cửa hàng lưu đơn hàng và giao dịch thanh toán ở hai danh sách. Ta cần tìm mã đơn chưa có bản ghi thanh toán tương ứng và tính tổng tiền đã được ghi nhận. Trong ví dụ này, mỗi bản ghi thanh toán được coi là một giao dịch thành công và không lặp lại.
+
+```python
+don_hang = [
+    {"ma": "DH01", "tien": 120000},
+    {"ma": "DH02", "tien": 250000},
+    {"ma": "DH03", "tien": 180000},
+]
+thanh_toan = [
+    {"ma_don": "DH01", "tien": 120000},
+    {"ma_don": "DH03", "tien": 180000},
+]
+
+ma_tt = {item["ma_don"] for item in thanh_toan}
+lech = [item for item in don_hang if item["ma"] not in ma_tt]
+tong_tt = sum(item["tien"] for item in thanh_toan)
+
+print("Đơn chưa có bản ghi thanh toán:", [x["ma"] for x in lech])
+print("Tổng tiền đơn chưa đối soát:   ", sum(x["tien"] for x in lech))
+print("Tổng tiền thanh toán nhận được:", tong_tt)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Đơn chưa có bản ghi thanh toán: ['DH02']
+Tổng tiền đơn chưa đối soát:    250000
+Tổng tiền thanh toán nhận được: 300000
+```
+
+Đoạn mã tiếp nhận hai danh sách từ điển đại diện cho danh mục đơn hàng và nhật ký thanh toán. Mỗi phần tử trong danh sách chứa khóa định danh mã đơn cùng số tiền tương ứng. Mục tiêu của thao tác là đối chiếu sự hiện diện của mã đơn giữa hai bảng dữ liệu độc lập.
+
+Tập hợp `ma_tt` chứa các mã đơn đã xuất hiện trong nhật ký thanh toán. Biểu thức `item["ma"] not in ma_tt` chọn các đơn chưa có mã tương ứng. Sau đó, `sum` cộng các trường `tien`. Đây mới là đối chiếu mã, chưa phải kiểm tra xem số tiền của từng đơn có khớp giữa hai danh sách hay không.
+
+Việc mã đơn `DH02` chưa xuất hiện trong bảng thanh toán chỉ cho thấy hệ thống thanh toán đang thiếu bản ghi của đơn này. Kết quả này không tự chứng minh khách hàng đang nợ tiền, và cũng không chứng minh giao dịch thanh toán bị thất bại.
+
+Nếu một đơn có nhiều lần thanh toán hoặc hoàn tiền, sự hiện diện của mã đơn chưa cho biết đã thu đủ tiền. Khi cần đối chiếu tiền, hãy gom các khoản theo mã đơn, thống nhất cách ghi hoàn tiền rồi mới so sánh tổng với giá trị đơn hàng.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.2. Chu trình xử lý dữ liệu từ dữ liệu thô đến quyết định
 Quá trình phân tích dữ liệu là một chuỗi biến đổi khép kín gồm các bước: Thu thập, làm sạch, chuyển dạng, tổng hợp, trực quan hóa và kiểm tra kết luận.
 
@@ -36,6 +82,54 @@ Trước khi mô hình hóa, ta cần kiểm tra dữ liệu có phù hợp vớ
 Mục tiêu của môn học là trang bị năng lực biến những tập dữ liệu thô hỗn loạn thành dữ liệu sạch, đáng tin cậy và có thể kiểm chứng được bằng mã nguồn minh bạch.
 
 ---
+
+<!-- worked-example bai-01-tong-quan-cong-cu-chinh-sach-ai-worked-2 -->
+
+::: example Tách ký tự đơn vị và chuyển chuỗi số theo quy ước phân cách hàng nghìn
+
+Biểu mẫu sau ghi số tiền nguyên không âm. Dấu chấm trong nguồn này phân cách hàng nghìn, các chữ số thuộc bộ ASCII, còn đơn vị là `đ` hoặc `VND`. Ta chuyển những chuỗi theo quy ước đó thành số nguyên và giữ giá trị chưa xác định bằng `None`.
+
+```python
+du_lieu_tho = [
+    " 150000 đ ", "200.500 VND", " 180000 ", "Chưa thanh toán"
+]
+
+def lam_sach_so_tien(gia_tri):
+    if not isinstance(gia_tri, str):
+        return None
+    chuoi = gia_tri.strip()
+    for ky_tu in ["đ", "VND", " "]:
+        chuoi = chuoi.replace(ky_tu, "")
+    chuoi = chuoi.replace(".", "")
+    if chuoi.isascii() and chuoi.isdigit():
+        return int(chuoi)
+    return None
+
+for muc in du_lieu_tho:
+    kq = lam_sach_so_tien(muc)
+    print(f"{muc!r:>20} -> {kq}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+        ' 150000 đ ' -> 150000
+       '200.500 VND' -> 200500
+          ' 180000 ' -> 180000
+   'Chưa thanh toán' -> None
+```
+
+Hàm `lam_sach_so_tien` tiếp nhận đối số `gia_tri` dưới dạng chuỗi văn bản hoặc kiểu dữ liệu bất kỳ. Nếu đầu vào không phải kiểu chuỗi `str`, hàm trả về `None` để biểu thị dữ liệu không đúng khuôn mẫu. Đầu ra của hàm là một số nguyên `int` hoặc giá trị `None`.
+
+Phương thức `strip()` loại bỏ khoảng trắng thừa ở hai đầu chuỗi, sau đó phương thức `replace()` lần lượt xóa các ký hiệu tiền tệ phổ biến và dấu cách. Lệnh `chuoi.replace('.', '')` loại bỏ dấu chấm dựa trên giả thiết rõ ràng rằng dấu chấm đóng vai trò phân cách hàng nghìn trong nguồn dữ liệu này, chứ không phải một bộ phân tích tiền tệ vạn năng.
+
+`isascii()` giới hạn chuỗi vào bộ ký tự ASCII, còn `isdigit()` kiểm tra các ký tự còn lại có phải chữ số hay không. Hai điều kiện này giúp `int()` nhận chuỗi số nguyên như `"200500"`. Nếu chỉ dùng `isdigit()`, một số ký tự như `"²"` vẫn được nhận là chữ số nhưng không chuyển được bằng `int()`.
+
+Hàm cho kết quả 150000, 200500, 180000 và `None`. Nó chuẩn hóa dữ liệu theo quy ước đã nêu, chưa kiểm tra mọi cách đặt dấu phân cách. Chẳng hạn, nếu dấu chấm là dấu thập phân thì xóa dấu trong `"12.5"` sẽ biến 12,5 thành 125. Vì vậy, cần xác định định dạng nguồn trước khi chọn quy tắc chuyển đổi.
+
+:::
+
+<!-- /worked-example -->
 
 ## 2. Vì sao chọn Python cho phân tích dữ liệu?
 
@@ -47,6 +141,49 @@ Ngăn xếp tính toán khoa học kết hợp hai ưu thế:
 2. **Tầng tính toán biên dịch**: Bên dưới giao diện lập trình, các thư viện như NumPy và SciPy ủy thác các phép toán ma trận nặng cho các thư viện biên dịch sẵn bằng C, Fortran hoặc C++ (như BLAS, LAPACK khi có sẵn).
 
 Khi thực hiện phép tính trên một mảng dữ liệu, Python đóng vai trò điều phối gửi chỉ thị xuống khối mã C đã được biên dịch tối ưu cho phần cứng CPU. Nhờ đó, chương trình vừa giữ được sự linh hoạt trong phát triển mã nguồn, vừa đạt tốc độ tính toán của mã nhị phân tối ưu.
+
+<!-- worked-example bai-01-tong-quan-cong-cu-chinh-sach-ai-worked-3 -->
+
+::: example Phối hợp danh sách Python và bộ đệm số học NumPy
+
+Khi xử lý mảng số lớn, việc duyệt từng phần tử bằng vòng lặp Python thuần tạo ra chi phí quản lý đối tượng lớn. Ngược lại, việc chuyển danh sách thành mảng số học giúp Python ủy thác toàn bộ phép tính cho khối mã C được biên dịch sẵn của NumPy. Ta đối chiếu cách viết lặp truyền thống và hàm cộng dồn mảng để thấy rõ vai trò điều phối của Python.
+
+```python
+import numpy as np
+
+gia_tri = [12.5, 18.0, 24.5, 30.0, 15.0]
+
+tong_thuan = 0.0
+for x in gia_tri:
+    tong_thuan += x
+
+mang = np.array(gia_tri, dtype=np.float64)
+tong_numpy = float(np.sum(mang))
+
+print(f"Tổng lặp:  {tong_thuan:.1f}")
+print(f"Tổng mảng: {tong_numpy:.1f}")
+print(f"Khớp nhau: {tong_thuan == tong_numpy}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Tổng lặp:  100.0
+Tổng mảng: 100.0
+Khớp nhau: True
+```
+
+Đoạn mã tiếp nhận một danh sách Python chứa các số thực và thực hiện tính tổng theo hai cơ chế khác nhau. Cơ chế thứ nhất dùng vòng lặp `for` truyền thống để cộng dồn từng phần tử vào biến `tong_thuan`. Cơ chế thứ hai chuyển danh sách thành đối tượng `ndarray` với kiểu dữ liệu `np.float64` và gọi hàm `np.sum`.
+
+Trong vòng lặp thuần, mỗi lần cộng dồn, trình thông dịch Python phải kiểm tra kiểu của đối tượng `x`, mở hộp giá trị số thực và cấp phát đối tượng mới cho kết quả. Quá trình này tiêu tốn nhiều chu kỳ xử lý của CPU do chi phí thông dịch động.
+
+Khi chuyển sang mảng NumPy, toàn bộ các số thực được xếp liên tục trong một khối bộ nhớ liền kề. Hàm `np.sum` ủy thác vòng lặp tính toán trực tiếp cho khối mã nhị phân C bên dưới, bỏ qua chi phí đóng gói đối tượng của Python.
+
+Với các số trong ví dụ, cả hai cách đều cho tổng 100.0. Đoạn mã chưa đo thời gian chạy nên chưa kết luận cách nào nhanh hơn ở đây. Với số thực khác, thứ tự cộng cũng có thể tạo ra sai khác làm tròn. Khi so sánh gần đúng, cần chọn dung sai phù hợp với đại lượng đang tính.
+
+:::
+
+<!-- /worked-example -->
 
 ### 2.2. Giải quyết bài toán hai ngôn ngữ (Two-Language Problem)
 Trước khi Python phổ biến trong khoa học dữ liệu, các tổ chức nghiên cứu thường đối mặt với bài toán hai ngôn ngữ:
@@ -76,6 +213,44 @@ Hệ sinh thái xử lý dữ liệu hiện đại được xây dựng dựa tr
 
 ---
 
+<!-- worked-example bai-01-tong-quan-cong-cu-chinh-sach-ai-worked-4 -->
+
+::: example Kiểm tra phiên bản các thư viện cốt lõi bằng importlib.metadata
+
+Một notebook chạy được trên máy này có thể gặp lỗi trên máy khác khi phiên bản thư viện khác nhau. Ta dùng `importlib.metadata` để xem phiên bản NumPy và pandas trong chính môi trường đang chạy, đồng thời xử lý trường hợp gói chưa được cài.
+
+```python
+import importlib.metadata
+
+cac_goi = ["numpy", "pandas"]
+for ten in cac_goi:
+    try:
+        ver = importlib.metadata.version(ten)
+        major = int(ver.split(".")[0])
+        print(f"Gói {ten:<8}: phiên bản {ver}, thế hệ chính {major}")
+    except importlib.metadata.PackageNotFoundError:
+        print(f"Gói {ten:<8}: chưa được cài đặt")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Gói numpy   : phiên bản 2.5.2, thế hệ chính 2
+Gói pandas  : phiên bản 3.0.5, thế hệ chính 3
+```
+
+Đoạn mã nhận vào danh sách chuỗi tên các thư viện cần kiểm tra môi trường. Vòng lặp duyệt qua từng tên gói và gọi hàm `importlib.metadata.version` để tra cứu siêu dữ liệu đã được cài đặt trong môi trường hiện hành.
+
+`version(ten)` trả chuỗi phiên bản của gói đã cài. Trong ví dụ, `split(".")[0]` lấy phần đầu rồi chuyển sang số nguyên, chẳng hạn lấy 3 từ `"3.0.5"`. Chuỗi đầy đủ vẫn được in ra vì chỉ số phiên bản chính không đủ để tái lập môi trường.
+
+Nếu một gói chưa từng được cài đặt trong môi trường, hàm sẽ làm phát sinh ngoại lệ `PackageNotFoundError`. Việc bọc khối tra cứu trong cấu trúc `try...except` giúp chương trình không bị gián đoạn, đồng thời thông báo trạng thái gói một cách rõ ràng.
+
+Kết quả in ra cung cấp thông tin kiểm tra nhanh về các thành phần cốt lõi của Scientific Python Stack. Trong thực tế, kỹ thuật này thường được đặt ở đầu các kịch bản kiểm thử nhằm bảo đảm các gói phụ thuộc đã sẵn sàng trước khi xử lý dữ liệu.
+
+:::
+
+<!-- /worked-example -->
+
 ## 4. Kiến trúc Môi trường Tính toán: Kịch bản Python và Sổ tay Jupyter
 
 ### 4.1. Phân biệt tệp mã nguồn `.py` và sổ tay `.ipynb`
@@ -88,6 +263,71 @@ Người lập trình có thể thực thi cùng một biểu thức tính toán
 
 Nhờ lưu trữ đồng thời cả mã lệnh lẫn kết quả đầu ra, tệp `.ipynb` cho phép người đọc xem trực tiếp biểu đồ và bảng kết quả mà không cần chạy lại toàn bộ mã nguồn.
 
+<!-- worked-example bai-01-tong-quan-cong-cu-chinh-sach-ai-worked-5 -->
+
+::: example Đọc và phân tách cấu trúc ô tính toán trong tệp sổ tay JSON
+
+Tệp sổ tay Jupyter có phần mở rộng `.ipynb` thực chất là một tài liệu JSON chứa mã nguồn kèm các khối kết quả đã được lưu. Khi cần tự động hóa việc kiểm tra mã hoặc trích xuất nội dung, ta có thể phân tích trực tiếp cấu trúc của tệp này bằng thư viện `json`. Đoạn mã sau mô phỏng việc tạo một sổ tay tối giản trong thư mục tạm và đọc lại các trường quan trọng.
+
+```python
+import json
+import tempfile
+from pathlib import Path
+
+noi_dung_so_tay = {
+    "cells": [
+        {
+            "cell_type": "code",
+            "metadata": {},
+            "id": "cell-demo1",
+            "execution_count": 1,
+            "source": ["a = 5\n", "print(a * 2)"],
+            "outputs": [{"output_type": "stream", "name": "stdout", "text": ["10\n"]}],
+        }
+    ],
+    "metadata": {"language_info": {"name": "python"}},
+    "nbformat": 4,
+    "nbformat_minor": 5,
+}
+
+with tempfile.NamedTemporaryFile(
+    mode="w", suffix=".ipynb", delete=False, encoding="utf-8"
+) as f:
+    json.dump(noi_dung_so_tay, f)
+    duong_dan = Path(f.name)
+
+try:
+    du_lieu = json.loads(duong_dan.read_text(encoding="utf-8"))
+    o_dau = du_lieu["cells"][0]
+    print(f"Loại ô tính:      {o_dau['cell_type']}")
+    print(f"Thứ tự thực thi:  {o_dau['execution_count']}")
+    print(f"Số dòng mã nguồn: {len(o_dau['source'])}")
+    print(f"Đầu ra đã lưu:    {o_dau['outputs'][0]['text'][0].strip()}")
+finally:
+    duong_dan.unlink(missing_ok=True)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Loại ô tính:      code
+Thứ tự thực thi:  1
+Số dòng mã nguồn: 2
+Đầu ra đã lưu:    10
+```
+
+Đoạn mã khởi tạo một từ điển Python mô phỏng cấu trúc của một tệp sổ tay Jupyter phiên bản `nbformat` 4. Cấu trúc này chứa danh sách `cells` đại diện cho các ô tính toán, kèm thông tin siêu dữ liệu `metadata` của ngôn ngữ.
+
+`NamedTemporaryFile` tạo tệp tạm, còn `json.dump` ghi từ điển thành JSON. Cờ `delete=False` giữ tệp sau khi đóng để `Path.read_text` có thể mở lại. Việc đóng trước khi đọc giúp ví dụ hoạt động cả trên Windows, nơi một tệp đang mở có thể bị khóa.
+
+Sau `json.loads`, `cells[0]` là ô đầu tiên. `execution_count` là số thứ tự lần chạy đã lưu, còn `outputs` chứa đầu ra cũ. Đọc được chuỗi `10` trong tệp không có nghĩa mã vừa được thực thi lại. Muốn kiểm tra kết quả hiện tại, cần chạy ô mã trong một kernel.
+
+Khối `finally` bảo đảm gọi phương thức `unlink()` của `Path` để xóa tệp tạm ngay cả khi xảy ra sự cố trong quá trình đọc. Việc hiểu rõ định dạng JSON của sổ tay giúp lập trình viên tự tin xây dựng các công cụ trích xuất nội dung hoặc chuyển đổi sổ tay thành báo cáo.
+
+:::
+
+<!-- /worked-example -->
+
 ### 4.2. Kiến trúc tương tác ba tầng của Jupyter
 Khi bạn thao tác trong Jupyter Notebook trên trình duyệt web, mã lệnh không được thực thi trực tiếp trên trang web đó. Kiến trúc vận hành của Jupyter gồm ba thành phần tách biệt:
 
@@ -97,7 +337,7 @@ Khi bạn thao tác trong Jupyter Notebook trên trình duyệt web, mã lệnh 
 
 Khi người dùng nhấn tổ hợp phím `Shift + Enter`, trình duyệt gửi mã qua giao thức WebSocket tới Jupyter Server, sau đó máy chủ chuyển tiếp mã tới IPython Kernel qua thư viện ZeroMQ. Kernel thực thi xong sẽ gửi trả kết quả về trình duyệt để vẽ giao diện.
 
-### 4.3. Thứ tự thực thi `In [ ]`, trạng thái RAM và bẫy biến ma
+### 4.3. Thứ tự thực thi `In [ ]` và trạng thái trong bộ nhớ {#_4-3-thu-tu-thuc-thi-in-trang-thai-ram-va-bay-bien-ma}
 Cần phân biệt rạch ròi giữa **tệp notebook lưu trên đĩa** và **trạng thái tính toán trong RAM**:
 
 - Nhãn `In [ ]`: Ô chưa từng được thực thi kể từ khi khởi động kernel.
@@ -106,7 +346,7 @@ Cần phân biệt rạch ròi giữa **tệp notebook lưu trên đĩa** và **
 
 Mọi ô mã trong cùng một sổ tay chia sẻ chung một không gian tên toàn cục (*global namespace*) trong RAM. Nếu bạn chạy một ô mã gán `x = 10`, sau đó chạy một ô mã khác tăng `x = x + 5` ba lần liên tiếp, giá trị của `x` trong RAM sẽ là $25$, bất kể các ô mã đó nằm ở vị trí nào trên trang.
 
-#### Cạm bẫy biến ma (Ghost Variable Trap)
+#### Biến còn trong bộ nhớ sau khi xóa ô mã {#cam-bay-bien-ma-ghost-variable-trap}
 Giả sử bạn tạo một ô mã khai báo biến tạm:
 ```python
 du_lieu_tam = [10, 20, 30]
@@ -126,7 +366,7 @@ NameError: name 'du_lieu_tam' is not defined
 ## 5. Quản trị môi trường làm việc với venv và pip
 
 ### 5.1. Cơ chế cách ly gói thư viện và phòng tránh xung đột
-Khi cài đặt Python lên máy tính, hệ điều hành chỉ cung cấp một thư mục mặc định duy nhất để chứa các thư viện bên thứ ba, gọi là `site-packages`. Nếu người dùng cài đặt gói bằng lệnh `pip install <ten-goi>` mà không dùng môi trường ảo, các thư viện sẽ được chép đè vào thư mục dùng chung này.
+Mỗi bản cài Python có các vị trí tìm kiếm gói thư viện, trong đó thường có thư mục `site-packages`. Nếu nhiều dự án cùng dùng một môi trường, việc nâng cấp gói cho dự án này có thể thay đổi phiên bản mà dự án kia sử dụng. Một máy có thể có nhiều bản Python, môi trường ảo và thư mục gói của người dùng.
 
 Thiết kế dùng chung thư mục bộc lộ hai rủi ro:
 1. **Xung đột phụ thuộc giữa các dự án (Dependency Collision)**: Dự án cũ của bạn cần `pandas 1.5.3`, trong khi dự án mới yêu cầu `pandas 2.2.0`. Việc cài đè phiên bản mới sẽ làm gãy mã nguồn của dự án cũ do nhiều hàm đã bị thay đổi cú pháp hoặc loại bỏ.
@@ -209,6 +449,43 @@ Các quy tắc thực hành tốt cần duy trì:
 - Khi viết mã trong sổ tay tương tác, chia nhỏ logic thành các ô độc lập, mỗi ô giải quyết một bước biến đổi cụ thể và có chú thích rõ ràng.
 
 ---
+
+<!-- worked-example bai-01-tong-quan-cong-cu-chinh-sach-ai-worked-6 -->
+
+::: example Bảo vệ biến cục bộ và kiểm soát không gian tên với bí danh import as
+
+Chương trình đang có biến `sqrt` chứa một dòng mô tả. Ta vẫn muốn gọi hàm căn bậc hai trong thư viện `math` mà giữ nguyên biến đó. Bí danh `toan` giúp phân biệt hàm của thư viện với tên đang dùng trong chương trình.
+
+```python
+import math as toan
+
+sqrt = "Căn bậc hai của mẫu đo"
+gia_tri_tinh = toan.sqrt(25.0)
+
+print(f"Biến sqrt sẵn có: {sqrt}")
+print(f"Hàm toan.sqrt:    {gia_tri_tinh}")
+print(f"Định danh sqrt không bị ghi đè: {isinstance(sqrt, str)}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Biến sqrt sẵn có: Căn bậc hai của mẫu đo
+Hàm toan.sqrt:    5.0
+Định danh sqrt không bị ghi đè: True
+```
+
+`sqrt` trong chương trình và `sqrt` trong mô-đun `math` là hai tên thuộc hai không gian tên khác nhau. Phép gán ban đầu gắn tên `sqrt` của chương trình với một chuỗi. `toan.sqrt` truy cập thuộc tính `sqrt` của mô-đun.
+
+Nếu viết `from math import sqrt` sau phép gán chuỗi, tên `sqrt` trong chương trình sẽ được gắn lại với hàm nhập vào. Lệnh nhập không xóa các tham chiếu khác tới chuỗi, nhưng tên `sqrt` không còn dùng để lấy chuỗi đó nữa.
+
+Bằng cách sử dụng `import math as toan`, định danh duy nhất được đưa vào không gian tên hiện hành là bí danh `toan`. Phép tính căn bậc hai được gọi tường minh qua thuộc tính `toan.sqrt(25.0)`, giữ nguyên vẹn biến `sqrt` ban đầu dưới dạng chuỗi.
+
+Kết quả cho thấy `sqrt` vẫn là chuỗi và `toan.sqrt(25.0)` cho 5.0. Cách viết qua tên mô-đun giúp nhìn ra hàm đến từ đâu. Bản thân bí danh cũng là một tên, nên cần chọn `toan` sao cho không đè lên một biến đang dùng.
+
+:::
+
+<!-- /worked-example -->
 
 ## Tài liệu tham khảo
 

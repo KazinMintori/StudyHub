@@ -1,0 +1,181 @@
+{
+  "slug": "bai-14-ke-chuyen-bang-du-lieu",
+  "sections": [
+    {
+      "anchor": "### Đọc, chuẩn hóa và xử lý giá trị khuyết thiếu",
+      "title": "Tách thông tin tác tử và chuẩn hóa chuỗi khuyết thiếu bằng str.extract",
+      "purpose": "Chuỗi User-Agent thường chứa thông tin ứng dụng và phiên bản ghép nối. Phương thức Series.str.extract với biểu thức chính quy hỗ trợ phân tách chuỗi thành các cột độc lập, kết hợp xử lý chuỗi rỗng và giá trị khuyết thiếu một cách tường minh.",
+      "code": "import pandas as pd\n\ns_agent = pd.Series([\n    \"Mozilla/5.0 (Windows NT 10.0)\",\n    \"curl/7.68.0\",\n    \"\",\n    None,\n], name=\"agent\")\n\n# Trích xuất tên ứng dụng chính trước dấu gạch chéo\ndf_ext = s_agent.fillna(\"Missing\").replace({\"\": \"Unknown\"}).to_frame()\ndf_ext[[\"app\", \"ver\"]] = df_ext[\"agent\"].str.extract(r\"^([^/]+)/?(\\S+)?\")\n\nbang_kq = pd.DataFrame({\n    \"goc\": df_ext[\"agent\"],\n    \"app\": df_ext[\"app\"].fillna(\"None\"),\n    \"ver\": df_ext[\"ver\"].fillna(\"None\"),\n})\nprint(bang_kq)",
+      "explanation": [
+        "Chuỗi tác tử người dùng (User-Agent) trong tiêu đề HTTP là chuỗi văn bản do phía máy khách gửi lên máy chủ web. Trong lịch sử phát triển web, tiền tố `Mozilla/5.0` là tiền tố tương thích kế thừa xuất hiện trên hầu hết các chuỗi User-Agent của các trình duyệt hiện đại, chứ không đại diện riêng cho danh tính của một trình duyệt đơn lẻ. Đối với các công cụ tự động như `curl/7.68.0`, định dạng thường thể hiện trực tiếp tên công cụ cùng số hiệu phiên bản.",
+        "Mẫu `^([^/]+)/?(\\S+)?` lấy phần đầu trước dấu `/` và dãy ký tự không phải khoảng trắng tiếp theo. Với `curl/7.68.0`, hai cột là `curl` và `7.68.0`. Với chuỗi Mozilla, nó chỉ lấy tiền tố tương thích và phiên bản tiền tố. Đây chưa phải một bộ phân tích đầy đủ để nhận diện trình duyệt.",
+        "Các bản ghi có thể bị khuyết thiếu dưới dạng giá trị `None` hoặc chuỗi rỗng `\"\"`. Việc gán nhãn `Missing` cho `None` và `Unknown` cho chuỗi rỗng giúp mã nguồn xử lý đồng bộ các trường hợp đặc biệt này. Tuy nhiên, chỉ dựa vào sự khác biệt giữa chuỗi rỗng và giá trị khuyết trong dữ liệu lưu vết thì chưa đủ căn cứ kỹ thuật để kết luận chính xác nguyên nhân gốc rễ phát sinh từ mạng truyền dẫn hay từ ứng dụng."
+      ],
+      "covered": [
+        "Series.str.extract",
+        "Series.fillna",
+        "Series.replace"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-1"
+    },
+    {
+      "anchor": "### Phân loại heuristic hệ điều hành từ chuỗi tác tử",
+      "title": "Phân loại điều kiện hệ điều hành bằng np.select",
+      "purpose": "Khi phân loại hệ điều hành từ chuỗi User-Agent theo các quy tắc gần đúng, việc dùng nhiều lệnh rẽ nhánh lồng nhau gây khó khăn cho việc bảo trì. Hàm np.select hỗ trợ quản lý danh sách điều kiện và nhãn lựa chọn theo cấu trúc mảng tuần tự.",
+      "code": "import numpy as np\nimport pandas as pd\n\ns_agent = pd.Series([\n    \"Mozilla/5.0 (Windows NT 10.0; Win64)\",\n    \"Mozilla/5.0 (Macintosh; Intel Mac OS X)\",\n    \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64)\",\n    \"Googlebot/2.1\",\n])\n\n# Thiết lập các điều kiện phân loại heuristic\ndieu_kien = [\n    s_agent.str.contains(\"Windows\"),\n    s_agent.str.contains(\"Macintosh\"),\n    s_agent.str.contains(\"Linux\"),\n]\nlua_chon = [\"Windows\", \"MacOS\", \"Linux\"]\n\ns_os = np.select(dieu_kien, lua_chon, default=\"Other\")\nbang_kq = pd.DataFrame({\n    \"os\": s_os,\n    \"so_luong\": [1] * len(s_os),\n})\nbang_dem = bang_kq.groupby(\"os\").count().reset_index()\nprint(bang_dem)",
+      "explanation": [
+        "Nhận diện hệ điều hành từ chuỗi User-Agent là bài toán phân loại theo quy tắc phỏng đoán (heuristic), bởi chuỗi tác tử có thể chứa nhiều từ khóa đồng thời hoặc bị thay đổi bởi phía người dùng. Thay vì viết nhiều câu lệnh lồng ghép phức tạp, hàm `np.select` của NumPy cung cấp cấu trúc biểu diễn trực quan dựa trên danh sách điều kiện và danh sách giá trị tương ứng.",
+        "Cơ chế vận hành của `np.select` bao gồm một danh sách các mảng boolean `dieu_kien` và danh sách nhãn `lua_chon`. Cần lưu ý rằng các biểu thức điều kiện như `s_agent.str.contains(...)` được tính toán toàn bộ trước khi đưa vào hàm, chứ không thực thi song song trên phần cứng hay ngắt sớm (short-circuit) như cấu trúc rẽ nhánh trong ngôn ngữ lập trình thuần túy. Hàm sẽ quét lần lượt qua từng mảng điều kiện theo thứ tự danh sách và chọn nhãn thỏa mãn đầu tiên cho mỗi phần tử.",
+        "Nếu một bản ghi không thỏa mãn bất kỳ điều kiện nào trong danh sách, ví dụ chuỗi bot tìm kiếm `Googlebot/2.1`, hàm sẽ gán giá trị mặc định được chỉ định tại `default=\"Other\"`. Bảng kết quả sau khi gom nhóm thể hiện số lượng bản ghi tương ứng cho từng nhóm hệ điều hành, giúp cấu trúc phân loại dễ dàng bổ sung thêm các điều kiện mới khi mở rộng hệ thống."
+      ],
+      "covered": [
+        "np.select",
+        "Series.str.contains",
+        "DataFrame.groupby"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-2"
+    },
+    {
+      "anchor": "### Hợp nhất dữ liệu và lập bảng xoay chiều",
+      "title": "Lọc số lượng đánh giá tối thiểu bằng GroupBy.filter trước khi lập bảng xoay chiều",
+      "purpose": "Trong dữ liệu đánh giá sản phẩm, các mục chỉ có một vài lượt đánh giá ngẫu nhiên có thể tạo ra điểm số bình quân không mang tính đại diện. Phương thức GroupBy.filter cho phép loại bỏ các nhóm có cỡ mẫu quá nhỏ trước khi tổng hợp bằng pivot_table.",
+      "code": "import pandas as pd\n\ndf_danh_gia = pd.DataFrame({\n    \"phim\": [\"Phim A\", \"Phim A\", \"Phim A\", \"Phim B\", \"Phim C\", \"Phim C\"],\n    \"gioi_tinh\": [\"F\", \"M\", \"F\", \"M\", \"F\", \"M\"],\n    \"diem\": [5, 4, 5, 5, 2, 3],\n})\n\n# Lọc chỉ giữ lại các phim có tối thiểu 3 lượt đánh giá\ndf_loc = df_danh_gia.groupby(\"phim\").filter(lambda x: len(x) >= 3)\n\nbang_piv = df_loc.pivot_table(\n    index=\"phim\",\n    columns=\"gioi_tinh\",\n    values=\"diem\",\n    aggfunc=\"mean\",\n).reset_index()\nprint(bang_piv)",
+      "explanation": [
+        "Khi phân tích dữ liệu xếp hạng sản phẩm hoặc nội dung, những mục chỉ có rất ít lượt đánh giá có thể đạt điểm số trung bình tối đa nhưng mang độ bất định cao do cỡ mẫu hạn chế. Chẳng hạn một bộ phim chỉ nhận được một lượt chấm 5 sao sẽ có điểm trung bình bằng 5.0, nhưng con số này khó so sánh trực tiếp với những bộ phim có hàng trăm lượt đánh giá với điểm số 4.5.",
+        "Phương thức `GroupBy.filter` hỗ trợ chọn lọc các nhóm thỏa mãn một điều kiện kích thước cụ thể. Điều kiện `lambda x: len(x) >= 3` yêu cầu mỗi nhóm phim phải có tối thiểu 3 lượt đánh giá mới được giữ lại trong dữ liệu phân tích. Khác với các hàm tổng hợp dữ liệu, phương thức này trả về tập con của bảng ban đầu gồm toàn bộ các dòng thuộc các nhóm đủ điều kiện.",
+        "Dù vậy, việc đặt ngưỡng tối thiểu 3 lượt đánh giá chỉ là một bước lọc sơ bộ chứ không loại bỏ hoàn toàn thiên lệch chọn mẫu, đồng thời không bảo đảm rằng số lượng mẫu trong từng nhóm con nhân khẩu học đã đủ lớn để suy diễn tin cậy. Trong bảng kết quả, `Phim A` vượt qua điều kiện lọc với 3 đánh giá, và bảng xoay chiều `pivot_table` hiển thị điểm trung bình của khán giả nữ là 5.0 dựa trên 2 lượt chấm và khán giả nam là 4.0 dựa trên 1 lượt chấm duy nhất."
+      ],
+      "covered": [
+        "DataFrame.groupby",
+        "GroupBy.filter",
+        "DataFrame.pivot_table"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-3"
+    },
+    {
+      "anchor": "### Đo lường mức độ bất đồng quan điểm",
+      "title": "Đo lường độ phân tán đánh giá bằng độ lệch chuẩn và khoảng tứ phân vị IQR",
+      "purpose": "Điểm trung bình không phản ánh được mức độ phân cực ý kiến của người đánh giá. Kết hợp độ lệch chuẩn std và khoảng tứ phân vị IQR cung cấp góc nhìn đa chiều về mức độ đồng thuận của các tập dữ liệu điểm số.",
+      "code": "import pandas as pd\n\ndf = pd.DataFrame({\n    \"phim\": [\"A\", \"A\", \"A\", \"A\", \"B\", \"B\", \"B\", \"B\"],\n    \"diem\": [1, 5, 1, 5, 3, 3, 4, 3],\n})\n\ndef tinh_iqr(s):\n    return s.quantile(0.75) - s.quantile(0.25)\n\ntong_hop = df.groupby(\"phim\")[\"diem\"].agg(\n    tb=\"mean\",\n    std=\"std\",\n    iqr=tinh_iqr,\n).reset_index()\n\nbang_kq = pd.DataFrame({\n    \"phim\": tong_hop[\"phim\"],\n    \"tb\": tong_hop[\"tb\"].round(2),\n    \"std\": tong_hop[\"std\"].round(2),\n    \"iqr\": tong_hop[\"iqr\"].round(2),\n})\nprint(bang_kq)",
+      "explanation": [
+        "Điểm trung bình là thước đo xu hướng tập trung cơ bản nhưng không thể hiện được sự phân tán của dữ liệu. Hai tập dữ liệu điểm số có thể cùng mang điểm trung bình là 3.0, nhưng một tập gồm toàn điểm 3 thể hiện sự đồng thuận cao, trong khi tập còn lại gồm nửa điểm 1 và nửa điểm 5 lại phản ánh sự chia rẽ ý kiến rõ rệt giữa hai thái cực.",
+        "Để định lượng độ biến thiên, độ lệch chuẩn mẫu `std` đo lường căn bậc hai của phương sai mẫu với bậc tự do hiệu chỉnh `ddof=1`. Với tập điểm `[1, 5, 1, 5]` của phim A, độ lệch chuẩn đạt giá trị xấp xỉ 2.31, trong khi tập điểm của phim B có độ lệch chuẩn là 0.50, cho thấy mức độ phân tán của phim A cao hơn đáng kể so với phim B.",
+        "IQR bằng phân vị 75% trừ phân vị 25%. Với điểm `[1, 5, 1, 5]`, hai phân vị là 5 và 1 nên IQR bằng 4. Phim B có IQR 0.25 theo cách nội suy phân vị mặc định. Hai chỉ tiêu cho thấy mức phân tán khác nhau trong mẫu, không tự suy ra nguyên nhân người xem chấm điểm."
+      ],
+      "covered": [
+        "DataFrame.groupby",
+        "Series.quantile",
+        "GroupBy.agg"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-4"
+    },
+    {
+      "anchor": "### Chuẩn hóa tỷ trọng và phân tích xu hướng",
+      "title": "Xếp hạng mức độ phổ biến theo từng nhóm năm bằng rank",
+      "purpose": "Khi phân tích xu hướng tên khai sinh theo thời gian, số lượng tuyệt đối bị chi phối bởi quy mô dân số. Phương thức rank với tham số ascending=False hỗ trợ tính toán thứ hạng tương đối của các tên trong từng năm quan sát.",
+      "code": "import pandas as pd\n\ndf_ten = pd.DataFrame({\n    \"nam\": [2010, 2010, 2010, 2020, 2020, 2020],\n    \"ten\": [\"Liam\", \"Noah\", \"William\", \"Liam\", \"Noah\", \"William\"],\n    \"so_tre\": [15000, 14000, 16000, 19000, 18000, 12000],\n})\n\n# Tính thứ hạng giảm dần theo số lượng trẻ trong từng năm\ndf_ten[\"thu_hang\"] = df_ten.groupby(\"nam\")[\"so_tre\"].rank(\n    ascending=False, method=\"min\"\n).astype(int)\n\nbang_kq = df_ten.sort_values([\"nam\", \"thu_hang\"]).reset_index(drop=True)\nprint(bang_kq)",
+      "explanation": [
+        "Khi theo dõi tần suất xuất hiện của các tên gọi qua các giai đoạn, sự gia tăng về số lượng tuyệt đối có thể phản ánh sự thay đổi quy mô dân số chung thay vì phản ánh sự thay đổi mức độ phổ biến tương đối. Do đó, việc chuyển đổi số lượng quan sát sang chỉ số thứ hạng (rank) theo từng năm giúp người phân tích theo dõi sự dịch chuyển vị thế giữa các thực thể trong tập dữ liệu.",
+        "Phương thức `GroupBy.rank` kết hợp tham số `ascending=False` thực hiện sắp xếp thứ bậc giảm dần trong từng nhóm năm: Tên có số lượng trẻ lớn nhất nhận thứ hạng 1, các tên kế tiếp nhận thứ hạng lớn hơn. Tùy chọn `method=\"min\"` quy định rằng các phần tử có cùng số lượng sẽ nhận chung thứ hạng nhỏ nhất trong nhóm đồng hạng.",
+        "Thứ hạng tính toán chỉ áp dụng cho danh sách các tên có mặt trong bảng dữ liệu khảo sát cụ thể. Bảng kết quả cho thấy vào năm 2010, thứ tự sắp xếp lần lượt là `William` (hạng 1), `Liam` (hạng 2) và `Noah` (hạng 3). Đến năm 2020, thứ tự ghi nhận là `Liam` (hạng 1), `Noah` (hạng 2) và `William` (hạng 3), phản ánh sự thay đổi thứ bậc số lượng giữa ba tên gọi này trong mẫu dữ liệu được cung cấp."
+      ],
+      "covered": [
+        "Series.groupby",
+        "GroupBy.rank",
+        "DataFrame.sort_values"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-5"
+    },
+    {
+      "anchor": "### Đo lường tính đa dạng đặt tên",
+      "title": "Xác định số lượng tên chiếm 50% tổng số trẻ bằng cumsum và searchsorted",
+      "purpose": "Để đánh giá mức độ tập trung của các tên gọi phổ biến, ta đo lường số lượng tên cần thiết để chiếm một nửa tổng số lượng quan sát. Quy trình kết hợp sắp xếp giảm dần, tính tổng tích lũy bằng cumsum và xác định vị trí ngưỡng bằng np.searchsorted.",
+      "code": "import numpy as np\nimport pandas as pd\n\ndf = pd.DataFrame({\n    \"ten\": [\"NameA\", \"NameB\", \"NameC\", \"NameD\", \"NameE\"],\n    \"so_tre\": [400, 300, 150, 100, 50],\n})\n\n# Sắp xếp giảm dần và tính tổng dồn tích lũy\ndf_sap = df.sort_values(\"so_tre\", ascending=False).copy()\ndf_sap[\"tong_don\"] = df_sap[\"so_tre\"].cumsum()\ntong_so = df_sap[\"so_tre\"].sum()\nnguong_50 = tong_so * 0.5\n\n# Tìm số lượng tên chạm hoặc vượt ngưỡng 50%\nso_luong_ten = int(df_sap[\"tong_don\"].values.searchsorted(nguong_50)) + 1\n\nbang_kq = pd.DataFrame([{\n    \"tong_tre\": int(tong_so),\n    \"nguong_50\": float(nguong_50),\n    \"so_ten_top50\": so_luong_ten,\n}])\nprint(bang_kq)",
+      "explanation": [
+        "Đo lường mức độ tập trung giúp người phân tích hiểu được tỷ trọng đóng góp của các thực thể hàng đầu vào quy mô chung. Nếu chỉ cần một số lượng nhỏ các phần tử đứng đầu đã chiếm tới một nửa tổng số quan sát, phân phối dữ liệu mang tính tập trung cao. Ngược lại, nếu cần nhiều phần tử hơn để đạt ngưỡng đó, phân phối có xu hướng phân tán và đa dạng hơn.",
+        "Phương pháp tính toán bắt đầu bằng việc sắp xếp bảng dữ liệu theo số lượng giảm dần qua `sort_values`. Tiếp theo, phương thức `Series.cumsum()` tính tổng dồn tích lũy qua từng hàng. Phép tính này đòi hỏi các giá trị số lượng phải không âm và tổng số lượng toàn bảng phải lớn hơn 0 để ngưỡng phân vị mang ý nghĩa toán học hợp lệ. Với tổng số trẻ là 1,000, ngưỡng 50% tương ứng với mốc 500 trẻ.",
+        "Hàm `np.searchsorted()` thực hiện tìm kiếm vị trí của phần tử đầu tiên đạt hoặc vượt ngưỡng 500 trên mảng tổng dồn đã sắp xếp tăng dần. Giá trị 700 tại chỉ số 1 vượt qua mốc 500, cộng thêm 1 do quy ước chỉ mục bắt đầu từ 0 của Python, ta xác định được kết quả là 2 tên. Hai tên đầu tiên trong danh sách đã tích lũy được 700 lượt, đạt và vượt ngưỡng 50% của tập dữ liệu mẫu."
+      ],
+      "covered": [
+        "Series.cumsum",
+        "np.searchsorted",
+        "DataFrame.sort_values"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-6"
+    },
+    {
+      "anchor": "### Phẳng hóa dữ liệu phân cấp",
+      "title": "Phẳng hóa cấu trúc JSON lồng nhau nhiều cấp bằng pd.json_normalize",
+      "purpose": "Dữ liệu phân cấp dạng JSON thường chứa các mảng con lồng trong bản ghi cha. Hàm pd.json_normalize nhận tham số record_path và meta để phân rã mảng con và liên kết trường định danh cha thành bảng hai chiều hoàn chỉnh.",
+      "code": "import pandas as pd\n\ndu_lieu = [\n    {\n        \"id\": 101,\n        \"ten\": \"Bo lat\",\n        \"nhom\": \"Sua\",\n        \"chat\": [\n            {\"ten_chat\": \"protein\", \"luong\": 0.85},\n            {\"ten_chat\": \"fat\", \"luong\": 81.11},\n        ],\n    },\n    {\n        \"id\": 102,\n        \"ten\": \"Trung ga\",\n        \"nhom\": \"Trung\",\n        \"chat\": [\n            {\"ten_chat\": \"protein\", \"luong\": 12.56},\n            {\"ten_chat\": \"fat\", \"luong\": 9.51},\n        ],\n    },\n]\n\ndf_phang = pd.json_normalize(\n    du_lieu,\n    record_path=\"chat\",\n    meta=[\"id\", \"ten\", \"nhom\"],\n)\n\nbang_kq = df_phang[[\"id\", \"ten\", \"ten_chat\", \"luong\"]]\nprint(bang_kq)",
+      "explanation": [
+        "Dữ liệu trao đổi qua các giao diện lập trình ứng dụng (API) thường có cấu trúc JSON phân cấp bán cấu trúc. Mỗi đối tượng ở tầng gốc có thể đính kèm một mảng các đối tượng con ở tầng dưới, chẳng hạn thông tin về một món ăn chứa mảng danh sách các thành phần dinh dưỡng. Việc xử lý thủ công các cấu trúc lồng nhau này bằng các vòng lặp Python thường tốn công sức và dễ phát sinh lỗi khi định dạng dữ liệu phức tạp.",
+        "Hàm `pd.json_normalize` cung cấp giải pháp chuyển đổi cấu trúc cây phân cấp thành bảng hai chiều có cấu trúc. Tham số `record_path=\"chat\"` hướng dẫn hàm tách từng phần tử trong mảng con thành một dòng dữ liệu độc lập. Mỗi chất dinh dưỡng trong mảng được chuyển hóa thành một bản ghi riêng biệt trong bảng kết quả.",
+        "Đi kèm với việc tách dòng con, tham số `meta=[\"id\", \"ten\", \"nhom\"]` sao chép các thuộc tính ở cấp độ cha và gắn kèm vào từng dòng con tương ứng. Cơ chế này tương tự như một phép nối bảng quan hệ, bảo đảm mỗi dòng thành phần dinh dưỡng đều mang đầy đủ thông tin định danh và tên món ăn nguồn, tạo thuận lợi cho các bước phân tích tiếp theo."
+      ],
+      "covered": [
+        "pd.json_normalize"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-7"
+    },
+    {
+      "anchor": "### Phân khoảng số tiền đóng góp với `pd.cut`",
+      "title": "So sánh phân khoảng theo mốc cố định pd.cut và phân khoảng theo phân vị pd.qcut",
+      "purpose": "Rời rạc hóa biến liên tục phục vụ việc gom nhóm đối tượng phân tích. Hàm pd.cut phân khoảng theo các mốc số học định trước, trong khi pd.qcut chia dữ liệu theo các phân vị nhằm tạo ra các nhóm có số lượng phần tử xấp xỉ bằng nhau.",
+      "code": "import pandas as pd\n\ns_tien = pd.Series([10, 25, 50, 100, 200, 500, 1000, 5000])\n\n# 1. pd.cut theo các ngưỡng giá trị định trước\nkhoang_cut = pd.cut(s_tien, bins=[0, 100, 1000, 10000])\n\n# 2. pd.qcut chia đều thành 4 tứ phân vị có cỡ mẫu bằng nhau\nkhoang_qcut = pd.qcut(s_tien, q=4)\n\nbang_kq = pd.DataFrame({\n    \"tien\": s_tien,\n    \"cut_bin\": khoang_cut.astype(str),\n    \"qcut_bin\": khoang_qcut.astype(str),\n})\nprint(bang_kq)",
+      "explanation": [
+        "Phân khoảng dữ liệu (Binning) là kỹ thuật chuyển đổi một biến số liên tục thành các nhóm rời rạc để phục vụ việc thống kê hoặc lập báo cáo. Trong pandas, hai hàm `pd.cut` và `pd.qcut` đáp ứng hai nhu cầu phân nhóm khác nhau tùy thuộc vào yêu cầu nghiệp vụ và đặc điểm phân phối của dữ liệu.",
+        "Hàm `pd.cut` nhận danh sách các ngưỡng ranh giới cố định thông qua tham số `bins`. Phương thức này gán mỗi giá trị vào khoảng chứa tương ứng bất kể số lượng mẫu trong mỗi khoảng nhiều hay ít. Cách tiếp cận này phù hợp với các tiêu chuẩn phân loại định sẵn theo quy định hành chính hoặc biểu phí kế toán, dù có thể dẫn đến việc các khoảng giá trị lớn có rất ít quan sát.",
+        "Ngược lại, hàm `pd.qcut` phân khoảng dựa trên các mốc phân vị thực nghiệm với tham số `q=4` để chia dữ liệu thành 4 nhóm. Mục tiêu của `pd.qcut` là tạo ra các khoảng có số lượng quan sát gần như bằng nhau. Cần chú ý rằng sự đồng đều về số lượng chỉ mang tính xấp xỉ và không được bảo đảm nếu dữ liệu xuất hiện nhiều giá trị trùng nhau tại các điểm phân vị biên. Bảng kết quả minh họa rõ sự khác biệt giữa hai cột phân khoảng trên cùng một tập số liệu."
+      ],
+      "covered": [
+        "pd.cut",
+        "pd.qcut"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-8"
+    },
+    {
+      "anchor": "#### Cơ cấu trọng số tác động như thế nào đến giá trị bình quân gộp?",
+      "title": "Phân rã biến động bình quân gộp và minh chứng nghịch lý Simpson bằng code",
+      "purpose": "Bảng minh họa sau ghi giá trung bình, tính bằng nghìn đồng, và số quan sát ở hai loại chỗ ở qua hai kỳ. Giá của cả hai loại đều tăng 10%. Ta cần xem giá bình quân gộp có tăng theo hay không khi tỷ trọng hai loại thay đổi.",
+      "code": "import pandas as pd\n\ndf = pd.DataFrame({\n    \"ky\": [1, 1, 2, 2],\n    \"loai\": [\"CanHo\", \"PhongRieng\", \"CanHo\", \"PhongRieng\"],\n    \"so_luong\": [10, 2, 2, 10],\n    \"gia_tb\": [60.0, 30.0, 66.0, 33.0],\n})\n\n# Tính tỷ trọng số lượng và trung bình gộp cho từng kỳ\ndf[\"tong_ky\"] = df.groupby(\"ky\")[\"so_luong\"].transform(\"sum\")\ndf[\"ty_trong\"] = df[\"so_luong\"] / df[\"tong_ky\"]\ndf[\"dong_gop\"] = df[\"ty_trong\"] * df[\"gia_tb\"]\n\ngop = df.groupby(\"ky\")[\"dong_gop\"].sum().reset_index()\nbang_kq = pd.DataFrame({\n    \"ky\": gop[\"ky\"],\n    \"gia_tb_gop\": gop[\"dong_gop\"].round(1),\n})\nprint(bang_kq)",
+      "explanation": [
+        "Nghịch lý Simpson là một hiện tượng thống kê trong đó mối quan hệ hoặc xu hướng xuất hiện đồng nhất ở từng nhóm nhỏ có thể bị đảo chiều khi các nhóm được gộp chung lại. Trong bài toán giá thuê phòng được khảo sát, phân khúc căn hộ nguyên căn tăng giá từ 60.0 lên 66.0 nghìn đồng (tăng 10%), và phân khúc phòng riêng cũng tăng giá từ 30.0 lên 33.0 nghìn đồng (tăng 10%).",
+        "Kỳ 1 có bình quân gộp `(10 × 60 + 2 × 30) / 12 = 55`. Kỳ 2 có bình quân `(2 × 66 + 10 × 33) / 12 = 38.5`. Phép nhân lấy phần đóng góp của từng nhóm theo số quan sát, rồi phép chia đưa về bình quân trên một quan sát. Hai nhóm đều tăng giá nhưng bình quân gộp lại giảm.",
+        "Hiện tượng này được giải thích bởi sự dịch chuyển cơ cấu tỷ trọng của các nhóm thành phần qua hai kỳ. Ở Kỳ 1, phân khúc căn hộ có giá cao chiếm tỷ trọng lớn là 10 trên 12 giao dịch, kéo giá trung bình gộp lên cao. Sang Kỳ 2, phân khúc phòng riêng có giá thấp hơn lại chiếm áp đảo với 10 trên 12 giao dịch, khiến trọng số bình quân bị kéo dồn về phân khúc giá thấp. Phân tích này cho thấy tầm quan trọng của việc kiểm tra cơ cấu trọng số thay vì chỉ dựa vào một chỉ số trung bình gộp duy nhất."
+      ],
+      "covered": [
+        "DataFrame.groupby",
+        "GroupBy.transform",
+        "Series.sum"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-9"
+    },
+    {
+      "anchor": "### Phân biệt phần trăm (%) và điểm phần trăm (pp)",
+      "title": "Tính toán chênh lệch điểm phần trăm và tỷ lệ thay đổi phần trăm",
+      "purpose": "Khi phân tích biến động giữa hai tỷ lệ phần trăm, việc nhầm lẫn giữa mức chênh lệch tuyệt đối và tốc độ thay đổi tương đối dễ gây hiểu lầm số liệu. Đoạn mã tính toán song song điểm phần trăm và phần trăm biến động nhằm phân định rõ ràng hai khái niệm này.",
+      "code": "import pandas as pd\n\ndf_ty_le = pd.DataFrame({\n    \"quy\": [\"Q1\", \"Q2\"],\n    \"ty_le_huy\": [0.05, 0.04],  # 5% và 4%\n})\n\n# 1. Chênh lệch tuyệt đối: Điểm phần trăm (percentage points - pp)\npp_diff = (df_ty_le[\"ty_le_huy\"].iloc[1] - df_ty_le[\"ty_le_huy\"].iloc[0]) * 100\n\n# 2. Biến động tương đối: Phần trăm thay đổi (%)\npct_change = (\n    (df_ty_le[\"ty_le_huy\"].iloc[1] - df_ty_le[\"ty_le_huy\"].iloc[0])\n    / df_ty_le[\"ty_le_huy\"].iloc[0]\n) * 100\n\nbang_kq = pd.DataFrame([{\n    \"q1_pct\": df_ty_le[\"ty_le_huy\"].iloc[0] * 100,\n    \"q2_pct\": df_ty_le[\"ty_le_huy\"].iloc[1] * 100,\n    \"chenh_lech_pp\": round(pp_diff, 1),\n    \"bien_dong_pct\": round(pct_change, 1),\n}])\nprint(bang_kq)",
+      "explanation": [
+        "Phân biệt giữa điểm phần trăm (percentage points - pp) và tỷ lệ phần trăm (percentage - %) là yêu cầu quan trọng trong trình bày số liệu định lượng. Khi một chỉ số vốn đã mang bản chất tỷ lệ (như tỷ lệ hủy đặt phòng hay lãi suất), phép trừ trực tiếp giữa hai mốc thời gian mang đơn vị đo lường là điểm phần trăm chứ không phải là phần trăm thay đổi tương đối.",
+        "Từ 5% xuống 4%, tỷ lệ giảm 1 điểm phần trăm. So với mức ban đầu, mức thay đổi tương đối là `(0.04 - 0.05) / 0.05 = -0.2`, tức giảm 20% của chính tỷ lệ đó. Số lượt hủy chưa chắc giảm 20% nếu tổng số đơn của hai quý khác nhau.",
+        "Bảng kết quả cung cấp cả hai chỉ số `-1.0 pp` và `-20.0%` để phản ánh đầy đủ hai khía cạnh đo lường khác nhau của cùng một chuỗi quan sát. Trình bày tách bạch cả chênh lệch tuyệt đối theo điểm phần trăm lẫn biến động tương đối theo phần trăm giúp báo cáo phân tích duy trì tính khách quan và chuẩn mực học thuật."
+      ],
+      "covered": [
+        "Series.iloc",
+        "Series.pct_change"
+      ],
+      "outputKind": "table",
+      "id": "bai-14-ke-chuyen-bang-du-lieu-worked-10"
+    }
+  ]
+}

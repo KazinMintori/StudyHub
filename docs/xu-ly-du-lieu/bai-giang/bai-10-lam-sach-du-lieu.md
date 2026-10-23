@@ -48,6 +48,52 @@ print(df_loc_gia)
 assert len(df_loc_gia) == 2
 ```
 
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-1 -->
+
+::: example Lọc bỏ hàng theo ngưỡng số lượng giá trị hợp lệ với tham số thresh
+
+Trong một bảng điểm tuyển sinh gồm nhiều môn thi, một thí sinh vắng thi một môn vẫn được giữ lại nếu có đủ điểm của hai môn còn lại. Ta sử dụng tham số thresh trong hàm dropna để giữ lại những hàng đạt tối thiểu hai giá trị hợp lệ trên tập hợp các cột môn học.
+
+```python
+import numpy as np
+import pandas as pd
+
+df_diem = pd.DataFrame({
+    "ma": ["A1", "A2", "A3", "A4"],
+    "toan": [8.0, np.nan, np.nan, 9.0],
+    "van": [7.5, 6.0, np.nan, np.nan],
+    "anh": [9.0, np.nan, np.nan, 7.0]
+})
+
+df_loc = df_diem.dropna(subset=["toan", "van", "anh"], thresh=2)
+print(df_loc)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | ma | toan | van | anh |
+| --- | --- | --- | --- | --- |
+| 0 | A1 | 8.0 | 7.5 | 9.0 |
+| 3 | A4 | 9.0 | (thiếu) | 7.0 |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Mặc định `dropna()` bỏ hàng có bất kỳ ô thiếu nào trong phạm vi đang xét. Điều kiện đó phù hợp khi mọi trường đều bắt buộc. Trong bảng này, quy tắc minh họa chỉ yêu cầu ít nhất hai trong ba điểm, nên ta cần một điều kiện khác.
+
+Tham số `thresh` cung cấp cơ chế lọc dựa trên ngưỡng số lượng: Thay vì kiểm tra xem có ô `NaN` nào hay không, tham số này yêu cầu hàng phải có ít nhất một số lượng giá trị không khuyết nhất định. Khi ta thiết lập `thresh=2` trên danh sách các cột môn thi, pandas sẽ đếm số phần tử hợp lệ trong mỗi dòng.
+
+Xét các dòng của bảng điểm: Thí sinh A1 có đủ 3 điểm môn thi nên được giữ lại. Thí sinh A2 chỉ có 1 điểm hợp lệ (môn Văn) nên bị loại bỏ. Thí sinh A3 khuyết cả 3 môn nên bị loại. Thí sinh A4 có 2 điểm hợp lệ (môn Toán và môn Anh) nên vẫn được giữ lại trong danh sách.
+
+`subset` giới hạn việc đếm vào ba môn, không tính cột mã. `thresh=2` yêu cầu ít nhất hai ô không thiếu. Không truyền đồng thời `how` và `thresh`, vì pandas không cho kết hợp hai cách chỉ định điều kiện này.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.2. Điền giá trị khuyết thiếu với `fillna`, `ffill` và `bfill`
 
 Thay vì xóa bỏ, ta có thể điền giá trị cho các ô trống:
@@ -55,14 +101,62 @@ Thay vì xóa bỏ, ta có thể điền giá trị cho các ô trống:
 - Điền theo thứ tự quan sát: Trong pandas 3, tham số `method` trong `fillna` đã bị loại bỏ hoàn toàn. Người dùng sử dụng trực tiếp hai phương thức riêng biệt là `df.ffill()` (lấy giá trị hợp lệ liền trước điền tới) hoặc `df.bfill()` (lấy giá trị hợp lệ liền sau điền lùi lại), hỗ trợ tham số `limit` để khống chế số bước điền liên tiếp tối đa.
 - Điền bằng đại lượng thống kê trung tâm: Sử dụng giá trị trung bình (`mean()`) hoặc giá trị trung vị (`median()`) của cột.
 
-### 1.3. Phân loại nguyên nhân khuyết thiếu và cạm bẫy khi điền giá trị
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-2 -->
+
+::: example Điền dữ liệu thiếu theo từng cột và kiểm soát bước truyền với ffill
+
+Trong chuỗi dữ liệu giá theo phiên, việc thiếu giá trị đo lường có thể tạm thời được bù đắp bằng giá trị hợp lệ gần nhất phía trước. Tuy nhiên, nếu khoảng gián đoạn kéo dài, việc truyền giá liên tục sẽ tạo ra thông tin giả định không có cơ sở. Ta áp dụng ffill có giới hạn limit và điền giá trị mặc định cho cột danh mục.
+
+```python
+import numpy as np
+import pandas as pd
+
+df_gia = pd.DataFrame({
+    "ngay": ["T2", "T3", "T4", "T5"],
+    "gia_goc": [100.0, np.nan, np.nan, 120.0],
+    "kho": ["K1", np.nan, "K2", np.nan]
+})
+
+df_gia["gia_ffill"] = df_gia["gia_goc"].ffill(limit=1)
+df_gia["kho"] = df_gia["kho"].fillna("ChuaGhi")
+print(df_gia)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| ngay | gia&#95;goc | kho | gia&#95;ffill |
+| --- | --- | --- | --- |
+| T2 | 100.0 | K1 | 100.0 |
+| T3 | (thiếu) | ChuaGhi | 100.0 |
+| T4 | (thiếu) | K2 | (thiếu) |
+| T5 | 120.0 | ChuaGhi | 120.0 |
+
+</div>
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Phương thức `ffill` (forward fill) sao chép giá trị hợp lệ gần nhất phía trước theo chiều chỉ mục hiện hành để lấp vào vị trí trống tiếp theo. Tuy nhiên, phương thức này không tự kiểm tra xem khoảng cách thời gian thực tế có phải là 1 ngày hay không: Nó thuần túy đếm số dòng khuyết thiếu liên tiếp theo đúng thứ tự đang sắp xếp của bảng.
+
+Thứ tự hàng cần phản ánh đúng chiều mà giá trị có thể truyền đi. Nếu muốn diễn giải `limit=1` là tối đa một ngày, còn cần bảo đảm mỗi hàng tương ứng một ngày liên tiếp. `ffill` tự nó không xác minh giả định đó và cũng không chứng minh giá cũ vẫn đúng ở ngày mới.
+
+Tham số `limit=1` giới hạn số bước truyền liên tiếp tối đa là 1 dòng: So sánh giữa cột ban đầu `gia_goc` và cột kết quả `gia_ffill` cho thấy ngày T3 được điền giá trị 100.0 từ ngày T2. Đến ngày T4, do đã chạm ngưỡng giới hạn 1 bước, ô dữ liệu vẫn giữ nguyên là `NaN` thay vì tiếp tục kéo dài giá trị cũ.
+
+Đối với cột biến định tính `kho`, việc truyền giá trị xuôi thường không phù hợp với quy trình nghiệp vụ. Ta sử dụng `fillna('ChuaGhi')` để gán một nhãn phân loại rõ ràng, phân biệt giữa các dòng đã có mã kho và các dòng chưa xác định kho lưu trữ.
+
+:::
+
+<!-- /worked-example -->
+
+### 1.3. Nguyên nhân khuyết thiếu và ảnh hưởng của việc điền dữ liệu {#_1-3-phan-loai-nguyen-nhan-khuyet-thieu-va-cam-bay-khi-đien-gia-tri}
 
 Trước khi quyết định loại bỏ hay điền giá trị cho các ô trống, nhà phân tích cần xem xét bản chất của dữ liệu thiếu:
 1. **Thiếu ngẫu nhiên do kỹ thuật**: Quá trình đo đạc hoặc truyền tải gói tin qua mạng gặp sự cố cục bộ, không phụ thuộc vào bản thân giá trị cần đo. Trong trường hợp này, việc loại bỏ dòng chỉ làm giảm kích thước mẫu quan sát mà không làm lệch ước lượng trung tâm.
 2. **Thiếu có điều kiện theo thuộc tính khác**: Xác suất thiếu gắn liền với một đặc tính đã quan sát được (chẳng hạn cơ sở lưu trú ở vùng ngoại ô ít khi cập nhật thông tin tiện nghi hơn cơ sở ở trung tâm thành phố).
 3. **Thiếu gắn liền với giá trị tiềm ẩn**: Ô trống xuất hiện chính vì giá trị của nó rơi vào khoảng khó ghi nhận hoặc người cung cấp chủ động bỏ trống trường dữ liệu đó. Việc điền giá trị đơn giản trong tình huống này có thể làm biến dạng bức tranh thống kê thực tế.
 
-Khi điền giá trị thay thế bằng đại lượng thống kê trung tâm (như giá trị trung bình mẫu), nhà phân tích cần chú ý cạm bẫy làm sụt giảm phương sai:
+Điền các ô thiếu bằng cùng một giá trị trung bình tạo thêm các quan sát ngay tại tâm của mẫu. Vì thế, độ phân tán của cột sau khi điền có thể nhỏ hơn ban đầu. Xét phép tính sau:
 
 ```python
 s = pd.Series([10.0, 12.0, 14.0, 16.0, 18.0, np.nan])
@@ -76,7 +170,7 @@ print("Giá trị trung bình sau khi điền:", s_dien_tb.mean())  # 14.0
 print("Phương sai mẫu sau khi điền:", s_dien_tb.var())       # 8.0
 ```
 
-> [!WARNING] Cạm bẫy sụt giảm phương sai nhân tạo
+> [!WARNING] Phương sai thay đổi sau khi điền dữ liệu
 > Khi điền giá trị trung bình $\bar{x} = 14{,}0$ vào vị trí khuyết thiếu, độ lệch của điểm dữ liệu mới này so với tâm bằng đúng $0$: $(14{,}0 - 14{,}0)^2 = 0$. Tổng bình phương độ lệch không đổi, nhưng kích thước mẫu $N$ lại tăng từ $5$ lên $6$. Hệ quả là phương sai mẫu bị kéo tụt nhân tạo từ $10{,}0$ xuống $8{,}0$. Dữ liệu trông có vẻ ít phân tán hơn thực tế, làm thu hẹp khoảng tin cậy một cách giả tạo và dễ dẫn đến kết luận kiểm định sai lệch.
 
 ---
@@ -109,6 +203,73 @@ print("Các dòng xung đột khóa cần thẩm định:")
 print(bang_khong_trung[xung_dot])
 ```
 
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-3 -->
+
+::: example Nhận diện bản ghi trùng lặp và kiểm soát vị trí lưu giữ với keep
+
+Khi hệ thống đồng bộ dữ liệu giao dịch phát lại các gói tin cũ, bảng ghi nhận có thể xuất hiện các dòng trùng lặp cùng một mã khách hàng và lần thanh toán. Ta sử dụng phương thức duplicated với keep=False để hiển thị mặt nạ kiểm tra và dùng drop_duplicates với keep='last' để giữ lại bản ghi ở vị trí cuối.
+
+```python
+import pandas as pd
+
+df_gd = pd.DataFrame({
+    "khach": ["An", "Binh", "An", "An"],
+    "lan": [1, 1, 2, 2],
+    "tien": [50, 70, 60, 60]
+})
+
+mask_trung = df_gd.duplicated(subset=["khach", "lan"], keep=False)
+print("Mat na cac dong trung lap:")
+print(mask_trung)
+
+df_sach = df_gd.drop_duplicates(subset=["khach", "lan"], keep="last")
+print("Bang sau khi giu dong cuoi:")
+print(df_sach)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Mat na cac dong trung lap:
+```
+
+<div class="data-worked-table">
+
+| Giá trị |
+| --- |
+| `False` |
+| `False` |
+| `True` |
+| `True` |
+
+</div>
+
+```text
+Bang sau khi giu dong cuoi:
+```
+
+<div class="data-worked-table data-worked-table-wide">
+
+| Chỉ mục | khach | lan | tien |
+| --- | --- | --- | --- |
+| 0 | An | 1 | 50 |
+| 1 | Binh | 1 | 70 |
+| 3 | An | 2 | 60 |
+
+</div>
+
+Hiện tượng trùng lặp trong dữ liệu bảng thường gắn với định nghĩa đơn vị quan sát trên một tập cột khóa cụ thể, chẳng hạn cặp mã `khach` và `lan`. Các dòng trùng lặp không nhất thiết phải xung đột về giá trị số tiền: Trong ví dụ trên, hai dòng của khách An ở lần 2 đều có cùng số tiền 60.
+
+Phương thức `df_gd.duplicated(subset=['khach', 'lan'], keep=False)` trả về một Series boolean đánh dấu `True` cho toàn bộ các dòng tham gia vào quan hệ trùng khóa. Việc in mặt nạ boolean này giúp người phân tích kiểm tra trực tiếp các vị trí bị lặp trong tập dữ liệu.
+
+Tham số `keep='last'` trong phương thức `drop_duplicates` chỉ thị giữ lại dòng xuất hiện sau cùng theo thứ tự hàng hiện thời của bảng. Cần lưu ý rằng dòng cuối cùng trong bảng không đồng nghĩa với bản ghi mới nhất theo mốc thời gian trừ khi bảng đã được sắp xếp trước theo cột thời gian giao dịch.
+
+Kết quả trả về là một bảng dữ liệu sạch với ba dòng đại diện cho ba lần giao dịch: Dòng số 2 bị loại bỏ và dòng số 3 được giữ lại, bảo toàn chỉ mục hàng gốc để phục vụ các bước đối chiếu tiếp theo.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.2. Biến đổi bằng hàm hoặc ánh xạ (`map`)
 
 Phương thức `map()` trên Series cho phép ánh xạ từng giá trị sang một giá trị mới thông qua một hàm hoặc một từ điển tra cứu:
@@ -129,6 +290,71 @@ du_lieu_mon["nguon_goc"] = du_lieu_mon["ten"].map(anh_xa_nguon)
 print(du_lieu_mon)
 ```
 
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-4 -->
+
+::: example Ánh xạ cột với Series.map và biến đổi bảng với DataFrame.map
+
+Khi chuẩn hóa dữ liệu, mã vùng cần được chuyển đổi thành tên địa phương qua bảng tra cứu từ điển, đồng thời các cột số thực cần được làm tròn đồng nhất một chữ số thập phân. Ta kết hợp Series.map để ánh xạ cột và DataFrame.map để áp dụng hàm trên từng ô dữ liệu.
+
+```python
+import pandas as pd
+
+df_sp = pd.DataFrame({
+    "ma": ["HN", "SG"],
+    "x": [1.234, 5.678],
+    "y": [9.101, 3.141]
+})
+
+tra_cuu = {"HN": "HaNoi", "SG": "SaiGon"}
+df_sp["ten_vung"] = df_sp["ma"].map(tra_cuu)
+
+df_tron = df_sp[["x", "y"]].map(lambda v: round(v, 1))
+print(df_sp)
+print(df_tron)
+print(df_sp[["x", "y"]].round(1))
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| ma | x | y | ten&#95;vung |
+| --- | --- | --- | --- |
+| HN | 1.234 | 9.101 | HaNoi |
+| SG | 5.678 | 3.141 | SaiGon |
+
+</div>
+
+<div class="data-worked-table">
+
+| x | y |
+| --- | --- |
+| 1.2 | 9.1 |
+| 5.7 | 3.1 |
+
+</div>
+
+<div class="data-worked-table">
+
+| x | y |
+| --- | --- |
+| 1.2 | 9.1 |
+| 5.7 | 3.1 |
+
+</div>
+
+Phương thức `Series.map` nhận một từ điển hoặc một hàm để ánh xạ từng phần tử của một Series sang giá trị mới: Biểu thức `df_sp['ma'].map(tra_cuu)` đối chiếu từng mã vùng với từ điển để sinh ra cột `ten_vung`. Nếu một giá trị không xuất hiện trong từ điển, `Series.map` sẽ gán giá trị `NaN` tại vị trí đó.
+
+Trên phạm vi toàn bảng, phương thức `DataFrame.map` áp dụng một hàm Python lên từng ô dữ liệu đơn lẻ: Đoạn mã áp dụng hàm lambda làm tròn trên tập con hai cột `['x', 'y']` để đưa các giá trị số thực về một chữ số thập phân.
+
+Đối với thao tác làm tròn số thực đơn thuần, pandas cung cấp phương thức chuyên dụng `df[['x', 'y']].round(1)`: Phương thức này biểu đạt trực tiếp mục đích nghiệp vụ mà không cần truyền hàm lambda qua `map`.
+
+Sự phân biệt giữa các phương thức nằm ở phạm vi áp dụng: `Series.map` hoạt động trên một cột, `DataFrame.map` duyệt qua từng ô của bảng, và các phương thức chuyên dụng như `round` xử lý trực tiếp trên mảng số liệu mà không cần tạo hàm trung gian.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.3. Thay thế giá trị và đổi tên chỉ mục trục
 
 - Phương thức `replace()` cho phép thay thế các giá trị cụ thể bằng giá trị mới, hỗ trợ danh sách hoặc từ điển.
@@ -139,6 +365,54 @@ du_lieu_mon = du_lieu_mon.rename(columns={"ten": "ten_thuc_pham", "khoi_luong": 
 print(du_lieu_mon.columns.tolist())
 assert "ten_thuc_pham" in du_lieu_mon.columns
 ```
+
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-5 -->
+
+::: example Thay thế nhiều giá trị bằng từ điển và chuẩn hóa tên cột với rename
+
+Một hệ thống cũ lưu trữ trạng thái người dùng bằng các chuỗi tiếng Anh viết thường và tên cột mang tiền tố kỹ thuật. Để chuẩn hóa báo cáo theo ngôn ngữ nghiệp vụ, ta sử dụng phương thức replace với từ điển ánh xạ để thay thế nhiều giá trị đồng thời và dùng rename để cập nhật lại tiêu đề cột.
+
+```python
+import pandas as pd
+
+df_nv = pd.DataFrame({
+    "ma_nv": [1, 2, 3],
+    "trang_thai": ["active", "pending", "unknown"]
+})
+
+df_nv["trang_thai"] = df_nv["trang_thai"].replace({
+    "active": "HoatDong",
+    "pending": "ChoXuLy",
+    "unknown": "KhongRo"
+})
+
+df_nv = df_nv.rename(columns={"ma_nv": "id", "trang_thai": "status"})
+print(df_nv)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| id | status |
+| --- | --- |
+| 1 | HoatDong |
+| 2 | ChoXuLy |
+| 3 | KhongRo |
+
+</div>
+
+Phương thức `Series.replace` khác biệt với `Series.map` ở cơ chế xử lý các giá trị không khớp: Khi dùng `map` với từ điển, bất kỳ giá trị nào không nằm trong danh sách khóa đều bị biến thành `NaN`. Ngược lại, `replace` chỉ thay thế những phần tử trùng khớp với từ điển và giữ nguyên các giá trị còn lại.
+
+Ta truyền từ điển chuyển đổi trực tiếp vào `replace`: Chuỗi `'active'` được đổi thành `'HoatDong'`, `'pending'` thành `'ChoXuLy'`, và `'unknown'` thành `'KhongRo'`. Phép biến đổi diễn ra trên toàn bộ cột mà không cần viết các cấu trúc rẽ nhánh điều kiện lặp lại.
+
+Phương thức `df.rename` cung cấp cơ chế cập nhật nhãn trục: Thông qua tham số `columns={'ma_nv': 'id', 'trang_thai': 'status'}`, ta đổi tên hai cột kỹ thuật thành các định danh ngắn gọn và nhất quán với quy ước của hệ thống mới.
+
+Kết quả thu được là một `DataFrame` mới có tên cột rõ ràng và nội dung trạng thái được quy chuẩn, bảo toàn toàn bộ số lượng dòng và chỉ mục hàng ban đầu.
+
+:::
+
+<!-- /worked-example -->
 
 ### 2.4. Rời rạc hóa và chia khoảng (Discretization and Binning)
 
@@ -156,6 +430,62 @@ print("Phân bố số lượng theo khoảng độ tuổi:")
 print(dem_nhom)
 assert dem_nhom.loc[pd.Interval(18, 25, closed="left")] == 4
 ```
+
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-6 -->
+
+::: example Rời rạc hóa giá trị theo khoảng cố định với cut và theo phân vị với qcut
+
+Trong các nghiên cứu nhân khẩu học, biến độ tuổi liên tục thường được phân thành các nhóm mốc cố định hoặc chia theo các phân vị mẫu. Ta kết hợp hàm pd.cut để chia theo ngưỡng giá trị và pd.qcut để chia theo phân vị.
+
+```python
+import pandas as pd
+
+tuoi = pd.Series([15, 22, 35, 48, 62], name="tuoi")
+nhom_cut = pd.cut(
+    tuoi,
+    bins=[0, 18, 40, 100],
+    labels=["Nhom_1", "Nhom_2", "Nhom_3"],
+    right=False
+)
+nhom_qcut = pd.qcut(
+    tuoi,
+    q=2,
+    labels=["PhanVi_Thap", "PhanVi_Cao"]
+)
+
+df_tuoi = pd.DataFrame({
+    "tuoi": tuoi,
+    "nhom_cut": nhom_cut,
+    "nhom_qcut": nhom_qcut
+})
+print(df_tuoi)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| tuoi | nhom&#95;cut | nhom&#95;qcut |
+| --- | --- | --- |
+| 15 | Nhom&#95;1 | PhanVi&#95;Thap |
+| 22 | Nhom&#95;2 | PhanVi&#95;Thap |
+| 35 | Nhom&#95;2 | PhanVi&#95;Thap |
+| 48 | Nhom&#95;3 | PhanVi&#95;Cao |
+| 62 | Nhom&#95;3 | PhanVi&#95;Cao |
+
+</div>
+
+Rời rạc hóa là quá trình chuyển đổi một biến số liên tục thành các nhóm định tính rời rạc. Hàm `pd.cut` chia miền giá trị dựa trên các điểm cắt tường minh do người phân tích chỉ định thông qua danh sách `bins=[0, 18, 40, 100]` cùng các nhãn trung tính `['Nhom_1', 'Nhom_2', 'Nhom_3']`.
+
+Quy ước toán học về mút của khoảng đóng vai trò quyết định: Khi thiết lập `right=False`, các khoảng được định nghĩa thành `[a, b)`, tức là nửa mở đóng bên trái. Với quy ước này, người 18 tuổi thuộc về nhóm `[18, 40)` thay vì nhóm trước đó.
+
+Hàm `pd.qcut` chia dữ liệu dựa trên các phân vị mẫu với tham số `q=2`: Tập dữ liệu được chia thành hai nhóm có số lượng phần tử xấp xỉ bằng nhau dựa trên giá trị trung vị của mẫu.
+
+Nếu nhiều giá trị bằng nhau nằm tại biên phân vị, hai nhóm có thể có số phần tử khác nhau. Khi điểm cắt bị trùng, có thể chọn `duplicates="drop"` để giảm số khoảng. Nếu còn truyền `labels`, số nhãn cũng phải khớp số khoảng thực tế sau khi bỏ điểm cắt.
+
+:::
+
+<!-- /worked-example -->
 
 ### 2.5. Phát hiện và xử lý giá trị ngoại lai bằng Hàng rào Tukey (IQR Fences)
 
@@ -186,6 +516,55 @@ assert gia_phong[ngoai_lai].tolist() == [1200]
 
 **Nguyên tắc sư phạm cốt lõi**: Ngoại lai không đồng nghĩa với dữ liệu sai sót. Một căn biệt thự có giá 1.200 USD/đêm là một thực thể kinh doanh hoàn toàn có thật. Nhà phân tích chỉ gắn cờ `la_ngoai_lai` để tách nhánh phân tích riêng, tuyệt đối không được tự ý xóa bỏ các dòng ngoại lai hợp lệ khỏi tổng thể kinh tế.
 
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-7 -->
+
+::: example Xác định biên ngoại lai theo khoảng tứ phân vị và nẹp giá trị bằng clip
+
+Thiết bị đo lường có thể ghi nhận các giá trị tăng vọt bất thường như 50.0 trong khi dải giá trị thông thường dao động từ 10.0 đến 18.0. Ta áp dụng quy tắc Hàng rào Tukey để xác định biên trên và nẹp giá trị quan sát bằng phương thức clip.
+
+```python
+import pandas as pd
+
+s_do = pd.Series([10.0, 12.0, 14.0, 15.0, 16.0, 18.0, 50.0])
+q1 = s_do.quantile(0.25)
+q3 = s_do.quantile(0.75)
+iqr = q3 - q1
+duoi = q1 - 1.5 * iqr
+tren = q3 + 1.5 * iqr
+
+s_nep = s_do.clip(lower=duoi, upper=tren)
+df_kq = pd.DataFrame({"goc": s_do, "nep": s_nep})
+print(df_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| goc | nep |
+| --- | --- |
+| 10.0 | 10.0 |
+| 12.0 | 12.0 |
+| 14.0 | 14.0 |
+| 15.0 | 15.0 |
+| 16.0 | 16.0 |
+| 18.0 | 18.0 |
+| 50.0 | 23.0 |
+
+</div>
+
+Quy tắc Hàng rào Tukey dựa trên khoảng tứ phân vị (`IQR = Q3 - Q1`) là phương pháp xác định biên ngoại lai ít nhạy cảm với các giá trị cực trị hơn so với phương pháp dựa trên giá trị trung bình và độ lệch chuẩn. Tuy nhiên, quy tắc này không miễn nhiễm hoàn toàn với các phân phối lệch nặng hoặc các tập dữ liệu có nhiều điểm bất thường cùng chiều.
+
+Các ngưỡng biên được thiết lập theo công thức: Biên dưới là `Q1 - 1.5 * IQR` và biên trên là `Q3 + 1.5 * IQR`. Trong chuỗi quan sát mẫu, phân vị Q1 bằng 13.0 và Q3 bằng 17.0, dẫn tới IQR bằng 4.0 và ngưỡng biên trên là 23.0.
+
+Giá trị 50.0 vượt qua ngưỡng biên 23.0. Phương thức `s_do.clip(lower=duoi, upper=tren)` điều chỉnh giá trị này về mức trần 23.0 trong khi giữ nguyên các quan sát bình thường từ 10.0 đến 18.0.
+
+Thao tác nẹp giá trị bằng `clip` là một lựa chọn mô hình hóa có chủ đích: Việc nẹp giá trị không chứng minh rằng quan sát 50.0 bắt nguồn từ lỗi đo lường thực tế, và thao tác này cũng không tự động bảo đảm cải thiện hiệu năng của mô hình phân tích sau đó.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.6. Hoán vị và lấy mẫu ngẫu nhiên
 
 Phương thức `sample()` trên DataFrame cho phép lấy mẫu ngẫu nhiên không hoàn lại (`replace=False`) hoặc có hoàn lại (`replace=True`), theo số lượng cố định `n` hoặc theo tỷ lệ `frac`.
@@ -202,6 +581,49 @@ assert df_dummies.shape == (4, 3)
 ```
 
 ---
+
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-8 -->
+
+::: example Mã hóa một nóng cho biến định tính với get_dummies
+
+Nhiều mô hình thống kê và thuật toán học máy yêu cầu dữ liệu đầu vào ở dạng ma trận số. Ta sử dụng hàm pd.get_dummies với tiền tố prefix và kiểu số nguyên dtype=int để chuyển đổi cột phân loại thành các cột chỉ báo nhị phân.
+
+```python
+import pandas as pd
+
+df_hang = pd.DataFrame({
+    "ma": ["P1", "P2", "P3"],
+    "loai": ["Ao", "Quan", "Ao"]
+})
+
+dummies = pd.get_dummies(df_hang["loai"], prefix="loai", dtype=int)
+df_out = pd.concat([df_hang[["ma"]], dummies], axis=1)
+print(df_out)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| ma | loai&#95;Ao | loai&#95;Quan |
+| --- | --- | --- |
+| P1 | 1 | 0 |
+| P2 | 0 | 1 |
+| P3 | 1 | 0 |
+
+</div>
+
+Mã hóa biến giả (Dummy variable) hoặc mã hóa một nóng (One-Hot Encoding) chuyển đổi một cột định tính có k giá trị phân loại thành k cột nhị phân chứa các giá trị 0 và 1. Cột nhận giá trị 1 biểu thị quan sát thuộc về nhóm tương ứng.
+
+Hàm `pd.get_dummies(df_hang['loai'], prefix='loai', dtype=int)` tạo ra hai cột mới là `loai_Ao` và `loai_Quan`. Tham số `prefix='loai'` gắn tiền tố rõ ràng vào tên cột, tránh xung đột tên khi mã hóa nhiều biến phân loại trong cùng một bảng.
+
+Thiết lập tham số `dtype=int` bảo đảm các giá trị xuất ra là số nguyên 0 và 1 thay vì kiểu boolean, phù hợp trực tiếp với các phép tính ma trận trong mô hình tuyến tính.
+
+Trong ví dụ, mỗi hàng thuộc đúng một loại nên chỉ một cột chỉ báo nhận 1. Cách mã hóa cần phù hợp với mô hình tiếp nhận. Một số công cụ hỗ trợ biến phân loại trực tiếp, nhưng không thể suy ra rằng mọi mô hình cây đều nhận chuỗi hoặc kiểu danh mục mà không cần chuyển đổi.
+
+:::
+
+<!-- /worked-example -->
 
 ## 3. Kiểu dữ liệu mở rộng (Extension Data Types)
 
@@ -249,11 +671,60 @@ Thuộc tính `.str` cho phép thực thi các phép biến đổi chuỗi trên
 
 Cần lưu ý rằng thuộc tính `.str` là tiện ích duyệt từng phần tử chuỗi Python ở tầng thông dịch. Với các bảng dữ liệu lớn hoặc biểu thức chính quy phức tạp, việc áp dụng liên tiếp nhiều phương thức `.str` có thể tiêu tốn thời gian hơn so với việc biên dịch trước mẫu regex bằng `re.compile()` và duyệt xử lý qua hàm `map()` hoặc list comprehension.
 
-> [!CAUTION] Bẫy ký tự neo regex khi làm sạch chuỗi tiền tệ
+> [!CAUTION] Dấu đô la có ý nghĩa riêng trong regex
 > Trong biểu thức chính quy, ký tự neo `\$` đại diện cho vị trí kết thúc chuỗi văn bản. Nếu gọi `s.str.replace(r"\$", "", regex=True)`, pandas sẽ thay thế vị trí cuối chuỗi bằng chuỗi rỗng và giữ nguyên ký tự đô la ở đầu chuỗi! Để thay thế ký tự tiền tệ thông thường một cách an toàn, luôn chỉ định tham số `regex=False`:
 > `s.str.replace("$", "", regex=False).str.replace(",", "", regex=False).astype(float)`
 
 ---
+
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-9 -->
+
+::: example Trích xuất nhóm thông tin bằng biểu thức chính quy với str.extract
+
+Trong các mã đơn hàng có cấu trúc dạng DH_HN_102, phần chữ hai ký tự đại diện cho mã vùng và dãy số biểu thị số thứ tự giao dịch. Ta sử dụng phương thức str.extract kèm biểu thức chính quy có neo giới hạn để bóc tách các trường thông tin thành các cột riêng biệt.
+
+```python
+import pandas as pd
+
+s_ma = pd.Series(["DH_HN_102", "DH_SG_405", "DH_DN_801", "sai_ma", "DH_HN_102\n"])
+mau_regex = r"^DH_(?P<vung>[A-Z]{2})_(?P<so>\d+)\Z"
+
+df_tach = s_ma.str.extract(mau_regex)
+print(df_tach)
+print("Kieu du lieu cot so:", df_tach["so"].dtype)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| vung | so |
+| --- | --- |
+| HN | 102 |
+| SG | 405 |
+| DN | 801 |
+| (thiếu) | (thiếu) |
+| (thiếu) | (thiếu) |
+
+</div>
+
+```text
+Kieu du lieu cot so: str
+```
+
+Ô ghi “(thiếu)” biểu thị giá trị chưa được cung cấp hoặc chưa xác định.
+
+Thuộc tính `.str` của pandas cung cấp các phương thức xử lý chuỗi theo vector trên đối tượng Series: Phương thức `str.extract` áp dụng một biểu thức chính quy chứa các nhóm bắt (capturing groups) để trích xuất các thành phần con thành một DataFrame.
+
+Cú pháp đặt tên nhóm `(?P<vung>[A-Z]{2})` và `(?P<so>\d+)` chỉ định tên hiển thị cho các cột kết quả: Hai ký tự chữ hoa được đưa vào cột `vung`, và dãy chữ số được đưa vào cột `so`.
+
+`^` neo đầu chuỗi, còn `\Z` yêu cầu kết thúc hẳn chuỗi. Nhờ vậy, mã có phần thừa hoặc dòng mới ở cuối không được chấp nhận. Dấu `$` có thể khớp ngay trước một ký tự xuống dòng cuối chuỗi, nên không thay hoàn toàn cho việc kiểm tra kết thúc nghiêm ngặt.
+
+Các hàng không khớp cho ô thiếu trong cả hai cột. Cột `so` chứa chuỗi chữ số, chưa phải số nguyên. Nếu cần tính toán, có thể dùng `pd.to_numeric(df_tach["so"], errors="coerce")`. `.str` giúp diễn đạt phép xử lý theo cột, không phải cam kết tốc độ trên mọi dữ liệu.
+
+:::
+
+<!-- /worked-example -->
 
 ## 5. Kiểu dữ liệu phân loại (Categorical Data)
 
@@ -292,6 +763,54 @@ assert danh_gia.max() == "giỏi"
 ```
 
 ---
+
+<!-- worked-example bai-10-lam-sach-du-lieu-worked-10 -->
+
+::: example Thiết lập phân loại có thứ tự và biến đổi thang đo định tính
+
+Các thang đo đánh giá chất lượng có thứ bậc nội tại nhưng khi lưu dưới dạng chuỗi thông thường, chúng sẽ bị sắp xếp theo thứ tự bảng chữ cái. Ta sử dụng pd.Categorical với tham số ordered=True để thiết lập thứ tự logic và trích xuất mã số định danh qua thuộc tính cat.codes.
+
+```python
+import pandas as pd
+
+phan_loai = pd.Categorical(
+    ["TrungBinh", "Cao", "Thap", "Cao"],
+    categories=["Thap", "TrungBinh", "Cao"],
+    ordered=True
+)
+
+s_hang = pd.Series(phan_loai)
+df_out = pd.DataFrame({
+    "nhan": s_hang.astype(str),
+    "ma_so": s_hang.cat.codes
+})
+print(df_out)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| nhan | ma&#95;so |
+| --- | --- |
+| TrungBinh | 1 |
+| Cao | 2 |
+| Thap | 0 |
+| Cao | 2 |
+
+</div>
+
+Kiểu dữ liệu chuỗi thông thường không mang theo khái niệm thứ bậc: Khi sắp xếp các chuỗi `'Cao'`, `'Thap'`, `'TrungBinh'`, hệ thống căn cứ vào bảng mã ký tự và xếp `'Cao'` trước `'Thap'`. Thao tác này làm lệch thứ tự đánh giá khi mức `'Thap'` là điểm khởi đầu của thang đo.
+
+Lớp `pd.Categorical` giải quyết vấn đề này thông qua hai tham số: Tham số `categories=['Thap', 'TrungBinh', 'Cao']` xác định danh mục các giá trị hợp lệ theo thứ bậc tăng dần, và `ordered=True` xác nhận thang đo có thứ tự so sánh được.
+
+Thuộc tính `cat.codes` cung cấp mã số nguyên đại diện cho từng mức phân loại: Mức `'Thap'` nhận mã 0, `'TrungBinh'` nhận mã 1, và `'Cao'` nhận mã 2. Việc mã hóa số nguyên này hỗ trợ các phép sắp xếp theo đúng logic thứ bậc của danh mục.
+
+Bảng kết quả liên kết giữa nhãn văn bản và mã số kỹ thuật tương ứng, cho phép thực hiện các phép lọc so sánh như `s_hang >= 'TrungBinh'` theo đúng thứ tự thang đo đã định nghĩa. Giá trị thiếu được mã hóa bằng -1. Mã 0, 1, 2 chỉ biểu diễn thứ tự, không khẳng định khoảng cách giữa hai mức liên tiếp bằng nhau.
+
+:::
+
+<!-- /worked-example -->
 
 ## 6. Xác thực văn bản sang bảng và đo lường chất lượng
 

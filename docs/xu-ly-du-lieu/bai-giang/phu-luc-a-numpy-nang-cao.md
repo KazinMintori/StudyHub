@@ -79,6 +79,52 @@ Kỹ thuật này giúp các hàm xử lý dữ liệu kiểm tra tính tương 
 
 ---
 
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-1 -->
+
+::: example Kiểm tra tương thích kiểu dữ liệu bằng np.issubdtype
+
+Khi xây dựng các hàm tính toán số học tổng quát, việc so sánh cứng với từng kiểu dữ liệu cụ thể dễ bỏ sót các biến thể hợp lệ khác. Hàm np.issubdtype cho phép kiểm tra quan hệ kế thừa trên cây phả hệ kiểu vô hướng của NumPy để xác định kiểu dữ liệu đầu vào.
+
+```python
+import numpy as np
+import pandas as pd
+
+# Tập hợp các kiểu dữ liệu đại diện
+cac_kieu = [np.float32, np.float64, np.int32, np.int64, np.complex128]
+
+bang_kq = pd.DataFrame({
+    "kieu": [k.__name__ for k in cac_kieu],
+    "la_so": [bool(np.issubdtype(k, np.number)) for k in cac_kieu],
+    "la_so_thuc": [bool(np.issubdtype(k, np.floating)) for k in cac_kieu],
+    "la_so_nguyen": [bool(np.issubdtype(k, np.integer)) for k in cac_kieu],
+})
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table data-worked-table-wide">
+
+| kieu | la&#95;so | la&#95;so&#95;thuc | la&#95;so&#95;nguyen |
+| --- | --- | --- | --- |
+| float32 | `True` | `True` | `False` |
+| float64 | `True` | `True` | `False` |
+| int32 | `True` | `False` | `True` |
+| int64 | `True` | `False` | `True` |
+| complex128 | `True` | `False` | `False` |
+
+</div>
+
+Hệ thống kiểu dữ liệu trong NumPy được cấu trúc theo một cây phân cấp kế thừa xuất phát từ lớp cơ sở `np.generic`. Khi viết các hàm xử lý tính toán số học, việc kiểm tra kiểu bằng toán tử so sánh bằng như `arr.dtype == np.float64` sẽ khiến hàm từ chối các kiểu số thực hợp lệ khác như `float32` hoặc `float16`.
+
+`np.issubdtype(kieu_con, kieu_cha)` kiểm tra quan hệ kiểu. `np.number` bao gồm các họ số nguyên, số thực dấu phẩy động và số phức của NumPy. `np.inexact` là họ số có biểu diễn gần đúng, không có nghĩa mọi giá trị thuộc họ này đều mang phần thập phân khác 0.
+
+Nhánh `np.inexact` tiếp tục phân tách thành kiểu số thực `np.floating` và số phức `np.complexfloating`. Bảng kết quả thể hiện rõ cấu trúc này: Cả `float32` và `float64` đều thuộc `np.floating` và `np.number`, trong khi các kiểu `int32` và `int64` thuộc `np.integer` và `np.number`. Kiểu `complex128` là số học nhưng không thuộc nhánh số thực hay số nguyên.
+
+:::
+
+<!-- /worked-example -->
+
 ## 2. Các phép biến đổi mảng nâng cao
 
 ### Thứ tự lưu trữ: Hàng trước (C-order) so với Cột trước (Fortran-order)
@@ -121,6 +167,74 @@ Cơ chế tạo View hay Copy của phép làm phẳng:
 - `ravel(order='C')`: Trả về một **View** nếu cấu trúc bước nhảy (`strides`) của mảng tương thích với thứ tự duyệt được yêu cầu (chẳng hạn mảng C-contiguous duyệt theo thứ tự C). Nếu thứ tự yêu cầu không khớp với bố cục bước nhảy hiện tại (ví dụ gọi `goc.T.ravel(order='C')` trên ma trận chuyển vị, hoặc mảng bị cắt lát gián cách), `ravel()` bắt buộc phải tạo một bản sao độc lập (Copy).
 - `flatten()`: Luôn luôn cấp phát vùng nhớ mới và tạo một **Copy** độc lập, bất kể mảng có liên tục hay không.
 
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-2 -->
+
+::: example Phân biệt mức độ chồng lấn bộ nhớ bằng shares_memory và may_share_memory
+
+Khi thao tác cắt lát và chuyển dạng ma trận, việc xác định một mảng là khung nhìn hay bản sao quyết định tính độc lập của dữ liệu. Các hàm np.shares_memory và np.may_share_memory kiểm tra mức độ chồng lấn vùng nhớ giữa hai mảng.
+
+```python
+import numpy as np
+import pandas as pd
+
+goc = np.arange(6, dtype=np.int32)
+
+# Tạo ba đối tượng dẫn xuất từ mảng gốc
+cat_lat = goc[1:4]             # View cắt lát
+chuyen_dang = goc.reshape(2, 3) # View chuyển dạng
+sao_chep = goc.copy()          # Copy độc lập
+
+bang_kq = pd.DataFrame([
+    {
+        "doi_tuong": "cat_lat",
+        "shares_memory": bool(np.shares_memory(goc, cat_lat)),
+        "may_share": bool(np.may_share_memory(goc, cat_lat)),
+    },
+    {
+        "doi_tuong": "chuyen_dang",
+        "shares_memory": bool(np.shares_memory(goc, chuyen_dang)),
+        "may_share": bool(np.may_share_memory(goc, chuyen_dang)),
+    },
+    {
+        "doi_tuong": "sao_chep",
+        "shares_memory": bool(np.shares_memory(goc, sao_chep)),
+        "may_share": bool(np.may_share_memory(goc, sao_chep)),
+    },
+])
+print(bang_kq)
+chan = goc[::2]
+le = goc[1::2]
+print("Hai lát chẵn/lẻ có thể chung bộ nhớ:", np.may_share_memory(chan, le))
+print("Hai lát chẵn/lẻ thực sự chung ô nhớ:", np.shares_memory(chan, le))
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| doi&#95;tuong | shares&#95;memory | may&#95;share |
+| --- | --- | --- |
+| cat&#95;lat | `True` | `True` |
+| chuyen&#95;dang | `True` | `True` |
+| sao&#95;chep | `False` | `False` |
+
+</div>
+
+```text
+Hai lát chẵn/lẻ có thể chung bộ nhớ: True
+Hai lát chẵn/lẻ thực sự chung ô nhớ: False
+```
+
+Cơ chế khung nhìn (View) trong NumPy cho phép tạo ra các mảng mới trỏ chung vào khối nhớ đệm của mảng ban đầu kèm theo thông tin kích thước và bước nhảy (strides) tương ứng. Khi cắt lát `goc[1:4]` hoặc đổi dạng `goc.reshape(2, 3)`, dữ liệu không bị sao chép sang vùng nhớ mới, giúp tiết kiệm thời gian khởi tạo và dung lượng bộ nhớ.
+
+`np.shares_memory` trả `True` khi hai mảng có phần dữ liệu thực sự chồng lấn. Nếu ghi vào phần chồng lấn, mảng kia sẽ nhìn thấy giá trị đổi. Nó không có nghĩa mọi ô của hai mảng đều trùng nhau. `.copy()` trong ví dụ tạo vùng dữ liệu độc lập nên phép kiểm tra cho `False`.
+
+`np.may_share_memory` mặc định kiểm tra giới hạn vùng nhớ, nên `True` chỉ là có khả năng chồng lấn. Hai lát chẵn và lẻ có vùng bao địa chỉ giao nhau nhưng không dùng chung một phần tử nào. Vì vậy, phép kiểm tra nhanh cho `True`, còn `shares_memory` cho `False`.
+
+:::
+
+<!-- /worked-example -->
+
 ### Nối và tách mảng: `concatenate`, `split`, `np.r_` và `np.c_`
 
 Bên cạnh các hàm nối truyền thống, NumPy cung cấp hai đối tượng tiện ích cú pháp mạnh mẽ là `np.r_` (xếp chồng theo hàng) và `np.c_` (xếp chồng theo cột):
@@ -137,6 +251,53 @@ print("Xếp chồng theo cột:\n", ma_tran_cot)
 vector_hang = np.r_[a, b]
 print("Xếp chồng theo hàng:\n", vector_hang)
 ```
+
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-3 -->
+
+::: example Tách mảng thành các phần không đều bằng array_split
+
+Khi phân chia mảng thành các khối để xử lý song song hoặc kiểm định chéo, tổng số phần tử không phải lúc nào cũng chia hết cho số phần mong muốn. Hàm np.array_split cho phép chia mảng thành các khối có kích thước chênh lệch không quá một phần tử.
+
+```python
+import numpy as np
+import pandas as pd
+
+# Mảng 10 phần tử cần chia thành 3 phần (10 không chia hết cho 3)
+arr = np.arange(10)
+cac_phan = np.array_split(arr, 3)
+
+bang_kq = pd.DataFrame([
+    {
+        "khoi": i + 1,
+        "kich_thuoc": len(p),
+        "noi_dung": str(p.tolist()),
+    }
+    for i, p in enumerate(cac_phan)
+])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| khoi | kich&#95;thuoc | noi&#95;dung |
+| --- | --- | --- |
+| 1 | 4 | &#91;0, 1, 2, 3&#93; |
+| 2 | 3 | &#91;4, 5, 6&#93; |
+| 3 | 3 | &#91;7, 8, 9&#93; |
+
+</div>
+
+Khi truyền số phần nguyên như `np.split(arr, 3)`, độ dài trên trục chia phải chia hết cho 3. Mảng 10 phần tử không thỏa nên lời gọi đó báo lỗi. `np.split` cũng nhận danh sách vị trí cắt như `[4, 7]`, khi đó có thể tạo các đoạn dài khác nhau.
+
+Hàm `np.array_split` giải quyết tình huống trên bằng cách cho phép chia mảng thành các phần có kích thước gần bằng nhau. Khi mảng 10 phần tử được chia thành 3 phần, hàm phân bổ phần dư vào các khối đầu tiên, tạo ra khối thứ nhất có 4 phần tử và hai khối tiếp theo mỗi khối có 3 phần tử. Độ chênh lệch kích thước giữa các khối được giữ ở mức tối đa là một phần tử.
+
+Các mảng con trả về từ `np.array_split` thường là các khung nhìn trỏ vào dữ liệu của mảng ban đầu. Dù không sao chép lại toàn bộ mảng dữ liệu, mỗi mảng con vẫn là một đối tượng Python độc lập sở hữu siêu dữ liệu riêng về kích thước, bước nhảy và con trỏ vùng đệm, do đó vẫn chiếm dụng một phần tài nguyên quản lý của tiến trình chứ không tiêu thụ mức bộ nhớ bằng không.
+
+:::
+
+<!-- /worked-example -->
 
 ### Lặp lại phần tử: Phân biệt `repeat` và `tile`
 
@@ -168,6 +329,71 @@ print("Kết quả put:", v) # [0, 10, 0, 30, 0]
 ```
 
 ---
+
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-4 -->
+
+::: example Trích xuất và gán phần tử trên trục chỉ định với take và put_along_axis
+
+Khi thao tác trên mảng đa chiều, việc trích xuất hoặc ghi đè phần tử theo chỉ mục trên một trục cụ thể đòi hỏi các biểu thức chỉ số phức tạp. Các hàm np.take và np.put_along_axis cung cấp phương thức thao tác trực tiếp trên trục chỉ định.
+
+```python
+import numpy as np
+import pandas as pd
+
+# Ma trận kích thước (3, 3)
+ma_tran = np.array([
+    [10, 20, 30],
+    [40, 50, 60],
+    [70, 80, 90],
+])
+
+# 1. take: Trích xuất hàng 0 và hàng 2 dọc theo trục 0
+hang_trich = np.take(ma_tran, [0, 2], axis=0)
+print("Hai hàng đã lấy:")
+print(pd.DataFrame(hang_trich, columns=["c0", "c1", "c2"]))
+
+# 2. put_along_axis: Gán giá trị 999 vào vị trí cột chỉ định trên từng hàng
+vi_tri_cot = np.array([[0], [1], [2]]) # Cột 0 hàng 0, cột 1 hàng 1, cột 2 hàng 2
+np.put_along_axis(ma_tran, vi_tri_cot, 999, axis=1)
+
+bang_kq = pd.DataFrame(ma_tran, columns=["c0", "c1", "c2"])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Hai hàng đã lấy:
+```
+
+<div class="data-worked-table">
+
+| c0 | c1 | c2 |
+| --- | --- | --- |
+| 10 | 20 | 30 |
+| 70 | 80 | 90 |
+
+</div>
+
+<div class="data-worked-table">
+
+| c0 | c1 | c2 |
+| --- | --- | --- |
+| 999 | 20 | 30 |
+| 40 | 999 | 60 |
+| 70 | 80 | 999 |
+
+</div>
+
+`np.take` hữu ích khi trục cần chọn được xác định bằng một tham số. Với `axis=0`, các chỉ số 0 và 2 chọn hai hàng. Có thể viết kết quả tương tự bằng `ma_tran[[0, 2]]`, nhưng `take` làm rõ trục trong các hàm nhận mảng có nhiều chiều.
+
+Hàm `np.take` nhận tham số `axis` rõ ràng, hỗ trợ trích xuất dữ liệu dọc theo trục được chỉ định. Trong đoạn mã, lệnh `np.take(ma_tran, [0, 2], axis=0)` lấy ra hàng 0 và hàng 2 của ma trận để tạo thành một mảng mới kích thước `(2, 3)` mà không làm xáo trộn cấu trúc các chiều còn lại.
+
+Đối với chiều ghi dữ liệu, hàm `np.put_along_axis` cho phép ghi đè giá trị tại chỗ theo các vị trí chỉ số tương ứng dọc theo trục chỉ định. Với mảng chỉ số `vi_tri_cot` và trục `axis=1`, giá trị 999 được gán trực tiếp vào các vị trí tương ứng trên từng hàng, tạo nên ma trận kết quả với giá trị mới xuất hiện trên đường chéo như thể hiện trong bảng số liệu.
+
+:::
+
+<!-- /worked-example -->
 
 ## 3. Cơ chế Broadcasting mở rộng
 
@@ -205,6 +431,49 @@ print("Bảng sau khi gán bằng broadcasting:\n", bang)
 
 ---
 
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-5 -->
+
+::: example Tính toán ma trận khoảng cách Euclid bằng broadcasting và np.newaxis
+
+Tính khoảng cách giữa hai tập hợp điểm là phép toán cơ bản trong nhiều thuật toán máy học. Mở rộng trục bằng np.newaxis cho phép tận dụng cơ chế broadcasting để tính toán khoảng cách đôi một giữa các điểm dữ liệu.
+
+```python
+import numpy as np
+import pandas as pd
+
+# Tập A gồm 2 điểm trong không gian 2D, tập B gồm 2 tâm cụm
+pts_a = np.array([[0.0, 0.0], [3.0, 4.0]])
+pts_b = np.array([[1.0, 1.0], [0.0, 0.0]])
+
+# Mở rộng trục để broadcasting: (2, 1, 2) trừ (1, 2, 2) ra (2, 2, 2)
+diff = pts_a[:, np.newaxis, :] - pts_b[np.newaxis, :, :]
+dists = np.sqrt(np.sum(diff**2, axis=-1))
+
+bang_kq = pd.DataFrame(dists.round(2), columns=["b0", "b1"])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| b0 | b1 |
+| --- | --- |
+| 1.41 | 0.0 |
+| 3.61 | 5.0 |
+
+</div>
+
+Bài toán tính khoảng cách đôi một giữa tập điểm $A$ kích thước $(N, D)$ và tập điểm $B$ kích thước $(M, D)$ xuất hiện trong các thuật toán như k-Means hay k-NN. Thay vì sử dụng các vòng lặp lồng nhau qua từng cặp điểm, cơ chế broadcasting của NumPy cho phép mở rộng các chiều có kích thước bằng 1 để thực hiện phép trừ đồng loạt trên các mảng đa chiều.
+
+Bằng cách chèn `np.newaxis`, mảng `pts_a` được chuyển thành hình dạng `(2, 1, 2)` và `pts_b` thành `(1, 2, 2)`. Phép trừ `diff = pts_a[:, np.newaxis, :] - pts_b[np.newaxis, :, :]` sinh ra một mảng hiệu số 3 chiều có kích thước `(2, 2, 2)`. Cần hiểu rằng dù các mảng đầu vào không bị nhân bản trong bộ nhớ trước khi trừ, phép toán trừ mảng này bắt buộc phải cấp phát bộ nhớ mới cho mảng kết quả có kích thước $N \times M \times D$.
+
+Tiếp theo, thao tác bình phương phần tử `diff**2`, tính tổng theo trục tọa độ cuối cùng `np.sum(..., axis=-1)` và lấy căn bậc hai `np.sqrt()` cho ra ma trận khoảng cách kích thước `(2, 2)`. Bảng kết quả hiển thị khoảng cách từ điểm `(0, 0)` đến `(1, 1)` là 1.41 và đến `(0, 0)` là 0.0, trong khi điểm `(3, 4)` cách `(0, 0)` một khoảng bằng 5.0. Bình phương `diff**2` cũng tạo một mảng trung gian. Khi N và M lớn, cần cân nhắc tính theo từng khối vì broadcasting không làm biến mất chi phí bộ nhớ của đầu ra.
+
+:::
+
+<!-- /worked-example -->
+
 ## 4. Phương thức của ufunc và Phân biệt hàm vector hóa
 
 Hàm phổ quát (`ufunc`) là hàm thực hiện các phép toán theo từng phần tử được viết và biên dịch sẵn bằng ngôn ngữ C. Ngoài việc gọi trực tiếp `np.add(a, b)`, các ufunc hai ngôi còn sở hữu các phương thức đặc biệt mạnh mẽ:
@@ -226,6 +495,51 @@ u_day = np.array([1, 2, 3, 4, 5])
 print("Tích lũy dồn (accumulate):", np.add.accumulate(u_day))
 print("Tích ngoài (outer):\n", np.multiply.outer(np.array([1, 2]), np.array([10, 20])))
 ```
+
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-6 -->
+
+::: example Tính toán thu gọn từng đoạn với phương thức reduceat của ufunc
+
+Khi cần tính tổng hoặc áp dụng phép toán thu gọn trên các đoạn chỉ số liên tiếp, phương thức reduceat của các ufunc hai ngôi thực hiện phép dồn trên từng khoảng chỉ mục được xác định.
+
+```python
+import numpy as np
+import pandas as pd
+
+vals = np.array([10, 20, 30, 40, 50, 60])
+indices = [0, 2, 4]
+
+# reduceat tính tổng dồn trên các khoảng [0:2], [2:4], [4:]
+tong_doan = np.add.reduceat(vals, indices)
+
+bang_kq = pd.DataFrame({
+    "doan": ["0-1", "2-3", "4-5"],
+    "tong": tong_doan,
+})
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| doan | tong |
+| --- | --- |
+| 0-1 | 30 |
+| 2-3 | 70 |
+| 4-5 | 110 |
+
+</div>
+
+Các hàm phổ quát hai ngôi trong NumPy như `np.add` hoặc `np.maximum` sở hữu các phương thức riêng hỗ trợ các bài toán thu gọn dữ liệu. Trong khi phương thức `reduce` áp dụng phép toán dồn trên toàn bộ mảng, phương thức `reduceat` thực hiện thao tác này trên từng phân đoạn chỉ số được chỉ định bởi một mảng mốc.
+
+Lệnh `np.add.reduceat(vals, [0, 2, 4])` chia mảng thành các phân đoạn tương ứng: Phân đoạn thứ nhất tính từ chỉ số 0 đến trước chỉ số 2 (tổng là 10 + 20 = 30), phân đoạn thứ hai tính từ chỉ số 2 đến trước chỉ số 4 (tổng là 30 + 40 = 70), và phân đoạn cuối tính từ chỉ số 4 đến hết mảng (tổng là 50 + 60 = 110). Bảng kết quả trả về đúng ba giá trị tương ứng cho ba đoạn.
+
+Nếu hai mốc liên tiếp thỏa `indices[i] >= indices[i + 1]`, kết quả đoạn đó là `vals[indices[i]]`, không phải tổng của một lát cắt rỗng. Đoạn cuối vẫn được tính từ mốc cuối đến hết mảng. Vì vậy, danh sách mốc lặp hoặc giảm có cách diễn giải riêng, không giống việc bỏ qua những đoạn đó.
+
+:::
+
+<!-- /worked-example -->
 
 ### Phân biệt bản chất: `np.vectorize` / `frompyfunc` so với ufunc biên dịch sẵn
 
@@ -289,6 +603,55 @@ Mảng cấu trúc là công cụ vô giá khi cần đọc và ghi trực tiế
 
 ---
 
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-7 -->
+
+::: example Chuyển đổi mảng cấu trúc sang mảng bản ghi để truy cập trường bằng thuộc tính
+
+Mảng cấu trúc lưu trữ dữ liệu nhị phân nhiều trường nhưng yêu cầu truy cập bằng chuỗi tên trường. Khung nhìn np.recarray cho phép đọc và ghi dữ liệu trực tiếp thông qua cú pháp thuộc tính mà không sao chép khối nhớ đệm.
+
+```python
+import numpy as np
+import pandas as pd
+
+# Định nghĩa kiểu phức hợp gồm định danh id và điểm số
+dt_rec = np.dtype([("id", "i4"), ("diem", "f8")])
+arr_struct = np.array([(1, 8.5), (2, 9.0), (3, 7.5)], dtype=dt_rec)
+
+# Chuyển đổi thành mảng bản ghi qua khung nhìn
+rec = arr_struct.view(np.recarray)
+
+# Truy cập và chỉnh sửa trực tiếp bằng cú pháp thuộc tính
+rec.diem = rec.diem + 0.5
+
+bang_kq = pd.DataFrame({
+    "id": rec.id,
+    "diem_moi": rec.diem,
+})
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| id | diem&#95;moi |
+| --- | --- |
+| 1.0 | 9.0 |
+| 2.0 | 9.5 |
+| 3.0 | 8.0 |
+
+</div>
+
+Mảng cấu trúc (Structured Array) trong NumPy cho phép tổ chức dữ liệu nhị phân gồm nhiều trường có kiểu dữ liệu khác nhau trong cùng một bản ghi. Tuy nhiên, việc truy xuất dữ liệu thông qua chuỗi khóa như `arr_struct["diem"]` có thể làm câu lệnh trở nên dài dòng khi kết hợp trong các biểu thức số học phức tạp.
+
+Lớp `np.recarray` cung cấp giao diện mở rộng cho phép người dùng truy cập các trường dữ liệu bằng cú pháp thuộc tính dạng `rec.diem`. Lời gọi `arr_struct.view(np.recarray)` tạo ra một khung nhìn mới trỏ chung vào cùng khối nhớ đệm của mảng cấu trúc ban đầu, giúp việc đọc và ghi giá trị diễn ra trực tiếp trên cùng dữ liệu mà không cần tạo bản sao.
+
+Khi thực hiện phép gán `rec.diem = rec.diem + 0.5`, dữ liệu trên mảng gốc được cập nhật đồng thời. Bảng kết quả xác nhận các điểm số mới lần lượt là 9.0, 9.5 và 8.0 tương ứng với các mã định danh. Cú pháp thuộc tính của mảng bản ghi mang lại sự thuận tiện khi lập trình mà vẫn duy trì khả năng tính toán số học trên khối nhớ nhị phân của NumPy.
+
+:::
+
+<!-- /worked-example -->
+
 ## 6. Các thuật toán sắp xếp chuyên sâu trong NumPy
 
 Sắp xếp dữ liệu là bài toán nền tảng trong mọi hệ thống xử lý thông tin. NumPy hỗ trợ cả hai phương thức: Sắp xếp tại chỗ (`arr.sort()`) và sắp xếp gián tiếp trả về chỉ mục.
@@ -329,6 +692,49 @@ print("Mảng sau phân hoạch tại k=3:", phan_hoach)
 print("Ba phần tử nhỏ nhất là:", phan_hoach[:3]) # [5, 12, 18]
 ```
 
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-8 -->
+
+::: example Phân hoạch mảng tại vị trí k với np.partition
+
+Khi chỉ cần tìm k phần tử nhỏ nhất mà không yêu cầu sắp xếp toàn bộ mảng, hàm np.partition sắp xếp lại dữ liệu sao cho phần tử tại vị trí chỉ số k đứng đúng vị trí phân hoạch, tiết kiệm thời gian tính toán so với sắp xếp toàn phần.
+
+```python
+import numpy as np
+import pandas as pd
+
+day_so = np.array([45, 12, 89, 5, 23, 71, 18, 90])
+
+# Phân hoạch tìm 3 phần tử nhỏ nhất (vị trí k = 3)
+part = np.partition(day_so, 3)
+
+bang_kq = pd.DataFrame([{
+    "k3_nho_nhat": str(np.sort(part[:3]).tolist()),
+    "phan_tu_tai_k": int(part[3]),
+    "phan_con_lai": str(np.sort(part[4:]).tolist()),
+}])
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| k3&#95;nho&#95;nhat | phan&#95;tu&#95;tai&#95;k | phan&#95;con&#95;lai |
+| --- | --- | --- |
+| &#91;5, 12, 18&#93; | 23 | &#91;45, 71, 89, 90&#93; |
+
+</div>
+
+Các thuật toán sắp xếp toàn bộ mảng như Quicksort thường có độ phức tạp thời gian trung bình là $O(n \log n)$. Trong nhiều bài toán thực tế như tìm kiếm $k$ láng giềng gần nhất, người phân tích chỉ cần xác định nhóm $k$ phần tử nhỏ nhất mà không cần quan tâm đến trật tự nội bộ của toàn bộ các phần tử còn lại trong mảng.
+
+Hàm `np.partition` nhận tham số `kth` dựa trên chỉ số bắt đầu từ 0 (0-based index). Hàm sắp đặt lại các phần tử sao cho phần tử tại vị trí `kth` nhận đúng giá trị mà nó sẽ có nếu toàn bộ mảng được sắp xếp thứ tự hoàn chỉnh. Toàn bộ các phần tử đứng trước vị trí này đều nhỏ hơn hoặc bằng nó, và toàn bộ các phần tử đứng sau vị trí này đều lớn hơn hoặc bằng nó.
+
+Trong ví dụ với mảng ban đầu, lời gọi `np.partition(day_so, 3)` đưa ba phần tử nhỏ nhất là 5, 12 và 18 về các vị trí đầu mảng trước chỉ số 3. Phần tử tại vị trí chỉ số 3 nhận giá trị 23, và phần còn lại chứa các số lớn hơn gồm 45, 71, 89, 90. Các phần tử trong từng phía không bắt buộc phải theo thứ tự sắp xếp nội bộ, phản ánh đúng cơ chế phân hoạch từng phần của thuật toán.
+
+:::
+
+<!-- /worked-example -->
+
 ### Tìm kiếm nhị phân với `np.searchsorted`
 
 Khi một mảng đã được sắp xếp tăng dần, `np.searchsorted(arr, gia_tri)` sẽ thực hiện tìm kiếm nhị phân với độ phức tạp **$O(\log n)$** để trả về vị trí chỉ mục mà tại đó giá trị có thể được chèn vào mà vẫn bảo toàn thứ tự:
@@ -344,6 +750,56 @@ print("Vị trí chèn tương ứng:", vi_tri_chen) # [0, 2, 4, 5]
 Phương thức này chính là động cơ tính toán nền tảng phía sau hàm phân khoảng `pd.cut` và tính phân vị trong pandas.
 
 ---
+
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-9 -->
+
+::: example Tìm vị trí phân nhóm nhị phân với np.searchsorted
+
+Khi phân loại các giá trị đo lường liên tục vào các ngưỡng định mức đã sắp xếp, hàm np.searchsorted áp dụng thuật toán tìm kiếm nhị phân trên mảng ngưỡng để trả về chỉ số nhóm tương ứng của từng phần tử.
+
+```python
+import numpy as np
+import pandas as pd
+
+# Mảng các mốc ngưỡng điểm đã sắp xếp tăng dần
+moc_diem = np.array([5.0, 6.5, 8.0, 9.0])
+diem_thi = np.array([4.5, 5.0, 5.5, 7.2, 8.0, 8.5, 9.5])
+
+# Tìm vị trí nhóm theo quy tắc nửa mở nửa đóng
+nhom_idx = np.searchsorted(moc_diem, diem_thi, side="right")
+
+bang_kq = pd.DataFrame({
+    "diem": diem_thi,
+    "nhom_idx": nhom_idx,
+})
+print(bang_kq)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| diem | nhom&#95;idx |
+| --- | --- |
+| 4.5 | 0.0 |
+| 5.0 | 1.0 |
+| 5.5 | 1.0 |
+| 7.2 | 2.0 |
+| 8.0 | 3.0 |
+| 8.5 | 3.0 |
+| 9.5 | 4.0 |
+
+</div>
+
+Phân nhóm dữ liệu liên tục vào các khoảng định mức là tác vụ quen thuộc trong xử lý số liệu. Nếu duyệt tuần tự từng phần tử qua các mốc ngưỡng bằng vòng lặp, chi phí thời gian sẽ tăng tuyến tính theo số lượng ngưỡng. Hàm `np.searchsorted` tận dụng trật tự tăng dần của mảng ngưỡng để xác định vị trí bằng thuật toán tìm kiếm nhị phân với độ phức tạp $O(\log M)$.
+
+Với `side="right"`, chỉ số trả về là vị trí chèn sau những ngưỡng bằng giá trị cần xét. Vì thế, 5.0 thuộc nhóm 1 và 8.0 thuộc nhóm 3. Khi dùng các ngưỡng để phân nhóm như ở đây, khoảng giữa hai ngưỡng nhận biên trái và bỏ biên phải.
+
+Bảng kết quả minh họa cụ thể sự phân loại này: Giá trị 4.5 nhỏ hơn mốc đầu tiên 5.0 nên nhận chỉ số nhóm 0, giá trị 5.5 rơi vào khoảng giữa 5.0 và 6.5 nên nhận nhóm 1, và giá trị 9.5 vượt qua mốc cao nhất 9.0 nên nhận nhóm 4. Hàm này là cơ chế tính toán nền tảng cho nhiều phép toán phân khoảng và tính hàm phân phối trong các thư viện khoa học dữ liệu.
+
+:::
+
+<!-- /worked-example -->
 
 ## 7. Tăng tốc độ tính toán số học với Numba (Tùy chọn bổ trợ / Optional)
 
@@ -420,6 +876,61 @@ finally:
 ```
 
 **Giới hạn tiêu thụ RAM của các thao tác tiếp theo**: Cần lưu ý rằng `np.memmap` **không tự động bảo đảm mọi phép toán tiếp theo đều tốn ít RAM**. Nếu ta thực hiện các phép toán sinh ra mảng mới (chẳng hạn `mmap_arr + 1`, `mmap_arr * 2`, hoặc `mmap_arr.sum(axis=0)`), NumPy sẽ cấp phát một mảng `ndarray` thông thường trên bộ nhớ RAM vật lý để chứa kết quả. Khi dữ liệu gốc có dung lượng hàng chục Gigabyte, điều này sẽ lập tức gây ra lỗi tràn RAM (OOM). Do đó, khi làm việc với `memmap`, các phép tính phải được chia nhỏ thành từng khối (chunking), ghi trực tiếp vào một tệp memmap đích khác, hoặc chỉ thực hiện các phép tích lũy cục bộ.
+
+<!-- worked-example phu-luc-a-numpy-nang-cao-worked-10 -->
+
+::: example Đọc và cập nhật dữ liệu mảng trên đĩa bằng np.memmap và tempfile
+
+Khi xử lý các ma trận có kích thước lớn, lớp np.memmap cho phép ánh xạ tệp nhị phân trên đĩa vào không gian địa chỉ bộ nhớ ảo của tiến trình, hỗ trợ nạp dữ liệu theo từng trang bộ nhớ khi truy cập thực tế.
+
+```python
+import os
+import tempfile
+import numpy as np
+import pandas as pd
+
+# Tạo tệp tạm thời an toàn cho môi trường đa nền tảng
+with tempfile.NamedTemporaryFile(delete=False) as tmp:
+    tep_tam = tmp.name
+
+try:
+    # Khởi tạo mảng memmap 3x3 kiểu float64 trực tiếp trên tệp đĩa
+    mm = np.memmap(tep_tam, dtype="float64", mode="w+", shape=(3, 3))
+    mm[:] = np.eye(3) * 5.0
+    mm.flush()  # Đẩy toàn bộ thay đổi xuống đĩa
+
+    # Đọc lại dữ liệu đường chéo chính từ tệp
+    diag = np.diag(mm).copy()
+    del mm  # Đóng kết nối tệp memmap
+
+    bang_kq = pd.DataFrame({"duong_cheo": diag})
+    print(bang_kq)
+finally:
+    if os.path.exists(tep_tam):
+        os.remove(tep_tam)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+<div class="data-worked-table">
+
+| duong&#95;cheo |
+| --- |
+| 5.0 |
+| 5.0 |
+| 5.0 |
+
+</div>
+
+Khi mảng dữ liệu có dung lượng lớn, việc đọc toàn bộ tệp vào bộ nhớ RAM có thể làm cạn kiệt tài nguyên hệ thống. Lớp `np.memmap` cung cấp giải pháp làm việc với dữ liệu trên đĩa thông qua cơ chế ánh xạ bộ nhớ ảo của hệ điều hành, cho phép chỉ nạp các trang bộ nhớ thực sự được đọc hoặc ghi thay vì nạp toàn bộ mảng cùng một lúc.
+
+`mode="w+"` tạo hoặc ghi đè tệp, nên ví dụ chỉ dùng một tệp tạm tự tạo. `flush()` yêu cầu ghi các thay đổi của ánh xạ về tệp, không phải lời bảo đảm riêng về độ bền vật lý của phần cứng. `del mm` bỏ tham chiếu hiện tại, nhưng ánh xạ có thể còn tồn tại nếu các view khác vẫn giữ nó.
+
+Để làm việc an toàn với các tệp định dạng `.npy` lớn trên đĩa mà không làm tràn bộ nhớ, người phân tích cũng có thể sử dụng hàm `np.load` với tham số `mmap_mode="r"`. Bảng kết quả hiển thị dữ liệu đường chéo chính với giá trị 5.0 được trích xuất từ tệp tạm thời, chứng minh khả năng đọc ghi dữ liệu có kiểm soát thông qua cơ chế ánh xạ bộ nhớ.
+
+:::
+
+<!-- /worked-example -->
 
 ### Tối ưu hóa tính liên tục của bộ nhớ và Dòng bộ nhớ đệm (Cache Lines)
 

@@ -10,38 +10,79 @@
     "ham-lap-trinh"
   ],
   "fragments": [],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 55,
+      "title": "Thực thi tệp kịch bản và lưu giữ biến trong không gian tên với %run"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 126,
+      "title": "Kiểm tra các lệnh ma thuật đã có trong phiên"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 191,
+      "title": "Tái sử dụng kết quả tính toán gần nhất với biến gạch dưới _ và __"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 251,
+      "title": "Truy xuất lịch sử câu lệnh và kết quả đầu ra qua In và Out"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 313,
+      "title": "Trích xuất và kiểm tra chuỗi câu lệnh đã thực thi với danh sách lịch sử"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 392,
+      "title": "Quản lý thư mục làm việc và theo dõi lịch sử điều hướng với %pwd và %dhist"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 498,
+      "title": "Đo lường thời gian thực thi thuật toán với lệnh ma thuật %timeit"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
+      "line": 559,
+      "title": "Đo đạc số lần gọi hàm và cấu trúc thực thi bằng lệnh ma thuật %prun"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
-      "line": 249,
+      "line": 692,
       "title": "Bài tập 1: Đo lường và so sánh hiệu năng giữa thuật toán thuần và thư viện bằng %timeit"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
-      "line": 293,
+      "line": 736,
       "title": "Bài tập 2: Tự động hóa trích xuất kết quả từ lịch sử In và Out"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
-      "line": 327,
+      "line": 770,
       "title": "Bài tập 3: Mô phỏng phân tích hiệu năng từng dòng để xác định điểm nghẽn"
     }
   ],
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
-      "line": 263,
+      "line": 706,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
-      "line": 308,
+      "line": 751,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md",
-      "line": 346,
+      "line": 789,
       "title": "Lời giải"
     }
   ],

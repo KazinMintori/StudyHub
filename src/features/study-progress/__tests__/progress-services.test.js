@@ -37,6 +37,14 @@ import {
   buildLastLessonPayload
 } from '../services/heading-bookmark.js'
 
+import {
+  COURSE_CATEGORIES,
+  COURSE_CATEGORY_MAP,
+  getCourseCategoryLabel,
+  getCourseQuickLinks,
+  useStudyHome
+} from '../controllers/useStudyHome.js'
+
 // Mock course catalog for pure testing
 const mockCourses = [
   {
@@ -311,4 +319,55 @@ test('buildLastLessonPayload constructs record preserving previous fields', () =
     heading: 'sec-2',
     headingTitle: 'Mục 2'
   })
+})
+
+test('COURSE_CATEGORIES defines standard categories with labels', () => {
+  assert.ok(Array.isArray(COURSE_CATEGORIES))
+  assert.ok(COURSE_CATEGORIES.some(c => c.id === 'all'))
+  assert.ok(COURSE_CATEGORIES.some(c => c.id === 'toan'))
+  assert.ok(COURSE_CATEGORIES.some(c => c.id === 'ai-cs'))
+})
+
+test('getCourseCategoryLabel returns mapped category or fallback', () => {
+  assert.strictEqual(getCourseCategoryLabel('toan-cho-ai'), 'Toán & Cơ sở ngành')
+  assert.strictEqual(getCourseCategoryLabel('unknown-course'), 'Học phần')
+})
+
+test('useStudyHome filters courses by category and query together', () => {
+  const customCatalog = [
+    { id: 'toan-cho-ai', name: 'Cơ sở toán cho AI', description: 'Toán', lessons: [] },
+    { id: 'vat-ly-1', name: 'Vật lý 1', description: 'Cơ nhiệt', lessons: [] },
+    { id: 'dsa', name: 'DSA', description: 'Cấu trúc dữ liệu', lessons: [] }
+  ]
+  const home = useStudyHome({ catalog: customCatalog, lastLesson: { value: null } })
+  assert.strictEqual(home.visibleCourses.value.length, 3)
+
+  home.selectedCategory.value = 'toan'
+  assert.strictEqual(home.visibleCourses.value.length, 1)
+  assert.strictEqual(home.visibleCourses.value[0].id, 'toan-cho-ai')
+
+  home.selectedCategory.value = 'all'
+  home.query.value = 'vật lý'
+  assert.strictEqual(home.visibleCourses.value.length, 1)
+  assert.strictEqual(home.visibleCourses.value[0].id, 'vat-ly-1')
+})
+test('getCourseQuickLinks generates correct links for standard and philosophy courses', () => {
+  const stdCourse = {
+    id: 'toan-cho-ai',
+    lessons: [{ slug: 'bai-01-nhap-mon-toi-uu', status: 'ready' }]
+  }
+  const stdLinks = getCourseQuickLinks(stdCourse)
+  assert.strictEqual(stdLinks.notes, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu')
+  assert.strictEqual(stdLinks.slides, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#slides')
+  assert.strictEqual(stdLinks.cheatsheet, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#cheatsheet')
+  assert.strictEqual(stdLinks.exercises, '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu#bai-tap')
+
+  const philCourse = {
+    id: 'triet-hoc-mac-lenin',
+    presentation: 'philosophy',
+    lessons: [{ slug: 'chuong-01-khai-luan', status: 'ready' }]
+  }
+  const philLinks = getCourseQuickLinks(philCourse)
+  assert.strictEqual(philLinks.notes, '/triet-hoc-mac-lenin/chuong-01-khai-luan/')
+  assert.strictEqual(philLinks.exercises, '/triet-hoc-mac-lenin/chuong-01-khai-luan/#bai-tap')
 })

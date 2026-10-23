@@ -13,17 +13,27 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .workspace-tabs, .lecture-tabs { display: flex; overflow-x: auto; gap: var(--space-5); border-bottom: 1px solid var(--rule); }
 .workspace-tabs a, .lecture-tabs a { display: inline-flex; align-items: center; flex-shrink: 0; min-height: 44px; padding: var(--space-2) var(--space-1); font-size: var(--fs-ui); border-bottom: 2px solid transparent; color: var(--ink-2); text-decoration: none; }
 .workspace-tabs a[aria-current=page], .lecture-tabs a[aria-current=page] { color: var(--ink); border-color: var(--tim); font-weight: 600; }
-.vp-doc .custom-block { font-family: var(--font-read); font-size: var(--fs-lead); padding: var(--space-3) var(--space-4); margin: 28px 0; border: 0; border-left: 3px solid var(--ink-3); border-radius: 0; background: transparent; color: var(--ink); }
+.vp-doc .custom-block { font-family: var(--font-read); font-size: var(--fs-lead); padding: var(--space-3) var(--space-4); margin: 28px 0; border: 0; border-left: 3px solid var(--ink-3); border-radius: 0 var(--radius) var(--radius) 0; background: transparent; color: var(--ink); }
 .vp-doc .custom-block :is(p, li) { font-size: inherit; line-height: 1.6; }
 .vp-doc .custom-block .custom-block-title { font-family: var(--font-ui); font-size: var(--fs-ui); font-weight: 600; color: var(--ink-2); line-height: 1.45; }
-.vp-doc .custom-block.tip { border-color: var(--tim); }
+.vp-doc .custom-block.info { border-color: var(--lam); background: color-mix(in srgb, var(--lam) 4%, transparent); }
+.vp-doc .custom-block.info .custom-block-title { color: var(--lam); }
+.vp-doc .custom-block.tip { border-color: var(--tim); background: color-mix(in srgb, var(--tim) 4%, transparent); }
 .vp-doc .custom-block.tip .custom-block-title { color: var(--tim); }
-.vp-doc .custom-block.warning { border-color: var(--vang); }
+.vp-doc .custom-block.warning { border-color: var(--vang); background: color-mix(in srgb, var(--vang) 4%, transparent); }
 .vp-doc .custom-block.warning .custom-block-title { color: var(--vang); }
-.vp-doc .custom-block.danger { border-color: var(--do); }
+.vp-doc .custom-block.danger { border-color: var(--do); background: color-mix(in srgb, var(--do) 4%, transparent); }
+.dark .vp-doc .custom-block.info { background: color-mix(in srgb, var(--lam) 8%, var(--canvas)); }
+.dark .vp-doc .custom-block.tip { background: color-mix(in srgb, var(--tim) 8%, var(--canvas)); }
+.dark .vp-doc .custom-block.warning { background: color-mix(in srgb, var(--vang) 8%, var(--canvas)); }
+.dark .vp-doc .custom-block.danger { background: color-mix(in srgb, var(--do) 8%, var(--canvas)); }
+.dark mjx-container { color: #f8fafc; }
 .vp-doc .custom-block.danger .custom-block-title { color: var(--do); }
-.vp-doc .custom-block.details, .vp-doc details { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--canvas); padding: var(--space-3) var(--space-4); }
-.vp-doc summary { font-family: var(--font-ui); font-size: var(--fs-ui); font-weight: 600; min-height: 32px; }
+.vp-doc .custom-block.details, .vp-doc details { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--canvas); padding: var(--space-3) var(--space-4); margin: var(--space-5) 0; transition: border-color var(--motion-fast) var(--ease); }
+.vp-doc .custom-block.details[open], .vp-doc details[open] { border-color: var(--control); }
+.vp-doc .custom-block details { background-color: color-mix(in srgb, var(--paper) 70%, transparent); border: 1px solid color-mix(in srgb, currentColor 18%, transparent); border-radius: var(--radius); margin: var(--space-3) 0; }
+.vp-doc summary { font-family: var(--font-ui); font-size: var(--fs-ui); font-weight: 600; color: var(--ink); min-height: 36px; display: flex; align-items: center; gap: var(--space-2); cursor: pointer; transition: color var(--motion-fast) var(--ease); }
+.vp-doc summary:hover { color: var(--tim); }
 .vp-doc :not(pre) > code { font-size: var(--fs-small); border-radius: var(--radius-sm); background: var(--sunken); color: var(--ink); }
 .vp-doc div[class*=language-] { border: 1px solid var(--rule); border-radius: var(--radius); margin: var(--space-6) 0; }
 .vp-doc div[class*=language-] pre, .vp-doc div[class*=language-] code { font-size: var(--fs-small); line-height: 1.65; }
@@ -31,7 +41,7 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .vp-doc table { display: block; max-width: 100%; overflow-x: auto; font-family: var(--font-ui); font-size: var(--fs-ui); font-variant-numeric: tabular-nums; border-collapse: collapse; margin: var(--space-6) 0; }
 .vp-doc :is(th, td) { border: 0; border-bottom: 1px solid var(--rule); padding: var(--space-3) var(--space-4); }
 .vp-doc th { background: var(--canvas); font-weight: 600; }
-.vp-doc tr { background: var(--paper); border: 0; }
+.vp-doc tr { background: var(--paper); border: 0; transition: none; }
 .vp-doc tr:nth-child(2n) { background: var(--canvas); }
 
 /* Quy chuẩn chống thanh cuộn & mũi tên scrollbar (No Math Scrollbars & Arrows) trên toàn bộ hệ thống */
@@ -186,8 +196,10 @@ mjx-container[display=true]::-webkit-scrollbar,
 .term-preview-wiki { display: inline-flex; align-items: center; min-height: 44px; margin-top: var(--space-1); color: var(--tim); font: 600 var(--fs-ui) var(--font-ui); text-decoration: none; }
 .term-preview-wiki:hover { color: var(--tim-hover); text-decoration: underline; }
 @media (max-width: 639px) {
-  .term-preview { width: auto; max-width: none; max-height: min(440px, 70dvh); }
-  .term-preview.is-pinned { width: auto !important; max-height: min(440px, 70dvh); left: var(--space-3) !important; right: var(--space-3) !important; top: auto !important; bottom: calc(var(--space-3) + env(safe-area-inset-bottom, 0px)) !important; }
+  .term-preview-scrim { display: block !important; opacity: .55; backdrop-filter: blur(2px); }
+  .term-preview::before { content: ''; display: block; width: 38px; height: 4px; border-radius: 999px; background: var(--rule); margin: 0 auto var(--space-3); }
+  .term-preview { position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important; width: 100% !important; max-width: 100% !important; max-height: 75dvh !important; border-radius: var(--radius-xl) var(--radius-xl) 0 0 !important; border: 1px solid var(--rule) !important; border-bottom: 0 !important; box-shadow: 0 -8px 32px rgb(0 0 0 / .28) !important; padding: var(--space-3) var(--space-4) calc(var(--space-5) + env(safe-area-inset-bottom, 0px)) !important; }
+  .term-preview.is-pinned { position: fixed !important; left: 0 !important; right: 0 !important; bottom: 0 !important; top: auto !important; width: 100% !important; max-width: 100% !important; max-height: 75dvh !important; border-radius: var(--radius-xl) var(--radius-xl) 0 0 !important; border: 1px solid var(--rule) !important; border-bottom: 0 !important; box-shadow: 0 -8px 32px rgb(0 0 0 / .28) !important; padding: var(--space-3) var(--space-4) calc(var(--space-5) + env(safe-area-inset-bottom, 0px)) !important; }
 }
 @media (min-width: 1280px) {
   .term-preview-scrim { display: none; }
@@ -248,3 +260,64 @@ mjx-container[display=true]::-webkit-scrollbar,
 .map-output span { font: var(--fs-small) var(--font-code); background: var(--paper); border: 1px solid var(--rule); padding: var(--space-2); }
 .illustration-code pre { overflow-x: auto; padding: var(--space-4); font-size: var(--fs-small); }
 .code-illustration figcaption { font-size: var(--fs-small); color: var(--ink-3); margin-top: var(--space-4); }
+
+
+/* Proof Accordion chuyên biệt cho chứng minh toán học */
+details.proof,
+.custom-block.details.proof {
+  margin: var(--space-5) 0;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background-color: var(--canvas);
+  border-left: 3px solid var(--tim);
+  transition: all 0.2s ease;
+}
+
+details.proof > summary,
+.custom-block.details.proof > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fs-body);
+  color: var(--tim);
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+details.proof > summary::-webkit-details-marker,
+.custom-block.details.proof > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.proof > summary::before,
+.custom-block.details.proof > summary::before {
+  content: '▸';
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 1.1rem;
+}
+
+details.proof[open] > summary::before,
+.custom-block.details.proof[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+details.proof[open] > summary,
+.custom-block.details.proof[open] > summary {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px dashed var(--rule);
+}
+
+/* Ký hiệu kết thúc chứng minh Q.E.D (∎) tự động ở cuối khối */
+details.proof > :last-child::after,
+.custom-block.details.proof > :last-child::after {
+  content: ' \220E';
+  float: right;
+  color: var(--tim);
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-left: var(--space-3);
+}

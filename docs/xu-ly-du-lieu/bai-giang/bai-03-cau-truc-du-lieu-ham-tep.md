@@ -54,6 +54,46 @@ print(cuoi)  # 6
 
 Phương thức chính của tuple gồm `tup.count(gia_tri)` (đếm số lần xuất hiện) và `tup.index(gia_tri)` (tìm vị trí đầu tiên).
 
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-1 -->
+
+::: example Giải nén phần tử đầu cuối với toán tử sao
+
+Các bản ghi giao dịch xuất từ tệp nhật ký thường chứa trường định danh ở đầu, một chuỗi các chỉ số phụ ở giữa và mã trạng thái ở cuối dòng. Độ dài của các chỉ số ở giữa có thể thay đổi tùy thuộc vào số lượng mặt hàng trong đơn. Ta sử dụng cú pháp giải nén với toán tử dấu sao để bóc tách các trường này mà không cần đo kích thước thủ công.
+
+```python
+ban_ghi = [
+    ("DH01", 120, 150, "HOAN_THANH"),
+    ("DH02", 90, 110, 85, 200, "HOAN_THANH"),
+    ("DH03", "HUY"),
+]
+
+for muc in ban_ghi:
+    ma, *chi_so, trang_thai = muc
+    tong_tien = sum(chi_so)
+    print(f"Mã: {ma:<5} | Số món: {len(chi_so)} | "
+          f"Tổng: {tong_tien:>4} | Trạng thái: {trang_thai}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Mã: DH01  | Số món: 2 | Tổng:  270 | Trạng thái: HOAN_THANH
+Mã: DH02  | Số món: 4 | Tổng:  485 | Trạng thái: HOAN_THANH
+Mã: DH03  | Số món: 0 | Tổng:    0 | Trạng thái: HUY
+```
+
+Cú pháp giải nén tuple mở rộng `ma, *chi_so, trang_thai = muc` phân bổ phần tử đầu tiên cho biến `ma` và phần tử cuối cùng cho biến `trang_thai`. Toàn bộ các phần tử nằm ở giữa được Python tự động thu gom vào biến `chi_so` dưới dạng một danh sách mới.
+
+Trong bản ghi `DH01`, biến `chi_so` nhận danh sách gồm hai giá trị `[120, 150]`. Ở bản ghi `DH02`, danh sách nhận bốn giá trị `[90, 110, 85, 200]`. Nếu bản ghi có đúng hai phần tử, biến `chi_so` sẽ nhận danh sách rỗng `[]`.
+
+Mẫu `ma, *chi_so, trang_thai` cần ít nhất hai phần tử. Cả ba bản ghi đều thỏa điều kiện đó, kể cả `DH03` chỉ có mã và trạng thái. Nếu nhận dữ liệu từ nguồn chưa kiểm soát, cần kiểm tra số phần tử trước khi giải nén.
+
+`sum([])` cho 0 nên đơn `DH03` có số món và tổng tiền đều bằng 0. Dấu sao thu phần giữa thành một danh sách, dù phần giữa có không, hai hay bốn phần tử. Nhờ đó, cùng một vòng lặp xử lý được các bản ghi có số món khác nhau.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.2. Danh sách (List)
 Khác với tuple, `list` là cấu trúc mảng động có kích thước biến thiên và nội dung **khả biến** (*mutable*).
 
@@ -68,6 +108,49 @@ Khác với tuple, `list` là cấu trúc mảng động có kích thước bi�
 Khi cần kết hợp hai danh sách:
 - Toán tử `ds1 + ds2` cấp phát một danh sách mới trong RAM và sao chép các tham chiếu phần tử của cả hai danh sách vào đó (sao chép nông tham chiếu, không sao chép sâu các đối tượng).
 - Phương thức `ds1.extend(ds2)` thay đổi trực tiếp danh sách `ds1` tại chỗ bằng cách gắn thêm các tham chiếu phần tử từ `ds2`. Thao tác này tránh việc cấp phát danh sách vỏ ngoài mới khi muốn tích lũy dữ liệu vào một danh sách sẵn có.
+
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-2 -->
+
+::: example Phân biệt tạo danh sách mới bằng toán tử cộng và biến đổi tại chỗ bằng extend
+
+Trong các vòng lặp thu thập dữ liệu theo lô, việc lựa chọn cách nối danh sách quyết định tốc độ thực thi và lượng RAM bị chiếm dụng. Toán tử cộng tạo ra một đối tượng danh sách mới trong khi phương thức extend nối trực tiếp vào danh sách hiện tại. Ta kiểm tra định danh đối tượng và quan sát biến bí danh để hiểu rõ sự khác biệt giữa hai cách viết.
+
+```python
+ds_cong = [10, 20]
+id_cong_truoc = id(ds_cong)
+ds_cong = ds_cong + [30, 40]
+id_cong_sau = id(ds_cong)
+
+ds_ext = [10, 20]
+id_ext_truoc = id(ds_ext)
+bi_danh_ext = ds_ext
+ds_ext.extend([30, 40])
+id_ext_sau = id(ds_ext)
+
+print(f"Toán tử + tạo đối tượng mới:             {id_cong_truoc != id_cong_sau}")
+print(f"Phương thức extend giữ nguyên đối tượng: {id_ext_truoc == id_ext_sau}")
+print(f"Biến bí danh cùng phản ánh dữ liệu mới:  {bi_danh_ext == [10, 20, 30, 40]}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Toán tử + tạo đối tượng mới:             True
+Phương thức extend giữ nguyên đối tượng: True
+Biến bí danh cùng phản ánh dữ liệu mới:  True
+```
+
+Đoạn mã khởi tạo hai danh sách có nội dung ban đầu giống nhau `[10, 20]` và lưu lại định danh `id` trước khi thực hiện thao tác nối. Hàm `id` trả về định danh duy nhất của đối tượng thùng chứa danh sách trong phiên làm việc hiện tại.
+
+Khi thực hiện phép toán `ds_cong + [30, 40]`, trình thông dịch cấp phát một đối tượng danh sách hoàn toàn mới trên bộ nhớ heap và sao chép các con trỏ phần tử sang đó. Định danh sau khi gán lại `id_cong_sau` khác biệt với `id_cong_truoc`, xác nhận một đối tượng mới đã được tạo ra.
+
+Ngược lại, phương thức `extend` thay đổi trực tiếp danh sách hiện tại tại chỗ. Định danh `id_ext_sau` hoàn toàn trùng khớp với `id_ext_truoc`, và biến bí danh `bi_danh_ext` cùng trỏ tới danh sách này cũng nhìn thấy ngay các phần tử mới được thêm vào.
+
+Cần hiểu rõ rằng `id()` chỉ phản ánh định danh của đối tượng thùng chứa danh sách, chứ không chứng minh sự ổn định của vùng đệm con trỏ bên trong. Khi vượt quá dung lượng đệm dự phòng của danh sách, phương thức `extend` vẫn có thể phải cấp phát lại vùng đệm C bên dưới để chứa thêm các phần tử mới.
+
+:::
+
+<!-- /worked-example -->
 
 #### Sắp xếp danh sách
 - `ds.sort()`: Sắp xếp danh sách tại chỗ (*in-place*), làm biến đổi danh sách gốc và trả về `None`.
@@ -109,6 +192,56 @@ Khi truy cập một khóa không tồn tại bằng cú pháp `d[khoa]`, Python
   print(phong_theo_khu["Bắc"])  # ['HN01', 'HN02']
   ```
 
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-3 -->
+
+::: example Gom nhóm dữ liệu với collections.defaultdict và dict.setdefault
+
+Khi tổng hợp các đơn hàng theo từng khách hàng, việc truy xuất một mã khách hàng chưa từng xuất hiện sẽ dẫn tới lỗi KeyError nếu dùng từ điển thông thường. Cả hai công cụ `collections.defaultdict` và `dict.setdefault` đều cho phép tự động khởi tạo danh sách gom nhóm. Ta triển khai cả hai cách để so sánh cú pháp và đánh giá cơ chế khởi tạo giá trị mặc định.
+
+```python
+from collections import defaultdict
+
+giao_dich = [
+    ("KH01", "Áo thun", 150000),
+    ("KH02", "Quần jean", 350000),
+    ("KH01", "Mũ len", 80000),
+    ("KH02", "Giày vải", 420000),
+]
+
+gom_defaultdict = defaultdict(list)
+for ma_kh, san_pham, gia in giao_dich:
+    gom_defaultdict[ma_kh].append({"sp": san_pham, "gia": gia})
+
+gom_setdefault = {}
+for ma_kh, san_pham, gia in giao_dich:
+    gom_setdefault.setdefault(ma_kh, []).append({"sp": san_pham, "gia": gia})
+
+print(f"Hai cách gom nhóm cho kết quả khớp nhau: {dict(gom_defaultdict) == gom_setdefault}")
+for ma_kh, ds in sorted(gom_defaultdict.items()):
+    tong = sum(item["gia"] for item in ds)
+    print(f"Khách hàng {ma_kh}: {len(ds)} món, tổng tiền = {tong:,d} đ")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Hai cách gom nhóm cho kết quả khớp nhau: True
+Khách hàng KH01: 2 món, tổng tiền = 230,000 đ
+Khách hàng KH02: 2 món, tổng tiền = 770,000 đ
+```
+
+Đối tượng `defaultdict(list)` nhận tham số là hàm tạo kiểu `list`. Khi truy cập vào một khóa chưa từng tồn tại trong từ điển, thay vì ném ngoại lệ `KeyError`, nó gọi hàm `list()` để tạo một danh sách rỗng gán vào khóa đó rồi trả về tham chiếu.
+
+Phương thức `setdefault(ma_kh, [])` của từ điển chuẩn cũng thực hiện nhiệm vụ tương tự: Nếu khóa đã tồn tại thì trả về giá trị hiện có, còn nếu khóa chưa có thì gán giá trị mặc định vào từ điển rồi trả về giá trị đó.
+
+Điểm khác biệt quan trọng nằm ở thời điểm khởi tạo: Biểu thức `[]` trong `setdefault(ma_kh, [])` luôn được lượng giá sớm ngay khi gọi hàm, tức là một danh sách rỗng mới luôn được tạo trong bộ nhớ ở mọi lượt lặp kể cả khi khóa đã tồn tại từ trước. Ngược lại, `defaultdict(list)` chỉ gọi hàm tạo `list()` một cách lười biếng khi gặp khóa bị thiếu.
+
+Phép so sánh `dict(gom_defaultdict) == gom_setdefault` xác nhận hai phương pháp cho ra cấu trúc từ điển hoàn toàn đồng nhất. Việc lựa chọn tùy thuộc vào nhu cầu: Dùng `defaultdict` khi gom nhóm dữ liệu lớn để tránh tạo danh sách thừa, hoặc dùng `setdefault` khi muốn giữ mã nguồn trên cấu trúc từ điển Python chuẩn.
+
+:::
+
+<!-- /worked-example -->
+
 #### Ràng buộc về kiểu khóa trong từ điển (Hashability)
 Khóa của từ điển bắt buộc phải là đối tượng **có thể sinh mã băm** (*hashable*). Điều này đồng nghĩa với việc khóa phải là đối tượng bất biến (như chuỗi, số thực, số nguyên, hoặc tuple chứa toàn các phần tử bất biến).
 
@@ -131,6 +264,48 @@ Các phép toán đại số tập hợp giữa hai tập `A` và `B`:
 - **Phép hiệu (Difference)**: Biểu thức `A - B` hoặc `A.difference(B)` lấy các phần tử thuộc `A` nhưng không thuộc `B`.
 - **Phép hiệu đối xứng (Symmetric Difference)**: Biểu thức `A ^ B` lấy các phần tử thuộc `A` hoặc `B` nhưng không thuộc phần giao.
 
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-4 -->
+
+::: example Đối soát người dùng hoạt động giữa hai kỳ bằng đại số tập hợp
+
+Trong phân tích hành vi khách hàng, các bộ phận dữ liệu cần xác định nhóm người dùng mới xuất hiện, nhóm duy trì sử dụng liên tục và nhóm đã rời bỏ dịch vụ giữa hai kỳ báo cáo. Việc duyệt qua danh sách bằng vòng lặp thủ công sẽ chậm khi quy mô người dùng lớn. Các toán tử đại số tập hợp cung cấp giải pháp tra cứu với độ phức tạp trung bình hằng số.
+
+```python
+thang_1 = {"U01", "U02", "U03", "U04"}
+thang_2 = {"U03", "U04", "U05", "U06"}
+
+duy_tri = sorted(thang_1 & thang_2)
+roi_bo = sorted(thang_1 - thang_2)
+moi_den = sorted(thang_2 - thang_1)
+thay_doi = sorted(thang_1 ^ thang_2)
+
+print(f"Người dùng duy trì (&): {duy_tri}")
+print(f"Người dùng rời bỏ (-):  {roi_bo}")
+print(f"Người dùng mới đến (-): {moi_den}")
+print(f"Nhóm có biến động (^):  {thay_doi}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Người dùng duy trì (&): ['U03', 'U04']
+Người dùng rời bỏ (-):  ['U01', 'U02']
+Người dùng mới đến (-): ['U05', 'U06']
+Nhóm có biến động (^):  ['U01', 'U02', 'U05', 'U06']
+```
+
+Đoạn mã tiếp nhận hai tập hợp chứa mã người dùng hoạt động trong tháng một và tháng hai. Cấu trúc `set` tự động loại bỏ các phần tử trùng lặp và xây dựng bảng băm cho các chuỗi định danh.
+
+Toán tử giao `&` trích xuất những mã người dùng xuất hiện đồng thời trong cả hai tháng, thể hiện nhóm khách hàng duy trì gồm `U03` và `U04`. Toán tử hiệu `-` giữa `thang_1` và `thang_2` bóc tách những khách hàng có ở tháng trước nhưng không còn ở tháng sau gồm `U01` và `U02`.
+
+`thang_2 - thang_1` cho các mã chỉ hoạt động ở tháng hai, gồm `U05` và `U06`. Chúng chưa chắc là tài khoản mới đăng ký, vì có thể đã tồn tại nhưng không hoạt động trong tháng một. Hiệu đối xứng `^` gom các mã chỉ xuất hiện ở một trong hai tháng.
+
+Tất cả các phép toán tập hợp trên đều đạt độ phức tạp thời gian trung bình tỷ lệ thuận với số phần tử. Sau khi tính toán, hàm `sorted()` chuyển đổi tập hợp thành danh sách có thứ tự để kết quả xuất ra ổn định và thuận tiện cho việc trình bày.
+
+:::
+
+<!-- /worked-example -->
+
 ### 1.5. Các hàm tuần tự tích hợp (Built-In Sequence Functions)
 - `enumerate(iterable, start=0)`: Trả về từng cặp `(chi_so, gia_tri)`, giúp tránh việc phải khởi tạo và tăng biến đếm thủ công:
   ```python
@@ -140,6 +315,41 @@ Các phép toán đại số tập hợp giữa hai tập `A` và `B`:
 - `sorted(iterable, key=..., reverse=...)`: Trả về danh sách mới được sắp xếp từ bất kỳ tập hợp khả lặp nào.
 - `zip(*iterables)`: Ghép đôi các phần tử có cùng vị trí từ nhiều tập hợp. Chiều dài kết quả bằng chiều dài của tập hợp ngắn nhất.
 - `reversed(sequence)`: Trả về một iterator duyệt ngược các phần tử của một dãy mà không cần nhân bản danh sách.
+
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-5 -->
+
+::: example Ghép cặp danh sách song song và đánh số thứ tự với zip và enumerate
+
+Khi tiếp nhận các cột dữ liệu rời rạc từ các tệp cảm biến khác nhau, ta cần ghép từng dòng tương ứng lại thành một bản ghi hoàn chỉnh và gắn số thứ tự dòng để ghi nhật ký. Việc quản lý chỉ số bằng một biến đếm thủ công ngoài vòng lặp rất dễ gây lỗi quên tăng bước nhảy. Sự kết hợp giữa `zip` và `enumerate` mang lại giải pháp duyệt song song an toàn và ngắn gọn.
+
+```python
+thoi_gian = ["08:00", "08:15", "08:30"]
+nhiet_do = [24.5, 25.0, 24.8]
+do_am = [65, 62, 60]
+
+for stt, (tg, nd, da) in enumerate(zip(thoi_gian, nhiet_do, do_am), start=1):
+    print(f"Dòng {stt}: lúc {tg}, nhiệt độ {nd}°C, độ ẩm {da}%")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Dòng 1: lúc 08:00, nhiệt độ 24.5°C, độ ẩm 65%
+Dòng 2: lúc 08:15, nhiệt độ 25.0°C, độ ẩm 62%
+Dòng 3: lúc 08:30, nhiệt độ 24.8°C, độ ẩm 60%
+```
+
+Hàm `zip` tiếp nhận ba tập hợp khả lặp `thoi_gian`, `nhiet_do` và `do_am`, sau đó ghép các phần tử có cùng vị trí chỉ số thành từng bộ tuple gồm ba giá trị `(tg, nd, da)`. Quá trình ghép dừng lại ngay khi tập hợp ngắn nhất duyệt đến phần tử cuối cùng.
+
+Hàm `enumerate` bọc lấy bộ lặp của `zip` và bổ sung thêm chỉ số thứ tự `stt` cho mỗi lượt lặp. Tham số `start=1` chỉ định biến đếm bắt đầu từ số một thay vì số không mặc định, phù hợp với quy ước đánh số dòng của các báo cáo.
+
+Bên trong vòng lặp `for`, cú pháp giải nén tuple `stt, (tg, nd, da)` bóc tách đồng thời số thứ tự và các giá trị cảm biến một cách trực tiếp, loại bỏ nhu cầu truy cập bằng chỉ số mảng như `thoi_gian[i]`.
+
+Kết quả in ra cho thấy dữ liệu được ghép cặp chuẩn xác giữa các mốc thời gian và chỉ số tương ứng. Đây là mẫu hình thuận tiện để chuyển đổi nhiều danh sách cột riêng lẻ thành dạng bản ghi theo dòng mà không cần tạo cấu trúc trung gian phức tạp.
+
+:::
+
+<!-- /worked-example -->
 
 ### 1.6. Cú pháp Comprehension
 Comprehension cho phép biến đổi và lọc dữ liệu ngắn gọn, diễn đạt rõ ý đồ lập trình:
@@ -162,6 +372,50 @@ lam_phang = [x for hang in ma_tran for x in hang if x % 2 == 0]
 ```
 
 ---
+
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-6 -->
+
+::: example Làm phẳng và lọc dữ liệu mảng hai chiều bằng list comprehension
+
+Dữ liệu nhật ký máy chủ thường được nhóm theo từng đợt dưới dạng danh sách chứa nhiều danh sách con. Để phục vụ việc thống kê toàn cục, ta cần làm phẳng cấu trúc hai chiều này thành một mảng duy nhất, đồng thời loại bỏ các giao dịch có giá trị không hợp lệ. Cú pháp comprehension lồng nhau cho phép thực hiện đồng thời hai thao tác này trong một biểu thức duy nhất.
+
+```python
+cac_lo = [
+    [{"id": "G01", "tien": 100}, {"id": "G02", "tien": -5}],
+    [{"id": "G03", "tien": 250}, {"id": "G04", "tien": 0}],
+    [{"id": "G05", "tien": 180}],
+]
+
+hop_le = [
+    {"ma": item["id"], "so_tien": item["tien"]}
+    for lo in cac_lo
+    for item in lo
+    if item["tien"] > 0
+]
+
+for g in hop_le:
+    print(f"Giao dịch {g['ma']}: số tiền = {g['so_tien']}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Giao dịch G01: số tiền = 100
+Giao dịch G03: số tiền = 250
+Giao dịch G05: số tiền = 180
+```
+
+Biểu thức list comprehension lồng nhau chứa hai mệnh đề `for` liên tiếp: Mệnh đề `for lo in cac_lo` duyệt qua từng lô danh sách lớn, và mệnh đề `for item in lo` tiếp tục duyệt qua từng bản ghi bên trong lô đó.
+
+Mệnh đề điều kiện `if item['tien'] > 0` được đặt ở cuối biểu thức đóng vai trò bộ lọc, chỉ giữ lại các giao dịch phát sinh giá trị dương và loại bỏ các bản ghi mang số tiền âm hoặc bằng không.
+
+Thứ tự các mệnh đề `for` giống thứ tự của vòng lặp lồng nhau. Phải có `lo` trước khi duyệt `item` trong nó. Nếu đảo hai mệnh đề, `lo` chưa được tạo trong ví dụ độc lập này. Trong notebook còn giữ biến `lo` cũ, mã thậm chí có thể chạy nhưng đọc nhầm dữ liệu.
+
+Kết quả in ra trả về ba bản ghi hợp lệ `G01`, `G03` và `G05` đã được làm phẳng hoàn toàn. So với cách viết hai vòng lặp `for` lồng nhau và gọi `append()` thủ công, comprehension vừa ngắn gọn vừa thể hiện rõ ràng luồng biến đổi dữ liệu.
+
+:::
+
+<!-- /worked-example -->
 
 ## 2. Hàm trong Python
 
@@ -213,6 +467,58 @@ chuoi_sach = ap_dung_duong_ong(chuoi_tho, duong_ong_lam_sach)
 print(chuoi_sach)  # 'Hà Nội'
 ```
 
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-7 -->
+
+::: example Áp dụng chuỗi hàm chuẩn hóa văn bản tuần tự
+
+Trong các hệ thống tiền xử lý văn bản, mỗi chuỗi dữ liệu thô phải trải qua nhiều bước chuẩn hóa như cắt khoảng trắng thừa, chuyển về chữ thường và thay thế từ viết tắt. Nếu viết lồng các phép gọi hàm vào nhau, mã nguồn sẽ trở nên rối rắm và khó bổ sung bước mới. Việc lưu trữ các hàm trong một danh sách cho phép ta áp dụng tuần tự từng bước xử lý một cách linh hoạt.
+
+```python
+def xoa_khoang_trang(chuoi):
+    return chuoi.strip()
+
+def viet_thuong(chuoi):
+    return chuoi.lower()
+
+def chuan_hoa_thanh_pho(chuoi):
+    tu_dien = {"hn": "Hà Nội", "hcm": "TP.HCM", "dn": "Đà Nẵng"}
+    return tu_dien.get(chuoi, chuoi)
+
+duong_ong = [xoa_khoang_trang, viet_thuong, chuan_hoa_thanh_pho]
+
+def thuc_thi_duong_ong(gia_tri_tho, cac_buoc):
+    kq = gia_tri_tho
+    for buoc in cac_buoc:
+        kq = buoc(kq)
+    return kq
+
+du_lieu_vao = ["  HN ", " HCM  ", " dn", "hai phong"]
+for item in du_lieu_vao:
+    ket_qua = thuc_thi_duong_ong(item, duong_ong)
+    print(f"{item!r:<14} -> {ket_qua!r}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+'  HN '        -> 'Hà Nội'
+' HCM  '       -> 'TP.HCM'
+' dn'          -> 'Đà Nẵng'
+'hai phong'    -> 'hai phong'
+```
+
+Trong Python, hàm là đối tượng hạng nhất nên ta có thể đưa tên các hàm `xoa_khoang_trang`, `viet_thuong`, `chuan_hoa_thanh_pho` vào danh sách `duong_ong` như những đối tượng thông thường mà không cần đặt cặp ngoặc tròn gọi hàm.
+
+Hàm `thuc_thi_duong_ong` tiếp nhận giá trị văn bản ban đầu và danh sách các bước xử lý. Vòng lặp `for` duyệt qua từng hàm `buoc` và thực thi nó với cú pháp `buoc(kq)`, chuyển kết quả đầu ra của bước trước thành đầu vào của bước kế tiếp.
+
+Thiết kế này tách rời logic của từng bước biến đổi với cơ chế điều phối đường ống. Khi cần bổ sung thêm bước lọc ký tự đặc biệt, lập trình viên chỉ cần viết một hàm độc lập và thêm vào danh sách mà không phải sửa đổi cấu trúc vòng lặp chính.
+
+Kết quả in ra cho thấy các chuỗi thô chứa khoảng trắng và chữ viết tắt đều được chuẩn hóa về tên thành phố mong muốn. Đây là nguyên lý nền tảng để xây dựng các đường ống biến đổi dữ liệu có khả năng mở rộng cao.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.4. Hàm ẩn danh (Lambda Functions)
 Hàm lambda là hàm không tên, được định nghĩa bằng một dòng biểu thức duy nhất:
 ```python
@@ -248,6 +554,52 @@ Mô-đun `itertools` cung cấp nhiều công cụ lặp hiệu năng cao:
 - `itertools.chain(*iterables)`: Nối liên tiếp nhiều tập hợp mà không nhân bản dữ liệu.
 - `itertools.groupby(iterable, key)`: Gom nhóm các phần tử liên tiếp có cùng giá trị khóa (yêu cầu dữ liệu phải được sắp xếp theo khóa trước khi gom nhóm).
 
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-8 -->
+
+::: example Gom nhóm và tính tổng dữ liệu đã sắp xếp với itertools.groupby
+
+Hàm `itertools.groupby` cho phép phân nhóm các bản ghi liên tiếp có cùng giá trị khóa mà không cần cấp phát thêm bộ nhớ từ điển phụ. Tuy nhiên, nếu dữ liệu chưa được sắp xếp trước theo khóa phân nhóm, `groupby` sẽ tách một nhóm thành nhiều nhóm nhỏ rời rạc mỗi khi khóa thay đổi. Ta kết hợp `sorted` và `groupby` để thực hiện phép tổng hợp doanh thu theo từng kho hàng.
+
+```python
+import itertools
+import operator
+
+don_hang = [
+    {"kho": "K01", "tien": 150},
+    {"kho": "K02", "tien": 200},
+    {"kho": "K01", "tien": 350},
+    {"kho": "K02", "tien": 100},
+    {"kho": "K01", "tien": 120},
+]
+
+lay_kho = operator.itemgetter("kho")
+don_da_sap = sorted(don_hang, key=lay_kho)
+
+for ma_kho, nhom in itertools.groupby(don_da_sap, key=lay_kho):
+    danh_sach_don = list(nhom)
+    tong_tien = sum(item["tien"] for item in danh_sach_don)
+    print(f"Kho {ma_kho}: {len(danh_sach_don)} đơn, tổng tiền = {tong_tien}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Kho K01: 3 đơn, tổng tiền = 620
+Kho K02: 2 đơn, tổng tiền = 300
+```
+
+`operator.itemgetter("kho")` tạo hàm lấy trường `kho` của mỗi từ điển. `itertools.groupby` chỉ gom các khóa bằng nhau đang nằm liên tiếp. Để có đúng một nhóm cho mỗi kho, ta sắp danh sách theo chính hàm lấy khóa này trước khi gom.
+
+Hàm `itertools.groupby` duyệt qua danh sách đã sắp xếp và sinh ra từng cặp `(ma_kho, nhom)`. Biến `nhom` là một bộ lặp, chỉ cung cấp các bản ghi thuộc nhóm hiện tại cho đến khi gặp một giá trị khóa mới trong chuỗi tuần tự.
+
+Vì `nhom` là một bộ lặp chỉ duyệt được một lần, ta chuyển nó thành `list(nhom)` để vừa tính được số lượng đơn bằng `len()`, vừa tính được tổng tiền bằng `sum()`. Nếu không lưu thành danh sách, việc gọi `sum()` trước sẽ làm cạn bộ lặp và khiến các phép tính sau không còn dữ liệu.
+
+Kho `K01` có 3 đơn, tổng 620, còn `K02` có 2 đơn, tổng 300. Nếu dữ liệu đã được sắp hoặc đã gom liền theo khóa thì không cần sắp lại. Nếu muốn giữ các đoạn liên tiếp như từng lượt vận hành, có thể chủ ý dùng `groupby` mà không sắp.
+
+:::
+
+<!-- /worked-example -->
+
 ### 2.6. Bắt và Xử lý Ngoại lệ (Exception Handling)
 Trong phân tích dữ liệu, việc gặp phải các ô dữ liệu rác, chuỗi ký tự sai định dạng là điều tất yếu. Nếu không bắt ngoại lệ, chương trình sẽ lập tức sập và làm gián đoạn toàn bộ đường ống:
 
@@ -266,6 +618,63 @@ Cấu trúc hoàn chỉnh của khối xử lý ngoại lệ:
 - `finally`: Khối mã **luôn luôn được thực thi**, kể cả khi có lỗi hay không, thường dùng để đóng tệp hoặc giải phóng tài nguyên mạng.
 
 ---
+
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-9 -->
+
+::: example Bóc tách dòng dữ liệu và xử lý ngoại lệ với try, except và else
+
+Trong một tệp nhật ký nhiều dòng, chắc chắn sẽ xuất hiện những dòng bị cắt cụt, thiếu trường hoặc sai định dạng số học. Nếu để ngoại lệ làm dừng tiến trình, công sức xử lý các dòng trước đó sẽ bị lãng phí. Cấu trúc gồm `try`, `except` và `else` cho phép chương trình bỏ qua dòng hỏng, ghi nhận lỗi và duy trì tiến trình an toàn.
+
+```python
+dong_nhat_ky = [
+    "D01,150.5",
+    "D02,chu_khong_phai_so",
+    "D03,200.0",
+    "D04_thieu_dau_phay",
+]
+
+hop_le = []
+dong_loi = []
+
+for idx, dong in enumerate(dong_nhat_ky, start=1):
+    try:
+        ma, chuoi_tien = dong.split(",")
+        so_tien = float(chuoi_tien)
+    except (ValueError, AttributeError):
+        dong_loi.append((idx, dong))
+    else:
+        hop_le.append((ma, so_tien))
+
+print(f"Số dòng hợp lệ: {len(hop_le)}")
+for ma, tien in hop_le:
+    print(f"  Hợp lệ: mã {ma}, tiền = {tien}")
+print(f"Số dòng lỗi:    {len(dong_loi)}")
+for idx, dong in dong_loi:
+    print(f"  Lỗi tại dòng {idx}: {dong!r}")
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Số dòng hợp lệ: 2
+  Hợp lệ: mã D01, tiền = 150.5
+  Hợp lệ: mã D03, tiền = 200.0
+Số dòng lỗi:    2
+  Lỗi tại dòng 2: 'D02,chu_khong_phai_so'
+  Lỗi tại dòng 4: 'D04_thieu_dau_phay'
+```
+
+Mỗi dòng được tách bằng `split(",")` rồi giải nén vào hai biến. `split` vẫn trả về danh sách khi không có dấu phẩy. Chính phép giải nén sẽ phát sinh `ValueError` nếu số phần khác hai. `float` cũng có thể gây `ValueError` khi phần tiền không đọc được thành số.
+
+Khối `except (ValueError, AttributeError)` bắt chính xác các lớp ngoại lệ dự kiến mà không sử dụng câu lệnh `except` trần trụi. Những dòng gặp lỗi được ghi lại vào danh sách `dong_loi` kèm theo số thứ tự dòng để tiện theo dõi và kiểm tra lại.
+
+Khối `else` chỉ thực thi khi khối `try` hoàn thành suôn sẻ mà không gặp bất kỳ ngoại lệ nào. Việc đặt thao tác thêm bản ghi vào danh sách `hop_le` bên trong `else` giúp tách bạch rõ ràng logic xử lý dữ liệu chuẩn với logic xử lý lỗi.
+
+Kết quả in ra xác nhận có 2 dòng hợp lệ và 2 dòng lỗi được phân loại rành mạch. Cấu trúc `try...except...else` này giúp đường ống xử lý dữ liệu tiếp tục vận hành liên tục mà không bị gián đoạn bởi các bản ghi cá biệt bị hỏng.
+
+:::
+
+<!-- /worked-example -->
 
 ## 3. Thao tác với tệp tin và hệ thống tệp
 
@@ -289,6 +698,58 @@ Khối lệnh `with` bảo đảm rằng tệp tin luôn được đóng an toà
 - `f.read()`: Đọc toàn bộ nội dung tệp thành một chuỗi duy nhất. Chỉ nên dùng khi kích thước tệp nhỏ và vừa vặn với RAM.
 - `f.readlines()`: Đọc toàn bộ tệp và trả về danh sách các dòng văn bản.
 - `for dong in f:`: Duyệt từng dòng mà không tự nạp cả tệp thành một danh sách. Bộ nhớ sử dụng còn phụ thuộc bộ đệm, độ dài dòng và việc chương trình có giữ lại kết quả của các dòng trước hay không.
+
+<!-- worked-example bai-03-cau-truc-du-lieu-ham-tep-worked-10 -->
+
+::: example Đọc và phân tách dòng văn bản với read_text và splitlines
+
+Khi xử lý các tệp cấu hình hoặc dữ liệu bảng kích thước nhỏ, việc đọc toàn bộ tệp thành chuỗi văn bản thông qua `pathlib.Path` giúp đơn giản hóa mã nguồn. Phương thức `splitlines` xử lý tự động các ký tự xuống dòng khác nhau giữa các hệ điều hành. Ta đọc tệp tạm và trích xuất dữ liệu thành các trường có cấu trúc.
+
+```python
+import tempfile
+from pathlib import Path
+
+du_lieu_csv = """ma_kho,ten_kho,suc_chua
+K01,Kho Bac Ninh,15000
+K02,Kho Da Nang,8000
+K03,Kho Binh Duong,22000"""
+
+with tempfile.NamedTemporaryFile(
+    mode="w", suffix=".csv", delete=False, encoding="utf-8"
+) as f:
+    f.write(du_lieu_csv)
+    duong_dan = Path(f.name)
+
+try:
+    noi_dung = duong_dan.read_text(encoding="utf-8")
+    cac_dong = [d.strip() for d in noi_dung.splitlines() if d.strip()]
+    tieu_de = cac_dong[0].split(",")
+    for dong in cac_dong[1:]:
+        gia_tri = dong.split(",")
+        print(f"Kho {gia_tri[0]}: {gia_tri[1]} (sức chứa {int(gia_tri[2]):,d})")
+finally:
+    duong_dan.unlink(missing_ok=True)
+```
+
+Kết quả khi chạy đoạn mã trên:
+
+```text
+Kho K01: Kho Bac Ninh (sức chứa 15,000)
+Kho K02: Kho Da Nang (sức chứa 8,000)
+Kho K03: Kho Binh Duong (sức chứa 22,000)
+```
+
+Đoạn mã sử dụng `NamedTemporaryFile` để tạo một tệp dữ liệu tạm thời với mã hóa UTF-8. Lớp `Path` từ thư viện `pathlib` quản lý đường dẫn tệp một cách hướng đối tượng và tương thích trên nhiều hệ điều hành.
+
+Phương thức `duong_dan.read_text(encoding='utf-8')` mở tệp, đọc toàn bộ nội dung thành chuỗi `str` và tự động đóng tệp. Phương thức `splitlines()` phân tách chuỗi thành danh sách các dòng, xử lý đồng nhất cả ký tự xuống dòng `\n` của Unix lẫn `\r\n` của Windows.
+
+Thao tác tách chuỗi bằng `split(',')` trong ví dụ này chỉ phù hợp với các tệp dữ liệu đơn giản, trong đó các trường không chứa dấu phẩy nằm trong ngoặc kép hoặc ký tự xuống dòng bên trong nội dung. Đối với dữ liệu CSV tổng quát trong thực tế, việc dùng `split(',')` sẽ bị sai lệch cấu trúc cột, và ta bắt buộc phải sử dụng thư viện chuyên dụng như `csv.reader` hoặc `pandas.read_csv`.
+
+Khối `finally` gọi phương thức `unlink()` để xóa tệp tạm khỏi ổ đĩa, bảo đảm không để lại tài nguyên rác sau phiên làm việc. Kết quả in ra xác nhận các thông tin kho hàng và sức chứa đã được bóc tách chính xác từ tệp văn bản.
+
+:::
+
+<!-- /worked-example -->
 
 ### 3.3. Chế độ mở và mã hóa ký tự
 - Chế độ mở tệp: Đọc văn bản (`'r'`), ghi đè (`'w'`), ghi tiếp vào cuối (`'a'`), đọc nhị phân (`'rb'`), ghi nhị phân (`'wb'`).

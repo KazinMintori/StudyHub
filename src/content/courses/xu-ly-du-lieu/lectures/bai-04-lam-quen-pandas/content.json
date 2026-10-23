@@ -14,41 +14,112 @@
     "raw_materials/xu-ly-du-lieu/labs/lab-04.md",
     "raw_materials/xu-ly-du-lieu/labs/lab-05-pandas.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 115,
+      "title": "Tái lập chỉ mục nhãn với giá trị lấp đầy và phương pháp ffill"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 210,
+      "title": "Phân biệt truy xuất theo nhãn số nguyên và vị trí với loc và iloc"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 287,
+      "title": "Gán giá trị có điều kiện an toàn với loc trong cơ chế Copy-on-Write"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 352,
+      "title": "Căn chỉnh nhãn tự động trong phép cộng hai Series và bù khuyết với add"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 409,
+      "title": "Trừ một Series theo cột hoặc hàng bằng sub"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 503,
+      "title": "Tra phí từ mã phòng bằng Series.map"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 547,
+      "title": "Hàm trong map nhận một giá trị, không nhận cả hàng"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 590,
+      "title": "Theo dõi đối số của DataFrame.apply qua từng trục"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 669,
+      "title": "Một hàng có thể tạo ra nhiều cột kết quả"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 710,
+      "title": "DataFrame.map giữ từng ô độc lập"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 762,
+      "title": "Xếp hạng các giá trị bằng nhau với rank"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 824,
+      "title": "Tính tổng cột thiếu dữ liệu với min_count"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 892,
+      "title": "Tính toán ma trận tương quan giữa các chỉ số bằng corr và corrwith"
+    },
+    {
+      "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 962,
+      "title": "Thống kê tần suất xuất hiện và tỷ lệ phần trăm với value_counts"
+    }
+  ],
   "exercises": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 277,
+      "line": 1045,
       "title": "Bài tập 1: Chọn chỗ ở theo ngân sách và ngưỡng số đêm"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 341,
+      "line": 1109,
       "title": "Bài tập 2: Phân biệt biến động giá và thay đổi tập mẫu quan sát"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 385,
+      "line": 1153,
       "title": "Bài tập 3: Lọc dữ liệu theo ngân sách và điều kiện kết hợp"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 418,
+      "line": 1186,
       "title": "Bài tập 4: Sửa giá phòng và cạm bẫy phụ thuộc cột"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 465,
+      "line": 1233,
       "title": "Bài tập 5: Bảo toàn mã định danh khi lưu trữ tệp CSV"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 504,
+      "line": 1272,
       "title": "Bài tập 6: Gán cột khớp theo nhãn chỉ mục độc lập với thứ tự"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 536,
+      "line": 1304,
       "title": "Bài tập 7: Tính toán chi phí có điều kiện và miễn phí dọn dẹp"
     },
     {
@@ -205,37 +276,37 @@
   "solutions": [
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 291,
+      "line": 1059,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 355,
+      "line": 1123,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 398,
+      "line": 1166,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 439,
+      "line": 1207,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 475,
+      "line": 1243,
       "title": ""
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 515,
+      "line": 1283,
       "title": "Lời giải"
     },
     {
       "source": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
-      "line": 549,
+      "line": 1317,
       "title": "Lời giải"
     },
     {
@@ -314,5 +385,18 @@
       "title": ""
     }
   ],
-  "assets": []
+  "assets": [
+    {
+      "reference": "img/function-examples/series-map.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 533,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/series-map.svg"
+    },
+    {
+      "reference": "img/function-examples/dataframe-apply.svg",
+      "declaredIn": "docs/xu-ly-du-lieu/bai-giang/bai-04-lam-quen-pandas.md",
+      "line": 653,
+      "source": "docs/xu-ly-du-lieu/bai-giang/img/function-examples/dataframe-apply.svg"
+    }
+  ]
 }
