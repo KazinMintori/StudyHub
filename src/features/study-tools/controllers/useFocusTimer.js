@@ -5,7 +5,8 @@ import {
   restoreTimerState,
   startTimer,
   resetTimer,
-  tickTimer
+  tickTimer,
+  isValidMinutes
 } from '../services/focusTimerService.mjs'
 
 export function useFocusTimer() {
@@ -67,8 +68,10 @@ export function useFocusTimer() {
   }
 
   function selectMinutes(m) {
-    minutes.value = m
+    if (!isValidMinutes(m)) return false
+    minutes.value = Number(m)
     reset()
+    return true
   }
 
   onMounted(() => {

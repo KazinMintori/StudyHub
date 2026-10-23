@@ -4,9 +4,12 @@
 
 export const VALID_TIMER_MINUTES = [25, 50, 5]
 export const DEFAULT_TIMER_MINUTES = 25
+export const MAX_TIMER_MINUTES = 240
 
 export function isValidMinutes(minutes) {
-  return VALID_TIMER_MINUTES.includes(Number(minutes))
+  if (typeof minutes !== 'number' && typeof minutes !== 'string') return false
+  const value = Number(minutes)
+  return Number.isInteger(value) && value >= 1 && value <= MAX_TIMER_MINUTES
 }
 
 export function formatTimerDisplay(remainingSeconds) {
@@ -39,7 +42,7 @@ export function restoreTimerState(state, now = Date.now()) {
     return defaultState
   }
 
-  const minutes = state.minutes
+  const minutes = Number(state.minutes)
   const sessions = Number(state.sessions) || 0
   const deadline = Number(state.deadline) || 0
   const wasRunning = Boolean(state.running)
@@ -68,7 +71,7 @@ export function restoreTimerState(state, now = Date.now()) {
 
   return {
     minutes,
-    remaining: Math.max(0, state.remaining),
+    remaining: Math.min(minutes * 60, Math.max(0, state.remaining)),
     running: false,
     sessions,
     deadline: 0,
@@ -77,7 +80,7 @@ export function restoreTimerState(state, now = Date.now()) {
 }
 
 export function startTimer(minutes, remaining, now = Date.now()) {
-  const validMins = isValidMinutes(minutes) ? minutes : DEFAULT_TIMER_MINUTES
+  const validMins = isValidMinutes(minutes) ? Number(minutes) : DEFAULT_TIMER_MINUTES
   const currentRem = Number.isFinite(remaining) && remaining > 0 ? remaining : validMins * 60
   const deadline = now + currentRem * 1000
 
@@ -100,7 +103,7 @@ export function pauseTimer(deadline, now = Date.now()) {
 }
 
 export function resetTimer(minutes) {
-  const validMins = isValidMinutes(minutes) ? minutes : DEFAULT_TIMER_MINUTES
+  const validMins = isValidMinutes(minutes) ? Number(minutes) : DEFAULT_TIMER_MINUTES
   return {
     minutes: validMins,
     remaining: validMins * 60,

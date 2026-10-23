@@ -34,6 +34,9 @@ const WikiFooter = defineAsyncComponent(() => import('../features/wiki/component
 const welcomeScreen = ref(null)
 const { hasSidebar } = useSidebar()
 const { frontmatter, page } = useData()
+const currentCourse = computed(() => courseCatalog.find(course =>
+  course.id === frontmatter.value.course || page.value?.relativePath?.startsWith(`${course.id}/`)
+))
 const isPhilosophy = computed(() => frontmatter.value.course === 'triet-hoc-mac-lenin')
 // XSTK stores the exercise-panel flag in the lesson catalog. Older Notes may
 // omit its frontmatter copy, so both the layout and panels use the same value.
@@ -53,6 +56,7 @@ const hasCourseSidebar = computed(() =>
 )
 
 const layoutClasses = computed(() => ({
+  'course-context': Boolean(currentCourse.value),
   ...resolveLayoutClasses({
     frontmatter: { ...frontmatter.value, hasChapterExercises: chapterExercises.value },
     hasCourseSidebar: hasCourseSidebar.value,
@@ -83,8 +87,8 @@ const layoutClasses = computed(() => ({
       </button>
     </template>
     <template #nav-bar-content-after>
-      <div class="nav-extra-tools">
-        <StudyUtilityWidget />
+      <div v-if="currentCourse" class="nav-extra-tools">
+        <StudyUtilityWidget :course-name="currentCourse.name" />
         <ZenModeToggle />
       </div>
     </template>

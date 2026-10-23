@@ -18,7 +18,7 @@ test('focusTimerService: isValidMinutes validates allowed pomodoro durations', (
   assert.equal(isValidMinutes(25), true)
   assert.equal(isValidMinutes(50), true)
   assert.equal(isValidMinutes(5), true)
-  assert.equal(isValidMinutes(10), false)
+  assert.equal(isValidMinutes(10), true)
   assert.equal(isValidMinutes(null), false)
 })
 
@@ -50,7 +50,7 @@ test('focusTimerService: restoreTimerState falls back to safe defaults on missin
 
   assert.deepEqual(restoreTimerState(null), defaultExpected)
   assert.deepEqual(restoreTimerState({}), defaultExpected)
-  assert.deepEqual(restoreTimerState({ minutes: 99, remaining: 100 }), defaultExpected)
+  assert.deepEqual(restoreTimerState({ minutes: 241, remaining: 100 }), defaultExpected)
   assert.deepEqual(restoreTimerState({ minutes: 25, remaining: 'corrupt' }), defaultExpected)
 })
 
@@ -164,4 +164,20 @@ test('focusTimerService: getTimerButtonLabel provides contextual user action tex
   assert.equal(getTimerButtonLabel(false, 0, 25), 'Phiên mới')
   assert.equal(getTimerButtonLabel(false, 1000, 25), 'Tiếp tục')
   assert.equal(getTimerButtonLabel(false, 1500, 25), 'Bắt đầu')
+})
+
+test('Custom durations reject invalid input and survive reset, start and reload', () => {
+  for (const value of [1, 17, 240, '17']) assert.equal(isValidMinutes(value), true)
+  for (const value of [0, -1, 241, 2.5, NaN, Infinity, '', null, true, [25], {}]) {
+    assert.equal(isValidMinutes(value), false)
+  }
+  assert.equal(resetTimer(17).remaining, 1020)
+  assert.equal(startTimer(17, 0, 1000).deadline, 1021000)
+  const restored = restoreTimerState({minutes:'17',remaining:840,running:false,sessions:2})
+  assert.equal(restored.minutes, 17)
+  assert.equal(restored.remaining, 840)
+  const active = restoreTimerState({minutes:17,remaining:840,running:true,deadline:121000},1000)
+  assert.equal(active.minutes, 17)
+  assert.equal(active.remaining, 120)
+  assert.equal(active.running, true)
 })
