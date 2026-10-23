@@ -1,4 +1,4 @@
-.home-hero { display: grid; grid-template-columns: minmax(0, 1fr); max-width:880px; align-items: center; gap: var(--space-6); margin-bottom: var(--space-8); }
+.home-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 360px); align-items: center; gap: var(--space-6); margin-bottom: var(--space-8); }
 .home-hero-copy { min-width: 0; }
 .home-hero-art { max-width: 400px; justify-self: end; width: 100%; }
 .home-intro { padding: 0 0 var(--space-6); max-width: 720px; }
@@ -21,9 +21,10 @@
   box-shadow: var(--shadow-lift);
 }
 .resume-card-inner {
-  display: grid;
-  grid-template-columns:minmax(0,1fr);
-  gap: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
 }
 .resume-copy {
   flex: 1;
@@ -104,11 +105,10 @@
   font-weight: 600;
 }
 .resume-action {
-  min-width:0;
+  flex-shrink: 0;
 }
 .resume-btn-group {
   display: flex;
-  flex-wrap:wrap;
   align-items: center;
   gap: var(--space-2);
 }
@@ -127,8 +127,6 @@
   text-decoration: none;
   transition: all var(--motion-fast) var(--ease);
 }
-.resume-title,.resume-chapter-name { overflow-wrap:normal;word-break:normal; }
-.resume-kicker,.course-badge { max-width:100%; }
 .resume-secondary-btn:hover {
   background: var(--sunken);
   color: var(--tim);
@@ -168,8 +166,7 @@
   align-items: center;
   gap: var(--space-2);
   margin-bottom: var(--space-5);
-  flex-wrap:wrap;
-  overflow:visible;
+  overflow-x: auto;
   padding-bottom: var(--space-1);
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -226,46 +223,111 @@
   white-space: nowrap;
 }
 
-/* Course cards use independent links, never nested interactive controls. */
-.course-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:var(--space-5)}
-.course-row{min-width:0;display:flex;flex-direction:column;gap:var(--space-4);padding:var(--space-5);border:1px solid var(--rule);border-radius:var(--radius-lg);background:var(--paper);color:var(--ink);transition:border-color var(--motion-fast) var(--ease)}
-.course-row:hover{border-color:var(--control)}
-.course-card-content{display:flex;align-items:flex-start;gap:var(--space-4);min-width:0}
-.course-card-art{display:block;flex:0 0 64px;width:64px;border-radius:var(--radius);overflow:hidden;margin-top:var(--space-1)}
-.course-copy{flex:1;min-width:0}
-.study-home .course-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-2);margin:0 0 var(--space-2)}
-.course-lesson-count{white-space:nowrap;flex:none;font-size:var(--fs-meta);font-variant-numeric:tabular-nums;color:var(--ink-3)}
-.course-tag-pill{font-size:var(--fs-meta);font-weight:500;background:transparent;padding:0;color:var(--ink-3)}
-.course-copy h3{font:600 20px/1.4 var(--font-ui);margin:0 0 var(--space-2)}
-.course-title-link{display:block;color:var(--ink);text-decoration:none}
-.course-title-link:hover{color:var(--tim)}
-.course-open{display:none}
-.course-summary{margin:0;color:var(--ink-2);font-size:var(--fs-small);line-height:1.65}
-.course-quick-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-2);margin-top:auto;padding-top:var(--space-4);border-top:1px solid var(--rule)}
-.action-pill{display:flex;align-items:center;justify-content:center;min-width:0;min-height:44px;padding:var(--space-2) var(--space-1);border:1px solid var(--rule);border-radius:var(--radius);background:var(--paper);color:var(--ink-2);font:500 var(--fs-small)/1.4 var(--font-ui);text-decoration:none;white-space:nowrap;overflow:visible}
-.action-pill:hover{color:var(--tim);border-color:var(--control);background:var(--tim-soft)}
-.empty-state-art{display:flex;align-items:center;gap:var(--space-4)}
-.empty-state-art .spot-art{width:96px;flex-shrink:0}
-.empty-state-art p{margin:0}
-.home-tools{padding-top:var(--space-8)}
-.home-tools h2{font-size:var(--fs-h3);font-weight:600;margin:0 0 var(--space-4)}
-.home-tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:var(--space-4)}
-.home-tool{display:flex;align-items:center;gap:var(--space-4);min-height:44px;padding:var(--space-4);border-radius:var(--radius-lg);background:var(--canvas);color:var(--ink);text-decoration:none}
-.home-tool:hover{background:var(--sunken)}
-.home-tool .spot-art{width:64px;flex-shrink:0}
-.home-tool-copy{display:grid;gap:var(--space-1);font-size:var(--fs-small);color:var(--ink-2);line-height:1.5}
-.home-tool-copy strong{color:var(--ink);font-size:var(--fs-ui)}
-@media(max-width:959px){.home-hero{grid-template-columns:1fr;gap:var(--space-5);margin-bottom:var(--space-7)}.home-hero-art{display:none}}
-@media(max-width:767px){
- .home-intro{padding-top:0;padding-bottom:var(--space-5)}
- .home-lead{font-size:var(--fs-ui)}
- .resume-panel{padding:var(--space-4)}
- .resume-btn-group{flex-direction:column;width:100%;gap:var(--space-2)}
- .resume-action .resume-secondary-btn,.resume-action .resume-cta-btn{width:100%;justify-content:center;min-height:44px}
- .course-list{gap:var(--space-4)}
- .course-row{padding:var(--space-4)}
- .course-card-art{display:none}
- .course-copy h3{font-size:19px}
- .section-heading{align-items:stretch}
- .home-tools{padding-top:var(--space-7)}
+/* Course cards. `.course-row` and `.course-list` are kept for existing tests. */
+.course-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: var(--space-4); }
+.course-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: var(--space-4);
+  row-gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-xl);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--motion-menu) var(--ease-out), box-shadow var(--motion-menu) var(--ease-out), border-color var(--motion-menu) var(--ease-out);
+}
+.course-row:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: color-mix(in srgb, var(--tim) 35%, var(--rule)); }
+.course-row:active { transform: translateY(-1px); transition-duration: var(--motion-fast); }
+.course-card-art { grid-row: 1 / span 2; align-self: start; width: 112px; border-radius: 14px; overflow: hidden; transition: transform var(--motion-slide) var(--ease-out); }
+.course-row:hover .course-card-art { transform: scale(1.04) rotate(-1deg); }
+.course-copy { min-width: 0; }
+.course-lesson-count { white-space: nowrap; flex-shrink: 0; }
+.course-copy h3 { font-size: 18px; line-height: 1.35; font-weight: 600; margin: 2px 0 var(--space-1); }
+.course-summary { margin: 0; font-size: var(--fs-small); line-height: 1.5; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.course-end { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); font-size: var(--fs-meta); font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink-3); }
+.course-open { color: var(--tim); font-size: 16px; transition: transform var(--motion-fast) var(--ease); }
+.course-row:hover .course-open { transform: translateX(4px); }
+@media (prefers-reduced-motion: no-preference) {
+  .course-row { animation: card-in 420ms var(--ease-out) both; animation-delay: calc(var(--card-index, 0) * 40ms); }
+}
+@keyframes card-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+.empty-state-art { display: flex; align-items: center; gap: var(--space-4); }
+.empty-state-art .spot-art { width: 96px; flex-shrink: 0; }
+.empty-state-art p { margin: 0; }
+
+.home-tools { padding-top: var(--space-8); }
+.home-tools h2 { font-size: var(--fs-h3); font-weight: 600; margin: 0 0 var(--space-4); }
+.home-tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: var(--space-4); }
+.home-tool { display: flex; align-items: center; gap: var(--space-4); min-height: 44px; padding: var(--space-4); border-radius: var(--radius-lg); background: var(--canvas); color: var(--ink); text-decoration: none; transition: background var(--motion-fast) var(--ease), transform var(--motion-menu) var(--ease-out); }
+.home-tool:hover { background: var(--sunken); transform: translateY(-2px); }
+.home-tool .spot-art { width: 84px; flex-shrink: 0; }
+.home-tool-copy { display: grid; gap: 2px; font-size: var(--fs-small); color: var(--ink-2); line-height: 1.5; }
+.home-tool-copy strong { color: var(--ink); font-size: var(--fs-ui); }
+
+@media (max-width: 959px) {
+  .home-hero { grid-template-columns: 1fr; gap: var(--space-5); margin-bottom: var(--space-7); }
+  .home-hero-art { display: none; }
+}
+@media (max-width: 767px) {
+  .home-intro { padding-top: 0; padding-bottom: var(--space-5); }
+  .home-lead { font-size: var(--fs-ui); }
+  .resume-panel { padding: var(--space-4); }
+  .resume-card-inner { flex-direction: column; align-items: stretch; gap: var(--space-4); }
+  .resume-header-row { gap: var(--space-1) var(--space-2); }
+  .resume-title { font-size: 19px; }
+  .resume-btn-group { flex-direction: column-reverse; width: 100%; gap: var(--space-2); }
+  .resume-action .resume-secondary-btn,
+  .resume-action .resume-cta-btn { width: 100%; justify-content: center; min-height: 44px; }
+  .course-row { grid-template-columns: 84px minmax(0, 1fr); padding: var(--space-3); column-gap: var(--space-3); }
+  .course-card-art { width: 84px; }
+  .course-summary { -webkit-line-clamp: 2; }
+  .section-heading { align-items: stretch; }
+  .home-tools { padding-top: var(--space-7); }
+}
+
+
+/* Quick-Action Pills trên từng Course Card ở Trang Chủ */
+.course-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-ui);
+  font-size: var(--fs-meta, 12px);
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink-2);
+  border: 1px solid var(--rule);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--motion-fast) var(--ease);
+}
+
+.action-pill:hover {
+  background: var(--sunken);
+  color: var(--tim);
+  border-color: var(--control);
+  transform: translateY(-1px);
+}
+
+.action-pill.highlight {
+  color: var(--tim);
+  border-color: var(--tim-soft);
+  background: var(--tim-soft);
 }

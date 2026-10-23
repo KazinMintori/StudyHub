@@ -1,6 +1,7 @@
 <script setup>
 import { useCourseOverview } from '../controllers/useCourseOverview.js'
 import PhilosophyCourse from '../../philosophy/components/PhilosophyCourse.vue'
+import CourseArt from '../../illustrations/components/CourseArt.vue'
 const {
   frontmatter,
   course,
@@ -25,6 +26,7 @@ const {
         <h1>{{ course.name }}</h1>
         <p class="course-description">{{ course.description }}</p>
       </div>
+      <div class="course-hero-art"><CourseArt :course="course" /></div>
     </header>
     <div class="course-meta">
       <span>{{ primaryLessonCount }} bài giảng</span>

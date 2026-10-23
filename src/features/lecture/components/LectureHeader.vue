@@ -6,6 +6,7 @@ import { lecturePath, lectureParts } from '../services/lecture-model.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
 import SplitCheatsheetDrawer from './SplitCheatsheetDrawer.vue'
+import CourseArt from '../../illustrations/components/CourseArt.vue'
 
 const { course, lesson, part } = useLecture(), router = useRouter(), { page } = useData()
 const currentPart = computed(() => course.value?.parts?.find(p => p.lessons.includes(lesson.value?.slug)))
@@ -69,6 +70,7 @@ onUnmounted(() => {
   </nav>
 
   <header v-if="course && lesson" class="lecture-header book-header">
+    <div class="lecture-header-art"><CourseArt :course="course" /></div>
     <nav class="book-breadcrumbs" aria-label="Đường dẫn bài đọc">
       <a :href="studyLink(`/${course.id}/`)">{{ course.name }}</a>
       <template v-if="currentPart">
