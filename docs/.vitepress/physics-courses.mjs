@@ -126,20 +126,68 @@ export const physics1Course = {
       "sourceChapter": 3
     },
     {
-      "slug": "04-dinh-luat-newton",
+  "slug": "04-dinh-luat-newton",
+  "title": "Các định luật chuyển động của Newton",
+  "prerequisites": [
+    "vector",
+    "thanh-phan-vector",
+    "gia-toc"
+  ],
+  "supportingConcepts": [
+    "luc",
+    "he-quy-chieu-quan-tinh",
+    "luc-phap-tuyen",
+    "ma-sat-nghi",
+    "ma-sat-truot",
+    "don-vi"
+  ],
+  "status": "draft",
+  "number": 4,
+  "sourceChapter": 4,
+  "topicGroups": [
+    {
       "title": "Các định luật chuyển động của Newton",
-      "prerequisites": [
-        "vector",
-        "dao-ham",
-        "don-vi"
-      ],
-      "supportingConcepts": [
-        "luc"
-      ],
-      "status": "draft",
-      "number": 4,
-      "sourceChapter": 4
-    },
+      "topics": [
+        {
+          "slug": "luc-va-tuong-tac",
+          "title": "Lực và tương tác",
+          "question": "Làm thế nào mô tả và tổng hợp các lực tác dụng lên một vật?",
+          "source": "4.1"
+        },
+        {
+          "slug": "dinh-luat-thu-nhat-newton",
+          "title": "Định luật thứ nhất của Newton",
+          "question": "Khi tổng ngoại lực bằng không, vật có thể chuyển động như thế nào?",
+          "source": "4.2"
+        },
+        {
+          "slug": "dinh-luat-thu-hai-newton",
+          "title": "Định luật thứ hai của Newton",
+          "question": "Tổng ngoại lực và khối lượng xác định gia tốc ra sao?",
+          "source": "4.3"
+        },
+        {
+          "slug": "khoi-luong-va-trong-luong",
+          "title": "Khối lượng và trọng lượng",
+          "question": "Vì sao khối lượng không đổi khi chuyển nơi nhưng trọng lượng có thể đổi?",
+          "source": "4.4"
+        },
+        {
+          "slug": "dinh-luat-thu-ba-newton",
+          "title": "Định luật thứ ba của Newton",
+          "question": "Hai lực tương tác bằng nhau có làm hợp lực lên mỗi vật bằng không không?",
+          "source": "4.5"
+        },
+        {
+          "slug": "so-do-luc",
+          "title": "Sơ đồ lực",
+          "question": "Những lực nào được đưa vào sơ đồ của vật đã chọn?",
+          "source": "4.6"
+        }
+      ]
+    }
+  ]
+},
     {
       "slug": "05-ung-dung-newton",
       "title": "Áp dụng các định luật Newton",

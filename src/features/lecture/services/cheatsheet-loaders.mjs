@@ -30,7 +30,7 @@ export const cheatsheetLoaders = {
   'vat-ly-2/24-hat-co-ban-vu-tru': () => import('../../../../docs/.vitepress/physics-particles-cosmology-course.mjs').then(module => module.particlesCosmologyCheatsheet),
   'vat-ly-1/01-don-vi-vector': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.unitsVectorsCheatsheet),
   'vat-ly-1/03-chuyen-dong-khong-gian': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.motion3dCheatsheet),
-  'vat-ly-1/04-dinh-luat-newton': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.newtonLawsCheatsheet),
+  'vat-ly-1/04-dinh-luat-newton': () => import('../../../../docs/.vitepress/physics1-remaining-ch04-parent.mjs').then(module => module.physics1RemainingChapter4Parent.cheatsheet),
   'vat-ly-1/05-ung-dung-newton': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.newtonApplicationsCheatsheet),
   'vat-ly-1/06-cong-dong-nang': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.workEnergyCheatsheet),
   'vat-ly-1/07-the-nang-bao-toan-co-nang': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.potentialEnergyCheatsheet),
