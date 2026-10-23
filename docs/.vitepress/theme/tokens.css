@@ -9,6 +9,11 @@
   --lam: #2f5fd0; --lam-soft: #e8eefc; --ngoc: #0f7a72; --ngoc-soft: #e2f4f2;
   --hong: #b4316f; --hong-soft: #fbe9f2; --cam: #c25417; --cam-soft: #fdeee4;
   --printed-paper: #ffffff; --scrim: rgb(23 22 29 / .92);
+  --math-ink: var(--ink);
+  --diagram-light-ink: #1e293b; --diagram-dark-paper: #0f141c; --diagram-dark-ink: #f8fafc;
+  --diagram-shadow: 0 4px 20px rgb(0 0 0 / .25);
+  --pomodoro-progress-start: #6366f1; --pomodoro-progress-end: #10b981;
+  --pomodoro-progress-glow: 0 0 8px rgb(99 102 241 / .5);
   --shadow: 0 8px 24px rgb(31 28 43 / .12);
   --shadow-soft: 0 1px 2px rgb(31 28 43 / .04), 0 4px 14px rgb(31 28 43 / .06);
   --shadow-lift: 0 2px 4px rgb(31 28 43 / .05), 0 14px 32px rgb(90 55 168 / .13);
@@ -37,6 +42,7 @@
 }
 .dark {
   color-scheme: dark;
+  --math-ink: #f8fafc;
   --paper: #0f141c; --canvas: #161d27; --sunken: #1e2634; --rule: #2a3444;
   --control: #64748b; --ink: #e2e8f0; --ink-2: #cbd5e1; --ink-3: #94a3b8;
   --tim: #a78bfa; --tim-hover: #c4b5fd; --tim-soft: #24213d;

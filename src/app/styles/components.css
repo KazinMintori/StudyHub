@@ -27,7 +27,7 @@ input[type=checkbox], input[type=range], progress { accent-color: var(--tim); }
 .dark .vp-doc .custom-block.tip { background: color-mix(in srgb, var(--tim) 8%, var(--canvas)); }
 .dark .vp-doc .custom-block.warning { background: color-mix(in srgb, var(--vang) 8%, var(--canvas)); }
 .dark .vp-doc .custom-block.danger { background: color-mix(in srgb, var(--do) 8%, var(--canvas)); }
-.dark mjx-container { color: #f8fafc; }
+.dark mjx-container { color: var(--math-ink); }
 .vp-doc .custom-block.danger .custom-block-title { color: var(--do); }
 .vp-doc .custom-block.details, .vp-doc details { border: 1px solid var(--rule); border-radius: var(--radius); background: var(--canvas); padding: var(--space-3) var(--space-4); margin: var(--space-5) 0; transition: border-color var(--motion-fast) var(--ease); }
 .vp-doc .custom-block.details[open], .vp-doc details[open] { border-color: var(--control); }

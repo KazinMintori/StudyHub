@@ -925,8 +925,8 @@
 }
 
 .checkpoint-toggle-btn.is-completed {
-  background: var(--xanh-soft, #e6f4ec);
-  color: var(--xanh, #1d6b45);
+  background: var(--xanh-soft);
+  color: var(--xanh);
   border-color: var(--xanh);
 }
 
@@ -948,7 +948,7 @@
 /* Biểu tượng tích xanh hoàn thành trên Sidebar của VitePress */
 .VPSidebar a.link.is-lecture-completed .text::after {
   content: ' ✓';
-  color: var(--xanh, #10b981);
+  color: var(--xanh);
   font-weight: 700;
   margin-left: 0.35rem;
 }
