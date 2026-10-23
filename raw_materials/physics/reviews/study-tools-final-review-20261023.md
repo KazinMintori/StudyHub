@@ -26,4 +26,6 @@ Kiểm chứng trước khi push: 148 kiểm thử dự án, 113 kiểm thử t�
 
 Phạm vi kiểm chứng không đồng nghĩa đã xem thủ công từng công thức và từng câu hỏi của toàn bộ website. Bài chủ đề Toán cho AI có công thức cũ tràn đã được ghi thành tác vụ biên tập riêng. Không coi kết quả kiểm tra điều khiển là chứng nhận toàn bộ nội dung môn học.
 
+Lượt kiểm tra chéo tiếp theo phát hiện bốn liên kết Slides còn sót trong Notes của hai bài Giải thuật và một nhãn môn trong Góc học tập. Đã thay bằng lối tra cứu Cheatsheet và mô tả các phần còn hiện hành. Không thay nội dung toán hoặc lời giải.
+
 Đã tham khảo cách gom tiện ích trong [Carbon UI Shell](https://github.com/carbon-design-system/carbon/blob/main/packages/react/src/components/UIShell/README.md). Thiết kế cuối tuân theo ảnh người dùng chấp nhận, không thay hệ hình minh họa của dự án.

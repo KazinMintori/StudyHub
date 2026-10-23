@@ -10,7 +10,7 @@ description: "Mô hình người lướt ngẫu nhiên (Random Surfer), ma trậ
 
 Học phần **Giải thuật nền tảng của Khoa học dữ liệu**, học kỳ 1 năm học 2026–2027.
 
-Tài liệu đi cùng [bộ trang chiếu Bài 03](#slides). Các lời giải bài tập được gập để người học thử tính trước khi đối chiếu.
+Các lời giải bài tập được gập để người học thử tính trước khi đối chiếu.
 
 ---
 
@@ -431,4 +431,4 @@ Bài này chỉ yêu cầu biểu diễn, không yêu cầu tính PageRank. Tổ
 - [Slide MMDS](http://www.mmds.org/), tệp `ch05-linkanalysis1.pdf`, trang chiếu 42 và 52. [Stanford CS246](https://web.stanford.edu/class/cs246/), tệp `09-pagerank.pdf`, trang chiếu 45 và 54: Phân phối điểm nút cụt, nguồn của phần bù $\beta\delta$.
 - Tệp mã thực hành: [materials/lec-03/code/pagerank.py](/materials/lec-03/code/pagerank.py) và [materials/lec-03/code/practice-README.md](/materials/lec-03/code/practice-README.md).
 
-[Quay về bộ trang chiếu](#slides).
+[Tra cứu công thức](#cheatsheet).

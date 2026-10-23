@@ -18,7 +18,7 @@ Sau buổi học, sinh viên có thể:
 2. Giải thích tính đúng của thuật toán xét mọi cặp và phân biệt các khía cạnh đánh giá lời giải.
 3. Phân biệt kết quả tính toán với kết luận rút ra về dữ liệu. Tính kỳ vọng trùng dưới các giả thiết đã cho.
 
-[Bộ trang chiếu Bài 01](#slides) dùng cùng dữ kiện và ký hiệu. Ghi chú mở rộng đặc tả, chứng minh, điều kiện chi phí và lời giải bài tập.
+Bài học giữ thống nhất dữ kiện và ký hiệu trong phần đặc tả, chứng minh, điều kiện chi phí và lời giải bài tập.
 
 ---
 
@@ -783,4 +783,4 @@ MMDS mục 1.1 phân biệt mô hình thống kê với bản tóm tắt phục 
 - **Nelson–Gailly, The Data Compression Book:** Chương 3–5, 8–9, 11. Slide CMU LZ và lossy theo Bài 10–11.
 - **Database System Concepts, ấn bản 7:** slide Chương 14–15, 24 và nội dung Chương 31 theo Bài 12–15. UMass CS514 Lecture 10 bổ sung Count-Min trong Bài 09.
 
-[Quay về bộ trang chiếu](#slides).
+[Tra cứu công thức](#cheatsheet).
