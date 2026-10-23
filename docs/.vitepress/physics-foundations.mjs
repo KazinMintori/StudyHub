@@ -1,4 +1,5 @@
 import {physics1PriorityConcepts,physics1PriorityWikiDetails,physics1PriorityWikiConnections} from './physics1-priority-foundations.mjs'
+import {physics1RemainingConcepts,physics1RemainingWikiDetails,physics1RemainingWikiConnections} from './physics1-remaining-foundations.mjs'
 import {particlesCosmologyConcepts,particlesCosmologyWikiDetails,particlesCosmologyWikiConnections} from './physics-particles-cosmology-foundations.mjs'
 import {nuclearConcepts,nuclearWikiDetails,nuclearWikiConnections} from './physics-nuclear-foundations.mjs'
 import {moleculesConcepts,moleculesWikiDetails,moleculesWikiConnections} from './physics-molecules-foundations.mjs'
@@ -25,6 +26,7 @@ import { electrostaticsConcepts, electrostaticsWikiDetails, electrostaticsWikiCo
 import { gaussConcepts, gaussWikiDetails, gaussWikiConnections } from './physics-gauss-foundations.mjs'
 import { potentialConcepts, potentialWikiDetails, potentialWikiConnections } from './physics-potential-foundations.mjs'
 export const physicsConcepts = {
+  ...physics1RemainingConcepts,
   ...physics1PriorityConcepts,
   ...matterWavesConcepts,
   ...photonConcepts,
@@ -354,6 +356,7 @@ export const physicsConcepts = {
 export const physicsConceptIds = Object.keys(physicsConcepts)
 
 export const physicsWikiDetails = {
+  ...physics1RemainingWikiDetails,
   ...physics1PriorityWikiDetails,
   ...matterWavesWikiDetails,
   ...photonWikiDetails,
@@ -406,6 +409,7 @@ export const physicsWikiDetails = {
 }
 
 export const physicsWikiConnections = {
+  ...physics1RemainingWikiConnections,
   ...physics1PriorityWikiConnections,
   ...matterWavesWikiConnections,
   ...photonWikiConnections,
