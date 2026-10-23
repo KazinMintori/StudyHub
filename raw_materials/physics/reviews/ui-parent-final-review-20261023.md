@@ -33,3 +33,5 @@ Bổ sung khi tích hợp cuối:
 - Tra cứu được gắn thêm ởTopicHeader cho các trang chủ đề con, dùng chung trạng thái tìm kiếm và điều khiển.
 - Tách công thức hàm vàHessian thành hai khối ngắn trong ghi chú khái niệm. Ma trận minh họa không đổi và đã tính lại các đạo hàm sai phân bằngPython.
 - Phần tra cứu tại một trang chủ đềToán choAI đã được kiểm ở320,375,1440 px và không tràn. Nội dung thân bài cũ của trang đó vẫn có công thức rộng vượt màn hình hẹp. Đây là vấn đề biên tập có trước, được ghi riêng trongtopic-lookup-results.json, không dùng kết quả tra cứu để chứng nhận toàn bộ công thức thân bài đã đạt.
+
+Tình trạng trên đã được xử lý ở lượt nghiệm thu tiếp theo: math-topic-layout-20261023.md ghi kết quả sửa thân bài, khôi phục bước tính chi tiết và kiểm tra mọi khối chứng minh/lời giải đã mở ở 320, 375, 1440 px. Việc bỏ hình và các nút truy cập nhanh mô tả trong báo cáo này cũng đã được thay thế bằng yêu cầu khôi phục hình cũ và bỏ hẳn ba nút dưới thẻ môn.

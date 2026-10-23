@@ -16,9 +16,10 @@ Câu trả lời cho câu hỏi đó chính là khái niệm trung tâm của to
 Ta bắt đầu bằng định nghĩa toán học chính xác của tập lồi trong không gian Euclid:
 
 > **Định nghĩa.** Một tập hợp $C \subseteq \mathbb{R}^n$ được gọi là **tập lồi** nếu với mọi cặp điểm $x_1, x_2 \in C$ và với mọi hệ số $\theta \in [0, 1]$, ta luôn có:
-> $$
-> \theta x_1 + (1 - \theta) x_2 \in C
-> $$
+
+$$
+\theta x_1 + (1 - \theta) x_2 \in C
+$$
 
 Về mặt hình học trực quan, ta có một cách hình dung rất tự nhiên: Một tập hợp là lồi nếu **mọi điểm nằm bên trong tập hợp đều nhìn thấy mọi điểm khác** theo một đường ngắm thẳng hoàn toàn không bị che khuất. Ở đây, "không bị che khuất" đồng nghĩa với việc toàn bộ tia sáng thẳng nối giữa hai điểm quan sát phải nằm trọn vẹn bên trong tập hợp, không bị đứt đoạn hay cắt ngang qua bất kỳ khoảng trống bên ngoài nào.
 
@@ -53,7 +54,10 @@ $$
 Tập hợp này không lồi. Chọn hai điểm đối xứng qua gốc tọa độ: Điểm $x_1 = (1, 0) \in S$ (vì $1^2 + 0^2 = 1$) và điểm $x_2 = (-1, 0) \in S$ (vì $(-1)^2 + 0^2 = 1$). Chọn hệ số $\theta = \tfrac{1}{2}$. Điểm tổ hợp tương ứng là trung điểm của đoạn thẳng:
 
 $$
-x_m = \frac{1}{2}(1, 0) + \frac{1}{2}(-1, 0) = (0, 0)
+\begin{aligned}
+x_m &= \frac{1}{2}(1, 0) + \frac{1}{2}(-1, 0) \\
+&= (0, 0)
+\end{aligned}
 $$
 
 Thử vào phương trình xác định tập hợp: $0^2 + 0^2 = 0 \ne 1$. Do đó trung điểm $x_m \notin S$, chứng minh rằng đường tròn không phải tập lồi.
@@ -61,7 +65,10 @@ Thử vào phương trình xác định tập hợp: $0^2 + 0^2 = 0 \ne 1$. Do �
 **Ví dụ 2: Miền quyết định rời rạc trong học máy.** Xét tập hợp các biến nhị phân trong $\mathbb{R}^2$:
 
 $$
-D = \{0, 1\}^2 = \{(0, 0), (0, 1), (1, 0), (1, 1)\}
+\begin{aligned}
+D &= \{0, 1\}^2 \\
+&= \left\{ \begin{matrix} (0, 0), & (0, 1), \\ (1, 0), & (1, 1) \end{matrix} \right\}
+\end{aligned}
 $$
 
 Tập này thường xuất hiện khi mô hình học máy cần lựa chọn bật hoặc tắt các đặc trưng (feature selection). Tập $D$ không lồi: Điểm $(0, 0) \in D$ và điểm $(1, 1) \in D$, nhưng trung điểm $(\tfrac{1}{2}, \tfrac{1}{2})$ rõ ràng không thuộc $D$. Các bài toán tối ưu với biến nguyên hoặc biến nhị phân rất khó giải quyết trong lý thuyết độ phức tạp tính toán chính vì miền khả thi của chúng thiếu tính lồi, buộc các nhà nghiên cứu phải tìm đến kỹ thuật nới lỏng lồi.
@@ -71,23 +78,23 @@ Tập này thường xuất hiện khi mô hình học máy cần lựa chọn b
 Xét hình tròn đặc (hình cầu đóng theo chuẩn Euclid) trong $\mathbb{R}^n$:
 
 $$
-B = \{x \in \mathbb{R}^n \mid \|x\|_2 \le 1\}
+B = \{x \in \mathbb{R}^n \mid \|x\| \le 1\}
 $$
 
-Ta chứng minh $B$ là tập lồi: Lấy hai điểm tùy ý $x_1, x_2 \in B$ và một hệ số bất kỳ $\theta \in [0, 1]$. Theo giả thiết, ta có $\|x_1\|_2 \le 1$ và $\|x_2\|_2 \le 1$.
+Trong mục này, viết gọn $\|x\| = \|x\|_2$ cho chuẩn Euclid. Ta chứng minh $B$ là tập lồi: Lấy hai điểm tùy ý $x_1, x_2 \in B$ và một hệ số bất kỳ $\theta \in [0, 1]$. Theo giả thiết, ta có $\|x_1\| \le 1$ và $\|x_2\| \le 1$.
 
-Áp dụng bất đẳng thức tam giác và tính thuần nhất tuyệt đối của chuẩn vector:
+Đặt $v = \theta x_1 + (1 - \theta) x_2$. Áp dụng bất đẳng thức tam giác và tính thuần nhất tuyệt đối của chuẩn vector:
 
 $$
 \begin{aligned}
-\|\theta x_1 + (1 - \theta) x_2\|_2 &\le \|\theta x_1\|_2 + \|(1 - \theta) x_2\|_2 \\
-&= |\theta|\, \|x_1\|_2 + |1 - \theta|\, \|x_2\|_2 \\
-&= \theta \|x_1\|_2 + (1 - \theta) \|x_2\|_2 \\
+\|v\| &\le \|\theta x_1\| + \|(1 - \theta) x_2\| \\
+&= |\theta|\, \|x_1\| + |1 - \theta|\, \|x_2\| \\
+&= \theta \|x_1\| + (1 - \theta) \|x_2\| \\
 &\le \theta(1) + (1 - \theta)(1) = 1
 \end{aligned}
 $$
 
-Trong chuỗi biến đổi trên, bước triệt tiêu dấu giá trị tuyệt đối $|\theta| = \theta$ và $|1 - \theta| = 1 - \theta$ hoàn toàn dựa vào điều kiện $\theta \ge 0$ và $1 - \theta \ge 0$. Nếu $\theta$ nằm ngoài đoạn $[0, 1]$, bất đẳng thức sẽ lập tức bị phá vỡ. Vì chuẩn của điểm tổ hợp không vượt quá 1, điểm $\theta x_1 + (1 - \theta) x_2$ thuộc $B$. Vậy hình cầu đóng là tập lồi.
+Trong chuỗi biến đổi trên, bước triệt tiêu dấu giá trị tuyệt đối $|\theta| = \theta$ và $|1 - \theta| = 1 - \theta$ hoàn toàn dựa vào điều kiện $\theta \ge 0$ và $1 - \theta \ge 0$. Nếu $\theta$ nằm ngoài đoạn $[0, 1]$, bất đẳng thức sẽ lập tức bị phá vỡ. Vì chuẩn của điểm tổ hợp không vượt quá 1, điểm $v = \theta x_1 + (1 - \theta) x_2$ thuộc $B$. Vậy hình cầu đóng là tập lồi.
 
 ::: warning Cạm bẫy biên không trọn vẹn trong topo
 Tính lồi của một tập hợp không chỉ phụ thuộc vào "hình dạng bao quát" mà còn phụ thuộc rất nhạy cảm vào việc biên của tập hợp được giữ lại như thế nào.
@@ -99,14 +106,25 @@ Xét hình vuông mở $U = (0, 1)^2$ trong mặt phẳng. Bây giờ ta thêm v
 
 Tương tự như cách ta mở rộng tổ hợp affine từ hai điểm sang nhiều điểm, khái niệm đoạn thẳng cũng được tổng quát hóa một cách tự nhiên sang nhiều điểm:
 
+Với hai điểm, dạng khai triển là $y = \theta_1 x_1 + \theta_2 x_2$, trong đó $\theta_1 + \theta_2 = 1$ và hai trọng số đều không âm. Ta mở rộng cách viết này cho $k$ điểm.
+
 > **Định nghĩa.** Cho $k$ điểm $x_1, \ldots, x_k \in \mathbb{R}^n$. Một điểm $y$ được gọi là một **tổ hợp lồi** (convex combination) của $k$ điểm đó nếu nó được biểu diễn dưới dạng:
-> $$
-> y = \sum_{i=1}^k \theta_i x_i = \theta_1 x_1 + \theta_2 x_2 + \dots + \theta_k x_k
-> $$
-> trong đó các trọng số $\theta_1, \dots, \theta_k$ thỏa mãn đồng thời hai điều kiện:
-> $$
-> \sum_{i=1}^k \theta_i = \theta_1 + \theta_2 + \dots + \theta_k = 1 , \quad \theta_i \ge 0, \quad \forall i = 1, \dots, k
-> $$
+
+$$
+\begin{aligned}
+y &= \sum_{i=1}^k \theta_i x_i \\
+&= \theta_1 x_1 + \dots + \theta_k x_k
+\end{aligned}
+$$
+
+Trong đó, các trọng số $\theta_1, \dots, \theta_k$ thỏa mãn đồng thời hai điều kiện:
+
+$$
+\begin{aligned}
+&\sum_{i=1}^k \theta_i = \theta_1 + \dots + \theta_k = 1, \\
+&\theta_i \ge 0, \quad \forall i = 1, \dots, k
+\end{aligned}
+$$
 
 ### Trực giác vật lý: Phép pha trộn thành phần
 
@@ -115,7 +133,17 @@ So với tổ hợp affine, tổ hợp lồi bổ sung thêm đúng một điề
 Hai ràng buộc $\sum_{i=1}^k \theta_i = 1$ và $\theta_i \ge 0$ chính là các tiên đề định nghĩa một **phân phối xác suất rời rạc** trên $k$ điểm. Về mặt vật lý và đời sống thường ngày, tổ hợp lồi mô tả chính xác một **phép pha trộn tỷ lệ** (mixture), trong đó mỗi $\theta_i$ là tỷ lệ phần trăm đóng góp của thành phần $x_i$:
 
 $$
-\underbrace{\sum_{i=1}^k \theta_i x_i}_{\text{blend}} \quad \text{with} \quad \underbrace{\sum_{i=1}^k \theta_i = 1}_{\text{weights sum to } 1} , \quad \underbrace{\theta_i \ge 0}_{\text{nonnegative}}
+\underbrace{\sum_{i=1}^k \theta_i x_i}_{\text{giá trị pha trộn}}
+$$
+
+Các trọng số phải có tổng bằng một và không âm:
+
+$$
+\underbrace{\sum_{i=1}^k \theta_i = 1}_{\text{tổng tỷ lệ bằng một}}
+$$
+
+$$
+\underbrace{\theta_i \ge 0}_{\text{tỷ lệ không âm}}
 $$
 
 Chẳng hạn khi một barista pha một tách cà phê sữa gồm 30% cà phê nguyên chất ($x_{\text{coffee}}$) và 70% sữa tươi ($x_{\text{milk}}$), đặc tính hương vị của ly nước thu được chính là tổ hợp lồi:
@@ -138,26 +166,47 @@ Chiều đảo là hiển nhiên vì đoạn thẳng nối hai điểm chính l�
 - **Cơ sở quy nạp**: Với $k = 1$, $y = 1 \cdot x_1 = x_1 \in C$. Với $k = 2$, khẳng định đúng theo chính định nghĩa tập lồi.
 - **Giả thiết quy nạp**: Giả sử khẳng định đúng với mọi tổ hợp lồi của $k - 1$ điểm thuộc $C$.
 - **Bước quy nạp**: Xét một tổ hợp lồi của $k$ điểm:
-  $$
-  y = \sum_{i=1}^k \theta_i x_i, , \quad \sum_{i=1}^k \theta_i = 1 \text{ and } \theta_i \ge 0
-  $$
+
+$$
+\begin{aligned}
+&y = \sum_{i=1}^k \theta_i x_i, \\
+&\sum_{i=1}^k \theta_i = 1, \quad \theta_i \ge 0
+\end{aligned}
+$$
+
   Nếu $\theta_k = 1$, thì các hệ số còn lại $\theta_1 = \dots = \theta_{k-1} = 0$, suy ra $y = x_k \in C$.
-  Nếu $\theta_k < 1$, ta có $1 - \theta_k > 0$. Ta tách số hạng thứ $k$ ra ngoài và viết lại $y$ dưới dạng:
-  $$
-  y = (1 - \theta_k) \underbrace{\left( \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i \right)}_{z} + \theta_k x_k
-  $$
+  Nếu $\theta_k < 1$, ta có $1 - \theta_k > 0$. Ta tách số hạng thứ $k$ ra ngoài và xác định điểm $z$:
+
+$$
+z = \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i
+$$
+
+  Khi đó $y$ được biểu diễn lại dưới dạng:
+
+$$
+y = (1 - \theta_k) z + \theta_k x_k
+$$
+
   Hãy kiểm tra các hệ số mới $\mu_i = \tfrac{\theta_i}{1 - \theta_k}$ trong biểu thức của $z$:
   1. Vì $\theta_i \ge 0$ và $1 - \theta_k > 0$, ta có $\mu_i \ge 0$ với mọi $i = 1, \dots, k - 1$.
   2. Tổng các hệ số:
-     $$
-     \sum_{i=1}^{k-1} \mu_i = \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} = \frac{1}{1 - \theta_k} \sum_{i=1}^{k-1} \theta_i = \frac{1 - \theta_k}{1 - \theta_k} = 1
-     $$
+
+$$
+\begin{aligned}
+\sum_{i=1}^{k-1} \mu_i &= \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} \\
+&= \frac{1}{1 - \theta_k} \sum_{i=1}^{k-1} \theta_i \\
+&= \frac{1 - \theta_k}{1 - \theta_k} = 1
+\end{aligned}
+$$
+
   Như vậy điểm $z$ là một tổ hợp lồi của $k - 1$ điểm $x_1, \dots, x_{k-1} \in C$. Theo giả thiết quy nạp, ta có $z \in C$.
   
   Cuối cùng, quan sát biểu thức tổng thể:
-  $$
-  y = (1 - \theta_k) z + \theta_k x_k
-  $$
+
+$$
+y = (1 - \theta_k) z + \theta_k x_k
+$$
+
   Đây chính là tổ hợp lồi của hai điểm $z \in C$ và $x_k \in C$ với hai trọng số $1 - \theta_k \ge 0$ và $\theta_k \ge 0$ có tổng bằng 1. Theo định nghĩa tập lồi với $k = 2$, ta suy ra $y \in C$. Phép quy nạp hoàn tất.
 :::
 
@@ -166,9 +215,19 @@ Chiều đảo là hiển nhiên vì đoạn thẳng nối hai điểm chính l�
 Khi một tập hợp $S$ ban đầu không có tính lồi, ta hoàn toàn có thể "lồi hóa" nó bằng cách bổ sung toàn bộ các tổ hợp lồi của các điểm thuộc $S$:
 
 > **Định nghĩa.** **Bao lồi** (convex hull) của một tập hợp $S \subseteq \mathbb{R}^n$, ký hiệu là $\operatorname{conv} S$, là tập hợp tất cả các tổ hợp lồi của các điểm thuộc $S$:
-> $$
-> \operatorname{conv} S = \left\{ \sum_{i=1}^k \theta_i x_i \;\middle|\; x_i \in S, \; \sum_{i=1}^k \theta_i = 1, \; \theta_i \ge 0, \; k \ge 1 \right\}
-> $$
+
+Viết gọn $H = \operatorname{conv} S$, ta có:
+
+$$
+H = \left\{ y \middle|\;
+\begin{aligned}
+&y = \sum_{i=1}^k \theta_i x_i, \\
+&\sum_{i=1}^k \theta_i = 1, \\
+&\theta_i \ge 0,\quad x_i \in S, \\
+&k \ge 1
+\end{aligned}
+\right\}
+$$
 
 Bao lồi luôn luôn là một tập lồi, và nó chính là **tập lồi nhỏ nhất chứa $S$**: Nếu $B$ là một tập lồi bất kỳ chứa $S$ ($S \subseteq B$), thì bắt buộc $\operatorname{conv} S \subseteq B$. Nói cách khác, bao lồi của $S$ chính bằng giao của tất cả các tập lồi chứa $S$.
 
@@ -184,21 +243,23 @@ Hình đa giác khép kín được tạo bởi sợi dây chun cùng toàn bộ
 Trong mặt phẳng $\mathbb{R}^2$, xét tam giác tạo bởi ba đỉnh: $A = (0, 0)$, $B = (4, 0)$ và $C = (0, 4)$. Bao lồi $\operatorname{conv}\{A, B, C\}$ chính là tam giác đặc $ABC$. Ta kiểm tra hai điểm $P = (1, 2)$ và $Q = (3, 3)$:
 
 1. **Khảo sát điểm $P = (1, 2)$**:
-   Thiết lập phương trình tổ hợp:
-   $$
-   \theta_A (0, 0) + \theta_B (4, 0) + \theta_C (0, 4) = (1, 2)
-   $$
+   Với ba đỉnh $A = (0, 0)$, $B = (4, 0)$ và $C = (0, 4)$, thiết lập phương trình tổ hợp:
+
+$$
+\theta_A A + \theta_B B + \theta_C C = (1, 2)
+$$
+
    Cân bằng tọa độ từng thành phần:
    - Tọa độ thứ nhất: $4 \theta_B = 1 \implies \theta_B = \tfrac{1}{4}$.
    - Tọa độ thứ hai: $4 \theta_C = 2 \implies \theta_C = \tfrac{1}{2}$.
-   - Tổng trọng số bằng 1: $\theta_A = 1 - \theta_B - \theta_C = 1 - \tfrac{1}{4} - \tfrac{1}{2} = \tfrac{1}{4}$.
+   - Tổng trọng số bằng 1 cho $\theta_A = 1 - \theta_B - \theta_C$. Thay số được $\theta_A = 1 - \tfrac{1}{4} - \tfrac{1}{2} = \tfrac{1}{4}$.
    
    Cả ba trọng số đều thỏa mãn điều kiện không âm: $\theta_A = 0.25 \ge 0$, $\theta_B = 0.25 \ge 0$, $\theta_C = 0.5 \ge 0$. Do đó điểm $P$ nằm trọn vẹn bên trong tam giác $ABC$.
 2. **Khảo sát điểm $Q = (3, 3)$**:
    Cân bằng tọa độ:
-   - $4 \theta_B = 3 \implies \theta_B = \tfrac{3}{4} = 0.75$.
-   - $4 \theta_C = 3 \implies \theta_C = \tfrac{3}{4} = 0.75$.
-   - Trọng số thứ ba: $\theta_A = 1 - 0.75 - 0.75 = -0.5$.
+   - $4 \theta_B = 3 \implies \theta_B = \tfrac{3}{4}$ (tức $0.75$).
+   - $4 \theta_C = 3 \implies \theta_C = \tfrac{3}{4}$ (tức $0.75$).
+   - Trọng số thứ ba: $\theta_A = 1 - 0.75 - 0.75$, cho kết quả $\theta_A = -0.5$.
    
    Vì trọng số $\theta_A = -0.5 < 0$, điểm $Q$ không thể biểu diễn dưới dạng tổ hợp lồi của ba đỉnh. Điểm $Q$ nằm ngoài tam giác (dù nó vẫn là tổ hợp affine thuộc mặt phẳng chứa tam giác).
 :::
@@ -220,17 +281,22 @@ Cận số $n + 1$ là tối ưu và không thể giảm bớt: Trọng tâm c�
 Khái niệm tổ hợp lồi không dừng lại ở số hữu hạn các điểm mà mở rộng tự nhiên sang giải tích liên tục và lý thuyết xác suất:
 
 1. **Chuỗi vô hạn có trọng số**: Cho dãy vô hạn các điểm $x_1, x_2, \ldots \in C$ và dãy trọng số không âm $\theta_i \ge 0$ thỏa mãn $\sum_{i=1}^\infty \theta_i = 1$. Khi đó, nếu chuỗi hội tụ thì:
-   $$
-   \sum_{i=1}^\infty \theta_i x_i \in C
-   $$
+
+$$
+\sum_{i=1}^\infty \theta_i x_i \in C
+$$
+
 2. **Tích phân mật độ xác suất**: Cho hàm mật độ xác suất $p(x) \ge 0$ xác định trên tập lồi $C \subseteq \mathbb{R}^n$ thỏa mãn điều kiện chuẩn hóa $\int_C p(x)\, dx = 1$. Khi đó, nếu tích phân hội tụ tuyệt đối thì:
-   $$
-   \int_C p(x)\, x\, dx \in C
-   $$
+
+$$
+\int_C p(x)\, x\, dx \in C
+$$
+
 3. **Kỳ vọng của vector ngẫu nhiên**: Dạng tổng quát nhất phát biểu rằng: Nếu $X$ là một vector ngẫu nhiên nhận giá trị trong tập lồi $C$ với xác suất 1 ($\mathbb{P}(X \in C) = 1$), thì **kỳ vọng toán học của nó cũng thuộc $C$**:
-   $$
-   \mathbb{E}[X] \in C
-   $$
+
+$$
+\mathbb{E}[X] \in C
+$$
 
 Dạng phát biểu thứ ba bao hàm trọn vẹn cả trường hợp rời rạc và liên tục. Chẳng hạn, nếu biến ngẫu nhiên $X$ chỉ nhận hai giá trị $x_1$ và $x_2$ với xác suất tương ứng $\theta$ và $1 - \theta$, thì kỳ vọng $\mathbb{E}[X] = \theta x_1 + (1 - \theta) x_2$, khớp chính xác với định nghĩa đoạn thẳng ban đầu.
 
@@ -238,7 +304,13 @@ Như vậy, về bản chất triết học toán học, tập lồi chính là 
 
 ### Ứng dụng trong học máy hiện đại
 
-- **Mô hình hỗn hợp (Mixture Models)**: Phân phối hỗn hợp Gaussian (GMM) biểu diễn mật độ xác suất dưới dạng tổ hợp lồi của nhiều phân phối thành phần, theo công thức $p(x) = \sum_{k=1}^K \pi_k \mathcal{N}(x \mid \mu_k, \Sigma_k)$ với $\sum_k \pi_k = 1, \pi_k \ge 0$.
+- **Mô hình hỗn hợp (Mixture Models)**: Phân phối hỗn hợp Gaussian (GMM) biểu diễn mật độ xác suất dưới dạng tổ hợp lồi của nhiều phân phối thành phần:
+
+$$
+p(x) = \sum_{k=1}^K \pi_k \mathcal{N}(x \mid \mu_k, \Sigma_k)
+$$
+
+  với $\sum_k \pi_k = 1, \pi_k \ge 0$.
 - **Lấy trung bình trọng số mô hình (Stochastic Weight Averaging - SWA & Model Soups)**: Trong huấn luyện mạng nơ-ron sâu, thay vì chỉ sử dụng trọng số tại bước lặp cuối cùng, người ta lấy trung bình cộng các điểm checkpoint dọc theo quỹ đạo tối ưu: $w_{\text{SWA}} = \tfrac{1}{T} \sum_{t=1}^T w_t$. Khi các trọng số bị ràng buộc trong một tập lồi (chẳng hạn $\|w\| \le R$), vector trọng số trung bình luôn đảm bảo thỏa mãn ràng buộc mà không cần phép chiếu phụ trợ.
 - **Nới lỏng lồi (Convex Relaxation)**: Đối với các bài toán tối ưu tổ hợp có miền nghiệm rời rạc $S$ không lồi, người ta thay thế $S$ bằng bao lồi $\operatorname{conv} S$. Kỹ thuật này chuyển bài toán NP-khó thành một bài toán quy hoạch lồi giải được trong thời gian đa thức.
 
@@ -247,9 +319,10 @@ Như vậy, về bản chất triết học toán học, tập lồi chính là 
 Một câu hỏi giải tích tinh tế thường được đặt ra là: Liệu ta có thể đơn giản hóa việc kiểm tra tính lồi bằng cách chỉ kiểm tra trung điểm của hai điểm bất kỳ thay vì phải kiểm tra mọi $\theta \in [0, 1]$?
 
 > **Định nghĩa.** Tập hợp $C$ được gọi là **lồi theo trung điểm** (midpoint convex) nếu với mọi $a, b \in C$, ta luôn có:
-> $$
-> \frac{a + b}{2} \in C
-> $$
+
+$$
+\frac{a + b}{2} \in C
+$$
 
 Rõ ràng mọi tập lồi đều lồi theo trung điểm (chỉ cần chọn $\theta = \tfrac{1}{2}$). Chiều ngược lại có luôn đúng không?
 
@@ -317,93 +390,144 @@ Ngược lại, tập rời rạc $\{0, 1\}$ không lồi. Do đó kỳ vọng k
 
 ::: exercise 1. Chứng minh hoặc bác bỏ tính lồi của các tập hợp
 Trong không gian mặt phẳng $\mathbb{R}^2$, hãy chứng minh tập hợp là lồi hoặc chỉ ra một phản ví dụ cụ thể cho các tập hợp sau:
-1. $S_1 = \{x \in \mathbb{R}^2 \mid |x_1| + |x_2| \le 1\}$
+1. $S_1 = \{x \mid |x_1| + |x_2| \le 1\}$
 2. $S_2 = \{x \in \mathbb{R}^2 \mid x_2 \ge x_1^2\}$
 3. $S_3 = \{x \in \mathbb{R}^2 \mid x_2 \le x_1^2\}$
-4. $S_4 = \{x \in \mathbb{R}^2 \mid \max\{x_1, x_2\} \le 1\}$
+4. $S_4 = \{x \mid \max(x_1, x_2) \le 1\}$
 :::
 
 ::: solution
-1. **Tập $S_1$ là tập lồi**: Đây là quả cầu đóng đơn vị theo chuẩn $\ell_1$. Lấy hai điểm $x, y \in S_1$ và $\theta \in [0, 1]$. Áp dụng bất đẳng thức tam giác cho từng tọa độ:
-   $$
+1. **Tập $S_1$ là tập lồi**: Đây là quả cầu đóng đơn vị theo chuẩn $\ell_1$, với $\|x\|_1 = |x_1| + |x_2|$. Lấy hai điểm $x, y \in S_1$ và $\theta \in [0, 1]$. Đặt $z = \theta x + (1 - \theta) y$. Với mỗi tọa độ $i = 1, 2$, bất đẳng thức tam giác cho:
+
+$$
+|z_i| \le \theta |x_i| + (1 - \theta)|y_i|
+$$
+
+   Cộng hai bất đẳng thức này rồi dùng định nghĩa chuẩn $\ell_1$:
+
+$$
 \begin{aligned}
-|\theta x_1 + (1 - \theta) y_1| + |\theta x_2 + (1 - \theta) y_2| &\le \theta(|x_1| + |x_2|) + (1 - \theta)(|y_1| + |y_2|) \\
+\|z\|_1 &\le \|\theta x\|_1 + \|(1 - \theta) y\|_1 \\
+&= \theta \|x\|_1 + (1 - \theta) \|y\|_1 \\
 &\le \theta(1) + (1 - \theta)(1) = 1
 \end{aligned}
 $$
-   Do đó tổ hợp lồi thuộc $S_1$.
-2. **Tập $S_2$ là tập lồi**: Lấy $x, y \in S_2$ thỏa $x_2 \ge x_1^2$ và $y_2 \ge y_1^2$. Với $\theta \in [0, 1]$:
-   $$
-   \theta x_2 + (1 - \theta) y_2 \ge \theta x_1^2 + (1 - \theta) y_1^2
-   $$
-   Mặt khác, xét hiệu:
-   $$
-   [\theta x_1^2 + (1 - \theta) y_1^2] - (\theta x_1 + (1 - \theta) y_1)^2 = \theta(1 - \theta)(x_1 - y_1)^2 \ge 0
-   $$
+
+   Do đó tổ hợp lồi $z$ thuộc $S_1$.
+2. **Tập $S_2$ là tập lồi**: Lấy $x, y \in S_2$ thỏa $x_2 \ge x_1^2$ và $y_2 \ge y_1^2$. Với $\theta \in [0, 1]$, đặt $z = \theta x + (1 - \theta) y$. Vì $x_2 \ge x_1^2$ và $y_2 \ge y_1^2$:
+
+$$
+z_2 \ge \theta x_1^2 + (1 - \theta) y_1^2
+$$
+
+   Mặt khác, đặt $a = \theta x_1^2 + (1 - \theta) y_1^2$. Vì $z_1 = \theta x_1 + (1 - \theta) y_1$, ta có:
+
+$$
+\begin{aligned}
+a - z_1^2 &= \theta(1 - \theta)(x_1 - y_1)^2 \\
+&\ge 0
+\end{aligned}
+$$
+
    Vì $\theta \ge 0, 1 - \theta \ge 0$ và bình phương không âm, ta suy ra:
-   $$
-   \theta x_2 + (1 - \theta) y_2 \ge (\theta x_1 + (1 - \theta) y_1)^2
-   $$
-   Chứng tỏ tổ hợp lồi thuộc $S_2$.
+
+$$
+z_2 \ge z_1^2
+$$
+
+   Chứng tỏ tổ hợp lồi $z$ thuộc $S_2$.
 3. **Tập $S_3$ không lồi**: Chọn $x = (-1, 1)$ và $y = (1, 1)$. Cả hai điểm đều thỏa $x_2 \le x_1^2$ (vì $1 \le (-1)^2 = 1$ và $1 \le 1^2 = 1$). Trung điểm của chúng với $\theta = 0.5$ là $m = (0, 1)$. Thử vào điều kiện: $1 \le 0^2 = 0$, mâu thuẫn. Vậy $S_3$ không lồi.
 4. **Tập $S_4$ là tập lồi**: Điều kiện $\max\{x_1, x_2\} \le 1$ tương đương đồng thời với $x_1 \le 1$ và $x_2 \le 1$. Đây là giao của hai nửa mặt phẳng lồi gồm nửa mặt phẳng $H_1 = \{x \mid x_1 \le 1\}$ và nửa mặt phẳng $H_2 = \{x \mid x_2 \le 1\}$. Vì giao của hai tập lồi là tập lồi, $S_4$ là tập lồi.
 :::
 
 ::: exercise 2. Tổ hợp lồi của các phân phối xác suất
 Cho ba phân phối xác suất rời rạc trên ba biến cố:
+
 $$
-p = (0.5, 0.3, 0.2), \quad q = (0.1, 0.1, 0.8), \quad r = (0.2, 0.6, 0.2)
+\begin{aligned}
+p &= (0.5, 0.3, 0.2), \\
+q &= (0.1, 0.1, 0.8), \\
+r &= (0.2, 0.6, 0.2)
+\end{aligned}
 $$
 1. Tính phân phối tổ hợp lồi $u = \tfrac{1}{2} p + \tfrac{1}{4} q + \tfrac{1}{4} r$ và kiểm tra xem $u$ có phải là một phân phối xác suất hợp lệ không.
 2. Có tồn tại bộ ba trọng số không âm $\alpha, \beta, \gamma \ge 0$ với $\alpha + \beta + \gamma = 1$ sao cho tổ hợp $\alpha p + \beta q + \gamma r$ tạo thành phân phối đều $d = (\tfrac{1}{3}, \tfrac{1}{3}, \tfrac{1}{3})$ không?
 :::
 
 ::: solution
-1. Tính từng thành phần tọa độ của $u$:
-   $$
+1. Tính từng thành phần tọa độ của $u$. Các hệ số $0.5$ và $0.25$ lần lượt bằng $\tfrac12$ và $\tfrac14$:
+
+$$
 \begin{aligned}
-u_1 &= 0.5(0.5) + 0.25(0.1) + 0.25(0.2) = 0.325 \\
-u_2 &= 0.5(0.3) + 0.25(0.1) + 0.25(0.6) = 0.325 \\
-u_3 &= 0.5(0.2) + 0.25(0.8) + 0.25(0.2) = 0.350
+u_1 &= \frac{0.5}{2} + \frac{0.1}{4} + \frac{0.2}{4} \\
+&= 0.325, \\
+u_2 &= \frac{0.3}{2} + \frac{0.1}{4} + \frac{0.6}{4} \\
+&= 0.325, \\
+u_3 &= \frac{0.2}{2} + \frac{0.8}{4} + \frac{0.2}{4} \\
+&= 0.350
 \end{aligned}
 $$
+
+   Do đó $u = (0.325, 0.325, 0.350)$.
    
    Kiểm tra: Các thành phần đều không âm ($u_i \ge 0$) và tổng bằng $0.325 + 0.325 + 0.350 = 1$. Do đó $u$ là một phân phối xác suất hợp lệ.
 2. Để tìm $\alpha, \beta, \gamma$, ta thiết lập hệ phương trình tuyến tính:
-   $$
+
+$$
 \begin{aligned}
 0.5 \alpha + 0.1 \beta + 0.2 \gamma &= \frac{1}{3} \\
 0.3 \alpha + 0.1 \beta + 0.6 \gamma &= \frac{1}{3} \\
 \alpha + \beta + \gamma &= 1
 \end{aligned}
 $$
-   Lấy phương trình thứ nhất trừ phương trình thứ hai:
-   $$
-   (0.5 - 0.3)\alpha + (0.1 - 0.1)\beta + (0.2 - 0.6)\gamma = 0 \iff 0.2 \alpha - 0.4 \gamma = 0 \iff \alpha = 2\gamma
-   $$
+
+   Lấy phương trình thứ nhất trừ phương trình thứ hai. Các hệ số tương ứng cho $0.5 - 0.3 = 0.2$, $0.1 - 0.1 = 0$ và $0.2 - 0.6 = -0.4$:
+
+$$
+\begin{aligned}
+0.2 \alpha - 0.4 \gamma &= 0 \\
+\implies \alpha &= 2\gamma
+\end{aligned}
+$$
+
    Thay $\beta = 1 - \alpha - \gamma = 1 - 3\gamma$ vào phương trình thứ nhất:
-   $$
-   0.5(2\gamma) + 0.1(1 - 3\gamma) + 0.2\gamma = \frac{1}{3}
-   $$
-   Rút gọn:
-   $$
-   \gamma + 0.1 - 0.3\gamma + 0.2\gamma = \frac{1}{3} \iff 0.9 \gamma = \frac{1}{3} - \frac{1}{10} = \frac{7}{30}
-   $$
+
+$$
+\gamma + 0.1(1 - 3\gamma) + 0.2\gamma = \frac{1}{3}
+$$
+
+   Khai triển vế trái thành $\gamma + 0.1 - 0.3\gamma + 0.2\gamma$, rồi gom các hệ số của $\gamma$:
+
+$$
+\begin{aligned}
+0.9\gamma + 0.1 &= \frac{1}{3} \\
+\implies 0.9\gamma &= \frac{1}{3} - \frac{1}{10} = \frac{7}{30}
+\end{aligned}
+$$
+
    Do đó:
-   $$
-   \gamma = \frac{7}{30 \times 0.9} = \frac{7}{27}
-   $$
+
+$$
+\gamma = \frac{7}{30 \times 0.9} = \frac{7}{27}
+$$
+
    Suy ra:
-   $$
-   \alpha = 2\gamma = \frac{14}{27}, \quad \beta = 1 - 3\left(\frac{7}{27}\right) = 1 - \frac{21}{27} = \frac{6}{27}
-   $$
+
+$$
+\begin{aligned}
+\alpha &= 2\gamma = \frac{14}{27}, \\
+\beta &= 1 - 3\left(\frac{7}{27}\right) \\
+&= 1 - \frac{21}{27} = \frac{6}{27}
+\end{aligned}
+$$
    Cả ba trọng số đều thỏa mãn điều kiện không âm: $\alpha = \tfrac{14}{27} > 0$, $\beta = \tfrac{6}{27} > 0$, $\gamma = \tfrac{7}{27} > 0$.
    
    Kết luận: Phân phối đều $d$ hoàn toàn có thể biểu diễn dưới dạng tổ hợp lồi của ba phân phối đã cho, nghĩa là $d$ nằm trọn trong tam giác xác suất sinh bởi $p, q, r$.
 :::
 
 ::: exercise 3. Chứng minh bao lồi là giao của mọi tập lồi chứa tập hợp ban đầu
-Cho tập hợp $S \subseteq \mathbb{R}^n$. Gọi $\mathcal{F} = \{B \subseteq \mathbb{R}^n \mid B \text{ convex and } S \subseteq B\}$ là họ tất cả các tập lồi chứa $S$. Chứng minh rằng:
+Cho tập hợp $S \subseteq \mathbb{R}^n$. Gọi $\mathcal{F}$ là họ tất cả các tập lồi $B \subseteq \mathbb{R}^n$ chứa $S$ ($S \subseteq B$). Chứng minh rằng:
+
 $$
 \operatorname{conv} S = \bigcap_{B \in \mathcal{F}} B
 $$
