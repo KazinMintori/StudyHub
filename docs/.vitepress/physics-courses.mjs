@@ -726,18 +726,80 @@ export const physics1Course = {
   "hasChapterExercises": true
 },
     {
-      "slug": "12-co-hoc-chat-luu",
+  "slug": "12-co-hoc-chat-luu",
+  "title": "Cơ học chất lưu",
+  "prerequisites": [
+    "luc",
+    "cong-nang-luong",
+    "don-vi",
+    "dao-ham"
+  ],
+  "supportingConcepts": [
+    "khoi-luong-rieng",
+    "ty-khoi",
+    "ap-suat-chat-luu",
+    "nguyen-ly-pascal",
+    "ap-suat-tuyet-doi-va-ap-suat-du",
+    "luc-day-archimedes",
+    "suc-cang-be-mat",
+    "chat-luu-ly-tuong",
+    "duong-dong-chat-luu",
+    "phuong-trinh-lien-tuc",
+    "phuong-trinh-bernoulli",
+    "do-nhot-chat-luu",
+    "chay-tang-va-chay-roi",
+    "dong-nhot-trong-ong-tru",
+    "ong-dong-chat-luu",
+    "duong-di-phan-tu-chat-luu",
+    "luu-luong-chat-luu"
+  ],
+  "status": "draft",
+  "number": 12,
+  "sourceChapter": 12,
+  "topicGroups": [
+    {
       "title": "Cơ học chất lưu",
-      "prerequisites": [
-        "luc",
-        "cong-nang-luong",
-        "don-vi"
-      ],
-      "supportingConcepts": [],
-      "status": "draft",
-      "number": 12,
-      "sourceChapter": 12
-    },
+      "topics": [
+        {
+          "slug": "chat-khi-chat-long-va-khoi-luong-rieng",
+          "title": "Chất khí, chất lỏng và khối lượng riêng",
+          "question": "Vì sao cùng một thể tích nhưng chất khí, chất lỏng và chất rắn có khối lượng khác nhau?",
+          "source": "12.1"
+        },
+        {
+          "slug": "ap-suat-trong-chat-luu",
+          "title": "Áp suất trong chất lưu",
+          "question": "Áp suất thay đổi theo độ sâu như thế nào và các dụng cụ đo áp suất hoạt động ra sao?",
+          "source": "12.2"
+        },
+        {
+          "slug": "luc-day-archimedes-va-suc-cang-be-mat",
+          "title": "Lực đẩy Archimedes và sức căng bề mặt",
+          "question": "Lực nào giữ vật nổi trong chất lưu, và vì sao một vật đặc hơn nước vẫn có thể nằm trên mặt nước?",
+          "source": "12.3"
+        },
+        {
+          "slug": "dong-chay-chat-luu",
+          "title": "Dòng chảy chất lưu",
+          "question": "Bảo toàn khối lượng liên hệ tiết diện, khối lượng riêng và tốc độ của dòng chảy như thế nào?",
+          "source": "12.4"
+        },
+        {
+          "slug": "phuong-trinh-bernoulli",
+          "title": "Phương trình Bernoulli",
+          "question": "Công của áp lực làm thay đổi tốc độ và độ cao của chất lưu như thế nào?",
+          "source": "12.5"
+        },
+        {
+          "slug": "do-nhot-va-chay-roi",
+          "title": "Độ nhớt và chảy rối",
+          "question": "Khi ma sát bên trong chất lưu và những nhiễu loạn dòng chảy trở nên đáng kể, mô hình lý tưởng thay đổi ra sao?",
+          "source": "12.6"
+        }
+      ]
+    }
+  ]
+},
     {
       "slug": "13-hap-dan",
       "title": "Hấp dẫn",

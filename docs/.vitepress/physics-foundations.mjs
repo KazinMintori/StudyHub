@@ -1,3 +1,4 @@
+import {physics1FluidConcepts,physics1FluidWikiDetails,physics1FluidWikiConnections} from './physics1-fluid-foundations.mjs'
 import {physics1PriorityConcepts,physics1PriorityWikiDetails,physics1PriorityWikiConnections} from './physics1-priority-foundations.mjs'
 import {physics1RemainingConcepts,physics1RemainingWikiDetails,physics1RemainingWikiConnections} from './physics1-remaining-foundations.mjs'
 import {particlesCosmologyConcepts,particlesCosmologyWikiDetails,particlesCosmologyWikiConnections} from './physics-particles-cosmology-foundations.mjs'
@@ -351,6 +352,8 @@ export const physicsConcepts = {
   ...moleculesConcepts,
   ...nuclearConcepts,
   ...particlesCosmologyConcepts,
+
+  ...physics1FluidConcepts
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -406,6 +409,8 @@ export const physicsWikiDetails = {
   ...moleculesWikiDetails,
   ...nuclearWikiDetails,
   ...particlesCosmologyWikiDetails,
+
+  ...physics1FluidWikiDetails
 }
 
 export const physicsWikiConnections = {
@@ -550,4 +555,6 @@ export const physicsWikiConnections = {
   ...moleculesWikiConnections,
   ...nuclearWikiConnections,
   ...particlesCosmologyWikiConnections,
+
+  ...physics1FluidWikiConnections
 }

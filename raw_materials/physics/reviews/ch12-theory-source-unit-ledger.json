@@ -1,0 +1,1698 @@
+{
+  "chapter": 12,
+  "scope": "Theory only;endexercises not certified",
+  "earlyUnits": [
+    {
+      "sourceSection": "opening",
+      "sourceUnit": 1,
+      "sourceText": "Câu hỏi mở: Cá bàng chài dài khoảng 10 cm nổi gần như không cần vận động, còn cá đuối manta rộng hơn 5 m phải vỗ vây liên tục để không chìm. Giữ đủ năm phương án: Hình dạng, khối lượng, thể tích, tích khối lượng với thể tích, tỷ số khối lượng với thể tích.",
+      "sourcePdfPages": [
+        386
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/00-mo-dau.md",
+      "destinations": [
+        {
+          "anchor": "Một con cá bàng chài",
+          "line": 1,
+          "paragraph": 1
+        },
+        {
+          "anchor": "Hãy chọn lời giải thích",
+          "line": 5,
+          "paragraph": 3
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "opening",
+      "sourceUnit": 2,
+      "sourceText": "Hai ảnh cá ở đầu chương là một cặp hình, không được bỏ một ảnh hoặc thay bằng minh họa mới.",
+      "sourcePdfPages": [
+        386
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/00-mo-dau.md",
+      "destinations": [
+        {
+          "anchor": "![Cá bàng chài",
+          "line": 3,
+          "paragraph": 2
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "opening",
+      "sourceUnit": 3,
+      "sourceText": "Chất lưu trong uống, thở, bơi, tuần hoàn và thời tiết. Tách tĩnh học chất lưu dựa trên cân bằng Newton với động lực học chất lưu dựa trên mô hình lý tưởng, Newton và bảo toàn năng lượng.",
+      "sourcePdfPages": [
+        386
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/00-mo-dau.md",
+      "destinations": [
+        {
+          "anchor": "Chất lưu hiện diện",
+          "line": 15,
+          "paragraph": 6
+        },
+        {
+          "anchor": "Chương bắt đầu",
+          "line": 17,
+          "paragraph": 7
+        },
+        {
+          "anchor": "Khi chất lưu chuyển động",
+          "line": 19,
+          "paragraph": 8
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "opening",
+      "sourceUnit": 4,
+      "sourceText": "Sáu mục tiêu học tương ứng sáu mục. Kiến thức cần ôn: Mục 7.1 về công của lực ngoài trọng lực và biến đổi cơ năng, Mục 11.4 về áp suất và đơn vị. Giữ các liên hệ này khi thiết kế prerequisites.",
+      "sourcePdfPages": [
+        386
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/00-mo-dau.md",
+      "destinations": [
+        {
+          "anchor": "Sau chương này",
+          "line": 21,
+          "paragraph": 9
+        },
+        {
+          "anchor": "Trước khi học",
+          "line": 30,
+          "paragraph": 11
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 1,
+      "sourceText": "Chất lưu có thể chảy và đổi hình dạng phần thể tích chiếm chỗ. Gồm khí và lỏng, đối chiếu vật rắn có xu hướng giữ hình dạng.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "**Chất lưu**",
+          "line": 7,
+          "paragraph": 4
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 2,
+      "sourceText": "Lực liên kết giữa các phân tử lỏng gần nhau làm một lượng chất lỏng gần như giữ thể tích khi chảy. Ví dụ 500 mL nước rót sang chảo vẫn 500 mL. Khí có khoảng cách phân tử lớn và lực liên kết yếu, nên 500 mL oxy nén có thể nở ra thể tích lớn hơn khi mở van.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "Các phân tử trong chất lỏng",
+          "line": 9,
+          "paragraph": 5
+        },
+        {
+          "anchor": "Trong chất khí",
+          "line": 11,
+          "paragraph": 6
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 3,
+      "sourceText": "Định nghĩa khối lượng riêng cho vật liệu đồng nhất. Hai vật cùng vật liệu có cùng m/V dù m và V khác nhau; đối chiếu cờ lê và đinh thép.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "Với vật liệu đồng nhất",
+          "line": 17,
+          "paragraph": 9
+        },
+        {
+          "anchor": "Hai vật làm từ cùng",
+          "line": 29,
+          "paragraph": 14
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 4,
+      "sourceText": "Đơn vị SI kg/m³ và cgs g/cm³, đổi 1 g/cm³ = 1000 kg/m³. Giữ đủ 20 dòng Bảng 12.1 và điều kiện không khí 1 atm,20°C.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "Đơn vị SI",
+          "line": 31,
+          "paragraph": 15
+        },
+        {
+          "anchor": "### Bảng 12.1",
+          "line": 48,
+          "paragraph": 20
+        },
+        {
+          "anchor": "Muốn chuyển các giá trị",
+          "line": 75,
+          "paragraph": 23
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 5,
+      "sourceText": "Khối lượng riêng tương đối là tỷ số với nước ở 4.0°C, không có đơn vị. Nhôm có tỷ số 2.7. Giải thích tên specific gravity không có nghĩa khối lượng riêng phụ thuộc lực hấp dẫn.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "**Tỉ khối**",
+          "line": 79,
+          "paragraph": 25
+        },
+        {
+          "anchor": "Đây là tỷ số hai đại lượng",
+          "line": 85,
+          "paragraph": 27
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 6,
+      "sourceText": "Vật không đồng nhất: Mỡ khoảng 940 kg/m³, xương 1700–2500 kg/m³, khí quyển và đại dương thay đổi theo cao độ/độ sâu. m/V khi đó là khối lượng riêng trung bình. Khối lượng riêng nói chung phụ thuộc nhiệt độ và áp suất.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "Không phải mọi vật",
+          "line": 87,
+          "paragraph": 28
+        },
+        {
+          "anchor": "Với một vật không đồng nhất",
+          "line": 89,
+          "paragraph": 29
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 7,
+      "sourceText": "Ứng dụng sinh học: Nước trong ống hẹp của cây được kéo lên nhờ liên kết giữa các phân tử khi nước bốc hơi ở lá. Giữ ví dụ cây cao hơn 100 m như bối cảnh mô hình trong nguồn.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "Tính liên kết của chất lỏng",
+          "line": 91,
+          "paragraph": 30
+        },
+        {
+          "anchor": "![Lực liên kết",
+          "line": 93,
+          "paragraph": 31
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 8,
+      "sourceText": "Ví dụ 12.1 đủ khối lượng và trọng lượng của không khí rồi cùng thể tích nước. Giữ kiểm tra tính hợp lý và phân biệt đơn vị trọng lượng lb/short ton với đơn vị khối lượng kg/tấn.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "::: example Ví dụ 12.1",
+          "line": 95,
+          "paragraph": 32
+        },
+        {
+          "anchor": "Khối lượng riêng của nước lớn",
+          "line": 163,
+          "paragraph": 50
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.1",
+      "sourceUnit": 9,
+      "sourceText": "Đặt câu tự kiểm 12.1 và lời giải ngay cuối mục, trước khi sang áp suất.",
+      "sourcePdfPages": [
+        386,
+        387,
+        388
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "destinations": [
+        {
+          "anchor": "### Tự kiểm 12.1",
+          "line": 167,
+          "paragraph": 52
+        },
+        {
+          "anchor": "Vì vậy, thứ tự",
+          "line": 192,
+          "paragraph": 58
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 1,
+      "sourceText": "Lực do va chạm phân tử tác dụng lên thành bình và vật ngâm trong chất lưu. Trong chất lưu đứng yên, lực tiếp xúc trên mặt tưởng tượng có phương pháp tuyến, hai phía bằng nhau ngược chiều.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "Khi thả chân",
+          "line": 3,
+          "paragraph": 2
+        },
+        {
+          "anchor": "Một chất lưu đứng yên",
+          "line": 7,
+          "paragraph": 4
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 2,
+      "sourceText": "Định nghĩa áp suất tại điểm bằng dF_perp/dA. Chỉ được thay bằng F_perp/A cho mặt phẳng có áp suất đều. Áp suất là vô hướng, lực có hướng; mặt có diện tích gấp đôi chịu lực gấp đôi ở cùng áp suất.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "Gọi diện tích mặt nhỏ",
+          "line": 11,
+          "paragraph": 6
+        },
+        {
+          "anchor": "Nếu áp suất như nhau",
+          "line": 19,
+          "paragraph": 9
+        },
+        {
+          "anchor": "Áp suất là một đại lượng",
+          "line": 31,
+          "paragraph": 14
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 3,
+      "sourceText": "Pa = N/m², bar=10^5 Pa, millibar=100 Pa. Khí áp thay đổi theo thời tiết và cao độ; 1 atm được định nghĩa chính xác 101325 Pa, xấp xỉ 1.013×10^5 Pa=1.013 bar=1013 millibar=14.70 lb/in².",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Đơn vị áp suất",
+          "line": 35,
+          "paragraph": 16
+        },
+        {
+          "anchor": "Đơn vị atmosphere",
+          "line": 54,
+          "paragraph": 22
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 4,
+      "sourceText": "Ví dụ 12.2 tính lực khí quyển lên sàn. Giải thích lực lớn không làm sập sàn vì khí phía dưới tạo lực ngược chiều gần bằng nếu bỏ qua độ dày sàn.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "::: example Ví dụ 12.2",
+          "line": 71,
+          "paragraph": 26
+        },
+        {
+          "anchor": "Nếu phía dưới sàn",
+          "line": 106,
+          "paragraph": 38
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 5,
+      "sourceText": "Suy ra thủy tĩnh bằng phần tử dV=A dy: dm=rho A dy,dw=rho g A dy, lực trên dưới pA và −(p+dp)A, lực bên triệt tiêu. Cân bằng cho dp/dy=−rho g. Tích phân khi rho,g không đổi để được chênh áp hai cao độ và công thức độ sâu.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Áp suất thay đổi",
+          "line": 110,
+          "paragraph": 40
+        },
+        {
+          "anchor": "Thể tích, khối lượng",
+          "line": 118,
+          "paragraph": 44
+        },
+        {
+          "anchor": "Theo điều kiện cân bằng",
+          "line": 130,
+          "paragraph": 47
+        },
+        {
+          "anchor": "Giữa hai điểm có cao độ",
+          "line": 152,
+          "paragraph": 55
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 6,
+      "sourceText": "Áp suất bằng nhau ở cùng cao độ trong chất lỏng liên thông cân bằng, không phụ thuộc hình dạng bình. Các cột thông nhau cùng mức tự do khi cùng chịu khí áp.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "Nếu điểm 2 ở cao hơn",
+          "line": 166,
+          "paragraph": 60
+        },
+        {
+          "anchor": "### Áp suất ở một độ sâu",
+          "line": 168,
+          "paragraph": 61
+        },
+        {
+          "anchor": "Công thức (12.6).",
+          "line": 188,
+          "paragraph": 68
+        },
+        {
+          "anchor": "![Hình 12.6",
+          "line": 194,
+          "paragraph": 71
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 7,
+      "sourceText": "Định luật Pascal nói về phần áp suất tăng thêm truyền nguyên vẹn trong chất lưu kín, không có nghĩa áp suất toàn phần giống nhau ở mọi cao độ.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Định luật Pascal",
+          "line": 196,
+          "paragraph": 72
+        },
+        {
+          "anchor": "**Định luật Pascal:**",
+          "line": 200,
+          "paragraph": 74
+        },
+        {
+          "anchor": "Định luật nói về phần",
+          "line": 202,
+          "paragraph": 75
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 8,
+      "sourceText": "Máy nâng thủy lực: Hai pít-tông cùng cao độ, F1/A1=F2/A2, lực được nhân theo tỷ lệ diện tích. Giữ các ứng dụng ghế nha sĩ, kích/nâng ô tô, thang nâng, phanh thủy lực.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "Máy nâng thủy lực",
+          "line": 204,
+          "paragraph": 76
+        },
+        {
+          "anchor": "Phần áp suất tăng thêm",
+          "line": 208,
+          "paragraph": 78
+        },
+        {
+          "anchor": "Tỷ số diện tích",
+          "line": 222,
+          "paragraph": 83
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 9,
+      "sourceText": "Điều kiện rho không đổi chỉ gần đúng cho khí trên chênh cao nhỏ. Trong phòng cao 3.0 m, rho_air=1.2 kg/m³ cho Δp≈35 Pa≈0.00035 atm. Nguồn đối chiếu thay đổi mật độ khí theo cao độ lớn; xem ghi chú dữ kiện địa lý ở sourceClarifications.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Khi nào có thể",
+          "line": 224,
+          "paragraph": 84
+        },
+        {
+          "anchor": "Giá trị này chỉ khoảng",
+          "line": 237,
+          "paragraph": 87
+        },
+        {
+          "anchor": "Chất lỏng gần như không",
+          "line": 239,
+          "paragraph": 88
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 10,
+      "sourceText": "Áp suất tuyệt đối và áp suất dư: Lốp bằng khí áp là xẹp, số 32 lb/in² là áp suất dư khoảng220kPa; áp suất tuyệt đối khoảng47lb/in² hoặc320kPa. Áp suất dư có thể âm trong chân không một phần. Giải thích psig/psia.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Áp suất tuyệt đối",
+          "line": 241,
+          "paragraph": 89
+        },
+        {
+          "anchor": "Một lốp được gọi",
+          "line": 251,
+          "paragraph": 93
+        },
+        {
+          "anchor": "Nếu áp suất trong bình",
+          "line": 253,
+          "paragraph": 94
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 11,
+      "sourceText": "Ví dụ 12.3 đủ hai áp suất ở đáy bể sâu12.0m mở ra khí quyển; không trộn loại áp suất hoặc đơn vị khi thay số.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "::: example Ví dụ 12.3",
+          "line": 255,
+          "paragraph": 95
+        },
+        {
+          "anchor": "Một đồng hồ",
+          "line": 304,
+          "paragraph": 109
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 12,
+      "sourceText": "Áp kế ống hở: Cân bằng áp suất ở đáy hai nhánh, p+rho g y1=patm+rho g y2, nên áp suất dư=rho g h với h=y2−y1 có dấu phù hợp.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Áp kế ống hở",
+          "line": 308,
+          "paragraph": 111
+        },
+        {
+          "anchor": "Gọi $y_1$",
+          "line": 314,
+          "paragraph": 114
+        },
+        {
+          "anchor": "Vì thế, áp kế",
+          "line": 331,
+          "paragraph": 119
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 13,
+      "sourceText": "Ứng dụng huyết áp130/80: Đây là hai áp suất dư cực đại/cực tiểu theo mmHg hoặc torr, mốc đo ở cánh tay ngang tim. Không biến ví dụ vật lý thành lời khuyên chẩn đoán.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "Huyết áp cũng được",
+          "line": 333,
+          "paragraph": 120
+        },
+        {
+          "anchor": "![Áp suất đo",
+          "line": 335,
+          "paragraph": 121
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 14,
+      "sourceText": "Khí áp kế thủy ngân: Ống kín đầu chứa thủy ngân lật trong chậu, phía trên gần chân không vì áp suất hơi thủy ngân rất nhỏ; patm=rho g h. Đơn vị mmHg/torr liên quan cột thủy ngân, rho phụ thuộc nhiệt độ và g phụ thuộc vị trí, nên ưu tiênPa.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Khí áp kế thủy ngân",
+          "line": 337,
+          "paragraph": 122
+        },
+        {
+          "anchor": "Công thức (12.9).",
+          "line": 347,
+          "paragraph": 126
+        },
+        {
+          "anchor": "Đơn vị milimét thủy ngân",
+          "line": 351,
+          "paragraph": 128
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 15,
+      "sourceText": "Áp kế Bourdon: Ống đàn hồi cuộn/duỗi theo chênh áp, làm kim lệch. Giữ cả sơ đồ và ảnh thiết bị, cùng nhận xét ảnh kim chỉ hơi hơn5bar. Nêu thay đổi biến dạng còn có thể đo quang, điện hoặc cơ học.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Áp kế dùng ống",
+          "line": 355,
+          "paragraph": 130
+        },
+        {
+          "anchor": "![Hình 12.9",
+          "line": 359,
+          "paragraph": 132
+        },
+        {
+          "anchor": "Nhiều thiết bị đo",
+          "line": 361,
+          "paragraph": 133
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 16,
+      "sourceText": "Ví dụ12.4: ỐngU có dầu và nước không trộn, mặt phân cách ở đáy như hình, hai mặt trên chịu khí áp. Viết công thức riêng cho từng chất, cân bằng tại mặt phân cách, được hoil=(rho_water/rho_oil)hwater; không dùng một rho chung cho cả hai cột.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "::: example Ví dụ 12.4",
+          "line": 363,
+          "paragraph": 134
+        },
+        {
+          "anchor": "Một cột chất lỏng nhẹ",
+          "line": 411,
+          "paragraph": 152
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.2",
+      "sourceUnit": 17,
+      "sourceText": "Câu tự kiểm12.2: Khí áp kế chuyển từ tủ lạnh kín sang ngày nóng, cộtHg giữ cùng chiều cao. RhoHg giảm nên khí áp ngoài thấp hơn, không được kết luận bằng nhau chỉ vì h bằng nhau.",
+      "sourcePdfPages": [
+        388,
+        389,
+        390,
+        391,
+        392,
+        393
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "destinations": [
+        {
+          "anchor": "### Tự kiểm 12.2",
+          "line": 415,
+          "paragraph": 154
+        },
+        {
+          "anchor": "Chọn (ii).",
+          "line": 428,
+          "paragraph": 159
+        },
+        {
+          "anchor": "Khi đưa khí áp kế",
+          "line": 434,
+          "paragraph": 161
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 1,
+      "sourceText": "Vật trong nước có vẻ nhẹ hơn. Cơ thể người và bóng helium là các bối cảnh. Phát biểu Archimedes cho vật ngập một phần hoặc toàn phần: Lực đẩy hướng lên bằng trọng lượng chất lưu bị chiếm chỗ.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "Một hòn đá",
+          "line": 3,
+          "paragraph": 2
+        },
+        {
+          "anchor": "**Nguyên lý Archimedes:**",
+          "line": 5,
+          "paragraph": 3
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 2,
+      "sourceText": "Chứng minh bằng phần tử chất lưu có hình dạng bất kỳ. Tổng lực áp suất cân bằng trọng lượng. Cân bằng mômen khiến giá lực đẩy qua trọng tâm phần chất lưu bị chiếm chỗ. Thay phần tử bằng vật rắn cùng hình dạng thì áp suất trên biên và lực đẩy không đổi. Trọng tâm phần chất lưu không nhất thiết trùng trọng tâm vật.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "### Vì sao lực đẩy",
+          "line": 15,
+          "paragraph": 7
+        },
+        {
+          "anchor": "Cân bằng còn đòi hỏi",
+          "line": 35,
+          "paragraph": 15
+        },
+        {
+          "anchor": "Bây giờ thay phần",
+          "line": 37,
+          "paragraph": 16
+        },
+        {
+          "anchor": "Giá lực đẩy",
+          "line": 41,
+          "paragraph": 18
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 3,
+      "sourceText": "Khí cầu cân bằng tính cả khí bên trong. Cá có mô đặc hơn nước nhưng bóng khí hạ khối lượng riêng trung bình, giải đáp câu mở chương chọn (v). Tàu thép rỗng có khối lượng riêng trung bình nhỏ hơn nước.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "### Điều kiện nổi",
+          "line": 43,
+          "paragraph": 19
+        },
+        {
+          "anchor": "Một quả bóng",
+          "line": 45,
+          "paragraph": 20
+        },
+        {
+          "anchor": "Mô cơ thể",
+          "line": 47,
+          "paragraph": 21
+        },
+        {
+          "anchor": "Vì vậy, câu hỏi",
+          "line": 60,
+          "paragraph": 25
+        },
+        {
+          "anchor": "Một vật có khối lượng",
+          "line": 62,
+          "paragraph": 26
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 4,
+      "sourceText": "Vật nổi trong chất lỏng đặc hơn ngập ít hơn. Giữ đối chiếu nước biển 1030 kg/m³ với nước ngọt 1000 kg/m³.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "Chất lỏng càng có khối lượng",
+          "line": 64,
+          "paragraph": 27
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 5,
+      "sourceText": "Phù kế chìm đến khi trọng lượng chất lưu chiếm chỗ bằng trọng lượng phù kế. Giữ phù kế đơn giản với quả nặng giữ thẳng, dụng cụ hút mẫu đo axit ắc quy hoặc chất chống đông, cùng ứng dụng đo khối lượng riêng nước tiểu trong bối cảnh sinh học.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "### Phù kế",
+          "line": 66,
+          "paragraph": 28
+        },
+        {
+          "anchor": "Quả nặng",
+          "line": 72,
+          "paragraph": 31
+        },
+        {
+          "anchor": "Phù kế có thể dùng",
+          "line": 74,
+          "paragraph": 32
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 6,
+      "sourceText": "Lực đẩy phụ thuộc khối lượng riêng chất lưu. Khối gỗ và sắt cùng thể tích ngập toàn phần nhận lực đẩy bằng nhau nhưng nổi hoặc chìm vì trọng lượng khác nhau.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "### Lực đẩy phụ thuộc",
+          "line": 76,
+          "paragraph": 33
+        },
+        {
+          "anchor": "Khối gỗ nổi lên",
+          "line": 80,
+          "paragraph": 35
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 7,
+      "sourceText": "Ví dụ 12.5 giữ sơ đồ ba lực, lực đẩy của nước biển và không khí. T=mg−B chỉ cho dây căng khi B≤mg. Nếu B>mg thì cần lực giữ xuống, dây treo phía trên không thể có lực căng âm.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "::: example Ví dụ 12.5",
+          "line": 82,
+          "paragraph": 36
+        },
+        {
+          "anchor": "Chọn chiều dương",
+          "line": 144,
+          "paragraph": 55
+        },
+        {
+          "anchor": "(b) Trong không khí",
+          "line": 162,
+          "paragraph": 60
+        },
+        {
+          "anchor": "Chất lưu càng đặc",
+          "line": 183,
+          "paragraph": 65
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 8,
+      "sourceText": "Sức căng bề mặt: Kẹp giấy và bọ gọng vó được đỡ dù vật liệu đặc hơn nước. Liên kết phân tử khiến bề mặt có xu hướng giảm diện tích. Đối chiếu phân tử trong lòng và trên mặt.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "### Sức căng bề mặt",
+          "line": 187,
+          "paragraph": 67
+        },
+        {
+          "anchor": "Các phân tử chất lỏng",
+          "line": 193,
+          "paragraph": 70
+        },
+        {
+          "anchor": "Bề mặt chất lỏng vì vậy",
+          "line": 197,
+          "paragraph": 72
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 9,
+      "sourceText": "Dạng cầu tối thiểu diện tích ở thể tích cho trước trong mô hình sức căng bề mặt chi phối. Giữ liên hệ giọt nước, không phổ quát hóa mô hình bỏ qua trọng lực cho mọi kích thước giọt.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "Với một thể tích cho trước",
+          "line": 199,
+          "paragraph": 73
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 10,
+      "sourceText": "Nước nóng và xà phòng giảm sức căng bề mặt, giúp nước qua khe sợi vải. Tỷ số diện tích/thể tích quả cầu bằng 3/r giải thích tác dụng mạnh ở giọt cỡ mm và yếu ở chất lưu khối lớn. Phần còn lại bỏ qua sức căng bề mặt.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "Sức căng bề mặt còn",
+          "line": 201,
+          "paragraph": 74
+        },
+        {
+          "anchor": "Tăng nhiệt độ",
+          "line": 203,
+          "paragraph": 75
+        },
+        {
+          "anchor": "Để thấy tác dụng",
+          "line": 207,
+          "paragraph": 77
+        },
+        {
+          "anchor": "Bán kính càng nhỏ",
+          "line": 222,
+          "paragraph": 81
+        }
+      ],
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceSection": "12.3",
+      "sourceUnit": 11,
+      "sourceText": "Câu tự kiểm 12.3: Bình nước biển trên cân, tượng treo từ ngoài nhúng trong nước nhưng không chạm đáy. Số chỉ tăng 7.84 N. Giữ cả cách xét toàn hệ lẫn phản lực của tượng lên nước.",
+      "sourcePdfPages": [
+        393,
+        394,
+        395
+      ],
+      "destinationFile": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "destinations": [
+        {
+          "anchor": "### Tự kiểm 12.3",
+          "line": 224,
+          "paragraph": 82
+        },
+        {
+          "anchor": "Chọn (i).",
+          "line": 238,
+          "paragraph": 87
+        },
+        {
+          "anchor": "Nước tác dụng",
+          "line": 240,
+          "paragraph": 88
+        },
+        {
+          "anchor": "Cũng có thể xét chung",
+          "line": 242,
+          "paragraph": 89
+        }
+      ],
+      "status": "authored-and-source-compared"
+    }
+  ],
+  "lateUnits": [
+    {
+      "sourceUnitId": "12.4.unit1",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Chất lưu lý tưởng không nén được và không có độ nhớt. Chất lỏng gần không nén được trong nhiều trường hợp. Khí có thể gần như không nén được khi chênh áp không lớn. Chỉ bỏ lực cắt nhớt khi nhỏ so với trọng lực và lực áp suất.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 7,
+        "paragraphStartsWith": "**Chất lưu lý tưởng**"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit2",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Phân biệt đường đi của phần tử chất lưu với đường dòng có tiếp tuyến cùng hướng vận tốc tức thời. Chúng trùng nhau trong dòng ổn định. Ổn định nghĩa trường vận tốc tại vị trí cố định không đổi theo thời gian, không có nghĩa mỗi phần tử không có gia tốc.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 11,
+        "paragraphStartsWith": "Quỹ đạo mà một phần tử"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit3",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Ống dòng gồm các đường dòng qua biên của một tiết diện tưởng tượng. Chất lưu không đi qua thành bên trong dòng ổn định. Giữ sơ đồ ống và ảnh thuốc nhuộm quanh vật cản.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 17,
+        "paragraphStartsWith": "Cho một diện tích tưởng tượng"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit4",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Chảy tầng là các phần chuyển động trượt êm tương đối. Tốc độ lớn hoặc biên làm đổi vận tốc đột ngột có thể gây chảy rối. Giữ ảnh khói từ que diêm với cả vùng tầng và rối.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 21,
+        "paragraphStartsWith": "Hình 12.19 cho thấy"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit5",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Suy ra liên tục từ bảo toàn khối lượng. Trong dt, ds1=v1dt và ds2=v2dt. Thể tích qua mỗi đầu là A1v1dt và A2v2dt. Khối lượng qua mỗi đầu là rho A1v1dt và rho A2v2dt. Dòng ổn định không tích lũy khối lượng nên hai khối lượng bằng nhau.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 31,
+        "paragraphStartsWith": "Khối lượng không tự sinh ra"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit6",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Với chất lưu không nén được, A1v1=A2v2. Lưu lượng thể tích Q=dV/dt=Av. Lưu lượng khối lượng bằng rho Q. Tiết diện nhỏ hơn thì tốc độ lớn hơn trong cùng ống dòng.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 66,
+        "paragraphStartsWith": "Tích $Av$ là thể tích"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit7",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Giữ dòng mật ong hẹp dần khi rơi nhanh dần, dòng sông rộng sâu chảy chậm hơn đoạn hẹp nông trong mô hình cùng lưu lượng, và ví dụ đường kính 2 cm giảm còn 1 cm khiến tốc độ tăng bốn lần.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 82,
+        "paragraphStartsWith": "Một đoạn sông rộng"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit8",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Tổng quát cho chất lưu nén được trong dòng ổn định: rho1A1v1=rho2A2v2. Lưu lượng khối lượng vẫn bằng nhau, nhưng Q có thể khác nếu rho thay đổi. Nếu rho2>rho1 thì Q2<Q1.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 86,
+        "paragraphStartsWith": "Nếu chất lưu có thể nén được"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit9",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Ví dụ 12.6 giữ đủ hai tốc độ và lưu lượng khối lượng ở cả hai tiết diện cho dầu 850 kg/m³, 9.5 L/s, đường kính 8 cm và 4 cm.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 102,
+        "paragraphStartsWith": "::: example Ví dụ 12.6"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.4.unit10",
+      "pdfPages": [
+        396,
+        397,
+        398
+      ],
+      "sourceMeaning": "Câu tự kiểm 12.4: Công trường giảm đường ba làn xuống một làn nhưng xe chậm lại. Khoảng cách giữa xe và thông lượng thay đổi nên giống chất lưu nén được. Nếu là dòng không nén được, ổn định và mật độ giữ nguyên thì một phần ba tiết diện đòi tốc độ gấp ba.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+        "line": 160,
+        "paragraphStartsWith": "### Câu hỏi sau mục 12.4"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit1",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Liên tục cho thấy tốc độ đổi khi tiết diện ống ngang thay đổi. Phần tử có gia tốc nên cần hợp lực áp suất. Dòng tăng tốc về phía áp suất thấp. Không biến điều này thành khẳng định phổ quát mọi tốc độ cao tự gây áp suất thấp.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 7,
+        "paragraphStartsWith": "### Chênh lệch áp suất"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit2",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Suy ra Bernoulli bằng công và cơ năng. Phần tử ban đầu giữa a–c, sau dt ở b–d. Hai đầu chuyển dời ds1,ds2 và cùng dV=A1ds1=A2ds2. Công áp suất p1A1ds1−p2A2ds2=(p1−p2)dV. Dấu âm ở đầu ra vì lực ngược chuyển dời. Phần chung b–c không đổi cơ năng trong dòng ổn định.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 17,
+        "paragraphStartsWith": "Xét đoạn chất lưu lúc đầu"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit3",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Tính dK=rho dV(v2²−v1²)/2 và dU=rho dV g(y2−y1). Ghép dW=dK+dU rồi chia dV để được dạng chênh áp. Viết dạng hai điểm và hằng số trên cùng ống dòng. Giải thích từng số hạng là năng lượng trên thể tích, có đơn vị Pa.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 51,
+        "paragraphStartsWith": "Hai phần ấy có cùng khối lượng"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit4",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Điều kiện: Dòng ổn định, không nén được, bỏ qua độ nhớt và hai điểm cùng ống dòng. Mô hình suy ra không có máy bơm hoặc tổn thất thêm giữa hai điểm. Không tự gán một hằng số cho mọi ống dòng khác nhau. Khi v=0, phương trình thu về thủy tĩnh.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 121,
+        "paragraphStartsWith": "::: warning Điều kiện áp dụng"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit5",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Ứng dụng hươu cao cổ: Áp suất giảm khi máu lên cao ở tốc độ gần không đổi. Giữ các số tâm thu 120 mmHg ở người và 280 mmHg ở hươu cao cổ trong ngữ cảnh mô hình nguồn, không trình bày thành chuẩn chẩn đoán.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 127,
+        "paragraphStartsWith": "### Ứng dụng: Áp suất máu"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit6",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Chiến lược 12.1: Kiểm tra mô hình, chọn điểm 1 và 2, chọn trục y hướng lên và mốc y=0, liệt kê biết/chưa biết, kết hợp liên tục và Q, giải rồi kiểm tra đơn vị và tính hợp lý. Các áp suất phải cùng là tuyệt đối hoặc cùng là dư theo một khí áp tham chiếu.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 135,
+        "paragraphStartsWith": "### Phương pháp giải 12.1"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit7",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Ví dụ 12.7 giữ v2,p2,Q và nhận xét tắt nước làm p2 tăng. Không nhầm đường kính với bán kính.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 146,
+        "paragraphStartsWith": "::: example Ví dụ 12.7"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit8",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Ví dụ 12.8: Bồn xăng có p0 trên mặt, miệng ra chịu patm, độ sâu h. A1≫A2 cho v1≈0 nhưng vẫn y1=h,y2=0. Giữ cả phần chênh áp, độ sâu, Q=A2v2, trường hợp mặt thoáng p0=patm và liên hệ rơi tự do Torricelli. Xem đính chính ký hiệu ở PDF400.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 224,
+        "paragraphStartsWith": "::: example Ví dụ 12.8"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit9",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Ví dụ 12.9: Venturi ngang, y1=y2,A1>A2 và các cột đo áp chứa chính chất lỏng cùng rho. Liên hệ chênh cột h với rho g h. Suy ra v1,v2 và chênh áp. Giải thích lực tăng tốc vào cổ và giảm tốc khi ra.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 282,
+        "paragraphStartsWith": "::: example Ví dụ 12.9"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit10",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Ví dụ định tính 12.10: Áp suất thấp phía trên cánh và chênh lực pháp tuyến tạo lực nâng. Giữ cách giải thích biến thiên động lượng khí xuống và phản lực lên. Các ứng dụng kèm theo là ô dù bị gió lật và cánh gió đuôi xe tạo lực ép xuống.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 329,
+        "paragraphStartsWith": "::: example Ví dụ định tính 12.10"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit11",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Bác bỏ giả thuyết hai hạt phải gặp lại ở mép sau vì đường phía trên dài hơn. Mô phỏng 12.27b chỉ rõ các hạt đi trên và dưới không gặp lại. Giữ đủ hai phần hình 12.27.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 350,
+        "paragraphStartsWith": "**Hai phần tử khí không bắt buộc"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.5.unit12",
+      "pdfPages": [
+        398,
+        399,
+        400,
+        401,
+        402
+      ],
+      "sourceMeaning": "Câu tự kiểm 12.5 chọn (ii). Chênh áp tạo hợp lực làm phần tử gia tốc theo Newton II. Giữ lời giải nhân quả thay vì chỉ đáp án.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+        "line": 358,
+        "paragraphStartsWith": "### Câu hỏi sau mục 12.5"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit1",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Độ nhớt là ma sát nội cản chuyển động tương đối giữa các phần chất lưu. Giữ hai vai trò của mái chèo: Phải tốn công đẩy thuyền, nhưng độ nhớt cũng giúp mái chèo truyền lực. Các ứng dụng là dòng trong ống, máu và bôi trơn động cơ.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 9,
+        "paragraphStartsWith": "**Độ nhớt** biểu thị"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit2",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Nước và xăng chảy dễ hơn mật hoặc dầu động cơ. Nguồn nêu độ nhớt khí tăng và chất lỏng giảm khi nhiệt độ tăng. Dung nham nóng chảy dễ hơn. Dầu bôi trơn được thiết kế để giảm phụ thuộc nhiệt độ.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 13,
+        "paragraphStartsWith": "Độ nhớt phụ thuộc mạnh"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit3",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Lớp biên gần bề mặt rắn có vận tốc gần bằng bề mặt. Giữ liên hệ bụi bám cánh quạt đang quay và vòi nước không rửa sạch hết bụi xe.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 17,
+        "paragraphStartsWith": "Chất lưu nhớt có xu hướng"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit4",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Ống trụ dài có cùng cao độ và tốc độ trung bình ở hai đầu vẫn cần chênh áp nếu có độ nhớt. Phân bố tốc độ chảy tầng có dạng parabol, bằng không tại thành và lớn nhất tại trục. Các lực nhớt cản trượt tương đối nên cần áp suất đầu vào lớn hơn.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 21,
+        "paragraphStartsWith": "Xét một ống trụ dài"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit5",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Giữ ví dụ bóp kem đánh răng và tương cà. Với cùng lưu lượng, chênh áp cần tỷ lệ L/R⁴. Bán kính còn một nửa cần chênh áp gấp 16. Bán kính còn 0.90 cần gấp 1.52, tức tăng 52%. Giữ liên hệ hẹp động mạch ở mức mô hình. Nguồn chưa phát biểu đầy đủ luật Poiseuille với hệ số độ nhớt.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 29,
+        "paragraphStartsWith": "Để duy trì dòng chảy"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit6",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Chảy rối xuất hiện khi nhiễu động tăng thay vì tắt dần. Độ nhớt góp phần dập nhiễu động. Tốc độ tới hạn phụ thuộc chất lưu và hình học. Độ gồ ghề thành ống, biến thiên mật độ và các yếu tố khác có thể khởi phát nhiễu động. Không áp dụng trực tiếp Bernoulli lý tưởng trong vùng rối.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 53,
+        "paragraphStartsWith": "### Sự hình thành dòng chảy rối"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit7",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Giữ so sánh khói tầng/rối và hai ảnh nước vòi ở tốc độ thấp/cao. Ứng dụng nghe âm thanh dòng máu bằng ống nghe cần cả ảnh sinh học tương ứng.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 69,
+        "paragraphStartsWith": "### Ứng dụng: Nghe dòng máu"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit8",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Ví dụ định tính 12.11: Trong hệ gắn với bóng, không khí đi ngược vận tốc bóng. Độ nhớt kéo khí sát bề mặt, chuyển động xoáy làm vùng rối và áp suất hai phía khác nhau. Topspin tạo lực xuống trong tennis, xoáy trục gần đứng làm bóng chày lệch ngang, backspin nâng bóng golf. Giữ trường hợp người ném tay trái với người đánh tay phải và vai trò các lõm trên bóng golf.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 75,
+        "paragraphStartsWith": "::: example Ví dụ định tính 12.11"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit9",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Hình 12.31 phải giữ đủ (a)–(f). Ảnh hoạt nghiệm dùng 1000 chớp/s và bóng quay một vòng qua tám chớp, suy ra 125 vòng/s=7500 rpm. Cặp đổi 35 m/s≈75 mi/h trong nguồn là gần đúng thô.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 100,
+        "paragraphStartsWith": "Ảnh hoạt nghiệm ở hình (f)"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "12.6.unit10",
+      "pdfPages": [
+        402,
+        403,
+        404
+      ],
+      "sourceMeaning": "Câu tự kiểm 12.6: Kim tiêm cùng chiều dài và lưu lượng, đường kính 0.30 mm so với 0.60 mm cần chênh áp gấp 16. Giữ đủ năm lựa chọn 2,4,8,16,32 và lập luận R⁻⁴.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+        "line": 105,
+        "paragraphStartsWith": "### Câu hỏi sau mục 12.6"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "summary.unit1",
+      "pdfPages": [
+        405
+      ],
+      "sourceMeaning": "Bốn nhóm tổng kết: Khối lượng riêng và áp suất, áp suất chất lưu đứng yên, lực đẩy, dòng chảy. Không bỏ tổng kết chỉ vì có Cheatsheet.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/17-tom-tat.md",
+        "line": 3,
+        "paragraphStartsWith": "### Khối lượng riêng và áp suất"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "summary.unit2",
+      "pdfPages": [
+        405
+      ],
+      "sourceMeaning": "Giữ rho=m/V,p=dF_perp/dA,Pascal,áp suất tuyệt đối/dư,Pa,chênh áp và độ sâu,Archimedes,chất lưu lý tưởng,đường đi/đường dòng/ống dòng,tầng/rối,liên tục,Q và Bernoulli kèm điều kiện.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/17-tom-tat.md",
+        "line": 61,
+        "paragraphStartsWith": "### Dòng chảy của chất lưu"
+      },
+      "status": "authored-and-source-compared"
+    },
+    {
+      "sourceUnitId": "summary.unit3",
+      "pdfPages": [
+        405
+      ],
+      "sourceMeaning": "Giữ bốn hình riêng: Mặt nhỏ chịu áp suất, áp suất theo độ sâu, vật thay phần tử chất lưu, ống dòng Bernoulli. Nền vàng nhạt của hình giữ nguyên pixel.",
+      "destination": {
+        "file": "raw_materials/physics/translations/chapter-12/17-tom-tat.md",
+        "line": 21,
+        "paragraphStartsWith": "![Tổng kết về áp suất"
+      },
+      "status": "authored-and-source-compared"
+    }
+  ]
+}

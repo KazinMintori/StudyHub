@@ -94,7 +94,14 @@ export function configureStudyMarkdown(md, { base, vueBinding = true }) {
         state.src = state.src
           .replace(/^## Tự kiểm tra$/gm, '## Câu hỏi ôn lại')
           // A container title ends on the same line; never consume the next paragraph.
-          .replace(/^[ \t]*::: example(?:[\t ]+(.*))?$/gm, (_, title) => `::: info Ví dụ${title ? `: ${title}` : ''}`)
+          .replace(/^[ \t]*::: example(?:[\t ]+(.*))?$/gm, (_, title) => {
+            const label = title?.trim()
+            const heading = !label ? 'Ví dụ'
+              : /^Ví dụ(?:\s|:|$)/u.test(label) ? label
+              : /^\d+(?:\.\d+)*(?::|\s|$)/u.test(label) ? `Ví dụ ${label}`
+              : `Ví dụ: ${label}`
+            return `::: info ${heading}`
+          })
           .replace(/^[ \t]*::: proof(?:[\t ]+(.*))?$/gm, (_, title) => {
             const label = title?.trim()
             return '::: details ' + (label && /^Chứng minh\b/u.test(label) ? label : 'Chứng minh' + (label ? ': ' + label : ''))

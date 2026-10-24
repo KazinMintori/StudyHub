@@ -67,6 +67,27 @@ const md = await createMarkdownRenderer(fileURLToPath(new URL('../../docs/', imp
 
 const testCases = [
   {
+    name: 'Example with its existing numbered heading',
+    input: '::: example Ví dụ 12.6: Dầu chảy qua hai đoạn ống\nNội dung ví dụ được giữ nguyên.\n:::',
+    expectClass: 'info custom-block',
+    expectTitle: 'Ví dụ 12.6: Dầu chảy qua hai đoạn ống',
+    forbidTitle: 'Ví dụ: Ví dụ',
+  },
+  {
+    name: 'Example number without a repeated label',
+    input: '::: example 12.6: Dầu chảy qua hai đoạn ống\nNội dung ví dụ được giữ nguyên.\n:::',
+    expectClass: 'info custom-block',
+    expectTitle: 'Ví dụ 12.6: Dầu chảy qua hai đoạn ống',
+    forbidTitle: 'Ví dụ: 12.6',
+  },
+  {
+    name: 'Untitled example keeps its body on the next line',
+    input: '::: example\nNội dung ví dụ được giữ nguyên.\n:::',
+    expectClass: 'info custom-block',
+    expectTitle: 'Ví dụ',
+    forbidTitle: 'Ví dụ: Nội dung',
+  },
+  {
     name: 'Explicit "Bài tập1: ..."',
     input: '::: exercise Bài tập1: Đọc bảng giá\nNội dung bài tập 1.\n:::',
     expectClass: 'warning custom-block exercise',

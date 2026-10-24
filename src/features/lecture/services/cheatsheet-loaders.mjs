@@ -38,7 +38,7 @@ export const cheatsheetLoaders = {
   'vat-ly-1/09-dong-hoc-vat-ran': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[9].cheatsheet),
   'vat-ly-1/10-dong-luc-hoc-quay': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[10].cheatsheet),
   'vat-ly-1/11-can-bang-dan-hoi': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[11].cheatsheet),
-  'vat-ly-1/12-co-hoc-chat-luu': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.fluidMechanicsCheatsheet),
+  'vat-ly-1/12-co-hoc-chat-luu': () => import('../../../../docs/.vitepress/physics1-remaining-ch12-course.mjs').then(module => module.physics1RemainingChapter12Parent.cheatsheet),
   'vat-ly-1/13-hap-dan': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.gravitationCheatsheet),
   'vat-ly-1/14-dao-dong': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.oscillationsCheatsheet),
   'vat-ly-1/15-song-co': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.mechanicalWavesCheatsheet),

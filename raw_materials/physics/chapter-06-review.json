@@ -32,5 +32,13 @@
     "raw_materials/physics/reviews/ch06-remaining-theory-20261023.md",
     "raw_materials/physics/reviews/ch06-parent-exercises-20261025.md"
   ],
-  "deploy": "Pending GitHub Actions after commit"
+  "deploy": {
+    "status": "passed",
+    "commit": "393735adcbabc45b046fde44f54f56890c7babc0",
+    "runId": 40123888635,
+    "prompts": 134,
+    "groups": 24,
+    "publishedImages": 21,
+    "allImagesHttp200AndByteIdenticalToGit": true
+  }
 }

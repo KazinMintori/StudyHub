@@ -1,29 +1,20 @@
 ---
-course: vat-ly-1
-lecture: 12-co-hoc-chat-luu
-section: lecture
+course: "vat-ly-1"
+lecture: "12-co-hoc-chat-luu"
+section: "lecture"
 title: "Cơ học chất lưu"
-prerequisites: ["luc","cong-nang-luong","don-vi"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Cơ học chất lưu."
+prerequisites: ["luc","cong-nang-luong","don-vi","dao-ham"]
+lessonStatus: "draft"
+sourceTranslation: "full"
+description: "Chất khí, chất lỏng và khối lượng riêng, Áp suất trong chất lưu, Lực đẩy Archimedes và sức căng bề mặt, Dòng chảy chất lưu, Phương trình Bernoulli, Độ nhớt và chảy rối."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<!--@include: ../../../raw_materials/physics/translations/chapter-12/00-mo-dau.md-->
 
-## Đề cương chi tiết bài giảng
+<TopicMap />
 
-- Lời mở đầu và mục tiêu học tập.
-- 12.1 — Gases, Liquids, and Density (từ trang 366).
-- 12.2 — Pressure in a Fluid (từ trang 368).
-- 12.3 — Buoyancy (từ trang 373).
-- 12.4 — Fluid Flow (từ trang 376).
-- 12.5 — Bernoulli’s Equation (từ trang 378).
-- 12.6 — Viscosity and Turbulence (từ trang 382).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<!--@include: ../../../raw_materials/physics/translations/chapter-12/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 12.
