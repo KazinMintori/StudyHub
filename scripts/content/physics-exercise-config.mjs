@@ -1,5 +1,6 @@
-export const publishedPhysicsExerciseChapters = [4,7,9,10,11,17,18,19,20]
+export const publishedPhysicsExerciseChapters = [4,6,7,9,10,11,17,18,19,20]
 export const physicsExerciseConfigs = {
+ 6:{"numbered": 97, "total": 134, "guided": 12, "discussion": 24, "half": 49, "files": [["guided", "parent-09-luyen-tap-huong-dan.md"], ["discussion", "parent-10-cau-hoi-thao-luan.md"], ["numbered-a", "parent-11-bai-tap-001-049.md"], ["numbered-b", "parent-12-bai-tap-050-097.md"], ["bridge", "parent-16-bai-tap-cau-noi.md"]]},
  7:{"numbered": 84, "total": 120, "guided": 12, "discussion": 23, "half": 42, "files": [["guided", "parent-09-luyen-tap-huong-dan.md"], ["discussion", "parent-10-cau-hoi-thao-luan.md"], ["numbered-a", "parent-11-bai-tap-001-042.md"], ["numbered-b", "parent-12-bai-tap-043-084.md"], ["bridge", "parent-16-bai-tap-cau-noi.md"]]},
  4:{numbered:60,total:111,guided:12,discussion:38,half:30,files:[
   ['guided','parent-09-luyen-tap-huong-dan.md'],

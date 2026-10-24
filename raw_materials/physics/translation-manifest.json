@@ -760,7 +760,7 @@
           "page": 187
         }
       ],
-      "status": "authored-under-review",
+      "status": "complete",
       "fragments": [
         {
           "sourceUnit": "00-mo-dau",
@@ -769,25 +769,25 @@
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "01-muc-01",
+          "sourceUnit": "6.1",
           "file": "raw_materials/physics/translations/chapter-06/01-muc-01.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "02-muc-02",
+          "sourceUnit": "6.2",
           "file": "raw_materials/physics/translations/chapter-06/02-muc-02.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "03-muc-03",
+          "sourceUnit": "6.3",
           "file": "raw_materials/physics/translations/chapter-06/03-muc-03.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "04-muc-04",
+          "sourceUnit": "6.4",
           "file": "raw_materials/physics/translations/chapter-06/04-muc-04.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
@@ -797,16 +797,41 @@
           "file": "raw_materials/physics/translations/chapter-06/17-tom-tat.md",
           "destination": "notes",
           "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-09-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-06/parent-09-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-10-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-06/parent-10-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-11-bai-tap-001-049",
+          "file": "raw_materials/physics/translations/chapter-06/parent-11-bai-tap-001-049.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-12-bai-tap-050-097",
+          "file": "raw_materials/physics/translations/chapter-06/parent-12-bai-tap-050-097.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-06/parent-16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "end-of-chapter-guided-problems",
-        "end-of-chapter-discussion-questions",
-        "end-of-chapter-numbered-problems",
-        "bridging-problem",
-        "end-exercise-source-numeric-and-browser-review"
-      ],
-      "theoryReview": "raw_materials/physics/reviews/ch06-remaining-theory-coverage.json"
+      "pendingSourceUnits": [],
+      "theoryReview": "raw_materials/physics/reviews/ch06-remaining-theory-coverage.json",
+      "completionReview": "raw_materials/physics/chapter-06-review.json"
     },
     {
       "chapter": 7,

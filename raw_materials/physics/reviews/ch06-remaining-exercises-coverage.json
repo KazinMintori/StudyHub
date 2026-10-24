@@ -1,0 +1,632 @@
+{
+  "chapter": 6,
+  "status": "source-numeric-and-browser-reviewed",
+  "sourcePDFPages": [
+    211,
+    220
+  ],
+  "exerciseConfig": {
+    "numbered": 97,
+    "total": 134,
+    "guided": 12,
+    "discussion": 24,
+    "half": 49,
+    "files": [
+      [
+        "guided",
+        "parent-09-luyen-tap-huong-dan.md"
+      ],
+      [
+        "discussion",
+        "parent-10-cau-hoi-thao-luan.md"
+      ],
+      [
+        "numbered-a",
+        "parent-11-bai-tap-001-049.md"
+      ],
+      [
+        "numbered-b",
+        "parent-12-bai-tap-050-097.md"
+      ],
+      [
+        "bridge",
+        "parent-16-bai-tap-cau-noi.md"
+      ]
+    ]
+  },
+  "independentSourceAudit": "raw_materials/physics/reviews/ch06-parent-exercises-20261025.md",
+  "sourceInventory": {
+    "numbered": 97,
+    "guided": 12,
+    "discussion": 24,
+    "bridge": 1
+  },
+  "reviewInputs": {
+    "early": "qa/physics1-remaining/ch06-gpt-early/report.json",
+    "guidedAndDiscussion": "qa/physics1-remaining/ch06-gpt-guided/report.md",
+    "figures": "qa/physics1-remaining/ch06-gpt-figures/report.json",
+    "late": "raw_materials/physics/verify_chapter06_parent_late.py"
+  },
+  "browser": {
+    "status": "passed",
+    "groups": 24,
+    "prompts": 134,
+    "fullCases": 120,
+    "finalAffectedCases": 15,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ]
+  },
+  "math": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 28,
+    "inlineLimitEx": 27,
+    "display": 458,
+    "inline": 1692,
+    "findings": []
+  },
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-06/00-mo-dau.md": "d7a4a7c64cc879142bea51d31a13e08586fa04099e0aa9c595aa0d9236355a21",
+    "raw_materials/physics/translations/chapter-06/01-muc-01.md": "1d726d03c07393c1cf42a93d9ef1f2874884ccf05a018f1c8ad1bcba0857d6d6",
+    "raw_materials/physics/translations/chapter-06/02-muc-02.md": "ff5f91d70f9cd7f8b57217d5ee3ee1b4e6874a4e6850068c9701d45106c1ab8d",
+    "raw_materials/physics/translations/chapter-06/03-muc-03.md": "7a50e8a876dfc991b15fb2fdc12c914b46d5c1649353a6d63cf2be2e990ed8de",
+    "raw_materials/physics/translations/chapter-06/04-muc-04.md": "4627407a7376d9ebd8bf59773d168778a801f72eaa0a57f4d5780c2e40bca429",
+    "raw_materials/physics/translations/chapter-06/17-tom-tat.md": "b70aabb8bc591d6f8b55a7ebded98d44912d685921821553fa544d6ee498a83e",
+    "raw_materials/physics/translations/chapter-06/parent-09-luyen-tap-huong-dan.md": "0662794f1a0ee15e41e04ab5752d34edcc39c7b0190e04e75f120d7c3260837d",
+    "raw_materials/physics/translations/chapter-06/parent-10-cau-hoi-thao-luan.md": "5b3713b18355bcf58091f0883208dfa98c33a28fa3b42c577c01d0e4ec0b299d",
+    "raw_materials/physics/translations/chapter-06/parent-11-bai-tap-001-049.md": "b9b675dd994a439bbfddfcba6ccc9b78e6b3676b5db5f12a83299e10d9dd766f",
+    "raw_materials/physics/translations/chapter-06/parent-12-bai-tap-050-097.md": "e836496b62901a66dbfd92693288dcac6d7f0f9ffebe48bdf71c94091f18c9b9",
+    "raw_materials/physics/translations/chapter-06/parent-16-bai-tap-cau-noi.md": "5a50f4d133234ce649236db2c91c68f868660c95bec71a670f1aa0d5b3fef655"
+  },
+  "numeric": {
+    "status": "passed",
+    "earlyNumbered": 49,
+    "lateNumbered": 48,
+    "guidedDiscussionBridge": 37,
+    "alternativeAlgorithmProblems": 15,
+    "qualitativeScope": "Qualitative units are checked by reasoning; record counts are not counts of numeric tests."
+  },
+  "originalExerciseCrops": 13,
+  "crossChapterReferenceCrops": 2,
+  "reusedTheoryDiagrams": 1,
+  "solutionDiagrams": 5,
+  "finalSourceReview": [
+    {
+      "id": "6.50",
+      "pdfPages": [
+        216
+      ],
+      "line": 3,
+      "sourceDataChecked": "20.0kg;8.00m/s;mu=.200",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Average power over stopping time, negative sign and magnitude distinguished.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.51",
+      "pdfPages": [
+        216
+      ],
+      "line": 61,
+      "sourceDataChecked": "Three flights;50ft;500W;class average weight to estimate",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Weight left as parameter;70kg is explicitly illustrative, not population data.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.52",
+      "pdfPages": [
+        216
+      ],
+      "line": 104,
+      "sourceDataChecked": "75kW/100hp;700kg;2.5m/s,150m/min,500ft/min",
+      "sourceSubparts": "single",
+      "reviewConclusion": "23 percent is climb-power fraction, not total efficiency.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.53",
+      "pdfPages": [
+        216
+      ],
+      "line": 143,
+      "sourceDataChecked": "30kg;0.90m;one minute;.50hp and100W",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Both rates84.6 and22.7 crates/min;746W per hp.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.54",
+      "pdfPages": [
+        216
+      ],
+      "line": 199,
+      "sourceDataChecked": "600kg elevator;20m/fivefloors;16s;40hp;65kg/passenger",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Maximum integer28 and both adjacent power levels checked.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.55",
+      "pdfPages": [
+        216
+      ],
+      "line": 245,
+      "sourceDataChecked": "15deg;300m;12km/h;50riders;70kg/rider",
+      "sourceSubparts": "single",
+      "reviewConclusion": "29.6kW ideal lifting power;length cancels in power.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.56",
+      "pdfPages": [
+        216
+      ],
+      "line": 288,
+      "sourceDataChecked": "F=(-8,3)N;v=(3.20,2.20)m/s",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Dot product -19W for specified force only.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.57",
+      "pdfPages": [
+        216
+      ],
+      "line": 341,
+      "sourceDataChecked": "Mass10g;force2mg;1.0cm perdownstroke;100downstrokes/s",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Original10g retained;0.196W;no erroneous extra factor1/2.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.58",
+      "pdfPages": [
+        216
+      ],
+      "line": 382,
+      "sourceDataChecked": "Fx=-(20.0N+3.0N/m*x);0to6.9m",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Variable force integral;negative work -209.415J.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.59",
+      "pdfPages": [
+        216
+      ],
+      "line": 429,
+      "sourceDataChecked": "20kg;32deg;160N parallel slope;mu=.300;s3.80m;initialrest",
+      "sourceSubparts": "a,b,c,d,e,f",
+      "reviewConclusion": "All four force works,net23.8J and speed1.54m/s,unrounded sums.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.60",
+      "pdfPages": [
+        216
+      ],
+      "line": 502,
+      "sourceDataChecked": "MassM;alpha0;groundlaunchandreturn;timeT;noairresistance",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Projectile relation and work Mg2T2/(8sin2alpha0);doublingT quadrupleswork.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.61",
+      "pdfPages": [
+        216
+      ],
+      "line": 553,
+      "sourceDataChecked": "5kg;60deg;2m verticalheight;final5m/s;newangle50deg",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "-35.5J then-51.6J;absolute friction work increases atfixedheight.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.62",
+      "pdfPages": [
+        216
+      ],
+      "line": 612,
+      "sourceDataChecked": "Massm;alpha;height h;mu_k;releasedfromrest",
+      "sourceSubparts": "single and anglecomparison",
+      "reviewConclusion": "Work -mu*m*g*h*cot(alpha);actualsliding required.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.63",
+      "pdfPages": [
+        216
+      ],
+      "line": 652,
+      "sourceDataChecked": "Reference6.7 weights20N and12N;75cm;mu_s.500;mu_k.325",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Separateblock totalworks5.625/3.375J and2.578/1.547J;staticstartup verified.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.64",
+      "pdfPages": [
+        216
+      ],
+      "line": 734,
+      "sourceDataChecked": "5kg;2.80m;24deg;mu.310;initial2.20m/s",
+      "sourceSubparts": "a,b,c,d,e",
+      "reviewConclusion": "All four force works andfinalspeed3.41m/s.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.65",
+      "pdfPages": [
+        216,
+        217
+      ],
+      "line": 799,
+      "sourceDataChecked": "Rear-end stoppedcar;8J threshold;10ms;head5kg;70kg context",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Speed1.79m/s=4mph;average179m/s2~18g;headforce894N;model limitation explicit.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.66",
+      "pdfPages": [
+        217
+      ],
+      "line": 858,
+      "sourceDataChecked": "5kg;Fx=-12N+.300N/m2*x2;x0=0;v0=-6m/s;xf5m",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Initial negative branch, leftturn and return retained;speed4.123m/s.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.67",
+      "pdfPages": [
+        217
+      ],
+      "line": 903,
+      "sourceDataChecked": "Initial4.50m/s;mu.100to.600 over12.5m",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "Slope.040/m;stop5.11m;mu.304;constantcase10.3m.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.68",
+      "pdfPages": [
+        217
+      ],
+      "line": 973,
+      "sourceDataChecked": "k100N/m;b700N/m2;c12000N/m3;deformations+/-0.050m",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "External holding force notspringforce;stretch.115J vscompress.173J;real-springcontext restored.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.69",
+      "pdfPages": [
+        217
+      ],
+      "line": 1025,
+      "sourceDataChecked": "MassM;constant horizontalforce;D;WD;V;startsrest",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Halfwork gives V/sqrt2>V/2;halfspeedrequiresWD/4<WD/2.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.70",
+      "pdfPages": [
+        217
+      ],
+      "line": 1072,
+      "sourceDataChecked": "Person530N;initialcompression1.80cm;dog180N;dampedfinalrest",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Equilibrium determines endpoints;springwork -3.79J independentof damping details.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.71",
+      "pdfPages": [
+        217
+      ],
+      "line": 1114,
+      "sourceDataChecked": "m.0600kg;r.40to.10m;speed.70to2.80m/s",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "Tensions.0735N/4.704N andwork.2205J;endpointcircularstates distinguishedfromspiral.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.72",
+      "pdfPages": [
+        217
+      ],
+      "line": 1168,
+      "sourceDataChecked": "Proton1.67e-27kg;3e5m/s;initial5.00m;alpha2.12e-26Nm2;target8e-10m",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "Repulsive worknegativeinward;speed2.414e5;rmin2.821e-10;return3e5 outward.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.73",
+      "pdfPages": [
+        217
+      ],
+      "line": 1243,
+      "sourceDataChecked": "1200kg;.65m/s;maximumcompression.090m;masslessspring",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Minimumk6.26e4N/m andinequalitydirection given.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.74",
+      "pdfPages": [
+        217
+      ],
+      "line": 1277,
+      "sourceDataChecked": "Person+bicycle80kg;5m/s to1.5m/s;height5.20m;no losses",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Totalwork -910J;pedalwork3166.8J;translationalmodel stated.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.75",
+      "pdfPages": [
+        217
+      ],
+      "line": 1328,
+      "sourceDataChecked": "Book2.50kg;k250N/m;compression.250m;mu.30;notattached",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Totaldistance1.063m includescompression;contactendsatnatural length.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.76",
+      "pdfPages": [
+        217
+      ],
+      "line": 1375,
+      "sourceDataChecked": "k400N/m;m.0300kg;compression/barrel6cm;resisting6N",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "No-friction6.93m/s,frictionexit4.90,max5.20 attravel4.50cm.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.77",
+      "pdfPages": [
+        218
+      ],
+      "line": 1446,
+      "sourceDataChecked": "k130N/m;m4kg;mu.400;push82N;towardwall;compression80cm",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Speed2.39m/s andacceleration9.42m/s2awayfromwall despiteinwardvelocity.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.78",
+      "pdfPages": [
+        218
+      ],
+      "line": 1490,
+      "sourceDataChecked": "k76N/m;m2kg;constant54Nawayfrompost;stretch.400m;frictionless",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Speed3.94m/s;acceleration11.8m/s2awayfrompost.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.79",
+      "pdfPages": [
+        218
+      ],
+      "line": 1534,
+      "sourceDataChecked": "m5kg;v06m/s;k500N/m;frictionless;compressionlimit.150m",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Maximumcompression.600m;allowedinitialspeed1.50m/s.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.80",
+      "pdfPages": [
+        218
+      ],
+      "line": 1580,
+      "sourceDataChecked": "85kg;30deg;horizontal600N;s2.50m;initial2m/s;frictionlessrollers",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Forcecosine retained;final3.17m/s;normaldoesnowork.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.81",
+      "pdfPages": [
+        218
+      ],
+      "line": 1627,
+      "sourceDataChecked": "8kg+6kg;pulleyideal;initial.900m/s;stopsafter2m",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Bothkineticenergies counted;mu.786;no unwarrantedstatic conclusion.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.82",
+      "pdfPages": [
+        218
+      ],
+      "line": 1675,
+      "sourceDataChecked": "Same8kg+6kg system;mu.250;rest;down1.50m",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Totalmass14kg;work58.8J;speed2.90m/s;slidingassumptionexplicit.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.83",
+      "pdfPages": [
+        218
+      ],
+      "line": 1714,
+      "sourceDataChecked": "Ice;3.0to1.65m/s;friction25percentweight",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Length1.281m;masscancels.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.84",
+      "pdfPages": [
+        218
+      ],
+      "line": 1748,
+      "sourceDataChecked": "10–25W/kg;Patagonagigas70g;10beats/s;person70kg;peak1.4kW;steady500W",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Birdwork.070–.175J/beat;humanflappingsteady700–1750W>500W;modelscope explicit.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.85",
+      "pdfPages": [
+        218
+      ],
+      "line": 1787,
+      "sourceDataChecked": "800kg/min~210gallon/min;height14m;exit18m/s",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "109760J lifting+129600J kinetic perminute;3.989kW usefuloutput.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.86",
+      "pdfPages": [
+        218
+      ],
+      "line": 1833,
+      "sourceDataChecked": "L.600m;m.200kg;F.760Ntangential;restatvertical;alpha37deg",
+      "sourceSubparts": "single",
+      "reviewConclusion": "Arcwork,radconversion,gravitynegative,tensionzero work;speed.7594m/s.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.87",
+      "pdfPages": [
+        218
+      ],
+      "line": 1880,
+      "sourceDataChecked": "Reference8kg+6kg system;rest;tension37N;s.800m",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "All requested force/networks forbothblocks andcomposite;system40.69J;tensionscancelonlysystem.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.88",
+      "pdfPages": [
+        218
+      ],
+      "line": 1954,
+      "sourceDataChecked": "F=2.50N/m2*x*y*i;three specifiedpaths endpoints(2,3)",
+      "sourceSubparts": "a,b,c",
+      "reviewConclusion": "Works15,0,10J;nonconservativecomparisonusesan added sameendpoint route correctly.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.89",
+      "pdfPages": [
+        218
+      ],
+      "line": 2001,
+      "sourceDataChecked": "7500L/day;rho1.05e3kg/m3;Americanwomanheight1.63m asestimate",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Volume7.5m3,totalflowmass7875kg;work125795J;power1.46W;notbloodsimultaneouslypresent.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.90",
+      "pdfPages": [
+        218,
+        219
+      ],
+      "line": 2046,
+      "sourceDataChecked": "F=33.55*x^.4871 numericSI;0to.040to.080m;m.300kg",
+      "sourceSubparts": "a,b,c,d",
+      "reviewConclusion": "Allfourparts;keffdecreases;integral.188/.339J;contractionspeed1.50m/s;dimensionalfit rewrittenconsistently.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.91",
+      "pdfPages": [
+        219
+      ],
+      "line": 2125,
+      "sourceDataChecked": "m.300kg;initialcompression.400m;eightoriginalpairs;NO.20row",
+      "sourceSubparts": "a,b,c,d",
+      "reviewConclusion": "QuadraticfitA-39.96031,B16.30609,C.00132508;dmax.20403;vmax1.29026;k11.9881;mu.79909.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.92",
+      "pdfPages": [
+        219
+      ],
+      "line": 2232,
+      "sourceDataChecked": "h16m;Tatiana50.2,Bill68.2,Ricardo81.8,Melanie59.1kg;Chang62.3kg,1hp",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Bars~31/50/45/53s;maxRicardo/minMelanie robustto+/-1s;Chang13.095s.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.93",
+      "pdfPages": [
+        219
+      ],
+      "line": 2276,
+      "sourceDataChecked": "SpringM,L0,k;linearvelocity,uniformmass;spring.243kg;k3200;X.025m;ball.053kg",
+      "sourceSubparts": "a,b,c,d",
+      "reviewConclusion": "Allhintsteps;Ks=Mv2/6;ballspeeds6.143/3.863;Kb.3955/Ks.6045J.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.94",
+      "pdfPages": [
+        219
+      ],
+      "line": 2370,
+      "sourceDataChecked": "Dragalpha*v2+beta/v2;Cessna150;alpha.30Ns2/m2;beta3.5e5Nm2/s2",
+      "sourceSubparts": "a,b",
+      "reviewConclusion": "Fixedenergy/efficiency model stated;range118.315km/h,endurance89.900km/h;bothpositiveuniqueminima verified.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.95",
+      "pdfPages": [
+        220
+      ],
+      "line": 2454,
+      "sourceDataChecked": "Sharedpassage70kg;300W;walk5km/h~1.4m/s;bike15km/h;1km",
+      "sourceSubparts": "single,choicesa–d",
+      "reviewConclusion": "Energybike/walk1/3,choicea.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.96",
+      "pdfPages": [
+        220
+      ],
+      "line": 2485,
+      "sourceDataChecked": "Sharedpassage;70kg;5km/h;treadmillgrade5percent;addverticalworkrate",
+      "sourceSubparts": "single,choicesa–d",
+      "reviewConclusion": "Percentgrade=tan,notdegrees;348W nearest350W,choicec.",
+      "status": "source-and-solution-reviewed"
+    },
+    {
+      "id": "6.97",
+      "pdfPages": [
+        220
+      ],
+      "line": 2525,
+      "sourceDataChecked": "Sharedpassage;massofbikeignored;speedratio15/5",
+      "sourceSubparts": "single,choicesa–d",
+      "reviewConclusion": "Kineticenergyratio9,choiced;distinguishesmetabolicenergyperdistance.",
+      "status": "source-and-solution-reviewed"
+    }
+  ],
+  "resolution": "All recorded source, arithmetic and presentation findings resolved; new6.91 plot regenerated with14px labels and15final viewport cases passed.",
+  "antigravityAudit": "Separate audit remains under review; not represented as complete."
+}

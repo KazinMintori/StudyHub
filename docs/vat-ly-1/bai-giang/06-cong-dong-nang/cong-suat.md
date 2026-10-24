@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "06-cong-dong-nang"
-section: "topic"
 topic: "cong-suat"
+section: "topic"
 title: "Công suất"
 description: "Tốc độ sinh công hoặc tiêu thụ năng lượng theo thời gian được định lượng ra sao?"
 ---

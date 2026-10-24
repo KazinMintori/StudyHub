@@ -376,7 +376,7 @@ export const physics1Course = {
   "supportingConcepts": [
     "cong-nang-luong"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 6,
   "sourceChapter": 6,
   "topicGroups": [
@@ -409,7 +409,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "07-the-nang-bao-toan-co-nang",
@@ -1768,6 +1769,46 @@ export const physics1Course = {
       "Trong một chiều, cân bằng bền ở cực tiểu địa phương và không bền ở cực đại. Dấu đạo hàm bậc hai là điều kiện đủ tại điểm dừng không suy biến. Khi đạo hàm bậc hai bằng không, phải xét thêm hình dạng của thế năng."
     ],
     "formula": "$$\nK=E-U(x)\n$$"
+  },
+  {
+    "note": "06-cong-dong-nang",
+    "title": "Công của lực không đổi",
+    "bullets": [
+      "Áp dụng cho lực không đổi tác dụng lên chất điểm chuyển động thẳng với độ dời xác định.",
+      "Với lực không đổi có độ lớn dương và độ dời khác không, dấu của công bằng dấu cosin góc giữa lực và độ dời.",
+      "Tổng công bằng tổng đại số công của các lực. Với các lực không đổi trên cùng độ dời thẳng, có thể tính bằng hợp lực.",
+      "Trong SI, công và động năng cùng đo bằng joule."
+    ],
+    "formula": "$$\nW = \\vec F \\cdot \\vec s = Fs\\cos\\phi\n$$"
+  },
+  {
+    "note": "06-cong-dong-nang",
+    "title": "Động năng và định lý công–động năng",
+    "bullets": [
+      "Năng lượng chuyển động của chất điểm khối lượng dương, không đổi trong cơ học Newton. Động năng không âm và phụ thuộc hệ quy chiếu.",
+      "Độ biến thiên động năng của chất điểm bằng tổng công của tất cả các ngoại lực tác dụng lên nó trong hệ quy chiếu quán tính."
+    ],
+    "formula": "$$\nK = \\frac{1}{2}mv^2\n$$"
+  },
+  {
+    "note": "06-cong-dong-nang",
+    "title": "Công của lực biến đổi và chuyển động cong",
+    "bullets": [
+      "Chất điểm chuyển động thẳng dọc theo trục x từ vị trí x1 đến x2 dưới tác dụng của lực biến đổi Fx(x).",
+      "Định luật Hooke trong miền biến dạng tuyến tính. Độ biến dạng x tính từ chiều dài tự nhiên. Lực ngoài kx giữ cân bằng đầu lò xo hoặc kéo, nén chậm.",
+      "Công của lực ngoài khi biến dạng chậm lò xo lý tưởng. Công của lò xo lên vật chuyển động có dấu ngược lại.",
+      "Công trên một đường đi xác định là tích phân của thành phần lực theo tiếp tuyến, lấy theo chiều chuyển động."
+    ],
+    "formula": "$$\nW = \\int_{x_1}^{x_2} F_x\\,dx\n$$"
+  },
+  {
+    "note": "06-cong-dong-nang",
+    "title": "Công suất",
+    "bullets": [
+      "Đại lượng vô hướng đặc trưng cho tốc độ thực hiện công hoặc tốc độ truyền năng lượng theo thời gian.",
+      "Watt là đơn vị công suất, mã lực là đơn vị công suất ngoài SI. Kilowatt-giờ là đơn vị năng lượng."
+    ],
+    "formula": "$$\nP_{\\mathrm{av}} = \\frac{\\Delta W}{\\Delta t}\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"

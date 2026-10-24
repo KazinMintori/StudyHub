@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "06-cong-dong-nang"
-section: "topic"
 topic: "cong-co-hoc"
+section: "topic"
 title: "Công cơ học"
 description: "Làm thế nào để đo lường tác dụng truyền năng lượng của một lực khi làm vật dịch chuyển?"
 ---

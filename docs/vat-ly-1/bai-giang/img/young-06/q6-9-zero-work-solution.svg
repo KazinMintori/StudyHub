@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="330" viewBox="0 0 480 330" role="img" aria-labelledby="title desc">
+  <title id="title">Đồ thị lực có công tổng bằng không</title>
+  <desc id="desc">Lực tuyến tính tăng từ giá trị âm tại x1 đến giá trị dương tại x2 và bằng không ở trung điểm x0. Hai miền tam giác có diện tích bằng nhau, một miền âm và một miền dương.</desc>
+  <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#39313f"/></marker></defs>
+  <rect width="480" height="330" fill="#fffdfa"/>
+  <g font-family="'Be Vietnam Pro',Arial,sans-serif" font-size="23" fill="#39313f">
+    <path d="M100 170L100 260L260 170Z" fill="#ddd4ec"/>
+    <path d="M260 170L420 80L420 170Z" fill="#ead8ad"/>
+    <path d="M60 170H455" stroke="#39313f" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M60 280V35" stroke="#39313f" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M100 260L420 80" stroke="#705286" stroke-width="4"/>
+    <path d="M100 170V280M260 170V280M420 170V280" stroke="#8b838d" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <text x="28" y="33">Fₓ</text><text x="453" y="157">x</text>
+    <text x="90" y="308">x₁</text><text x="247" y="308">x₀</text><text x="407" y="308">x₂</text>
+    <text x="108" y="205">W₁ &lt; 0</text><text x="335" y="163">W₂ &gt; 0</text>
+    <text x="157" y="43">W₁ + W₂ = 0</text>
+  </g>
+</svg>
