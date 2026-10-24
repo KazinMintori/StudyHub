@@ -136,7 +136,7 @@
  html.study-lookup-open .Layout .VPDoc .content-container { min-width:0;max-width:100%; }
 }
 @media (max-width:1279px) {
- html.study-lookup-open .Layout .VPContent { padding-bottom:calc(48dvh + var(--space-5)); }
+ html.study-lookup-open .Layout .VPContent { padding-bottom:calc(62dvh + var(--space-5)); }
 }
 @media (max-width:767px) {
  .nav-extra-tools { position:fixed;top:var(--vp-nav-height);inset-inline:0;height:52px;box-sizing:border-box;justify-content:flex-end;margin:0;padding:var(--space-1) 16px;gap:var(--space-2);background:var(--paper);border-bottom:1px solid var(--rule); }

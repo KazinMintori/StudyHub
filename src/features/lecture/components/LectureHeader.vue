@@ -5,7 +5,6 @@ import { useLecture, lecturePart, shouldIgnoreNavigationClick } from '../../navi
 import { lecturePath, lectureParts } from '../services/lecture-model.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
-import SplitCheatsheetDrawer from './SplitCheatsheetDrawer.vue'
 import CourseArt from '../../illustrations/components/CourseArt.vue'
 
 const { course, lesson, part } = useLecture(), router = useRouter(), { page } = useData()
@@ -112,6 +111,5 @@ onUnmounted(() => {
         {{ item.name }}
       </a>
     </nav>
-    <SplitCheatsheetDrawer class="lecture-split-tool" />
   </div>
 </template>

@@ -2,7 +2,6 @@
 import { ref, nextTick } from 'vue'
 import { onContentUpdated } from 'vitepress'
 import { useTopic } from '../controllers/topic-state.js'
-import SplitCheatsheetDrawer from './SplitCheatsheetDrawer.vue'
 import { lecturePath, topicPath } from '../services/lecture-model.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 
@@ -42,7 +41,6 @@ const lectureLabel = lesson => lesson.kind === 'review' ? 'Ôn luyện' : `Bài 
           <a :href="studyLink(topicPath(course.id, lesson.slug, item.slug))" :title="`${i + 1}. ${item.title}`" :aria-current="i === index ? 'page' : undefined"><span class="visually-hidden">{{ i + 1 }}. {{ item.title }}</span></a>
         </li>
       </ol>
-      <SplitCheatsheetDrawer class="topic-lookup-tool" />
     </header>
   </template>
 </template>

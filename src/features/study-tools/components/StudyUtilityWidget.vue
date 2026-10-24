@@ -2,9 +2,15 @@
 import { ref, computed, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vitepress'
 import { useFocusTimer } from '../controllers/useFocusTimer.js'
+import { useLecture } from '../../navigation/index.mjs'
+import SplitCheatsheetDrawer from '../../lecture/components/SplitCheatsheetDrawer.vue'
 
 defineProps({ courseName: { type: String, default: '' } })
 const route = useRoute()
+const { course, lesson } = useLecture()
+const lookup = ref(null)
+const lookupAvailable = computed(() => Boolean(course.value && lesson.value))
+function openLookup() { closeTools(); lookup.value?.openDrawer(triggerRef.value) }
 const { display, running, toggle, reset, remaining, minutes, finished, selectMinutes } = useFocusTimer()
 const open = ref(false), showScratchpad = ref(false), noteContent = ref(''), storageError = ref(false)
 const customMinutes = ref('25'), durationError = ref('')
@@ -50,6 +56,7 @@ watch(noteContent, value => {
   } catch { storageError.value = true }
 })
 async function toggleTools() {
+  if (!open.value) lookup.value?.closeDrawer(false)
   open.value = !open.value
   if (open.value) { await nextTick(); closeRef.value?.focus() }
 }
@@ -101,6 +108,11 @@ onUnmounted(() => {
         <button ref="closeRef" type="button" class="study-tools-close" aria-label="Đóng công cụ học tập" @click="closeTools(true)"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button>
       </header>
       <div class="study-tools-cards">
+        <button v-if="lookupAvailable" type="button" class="study-tool-card lookup-tool-card" aria-haspopup="dialog" aria-controls="parallel-cheatsheet" @click="openLookup">
+          <span class="tool-icon lookup-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5M10.5 7.5v6m-3-3h6" /></svg></span>
+          <span class="note-card-copy"><strong>Notebook</strong><span>Kiến thức, tính chất và công thức đang học</span></span>
+          <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
+        </button>
         <section class="study-tool-card timer-tool-card" aria-labelledby="focus-tool-title">
           <div class="tool-card-heading">
             <span class="tool-icon timer-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 1.5M9 2h6m-3 0v3m6 1 1.5-1.5" /></svg></span>
@@ -142,6 +154,7 @@ onUnmounted(() => {
         </section>
       </div>
     </section>
+    <SplitCheatsheetDrawer ref="lookup" />
   </div>
 </template>
 
@@ -160,6 +173,10 @@ onUnmounted(() => {
 .study-tools-close:hover { background:var(--canvas); color:var(--ink); }
 .study-tools-cards { display:grid; gap:var(--space-3); }
 .study-tool-card { min-width:0; border:1px solid var(--rule); border-radius:var(--radius-lg); background:var(--canvas); }
+.lookup-tool-card { display:flex; align-items:center; gap:var(--space-3); width:100%; min-height:84px; padding:var(--space-4); text-align:left; white-space:normal; cursor:pointer; color:var(--ink); font-family:var(--font-ui); }
+.lookup-tool-card>svg { flex-shrink:0; }
+.lookup-tool-card:hover { background:var(--sunken); }
+.lookup-icon { background:var(--tim-soft); color:var(--tim); }
 .timer-tool-card { padding:var(--space-4); }
 .tool-card-heading { display:flex; align-items:center; gap:var(--space-3); }
 .tool-icon { display:grid; place-items:center; flex:0 0 40px; width:40px; height:40px; border-radius:var(--radius); }
@@ -189,7 +206,7 @@ onUnmounted(() => {
 .pomo-reset:hover { background:var(--sunken); }
 .scratchpad-toggle-btn { display:flex; align-items:center; gap:var(--space-3); width:100%; min-height:84px; padding:var(--space-4); border:0; border-radius:var(--radius-lg); background:transparent; color:var(--ink); text-align:left; cursor:pointer; }
 .scratchpad-toggle-btn:hover { background:var(--sunken); }
-.note-card-copy { display:grid; flex:1; min-width:0; gap:var(--space-1); }
+.note-card-copy { display:grid; flex:1; min-width:0; gap:var(--space-1); white-space:normal; }
 .note-card-copy strong { font:600 var(--fs-ui)/1.4 var(--font-ui); }
 .note-card-copy>span { color:var(--ink-3); font-size:var(--fs-meta); line-height:1.5; }
 .note-chevron { flex:0 0 16px; color:var(--ink-3); transition:transform var(--motion-fast) var(--ease); }
