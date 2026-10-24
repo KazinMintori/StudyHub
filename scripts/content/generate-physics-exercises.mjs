@@ -5,6 +5,7 @@ import {join,resolve} from 'node:path'
 import {createHash} from 'node:crypto'
 import {splitPhysicsExercises} from './physics-exercise-groups.mjs'
 import {publishedPhysicsExerciseChapters,physicsExerciseConfigs,physicsExerciseFiles,validatePhysicsExerciseIds} from './physics-exercise-config.mjs'
+import {publishPhysicsExerciseImages} from './publish-physics-exercise-images.mjs'
 const selected=process.argv.slice(2).map(Number)
 if(selected.some(chapter=>!Number.isInteger(chapter)||!physicsExerciseConfigs[chapter]))throw Error('Unconfigured exercise chapter')
 for(const chapter of selected.length?selected:publishedPhysicsExerciseChapters){
@@ -12,7 +13,7 @@ const chapterLabel=String(chapter).padStart(2,'0')
 const directory=resolve('docs/public/physics-exercises/ch'+chapterLabel)
 await mkdir(directory,{recursive:true})
 const files=physicsExerciseFiles(chapter)
-const groups=[],sources=[]
+const groups=[],sources=[],images=new Map()
 for(const[kind,file]of files){
  const path='raw_materials/physics/translations/chapter-'+chapterLabel+'/'+file
  const source=await readFile(path,'utf8')
@@ -31,10 +32,16 @@ try{
    const child=spawn(process.execPath,['--max-old-space-size=512','scripts/content/render-physics-exercise-group.mjs',input,join(directory,group.id+'.json')],{stdio:'inherit',windowsHide:true})
    child.once('error',fail);child.once('exit',code=>code===0?done():fail(Error('Group render failed: '+group.id)))
   })
+  const output=join(directory,group.id+'.json')
+  const payload=JSON.parse(await readFile(output,'utf8'))
+  const published=await publishPhysicsExerciseImages(payload.html)
+  payload.html=published.html
+  for(const image of published.images)images.set(image.publicPath,image)
+  await writeFile(output,JSON.stringify(payload))
   console.log('Rendered '+group.title)
  }
  // Publish the index only after every complete group was rendered successfully.
- await writeFile(join(directory,'index.json'),JSON.stringify({chapter,sources,total,groups:groups.map(({markdown,...g})=>g)}))
+ await writeFile(join(directory,'index.json'),JSON.stringify({chapter,sources,total,images:[...images.values()],groups:groups.map(({markdown,...g})=>g)}))
 }finally{
  // This exact directory was created above by mkdtemp and is owned by this run.
  await rm(temporary,{recursive:true,force:true})
