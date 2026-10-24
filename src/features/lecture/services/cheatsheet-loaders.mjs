@@ -34,7 +34,7 @@ export const cheatsheetLoaders = {
   'vat-ly-1/05-ung-dung-newton': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.newtonApplicationsCheatsheet),
   'vat-ly-1/06-cong-dong-nang': () => import('../../../../docs/.vitepress/physics1-remaining-ch06-course.mjs').then(module => module.physics1RemainingChapter6Parent.cheatsheet),
   'vat-ly-1/07-the-nang-bao-toan-co-nang': () => import('../../../../docs/.vitepress/physics1-remaining-ch07-course.mjs').then(module => module.physics1RemainingChapter7Parent.cheatsheet),
-  'vat-ly-1/08-dong-luong-va-cham': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.momentumCheatsheet),
+  'vat-ly-1/08-dong-luong-va-cham': () => import('../../../../docs/.vitepress/physics1-remaining-ch08-course.mjs').then(module => module.physics1RemainingChapter8Parent.cheatsheet),
   'vat-ly-1/09-dong-hoc-vat-ran': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[9].cheatsheet),
   'vat-ly-1/10-dong-luc-hoc-quay': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[10].cheatsheet),
   'vat-ly-1/11-can-bang-dan-hoi': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[11].cheatsheet),

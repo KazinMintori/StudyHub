@@ -351,20 +351,67 @@ export const physics1Course = {
   ]
 },
     {
-      "slug": "08-dong-luong-va-cham",
+  "slug": "08-dong-luong-va-cham",
+  "title": "Động lượng, xung lượng và va chạm",
+  "prerequisites": [
+    "vector",
+    "luc",
+    "he-quy-chieu-quan-tinh",
+    "van-toc-tuong-doi",
+    "cong-nang-luong"
+  ],
+  "supportingConcepts": [
+    "dong-luong-vat-ly",
+    "khoi-tam",
+    "va-cham-dan-hoi"
+  ],
+  "status": "draft",
+  "number": 8,
+  "sourceChapter": 8,
+  "topicGroups": [
+    {
       "title": "Động lượng, xung lượng và va chạm",
-      "prerequisites": [
-        "vector",
-        "tich-phan",
-        "cong-nang-luong"
-      ],
-      "supportingConcepts": [
-        "dong-luong-vat-ly"
-      ],
-      "status": "draft",
-      "number": 8,
-      "sourceChapter": 8
-    },
+      "topics": [
+        {
+          "slug": "dong-luong-va-xung-luong",
+          "title": "Động lượng và xung lượng",
+          "question": "Động lượng của một chất điểm được định nghĩa như thế nào và xung lượng của hợp lực tác dụng làm thay đổi động lượng ra sao?",
+          "source": "8.1"
+        },
+        {
+          "slug": "dinh-luat-bao-toan-dong-luong",
+          "title": "Định luật bảo toàn động lượng",
+          "question": "Trong những điều kiện nào thì tổng động lượng của một hệ chất điểm được bảo toàn và nguyên lý này áp dụng ra sao cho chuyển động nhiều chiều?",
+          "source": "8.2"
+        },
+        {
+          "slug": "bao-toan-dong-luong-va-va-cham",
+          "title": "Bảo toàn động lượng và va chạm",
+          "question": "Sự khác biệt về mặt cơ chế và năng lượng giữa va chạm đàn hồi, va chạm không đàn hồi và va chạm hoàn toàn mềm là gì?",
+          "source": "8.3"
+        },
+        {
+          "slug": "va-cham-dan-hoi",
+          "title": "Va chạm đàn hồi",
+          "question": "Trong va chạm đàn hồi một chiều và hai chiều, các phương trình bảo toàn động lượng và bảo toàn động năng liên hệ với nhau như thế nào?",
+          "source": "8.4"
+        },
+        {
+          "slug": "khoi-tam",
+          "title": "Khối tâm",
+          "question": "Khối tâm của một hệ chất điểm được xác định ra sao và hợp ngoại lực chi phối gia tốc của khối tâm theo quy luật nào?",
+          "source": "8.5"
+        },
+        {
+          "slug": "chuyen-dong-phan-luc-ten-lua",
+          "title": "Chuyển động phản lực của tên lửa",
+          "question": "Phương trình chuyển động phản lực của tên lửa được thiết lập như thế nào khi khối lượng của tên lửa liên tục giảm theo thời gian?",
+          "source": "8.6"
+        }
+      ]
+    }
+  ]
+},
     {
   "slug": "09-dong-hoc-vat-ran",
   "title": "Chuyển động quay của vật rắn",

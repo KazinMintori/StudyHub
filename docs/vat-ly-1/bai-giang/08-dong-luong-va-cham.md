@@ -1,29 +1,20 @@
 ---
-course: vat-ly-1
-lecture: 08-dong-luong-va-cham
-section: lecture
+course: "vat-ly-1"
+lecture: "08-dong-luong-va-cham"
+section: "lecture"
 title: "Động lượng, xung lượng và va chạm"
-prerequisites: ["vector","tich-phan","cong-nang-luong"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Động lượng, xung lượng và va chạm."
+prerequisites: ["vector","luc","he-quy-chieu-quan-tinh","van-toc-tuong-doi","cong-nang-luong"]
+lessonStatus: "draft"
+sourceTranslation: "full"
+description: "Động lượng và xung lượng, Định luật bảo toàn động lượng, Bảo toàn động lượng và va chạm, Va chạm đàn hồi, Khối tâm, Chuyển động phản lực của tên lửa."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<!--@include: ../../../raw_materials/physics/translations/chapter-08/00-mo-dau.md-->
 
-## Đề cương chi tiết bài giảng
+<TopicMap />
 
-- Lời mở đầu và mục tiêu học tập.
-- 8.1 — Momentum and Impulse (từ trang 235).
-- 8.2 — Conservation of Momentum (từ trang 241).
-- 8.3 — Momentum Conservation and Collisions (từ trang 245).
-- 8.4 — Elastic Collisions (từ trang 249).
-- 8.5 — Center of Mass (từ trang 253).
-- 8.6 — Rocket Propulsion (từ trang 256).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<!--@include: ../../../raw_materials/physics/translations/chapter-08/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 8.
