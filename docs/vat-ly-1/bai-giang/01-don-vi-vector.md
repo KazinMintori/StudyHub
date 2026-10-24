@@ -1,23 +1,20 @@
 ---
-course: vat-ly-1
-lecture: 01-don-vi-vector
-section: lecture
+course: "vat-ly-1"
+lecture: "01-don-vi-vector"
+section: "lecture"
 title: "Đơn vị, đại lượng vật lý và vector"
 prerequisites: []
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Đơn vị, đại lượng vật lý và vector."
+lessonStatus: "draft"
+sourceTranslation: "full"
+description: "Bản chất của vật lý, Giải bài toán vật lý, Chuẩn đo lường và hệ đơn vị SI, Sử dụng và đổi đơn vị, Độ bất định và chữ số có nghĩa, Ước lượng và bậc độ lớn, Vector và phép cộng vector, Thành phần của vector, Vector đơn vị, Các phép nhân vector."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<!--@include: ../../../raw_materials/physics/translations/chapter-01/00-mo-dau.md-->
 
-## Đề cương chi tiết bài giảng
+<TopicMap />
 
-- Lời mở đầu và mục tiêu học tập.
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<!--@include: ../../../raw_materials/physics/translations/chapter-01/11-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 1.

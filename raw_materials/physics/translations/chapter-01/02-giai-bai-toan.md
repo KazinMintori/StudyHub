@@ -1,59 +1,53 @@
-<!-- Nguồn: mục 1.2, trang in 2–3, trang PDF 22–23; gồm Chiến lược 1.1, mô hình lý tưởng hóa và Hình 1.2. -->
-
 ## 1.2. Giải bài toán vật lý
 
-Trong quá trình học, hầu như mọi sinh viên vật lý đều có lúc nghĩ: “Mình hiểu khái niệm nhưng không giải được bài tập.” Tuy nhiên, trong vật lý, hiểu một khái niệm thực sự có nghĩa là có thể vận dụng nó vào nhiều bài toán. Học cách giải bài vì vậy là phần thiết yếu của việc học vật lý.
+Trong quá trình học, người học có thể nhận thấy: “Mình hiểu khái niệm nhưng không giải được bài tập.” Tuy nhiên, trong vật lý, hiểu một khái niệm thực sự đồng nghĩa với việc có thể vận dụng nó vào nhiều bài toán đa dạng. Rèn luyện kỹ năng giải bài vì vậy là phần thiết yếu của việc học vật lý.
 
-Mỗi chương của sách có các **chiến lược giải bài toán**, trình bày cách thiết lập và giải những loại bài cụ thể sao cho hiệu quả và chính xác. Sau mỗi chiến lược là một hoặc nhiều ví dụ có lời giải, cho thấy cách áp dụng. Các chiến lược cũng chỉ ra những cách làm sai mà người học có thể bị cuốn vào. Sách còn có những ví dụ không gắn với một chiến lược cụ thể. Cuối chương có bài toán tổng hợp nối nhiều ý chính của chương. Hãy nghiên cứu kỹ các chiến lược và bài toán ấy, đồng thời tự thực hiện từng ví dụ trên giấy.
+Trong toàn bộ môn học, ta xây dựng các **chiến lược giải bài toán**, trình bày cách thiết lập và giải những dạng bài cụ thể sao cho hiệu quả và chính xác. Sau mỗi chiến lược là các ví dụ có lời giải chi tiết, minh họa rõ từng thao tác áp dụng. Các chiến lược cũng chỉ ra những cách lập luận sai và cách tránh chúng. Bài giảng còn có những ví dụ mở rộng và bài toán tổng hợp liên kết nhiều ý tưởng trọng tâm của chương. Hãy nghiên cứu kỹ các chiến lược ấy, đồng thời tự đặt bút giải lại từng ví dụ trên giấy.
 
-Những loại bài khác nhau cần những kỹ thuật khác nhau, nên sách đưa ra nhiều chiến lược. Tuy vậy, mọi bài toán đều có một số bước chung. Những bước này cũng hữu ích trong toán học, kỹ thuật, hóa học và nhiều lĩnh vực khác. Sách tổ chức chúng thành bốn giai đoạn.
+Những dạng bài khác nhau cần những kỹ thuật chuyên biệt, nhưng mọi bài toán vật lý đều tuân theo một quy trình chung gồm bốn giai đoạn chuẩn mực. Những bước này cũng hữu ích trong toán học, kỹ thuật, hóa học và nhiều lĩnh vực khoa học khác.
 
-Tất cả chiến lược và ví dụ đều đi theo bốn bước này, đôi khi gộp hai hoặc ba bước đầu. Khi tự giải bài, bạn cũng nên sử dụng chúng. Có thể nhớ bằng chữ viết tắt **I SEE** của bốn từ tiếng Anh: *Identify, Set up, Execute, Evaluate*.
+Quy trình giải bài chuẩn mực gồm bốn bước, có thể ghi nhớ bằng chữ viết tắt **I SEE** từ bốn từ tiếng Anh: *Identify, Set up, Execute, Evaluate*.
 
-### Chiến lược giải bài toán 1.1 — Giải bài toán vật lý
+### Chiến lược giải bài toán 1.1: Giải bài toán vật lý
 
-**Bước 1. Xác định các khái niệm liên quan — Identify.**
+**Bước 1. Xác định các khái niệm liên quan (Identify)**:
+- Dựa vào các điều kiện vật lý nêu trong đề bài để xác định những khái niệm và quy luật cần sử dụng.
+- Xác định đại lượng mục tiêu cần tìm, tức những đại lượng mà bài toán yêu cầu xác định giá trị. Chẳng hạn, đó có thể là tốc độ của một vật khi chạm đất, cường độ âm của còi, hoặc vị trí ảnh do thấu kính tạo ra.
+- Xác định những đại lượng đã biết, gồm cả dữ kiện cho trực tiếp bằng số lẫn dữ kiện được hàm ý qua điều kiện biên của đề bài. Bước này cần thiết cho cả bài toán giải tích bằng chữ lẫn bài toán tính số.
 
-- Dựa vào các điều kiện vật lý nêu trong đề để xác định khái niệm nào cần dùng.
-- Xác định đại lượng cần tìm, tức những đại lượng mà bài yêu cầu xác định giá trị. Chẳng hạn, đó có thể là tốc độ của một vật ném khi chạm đất, cường độ âm của còi, hoặc kích thước ảnh do thấu kính tạo ra.
-- Xác định những đại lượng đã biết, kể cả dữ kiện được nêu trực tiếp lẫn dữ kiện được hàm ý trong đề. Bước này cần thiết dù bài yêu cầu một biểu thức đại số hay một kết quả bằng số.
+**Bước 2. Thiết lập bài toán (Set up)**:
+- Từ các khái niệm, dữ kiện đã biết và đại lượng cần tìm ở bước trước, lựa chọn những phương trình phù hợp và vạch rõ trình tự liên kết giữa chúng.
+- Bảo đảm các biến đã xác định tương ứng chính xác với các biến trong hệ phương trình vật lý.
+- Khi phù hợp, vẽ phác sơ đồ tình huống mà đề bài mô tả. Một hình vẽ rõ ràng với hệ trục tọa độ thích hợp sẽ định hướng toàn bộ lời giải.
 
-**Bước 2. Thiết lập bài toán — Set up.**
+**Bước 3. Thực hiện lời giải (Execute)**:
+Sử dụng các phương trình đã chọn ở bước thiết lập để biến đổi đại số và tính toán những đại lượng mục tiêu đã xác định. Hãy chú ý giữ nguyên đơn vị qua từng bước tính để kiểm tra tính nhất quán.
 
-- Từ các khái niệm, dữ kiện và đại lượng cần tìm ở bước trước, chọn những phương trình sẽ sử dụng và cách sử dụng chúng. Các ví dụ có lời giải trong sách cho thấy cách lựa chọn phương trình. Nếu việc này còn khó, kỹ năng sẽ được cải thiện qua luyện tập.
-- Bảo đảm các biến đã xác định tương ứng đúng với các biến trong phương trình.
-- Khi phù hợp, vẽ phác tình huống mà đề mô tả. Giấy kẻ ô và thước giúp tạo những hình rõ ràng, có ích cho lời giải.
-
-**Bước 3. Thực hiện lời giải — Execute.**
-
-Sử dụng các phương trình đã chọn ở bước thiết lập để tính những đại lượng cần tìm đã xác định ở bước đầu. Các ví dụ trong sách minh họa các thao tác cụ thể của giai đoạn này.
-
-**Bước 4. Đánh giá kết quả — Evaluate.**
-
-- Xem kết quả có hợp lý hay không. Chẳng hạn, nếu tính độ cao của một quả bóng chày được ném lên, đáp số $1.0\,\mathrm{mm}$ là quá nhỏ và $100\,\mathrm{km}$ là quá lớn. Với biểu thức đại số, hãy xét xem nó có mô tả đúng điều sẽ xảy ra khi các biến nhận giá trị rất lớn hoặc rất nhỏ hay không.
-- Ghi lại kết quả nào có ý nghĩa đặc biệt để dùng về sau. Hãy tự hỏi có thể giải một phiên bản tổng quát hơn hoặc khó hơn của bài vừa làm như thế nào.
+**Bước 4. Đánh giá kết quả (Evaluate)**:
+- Kiểm tra tính hợp lý của kết quả thu được. Chẳng hạn, nếu tính độ cao của một quả bóng chày được ném lên, đáp số $1.0\,\mathrm{mm}$ là quá nhỏ và $100\,\mathrm{km}$ là phi thực tế. Với biểu thức đại số, hãy xét xem biểu thức có phản ánh đúng hành vi tiệm cận khi các biến số tiến tới giá trị rất lớn hoặc rất nhỏ hay không.
+- Rút ra ý nghĩa vật lý cốt lõi của kết quả và tự liên hệ xem phương pháp này có thể mở rộng cho những bài toán tổng quát hơn như thế nào.
 
 ### Mô hình lý tưởng hóa
 
-Trong giao tiếp hằng ngày, “mô hình” có thể là một bản sao thu nhỏ, chẳng hạn đường sắt mô hình, hoặc từ tiếng Anh *model* chỉ người trình diễn trang phục, thậm chí trình diễn hình thể khi không mặc trang phục. Trong vật lý, **mô hình** là phiên bản đơn giản hóa của một hệ vật lý mà việc phân tích đầy đủ mọi chi tiết sẽ quá phức tạp.
+Trong giao tiếp hằng ngày, “mô hình” có thể là một bản sao thu nhỏ, chẳng hạn mô hình tàu hỏa, hoặc từ tiếng Anh *model* chỉ người trình diễn trang phục. Trong vật lý, **mô hình lý tưởng hóa** là phiên bản đơn giản hóa của một hệ vật lý mà việc phân tích đầy đủ mọi chi tiết thực tế sẽ quá phức tạp.
 
-Ví dụ, ta muốn phân tích chuyển động của một quả bóng chày được ném đi, như ở Hình 1.2a. Quả bóng không phải hình cầu hoàn hảo vì có các đường chỉ may nổi, và nó vừa chuyển động vừa quay. Lực cản không khí và gió ảnh hưởng đến chuyển động. Trọng lượng của bóng cũng thay đổi một chút theo độ cao. Nếu đưa tất cả những tác dụng này vào, việc phân tích sẽ trở nên quá phức tạp.
+Ví dụ: Ta muốn phân tích chuyển động của một quả bóng chày được ném đi, như ở Hình 1.2a. Quả bóng không phải hình cầu hoàn hảo vì có các đường chỉ may nổi, và nó vừa chuyển động tịnh tiến vừa quay quanh trục. Lực cản không khí và gió ảnh hưởng đáng kể đến quỹ đạo. Trọng lượng của bóng cũng thay đổi một lượng rất nhỏ theo độ cao. Nếu đưa tất cả những tác dụng này vào phương trình chuyển động, việc phân tích giải tích sẽ trở nên quá phức tạp.
 
-Thay vào đó, ta xây dựng một phiên bản đơn giản hơn. Ta bỏ qua kích thước, hình dạng và sự quay của bóng bằng cách biểu diễn nó như một vật điểm, hay **chất điểm**. Ta bỏ lực cản không khí bằng cách cho bóng chuyển động trong chân không, đồng thời coi trọng lượng không đổi. Khi ấy, bài toán đủ đơn giản để xử lý, như Hình 1.2b. Mô hình này được phân tích chi tiết trong chương 3.
+Thay vào đó, ta xây dựng một mô hình đơn giản hơn: Ta bỏ qua kích thước, hình dạng và sự quay của bóng bằng cách biểu diễn nó như một vật điểm, hay **chất điểm**. Ta bỏ qua lực cản không khí bằng cách xem như bóng chuyển động trong chân không, đồng thời coi gia tốc trọng trường là không đổi. Khi ấy, bài toán trở nên đủ đơn giản để giải quyết trọn vẹn, như minh họa ở Hình 1.2b.
 
-Để lý tưởng hóa, ta phải bỏ qua nhiều tác dụng nhỏ, nhưng không được bỏ quá nhiều. Nếu bỏ hẳn trọng lực, mô hình sẽ dự đoán quả bóng được ném lên tiếp tục đi thẳng và mất hút vào không gian. Mô hình có ích phải đơn giản hóa đủ để giải được bài toán nhưng vẫn giữ những đặc điểm thiết yếu của hệ.
+Để lý tưởng hóa, ta phải bỏ qua nhiều tác dụng nhỏ, nhưng không được bỏ qua những yếu tố chi phối bản chất. Nếu bỏ hẳn tác dụng của trọng lực, mô hình sẽ dự đoán quả bóng bay thẳng đều và mất hút vào không gian, hoàn toàn sai lệch thực tế. Một mô hình hữu ích phải đơn giản hóa đủ để có thể giải được bài toán nhưng vẫn giữ nguyên các đặc tính vật lý cốt lõi của hệ.
 
-Độ tin cậy của dự đoán bị giới hạn bởi độ phù hợp của mô hình. Dự đoán của Galileo về vật rơi ở mục 1.1 tương ứng với mô hình không xét lực cản không khí. Mô hình này khá phù hợp với một viên đạn đại bác được thả rơi, nhưng không phù hợp bằng khi dùng cho một chiếc lông.
+Độ tin cậy của dự đoán bị giới hạn bởi phạm vi phù hợp của mô hình. Dự đoán của Galileo về vật rơi ở mục 1.1 tương ứng với mô hình bỏ qua lực cản không khí. Mô hình này rất phù hợp với một viên đạn đại bác đặc bằng sắt rơi từ độ cao vừa phải, nhưng không còn phù hợp khi áp dụng cho một chiếc lông chim hay một chiếc dù.
 
-Mô hình lý tưởng hóa được sử dụng xuyên suốt sách. Khi đọc về một lý thuyết vật lý hoặc ứng dụng của nó vào bài toán cụ thể, hãy chú ý những giả thiết lý tưởng hóa đang được dùng.
+Mô hình lý tưởng hóa được sử dụng xuyên suốt toàn bộ giáo trình. Khi tiếp cận bất kỳ định luật vật lý nào hoặc ứng dụng của nó vào một bài toán cụ thể, hãy luôn tự hỏi những giả thiết lý tưởng hóa nào đang được áp dụng.
 
-### Hình 1.2 — Quả bóng thật và mô hình lý tưởng hóa
+### Hình 1.2: Quả bóng thật và mô hình lý tưởng hóa
 
-![Hình 1.2 nguyên tác: Đối chiếu một quả bóng chày đang bay với mô hình chất điểm](img/young-01/hinh-1-2.png)
+![Hình 1.2: Đối chiếu quả bóng chày thật đang bay với mô hình chất điểm](/vat-ly-1/bai-giang/img/young-01/hinh-1-2.png)
 
 Hình đối chiếu hai cách mô tả:
 
-- **(a) Quả bóng thật đang bay:** Bóng quay và có hình dạng phức tạp. Không khí và gió tác dụng lực lên bóng. Lực hấp dẫn tác dụng lên bóng phụ thuộc độ cao. Mũi tên chỉ hướng chuyển động.
-- **(b) Mô hình lý tưởng hóa:** Coi bóng là chất điểm, bỏ lực cản không khí và coi lực hấp dẫn không đổi. Mũi tên vẫn chỉ hướng chuyển động.
+- **(a) Quả bóng thật đang bay**: Bóng quay và có hình dạng phức tạp. Không khí và gió tác dụng lực cản lên bóng. Lực hấp dẫn tác dụng lên bóng phụ thuộc vào độ cao. Mũi tên chỉ hướng chuyển động của quả bóng.
+- **(b) Mô hình lý tưởng hóa**: Coi quả bóng là một chất điểm không có kích thước, bỏ qua lực cản không khí và coi lực hấp dẫn tác dụng lên bóng là không đổi. Mũi tên vẫn chỉ hướng chuyển động.
 
-Nhờ chuyển từ hệ thật ở (a) sang mô hình ở (b), ta có thể phân tích chuyển động đơn giản hơn.
+Nhờ chuyển đổi từ hệ thực tế ở hình (a) sang mô hình lý tưởng hóa ở hình (b), ta có thể thiết lập phương trình và phân tích chuyển động một cách sáng sủa và chính xác.

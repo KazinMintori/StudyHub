@@ -3,13 +3,558 @@
   "lecture": "01-don-vi-vector",
   "route": "/vat-ly-1/bai-giang/01-don-vi-vector",
   "notes": "docs/vat-ly-1/bai-giang/01-don-vi-vector.md",
-  "topics": [],
+  "topics": [
+    {
+      "slug": "ban-chat-vat-ly",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/ban-chat-vat-ly.md"
+    },
+    {
+      "slug": "giai-bai-toan-vat-ly",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/giai-bai-toan-vat-ly.md"
+    },
+    {
+      "slug": "chuan-va-don-vi",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/chuan-va-don-vi.md"
+    },
+    {
+      "slug": "su-dung-doi-don-vi",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/su-dung-doi-don-vi.md"
+    },
+    {
+      "slug": "do-bat-dinh-chu-so",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/do-bat-dinh-chu-so.md"
+    },
+    {
+      "slug": "uoc-luong-bac-do-lon",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/uoc-luong-bac-do-lon.md"
+    },
+    {
+      "slug": "vector-va-phep-cong-vector",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/vector-va-phep-cong-vector.md"
+    },
+    {
+      "slug": "thanh-phan-vector",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/thanh-phan-vector.md"
+    },
+    {
+      "slug": "vector-don-vi",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/vector-don-vi.md"
+    },
+    {
+      "slug": "cac-phep-nhan-vector",
+      "source": "docs/vat-ly-1/bai-giang/01-don-vi-vector/cac-phep-nhan-vector.md"
+    }
+  ],
   "slides": "docs/.vitepress/physics-courses.mjs",
   "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
   "prerequisites": [],
-  "fragments": [],
-  "examples": [],
-  "exercises": [],
-  "solutions": [],
-  "assets": []
+  "fragments": [
+    "raw_materials/physics/translations/chapter-01/00-mo-dau.md",
+    "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+    "raw_materials/physics/translations/chapter-01/01-ban-chat-vat-ly.md",
+    "raw_materials/physics/translations/chapter-01/02-giai-bai-toan.md",
+    "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
+    "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+    "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+    "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+    "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+    "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+    "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+    "raw_materials/physics/translations/chapter-01/10-tich-vector.md"
+  ],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+      "line": 53,
+      "title": "Ví dụ 1.1: Đổi đơn vị tốc độ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+      "line": 89,
+      "title": "Ví dụ 1.2: Đổi đơn vị thể tích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+      "line": 138,
+      "title": "Ví dụ 1.3: Chữ số có nghĩa trong phép nhân"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+      "line": 9,
+      "title": "Ví dụ 1.4: Ước lượng bậc độ lớn của một tỷ đô la vàng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 125,
+      "title": "Ví dụ 1.5: Cộng hai vector vuông góc"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 50,
+      "title": "Ví dụ 1.6: Xác định các thành phần của vector"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 233,
+      "title": "Ví dụ 1.7: Cộng vector bằng phương pháp thành phần"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+      "line": 67,
+      "title": "Ví dụ 1.8: Sử dụng vector đơn vị trong không gian ba chiều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 108,
+      "title": "Ví dụ 1.9: Tính tích vô hướng của hai vector"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 174,
+      "title": "Ví dụ 1.10: Tìm góc giữa hai vector bằng tích vô hướng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 355,
+      "title": "Ví dụ 1.11: Tính tích có hướng của hai vector"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "raw_materials/physics/translations/chapter-01/00-mo-dau.md",
+      "line": 3,
+      "title": "Câu hỏi mở đầu: Dự đoán đường đi của tâm bão dông"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+      "line": 55,
+      "title": "Ví dụ 1.1: Đổi đơn vị tốc độ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+      "line": 91,
+      "title": "Ví dụ 1.2: Đổi đơn vị thể tích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+      "line": 140,
+      "title": "Ví dụ 1.3: Chữ số có nghĩa trong phép nhân"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+      "line": 189,
+      "title": "Câu hỏi tự kiểm tra 1.5: Khối lượng riêng của hòn đá"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+      "line": 11,
+      "title": "Ví dụ 1.4: Ước lượng bậc độ lớn của một tỷ đô la vàng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+      "line": 63,
+      "title": "Câu hỏi tự kiểm tra 1.6: Ước lượng tổng số răng của sinh viên trên giảng đường"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 127,
+      "title": "Ví dụ 1.5: Cộng hai vector vuông góc"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 181,
+      "title": "Câu hỏi tự kiểm tra 1.7: Độ lớn của hiệu hai vector"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 52,
+      "title": "Ví dụ 1.6: Xác định các thành phần của vector"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 235,
+      "title": "Ví dụ 1.7: Cộng vector bằng phương pháp thành phần"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 358,
+      "title": "Câu hỏi tự kiểm tra 1.8: Quan hệ giữa độ lớn và các thành phần vector"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+      "line": 69,
+      "title": "Ví dụ 1.8: Sử dụng vector đơn vị trong không gian ba chiều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+      "line": 128,
+      "title": "Câu hỏi tự kiểm tra 1.9: So sánh độ lớn của các vector trong không gian"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 110,
+      "title": "Ví dụ 1.9: Tính tích vô hướng của hai vector"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 176,
+      "title": "Ví dụ 1.10: Tìm góc giữa hai vector bằng tích vô hướng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 357,
+      "title": "Ví dụ 1.11: Tính tích có hướng của hai vector"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 429,
+      "title": "Câu hỏi tự kiểm tra 1.10: Giá trị của tích vô hướng và tích có hướng"
+    }
+  ],
+  "solutions": [
+    {
+      "source": "raw_materials/physics/translations/chapter-01/00-mo-dau.md",
+      "line": 13,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+      "line": 59,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+      "line": 95,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+      "line": 144,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+      "line": 199,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+      "line": 15,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+      "line": 68,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 131,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 192,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 63,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 246,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 366,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+      "line": 82,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+      "line": 136,
+      "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 116,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 189,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 363,
+      "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 443,
+      "title": "Lời giải chi tiết"
+    }
+  ],
+  "assets": [
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/mo-chuong-loc-xoay.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/00-mo-dau.md",
+      "line": 1,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/mo-chuong-loc-xoay.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/tom-tat-chu-so.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+      "line": 23,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-chu-so.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/tom-tat-cong-vector.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+      "line": 29,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-cong-vector.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/tom-tat-thanh-phan.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+      "line": 45,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-thanh-phan.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/tom-tat-vector-don-vi.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+      "line": 55,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-vector-don-vi.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/tom-tat-tich-vo-huong.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+      "line": 71,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-tich-vo-huong.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/tom-tat-tich-co-huong.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+      "line": 86,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-tich-co-huong.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-1a.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/01-ban-chat-vat-ly.md",
+      "line": 21,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-1a.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-1b.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/01-ban-chat-vat-ly.md",
+      "line": 25,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-1b.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-2.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/02-giai-bai-toan.md",
+      "line": 46,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-2.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-3.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
+      "line": 37,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-3.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-4.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
+      "line": 46,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-4.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-5.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
+      "line": 159,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-5.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-6.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
+      "line": 175,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-6.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-7.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+      "line": 23,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-7.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-8.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+      "line": 97,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-8.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/ung-dung-nhiet-do-gio.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 11,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/ung-dung-nhiet-do-gio.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-9.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 23,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-9.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-10.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 33,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-10.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-11.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 64,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-11.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-12.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 77,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-12.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-13.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 103,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-13.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-14.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 111,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-14.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-15.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 121,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-15.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-16.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+      "line": 177,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-16.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-17.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 35,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-17.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-18.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 41,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-18.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-19.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 58,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-19.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-20.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 150,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-20.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-21.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 176,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-21.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-22.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 215,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-22.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-23.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+      "line": 244,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-23.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-24.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+      "line": 15,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-24.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-25.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+      "line": 65,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-25.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-26.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 24,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-26.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-27.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 35,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-27.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-28.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 114,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-28.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-29.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 187,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-29.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-30.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 265,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-30.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-31.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 278,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-31.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-32.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 353,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-32.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-01/hinh-1-33.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+      "line": 361,
+      "source": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-33.png"
+    }
+  ]
 }

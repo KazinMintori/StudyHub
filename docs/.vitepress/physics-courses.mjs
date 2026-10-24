@@ -78,18 +78,87 @@ export const physics1Course = {
   ],
   "lessons": [
     {
-      "slug": "01-don-vi-vector",
+  "slug": "01-don-vi-vector",
+  "title": "Đơn vị, đại lượng vật lý và vector",
+  "prerequisites": [],
+  "supportingConcepts": [
+    "don-vi",
+    "vector",
+    "thanh-phan-vector",
+    "tich-vo-huong",
+    "tich-co-huong"
+  ],
+  "status": "draft",
+  "number": 1,
+  "sourceChapter": 1,
+  "topicGroups": [
+    {
       "title": "Đơn vị, đại lượng vật lý và vector",
-      "prerequisites": [],
-      "supportingConcepts": [
-        "don-vi",
-        "vector",
-        "tich-vo-huong"
-      ],
-      "status": "draft",
-      "number": 1,
-      "sourceChapter": 1
-    },
+      "topics": [
+        {
+          "slug": "ban-chat-vat-ly",
+          "title": "Bản chất của vật lý",
+          "question": "Lý thuyết vật lý được hình thành và kiểm chứng qua thực nghiệm như thế nào?",
+          "source": "1.1"
+        },
+        {
+          "slug": "giai-bai-toan-vat-ly",
+          "title": "Giải bài toán vật lý",
+          "question": "Quy trình bốn bước I SEE và phương pháp mô hình lý tưởng hóa vận hành ra sao?",
+          "source": "1.2"
+        },
+        {
+          "slug": "chuan-va-don-vi",
+          "title": "Chuẩn đo lường và hệ đơn vị SI",
+          "question": "Giây, mét, kilôgam và các tiền tố đơn vị được xác định, sử dụng như thế nào?",
+          "source": "1.3"
+        },
+        {
+          "slug": "su-dung-doi-don-vi",
+          "title": "Sử dụng và đổi đơn vị",
+          "question": "Tính nhất quán thứ nguyên và phương pháp hệ số đổi đơn vị được áp dụng ra sao?",
+          "source": "1.4"
+        },
+        {
+          "slug": "do-bat-dinh-chu-so",
+          "title": "Độ bất định và chữ số có nghĩa",
+          "question": "Quy tắc xác định chữ số có nghĩa trong phép tính nhân, chia, cộng, trừ là gì?",
+          "source": "1.5"
+        },
+        {
+          "slug": "uoc-luong-bac-do-lon",
+          "title": "Ước lượng và bậc độ lớn",
+          "question": "Làm thế nào để ước lượng gần đúng theo bậc độ lớn khi thiếu dữ liệu chính xác?",
+          "source": "1.6"
+        },
+        {
+          "slug": "vector-va-phep-cong-vector",
+          "title": "Vector và phép cộng vector",
+          "question": "Phép cộng và trừ vector theo phương pháp hình học tuân theo những định luật nào?",
+          "source": "1.7"
+        },
+        {
+          "slug": "thanh-phan-vector",
+          "title": "Thành phần của vector",
+          "question": "Làm thế nào xác định, cộng và nhân các thành phần của vector?",
+          "source": "1.8"
+        },
+        {
+          "slug": "vector-don-vi",
+          "title": "Vector đơn vị",
+          "question": "Hệ vector đơn vị trực chuẩn biểu diễn các vector trong không gian như thế nào?",
+          "source": "1.9"
+        },
+        {
+          "slug": "cac-phep-nhan-vector",
+          "title": "Các phép nhân vector",
+          "question": "Sự khác biệt về định nghĩa và ý nghĩa hình học giữa tích vô hướng và tích có hướng là gì?",
+          "source": "1.10"
+        }
+      ]
+    }
+  ]
+},
     {
       "slug": "02-chuyen-dong-thang",
       "title": "Chuyển động trên đường thẳng",

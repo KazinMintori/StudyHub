@@ -1,3 +1,4 @@
+import {physics1RemainingChapter1Parent} from '../../../../docs/.vitepress/physics1-remaining-ch01-course.mjs'
 import {physics1RemainingChapter5Parent} from '../../../../docs/.vitepress/physics1-remaining-ch05-course.mjs'
 import {physics1RemainingChapter8Parent} from '../../../../docs/.vitepress/physics1-remaining-ch08-course.mjs'
 import {physics1RemainingChapter7Parent} from '../../../../docs/.vitepress/physics1-remaining-ch07-course.mjs'
@@ -61,7 +62,7 @@ export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/1
   'vat-ly-2/22-chat-ran-ban-dan': moleculesCheatsheet,
   'vat-ly-2/23-vat-ly-hat-nhan': nuclearCheatsheet,
   'vat-ly-2/24-hat-co-ban-vu-tru': particlesCosmologyCheatsheet,
-  'vat-ly-1/01-don-vi-vector': unitsVectorsCheatsheet,
+  'vat-ly-1/01-don-vi-vector': physics1RemainingChapter1Parent.cheatsheet,
   'vat-ly-1/03-chuyen-dong-khong-gian': physics1RemainingChapter3Parent.cheatsheet,
   'vat-ly-1/04-dinh-luat-newton': physics1RemainingChapter4Parent.cheatsheet,
   'vat-ly-1/05-ung-dung-newton': physics1RemainingChapter5Parent.cheatsheet,

@@ -22,7 +22,8 @@
     "test": "node --test scripts/tests/*.test.mjs",
     "verify:architecture": "node scripts/verification/verify-architecture.mjs",
     "verify:refactor": "node scripts/verification/verify-refactor-browser.mjs",
-    "test:features": "node --test src/features/navigation/services/*.test.mjs src/features/study-progress/__tests__/*.test.js src/core/storage/__tests__/*.test.js src/features/study-tools/tests/*.test.mjs src/features/wiki/services/*.test.mjs"
+    "test:features": "node --test src/features/navigation/services/*.test.mjs src/features/study-progress/__tests__/*.test.js src/core/storage/__tests__/*.test.js src/features/study-tools/tests/*.test.mjs src/features/wiki/services/*.test.mjs",
+    "verify:math": "node --test scripts/tests/markdown-math-integrity.test.mjs scripts/tests/math-text.test.mjs scripts/tests/static-math-cache.test.mjs"
   },
   "keywords": [
     "uet",
