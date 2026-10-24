@@ -1,0 +1,26 @@
+[
+  {
+    "id": "7.9(d)",
+    "note": "With unrounded speed the normal force is5.00N. Substituting the intermediate rounded2.8m/s gives about5.1N. Keep unrounded data through the calculation."
+  },
+  {
+    "id": "7.41(b)",
+    "note": "With original values, force is11433.3N, rounded1.14e4N. A rounded intermediate speed gives the printed1.15e4N."
+  },
+  {
+    "id": "7.71",
+    "note": "Original values withg9.80m/s2 give0.460N, not0.456N. Substituting9.80665 gives0.458005N, so it does not explain0.456N."
+  },
+  {
+    "id": "VP7.9.3",
+    "note": "Use the defined compression d consistently. The condition for rising above the free spring endpoint is d>2mg/k."
+  },
+  {
+    "id": "7.79",
+    "note": "Coordinates and energy values are approximate readings of the original plotted data. The initialKmax~.39J, K(0)~.14J and K(-1.3m)~.27J."
+  },
+  {
+    "id": "7.80",
+    "note": "The solution speed graph usesv*=sqrt(2alpha/(m*x0^2)). Its first normalized maximum is1/2, not1/sqrt2; the physical maximum remains beta/sqrt(2malpha)."
+  }
+]

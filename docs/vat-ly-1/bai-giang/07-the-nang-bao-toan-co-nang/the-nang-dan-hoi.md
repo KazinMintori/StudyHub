@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "07-the-nang-bao-toan-co-nang"
-section: "topic"
 topic: "the-nang-dan-hoi"
+section: "topic"
 title: "Thế năng đàn hồi"
 description: "Năng lượng tích trữ trong lò xo biến dạng phụ thuộc vào độ biến dạng ra sao?"
 ---

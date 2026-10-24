@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "07-the-nang-bao-toan-co-nang"
-section: "topic"
 topic: "luc-va-the-nang"
+section: "topic"
 title: "Lực và thế năng"
 description: "Làm thế nào xác định lực tác dụng khi biết hàm thế năng của hệ?"
 ---

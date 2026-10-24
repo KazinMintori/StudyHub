@@ -1,6 +1,6 @@
 {
   "chapter": 7,
-  "status": "theory-reviewed-exercises-incomplete",
+  "status": "theory-and-exercises-reviewed",
   "sourcePDFPages": [
     221,
     244
@@ -8,31 +8,31 @@
   "fragments": [
     {
       "file": "raw_materials/physics/translations/chapter-07/00-mo-dau.md",
-      "sha256": "596871d780b4b5a4fd30e1aa9b0df676a7aa7ce123bcd4a5279be6c3c26532c6"
+      "sha256": "20896a62552f3385b7fb2f88909736ae30caa08d95f5700a52386bff3cefa05e"
     },
     {
       "file": "raw_materials/physics/translations/chapter-07/01-muc-01.md",
-      "sha256": "721cbef581d8bca24d582d84c641118ed9e0924097595f6ca39ecddbc0d8b098"
+      "sha256": "4e171d7ce35ed35ef9adee8b92106e8ef411b2924d76f94a5b8a8d89b0b7f0fd"
     },
     {
       "file": "raw_materials/physics/translations/chapter-07/02-muc-02.md",
-      "sha256": "c489367d0aa7f0099d4e3e340e43d29b0af26cb1b966ed72d92a57bcd2d7eb50"
+      "sha256": "f6ce30e8e8653fef3cd123f2cfd2e6c2908509c0d553f347c3f969a9de5a7efd"
     },
     {
       "file": "raw_materials/physics/translations/chapter-07/03-muc-03.md",
-      "sha256": "b482a2958a47fa6eaa4a3c6bc575fbb9ab2ad3c93f084f9b7e2ed8a0851c197c"
+      "sha256": "c16da020cb2739ff2b26640afada57bfdeeca48baa37bfd996113ac6b3171645"
     },
     {
       "file": "raw_materials/physics/translations/chapter-07/04-muc-04.md",
-      "sha256": "587f1bded9cb30ebd45deb13310fa2aed57e7c60a9a4c46013892d6f24b1bc3a"
+      "sha256": "a53d47c7f86493af80e1950237766aa7025a6fad6c171d9f3a1bea4a2113fb27"
     },
     {
       "file": "raw_materials/physics/translations/chapter-07/05-muc-05.md",
-      "sha256": "219f87252245c0e45aacc7cff13bed8ba555706ec07190daa40d62c2475b8b65"
+      "sha256": "e4830307b16157bda299857cf6dcd8bf2140bc93460bf959e136b0a349221322"
     },
     {
       "file": "raw_materials/physics/translations/chapter-07/17-tom-tat.md",
-      "sha256": "93dc3be473dd3d1a67c09c669ac52b6c66fdf7941d78a7a3f52fc77db79ca3b3"
+      "sha256": "4d208b2919cdef279d3e0479803fe552e9c32eb6692b5c18e6a357a7d7bd109c"
     }
   ],
   "sections": [
@@ -451,5 +451,7 @@
     1440
   ],
   "browserStatus": "passed",
-  "completionBlocker": "Original end-of-chapter exercise solutions still need source and numerical review. Chapter remains draft."
+  "completionBlocker": "Original end-of-chapter exercise solutions still need source and numerical review. Chapter remains draft.",
+  "completionReview": "raw_materials/physics/chapter-07-review.json",
+  "sha256Normalization": "UTF8 with LF line endings, matching Git content"
 }

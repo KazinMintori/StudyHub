@@ -1,6 +1,6 @@
 # Rà lý thuyết chương 7
 
-Phạm vi: Lời mở, năm mục 7.1–7.5 và tổng kết, trang PDF 221–244 của Young & Freedman, ấn bản 15. Chương tiếp tục ở trạng thái `draft` vì bài tập cuối chương chưa được nghiệm thu.
+Phạm vi: Lời mở, năm mục 7.1–7.5 và tổng kết, trang PDF 221–244 của Young & Freedman, ấn bản 15. Bộ bài tập cuối chương được nghiệm thu riêng tại báo cáo ch07-parent-exercises-20261024.md. Sau khi cả hai phạm vi đạt kiểm tra, chương được chuyển sang trạng thái hoàn chỉnh.
 
 ## Các lỗi nguồn đã sửa
 

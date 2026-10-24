@@ -425,7 +425,7 @@ export const physics1Course = {
     "gia-toc",
     "vector"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 7,
   "sourceChapter": 7,
   "topicGroups": [
@@ -464,7 +464,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "08-dong-luong-va-cham",
@@ -1722,6 +1723,51 @@ export const physics1Course = {
       "Biểu diễn riêng mọi ngoại lực tác dụng lên vật đã chọn. Không đưa lực vật tác dụng lên môi trường vào sơ đồ ấy. Các vật khác nhau có sơ đồ riêng."
     ],
     "formula": "$$\n\\vec F_{A/B}=-\\vec F_{B/A}\n$$"
+  },
+  {
+    "note": "07-the-nang-bao-toan-co-nang",
+    "title": "Thế năng trọng trường",
+    "bullets": [
+      "Trong miền gia tốc trọng trường không đổi, trục y hướng lên. Thế năng của hệ vật–Trái Đất phụ thuộc mốc, còn hiệu thế năng không phụ thuộc hằng số cộng.",
+      "Động năng và thế năng phải được tính trong cùng hệ quy chiếu và theo cùng quy ước mốc."
+    ],
+    "formula": "$$\nU_g=mgy\n$$"
+  },
+  {
+    "note": "07-the-nang-bao-toan-co-nang",
+    "title": "Thế năng đàn hồi",
+    "bullets": [
+      "Định luật Hooke trong miền tuyến tính, x tính từ chiều dài tự nhiên. Chọn thế năng bằng không khi lò xo không biến dạng.",
+      "Bỏ qua động năng lò xo khi khối lượng lò xo nhỏ so với vật. Công của lực khác bằng độ biến thiên cơ năng."
+    ],
+    "formula": "$$\nF_x=-kx\n$$"
+  },
+  {
+    "note": "07-the-nang-bao-toan-co-nang",
+    "title": "Lực bảo toàn và nội năng",
+    "bullets": [
+      "Công giữa hai điểm không phụ thuộc đường đi, tương đương công trên mọi đường kín trong miền xét bằng không. Có thể biểu diễn công bằng độ giảm thế năng.",
+      "Với lực ma sát có độ lớn không đổi, công ma sát trên vật là âm. Khi hệ chỉ chuyển hóa cơ năng thành nội năng và không trao đổi năng lượng ra ngoài, tổng các dạng năng lượng được bảo toàn."
+    ],
+    "formula": "$$\n\\oint\\vec F\\cdot d\\vec l=0\n$$"
+  },
+  {
+    "note": "07-the-nang-bao-toan-co-nang",
+    "title": "Lực và thế năng",
+    "bullets": [
+      "Lực phụ thuộc độ dốc thế năng, không phụ thuộc dấu hoặc hằng số cộng của thế năng.",
+      "Mỗi đạo hàm riêng giữ các tọa độ còn lại cố định. Gradient hướng tăng thế năng nhanh nhất tại điểm xét, lực bảo toàn hướng ngược lại."
+    ],
+    "formula": "$$\nF_x=-\\frac{dU}{dx}\n$$"
+  },
+  {
+    "note": "07-the-nang-bao-toan-co-nang",
+    "title": "Đồ thị năng lượng và cân bằng",
+    "bullets": [
+      "Với cơ năng bảo toàn, chuyển động chỉ xảy ra trong miền động năng không âm. Tại một biên miền có lực khác không, vận tốc bằng không rồi đổi chiều.",
+      "Trong một chiều, cân bằng bền ở cực tiểu địa phương và không bền ở cực đại. Dấu đạo hàm bậc hai là điều kiện đủ tại điểm dừng không suy biến. Khi đạo hàm bậc hai bằng không, phải xét thêm hình dạng của thế năng."
+    ],
+    "formula": "$$\nK=E-U(x)\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"
