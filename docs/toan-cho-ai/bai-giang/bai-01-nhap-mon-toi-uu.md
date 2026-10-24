@@ -99,9 +99,9 @@ flowchart TD
 ## 4. Hệ thống Bài tập Tự luyện & Vận dụng Chuyên sâu {#bai-tap-tu-luyen}
 
 ::: exercise 1. Nhận diện bốn thành phần và Cải dạng bài toán tối ưu
-1. Một robot tự hành cần lựa chọn vận tốc di chuyển $v \in \mathbb{R}$ sao cho tiến gần nhất tới vận tốc tham chiếu $v_{\mathrm{ref}}$, đồng thời tiết kiệm năng lượng và không vượt quá giới hạn an toàn động cơ:
+1. Một robot tự hành cần lựa chọn vận tốc di chuyển $v \in \mathbb{R}$ sao cho tiến gần nhất tới vận tốc tham chiếu $v_{\mathrm{ref}}$, đồng thời tiết kiệm năng lượng. Vận tốc phải thỏa mãn giới hạn an toàn $|v| \le v_{\max}$. Bài toán cần giải là:
    $$
-   \min_{v} (v - v_{\mathrm{ref}})^2 + \lambda v^2 \quad \text{s.t.} \quad |v| \le v_{\max},
+   \min_{v} (v - v_{\mathrm{ref}})^2 + \lambda v^2,
    $$
    với $\lambda > 0$ và $v_{\max} > 0$. Hãy xác định tường minh: Dữ kiện bài toán, vector biến quyết định, hàm mục tiêu và miền khả thi. Xác định nghiệm tối ưu giải tích $v^*$ theo các tham số.
 2. Xét ba bài toán tối ưu sau, phân tích xem bài toán nào là bài toán lồi hoặc có thể đưa về bài toán lồi:
@@ -169,9 +169,9 @@ flowchart TD
 :::
 
 ::: exercise 3. Bài toán điều khiển tối ưu một bước với giới hạn chấp hành
-Xét bài toán điều khiển một bước cho xe tự hành: Trạng thái hiện tại là $s = 2$. Sau khi áp dụng lực điều khiển $u$, trạng thái tiếp theo trở thành $s + u$. Ta muốn triệt tiêu độ lệch trạng thái về 0 nhưng đồng thời phải tiết kiệm năng lượng, và cơ cấu chấp hành có giới hạn vật lý:
+Xét bài toán điều khiển một bước cho xe tự hành: Trạng thái hiện tại là $s = 2$. Sau khi áp dụng lực điều khiển $u$, trạng thái tiếp theo trở thành $s + u$. Ta muốn triệt tiêu độ lệch trạng thái về 0 nhưng đồng thời phải tiết kiệm năng lượng. Cơ cấu chấp hành bị giới hạn bởi $|u| \le 0.5$. Bài toán cần giải là:
 $$
-\min_u \frac{1}{2} (2 + u)^2 + \frac{1}{2} u^2 \quad \text{s.t.} \quad |u| \le 0.5.
+\min_u \frac{1}{2} (2 + u)^2 + \frac{1}{2} u^2.
 $$
 1. Chứng minh bài toán trên là bài toán tối ưu lồi.
 2. Tìm nghiệm tối ưu $u^*$ và kiểm chứng bằng điều kiện tối ưu bậc nhất trên miền lồi.
@@ -303,9 +303,17 @@ $$
 :::
 
 ::: exercise 7. Khắc phục bằng Điều chuẩn L2 trong Hồi quy Logistic
-Xét bài toán hồi quy logistic có số hạng điều chuẩn trọng số $L_2$:
+Xét bài toán hồi quy logistic có số hạng điều chuẩn trọng số $L_2$, với $w \in \mathbb{R}^d$ và hệ số điều chuẩn $\mu > 0$. Đặt mất mát của quan sát thứ $i$ là:
 $$
-L_\mu(w) = \sum_{i=1}^n \log(1 + e^{-y_i a_i^T w}) + \frac{\mu}{2} \|w\|_2^2 , \quad \mu > 0, \; w \in \mathbb{R}^d.
+\ell_i(w) = \log(1 + e^{-y_i a_i^T w}).
+$$
+Với hai quan sát, tổng mất mát dữ liệu là $\ell_1(w) + \ell_2(w)$. Tổng quát, với $n$ quan sát, ta cộng mất mát của từng quan sát:
+$$
+\sum_{i=1}^n \ell_i(w) = \ell_1(w) + \dots + \ell_n(w).
+$$
+Hàm mục tiêu gồm tổng mất mát dữ liệu và số hạng phạt độ lớn của trọng số:
+$$
+L_\mu(w) = \sum_{i=1}^n \ell_i(w) + \frac{\mu}{2} \|w\|_2^2.
 $$
 1. Tính ma trận Hessian $\nabla^2 L_\mu(w)$ và chứng minh $L_\mu(w)$ lồi mạnh (strongly convex).
 2. Chứng minh rằng bài toán luôn luôn tồn tại nghiệm tối ưu duy nhất trên $\mathbb{R}^d$.

@@ -7,6 +7,8 @@ title: "Bài tập trong giáo trình"
 
 Hệ thống bài tập củng cố được tích hợp đồng bộ trong từng chương học, bao gồm hệ thống câu hỏi lý thuyết, bài tập tính toán có hướng dẫn phương pháp giải và đáp số đối chiếu chi tiết.
 
+<div class="study-link-cards">
+
 - [Chương 21: Điện tích và điện trường](/vat-ly-2/bai-giang/01-dien-truong-coulomb.md).
 - [Chương 22: Định luật Gauss](/vat-ly-2/bai-giang/03-dinh-luat-gauss.md).
 - [Chương 23: Điện thế](/vat-ly-2/bai-giang/02-dien-the.md).
@@ -31,3 +33,5 @@ Hệ thống bài tập củng cố được tích hợp đồng bộ trong từ
 - [Chương 42: Phân tử và vật chất ngưng tụ](/vat-ly-2/bai-giang/22-chat-ran-ban-dan.md).
 - [Chương 43: Vật lý hạt nhân](/vat-ly-2/bai-giang/23-vat-ly-hat-nhan.md).
 - [Chương 44: Vật lý hạt và vũ trụ học](/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru.md).
+
+</div>

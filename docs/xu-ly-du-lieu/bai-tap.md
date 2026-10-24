@@ -11,6 +11,8 @@ Trong tab **Bài tập**, các bộ thực hành được chia theo chủ đề.
 
 Các bộ dữ liệu nhỏ được ghi đầy đủ trong bài để có thể chạy lại ngay. Khi chuyển sang dữ liệu thật, hãy giữ cùng quy tắc về giá trị thiếu, ngày tháng, mẫu số và khóa ghép. Kết quả của dữ liệu minh họa không phải số liệu tổng kết của Santiago.
 
+<div class="study-link-cards">
+
 - [Chương 1. Công việc xử lý dữ liệu và môi trường Python](/xu-ly-du-lieu/bai-giang/bai-01-tong-quan-cong-cu-chinh-sach-ai.md#bai-tap)
 - [Chương 2. Python, IPython và Jupyter Notebook](/xu-ly-du-lieu/bai-giang/bai-02-python-co-ban.md#bai-tap)
 - [Chương 3. Cấu trúc dữ liệu, hàm và tệp](/xu-ly-du-lieu/bai-giang/bai-03-cau-truc-du-lieu-ham-tep.md#bai-tap)
@@ -26,6 +28,8 @@ Các bộ dữ liệu nhỏ được ghi đầy đủ trong bài để có thể
 - [Chương 13. Các bài toán phân tích dữ liệu và kiểm tra kết luận](/xu-ly-du-lieu/bai-giang/bai-14-ke-chuyen-bang-du-lieu.md#bai-tap)
 - [Phụ lục A: NumPy nâng cao](/xu-ly-du-lieu/bai-giang/phu-luc-a-numpy-nang-cao.md#bai-tap)
 - [Phụ lục B: Làm việc hiệu quả với IPython](/xu-ly-du-lieu/bai-giang/phu-luc-b-ipython.md#bai-tap)
+
+</div>
 
 ## Dữ liệu thực hành
 

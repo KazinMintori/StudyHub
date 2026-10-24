@@ -9,11 +9,12 @@
 .course-overview-tabs + div { scroll-margin-top: calc(var(--vp-nav-height) + var(--space-4)); }
 .part-banner h2 { font-size: var(--fs-h3); font-weight: 600; line-height: 1.35; margin-bottom: var(--space-2); }
 .part-description { color: var(--ink-2); font-size: var(--fs-ui); margin-bottom: var(--space-4); }
-.lecture-list { border-top: 1px solid var(--rule); margin-top: var(--space-4); }
-.lecture-list > article { border-bottom: 1px solid var(--rule); }
-.lecture-row { display: flex; align-items: center; gap: var(--space-5); padding: var(--space-5) var(--space-3); transition: background var(--motion-fast) var(--ease); }
-.lecture-row:hover { background: var(--canvas); }
-.lesson-number { font-size: var(--fs-read); font-variant-numeric: tabular-nums; color: var(--ink-3); min-width: 24px; }
+.lecture-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
+.lecture-list > article { display: flex; min-width: 0; }
+.lecture-row { display: flex; align-items: center; gap: var(--space-4); width: 100%; min-height: 88px; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--paper); transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.lecture-row:hover { border-color: var(--tim); background: var(--tim-soft); }
+.lecture-row:focus-visible { border-color: var(--tim); outline: 2px solid var(--tim); outline-offset: 3px; }
+.lesson-number { display: grid; place-items: center; flex: 0 0 36px; min-height: 36px; padding: var(--space-1); border-radius: var(--radius); background: var(--tim-soft); color: var(--tim); font-size: var(--fs-ui); font-weight: 600; font-variant-numeric: tabular-nums; }
 #bo-tro-co-dien .lesson-number { flex: 0 0 3rem; }
 .lecture-list-copy { flex: 1; min-width: 0; }
 .lecture-list-copy h3 { font-size: var(--fs-read); line-height: 1.45; font-weight: 600; }
@@ -22,7 +23,20 @@
 .course-wiki-footnote { margin-top: var(--space-7); border-top: 1px solid var(--rule); padding-top: var(--space-5); font-size: var(--fs-ui); color: var(--ink-2); }
 .course-wiki-footnote a { color: var(--tim); }
 .course-parent { font-family: var(--font-ui); font-size: var(--fs-small); color: var(--tim); display: inline-flex; min-height: 44px; align-items: center; }
+
+/* Explicit lesson directories in Markdown; prose and reference lists stay plain. */
+.vp-doc .study-link-cards { margin: var(--space-5) 0; }
+.vp-doc .study-link-cards > ul { display: grid; gap: var(--space-3); padding: 0; margin: 0; list-style: disc; }
+.vp-doc .study-link-cards li::marker { color: transparent; font-size: 0; }
+.vp-doc .study-link-cards li { position: relative; min-width: 0; margin: 0; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--canvas); color: var(--ink-2); font: var(--fs-ui)/1.75 var(--font-ui); transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.vp-doc .study-link-cards li > a { display: inline; color: var(--ink); font-weight: 600; text-decoration: none; }
+.vp-doc .study-link-cards li > a::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+.vp-doc .study-link-cards li:has(> a:hover) { border-color: var(--tim); background: var(--tim-soft); }
+.vp-doc .study-link-cards li:has(> a:focus-visible) { outline: 2px solid var(--tim); outline-offset: 3px; }
+.vp-doc .study-link-cards li > a:focus-visible { outline: none; }
+/* Term previews in a description remain reachable above the stretched link. */
+.vp-doc .study-link-cards button.study-term { position: relative; z-index: 1; }
 @media (max-width: 767px) {
   .lecture-row { gap: var(--space-3); flex-wrap: wrap; }
-  .lesson-status { margin-left: 36px; }
+  .lesson-status { margin-left: 48px; }
 }
