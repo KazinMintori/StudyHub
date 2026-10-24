@@ -235,18 +235,65 @@ export const physics1Course = {
   "hasChapterExercises": true
 },
     {
-      "slug": "05-ung-dung-newton",
+  "slug": "05-ung-dung-newton",
+  "title": "Áp dụng các định luật Newton",
+  "prerequisites": [
+    "vector",
+    "thanh-phan-vector",
+    "luc",
+    "he-quy-chieu-quan-tinh",
+    "gia-toc",
+    "gia-toc-huong-tam"
+  ],
+  "supportingConcepts": [
+    "luc-phap-tuyen",
+    "ma-sat-nghi",
+    "ma-sat-truot",
+    "can-bang-co-hoc",
+    "dao-ham",
+    "tich-phan"
+  ],
+  "status": "draft",
+  "number": 5,
+  "sourceChapter": 5,
+  "topicGroups": [
+    {
       "title": "Áp dụng các định luật Newton",
-      "prerequisites": [
-        "vector",
-        "luc",
-        "don-vi"
-      ],
-      "supportingConcepts": [],
-      "status": "draft",
-      "number": 5,
-      "sourceChapter": 5
-    },
+      "topics": [
+        {
+          "slug": "can-bang-chat-diem-dinh-luat-1",
+          "title": "Sử dụng định luật I Newton: Chất điểm cân bằng",
+          "question": "Làm thế nào xác định lực khi vật đứng yên hoặc chuyển động thẳng đều?",
+          "source": "5.1"
+        },
+        {
+          "slug": "dong-luc-hoc-chat-diem-dinh-luat-2",
+          "title": "Sử dụng định luật II Newton: Động lực học chất điểm",
+          "question": "Phân tích lực và gia tốc của một hoặc nhiều vật bằng cách nào?",
+          "source": "5.2"
+        },
+        {
+          "slug": "luc-ma-sat-va-luc-can",
+          "title": "Lực ma sát và lực cản chất lưu",
+          "question": "Điều kiện tiếp xúc và vận tốc tương đối quyết định ma sát, lực cản ra sao?",
+          "source": "5.3"
+        },
+        {
+          "slug": "dong-luc-hoc-chuyen-dong-tron",
+          "title": "Động lực học chuyển động tròn",
+          "question": "Các lực thực tế tạo thành phần hướng tâm như thế nào?",
+          "source": "5.4"
+        },
+        {
+          "slug": "cac-luc-co-ban-trong-tu-nhien",
+          "title": "Các tương tác cơ bản của tự nhiên",
+          "question": "Bốn tương tác cơ bản có những tính chất chủ yếu gì?",
+          "source": "5.5"
+        }
+      ]
+    }
+  ]
+},
     {
   "slug": "06-cong-dong-nang",
   "title": "Công và động năng",

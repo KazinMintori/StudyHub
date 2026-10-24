@@ -22,7 +22,7 @@ out['5.6']={'a_m_s2':6/4,'wind_force_N':200*6/4}
 out['5.7']={'wind_force_N':200*1.5+100}
 a=10**2/(2*25)
 out['5.8']={'a_upward_m_s2':a,'tension_N':800*(g+a)}
-out['5.9']={'normal_scale_N':50*(g+a),'true_weight_N':50*g,'condition':'Moving down but slowing: upward acceleration'}
+out['5.9']={'normal_scale_N':50*(g+a),'downward_acceleration_scale_N':50*(g-a),'true_weight_N':50*g,'condition':'Moving down but slowing: upward acceleration'}
 out['5.10']={'a_down_slope':'g*sin(alpha)','normal':'w*cos(alpha)'}
 a=9/(1+.50)
 out['5.11']={'a_m_s2':a,'tray_on_carton_N':.50*a}
@@ -50,10 +50,10 @@ for m,L,beta in[(.5,2,15),(3,1,45),(6,.8,70)]:
  assert isclose(F*sin(b),m*v*v/r)
  assert isclose(2*pi*r/v,period)
 out['5.20']={'wire_tension':'m*g/cos(beta)','period':'2*pi*sqrt(L*cos(beta)/g)','radius':'L*sin(beta)','speed_squared':'g*L*sin(beta)*tan(beta)'}
-out['5.21']={'max_speed':'sqrt(mu_s*g*R)','condition':'Level curve, static friction, normal=mg'}
+out['5.21']={'original_mu_s':.96,'original_R_m':230,'original_max_speed_m_s':sqrt(.96*g*230),'original_max_speed_km_h':3.6*sqrt(.96*g*230),'max_speed':'sqrt(mu_s*g*R)','condition':'Level curve, static friction, normal=mg'}
 for R,mu in[(30,.2),(170,.97),(500,.4)]:
  vmax=sqrt(mu*g*R);assert isclose(vmax*vmax/R,mu*g)
-out['5.22']={'bank_angle':'atan(v^2/(g*R))','condition':'Design speed v, no friction needed'}
+out['5.22']={'original_beta_degrees':atan(25**2/(g*230))*180/pi,'original_speed_km_h':25*3.6,'bank_angle':'atan(v^2/(g*R))','condition':'Design speed v, no friction needed'}
 for R,v in[(30,10),(170,40),(500,45)]:
  b=atan(v*v/(g*R));m=1000.;normal=m*g/cos(b)
  assert isclose(normal*sin(b),m*v*v/R)
@@ -62,5 +62,13 @@ out['self5.1']={'tension_over_weight':1/sqrt(2),'choice':'ii'}
 out['self5.2']={'choice':'ii','reason':'Same nonzero acceleration and tension at instantaneous zero velocity'}
 out['self5.3']={'no_friction':['i','iii'],'static_friction':['ii','iv'],'kinetic_friction':['v']}
 out['self5.4']={'choice':'iii','reason':'For the same orbiting mass, both smaller v and larger R imply smaller m*v^2/R at the larger orbit'}
-assert len([k for k in out if not k.startswith('self')])==23
-print(json.dumps({'status':'passed','scope':'Independent reference values and sampled force-balance residuals; final authored prose remains to compare','items':out},indent=2))
+out['airplane_app']={'80degrees_normal_over_mg':1/cos(radians(80)),'84degrees_normal_over_mg':1/cos(radians(84))}
+assert isclose(out['5.6']['wind_force_N'],300)
+assert isclose(out['5.7']['wind_force_N'],400)
+assert isclose(out['5.11']['a_m_s2'],6)
+assert isclose(out['5.11']['tray_on_carton_N'],3)
+assert isclose(out['5.9']['normal_scale_N'],590)
+assert isclose(out['5.9']['downward_acceleration_scale_N'],390)
+assert isclose(out['5.22']['original_speed_km_h'],90)
+assert len([k for k in out if k.startswith('5.')])==23
+print(json.dumps({'status':'passed','scope':'Independent reference values and sampled force-balance residuals; Source values compared with authored theory; no end-of-chapter exercises in this scope','items':out},indent=2))
