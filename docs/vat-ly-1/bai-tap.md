@@ -7,6 +7,8 @@ title: "Bài tập trong giáo trình"
 
 Hệ thống bài tập củng cố được tích hợp đồng bộ trong từng chương học, bao gồm hệ thống câu hỏi lý thuyết, bài tập tính toán có hướng dẫn phương pháp giải và đáp số đối chiếu chi tiết.
 
+<div class="study-link-cards">
+
 - [Chương 1: Đơn vị, đại lượng vật lý và vector](/vat-ly-1/bai-giang/01-don-vi-vector.md).
 - [Chương 2: Chuyển động trên đường thẳng](/vat-ly-1/bai-giang/02-chuyen-dong-thang.md).
 - [Chương 3: Chuyển động trong hai hoặc ba chiều](/vat-ly-1/bai-giang/03-chuyen-dong-khong-gian.md).
@@ -27,3 +29,5 @@ Hệ thống bài tập củng cố được tích hợp đồng bộ trong từ
 - [Chương 18: Tính chất nhiệt của vật chất](/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi.md).
 - [Chương 19: Nguyên lý thứ nhất của nhiệt động lực học](/vat-ly-1/bai-giang/19-nguyen-ly-thu-nhat.md).
 - [Chương 20: Nguyên lý thứ hai của nhiệt động lực học](/vat-ly-1/bai-giang/20-nguyen-ly-thu-hai-entropy.md).
+
+</div>

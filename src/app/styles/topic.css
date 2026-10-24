@@ -31,22 +31,16 @@
 .vp-doc .topic-map-group { margin: var(--space-5) 0 var(--space-6); }
 .vp-doc .topic-map-group-title { font-size: var(--fs-h3); font-weight: 600; margin: 0; padding: 0; border: 0; }
 .vp-doc .topic-map-group-description { font: var(--fs-ui)/1.6 var(--font-read); color: var(--ink-2); margin: var(--space-1) 0 var(--space-3); }
-.vp-doc .topic-map ol { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
-.vp-doc .topic-map li { margin: 0; border-bottom: 1px solid var(--rule); }
-.vp-doc .topic-map li a { display: flex; gap: var(--space-4); padding: var(--space-3) var(--space-2); color: var(--ink); text-decoration: none; border-radius: var(--radius-sm); }
-.vp-doc .topic-map li a:hover, .vp-doc .topic-map li a:focus-visible { background: var(--canvas); }
+.vp-doc .topic-map ol { display: grid; gap: var(--space-3); list-style: none; padding: 0; margin: 0; }
+.vp-doc .topic-map li { display: flex; min-width: 0; margin: 0; }
+.vp-doc .topic-map li a { display: flex; align-items: center; gap: var(--space-4); width: 100%; min-width: 0; min-height: 76px; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--canvas); color: var(--ink); text-decoration: none; transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.vp-doc .topic-map li a:hover { border-color: var(--tim); background: var(--tim-soft); }
+.vp-doc .topic-map li a:focus-visible { border-color: var(--tim); outline: 2px solid var(--tim); outline-offset: 3px; }
 .vp-doc .topic-map-number { flex: 0 0 2.2em; height: 2.2em; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--tim-soft); color: var(--tim); font-weight: 600; font-size: var(--fs-small); font-variant-numeric: tabular-nums; }
 .vp-doc .topic-map-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .vp-doc .topic-map-title { font-weight: 600; font-size: var(--fs-ui); color: var(--tim); line-height: 1.45; }
 .vp-doc .topic-map-question { font: var(--fs-ui)/1.55 var(--font-read); color: var(--ink); }
 .vp-doc .topic-map-source { font-size: var(--fs-meta); color: var(--ink-3); }
-
-/* Match the framed topic links on the Philosophy course overview. */
-.vp-doc .topic-map-framed ol { display: grid; gap: var(--space-3); border-top: 0; }
-.vp-doc .topic-map-framed li { display: flex; min-width: 0; border-bottom: 0; }
-.vp-doc .topic-map-framed li a { width: 100%; min-width: 0; min-height: 76px; align-items: center; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--canvas); transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
-.vp-doc .topic-map-framed li a:hover { border-color: var(--tim); background: var(--tim-soft); }
-.vp-doc .topic-map-framed li a:focus-visible { border-color: var(--tim); outline: 2px solid var(--tim); outline-offset: 3px; }
 
 @media (max-width: 767px) {
   .topic-nav-cards { grid-template-columns: 1fr; }
