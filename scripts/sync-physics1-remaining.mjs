@@ -56,7 +56,8 @@ for(const n of chapters){
  await mkdir(directory,{recursive:true})
  for(const t of data.topics){
   assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(t.slug),'Invalid topic slug')
-  await writeFile(directory+'/'+t.slug+'.md',front({course:'vat-ly-1',lecture:old.slug,topic:t.slug,section:'topic',title:t.title,description:t.question})+`<!--@include: ../../../../${raw}/${t.file}-->\n\n## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục ${t.source}.\n`)
+  const extraReferences=(data.topicReferences?.[t.source]||[]).map(reference=>`\n[${reference.title}](${reference.url}).\n`).join('')
+  await writeFile(directory+'/'+t.slug+'.md',front({course:'vat-ly-1',lecture:old.slug,topic:t.slug,section:'topic',title:t.title,description:t.question})+`<!--@include: ../../../../${raw}/${t.file}-->\n\n## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục ${t.source}.\n`+extraReferences)
  }
  const inc=file=>`<!--@include: ../../../${raw}/${file}-->\n\n`
  let main=front({course:'vat-ly-1',lecture:old.slug,section:'lecture',title:old.title,prerequisites:lesson.prerequisites,lessonStatus:lesson.status,hasChapterExercises:true,sourceTranslation:'full',description:data.topics.map(t=>t.title).join(', ')+'.'})

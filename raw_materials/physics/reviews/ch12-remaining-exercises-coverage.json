@@ -1,0 +1,161 @@
+{
+  "chapter": 12,
+  "status": "source-numeric-and-browser-reviewed",
+  "sourcePDFPages": [
+    406,
+    414
+  ],
+  "exerciseConfig": {
+    "numbered": 92,
+    "total": 135,
+    "guided": 12,
+    "discussion": 30,
+    "half": 46,
+    "files": [
+      [
+        "guided",
+        "parent-09-luyen-tap-huong-dan.md"
+      ],
+      [
+        "discussion",
+        "parent-10-cau-hoi-thao-luan.md"
+      ],
+      [
+        "numbered-a",
+        "parent-11-bai-tap-001-046.md"
+      ],
+      [
+        "numbered-b",
+        "parent-12-bai-tap-047-092.md"
+      ],
+      [
+        "bridge",
+        "parent-16-bai-tap-cau-noi.md"
+      ]
+    ]
+  },
+  "sourceInventory": {
+    "numbered": 92,
+    "guided": 12,
+    "discussion": 30,
+    "bridge": 1
+  },
+  "parentCorrections": [
+    "12.49sourcepressureexponent",
+    "12.50diameternotarea",
+    "12.47firehosecontext",
+    "12.47/48/52difficulty",
+    "Q12.3bothquantitiesareforces",
+    "Numericcompoundunitsparenthesized"
+  ],
+  "sourceSnapshot": {
+    "early/proposed-fragments/parent-11-bai-tap-001-046.md": "beef303b8bc0b4298e32edc208e143e4112fd85ac9edcc6170bdcf71f80f457d",
+    "middle/proposed-fragments/parent-12-middle-053-072.md": "01d0453faeee875913e148a1a120ddb1141f74ab3a2bfc71c123b7575c900bbd",
+    "guided/proposed-fragments/parent-09-luyen-tap-huong-dan.md": "ee849c0f0a9071a678d21ab5301bd4f2715a27483b015434369974915676e541",
+    "guided/proposed-fragments/parent-10-cau-hoi-thao-luan.md": "9a62c46581a3ee0b9e49f445a9e1b708c70616242fefbebe24cb81542e05c203",
+    "guided/proposed-fragments/parent-16-bai-tap-cau-noi.md": "f8aa56790a2ac65686b3a549d1b3d12f8b034e5011995350bade672330ca6169"
+  },
+  "browser": {
+    "status": "passed",
+    "groups": 24,
+    "prompts": 135,
+    "cases": 120,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "finalAffectedCases": 15
+  },
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-12/00-mo-dau.md": "b578d4857386ea74b81bc08d7a88de79fe09f28ee177c974bfd038183231acd9",
+    "raw_materials/physics/translations/chapter-12/01-muc-01.md": "4c29039b784a40733e8eb009fc3b7838914b03e99876f8898aea15f7ccb8815e",
+    "raw_materials/physics/translations/chapter-12/02-muc-02.md": "984271f28ae64cc29dcc79461fd741817cd80e7ab0e54e125307d5b70d8bcf5c",
+    "raw_materials/physics/translations/chapter-12/03-muc-03.md": "cd4ec1b1b8f2de82602f7c13cb5346e2e2a9ea00efed86cfaddcaafd103eddb3",
+    "raw_materials/physics/translations/chapter-12/04-muc-04.md": "851b076811cdf01f79a06ed3427327e12aa6919603a1dfdd037e242506f474c3",
+    "raw_materials/physics/translations/chapter-12/05-muc-05.md": "336256df447056cafaf044d26c94d028aacdd03a31a5f7d51d68707e06c984aa",
+    "raw_materials/physics/translations/chapter-12/06-muc-06.md": "ff01c70805ecd9ba98ba70cf218179898c7ff27eb5da4c49725d5ee62d6ee1ab",
+    "raw_materials/physics/translations/chapter-12/17-tom-tat.md": "a90779ad69ddbee9969ee205e0450e80e22d40c112086d506f3d92d7f1d7bc22",
+    "raw_materials/physics/translations/chapter-12/parent-09-luyen-tap-huong-dan.md": "3577b920e9e94486ff03013753b1809e3815269024860fe479b6e840d2b94777",
+    "raw_materials/physics/translations/chapter-12/parent-10-cau-hoi-thao-luan.md": "ea401339451150296cd28383d26bd13e88359ac2141e3ca31ed931e6e6bc3a71",
+    "raw_materials/physics/translations/chapter-12/parent-11-bai-tap-001-046.md": "beef303b8bc0b4298e32edc208e143e4112fd85ac9edcc6170bdcf71f80f457d",
+    "raw_materials/physics/translations/chapter-12/parent-12-bai-tap-047-092.md": "2235279c8048056dfbbf565b05714ce820a2ff06943d81025af358c503fc018b",
+    "raw_materials/physics/translations/chapter-12/parent-16-bai-tap-cau-noi.md": "f8aa56790a2ac65686b3a549d1b3d12f8b034e5011995350bade672330ca6169"
+  },
+  "originalExerciseCrops": 16,
+  "reusedTheoryDiagrams": 5,
+  "solutionGraphs": 3,
+  "math": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 28,
+    "inlineLimitEx": 27,
+    "display": 420,
+    "inline": 1356,
+    "findings": []
+  },
+  "numeric": {
+    "earlyNumbered": 46,
+    "middleNumbered": 20,
+    "lateNumbered": 26,
+    "guided": 12,
+    "discussionReasoning": 30,
+    "bridge": 1,
+    "independentLateAssertions": 110,
+    "independentLateScalarComparisons": 59,
+    "independentFiniteAreaRationalCases": 12,
+    "independentBridgeODECases": 3,
+    "note": "Qualitative reason records are not numeric proofs; overlaps are not summed as distinct examples."
+  },
+  "findingResolutions": [
+    {
+      "id": "12.49",
+      "issue": "Pressure exponent1.80e4wasmistyped1.80e5",
+      "resolution": "Prompt,formula/code andanswer corrected;source reviewer rechecked."
+    },
+    {
+      "id": "12.50",
+      "issue": "Diameterdoubledwasmistakenlychangedtohalvedarea",
+      "resolution": "A2=4A1,v2=.750m/s,p2=162018.75Pa;prompt,reasons andcodecorrected."
+    },
+    {
+      "id": "12.47/48/52",
+      "issue": "Difficultyflagsandfirehosecontext",
+      "resolution": "Restoredsource•flagsandfirehoseconnectedtocitymains."
+    },
+    {
+      "id": "Q12.3",
+      "issue": "Bothquantitiesareforces",
+      "resolution": "Describestwoforceswithdifferentroles."
+    },
+    {
+      "id": "VP12.4.1/4.2/5.2/5.3",
+      "issue": "Compoundnumericunits",
+      "resolution": "Parenthesizedsums/differencesbeforeunit."
+    },
+    {
+      "id": "VP12.9.4",
+      "issue": "Steadyoutflowwording",
+      "resolution": "Usesnghiệmdòngraổnđịnh,keepsdomainandpositivebranch."
+    },
+    {
+      "id": "Q12.26",
+      "issue": "Overgeneralizingfreejetpressure",
+      "resolution": "Localpressurefieldontheball,flowcurvatureandmomentumtransferexplicit."
+    },
+    {
+      "id": "12.72",
+      "issue": "ParenthandoffconflatedbeakermasswithbalanceDreading",
+      "resolution": "Originalsourcebeaker1kg,D3.5kg,E7.5kgused;wronghandoffrejected."
+    }
+  ],
+  "solutionGraphReview": {
+    "regeneratedFromVerifiedValues": true,
+    "reviewedPNGPreviews": 3,
+    "minimumNormalTextPx": 14,
+    "bridgeDomain": "0<=t<=T",
+    "newGraphsReplaceOriginalFigures": false
+  }
+}

@@ -1,0 +1,3444 @@
+{
+  "earlyNumbered": [
+    {
+      "id": "12.1",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.1 ••  On a part-time job, you are asked to bring a cylindrical iron rod \nof length 85.8 cm and diameter 2.85 cm from a storage room to a ma-\nchinist. Will you need a cart? (To answer, calculate the weight of the rod.)",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nTrong một công việc làm thêm, bạn được nhờ mang một thanh sắt trụ dài $85{,}8\\,\\mathrm{cm}$, đường kính $2{,}85\\,\\mathrm{cm}$ từ kho tới chỗ người thợ gia công. Bạn có cần xe đẩy không? Hãy tính trọng lượng thanh để trả lời.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 3,
+        "title": "Trọng lượng thanh sắt"
+      },
+      "pythonVerifiedOutputs": {
+        "volume_m3": 0.0005473522267523974,
+        "mass_kg": 4.2693473686687,
+        "weight_N": 41.83960421295326
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.2",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.2 ••  A cube 5.0 cm on each side is made of a metal alloy. After \nyou drill a cylindrical hole 2.0 cm in diameter all the way through and \nperpendicular to one face, you find that the cube weighs 6.30 N. (a) What \nis the density of this metal? (b) What did the cube weigh before you \ndrilled the hole in it?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột khối lập phương cạnh $5{,}0\\,\\mathrm{cm}$ làm bằng hợp kim. Người ta khoan một lỗ trụ đường kính $2{,}0\\,\\mathrm{cm}$ xuyên suốt khối, vuông góc với một mặt. Sau khi khoan, khối có trọng lượng $6{,}30\\,\\mathrm N$.\n\n(a) Tính khối lượng riêng của hợp kim.\n\n(b) Trước khi khoan, khối có trọng lượng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 41,
+        "title": "Khối kim loại bị khoan thủng"
+      },
+      "pythonVerifiedOutputs": {
+        "remaining_volume_m3": 0.00010929203673205106,
+        "density_kg_m3": 5882.012652332775,
+        "initial_weight_N": 7.205465499107652
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.3",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.3 •  You purchase a rectangular piece of metal that has dimensions \n5.0 * 15.0 * 30.0 mm and mass 0.0158 kg. The seller tells you that \nthe metal is gold. To check this, you compute the average density of the \npiece. What value do you get? Were you cheated?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nBạn mua một miếng kim loại hình hộp chữ nhật có ba kích thước $5{,}0\\,\\mathrm{mm}$, $15{,}0\\,\\mathrm{mm}$, $30{,}0\\,\\mathrm{mm}$ và khối lượng $0{,}0158\\,\\mathrm{kg}$. Người bán nói đó là vàng. Hãy tính khối lượng riêng trung bình để kiểm tra. Bạn có bị bán nhầm vật liệu không?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 91,
+        "title": "Kiểm tra miếng kim loại được bán là vàng"
+      },
+      "pythonVerifiedOutputs": {
+        "volume_m3": 2.2499999999999996e-06,
+        "density_kg_m3": 7022.222222222224,
+        "gold_density_kg_m3": 19300,
+        "percent_of_gold_density": 36.38457109959702,
+        "is_gold_density": false
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.4",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.4 •  (a) What is the average density of the sun? (b) What is the av-\nerage density of a neutron star that has the same mass as the sun but a \nradius of only 20.0 km?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\n(a) Tính khối lượng riêng trung bình của Mặt Trời.\n\n(b) Tính khối lượng riêng trung bình của một sao neutron có cùng khối lượng với Mặt Trời nhưng bán kính chỉ $20{,}0\\,\\mathrm{km}$.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 126,
+        "title": "Khối lượng riêng trung bình của hai loại sao"
+      },
+      "pythonVerifiedOutputs": {
+        "sun_mean_density_kg_m3": 1409.0835610554225,
+        "neutron_mean_density_kg_m3": 5.938468814116346e+16,
+        "mass_kg": 1.99e+30,
+        "sun_radius_m": 696000000.0
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.5",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.5 ••  A uniform lead sphere and a uniform aluminum sphere have \nthe same mass. What is the ratio of the radius of the aluminum sphere to \nthe radius of the lead sphere?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột quả cầu chì đồng nhất và một quả cầu nhôm đồng nhất có cùng khối lượng. Tỉ số bán kính của quả cầu nhôm với bán kính của quả cầu chì bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 171,
+        "title": "Hai quả cầu khác vật liệu nhưng cùng khối lượng"
+      },
+      "pythonVerifiedOutputs": {
+        "aluminum_to_lead_radius_ratio": 1.6115293757038798
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.6",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.6 ••  A hollow cylindrical copper pipe is 1.50 m long and has an \noutside diameter of 3.50 cm and an inside diameter of 2.50 cm. How \nmuch does it weigh?\nSection 12.2 Pressure in a Fluid",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột ống đồng trụ rỗng dài $1{,}50\\,\\mathrm m$, đường kính ngoài $3{,}50\\,\\mathrm{cm}$ và đường kính trong $2{,}50\\,\\mathrm{cm}$. Ống có trọng lượng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 205,
+        "title": "Trọng lượng ống đồng rỗng"
+      },
+      "pythonVerifiedOutputs": {
+        "metal_volume_m3": 0.0007068583470577035,
+        "mass_kg": 6.291039288813561,
+        "weight_N": 61.652185030372905
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.7",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.7 ••  Oceans on Mars. Scientists have found evidence that Mars may \nonce have had an ocean 0.500 km deep. The acceleration due to gravity on \nMars is 3.71 m>s2. (a) What would be the gauge pressure at the bottom of \nsuch an ocean, assuming it was freshwater? (b) To what depth would you \nneed to go in the earth’s ocean to experience the same gauge pressure?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nCác nhà khoa học tìm thấy dấu hiệu cho khả năng sao Hỏa từng có đại dương sâu $0{,}500\\,\\mathrm{km}$. Gia tốc trọng trường trên sao Hỏa là $3{,}71\\,\\mathrm{m/s^2}$.\n\n(a) Giả sử đại dương ấy là nước ngọt, áp suất dư ở đáy bằng bao nhiêu?\n\n(b) Cần xuống sâu bao nhiêu trong đại dương Trái Đất để có cùng áp suất dư?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 248,
+        "title": "Áp suất của một đại dương giả định trên sao Hỏa"
+      },
+      "pythonVerifiedOutputs": {
+        "mars_gauge_Pa": 1855000.0,
+        "earth_seawater_depth_m": 183.7725381414702
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.8",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [
+        "BIO"
+      ],
+      "sourceExcerpt": "12.8 ••  BIO (a) Calculate the difference in blood pressure between the \nfeet and top of the head for a person who is 1.65 m tall. (b) Consider \na cylindrical segment of a blood vessel 2.00 cm long and 1.50 mm in \ndiameter. What additional outward force would such a vessel need to \nwithstand in the person’s feet compared to a similar vessel in her head?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Sinh học (BIO).\n\n(a) Tính chênh lệch áp suất máu giữa bàn chân và đỉnh đầu của người cao $1{,}65\\,\\mathrm m$.\n\n(b) Xét một đoạn mạch máu trụ dài $2{,}00\\,\\mathrm{cm}$, đường kính $1{,}50\\,\\mathrm{mm}$. Thành mạch ở chân phải chịu thêm độ lớn tải lực hướng ra ngoài bao nhiêu so với một đoạn mạch tương tự ở đầu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 288,
+        "title": "Chênh lệch áp suất máu giữa đầu và chân"
+      },
+      "pythonVerifiedOutputs": {
+        "head_to_feet_pressure_increase_Pa": 17140.2,
+        "lateral_area_m2": 9.42477796076938e-05,
+        "integrated_outward_load_increase_N": 1.6154257920317934,
+        "note": "Integral of outward normal force magnitudes on cylindrical wall, not nonzero net vector around full circumference."
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.9",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 1,
+      "flags": [
+        "BIO"
+      ],
+      "sourceExcerpt": "12.9 •  BIO In intravenous feeding, a needle is inserted in a vein in \nthe patient’s arm and a tube leads from the needle to a reservoir of fluid \n1density 1050 kg>m32 located at height h above the arm. The top of the \nreservoir is open to the air. If the gauge pressure inside the vein is 5980 Pa, \nwhat is the minimum value of h that allows fluid to enter the vein? \nAssume the needle diameter is large enough that you can ignore the \nviscosity (see Section 12.6) of the fluid.",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1. Sinh học (BIO).\n\nTrong truyền dịch tĩnh mạch, kim được đưa vào tĩnh mạch cánh tay và nối qua ống tới bình dịch có khối lượng riêng $1050\\,\\mathrm{kg/m^3}$. Bình đặt cao hơn cánh tay một đoạn $h$, mặt dịch hở ra không khí. Nếu áp suất dư trong tĩnh mạch là $5980\\,\\mathrm{Pa}$, giá trị nhỏ nhất của $h$ để dịch có thể vào tĩnh mạch là bao nhiêu? Coi đường kính kim đủ lớn để bỏ qua độ nhớt.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 328,
+        "title": "Độ cao bình dịch truyền"
+      },
+      "pythonVerifiedOutputs": {
+        "threshold_height_m": 0.5811467444120505,
+        "note": "Threshold corresponds zero flow; positive flow needs a strictly positive excess head in ideal limiting model."
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.10",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.10 •  A barrel contains a 0.120 m layer of oil floating on water that \nis 0.250 m deep. The density of the oil is 600 kg>m3. (a) What is the \ngauge pressure at the oil–water interface? (b) What is the gauge pres-\nsure at the bottom of the barrel?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột thùng chứa lớp dầu dày $0{,}120\\,\\mathrm m$ nổi trên lớp nước sâu $0{,}250\\,\\mathrm m$. Dầu có khối lượng riêng $600\\,\\mathrm{kg/m^3}$.\n\n(a) Tính áp suất dư tại mặt phân cách dầu–nước.\n\n(b) Tính áp suất dư ở đáy thùng.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 359,
+        "title": "Hai lớp dầu và nước trong thùng"
+      },
+      "pythonVerifiedOutputs": {
+        "interface_gauge_Pa": 705.6,
+        "bottom_gauge_Pa": 3155.6
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.11",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.11 •  A U-shaped tube with both arms open to the air has a 35.0 cm \ncolumn of liquid of unknown density in its right arm. Beneath this liq-\nuid and not mixing with it is glycerin that extends into the left arm of \nthe tube. The surface of the glycerin in the left arm is 12.0 cm below the \nsurface of the unknown liquid in the right arm. What is the density of \nthe unknown liquid?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột ống chữ U có hai nhánh hở. Nhánh phải chứa cột chất lỏng chưa biết khối lượng riêng cao $35{,}0\\,\\mathrm{cm}$. Bên dưới là glycerin không hòa trộn với chất này, đồng thời kéo dài sang nhánh trái.\n\nMặt glycerin ở nhánh trái thấp hơn mặt chất lỏng nhánh phải $12{,}0\\,\\mathrm{cm}$. Tính khối lượng riêng chất lỏng chưa biết.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 398,
+        "title": "Tìm khối lượng riêng từ hai cột chất lỏng"
+      },
+      "pythonVerifiedOutputs": {
+        "glycerin_column_above_interface_m": 0.22999999999999998,
+        "unknown_density_kg_m3": 827.9999999999999
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.12",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.12 ••  You are designing a diving bell to withstand the pressure \nof seawater at a depth of 250 m. (a) What is the gauge pressure at this \ndepth? (You can ignore changes in the density of the water with depth.) \n(b) At this depth, what is the net force due to the water outside and the air \ninside the bell on a circular glass window 30.0 cm in diameter if the pres-\nsure inside the diving bell equals the pressure at the surface of the water? \n(Ignore the small variation of pressure over the surface of the window.)",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột chuông lặn phải chịu áp suất nước biển ở độ sâu $250\\,\\mathrm m$.\n\n(a) Tính áp suất dư tại độ sâu ấy, bỏ qua sự thay đổi khối lượng riêng theo độ sâu.\n\n(b) Cửa kính tròn đường kính $30{,}0\\,\\mathrm{cm}$ chịu hợp lực bao nhiêu do nước bên ngoài và khí bên trong? Áp suất bên trong bằng áp suất tại mặt nước. Bỏ qua sự thay đổi nhỏ của áp suất trên diện tích cửa.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 437,
+        "title": "Áp suất lên cửa kính chuông lặn"
+      },
+      "pythonVerifiedOutputs": {
+        "gauge_Pa": 2523500.0,
+        "window_net_force_inward_N": 178375.70388001145
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.13",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [
+        "BIO"
+      ],
+      "sourceExcerpt": "12.13 ••  BIO Ear Damage from Diving. If the force on the tym-\npanic membrane (eardrum) increases by about 1.5 N above the force \nfrom atmospheric pressure, the membrane can be damaged. When you \ngo scuba diving in the ocean, below what depth could damage to your \neardrum start to occur? The eardrum is typically 8.2 mm in diameter. \n(Consult Table 12.1.)",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Sinh học (BIO).\n\nXét mô hình màng nhĩ có thể bị tổn thương khi lực bên ngoài tăng thêm khoảng $1{,}5\\,\\mathrm N$ so với lực do áp suất khí quyển. Khi lặn trong biển, từ độ sâu nào chênh lệch ấy có thể đạt ngưỡng? Lấy đường kính màng nhĩ là $8{,}2\\,\\mathrm{mm}$ và dùng khối lượng riêng nước biển trong Bảng 12.1.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 482,
+        "title": "Mô hình chênh lệch áp suất lên màng nhĩ"
+      },
+      "pythonVerifiedOutputs": {
+        "eardrum_area_m2": 5.281017250684443e-05,
+        "pressure_difference_threshold_Pa": 28403.618636269242,
+        "depth_m": 2.8139110992935645
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.14",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.14 ••  The liquid in the open-tube manometer in Fig. 12.8a is \nmercury, y1 = 3.00 cm, and y2 = 7.00 cm. Atmospheric pressure is \n980 millibars. What are (a) the absolute pressure at the bottom of the \nU-shaped tube; (b) the absolute pressure in the open tube at a depth of \n4.00 cm below the free surface; (c) the absolute pressure of the gas in \nthe container; (d) the gauge pressure of the gas in pascals?",
+      "sourceParts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nÁp kế ống hở ở Hình 12.8a chứa thủy ngân, có $y_1=3{,}00\\,\\mathrm{cm}$ và $y_2=7{,}00\\,\\mathrm{cm}$. Áp suất khí quyển bằng $980$ millibar. Tính\n\n(a) áp suất tuyệt đối ở đáy ống chữ U,\n\n(b) áp suất tuyệt đối tại điểm sâu $4{,}00\\,\\mathrm{cm}$ dưới mặt thoáng của nhánh hở,\n\n(c) áp suất tuyệt đối của khí trong bình và\n\n(d) áp suất dư của khí theo pascal.\n\n![Hình 12.8: Áp kế ống hở ở hình (a) có hai mức y1 và y2. Hình (b) thể hiện khí áp kế thủy ngân để đối chiếu nguyên lý đo.](/vat-ly-1/bai-giang/img/young-12/r-theory-12-08.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 522,
+        "title": "Đọc áp suất từ áp kế thủy ngân"
+      },
+      "pythonVerifiedOutputs": {
+        "bottom_absolute_Pa": 107329.6,
+        "depth4cm_absolute_Pa": 103331.2,
+        "gas_absolute_Pa": 103331.20000000001,
+        "gas_gauge_Pa": 5331.200000000001
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.15",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 1,
+      "flags": [
+        "BIO"
+      ],
+      "sourceExcerpt": "12.15 •  BIO There is a maximum depth at \nwhich a diver can breathe through a snorkel tube \n(Fig. E12.15) because as the depth increases, \nso does the pressure difference, which tends to \ncollapse the diver’s lungs. Since the snorkel con-\nnects the air in the lungs to the atmosphere at the \nsurface, the pressure inside the lungs is atmo-\nspheric pressure. What is the external–internal \npressure difference when the diver’s lungs are at \na depth of 6.1 m (about 20 ft)? Assume that the \ndiver is in freshwater. (A scuba diver breathing \nfrom compressed air tanks can operate at greater \ndepths than can a snorkeler, since the pressure of \nthe air inside the scuba diver’s lungs increases to \nmatch the external pressure of the water.)",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1. Sinh học (BIO).\n\nĐộ sâu mà người lặn có thể thở qua ống nối lên mặt nước bị giới hạn bởi chênh lệch áp suất có xu hướng ép phổi. Vì ống nối phổi với khí quyển, áp suất trong phổi được lấy bằng áp suất khí quyển. Khi phổi sâu $6{,}1\\,\\mathrm m$, khoảng $20\\,\\mathrm{ft}$, trong nước ngọt, chênh lệch áp suất ngoài–trong bằng bao nhiêu?\n\nNgười thở từ bình khí nén có thể hoạt động ở độ sâu lớn hơn trong mô hình này vì áp suất khí cung cấp cho phổi tăng để phù hợp với áp suất nước bên ngoài.\n\n![Hình E12.15: Phổi người lặn nằm sâu 6,1 m trong khi ống thở thông lên khí quyển ở mặt nước.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-e12-15.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 593,
+        "title": "Chênh lệch áp suất khi thở qua ống lên mặt nước"
+      },
+      "pythonVerifiedOutputs": {
+        "external_minus_internal_pressure_Pa": 59780.0
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.16",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [
+        "BIO"
+      ],
+      "sourceExcerpt": "12.16 ••  BIO The lower end of a long plastic straw is immersed below \nthe surface of the water in a plastic cup. An average person sucking on the \nupper end of the straw can pull water into the straw to a vertical height \nof 1.1 m above the surface of the water in the cup. (a) What is the ­lowest \ngauge pressure that the average person can achieve inside his lungs? \n(b) Explain why your answer in part (a) is negative.",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Sinh học (BIO).\n\nĐầu dưới một ống hút dài bằng nhựa nằm dưới mặt nước trong cốc. Một người có khả năng hút ở mức trung bình hút qua đầu trên và có thể kéo nước lên độ cao thẳng đứng $1{,}1\\,\\mathrm m$ phía trên mặt nước trong cốc.\n\n(a) Áp suất dư thấp nhất mà người ấy tạo ra trong phổi theo phép đo này là bao nhiêu?\n\n(b) Vì sao kết quả ở câu (a) âm?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 626,
+        "title": "Áp suất dư âm khi hút nước bằng ống"
+      },
+      "pythonVerifiedOutputs": {
+        "lowest_lung_gauge_Pa": -10780.0
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.17",
+      "pdfPage1Based": 408,
+      "printedPage": 388,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.17 ••  An electrical short cuts off all power to a submersible diving \nvehicle when it is 30 m below the surface of the ocean. The crew must \npush out a hatch of area 0.75 m2 and weight 300 N on the bottom to \nescape. If the pressure inside is 1.0 atm, what downward force must the \ncrew exert on the hatch to open it?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột sự cố điện làm tàu lặn mất toàn bộ nguồn khi ở sâu $30\\,\\mathrm m$ dưới mặt biển. Để thoát ra, thủy thủ phải đẩy mở xuống dưới một cửa ở đáy tàu có diện tích $0{,}75\\,\\mathrm{m^2}$ và trọng lượng $300\\,\\mathrm N$. Nếu áp suất trong tàu bằng $1{,}0\\,\\mathrm{atm}$, lực hướng xuống họ cần tác dụng là bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 665,
+        "title": "Lực mở cửa thoát hiểm dưới tàu lặn"
+      },
+      "pythonVerifiedOutputs": {
+        "net_water_over_air_force_up_N": 227115.0,
+        "crew_downward_force_N": 226815.0
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.18",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.18 ••  A tall cylinder with a cross-sectional area 12.0 cm2 is par-\ntially filled with mercury; the surface of the mercury is 8.00 cm above \nthe bottom of the cylinder. Water is slowly poured in on top of the \nmercury, and the two fluids don’t mix. What volume of water must \nbe added to double the gauge pressure at the bottom of the cylinder?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột bình trụ cao có tiết diện $12{,}0\\,\\mathrm{cm^2}$ chứa một phần thủy ngân, với mặt thủy ngân cao $8{,}00\\,\\mathrm{cm}$ trên đáy. Nước được đổ chậm lên trên, hai chất không hòa trộn. Cần thêm thể tích nước bao nhiêu để áp suất dư ở đáy tăng gấp đôi?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 701,
+        "title": "Đổ thêm nước để tăng áp suất đáy"
+      },
+      "pythonVerifiedOutputs": {
+        "added_water_height_m": 1.088,
+        "added_water_volume_m3": 0.0013056,
+        "added_water_volume_L": 1.3056
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.19",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.19 ••  A cylindrical disk of \nwood weighing 45.0 N and having a \ndiameter of 30.0 cm floats on a cyl-\ninder of oil of density 0.850 g >cm3 \n(Fig. E12.19). The cylinder of oil \nis 75.0 cm deep and has a diam-\neter the same as that of the wood. \n(a) What is the gauge pressure at the \ntop of the oil column? (b) Suppose \nnow that someone puts a weight \nof 83.0 N on top of the wood, but \nno oil seeps around the edge of the \nwood. What is the change in pres-\nsure at (i) the bottom of the oil and \n(ii) halfway down in the oil?",
+      "sourceParts": [
+        "a",
+        "b(i)",
+        "b(ii)"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột đĩa gỗ trụ trọng lượng $45{,}0\\,\\mathrm N$, đường kính $30{,}0\\,\\mathrm{cm}$ nổi trên cột dầu có khối lượng riêng $0{,}850\\,\\mathrm{g/cm^3}$. Cột dầu sâu $75{,}0\\,\\mathrm{cm}$ và có cùng đường kính với đĩa, như Hình E12.19.\n\n(a) Tính áp suất dư ở mặt trên cột dầu.\n\n(b) Đặt thêm vật trọng lượng $83{,}0\\,\\mathrm N$ lên đĩa và không để dầu lọt qua mép đĩa. Áp suất thay đổi bao nhiêu tại (i) đáy cột dầu, (ii) điểm giữa chiều sâu cột dầu?\n\n![Hình E12.19: Đĩa gỗ đường kính 30,0 cm nằm trên cột dầu sâu 75,0 cm và truyền tải trọng xuống dầu.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-e12-19.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 742,
+        "title": "Đĩa gỗ truyền áp suất xuống cột dầu"
+      },
+      "pythonVerifiedOutputs": {
+        "oil_surface_gauge_Pa": 636.6197723675814,
+        "added_pressure_every_depth_Pa": 1174.2098023668723,
+        "initial_bottom_gauge_Pa": 6884.119772367581
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.20",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.20 •  You are doing experiments from a research ship in the Atlantic \nOcean. On a day when the atmospheric pressure at the surface of the \nwater is 1.03 * 105 Pa, at what depth below the surface of the water is \nthe absolute pressure (a) twice the pressure at the surface and (b) four \ntimes the pressure at the surface?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nBạn làm thí nghiệm từ tàu nghiên cứu trên Đại Tây Dương. Áp suất khí quyển ở mặt nước hôm đó là $1{,}03\\times10^5\\,\\mathrm{Pa}$. Tại độ sâu nào áp suất tuyệt đối bằng\n\n(a) hai lần và\n\n(b) bốn lần áp suất ở mặt nước?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 781,
+        "title": "Độ sâu ứng với các bội áp suất mặt biển"
+      },
+      "pythonVerifiedOutputs": {
+        "double_surface_pressure_depth_m": 10.204081632653061,
+        "quadruple_surface_pressure_depth_m": 30.612244897959183
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.21",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.21 ••  Hydraulic Lift I. For the hydraulic lift shown in Fig. 12.7, \nwhat must be the ratio of the diameter of the vessel at the car to the di-\nameter of the vessel where the force F1 is applied so that a 1520 kg car \ncan be lifted with a force F1 of just 125 N?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nVới máy nâng thủy lực trong Hình 12.7, đường kính bình phía ô tô phải lớn gấp bao nhiêu đường kính bình nơi tác dụng lực $F_1$, để nâng ô tô $1520\\,\\mathrm{kg}$ bằng lực chỉ $125\\,\\mathrm N$?\n\n![Hình 12.7: Máy nâng thủy lực có pít-tông nhỏ nhận lực F1 và pít-tông lớn đỡ ô tô.](/vat-ly-1/bai-giang/img/young-12/r-theory-12-07.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 822,
+        "title": "Tỉ số đường kính của máy nâng thủy lực"
+      },
+      "pythonVerifiedOutputs": {
+        "diameter_ratio": 10.916409666186041,
+        "area_ratio": 119.16800000000002
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.22",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.22 •  Hydraulic Lift II. The piston of a hydraulic automobile lift is \n0.30 m in diameter. What gauge pressure, in pascals, is required to lift a \ncar with a mass of 1200 kg? Also express this pressure in atmospheres.",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nPít-tông của máy nâng ô tô thủy lực có đường kính $0{,}30\\,\\mathrm m$. Cần áp suất dư bao nhiêu pascal để nâng ô tô khối lượng $1200\\,\\mathrm{kg}$? Biểu diễn áp suất ấy theo đơn vị atmosphere.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 861,
+        "title": "Áp suất cần để nâng ô tô"
+      },
+      "pythonVerifiedOutputs": {
+        "required_gauge_Pa": 166369.96717872794,
+        "required_gauge_atm": 1.6419439149146602
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.23",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.23 •  Early barometers contained wine instead of mercury. On a \nday when the height h of the liquid in the barometer tube is 750 mm \nfor a mercury barometer, what is h for a barometer that uses wine with \ndensity 990 kg>m3?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột số khí áp kế ban đầu dùng rượu vang thay cho thủy ngân. Trong ngày cột thủy ngân của khí áp kế cao $750\\,\\mathrm{mm}$, cột rượu vang có khối lượng riêng $990\\,\\mathrm{kg/m^3}$ phải cao bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 895,
+        "title": "Khí áp kế dùng rượu vang"
+      },
+      "pythonVerifiedOutputs": {
+        "wine_barometer_height_m": 10.303030303030303
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.24",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.24 •  Estimate the fraction of your body’s total volume that is above \nthe surface of the water when you float in seawater (density 1030 kg>m3). \n(a) Use this estimate and your weight to calculate the total volume of \nyour body. (b) What is your average density? How does your average \ndensity compare to the density of seawater?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nHãy ước lượng phần thể tích cơ thể nằm trên mặt nước khi bạn nổi trong nước biển có khối lượng riêng $1030\\,\\mathrm{kg/m^3}$.\n\n(a) Dùng phần thể tích vừa ước lượng và trọng lượng của bạn để tính tổng thể tích cơ thể.\n\n(b) Tính khối lượng riêng trung bình của cơ thể và so sánh với nước biển.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 928,
+        "title": "Ước lượng thể tích và khối lượng riêng của cơ thể"
+      },
+      "pythonVerifiedOutputs": {
+        "formula_total_volume": "weight/(rho_sea*g*(1-f))",
+        "formula_density": "rho_sea*(1-f)",
+        "illustrative_emerged_fraction": 0.03,
+        "illustrative_weight_N": 686.0,
+        "illustrative_volume_m3": 0.07006305675107596,
+        "illustrative_mean_density_kg_m3": 999.1
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.25",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.25 ••  A 900 N athlete in very good condition does not float in a fresh-\nwater pool. To keep him from sinking to the bottom, an upward force of 20 N \nmust be applied to him. What are his volume and his average density?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột vận động viên có thể trạng rất tốt, trọng lượng $900\\,\\mathrm N$, không nổi được trong bể nước ngọt. Muốn giữ người ấy không chìm xuống đáy phải tác dụng thêm một lực $20\\,\\mathrm N$ hướng lên. Tính thể tích và khối lượng riêng trung bình của người ấy.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 981,
+        "title": "Người không nổi được trong nước ngọt"
+      },
+      "pythonVerifiedOutputs": {
+        "volume_m3": 0.08979591836734693,
+        "mean_density_kg_m3": 1022.7272727272727
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.26",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.26 ••  A rock has mass 1.80 kg. When the rock is suspended from \nthe lower end of a string and totally immersed in water, the tension in \nthe string is 12.8 N. What is the smallest density of a liquid in which the \nrock will float?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột hòn đá khối lượng $1{,}80\\,\\mathrm{kg}$ treo ở đầu dưới một sợi dây. Khi đá ngập hoàn toàn trong nước, lực căng dây là $12{,}8\\,\\mathrm N$. Khối lượng riêng nhỏ nhất của một chất lỏng để hòn đá có thể nổi trong đó là bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1021,
+        "title": "Khối lượng riêng nhỏ nhất để đá nổi"
+      },
+      "pythonVerifiedOutputs": {
+        "volume_m3": 0.0004938775510204081,
+        "minimum_float_density_kg_m3": 3644.6280991735543
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.27",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.27 •  A 950 kg cylindrical buoy floats vertically in seawater. The \ndiameter of the buoy is 0.900 m. Calculate the additional distance the \nbuoy will sink when an 80.0 kg man stands on top of it.",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột phao trụ khối lượng $950\\,\\mathrm{kg}$ nổi thẳng đứng trong nước biển, đường kính $0{,}900\\,\\mathrm m$. Khi người khối lượng $80{,}0\\,\\mathrm{kg}$ đứng lên phao, phao chìm thêm bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1061,
+        "title": "Phao chìm thêm khi có người đứng lên"
+      },
+      "pythonVerifiedOutputs": {
+        "additional_sink_m": 0.12208937262233371,
+        "initial_submerged_height_m": 1.4498112998902128
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.28",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.28 ••  A slab of ice floats on a freshwater lake. What minimum \nvolume must the slab have for a 65.0 kg woman to be able to stand on it \nwithout getting her feet wet?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột tấm băng nổi trên hồ nước ngọt. Tấm băng cần có thể tích nhỏ nhất bao nhiêu để người phụ nữ $65{,}0\\,\\mathrm{kg}$ đứng lên mà không bị ướt chân?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1101,
+        "title": "Tấm băng đỡ một người"
+      },
+      "pythonVerifiedOutputs": {
+        "minimum_ice_volume_m3": 0.8125
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.29",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.29 ••  An ore sample weighs 17.50 N in air. When the sample is \nsuspended by a light cord and totally immersed in water, the tension in \nthe cord is 11.20 N. Find the total volume and the density of the sample.\nWooden\ndisk\n75.0\ncm\nOil\n30.0 cm\nFigure E12.19\n10.0\ncm\nOil\n10.0\ncm\nWater\nWood\nFigure E12.33\n\t\nProblems        389",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột mẫu quặng có trọng lượng $17{,}50\\,\\mathrm N$ trong không khí. Khi mẫu treo bằng dây nhẹ và ngập hoàn toàn trong nước, lực căng dây là $11{,}20\\,\\mathrm N$. Tìm tổng thể tích và khối lượng riêng mẫu.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1136,
+        "title": "Thể tích và khối lượng riêng mẫu quặng"
+      },
+      "pythonVerifiedOutputs": {
+        "total_volume_m3": 0.0006428571428571429,
+        "density_kg_m3": 2777.7777777777774
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.30",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.30 ••  You are preparing some apparatus for a visit to a newly dis-\ncovered planet Caasi having oceans of glycerin and a surface accelera-\ntion due to gravity of 5.40 m>s2. If your apparatus floats in the oceans \non earth with 25.0% of its volume submerged, what percentage will be \nsubmerged in the glycerin oceans of Caasi?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nBạn chuẩn bị thiết bị cho chuyến thăm hành tinh Caasi mới được phát hiện trong tình huống giả định. Đại dương ở đó là glycerin và gia tốc trọng trường bề mặt là $5{,}40\\,\\mathrm{m/s^2}$. Thiết bị nổi trong các đại dương Trái Đất với $25{,}0\\%$ thể tích chìm. Khi ở đại dương glycerin của Caasi, bao nhiêu phần trăm thể tích thiết bị sẽ chìm?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1176,
+        "title": "Thiết bị nổi trên hành tinh có đại dương glycerin"
+      },
+      "pythonVerifiedOutputs": {
+        "apparatus_mean_density_kg_m3": 257.5,
+        "caasi_submerged_fraction": 0.20436507936507936,
+        "caasi_submerged_percent": 20.436507936507937
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.31",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.31 ••  A rock with density 1200 kg>m3 is suspended from the lower \nend of a light string. When the rock is in air, the tension in the string \nis  28.0 N. What is the tension in the string when the rock is totally \n­immersed in a liquid with density 750 kg>m3?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột hòn đá có khối lượng riêng $1200\\,\\mathrm{kg/m^3}$ được treo ở đầu dưới dây nhẹ. Trong không khí, lực căng dây bằng $28{,}0\\,\\mathrm N$. Khi đá ngập hoàn toàn trong chất lỏng có khối lượng riêng $750\\,\\mathrm{kg/m^3}$, lực căng bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1213,
+        "title": "Lực căng dây treo đá trong chất lỏng"
+      },
+      "pythonVerifiedOutputs": {
+        "immersed_tension_N": 10.5
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.32",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.32 •  A hollow plastic sphere is held below the surface of a freshwa-\nter lake by a cord anchored to the bottom of the lake. The sphere has a \nvolume of 0.650 m3 and the tension in the cord is 1120 N. (a) Calculate \nthe buoyant force exerted by the water on the sphere. (b) What is the \nmass of the sphere? (c) The cord breaks and the sphere rises to the sur-\nface. When the sphere comes to rest, what fraction of its volume will be \nsubmerged?",
+      "sourceParts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột quả cầu nhựa rỗng được giữ dưới mặt hồ nước ngọt bằng dây neo xuống đáy. Thể tích quả cầu là $0{,}650\\,\\mathrm{m^3}$, lực căng dây $1120\\,\\mathrm N$.\n\n(a) Tính lực đẩy của nước lên quả cầu.\n\n(b) Tính khối lượng quả cầu.\n\n(c) Dây đứt, quả cầu nổi lên. Khi đã đứng yên ở mặt nước, phần thể tích chìm bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1248,
+        "title": "Quả cầu rỗng được neo dưới nước"
+      },
+      "pythonVerifiedOutputs": {
+        "buoyant_force_N": 6370.0,
+        "sphere_mass_kg": 535.7142857142857,
+        "floating_submerged_fraction": 0.8241758241758241
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.33",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.33 ••  A cubical block of wood, \n10.0 cm on a side, floats at the inter-\nface between oil and water with its \nlower surface 1.50 cm below the inter-\nface (Fig. E12.33). The density of the \noil is 790 kg>m3. (a) What is the gauge \npressure at the upper face of the block? \n(b)  What is the gauge pressure at the \nlower face of the block? (c) What are the \nmass and density of the block?",
+      "sourceParts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột khối gỗ lập phương cạnh $10{,}0\\,\\mathrm{cm}$ nổi ở mặt phân cách dầu–nước, mặt dưới thấp hơn mặt phân cách $1{,}50\\,\\mathrm{cm}$ như Hình E12.33. Dầu có khối lượng riêng $790\\,\\mathrm{kg/m^3}$.\n\n(a) Tính áp suất dư ở mặt trên khối gỗ.\n\n(b) Tính áp suất dư ở mặt dưới.\n\n(c) Tính khối lượng và khối lượng riêng của khối gỗ.\n\n![Hình E12.33: Khối gỗ cạnh 10,0 cm nằm một phần trong lớp dầu dày 10,0 cm và phần dưới chìm 1,50 cm vào nước.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-e12-33.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1298,
+        "title": "Khối gỗ ở mặt phân cách dầu và nước"
+      },
+      "pythonVerifiedOutputs": {
+        "upper_face_gauge_Pa": 116.13000000000001,
+        "lower_face_gauge_Pa": 921.2000000000002,
+        "mass_kg": 0.8215000000000002,
+        "density_kg_m3": 821.5,
+        "oil_submerged_height_m": 0.085,
+        "water_submerged_height_m": 0.015
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.34",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.34 •  A solid aluminum ingot weighs 89 N in air. (a) What is its vol-\nume? (b) The ingot is suspended from a rope and totally immersed in water. \nWhat is the tension in the rope (the apparent weight of the ingot in water)?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột thỏi nhôm đặc có trọng lượng $89\\,\\mathrm N$ trong không khí.\n\n(a) Tính thể tích thỏi.\n\n(b) Treo thỏi bằng dây và nhúng ngập hoàn toàn trong nước. Lực căng dây, cũng là trọng lượng biểu kiến của thỏi trong nước, bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1370,
+        "title": "Trọng lượng biểu kiến của thỏi nhôm"
+      },
+      "pythonVerifiedOutputs": {
+        "volume_m3": 0.0033635676492819347,
+        "immersed_tension_N": 56.03703703703704
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.35",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.35 ••  A rock is suspended by a light string. When the rock is in air, \nthe tension in the string is 39.2 N. When the rock is totally immersed \nin water, the tension is 28.4 N. When the rock is totally immersed in \nan unknown liquid, the tension is 21.5 N. What is the density of the \nunknown liquid?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột hòn đá treo bằng dây nhẹ. Lực căng dây trong không khí là $39{,}2\\,\\mathrm N$, khi ngập hoàn toàn trong nước là $28{,}4\\,\\mathrm N$, còn khi ngập hoàn toàn trong chất lỏng chưa biết là $21{,}5\\,\\mathrm N$. Tìm khối lượng riêng chất lỏng chưa biết.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1408,
+        "title": "Tìm khối lượng riêng chất lỏng từ lực căng"
+      },
+      "pythonVerifiedOutputs": {
+        "rock_volume_m3": 0.001102040816326531,
+        "unknown_liquid_density_kg_m3": 1638.8888888888885
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.36",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.36 •  A uniform plastic block floats in water with 30.0% of its vol-\nume above the surface of the water. The block is placed in a second liq-\nuid and floats with 20.0% of its volume above the surface of the liquid. \nWhat is the density of the second liquid?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột khối nhựa đồng nhất nổi trong nước, có $30{,}0\\%$ thể tích nằm trên mặt nước. Đặt vào chất lỏng thứ hai, khối nổi với $20{,}0\\%$ thể tích nằm trên mặt chất lỏng. Tính khối lượng riêng chất lỏng thứ hai.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1451,
+        "title": "Khối nhựa nổi trong hai chất lỏng"
+      },
+      "pythonVerifiedOutputs": {
+        "block_density_kg_m3": 700.0,
+        "second_liquid_density_kg_m3": 875.0
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.37",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.37 ••  A large plastic cylinder with mass 30.0 kg and density 370 kg>m3 \nis in the water of a lake. A light vertical cable runs between the bottom \nof the cylinder and the bottom of the lake and holds the cylinder so that \n30.0% of its volume is above the surface of the water. What is the ten-\nsion in the cable?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột trụ nhựa lớn khối lượng $30{,}0\\,\\mathrm{kg}$, khối lượng riêng $370\\,\\mathrm{kg/m^3}$, nằm trong nước hồ. Một dây nhẹ thẳng đứng nối đáy trụ với đáy hồ, giữ cho $30{,}0\\%$ thể tích trụ ở trên mặt nước. Tính lực căng dây.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1488,
+        "title": "Dây neo giữ trụ nhựa nổi một phần"
+      },
+      "pythonVerifiedOutputs": {
+        "cylinder_volume_m3": 0.08108108108108109,
+        "buoyant_force_N": 556.2162162162163,
+        "cable_tension_down_N": 262.21621621621625
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.38",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.38 ••  Water runs into a fountain, filling all the pipes, at a steady \nrate of 0.750 m3>s. (a) How fast will it shoot out of a hole 4.50 cm in \ndiameter? (b) At what speed will it shoot out if the diameter of the hole \nis three times as large?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nNước vào một đài phun với lưu lượng ổn định $0{,}750\\,\\mathrm{m^3/s}$ và luôn chiếm đầy các ống.\n\n(a) Tốc độ nước phun qua lỗ đường kính $4{,}50\\,\\mathrm{cm}$ bằng bao nhiêu?\n\n(b) Nếu đường kính lỗ lớn gấp ba, tốc độ phun bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1527,
+        "title": "Tốc độ nước qua lỗ phun"
+      },
+      "pythonVerifiedOutputs": {
+        "hole_speed_m_s": 471.570201753764,
+        "triple_diameter_speed_m_s": 52.39668908375156
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.39",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.39 ••  A shower head has 20 circular openings, each with radius \n1.0 mm. The shower head is connected to a pipe with radius 0.80 cm. If \nthe speed of water in the pipe is 3.0 m>s, what is its speed as it exits the \nshower-head openings?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nĐầu vòi sen có $20$ lỗ tròn, mỗi lỗ bán kính $1{,}0\\,\\mathrm{mm}$. Đầu vòi nối với ống có bán kính $0{,}80\\,\\mathrm{cm}$. Nếu tốc độ nước trong ống là $3{,}0\\,\\mathrm{m/s}$, tốc độ khi đi ra các lỗ bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1565,
+        "title": "Nước đi qua các lỗ của vòi sen"
+      },
+      "pythonVerifiedOutputs": {
+        "pipe_Q_m3_s": 0.0006031857894892403,
+        "exit_speed_m_s": 9.600000000000001
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.40",
+      "pdfPage1Based": 409,
+      "printedPage": 389,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.40 •  Water is flowing in a pipe with a varying cross-sectional \narea, and at all points the water completely fills the pipe. At point 1 \nthe cross-sectional area of the pipe is 0.070 m2, and the magnitude of \nthe fluid ­velocity is 3.50 m>s. (a) What is the fluid speed at points in the \npipe where the cross-sectional area is (a) 0.105 m2 and (b) 0.047 m2? \n(c) Calculate the volume of water discharged from the open end of the \npipe in 1.00 hour.",
+      "sourceParts": [
+        "a",
+        "b",
+        "c"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nNước chảy trong ống có tiết diện thay đổi và luôn chiếm đầy ống. Tại điểm 1, tiết diện là $0{,}070\\,\\mathrm{m^2}$ và tốc độ là $3{,}50\\,\\mathrm{m/s}$.\n\n(a) Tính tốc độ ở đoạn có tiết diện $0{,}105\\,\\mathrm{m^2}$.\n\n(b) Tính tốc độ ở đoạn có tiết diện $0{,}047\\,\\mathrm{m^2}$.\n\n(c) Tính thể tích nước chảy ra đầu hở của ống trong $1{,}00$ giờ.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1599,
+        "title": "Tốc độ và thể tích nước trong ống đổi tiết diện"
+      },
+      "pythonVerifiedOutputs": {
+        "volume_flow_m3_s": 0.24500000000000002,
+        "speed_at_A0105_m_s": 2.3333333333333335,
+        "speed_at_A0047_m_s": 5.212765957446809,
+        "discharged_volume_one_hour_m3": 882.0000000000001
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.41",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.41 •  Water is flowing in a pipe with a circular cross section but \nwith varying cross-sectional area, and at all points the water completely \nfills the pipe. (a) At one point in the pipe the radius is 0.150 m. What is \nthe speed of the water at this point if water is flowing into this pipe at \na steady rate of 1.20 m3>s? (b) At a second point in the pipe the water \nspeed is 3.80 m>s. What is the radius of the pipe at this point?",
+      "sourceParts": [
+        "a",
+        "b"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nNước chảy trong ống tiết diện tròn có diện tích thay đổi và luôn chiếm đầy ống.\n\n(a) Tại một điểm bán kính ống là $0{,}150\\,\\mathrm m$. Tính tốc độ nước nếu lưu lượng vào ổn định $1{,}20\\,\\mathrm{m^3/s}$.\n\n(b) Tại điểm khác, tốc độ nước là $3{,}80\\,\\mathrm{m/s}$. Bán kính ống ở đó bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1648,
+        "title": "Tìm tốc độ và bán kính ống"
+      },
+      "pythonVerifiedOutputs": {
+        "speed_at_r015_m_s": 16.9765272631355,
+        "radius_at_v380_m": 0.31704717539580796
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.42",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.42 ••  On another planet that you are exploring, a large tank is \nopen to the atmosphere and contains ethanol. A horizontal pipe of cross- \nsectional area 9.0 * 10-4 m2 has one end inserted into the tank just \nabove the bottom of the tank. The other end of the pipe is open to the \natmosphere. The viscosity of the ethanol can be neglected. You measure \nthe volume flow rate of the ethanol from the tank as a function of the \ndepth h of the ethanol in the tank. If you graph the volume flow rate \nsquared as a function of h, your data lie close to a straight line that has \nslope 1.94 * 10-5 m5>s2. What is the value of g, the acceleration of a \nfree-falling object at the surface of the planet?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nTrên hành tinh đang khảo sát, một bồn lớn hở ra khí quyển chứa ethanol. Một ống ngang tiết diện $9{,}0\\times10^{-4}\\,\\mathrm{m^2}$ nối vào bồn ngay phía trên đáy, đầu kia cũng hở ra khí quyển. Bỏ qua độ nhớt ethanol.\n\nBạn đo lưu lượng thể tích theo độ sâu $h$ của ethanol trong bồn. Khi vẽ bình phương lưu lượng theo $h$, dữ liệu gần một đường thẳng có hệ số góc $1{,}94\\times10^{-5}\\,\\mathrm{m^5/s^2}$. Tính gia tốc rơi tự do ở bề mặt hành tinh.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1683,
+        "title": "Đo gia tốc trọng trường từ dòng ethanol"
+      },
+      "pythonVerifiedOutputs": {
+        "planet_g_m_s2": 11.975308641975309
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.43",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.43 ••  A large, cylindrical water tank with diameter 3.00 m is on a \nplatform 2.00 m above the ground. The vertical tank is open to the air \nand the depth of the water in the tank is 2.00 m. There is a hole with \ndiameter 0.500 cm in the side of the tank just above the bottom of the \ntank. The hole is plugged with a cork. You remove the cork and collect \nin a bucket the water that flows out the hole. (a) When 1.00 gal of water \nflows out of the tank, what is the change in the height of the water in the \ntank? (b) How long does it take you to collect 1.00 gal of water in the \nbucket? Based on your answer in part (a), is it reasonable to ignore \nthe change in the depth of the water in the tank as 1.00 gal of water \nflows out?",
+      "sourceParts": [
+        "a",
+        "b",
+        "reasonableness"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột bồn nước trụ đứng đường kính $3{,}00\\,\\mathrm m$ đặt trên bệ cao $2{,}00\\,\\mathrm m$ so với mặt đất. Bồn hở và nước sâu $2{,}00\\,\\mathrm m$. Thành bồn ngay trên đáy có một lỗ đường kính $0{,}500\\,\\mathrm{cm}$ được nút kín. Bạn rút nút rồi hứng nước vào xô.\n\n(a) Sau khi $1{,}00\\,\\mathrm{gal}$ nước chảy ra, mặt nước trong bồn thay đổi độ cao bao nhiêu?\n\n(b) Cần bao lâu để hứng đủ lượng nước ấy? Dựa vào câu (a), có hợp lý khi bỏ qua sự thay đổi độ sâu của nước trong quá trình hứng không?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1722,
+        "title": "Thu một gallon nước từ bồn lớn"
+      },
+      "pythonVerifiedOutputs": {
+        "one_US_gallon_m3": 0.003785411784,
+        "height_drop_m": 0.0005355262196105867,
+        "initial_exit_speed_m_s": 6.260990336999411,
+        "initial_volume_flow_m3_s": 0.0001229342577932127,
+        "constant_head_collect_time_s": 30.79216364869936,
+        "exact_varying_head_time_s": 30.794225176097243,
+        "relative_depth_change": 0.00026776310980529335
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.44",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "difficulty": 1,
+      "flags": [],
+      "sourceExcerpt": "12.44 •  A soft drink (mostly water) flows in a pipe at a beverage plant \nwith a mass flow rate that would fill 220 0.355-L cans per minute. At \npoint 2 in the pipe, the gauge pressure is 152 kPa and the cross-sectional \narea is 8.00 cm2. At point 1, 1.35 m above point 2, the cross-sectional \narea is 2.00 cm2. Find the (a) mass flow rate; (b) volume flow rate; \n(c) flow speeds at points 1 and 2; (d) gauge pressure at point 1.",
+      "sourceParts": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nNước giải khát, thành phần chủ yếu là nước, chảy trong một ống ở nhà máy với lưu lượng đủ rót $220$ lon, mỗi lon $0{,}355\\,\\mathrm L$, trong một phút. Tại điểm 2, áp suất dư là $152\\,\\mathrm{kPa}$, tiết diện $8{,}00\\,\\mathrm{cm^2}$. Điểm 1 cao hơn điểm 2 $1{,}35\\,\\mathrm m$ và có tiết diện $2{,}00\\,\\mathrm{cm^2}$.\n\nTính (a) lưu lượng khối lượng, (b) lưu lượng thể tích, (c) tốc độ tại hai điểm, (d) áp suất dư tại điểm 1.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1780,
+        "title": "Dòng nước giải khát trong dây chuyền đóng lon"
+      },
+      "pythonVerifiedOutputs": {
+        "mass_flow_kg_s": 1.3016666666666667,
+        "volume_flow_m3_s": 0.0013016666666666667,
+        "v1_m_s": 6.508333333333333,
+        "v2_m_s": 1.6270833333333332,
+        "p1_gauge_Pa": 118914.49869791669
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.45",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "difficulty": 2,
+      "flags": [],
+      "sourceExcerpt": "12.45 ••  A sealed tank containing seawater to a height of 11.0 m also \ncontains air above the water at a gauge pressure of 3.00 atm. Water flows \nout from the bottom through a small hole. How fast is this water moving?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột bồn kín chứa nước biển cao $11{,}0\\,\\mathrm m$. Không khí phía trên có áp suất dư $3{,}00\\,\\mathrm{atm}$. Nước thoát qua một lỗ nhỏ ở đáy ra ngoài khí quyển. Tốc độ nước khi ra lỗ bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1853,
+        "title": "Nước biển thoát từ bồn có khí nén"
+      },
+      "pythonVerifiedOutputs": {
+        "exit_speed_m_s": 28.38736899479418
+      },
+      "status": "authored-source-compared-and-python-verified"
+    },
+    {
+      "id": "12.46",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "difficulty": 2,
+      "flags": [
+        "BIO"
+      ],
+      "sourceExcerpt": "12.46 ••  BIO Artery Blockage. A medical technician is trying to de-\ntermine what percentage of a patient’s artery is blocked by plaque. To do \nthis, she measures the blood pressure just before the region of blockage \nand finds that it is 1.20 * 104 Pa, while in the region of blockage it is \n1.15 * 104 Pa. Furthermore, she knows that blood flowing through the \nnormal artery just before the point of blockage is traveling at 30.0 cm>s, \nand the specific gravity of this patient’s blood is 1.06. What percentage of \nthe cross-sectional area of the patient’s artery is blocked by the plaque?",
+      "sourceParts": [
+        "single"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Sinh học (BIO).\n\nMột kỹ thuật viên muốn ước lượng phần trăm tiết diện động mạch bị mảng bám chiếm chỗ. Áp suất ngay trước đoạn hẹp là $1{,}20\\times10^4\\,\\mathrm{Pa}$, trong đoạn hẹp là $1{,}15\\times10^4\\,\\mathrm{Pa}$. Máu trước đoạn hẹp chuyển động với tốc độ $30{,}0\\,\\mathrm{cm/s}$ và có tỉ khối $1{,}06$. Tính phần trăm diện tích tiết diện bị mảng bám chặn.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-early/proposed-fragments/parent-11-bai-tap-001-046.md",
+        "line": 1897,
+        "title": "Ước lượng phần tiết diện động mạch bị hẹp"
+      },
+      "pythonVerifiedOutputs": {
+        "pressure_drop_Pa": 500.0,
+        "blood_density_kg_m3": 1060,
+        "constriction_speed_m_s": 1.0165609801753628,
+        "open_area_fraction": 0.2951126453311716,
+        "blocked_area_percent": 70.48873546688283
+      },
+      "status": "authored-source-compared-and-python-verified"
+    }
+  ],
+  "middleNumbered": [
+    {
+      "id": "12.53",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "sourceExcerpt": "12.53 ••  BIO Clogged Artery. Viscous blood is flowing through an ar-\ntery partially clogged by cholesterol. A surgeon wants to remove enough \nof the cholesterol to double the flow rate of blood through this artery. If \nthe original diameter of the artery is D, what should be the new diameter \n(in terms of D) to accomplish this for the same pressure gradient?",
+      "sourceParts": [
+        "single"
+      ],
+      "difficulty": 2,
+      "flags": [
+        "BIO"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Sinh học (BIO).\n\nMáu có độ nhớt chảy qua một động mạch bị cholesterol làm hẹp một phần. Một bác sĩ phẫu thuật muốn lấy bớt lượng cholesterol để lưu lượng máu qua đoạn mạch tăng gấp đôi. Nếu đường kính ban đầu của lòng mạch còn thông là $D$, đường kính mới phải bằng bao nhiêu theo $D$ để đạt yêu cầu khi gradient áp suất giữ nguyên?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 3,
+        "title": "Mở rộng động mạch để tăng lưu lượng"
+      },
+      "sourceAndReasoningReview": "Fixedgradient andviscosity,laminarcylindricalmodel QproportionalD4;Dnew=1.189207D.",
+      "pythonOutputs": {
+        "diameter_ratio": 1.189207115002721,
+        "percent_diameter_increase": 18.920711500272102
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.54",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "sourceExcerpt": "12.54 ••  CP The deepest point known in any of the earth’s oceans is \nin the Marianas Trench, 10.92 km deep. (a) Assuming water is incom-\npressible, what is the pressure at this depth? Use the density of ­seawater. \n(b) The actual pressure is 1.16 * 108 Pa; your calculated value will be \nless because the density actually varies with depth. Using the compress-\nibility of water and the actual pressure, find the density of the water at \nthe bottom of the Marianas Trench. What is the percent change in the \ndensity of the water?",
+      "sourceParts": [
+        "a",
+        "b-density",
+        "b-percent"
+      ],
+      "difficulty": 2,
+      "flags": [
+        "CP"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Bài tập tổng hợp (CP).\n\nTrong bài toán này, điểm sâu nhất được xét trong các đại dương Trái Đất nằm ở rãnh Mariana, sâu $10{,}92\\,\\mathrm{km}$.\n\n(a) Coi nước không nén được và dùng khối lượng riêng nước biển để tính áp suất ở độ sâu ấy.\n\n(b) Áp suất thực tế được cho là $1{,}16\\times10^8\\,\\mathrm{Pa}$. Kết quả câu (a) nhỏ hơn vì khối lượng riêng thực sự tăng theo độ sâu. Dùng độ nén của nước và áp suất thực tế để tìm khối lượng riêng ở đáy. Khối lượng riêng thay đổi bao nhiêu phần trăm?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 39,
+        "title": "Áp suất và sự nén nước ở rãnh Mariana"
+      },
+      "sourceAndReasoningReview": "ActualTable11.2PDF369kappa45.8e-11Pa^-1. Absolute pressure110327805Pa. Linear finitebulkstrain givesrho1087.739,+5.606%;firstorder density1084.674,+5.308%,clearly distinguished.",
+      "pythonOutputs": {
+        "incompressible_gauge_Pa": 110226480.0,
+        "incompressible_absolute_Pa": 110327805.0,
+        "compressibility_Pa_inv": 4.58e-10,
+        "pressure_increase_Pa": 115898675.0,
+        "volume_fraction": 0.94691840685,
+        "linear_volume_model_density_kg_m3": 1087.7389145136356,
+        "density_increase_percent": 5.605719855692781,
+        "first_order_density_kg_m3": 1084.6740409445,
+        "first_order_density_percent": 5.308159315,
+        "note": "Finite bulk-strain model V≈V0(1-kappa*dp). Expanding reciprocal to first order gives5.31percent, while retaining reciprocal gives5.61percent. No hydrostatic integration withvariablekappa claimed."
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.55",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "sourceExcerpt": "12.55 •••  CALC A swimming pool is 5.0 m long, 4.0 m wide, and 3.0 m \ndeep. Compute the force exerted by the water against (a) the bottom and \n(b) either end. (Hint: Calculate the force on a thin, horizontal strip at a \ndepth h, and integrate this over the end of the pool.) Do not include the \nforce due to air pressure.",
+      "sourceParts": [
+        "a-bottom",
+        "b-end"
+      ],
+      "difficulty": 3,
+      "flags": [
+        "CALC"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 3. Dùng giải tích (CALC).\n\nMột hồ bơi dài $5{,}0\\,\\mathrm m$, rộng $4{,}0\\,\\mathrm m$ và sâu $3{,}0\\,\\mathrm m$. Tính lực của nước lên\n\n(a) đáy hồ và\n\n(b) một trong hai mặt đầu hồ.\n\nGợi ý: Với mặt đầu hồ, tính lực trên một dải ngang mỏng ở độ sâu $h$ rồi tích phân theo chiều sâu. Không kể lực do áp suất khí quyển.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 120,
+        "title": "Lực nước tác dụng lên hồ bơi"
+      },
+      "sourceAndReasoningReview": "Endface4mx3m,notlongside5mx3m. Integrate rho*g*b*h dh. Bottom588000N,end176400N. Atmosphericforceexcluded.",
+      "pythonOutputs": {
+        "bottom_force_N": 588000.0,
+        "end_force_N": 176399.99999999997,
+        "long_side_force_if_requested_N": 220500.0
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.56",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "sourceExcerpt": "12.56 ••  A rock is suspended from the lower end of a light string. When \nthe rock is totally immersed in water, the tension in the string is 1.20 N. \nWhen the rock is totally immersed in ethanol, the tension in the string is \n1.60 N. Use the densities in Table 12.1 to calculate the weight of the rock.",
+      "sourceParts": [
+        "single"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột hòn đá treo ở đầu dưới dây nhẹ. Khi ngập hoàn toàn trong nước, lực căng dây bằng $1{,}20\\,\\mathrm N$. Khi ngập hoàn toàn trong ethanol, lực căng là $1{,}60\\,\\mathrm N$. Dùng các khối lượng riêng trong Bảng 12.1 để tính trọng lượng hòn đá.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 175,
+        "title": "Trọng lượng đá từ hai lực căng"
+      },
+      "sourceAndReasoningReview": "Both equilibrium equations forwater1000 andethanol810;differenceof tensions givesvolume;weight3.305263N.",
+      "pythonOutputs": {
+        "rock_volume_m3": 0.0002148227712137487,
+        "rock_weight_N": 3.3052631578947373
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.57",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "sourceExcerpt": "12.57 •••  CP \nCALC The upper \nedge of a gate in a dam runs along the \nwater surface. The gate is 2.00 m high \nand 4.00 m wide and is hinged along \na  horizontal line through its center \n(Fig.  P12.57). Calculate the torque \nabout the hinge arising from the force \ndue to the water. (Hint: Use a proce-\ndure similar to that used in Problem",
+      "sourceParts": [
+        "single-torque"
+      ],
+      "difficulty": 3,
+      "flags": [
+        "CP",
+        "CALC"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 3. Bài tập tổng hợp (CP). Dùng giải tích (CALC).\n\nMép trên một cửa đập nằm ngang mặt nước. Cửa cao $2{,}00\\,\\mathrm m$, rộng $4{,}00\\,\\mathrm m$ và có bản lề theo một đường ngang qua chính giữa, như Hình P12.57. Tính mômen quanh trục bản lề do lực nước.\n\nGợi ý: Tính mômen trên một dải ngang mỏng ở độ sâu $h$ rồi tích phân trên toàn cửa, tương tự cách chia dải trong Bài 12.55.\n\n![Hình P12.57: Cửa đập cao 2,00 m, rộng 4,00 m có trục bản lề nằm ngang qua giữa chiều cao.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-57.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 227,
+        "title": "Mômen lực nước quanh trục giữa cửa đập"
+      },
+      "sourceAndReasoningReview": "Signed leverh-H/2aboutmiddle hinge. Upper/lower momentsopposite;integral26133.333Nm. Alternativecenterofpressure2H/3check.",
+      "pythonOutputs": {
+        "gate_force_N": 78400.0,
+        "torque_about_middle_N_m": 26133.33333333334,
+        "upper_signed_torque_N_m": -6533.333333333333,
+        "lower_signed_torque_N_m": 32666.666666666668,
+        "center_of_pressure_depth_m": 1.3333333333333333
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.58",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "sourceExcerpt": "12.58 •••  A large tank has a 40.0-cm-deep layer of water floating on \ntop of a 60.0-cm-deep layer of glycerin. A dense wooden cube has a side \nlength of 2.00 cm and a mass of 9.20 * 10-3 kg. When the cube floats in \nthe tank, what fraction of its volume is below the surface of the glycerin?",
+      "sourceParts": [
+        "single"
+      ],
+      "difficulty": 3,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 3.\n\nMột bồn lớn chứa lớp nước dày $40{,}0\\,\\mathrm{cm}$ nổi trên lớp glycerin dày $60{,}0\\,\\mathrm{cm}$. Một khối gỗ đặc, hình lập phương cạnh $2{,}00\\,\\mathrm{cm}$, có khối lượng $9{,}20\\times10^{-3}\\,\\mathrm{kg}$. Khi khối nổi trong bồn, phần thể tích nào nằm dưới mặt glycerin?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 281,
+        "title": "Khối gỗ nổi giữa nước và glycerin"
+      },
+      "sourceAndReasoningReview": "Wooddensity1150betweenwater1000/glycerin1260. Volume8e-6m3. Lowerfraction.576923;bothlayerdepthsretained.",
+      "pythonOutputs": {
+        "wood_density_kg_m3": 1149.9999999999998,
+        "glycerin_submerged_fraction": 0.5769230769230761,
+        "glycerin_submerged_percent": 57.69230769230761,
+        "depth_in_glycerin_m": 0.011538461538461522,
+        "depth_in_water_m": 0.008461538461538479
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.59",
+      "pdfPage1Based": 410,
+      "printedPage": 390,
+      "sourceExcerpt": "12.59 ••  A block of plastic in the shape of a rectangular solid that has \nheight 8.00 cm and area A for its top and bottom surfaces is floating in \nwater. You place coins on the top surface of the block (at the center, so the \ntop surface of the block remains horizontal). By measuring the height of \nthe block above the surface of the water, you can determine the height h \nbelow the surface. You measure h for various values of the total mass m \nof the coins that you have placed on the block. You plot h versus m and \nfind that your data lie close to a straight line that has slope 0.0390 m>kg \nand y-intercept 0.0312 m. What is the mass of the block?",
+      "sourceParts": [
+        "single-fitmass"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột khối nhựa hình hộp chữ nhật cao $8{,}00\\,\\mathrm{cm}$ có hai mặt ngang diện tích $A$ và nổi trong nước. Bạn đặt các đồng xu ở giữa mặt trên để mặt này luôn nằm ngang. Từ chiều cao nhô lên, bạn suy ra phần chiều cao $h$ chìm dưới nước cho từng tổng khối lượng xu $m$.\n\nĐồ thị $h$ theo $m$ gần một đường thẳng có hệ số góc $0{,}0390\\,\\mathrm{m/kg}$ và tung độ gốc $0{,}0312\\,\\mathrm m$. Tính khối lượng khối nhựa.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 326,
+        "title": "Khối lượng khối nhựa từ đường thẳng thực nghiệm"
+      },
+      "sourceAndReasoningReview": "h=(M+m)/(rho*A);slope1/(rho*A),interceptM/(rho*A). M=intercept/slope=.800kg. Height8cmretainedasdomainlimit.",
+      "pythonOutputs": {
+        "area_m2": 0.02564102564102564,
+        "block_mass_kg": 0.7999999999999999,
+        "block_density_kg_m3": 389.99999999999994,
+        "maximum_coin_mass_before_top_wet_kg": 1.2512820512820513
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.60",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.60 ••  Ballooning on Mars. It has been proposed that we could \n­explore Mars using inflated balloons to hover just above the surface. The \nbuoyancy of the atmosphere would keep the balloon aloft. The density of \nthe Martian atmosphere is 0.0154 kg>m3 (although this varies with tem-\nperature). Suppose we construct these balloons of a thin but tough plastic \nhaving a density such that each square meter has a mass of 5.00 g. We \ninflate them with a very light gas whose mass we can ignore. (a) What \nshould be the radius and mass of these balloons so they just hover \nabove the surface of Mars? (b) If we released one of the balloons from \npart (a) on earth, where the atmospheric density is 1.20 kg>m3, what \nwould be its initial acceleration assuming it was the same size as on \nMars? Would it go up or down? (c) If on Mars these balloons have five \ntimes the radius found in part (a), how heavy an instrument package \ncould they carry?",
+      "sourceParts": [
+        "a-radius-and-mass",
+        "b-acceleration-direction",
+        "c-payload"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột đề xuất thăm dò sao Hỏa dùng khí cầu lơ lửng ngay trên bề mặt nhờ lực đẩy của khí quyển. Lấy khối lượng riêng khí quyển sao Hỏa là $0{,}0154\\,\\mathrm{kg/m^3}$, dù đại lượng này có thay đổi theo nhiệt độ.\n\nVỏ khí cầu làm bằng nhựa mỏng nhưng bền, mỗi mét vuông có khối lượng $5{,}00\\,\\mathrm g$. Khí cầu được bơm bằng khí rất nhẹ và có thể bỏ qua khối lượng khí bên trong.\n\n(a) Bán kính và khối lượng khí cầu hình cầu phải bằng bao nhiêu để vừa đủ lơ lửng trên sao Hỏa?\n\n(b) Đem một khí cầu ở câu (a) thả trên Trái Đất, nơi không khí có khối lượng riêng $1{,}20\\,\\mathrm{kg/m^3}$. Giữ nguyên kích thước như trên sao Hỏa, gia tốc ban đầu bằng bao nhiêu, hướng lên hay xuống?\n\n(c) Nếu bán kính khí cầu trên sao Hỏa lớn gấp năm kết quả câu (a), nó có thể mang một bộ thiết bị nặng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 375,
+        "title": "Khí cầu thăm dò sao Hỏa"
+      },
+      "sourceAndReasoningReview": "Massperarea.005kg/m2notbulkdensity. Sphere r=.974026m,m=.0596103kg. Earthinitiala753.836up. Fivefoldr has25foldenvelopemass/125foldbuoyancy,payload5.961025kg.",
+      "pythonOutputs": {
+        "radius_m": 0.9740259740259739,
+        "envelope_mass_kg": 0.05961025021569433,
+        "initial_earth_acceleration_up_m_s2": 753.8363636363637,
+        "initial_earth_acceleration_in_g": 76.92207792207792,
+        "big_radius_m": 4.87012987012987,
+        "big_envelope_mass_kg": 1.4902562553923582,
+        "big_displaced_atmosphere_mass_kg": 7.451281276961791,
+        "package_mass_kg": 5.961025021569433,
+        "package_weight_on_Mars_N": 22.115402830022596
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.61",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.61 ••  A 0.180 kg cube of ice (frozen water) is floating in glycerin. \nThe gylcerin is in a tall cylinder that has inside radius 3.50 cm. The \nlevel of the glycerin is well below the top of the cylinder. If the ice com-\npletely melts, by what distance does the height of liquid in the cylinder \nchange? Does the level of liquid rise or fall? That is, is the surface of \nthe water above or below the original level of the glycerin before the \nice melted?",
+      "sourceParts": [
+        "single-height-change-and-sign"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột khối băng nước khối lượng $0{,}180\\,\\mathrm{kg}$ nổi trong glycerin chứa ở một bình trụ cao có bán kính trong $3{,}50\\,\\mathrm{cm}$. Mặt glycerin còn thấp hơn nhiều so với miệng bình. Nếu băng tan hoàn toàn, chiều cao mặt chất lỏng thay đổi bao nhiêu? Mặt nước sau cùng cao hơn hay thấp hơn mặt glycerin ban đầu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 456,
+        "title": "Mực chất lỏng khi băng tan trong glycerin"
+      },
+      "sourceAndReasoningReview": "Displacementbeforem/rho_gly,volumeafterm/rho_water. Additivevolumesandneglectedmixingcontractionstated. Levelrises.00965138m.",
+      "pythonOutputs": {
+        "initial_displaced_glycerin_volume_m3": 0.00014285714285714284,
+        "melted_water_volume_m3": 0.00017999999999999998,
+        "liquid_level_change_up_m": 0.009651378473211146
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.62",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.62 ••  A narrow, U-shaped glass \ntube with open ends is filled with \n25.0 cm of oil (of specific gravity \n0.80) and 25.0 cm of water on oppo-\nsite sides, with a barrier separating the \nliquids (Fig. P12.62). (a) Assume that \nthe two liquids do not mix, and find the \nfinal heights of the columns of liquid in \neach side of the tube after the barrier is \nremoved. (b) For the following cases, \narrive at your answer by simple physi-\ncal reasoning, not by calculations: \n(i) What would be the height on each \nside if the oil and water had equal densities? (ii) What would the heights \nbe if the oil’s density were much less than that of water?",
+      "sourceParts": [
+        "a-heights",
+        "b(i)-equal-density-physical-reasoning",
+        "b(ii)-light-oil-physical-reasoning"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột ống thủy tinh chữ U hẹp, hai đầu hở, ban đầu có cột dầu cao $25{,}0\\,\\mathrm{cm}$ ở một phía và cột nước cao $25{,}0\\,\\mathrm{cm}$ ở phía kia. Dầu có tỉ khối $0{,}80$, còn hai chất được giữ riêng bằng vách ngăn như Hình P12.62.\n\n(a) Bỏ vách ngăn, giả sử hai chất không trộn. Tìm chiều cao cuối cùng của các cột chất lỏng ở hai nhánh.\n\n(b) Không tính toán, dùng lập luận vật lý để cho biết chiều cao mỗi nhánh nếu (i) dầu và nước có cùng khối lượng riêng, (ii) khối lượng riêng dầu rất nhỏ so với nước.\n\n![Hình P12.62: Hai cột nước và dầu ban đầu cao bằng nhau được giữ riêng trong ống chữ U bằng vách ngăn.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-62.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 507,
+        "title": "Hai cột dầu và nước sau khi bỏ vách ngăn"
+      },
+      "sourceAndReasoningReview": "Equalcrosssections,negligiblecurvedbottomsize. Oilcolumnstays25cm. Waterleft22.5cm,waterright2.5cm,totalright27.5cm. Limitingcasesboth25;lightoilleft12.5/right37.5.",
+      "pythonOutputs": {
+        "water_left_height_m": 0.225,
+        "water_under_oil_right_m": 0.024999999999999994,
+        "right_total_column_height_m": 0.275,
+        "equal_density_heights_m": [
+          0.25,
+          0.25
+        ],
+        "negligible_oil_density_heights_m": [
+          0.125,
+          0.375
+        ]
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.63",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.63 •  A U-shaped tube open to \nthe air at both ends contains some \nmercury. A quantity of water is care-\nfully poured into the left arm of the \nU-shaped tube until the vertical \nheight of the water column is 15.0 cm \n(Fig. P12.63). (a) What is the gauge \npressure at the water–mercury inter-\nface? (b) Calculate the vertical dis-\ntance h from the top of the mercury in \nthe right-hand arm of the tube to the \ntop of the water in the left-hand arm.",
+      "sourceParts": [
+        "a-pressure",
+        "b-distance"
+      ],
+      "difficulty": 1,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột ống chữ U chứa thủy ngân và hở ra không khí ở cả hai đầu. Đổ nước cẩn thận vào nhánh trái tới khi cột nước có chiều cao thẳng đứng $15{,}0\\,\\mathrm{cm}$ như Hình P12.63.\n\n(a) Tính áp suất dư ở mặt phân cách nước–thủy ngân.\n\n(b) Tính khoảng cách thẳng đứng $h$ từ mặt thủy ngân ở nhánh phải tới mặt nước ở nhánh trái.\n\n![Hình P12.63: Cột nước cao 15,0 cm phía trên thủy ngân làm hai mặt thủy ngân lệch nhau.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-63.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 572,
+        "title": "Mức nước và thủy ngân trong ống chữ U"
+      },
+      "sourceAndReasoningReview": "Interfacegauge1470Pa,mercuryleveldifference1.10294cm;askedwater-top-to-right-mercury13.8971cm.",
+      "pythonOutputs": {
+        "interface_gauge_Pa": 1470.0,
+        "mercury_level_difference_m": 0.011029411764705883,
+        "water_top_above_right_mercury_m": 0.13897058823529412
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.64",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.64 ••  CALC The Great Molasses Flood. On the afternoon of \nJanuary 15, 1919, an unusually warm day in Boston, a 17.7-m-high, \n27.4-m-diameter cylindrical metal tank used for storing molasses rup-\ntured. Molasses flooded into the streets in a 5-m-deep stream, killing \npedestrians and horses and knocking down buildings. The molasses \nhad a density of 1600 kg>m3. If the tank was full before the accident, \nwhat was the total outward force the molasses exerted on its sides? \n(Hint: Consider the outward force on a circular ring of the tank wall of \nwidth dy and at a depth y below the surface. Integrate to find the total \noutward force. Assume that before the tank ruptured, the pressure at the \nsurface of the molasses was equal to the air pressure outside the tank.)",
+      "sourceParts": [
+        "single"
+      ],
+      "difficulty": 2,
+      "flags": [
+        "CALC"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Dùng giải tích (CALC).\n\nChiều ngày 15 tháng 1 năm 1919, một ngày ấm bất thường ở Boston, một bồn kim loại hình trụ chứa mật mía cao $17{,}7\\,\\mathrm m$, đường kính $27{,}4\\,\\mathrm m$ bị vỡ. Mật mía tràn ra đường thành dòng sâu khoảng $5\\,\\mathrm m$, làm chết người đi bộ và ngựa, đồng thời làm đổ các tòa nhà.\n\nMật mía có khối lượng riêng $1600\\,\\mathrm{kg/m^3}$. Nếu trước tai nạn bồn đầy, tổng độ lớn lực hướng ra ngoài mà mật mía tác dụng lên các thành bên là bao nhiêu?\n\nGợi ý: Xét một vành tròn mỏng của thành bồn, bề rộng $dy$, ở độ sâu $y$ dưới mặt mật mía rồi tích phân. Trước khi bồn vỡ, áp suất trên mặt mật mía bằng áp suất không khí ngoài bồn.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 623,
+        "title": "Lực lên thành bồn trong trận lũ mật mía Boston"
+      },
+      "sourceAndReasoningReview": "AllhistoricalgivensreadPDF411:afternoonJan15,1919,unusuallywarmBoston,17.7mhigh,27.4mD,5mflow,pedestriansandhorseskilled,buildingsdestroyed,rho1600. Gaugecylinderload211428257.7Nisoutwardmagnitudesum,notnetvector.",
+      "pythonOutputs": {
+        "total_outward_load_magnitude_N": 211428257.6857869,
+        "net_vector_force_all_sidewalls_N": 0,
+        "tank_volume_m3": 10436.725795195147
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.65",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.65 ••  A large, 40.0 kg cubical block of wood with uniform density \nis floating in a freshwater lake with 20.0% of its volume above the sur-\nface of the water. You want to load bricks onto the floating block and \nthen push it horizontally through the water to an island where you are \nbuilding an outdoor grill. (a) What is the volume of the block? (b) What \nis the maximum mass of bricks that you can place on the block without \ncausing it to sink below the water surface?",
+      "sourceParts": [
+        "a-volume",
+        "b-maxbricks"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột khối gỗ lập phương lớn, đồng nhất, khối lượng $40{,}0\\,\\mathrm{kg}$ nổi trên hồ nước ngọt với $20{,}0\\%$ thể tích nằm trên mặt nước. Bạn muốn xếp gạch lên khối gỗ rồi đẩy ngang qua hồ tới đảo để xây một bếp nướng ngoài trời.\n\n(a) Tính thể tích khối gỗ.\n\n(b) Khối lượng gạch lớn nhất có thể đặt lên mà khối gỗ chưa chìm dưới mặt nước bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 669,
+        "title": "Chở gạch trên khối gỗ nổi"
+      },
+      "sourceAndReasoningReview": "Initial40kg/.8immersiongivesvolume.0500m3;maximum10kgbricksatfullyimmersedwood.",
+      "pythonOutputs": {
+        "block_volume_m3": 0.05,
+        "maximum_brick_mass_kg": 10.0
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.66",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.66 •••  A hot-air balloon has a volume of 2200 m3. The balloon \n­fabric (the envelope) weighs 900 N. The basket with gear and full pro-\npane tanks weighs 1700 N. If the balloon can barely lift an additional \n3200 N of passengers, breakfast, and champagne when the outside air \ndensity is 1.23 kg>m3, what is the average density of the heated gases in \nthe envelope?",
+      "sourceParts": [
+        "single"
+      ],
+      "difficulty": 3,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 3.\n\nMột khí cầu khí nóng có thể tích $2200\\,\\mathrm{m^3}$. Vải vỏ khí cầu nặng $900\\,\\mathrm N$. Giỏ cùng thiết bị và các bình propane đầy nặng $1700\\,\\mathrm N$. Khí cầu vừa đủ nâng thêm $3200\\,\\mathrm N$ gồm hành khách, bữa sáng và champagne khi không khí ngoài có khối lượng riêng $1{,}23\\,\\mathrm{kg/m^3}$.\n\nTính khối lượng riêng trung bình của các khí đã được đốt nóng bên trong vỏ.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 717,
+        "title": "Khối lượng riêng khí nóng trong khí cầu"
+      },
+      "sourceAndReasoningReview": "Allweights900+1700+3200=5800Nretainedincludingbreakfast/champagne. Heatedgasrho.960983kg/m3;gasweightincluded.",
+      "pythonOutputs": {
+        "buoyant_force_N": 26518.8,
+        "total_non_gas_weight_N": 5800,
+        "heated_gas_density_kg_m3": 0.9609833024118738,
+        "heated_gas_mass_kg": 2114.1632653061224
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.67",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.67 •  An open barge has the \n­dimensions shown in Fig. P12.67. If \nthe barge is made out of 4.0-cm-thick \nsteel plate on each of its four sides and \nits bottom, what mass of coal can the \nbarge carry in freshwater without sink-\ning? Is there enough room in the barge \nto hold this amount of coal? (The density of coal is about 1500 kg>m3.)",
+      "sourceParts": [
+        "max-coal-mass",
+        "does-it-fit"
+      ],
+      "difficulty": 1,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 1.\n\nMột sà lan hở có các kích thước như Hình P12.67: Dài $40\\,\\mathrm m$, rộng $22\\,\\mathrm m$, cao $12\\,\\mathrm m$. Bốn thành bên và đáy đều làm bằng tấm thép dày $4{,}0\\,\\mathrm{cm}$.\n\nSà lan có thể chở bao nhiêu than trong nước ngọt mà chưa chìm? Trong lòng sà lan có đủ chỗ để chứa khối lượng than đó không? Lấy khối lượng riêng than khoảng $1500\\,\\mathrm{kg/m^3}$.\n\n![Hình P12.67: Sà lan hở dài 40 m, rộng 22 m, cao 12 m, có bốn thành và đáy bằng thép.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-67.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 766,
+        "title": "Tải than cực đại của sà lan"
+      },
+      "sourceAndReasoningReview": "Readfigouter40x22x12m,4cmsteel. Exactopenshellsubtraction,interior10465.55m3. Coal9.82333e6kg,V6548.89m3fits. Thinplate9.821184e6kgagreesattwofigures;outerdimensionsassumptionstated.",
+      "pythonOutputs": {
+        "outer_displacement_limit_m3": 10560.0,
+        "interior_capacity_m3": 10465.554944000001,
+        "steel_volume_m3": 94.44505599999866,
+        "steel_mass_kg": 736671.4367999895,
+        "max_coal_mass_kg": 9823328.56320001,
+        "coal_volume_m3": 6548.885708800007,
+        "coal_fits": true,
+        "thin_plate_approx_steel_volume_m3": 94.72,
+        "thin_plate_approx_max_coal_mass_kg": 9821184.0,
+        "outer_dimensions_assumed": true
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.68",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.68 •••  A piece of wood is 0.600 m long, 0.250 m wide, and 0.080 m \nthick. Its density is 700 kg>m3. What volume of lead must be fastened \nunderneath it to sink the wood in calm water so that its top is just even \nwith the water level? What is the mass of this volume of lead?",
+      "sourceParts": [
+        "lead-volume",
+        "lead-mass"
+      ],
+      "difficulty": 3,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 3.\n\nMột miếng gỗ dài $0{,}600\\,\\mathrm m$, rộng $0{,}250\\,\\mathrm m$, dày $0{,}080\\,\\mathrm m$, có khối lượng riêng $700\\,\\mathrm{kg/m^3}$. Cần gắn bên dưới thể tích chì bao nhiêu để gỗ nổi trong nước yên lặng với mặt trên vừa ngang mặt nước? Phần chì ấy có khối lượng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 831,
+        "title": "Gắn chì để dìm khối gỗ tới mặt trên"
+      },
+      "sourceAndReasoningReview": "Bothwoodandleadbuoyancyincluded. Vwood.012m3,leadV.000349515m3,mass3.949515kg. Fullsumofforcesbeforealgebra.",
+      "pythonOutputs": {
+        "wood_volume_m3": 0.012,
+        "lead_volume_m3": 0.00034951456310679615,
+        "lead_mass_kg": 3.9495145631067965
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.69",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.69 ••  A gallon of milk in a full plastic jug is sitting on the edge of \nyour kitchen table. Estimate the vertical distance between the top sur-\nface of the milk and the bottom of the jug. Also estimate the distance \nfrom the tabletop to the floor. You punch a small hole in the side of the \njug just above the bottom of the jug, and milk flows out the hole. When \nthe milk first starts to flow out the hole, what horizontal distance does it \ntravel before reaching the floor? Assume the milk is in free fall after it \nhas passed through the hole, and neglect the viscosity of the milk.",
+      "sourceParts": [
+        "estimate-two-heights",
+        "horizontal-range"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nMột bình nhựa đầy một gallon sữa đặt sát mép bàn bếp. Hãy ước lượng khoảng cách thẳng đứng từ mặt sữa tới đáy bình, đồng thời ước lượng độ cao mặt bàn so với sàn. Bạn đục một lỗ nhỏ ở thành bình ngay trên đáy để sữa chảy ngang ra ngoài.\n\nKhi sữa vừa bắt đầu chảy, nó đi được bao xa theo phương ngang trước khi chạm sàn? Coi sữa rơi tự do sau khi qua lỗ và bỏ qua độ nhớt.",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 888,
+        "title": "Tầm ngang của tia sữa từ bình trên bàn"
+      },
+      "sourceAndReasoningReview": "No inventedfixedheights. GeneralR2sqrt(hH),explicitillustrativeh.25m,H.80m->.894427m. SourceassumesTorricellioutflow;ventconditionstated.",
+      "pythonOutputs": {
+        "general_range_formula": "2sqrt(hH)",
+        "illustrative_milk_head_m": 0.25,
+        "illustrative_table_height_m": 0.8,
+        "illustrative_exit_speed_m_s": 2.2135943621178655,
+        "illustrative_fall_time_s": 0.40406101782088427,
+        "illustrative_range_m": 0.8944271909999159
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.70",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.70 ••  Ethanol is flowing in a pipe and at all points completely \nfills the pipe. At point A in the pipe the gauge pressure is p and the \ncross-sectional area of the pipe is 0.0500 m2. The other end of the pipe \n(point B) is open to the air, has cross-sectional area 0.0200 m2, and \nis at a vertical height of 3.00 m above point A. What must the gauge \npressure p be at A if the volume flow rate out of the pipe at point B is \n0.0800 m3>s?",
+      "sourceParts": [
+        "single"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nEthanol chảy và luôn chiếm đầy ống. Tại A, áp suất dư là $p$ và tiết diện $0{,}0500\\,\\mathrm{m^2}$. Đầu B hở ra không khí có tiết diện $0{,}0200\\,\\mathrm{m^2}$ và cao hơn A $3{,}00\\,\\mathrm m$. Để lưu lượng tại B bằng $0{,}0800\\,\\mathrm{m^3/s}$, áp suất dư ở A phải bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 938,
+        "title": "Áp suất cấp cho dòng ethanol đi lên"
+      },
+      "sourceAndReasoningReview": "Ethanol810kg/m3,A.0500/B.0200,Q.0800,h3.00m;vA1.60,vB4,p29257.2Pa. Outletgauge0,steadyidealmodel.",
+      "pythonOutputs": {
+        "speed_A_m_s": 1.5999999999999999,
+        "speed_B_m_s": 4.0,
+        "required_gauge_Pa": 29257.200000000004
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.71",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.71 ••  CP A firehose must be able to shoot water to the top of a \nbuilding 28.0 m tall when aimed straight up. Water enters this hose at a \nsteady rate of 0.500 m3>s and shoots out of a round nozzle. Neglect air \nresistance. (a) What is the maximum diameter this nozzle can have? \n(b) If the only nozzle available has a diameter twice as great, what is the \nhighest point the water can reach?",
+      "sourceParts": [
+        "a-maxdiameter",
+        "b-newheight"
+      ],
+      "difficulty": 2,
+      "flags": [
+        "CP"
+      ],
+      "vietnamesePrompt": "Độ khó: Mức 2. Bài tập tổng hợp (CP).\n\nMột vòi chữa cháy phải phun được nước tới đỉnh tòa nhà cao $28{,}0\\,\\mathrm m$ khi chĩa thẳng đứng lên. Nước vào vòi đều với lưu lượng $0{,}500\\,\\mathrm{m^3/s}$ và ra qua đầu phun tròn. Bỏ qua lực cản không khí.\n\n(a) Đầu phun có đường kính lớn nhất bao nhiêu?\n\n(b) Nếu chỉ có đầu phun đường kính lớn gấp đôi giá trị ấy, độ cao lớn nhất tia nước đạt được bằng bao nhiêu?",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 991,
+        "title": "Chọn đường kính vòi chữa cháy"
+      },
+      "sourceAndReasoningReview": "Waterheight28.0m,Q.500m3/s. MaximumD.164849m. DoubleD quadruplesarea,quartersspeed,sixteenthheight1.75m.",
+      "pythonOutputs": {
+        "required_exit_speed_m_s": 23.426480742954116,
+        "maximum_nozzle_diameter_m": 0.1648490830601565,
+        "double_diameter_exit_speed_m_s": 5.856620185738529,
+        "double_diameter_max_height_m": 1.75
+      },
+      "status": "source-compared-authored-and-python-verified"
+    },
+    {
+      "id": "12.72",
+      "pdfPage1Based": 411,
+      "printedPage": 391,
+      "sourceExcerpt": "12.72 ••  Block A in Fig. P12.72 \nhangs by a cord from spring balance \nD and is submerged in a liquid C con-\ntained in beaker B. The mass of the \nbeaker is 1.00 kg; the mass of the liq-\nuid is 1.80 kg. Balance D reads 3.50 kg, \nand balance E reads 7.50 kg. The vol-\nume of block A is 3.80 * 10-3 m3. \n(a) What is  the density of the liquid? \n(b) What will each balance read if block \nA is pulled up out of the liquid?",
+      "sourceParts": [
+        "a-density",
+        "b-bothscales"
+      ],
+      "difficulty": 2,
+      "flags": [],
+      "vietnamesePrompt": "Độ khó: Mức 2.\n\nKhối A trong Hình P12.72 được treo bằng dây từ cân lò xo D và ngập trong chất lỏng C chứa ở cốc B. Cốc có khối lượng $1{,}00\\,\\mathrm{kg}$, chất lỏng có khối lượng $1{,}80\\,\\mathrm{kg}$. Cân D chỉ $3{,}50\\,\\mathrm{kg}$, còn cân E đỡ cốc chỉ $7{,}50\\,\\mathrm{kg}$. Thể tích khối A là $3{,}80\\times10^{-3}\\,\\mathrm{m^3}$.\n\n(a) Tính khối lượng riêng chất lỏng.\n\n(b) Mỗi cân sẽ chỉ bao nhiêu nếu khối A được kéo lên hẳn khỏi chất lỏng?\n\n![Hình P12.72: Cân D treo khối A trong chất lỏng C. Cốc B cùng chất lỏng được đỡ riêng bởi cân E.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-72.png)",
+      "destination": {
+        "file": "qa/physics1-remaining/ch12-exercises-middle/proposed-fragments/parent-12-middle-053-072.md",
+        "line": 1046,
+        "title": "Hai cân và khối vật nhúng trong chất lỏng"
+      },
+      "sourceAndReasoningReview": "Directsourcebeaker1.00kg,liquid1.80kg,D3.50kg,E7.50kg,V.00380m3. Rejecthandoffbeaker3.50kg. BuoyancyB/g4.70kg,rho1236.842kg/m3;finalD8.20/E2.80kg.",
+      "pythonOutputs": {
+        "beaker_mass_kg": 1.0,
+        "liquid_mass_kg": 1.8,
+        "hanging_balance_D_kg": 3.5,
+        "platform_balance_E_kg": 7.5,
+        "buoyant_mass_equivalent_kg": 4.7,
+        "buoyant_force_N": 46.06,
+        "liquid_density_kg_m3": 1236.842105263158,
+        "block_mass_kg": 8.2,
+        "final_D_kg": 8.2,
+        "final_E_kg": 2.8,
+        "rejected_handoff_error": "Handoff incorrectlycalledbeaker3.50kg;actualPDF411beaker1.00kgandD3.50kg."
+      },
+      "status": "source-compared-authored-and-python-verified"
+    }
+  ],
+  "lateNumbered": [
+    {
+      "unit": "12.47",
+      "sourcePdfPage1Based": 410,
+      "sourcePrintedPage": 390,
+      "sourceData": "Citymain connectedfirehose, verticalheight15.0m, mainmuchlargerdiameter.",
+      "requiredParts": [
+        "Gaugepressure required"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Firehosecontext restored. Mainvelocityneglected at nozzleheight; pressuregauge147000Pa. Sourceflag• restored.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-bai-tap-047-092.md",
+      "headingLine": 5,
+      "heading": "### 12.47 (•): Áp suất để tia nước đạt độ cao cho trước",
+      "draftUnitSha256": "03c293c3993c8e28e7000a3bf5f55930aff0b0cb19e8739e8abef57d82aed3a7",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.48",
+      "sourcePdfPage1Based": 410,
+      "sourcePrintedPage": 390,
+      "sourceData": "Hole DIAMETER6.00mm,14.0m below openlargewaterlevel.",
+      "requiredParts": [
+        "Effluxspeed",
+        "Volumepersecond"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Bothsubparts retained, diameterconvertedbeforecirculararea. Speed16.565m/s,Q4.68365e-4m3/s. Sourceflag• restored.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-bai-tap-047-092.md",
+      "headingLine": 38,
+      "heading": "### 12.48 (•): Nước thoát qua một lỗ nhỏ ở thành bồn",
+      "draftUnitSha256": "f6cf42ea8e17bd15e29bbe8b5d694077711b2777241b45ae975af31b7bd88fac",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.49",
+      "sourcePdfPage1Based": 410,
+      "sourcePrintedPage": 390,
+      "sourceData": "Horizontalwaterpipe,2.50m/s,gaugepressure1.80e4Pa,A2=2A1.",
+      "requiredParts": [
+        "Secondgaugepressure"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "P1sourceexponenterror fixed inprompt,summary,solutionandparentcode. Correctv2=1.25m/s,p2=20343.75Pa.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-bai-tap-047-092.md",
+      "headingLine": 80,
+      "heading": "### 12.49 (•): Ống nằm ngang có tiết diện tăng gấp đôi",
+      "draftUnitSha256": "830443f75e2aa4f0727dedd8dcd3cf3bfc96eb979ce93a1965e74db02924b2e2",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.50",
+      "sourcePdfPage1Based": 410,
+      "sourcePrintedPage": 390,
+      "sourceData": "v1=3.00m/s,gaugep1=5.00e4Pa,y2lower11.0m,DIAMETER2=2DIAMETER1.",
+      "requiredParts": [
+        "Secondgaugepressure"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "P1diameter/area/directionerror fixed throughout. CorrectA2=4A1,v2=.750m/s,p2=162018.75Pa. Bothheightdropandslowingraisep.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-bai-tap-047-092.md",
+      "headingLine": 122,
+      "heading": "### 12.50 (••): Dòng nước đi xuống và chậm lại",
+      "draftUnitSha256": "57cdedcef1da60ab320f22fe9f0076a2c9abe2b723b51991eb21a9e0c2fc290b",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.51",
+      "sourcePdfPage1Based": 410,
+      "sourcePrintedPage": 390,
+      "sourceData": "Golf-coursewaterQ7200cm3/s,horizontalpipe,radii4.00cm/2.00cm,absolutep1=2.40e5Pa.",
+      "requiredParts": [
+        "Secondabsolutepressure"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Allnumbersandpressuretype retained. v2=4v1,p2=224611.845Pa.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-bai-tap-047-092.md",
+      "headingLine": 171,
+      "heading": "### 12.51 (••): Áp suất qua chỗ thắt của hệ thống tưới",
+      "draftUnitSha256": "c0039c30dadfb431a282fb725e7bf4e58179b3340b82dc84047c27a17b187498",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.52",
+      "sourcePdfPage1Based": 410,
+      "sourcePrintedPage": 390,
+      "sourceData": "ViscoussameQ.800m3/s,DeltaP6.00e4Pa,R.210m to.0700m.",
+      "requiredParts": [
+        "Newpressuredifference"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "L/fluid/temperature/Q heldfixed,pressurefactor81,new4.86e6Pa. Laminarvalidity explicit; sourceflag• restored.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-bai-tap-047-092.md",
+      "headingLine": 221,
+      "heading": "### 12.52 (•): Giảm bán kính ống dẫn chất lỏng nhớt",
+      "draftUnitSha256": "19e4bf6b48fe7fafa0ecbe67482a101311e6bad3095706ecfee3699c9724ec7a",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.73",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "ClosedraisedtankD2.00m,H.800m,holed.0200m,CONSTANTgaugepressure5000Pa,noviscosity.",
+      "requiredParts": [
+        "Initialspeed",
+        "Speed-to-openratio",
+        "Completedraintime",
+        "Time-to-openratio"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Allfourrequestedoutputs retained. Surfacevelocityneglected withA/a=1e4. DirectODEandquadagreeT1944.149s,speed5.06754,ratios1.27975/.481152.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 1,
+      "heading": "### 12.73 (•••, CALC): Tháo nước khỏi bồn có khí nén",
+      "draftUnitSha256": "a25b5e05fba36c410b595bd17765a63b6dadb64dce9e77574315c2208a799836",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.74",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Plasticballradius12.0cm,floating24.0%volumesubmerged.",
+      "requiredParts": [
+        "Downwardholdingforcefullyimmersed",
+        "Upwardinstantreleaseacceleration"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Usesmeanwholeballdensity240kg/m3,notmaterialdensity. F53.9103N,a31.0333m/s2. Statedidealforce model withdragignored.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 90,
+      "heading": "### 12.74 (••): Giữ một quả bóng nhựa ngập hoàn toàn",
+      "draftUnitSha256": "e7e0972316d1207e1cb10b91122909b85560d78228f60b4b619236a0d509c802",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.75",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "CubeL,rhoB<rhoL,rhoL>rhoW,immisciblelayers; Fe/Hg,L10.0cm.",
+      "requiredParts": [
+        "Abovesurfacevolumefraction",
+        "Waterdepthwhenjustcovertop",
+        "NumericalFe/Hgcase"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Twofluidbuoyancies kept. h=L(rhoL-rhoB)/(rhoL-rhoW),domainrhoW<=rhoB<rhoL. Lighterthanwaterexception explained. h4.60317cm.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 146,
+      "heading": "### 12.75 (•••): Khối lập phương nổi giữa hai chất lỏng",
+      "draftUnitSha256": "ab98bff3f96e20bf2f69de058b3ea4fe78787e692dc15b7253a98ca155611f38",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.76",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Closedfreshwaterlock60.0m*20.0m,cargoweight2.50e6N,rho7200,shore->floatingbarge->bottom.",
+      "requiredParts": [
+        "Risefromshorestate",
+        "Directionandchangefromloadedbargeaftercargotipped"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Threelevelreferences distinguished. Rise.212585m,thenfall.183059m,final.0295257maboveinitial. Usesentirelockplanarea correctly.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 219,
+      "heading": "### 12.76 (••): Chuyển sắt vụn từ bờ xuống sà lan rồi xuống nước",
+      "draftUnitSha256": "8045b19e2388be1571ce17525010de4023703ecd6506ec25431c146cec815dc5",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.77",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "OpentankwaterdepthH,verticalwalls,holedepthhbelowwater,groundatbottom.",
+      "requiredParts": [
+        "RangeR",
+        "Secondholeheightabovebottom"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "R2sqrt[h(H-h)],secondheightabovebottomh. Covers0<h<H,midpointdegeneracy ratherthanclaimdistinctholealways.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 272,
+      "heading": "### 12.77 (•, CP): Hai lỗ có cùng tầm phun",
+      "draftUnitSha256": "dc5b6fa10ff1f298554b0f697a4497575a369607269f3b8ae3c69d8fdc02ca85",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.78",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Errantspearpiercesboatgalley,hole.900mbelowwater,area1.20cm2,V10.0L.",
+      "requiredParts": [
+        "Timefor10L",
+        "Needforsinkingcorrection"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Constantheadtime19.8413s. Interiorinitiallyairatmospheric/notabovehole. Partbqualifiedsmallrelativehead; missinghullwaterplaneandinteriorlevelnotinvented.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 309,
+      "heading": "### 12.78 (••): Nước rò vào khoang bếp của thuyền",
+      "draftUnitSha256": "784a3a7e7463e3fa9d400cf5f5b3490d8145123e1f2372497e23712928e46ffb",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.79",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Horizontalhosesamewaistheight,d1=1.80cm,R1=.950m,d2=.750cm,noairdrag.",
+      "requiredParts": [
+        "Newrange"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "SourceimplicitconstantfeedQmadeexplicitratherthanderivedfromincompressibilityalone. UnderthatmodelR2=5.472m. Fixedpressuresupplywouldneedmoredata.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 347,
+      "heading": "### 12.79 (••, CP): Thu nhỏ miệng vòi nước",
+      "draftUnitSha256": "9aeec1a7b31b7cb3e22759211dab12a551828a0e4160a5c8e42aae1baef42e3c",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.80",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Openbucket25.0cmhigh,10.0cmdiameter,holearea1.50cm2,Qin2.40e-4m3/s.",
+      "requiredParts": [
+        "Equilibriumdepth"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "NumericalrootofinflowminusTorricellioutflow=h.130612m;belowrim. Restoringsignsconfirmstablelevel. Bucketdiameteraffectstransientnotfinalbalance.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 379,
+      "heading": "### 12.80 (•••): Mực nước ổn định trong xô có lỗ đáy",
+      "draftUnitSha256": "7c30b9aaf255c00495d11386e9c22e48dcb3b6a0946edbd5b27e5571cec7df4f",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.81",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "y1=10.0m,y2=y3=2.00m,A2=.0480m2,A3=.0160m2,largereservoir,Bernoulli.",
+      "requiredParts": [
+        "DischargeQ",
+        "Point2gaugepressure"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Allgeometryandareasretained. Q.2003517m3/s,p2g69688.8889Pa. Point3atmospheric;v1~0.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 411,
+      "heading": "### 12.81 (•): Lưu lượng và áp suất trong ống thoát nước",
+      "draftUnitSha256": "8582723f3a1a3ba664e06ffac54eec398a126127f57ee81df4ae3e4728c417c2",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.82",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Emily1993,rimradius350km,eyeradius30km,eye200km/h,approximatelyconservedangularmomentum.",
+      "requiredParts": [
+        "Rimwindspeed",
+        "Pressuredifferenceandwhichhigher",
+        "HeightfromswirlKonly",
+        "Reconcileactualkilometerrise"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Allfourparts retained. Radialpressureintegration independentlyagreesBernoulli. Rim17.1429km/h,dp1838.246Pa,rimhigher,157.470mK-onlyheight. Partdpressureworkandenergyexchangeexplicit.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 461,
+      "heading": "### 12.82 (••, CP): Tốc độ gió và chênh áp trong bão Emily",
+      "draftUnitSha256": "171d9a6e9860c47743c0ca9a104fa32c6558c48fd941bb82f9438d1eb85a1c08",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.83",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Twohugeopentankssamefluid,BCDhorizontal,Dopen,Carea=halfD,Dheaddroph1,EverticaldiptankF.",
+      "requiredParts": [
+        "Riseh2aboveFsurface"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "vC=2vD,pressuredeficit3rho*g*h1,rise3h1. Continuouscolumnandbeforesignificantmixingdomainexplicit,absolutepressureboundretained.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 514,
+      "heading": "### 12.83 (••): Hút chất lỏng lên ống nối với chỗ thắt",
+      "draftUnitSha256": "d1373a672b3de6b189701796001a5c95e2a989674154761abe31613dd2becebb",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.84",
+      "sourcePdfPage1Based": 412,
+      "sourcePrintedPage": 392,
+      "sourceData": "Verticalfreefalljetv0,r0,yfallen;v0=1.20m/sforhalfradius.",
+      "requiredParts": [
+        "v(y)",
+        "r(y)",
+        "Distanceforr=r0/2"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "r=r0(1+2gy/v0²)^(-1/4);rhalvedmeansspeedquadrupled. y1.10204m. Allthreeoutputsretained.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-final-073-092.md",
+      "headingLine": 564,
+      "heading": "### 12.84 (•): Hình dạng dòng chất lỏng rơi thẳng đứng",
+      "draftUnitSha256": "989e8b0cf55f620f6c5986c0bd3a5cb39721019080ab0f7912e4cb77fc74a98a",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.85",
+      "sourcePdfPage1Based": 413,
+      "sourcePrintedPage": 393,
+      "sourceData": "All8chemicalelementsTable12.1,atomicmassesfromAppendixD1550,densityg/cm3.",
+      "requiredParts": [
+        "8pointgraph",
+        "Simpleline/curverelationassessment",
+        "Whyheavieratomsinsufficient"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "All8pairscheckedvisuallyagainstTable12.1andAppendixD. PtloweratomicmassbuthigherdensitythanAu/Hg/Pbprovesnonmonotonicity. MolarvolumeandHgphaseappropriatelymentioned;plotseparateparenttask.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 1,
+      "heading": "### 12.85 (••, DATA): Khối lượng nguyên tử và khối lượng riêng",
+      "draftUnitSha256": "1bb7424ad0c3d734515480b67c38ea861711ff330ecc2f063a393ea2a4ac9293",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.86",
+      "sourcePdfPage1Based": 413,
+      "sourcePrintedPage": 393,
+      "sourceData": "8.0cmwoodcube,Nquarter2012coins,bestfitlineheightabovefluid.",
+      "requiredParts": [
+        "Fluiddensityfromslope",
+        "Blockmassfromintercept"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Actualgraphh0~.030m,h25~.012m,slope~-.00072m/coin;official2012circulatingcoin5.670g. rho~1230.46875,mblock~.39375kg;readinguncertaintynotconcealed.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 52,
+      "heading": "### 12.86 (••, DATA): Dùng đồng xu để đo khối lượng riêng chất lỏng",
+      "draftUnitSha256": "10412e3a97fe7e98f73372b8562fb042ab5eab2f6facdf78d673a3220afde7c0",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.87",
+      "sourcePdfPage1Based": 413,
+      "sourcePrintedPage": 393,
+      "sourceData": "Sealedcylindertank,hunknown,hole.500maboveground,pg(atm).5/1/2/3/4,R(m)5.4/6.5/8.2/9.7/10.9,g9.80.",
+      "requiredParts": [
+        "GraphR²vspg",
+        "Explainlinearity",
+        "Slope/intercept",
+        "Depthh",
+        "Fluiddensity"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "ExactrationalOLSnormal equationsyieldS25.6786585366m²/atm,B16.3848170732m²,h8.19240854m,rho805.0836985kg/m3 withatm101300. All5pointsretained;plotsseparatetask.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 117,
+      "heading": "### 12.87 (•••, DATA): Xác định chất lỏng trong bồn kín",
+      "draftUnitSha256": "d50a40b39f22e45858dea069e0d5c5e8f3ebbfbc419887c06db63af4c0d3ac87",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.88",
+      "sourcePdfPage1Based": 413,
+      "sourcePrintedPage": 393,
+      "sourceData": "Initiallyfilledsiphon,samecrosssection,rho,patm,exitdropbelowlevelh,crestheightH,hugecontainer,noviscosity.",
+      "requiredParts": [
+        "Exitspeed",
+        "Maximumcrestheight"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "v=sqrt(2gh),Hmax=patm/(rhog)-h; dynamicheadsubtracthretained. Continuouscolumn,cavitationandidealzeroabsolutepressureboundstated.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 195,
+      "heading": "### 12.88 (•••): Giới hạn độ cao của ống xi-phông",
+      "draftUnitSha256": "dff1933436ccaa029016ad73e538cd515a248a5695bd8d6f5577c287afd5e7fb",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.89",
+      "sourcePdfPage1Based": 413,
+      "sourcePrintedPage": 393,
+      "sourceData": "Lungs0mmHg,abdomen150mmHg,gauge;freshwaterlake;sharedpassage3cmthickness/120cmdiameter.",
+      "requiredParts": [
+        "Choiceamong1.5/2.0/3.0/15m"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Depth2.040306m;choiceb.All4optionsmatchPDF;passageandfigurepreserved.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 265,
+      "heading": "### 12.89 Độ sâu tương ứng với áp suất dư",
+      "draftUnitSha256": "1714811f219d24d4e67b36f592ad89dc4b73880824df435fabcd774841c6885b",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.90",
+      "sourcePdfPage1Based": 413,
+      "sourcePrintedPage": 393,
+      "sourceData": "Fmax24000N,diaphragmdiameter120cm;options160/760/920/5000mmHg.",
+      "requiredParts": [
+        "Maximumpressuredifferencechoice"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "Circulararea1.130973m²,p21220.659Pa=159.194742mmHg;choicea. Diameter/radiuscorrect;thicknessirrelevantbecauseFmaxprovided.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 296,
+      "heading": "### 12.90 Chênh áp cực đại trên cơ hoành",
+      "draftUnitSha256": "0c7617ec454becdb186833c73671f0083d56ea74c521b2fe51d6446230001468",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.91",
+      "sourcePdfPage1Based": 414,
+      "sourcePrintedPage": 394,
+      "sourceData": "Snorkelmodelpulmonarypressureatmospheric,depthchangeswithfixedwaterdensityanddiaphragmarea.",
+      "requiredParts": [
+        "Linear/quadratic/cubic/exponentialchoice"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "F=rho*g*A*h,linearchoicea;all4sourceoptionsmatch.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 337,
+      "heading": "### 12.91 Lực trên cơ hoành thay đổi theo độ sâu",
+      "draftUnitSha256": "893b784b8433a50f71ff64f767312770a767f03ed9cc61031c8da37b57980639",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    },
+    {
+      "unit": "12.92",
+      "sourcePdfPage1Based": 414,
+      "sourcePrintedPage": 394,
+      "sourceData": "Saltratherthanfreshwater,maximumsnorkeldepth;all4causaloptions.",
+      "requiredParts": [
+        "Correctdepthcomparisonandreason"
+      ],
+      "dataAndSubpartsReview": "passed",
+      "reasoningReview": "passed-with-model-conditions-explicit",
+      "review": "hmax=Fmax/(rho*g*A),largerrhodecreasesdepth;choiceb. AllfourcausaloptionscheckedagainstPDF,notreplacedbyanswer-onlysummary.",
+      "draftFile": "qa/physics1-remaining/ch12-exercises-late/proposed-fragments/parent-12-data-085-092.md",
+      "headingLine": 368,
+      "heading": "### 12.92 Đổi từ nước ngọt sang nước mặn",
+      "draftUnitSha256": "bb3e444f0ad889908086bdfe7abfab6b296f7f5b75a69e212693278f28c8c066",
+      "solutionStructure": "Oneclosedsolution,summary,direction-withreasons,detailedsolution",
+      "status": "passed"
+    }
+  ],
+  "guidedDiscussionBridge": {
+    "status": "passed",
+    "count": 43,
+    "sourcePagesVisuallyRead": [
+      406,
+      407,
+      408,
+      414
+    ],
+    "units": [
+      {
+        "id": "VP12.4.1",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 5,
+        "heading": "VP12.4.1: Áp suất ở đáy bồn khí thiên nhiên hóa lỏng",
+        "promptVi": "Khí thiên nhiên hóa lỏng trong một bồn thẳng đứng có khối lượng riêng $455\\,\\mathrm{kg/m^3}$. Độ sâu chất lỏng là $2{,}00\\,\\mathrm m$. Không khí trên mặt chất lỏng trong bồn có áp suất tuyệt đối $1{,}22\\times10^5\\,\\mathrm{Pa}$. Tìm áp suất tuyệt đối ở đáy bồn.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.4.1  Liquefied natural gas (LNG) in a vertical storage tank has a \ndensity of 455 kg>m3. The depth of LNG in the tank is 2.00 m, and the \nabsolute pressure of the air inside the tank above the upper surface of \nthe LNG is 1.22 * 105 Pa. What is the absolute pressure at the bottom \nof the tank?",
+        "requiredParts": [
+          "Bottomabsolute pressure"
+        ],
+        "independentResult": {
+          "p_bottom_Pa": 130918.0
+        }
+      },
+      {
+        "id": "VP12.4.2",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 46,
+        "heading": "VP12.4.2: Hai lớp xăng và nước",
+        "promptVi": "Đổ nước ngọt vào một ống thủy tinh thẳng đứng đến độ cao $15{,}0\\,\\mathrm{cm}$. Sau đó đổ thêm lên trên một lớp xăng dày $15{,}0\\,\\mathrm{cm}$, có khối lượng riêng $7{,}40\\times10^2\\,\\mathrm{kg/m^3}$. Xăng không trộn với nước và mặt trên của xăng tiếp xúc không khí. Tìm áp suất dư tại (a) mặt phân cách xăng–nước và (b) đáy ống.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.4.2  You fill a vertical glass tube to a depth of 15.0 cm with fresh-\nwater. You then pour on top of the water an additional 15.0 cm of gasoline \n(density 7.40 * 102 kg>m3), which does not mix with water. The upper sur-\nface of the gasoline is exposed to the air. Find the gauge pressure (a) at the \ninterface between the gasoline and water and (b) at the bottom of the tube.",
+        "requiredParts": [
+          "(a)Gasoline-waterinterfacegaugepressure",
+          "(b)Bottomgaugepressure"
+        ],
+        "independentResult": {
+          "p_interface_Pa": 1087.8000000000002,
+          "p_bottom_Pa": 2557.7999999999997
+        }
+      },
+      {
+        "id": "VP12.4.3",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 90,
+        "heading": "VP12.4.3: Chênh cao hai cột thủy ngân",
+        "promptVi": "Trong áp kế ống hở ở Hình 12.8a, khí trong bình bên trái có áp suất tuyệt đối $2{,}10\\times10^5\\,\\mathrm{Pa}$. Khí áp là $1{,}01\\times10^5\\,\\mathrm{Pa}$. Chất lỏng trong ống là thủy ngân có khối lượng riêng $1{,}36\\times10^4\\,\\mathrm{kg/m^3}$. Hai mặt chất lỏng chênh nhau bao nhiêu?\n\n![Hình 12.8: Áp kế ống hở ở phần (a) dùng chênh cao hai cột thủy ngân để đo áp suất dư của khí trong bình.](/vat-ly-1/bai-giang/img/young-12/r-theory-12-08.png)",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.4.3  In an open-tube manometer (see Fig. 12.8a), the absolute \npressure in the container of gas on the left is 2.10 * 105 Pa. If atmo-\nspheric pressure is 1.01 * 105 Pa and the liquid in the manometer is \nmercury (density 1.36 * 104 kg>m3), what will be the difference in the \nheights of the left and right columns of liquid?",
+        "requiredParts": [
+          "Columnheightdifferenceandorientation"
+        ],
+        "independentResult": {
+          "h_m": 0.8178271308523409
+        }
+      },
+      {
+        "id": "VP12.4.4",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 131,
+        "heading": "VP12.4.4: Cột dầu ô liu và cột nước",
+        "promptVi": "Trong ống áp kế ở Hình 12.10, nhánh bên phải chứa dầu ô liu có khối lượng riêng $916\\,\\mathrm{kg/m^3}$. (a) Nếu mặt dầu cao hơn đáy ống $25{,}0\\,\\mathrm{cm}$, mặt nước cao hơn đáy bao nhiêu? (b) Áp suất dư ở điểm dưới mặt nước $15{,}0\\,\\mathrm{cm}$ bằng bao nhiêu? (c) Ở độ sâu nào dưới mặt dầu, áp suất dư bằng giá trị ở phần (b)?\n\n![Hình 12.10: Hai mặt trên chịu cùng khí áp, còn áp suất tại phần đáy tiếp xúc phải bằng nhau dù dầu và nước có khối lượng riêng khác nhau.](/vat-ly-1/bai-giang/img/young-12/r-theory-12-10.png)",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.4.4  In the manometer tube shown in Fig. 12.10, the oil in the \nright-hand arm is olive oil of density 916 kg>m3. (a) If the top of the oil \nis 25.0 cm above the bottom of the tube, what is the height of the top of \nthe water above the bottom of the tube? (b) What is the gauge pressure \n15.0 cm beneath the surface of the water? (c) At what depth below the \nsurface of the oil is the gauge pressure the same as in part (b)?",
+        "requiredParts": [
+          "(a)Watersurfaceheightfrombottom",
+          "(b)Gaugepressure15cmbelowwater",
+          "(c)Oildepthatsamepressure"
+        ],
+        "independentResult": {
+          "h_water_m": 0.229,
+          "p_water_15cm_Pa": 1470.0,
+          "h_oil_same_p_m": 0.16375545851528386
+        }
+      },
+      {
+        "id": "VP12.5.1",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 190,
+        "heading": "VP12.5.1: Một vật trong ba môi trường",
+        "promptVi": "Một vật có thể tích $7{,}50\\times10^{-4}\\,\\mathrm{m^3}$ và khối lượng riêng $1{,}15\\times10^3\\,\\mathrm{kg/m^3}$, ngập hoàn toàn trong chất lưu. (a) Tính trọng lượng vật. (b) Tính lực đẩy khi môi trường là (i) không khí có khối lượng riêng $1{,}20\\,\\mathrm{kg/m^3}$, (ii) nước có khối lượng riêng $1{,}00\\times10^3\\,\\mathrm{kg/m^3}$ và (iii) glycerin có khối lượng riêng $1{,}26\\times10^3\\,\\mathrm{kg/m^3}$. Trong mỗi trường hợp, vật sẽ nổi lên hay chìm xuống nếu được thả khi đang ngập?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.5.1  An \nobject \nof \nvolume \n7.50 * 10-4 m3 \nand \ndensity \n1.15 * 103 kg>m3 is completely submerged in a fluid. (a) Calculate the \nweight of this object. (b) Calculate the buoyant force on this object if the \nfluid is (i) air (density 1.20 kg>m3), (ii) water (density 1.00 * 103 kg>m3), \nand (iii) glycerin (density 1.26 * 103 kg>m3). In each case state whether \nthe object will rise or sink if released while submerged in the fluid.",
+        "requiredParts": [
+          "(a)Weight",
+          "(b)(i)Airbuoyancyandreleaseddirection",
+          "(b)(ii)Waterbuoyancyandreleaseddirection",
+          "(b)(iii)Glycerinbuoyancyandreleaseddirection"
+        ],
+        "independentResult": {
+          "weight_N": 8.4525,
+          "buoyancy_N": [
+            0.00882,
+            7.3500000000000005,
+            9.261000000000001
+          ],
+          "released_acceleration_m_s2": [
+            -9.78977391304348,
+            -1.2782608695652178,
+            0.9373913043478251
+          ]
+        }
+      },
+      {
+        "id": "VP12.5.2",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 229,
+        "heading": "VP12.5.2: Tìm khối lượng riêng từ lực căng dây",
+        "promptVi": "Một quả cầu có thể tích $1{,}20\\times10^{-3}\\,\\mathrm{m^3}$ treo bằng một sợi cáp. Khi quả cầu ngập hoàn toàn trong nước, lực căng cáp bằng $29{,}4\\,\\mathrm N$. (a) Tính lực đẩy lên quả cầu. (b) Tìm trọng lượng quả cầu. (c) Tìm khối lượng riêng của quả cầu.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.5.2  A sphere of volume 1.20 * 10-3 m3 hangs from a cable. When \nthe sphere is completely submerged in water, the tension in the cable is 29.4 N. \n(a) What is the buoyant force on the submerged sphere? (b) What is the \nweight of the sphere? (c) What is the density of the sphere?",
+        "requiredParts": [
+          "(a)Buoyancy",
+          "(b)Weight",
+          "(c)Density"
+        ],
+        "independentResult": {
+          "B_N": 11.76,
+          "weight_N": 41.16,
+          "rho_kg_m3": 3500.0
+        }
+      },
+      {
+        "id": "VP12.5.3",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 282,
+        "heading": "VP12.5.3: Chất lỏng đỡ một nửa khối lập phương",
+        "promptVi": "Một khối lập phương có thể tích $5{,}50\\times10^{-3}\\,\\mathrm{m^3}$ và khối lượng riêng $7{,}50\\times10^3\\,\\mathrm{kg/m^3}$ treo bằng cáp. Khi nửa dưới của khối ngập trong một chất lỏng chưa biết, lực căng cáp bằng $375\\,\\mathrm N$. Tìm khối lượng riêng chất lỏng. Bỏ qua lực đẩy rất nhỏ của không khí lên nửa trên.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.5.3  A \ncube \nof \nvolume \n5.50 * 10-3 m3 \nand \ndensity \n7.50 * 103 kg>m3 hangs from a cable. When the cube has the lower \nhalf of its volume submerged in an unknown liquid, the tension in the \ncable is 375 N. What is the density of the liquid? (Ignore the small \nbuoyant force exerted by the air on the upper half of the cube.)",
+        "requiredParts": [
+          "Liquid densityfromhalfcubeimmersion;airbuoyancyneglected"
+        ],
+        "independentResult": {
+          "weight_N": 404.25000000000006,
+          "B_N": 29.250000000000057,
+          "rho_liquid_kg_m3": 1085.343228200373
+        }
+      },
+      {
+        "id": "VP12.5.4",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 331,
+        "heading": "VP12.5.4: Khối trụ gỗ nổi thẳng đứng",
+        "promptVi": "Một khối trụ gỗ dài $L$, tiết diện $A$, ngập một phần trong chất lỏng có khối lượng riêng $\\rho_L$. Trục khối trụ thẳng đứng. (a) Nếu chiều dài phần dưới mặt chất lỏng là $d$, lực đẩy lên khối trụ bằng bao nhiêu? (b) Nếu khối trụ nổi cân bằng ở vị trí ấy, khối lượng riêng của gỗ bằng bao nhiêu? Bỏ qua lực đẩy của không khí lên phần trên mặt chất lỏng.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.5.4  A wooden cylinder of length L and cross-sectional area A \nis partially submerged in a liquid with the axis of the cylinder oriented \nstraight up and down. The density of the liquid is rL. (a) If the length of \nthe cylinder that is below the surface of the liquid is d, what is the buoy-\nant force that the liquid exerts on the cylinder? (b) If the cylinder floats \nin the position described in part (a), what is the density of the cylinder? \n(Ignore the small buoyant force exerted by the air on the part of the cyl-\ninder above the surface of the liquid.)",
+        "requiredParts": [
+          "(a)Buoyancyforlengthd",
+          "(b)Cylinderdensitywhenfloating;airbuoyancyneglected"
+        ],
+        "independentResult": {
+          "B": "rho_L*A*d*g",
+          "rho_cylinder": "rho_L*d/L",
+          "tests": [
+            {
+              "rho_L": 1000,
+              "A": 0.02,
+              "L": 1,
+              "d": 0.5,
+              "rho_cylinder": 500.0,
+              "B": 98.0,
+              "weight": 98.0
+            },
+            {
+              "rho_L": 850,
+              "A": 0.1,
+              "L": 2,
+              "d": 1.5,
+              "rho_cylinder": 637.5,
+              "B": 1249.5,
+              "weight": 1249.5
+            },
+            {
+              "rho_L": 1260,
+              "A": 0.003,
+              "L": 0.4,
+              "d": 0.3,
+              "rho_cylinder": 945.0,
+              "B": 11.113200000000003,
+              "weight": 11.113200000000003
+            }
+          ]
+        }
+      },
+      {
+        "id": "VP12.9.1",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 374,
+        "heading": "VP12.9.1: Nước từ bồn mái xuống tầng trệt",
+        "promptVi": "Một ống dẫn từ bồn chứa trên mái xuống tầng trệt. Tại chỗ nối bồn với ống, nước có áp suất tuyệt đối $3{,}0\\times10^5\\,\\mathrm{Pa}$, bán kính ống $1{,}0\\,\\mathrm{cm}$ và tốc độ $1{,}6\\,\\mathrm{m/s}$. Ống ở tầng trệt có bán kính $0{,}50\\,\\mathrm{cm}$ và thấp hơn vị trí nối bồn $9{,}0\\,\\mathrm m$. Tìm (a) tốc độ dòng và (b) áp suất ở tầng trệt.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.9.1  A pipe leads from a storage tank on the roof of a building to \nthe ground floor. The absolute pressure of the water in the storage tank \nwhere it connects to the pipe is 3.0 * 105 Pa, the pipe has a radius of \n1.0 cm where it connects to the storage tank, and the speed of flow in \nthis pipe is 1.6 m>s. The pipe on the ground floor has a radius of 0.50 cm \nand is 9.0 m below the storage tank. Find (a) the speed of flow and \n(b) the pressure in the pipe on the ground floor.",
+        "requiredParts": [
+          "(a)Groundfloorspeed",
+          "(b)Groundfloorabsolutepressure"
+        ],
+        "independentResult": {
+          "v2_m_s": 6.4,
+          "p2_Pa": 369000.0
+        }
+      },
+      {
+        "id": "VP12.9.2",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 432,
+        "heading": "VP12.9.2: Áp suất khí trên bồn ethanol",
+        "promptVi": "Bồn ở Hình 12.25 chứa ethanol có khối lượng riêng $8{,}1\\times10^2\\,\\mathrm{kg/m^3}$. Bán kính bồn là $4{,}0\\,\\mathrm m$, bán kính ống ngắn ở đáy là $1{,}0\\,\\mathrm{cm}$ và chiều cao ethanol là $3{,}2\\,\\mathrm m$. Lưu lượng qua ống là $4{,}4\\times10^{-3}\\,\\mathrm{m^3/s}$.\n\n- (a) Ethanol ra khỏi ống với tốc độ bao nhiêu?\n- (b) Áp suất dư của không khí phía trên ethanol trong bồn bằng bao nhiêu?\n\n![Hình 12.25: Chất lỏng từ bồn lớn chảy qua ống ngắn ở đáy. Mặt thoáng chịu áp suất khí trong bồn, còn đầu ra chịu khí áp.](/vat-ly-1/bai-giang/img/young-12/r-theory-12-25.png)",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.9.2  The storage tank in Fig. 12.25 contains ethanol (density \n8.1 * 102  kg>m3). The tank is 4.0 m in radius, the short pipe at the bottom \nof the tank is 1.0 cm in radius, and the height of ethanol in the tank is 3.2 m. \nThe volume flow rate of ethanol from the short pipe is 4.4 * 10-3 m3>s. \n(a) What is the speed at which ethanol flows out of the short pipe? \n(b) What is the gauge pressure of the air inside the tank in the space above \nthe ethanol?",
+        "requiredParts": [
+          "(a)Outletspeed",
+          "(b)Airgaugepressure;tankradiusandoutletradiusretained"
+        ],
+        "independentResult": {
+          "v1_m_s": 8.753521870054244e-05,
+          "v2_m_s": 14.005634992086788,
+          "p_gauge_full_Pa": 54042.31366718091,
+          "p_gauge_tank_approx_Pa": 54042.31367028419,
+          "area_ratio": 6.250000000000001e-06
+        }
+      },
+      {
+        "id": "VP12.9.3",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 496,
+        "heading": "VP12.9.3: Lưu lượng qua ống Venturi",
+        "promptVi": "Một ống Venturi dùng nước ngọt có chênh áp giữa điểm 1 và 2 là $8{,}1\\times10^2\\,\\mathrm{Pa}$. Bán kính phần rộng là $2{,}5\\,\\mathrm{cm}$ và phần hẹp là $1{,}2\\,\\mathrm{cm}$. Tìm (a) chênh cao chất lỏng trong hai ống thẳng đứng và (b) lưu lượng qua ống nằm ngang.\n\n![Hình 12.26: Các ống đo áp chứa nước cùng loại với nước trong ống Venturi. Cổ hẹp có tốc độ lớn hơn và áp suất nhỏ hơn.](/vat-ly-1/bai-giang/img/young-12/r-theory-12-26.png)",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.9.3  In a Venturi meter (see Fig. 12.26) that uses freshwater, the pres-\nsure difference between points 1 and 2 is 8.1 * 102 Pa, and the wide and \nnarrow parts of the pipe have radii 2.5 cm and 1.2 cm, respectively. Find \n(a) the difference in the heights of the liquid levels in the two vertical tubes \nand (b) the volume flow rate through the horizontal pipe.",
+        "requiredParts": [
+          "(a)Piezometerheightdifference",
+          "(b)Volumeflowrate"
+        ],
+        "independentResult": {
+          "h_m": 0.0826530612244898,
+          "v1_m_s": 0.30135908687780955,
+          "v2_m_s": 1.3079821479071596,
+          "Q_m3_s": 0.0005917171833924092
+        }
+      },
+      {
+        "id": "VP12.9.4",
+        "kind": "guided",
+        "file": "proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+        "line": 566,
+        "heading": "VP12.9.4: Bồn có tiết diện không lớn hơn nhiều so với ống ra",
+        "promptVi": "Trong bồn ở Hình 12.25, giả sử tiết diện $A_1$ không lớn hơn nhiều so với tiết diện đầu ra $A_2$. Khi đó không thể coi tốc độ $v_1$ của mặt xăng bằng không. Hãy suy ra tốc độ dòng trong ống theo $p_0$, $p_{\\mathrm{atm}}$, $g$, $h$, $A_1$, $A_2$ và khối lượng riêng $\\rho$.\n\n![Hình 12.25: Khi tiết diện bồn không quá lớn so với ống ra, cần giữ tốc độ hạ của mặt chất lỏng trong phương trình Bernoulli.](/vat-ly-1/bai-giang/img/young-12/r-theory-12-25.png)",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "sourcePromptEnglish": "VP12.9.4  In the storage tank shown in Fig. 12.25, suppose area A1 is not \nvery much larger than area A2. In this case we cannot treat the speed v1 of \nthe upper surface of the gasoline as zero. Derive an expression for the flow \nspeed in the pipe in this situation in terms of p0, patm g, h, A1, A2 and r.",
+        "requiredParts": [
+          "Finiteareasurfacevelocityretained",
+          "Outputformulainallsourcevariables",
+          "Positiverootandradicandconditions",
+          "Large-tanklimit"
+        ],
+        "independentResult": {
+          "formula": "sqrt((2*(p0-patm)/rho+2*g*h)/(1-(A2/A1)**2))",
+          "tests": [
+            {
+              "area_ratio": 0.01,
+              "v2_squared": 179.8056348844761,
+              "bernoulli_residual": 0.0
+            },
+            {
+              "area_ratio": 0.25,
+              "v2_squared": 191.77349794238683,
+              "bernoulli_residual": 0.0
+            },
+            {
+              "area_ratio": 0.5,
+              "v2_squared": 239.71687242798353,
+              "bernoulli_residual": 0.0
+            },
+            {
+              "area_ratio": 0.75,
+              "v2_squared": 410.9432098765432,
+              "bernoulli_residual": 0.0
+            }
+          ]
+        }
+      },
+      {
+        "id": "Q12.1",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 3,
+        "heading": "Q12.1: Khối gỗ áp sát đáy bình",
+        "promptVi": "Một khối gỗ sồi hình lập phương có các mặt rất nhẵn, bình thường nổi trên nước. Nhúng chìm khối rồi ép một mặt sát đáy bình sao cho không có nước dưới mặt ấy. Khối có tự nổi lên mặt nước không? Có lực đẩy lên khối hay không? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.1  A cube of oak wood with very smooth faces normally floats \nin water. Suppose you submerge it completely and press one face flat \nagainst the bottom of a tank so that no water is under that face. Will the \nblock float to the surface? Is there a buoyant force on it? Explain.",
+        "reasoningAudit": "Sealed lower face removes the upward water-pressure force;Archimedes all-surrounding-fluid condition fails.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.1",
+          "claim": "No upward pressure force from a perfectly sealed lower face;vertical water resultant points down.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.2",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 29,
+        "heading": "Q12.2: Phễu rộng nối với ống hẹp",
+        "promptVi": "Một ống cao su nối với phễu. Đầu tự do của ống được uốn lên trên. Khi đổ nước vào phễu, nước trong ống lên cùng độ cao với mặt nước trong phễu, mặc dù phễu chứa nhiều nước hơn hẳn. Vì sao? Bộ phận nào đỡ trọng lượng nước thừa trong phễu?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.2  A rubber hose is attached to a funnel, and the free end is bent \naround to point upward. When water is poured into the funnel, it rises in \nthe hose to the same level as in the funnel, even though the funnel has \na lot more water in it than the hose does. Why? What supports the extra \nweight of the water in the funnel?",
+        "reasoningAudit": "Communicating water at common depth has common pressure;vertical components from sloping funnel walls carry extra water weight.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.2",
+          "claim": "Common depth gives same pressure;funnel wall supports excess water weight.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.3",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 56,
+        "heading": "Q12.3: Không khí nặng 700 N lại ép sàn hai triệu newton",
+        "promptVi": "So sánh Ví dụ 12.1 và 12.2 ở các Mục 12.1 và 12.2, dường như lượng không khí có trọng lượng $700\\,\\mathrm N$ lại tác dụng lực hướng xuống $2{,}0\\times10^6\\,\\mathrm N$ lên sàn. Làm sao điều này có thể xảy ra?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.3  Comparing Example 12.1 (Section 12.1) and Example 12.2 \n(Section 12.2), it seems that 700 N of air is exerting a downward force \nof 2.0 * 106 N on the floor. How is this possible?",
+        "reasoningAudit": "Large pressure forces on floor/ceiling differ only by the air weight;absolute force is not the contained-air weight.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.3",
+          "claim": "Room pressure-force difference equals its contained air weight.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.4",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 95,
+        "heading": "Q12.4: Máy thủy lực có nhân năng lượng không?",
+        "promptVi": "Công thức (12.7) cho thấy tỷ số diện tích $100:1$ có thể tạo lực đầu ra gấp $100$ lần lực đầu vào. Điều này có vi phạm bảo toàn năng lượng không? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.4  Equation (12.7) shows that an area ratio of 100 to 1 can give \n100 times more output force than input force. Doesn’t this violate con-\nservation of energy? Explain.",
+        "reasoningAudit": "Volume conservation gives100timesforceand1/100travel,soidealworkisconserved.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.4",
+          "claim": "100x force entails1/100 travel;work unchanged.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.5",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 140,
+        "heading": "Q12.5: Áp suất lốp và diện tích tiếp xúc",
+        "promptVi": "Khi áp suất lốp thấp đi, diện tích tiếp xúc giữa lốp và mặt đường thường lớn lên. Vì sao?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.5  You have probably noticed that the lower the tire pressure, the \nlarger the contact area between the tire and the road. Why?",
+        "reasoningAudit": "Fixedloadrequiresapproximatelygaugepressuretimescontactarea;lowerpressuremeanslargercontactarea.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.5",
+          "claim": "For fixed load,contact area grows as gauge pressure decreases.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.6",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 174,
+        "heading": "Q12.6: Vì sao khí cầu cần nung nóng không khí?",
+        "promptVi": "Trong khí cầu khí nóng, một bóng lớn được bơm đầy không khí rồi nung bằng đầu đốt gas ở đáy. Vì sao phải nung nóng? Người điều khiển làm thế nào để điều chỉnh bay lên và hạ xuống?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.6  In hot-air ballooning, a large balloon is filled with air heated by \na gas burner at the bottom. Why must the air be heated? How does the \nballoonist control ascent and descent?",
+        "reasoningAudit": "Heating open-bottom balloon at nearly ambient pressure reduces inside density/mass;net lift is density difference timesVg.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.6",
+          "claim": "Heating at nearly fixed ambient pressure lowers density and increases net lift.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.7",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 206,
+        "heading": "Q12.7: Tàu chiếm chỗ hai mươi nghìn tấn",
+        "promptVi": "Khi mô tả kích thước một tàu lớn, người ta dùng cách nói tàu “chiếm chỗ $20000$ tấn”. Cách nói ấy có nghĩa gì? Có thể suy ra trọng lượng tàu từ thông tin này không?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.7  In describing the size of a large ship, one uses such expressions \nas “it displaces 20,000 tons.” What does this mean? Can the weight of \nthe ship be obtained from this information?",
+        "reasoningAudit": "Floating equilibrium makes displaced-watermass equal totalshipmass;weight additionally requiresg and a specified tonne convention.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.7",
+          "claim": "Equilibrium displacement mass equals ship mass.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.8",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 246,
+        "heading": "Q12.8: Quả cầu nhôm trong thang máy đi lên nhanh dần",
+        "promptVi": "Thả một quả cầu nhôm đặc vào xô nước đặt trên mặt đất, quả cầu chìm xuống vì lực đẩy nhỏ hơn trọng lượng. Nếu mang xô vào thang máy có gia tốc hướng lên, trọng lượng biểu kiến của nước và lực đẩy đều tăng. Có thể tăng gia tốc đủ lớn để quả cầu bật lên khỏi nước không? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.8  You drop a solid sphere of aluminum in a bucket of water that \nsits on the ground. The buoyant force equals the weight of water dis-\nplaced; this is less than the weight of the sphere, so the sphere sinks to \nthe bottom. If you take the bucket with you on an elevator that acceler-\nates upward, the apparent weight of the water increases and the buoyant \nforce on the sphere increases. Could the acceleration of the elevator be \ngreat enough to make the sphere pop up out of the water? Explain.",
+        "reasoningAudit": "Both apparentweightandbuoyancyscale by g+a;aluminum/waterdensityratio does not reverse.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.8",
+          "claim": "Both apparent weight and buoyancy scale by g+a;aluminum remains denser.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.9",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 286,
+        "heading": "Q12.9: Giới hạn độ cao của khí cầu cứng chứa helium",
+        "promptVi": "Một khí cầu cứng nhẹ hơn không khí, chứa helium, không thể tiếp tục bay lên mãi. Vì sao? Điều gì xác định độ cao lớn nhất mà nó có thể đạt được?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.9  A rigid, lighter-than-air dirigible filled with helium cannot con-\ntinue to rise indefinitely. Why? What determines the maximum height \nit can attain?",
+        "reasoningAudit": "Rigidvolume makesbuoyancydecreaseasambientdensitydecreases;neutralceilingfixedbyrhoambient=M/V,withpossibleinertialovershoot.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.9",
+          "claim": "Fixed-volume buoyancy declines with ambient density until neutral.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.10",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 322,
+        "heading": "Q12.10: Cùng thể tích gỗ và sắt",
+        "promptVi": "Một miếng gỗ có thể tích $25\\,\\mathrm{cm^3}$ nổi với một phần trên mặt nước. Một miếng sắt có cùng thể tích $25\\,\\mathrm{cm^3}$ ngập trong nước. Miếng nào chịu lực đẩy lớn hơn? Hay phải biết khối lượng của chúng mới trả lời được? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.10  Which has a greater buoyant force on it: a 25 cm3 piece of \nwood floating with part of its volume above water or a 25 cm3 piece \nof submerged iron? Or, must you know their masses before you can \nanswer? Explain.",
+        "reasoningAudit": "Fully immersed iron displaces full25cm3;partly floating wood displaces less,soironbuoyancyisgreater.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.10",
+          "claim": "Equal total volume;iron fully submerged displaces more water than partly floating wood.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.11",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 350,
+        "heading": "Q12.11: Thử độ tinh khiết của vàng bằng cân",
+        "promptVi": "Có thể kiểm tra độ tinh khiết của vàng bằng cách cân trong không khí và trong nước. Thực hiện như thế nào? Có thể làm một thỏi vàng giả bằng cách mạ vàng lên vật liệu rẻ hơn mà qua được phép kiểm này không?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.11  The purity of gold can be tested by weighing it in air and in \nwater. How? Do you think you could get away with making a fake gold \nbrick by gold-plating some cheaper material?",
+        "reasoningAudit": "Weighing loss determines displacedvolume and average density;goldplatingalower-densitycorefails,butdensityaloneisnotchemicalproof.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.11",
+          "claim": "Mass/apparent-mass loss determines density:rho_obj=rho_water*W_air/(W_air-W_water).",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.12",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 387,
+        "heading": "Q12.12: Vì sao đê thường vỡ từ phía dưới?",
+        "promptVi": "Trong trận lũ lớn trên sông Mississippi năm 1993, các đoạn đê ở St. Louis có xu hướng bị phá vỡ trước ở phía dưới. Vì sao?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.12  During the Great Mississippi Flood of 1993, the levees in \nSt. Louis tended to rupture first at the bottom. Why?",
+        "reasoningAudit": "Hydrostaticgaugepressureandloadperarea increasewithdepth;actualstructuralfailurealso depends on structure.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.12",
+          "claim": "Hydrostatic gauge pressure increases linearly with depth.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.13",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 411,
+        "heading": "Q12.13: Tàu từ biển vào hồ nước ngọt",
+        "promptVi": "Một tàu hàng đi từ Đại Tây Dương qua sông St. Lawrence vào hồ Ontario. Trong hồ nước ngọt, tàu chìm thấp hơn vài xentimét so với khi ở biển. Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.13  A cargo ship travels from the Atlantic Ocean (salt water) to \nLake Ontario (freshwater) via the St. Lawrence River. The ship rides \nseveral centimeters lower in the water in Lake Ontario than it did in the \nocean. Explain.\nPROBLEMS\n•, ••, •••: Difficulty levels. CP: Cumulative problems incorporating material from earlier chapters. CALC: Problems requiring calculus.  \nDATA: Problems involving real data, scientific evidence, experimental design, and>or statistical reasoning. BIO: Biosciences problems.",
+        "reasoningAudit": "Same totalmass in lower-densityfreshwater needs larger displacement;shiprideslower.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.13",
+          "claim": "Fixed mass requires larger displacement in less dense freshwater.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.14",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 441,
+        "heading": "Q12.14: Đẩy gỗ ngập càng sâu",
+        "promptVi": "Ấn một miếng gỗ xuống dưới mặt hồ bơi. Sau khi nó đã ngập hoàn toàn, tiếp tục đẩy nó sâu hơn. Lực đẩy có tiếp tục tăng, giữ nguyên hay giảm? Vì sao?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.14  You push a piece of wood under the surface of a swimming \npool. After it is completely submerged, you keep pushing it deeper and \ndeeper. As you do this, what will happen to the buoyant force on it? Will \nthe force keep increasing, stay the same, or decrease? Why?",
+        "reasoningAudit": "Oncefullyimmersed,unchangedV andrho makeBconstant;pressuresonbothfacesincrease together.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.14",
+          "claim": "Incompressible wood/fluid,full immersion and no contact:buoyancy independent of depth.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.15",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 467,
+        "heading": "Q12.15: Một pound lông vũ và một pound chì",
+        "promptVi": "“Một pound lông vũ hay một pound chì nặng hơn?” Nếu trọng lượng tính bằng pound được hiểu là lực hấp dẫn, hai lượng này có cân bằng trên hai đĩa của một cân đòn có hai cánh tay bằng nhau không? Hãy xét cả lực đẩy của không khí.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.15  An old question is “Which weighs more, a pound of feathers \nor a pound of lead?” If the weight in pounds is the gravitational force, \nwill a pound of feathers balance a pound of lead on opposite pans of an \nequal-arm balance? Explain, taking into account buoyant forces.",
+        "reasoningAudit": "Equaltrueweightsdo notyield equalapparentweights inair;largerfeathervolumehasgreaterairbuoyancy andtransmitslessload.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.15",
+          "claim": "Feathers of equal true weight receive greater air buoyancy;feather pan rises.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.16",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 500,
+        "heading": "Q12.16: Cửa phòng chịu chênh áp một phần trăm",
+        "promptVi": "Một cánh cửa mở vào trong phòng, khít kín khí với khung nhưng không có ma sát. Nếu ngoài phòng có khí áp tiêu chuẩn và áp suất trong phòng cao hơn $1\\%$, liệu có thể mở cửa bằng tay không? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.16  Suppose the door that opens into a room makes an airtight but \nfrictionless fit in its frame. Do you think you could open the door if the \nair pressure outside the room were standard atmospheric pressure and \nthe air pressure inside the room was 1% greater? Explain.",
+        "reasoningAudit": "Onepercentofatmosphericpressure isabout1013Pa;sealedinward-openingdoor faceslarge opposingpressuretorque;area was notspecified.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.16",
+          "claim": "One-percent atmospheric pressure difference isabout1013Pa;requires large door-opening torque.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.17",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 540,
+        "heading": "Q12.17: Gấp đôi độ sâu có gấp đôi áp suất tuyệt đối không?",
+        "promptVi": "Tại một độ sâu trong chất lỏng không nén được, áp suất tuyệt đối là $p$. Ở độ sâu gấp đôi, áp suất tuyệt đối bằng, lớn hơn hay nhỏ hơn $2p$? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.17  At a certain depth in an incompressible liquid, the absolute pres-\nsure is p. At twice this depth, will the absolute pressure be equal to 2p, \ngreater than 2p, or less than 2p? Justify your answer.",
+        "reasoningAudit": "Absolute p(2h)=2p(h)-p0<2p(h)whenp0>0;onlygaugepressure doubles.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.17",
+          "claim": "p(2h)=2p(h)-p0<2p(h)forp0>0.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.18",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 577,
+        "heading": "Q12.18: Lật khối gỗ có miếng sắt dán trên",
+        "promptVi": "Một miếng sắt được dán lên mặt trên khối gỗ. Đặt vào xô nước với sắt ở trên thì hệ nổi. Lật ngược để sắt ngập bên dưới gỗ, hệ sẽ nổi hay chìm? Mực nước trong xô tăng, giảm hay không đổi? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.18  A piece of iron is glued to the top of a block of wood. When \nthe block is placed in a bucket of water with the iron on top, the block \nfloats. The block is now turned over so that the iron is submerged be-\nneath the wood. Does the block float or sink? Does the water level in \nthe bucket rise, drop, or stay the same? Explain.",
+        "reasoningAudit": "Flippedwood+ironstillfloats,same totaldisplacement;ironnowcontributesbuoyancyandwoodsubmergesless,waterlevelunchanged.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.18",
+          "claim": "Both orientations float and total displacement remains constant;wood submerges less after iron goes under.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.19",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 611,
+        "heading": "Q12.19: Úp lọ thủy tinh xuống nước",
+        "promptVi": "Úp miệng một lọ thủy tinh rỗng xuống rồi đẩy vào bể nước sao cho không khí trong lọ bị giữ lại và không thoát ra. Khi đẩy lọ sâu hơn, lực đẩy có giữ nguyên không? Nếu thay đổi thì tăng hay giảm? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.19  You take an empty glass jar and push it into a tank of water \nwith the open mouth of the jar downward, so that the air inside the jar \nis trapped and cannot get out. If you push the jar deeper into the water, \ndoes the buoyant force on the jar stay the same? If not, does it increase \nor decrease? Explain.",
+        "reasoningAudit": "Trappedaircompresseswithdepth;glassplusairdisplacementdecreases,soexternalwaterbuoyancydecreases.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.19",
+          "claim": "Trapped air compresses under depth pressure;total displaced volume and buoyancy fall.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.20",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 644,
+        "heading": "Q12.20: Thả bóng bowling khỏi xuồng",
+        "promptVi": "Bạn đang ở trên một chiếc xuồng nổi giữa hồ bơi. Một người bạn đứng ở bờ quan sát cẩn thận mực nước. Trên xuồng có một quả bóng bowling. Nếu thả nhẹ bóng qua mạn và nó chìm xuống đáy, mực nước tăng hay giảm?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.20  You are floating in a canoe in the middle of a swimming pool. \nYour friend is at the edge of the pool, carefully noting the level of the water \non the side of the pool. You have a bowling ball with you in the canoe. If \nyou carefully drop the bowling ball over the side of the canoe and it sinks \nto the bottom of the pool, does the water level in the pool rise or fall?",
+        "reasoningAudit": "Afloatcanoload displacesm/rhowater;sunkenball displacesm/rhoball,smallerbecauseballisdenser;waterlevel falls.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.20",
+          "claim": "Sinking dense ball displaces less than its afloat canoe load.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.21",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 679,
+        "heading": "Q12.21: Chim đậu lên vai người trên xuồng",
+        "promptVi": "Bạn đang ngồi trên xuồng nổi giữa hồ bơi. Một con chim lớn bay đến và đậu lên vai bạn. Mực nước hồ bơi tăng hay giảm?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.21  You are floating in a canoe in the middle of a swimming pool. \nA large bird flies up and lights on your shoulder. Does the water level in \nthe pool rise or fall?",
+        "reasoningAudit": "Birdlandingaddsload to canoe,requiringadditionalwaterdisplacement;steadywaterlevel rises.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.21",
+          "claim": "Bird landing adds weight to canoe;displacement increases.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.22",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 713,
+        "heading": "Q12.22: Hai xô đầy tràn, một xô có gỗ nổi",
+        "promptVi": "Hai chiếc xô giống nhau đều đầy nước đến miệng, nhưng một xô có miếng gỗ nổi trong đó. Xô nào có tổng trọng lượng lớn hơn? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.22  Two identical buckets are filled to the brim with water, but \none of them has a piece of wood floating in it. Which bucket of water \nweighs more? Explain.",
+        "reasoningAudit": "Floatingwoodreplaceswaterwithsameweight;bothbrimmingbuckets haveequal totalweight.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.22",
+          "claim": "Floating wood displaces its mass in water;equal brimming buckets have equal total weight.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.23",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 743,
+        "heading": "Q12.23: Nước đá nổi tan ra",
+        "promptVi": "Một viên nước đá nổi trong cốc nước. Khi viên đá tan hết, mực nước tăng, giảm hay không đổi? Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.23  An ice cube floats in a glass of water. When the ice melts, will \nthe water level in the glass rise, fall, or remain unchanged? Explain.",
+        "reasoningAudit": "Floatingfreshwaterice displacesm/rhowater,andmeltsintoexactlysamewater volume,subjecttostatedthermalassumptions.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.23",
+          "claim": "Freshwater ice melt volume equals displaced water volume.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.24",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 778,
+        "heading": "Q12.24: Bóng helium trong xe tăng tốc",
+        "promptVi": "Một quả bóng helium được buộc bằng dây nhẹ vào sàn xe đang đứng yên, khiến dây thẳng đứng. Đóng các cửa sổ rồi cho xe tăng tốc về phía trước. Bóng có lệch đi không, và lệch về trước hay sau? Giải thích bằng lực đẩy. Nếu thử quan sát, hãy để một người khác lái xe.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.24  A helium-filled balloon is tied to a light string inside a car at \nrest. The other end of the string is attached to the floor of the car, so the \nballoon pulls the string vertical. The car’s windows are closed. Now the \ncar accelerates forward. Does the balloon move? If so, does it move for-\nward or backward? Justify your reasoning with reference to buoyancy. \n(If you have a chance, try this experiment yourself—but with someone \nelse driving!)",
+        "reasoningAudit": "Acceleratingcar createsgreaterairpressureattheback;horizontal pressureforce exceedsballpseudoforceforlighterthanairballoon,soitdeflectsforward.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.24",
+          "claim": "Accelerating-car pressure gradient creates forward helium-buoyancy component.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.25",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 815,
+        "heading": "Q12.25: Dòng ổn định nhưng phần tử vẫn gia tốc",
+        "promptVi": "Trong dòng chất lưu ổn định, vận tốc tại mỗi điểm cố định trong không gian không đổi theo thời gian. Vậy một phần tử chất lưu có thể có gia tốc như thế nào?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          407
+        ],
+        "sourcePromptEnglish": "Q12.25  If the velocity at each point in space in steady-state fluid flow \nis constant, how can a fluid particle accelerate?\n\t\nProblems        387\n\n388        CHAPTER 12  Fluid Mechanics",
+        "reasoningAudit": "SteadyEulerianvelocitycanvaryspatially;aparticlemovesbetweenpositionsandhasconvectiveaccelerationorcurvatureacceleration.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.25",
+          "claim": "A steady field can have material acceleration v*dv/dx.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.26",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 848,
+        "heading": "Q12.26: Bóng bàn được giữ trong tia khí",
+        "promptVi": "Trong một cách trưng bày máy hút bụi ở cửa hàng, một quả bóng bàn lơ lửng trong tia khí thổi ra từ ống của máy. Bóng dao động nhẹ nhưng luôn trở lại gần tâm tia khí, ngay cả khi tia khí nghiêng so với phương thẳng đứng. Hiện tượng này minh họa phương trình Bernoulli như thế nào?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          408
+        ],
+        "sourcePromptEnglish": "Q12.26  In a store-window vacuum cleaner display, a table-tennis ball \nis suspended in midair in a jet of air blown from the outlet hose of a \ntank-type vacuum cleaner. The ball bounces around a little but always \nmoves back toward the center of the jet, even if the jet is tilted from the \nvertical. How does this behavior illustrate Bernoulli’s equation?",
+        "reasoningAudit": "QualitativeBernoullisidepressuredifference restoresballtowardjet;verticalsupportalsoinvolvesmomentumtransfer andrealjetviscosity/mixing.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.26",
+          "claim": "Jet provides vertical momentum transfer andlower sidepressure restoresan off-center ball;Bernoulli alone isnot allforcebalance.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.27",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 875,
+        "heading": "Q12.27: Áp suất thấp trong tâm vòi rồng",
+        "promptVi": "Một vòi rồng là một xoáy không khí quay rất nhanh. Vì sao áp suất gần tâm thấp hơn nhiều so với bên ngoài? Điều này liên quan thế nào đến sức phá hoại của vòi rồng?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          408
+        ],
+        "sourcePromptEnglish": "Q12.27  A tornado consists of a rapidly whirling air vortex. Why is the \npressure always much lower in the center than at the outside? How does \nthis condition account for the destructive power of a tornado?",
+        "reasoningAudit": "Circularflowrequiresinwardforceanddp/dr=rhovtheta²/r>0;damageinvolveswind,pressuredifferencesanddebris,not auniqueindependentsuctionforce.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.27",
+          "claim": "Circular motion needs inward pressure gradient:dp/dr=rho*vtheta^2/r>0.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.28",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 908,
+        "heading": "Q12.28: Đường băng ở vùng cao",
+        "promptVi": "Sân bay ở độ cao lớn có đường băng cất và hạ cánh dài hơn sân bay gần mực nước biển. Một nguyên nhân là động cơ máy bay tạo công suất nhỏ hơn trong không khí loãng. Hãy nêu một nguyên nhân khác.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          408
+        ],
+        "sourcePromptEnglish": "Q12.28  Airports at high elevations have longer runways for takeoffs \nand landings than do airports at sea level. One reason is that aircraft \nengines develop less power in the thin air well above sea level. What is \nanother reason?",
+        "reasoningAudit": "Lowerdensityrequiresgreaterairspeedforsamewingshapeandlift;takeoff/landinggrounddistancegrowsunderappropriatecomparableconditions.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.28",
+          "claim": "Same wing/liftcoefficientat lower density needs higher airspeed.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.29",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 944,
+        "heading": "Q12.29: Dòng nước hẹp dần khi rơi",
+        "promptVi": "Một dòng nước chảy êm ra khỏi vòi trở nên hẹp hơn khi rơi xuống. Giải thích.",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 2,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          408
+        ],
+        "sourcePromptEnglish": "Q12.29  When a smooth-flowing stream of water comes out of a fau-\ncet, it narrows as it falls. Explain.",
+        "reasoningAudit": "Gravityspeedsthefallingjet;constantQ=AvrequiresA todecrease,notcompressionofwater.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.29",
+          "claim": "Falling steady jet speedsup;crosssection falls atconstantQ.",
+          "passed": true
+        }
+      },
+      {
+        "id": "Q12.30",
+        "kind": "discussion",
+        "file": "proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+        "line": 978,
+        "heading": "Q12.30: Hai khối chì và nhôm ở độ sâu khác nhau",
+        "promptVi": "Hai khối lập phương chì và nhôm có cùng kích thước, được treo bằng hai sợi dây ở những độ sâu khác nhau trong một bể nước lớn như Hình Q12.30.\n\n- (a) Khối nào chịu lực đẩy lớn hơn?\n- (b) Dây treo khối nào có lực căng lớn hơn?\n- (c) Khối nào chịu lực lớn hơn trên mặt dưới?\n- (d) Chênh áp giữa mặt trên và mặt dưới lớn hơn ở khối nào?\n\n![Hình Q12.30: Khối nhôm được treo nông hơn, khối chì được treo sâu hơn. Hai khối có cùng kích thước và đều ngập hoàn toàn.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-q12-30.png)",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 3,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          408
+        ],
+        "sourcePromptEnglish": "Q12.30  Identical-size \nlead \nand \naluminum cubes are suspended at \ndifferent depths by two wires in a \nlarge vat of water (Fig. Q12.30). \n(a)  Which cube experiences a \ngreater buoyant force? (b) For \nwhich cube is the tension in the wire \ngreater? (c) Which cube experiences \na greater force on its lower face? \n(d) For which cube is the difference \nin pressure between the upper and \nlower faces greater?",
+        "reasoningAudit": "SameV gives equalB;denserleadhaslargertension;deeperleadbottomfacehaslargerforce;equalheightgives equal pressuredifference.",
+        "pythonPhysicalCheck": {
+          "id": "Q12.30",
+          "claim": "Same V gives same buoyancy/delta pressure;denser,deeper lead givesgreater tension/bottomfaceforce.",
+          "passed": true
+        },
+        "requiredParts": [
+          "(a)Buoyancy",
+          "(b)Tension",
+          "(c)Bottomfaceforce",
+          "(d)Top-bottompressuredifference"
+        ]
+      },
+      {
+        "id": "Bridge12",
+        "kind": "bridge",
+        "file": "proposed-fragments/parent-16-bai-tap-cau-noi.md",
+        "line": 3,
+        "heading": "Bài tập cầu nối: Tháo cạn một bồn nước mất bao lâu?",
+        "promptVi": "Một bồn hình trụ lớn có đường kính $D$, miệng trên hở ra không khí và chứa nước đến độ cao ban đầu $H$. Mở một lỗ tròn nhỏ có đường kính $d$ ở đáy, với $d\\ll D$, như Hình 12.32. Bỏ qua mọi tác dụng của độ nhớt.\n\n- (a) Tìm độ cao nước $y$ trong bồn theo thời gian $t$ sau khi mở lỗ.\n- (b) Bao lâu thì bồn cạn hoàn toàn?\n- (c) Nếu tăng gấp đôi độ cao ban đầu $H$, thời gian tháo cạn tăng bao nhiêu lần?\n\n![Hình 12.32: Bồn trụ có đường kính D, lỗ đáy có đường kính d. Nước ban đầu cao H và còn cao y ở thời điểm t, cả mặt thoáng và đầu ra cùng tiếp xúc khí quyển.](/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-12-32.png)\n\nGợi ý triển khai bài toán:\n\n1. Vẽ phác tình huống và ghi đủ những kích thước liên quan.\n2. Liệt kê các đại lượng chưa biết, rồi xác định những đại lượng cần tìm.\n3. Nước ra khỏi đáy với tốc độ bao nhiêu? Tốc độ ấy liên hệ thế nào với lưu lượng ra và tốc độ thay đổi của $y$?\n4. Từ các quan hệ trên, lập một phương trình cho $dy/dt$.\n5. Tích phân phương trình vi phân để tìm $y(t)$. Sau khi tích phân, còn cần biến đổi đại số để đưa về dạng độ cao theo thời gian.\n6. Dùng kết quả để tìm thời điểm bồn cạn và xem nó phụ thuộc độ cao ban đầu $H$ ra sao.\n7. Kiểm tra tính hợp lý bằng đồ thị $y$ theo $t$. Dấu của $dy/dt$ ở những thời điểm khác nhau có phù hợp việc nước chảy ra không?",
+        "stageLabels": [
+          "Tóm tắt đề bài",
+          "Hướng đi:",
+          "Lời giải"
+        ],
+        "oneClosedSolution": true,
+        "whyBullets": 4,
+        "sourceCompared": true,
+        "sourcePdfPages": [
+          406,
+          407
+        ],
+        "answerPdfPages": [
+          414
+        ],
+        "requiredParts": [
+          "(a)y(t)",
+          "(b)emptyingtimeT",
+          "(c)timefactorfordoubledH"
+        ],
+        "sourceGuideSteps": 7,
+        "domain": "H>0,D>0,0<d<<D,g>0,0<=t<=T;afterT,y=0",
+        "independentResult": {
+          "alpha": "(d/D)^2",
+          "height": "H*(1-t/T)^2 for0<=t<=T;0 afterempty",
+          "T": "sqrt(2H/g)*(D/d)^2",
+          "cases": [
+            {
+              "H": 1,
+              "D": 1,
+              "d": 0.02,
+              "T": 1129.3848786315639,
+              "ODEcomparison": "passed",
+              "heightAtEmpty": 0,
+              "doubledHeightTimeRatio": 1.4142135623730951
+            },
+            {
+              "H": 2,
+              "D": 3,
+              "d": 0.05,
+              "T": 2299.9556339997835,
+              "ODEcomparison": "passed",
+              "heightAtEmpty": 0,
+              "doubledHeightTimeRatio": 1.4142135623730951
+            },
+            {
+              "H": 0.5,
+              "D": 0.8,
+              "d": 0.01,
+              "T": 2044.4050079998078,
+              "ODEcomparison": "passed",
+              "heightAtEmpty": 0,
+              "doubledHeightTimeRatio": 1.4142135623730951
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "parentReviewEarlyNumbered": {
+    "sourcePagesVisuallyRead": [
+      408,
+      409,
+      410
+    ],
+    "reviewedPromptExtract": "qa/physics1-remaining/ch12/early-prompts-parent-review.md",
+    "disposition": "All46actualsourcepromptscompared;data/subparts retained. In particular12.14manometer,12.19oilcolumn,12.33twofluids,12.38largeoriginalflow,12.43gallonand12.44–46verified."
+  }
+}

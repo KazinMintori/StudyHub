@@ -690,5 +690,13 @@ export const physics1RemainingChapter12Parent={
         ]
       }
     ]
+  },
+  "topicReferences": {
+    "12.2": [
+      {
+        "title": "Công bố chung của Trung Quốc và Nepal về độ cao đỉnh Everest (08/12/2020)",
+        "url": "https://www.fmprc.gov.cn/mfa_eng/gjhdq_665435/2675_665437/2752_663508/2754_663512/202406/t20240607_11411566.html"
+      }
+    ]
   }
 }

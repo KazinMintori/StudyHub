@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "12-co-hoc-chat-luu"
-section: "topic"
 topic: "phuong-trinh-bernoulli"
+section: "topic"
 title: "Phương trình Bernoulli"
 description: "Công của áp lực làm thay đổi tốc độ và độ cao của chất lưu như thế nào?"
 ---

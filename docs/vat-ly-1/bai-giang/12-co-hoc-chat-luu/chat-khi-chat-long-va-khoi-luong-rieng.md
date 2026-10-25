@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "12-co-hoc-chat-luu"
-section: "topic"
 topic: "chat-khi-chat-long-va-khoi-luong-rieng"
+section: "topic"
 title: "Chất khí, chất lỏng và khối lượng riêng"
 description: "Vì sao cùng một thể tích nhưng chất khí, chất lỏng và chất rắn có khối lượng khác nhau?"
 ---

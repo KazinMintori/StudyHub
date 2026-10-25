@@ -1459,64 +1459,90 @@
           "page": 382
         }
       ],
-      "status": "theory-reviewed-exercises-incomplete",
+      "status": "complete",
       "fragments": [
         {
-          "sourceUnit": "0: 00-mo-dau.md",
+          "sourceUnit": "00-mo-dau",
           "file": "raw_materials/physics/translations/chapter-12/00-mo-dau.md",
           "destination": "notes",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "1: 01-muc-01.md",
+          "sourceUnit": "12.1",
           "file": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "2: 02-muc-02.md",
+          "sourceUnit": "12.2",
           "file": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "3: 03-muc-03.md",
+          "sourceUnit": "12.3",
           "file": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "4: 04-muc-04.md",
+          "sourceUnit": "12.4",
           "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "5: 05-muc-05.md",
+          "sourceUnit": "12.5",
           "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "6: 06-muc-06.md",
+          "sourceUnit": "12.6",
           "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "7: 17-tom-tat.md",
+          "sourceUnit": "17-tom-tat",
           "file": "raw_materials/physics/translations/chapter-12/17-tom-tat.md",
           "destination": "notes",
           "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-09-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-12/parent-09-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-10-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-12/parent-10-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-11-bai-tap-001-046",
+          "file": "raw_materials/physics/translations/chapter-12/parent-11-bai-tap-001-046.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-12-bai-tap-047-092",
+          "file": "raw_materials/physics/translations/chapter-12/parent-12-bai-tap-047-092.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-12/parent-16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "12guided-practice",
-        "30discussion-questions",
-        "92numbered-exercises",
-        "1bridging-problem"
-      ],
-      "theoryReview": "raw_materials/physics/reviews/ch12-remaining-theory-coverage.json"
+      "pendingSourceUnits": [],
+      "theoryReview": "raw_materials/physics/reviews/ch12-remaining-theory-coverage.json",
+      "completionReview": "raw_materials/physics/chapter-12-review.json"
     },
     {
       "chapter": 13,

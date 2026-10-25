@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "12-co-hoc-chat-luu"
-section: "topic"
 topic: "ap-suat-trong-chat-luu"
+section: "topic"
 title: "Áp suất trong chất lưu"
 description: "Áp suất thay đổi theo độ sâu như thế nào và các dụng cụ đo áp suất hoạt động ra sao?"
 ---

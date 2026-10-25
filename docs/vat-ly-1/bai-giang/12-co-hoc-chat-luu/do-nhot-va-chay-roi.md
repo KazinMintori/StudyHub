@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "12-co-hoc-chat-luu"
-section: "topic"
 topic: "do-nhot-va-chay-roi"
+section: "topic"
 title: "Độ nhớt và chảy rối"
 description: "Khi ma sát bên trong chất lưu và những nhiễu loạn dòng chảy trở nên đáng kể, mô hình lý tưởng thay đổi ra sao?"
 ---

@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "12-co-hoc-chat-luu"
-section: "topic"
 topic: "dong-chay-chat-luu"
+section: "topic"
 title: "Dòng chảy chất lưu"
 description: "Bảo toàn khối lượng liên hệ tiết diện, khối lượng riêng và tốc độ của dòng chảy như thế nào?"
 ---

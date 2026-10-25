@@ -753,7 +753,7 @@ export const physics1Course = {
     "duong-di-phan-tu-chat-luu",
     "luu-luong-chat-luu"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 12,
   "sourceChapter": 12,
   "topicGroups": [
@@ -798,7 +798,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
       "slug": "13-hap-dan",
@@ -1871,6 +1872,72 @@ export const physics1Course = {
       "Watt là đơn vị công suất, mã lực là đơn vị công suất ngoài SI. Kilowatt-giờ là đơn vị năng lượng."
     ],
     "formula": "$$\nP_{\\mathrm{av}} = \\frac{\\Delta W}{\\Delta t}\n$$"
+  },
+  {
+    "note": "12-co-hoc-chat-luu",
+    "title": "Chất khí, chất lỏng và khối lượng riêng",
+    "bullets": [
+      "Chất lưu có thể chảy và thay đổi hình dạng. Chất khí và chất lỏng đều là chất lưu. Chất lỏng có lực liên kết phân tử đủ mạnh để giữ thể tích gần như không đổi trong những điều kiện thông thường.",
+      "Vật liệu đồng nhất có cùng khối lượng riêng tại mọi điểm. Với vật không đồng nhất, tỉ số khối lượng toàn vật và thể tích toàn vật là khối lượng riêng trung bình.",
+      "Đơn vị SI là kilogram trên mét khối. Giá trị bằng gram trên centimet khối được đổi sang SI bằng hệ số một nghìn.",
+      "Tỉ khối là tỉ số khối lượng riêng của vật liệu và khối lượng riêng của nước ở 4,0 °C. Đại lượng này không có đơn vị."
+    ],
+    "formula": "$$\n\\rho=\\frac mV\n$$"
+  },
+  {
+    "note": "12-co-hoc-chat-luu",
+    "title": "Áp suất và cân bằng chất lưu",
+    "bullets": [
+      "Áp suất là đại lượng vô hướng. Trong chất lưu đứng yên, áp lực tác dụng vuông góc với mặt tiếp xúc. Hai phía của một mặt nhỏ trong chất lưu cân bằng chịu lực bằng nhau về độ lớn và ngược chiều.",
+      "Khi áp suất bằng nhau trên toàn bộ mặt phẳng đang xét, độ lớn áp lực ở một phía bằng tích áp suất và diện tích.",
+      "Pascal là đơn vị SI. Atmosphere tiêu chuẩn được định nghĩa bằng 101325 Pa. Bar và millibar là các đơn vị áp suất.",
+      "Chất lưu đứng yên trong trường trọng lực. Trục y hướng lên và g là độ lớn gia tốc trọng trường. Công thức hiệu áp suất dưới đây dùng khối lượng riêng và g không đổi trên đoạn xét."
+    ],
+    "formula": "$$\np=\\frac{dF_\\perp}{dA}\n$$"
+  },
+  {
+    "note": "12-co-hoc-chat-luu",
+    "title": "Lực nổi và sức căng bề mặt",
+    "bullets": [
+      "Lực đẩy hướng lên bằng trọng lượng phần chất lưu bị vật chiếm chỗ. Với chất lưu có khối lượng riêng không đổi trong trường trọng lực đều, đường tác dụng đi qua trọng tâm phần chất lưu bị chiếm chỗ.",
+      "Khi chỉ trọng lực và lực đẩy tác dụng lên vật, lực đẩy bằng trọng lượng. Tỉ lệ thể tích chìm dưới đây bỏ qua lực nổi của không khí và dùng khối lượng riêng trung bình của toàn vật.",
+      "Với dây căng kéo thẳng lên và vật cân bằng, lực căng bằng trọng lượng trừ lực đẩy. Biểu thức áp dụng khi lực căng không âm. Nếu lực đẩy lớn hơn trọng lượng, dây phía trên không thể giữ vật bằng lực căng.",
+      "Phù kế tự nổi cân bằng. Cùng một phù kế chiếm chỗ thể tích chất lỏng lớn hơn khi khối lượng riêng chất lỏng nhỏ hơn."
+    ],
+    "formula": "$$\nB=\\rho_{\\mathrm f}gV_{\\mathrm d}\n$$"
+  },
+  {
+    "note": "12-co-hoc-chat-luu",
+    "title": "Dòng chảy và phương trình liên tục",
+    "bullets": [
+      "Mô hình chất lưu không nén được và không có ma sát bên trong. Bỏ qua ứng suất nhớt khi tác dụng của chúng nhỏ so với lực áp suất và trọng lực.",
+      "Trong dòng ổn định, trường vận tốc tại mỗi vị trí cố định không đổi theo thời gian. Tiếp tuyến đường dòng cùng hướng vận tốc tức thời. Đường đi của phần tử trùng đường dòng trong dòng ổn định. Chất lưu không đi xuyên qua thành bên của ống dòng.",
+      "Dòng ổn định, cùng một ống dòng không có nguồn cấp hoặc nhánh hút qua thành bên. Khối lượng riêng không đổi. Các tốc độ là đều trên tiết diện hoặc được hiểu là giá trị trung bình phù hợp.",
+      "Lưu lượng thể tích là thể tích đi qua một tiết diện trong một đơn vị thời gian. Công thức Av dùng tốc độ trung bình theo tiết diện nếu vận tốc không đều."
+    ],
+    "formula": "$$\nA_1v_1=A_2v_2\n$$"
+  },
+  {
+    "note": "12-co-hoc-chat-luu",
+    "title": "Phương trình Bernoulli",
+    "bullets": [
+      "Dòng ổn định, chất lưu không nén được, bỏ qua nhớt và tổn hao cơ năng. Hai điểm thuộc cùng một đường dòng hoặc ống dòng được mô hình hóa. Không có công bơm hay tuabin giữa hai điểm trong dạng phương trình đang xét.",
+      "Tổng áp suất, thế năng trọng trường trên thể tích và động năng trên thể tích không đổi dọc đường dòng dưới các điều kiện Bernoulli. Mỗi số hạng có đơn vị Pa.",
+      "Trong cùng thời gian, thể tích dV đi vào và đi ra ống dòng không nén được bằng nhau. Công áp suất ở đầu vào dương, ở đầu ra âm theo chiều dòng.",
+      "Trong phép so sánh hai trạng thái của dòng ổn định, phần thể tích chung không đổi cơ năng. Với phần chất lưu được thay thế có khối lượng ρdV, công áp suất bằng biến thiên động năng và thế năng."
+    ],
+    "formula": "$$\n\\begin{aligned}\n&p_1+\\rho gy_1+\\frac12\\rho v_1^2=C,\\\\\n&p_2+\\rho gy_2+\\frac12\\rho v_2^2=C.\n\\end{aligned}\n$$"
+  },
+  {
+    "note": "12-co-hoc-chat-luu",
+    "title": "Độ nhớt và chảy rối",
+    "bullets": [
+      "Độ nhớt đặc trưng ma sát bên trong chất lưu. Lực nhớt chống lại chuyển động tương đối giữa những phần chất lưu. Ở các chất được xét, độ nhớt tăng theo nhiệt độ đối với khí và giảm theo nhiệt độ đối với chất lỏng.",
+      "Chất lưu nhớt có xu hướng bám bề mặt rắn. Gần bề mặt, tốc độ tương đối của chất lưu so với bề mặt nhỏ. Trong mô hình không trượt ở thành ống, tốc độ tương đối bằng không.",
+      "Trong ống trụ dài, dòng tầng có độ lớn vận tốc theo bán kính dạng parabol. Tốc độ lớn nhất trên trục ống và bằng không tại thành. Cần chênh áp theo chiều dòng để duy trì lưu lượng.",
+      "Với cùng chất lưu, trạng thái nhiệt độ và lưu lượng thể tích trong dòng tầng qua ống trụ dài, chênh áp tỉ lệ chiều dài ống và nghịch đảo lũy thừa bậc bốn bán kính trong."
+    ],
+    "formula": "$$\nv(R)=0\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"
