@@ -917,7 +917,7 @@ export const physics1Course = {
     "dao-dong-cuong-buc",
     "tat-dan-toi-han"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 14,
   "sourceChapter": 14,
   "topicGroups": [
@@ -974,7 +974,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "15-song-co",
@@ -2331,6 +2332,90 @@ export const physics1Course = {
       "Trong mô hình Kepler chi phối bởi một vật trung tâm, chu kỳ T và bán trục lớn a của sao lân cận xác định khối lượng trung tâm."
     ],
     "formula": "$$\nM=\\frac{4\\pi}{3}\\bar\\rho R^3\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Mô tả dao động",
+    "bullets": [
+      "Chuyển động lặp lại sau chu kỳ $T$. Các hệ dao động phục hồi đang xét có cân bằng bền và chuyển động qua lại quanh vị trí cân bằng.",
+      "Tần số góc bằng hai pi lần tần số, có đơn vị rad/s. Tần số có đơn vị Hz.",
+      "Biên độ $A$ là độ lớn li độ cực đại. Trong dao động qua lại đối xứng, hành trình giữa hai biên dài $2A$ và mất nửa chu kỳ."
+    ],
+    "formula": "$$\nf=\\frac1T,\\qquad T=\\frac1f\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Dao động điều hòa",
+    "bullets": [
+      "Hợp lực theo trục dao động bằng $-kx$, với $m>0$, $k>0$ và không có tiêu tán.",
+      "Lò xo lý tưởng có khối lượng bỏ qua. Với cùng $m,k$, tần số và chu kỳ không phụ thuộc biên độ.",
+      "Biên độ $A$ và pha ban đầu $\\phi$ do điều kiện đầu xác định. Pha tại thời điểm $t$ là $\\omega t+\\phi$.",
+      "Vận tốc và gia tốc là các đạo hàm theo thời gian của li độ."
+    ],
+    "formula": "$$\nF_x=-kx\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Cơ năng dao động điều hòa",
+    "bullets": [
+      "Lò xo lý tưởng, không có công của lực tiêu tán, với mốc thế năng tại cân bằng.",
+      "Ký hiệu $K,U$ lần lượt là động năng và thế năng đàn hồi. Miền chuyển động là $|x|\\le A$.",
+      "Dấu của vận tốc phụ thuộc chiều chuyển động tại li độ đang xét."
+    ],
+    "formula": "$$\nE=\\frac12mv_x^2+\\frac12kx^2\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Các mô hình điều hòa",
+    "bullets": [
+      "Li độ $x$ đo từ vị trí cân bằng có trọng lực. Độ dãn tĩnh là $\\Delta l$. Trọng lực dịch vị trí cân bằng nhưng không đổi tần số khi $m,k$ giữ nguyên.",
+      "Góc tính bằng radian, $\\kappa>0$ là hằng số xoắn và $I$ là mômen quán tính quanh trục dao động.",
+      "Mô hình van der Waals có $U_0>0$, khoảng cách cân bằng $R_0$. Biến $u$ là tỷ số khoảng cách không thứ nguyên.",
+      "Độ lệch $x=r-R_0$ thỏa $|x|\\ll R_0$. Độ cứng hiệu dụng là độ cong thế năng tại cân bằng. Khi cả hai hạt tự do, tần số tương đối dùng khối lượng rút gọn $\\mu$."
+    ],
+    "formula": "$$\nk\\Delta l=mg\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Con lắc đơn",
+    "bullets": [
+      "Chất điểm treo bằng dây không khối lượng, không dãn, dài $L$. Dây còn căng và góc $\\theta$ đo từ phương thẳng đứng xuống.",
+      "Với góc nhỏ tính bằng radian, $\\sin\\theta\\approx\\theta$ và chuyển động gần điều hòa.",
+      "Biên độ góc thỏa $0\\le\\Theta<\\pi$. Ký hiệu $T_0$ là chu kỳ góc nhỏ. Chuỗi dưới đây biểu diễn chu kỳ với hai hệ số hiệu chỉnh đầu."
+    ],
+    "formula": "$$\nx=L\\theta\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Con lắc vật lý",
+    "bullets": [
+      "Vật rắn quay quanh trục không ma sát. Ở cân bằng bền, trọng tâm ở dưới trục một đoạn $d>0$. Mômen quán tính $I$ lấy quanh trục treo.",
+      "Góc nhỏ tính bằng radian, trường trọng lực gần đều và mômen quán tính quanh trục không đổi.",
+      "Thanh dài $L$, khối lượng $m$, dao động góc nhỏ quanh trục qua đầu, vuông góc thanh."
+    ],
+    "formula": "$$\n\\tau_z=-mgd\\sin\\theta\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Tắt dần do lực cản tuyến tính",
+    "bullets": [
+      "Khối lượng và độ cứng dương, hệ số cản không âm. Lực cản tuyến tính ngược chiều vận tốc.",
+      "Hệ số cản thỏa $0<b<2\\sqrt{km}$. Đặt $\\omega_0=\\sqrt{k/m}$. Các hằng số $A,\\phi$ do điều kiện đầu xác định.",
+      "Tới hạn khi $b=b_c$, quá tới hạn khi $b>b_c$. Vật bị lệch rồi thả từ nghỉ trở về mà không dao động qua lại trong hai chế độ này.",
+      "Tốc độ biến thiên cơ năng bằng công suất lực cản và không dương. Cơ năng tức thời không giảm với tốc độ đều."
+    ],
+    "formula": "$$\nF_d=-bv_x\n$$"
+  },
+  {
+    "note": "14-dao-dong",
+    "title": "Dao động cưỡng bức và cộng hưởng",
+    "bullets": [
+      "Ngoại lực hình sin tác dụng lên hệ tuyến tính có $b>0$. Sau khi quá độ tắt, tần số góc đáp ứng bằng $\\omega_d$.",
+      "Công thức cho trạng thái ổn định của hệ tuyến tính có cản, với biên độ lực $F_{\\max}$ và tần số góc cưỡng bức $\\omega_d$.",
+      "Đỉnh tại tần số dương chỉ tồn tại khi $b<\\sqrt{2km}$. Tần số đỉnh gần tần số riêng không cản khi cản yếu.",
+      "Đặt $\\omega_0=\\sqrt{k/m}$. Tại tần số cưỡng bức không, lực là hằng số và đáp ứng cuối là độ lệch cân bằng tĩnh."
+    ],
+    "formula": "$$\nF(t)=F_{\\max}\\cos\\omega_dt\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"

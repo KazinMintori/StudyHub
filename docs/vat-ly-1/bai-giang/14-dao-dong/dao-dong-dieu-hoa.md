@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "14-dao-dong"
-section: "topic"
 topic: "dao-dong-dieu-hoa"
+section: "topic"
 title: "Dao động điều hòa"
 description: "Lực phục hồi tuyến tính xác định li độ, vận tốc và gia tốc ra sao?"
 ---

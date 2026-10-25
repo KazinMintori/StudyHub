@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "14-dao-dong"
-section: "topic"
 topic: "dao-dong-cuong-buc-va-cong-huong"
+section: "topic"
 title: "Dao động cưỡng bức và cộng hưởng"
 description: "Ngoại lực tuần hoàn và độ cản quyết định biên độ đáp ứng ra sao?"
 ---

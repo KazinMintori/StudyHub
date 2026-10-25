@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "14-dao-dong"
-section: "topic"
 topic: "con-lac-don"
+section: "topic"
 title: "Con lắc đơn"
 description: "Khi nào con lắc đơn gần điều hòa và chu kỳ thay đổi theo biên độ thế nào?"
 ---

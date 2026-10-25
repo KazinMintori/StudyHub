@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "14-dao-dong"
-section: "topic"
 topic: "dao-dong-tat-dan"
+section: "topic"
 title: "Dao động tắt dần"
 description: "Lực cản làm giảm cơ năng và phân chia các chế độ chuyển động thế nào?"
 ---

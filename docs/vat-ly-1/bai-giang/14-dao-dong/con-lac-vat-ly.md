@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "14-dao-dong"
-section: "topic"
 topic: "con-lac-vat-ly"
+section: "topic"
 title: "Con lắc vật lý"
 description: "Phân bố khối lượng và trục treo quyết định chu kỳ của vật quay ra sao?"
 ---

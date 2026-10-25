@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "14-dao-dong"
-section: "topic"
 topic: "co-nang-dao-dong-dieu-hoa"
+section: "topic"
 title: "Cơ năng trong dao động điều hòa"
 description: "Cơ năng và li độ liên hệ với tốc độ, biên độ như thế nào?"
 ---

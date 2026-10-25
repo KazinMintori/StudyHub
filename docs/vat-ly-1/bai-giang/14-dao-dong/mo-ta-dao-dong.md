@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "14-dao-dong"
-section: "topic"
 topic: "mo-ta-dao-dong"
+section: "topic"
 title: "Mô tả dao động"
 description: "Biên độ, chu kỳ và tần số mô tả một dao động như thế nào?"
 ---
