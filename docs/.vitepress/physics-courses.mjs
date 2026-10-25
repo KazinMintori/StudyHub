@@ -888,21 +888,93 @@ export const physics1Course = {
   ]
 },
     {
-      "slug": "14-dao-dong",
+  "slug": "14-dao-dong",
+  "title": "Chuyển động tuần hoàn",
+  "prerequisites": [
+    "luc",
+    "cong-nang-luong",
+    "bao-toan-co-nang",
+    "gia-toc-huong-tam",
+    "momen-luc",
+    "momen-quan-tinh",
+    "dao-ham",
+    "dong-luong-vat-ly"
+  ],
+  "supportingConcepts": [
+    "dao-dong-dieu-hoa",
+    "dao-dong-tat-dan",
+    "cong-huong-co-hoc",
+    "can-bang-co-hoc",
+    "luc-can-tuyen-tinh",
+    "khoi-luong-rut-gon",
+    "chu-ky-va-tan-so-dao-dong",
+    "tan-so-goc-dao-dong",
+    "pha-dao-dong-co-hoc",
+    "dao-dong-dieu-hoa-goc",
+    "con-lac-don",
+    "con-lac-vat-ly",
+    "dao-dong-cuong-buc",
+    "tat-dan-toi-han"
+  ],
+  "status": "draft",
+  "number": 14,
+  "sourceChapter": 14,
+  "topicGroups": [
+    {
       "title": "Chuyển động tuần hoàn",
-      "prerequisites": [
-        "dao-ham",
-        "cong-nang-luong",
-        "momen-quan-tinh"
-      ],
-      "supportingConcepts": [
-        "dao-dong-dieu-hoa",
-        "pha-song"
-      ],
-      "status": "draft",
-      "number": 14,
-      "sourceChapter": 14
-    },
+      "topics": [
+        {
+          "slug": "mo-ta-dao-dong",
+          "title": "Mô tả dao động",
+          "question": "Biên độ, chu kỳ và tần số mô tả một dao động như thế nào?",
+          "source": "14.1"
+        },
+        {
+          "slug": "dao-dong-dieu-hoa",
+          "title": "Dao động điều hòa",
+          "question": "Lực phục hồi tuyến tính xác định li độ, vận tốc và gia tốc ra sao?",
+          "source": "14.2"
+        },
+        {
+          "slug": "co-nang-dao-dong-dieu-hoa",
+          "title": "Cơ năng trong dao động điều hòa",
+          "question": "Cơ năng và li độ liên hệ với tốc độ, biên độ như thế nào?",
+          "source": "14.3"
+        },
+        {
+          "slug": "ung-dung-dao-dong-dieu-hoa",
+          "title": "Các ứng dụng của dao động điều hòa",
+          "question": "Lò xo đứng, dao động xoắn và tương tác phân tử cùng dẫn tới mô hình điều hòa ra sao?",
+          "source": "14.4"
+        },
+        {
+          "slug": "con-lac-don",
+          "title": "Con lắc đơn",
+          "question": "Khi nào con lắc đơn gần điều hòa và chu kỳ thay đổi theo biên độ thế nào?",
+          "source": "14.5"
+        },
+        {
+          "slug": "con-lac-vat-ly",
+          "title": "Con lắc vật lý",
+          "question": "Phân bố khối lượng và trục treo quyết định chu kỳ của vật quay ra sao?",
+          "source": "14.6"
+        },
+        {
+          "slug": "dao-dong-tat-dan",
+          "title": "Dao động tắt dần",
+          "question": "Lực cản làm giảm cơ năng và phân chia các chế độ chuyển động thế nào?",
+          "source": "14.7"
+        },
+        {
+          "slug": "dao-dong-cuong-buc-va-cong-huong",
+          "title": "Dao động cưỡng bức và cộng hưởng",
+          "question": "Ngoại lực tuần hoàn và độ cản quyết định biên độ đáp ứng ra sao?",
+          "source": "14.8"
+        }
+      ]
+    }
+  ]
+},
     {
       "slug": "15-song-co",
       "title": "Sóng cơ",

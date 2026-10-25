@@ -1715,24 +1715,76 @@
           "page": 451
         }
       ],
-      "status": "pending",
-      "fragments": [],
+      "status": "theory-reviewed-exercises-incomplete",
+      "fragments": [
+        {
+          "sourceUnit": "00-mo-dau.md",
+          "file": "raw_materials/physics/translations/chapter-14/00-mo-dau.md",
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "01-muc-01.md",
+          "file": "raw_materials/physics/translations/chapter-14/01-muc-01.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "02-muc-02.md",
+          "file": "raw_materials/physics/translations/chapter-14/02-muc-02.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "03-muc-03.md",
+          "file": "raw_materials/physics/translations/chapter-14/03-muc-03.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "04-muc-04.md",
+          "file": "raw_materials/physics/translations/chapter-14/04-muc-04.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "05-muc-05.md",
+          "file": "raw_materials/physics/translations/chapter-14/05-muc-05.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "06-muc-06.md",
+          "file": "raw_materials/physics/translations/chapter-14/06-muc-06.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "07-muc-07.md",
+          "file": "raw_materials/physics/translations/chapter-14/07-muc-07.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "08-muc-08.md",
+          "file": "raw_materials/physics/translations/chapter-14/08-muc-08.md",
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "17-tom-tat.md",
+          "file": "raw_materials/physics/translations/chapter-14/17-tom-tat.md",
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
+        }
+      ],
       "pendingSourceUnits": [
-        "chapter-opening",
-        "14.1",
-        "14.2",
-        "14.3",
-        "14.4",
-        "14.5",
-        "14.6",
-        "14.7",
-        "14.8",
-        "all-original-figures-and-captions",
-        "chapter-summary",
         "guided-practice",
         "discussion-questions",
-        "all-end-of-chapter-exercises-and-problems"
-      ]
+        "all-numbered-end-exercises",
+        "bridging-problem"
+      ],
+      "theoryReview": "raw_materials/physics/reviews/ch14-remaining-theory-coverage.json"
     },
     {
       "chapter": 15,

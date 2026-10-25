@@ -7,11 +7,39 @@ next: false
 
 # Tắt dần tới hạn
 
-Tắt dần tới hạn là ngưỡng giữa dao động tắt dần và quá tắt dần. Với RLC nối tiếp, $R=2\sqrt{L/C}$. Nghiệm điện tích có dạng $(a+bt)e^{-Rt/(2L)}$.
+Tắt dần tới hạn là ngưỡng giữa dao động và đáp ứng không dao động. Với hệ lò xo có lực cản tuyến tính, $b_c=2\sqrt{km}$. Với mạch RLC nối tiếp, $R_c=2\sqrt{L/C}$.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
+
+### Hệ lò xo có lực cản tuyến tính
+
+$$
+b_c=2\sqrt{km}
+$$
+
+Dưới tới hạn, $0<b<b_c$, bao biên giảm nhưng vật còn dao động. Tại và quá tới hạn, vật bị lệch rồi thả từ nghỉ không dao động qua lại.
+
+Với vận tốc đầu tùy ý, cần đọc đầy đủ nghiệm để xác định vật có cắt qua cân bằng một lần hay không. Căn âm trong biểu thức tần số báo không còn tần số dao động thực, không phải một dao động vật lý có “tần số ảo”.
+
+Ở ngưỡng tới hạn, nghiệm cơ học có dạng:
+
+$$
+x(t)=(C_1+C_2t)e^{-\beta t}
+$$
+
+$$
+\beta=\frac{b_c}{2m}
+$$
+
+Với vị trí đầu $x_0$ và vận tốc đầu $v_0$, các hằng số thỏa:
+
+$$
+C_1=x_0,\qquad C_2=v_0+\beta x_0
+$$
+
+### Mạch RLC nối tiếp
 
 Ngưỡng tới hạn RLC được xác định bởi nghiệm kép của phương trình đặc trưng. Với $R^2=4L/C$, tốc độ suy giảm là $\alpha=R/(2L)$ và
 
@@ -25,28 +53,30 @@ Hệ không có các lần đổi dấu lặp lại như dao động. Kết lu�
 
 ## Ví dụ
 
-Với điện tích đầu dương và dòng đầu bằng không, nghiệm tới hạn trở về không mà không dao động lặp lại.
+Với điện tích đầu dương và dòng đầu bằng không, nghiệm tới hạn trở về không mà không dao động lặp lại. Một vật gắn lò xo bị lệch rồi thả từ nghỉ cũng trở về mà không dao động qua lại ở ngưỡng tới hạn.
 
 ## Khi nào cần dùng?
 
-Nhận biết ngưỡng không dao động và chọn nghiệm chuyển tiếp.
+Phân loại đáp ứng sau một kích thích và phân biệt ngưỡng tắt dần với ngưỡng mất đỉnh cộng hưởng.
 
 ## Câu hỏi ôn lại
 
-Không dao động có luôn nghĩa không thể đổi dấu dù điều kiện đầu bất kỳ không?
+Ngưỡng tới hạn của dao động tự do có bằng ngưỡng mất đỉnh biên độ cưỡng bức không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Điều kiện đầu phù hợp có thể tạo một lần đổi dấu, nhưng không dao động lặp lại.
+Không. Ngưỡng tự do là $2\sqrt{km}$, còn đỉnh biên độ li độ ở tần số dương mất khi $b\ge\sqrt{2km}$.
 
 </details>
 
 ## Thuật ngữ liên quan
 
-- [Mạch RLC nối tiếp](./mach-rlc.md)
 - [Dao động tắt dần](./dao-dong-tat-dan.md)
+- [Lực cản tuyến tính](./luc-can-tuyen-tinh.md)
+- [Cộng hưởng cơ học](./cong-huong-co-hoc.md)
+- [Mạch RLC nối tiếp](./mach-rlc.md)
 - [Quá tắt dần](./qua-tat-dan.md)
 
 ## Tài liệu tham khảo
 
-Young & Freedman, ấn bản 15, chương 30, trang 988–1009.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 14.7–14.8 và chương 30, tr. 988–1009.

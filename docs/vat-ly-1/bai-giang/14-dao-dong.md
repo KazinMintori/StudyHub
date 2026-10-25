@@ -1,31 +1,20 @@
 ---
-course: vat-ly-1
-lecture: 14-dao-dong
-section: lecture
+course: "vat-ly-1"
+lecture: "14-dao-dong"
+section: "lecture"
 title: "Chuyển động tuần hoàn"
-prerequisites: ["dao-ham","cong-nang-luong","momen-quan-tinh"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Chuyển động tuần hoàn."
+prerequisites: ["luc","cong-nang-luong","bao-toan-co-nang","gia-toc-huong-tam","momen-luc","momen-quan-tinh","dao-ham","dong-luong-vat-ly"]
+lessonStatus: "draft"
+sourceTranslation: "full"
+description: "Mô tả dao động, Dao động điều hòa, Cơ năng trong dao động điều hòa, Các ứng dụng của dao động điều hòa, Con lắc đơn, Con lắc vật lý, Dao động tắt dần, Dao động cưỡng bức và cộng hưởng."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<!--@include: ../../../raw_materials/physics/translations/chapter-14/00-mo-dau.md-->
 
-## Đề cương chi tiết bài giảng
+<TopicMap />
 
-- Lời mở đầu và mục tiêu học tập.
-- 14.1 — Describing Oscillation (từ trang 429).
-- 14.2 — Simple Harmonic Motion (từ trang 431).
-- 14.3 — Energy in Simple Harmonic Motion (từ trang 438).
-- 14.4 — Applications of Simple Harmonic Motion (từ trang 442).
-- 14.5 — The Simple Pendulum (từ trang 446).
-- 14.6 — The Physical Pendulum (từ trang 447).
-- 14.7 — Damped Oscillations (từ trang 449).
-- 14.8 — Forced Oscillations and Resonance (từ trang 451).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<!--@include: ../../../raw_materials/physics/translations/chapter-14/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 14.

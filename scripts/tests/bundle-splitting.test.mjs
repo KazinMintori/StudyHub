@@ -110,7 +110,7 @@ test('client bundles skip rendered math for server-only Wiki article bodies', as
 })
 
 test('new Physics1 chapter modules compile every formula and variable legend', async () => {
-  for (const chapter of [1,3,4,5,6,7,8,12,13]) {
+  for (const chapter of [1,3,4,5,6,7,8,12,13,14]) {
     const nn=String(chapter).padStart(2,'0')
     const {module,math}=await evaluateTransformed('docs/.vitepress/physics1-remaining-ch'+nn+'-course.mjs',false)
     const data=module['physics1RemainingChapter'+chapter+'Parent']
