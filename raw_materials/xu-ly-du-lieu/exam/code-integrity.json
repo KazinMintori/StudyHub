@@ -17686,11 +17686,8 @@
     "B8-038": {
       "prompt": {
         "inline": [
-          "m",
-          "doi",
-          "shift(1)",
-          "rv",
-          "date"
+          "DD/MM/YYYY",
+          "04/08/2026"
         ],
         "blocks": [
           "vao_raw = \"04/08/2026\"\nra_raw = \"07/08/2026\"\nvao = pd.to_datetime(vao_raw)\nra = pd.to_datetime(ra_raw)\nprint(vao.strftime(\"%Y-%m-%d\"), ra.strftime(\"%Y-%m-%d\"), (ra-vao).days)"
