@@ -1006,7 +1006,7 @@ export const physics1Course = {
     "giao-thoa-song",
     "dao-ham-rieng"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 15,
   "sourceChapter": 15,
   "topicGroups": [
@@ -1063,7 +1063,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "16-am-hoc",
@@ -2416,6 +2417,92 @@ export const physics1Course = {
       "Đặt $\\omega_0=\\sqrt{k/m}$. Tại tần số cưỡng bức không, lực là hằng số và đáp ứng cuối là độ lệch cân bằng tĩnh."
     ],
     "formula": "$$\nF(t)=F_{\\max}\\cos\\omega_dt\n$$"
+  },
+  {
+    "note": "15-song-co",
+    "title": "Các loại sóng cơ",
+    "bullets": [
+      "Nhiễu loạn truyền trong môi trường vật chất. Tốc độ truyền nhiễu loạn khác vận tốc dao động của từng phần tử môi trường.",
+      "Sóng ngang có phương dao động vuông góc chiều truyền. Sóng dọc có phương dao động cùng phương chiều truyền. Một chuyển động sóng có thể chứa cả hai thành phần.",
+      "Sóng cơ truyền năng lượng nhờ tương tác giữa các phần môi trường. Trong mô hình dao động tuyến tính đang xét, phần tử dao động quanh vị trí cân bằng, còn hình dạng nhiễu loạn truyền đi."
+    ],
+    "formula": ""
+  },
+  {
+    "note": "15-song-co",
+    "title": "Sóng tuần hoàn",
+    "bullets": [
+      "Chu kỳ là thời gian chuyển động lặp lại, còn tần số là số chu kỳ trong một đơn vị thời gian.",
+      "Khoảng cách giữa hai điểm liên tiếp cùng pha của sóng tuần hoàn, chẳng hạn hai đỉnh kề nhau. Trong một chu kỳ, dạng sóng chạy một bước sóng.",
+      "Khi tốc độ truyền chỉ do các tính chất cơ học cố định của môi trường quyết định, tăng tần số làm giảm bước sóng theo cùng tỷ lệ nghịch. Tính độc lập với tần số này là giả thiết của các mô hình trong chương."
+    ],
+    "formula": "$$\nf=\\frac1T,\\qquad \\omega=2\\pi f\n$$"
+  },
+  {
+    "note": "15-song-co",
+    "title": "Hàm sóng hình sin",
+    "bullets": [
+      "Chọn gốc thời gian khi nguồn có li độ dương cực đại.",
+      "Với hàm $y(x,t)$, pha $kx-\\omega t$ không đổi trên các vị trí chuyển về phía x tăng. Ba cách viết dưới đây tương đương, với y là cùng hàm li độ.",
+      "Số sóng là tốc độ biến thiên pha theo vị trí. Tần số góc là độ biến thiên pha theo thời gian tại một vị trí.",
+      "Dấu cộng giữa $kx$ và $\\omega t$ ứng với chiều truyền âm khi k và tần số góc đều dương."
+    ],
+    "formula": "$$\ny(0,t)=A\\cos\\omega t\n$$"
+  },
+  {
+    "note": "15-song-co",
+    "title": "Tốc độ sóng trên dây",
+    "bullets": [
+      "Khối lượng trên một đơn vị chiều dài. Với dây đồng nhất, tổng khối lượng bằng $\\mu L$.",
+      "Với phần dây ban đầu đứng yên được cuốn vào chuyển động ngang trong thời gian t, khối lượng tham gia là $\\mu vt$.",
+      "Dây mềm đồng nhất, lực căng gần đều, độ dốc và dao động ngang nhỏ. Khối lượng riêng dài giữ vai trò quán tính, còn lực căng giữ vai trò phục hồi.",
+      "Với $\\mu$ không đổi, tốc độ tỉ lệ căn lực căng. Với lực căng không đổi, tốc độ tỉ lệ nghịch căn khối lượng riêng dài."
+    ],
+    "formula": "$$\n\\mu=\\frac mL\n$$"
+  },
+  {
+    "note": "15-song-co",
+    "title": "Năng lượng và cường độ",
+    "bullets": [
+      "Xét lực của phần dây bên trái lên phần bên phải. Công suất dương quy ước năng lượng truyền theo chiều x tăng.",
+      "Với sóng chạy theo chiều dương, đặt $\\theta=kx-\\omega t$ và viết P cho $P(x,t)$. Công suất tức thời không âm trong trường hợp một sóng chạy này.",
+      "Trung bình trên một số nguyên chu kỳ. Với cùng dây và cùng lực căng, công suất trung bình tỉ lệ $A^2f^2$, trong đó A là biên độ li độ.",
+      "Công suất trung bình truyền qua một đơn vị diện tích S vuông góc chiều truyền. Công thức thương dưới đây áp dụng khi cường độ đều trên S."
+    ],
+    "formula": "$$\nF_y=-F\\frac{\\partial y}{\\partial x}\n$$"
+  },
+  {
+    "note": "15-song-co",
+    "title": "Phản xạ và chồng chất",
+    "bullets": [
+      "Li độ đầu dây bằng không ở mọi thời điểm. Sóng phản xạ lý tưởng đảo dấu li độ so với sóng tới.",
+      "Vòng nhẹ không ma sát không nhận lực theo phương dao động từ giá đỡ. Độ dốc tại đầu tự do bằng không, và sóng phản xạ không đảo dấu.",
+      "Li độ tổng tại cùng vị trí và thời điểm bằng tổng đại số các li độ thành phần. Cần phương trình sóng và điều kiện biên tuyến tính.",
+      "Cộng hai li độ cùng dấu làm tăng độ lớn li độ tổng. Hai li độ trái dấu bù nhau một phần hoặc toàn phần. Sau khi hai xung vượt qua nhau trong môi trường tuyến tính lý tưởng, từng xung tiếp tục truyền với dạng riêng."
+    ],
+    "formula": "$$\ny(0,t)=0\n$$"
+  },
+  {
+    "note": "15-song-co",
+    "title": "Sóng dừng",
+    "bullets": [
+      "Hai sóng cùng $A,\\omega,k$, với quan hệ pha thỏa đầu cố định ở gốc.",
+      "Viết y cho li độ y(x,t). Biên độ tại một điểm là độ lớn thừa số không gian. Các điểm trong cùng một bó dao động cùng pha.",
+      "Nút luôn đứng yên. Bụng có biên độ lớn nhất và nằm giữa hai nút. Nút đếm bằng n=0,1,2,... từ đầu cố định.",
+      "Có trao đổi năng lượng cục bộ theo thời gian, nhưng không có truyền năng lượng trung bình qua một điểm. Công suất tức thời không bắt buộc bằng không ở mọi điểm."
+    ],
+    "formula": "$$\ny_1=-A\\cos(kx+\\omega t)\n$$"
+  },
+  {
+    "note": "15-song-co",
+    "title": "Dạng riêng và họa âm",
+    "bullets": [
+      "Chiều dài chứa một, hai, ba,... nửa bước sóng. Chỉ số n chạy qua các số nguyên dương.",
+      "Tần số riêng của dây mềm lý tưởng là $f_1$, $2f_1$, $3f_1$, v.v. với $n=1,2,3,\\ldots$. Mỗi dạng có cùng tần số tại mọi điểm, nhưng biên độ có thể khác nhau.",
+      "Viết y_n cho y_n(x,t). Hai đầu x=0 và x=L đều là nút. Pha thời gian có thể thay đổi theo điều kiện đầu.",
+      "Họa âm thứ nhất là âm cơ bản. Họa âm thứ hai là âm bồi thứ nhất. Âm bồi thứ hai là họa âm thứ ba."
+    ],
+    "formula": "$$\nL=n\\frac\\lambda2\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"

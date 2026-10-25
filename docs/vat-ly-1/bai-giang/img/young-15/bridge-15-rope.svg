@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 460 540" role="img" aria-labelledby="title desc">
+<title id="title">Dây quay và lực tác dụng lên phần ngoài điểm cắt</title>
+<desc id="desc">Hình nhìn từ trên xuống. Dây từ đầu giữ O tới đầu tự do L, điểm cắt ở r. Phần ngoài từ r tới L được tô cam, khối tâm ở giữa. Khi tách phần ngoài, chỉ có lực căng F(r) tại đầu trong hướng về trục quay.</desc>
+<rect width="460" height="540" fill="white"/>
+<g font-family="Arial, sans-serif" font-size="24" fill="#26364b">
+<text x="20" y="30" font-size="24" font-weight="700">(a) Dây quay</text>
+<line x1="48" y1="112" x2="422" y2="112" stroke="#245caf" stroke-width="5"/>
+<line x1="216" y1="112" x2="422" y2="112" stroke="#bd742c" stroke-width="9"/>
+<circle cx="48" cy="112" r="7" fill="#245caf"/>
+<circle cx="216" cy="112" r="5" fill="#26364b"/>
+<circle cx="319" cy="112" r="5" fill="#26364b"/>
+<text x="40" y="99">O</text><text x="209" y="99">r</text><text x="418" y="99">L</text>
+<line x1="48" y1="157" x2="216" y2="157" stroke="#65778d" stroke-width="1.5"/>
+<path d="M48 157L57 153L57 161Z M216 157L207 153L207 161Z" fill="#65778d"/>
+<text x="126" y="150" font-style="italic">r</text>
+<line x1="48" y1="195" x2="422" y2="195" stroke="#65778d" stroke-width="1.5"/>
+<path d="M48 195L57 191L57 199Z M422 195L413 191L413 199Z" fill="#65778d"/>
+<text x="228" y="188" font-style="italic">L</text>
+<text x="20" y="286" font-size="24" font-weight="700">(b) Phần dây ngoài</text>
+<line x1="144" y1="356" x2="422" y2="356" stroke="#bd742c" stroke-width="9"/>
+<circle cx="144" cy="356" r="5" fill="#26364b"/>
+<circle cx="283" cy="356" r="6" fill="#26364b"/>
+<line x1="144" y1="356" x2="46" y2="356" stroke="#b44343" stroke-width="3"/>
+<path d="M46 356L62 349L62 363Z" fill="#b44343"/>
+<text x="77" y="338" font-style="italic">F(r)</text>
+<text x="138" y="388" font-style="italic">r</text><text x="416" y="388" font-style="italic">L</text>
+<text x="245" y="399">Khối tâm</text>
+<text x="232" y="426">Giữa r và L</text>
+</g></svg>

@@ -1,0 +1,5282 @@
+{
+  "chapter": 15,
+  "status": "source-reviewed-and-render-verified",
+  "total": 114,
+  "units": [
+    {
+      "id": "VP15.3.1",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.3.1",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 5,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Tần số",
+          "(b) Tốc độ",
+          "(c) Tần số góc",
+          "(d) Số sóng"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ T=5,10 s, A=1,00 m, bước sóng 30,5 m và hoàn cảnh thuyền neo. Bốn kết quả khớp tính độc lập. Biên độ không chi phối các quan hệ động học này."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 5,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.3.2",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.3.2",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 47,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Chu kỳ và bước sóng",
+          "(b) Tần số và tần số góc"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ tốc độ 245 m/s, hai sóng 125 Hz và bước sóng 3,00 m. Không dùng nhầm tần số của (a) cho (b)."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 47,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.3.3",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.3.3",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 88,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Tốc độ",
+          "(b) Bước sóng",
+          "(c) Hàm thời gian ở 2,50 m"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ khối lượng riêng dài, lực căng, tần số, biên độ, điều kiện nguồn ở biên dương và không phản xạ. Pha trễ 3,539741687 rad, dấu truyền +x đúng. Hai dạng cos đổi toàn dấu pha tương đương."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 88,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.3.4",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.3.4",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 154,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Tốc độ",
+          "(b) Khối lượng riêng dài"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ điều kiện ngược pha gần nhất. Khoảng 0,400 m là nửa bước sóng, dẫn đến 36,0 m/s và 0,0192901 kg/m."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 154,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.5.1",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.5.1",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 189,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Tần số góc",
+          "(b) Công suất trung bình"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ lực, chiều dài, khối lượng, chu kỳ, biên độ và đầu kia buộc cọc. Phân biệt công suất thành phần phát với công suất ròng khi có phản xạ. Giá trị 0,294304694 W đúng."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 189,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.5.2",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.5.2",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 230,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "Biên độ từ công suất cực đại"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ chữ cực đại, không thay bằng trung bình. Biên độ 0,002504469 m, công suất trung bình 2,60 W. Sai hệ số hai trong công suất sẽ làm biên độ sai căn hai."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 230,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.5.3",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.5.3",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 265,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Cường độ ở 2,00 m",
+          "(b) Khoảng cách tới cường độ 0,045 W/m²"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ công suất 8,00 W và đẳng hướng. Tính được 0,159154943 W/m² và 3,761263890 m. Bản thảo viết 3,8 m phù hợp dữ kiện cường độ hai chữ số có nghĩa."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 265,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.5.4",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.5.4",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 298,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "Năng lượng tới một màng mỗi giây"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ bán kính 0,500 cm, công suất nguồn 2,50e-6 W, khoảng cách 1,50 m và một màng. Tính đúng 6,944444444e-12 J mỗi giây. Nêu rõ mô hình diện tích hứng âm và không khẳng định hấp thụ hoàn toàn."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 298,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.8.1",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.8.1",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 339,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Tốc độ truyền",
+          "(b) Vận tốc ngang cực đại tại bụng",
+          "(c) Gia tốc ngang cực đại tại bụng"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Khoảng nút 0,125 m cho bước sóng 0,250 m. Biên độ 1,40e-3 m là biên độ bụng, không phải mỗi sóng chạy. Kết quả 64,0 m/s, 2,251893614 m/s, 3622,160607 m/s² khớp."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 339,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.8.2",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.8.2",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 378,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Tốc độ trên dây Sol",
+          "(b) Lực căng"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ f1=196 Hz, L=0,641 m, khối lượng riêng dài 2,29e-3 kg/m. Tính v=251,272 m/s và F=144,585145 N bằng tốc độ chưa làm tròn."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 378,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.8.3",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.8.3",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 407,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Bước sóng",
+          "(b) Tần số",
+          "(c) Khối lượng riêng dài"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ 5 bụng trên đoạn hai đầu cố định 3,00 m, v=96,0 m/s và F=175 N. Đúng 1,20 m, 80,0 Hz và 0,0189887153 kg/m."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 407,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP15.8.4",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP15.8.4",
+        "file": "parent-09-luyen-tap-huong-dan.md",
+        "line": 442,
+        "source_pdf_pages": [
+          512
+        ],
+        "source_printed_pages": [
+          492
+        ],
+        "required_parts": [
+          "(a) Lực căng",
+          "(b) Bước sóng âm ở tần số cơ bản"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ họa âm thứ hai 512 Hz, L=0,500 m và tốc độ không khí 344 m/s. Dùng f1=256 Hz ở (b), F=76,67712 N và bước sóng âm 1,34375 m."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md",
+      "line": 442,
+      "sha256": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.1",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.1",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 3,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "(a) f khác",
+          "(b) Bước sóng khác",
+          "(c) Tốc độ khác",
+          "(d) Biên độ khác",
+          "(e) Cùng f, bước sóng khác",
+          "Giải thích từng trường hợp"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Đáp án Có, Có, Không, Có, Không đúng trong cùng dây đồng nhất, cùng lực căng và miền tuyến tính không tán sắc. Không nhầm tốc độ với chiều vận tốc truyền."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 3,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.2",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.2",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 28,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Lực căng mới theo F",
+          "Giải thích"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ hai thời gian 2,00 s và 6,00 s. Tỷ số lực căng 1/9 đúng khi chiều dài và khối lượng riêng dài giữ nguyên."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 28,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.3",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.3",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 57,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Các dạng năng lượng",
+          "Cách phát hiện bằng thí nghiệm"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Đủ động năng và thế năng đàn hồi. Mật độ theo chiều dài có hệ số 1/2 đúng. Thí nghiệm nhận công ở vật thu là hợp lý, không coi li độ là thước đo đầy đủ năng lượng."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 57,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.4",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.4",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 87,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Sự biến đổi năng lượng khi biên độ giảm"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Phân biệt mất năng lượng của sóng với bảo toàn tổng năng lượng. Điều kiện dây đồng nhất và tần số giữ nguyên bảo vệ kết luận. Phản ví dụ trở kháng thay đổi cho thấy giảm biên độ đơn thuần chưa đủ kết luận hấp thụ."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 87,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.5",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.5",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 112,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Phụ thuộc biên độ hay không",
+          "Căn cứ"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Kết luận độc lập biên độ được giới hạn trong mô hình tuyến tính biên độ nhỏ. Nêu khả năng lực căng biến đổi/phi tuyến ở biên độ lớn, không tổng quát hóa vô điều kiện."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 112,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.6",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.6",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 137,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Giải thích dựng sóng và vỡ gần bờ từ phụ thuộc độ sâu"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Lập luận phần trước vào vùng nông chậm lại, đỉnh cao có xu hướng vượt lên phù hợp mô tả định tính. Bản thảo không dùng mô hình tuyến tính để dự đoán chính xác thời điểm vỡ."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 137,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.7",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.7",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 158,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Sóng dọc trên dây",
+          "Lý do và cách tạo",
+          "Sóng ngang trong thanh thép",
+          "Lý do và cách tạo"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ đủ cả hai câu hỏi và cách kích thích. Dây đàn hồi truyền biến dạng dọc, thanh truyền sóng uốn ngang. Không áp công thức dây mềm căng cho thanh thép."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 158,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.8",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.8",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 181,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "So tốc độ truyền với tốc độ phần tử",
+          "Giải thích khác nhau",
+          "Đại lượng không đổi"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Đạo hàm theo thời gian của cos(kx-omega t) có dấu dương trước sin. Phân biệt tốc độ pha hằng với vận tốc phần tử đổi dấu. Trong miền độ dốc nhỏ, tốc độ phần tử cực đại nhỏ hơn tốc độ pha. Câu điều kiện các độ lớn có thể trùng nhau không khẳng định sự trùng nhau trong miền nhỏ đó."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 181,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.9",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.9",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 218,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Dây dày hay mảnh truyền nhanh",
+          "Lý do",
+          "So tần số cơ bản"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Dây có khối lượng riêng dài nhỏ hơn truyền nhanh hơn và có tần số cơ bản cao hơn khi cùng chiều dài, lực căng. Bản thảo nêu vật liệu/cấu tạo có thể làm đường kính không đủ quyết định."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 218,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.10",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.10",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 243,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Vì sao công suất trung bình không bằng không"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Công suất có dấu P=-F yx yt. Với sóng chạy +x, tích thành sin² nên không triệt tiêu trung bình. Đã thử cả hai chiều truyền và quan hệ P=±v(uK+uU)."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 243,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.11",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.11",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 278,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Tốc độ",
+          "Tần số",
+          "Bước sóng",
+          "Lý do vật lý từng đại lượng"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Tốc độ và bước sóng đổi, tần số giữ. Phân biệt thành phần truyền qua với phản xạ và dùng liên tục chuyển động tại điểm nối."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 278,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.12",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.12",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 300,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Tốc độ có đổi",
+          "Tăng hay giảm",
+          "Giải thích"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Tọa độ từ dưới lên cho F=mu gz và v=sqrt(gz), tốc độ tăng khi đi lên. Bản thảo giải thích giới hạn lực căng bằng không tại đúng đầu tự do."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 300,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.13",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.13",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 331,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Cơ chế truyền năng lượng dọc dây khi vật chất dao động ngang"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Công qua lực căng giữa hai đoạn giải thích được hướng dòng năng lượng. Không đòi vật chất di chuyển từ nguồn tới đầu thu. Công thức công suất và cách đọc đạo hàm đúng."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 331,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.14",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.14",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 358,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Vì sao không có truyền năng lượng qua nút"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Nút có yt=0 mọi lúc, nên công suất tức thời tại nút bằng không. Tại điểm trong bó, công suất có thể khác không và đổi dấu, còn trung bình chu kỳ bằng không. Đã kiểm bảo toàn năng lượng cục bộ và năng lượng một bó."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 358,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.15",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.15",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 385,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Cùng f, biên độ khác",
+          "Giải thích",
+          "Cùng biên độ, f khác",
+          "Giải thích"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Đúng khi hiểu sóng dừng thuần túy có nút cố định. Biên độ nhỏ nhất |A1-A2| khác không khi biên độ khác. Tần số khác không duy trì triệt tiêu ở một điểm cho mọi thời gian."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 385,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.16",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.16",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 418,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Thay đổi tần số khi dãn",
+          "Gợi ý thử quan sát",
+          "Đối chiếu (15.35)",
+          "Giải thích"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Không bịa kết quả thí nghiệm. Cho phép L, F và mu cùng đổi, dùng m cố định. Ví dụ Hooke có f1²=K(1-L0/L)/(4m) tăng theo L. Giữ giới hạn cần quan hệ vật liệu thật để kết luận tổng quát."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 418,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.17",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.17",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 457,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Một quãng tám",
+          "Hai quãng tám",
+          "Giải thích",
+          "Nguy hiểm khi thử"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ đủ bốn ý. Tỷ số lực 4 và 16 đúng khi L, mu giữ nguyên. Nêu dây/cấu kiện có thể hỏng thay vì cho rằng công thức bảo đảm an toàn cơ học."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 457,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.18",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.18",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 492,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Vì sao chạm giữa dây tạo âm cao một quãng tám"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Dạng cơ bản và họa âm lẻ có bụng giữa bị cản, họa âm chẵn có nút giữa được giữ. Tần số thấp nhất còn phù hợp là 2f1. Không coi âm thực chỉ chứa duy nhất họa âm thứ hai."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 492,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.19",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.19",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 517,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Bảo vệ nút chuyển vị dọc và bụng chuyển vị ngang tại tường"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giải thích rõ dọc/ngang so với hướng truyền sóng tới. Điều kiện không xuyên tường tạo nút chuyển vị pháp tuyến, phản xạ gần toàn phần tạo bụng lên xuống. Không nhầm nút mọi thành phần."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 517,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.20",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.20",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 538,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Giải thích kích thước violin/cello/contrabass từ tần số"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "f1=v/(2L) giải thích xu hướng dây dài cho âm thấp khi giữ v. Bản thảo nêu F, mu còn ảnh hưởng và không gán toàn bộ khác biệt nhạc cụ cho chiều dài."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 538,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q15.21",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q15.21",
+        "file": "parent-10-cau-hoi-thao-luan.md",
+        "line": 563,
+        "source_pdf_pages": [
+          513
+        ],
+        "source_printed_pages": [
+          493
+        ],
+        "required_parts": [
+          "Chức năng phím guitar",
+          "Giải thích theo tần số"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Phím đặt đầu mới của đoạn tự do tới ngựa đàn, giảm L hiệu dụng làm tăng f gần tỷ lệ nghịch. Giữ gần đúng tốc độ không đổi."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md",
+      "line": 563,
+      "sha256": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.1",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.1",
+        "source_pdf_page_1based": 513,
+        "source_printed_page": 493,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 5,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Wavelength and milliseconds per vibration",
+          "b: Wavelength one octave higher"
+        ],
+        "source_data_and_constraints_read": "344 m/s at 20 C; 784 Hz, G5; octave doubles frequency",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "lambda=v/f; T=1/f; f_octave=2f",
+        "inputs_with_units": {
+          "v_m_s": 344,
+          "f_Hz": 784
+        },
+        "results_with_units": {
+          "lambda_m": 0.4387755102040816,
+          "T_ms": 1.2755102040816326,
+          "lambda_octave_m": 0.2193877551020408
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 5,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.2",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.2",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 39,
+        "difficulty": "•",
+        "tags": [
+          "BIO"
+        ],
+        "source_subparts": [
+          "Minimum frequency for detailed scan"
+        ],
+        "source_data_and_constraints_read": "1500 m/s tissue; wavelength at most 1.0 mm; ultrasound above about 20000 Hz",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "lambda<=lambda_max implies f>=v/lambda_max",
+        "inputs_with_units": {
+          "v_m_s": 1500,
+          "lambda_max_m": 0.001
+        },
+        "results_with_units": {
+          "f_min_Hz": 1500000.0
+        },
+        "assertions_passed": 1,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 39,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.3",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.3",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 61,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "Speed in m/s and km/h",
+          "Interpret relation to devastation"
+        ],
+        "source_data_and_constraints_read": "2004-12-26 Sumatra; >200000 killed; 800 km crest spacing; 1.0 h period",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "v=lambda/T; destructive effects also need amplitude/energy/coastal transformation",
+        "inputs_with_units": {
+          "lambda_m": 800000.0,
+          "T_s": 3600
+        },
+        "results_with_units": {
+          "v_m_s": 222.22222222222223,
+          "v_km_h": 800
+        },
+        "assertions_passed": 2,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 61,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.4",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.4",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 89,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Wave speed",
+          "b: Amplitude",
+          "c: New vertical distance, other data unchanged"
+        ],
+        "source_data_and_constraints_read": "Highest-to-lowest 2.5 s and 0.53 m; 4.8 m crest spacing; repeat with 0.30 m",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "T=2dt; A=peak-to-trough/2; v=lambda/T",
+        "inputs_with_units": {
+          "half_period_s": 2.5,
+          "peak_trough_m": 0.53,
+          "lambda_m": 4.8,
+          "new_peak_trough_m": 0.3
+        },
+        "results_with_units": {
+          "T_s": 5,
+          "v_m_s": 0.96,
+          "A_m": 0.265,
+          "new_A_m": 0.15
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 89,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.5",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.5",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 121,
+        "difficulty": "•",
+        "tags": [
+          "BIO"
+        ],
+        "source_subparts": [
+          "a: Audible wavelengths",
+          "b: Visible frequencies",
+          "c: Surgery ultrasound wavelength in air",
+          "d: Same sound in body fluid"
+        ],
+        "source_data_and_constraints_read": "20–20000 Hz; 380–750 nm; Cavitron 23 kHz; fluid speed 1480 m/s",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "frequency reverses interval endpoints under lambda=v/f",
+        "inputs_with_units": {
+          "v_air_m_s": 344,
+          "v_fluid_m_s": 1480,
+          "c_m_s": 300000000.0,
+          "audible_Hz": [
+            20,
+            20000
+          ],
+          "visible_lambda_m": [
+            3.8e-07,
+            7.5e-07
+          ],
+          "ultrasound_Hz": 23000
+        },
+        "results_with_units": {
+          "lambda_air_m": [
+            0.0172,
+            17.2
+          ],
+          "visible_f_Hz": [
+            400000000000000.0,
+            789473684210526.2
+          ],
+          "lambda_surgery_air_m": 0.014956521739130434,
+          "lambda_surgery_fluid_m": 0.06434782608695652
+        },
+        "assertions_passed": 6,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 121,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.6",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.6",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 169,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "Maximum vertical force of string on bead"
+        ],
+        "source_data_and_constraints_read": "4.00 g; A=0.800 cm; f=20.0 Hz; horizontal string; bead does not alter wave",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "F_string,y - mg = m a_y; upward peak at y=-A",
+        "inputs_with_units": {
+          "m_kg": 0.004,
+          "A_m": 0.008,
+          "f_Hz": 20,
+          "g_m_s2": 9.8
+        },
+        "results_with_units": {
+          "a_max_m_s2": 126.33093633394378,
+          "net_force_amplitude_N": 0.5053237453357752,
+          "F_string_y_max_N": 0.5445237453357752,
+          "F_string_y_min_N": -0.46612374533577516
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 169,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.7",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.7",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 197,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: f, T, k",
+          "b: Wave function",
+          "c: y at x=.360 m,t=.150 s",
+          "d: Wait until next upward maximum"
+        ],
+        "source_data_and_constraints_read": "v=8.00 m/s; A=.0700 m; lambda=.320 m; -x; initial origin at upper maximum",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "negative-x wave cos(kx+omega t), initial cos phase 0; next maximum advances to 10pi",
+        "inputs_with_units": {
+          "v_m_s": 8,
+          "A_m": 0.07,
+          "lambda_m": 0.32,
+          "x_m": 0.36,
+          "t_s": 0.15
+        },
+        "results_with_units": {
+          "f_Hz": 25,
+          "T_s": 0.04,
+          "k_rad_m": 19.634954084936208,
+          "phase_rad": 30.630528372500486,
+          "y_m": 0.04949747468305841,
+          "wait_s": 0.004999999999999983,
+          "signed_phase_speed_m_s": -8.0
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 197,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.8",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.8",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 255,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: A",
+          "b: lambda",
+          "c: f",
+          "d: v",
+          "e: Direction"
+        ],
+        "source_data_and_constraints_read": "6.50 mm cos 2pi[x/(28.0 cm)-t/(.0360 s)]",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "cos 2pi(x/lambda-t/T), positive phase speed",
+        "inputs_with_units": {
+          "A_m": 0.0065,
+          "lambda_m": 0.28,
+          "T_s": 0.036
+        },
+        "results_with_units": {
+          "A_mm": 6.5,
+          "lambda_m": 0.28,
+          "f_Hz": 27.77777777777778,
+          "v_m_s": 7.7777777777777795,
+          "direction": "+x"
+        },
+        "assertions_passed": 2,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 255,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.9",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.9",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 293,
+        "difficulty": "•",
+        "tags": [
+          "CALC"
+        ],
+        "source_subparts": [
+          "a: Cos phase wave PDE",
+          "b: Sin phase wave PDE",
+          "c: Separable cosine sum PDE",
+          "d: vy and ay for b"
+        ],
+        "source_data_and_constraints_read": "cos(kx+omega t), sin(kx+omega t), cos kx + cos omega t; second-derivative wave equation",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "five-point second derivatives verify wave equation for sin/cos of one phase, reject separable sum; time derivative signs tested",
+        "inputs_with_units": {
+          "nondegenerate_test_A": 0.7,
+          "k_rad_m": 1.7,
+          "omega_rad_s": 2.3
+        },
+        "results_with_units": {
+          "wave_equation_residuals": [
+            1.0869089482612448e-10,
+            1.7249757178205982e-10,
+            -1.0866356927563796
+          ],
+          "vy_numeric": 0.010942001898994745,
+          "vy_analytic": 0.010942001904046301,
+          "ay_analytic": -3.7029144794369757
+        },
+        "assertions_passed": 5,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 293,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.10",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.10",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 351,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Pattern time and crest travel distance",
+          "b: Wave number and cycles per second",
+          "c: Crest speed and maximum bobbing speed"
+        ],
+        "source_data_and_constraints_read": "A=2.75 cm, k=.410 rad/cm, omega=6.20 rad/s, positive time phase",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "positive time phase gives negative-x propagation; crest speed omega/k, floater speed omega*A",
+        "inputs_with_units": {
+          "A_m": 0.0275,
+          "k_rad_m": 41,
+          "omega_rad_s": 6.2
+        },
+        "results_with_units": {
+          "T_s": 1.0134169850289656,
+          "lambda_m": 0.15324842212633139,
+          "f_Hz": 0.9867606471697512,
+          "v_m_s": 0.15121951219512195,
+          "vymax_m_s": 0.1705,
+          "direction": "-x"
+        },
+        "assertions_passed": 5,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 351,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.11",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.11",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 406,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: A",
+          "b: T",
+          "c: lambda/v for +x with separation<lambda",
+          "d: lambda/v for -x",
+          "e: Uniqueness if separation constraint removed"
+        ],
+        "source_data_and_constraints_read": "E15.11; x=0 and .0900 m; pink origin, blue right point; complete source graph labels retained",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "source graph read directly: phase delay .025s to right, .015s to left, choose delays<T; additional periods cause nonuniqueness",
+        "inputs_with_units": {
+          "dx_m": 0.09,
+          "A_mm": 4,
+          "T_s": 0.04,
+          "origin_peak_s": 0.01,
+          "right_peak_s": 0.035
+        },
+        "results_with_units": {
+          "v_right_m_s": 3.5999999999999996,
+          "lambda_right_m": 0.144,
+          "v_left_m_s": 6.0,
+          "lambda_left_m": 0.24,
+          "right_family_m": [
+            0.144,
+            0.05538461538461538,
+            0.03428571428571428,
+            0.024827586206896554
+          ],
+          "left_family_m": [
+            0.24,
+            0.06545454545454545,
+            0.03789473684210526,
+            0.026666666666666665
+          ]
+        },
+        "assertions_passed": 5,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [
+          "E15.11"
+        ],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 406,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-e15-11.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.12",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.12",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 454,
+        "difficulty": "••",
+        "tags": [
+          "CALC"
+        ],
+        "source_subparts": [
+          "a: Derive cos[2pi(x-vt)/lambda]",
+          "b: Transverse velocity",
+          "c: Max particle speed and comparison to v"
+        ],
+        "source_data_and_constraints_read": "Traveling sinusoid; identify particle speed separately from propagation speed",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "omega=kv; vy=kAv sin(k(x-vt)); max speed / wave speed=kA",
+        "inputs_with_units": {
+          "symbolic_case_lambda_m": 1.7,
+          "v_m_s": 3.1,
+          "A_m": 0.19
+        },
+        "results_with_units": {
+          "vy_numeric": -1.9037769185915874,
+          "vy_analytic": -1.9037769227538914,
+          "ratios_for_A_lambda_over_2pi_times_0.5_1_2": [
+            0.5,
+            1,
+            2
+          ],
+          "small_slope_condition": "2pi A/lambda << 1"
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 454,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.13",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.13",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 496,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Nine samples and graph at t=0",
+          "b: Nine samples and graphs at .400/.800 s; direction"
+        ],
+        "source_data_and_constraints_read": "A=.300 cm, lambda=12.0 cm, v=6.00 cm/s; positive-x form from 15.12; x step1.5 cm",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "cos 2pi(x-vt)/lambda; all nine requested samples independently evaluated",
+        "inputs_with_units": {
+          "A_cm": 0.3,
+          "lambda_cm": 12,
+          "v_cm_s": 6,
+          "times_s": [
+            0,
+            0.4,
+            0.8
+          ],
+          "x_cm": [
+            0.0,
+            1.5,
+            3.0,
+            4.5,
+            6.0,
+            7.5,
+            9.0,
+            10.5,
+            12.0
+          ]
+        },
+        "results_with_units": {
+          "y_cm_by_time": [
+            [
+              0.3,
+              0.21213203435596426,
+              1.8369701987210297e-17,
+              -0.21213203435596423,
+              -0.3,
+              -0.21213203435596437,
+              -5.510910596163089e-17,
+              0.2121320343559642,
+              0.3
+            ],
+            [
+              0.09270509831248418,
+              0.26730195725651035,
+              0.2853169548885461,
+              0.1361971499218641,
+              -0.09270509831248414,
+              -0.26730195725651024,
+              -0.2853169548885461,
+              -0.13619714992186407,
+              0.09270509831248416
+            ],
+            [
+              -0.2427050983124843,
+              -0.04693033951206931,
+              0.17633557568774183,
+              0.29630650217854126,
+              0.24270509831248427,
+              0.04693033951206934,
+              -0.1763355756877418,
+              -0.29630650217854126,
+              -0.24270509831248432
+            ]
+          ],
+          "translations_cm": [
+            0,
+            2.4,
+            4.8
+          ],
+          "direction": "+x"
+        },
+        "assertions_passed": 28,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 496,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-13.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.14",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.14",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 546,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "Tension factor for octave",
+          "Assess practical suitability"
+        ],
+        "source_data_and_constraints_read": "Fundamental frequency doubles, same guitar string; approximate fixed L and mu",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "f1=(1/2L)sqrt(F/mu), fixed L and mu; force scales as f squared",
+        "inputs_with_units": {
+          "frequency_ratio": 2
+        },
+        "results_with_units": {
+          "tension_ratio": 4,
+          "limits": "Large stretch invalidates fixed L/mu assumption; increased load can break string/damage instrument"
+        },
+        "assertions_passed": 1,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 576,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.15",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.15",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 568,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Wave speed",
+          "b: lambda",
+          "c: Repeat with doubled hanging mass"
+        ],
+        "source_data_and_constraints_read": "120 Hz fork; ideal pulley; 1.50 kg then 3.00 kg; mu=.0480 kg/m",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "ideal pulley and equilibrium mass give F=mg; source frequency fixed",
+        "inputs_with_units": {
+          "f_Hz": 120,
+          "m_kg": [
+            1.5,
+            3
+          ],
+          "mu_kg_m": 0.048
+        },
+        "results_with_units": {
+          "v_m_s": [
+            17.5,
+            24.748737341529164
+          ],
+          "lambda_m": [
+            0.14583333333333334,
+            0.20623947784607638
+          ],
+          "ratio": 1.4142135623730951
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 598,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.16",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.16",
+        "source_pdf_page_1based": 514,
+        "source_printed_page": 494,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 602,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "Required tension"
+        ],
+        "source_data_and_constraints_read": "L=2.50 m,m=.120 kg,f=40.0 Hz,lambda=.750 m",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "mu=m/L; v=f lambda; F=mu v squared",
+        "inputs_with_units": {
+          "m_kg": 0.12,
+          "L_m": 2.5,
+          "f_Hz": 40,
+          "lambda_m": 0.75
+        },
+        "results_with_units": {
+          "mu_kg_m": 0.048,
+          "v_m_s": 30.0,
+          "F_N": 43.2
+        },
+        "assertions_passed": 1,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 632,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.17",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.17",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 622,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "Mass of vertically suspended steel wire"
+        ],
+        "source_data_and_constraints_read": "L=3.8 m, bottom load=54 kg, transverse pulse transit .049 s; no explicit neglect of wire weight",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "F(z)=g(M+mu z); integrate dt=sqrt(mu/F)dz then solve independently by bisection; Simpson quadrature confirms",
+        "inputs_with_units": {
+          "L_m": 3.8,
+          "load_M_kg": 54,
+          "transit_s": 0.049,
+          "g_m_s2": 9.8
+        },
+        "results_with_units": {
+          "mass_constant_tension_kg": 0.33437084210526324,
+          "mass_self_weight_kg": 0.3354084718061876,
+          "mass_difference_kg": 0.0010376297009243585,
+          "relative_wire_mass": 0.006211267996410881,
+          "transit_quadrature_s": 0.04900000000000006
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 652,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.18",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.18",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 666,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Transit time",
+          "b: Supported weight W",
+          "c: Wavelength count",
+          "d: Downward wave equation"
+        ],
+        "source_data_and_constraints_read": "L=1.50 m, wire weight=.0125 N, A=8.50 mm,k=172 rad/m,omega=4830 rad/s; neglect tension variation and F=W",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "positive x upward from given upgoing phase; down wave uses +omega t and arbitrary initial phase; force from mu v squared",
+        "inputs_with_units": {
+          "L_m": 1.5,
+          "wire_weight_N": 0.0125,
+          "A_m": 0.0085,
+          "k_rad_m": 172,
+          "omega_rad_s": 4830
+        },
+        "results_with_units": {
+          "v_m_s": 28.08139534883721,
+          "transit_s": 0.05341614906832298,
+          "mu_kg_m": 0.0008503401360544217,
+          "W_N": 0.6705482693347755,
+          "wavelength_count": 41.061975317709,
+          "downward_phase_speed_m_s": -28.08139534883721
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 696,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.19",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.19",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 718,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Tension",
+          "b: Speed"
+        ],
+        "source_data_and_constraints_read": "L=75.0 cm,m=16.5 g,lambda=3.33 cm,f=625 Hz; adjustable screw",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "v=f lambda, F=(m/L) v squared",
+        "inputs_with_units": {
+          "L_m": 0.75,
+          "m_kg": 0.0165,
+          "lambda_m": 0.0333,
+          "f_Hz": 625
+        },
+        "results_with_units": {
+          "v_m_s": 20.812500000000004,
+          "F_N": 9.529523437500005
+        },
+        "assertions_passed": 2,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 748,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.20",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.20",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 746,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Bottom speed",
+          "b: Middle speed",
+          "c: Top speed",
+          "d: Compare middle tension and speed with endpoint averages"
+        ],
+        "source_data_and_constraints_read": "L=6.00 m,wire weight=29.4 N,bottom mass=.500 kg; vertical",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "local tension supports load plus wire below; tension linear, speed sqrt(tension)",
+        "inputs_with_units": {
+          "L_m": 6,
+          "wire_weight_N": 29.4,
+          "load_kg": 0.5
+        },
+        "results_with_units": {
+          "mu_kg_m": 0.49999999999999994,
+          "F_bottom_mid_top_N": [
+            4.9,
+            19.6,
+            34.3
+          ],
+          "v_bottom_mid_top_m_s": [
+            3.130495168499706,
+            6.260990336999412,
+            8.282511696339464
+          ],
+          "mean_end_speed_m_s": 5.706503432419585
+        },
+        "assertions_passed": 5,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 776,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.21",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.21",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 780,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Estimate mean power ignoring reflection",
+          "b: Halve amplitude and double frequency"
+        ],
+        "source_data_and_constraints_read": "mu=.500 kg/m; estimate A from arm length, max horizontal pull and cycle time; reference power about1W",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "explicit estimates; no reflection; Pavg=1/2 mu v omega squared A squared; comparison at fixed tension",
+        "inputs_with_units": {
+          "chosen_A_m": 0.6,
+          "chosen_F_N": 100,
+          "chosen_T_s": 1,
+          "given_mu_kg_m": 0.5
+        },
+        "results_with_units": {
+          "v_m_s": 14.142135623730951,
+          "P_W": 50.24782223739993,
+          "P_ratio_halved_A_doubled_f": 1.0,
+          "maximum_slope": 0.26657297628950194
+        },
+        "assertions_passed": 2,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 810,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.22",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.22",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 820,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Mean wave power",
+          "b: Power if A halved"
+        ],
+        "source_data_and_constraints_read": "m=3.00 g,L=80.0 cm,F=25.0 N,f=120.0 Hz,A=1.6 mm",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "traveling-wave average power, amplitude squared",
+        "inputs_with_units": {
+          "m_kg": 0.003,
+          "L_m": 0.8,
+          "F_N": 25,
+          "f_Hz": 120,
+          "A_m": 0.0016
+        },
+        "results_with_units": {
+          "mu_kg_m": 0.00375,
+          "v_m_s": 81.64965809277261,
+          "P_W": 0.22280135957725677,
+          "P_halved_A_W": 0.055700339894314194
+        },
+        "assertions_passed": 2,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 850,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.23",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.23",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 848,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "Required amplitude for target mean power"
+        ],
+        "source_data_and_constraints_read": "F=94.0 N,v=406 m/s,f=69.0 Hz,P=.365 W",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "eliminate mu=F/v squared, solve positive A=sqrt(2vP/(F omega squared))",
+        "inputs_with_units": {
+          "F_N": 94,
+          "v_m_s": 406,
+          "f_Hz": 69,
+          "P_W": 0.365
+        },
+        "results_with_units": {
+          "A_m": 0.004095732279789518
+        },
+        "assertions_passed": 1,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 878,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.24",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.24",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 876,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "How much closer can observer move to stated threshold"
+        ],
+        "source_data_and_constraints_read": "Isotropic point source, ignore reflection; r=7.5 m,I=.11 W/m2,threshold1.0 W/m2",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "isotropic steady source Ir squared fixed; requested approach distance is r0-rthreshold",
+        "inputs_with_units": {
+          "r0_m": 7.5,
+          "I0_W_m2": 0.11,
+          "Ithreshold_W_m2": 1
+        },
+        "results_with_units": {
+          "rthreshold_m": 2.48746859276655,
+          "approach_m": 5.01253140723345
+        },
+        "assertions_passed": 2,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 906,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.25",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.25",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 904,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Closest housing distance",
+          "b: Intensity at twice that distance",
+          "c: Sound power"
+        ],
+        "source_data_and_constraints_read": "Point source; 10.0 W/m2 at30.0m; target 1.0 microW/m2 verified visually, not OCR mW",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "direct PDF image says microW/m2, extraction font misreads mu as m; inverse square; P=4pi r squared I",
+        "inputs_with_units": {
+          "I0_W_m2": 10,
+          "r0_m": 30,
+          "Itarget_W_m2": 1e-06
+        },
+        "results_with_units": {
+          "r_m": 94868.32980505138,
+          "I_twice_r_W_m2": 2.5e-07,
+          "P_W": 113097.33552923254
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 934,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.26",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.26",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 948,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: A",
+          "b: f",
+          "c: lambda",
+          "d: v",
+          "e: Direction",
+          "f: Tension",
+          "g: Mean power"
+        ],
+        "source_data_and_constraints_read": "A=2.30 mm,k=6.98 rad/m,omega=742 rad/s; positive time phase; L=1.35m,m=.00338kg",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "positive time phase gives -x; v=omega/k; F=mu v squared; P average traveling wave",
+        "inputs_with_units": {
+          "A_m": 0.0023,
+          "k_rad_m": 6.98,
+          "omega_rad_s": 742,
+          "L_m": 1.35,
+          "m_kg": 0.00338
+        },
+        "results_with_units": {
+          "f_Hz": 118.09296777418635,
+          "lambda_m": 0.9001698147821756,
+          "v_m_s": 106.30372492836676,
+          "mu_kg_m": 0.0025037037037037037,
+          "F_N": 28.29305847090594,
+          "P_W": 0.38758316189841874,
+          "direction": "-x"
+        },
+        "assertions_passed": 5,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 978,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.27",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.27",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 990,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Intensity at3.1m",
+          "b: Energy emitted in1h at constant power"
+        ],
+        "source_data_and_constraints_read": "Isotropic point source; I=.026 W/m2 at4.3m",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "Ir squared constant; P=4pi r squared I; E=P dt",
+        "inputs_with_units": {
+          "I_W_m2": 0.026,
+          "r_m": 4.3,
+          "new_r_m": 3.1,
+          "dt_s": 3600
+        },
+        "results_with_units": {
+          "I_new_W_m2": 0.050024973985431834,
+          "P_W": 6.041157009147027,
+          "E_J": 21748.1652329293
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1020,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.28",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.28",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1032,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Seven total-wave sketches for fixed end",
+          "b: Same seven times for free end"
+        ],
+        "source_data_and_constraints_read": "E15.28; triangle height4.0mm,each half4.0mm,leading gap8.0mm,v40cm/s,+x; times15,20,25,30,35,40,45ms",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "incident triangle center -12+400t; image center +12-400t; subtract at fixed end x=0 and add at free end, physical x<=0",
+        "inputs_with_units": {
+          "height_mm": 4,
+          "half_width_mm": 4,
+          "leading_gap_mm": 8,
+          "v_mm_s": 400,
+          "times_s": [
+            0.015,
+            0.02,
+            0.025,
+            0.03,
+            0.035,
+            0.04,
+            0.045
+          ]
+        },
+        "results_with_units": {
+          "reflection_start_s": 0.02,
+          "peak_arrival_s": 0.03,
+          "reflection_end_s": 0.04,
+          "fixed_endpoint_mm": [
+            0,
+            0,
+            0.0,
+            0.0,
+            0.0,
+            0,
+            0
+          ],
+          "free_endpoint_mm": [
+            0,
+            0,
+            4.0,
+            8.0,
+            3.9999999999999964,
+            0,
+            0
+          ]
+        },
+        "assertions_passed": 12,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [
+          "E15.28"
+        ],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1062,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-e15-28.png",
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-28-fixed.svg",
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-28-free.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.29",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.29",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1082,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Seven total-wave sketches for fixed end",
+          "b: Same seven times for free end"
+        ],
+        "source_data_and_constraints_read": "E15.29; rectangle height5.0mm,width2.0cm,gap1.0cm,v5.0m/s,-x; times1,2,3,4,5,6,7ms",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "incident rectangle moves left, reflected image moves right; physical x>=0; ideal discontinuities use one-sided limits and fixed endpoint dot",
+        "inputs_with_units": {
+          "height_mm": 5,
+          "width_mm": 20,
+          "gap_mm": 10,
+          "v_mm_s": 5000,
+          "times_s": [
+            0.001,
+            0.002,
+            0.003,
+            0.004,
+            0.005,
+            0.006,
+            0.007
+          ]
+        },
+        "results_with_units": {
+          "reflection_start_s": 0.002,
+          "reflection_end_s": 0.006,
+          "fixed_endpoint_mm": [
+            0.0,
+            0.0,
+            0,
+            0,
+            0,
+            0.0,
+            0.0
+          ],
+          "free_endpoint_mm": [
+            0.0,
+            0.0,
+            10,
+            10,
+            10,
+            0.0,
+            0.0
+          ]
+        },
+        "assertions_passed": 12,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [
+          "E15.29"
+        ],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1112,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-e15-29.png",
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-29-fixed.svg",
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-29-free.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.30",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.30",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1126,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "Five total-wave sketches at .250,.500,.750,1.000,1.250s"
+        ],
+        "source_data_and_constraints_read": "E15.30; identical positive triangles height1cm,width2cm,gap1cm; each2cm/s in opposite directions",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "independent triangles move rigidly through each other, then sum signed displacement",
+        "inputs_with_units": {
+          "height_cm": 1,
+          "width_cm": 2,
+          "leading_gap_cm": 1,
+          "v_each_cm_s": 2,
+          "times_s": [
+            0.25,
+            0.5,
+            0.75,
+            1,
+            1.25
+          ]
+        },
+        "results_with_units": {
+          "centers_cm": [
+            [
+              -1.0,
+              1.0
+            ],
+            [
+              -0.5,
+              0.5
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.5,
+              -0.5
+            ],
+            [
+              1.0,
+              -1.0
+            ]
+          ],
+          "max_y_cm": [
+            1.0,
+            1.0,
+            2.0,
+            1.0,
+            1.0
+          ]
+        },
+        "assertions_passed": 6,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [
+          "E15.30"
+        ],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1156,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-e15-30.png",
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-30.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.31",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.31",
+        "source_pdf_page_1based": 515,
+        "source_printed_page": 495,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1166,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "Repeat all five sketches from15.30 with negative left-moving pulse"
+        ],
+        "source_data_and_constraints_read": "Only left-traveling pulse changes sign; same dimensions, velocity and times from15.30",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "change only sign of left-moving pulse; complete displacement cancellation at .75s, nonzero velocity allowed",
+        "inputs_with_units": {
+          "same_geometry_as": "15.30",
+          "negative_pulse_direction": "left"
+        },
+        "results_with_units": {
+          "max_abs_y_cm": [
+            1.0,
+            1.0,
+            0,
+            1.0,
+            1.0
+          ],
+          "final_right_peak_sign": 1.0,
+          "final_left_peak_sign": -1.0
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [
+          "E15.30"
+        ],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1196,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-31.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.32",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.32",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1192,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "Sketch total wave at4.00,6.00,10.0s"
+        ],
+        "source_data_and_constraints_read": "E15.32; each1.00mm/s; +3mm and -4mm heights,both4mm wide,gap8mm; both directions retained",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "translate each support independently; sum signed heights in overlap",
+        "inputs_with_units": {
+          "positive_height_mm": 3,
+          "negative_height_mm": -4,
+          "both_width_mm": 4,
+          "leading_gap_mm": 8,
+          "v_each_mm_s": 1,
+          "times_s": [
+            4,
+            6,
+            10
+          ]
+        },
+        "results_with_units": {
+          "supports_mm": [
+            [
+              [
+                0,
+                4
+              ],
+              [
+                4,
+                8
+              ]
+            ],
+            [
+              [
+                2,
+                6
+              ],
+              [
+                2,
+                6
+              ]
+            ],
+            [
+              [
+                6,
+                10
+              ],
+              [
+                -2,
+                2
+              ]
+            ]
+          ],
+          "full_overlap_height_mm": -1,
+          "final_positive_height_mm": 3.0,
+          "final_negative_height_mm": -4.0
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [
+          "E15.32"
+        ],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1222,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-e15-32.png",
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-32.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.33",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.33",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1226,
+        "difficulty": "••",
+        "tags": [],
+        "source_subparts": [
+          "a: Estimate violin free length, infer speed for E5",
+          "b: Air wavelength and comparison",
+          "c: Repeat for bass G2"
+        ],
+        "source_data_and_constraints_read": "659Hz open E5; air344m/s; bass98Hz G2; lengths are requested estimates",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "fundamental string lambda=2L, v=2Lf; radiated air wave has same f but air speed; comparisons conditional on chosen lengths",
+        "inputs_with_units": {
+          "chosen_violin_L_m": 0.33,
+          "violin_f_Hz": 659,
+          "chosen_bass_L_m": 1.1,
+          "bass_f_Hz": 98,
+          "air_v_m_s": 344
+        },
+        "results_with_units": {
+          "violin_lambda_string_m": 0.66,
+          "violin_v_m_s": 434.94,
+          "violin_air_lambda_m": 0.5220030349013657,
+          "bass_lambda_string_m": 2.2,
+          "bass_v_m_s": 215.60000000000002,
+          "bass_air_lambda_m": 3.510204081632653
+        },
+        "assertions_passed": 6,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1262,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.34",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.34",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1283,
+        "difficulty": "••",
+        "tags": [
+          "CALC"
+        ],
+        "source_subparts": [
+          "a: Adjacent node spacing",
+          "b: Running lambda,A,v",
+          "c: Max and min speed at antinode",
+          "d: Minimum node-antinode distance"
+        ],
+        "source_data_and_constraints_read": "Adjacent antinodes15.0cm; antinode A=.850cm,T=.0750s; +x string,fixed x=0",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "node-node and antinode-antinode spacing lambda/2; component A=antinode A/2; particle SHM min speed 0",
+        "inputs_with_units": {
+          "antinode_spacing_m": 0.15,
+          "antinode_A_m": 0.0085,
+          "T_s": 0.075
+        },
+        "results_with_units": {
+          "node_spacing_m": 0.15,
+          "lambda_m": 0.3,
+          "running_A_m": 0.00425,
+          "wave_v_m_s": 4.0,
+          "particle_vmax_m_s": 0.7120943348136864,
+          "particle_vmin_m_s": 0,
+          "node_antinode_min_m": 0.075
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1319,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.35",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.35",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1327,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Node distances from left end",
+          "b: Antinode distances from left end"
+        ],
+        "source_data_and_constraints_read": "Asw=2.50mm,omega942rad/s,k=.750pi rad/m; y=Asw sin kx sin omega t; left endx=0; no length",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "nodes sin(kx)=0; antinodes abs(sin(kx))=1; no right endpoint length given",
+        "inputs_with_units": {
+          "Asw_m": 0.0025,
+          "k_rad_m": 2.356194490192345,
+          "omega_rad_s": 942
+        },
+        "results_with_units": {
+          "first_nodes_m": [
+            0.0,
+            1.3333333333333333,
+            2.6666666666666665,
+            4.0
+          ],
+          "first_antinodes_m": [
+            0.6666666666666666,
+            2.0,
+            3.3333333333333335
+          ],
+          "finite_list_not_determined": true
+        },
+        "assertions_passed": 7,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1363,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.36",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.36",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1363,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Fundamental lambda/f",
+          "b: Second overtone lambda/f",
+          "c: Fourth harmonic lambda/f"
+        ],
+        "source_data_and_constraints_read": "L=1.50m,v=62.0m/s; second overtone means n=3",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "second overtone is third harmonic, not second; lambda_n=2L/n, f_n=n v/(2L)",
+        "inputs_with_units": {
+          "L_m": 1.5,
+          "v_m_s": 62,
+          "harmonic_indices": [
+            1,
+            3,
+            4
+          ]
+        },
+        "results_with_units": {
+          "lambda_m": [
+            3.0,
+            1.0,
+            0.75
+          ],
+          "f_Hz": [
+            20.666666666666668,
+            62.0,
+            82.66666666666667
+          ]
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1399,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.37",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.37",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1387,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Propagation speed",
+          "b: Tension",
+          "c: Maximum transverse velocity and acceleration"
+        ],
+        "source_data_and_constraints_read": "m=40.0g,L=80.0cm,fundamental60.0Hz; antinode A=.300cm",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "fundamental lambda=2L; F=mu v squared; maximum particle quantities occur at antinodes and at distinct phases",
+        "inputs_with_units": {
+          "m_kg": 0.04,
+          "L_m": 0.8,
+          "f_Hz": 60,
+          "antinode_A_m": 0.003
+        },
+        "results_with_units": {
+          "wave_v_m_s": 96.0,
+          "F_N": 460.79999999999995,
+          "particle_vmax_m_s": 1.1309733552923256,
+          "particle_amax_m_s2": 426.3669101270602
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1435,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.38",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.38",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1431,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Fundamental frequency",
+          "b: Highest audible harmonic number"
+        ],
+        "source_data_and_constraints_read": "F=800N,L=.400m,m=3.00g; upper hearing frequency10000Hz",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "fundamental f=v/2L; largest integer n with n f<=10000, evaluate using unrounded f",
+        "inputs_with_units": {
+          "F_N": 800,
+          "m_kg": 0.003,
+          "L_m": 0.4,
+          "audible_max_Hz": 10000
+        },
+        "results_with_units": {
+          "v_m_s": 326.59863237109045,
+          "f1_Hz": 408.24829046386304,
+          "n_max": 24,
+          "f24_Hz": 9797.958971132713,
+          "f25_Hz": 10206.207261596575
+        },
+        "assertions_passed": 3,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1479,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.39",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.39",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1465,
+        "difficulty": "•",
+        "tags": [
+          "CALC"
+        ],
+        "source_subparts": [
+          "a: Standing-wave sketch",
+          "b: Running amplitude",
+          "c: String length",
+          "d: lambda,f,T,v",
+          "e: Maximum transverse speed",
+          "f: Eighth-harmonic equation"
+        ],
+        "source_data_and_constraints_read": "Third harmonic,fixed both ends; Asw5.60cm,k=.0340rad/cm,omega50rad/s; eighth amplitude/phase unspecified",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "kL=3pi; each running amplitude Asw/2; at fixed string/tension harmonic 8 has k8=8k/3 and omega8=8omega/3; B and phase unconstrained",
+        "inputs_with_units": {
+          "Asw_m": 0.056,
+          "k_rad_m": 3.4,
+          "omega_rad_s": 50,
+          "harmonic": 3
+        },
+        "results_with_units": {
+          "component_A_m": 0.028,
+          "L_m": 2.771993517873347,
+          "lambda_m": 1.8479956785822313,
+          "f_Hz": 7.957747154594767,
+          "T_s": 0.12566370614359174,
+          "v_m_s": 14.705882352941178,
+          "particle_vmax_m_s": 2.8000000000000003,
+          "k8_rad_m": 9.066666666666666,
+          "omega8_rad_s": 133.33333333333331,
+          "amplitude_phase_unique": false
+        },
+        "assertions_passed": 12,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [
+          "F01"
+        ],
+        "verdict": "pass_with_minor_label_finding"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1513,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/solution-s15-39.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.40",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "15.40",
+        "source_pdf_page_1based": 516,
+        "source_printed_page": 496,
+        "draft": "qa\\physics1-remaining\\ch15-exercises-early\\proposed-fragments\\parent-11-bai-tap-001-040.md",
+        "draft_line_start": 1553,
+        "difficulty": "•",
+        "tags": [],
+        "source_subparts": [
+          "a: Running amplitude",
+          "b: lambda",
+          "c: f",
+          "d: v",
+          "e: Two running functions",
+          "f: Can harmonic number be determined?"
+        ],
+        "source_data_and_constraints_read": "Asw4.44mm,k32.5rad/m,omega754rad/s; y=Asw sin kx sin omega t; no length",
+        "statement_and_subparts_match": true,
+        "difficulty_and_tags_match": true,
+        "independently_calculated": true,
+        "calculation_model": "2sin a sin b=cos(a-b)-cos(a+b); opposite signs of traveling cosine terms; n needs length/boundary conditions",
+        "inputs_with_units": {
+          "Asw_m": 0.00444,
+          "k_rad_m": 32.5,
+          "omega_rad_s": 754
+        },
+        "results_with_units": {
+          "component_A_m": 0.00222,
+          "lambda_m": 0.1933287786824488,
+          "f_Hz": 120.00282709128909,
+          "v_m_s": 23.2,
+          "decomposition_lhs_m": 0.0030330555107443247,
+          "decomposition_rhs_m": 0.003033055510744327,
+          "harmonic_number_unique": false
+        },
+        "assertions_passed": 4,
+        "single_closed_solution_and_ordered_three_stages": true,
+        "direction_reason_manually_read": true,
+        "source_figure_ids": [],
+        "finding_ids": [],
+        "verdict": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md",
+      "line": 1601,
+      "sha256": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.41",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.41",
+        "source_actual_pdf_pages": [
+          516
+        ],
+        "source_printed_pages": [
+          496
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1,
+        "draft_end_line": 28,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Hai đầu cố định và lực căng giữ không đổi. Âm bồi thứ hai có khoảng nút 8,00 cm. Tìm L và khoảng nút của họa âm4.",
+        "independent_check_result": "n=3, L=24,0 cm, d4=6,00 cm.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass with terminology correction",
+        "notes": "Thuật ngữ vượt âm cần chuẩn hóa."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.42",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.42",
+        "source_actual_pdf_pages": [
+          516
+        ],
+        "source_printed_pages": [
+          496
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 29,
+        "draft_end_line": 68,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "L=75,0 cm, m=8,75 g, vâm=344 m/s. Âm bồi thứ hai phát âm lambda=0,765 m. Giữ giả thiết không vượt ứng suất đứt. Tìm lực căng và tần số cơ bản.",
+        "independent_check_result": "Phân biệt bước sóng trong không khí với trên dây. F≈590 N, f1≈150 Hz.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass with terminology correction",
+        "notes": "Thuật ngữ vượt âm cần chuẩn hóa."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 29,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.43",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.43",
+        "source_actual_pdf_pages": [
+          516
+        ],
+        "source_printed_pages": [
+          496
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 69,
+        "draft_end_line": 107,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Phần tự do dài60,0 cm, khối lượng2,00 g, A4=440 Hz. Tìm khoảng x tính từ cầu đàn cho D5=587 Hz. Cả hai nốt cơ bản. Xét G4=392 Hz khi không chỉnh lại dây và giải thích. Hình E15.43 giữ x và60,0 cm.",
+        "independent_check_result": "x≈45,0 cm. G4 đòi67,3 cm nên bấm dây không đạt.",
+        "figures": [
+          "E15.43"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 69,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-e15-43.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.44",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.44",
+        "source_actual_pdf_pages": [
+          516
+        ],
+        "source_printed_pages": [
+          496
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 108,
+        "draft_end_line": 151,
+        "subparts_or_atomic_requests": [
+          "a.i",
+          "a.ii",
+          "a.iii",
+          "b.i",
+          "b.ii",
+          "b.iii",
+          "c.i",
+          "c.ii",
+          "c.iii"
+        ],
+        "source_data_and_conditions": "Dây ngang hai đầu cố định, mode cơ bản. A là biên độ sóng chạy, không phải biên độ bụng. Ba vị trí lambda/2,lambda/4,lambda/8. Đủ tốc độ, gia tốc, biên độ và thời gian giữa hai biên ở từng điểm.",
+        "independent_check_result": "Hệ số biên độ0,2,sqrt2 lần A. Nút đứng yên nên thời gian giữa hai biên không áp dụng. Hai điểm còn lại T/2.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 107,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.45",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.45",
+        "source_actual_pdf_pages": [
+          516
+        ],
+        "source_printed_pages": [
+          496
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 152,
+        "draft_end_line": 194,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Lambda0,400 m, tốc độ ngang cực đại3,00 m/s, gia tốc ngang cực đại8,50e4 m/s². Tìm v và A.",
+        "independent_check_result": "omega=a/u. v≈1,80e3 m/s, A≈0,106 mm.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 163,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.46",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.46",
+        "source_actual_pdf_pages": [
+          516,
+          517
+        ],
+        "source_printed_pages": [
+          496,
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 195,
+        "draft_end_line": 275,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "source_data_and_conditions": "Hàm0,750 cm cos{pi[(0,400 cm^-1)x+(250 s^-1)t]}. Đủ A,T,f,lambda,v. Vẽ tại0;0,0005;0,0010 s. Chiều truyền, mu0,0500 kg/m, lực căng và công suất.",
+        "independent_check_result": "Đổi k=40pi rad/m. v6,25 m/s sang trái. F1,95 N, P5,42 W. SVG có đủ ba thời điểm và đúng độ dịch.",
+        "figures": [
+          "S15.46"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 206,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/solution-15-46-snapshots.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.47",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.47",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 276,
+        "draft_end_line": 337,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "source_data_and_conditions": "A2,50 mm, lambda1,80 m, v36,0 m/s sang phải, t0 đầu trái tại biên trên. Đủ f,omega,k,hàm y(x,t),y(0,t),y(1,35,t),umax và y,u tại t0,0625 s.",
+        "independent_check_result": "f20 Hz, omega40pi, k10pi/9, y(1,35,t)=-A sin omega t. Cuối cùng y=-2,50 mm,u=0.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 286,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.48",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.48",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 338,
+        "draft_end_line": 390,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Dầm không đồng chất1750 N, hai dây1,25 m mỗi dây nặng0,290 N. Trọng tâm1/3 từ A. Gảy cùng lúc ở dầm, hỏi độ trễ và dây tới trước. Bỏ trọng lượng dây trong lực căng.",
+        "independent_check_result": "FA=2W/3,FB=W/3. A tới trước khoảng2,33 ms.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 348,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.49",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.49",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 391,
+        "draft_end_line": 428,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Thanh nhẹ đồng chất bản lề không ma sát, giữ ngang bởi dây2,00 m tạo30,0 độ. Vật m treo trung điểm. Đồ thị f² theo m có hệ số20,4 kg^-1 s^-2. Tìm khối lượng dây. Bỏ độ đổi chiều dài.",
+        "independent_check_result": "Mômen cho F=(m+mthanh)g. Khối lượng thanh chỉ đổi intercept. mdây≈60,0 g.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 401,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.50",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.50",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 429,
+        "draft_end_line": 476,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Kiến khối lượng m trên dây ngang có mu,F. Sóng ngang bước lambda trong mặt phẳng đứng. Tìm biên độ tối thiểu mất trọng lượng biểu kiến. Kiến không ảnh hưởng sóng.",
+        "independent_check_result": "Nmin=m(g-omega²A). Amin=g mu lambda²/(4pi²F). Khối lượng kiến triệt tiêu, điều kiện tiếp xúc được giải thích.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 439,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.51",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.51",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 477,
+        "draft_end_line": 545,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Đoạn mẫu2,00 cm có14,5 microgam trên ảnh PDF. Vật treo0,400 kg, xung nhỏ mất26,7 ms. Tính L khi bỏ trọng lượng dây rồi đánh giá chính giả thiết đó.",
+        "independent_check_result": "mu7,25e-7 kg/m, L62,0848 m. Tỷ số trọng lượng1,13e-4. Có tích phân hiệu chỉnh L62,0865 m, sai số0,00281%.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Lớp chữ PDF sai mg, ảnh trang gốc xác nhận µg. Dữ liệu draft đúng."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 487,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.52",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.52",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 546,
+        "draft_end_line": 596,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "source_data_and_conditions": "Hai dây kim loại35,0 cm cùng lực căng. S1 nặng8,00 g phát C262 Hz. Tìm F,m2 cho A#466 Hz, khoảng phím x tính từ đầu trên cho S1 phát C#277 Hz và f khi S2 bấm cùng phím. Phím bình thường không chạm dây. Đủ labels trong P15.52.",
+        "independent_check_result": "F769 N,m2≈2,53 g,x1,90 cm,f2≈493 Hz.",
+        "figures": [
+          "P15.52"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Caption giải nghĩa tiếng Anh có thể chuyển sang glossary chung khi tích hợp."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 556,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-p15-52.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.53",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.53",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 597,
+        "draft_end_line": 647,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Dây5,00 m nặng0,732 kg giữ hai cột đồng chất235 N cùng chiều dài. Góc57,0 độ từ hình, dây gần ngang, vâm344 m/s. Gió gây âm bồi thứ năm. Hỏi f và lambda âm. Đủ Wire/Pivots/hai góc57.",
+        "independent_check_result": "Mômen F=(W/2)cot57. Họa âm6 cho f13,7 Hz, lambdaâm25,1 m.",
+        "figures": [
+          "P15.53"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass with terminology correction",
+        "notes": "Thuật ngữ vượt âm cần chuẩn hóa. Caption nhãn có thể chuyển glossary."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 606,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-p15-53.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.54",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.54",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 648,
+        "draft_end_line": 686,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "R7,20e7 m. Dây4,00 m nặng0,0280 kg với cùng vật chì. Thời gian0,0685 s trên hành tinh,0,0390 s trên Trái Đất. Bỏ trọng lượng dây và phân bố khối lượng đối xứng cầu. Hỏi M.",
+        "independent_check_result": "gp=gE(tE/tp)^2≈3,18 m/s²,M≈2,47e26 kg với G đã công khai.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 656,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.55",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.55",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 687,
+        "draft_end_line": 712,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Hai tần số liên tiếp525 và630 Hz, vẫn có mode thấp hơn và cao hơn. v384 m/s. Tìm L, bỏ ảnh hưởng trọng lượng dây.",
+        "independent_check_result": "f1=105 Hz,n5 và6,L1,83 m.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 695,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.56",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.56",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 713,
+        "draft_end_line": 744,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Dây0,800 m cố định hai đầu, n là nút thêm bên trong, lực căng không đổi. Đồ thị n theo fn có hệ số7,30e-3 s. Hỏi v.",
+        "independent_check_result": "n=(2L/v)fn-1. v≈219 m/s. Số họa âm là n+1.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 721,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.57",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.57",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 745,
+        "draft_end_line": 796,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Thanh đồng chất1,80 m nặng638 N. Nhôm ở đầu trái, đồng cách đầu phải0,40 m. Hai dây dài0,600 m bán kính0,280 mm. Hỏi f cơ bản từng dây. Bổ sung rhoAl2700,rhoCu8900 đúng bảng12.1.",
+        "independent_check_result": "FAl≈228 N,FCu≈410 N. fAl≈488 Hz,fCu≈360 Hz. Dùng bán kính, không nhầm đường kính.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 753,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.58",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.58",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 797,
+        "draft_end_line": 832,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Hai đầu cố định,x0 là nút, bụng đầu tiên x0,150 m. Biên độ bụng1,80 mm,v260 m/s. Hỏi umax tại bụng và x0,075 m.",
+        "independent_check_result": "lambda0,600 m,f433 Hz. u bụng4,90 m/s,u x0,075≈3,47 m/s.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 805,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.59",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.59",
+        "source_actual_pdf_pages": [
+          517
+        ],
+        "source_printed_pages": [
+          497
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 833,
+        "draft_end_line": 874,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Dây ngang hai đầu cố định ở âm bồi thứ hai. F5,00 N,khoảng nút6,28 cm. Hỏi L rồi khối lượng từ thời gian biên trên đến biên dưới8,40 ms.",
+        "independent_check_result": "L0,1884 m,T0,0168 s,lambda0,1256 m,v7,48 m/s,m16,9 g.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass with terminology correction",
+        "notes": "Thuật ngữ vượt âm cần chuẩn hóa."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 841,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.60",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.60",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 875,
+        "draft_end_line": 912,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Dây đồng thẳng đứng1,20 m,cỡ18 đường kính1,024 mm,quả100,0 N. Hỏi lambda họa âm3 và thay đổi khi đổi quả500,0 N. Y1,1e11 Pa đúng bảng11.1.",
+        "independent_check_result": "lambda0,800 m. deltaL≈5,30 mm,delta lambda≈3,53 mm. Phân biệt chiều dài tự nhiên và chiều dài chịu tải trong chú thích.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 883,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.61",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.61",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 913,
+        "draft_end_line": 961,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Dây8,00 m nặng6,00 g,v30,0 m/s,lambda0,200 m. Tìm A để P50,0 W. Giữ cùng dây,A,lambda rồi tăng lực căng làm tốc độ gấp đôi, hỏi P mới.",
+        "independent_check_result": "A≈7,07 cm,omega300pi. P tỷ lệ v³ nên400 W. Giữ cảnh báo kA≈2,22 không thỏa góc nhỏ.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Đáp số là kết quả hình thức của mô hình tuyến tính, chưa bảo đảm mô hình dây thực. Draft nêu rõ."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 921,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.62",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.62",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 962,
+        "draft_end_line": 1023,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d.i",
+          "d.ii",
+          "e"
+        ],
+        "source_data_and_conditions": "Dây50,0 cm,F1,00 N,5000 chớp/phút. Biên ở flash1 và5,không biên xen giữa. Hỏi T,f,lambda,mode,v,uP positions1/3,m. Hình đủ năm lần chớp,hai bó,P,hai nhãn1,5 cm.",
+        "independent_check_result": "4 khoảng là T/2 nên T0,0960 s,f10,4 Hz,lambda0,500 m,n2,v5,21 m/s. P speed0/0,982 m/s và tại3 hướng xuống. m18,4 g.",
+        "figures": [
+          "P15.62"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass with terminology correction",
+        "notes": "Thuật ngữ vượt âm cần chuẩn hóa tại lời giải(b)."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 970,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-p15-62.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.63",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.63",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1024,
+        "draft_end_line": 1107,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h"
+        ],
+        "source_data_and_conditions": "Chuỗi1,005 m,hạt1,00 g đường kính5,00 mm,khoảng tâm10,0 mm,hạt hai đầu. k28,8 N/m,sợi không khối lượng,kéo tới1,50 m trên bàn không ma sát,cố định hai hạt đầu. Đủ mu,F,v,f bốn bụng,năm hạt nút,B13 từ7,54 m/s,xn với gốc tâm hạt1,tâm hạt101 tại1,50 m và u30.",
+        "independent_check_result": "101 hạt,mu0,0673 kg/m,F14,256 N,v14,6 m/s,f19,4 Hz. Nút1,26,51,76,101. B13≈0,0619 m. xn=(n-1)L/100. u30≈3,64 m/s.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Nguồn ghi x0 ở tâm hạt1 rồi x101 ở tâm hạt101. Draft chuẩn hóa tên tọa độ, không tạo thêm hạt0. Dùng mô hình liên tục và L1,50 như nguồn, không tuyên bố nghiệm chuỗi rời rạc chính xác."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1031,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.64",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.64",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1108,
+        "draft_end_line": 1144,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Dây3,00 g,L2,20 m,cố định hai đầu,mode cơ bản,u ngang trung điểm9,00 m/s,F330 N. Hỏi biên độ bụng và độ lớn amax.",
+        "independent_check_result": "v492 m/s,omega702 rad/s,B1,28 cm,a6,32e3 m/s².",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1115,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.65",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.65",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1145,
+        "draft_end_line": 1183,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Dây2,50 m,F90,0 N,âm bồi thứ nhất,biên độ bụng3,50 cm,umax28,0 m/s. Hỏi khối lượng và độ lớn amax.",
+        "independent_check_result": "n2,omega800 rad/s,v318 m/s,m2,22 g,a2,24e4 m/s².",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass with terminology correction",
+        "notes": "Thuật ngữ vượt âm cần chuẩn hóa cả heading và nội dung."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1152,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.66",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.66",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1184,
+        "draft_end_line": 1215,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Dây đàn tự do0,386 m,mode cơ bản,nút hai đầu. Tại trung điểm amax8,40e3 m/s²,umax3,80 m/s. Hỏi biên độ sóng dừng và tốc độ sóng chạy.",
+        "independent_check_result": "omega2211 rad/s,B1,72 mm,v272 m/s. Nêu mỗi sóng chạy có A=B/2.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1191,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.67",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.67",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1216,
+        "draft_end_line": 1249,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Dây thép trụ đồng chất55,0 cm,đường kính1,14 mm,cố định hai đầu. Âm bồi thứ nhất phát D#311 Hz,bỏ độ giãn. Hỏi F. Rho thép7800 đúng bảng12.1.",
+        "independent_check_result": "n2,mu7,96e-3 kg/m,v171,05 m/s,F233 N.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass with terminology correction",
+        "notes": "Thuật ngữ vượt âm cần chuẩn hóa."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1223,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.68",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.68",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1250,
+        "draft_end_line": 1305,
+        "subparts_or_atomic_requests": [
+          "a.i",
+          "a.ii",
+          "a.iii",
+          "b.i",
+          "b.ii",
+          "b.iii",
+          "c.i",
+          "c.ii",
+          "c.iii"
+        ],
+        "source_data_and_conditions": "Hai đầu cố định,họa âm3,v192 m/s,f240 Hz,Bbụng0,400 cm. Ba điểm40,0/20,0/10,0 cm. Đủ biên độ,thời gian giữa biên,tốc độ và gia tốc cực đại tại cả ba.",
+        "independent_check_result": "lambda0,800 m,L1,20 m. B0/4,00/2,83 mm. Điểm40 cm là nút nên thời gian không áp dụng. Hai điểm còn lại2,08 ms. u0/6,03/4,27,a0/9,10e3/6,43e3.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1257,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.69",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.69",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1306,
+        "draft_end_line": 1347,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Đá164,0 N,rho3200 kg/m³,dây3,00 m,đầu trên cố định,bỏ trọng lượng dây. f cơ bản42,0 Hz trong không khí và28,0 Hz khi chìm hoàn toàn,mặt trên đá ngay dưới mặt thoáng. Hỏi rho lỏng.",
+        "independent_check_result": "Bình phương tỷ số f bằng tỷ số lực căng. Rho lỏng≈1,78e3 kg/m³.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1319,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.70",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.70",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1348,
+        "draft_end_line": 1382,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "source_data_and_conditions": "Dây cao su nhỏ kéo gấp đôi đến10 cm. Ước lượng F,dùng khối lượng điển hình0,10 g để tính mu SI,tính f dự kiến và bàn tính thực tế.",
+        "independent_check_result": "Công khai F≈1 N là lựa chọn ước lượng. Mu0,001 kg/m,v≈32 m/s,f≈160 Hz. Bàn phụ thuộc vật liệu,cách giữ,tổn hao.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1361,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.71",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.71",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1383,
+        "draft_end_line": 1412,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Dây C cơ bản65,4 Hz,phần dao động0,600 m,m14,4 g. Hỏi lực căng và phần trăm tăng để D73,4 Hz.",
+        "independent_check_result": "F≈148 N,tăng≈26,0%. Không lấy tỷ số tần số tuyến tính.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1396,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.72",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.72",
+        "source_actual_pdf_pages": [
+          518
+        ],
+        "source_printed_pages": [
+          498
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1413,
+        "draft_end_line": 1460,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Thép rho7800 kg/m³,ứng suất đứt7,0e8 N/m²,dùng4,0 g để chịu900 N. Tìm Lmax,rmin và f cơ bản cao nhất khi toàn dây tự do.",
+        "independent_check_result": "Lmax≈0,40 m,rmin≈0,64 mm. Với hình học(a),v≈300 m/s,f≈375,5 Hz. Nếu cho phép tùy ý đổi hình học thì dữ kiện không cho cận trên chung.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Draft giữ rõ phần(b) xét chính sợi dây hình học(a), không gán tối ưu toàn cục sai."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1426,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.73",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.73",
+        "source_actual_pdf_pages": [
+          518,
+          519
+        ],
+        "source_printed_pages": [
+          498,
+          499
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1461,
+        "draft_end_line": 1535,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "source_data_and_conditions": "Máy rung một đầu,dây ngang qua ròng rọc không ma sát,mang M,tensionMg. f và khoảng máy-ròng rọc cố định. Giữ đủ bảng A,A,B,B,C;mu0,0260/0,0260/0,0374/0,0374/0,0482 g/cm;M559/249/365/207/262 g;d48,1/31,9/32,0/24,2/23,8 cm. Hỏi d rời rạc,vẽ mu d² theo M,giải thích tuyến tính,f từ best fit,g9,80 và M cho A,d24,0 cm.",
+        "independent_check_result": "Đổi units đúng,axes x kg,y kg m. Fit free intercept s1,0880e-3 m,c-9,07e-6 kg m,f47,5 Hz,M138 g. SVG và bảng match từng giá trị. Không diễn giải intercept âm là lực thật.",
+        "figures": [
+          "S15.73"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Nguồn lớp chữ nhiễu đơn vị dòng(b),ảnh rõ kg m. Draft và SVG dùng đúng."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1474,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/solution-15-73-regression.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.74",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.74",
+        "source_actual_pdf_pages": [
+          519
+        ],
+        "source_printed_pages": [
+          499
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1536,
+        "draft_end_line": 1588,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b"
+        ],
+        "source_data_and_conditions": "Scale25,5 inch,đủ bảng E2,A2,D3,G3,B3,E4 ở82,4/110,0/146,8/196,0/246,9/329,6 Hz. Lực điển hình78,0 N có thể khác giữa dây. Hỏi mu g/cm E2,G3,E4 và lực căng dây E2 thay G3.",
+        "independent_check_result": "L0,6477 m,mu0,0685/0,0121/0,00428 g/cm. F thay≈441 N.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1591,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.75",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.75",
+        "source_actual_pdf_pages": [
+          519
+        ],
+        "source_printed_pages": [
+          499
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1589,
+        "draft_end_line": 1644,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_data_and_conditions": "Dây3,5 g/m,A4,0 mm,đồ thị Pav theo f². Hỏi lý do tuyến tính,tốc độ từ đường bestfit,tần số góc choP10,0 W. Hình giữ trục W/Hz² và toàn bộ dữ liệu.",
+        "independent_check_result": "Slope≈3,1e-4 W/Hz² đọc gần đúng,v≈2,8e2 m/s,omega≈1,1e3 rad/s. Không gán độ chính xác quá mức cho slope đọc hình.",
+        "figures": [
+          "P15.75"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1687,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-p15-75.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.76",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.76",
+        "source_actual_pdf_pages": [
+          519
+        ],
+        "source_printed_pages": [
+          499
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1645,
+        "draft_end_line": 1726,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "source_data_and_conditions": "Neoprene W1,00 m,L4,00 m,hai cạnh ngắn gắn thanh thép,rung đều theo bề rộng. Lực81,0 N mỗi đầu,M4,00 kg,A10,0 cm,f1,00 Hz,cạnh phải tự do lên xuống. Hỏi suy diễn tốc độ và số,k cho hàm sóng đã cho,công suất tức thời qua lát x,t,năng lượng mỗi giây tổng quát và số.",
+        "independent_check_result": "Sigma=M/(WL),tau=F/W,suy diễn PDE,v=sqrt(FL/M)=9,00 m/s,k0,698 rad/m,P=FA²komega cos²phi,Pavg1,7765 W. Mỗi giây một chu kỳ nên1,7765 J cho thành phần sóng chạy.",
+        "figures": [],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Giữ cảnh báo đầu tự do phản xạ. Không nhận1,78 W là công suất ròng của trạng thái sóng dừng sau phản xạ."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1742,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.77",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.77",
+        "source_actual_pdf_pages": [
+          519
+        ],
+        "source_printed_pages": [
+          499
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1727,
+        "draft_end_line": 1793,
+        "subparts_or_atomic_requests": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_data_and_conditions": "Thợ lặn ở LochNess,cáp100 m gắn thuyền. Người+đồ120 kg,V0,0800 m³,cáp đường kính2,00 cm,mu1,10 kg/m,nước1000 kg/m³. Hỏi lực căng dưới cùng,F(x) có lực nổi lên cả cáp,tích phân thời gian tín hiệu đầu tiên tới mặt nước. Bỏ cản nước như nguồn. Hình đủ100 m,x,m120 kg.",
+        "independent_check_result": "F0=392 N,q≈7,70 N/m,Fsurf≈1162 N. Tích phân sqrt(mu/F(x))cho3,89 s. Đối chiếu quadrature độc lập và hai cận tốc độ.",
+        "figures": [
+          "P15.77"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1824,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-p15-77.png",
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-p15-79.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.78",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.78",
+        "source_actual_pdf_pages": [
+          519,
+          520
+        ],
+        "source_printed_pages": [
+          499,
+          500
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1803,
+        "draft_end_line": 1822,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Giữ tình huống chung BIO ở trang519,nếp thanh âm,d2,0 mm,f125 Hz,v375 cm/s,hướng+z và hình P15.79. Câu78 hỏi bước sóng với đủ bốn lựa chọn2,0 mm/3,3 mm/0,50 cm/3,0 cm.",
+        "independent_check_result": "Lambda3,0 cm,chọn(d). Không lấy d làm lambda.",
+        "figures": [
+          "P15.79 (shared passage)"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1898,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.79",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.79",
+        "source_actual_pdf_pages": [
+          519,
+          520
+        ],
+        "source_printed_pages": [
+          499,
+          500
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1823,
+        "draft_end_line": 1874,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Cùng tình huống78,đủ bốn biểu thức sin[2pi f(t+z/v)],sin[2pi f(t-z/v)],sin(2pi ft)cos(2pi z/lambda),sin(2pi ft)sin(2pi z/lambda).",
+        "independent_check_result": "Chọn(b) từ t-z/v=const,dz/dt=v>0. (a) đi-z,(c,d) là sóng dừng.",
+        "figures": [
+          "P15.79 (shared passage)"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": "Caption giải nghĩa Vocal fold/Airflow có thể chuyển glossary chung, giữ phần giải thích vật lý."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1918,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "15.80",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "exercise": "15.80",
+        "source_actual_pdf_pages": [
+          519,
+          520
+        ],
+        "source_printed_pages": [
+          499,
+          500
+        ],
+        "draft_file": "qa/physics1-remaining/ch15-exercises-late/proposed-fragments/parent-12-bai-tap-041-080.md",
+        "draft_line": 1875,
+        "draft_end_line": 1898,
+        "subparts_or_atomic_requests": [
+          "whole problem"
+        ],
+        "source_data_and_conditions": "Cùng tình huống78–79. Đồ thị v(cm/s) theo f(Hz) đo ở nhiều tần số và đủ options tăng/giảm/không đổi/không xác định. Hình đủ tất cả chấm và nhãn trục.",
+        "independent_check_result": "v/f gần3 cm trong miền dữ liệu nên lambda không đổi,chọn(c). Không suy tốc độ không đổi.",
+        "figures": [
+          "P15.80"
+        ],
+        "source_and_math_status": "pass",
+        "review_status": "pass",
+        "notes": ""
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md",
+      "line": 1970,
+      "sha256": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/r-exercises-p15-80.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Bài tập cầu nối",
+      "kind": "bridge",
+      "independentSourceReview": {
+        "id": "Bài tập cầu nối",
+        "file": "parent-16-bai-tap-cau-noi.md",
+        "line": 1,
+        "source_pdf_pages": [
+          512,
+          513
+        ],
+        "source_printed_pages": [
+          492,
+          493
+        ],
+        "required_parts": [
+          "(a) F(r)",
+          "(b) v(r)",
+          "(c) Thời gian truyền",
+          "10 bước hướng dẫn trước hộp",
+          "10 bước thực hiện trong hộp"
+        ],
+        "preserved_all_parts": true,
+        "one_closed_box": true,
+        "three_stages": true,
+        "source_fidelity": "pass",
+        "physics": "pass",
+        "pedagogy_and_vietnamese": "pass",
+        "severity": "none",
+        "action": "none",
+        "evidence": "Giữ đủ 3 phần và 10 bước của nguồn. Phần ngoài có một lực căng vào trong, khối tâm (L+r)/2. Tích phân lực, phương trình vi phân và thời gian đều đúng. Đầu tự do F=0 là điều kiện biên, tích phân thời gian hữu hạn được xử lý bằng đổi biến. SVG có phác tình huống và sơ đồ lực riêng hai phần, đúng hướng và điểm đặt lực."
+      },
+      "destination": "raw_materials/physics/translations/chapter-15/parent-16-bai-tap-cau-noi.md",
+      "line": 1,
+      "sha256": "d6706d01fd080f7dc8e835929ffd7adb19900f00278d0126e1776992e901f339",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-15/bridge-15-rope.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    }
+  ],
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-15/00-mo-dau.md": "bd80b94bafaa94ff9cf2a0b53e2d3f9733083de5664abe5924ede98a7cdd38f1",
+    "raw_materials/physics/translations/chapter-15/01-muc-01.md": "867e32c115ab00548bd93af9eb7b71b9d1e3b74540fcec5ef46bebc974f6a33d",
+    "raw_materials/physics/translations/chapter-15/02-muc-02.md": "5fa3a0d9a65c73baddb151d9f72a4996f756bd03e155dca92890435533afd60c",
+    "raw_materials/physics/translations/chapter-15/03-muc-03.md": "b52121e3386ab2d58d5bc4b48efb6f1779d2ca492d73bc1c89b0ad377d073c42",
+    "raw_materials/physics/translations/chapter-15/04-muc-04.md": "4dfcf61d012d6cb02da288f136e760a06c49c98cd15c379cd22809d02e289c6d",
+    "raw_materials/physics/translations/chapter-15/05-muc-05.md": "938e101661055e9cc9329c7bbacaa81def3df50071b0a728882971771974a1cb",
+    "raw_materials/physics/translations/chapter-15/06-muc-06.md": "28a08ce8b6800e19481d5d09f833402470cb93563d1fd7d479def7d10ee12fcd",
+    "raw_materials/physics/translations/chapter-15/07-muc-07.md": "ed47647089ca3c0840fd2729d1cd6f62b80964b6f5ec8c1844f3069e951cdd89",
+    "raw_materials/physics/translations/chapter-15/08-muc-08.md": "a0999075b3ea3c1a09827d9eb9780bb486b6ee100575fb2d75a0c399188717ea",
+    "raw_materials/physics/translations/chapter-15/17-tom-tat.md": "ead2b3f5fcd76f40634785508b99eced635c5e627af56ceabae91a27422e0826",
+    "raw_materials/physics/translations/chapter-15/parent-09-luyen-tap-huong-dan.md": "729c7034bff3cc6a5bae3be188e27d3788bc92513c5057d4562e2708915058eb",
+    "raw_materials/physics/translations/chapter-15/parent-10-cau-hoi-thao-luan.md": "c63225017f5388d96fc63e029281c9c32ff08b4003c1816fa19ca0f1adc3368b",
+    "raw_materials/physics/translations/chapter-15/parent-11-bai-tap-001-040.md": "ffb3e0f44e16d4db31a1b2a168ddf700737a4311adae19d86e3dbc06af50681e",
+    "raw_materials/physics/translations/chapter-15/parent-12-bai-tap-041-080.md": "1e64f175c25dedbb3311d2609bb11518878431b039d2692d1ab482e47e3af209",
+    "raw_materials/physics/translations/chapter-15/parent-16-bai-tap-cau-noi.md": "d6706d01fd080f7dc8e835929ffd7adb19900f00278d0126e1776992e901f339"
+  }
+}

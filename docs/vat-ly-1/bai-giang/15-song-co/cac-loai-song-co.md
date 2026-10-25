@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "15-song-co"
-section: "topic"
 topic: "cac-loai-song-co"
+section: "topic"
 title: "Các loại sóng cơ"
 description: "Sóng truyền đi trong khi từng phần tử môi trường chuyển động như thế nào?"
 ---

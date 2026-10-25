@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "15-song-co"
-section: "topic"
 topic: "song-tuan-hoan"
+section: "topic"
 title: "Sóng tuần hoàn"
 description: "Bước sóng, chu kỳ và tần số xác định tốc độ truyền ra sao?"
 ---

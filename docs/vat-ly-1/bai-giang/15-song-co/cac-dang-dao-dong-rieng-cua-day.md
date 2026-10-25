@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "15-song-co"
-section: "topic"
 topic: "cac-dang-dao-dong-rieng-cua-day"
+section: "topic"
 title: "Các dạng dao động riêng của dây"
 description: "Hai đầu cố định chọn những tần số nào và vì sao dây đàn tạo nhiều họa âm?"
 ---

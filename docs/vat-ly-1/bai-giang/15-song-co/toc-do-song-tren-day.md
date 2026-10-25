@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "15-song-co"
-section: "topic"
 topic: "toc-do-song-tren-day"
+section: "topic"
 title: "Tốc độ sóng ngang trên dây"
 description: "Lực căng và quán tính của dây quyết định tốc độ truyền thế nào?"
 ---

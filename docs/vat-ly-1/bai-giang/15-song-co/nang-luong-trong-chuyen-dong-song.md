@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "15-song-co"
-section: "topic"
 topic: "nang-luong-trong-chuyen-dong-song"
+section: "topic"
 title: "Năng lượng trong chuyển động sóng"
 description: "Biên độ, tần số và khoảng cách ảnh hưởng công suất và cường độ ra sao?"
 ---
