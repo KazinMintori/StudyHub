@@ -1,3 +1,4 @@
+import {physics1WaveConcepts,physics1WaveWikiDetails,physics1WaveWikiConnections} from './physics1-wave-foundations.mjs'
 import {physics1OscillationConcepts,physics1OscillationWikiDetails,physics1OscillationWikiConnections} from './physics1-oscillation-foundations.mjs'
 import {physics1GravityConcepts,physics1GravityWikiDetails,physics1GravityWikiConnections} from './physics1-gravity-foundations.mjs'
 import {physics1FluidConcepts,physics1FluidWikiDetails,physics1FluidWikiConnections} from './physics1-fluid-foundations.mjs'
@@ -360,6 +361,8 @@ export const physicsConcepts = {
   ...physics1GravityConcepts
 ,
   ...physics1OscillationConcepts
+,
+  ...physics1WaveConcepts
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -421,6 +424,8 @@ export const physicsWikiDetails = {
   ...physics1GravityWikiDetails
 ,
   ...physics1OscillationWikiDetails
+,
+  ...physics1WaveWikiDetails
 }
 
 export const physicsWikiConnections = {
@@ -571,4 +576,6 @@ export const physicsWikiConnections = {
   ...physics1GravityWikiConnections
 ,
   ...physics1OscillationWikiConnections
+,
+  ...physics1WaveWikiConnections
 }

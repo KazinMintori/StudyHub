@@ -976,22 +976,93 @@ export const physics1Course = {
   ]
 },
     {
-      "slug": "15-song-co",
+  "slug": "15-song-co",
+  "title": "Sóng cơ",
+  "prerequisites": [
+    "dao-dong-dieu-hoa",
+    "luc",
+    "cong-nang-luong",
+    "dao-ham",
+    "dong-luong-vat-ly"
+  ],
+  "supportingConcepts": [
+    "song-co-hoc",
+    "buoc-song-co-hoc",
+    "so-song",
+    "ham-song-co-hoc",
+    "toc-do-song-ngang-tren-day",
+    "cong-suat-song-co",
+    "cuong-do-song-co",
+    "chong-chat-song-tuyen-tinh",
+    "dieu-kien-bien-cua-day",
+    "song-dung-co-hoc",
+    "nut-va-bung-song",
+    "dang-dao-dong-rieng-cua-day",
+    "hoa-am-va-am-boi",
+    "phan-tich-hoa-am-cua-day",
+    "pha-song",
+    "giao-thoa-song",
+    "dao-ham-rieng"
+  ],
+  "status": "draft",
+  "number": 15,
+  "sourceChapter": 15,
+  "topicGroups": [
+    {
       "title": "Sóng cơ",
-      "prerequisites": [
-        "dao-dong-dieu-hoa",
-        "dao-ham",
-        "don-vi"
-      ],
-      "supportingConcepts": [
-        "song",
-        "pha-song",
-        "giao-thoa-song"
-      ],
-      "status": "draft",
-      "number": 15,
-      "sourceChapter": 15
-    },
+      "topics": [
+        {
+          "slug": "cac-loai-song-co",
+          "title": "Các loại sóng cơ",
+          "question": "Sóng truyền đi trong khi từng phần tử môi trường chuyển động như thế nào?",
+          "source": "15.1"
+        },
+        {
+          "slug": "song-tuan-hoan",
+          "title": "Sóng tuần hoàn",
+          "question": "Bước sóng, chu kỳ và tần số xác định tốc độ truyền ra sao?",
+          "source": "15.2"
+        },
+        {
+          "slug": "ham-song",
+          "title": "Hàm sóng",
+          "question": "Làm thế nào mô tả dạng sóng và dao động của từng phần tử bằng một hàm?",
+          "source": "15.3"
+        },
+        {
+          "slug": "toc-do-song-tren-day",
+          "title": "Tốc độ sóng ngang trên dây",
+          "question": "Lực căng và quán tính của dây quyết định tốc độ truyền thế nào?",
+          "source": "15.4"
+        },
+        {
+          "slug": "nang-luong-trong-chuyen-dong-song",
+          "title": "Năng lượng trong chuyển động sóng",
+          "question": "Biên độ, tần số và khoảng cách ảnh hưởng công suất và cường độ ra sao?",
+          "source": "15.5"
+        },
+        {
+          "slug": "giao-thoa-dieu-kien-bien-va-chong-chat",
+          "title": "Giao thoa, điều kiện biên và chồng chất",
+          "question": "Vì sao sóng phản xạ có thể đảo dấu, và hai sóng chồng nhau được cộng thế nào?",
+          "source": "15.6"
+        },
+        {
+          "slug": "song-dung-tren-day",
+          "title": "Sóng dừng trên dây",
+          "question": "Hai sóng chạy ngược chiều tạo nút, bụng và chuyển động tại chỗ ra sao?",
+          "source": "15.7"
+        },
+        {
+          "slug": "cac-dang-dao-dong-rieng-cua-day",
+          "title": "Các dạng dao động riêng của dây",
+          "question": "Hai đầu cố định chọn những tần số nào và vì sao dây đàn tạo nhiều họa âm?",
+          "source": "15.8"
+        }
+      ]
+    }
+  ]
+},
     {
       "slug": "16-am-hoc",
       "title": "Âm thanh và sự nghe",
