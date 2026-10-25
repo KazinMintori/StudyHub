@@ -1,0 +1,3196 @@
+{
+  "status": "theory-reviewed-exercises-incomplete",
+  "chapter": 16,
+  "scope": "Theory only, actualPDF521–552; no endchapter exercises or public UI/deployment acceptance.",
+  "sourceUnits": 104,
+  "units": [
+    {
+      "id": "opening-u01",
+      "sourcePDFPages": [
+        521
+      ],
+      "sourceInventoryRequirement": "Ảnh người thổi tù và trên núi và câu hỏi đủ năm lựa chọn: Âm truyền chậm hơn vào ngày đông lạnh ở núi cao so với ngày hè ấm ở mực nước biển do áp suất, khối lượng riêng, độ ẩm, nhiệt độ hay khối lượng mol thấp hơn. Đáp (iv) sau16.2, không trả lời bằng áp suất riêng lẻ.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/00-mo-dau.md",
+      "anchor": {
+        "text": "Tiếng tù và truyền chậm hơn",
+        "line": 3,
+        "context": "Tiếng tù và truyền chậm hơn vào một ngày đông lạnh trên núi cao so với một ngày hè ấm ở ngang mực nước biển. Điều nào giải thích sự khác biệt ấy? Không khí trên núi vào mùa đông có:\n\n(i) Áp suất thấp hơn.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/00-mo-dau.md",
+      "publicSha256": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082"
+    },
+    {
+      "id": "opening-u02",
+      "sourcePDFPages": [
+        521
+      ],
+      "sourceInventoryRequirement": "Âm trong đời sống là sóng dọc thường truyền trong không khí. Thính giác phát hiện biến thiên áp suất rất nhỏ và hỗ trợ nhận biết môi trường dù không nhìn thấy nguồn.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/00-mo-dau.md",
+      "anchor": {
+        "text": "Trong đời sống",
+        "line": 19,
+        "context": "Trong đời sống, phần lớn âm ta nghe là sóng dọc truyền trong không khí. Tai phát hiện được những biến thiên áp suất rất nhỏ. Nhờ vậy, ta có thể nhận biết tiếng nói, nhạc cụ hoặc một nguồn đang chuyển động ngay cả khi chưa nhìn thấy nó.\n\nMô tả bằng li độ đã dùng cho sóng cơ vẫn đúng, nhưng với âm thanh, mô tả bằng biến thiên áp suất thường thuận tiện hơn. Chương này nối li độ, áp suất và cường độ với nhau, rồi phân biệt chúng với độ to, cao độ và âm sắc mà người nghe cảm nhận.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/00-mo-dau.md",
+      "publicSha256": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082"
+    },
+    {
+      "id": "opening-u03",
+      "sourcePDFPages": [
+        521
+      ],
+      "sourceInventoryRequirement": "Kết nối mô tả li độ của sóng cơ với áp suất, cường độ và cảm giác nghe. Giới thiệu Doppler khi nguồn hoặc người nghe chuyển động, ứng dụng trong công nghệ và y học.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/00-mo-dau.md",
+      "anchor": {
+        "text": "Mô tả bằng li độ",
+        "line": 21,
+        "context": "Mô tả bằng li độ đã dùng cho sóng cơ vẫn đúng, nhưng với âm thanh, mô tả bằng biến thiên áp suất thường thuận tiện hơn. Chương này nối li độ, áp suất và cường độ với nhau, rồi phân biệt chúng với độ to, cao độ và âm sắc mà người nghe cảm nhận.\n\nKhi nguồn âm hoặc người nghe chuyển động trong không khí, tần số người nghe nhận được có thể khác tần số nguồn phát. Hiệu ứng Doppler là cơ sở của nhiều cách đo vận tốc trong công nghệ và y học. Nếu nguồn chuyển động nhanh hơn âm, hình học mặt sóng còn dẫn tới sóng xung kích.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/00-mo-dau.md",
+      "publicSha256": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082"
+    },
+    {
+      "id": "opening-u04",
+      "sourcePDFPages": [
+        521
+      ],
+      "sourceInventoryRequirement": "Giữ chín mục tiêu tương ứng16.1–16.9. Nền tảng dùng lại: Công suất, xung lượng–động lượng, môđun nén/thanh, áp suất dư/tuyệt đối, cưỡng bức/cộng hưởng và toàn bộ sóng cơ.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/00-mo-dau.md",
+      "anchor": {
+        "text": "Những nhiệm vụ của chương",
+        "line": 25,
+        "context": "### Những nhiệm vụ của chương\n\n1. Mô tả sóng âm bằng li độ phần tử và biến thiên áp suất.\n2. Tính tốc độ âm trong chất lưu, thanh rắn và chất khí."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/00-mo-dau.md",
+      "publicSha256": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082"
+    },
+    {
+      "id": "16.1-u01",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Định nghĩa sóng âm dọc trong khí, lỏng, rắn. Phân biệt miền nghe được xấp xỉ20–20000Hz, siêu âm lớn hơn và hạ âm nhỏ hơn. Nêu âm truyền qua tường rắn.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Miền tần số nghe được",
+        "line": 5,
+        "context": "Miền tần số nghe được ở người thường được lấy xấp xỉ từ $20$ đến $20\\,000\\,\\mathrm{Hz}$. Sóng có tần số cao hơn gọi là **siêu âm**, còn thấp hơn gọi là **hạ âm**. Những giới hạn ấy chỉ mô tả một khoảng điển hình, không khẳng định mọi tai đều có cùng độ nhạy.\n\n### Li độ trong một sóng dọc\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u02",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Sóng từ nguồn thường tỏa theo nhiều hướng và biên độ tùy hướng, khoảng cách. Trước tiên dùng mô hình một chiều tiến+x, y(x,t)=Acos(kx−ωt). x và li độ y đo theo các phương song song, không vuông góc như dây ngang.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Âm thường tỏa ra nhiều hướng",
+        "line": 9,
+        "context": "Âm thường tỏa ra nhiều hướng, với biên độ phụ thuộc hướng và khoảng cách tới nguồn. Trước hết, xét mô hình sóng sin chỉ truyền theo chiều dương của trục $x$:\n\n$$\ny(x,t)=A\\cos(kx-\\omega t)."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u03",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "A là biên độ dịch chuyển của phần tử quanh vị trí cân bằng. H16.1 giữ đủ chín thời điểm cáchT/8 và hai phần tử cáchλ. Không đồng nhất dao động phần tử với chuyển động mặt sóng.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "$A$ là biên độ li độ",
+        "line": 17,
+        "context": "$A$ là biên độ li độ, tức độ dời lớn nhất của phần tử khỏi vị trí cân bằng.\n\n![Hình 16.1: Sóng dọc hình sin qua chín thời điểm cách nhau một phần tám chu kỳ, với hai phần tử cách nhau một bước sóng dao động cùng pha](source-image:figure-16-1)\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u04",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Tai và micrô nhạy với biến thiên áp suất. Màng nhĩ chịu chênh áp hai mặt, vòi Eustache nối khoang phía trong với môi trường. p(x,t) là áp suất dư có thể âm hoặc dương, áp suất tuyệt đối bằngpa+p.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Khi sóng đi vào ống tai",
+        "line": 25,
+        "context": "Khi sóng đi vào ống tai, áp suất ở một mặt màng nhĩ biến thiên. Không khí phía bên kia thông với môi trường qua vòi Eustache, nên áp suất nền ở hai phía được cân bằng. Chênh lệch áp suất dao động làm màng nhĩ chuyển động. Micrô cũng thường đáp ứng với biến thiên áp suất thay vì đo trực tiếp li độ một phần tử không khí.\n\nKý hiệu $p(x,t)$ là phần áp suất lệch khỏi áp suất khí quyển cân bằng $p_a$. Đây là **áp suất dư của sóng**, có thể dương hoặc âm. Áp suất tuyệt đối tại điểm ấy bằng $p_a+p(x,t)$. Áp suất dư âm không có nghĩa áp suất tuyệt đối âm.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u05",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Dẫn16.2 từ phần tử trụ tiết diệnS, chiều dàiΔx, V=SΔx, hai đầu dịch chuyểny₁,y₂. ΔV=S(y₂−y₁), chiaV và lấygiớihạn thu∂y/∂x. Giữ ba trường hợpy₂>y₁ giãn/giảmáp,y₂<y₁ nén/tăngáp,y₂=y₁ chỉtịnh tiến.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Xét một hình trụ tưởng tượng",
+        "line": 31,
+        "context": "Xét một hình trụ tưởng tượng trong môi trường có tiết diện $S$, chiều dài cân bằng $\\Delta x$ và thể tích $V=S\\Delta x$. Trục hình trụ cùng phương truyền sóng.\n\nỞ cùng thời điểm $t$, đầu trái có li độ $y_1=y(x,t)$ và đầu phải có li độ $y_2=y(x+\\Delta x,t)$. Độ dài hình trụ thay đổi một lượng $y_2-y_1$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u06",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Dùng định nghĩa môđun nénB=−p/(dV/V) để suyra16.3 p=−B∂y/∂x. Giải thích dấu âm và vì sao áp suất phụ thuộc chênh li độ hai điểm lân cận, không phụ thuộc li độ tuyệt đối.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Môđun nén $B$",
+        "line": 63,
+        "context": "Môđun nén $B$ liên hệ biến thiên áp suất với biến dạng thể tích nhỏ:\n\n$$\nB=-\\frac{p}{dV/V}."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u07",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Lấyđạo hàm theo x của16.1 để có16.4 p=BkAsin(kx−ωt), biên độ áp suất16.5pmax=BkA. H16.3 đủ ba đồ thị y, phần tử, p tại t0, quan hệ lệchpha¼chu kỳ, nén/giãn ởnơi li độ0.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Hai hàm li độ và áp suất",
+        "line": 91,
+        "context": "Công thức (16.4). Hai hàm li độ và áp suất lệch pha một phần tư chu kỳ. Ở nơi độ lớn li độ cực đại, áp suất dư bằng không. Ở tâm vùng nén hoặc vùng giãn, áp suất dư đạt cực trị nhưng li độ bằng không tại thời điểm đang xét.\n\n![Hình 16.3: Ba cách mô tả cùng một sóng âm tại thời điểm ban đầu, gồm đồ thị li độ, các phần tử thực sự dịch chuyển và đồ thị áp suất dư](source-image:figure-16-3)\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u08",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Giữ nhận xét bước sóng ngắn/k lớn tạo áp suất lớn hơn với cùngA, môi trường cóB lớn cần áp suất lớn hơn cho cùng biến dạng. Cảnh báo H16.3 chỉ là ảnh chụp ở một thời điểm, đồthịdịch chuyển còn phần tử chỉ dao động tại chỗ.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Với cùng $A$",
+        "line": 101,
+        "context": "Công thức (16.5). Với cùng $A$ và cùng môi trường, bước sóng ngắn hơn làm $k$ lớn hơn, nên vùng nén và giãn biến thiên mạnh hơn. Với cùng biến dạng, môi trường có $B$ lớn hơn cũng đòi biên độ áp suất lớn hơn vì khó nén hơn.\n\nCác đồ thị trong Hình 16.3 là ảnh của sóng ở một thời điểm. Theo thời gian, những đường biểu diễn ấy tiến theo chiều dương với tốc độ $v=\\omega/k$. Từng phần tử môi trường vẫn chỉ dao động qua lại như Hình 16.1.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u09",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.1 tính biên độ li độ từ áp suất, tần số, vận tốc vàB. Ví dụ16.2 mô hình lý tưởng ba xương tai truyền lực như nhau, biên độ áp suất tăng nhờ giảm diện tích và biên độ li độ trong chất lỏng nhỏ hơn. Giữ ảnh giải phẫu16.4 nhưng ghi tên xương đúng.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Ví dụ 16.1",
+        "line": 105,
+        "context": "::: example Ví dụ 16.1: Biên độ của một sóng âm trong không khí\nMột sóng sin có biên độ biến thiên áp suất khoảng $3{,}0\\times10^{-2}\\,\\mathrm{Pa}$ phía trên và phía dưới áp suất khí quyển. Tìm biên độ li độ khi tần số bằng $1000\\,\\mathrm{Hz}$. Lấy tốc độ âm $344\\,\\mathrm{m/s}$ và môđun nén của không khí $1{,}42\\times10^5\\,\\mathrm{Pa}$.\n\n**Tóm tắt đề bài:** $p_{\\max}=0{,}030\\,\\mathrm{Pa}$, $f=1000\\,\\mathrm{Hz}$, $v=344\\,\\mathrm{m/s}$, $B=1{,}42\\times10^5\\,\\mathrm{Pa}$. Tìm $A$."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "present-with-P3-restoration-or-wording-recommendation",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u10",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Khi sóng truyền qua môi trường khác, tần số vàω không đổi, nhưngk,λ, biên độ áp suất và li độ có thể đổi. Điều tai trong đáp ứng là biến thiên áp suất kích thích tế bào lông, không phải so sánhA môi trường đơn thuần.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Khi sóng kích thích một môi trường khác",
+        "line": 186,
+        "context": "Khi sóng kích thích một môi trường khác, $f$ và $\\omega$ được giữ, còn $v$, $k$, $\\lambda$ và các biên độ có thể đổi.\n:::\n\n### Độ to, cao độ và âm sắc"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u11",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Cảm nhận độ to phụ thuộc biên độ áp suất nhưng không có quan hệ tuyến tính đơn giản, khác giữa người và giữa tần số. Giữ ngưỡng minh họa1000Hz≈3×10⁻⁵Pa,200/15000Hz≈3×10⁻⁴Pa dưới cách gọi xấp xỉ. Lão hóa và sức khỏe tai ảnh hưởng độ nhạy cao tần.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Ở một tần số xác định",
+        "line": 191,
+        "context": "Ở một tần số xác định, biên độ áp suất lớn hơn thường được cảm nhận thành âm to hơn. Tuy nhiên, **độ to** không phải một đại lượng tỉ lệ tuyến tính với biên độ áp suất. Cảm giác còn tùy người nghe, tần số và tình trạng của tai.\n\nĐể hình dung sự khác nhau theo tần số, có thể dùng các mốc gần đúng sau. Ở $1000\\,\\mathrm{Hz}$, biên độ áp suất nhỏ nhất nghe được có thể cỡ $3\\times10^{-5}\\,\\mathrm{Pa}$. Ở $200$ hoặc $15\\,000\\,\\mathrm{Hz}$, cùng mức cảm nhận cần biên độ cỡ $3\\times10^{-4}\\,\\mathrm{Pa}$. Đây là các thang minh họa, không phải ngưỡng cố định cho mọi người.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u12",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Cao độ chủ yếu do tần số, trong miền nghe được f lớn âm cao hơn. Cường độ cũng có thể ảnh hưởng cảm giác cao độ. Không đồng nhất cao độ với độ to.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Cũng cần phân biệt độ to",
+        "line": 195,
+        "context": "Tuổi tác và tình trạng tai có thể làm thay đổi độ nhạy, đặc biệt ở cao tần. Cũng cần phân biệt độ to với **cao độ**, tức cảm giác âm cao hay thấp. Tần số là yếu tố chủ yếu quyết định cao độ trong miền nghe được. Biên độ còn có thể ảnh hưởng cảm giác cao độ, nên hai sóng cùng tần số nhưng khác biên độ không nhất thiết được cảm nhận hoàn toàn giống nhau.\n\nÂm từ nhạc cụ thường không phải một sóng sin duy nhất. Một cột khí có thể dao động đồng thời ở tần số cơ bản và các họa âm. Sóng âm phát ra mang những thành phần tương ứng.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "present-with-P3-restoration-or-wording-recommendation",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u13",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Âm nhạc gồm nhiều họa âm của tần số cơ bản. H16.5 giữ clarinet233Hz,T4.29ms và sáoalto523Hz,T1.91ms, đồ thị thời gian và phổ. Phân tích Fourier chuyển dạng sóng sang thành phần tần số.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Trong hình, clarinet",
+        "line": 201,
+        "context": "Trong hình, clarinet có $f_1=233\\,\\mathrm{Hz}$ và $T\\approx4{,}29\\,\\mathrm{ms}$. Sáo recorder alto có $f_1=523\\,\\mathrm{Hz}$ và $T\\approx1{,}91\\,\\mathrm{ms}$. **Phân tích Fourier** chuyển thông tin từ dạng sóng áp suất theo thời gian sang những thành phần tần số và biên độ của nó.\n\nHai nhạc cụ có thể phát cùng âm cơ bản nhưng vẫn cho âm thanh khác nhau. Sự khác biệt ấy là **âm sắc**. Nó phụ thuộc phân bố họa âm, không chỉ một tần số duy nhất. Âm clarinet giàu họa âm tạo cảm giác khác âm sáo gần thành phần cơ bản. Cùng nguyên tắc đó góp phần phân biệt giọng hát và những nguyên âm như “a”, “e”.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u14",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Âm sắc phụ thuộc phổ họa âm và diễn biến lúc bắt đầu/kết thúc âm. So sánh clarinet giàu họa âm/sáoalto gần âm cơ bản, giọng hát và nguyên âma/e. So sánh âm piano nổi dần rồi tắt với đàn clavecin khởi phát nhanh và tắt nhanh.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Âm sắc còn phụ thuộc",
+        "line": 205,
+        "context": "Âm sắc còn phụ thuộc cách âm bắt đầu và tắt đi. So với piano có âm nổi lên và suy giảm từ từ hơn, đàn clavecin khởi phát bằng một tiếng bật nhanh. Những họa âm cao của clavecin có thể xuất hiện trước các họa âm thấp. Khi nhả phím, âm clavecin cũng tắt nhanh hơn piano. Chỉ biết phổ ở một thời điểm chưa mô tả hết chất lượng của một âm.\n\n**Tiếng ồn** thường chứa một dải tần liên tục, không chỉ những bội nguyên của một tần số cơ bản. Tiếng gió và tiếng xì khi phát phụ âm “s” là những ví dụ. Nhiễu trắng lý tưởng có mật độ phổ công suất bằng nhau trên các khoảng tần số bằng nhau trong dải đang xét.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u15",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Tiếng ồn chứa dải tần liên tục không chỉ các bội nguyên. Nhiễu trắng lý tưởng có mật độ phổ công suất đều theo tần số trong dải xét. Ví dụgió, âm phụ âms. Giữ ứng dụng âm khuếch đại gây tổn thương tai và ảnh nghệ sĩ, nhưng số liệu tuổi65 cần kiểm chứng độc lập trước khi dùng như thực tế.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Tiếng ồn",
+        "line": 207,
+        "context": "**Tiếng ồn** thường chứa một dải tần liên tục, không chỉ những bội nguyên của một tần số cơ bản. Tiếng gió và tiếng xì khi phát phụ âm “s” là những ví dụ. Nhiễu trắng lý tưởng có mật độ phổ công suất bằng nhau trên các khoảng tần số bằng nhau trong dải đang xét.\n\n### Ứng dụng: Âm khuếch đại và thính giác\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "qualified-source-health-application",
+      "limit": "The general amplified-sound mechanism and source photo are retained. Original age65 population-style claim is not independently verified and is not certified as a health statistic.",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.1-u16",
+      "sourcePDFPages": [
+        521,
+        522,
+        523,
+        524,
+        525,
+        526
+      ],
+      "sourceInventoryRequirement": "Đặt câu tự kiểm16.1 đủ năm lựa chọn ngay sau phần16.1, đáp(v), giải thích k∝f vàA∝1/f khi pmax,B giữ nguyên.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "anchor": {
+        "text": "Tự kiểm 16.1",
+        "line": 215,
+        "context": "### Tự kiểm 16.1: Tăng tần số nhưng giữ biên độ áp suất\n\nMột bộ phát điện tử tạo sóng sin trong không khí. Khi tăng tần số từ $100$ lên $400\\,\\mathrm{Hz}$ mà giữ biên độ áp suất không đổi, biên độ li độ sẽ:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+      "publicSha256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+    },
+    {
+      "id": "16.2-u01",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Từ sóng dâyv=√(F/μ), xác định vận tốc sóng phụ thuộc độ phục hồi so với quán tính. Trong chất lưu hai đại lượng là môđun nénB vàkhối lượng riêngρ. Giới thiệu ống nhạc cụ và đường thanh quản như cột khí, giữ ảnhkèn16.6.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Trên dây, tăng lực căng",
+        "line": 3,
+        "context": "Trên dây, tăng lực căng làm sóng truyền nhanh hơn, còn tăng khối lượng riêng dài làm sóng chậm hơn. Công thức $v=\\sqrt{F/\\mu}$ so sánh vai trò phục hồi với vai trò quán tính. Với âm trong chất lưu, hai vai trò ấy được biểu diễn bằng những đại lượng nào?\n\nSóng dọc nén và giãn môi trường, nên môđun nén $B$ quyết định mức chống lại biến dạng. Khối lượng riêng $\\rho$ mô tả quán tính của môi trường theo thể tích. Ta dự đoán tỉ số $B/\\rho$ sẽ quyết định bình phương tốc độ truyền.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u02",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "H16.7 pít-tông chuyểnđộng từt0 vớivy, ranh giới nhiễu loạn tiếntới với vận tốcv. Chất lưu trướcPđứngyên,sauP chuyểnđộng. Trong t khối lượng chịu tácđộngρAvt, độnglượngρAvtvy.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Trong hình, vận tốc phần tử",
+        "line": 17,
+        "context": "Trong hình, vận tốc phần tử được ký hiệu $v_y$. Ta viết $u=v_y$ để phân biệt rõ với tốc độ truyền $v$. Sau thời gian $t$, pít-tông đi được $ut$, còn ranh giới P của nhiễu loạn tiến được $vt$.\n\nChất lưu phía trước P vẫn đứng yên. Phần đã chịu nhiễu loạn có thể tích cân bằng $Svt$ và khối lượng:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u03",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Thể tíchban đầuAvt giảmAvyt, nênΔp=Bvy/v. LựcthuầnΔpA từ chênháp hai đầu, xunglượngΔpAt=B(vy/v)At. Ápdụngxunglượng–độnglượng16.6 rồi triệt các thừa số để suyra16.7v=√(B/ρ). Giữ phân biệtvt vàvyt.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "thể tích cân bằng",
+        "line": 19,
+        "context": "Chất lưu phía trước P vẫn đứng yên. Phần đã chịu nhiễu loạn có thể tích cân bằng $Svt$ và khối lượng:\n\n$$\nm=\\rho Svt."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u04",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Côngthức16.7 cũng dùng cho sóngdọc trong chất lưu khối, không chỉ ống. Với thanh rắn có mặt bên tự do phình/co,16.8v=√(Y/ρ). Cảnhbáokhông dùng16.8 cho khối rắn bị môi trườngbaoquanh cảnbiếndạngngang, khiđó cầnB vàmôđuntrượt.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Sóng dọc trong thanh rắn",
+        "line": 55,
+        "context": "### Sóng dọc trong thanh rắn\n\nKhi một thanh bị nén dọc, nó còn có thể phình nhẹ sang bên. Nếu mặt bên được tự do biến dạng, quan hệ phục hồi dọc được mô tả bằng môđun Young $Y$:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u05",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Giữ đủ11hàngBảng16.1, nhiệt độ của mỗi chất lưu vàhệSI. Vận tốc chì nhỏ hơn nhôm/thép do môđun thấp vàρcao. Các côngthức không chỉ dùng cho xung đặcbiệt, còn sóngtuầnhoàn.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Bảng 16.1",
+        "line": 69,
+        "context": "### Bảng 16.1: Tốc độ âm trong một số môi trường khối\n\n| Môi trường | Điều kiện nhiệt độ được nêu | Tốc độ âm, đơn vị m/s |\n| --- | --- | ---: |"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u06",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.3 sonar vớiB2.18×10⁹Pa,ρ1000kg/m³,f262Hz, H16.8. Đối chiếuλnước5.64m vớikhôngkhí1.31m cùngf. Chấtlỏng đặc hơn nhưng khó nén hơn nhiều nênâmnhanhhơn.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Ví dụ 16.3",
+        "line": 87,
+        "context": "::: example Ví dụ 16.3: Bước sóng của sóng sonar\nMột tàu dùng sonar để xác định vị trí vật dưới nước. Tính tốc độ âm trong nước bằng công thức (16.7), rồi tìm bước sóng ứng với tần số $262\\,\\mathrm{Hz}$.\n\n![Hình 16.8: Hệ sonar phát sóng âm dưới nước và nhận tín hiệu phản xạ để phát hiện, định vị vật](source-image:figure-16-8)"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u07",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Ứng dụngcáheosiêuâm100000Hz,λnước1.48cm vànhậnbiếtvật cỡbướcsóng. Siêuâm5MHz,λ≈.3mm, nhiều lát2Dghép3D ởH16.9, khảo sátvan tim/khối mô. Không suyra độ phân giải tuyệt đối chỉ từλ hoặc quy tắc an toàn y khoa.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Sonar sinh học",
+        "line": 116,
+        "context": "### Ứng dụng: Sonar sinh học và ảnh siêu âm\n\nCá heo có thể dùng âm tần số cao và tín hiệu dội về để định hướng, tìm mồi. Chẳng hạn, với tần số cỡ $100\\,000\\,\\mathrm{Hz}$ và tốc độ âm trong nước khoảng $1482\\,\\mathrm{m/s}$, bước sóng cỡ $1{,}48\\,\\mathrm{cm}$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "limit": "Medical resolution illustrations are source models. No independent diagnostic/clinical performance certification.",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u08",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Với khí nén/giãn nhanh gầnđoạnnhiệt,16.9B=γp₀. Địnhnghĩaγtỷsố nhiệt dung,khôngcóđơnvị,khôngkhíγ1.40,p₀1.013×10⁵Pa⇒B1.42×10⁵Pa, rất nhỏ so môđun chất rắn10¹⁰–10¹¹Pa.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "B=\\gamma p_0",
+        "line": 135,
+        "context": "B=\\gamma p_0.\n$$\n\nCông thức (16.9). $p_0$ là áp suất cân bằng, còn $\\gamma$ là tỉ số các nhiệt dung, không có đơn vị. Với không khí ở điều kiện thông thường, có thể dùng $\\gamma=1{,}40$."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u09",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Dùng mật độkhílýtưởngρ=p₀M/(RT) đểsuyra16.10v=√(γRT/M). Với cùng thànhphầnkhí,γxấpxỉhằng trong miềnxét, phụthuộc√T chứ khôngáp suất. Giải thíchMkhốilượngmol,Runiversal vàTphảikelvin,20.00°C293.15K.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Khối lượng riêng của khí",
+        "line": 148,
+        "context": "Khối lượng riêng của khí cũng thay đổi với áp suất. Với khí lý tưởng, phương trình trạng thái cho $\\rho=p_0M/(RT)$, trong đó $M$ là khối lượng mol. Thay vào $B/\\rho$, áp suất cân bằng triệt tiêu:\n\n$$\n\\frac B\\rho=\\frac{\\gamma RT}{M}."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u10",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.4 tại20°C≈293K,M28.8×10⁻³kg/mol,γ1.40,R8.314⇒v344m/s,λcho20Hz≈17m và20000Hz≈1.7cm. Đặt trả lời câu hỏi mởchương(iv)nhiệt độ sau kếtluậnnày.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Ví dụ 16.4",
+        "line": 168,
+        "context": "::: example Ví dụ 16.4: Tốc độ âm và miền bước sóng nghe được\nTìm tốc độ âm trong không khí ở $20^\\circ\\mathrm C$ và khoảng bước sóng ứng với miền tần số $20$ đến $20\\,000\\,\\mathrm{Hz}$. Lấy khối lượng mol trung bình của không khí $M=28{,}8\\times10^{-3}\\,\\mathrm{kg/mol}$ và $\\gamma=1{,}40$.\n\n**Tóm tắt đề bài:** $T=293{,}15\\,\\mathrm K$, $M=0{,}0288\\,\\mathrm{kg/mol}$, $\\gamma=1{,}40$. Hai giới hạn tần số là $20$ và $20\\,000\\,\\mathrm{Hz}$."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u11",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Phân biệt daođộngtập thể sóng với nhiệt độngngẫu nhiên của phân tử, quãng đường tự do trungbìnhcỡ10⁻⁷m vàAâmnhẹcỡ10⁻⁹m chỉ là quy mô minh họa. Giữ phépso sánh bầyong daođộng tập thể trong khi từngconchuyểnđộngngẫu nhiên.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Phân tử khí luôn chuyển động",
+        "line": 202,
+        "context": "Phân tử khí luôn chuyển động nhiệt hỗn loạn, ngay cả khi không có âm. Dao động có tổ chức của sóng âm chồng lên chuyển động ấy. Ở áp suất khí quyển, quãng đường tự do trung bình có thể cỡ $10^{-7}\\,\\mathrm m$, trong khi biên độ li độ của một âm yếu có thể chỉ cỡ $10^{-9}\\,\\mathrm m$.\n\nCó thể hình dung một đàn ong mà từng con chuyển động trong đàn, trong khi cả đàn cùng dao động nhẹ qua lại. Li độ sóng mô tả chuyển động tập thể nhỏ, không có nghĩa mỗi phân tử chỉ đi theo một quỹ đạo điều hòa riêng biệt giữa các va chạm.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.2-u12",
+      "sourcePDFPages": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "sourceInventoryRequirement": "Đặt câu tựkiểm16.2 ngay cuối mục: Thủyngânρ13.6lầnnước,vdữliệuBảng16.1. Đáp(i),B=ρv² vàtỷsố13.0, khôngnhầm vận tốc thấp hơn suyraBthấphơn.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md",
+      "anchor": {
+        "text": "Tự kiểm 16.2",
+        "line": 206,
+        "context": "### Tự kiểm 16.2: Môđun nén của thủy ngân và nước\n\nThủy ngân có khối lượng riêng bằng $13{,}6$ lần của nước. Dựa trên Bảng 16.1 ở $20^\\circ\\mathrm C$, chất nào có môđun nén lớn hơn?\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+      "publicSha256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+    },
+    {
+      "id": "16.3-u01",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "ĐịnhnghĩacườngđộI là tốcđộtrungbìnhtruyềnnănglượng qua mộtđơnvịdiệntích vuônggócchiềutruyền. Với sóng mộtchiều,từcôngsuấtFvy suyra côngsuất trênđơnvịdiệntíchpvy.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Một âm có thể có biên độ",
+        "line": 3,
+        "context": "Một âm có thể có biên độ li độ rất nhỏ nhưng vẫn mang năng lượng. Muốn định lượng năng lượng đi qua một vùng mỗi giây, ta dùng **cường độ âm** $I$, tức công suất trung bình trên một đơn vị diện tích vuông góc chiều truyền.\n\nTa sẽ liên hệ $I$ với biên độ li độ $A$ và biên độ áp suất $p_{\\max}$ cho một sóng âm chạy hình sin trong chất lưu.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u02",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Tínhvy=∂y/∂t=ωAsin(kx−ωt), nhânvớip=BkAsin pha, lấytrungbìnhsin²=1/2 đểcó16.11I=BωkA²/2. Khôngđồngnhất tốcđộhạt vym ax=ωA vớivận tốc mặt sóngv.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Vận tốc phần tử là",
+        "line": 9,
+        "context": "Xét sóng truyền theo chiều dương. Đặt $\\theta=kx-\\omega t$, ta có $y=A\\cos\\theta$. Vận tốc phần tử là đạo hàm theo thời gian tại vị trí cân bằng cố định:\n\n$$\nv_y=\\frac{\\partial y}{\\partial t}=\\omega A\\sin\\theta."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u03",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Dùngω=vk,v=√(B/ρ) đểsuyra16.12I=√(ρB)ω²A²/2. Thaypmax=BkA đểcó16.13I=ωpmax²/(2Bk)=vpmax²/(2B) và16.14I=pmax²/(2ρv)=pmax²/(2√(ρB)). Mở cácbướcđại sốkhó, khôngchỉchépkếtquả.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Dùng $k=",
+        "line": 31,
+        "context": "Dùng $k=\\omega/v$ và $v=\\sqrt{B/\\rho}$, hệ số $B/v$ bằng $\\sqrt{\\rho B}$. Do đó:\n\n$$\nI=\\frac12\\sqrt{\\rho B}\\,\\omega^2A^2."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u04",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Cùng môi trường vàI, pmax khôngđổi vớif nhưngA∝1/f. Ví dụ16.5 và16.6 giữđúng dữliệu, kểcảbiênđộ20Hz0.60µm. Sửa câuKeyConcept16.6 ngượcchiều, khônglặp sai higherf⇒largerA.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Trong cùng môi trường",
+        "line": 64,
+        "context": "Trong cùng môi trường, hai sóng sin cùng cường độ có cùng biên độ áp suất dù tần số khác nhau. Trái lại, biên độ li độ phải giảm khi tần số tăng:\n\n$$\nA\\propto\\frac1f."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u05",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "CôngsuấttrungbìnhP=IS chỉkhiIđều trênmặtS. Giữ mức quy mô nói chuyện10⁻⁵W, hét3×10⁻²W. Ví dụ dân sốNewYorktổng100W chỉso sánhquymô ước lượng, khônggánsốdânhiện tại.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "công suất âm của một người",
+        "line": 76,
+        "context": "Để hình dung quy mô, công suất âm của một người nói bình thường có thể cỡ $10^{-5}\\,\\mathrm W$, còn tiếng hét lớn cỡ $3\\times10^{-2}\\,\\mathrm W$. Trong một ước tính cho một thành phố quy mô New York, mọi người cùng nói có thể tạo công suất tổng cỡ $100\\,\\mathrm W$, ngang quy mô điện năng cấp cho một bóng đèn công suất vừa.\n\nĐây là so sánh quy mô năng lượng, không nói âm của một thành phố tập trung vào một điểm. Muốn tạo cường độ lớn khắp khán phòng hoặc sân vận động, cần công suất đáng kể vì năng lượng phải phân bố trên diện tích lớn.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "present-with-P3-restoration-or-wording-recommendation",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u06",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Nguồnđẳnghướng khônghấp thụphảnxạ cóI∝1/r². Khumtayđịnhhướng ởH16.10 làmâmtruyềnít sanghai bên. Trongphòng,phảnxạ tường/trần khiến khôngápdụngđơn giản quy luật1/r², liênhệ thiết kế khánphòng.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Với nguồn phát đều mọi hướng",
+        "line": 80,
+        "context": "Với nguồn phát đều mọi hướng, bỏ hấp thụ và phản xạ, cường độ giảm theo $1/r^2$. Định hướng phát âm có thể tăng cường độ về một vùng mong muốn bằng cách giảm năng lượng tỏa sang các hướng khác.\n\n![Hình 16.10: Khum hai bàn tay quanh miệng hướng phần lớn âm về phía trước và giảm phần âm truyền sang hai bên](source-image:figure-16-10)\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u07",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Giữ chiếnlược16.1 phânloạithuộctínhsóng(A,pmax,f,ω,k,λ) và môi trường(B,ρ,γ,T,M), chọnẩncần tìm,côngthức,gửiTvềkelvinvàđối chiếuhệ thức khác.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Phương pháp giải 16.1",
+        "line": 88,
+        "context": "### Phương pháp giải 16.1: Cường độ âm\n\n1. Tách thuộc tính sóng khỏi thuộc tính môi trường. Thuộc tính sóng gồm $A$, $p_{\\max}$, $f$, $\\omega$, $k$ và $\\lambda$. Môi trường chất lỏng cho $B,\\rho$, còn khí lý tưởng có thêm $\\gamma,T,M$.\n2. Ghi đại lượng đã biết và xác định đúng ẩn cần tìm. Chọn một quan hệ nối trực tiếp dữ kiện với ẩn, rồi bổ sung các quan hệ như $v=\\lambda f$ nếu còn thiếu thông số."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u08",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.7 chỉdùngbáncầu vìloamặ tđấ tkhôngtruyền côngsuấtvàođất,2.5kW, phânbiệt côngsuấtâmvớiđiện cấp. Khôngđổi sangcầutoànbộ5kW màkhôngđổi giảthiết.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Ví dụ 16.7",
+        "line": 150,
+        "context": "::: example Ví dụ 16.7: Công suất âm cho buổi hòa nhạc ngoài trời\nCần cường độ âm bằng $1\\,\\mathrm{W/m^2}$ ở khoảng cách $20\\,\\mathrm m$ từ hệ loa. Tìm công suất âm trung bình cần thiết khi âm được phân bố đều theo các hướng ra môi trường phía trên mặt đất.\n\n**Tóm tắt đề bài:** $I=1\\,\\mathrm{W/m^2}$, $r=20\\,\\mathrm m$. Hệ loa đặt trên đất, không truyền công suất âm vào lòng đất. Mô hình phân bố đều trên một bán cầu."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u09",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Thanglogarithm16.15 β=(10dB)log₁₀(I/I₀),I₀10⁻¹²W/m². Nêu0dBkhôngphảikhôngcóâm,120dBứngvới1W/m². Mộtdecibel bằng1/10bel, tênAlexanderGrahamBell. dBA cótrọngsốtần sốtheođộnhạytai.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Thang decibel",
+        "line": 178,
+        "context": "### Thang decibel\n\nMiền cường độ nghe được trải qua nhiều bậc độ lớn. Một thang logarithm giúp biểu diễn sự khác biệt ấy gọn hơn. **Mức cường độ âm** được định nghĩa:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u10",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Giữđủ11hàng Bảng16.2 là giátrị đại diện, khôngngưỡng antoànykhoa. Ví dụ16.8 đổi28/92dBsangcườngđộ,nhưng cácphátbiểudose10phút120dB/10năm92dB cầnprimaryhealthsource trước khi phátbiểu chắcchắn.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Bảng 16.2",
+        "line": 198,
+        "context": "### Bảng 16.2: Một số mức cường độ âm đại diện\n\n| Nguồn hoặc mô tả | Mức cường độ, đơn vị dB | Cường độ, đơn vị W/m² |\n| --- | ---: | ---: |"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u11",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.9 nguồnchimđiểmI∝1/r²,r tăngđôilàmIgiảmcòn1/4,Δβ≈−6dB. PhảisuyraΔβ=(10dB)log(I₂/I₁), khôngtrừcácgiátrịItrựctiếp. Độto cảmnhậnkhôngtỷlệI,8–10dBchỉquymôcảmgiácxấpxỉ.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Ví dụ 16.9",
+        "line": 246,
+        "context": "::: example Ví dụ 16.9: Tiếng chim trên đồng cỏ\nCoi một con chim là nguồn điểm phát công suất âm không đổi, với cường độ tuân định luật nghịch đảo bình phương. Khi người nghe đi ra xa đến khoảng cách gấp đôi ban đầu, mức cường độ giảm bao nhiêu decibel?\n\n![Hình 16.11: Hai vị trí người nghe cách một nguồn điểm những khoảng khác nhau, dùng để so sánh mức cường độ âm](source-image:figure-16-11)"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.3-u12",
+      "sourcePDFPages": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "sourceInventoryRequirement": "Đặt câutựkiểm16.3 giữf,môitrường khôngđổi,I tăngđôi. TrảlờiA,pmax tăng√2,B,v giữnguyên,β tăng3.0dB. Câu hỏi cócả5đạilượng, khôngbỏmụcβ.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "anchor": {
+        "text": "Tự kiểm 16.3",
+        "line": 284,
+        "context": "### Tự kiểm 16.3: Gấp đôi cường độ\n\nTăng gấp đôi cường độ sóng âm trong không khí nhưng giữ tần số, áp suất nền, khối lượng riêng và nhiệt độ không đổi. Biên độ li độ, biên độ áp suất, môđun nén, tốc độ âm và mức cường độ thay đổi thế nào?\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+      "publicSha256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+    },
+    {
+      "id": "16.4-u01",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "Sóngâmtrongống phảnxạ haiđầuvàchồngchất tạo sóngdừng. Liênhệdâydừng,giọngnóivànhạccụhơi. Phânbiệtnút/bụngliđộvớinút/bụngáp suất.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Sóng dọc truyền trong ống",
+        "line": 5,
+        "context": "Sóng dọc truyền trong ống phản xạ ở hai đầu. Sóng đi và sóng về chồng lên nhau có thể tạo **sóng âm dừng**, tương tự sóng dừng trên dây. Cột khí dao động còn kích thích sóng âm chạy truyền ra môi trường bên ngoài. Đây là một phần cơ chế của tiếng nói và nhiều nhạc cụ hơi, từ sáo tới kèn đồng, clarinet và đàn đại phong cầm.\n\n### Nút và bụng của li độ\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u02",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "ỐngKundtH16.12dài khoảng1m,mộtđầukín,đầukiacómàng mềm đượcloa/kíchâmkhuếchđạitácđộng. Bột nhẹbịquét tại vùngchuyểnđộngvàtụ tại nútliđộ, khoảngcáchnútλ/2. Giữ thựcnghiệm,chứkhôngchỉcôngthức.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Thí nghiệm ống Kundt",
+        "line": 13,
+        "context": "Thí nghiệm ống Kundt cho thấy trực tiếp các vị trí ấy. Một ống thủy tinh nằm ngang dài cỡ một mét có một đầu kín. Đầu còn lại mang một màng mềm có thể truyền dao động từ loa vào khí trong ống. Loa nối với bộ phát âm và bộ khuếch đại, cho phép thay đổi tần số kích thích.\n\n![Hình 16.12: Ống Kundt dùng màng rung truyền âm vào cột khí. Ở tần số phù hợp, bột nhẹ tụ tại nút li độ, trong khi khí dao động mạnh ở bụng li độ](source-image:figure-16-12)\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u03",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "H16.13giữchínthời điểm,chínphầntử. Haihạthai phí anútliđộngượcpha nênkhoảngcách thayđổi,mậtđộvàáp suất biếnthiênlớn. Haihạthai phí abụngliđộcùngpha nênbiếnthiênáp suấtbằng0.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Hình 16.13 theo dõi",
+        "line": 21,
+        "context": "Hình 16.13 theo dõi chín phần tử khí trong một chu kỳ. Phần tử tại N đứng yên, còn phần tử tại A dao động với biên độ lớn nhất. Hai phần tử ở hai bên một nút li độ dao động ngược pha.\n\n![Hình 16.13: Chín thời điểm của sóng âm dừng. N là nút li độ đồng thời là bụng áp suất, còn A là bụng li độ đồng thời là nút áp suất](source-image:figure-16-13)\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u04",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "Phátbiểunútáp suấtlàbụngliđộvàngượclại. Tạ iđầukíncứng y=0 lànútliđộ/bụngáp suất,đầuhởgầnáp suấtkhíquyểnlànútáp suất/bụngliđộ.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Nút áp suất trùng bụng li độ",
+        "line": 31,
+        "context": "- Nút áp suất trùng bụng li độ.\n- Bụng áp suất trùng nút li độ.\n\nỞ thời điểm những vùng nén và giãn rõ nhất trong Hình 16.12, mật độ và áp suất đạt các cực trị tại nút li độ. Không thể suy rằng khí đứng yên tại một nút li độ thì áp suất tại đó không thay đổi."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u05",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "Giữhiệuchỉnhđầuhở: Nútáp suấtthựcởhơira ngoàiống, cóthểbỏquakhi đườngkínhnhỏsoλ. Ví dụ16.10đứngcách tườngλ/4,3λ/4,5λ/4,… nghetriệttiêulýtưởng. Cầnloađịnhhướngvàbỏphảnxạtườngkhác.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Trên một ống thực",
+        "line": 42,
+        "context": "Trên một ống thực, nút áp suất nằm hơi vượt ra ngoài miệng ống. Khi đường kính ống nhỏ so với bước sóng, có thể bỏ qua hiệu chỉnh đầu ống và dùng chiều dài hình học. Những công thức dưới đây được viết trong gần đúng đó.\n\n::: example Ví dụ 16.10: Những vị trí nghe thấy âm triệt tiêu\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u06",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "CấutrúcốngorganH16.15/16.16: Khítừquạtqua khehẹp,đậpvàomépmiệngống,tạodaođộngcộtkhí. Miệngốnglàđầuhở,đầu trên cóthểhởhoặckín. Giữhai thờiđiểm cáchT/2.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Cột khí trong đàn đại phong cầm",
+        "line": 76,
+        "context": "### Cột khí trong đàn đại phong cầm\n\nNhững ống có chiều dài khác nhau của đàn đại phong cầm phát những tần số khác nhau. Mỗi ống không chỉ là đường dẫn âm từ một loa ngoài, mà chứa cột khí dao động và tương tác với dòng hơi ở miệng.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u07",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "ỐnghởhaiđầuH16.17: L=λ₁/2,16.16f₁=v/(2L),16.17L=nλn/2,λn=2L/n. Suyra16.18fn=nv/(2L) và16.19fn=nf₁,n=1,2,3,…, đủcảchẵn/lẻ. Nêurõâmvượtthứnhấtlàhọaâmbậc2.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Ống hở ở cả hai đầu",
+        "line": 88,
+        "context": "### Ống hở ở cả hai đầu\n\nGọi chiều dài cột khí là $L$. Ở cả hai đầu đều có bụng li độ và nút áp suất. Dạng cơ bản có một nút li độ ở giữa và hai bụng ở hai đầu. Khoảng cách giữa hai bụng liên tiếp bằng nửa bước sóng, nên $L=\\lambda_1/2$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u08",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "ỐngkínmộtđầuH16.18: L=λ₁/4,16.20f₁=v/(4L),16.21L=nλn/4,λn=4L/n.16.22fn=nv/(4L),16.23fn=nf₁,n=1,3,5,…,chỉhọaâmlẻ. f₁bằngnửaốnghởcùngL. Ốngkínhaiđầu cóhainútliđộnhưngkémphùhợpphátâmra ngoài.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Ống hở một đầu, kín một đầu",
+        "line": 132,
+        "context": "### Ống hở một đầu, kín một đầu\n\nTại đầu hở là bụng li độ, còn đầu kín là nút li độ. Dạng cơ bản chỉ chứa khoảng cách từ một bụng đến nút liền kề, bằng một phần tư bước sóng:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u09",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.11 giữcả(a)chiềudàiốngkín220Hz,(b)âmvượtthứhai(=họaâm5)trùngbướcsónghọaâm3củaốnghở. Dùốnghởdàihơn vẫn cóf₁caohơn, khôngmáymócdùngthứtựLgiữa2loạiống.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Ví dụ 16.11",
+        "line": 182,
+        "context": "::: example Ví dụ 16.11: Hai ống có cùng một bước sóng\n\nỞ một ngày có tốc độ âm $344\\,\\mathrm{m/s}$, một ống đàn kín một đầu có tần số cơ bản $220\\,\\mathrm{Hz}$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u10",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "Trongốngthựcnhiềumodecùngtồntại,phổâmphátra gần phổdaođộngtrongống. Ốnghẹpgiàuhọaâmcao,ốngrộngnổiâmcơbản,miệngốngảnhhưởngâm sắc. Sâoflute/recorderhởhaiđầu,clarinetgầnốngkínởdămlưỡigà.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Nhiều dạng riêng cùng tồn tại",
+        "line": 232,
+        "context": "### Nhiều dạng riêng cùng tồn tại và âm sắc của nhạc cụ\n\nKhi ống đàn hoạt động, thường có nhiều dạng riêng cùng tồn tại. Chuyển động cột khí là tổng các dạng đó, giống dây bị gảy hoặc gõ ở chương 15. Sóng dừng phức hợp bên trong tạo sóng chạy bên ngoài có thành phần họa âm tương ứng.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u11",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "Đóng/mởlỗốngthayđổichiềudàihiệudụngvàcaođộ. Mỗiốngorganthườngmộtnốt. Tăngnhiệtđộlàmvtăngvàcaođộnhạccụhơităng,khácnhiệtđộgiữacácốnggâylệchnốt.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Sáo ngang và sáo recorder",
+        "line": 238,
+        "context": "Sáo ngang và sáo recorder gần với mô hình ống hở hai đầu. Khác với mỗi ống đàn đại phong cầm thường chỉ đảm nhận một nốt, các nhạc cụ này có những lỗ dọc thân. Đóng hoặc mở lỗ bằng ngón tay làm thay đổi chiều dài hiệu dụng của cột khí, từ đó đổi cao độ.\n\nClarinet gần với mô hình ống kín một đầu: Đầu gắn dăm kèn đóng vai trò đầu kín, còn miệng loe là đầu hở. Những mô hình một chiều này giải thích các họ tần số cơ bản, nhưng không thay thế toàn bộ cơ học của dăm, hình học miệng loe và hiệu chỉnh đầu ống.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.4-u12",
+      "sourcePDFPages": [
+        534,
+        535,
+        536,
+        537,
+        538
+      ],
+      "sourceInventoryRequirement": "Đặt câutựkiểm16.4: Thổikhíheliumcùngp,Tthaykhôngkhítrongống,caođộcaohơn(ii),vìMnhỏ,vâmcaohơn,fn∝v. Khôngđềxuấtthựchiệnhítkhí.",
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md",
+      "anchor": {
+        "text": "Tự kiểm 16.4",
+        "line": 244,
+        "context": "### Tự kiểm 16.4: Thổi helium thay không khí\n\nNối một ống dẫn vào một đầu ống kim loại rồi thổi khí nén qua, ta nghe một âm nhạc. Nếu thay không khí bằng helium nén ở cùng áp suất và nhiệt độ, âm phát ra sẽ:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+      "publicSha256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+    },
+    {
+      "id": "16.5-u01",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "Cộtkhívàdâycă ngcóvôsốmode, mỗimode mọiphầntửdaođộngcùngtầnsố. So sánhvớidaođộngđiềuhòacơbảnchỉmộtmode. Lựccưỡngbứcđặt tầnsố,khôngphảihệ luônchỉdaođộngởtầnsốtựdo.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Vật gắn lò xo lý tưởng",
+        "line": 7,
+        "context": "Vật gắn lò xo lý tưởng có một tần số dao động riêng. Dây căng và cột khí lại có cả một họ dạng dao động riêng. Trong mỗi dạng, mọi phần tử dao động điều hòa với cùng một tần số, nhưng biên độ và pha của chúng thay đổi theo vị trí.\n\nKhi một lực tuần hoàn tác dụng, hệ bị buộc chuyển động theo tần số ngoại lực sau khi phần quá độ đã tắt. Không có yêu cầu tần số cưỡng bức luôn bằng một tần số riêng. Tuy nhiên, biên độ đáp ứng phụ thuộc mạnh vào nhịp kích thích.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.5-u02",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "Xíchđuphảikíchthíchtầnsốphùhợp. H16.19loa phátf vàốngdaođộngf,biênđộnhỏ ngoàiđỉnh, đápứng lớn gầncáctầnsốriêngf₁,2f₁,… ởốnghở. Hìnhdạngđườngcộnghưởngtùyhìnhhọcống.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Cột khí được kích thích bằng loa",
+        "line": 13,
+        "context": "### Cột khí được kích thích bằng loa\n\nĐặt một ống hở hai đầu gần loa phát âm hình sin. Loa tạo lực tuần hoàn lên không khí và buộc không khí trong ống dao động theo tần số phát. Khi thay đổi tần số loa, quan sát biên độ trong ống.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.5-u03",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "Nếu khôngtiêután,cưỡngbứcđúngtầnsốriêng làmnănglượngvàbiênđộtiếptụctăng. Thực tếcótắtdầnnênđỉnhhữuhạn. Khôngkhẳngđịnhđỉnhchuyểnvịluônđúngω₀chomọimôhìnhcản,màliênhệđiềukiệnyếucủa14.8.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Nếu hệ lý tưởng không mất năng lượng",
+        "line": 23,
+        "context": "Nếu hệ lý tưởng không mất năng lượng, kích thích đúng tần số riêng có thể tiếp tục cấp năng lượng làm biên độ tăng, thay vì đạt một biên độ ổn định hữu hạn. Hệ thực có ma sát, bức xạ âm và các dạng tiêu tán khác. Vì thế đáp ứng cộng hưởng có thể lớn nhưng không vô hạn.\n\nKhông cần đổi kết luận của Mục 14.8: Đỉnh biên độ li độ không bắt buộc nằm đúng tần số riêng không cản trong mọi mô hình cản. Ở đây, các đỉnh gần tần số riêng là cách mô tả thích hợp cho cộng hưởng âm có cản nhỏ.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.5-u04",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "Tiếngvỏsòlàkhôngkhíbêntrong lọc/khuếchđạicáctầnsốtừtiếngồnngoài. Thổiquamiệngchaicũngcộnghưởng,khiuốngbớtchấtlỏngthìkhoangkhídàihơn/ lớn hơn nênâmthấphơn. Giữđây làmôhìnhgầnđúng,táchchaihẹp-cổcóthểlàHelmholtz.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Vỏ sò và không khí trong chai",
+        "line": 27,
+        "context": "### Vỏ sò và không khí trong chai\n\nTiếng giống tiếng biển khi áp tai vào vỏ sò không phải âm thanh đã được cất giữ trong vỏ. Âm ngoài môi trường chứa nhiều tần số, kích thích không khí trong khoang. Những miền tần số được khoang đáp ứng mạnh hơn tạo nên âm sắc nghe thấy.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.5-u05",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "Dâymộtđầucốđịnh,đầukiađượcdaođộngbiênđộnhỏ: Gầntầnsốriêng thìbụngcóAthấylớnhơnđầukích,đầukíchgầnnútnhưngkhôngchínhxáctạinút. Liênhệảnh15.23.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Giữ cố định một đầu dây căng",
+        "line": 37,
+        "context": "Giữ cố định một đầu dây căng, rồi làm đầu kia dao động ngang với biên độ nhỏ. Khi tần số kích thích gần một tần số riêng, bụng sóng có thể dao động với biên độ lớn hơn nhiều biên độ của đầu kích thích. Đầu này không hoàn toàn là nút vì nó vẫn chuyển động, nhưng ở cộng hưởng nó gần một nút hơn một bụng.\n\nĐó là cách tạo các ảnh sóng dừng trên dây ở Hình 15.23. Điều kiện đầu gần nút giúp dùng mô hình hai đầu cố định như một gần đúng để dự đoán các tần số đáp ứng mạnh.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.5-u06",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "Thínghiệmđạppedalgiảmrungpianobỏchặndây,hátvàođàn,dâygầncáctầnsốtronggiọnghátcộnghưởngvàtiếptụckêusaukhidừnghát. Vídụgiọnghátkhuếchđại/hình16.20kènlàmvỡlydoAthíchhợplớn,khôngnhầmảnhlàcasi.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Với đàn piano",
+        "line": 41,
+        "context": "Với đàn piano, nhấn bàn đạp nâng bộ chặn dây rồi hát một âm đều vào đàn. Sau khi giọng hát dừng, một số dây vẫn rung và phát âm. Các thành phần tần số trong giọng hát đã kích thích những dây có tần số riêng gần chúng.\n\nMột giọng hát được khuếch đại cũng có thể kích thích dao động của ly thủy tinh. Nếu âm phù hợp với một dạng riêng và biên độ đủ lớn, ứng suất có thể làm ly vỡ. Hình 16.20 minh họa cơ chế ấy bằng âm từ một chiếc kèn.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.5-u07",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "ỨngdụngtaihìnhBIO: Ốngtaidài2.5cm,gầnốngkínmộtđầu,f₁=344/(4×.025)=3440Hz,nêncóthểtăngđộnhạyởvùngtầnsốđó. Đây làmôhìnhđơngiản,khôngmộtcôngthứcgiảithíchtấtcảđộnhạytai.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Mô hình cộng hưởng của ống tai",
+        "line": 47,
+        "context": "### Mô hình cộng hưởng của ống tai\n\nỐng tai chứa không khí, hở ở phía ngoài và gần kín ở phía màng nhĩ. Nếu gần đúng nó bằng một ống đều dài $L$, tần số cơ bản là $v/(4L)$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.5-u08",
+      "sourcePDFPages": [
+        538,
+        539,
+        540
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.12ốngkín/dâyguitartrùngf₁,Ldây=.80Lkhí⇒vdây/vkhí=.40,cùngfnhưngλkhác,λkhídàihơn. Câu16.5đủbốnloạiống,đápi+ivvàđủgiảithíchvìsaoii/iiikhôngcó660Hz.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md",
+      "anchor": {
+        "text": "Ví dụ 16.12",
+        "line": 64,
+        "context": "::: example Ví dụ 16.12: Hòa tấu organ và guitar\nMột ống organ kín một đầu phát âm gần đàn guitar và làm một dây đàn rung mạnh. Ta thay đổi lực căng dây cho tới khi biên độ của dây lớn nhất. Dây dài bằng $80\\%$ chiều dài ống. Nếu cả ống lẫn dây đều dao động ở tần số cơ bản, tìm tỷ số tốc độ sóng trên dây so với tốc độ âm trong không khí.\n\n**Tóm tắt đề bài:** Gọi $L_a$, $v_a$ là chiều dài cột khí và tốc độ âm, còn $L_s$, $v_s$ là chiều dài dây và tốc độ sóng trên dây. Dữ kiện cho $L_s=0{,}80L_a$. Ống kín một đầu, dây giữ cố định ở hai đầu."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+      "publicSha256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+    },
+    {
+      "id": "16.6-u01",
+      "sourcePDFPages": [
+        540,
+        541,
+        542
+      ],
+      "sourceInventoryRequirement": "Giao thoa là hiện tượng chồngchất haihaynhiềusóngtrongcùngvùngkhônggian. Sóngdừnglàtrườnghợphai sóngngượcchiều. Hai loa cùngbộkhuếchđạicùngphaH16.21choPđườngđibằngnhau,tăngcường,biênđộtổng2AnếuhaiAtạ iP bằngnhau.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md",
+      "anchor": {
+        "text": "Giao thoa là các hiệu ứng",
+        "line": 5,
+        "context": "**Giao thoa** là các hiệu ứng do hai hay nhiều sóng chồng lên nhau trong cùng một vùng. Sóng dừng là một trường hợp đặc biệt, khi hai sóng cùng tần số truyền ngược chiều kết hợp. Hai nguồn phát ra không gian còn tạo những mẫu giao thoa khác.\n\n### Hai loa cùng pha\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+      "publicSha256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+    },
+    {
+      "id": "16.6-u02",
+      "sourcePDFPages": [
+        540,
+        541,
+        542
+      ],
+      "sourceInventoryRequirement": "Qhiệuđườngđiλ/2làlệchphanửachu kỳ,triệttiêu. HủyhoàntoàncầncùngtầnsốvàAtạiđiểmxétbằngnhau. Đừnghứatriệttiêuhoàntoànkhihai khoảngcáchkhácnhaulàmhain guồnđiểmcườngđộkhác.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md",
+      "anchor": {
+        "text": "Tại Q, hai đường đi",
+        "line": 15,
+        "context": "Tại Q, hai đường đi chênh nhau $\\lambda/2$. Sóng đi xa hơn tới chậm nửa chu kỳ. Một đỉnh áp suất dương có thể tới cùng một đáy áp suất âm của sóng kia, tạo giao thoa triệt tiêu.\n\nTriệt tiêu hoàn toàn cần hai biên độ tại Q bằng nhau và lệch pha đúng nửa chu kỳ. Nếu hai biên độ khác nhau, vẫn có cực tiểu giao thoa nhưng biên độ còn lại bằng hiệu độ lớn hai biên độ. Đối với các nguồn điểm, sự suy giảm theo khoảng cách có thể khiến hai biên độ tại Q không bằng nhau.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+      "publicSha256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+    },
+    {
+      "id": "16.6-u03",
+      "sourcePDFPages": [
+        540,
+        541,
+        542
+      ],
+      "sourceInventoryRequirement": "Giữcảnhbáophânbiệtmẫugiaothaocủahainguồntỏa với sóngdừng: Vẫncódòngnănglượngtổngra ngoàinhưngphânbốlạ i,chỗyếukhôngphảinănglượngbiếnmất. Tránhkhẳngđịnhvectorliđộtựđộngtriệttiêutạiđiểmp=0khihai sóngtruyềntheophươngkhácnhau.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md",
+      "anchor": {
+        "text": "Giao thoa không làm năng lượng biến mất",
+        "line": 41,
+        "context": "### Giao thoa không làm năng lượng biến mất\n\nMẫu hai nguồn tỏa âm vẫn có dòng năng lượng tổng từ nguồn ra môi trường. Giao thoa phân bố lại dòng năng lượng theo vị trí và hướng. Một vùng âm yếu không có nghĩa năng lượng toàn hệ đã bị hủy, vì những vùng khác nhận dòng năng lượng mạnh hơn.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+      "publicSha256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+    },
+    {
+      "id": "16.6-u04",
+      "sourcePDFPages": [
+        540,
+        541,
+        542
+      ],
+      "sourceInventoryRequirement": "H16.22đủhaiphần: Hiệuđườngđi0,λ,2λ,… chotăngcường;λ/2,3λ/2,5λ/2,…chotriệttiêuvớinguồncùngpha. Khikhaithác côngthứcphảinêuđiềukiệnnguồncùngpha/cùngf.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md",
+      "anchor": {
+        "text": "Hiệu đường đi và điều kiện pha",
+        "line": 19,
+        "context": "### Hiệu đường đi và điều kiện pha\n\nGọi độ chênh chiều dài hai đường đi là $d=|r_2-r_1|$. Với hai nguồn cùng pha và cùng tần số, độ lệch pha do đường truyền là $2\\pi d/\\lambda$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+      "publicSha256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+    },
+    {
+      "id": "16.6-u05",
+      "sourcePDFPages": [
+        540,
+        541,
+        542
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.13đủhình16.23vàhaicâu(a)tăngcường,(b)triệttiêu. Hìnhhọcsuyra4.47213595−4.12310563=.349030329m,nguồnlàmtròn.35m⇒họtầnsốxấpxỉ1kHzvà500Hz. Khônggánđẳngthứcchínhxácchogiátrịlàmtròn.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md",
+      "anchor": {
+        "text": "Ví dụ 16.13",
+        "line": 51,
+        "context": "::: example Ví dụ 16.13: Các tần số tăng cường và triệt tiêu của hai loa\nHai loa nhỏ A, B nối cùng bộ khuếch đại, phát các sóng hình sin cùng pha. Hình 16.23 cho các khoảng cách hình học: Độ lệch của A và B theo một phương lần lượt là $2{,}00\\,\\mathrm m$ và $1{,}00\\,\\mathrm m$, còn P cách đường đó theo phương vuông góc $4{,}00\\,\\mathrm m$.\n\n(a) Những tần số nào tạo giao thoa tăng cường tại P?"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+      "publicSha256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+    },
+    {
+      "id": "16.6-u06",
+      "sourcePDFPages": [
+        540,
+        541,
+        542
+      ],
+      "sourceInventoryRequirement": "Tai nghegiảmồnchủđộngH16.24: Micrôthuâmngoài,mạchphátâmngượcpha trongtainghe,tạotriệttiêutrongvùngđượchiệuchỉnh. Giữứngdụngphi cônggió/cánhquạt,khôngbảorằngtriệttiêuhếtmọiâmtrênmọitầnsố.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md",
+      "anchor": {
+        "text": "Tai nghe giảm ồn chủ động",
+        "line": 102,
+        "context": "### Tai nghe giảm ồn chủ động\n\nMicrô của tai nghe nhận tiếng ồn từ bên ngoài. Mạch điện tạo tín hiệu điều khiển loa bên trong để sinh biến thiên áp suất đối pha với một phần tiếng ồn tới tai. Sự chồng chất làm giảm dao động áp suất trong vùng được hiệu chỉnh.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+      "publicSha256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+    },
+    {
+      "id": "16.6-u07",
+      "sourcePDFPages": [
+        540,
+        541,
+        542
+      ],
+      "sourceInventoryRequirement": "Đặt tựkiểm16.6: Hai loa500/1000Hz,đáp(iii),khôngcómẫutăngcường/triệttiêubấtbiếntheothờigian. Nguyênlýchồngchấtvẫnđúng,khôngnóikháctầnsốkhôngthểcộngsóng.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md",
+      "anchor": {
+        "text": "Tự kiểm 16.6",
+        "line": 110,
+        "context": "### Tự kiểm 16.6: Hai loa phát hai tần số khác nhau\n\nGiả sử loa A trong Hình 16.23 phát sóng hình sin $500\\,\\mathrm{Hz}$, còn loa B phát sóng hình sin $1000\\,\\mathrm{Hz}$. Hai sóng tạo kiểu giao thoa nào?\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+      "publicSha256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+    },
+    {
+      "id": "16.7-u01",
+      "sourcePDFPages": [
+        542,
+        543,
+        544
+      ],
+      "sourceInventoryRequirement": "Haiâmgầntầnsố,cùngAtạ iđiểmxét,tạobiênđộtổngthayđổichậmgọi làphách. Vídụâmthoa/cácốngorganlệchnốt. H16.25cóhaiâm16/18Hz,phách2Hz,khôngđồngnhấtvớifdaođộngnhanh17Hz.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md",
+      "anchor": {
+        "text": "Phách là sự biến thiên",
+        "line": 5,
+        "context": "**Phách** là sự biến thiên chậm của biên độ và độ to khi hai dao động có tần số gần nhau chồng lên nhau. Có thể gặp phách ở hai âm thoa, hai ống organ hơi lệch nhau hoặc hai nguồn âm cần được điều chỉnh cùng tần số.\n\n### Hai dao động 16 Hz và 18 Hz\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+      "publicSha256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+    },
+    {
+      "id": "16.7-u02",
+      "sourcePDFPages": [
+        542,
+        543,
+        544
+      ],
+      "sourceInventoryRequirement": "GiữquyướcphađúngcủaH16.25: ya=Asin(2πfa t),yb=−Asin(2πfb t),biênđộbao2A|sinπ(fa−fb)t|. Bắtđầungượcpha,max.25s,min.50s. Nguồnđúngởđiểmnày,khôngsửa. Dẫnđếnhaitố iđahaitố ithiểutrong1s.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md",
+      "anchor": {
+        "text": "Các dao động trong hình có pha",
+        "line": 13,
+        "context": "Các dao động trong hình có pha ban đầu đối nhau. Ở khoảng $t=0{,}25\\,\\mathrm s$, bao biên đạt cực đại. Ở $t=0{,}50\\,\\mathrm s$, chúng ngược pha và bao biên bằng không. Một giây có hai nhịp tăng rồi giảm biên độ, nên tần số phách bằng $2\\,\\mathrm{Hz}$.\n\nĐừng đồng nhất tần số phách với tần số dao động nhanh bên trong bao biên. Trong ví dụ này, dao động nhanh có tần số trung bình $17\\,\\mathrm{Hz}$, còn nhịp lớn nhỏ chỉ có $2\\,\\mathrm{Hz}$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+      "publicSha256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+    },
+    {
+      "id": "16.7-u03",
+      "sourcePDFPages": [
+        542,
+        543,
+        544
+      ],
+      "sourceInventoryRequirement": "Chứngminhthứnhất: Giả sửkhởiđầucùngpha,fa>fb,Tₐ<Tᵦ,đếnpháchkếtiếpsóngachạyhơnbđúng1chukỳ,Tbeat=nTa=(n−1)Tb. Loạin cóTbeat=TaTb/(Tb−Ta),nghịchđảo16.24fbeat=fa−fb. Miềnkhôngthứtựdùnggiátrịtuyệtđối.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md",
+      "anchor": {
+        "text": "Chứng minh bằng số chu kỳ",
+        "line": 17,
+        "context": "### Chứng minh bằng số chu kỳ\n\nGiả sử $f_a>f_b$, nên hai chu kỳ thỏa $T_a<T_b$. Để đếm nhịp phách, có thể chọn thời điểm ban đầu hai dao động cùng pha. Chúng cùng pha trở lại khi dao động a thực hiện nhiều hơn dao động b đúng một chu kỳ.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+      "publicSha256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+    },
+    {
+      "id": "16.7-u04",
+      "sourcePDFPages": [
+        542,
+        543,
+        544
+      ],
+      "sourceInventoryRequirement": "Chứngminhthứhai: Dùngsina−sinb=2sin((a−b)/2)cos((a+b)/2) choquyướcngượcphatrên. NêurõtầnsốhệsốbiênđộcódấulàΔf/2nhưngcườngđộtỷlệbìnhphương,nênnhịpngheđượcΔf,chứkhôngΔf/2.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md",
+      "anchor": {
+        "text": "Chứng minh bằng phép cộng lượng giác",
+        "line": 50,
+        "context": "### Chứng minh bằng phép cộng lượng giác\n\nĐể mô tả đúng pha ban đầu trong Hình 16.25, chọn\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+      "publicSha256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+    },
+    {
+      "id": "16.7-u05",
+      "sourcePDFPages": [
+        542,
+        543,
+        544
+      ],
+      "sourceInventoryRequirement": "Ứngdụnglênnhạccụ: 2–3Hznghechậpn,o rgan1–2Hzcóthểchủýtạorung. Khoảng6–7Hzchỉquymôcảmnhận,ngoàikhigầnnhaukhôngcònphânbiệttừngnhịp. Âm1800/1900Hzcóthểtạoâmhiệu100Hztrongthínhgiácphi tuyến,khôngnhầmđó làthànhphầnmớicủachồngchấttuyến tính.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md",
+      "anchor": {
+        "text": "Phách vài hertz",
+        "line": 79,
+        "context": "Phách vài hertz được nghe như âm chập chờn. Hai dây piano hoặc hai ống organ lệch khoảng $2$–$3\\,\\mathrm{Hz}$ tạo cảm giác chưa đúng dây. Một số bộ ống organ lại chủ ý lệch khoảng $1$–$2\\,\\mathrm{Hz}$ để tạo hiệu ứng âm nhấp nhô nhẹ.\n\nVới chênh lệch lớn hơn cỡ $6$–$7\\,\\mathrm{Hz}$, từng nhịp thường không còn được cảm nhận rõ như những lần lớn nhỏ riêng biệt. Cảm giác chuyển dần sang sự hòa hợp hoặc nghịch của hai cao độ, tùy tỷ số tần số. Các con số này biểu thị một quy mô cảm nhận, không phải ranh giới giống hệt ở mọi người và mọi tín hiệu.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+      "publicSha256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+    },
+    {
+      "id": "16.7-u06",
+      "sourcePDFPages": [
+        542,
+        543,
+        544
+      ],
+      "sourceInventoryRequirement": "GiữứngdụngđồngbộhaicánhquạtmáybayH16.26đểgiảmtiếngpháchvàứngdụngchỉnhdâyđàn. Cảnhbáopháchchỉcho|fa−fb|,vídụbiết256Hzvàphách1Hzthìcònlạilà255hoặc257Hz.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md",
+      "anchor": {
+        "text": "Nghe phách là một cách",
+        "line": 87,
+        "context": "Nghe phách là một cách chỉnh tần số nhạc cụ. Khi hai tần số tiến gần nhau, nhịp phách chậm lại. Nguyên tắc tương tự giúp đồng bộ cánh quạt của máy bay nhiều động cơ để giảm tiếng rung âm khó chịu.\n\nTần số phách chỉ cho độ lớn chênh lệch. Nếu biết một âm là $256\\,\\mathrm{Hz}$ và phách bằng $1\\,\\mathrm{Hz}$, âm kia có thể là $255$ hoặc $257\\,\\mathrm{Hz}$. Muốn phân biệt cần thêm thông tin, chẳng hạn so sánh cao độ từng âm hoặc quan sát chiều biến đổi nhịp khi điều chỉnh một nguồn.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+      "publicSha256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+    },
+    {
+      "id": "16.7-u07",
+      "sourcePDFPages": [
+        542,
+        543,
+        544
+      ],
+      "sourceInventoryRequirement": "Đặt tựkiểm16.7đủsáulựachọn: Âmthoa440Hz,phách3Hz⇒437hoặc443Hz,(vi). Nêu cáchphânbiệtcaođộ bằngnghe từngâm,khôngtựchọnmộtnghiệm.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md",
+      "anchor": {
+        "text": "Tự kiểm 16.7",
+        "line": 91,
+        "context": "### Tự kiểm 16.7: Một âm thoa chưa biết tần số\n\nMột âm thoa dao động ở $440\\,\\mathrm{Hz}$, âm thoa thứ hai có tần số chưa biết. Phát đồng thời hai âm, ta nghe cường độ tăng giảm ba lần mỗi giây. Tần số âm thoa thứ hai là:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+      "publicSha256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+    },
+    {
+      "id": "16.8-u01",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Mở từ tiếngcòixeđổicaođộkhilướtqua. Dopplerâmxétvậntốcnguồnngười ngheso vớimôitrường,khôngchỉvậntốctươngđốivới nhau. Hạnchếchuyểnđộngdọcđườngnối,chiềudươngtừngườingheLtớinguồnS,vl/vscódấu,vâm>0.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Còi xe đang tiến lại gần",
+        "line": 3,
+        "context": "Còi xe đang tiến lại gần thường nghe cao hơn, rồi hạ xuống khi xe đi qua và ra xa. Nguồn chưa cần đổi nhịp dao động để người nghe nhận một tần số khác. Chuyển động làm thay đổi nhịp các mặt sóng tới người nghe.\n\nSự thay đổi tần số thu được do chuyển động của nguồn, người nhận hoặc cả hai gọi là **hiệu ứng Doppler**. Hiện tượng được đặt theo tên nhà vật lý Áo Christian Doppler, người đã mô tả nó trong thế kỷ XIX. Doppler xuất hiện với âm, ánh sáng và sóng vô tuyến, nhưng quan hệ định lượng của âm khác với ánh sáng trong chân không.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u02",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Nguồnđứngyên,ngườinghedịchchuyểnH16.27: λ=v/fS,mặt sóngtớivới tốcđộtươngđốiv+vL.16.25fL=(v+vL)/λ=(v+vL)/(v/fS)⇒16.26fL=(1+vL/v)fS. vL>0tiếntớinghecao,vL<0raxanghethấp.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Người nghe chuyển động, nguồn đứng yên",
+        "line": 15,
+        "context": "### Người nghe chuyển động, nguồn đứng yên\n\nKhi nguồn đứng yên trong không khí, khoảng cách giữa hai đỉnh liên tiếp là $\\lambda=v/f_S$. Nếu người nghe tiến về nguồn với $v_L>0$, đỉnh sóng và người nghe chuyển động ngược chiều nhau. Tốc độ gặp nhau bằng $v+v_L$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u03",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "NguồnchuyểnđộngH16.28: TrongTS=1/fS,mặtsóngđivTS,nguồnđivSTS,vâmso môitrườngkhôngđổido nguồndịchchuyển. Bướcsóngtrước16.27(v−vS)/fS,sau16.28(v+vS)/fS,vSởđâylàchiềunguồntronghình.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Nguồn chuyển động làm đổi bước sóng",
+        "line": 39,
+        "context": "### Nguồn chuyển động làm đổi bước sóng\n\nKhi nguồn chuyển động, tốc độ truyền âm đối với môi trường vẫn do môi trường quyết định. Điều thay đổi là vị trí nguồn tại những lần phát đỉnh liên tiếp.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u04",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Phốihợpngườinghevànguồn trongquyướcLtớiS cho16.29fL=(v+vL)/(v+vS)fS. BướcsóngphíasautronghìnhlàphíasóngđếnL. Chuyển vịtríngườinghesangphíatrướcthìphảichọnlạidấutheochiềuLtớiS,khôngthaycôngthứcngẫunhiên.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Cả nguồn lẫn người nghe chuyển động",
+        "line": 65,
+        "context": "### Cả nguồn lẫn người nghe chuyển động\n\nTrong Hình 16.28, người nghe ở phía sau và các đỉnh sóng tới người ấy có bước sóng $(v+v_S)/f_S$. Nếu người nghe còn chuyển động, tốc độ gặp đỉnh vẫn là $v+v_L$ theo quy ước L tới S.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u05",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "CácgiớihạnvL=0,vS=0,vL=vSchohệthứcđúng. NguồnraxavS>0nghethấp,nguồntiếntớivS<0nghecao. H16.29còixecứuthương. Giữđiềukiệntố cđộdướiâmđểcácđỉnhsóngđếnđúngthứtự,khôngđemdùngcôngthứctổngquátchonguồnsiêuâmtùygóc.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Các trường hợp giới hạn",
+        "line": 82,
+        "context": "Các trường hợp giới hạn giúp đọc ý nghĩa:\n\n- Nếu $v_S=0$, trở lại công thức người nghe chuyển động.\n- Nếu $v_L=0$, nguồn tiến lại gần có $v_S<0$, làm mẫu nhỏ hơn và tần số tăng. Nguồn ra xa có $v_S>0$, làm tần số giảm."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u06",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Chiếnlược16.2giữđủ: ChọntrụcLtớiS,xácđịnhdấuvậntốcso môitrường,subscriptsS/L,mục tiêu. Vớiâmphảnxạphânhai lượt, vậtphảnxạlàLrồitrởthànhSpháttầnsốđãnhận. Kiểmtrachiềudịchtầnsố.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Cách thiết lập bài toán Doppler",
+        "line": 90,
+        "context": "### Cách thiết lập bài toán Doppler\n\nTrước khi thay số, xác định ai phát sóng và ai nhận sóng ở lượt đang xét. Vẽ đường nối L với S, đặt chiều dương L tới S rồi ghi vận tốc của từng vật so với môi trường. Dùng nhất quán các chỉ số L, S và nêu rõ đại lượng cần tìm.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u07",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.14đủ3bướcsóngnguồndừng/trước/sau;16.15nguồnraxangườinghedừng;16.16ngườingheraxanguồndừng;16.17nguồnvàngườinghecùngchiềuso khôngkhí. Cảba15–17có tốcđộrời nhau30m/snhưngfkhác,khôngdùngchỉtố cđộtươngđối.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Ví dụ 16.14",
+        "line": 100,
+        "context": "::: example Ví dụ 16.14: Doppler I, bước sóng phía trước và phía sau\nCòi xe cảnh sát phát sóng hình sin với tần số $f_S=300\\,\\mathrm{Hz}$. Không khí đứng yên và tốc độ âm là $340\\,\\mathrm{m/s}$.\n\n(a) Tìm bước sóng khi còi đứng yên."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u08",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.18xeđế nnhàkho: Lượt1nguồnxevS−30,vL0,fW329Hz,lượt2nhàkhostationarynguồnvS0,ngườinghetiếntớivL+30,fL358Hz. GiữH16.34hai trạngthái,khôngchỉmộtlầnDoppler.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Ví dụ 16.18",
+        "line": 219,
+        "context": "::: example Ví dụ 16.18: Doppler V, âm phản xạ về xe\nXe cảnh sát chuyển động về phía một nhà kho với tốc độ $30\\,\\mathrm{m/s}$. Người lái nghe âm còi phản xạ từ nhà kho với tần số bao nhiêu? Dùng tần số còi $300\\,\\mathrm{Hz}$, tốc độ âm $340\\,\\mathrm{m/s}$ và không khí đứng yên.\n\n![Hình 16.34: Phần (a) là lượt từ còi xe tới nhà kho, với nhà kho đóng vai người nghe. Phần (b) là lượt phản xạ từ nhà kho về xe, với người lái đóng vai người nghe. Chiều dương được chọn lại cho từng lượt.](source-image:figure-16-34)"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u09",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Dopplerđiệntừtrongchânkhôngkhôngcómôitrường làmchuẩn,chỉvậntốctươngđốiquantrọng. Nêurõchỉtríchkếtquảtươngđốiđặcbiệt(chưa chứngminhởđây),16.30fR=√((c−u)/(c+u))fS,u>0raxa,u<0tiếntới,|u|<c.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Doppler của sóng điện từ trong chân không",
+        "line": 253,
+        "context": "### Doppler của sóng điện từ trong chân không\n\nÁnh sáng và sóng vô tuyến trong chân không không cần một môi trường vật chất làm chuẩn vận tốc. Độ dịch tần số khi nguồn và máy thu chuyển động tương đối phải được mô tả bằng thuyết tương đối hẹp, được phát triển ở Chương 37.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u10",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Ứngdụngradarđo xe dùngsóngphảnxạtrộn tínhiệu gốctạopháchsuyravậntốc,radargió,vệtinhH16.35vậntốctheophươngngắmđổitừtiếntớisangraxa,nêntầnsốthucaoxuốngthấp.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Radar và theo dõi vệ tinh",
+        "line": 269,
+        "context": "### Radar và theo dõi vệ tinh\n\nRadar đo tốc độ xe phát sóng vô tuyến rồi nhận sóng phản xạ từ xe chuyển động. Tín hiệu thu được trộn với tín hiệu phát để tạo nhịp phách. Tần số phách cho phép suy ra thành phần vận tốc cần đo. Radar Doppler cũng được dùng để khảo sát chuyển động của không khí.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.8-u11",
+      "sourcePDFPages": [
+        544,
+        545,
+        546,
+        547,
+        548,
+        549
+      ],
+      "sourceInventoryRequirement": "Tựkiểm16.8gió10m/s từbiểudiễntớingườinghe,nguồnvàngườidừngtrênđất. So vớikhí,vS=vL+10m/strongchiềuLtớiS⇒fL=fS,khôngcóDoppler, dùtốcđộâmso đấtđổi.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md",
+      "anchor": {
+        "text": "Tự kiểm 16.8",
+        "line": 277,
+        "context": "### Tự kiểm 16.8: Gió có gây Doppler không?\n\nBạn nghe hòa nhạc ngoài trời. Gió thổi với tốc độ $10\\,\\mathrm{m/s}$ từ người biểu diễn về phía bạn. Âm nghe được có bị dịch Doppler không? Nếu có, tần số tăng hay giảm?\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+      "publicSha256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+    },
+    {
+      "id": "16.9-u01",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "VùnggầnâmvS→v: Bướcsóngphíatrước(v−vS)/fgiảmvàcácđỉnhdồnlạiH16.36a,né nkhí cầnlựclớn,tănglựccản,giảithíchnặngýnghĩaràocảnâmthanh.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Khi nguồn tiến gần tốc độ âm",
+        "line": 5,
+        "context": "### Khi nguồn tiến gần tốc độ âm\n\nGọi tốc độ máy bay đối với không khí là $v_S>0$, còn tốc độ âm là $v$. Khi $v_S<v$, các mặt sóng phía trước nguồn gần nhau hơn, như biểu thức\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u02",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "KhinguồnvS>v,côngthứcDopplerphíatrướckhôngcòndùngđược. Mặt sóngphátraởS₁nởbánkínhvt trongkhinguồnđiđếnS₂khoảngvSt,làngbao tiếpxúccácmặt sóngtạo mặtxungkíchH16.36b,ảnh16.36cđủmũi/cánh/đuôi.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Mặt nón Mach",
+        "line": 19,
+        "context": "### Mặt nón Mach\n\nGiả sử nguồn chuyển động đều từ S₁ tới S₂ trong thời gian $t$. Nhiễu loạn phát lúc nguồn ở S₁ lan được quãng $vt$, trong khi nguồn đã đi được quãng lớn hơn $v_St$.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u03",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "Tamgiácvuôngtại tiếpxúcch o16.31sinα=vt/(vSt)=v/vS. Mach=vS/v>1,αlàngóc nửamặt nón,khônggóctoànnón. Ba chiềulàmặtnónđi theo nguồnchuyểnđộngđều.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Số Mach",
+        "line": 33,
+        "context": "**Số Mach** là tỷ số tốc độ vật đối với môi trường với tốc độ âm trong môi trường ấy:\n\n$$\nM=\\frac{v_S}{v}."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u04",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "GiữmáybayBellX-1H16.37vàchuyếnvượtâmMach1.06củaChuckYeagerngày14/10/1947,nhưngparentcầnverifyprimarynếuthôngtinnàychưacósổnguồntrướ c.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Chuyến bay vượt âm",
+        "line": 41,
+        "context": "![Hình 16.37: Máy bay Bell X-1 có hình dáng thân gợi từ đầu đạn. Chuyến bay vượt âm có người lái của Chuck Yeager diễn ra ngày 14 tháng 10 năm 1947, đạt khoảng Mach 1,06.](source-image:figure-16-37)\n\nNếu nguồn và tốc độ âm đều không đổi, mặt nón chuyển động cùng nguồn với góc mở không đổi. Không khí thực quanh mũi, cánh và đuôi bị tăng hoặc giảm tốc cục bộ, nên những mặt xung kích ở các vị trí khác nhau trên máy bay không nhất thiết có cùng một góc.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u05",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "Tiếngnổkhi mặtxungkíchquangườinghe,khôngphảibấtkỳlúcmáybayởngaytrênđầu. Trướcnónchưanghe,bêntrongphíasau ngheâmhạ tầndo nguồnraxa.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Tiếng nổ không chỉ xuất hiện",
+        "line": 45,
+        "context": "### Tiếng nổ không chỉ xuất hiện lúc vừa vượt âm\n\nNgười nghe tiếng nổ khi mặt xung kích đi qua vị trí mình. Nguồn có thể đã bay qua đầu trước đó. Người ở phía trước mặt nón chưa nhận các nhiễu loạn do nguồn đang vượt âm tạo ra, còn phía trong nón có thể nghe âm từ nguồn đang rời xa.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u06",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "Cảnhbáogiữđủ: Mặtxungkíchtạoliêntụctrongsuốtchuyểnđộngsiêuâm,khôngchỉthờikhắcvượtMach1. Vậtđẩykhí tựtạora,nênđộngcơtắtmáybayvẫncóxungkíchnếuvẫncònsiêuâm. Đạnvàđầuroivượttố câmcũngtạotiếngnổ.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Sóng xung kích được tạo liên tục",
+        "line": 49,
+        "context": "Sóng xung kích được tạo liên tục khi vật tiếp tục chuyển động vượt âm, không chỉ ở khoảnh khắc tốc độ vượt qua Mach 1. Nó xuất hiện do vật làm nhiễu loạn và nén không khí, không phụ thuộc việc vật có mang một loa hoặc động cơ đang phát tiếng lớn hay không.\n\nMáy bay tắt động cơ nhưng vẫn còn vượt âm vẫn tạo xung kích. Tiếng nổ của viên đạn và tiếng đanh ở đầu roi cũng liên quan đến chuyển động vượt tốc độ âm. Những trường hợp này phân biệt nguyên nhân cơ học của mặt xung kích với tiếng động do một nguồn âm gắn trên vật phát ra.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u07",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "Ứngdụngxungkíchhội tụbằnggương/thấukínhâmđểphávỡsỏi,địnhvịbằngsiêuâm. Chỉtrìnhbàycơchếvậtlýứngsuấtvượtđộbền,khônghướngdẫnđiềutrịhoặckhẳngđịnhmọiloạisỏiđềuđượcdùng.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Hội tụ xung kích",
+        "line": 53,
+        "context": "### Hội tụ xung kích\n\nSóng xung kích còn được ứng dụng trong tán sỏi ngoài cơ thể. Nguồn đặt bên ngoài tạo xung được phản xạ hoặc khúc xạ để tập trung vào vị trí cần tác dụng. Khi ứng suất thích hợp vượt độ bền của vật liệu sỏi, sỏi có thể bị phân mảnh.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u08",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "Ví dụ16.19Mach1.75,ca o8000m,v320m/s,α34.8499°,vS560m/s,trễ20.5163s,máybayđi11.489km. Giữmôhìnhvkhôngđổitheođộcaonêntạonónchuẩn,câuhỏimởcuốivềsựphụthuộcvàođộcao.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Ví dụ 16.19",
+        "line": 59,
+        "context": "::: example Ví dụ 16.19: Độ trễ nghe tiếng nổ của máy bay vượt âm\nMáy bay bay ở Mach $1{,}75$, độ cao $8000\\,\\mathrm m$. Tốc độ âm tại độ cao đó là $320\\,\\mathrm{m/s}$. Sau bao lâu kể từ khi máy bay đi qua ngay trên đầu, người đứng dưới đất nghe tiếng nổ?\n\n![Hình 16.38: Người nghe tại L nhận tiếng nổ khi mặt nón chạm tới vị trí mình. Máy bay khi ấy đã đi thêm một quãng ngang sau lúc qua ngay trên đầu.](source-image:figure-16-38)"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "16.9-u09",
+      "sourcePDFPages": [
+        549,
+        550,
+        551
+      ],
+      "sourceInventoryRequirement": "Tựkiểm16.9ngườinghengayphíasauvàbêntrongnónngheâmDopplerthấp,(iii). Phânbiệtviệcnghenguồnbêntrongnónvớichínhsựkiệnmặtnónđiqua gâytiếngnổ.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md",
+      "anchor": {
+        "text": "Tự kiểm 16.9",
+        "line": 107,
+        "context": "### Tự kiểm 16.9: Người nghe ở phía sau máy bay\n\nNếu ở ngay phía sau, tức phía trái máy bay vượt âm trong Hình 16.38, bạn sẽ nghe gì?\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+      "publicSha256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+    },
+    {
+      "id": "summary-u01",
+      "sourcePDFPages": [
+        551,
+        552
+      ],
+      "sourceInventoryRequirement": "Tổngkếtsóngâmvàliênhệpmax=BkA,vchấtlưu/khílýtưởng/thanh,giữđúngđiềukiệnmôitrườngcủatừngcôngthức.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/17-tom-tat.md",
+      "anchor": {
+        "text": "Sóng âm và biến thiên áp suất",
+        "line": 3,
+        "context": "### Sóng âm và biến thiên áp suất\n\nÂm truyền trong chất lưu dưới dạng sóng dọc. Li độ phần tử và chiều truyền sóng song song nhau. Với sóng hình sin truyền theo chiều dương trục $x$,\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/17-tom-tat.md",
+      "publicSha256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    },
+    {
+      "id": "summary-u02",
+      "sourcePDFPages": [
+        551,
+        552
+      ],
+      "sourceInventoryRequirement": "TổngkếtItheoAhoặcpmax,mứcβlogarithm,I₀,đơnvịdB.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/17-tom-tat.md",
+      "anchor": {
+        "text": "Cường độ và mức cường độ âm",
+        "line": 45,
+        "context": "### Cường độ và mức cường độ âm\n\nCường độ là công suất truyền trung bình trên một đơn vị diện tích vuông góc phương truyền. Với sóng âm hình sin chạy trong chất lưu,\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/17-tom-tat.md",
+      "publicSha256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    },
+    {
+      "id": "summary-u03",
+      "sourcePDFPages": [
+        551,
+        552
+      ],
+      "sourceInventoryRequirement": "Tổngkếtnút/bụngliđộáp suất,ốnghởđầyđủhọaâmvàốngkínmộtđầuchỉhọaâmlẻ,cộnghưởnggầntầnsốriêng.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/17-tom-tat.md",
+      "anchor": {
+        "text": "Sóng âm dừng và cộng hưởng",
+        "line": 67,
+        "context": "### Sóng âm dừng và cộng hưởng\n\nTrong ống khí lý tưởng, đầu kín là nút li độ và bụng áp suất. Đầu hở gần là bụng li độ và nút áp suất. Nút của một đại lượng không được đồng nhất với nút của đại lượng kia.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/17-tom-tat.md",
+      "publicSha256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    },
+    {
+      "id": "summary-u04",
+      "sourcePDFPages": [
+        551,
+        552
+      ],
+      "sourceInventoryRequirement": "Tổngkếtgiaothoa,pháchvớiđiềukiệncùng/kháctầnsố,họfbeat=|fa−fb|.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/17-tom-tat.md",
+      "anchor": {
+        "text": "Giao thoa",
+        "line": 87,
+        "context": "### Giao thoa\n\nHai nguồn cùng tần số và cùng pha tạo tăng cường khi hiệu đường đi bằng $0$, $\\lambda$, $2\\lambda$, tiếp tục theo các bội nguyên. Chúng tạo triệt tiêu khi hiệu đường đi bằng $\\lambda/2$, $3\\lambda/2$, $5\\lambda/2$, tiếp tục theo số lẻ nửa bước sóng.\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/17-tom-tat.md",
+      "publicSha256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    },
+    {
+      "id": "summary-u05",
+      "sourcePDFPages": [
+        551,
+        552
+      ],
+      "sourceInventoryRequirement": "TổngkếtDopplerâmvớiquyướcdấuLtớiSvàvậntốcso môitrường,nguồnsiêuâmvàsinα=v/vS.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/17-tom-tat.md",
+      "anchor": {
+        "text": "Doppler",
+        "line": 107,
+        "context": "### Doppler\n\nVới âm và chuyển động dọc đường nối, vận tốc nguồn và người nghe phải đo đối với môi trường. Chọn chiều dương từ L tới S, tốc độ âm $v>0$ và các thành phần $v_L$, $v_S$ có dấu:\n"
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/17-tom-tat.md",
+      "publicSha256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    },
+    {
+      "id": "summary-u06",
+      "sourcePDFPages": [
+        551,
+        552
+      ],
+      "sourceInventoryRequirement": "Giữcảbảyhìnhminhhọatổngkếtriêng,khôngcoicáchìnhnhỏởSummarylàkhôngquantrọng. Câutựkiểm16.9nằmtrướcSummary,khôngđưa xuốngcuốichương.",
+      "proposal": "qa/physics1-remaining/ch16-author-b/proposed-fragments/17-tom-tat.md",
+      "anchor": {
+        "text": "Tổng kết xung kích",
+        "line": 127,
+        "context": "![Tổng kết xung kích: Mặt nón đi theo nguồn có tốc độ lớn hơn tốc độ âm. Góc alpha được đo giữa phương chuyển động và một đường sinh mặt nón.](source-image:summary-shock)\n\nSố Mach $M=v_S/v$ lớn hơn một. Tiếng nổ được nghe khi mặt xung kích tới người nghe, không nhất thiết lúc máy bay ở ngay trên đầu và không chỉ tại thời điểm nguồn vừa vượt Mach 1."
+      },
+      "review": "Actual original PDF section and corresponding proposal read; mathematical content independently checked where applicable.",
+      "status": "source-meaning-present",
+      "publicFragment": "raw_materials/physics/translations/chapter-16/17-tom-tat.md",
+      "publicSha256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    }
+  ],
+  "actualSourcePagesRead": [
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    543,
+    544,
+    545,
+    546,
+    547,
+    548,
+    549,
+    550,
+    551,
+    552
+  ],
+  "inputFileHashes": {
+    "qa/physics1-remaining/ch16-author-a/proposed-fragments/00-mo-dau.md": "b9b882d116a0edd4b4e6a20bba313f35a565da3f80a225f8714462949fc2b4e5",
+    "qa/physics1-remaining/ch16-author-b/proposed-fragments/17-tom-tat.md": "172cc4aa9ccff8ab349d3818360b628f711bdda07c8e9a3c7328ea5c5435fcab",
+    "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md": "144979ee529f1b2967416abbafd80953d61736e32b9e5527c60d571f6c00ef8f",
+    "qa/physics1-remaining/ch16-author-a/proposed-fragments/02-muc-02.md": "3a9a24bb3f5f774087fce135e069ca6544d75d641587207078899de430815475",
+    "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md": "86e8a04083e063a237f41dbae51fb6f926cb6da1e61175a297199df4c59af535",
+    "qa/physics1-remaining/ch16-author-a/proposed-fragments/04-muc-04.md": "124c4e70e371355e16b2a5f039877cabf8271c09ea54b7d91fe18fa23270b673",
+    "qa/physics1-remaining/ch16-author-b/proposed-fragments/05-muc-05.md": "a2a1c932d80495c867f8c3470fcd8e55b7e964833177bab94f1e4916876952a8",
+    "qa/physics1-remaining/ch16-author-b/proposed-fragments/06-muc-06.md": "1f17b74659f8435a1b7f1ec3e358003d219e7b19572982c6b8986d3e434a9387",
+    "qa/physics1-remaining/ch16-author-b/proposed-fragments/07-muc-07.md": "0c5e37466d04a18931b218aec1a3b2607af73534435795fd000dfe59fbb0e03d",
+    "qa/physics1-remaining/ch16-author-b/proposed-fragments/08-muc-08.md": "a4bdf1a690f46a3349c8a4405035fbf891ba3603fee70802b7b848f89f77355a",
+    "qa/physics1-remaining/ch16-author-b/proposed-fragments/09-muc-09.md": "9a9c011e40b3e43320b604c8743004c9facfd3e4e28070d53768858cced99005"
+  },
+  "examples": [
+    {
+      "id": "16.1",
+      "sourcePDFPages": [
+        524
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Tính biên độ dịch chuyển A."
+      ],
+      "proposalSection": "Notes/16.1",
+      "numericResult": {
+        "wave_number_rad_m": 18.265073567382515,
+        "displacement_m": 1.1566753610622254e-08,
+        "model": "linear plane traveling sound"
+      }
+    },
+    {
+      "id": "16.2",
+      "sourcePDFPages": [
+        524,
+        525
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "(a) Tính biên độ áp suất trong chất lỏng tai trong.",
+        "(b) Tính biên độ dịch chuyển trong chất lỏng."
+      ],
+      "proposalSection": "Notes/16.1",
+      "numericResult": {
+        "area_ratio": 13.4375,
+        "fluid_pressure_Pa": 0.403125,
+        "fluid_bulk_modulus_Pa": 2183406113.537118,
+        "fluid_displacement_m": 4.407746413010325e-11
+      }
+    },
+    {
+      "id": "16.3",
+      "sourcePDFPages": [
+        528
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Tính vận tốc âm trong nước.",
+        "Tính bước sóng của sóng262Hz."
+      ],
+      "proposalSection": "Notes/16.2",
+      "numericResult": {
+        "water_speed_m_s": 1476.48230602334,
+        "wavelength_m": 5.635428648944046
+      }
+    },
+    {
+      "id": "16.4",
+      "sourcePDFPages": [
+        529
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Tính vận tốc âm ở20°C.",
+        "Tính dải bước sóng tương ứng20–20000Hz."
+      ],
+      "proposalSection": "Notes/16.2",
+      "numericResult": {
+        "gas_speed_m_s": 344.20544273087194,
+        "wavelength_20Hz_m": 17.210272136543598,
+        "wavelength_20000Hz_m": 0.017210272136543598
+      }
+    },
+    {
+      "id": "16.5",
+      "sourcePDFPages": [
+        531
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Tính I."
+      ],
+      "proposalSection": "Notes/16.3",
+      "numericResult": {
+        "intensity_W_m2": 1.0901162790697674e-06
+      }
+    },
+    {
+      "id": "16.6",
+      "sourcePDFPages": [
+        532
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Tính biên độ áp suất ở20Hz khiIgiữnguyên.",
+        "Tính biên độ dịch chuyển ở20Hz."
+      ],
+      "proposalSection": "Notes/16.3",
+      "numericResult": {
+        "pressure_Pa": 0.03,
+        "displacement_using_rounded_16_1_m": 6e-07,
+        "displacement_ratio": 50
+      }
+    },
+    {
+      "id": "16.7",
+      "sourcePDFPages": [
+        532
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Tính công suất âm trung bình yêu cầu."
+      ],
+      "proposalSection": "Notes/16.3",
+      "numericResult": {
+        "required_hemispherical_power_W": 2513.2741228718346
+      }
+    },
+    {
+      "id": "16.8",
+      "sourcePDFPages": [
+        533
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Cường độ nào tương ứng28dB?",
+        "Cường độ nào tương ứng92dB?"
+      ],
+      "proposalSection": "Notes/16.3",
+      "numericResult": {
+        "I28_W_m2": 6.30957344480193e-10,
+        "I92_W_m2": 0.0015848931924611108,
+        "health_dose_outcomes_verified": false
+      }
+    },
+    {
+      "id": "16.9",
+      "sourcePDFPages": [
+        533
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Khi khoảng cách tăng gấp đôi, mức cường độ âm giảm bao nhiêu dB?"
+      ],
+      "proposalSection": "Notes/16.3",
+      "numericResult": {
+        "level_change_dB": -6.020599913279624
+      }
+    },
+    {
+      "id": "16.10",
+      "sourcePDFPages": [
+        535
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Đứng cách tường những khoảng nào thì không nghe âm trong mô hình sóng tới–phản xạ lý tưởng?"
+      ],
+      "proposalSection": "Notes/16.4",
+      "numericResult": {
+        "pressure_node_d_over_lambda": [
+          0.25,
+          0.75,
+          1.25
+        ],
+        "conceptual": true
+      }
+    },
+    {
+      "id": "16.11",
+      "sourcePDFPages": [
+        537
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "(a) Tính chiều dài ống kín một đầu.",
+        "(b) Tính chiều dài ống hở hai đầu."
+      ],
+      "proposalSection": "Notes/16.4",
+      "numericResult": {
+        "stopped_pipe_length_m": 0.39090909090909093,
+        "shared_frequency_Hz": 1100,
+        "open_pipe_length_m": 0.4690909090909091
+      }
+    },
+    {
+      "id": "16.12",
+      "sourcePDFPages": [
+        539,
+        540
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Tính tỷ số vận tốc sóng trên dây so với tốc độ âm trong không khí."
+      ],
+      "proposalSection": "Notes/16.5",
+      "numericResult": {
+        "string_to_air_wave_speed_ratio": 0.4,
+        "string_length_to_pipe_ratio": 0.8
+      }
+    },
+    {
+      "id": "16.13",
+      "sourcePDFPages": [
+        541
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "(a) Những tần số nào cho tăng cường tạiP?",
+        "(b) Những tần số nào cho triệt tiêu tạiP?"
+      ],
+      "proposalSection": "Notes/16.6",
+      "numericResult": {
+        "path_difference_m": 0.349030329381919,
+        "constructive_fundamental_Hz": 1002.7781844053442,
+        "destructive_lowest_Hz": 501.3890922026721
+      }
+    },
+    {
+      "id": "16.14",
+      "sourcePDFPages": [
+        546
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "(a) Tínhλkhinguồnđứngyên.",
+        "(b) Tínhλtrướcvàsaukhinguồnchuyểnđộng30m/s."
+      ],
+      "proposalSection": "Notes/16.8",
+      "numericResult": {
+        "static_wavelength_m": 1.1333333333333333,
+        "front_wavelength_m": 1.0333333333333334,
+        "rear_wavelength_m": 1.2333333333333334
+      }
+    },
+    {
+      "id": "16.15",
+      "sourcePDFPages": [
+        547
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Người nghe đứng yên nghe tần số nào khi nguồn ra xa30m/s?"
+      ],
+      "proposalSection": "Notes/16.8",
+      "numericResult": {
+        "received_Hz": 275.6756756757239
+      }
+    },
+    {
+      "id": "16.16",
+      "sourcePDFPages": [
+        547
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Nguồn đứng yên, người nghe ra xa30m/s thì nghe tần số nào?"
+      ],
+      "proposalSection": "Notes/16.8",
+      "numericResult": {
+        "received_Hz": 273.52941176468886
+      }
+    },
+    {
+      "id": "16.17",
+      "sourcePDFPages": [
+        547
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Nguồn ra xa45m/s, người nghe đuổi theo15m/s so khôngkhí thì nghe tần số nào?"
+      ],
+      "proposalSection": "Notes/16.8",
+      "numericResult": {
+        "received_Hz": 276.6233766233334
+      }
+    },
+    {
+      "id": "16.18",
+      "sourcePDFPages": [
+        548
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Người lái nghe âm phản xạ từ nhà kho với tần số nào?"
+      ],
+      "proposalSection": "Notes/16.8",
+      "numericResult": {
+        "wall_received_Hz": 329.03225806451616,
+        "echo_received_Hz": 358.06451612905016
+      }
+    },
+    {
+      "id": "16.19",
+      "sourcePDFPages": [
+        550,
+        551
+      ],
+      "promptDataComparedWithActualSource": true,
+      "sourceSubparts": [
+        "Sau bao lâu kể từ khi máy bay ở ngay trên đầu thì người đứng dưới đất nghe tiếng nổ?"
+      ],
+      "proposalSection": "Notes/16.9",
+      "numericResult": {
+        "Mach_half_angle_deg": 34.84990457904648,
+        "delay_after_overhead_s": 20.516295166207247,
+        "first_arrival_by_retarded_minimum_s": 20.516295166207243,
+        "distance_plane_travels_m": 11489.125293076058
+      }
+    }
+  ],
+  "sourceInventoryCorrections": [
+    {
+      "id": "source-audit-example16.1-cell-versus-atom",
+      "location": "qa/physics1-remaining/ch16-gpt-source/source-unit-ledger.json examples16.1.requiredSolution",
+      "issue": "Source-audit index says one hundredth of an atom, but actualPDF524 says one hundredth of a human cell. The proposal correctly says cell, so this index error was not propagated.",
+      "action": "Use actual source page, preserve frozen audit as evidence; record correction in final independent coverage."
+    }
+  ],
+  "tables": {
+    "16.1": {
+      "rows": 11,
+      "transcription": "Compared with actualPDF528; no experimental verification."
+    },
+    "16.2": {
+      "rows": 11,
+      "transcription": "Compared with actualPDF533; logarithmic conversions independently recalculated."
+    }
+  },
+  "twoStrategies": "Source16.1 intensity strategy onPDF531 and16.2 Doppler strategy onPDF546 compared with authored paragraphs.",
+  "findings": [
+    {
+      "severity": "P3",
+      "id": "16.1-example-scale-comparison",
+      "sourcePDFPage": 524,
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "line": 130,
+      "issue": "Core amplitude is correct. Source evaluation compares it to approximately one hundredth of a human cell; draft only says much smaller than a human cell.",
+      "recommendation": "Restore the approximate one-hundredth scale comparison, clearly as an illustrative scale rather than a universal cell-size claim.",
+      "status": "open-for-parent-correction"
+    },
+    {
+      "severity": "P3",
+      "id": "16.1-amplitude-pitch-direction",
+      "sourcePDFPage": 525,
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/01-muc-01.md",
+      "line": 195,
+      "issue": "Draft preserves that amplitude affects perceived pitch but omits the source's direction: Greater amplitude at fixed frequency is generally perceived as louder and slightly lower in pitch.",
+      "recommendation": "Restore the qualified direction of this perceptual comparison, without claiming it as a universal law.",
+      "status": "open-for-parent-correction"
+    },
+    {
+      "severity": "P3",
+      "id": "16.3-power-wording",
+      "sourcePDFPage": 531,
+      "proposal": "qa/physics1-remaining/ch16-author-a/proposed-fragments/03-muc-03.md",
+      "issue": "The100W comparison currently calls the lightbulb quantity electrical energy supplied. The compared dimension is power.",
+      "recommendation": "Use công suất điện cấp instead of điện năng cấp.",
+      "line": 76,
+      "status": "open-for-parent-correction"
+    }
+  ],
+  "math": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 28,
+    "inlineLimitEx": 27,
+    "display": 123,
+    "inline": 614,
+    "findings": []
+  },
+  "numericScope": "Independent theory arithmetic and physical models for19examples/9selfchecks; not source/UI/deployment or health-dose certification.",
+  "parentExternalReferences": "NIH/NASA primary factual verification was reported by parent; no network used in this independent task.",
+  "parentCorrections": {
+    "status": "accepted-after-parent-corrections",
+    "sourceUnits": 104,
+    "independentNumericalAssertions": 151,
+    "resolvedP3Prose": 3,
+    "resolvedP2Frames": 5,
+    "additionalFrameMargin": 1,
+    "resolvedGlossPoints": 2,
+    "anatomyCaptionExplainsSourceLabelSwap": true,
+    "parentAdditionalCorrections": [
+      "Source16.4 text points to16.13 compression/rarefaction frames, not16.12 Kundt apparatus.",
+      "Intensity-level units written in words in concept cards and Wiki to prevent stray Unicode math."
+    ],
+    "hearingComparison": "Age65comparison retained as a measured-threshold comparison; no universal age-equivalent or clinical dose-response law asserted.",
+    "publicFileHashes": {
+      "raw_materials/physics/translations/chapter-16/00-mo-dau.md": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082",
+      "raw_materials/physics/translations/chapter-16/01-muc-01.md": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23",
+      "raw_materials/physics/translations/chapter-16/02-muc-02.md": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624",
+      "raw_materials/physics/translations/chapter-16/03-muc-03.md": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c",
+      "raw_materials/physics/translations/chapter-16/04-muc-04.md": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba",
+      "raw_materials/physics/translations/chapter-16/05-muc-05.md": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee",
+      "raw_materials/physics/translations/chapter-16/06-muc-06.md": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010",
+      "raw_materials/physics/translations/chapter-16/07-muc-07.md": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8",
+      "raw_materials/physics/translations/chapter-16/08-muc-08.md": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72",
+      "raw_materials/physics/translations/chapter-16/09-muc-09.md": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e",
+      "raw_materials/physics/translations/chapter-16/17-tom-tat.md": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    }
+  },
+  "finalPublicFileHashes": {
+    "raw_materials/physics/translations/chapter-16/00-mo-dau.md": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082",
+    "raw_materials/physics/translations/chapter-16/01-muc-01.md": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23",
+    "raw_materials/physics/translations/chapter-16/02-muc-02.md": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624",
+    "raw_materials/physics/translations/chapter-16/03-muc-03.md": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c",
+    "raw_materials/physics/translations/chapter-16/04-muc-04.md": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba",
+    "raw_materials/physics/translations/chapter-16/05-muc-05.md": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee",
+    "raw_materials/physics/translations/chapter-16/06-muc-06.md": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010",
+    "raw_materials/physics/translations/chapter-16/07-muc-07.md": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8",
+    "raw_materials/physics/translations/chapter-16/08-muc-08.md": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72",
+    "raw_materials/physics/translations/chapter-16/09-muc-09.md": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e",
+    "raw_materials/physics/translations/chapter-16/17-tom-tat.md": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+  },
+  "publicFigureSource": {
+    "mapping": {
+      "opening": "r-theory-opening",
+      "figure-16-1": "r-theory-16-01",
+      "figure-16-2": "r-theory-16-02",
+      "figure-16-3": "r-theory-16-03",
+      "figure-16-4": "r-theory-16-04",
+      "figure-16-5": "r-theory-16-05",
+      "app-hearing-loss": "r-theory-app-hearing-loss",
+      "figure-16-6": "r-theory-16-06",
+      "figure-16-7": "r-theory-16-07",
+      "figure-16-8": "r-theory-16-08",
+      "figure-16-9": "r-theory-16-09",
+      "figure-16-10": "r-theory-16-10",
+      "figure-16-11": "r-theory-16-11",
+      "figure-16-12": "r-theory-16-12",
+      "figure-16-13": "r-theory-16-13",
+      "figure-16-14": "r-theory-16-14",
+      "figure-16-15": "r-theory-16-15",
+      "figure-16-16": "r-theory-16-16",
+      "figure-16-17": "r-theory-16-17",
+      "figure-16-18": "r-theory-16-18",
+      "figure-16-19": "r-theory-16-19",
+      "app-ear-resonance": "r-theory-app-ear-resonance",
+      "figure-16-20": "r-theory-16-20",
+      "figure-16-21": "r-theory-16-21",
+      "figure-16-22": "r-theory-16-22",
+      "figure-16-23": "r-theory-16-23",
+      "figure-16-24": "r-theory-16-24",
+      "figure-16-25": "r-theory-16-25",
+      "figure-16-26": "r-theory-16-26",
+      "figure-16-27": "r-theory-16-27",
+      "figure-16-28": "r-theory-16-28",
+      "figure-16-29": "r-theory-16-29",
+      "figure-16-30": "r-theory-16-30",
+      "figure-16-31": "r-theory-16-31",
+      "figure-16-32": "r-theory-16-32",
+      "figure-16-33": "r-theory-16-33",
+      "figure-16-34": "r-theory-16-34",
+      "figure-16-35": "r-theory-16-35",
+      "figure-16-36": "r-theory-16-36",
+      "figure-16-37": "r-theory-16-37",
+      "figure-16-38": "r-theory-16-38",
+      "summary-wave": "r-theory-summary-wave",
+      "summary-intensity": "r-theory-summary-intensity",
+      "summary-standing": "r-theory-summary-standing",
+      "summary-interference": "r-theory-summary-interference",
+      "summary-beats": "r-theory-summary-beats",
+      "summary-doppler": "r-theory-summary-doppler",
+      "summary-shock": "r-theory-summary-shock"
+    },
+    "sourceCropSpecs": {
+      "r-theory-opening": [
+        521,
+        [
+          0,
+          0,
+          439,
+          247
+        ]
+      ],
+      "r-theory-16-01": [
+        522,
+        [
+          34,
+          98,
+          196,
+          429
+        ]
+      ],
+      "r-theory-16-02": [
+        522,
+        [
+          34,
+          553,
+          196,
+          734
+        ]
+      ],
+      "r-theory-16-03": [
+        523,
+        [
+          76,
+          58,
+          422,
+          366
+        ]
+      ],
+      "r-theory-16-04": [
+        524,
+        [
+          310,
+          371,
+          572,
+          535
+        ]
+      ],
+      "r-theory-16-05": [
+        525,
+        [
+          454,
+          269,
+          615,
+          705
+        ]
+      ],
+      "r-theory-app-hearing-loss": [
+        526,
+        [
+          36,
+          158,
+          192,
+          339
+        ]
+      ],
+      "r-theory-16-06": [
+        526,
+        [
+          35,
+          572,
+          194,
+          683
+        ]
+      ],
+      "r-theory-16-07": [
+        527,
+        [
+          453,
+          126,
+          621,
+          307
+        ]
+      ],
+      "r-theory-16-08": [
+        528,
+        [
+          311,
+          106,
+          562,
+          257
+        ]
+      ],
+      "r-theory-16-09": [
+        528,
+        [
+          0,
+          489,
+          193,
+          635
+        ]
+      ],
+      "r-theory-16-10": [
+        531,
+        [
+          449,
+          118,
+          648,
+          250
+        ]
+      ],
+      "r-theory-16-11": [
+        533,
+        [
+          352,
+          464,
+          612,
+          570
+        ]
+      ],
+      "r-theory-16-12": [
+        534,
+        [
+          208,
+          583,
+          572,
+          743
+        ]
+      ],
+      "r-theory-16-13": [
+        535,
+        [
+          451,
+          128,
+          619,
+          406
+        ]
+      ],
+      "r-theory-16-14": [
+        535,
+        [
+          352,
+          587,
+          594,
+          703
+        ]
+      ],
+      "r-theory-16-15": [
+        536,
+        [
+          0,
+          88,
+          194,
+          251
+        ]
+      ],
+      "r-theory-16-16": [
+        536,
+        [
+          34,
+          354,
+          195,
+          579
+        ]
+      ],
+      "r-theory-16-17": [
+        536,
+        [
+          76,
+          667,
+          614,
+          751
+        ]
+      ],
+      "r-theory-16-18": [
+        537,
+        [
+          76,
+          84,
+          614,
+          172
+        ]
+      ],
+      "r-theory-16-19": [
+        538,
+        [
+          34,
+          487,
+          200,
+          746
+        ]
+      ],
+      "r-theory-app-ear-resonance": [
+        539,
+        [
+          455,
+          197,
+          648,
+          343
+        ]
+      ],
+      "r-theory-16-20": [
+        539,
+        [
+          454,
+          421,
+          648,
+          593
+        ]
+      ],
+      "r-theory-16-21": [
+        540,
+        [
+          34,
+          524,
+          200,
+          743
+        ]
+      ],
+      "r-theory-16-22": [
+        541,
+        [
+          76,
+          58,
+          423,
+          279
+        ]
+      ],
+      "r-theory-16-23": [
+        541,
+        [
+          77,
+          632,
+          322,
+          746
+        ]
+      ],
+      "r-theory-16-24": [
+        542,
+        [
+          35,
+          108,
+          194,
+          247
+        ]
+      ],
+      "r-theory-16-25": [
+        542,
+        [
+          257,
+          564,
+          527,
+          745
+        ]
+      ],
+      "r-theory-16-26": [
+        543,
+        [
+          454,
+          598,
+          648,
+          743
+        ]
+      ],
+      "r-theory-16-27": [
+        544,
+        [
+          208,
+          565,
+          573,
+          743
+        ]
+      ],
+      "r-theory-16-28": [
+        545,
+        [
+          76,
+          59,
+          423,
+          267
+        ]
+      ],
+      "r-theory-16-29": [
+        546,
+        [
+          0,
+          118,
+          193,
+          241
+        ]
+      ],
+      "r-theory-16-30": [
+        546,
+        [
+          312,
+          541,
+          571,
+          614
+        ]
+      ],
+      "r-theory-16-31": [
+        547,
+        [
+          352,
+          100,
+          613,
+          166
+        ]
+      ],
+      "r-theory-16-32": [
+        547,
+        [
+          352,
+          343,
+          613,
+          411
+        ]
+      ],
+      "r-theory-16-33": [
+        547,
+        [
+          352,
+          576,
+          613,
+          642
+        ]
+      ],
+      "r-theory-16-34": [
+        548,
+        [
+          310,
+          108,
+          571,
+          309
+        ]
+      ],
+      "r-theory-16-35": [
+        549,
+        [
+          454,
+          125,
+          614,
+          234
+        ]
+      ],
+      "r-theory-16-36": [
+        549,
+        [
+          76,
+          570,
+          575,
+          744
+        ]
+      ],
+      "r-theory-16-37": [
+        550,
+        [
+          0,
+          228,
+          194,
+          346
+        ]
+      ],
+      "r-theory-16-38": [
+        551,
+        [
+          77,
+          106,
+          333,
+          274
+        ]
+      ],
+      "r-theory-summary-wave": [
+        551,
+        [
+          488,
+          475,
+          617,
+          677
+        ]
+      ],
+      "r-theory-summary-intensity": [
+        552,
+        [
+          441,
+          60,
+          570,
+          126
+        ]
+      ],
+      "r-theory-summary-standing": [
+        552,
+        [
+          438,
+          199,
+          573,
+          357
+        ]
+      ],
+      "r-theory-summary-interference": [
+        552,
+        [
+          441,
+          385,
+          575,
+          449
+        ]
+      ],
+      "r-theory-summary-beats": [
+        552,
+        [
+          441,
+          471,
+          576,
+          562
+        ]
+      ],
+      "r-theory-summary-doppler": [
+        552,
+        [
+          441,
+          581,
+          576,
+          668
+        ]
+      ],
+      "r-theory-summary-shock": [
+        552,
+        [
+          441,
+          691,
+          575,
+          743
+        ]
+      ]
+    },
+    "parentAppliedRectangleRepairs": [
+      {
+        "key": "figure-16-8",
+        "pdfPage1Based": 528,
+        "oldRectangle": [
+          311,
+          109,
+          562,
+          257
+        ],
+        "rectangle": [
+          311,
+          106,
+          562,
+          257
+        ],
+        "severity": "P2",
+        "reason": "Top sonar-wave arc starts at y108.020 with stroke1; current top109 cuts visible blue endpoint. Extend to106 without including prior caption ink.",
+        "proposedRaster": "proposed-crops/figure-16-8.png",
+        "proposedSha256": "2a412b6f7eaf904f6cc504ae2ec3b960dd6ab07960d1e5e2641eb26b50a53f62",
+        "sourcePixelsUnchanged": true
+      },
+      {
+        "key": "figure-16-19",
+        "pdfPage1Based": 538,
+        "oldRectangle": [
+          34,
+          490,
+          200,
+          741
+        ],
+        "rectangle": [
+          34,
+          487,
+          200,
+          746
+        ],
+        "severity": "P2",
+        "reason": "Bottom axis subscripts extend to y742.587 and are cropped at y741. Top(a) also has virtually no margin. Expand both ends without including adjacent prose.",
+        "proposedRaster": "proposed-crops/figure-16-19.png",
+        "proposedSha256": "37732feacfd894983cf9143c68cb7c41ecf4f5341c28eb90d2708c1a9bbc4491",
+        "sourcePixelsUnchanged": true
+      },
+      {
+        "key": "figure-16-33",
+        "pdfPage1Based": 547,
+        "oldRectangle": [
+          352,
+          576,
+          613,
+          638
+        ],
+        "rectangle": [
+          352,
+          576,
+          613,
+          642
+        ],
+        "severity": "P2",
+        "reason": "Bottom circles around sourceS/listenerL extend to y638.537 withstroke0.25; current bottom638 removes actual vector ink.",
+        "proposedRaster": "proposed-crops/figure-16-33.png",
+        "proposedSha256": "86cfe03741950369566ff373b526e2cd9e1808580e4ef9f5e8f1e18a8cb3c2b5",
+        "sourcePixelsUnchanged": true
+      },
+      {
+        "key": "figure-16-36",
+        "pdfPage1Based": 549,
+        "oldRectangle": [
+          76,
+          570,
+          575,
+          740
+        ],
+        "rectangle": [
+          76,
+          570,
+          575,
+          744
+        ],
+        "severity": "P2",
+        "reason": "Lower blue Mach-cone ray path extends to y740.595 withstroke1, beyond currentbottom740. Allthreepanelsmustincludeitsendpoint.",
+        "proposedRaster": "proposed-crops/figure-16-36.png",
+        "proposedSha256": "16b7df36e6bcd8aeb628fae65f22fef55394a080a40a2cc4127e94c1934ff752",
+        "sourcePixelsUnchanged": true
+      },
+      {
+        "key": "figure-16-38",
+        "pdfPage1Based": 551,
+        "oldRectangle": [
+          77,
+          106,
+          333,
+          270
+        ],
+        "rectangle": [
+          77,
+          106,
+          333,
+          274
+        ],
+        "severity": "P3",
+        "reason": "Text subscriptS ink ends at269.2 and is NOTclipped despite fontbbox270.523. Dimensiontick reaches269.808 withstroke0.25. Addmargin for the bottom geometric annotation, not a missing-label claim.",
+        "proposedRaster": "proposed-crops/figure-16-38.png",
+        "proposedSha256": "a65d4a0249711a709229df90e39e7f37c551445396e11f94f356f401c592eaec",
+        "sourcePixelsUnchanged": true
+      },
+      {
+        "key": "summary-shock",
+        "pdfPage1Based": 552,
+        "oldRectangle": [
+          441,
+          696,
+          575,
+          743
+        ],
+        "rectangle": [
+          441,
+          691,
+          575,
+          743
+        ],
+        "severity": "P2",
+        "reason": "Upper Mach-cone ray begins above old top696; actual expanded source raster shows its missing end. Preserve the complete summary geometry too.",
+        "proposedRaster": "proposed-crops/summary-shock.png",
+        "proposedSha256": "9bbaf7f01f7350940622e391b6c1f62aee1824584d10552bb3a5f3c3e083ddef",
+        "sourcePixelsUnchanged": true
+      }
+    ],
+    "parentGlossRepairs": [
+      "Rarefaction means most negative pressure fluctuation",
+      "Supersonic airplane uses vượt âm"
+    ],
+    "originalCrops": 48,
+    "englishPairs": 131,
+    "parentReferences": {
+      "anatomy": "https://www.nidcd.nih.gov/health/otosclerosis",
+      "hearing": "https://www.nidcd.nih.gov/health/noise-induced-hearing-loss",
+      "YeagerX1": "https://www.nasa.gov/aeronautics/first-generation-x-1/"
+    },
+    "status": "five-P2-frames-and-one-margin-repaired-parent-recheck-pending"
+  }
+}

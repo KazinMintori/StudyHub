@@ -1,3 +1,4 @@
+import {physics1SoundConcepts,physics1SoundWikiDetails,physics1SoundWikiConnections} from './physics1-sound-foundations.mjs'
 import {physics1WaveConcepts,physics1WaveWikiDetails,physics1WaveWikiConnections} from './physics1-wave-foundations.mjs'
 import {physics1OscillationConcepts,physics1OscillationWikiDetails,physics1OscillationWikiConnections} from './physics1-oscillation-foundations.mjs'
 import {physics1GravityConcepts,physics1GravityWikiDetails,physics1GravityWikiConnections} from './physics1-gravity-foundations.mjs'
@@ -362,7 +363,8 @@ export const physicsConcepts = {
 ,
   ...physics1OscillationConcepts
 ,
-  ...physics1WaveConcepts
+  ...physics1WaveConcepts,
+  ...physics1SoundConcepts
 }
 
 export const physicsConceptIds = Object.keys(physicsConcepts)
@@ -425,7 +427,8 @@ export const physicsWikiDetails = {
 ,
   ...physics1OscillationWikiDetails
 ,
-  ...physics1WaveWikiDetails
+  ...physics1WaveWikiDetails,
+  ...physics1SoundWikiDetails
 }
 
 export const physicsWikiConnections = {
@@ -577,5 +580,6 @@ export const physicsWikiConnections = {
 ,
   ...physics1OscillationWikiConnections
 ,
-  ...physics1WaveWikiConnections
+  ...physics1WaveWikiConnections,
+  ...physics1SoundWikiConnections
 }

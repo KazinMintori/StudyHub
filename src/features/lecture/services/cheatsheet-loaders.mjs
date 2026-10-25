@@ -42,7 +42,7 @@ export const cheatsheetLoaders = {
   'vat-ly-1/13-hap-dan': () => import('../../../../docs/.vitepress/physics1-remaining-ch13-course.mjs').then(module => module.physics1RemainingChapter13Parent.cheatsheet),
   'vat-ly-1/14-dao-dong': () => import('../../../../docs/.vitepress/physics1-remaining-ch14-course.mjs').then(module => module.physics1RemainingChapter14Parent.cheatsheet),
   'vat-ly-1/15-song-co': () => import('../../../../docs/.vitepress/physics1-remaining-ch15-course.mjs').then(module => module.physics1RemainingChapter15Parent.cheatsheet),
-  'vat-ly-1/16-am-hoc': () => import('../../../../docs/.vitepress/physics1-cheatsheets.mjs').then(module => module.acousticsCheatsheet),
+  'vat-ly-1/16-am-hoc': () => import('../../../../docs/.vitepress/physics1-remaining-ch16-course.mjs').then(module => module.physics1RemainingChapter16Parent.cheatsheet),
   'vat-ly-1/17-nhiet-do-nhiet-luong': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[17].cheatsheet),
   'vat-ly-1/18-thuyet-dong-hoc-chat-khi': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[18].cheatsheet),
   'vat-ly-1/19-nguyen-ly-thu-nhat': () => import('../../../../docs/.vitepress/physics1-priority-course.mjs').then(module => module.physics1PriorityCourseData[19].cheatsheet),

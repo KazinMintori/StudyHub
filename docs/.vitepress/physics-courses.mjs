@@ -1065,20 +1065,108 @@ export const physics1Course = {
   ]
 },
     {
-      "slug": "16-am-hoc",
+  "slug": "16-am-hoc",
+  "title": "Âm thanh và sự nghe",
+  "prerequisites": [
+    "cong-suat-co-hoc",
+    "dong-luong-vat-ly",
+    "modun-khoi",
+    "modun-young",
+    "ap-suat-tuyet-doi-va-ap-suat-du",
+    "dao-dong-cuong-buc",
+    "cong-huong-co-hoc",
+    "song-co-hoc",
+    "ham-song-co-hoc",
+    "buoc-song-co-hoc",
+    "so-song",
+    "chong-chat-song-tuyen-tinh",
+    "cuong-do-song-co",
+    "dao-ham-rieng"
+  ],
+  "supportingConcepts": [
+    "song-am",
+    "ap-suat-am",
+    "toc-do-truyen-am",
+    "cuong-do-am",
+    "muc-cuong-do-am",
+    "cao-do-am",
+    "am-sac",
+    "song-dung-trong-cot-khi",
+    "cong-huong-am",
+    "phach",
+    "hieu-ung-doppler-am",
+    "doppler-dien-tu",
+    "song-xung-kich",
+    "so-mach",
+    "tieng-no-vuot-am",
+    "nut-va-bung-song",
+    "hoa-am-va-am-boi"
+  ],
+  "status": "draft",
+  "number": 16,
+  "sourceChapter": 16,
+  "topicGroups": [
+    {
       "title": "Âm thanh và sự nghe",
-      "prerequisites": [
-        "song",
-        "pha-song",
-        "dao-dong-dieu-hoa"
-      ],
-      "supportingConcepts": [
-        "giao-thoa-song"
-      ],
-      "status": "draft",
-      "number": 16,
-      "sourceChapter": 16
-    },
+      "topics": [
+        {
+          "slug": "song-am",
+          "title": "Sóng âm",
+          "question": "Li độ phần tử và biến thiên áp suất mô tả cùng một sóng âm như thế nào?",
+          "source": "16.1"
+        },
+        {
+          "slug": "toc-do-truyen-am",
+          "title": "Tốc độ truyền âm",
+          "question": "Cơ tính, khối lượng riêng và nhiệt độ quyết định tốc độ truyền ra sao?",
+          "source": "16.2"
+        },
+        {
+          "slug": "cuong-do-va-muc-cuong-do-am",
+          "title": "Cường độ và mức cường độ âm",
+          "question": "Biên độ áp suất, biên độ li độ và decibel liên hệ như thế nào?",
+          "source": "16.3"
+        },
+        {
+          "slug": "song-am-dung-va-cac-dang-rieng",
+          "title": "Sóng âm dừng và các dạng dao động riêng",
+          "question": "Điều kiện đầu ống chọn tần số và các nút, bụng của đại lượng nào?",
+          "source": "16.4"
+        },
+        {
+          "slug": "cong-huong-am",
+          "title": "Cộng hưởng âm",
+          "question": "Vì sao một cột khí hoặc dây đàn có thể rung mạnh do nguồn âm bên ngoài?",
+          "source": "16.5"
+        },
+        {
+          "slug": "giao-thoa-song-am",
+          "title": "Giao thoa sóng âm",
+          "question": "Pha và hiệu đường đi tạo các vùng âm mạnh, yếu như thế nào?",
+          "source": "16.6"
+        },
+        {
+          "slug": "phach",
+          "title": "Phách",
+          "question": "Hai tần số gần nhau tạo nhịp lớn nhỏ với tần số nào?",
+          "source": "16.7"
+        },
+        {
+          "slug": "hieu-ung-doppler",
+          "title": "Hiệu ứng Doppler",
+          "question": "Chuyển động của nguồn, người nghe và môi trường làm đổi tần số nhận thế nào?",
+          "source": "16.8"
+        },
+        {
+          "slug": "song-xung-kich",
+          "title": "Sóng xung kích",
+          "question": "Nguồn vượt âm tạo mặt nón và tiếng nổ tại người nghe như thế nào?",
+          "source": "16.9"
+        }
+      ]
+    }
+  ]
+},
     {
   "slug": "17-nhiet-do-nhiet-luong",
   "title": "Nhiệt độ và nhiệt",

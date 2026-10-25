@@ -1,0 +1,237 @@
+{
+  "chapter": 16,
+  "status": "theory-reviewed-exercises-incomplete",
+  "sourcePDFPages": [
+    521,
+    552
+  ],
+  "sourceInventory": {
+    "sections": 9,
+    "sourceSemanticUnits": 104,
+    "examples": 19,
+    "immediateSelfChecks": 9,
+    "numberedEquations": 31,
+    "tables": 2,
+    "tableRows": [
+      11,
+      11
+    ],
+    "strategies": 2,
+    "originalCrops": 48,
+    "actualEnglishLabelPairs": 131
+  },
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-16/00-mo-dau.md": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082",
+    "raw_materials/physics/translations/chapter-16/01-muc-01.md": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23",
+    "raw_materials/physics/translations/chapter-16/02-muc-02.md": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624",
+    "raw_materials/physics/translations/chapter-16/03-muc-03.md": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c",
+    "raw_materials/physics/translations/chapter-16/04-muc-04.md": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba",
+    "raw_materials/physics/translations/chapter-16/05-muc-05.md": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee",
+    "raw_materials/physics/translations/chapter-16/06-muc-06.md": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010",
+    "raw_materials/physics/translations/chapter-16/07-muc-07.md": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8",
+    "raw_materials/physics/translations/chapter-16/08-muc-08.md": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72",
+    "raw_materials/physics/translations/chapter-16/09-muc-09.md": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e",
+    "raw_materials/physics/translations/chapter-16/17-tom-tat.md": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+  },
+  "support": {
+    "newWiki": 13,
+    "revisedWiki": [
+      "hieu-ung-doppler-am"
+    ],
+    "cheatsheetItems": 34,
+    "formulaRows": 49,
+    "oldDopplerTechnicalExplanationPreserved": true
+  },
+  "math": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 28,
+    "inlineLimitEx": 27,
+    "display": 190,
+    "inline": 653,
+    "findings": []
+  },
+  "mathScope": "All raw theory fragments,14Wikiarticles and49cheatsheet formula rows.",
+  "numeric": {
+    "earlyAssertions": 112,
+    "lateAssertions": 113,
+    "sourceAssertions": 140,
+    "independentAssertions": 151,
+    "note": "Overlapping independent models are not counts of distinct exercises."
+  },
+  "browser": {
+    "status": "passed",
+    "theoryAndCheatsheetCases": 55,
+    "wikiCases": 42,
+    "notebookCases": 5,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ]
+  },
+  "independentReview": {
+    "status": "accepted-after-parent-corrections",
+    "sourceUnits": 104,
+    "independentNumericalAssertions": 151,
+    "resolvedP3Prose": 3,
+    "resolvedP2Frames": 5,
+    "additionalFrameMargin": 1,
+    "resolvedGlossPoints": 2,
+    "anatomyCaptionExplainsSourceLabelSwap": true,
+    "parentAdditionalCorrections": [
+      "Source16.4 text points to16.13 compression/rarefaction frames, not16.12 Kundt apparatus.",
+      "Intensity-level units written in words in concept cards and Wiki to prevent stray Unicode math."
+    ],
+    "hearingComparison": "Age65comparison retained as a measured-threshold comparison; no universal age-equivalent or clinical dose-response law asserted.",
+    "publicFileHashes": {
+      "raw_materials/physics/translations/chapter-16/00-mo-dau.md": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082",
+      "raw_materials/physics/translations/chapter-16/01-muc-01.md": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23",
+      "raw_materials/physics/translations/chapter-16/02-muc-02.md": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624",
+      "raw_materials/physics/translations/chapter-16/03-muc-03.md": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c",
+      "raw_materials/physics/translations/chapter-16/04-muc-04.md": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba",
+      "raw_materials/physics/translations/chapter-16/05-muc-05.md": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee",
+      "raw_materials/physics/translations/chapter-16/06-muc-06.md": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010",
+      "raw_materials/physics/translations/chapter-16/07-muc-07.md": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8",
+      "raw_materials/physics/translations/chapter-16/08-muc-08.md": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72",
+      "raw_materials/physics/translations/chapter-16/09-muc-09.md": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e",
+      "raw_materials/physics/translations/chapter-16/17-tom-tat.md": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+    }
+  },
+  "sourceFigureRepairs": [
+    {
+      "key": "figure-16-8",
+      "pdfPage1Based": 528,
+      "oldRectangle": [
+        311,
+        109,
+        562,
+        257
+      ],
+      "rectangle": [
+        311,
+        106,
+        562,
+        257
+      ],
+      "severity": "P2",
+      "reason": "Top sonar-wave arc starts at y108.020 with stroke1; current top109 cuts visible blue endpoint. Extend to106 without including prior caption ink.",
+      "proposedRaster": "proposed-crops/figure-16-8.png",
+      "proposedSha256": "2a412b6f7eaf904f6cc504ae2ec3b960dd6ab07960d1e5e2641eb26b50a53f62",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "key": "figure-16-19",
+      "pdfPage1Based": 538,
+      "oldRectangle": [
+        34,
+        490,
+        200,
+        741
+      ],
+      "rectangle": [
+        34,
+        487,
+        200,
+        746
+      ],
+      "severity": "P2",
+      "reason": "Bottom axis subscripts extend to y742.587 and are cropped at y741. Top(a) also has virtually no margin. Expand both ends without including adjacent prose.",
+      "proposedRaster": "proposed-crops/figure-16-19.png",
+      "proposedSha256": "37732feacfd894983cf9143c68cb7c41ecf4f5341c28eb90d2708c1a9bbc4491",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "key": "figure-16-33",
+      "pdfPage1Based": 547,
+      "oldRectangle": [
+        352,
+        576,
+        613,
+        638
+      ],
+      "rectangle": [
+        352,
+        576,
+        613,
+        642
+      ],
+      "severity": "P2",
+      "reason": "Bottom circles around sourceS/listenerL extend to y638.537 withstroke0.25; current bottom638 removes actual vector ink.",
+      "proposedRaster": "proposed-crops/figure-16-33.png",
+      "proposedSha256": "86cfe03741950369566ff373b526e2cd9e1808580e4ef9f5e8f1e18a8cb3c2b5",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "key": "figure-16-36",
+      "pdfPage1Based": 549,
+      "oldRectangle": [
+        76,
+        570,
+        575,
+        740
+      ],
+      "rectangle": [
+        76,
+        570,
+        575,
+        744
+      ],
+      "severity": "P2",
+      "reason": "Lower blue Mach-cone ray path extends to y740.595 withstroke1, beyond currentbottom740. Allthreepanelsmustincludeitsendpoint.",
+      "proposedRaster": "proposed-crops/figure-16-36.png",
+      "proposedSha256": "16b7df36e6bcd8aeb628fae65f22fef55394a080a40a2cc4127e94c1934ff752",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "key": "figure-16-38",
+      "pdfPage1Based": 551,
+      "oldRectangle": [
+        77,
+        106,
+        333,
+        270
+      ],
+      "rectangle": [
+        77,
+        106,
+        333,
+        274
+      ],
+      "severity": "P3",
+      "reason": "Text subscriptS ink ends at269.2 and is NOTclipped despite fontbbox270.523. Dimensiontick reaches269.808 withstroke0.25. Addmargin for the bottom geometric annotation, not a missing-label claim.",
+      "proposedRaster": "proposed-crops/figure-16-38.png",
+      "proposedSha256": "a65d4a0249711a709229df90e39e7f37c551445396e11f94f356f401c592eaec",
+      "sourcePixelsUnchanged": true
+    },
+    {
+      "key": "summary-shock",
+      "pdfPage1Based": 552,
+      "oldRectangle": [
+        441,
+        696,
+        575,
+        743
+      ],
+      "rectangle": [
+        441,
+        691,
+        575,
+        743
+      ],
+      "severity": "P2",
+      "reason": "Upper Mach-cone ray begins above old top696; actual expanded source raster shows its missing end. Preserve the complete summary geometry too.",
+      "proposedRaster": "proposed-crops/summary-shock.png",
+      "proposedSha256": "9bbaf7f01f7350940622e391b6c1f62aee1824584d10552bb3a5f3c3e083ddef",
+      "sourcePixelsUnchanged": true
+    }
+  ],
+  "pendingSourceUnits": [
+    "guided-practice",
+    "discussion-questions",
+    "all-numbered-end-exercises",
+    "bridging-problem"
+  ]
+}
