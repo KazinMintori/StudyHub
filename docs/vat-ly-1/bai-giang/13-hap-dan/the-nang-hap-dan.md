@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "13-hap-dan"
-section: "topic"
 topic: "the-nang-hap-dan"
+section: "topic"
 title: "Thế năng hấp dẫn"
 description: "Tính công, cơ năng và tốc độ thoát thế nào khi lực hấp dẫn thay đổi theo khoảng cách?"
 ---

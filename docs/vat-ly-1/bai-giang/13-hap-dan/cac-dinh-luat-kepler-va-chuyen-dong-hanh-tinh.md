@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "13-hap-dan"
-section: "topic"
 topic: "cac-dinh-luat-kepler-va-chuyen-dong-hanh-tinh"
+section: "topic"
 title: "Các định luật Kepler và chuyển động hành tinh"
 description: "Hình học quỹ đạo, diện tích quét và chu kỳ liên hệ với các định luật Newton như thế nào?"
 ---

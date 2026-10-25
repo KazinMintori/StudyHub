@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "13-hap-dan"
-section: "topic"
 topic: "ho-den"
+section: "topic"
 title: "Hố đen"
 description: "Chân trời sự kiện có ý nghĩa gì và làm thế nào nhận biết hố đen qua chuyển động của vật lân cận?"
 ---

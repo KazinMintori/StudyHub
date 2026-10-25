@@ -828,7 +828,7 @@ export const physics1Course = {
     "chan-troi-su-kien",
     "ho-den"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 13,
   "sourceChapter": 13,
   "topicGroups": [
@@ -885,7 +885,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "14-dao-dong",
@@ -2154,6 +2155,94 @@ export const physics1Course = {
       "Với cùng chất lưu, trạng thái nhiệt độ và lưu lượng thể tích trong dòng tầng qua ống trụ dài, chênh áp tỉ lệ chiều dài ống và nghịch đảo lũy thừa bậc bốn bán kính trong."
     ],
     "formula": "$$\nv(R)=0\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Lực hấp dẫn",
+    "bullets": [
+      "Hai chất điểm có khối lượng dương hút nhau theo đường nối chúng. Với hai phân bố đối xứng cầu không chồng lấn, r là khoảng cách giữa hai tâm.",
+      "Hai lực đặt lên hai vật khác nhau, bằng nhau về độ lớn và ngược chiều.",
+      "Lực tổng hợp là tổng vector từng lực. Viết tường minh cho ba vật gây lực.",
+      "G không phải gia tốc trọng trường g. Giá trị dùng trong các phép tính là xấp xỉ ba chữ số có nghĩa."
+    ],
+    "formula": "$$\nF_g=\\frac{Gm_1m_2}{r^2}\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Trọng lượng và gia tốc trọng trường",
+    "bullets": [
+      "Trọng lượng là tổng lực hấp dẫn tác dụng lên vật. Gần một thiên thể, dùng lực hút của thiên thể đó khi các ảnh hưởng khác không đáng kể.",
+      "Thiên thể trung tâm có khối lượng M. r đo từ tâm và nằm ngoài vật. g là độ lớn gia tốc hấp dẫn do thiên thể đó.",
+      "Thiên thể đối xứng cầu có bán kính R.",
+      "Vị trí nằm ở độ cao h trên bề mặt, nên r=R+h. Khối lượng của vật thử không thay đổi."
+    ],
+    "formula": "$$\nw=mg\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Thế năng và tốc độ thoát",
+    "bullets": [
+      "Chiều dương bán kính hướng ra ngoài thiên thể đối xứng cầu.",
+      "Thế năng của hệ hai vật, với mốc bằng không ở vô cực. Công thức dùng cho chất điểm hoặc tương tác bên ngoài phù hợp của phân bố đối xứng cầu.",
+      "Hai trạng thái nằm ngoài thiên thể. Công hấp dẫn không phụ thuộc đường đi.",
+      "Động năng K của vật được phóng được tính trong hệ thiên thể trung tâm đứng yên. Vật nhẹ hơn nhiều thiên thể. Chỉ lực hấp dẫn thực hiện công trong mô hình đang xét."
+    ],
+    "formula": "$$\nF_r=-\\frac{GMm}{r^2}\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Quỹ đạo tròn",
+    "bullets": [
+      "Chỉ lực hút của thiên thể khối lượng M chi phối chuyển động. Vật trung tâm được coi đứng yên và quỹ đạo có bán kính r.",
+      "T là thời gian đi hết một vòng trên quỹ đạo tròn.",
+      "Thế năng dùng mốc vô cực. Các quan hệ K,U,E dưới đây dành riêng cho quỹ đạo tròn.",
+      "Coi thiên thể trung tâm đứng yên và vật được phóng có khối lượng nhỏ hơn nhiều khối lượng thiên thể. So sánh tại cùng khoảng cách r quanh cùng thiên thể."
+    ],
+    "formula": "$$\nv=\\sqrt{\\frac{GM}{r}}\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Các định luật Kepler",
+    "bullets": [
+      "Mặt Trời nằm tại một tiêu điểm. a là bán trục lớn, e là độ lệch tâm. e=0 cho đường tròn, 0<e<1 cho ellipse không tròn.",
+      "Đường nối từ thiên thể trung tâm tới vật quét các diện tích bằng nhau trong những khoảng thời gian bằng nhau. Áp dụng khi mômen động lượng quanh tâm bảo toàn.",
+      "Lực luôn dọc đường nối chất điểm với một điểm cố định. Mômen lực quanh điểm đó bằng không, nên vector mômen động lượng bảo toàn.",
+      "Quỹ đạo liên kết quanh thiên thể trung tâm có khối lượng M lớn hơn nhiều khối lượng vật quay. Chu kỳ phụ thuộc bán trục lớn, không phụ thuộc riêng độ lệch tâm."
+    ],
+    "formula": "$$\n0\\le e<1\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Đối xứng cầu và vỏ cầu",
+    "bullets": [
+      "Chất điểm ở bên ngoài vật đối xứng cầu tổng khối lượng M. r tính từ tâm.",
+      "Vỏ bán kính R, khối lượng M phân bố đều trên mặt. Chất điểm ở r<R. Thế năng dùng mốc vô cực.",
+      "M(r) là khối lượng nằm trong bán kính r. Các vỏ ngoài r không gây hợp lực lên vật thử bên trong.",
+      "Vật cầu bán kính R, tổng khối lượng M. Biểu thức áp dụng r≤R, và lực tại tâm bằng không theo đối xứng."
+    ],
+    "formula": "$$\nU=-\\frac{GMm}{r}\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Trọng lượng biểu kiến và sự quay",
+    "bullets": [
+      "F là lực do cân tác dụng lên vật. Trọng lượng biểu kiến có độ lớn bằng số chỉ cân và vector ngược hướng lực cân.",
+      "Trái Đất được coi hình cầu, quay đều. w0 là trọng lượng hấp dẫn thật và v là tốc độ xích đạo.",
+      "Gia tốc hướng tâm arad hướng về trục quay. Hệ thức là vector, không thay bằng hiệu hai độ lớn khi các vector không cùng phương.",
+      "Trong mô hình hình cầu, bán kính chuyển động quanh trục bằng không ở hai cực, nên số chỉ cân bằng trọng lượng thật."
+    ],
+    "formula": "$$\n\\vec w=-\\vec F\n$$"
+  },
+  {
+    "note": "13-hap-dan",
+    "title": "Hố đen và chân trời sự kiện",
+    "bullets": [
+      "Coi thiên thể trung tâm đứng yên và vật được phóng có khối lượng nhỏ hơn nhiều khối lượng thiên thể. Trong mô hình Newton bên ngoài một thiên thể hình cầu, với khối lượng riêng trung bình rho và bán kính R.",
+      "Mô hình hố đen đối xứng cầu, không quay và không tích điện. Đây là kết quả của thuyết tương đối rộng.",
+      "Ranh giới nhân quả bao quanh vùng không thể truyền tín hiệu ra ngoài. Với mô hình Schwarzschild, chân trời là mặt cầu bán kính RS. Ánh sáng quan sát từ đĩa bồi tụ phát ra trước khi vật chất đi vào chân trời.",
+      "Trong mô hình Kepler chi phối bởi một vật trung tâm, chu kỳ T và bán trục lớn a của sao lân cận xác định khối lượng trung tâm."
+    ],
+    "formula": "$$\nM=\\frac{4\\pi}{3}\\bar\\rho R^3\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"

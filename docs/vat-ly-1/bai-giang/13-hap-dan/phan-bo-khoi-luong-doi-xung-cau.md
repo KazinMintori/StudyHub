@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "13-hap-dan"
-section: "topic"
 topic: "phan-bo-khoi-luong-doi-xung-cau"
+section: "topic"
 title: "Phân bố khối lượng đối xứng cầu"
 description: "Vì sao vật đối xứng cầu có thể được thay bằng khối lượng ở tâm, và điều gì xảy ra bên trong vỏ cầu?"
 ---

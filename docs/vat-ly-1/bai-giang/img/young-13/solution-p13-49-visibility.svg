@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="453.6pt" height="252pt" viewBox="0 0 453.6 252" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>StudyHub solution diagram</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 252
+L 453.6 252
+L 453.6 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 67.487886 177.052719
+C 81.739822 177.052719 95.409954 171.390365 105.487595 161.312724
+C 115.565236 151.235084 121.22759 137.564951 121.22759 123.313015
+C 121.22759 109.061079 115.565236 95.390946 105.487595 85.313305
+C 95.409954 75.235664 81.739822 69.57331 67.487886 69.57331
+C 53.235949 69.57331 39.565817 75.235664 29.488176 85.313305
+C 19.410535 95.390946 13.748181 109.061079 13.748181 123.313015
+C 13.748181 137.564951 19.410535 151.235084 29.488176 161.312724
+C 39.565817 171.390365 53.235949 177.052719 67.487886 177.052719
+z
+" clip-path="url(#p823dfa4c7d)" style="fill: #dcebf8; stroke: #235cc4; stroke-width: 1.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 91.670753 123.313015
+C 91.670753 117.532967 89.598483 111.940175 85.832241 107.555614
+C 82.066 103.171054 76.849814 100.278816 71.135912 99.406887
+" clip-path="url(#p823dfa4c7d)" style="fill: none; stroke: #8a5520; stroke-linejoin: miter"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="C0_0_eb672c66d2" d="M 0 2.738613
+C 0.726289 2.738613 1.422928 2.450055 1.936492 1.936492
+C 2.450055 1.422928 2.738613 0.726289 2.738613 -0
+C 2.738613 -0.726289 2.450055 -1.422928 1.936492 -1.936492
+C 1.422928 -2.450055 0.726289 -2.738613 0 -2.738613
+C -0.726289 -2.738613 -1.422928 -2.450055 -1.936492 -1.936492
+C -2.450055 -1.422928 -2.738613 -0.726289 -2.738613 0
+C -2.738613 0.726289 -2.450055 1.422928 -1.936492 1.936492
+C -1.422928 2.450055 -0.726289 2.738613 0 2.738613
+z
+"/>
+    </defs>
+    <g clip-path="url(#p823dfa4c7d)">
+     <use xlink:href="#C0_0_eb672c66d2" x="67.487886" y="123.313015" style="fill: #235cc4; stroke: #235cc4"/>
+    </g>
+    <g clip-path="url(#p823dfa4c7d)">
+     <use xlink:href="#C0_0_eb672c66d2" x="75.59461" y="70.188285" style="fill: #c34753; stroke: #c34753"/>
+    </g>
+    <g clip-path="url(#p823dfa4c7d)">
+     <use xlink:href="#C0_0_eb672c66d2" x="423.729908" y="123.313015" style="fill: #c34753; stroke: #c34753"/>
+    </g>
+   </g>
+   <g id="line2d_1">
+    <path d="M 67.487886 123.313015
+L 423.729908 123.313015
+" clip-path="url(#p823dfa4c7d)" style="fill: none; stroke-dasharray: 4.07,1.76; stroke-dashoffset: 0; stroke: #616976; stroke-width: 1.1"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 67.487886 123.313015
+L 75.59461 70.188285
+" clip-path="url(#p823dfa4c7d)" style="fill: none; stroke: #235cc4; stroke-width: 1.6; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 75.59461 70.188285
+L 423.729908 123.313015
+" clip-path="url(#p823dfa4c7d)" style="fill: none; stroke: #c34753; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="53.515562" y="141.584514" transform="rotate(-0 53.515562 141.584514)">O</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="67.533654" y="62.12733" transform="rotate(-0 67.533654 62.12733)">P</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="430.178672" y="127.612191" transform="rotate(-0 430.178672 127.612191)">S</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #80501f" x="99.731708" y="99.130148" transform="rotate(-0 99.731708 99.130148)">φ ≈ 81,3°</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="32.557078" y="202.847778" transform="rotate(-0 32.557078 202.847778)">Trái Đất</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start" x="330.812438" y="156.631632" transform="rotate(-0 330.812438 156.631632)">Vệ tinh</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle" x="217.959059" y="83.008236" transform="rotate(-0 217.959059 83.008236)">Tia giới hạn SP</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: middle" x="223.333029" y="201.235586" transform="rotate(-0 223.333029 201.235586)">Góc tại P: 90°</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p823dfa4c7d">
+   <rect x="3.00024" y="37.329487" width="447.59952" height="177.341025"/>
+  </clipPath>
+ </defs>
+</svg>

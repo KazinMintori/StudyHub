@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "13-hap-dan"
-section: "topic"
 topic: "dinh-luat-van-vat-hap-dan"
+section: "topic"
 title: "Định luật vạn vật hấp dẫn Newton"
 description: "Hai vật có khối lượng hút nhau như thế nào và lực tổng hợp được tính ra sao?"
 ---

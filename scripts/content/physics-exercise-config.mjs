@@ -1,5 +1,12 @@
-export const publishedPhysicsExerciseChapters = [4,6,7,9,10,11,12,17,18,19,20]
+export const publishedPhysicsExerciseChapters = [4,6,7,9,10,11,12,13,17,18,19,20]
 export const physicsExerciseConfigs = {
+ 13:{numbered:84,total:118,guided:12,discussion:21,half:42,files:[
+  ['guided','parent-09-luyen-tap-huong-dan.md'],
+  ['discussion','parent-10-cau-hoi-thao-luan.md'],
+  ['numbered-a','parent-11-bai-tap-001-042.md'],
+  ['numbered-b','parent-12-bai-tap-043-084.md'],
+  ['bridge','parent-16-bai-tap-cau-noi.md']
+ ]},
  12:{"numbered": 92, "total": 135, "guided": 12, "discussion": 30, "half": 46, "files": [["guided", "parent-09-luyen-tap-huong-dan.md"], ["discussion", "parent-10-cau-hoi-thao-luan.md"], ["numbered-a", "parent-11-bai-tap-001-046.md"], ["numbered-b", "parent-12-bai-tap-047-092.md"], ["bridge", "parent-16-bai-tap-cau-noi.md"]]},
  6:{"numbered": 97, "total": 134, "guided": 12, "discussion": 24, "half": 49, "files": [["guided", "parent-09-luyen-tap-huong-dan.md"], ["discussion", "parent-10-cau-hoi-thao-luan.md"], ["numbered-a", "parent-11-bai-tap-001-049.md"], ["numbered-b", "parent-12-bai-tap-050-097.md"], ["bridge", "parent-16-bai-tap-cau-noi.md"]]},
  7:{"numbered": 84, "total": 120, "guided": 12, "discussion": 23, "half": 42, "files": [["guided", "parent-09-luyen-tap-huong-dan.md"], ["discussion", "parent-10-cau-hoi-thao-luan.md"], ["numbered-a", "parent-11-bai-tap-001-042.md"], ["numbered-b", "parent-12-bai-tap-043-084.md"], ["bridge", "parent-16-bai-tap-cau-noi.md"]]},

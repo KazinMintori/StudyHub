@@ -1594,76 +1594,102 @@
           "page": 415
         }
       ],
-      "status": "theory-reviewed-exercises-incomplete",
+      "status": "complete",
       "fragments": [
         {
-          "sourceUnit": "00-mo-dau.md",
+          "sourceUnit": "00-mo-dau",
           "file": "raw_materials/physics/translations/chapter-13/00-mo-dau.md",
           "destination": "notes",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "01-muc-01.md",
+          "sourceUnit": "13.1",
           "file": "raw_materials/physics/translations/chapter-13/01-muc-01.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "02-muc-02.md",
+          "sourceUnit": "13.2",
           "file": "raw_materials/physics/translations/chapter-13/02-muc-02.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "03-muc-03.md",
+          "sourceUnit": "13.3",
           "file": "raw_materials/physics/translations/chapter-13/03-muc-03.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "04-muc-04.md",
+          "sourceUnit": "13.4",
           "file": "raw_materials/physics/translations/chapter-13/04-muc-04.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "05-muc-05.md",
+          "sourceUnit": "13.5",
           "file": "raw_materials/physics/translations/chapter-13/05-muc-05.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "06-muc-06.md",
+          "sourceUnit": "13.6",
           "file": "raw_materials/physics/translations/chapter-13/06-muc-06.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "07-muc-07.md",
+          "sourceUnit": "13.7",
           "file": "raw_materials/physics/translations/chapter-13/07-muc-07.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "08-muc-08.md",
+          "sourceUnit": "13.8",
           "file": "raw_materials/physics/translations/chapter-13/08-muc-08.md",
           "destination": "topic",
           "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "17-tom-tat.md",
+          "sourceUnit": "17-tom-tat",
           "file": "raw_materials/physics/translations/chapter-13/17-tom-tat.md",
           "destination": "notes",
           "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-09-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-13/parent-09-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-10-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-13/parent-10-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-11-bai-tap-001-042",
+          "file": "raw_materials/physics/translations/chapter-13/parent-11-bai-tap-001-042.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-12-bai-tap-043-084",
+          "file": "raw_materials/physics/translations/chapter-13/parent-12-bai-tap-043-084.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
+        },
+        {
+          "sourceUnit": "parent-16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-13/parent-16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "guided-practice",
-        "discussion-questions",
-        "all-numbered-end-exercises",
-        "bridging-problem"
-      ],
-      "theoryReview": "raw_materials/physics/reviews/ch13-remaining-theory-coverage.json"
+      "pendingSourceUnits": [],
+      "theoryReview": "raw_materials/physics/reviews/ch13-remaining-theory-coverage.json",
+      "completionReview": "raw_materials/physics/chapter-13-review.json"
     },
     {
       "chapter": 14,

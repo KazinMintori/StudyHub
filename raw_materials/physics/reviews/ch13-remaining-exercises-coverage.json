@@ -1,0 +1,118 @@
+{
+  "chapter": 13,
+  "status": "source-reviewed-exercises-and-render-verified",
+  "exerciseConfig": {
+    "numbered": 84,
+    "total": 118,
+    "guided": 12,
+    "discussion": 21,
+    "half": 42,
+    "files": [
+      [
+        "guided",
+        "parent-09-luyen-tap-huong-dan.md"
+      ],
+      [
+        "discussion",
+        "parent-10-cau-hoi-thao-luan.md"
+      ],
+      [
+        "numbered-a",
+        "parent-11-bai-tap-001-042.md"
+      ],
+      [
+        "numbered-b",
+        "parent-12-bai-tap-043-084.md"
+      ],
+      [
+        "bridge",
+        "parent-16-bai-tap-cau-noi.md"
+      ]
+    ]
+  },
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-13/00-mo-dau.md": "9385cbd6d6cf2ae9d2e6b397698fe93ff71935c560676580b920604dc7258da8",
+    "raw_materials/physics/translations/chapter-13/01-muc-01.md": "21e03df7b07436a8cb0f202e4478c46c3e4ccd7de686769aa5295afd0fa42c11",
+    "raw_materials/physics/translations/chapter-13/02-muc-02.md": "06c8f37520f682befdbc1a3086f939e9f9c7775eafb6ef03aa4d085f8593d6f7",
+    "raw_materials/physics/translations/chapter-13/03-muc-03.md": "8563ab361331e69f996269c4fb8a3c8631e35438f18f39ad99670f501632159e",
+    "raw_materials/physics/translations/chapter-13/04-muc-04.md": "82b6cddc2c7c857cde5347c969b2c89e3fcdcd3820a212b27cc23494d653107d",
+    "raw_materials/physics/translations/chapter-13/05-muc-05.md": "a4ce5dbec0b24f14e610137d82ac35894cbcfd0645c15a25315a7d7d27a231bc",
+    "raw_materials/physics/translations/chapter-13/06-muc-06.md": "1ee4549904e25a2dbd1f6c7c962e54deea459099958af1faa04637c8a6d07a50",
+    "raw_materials/physics/translations/chapter-13/07-muc-07.md": "1ee04b4c7fb34f60738812eff02a0dda528242a19377792ac53c13c67f7cd472",
+    "raw_materials/physics/translations/chapter-13/08-muc-08.md": "d5e3f66698cd7f9a16d4ca6ddc28c783e8264343be104af8accf51b92b4d8e4f",
+    "raw_materials/physics/translations/chapter-13/17-tom-tat.md": "11a6814e03a1e1e33805be3522451482af1e8c5c584e8c89849c4362ab3dc38f",
+    "raw_materials/physics/translations/chapter-13/parent-09-luyen-tap-huong-dan.md": "35c85f8fbb2745a6b829118adc3e0b85b9bb2350a5c04f1bd98d9e8395350ade",
+    "raw_materials/physics/translations/chapter-13/parent-10-cau-hoi-thao-luan.md": "1d0b31d5d3ea601dbb293a857eb3467f9b34f6a44a09fb0137959d038de61e55",
+    "raw_materials/physics/translations/chapter-13/parent-11-bai-tap-001-042.md": "7a5af374c5dfae839d7ff902ce7e427d50dfb4377e841d2ce5ccb986be9eb057",
+    "raw_materials/physics/translations/chapter-13/parent-12-bai-tap-043-084.md": "1a5bebb414b518cc4cd31beab3b19a8df2e85a200728a5565ad7faf1544e2a30",
+    "raw_materials/physics/translations/chapter-13/parent-16-bai-tap-cau-noi.md": "c3ce2fd1664e1e444f5ea90a510d36f6a5c5777cf055284965850489f30f9c36"
+  },
+  "sourcePages": [
+    440,
+    448
+  ],
+  "sourceCounts": {
+    "numbered": 84,
+    "guided": 12,
+    "discussion": 21,
+    "bridge": 1,
+    "bridgeGuideParts": 9,
+    "challenge": 3,
+    "MCAT": 3,
+    "total": 118
+  },
+  "figures": {
+    "newOriginalCrops": 8,
+    "reusedTheoryFigures": 5,
+    "newRequiredSolutionDiagrams": 10,
+    "uniqueExerciseImagePaths": 23,
+    "originalPixelsPreserved": true,
+    "deduplicatedE13_39": "Union of the two complete original frames, not a redraw."
+  },
+  "independentChecks": {
+    "early": 139,
+    "lateNumericalAndGeometry": 189,
+    "lateStructural": 106,
+    "discussion": 122,
+    "guidedAuthorAndParentModels": 67,
+    "note": "Overlapping calculations and structural checks are not counts of distinct problems."
+  },
+  "browser": {
+    "status": "passed",
+    "groups": 21,
+    "sourceUnits": 118,
+    "cases": 105,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "resumedAfterHostReset": true,
+    "allSolutionsInitiallyClosed": true
+  },
+  "math": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 28,
+    "inlineLimitEx": 27,
+    "display": 418,
+    "inline": 1282,
+    "findings": []
+  },
+  "sourceClarifications": [
+    "13.58: Requested rightward trajectory from rest cannot occur with actual initial force and potential barrier; algebraic final speed does not prove accessibility.",
+    "13.70: Given9640m/s and circularEarth orbit imply a radius insideEarth; distinguish formal circular-point-field algebra from valid exterior orbit.",
+    "13.41:11.2m/s2 is rounded; mass/radius inputs imply11.242m/s2. Both numeric paths are explicitly qualified.",
+    "13.76: ExplicitG=6.674e-11, original8rows, free-slope and fixed-Kepler-slope fits distinguished.",
+    "13.47: Surface contact position26.6m differs from50kg sphere center displacement26.4m."
+  ],
+  "parentCorrections": [
+    "13.22one difficulty dot,13.37two, derivativeprime and rightward sign convention.",
+    "Late13.73 totalforce on whole sphere wording, ledger13.58 page445.",
+    "Q13.20 exterior domain explicitlyRE≤r<infinity.",
+    "Bridge heading hierarchy corrected for one-source-unit grouping.",
+    "13.64 one wide3column solution table split into two2column tables; data and units preserved."
+  ]
+}

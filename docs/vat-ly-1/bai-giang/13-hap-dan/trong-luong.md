@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "13-hap-dan"
-section: "topic"
 topic: "trong-luong"
+section: "topic"
 title: "Trọng lượng"
 description: "Trọng lượng và gia tốc trọng trường thay đổi theo thiên thể và độ cao như thế nào?"
 ---
