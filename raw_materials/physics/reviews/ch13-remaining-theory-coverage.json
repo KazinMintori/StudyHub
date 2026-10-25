@@ -1,0 +1,372 @@
+{
+  "chapter": 13,
+  "status": "theory-reviewed-exercises-incomplete",
+  "sourcePDFPages": [
+    415,
+    440
+  ],
+  "theoryLastPageBoundary": "Summaryendsaroundy296onPDF440;Guidedbeginsbelowaroundy375.",
+  "sections": [
+    {
+      "file": "raw_materials/physics/translations/chapter-13/00-mo-dau.md",
+      "sha256": "9385cbd6d6cf2ae9d2e6b397698fe93ff71935c560676580b920604dc7258da8",
+      "sourceEquations": [],
+      "figureAssets": [
+        "r-theory-opener-saturn"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/01-muc-01.md",
+      "sha256": "21e03df7b07436a8cb0f202e4478c46c3e4ccd7de686769aa5295afd0fa42c11",
+      "sourceEquations": [
+        "13.1",
+        "13.2"
+      ],
+      "figureAssets": [
+        "r-theory-13-01",
+        "r-theory-13-02",
+        "r-theory-13-03",
+        "r-theory-13-04",
+        "r-theory-13-05",
+        "r-theory-13-06"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/02-muc-02.md",
+      "sha256": "06c8f37520f682befdbc1a3086f939e9f9c7775eafb6ef03aa4d085f8593d6f7",
+      "sourceEquations": [
+        "13.3",
+        "13.4",
+        "13.5"
+      ],
+      "figureAssets": [
+        "r-theory-13-07",
+        "r-theory-13-08",
+        "r-theory-application-moon-walk",
+        "r-theory-13-09"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/03-muc-03.md",
+      "sha256": "8563ab361331e69f996269c4fb8a3c8631e35438f18f39ad99670f501632159e",
+      "sourceEquations": [
+        "13.6",
+        "13.7",
+        "13.8",
+        "13.9"
+      ],
+      "figureAssets": [
+        "r-theory-13-10",
+        "r-theory-13-11",
+        "r-theory-13-12"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/04-muc-04.md",
+      "sha256": "82b6cddc2c7c857cde5347c969b2c89e3fcdcd3820a212b27cc23494d653107d",
+      "sourceEquations": [
+        "13.10",
+        "13.11",
+        "13.12",
+        "13.13"
+      ],
+      "figureAssets": [
+        "r-theory-13-13",
+        "r-theory-13-14",
+        "r-theory-13-15",
+        "r-theory-13-16",
+        "r-theory-13-17"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/05-muc-05.md",
+      "sha256": "a4ce5dbec0b24f14e610137d82ac35894cbcfd0645c15a25315a7d7d27a231bc",
+      "sourceEquations": [
+        "13.14",
+        "13.15",
+        "13.16",
+        "13.17"
+      ],
+      "figureAssets": [
+        "r-theory-13-18",
+        "r-theory-13-19",
+        "r-theory-13-20",
+        "r-theory-application-interplanetary",
+        "r-theory-13-21",
+        "r-theory-13-22"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/06-muc-06.md",
+      "sha256": "1ee4549904e25a2dbd1f6c7c962e54deea459099958af1faa04637c8a6d07a50",
+      "sourceEquations": [
+        "13.18",
+        "13.19",
+        "13.20",
+        "13.21",
+        "13.22",
+        "13.23",
+        "13.24",
+        "13.25",
+        "13.26"
+      ],
+      "figureAssets": [
+        "r-theory-13-23",
+        "r-theory-13-24",
+        "r-theory-13-25"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/07-muc-07.md",
+      "sha256": "1ee04b4c7fb34f60738812eff02a0dda528242a19377792ac53c13c67f7cd472",
+      "sourceEquations": [
+        "13.27",
+        "13.28"
+      ],
+      "figureAssets": [
+        "r-theory-13-26"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/08-muc-08.md",
+      "sha256": "d5e3f66698cd7f9a16d4ca6ddc28c783e8264343be104af8accf51b92b4d8e4f",
+      "sourceEquations": [
+        "13.29",
+        "13.30"
+      ],
+      "figureAssets": [
+        "r-theory-13-27",
+        "r-theory-13-28",
+        "r-theory-13-29"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-13/17-tom-tat.md",
+      "sha256": "11a6814e03a1e1e33805be3522451482af1e8c5c584e8c89849c4362ab3dc38f",
+      "sourceEquations": [],
+      "figureAssets": [
+        "r-theory-summary-newton",
+        "r-theory-summary-weight",
+        "r-theory-summary-orbit",
+        "r-theory-summary-black-hole"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    }
+  ],
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-13/00-mo-dau.md": "9385cbd6d6cf2ae9d2e6b397698fe93ff71935c560676580b920604dc7258da8",
+    "raw_materials/physics/translations/chapter-13/01-muc-01.md": "21e03df7b07436a8cb0f202e4478c46c3e4ccd7de686769aa5295afd0fa42c11",
+    "raw_materials/physics/translations/chapter-13/02-muc-02.md": "06c8f37520f682befdbc1a3086f939e9f9c7775eafb6ef03aa4d085f8593d6f7",
+    "raw_materials/physics/translations/chapter-13/03-muc-03.md": "8563ab361331e69f996269c4fb8a3c8631e35438f18f39ad99670f501632159e",
+    "raw_materials/physics/translations/chapter-13/04-muc-04.md": "82b6cddc2c7c857cde5347c969b2c89e3fcdcd3820a212b27cc23494d653107d",
+    "raw_materials/physics/translations/chapter-13/05-muc-05.md": "a4ce5dbec0b24f14e610137d82ac35894cbcfd0645c15a25315a7d7d27a231bc",
+    "raw_materials/physics/translations/chapter-13/06-muc-06.md": "1ee4549904e25a2dbd1f6c7c962e54deea459099958af1faa04637c8a6d07a50",
+    "raw_materials/physics/translations/chapter-13/07-muc-07.md": "1ee04b4c7fb34f60738812eff02a0dda528242a19377792ac53c13c67f7cd472",
+    "raw_materials/physics/translations/chapter-13/08-muc-08.md": "d5e3f66698cd7f9a16d4ca6ddc28c783e8264343be104af8accf51b92b4d8e4f",
+    "raw_materials/physics/translations/chapter-13/17-tom-tat.md": "11a6814e03a1e1e33805be3522451482af1e8c5c584e8c89849c4362ab3dc38f"
+  },
+  "sourceInventory": {
+    "sections": 8,
+    "examples": 11,
+    "selfChecks": 8,
+    "numberedEquations": 30,
+    "originalCrops": 36,
+    "actualEnglishLabelPairs": 92,
+    "table13_1Rows": 7,
+    "table13_1Fields": 4
+  },
+  "support": {
+    "newWiki": 9,
+    "cheatsheetItems": 38,
+    "formulaRows": 60,
+    "prerequisites": 9,
+    "supportingConcepts": 11
+  },
+  "math": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 28,
+    "inlineLimitEx": 27,
+    "display": 132,
+    "inline": 391,
+    "findings": []
+  },
+  "numeric": {
+    "earlyAssertions": 76,
+    "lateAssertions": 140,
+    "independentAssertions": 115,
+    "note": "Thesechecks overlapinexamplesandidentities;notcountedasdistinctproblems."
+  },
+  "browser": {
+    "status": "passed",
+    "theoryAndCheatsheetCases": 50,
+    "wikiCases": 27,
+    "notebookCases": 5,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ]
+  },
+  "independentReview": {
+    "status": "accepted-after-parent-corrections",
+    "originalP2": 4,
+    "requiredSourceRestorations": 3,
+    "resolved": 7,
+    "findings": {
+      "status": "needs-small-corrections",
+      "P1": 0,
+      "P2": 4,
+      "findings": [
+        {
+          "id": "G2018-publication-claim",
+          "priority": "P2",
+          "file": "qa/physics1-remaining/ch13-author-a/proposed-fragments/01-muc-01.md",
+          "line": 63,
+          "sourcePdfPages": [
+            417
+          ],
+          "problem": "Source says this was the accepted value as of the writing(2018). Draft changes it into a measured value published in2018,an unsupported publication-date claim.",
+          "evidence": "PDF417:“The accepted value as of this writing(2018)isG=6.67408(31)×10−11.” The PDFdoesnot identify a measurement publication in2018.",
+          "requiredChange": "Keep the numerical value but write “Giá trị được nêu tại thời điểm2018...”or “Một giá trị tham chiếu là...”. Do not assert a measurement publication year without primary evidence.",
+          "actualLine": "Đơn vị của $G$ trong SI có thể viết là $\\mathrm{N\\cdot m^2/kg^2}$. Khi biểu diễn bằng đơn vị đó, một giá trị đo công bố năm 2018 có hệ số $6{,}67408(31)\\times10^{-11}$. Trong các phép tính của chương, dùng hệ số ba chữ số có nghĩa $6{,}67\\times10^{-11}$."
+        },
+        {
+          "id": "escape-sqrt2-wording",
+          "priority": "P2",
+          "file": "qa/physics1-remaining/ch13-author-b/proposed-wiki/toc-do-thoat.md",
+          "line": 26,
+          "relatedLocations": [
+            {
+              "file": "qa/physics1-remaining/ch13-author-b/proposed-concepts.json",
+              "line": 22,
+              "field": "newConcepts.toc-do-thoat.example"
+            }
+          ],
+          "sourcePdfPages": [
+            426
+          ],
+          "problem": "“bằng căn bậc hai của hai lần tốc độ quỹ đạo tròn”grammatically places the speed inside the square root,which can read as sqrt(2v)and is dimensionally wrong.",
+          "evidence": "Correctrelation isvesc=sqrt(2)*vcirc. Notes04andCheatsheetalreadywriteitcorrectly.",
+          "requiredChange": "Use “bằng√2lần tốc độ quỹ đạo tròn”or “bằng tốc độ quỹ đạo tròn nhân với căn bậc hai của2”in both concept and Wiki.",
+          "actualLine": "Tại cùng bán kính quanh cùng một thiên thể, tốc độ thoát bằng căn bậc hai của hai lần tốc độ quỹ đạo tròn."
+        },
+        {
+          "id": "test-particle-energy-scope",
+          "priority": "P2",
+          "file": "qa/physics1-remaining/ch13-author-a/proposed-fragments/03-muc-03.md",
+          "line": 74,
+          "relatedLocations": [
+            {
+              "file": "qa/physics1-remaining/ch13-author-a/proposed-fragments/03-muc-03.md",
+              "line": 161
+            },
+            {
+              "file": "qa/physics1-remaining/ch13-author-b/proposed-wiki/toc-do-thoat.md",
+              "line": 16
+            },
+            {
+              "file": "qa/physics1-remaining/ch13-author-b/proposed-wiki/toc-do-thoat.md",
+              "line": 30
+            },
+            {
+              "file": "qa/physics1-remaining/ch13-author-b/proposed-concepts.json",
+              "line": 23
+            },
+            {
+              "file": "qa/physics1-remaining/ch13-author-b/proposed-concepts.json",
+              "line": 109
+            },
+            {
+              "file": "qa/physics1-remaining/ch13-author-b/proposed-course-data.json",
+              "line": 250
+            },
+            {
+              "file": "qa/physics1-remaining/ch13-author-b/proposed-course-data.json",
+              "line": 276
+            }
+          ],
+          "sourcePdfPages": [
+            422,
+            423,
+            430,
+            431
+          ],
+          "problem": "Earthlaunchcalculationsarecorrect,butthegeneralenergy/escapeexpositiondoesnotstate thatthecentralbodyisfixed orprojectileisa testmass. Meanwhile Uiscorrectlycalledtwo-bodypotentialandWikiusecallsthis“mô hình hai vật”,whichcanincorrectlyextend sqrt(2GM/r)to comparable finite masses.",
+          "evidence": "Inexact isolatedtwo-body relative motion,relativekineticenergyusesreducedmass,andrelativeescapespeedcontainsG(M+m). Setting m=M changes the threshold bysqrt2comparedwiththetest-particleformula. Proposed orbitWikialreadyexplicitlystatesfixedcenter/m<<M;applysameconditiontoescape.",
+          "requiredChange": "BeforeusingK=mv²/2asallrelevantK,explicitlystate thecentralbodyisconsideredstationaryandm<<M(orafixedcentralpotential). Carry theconditionintoescapeWikiandCheatsheetdescriptions,andchangeambiguous“mô hình hai vật”usetotest-particlemodel. No need addfullbinaryderivationtothepubliclesson.",
+          "actualLine": "Nếu chỉ lực hấp dẫn thực hiện công, tổng động năng và thế năng của hệ được bảo toàn:"
+        },
+        {
+          "id": "SgrA-radius-bound-label",
+          "priority": "P2",
+          "file": "qa/physics1-remaining/ch13-author-b/proposed-fragments/08-muc-08.md",
+          "line": 142,
+          "sourcePdfPages": [
+            438
+          ],
+          "problem": "Source givesanupperbound onradius,no more than4.4e10m. Draft changes it to “giới hạn kích thước cỡ4.4e10m”,whichlosesradiusversusdiameterandthestrictupper-boundmeaningneededwhencomparingwithRS.",
+          "evidence": "PDF438:“it has a radius no more than4.4×10^10m”. DraftcorrectedRS≈1.2e10mforgivenmassisconsistent,buttheobservationalradiusboundshouldremainexplicit.",
+          "requiredChange": "Write “bán kính không vượt quá khoảng4,4×10^10m”whilepreserving historical/illustrativecontext. Do not silently double or halve the value.",
+          "actualLine": "Trong phép ước lượng minh họa, khối lượng thu được khoảng $8{,}2\\times10^{36}\\,\\mathrm{kg}$, tức khoảng 4,1 triệu khối lượng Mặt Trời. Một giới hạn kích thước cỡ $4{,}4\\times10^{10}\\,\\mathrm m$, khoảng một phần ba khoảng cách Trái Đất–Mặt Trời, đặt khối lượng rất lớn vào một vùng rất gọn."
+        }
+      ]
+    },
+    "sourceRestorations": [
+      {
+        "id": "solar-scale-comparison",
+        "sourcePdfPage": 418,
+        "sourceLocation": "Figure13.5caption",
+        "draftFile": "C:/Users/Ai/.codex/worktrees/physics1-priority-20261022/StudyHub/qa/physics1-remaining/ch13-author-a/proposed-fragments/01-muc-01.md",
+        "draftAnchor": "::: example Ví dụ 13.3:",
+        "missing": "Source explicitly compares with Sunmass1.99e30kg andEarth–Sundistance1.50e11m. Thedraftdoesnotcarrythesetwoquantitativecomparisonvalueslocally.",
+        "suggestion": "RestoreoneVietnamesesentenceafterthestargeometryorcaptionforstrictfull-sourcecoverage.",
+        "severity": "required-source-restoration",
+        "requiredForUserFullCoverage": true,
+        "draftLine": 147,
+        "recommendedPlacement": "AddthecomparisonaftertheExample13.3geometry/captionorimmediatelybeforeTómtắt."
+      },
+      {
+        "id": "distant-night-stars",
+        "sourcePdfPage": 416,
+        "draftFile": "C:/Users/Ai/.codex/worktrees/physics1-priority-20261022/StudyHub/qa/physics1-remaining/ch13-author-a/proposed-fragments/01-muc-01.md",
+        "missing": "Sourceillustrates1/r²suppressionbynight-sky starsmoremassivethantheSunbutsofarawaythattheirforceonEarthisnegligible.",
+        "suggestion": "Restoretheshortdistance-versus-massillustrationifmeetingtheuserstrictnarrativecoverage.",
+        "severity": "required-source-restoration",
+        "requiredForUserFullCoverage": true,
+        "draftAnchor": "Khi khoảng cách tăng gấp đôi",
+        "draftLine": 21,
+        "recommendedPlacement": "Addtheshortillustrationaftertheinversesquaredistanceparagraph."
+      },
+      {
+        "id": "Newton-delayed-proof",
+        "sourcePdfPage": 431,
+        "draftFile": "C:/Users/Ai/.codex/worktrees/physics1-priority-20261022/StudyHub/qa/physics1-remaining/ch13-author-b/proposed-fragments/06-muc-06.md",
+        "missing": "Sourceintro saysNewtonsearchedforseveralyearsanddelayedpublicationuntilhefoundashell-theoremproof.",
+        "suggestion": "Requiredshortrestorationforhistoricalsourcefidelity;coreproofitselfiscomplete.",
+        "severity": "required-source-restoration",
+        "requiredForUserFullCoverage": true,
+        "draftAnchor": "Vì sao có thể tính lực hút",
+        "draftLine": 3,
+        "recommendedPlacement": "Addthehistoricalcontextaftertheopeningquestion,beforestartingthepointmass/shellproof."
+      }
+    ]
+  },
+  "pendingSourceUnits": [
+    "guided-practice",
+    "discussion-questions",
+    "all-numbered-end-exercises",
+    "bridging-problem"
+  ]
+}

@@ -1,3 +1,4 @@
+import {physics1RemainingChapter13Parent} from '../../../../docs/.vitepress/physics1-remaining-ch13-course.mjs'
 import {physics1RemainingChapter12Parent} from '../../../../docs/.vitepress/physics1-remaining-ch12-course.mjs'
 import {physics1RemainingChapter1Parent} from '../../../../docs/.vitepress/physics1-remaining-ch01-course.mjs'
 import {physics1RemainingChapter5Parent} from '../../../../docs/.vitepress/physics1-remaining-ch05-course.mjs'
@@ -74,7 +75,7 @@ export const cheatsheets = { 'vat-ly-2/18-photon': photonCheatsheet, 'vat-ly-2/1
   'vat-ly-1/10-dong-luc-hoc-quay': physics1PriorityCourseData[10].cheatsheet,
   'vat-ly-1/11-can-bang-dan-hoi': physics1PriorityCourseData[11].cheatsheet,
   'vat-ly-1/12-co-hoc-chat-luu': physics1RemainingChapter12Parent.cheatsheet,
-  'vat-ly-1/13-hap-dan': gravitationCheatsheet,
+  'vat-ly-1/13-hap-dan': physics1RemainingChapter13Parent.cheatsheet,
   'vat-ly-1/14-dao-dong': oscillationsCheatsheet,
   'vat-ly-1/15-song-co': mechanicalWavesCheatsheet,
   'vat-ly-1/16-am-hoc': acousticsCheatsheet,

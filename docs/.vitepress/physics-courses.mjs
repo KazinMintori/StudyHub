@@ -802,18 +802,91 @@ export const physics1Course = {
   "hasChapterExercises": true
 },
     {
-      "slug": "13-hap-dan",
+  "slug": "13-hap-dan",
+  "title": "Hấp dẫn",
+  "prerequisites": [
+    "luc",
+    "cong-nang-luong",
+    "vector",
+    "gia-toc-huong-tam",
+    "momen-luc",
+    "momen-dong-luong",
+    "khoi-tam",
+    "dao-ham",
+    "tich-phan"
+  ],
+  "supportingConcepts": [
+    "dinh-luat-van-vat-hap-dan",
+    "the-nang-hap-dan",
+    "toc-do-thoat",
+    "quy-dao-ve-tinh",
+    "dinh-luat-kepler",
+    "luc-xuyen-tam",
+    "dinh-ly-vo-cau",
+    "trong-luong-bieu-kien",
+    "ban-kinh-schwarzschild",
+    "chan-troi-su-kien",
+    "ho-den"
+  ],
+  "status": "draft",
+  "number": 13,
+  "sourceChapter": 13,
+  "topicGroups": [
+    {
       "title": "Hấp dẫn",
-      "prerequisites": [
-        "luc",
-        "cong-nang-luong",
-        "vector"
-      ],
-      "supportingConcepts": [],
-      "status": "draft",
-      "number": 13,
-      "sourceChapter": 13
-    },
+      "topics": [
+        {
+          "slug": "dinh-luat-van-vat-hap-dan",
+          "title": "Định luật vạn vật hấp dẫn Newton",
+          "question": "Hai vật có khối lượng hút nhau như thế nào và lực tổng hợp được tính ra sao?",
+          "source": "13.1"
+        },
+        {
+          "slug": "trong-luong",
+          "title": "Trọng lượng",
+          "question": "Trọng lượng và gia tốc trọng trường thay đổi theo thiên thể và độ cao như thế nào?",
+          "source": "13.2"
+        },
+        {
+          "slug": "the-nang-hap-dan",
+          "title": "Thế năng hấp dẫn",
+          "question": "Tính công, cơ năng và tốc độ thoát thế nào khi lực hấp dẫn thay đổi theo khoảng cách?",
+          "source": "13.3"
+        },
+        {
+          "slug": "chuyen-dong-ve-tinh",
+          "title": "Chuyển động vệ tinh",
+          "question": "Lực hấp dẫn xác định tốc độ, chu kỳ và cơ năng của vệ tinh trên quỹ đạo tròn ra sao?",
+          "source": "13.4"
+        },
+        {
+          "slug": "cac-dinh-luat-kepler-va-chuyen-dong-hanh-tinh",
+          "title": "Các định luật Kepler và chuyển động hành tinh",
+          "question": "Hình học quỹ đạo, diện tích quét và chu kỳ liên hệ với các định luật Newton như thế nào?",
+          "source": "13.5"
+        },
+        {
+          "slug": "phan-bo-khoi-luong-doi-xung-cau",
+          "title": "Phân bố khối lượng đối xứng cầu",
+          "question": "Vì sao vật đối xứng cầu có thể được thay bằng khối lượng ở tâm, và điều gì xảy ra bên trong vỏ cầu?",
+          "source": "13.6"
+        },
+        {
+          "slug": "trong-luong-bieu-kien-va-su-quay-trai-dat",
+          "title": "Trọng lượng biểu kiến và sự quay của Trái Đất",
+          "question": "Vì sao số chỉ của cân khác lực hấp dẫn thật khi vật cùng quay với Trái Đất?",
+          "source": "13.7"
+        },
+        {
+          "slug": "ho-den",
+          "title": "Hố đen",
+          "question": "Chân trời sự kiện có ý nghĩa gì và làm thế nào nhận biết hố đen qua chuyển động của vật lân cận?",
+          "source": "13.8"
+        }
+      ]
+    }
+  ]
+},
     {
       "slug": "14-dao-dong",
       "title": "Chuyển động tuần hoàn",

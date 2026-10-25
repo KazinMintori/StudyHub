@@ -1,31 +1,20 @@
 ---
-course: vat-ly-1
-lecture: 13-hap-dan
-section: lecture
+course: "vat-ly-1"
+lecture: "13-hap-dan"
+section: "lecture"
 title: "Hấp dẫn"
-prerequisites: ["luc","cong-nang-luong","vector"]
-lessonStatus: draft
-sourceTranslation: full
-description: "Bài giảng chuyên đề Hấp dẫn."
+prerequisites: ["luc","cong-nang-luong","vector","gia-toc-huong-tam","momen-luc","momen-dong-luong","khoi-tam","dao-ham","tich-phan"]
+lessonStatus: "draft"
+sourceTranslation: "full"
+description: "Định luật vạn vật hấp dẫn Newton, Trọng lượng, Thế năng hấp dẫn, Chuyển động vệ tinh, Các định luật Kepler và chuyển động hành tinh, Phân bố khối lượng đối xứng cầu, Trọng lượng biểu kiến và sự quay của Trái Đất, Hố đen."
 ---
 
-::: info Kế hoạch biên soạn
-Bài giảng chuyên đề này đang trong quá trình hoàn thiện nội dung chi tiết và đồ họa minh họa theo chuẩn học thuật StudyHub.
-:::
+<!--@include: ../../../raw_materials/physics/translations/chapter-13/00-mo-dau.md-->
 
-## Đề cương chi tiết bài giảng
+<TopicMap />
 
-- Lời mở đầu và mục tiêu học tập.
-- 13.1 — Newton’s Law of Gravitation (từ trang 395).
-- 13.2 — Weight (từ trang 399).
-- 13.3 — Gravitational Potential Energy (từ trang 402).
-- 13.4 — The Motion of Satellites (từ trang 404).
-- 13.5 — Kepler’s Laws and the Motion of Planets (từ trang 407).
-- 13.6 — Spherical Mass Distributions (từ trang 411).
-- 13.7 — Apparent Weight and the Earth’s Rotation (từ trang 414).
-- 13.8 — Black Holes (từ trang 415).
-- Câu hỏi thảo luận và bài tập luyện tập có hướng dẫn.
+<!--@include: ../../../raw_materials/physics/translations/chapter-13/17-tom-tat.md-->
 
 ## Tài liệu tham khảo
 
-- Hugh D. Young, Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition, Pearson.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 13.
