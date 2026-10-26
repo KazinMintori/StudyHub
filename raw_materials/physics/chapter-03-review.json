@@ -1,7 +1,7 @@
 {
   "chapter": 3,
   "status": "source-reviewed-and-render-verified",
-  "timestampUTC": "2026-10-26T16:24:10.085449+00:00",
+  "timestampUTC": "2026-10-26T16:47:14.414260+00:00",
   "sourcePages": {
     "theory": [
       86,
@@ -23,7 +23,7 @@
     "raw_materials/physics/translations/chapter-03/parent-09-luyen-tap-huong-dan.md": "8349aafb33e8243b7d516bfffddd47512fac099209a21c45fe2f01c452743bda",
     "raw_materials/physics/translations/chapter-03/parent-10-cau-hoi-thao-luan.md": "fbc867218cbfe78cdffe5db651dd8935118a14b2bb07b3abfb79ed1fb6c4952d",
     "raw_materials/physics/translations/chapter-03/parent-11-bai-tap-001-043.md": "3b52ba97bf07618d1e734fd575ad6633be1dab0c72fc94a48004ac53e5e9c994",
-    "raw_materials/physics/translations/chapter-03/parent-12-bai-tap-044-085.md": "1644873a72532b1313549ddd51c16bc182803a178aa13f58fffcb889b7eaa459",
+    "raw_materials/physics/translations/chapter-03/parent-12-bai-tap-044-085.md": "df2965725f4d6898c02a665fee4dd47160675ed891ba99fd114217db5bc294b7",
     "raw_materials/physics/translations/chapter-03/parent-16-bai-tap-cau-noi.md": "27eadad373b884a6f74a8868e0fc026f55ae1c9c8edef8aa8cb53a6737e680fb"
   },
   "exercisePrompts": 115,
@@ -51,6 +51,12 @@
     "sourceUnits": 115,
     "closedSolutions": 115,
     "hashedImageBytesVerified": 45,
-    "scope": "Boundedactualproductiongroupgeneration only; publicdeployment pending."
+    "scope": "Boundedactualproductiongroupgeneration; publicdeployment pending."
+  },
+  "normalizationReview": {
+    "beforeSHA256": "1644873a72532b1313549ddd51c16bc182803a178aa13f58fffcb889b7eaa459",
+    "afterSHA256": "df2965725f4d6898c02a665fee4dd47160675ed891ba99fd114217db5bc294b7",
+    "change": "Removed one redundant blank line at EOF only; source text/formulas unchanged.",
+    "bytesRemoved": 1
   }
 }

@@ -1653,4 +1653,3 @@ Các tốc độ từ $2{,}3$ đến $4{,}6\,\mathrm{m/s}$ cho góc tối ưu kh
 Các góc đo còn phân tán và góc trung bình không trùng chính xác góc tối ưu của mô hình. Dữ liệu ủng hộ cách giải thích về phát tán xa theo phương ngang, nhưng chưa đủ để khẳng định mọi hạt được phóng với góc tối ưu.
 
 </details>
-
