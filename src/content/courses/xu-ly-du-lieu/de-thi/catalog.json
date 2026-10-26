@@ -1,0 +1,57 @@
+[
+  {
+    "id": "de-1",
+    "slug": "de-1",
+    "title": "Đề 1",
+    "number": 1,
+    "code": "047",
+    "description": "Mã đề 047 · 20 câu trắc nghiệm · 6 câu tự luận",
+    "total": 26,
+    "quiz": 20,
+    "essay": 6
+  },
+  {
+    "id": "de-2",
+    "slug": "de-2",
+    "title": "Đề 2",
+    "number": 2,
+    "code": "045",
+    "description": "Mã đề 045 · 20 câu trắc nghiệm · 6 câu tự luận",
+    "total": 26,
+    "quiz": 20,
+    "essay": 6
+  },
+  {
+    "id": "de-3",
+    "slug": "de-3",
+    "title": "Đề 3",
+    "number": 3,
+    "code": "046",
+    "description": "Mã đề 046 · 20 câu trắc nghiệm · 6 câu tự luận",
+    "total": 26,
+    "quiz": 20,
+    "essay": 6
+  },
+  {
+    "id": "de-4",
+    "slug": "de-4",
+    "title": "Đề 4",
+    "number": 4,
+    "code": "030",
+    "description": "Mã đề 030 · 20 câu trắc nghiệm · 6 câu tự luận",
+    "total": 26,
+    "quiz": 20,
+    "essay": 6
+  },
+  {
+    "id": "de-5",
+    "slug": "de-5",
+    "title": "Đề 5",
+    "number": 5,
+    "code": "001",
+    "description": "Mã đề 001 (luyện tập) · 20 câu trắc nghiệm · 6 câu tự luận",
+    "total": 26,
+    "quiz": 20,
+    "essay": 6
+  }
+]

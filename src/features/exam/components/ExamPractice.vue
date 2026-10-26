@@ -1,12 +1,13 @@
 <template>
   <div ref="examRootRef" class="exam-practice vp-doc" :class="{ 'is-empty': !currentQuestion }" @click="copyCode">
-    <a class="exam-course-link" :href="withBase(courseLink)">← Chọn bài ôn thi</a>
+    <a class="exam-course-link" :href="withBase(courseLink)">{{ backLinkText }}</a>
     <!-- Top Header Bar -->
     <header class="exam-header">
       <div class="exam-header__left">
         <h1 class="exam-header__title">{{ bank?.title || 'Ôn tập ngân hàng câu hỏi' }}</h1>
-        <div v-if="bank?.lesson" class="exam-header__lesson-tag">
-          Bài {{ bank.lesson }}
+        <div v-if="bank?.code || bank?.lesson" class="exam-header__lesson-tag">
+          <template v-if="bank?.code">Mã đề {{ bank.code }}</template>
+          <template v-else>Bài {{ bank.lesson }}</template>
         </div>
       </div>
 
@@ -124,7 +125,7 @@
           tabindex="-1"
           class="exam-question__heading"
         >
-          Câu hỏi {{ activeIndex + 1 }}
+          Câu hỏi {{ currentQuestion.sourceNumber ?? activeIndex + 1 }}
           <span v-if="currentQuestion.id" class="exam-question__id-tag">
             {{ currentQuestion.id }}
           </span>
@@ -136,6 +137,7 @@
 
       <!-- Question Prompt (Pre-rendered VitePress HTML) -->
       <div class="exam-question__prompt" v-html="currentQuestion.promptHtml"></div>
+      <div v-if="currentQuestion.reviewNoteHtml" class="exam-source-note" role="note" v-html="currentQuestion.reviewNoteHtml"></div>
 
       <!-- QUIZ MODE: 4 vertical options A–D -->
       <div
@@ -170,7 +172,7 @@
                 :name="'exam-choice-' + currentQuestion.id"
                 :value="option.key"
                 :checked="selectedKey === option.key"
-                :disabled="isAnswered"
+                :disabled="isAnswered || isManualReview"
                 @change="handleSelect(option.key)"
                 @keydown="onRadioKeydown($event, option.key)"
               />
@@ -220,11 +222,16 @@
           ></div>
         </div>
 
+        <button v-if="isManualReview && !isAnswered" type="button" class="exam-nav-btn" @click="reviewQuestion">
+          Đối chiếu lời giải
+        </button>
+
         <!-- Optional overall answer notes / verification for quiz if present -->
         <details
           :key="`quiz-notes-${currentQuestion.id}`"
           v-if="isAnswered && (currentQuestion.answerHtml || currentQuestion.verificationHtml)"
           class="exam-quiz-notes"
+          :open="isManualReview"
         >
           <summary class="exam-quiz-notes__summary">
             <span>Xem lời giải</span>
@@ -324,7 +331,7 @@
             :aria-current="idx === activeIndex ? 'true' : undefined"
             @click="jumpToQuestion(q.id)"
           >
-            <span class="exam-modal__cell-num">{{ idx + 1 }}</span>
+            <span class="exam-modal__cell-num">{{ q.sourceNumber ?? idx + 1 }}</span>
             <span class="exam-modal__cell-id">{{ q.id }}</span>
           </button>
         </div>
@@ -370,6 +377,8 @@ import {
   buildExamQueryString,
   createExamSessionState,
   recordQuizAnswer,
+  recordQuizReview,
+  acceptedQuizKeys,
   getAnswer,
   calculateSessionStats,
   loadStoredAnswers,
@@ -378,6 +387,7 @@ import {
 } from '../services/exam-session.mjs';
 
 const props = defineProps({
+  backLinkText: { type: String, default: '← Chọn bài ôn thi' },
   courseLink: { type: String, default: '/xu-ly-du-lieu/on-thi/' },
   sessionKey: { type: String, default: '' },
   restoreState: { type: Function, default: null },
@@ -427,7 +437,7 @@ const sessionState = reactive(createExamSessionState());
 // Unique storage key per lesson
 const storageKey = computed(() => {
   if (props.sessionKey) return props.sessionKey;
-  const lesson = props.bank?.lesson || 'default';
+  const lesson = props.bank?.id || props.bank?.code || props.bank?.lesson || 'default';
   return `studyhub_exam_session_lesson_${lesson}`;
 });
 
@@ -476,6 +486,7 @@ const currentAnswer = computed(() => {
 });
 
 const isAnswered = computed(() => Boolean(currentAnswer.value));
+const isManualReview = computed(() => currentQuestion.value?.grading === 'manual');
 const selectedKey = computed(() => currentAnswer.value?.selectedKey || null);
 
 // Progress percentage
@@ -503,8 +514,7 @@ function getOptionInputId(key) {
 }
 
 function isOptionCorrect(key) {
-  if (!currentQuestion.value?.correctKey) return false;
-  return String(key).trim().toUpperCase() === String(currentQuestion.value.correctKey).trim().toUpperCase();
+  return acceptedQuizKeys(currentQuestion.value).includes(String(key).trim().toUpperCase());
 }
 
 function isQuestionCorrect(questionId) {
@@ -514,7 +524,7 @@ function isQuestionCorrect(questionId) {
 
 function isQuestionWrong(questionId) {
   const ans = getAnswer(sessionState, questionId);
-  return Boolean(ans && !ans.isCorrect);
+  return Boolean(ans && ans.isCorrect === false);
 }
 
 function isQuestionAnswered(questionId) {
@@ -522,6 +532,13 @@ function isQuestionAnswered(questionId) {
 }
 
 // User Actions
+function reviewQuestion() {
+  if (!currentQuestion.value || !isManualReview.value) return;
+  recordQuizReview(sessionState, currentQuestion.value);
+  saveStoredAnswers(storageKey.value, sessionState.answers);
+  liveStatus.value = 'Đã mở lời giải. Câu này không tính đúng hoặc sai vì đề gốc cần đối chiếu.';
+}
+
 function handleSelect(key) {
   if (!currentQuestion.value || isAnswered.value || currentMode.value !== 'quiz') return;
   const recorded = recordQuizAnswer(sessionState, currentQuestion.value, key);
@@ -532,7 +549,7 @@ function handleSelect(key) {
     const isCorrect = recorded.isCorrect;
     liveStatus.value = `Đã chọn đáp án ${key}. Kết quả: ${
       isCorrect ? 'Chính xác' : 'Không chính xác'
-    }. ${!isCorrect && recorded.correctKey ? `Đáp án đúng là ${recorded.correctKey}.` : ''}`;
+    }. ${!isCorrect && recorded.correctKey ? `Đáp án đúng là ${acceptedQuizKeys(currentQuestion.value).join(' hoặc ')}.` : ''}`;
   }
 }
 
@@ -772,6 +789,16 @@ onUnmounted(() => {
 }
 
 /* Header */
+.exam-source-note {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--ep-tim);
+  background: var(--ep-tim-soft);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.exam-source-note :deep(p) { margin: 0; }
+
 .exam-header {
   display: flex;
   align-items: center;

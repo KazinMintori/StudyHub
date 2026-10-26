@@ -25,6 +25,7 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
           }] : []),
           ...(course.id === 'xu-ly-du-lieu' ? [
             {text:'Ôn thi',link:`/${course.id}/on-thi/`},
+            {text:'Đề thi',link:`/${course.id}/de-thi/`,items:[1,2,3,4,5].map(number=>({text:`Đề ${number}`,link:`/${course.id}/de-thi/de-${number}`}))},
             {text:'Bài tập lớn',link:`/${course.id}/bai-tap-lon/`,items:[
               {text:'Đề bài tập lớn',link:`/${course.id}/bai-tap-lon/`},
               {text:'Ví dụ thực hành',link:`/${course.id}/bai-tap-lon/thuc-hanh`}
