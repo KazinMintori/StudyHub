@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { convexHull, insideConvexPolygon, insidePolygon, add, scale, sub, combination } from '../services/convex-geometry.mjs'
@@ -65,7 +66,7 @@ function removePoint() { if (points.value.length > 3) points.value = points.valu
 <template>
   <figure class="study-lab" :aria-label="type === 'test' ? 'Kiểm tra định nghĩa tập lồi bằng hai điểm' : 'Bao lồi của một tập điểm'">
     <p class="lab-title">{{ type === 'test' ? 'Đoạn nối hai điểm có ở lại trong tập không?' : 'Bao lồi: sợi dây chun quanh các điểm' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'test' ? `Hình ${shape.label} và đoạn nối hai điểm` : 'Các điểm, bao lồi tô màu và các đỉnh của bao lồi'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'test' ? `Hình ${shape.label} và đoạn nối hai điểm` : 'Các điểm, bao lồi tô màu và các đỉnh của bao lồi'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <template v-if="type === 'test'">
         <template v-if="shapeKey === 'crescent'">
           <circle :cx="view.sx(0)" :cy="view.sy(0)" :r="2.5 * view.width / 8" class="lab-region" />
@@ -82,6 +83,7 @@ function removePoint() { if (points.value.length > 3) points.value = points.valu
         <circle v-for="(p, i) in points" :key="i" :cx="P(p)[0]" :cy="P(p)[1]" :r="isVertex(p) ? 9 : 7" :class="isVertex(p) ? 'lab-handle' : 'lab-handle lab-handle-alt'" tabindex="0" role="slider" :aria-label="`Điểm thứ ${i + 1}`" @pointerdown="drag.start(String(i), $event)" @keydown="drag.key(String(i), p, $event)" />
       </template>
     </svg>
+    <LabPointControls :svg="svg" />
     <div v-if="type === 'test'" class="lab-buttons" role="group" aria-label="Chọn hình">
       <button v-for="(item, key) in shapes" :key="key" :aria-pressed="shapeKey === key" @click="pickShape(key)">{{ item.label }}</button>
     </div>

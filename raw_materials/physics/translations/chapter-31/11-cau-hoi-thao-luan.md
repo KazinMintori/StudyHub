@@ -972,7 +972,7 @@ $$
 Triệt tiêu $4R^2$ ở cả hai vế:
 
 $$
- \le ft(2 X_L - \frac{X_C}{2}\right)^2 = 4(X_L - X_C)^2.
+ \left(2 X_L - \frac{X_C}{2}\right)^2 = 4(X_L - X_C)^2.
 $$
 
 Khai triển hai vế:

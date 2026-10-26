@@ -4,11 +4,12 @@ export function stabilizeInitialHeading({
   browser = window,
   document = browser.document,
   getOffset,
+  targetId,
   durationMs = 10000
 }) {
   const initialUrl = browser.location.href
   let id
-  try { id = decodeURIComponent(browser.location.hash.slice(1)) } catch { id = '' }
+  try { id = typeof targetId === 'string' ? targetId : decodeURIComponent(browser.location.hash.slice(1)) } catch { id = '' }
   if (!id) return { refresh() {}, stop() {} }
 
   let stopped = false

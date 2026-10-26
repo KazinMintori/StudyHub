@@ -3,6 +3,7 @@ import { studyLink as withBase } from '../../../core/routing/links.js'
 import { useFlashcards } from '../controllers/useFlashcards.js'
 
 const props = defineProps({
+  courseId: { type: String, default: '' },
   courses: {
     type: Array,
     default: () => []
@@ -20,7 +21,7 @@ const {
   review,
   next,
   resetReview
-} = useFlashcards({ courses: props.courses })
+} = useFlashcards({ courses: props.courses, courseId: () => props.courseId })
 </script>
 
 <template>
@@ -29,7 +30,7 @@ const {
       <div>
         <h2 id="flash-heading">Nhớ trước khi xem đáp án</h2>
       </div>
-      <label class="select-label">
+      <label v-if="!courseId" class="select-label">
         Học phần
         <select v-model="subject">
           <option value="all">Tất cả học phần</option>
@@ -37,7 +38,7 @@ const {
         </select>
       </label>
     </div>
-    <div class="flashcard-progress">
+    <div v-if="deck.length" class="flashcard-progress">
       <span>{{ knownCount }} / {{ deck.length }} thẻ đã nhớ</span>
       <progress :value="knownCount" :max="deck.length" :aria-label="`${knownCount} trên ${deck.length} thẻ đã nhớ`"></progress>
       <button class="text-link" @click="resetReview">Ôn lại từ đầu</button>
@@ -54,7 +55,8 @@ const {
       </div>
       <button v-else class="study-button primary" @click="revealed = true">Xem đáp án</button>
     </article>
-    <div class="flashcard-actions">
+    <div v-else class="empty-state" role="status">Học phần này chưa có flashcard. Bạn có thể dùng ghi chú và danh sách việc học để tự ôn tập.</div>
+    <div v-if="deck.length" class="flashcard-actions">
       <button class="study-button" @click="next(-1)">← Thẻ trước</button>
       <div v-if="revealed" class="button-row">
         <button class="study-button" @click="review(false)">Chưa nhớ</button>

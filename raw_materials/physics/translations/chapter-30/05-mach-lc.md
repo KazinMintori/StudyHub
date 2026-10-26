@@ -219,76 +219,76 @@ Mạch điện không có điện trở nên dao động là dao động điều
 **Lời giải:**
 1. Tần số góc dao động của mạch là:
    $$
-\begin{aligned}
-\omega &= \frac{1}{\sqrt{LC}} \\
-&= \frac{1}{\sqrt{(10\text{ mH})(25\ \mu\text{F})}} \\
-&= \frac{1}{\sqrt{2{,}5 \times 10^{-7}\text{ s}^2}} \\
-&= 2{,}0 \times 10^3\text{ rad/s}
-\end{aligned}
-$$
+   \begin{aligned}
+   \omega &= \frac{1}{\sqrt{LC}} \\
+   &= \frac{1}{\sqrt{(10\text{ mH})(25\ \mu\text{F})}} \\
+   &= \frac{1}{\sqrt{2{,}5 \times 10^{-7}\text{ s}^2}} \\
+   &= 2{,}0 \times 10^3\text{ rad/s}
+   \end{aligned}
+   $$
    Tần số dao động của mạch là:
    $$
-\begin{aligned}
-f &= \frac{\omega}{2\pi} \\
-&= \frac{2{,}0 \times 10^3\text{ rad/s}}{2\pi} \\
-&\approx 318\text{ Hz} \approx 320\text{ Hz}
-\end{aligned}
-$$
+   \begin{aligned}
+   f &= \frac{\omega}{2\pi} \\
+   &= \frac{2{,}0 \times 10^3\text{ rad/s}}{2\pi} \\
+   &\approx 318\text{ Hz} \approx 320\text{ Hz}
+   \end{aligned}
+   $$
    Chu kỳ dao động là:
    $$
-\begin{aligned}
-T &= \frac{1}{f} \\
-&= \frac{1}{318\text{ Hz}} \\
-&\approx 3{,}14 \times 10^{-3}\text{ s} = 3{,}1\text{ ms}
-\end{aligned}
-$$
+   \begin{aligned}
+   T &= \frac{1}{f} \\
+   &= \frac{1}{318\text{ Hz}} \\
+   &\approx 3{,}14 \times 10^{-3}\text{ s} = 3{,}1\text{ ms}
+   \end{aligned}
+   $$
 
 2. Điện tích cực đại ban đầu của tụ điện:
    $$
-\begin{aligned}
-Q &= C V \\
-&= (25\ \mu\text{F})(300\text{ V}) \\
-&= 7{,}5\text{ mC}
-\end{aligned}
-$$
+   \begin{aligned}
+   Q &= C V \\
+   &= (25\ \mu\text{F})(300\text{ V}) \\
+   &= 7{,}5\text{ mC}
+   \end{aligned}
+   $$
    Phương trình điện tích và dòng điện theo thời gian:
    $$
-\begin{aligned}
-q(t) &= Q\cos(\omega t) \\
-&= (7{,}5\text{ mC})\cos(\omega t)
-\end{aligned}
-$$
+   \begin{aligned}
+   q(t) &= Q\cos(\omega t) \\
+   &= (7{,}5\text{ mC})\cos(\omega t)
+   \end{aligned}
    $$
-\begin{aligned}
-I_m &= \omega Q \\
-&= (2000\text{ rad/s})(7{,}5\text{ mC}) \\
-&= 15\text{ A}
-\end{aligned}
-$$
+   $$
+   \begin{aligned}
+   I_m &= \omega Q \\
+   &= (2000\text{ rad/s})(7{,}5\text{ mC}) \\
+   &= 15\text{ A}
+   \end{aligned}
+   $$
    $$
    i(t) = -(15\text{ A})\sin(\omega t)
    $$
    Tại thời điểm $t = 1{,}2\text{ ms} = 1{,}2 \times 10^{-3}\text{ s}$, góc pha là:
    $$
-\begin{aligned}
-\omega t &= (2000\text{ rad/s})(1{,}2\text{ ms}) \\
-&= 2{,}4\text{ rad}
-\end{aligned}
-$$
+   \begin{aligned}
+   \omega t &= (2000\text{ rad/s})(1{,}2\text{ ms}) \\
+   &= 2{,}4\text{ rad}
+   \end{aligned}
+   $$
    Tính các giá trị lượng giác tương ứng: Ta có $\cos(2{,}4\text{ rad}) \approx -0{,}7374$ và $\sin(2{,}4\text{ rad}) \approx 0{,}6755$.
    Thay vào phương trình ta được:
    $$
-\begin{aligned}
-q &= (7{,}5\text{ mC})(-0{,}7374) \\
-&\approx -5{,}5\text{ mC}
-\end{aligned}
-$$
+   \begin{aligned}
+   q &= (7{,}5\text{ mC})(-0{,}7374) \\
+   &\approx -5{,}5\text{ mC}
+   \end{aligned}
    $$
-\begin{aligned}
-i &= -(15\text{ A})(0{,}6755) \\
-&\approx -10{,}1\text{ A} \approx -10\text{ A}
-\end{aligned}
-$$
+   $$
+   \begin{aligned}
+   i &= -(15\text{ A})(0{,}6755) \\
+   &\approx -10{,}1\text{ A} \approx -10\text{ A}
+   \end{aligned}
+   $$
 
 **Đánh giá:**
 Vì chu kỳ dao động là $T = 3{,}1\text{ ms}$, thời điểm $t = 1{,}2\text{ ms}$ tương ứng với $t \approx 0{,}38T$. Thời điểm này nằm giữa $T/4 = 0{,}25T$ (giai đoạn b) và $T/2 = 0{,}50T$ (giai đoạn c). Ở vị trí này, bản tụ bên trái mang điện tích âm đang tiếp tục nạp, và dòng điện ngược chiều kim đồng hồ đang giảm dần về không. Dấu âm của cả $q$ và $i$ hoàn toàn phù hợp với dự đoán hình học từ sơ đồ dao động.
@@ -310,39 +310,39 @@ Năng lượng từ trường tích trữ trong cuộn cảm là $U_B = \frac{1}
    U_B = \frac{1}{2}L i^2 = 0
    $$
    $$
-\begin{aligned}
-U_E &= \frac{Q^2}{2C} \\
-&= \frac{(7{,}5\text{ mC})^2}{2(25\ \mu\text{F})} \\
-&= \frac{56{,}25 \times 10^{-6}\,\mathrm{C^2}}{50 \times 10^{-6}\,\mathrm F} \\
-&= 1{,}125\text{ J} \approx 1{,}1\text{ J}
-\end{aligned}
-$$
+   \begin{aligned}
+   U_E &= \frac{Q^2}{2C} \\
+   &= \frac{(7{,}5\text{ mC})^2}{2(25\ \mu\text{F})} \\
+   &= \frac{56{,}25 \times 10^{-6}\,\mathrm{C^2}}{50 \times 10^{-6}\,\mathrm F} \\
+   &= 1{,}125\text{ J} \approx 1{,}1\text{ J}
+   \end{aligned}
+   $$
    Tổng năng lượng của mạch tại $t = 0$ là $E = U_B + U_E = 1{,}125\text{ J} \approx 1{,}1\text{ J}$.
 
 2. Tại thời điểm $t = 1{,}2\text{ ms}$, ta có $i = -10{,}13\text{ A}$ và $q = -5{,}53 \times 10^{-3}\text{ C}$:
    $$
-\begin{aligned}
-U_B &= \frac{1}{2}L i^2 \\
-&= \frac{1}{2}(10\text{ mH})(-10{,}13\text{ A})^2 \\
-&\approx 0{,}513\text{ J}
-\end{aligned}
-$$
+   \begin{aligned}
+   U_B &= \frac{1}{2}L i^2 \\
+   &= \frac{1}{2}(10\text{ mH})(-10{,}13\text{ A})^2 \\
+   &\approx 0{,}513\text{ J}
+   \end{aligned}
    $$
-\begin{aligned}
-U_E &= \frac{q^2}{2C} \\
-&= \frac{(-5{,}53\text{ mC})^2}{2(25\ \mu\text{F})} \\
-&= \frac{30{,}58 \times 10^{-6}\,\mathrm{C^2}}{50 \times 10^{-6}\,\mathrm F} \\
-&\approx 0{,}612\text{ J} \approx 0{,}6\text{ J}
-\end{aligned}
-$$
+   $$
+   \begin{aligned}
+   U_E &= \frac{q^2}{2C} \\
+   &= \frac{(-5{,}53\text{ mC})^2}{2(25\ \mu\text{F})} \\
+   &= \frac{30{,}58 \times 10^{-6}\,\mathrm{C^2}}{50 \times 10^{-6}\,\mathrm F} \\
+   &\approx 0{,}612\text{ J} \approx 0{,}6\text{ J}
+   \end{aligned}
+   $$
    Tổng năng lượng tại thời điểm này là:
    $$
-\begin{aligned}
-E &= U_B + U_E \\
-&= 0{,}513\text{ J} + 0{,}612\text{ J} \\
-&= 1{,}125\text{ J} \approx 1{,}1\text{ J}
-\end{aligned}
-$$
+   \begin{aligned}
+   E &= U_B + U_E \\
+   &= 0{,}513\text{ J} + 0{,}612\text{ J} \\
+   &= 1{,}125\text{ J} \approx 1{,}1\text{ J}
+   \end{aligned}
+   $$
 
 **Đánh giá:**
 Năng lượng điện và năng lượng từ bằng nhau tại thời điểm $t = 3T/8 = 0{,}375T$. Vì thời điểm $t = 1{,}2\text{ ms} \approx 0{,}38T$ hơi muộn hơn $0{,}375T$ một chút, năng lượng từ trường $U_B$ hơi nhỏ hơn năng lượng điện trường $U_E$. Ở mọi thời điểm, tổng năng lượng $U_B + U_E$ luôn không đổi và bằng $1{,}125\text{ J}$, đúng như định luật bảo toàn năng lượng yêu cầu.

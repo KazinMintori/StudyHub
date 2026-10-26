@@ -66,6 +66,18 @@ test('late headings are picked up when content refreshes', () => {
   assert.equal(env.browser.scrollY, 866)
 })
 
+test('a query-selected tool can stabilize its own heading without replacing the tab hash', () => {
+  const env = environment()
+  env.browser.location.href = 'https://study.test/workspace.html?mo-phong=affine#simulation'
+  env.browser.location.hash = '#simulation'
+  stabilizeInitialHeading({ ...env, targetId: 'exercise', getOffset: () => 72 })
+  env.flush()
+  assert.equal(env.browser.scrollY, 928)
+  env.shiftTo(1800); env.flush()
+  assert.equal(env.browser.scrollY, 1728)
+  assert.equal(env.browser.location.hash, '#simulation')
+})
+
 for (const intent of ['wheel', 'touchstart', 'pointerdown', 'keydown']) {
   test(`${intent} cancels queued corrections and releases observers/listeners`, () => {
     const env = environment()

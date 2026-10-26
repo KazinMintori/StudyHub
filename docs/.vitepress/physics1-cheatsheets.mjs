@@ -34,7 +34,7 @@ export const unitsVectorsCheatsheet = {
           name: 'Thành phần và độ lớn của vector trong mặt phẳng',
           formulaRows: [
             { label: 'Thành phần theo hai trục tọa độ vuông góc', formula: d(String.raw`A_x = A\cos\theta,\quad A_y = A\sin\theta`) },
-            { label: 'Độ lớn và góc hướng của vector', formula: d(String.raw`A = \sqrt{A_x^2 + A_y^2},\quad \tan\theta = \frac{A_y}{A_x}`) }
+            { label: 'Độ lớn và góc hướng của vector', formula: d(String.raw`\begin{aligned}&A = \sqrt{A_x^2 + A_y^2}, \\ &\tan\theta = \frac{A_y}{A_x}.\end{aligned}`) }
           ],
           variables: [
             String.raw`$A$: Độ lớn của vector $\vec A$ (Luôn không âm)`,
@@ -46,8 +46,8 @@ export const unitsVectorsCheatsheet = {
         {
           name: 'Phép cộng vector theo thành phần trong không gian',
           formulaRows: [
-            { label: 'Hợp vector của hai vector', formula: d(String.raw`\vec R = \vec A + \vec B = (A_x + B_x)\hat{\mathbf i} + (A_y + B_y)\hat{\mathbf j} + (A_z + B_z)\hat{\mathbf k}`) },
-            { label: 'Khai triển tổng quát cho n vector', formula: d(String.raw`\vec R = \sum_{i=1}^n \vec A_i = \vec A_1 + \vec A_2 + \dots + \vec A_n`) }
+            { label: 'Hợp vector của hai vector', formula: d(String.raw`\begin{aligned}\vec R &= \vec A + \vec B, \\ R_x &= A_x + B_x, \\ R_y &= A_y + B_y, \\ R_z &= A_z + B_z.\end{aligned}`) },
+            { label: 'Khai triển tổng quát cho n vector', formula: d(String.raw`\begin{aligned}\vec R &= \vec A_1 + \vec A_2 + \dots + \vec A_n \\ &= \sum_{i=1}^n \vec A_i.\end{aligned}`) }
           ],
           variables: [
             String.raw`$\vec R$: Vector tổng hợp`,
@@ -87,7 +87,7 @@ export const unitsVectorsCheatsheet = {
           name: 'Định nghĩa và biểu thức tọa độ của tích có hướng',
           formulaRows: [
             { label: 'Độ lớn của tích có hướng', formula: d(String.raw`C = |\vec A \times \vec B| = AB\sin\phi`) },
-            { label: 'Khai triển theo các vector đơn vị trực chuẩn', formula: d(String.raw`\vec A \times \vec B = (A_y B_z - A_z B_y)\hat{\mathbf i} + (A_z B_x - A_x B_z)\hat{\mathbf j} + (A_x B_y - A_y B_x)\hat{\mathbf k}`) }
+            { label: 'Các thành phần của tích có hướng', formula: d(String.raw`\begin{aligned}\vec C &= \vec A \times \vec B, \\ C_x &= A_yB_z - A_zB_y, \\ C_y &= A_zB_x - A_xB_z, \\ C_z &= A_xB_y - A_yB_x.\end{aligned}`) }
           ],
           variables: [
             String.raw`$\vec C = \vec A \times \vec B$: Vector tích có hướng, vuông góc với mặt phẳng chứa $\vec A$ và $\vec B$`,
@@ -309,7 +309,7 @@ export const newtonApplicationsCheatsheet = {
       items: [
         {
           name: 'Điều kiện cân bằng chất điểm',
-          formula: d(String.raw`\sum\vec F = \vec 0 \iff \sum F_x = 0,\quad \sum F_y = 0`),
+          formula: d(String.raw`\sum\vec F = \vec 0 \iff \begin{cases}\sum F_x = 0, \\ \sum F_y = 0.\end{cases}`),
           variables: [
             String.raw`$\sum F_x, \sum F_y$: Tổng các thành phần lực tác dụng dọc theo trục $x$ và $y$ ($\mathrm{N}$)`
           ],
@@ -849,7 +849,7 @@ export const equilibriumElasticityCheatsheet = {
         {
           name: 'Cân bằng tịnh tiến và cân bằng quay',
           formulaRows: [
-            { label: 'Điều kiện 1: Hợp lực tịnh tiến triệt tiêu', formula: d(String.raw`\sum\vec F = \vec 0 \iff \sum F_x = 0,\quad \sum F_y = 0`) },
+            { label: 'Điều kiện 1: Hợp lực tịnh tiến triệt tiêu', formula: d(String.raw`\sum\vec F = \vec 0 \iff \begin{cases}\sum F_x = 0, \\ \sum F_y = 0.\end{cases}`) },
             { label: 'Điều kiện 2: Hợp momen lực quanh điểm bất kỳ triệt tiêu', formula: d(String.raw`\sum\vec\tau = \vec 0 \iff \sum\tau_z = 0`) }
           ],
           variables: [
@@ -916,14 +916,14 @@ export const fluidMechanicsCheatsheet = {
       items: [
         {
           name: 'Áp suất theo độ sâu trong chất lưu không nén được',
-          formula: d(String.raw`p = p_0 + \rho gh \iff p_2 - p_1 = \rho g(y_1 - y_2)`),
+          formula: d(String.raw`\begin{aligned}&p = p_0 + \rho gh, \\ &p_2 - p_1 = \rho g(y_1 - y_2).\end{aligned}`),
           variables: [
             String.raw`$p$: Áp suất tuyệt đối ở độ sâu $h$ trong lòng chất lưu ($\mathrm{Pa}$)`,
             String.raw`$p_0$: Áp suất ở bề mặt thoáng, thường là áp suất khí quyển $p_{\mathrm{atm}}$ ($\mathrm{Pa}$)`,
             String.raw`$\rho$: Khối lượng riêng của chất lưu ($\mathrm{kg/m^3}$)`,
             String.raw`$h$: Độ sâu đo thẳng đứng từ mặt thoáng xuống điểm khảo sát ($\mathrm{m}$)`
           ],
-          description: String.raw`Áp suất ở cùng một độ sâu trong cùng một chất lưu đứng yên là như nhau theo mọi hướng. Đơn vị đo: $1\,\mathrm{atm} = 1{,}013\times 10^5\,\mathrm{Pa} = 760\,\mathrm{mmHg}$.`
+          description: String.raw`Áp suất ở cùng một độ sâu trong cùng một chất lưu đứng yên là như nhau theo mọi hướng. Đơn vị đo: Một atm tương đương khoảng $1{,}013\times 10^5\,\mathrm{Pa}$ hoặc $760\,\mathrm{mmHg}$.`
         },
         {
           name: 'Nguyên lý truyền áp suất Pascal',
@@ -970,7 +970,7 @@ export const fluidMechanicsCheatsheet = {
         },
         {
           name: 'Phương trình Bernoulli cho chất lưu lý tưởng',
-          formula: d(String.raw`p_1 + \tfrac12\rho v_1^2 + \rho g y_1 = p_2 + \tfrac12\rho v_2^2 + \rho g y_2 = \mathrm{const}`),
+          formula: d(String.raw`\begin{aligned}p_1 + \tfrac12\rho v_1^2 + \rho g y_1 &= \mathrm{const}, \\ p_2 + \tfrac12\rho v_2^2 + \rho g y_2 &= \mathrm{const}.\end{aligned}`),
           variables: [
             String.raw`$p$: Áp suất tĩnh của chất lưu ($\mathrm{Pa}$)`,
             String.raw`$\frac{1}{2}\rho v^2$: Áp suất động liên quan đến tốc độ dòng chảy ($\mathrm{Pa}$)`,
@@ -1024,7 +1024,7 @@ export const gravitationCheatsheet = {
       items: [
         {
           name: 'Thế năng hấp dẫn vũ trụ (Mốc ở vô cực)',
-          formula: d(String.raw`U(r) = -G\frac{m M}{r},\quad W_{\mathrm{grav}} = GMm\left(\frac{1}{r_2} - \frac{1}{r_1}\right)`),
+          formula: d(String.raw`\begin{aligned}&U(r) = -G\frac{mM}{r}, \\ &W_{\mathrm{grav}} = GMm\left(\frac{1}{r_2} - \frac{1}{r_1}\right).\end{aligned}`),
           variables: [
             String.raw`$U(r)$: Thế năng hấp dẫn của hệ hai vật với mốc quy ước $U(\infty) = 0$ ($\mathrm{J}$)`
           ],
@@ -1035,14 +1035,14 @@ export const gravitationCheatsheet = {
           formulaRows: [
             { label: 'Vận tốc quỹ đạo tròn bán kính r', formula: d(String.raw`v_{\mathrm{orb}} = \sqrt{\frac{GM}{r}}`) },
             { label: 'Vận tốc thoát ly khỏi bề mặt thiên thể', formula: d(String.raw`v_{\mathrm{esc}} = \sqrt{\frac{2GM}{R}} = \sqrt{2gR}`) },
-            { label: 'Cơ năng của vệ tinh trên quỹ đạo tròn', formula: d(String.raw`E = K + U = -\frac{GMm}{2r} = \tfrac12 U = -K`) }
+            { label: 'Cơ năng của vệ tinh trên quỹ đạo tròn', formula: d(String.raw`\begin{aligned}E &= K + U \\ &= -\frac{GMm}{2r} \\ &= \tfrac12 U = -K.\end{aligned}`) }
           ],
           variables: [
             String.raw`$v_{\mathrm{orb}}$: Tốc độ chuyển động của vệ tinh trên quỹ đạo tròn ($\mathrm{m/s}$)`,
             String.raw`$v_{\mathrm{esc}}$: Tốc độ tối thiểu để vật thoát khỏi trường hấp dẫn của thiên thể ($\mathrm{m/s}$)`,
             String.raw`$E$: Cơ năng toàn phần của vệ tinh, có giá trị âm đối với quỹ đạo đóng kín ($\mathrm{J}$)`
           ],
-          description: String.raw`Đối với Trái Đất: $v_{\mathrm{esc}} \approx 11{,}2\,\mathrm{km/s} = \sqrt{2}v_{\mathrm{orb,surface}}$.`
+          description: String.raw`Đối với Trái Đất, vận tốc thoát khoảng $11{,}2\,\mathrm{km/s}$, bằng $\sqrt{2}$ lần vận tốc quỹ đạo tròn ngay sát bề mặt.`
         }
       ]
     },
@@ -1083,9 +1083,9 @@ export const oscillationsCheatsheet = {
         {
           name: 'Phương trình li độ, vận tốc và gia tốc',
           formulaRows: [
-            { label: 'Phương trình vi phân và li độ', formula: d(String.raw`\frac{d^2x}{dt^2} + \omega^2 x = 0 \implies x(t) = A\cos(\omega t + \phi)`) },
-            { label: 'Vận tốc tức thời, sớm pha π/2 so với li độ', formula: d(String.raw`v(t) = -\omega A\sin(\omega t + \phi),\quad v_{\max} = \omega A`) },
-            { label: 'Gia tốc tức thời, ngược pha so với li độ', formula: d(String.raw`a(t) = -\omega^2 A\cos(\omega t + \phi) = -\omega^2 x(t),\quad a_{\max} = \omega^2 A`) }
+            { label: 'Phương trình vi phân và li độ', formula: d(String.raw`\begin{aligned}&\frac{d^2x}{dt^2} + \omega^2 x = 0, \\ &x(t) = A\cos(\omega t + \phi).\end{aligned}`) },
+            { label: 'Vận tốc tức thời, sớm pha π/2 so với li độ', formula: d(String.raw`\begin{aligned}&v(t) = -\omega A\sin(\omega t + \phi), \\ &v_{\max} = \omega A.\end{aligned}`) },
+            { label: 'Gia tốc tức thời, ngược pha so với li độ', formula: d(String.raw`\begin{aligned}a(t) &= -\omega^2 A\cos(\omega t + \phi) \\ &= -\omega^2 x(t), \\ a_{\max} &= \omega^2 A.\end{aligned}`) }
           ],
           variables: [
             String.raw`$x(t)$: Li độ dao động của chất điểm tại thời điểm $t$ ($\mathrm{m}$)`,
@@ -1105,8 +1105,8 @@ export const oscillationsCheatsheet = {
         {
           name: 'Bảo toàn cơ năng trong dao động điều hòa',
           formulaRows: [
-            { label: 'Cơ năng toàn phần bảo toàn', formula: d(String.raw`E = K + U = \tfrac12 m v^2 + \tfrac12 k x^2 = \tfrac12 k A^2 = \tfrac12 m v_{\max}^2`) },
-            { label: 'Hệ thức độc lập thời gian giữa x và v', formula: d(String.raw`x^2 + \frac{v^2}{\omega^2} = A^2 \iff v = \pm\omega\sqrt{A^2 - x^2}`) }
+            { label: 'Cơ năng toàn phần bảo toàn', formula: d(String.raw`\begin{aligned}E &= K + U \\ &= \tfrac12 mv^2 + \tfrac12 kx^2 \\ &= \tfrac12 kA^2 \\ &= \tfrac12 mv_{\max}^2.\end{aligned}`) },
+            { label: 'Hệ thức độc lập thời gian giữa x và v', formula: d(String.raw`\begin{aligned}&x^2 + \frac{v^2}{\omega^2} = A^2, \\ &v = \pm\omega\sqrt{A^2 - x^2}.\end{aligned}`) }
           ],
           variables: [
             String.raw`$E$: Cơ năng của vật dao động điều hòa ($\mathrm{J}$)`,
@@ -1147,11 +1147,12 @@ export const oscillationsCheatsheet = {
         {
           name: 'Dao động tắt dần yếu và hiện tượng cộng hưởng',
           formulaRows: [
-            { label: 'Li độ dao động tắt dần dưới lực cản f = -bv', formula: d(String.raw`x(t) = A e^{-(b/2m)t}\cos(\omega' t + \phi),\quad \omega' = \sqrt{\frac{k}{m} - \frac{b^2}{4m^2}}`) },
+            { label: 'Li độ dao động tắt dần dưới lực cản f = -bv', formula: d(String.raw`\begin{aligned}&x(t) = Ae^{-\beta t}\cos(\omega' t + \phi), \\ &\beta = \frac{b}{2m}, \\ &\omega' = \sqrt{\frac{k}{m} - \beta^2}.\end{aligned}`) },
             { label: 'Tần số góc cộng hưởng khi có lực cưỡng bức', formula: d(String.raw`\omega_{\mathrm d} \approx \omega_0 = \sqrt{\frac{k}{m}}`) }
           ],
           variables: [
             String.raw`$b$: Hệ số cản nhớt của môi trường ($\mathrm{kg/s}$)`,
+            String.raw`$\beta=b/(2m)$: Hệ số suy giảm biên độ theo thời gian ($\mathrm{s^{-1}}$)`,
             String.raw`$\omega_{\mathrm d}$: Tần số góc của ngoại lực cưỡng bức tuần hoàn ($\mathrm{rad/s}$)`
           ],
           description: String.raw`Hiện tượng cộng hưởng xảy ra khi tần số ngoại lực cưỡng bức xấp xỉ bằng tần số dao động riêng của hệ, làm biên độ dao động đạt giá trị cực đại.`
@@ -1188,7 +1189,7 @@ export const mechanicalWavesCheatsheet = {
         {
           name: 'Hàm sóng truyền điều hòa một chiều',
           formulaRows: [
-            { label: 'Sóng truyền theo chiều dương +x', formula: d(String.raw`y(x, t) = A\cos(kx - \omega t) = A\cos\left(2\pi\left(\frac{x}{\lambda} - \frac{t}{T}\right)\right)`) },
+            { label: 'Sóng truyền theo chiều dương +x', formula: d(String.raw`\begin{aligned}y(x,t) &= A\cos(kx - \omega t) \\ &= A\cos\left[2\pi\left(\tfrac{x}{\lambda} - \tfrac{t}{T}\right)\right].\end{aligned}`) },
             { label: 'Sóng truyền theo chiều âm -x', formula: d(String.raw`y(x, t) = A\cos(kx + \omega t)`) }
           ],
           variables: [
@@ -1208,7 +1209,7 @@ export const mechanicalWavesCheatsheet = {
           name: 'Tốc độ sóng trên dây căng và công suất',
           formulaRows: [
             { label: 'Tốc độ sóng cơ trên dây căng', formula: d(String.raw`v = \sqrt{\frac{F}{\mu}}`) },
-            { label: 'Công suất truyền sóng trung bình', formula: d(String.raw`P_{\mathrm{av}} = \tfrac12\sqrt{\mu F}\omega^2 A^2 = \tfrac12\mu v\omega^2 A^2`) }
+            { label: 'Công suất truyền sóng trung bình', formula: d(String.raw`\begin{aligned}P_{\mathrm{av}} &= \tfrac12\sqrt{\mu F}\omega^2 A^2 \\ &= \tfrac12\mu v\omega^2 A^2.\end{aligned}`) }
           ],
           variables: [
             String.raw`$F$: Lực căng của sợi dây đàn hồi ($\mathrm{N}$)`,
@@ -1229,19 +1230,20 @@ export const mechanicalWavesCheatsheet = {
           formulaRows: [
             { label: 'Hàm sóng dừng khi đầu x = 0 là nút cố định', formula: d(String.raw`y(x, t) = (2A\sin kx)\sin\omega t`) },
             { label: 'Vị trí các nút sóng (Biên độ triệt tiêu)', formula: d(String.raw`x_n = n\frac{\lambda}{2},\quad n = 0, 1, 2, \dots`) },
-            { label: 'Vị trí các bụng sóng (Biên độ cực đại 2A)', formula: d(String.raw`x_n = \left(n + \tfrac12\right)\frac{\lambda}{2},\quad n = 0, 1, 2, \dots`) }
+            { label: 'Vị trí các bụng sóng (Biên độ cực đại 2A)', formula: d(String.raw`x_n = \left(n + \tfrac12\right)\frac{\lambda}{2}`) }
           ],
           variables: [
-            String.raw`$2A\sin kx$: Biên độ dao động của phần tử tại tọa độ $x$ ($\mathrm{m}$)`
+            String.raw`$2A\sin kx$: Biên độ dao động của phần tử tại tọa độ $x$ ($\mathrm{m}$)`,
+            String.raw`$n=0,1,2,\dots$: Chỉ số các nút và bụng sóng theo chiều dương trục $x$`
           ],
           description: String.raw`Khoảng cách giữa hai nút sóng liên tiếp hoặc hai bụng sóng liên tiếp bằng nửa bước sóng $\lambda/2$. Khoảng cách từ một nút đến bụng liền kề bằng $\lambda/4$.`
         },
         {
           name: 'Tần số riêng của dây hai đầu cố định dài L',
-          formula: d(String.raw`f_n = n\frac{v}{2L} = n f_1,\quad n = 1, 2, 3, \dots`),
+          formula: d(String.raw`f_n = n\frac{v}{2L} = n f_1`),
           variables: [
             String.raw`$f_1 = v/(2L)$: Tần số cơ bản hay họa ba thứ nhất ($\mathrm{Hz}$)`,
-            String.raw`$f_n$: Tần số của họa ba thứ $n$ ($\mathrm{Hz}$)`
+            String.raw`$f_n$: Tần số của họa ba thứ $n$ ($\mathrm{Hz}$), với $n=1,2,3,\dots$`
           ],
           description: String.raw`Dây hai đầu cố định có thể phát ra mọi họa ba nguyên lần tần số cơ bản. Đối với dây một đầu cố định một đầu tự do: $f_n = (2n - 1)\frac{v}{4L}$ (chỉ tồn tại các họa ba lẻ).`
         }
@@ -1326,11 +1328,12 @@ export const acousticsCheatsheet = {
           name: 'Tần số riêng của cột không khí trong ống',
           formulaRows: [
             { label: 'Ống hở hai đầu: Đủ mọi họa ba', formula: d(String.raw`f_n = n\frac{v}{2L},\quad n = 1, 2, 3, \dots`) },
-            { label: 'Ống một đầu kín, một đầu hở: Chỉ có họa ba lẻ', formula: d(String.raw`f_n = (2n - 1)\frac{v}{4L},\quad n = 1, 2, 3, \dots`) },
+            { label: 'Ống một đầu kín, một đầu hở: Chỉ có họa ba lẻ', formula: d(String.raw`f_n = (2n - 1)\frac{v}{4L}`) },
             { label: 'Tần số phách giữa hai sóng âm', formula: d(String.raw`f_{\mathrm{beat}} = |f_a - f_b|`) }
           ],
           variables: [
-            String.raw`$L$: Chiều dài của ống cộng hưởng ($\mathrm{m}$)`
+            String.raw`$L$: Chiều dài của ống cộng hưởng ($\mathrm{m}$)`,
+            String.raw`$n=1,2,3,\dots$: Chỉ số mode dao động của cột không khí`
           ],
           description: String.raw`Đầu hở của ống luôn là nút áp suất (bụng li độ); đầu kín của ống luôn là bụng áp suất (nút li độ).`
         },

@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, sub, scale, dot, norm2 } from '../services/convex-geometry.mjs'
@@ -65,7 +66,7 @@ const arrow = `${uid}-arrow`
 <template>
   <figure class="study-lab" :aria-label="type === 'halfspace' ? 'Siêu phẳng và nửa không gian' : 'Nửa không gian các điểm gần một điểm hơn'">
     <p class="lab-title">{{ type === 'halfspace' ? 'Siêu phẳng aᵀx = b và nửa không gian aᵀx ≤ b' : 'Những điểm gần p hơn gần q' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'halfspace' ? 'Đường thẳng aᵀx = b, phần tô là nửa mặt phẳng aᵀx ≤ b, vector pháp tuyến a và điểm thử x' : 'Hai điểm p, q, đường trung trực và nửa mặt phẳng gần p hơn'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'halfspace' ? 'Đường thẳng aᵀx = b, phần tô là nửa mặt phẳng aᵀx ≤ b, vector pháp tuyến a và điểm thử x' : 'Hai điểm p, q, đường trung trực và nửa mặt phẳng gần p hơn'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><marker :id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-accent" /></marker></defs>
       <line v-for="x in [-4, -3, -2, -1, 1, 2, 3, 4]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="y in [-3, -2, -1, 1, 2, 3]" :key="`gy${y}`" :y1="view.sy(y)" :y2="view.sy(y)" x1="0" :x2="view.width" class="lab-grid" />
@@ -99,6 +100,7 @@ const arrow = `${uid}-arrow`
         <text :x="P(pts.z)[0] + 12" :y="P(pts.z)[1] + 18">z</text>
       </template>
     </svg>
+    <LabPointControls :svg="svg" />
 
     <div v-if="type === 'halfspace'" class="lab-controls">
       <label>b = {{ fmt(b, 1) }}<input v-model.number="b" type="range" min="-4" max="4" step="0.1" /></label>

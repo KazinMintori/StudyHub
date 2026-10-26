@@ -46,9 +46,16 @@ Ta kiểm tra tính tương đương logic giữa hai phát biểu:
   - Nếu $\theta_1 = \theta_2 = 0$, thì $\theta_1 x_1 + \theta_2 x_2 = 0 \in C$.
   - Nếu $\theta_1 + \theta_2 > 0$, ta thực hiện phép biến đổi đại số tách tổng trọng số:
     $$
-    \theta_1 x_1 + \theta_2 x_2 = (\theta_1 + \theta_2) \left( \frac{\theta_1}{\theta_1 + \theta_2} x_1 + \frac{\theta_2}{\theta_1 + \theta_2} x_2 \right)
+    s = \theta_1 + \theta_2 > 0, \qquad \lambda = \frac{\theta_1}{s}.
     $$
-    Biểu thức trong dấu ngoặc đơn là một tổ hợp lồi của $x_1, x_2$ vì các trọng số $\tfrac{\theta_1}{\theta_1 + \theta_2}$ và $\tfrac{\theta_2}{\theta_1 + \theta_2}$ đều không âm và có tổng đúng bằng 1. Vì $C$ là tập lồi, điểm trong ngoặc thuộc $C$. Tiếp theo, vì $C$ là một nón và số nhân $(\theta_1 + \theta_2) > 0$ là không âm, tích vô hướng của toàn bộ biểu thức vẫn thuộc $C$.
+    Khi đó $0\le\lambda\le1$ và $1-\lambda=\theta_2/s$. Đặt:
+    $$
+    z = \lambda x_1 + (1-\lambda)x_2.
+    $$
+    Điểm $z$ là một tổ hợp lồi của $x_1,x_2$, nên thuộc $C$. Vì $C$ là nón và $s>0$, ta có $sz\in C$. Mặt khác:
+    $$
+    sz = \theta_1x_1 + \theta_2x_2.
+    $$
 
 Về mặt hình học, tập hợp tất cả các tổ hợp $\theta_1 x_1 + \theta_2 x_2$ với $\theta_1, \theta_2 \ge 0$ sinh bởi hai vector độc lập tuyến tính trong mặt phẳng tạo thành một **hình quạt vô hạn** (infinite wedge hay pie slice) có đỉnh đặt tại gốc tọa độ, hai mép biên là hai tia thẳng đi qua $x_1$ và $x_2$. Khác biệt căn bản với đoạn thẳng giới hạn của tập lồi, hình quạt này trải rộng vô tận ra xa vì không có bất kỳ rào cản nào giới hạn độ lớn của các hệ số $\theta_1, \theta_2$.
 
@@ -58,16 +65,21 @@ Về mặt hình học, tập hợp tất cả các tổ hợp $\theta_1 x_1 + \
 
 Mở rộng từ hai điểm sang một số hữu hạn các điểm, ta thiết lập định nghĩa tổ hợp nón chuẩn mực:
 
-> **Định nghĩa.** Cho $k$ điểm $x_1, \ldots, x_k \in \mathbb{R}^n$. Một điểm $y$ có dạng:
+> **Định nghĩa.** Cho các điểm $x_1,\ldots,x_k$ trong $\mathbb{R}^n$. Một điểm $y$ có dạng:
 > $$
-> y = \sum_{i=1}^k \theta_i x_i = \theta_1 x_1 + \theta_2 x_2 + \dots + \theta_k x_k
+> \begin{aligned}
+> y &= \theta_1 x_1 + \theta_2 x_2 + \dots + \theta_k x_k \\
+> &= \sum_{i=1}^k \theta_i x_i
+> \end{aligned}
 > $$
 > với tất cả các trọng số không âm ($\theta_i \ge 0, \forall i = 1, \ldots, k$) được gọi là một **tổ hợp nón** (conic combination), hay tổ hợp tuyến tính không âm.
 > 
-> **Bao nón** (conic hull) của một tập hợp $S \subseteq \mathbb{R}^n$, ký hiệu là $\operatorname{cone} S$, là tập hợp tất cả các tổ hợp nón của các điểm thuộc $S$:
+> **Bao nón** (conic hull) của một tập hợp $S \subseteq \mathbb{R}^n$, ký hiệu là $\operatorname{cone} S$, gồm mọi điểm biểu diễn được bằng một tổng hữu hạn:
 > $$
-> \operatorname{cone} S = \left\{ \sum_{i=1}^k \theta_i x_i \;\middle|\; x_i \in S, \; \theta_i \ge 0, \; k \ge 1 \right\}
+> y \in \operatorname{cone} S
+> \iff y = \sum_{i=1}^k \theta_i x_i.
 > $$
+> Ở đây $k$ là số nguyên dương. Với mỗi chỉ số $i=1,\ldots,k$, điểm $x_i$ thuộc $S$ và hệ số $\theta_i$ không âm. Các điểm và hệ số có thể thay đổi theo điểm $y$ cần biểu diễn.
 
 Tương tự như bao lồi và bao affine, một tập hợp là nón lồi khi và chỉ khi nó chứa mọi tổ hợp nón của các điểm thuộc tập đó. Bao nón $\operatorname{cone} S$ luôn luôn là một nón lồi, và nó chính là **nón lồi nhỏ nhất chứa $S$**.
 
@@ -81,14 +93,20 @@ Nếu các vector được phân bố sao cho gốc tọa độ $O$ nằm trọn
 Trong mặt phẳng $\mathbb{R}^2$, xét ba vector:
 
 $$
-v_1 = (1, 0), \quad v_2 = (-1, 1), \quad v_3 = (-1, -1)
+\begin{aligned}
+&v_1 = (1, 0), \\
+&v_2 = (-1, 1), \\
+&v_3 = (-1, -1).
+\end{aligned}
 $$
 
 Gốc tọa độ $O = (0, 0)$ là một tổ hợp lồi của ba vector này:
 
 $$
-\frac{1}{2} v_1 + \frac{1}{4} v_2 + \frac{1}{4} v_3 = \frac{1}{2}(1, 0) + \frac{1}{4}(-1, 1) + \frac{1}{4}(-1, -1) = (0, 0)
+\tfrac12 v_1 + \tfrac14 v_2 + \tfrac14 v_3 = (0,0).
 $$
+
+Thật vậy, tọa độ thứ nhất bằng $\tfrac12-\tfrac14-\tfrac14=0$, còn tọa độ thứ hai bằng $0+\tfrac14-\tfrac14=0$.
 
 với các trọng số không âm $\theta_1 = 0.5$, $\theta_2 = 0.25$, $\theta_3 = 0.25$ có tổng bằng 1.
 
@@ -133,8 +151,10 @@ Trong giải tích lồi và các thuật toán học máy, có bốn họ nón 
 Góc phần tư không âm trong không gian $n$ chiều được định nghĩa là:
 
 $$
-\mathbb{R}^n_+ = \{x \in \mathbb{R}^n \mid x_i \ge 0, \; \forall i = 1, \dots, n\}
+\mathbb{R}^n_+ = \{x\in\mathbb{R}^n\mid x_i\ge0\}.
 $$
+
+Điều kiện $x_i\ge0$ phải đúng với mọi chỉ số $i=1,\ldots,n$.
 
 Đây là nón lồi sơ cấp và quen thuộc nhất: Tổng của hai vector có các tọa độ không âm là một vector không âm, và tích của một vector không âm với một số thực $\theta \ge 0$ vẫn là một vector không âm. Nón này sinh ra quan hệ thứ tự thành phần thông thường $x \preceq y \iff y - x \in \mathbb{R}^n_+$, nền tảng của quy hoạch tuyến tính (LP).
 
@@ -149,22 +169,29 @@ Xét nửa không gian đóng có phương trình $a^T x \le b$ với $a \ne 0$:
 Cho một chuẩn vector bất kỳ $\|\cdot\|$ trên $\mathbb{R}^n$. **Nón chuẩn** tương ứng trong không gian $\mathbb{R}^{n+1}$ là tập hợp:
 
 $$
-C = \{(x, t) \in \mathbb{R}^n \times \mathbb{R} \mid \|x\| \le t\}
+C = \{(x,t)\mid \|x\|\le t\}.
 $$
+
+Trong định nghĩa này, $x\in\mathbb{R}^n$ và $t\in\mathbb{R}$.
 
 Chứng minh tính lồi và tính nón của $C$:
 - Tính chất nón: Nếu $\|x\| \le t$ và $\theta \ge 0$, thì $\|\theta x\| = \theta \|x\| \le \theta t$, do đó $\theta(x, t) \in C$.
-- Tính lồi: Lấy $(x_1, t_1), (x_2, t_2) \in C$ và $\theta \in [0, 1]$. Theo bất đẳng thức tam giác:
+- Tính lồi: Lấy $(x_1, t_1), (x_2, t_2) \in C$ và $\theta \in [0, 1]$. Đặt $u=\theta x_1+(1-\theta)x_2$ và $s=\theta t_1+(1-\theta)t_2$. Theo bất đẳng thức tam giác:
   $$
-  \|\theta x_1 + (1 - \theta) x_2\| \le \theta \|x_1\| + (1 - \theta) \|x_2\| \le \theta t_1 + (1 - \theta) t_2
+  \begin{aligned}
+  \|u\| &\le \theta\|x_1\|+(1-\theta)\|x_2\| \\
+  &\le s.
+  \end{aligned}
   $$
-  Do đó tổ hợp lồi thuộc $C$.
+  Do đó tổ hợp lồi $(u,s)$ thuộc $C$.
 
 Khi chuẩn được sử dụng là chuẩn Euclid $\|\cdot\|_2$, nón chuẩn được gọi là **nón bậc hai** (Second-Order Cone), hay còn gọi là **nón Lorentz** hoặc **nón kem** (ice-cream cone):
 
 $$
-\mathcal{Q}^{n+1} = \{(x, t) \in \mathbb{R}^n \times \mathbb{R} \mid \|x\|_2 \le t\}
+\mathcal{Q}^{n+1} = \{(x,t)\mid \|x\|_2\le t\}.
 $$
+
+Ở đây vẫn lấy $x\in\mathbb{R}^n$ và $t\in\mathbb{R}$.
 
 Trong không gian ba chiều $\mathbb{R}^3$, điều kiện trên viết thành $\sqrt{x_1^2 + x_2^2} \le x_3$, tạo nên một chiếc nón tròn xoay có trục thẳng đứng dọc theo trục $x_3$. Đây là đối tượng nghiên cứu của quy hoạch nón bậc hai (SOCP).
 
@@ -173,13 +200,23 @@ Trong không gian ba chiều $\mathbb{R}^3$, điều kiện trên viết thành 
 Trong không gian các ma trận đối xứng kích thước $n \times n$ ký hiệu là $\mathbb{S}^n$, tập hợp tất cả các ma trận nửa xác định dương:
 
 $$
-\mathbb{S}^n_+ = \{X \in \mathbb{S}^n \mid X \succeq 0\} = \{X \in \mathbb{S}^n \mid z^T X z \ge 0, \; \forall z \in \mathbb{R}^n\}
+\mathbb{S}^n_+ = \{X\in\mathbb{S}^n\mid X\succeq0\}.
+$$
+
+Điều kiện nửa xác định dương có nghĩa là:
+
+$$
+z^TXz\ge0, \qquad \forall z\in\mathbb{R}^n.
 $$
 
 tạo thành một nón lồi có số chiều $\tfrac{n(n+1)}{2}$. Nếu $A, B \in \mathbb{S}^n_+$ và $\theta_1, \theta_2 \ge 0$, thì với mọi $z \in \mathbb{R}^n$:
 
 $$
-z^T (\theta_1 A + \theta_2 B) z = \theta_1 (z^T A z) + \theta_2 (z^T B z) \ge 0
+\begin{aligned}
+z^T(\theta_1A+\theta_2B)z
+&= \theta_1(z^TAz)+\theta_2(z^TBz) \\
+&\ge0.
+\end{aligned}
 $$
 
 Nón này là trái tim của quy hoạch nửa xác định dương (SDP).
@@ -212,8 +249,12 @@ Ta kiểm tra hai vector truy vấn $b = (4, 7)$ và $b' = (4, -1)$:
    $$
    Nhân phương trình thứ hai với 2 rồi trừ đi phương trình thứ nhất:
    $$
-   2(\theta_1 + 3\theta_2) - (2\theta_1 + \theta_2) = 14 - 4 \iff 5\theta_2 = 10 \iff \theta_2 = 2
+   \begin{aligned}
+   5\theta_2 &= 14-4 \\
+   &=10.
+   \end{aligned}
    $$
+   Chia cho 5, ta được $\theta_2=2$.
    Thay ngược lại vào phương trình thứ nhất: $2\theta_1 + 2 = 4 \implies \theta_1 = 1$.
    Cả hai hệ số đều không âm: Cụ thể là $\theta_1 = 1 \ge 0$ và $\theta_2 = 2 \ge 0$. Do đó $b$ thuộc bao nón của $a_1, a_2$.
 2. **Khảo sát vector $b' = (4, -1)$**:
@@ -226,7 +267,11 @@ Ta kiểm tra hai vector truy vấn $b = (4, 7)$ và $b' = (4, -1)$:
    $$
    Nhân phương trình thứ hai với 2 rồi trừ phương trình thứ nhất:
    $$
-   5\theta_2 = -2 - 4 = -6 \iff \theta_2 = -\frac{6}{5} = -1.2
+   \begin{aligned}
+   5\theta_2 &= -2-4 \\
+   &=-6, \\
+   \theta_2 &= -\frac65 = -1{,}2.
+   \end{aligned}
    $$
    Vì $a_1$ và $a_2$ độc lập tuyến tính ($\det = 2 \cdot 3 - 1 \cdot 1 = 5 \ne 0$), hệ phương trình có nghiệm duy nhất. Nghiệm duy nhất này có $\theta_2 = -1.2 < 0$, vi phạm điều kiện không âm. Do đó $b'$ không thuộc bao nón.
 :::
@@ -294,9 +339,16 @@ Cả hai phép toán đều bảo toàn cấu trúc nón lồi:
 1. **Phép giao**: Nếu $u, v \in K_1 \cap K_2$ và $\theta_1, \theta_2 \ge 0$, thì $\theta_1 u + \theta_2 v$ thuộc $K_1$ (do $K_1$ là nón lồi) và cũng thuộc $K_2$ (do $K_2$ là nón lồi). Do đó tổ hợp thuộc phần giao.
 2. **Tổng Minkowski**: Lấy hai điểm thuộc tổng $u = x_1 + y_1$ và $v = x_2 + y_2$ với $x_1, x_2 \in K_1$ và $y_1, y_2 \in K_2$. Với mọi $\theta_1, \theta_2 \ge 0$:
    $$
-   \theta_1 u + \theta_2 v = (\theta_1 x_1 + \theta_2 x_2) + (\theta_1 y_1 + \theta_2 y_2)
+   \theta_1 u + \theta_2 v = p+q,
    $$
-   Số hạng thứ nhất thuộc $K_1$ và số hạng thứ hai thuộc $K_2$, do đó tổng của chúng thuộc $K_1 + K_2$.
+   trong đó:
+   $$
+   \begin{aligned}
+   &p=\theta_1x_1+\theta_2x_2\in K_1, \\
+   &q=\theta_1y_1+\theta_2y_2\in K_2.
+   \end{aligned}
+   $$
+   Do đó tổng $p+q$ thuộc $K_1+K_2$.
 
 </details>
 
@@ -352,7 +404,11 @@ Trong các tập hợp sau đây, tập hợp nào là nón, tập hợp nào l�
 ::: exercise 2. Biểu diễn vector trong nón sinh bởi ba vector trong không gian
 Trong không gian ba chiều $\mathbb{R}^3$, cho ba vector:
 $$
-a_1 = (1, 0, 1), \quad a_2 = (0, 1, 1), \quad a_3 = (1, 1, 0)
+\begin{aligned}
+&a_1=(1,0,1), \\
+&a_2=(0,1,1), \\
+&a_3=(1,1,0).
+\end{aligned}
 $$
 1. Vector $b = (3, 1, 2)$ có thuộc bao nón $\operatorname{cone}\{a_1, a_2, a_3\}$ không?
 2. Vector $b' = (2, 0, 0)$ có thuộc bao nón $\operatorname{cone}\{a_1, a_2, a_3\}$ không?
@@ -370,8 +426,12 @@ $$
    $$
    Cộng cả ba phương trình lại với nhau:
    $$
-   2(\theta_1 + \theta_2 + \theta_3) = 3 + 1 + 2 = 6 \implies \theta_1 + \theta_2 + \theta_3 = 3
+   \begin{aligned}
+   2(\theta_1+\theta_2+\theta_3) &= 3+1+2 \\
+   &=6.
+   \end{aligned}
    $$
+   Chia hai vế cho 2, ta được $\theta_1+\theta_2+\theta_3=3$.
    Từ đó suy ra từng ẩn số:
    - $\theta_2 = 3 - (\theta_1 + \theta_3) = 3 - 3 = 0$.
    - $\theta_1 = 3 - (\theta_2 + \theta_3) = 3 - 1 = 2$.
@@ -389,8 +449,9 @@ $$
    $$
    Cộng cả ba phương trình:
    $$
-   2(\theta_1 + \theta_2 + \theta_3) = 2 \implies \theta_1 + \theta_2 + \theta_3 = 1
+   2(\theta_1+\theta_2+\theta_3)=2.
    $$
+   Suy ra $\theta_1+\theta_2+\theta_3=1$.
    Suy ra:
    - $\theta_2 = 1 - (\theta_1 + \theta_3) = 1 - 2 = -1$.
    - $\theta_1 = 1 - (\theta_2 + \theta_3) = 1 - 0 = 1$.

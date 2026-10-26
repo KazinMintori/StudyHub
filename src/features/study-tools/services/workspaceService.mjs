@@ -5,6 +5,7 @@
 export const DEFAULT_WORKSPACE_TABS = [
   { id: 'flashcards', name: 'Flashcard' },
   { id: 'notes', name: 'Ghi chú' },
+  { id: 'plan', name: 'Việc cần học' },
   { id: 'focus', name: 'Hẹn giờ' },
   { id: 'simulation', name: 'Mô phỏng' }
 ]

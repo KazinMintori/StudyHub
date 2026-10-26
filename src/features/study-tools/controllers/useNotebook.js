@@ -1,4 +1,4 @@
-import { ref, computed, watch, nextTick, onMounted } from 'vue'
+import { ref, computed, watch, nextTick, onMounted, toValue } from 'vue'
 import MarkdownIt from 'markdown-it'
 import { readStored, writeStored } from '../../../core/storage/index.js'
 import {
@@ -7,6 +7,7 @@ import {
   getNoteDownloadFilename,
   createMarkdownOptions
 } from '../services/notebookService.mjs'
+import { normalizeWorkspaceCourse } from '../services/courseWorkspaceService.mjs'
 
 export function useNotebook(options = {}) {
   const getCourses = () => options.courses || []
@@ -21,10 +22,14 @@ export function useNotebook(options = {}) {
   const renderedNote = computed(() => markdown.render(note.value))
 
   const currentKey = computed(() => getNoteStorageKey(noteSubject.value))
+  let loadVersion = 0
+  const snapshots = new Map(), unsaved = new Map()
 
   async function loadNote() {
+    const version = ++loadVersion
     loaded.value = false
-    let text = readStored(currentKey.value, null)
+    const key = currentKey.value
+    let text = unsaved.has(key) ? unsaved.get(key) : readStored(key, snapshots.get(key) ?? null)
 
     let legacyRawNotes = null
     if (text === null && noteSubject.value === 'general') {
@@ -36,14 +41,23 @@ export function useNotebook(options = {}) {
     }
 
     note.value = resolveInitialNote(text, legacyRawNotes, noteSubject.value)
+    snapshots.set(key, note.value)
     await nextTick()
+    if (version !== loadVersion) return
     loaded.value = true
-    saved.value = ''
+    saved.value = unsaved.has(key) ? 'Chưa lưu được. Bản nháp vẫn được giữ trong phiên này.' : ''
   }
 
   function saveNote() {
-    if (writeStored(currentKey.value, note.value)) {
+    if (!loaded.value) return
+    const key = currentKey.value
+    snapshots.set(key, note.value)
+    if (writeStored(key, note.value)) {
+      unsaved.delete(key)
       saved.value = 'Đã lưu trên trình duyệt'
+    } else {
+      unsaved.set(key, note.value)
+      saved.value = 'Chưa lưu được. Bản nháp vẫn được giữ trong phiên này.'
     }
   }
 
@@ -51,7 +65,14 @@ export function useNotebook(options = {}) {
     if (loaded.value) {
       saveNote()
     }
-  })
+  }, { flush: 'sync' })
+
+  watch(noteSubject, loadNote, { flush: 'sync' })
+  watch(() => toValue(options.courseId), id => {
+    if (!id) return
+    const course = normalizeWorkspaceCourse(id, getCourses())
+    noteSubject.value = course === 'all' ? 'general' : course
+  }, { immediate: true, flush: 'sync' })
 
   function downloadNote() {
     const filename = getNoteDownloadFilename(noteSubject.value)

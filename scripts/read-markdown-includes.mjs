@@ -10,10 +10,17 @@ export async function readMarkdownIncludes(file, root = process.cwd(), parents =
   }
   if (parents.includes(absolute)) throw new Error(`Cyclic Markdown include: ${absolute}`)
   let source = await readFile(absolute, 'utf8')
-  for (const match of [...source.matchAll(/<!--@include:\s*([^>]+?)\s*-->/g)]) {
+  // VitePress removes frontmatter from included Markdown, but retains the
+  // entry page's frontmatter for its own page-data parser.
+  if (parents.length && path.extname(absolute) === '.md') {
+    source = source.replace(/^\uFEFF?---\r?\n[\s\S]*?\r?\n(?:---|\.\.\.)(?:\r?\n|$)/, '')
+  }
+  for (const match of [...source.matchAll(/<!--\s*@include:\s*([^>]+?)\s*-->/g)]) {
     const target = path.resolve(path.dirname(absolute), match[1])
     const included = await readMarkdownIncludes(target, root, [...parents, absolute])
-    source = source.replace(match[0], included)
+    // A replacement string interprets TeX's $$ and $& as substitutions.
+    // Return the fragment from a callback so every character survives intact.
+    source = source.replace(match[0], () => included)
   }
   return source
 }

@@ -5,6 +5,7 @@ import { useLecture, lecturePart, shouldIgnoreNavigationClick } from '../../navi
 import { lecturePath, lectureParts } from '../services/lecture-model.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
+import { workspacePath } from '../../study-tools/services/courseWorkspaceService.mjs'
 import CourseArt from '../../illustrations/components/CourseArt.vue'
 
 const { course, lesson, part } = useLecture(), router = useRouter(), { page } = useData()
@@ -87,7 +88,7 @@ onUnmounted(() => {
       <span v-if="lesson.supplementary">Chuyên đề bổ trợ {{ lesson.supplementNumber }}</span>
       <span v-else>Bài {{ lesson.number ?? course.lessons.indexOf(lesson) + 1 }}</span>
       <span v-if="updated" class="updated-date">Cập nhật {{ updated }}</span>
-      <a :href="studyLink('/goc-hoc-tap#notes')">Ghi chú của bạn</a>
+      <a :href="studyLink(workspacePath(course.id, 'notes'))">Ghi chú của bạn</a>
     </div>
     <p v-if="lesson.status !== 'ready'" class="draft-notice">Bài đang được soạn. Kiến thức nền đã đọc được.</p>
   </header>

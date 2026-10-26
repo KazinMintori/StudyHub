@@ -21,12 +21,15 @@ Các bài “đang biên soạn” mới là khung nội dung. Dùng ô “Tìm 
 
 ## Công cụ học tập cá nhân
 
-Mở [Góc học tập](/goc-hoc-tap) để dùng các công cụ:
+Mở [Góc học tập](/goc-hoc-tap) rồi chọn học phần. Ghi chú, flashcard và danh sách việc học sẽ chuyển theo môn đã chọn. Bạn cũng có thể vào thẳng từ liên kết “Góc học tập của môn” trên trang học phần hoặc từ nút “Công cụ học tập” trong bài giảng.
+
+Các công cụ gồm:
 
 - **Flashcard:** Chọn học phần, tự trả lời rồi mở lời giải. Đánh dấu “Đã nhớ” hoặc “Cần ôn lại” để theo dõi việc ôn tập.
 - **Ghi chú Markdown:** Mỗi học phần có một sổ riêng, tự lưu khi viết. Dùng “Xem trước” để đọc và “Tải .md” để sao lưu.
-- **Mô phỏng điện trường:** Đặt điện tích dương hoặc âm để quan sát hướng điện trường tổng hợp. Các nút thêm và xóa cũng dùng được bằng bàn phím.
-- **Pomodoro:** Chọn 25 hoặc 50 phút tập trung, 5 phút nghỉ. Đồng hồ giữ thời gian khi chuyển trang hoặc tải lại.
+- **Việc cần học:** Ghi các mục tiêu nhỏ, đánh dấu việc đã hoàn thành và giữ danh sách riêng cho từng môn.
+- **Mô phỏng:** Chọn một mô phỏng để mở riêng trong Góc học tập. Trên điện thoại, chọn điểm rồi bấm các nút hướng để di chuyển, hoặc dùng thanh chỉnh khi có. Mô phỏng điện trường có thêm nút chọn từng điện tích và điều chỉnh bước di chuyển.
+- **Pomodoro:** Chọn thời lượng có sẵn hoặc nhập số phút phù hợp với buổi học. Đồng hồ giữ thời gian khi chuyển trang hoặc tải lại.
 
 Ghi chú được lưu cục bộ trên trình duyệt hiện tại, chưa đồng bộ giữa các thiết bị. Hãy tải ghi chú trước khi xóa dữ liệu trình duyệt.
 

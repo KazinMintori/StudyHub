@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { lerp, perspectiveWeight } from '../services/convex-geometry.mjs'
@@ -25,7 +26,7 @@ const ray = p => { const s = 4.4 / p[1]; return [p[0] * s, 4.4] }
 <template>
   <figure class="study-lab" aria-label="Phép phối cảnh như một máy ảnh lỗ kim">
     <p class="lab-title">Chia cho tọa độ cuối: đoạn thẳng vẫn là đoạn thẳng</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Hai điểm u, v trong nửa mặt phẳng t dương, các tia từ gốc và ảnh của chúng trên đường t bằng 1" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Hai điểm u, v trong nửa mặt phẳng t dương, các tia từ gốc và ảnh của chúng trên đường t bằng 1" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <rect x="0" y="0" :width="view.width" :height="view.sy(0)" class="lab-region-soft" style="opacity: 0.35" />
       <line x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
       <line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" :y2="view.height" class="lab-axis" />
@@ -42,6 +43,7 @@ const ray = p => { const s = 4.4 / p[1]; return [p[0] * s, 4.4] }
       <circle v-for="name in ['u', 'v']" :key="name" :cx="P(pts[name])[0]" :cy="P(pts[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm ${name} = (z, t)`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, pts[name], $event)" />
       <text :x="P(pts.u)[0] + 10" :y="P(pts.u)[1] - 10">u</text><text :x="P(pts.v)[0] + 10" :y="P(pts.v)[1] - 10">v</text>
     </svg>
+    <LabPointControls :svg="svg" />
     <div class="lab-controls">
       <label>θ = {{ fmt(theta) }}<input v-model.number="theta" type="range" min="0" max="1" step="0.05" /></label>
     </div>

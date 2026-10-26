@@ -1,3 +1,5 @@
+import { assertMathIntegrity, physicsEquationTag } from './math-integrity.mjs'
+
 // Keep MathJax's exact SVG/MathML output in a single Vue HTML binding. Parsing
 // every SVG path as a Vue node makes textbook-sized pages consume gigabytes.
 export function staticMathPlugin(md, { vueBinding = true } = {}) {
@@ -7,16 +9,20 @@ export function staticMathPlugin(md, { vueBinding = true } = {}) {
   if(!render)throw new Error(`Math renderer missing: ${rule}`)
   md.renderer.rules[rule]=(...args)=>{
    const [tokens,index,,env]=args,token=tokens[index]
-   if(!vueBinding)return render(...args)
+   const validatedRender=()=>{
+    const html=render(...args)
+    assertMathIntegrity(token,html,env)
+    return html
+   }
+   if(!vueBinding)return validatedRender()
    const cachedRender=()=>{
     // Explicit labels and references may depend on other equations.
-    if(/\\(?:label|ref|eqref)\b/.test(token.content))return render(...args)
+    if(/\\(?:label|ref|eqref)\b/.test(token.content))return validatedRender()
     const key=rule+'\0'+token.content
-    if(!cache.has(key))cache.set(key,render(...args))
+    if(!cache.has(key))cache.set(key,validatedRender())
     return cache.get(key)
    }
-   const numbered=rule==='math_block'&&/^vat-ly-[12]\//.test((env?.relativePath||'').replaceAll('\\','/'))
-     ? token.content.match(/\\tag\{(\d+(?:\.\d+)*[a-zA-Z]?)\}/) : null
+   const numbered=rule==='math_block' ? physicsEquationTag(token.content,env?.relativePath) : null
    if(numbered){
     const content=token.content
     let html

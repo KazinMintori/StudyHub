@@ -1,6 +1,7 @@
 <script setup>
-import { computed, ref, useId, watch } from 'vue'
+import { computed, ref, useId, watch, onMounted, onUnmounted } from 'vue'
 import { electricField, fieldLines } from '../services/electric-field.mjs'
+import { resolveChargePosition, chargeHitRadius } from '../services/field-interaction.mjs'
 import { useSimulationVisibility } from '../controllers/simulation-visibility.js'
 
 const presets = {
@@ -13,6 +14,14 @@ const root = ref(null), playing = ref(false), speed = ref(1), showArrows = ref(t
 const { reducedMotion } = useSimulationVisibility(root, () => { playing.value = false })
 const titleId = `field-title-${useId()}`, descriptionId = `${titleId}-description`
 const activeCharge = computed(() => charges.value[active.value])
+const canvas = ref(null), canvasWidth = ref(740), moveStep = ref(20)
+const hitRadius = computed(() => chargeHitRadius(canvasWidth.value))
+let resizeObserver
+onMounted(() => {
+  resizeObserver = new ResizeObserver(() => { canvasWidth.value = canvas.value?.getBoundingClientRect().width || 740 })
+  resizeObserver.observe(canvas.value)
+})
+onUnmounted(() => resizeObserver?.disconnect())
 const lines = computed(() => fieldLines(charges.value))
 watch(showLines, value => { if (!value) playing.value = false })
 const arrows = computed(() => {
@@ -34,8 +43,10 @@ function add(x = 370, y = 180) {
   message.value = `Đã thêm điện tích ${selected.value > 0 ? 'dương' : 'âm'}.`
 }
 function mappedPoint(event) {
-  const svg = event.currentTarget, point = svg.createSVGPoint(); point.x = event.clientX; point.y = event.clientY
-  return point.matrixTransform(svg.getScreenCTM().inverse())
+  const svg = canvas.value, matrix = svg?.getScreenCTM()
+  if (!matrix) return null
+  const point = svg.createSVGPoint(); point.x = event.clientX; point.y = event.clientY
+  return point.matrixTransform(matrix.inverse())
 }
 let dragging = null, suppressClick = false
 function beginDrag(event, index) {
@@ -44,15 +55,19 @@ function beginDrag(event, index) {
   event.currentTarget.ownerSVGElement.setPointerCapture(event.pointerId)
 }
 function moveCharge(x, y) {
-  x = Math.max(20, Math.min(720, x)); y = Math.max(20, Math.min(340, y))
-  if (charges.value.some((c, i) => i !== active.value && Math.hypot(c.x - x, c.y - y) < 36)) {
+  const position = resolveChargePosition(charges.value, active.value, x, y)
+  if (!position) {
     message.value = 'Giữ các điện tích cách nhau ít nhất 36 đơn vị.'; return
   }
-  Object.assign(activeCharge.value, { x, y }); message.value = ''
+  Object.assign(activeCharge.value, position); message.value = ''
+}
+function nudge(dx, dy) {
+  if (!activeCharge.value) return
+  moveCharge(activeCharge.value.x + dx * moveStep.value, activeCharge.value.y + dy * moveStep.value)
 }
 function drag(event) {
   if (dragging !== event.pointerId) return
-  const point = mappedPoint(event); moveCharge(Math.round(point.x), Math.round(point.y))
+  const point = mappedPoint(event); if (point) moveCharge(point.x, point.y)
 }
 function endDrag(event) {
   if (dragging !== event.pointerId) return
@@ -62,7 +77,7 @@ function endDrag(event) {
 }
 function place(event) {
   if (suppressClick) { suppressClick = false; return }
-  const point = mappedPoint(event); add(Math.round(point.x), Math.round(point.y))
+  const point = mappedPoint(event); if (point) add(Math.round(point.x), Math.round(point.y))
 }
 function loadPreset(name) {
   playing.value = false; dragging = null; suppressClick = false
@@ -78,7 +93,7 @@ function remove(index) {
 
 <template>
   <div ref="root" class="field-simulation">
-    <p>Chọn dấu rồi nhấn vào vùng trống để thêm điện tích. Kéo điện tích để thay đổi vị trí, hoặc dùng các thanh chỉnh bên dưới.</p>
+    <p>Chọn dấu rồi chạm vào vùng trống để thêm điện tích. Chọn điện tích theo số và dùng bốn nút di chuyển bên dưới, không cần kéo trên hình. Bạn vẫn có thể kéo điện tích hoặc chỉnh tọa độ bằng thanh trượt.</p>
     <div class="simulation-toolbar">
       <div class="button-row"><button type="button" class="study-button" :aria-pressed="selected === 1" @click="selected = 1">Dương (+)</button><button type="button" class="study-button" :aria-pressed="selected === -1" @click="selected = -1">Âm (−)</button></div>
       <label class="field-preset">Cấu hình mẫu<select aria-label="Cấu hình điện tích" value="" @change="loadPreset($event.target.value); $event.target.value = ''"><option value="" disabled>Chọn cấu hình…</option><option value="dipole">Lưỡng cực (+, −)</option><option value="positive">Một điện tích dương</option><option value="pair">Hai điện tích dương</option></select></label>
@@ -88,18 +103,35 @@ function remove(index) {
       <button type="button" class="study-button" :aria-pressed="playing" :disabled="!charges.length || !showLines || reducedMotion" @click="playing = !playing">{{ playing ? 'Tạm dừng' : 'Chạy chỉ báo chiều' }}</button>
       <label>Tốc độ<select v-model.number="speed"><option :value=".5">0.5×</option><option :value="1">1×</option><option :value="2">2×</option></select></label>
     </div>
-    <svg class="field-canvas" viewBox="0 0 740 360" role="img" :aria-labelledby="`${titleId} ${descriptionId}`" @click="place" @pointermove="drag" @pointerup="endDrag" @pointercancel="endDrag" @lostpointercapture="dragging = null">
+    <div v-if="charges.length" class="field-charge-picker" role="group" aria-label="Chọn điện tích để chỉnh">
+      <span>Chọn điện tích</span>
+      <button v-for="(charge, index) in charges" :key="index" type="button" :aria-pressed="active === index" @click="active = index">#{{ index + 1 }} · {{ charge.q > 0 ? '+q' : '−q' }}</button>
+    </div>
+    <svg ref="canvas" class="field-canvas" viewBox="0 0 740 360" role="img" :aria-labelledby="`${titleId} ${descriptionId}`" @click="place" @pointermove="drag" @pointerup="endDrag" @pointercancel="endDrag" @lostpointercapture="dragging = null">
       <title :id="titleId">Mô phỏng điện trường của các điện tích điểm</title><desc :id="descriptionId">Mũi tên và đường sức hướng ra khỏi điện tích dương, hướng vào điện tích âm. Dùng các thanh chỉnh vị trí và nút bên dưới để điều khiển bằng bàn phím.</desc>
       <g v-if="showArrows" class="field-arrows"><g v-for="(a, i) in arrows" :key="i"><line :x1="a.x" :y1="a.y" :x2="a.x2" :y2="a.y2"/><polyline :points="a.head"/></g></g>
       <g v-if="showLines" class="field-lines"><path v-for="(line,i) in lines" :key="`line-${i}`" :d="line"/><path v-for="(line,i) in lines" :key="`flow-${i}`" :d="line" class="field-flow" :style="{ animationPlayState: playing ? 'running' : 'paused', animationDuration: `${1.4/speed}s` }"/></g>
       <g v-for="(c, i) in charges" :key="`charge-${i}`" class="field-charge" @pointerdown.stop="beginDrag($event, i)" @click.stop="active = i; suppressClick = false">
-        <circle :cx="c.x" :cy="c.y" r="23" class="charge-hit"/><circle v-if="active === i" :cx="c.x" :cy="c.y" r="21" class="charge-selection"/><circle :cx="c.x" :cy="c.y" r="16" :class="c.q > 0 ? 'charge-positive' : 'charge-negative'"/><text :x="c.x" :y="c.y + 6" text-anchor="middle" font-size="22">{{ c.q > 0 ? '+' : '−' }}</text>
+        <circle :cx="c.x" :cy="c.y" :r="hitRadius" :style="{ r: `${hitRadius}px` }" class="charge-hit"/><circle v-if="active === i" :cx="c.x" :cy="c.y" r="21" class="charge-selection"/><circle :cx="c.x" :cy="c.y" r="16" :class="c.q > 0 ? 'charge-positive' : 'charge-negative'"/><text :x="c.x" :y="c.y + 6" text-anchor="middle" font-size="22">{{ c.q > 0 ? '+' : '−' }}</text>
       </g>
       <text v-if="!charges.length" x="370" y="180" text-anchor="middle" class="field-empty">Thêm điện tích để bắt đầu</text>
     </svg>
     <p v-if="reducedMotion" class="small">Đang giảm chuyển động theo cài đặt thiết bị; đường sức hiển thị tĩnh.</p>
     <p class="small" role="status">{{ message || `${charges.length} điện tích · Tối đa 8 điện tích` }}</p>
     <div class="button-row"><button type="button" class="study-button" :disabled="charges.length >= 8" @click="add()">Thêm ở giữa</button><button type="button" class="study-button" :disabled="!charges.length" @click="loadPreset('')">Xóa tất cả</button></div>
+    <section v-if="activeCharge" class="field-movement" :aria-labelledby="`${titleId}-movement`">
+      <div>
+        <h3 :id="`${titleId}-movement`">Di chuyển điện tích #{{ active + 1 }}</h3>
+        <p>x = {{ activeCharge.x }}, y = {{ activeCharge.y }}</p>
+        <label>Bước di chuyển<select v-model.number="moveStep"><option :value="5">5 đơn vị</option><option :value="20">20 đơn vị</option><option :value="50">50 đơn vị</option></select></label>
+      </div>
+      <div class="field-movement-pad" role="group" aria-label="Di chuyển điện tích">
+        <button type="button" class="move-up" :disabled="activeCharge.y <= 20" aria-label="Di chuyển điện tích lên trên" @click="nudge(0, -1)">Lên</button>
+        <button type="button" class="move-left" :disabled="activeCharge.x <= 20" aria-label="Di chuyển điện tích sang trái" @click="nudge(-1, 0)">Trái</button>
+        <button type="button" class="move-right" :disabled="activeCharge.x >= 720" aria-label="Di chuyển điện tích sang phải" @click="nudge(1, 0)">Phải</button>
+        <button type="button" class="move-down" :disabled="activeCharge.y >= 340" aria-label="Di chuyển điện tích xuống dưới" @click="nudge(0, 1)">Xuống</button>
+      </div>
+    </section>
     <div v-if="charges.length" class="charge-editor">
       <label>Điện tích đang chỉnh<select v-model.number="active"><option v-for="(c,i) in charges" :key="i" :value="i">#{{ i+1 }} · {{ c.q > 0 ? '+q' : '−q' }}</option></select></label>
       <label>Vị trí ngang x = {{ activeCharge.x }}<input type="range" min="20" max="720" :value="activeCharge.x" @input="moveCharge(Number($event.target.value), activeCharge.y)"></label>
@@ -109,3 +141,20 @@ function remove(index) {
     <div class="simulation-caption"><div><h3>E = −∇V</h3><p>Điện trường chỉ theo chiều điện thế giảm nhanh nhất. Điện tích thử dương chịu lực cùng chiều điện trường.</p></div><p class="small">Các điện tích điểm có cùng độ lớn, xét trên một mặt phẳng. Mũi tên được chuẩn hóa; các nét chuyển động chỉ chiều đường sức, không mô tả quỹ đạo hay vận tốc của hạt. Đường sức được vẽ gần đúng bằng các bước hữu hạn.</p></div>
   </div>
 </template>
+
+<style scoped>
+.field-charge-picker { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-4) 0; }
+.field-charge-picker > span { flex-basis: 100%; font-size: var(--fs-small); color: var(--ink-2); }
+.field-charge-picker button { min-width: 64px; min-height: 44px; padding: var(--space-2) var(--space-3); border: 1px solid var(--control); border-radius: var(--radius); background: var(--paper); color: var(--ink); font-size: var(--fs-ui); }
+.field-charge-picker button[aria-pressed=true] { border-color: var(--tim); color: var(--tim); background: var(--tim-soft); }
+.field-movement { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4); padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--canvas); }
+.field-movement h3 { font-size: var(--fs-ui); font-weight: 600; margin: 0; }
+.field-movement p { margin: var(--space-2) 0; color: var(--ink-2); font-size: var(--fs-small); font-variant-numeric: tabular-nums; }
+.field-movement label { display: grid; gap: var(--space-2); font-size: var(--fs-small); }
+.field-movement-pad { display: grid; grid-template-columns: repeat(3, minmax(52px, 1fr)); grid-template-rows: repeat(3, 44px); gap: var(--space-2); }
+.field-movement-pad button { min-width: 52px; min-height: 44px; padding: var(--space-2); border: 1px solid var(--control); border-radius: var(--radius); color: var(--ink); background: var(--paper); font-size: var(--fs-small); }
+.field-movement-pad button:hover:not(:disabled) { border-color: var(--tim); color: var(--tim); }
+.field-movement-pad button:disabled { opacity: .5; cursor: default; }
+.move-up { grid-column: 2; grid-row: 1; }.move-left { grid-column: 1; grid-row: 2; }.move-right { grid-column: 3; grid-row: 2; }.move-down { grid-column: 2; grid-row: 3; }
+@media (max-width: 599px) { .field-movement { align-items: stretch; }.field-movement > div:first-child { flex: 1 1 100%; }.field-movement-pad { margin-inline: auto; } }
+</style>

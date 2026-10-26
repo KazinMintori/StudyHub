@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 
@@ -53,7 +54,7 @@ const drag = createDragger(svg, view, (_, p) => { c2.value = p }, { step: 0.1, s
   <figure class="study-lab" aria-label="Khoảng cách giữa hai đa giác lồi là nghiệm của một quy hoạch toàn phương">
     <p class="lab-title">Hai điểm gần nhau nhất của hai đa giác</p>
     <p class="lab-lead">Kéo đa giác bên phải. Cặp điểm gần nhau nhất là nghiệm của một QP bốn biến, và đường trung trực của đoạn nối chúng tách hai đa giác.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Hai đa giác, đoạn nối hai điểm gần nhất và đường thẳng tách" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Hai đa giác, đoạn nối hai điểm gần nhất và đường thẳng tách" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line v-for="t in [0, 1, 2, 3, 4, 5, 6]" :key="`gx${t}`" :x1="view.sx(t)" :x2="view.sx(t)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="t in [0, 1, 2, 3, 4]" :key="`gy${t}`" x1="0" :x2="view.width" :y1="view.sy(t)" :y2="view.sy(t)" class="lab-grid" />
       <line v-if="bisector" :x1="P(bisector[0])[0]" :y1="P(bisector[0])[1]" :x2="P(bisector[1])[0]" :y2="P(bisector[1])[1]" class="lab-guide" />
@@ -68,6 +69,7 @@ const drag = createDragger(svg, view, (_, p) => { c2.value = p }, { step: 0.1, s
       <circle :cx="P(c2)[0]" :cy="P(c2)[1]" r="10" class="lab-handle" tabindex="0" role="slider" aria-label="Kéo đa giác P₂" :aria-valuetext="`tâm ${fmtPoint(c2)}`" @pointerdown="drag.start('c2', $event)" @keydown="drag.key('c2', c2, $event)" />
       <text :x="P(c2)[0] + 12" :y="P(c2)[1] - 10" class="lab-small">P₂</text>
     </svg>
+    <LabPointControls :svg="svg" />
     <p class="lab-legend"><span class="legend-accent">P₁</span><span class="legend-good">P₂ (rời P₁)</span><span class="legend-bad">P₂ chồng lên P₁</span><span class="legend-warn">đoạn ngắn nhất</span><span class="legend-guide">đường thẳng tách</span></p>
     <div class="lab-readout" role="status">
       <p>QP: cực tiểu ‖x₁ − x₂‖² với x₁ ∈ P₁ và x₂ ∈ P₂, gồm 4 biến và 8 bất đẳng thức tuyến tính.</p>

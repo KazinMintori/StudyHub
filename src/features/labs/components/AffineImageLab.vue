@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, matVec2, lerp } from '../services/convex-geometry.mjs'
@@ -33,7 +34,7 @@ const midOfImages = computed(() => lerp(f(pts.value.p), f(pts.value.q), midTheta
 <template>
   <figure class="study-lab" aria-label="Ảnh của một tập lồi qua ánh xạ affine">
     <p class="lab-title">Ánh xạ affine biến đoạn thẳng thành đoạn thẳng</p>
-    <svg ref="svg" viewBox="0 0 620 300" role="img" aria-label="Tập gốc bên trái, ảnh của nó qua f(x) = Ax + b bên phải" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" viewBox="0 0 620 300" role="img" aria-label="Tập gốc bên trái, ảnh của nó qua f(x) = Ax + b bên phải" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line x1="0" x2="300" :y1="left.sy(0)" :y2="left.sy(0)" class="lab-axis" /><line :x1="left.sx(0)" :x2="left.sx(0)" y1="0" y2="300" class="lab-axis" />
       <line x1="320" x2="620" :y1="right.sy(0)" :y2="right.sy(0)" class="lab-axis" /><line :x1="right.sx(0) + 320" :x2="right.sx(0) + 320" y1="0" y2="300" class="lab-axis" />
       <polygon :points="shapes[shape].pts.map(p => L(p).join(',')).join(' ')" class="lab-region" />
@@ -48,6 +49,7 @@ const midOfImages = computed(() => lerp(f(pts.value.p), f(pts.value.q), midTheta
       <text :x="R(f(pts.p))[0] + 8" :y="R(f(pts.p))[1] + 18" class="lab-small">f(p)</text><text :x="R(f(pts.q))[0] + 8" :y="R(f(pts.q))[1] - 8" class="lab-small">f(q)</text>
       <text x="8" y="18" class="lab-small">tập gốc</text><text x="328" y="18" class="lab-small">ảnh qua f</text>
     </svg>
+    <LabPointControls :svg="svg" />
     <div class="lab-controls">
       <label>Tập gốc<select v-model="shape"><option v-for="(item, key) in shapes" :key="key" :value="key">{{ item.label }}</option></select></label>
       <label>θ của điểm vàng: {{ fmt(midTheta) }}<input v-model.number="midTheta" type="range" min="0" max="1" step="0.05" /></label>

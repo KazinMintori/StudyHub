@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt } from '../controllers/svg-drag.js'
 
@@ -67,7 +68,7 @@ const plot = computed(() => {
   <figure class="study-lab" aria-label="Người cứu hộ chọn điểm xuống nước">
     <p class="lab-title">Chạy bao xa rồi mới bơi?</p>
     <p class="lab-lead">Kéo điểm P dọc mép nước. Đồ thị bên dưới cho biết tổng thời gian T(x) ứng với mỗi điểm xuống nước.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Bãi cát phía trên, mặt nước phía dưới, người cứu hộ A, người bị nạn B, điểm xuống nước P và hai góc so với pháp tuyến" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Bãi cát phía trên, mặt nước phía dưới, người cứu hộ A, người bị nạn B, điểm xuống nước P và hai góc so với pháp tuyến" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <!-- Khung rộng hơn tỉ lệ viewBox thì hình được canh giữa: cát và nước kéo dài ra hai bên để không lộ dải trống. -->
       <rect x="-400" y="0" :width="view.width + 800" :height="view.sy(0)" class="lab-sand" />
       <rect x="-400" :y="view.sy(0)" :width="view.width + 800" :height="view.height - view.sy(0)" class="lab-water" />
@@ -91,6 +92,7 @@ const plot = computed(() => {
       <circle :cx="arcs.c[0]" :cy="arcs.c[1]" r="10" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm xuống nước P" :aria-valuetext="`x = ${fmt(x, 1)} mét`" @pointerdown="drag.start('p', $event)" @keydown="drag.key('p', [x, 0], $event)" />
       <text :x="arcs.c[0] - 26" :y="arcs.c[1] + 24">P</text>
     </svg>
+    <LabPointControls :svg="svg" axes="x" />
     <p class="lab-legend"><span class="legend-accent">đường đang chọn</span><span class="legend-guide">đoạn thẳng AB</span><span v-if="showBest" class="legend-good">đường nhanh nhất</span><span class="legend-warn">góc với pháp tuyến</span></p>
     <svg :viewBox="`0 0 ${PW} ${PH}`" role="img" aria-label="Đồ thị tổng thời gian T theo vị trí điểm xuống nước x" style="margin-top: var(--space-3)">
       <line x1="34" :x2="PW - 22" :y1="AXIS" :y2="AXIS" class="lab-axis" />

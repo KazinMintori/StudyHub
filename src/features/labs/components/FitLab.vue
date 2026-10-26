@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt } from '../controllers/svg-drag.js'
 import { leastSquaresLine, l1Line, chebyshevLine, lossL1, lossL2, lossLinf } from '../services/fitting.mjs'
@@ -32,7 +33,7 @@ const residualLine = computed(() => fits.value.find(f => f.key === residualsOf.v
   <figure class="study-lab" aria-label="So sánh ba cách khớp đường thẳng">
     <p class="lab-title">Ba tiêu chí, ba đường thẳng</p>
     <p class="lab-lead">Kéo các điểm theo chiều dọc. Đường tím cực tiểu tổng bình phương phần dư, đường xanh cực tiểu tổng trị tuyệt đối, đường vàng cực tiểu phần dư lớn nhất.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Năm điểm dữ liệu và các đường khớp" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Năm điểm dữ liệu và các đường khớp" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line v-for="x in [0, 1, 2, 3, 4]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" :class="x === 0 ? 'lab-axis' : 'lab-grid'" />
       <line v-for="y in [0, 2, 4, 6, 8]" :key="`gy${y}`" :y1="view.sy(y)" :y2="view.sy(y)" x1="0" :x2="view.width" :class="y === 0 ? 'lab-axis' : 'lab-grid'" />
       <text v-for="x in [1, 2, 3, 4]" :key="`tx${x}`" :x="view.sx(x) - 4" :y="view.sy(0) + 18" class="lab-small">{{ x }}</text>
@@ -45,6 +46,7 @@ const residualLine = computed(() => fits.value.find(f => f.key === residualsOf.v
       </template>
       <circle v-for="(p, i) in points" :key="i" :cx="P(p)[0]" :cy="P(p)[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm dữ liệu thứ ${i + 1}, kéo theo chiều dọc`" @pointerdown="drag.start(String(i), $event)" @keydown="drag.key(String(i), p, $event)" />
     </svg>
+    <LabPointControls :svg="svg" axes="y" />
     <div class="lab-controls">
       <label class="lab-check"><input v-model="show.l2" type="checkbox" /> Đường bình phương tối thiểu</label>
       <label class="lab-check"><input v-model="show.l1" type="checkbox" /> Đường ℓ₁</label>

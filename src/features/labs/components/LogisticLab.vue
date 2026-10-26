@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { contourSegments } from '../services/contour.mjs'
@@ -60,7 +61,7 @@ const line = s => `${PL(s[0])[0]},${PL(s[0])[1]} ${PL(s[1])[0]},${PL(s[1])[1]}`
 <template>
   <figure class="study-lab" aria-label="Hàm mất mát của hồi quy logistic theo hai tham số">
     <p class="lab-title">Hồi quy logistic: một cái bát theo tham số (a, b)</p>
-    <svg ref="svg" viewBox="0 0 620 300" role="img" aria-label="Bên trái đường mức của hàm mất mát theo a và b, bên phải dữ liệu và đường cong xác suất" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" viewBox="0 0 620 300" role="img" aria-label="Bên trái đường mức của hàm mất mát theo a và b, bên phải dữ liệu và đường cong xác suất" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clip"><rect x="0" y="0" width="300" height="300" /></clipPath></defs>
       <g :clip-path="`url(#${clip})`">
         <line x1="0" x2="300" :y1="left.sy(0)" :y2="left.sy(0)" class="lab-axis" /><line :x1="left.sx(0)" :x2="left.sx(0)" y1="0" y2="300" class="lab-axis" />
@@ -80,6 +81,7 @@ const line = s => `${PL(s[0])[0]},${PL(s[0])[1]} ${PL(s[1])[0]},${PL(s[1])[1]}`
         <text x="612" :y="right.sy(0) + 16" class="lab-small" text-anchor="end">u</text>
       </g>
     </svg>
+    <LabPointControls :svg="svg" />
     <div class="lab-controls">
       <label>Dữ liệu <select v-model="dKey"><option v-for="(item, key) in datasets" :key="key" :value="key">{{ item.label }}</option></select></label>
       <label>Điều chuẩn λ = {{ fmt(lam, 2) }}<input v-model.number="lam" type="range" min="0" max="0.3" step="0.01" /></label>

@@ -4,8 +4,10 @@ import { useRoute } from 'vitepress'
 import { useFocusTimer } from '../controllers/useFocusTimer.js'
 import { useLecture } from '../../navigation/index.mjs'
 import SplitCheatsheetDrawer from '../../lecture/components/SplitCheatsheetDrawer.vue'
+import { studyLink } from '../../../core/routing/links.js'
+import { workspacePath } from '../services/courseWorkspaceService.mjs'
 
-defineProps({ courseName: { type: String, default: '' } })
+defineProps({ courseName: { type: String, default: '' }, courseId: { type: String, default: 'all' } })
 const route = useRoute()
 const { course, lesson } = useLecture()
 const lookup = ref(null)
@@ -95,7 +97,7 @@ onUnmounted(() => {
     <Teleport to="body">
       <div v-if="showTopBar" class="studyhub-pomodoro-top-bar" :style="{ width: `${progressPercent}%` }" aria-hidden="true" />
     </Teleport>
-    <button ref="triggerRef" type="button" class="study-tools-trigger" :class="{ 'is-open': open }" aria-haspopup="dialog" :aria-expanded="open" aria-controls="study-tools-panel" @click="toggleTools">
+    <button ref="triggerRef" type="button" class="study-tools-trigger" :class="{ 'is-open': open }" aria-label="Công cụ học tập" aria-haspopup="dialog" :aria-expanded="open" aria-controls="study-tools-panel" @click="toggleTools">
       <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2" /><rect x="14" y="3" width="7" height="7" rx="2" /><rect x="3" y="14" width="7" height="7" rx="2" /><path d="M14 17.5h7m-3.5-3.5v7" /></svg>
       <span>Công cụ học tập</span>
       <span v-if="running" class="tools-running-time">{{ display }}</span>
@@ -107,6 +109,9 @@ onUnmounted(() => {
         <div><h2 id="study-tools-title">Công cụ học tập</h2><p>{{ courseName }}</p></div>
         <button ref="closeRef" type="button" class="study-tools-close" aria-label="Đóng công cụ học tập" @click="closeTools(true)"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg></button>
       </header>
+      <nav class="study-tools-workspace-links" aria-label="Góc học tập của học phần">
+        <a :href="studyLink(workspacePath(courseId, 'notes'))">Ghi chú môn học</a><a :href="studyLink(workspacePath(courseId, 'plan'))">Việc cần học</a><a :href="studyLink(workspacePath(courseId, 'simulation'))">Mô phỏng của môn</a>
+      </nav>
       <div class="study-tools-cards">
         <button v-if="lookupAvailable" type="button" class="study-tool-card lookup-tool-card" aria-haspopup="dialog" aria-controls="parallel-cheatsheet" @click="openLookup">
           <span class="tool-icon lookup-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5M10.5 7.5v6m-3-3h6" /></svg></span>
@@ -169,6 +174,9 @@ onUnmounted(() => {
 .study-tools-header { display:flex; align-items:flex-start; justify-content:space-between; gap:var(--space-2); margin-bottom:var(--space-4); }
 .study-tools-header h2 { margin:3px 0 var(--space-1); font:600 17px/1.4 var(--font-ui); }
 .study-tools-header p { margin:0; color:var(--ink-3); font-size:var(--fs-meta); line-height:1.5; }
+.study-tools-workspace-links { display: grid; grid-template-columns: 1fr; gap: var(--space-2); margin-bottom: var(--space-4); }
+.study-tools-workspace-links a { display: flex; align-items: center; min-height: 44px; padding: var(--space-2) var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius); color: var(--tim); background: var(--canvas); text-decoration: none; font-size: var(--fs-small); }
+.study-tools-workspace-links a:hover { border-color: var(--tim); background: var(--tim-soft); }
 .study-tools-close { display:grid; place-items:center; flex:0 0 44px; width:44px; height:44px; border:1px solid var(--rule); border-radius:var(--radius); background:var(--paper); color:var(--ink-2); cursor:pointer; }
 .study-tools-close:hover { background:var(--canvas); color:var(--ink); }
 .study-tools-cards { display:grid; gap:var(--space-3); }
@@ -217,7 +225,7 @@ onUnmounted(() => {
 .scratchpad-hint { margin:var(--space-2) 0 0; color:var(--ink-3); font-size:var(--fs-meta); line-height:1.5; }
 .scratchpad-hint.is-error { color:var(--do); }
 :is(button,textarea):focus-visible { outline:2px solid var(--tim); outline-offset:3px; }
-@media(max-width:767px) { .study-tools-panel { position:fixed; top:calc(var(--vp-nav-height) + 60px); right:16px; max-height:calc(100dvh - var(--vp-nav-height) - 76px); } }
+@media(max-width:959px) { .study-tools-panel { position:fixed; top:calc(var(--vp-nav-height) + var(--space-2)); left:16px; right:auto; max-height:calc(100dvh - var(--vp-nav-height) - var(--space-5)); }.scratchpad-textarea { font-size:16px; } }
 @media(max-width:479px) { .tools-running-time { display:none; } }
 @media(prefers-reduced-motion:reduce) { .tools-chevron,.note-chevron,.study-tools-trigger { transition:none; } }
 </style>

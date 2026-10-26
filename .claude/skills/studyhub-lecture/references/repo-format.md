@@ -128,12 +128,12 @@ npm ci                                   # lần đầu
 node .claude/skills/studyhub-lecture/scripts/check_lecture.mjs <course-id>/<slug>   # tích hợp một bài
 node .claude/skills/studyhub-lecture/scripts/check_lecture.mjs --all                 # cả site
 python3 .claude/skills/studyhub-lecture/scripts/review_teaching_text.py docs/<môn>/bai-giang/<slug>.md
-npm run ci:build                         # sync + build VitePress; phải exit 0
-npm run build && npx vitepress preview docs --port 8080   # rồi trong terminal khác:
-QA_URL=http://127.0.0.1:8080 node scripts/verify-courses.mjs   # cần Chrome cho Puppeteer
+npm run verify:math                      # toàn bộ Markdown, nguồn include và dữ liệu công thức
+npm run dev -- --port 8080               # xem trực quan cục bộ
+# Trong terminal khác, đặt QA_URL=http://127.0.0.1:8080 rồi chạy kiểm tra trình duyệt.
 ```
 
-`npm run build` còn xuất file tĩnh ra thư mục gốc (đã gitignore). Khi chỉ kiểm tra, dùng `npm run ci:build`. Đọc kết quả, đừng chỉ đọc exit code: Warning của check_lecture và review là việc cần xem.
+Build toàn bộ và deploy chỉ chạy trên GitHub Actions sau khi push lên `main`. Không chạy `npm run build`, `npm run ci:build` hoặc `npm run docs:build` cục bộ. Đọc kết quả, đừng chỉ đọc exit code: Warning của check_lecture và review là việc cần xem. Quy chuẩn chi tiết nằm trong `docs/engineering/math-rendering.md`.
 
 ## 7. Chỗ hay hỏng
 
@@ -142,6 +142,8 @@ QA_URL=http://127.0.0.1:8080 node scripts/verify-courses.mjs   # cần Chrome ch
 - Thêm id vào `prerequisites` nhưng thiếu `wikiGroups`/`wikiDetails` → verify fail, có thể làm `relatedConcepts` ném lỗi khi build.
 - Viết H1 trong Notes → hai tiêu đề.
 - Lệnh TeX trong chuỗi slide thiếu `$…$` hoặc `$$…$$` → hiện nguyên ký tự `\frac`; `check_lecture.mjs` phát hiện lỗi này.
+- Công thức trong danh sách phải thụt lề đồng nhất ở delimiter mở, thân và delimiter đóng. Chỉ thụt lề delimiter mở có thể khiến Markdown nuốt phần văn phía sau thành toán dù số delimiter vẫn chẵn.
+- Phải mở mọi `<!--@include: ...-->` khi kiểm tra. `createMarkdownRenderer().parse()` không tự mở include như pipeline trang VitePress. `npm run verify:math` kiểm toàn bộ nội dung đã mở include.
 - Container quên `:::` đóng → nuốt phần còn lại của bài.
 - Đặt hình ở chỗ khác `img/<lec>/` cạnh bài rồi viết đường dẫn tay → dễ gãy khi site chạy dưới `/StudyHub/`. Giữ quy ước đường dẫn tương đối như các bài hiện có và xem trang đã build.
 - Viết `**…**` hoặc HTML trong `concepts.mjs` → hiện nguyên ký tự. Chỉ văn bản và TeX có dấu phân cách được hỗ trợ.

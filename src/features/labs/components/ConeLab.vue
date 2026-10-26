@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, scale, dot, norm2, cross2 } from '../services/convex-geometry.mjs'
@@ -69,7 +70,7 @@ const halfplaneOfY = computed(() => planarCone([[-vecs.value.y[1], vecs.value.y[
 <template>
   <figure class="study-lab" :aria-label="type === 'conic' ? 'Nón sinh bởi các vector' : 'Nón và nón đối ngẫu'">
     <p class="lab-title">{{ type === 'conic' ? 'Tổ hợp với hệ số không âm' : 'Nón K và nón đối ngẫu K*' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'conic' ? 'Hình quạt sinh bởi các vector và một tổ hợp nón' : 'Nón K, nón đối ngẫu K và vector thử y'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'conic' ? 'Hình quạt sinh bởi các vector và một tổ hợp nón' : 'Nón K, nón đối ngẫu K và vector thử y'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clipId"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <line :x1="view.sx(-4)" :x2="view.sx(4)" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
       <line :x1="view.sx(0)" :x2="view.sx(0)" :y1="view.sy(-3)" :y2="view.sy(3)" class="lab-axis" />
@@ -98,6 +99,7 @@ const halfplaneOfY = computed(() => planarCone([[-vecs.value.y[1], vecs.value.y[
         <text :x="P(vecs.y)[0] + 12" :y="P(vecs.y)[1] + 18">y</text>
       </template>
     </svg>
+    <LabPointControls :svg="svg" />
     <div v-if="type === 'conic'" class="lab-controls">
       <label>θ₁ = {{ fmt(t1) }}<input v-model.number="t1" type="range" min="0" max="2" step="0.05" :disabled="useThird" /></label>
       <label>θ₂ = {{ fmt(t2) }}<input v-model.number="t2" type="range" min="0" max="2" step="0.05" :disabled="useThird" /></label>

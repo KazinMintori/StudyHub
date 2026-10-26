@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, sub, scale, dot, norm2, convexHull, closestPolygons, polygonsIntersect, insideConvexPolygon } from '../services/convex-geometry.mjs'
@@ -79,7 +80,7 @@ const drag = createDragger(svg, view, (name, value) => {
 <template>
   <figure class="study-lab" :aria-label="type === 'support' ? 'Siêu phẳng tựa của một đa giác lồi' : 'Siêu phẳng phân tách hai tập lồi'">
     <p class="lab-title">{{ type === 'sets' ? 'Một siêu phẳng giữa hai tập lồi rời nhau' : type === 'data' ? 'Tách hai lớp dữ liệu với lề lớn nhất' : 'Siêu phẳng tựa tại một điểm biên' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'support' ? 'Ngũ giác lồi, một điểm trên biên và đường thẳng tựa tại điểm đó' : 'Hai tập, cặp điểm gần nhất và đường thẳng phân tách'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'support' ? 'Ngũ giác lồi, một điểm trên biên và đường thẳng tựa tại điểm đó' : 'Hai tập, cặp điểm gần nhất và đường thẳng phân tách'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line :x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-grid" /><line :y1="0" :y2="view.height" :x1="view.sx(0)" :x2="view.sx(0)" class="lab-grid" />
 
       <template v-if="type === 'sets'">
@@ -117,6 +118,7 @@ const drag = createDragger(svg, view, (name, value) => {
         <text :x="P(boundary.point)[0] + 8" :y="P(boundary.point)[1] + 18">x₀</text>
       </template>
     </svg>
+    <LabPointControls :svg="svg" />
 
     <div v-if="type === 'support'" class="lab-controls">
       <label>Vị trí x₀ trên biên: {{ fmt(sParam) }}<input v-model.number="sParam" type="range" min="0" max="0.999" step="0.004" /></label>

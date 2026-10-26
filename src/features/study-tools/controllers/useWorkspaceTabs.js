@@ -1,6 +1,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import {
   DEFAULT_WORKSPACE_TABS,
+  isValidTab,
   parseTabFromHash,
   formatTabHash
 } from '../services/workspaceService.mjs'
@@ -10,9 +11,10 @@ export function useWorkspaceTabs(initialTabs = DEFAULT_WORKSPACE_TABS) {
   const active = ref(tabs[0]?.id || 'flashcards')
 
   function changeTab(id) {
+    if (!isValidTab(id, tabs)) return
     active.value = id
     if (typeof window !== 'undefined' && window.history?.replaceState) {
-      window.history.replaceState(null, '', formatTabHash(id))
+      window.history.replaceState(window.history.state, '', formatTabHash(id))
     }
   }
 
@@ -26,12 +28,14 @@ export function useWorkspaceTabs(initialTabs = DEFAULT_WORKSPACE_TABS) {
     syncHash()
     if (typeof window !== 'undefined') {
       window.addEventListener('hashchange', syncHash)
+      window.addEventListener('popstate', syncHash)
     }
   })
 
   onUnmounted(() => {
     if (typeof window !== 'undefined') {
       window.removeEventListener('hashchange', syncHash)
+      window.removeEventListener('popstate', syncHash)
     }
   })
 

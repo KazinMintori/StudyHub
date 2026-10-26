@@ -52,13 +52,18 @@ node .agents/skills/studyhub-lecture/scripts/check_lecture.mjs --all
 
 # 4. Chạy bộ bài kiểm thử tự động của skill
 python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
+
+# 5. Kiểm tra công thức trong toàn bộ Markdown, nguồn include và dữ liệu học tập
+npm run verify:math
 ```
 
 > [!NOTE]
 > **Ủy thác build toàn cục cho GitHub Actions (Offload Full Build to GitHub Actions)**:
 > - **Tuyệt đối không tự ý chạy `npm run ci:build` trên máy cục bộ của người dùng**, vì lệnh này phải nén bundle và xuất HTML tĩnh cho toàn bộ 779+ bài học, gây nghẽn CPU và ngốn 15+ GB RAM làm chậm máy người dùng.
 > - Toàn bộ công việc build và deploy trang tĩnh đã được cấu hình tự động 100% trên hạ tầng máy chủ đám mây của GitHub qua GitHub Actions (`.github/workflows/deploy.yml`). Khi code được push lên `main`, GitHub sẽ tự khởi tạo runner để chạy `ci:build` và xuất bản lên GitHub Pages.
-> - Trên máy cục bộ, AI chỉ chạy `check_lecture.mjs` và `test_tools.py` để xác minh tính đúng đắn trước khi commit và push.
+> - Trên máy cục bộ, AI chạy các kiểm tra nguồn và giao diện nhẹ ở trên để xác minh trước khi commit và push, gồm `check_lecture.mjs`, `test_tools.py` và `npm run verify:math` khi sửa công thức.
+
+Quy chuẩn bổ sung về delimiter, thụt lề danh sách, nguồn include và bước chặn công thức hỏng: [Quy chuẩn hiển thị công thức](docs/engineering/math-rendering.md). Khi sửa công thức, bắt buộc chạy `npm run verify:math` và xem trang trên điện thoại. Không chỉ kiểm file Notes chứa lệnh include.
 
 ---
 
