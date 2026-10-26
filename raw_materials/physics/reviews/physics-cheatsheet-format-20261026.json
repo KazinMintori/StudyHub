@@ -1,0 +1,372 @@
+{
+  "status": "component-data-and-format-reviewed-awaiting-full-public-route-check",
+  "scope": "All44Physics1/2Cheatsheets,13operation-break fixes and missing-frontmatter route lookup guard. This is not the full academic/source audit of two courses.",
+  "sourceProbe": {
+    "sheets": 44,
+    "mathSegmentsBeforeAdditionalLegends": 2936,
+    "rawFindingsInitially": 14,
+    "confirmedOperationBreaks": 13,
+    "falsePositiveIndependentInequality": 1
+  },
+  "formulaChanges": [
+    {
+      "file": "docs/.vitepress/physics-geometric-optics-course.mjs",
+      "export": "geometricOpticsCheatsheet",
+      "path": [
+        "sections",
+        3,
+        "items",
+        2,
+        "formula"
+      ],
+      "before": "display(String.raw`\\begin{aligned}\\frac1f&=\\left(\\frac{n_g}{n_l}-1\\right)\\\\&\\quad\\times\\left(\\frac1{R_1}-\\frac1{R_2}\\right).\\end{aligned}`)",
+      "after": "$$\n\\frac1f=\\left(\\frac{n_g}{n_l}-1\\right)\\left(\\frac1{R_1}-\\frac1{R_2}\\right)\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-optics-course.mjs",
+      "export": "opticsCheatsheet",
+      "path": [
+        "sections",
+        4,
+        "items",
+        2,
+        "formula"
+      ],
+      "before": "display('\\\\begin{aligned}&I(\\\\alpha)=I_u/2\\\\\\\\&\\\\qquad+I_p\\\\cos^2(\\\\alpha-\\\\theta).\\\\end{aligned}')",
+      "after": "$$\nI(\\alpha)=I_u/2+I_p\\cos^2(\\alpha-\\theta)\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-inductance-course.mjs",
+      "export": "inductanceCheatsheet",
+      "path": [
+        "sections",
+        5,
+        "items",
+        1,
+        "formula"
+      ],
+      "before": "display(String.raw`\\begin{aligned}&q=Ae^{-\\alpha t}\\\\&\\quad\\times\\cos(\\omega_dt+\\phi)\\\\&q(0)=A\\cos\\phi\\\\&i(0)=-\\alpha q(0)\\\\&\\quad-\\omega_dA\\sin\\phi.\\end{aligned}`)",
+      "after": "$$\n\\begin{aligned}\n&q=Ae^{-\\alpha t}\\cos(\\omega_dt+\\phi),\\\\\n&q(0)=A\\cos\\phi,\\\\\n&i(0)=-\\alpha q(0)-\\omega_dA\\sin\\phi.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-induction-course.mjs",
+      "export": "inductionCheatsheet",
+      "path": [
+        "sections",
+        6,
+        "items",
+        4,
+        "formula"
+      ],
+      "before": "display(String.raw`\\begin{aligned}&\\oint\\vec B\\cdot d\\vec\\ell\\\\&\\quad=\\mu_0(i_C)_{\\mathrm{encl}}\\\\&\\quad+\\mu_0\\varepsilon_0\\frac{d\\Phi_E}{dt}.\\end{aligned}`)",
+      "after": "$$\n\\begin{aligned}\n&i_D=\\varepsilon_0\\frac{d\\Phi_E}{dt},\\\\\n&\\oint\\vec B\\cdot d\\vec\\ell=\\mu_0(i_C+i_D)_{\\mathrm{encl}}.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-sources-course.mjs",
+      "export": "sourcesCheatsheet",
+      "path": [
+        "sections",
+        1,
+        "items",
+        0,
+        "formula"
+      ],
+      "before": "display(String.raw`\\begin{aligned}&d\\vec B = \\frac{\\mu_0}{4\\pi}\\\\&\\quad\\cdot\\frac{I\\,d\\vec l\\times\\hat r}{r^2}.\\end{aligned}`)",
+      "after": "$$\nd\\vec B=\\frac{\\mu_0 I\\,d\\vec l\\times\\hat r}{4\\pi r^2}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-sources-course.mjs",
+      "export": "sourcesCheatsheet",
+      "path": [
+        "sections",
+        1,
+        "items",
+        1,
+        "formula"
+      ],
+      "before": "display(String.raw`\\begin{aligned}&\\vec B = \\frac{\\mu_0}{4\\pi}\\\\&\\quad\\times\\int\\frac{I\\,d\\vec l\\times\\hat r}{r^2}.\\end{aligned}`)",
+      "after": "$$\n\\vec B=\\int\\frac{\\mu_0 I\\,d\\vec l\\times\\hat r}{4\\pi r^2}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-dc-course.mjs",
+      "export": "dcCheatsheet",
+      "path": [
+        "sections",
+        0,
+        "items",
+        2,
+        "formula"
+      ],
+      "before": "d(String.raw`\\begin{aligned}\r\n&R_s = R_1+R_2+\\cdots+R_n,\\\\\r\n&R_s = \\sum_{j=1}^{n}R_j,\\\\\r\n&\\frac1{R_p} = \\frac1{R_1}+\\frac1{R_2}\\\\\r\n&\\quad+\\cdots+\\frac1{R_n},\\\\\r\n&\\frac1{R_p} = \\sum_{j=1}^{n}\\frac1{R_j}.\r\n\\end{aligned}`)",
+      "after": "$$\n\\begin{aligned}\n&R_s=R_1+R_2+\\cdots+R_n,\\\\\n&R_s=\\sum_{j=1}^{n}R_j,\\\\\n&\\frac1{R_p}=\\frac1{R_1}+\\frac1{R_2}+\\cdots+\\frac1{R_n},\\\\\n&\\frac1{R_p}=\\sum_{j=1}^{n}\\frac1{R_j}.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-dc-course.mjs",
+      "export": "dcCheatsheet",
+      "path": [
+        "sections",
+        1,
+        "items",
+        1,
+        "formula"
+      ],
+      "before": "d(String.raw`\\begin{aligned}\r\n&\\Delta V_1+\\Delta V_2\\\\\r\n&\\quad+\\cdots+\\Delta V_k = 0,\\\\\r\n&\\sum_{j=1}^{k}\\Delta V_j = 0.\r\n\\end{aligned}`)",
+      "after": "$$\n\\begin{aligned}\n&\\Delta V_1+\\Delta V_2+\\cdots+\\Delta V_k=0,\\\\\n&\\sum_{j=1}^{k}\\Delta V_j=0.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-electrostatics-course.mjs",
+      "export": "electrostaticsCheatsheet",
+      "path": [
+        "sections",
+        0,
+        "items",
+        0,
+        "formulaRows",
+        2,
+        "formula"
+      ],
+      "before": "'$$\\n\\\\begin{aligned}&\\ne = 1.602176634\\\\\\\\&\\n \\\\quad\\\\times10^{-19}\\\\,\\\\mathrm C.\\n\\\\end{aligned}\\n$$'",
+      "after": "$$\ne=1.602176634\\times10^{-19}\\,\\mathrm C\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-electrostatics-course.mjs",
+      "export": "electrostaticsCheatsheet",
+      "path": [
+        "sections",
+        2,
+        "items",
+        0,
+        "formula"
+      ],
+      "before": "'$$\\n\\\\begin{aligned}&\\\\vec E=\\\\vec E_1+\\\\vec E_2\\\\\\\\&\\\\quad+\\\\cdots+\\\\vec E_n\\\\\\\\&\\\\quad=\\\\sum_{i=1}^{n}\\\\vec E_i.\\\\end{aligned}\\n$$'",
+      "after": "$$\n\\begin{aligned}\n\\vec E&=\\vec E_1+\\vec E_2+\\cdots+\\vec E_n\\\\\n&=\\sum_{i=1}^{n}\\vec E_i.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-electrostatics-course.mjs",
+      "export": "electrostaticsCheatsheet",
+      "path": [
+        "sections",
+        3,
+        "items",
+        3,
+        "formula"
+      ],
+      "before": "'$$\\n\\\\begin{aligned}&\\nE_x = \\\\frac{\\\\sigma}{2\\\\varepsilon_0}\\\\\\\\&\\n \\\\quad-\\\\frac{\\\\sigma x}{2\\\\varepsilon_0\\\\sqrt{x^2+R^2}},\\\\\\\\&\\nx >0.\\n\\\\end{aligned}\\n$$'",
+      "after": "$$\n\\begin{aligned}\n&E_x=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{x}{\\sqrt{x^2+R^2}}\\right),\\\\\n&x>0.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-potential-course.mjs",
+      "export": "potentialCheatsheet",
+      "path": [
+        "sections",
+        0,
+        "items",
+        2,
+        "formulaRows",
+        0,
+        "formula"
+      ],
+      "before": "d(String.raw`\\begin{aligned}\r\n&U_{123} = \\frac{kq_1q_2}{r_{12}}\\\\\r\n&\\quad+\\frac{kq_1q_3}{r_{13}}\\\\\r\n&\\quad+\\frac{kq_2q_3}{r_{23}}.\r\n\\end{aligned}`)",
+      "after": "$$\n\\begin{aligned}\n&U_{12}=\\frac{kq_1q_2}{r_{12}},\\\\\n&U_{13}=\\frac{kq_1q_3}{r_{13}},\\\\\n&U_{23}=\\frac{kq_2q_3}{r_{23}},\\\\\n&U_{123}=U_{12}+U_{13}+U_{23}.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    },
+    {
+      "file": "docs/.vitepress/physics-potential-course.mjs",
+      "export": "potentialCheatsheet",
+      "path": [
+        "sections",
+        1,
+        "items",
+        1,
+        "formula"
+      ],
+      "before": "d(String.raw`\\begin{aligned}\r\n&W_{a\\to b} = q_0(V_a-V_b),\\\\\r\n&\\Delta K = -q_0\\Delta V,\\\\\r\n&1\\,\\mathrm{eV} = 1.602176634\\\\\r\n&\\quad\\times10^{-19}\\,\\mathrm J.\r\n\\end{aligned}`)",
+      "after": "$$\n\\begin{aligned}\n&W_{a\\to b}=q_0(V_a-V_b),\\\\\n&\\Delta K=-q_0\\Delta V,\\\\\n&1\\,\\mathrm{eV}=1.602176634\\times10^{-19}\\,\\mathrm J.\n\\end{aligned}\n$$",
+      "scope": "Formula presentation only; definitions unpacked where necessary, original physical terms/values/conditions retained."
+    }
+  ],
+  "dataPreservation": {
+    "status": "passed",
+    "formulaFields": 13,
+    "modules": [
+      {
+        "file": "docs/.vitepress/physics-geometric-optics-course.mjs",
+        "changedFields": 1,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "geometricOpticsSlides",
+          "geometricOpticsTopics"
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics-optics-course.mjs",
+        "changedFields": 1,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "opticsSlides",
+          "opticsTopics"
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics-inductance-course.mjs",
+        "changedFields": 1,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "inductanceSlides",
+          "inductanceTopics"
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics-induction-course.mjs",
+        "changedFields": 1,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "inductionSlides",
+          "inductionTopics"
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics-sources-course.mjs",
+        "changedFields": 2,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "sourcesSlides",
+          "sourcesTopics"
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics-dc-course.mjs",
+        "changedFields": 2,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "dcSlides",
+          "dcTopics"
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics-electrostatics-course.mjs",
+        "changedFields": 3,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "electrostaticsSlides",
+          "electrostaticsTopics"
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics-potential-course.mjs",
+        "changedFields": 2,
+        "allOtherCheatsheetDataUnchanged": true,
+        "otherExportsUnchanged": [
+          "potentialSlides",
+          "potentialTopics"
+        ]
+      }
+    ],
+    "scope": "Before/after data audit; not an independent proof of the algebra or viewport fit."
+  },
+  "algebraAssertions": 32,
+  "browser": {
+    "status": "passed",
+    "mode": "Isolated actualLecturePanels.vue template andMathTextservice withproductionCSS/VPDocwrapper; no Notes/fullsite compilation.",
+    "sheets": 44,
+    "cases": 220,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "noClippingScrollbarOrMathErrorObserved": true,
+    "fontSizeUnchanged": true
+  },
+  "probeDispositions": [
+    {
+      "where": "vat-ly-2/14-quang-hinh-hoc.sections[3].items[2].formula",
+      "disposition": "Conservative28exprobe exceeded slightly. Complete expression kept; actual220casecomponent viewport review passed with unchanged math font and responsive padding."
+    },
+    {
+      "where": "vat-ly-2/06-mach-dien-mot-chieu.sections[0].items[2].formula",
+      "disposition": "Conservative28exprobe exceeded slightly. Complete expression kept; actual220casecomponent viewport review passed with unchanged math font and responsive padding."
+    },
+    {
+      "where": "vat-ly-2/06-mach-dien-mot-chieu.sections[1].items[1].formula",
+      "disposition": "Conservative28exprobe exceeded slightly. Complete expression kept; actual220casecomponent viewport review passed with unchanged math font and responsive padding."
+    },
+    {
+      "where": "vat-ly-2/01-dien-truong-coulomb.sections[3].items[3].formula",
+      "disposition": "Conservative28exprobe exceeded slightly. Complete expression kept; actual220casecomponent viewport review passed with unchanged math font and responsive padding."
+    },
+    {
+      "where": "vat-ly-2/02-dien-the.sections[1].items[1].formula",
+      "disposition": "Conservative28exprobe exceeded slightly. Complete expression kept; actual220casecomponent viewport review passed with unchanged math font and responsive padding."
+    },
+    {
+      "where": "vat-ly-2/21-cau-truc-nguyen-tu.sections[2].items[3].formula",
+      "disposition": "Independent inequality starting with negativeell; not an arithmetic continuation. Formula unchanged."
+    }
+  ],
+  "runtimeGuard": {
+    "trigger": "Unknowncourse and undefinedlecture slug during incomplete page metadata caused undefined===undefined review fallback to dereference course.review.",
+    "change": "Return undefined before review fallback when course orslug is missing.",
+    "regression": "Two tests cover absentmetadata, topic lookup and valid lecture/review routes. Added to feature-test command."
+  },
+  "reviewedFileHashes": {
+    "docs/.vitepress/physics-dc-course.mjs": "e375f812488329a48da69d4c7fb62153c78aebc5cb0e16742df996913cdec656",
+    "docs/.vitepress/physics-electrostatics-course.mjs": "4d658adeb550694b472c397b4d5f577caa4dbf07c22559f8f901148520851042",
+    "docs/.vitepress/physics-geometric-optics-course.mjs": "a227a49ff836d2e122f9a299d097a13e30a43a547c399377126ddd9e763bb28c",
+    "docs/.vitepress/physics-inductance-course.mjs": "15e47ef440a7c2df86e86ea5fd73f2afd268241d78c85aaa634530652c75d51a",
+    "docs/.vitepress/physics-induction-course.mjs": "c4899f0b9696cfdbc0b0ef81de32ff0b18ca74c1c70018917c67652a162f179d",
+    "docs/.vitepress/physics-optics-course.mjs": "3650e96c34cb5e494f35ffa0e71b6da99e7c6286586917c2106a4f96f116a70a",
+    "docs/.vitepress/physics-potential-course.mjs": "b5c1b8e881a891aeced4b0380bdf95492b49c1ef127d18fddbd695b6218e72b9",
+    "docs/.vitepress/physics-sources-course.mjs": "86d5c7ac1e267dd0b9560eb3354d0a772832f5bb6b990483fb261e14312d92fd",
+    "package.json": "5ca155929de25b05f3711018d48879fe39530cbc962691659a796e1e284b8ab9",
+    "src/app/styles/lecture.css": "0e6ea4b4be688967b532fb0bd90f576406e6cd0bcea41963ef4021c5564425fa",
+    "src/features/lecture/services/lecture-model.mjs": "fec0f997f71ca2a6ce027bf768856e4da403fdeb052dd0ba38d58d5208268662",
+    "src/features/lecture/services/lecture-model.test.mjs": "30fdb6917f1fd703f012c42c4ae9e4071dc99cb8c0d8a7ffc36de2acb9de852e"
+  },
+  "cloudBuildAndPublicRoutes": "Pending after push; component harness does not certify routing or lazy data delivery.",
+  "requiredChecks": {
+    "lectureStructure": {
+      "lectures": 133,
+      "topics": 354,
+      "errors": 0,
+      "warnings": 0
+    },
+    "skillTools": {
+      "passed": 39,
+      "failed": 0
+    },
+    "features": {
+      "passed": 139,
+      "failed": 0
+    },
+    "bundleSplitting": {
+      "passed": 8,
+      "failed": 0
+    },
+    "math": {
+      "passed": 31,
+      "failed": 0,
+      "uniqueExpressions": 18252
+    },
+    "designTokens": "passed",
+    "architecture": {
+      "modules": 375,
+      "ownershipIndexes": 138,
+      "status": "passed"
+    },
+    "localFullBuildRun": false
+  }
+}

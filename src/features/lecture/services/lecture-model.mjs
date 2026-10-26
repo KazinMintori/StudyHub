@@ -12,6 +12,7 @@ export const lecturePath = (courseId, slug, part = '') => `/${courseId}/${slug =
 export const lectureConceptIds = lesson => [...new Set([...(lesson?.prerequisites || []), ...(lesson?.supportingConcepts || [])])]
 export function findLecture(courseId, slug) {
   const course = findCourse(courseId)
+  if (!course || !slug) return undefined
   return course?.lessons.find(lesson => lesson.slug === slug) || (course?.review?.slug === slug ? course.review : undefined)
 }
 

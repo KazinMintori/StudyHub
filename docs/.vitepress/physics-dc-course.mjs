@@ -72,13 +72,7 @@ export const dcCheatsheet={summary:'Định nghĩa, tính chất và công thứ
    String.raw`$V$: Hiệu điện thế chung giữa hai đầu các nhánh song song ($V_1 = V_2 = V$) ($\mathrm{V}$)`,
    String.raw`$I$: Dòng điện tổng đi vào nút phân nhánh ($I = I_1 + I_2$) ($\mathrm{A}$)`
   ],description:'Hai điện trở nối cùng hai nút. Với các điện trở dương, R_p nhỏ hơn từng điện trở thành phần.'},
-  {name:'n điện trở dương',formula:d(String.raw`\begin{aligned}
-&R_s = R_1+R_2+\cdots+R_n,\\
-&R_s = \sum_{j=1}^{n}R_j,\\
-&\frac1{R_p} = \frac1{R_1}+\frac1{R_2}\\
-&\quad+\cdots+\frac1{R_n},\\
-&\frac1{R_p} = \sum_{j=1}^{n}\frac1{R_j}.
-\end{aligned}`),variables:[
+  {name:'n điện trở dương',formula:"$$\n\\begin{aligned}\n&R_s=R_1+R_2+\\cdots+R_n,\\\\\n&R_s=\\sum_{j=1}^{n}R_j,\\\\\n&\\frac1{R_p}=\\frac1{R_1}+\\frac1{R_2}+\\cdots+\\frac1{R_n},\\\\\n&\\frac1{R_p}=\\sum_{j=1}^{n}\\frac1{R_j}.\n\\end{aligned}\n$$",variables:[
    String.raw`$R_s$: Điện trở tương đương của $n$ điện trở nối tiếp ($\Omega$)`,
    String.raw`$R_p$: Điện trở tương đương của $n$ điện trở song song ($\Omega$)`,
    String.raw`$R_j$: Điện trở của phần tử thứ $j$ trong tổ hợp ($\Omega$)`
@@ -100,11 +94,7 @@ export const dcCheatsheet={summary:'Định nghĩa, tính chất và công thứ
    String.raw`$\widetilde I_j$: Cường độ dòng điện có dấu tại nhánh thứ $j$ nối vào nút ($\mathrm{A}$)`,
    String.raw`$m$: Số lượng các nhánh rẽ quy tụ tại nút khảo sát (Không có đơn vị)`
   ],description:'Dòng vào mang dấu dương, dòng ra mang dấu âm (hoặc ngược lại). Tổng đại số các dòng điện tại một nút bằng không.'},
-  {name:'Quy tắc vòng',formula:d(String.raw`\begin{aligned}
-&\Delta V_1+\Delta V_2\\
-&\quad+\cdots+\Delta V_k = 0,\\
-&\sum_{j=1}^{k}\Delta V_j = 0.
-\end{aligned}`),variables:[
+  {name:'Quy tắc vòng',formula:"$$\n\\begin{aligned}\n&\\Delta V_1+\\Delta V_2+\\cdots+\\Delta V_k=0,\\\\\n&\\sum_{j=1}^{k}\\Delta V_j=0.\n\\end{aligned}\n$$",variables:[
    String.raw`$\Delta V_j$: Độ biến thiên điện thế dọc theo đoạn mạch thứ $j$ trong vòng kín ($\mathrm{V}$)`,
    String.raw`$k$: Số phần tử mạch trên vòng kín khảo sát (Không có đơn vị)`
   ],description:'Đi theo một vòng kín theo chiều tùy chọn. Tổng đại số các biến thiên điện thế bằng không.'},

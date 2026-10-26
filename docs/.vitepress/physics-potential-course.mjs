@@ -57,14 +57,11 @@ export const potentialCheatsheet={summary:'Định nghĩa, tính chất và côn
    String.raw`$k$: Hằng số tĩnh điện Coulomb ($\approx 8{,}99\times10^9\,\mathrm{N\cdot m^2/C^2}$)`
   ],description:'r là khoảng cách hai nguồn, k = 1/(4πε₀). Mốc thế năng bằng không ở khoảng cách vô hạn. Tích qq₀ được giữ dấu.'},
   {name:'Ba điện tích và tổng các cặp',formulaRows:[
-   {label:'Hệ ba điện tích điểm',formula:d(String.raw`\begin{aligned}
-&U_{123} = \frac{kq_1q_2}{r_{12}}\\
-&\quad+\frac{kq_1q_3}{r_{13}}\\
-&\quad+\frac{kq_2q_3}{r_{23}}.
-\end{aligned}`)},
+   {label:'Hệ ba điện tích điểm',formula:"$$\n\\begin{aligned}\n&U_{12}=\\frac{kq_1q_2}{r_{12}},\\\\\n&U_{13}=\\frac{kq_1q_3}{r_{13}},\\\\\n&U_{23}=\\frac{kq_2q_3}{r_{23}},\\\\\n&U_{123}=U_{12}+U_{13}+U_{23}.\n\\end{aligned}\n$$"},
    {label:'Tổng quát cho hệ n điện tích',formula:d(String.raw`U=k\sum_{i=1}^{n-1}\sum_{j=i+1}^{n}\frac{q_iq_j}{r_{ij}}`)}
   ],variables:[
    String.raw`$U_{123}$: Thế năng tương tác của hệ ba điện tích điểm ($\mathrm{J}$)`,
+   String.raw`$U_{12}, U_{13}, U_{23}$: Thế năng của từng cặp điện tích tương ứng ($\mathrm{J}$)`,
    String.raw`$q_i, q_j$: Điện tích của hạt thứ $i$ và thứ $j$ trong hệ ($\mathrm{C}$)`,
    String.raw`$r_{ij}$: Khoảng cách giữa hạt thứ $i$ và hạt thứ $j$ ($\mathrm{m}$)`,
    String.raw`$U$: Tổng thế năng tĩnh điện của hệ $n$ điện tích điểm ($\mathrm{J}$)`
@@ -82,12 +79,7 @@ export const potentialCheatsheet={summary:'Định nghĩa, tính chất và côn
    String.raw`$V_a - V_b$: Hiệu điện thế giữa hai điểm $a$ và $b$ ($\mathrm{V}$)`,
    String.raw`$W_{a\to b}$: Công của lực tĩnh điện khi dịch chuyển $q_0$ từ $a$ đến $b$ ($\mathrm{J}$)`
   ],description:'q₀ là điện tích thử khác không, đủ nhỏ để không làm đổi phân bố nguồn. Chỉ hiệu điện thế có ý nghĩa độc lập với mốc.'},
-  {name:'Công, động năng và electron-volt',formula:d(String.raw`\begin{aligned}
-&W_{a\to b} = q_0(V_a-V_b),\\
-&\Delta K = -q_0\Delta V,\\
-&1\,\mathrm{eV} = 1.602176634\\
-&\quad\times10^{-19}\,\mathrm J.
-\end{aligned}`),variables:[
+  {name:'Công, động năng và electron-volt',formula:"$$\n\\begin{aligned}\n&W_{a\\to b}=q_0(V_a-V_b),\\\\\n&\\Delta K=-q_0\\Delta V,\\\\\n&1\\,\\mathrm{eV}=1.602176634\\times10^{-19}\\,\\mathrm J.\n\\end{aligned}\n$$",variables:[
    String.raw`$\Delta K$: Độ biến thiên động năng của hạt mang điện ($\mathrm{J}$)`,
    String.raw`$\Delta V$: Hiệu điện thế giữa điểm cuối và điểm đầu ($\Delta V = V_b - V_a$) ($\mathrm{V}$)`,
    String.raw`$1\,\mathrm{eV}$: Đơn vị năng lượng electron-volt ($\approx 1{,}602\times10^{-19}\,\mathrm{J}$)`

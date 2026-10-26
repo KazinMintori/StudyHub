@@ -90,7 +90,7 @@ export const geometricOpticsCheatsheet={title:'Cheatsheet: Quang hình học',le
  {id:'lenses',title:'Thấu kính mỏng',items:[
   {name:'Tạo ảnh qua kính mỏng',formula:display(String.raw`\begin{aligned}\frac1s+\frac1{s^\prime}&=\frac1f\\m&=-s^\prime/s.\end{aligned}`),description:'Hai môi trường ngoài giống nhau, bề dày kính được bỏ qua. Kính hội tụ có f dương, kính phân kỳ có f âm.'},
   {name:'Công thức chế tạo trong không khí',formula:display(String.raw`\frac1f=(n-1)\left(\frac1{R_1}-\frac1{R_2}\right).`),description:'R1 và R2 có dấu theo chiều truyền. n là chiết suất kính, không thứ nguyên.'},
-  {name:'Công thức chế tạo trong môi trường',formula:display(String.raw`\begin{aligned}\frac1f&=\left(\frac{n_g}{n_l}-1\right)\\&\quad\times\left(\frac1{R_1}-\frac1{R_2}\right).\end{aligned}`),description:'Kính chiết suất ng ngập hoàn toàn trong môi trường đồng nhất chiết suất nl ở cả hai phía.'}
+  {name:'Công thức chế tạo trong môi trường',formula:"$$\n\\frac1f=\\left(\\frac{n_g}{n_l}-1\\right)\\left(\\frac1{R_1}-\\frac1{R_2}\\right)\n$$",description:'Kính chiết suất ng ngập hoàn toàn trong môi trường đồng nhất chiết suất nl ở cả hai phía.'}
  ]},
  {id:'systems',title:'Hệ hai phần tử',items:[
   {name:'Hai thấu kính cách nhau',formula:display(String.raw`\begin{aligned}s_2&=d-s^\prime_1\\m&=m_1m_2.\end{aligned}`),description:'Hai kính đồng trục, ánh sáng truyền cùng chiều qua cả hai. d là khoảng hai kính. Mỗi khoảng vật, ảnh đo từ kính tương ứng.'},

@@ -46,13 +46,13 @@ export const sourcesCheatsheet = {
       ], description: 'φ là góc giữa vận tốc và hướng từ điện tích đến điểm đo. Trường bằng không khi hai hướng song song hoặc ngược song song.' },
     ] },
     { id: 'biot-savart', title: 'Biot–Savart', items: [
-      { name: 'Định luật Biot–Savart', formula: display(String.raw`\begin{aligned}&d\vec B = \frac{\mu_0}{4\pi}\\&\quad\cdot\frac{I\,d\vec l\times\hat r}{r^2}.\end{aligned}`), variables: [
+      { name: 'Định luật Biot–Savart', formula: "$$\nd\\vec B=\\frac{\\mu_0 I\\,d\\vec l\\times\\hat r}{4\\pi r^2}\n$$", variables: [
         String.raw`$d\vec B$: Vector cảm ứng từ vi phân do phần tử dòng điện gây ra ($\mathrm{T}$)`,
         String.raw`$I$: Cường độ dòng điện không đổi chạy trong dây dẫn ($\mathrm{A}$)`,
         String.raw`$d\vec l$: Vector phần tử độ dài của dây dẫn theo chiều dòng điện ($\mathrm{m}$)`,
         String.raw`$r$: Khoảng cách từ phần tử dòng điện $d\vec l$ đến điểm khảo sát ($\mathrm{m}$)`
       ], description: 'Dùng cho dòng điện ổn định. Cộng vector các phần tử trên toàn dây.' },
-      { name: 'Trường của cả dây dẫn', formula: display(String.raw`\begin{aligned}&\vec B = \frac{\mu_0}{4\pi}\\&\quad\times\int\frac{I\,d\vec l\times\hat r}{r^2}.\end{aligned}`), variables: [
+      { name: 'Trường của cả dây dẫn', formula: "$$\n\\vec B=\\int\\frac{\\mu_0 I\\,d\\vec l\\times\\hat r}{4\\pi r^2}\n$$", variables: [
         String.raw`$\vec B$: Vector cảm ứng từ tổng hợp của toàn bộ sợi dây dẫn mang dòng ($\mathrm{T}$)`
       ], description: 'Tích phân dọc dây dẫn. Hướng từ phần tử nguồn đến điểm trường và khoảng cách được tính riêng tại mỗi phần tử.' },
       { name: 'Đoạn dây hữu hạn', formula: display(String.raw`B=\frac{\mu_0 I}{4\pi a}(\sin\theta_1+\sin\theta_2)`), variables: [

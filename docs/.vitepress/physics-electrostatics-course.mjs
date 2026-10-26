@@ -15,7 +15,7 @@ export const electrostaticsCheatsheet={
       {name:'Bảo toàn và lượng tử hóa',formulaRows:[
         {label:'Tổng điện tích trong hệ kín được bảo toàn',formula:'$$\nQ_{\\mathrm{tong}}=Q_0\n$$'},
         {label:'Điện tích của vật cô lập được lượng tử hóa',formula:'$$\nQ=ne,\\quad n\\in\\mathbb Z\n$$'},
-        {label:'Độ lớn điện tích cơ bản, chính xác theo định nghĩa',formula:'$$\n\\begin{aligned}&\ne = 1.602176634\\\\&\n \\quad\\times10^{-19}\\,\\mathrm C.\n\\end{aligned}\n$$'}
+        {label:'Độ lớn điện tích cơ bản, chính xác theo định nghĩa',formula:"$$\ne=1.602176634\\times10^{-19}\\,\\mathrm C\n$$"}
       ],variables:[
         String.raw`$Q_{\mathrm{tong}}$: Tổng đại số điện tích trong một hệ kín ($\mathrm{C}$)`,
         String.raw`$Q$: Điện tích của vật cô lập mang điện ($\mathrm{C}$)`,
@@ -40,7 +40,7 @@ export const electrostaticsCheatsheet={
       ],description:'Vector đơn vị hướng từ nguồn đến điểm trường. Đơn vị trường là N/C. Nguồn dương tạo trường ra xa, nguồn âm tạo trường hướng về. Trường trong vật liệu dẫn ở cân bằng tĩnh điện bằng không.'}
     ]},
     {id:'distribution',title:'Chồng chất và mật độ điện tích',items:[
-      {name:'Các nguồn rời rạc',formula:'$$\n\\begin{aligned}&\\vec E=\\vec E_1+\\vec E_2\\\\&\\quad+\\cdots+\\vec E_n\\\\&\\quad=\\sum_{i=1}^{n}\\vec E_i.\\end{aligned}\n$$',variables:[
+      {name:'Các nguồn rời rạc',formula:"$$\n\\begin{aligned}\n\\vec E&=\\vec E_1+\\vec E_2+\\cdots+\\vec E_n\\\\\n&=\\sum_{i=1}^{n}\\vec E_i.\n\\end{aligned}\n$$",variables:[
         String.raw`$\vec E$: Vector cường độ điện trường tổng hợp ($\mathrm{N/C}$)`,
         String.raw`$\vec E_i$: Điện trường do điện tích nguồn thứ $i$ sinh ra tại điểm khảo sát ($\mathrm{N/C}$)`
       ],description:'Các thành phần đều được tính tại cùng điểm khảo sát, trong đó chỉ số i chạy từ 1 đến n qua các nguồn.'},
@@ -72,7 +72,7 @@ export const electrostaticsCheatsheet={
         String.raw`$|\sigma|$: Độ lớn mật độ điện tích mặt của tấm phẳng ($\mathrm{C/m^2}$)`,
         String.raw`$r$: Khoảng cách vuông góc từ điểm khảo sát đến dây dẫn ($\mathrm{m}$)`
       ],description:'Trường vuông góc nguồn, ra xa nếu mật độ dương và hướng về nếu mật độ âm.'},
-      {name:'Trên trục đĩa bán kính R',formula:'$$\n\\begin{aligned}&\nE_x = \\frac{\\sigma}{2\\varepsilon_0}\\\\&\n \\quad-\\frac{\\sigma x}{2\\varepsilon_0\\sqrt{x^2+R^2}},\\\\&\nx >0.\n\\end{aligned}\n$$',variables:[
+      {name:'Trên trục đĩa bán kính R',formula:"$$\n\\begin{aligned}\n&E_x=\\frac{\\sigma}{2\\varepsilon_0}\\left(1-\\frac{x}{\\sqrt{x^2+R^2}}\\right),\\\\\n&x>0.\n\\end{aligned}\n$$",variables:[
         String.raw`$E_x$: Điện trường trên trục vuông góc đi qua tâm đĩa tròn mang điện ($\mathrm{N/C}$)`,
         String.raw`$\sigma$: Mật độ điện tích mặt phân bố đều trên đĩa ($\mathrm{C/m^2}$)`,
         String.raw`$R$: Bán kính của đĩa tròn mang điện ($\mathrm{m}$)`,

@@ -894,6 +894,14 @@
 .next-lesson-nav { display: flex; justify-content: flex-end; margin-top: var(--space-5); }
 .next-lesson-link { min-width: 0; overflow-wrap: anywhere; }
 
+/* Reserve space for complete equations on narrow phones without reducing math type. */
+@media (max-width: 360px) {
+  .Layout.physics-layout .cheatsheet-card { padding: var(--space-2); }
+  .Layout.physics-layout .cheatsheet-card :is(.item-formula, .formula-set) {
+    padding-inline: var(--space-1);
+  }
+}
+
 .lecture-tabs-wrapper .lecture-tabs {
   flex: 1 1 480px;
   flex-wrap: wrap;
