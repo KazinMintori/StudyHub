@@ -27,7 +27,7 @@ for name,label,f,lo,hi in panels:
  body=f'<text x="24" y="30">{label}</text><line x1="64" y1="{zero:.3f}" x2="330" y2="{zero:.3f}" stroke="#374151" marker-end="url(#arrow)"/><line x1="64" y1="220" x2="64" y2="50" stroke="#374151" marker-end="url(#arrow)"/>'
  for t in [0,1,2]:
   body+=f'<line x1="{X(t)}" y1="{zero-4}" x2="{X(t)}" y2="{zero+4}" stroke="#374151"/><text x="{X(t)-5}" y="{zero+22}">{t}</text>'
- body+='<text x="300" y="244">t / T</text>'
+ body+='<text x="252" y="244" text-anchor="middle">t / T</text>'
  for val in sorted(set([lo if lo==-1.2 else 0,1 if hi>1 else .5])):
   if val==lo and val<0:val=-1
   if lo<=val<=hi:body+=f'<text x="24" y="{Y(val)+5:.3f}">{val:g}</text>'
@@ -36,5 +36,5 @@ for name,label,f,lo,hi in panels:
  if name in ['y','vy']:body+=f'<line x1="{X(1)}" y1="55" x2="{X(1)}" y2="210" stroke="#9a4c11" stroke-dasharray="4 4"/><text x="175" y="48">Đỉnh</text>'
  save('s-q3-7-'+name,body,'Đồ thị chuẩn hóa '+label+' theo t/T cho chuyển động ném xiên.',dict(domain=[0,2],sampleCount=201,ordinate=label,normalization='T=V/g, X=UT, Y=VT; U=v0 cos(alpha), V=v0 sin(alpha)',formula={'x':'tau','y':'tau-tau^2/2','vx':'1','vy':'1-tau','ax':'0','ay':'-1'}[name]))
 
-(HERE/'parent-solution-image-manifest.json').write_text(json.dumps({'assets':solutions},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(HERE/'parent-solution-image-manifest.json').write_bytes((json.dumps({'assets':solutions},ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
 print('Generated',len(solutions),'reviewed solution diagrams with20unit text; original images unchanged.')

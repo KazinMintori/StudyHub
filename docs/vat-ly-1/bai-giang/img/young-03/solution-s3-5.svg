@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="462" viewBox="0 0 360 462" role="img" aria-label="Bài 3.5: Hai vận tốc">
+<title>Bài 3.5: Hai vận tốc</title>
+<rect width="360" height="462" rx="10" fill="white"/>
+<defs>
+<marker id="m2563eb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#2563eb"/></marker>
+<marker id="m15803d" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#15803d"/></marker>
+<marker id="mbe123c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#be123c"/></marker>
+<marker id="m7e22ce" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#7e22ce"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<text x="180" y="28" text-anchor="middle" font-weight="600">Bài 3.5: Hai vận tốc</text>
+<line data-arrow="0" x1="217.692308" y1="211.826923" x2="302.500000" y2="108.173077" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-arrow="1" x1="217.692308" y1="211.826923" x2="57.500000" y2="174.134615" stroke="#15803d" stroke-width="2.5" marker-end="url(#m15803d)"/>
+<line data-arrow="2" x1="302.500000" y1="108.173077" x2="57.500000" y2="174.134615" stroke="#7e22ce" stroke-width="2.5" marker-end="url(#m7e22ce)"/>
+<text x="227.692308" y="201.826923">O</text>
+<text x="312.500000" y="98.173077">v₁</text>
+<text x="67.500000" y="164.134615">v₂</text>
+<path d="M270 300 H311 M270 300 V276 M307 297 L311 300 L307 303 M267 280 L270 276 L273 280" stroke="#64748b" fill="none"/>
+<text x="316" y="306">vₓ</text>
+<text x="247" y="274">vᵧ</text>
+<text x="18" y="330">v₁: Lúc t = 0 s</text>
+<text x="18" y="358">v₂: Lúc t = 30,0 s</text>
+<text x="18" y="386">Tím: Hiệu v₂ − v₁</text>
+<text x="18" y="414">Hai trục là vₓ, vᵧ (m/s)</text>
+</g></svg>

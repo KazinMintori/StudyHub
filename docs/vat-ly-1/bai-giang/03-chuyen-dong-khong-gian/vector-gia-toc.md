@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "03-chuyen-dong-khong-gian"
-section: "topic"
 topic: "vector-gia-toc"
+section: "topic"
 title: "Vector gia tốc"
 description: "Vì sao vật chuyển động với tốc độ không đổi trên đường cong vẫn có gia tốc?"
 ---

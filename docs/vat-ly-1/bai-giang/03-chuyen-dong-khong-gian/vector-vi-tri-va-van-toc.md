@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "03-chuyen-dong-khong-gian"
-section: "topic"
 topic: "vector-vi-tri-va-van-toc"
+section: "topic"
 title: "Vector vị trí và vector vận tốc"
 description: "Làm thế nào xác định vị trí và chiều chuyển động của chất điểm trong không gian?"
 ---

@@ -46,5 +46,8 @@
     "textHashMode": "CanonicalLF",
     "originalPNGAndPDFByteHashesUnchanged": true,
     "semanticSourceAndImageChanges": false
-  }
+  },
+  "historicalSubsetSnapshot": true,
+  "subsequentWholeChapterReview": "raw_materials/physics/chapter-03-review.json",
+  "subsequentLayoutFix": "Full26SVGcheckfoundtick/timeaxislabeloverlapinthreepreviousguidedplots. Sharedaxislabelmovedbetweenticks; physicalcurvesand1206samplesunchanged."
 }

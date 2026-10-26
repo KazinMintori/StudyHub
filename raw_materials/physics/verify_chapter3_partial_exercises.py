@@ -107,4 +107,4 @@ assert sha(ROOT/'raw_materials/physics/source/young-freedman-15.pdf')==progress[
 for row in progress['files']:assert sha(B/row['file'])==row['sha256']
 manifest=json.loads((B/'parent-solution-image-manifest.json').read_text(encoding='utf-8'))['assets']
 for row in manifest:assert sha(ROOT/row['publicFile'])==row['sha256']
-print(json.dumps({'status':'passed-partial30units','sourceUnits':len(ledger),'checks':len(checks),'actualPlotSamplesChecked':1206,'originalCrops':4,'solutionDiagrams':7,'wholeChapterComplete':False,'pendingNumberedRange':'3.1–3.85'},ensure_ascii=False))
+print(json.dumps({'status':'passed-guided30unit-subset','sourceUnits':len(ledger),'checks':len(checks),'actualPlotSamplesChecked':1206,'originalCrops':4,'solutionDiagrams':7,'wholeChapterVerifiedByThisProgram':False,'wholeChapterReview':'raw_materials/physics/chapter-03-review.json'},ensure_ascii=False))

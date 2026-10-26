@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "03-chuyen-dong-khong-gian"
-section: "topic"
 topic: "van-toc-tuong-doi"
+section: "topic"
 title: "Vận tốc tương đối"
 description: "Làm thế nào liên hệ kết quả đo vận tốc giữa các hệ quy chiếu chuyển động đối với nhau?"
 ---

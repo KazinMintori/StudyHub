@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "03-chuyen-dong-khong-gian"
-section: "topic"
 topic: "chuyen-dong-nem"
+section: "topic"
 title: "Chuyển động ném"
 description: "Các chuyển động theo phương ngang và phương thẳng đứng độc lập với nhau thế nào?"
 ---

@@ -12,7 +12,7 @@
     {
       "key": "s-q3-7-x",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-x.svg",
-      "sha256": "1ee93ce7886a8764afcc4fa3f15ed6b368fe2ff7bdbc1ac544e661dedade9342",
+      "sha256": "f121bda3aeef030eba8942d4a65312cbe7d4d170679f02facdf04f33866bd322",
       "purpose": "Đồ thị chuẩn hóa x / X theo t/T cho chuyển động ném xiên.",
       "model": {
         "domain": [
@@ -30,7 +30,7 @@
     {
       "key": "s-q3-7-y",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-y.svg",
-      "sha256": "e7c662df4f18ccd33d892819b9c16319c0cb603a72cf9c7f2add98a793aae0ed",
+      "sha256": "03f8a1f109a060f2fe626a9eea96ca47200a8c13d9d517934f625c924cbaef96",
       "purpose": "Đồ thị chuẩn hóa y / Y theo t/T cho chuyển động ném xiên.",
       "model": {
         "domain": [
@@ -48,7 +48,7 @@
     {
       "key": "s-q3-7-vx",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-vx.svg",
-      "sha256": "8ead3453be991f00168794389e3ab0e9bdba49b2af163a814c17b7a77b0bc295",
+      "sha256": "2ca57c009217a67b21efa373e6d373ebb74080d1dfbed08595bdca2bfcc9b29e",
       "purpose": "Đồ thị chuẩn hóa vₓ / U theo t/T cho chuyển động ném xiên.",
       "model": {
         "domain": [
@@ -66,7 +66,7 @@
     {
       "key": "s-q3-7-vy",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-vy.svg",
-      "sha256": "f4c3b1470325d8fb792ffc697c14f3f4d08df6b968e7a0da4e5451f13b0e51f9",
+      "sha256": "bc6eca3674b13bdee0279b1ff530e0db6013d89ad5ff2e2ba9cc5101286ffbdf",
       "purpose": "Đồ thị chuẩn hóa vᵧ / V theo t/T cho chuyển động ném xiên.",
       "model": {
         "domain": [
@@ -84,7 +84,7 @@
     {
       "key": "s-q3-7-ax",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-ax.svg",
-      "sha256": "2eb87ae8e31f9f40bbbf8b6d6ff00b0b4a560edd73b32d581999c5f2e8258571",
+      "sha256": "cb373d6134af161649eb072894577c656ae381575bead71538bc8965133856d6",
       "purpose": "Đồ thị chuẩn hóa aₓ / g theo t/T cho chuyển động ném xiên.",
       "model": {
         "domain": [
@@ -102,7 +102,7 @@
     {
       "key": "s-q3-7-ay",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-ay.svg",
-      "sha256": "60bbde8ca18b306ed9ee714479dd571fffffc62714153739aca096b2ae103399",
+      "sha256": "e7d77aadee20d01883dc762ea43ee74112e54482506dd17ad100cc849725d22a",
       "purpose": "Đồ thị chuẩn hóa aᵧ / g theo t/T cho chuyển động ném xiên.",
       "model": {
         "domain": [

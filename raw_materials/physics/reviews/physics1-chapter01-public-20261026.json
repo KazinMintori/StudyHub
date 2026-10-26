@@ -1,0 +1,28 @@
+{
+  "status": "passed-public-chapter1",
+  "checkedUTC": "2026-10-26T16:32:53.738419+00:00",
+  "commit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+  "githubActionsRunId": 40316518324,
+  "githubActionsConclusion": "success",
+  "publicExerciseUnits": 129,
+  "publicExerciseGroups": 24,
+  "publicExerciseImagesByteIdenticalToGit": 31,
+  "publicTheoryPages": 11,
+  "publicTheoryOriginalImagesByteIdenticalToGit": 42,
+  "publicExerciseBrowserCases": 120,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "observedBrowserErrors": 0,
+  "sourceHashesMatchPublishedGit": true,
+  "reportHashes": {
+    "qa/physics1-remaining/ch01/public-release.json": "b95f2fca7a2b1707daa7449daab114e5ea456547509703be742b1fe46d28e3de",
+    "qa/physics1-remaining/ch01/public-theory-release.json": "c18b6fd007fc050cfef37ecd201916766f613651290e2e054d56f4318182b559",
+    "qa/physics1-remaining/ch01-exercise-browser-public/results.json": "d57ecfa887120e2f2c83e57bf3dc51f1850fb0c0fcc533ea4bc3e07b63cac3fd"
+  },
+  "scopeLimit": "Chapter1release/sourceassetsandexerciseUIonly. WholePhysics1/2audit/report/cleanup remainpending."
+}

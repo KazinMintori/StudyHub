@@ -197,7 +197,7 @@ export const physics1Course = {
     "van-toc-vat-ly",
     "toc-do-chuyen-dong"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 3,
   "sourceChapter": 3,
   "topicGroups": [
@@ -236,7 +236,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "04-dinh-luat-newton",
@@ -2643,6 +2644,45 @@ export const physics1Course = {
       "Với hai vector không cùng phương và khác không, kết quả vuông góc mặt phẳng của chúng, hướng theo quy tắc bàn tay phải. Nếu cùng phương hoặc có vector không, kết quả là vector không."
     ],
     "formula": "$$\n\\vec A\\cdot\\vec B=AB\\cos\\varphi\n$$"
+  },
+  {
+    "note": "03-chuyen-dong-khong-gian",
+    "title": "Vector vị trí, vận tốc và gia tốc",
+    "bullets": [
+      "Định nghĩa vị trí chất điểm trong hệ tọa độ Descartes ba chiều.",
+      "Vận tốc trung bình cùng hướng với độ dời. vận tốc tức thời tiếp tuyến với quỹ đạo.",
+      "Phân tích vận tốc thành hai thành phần vuông góc $v_x$ và $v_y$.",
+      "Gia tốc mô tả tốc độ biến thiên của vector vận tốc theo thời gian."
+    ],
+    "formula": "$$\n\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}\n$$"
+  },
+  {
+    "note": "03-chuyen-dong-khong-gian",
+    "title": "Chuyển động ném trong mặt phẳng",
+    "bullets": [
+      "Bỏ qua sức cản không khí, gia tốc ngang triệt tiêu và gia tốc đứng hướng xuống với độ lớn g.",
+      "Gốc tại điểm ném, vận tốc ngang khác không. Đặt b và c như dưới đây để viết phương trình quỹ đạo.",
+      "Áp dụng khi điểm rơi có cùng cao độ với điểm ném ban đầu ($y = 0$)."
+    ],
+    "formula": "$$\na_x = 0, \\quad a_y = -g\n$$"
+  },
+  {
+    "note": "03-chuyen-dong-khong-gian",
+    "title": "Chuyển động tròn đều và không đều",
+    "bullets": [
+      "Chất điểm đi trên đường tròn bán kính R với tốc độ không đổi v.",
+      "Tốc độ thay đổi theo thời gian, gia tốc gồm cả thành phần hướng tâm và tiếp tuyến."
+    ],
+    "formula": "$$\nv = \\frac{2\\pi R}{T}\n$$"
+  },
+  {
+    "note": "03-chuyen-dong-khong-gian",
+    "title": "Vận tốc tương đối (Phép biến đổi Galilei)",
+    "bullets": [
+      "Quy tắc cộng vận tốc dọc theo một đường thẳng.",
+      "Quy tắc cộng vector vận tốc giữa các hệ quy chiếu chuyển động tịnh tiến."
+    ],
+    "formula": "$$\nv_{P/A}=v_{P/B}+v_{B/A}\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"

@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "03-chuyen-dong-khong-gian"
-section: "topic"
 topic: "chuyen-dong-tron"
+section: "topic"
 title: "Chuyển động tròn"
 description: "Điều gì quyết định độ lớn và phương hướng của gia tốc trong chuyển động tròn?"
 ---

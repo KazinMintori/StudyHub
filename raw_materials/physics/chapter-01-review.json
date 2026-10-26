@@ -52,7 +52,12 @@
     "1.51": "Unroundedradius16453.0057km. Rounded3sigfig1.65e4km,2sigfig1.6e4km. CoursekeepsguarddigitsandactualAppendixFearthradius6370km.",
     "1.71": "Exact29.5496057m gives29.5m at3sigfig;oddanswers29.6comesfromprematurerounding."
   },
-  "deploy": "Pending GitHub Actions after commit",
+  "deploy": {
+    "status": "passed",
+    "commit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+    "githubActionsRunId": 40316518324,
+    "publicAcceptance": "raw_materials/physics/reviews/physics1-chapter01-public-20261026.json"
+  },
   "localExercisePayloads": {
     "status": "passed",
     "groups": 24,
