@@ -40,5 +40,11 @@
     "Completeandindependentlyreview85numberedexercises",
     "Verifyall115sourceunits andfinalwholechaptergates",
     "Publishandverifyactualpublicexercise route"
-  ]
+  ],
+  "hashPortabilityReview": {
+    "canonicalProgressFileSHA256": "2ba9e5b2c555d7f85ee190809b0cc31889ec048100fe2599941002074f78d8c6",
+    "textHashMode": "CanonicalLF",
+    "originalPNGAndPDFByteHashesUnchanged": true,
+    "semanticSourceAndImageChanges": false
+  }
 }

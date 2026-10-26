@@ -129,7 +129,8 @@
       "minimumFontUnits": 20,
       "parentTypographyReview": "All native diagram text uses20SVGunits without shrinking or removing labels.",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-2-antiparallel.svg",
-      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py"
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "hashMode": "sha256-canonical-lf-for-text"
     },
     {
       "key": "s-q3-7-x",
@@ -148,7 +149,8 @@
       "minimumFontUnits": 20,
       "parentTypographyReview": "All native diagram text uses20SVGunits without shrinking or removing labels.",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-x.svg",
-      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py"
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "hashMode": "sha256-canonical-lf-for-text"
     },
     {
       "key": "s-q3-7-y",
@@ -167,7 +169,8 @@
       "minimumFontUnits": 20,
       "parentTypographyReview": "All native diagram text uses20SVGunits without shrinking or removing labels.",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-y.svg",
-      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py"
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "hashMode": "sha256-canonical-lf-for-text"
     },
     {
       "key": "s-q3-7-vx",
@@ -186,7 +189,8 @@
       "minimumFontUnits": 20,
       "parentTypographyReview": "All native diagram text uses20SVGunits without shrinking or removing labels.",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-vx.svg",
-      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py"
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "hashMode": "sha256-canonical-lf-for-text"
     },
     {
       "key": "s-q3-7-vy",
@@ -205,7 +209,8 @@
       "minimumFontUnits": 20,
       "parentTypographyReview": "All native diagram text uses20SVGunits without shrinking or removing labels.",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-vy.svg",
-      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py"
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "hashMode": "sha256-canonical-lf-for-text"
     },
     {
       "key": "s-q3-7-ax",
@@ -224,7 +229,8 @@
       "minimumFontUnits": 20,
       "parentTypographyReview": "All native diagram text uses20SVGunits without shrinking or removing labels.",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-ax.svg",
-      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py"
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "hashMode": "sha256-canonical-lf-for-text"
     },
     {
       "key": "s-q3-7-ay",
@@ -243,7 +249,8 @@
       "minimumFontUnits": 20,
       "parentTypographyReview": "All native diagram text uses20SVGunits without shrinking or removing labels.",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-ay.svg",
-      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py"
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "hashMode": "sha256-canonical-lf-for-text"
     }
   ],
   "sourcePDFSHA256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
@@ -270,5 +277,9 @@
     "Independentreview85numberedexercises",
     "Wholechapter115unitgrouping andrender",
     "GitHubpublication andpublicexerciseverification"
-  ]
+  ],
+  "hashRules": {
+    "markdownAndSVG": "SHA256afterCRLFtoLFnormalization; consistentwithGittextnormalization.",
+    "originalRasterAndPDF": "StrictSHA256oforiginalbytes; norasterorpixelnormalization."
+  }
 }

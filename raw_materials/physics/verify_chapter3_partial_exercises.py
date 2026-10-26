@@ -3,6 +3,10 @@ import math,json,re,hashlib,xml.etree.ElementTree as ET
 import numpy as np,pymupdf
 ROOT=Path(__file__).resolve().parents[2]
 B=ROOT/'raw_materials/physics/translations/chapter-03';checks=[]
+def sha256_asset(path):
+ data=path.read_bytes()
+ if path.suffix.lower()in {'.md','.svg'}:data=data.replace(b'\r\n',b'\n')
+ return hashlib.sha256(data).hexdigest()
 def ck(unit,label,actual,expected,tol=1e-8):
  assert np.allclose(actual,expected,rtol=tol,atol=tol),(unit,label,actual,expected)
  checks.append({'unit':unit,'check':label,'actual':np.asarray(actual).tolist(),'expected':np.asarray(expected).tolist(),'passed':True})
@@ -84,7 +88,7 @@ for name,text in fragments.items():
   if unit=='Bài tập cầu nối':st(unit,'9original guidequestions beforebox',re.findall(r'^(\d+)\. ',prompt,re.M)==list(map(str,range(1,10))))
   ledger.append({'id':unit,'file':name,'line':text[:match.start()].count('\n')+1,'sourcePDFPages':[111,112]if unit=='Bài tập cầu nối'else[112]if unit.startswith('Q')else[111]})
 st('all','exact30sourceunits',sorted(expected)==sorted(r['id']for r in ledger))
-sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+sha=sha256_asset
 with pymupdf.open(ROOT/'raw_materials/physics/source/young-freedman-15.pdf')as pdf:
  for row in json.loads((B/'parent-image-assets.json').read_text(encoding='utf-8')):
   actual=pymupdf.Pixmap(ROOT/row['publicFile']);expectedpix=pdf[row['pdfPage1Based']-1].get_pixmap(matrix=pymupdf.Matrix(row['scale'],row['scale']),clip=pymupdf.Rect(row['rectangle']),alpha=False)

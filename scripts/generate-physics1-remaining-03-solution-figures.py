@@ -11,7 +11,7 @@ sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 def svg(body):return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" width="100%"><rect width="360" height="250" fill="#fffdf7"/><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#374151"/></marker></defs><g font-family="Segoe UI, sans-serif" font-size="20" fill="#17212b">'+body+'</g></svg>'
 solutions=[]
 def save(key,body,description,model):
- dst=assets/('solution-'+key+'.svg');dst.write_text(svg(body),encoding='utf-8')
+ dst=assets/('solution-'+key+'.svg');dst.write_bytes(svg(body).encode('utf-8'))
  solutions.append(dict(key=key,publicFile=dst.relative_to(ROOT).as_posix(),sha256=sha(dst),purpose=description,model=model,generator="scripts/generate-physics1-remaining-03-solution-figures.py",minimumFontUnits=20))
 body='<text x="24" y="32">Gia tốc ngược chiều vận tốc</text>'
 for y,start,end,label in [(78,70,300,'v₁'),(135,70,220,'v₂'),(195,220,140,'Δv, a')]:

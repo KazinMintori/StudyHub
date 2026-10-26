@@ -53,6 +53,13 @@
   "reports": {
     "qa/physics1-remaining/agy-bulk-20261026/ch01-early-parent-final/browser-canonical-review.json": "737de3cbbcd4615136c09f5a2257a80d08a8ff52bf9b1ae9d49807ca175a5d22",
     "qa/physics1-remaining/agy-bulk-20261026/ch01-guided-parent-final/browser-canonical-review.json": "6f09d99b16959d8675a76650ac3c4e1be549d57af4a35dac942a017176d7c38f",
-    "raw_materials/physics/translations/chapter-01/parent-exercise-progress.json": "d23b1a436d567a8d8d0ac401205876e54bea33e2bcba8d8feab5fa4c79957c3c"
+    "raw_materials/physics/translations/chapter-01/parent-exercise-progress.json": "2b59719f1ebbe9e0fcaf3a732eb533965d0edc9f44bce51dcb031084bb93e529"
+  },
+  "previousProgressFileSHA256": "d23b1a436d567a8d8d0ac401205876e54bea33e2bcba8d8feab5fa4c79957c3c",
+  "hashPortabilityReview": {
+    "canonicalProgressFileSHA256": "2b59719f1ebbe9e0fcaf3a732eb533965d0edc9f44bce51dcb031084bb93e529",
+    "textHashMode": "CanonicalLF",
+    "originalPNGAndPDFByteHashesUnchanged": true,
+    "semanticSourceAndImageChanges": false
   }
 }

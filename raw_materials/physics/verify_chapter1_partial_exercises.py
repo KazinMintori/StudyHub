@@ -7,6 +7,10 @@ from pathlib import Path
 import json,math,re,hashlib
 import numpy as np,pymupdf
 ROOT=Path(__file__).resolve().parents[2]
+def sha256_asset(path):
+ data=path.read_bytes()
+ if path.suffix.lower()in {'.md','.svg'}:data=data.replace(b'\r\n',b'\n')
+ return hashlib.sha256(data).hexdigest()
 def verify_numbered():
  records=[];units={}
  def ck(n,name,actual,expected,tol=1e-6):
@@ -176,7 +180,7 @@ def main():
  raw=ROOT/'raw_materials/physics/translations/chapter-01'
  progress=json.loads((raw/'parent-exercise-progress.json').read_text(encoding='utf-8'))
  assert progress['status']=='partially-reviewed-not-ready'and progress['reviewedUnits']==82 and progress['expectedUnits']==129
- sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+ sha=sha256_asset
  assert sha(ROOT/'raw_materials/physics/source/young-freedman-15.pdf')==progress['sourcePDFSHA256']
  numbered=verify_numbered();guided=verify_guided();images=0;sourceUnits=0
  for row in progress['files']:

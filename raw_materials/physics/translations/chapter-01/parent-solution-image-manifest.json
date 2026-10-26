@@ -13,7 +13,7 @@
   "assets": [
     {
       "key": "solution-image:S1.21",
-      "sha256": "2e05410f72d6ec058cc56c5c5d987148da10847cd02447a83536968b5482ea6f",
+      "sha256": "e8c1a3f4a292d41282c9dea71730ab5fa7e5a988dc7b6783bda9a1dd896bc49b",
       "description": "Sơ đồ lời giải độc lập cho bài1.21.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [
@@ -98,7 +98,7 @@
     },
     {
       "key": "solution-image:S1.22",
-      "sha256": "c06b4c13f2b83084d2e7b9c061db7c681bad466a6a2b4da314abf9b64aa3dd35",
+      "sha256": "a1912a9b137c1ce645127779291209737114804c366ec4501d3fc02cb0998910",
       "description": "Sơ đồ lời giải độc lập cho bài1.22.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [
@@ -340,7 +340,7 @@
     },
     {
       "key": "solution-image:S1.23",
-      "sha256": "64796129939ccd87bcf72fdb3d8acf026b5f8b1410dec5cabd9088641996679d",
+      "sha256": "6f6449fadd6fefa50816629c815acae8b5420618128a19d3090c8b75efe7dda1",
       "description": "Sơ đồ lời giải độc lập cho bài1.23.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [
@@ -425,7 +425,7 @@
     },
     {
       "key": "solution-image:S1.28",
-      "sha256": "e53b11ec4de6c0d964c1bea1a1f9f39105a2721d33e9aa50b9f46367fabd640b",
+      "sha256": "bac6d058b6f4474e743018cdc7a2f39611007b3bc3a7c129c44e3ef341972a89",
       "description": "Sơ đồ lời giải độc lập cho bài1.28.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [
@@ -513,7 +513,7 @@
     },
     {
       "key": "solution-image:S1.31",
-      "sha256": "d0bbae3c5d029ca87490d96ddb512691420012d15e5148f6b16a5ad4f7454f5f",
+      "sha256": "b40ab22fd629e6ff2c0e5056f2f8e19cf4b11a4108630931ad8fc2ba0cdf50b7",
       "description": "Sơ đồ lời giải độc lập cho bài1.31.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [
@@ -598,7 +598,7 @@
     },
     {
       "key": "solution-image:S1.33",
-      "sha256": "60faee900e364e01dbc449ee4736e2ed7f5e1b9294a529fbd835b2f7cf1bfd74",
+      "sha256": "450c0c9d4c9fc9ce8af9bb124d29001671b05ccd2b504bd1d31e958271247805",
       "description": "Sơ đồ lời giải độc lập cho bài1.33.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [
@@ -782,7 +782,7 @@
     },
     {
       "key": "solution-image:S1.36",
-      "sha256": "bdcf454882052f345a3bd174e1c5857971bc4334f945eb18be0438d1a5780d47",
+      "sha256": "b5dab0b672b3e36ab801853251cc662a392c611425f1dd5e3cf79effbe0a44ec",
       "description": "Sơ đồ lời giải độc lập cho bài1.36.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [
@@ -851,7 +851,7 @@
     },
     {
       "key": "s-bridge-roof-fbd",
-      "sha256": "b867aa47828b78cca10913bf2d4bfc93bec6e3a1d7bd7be0d95f14122edad693",
+      "sha256": "98eb070586087bc0df4ef27cdbe4591564e803e93c235fc64a18c10edf47b587",
       "purpose": "Phân tích trọng lực theo hai trục vuông góc gắn với mái nghiêng.",
       "sourceFigureUnchanged": true,
       "geometry": {

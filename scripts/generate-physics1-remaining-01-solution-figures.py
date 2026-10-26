@@ -70,7 +70,7 @@ def render_panels(panels):
  return '\n'.join(parts)+'\n'
 manifest=[]
 for key,name,panels in specs:
- p=OUT/('solution-'+name);p.write_text(render_panels(panels),encoding='utf-8')
+ p=OUT/('solution-'+name);p.write_bytes(render_panels(panels).encode('utf-8'))
  manifest.append({'key':'solution-image:'+key,'output':'proposed-assets/'+name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'description':'Sơ đồ lời giải độc lập cho bài'+key[1:]+'.','generator':'generate-reviewed-solution-diagrams.py','panels':panels,'minimumFontUnits':20})
 earlyManifest=manifest
 
@@ -90,7 +90,7 @@ for color in ['#2563eb','#15803d','#9333ea']:
 svg+=['</defs>','<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">','<text x="180" y="28" text-anchor="middle" font-weight="600">Phân tích trọng lượng</text>','<text x="180" y="54" text-anchor="middle">Trên mái nghiêng 35°</text>',line(O,axisx,'#2563eb',1.7,'4 4',True),line(O,axisy,'#2563eb',1.7,'4 4',True),line(X,W,'#94a3b8',1.5,'4 4'),line(Y,W,'#94a3b8',1.5,'4 4'),line(O,X,'#15803d',3,marker=True),line(O,Y,'#15803d',3,marker=True),line(O,W,'#9333ea',3.2,marker=True),'<circle cx="218" cy="133" r="3.5" fill="#172033"/>','<text x="83" y="211" fill="#2563eb">+x</text>','<text x="133" y="85" fill="#2563eb">+y</text>','<text x="114" y="166" fill="#15803d">Fₓ</text>','<text x="297" y="223" fill="#15803d">Fᵧ</text>','<text x="228" y="286" fill="#9333ea">F</text>']
 r=48;pa=plus(O,(r*math.sin(theta),r*math.cos(theta)));pb=plus(O,(0,r))
 svg+=[f'<path d="M{pa[0]:.4f} {pa[1]:.4f} A48 48 0 0 1 {pb[0]:.4f} {pb[1]:.4f}" fill="none" stroke="#9333ea" stroke-width="1.5"/>','<text x="234" y="199" fill="#9333ea">35°</text>','<line x1="24" y1="309" x2="336" y2="309" stroke="#d1d5db"/>','<text x="24" y="338">Fₓ = F sin 35°</text>','<text x="24" y="366">Fᵧ = −F cos 35°</text>','<text x="24" y="394">|Fᵧ| ≤ 425 N</text>','</g></svg>']
-p=OUT/'solution-s-bridge-roof-fbd.svg';p.write_text('\n'.join(svg)+'\n',encoding='utf-8')
+p=OUT/'solution-s-bridge-roof-fbd.svg';p.write_bytes(('\n'.join(svg)+'\n').encode('utf-8'))
 manifest=[{'key':'s-bridge-roof-fbd','file':'proposed-assets/s-bridge-roof-fbd.svg','sha256':sha(p),'purpose':'Phân tích trọng lực theo hai trục vuông góc gắn với mái nghiêng.','sourceFigureUnchanged':True,'geometry':{'origin':O,'xUnitScreen':ex,'yUnitScreen':ey,'FxScreen':fx,'FyScreen':fy,'FScreen':F,'thetaDegrees':35,'svgTextMinimum':20},'generator':'generate-reviewed-assets.py'}]
 
 allRows=earlyManifest+manifest
