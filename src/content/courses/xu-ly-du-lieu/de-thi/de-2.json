@@ -2,6 +2,13 @@
   "id": "de-2",
   "title": "Đề 2",
   "code": "045",
+  "examType": "official",
+  "semester": 1,
+  "academicYear": "2026–2027",
+  "examDate": null,
+  "examTypeLabel": "Đề chính thức",
+  "academicTerm": "Học kỳ 1, năm học 2026–2027",
+  "examDateLabel": "",
   "questions": [
     {
       "id": "D2-001",

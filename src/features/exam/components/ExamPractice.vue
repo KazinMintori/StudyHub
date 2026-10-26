@@ -67,6 +67,13 @@
       </div>
     </header>
 
+    <div v-if="bank?.examTypeLabel" class="exam-paper-meta" aria-label="Thông tin đề thi">
+      <span>{{ bank.examTypeLabel }}</span>
+      <span>{{ bank.academicTerm }}</span>
+      <span v-if="bank.examDate">Ngày thi: <time :datetime="bank.examDate">{{ bank.examDateLabel }}</time></span>
+      <span v-else-if="bank.examType === 'official'">Ngày thi: Chưa có thông tin</span>
+    </div>
+
     <!-- Progress Row matching screenshot -->
     <div v-if="currentQuestion" class="exam-progress-row">
       <div class="exam-progress-bar-wrap">
@@ -789,6 +796,16 @@ onUnmounted(() => {
 }
 
 /* Header */
+.exam-paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-top: 12px;
+  color: var(--ep-ink-2);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 .exam-source-note {
   margin: 16px 0;
   padding: 12px 16px;

@@ -8,6 +8,7 @@ import { assertCodePreserved } from './exam-code-integrity.mjs'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 const sourcePath = path.join(root, 'raw_materials/xu-ly-du-lieu/exam-papers/source.json')
 const source = JSON.parse(await readFile(sourcePath, 'utf8'))
+const metadata = JSON.parse(await readFile(path.join(path.dirname(sourcePath), 'metadata.json'), 'utf8'))
 const output = path.join(root, 'src/content/courses/xu-ly-du-lieu/de-thi')
 await mkdir(output, { recursive: true })
 const render = await createExamMarkdownRenderer(root)
@@ -19,6 +20,13 @@ const itemMarkdown = item => item.kind === 'code'
 const catalog = []
 const coverage = []
 for (const exam of source.exams) {
+  const meta = metadata[exam.code]
+  if(!meta || !['official','practice'].includes(meta.examType)) throw new Error(`Missing exam metadata: ${exam.code}`)
+  if(meta.examDate && (!/^\d{4}-\d{2}-\d{2}$/.test(meta.examDate) || new Date(meta.examDate).toISOString().slice(0,10)!==meta.examDate)) throw new Error(`Invalid exam date: ${exam.code}`)
+  const examTypeLabel = meta.examType === 'official' ? 'Đề chính thức' : 'Đề luyện tập'
+  const academicTerm = `Học kỳ ${meta.semester}, năm học ${meta.academicYear}`
+  const examDateLabel = meta.examDate ? meta.examDate.split('-').reverse().join('/') : ''
+  const paperInfo = {...meta, examTypeLabel, academicTerm, examDateLabel}
   const questions = exam.questions.map(q => {
     const promptItems = q.items.filter(x => x.kind !== 'choice')
     const promptMarkdown = promptItems.map(itemMarkdown).join('\n\n')
@@ -40,12 +48,13 @@ for (const exam of source.exams) {
       grading: q.grading, reviewNoteHtml: q.reviewNote ? renderOriginal(escapeProse(q.reviewNote)) : '', answerHtml,
     }
   })
-  const bank = { id: exam.id, title: exam.title, code: exam.code, questions }
+  const bank = { id: exam.id, title: exam.title, code: exam.code, ...paperInfo, questions }
   await writeFile(path.join(output, `${exam.id}.json`), JSON.stringify(bank, null, 2) + '\n')
   catalog.push({ id: exam.id, slug: exam.id, title: exam.title, number: exam.number, code: exam.code,
-    description: exam.description, total: questions.length, quiz: 20, essay: 6 })
+    ...paperInfo, description: `${examTypeLabel} · Mã đề ${exam.code} · ${academicTerm}${examDateLabel ? ` · Ngày thi: ${examDateLabel}` : ''}`, total: questions.length, quiz: 20, essay: 6 })
   coverage.push({ id: exam.id, questions: questions.map(q => q.id),
     sourceSha256: createHash('sha256').update(JSON.stringify(exam)).digest('hex'),
+    metadataSha256: createHash('sha256').update(JSON.stringify(meta)).digest('hex'),
     renderedSha256: createHash('sha256').update(JSON.stringify(bank)).digest('hex') })
   console.log(`Rendered ${exam.title} (${exam.code}): ${questions.length} questions`)
 }

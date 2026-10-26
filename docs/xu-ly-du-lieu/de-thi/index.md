@@ -19,7 +19,7 @@ import catalog from '../../../src/content/courses/xu-ly-du-lieu/de-thi/catalog.j
   <header class="course-hero">
     <div class="course-hero-copy">
       <h1>Đề thi</h1>
-      <p class="course-description">Năm đề giữa kỳ với đầy đủ câu hỏi và lời giải. Làm trắc nghiệm để đối chiếu đáp án hoặc mở phần tự luận để xem từng bước giải.</p>
+      <p class="course-description">Bốn đề giữa kỳ chính thức và một đề luyện tập, có đầy đủ câu hỏi và lời giải. Làm trắc nghiệm để đối chiếu đáp án hoặc mở phần tự luận để xem từng bước giải.</p>
     </div>
   </header>
   <div class="course-meta">

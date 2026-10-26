@@ -2,6 +2,13 @@
   "id": "de-3",
   "title": "Đề 3",
   "code": "046",
+  "examType": "official",
+  "semester": 1,
+  "academicYear": "2026–2027",
+  "examDate": null,
+  "examTypeLabel": "Đề chính thức",
+  "academicTerm": "Học kỳ 1, năm học 2026–2027",
+  "examDateLabel": "",
   "questions": [
     {
       "id": "D3-001",

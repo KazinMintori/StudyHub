@@ -9,6 +9,7 @@ const load = file => JSON.parse(readFileSync(file, 'utf8'))
 const source = load('raw_materials/xu-ly-du-lieu/exam-papers/source.json')
 const catalog = load('src/content/courses/xu-ly-du-lieu/de-thi/catalog.json')
 const coverage = load('raw_materials/xu-ly-du-lieu/exam-papers/render-coverage.json')
+const metadata = load('raw_materials/xu-ly-du-lieu/exam-papers/metadata.json')
 const banks = catalog.map(exam => load(`src/content/courses/xu-ly-du-lieu/de-thi/${exam.id}.json`))
 const clean = text => htmlCodeText(text).replace(/\s+/g, ' ').trim()
 const sha = object => createHash('sha256').update(JSON.stringify(object)).digest('hex')
@@ -22,6 +23,7 @@ test('Five papers contain every source question, choice and unchanged code block
     assert.equal(bank.questions.filter(q => q.kind === 'quiz').length, 20)
     assert.equal(bank.questions.filter(q => q.kind === 'essay').length, 6)
     assert.equal(coverage[i].sourceSha256, sha(source.exams[i]))
+    assert.equal(coverage[i].metadataSha256, sha(metadata[bank.code]))
     assert.equal(coverage[i].renderedSha256, sha(bank))
     for (const [j, q] of bank.questions.entries()) {
       const original = source.exams[i].questions[j]
@@ -50,6 +52,18 @@ test('Five papers contain every source question, choice and unchanged code block
   assert.equal(questions, 130)
   assert.equal(choices, 400)
   assert.equal(blocks, 94)
+})
+
+test('Only code 001 is a practice paper and unspecified dates are never invented', () => {
+  assert.deepEqual(banks.map(bank=>bank.examType), ['official','official','official','official','practice'])
+  assert.equal(banks[3].academicYear, '2025–2026')
+  for(const [i,bank] of banks.entries()) {
+    assert.equal(bank.examDate, metadata[bank.code].examDate)
+    assert.equal(catalog[i].examDate, bank.examDate)
+    assert.ok(catalog[i].description.includes(bank.examTypeLabel))
+    assert.ok(catalog[i].description.includes(bank.academicYear))
+    assert.equal(bank.examDateLabel, bank.examDate ? bank.examDate.split('-').reverse().join('/') : '')
+  }
 })
 
 test('Invalid source questions are reviewable without an invented grade', () => {

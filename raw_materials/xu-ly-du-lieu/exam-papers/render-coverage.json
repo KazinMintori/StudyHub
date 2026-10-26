@@ -30,7 +30,8 @@
       "D1-026"
     ],
     "sourceSha256": "c6a047c23b0dd564ea1dd2abbc489048d528ec17be81099bcbe100a14b10629f",
-    "renderedSha256": "135e01325d7045667c6bfc12ac3089492b2ad8bb9f538e3aa689820767c7a166"
+    "metadataSha256": "b2ee8e99f3370fce281dafcd9cadc189c500b8711f76f52a1f7561274afbad53",
+    "renderedSha256": "ba0ab4433c2e9db1cc179892f82edf74a23b16efa1043f0d6fe06afce1b39a99"
   },
   {
     "id": "de-2",
@@ -63,7 +64,8 @@
       "D2-026"
     ],
     "sourceSha256": "eeafef2bafdecba9c88c7fa2b9aa19096f0800c66cfb4314d0f207911b9c0c48",
-    "renderedSha256": "79747ee9b8e684de3a8657f3e8bae72f1ba5ae60e05542b32b486c7b04d080fe"
+    "metadataSha256": "b2ee8e99f3370fce281dafcd9cadc189c500b8711f76f52a1f7561274afbad53",
+    "renderedSha256": "27b279471efc7de00fc5389db726e2db1706948c99be35abc7ecf4f6b7874787"
   },
   {
     "id": "de-3",
@@ -96,7 +98,8 @@
       "D3-026"
     ],
     "sourceSha256": "3c6d835d93ae6b7d1c5c25363120eb5892163504af541bfb4bfe28ba0c7e8a68",
-    "renderedSha256": "20ba8f169f1b1909ac2e0d951d2de96ec0323744279d94d88506f25f6a793393"
+    "metadataSha256": "b2ee8e99f3370fce281dafcd9cadc189c500b8711f76f52a1f7561274afbad53",
+    "renderedSha256": "98351b50ee156477c0869177e69628456dbd1f1f05505b2e6ff48f1cf143fd76"
   },
   {
     "id": "de-4",
@@ -129,7 +132,8 @@
       "D4-026"
     ],
     "sourceSha256": "6db0a2eb5f8a55b6dcd0aa110e032b0c8a90996c4801c14dab65e75e77d218bf",
-    "renderedSha256": "437379e6c92826d92c4faf7ae0153107433524e6f092c3c73dbda7c3bbed7c98"
+    "metadataSha256": "6dc378d6c1f41f03dbc45e806cfaaa24cebe7a1c7da70ea0420013e562f4c803",
+    "renderedSha256": "687374304a5e5da7f5eb33e6661386a3c5091986eabda4e1f61402749b682668"
   },
   {
     "id": "de-5",
@@ -162,6 +166,7 @@
       "D5-026"
     ],
     "sourceSha256": "b7d901e5a3c843ccf324a4c99ff0d88bb012bc87562e25b82740f99c405add6a",
-    "renderedSha256": "0e4b7f76648d13d1b0e04b37da123a1234e4c458c60dbbb15a47722079426b1c"
+    "metadataSha256": "2b175b07f235cd6d73e37d2c337abf19b83e2a393c98c3d495d70ecb50e1807d",
+    "renderedSha256": "67988603176ad227f6254e752a9995fb1f82fc1ac5c9f60ac3b358a0ff3a7ce2"
   }
 ]

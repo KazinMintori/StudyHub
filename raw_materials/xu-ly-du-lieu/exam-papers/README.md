@@ -15,3 +15,5 @@ Nguồn nhập là các ảnh và PDF người dùng cung cấp trong cuộc tr�
 Mã 030 có chín câu không đủ điều kiện chấm A–D: 4, 5, 7, 8, 9, 10, 11, 12, 18. Các câu vẫn xuất hiện trong phần trắc nghiệm, cho mở lời giải và ghi nhận đã đối chiếu, nhưng không tính đúng/sai. Câu 13 nhận A hoặc C; câu 17 nhận C hoặc D.
 
 Tái tạo các ngân hàng HTML bằng `node scripts/build/render-imported-exams.mjs`. Bước này kiểm tra code trong cả đề và lời giải không đổi sau render; `render-coverage.json` ghi mã băm nguồn và đầu ra từng đề. Chạy `node --test scripts/tests/imported-exams.test.mjs` để kiểm tra số lượng, phương án, code và chấm điểm.
+
+`metadata.json` phân biệt bốn đề chính thức với mã 001 luyện tập và lưu học kỳ, năm học đúng phần đầu tài liệu. Ngày thi cụ thể chỉ điền theo thông tin đã xác nhận, dùng dạng ISO `YYYY-MM-DD`. Giá trị `null` nghĩa là chưa có thông tin ngày thi, không lấy ngày trong dữ liệu bài tập hoặc ngày biên soạn lời giải làm ngày thi. Giao diện trình bày ngày đã xác nhận theo dạng ngày/tháng/năm.

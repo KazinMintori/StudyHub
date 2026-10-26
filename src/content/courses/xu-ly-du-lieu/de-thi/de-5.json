@@ -2,6 +2,13 @@
   "id": "de-5",
   "title": "Đề 5",
   "code": "001",
+  "examType": "practice",
+  "semester": 1,
+  "academicYear": "2026–2027",
+  "examDate": null,
+  "examTypeLabel": "Đề luyện tập",
+  "academicTerm": "Học kỳ 1, năm học 2026–2027",
+  "examDateLabel": "",
   "questions": [
     {
       "id": "D5-001",
