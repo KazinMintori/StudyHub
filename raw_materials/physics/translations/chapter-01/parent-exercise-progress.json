@@ -1,0 +1,200 @@
+{
+  "status": "partially-reviewed-not-ready",
+  "chapter": 1,
+  "reviewedUnits": 82,
+  "expectedUnits": 129,
+  "numberedReviewed": [
+    1,
+    47
+  ],
+  "numberedRemaining": [
+    48,
+    94
+  ],
+  "guided": 8,
+  "discussion": 26,
+  "bridge": 1,
+  "files": [
+    {
+      "file": "parent-09-luyen-tap-huong-dan.md",
+      "units": 8,
+      "sha256": "71b6c239f52565f38da146b9cbc0c8646e6ddeeb8449a6506e3739021e431310",
+      "reviewedProposalSHA256": "6688068f864f3bfb9db71ed7e92f5223e541d4635b74034d25fbe520a54f1a21"
+    },
+    {
+      "file": "parent-10-cau-hoi-thao-luan.md",
+      "units": 26,
+      "sha256": "d674b3e979d0fd7701f4a7ef922f1f5c545ad3338b45d6c464843b0636b6188a",
+      "reviewedProposalSHA256": "a5dee9bfe28cd4ae4f9126a786f5dd4c4757bef82fcd3de317f1878a4f77604d"
+    },
+    {
+      "file": "parent-16-bai-tap-cau-noi.md",
+      "units": 1,
+      "sha256": "6dc134b46d364801de54a050cd2537559a32d68e41efb394ec1c7a23c48b287a",
+      "reviewedProposalSHA256": "637cf95a677d2b503e79b4d9a1735caa9c5fdc03c2f5482f6c9bd87d4ab36725",
+      "postImportSourceRoundingReview": "Retain unrounded518.829N and446.382J for computation; finaltwo-significant-digit presentation520N and450J agrees with the source appendix. No content omitted."
+    },
+    {
+      "file": "parent-11-bai-tap-001-047.md",
+      "units": 47,
+      "sha256": "f56df0fb862b3335e0ba6d0927e8ad37be3dfd538c1947d83520aa25b1e677c0",
+      "reviewedProposalSHA256": "62d5a12dcc4d3a73dc6200a70c95c476f489b686a0df597e849252ff63e31e54"
+    }
+  ],
+  "originalImages": [
+    {
+      "name": "r-exercises-e1-21",
+      "page": 48,
+      "rectangle": [
+        310.0,
+        260.0,
+        535.0,
+        405.0
+      ],
+      "scale": 2.5,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-21.png",
+      "sha256": "4bfab86599b7bf8383b1a36cb9ea45af94637b1298042532c255d1784496a3a8"
+    },
+    {
+      "name": "r-exercises-e1-22",
+      "page": 48,
+      "rectangle": [
+        440.0,
+        400.0,
+        615.0,
+        570.0
+      ],
+      "scale": 2.5,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-22.png",
+      "sha256": "ebc9ec681537f09f02d76d0c5b2e36b3fd9eeecc11bd63843fa4f73f734b22b8"
+    },
+    {
+      "name": "r-exercises-e1-33",
+      "page": 49,
+      "rectangle": [
+        75.0,
+        455.0,
+        300.0,
+        580.0
+      ],
+      "scale": 2.5,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-33.png",
+      "sha256": "36c2424cdc1b805110ecfd563326f6efc9e20e3f21144bc5e7ad1c26add2aaf7"
+    },
+    {
+      "name": "r-exercises-e1-37",
+      "page": 49,
+      "rectangle": [
+        495.0,
+        60.0,
+        615.0,
+        180.0
+      ],
+      "scale": 2.5,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-37.png",
+      "sha256": "74c13cff3049f698efeb3325ca706b0f1e41a3ca7bfaae0f83c98c8bf7228e47"
+    },
+    {
+      "name": "r-exercises-bridge-fig-1-34",
+      "page": 46,
+      "rectangle": [
+        305,
+        398,
+        545,
+        542
+      ],
+      "scale": 2.5,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-bridge-fig-1-34.png",
+      "sha256": "5cc4af490b2709f84f63da4057a65cc1726652331507ccda7208661f5f792ea6"
+    },
+    {
+      "name": "r-exercises-guided-media-qr",
+      "page": 46,
+      "rectangle": [
+        260,
+        37,
+        573,
+        76
+      ],
+      "scale": 2.5,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-guided-media-qr.png",
+      "sha256": "bf4fcb29f201a86e097f54c62b239afcbba3bf407a114b6b0ac87731d012f26e"
+    },
+    {
+      "name": "r-exercises-q1-21-figure-1-7",
+      "page": 28,
+      "rectangle": [
+        35,
+        117,
+        195,
+        325
+      ],
+      "scale": 2.5,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-q1-21-figure-1-7.png",
+      "sha256": "7d6a1d22eaca5f604dcca0dce6270c063ef93053518a2cb14e3e35df7a67a0f9"
+    }
+  ],
+  "separateSolutionDiagrams": [
+    {
+      "key": "S1.21",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-21-scale-diagram.svg",
+      "sha256": "2e05410f72d6ec058cc56c5c5d987148da10847cd02447a83536968b5482ea6f",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    },
+    {
+      "key": "S1.22",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-22-scale-diagram.svg",
+      "sha256": "c06b4c13f2b83084d2e7b9c061db7c681bad466a6a2b4da314abf9b64aa3dd35",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    },
+    {
+      "key": "S1.23",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-23-closed-route.svg",
+      "sha256": "64796129939ccd87bcf72fdb3d8acf026b5f8b1410dec5cabd9088641996679d",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    },
+    {
+      "key": "S1.28",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-28-addition-diagram.svg",
+      "sha256": "e53b11ec4de6c0d964c1bea1a1f9f39105a2721d33e9aa50b9f46367fabd640b",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    },
+    {
+      "key": "S1.31",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-31-drive-route.svg",
+      "sha256": "d0bbae3c5d029ca87490d96ddb512691420012d15e5148f6b16a5ad4f7454f5f",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    },
+    {
+      "key": "S1.33",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-33-vector-diagrams.svg",
+      "sha256": "60faee900e364e01dbc449ee4736e2ed7f5e1b9294a529fbd835b2f7cf1bfd74",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    },
+    {
+      "key": "S1.36",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-36-vector-difference.svg",
+      "sha256": "bdcf454882052f345a3bd174e1c5857971bc4334f945eb18be0438d1a5780d47",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    },
+    {
+      "key": "s-bridge-roof-fbd",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s-bridge-roof-fbd.svg",
+      "sha256": "b867aa47828b78cca10913bf2d4bfc93bec6e3a1d7bd7be0d95f14122edad693",
+      "generator": "scripts/generate-physics1-remaining-01-solution-figures.py"
+    }
+  ],
+  "sourcePDFSHA256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
+  "publicLessonStatus": "draft",
+  "publicExerciseChapterEnabled": false,
+  "scopeLimit": "Only parent-accepted82units integrated into canonical source. Not rendered by publicchapter until all129units and finalgates pass. Theory and unrelated existing files remain unchanged.",
+  "pending": [
+    "Sourcecorrection andindependentreview exercises1.48–1.94",
+    "Full129unitgrouping/render",
+    "Sourcecontentindex andallchaptergates",
+    "GitHubdeployment andpublicexerciseverification"
+  ],
+  "canonicalVerificationProgram": "raw_materials/physics/verify_chapter1_partial_exercises.py",
+  "originalCropGenerator": "scripts/prepare-physics1-remaining-01-exercises-assets.py",
+  "solutionFigureManifest": "raw_materials/physics/translations/chapter-01/parent-solution-image-manifest.json"
+}

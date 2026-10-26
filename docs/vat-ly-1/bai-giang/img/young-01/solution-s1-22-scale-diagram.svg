@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="1660" viewBox="0 0 360 1660" role="img" aria-label="Sơ đồ vector có cùng tỷ lệ trên hai trục">
+<rect width="360" height="100%" rx="10" fill="#fff"/>
+<defs>
+<marker id="c2563eb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#2563eb"/></marker>
+<marker id="c15803d" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#15803d"/></marker>
+<marker id="cbe123c" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#be123c"/></marker>
+<marker id="c7e22ce" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#7e22ce"/></marker>
+</defs><g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<g transform="translate(0 0)"><text x="180" y="28" text-anchor="middle" font-weight="600">(a): A + B</text>
+<line x1="117.0688" y1="151.7468" x2="117.0688" y2="286.0000" stroke="#2563eb" stroke-width="2.5" marker-end="url(#c2563eb)"/>
+<text x="99.0688" y="218.8734" fill="#2563eb" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">A</text>
+<line x1="117.0688" y1="286.0000" x2="242.9312" y2="68.0000" stroke="#15803d" stroke-width="2.5" marker-end="url(#c15803d)"/>
+<text x="188.0000" y="169.0000" fill="#15803d" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">B</text>
+<line x1="117.0688" y1="151.7468" x2="242.9312" y2="68.0000" stroke="#7e22ce" stroke-width="2.5" marker-end="url(#c7e22ce)"/>
+<text x="188.0000" y="121.8734" fill="#7e22ce" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">A+B</text>
+<circle cx="117.0688" cy="151.7468" r="3" fill="#172033"/><text x="100.0688" y="173.7468">O</text>
+<line x1="24" y1="311" x2="336" y2="311" stroke="#cbd5e1"/>
+<text x="24" y="340">A hướng xuống, B chếch lên</text>
+<text x="24" y="366">Tổng hướng đông bắc</text>
+</g>
+<g transform="translate(0 415)"><text x="180" y="28" text-anchor="middle" font-weight="600">(b): A − B</text>
+<line x1="218.9464" y1="68.0000" x2="218.9464" y2="151.0857" stroke="#2563eb" stroke-width="2.5" marker-end="url(#c2563eb)"/>
+<text x="194.9464" y="109.5428" fill="#2563eb" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">A</text>
+<line x1="218.9464" y1="151.0857" x2="141.0536" y2="286.0000" stroke="#15803d" stroke-width="2.5" marker-end="url(#c15803d)"/>
+<text x="152.0000" y="218.5428" fill="#15803d" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">−B</text>
+<line x1="218.9464" y1="68.0000" x2="141.0536" y2="286.0000" stroke="#7e22ce" stroke-width="2.5" marker-end="url(#c7e22ce)"/>
+<text x="192.0000" y="172.0000" fill="#7e22ce" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">A−B</text>
+<circle cx="218.9464" cy="68.0000" r="3" fill="#172033"/><text x="201.9464" y="90.0000">O</text>
+<line x1="24" y1="311" x2="336" y2="311" stroke="#cbd5e1"/>
+<text x="24" y="340">Đặt −B tại ngọn A</text>
+<text x="24" y="366">Hiệu hướng tây nam</text>
+</g>
+<g transform="translate(0 830)"><text x="180" y="28" text-anchor="middle" font-weight="600">(c): −A − B</text>
+<line x1="242.9312" y1="202.2532" x2="242.9312" y2="68.0000" stroke="#2563eb" stroke-width="2.5" marker-end="url(#c2563eb)"/>
+<text x="217.9312" y="135.1266" fill="#2563eb" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">−A</text>
+<line x1="242.9312" y1="68.0000" x2="117.0688" y2="286.0000" stroke="#15803d" stroke-width="2.5" marker-end="url(#c15803d)"/>
+<text x="155.0000" y="177.0000" fill="#15803d" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">−B</text>
+<line x1="242.9312" y1="202.2532" x2="117.0688" y2="286.0000" stroke="#7e22ce" stroke-width="2.5" marker-end="url(#c7e22ce)"/>
+<text x="184.0000" y="262.1266" fill="#7e22ce" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">−A−B</text>
+<circle cx="242.9312" cy="202.2532" r="3" fill="#172033"/><text x="225.9312" y="224.2532">O</text>
+<line x1="24" y1="311" x2="336" y2="311" stroke="#cbd5e1"/>
+<text x="24" y="340">Vector đối của A+B</text>
+<text x="24" y="366">Độ lớn giữ nguyên</text>
+</g>
+<g transform="translate(0 1245)"><text x="180" y="28" text-anchor="middle" font-weight="600">(d): B − A</text>
+<line x1="141.0536" y1="286.0000" x2="218.9464" y2="151.0857" stroke="#2563eb" stroke-width="2.5" marker-end="url(#c2563eb)"/>
+<text x="188.0000" y="211.5428" fill="#2563eb" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">B</text>
+<line x1="218.9464" y1="151.0857" x2="218.9464" y2="68.0000" stroke="#15803d" stroke-width="2.5" marker-end="url(#c15803d)"/>
+<text x="230.9464" y="109.5428" fill="#15803d" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">−A</text>
+<line x1="141.0536" y1="286.0000" x2="218.9464" y2="68.0000" stroke="#7e22ce" stroke-width="2.5" marker-end="url(#c7e22ce)"/>
+<text x="115.0000" y="177.0000" fill="#7e22ce" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">B−A</text>
+<circle cx="141.0536" cy="286.0000" r="3" fill="#172033"/><text x="124.0536" y="308.0000">O</text>
+<line x1="24" y1="311" x2="336" y2="311" stroke="#cbd5e1"/>
+<text x="24" y="340">Vector đối của A−B</text>
+<text x="24" y="366">Hiệu hướng đông bắc</text>
+</g>
+</g></svg>

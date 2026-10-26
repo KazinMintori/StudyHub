@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 408" role="img" aria-labelledby="title desc">
+<title id="title">Phân tích trọng lượng trên mái nghiêng 35 độ</title>
+<desc id="desc">Trục x hướng xuống dốc về bên trái. Trục y vuông góc mái hướng ra ngoài về phía trên bên trái. Thành phần Fx hướng xuống dốc, Fy hướng vào mái xuống bên phải. Tổng hai thành phần là trọng lực thẳng đứng xuống.</desc>
+<rect width="360" height="408" rx="12" fill="#fff"/>
+<defs>
+<marker id="2563eb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#2563eb"/></marker>
+<marker id="15803d" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#15803d"/></marker>
+<marker id="9333ea" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#9333ea"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<text x="180" y="28" text-anchor="middle" font-weight="600">Phân tích trọng lượng</text>
+<text x="180" y="54" text-anchor="middle">Trên mái nghiêng 35°</text>
+<line x1="218.0000" y1="133.0000" x2="119.7018" y2="201.8292" stroke="#2563eb" stroke-width="1.7" stroke-dasharray="4 4" marker-end="url(#2563eb)"/>
+<line x1="218.0000" y1="133.0000" x2="164.6574" y2="56.8189" stroke="#2563eb" stroke-width="1.7" stroke-dasharray="4 4" marker-end="url(#2563eb)"/>
+<line x1="149.8723" y1="180.7035" x2="218.0000" y2="278.0000" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="286.1277" y1="230.2965" x2="218.0000" y2="278.0000" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="218.0000" y1="133.0000" x2="149.8723" y2="180.7035" stroke="#15803d" stroke-width="3" marker-end="url(#15803d)"/>
+<line x1="218.0000" y1="133.0000" x2="286.1277" y2="230.2965" stroke="#15803d" stroke-width="3" marker-end="url(#15803d)"/>
+<line x1="218.0000" y1="133.0000" x2="218.0000" y2="278.0000" stroke="#9333ea" stroke-width="3.2" marker-end="url(#9333ea)"/>
+<circle cx="218" cy="133" r="3.5" fill="#172033"/>
+<text x="83" y="211" fill="#2563eb">+x</text>
+<text x="133" y="85" fill="#2563eb">+y</text>
+<text x="114" y="166" fill="#15803d">Fₓ</text>
+<text x="297" y="223" fill="#15803d">Fᵧ</text>
+<text x="228" y="286" fill="#9333ea">F</text>
+<path d="M245.5317 172.3193 A48 48 0 0 1 218.0000 181.0000" fill="none" stroke="#9333ea" stroke-width="1.5"/>
+<text x="234" y="199" fill="#9333ea">35°</text>
+<line x1="24" y1="309" x2="336" y2="309" stroke="#d1d5db"/>
+<text x="24" y="338">Fₓ = F sin 35°</text>
+<text x="24" y="366">Fᵧ = −F cos 35°</text>
+<text x="24" y="394">|Fᵧ| ≤ 425 N</text>
+</g></svg>

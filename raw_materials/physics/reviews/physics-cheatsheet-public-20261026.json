@@ -1,0 +1,24 @@
+{
+  "status": "passed-public-cheatsheet-scope",
+  "checkedAtUTC": "2026-10-26T07:57:45.607820+00:00",
+  "publishedCommit": "d0ba1b27092c2ce048f611f7baf7e5973de5af48",
+  "githubRun": "https://github.com/KazinMintori/StudyHub/actions/runs/40283092358",
+  "githubConclusion": "success",
+  "cheatsheets": 44,
+  "viewportWidths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "cases": 220,
+  "updatedFormulaMathMLMatches": 13,
+  "javascriptErrors": 0,
+  "networkFailures": 0,
+  "mathOverflows": 0,
+  "mathScrollbars": 0,
+  "reportSHA256": "9d5fe3d0fa0b5f6a59060d71e39b5f4fed095b58fb4b0fc2f41471e9b6046543",
+  "scopeLimit": "Confirms all44effectivePhysicscheatsheets and13specificupdatedformulas on publicroutes. Does not certify fullsourcecoverage or academic correctness of all chapters, which remain separate goal work.",
+  "cancelledRunExplanation": "Run40282414856 was superseded while pending by a newer push; the newer descendant40283092358 successfully deployed the included fixes."
+}

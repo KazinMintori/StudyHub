@@ -1,0 +1,58 @@
+{
+  "status": "partially-reviewed-not-ready",
+  "timestampUTC": "2026-10-26T08:19:51.192314+00:00",
+  "chapter": 1,
+  "reviewedUnits": 82,
+  "expectedUnits": 129,
+  "guided": 8,
+  "discussion": 26,
+  "bridge": 1,
+  "numberedRangeReviewed": [
+    1,
+    47
+  ],
+  "numberedRangePending": [
+    48,
+    94
+  ],
+  "originalCropsPixelVerified": 7,
+  "separateSolutionDiagrams": 8,
+  "nativeVectorDiagramPanels": 12,
+  "independentNumberedCalculations": 130,
+  "independentGuidedCalculations": 244,
+  "vectorSVGGeometryChecks": 132,
+  "canonicalGroupBrowserCases": 80,
+  "canonicalBridgeAfterRoundingCases": 5,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "closedSolutions": 82,
+  "globalChecks": {
+    "lectures": 133,
+    "topics": 354,
+    "lectureErrors": 0,
+    "skillTests": 39,
+    "mathTests": 32,
+    "imageMarkdownPresentationTests": 17
+  },
+  "portableVerifier": "raw_materials/physics/verify_chapter1_partial_exercises.py",
+  "cropGenerator": "scripts/prepare-physics1-remaining-01-exercises-assets.py",
+  "solutionGenerator": "scripts/generate-physics1-remaining-01-solution-figures.py",
+  "sourceProgressFile": "raw_materials/physics/translations/chapter-01/parent-exercise-progress.json",
+  "scopeLimit": "Canonical acceptedsourceonly. Chapter1remainsdraftanditsendexercise routeisnotenableduntilall129unitsandfinalgatespass. Thisisnotgoalcompletion.",
+  "remaining": [
+    "Correctandindependentlyreview1.48–1.94againstactualPDF",
+    "Finish115sourceunitschapter3,159chapter5,148chapter8",
+    "AuditthewholePhysics1and2",
+    "FinalGitHubpublication verification,reportandcleanup"
+  ],
+  "reports": {
+    "qa/physics1-remaining/agy-bulk-20261026/ch01-early-parent-final/browser-canonical-review.json": "737de3cbbcd4615136c09f5a2257a80d08a8ff52bf9b1ae9d49807ca175a5d22",
+    "qa/physics1-remaining/agy-bulk-20261026/ch01-guided-parent-final/browser-canonical-review.json": "6f09d99b16959d8675a76650ac3c4e1be549d57af4a35dac942a017176d7c38f",
+    "raw_materials/physics/translations/chapter-01/parent-exercise-progress.json": "d23b1a436d567a8d8d0ac401205876e54bea33e2bcba8d8feab5fa4c79957c3c"
+  }
+}
