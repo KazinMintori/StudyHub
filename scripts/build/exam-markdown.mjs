@@ -2,12 +2,16 @@ import {createMarkdownRenderer} from 'vitepress'
 import path from 'node:path'
 import {configureStudyMarkdown} from './markdown-presentation.mjs'
 import {examProsePlugin} from './exam-prose.mjs'
+const proseRenderers = new WeakSet()
 
-export async function createExamMarkdownRenderer(root) {
+export async function createExamMarkdownRenderer(root, { preserveProse = false } = {}) {
   const md=await createMarkdownRenderer(path.join(root,'docs'),{
     html:true,math:true,lineNumbers:false,
-    config:renderer=>{configureStudyMarkdown(renderer,{base:'/'});renderer.use(examProsePlugin)}
+    config:renderer=>configureStudyMarkdown(renderer,{base:'/'})
   })
+  // VitePress shares one MarkdownIt instance. Set the prose policy per render,
+  // so original exam wording stays literal while existing feedback keeps its style.
+  if(!proseRenderers.has(md)){md.use(examProsePlugin);proseRenderers.add(md)}
   md.renderer.rules.html_inline=(tokens,index)=>md.utils.escapeHtml(tokens[index].content)
   md.renderer.rules.html_block=(tokens,index)=>md.utils.escapeHtml(tokens[index].content)
   return function render(text='',literalDollars=false) {
@@ -18,7 +22,10 @@ export async function createExamMarkdownRenderer(root) {
         match=>({'$':'\\$','<':'&lt;','>':'&gt;'})[match]||match)
     }
     let html
-    try {html=md.render(text,{relativePath:'xu-ly-du-lieu/on-thi/index.md'})}
+    try {
+      md.core.ruler[preserveProse?'disable':'enable']('exam_prose_colons')
+      html=md.render(text,{relativePath:'xu-ly-du-lieu/on-thi/index.md'})
+    }
     catch(error){throw new Error(`Exam Markdown failed near: ${text.slice(0,300)}`,{cause:error})}
     if(/data-mjx-error|<merror\b/.test(html))throw new Error(`Invalid exam math near: ${text.slice(0,300)}`)
     const entities={quot:'"',amp:'&',lt:'<',gt:'>'}

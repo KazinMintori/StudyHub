@@ -34,6 +34,7 @@ const {
       <a :href="studyLink(`/goc-hoc-tap?mon=${course.id}`)">Góc học tập của môn</a>
       <a :href="studyLink(`/${course.id}/bai-tap`)">{{ course.problemSets ? 'Problem Set' : 'Bài tập ôn luyện' }}</a>
       <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/on-thi/`)">Ôn thi</a>
+      <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/de-thi/`)">Đề thi</a>
       <a v-if="course.id === 'xu-ly-du-lieu'" :href="studyLink(`/${course.id}/bai-tap-lon/`)">Bài tập lớn</a>
       <a :href="studyLink(`/${course.id}/notes/lo-trinh`)">Lộ trình và tài liệu</a>
     </div>

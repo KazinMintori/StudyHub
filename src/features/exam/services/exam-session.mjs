@@ -171,17 +171,39 @@ export function createExamSessionState(initialAnswers = {}) {
   };
 }
 
+// Imported papers may contain duplicate correct options or an invalid question.
+// Keep those source options intact without inventing a single answer key.
+export function acceptedQuizKeys(question) {
+  if (question?.grading === 'manual') return [];
+  const keys = Array.isArray(question?.correctKeys) && question.correctKeys.length
+    ? question.correctKeys : [question?.correctKey];
+  return [...new Set(keys.map(key => String(key || '').trim().toUpperCase())
+    .filter(key => ['A', 'B', 'C', 'D'].includes(key)))];
+}
+
+export function recordQuizReview(sessionState, question) {
+  if (!sessionState || !question?.id || question.grading !== 'manual') return null;
+  if (!sessionState.answers) sessionState.answers = {};
+  const record = { reviewed: true, selectedKey: null, correctKey: null, isCorrect: null, answeredAt: Date.now() };
+  sessionState.answers[question.id] = record;
+  return record;
+}
+
 // A reviewed key can change between publications. Restore selections, then
 // derive correctness from the current bank instead of trusting an old score.
 export function reconcileStoredAnswers(questions, stored = {}) {
   const answers = {};
   for (const question of filterQuestionsByMode(questions, 'quiz')) {
     const record = stored?.[question.id];
+    if (question.grading === 'manual') {
+      if (record?.reviewed) answers[question.id] = { ...record, selectedKey: null, correctKey: null, isCorrect: null };
+      continue;
+    }
     if (!record || !['A', 'B', 'C', 'D'].includes(record.selectedKey)) continue;
     answers[question.id] = {
       ...record,
       correctKey: question.correctKey,
-      isCorrect: record.selectedKey === question.correctKey,
+      isCorrect: acceptedQuizKeys(question).includes(record.selectedKey),
     };
   }
   return answers;
@@ -196,13 +218,14 @@ export function reconcileStoredAnswers(questions, stored = {}) {
  */
 export function recordQuizAnswer(sessionState, question, selectedKey) {
   if (!sessionState || !question || !question.id || !selectedKey) return null;
+  if (question.grading === 'manual') return null;
   if (!sessionState.answers) {
     sessionState.answers = {};
   }
 
   const normKey = String(selectedKey).trim().toUpperCase();
   const correctKey = question.correctKey ? String(question.correctKey).trim().toUpperCase() : null;
-  const isCorrect = Boolean(correctKey && normKey === correctKey);
+  const isCorrect = acceptedQuizKeys(question).includes(normKey);
 
   const answerRecord = {
     selectedKey: normKey,
@@ -260,6 +283,7 @@ export function calculateSessionStats(sessionState, questions) {
     const ans = getAnswer(sessionState, q.id);
     if (ans) {
       answeredCount++;
+      if (q.grading === 'manual') continue;
       if (ans.isCorrect) {
         correctCount++;
       } else {
@@ -268,7 +292,8 @@ export function calculateSessionStats(sessionState, questions) {
     }
   }
 
-  const scorePercentage = totalQuiz > 0 ? Math.round((correctCount / totalQuiz) * 100) : 0;
+  const gradableCount = quizQuestions.filter(q => q.grading !== 'manual').length;
+  const scorePercentage = gradableCount > 0 ? Math.round((correctCount / gradableCount) * 100) : 0;
 
   return {
     totalQuiz,
