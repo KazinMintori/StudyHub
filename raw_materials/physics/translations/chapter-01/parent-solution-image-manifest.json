@@ -98,7 +98,7 @@
     },
     {
       "key": "solution-image:S1.22",
-      "sha256": "a1912a9b137c1ce645127779291209737114804c366ec4501d3fc02cb0998910",
+      "sha256": "0cc3be72033c84cc4ef29a82fde676f9868519a60fdf11a1ee70a44fb3d66742",
       "description": "Sơ đồ lời giải độc lập cho bài1.22.",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "panels": [

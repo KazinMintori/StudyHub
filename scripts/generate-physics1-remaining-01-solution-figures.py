@@ -62,7 +62,9 @@ def render_panels(panels):
    start=np.array(row['start']);end=start+row['delta'];u=xy(start);v=xy(end);mid=(u+v)/2+row['labelOffset']
    parts.append(f'<line x1="{u[0]:.4f}" y1="{u[1]:.4f}" x2="{v[0]:.4f}" y2="{v[1]:.4f}" stroke="{row["color"]}" stroke-width="2.5" marker-end="url(#c{row["color"][1:]})"/>')
    parts.append(f'<text x="{mid[0]:.4f}" y="{mid[1]:.4f}" fill="{row["color"]}" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">{html.escape(row["label"])}</text>')
-  o=xy(ZERO);parts.append(f'<circle cx="{o[0]:.4f}" cy="{o[1]:.4f}" r="3" fill="#172033"/><text x="{o[0]-17:.4f}" y="{o[1]+22:.4f}">O</text>')
+  # Keep the origin label clear of A in the second four-panel diagram.
+  origin_label_dx=-44 if len(panels)==4 and index==1 else -17
+  o=xy(ZERO);parts.append(f'<circle cx="{o[0]:.4f}" cy="{o[1]:.4f}" r="3" fill="#172033"/><text x="{o[0]+origin_label_dx:.4f}" y="{o[1]+22:.4f}">O</text>')
   parts.append('<line x1="24" y1="311" x2="336" y2="311" stroke="#cbd5e1"/>')
   for j,line in enumerate(p['legend']):parts.append(f'<text x="24" y="{340+26*j}">{html.escape(line)}</text>')
   parts.append('</g>')
@@ -101,5 +103,5 @@ for row in allRows:
  row['sha256']=sha(ROOT/row['publicFile'])
  row['generator']='scripts/generate-physics1-remaining-01-solution-figures.py'
  row.pop('output',None);row.pop('file',None)
-(B/'parent-solution-image-manifest.json').write_text(json.dumps({'status':'reproducible-reviewed-figures','sourceUnits':[21,22,23,28,31,33,36,'bridge'],'assets':allRows},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(B/'parent-solution-image-manifest.json').write_bytes((json.dumps({'status':'reproducible-reviewed-figures','sourceUnits':[21,22,23,28,31,33,36,'bridge'],'assets':allRows},ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
 print('Generated',len(allRows),'reviewed standalone solution diagrams; original textbook images unchanged.')

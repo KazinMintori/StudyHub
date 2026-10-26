@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "chuan-va-don-vi"
+section: "topic"
 title: "Chuẩn đo lường và hệ đơn vị SI"
 description: "Giây, mét, kilôgam và các tiền tố đơn vị được xác định, sử dụng như thế nào?"
 ---

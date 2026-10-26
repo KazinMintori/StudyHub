@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "ban-chat-vat-ly"
+section: "topic"
 title: "Bản chất của vật lý"
 description: "Lý thuyết vật lý được hình thành và kiểm chứng qua thực nghiệm như thế nào?"
 ---

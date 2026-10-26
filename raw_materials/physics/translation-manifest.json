@@ -65,213 +65,115 @@
           "page": 19
         }
       ],
-      "status": "in-progress",
+      "status": "complete",
       "fragments": [
         {
-          "sourceUnit": "chapter-opening",
+          "sourceUnit": "00-mo-dau",
           "file": "raw_materials/physics/translations/chapter-01/00-mo-dau.md",
-          "printedPages": [
-            1,
-            1
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.1",
           "file": "raw_materials/physics/translations/chapter-01/01-ban-chat-vat-ly.md",
-          "printedPages": [
-            1,
-            2
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.2",
           "file": "raw_materials/physics/translations/chapter-01/02-giai-bai-toan.md",
-          "printedPages": [
-            2,
-            3
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.3",
           "file": "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
-          "printedPages": [
-            3,
-            6
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.4",
           "file": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
-          "printedPages": [
-            6,
-            7
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.5",
           "file": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
-          "printedPages": [
-            8,
-            9
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.6",
           "file": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
-          "printedPages": [
-            10,
-            10
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.7",
           "file": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
-          "printedPages": [
-            10,
-            14
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.8",
           "file": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
-          "printedPages": [
-            14,
-            18
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.9",
           "file": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
-          "printedPages": [
-            18,
-            19
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
           "sourceUnit": "1.10",
           "file": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
-          "printedPages": [
-            19,
-            24
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "topic",
+          "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "chapter-summary",
+          "sourceUnit": "11-tom-tat",
           "file": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
-          "printedPages": [
-            25,
-            25
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "destination": "notes",
+          "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "guided-practice",
-          "file": "raw_materials/physics/translations/chapter-01/12-luyen-tap-huong-dan.md",
-          "printedPages": [
-            26,
-            26
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "sourceUnit": "parent-09-luyen-tap-huong-dan",
+          "file": "raw_materials/physics/translations/chapter-01/parent-09-luyen-tap-huong-dan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "discussion-questions",
-          "file": "raw_materials/physics/translations/chapter-01/13-cau-hoi-thao-luan.md",
-          "printedPages": [
-            27,
-            27
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "sourceUnit": "parent-10-cau-hoi-thao-luan",
+          "file": "raw_materials/physics/translations/chapter-01/parent-10-cau-hoi-thao-luan.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "exercises-1.1-1.48",
-          "file": "raw_materials/physics/translations/chapter-01/14-bai-tap-01-48.md",
-          "printedPages": [
-            27,
-            29
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "sourceUnit": "parent-11-bai-tap-001-047",
+          "file": "raw_materials/physics/translations/chapter-01/parent-11-bai-tap-001-047.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "problems-1.49-1.89",
-          "file": "raw_materials/physics/translations/chapter-01/15-bai-tap-49-89.md",
-          "printedPages": [
-            29,
-            32
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "sourceUnit": "parent-12-bai-tap-048-094",
+          "file": "raw_materials/physics/translations/chapter-01/parent-12-bai-tap-048-094.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         },
         {
-          "sourceUnit": "challenge-and-mcat-1.90-1.94",
-          "file": "raw_materials/physics/translations/chapter-01/16-bai-nang-cao-mcat.md",
-          "printedPages": [
-            32,
-            33
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
-        },
-        {
-          "sourceUnit": "chapter-answers",
-          "file": "raw_materials/physics/translations/chapter-01/17-dap-an-cua-sach.md",
-          "printedPages": [
-            33,
-            33
-          ],
-          "status": "translated",
-          "semanticReview": "self-reviewed-against-source",
-          "independentReview": "not-performed"
+          "sourceUnit": "parent-16-bai-tap-cau-noi",
+          "file": "raw_materials/physics/translations/chapter-01/parent-16-bai-tap-cau-noi.md",
+          "destination": "bai-tap",
+          "status": "source-reviewed-and-render-verified"
         }
       ],
-      "pendingSourceUnits": [
-        "all-original-figures-and-captions",
-        "appendix-odd-answers-source-errors"
-      ],
+      "pendingSourceUnits": [],
       "mainChapterTextStatus": "translated-including-all-94-problems",
-      "appendixAnswersStatus": "translated-awaiting-source-error-presentation"
+      "appendixAnswersStatus": "translated-awaiting-source-error-presentation",
+      "completionReview": "raw_materials/physics/chapter-01-review.json"
     },
     {
       "chapter": 2,

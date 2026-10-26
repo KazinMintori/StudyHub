@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="464" viewBox="0 0 360 464" role="img" aria-label="Giản đồ chuyển dời">
+<title>Giản đồ chuyển dời</title>
+<rect width="360" height="464" fill="white" rx="10"/>
+<defs>
+<marker id="m2563eb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#2563eb"/></marker>
+<marker id="m15803d" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#15803d"/></marker>
+<marker id="mc2410c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#c2410c"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<text x="180" y="29" text-anchor="middle" font-weight="600">Giản đồ chuyển dời</text>
+<line data-from="0" data-to="1" x1="162.593626" y1="257.500000" x2="222.022705" y2="198.070921" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="1" data-to="2" x1="222.022705" y1="198.070921" x2="137.977295" y2="52.500000" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="2" data-to="3" x1="137.977295" y1="52.500000" x2="137.977295" y2="157.556763" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="3" data-to="4" x1="137.977295" y1="157.556763" x2="162.593626" y2="257.500000" stroke="#c2410c" stroke-width="2.5" marker-end="url(#mc2410c)"/>
+<line data-from="0" data-to="3" x1="162.593626" y1="257.500000" x2="137.977295" y2="157.556763" stroke="#15803d" stroke-width="2.5" marker-end="url(#m15803d)"/>
+<circle cx="162.593626" cy="257.500000" r="3.5" fill="#172033"/>
+<text x="171.593626" y="247.500000" data-point="0">0</text>
+<circle cx="222.022705" cy="198.070921" r="3.5" fill="#172033"/>
+<text x="231.022705" y="188.070921" data-point="1">1</text>
+<circle cx="137.977295" cy="52.500000" r="3.5" fill="#172033"/>
+<text x="146.977295" y="77.500000" data-point="2">2</text>
+<circle cx="137.977295" cy="157.556763" r="3.5" fill="#172033"/>
+<text x="146.977295" y="147.556763" data-point="3">3</text>
+<path d="M260 310 H305 M260 310 V282" stroke="#64748b" fill="none"/>
+<text x="310" y="316">Đông</text>
+<text x="247" y="276">Bắc</text>
+<text x="18" y="350">0: Nơi trú ẩn</text>
+<text x="18" y="378">Xanh dương: Ba chặng đầu</text>
+<text x="18" y="406">Xanh lá: Vector tổng</text>
+<text x="18" y="434">Cam: Chặng trở về</text>
+</g></svg>

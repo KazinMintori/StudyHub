@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="492" viewBox="0 0 360 492" role="img" aria-label="Hai vector khi c = 0">
+<title>Hai vector khi c = 0</title>
+<rect width="360" height="492" fill="white" rx="10"/>
+<defs>
+<marker id="m2563eb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#2563eb"/></marker>
+<marker id="m15803d" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#15803d"/></marker>
+<marker id="mc2410c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#c2410c"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<text x="180" y="29" text-anchor="middle" font-weight="600">Hai vector khi c = 0</text>
+<line data-from="0" data-to="1" x1="103.125000" y1="155.000000" x2="256.875000" y2="257.500000" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="0" data-to="2" x1="103.125000" y1="155.000000" x2="103.125000" y2="52.500000" stroke="#15803d" stroke-width="2.5" marker-end="url(#m15803d)"/>
+<circle cx="103.125000" cy="155.000000" r="3.5" fill="#172033"/>
+<text x="112.125000" y="145.000000" data-point="0">O</text>
+<circle cx="256.875000" cy="257.500000" r="3.5" fill="#172033"/>
+<text x="265.875000" y="247.500000" data-point="1">A</text>
+<circle cx="103.125000" cy="52.500000" r="3.5" fill="#172033"/>
+<text x="112.125000" y="77.500000" data-point="2">B</text>
+<path d="M260 310 H305 M260 310 V282" stroke="#64748b" fill="none"/>
+<text x="310" y="316">x</text>
+<text x="247" y="276">z</text>
+<text x="18" y="350">A = (a, −b), B = (0, d)</text>
+<text x="18" y="378">Hai trục trong hình: x, z</text>
+<text x="18" y="406">A × B: Hướng −y</text>
+<text x="18" y="434">−y: Ra khỏi mặt phẳng</text>
+<text x="18" y="462">Độ dài chỉ để minh họa</text>
+</g></svg>

@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "uoc-luong-bac-do-lon"
+section: "topic"
 title: "Ước lượng và bậc độ lớn"
 description: "Làm thế nào để ước lượng gần đúng theo bậc độ lớn khi thiếu dữ liệu chính xác?"
 ---

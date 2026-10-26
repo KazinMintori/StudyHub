@@ -1,0 +1,688 @@
+{
+  "assets": [
+    {
+      "key": "S1-57",
+      "sha256": "5e0cfc9054adf289d33bc71def0fe85e936f8301d959c944d585539af0f3fc3e",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.57",
+      "worldPoints": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -180.0,
+          2.2043642384652358e-14
+        ],
+        [
+          -31.507575950825043,
+          -148.49242404917499
+        ],
+        [
+          108.49242404917499,
+          93.99468901046782
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "pointNames": [
+        "0",
+        "1",
+        "2",
+        "3",
+        ""
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#2563eb"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "#2563eb"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "color": "#c2410c"
+        }
+      ],
+      "screenMapping": {
+        "scale": 0.8454057513133806,
+        "centerWorld": [
+          -35.75378797541251,
+          -27.24886751935358
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-57.svg"
+    },
+    {
+      "key": "S1-60",
+      "sha256": "5276f4aa689f4bb1ff335fd1ece7f0ee59bb9f9da65f00132b300619b6563877",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.60",
+      "worldPoints": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          4.474873734152917,
+          -2.4748737341529163
+        ],
+        [
+          5.800000000000001,
+          0.0
+        ]
+      ],
+      "pointNames": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#2563eb"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "#c2410c"
+        },
+        {
+          "from": 0,
+          "to": 3,
+          "color": "#15803d"
+        }
+      ],
+      "screenMapping": {
+        "scale": 43.9655172413793,
+        "centerWorld": [
+          2.9000000000000004,
+          -1.2374368670764582
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-60.svg"
+    },
+    {
+      "key": "S1-62",
+      "sha256": "8d8c77c12c709c1fbbdd3abf2c882a4b896c9f9014f4a4fea81120a370bab645",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.62",
+      "worldPoints": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          146.4406206194866,
+          12.81189418390575
+        ],
+        [
+          170.28543237993628,
+          -90.47133268332918
+        ],
+        [
+          34.306193027963616,
+          -185.6850211176028
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "pointNames": [
+        "0",
+        "1",
+        "2",
+        "3",
+        ""
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#2563eb"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "#2563eb"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "color": "#c2410c"
+        }
+      ],
+      "screenMapping": {
+        "scale": 1.032761641099629,
+        "centerWorld": [
+          85.14271618996814,
+          -86.43656346684853
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-62.svg"
+    },
+    {
+      "key": "S1-64",
+      "sha256": "7c41874a7c91a20760d7ec5c1cf8d2006f88163ed654f74a69a0009b521f212e",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.64",
+      "worldPoints": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          28.284271247461902,
+          28.284271247461902
+        ],
+        [
+          -11.715728752538084,
+          97.566303550217
+        ],
+        [
+          -11.71572875253808,
+          47.566303550217
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "pointNames": [
+        "0",
+        "1",
+        "2",
+        "3",
+        ""
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#2563eb"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "#2563eb"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "color": "#c2410c"
+        },
+        {
+          "from": 0,
+          "to": 3,
+          "color": "#15803d"
+        }
+      ],
+      "screenMapping": {
+        "scale": 2.101135254083776,
+        "centerWorld": [
+          8.28427124746191,
+          48.7831517751085
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-64.svg"
+    },
+    {
+      "key": "S1-69",
+      "sha256": "8308dc767c148e06bf9dd74fa7a3e5c96e164fc4bb1d185fbbed0bfd59f7cc32",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.69",
+      "worldPoints": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          5.051668046482832e-14,
+          -825.0
+        ],
+        [
+          -624.9999999999998,
+          257.5317547305483
+        ],
+        [
+          223.04809615642614,
+          787.4510189637532
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "pointNames": [
+        "0",
+        "1",
+        "2",
+        "3",
+        ""
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#2563eb"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "#2563eb"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "color": "#c2410c"
+        }
+      ],
+      "screenMapping": {
+        "scale": 0.1271356447972875,
+        "centerWorld": [
+          -200.97595192178682,
+          -18.7744905181234
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-69.svg"
+    },
+    {
+      "key": "S1-72",
+      "sha256": "77779237067bf10cb64d45cca2f5654a4aef32e077d17de00cdffbb476275141",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.72",
+      "worldPoints": [
+        [
+          0,
+          0
+        ],
+        [
+          -22.516660498395407,
+          12.999999999999998
+        ],
+        [
+          -13.856406460551018,
+          -8.000000000000002
+        ]
+      ],
+      "pointNames": [
+        "O",
+        "R",
+        "J"
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "color": "#15803d"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#c2410c"
+        }
+      ],
+      "screenMapping": {
+        "scale": 9.761904761904763,
+        "centerWorld": [
+          -11.258330249197703,
+          2.4999999999999982
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-72.svg"
+    },
+    {
+      "key": "S1-79",
+      "sha256": "f59190c2245ed99b68d2ce61c00b6a9eadfed193be0969542754bf4effe6ce00",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.79",
+      "worldPoints": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          -2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "pointNames": [
+        "O",
+        "A",
+        "B"
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "color": "#15803d"
+        }
+      ],
+      "screenMapping": {
+        "scale": 51.25,
+        "centerWorld": [
+          1.5,
+          0.0
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "symbolicillustrationonly",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-79.svg"
+    },
+    {
+      "key": "S1-89",
+      "sha256": "74a2c61ca005e936e79cd1ce8f1ba873ecbcc08644047175492d5264ad2e22c7",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.89",
+      "worldPoints": [
+        [
+          0,
+          0
+        ],
+        [
+          0.3182,
+          0.9329
+        ],
+        [
+          1.3087,
+          -0.4423
+        ]
+      ],
+      "pointNames": [
+        "S",
+        "E",
+        "M"
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "color": "#15803d"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#c2410c"
+        }
+      ],
+      "screenMapping": {
+        "scale": 149.06922629435718,
+        "centerWorld": [
+          0.65435,
+          0.24529999999999996
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": [
+        0,
+        0,
+        -0.0414
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-89.svg"
+    },
+    {
+      "key": "S1-90",
+      "sha256": "d8cbd3c38b2e5fcf497e3d326c23f10c8aa75a170d7c963adf995e424620b604",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.90",
+      "worldPoints": [
+        [
+          1,
+          -5
+        ],
+        [
+          10,
+          -5
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          16,
+          28
+        ],
+        [
+          0,
+          -7
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "pointNames": [
+        "P₀",
+        "P₁",
+        "P₂",
+        "P₃",
+        "P₄",
+        "Q",
+        "O"
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#2563eb"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "#2563eb"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "color": "#2563eb"
+        },
+        {
+          "from": 5,
+          "to": 4,
+          "color": "#c2410c"
+        }
+      ],
+      "screenMapping": {
+        "scale": 5.857142857142857,
+        "centerWorld": [
+          8.0,
+          10.5
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-90.svg"
+    },
+    {
+      "key": "S1-91",
+      "sha256": "2f76e3a611d61368451ced5a76c8226a03693334adf5084db1a473177e2e0530",
+      "minimumFontUnits": 20,
+      "generator": "scripts/generate-physics1-remaining-01-late-solution-figures.py",
+      "sourceUnit": "1.91",
+      "worldPoints": [
+        [
+          0,
+          0
+        ],
+        [
+          77,
+          0
+        ],
+        [
+          124.45288864390571,
+          59.62783333467356
+        ]
+      ],
+      "pointNames": [
+        "S",
+        "M",
+        "A"
+      ],
+      "segments": [
+        {
+          "from": 0,
+          "to": 1,
+          "color": "#2563eb"
+        },
+        {
+          "from": 0,
+          "to": 2,
+          "color": "#15803d"
+        },
+        {
+          "from": 1,
+          "to": 2,
+          "color": "#c2410c"
+        }
+      ],
+      "screenMapping": {
+        "scale": 2.0489681097690378,
+        "centerWorld": [
+          62.226444321952854,
+          29.81391666733678
+        ],
+        "centerScreen": [
+          180,
+          155
+        ],
+        "flipY": true
+      },
+      "scope": "same-scalephysicalvectors",
+      "sourceZ": null,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-p1-91.svg"
+    }
+  ]
+}

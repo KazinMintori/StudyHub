@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "thanh-phan-vector"
+section: "topic"
 title: "Thành phần của vector"
 description: "Làm thế nào xác định, cộng và nhân các thành phần của vector?"
 ---

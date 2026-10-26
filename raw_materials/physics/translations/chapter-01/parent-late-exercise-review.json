@@ -1,0 +1,16 @@
+{
+  "status": "reviewed-awaiting-whole-chapter-gate",
+  "units": 47,
+  "range": [
+    48,
+    94
+  ],
+  "canonicalFile": "parent-12-bai-tap-048-094.md",
+  "canonicalSHA256": "19b2d32865066d5d52f994eb3710fcdf7f35fefab910131ab56e81691b3dd3c4",
+  "proposalAcceptanceSHA256": "60bd063443c8add52b58a2f84acef8e8d5220a4955460819c1ec7d5f80ccdb3d",
+  "independentChecks": 410,
+  "originalImages": 6,
+  "separateSolutionDiagrams": 10,
+  "publicExerciseEnabled": false,
+  "wholeChapterReview": "Pending complete129unitcanonicalreview andsourcehashgate."
+}

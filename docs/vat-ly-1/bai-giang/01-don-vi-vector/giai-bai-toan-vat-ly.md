@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "giai-bai-toan-vat-ly"
+section: "topic"
 title: "Giải bài toán vật lý"
 description: "Quy trình bốn bước I SEE và phương pháp mô hình lý tưởng hóa vận hành ra sao?"
 ---

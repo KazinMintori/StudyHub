@@ -88,7 +88,7 @@ export const physics1Course = {
     "tich-vo-huong",
     "tich-co-huong"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 1,
   "sourceChapter": 1,
   "topicGroups": [
@@ -157,7 +157,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
       "slug": "02-chuyen-dong-thang",
@@ -2600,6 +2601,48 @@ export const physics1Course = {
       "Tiếng nổ xuất hiện khi mặt xung kích đi qua người nghe. Vật tạo xung kích liên tục khi còn vượt âm, không chỉ lúc vừa vượt Mach 1 hoặc chỉ khi động cơ phát tiếng. Công thức Doppler phía trước nguồn dưới âm không được kéo dài sang nguồn vượt âm."
     ],
     "formula": "$$\nM=\\frac{v_S}{v}\n$$"
+  },
+  {
+    "note": "01-don-vi-vector",
+    "title": "Đại lượng vật lý và đơn vị",
+    "bullets": [
+      "Một giá trị đo gồm con số và đơn vị. Đơn vị dẫn xuất được lập từ các đơn vị cơ bản. Trong cơ học, các đơn vị cơ bản là mét, kilôgam và giây.",
+      "Giây dựa trên bức xạ của nguyên tử cesium-133. Mét được xác định từ tốc độ ánh sáng. Kilôgam dựa trên hằng số Planck.",
+      "Các hệ số thập phân là chính xác.",
+      "Nhân giá trị với một hệ số đổi đơn vị bằng một. Đơn vị cũng được nhân, chia và khử như các thừa số đại số."
+    ],
+    "formula": "$$\nf_{\\mathrm{Cs}}=9\\,192\\,631\\,770\\,\\mathrm{Hz}\n$$"
+  },
+  {
+    "note": "01-don-vi-vector",
+    "title": "Độ bất định, chữ số có nghĩa và ước lượng",
+    "bullets": [
+      "Với giá trị đo khác không, độ bất định tương đối bằng độ bất định tuyệt đối chia độ lớn giá trị đo.",
+      "Kết quả giữ số chữ số có nghĩa bằng số chữ số có nghĩa ít nhất trong các dữ kiện đo tham gia phép tính.",
+      "Kết quả làm tròn tới hàng thập phân kém chính xác nhất của các số hạng. Đây là quy tắc về hàng thập phân, khác quy tắc cho phép nhân và chia.",
+      "Hệ số đổi đơn vị chính xác không giới hạn số chữ số có nghĩa. Giữ thêm chữ số ở các bước trung gian và làm tròn kết quả cuối."
+    ],
+    "formula": "$$\n\\varepsilon_r=\\frac{\\Delta x}{|x|}\n$$"
+  },
+  {
+    "note": "01-don-vi-vector",
+    "title": "Vector và thành phần",
+    "bullets": [
+      "Đại lượng vô hướng có giá trị số. Vector có độ lớn và hướng. Vector bằng không có độ lớn bằng không và không có hướng xác định.",
+      "Cộng vector theo quy tắc nối đuôi vào đầu hoặc quy tắc hình bình hành. Nhân với số âm đảo hướng, còn độ lớn được nhân với trị tuyệt đối của số ấy.",
+      "Trong mặt phẳng, θ đo từ trục +x về phía +y theo chiều ngược kim đồng hồ. Các thành phần là đại lượng đại số, không phải vector.",
+      "Công thức tang chỉ dùng khi Aₓ khác không. Phải chọn góc phần tư theo dấu cả hai thành phần. Nếu Aₓ=0 thì hướng nằm trên trục y. Nếu cả hai bằng không thì hướng không xác định."
+    ],
+    "formula": "$$\nA=\\|\\vec A\\|\\ge0\n$$"
+  },
+  {
+    "note": "01-don-vi-vector",
+    "title": "Các phép nhân vector",
+    "bullets": [
+      "Kết quả là một đại lượng vô hướng. Với hai vector khác không, φ là góc giữa chúng trong khoảng từ 0° đến 180°. Ký hiệu S là tích vô hướng của hai vector.",
+      "Với hai vector không cùng phương và khác không, kết quả vuông góc mặt phẳng của chúng, hướng theo quy tắc bàn tay phải. Nếu cùng phương hoặc có vector không, kết quả là vector không."
+    ],
+    "formula": "$$\n\\vec A\\cdot\\vec B=AB\\cos\\varphi\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"

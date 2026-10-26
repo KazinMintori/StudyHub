@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "su-dung-doi-don-vi"
+section: "topic"
 title: "Sử dụng và đổi đơn vị"
 description: "Tính nhất quán thứ nguyên và phương pháp hệ số đổi đơn vị được áp dụng ra sao?"
 ---

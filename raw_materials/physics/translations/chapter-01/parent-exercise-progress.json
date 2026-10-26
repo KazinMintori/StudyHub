@@ -145,7 +145,7 @@
     {
       "key": "S1.22",
       "publicFile": "docs/vat-ly-1/bai-giang/img/young-01/solution-s1-22-scale-diagram.svg",
-      "sha256": "a1912a9b137c1ce645127779291209737114804c366ec4501d3fc02cb0998910",
+      "sha256": "0cc3be72033c84cc4ef29a82fde676f9868519a60fdf11a1ee70a44fb3d66742",
       "generator": "scripts/generate-physics1-remaining-01-solution-figures.py",
       "hashMode": "sha256-canonical-lf-for-text"
     },
@@ -208,5 +208,7 @@
   "hashRules": {
     "markdownAndSVG": "SHA256afterCRLFtoLFnormalization; consistentwithGittextnormalization.",
     "originalRasterAndPDF": "StrictSHA256oforiginalbytes; norasterorpixelnormalization."
-  }
+  },
+  "historicalSubsetSnapshot": true,
+  "subsequentWholeChapterReview": "raw_materials/physics/chapter-01-review.json"
 }

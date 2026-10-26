@@ -61,5 +61,7 @@
     "textHashMode": "CanonicalLF",
     "originalPNGAndPDFByteHashesUnchanged": true,
     "semanticSourceAndImageChanges": false
-  }
+  },
+  "subsequentWholeChapterReview": "raw_materials/physics/chapter-01-review.json",
+  "subsequentLayoutFix": "A whole-chapter18SVGtext-overlap check found andfixedoriginlabelcollisionin1.22; vectorgeometryandmathunchanged."
 }

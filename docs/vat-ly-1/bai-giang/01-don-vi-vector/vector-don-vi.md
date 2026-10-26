@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "vector-don-vi"
+section: "topic"
 title: "Vector đơn vị"
 description: "Hệ vector đơn vị trực chuẩn biểu diễn các vector trong không gian như thế nào?"
 ---

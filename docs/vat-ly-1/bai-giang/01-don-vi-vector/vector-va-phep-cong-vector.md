@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "vector-va-phep-cong-vector"
+section: "topic"
 title: "Vector và phép cộng vector"
 description: "Phép cộng và trừ vector theo phương pháp hình học tuân theo những định luật nào?"
 ---

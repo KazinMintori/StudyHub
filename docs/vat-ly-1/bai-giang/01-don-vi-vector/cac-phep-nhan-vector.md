@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "01-don-vi-vector"
-section: "topic"
 topic: "cac-phep-nhan-vector"
+section: "topic"
 title: "Các phép nhân vector"
 description: "Sự khác biệt về định nghĩa và ý nghĩa hình học giữa tích vô hướng và tích có hướng là gì?"
 ---

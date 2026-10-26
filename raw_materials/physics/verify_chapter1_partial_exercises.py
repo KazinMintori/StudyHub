@@ -199,5 +199,5 @@ def main():
  manifest=json.loads((raw/'parent-solution-image-manifest.json').read_text(encoding='utf-8'))['assets']
  for row in manifest:assert sha(ROOT/row['publicFile'])==row['sha256']
  assert sourceUnits==82 and images==7 and len(manifest)==8
- print(json.dumps({'status':'passed-partial82units','sourceUnits':sourceUnits,'numberedChecks':len(numbered),'guidedNumericalChecks':len(guided),'exactOriginalCrops':images,'solutionDiagrams':len(manifest),'wholeChapterComplete':False,'pendingNumberedRange':'1.48–1.94'},ensure_ascii=False))
+ print(json.dumps({'status':'passed-earlier82unit-subset','sourceUnits':sourceUnits,'numberedChecks':len(numbered),'guidedNumericalChecks':len(guided),'exactOriginalCrops':images,'solutionDiagrams':len(manifest),'wholeChapterVerifiedByThisProgram':False,'wholeChapterReview':'raw_materials/physics/chapter-01-review.json'},ensure_ascii=False))
 if __name__=='__main__':main()

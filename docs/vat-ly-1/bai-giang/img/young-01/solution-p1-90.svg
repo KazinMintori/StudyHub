@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="520" viewBox="0 0 360 520" role="img" aria-label="Đường chạy và đường ném">
+<title>Đường chạy và đường ném</title>
+<rect width="360" height="520" fill="white" rx="10"/>
+<defs>
+<marker id="m2563eb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#2563eb"/></marker>
+<marker id="m15803d" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#15803d"/></marker>
+<marker id="mc2410c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#c2410c"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<text x="180" y="29" text-anchor="middle" font-weight="600">Đường chạy và đường ném</text>
+<line data-from="0" data-to="1" x1="139.000000" y1="245.785714" x2="191.714286" y2="245.785714" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="1" data-to="2" x1="191.714286" y1="245.785714" x2="191.714286" y2="181.357143" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="2" data-to="3" x1="191.714286" y1="181.357143" x2="156.571429" y2="157.928571" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="3" data-to="4" x1="156.571429" y1="157.928571" x2="226.857143" y2="52.500000" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m2563eb)"/>
+<line data-from="5" data-to="4" x1="133.142857" y1="257.500000" x2="226.857143" y2="52.500000" stroke="#c2410c" stroke-width="2.5" marker-end="url(#mc2410c)"/>
+<circle cx="139.000000" cy="245.785714" r="3.5" fill="#172033"/>
+<text x="148.000000" y="235.785714" data-point="0">P₀</text>
+<circle cx="191.714286" cy="245.785714" r="3.5" fill="#172033"/>
+<text x="200.714286" y="235.785714" data-point="1">P₁</text>
+<circle cx="191.714286" cy="181.357143" r="3.5" fill="#172033"/>
+<text x="200.714286" y="171.357143" data-point="2">P₂</text>
+<circle cx="156.571429" cy="157.928571" r="3.5" fill="#172033"/>
+<text x="165.571429" y="147.928571" data-point="3">P₃</text>
+<circle cx="226.857143" cy="52.500000" r="3.5" fill="#172033"/>
+<text x="235.857143" y="77.500000" data-point="4">P₄</text>
+<circle cx="133.142857" cy="257.500000" r="3.5" fill="#172033"/>
+<text x="112.142857" y="247.500000" data-point="5">Q</text>
+<circle cx="133.142857" cy="216.500000" r="3.5" fill="#172033"/>
+<text x="142.142857" y="206.500000" data-point="6">O</text>
+<path d="M260 310 H305 M260 310 V282" stroke="#64748b" fill="none"/>
+<text x="310" y="316">Phải</text>
+<text x="247" y="276">Dọc sân</text>
+<text x="18" y="350">O: Gốc tại bóng ban đầu</text>
+<text x="18" y="378">P₀: Vị trí người nhận lúc đầu</text>
+<text x="18" y="406">P₁–P₄: Bốn chặng chạy</text>
+<text x="18" y="434">Q: Tiền vệ sau khi lùi</text>
+<text x="18" y="462">Cam: Vector ném Q tới P₄</text>
+<text x="18" y="490">Đơn vị tọa độ: Yard</text>
+</g></svg>
