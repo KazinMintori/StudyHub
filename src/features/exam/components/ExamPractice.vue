@@ -1574,6 +1574,10 @@ onUnmounted(() => {
 
 /* Responsive Media Queries down to 360px */
 @media (max-width: 640px) {
+  .exam-essay__body {
+    padding: 16px 12px;
+  }
+
   .exam-practice {
     padding: 12px 14px 40px;
   }

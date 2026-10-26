@@ -29,6 +29,9 @@ test('Five papers contain every source question, choice and unchanged code block
       assert.equal(q.id, original.id)
       assert.ok(q.answerHtml.includes('Đáp án') && clean(q.answerHtml).length > 200, `${q.id}: detailed solution`)
       assert.ok(!/ZXQKEEP|data-mjx-error|<merror\b/.test(q.answerHtml), q.id)
+      for (const svg of q.answerHtml.matchAll(/<svg[^>]*width="([0-9.]+)ex"/g)) {
+        assert.ok(Number(svg[1]) <= 30, `${q.id}: equation fits a narrow solution panel`)
+      }
       const codes = original.items.filter(item => item.kind === 'code').map(item => item.text.replace(/\r\n?/g, '\n').replace(/\n$/, ''))
       assert.deepEqual(renderedCodeLiterals(q.promptHtml).blocks, codes, q.id)
       for (const prose of original.items.filter(item => item.kind === 'prose')) {
