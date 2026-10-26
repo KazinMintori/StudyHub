@@ -1,0 +1,121 @@
+{
+  "assets": [
+    {
+      "key": "s-q3-2-antiparallel",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-2-antiparallel.svg",
+      "sha256": "bcee21503ec60731c734ddae6f10b391289930ede98bc6c56371e101864b5e18",
+      "purpose": "Phác họa vận tốc sau ngắn hơn vận tốc trước, gia tốc và độ biến thiên vận tốc ngược chiều chuyển động.",
+      "model": "v1=230 units; v2=150 units; dv=-80 units; same x axis; finite interval before stop.",
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "minimumFontUnits": 20
+    },
+    {
+      "key": "s-q3-7-x",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-x.svg",
+      "sha256": "1ee93ce7886a8764afcc4fa3f15ed6b368fe2ff7bdbc1ac544e661dedade9342",
+      "purpose": "Đồ thị chuẩn hóa x / X theo t/T cho chuyển động ném xiên.",
+      "model": {
+        "domain": [
+          0,
+          2
+        ],
+        "sampleCount": 201,
+        "ordinate": "x / X",
+        "normalization": "T=V/g, X=UT, Y=VT; U=v0 cos(alpha), V=v0 sin(alpha)",
+        "formula": "tau"
+      },
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "minimumFontUnits": 20
+    },
+    {
+      "key": "s-q3-7-y",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-y.svg",
+      "sha256": "e7c662df4f18ccd33d892819b9c16319c0cb603a72cf9c7f2add98a793aae0ed",
+      "purpose": "Đồ thị chuẩn hóa y / Y theo t/T cho chuyển động ném xiên.",
+      "model": {
+        "domain": [
+          0,
+          2
+        ],
+        "sampleCount": 201,
+        "ordinate": "y / Y",
+        "normalization": "T=V/g, X=UT, Y=VT; U=v0 cos(alpha), V=v0 sin(alpha)",
+        "formula": "tau-tau^2/2"
+      },
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "minimumFontUnits": 20
+    },
+    {
+      "key": "s-q3-7-vx",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-vx.svg",
+      "sha256": "8ead3453be991f00168794389e3ab0e9bdba49b2af163a814c17b7a77b0bc295",
+      "purpose": "Đồ thị chuẩn hóa vₓ / U theo t/T cho chuyển động ném xiên.",
+      "model": {
+        "domain": [
+          0,
+          2
+        ],
+        "sampleCount": 201,
+        "ordinate": "vₓ / U",
+        "normalization": "T=V/g, X=UT, Y=VT; U=v0 cos(alpha), V=v0 sin(alpha)",
+        "formula": "1"
+      },
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "minimumFontUnits": 20
+    },
+    {
+      "key": "s-q3-7-vy",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-vy.svg",
+      "sha256": "f4c3b1470325d8fb792ffc697c14f3f4d08df6b968e7a0da4e5451f13b0e51f9",
+      "purpose": "Đồ thị chuẩn hóa vᵧ / V theo t/T cho chuyển động ném xiên.",
+      "model": {
+        "domain": [
+          0,
+          2
+        ],
+        "sampleCount": 201,
+        "ordinate": "vᵧ / V",
+        "normalization": "T=V/g, X=UT, Y=VT; U=v0 cos(alpha), V=v0 sin(alpha)",
+        "formula": "1-tau"
+      },
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "minimumFontUnits": 20
+    },
+    {
+      "key": "s-q3-7-ax",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-ax.svg",
+      "sha256": "2eb87ae8e31f9f40bbbf8b6d6ff00b0b4a560edd73b32d581999c5f2e8258571",
+      "purpose": "Đồ thị chuẩn hóa aₓ / g theo t/T cho chuyển động ném xiên.",
+      "model": {
+        "domain": [
+          0,
+          2
+        ],
+        "sampleCount": 201,
+        "ordinate": "aₓ / g",
+        "normalization": "T=V/g, X=UT, Y=VT; U=v0 cos(alpha), V=v0 sin(alpha)",
+        "formula": "0"
+      },
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "minimumFontUnits": 20
+    },
+    {
+      "key": "s-q3-7-ay",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-03/solution-s-q3-7-ay.svg",
+      "sha256": "60bbde8ca18b306ed9ee714479dd571fffffc62714153739aca096b2ae103399",
+      "purpose": "Đồ thị chuẩn hóa aᵧ / g theo t/T cho chuyển động ném xiên.",
+      "model": {
+        "domain": [
+          0,
+          2
+        ],
+        "sampleCount": 201,
+        "ordinate": "aᵧ / g",
+        "normalization": "T=V/g, X=UT, Y=VT; U=v0 cos(alpha), V=v0 sin(alpha)",
+        "formula": "-1"
+      },
+      "generator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+      "minimumFontUnits": 20
+    }
+  ]
+}

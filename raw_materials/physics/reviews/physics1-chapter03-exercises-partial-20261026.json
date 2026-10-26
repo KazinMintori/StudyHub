@@ -1,0 +1,44 @@
+{
+  "status": "partially-reviewed-not-ready",
+  "timestampUTC": "2026-10-26T08:27:28.593545+00:00",
+  "chapter": 3,
+  "sourceUnitsReviewed": 30,
+  "sourceUnitsExpected": 115,
+  "guided": 13,
+  "discussion": 16,
+  "bridge": 1,
+  "bridgeGuideQuestions": 9,
+  "numberedPending": [
+    1,
+    85
+  ],
+  "sourcePagesVisuallyRead": [
+    92,
+    111,
+    112
+  ],
+  "originalPixelIdenticalCrops": 4,
+  "separateSolutionDiagrams": 7,
+  "actualPlotSamplesChecked": 1206,
+  "independentChecks": 1613,
+  "nativeSVGTextSize": 20,
+  "canonicalBrowserCases": 35,
+  "SVGTextBoundsCases": 7,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "portableVerifier": "raw_materials/physics/verify_chapter3_partial_exercises.py",
+  "cropGenerator": "scripts/prepare-physics1-remaining-03-exercises-assets.py",
+  "solutionGenerator": "scripts/generate-physics1-remaining-03-solution-figures.py",
+  "scopeLimit": "Only13VP,16discussionandonebridge reviewed. Chapter remainsdraft; no wholechapterorcoursecompletionclaim.",
+  "reportSHA256": "b3c091ca9d35976780066ea3d9e45f26da49f02baebde0c94da44295c3206633",
+  "pending": [
+    "Completeandindependentlyreview85numberedexercises",
+    "Verifyall115sourceunits andfinalwholechaptergates",
+    "Publishandverifyactualpublicexercise route"
+  ]
+}
