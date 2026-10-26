@@ -3,10 +3,14 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { buildThemeConfig } from '../../src/features/course/services/build-navigation.mjs'
 
-test('Data project follows exam navigation with two distinct sections', () => {
+test('Data project follows review and all five exam papers with two distinct project sections', () => {
   const theme=buildThemeConfig({courseCatalog:[{id:'xu-ly-du-lieu',name:'Dữ liệu',lessons:[]},{id:'other',name:'Khác',lessons:[]}],wikiGroups:[],concepts:{}})
   const items=theme.sidebar['/xu-ly-du-lieu/'][0].items
-  assert.equal(items[items.findIndex(item=>item.text==='Ôn thi')+1].text,'Bài tập lớn')
+  const reviewIndex=items.findIndex(item=>item.text==='Ôn thi')
+  const examIndex=items.findIndex(item=>item.text==='Đề thi')
+  const projectIndex=items.findIndex(item=>item.text==='Bài tập lớn')
+  assert.ok(reviewIndex>=0 && examIndex>reviewIndex && projectIndex>examIndex)
+  assert.deepEqual(items[examIndex].items.map(item=>({text:item.text,link:item.link})),[1,2,3,4,5].map(number=>({text:`Đề ${number}`,link:`/xu-ly-du-lieu/de-thi/de-${number}`})))
   assert.deepEqual(items.at(-1).items.map(item=>item.text),['Đề bài tập lớn','Ví dụ thực hành'])
   assert(!theme.sidebar['/other/'][0].items.some(item=>item.text==='Bài tập lớn'))
 })
