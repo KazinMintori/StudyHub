@@ -1,3 +1,4 @@
+import {physics1RemainingChapter5ExercisesImageAnnotations} from './physics1-remaining-05-exercises-image-annotations.mjs'
 import {physics1RemainingChapter3ExercisesImageAnnotations} from './physics1-remaining-03-exercises-image-annotations.mjs'
 import {physics1RemainingChapter1ExercisesImageAnnotations} from './physics1-remaining-01-exercises-image-annotations.mjs'
 import {physics1RemainingChapter16ExercisesImageAnnotations} from './physics1-remaining-16-exercises-image-annotations.mjs'
@@ -264,6 +265,7 @@ const originalLabels={
  ...capacitanceImageAnnotations,...physics25ImageAnnotations
 }
 export const physicsImageLabels={
+ ...physics1RemainingChapter5ExercisesImageAnnotations,
  ...physics1RemainingChapter3ExercisesImageAnnotations,
  ...physics1RemainingChapter1ExercisesImageAnnotations,
  ...physics1RemainingChapter16ExercisesImageAnnotations,

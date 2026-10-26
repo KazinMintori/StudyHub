@@ -1,0 +1,49 @@
+{
+  "status": "partially-reviewed-not-ready",
+  "timestampUTC": "2026-10-26T10:53:20.667615+00:00",
+  "chapter": 5,
+  "sourceUnitsReviewed": 41,
+  "sourceUnitsExpected": 159,
+  "guided": 12,
+  "discussion": 28,
+  "bridge": 1,
+  "bridgeGuideQuestions": 10,
+  "numberedPending": [
+    1,
+    118
+  ],
+  "sourcePagesVisuallyRead": [
+    177,
+    178,
+    179
+  ],
+  "originalPixelIdenticalCrops": 9,
+  "separateSolutionDiagrams": 2,
+  "independentChecks": 626,
+  "independentConeLPCases": 28,
+  "dragTrajectoryCases": 9,
+  "nativeSVGTextSize": 20,
+  "canonicalBrowserCases": 40,
+  "SVGTextBoundsAndOverlapCases": 2,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "portableVerifier": "raw_materials/physics/verify_chapter5_partial_exercises.py",
+  "cropGenerator": "scripts/prepare-physics1-remaining-05-exercises-assets.py",
+  "solutionGenerator": "scripts/generate-physics1-remaining-05-solution-figures.py",
+  "sourceQ5_23": "The source explicitly says do not ignore air resistance; with-drag premise preserved.",
+  "scopeLimit": "Only41guided/discussion/bridgeunits accepted. Whole159unitchapter remainsdraft, publicexercisechapter disabled.",
+  "textHashMode": "CanonicalLF for Markdown/SVG, exact bytes for PNG/PDF",
+  "canonicalBrowserReportSHA256": "a0a17e12571fe76d2c8e0884959673ed4b8f2dea29e7af9ae36f23c3417d3ab0",
+  "canonicalMathReportSHA256": "63e2ecdd83ebe8b18034aeec4e1132ea9c3f37961465205a8d77bb292d7ac585",
+  "proposalAcceptanceSHA256": "4fd2bd4a5d77f0506eafd67466c1083dba0d8a84ac6ffc92480e8c3e61e23397",
+  "pending": [
+    "Independentreview118numberedexercises",
+    "Whole159unitgrouping/runtime andfinalchaptergates",
+    "Publishandverifyactualpublicexercise route"
+  ]
+}
