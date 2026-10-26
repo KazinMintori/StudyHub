@@ -1,0 +1,4921 @@
+{
+  "chapter": 16,
+  "status": "source-reviewed-and-render-verified",
+  "total": 119,
+  "units": [
+    {
+      "id": "VP16.9.1",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.9.1",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "256 Hz, rho 1.20 kg/m3, v344 m/s, I5.50e-8 W/m2",
+          "(a) Pressure amplitude",
+          "(b) Same intensity, doubled frequency512 Hz"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 11,
+          "endLine": 49
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "p=6.74e-3 Pa; pressure unchanged. Displacement halves.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 11,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.9.2",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.9.2",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "fire alarm85.0 dB",
+          "(a) Absolute intensity",
+          "(b) Ratio versus67.0 dB"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 50,
+          "endLine": 94
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "3.16e-4 W/m2; ratio63.1.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 50,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.9.3",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.9.3",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "lion114 dB at1.00 m, inverse-square assumption",
+          "(a) Level at4.00 m",
+          "(b) Level at15.8 m"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 95,
+          "endLine": 135
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "102 dB and90.0 dB; logarithm applied after geometric dilution.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 95,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.9.4",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.9.4",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "cabin66.0 dB, rho0.920 kg/m3, v344 m/s",
+          "(a) Pressure amplitude",
+          "(b) Level for10.0 times pressure"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 136,
+          "endLine": 180
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "5.02e-2 Pa;86.0 dB.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 136,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.12.1",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.12.1",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "open organ pipe220 Hz, A3, v344 m/s",
+          "(a) Open-pipe length",
+          "(b) Third open harmonic equals stopped fundamental, find stopped length"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 181,
+          "endLine": 219
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "0.782 m;0.130 m. Pressure nodes and displacement nodes correctly distinguished.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 181,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.12.2",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.12.2",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "open and stopped pipes, target third open harmonic",
+          "(a) Ls/Lo=1/6",
+          "(b) Ls/Lo=1/2",
+          "(c) Ls/Lo=1/3, if any admissible harmonic"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 220,
+          "endLine": 254
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "n=1; n=3; none because algebraic n=2 is forbidden.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 220,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.12.3",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.12.3",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "bass-viol string0.680 m, fundamental165 Hz",
+          "(a) Speed on string",
+          "(b) Same fundamental in nearby stopped pipe, v344 m/s, find length"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 255,
+          "endLine": 293
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "224 m/s;0.521 m; distinguish string and air speed.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 255,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.12.4",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.12.4",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "stopped pipe1.00 m with helium20 C, v999 m/s, third harmonic",
+          "open air pipe20 C v344 m/s excited at fifth harmonic",
+          "(a) Helium frequency and wavelength",
+          "(b) Air frequency and wavelength",
+          "(c) Open length"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 294,
+          "endLine": 341
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "749 Hz in both;1.33 m helium;0.459 m air;1.15 m open pipe. Third harmonic is second allowed mode.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 294,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.18.1",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.18.1",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "ambulance source2800 Hz, u26.0 m/s (93.6 km/h,58.2 mi/h), v340 m/s, still air",
+          "stationary listener, frequency and wavelength (a) in front",
+          "frequency and wavelength (b) behind"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 342,
+          "endLine": 390
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "3030 Hz,0.112 m front;2600 Hz,0.131 m behind; speed fixed in air.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 342,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.18.2",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.18.2",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "stationary Highland bagpiper reed440 Hz, v340 m/s, still air",
+          "(a) Wavelength",
+          "(b) Frequency and wavelength bicyclist approaching10.0 m/s",
+          "(c) Frequency and wavelength bicyclist receding10.0 m/s"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 391,
+          "endLine": 429
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "0.773 m throughout;453 Hz approaching,427 Hz receding. Use wave speed relative to listener for wavelength.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 391,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.18.3",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.18.3",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "police east40.0 m/s, sports car east35.0 m/s, source1200 Hz, v340 m/s, still air",
+          "(a) Heard frequency while chased",
+          "(b) Sports car turns west35.0 m/s toward police"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 430,
+          "endLine": 475
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "1220 Hz;1500 Hz. Source and listener velocities measured separately relative to medium.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 430,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "VP16.18.4",
+      "kind": "guided",
+      "independentSourceReview": {
+        "id": "VP16.18.4",
+        "sourcePdfPages": [
+          553
+        ],
+        "sourcePromptObligations": [
+          "car25.0 m/s directly toward wall, horn415 Hz",
+          "(a) Reflected frequency received by driver, v340 m/s, still air",
+          "(b) Speed needed for reflected495 Hz"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-09-luyen-tap-huong-dan.md",
+          "startLine": 476,
+          "endLine": 535
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "481 Hz;29.9 m/s. Two Doppler stages.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md",
+      "line": 476,
+      "sha256": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.1",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.1",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "air into water",
+          "frequency change?",
+          "speed change?",
+          "wavelength change?",
+          "explain"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 3,
+          "endLine": 21
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Stationary boundary preserves frequency; ordinary water gives greater speed and wavelength.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 3,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.2",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.2",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "western movie ear on track",
+          "why earlier warning than usual listening?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 22,
+          "endLine": 40
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Compare transit times through steel and air, not loudness alone.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 22,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.3",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.3",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "organ-pipe pitch versus increasing temperature",
+          "increase or decrease and why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 41,
+          "endLine": 65
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "At fixed length/composition, v and mode frequency increase with absolute-temperature square root; thermal expansion caveat retained.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 41,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.4",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.4",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "usual keys/valves alter air-column length",
+          "bugle lacks keys or valves, how many notes?",
+          "restrictions on available notes?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 66,
+          "endLine": 84
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Lips select natural resonances; restricted resonance series, not arbitrary pitch.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 66,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.5",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.5",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "symphonic musicians blow to warm wind instruments",
+          "purpose?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 85,
+          "endLine": 103
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Stabilize temperature before tuning so frequencies do not continue to drift.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 85,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.6",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.6",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "helium inhalation makes voice high/squeaky",
+          "explain",
+          "source warning unconsciousness or death preserved"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 104,
+          "endLine": 122
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Resonance/formant changes distinguished from proportional vocal-fold fundamental change; source warning retained.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 104,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.7",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.7",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "regular road-divider ridges",
+          "why musical note?",
+          "how measure car speed?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 123,
+          "endLine": 151
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "f=u/d and inverse u=fd, identify fundamental rather than arbitrary spectral peak.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 123,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.8",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.8",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "(a) Does0 dB mean no sound?",
+          "(b) Meaning of negative intensity level?",
+          "(c) Does zero intensity imply no sound?",
+          "(d) Meaning of negative intensity and why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 152,
+          "endLine": 193
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Distinguishes nonnegative single-traveling-wave intensity, logarithmic level, signed component of mean flux; standing sound can have zero mean net flux.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 152,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.9",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.9",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "displacement amplitude or pressure amplitude",
+          "which more direct for loudness and why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 194,
+          "endLine": 222
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Pressure drives eardrum; I=p^2/(2rho v), displacement relation depends on omega; loudness also frequency and listener dependent.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 194,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.10",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.10",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "half pressure: intensity factor?",
+          "sixteenfold intensity: pressure factor?",
+          "explain"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 223,
+          "endLine": 253
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Intensity quarter and pressure fourfold at fixed medium.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 223,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.11",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.11",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "does intensity level beta obey inverse-square law?",
+          "why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 254,
+          "endLine": 276
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "No, beta difference is -20log distance ratio; doubling distance reduces6.02 dB.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 254,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.12",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.12",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "air absorbs small energy fraction",
+          "effect on inverse-square dependence and why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 277,
+          "endLine": 301
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Extra attenuation beyond geometric1/r2, exponential model identified as model.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 277,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.13",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.13",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "small metal band on one tuning-fork tine",
+          "move toward tip: wavelength effect?",
+          "frequency effect?",
+          "why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 302,
+          "endLine": 326
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Mass loading increases effective inertia more near tip; frequency decreases, air wavelength increases; excludes clamping-length interpretation.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 302,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.14",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.14",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "organist releases loud chord in cathedral",
+          "why persists a few seconds?",
+          "what happens to energy as sound dies?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 327,
+          "endLine": 345
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Multiple reflections/reverberation then absorption, transmission and escape, with energy conserved.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 327,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.15",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.15",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "same-amplifier sinusoidal speakers in phase860 Hz",
+          "P distances12.0 m and13.4 m",
+          "constructive or destructive and reasoning"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 346,
+          "endLine": 380
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Added explicit v344 m/s is consistent with chapter convention; lambda0.400 m, difference3.5lambda gives opposite phase; full cancellation needs equal amplitudes.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 346,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.16",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.16",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "two equal-frequency tuning forks, one stationary and one at rotating rim",
+          "what listener hears and why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 381,
+          "endLine": 401
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Variable Doppler shift/possible variable beats off axis; exact axis has no classical Doppler shift.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 381,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.17",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.17",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "organ at church front and back simultaneously playing",
+          "listener walks quickly down aisle and reports out of tune",
+          "why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 402,
+          "endLine": 430
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Approaching and receding observer shifts differ in sign; organ tuning may remain correct.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 402,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.18",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.18",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "source and listener earth-fixed",
+          "strong wind source toward listener",
+          "Doppler? why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 431,
+          "endLine": 461
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Uniform steady wind changes wavelength and transit time but no received-frequency shift.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 431,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.19",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.19",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "Doppler for surface water waves?",
+          "Doppler for elastic waves deep below water surface?",
+          "describe circumstances/explain if yes or no"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 462,
+          "endLine": 484
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Examples for moving sources or receivers in both; water-surface dispersion caveat.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 462,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.20",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.20",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "unresolved other stars",
+          "how rotation inferred from light?",
+          "how surface speed measured?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 485,
+          "endLine": 505
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Rotational spectral broadening gives projected v_eq sin i; inclination/other broadening needed for true speed.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 485,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.21",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.21",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "train approaches and passes crossing",
+          "frequency changes smoothly high to low rather than abrupt jump",
+          "why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 506,
+          "endLine": 526
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Finite lateral distance gives continuous radial component; retarded emission geometry explicitly noted.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 506,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.22",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.22",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "case1 source approaches resting observer at u",
+          "case2 observer approaches resting source at same u",
+          "same emitted frequency and same closing speed: same observed frequency? why?"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 527,
+          "endLine": 561
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "No. v/(v-u) versus(v+u)/v; source case larger for0<u<v, difference begins beyond first order.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 527,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.23",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.23",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "sonic boom only instant speed exceeds Mach1?",
+          "explain"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 562,
+          "endLine": 586
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Continuously sustained shock while supersonic; observer boom occurs as surface passes.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 562,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.24",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.24",
+        "sourcePdfPages": [
+          554
+        ],
+        "sourcePromptObligations": [
+          "riding inside supersonic aircraft: what do you hear?",
+          "continuous sonic boom?",
+          "explain why or why not"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 587,
+          "endLine": 607
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "Cabin sounds remain audible; own shock does not continually sweep a co-moving listener.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 587,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Q16.25",
+      "kind": "discussion",
+      "independentSourceReview": {
+        "id": "Q16.25",
+        "sourcePdfPages": [
+          555
+        ],
+        "sourcePromptObligations": [
+          "steady altitude and supersonic speed",
+          "shock just reaches B in original figure",
+          "what A hears now?",
+          "what B hears now?",
+          "what C hears now?",
+          "explain using leftward source arrow"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-10-cau-hoi-thao-luan.md",
+          "startLine": 608,
+          "endLine": 631
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "A not yet reached; B hears boom; C previously crossed and should explicitly hear aircraft sound after shock. Minor clarification requested in finding G16-01.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "minor-clarification",
+        "findingIds": [
+          "G16-01"
+        ]
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md",
+      "line": 608,
+      "sha256": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-figure-q16-25.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.1",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.1",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "1000 Hz, A=1.2e-8 m and p=0.030 Pa form a given calibration. Pain pressure=30 Pa. Last target p=0.0015 Pa at original A.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 8,
+        "draft_line_end": 46,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses pressure proportional to fA in unchanged air, preserving the rounded calibration instead of silently replacing it.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 4,
+        "check_names": [
+          "lambda_a",
+          "A_b",
+          "frequency_c",
+          "lambda_c"
+        ],
+        "computed_values": {
+          "lambda_a": 0.344,
+          "A_b": 1.2e-05,
+          "frequency_c": 50.0,
+          "lambda_c": 6.88
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 8,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.2",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.2",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "frequency",
+          "audibility"
+        ],
+        "source_conditions_and_data": "Actual visual PDF says 1.00 micrometre (text extraction wrongly emits mm). B=1.42e5 Pa and pressure ceiling=10.0 Pa.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 47,
+        "draft_line_end": 75,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Converts micrometres correctly and explains why frequency is bounded at fixed displacement.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "max_frequency",
+          "audible"
+        ],
+        "computed_values": {
+          "max_frequency": 3855.5845368740847
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 47,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.3",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.3",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "A=0.0200 mm. Frequencies 150,1500,15000 Hz. Compare every pressure with 30 Pa.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 76,
+        "draft_line_end": 104,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Displacement-to-pressure relation and the three comparisons are explicit.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 4,
+        "check_names": [
+          "pressure_150",
+          "pressure_1500",
+          "pressure_15000",
+          "pain_comparisons"
+        ],
+        "computed_values": {
+          "pressure_150": 7.780921339704952,
+          "pressure_1500": 77.80921339704952,
+          "pressure_15000": 778.0921339704954
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 76,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.4",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.4",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [
+          "BIO"
+        ],
+        "questions": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "source_conditions_and_data": "17 Hz and seawater1531 m/s. Dolphin wavelength1.5 cm. Dog25 kHz. Bat39–78 kHz. Tumour1.0 mm, tissue1550 m/s, wavelength at most one quarter size.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 105,
+        "draft_line_end": 155,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Distinguishes three media, reverses the frequency/wavelength range correctly and retains the imaging inequality.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 6,
+        "check_names": [
+          "whale_lambda",
+          "dolphin_frequency",
+          "whistle_lambda",
+          "bat_short_lambda",
+          "bat_long_lambda",
+          "tumour_min_frequency"
+        ],
+        "computed_values": {
+          "whale_lambda": 90.05882352941177,
+          "dolphin_frequency": 102066.66666666667,
+          "whistle_lambda": 13.76,
+          "bat_short_lambda": 4.41025641025641,
+          "bat_long_lambda": 8.82051282051282,
+          "tumour_min_frequency": 6200000.0
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 117,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.5",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.5",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "delay"
+        ],
+        "source_conditions_and_data": "Brass rod60.0 m, air344 m/s. External tables11.1 and12.1 supply Y=9.0e10 Pa, density8.6e3 kg/m3.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 156,
+        "draft_line_end": 196,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses free-sided rod Young modulus, not bulk-solid speed, and subtracts travel times in correct order.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "rod_speed",
+          "air_delay",
+          "rod_arrives_first"
+        ],
+        "computed_values": {
+          "rod_speed": 3234.9831961031527,
+          "air_delay": 0.1558713676601714
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 168,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.6",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.6",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Liquid density1300 kg/m3,400 Hz,8.00 m. Metal rod1.50 m,density6400 kg/m3,transit3.90e-4 s. Part b continues at top right of PDF555.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 197,
+        "draft_line_end": 235,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Separates bulk modulus for liquid and Young modulus for the rod after determining speeds.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "liquid_bulk_modulus",
+          "metal_young_modulus"
+        ],
+        "computed_values": {
+          "liquid_bulk_modulus": 13312000000,
+          "metal_young_modulus": 94674556213.01775
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 209,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.7",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.7",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "horn_diver_distance"
+        ],
+        "source_conditions_and_data": "Simultaneous hearing, friend22.0 m from boat, horn1.2 m above water, diver directly below, both media20 C. E16.7.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 236,
+        "draft_line_end": 274,
+        "source_image_keys": [
+          "E16.7"
+        ],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Adds the air and water times and adds1.2 m to the water depth for the requested full distance.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "water_depth",
+          "horn_diver_distance",
+          "equal_arrival_times"
+        ],
+        "computed_values": {
+          "water_depth": 89.6093023255814,
+          "horn_diver_distance": 90.8093023255814
+        },
+        "status": "pass_with_optional_crop_cleanup"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 248,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-e16-7.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.8",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.8",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "source_conditions_and_data": "27.0 C; molar masses2.02,4.00,39.9 g/mol. Table19.1 gamma1.41,1.67,1.67. Compare air at same temperature.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 275,
+        "draft_line_end": 302,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Absolute temperature and SI molar masses are explicit. Ratios of gamma/M justify the speed ordering.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 7,
+        "check_names": [
+          "hydrogen_speed",
+          "helium_speed",
+          "argon_speed",
+          "air_speed",
+          "hydrogen_air_ratio",
+          "helium_air_ratio",
+          "argon_air_ratio"
+        ],
+        "computed_values": {
+          "hydrogen_speed": 1319.7997918601363,
+          "helium_speed": 1020.7101274357964,
+          "argon_speed": 323.1811125418059,
+          "air_speed": 348.2907639458732,
+          "hydrogen_air_ratio": 3.7893620172633757,
+          "helium_air_ratio": 2.9306264566763582,
+          "argon_air_ratio": 0.9279060658410984
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 287,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.9",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.9",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "temperature"
+        ],
+        "source_conditions_and_data": "Same1250 Hz oscillator in same ideal gas,325 m/s at22.0 C. Required wavelength28.5 cm.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 303,
+        "draft_line_end": 334,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Gets target speed first and squares the speed ratio on a kelvin scale.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "new_speed",
+          "new_temperature"
+        ],
+        "computed_values": {
+          "new_speed": 356.24999999999994,
+          "new_temperature": 81.48844304733717
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 329,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.10",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.10",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "••",
+        "source_tags": [
+          "CALC"
+        ],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Derive small-change dv/v=(1/2)dT/T. Evaluate1.0 C change at20 C with344 m/s.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 335,
+        "draft_line_end": 373,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Holds gas properties fixed, differentiates square root and states the approximation and sign.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "linear_temperature_slope",
+          "differential_identity"
+        ],
+        "computed_values": {
+          "linear_temperature_slope": 0.5867303428279038
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 361,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.11",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.11",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "••",
+        "source_tags": [
+          "BIO"
+        ],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Eardrum diameter8.4 mm,whisper20 dB. Mosquito mass2.0 mg. Energy delivered in one second, speed requested in mm/s.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 374,
+        "draft_line_end": 417,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses area times intensity times one second, then kinetic energy. It distinguishes energy from power.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "eardrum_area",
+          "one_second_energy",
+          "mosquito_speed"
+        ],
+        "computed_values": {
+          "eardrum_area": 5.541769440932394e-05,
+          "one_second_energy": 5.541769440932394e-15,
+          "mosquito_speed": 0.07444306173803167
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 400,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.12",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.12",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Intensity level rises13.0 dB. Explain why initial intensity is unnecessary.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 418,
+        "draft_line_end": 446,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Takes logarithmic differences and isolates the intensity ratio.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "intensity_factor",
+          "initial_intensity_cancels"
+        ],
+        "computed_values": {
+          "intensity_factor": 19.952623149688797
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 444,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.13",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.13",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "distance"
+        ],
+        "source_conditions_and_data": "20.0 dB whisper at15.0 m, desired60.0 dB.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 447,
+        "draft_line_end": 469,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Declares constant-power point-source model, computes distance reduction and notes its near-source limit.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "required_source_distance"
+        ],
+        "computed_values": {
+          "required_source_distance": 0.15
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 473,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.14",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.14",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "power_factor"
+        ],
+        "source_conditions_and_data": "Small isotropic source,observation distance20.0 m fixed,desired rise5.00 dB.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 470,
+        "draft_line_end": 492,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Explains cancellation of the fixed distance and proportionality of power and intensity.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "power_factor"
+        ],
+        "computed_values": {
+          "power_factor": 3.1622776601683795
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 496,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.15",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.15",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "Air20 C,f320 Hz,A5.00e-3 mm. Pressure Pa,intensity W/m2,level dB requested.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 493,
+        "draft_line_end": 529,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Converts millimetres, uses pressure amplitude rather than total atmospheric pressure, and then intensity and level.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "pressure",
+          "intensity",
+          "intensity_level"
+        ],
+        "computed_values": {
+          "pressure": 4.149824714509308,
+          "intensity": 0.02085882408085303,
+          "intensity_level": 103.19289821367997
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 519,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.16",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.16",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Windows lower level by30 dB. Ask fraction of intensity removed. Alternative intensity halved.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 530,
+        "draft_line_end": 563,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Distinguishes retained0.001 from removed0.999 and gives negative change for halving.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "remaining_fraction",
+          "removed_fraction",
+          "half_intensity_dB"
+        ],
+        "computed_values": {
+          "remaining_fraction": 0.001,
+          "removed_fraction": 0.999,
+          "half_intensity_dB": -3.010299956639812
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 556,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.17",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.17",
+        "source_pdf_pages": [
+          555
+        ],
+        "printed_pages": [
+          535
+        ],
+        "difficulty": "•",
+        "source_tags": [
+          "BIO"
+        ],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "At400 Hz faintest pressure amplitude6.0e-5 Pa. Intensity,level,displacement at20 C requested.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 564,
+        "draft_line_end": 601,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Distinguishes a frequency-dependent hearing threshold from the reference intensity defining zero decibels.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "intensity",
+          "intensity_level",
+          "displacement_amplitude"
+        ],
+        "computed_values": {
+          "intensity": 4.36046511627907e-12,
+          "intensity_level": 6.39532816484151,
+          "displacement_amplitude": 5.783376805311127e-11
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 590,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.18",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.18",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Four quadruplets cry simultaneously versus one. Independent-source intensities add. Ask extra babies for same additional dB rise.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 602,
+        "draft_line_end": 626,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Interprets the four babies of a quadruplet set, states equal received intensity assumption, multiplies total by4 again and subtracts existing4.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "four_babies_dB",
+          "additional_babies"
+        ],
+        "computed_values": {
+          "four_babies_dB": 6.020599913279624,
+          "additional_babies": 12
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 628,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.19",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.19",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [
+          "CP"
+        ],
+        "questions": [
+          "level_difference"
+        ],
+        "source_conditions_and_data": "Baby mouth30 cm from father and1.50 m from mother.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 627,
+        "draft_line_end": 659,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses inverse-square ratio, states isotropic point-source model and determines father hears the higher level.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "father_minus_mother_dB"
+        ],
+        "computed_values": {
+          "father_minus_mother_dB": 13.979400086720377
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 653,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.20",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.20",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "5.00 dB difference;100-fold intensity;doubling intensity.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 660,
+        "draft_line_end": 697,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "All directions of conversion between ratios and logarithmic differences are shown.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "five_dB_ratio",
+          "hundred_times_dB",
+          "twice_dB"
+        ],
+        "computed_values": {
+          "five_dB_ratio": 3.1622776601683795,
+          "hundred_times_dB": 20.0,
+          "twice_dB": 3.010299956639812
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 686,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.21",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.21",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "••",
+        "source_tags": [
+          "CP"
+        ],
+        "questions": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "source_conditions_and_data": "Isotropic source,pointA at3.0 m has53 dB. Quarter intensity and quarter numerical dB are separate targets.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 698,
+        "draft_line_end": 735,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Computes distinct distances, states both distance from source and additional walk, and distinguishes intensity law from logarithmic level.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 5,
+        "check_names": [
+          "intensity_A",
+          "quarter_intensity_distance",
+          "quarter_dB_distance",
+          "additional_walk_c",
+          "level_not_inverse_square"
+        ],
+        "computed_values": {
+          "intensity_A": 1.995262314968879e-07,
+          "quarter_intensity_distance": 6.0,
+          "quarter_dB_distance": 291.48838547313187,
+          "additional_walk_c": 288.48838547313187
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 724,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.22",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.22",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "source_conditions_and_data": "Displacement pattern ANANANANANA at1710 Hz in20 C air. Helium at20 C for part e,table16.1 speed999 m/s.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 736,
+        "draft_line_end": 778,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Counts10 intervals of lambda/4, identifies open-open fifth harmonic and recalculates fundamental for changed medium.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 4,
+        "check_names": [
+          "open_open_fifth_harmonic",
+          "pipe_length",
+          "air_fundamental",
+          "helium_fundamental"
+        ],
+        "computed_values": {
+          "pipe_length": 0.5029239766081871,
+          "air_fundamental": 342.0,
+          "helium_fundamental": 993.1918604651163
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 762,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.23",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.23",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a_three_modes",
+          "b_three_modes"
+        ],
+        "source_conditions_and_data": "Pipe1.20 m. Fundamental and first two overtones. Locations from left. Open-open,then left-closed/right-open. Both displacement and pressure nodes.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 779,
+        "draft_line_end": 819,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Correct endpoints and six mode tables. Distinguishes harmonic indices1,2,3 from1,3,5 and explains interlaced pressure/displacement nodes.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 24,
+        "check_names": [
+          "open_n1_u_nodes",
+          "open_n1_p_nodes",
+          "open_n1_right_open",
+          "open_n2_u_nodes",
+          "open_n2_p_nodes",
+          "open_n2_right_open",
+          "open_n3_u_nodes",
+          "open_n3_p_nodes",
+          "open_n3_right_open",
+          "stopped_n1_u_nodes",
+          "stopped_n1_p_nodes",
+          "stopped_n1_right_open",
+          "stopped_n3_u_nodes",
+          "stopped_n3_p_nodes",
+          "stopped_n3_right_open",
+          "stopped_n5_u_nodes",
+          "stopped_n5_p_nodes",
+          "stopped_n5_right_open",
+          "open_n1_table_match",
+          "open_n2_table_match",
+          "open_n3_table_match",
+          "stopped_n1_table_match",
+          "stopped_n3_table_match",
+          "stopped_n5_table_match"
+        ],
+        "computed_values": {},
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 805,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/solution-s16-23-open.svg",
+        "/vat-ly-1/bai-giang/img/young-16/solution-s16-23-stopped.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.24",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.24",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "Open-open fundamental524 Hz. Close one end without changing length.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 820,
+        "draft_line_end": 858,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "States change of boundary condition doubles fundamental wavelength and halves frequency.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "open_length",
+          "new_lambda",
+          "new_frequency"
+        ],
+        "computed_values": {
+          "open_length": 0.3282442748091603,
+          "new_lambda": 1.3129770992366412,
+          "new_frequency": 262.0
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 858,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.25",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.25",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [
+          "BIO"
+        ],
+        "questions": [
+          "first_three_frequencies"
+        ],
+        "source_conditions_and_data": "Vocal tract17 cm,lips to vocal folds. Stopped-pipe approximation with344 m/s. Lip/tongue motion limits estimate.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 859,
+        "draft_line_end": 883,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses harmonics1,3,5 and distinguishes cavity resonances from universal vocal-fold vibration frequencies.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "harmonic_1",
+          "harmonic_3",
+          "harmonic_5"
+        ],
+        "computed_values": {
+          "harmonic_1": 505.8823529411764,
+          "harmonic_3": 1517.6470588235293,
+          "harmonic_5": 2529.411764705882
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 897,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.26",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.26",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "••",
+        "source_tags": [
+          "BIO"
+        ],
+        "questions": [
+          "length",
+          "reasonableness"
+        ],
+        "source_conditions_and_data": "Range220–1244 Hz,two-and-half octaves or more. Open mouth/closed diaphragm model. Lowest note fundamental. Explicit speed354 m/s.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 884,
+        "draft_line_end": 908,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses the correct special speed, derives length from lowest note and assesses body scale while retaining the stated simplified model.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "effective_column_length"
+        ],
+        "computed_values": {
+          "effective_column_length": 0.4022727272727273
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 922,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.27",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.27",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Organ pipe4.88 m(16 ft),open-open or open-stopped.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 909,
+        "draft_line_end": 937,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses both fundamental formulas and notes17.6 Hz lies below the nominal20 Hz lower hearing bound.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "open_fundamental",
+          "stopped_fundamental"
+        ],
+        "computed_values": {
+          "open_fundamental": 35.24590163934426,
+          "stopped_fundamental": 17.62295081967213
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 947,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.28",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.28",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Both ends closed. Prove lambda_n=2L/n and f_n=n v/(2L),n positive integers. Shower height2.50 m,first3 modes,audibility.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 938,
+        "draft_line_end": 982,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Applies displacement nodes at both ends and excludes the nonoscillating n=0 mode.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 6,
+        "check_names": [
+          "harmonic_1",
+          "closed_ends_n1",
+          "harmonic_2",
+          "closed_ends_n2",
+          "harmonic_3",
+          "closed_ends_n3"
+        ],
+        "computed_values": {
+          "harmonic_1": 68.8,
+          "harmonic_2": 137.6,
+          "harmonic_3": 206.4
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 976,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.29",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.29",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "source_conditions_and_data": "Displacement pattern NANANANANA at1710 Hz in20 C air.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 983,
+        "draft_line_end": 1015,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Counts9 quarter-wave intervals and identifies stopped ninth harmonic, not tenth, and fourth overtone.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "stopped_ninth_harmonic",
+          "pipe_length",
+          "fundamental"
+        ],
+        "computed_values": {
+          "pipe_length": 0.45263157894736844,
+          "fundamental": 190.0
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1021,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.30",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.30",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "••",
+        "source_tags": [
+          "CP"
+        ],
+        "questions": [
+          "pipe_length"
+        ],
+        "source_conditions_and_data": "Adjustable stopped pipe excites wire second overtone. Wire62.0 cm,7.25 g,tension4110 N.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1016,
+        "draft_line_end": 1054,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses linear mass density, third harmonic of fixed-end wire and matches its frequency to the stopped-pipe fundamental.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "wire_speed",
+          "wire_second_overtone",
+          "stopped_length"
+        ],
+        "computed_values": {
+          "wire_speed": 592.8539972615226,
+          "wire_second_overtone": 1434.3241869230387,
+          "stopped_length": 0.0599585510612424
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1054,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.31",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.31",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "14.0 cm air column in empty test tube as stopped pipe. Repeat with tube half filled with water.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1055,
+        "draft_line_end": 1083,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Water surface becomes closed end and halves the air-column length, doubling fundamental.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "empty_frequency",
+          "half_water_frequency"
+        ],
+        "computed_values": {
+          "empty_frequency": 614.2857142857142,
+          "half_water_frequency": 1228.5714285714284
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1093,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.32",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.32",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "In-phase725 Hz small speakers,both initially4.50 m from listener,A slowly moved away. E16.32. First two minima and first nonzero maximum.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1084,
+        "draft_line_end": 1126,
+        "source_image_keys": [
+          "E16.32"
+        ],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Explains path difference=d and odd/even half-wavelength conditions. Notes unequal arriving amplitudes need not give zero sound.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "first_minimum",
+          "next_minimum",
+          "first_nonzero_maximum"
+        ],
+        "computed_values": {
+          "first_minimum": 0.23724137931034484,
+          "next_minimum": 0.7117241379310345,
+          "first_nonzero_maximum": 0.47448275862068967
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1122,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-e16-32.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.33",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.33",
+        "source_pdf_pages": [
+          556
+        ],
+        "printed_pages": [
+          536
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "In-phase direct sinusoidal waves,A toB2.00 m,Q1.00 m beyondB. E16.33.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1127,
+        "draft_line_end": 1163,
+        "source_image_keys": [
+          "E16.33"
+        ],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses fixed2.00 m path difference and chooses largest allowed wavelength for lowest positive frequency.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "lowest_constructive_frequency",
+          "lowest_destructive_frequency"
+        ],
+        "computed_values": {
+          "lowest_constructive_frequency": 172.0,
+          "lowest_destructive_frequency": 86.0
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1165,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-e16-33.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.34",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.34",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b",
+          "c"
+        ],
+        "source_conditions_and_data": "Same geometry as E16.33,f206 Hz,P between speakers,x fromA. Direct waves. Explain home-stereo contrast.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1164,
+        "draft_line_end": 1208,
+        "source_image_keys": [
+          "E16.33"
+        ],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Enumerates all in-interval minima and maxima and explains broadband,channel and reflection effects without denying interference.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 6,
+        "check_names": [
+          "minimum_x0",
+          "minimum_x1",
+          "maximum_x0",
+          "maximum_x1",
+          "maximum_x2",
+          "no_higher_minimum_in_interval"
+        ],
+        "computed_values": {
+          "minimum_x0": 0.5825242718446602,
+          "minimum_x1": 1.4174757281553398,
+          "maximum_x0": 0.16504854368932043,
+          "maximum_x1": 1,
+          "maximum_x2": 1.8349514563106797
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1202,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.35",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.35",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "walk"
+        ],
+        "source_conditions_and_data": "In-phase688 Hz speakers12.0 m apart,listener between them at a constructive point,walk towardB to adjacent destructive point.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1209,
+        "draft_line_end": 1237,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Explains path difference changes twice as fast as listener displacement, giving lambda/4, with between-speakers condition retained.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "walk_to_adjacent_minimum"
+        ],
+        "computed_values": {
+          "walk_to_adjacent_minimum": 0.125
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1247,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.36",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.36",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "•",
+        "source_tags": [],
+        "questions": [
+          "closest_distance_B"
+        ],
+        "source_conditions_and_data": "In-phase172 Hz sources,distance toA8.00 m. No fixed interspeaker spacing given.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1238,
+        "draft_line_end": 1268,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Searches allowed odd half-wave path differences and chooses smallest nonnegative distance rather than assuming first order.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "closest_B_distance"
+        ],
+        "computed_values": {
+          "closest_B_distance": 1.0
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1276,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.37",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.37",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "In-phase variable oscillator. E16.37 has sources2.00 m vertically apart and microphone4.50 m horizontally from upper source.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1269,
+        "draft_line_end": 1318,
+        "source_image_keys": [
+          "E16.37"
+        ],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Pythagorean path difference yields entire frequency sequences. Text/answers correct, but current crop loses lower source dot and arrow tip.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 7,
+        "check_names": [
+          "path_difference",
+          "constructive_frequency_1",
+          "constructive_frequency_2",
+          "constructive_frequency_3",
+          "destructive_frequency_0",
+          "destructive_frequency_1",
+          "destructive_frequency_2"
+        ],
+        "computed_values": {
+          "path_difference": 0.42442890089805196,
+          "constructive_frequency_1": 810.5008854772333,
+          "constructive_frequency_2": 1621.0017709544666,
+          "constructive_frequency_3": 2431.5026564317,
+          "destructive_frequency_0": 405.25044273861664,
+          "destructive_frequency_1": 1215.75132821585,
+          "destructive_frequency_2": 2026.2522136930831
+        },
+        "status": "needs_image_recrop"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1307,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-e16-37.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.38",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.38",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "beat_frequency"
+        ],
+        "source_conditions_and_data": "Two guitars,wavelengths64.8 and65.2 cm in same air.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1319,
+        "draft_line_end": 1351,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Converts each wavelength to frequency and subtracts unrounded values.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "beat_frequency"
+        ],
+        "computed_values": {
+          "beat_frequency": 3.2568355676739884
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1357,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.39",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.39",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "a",
+          "b"
+        ],
+        "source_conditions_and_data": "Reference440 Hz. Beats3 Hz rise to4 Hz when string slightly tightened.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1352,
+        "draft_line_end": 1374,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Explains increasing tension raises frequency and growing beats select443 Hz branch; loosening tunes down.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 3,
+        "check_names": [
+          "tightening_raises_frequency",
+          "upper_branch_increases_beats",
+          "original_violin_frequency"
+        ],
+        "computed_values": {
+          "original_violin_frequency": 443
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1390,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.40",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.40",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "beat_frequency"
+        ],
+        "source_conditions_and_data": "Two stopped pipes initially1.14 m. One lengthened2.00 cm. Both fundamental.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1375,
+        "draft_line_end": 1407,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses new length1.16 m and unrounded frequency difference; longer pipe has lower frequency.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 1,
+        "check_names": [
+          "beat_frequency"
+        ],
+        "computed_values": {
+          "beat_frequency": 1.300665456745321
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1413,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.41",
+      "kind": "numbered-a",
+      "independentSourceReview": {
+        "exercise": "16.41",
+        "source_pdf_pages": [
+          557
+        ],
+        "printed_pages": [
+          537
+        ],
+        "difficulty": "••",
+        "source_tags": [],
+        "questions": [
+          "sound_speed"
+        ],
+        "source_conditions_and_data": "Arrakis source flying toward stationary mate25.0 m/s,source1200 Hz,heard1240 Hz.",
+        "draft_file": "frozen-inputs/proposed-fragments/parent-11-bai-tap-001-041.md",
+        "draft_line_start": 1408,
+        "draft_line_end": 1444,
+        "source_image_keys": [],
+        "source_subparts_and_conditions_complete": true,
+        "reasoning_and_pedagogy_review": "Uses approaching-source denominator,solves unknown medium speed rather than importing Earth value,and back-substitutes.",
+        "closed_three_stage_solution": true,
+        "independent_numeric_and_boundary_checks": 2,
+        "check_names": [
+          "Arrakis_speed",
+          "Doppler_back_substitution"
+        ],
+        "computed_values": {
+          "Arrakis_speed": 775.0
+        },
+        "status": "pass"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md",
+      "line": 1446,
+      "sha256": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.42",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.42",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Moving emitter compresses/expands wavelength; stationary detector f=v/lambda.",
+        "independentCalculation": {
+          "front_lambda": 0.7975,
+          "rear_lambda": 0.9225,
+          "front_f": 431.34796238244513,
+          "rear_f": 372.89972899728997
+        },
+        "fragmentLine": 3,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 3,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.43",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.43",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Two acoustic propagation directions use different listener/source sign combinations; beat3.59Hz.",
+        "independentCalculation": {
+          "fA": 374.90697674418607,
+          "fB": 371.31398416886543,
+          "beats": 3.592992575320636
+        },
+        "fragmentLine": 39,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 39,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-e16-43.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.44",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.44",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Source and listener motion not interchangeable in a medium.",
+        "independentCalculation": {
+          "moving_source_hz": 2000.0,
+          "moving_listener_hz": 1500.0
+        },
+        "fragmentLine": 82,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 81,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.45",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.45",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Water crests separation from emissions one period apart.",
+        "independentCalculation": {
+          "duck_speed": 0.245,
+          "rear_lambda": 0.9039999999999999
+        },
+        "fragmentLine": 108,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 107,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.46",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.46",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Two independent velocities relative to air.",
+        "independentCalculation": {
+          "approaching": 405.8089171974522,
+          "receding": 306.8235294117647
+        },
+        "fragmentLine": 136,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 135,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.47",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.47",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Stationary source and receding detector.",
+        "independentCalculation": {
+          "u": 19.846153846153854
+        },
+        "fragmentLine": 168,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 167,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.48",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.48",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Approaching source fixes the beat branch to266Hz.",
+        "independentCalculation": {
+          "u": 7.7593984962406015
+        },
+        "fragmentLine": 197,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 196,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.49",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.49",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Equal lab velocities keep frequency500Hz; relative wave speed355 and wavelength.710m.",
+        "independentCalculation": {
+          "relative_speed": 355,
+          "lambda_m": 0.71,
+          "frequency": 500.0
+        },
+        "fragmentLine": 230,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 229,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.50",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.50",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Two Doppler legs; wavelength uses374m/s in driver frame.",
+        "independentCalculation": {
+          "mirror_f": 2063.6942675159235,
+          "received_f": 2120.389164975152,
+          "wavelength": 0.17638271604938272
+        },
+        "fragmentLine": 262,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 261,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.51",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.51",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Moving reflector double shift, preserve found car velocity when police changes speed.",
+        "independentCalculation": {
+          "speed": 7.020408163265306,
+          "new_echo": 1404.320987654321
+        },
+        "fragmentLine": 302,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 301,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.52",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.52",
+        "sourcePDFPages": [
+          557
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Intercept is source600Hz, slope f/v.",
+        "independentCalculation": {
+          "source_hz": 600,
+          "sound_speed": 342.85714285714283
+        },
+        "fragmentLine": 350,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 349,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.53",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.53",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Mach cone delay from overhead2.94s.",
+        "independentCalculation": {
+          "angle_degrees": 36.031879072470566,
+          "delay": 2.9385531559651845,
+          "plane_horizontal_distance": 1718.4658856084397
+        },
+        "fragmentLine": 380,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 379,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.54",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.54",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Same true speed with different local speed of sound.",
+        "independentCalculation": {
+          "mach": 1.1791784033620962,
+          "speed": 390.30805151285387,
+          "mph": 873.094245510142,
+          "mach_low": 1.1346164288164358,
+          "angle_low": 61.80626539766656
+        },
+        "fragmentLine": 408,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 407,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.55",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.55",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Linearization error versus omitted correction distinguished.",
+        "independentCalculation": {
+          "v0": 332.1651823014166,
+          "linear20": 344.1611721611722,
+          "exact20": 343.94624335064094,
+          "linear120": 404.967032967033,
+          "exact120": 398.3391894982339,
+          "relative_omitted_correction": 0.10989010989010989
+        },
+        "fragmentLine": 446,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 445,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.56",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.56",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Pressure/particle amplitude/intensity and inverse-square spreading.",
+        "independentCalculation": {
+          "intensity": 1.584893192461114e-07,
+          "pressure": 0.01143891524444471,
+          "amplitude": 7.5132386492653e-09,
+          "distance": 62.94627058970838
+        },
+        "fragmentLine": 504,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 503,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.57",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.57",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Independent travel-time quadrature; cold-layer horizontal distance295m.",
+        "independentCalculation": {
+          "time": 0.8792341947128746,
+          "horizontal": 294.7928095996376
+        },
+        "fragmentLine": 552,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 551,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.58",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.58",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Static torque gives separate wire tensions and frequencies.",
+        "independentCalculation": {
+          "FA": 128.75,
+          "FB": 221.25,
+          "fA": 88.33476270999036,
+          "fB": 115.7976291168818,
+          "beats": 27.462866406891436
+        },
+        "fragmentLine": 602,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 601,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-p16-58.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.59",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.59",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Consecutive odd harmonics7/9 distinguish stopped pipe.",
+        "independentCalculation": {
+          "closed_fundamental": 196,
+          "harmonics": [
+            7.0,
+            9.0
+          ],
+          "length": 0.4387755102040816
+        },
+        "fragmentLine": 650,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 648,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.60",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.60",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Use helium999m/s at293.15K; temperature373.75K.",
+        "independentCalculation": {
+          "temperature_K": 373.74648883117356,
+          "temperature_C": 100.59648883117359
+        },
+        "fragmentLine": 687,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 685,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.61",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.61",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Finite phase-path orders; boundary threshold86Hz and unequal-amplitude caveat.",
+        "independentCalculation": {
+          "opposite_phase_positions": [
+            9.006585192216422,
+            2.7096780572694192,
+            1.2747864261983866,
+            0.5344684385382061,
+            0.02567499868164314
+          ],
+          "same_phase_positions": [
+            4.33875177978168,
+            1.840294257237779,
+            0.8612165796551178,
+            0.2619838633127671
+          ],
+          "threshold": 86.0
+        },
+        "fragmentLine": 717,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 715,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-p16-61.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.62",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.62",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Bat hears its own fixed clock plus double-Doppler echo.",
+        "independentCalculation": {
+          "speed": 0.8075117370892019
+        },
+        "fragmentLine": 783,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 780,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.63",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.63",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Water1482m/s; two-leg moving whale.",
+        "independentCalculation": {
+          "wavelength": 0.08233333333333333,
+          "shift": 120.6458819945161
+        },
+        "fragmentLine": 809,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 806,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.64",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.64",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Explicit estimates, no claimed measurement.",
+        "independentCalculation": {
+          "chosen_delay": 3,
+          "chosen_level": 80,
+          "chosen_duration": 2,
+          "distance": 1032.0,
+          "power": 1338.3486297187264,
+          "energy": 2676.697259437453
+        },
+        "fragmentLine": 841,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 838,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.65",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.65",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Explicit acoustic estimates and solid-ball translational+rotational energy.",
+        "independentCalculation": {
+          "chosen_level": 90,
+          "chosen_duration": 0.5,
+          "chosen_ball_time": 2.5,
+          "power": 4.071504079052372,
+          "energy": 2.035752039526186,
+          "kinetic": 232.2432,
+          "fraction": 0.008765604502203664
+        },
+        "fragmentLine": 884,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 881,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.66",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.66",
+        "sourcePDFPages": [
+          558
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Moving heart wall two Doppler legs, not only one.",
+        "independentCalculation": {
+          "wall_speed": 0.02699951400874784
+        },
+        "fragmentLine": 937,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 934,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.67",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.67",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Independent inverse reconstruction of moving-bat/moving-insect reflection.",
+        "independentCalculation": {
+          "insect_speed": 1.9663972087627286
+        },
+        "fragmentLine": 969,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 966,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.68",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.68",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Subsonic instantaneous-source extrema at equilibrium crossings.",
+        "independentCalculation": {
+          "max_ratio": "v/(v-U)",
+          "min_ratio": "v/(v+U)",
+          "U": "2*pi*fp*Ap",
+          "valid_domain": "U<v",
+          "position": "equilibrium, upward for max and downward for min"
+        },
+        "fragmentLine": 1033,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1030,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.69",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.69",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Far-listener approximation stated because source omits distance.",
+        "independentCalculation": {
+          "far_field_approx": true,
+          "speed": 5.890486225480862,
+          "source": 1099.0415335463258,
+          "max_beats": 37.649929123843094
+        },
+        "fragmentLine": 1063,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1060,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.70",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.70",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Independent least-squares v²/Celsius and nitrogen identification qualified.",
+        "independentCalculation": {
+          "slope": 416.4714285714285,
+          "intercept": 113462.52380952382,
+          "R2": 0.9999269217748767,
+          "molar_mass_g": 27.948135697869866
+        },
+        "fragmentLine": 1113,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1110,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/solution-s16-70-fit.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.71",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.71",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Successive resonances cancel end correction;7.5mm extension.",
+        "independentCalculation": {
+          "speed": 375.00000000000006,
+          "gamma": 1.391204175151438,
+          "end_correction": 0.007500000000000007
+        },
+        "fragmentLine": 1166,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1167,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.72",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.72",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Light Doppler, explicit2026reference year, image expansion age versus light travel separated.",
+        "independentCalculation": {
+          "reference_year": 2026,
+          "expansion": 1179807.5422180523,
+          "approx_expansion": 1182136.6024518998,
+          "diameter_m": 7.237880289692e+16,
+          "diameter_ly": 7.64515287357298,
+          "distance_ly": 5256.419920656543,
+          "astronomical_explosion_year": -4202.419920656543,
+          "approx_BCE": 4203.419920656543
+        },
+        "fragmentLine": 1213,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1214,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.73",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.73",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Torque plus open-pipe/string resonance;h.430m.",
+        "independentCalculation": {
+          "f": 441.025641025641,
+          "height": 0.42980353734824917,
+          "tension": 201.21283389105128
+        },
+        "fragmentLine": 1293,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1294,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/solution-s16-73-forces.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.74",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.74",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Integer path-order enumeration16+50 and34extra, nearest1.52cm.",
+        "independentCalculation": {
+          "first_count": 16,
+          "far_distance_to_door": 10.255225007550585,
+          "other_frequency": 1320,
+          "total_second": 50,
+          "extra_count": 34,
+          "nearest_extra": 0.015159175169286889
+        },
+        "fragmentLine": 1342,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1342,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.75",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.75",
+        "sourcePDFPages": [
+          559
+        ],
+        "sourceSubparts": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Pressure-integral displacement, phase direction, piecewise acceleration and corners.",
+        "independentCalculation": {
+          "period": 0.0005813953488372093,
+          "displacement_amp": 7.0420948260320885e-06,
+          "max_particle_speed": 0.09689922480620154,
+          "piecewise_acceleration": 666.6666666666667,
+          "differentiability": "One-sided acceleration at triangular corners; no two-sided derivative there."
+        },
+        "fragmentLine": 1416,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1416,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-p16-75.png",
+        "/vat-ly-1/bai-giang/img/young-16/solution-s16-75-pressure-time.svg",
+        "/vat-ly-1/bai-giang/img/young-16/solution-s16-75-displacement-space.svg",
+        "/vat-ly-1/bai-giang/img/young-16/solution-s16-75-displacement-time.svg"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.76",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.76",
+        "sourcePDFPages": [
+          560
+        ],
+        "sourceSubparts": [
+          "a",
+          "b"
+        ],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Distributed spring continuum recoversLsqrt(k/m).",
+        "independentCalculation": {
+          "speed": 4.898979485566356
+        },
+        "fragmentLine": 1510,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1506,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.77",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.77",
+        "sourcePDFPages": [
+          560
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Wait for round-trip echo7700pulses/s.",
+        "independentCalculation": {
+          "round_trip": 0.00012987012987012987,
+          "pulses": 7700.0,
+          "choice": "b"
+        },
+        "fragmentLine": 1565,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1561,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.78",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.78",
+        "sourcePDFPages": [
+          560
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "One-way attenuation −10dB gives.1.",
+        "independentCalculation": {
+          "level_change_dB": -10.0,
+          "intensity_ratio": 0.1,
+          "choice": "d"
+        },
+        "fragmentLine": 1591,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1587,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.79",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.79",
+        "sourcePDFPages": [
+          560
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Bone twice faster makes inferred depth6cm versus true7cm.",
+        "independentCalculation": {
+          "measured": 0.06,
+          "true": 0.07,
+          "error": 0.010000000000000009,
+          "choice": "a"
+        },
+        "fragmentLine": 1620,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1616,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.80",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.80",
+        "sourcePDFPages": [
+          560
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Adjacent antinodes.770mm; closest option.75mm.",
+        "independentCalculation": {
+          "antinode_spacing_m": 0.00077,
+          "nearest_choice": "b:0.75mm"
+        },
+        "fragmentLine": 1646,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1642,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "16.81",
+      "kind": "numbered-b",
+      "independentSourceReview": {
+        "id": "16.81",
+        "sourcePDFPages": [
+          560
+        ],
+        "sourceSubparts": [],
+        "allPromptPartsReadAndCompared": true,
+        "modelReview": "Given attenuation model only, no clinical recommendation.",
+        "independentCalculation": {
+          "choice": "d",
+          "attenuation_model": "Less intensity attenuation at lower frequency for fixed path length; not a clinical recommendation."
+        },
+        "fragmentLine": 1672,
+        "status": "passed-with-two-parent-precision-corrections"
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md",
+      "line": 1668,
+      "sha256": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [],
+      "status": "source-numeric-and-browser-reviewed"
+    },
+    {
+      "id": "Bài tập cầu nối",
+      "kind": "bridge",
+      "independentSourceReview": {
+        "id": "bridge",
+        "sourcePdfPages": [
+          553,
+          554
+        ],
+        "sourcePromptObligations": [
+          "in-phase isotropic speakers172 Hz7.00 m apart",
+          "PA8.00e-4 W, PB6.00e-5 W,20 C",
+          "C between speakers4.00 m from A and3.00 m from B, original H16.39",
+          "(a) Phase difference",
+          "(b) Individual intensity and level for each speaker alone",
+          "(c) Combined intensity and level",
+          "nine source guide questions before solution, corresponding nine solution steps"
+        ],
+        "choices": "No multiple-choice options in this review scope.",
+        "destination": {
+          "file": "frozen-inputs/proposed-fragments/parent-16-bai-tap-cau-noi.md",
+          "startLine": 1,
+          "endLine": 209
+        },
+        "promptComparison": "All source prompt obligations retained.",
+        "reasoningReview": "pi rad; IA3.98e-6,IB5.31e-7 W/m2,66.0/57.2 dB; pressure-equivalent Iq1.60e-6 W/m2,62.1 dB, explicitly distinct from signed flux IA-IB.",
+        "numerics": "Own checks.py where numerical; conceptual reasoning independently reviewed.",
+        "status": "pass",
+        "findingIds": []
+      },
+      "destination": "raw_materials/physics/translations/chapter-16/parent-16-bai-tap-cau-noi.md",
+      "line": 1,
+      "sha256": "6ae7cf7b6d8aefeff55f1af1b22e69ad0a2c5e4c7ff6f9a7ded4eae7141ab24e",
+      "closedSolution": true,
+      "stages": [
+        "Tóm tắt đề bài",
+        "Hướng đi",
+        "Lời giải"
+      ],
+      "imagePaths": [
+        "/vat-ly-1/bai-giang/img/young-16/r-exercises-figure-16-39.png"
+      ],
+      "status": "source-numeric-and-browser-reviewed"
+    }
+  ],
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-16/00-mo-dau.md": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082",
+    "raw_materials/physics/translations/chapter-16/01-muc-01.md": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23",
+    "raw_materials/physics/translations/chapter-16/02-muc-02.md": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624",
+    "raw_materials/physics/translations/chapter-16/03-muc-03.md": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c",
+    "raw_materials/physics/translations/chapter-16/04-muc-04.md": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba",
+    "raw_materials/physics/translations/chapter-16/05-muc-05.md": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee",
+    "raw_materials/physics/translations/chapter-16/06-muc-06.md": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010",
+    "raw_materials/physics/translations/chapter-16/07-muc-07.md": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8",
+    "raw_materials/physics/translations/chapter-16/08-muc-08.md": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72",
+    "raw_materials/physics/translations/chapter-16/09-muc-09.md": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e",
+    "raw_materials/physics/translations/chapter-16/17-tom-tat.md": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204",
+    "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+    "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+    "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+    "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+    "raw_materials/physics/translations/chapter-16/parent-16-bai-tap-cau-noi.md": "6ae7cf7b6d8aefeff55f1af1b22e69ad0a2c5e4c7ff6f9a7ded4eae7141ab24e"
+  }
+}

@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "toc-do-truyen-am"
+section: "topic"
 title: "Tốc độ truyền âm"
 description: "Cơ tính, khối lượng riêng và nhiệt độ quyết định tốc độ truyền ra sao?"
 ---

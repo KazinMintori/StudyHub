@@ -1,0 +1,167 @@
+{
+  "chapter": 16,
+  "status": "source-reviewed-exercises-and-render-verified",
+  "exerciseConfig": {
+    "numbered": 81,
+    "total": 119,
+    "guided": 12,
+    "discussion": 25,
+    "half": 41,
+    "files": [
+      [
+        "guided",
+        "parent-09-luyen-tap-huong-dan.md"
+      ],
+      [
+        "discussion",
+        "parent-10-cau-hoi-thao-luan.md"
+      ],
+      [
+        "numbered-a",
+        "parent-11-bai-tap-001-041.md"
+      ],
+      [
+        "numbered-b",
+        "parent-12-bai-tap-042-081.md"
+      ],
+      [
+        "bridge",
+        "parent-16-bai-tap-cau-noi.md"
+      ]
+    ]
+  },
+  "sourcePDFPages": [
+    553,
+    560
+  ],
+  "sourceCounts": {
+    "numbered": 81,
+    "guided": 12,
+    "discussion": 25,
+    "bridge": 1,
+    "bridgeGuideParts": 9,
+    "challenge": 2,
+    "MCAT": 5,
+    "total": 119
+  },
+  "reviewedFileHashes": {
+    "raw_materials/physics/translations/chapter-16/00-mo-dau.md": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082",
+    "raw_materials/physics/translations/chapter-16/01-muc-01.md": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23",
+    "raw_materials/physics/translations/chapter-16/02-muc-02.md": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624",
+    "raw_materials/physics/translations/chapter-16/03-muc-03.md": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c",
+    "raw_materials/physics/translations/chapter-16/04-muc-04.md": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba",
+    "raw_materials/physics/translations/chapter-16/05-muc-05.md": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee",
+    "raw_materials/physics/translations/chapter-16/06-muc-06.md": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010",
+    "raw_materials/physics/translations/chapter-16/07-muc-07.md": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8",
+    "raw_materials/physics/translations/chapter-16/08-muc-08.md": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72",
+    "raw_materials/physics/translations/chapter-16/09-muc-09.md": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e",
+    "raw_materials/physics/translations/chapter-16/17-tom-tat.md": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204",
+    "raw_materials/physics/translations/chapter-16/parent-09-luyen-tap-huong-dan.md": "437fc5ec6bf05cde0ea40870fcf3ebf2a8f04693ec27cb819a85c08b00eda035",
+    "raw_materials/physics/translations/chapter-16/parent-10-cau-hoi-thao-luan.md": "dcff4e54f7a60dc3d00c11cf4e14eb466a98be7d5e2ab4dad4aacf74084014a1",
+    "raw_materials/physics/translations/chapter-16/parent-11-bai-tap-001-041.md": "763218cc16711453e1ea2bc845974c60a6ab85226825c38b1913f3c856295613",
+    "raw_materials/physics/translations/chapter-16/parent-12-bai-tap-042-081.md": "9c92b8a2ef8a35eb7062c87b3bca6056b2a9957493c535c6a15d17bb03f864be",
+    "raw_materials/physics/translations/chapter-16/parent-16-bai-tap-cau-noi.md": "6ae7cf7b6d8aefeff55f1af1b22e69ad0a2c5e4c7ff6f9a7ded4eae7141ab24e"
+  },
+  "figures": {
+    "newOriginalCrops": 10,
+    "newRequiredSolutionDiagrams": 7,
+    "uniqueExerciseImagePaths": 17,
+    "allOriginalPixelsPreserved": true,
+    "actualEnglishPairs": 48,
+    "E16_37_lowerSpeakerRestored": true,
+    "E16_7_precedingProseTrimmed": true
+  },
+  "numeric": {
+    "authorEarlyAssertions": 75,
+    "authorLateAssertions": 215,
+    "authorGuidedAssertions": 108,
+    "independentEarlyAssertions": 140,
+    "independentLateParentAssertions": 65,
+    "independentGuidedAssertions": 81,
+    "independentEarlySvgVertices": 14412,
+    "independentLatePressureDisplacementVertices": 2403,
+    "parentPublicPlotAndGeometryAssertions": 2420,
+    "note": "Overlapping assertions and sampled plot vertices are not counts of distinct exercises."
+  },
+  "math": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 28,
+    "inlineLimitEx": 27,
+    "display": 356,
+    "inline": 1075,
+    "findings": []
+  },
+  "browser": {
+    "status": "passed",
+    "groups": 22,
+    "sourceUnits": 119,
+    "cases": 110,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "allSolutionsInitiallyClosed": true,
+    "solutionDiagramBoundingCases": 7
+  },
+  "parentCorrections": [
+    "Restored lower speaker and arrow in E16.37; trimmed preceding prose out of E16.7.",
+    "Q16.25 explicitly states the lower-frequency aircraft sound heard atC after the boom.",
+    "16.61 names pressure-equivalent intensity, separate from vector energy flux.",
+    "16.81 keeps physical frequency units in attenuation product."
+  ],
+  "responsiveTableChanges": [
+    {
+      "file": "parent-11-bai-tap-001-041.md",
+      "oldColumns": 4,
+      "oldDataRows": 3,
+      "allCellTextPreserved": true,
+      "beforeSHA256": "e9987127f45e6b40585fbd35cdb7c4686fe9e4266310e60a188555a1ef873c47",
+      "afterSHA256": "bbf1fe258b85d213f7c53945d8cc3097aef02b67faeb7ee5ca621fbc9c3f5563"
+    },
+    {
+      "file": "parent-11-bai-tap-001-041.md",
+      "oldColumns": 4,
+      "oldDataRows": 4,
+      "allCellTextPreserved": true,
+      "beforeSHA256": "be6971aca68e70969025cf001b35340e6df444328bf5c1892cd541472c003955",
+      "afterSHA256": "21db6253563cc03d6b2e2f8c02fe25a80ee3fcaab3b13ced86b144bcd7f6701c"
+    },
+    {
+      "file": "parent-11-bai-tap-001-041.md",
+      "oldColumns": 3,
+      "oldDataRows": 3,
+      "allCellTextPreserved": true,
+      "beforeSHA256": "8d0446e0d8197ca0e867f640f269018216114fa7f229c444634e286cfc94d852",
+      "afterSHA256": "66c3774e457bd0d0b58c16217d364bd8894dbd14017891c0f2c29436a2b22ec5"
+    },
+    {
+      "file": "parent-11-bai-tap-001-041.md",
+      "oldColumns": 3,
+      "oldDataRows": 3,
+      "allCellTextPreserved": true,
+      "beforeSHA256": "73ebf93ae6470430921c93a0b59a22be3f22800ffc23fe43760f3127f0514fb2",
+      "afterSHA256": "4df216ecf5630f96e27237c37d02128613c7bc37c3454c1313d1bf525436ee18"
+    },
+    {
+      "file": "parent-12-bai-tap-042-081.md",
+      "oldColumns": 7,
+      "oldDataRows": 1,
+      "allCellTextPreserved": true,
+      "beforeSHA256": "28da326a7d5dc697f452a88c2aa38655301cf516510d5eeb138a617d4eba4ffc",
+      "afterSHA256": "2809cfcae89fe95c236be81f7710d2bed46d217d5c36173fd7515af25f5c7971"
+    }
+  ],
+  "sourceClarifications": [
+    "Source sound speeds and gas properties retained per problem, includinghelium999m/s.",
+    "Pressure-equivalent intensity of counterpropagating sound is distinct from signed energy flux.",
+    "16.69 far-field approximation stated because listener distance is unspecified.",
+    "16.72 reference year2026 explicit, source1054observation date distinguished from actual explosion time.",
+    "16.74 phase minima counts use a qualified model when amplitudes vary.",
+    "16.75 triangular-pressure corners have one-sided acceleration limits; three required plots cover two periods/wavelengths.",
+    "MCAT has five questions16.77–16.81.0.770mmcomputed spacing compared with nearest listed0.75mmchoice."
+  ]
+}

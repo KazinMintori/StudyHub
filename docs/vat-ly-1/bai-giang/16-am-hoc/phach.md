@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "phach"
+section: "topic"
 title: "Phách"
 description: "Hai tần số gần nhau tạo nhịp lớn nhỏ với tần số nào?"
 ---

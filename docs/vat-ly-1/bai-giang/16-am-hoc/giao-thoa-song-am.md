@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "giao-thoa-song-am"
+section: "topic"
 title: "Giao thoa sóng âm"
 description: "Pha và hiệu đường đi tạo các vùng âm mạnh, yếu như thế nào?"
 ---

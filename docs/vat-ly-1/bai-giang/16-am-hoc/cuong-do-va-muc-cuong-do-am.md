@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "cuong-do-va-muc-cuong-do-am"
+section: "topic"
 title: "Cường độ và mức cường độ âm"
 description: "Biên độ áp suất, biên độ li độ và decibel liên hệ như thế nào?"
 ---

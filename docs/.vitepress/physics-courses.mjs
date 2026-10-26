@@ -1104,7 +1104,7 @@ export const physics1Course = {
     "nut-va-bung-song",
     "hoa-am-va-am-boi"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 16,
   "sourceChapter": 16,
   "topicGroups": [
@@ -1167,7 +1167,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "17-nhiet-do-nhiet-luong",
@@ -2503,6 +2504,102 @@ export const physics1Course = {
       "Họa âm thứ nhất là âm cơ bản. Họa âm thứ hai là âm bồi thứ nhất. Âm bồi thứ hai là họa âm thứ ba."
     ],
     "formula": "$$\nL=n\\frac\\lambda2\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Sóng âm và áp suất",
+    "bullets": [
+      "Trong chất lưu, dao động phần tử song song phương truyền. x là tọa độ cân bằng, y là li độ dọc, A là biên độ li độ.",
+      "p là áp suất dư so với cân bằng, B>0 là môđun khối. Biến dạng thể tích nhỏ và chuyển động dọc một chiều.",
+      "Với sóng hình sin, p và y lệch pha một phần tư chu kỳ tại cùng vị trí. Biên độ áp suất không phải li độ phần tử.",
+      "Cao độ liên hệ chủ yếu với tần số. Âm sắc phụ thuộc thành phần họa âm và sự hình thành, suy giảm âm. Độ to không đồng nghĩa cao độ. Hạ âm dưới khoảng 20 Hz, miền nghe thường khoảng 20–20000 Hz, siêu âm trên miền ấy."
+    ],
+    "formula": "$$\ny=A\\cos(kx-\\omega t)\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Tốc độ truyền âm",
+    "bullets": [
+      "Mô hình biến dạng nhỏ, môi trường gần đồng nhất, rho>0. Độ phục hồi thể tích so với quán tính quyết định tốc độ.",
+      "Thanh đàn hồi tuyến tính, biến dạng ngang tự do. Y là môđun Young. Không phải công thức chung cho mọi sóng trong khối rắn.",
+      "Nén giãn âm gần đoạn nhiệt. Nhiệt độ tuyệt đối T, khối lượng mol M và tỷ số nhiệt dung gamma xác định tốc độ. Với cùng loại khí, không coi áp suất là yếu tố độc lập khi lấy B/rho.",
+      "f>0 và tốc độ pha v trong môi trường đang xét. Khi qua mặt phân cách đứng yên, tần số giữ nguyên còn bước sóng có thể đổi."
+    ],
+    "formula": "$$\nv=\\sqrt{\\frac B\\rho}\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Cường độ và mức cường độ âm",
+    "bullets": [
+      "Công suất trung bình trên diện tích vuông góc phương truyền. Công thức theo A hoặc pmax dùng cho sóng hình sin chạy trong chất lưu.",
+      "Cùng môi trường và cùng tần số, cường độ tỷ lệ bình phương biên độ li độ hoặc áp suất. Với I cố định, biên độ li độ tỷ lệ nghịch tần số.",
+      "Công suất trung bình P không bị hấp thụ. Nguồn tỏa toàn mặt cầu dùng diện tích $4\\pi r^2$. Tỏa đều trên bán cầu dùng $2\\pi r^2$.",
+      "Cường độ tham chiếu $I_0=10^{-12}\\,\\mathrm{W/m^2}$. Logarit cơ số 10, đối số là tỷ số không thứ nguyên. Đơn vị mức là dB."
+    ],
+    "formula": "$$\nI=\\frac12\\rho v\\omega^2A^2\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Sóng âm dừng và các dạng riêng",
+    "bullets": [
+      "Đầu kín là nút li độ, bụng áp suất. Đầu hở gần là bụng li độ, nút áp suất. Nút/bụng phải chỉ rõ đại lượng.",
+      "Trong sóng dừng một chiều hình sin, hai nút kế tiếp hoặc hai bụng kế tiếp cách $\\lambda/2$. Nút và bụng kề nhau cách $\\lambda/4$.",
+      "Cột khí đều dài hiệu dụng L, bỏ hiệu chỉnh đầu ống. n=1,2,3,… là mọi số nguyên dương.",
+      "Cột khí đều dài hiệu dụng L, một đầu kín và đầu kia hở. n=1,3,5,… chỉ nhận số nguyên dương lẻ."
+    ],
+    "formula": "$$\nd_{NN}=\\frac\\lambda2\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Cộng hưởng âm",
+    "bullets": [
+      "Đáp ứng tăng mạnh khi tần số kích thích gần một tần số riêng. Đỉnh phụ thuộc hình học, độ cản và đại lượng đáp ứng. Cản yếu cho đỉnh gần tần số riêng không cản.",
+      "Hai hệ ghép cộng hưởng có thể cùng tần số nhưng khác bước sóng vì tốc độ truyền khác nhau.",
+      "Ở trạng thái ổn định có cản, công suất trung bình nhận cân bằng công suất tiêu tán. Hệ lý tưởng không cản kích thích đúng tần số riêng không có biên độ ổn định hữu hạn."
+    ],
+    "formula": "$$\nf_a=f_b\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Giao thoa sóng âm",
+    "bullets": [
+      "Hai nguồn cùng tần số, cùng pha ban đầu. Pha tới phụ thuộc chênh đường truyền. Nguồn lệch pha ban đầu cần tính thêm độ lệch ấy.",
+      "Hai nguồn cùng pha và cùng tần số. n=0,1,2,… là số nguyên không âm.",
+      "Hai nguồn cùng pha và cùng tần số. n=1,3,5,… là số nguyên dương lẻ. Triệt tiêu áp suất hoàn toàn còn cần biên độ tới bằng nhau.",
+      "Năng lượng được phân bố lại, không biến mất. Với hai sóng tới không song song, tổng áp suất bằng không không tự làm tổng vector li độ bằng không."
+    ],
+    "formula": "$$\nd=|r_2-r_1|\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Phách",
+    "bullets": [
+      "Hai âm gần tần số tạo nhịp lớn nhỏ. Pha ban đầu không đổi khoảng cách giữa hai cực đại bao liên tiếp.",
+      "Hai dao động có cùng biên độ A. Đặt $\\Delta f=f_a-f_b$ và $\\bar f=(f_a+f_b)/2$. Với pha đầu đối nhau, $h=\\pi\\Delta f\\,t$ và $g=2\\pi\\bar f\\,t$.",
+      "Biết một tần số và tần số phách chỉ cho hai khả năng cao hơn hoặc thấp hơn. Phách khác âm hiệu có thể xuất hiện do đáp ứng phi tuyến."
+    ],
+    "formula": "$$\nf_{\\mathrm{ph}}=|f_a-f_b|\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Hiệu ứng Doppler",
+    "bullets": [
+      "Nguồn S và người nghe L chuyển động dọc đường nối, vận tốc đo so với môi trường. Chiều dương từ L tới S. Xét miền dưới tốc độ âm, v>0.",
+      "Nguồn đứng yên đối với môi trường. Người nghe tiến về nguồn có $v_L>0$, ra xa có $v_L<0$.",
+      "u>0 là tốc độ nguồn đối với môi trường, u<v. Phía trước và phía sau được xác định theo chiều nguồn chuyển động.",
+      "Bề mặt nhận sóng ở lượt tới, rồi là nguồn ở lượt phản xạ. Tần số phát lại trong hệ bề mặt bằng tần số bề mặt nhận. Cần hai lần đổi vai nguồn/người nghe."
+    ],
+    "formula": "$$\nf_L=\\frac{v+v_L}{v+v_S}f_S\n$$"
+  },
+  {
+    "note": "16-am-hoc",
+    "title": "Sóng xung kích và số Mach",
+    "bullets": [
+      "Tốc độ vật $v_S$ đo so với môi trường, tốc độ âm $v>0$. Vượt âm ứng với $M>1$.",
+      "Nguồn chuyển động đều vượt âm trong môi trường đồng nhất. Góc $\\alpha$ giữa một đường sinh nón và phương vận tốc là nửa góc mở nón.",
+      "Tiếng nổ xuất hiện khi mặt xung kích đi qua người nghe. Vật tạo xung kích liên tục khi còn vượt âm, không chỉ lúc vừa vượt Mach 1 hoặc chỉ khi động cơ phát tiếng. Công thức Doppler phía trước nguồn dưới âm không được kéo dài sang nguồn vượt âm."
+    ],
+    "formula": "$$\nM=\\frac{v_S}{v}\n$$"
   }
 ],
   "contentPolicy": "full-source-translation"

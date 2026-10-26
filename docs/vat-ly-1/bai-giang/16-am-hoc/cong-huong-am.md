@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "cong-huong-am"
+section: "topic"
 title: "Cộng hưởng âm"
 description: "Vì sao một cột khí hoặc dây đàn có thể rung mạnh do nguồn âm bên ngoài?"
 ---

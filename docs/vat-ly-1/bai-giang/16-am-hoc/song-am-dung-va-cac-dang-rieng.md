@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "song-am-dung-va-cac-dang-rieng"
+section: "topic"
 title: "Sóng âm dừng và các dạng dao động riêng"
 description: "Điều kiện đầu ống chọn tần số và các nút, bụng của đại lượng nào?"
 ---

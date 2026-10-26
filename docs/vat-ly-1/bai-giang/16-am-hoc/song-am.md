@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "song-am"
+section: "topic"
 title: "Sóng âm"
 description: "Li độ phần tử và biến thiên áp suất mô tả cùng một sóng âm như thế nào?"
 ---

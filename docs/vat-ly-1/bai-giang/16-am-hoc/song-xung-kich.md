@@ -1,8 +1,8 @@
 ---
 course: "vat-ly-1"
 lecture: "16-am-hoc"
-section: "topic"
 topic: "song-xung-kich"
+section: "topic"
 title: "Sóng xung kích"
 description: "Nguồn vượt âm tạo mặt nón và tiếng nổ tại người nghe như thế nào?"
 ---
