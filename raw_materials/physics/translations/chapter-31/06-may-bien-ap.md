@@ -29,7 +29,7 @@ Hai suất điện động, với chiều quấn và quy ước dấu thống nh
 $$
 \begin{aligned}
 \mathcal E_1 &= -N_1\frac{d\Phi_B}{dt}, \\
-\mathcal E_2 &= -N_2\frac{d\Phi_B}{dt}.\tag{31.33}
+\mathcal E_2 &= -N_2\frac{d\Phi_B}{dt}.
 \end{aligned} \tag{31.33}
 $$
 
@@ -103,7 +103,7 @@ Suy ra
 $$
 \begin{aligned}
 \frac{V_1}{I_1} &= \frac R{n^2}, \\
-n &= \frac{N_2}{N_1}.\tag{31.37}
+n &= \frac{N_2}{N_1}.
 \end{aligned} \tag{31.37}
 $$
 

@@ -1,4 +1,4 @@
-import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted, toValue } from 'vue'
 import { getStorage, writeStored } from '../../../core/storage/index.js'
 import {
   filterCardsByCourse,
@@ -10,6 +10,7 @@ import {
   resetCardReviews
 } from '../services/flashcardService.mjs'
 import { cards as defaultCards } from '../data/flashcards.mjs'
+import { normalizeWorkspaceCourse } from '../services/courseWorkspaceService.mjs'
 
 export function useFlashcards(options = {}) {
   const allCards = options.cards || defaultCards
@@ -34,6 +35,10 @@ export function useFlashcards(options = {}) {
     index.value = 0
     revealed.value = false
   })
+
+  watch(() => toValue(options.courseId), id => {
+    if (id) subject.value = normalizeWorkspaceCourse(id, getCourses())
+  }, { immediate: true, flush: 'sync' })
 
   function review(known) {
     if (!current.value) return

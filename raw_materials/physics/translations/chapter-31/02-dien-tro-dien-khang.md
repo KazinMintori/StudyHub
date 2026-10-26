@@ -15,7 +15,7 @@ Với điện trở thuần $R$, định luật Ohm áp dụng tại từng th�
 $$
 \begin{aligned}
 v_R &= iR \\
-&= IR\cos\omega t.\tag{31.6}
+&= IR\cos\omega t.
 \end{aligned} \tag{31.6}
 $$
 
@@ -68,7 +68,7 @@ Lấy đạo hàm dòng hình sin:
 $$
 \begin{aligned}
 v_L &= L\frac d{dt}(I\cos\omega t) \\
-&= -I\omega L\sin\omega t.\tag{31.9}
+&= -I\omega L\sin\omega t.
 \end{aligned} \tag{31.9}
 $$
 

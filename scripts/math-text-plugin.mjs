@@ -41,8 +41,9 @@ export function mathTextPlugin() {
       const browser = !options?.ssr
       // Course content can live in dedicated modules, including new subjects and cheatsheets.
       const courseContent = /[/\\]src[/\\]content[/\\]courses[/\\].*\.mjs$/.test(file)
+      const labContent = /[/\\]docs[/\\]\.vitepress[/\\]labs[/\\].*\.mjs$/.test(file)
       const cheatsheetService = /[/\\]src[/\\]features[/\\]lecture[/\\]services[/\\]cheatsheet-service\.mjs$/.test(file)
-      if (!courseContent && !cheatsheetService && !/[/\\](?:concepts|course-catalog|math-labels|cheatsheets|[\w-]+-(?:course|courses|foundations))\.mjs$/.test(file)) return
+      if (!courseContent && !labContent && !cheatsheetService && !/[/\\](?:concepts|course-catalog|math-labels|cheatsheets|[\w-]+-(?:course|courses|foundations|cheatsheets))\.mjs$/.test(file)) return
       const expressions = new Set()
       // Read string values from syntax, including raw templates and the small
       // pure string helpers used to wrap display formulas. Never execute a module.

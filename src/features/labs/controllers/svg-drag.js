@@ -5,7 +5,7 @@ export function svgPoint(svg, event) {
   const point = svg.createSVGPoint()
   point.x = event.clientX
   point.y = event.clientY
-  return point.matrixTransform(matrix.inverse())
+  try { return point.matrixTransform(matrix.inverse()) } catch { return null }
 }
 
 // view: { x0, x1, y0, y1, width, height, pad } ánh xạ hệ tọa độ toán học sang tọa độ SVG (trục y hướng lên).
@@ -22,27 +22,38 @@ export function makeView({ x0, x1, y0, y1, width = 400, height = 300, pad = 0 })
 export function createDragger(svgRef, view, onMove, { step = 0.1, snap = 0 } = {}) {
   let active = null
   const round = v => (snap ? Math.round(v / snap) * snap : v)
+  const constrained = (point, v) => [
+    Math.min(v.x1, Math.max(v.x0, round(point[0]))),
+    Math.min(v.y1, Math.max(v.y0, round(point[1])))
+  ]
   return {
     start(name, event) {
-      active = name
+      if (active || event.isPrimary === false || (event.button !== undefined && event.button !== 0)) return
+      active = { name, pointerId: event.pointerId, target: event.currentTarget }
       event.currentTarget?.setPointerCapture?.(event.pointerId)
       event.preventDefault()
     },
     move(event) {
-      if (!active || !svgRef.value) return
+      if (!active || event.pointerId !== active.pointerId || !svgRef.value) return
       const p = svgPoint(svgRef.value, event)
       if (!p) return
       const [x, y] = view.value.toWorld(p.x, p.y)
-      onMove(active, [round(x), round(y)])
+      onMove(active.name, constrained([x, y], view.value))
     },
-    end() { active = null },
+    end(event) {
+      if (!active || (event && event.pointerId !== active.pointerId)) return
+      const { target, pointerId } = active
+      active = null
+      if (target?.hasPointerCapture?.(pointerId)) target.releasePointerCapture(pointerId)
+    },
     key(name, current, event) {
-      const moves = { ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, step], ArrowDown: [0, -step] }
+      const distance = step * (event.shiftKey ? 5 : 1)
+      const moves = { ArrowLeft: [-distance, 0], ArrowRight: [distance, 0], ArrowUp: [0, distance], ArrowDown: [0, -distance] }
       const d = moves[event.key]
       if (!d) return
       event.preventDefault()
       const v = view.value
-      onMove(name, [Math.min(v.x1, Math.max(v.x0, round(current[0] + d[0]))), Math.min(v.y1, Math.max(v.y0, round(current[1] + d[1])))])
+      onMove(name, constrained([current[0] + d[0], current[1] + d[1]], v))
     }
   }
 }

@@ -3,6 +3,7 @@
 .study-lab .lab-title { font-size: var(--fs-read); font-weight: 600; margin: 0 0 var(--space-2); line-height: 1.4; }
 .study-lab .lab-lead { font: var(--fs-ui)/1.6 var(--font-read); color: var(--ink-2); margin: 0 0 var(--space-4); }
 .study-lab svg { display: block; width: 100%; height: auto; max-height: 420px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); }
+.study-lab > svg { touch-action: pan-y pinch-zoom; }
 .study-lab svg text { font: 15px var(--font-ui); fill: var(--ink); }
 .study-lab svg .lab-small { font-size: 13px; fill: var(--ink-2); }
 .study-lab .lab-grid { stroke: var(--grid); stroke-width: 1; }
@@ -28,6 +29,7 @@
 .study-lab .lab-handle { fill: var(--tim); stroke: var(--paper); stroke-width: 2.5; cursor: grab; touch-action: none; }
 .study-lab .lab-handle:active { cursor: grabbing; }
 .study-lab .lab-handle:focus-visible { outline: none; stroke: var(--vang); stroke-width: 4; }
+.study-lab .lab-handle-selected { stroke: var(--ink); stroke-width: 4; }
 .study-lab .lab-handle-alt { fill: var(--vang); }
 .study-lab .lab-arrow-head { fill: var(--ink-2); }
 .study-lab .lab-arrow-accent { fill: var(--tim); }
@@ -36,7 +38,7 @@
 .study-lab .lab-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: var(--space-2) var(--space-5); margin: var(--space-4) 0 0; }
 .study-lab label { display: grid; gap: var(--space-1); font-size: var(--fs-ui); }
 .study-lab label.lab-check { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; }
-.study-lab input[type=range] { width: 100%; min-height: 36px; accent-color: var(--tim); }
+.study-lab input[type=range] { width: 100%; min-height: 44px; accent-color: var(--tim); }
 .study-lab select { min-height: 44px; }
 .study-lab .lab-buttons { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
 .study-lab .lab-buttons button { min-height: 44px; padding: var(--space-2) var(--space-4); border: 1px solid var(--control); border-radius: var(--radius); background: var(--paper); color: var(--ink); font-size: var(--fs-ui); }
@@ -58,4 +60,17 @@
 .study-lab .lab-legend .legend-bad::before { background: var(--do); }
 .study-lab .lab-legend .legend-warn::before { background: var(--vang); }
 .study-lab .lab-legend .legend-guide::before { background: var(--ink-3); height: 2px; }
+.study-lab .lab-point-controls { margin-top: var(--space-3); padding: var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
+.study-lab .lab-point-heading { margin: 0 0 var(--space-2); font-size: var(--fs-ui); font-weight: 600; line-height: 1.5; }
+.study-lab .lab-point-options { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--space-3); }
+.study-lab .lab-point-options select { width: 100%; min-width: 0; max-width: 100%; font-size: var(--fs-read); }
+.study-lab .lab-point-step { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; }
+.study-lab .lab-point-directions { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-2); margin-top: var(--space-3); }
+.study-lab .lab-point-directions button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-1); min-width: 0; min-height: 64px; padding: var(--space-2); border: 1px solid var(--control); border-radius: var(--radius); background: var(--paper); color: var(--ink); font: 500 var(--fs-small)/1.5 var(--font-ui); touch-action: manipulation; }
+.study-lab .lab-point-directions button:hover { border-color: var(--tim); background: var(--tim-soft); }
+.study-lab .lab-point-directions button:disabled { color: var(--ink-3); border-color: var(--rule); background: var(--canvas); cursor: default; }
+.study-lab .lab-point-directions svg { flex: 0 0 18px; width: 18px; height: 18px; max-height: none; border: 0; background: transparent; }
+.study-lab .lab-point-directions svg path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.study-lab .lab-point-readout, .study-lab .lab-point-hint { margin: var(--space-2) 0 0; color: var(--ink-2); font-size: var(--fs-small); line-height: 1.65; }
+@media (max-width: 600px) { .study-lab .lab-point-options { grid-template-columns: minmax(0, 1fr); gap: var(--space-1); } }
 @media (max-width: 480px) { .study-lab { padding: var(--space-3); } .study-lab .lab-controls { grid-template-columns: 1fr; } }

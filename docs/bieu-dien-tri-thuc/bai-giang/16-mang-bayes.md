@@ -88,8 +88,16 @@ flowchart TD
 ### Định lý phân tích nhân tử toàn cục (The Chain Rule for Bayesian Networks)
 Nhờ tính chất đồ thị, phân phối xác suất đồng thời đầy đủ của toàn bộ mạng được tính bằng tích đơn giản của các bảng xác suất có điều kiện tại từng nút:
 
+Với hai nút liên kết $X_1\to X_2$, phép phân tích là:
+
 $$
-P(X_1, X_2, \ldots, X_n) = \prod_{i=1}^n P(X_i \mid \text{Parents}(X_i))
+P(X_1,X_2) = P(X_1)P(X_2\mid X_1).
+$$
+
+Trong trường hợp tổng quát, gọi $\mathbf X=(X_1,\ldots,X_n)$ là vector các biến và $\Pi_i$ là tập biến cha trực tiếp của $X_i$. Ta có:
+
+$$
+P(\mathbf X) = \prod_{i=1}^n P(X_i\mid\Pi_i).
 $$
 
 ### Hiệu quả nén tham số của Mạng Bayes
@@ -153,7 +161,10 @@ Hai nguyên nhân độc lập $X$ (Đột nhập) và $Z$ (Động đất) cùn
 
 Nhiệm vụ cốt lõi của một hệ thống chẩn đoán là tính toán phân phối hậu nghiệm của một biến truy vấn $Q$ khi đã quan sát được tập chứng cứ $E = e$:
 $$
-P(Q \mid E = e) = \frac{P(Q, E = e)}{P(E = e)} = \alpha \sum_{H} P(Q, E = e, H)
+\begin{aligned}
+P(Q \mid E = e) &= \frac{P(Q, E = e)}{P(E = e)} \\
+&= \alpha \sum_{H} P(Q, E = e, H).
+\end{aligned}
 $$
 Trong đó $H$ là tập hợp tất cả các biến ẩn (Hidden/Unobserved variables) còn lại trong mạng.
 

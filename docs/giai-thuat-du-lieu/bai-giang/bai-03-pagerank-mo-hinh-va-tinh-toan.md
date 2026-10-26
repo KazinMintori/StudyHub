@@ -108,7 +108,13 @@ vì mỗi cột của $S$ có tổng 1. Suy ra $\|F(x)-F(y)\|_1\le\beta\|x-y\|_1
 
 ::: derivation Khai triển chi tiết: Cận hậu nghiệm (đọc thêm)
 Sai số so với nghiệm bị chặn bởi:
-$$\|r^{t+1}-r^*\|_1\le\sum_{j=t+1}^{\infty}\Delta_j\le\frac{\beta}{1-\beta}\Delta_t.$$
+$$
+\begin{aligned}
+\|r^{t+1}-r^*\|_1
+&\le\sum_{j=t+1}^{\infty}\Delta_j \\
+&\le\frac{\beta}{1-\beta}\Delta_t.
+\end{aligned}
+$$
 Lưu ý $\Delta_t=\|r^{t+1}-r^t\|_1$ đo vòng *sau*, còn cận nói về $r^{t+1}$. Và trên máy tính số dấu phẩy động, kết luận đúng cho số thực lý tưởng còn phép so sánh cần dung sai.
 :::
 
@@ -206,7 +212,17 @@ Một máy tuần tự: $8c_e$. Bốn máy, mỗi máy một tác vụ: $T_{\tex
 
 **Một vòng và cả công việc.** Giả định các pha không chồng nhau:
 
-$$T_{\text{round}}\approx T_\delta+T_{\text{map}}+T_{\text{shuffle}}+T_{\text{reduce}}+T_{\text{sync}}.$$
+Gộp thời gian Map, Shuffle và Reduce thành thời gian xử lý $T_{\mathrm{MR}}$:
+
+$$
+T_{\mathrm{MR}} = T_{\text{map}}+T_{\text{shuffle}}+T_{\text{reduce}}.
+$$
+
+Thời gian một vòng được ước lượng bởi:
+
+$$
+T_{\text{round}}\approx T_\delta+T_{\mathrm{MR}}+T_{\text{sync}}.
+$$
 
 $T_\delta$ đo pha tính tổng điểm nút cụt. $T_{\text{shuffle}}$ đo pha truyền và nhóm. $T_{\text{reduce}}$ đo pha gộp kết quả. $T_{\text{sync}}$ đo pha kiểm tra dừng và đồng bộ.
 
@@ -297,7 +313,14 @@ Tính PageRank của từng trang trong Hình 5.7, không có bước nhảy.
 ::: solution
 Cột nguồn: Cột $a$ là $(\frac{1}{3},\frac{1}{3},\frac{1}{3})$, cột $b$ là $(\frac{1}{2},0,\frac{1}{2})$, cột $c$ là $(0,\frac{1}{2},\frac{1}{2})$. Hệ cân bằng:
 
-$$a=\frac a3+\frac b2,\qquad b=\frac a3+\frac c2,\qquad c=\frac a3+\frac b2+\frac c2,\qquad a+b+c=1.$$
+$$
+\begin{aligned}
+&a=\frac a3+\frac b2, \\
+&b=\frac a3+\frac c2, \\
+&c=\frac a3+\frac b2+\frac c2, \\
+&a+b+c=1.
+\end{aligned}
+$$
 
 Từ phương trình đầu: $a-\frac b2=\frac a3\Rightarrow b=\frac{4a}3$.
 
@@ -323,12 +346,26 @@ Tính PageRank của từng trang trong Hình 5.7 với $\beta=0{,}8$.
 ::: solution
 Hai phương trình đầu (nhân 15):
 
-$$15a=4a+6b+1\ \Rightarrow\ 11a-6b=1;\qquad 15b=4a+6c+1.$$
+$$
+\begin{aligned}
+&15a=4a+6b+1, \\
+&15b=4a+6c+1.
+\end{aligned}
+$$
+
+Chuyển $4a$ sang vế trái của phương trình đầu:
+
+$$
+11a-6b=1.
+$$
 
 Thay $c=1-a-b$:
 
 $$
-15b = 4a + 6 - 6a - 6b + 1 \implies 2a + 21b = 7
+\begin{aligned}
+15b &= 4a+6-6a-6b+1 \\
+2a+21b &= 7.
+\end{aligned}
 $$
 
 Nhân phương trình đầu với 7, phương trình sau với 2 rồi cộng: $77a+4a=7+14\Rightarrow 81a=21$, nên:
@@ -337,8 +374,24 @@ $$a=\frac7{27}=\frac{21}{81}.$$
 
 Tiếp tục: $b=\frac{11a-1}{6}=\frac{\frac{231}{81}-1}{6}=\frac{25}{81}$. $c=1-a-b=\frac{35}{81}$.
 
-Kiểm phương trình của $c$:
-$$\frac45\left(\frac7{81}+\frac{25}{162}+\frac{35}{162}\right)+\frac1{15}=\frac45\cdot\frac{74}{162}+\frac1{15}=\frac{148}{405}+\frac{27}{405}=\frac{35}{81}.$$
+Kiểm phương trình của $c$. Tổng đóng góp theo liên kết trước khi nhân hệ số bước nhảy là:
+
+$$
+\begin{aligned}
+s &= \frac7{81}+\frac{25}{162}+\frac{35}{162} \\
+&= \frac{74}{162}.
+\end{aligned}
+$$
+
+Thay tổng này vào công thức cập nhật:
+
+$$
+\begin{aligned}
+\frac45s+\frac1{15}
+&= \frac{148}{405}+\frac{27}{405} \\
+&= \frac{35}{81}=c.
+\end{aligned}
+$$
 Tổng: $\frac{21+25+35}{81}=1$.
 
 So sánh hai bài: Bước nhảy san phẳng điểm, kéo $c$ từ $\frac{6}{13}\approx0{,}462$ xuống $\frac{35}{81}\approx0{,}432$ và nâng $a$ lên.
@@ -359,9 +412,17 @@ Cách đặc: $n^2$ bit.
 
 Cách thưa: $m$ ô 1, mỗi ô cần hai số nguyên, mỗi số $\lceil\log_2 n\rceil$ bit, tổng $2m\lceil\log_2 n\rceil$ bit.
 
-Điều kiện tiết kiệm:
+Đặt $\rho=m/n^2$ là tỷ lệ ô bằng $1$. Điều kiện tiết kiệm:
 
-$$2m\lceil\log_2 n\rceil < n^2\quad\Longleftrightarrow\quad \rho=\frac m{n^2}<\frac{1}{2\lceil\log_2 n\rceil}.$$
+$$
+2m\lceil\log_2 n\rceil<n^2.
+$$
+
+Với $n\ge2$, chia hai vế cho số dương $2n^2\lceil\log_2 n\rceil$ cho điều kiện tương đương:
+
+$$
+\rho<\frac1{2\lceil\log_2 n\rceil}.
+$$
 
 Tại điểm bằng nhau hai cách tốn như nhau nên điều kiện phải là bất đẳng thức ngặt. Với $n=1$, $\lceil\log_2 n\rceil=0$ và mô hình tọa độ suy biến. So sánh chỉ có nghĩa từ $n\ge2$. Kết luận là điều kiện theo $n$, không cần dữ liệu cụ thể khác.
 :::

@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { contourSegments } from '../services/contour.mjs'
@@ -74,7 +75,7 @@ const shape = computed(() => {
 <template>
   <figure class="study-lab" aria-label="Bản đồ những điểm mà Hessian không nửa xác định dương">
     <p class="lab-title">Tính lồi hỏng ở đâu: bản đồ Hessian</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đường đồng mức, vùng Hessian không nửa xác định dương và hai hướng riêng tại x" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đường đồng mức, vùng Hessian không nửa xác định dương và hai hướng riêng tại x" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clip"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <g :clip-path="`url(#${clip})`">
         <rect v-for="(r, i) in outside" :key="`o${i}`" x="0" :y="view.sy(r.y1)" :width="view.width" :height="view.sy(r.y0) - view.sy(r.y1)" class="lab-grid" style="fill: var(--rule); opacity: 0.5" />
@@ -87,6 +88,7 @@ const shape = computed(() => {
         <circle :cx="P(x)[0]" :cy="P(x)[1]" r="8" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x" :aria-valuetext="fmtPoint(x)" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', x, $event)" />
       </g>
     </svg>
+    <LabPointControls :svg="svg" />
     <p class="lab-legend"><span class="legend-bad">vùng Hessian có trị riêng âm</span><span class="legend-good">hướng cong lên</span><span class="legend-guide">hướng có độ cong 0</span></p>
     <div class="lab-controls">
       <label>Hàm f = <select v-model="choice"><option v-for="(item, key) in catalog" :key="key" :value="key">{{ item.label }}</option></select></label>

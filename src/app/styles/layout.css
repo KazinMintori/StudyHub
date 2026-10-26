@@ -49,7 +49,7 @@
   .Layout.lecture-layout .VPLocalNavOutlineDropdown .items { top: 100%; }
 }
 @media (min-width: 768px) and (max-width: 959px) {
-  .Layout.lecture-layout .lecture-tabs { top: 48px; }
+  .Layout.lecture-layout .lecture-tabs { top: calc(var(--vp-nav-height) + 48px); }
 }
 @media (min-width: 960px) and (max-width: 1279px) {
   .Layout.lecture-layout:has(> .VPLocalNav:not(.empty)) .lecture-tabs { top: calc(var(--vp-nav-height) + 48px); }
@@ -138,8 +138,23 @@
 @media (max-width:1279px) {
  html.study-lookup-open .Layout .VPContent { padding-bottom:calc(62dvh + var(--space-5)); }
 }
+/* One stable header owns the top edge on phones and tablets. The tools used
+   to float below a header that scrolled away, while local navigation moved
+   into the same space. Keep the rows in one predictable stack instead. */
+@media (max-width:959px) {
+ .Layout > .VPNav { position: fixed; inset: var(--vp-layout-top-height, 0px) auto auto 0; width: 100vw; background: var(--paper); transition: none; }
+ .Layout .VPNavBar, .Layout .VPNavBar .content-body { background: var(--paper); transition: none; }
+ .Layout .VPNavBar .title { transition: none; }
+ .Layout .VPNavBar .divider-line { background: var(--rule); transition: none; }
+ .Layout .VPNavScreen { right: auto; width: 100vw; }
+ .Layout .VPContent { padding-top: var(--vp-nav-height); }
+ .Layout > .VPLocalNav { top: var(--vp-nav-height); }
+ .Layout > .VPLocalNav.empty:not(.has-sidebar) { display: none; }
+ .nav-extra-tools { position: static; height: auto; margin-left: var(--space-2); padding: 0; background: transparent; border: 0; }
+ .Layout .VPLocalNavOutlineDropdown .items { top: 100%; max-height: calc(100dvh - var(--vp-nav-height) - 64px); }
+}
 @media (max-width:767px) {
- .nav-extra-tools { position:fixed;top:var(--vp-nav-height);inset-inline:0;height:52px;box-sizing:border-box;justify-content:flex-end;margin:0;padding:var(--space-1) 16px;gap:var(--space-2);background:var(--paper);border-bottom:1px solid var(--rule); }
- .Layout.course-context .VPContent { padding-top:calc(var(--vp-nav-height) + 52px); }
- .VPNavBar:has(.VPNavBarHamburger[aria-expanded=true]) .nav-extra-tools { visibility:hidden; }
+ .Layout .VPNavBar .wrapper { padding-inline: 16px 8px; }
+ .Layout .VPNavBar .content-body { column-gap: var(--space-1); }
+ .nav-extra-tools { margin-left: var(--space-1); }
 }

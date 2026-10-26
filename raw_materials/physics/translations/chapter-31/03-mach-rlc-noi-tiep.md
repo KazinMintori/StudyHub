@@ -84,7 +84,7 @@ Khi đó biểu thức đầy đủ là
 $$
 \begin{aligned}
 Z &= \sqrt{R^2+X^2}, \\
-X &= \omega L-\frac1{\omega C}.\tag{31.23}
+X &= \omega L-\frac1{\omega C}.
 \end{aligned} \tag{31.23}
 $$
 
@@ -102,7 +102,7 @@ $$
 \begin{aligned}
 \tan\phi &= \frac{V_L-V_C}{V_R} \\
 &= \frac{X_L-X_C}{R} \\
-&= \frac{\omega L-1/(\omega C)}R.\tag{31.24}
+&= \frac{\omega L-1/(\omega C)}R.
 \end{aligned} \tag{31.24}
 $$
 

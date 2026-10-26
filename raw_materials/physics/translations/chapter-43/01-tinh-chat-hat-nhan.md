@@ -419,11 +419,13 @@ $$
 $$
 với độ lớn thực nghiệm $\mu_n = 5{,}05078 \times 10^{-27}\text{ J/T}$ (tương đương $3{,}15245 \times 10^{-8}\text{ eV/T}$). Vì khối lượng proton lớn gấp khoảng 1836 lần khối lượng electron ($m_p \approx 1836 m_e$), magneton hạt nhân nhỏ hơn magneton Bohr $\mu_B = e\hbar/(2m_e)$ ($\approx 9{,}274 \times 10^{-24}\text{ J/T}$) đúng 1836 lần.
 
-Nếu proton là một hạt điểm không có cấu trúc nội tại theo phương trình Dirac, thành phần $z$ của momen từ spin của nó sẽ có độ lớn đúng bằng $1\mu_n$. Tuy nhiên, các phép đo thực nghiệm chính xác cho thấy:
+Nếu proton là một hạt điểm không có cấu trúc nội tại theo phương trình Dirac, thành phần $z$ của momen từ spin của nó sẽ có độ lớn đúng bằng $1\mu_n$. Tuy nhiên, khi $S_z=+\hbar/2$, các phép đo thực nghiệm cho thành phần momen từ của proton:
 $$
+\mu_{p,z} = +2{,}7928\mu_n.
 $$
-Bất ngờ hơn, neutron là hạt trung hòa về điện tích nhưng vẫn sở hữu momen từ spin khác không:
+Bất ngờ hơn, neutron là hạt trung hòa về điện tích nhưng vẫn sở hữu momen từ spin khác không. Với cùng chiều spin $S_z=+\hbar/2$, thành phần momen từ của neutron là:
 $$
+\mu_{n,z} = -1{,}9130\mu_n.
 $$
 Dấu của thành phần này đối với neutron là âm ($(\mu_{\text{sz}})_{\text{neutron}} = -1{,}9130\mu_n$), chứng tỏ momen từ $\vec{\mu}$ của neutron hướng ngược chiều với momen động lượng spin $\vec{S}$, giống như trường hợp hạt mang điện tích âm. Sự tồn tại của các momen từ dị thường này là bằng chứng thực nghiệm rõ ràng cho thấy proton và neutron không phải là các hạt điểm cơ bản, mà được cấu tạo từ các hạt nhỏ hơn mang điện tích phân số gọi là các quark (gồm quark $u$ mang điện $+2/3e$ và quark $d$ mang điện $-1/3e$).
 

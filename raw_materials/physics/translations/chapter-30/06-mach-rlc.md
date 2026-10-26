@@ -269,29 +269,29 @@ Bây giờ ta tính giá trị của đại lượng $4L/C$ cho từng trường
 
 - **Trường hợp (i)**: Với $L = 3{,}0\ \mu\text{H}$ và $C = 6{,}0\ \mu\text{F}$:
   $$
-\begin{aligned}
-\frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{6{,}0\ \mu\text{F}} \\
-&= 2{,}0\ \Omega^2
-\end{aligned}
-$$
+  \begin{aligned}
+  \frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{6{,}0\ \mu\text{F}} \\
+  &= 2{,}0\ \Omega^2
+  \end{aligned}
+  $$
   Vì $R^2 = 4{,}0\ \Omega^2 > 4L/C = 2{,}0\ \Omega^2$, mạch rơi vào **chế độ quá tắt dần (Overdamped)**. Điện tích trên tụ giảm dần về không mà không dao động. Do đó trường hợp (i) thỏa mãn.
 
 - **Trường hợp (ii)**: Với $L = 6{,}0\ \mu\text{H}$ và $C = 3{,}0\ \mu\text{F}$:
   $$
-\begin{aligned}
-\frac{4L}{C} &= \frac{4(6{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
-&= 8{,}0\ \Omega^2
-\end{aligned}
-$$
+  \begin{aligned}
+  \frac{4L}{C} &= \frac{4(6{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
+  &= 8{,}0\ \Omega^2
+  \end{aligned}
+  $$
   Vì $R^2 = 4{,}0\ \Omega^2 < 4L/C = 8{,}0\ \Omega^2$, mạch rơi vào **chế độ dao động tắt dần (Underdamped)**. Điện tích trên tụ vẫn dao động đổi chiều quanh vị trí cân bằng với biên độ giảm dần. Do đó trường hợp (ii) không thỏa mãn.
 
 - **Trường hợp (iii)**: Với $L = 3{,}0\ \mu\text{H}$ và $C = 3{,}0\ \mu\text{F}$:
   $$
-\begin{aligned}
-\frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
-&= 4{,}0\ \Omega^2
-\end{aligned}
-$$
+  \begin{aligned}
+  \frac{4L}{C} &= \frac{4(3{,}0\ \mu\text{H})}{3{,}0\ \mu\text{F}} \\
+  &= 4{,}0\ \Omega^2
+  \end{aligned}
+  $$
   Vì $R^2 = 4{,}0\ \Omega^2 = 4L/C$, mạch rơi vào **chế độ tắt dần tới hạn (Critically damped)**. Điện tích trên tụ giảm nhanh về không mà không đổi chiều dao động. Do đó trường hợp (iii) thỏa mãn.
 
 Kết luận: Các bộ thông số (i) và (iii) làm cho điện tích trên tụ điện không dao động.

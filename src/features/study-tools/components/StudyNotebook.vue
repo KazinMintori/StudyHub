@@ -2,6 +2,7 @@
 import { useNotebook } from '../controllers/useNotebook.js'
 
 const props = defineProps({
+  courseId: { type: String, default: '' },
   courses: {
     type: Array,
     default: () => []
@@ -15,10 +16,9 @@ const {
   saved,
   mode,
   renderedNote,
-  loadNote,
   saveNote,
   downloadNote
-} = useNotebook({ courses: props.courses })
+} = useNotebook({ courses: props.courses, courseId: () => props.courseId })
 </script>
 
 <template>
@@ -27,9 +27,9 @@ const {
       <div>
         <h2 id="notes-heading">Ghi lại bằng lời của bạn</h2>
       </div>
-      <label class="select-label">
+      <label v-if="!courseId" class="select-label">
         Sổ ghi chú
-        <select v-model="noteSubject" @change="loadNote">
+        <select v-model="noteSubject">
           <option value="general">Ghi chú chung</option>
           <option v-for="c in courses" :key="c.id" :value="c.id">{{ c.name }}</option>
         </select>
@@ -41,8 +41,8 @@ const {
         <button class="study-button" :aria-pressed="mode === 'preview'" @click="mode = 'preview'">Xem trước</button>
       </div>
       <div class="button-row">
-        <button class="study-button" @click="saveNote">Lưu ghi chú</button>
-        <button class="study-button primary" @click="downloadNote">Tải .md</button>
+        <button class="study-button" :disabled="!loaded" @click="saveNote">Lưu ghi chú</button>
+        <button class="study-button primary" :disabled="!loaded" @click="downloadNote">Tải .md</button>
       </div>
     </div>
     <label v-show="mode === 'edit'" class="notes-editor">

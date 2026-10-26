@@ -62,7 +62,7 @@ I_{\mathrm{rav}} &= \frac1T\int_0^T|i(t)|\,dt \\
 &= \frac{I}{2\pi}\int_0^{2\pi}|\cos\theta|\,d\theta \\
 &= \frac{I}{2\pi}\,4 \\
 &= \frac2\pi I \\
-&\approx 0{,}637I.\tag{31.3}
+&\approx 0{,}637I.
 \end{aligned} \tag{31.3}
 $$
 

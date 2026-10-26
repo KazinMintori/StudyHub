@@ -52,13 +52,20 @@ Xét hai điểm cụ thể trong mặt phẳng $\mathbb{R}^2$: Điểm $x_1 = (
 Vector dịch chuyển từ $x_2$ sang $x_1$ là:
 
 $$
-v = x_1 - x_2 = (4 - 1,\; 3 - 1) = (3, 2).
+\begin{aligned}
+v &= x_1 - x_2 \\
+&= (4 - 1,\; 3 - 1) \\
+&= (3, 2).
+\end{aligned}
 $$
 
 Phương trình tham số của đường thẳng đi qua $x_1$ và $x_2$ có dạng:
 
 $$
-y(\theta) = (1, 1) + \theta(3, 2) = (1 + 3\theta,\; 1 + 2\theta).
+\begin{aligned}
+y(\theta) &= (1, 1) + \theta(3, 2) \\
+&= (1 + 3\theta,\; 1 + 2\theta).
+\end{aligned}
 $$
 
 **Bước 2: Khảo sát các điểm cụ thể tương ứng với từng miền giá trị của $\theta$**
@@ -70,8 +77,8 @@ $$
 - Xét điểm $M(10, 7)$: Ta thiết lập hệ phương trình tìm tham số $\theta$:
   $$
   \begin{cases}
-  1 + 3\theta = 10 \implies 3\theta = 9 \implies \theta = 3 \\
-  1 + 2\theta = 7 \implies 2\theta = 6 \implies \theta = 3
+  1 + 3\theta = 10 \\
+  1 + 2\theta = 7
   \end{cases}
   $$
   Cả hai tọa độ đều cho cùng một giá trị $\theta = 3$. Do đó, điểm $M(10, 7)$ thuộc đường thẳng, ứng với vị trí $\theta = 3$.
@@ -148,7 +155,10 @@ Xét hợp của hai trục tọa độ trong mặt phẳng $\mathbb{R}^2$: $C =
 
 > **Định nghĩa.** Một điểm $y$ được gọi là một **tổ hợp affine** của $k$ điểm $x_1, x_2, \dots, x_k \in \mathbb{R}^n$ nếu nó được biểu diễn dưới dạng:
 > $$
-> y = \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k = \sum_{i=1}^k \theta_i x_i,
+> \begin{aligned}
+> y &= \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k \\
+> &= \sum_{i=1}^k \theta_i x_i,
+> \end{aligned}
 > $$
 > trong đó các hệ số số thực $\theta_i \in \mathbb{R}$ thỏa mãn ràng buộc chuẩn hóa:
 > $$
@@ -169,25 +179,30 @@ Giả sử $C$ là một tập affine. Ta chứng minh bằng phương pháp quy
 **Bước quy nạp**:
 Giả sử mệnh đề đúng với mọi tổ hợp của $k - 1$ điểm ($k \ge 3$). Xét một tổ hợp affine bất kỳ của $k$ điểm thuộc $C$:
 $$
-y = \sum_{i=1}^k \theta_i x_i = \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k, \qquad \sum_{i=1}^k \theta_i = 1.
+\begin{aligned}
+y &= \sum_{i=1}^k \theta_i x_i, \\
+\sum_{i=1}^k \theta_i &= 1.
+\end{aligned}
 $$
 
 Vì tổng $k$ hệ số bằng $1$ và $k \ge 3$, không thể xảy ra trường hợp mọi hệ số đều bằng $1$. Ta có thể đổi thứ tự đánh số các điểm nếu cần thiết để đảm bảo hệ số cuối cùng $\theta_k \ne 1$, đồng nghĩa với việc $1 - \theta_k \ne 0$.
 
-Bây giờ, ta áp dụng kỹ thuật phân rã gom nhóm đại số:
+Bây giờ, ta chuẩn hóa các hệ số của $k-1$ điểm đầu bằng cách đặt:
+$$
+\beta_i = \frac{\theta_i}{1-\theta_k},
+$$
+
+với $i=1,\dots,k-1$. Tổng các hệ số mới bằng:
 $$
 \begin{aligned}
-y &= \sum_{i=1}^{k-1} \theta_i x_i + \theta_k x_k \\
-&= (1 - \theta_k) \sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i + \theta_k x_k .
+\sum_{i=1}^{k-1} \beta_i
+&= \frac{1}{1-\theta_k}\sum_{i=1}^{k-1}\theta_i \\
+&= \frac{1-\theta_k}{1-\theta_k} \\
+&= 1.
 \end{aligned}
 $$
 
-Hãy kiểm tra tổng các hệ số mới bên trong dấu tổng thu gọn:
-$$
-\sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} = \frac{1}{1 - \theta_k} \sum_{i=1}^{k-1} \theta_i = \frac{1 - \theta_k}{1 - \theta_k} = 1.
-$$
-
-Biểu thức $\sum_{i=1}^{k-1} \frac{\theta_i}{1 - \theta_k} x_i$ chính là một tổ hợp affine của $k - 1$ điểm thuộc $C$. Theo giả thiết quy nạp, điểm trung gian này là một điểm hợp lệ $z \in C$. Khi đó:
+Đặt $z=\sum_{i=1}^{k-1}\beta_i x_i$. Đây là một tổ hợp affine của $k-1$ điểm thuộc $C$, nên giả thiết quy nạp cho $z\in C$. Khi đó:
 $$
 y = (1 - \theta_k) z + \theta_k x_k .
 $$
@@ -200,7 +215,10 @@ $$
 Trong không gian hai chiều $\mathbb{R}^2$, nếu ba điểm $p_1, p_2, p_3$ không thẳng hàng (tạo thành một tam giác không suy biến), thì mọi điểm $y \in \mathbb{R}^2$ trên mặt phẳng đều được biểu diễn duy nhất dưới dạng một tổ hợp affine:
 
 $$
-y = \theta_1 p_1 + \theta_2 p_2 + \theta_3 p_3, \qquad \theta_1 + \theta_2 + \theta_3 = 1.
+\begin{aligned}
+&y = \theta_1 p_1 + \theta_2 p_2 + \theta_3 p_3, \\
+&\theta_1 + \theta_2 + \theta_3 = 1.
+\end{aligned}
 $$
 
 Bộ ba số thực duy nhất $(\theta_1, \theta_2, \theta_3)$ này được gọi là **tọa độ trọng tâm** của điểm $y$ đối với tam giác $p_1 p_2 p_3$.
@@ -212,7 +230,10 @@ $A = (0, 0)$, $B = (4, 0)$, $C = (0, 4)$.
 **Trường hợp 1: Tính tọa độ trọng tâm của điểm $M(1, 1)$ nằm trong tam giác**
 Ta cần tìm bộ ba $(\theta_1, \theta_2, \theta_3)$ thỏa mãn phương trình vector và phương trình tổng chuẩn hóa:
 $$
-\theta_1 \begin{bmatrix} 0 \\ 0 \end{bmatrix} + \theta_2 \begin{bmatrix} 4 \\ 0 \end{bmatrix} + \theta_3 \begin{bmatrix} 0 \\ 4 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \qquad \theta_1 + \theta_2 + \theta_3 = 1.
+\begin{aligned}
+&\theta_1 A + \theta_2 B + \theta_3 C = M, \\
+&\theta_1 + \theta_2 + \theta_3 = 1.
+\end{aligned}
 $$
 
 Khai triển thành hệ ba phương trình bậc nhất ba ẩn số:
@@ -222,12 +243,12 @@ $$
 4\theta_3 = 1 \\
 \theta_1 + \theta_2 + \theta_3 = 1
 \end{cases}
-\implies
-\begin{cases}
-\theta_2 = \tfrac{1}{4} \\
-\theta_3 = \tfrac{1}{4} \\
-\theta_1 = 1 - \tfrac{1}{4} - \tfrac{1}{4} = \tfrac{1}{2}
-\end{cases}
+$$
+
+Hai phương trình đầu cho $\theta_2=\theta_3=\tfrac14$. Thay vào phương trình cuối:
+
+$$
+\theta_1 = 1-\tfrac14-\tfrac14 = \tfrac12.
 $$
 
 Kết quả: Tọa độ trọng tâm của điểm $M(1, 1)$ là $(\tfrac{1}{2},\; \tfrac{1}{4},\; \tfrac{1}{4})$.
@@ -237,10 +258,16 @@ Kết quả: Tọa độ trọng tâm của điểm $M(1, 1)$ là $(\tfrac{1}{2}
 Thiết lập hệ phương trình tìm tọa độ trọng tâm cho $P(3, 3)$:
 $$
 \begin{cases}
-4\theta_2 = 3 \implies \theta_2 = \tfrac{3}{4} \\
-4\theta_3 = 3 \implies \theta_3 = \tfrac{3}{4} \\
-\theta_1 + \theta_2 + \theta_3 = 1 \implies \theta_1 = 1 - \tfrac{3}{4} - \tfrac{3}{4} = -\tfrac{1}{2}
+4\theta_2 = 3 \\
+4\theta_3 = 3 \\
+\theta_1 + \theta_2 + \theta_3 = 1
 \end{cases}
+$$
+
+Hai phương trình đầu cho $\theta_2=\theta_3=\tfrac34$. Khi đó:
+
+$$
+\theta_1 = 1-\tfrac34-\tfrac34 = -\tfrac12.
 $$
 
 Kết quả: Tọa độ trọng tâm của điểm $P(3, 3)$ là $(-\tfrac{1}{2},\; \tfrac{3}{4},\; \tfrac{3}{4})$.
@@ -267,7 +294,11 @@ Vị trí của một điểm trên hệ trục tọa độ phụ thuộc hoàn 
 Giả sử ta thực hiện tịnh tiến gốc tọa độ đi một vector dời $c \in \mathbb{R}^n$. Khi đó, tọa độ của mỗi điểm $x_i$ trong hệ tọa độ mới sẽ chuyển thành $x_i + c$. Xét một tổ hợp tuyến tính tùy ý $\sum_{i=1}^k \theta_i x_i$:
 
 $$
-\sum_{i=1}^k \theta_i (x_i + c) = \sum_{i=1}^k \theta_i x_i + \left(\sum_{i=1}^k \theta_i\right) c .
+\begin{aligned}
+\sum_{i=1}^k \theta_i(x_i+c) &= y+sc, \\
+y &= \sum_{i=1}^k \theta_i x_i, \\
+s &= \sum_{i=1}^k \theta_i.
+\end{aligned}
 $$
 
 Hãy so sánh kết quả này với tọa độ của một điểm thực sự: Khi tịnh tiến gốc, một điểm thực sự phải dịch chuyển đúng một lượng bằng $c$. Do đó, để tổ hợp điểm $\sum_{i=1}^k \theta_i x_i$ giữ nguyên vị trí hình học nội tại (không bị bóp méo hay trôi dạt theo việc chọn gốc tọa độ), hệ số trước vector tịnh tiến $c$ bắt buộc phải bằng 1:
@@ -282,13 +313,22 @@ Mô phỏng dưới đây cho phép bạn tự do kéo dời vị trí gốc t�
 
 <AffineLab type="origin" />
 
-Một cách nhìn đại số tương đương là biến đổi tổ hợp affine thành dạng "một điểm mốc cộng với tổ hợp tuyến tính các vector độ dời":
+Một cách nhìn đại số tương đương là chọn $x_1$ làm điểm mốc. Đặt $v_i=x_i-x_1$ với $i=2,\dots,k$. Tổ hợp các vector độ dời là:
 
 $$
 \begin{aligned}
-\sum_{i=1}^k \theta_i x_i &= \theta_1 x_1 + \theta_2 x_2 + \cdots + \theta_k x_k \\
-&= (1 - \theta_2 - \cdots - \theta_k) x_1 + \theta_2 x_2 + \cdots + \theta_k x_k \\
-&= x_1 + \theta_2 (x_2 - x_1) + \theta_3 (x_3 - x_1) + \cdots + \theta_k (x_k - x_1).
+u &= \theta_2v_2+\theta_3v_3+\cdots+\theta_kv_k \\
+&= \sum_{i=2}^k\theta_i(x_i-x_1).
+\end{aligned}
+$$
+
+Vì tổng các hệ số bằng $1$, ta có:
+
+$$
+\begin{aligned}
+u &= \sum_{i=2}^k\theta_i x_i-(1-\theta_1)x_1 \\
+&= y-x_1, \\
+y &= x_1+u.
 \end{aligned}
 $$
 
@@ -301,12 +341,18 @@ Từ các ví dụ về điểm, đường thẳng, mặt phẳng, ta nhận th�
 > **Định lý.** Cho $C \subseteq \mathbb{R}^n$ là một tập affine khác rỗng, và chọn một điểm mốc tùy ý $x_0 \in C$. Khi đó:
 > 1. Tập hợp sai số dịch chuyển về gốc:
 >    $$
->    V = C - x_0 = \{x - x_0 \mid x \in C\}
+>    \begin{aligned}
+>    V &= C-x_0 \\
+>    &= \{x-x_0\mid x\in C\}.
+>    \end{aligned}
 >    $$
 >    là một không gian con tuyến tính của $\mathbb{R}^n$.
 > 2. Tập affine ban đầu được khôi phục bằng phép tịnh tiến không gian con $V$ theo vector $x_0$:
 >    $$
->    C = V + x_0 = \{v + x_0 \mid v \in V\}.
+>    \begin{aligned}
+>    C &= V+x_0 \\
+>    &= \{v+x_0\mid v\in V\}.
+>    \end{aligned}
 >    $$
 
 ::: proof Chứng minh tính chất không gian con của V = C − x₀
@@ -315,17 +361,16 @@ Từ các ví dụ về điểm, đường thẳng, mặt phẳng, ta nhận th�
 Theo định nghĩa của tập $V$, vì $v_1, v_2 \in V$ nên tồn tại hai điểm $x_1, x_2 \in C$ sao cho:
 $$
 \begin{aligned}
-v_1 &= x_1 - x_0 \implies x_1 = v_1 + x_0 \in C, \\
-v_2 &= x_2 - x_0 \implies x_2 = v_2 + x_0 \in C.
+&v_1 = x_1-x_0, \\
+&v_2 = x_2-x_0.
 \end{aligned}
 $$
 
-Xét biểu thức tịnh tiến của tổ hợp cần kiểm tra:
+Tương đương, $x_1=v_1+x_0$ và $x_2=v_2+x_0$ đều thuộc $C$.
+
+Đặt $w=\alpha v_1+\beta v_2$ và $\gamma=1-\alpha-\beta$. Thay biểu thức của $v_1,v_2$ rồi gom nhóm theo các điểm:
 $$
-\begin{aligned}
-(\alpha v_1 + \beta v_2) + x_0 &= \alpha (x_1 - x_0) + \beta (x_2 - x_0) + x_0 \\
-&= \alpha x_1 + \beta x_2 + (1 - \alpha - \beta) x_0 .
-\end{aligned}
+w+x_0 = \alpha x_1+\beta x_2+\gamma x_0.
 $$
 
 Quan sát ba hệ số trọng số của ba điểm $x_1, x_2, x_0 \in C$:
@@ -335,7 +380,10 @@ $$
 
 Tổng ba hệ số bằng đúng $1$, do đó vế phải chính là một tổ hợp affine của ba điểm thuộc $C$. Vì $C$ là tập affine, điểm này bắt buộc phải thuộc về $C$. Ta đặt điểm đó là $x_3 \in C$:
 $$
-(\alpha v_1 + \beta v_2) + x_0 = x_3 \in C \implies \alpha v_1 + \beta v_2 = x_3 - x_0 \in V.
+\begin{aligned}
+w+x_0 &= x_3\in C, \\
+\alpha v_1+\beta v_2 &= x_3-x_0\in V.
+\end{aligned}
 $$
 
 Như vậy, $V$ khép kín với mọi phép cộng vector và phép nhân vô hướng. Kết luận: Không gian $V = C - x_0$ là một không gian con tuyến tính hoàn chỉnh.
@@ -352,22 +400,36 @@ $$
 **Bước 1: Chọn điểm mốc thứ nhất $x_0 = (3, 0) \in C$**
 Xét tập dịch chuyển $V_1 = C - x_0$:
 $$
-v = x - x_0 = (x_1 - 3,\; x_2 - 0) \implies x_1 = v_1 + 3, \quad x_2 = v_2.
+\begin{aligned}
+v &= x-x_0 \\
+&= (x_1-3,\;x_2).
+\end{aligned}
 $$
-Thay vào phương trình xác định của $C$:
+Suy ra $x_1=v_1+3$ và $x_2=v_2$. Thay vào phương trình xác định của $C$:
 $$
-2(v_1 + 3) - 3v_2 = 6 \implies 2v_1 + 6 - 3v_2 = 6 \implies 2v_1 - 3v_2 = 0.
+\begin{aligned}
+2(v_1+3)-3v_2 &= 6 \\
+2v_1+6-3v_2 &= 6 \\
+2v_1-3v_2 &= 0.
+\end{aligned}
 $$
 Như vậy, $V_1 = \{(v_1, v_2) : 2v_1 - 3v_2 = 0\}$. Đây là một đường thẳng đi qua gốc tọa độ, tức là một không gian con một chiều sinh bởi vector chỉ phương $(3, 2)$.
 
 **Bước 2: Chọn điểm mốc thứ hai $x_0' = (0, -2) \in C$**
 Xét tập dịch chuyển $V_2 = C - x_0'$:
 $$
-v = x - x_0' = (x_1 - 0,\; x_2 - (-2)) \implies x_1 = v_1, \quad x_2 = v_2 - 2.
+\begin{aligned}
+v &= x-x_0' \\
+&= (x_1,\;x_2+2).
+\end{aligned}
 $$
-Thay vào phương trình của $C$:
+Suy ra $x_1=v_1$ và $x_2=v_2-2$. Thay vào phương trình của $C$:
 $$
-2v_1 - 3(v_2 - 2) = 6 \implies 2v_1 - 3v_2 + 6 = 6 \implies 2v_1 - 3v_2 = 0.
+\begin{aligned}
+2v_1-3(v_2-2) &= 6 \\
+2v_1-3v_2+6 &= 6 \\
+2v_1-3v_2 &= 0.
+\end{aligned}
 $$
 Ta thấy $V_2$ hoàn toàn trùng khớp với $V_1$.
 :::
@@ -401,7 +463,8 @@ Lấy hai nghiệm tùy ý $x_1, x_2 \in C$, tức $Ax_1 = b$ và $Ax_2 = b$. V�
 
 $$
 \begin{aligned}
-A\big(\theta x_1 + (1-\theta)x_2\big) &= \theta A x_1 + (1-\theta) A x_2 \\
+z &= \theta x_1+(1-\theta)x_2, \\
+Az &= \theta A x_1 + (1-\theta) A x_2 \\
 &= \theta b + (1-\theta) b \\
 &= \big(\theta + (1-\theta)\big) b = 1 \cdot b = b .
 \end{aligned}
@@ -438,15 +501,23 @@ Chọn các biến tự do $x_2 = 0, x_3 = 0$, ta tính được ngay $x_1 = 6$.
 Xét phương trình thuần nhất $x_1 + 2x_2 + 3x_3 = 0$, ta rút ra $x_1 = -2x_2 - 3x_3$.
 Đặt hai biến tự do $x_2 = s$ và $x_3 = t$ ($s, t \in \mathbb{R}$):
 $$
-\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} = \begin{bmatrix} -2s - 3t \\ s \\ t \end{bmatrix} = s \begin{bmatrix} -2 \\ 1 \\ 0 \end{bmatrix} + t \begin{bmatrix} -3 \\ 0 \\ 1 \end{bmatrix}.
+\begin{aligned}
+\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}
+&= \begin{bmatrix}-2s-3t\\s\\t\end{bmatrix} \\
+&= s\begin{bmatrix}-2\\1\\0\end{bmatrix}+t\begin{bmatrix}-3\\0\\1\end{bmatrix}.
+\end{aligned}
 $$
 
 Hai vector chỉ phương cơ sở là $v_1 = (-2, 1, 0)$ và $v_2 = (-3, 0, 1)$. Hai vector này độc lập tuyến tính và sinh ra không gian con hai chiều $\mathcal{N}(A)$.
 
 **Bước 3: Biểu diễn hình học của tập nghiệm**
-Toàn bộ tập nghiệm $C$ được mô tả dưới dạng tịnh tiến:
+Với $s,t\in\mathbb R$, đặt vector độ dời:
 $$
-C = \left\{(1, 1, 1) + s(-2, 1, 0) + t(-3, 0, 1) \;\middle|\; s, t \in \mathbb{R}\right\}.
+u=s(-2,1,0)+t(-3,0,1).
+$$
+Toàn bộ tập nghiệm $C$ gồm các điểm:
+$$
+x=(1,1,1)+u.
 $$
 Đây là một mặt phẳng hai chiều trong không gian $\mathbb{R}^3$, song song với mặt phẳng đi qua gốc tọa độ có phương trình $x_1 + 2x_2 + 3x_3 = 0$.
 :::
@@ -474,7 +545,10 @@ Một câu hỏi mang tính bản chất: **Thuật toán tối ưu hóa sẽ ch
 Xét trường hợp cụ thể: Huấn luyện mô hình hai tham số $w_1, w_2$ trên một mẫu dữ liệu duy nhất có vector đặc trưng $x = (1, 1)$ và nhãn mục tiêu $y = 2$.
 Phương trình khớp dữ liệu là:
 $$
-w_1 \cdot 1 + w_2 \cdot 1 = 2 \implies w_1 + w_2 = 2.
+\begin{aligned}
+w_1\cdot1+w_2\cdot1 &= 2 \\
+w_1+w_2 &= 2.
+\end{aligned}
 $$
 Tập nghiệm là một đường thẳng trong mặt phẳng tham số $\mathbb{R}^2$.
 
@@ -487,9 +561,16 @@ $$
 \nabla L(w) = (w_1 + w_2 - 2) \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
 $$
 
+Đặt sai số tại bước $k$ là:
+$$
+r_k=w_1^{(k)}+w_2^{(k)}-2.
+$$
 Thuật toán Gradient Descent cập nhật theo công thức:
 $$
-w^{(k+1)} = w^{(k)} - \eta \nabla L(w^{(k)}) = w^{(k)} - \eta (w_1^{(k)} + w_2^{(k)} - 2) \begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+\begin{aligned}
+w^{(k+1)} &= w^{(k)}-\eta\nabla L(w^{(k)}) \\
+&= w^{(k)}-\eta r_k\begin{bmatrix}1\\1\end{bmatrix}.
+\end{aligned}
 $$
 
 Vector hiệu chỉnh ở mọi bước lặp luôn luôn cùng phương với vector $(1, 1)$, tức là vector hàng của ma trận dữ liệu $X$. Do đó:
@@ -504,8 +585,9 @@ Nếu một tập hợp $C \subseteq \mathbb{R}^n$ bất kỳ chưa phải là t
 
 > **Định nghĩa.** **Bao affine** của tập hợp $C \subseteq \mathbb{R}^n$, ký hiệu là $\operatorname{aff}(C)$, là tập hợp tất cả các tổ hợp affine có thể tạo thành từ các phần tử của $C$:
 > $$
-> \operatorname{aff}(C) = \left\{\sum_{i=1}^k \theta_i x_i \;\middle|\; x_i \in C, \ \sum_{i=1}^k \theta_i = 1, \ k \ge 1\right\}.
+> y=\sum_{i=1}^k\theta_i x_i,
 > $$
+> với $k\ge1$, các điểm $x_i\in C$ và các hệ số thực thỏa mãn $\sum_{i=1}^k\theta_i=1$.
 
 Bao affine $\operatorname{aff}(C)$ là tập affine nhỏ nhất chứa $C$, theo nghĩa: Nếu $S$ là một tập affine bất kỳ thỏa mãn $C \subseteq S$, thì bắt buộc $\operatorname{aff}(C) \subseteq S$.
 
@@ -513,8 +595,9 @@ Bao affine $\operatorname{aff}(C)$ là tập affine nhỏ nhất chứa $C$, the
 1. **Tập gồm hai điểm phân biệt $\{x_1, x_2\}$**:
    Bao affine là đường thẳng duy nhất đi qua hai điểm đó, có số chiều bằng $1$:
    $$
-   \operatorname{aff}(\{x_1, x_2\}) = \{\theta x_1 + (1-\theta)x_2 \mid \theta \in \mathbb{R}\}.
+   y(\theta)=\theta x_1+(1-\theta)x_2,
    $$
+   với mọi $\theta\in\mathbb R$.
 2. **Đoạn thẳng nối hai điểm $[x_1, x_2]$**:
    Dù đoạn thẳng bị chặn ở hai đầu mút, mọi tổ hợp affine tự do của các điểm trên đoạn thẳng sẽ kéo dài vô hạn về hai phía, tạo thành trọn vẹn đường thẳng chứa đoạn thẳng đó: $\operatorname{aff}([x_1, x_2]) = \operatorname{aff}(\{x_1, x_2\})$.
 3. **Đường tròn đơn vị $S^1 = \{(x_1, x_2) \in \mathbb{R}^2 \mid x_1^2 + x_2^2 = 1\}$**:
@@ -524,7 +607,7 @@ Bao affine $\operatorname{aff}(C)$ là tập affine nhỏ nhất chứa $C$, the
    Mọi tổ hợp affine có dạng $\theta_1 e_1 + \theta_2 e_2 + \theta_3 e_3 = (\theta_1, \theta_2, \theta_3)$ với $\theta_1 + \theta_2 + \theta_3 = 1$.
    Do đó, bao affine chính là mặt phẳng:
    $$
-   \operatorname{aff}(\{e_1, e_2, e_3\}) = \{(x_1, x_2, x_3) \in \mathbb{R}^3 \mid x_1 + x_2 + x_3 = 1\}.
+   x_1+x_2+x_3=1.
    $$
    Mặt phẳng này có số chiều bằng $2$. Đây cũng chính là không gian nền tự nhiên chứa đơn hình xác suất (probability simplex) của ba biến cố rời rạc.
 :::
@@ -541,14 +624,16 @@ Bao affine đóng vai trò là "không gian nền tự nhiên" của một tập
 > $$
 > trong đó $A \in \mathbb{R}^{m \times n}$ là một ma trận và $b \in \mathbb{R}^m$ là một vector hằng số.
 
-Đặc tính đại số quan trọng nhất của hàm affine là nó **bảo toàn hoàn toàn các tổ hợp affine**. Thật vậy, với mọi tập hợp điểm $x_1, \dots, x_k$ và mọi bộ trọng số thỏa mãn $\sum_{i=1}^k \theta_i = 1$:
+Đặc tính đại số quan trọng nhất của hàm affine là nó **bảo toàn hoàn toàn các tổ hợp affine**. Thật vậy, với mọi tập hợp điểm $x_1, \dots, x_k$ và mọi bộ trọng số thỏa mãn $\sum_{i=1}^k \theta_i = 1$, đặt $y=\sum_{i=1}^k\theta_i x_i$. Khi đó:
 
 $$
 \begin{aligned}
-f &\left(\sum_{i=1}^k \theta_i x_i\right) = A\left(\sum_{i=1}^k \theta_i x_i\right) + b \\
+f(y) &= Ay+b \\
+&= A\left(\sum_{i=1}^k\theta_i x_i\right)+b \\
 &= \sum_{i=1}^k \theta_i A x_i + 1 \cdot b \\
 &= \sum_{i=1}^k \theta_i A x_i + \left(\sum_{i=1}^k \theta_i\right) b \\
-&= \sum_{i=1}^k \theta_i (A x_i + b) = \sum_{i=1}^k \theta_i f(x_i).
+&= \sum_{i=1}^k \theta_i (A x_i + b) \\
+&= \sum_{i=1}^k \theta_i f(x_i).
 \end{aligned}
 $$
 
@@ -557,24 +642,38 @@ Xét hàm số $f: \mathbb{R} \to \mathbb{R}$ xác định bởi $f(x) = 2x + 3$
 
 Lấy hai điểm $x_1 = 1, x_2 = 5$. Giá trị hàm số tại hai điểm là:
 $$
-f(x_1) = 2(1) + 3 = 5, \qquad f(x_2) = 2(5) + 3 = 13.
+\begin{aligned}
+f(x_1) &= 2(1)+3=5, \\
+f(x_2) &= 2(5)+3=13.
+\end{aligned}
 $$
 
 - **Trường hợp 1: Chọn tổ hợp affine với $\theta_1 = \tfrac{1}{4}, \theta_2 = \tfrac{3}{4}$ (tổng bằng 1)**:
   Tọa độ điểm tổ hợp là $x = \tfrac{1}{4}(1) + \tfrac{3}{4}(5) = 4$.
   Giá trị hàm số tại điểm tổ hợp: $f(4) = 2(4) + 3 = 11$.
-  Tổ hợp các giá trị hàm số:
+  Gọi $q$ là tổ hợp tương ứng của các giá trị hàm số:
   $$
-  \tfrac{1}{4} f(x_1) + \tfrac{3}{4} f(x_2) = \tfrac{1}{4}(5) + \tfrac{3}{4}(13) = \tfrac{44}{4} = 11.
+  \begin{aligned}
+  q &= \tfrac14 f(x_1)+\tfrac34 f(x_2) \\
+  &= \tfrac14(5)+\tfrac34(13) \\
+  &= \tfrac{44}{4} \\
+  &= 11.
+  \end{aligned}
   $$
-  Hai kết quả trùng khớp hoàn toàn: $f(\tfrac{1}{4} x_1 + \tfrac{3}{4} x_2) = \tfrac{1}{4} f(x_1) + \tfrac{3}{4} f(x_2)$.
+  Hai kết quả trùng khớp hoàn toàn, vì $f(x)=q=11$.
 
 - **Trường hợp 2: Xét tổ hợp tuyến tính với $\alpha_1 = 1, \alpha_2 = 1$ (tổng bằng $2 \ne 1$)**:
   Điểm kết hợp: $x = 1(1) + 1(5) = 6$, cho giá trị hàm số:
   $$
   f(6) = 2(6) + 3 = 15.
   $$
-  Tổng hai giá trị hàm số: $f(x_1) + f(x_2) = 5 + 13 = 18 \ne 15$.
+  Tổng hai giá trị hàm số là:
+  $$
+  \begin{aligned}
+  f(x_1)+f(x_2) &= 5+13 \\
+  &= 18\ne15.
+  \end{aligned}
+  $$
   Đẳng thức bị phá vỡ vì hệ số tự do $b = 3$ bị nhân đôi ở vế phải thành $3 + 3 = 6$ thay vì $3$.
 :::
 
@@ -629,7 +728,10 @@ Trung điểm tương ứng với $\theta = \tfrac{1}{2}$, điểm đối xứng
 Định nghĩa tập affine đòi hỏi tính khép kín với **mọi số thực $\theta \in \mathbb{R}$**.
 Lấy hai điểm $x_1 = (1, 0) \in \mathbb{Q}^2$ và $x_2 = (0, 0) \in \mathbb{Q}^2$. Với tham số vô tỉ $\theta = \sqrt{2}$, điểm kết hợp là:
 $$
-y = \sqrt{2} (1, 0) + (1 - \sqrt{2}) (0, 0) = (\sqrt{2}, 0) \notin \mathbb{Q}^2.
+\begin{aligned}
+y &= \sqrt2(1,0)+(1-\sqrt2)(0,0) \\
+&= (\sqrt2,0)\notin\mathbb Q^2.
+\end{aligned}
 $$
 Ví dụ này khẳng định tầm quan trọng của trường số thực liên tục trong giải tích lồi.
 </details>
@@ -652,20 +754,26 @@ Tính vector chỉ phương $x_1 - x_2$, thiết lập phương trình từng t�
 **Bước 1: Thiết lập phương trình tham số**
 Vector dịch chuyển từ $x_2$ sang $x_1$ là:
 $$
-v = x_1 - x_2 = (2 - 0,\; -1 - 1,\; 3 - 1) = (2, -2, 2).
+\begin{aligned}
+v &= x_1-x_2 \\
+&= (2,-2,2).
+\end{aligned}
 $$
 Mọi điểm $y$ trên đường thẳng có phương trình tham số:
 $$
-y(\theta) = x_2 + \theta(x_1 - x_2) = (0 + 2\theta,\; 1 - 2\theta,\; 1 + 2\theta) = (2\theta,\; 1 - 2\theta,\; 1 + 2\theta).
+\begin{aligned}
+y(\theta) &= x_2+\theta(x_1-x_2) \\
+&= \begin{bmatrix}2\theta\\1-2\theta\\1+2\theta\end{bmatrix}.
+\end{aligned}
 $$
 
 **Bước 2: Kiểm tra điểm $M(5, -4, 6)$**
 Thiết lập hệ phương trình theo $\theta$:
 $$
 \begin{cases}
-2\theta = 5 \implies \theta = \tfrac{5}{2} \\
-1 - 2\theta = -4 \implies 2\theta = 5 \implies \theta = \tfrac{5}{2} \\
-1 + 2\theta = 6 \implies 2\theta = 5 \implies \theta = \tfrac{5}{2}
+2\theta = 5 \\
+1-2\theta = -4 \\
+1+2\theta = 6
 \end{cases}
 $$
 Cả ba phương trình đều cho cùng một giá trị $\theta = \tfrac{5}{2} = 2.5$. Do đó, điểm $M$ thuộc đường thẳng.
@@ -675,18 +783,22 @@ Vì $\theta = 2.5 > 1$, điểm $M$ nằm ở phần kéo dài vượt qua đi�
 Thiết lập hệ phương trình:
 $$
 \begin{cases}
-2\theta = 1 \implies \theta = \tfrac{1}{2} \\
-1 - 2\theta = 1 \implies 2\theta = 0 \implies \theta = 0
+2\theta = 1 \\
+1-2\theta = 1
 \end{cases}
 $$
-Hai phương trình mâu thuẫn về giá trị $\theta$. Do đó, điểm $N(1, 1, 2)$ không thuộc đường thẳng.
+Phương trình đầu cho $\theta=\tfrac12$, còn phương trình thứ hai cho $\theta=0$. Hai phương trình mâu thuẫn về giá trị $\theta$. Do đó, điểm $N(1, 1, 2)$ không thuộc đường thẳng.
 :::
 
 ::: exercise 2. Xác định cấu trúc tập nghiệm và số chiều
 Cho hệ phương trình tuyến tính $Ax = b$ với:
 $$
-A = \begin{bmatrix} 1 & 1 & 0 & 0 \\ 0 & 1 & 1 & 0 \end{bmatrix} \in \mathbb{R}^{2 \times 4}, \qquad b = \begin{bmatrix} 2 \\ 3 \end{bmatrix}.
+\begin{aligned}
+&A=\begin{bmatrix}1&1&0&0\\0&1&1&0\end{bmatrix}, \\
+&b=\begin{bmatrix}2\\3\end{bmatrix}.
+\end{aligned}
 $$
+Ma trận $A$ có kích thước $2\times4$.
 1. Tìm một nghiệm riêng $x_0$ của hệ phương trình.
 2. Xác định cơ sở của không gian nghiệm thuần nhất $\mathcal{N}(A)$.
 3. Biểu diễn tập nghiệm dưới dạng không gian con tịnh tiến và xác định số chiều của tập nghiệm.
@@ -705,7 +817,10 @@ x_2 + x_3 = 3
 $$
 Ta có thể chọn hai biến tự do $x_2 = 0$ và $x_4 = 0$. Khi đó:
 $$
-x_1 = 2 - 0 = 2, \qquad x_3 = 3 - 0 = 3.
+\begin{aligned}
+x_1 &= 2-0=2, \\
+x_3 &= 3-0=3.
+\end{aligned}
 $$
 Ta thu được một nghiệm riêng: $x_0 = (2, 0, 3, 0)$.
 
@@ -719,18 +834,26 @@ x_2 + x_3 = 0 \implies x_3 = -x_2
 $$
 Hai biến $x_2$ và $x_4$ hoàn toàn tự do. Đặt $x_2 = s$ và $x_4 = t$ ($s, t \in \mathbb{R}$):
 $$
-\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \begin{bmatrix} -s \\ s \\ -s \\ t \end{bmatrix} = s \begin{bmatrix} -1 \\ 1 \\ -1 \\ 0 \end{bmatrix} + t \begin{bmatrix} 0 \\ 0 \\ 0 \\ 1 \end{bmatrix}.
+\begin{aligned}
+\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}
+&= \begin{bmatrix}-s\\s\\-s\\t\end{bmatrix} \\
+&= s\begin{bmatrix}-1\\1\\-1\\0\end{bmatrix}+t\begin{bmatrix}0\\0\\0\\1\end{bmatrix}.
+\end{aligned}
 $$
 Hai vector chỉ phương cơ sở là $v_1 = (-1, 1, -1, 0)$ và $v_2 = (0, 0, 0, 1)$. Hai vector này độc lập tuyến tính và sinh ra không gian hạt nhân $\mathcal{N}(A)$.
 
 **Bước 3: Biểu diễn hình học và số chiều**
-Tập nghiệm của hệ phương trình là tập affine:
+Với nghiệm riêng $x_0$ và hai vector cơ sở vừa tìm được, tập nghiệm gồm các điểm:
 $$
-C = \left\{(2, 0, 3, 0) + s(-1, 1, -1, 0) + t(0, 0, 0, 1) : s, t \in \mathbb{R}\right\}.
+x=x_0+sv_1+tv_2,
 $$
+trong đó $s,t\in\mathbb R$.
 Số chiều của tập nghiệm bằng số chiều của $\mathcal{N}(A)$:
 $$
-\dim(C) = n - \operatorname{rank}(A) = 4 - 2 = 2.
+\begin{aligned}
+\dim(C) &= n-\operatorname{rank}(A) \\
+&= 4-2=2.
+\end{aligned}
 $$
 Tập nghiệm là một mặt phẳng affine hai chiều trong không gian bốn chiều $\mathbb{R}^4$.
 :::
@@ -747,11 +870,15 @@ Tìm bao affine của hai tập hợp sau và cho biết tập nào là không g
 **Xét tập $S_1$**:
 Mọi tổ hợp affine của ba điểm thuộc $S_1$ có dạng:
 $$
-y = \theta_1 (1,0,0) + \theta_2 (0,1,0) + \theta_3 (0,0,1) = (\theta_1, \theta_2, \theta_3), \qquad \theta_1 + \theta_2 + \theta_3 = 1.
+\begin{aligned}
+y &= \theta_1e_1+\theta_2e_2+\theta_3e_3 \\
+&= (\theta_1,\theta_2,\theta_3), \\
+\theta_1+\theta_2+\theta_3 &= 1.
+\end{aligned}
 $$
-Đặt $x_1 = \theta_1, x_2 = \theta_2, x_3 = \theta_3$, ta thấy tập hợp này chính là mặt phẳng:
+Đặt $x_1 = \theta_1, x_2 = \theta_2, x_3 = \theta_3$, ta thấy bao affine là mặt phẳng gồm các điểm $(x_1,x_2,x_3)\in\mathbb R^3$ thỏa mãn:
 $$
-\operatorname{aff}(S_1) = \{(x_1, x_2, x_3) \in \mathbb{R}^3 \mid x_1 + x_2 + x_3 = 1\}.
+x_1+x_2+x_3=1.
 $$
 Mặt phẳng này không chứa gốc tọa độ $0 = (0, 0, 0)$ vì $0 + 0 + 0 = 0 \ne 1$.
 Kết luận: Bao affine $\operatorname{aff}(S_1)$ là một tập affine hai chiều nhưng **không phải** là một không gian con tuyến tính.
@@ -761,12 +888,15 @@ Tập $S_2$ gồm hai điểm $p_1 = (1, 2)$ và $p_2 = (3, 6)$.
 Vector chỉ phương là $p_2 - p_1 = (2, 4) = 2(1, 2)$.
 Bao affine là đường thẳng đi qua hai điểm:
 $$
-y(\theta) = (1, 2) + \theta(2, 4) = (1 + 2\theta,\; 2 + 4\theta).
+\begin{aligned}
+y(\theta) &= (1,2)+\theta(2,4) \\
+&= (1+2\theta,\;2+4\theta).
+\end{aligned}
 $$
 Quan sát thấy tỉ số giữa hai tọa độ luôn thỏa mãn: $x_2 = 2x_1 \implies 2x_1 - x_2 = 0$.
-Do đó:
+Do đó, bao affine $\operatorname{aff}(S_2)$ gồm các điểm $(x_1,x_2)\in\mathbb R^2$ thỏa mãn:
 $$
-\operatorname{aff}(S_2) = \{(x_1, x_2) \in \mathbb{R}^2 \mid 2x_1 - x_2 = 0\}.
+2x_1-x_2=0.
 $$
 Đường thẳng này đi qua gốc tọa độ $(0, 0)$ (ứng với $\theta = -0.5$).
 Kết luận: Bao affine $\operatorname{aff}(S_2)$ là một tập affine một chiều và **chính là một không gian con tuyến tính** của $\mathbb{R}^2$.

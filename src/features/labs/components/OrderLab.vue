@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, scale, sub, dot } from '../services/convex-geometry.mjs'
@@ -42,7 +43,7 @@ const label = i => String.fromCharCode(65 + i)
 <template>
   <figure class="study-lab" :aria-label="type === 'order' ? 'Thứ tự sinh bởi một nón và các phần tử tối thiểu' : 'Tìm phần tử tối thiểu bằng tổng có trọng số'">
     <p class="lab-title">{{ type === 'order' ? 'So sánh các điểm theo một nón' : 'Vô hướng hóa: cực tiểu λᵀz trên tập điểm' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Tập điểm, nón dời tới một điểm đang chọn và các phần tử tối thiểu" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Tập điểm, nón dời tới một điểm đang chọn và các phần tử tối thiểu" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clipId"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <line v-for="x in [1, 2, 3, 4, 5, 6]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="y in [1, 2, 3, 4, 5, 6]" :key="`gy${y}`" :y1="view.sy(y)" :y2="view.sy(y)" x1="0" :x2="view.width" class="lab-grid" />
@@ -64,6 +65,7 @@ const label = i => String.fromCharCode(65 + i)
       <line v-if="type === 'pareto'" :x1="view.sx(0.3)" :y1="view.sy(0.3)" :x2="P(add([0.3, 0.3], scale(1.2, lambda)))[0]" :y2="P(add([0.3, 0.3], scale(1.2, lambda)))[1]" class="lab-accent" />
       <text v-if="type === 'pareto'" :x="P(add([0.3, 0.3], scale(1.35, lambda)))[0]" :y="P(add([0.3, 0.3], scale(1.35, lambda)))[1]" class="lab-small">λ</text>
     </svg>
+    <LabPointControls :svg="svg" />
     <div class="lab-controls">
       <template v-if="type === 'order'">
         <label>Góc của k₁: {{ ang1 }}°<input v-model.number="ang1" type="range" min="-60" max="80" step="5" @input="ang2 = Math.max(ang2, ang1 + 10)" /></label>

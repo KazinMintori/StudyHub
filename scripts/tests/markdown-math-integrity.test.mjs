@@ -5,9 +5,13 @@ import { fileURLToPath } from 'node:url'
 import test from 'node:test'
 import { createMarkdownRenderer } from 'vitepress'
 import config from '../../docs/.vitepress/config.mjs'
+import { readMarkdownIncludes } from '../read-markdown-includes.mjs'
+import { mathTokens, swallowedMarkdown, mathRenderError as mathError } from '../math-integrity.mjs'
+import { createMathValidator } from '../verification/math-validator.mjs'
 
 const docs = fileURLToPath(new URL('../../docs/', import.meta.url))
 const md = await createMarkdownRenderer(docs, config.markdown)
+const validateMath = createMathValidator(config.markdown.math)
 const affectedPages = [
   'discrete-math/bai-tap.md',
   'toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.md',
@@ -29,32 +33,6 @@ const affectedPages = [
   'toan-cho-ai/bai-giang/bai-02-tap-loi/uoc-luong-phi-tham-so-va-kiem-dinh.md',
   'toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.md'
 ]
-const mathError = /data-mjx-error|data-mml-node=(?:&quot;|["'])merror|<merror\b/
-
-function* mathTokens(tokens) {
-  for (const token of tokens) {
-    if (token.type === 'math_block' || token.type === 'math_inline') yield token
-    if (token.children) yield* mathTokens(token.children)
-  }
-}
-
-function swallowedMarkdown(token) {
-  // Inspect the real parser output. Counting source delimiters alone misses a
-  // list whose opening delimiter is indented but whose body escapes the list.
-  const content = token.content
-  return (token.type === 'math_block' && !content.trim())
-    || /(?:^|\n)\s*#{1,6}\s+\S/.test(content)
-    || /(?:^|\n)\s*:::(?:\s|$)/.test(content)
-    || /(?:^|\n)\s*\$\$\s*(?:\n|$)/.test(content)
-    // A bare prose line cannot be TeX. Text inside \text{...}, commands,
-    // variables with operators and escaped \# remain valid math here.
-    || content.split('\n').some(line => {
-      const text = line.trim()
-      return /^\p{L}[\p{L}\t ,.!?():;\-]{18,}$/u.test(text)
-        && /\p{Ll}/u.test(text)
-        && /(?:\p{L}{2,}[ \t]+){2,}\p{L}{2,}/u.test(text)
-    })
-}
 
 async function* markdownFiles(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -84,7 +62,7 @@ test('the integrity check detects list math swallowing headings and prose', () =
   const invalid = [...mathTokens(tokens)].filter(swallowedMarkdown)
   assert(invalid.some(token => token.content.includes('## Phần tiếp theo')))
   assert(invalid.some(token => token.content.includes('Đây là đoạn văn')))
-  assert.match(md.render(broken, {}), mathError)
+  assert.throws(() => md.render(broken, {}), /Markdown inside math/)
   assert(swallowedMarkdown({ content: 'Đây là đoạn văn phải nằm ngoài công thức.' }))
 })
 
@@ -137,28 +115,43 @@ test('literal Markdown in code and legitimate TeX text are not flagged', () => {
   assert.doesNotMatch(md.render(source, {}), mathError)
 })
 
-test('no published Markdown page swallows headings or prose into math', async t => {
+test('all published Markdown, including source fragments, parses and renders valid math', async t => {
   const issues = []
+  const rendered = new Set()
   let pageCount = 0
+  let includeCount = 0
   for await (const file of markdownFiles(docs)) {
     pageCount++
     const relativePath = relative(docs, file).replaceAll('\\', '/')
     const env = { path: file, relativePath }
-    const tokens = md.parse(await readFile(file, 'utf8'), env)
+    const stub = await readFile(file, 'utf8')
+    includeCount += [...stub.matchAll(/<!--\s*@include:/g)].length
+    let tokens
+    try { tokens = md.parse(await readMarkdownIncludes(file), env) }
+    catch (error) { issues.push(`${relativePath}: ${error.message}`); continue }
     for (const token of mathTokens(tokens)) {
-      if (!swallowedMarkdown(token)) continue
-      const html = md.renderer.render([token], md.options, env)
-      issues.push(`${relativePath}:${(token.map?.[0] ?? 0) + 1}: ${mathError.test(html) ? 'MathJax error and ' : ''}Markdown inside ${token.type}`)
+      const location = `${relativePath}:${(token.map?.[0] ?? 0) + 1}`
+      if (swallowedMarkdown(token)) {
+        issues.push(`${location}: Markdown inside ${token.type}`)
+        continue
+      }
+      const key = token.type + '\0' + token.content
+      if (rendered.has(key)) continue
+      try {
+        validateMath(token.content, token.type === 'math_block', relativePath)
+        rendered.add(key)
+      } catch (error) { issues.push(`${location}: ${error.message.slice(0, 320)}`) }
     }
   }
   assert(pageCount > 1000, 'The regression check must cover the full published Markdown tree')
-  t.diagnostic(`Parsed ${pageCount} published Markdown pages with the VitePress configuration`)
+  assert(includeCount > 500, 'Source-linked lectures must be expanded, not just their Markdown stubs')
+  t.diagnostic(`Parsed ${pageCount} pages with ${includeCount} include directives and rendered ${rendered.size} unique math tokens`)
   assert.deepEqual(issues, [])
 })
 
 for (const page of affectedPages) {
   test(`the repaired page renders without MathJax errors: ${page}`, async () => {
-    const source = await readFile(`${docs}/${page}`, 'utf8')
+    const source = await readMarkdownIncludes(`${docs}/${page}`)
     const html = md.render(source, { path: `${docs}/${page}`, relativePath: page })
     assert.doesNotMatch(html, mathError)
   })

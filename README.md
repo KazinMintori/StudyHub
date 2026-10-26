@@ -70,10 +70,7 @@ Sau khi chạy lệnh, truy cập `http://localhost:5173` trên trình duyệt. 
 ### Đóng gói & Xem trước bản tĩnh
 
 ```sh
-# Đồng bộ dữ liệu môn học và build vào docs/.vitepress/dist/
-npm run build
-
-# Xem trước bản đóng gói
+# Xem trước bản đóng gói đã có trong docs/.vitepress/dist/
 npm run preview
 ```
 
@@ -83,7 +80,7 @@ npm run preview
 python -m http.server 8080 --directory docs/.vitepress/dist
 ```
 
-`npm run build` chỉ tạo một bản website. Khi cần thêm bản chuyển giao trong `dist/`, chạy `npm run export:static`. Đo dung lượng bằng `npm run audit:storage`.
+Build toàn bộ chỉ được chạy trên GitHub Actions. Khi đã có bản đóng gói và cần thêm bản chuyển giao trong `dist/`, chạy `npm run export:static`. Đo dung lượng bằng `npm run audit:storage`.
 
 Mỗi khi có commit được đẩy lên nhánh `main`, quy trình GitHub Actions sẽ tự động kiểm tra, chạy `npm run ci:build` và xuất bản website lên GitHub Pages.
 
@@ -94,8 +91,8 @@ Mỗi khi có commit được đẩy lên nhánh `main`, quy trình GitHub Actio
 Dự án áp dụng quy trình kiểm định nghiêm ngặt để đảm bảo chất lượng bài giảng và tính toàn vẹn của hệ thống:
 
 ```sh
-# 1. Kiểm tra quá trình build VitePress
-npm run ci:build
+# 1. Kiểm tra công thức, kể cả nội dung được chèn từ file nguồn
+npm run verify:math
 
 # 2. Kiểm tra liên kết catalog, Wiki, hình ảnh và cấu trúc bài giảng
 node .agents/skills/studyhub-lecture/scripts/check_lecture.mjs --all
@@ -109,12 +106,14 @@ node scripts/verification/verify-content-model.mjs
 npm test
 npm run test:features
 
-# 5. Chạy preview trên cổng 5183, rồi kiểm tra bằng terminal khác
-npm run preview -- --port 5183
+# 5. Chạy dev trên cổng 5183, rồi kiểm tra bằng terminal khác
+npm run dev -- --port 5183
 # PowerShell trong terminal kiểm tra:
 # $env:QA_URL = "http://127.0.0.1:5183"
 # npm run verify:refactor
 ```
+
+Build toàn bộ và deploy được thực hiện trên GitHub Actions sau khi push lên `main`. Không chạy build toàn bộ trên máy cục bộ. Xem [Quy chuẩn hiển thị công thức](docs/engineering/math-rendering.md) để kiểm tra delimiter, nguồn include và bố cục toán trên điện thoại.
 
 ---
 

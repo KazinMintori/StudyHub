@@ -88,7 +88,7 @@ const layoutClasses = computed(() => ({
     </template>
     <template #nav-bar-content-after>
       <div v-if="currentCourse" class="nav-extra-tools">
-        <StudyUtilityWidget :course-name="currentCourse.name" />
+        <StudyUtilityWidget :course-name="currentCourse.name" :course-id="currentCourse.id" />
         <ZenModeToggle />
       </div>
     </template>

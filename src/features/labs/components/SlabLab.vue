@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { polyhedronInBox } from '../services/convex-geometry.mjs'
@@ -35,7 +36,7 @@ const curve = computed(() => Array.from({ length: 121 }, (_, k) => { const t = (
 <template>
   <figure class="study-lab" aria-label="Giao vô hạn các dải trong ví dụ đa thức lượng giác">
     <p class="lab-title">Mỗi giá trị t cho một dải, và S là giao của tất cả</p>
-    <svg ref="svg" viewBox="0 0 640 300" role="img" aria-label="Bên trái các dải và tập S, bên phải đồ thị đa thức lượng giác của điểm đang chọn" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" viewBox="0 0 640 300" role="img" aria-label="Bên trái các dải và tập S, bên phải đồ thị đa thức lượng giác của điểm đang chọn" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clipId"><rect x="0" y="0" width="300" height="300" /></clipPath></defs>
       <g :clip-path="`url(#${clipId})`">
         <line :x1="0" x2="300" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" /><line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" y2="300" class="lab-axis" />
@@ -59,6 +60,7 @@ const curve = computed(() => Array.from({ length: 121 }, (_, k) => { const t = (
       <text :x="plot.x + 4" :y="syP(1) - 4" class="lab-small">1</text>
       <text :x="plot.x + 4" :y="syP(-1) + 14" class="lab-small">−1</text>
     </svg>
+    <LabPointControls :svg="svg" />
     <div class="lab-controls">
       <label>Số dải được vẽ: {{ showCount }}<input v-model.number="showCount" type="range" min="1" max="20" step="1" /></label>
     </div>

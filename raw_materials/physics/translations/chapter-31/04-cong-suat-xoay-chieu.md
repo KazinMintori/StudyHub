@@ -33,7 +33,7 @@ $$
 $$
 \begin{aligned}
 P_{\mathrm{av}} &= \frac V{\sqrt2}\frac I{\sqrt2} \\
-&= V_{\mathrm{rms}}I_{\mathrm{rms}}.\tag{31.28}
+&= V_{\mathrm{rms}}I_{\mathrm{rms}}.
 \end{aligned} \tag{31.28}
 $$
 
@@ -43,7 +43,7 @@ $$
 \begin{aligned}
 P_{\mathrm{av}} &= I_{\mathrm{rms}}^2R \\
 &= \frac{V_{\mathrm{rms}}^2}{R} \\
-&= V_{\mathrm{rms}}I_{\mathrm{rms}}.\tag{31.29}
+&= V_{\mathrm{rms}}I_{\mathrm{rms}}.
 \end{aligned} \tag{31.29}
 $$
 
@@ -97,7 +97,7 @@ Trên một chu kỳ, trung bình $\cos^2\omega t$ bằng $1/2$. Vì tích sin v
 $$
 \begin{aligned}
 P_{\mathrm{av}} &= \frac12VI\cos\phi \\
-&= V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.\tag{31.31}
+&= V_{\mathrm{rms}}I_{\mathrm{rms}}\cos\phi.
 \end{aligned} \tag{31.31}
 $$
 

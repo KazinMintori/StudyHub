@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, sub, scale, dot, norm2, barycentric, combination } from '../services/convex-geometry.mjs'
@@ -92,7 +93,7 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
 <template>
   <figure class="study-lab" :aria-label="titles[type]">
     <p class="lab-title">{{ titles[type] }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="titles[type]" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="titles[type]" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs>
         <marker :id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-head" /></marker>
         <marker :id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-accent" /></marker>
@@ -151,6 +152,7 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
         <text :x="P(xt)[0] + 10" :y="P(xt)[1] - 10">x₀ + t·d</text>
       </template>
     </svg>
+    <LabPointControls :svg="svg" />
 
     <div v-if="type === 'line'" class="lab-controls">
       <label>θ = {{ fmt(theta) }}<input v-model.number="theta" type="range" min="-1" max="2" step="0.05" /></label>

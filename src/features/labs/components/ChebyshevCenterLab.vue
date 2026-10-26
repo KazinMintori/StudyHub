@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 
@@ -94,7 +95,7 @@ const label = (c) => {
   <figure class="study-lab" aria-label="Tâm Chebyshev của một đa giác">
     <p class="lab-title">Hình tròn lớn nhất nằm trong đa giác</p>
     <p class="lab-lead">Kéo các chấm tròn để dịch từng cạnh song song với chính nó. Hình tròn lớn nhất nằm trong đa giác là nghiệm của một LP ba biến: hai tọa độ của tâm và bán kính.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đa giác khả thi, các đường ràng buộc, hình tròn lớn nhất và tâm Chebyshev" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đa giác khả thi, các đường ràng buộc, hình tròn lớn nhất và tâm Chebyshev" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line v-for="t in [0, 1, 2, 3, 4]" :key="`gx${t}`" :x1="view.sx(t)" :x2="view.sx(t)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="t in [0, 1, 2, 3, 4]" :key="`gy${t}`" x1="0" :x2="view.width" :y1="view.sy(t)" :y2="view.sy(t)" class="lab-grid" />
       <line v-for="(c, i) in cons" :key="`l${i}`" :x1="lineEnds(c)[0][0]" :y1="lineEnds(c)[0][1]" :x2="lineEnds(c)[1][0]" :y2="lineEnds(c)[1][1]" :class="active.includes(i) ? 'lab-warn' : 'lab-guide'" />
@@ -106,6 +107,7 @@ const label = (c) => {
       <circle v-if="showCentroid && centroid" :cx="P(centroid.x)[0]" :cy="P(centroid.x)[1]" r="6" class="lab-dot-hollow" />
       <circle v-for="(c, i) in cons" :key="`h${i}`" :cx="P(handle(i))[0]" :cy="P(handle(i))[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Cạnh ${i + 1}: ${label(c)}`" :aria-valuetext="`b = ${fmt(c.b, 2)}`" @pointerdown="drag.start(`c${i}`, $event)" @keydown="drag.key(`c${i}`, handle(i), $event)" />
     </svg>
+    <LabPointControls :svg="svg" />
     <p class="lab-legend"><span class="legend-accent">đa giác khả thi</span><span class="legend-good">hình tròn lớn nhất</span><span class="legend-warn">ràng buộc chặt</span><span class="legend-guide">ràng buộc còn dư</span></p>
     <div class="lab-controls">
       <label class="lab-check"><input v-model="showCentroid" type="checkbox" /> Hiện trọng tâm của đa giác</label>

@@ -9,6 +9,7 @@ import { studyLink } from '../../../core/routing/links.js'
     <p class="philosophy-eyebrow">TRIẾT HỌC · 3 CHƯƠNG</p>
     <h1>Triết học Mác – Lênin</h1>
     <p class="philosophy-lead">Từ những câu hỏi về thế giới và con người đến cách nhìn biện chứng về tự nhiên, nhận thức và đời sống xã hội.</p>
+    <a class="text-link" :href="studyLink('/goc-hoc-tap?mon=triet-hoc-mac-lenin')">Góc học tập của môn <span aria-hidden="true">→</span></a>
     <section v-for="chapter in course.lessons" :key="chapter.slug" class="philosophy-chapter" :aria-labelledby="`philosophy-chapter-${chapter.number}`">
       <div class="philosophy-chapter-number" aria-hidden="true">0{{ chapter.number }}</div>
       <div class="philosophy-chapter-body">

@@ -63,3 +63,11 @@ test('real MathJax markup is preserved inside the escaped Vue binding',()=>{
  assert.equal(JSON.parse(decoded),actual)
  assert.equal(cached.renderInline('$x^2+1$'),rendered)
 })
+
+test('invalid TeX cannot be cached or published as a raw MathJax error',()=>{
+ const md=new MarkdownIt().use(mathjax).use(staticMathPlugin)
+ for(let n=0;n<2;n++)assert.throws(()=>md.render('$$\n\\frac{1}\n$$',{relativePath:'vat-ly-2/broken.md'}),/vat-ly-2\/broken.md.*MathJax rendering error/)
+ // Standalone exercise HTML uses the same validation without a Vue binding.
+ const direct=new MarkdownIt().use(mathjax).use(staticMathPlugin,{vueBinding:false})
+ assert.throws(()=>direct.render('$$\n\\frac{1}\n$$'),/MathJax rendering error/)
+})

@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
 import { makeView, createDragger, fmt } from '../controllers/svg-drag.js'
 
@@ -44,7 +45,7 @@ const area = computed(() => Math.PI * Math.sqrt(1 - c.value * c.value))
   <figure class="study-lab" aria-label="Lát cắt của tập ma trận tương quan, miền khả thi của một bất đẳng thức ma trận tuyến tính">
     <p class="lab-title">Những bộ hệ số tương quan có thể xảy ra</p>
     <p class="lab-lead">Ba biến ngẫu nhiên có ma trận tương quan R. Giữ ρ₂₃ cố định, các cặp (ρ₁₂, ρ₁₃) làm R nửa xác định dương lấp đầy một ellipse, nhỏ hơn hẳn hình vuông [−1, 1]². Kéo điểm để xem trị riêng của R.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Hình vuông các hệ số trong khoảng trừ một tới một và ellipse các cặp hợp lệ" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Hình vuông các hệ số trong khoảng trừ một tới một và ellipse các cặp hợp lệ" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <rect :x="view.sx(-1)" :y="view.sy(1)" :width="view.sx(1) - view.sx(-1)" :height="view.sy(-1) - view.sy(1)" class="lab-region-soft" style="opacity: 0.3" />
       <line v-for="t in [-1, -0.5, 0, 0.5, 1]" :key="`gx${t}`" :x1="view.sx(t)" :x2="view.sx(t)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="t in [-1, -0.5, 0, 0.5, 1]" :key="`gy${t}`" x1="0" :x2="view.width" :y1="view.sy(t)" :y2="view.sy(t)" class="lab-grid" />
@@ -59,6 +60,7 @@ const area = computed(() => Math.PI * Math.sqrt(1 - c.value * c.value))
       </template>
       <circle :cx="P(pt)[0]" :cy="P(pt)[1]" r="9" :class="psd ? 'lab-handle' : 'lab-handle lab-handle-alt'" tabindex="0" role="slider" aria-label="Cặp hệ số tương quan" :aria-valuetext="`ρ₁₂ = ${fmt(pt[0], 2)}, ρ₁₃ = ${fmt(pt[1], 2)}`" @pointerdown="drag.start('p', $event)" @keydown="drag.key('p', pt, $event)" />
     </svg>
+    <LabPointControls :svg="svg" />
     <p class="lab-legend"><span class="legend-accent">cặp hệ số làm R ⪰ 0</span><span class="legend-guide">hình vuông [−1, 1]² (nhạt)</span><span v-if="fixRow" class="legend-warn">các giá trị ρ₁₃ được phép khi ρ₁₂ cố định</span></p>
     <div class="lab-controls">
       <label>ρ₂₃ = {{ fmt(c, 2) }}<input v-model.number="c" type="range" min="-0.98" max="0.98" step="0.01" /></label>

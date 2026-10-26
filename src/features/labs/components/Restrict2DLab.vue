@@ -1,4 +1,5 @@
 <script setup>
+import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { contourSegments } from '../services/contour.mjs'
@@ -55,7 +56,7 @@ const lineEnds = computed(() => [pointAt(-T), pointAt(T)])
 <template>
   <figure class="study-lab" aria-label="Hàm hai biến hạn chế lên một đường thẳng">
     <p class="lab-title">Lồi trên mọi đường thẳng</p>
-    <svg ref="svg" viewBox="0 0 620 300" role="img" aria-label="Bên trái các đường đồng mức và một đường thẳng, bên phải đồ thị của hàm hạn chế" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end">
+    <svg ref="svg" viewBox="0 0 620 300" role="img" aria-label="Bên trái các đường đồng mức và một đường thẳng, bên phải đồ thị của hàm hạn chế" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clipId"><rect x="0" y="0" width="300" height="300" /></clipPath></defs>
       <g :clip-path="`url(#${clipId})`">
         <line x1="0" x2="300" :y1="left.sy(0)" :y2="left.sy(0)" class="lab-axis" /><line :x1="left.sx(0)" :x2="left.sx(0)" y1="0" y2="300" class="lab-axis" />
@@ -73,6 +74,7 @@ const lineEnds = computed(() => [pointAt(-T), pointAt(T)])
       <text x="595" y="296" class="lab-small">t</text>
       <text x="334" y="26" class="lab-small">g(t) = f(x + tv)</text>
     </svg>
+    <LabPointControls :svg="svg" />
     <div class="lab-controls">
       <label>Hàm f = <select v-model="choice"><option v-for="(item, key) in catalog" :key="key" :value="key">{{ item.label }}</option></select></label>
       <label>Hướng v: {{ angle }}°<input v-model.number="angle" type="range" min="0" max="180" step="2" /></label>

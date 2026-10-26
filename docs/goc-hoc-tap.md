@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Góc học tập
-description: Pomodoro, flashcard, ghi chú Markdown và mô phỏng điện trường.
+description: Ghi chú, flashcard, việc cần học, hẹn giờ và mô phỏng theo từng học phần.
 ---
 
 <script setup>
