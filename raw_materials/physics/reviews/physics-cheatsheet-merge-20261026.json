@@ -1,0 +1,31 @@
+{
+  "status": "passed-after-upstream-integration",
+  "verifiedMergeHead": "33752c6a32880b73ff6087ec18a3a049e6035f73",
+  "upstreamCommits": [
+    "6c2938a68a558f923e1419966ba2b82aedf11e21",
+    "7c87a9fb"
+  ],
+  "ownFixCommit": "388c0d06",
+  "interfaceScope": "Actualcomponenttemplate/productionCSS,44cheatsheets220cases; finalpublicroutingstillpending.",
+  "checks": {
+    "features": 159,
+    "bundle": 8,
+    "skillTools": 39,
+    "mathTests": 32,
+    "publishedMarkdownPages": 1500,
+    "includeDirectivesExpanded": 596,
+    "uniqueRenderedMarkdownMathTokens": 56395,
+    "uniqueMathAcrossAllData": 58457,
+    "architectureModules": 382,
+    "ownershipIndexes": 138,
+    "colorTokens": "passed"
+  },
+  "note": "Math counts increased because upstream verification now expands and validates included source fragments; they are not a count of newly authored formulas.",
+  "reviewedFiles": {
+    "src/app/styles/lecture.css": "93ff8c15686de23edf6f05ffe97a9e4fcbe92f85414345681dd997959a30bf2a",
+    "src/features/lecture/services/lecture-model.mjs": "fec0f997f71ca2a6ce027bf768856e4da403fdeb052dd0ba38d58d5208268662",
+    "package.json": "5ca155929de25b05f3711018d48879fe39530cbc962691659a796e1e284b8ab9"
+  },
+  "fullSourceAcademicAuditComplete": false,
+  "publicRouteCheckPending": true
+}
