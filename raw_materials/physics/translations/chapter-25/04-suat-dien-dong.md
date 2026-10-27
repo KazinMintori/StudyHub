@@ -193,7 +193,11 @@ $$
 Kiểm tra trực tiếp ở nguồn:
 
 $$
-V_{ab} = \mathcal E-Ir = 12-(2.00)(2) = 8.00\,\mathrm V.
+\begin{aligned}
+V_{ab}&=\mathcal E-Ir\\
+&=12\,\mathrm V-(2.00\,\mathrm A)(2\,\Omega)\\
+&=8.00\,\mathrm V.
+\end{aligned}
 $$
 
 Trong trường hợp pin cấp điện, dòng chạy bên trong pin từ cực âm lên cực dương và điện áp đầu cực thấp hơn suất điện động. Nếu pin được nạp, dòng qua pin đổi chiều và điện áp đầu cực lớn hơn suất điện động. Điện trở trong càng nhỏ thì độ chênh này càng ít.

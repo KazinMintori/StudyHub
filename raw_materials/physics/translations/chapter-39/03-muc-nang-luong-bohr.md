@@ -341,16 +341,47 @@ Hãy xác định động năng, thế năng và cơ năng toàn phần của ng
 
 **Nhận dạng và Chuẩn bị**:
 - **Nhận dạng**: Bài toán yêu cầu tính các dạng năng lượng của nguyên tử hydro ở mức kích thích thứ nhất ($n = 2$) và bước sóng photon phát ra khi chuyển về mức cơ bản ($n = 1$).
-- **Chuẩn bị**: Năng lượng ở mức thứ $n$ được xác định theo hệ thức $E_n = -hcR/n^2 = -(13{,}60\text{ eV})/n^2$. Từ các phương trình (39.12), (39.13) và (39.14), động năng và thế năng liên hệ với năng lượng toàn phần theo $K_n = (13{,}60\text{ eV})/n^2$ và $U_n = -(27{,}20\text{ eV})/n^2$. Bước sóng photon phát xạ khi chuyển từ mức $n_U = 2$ về $n_L = 1$ được tính qua $\lambda = hc/(E_2 - E_1)$.
+- **Chuẩn bị**: Năng lượng ở mức thứ n là $E_n=-hcR/n^2$. Với hydro, $hcR=13{,}60\,\mathrm{eV}$. Từ (39.12), (39.13) và (39.14):
+
+$$
+\begin{aligned}
+&K_n=\frac{13{,}60\,\mathrm{eV}}{n^2},\\
+&U_n=-\frac{27{,}20\,\mathrm{eV}}{n^2}.
+\end{aligned}
+$$
+
+Bước sóng photon phát xạ từ mức $n_U=2$ về mức $n_L=1$ được tính qua $\lambda=hc/(E_2-E_1)$.
 
 **Thực hiện**:
 
 Đối với mức kích thích thứ nhất ứng với $n = 2$:
-- Động năng: $K_2 = (13{,}60\text{ eV})/2^2 = 3{,}40\text{ eV}$.
-- Thế năng: $U_2 = -(27{,}20\text{ eV})/2^2 = -6{,}80\text{ eV}$.
+- Động năng:
+
+$$
+\begin{aligned}
+K_2&=\frac{13{,}60\,\mathrm{eV}}{2^2}\\
+&=3{,}40\,\mathrm{eV}.
+\end{aligned}
+$$
+
+- Thế năng:
+
+$$
+\begin{aligned}
+U_2&=-\frac{27{,}20\,\mathrm{eV}}{2^2}\\
+&=-6{,}80\,\mathrm{eV}.
+\end{aligned}
+$$
 - Cơ năng toàn phần: $E_2 = K_2 + U_2$, thu được $E_2 = -3{,}40\text{ eV}$.
 
-Đối với mức cơ bản $n = 1$: $E_1 = -(13{,}60\text{ eV})/1^2 = -13{,}60\text{ eV}$.
+Đối với mức cơ bản $n=1$:
+
+$$
+\begin{aligned}
+E_1&=-\frac{13{,}60\,\mathrm{eV}}{1^2}\\
+&=-13{,}60\,\mathrm{eV}.
+\end{aligned}
+$$
 
 Năng lượng của photon phát ra trong quá trình chuyển dời là $\Delta E = E_2 - E_1$:
 
@@ -541,7 +572,17 @@ $$
 \frac{1}{n_L'^2} - \frac{1}{n_U'^2} = \frac{7}{36}
 $$
 
-Với $n'_L = 1$, năng lượng nhỏ nhất trong dãy Lyman là $10{,}20\text{ eV} > 2{,}64\text{ eV}$. Với $n'_L = 2$, ta có $1/n_U'^2 = 1/18 \implies n'_U = \sqrt{18} \approx 4{,}24$ (không nguyên). Với $n'_L \ge 3$, hiệu năng lượng cực đại của hydro chỉ đạt $(13{,}60\text{ eV})/9 \approx 1{,}51\text{ eV} < 2{,}64\text{ eV}$. Do đó hydro cũng không thể phát ra photon này.
+Với $n'_L=1$, năng lượng nhỏ nhất trong dãy Lyman là $10{,}20\,\mathrm{eV}>2{,}64\,\mathrm{eV}$. Với $n'_L=2$, ta có:
+
+$$
+\begin{aligned}
+\frac1{n_U'^2}&=\frac1{18},\\
+n'_U&=\sqrt{18}\\
+&\approx4{,}24.
+\end{aligned}
+$$
+
+Giá trị này không nguyên. Với $n'_L\ge3$, hiệu năng lượng cực đại của hydro chỉ đạt $(13{,}60\,\mathrm{eV})/9\approx1{,}51\,\mathrm{eV}<2{,}64\,\mathrm{eV}$. Do đó hydro cũng không thể phát ra photon này.
 
 Như vậy, trong các chuyển dời đã cho, chỉ duy nhất chuyển dời (iv) phát ra photon có bước sóng trùng với hydro.
 :::

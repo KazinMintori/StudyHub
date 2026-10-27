@@ -61,6 +61,56 @@
       "source": "raw_materials/physics/translations/chapter-25/01-dong-dien.md",
       "line": 127,
       "title": "Ví dụ 25.1. Mật độ dòng điện và vận tốc trôi trong dây dẫn"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/03-dien-tro.md",
+      "line": 126,
+      "title": "Ví dụ 25.2. Điện trường, hiệu điện thế và điện trở trong dây"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/03-dien-tro.md",
+      "line": 190,
+      "title": "Ví dụ 25.3. Điện trở của dây đồng ở các nhiệt độ khác nhau"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
+      "line": 135,
+      "title": "Ví dụ khái niệm 25.4. Nguồn trong mạch hở"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
+      "line": 165,
+      "title": "Ví dụ 25.5. Nguồn trong mạch kín"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
+      "line": 206,
+      "title": "Ví dụ khái niệm 25.6. Đặt vôn kế và ampe kế đúng chỗ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
+      "line": 243,
+      "title": "Ví dụ 25.7. Nguồn bị ngắn mạch"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/05-nang-luong-cong-suat.md",
+      "line": 98,
+      "title": "Ví dụ 25.8: Cân bằng công suất trong mạch kín"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/05-nang-luong-cong-suat.md",
+      "line": 138,
+      "title": "Ví dụ 25.9: Tăng điện trở tải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/05-nang-luong-cong-suat.md",
+      "line": 179,
+      "title": "Ví dụ 25.10: Đoản mạch"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/06-mo-hinh-dan-dien-kim-loai.md",
+      "line": 92,
+      "title": "Ví dụ 25.11: Thời gian tự do trung bình trong đồng"
     }
   ],
   "exercises": [
@@ -1305,6 +1355,16 @@
       "source": "raw_materials/physics/translations/chapter-25/02-dien-tro-suat.md",
       "line": 136,
       "title": "Lời giải"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/03-dien-tro.md",
+      "line": 237,
+      "title": "Đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
+      "line": 303,
+      "title": "Đáp án và giải thích"
     }
   ],
   "assets": [
@@ -1635,19 +1695,19 @@
     {
       "reference": "../img/young-25/hinh-25-18.png",
       "declaredIn": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
-      "line": 206,
+      "line": 210,
       "source": "docs/vat-ly-2/bai-giang/img/young-25/hinh-25-18.png"
     },
     {
       "reference": "../img/young-25/hinh-25-19.png",
       "declaredIn": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
-      "line": 243,
+      "line": 247,
       "source": "docs/vat-ly-2/bai-giang/img/young-25/hinh-25-19.png"
     },
     {
       "reference": "../img/young-25/hinh-25-20.png",
       "declaredIn": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
-      "line": 283,
+      "line": 287,
       "source": "docs/vat-ly-2/bai-giang/img/young-25/hinh-25-20.png"
     },
     {

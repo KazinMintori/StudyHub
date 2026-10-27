@@ -163,7 +163,10 @@ $$
 Khoảng cách giữa hai vân tối bậc hai nằm đối xứng ở hai phía của cực đại trung tâm là:
 
 $$
-2 y_2 = 2 \times (32\,\mathrm{mm}) = 64\,\mathrm{mm}
+\begin{aligned}
+2y_2&=2\times(32\,\mathrm{mm})\\
+&=64\,\mathrm{mm}.
+\end{aligned}
 $$
 
 Hoàn toàn tương tự, với vân tối bậc $m$ bất kỳ, khoảng cách giữa hai cực tiểu bậc $m$ đối xứng hai bên là $2 y_m = m \times (32\,\mathrm{mm})$.
@@ -188,10 +191,43 @@ Thứ tự giảm dần là (ii), rồi (i) và (iv) bằng nhau, cuối cùng l
 Giải thích:
 
 Góc lệch $\theta$ của vân tối bậc một được xác định bởi phương trình (36.2) với $m = 1$, tức là $\sin\theta = \frac{\lambda}{a}$. Tỷ số $\frac{\lambda}{a}$ càng lớn thì $\sin\theta$ và góc $\theta$ càng lớn. Ta tính tỷ số $\frac{\lambda}{a}$ cho từng trường hợp:
-- Trường hợp (i): Tỷ số $\frac{\lambda}{a} = \frac{4{,}0 \times 10^{-7}\,\mathrm{m}}{2{,}0 \times 10^{-4}\,\mathrm{m}} = 2{,}0 \times 10^{-3}$.
-- Trường hợp (ii): Tỷ số $\frac{\lambda}{a} = \frac{6{,}0 \times 10^{-7}\,\mathrm{m}}{2{,}0 \times 10^{-4}\,\mathrm{m}} = 3{,}0 \times 10^{-3}$.
-- Trường hợp (iii): Tỷ số $\frac{\lambda}{a} = \frac{4{,}0 \times 10^{-7}\,\mathrm{m}}{3{,}0 \times 10^{-4}\,\mathrm{m}} = 1{,}33 \times 10^{-3}$.
-- Trường hợp (iv): Tỷ số $\frac{\lambda}{a} = \frac{6{,}0 \times 10^{-7}\,\mathrm{m}}{3{,}0 \times 10^{-4}\,\mathrm{m}} = 2{,}0 \times 10^{-3}$.
+Đổi cả bước sóng và bề rộng khe sang mét để đơn vị triệt tiêu trong tỷ số.
+
+Trường hợp (i):
+
+$$
+\begin{aligned}
+\frac\lambda a&=\frac{4{,}0\times10^{-7}}{2{,}0\times10^{-4}}\\
+&=2{,}0\times10^{-3}.
+\end{aligned}
+$$
+
+Trường hợp (ii):
+
+$$
+\begin{aligned}
+\frac\lambda a&=\frac{6{,}0\times10^{-7}}{2{,}0\times10^{-4}}\\
+&=3{,}0\times10^{-3}.
+\end{aligned}
+$$
+
+Trường hợp (iii):
+
+$$
+\begin{aligned}
+\frac\lambda a&=\frac{4{,}0\times10^{-7}}{3{,}0\times10^{-4}}\\
+&\approx1{,}33\times10^{-3}.
+\end{aligned}
+$$
+
+Trường hợp (iv):
+
+$$
+\begin{aligned}
+\frac\lambda a&=\frac{6{,}0\times10^{-7}}{3{,}0\times10^{-4}}\\
+&=2{,}0\times10^{-3}.
+\end{aligned}
+$$
 
 Do đó: $\theta_\text{(ii)} > \theta_\text{(i)} = \theta_\text{(iv)} > \theta_\text{(iii)}$.
 

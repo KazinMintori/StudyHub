@@ -30,7 +30,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired andcurrentlocal changedpagesverified; publicreleasepending",
+        "report": "raw_materials/physics/reviews/selected-theory-mobile-repairs-20261028.json"
+      }
     },
     {
       "chapter": 24,
@@ -71,7 +75,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired andcurrentlocal changedpagesverified; publicreleasepending",
+        "report": "raw_materials/physics/reviews/selected-theory-mobile-repairs-20261028.json"
+      }
     },
     {
       "chapter": 26,
@@ -1285,7 +1293,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired andcurrentlocal changedpagesverified; publicreleasepending",
+        "report": "raw_materials/physics/reviews/selected-theory-mobile-repairs-20261028.json"
+      }
     },
     {
       "chapter": 36,
@@ -1317,7 +1329,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired andcurrentlocal changedpagesverified; publicreleasepending",
+        "report": "raw_materials/physics/reviews/selected-theory-mobile-repairs-20261028.json"
+      }
     },
     {
       "chapter": 37,
@@ -1366,7 +1382,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired andcurrentlocal changedpagesverified; publicreleasepending",
+        "report": "raw_materials/physics/reviews/selected-theory-mobile-repairs-20261028.json"
+      }
     },
     {
       "chapter": 40,

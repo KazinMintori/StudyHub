@@ -1,0 +1,57 @@
+{
+  "status": "selected-theory-mobile-repairs-locally-verified-pending-public-release",
+  "checkedUTC": "2026-10-27T17:41:20.248909+00:00",
+  "chapters": [
+    23,
+    25,
+    35,
+    36,
+    39
+  ],
+  "scope": "Sourcepresentation repairs and actualchanged-page layout only; no fullchapter semantic completeness claim.",
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md": "3b3d4237f78bbd5581162b45e01dd09bc89336914919e84fa6bdbe9ec229bf92",
+    "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md": "fe492dc82cc387e0c4ced169dee69c90f1da59b7c844bc247785018cd3100dee",
+    "raw_materials/physics/translations/chapter-35/03-cuong-do-giao-thoa.md": "eeedc9a47c8aba8dd8d75e7d8637519f7d3862989d12a2cd5ca5704078250f01",
+    "raw_materials/physics/translations/chapter-36/09-tom-tat.md": "aa7dfc84896c7d17ab86623faf3b06e4705a8b565d2e66b64936295021e81b8a",
+    "raw_materials/physics/translations/chapter-36/02-nhieu-xa-mot-khe.md": "7629c7e9222038e05a7a2eedb8f4e42268568fca6a64f792fb3697f49ba26ba9",
+    "raw_materials/physics/translations/chapter-39/03-muc-nang-luong-bohr.md": "d5c024b44de169e010fa53daba1563bf91412ab81d61af7cf11cff6c9ce87805"
+  },
+  "independentPhysicalChecks": 78,
+  "actualViewportCases": 110,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "actualScope": {
+    "23": "All6theory pages30cases",
+    "25": "All7theory pages35cases",
+    "35": "All6theory pages30cases",
+    "36": "ChangedNotes/summary andsingle-slit topic10cases",
+    "39": "ChangedBohrtopic5cases"
+  },
+  "executionFailure": {
+    "firstBatch": "Devserver exhausted4GBdefaultheap after95complete cases. Subsequentpageswere notaccepted from thatfailedrun.",
+    "recovery": "Confirmedoldprocess terminated, restarted freshdevserver and checked ONLYremainingchanged pages. Keptfailureevidence. Didnotraisememorylimit orrunfullbuild."
+  },
+  "evidence": {
+    "qa/physics-global-audit/runtime-selected-theory-repairs-20261028/chapters-23-to-39/theory/results.json": "23d387a9a5c34b7f0923385840307973f0d989717018326db1642f3394199313",
+    "qa/physics-global-audit/runtime-focused-theory-repairs-20261028/chapters-36-to-39/theory/results.json": "644704638e45d5ddca7d1776656fe4477e1b50c668cfc7f7b5f6bc7900670397",
+    "qa/physics-global-audit/selected-theory-repairs-20261028/numeric-checks.json": "c2fc077e826186dc4e103f47cacc4b88baa4f9b373b76a48e7ba5f5d35378d61",
+    "qa/physics-global-audit/selected-theory-repairs-20261028/focused-before-second-repair.json": "b7b8141433f9f91cf3ec450b46c1ac4a42e0dae89d5dd7b017158a872508bb21",
+    "qa/physics-global-audit/selected-theory-repairs-20261028/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
+    "qa/physics-global-audit/selected-theory-repairs-20261028/skill-tests.log": "5313b9e0641cd0b4841b31c8eb9da8fa1217791eeccad32eabead43e7fddf1e6",
+    "qa/physics-global-audit/selected-theory-repairs-20261028/index-refresh-proof.json": "7581fe411c3d35029670328cdbe9ff9d45b4919061999d0128c8e3bf4c872847"
+  },
+  "lightweightChecks": {
+    "lectures": 133,
+    "topics": 354,
+    "errors": 0,
+    "warnings": 0,
+    "skillToolsTests": 39
+  },
+  "remaining": "Cloudbuild/deployandpublicverification. Source/content/figure/exercise/Wiki/cheatsheetaudit remainsseparate; confirmedtheorylayoutbacklogstill8otherchapters."
+}

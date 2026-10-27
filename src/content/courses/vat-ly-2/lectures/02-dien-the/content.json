@@ -49,7 +49,78 @@
     "raw_materials/physics/translations/chapter-23/04-mat-dang-the.md",
     "raw_materials/physics/translations/chapter-23/05-gradient-dien-the.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
+      "line": 117,
+      "title": "Ví dụ 23.1: Bảo toàn năng lượng với lực điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
+      "line": 231,
+      "title": "Ví dụ 23.2: Hệ ba nguồn điểm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/02-dien-the.md",
+      "line": 151,
+      "title": "Ví dụ 23.3: Lực điện và hiệu điện thế"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/02-dien-the.md",
+      "line": 172,
+      "title": "Ví dụ 23.4: Điện thế do lưỡng cực"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/02-dien-the.md",
+      "line": 193,
+      "title": "Ví dụ 23.5: Điện thế và thế năng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/02-dien-the.md",
+      "line": 212,
+      "title": "Ví dụ 23.6: Tìm điện thế bằng tích phân"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/02-dien-the.md",
+      "line": 234,
+      "title": "Ví dụ 23.7: Chuyển động qua hiệu điện thế"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/03-tinh-dien-the.md",
+      "line": 18,
+      "title": "Ví dụ 23.8: Cầu dẫn tích điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/03-tinh-dien-the.md",
+      "line": 63,
+      "title": "Ví dụ 23.9: Hai bản song song trái dấu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/03-tinh-dien-the.md",
+      "line": 87,
+      "title": "Ví dụ 23.10: Dây dài và trụ dẫn dài"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/03-tinh-dien-the.md",
+      "line": 112,
+      "title": "Ví dụ 23.11: Vòng tích điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/03-tinh-dien-the.md",
+      "line": 131,
+      "title": "Ví dụ 23.12: Đoạn dây tích điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/05-gradient-dien-the.md",
+      "line": 69,
+      "title": "Ví dụ 23.13: Trường từ điện thế nguồn điểm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-23/05-gradient-dien-the.md",
+      "line": 108,
+      "title": "Ví dụ 23.14: Trường trên trục vòng tích điện"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-23/00-mo-dau.md",
@@ -688,7 +759,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
-      "line": 257,
+      "line": 263,
       "title": "Câu hỏi ôn lại mục 23.1"
     },
     {
@@ -1340,12 +1411,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
-      "line": 231,
+      "line": 237,
       "title": "Chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
-      "line": 261,
+      "line": 267,
       "title": "Giải thích"
     },
     {
@@ -1625,19 +1696,19 @@
     {
       "reference": "../img/young-23/hinh-23-8.png",
       "declaredIn": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
-      "line": 186,
+      "line": 192,
       "source": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-8.png"
     },
     {
       "reference": "../img/young-23/hinh-23-9.png",
       "declaredIn": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
-      "line": 198,
+      "line": 204,
       "source": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-9.png"
     },
     {
       "reference": "../img/young-23/hinh-23-10.png",
       "declaredIn": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
-      "line": 229,
+      "line": 235,
       "source": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-10.png"
     },
     {

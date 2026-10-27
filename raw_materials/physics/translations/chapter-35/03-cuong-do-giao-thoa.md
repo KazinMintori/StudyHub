@@ -269,13 +269,17 @@ Vì giá trị của hàm sin không thể vượt quá $1$, các nghiệm lớn
 Điều kiện ở câu (b) để $I = I_0/2$, tức là $(2{,}00\pi\,\mathrm{rad})\sin\theta = \pm \frac{\pi}{4}\,\mathrm{rad}$, trên thực tế còn được thỏa mãn bởi các nghiệm khác của phương trình lượng giác:
 
 $$
-2{,}00\pi \sin\theta = \pm \frac{3\pi}{4}, \pm \frac{5\pi}{4}, \pm \frac{7\pi}{4}
+2{,}00\pi\sin\theta=\frac{m\pi}{4}.
 $$
 
-Tương ứng với các giá trị:
+Ở đây $m=\pm3,\pm5,\pm7$. Các giá trị tương ứng được viết riêng:
 
 $$
-\sin\theta = \pm 0{,}375, \pm 0{,}625, \pm 0{,}875
+\begin{aligned}
+&m=\pm3\implies\sin\theta=\pm0{,}375,\\
+&m=\pm5\implies\sin\theta=\pm0{,}625,\\
+&m=\pm7\implies\sin\theta=\pm0{,}875.
+\end{aligned}
 $$
 
 Từ đó cho các góc phương vị khác:
@@ -321,7 +325,10 @@ Tính toán cụ thể cho từng trường hợp:
 - Điểm (i): Vì hiệu đường đi $\Delta r = 4{,}00 \times 10^{-7}\,\mathrm{m}$ cho tỉ số $\Delta r/\lambda = 0{,}800$:
 
 $$
-I = I_0 \cos^2(0{,}800\pi\,\mathrm{rad}) \approx 0{,}655 I_0
+\begin{aligned}
+I&=I_0\cos^2(0{,}800\pi\,\mathrm{rad})\\
+&\approx0{,}655I_0.
+\end{aligned}
 $$
 
 - Điểm (ii):
@@ -353,7 +360,11 @@ $$
 So sánh các giá trị cường độ:
 
 $$
-0{,}655 I_0 > 0{,}292 I_0 > 0{,}173 I_0 > 0
+\begin{aligned}
+&0{,}655I_0>0{,}292I_0,\\
+&0{,}292I_0>0{,}173I_0,\\
+&0{,}173I_0>0.
+\end{aligned}
 $$
 
 Do đó thứ tự cường độ giảm dần là (i), (iv), (ii), (iii).

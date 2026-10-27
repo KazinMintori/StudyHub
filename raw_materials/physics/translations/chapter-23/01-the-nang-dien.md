@@ -170,10 +170,16 @@ Electron phải có tốc độ đầu tối thiểu bao nhiêu tại $r_a=1.00\
 
 ### Nhiều điện tích điểm
 
-Nếu trường do q₁,q₂,q₃,... tạo ra, công tổng lên q₀ bằng tổng công của các lực thành phần. Với hai nguồn để hình dung, phần thế năng liên quan việc đưa q₀ vào là $kq_0q_1/r_1+kq_0q_2/r_2$. Với n nguồn:
+Nếu trường do q₁,q₂,q₃,... tạo ra, công tổng lên q₀ bằng tổng công của các lực thành phần. Với hai nguồn để hình dung, phần thế năng liên quan việc đưa q₀ vào là $kq_0q_1/r_1+kq_0q_2/r_2$. Với n nguồn, gọi mỗi thế năng tương tác là:
 
 $$
-U =kq_0\frac{q_1}{r_1} +kq_0\frac{q_2}{r_2} +\cdots+kq_0\frac{q_n}{r_n}.
+U_i=\frac{kq_0q_i}{r_i}.
+$$
+
+Chỉ số i chạy từ 1 đến n. Tổng thế năng của q₀ trong trường các nguồn là:
+
+$$
+U=U_1+U_2+\cdots+U_n.
 $$
 
 Với chỉ số i chạy từ 1 đến n, viết gọn thành:
