@@ -1,0 +1,512 @@
+[
+  {
+    "key": "source-image:H8.31",
+    "source_pdf_page_1based": 275,
+    "printed_page": 255,
+    "clip_pdf_points": [
+      76,
+      75,
+      342,
+      150
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      665,
+      188
+    ],
+    "sha256": "482d88b23c93ce0c2b6d4c3db7164660ae0721d62012bffd98be9b1b1f62dd74",
+    "englishLabels": [
+      [
+        "Khối lượng James",
+        "90.0 kg"
+      ],
+      [
+        "Khối lượng Ramon",
+        "60.0 kg"
+      ],
+      [
+        "Tọa độ khối tâm",
+        "x_cm"
+      ],
+      [
+        "Tọa độ ban đầu của hai người",
+        "−10.0 m, +10.0 m"
+      ]
+    ],
+    "parentFrameReview": "Compared actual fullPDF275/287. Both people/masses/xcm and all three spheres, velocity arrows, angle/referenceaxes/text retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-h8-31.png"
+  },
+  {
+    "key": "source-image:P8.69",
+    "source_pdf_page_1based": 287,
+    "printed_page": 267,
+    "clip_pdf_points": [
+      354,
+      450,
+      580,
+      600
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      565,
+      375
+    ],
+    "sha256": "d31c479ba191befe62b46e6d8b90cb4db9820d95ddf63633f3b433b6897baad2",
+    "englishLabels": [
+      [
+        "Hình P8.69",
+        "Figure P8.69"
+      ],
+      [
+        "Gốc tọa độ",
+        "O"
+      ],
+      [
+        "Hai trục tọa độ",
+        "x, y"
+      ],
+      [
+        "Ba quả cầu",
+        "A, B, C"
+      ],
+      [
+        "Tốc độ ban đầu A",
+        "v_A = 1.50 m/s"
+      ],
+      [
+        "Tốc độ ban đầu B",
+        "v_B = 0.50 m/s"
+      ],
+      [
+        "Vận tốc ban đầu C",
+        "v_C"
+      ],
+      [
+        "Góc tia OB với chiều dương x",
+        "60°"
+      ]
+    ],
+    "parentFrameReview": "Compared actual fullPDF275/287. Both people/masses/xcm and all three spheres, velocity arrows, angle/referenceaxes/text retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-69.png"
+  },
+  {
+    "key": "source-image:P8.73",
+    "source_pdf_page_1based": 288,
+    "printed_page": 268,
+    "clip_pdf_points": [
+      36,
+      210,
+      296,
+      275
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      650,
+      163
+    ],
+    "sha256": "dc31d71a74fd03239ddfedde8fb260b0a090906da6b307684588b5c881389820",
+    "englishLabels": [
+      [
+        "Hình P8.73",
+        "Figure P8.73"
+      ],
+      [
+        "Khối lượng mỗi khối băng",
+        "5.00 kg"
+      ],
+      [
+        "Tốc độ đầu khối băng bên trái",
+        "12.0 m/s"
+      ]
+    ],
+    "parentFrameReview": "Compared actual fullPDF288 and opened each crop. Complete source diagram, supporting spring/track/bowl, all people/boxes, arrows and labels retained, no neighboring question prose.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-73.png"
+  },
+  {
+    "key": "source-image:P8.78",
+    "source_pdf_page_1based": 288,
+    "printed_page": 268,
+    "clip_pdf_points": [
+      200,
+      582,
+      296,
+      735
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      240,
+      383
+    ],
+    "sha256": "d7aca9a679d957025eaff65c17e3125285c2b5293363d5311c13aeb3dc5d1e02",
+    "englishLabels": [
+      [
+        "Hình P8.78",
+        "Figure P8.78"
+      ],
+      [
+        "Độ cao thả đất nặn phía trên khung",
+        "30.0 cm"
+      ]
+    ],
+    "parentFrameReview": "Compared actual fullPDF288 and opened each crop. Complete source diagram, supporting spring/track/bowl, all people/boxes, arrows and labels retained, no neighboring question prose.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-78.png"
+  },
+  {
+    "key": "source-image:P8.79",
+    "source_pdf_page_1based": 288,
+    "printed_page": 268,
+    "clip_pdf_points": [
+      312,
+      150,
+      572,
+      235
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      650,
+      213
+    ],
+    "sha256": "b8b3ad921ae51ab0dd74103ce7663ad090052bdf2aaa41cd9d8e8cd1a56a0d5c",
+    "englishLabels": [
+      [
+        "Hình P8.79",
+        "Figure P8.79"
+      ],
+      [
+        "Vận tốc viên đạn",
+        "v"
+      ],
+      [
+        "Độ nén lò xo cực đại",
+        "15.0 cm"
+      ]
+    ],
+    "parentFrameReview": "Compared actual fullPDF288 and opened each crop. Complete source diagram, supporting spring/track/bowl, all people/boxes, arrows and labels retained, no neighboring question prose.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-79.png"
+  },
+  {
+    "key": "source-image:P8.81",
+    "source_pdf_page_1based": 288,
+    "printed_page": 268,
+    "clip_pdf_points": [
+      457,
+      315,
+      572,
+      441
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      288,
+      316
+    ],
+    "sha256": "7dbadaef8b0e257c59eaba262a0c2b2b7269463277b71ee142b3c9ec14cc3f54",
+    "englishLabels": [
+      [
+        "Hình P8.81",
+        "Figure P8.81"
+      ],
+      [
+        "Độ giảm độ cao khối tâm diễn viên",
+        "5.0 m"
+      ],
+      [
+        "Khối lượng diễn viên",
+        "m = 80.0 kg"
+      ],
+      [
+        "Khối lượng người đứng dưới",
+        "m = 70.0 kg"
+      ]
+    ],
+    "parentFrameReview": "Compared actual fullPDF288 and opened each crop. Complete source diagram, supporting spring/track/bowl, all people/boxes, arrows and labels retained, no neighboring question prose.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-81.png"
+  },
+  {
+    "key": "source-image:P8.82",
+    "source_pdf_page_1based": 288,
+    "printed_page": 268,
+    "clip_pdf_points": [
+      459,
+      490,
+      573,
+      568
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      286,
+      195
+    ],
+    "sha256": "f9321850a014e0339761952637bce977a6be0b0b1af5196e529894ef38a1df69",
+    "englishLabels": [
+      [
+        "Hình P8.82",
+        "Figure P8.82"
+      ],
+      [
+        "Bán kính bát bán cầu",
+        "R"
+      ]
+    ],
+    "parentFrameReview": "Compared actual fullPDF288 and opened each crop. Complete source diagram, supporting spring/track/bowl, all people/boxes, arrows and labels retained, no neighboring question prose.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-82.png"
+  },
+  {
+    "key": "source-image:P8.87",
+    "source_pdf_page_1based": 289,
+    "printed_page": 269,
+    "clip_pdf_points": [
+      78,
+      299,
+      296,
+      414
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      545,
+      288
+    ],
+    "sha256": "0ab8df9281a417c8344e90a3f2480d47c3345c8cb8f6b3902fe32063fe67582e",
+    "englishLabels": [
+      [
+        "Hình P8.87",
+        "Figure P8.87"
+      ],
+      [
+        "Góc máng với phương ngang",
+        "37°"
+      ],
+      [
+        "Độ cao rơi tới đáy xe",
+        "4.00 m"
+      ]
+    ],
+    "parentFrameReview": "Opened each crop and full PDF289/276. Complete chute/reference angle/4m arrows/cart, canoe/Start/Finish/three dimensions, and full source explosion diagram preserved. P8.92bottom228 includes complete225.316text before8.93starts236.774;P8.87bottom414retainsgroundrasterto412.421.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-87.png"
+  },
+  {
+    "key": "source-image:P8.92",
+    "source_pdf_page_1based": 289,
+    "printed_page": 269,
+    "clip_pdf_points": [
+      352,
+      114,
+      615,
+      228
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      658,
+      285
+    ],
+    "sha256": "ef29f8bdfc9aa6a78b7a3e769675069c91c6e7906812f001163871c3a8bb896a",
+    "englishLabels": [
+      [
+        "Hình P8.92",
+        "Figure P8.92"
+      ],
+      [
+        "Vị trí bắt đầu",
+        "Start"
+      ],
+      [
+        "Vị trí kết thúc",
+        "Finish"
+      ],
+      [
+        "Khoảng cách từ mỗi đầu thuyền",
+        "1.00 m"
+      ],
+      [
+        "Quãng đi tương đối",
+        "3.00 m"
+      ]
+    ],
+    "parentFrameReview": "Opened each crop and full PDF289/276. Complete chute/reference angle/4m arrows/cart, canoe/Start/Finish/three dimensions, and full source explosion diagram preserved. P8.92bottom228 includes complete225.316text before8.93starts236.774;P8.87bottom414retainsgroundrasterto412.421.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-92.png"
+  },
+  {
+    "key": "source-image:H8.32",
+    "source_pdf_page_1based": 276,
+    "printed_page": 256,
+    "clip_pdf_points": [
+      207,
+      60,
+      576,
+      189
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      923,
+      323
+    ],
+    "sha256": "692057b291b829783237332365bae27ce020541865545fbcf772516be95fff36",
+    "englishLabels": [
+      [
+        "Đạn pháo nổ",
+        "Shell explodes"
+      ],
+      [
+        "Sau vụ nổ, hai mảnh theo quỹ đạo riêng còn khối tâm tiếp tục theo quỹ đạo ban đầu khi cả hai còn bay",
+        "After the shell explodes, the two fragments follow individual trajectories, but the center of mass (cm) continues to follow the shell’s original trajectory."
+      ],
+      [
+        "Khối tâm",
+        "cm"
+      ]
+    ],
+    "parentFrameReview": "Opened each crop and full PDF289/276. Complete chute/reference angle/4m arrows/cart, canoe/Start/Finish/three dimensions, and full source explosion diagram preserved. P8.92bottom228 includes complete225.316text before8.93starts236.774;P8.87bottom414retainsgroundrasterto412.421.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-h8-32.png"
+  },
+  {
+    "key": "source-image:P8.99",
+    "source_pdf_page_1based": 290,
+    "printed_page": 270,
+    "clip_pdf_points": [
+      34,
+      215,
+      298,
+      330
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      660,
+      288
+    ],
+    "sha256": "9338fe7eb06b41f51de6afaa238555c04d6bc38a65262659979a6a70a0f866db",
+    "englishLabels": [
+      [
+        "Hình P8.99",
+        "Figure P8.99"
+      ],
+      [
+        "Khối lượng xe cùng vàng",
+        "300 kg"
+      ],
+      [
+        "Góc nghiêng dốc",
+        "6.0°"
+      ],
+      [
+        "Chiều dài dốc",
+        "50 m"
+      ],
+      [
+        "Khoảng còn lại tới mép vực",
+        "40 m to cliff"
+      ]
+    ],
+    "parentFrameReview": "Opened full actualPDF290/291 and each crop. Wagon cliff and50m/40m references, fullgraph all ticks and three force segments, full5rowbullet table/headers/sourcecitation, semicirclex/y/radius/thickness retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-99.png"
+  },
+  {
+    "key": "source-image:P8.100",
+    "source_pdf_page_1based": 290,
+    "printed_page": 270,
+    "clip_pdf_points": [
+      36,
+      498,
+      266,
+      608
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      575,
+      275
+    ],
+    "sha256": "3086e027e43b21bcf12d51e94dc7421d13099133f30cbe72258e911361bee67a",
+    "englishLabels": [
+      [
+        "Hình P8.100",
+        "Figure P8.100"
+      ],
+      [
+        "Hợp lực ngang, đơn vị newton",
+        "F_x (N)"
+      ],
+      [
+        "Thời gian, đơn vị giây",
+        "t (s)"
+      ]
+    ],
+    "parentFrameReview": "Opened full actualPDF290/291 and each crop. Wagon cliff and50m/40m references, fullgraph all ticks and three force segments, full5rowbullet table/headers/sourcecitation, semicirclex/y/radius/thickness retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-100.png"
+  },
+  {
+    "key": "source-image:TABLE8.101",
+    "source_pdf_page_1based": 290,
+    "printed_page": 270,
+    "clip_pdf_points": [
+      310,
+      53,
+      576,
+      170
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      665,
+      293
+    ],
+    "sha256": "a66c8f2be089e339620c801c921b6504ca31391e355531dd3e7429c5571f9426",
+    "englishLabels": [
+      [
+        "Mã viên đạn",
+        "Bullet ID"
+      ],
+      [
+        "Loại",
+        "Type"
+      ],
+      [
+        "Khối lượng viên đạn, đơn vị grain",
+        "Bullet Mass (grains)"
+      ],
+      [
+        "Tốc độ đầu nòng, đơn vị foot trên giây",
+        "Muzzle Velocity (ft/s)"
+      ],
+      [
+        "Nguồn dữ liệu",
+        "Source: www.chuckhawks.com"
+      ]
+    ],
+    "parentFrameReview": "Opened full actualPDF290/291 and each crop. Wagon cliff and50m/40m references, fullgraph all ticks and three force segments, full5rowbullet table/headers/sourcecitation, semicirclex/y/radius/thickness retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-table8-101.png"
+  },
+  {
+    "key": "source-image:P8.105",
+    "source_pdf_page_1based": 291,
+    "printed_page": 271,
+    "clip_pdf_points": [
+      220,
+      281,
+      336,
+      395
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      290,
+      286
+    ],
+    "sha256": "4ff9f72c854bcb729a41af6831ba76a42c4fef377233a6b3d95681d72d615601",
+    "englishLabels": [
+      [
+        "Hình P8.105",
+        "Figure P8.105"
+      ],
+      [
+        "Chiều dày tấm",
+        "t"
+      ],
+      [
+        "Bán kính",
+        "a"
+      ],
+      [
+        "Hai trục tọa độ",
+        "x, y"
+      ]
+    ],
+    "parentFrameReview": "Opened full actualPDF290/291 and each crop. Wagon cliff and50m/40m references, fullgraph all ticks and three force segments, full5rowbullet table/headers/sourcecitation, semicirclex/y/radius/thickness retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-numbered-late-p8-105.png"
+  }
+]

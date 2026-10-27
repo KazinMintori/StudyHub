@@ -1,6 +1,6 @@
 # Hoàn thiện chương 5: Áp dụng các định luật Newton
 
-Chương 5 đã đạt kiểm tra tại nguồn hiện tại và được đăng ký ở trạng thái sẵn sàng. Bản công khai còn chờ push, build và deploy trên GitHub. Đây chưa phải xác nhận hoàn tất toàn bộ Vật lý đại cương 1 hoặc đợt rà hai học phần.
+Chương 5 đã đạt kiểm tra tại nguồn hiện tại và được đăng ký ở trạng thái sẵn sàng. Bản công khai đã vượt qua build, deploy và kiểm tra trang thực tế trên GitHub Pages. Đây chưa phải xác nhận hoàn tất toàn bộ Vật lý đại cương 1 hoặc đợt rà hai học phần.
 
 Giữ đủ năm mục lý thuyết, 23 ví dụ có lời giải, bốn câu tự kiểm đặt trong mạch giảng và 16 công thức đánh số. Notes và năm trang chủ đề gồm đầy đủ 46 ảnh mở đầu, hình đánh số, ứng dụng và sơ đồ tổng kết đã đối chiếu. Có đủ nội dung lực cản, phép tích phân, chuyển động tròn không đều và bốn tương tác cơ bản.
 
@@ -17,4 +17,8 @@ Cheatsheet có 36 dòng công thức và chỉ gồm định nghĩa, tính chấ
 
 Lượt kiểm tra tuyến trang đầu tiên phát hiện thiếu khối hiển thị bài tập và khối phân tách Notes. Các khối này đã được bổ sung, sau đó kiểm tra lại đủ 159 mục thành công. Kết quả lỗi trước khi sửa được giữ trong bằng chứng nội bộ. Bộ đếm và tệp dữ liệu không đủ để xác nhận người học thực sự truy cập được nội dung.
 
-Toàn bộ build và deploy sẽ chạy trên GitHub Actions. Không chạy build toàn cục trên máy người dùng. Chương 8, đợt rà toàn bộ hai môn, báo cáo kinh nghiệm cuối cùng và dọn dẹp vẫn đang tiếp tục.
+Build và deploy toàn cục đã chạy thành công trên GitHub Actions. Không chạy build toàn cục trên máy người dùng. Chương 8, đợt rà toàn bộ hai môn, báo cáo kinh nghiệm cuối cùng và dọn dẹp vẫn đang tiếp tục.
+
+## Xác minh bản công khai
+
+Commit `efac57be50c76e7ed1f005a8ca9a15fab919d844` đã build và deploy thành công trong [GitHub Actions 40487728060](https://github.com/KazinMintori/StudyHub/actions/runs/40487728060). Trang công khai có đủ 159 mục, 28 nhóm, 79 ảnh bài tập và 46 ảnh lý thuyết khớp đúng byte với Git. Đã kiểm tra 240 trường hợp hiển thị thực tế, không có lỗi được ghi nhận.

@@ -1,0 +1,33 @@
+{
+  "assets": [
+    {
+      "key": "solution-image:s8.70-graph",
+      "sha256": "654df5ba7fe0ef9f4f117f44d6b2e613a5e47552d27dcc792103a8e05f2e5c1b",
+      "title": "Đồ thị lực theo thời gian trong bài 8.70",
+      "minimumFontUnits": 20,
+      "physicalData": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          0
+        ]
+      ],
+      "coordinateMap": {
+        "xOrigin": 60,
+        "yOrigin": 335,
+        "xScale": 25,
+        "yScale": -50
+      },
+      "purpose": "Actual requested F(t) plot, peak5N at4s, end10s.",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/solution-s8-70-graph.svg",
+      "generator": "scripts/generate-physics1-remaining-08-late-solution-images.py"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "status": "chapter5-ready-local-public-release-pending",
+  "status": "chapter5-source-reviewed-and-publicly-verified",
   "checkedUTC": "2026-10-27T10:20:00.461208+00:00",
   "sourceChapter": 5,
   "sourcePDFPagesTheory": [
@@ -85,19 +85,37 @@
     "raw_materials/physics/verify_chapter5_numbered_late.py"
   ],
   "scopeLimits": [
-    "Current local chapter5 only; no publicdeployclaim.",
-    "No claim allPhysics1ready:chapter8stillincomplete.",
-    "WholePhysics1+2audit/finalreport/cleanupstillrequired."
+    "Verifiedpublishedchapter5only. Chapter8remainsincomplete; wholePhysics1+2audit/finalreport/cleanupstillrequired."
   ],
   "localFullBuildRun": false,
   "publication": {
-    "status": "pending-push-and-GitHubActions",
-    "lastVerifiedPublicCommit": "68ee041995d05688f602f644a262e625f7d3e60e"
+    "status": "passed",
+    "commit": "efac57be50c76e7ed1f005a8ca9a15fab919d844",
+    "runId": 40487728060,
+    "runUrl": "https://github.com/KazinMintori/StudyHub/actions/runs/40487728060",
+    "buildJob": {
+      "id": 122133632218,
+      "conclusion": "success"
+    },
+    "deployJob": {
+      "id": 122144646101,
+      "conclusion": "success"
+    },
+    "publicExerciseUnits": 159,
+    "publicExerciseGroups": 28,
+    "publicExerciseImageBytesMatchGit": 79,
+    "publicTheoryPages": 6,
+    "publicTheoryImageBytesMatchGit": 46,
+    "actualPublicExerciseViewportCases": 140,
+    "actualPublicTheoryViewportCases": 30,
+    "actualPublicSupportWikiViewportCases": 70,
+    "errors": []
   },
   "lessonsLearned": [
     "Canonical text and manifests do not make a route usable without its actual component and Notes/exercise containers. The initial blank-route checks were retained and corrected.",
     "Legacy course summaries required by validators remain internal; actual UI confirms no Slides tab.",
     "Source diagram frame completeness needs full-source inspection in addition to exactpixel checks.",
     "Ready status requires actual group/tab/Wiki routes and font/math visibility checks, not justcounts."
-  ]
+  ],
+  "publicVerifiedUTC": "2026-10-27T10:57:07.348121+00:00"
 }
