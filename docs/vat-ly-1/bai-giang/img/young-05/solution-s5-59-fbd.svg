@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="390" viewBox="0 0 360 390" role="img" aria-label="Ba lực căng tác dụng tại nút nối hai dây và cáp thép">
+<title>Ba lực căng tác dụng tại nút nối hai dây và cáp thép</title>
+<rect width="360" height="390" fill="white" rx="10"/>
+<defs>
+<marker id="a2563eb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#2563eb"/></marker>
+<marker id="ab91c1c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#b91c1c"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<g transform="translate(0 0)">
+<text x="180" y="28" text-anchor="middle" font-weight="600">(a) Nút nối các dây</text>
+<circle cx="180" cy="160" r="5" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+<line x1="180.000000" y1="160.000000" x2="130.000000" y2="73.397460" stroke="#2563eb" stroke-width="3" marker-end="url(#a2563eb)"/>
+<text x="78" y="65" fill="#2563eb" font-size="24" font-style="italic">T<tspan dy="5" font-style="normal" font-size="20">1</tspan></text>
+<line x1="180.000000" y1="160.000000" x2="230.000000" y2="118.045018" stroke="#2563eb" stroke-width="3" marker-end="url(#a2563eb)"/>
+<text x="242" y="111" fill="#2563eb" font-size="24" font-style="italic">T<tspan dy="5" font-style="normal" font-size="20">2</tspan></text>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="288.557522" stroke="#2563eb" stroke-width="3" marker-end="url(#a2563eb)"/>
+<text x="200" y="284" fill="#2563eb" font-size="24" font-style="italic">T<tspan dy="5" font-style="normal" font-size="20">c</tspan></text>
+<line x1="18" y1="315" x2="342" y2="315" stroke="#cbd5e1"/>
+<text x="18" y="344">Tc = w, góc T1 là 60°, T2 là 40°</text>
+<text x="18" y="372">T1 lớn hơn T2</text>
+</g>
+</g></svg>

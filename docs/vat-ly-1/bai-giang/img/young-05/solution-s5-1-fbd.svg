@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="780" viewBox="0 0 360 780" role="img" aria-label="Cân bằng trên vật treo và ròng rọc nhẹ">
+<title>Cân bằng trên vật treo và ròng rọc nhẹ</title>
+<rect width="360" height="780" fill="white" rx="10"/>
+<defs>
+<marker id="a2563eb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#2563eb"/></marker>
+<marker id="ab91c1c" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#b91c1c"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<g transform="translate(0 0)">
+<text x="180" y="28" text-anchor="middle" font-weight="600">(a) Một vật treo</text>
+<circle cx="180" cy="160" r="10" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="110.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#a2563eb)"/>
+<text x="151" y="98" fill="#2563eb" font-size="24" font-style="italic">T</text>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="210.000000" stroke="#b91c1c" stroke-width="3" marker-end="url(#ab91c1c)"/>
+<text x="192" y="235" fill="#b91c1c" font-size="24" font-style="italic">w</text>
+<line x1="18" y1="315" x2="342" y2="315" stroke="#cbd5e1"/>
+<text x="18" y="344">Trọng lực và lực căng cân bằng</text>
+<text x="18" y="372">T = w = 25,0 N</text>
+</g>
+<g transform="translate(0 390)">
+<text x="180" y="28" text-anchor="middle" font-weight="600">(b) Ròng rọc và xích đỡ</text>
+<circle cx="180" cy="160" r="25" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+<line x1="155.000000" y1="160.000000" x2="155.000000" y2="210.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#a2563eb)"/>
+<text x="130" y="235" fill="#2563eb" font-size="24" font-style="italic">T</text>
+<line x1="205.000000" y1="160.000000" x2="205.000000" y2="210.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#a2563eb)"/>
+<text x="217" y="235" fill="#2563eb" font-size="24" font-style="italic">T</text>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="60.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#a2563eb)"/>
+<text x="140" y="76" fill="#2563eb" font-size="24" font-style="italic">T<tspan dy="5" font-style="normal" font-size="20">c</tspan></text>
+<line x1="18" y1="315" x2="342" y2="315" stroke="#cbd5e1"/>
+<text x="18" y="344">Hai nhánh dây cùng kéo xuống</text>
+<text x="18" y="372">Tc = 2T = 50,0 N</text>
+</g>
+</g></svg>

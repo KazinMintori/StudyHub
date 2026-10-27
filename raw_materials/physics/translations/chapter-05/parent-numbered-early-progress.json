@@ -1,0 +1,30 @@
+{
+  "status": "canonical-early59-accepted-pending-whole159gate",
+  "chapter": 5,
+  "numberedRange": [
+    1,
+    59
+  ],
+  "sourceUnits": 59,
+  "file": "parent-11-bai-tap-001-059.md",
+  "canonicalSHA256": "0dd3cd37d47cf696ac4bfc1f0e59d686193fe42dcf2816af883c738d41fe9fc2",
+  "privateFragmentSHA256": "e3bd2c5d0a147713e393ef614e65722e2a9ace749c3ddc9ea7a03a0c534bc948",
+  "independentNumericSourceStructureRuntimeChecks": 1124,
+  "sourceOriginalFrames": 15,
+  "displayedOriginalFigureOccurrences": 18,
+  "solutionDiagrams": 16,
+  "actualForceArrows": 67,
+  "actualPlotVertices": 6,
+  "privateViewportCases": 50,
+  "canonicalBrowserStatus": "passed-early59-only",
+  "publicLessonStatus": "draft",
+  "publicExerciseChapterEnabled": false,
+  "scopeLimit": "Canonical59numberedearlyunits only, not a ready/published chapter. Whole159/theory/wiki/cheatsheet gate and chapter8/all-course audit remain.",
+  "canonicalViewportCases": 50,
+  "canonicalNativeSVGTextBoundsAndOverlapCases": 16,
+  "canonicalOriginalFigureGlossOccurrences": 18,
+  "canonicalBrowserReportSHA256": "967582a4059911c56a043b37eb6bf8055a5f61d7d80183f47f36f29ba2e066d8",
+  "portableVerification": "raw_materials/physics/verify_chapter5_numbered_early.py",
+  "portablePhysicalGeometryChecks": 483,
+  "assetGeneratorsByteIdentical": true
+}

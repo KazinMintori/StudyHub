@@ -1,0 +1,1678 @@
+{
+  "assets": [
+    {
+      "key": "solution-image:s5.1-fbd",
+      "sha256": "dd5ff7a6572ec6da4d1a1fb9892fb72814c7e1d768c1f85841410a4d2f8414c2",
+      "title": "Cân bằng trên vật treo và ròng rọc nhẹ",
+      "purpose": "Biểu diễn cân bằng lực trên vật nặng T = w và trên ròng rọc T_chain = 2T.",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Một vật treo",
+          "bodies": [
+            [
+              180,
+              160,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                0,
+                -50
+              ],
+              "label": "T",
+              "labelPosition": [
+                151,
+                98
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                0,
+                50
+              ],
+              "label": "w",
+              "labelPosition": [
+                192,
+                235
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Trọng lực và lực căng cân bằng",
+            "T = w = 25,0 N"
+          ]
+        },
+        {
+          "title": "(b) Ròng rọc và xích đỡ",
+          "bodies": [
+            [
+              180,
+              160,
+              25
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                155,
+                160
+              ],
+              "delta": [
+                0,
+                50
+              ],
+              "label": "T",
+              "labelPosition": [
+                130,
+                235
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                205,
+                160
+              ],
+              "delta": [
+                0,
+                50
+              ],
+              "label": "T",
+              "labelPosition": [
+                217,
+                235
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                0,
+                -100
+              ],
+              "label": "T_c",
+              "labelPosition": [
+                140,
+                76
+              ],
+              "color": "#2563eb"
+            }
+          ],
+          "legend": [
+            "Hai nhánh dây cùng kéo xuống",
+            "Tc = 2T = 50,0 N"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-1-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.2-fbd",
+      "sha256": "7bb0d3af6569a723e120f4b2d5ca4a5d66af6760652a7ef8772be5d19c818de9",
+      "title": "Giản đồ lực đầy đủ cho ba cấu hình dây",
+      "purpose": "Biểu diễn cân bằng lực trên từng vật nặng treo T = w cho sơ đồ (a), (b) và (c).",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Vật treo và đầu dây cố định",
+          "bodies": [
+            [
+              180,
+              160,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                0,
+                -75
+              ],
+              "label": "T",
+              "labelPosition": [
+                155,
+                76
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                0,
+                75
+              ],
+              "label": "w",
+              "labelPosition": [
+                192,
+                262
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Mỗi vật cân bằng với hai lực trực đối",
+            "T = w trên từng vật treo"
+          ]
+        },
+        {
+          "title": "(b) Hai vật ở hai đầu dây",
+          "bodies": [
+            [
+              100,
+              160,
+              10
+            ],
+            [
+              260,
+              160,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                100,
+                160
+              ],
+              "delta": [
+                0,
+                -75
+              ],
+              "label": "T",
+              "labelPosition": [
+                75,
+                76
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                100,
+                160
+              ],
+              "delta": [
+                0,
+                75
+              ],
+              "label": "w",
+              "labelPosition": [
+                112,
+                262
+              ],
+              "color": "#b91c1c"
+            },
+            {
+              "origin": [
+                260,
+                160
+              ],
+              "delta": [
+                0,
+                -75
+              ],
+              "label": "T",
+              "labelPosition": [
+                235,
+                76
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                260,
+                160
+              ],
+              "delta": [
+                0,
+                75
+              ],
+              "label": "w",
+              "labelPosition": [
+                272,
+                262
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Mỗi vật cân bằng với hai lực trực đối",
+            "T = w trên từng vật treo"
+          ]
+        },
+        {
+          "title": "(c) Hai vật ở hai mép bàn",
+          "bodies": [
+            [
+              100,
+              160,
+              10
+            ],
+            [
+              260,
+              160,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                100,
+                160
+              ],
+              "delta": [
+                0,
+                -75
+              ],
+              "label": "T",
+              "labelPosition": [
+                75,
+                76
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                100,
+                160
+              ],
+              "delta": [
+                0,
+                75
+              ],
+              "label": "w",
+              "labelPosition": [
+                112,
+                262
+              ],
+              "color": "#b91c1c"
+            },
+            {
+              "origin": [
+                260,
+                160
+              ],
+              "delta": [
+                0,
+                -75
+              ],
+              "label": "T",
+              "labelPosition": [
+                235,
+                76
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                260,
+                160
+              ],
+              "delta": [
+                0,
+                75
+              ],
+              "label": "w",
+              "labelPosition": [
+                272,
+                262
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Mỗi vật cân bằng với hai lực trực đối",
+            "T = w trên từng vật treo"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-2-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.6-fbd",
+      "sha256": "ef8f152eaf7f0081b868fc175728156a5cec78fa73430b7e8f0399454db90009",
+      "title": "Ba lực trên quả cầu phá dỡ được cáp giữ",
+      "purpose": "Phân tích lực cân bằng tại điểm treo quả cầu: T_B cos(40°) = mg và T_B sin(40°) = T_A.",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "Quả cầu đứng yên",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                83.909963117728,
+                -100
+              ],
+              "label": "T_B",
+              "labelPosition": [
+                272,
+                66
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                -83.909963117728,
+                0
+              ],
+              "label": "T_A",
+              "labelPosition": [
+                55,
+                160
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                100
+              ],
+              "label": "mg",
+              "labelPosition": [
+                192,
+                295
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "TB đỡ vật và kéo sang phải",
+            "TA giữ ngang, mg hướng xuống"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-6-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.9-fbd",
+      "sha256": "aaa9df94ba230bf65a75d4a42310bc674aca9aecdd96d4a0fcc7ca15ba2b823b",
+      "title": "Ba lực trên đàn piano khi trượt đều xuống dốc",
+      "purpose": "So sánh hai hướng đẩy: lực F song song mặt dốc vs lực F nằm ngang cân bằng thành phần trọng lực.",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Lực đẩy dọc mặt dốc",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                30.783073766282918,
+                -10.599462319663905
+              ],
+              "label": "F",
+              "labelPosition": [
+                232,
+                157
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                -30.78307376628292,
+                -89.40053768033611
+              ],
+              "label": "N",
+              "labelPosition": [
+                120,
+                68
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                100
+              ],
+              "label": "mg",
+              "labelPosition": [
+                192,
+                295
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Mặt dốc cao dần về bên phải",
+            "F = mg sinθ, N = mg cosθ"
+          ]
+        },
+        {
+          "title": "(b) Lực đẩy nằm ngang",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                34.43276132896653,
+                0
+              ],
+              "label": "F",
+              "labelPosition": [
+                232,
+                160
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                -34.43276132896653,
+                -100
+              ],
+              "label": "N",
+              "labelPosition": [
+                120,
+                60
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                100
+              ],
+              "label": "mg",
+              "labelPosition": [
+                192,
+                295
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Mặt dốc cao dần về bên phải",
+            "F = mg tanθ, N = mg/cosθ"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-9-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.59-fbd",
+      "sha256": "84b3df124ab0f0d67839d9e7b28e99705c9cd8201c1a45191f169b270a0b55d1",
+      "title": "Ba lực căng tác dụng tại nút nối hai dây và cáp thép",
+      "purpose": "Minh họa cân bằng lực trên hai trục: T₁ cos(60°) = T₂ cos(40°) và T₁ sin(60°) + T₂ sin(40°) = w.",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Nút nối các dây",
+          "bodies": [
+            [
+              180,
+              160,
+              5
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                -50.000000000000014,
+                -86.60254037844386
+              ],
+              "label": "T_1",
+              "labelPosition": [
+                78,
+                65
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                50.00000000000001,
+                -41.954981558864006
+              ],
+              "label": "T_2",
+              "labelPosition": [
+                242,
+                111
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                160
+              ],
+              "delta": [
+                0,
+                128.55752193730785
+              ],
+              "label": "T_c",
+              "labelPosition": [
+                200,
+                284
+              ],
+              "color": "#2563eb"
+            }
+          ],
+          "legend": [
+            "Tc = w, góc T1 là 60°, T2 là 40°",
+            "T1 lớn hơn T2"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-59-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.11-fbd",
+      "sha256": "53f3ba3240d90a77a0d8543078b91c0c647d61b2a57a651a8c3451680731478e",
+      "title": "Giản đồ lực tại giới hạn gia tốc bốn g",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Tên lửa lúc rời bệ phóng",
+          "bodies": [
+            [
+              180,
+              220,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                220
+              ],
+              "delta": [
+                0,
+                -160
+              ],
+              "label": "F",
+              "labelPosition": [
+                144,
+                75
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                220
+              ],
+              "delta": [
+                0,
+                32
+              ],
+              "label": "Mg",
+              "labelPosition": [
+                192,
+                279
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "F = 5Mg hướng lên",
+            "F − Mg = 4Mg"
+          ]
+        },
+        {
+          "title": "(b) Phi hành gia trong tên lửa",
+          "bodies": [
+            [
+              180,
+              220,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                220
+              ],
+              "delta": [
+                0,
+                -160
+              ],
+              "label": "N",
+              "labelPosition": [
+                144,
+                75
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                220
+              ],
+              "delta": [
+                0,
+                32
+              ],
+              "label": "w",
+              "labelPosition": [
+                192,
+                279
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "N = 5w hướng lên",
+            "N − w = 4w"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-11-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.12-fbd",
+      "sha256": "0434719a972837f67d446b87a7e68148b769cb878e80b3851abe92501aeac1f2",
+      "title": "Lực trên bộ nguồn điện khi tên lửa gia tốc lên",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "Bộ nguồn điện trên sàn",
+          "bodies": [
+            [
+              180,
+              180,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                180
+              ],
+              "delta": [
+                0,
+                -112.3265306122449
+              ],
+              "label": "N",
+              "labelPosition": [
+                145,
+                83
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                180
+              ],
+              "delta": [
+                0,
+                80
+              ],
+              "label": "w",
+              "labelPosition": [
+                192,
+                289
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "N − w = (w/g)a",
+            "N = 21,8 N > w"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-12-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.15-fbd",
+      "sha256": "e4b6eb1f84e5f33aee6e0ce7ce048b3af6b5282adc68add378cbc00665ff8477",
+      "title": "Lực căng và trọng lực của hai vật trong máy Atwood",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Tải gạch 15,0 kg",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -76.57674418604653
+              ],
+              "label": "T",
+              "labelPosition": [
+                148,
+                83
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                58.800000000000004
+              ],
+              "label": "w_1",
+              "labelPosition": [
+                192,
+                255
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Tải gạch có gia tốc hướng lên",
+            "T > w1 = 147 N"
+          ]
+        },
+        {
+          "title": "(a) Đối trọng 28,0 kg",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -76.57674418604653
+              ],
+              "label": "T",
+              "labelPosition": [
+                148,
+                83
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                109.76000000000002
+              ],
+              "label": "w_2",
+              "labelPosition": [
+                192,
+                304
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Đối trọng có gia tốc hướng xuống",
+            "T < w2 = 274,4 N"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-15-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.17-fbd",
+      "sha256": "fb5015a7dc0a1abdca33bddf0171ff15736f180e2932f8ce673d5888e002567d",
+      "title": "Hai giản đồ lực của khối hộp ở bàn và vật treo",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Khối hộp trên bàn",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                30,
+                0
+              ],
+              "label": "T",
+              "labelPosition": [
+                232,
+                160
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -78.4
+              ],
+              "label": "N",
+              "labelPosition": [
+                148,
+                82
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                78.4
+              ],
+              "label": "Mg",
+              "labelPosition": [
+                192,
+                278
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "M = 4,00 kg, T = 15,0 N",
+            "Gia tốc hướng sang phải"
+          ]
+        },
+        {
+          "title": "(a) Khối hộp treo",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -30
+              ],
+              "label": "T",
+              "labelPosition": [
+                148,
+                128
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                48.595041322314046
+              ],
+              "label": "mg",
+              "labelPosition": [
+                192,
+                247
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "mg ≈ 24,3 N > T",
+            "Gia tốc hướng xuống"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-17-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.19-fbd",
+      "sha256": "86ac6cb05353a9dcaf58beba681b24df29487612da14aedae4a4c249828fb549",
+      "title": "Giản đồ lực trong giai đoạn duỗi người bật nhảy",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(b) Chân còn tiếp xúc đất",
+          "bodies": [
+            [
+              180,
+              200,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                200
+              ],
+              "delta": [
+                0,
+                -110
+              ],
+              "label": "N",
+              "labelPosition": [
+                145,
+                80
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                200
+              ],
+              "delta": [
+                0,
+                50
+              ],
+              "label": "w",
+              "labelPosition": [
+                192,
+                280
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Ước lượng gia tốc không đổi",
+            "N = 2,2w"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-19-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.24-graph",
+      "sha256": "61d38cc38106f71c9eb5f88bf6060f3165384bf05f0a48eccdbd79aa6145f4fd",
+      "title": "Đồ thị ma sát khi tổng trọng lượng tăng lên 270 N",
+      "minimumFontUnits": 20,
+      "physicalData": {
+        "static": [
+          [
+            0,
+            0
+          ],
+          [
+            150,
+            150
+          ]
+        ],
+        "transition": [
+          [
+            150,
+            150
+          ],
+          [
+            150,
+            100
+          ]
+        ],
+        "kinetic": [
+          [
+            150,
+            100
+          ],
+          [
+            300,
+            100
+          ]
+        ]
+      },
+      "coordinateMap": {
+        "xOrigin": 60,
+        "yOrigin": 335,
+        "xScale": 0.8133333333333334,
+        "yScale": -1.3888888888888888
+      },
+      "sourceOriginalPreserved": true,
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-24-graph.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.32-fbd",
+      "sha256": "e3eddc763880d93e50ee3f87882085eee974f84d05bab96c25af402bdc4b12ae",
+      "title": "Ba lực trên hộp dụng cụ ở giới hạn tăng tốc không trượt",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "Hộp chuyển động cùng xe",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -90
+              ],
+              "label": "N",
+              "labelPosition": [
+                150,
+                67
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                90
+              ],
+              "label": "mg",
+              "labelPosition": [
+                192,
+                288
+              ],
+              "color": "#b91c1c"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                58.5,
+                0
+              ],
+              "label": "f_s",
+              "labelPosition": [
+                256,
+                158
+              ],
+              "color": "#2563eb"
+            }
+          ],
+          "legend": [
+            "Ma sát nghỉ hướng về phía trước",
+            "fs ≤ 0,650mg"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-32-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.37-fbd",
+      "sha256": "5afa5e58807eef0a9b1db3a0786e85c3ba294c237fb3ae8279e45c5d91a898aa",
+      "title": "Giản đồ lực hai kiện trượt đều, minh họa tỉ lệ lực",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a, b) Kiện A",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -100
+              ],
+              "label": "N_A",
+              "labelPosition": [
+                143,
+                60
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                100
+              ],
+              "label": "w_A",
+              "labelPosition": [
+                192,
+                299
+              ],
+              "color": "#b91c1c"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                40,
+                0
+              ],
+              "label": "T",
+              "labelPosition": [
+                235,
+                159
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                -40,
+                0
+              ],
+              "label": "f_A",
+              "labelPosition": [
+                90,
+                159
+              ],
+              "color": "#2563eb"
+            }
+          ],
+          "legend": [
+            "Minh họa μk = 0,4 và mA/mB = 5/3",
+            "T = fA, NA = mAg"
+          ]
+        },
+        {
+          "title": "(a, b) Kiện B",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -60
+              ],
+              "label": "N_B",
+              "labelPosition": [
+                143,
+                99
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                60
+              ],
+              "label": "w_B",
+              "labelPosition": [
+                192,
+                263
+              ],
+              "color": "#b91c1c"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                64,
+                0
+              ],
+              "label": "F",
+              "labelPosition": [
+                262,
+                159
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                -40,
+                0
+              ],
+              "label": "T",
+              "labelPosition": [
+                92,
+                159
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                195
+              ],
+              "delta": [
+                -24,
+                0
+              ],
+              "label": "f_B",
+              "labelPosition": [
+                94,
+                221
+              ],
+              "color": "#2563eb"
+            }
+          ],
+          "legend": [
+            "F = T + fB, NB = mBg",
+            "T trên hai kiện ngược chiều nhau"
+          ]
+        }
+      ],
+      "illustrationParameters": {
+        "mu": 0.4,
+        "mA": 5,
+        "mB": 3,
+        "scope": "Explicitly labeled illustrative ratio only, not added source givens."
+      },
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-37-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.39-fbd",
+      "sha256": "ab76f6bc631279cf7f68d6d273544a6a16d099435efb6aec8e414adebe59f242",
+      "title": "Giản đồ lực thực của hai vật trong bài 5.39",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "Vật A trên bàn",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -88.2
+              ],
+              "label": "N_A",
+              "labelPosition": [
+                143,
+                69
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                88.2
+              ],
+              "label": "w_A",
+              "labelPosition": [
+                192,
+                289
+              ],
+              "color": "#b91c1c"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                46.832957746478876,
+                0
+              ],
+              "label": "T",
+              "labelPosition": [
+                242,
+                159
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                -39.69,
+                0
+              ],
+              "label": "f_k",
+              "labelPosition": [
+                90,
+                159
+              ],
+              "color": "#2563eb"
+            }
+          ],
+          "legend": [
+            "T > fk: Vật A gia tốc sang phải",
+            "NA = mAg"
+          ]
+        },
+        {
+          "title": "Vật B treo",
+          "bodies": [
+            [
+              180,
+              170,
+              10
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                -46.832957746478876
+              ],
+              "label": "T",
+              "labelPosition": [
+                148,
+                111
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                180,
+                170
+              ],
+              "delta": [
+                0,
+                50.96000000000001
+              ],
+              "label": "w_B",
+              "labelPosition": [
+                192,
+                255
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "mBg > T: Vật B gia tốc xuống",
+            "Cùng độ lớn gia tốc với A"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-39-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.43-fbd",
+      "sha256": "0ce0b30e3543517674b03e62183dd16555a1c77a055ba6343c38522f595ff630",
+      "title": "Giản đồ lực hòn đá trên bàn tại giới hạn lực căng",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Hòn đá trên bàn nhẵn",
+          "bodies": [
+            [
+              220,
+              180,
+              5
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                220,
+                180
+              ],
+              "delta": [
+                0,
+                -19.6
+              ],
+              "label": "N",
+              "labelPosition": [
+                239,
+                139
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                220,
+                180
+              ],
+              "delta": [
+                0,
+                19.6
+              ],
+              "label": "mg",
+              "labelPosition": [
+                239,
+                233
+              ],
+              "color": "#b91c1c"
+            },
+            {
+              "origin": [
+                220,
+                180
+              ],
+              "delta": [
+                -150.0,
+                0
+              ],
+              "label": "T",
+              "labelPosition": [
+                45,
+                166
+              ],
+              "color": "#2563eb"
+            }
+          ],
+          "legend": [
+            "T hướng vào tâm, N = mg",
+            "Minh họa lúc T = 60,0 N"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-43-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    },
+    {
+      "key": "solution-image:s5.44-fbd",
+      "sha256": "989d97e23e3487f0024c061c7e3c0a748e2ef3541f9d073b65a71a75d0db9d64",
+      "title": "Hai lực thực tác dụng lên bàn tay vận động viên",
+      "minimumFontUnits": 20,
+      "parentReviewedGeometry": [
+        {
+          "title": "(a) Bàn tay bên phải trục quay",
+          "bodies": [
+            [
+              250,
+              170,
+              5
+            ]
+          ],
+          "forces": [
+            {
+              "origin": [
+                250,
+                170
+              ],
+              "delta": [
+                -153.96582865699398,
+                -12.740000000000002
+              ],
+              "label": "F_c",
+              "labelPosition": [
+                60,
+                137
+              ],
+              "color": "#2563eb"
+            },
+            {
+              "origin": [
+                250,
+                170
+              ],
+              "delta": [
+                0,
+                12.740000000000002
+              ],
+              "label": "w",
+              "labelPosition": [
+                269,
+                218
+              ],
+              "color": "#b91c1c"
+            }
+          ],
+          "legend": [
+            "Fc là lực tổng hợp do cổ tay",
+            "Thành phần đứng của Fc bằng w"
+          ]
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/solution-s5-44-fbd.svg",
+      "generator": "scripts/generate-physics1-remaining-05-early-solution-images.py"
+    }
+  ]
+}

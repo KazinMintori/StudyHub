@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="480" viewBox="0 0 360 480" role="img" aria-label="Đồ thị ma sát khi tổng trọng lượng tăng lên 270 N">
+<title>Đồ thị ma sát khi tổng trọng lượng tăng lên 270 N</title>
+<rect width="360" height="480" rx="10" fill="white"/>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<text x="180" y="28" text-anchor="middle" font-weight="600">Tổng trọng lượng 270 N</text>
+<text x="18" y="60">f (N)</text>
+<line x1="60" y1="265.555556" x2="304" y2="265.555556" stroke="#cbd5e1"/>
+<text x="52" y="272.555556" text-anchor="end">50</text>
+<line x1="60" y1="196.111111" x2="304" y2="196.111111" stroke="#cbd5e1"/>
+<text x="52" y="203.111111" text-anchor="end">100</text>
+<line x1="60" y1="126.666667" x2="304" y2="126.666667" stroke="#cbd5e1"/>
+<text x="52" y="133.666667" text-anchor="end">150</text>
+<line x1="60.000000" y1="335" x2="60.000000" y2="342" stroke="#334155"/>
+<text x="60.000000" y="369" text-anchor="middle">0</text>
+<line x1="121.000000" y1="335" x2="121.000000" y2="342" stroke="#334155"/>
+<text x="121.000000" y="369" text-anchor="middle">75</text>
+<line x1="182.000000" y1="335" x2="182.000000" y2="342" stroke="#334155"/>
+<text x="182.000000" y="369" text-anchor="middle">150</text>
+<line x1="243.000000" y1="335" x2="243.000000" y2="342" stroke="#334155"/>
+<text x="243.000000" y="369" text-anchor="middle">225</text>
+<line x1="304.000000" y1="335" x2="304.000000" y2="342" stroke="#334155"/>
+<text x="304.000000" y="369" text-anchor="middle">300</text>
+<path d="M60 75V335H320" fill="none" stroke="#334155" stroke-width="2"/>
+<text x="270" y="406">P (N)</text>
+<polyline data-series="static" points="60.000000,335.000000 182.000000,126.666667" fill="none" stroke="#2563eb" stroke-width="3"/>
+<polyline data-series="transition" points="182.000000,126.666667 182.000000,196.111111" fill="none" stroke="#64748b" stroke-width="3" stroke-dasharray="5 4"/>
+<polyline data-series="kinetic" points="182.000000,196.111111 304.000000,196.111111" fill="none" stroke="#b91c1c" stroke-width="3"/>
+<text x="18" y="440" fill="#2563eb">Ma sát nghỉ tới 150 N</text>
+<text x="18" y="468" fill="#b91c1c">Ma sát trượt bằng 100 N</text>
+</g></svg>

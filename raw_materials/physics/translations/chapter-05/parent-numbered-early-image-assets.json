@@ -1,0 +1,722 @@
+[
+  {
+    "key": "source-image:E5.2",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 179,
+    "printed_page": 159,
+    "source_label": "E5.2",
+    "clip_pdf_points": [
+      350,
+      400,
+      620,
+      560
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      675,
+      400
+    ],
+    "caption_vi": "Hình E5.2: Ba cấu hình dây với đủ các vật treo ở mỗi đầu.",
+    "english_labels_exact": [
+      "Figure E5.2",
+      "(a), (b), (c)",
+      "w"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "a00e77f2fceebbf2a8f7ab5d0218447d07b82759c30b50eeb989ae4943c5c9bb",
+    "parentFrameReview": "Compared with full actual PDF179/180. Completepanels,angles,referencewalls,ropes/anchors,allhangingweightsandlabels retained. No invented English labels.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-2.png",
+    "englishLabels": [
+      [
+        "Hình E5.2",
+        "Figure E5.2"
+      ],
+      [
+        "Ba cấu hình khảo sát",
+        "(a), (b), (c)"
+      ],
+      [
+        "Trọng lượng mỗi vật treo",
+        "w"
+      ]
+    ],
+    "privatePNGByteSHA256": "923b1057fac738cad4e5ebf9034993d1be52b0dabba448d4d392034edb23576c"
+  },
+  {
+    "key": "source-image:E5.4",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 180,
+    "printed_page": 160,
+    "source_label": "E5.4",
+    "clip_pdf_points": [
+      36,
+      60,
+      290,
+      190
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      635,
+      325
+    ],
+    "caption_vi": "Hình E5.4: Khung Stryker và hai cáp đối xứng tạo lực kéo qua đai cổ.",
+    "english_labels_exact": [
+      "Figure E5.4",
+      "(a), (b)",
+      "W",
+      "65°"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "d449a047d247450e677d3c444e077ed47a1f0522825d7778c924b32941560ba0",
+    "parentFrameReview": "Compared with full actual PDF179/180. Completepanels,angles,referencewalls,ropes/anchors,allhangingweightsandlabels retained. No invented English labels.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-4.png",
+    "englishLabels": [
+      [
+        "Hình E5.4",
+        "Figure E5.4"
+      ],
+      [
+        "Hai hình mô tả hệ và đai cổ",
+        "(a), (b)"
+      ],
+      [
+        "Trọng lượng tải treo",
+        "W"
+      ],
+      [
+        "Góc mỗi cáp với đường ngang trong hình b",
+        "65°"
+      ]
+    ],
+    "privatePNGByteSHA256": "1171cdbfa069a290442d53acc4cb2eb5743bee333cabad20afbc89afdf1ea453"
+  },
+  {
+    "key": "source-image:E5.6",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 180,
+    "printed_page": 160,
+    "source_label": "E5.6",
+    "clip_pdf_points": [
+      165,
+      252,
+      296,
+      354
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      328,
+      255
+    ],
+    "caption_vi": "Hình E5.6: Cáp A nằm ngang, cáp B nghiêng lên giữ quả cầu khối lượng m.",
+    "english_labels_exact": [
+      "Figure E5.6",
+      "TA",
+      "TB",
+      "m",
+      "40°"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "e253e504bdd8916d8431c40b33a9b812b169bc59948f7b4cbdae2951152848b2",
+    "parentFrameReview": "Compared with full actual PDF179/180. Completepanels,angles,referencewalls,ropes/anchors,allhangingweightsandlabels retained. No invented English labels.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-6.png",
+    "englishLabels": [
+      [
+        "Hình E5.6",
+        "Figure E5.6"
+      ],
+      [
+        "Lực căng cáp nằm ngang",
+        "TA"
+      ],
+      [
+        "Lực căng cáp nghiêng",
+        "TB"
+      ],
+      [
+        "Khối lượng quả cầu",
+        "m"
+      ],
+      [
+        "Góc cáp B với phương đứng",
+        "40°"
+      ]
+    ],
+    "privatePNGByteSHA256": "e253e504bdd8916d8431c40b33a9b812b169bc59948f7b4cbdae2951152848b2"
+  },
+  {
+    "key": "source-image:E5.7",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 180,
+    "printed_page": 160,
+    "source_label": "E5.7",
+    "clip_pdf_points": [
+      34,
+      400,
+      296,
+      530
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      655,
+      325
+    ],
+    "caption_vi": "Hình E5.7: Góc A với phương ngang ở a là 30°, còn góc A với tường đứng ở b là 60°.",
+    "english_labels_exact": [
+      "Figure E5.7",
+      "(a), (b)",
+      "A, B, C",
+      "w",
+      "30°, 45°, 60°"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "1a211566c365a5e6a1682327bc9d9b34ec70741f9c058c913a1b8393f1686b91",
+    "parentFrameReview": "Compared with full actual PDF179/180. Completepanels,angles,referencewalls,ropes/anchors,allhangingweightsandlabels retained. No invented English labels.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-7.png",
+    "englishLabels": [
+      [
+        "Hình E5.7",
+        "Figure E5.7"
+      ],
+      [
+        "Hai cấu hình cân bằng",
+        "(a), (b)"
+      ],
+      [
+        "Ba sợi dây",
+        "A, B, C"
+      ],
+      [
+        "Trọng lượng vật treo",
+        "w"
+      ],
+      [
+        "Các góc ghi trong hình",
+        "30°, 45°, 60°"
+      ]
+    ],
+    "privatePNGByteSHA256": "1a211566c365a5e6a1682327bc9d9b34ec70741f9c058c913a1b8393f1686b91"
+  },
+  {
+    "key": "source-image:E5.8",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 180,
+    "printed_page": 160,
+    "source_label": "E5.8",
+    "clip_pdf_points": [
+      36,
+      618,
+      250,
+      755
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      535,
+      343
+    ],
+    "caption_vi": "Hình E5.8: Hai lực ngang ngược chiều giữ các nút và vật treo ở cấu hình đã cho.",
+    "english_labels_exact": [
+      "Figure E5.8",
+      "F1",
+      "F2",
+      "w",
+      "45.0°",
+      "90.0°"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "29d9b7b9ecc7b65ddc72b0fc5f53790a59cae2721d746f9715da7a416aec0907",
+    "parentFrameReview": "Compared with full actual PDF179/180. Completepanels,angles,referencewalls,ropes/anchors,allhangingweightsandlabels retained. No invented English labels.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-8.png",
+    "englishLabels": [
+      [
+        "Hình E5.8",
+        "Figure E5.8"
+      ],
+      [
+        "Lực ngang tại nút trên",
+        "F1"
+      ],
+      [
+        "Lực ngang tại nút dưới",
+        "F2"
+      ],
+      [
+        "Trọng lượng vật treo",
+        "w"
+      ],
+      [
+        "Góc dây chéo với phương ngang",
+        "45.0°"
+      ],
+      [
+        "Các góc vuông",
+        "90.0°"
+      ]
+    ],
+    "privatePNGByteSHA256": "e127fd41052080572b0ee763541d9576ab6937304fc864231db1c6115857cf2e"
+  },
+  {
+    "key": "source-image:E5.14",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 180,
+    "printed_page": 160,
+    "source_label": "E5.14",
+    "clip_pdf_points": [
+      312,
+      500,
+      572,
+      555
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      650,
+      138
+    ],
+    "caption_vi": "Hình E5.14: Ba xe được kéo sang phải, dây B ở bên trái dây A.",
+    "english_labels_exact": [
+      "Figure E5.14",
+      "30.0 kg, 20.0 kg, 10.0 kg",
+      "B, A",
+      "Pull"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "dbad62b71a82f8094de87a0ad91a97f2a3c92a767e2f0f9cd7f017d78a45d731",
+    "parentFrameReview": "Read full PDF180. All sleds/rope letters/pull arrow and Atwood support/pulley/weights/labels remain complete.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-14.png",
+    "englishLabels": [
+      [
+        "Hình E5.14",
+        "Figure E5.14"
+      ],
+      [
+        "Khối lượng các xe từ trái sang phải",
+        "30.0 kg, 20.0 kg, 10.0 kg"
+      ],
+      [
+        "Hai dây nối các xe",
+        "B, A"
+      ],
+      [
+        "Lực kéo sang phải",
+        "Pull"
+      ]
+    ],
+    "privatePNGByteSHA256": "fca5049b972a8237fafd763f73c77ad79bc866ec3264811d7feb9656bffe8726"
+  },
+  {
+    "key": "source-image:E5.15",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 180,
+    "printed_page": 160,
+    "source_label": "E5.15",
+    "clip_pdf_points": [
+      455,
+      555,
+      572,
+      745
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      293,
+      476
+    ],
+    "caption_vi": "Hình E5.15: Tải gạch và đối trọng nối qua ròng rọc.",
+    "english_labels_exact": [
+      "Figure E5.15",
+      "15.0 kg",
+      "28.0 kg"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "08f707ebf1b31fd319eccada538c0689bc645e48bc94dc67da9f68cdb2c7869e",
+    "parentFrameReview": "Read full PDF180. All sleds/rope letters/pull arrow and Atwood support/pulley/weights/labels remain complete.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-15.png",
+    "englishLabels": [
+      [
+        "Hình E5.15",
+        "Figure E5.15"
+      ],
+      [
+        "Khối lượng tải gạch",
+        "15.0 kg"
+      ],
+      [
+        "Khối lượng đối trọng",
+        "28.0 kg"
+      ]
+    ],
+    "privatePNGByteSHA256": "69c5a6a94232e0d683061ff76308c8f4f5d294c0daed2964f1c20090fde23fce"
+  },
+  {
+    "key": "source-image:E5.24",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 181,
+    "printed_page": 161,
+    "source_label": "E5.24",
+    "clip_pdf_points": [
+      354,
+      185,
+      575,
+      305
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      553,
+      301
+    ],
+    "caption_vi": "Hình E5.24: Ma sát nghỉ tăng đến 75 N, rồi ma sát trượt bằng 50 N.",
+    "english_labels_exact": [
+      "Figure E5.24",
+      "f (N)",
+      "P (N)",
+      "O"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "1183085e185dc61e3f3e316059a1c26e521894974c0aea6403ec913aba800231",
+    "parentFrameReview": "Read full PDF181: both axes, all ticks, complete75N peak and50N plateau retained with no neighboring question text.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-24.png",
+    "englishLabels": [
+      [
+        "Hình E5.24",
+        "Figure E5.24"
+      ],
+      [
+        "Lực ma sát, đơn vị newton",
+        "f (N)"
+      ],
+      [
+        "Lực kéo, đơn vị newton",
+        "P (N)"
+      ],
+      [
+        "Gốc tọa độ",
+        "O"
+      ]
+    ],
+    "privatePNGByteSHA256": "183d2a1823d9fca3c47a926907ce097ce0279e2b44c7594cc0b74bb8f4aa9597"
+  },
+  {
+    "key": "source-image:E5.33",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 182,
+    "printed_page": 162,
+    "source_label": "E5.33",
+    "clip_pdf_points": [
+      36,
+      528,
+      296,
+      665
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      650,
+      343
+    ],
+    "caption_vi": "Hình E5.33: Thùng 32 kg đặt trên thùng 48 kg, cùng trượt đều xuống dốc.",
+    "english_labels_exact": [
+      "Figure E5.33",
+      "32.0 kg",
+      "48.0 kg",
+      "2.50 m",
+      "4.75 m"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "245b7960e7e7afb4fe7ee92c448bfc8abfdaf17fbd29f440ef09301e98d0f24d",
+    "parentFrameReview": "Compared full actual PDF182. All boxes, rope contacts, pulley/support and dimension arrows/labels retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-33.png",
+    "englishLabels": [
+      [
+        "Hình E5.33",
+        "Figure E5.33"
+      ],
+      [
+        "Khối lượng thùng trên",
+        "32.0 kg"
+      ],
+      [
+        "Khối lượng thùng dưới",
+        "48.0 kg"
+      ],
+      [
+        "Chiều cao dốc",
+        "2.50 m"
+      ],
+      [
+        "Đáy dốc nằm ngang",
+        "4.75 m"
+      ]
+    ],
+    "privatePNGByteSHA256": "847dcfee52c10d73f55166928f92b9d117e9ec8d3e05621a9df312de252efee8"
+  },
+  {
+    "key": "source-image:E5.34",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 182,
+    "printed_page": 162,
+    "source_label": "E5.34",
+    "clip_pdf_points": [
+      312,
+      60,
+      572,
+      155
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      650,
+      238
+    ],
+    "caption_vi": "Hình E5.34: Vật A trên bàn nối bằng dây qua ròng rọc với vật B treo.",
+    "english_labels_exact": [
+      "Figure E5.34",
+      "A",
+      "B"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "35d4088c4ff55d2e81daaf711e102201208d8509a21168e8182e969f4ec83333",
+    "parentFrameReview": "Compared full PDF182. Full box/rope/pulley and actual applied-force arrow retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-34.png",
+    "englishLabels": [
+      [
+        "Hình E5.34",
+        "Figure E5.34"
+      ],
+      [
+        "Vật trên bàn",
+        "A"
+      ],
+      [
+        "Vật treo",
+        "B"
+      ]
+    ],
+    "privatePNGByteSHA256": "0acf34fc9e27ef555fca3b82abc0e07e1f9ca156a06ed64c87f9bf423900529f"
+  },
+  {
+    "key": "source-image:E5.37",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 182,
+    "printed_page": 162,
+    "source_label": "E5.37",
+    "clip_pdf_points": [
+      312,
+      418,
+      572,
+      485
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      650,
+      168
+    ],
+    "caption_vi": "Hai kiện hàng A và B nối bằng dây được kéo sang phải trên sàn nhám",
+    "english_labels_exact": [
+      "Figure E5.37",
+      "A",
+      "B",
+      "F"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "bee0982252c59c47983dc6a4bfbc7d3f5a6082e03434b09608400919cce2e264",
+    "parentFrameReview": "Compared full PDF182. Full box/rope/pulley and actual applied-force arrow retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-37.png",
+    "englishLabels": [
+      [
+        "Hình E5.37",
+        "Figure E5.37"
+      ],
+      [
+        "Kiện ở bên trái",
+        "A"
+      ],
+      [
+        "Kiện chịu lực kéo ngoài",
+        "B"
+      ],
+      [
+        "Lực kéo ngoài",
+        "F"
+      ]
+    ],
+    "privatePNGByteSHA256": "f400408b09ab3bf21841292a2abb5b3243f691c50b7814129c11a6815fbebab9"
+  },
+  {
+    "key": "source-image:E5.45",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 183,
+    "printed_page": 163,
+    "source_label": "E5.45",
+    "clip_pdf_points": [
+      78,
+      508,
+      338,
+      675
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      650,
+      418
+    ],
+    "caption_vi": "Hình E5.45: Xe chạy trên mặt trong đường đua, A ở đáy và B ở đỉnh.",
+    "english_labels_exact": [
+      "Figure E5.45",
+      "A",
+      "B",
+      "5.00 m"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "3e4a3d29003419b7f02e5c7ac2bb0736e38119e6d76f0b85127091de2e182c9b",
+    "parentFrameReview": "Compared full PDF183. Entire circle, both vehicles, A/B labels, velocity arrows, radius arrow/value and ground retained.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-45.png",
+    "englishLabels": [
+      [
+        "Hình E5.45",
+        "Figure E5.45"
+      ],
+      [
+        "Điểm ở đáy đường đua",
+        "A"
+      ],
+      [
+        "Điểm ở đỉnh đường đua",
+        "B"
+      ],
+      [
+        "Bán kính đường đua",
+        "5.00 m"
+      ]
+    ],
+    "privatePNGByteSHA256": "ffbf5fe7fe12e4325437f54dc5d11442d8e8cb2231051f1b80b37563d8e84473"
+  },
+  {
+    "key": "source-image:E5.50",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 183,
+    "printed_page": 163,
+    "source_label": "E5.50",
+    "clip_pdf_points": [
+      354,
+      350,
+      570,
+      515
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      540,
+      413
+    ],
+    "caption_vi": "Hình E5.50: Ghế treo vào cáp dài 5 m, điểm treo cách trục 3 m.",
+    "english_labels_exact": [
+      "Figure E5.50",
+      "3.00 m",
+      "5.00 m",
+      "30.0°"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "773ae7bdb4646deb5c49a2c82765b24f3fa0cecf93c8362f752bc5118cf92acd",
+    "parentFrameReview": "Compared full actualPDF183/184. All support shafts, human/seat/feet, rope endpoints, reference angles and length labels retained. E5.51bottom663 includesfullshaft ending662.281 before5.52prose664.904.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-50.png",
+    "englishLabels": [
+      [
+        "Hình E5.50",
+        "Figure E5.50"
+      ],
+      [
+        "Khoảng cách trục tới điểm treo",
+        "3.00 m"
+      ],
+      [
+        "Chiều dài cáp",
+        "5.00 m"
+      ],
+      [
+        "Góc cáp với phương đứng",
+        "30.0°"
+      ]
+    ],
+    "privatePNGByteSHA256": "2bf7c3ea70d73a637c4ec8e8ddc874d7f93103ee3a661932d29c0be8d46c65cc"
+  },
+  {
+    "key": "source-image:E5.51",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 183,
+    "printed_page": 163,
+    "source_label": "E5.51",
+    "clip_pdf_points": [
+      490,
+      520,
+      614,
+      663
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      310,
+      358
+    ],
+    "caption_vi": "Hình E5.51: Cáp ngang dài 7,50 m và cáp trên hợp với phương đứng góc 40°.",
+    "english_labels_exact": [
+      "Figure E5.51",
+      "7.50 m",
+      "40.0°"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "c2fd8f4b8a6a39865e6a7b918c5b00ffc71c24e8f2fa276445d510941498623b",
+    "parentFrameReview": "Compared full actualPDF183/184. All support shafts, human/seat/feet, rope endpoints, reference angles and length labels retained. E5.51bottom663 includesfullshaft ending662.281 before5.52prose664.904.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-e5-51.png",
+    "englishLabels": [
+      [
+        "Hình E5.51",
+        "Figure E5.51"
+      ],
+      [
+        "Chiều dài cáp ngang",
+        "7.50 m"
+      ],
+      [
+        "Góc cáp trên với phương đứng",
+        "40.0°"
+      ]
+    ],
+    "privatePNGByteSHA256": "c2fd8f4b8a6a39865e6a7b918c5b00ffc71c24e8f2fa276445d510941498623b"
+  },
+  {
+    "key": "source-image:P5.59",
+    "source_pdf": "raw_materials/physics/source/young-freedman-15.pdf",
+    "source_pdf_page_1based": 184,
+    "printed_page": 164,
+    "source_label": "P5.59",
+    "clip_pdf_points": [
+      185,
+      530,
+      296,
+      628
+    ],
+    "scale": 2.5,
+    "pixel_size": [
+      278,
+      245
+    ],
+    "caption_vi": "Hình P5.59: Dây trái nghiêng 60°, dây phải nghiêng 40° so với trần ngang.",
+    "english_labels_exact": [
+      "Figure P5.59",
+      "60°",
+      "40°"
+    ],
+    "preservation": "Direct PyMuPDF rectangle render, unmodified, complete visible diagram and labels.",
+    "sha256": "1fffec82ab80bbc6bf077d22c8660bc980cd6402d9298b28135e4273cf54829d",
+    "parentFrameReview": "Compared full actualPDF183/184. All support shafts, human/seat/feet, rope endpoints, reference angles and length labels retained. E5.51bottom663 includesfullshaft ending662.281 before5.52prose664.904.",
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-05/r-numbered-early-p5-59.png",
+    "englishLabels": [
+      [
+        "Hình P5.59",
+        "Figure P5.59"
+      ],
+      [
+        "Góc dây bên trái với trần ngang",
+        "60°"
+      ],
+      [
+        "Góc dây bên phải với trần ngang",
+        "40°"
+      ]
+    ],
+    "privatePNGByteSHA256": "837ef4bed944fdfe4e241e7c87a39167e970845aa81793ace72e9cf64016dc5c"
+  }
+]
