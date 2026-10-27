@@ -1,0 +1,43 @@
+{
+  "status": "reviewed-late59-awaiting-early59-and-whole159gate",
+  "chapter": 5,
+  "numberedRange": [
+    60,
+    118
+  ],
+  "sourceUnits": 59,
+  "file": "parent-12-bai-tap-060-118.md",
+  "canonicalSHA256": "4f21660e06197ed90f998f56c3db4c9253af5a703e20f3cf0afdf12a400c7701",
+  "reviewedPrivateSHA256": "2fc7a194bfc92ac5350a4afe259a5939469ff18f1944c6f5d5b724a60e4a08d9",
+  "proposalAcceptanceSHA256": "f90822fe019f79ce98001032b356bcfd6ed8a1a726ae0f85ce909da0aff39f86",
+  "independentNumericChecks": 1621,
+  "privateBrowserCases": 50,
+  "sourceOriginalFrames": 29,
+  "solutionDiagrams": 8,
+  "canonicalBrowserStatus": "passed-late59-only",
+  "publicLessonStatus": "draft",
+  "publicExerciseChapterEnabled": false,
+  "scopeLimit": "No chapter completion claimed. Early5.1–5.59 and full159unit publication gate remain required.",
+  "canonicalBrowserCases": 50,
+  "canonicalNativeSVGTextBoundsAndOverlapCases": 8,
+  "canonicalSingleGlossaryImageOccurrences": 32,
+  "canonicalBrowserReportSHA256": "fea2cedf7e69d1ef3f60a335fa172f77f0c7819e95a83053d9b2a5e80b7791d4",
+  "portableVerification": "raw_materials/physics/verify_chapter5_numbered_late.py",
+  "assetGeneratorsByteIdentical": true,
+  "lightweightChecks": {
+    "lectureAll": [
+      133,
+      354,
+      0,
+      0
+    ],
+    "mathTests": [
+      32,
+      0
+    ],
+    "skillToolsTests": [
+      39,
+      0
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "status": "canonical-late59-accepted-not-chapter-ready",
+  "checkedUTC": "2026-10-27T07:49:33.948949+00:00",
+  "chapter": 5,
+  "numberedRange": [
+    60,
+    118
+  ],
+  "sourceUnits": 59,
+  "sourcePDFPages": [
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190
+  ],
+  "sourcePrintedPages": [
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170
+  ],
+  "originalSourceFrames": 29,
+  "separateSolutionSVGs": 8,
+  "byteIdenticalAssetReproduction": 37,
+  "independentNumericChecks": 1621,
+  "canonicalBrowserCases": 50,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "nativeSVGTextBoundsAndOverlapCases": 8,
+  "actualForceArrowsChecked": 32,
+  "actualPlotDataPointsChecked": 20,
+  "actualPlotFitSamplesChecked": 183,
+  "actualSourceCurveSamples": 903,
+  "singleGlossaryOccurrencesForRepeatedSourceImages": 32,
+  "canonicalSourceSHA256": "4f21660e06197ed90f998f56c3db4c9253af5a703e20f3cf0afdf12a400c7701",
+  "portableVerificationProgram": "raw_materials/physics/verify_chapter5_numbered_late.py",
+  "sourceUnitLedger": "raw_materials/physics/translations/chapter-05/parent-numbered-late-source-unit-ledger.json",
+  "sourceUnitLedgerSHA256": "58b6af62d21c6dd03e67899d2907da1ba1299fa49a7d2ebad154361025931fde",
+  "imageManifestSHA256": "6c4653bb0221e4ed40f39df96e463ad0eafbdfadf02afe4c5d77dd10f4eb95be",
+  "solutionManifestSHA256": "fbc2fb1843a6681727326e289ca36ed2c73cd89550cd1af6a29be20bfeff1513",
+  "browserEvidenceSHA256": "fea2cedf7e69d1ef3f60a335fa172f77f0c7819e95a83053d9b2a5e80b7791d4",
+  "lightweightChecks": {
+    "lectureAll": [
+      133,
+      354,
+      0,
+      0
+    ],
+    "mathTests": [
+      32,
+      0
+    ],
+    "skillToolsTests": [
+      39,
+      0
+    ]
+  },
+  "fullLocalBuildRun": false,
+  "remainingScope": "Early5.1–5.59,wholechapter159unitgate,theory/wiki/cheatsheetreview,chapter8completion,fullPhysics1/2audit,finalGitHub/publicrelease,finalreportandcleanupstillrequired.",
+  "sourceDiscrepancyNotes": {
+    "5.67": "Actualappendix1555prints762N;given680N/0.30m/1s,start/endrest,g9.8give763.265N. Sourcepromptpreserved;reasonnotestablished.",
+    "5.103": "Actualappendix1555prints31.0N;actual25Nweights/mu.35/theta36.9give30.757746N. Do notinventroundingcause. After-cut1.5379matchesprinted1.54.",
+    "5.111b": "Through-originproportionalhypothesisfitgives23.6756kN;free-interceptfitgives23.9409kN,compatiblewithprinted23.9. Both fitting assumptions explicitly distinguished.",
+    "5.111c": "Printed3.57kN/smaller is retained as the impending-downward-slipcase. A genericreststate onlyboundsTbetween3.569and23.770kN;staticfriction is not always at its maximum."
+  }
+}

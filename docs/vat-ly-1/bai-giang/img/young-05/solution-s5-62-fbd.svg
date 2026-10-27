@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="1170" viewBox="0 0 360 1170" role="img" aria-label="Lực trên từng bộ phận của hệ ròng rọc">
+<title>Lực trên từng bộ phận của hệ ròng rọc</title>
+<rect width="360" height="1170" rx="10" fill="white"/>
+<defs>
+<marker id="m2563eb" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#2563eb"/></marker>
+<marker id="m15803d" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#15803d"/></marker>
+<marker id="m7e22ce" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#7e22ce"/></marker>
+</defs>
+<g font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172033">
+<g transform="translate(0 0)">
+<text x="180" y="28" text-anchor="middle" font-weight="600">Ròng rọc dưới</text>
+<circle cx="180" cy="160" r="10" fill="#e2e8f0" stroke="#64748b"/>
+<line x1="135.000000" y1="160.000000" x2="135.000000" y2="100.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#m2563eb)"/><text x="110.000000" y="100.000000" fill="#2563eb">T</text>
+<line x1="225.000000" y1="160.000000" x2="225.000000" y2="100.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#m2563eb)"/><text x="235.000000" y="100.000000" fill="#2563eb">T</text>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="280.000000" stroke="#7e22ce" stroke-width="3" marker-end="url(#m7e22ce)"/><text x="190.000000" y="280.000000" fill="#7e22ce">T₂</text>
+<line x1="20" y1="315" x2="340" y2="315" stroke="#cbd5e1"/>
+<text x="18" y="343">Hai lực T kéo lên, T₂ kéo xuống</text>
+<text x="18" y="370">2T = T₂ = w</text>
+</g>
+<g transform="translate(0 390)">
+<text x="180" y="28" text-anchor="middle" font-weight="600">Ròng rọc trên</text>
+<circle cx="180" cy="160" r="10" fill="#e2e8f0" stroke="#64748b"/>
+<line x1="135.000000" y1="160.000000" x2="135.000000" y2="220.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#m2563eb)"/><text x="110.000000" y="240.000000" fill="#2563eb">T</text>
+<line x1="225.000000" y1="160.000000" x2="225.000000" y2="220.000000" stroke="#2563eb" stroke-width="3" marker-end="url(#m2563eb)"/><text x="235.000000" y="240.000000" fill="#2563eb">T</text>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="40.000000" stroke="#15803d" stroke-width="3" marker-end="url(#m15803d)"/><text x="144.000000" y="60.000000" fill="#15803d">T₁</text>
+<line x1="20" y1="315" x2="340" y2="315" stroke="#cbd5e1"/>
+<text x="18" y="343">Hai nhánh dây kéo ròng rọc xuống</text>
+<text x="18" y="370">T₁ = 2T = w</text>
+</g>
+<g transform="translate(0 780)">
+<text x="180" y="28" text-anchor="middle" font-weight="600">Vật nặng</text>
+<circle cx="180" cy="160" r="10" fill="#e2e8f0" stroke="#64748b"/>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="70.000000" stroke="#15803d" stroke-width="3" marker-end="url(#m15803d)"/><text x="145.000000" y="70.000000" fill="#15803d">T₂</text>
+<line x1="180.000000" y1="160.000000" x2="180.000000" y2="250.000000" stroke="#7e22ce" stroke-width="3" marker-end="url(#m7e22ce)"/><text x="190.000000" y="250.000000" fill="#7e22ce">w</text>
+<line x1="20" y1="315" x2="340" y2="315" stroke="#cbd5e1"/>
+<text x="18" y="343">T₂ kéo lên, trọng lượng kéo xuống</text>
+<text x="18" y="370">T₂ = w, F = T = w / 2</text>
+</g>
+</g></svg>
