@@ -44,19 +44,50 @@
     "3.55": "Directcalculation10.8257463m/s=>10.8m/s and40.1363degrees=>40.1degrees. Oddanswers10.9/40.5differ; exactreasonnotestablished. Do notclaimtheyfollowfromroundingv0to16.6.",
     "3.61": "Actualrange6.9303665m=>6.93m,not6.91modificationofsource;inputs7m/s40deg14mretained."
   },
-  "deploy": "Pending GitHub Actions after commit",
+  "deploy": "Passed GitHub Actions 40375605657 and actual public artifact/browser verification on commit 68ee041995d05688f602f644a262e625f7d3e60e",
   "localExercisePayloads": {
     "status": "passed",
     "groups": 22,
     "sourceUnits": 115,
     "closedSolutions": 115,
     "hashedImageBytesVerified": 45,
-    "scope": "Boundedactualproductiongroupgeneration; publicdeployment pending."
+    "scope": "Bounded actual production group generation; public deployment verified separately in publicRelease."
   },
   "normalizationReview": {
     "beforeSHA256": "1644873a72532b1313549ddd51c16bc182803a178aa13f58fffcb889b7eaa459",
     "afterSHA256": "df2965725f4d6898c02a665fee4dd47160675ed891ba99fd114217db5bc294b7",
     "change": "Removed one redundant blank line at EOF only; source text/formulas unchanged.",
     "bytesRemoved": 1
+  },
+  "publicRelease": {
+    "status": "passed-public-chapter3",
+    "checkedUTC": "2026-10-27T02:43:51.009274+00:00",
+    "commit": "68ee041995d05688f602f644a262e625f7d3e60e",
+    "githubActionsRunId": 40375605657,
+    "githubActionsConclusion": "success",
+    "publicExerciseUnits": 115,
+    "publicExerciseGroups": 22,
+    "publicExerciseImagesByteIdenticalToGit": 45,
+    "publicTheoryPages": 6,
+    "publicTheoryOriginalImagesByteIdenticalToGit": 47,
+    "publicExerciseBrowserCases": 110,
+    "publicTheoryAndCheatsheetBrowserCases": 35,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "observedBrowserErrors": 0,
+    "sourceHashesMatchPublishedGit": true,
+    "acceptedSourceFileHashesUnchanged": 12,
+    "reportHashes": {
+      "qa/physics1-remaining/ch03/public-release.json": "26f7a40f27e40734ca249abedb8154fa3726d8a94586dadca1eae55adb725e5b",
+      "qa/physics1-remaining/ch03/public-theory-release.json": "d46b8b69caec0bb42707638d01a385afdc63eec254699b0fc385a778fd6e51c3",
+      "qa/physics1-remaining/ch03-exercise-browser-public/results.json": "e079be0a404288e7063de9d9bf531ed1259e996143fd9153674e290007ea55d0",
+      "qa/physics1-remaining/ch03/browser-public-theory.json": "4eb11d142d19a29765e7f34bb0bdc559b475bf6373df8cdb6487e7055d0076e5"
+    },
+    "scopeLimit": "Public chapter3 release and hash-bound accepted chapter3 source only. Chapters5/8, the full Physics1/2 audit, final report and cleanup remain pending."
   }
 }
