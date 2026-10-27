@@ -79,6 +79,10 @@ export function classifyLectureHash(rawHash, options = {}) {
     // Malformed URI keeps the raw stripped string
   }
 
+  // Panel headings keep their tab when linked directly, including after reload.
+  const panelPart = ['cheatsheet', 'kien-thuc-can-co', 'bai-tap'].find(part => decodedId.startsWith(`${part}--`))
+  if (panelPart && isValidLecturePartId(panelPart, allowedParts)) return panelPart
+
   if (typeof isExerciseAnchor === 'function') {
     try {
       if (isExerciseAnchor(decodedId)) {

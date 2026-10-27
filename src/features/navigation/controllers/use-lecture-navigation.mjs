@@ -1,4 +1,4 @@
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, nextTick, onMounted, onUnmounted, watch } from 'vue'
 import { useRoute } from 'vitepress'
 import {
   LECTURE_PART_HASHES,
@@ -15,6 +15,19 @@ import {
  * Shared reactive state for current lecture part across layout and components.
  */
 export const lecturePart = ref('notes')
+
+// Tab hashes are state, not article anchors (the exercise content also has an
+// element named bai-tap). Bypass the router's automatic anchor scrolling.
+export async function selectLecturePart(part) {
+  lecturePart.value = part
+  const hash = `#${part}`
+  if (window.location.hash !== hash) {
+    window.history.pushState(window.history.state, '', hash)
+    window.dispatchEvent(new HashChangeEvent('hashchange'))
+  }
+  await nextTick()
+  window.scrollTo({ top: 0, behavior: 'instant' })
+}
 
 /**
  * Synchronizes the reactive lecturePart with current window.location.hash.
@@ -39,6 +52,9 @@ export function syncLecturePart() {
       return Boolean(anchor?.closest(NAVIGATION_SELECTORS.exerciseContent))
     }
   })
+  if (LECTURE_PART_HASHES.includes(rawHash) && document.querySelector('.shared-reading-outline')) {
+    nextTick(() => requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'instant' })))
+  }
 }
 
 /**
@@ -50,11 +66,12 @@ export function syncLink(event) {
   if (typeof window === 'undefined') return
   if (shouldIgnoreNavigationClick(event)) return
   const anchor = event.target?.closest?.('a[href]')
-  if (!anchor) return
+  if (!anchor?.closest('.shared-reading-outline')) return
 
   const result = isSamePageLectureLink(anchor.href, window.location.href, LECTURE_PART_HASHES)
   if (result.isMatch && result.part) {
-    lecturePart.value = result.part
+    event.preventDefault()
+    selectLecturePart(result.part)
   }
 }
 

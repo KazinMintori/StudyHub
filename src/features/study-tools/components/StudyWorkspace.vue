@@ -31,7 +31,8 @@ const {
   changeTab
 } = useWorkspaceTabs()
 
-const selectedCourse = ref('all')
+const selectedCourse = ref(props.courses[0]?.id || 'all')
+const resolveCourse = value => normalizeWorkspaceCourse(value, props.courses) === 'all' ? (props.courses[0]?.id || 'all') : value
 const currentCourse = computed(() => props.courses.find(course => course.id === selectedCourse.value))
 const simulations = computed(() => courseSimulations(selectedCourse.value))
 const hasField = computed(() => selectedCourse.value === 'all' || selectedCourse.value === 'vat-ly-2')
@@ -61,13 +62,13 @@ const simulationProps = computed(() => selectedSimulation.value?.component === '
   ? { type: selectedSimulation.value.id === 'mapreduce' ? 'mapreduce' : 'search' }
   : {})
 function syncCourse() {
-  selectedCourse.value = parseWorkspaceCourse(window.location.search, props.courses)
+  selectedCourse.value = resolveCourse(parseWorkspaceCourse(window.location.search, props.courses))
   const requested = new URLSearchParams(window.location.search).get('mo-phong')
   simulationId.value = simulations.value.some(item => item.id === requested) ? requested : ''
 }
 function selectCourse(event) {
   cancelInitialSimulation()
-  selectedCourse.value = normalizeWorkspaceCourse(event.target.value, props.courses)
+  selectedCourse.value = resolveCourse(event.target.value)
   fieldOpened.value = false
   simulationId.value = ''
   const url = new URL(window.location.href)
@@ -116,7 +117,7 @@ onUnmounted(() => { cancelInitialSimulation(); window.removeEventListener('popst
       <SpotArt name="tools" tone="hong" />
     </header>
     <section class="workspace-course-context" aria-label="Học phần đang học">
-      <label for="workspace-course">Chọn học phần<select id="workspace-course" :value="selectedCourse" @change="selectCourse"><option value="all">Góc học tập chung</option><option v-for="course in courses" :key="course.id" :value="course.id">{{ course.name }}</option></select></label>
+      <label for="workspace-course">Chọn học phần<select id="workspace-course" :value="selectedCourse" @change="selectCourse"><option v-for="course in courses" :key="course.id" :value="course.id">{{ course.name }}</option></select></label>
       <div v-if="currentCourse" class="workspace-course-links"><a class="text-link" :href="withBase(`/${currentCourse.id}/`)">Bài giảng của môn</a><a class="text-link" :href="withBase(`/${currentCourse.id}/${currentCourse.presentation === 'philosophy' ? 'on-thi/' : 'bai-tap.html'}`)">{{ currentCourse.presentation === 'philosophy' ? 'Ôn thi' : 'Bài tập của môn' }}</a></div>
       <p v-else>Chọn một môn để mở đúng sổ ghi chú, bộ thẻ và danh sách việc học.</p>
     </section>

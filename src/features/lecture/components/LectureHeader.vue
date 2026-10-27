@@ -1,36 +1,29 @@
 <script setup>
-import { computed, ref, nextTick, onMounted, onUnmounted } from 'vue'
-import { useRouter, useData, onContentUpdated } from 'vitepress'
-import { useLecture, lecturePart, shouldIgnoreNavigationClick } from '../../navigation/index.mjs'
+import { computed, onMounted, onUnmounted } from 'vue'
+import { useData } from 'vitepress'
+import { useLecture, shouldIgnoreNavigationClick } from '../../navigation/index.mjs'
 import { lecturePath, lectureParts } from '../services/lecture-model.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
 import { workspacePath } from '../../study-tools/services/courseWorkspaceService.mjs'
 import CourseArt from '../../illustrations/components/CourseArt.vue'
+import ReadingOutline from '../../navigation/components/ReadingOutline.vue'
+import { selectLecturePart } from '../../navigation/controllers/use-lecture-navigation.mjs'
 
-const { course, lesson, part } = useLecture(), router = useRouter(), { page } = useData()
+const { course, lesson, part } = useLecture(), { page } = useData()
 const currentPart = computed(() => course.value?.parts?.find(p => p.lessons.includes(lesson.value?.slug)))
 const orderedParts = computed(() => course.value?.id === 'xac-suat-thong-ke'
   ? ['notes', 'kien-thuc-can-co', 'bai-tap', 'cheatsheet'].map(id => lectureParts.find(item => item.id === id))
   : lectureParts)
 const updated = computed(() => page.value.lastUpdated ? new Date(page.value.lastUpdated).toLocaleDateString('vi-VN', { timeZone: 'Asia/Bangkok' }) : '')
-const mobileOutline = ref(null)
-const articleHeadings = ref([])
-
-onContentUpdated(async () => {
-  await nextTick()
-  articleHeadings.value = [...document.querySelectorAll('.main > .vp-doc h2[id]')].map(heading => ({ slug: heading.id, title: heading.textContent.replace(/\u200b/g, '').trim() }))
-})
-
 function openSidebar() { document.querySelector('.VPLocalNav .menu')?.click() }
-function closeOutline() { if (mobileOutline.value) mobileOutline.value.open = false }
 // Start downloading panel data as soon as the reader reaches for a tab.
 function warmPanels() { loadLecturePayload(course.value, lesson.value).catch(() => {}) }
 function select(id, event) {
   if (shouldIgnoreNavigationClick(event)) return
+  if (event?.defaultPrevented) return
   event?.preventDefault()
-  lecturePart.value = id
-  router.go(studyLink(lecturePath(course.value.id, lesson.value.slug, id)))
+  selectLecturePart(id)
 }
 
 function handleKeydown(e) {
@@ -66,12 +59,7 @@ onUnmounted(() => {
       <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
     </button>
     <a :href="studyLink(`/${course.id}/`)">{{ course.short }}</a>
-    <details v-if="part === 'notes'" ref="mobileOutline">
-      <summary>Mục lục</summary>
-      <nav aria-label="Mục lục bài viết">
-        <a v-for="heading in articleHeadings" :key="heading.slug" :href="`#${heading.slug}`" @click="closeOutline">{{ heading.title }}</a>
-      </nav>
-    </details>
+    <ReadingOutline dropdown />
   </nav>
 
   <header v-if="course && lesson" class="lecture-header book-header">
@@ -112,5 +100,6 @@ onUnmounted(() => {
         {{ item.name }}
       </a>
     </nav>
+    <ReadingOutline dropdown class="tablet-reading-outline" />
   </div>
 </template>

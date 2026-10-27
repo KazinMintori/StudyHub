@@ -32,6 +32,6 @@ export const NAVIGATION_SELECTORS = {
   backdrop: '.Layout > .VPBackdrop.backdrop',
   sidebarToggle: '.course-sidebar-toggle',
   navBarHamburgerExpanded: '.VPNavBarHamburger[aria-expanded="true"]',
-  docSearchButton: '.DocSearch-Button',
+  docSearchButton: '.site-search-button, .DocSearch-Button',
   exerciseContent: '.lecture-exercises-content'
 }

@@ -2,6 +2,7 @@
 import { nextTick, onMounted, onUnmounted, ref } from 'vue'
 import { onContentUpdated, useData } from 'vitepress'
 import { stabilizeInitialHeading } from '../services/initial-heading-stabilizer.mjs'
+import { LECTURE_PART_HASHES } from '../../../config/navigation.mjs'
 
 const { frontmatter } = useData()
 const height = ref(134)
@@ -35,7 +36,10 @@ function observe() {
 onMounted(() => {
   observe()
   window.addEventListener('resize', measure)
-  initialHeading = stabilizeInitialHeading({ getOffset() { measure(); return height.value } })
+  initialHeading = stabilizeInitialHeading({
+    ...(LECTURE_PART_HASHES.includes(window.location.hash) ? { targetId: '' } : {}),
+    getOffset() { measure(); return height.value }
+  })
 })
 onContentUpdated(async () => {
   await nextTick()
