@@ -1,0 +1,659 @@
+[
+  {
+    "id": "8.1",
+    "sourcePDFPage": 283,
+    "printedPage": 263,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "16b805dcf44d021784d6b5d997507367060fb1a72811385c32db3e99f644e356",
+    "privateReviewedUnitSHA256": "16b805dcf44d021784d6b5d997507367060fb1a72811385c32db3e99f644e356",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.2",
+    "sourcePDFPage": 283,
+    "printedPage": 263,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "ea30fdccf091b90eb3ea4ba6245e55744136bc2fa34f05a6075c0052b600a756",
+    "privateReviewedUnitSHA256": "ea30fdccf091b90eb3ea4ba6245e55744136bc2fa34f05a6075c0052b600a756",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.3",
+    "sourcePDFPage": 283,
+    "printedPage": 263,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "df5d30fbf86dbe1cb9aefca7bdbf24d67c32bb23dcdfa0d81dd777e39276873e",
+    "privateReviewedUnitSHA256": "7ce0e5d91d6d8b2b7318f27c0f520e6cb800cc057427b545e1cc0d0cb6dec314",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.4",
+    "sourcePDFPage": 283,
+    "printedPage": 263,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "863522bbc6b00227493d3ff90890ea251908460d54ee9c9b1515180fa53f5009",
+    "privateReviewedUnitSHA256": "863522bbc6b00227493d3ff90890ea251908460d54ee9c9b1515180fa53f5009",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.5",
+    "sourcePDFPage": 283,
+    "printedPage": 263,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "acc982e935008f9cf335049990aece8b2505d53b4f0ba42ef4f2b65ad6f0d9f9",
+    "privateReviewedUnitSHA256": "acc982e935008f9cf335049990aece8b2505d53b4f0ba42ef4f2b65ad6f0d9f9",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.6",
+    "sourcePDFPage": 283,
+    "printedPage": 263,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "ea93b4ed55037141db8f9d59eb60d2b90492a6530de350711c292d8e47f6fd4e",
+    "privateReviewedUnitSHA256": "ea93b4ed55037141db8f9d59eb60d2b90492a6530de350711c292d8e47f6fd4e",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.7",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "2bafd817c8c67747c53dfb7dd251de277b3a77a7285ca893ddcc71f916a3c851",
+    "privateReviewedUnitSHA256": "2bafd817c8c67747c53dfb7dd251de277b3a77a7285ca893ddcc71f916a3c851",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.8",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "43011c1b7bb67c9d5f35bdad5c3541e984ee4255675e2b38254ce4e594f031c1",
+    "privateReviewedUnitSHA256": "43011c1b7bb67c9d5f35bdad5c3541e984ee4255675e2b38254ce4e594f031c1",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.9",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "d83851b5776dcbf04160d6457dfc74858b3d24cfea059434e439fa932c5183fa",
+    "privateReviewedUnitSHA256": "d83851b5776dcbf04160d6457dfc74858b3d24cfea059434e439fa932c5183fa",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.10",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "b2ee639741eaff30a10b9dcb4b04171d71e1ad2869b94e9057377e9f0b234973",
+    "privateReviewedUnitSHA256": "b2ee639741eaff30a10b9dcb4b04171d71e1ad2869b94e9057377e9f0b234973",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.11",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "1b0bee5c94f0822f95d0053f2fddec7aaec89ca152560eaa31009c508d360943",
+    "privateReviewedUnitSHA256": "1b0bee5c94f0822f95d0053f2fddec7aaec89ca152560eaa31009c508d360943",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.12",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "6a8f433bf129f8f632d05992c04cc7604b2840ea693b58772fc21be0fa3e99a3",
+    "privateReviewedUnitSHA256": "6a8f433bf129f8f632d05992c04cc7604b2840ea693b58772fc21be0fa3e99a3",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.13",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "a030e479094f0b954460a5eeb02e67cff7921a9b6172574ee86e8857be335690",
+    "privateReviewedUnitSHA256": "12d511079ba4aca4cb2e588f9f94601b094de46002c3dbaa5c3aa798ed7bdc20",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.14",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "03008297cceba460ed1c0f6684086e189926d4603972454cb2d2099389445d53",
+    "privateReviewedUnitSHA256": "03008297cceba460ed1c0f6684086e189926d4603972454cb2d2099389445d53",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.15",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "d64f34b294b69e1e958bc7b80cb1309887169ae960834831c135cbb37a7d0669",
+    "privateReviewedUnitSHA256": "d64f34b294b69e1e958bc7b80cb1309887169ae960834831c135cbb37a7d0669",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.16",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "9da148e585a91a1a30958333b525858a69bac6951fd5339e55b114c65112a8d2",
+    "privateReviewedUnitSHA256": "9da148e585a91a1a30958333b525858a69bac6951fd5339e55b114c65112a8d2",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.17",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "1af52b46bd087a77b35d8a4b255d022b9035b06842ffe3ac60e9f4c11d700d5a",
+    "privateReviewedUnitSHA256": "1af52b46bd087a77b35d8a4b255d022b9035b06842ffe3ac60e9f4c11d700d5a",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.18",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "b2da580247d5592da06f4d7aece383df184dbb5b5710e174878208bf8e5ca38d",
+    "privateReviewedUnitSHA256": "b2da580247d5592da06f4d7aece383df184dbb5b5710e174878208bf8e5ca38d",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.19",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "125bfcb664fa6c82aa38e40d2135aa9a132f284f87330659eb7695a84187fcd0",
+    "privateReviewedUnitSHA256": "125bfcb664fa6c82aa38e40d2135aa9a132f284f87330659eb7695a84187fcd0",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.20",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "bf79b6bc60c779d248c77928aa94c861b18031f1b511c082bb3ff9fd86233731",
+    "privateReviewedUnitSHA256": "bf79b6bc60c779d248c77928aa94c861b18031f1b511c082bb3ff9fd86233731",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.21",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "6b5d5132f6f00d19a4c28de771aa15bce46d3d79dbfb874e99d4495662b8c4ec",
+    "privateReviewedUnitSHA256": "6b5d5132f6f00d19a4c28de771aa15bce46d3d79dbfb874e99d4495662b8c4ec",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.22",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "03a43b35ae4797dbb0f2609ab90a96c20b5f552927f249763419cb22bf926ba5",
+    "privateReviewedUnitSHA256": "03a43b35ae4797dbb0f2609ab90a96c20b5f552927f249763419cb22bf926ba5",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.23",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "0514141320dc255dc05d9a90c536ef11cd9edec860f17a0740be53fa2d1c9cbe",
+    "privateReviewedUnitSHA256": "0514141320dc255dc05d9a90c536ef11cd9edec860f17a0740be53fa2d1c9cbe",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.24",
+    "sourcePDFPage": 284,
+    "printedPage": 264,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "abaa9e6d312677d0c507a7973ab9e6d9f93a3a101b2c2733c26503045fdf1e5e",
+    "privateReviewedUnitSHA256": "7ef9cc71b82949ff3420673e734a537bfef6e84690f09a4138121e4774e72be4",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.25",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "1dc82bb8d8f3ace002ad2bc7fe6462f5fbed328f10069bf1a94116b9c7cd20eb",
+    "privateReviewedUnitSHA256": "1dc82bb8d8f3ace002ad2bc7fe6462f5fbed328f10069bf1a94116b9c7cd20eb",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.26",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "fbb62ff22a4eedb20bab8c9cb1e509b4b5ad1bf2c3111c8a9784340527da4227",
+    "privateReviewedUnitSHA256": "fbb62ff22a4eedb20bab8c9cb1e509b4b5ad1bf2c3111c8a9784340527da4227",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.27",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "e8091a0cf38657757f3e6f32f240affc60a555854a58852dc8efd8b9dba7c49e",
+    "privateReviewedUnitSHA256": "e8091a0cf38657757f3e6f32f240affc60a555854a58852dc8efd8b9dba7c49e",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.28",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "4366e7c096b5d42f32e4dda47e5e630d06b173047ed22ae5b51c63233de785de",
+    "privateReviewedUnitSHA256": "4366e7c096b5d42f32e4dda47e5e630d06b173047ed22ae5b51c63233de785de",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.29",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "4170de98602445addb7d8c684a8b878292a3c30b78a83a1e445d67573cb873f5",
+    "privateReviewedUnitSHA256": "4170de98602445addb7d8c684a8b878292a3c30b78a83a1e445d67573cb873f5",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.30",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "6313a6d8693eaa8e75c7c25fa8c64a2861854e72e24f937077e54f6ba90bf60c",
+    "privateReviewedUnitSHA256": "f26721c9878e52faaf93aa17d17da564c1047439ba011b8de627dabf52fe26f2",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.31",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "3711aa22ff74b25f1f6864621b2bb5b87f23e41e0ea934f097e393301524255a",
+    "privateReviewedUnitSHA256": "3711aa22ff74b25f1f6864621b2bb5b87f23e41e0ea934f097e393301524255a",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.32",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "0cac61625ea7d0f892a8939caec044d7bce6de7ed965404e837f6955972f7933",
+    "privateReviewedUnitSHA256": "0cac61625ea7d0f892a8939caec044d7bce6de7ed965404e837f6955972f7933",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.33",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "1af1eb8a74691e8029390a566ffe6f569282371865e8c930870b03ab82d1883c",
+    "privateReviewedUnitSHA256": "1af1eb8a74691e8029390a566ffe6f569282371865e8c930870b03ab82d1883c",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.34",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "c3c79a66b44a7ccdfa9c4619a2c843551b2e023c37abab1329b1e4b23fb7b6ad",
+    "privateReviewedUnitSHA256": "c3c79a66b44a7ccdfa9c4619a2c843551b2e023c37abab1329b1e4b23fb7b6ad",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.35",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "e18a6ef7c46d86ef846381406a84c145df7d9f3192902fe4a18d0cd1a20e34cc",
+    "privateReviewedUnitSHA256": "e18a6ef7c46d86ef846381406a84c145df7d9f3192902fe4a18d0cd1a20e34cc",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.36",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "8901b2cf410e0f778f3c603961e167cbc7b143a41c37681e7945f1d107d4c138",
+    "privateReviewedUnitSHA256": "8901b2cf410e0f778f3c603961e167cbc7b143a41c37681e7945f1d107d4c138",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.37",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "106046f752b01538232c6b61234c8ff226194887828cceeafff9bf8243fef03f",
+    "privateReviewedUnitSHA256": "106046f752b01538232c6b61234c8ff226194887828cceeafff9bf8243fef03f",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.38",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "b8da42a97e1ae5a9e387f7c27d4cc5c1600d5dd8a228269c5a092cdaf511a0bf",
+    "privateReviewedUnitSHA256": "b8da42a97e1ae5a9e387f7c27d4cc5c1600d5dd8a228269c5a092cdaf511a0bf",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.39",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "01b71c3548c2931bd2aebb83d1b9b1e6d4a0698c5abfbd2977da3d8ba1ae083e",
+    "privateReviewedUnitSHA256": "01b71c3548c2931bd2aebb83d1b9b1e6d4a0698c5abfbd2977da3d8ba1ae083e",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.40",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "29266f2bdfc1df64ef9fbbf6b5db7d8b2854df7298f53520165248a9894c4361",
+    "privateReviewedUnitSHA256": "29266f2bdfc1df64ef9fbbf6b5db7d8b2854df7298f53520165248a9894c4361",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.41",
+    "sourcePDFPage": 285,
+    "printedPage": 265,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "cfb013379b9033638dc91a9bccb06f2f99112cda65622c50206a53b5db3f2fd7",
+    "privateReviewedUnitSHA256": "3fb47fb883023618b2751e5ef2fcd94b7ecfd03c29f4ac52795ca0c79e290ec7",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.42",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "a4558d73ac01e1bc5b3603ec84736c058ab01dcfa1fb182b52f1bc0526941c4d",
+    "privateReviewedUnitSHA256": "a4558d73ac01e1bc5b3603ec84736c058ab01dcfa1fb182b52f1bc0526941c4d",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.43",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "3d460356efa8a2b276283df809000c77c0eac38bbb3221dd6991f838d3a7a115",
+    "privateReviewedUnitSHA256": "3d460356efa8a2b276283df809000c77c0eac38bbb3221dd6991f838d3a7a115",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.44",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "5d2031e617982e87049345f7e7c98f983a0960e432eb0e2ce25f4d53b83bd6f2",
+    "privateReviewedUnitSHA256": "8d2e0fa0c0e7c4f9d1b3802d8869b8fc0fce0971e0f82c1a21f3a06fb4e07286",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.45",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "86d811eb115de8cf033a73e6ab368278b0f155d1a8cc1bf189973ebf4c9b6180",
+    "privateReviewedUnitSHA256": "86d811eb115de8cf033a73e6ab368278b0f155d1a8cc1bf189973ebf4c9b6180",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.46",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "144cdf5ee3cb5a4a0b3e1e7f3a2246a7e264a5cb94131ce0479f72b8b2670715",
+    "privateReviewedUnitSHA256": "144cdf5ee3cb5a4a0b3e1e7f3a2246a7e264a5cb94131ce0479f72b8b2670715",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.47",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "db94607db855ec127f887012ad2f0388d3e8c88d5941279289fa78d19b7e8b4f",
+    "privateReviewedUnitSHA256": "db94607db855ec127f887012ad2f0388d3e8c88d5941279289fa78d19b7e8b4f",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.48",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "569fa499aa4bd71bc73dc5b07b351f05b1edc94a2551c901ebc4d072148f7161",
+    "privateReviewedUnitSHA256": "baadc10c9b533a5680d2224069b404284eedc739deff6f5ae518f345bfa3c068",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.49",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "577720d2885839096c9f5104bb51830c358d6afa2592b8e0632c76864d5e130d",
+    "privateReviewedUnitSHA256": "577720d2885839096c9f5104bb51830c358d6afa2592b8e0632c76864d5e130d",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.50",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b"
+    ],
+    "canonicalUnitSHA256": "509216174b37ad3f91f89f8397b30a593150bb525c4089c0160c03436718fa0c",
+    "privateReviewedUnitSHA256": "509216174b37ad3f91f89f8397b30a593150bb525c4089c0160c03436718fa0c",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.51",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c"
+    ],
+    "canonicalUnitSHA256": "eba45e7bf8957c409ff92719d0df7bdd69a48c332f50ac2065e8abc4da27af8b",
+    "privateReviewedUnitSHA256": "eba45e7bf8957c409ff92719d0df7bdd69a48c332f50ac2065e8abc4da27af8b",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.52",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "b2d566f17fafebb0701f9de8120abdda64d9d55fd83297ce3b53fd313607328e",
+    "privateReviewedUnitSHA256": "b2d566f17fafebb0701f9de8120abdda64d9d55fd83297ce3b53fd313607328e",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.53",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "5ccdec6e85bb3b4193d209bf8d3594e9420d119a5f6cd358bd650c7dccb34e7f",
+    "privateReviewedUnitSHA256": "5ccdec6e85bb3b4193d209bf8d3594e9420d119a5f6cd358bd650c7dccb34e7f",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.54",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "canonicalUnitSHA256": "52d807aaef6a6aec4e99d319067561cc6cfe255c0fc7cfa4f7c4a8a820d8906c",
+    "privateReviewedUnitSHA256": "2de98a9d3f0c445f49e1245b1560ad4dbbbeea1a936b2283bc28f7f375487a06",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  },
+  {
+    "id": "8.55",
+    "sourcePDFPage": 286,
+    "printedPage": 266,
+    "destination": "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md",
+    "requiredParts": [],
+    "canonicalUnitSHA256": "c2d4c5aeb30851d4a9d50ead193cc025bbeebcfa62dda205a75e878752cab1e3",
+    "privateReviewedUnitSHA256": "c2d4c5aeb30851d4a9d50ead193cc025bbeebcfa62dda205a75e878752cab1e3",
+    "status": "parent-source-read-recomputed-and-runtime-verified-early55only"
+  }
+]
