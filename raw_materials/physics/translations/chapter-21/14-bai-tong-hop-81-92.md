@@ -19,8 +19,10 @@
 - Khai triển theo $R^2/x^2$ để so với điện tích điểm.
 - So sánh trường cần chỉ rõ mẫu số khi tính phần trăm.
 
+Đặt hệ số trường $E_0=Q/(2\pi\varepsilon_0R^2)$ và khoảng cách $\rho=\sqrt{x^2+R^2}$. Khi đó:
+
 $$
-E = \frac{Q}{2\pi\varepsilon_0R^2} -\frac{Qx}{2\pi\varepsilon_0R^2\sqrt{x^2+R^2}}.
+E=E_0\left(1-\frac x\rho\right).
 $$
 
 (a) Tại x = 0,200 m, E = 1,56 N/C, hướng +x. (b) Với $u=R^2/x^2\ll1$, $(1+u)^{-1/2}\approx1-u/2$, nên:
@@ -178,8 +180,19 @@ $$
 
 (a) $Q=\pi\sigma(R_2^2-R_1^2)$. (b) Biểu thức có dấu dùng được cả hai phía:
 
+Gọi hai khoảng cách đến các đường tròn biên là:
+
 $$
-E_x = \frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_1^2}} -\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_2^2}}.
+\begin{aligned}
+&r_1=\sqrt{x^2+R_1^2},\\
+&r_2=\sqrt{x^2+R_2^2}.
+\end{aligned}
+$$
+
+Khi trừ hai trường đĩa:
+
+$$
+E_x=\frac{\sigma x}{2\varepsilon_0}\left(\frac1{r_1}-\frac1{r_2}\right).
 $$
 
 Trường dương với x > 0, âm với x < 0, bằng không ở tâm. (c) Khi $|x|\ll R_1$:
@@ -190,8 +203,14 @@ $$
 
 (d) $F_x=-qE_x=-\kappa x$, với hệ số phục hồi dương. Tần số:
 
+Hệ số phục hồi và tần số là:
+
 $$
-f = \frac1{2\pi}\sqrt{\frac{q\sigma}{2m\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right)}.
+\kappa=\frac{q\sigma}{2\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right),
+$$
+
+$$
+f=\frac1{2\pi}\sqrt{\frac\kappa m}.
 $$
 
 Biên độ ban đầu 0,01R₁ thỏa gần đúng nhỏ.
@@ -316,11 +335,13 @@ $$
 
 **(c), (d)**
 
+Gọi $F_0=q\sigma/(2\varepsilon_0)$ là độ lớn lực điện giới hạn. Đặt $\ell=\sqrt{\Delta^2+R^2}-R$. Hai công là:
+
 $$
 \begin{aligned}
-W_e &= -\frac{q\sigma}{2\varepsilon_0}\int_0^\Delta\frac{s\,ds}{\sqrt{s^2+R^2}} \\
-&= -\frac{q\sigma}{2\varepsilon_0}(\sqrt{\Delta^2+R^2}-R), \\
-W_g &= mg\Delta.
+W_e&=-F_0\int_0^\Delta\frac{s\,ds}{\sqrt{s^2+R^2}}\\
+&=-F_0\ell,\\
+W_g&=mg\Delta.
 \end{aligned}
 $$
 
@@ -353,9 +374,13 @@ Hai vế ở bước trước khi bình phương đều không âm, nên phép b
 
 (f)
 
+Với độ dài phụ $\ell=\sqrt{\Delta^2+R^2}-R$ đã dùng khi tính công, tốc độ là:
+
 $$
-v = \sqrt{2g\left[\Delta-\frac{\sqrt{\Delta^2+R^2}-R}{\alpha}\right]}.
+v=\sqrt{2g\left(\Delta-\frac\ell\alpha\right)}.
 $$
+
+Công thức áp dụng trong đoạn chuyển động có biểu thức dưới căn không âm.
 
 (g) Đổi mật độ thành $10^{-5}$ C/m², được $m_{\max}=57.7$ g, $\alpha=0.434$ và $\Delta_{\max}=10.7$ cm.
 :::
@@ -403,10 +428,31 @@ $$
 
 Hai số hạng bằng nhau tại $u=\pi/4$, nên $g(\pi/4)=0$. Đạo hàm từng số hạng cho:
 
+Tách $g=g_1-g_2$ với:
+
 $$
 \begin{aligned}
-g'(u) &= -\frac1{\sin u}-\frac{2\cos^2u}{\sin^3u} -\frac1{\cos u}-\frac{2\sin^2u}{\cos^3u}, \\
-g'(\pi/4) &= -6\sqrt2.
+&g_1(u)=\frac{\cos u}{\sin^2u},\\
+&g_2(u)=\frac{\sin u}{\cos^2u}.
+\end{aligned}
+$$
+
+Đạo hàm từng hàm:
+
+$$
+g_1'(u)=-\frac1{\sin u}-\frac{2\cos^2u}{\sin^3u},
+$$
+
+$$
+g_2'(u)=\frac1{\cos u}+\frac{2\sin^2u}{\cos^3u}.
+$$
+
+Do đó:
+
+$$
+\begin{aligned}
+g'(u)&=g_1'(u)-g_2'(u),\\
+g'(\pi/4)&=-6\sqrt2.
 \end{aligned}
 $$
 

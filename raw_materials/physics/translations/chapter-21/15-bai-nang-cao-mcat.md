@@ -27,8 +27,10 @@ $$
 
 (b) Với $\lambda=Q/L$:
 
+Gọi $I(y_2)$ là tích phân theo vị trí phần tử của thanh thứ nhất. Khi đó:
+
 $$
-dF_{2x} = k\lambda^2a\,dy_2 \times\int_0^L\frac{dy_1}{[a^2+(y_2-y_1)^2]^{3/2}}.
+dF_{2x}=k\lambda^2aI(y_2)\,dy_2.
 $$
 
 Giữ y₂ cố định rồi đặt u = y₂ − y₁, nên du = −dy₁. Khi y₁ chạy từ 0 đến L, u chạy từ y₂ đến y₂ − L. Đổi chiều cận loại dấu trừ:
@@ -43,20 +45,31 @@ $$
 G(u)=\frac{u}{a^2\sqrt{a^2+u^2}}.
 $$
 
-Thật vậy, lấy đạo hàm u/√(a² + u²) cho a²/(a² + u²)^(3/2). Chia thêm a² trong G trả lại hàm dưới dấu tích phân. Thế cận:
+Thật vậy, lấy đạo hàm u/√(a² + u²) cho a²/(a² + u²)^(3/2). Chia thêm a² trong G trả lại hàm dưới dấu tích phân. Đặt hai khoảng cách:
+
+$$
+\begin{aligned}
+&r_0=\sqrt{a^2+y_2^2},\\
+&r_L=\sqrt{a^2+(L-y_2)^2}.
+\end{aligned}
+$$
+
+Gọi hai hệ số hình học là $A=y_2/r_0$ và $B=(L-y_2)/r_L$. Thế các cận:
 
 $$
 \begin{aligned}
 I(y_2) &= G(y_2)-G(y_2-L) \\
-&= \frac1{a^2}\left(\frac{y_2}{r_0}+\frac{L-y_2}{r_L}\right).
+&= \frac{A+B}{a^2}.
 \end{aligned}
 $$
 
-Ở đây $r_0=\sqrt{a^2+y_2^2}$ và $r_L=\sqrt{a^2+(L-y_2)^2}$. Nhân I với hệ số kλ²a dy₂ trong biểu thức lực ban đầu:
+Nhân I với hệ số kλ²a dy₂ trong biểu thức lực ban đầu:
 
 $$
-dF_{2x}=\frac{k\lambda^2}{a}\left(\frac{y_2}{r_0}+\frac{L-y_2}{r_L}\right)dy_2.
+dF_{2x}=\frac{k\lambda^2}{a}(A+B)\,dy_2.
 $$
+
+Hai số hạng A và B vẫn lần lượt biểu diễn đóng góp hình học từ hai đầu thanh.
 
 (c) Tích phân trên $0\le y_2\le L$. Hai số hạng trong ngoặc có cùng tích phân, vì đặt v = L − y₂ biến số hạng thứ hai thành số hạng thứ nhất. Tích phân cần tính là:
 
@@ -102,8 +115,19 @@ $$
 
 Thay biểu thức lực ở (c). Phần cần tích phân là √(s² + L²)/s − 1. Một nguyên hàm là:
 
+Đặt hai hàm phụ để trình bày riêng phần căn và phần logarit:
+
 $$
-H(s) = \sqrt{s^2+L^2}-s -L\ln\frac{L+\sqrt{s^2+L^2}}s.
+\begin{aligned}
+&R(s)=\sqrt{s^2+L^2},\\
+&T(s)=\ln\frac{L+R(s)}s.
+\end{aligned}
+$$
+
+Nguyên hàm được viết thành:
+
+$$
+H(s)=R(s)-s-LT(s).
 $$
 
 Lấy đạo hàm H cho đúng √(s² + L²)/s − 1. Khi s tiến ra vô hạn, √(s² + L²) − s tiến về không và logarit cũng tiến về không. Vì vậy H(∞) = 0. Thế hai cận vào tích phân:
@@ -115,14 +139,28 @@ $$
 Thế s = a vào H rồi đổi dấu từng số hạng, ta được:
 
 $$
--H(a) = L\ln\frac{L+\sqrt{a^2+L^2}}a +a-\sqrt{a^2+L^2}.
+-H(a)=LT(a)+a-R(a).
 $$
 
 Nhân từng số hạng với hệ số 2kQ²/L² cho kết quả:
 
+Đặt hệ số $C=2kQ^2/L^2$. Ba đóng góp sau khi nhân lần lượt là:
+
 $$
-U(a) = \frac{2kQ^2L}{L^2}\ln\frac{L+\sqrt{a^2+L^2}}a +\frac{2kQ^2a}{L^2} -\frac{2kQ^2}{L^2}\sqrt{a^2+L^2}.
+\begin{aligned}
+&U_L=CLT(a),\\
+&U_a=Ca,\\
+&U_R=CR(a).
+\end{aligned}
 $$
+
+Thế năng cuối cùng là:
+
+$$
+U(a)=U_L+U_a-U_R.
+$$
+
+Ở đây $R(a)=\sqrt{a^2+L^2}$ và $T(a)=\ln[(L+R(a))/a]$. Biểu thức giữ riêng cả ba số hạng của nguyên hàm.
 
 (f) Hai thanh có cùng khối lượng, từ nghỉ nên động lượng tổng bằng không. Mỗi thanh có tốc độ v ngược chiều nhau; $mv^2=U(a)$ và tốc độ tương đối $v_{\mathrm{rel}}=2v$. Thế dữ kiện cho U = 5,37 J, nên $v_{\mathrm{rel}}=2\sqrt{U/0.500}=6.55$ m/s.
 :::
@@ -292,10 +330,12 @@ Thay lại c = x + a/2:
 
 $$
 \begin{aligned}
-E_x(x) &= \frac{kQ}{L(x+a/2)} -\frac{kQ}{L(x+a/2+L)}, \\
-E_y &= 0.
+&E_x(x)=\frac{kQ}{L}\left(\frac1c-\frac1{c+L}\right),\\
+&E_y=0.
 \end{aligned}
 $$
+
+Trong biểu thức này $c=x+a/2$.
 
 (b)
 
@@ -314,12 +354,12 @@ J(a/2) &= \ln\frac a{a+L}.
 \end{aligned}
 $$
 
-Lấy giá trị trên trừ giá trị dưới, rồi dùng hiệu hai logarit bằng logarit tỷ số:
+Gọi hai giá trị cận vừa tính là $J_2=J(a/2+L)$ và $J_1=J(a/2)$. Lấy cận trên trừ cận dưới, rồi dùng hiệu hai logarit bằng logarit tỷ số:
 
 $$
 \begin{aligned}
 F &= \frac QL\int_{a/2}^{a/2+L}E_x(x)\,dx \\
-&= \frac{kQ^2}{L^2}[J(a/2+L)-J(a/2)] \\
+&= \frac{kQ^2}{L^2}(J_2-J_1) \\
 &= \frac{kQ^2}{L^2}\ln\frac{(a+L)^2}{a(a+2L)}.
 \end{aligned}
 $$

@@ -74,12 +74,21 @@ $q_1=+6.00\,\mathrm{nC}$ ở $(0,0.200\,\mathrm m)$, $q_2=-6.00\,\mathrm{nC}$ �
 
 Khoảng cách mỗi nguồn đến điểm thử là 0,250 m:
 
+Gọi F là độ lớn lực do mỗi nguồn:
+
+$$
+F=\frac{k|q_1q_3|}{r^2}.
+$$
+
+Với $r=0.250\,\mathrm m$, ta được $F\approx2.16\,\mu\mathrm N$. Giữ giá trị chưa làm tròn khi cộng hai thành phần đứng cùng hướng dương:
+
 $$
 \begin{aligned}
-F_y &= 2\frac{k(6.00)(2.50)10^{-18}}{0.250^2}\frac{0.200}{0.250} \\
-&= +3.45\,\mu\mathrm N.
+F_y&=2F\frac{0.200}{0.250}\\
+&=+3.45\,\mu\mathrm N.
 \end{aligned}
 $$
+
 :::
 
 ::: exercise VP21.4.4
@@ -96,13 +105,33 @@ Một mảnh nhựa nhỏ có $q_1=+4.00\,\mathrm{nC}$ ở $(0,0.200\,\mathrm m)
 - Nguồn trên hút lên trái, nguồn gốc đẩy sang phải.
 - Tính khoảng cách r₁ rồi chiếu từng lực, tránh cộng độ lớn vì hai lực khác hướng.
 
+Khoảng cách đến hai nguồn là:
+
 $$
 \begin{aligned}
-r_1 &= \sqrt{0.250^2+0.200^2}, \\
-F_x &= k(1.50)(4.00)10^{-18} \left(\frac1{0.250^2}-\frac{0.250}{r_1^3}\right), \\
-F_y &= k(1.50)(4.00)10^{-18}\frac{0.200}{r_1^3}.
+&r_1=\sqrt{0.250^2+0.200^2}\,\mathrm m,\\
+&r_2=0.250\,\mathrm m.
 \end{aligned}
 $$
+
+Tính riêng độ lớn hai lực hút và đẩy:
+
+$$
+\begin{aligned}
+&F_1=\frac{k|q_1q_3|}{r_1^2},\\
+&F_2=\frac{k|q_2q_3|}{r_2^2}.
+\end{aligned}
+$$
+
+Với $\cos\theta=0.250\,\mathrm m/r_1$ và $\sin\theta=0.200\,\mathrm m/r_1$, các thành phần tổng là:
+
+$$
+\begin{aligned}
+&F_x=F_2-F_1\cos\theta,\\
+&F_y=F_1\sin\theta.
+\end{aligned}
+$$
+
 
 Kết quả $F_x=+0.452$ µN, $F_y=+0.329$ µN.
 :::
@@ -136,12 +165,24 @@ $$
 
 (b) Hai trường đối hướng:
 
+Gọi $E_1$ và $E_2$ là hai độ lớn trường tại điểm b:
+
 $$
 \begin{aligned}
-E_y &= \frac{k(4.00\times10^{-9})}{0.200^2} -\frac{k(5.00\times10^{-9})}{0.400^2} \\
-&= 618\,\mathrm{N/C}.
+&E_1=\frac{k(4.00\times10^{-9})}{0.200^2}\,\mathrm{N/C},\\
+&E_2=\frac{k(5.00\times10^{-9})}{0.400^2}\,\mathrm{N/C}.
 \end{aligned}
 $$
+
+Trường nguồn dương hướng lên, trường nguồn âm hướng xuống:
+
+$$
+\begin{aligned}
+E_y&=E_1-E_2\\
+&=618\,\mathrm{N/C}.
+\end{aligned}
+$$
+
 
 (c) Nguồn trên cách điểm c $\sqrt{0.200^2+0.200^2}$ m, có trường phải và xuống; nguồn gốc có trường trái. Cộng cho $E_x=-806$ N/C, $E_y=-318$ N/C.
 :::

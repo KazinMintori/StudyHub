@@ -103,10 +103,12 @@ $$
 
 **Bài 21.87:** (a) $Q=\pi(R_2^2-R_1^2)\sigma$. (b) Với $x\ne0$:
 
+Đặt $r_1=\sqrt{x^2+R_1^2}$ và $r_2=\sqrt{x^2+R_2^2}$:
+
 $$
 \begin{aligned}
-E_x &= \frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_1^2}} -\frac{\sigma x}{2\varepsilon_0\sqrt{x^2+R_2^2}}, \\
-\vec E &= E_x\hat{\mathbf i}.
+E_x&=\frac{\sigma x}{2\varepsilon_0}\left(\frac1{r_1}-\frac1{r_2}\right),\\
+\vec E&=E_x\hat{\mathbf i}.
 \end{aligned}
 $$
 
@@ -119,7 +121,11 @@ $$
 (d)
 
 $$
-f = \frac1{2\pi}\sqrt{\frac{q\sigma}{2\varepsilon_0m}\left(\frac1{R_1}-\frac1{R_2}\right)}.
+\kappa=\frac{q\sigma}{2\varepsilon_0}\left(\frac1{R_1}-\frac1{R_2}\right),
+$$
+
+$$
+f=\frac1{2\pi}\sqrt{\frac\kappa m}.
 $$
 
 **Bài 21.89:** (a) $q_1=8.00\,\mu\mathrm C$, $q_2=3.00\,\mu\mathrm C$. (b) $7.50\,\mathrm N$ hướng $-x$. (c) $x=0.248\,\mathrm m$.
@@ -132,12 +138,14 @@ $$
 
 (b) $m_{\max}=q\sigma/(2g\varepsilon_0)$.
 
+Đặt $F_0=q\sigma/(2\varepsilon_0)$ và $\ell=\sqrt{\Delta^2+R^2}-R$:
+
 $$
 \begin{aligned}
-W_e &= -\frac{q\sigma}{2\varepsilon_0}(\sqrt{\Delta^2+R^2}-R), \\
-W_g &= mg\Delta, \\
-\Delta_{\max} &= \frac{2R\alpha}{1-\alpha^2}, \\
-\frac12mv^2 &= W_e+W_g.
+&W_e=-F_0\ell,\\
+&W_g=mg\Delta,\\
+&\Delta_{\max}=\frac{2R\alpha}{1-\alpha^2},\\
+&\frac12mv^2=W_e+W_g.
 \end{aligned}
 $$
 
@@ -147,25 +155,34 @@ $$
 
 $$
 \begin{aligned}
-r_0 &= \sqrt{y_2^2+a^2}, \\
-r_L &= \sqrt{(y_2-L)^2+a^2}, \\
-dF_{2x} &= \frac{k\lambda^2}{a}\left(\frac{y_2}{r_0}-\frac{y_2-L}{r_L}\right)dy_2.
+&r_0=\sqrt{y_2^2+a^2},\\
+&r_L=\sqrt{(y_2-L)^2+a^2},\\
+&A=\frac{y_2}{r_0},\\
+&B=\frac{L-y_2}{r_L}.
 \end{aligned}
+$$
+
+$$
+dF_{2x}=\frac{k\lambda^2}{a}(A+B)\,dy_2.
 $$
 
 (c)
 
+Đặt $\eta=L/a$ và $j=\sqrt{1+\eta^2}-1$:
+
 $$
 \begin{aligned}
-F_{2x} &= \frac{2kQ^2}{L^2} \left(\sqrt{1+(L/a)^2}-1\right), \\
-\vec F_2 &= F_{2x}\hat{\mathbf i}.
+&F_{2x}=\frac{2kQ^2}{L^2}j,\\
+&\vec F_2=F_{2x}\hat{\mathbf i}.
 \end{aligned}
 $$
 
 (e)
 
+Đặt $R_a=\sqrt{a^2+L^2}$ và $T_a=\ln[(L+R_a)/a]$:
+
 $$
-W = \frac{2kQ^2}{L}\ln\frac{L+\sqrt{a^2+L^2}}a +\frac{2kQ^2a}{L^2} -\frac{2kQ^2}{L^2}\sqrt{a^2+L^2}.
+W=\frac{2kQ^2}{L^2}(LT_a+a-R_a).
 $$
 
 (f) $6.55\,\mathrm{m/s}$.
@@ -174,8 +191,10 @@ $$
 
 **Bài 21.97(a):**
 
+Đặt $c=x+a/2>0$:
+
 $$
-E_x = \frac{2kQ}{L(2x+a)} -\frac{2kQ}{L(2L+2x+a)}.
+E_x=\frac{kQ}{L}\left(\frac1c-\frac1{c+L}\right).
 $$
 
 **Bài 21.99:** Chọn (c). **Bài 21.101:** Chọn (b).

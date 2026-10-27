@@ -72,14 +72,26 @@ $q_1=+5.00\,\mathrm{nC}$ tại gốc và $q_2=-2.00\,\mathrm{nC}$ tại $x=4.00\
 - Nguồn âm phía dưới cách 3,00 cm chỉ hút xuống.
 - Cộng thành phần rồi lấy độ lớn.
 
+Gọi F là độ lớn lực do nguồn tại gốc, G là độ lớn lực do nguồn trên trục x. Hai độ lớn là:
+
 $$
 \begin{aligned}
-F_x &= \frac{k(5.00)(6.00)10^{-18}}{0.0500^2}\frac45 \\
-&= 8.63\times10^{-5}\,\mathrm N, \\
-F_y &= \frac{k(5.00)(6.00)10^{-18}}{0.0500^2}\frac35 -\frac{k(2.00)(6.00)10^{-18}}{0.0300^2} \\
-&= -5.52\times10^{-5}\,\mathrm N.
+&F=\frac{k(5.00)(6.00)10^{-18}}{0.0500^2}\,\mathrm N,\\
+&G=\frac{k(2.00)(6.00)10^{-18}}{0.0300^2}\,\mathrm N.
 \end{aligned}
 $$
+
+Tam giác 3–4–5 cho:
+
+$$
+\begin{aligned}
+F_x&=\frac45F\\
+&=8.63\times10^{-5}\,\mathrm N,\\
+F_y&=\frac35F-G\\
+&=-5.52\times10^{-5}\,\mathrm N.
+\end{aligned}
+$$
+
 
 Độ lớn $1.02\times10^{-4}$ N, hướng $32.6^\circ$ dưới +x.
 :::
@@ -141,10 +153,10 @@ q^2 &= \frac{mg(2L\sin\theta)^2\tan\theta}{k}, \\
 \end{aligned}
 $$
 
-Sơ đồ mỗi cầu gồm mg xuống, T dọc dây lên và lực điện ngang ra ngoài. Giữ q, m không đổi khi thay L:
+Sơ đồ mỗi cầu gồm mg xuống, T dọc dây lên và lực điện ngang ra ngoài. Đặt $f(\theta)=\sin^2\theta\tan\theta$. Giữ q, m không đổi khi thay L:
 
 $$
-\sin^2\theta_2\tan\theta_2 = \frac{L_1^2}{L_2^2} \times\sin^2\theta_1\tan\theta_1.
+f(\theta_2)=\left(\frac{L_1}{L_2}\right)^2f(\theta_1).
 $$
 
 Thế $L_1/L_2=2$ và giải phương trình đơn điệu trên $(0,\pi/2)$ cho $\theta_2\approx39.5^\circ$.
@@ -373,14 +385,26 @@ Nguồn $-3.00\,\mathrm{nC}$ ở gốc, nguồn $2.00\,\mathrm{nC}$ ở $(0,4.00
 - Nguồn gốc hút theo hướng (−3/5,−4/5), khoảng cách 5,00 cm.
 - Nguồn dương ở cùng y đẩy sang phải, khoảng cách 3,00 cm.
 
+Gọi F là độ lớn lực do nguồn ở gốc và G là độ lớn lực do nguồn tại $(0,4.00\,\mathrm{cm})$:
+
 $$
 \begin{aligned}
-F_x &= -\frac35\frac{k(3.00)(5.00)10^{-18}}{0.0500^2} +\frac{k(2.00)(5.00)10^{-18}}{0.0300^2} \\
-&= 6.75\times10^{-5}\,\mathrm N, \\
-F_y &= -\frac45\frac{k(3.00)(5.00)10^{-18}}{0.0500^2} \\
-&= -4.31\times10^{-5}\,\mathrm N.
+&F=\frac{k(3.00)(5.00)10^{-18}}{0.0500^2}\,\mathrm N,\\
+&G=\frac{k(2.00)(5.00)10^{-18}}{0.0300^2}\,\mathrm N.
 \end{aligned}
 $$
+
+Chiếu lực từ nguồn ở gốc theo tam giác 3–4–5:
+
+$$
+\begin{aligned}
+F_x&=-\frac35F+G\\
+&=6.75\times10^{-5}\,\mathrm N,\\
+F_y&=-\frac45F\\
+&=-4.31\times10^{-5}\,\mathrm N.
+\end{aligned}
+$$
+
 
 Độ lớn $8.01\times10^{-5}$ N, góc $32.6^\circ$ dưới +x.
 :::
@@ -528,9 +552,17 @@ $$
 - Trường đĩa cho lực điện hướng lên; trừ trọng lực để có tổng lực.
 - Cân bằng là tổng bằng không, rồi giải theo h với tham số không thứ nguyên đã cho.
 
+Đặt hệ số lực $F_0=Q\sigma/(2\varepsilon_0)$ và hệ số hình học:
+
+$$
+f(z)=\frac z{\sqrt{z^2+R^2}}.
+$$
+
+Khi đó:
+
 $$
 \begin{aligned}
-F_z(z) &= \frac{Q\sigma}{2\varepsilon_0} -\frac{Q\sigma z}{2\varepsilon_0\sqrt{z^2+R^2}} -Mg, \\
+F_z(z) &= F_0(1-f(z))-Mg, \\
 \frac h{\sqrt{h^2+R^2}} &= 1-\omega, \\
 h &= \frac{R(1-\omega)}{\sqrt{\omega(2-\omega)}}.
 \end{aligned}
