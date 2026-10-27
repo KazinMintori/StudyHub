@@ -1,6 +1,6 @@
 {
   "status": "chapter8-parent-source-reviewed-local-runtime-passed-pending-cloud",
-  "checkedUTC": "2026-10-27T16:42:41.092617+00:00",
+  "checkedUTC": "2026-10-27T16:46:12.969491+00:00",
   "sourceChapter": 8,
   "sourcePDFPagesTheory": [
     255,
@@ -114,5 +114,19 @@
     "qa/physics1-remaining/ch08-whole148-20261027/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
     "qa/physics1-remaining/ch08-whole148-20261027/skill-tests.log": "e7e4118da9ab30fa1936ece558cc1cf4c77d82399556b7f4e87ba0d80d6b14ea"
   },
-  "scopeLimit": "This report certifies the reviewed chapter8 source and actual local routes only. Cloud build/deploy/public release, full Physics1and2audit, final report and cleanup remain pending."
+  "scopeLimit": "This report certifies the reviewed chapter8 source and actual local routes only. Cloud build/deploy/public release, full Physics1and2audit, final report and cleanup remain pending.",
+  "mergedNavigationVerification": {
+    "upstreamMain": "ace76ebe282a3541105deca009c4d67caed4a65c",
+    "testedMerge": "206d5b6b",
+    "chapter8ActualRouteCasesRepeated": 220,
+    "widths": [
+      375,
+      768,
+      1280,
+      1920
+    ],
+    "checks": "Search, tab scroll reset, shared outline, deep-link reload, quick page jumps and study workspace selection/tabs.",
+    "unitTests": 23,
+    "logSHA256": "7c78cd5fd8ff2c29f40aec4b225176cf1323f9d12c48e31c7ebe8cfe57cadc71"
+  }
 }
