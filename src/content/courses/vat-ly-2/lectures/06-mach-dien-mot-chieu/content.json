@@ -53,7 +53,78 @@
     "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
     "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+      "line": 159,
+      "title": "Ví dụ 26.1. Điện trở tương đương"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+      "line": 219,
+      "title": "Ví dụ 26.2. Mắc nối tiếp và mắc song song"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 104,
+      "title": "Ví dụ 26.3. Mạch một vòng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 196,
+      "title": "Ví dụ 26.4. Nạp pin"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 313,
+      "title": "Ví dụ 26.5. Công suất trong mạch nạp pin"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 367,
+      "title": "Ví dụ 26.6. Mạng điện phức tạp"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+      "line": 457,
+      "title": "Ví dụ 26.7. Hiệu điện thế trong mạng điện phức tạp"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 49,
+      "title": "Ví dụ 26.8: Thiết kế ampe kế"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 101,
+      "title": "Ví dụ 26.9: Thiết kế vôn kế"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 138,
+      "title": "Ví dụ 26.10: Đo điện trở, cách thứ nhất"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 193,
+      "title": "Ví dụ 26.11: Đo điện trở, cách thứ hai"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 107,
+      "title": "Ví dụ 26.12: Nạp một tụ điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 202,
+      "title": "Ví dụ 26.13: Phóng điện một tụ điện"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+      "line": 80,
+      "title": "Ví dụ 26.14. Các thiết bị trong cùng một mạch bếp"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-26/00-mo-dau.md",
@@ -1333,6 +1404,16 @@
       "title": "Các bài lẻ"
     },
     {
+      "source": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+      "line": 284,
+      "title": "Lời giải kiểm tra hiểu"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+      "line": 296,
+      "title": "Lời giải kiểm tra hiểu"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
       "line": 124,
       "title": "Lời giải"
@@ -1876,25 +1957,25 @@
     {
       "reference": "../img/young-26/hinh-26-02.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
-      "line": 47,
+      "line": 55,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-02.png"
     },
     {
       "reference": "../img/young-26/hinh-26-03.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
-      "line": 137,
+      "line": 163,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-03.png"
     },
     {
       "reference": "../img/young-26/hinh-26-04.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
-      "line": 189,
+      "line": 223,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-04.png"
     },
     {
       "reference": "../img/young-26/hinh-26-05.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
-      "line": 267,
+      "line": 313,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-05.png"
     },
     {
@@ -1930,13 +2011,13 @@
     {
       "reference": "../img/young-26/hinh-26-11.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
-      "line": 187,
+      "line": 200,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-11.png"
     },
     {
       "reference": "../img/young-26/hinh-26-12.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
-      "line": 312,
+      "line": 371,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-12.png"
     },
     {
@@ -2008,13 +2089,13 @@
     {
       "reference": "../img/young-26/hinh-26-22.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
-      "line": 148,
+      "line": 156,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-22.png"
     },
     {
       "reference": "../img/young-26/hinh-26-23.png",
       "declaredIn": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
-      "line": 152,
+      "line": 160,
       "source": "docs/vat-ly-2/bai-giang/img/young-26/hinh-26-23.png"
     },
     {

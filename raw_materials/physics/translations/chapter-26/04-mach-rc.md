@@ -130,13 +130,21 @@ $$
 **(b) Phần điện tích cuối cùng đã đạt được.**
 
 $$
-\frac{q}{Q_f} = 1-e^{-t/\tau} = 1-e^{-46/10} \approx 0{,}99.
+\begin{aligned}
+\frac q{Q_f}&=1-e^{-t/\tau}\\
+&=1-e^{-46/10}\\
+&\approx0{,}99.
+\end{aligned}
 $$
 
 **(c) Phần dòng điện ban đầu còn lại.**
 
 $$
-\frac{i}{I_0} = e^{-t/\tau} = e^{-46/10} \approx 0{,}010.
+\begin{aligned}
+\frac i{I_0}&=e^{-t/\tau}\\
+&=e^{-46/10}\\
+&\approx0{,}010.
+\end{aligned}
 $$
 
 **Đánh giá:** Sau $4{,}6$ hằng số thời gian, tụ đạt khoảng $99\%$ điện tích cuối cùng, trong khi dòng nạp chỉ còn khoảng $1{,}0\%$ giá trị ban đầu. Giảm điện trở sẽ làm giảm $\tau$ và nạp tụ nhanh hơn.

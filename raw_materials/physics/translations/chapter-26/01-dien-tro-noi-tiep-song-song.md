@@ -21,13 +21,21 @@ $$
 Trong Hình 26.1a, dòng điện $I$ như nhau qua cả ba điện trở. Định luật Ôm cho từng điện trở:
 
 $$
-V_{ax} = IR_1, \quad V_{xy} = IR_2, \quad V_{yb} = IR_3.
+\begin{aligned}
+&V_{ax}=IR_1,\\
+&V_{xy}=IR_2,\\
+&V_{yb}=IR_3.
+\end{aligned}
 $$
 
 Hiệu điện thế trên từng điện trở không nhất thiết bằng nhau, trừ trường hợp đặc biệt các điện trở bằng nhau. Hiệu điện thế giữa hai đầu toàn bộ tổ hợp bằng tổng các độ giảm thế thành phần:
 
 $$
-V_{ab} = V_{ax}+V_{xy}+V_{yb} = IR_1+IR_2+IR_3 = I(R_1+R_2+R_3).
+\begin{aligned}
+V_{ab}&=V_{ax}+V_{xy}+V_{yb}\\
+&=IR_1+IR_2+IR_3\\
+&=I(R_1+R_2+R_3).
+\end{aligned}
 $$
 
 Chia hai vế cho dòng điện chung $I$ và dùng định nghĩa điện trở tương đương, ta được
@@ -59,13 +67,20 @@ Trong Hình 26.1b, dòng điện qua mỗi điện trở có thể khác nhau. T
 Gọi các dòng điện qua ba điện trở lần lượt là $I_1$, $I_2$ và $I_3$. Từ định luật Ôm:
 
 $$
-I_1 = \frac{V_{ab}}{R_1}, \quad I_2 = \frac{V_{ab}}{R_2}, \quad I_3 = \frac{V_{ab}}{R_3}.
+\begin{aligned}
+&I_1=\frac{V_{ab}}{R_1},\\
+&I_2=\frac{V_{ab}}{R_2},\\
+&I_3=\frac{V_{ab}}{R_3}.
+\end{aligned}
 $$
 
 Điện tích không tích tụ tại điểm $a$ cũng không biến mất khỏi đó. Bởi vậy, dòng tổng bằng tổng các dòng phân nhánh:
 
 $$
-I = I_1+I_2+I_3 = \frac{V_{ab}}{R_1}+\frac{V_{ab}}{R_2} +\frac{V_{ab}}{R_3}.
+\begin{aligned}
+I&=I_1+I_2+I_3\\
+&=\frac{V_{ab}}{R_1}+\frac{V_{ab}}{R_2}+\frac{V_{ab}}{R_3}.
+\end{aligned}
 $$
 
 Theo định nghĩa điện trở tương đương, $I/V_{ab}=1/R_{\mathrm{eq}}$. Do đó,
@@ -76,8 +91,16 @@ $$
 
 Với $n$ điện trở mắc song song, ta khai triển ba số hạng đầu trước khi viết gọn bằng ký hiệu tổng:
 
+Đặt $g_i=1/R_i$ với i chạy từ 1 đến n. Mỗi $g_i$ chỉ là cách viết gọn nghịch đảo điện trở nhánh:
+
 $$
-\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1}+\frac{1}{R_2} +\frac{1}{R_3}+\cdots+\frac{1}{R_n} = \sum_{i=1}^{n}\frac{1}{R_i}.
+\frac1{R_{\mathrm{eq}}}=g_1+g_2+g_3+\cdots+g_n.
+$$
+
+Do đó:
+
+$$
+\frac1{R_{\mathrm{eq}}}=\sum_{i=1}^n\frac1{R_i}.
 $$
 
 Điện trở tương đương song song luôn nhỏ hơn từng điện trở nhánh. Mỗi nhánh thêm vào tạo thêm một đường cho điện tích chuyển động, làm tổng dòng tăng khi hiệu điện thế không đổi.
@@ -89,7 +112,10 @@ $$
 Với hai điện trở song song, quy tắc trên cho
 
 $$
-\frac{1}{R_{\mathrm{eq}}} = \frac{1}{R_1} +\frac{1}{R_2} = \frac{R_1+R_2}{R_1R_2}.
+\begin{aligned}
+\frac1{R_{\mathrm{eq}}}&=\frac1{R_1}+\frac1{R_2}\\
+&=\frac{R_1+R_2}{R_1R_2}.
+\end{aligned}
 $$
 
 Suy ra công thức tích trên tổng:
@@ -147,8 +173,13 @@ Mạng gồm ba điện trở, trong đó $6\,\Omega$ song song với $3\,\Omega
 Từ (26.2), điện trở tương đương của cặp $6\,\Omega$ và $3\,\Omega$ là
 
 $$
-\frac{1}{R_{6\parallel3}} = \frac{1}{6\,\Omega} +\frac{1}{3\,\Omega} = \frac{1}{2\,\Omega} \implies R_{6\parallel3} = 2\,\Omega.
+\begin{aligned}
+\frac1{R_{6\parallel3}}&=\frac1{6\,\Omega}+\frac1{3\,\Omega}\\
+&=\frac1{2\,\Omega}.
+\end{aligned}
 $$
+
+Vậy $R_{6\parallel3}=2\,\Omega$.
 
 Cặp tương đương này nối tiếp với điện trở $4\,\Omega$, nên
 
@@ -171,7 +202,10 @@ $$
 Hai điện trở song song cùng chịu hiệu điện thế này. Do đó,
 
 $$
-I_{6\,\Omega} = \frac{6\,\mathrm V}{6\,\Omega}=1\,\mathrm A, \quad I_{3\,\Omega} = \frac{6\,\mathrm V}{3\,\Omega}=2\,\mathrm A.
+\begin{aligned}
+I_{6\,\Omega}&=\frac{6\,\mathrm V}{6\,\Omega}=1\,\mathrm A,\\
+I_{3\,\Omega}&=\frac{6\,\mathrm V}{3\,\Omega}=2\,\mathrm A.
+\end{aligned}
 $$
 
 #### Đánh giá
@@ -211,13 +245,21 @@ $$
 Vì hai điện trở bằng nhau, hiệu điện thế trên từng bóng cũng bằng nhau:
 
 $$
-V_{ab} = V_{bc} = IR = (2\,\mathrm A)(2\,\Omega) = 4\,\mathrm V.
+\begin{aligned}
+V_{ab}&=V_{bc}=IR\\
+&=(2\,\mathrm A)(2\,\Omega)\\
+&=4\,\mathrm V.
+\end{aligned}
 $$
 
 Công suất mỗi bóng là
 
 $$
-P = I^2R = (2\,\mathrm A)^2(2\,\Omega) = 8\,\mathrm W.
+\begin{aligned}
+P&=I^2R\\
+&=(2\,\mathrm A)^2(2\,\Omega)\\
+&=8\,\mathrm W.
+\end{aligned}
 $$
 
 Có thể kiểm tra công suất bằng hiệu điện thế trên bóng:
@@ -241,7 +283,11 @@ $$
 Công suất mỗi bóng là
 
 $$
-P = I^2R = (4\,\mathrm A)^2(2\,\Omega) = 32\,\mathrm W.
+\begin{aligned}
+P&=I^2R\\
+&=(4\,\mathrm A)^2(2\,\Omega)\\
+&=32\,\mathrm W.
+\end{aligned}
 $$
 
 Kiểm tra theo hiệu điện thế:
@@ -289,9 +335,9 @@ Cả bốn mạng đều có ba điện trở bằng nhau, mỗi điện trở l
 #### Hướng đi
 
 - Ở (a), ba điện trở nối tiếp nên $R_{\mathrm{eq}}=R+R+R=3R$.
-- Ở (b), ba điện trở song song nên $1/R_{\mathrm{eq}}=1/R+1/R+1/R=3/R$, suy ra $R_{\mathrm{eq}}=R/3$.
+- Ở (b), ba điện trở song song. Mỗi nhánh góp nghịch đảo $1/R$, nên $1/R_{\mathrm{eq}}=3/R$ và $R_{\mathrm{eq}}=R/3$.
 - Ở (c), hai điện trở song song có điện trở tương đương $R/2$. Nhóm đó nối tiếp với điện trở thứ ba, nên $R_{\mathrm{eq}}=R+R/2=3R/2$.
-- Ở (d), hai điện trở nối tiếp có điện trở tương đương $2R$. Nhóm đó song song với điện trở còn lại, nên $1/R_{\mathrm{eq}}=1/R+1/(2R)=3/(2R)$, do đó $R_{\mathrm{eq}}=2R/3$.
+- Ở (d), hai điện trở nối tiếp có điện trở tương đương $2R$. Nhóm đó song song với điện trở còn lại. Khi cộng $1/R$ và $1/(2R)$, ta được $1/R_{\mathrm{eq}}=3/(2R)$, do đó $R_{\mathrm{eq}}=2R/3$.
 
 Vì $3R>3R/2>2R/3>R/3$, thứ tự là (a), (c), (d), (b). Đáp án (ii).
 :::

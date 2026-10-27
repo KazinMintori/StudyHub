@@ -1,0 +1,58 @@
+{
+  "status": "chapter26theory-mobile-layout-repair-verified-locally",
+  "checkedUTC": "2026-10-27T17:52:37.612800+00:00",
+  "chapter": 26,
+  "scope": "Threechanged theory fragments and actualNotes/allfivetopic layouts. Fullsource/content/image/exercise/cheatsheet/Wiki acceptance remains separate.",
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md": "5050ed1dd91aef81a643e5d7b674100dd8352217cdf0548ef143f76ef5197a74",
+    "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md": "a4c122707e5f4e6bf9495ff2c0d26ae321ccd63e4486466339d3cfe3519d68f2",
+    "raw_materials/physics/translations/chapter-26/04-mach-rc.md": "f1d6f1e2313bfbf769c030dff51d446208166522e4fadeb509a2f2b3ea8a3d5a"
+  },
+  "physicalModelChecks": 130,
+  "actualViewportCases": 30,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "sourceMarkersUnchanged": [
+    {
+      "file": "01-dien-tro-noi-tiep-song-song.md",
+      "headings": 21,
+      "originalFigureReferences": 5,
+      "numberedEquationTags": 4
+    },
+    {
+      "file": "02-quy-tac-kirchhoff.md",
+      "headings": 36,
+      "originalFigureReferences": 7,
+      "numberedEquationTags": 2
+    },
+    {
+      "file": "04-mach-rc.md",
+      "headings": 10,
+      "originalFigureReferences": 5,
+      "numberedEquationTags": 10
+    }
+  ],
+  "repairMethod": "Explicitcomponent equations and relation-aligned chains, groupedresistances withallfourcomponentvalues retained, dividingknownloop equations by1ohm tokeepcurrentterms, retainingallquestions and sourceimages.",
+  "evidence": {
+    "qa/physics-global-audit/runtime-selected-theory-repairs-20261028/ch26/theory/results.json": "50d8f296bdb5d57d51d50d20f6e5d24402690a5822d59441d7a7ace39275b082",
+    "qa/physics-global-audit/ch26-theory-layout-repair-20261028/numeric-checks.json": "a6f1d4b1aa95723b9e2d3df7d483a370b79b0baa1f2d12a52a478f2973c8e0d7",
+    "qa/physics-global-audit/ch26-theory-layout-repair-20261028/edits.json": "4de1e5d2ef97793823677af9659cf4af9fb7e0880c248101bcbcc858f9e919b2",
+    "qa/physics-global-audit/ch26-theory-layout-repair-20261028/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
+    "qa/physics-global-audit/ch26-theory-layout-repair-20261028/skill-tests.log": "b147c7409aff6a5c586b1a5f9e1d633a964d53520a80027ca6bc3992e120f7ea",
+    "qa/physics-global-audit/ch26-theory-layout-repair-20261028/index-refresh-proof.json": "825060755597999b1d455c4175dcf2d65624b94a9b76f886f26ebe246845f84e"
+  },
+  "lightweightChecks": {
+    "lectures": 133,
+    "topics": 354,
+    "errors": 0,
+    "warnings": 0,
+    "skillToolsTests": 39
+  },
+  "portableVerifier": "raw_materials/physics/verify_chapter26_theory_layout_parent.py",
+  "remaining": "Cloudpublication/publicverification andcompletechapter source/prose/originalframes/exercises/cheatsheet/Wiki review."
+}
