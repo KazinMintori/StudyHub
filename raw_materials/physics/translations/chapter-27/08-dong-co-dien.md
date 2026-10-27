@@ -69,19 +69,31 @@ Dùng phương trình điện áp động cơ để tìm $\mathcal E$. Công su�
 (a) Suất phản điện động:
 
 $$
-\mathcal E = V_{ab}-Ir = 120-(4{,}00)(2{,}00) = 112\,\mathrm V.
+\begin{aligned}
+\mathcal E&=V_{ab}-Ir\\
+&=120\,\mathrm V-(4{,}00\,\mathrm A)(2{,}00\,\Omega)\\
+&=112\,\mathrm V.
+\end{aligned}
 $$
 
 (b) Công suất cấp vào:
 
 $$
-P_{\mathrm{in}} = V_{ab}I = (120)(4{,}00) = 480\,\mathrm W.
+\begin{aligned}
+P_{\mathrm{in}}&=V_{ab}I\\
+&=(120\,\mathrm V)(4{,}00\,\mathrm A)\\
+&=480\,\mathrm W.
+\end{aligned}
 $$
 
 (c) Công suất nhiệt:
 
 $$
-P_r = I^2r = (4{,}00)^2(2{,}00) = 32\,\mathrm W.
+\begin{aligned}
+P_r&=I^2r\\
+&=(4{,}00\,\mathrm A)^2(2{,}00\,\Omega)\\
+&=32\,\mathrm W.
+\end{aligned}
 $$
 
 (d) Bỏ qua các tổn hao khác:

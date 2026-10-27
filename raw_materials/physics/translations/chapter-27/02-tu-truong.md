@@ -118,12 +118,12 @@ Một chùm proton, mỗi proton có điện tích $q=1{,}6\times10^{-19}\,\math
 
 **Nhận diện và thiết lập.** Lực cần tìm là $\vec{F}=q\,\vec{v}\times\vec{B}$. Vì proton mang điện dương, lực cùng chiều với $\vec{v}\times\vec{B}$. Quy tắc bàn tay phải cho chiều $-y$.
 
-**Thực hiện.** Độ lớn lực là
+**Thực hiện.** Tích các hệ số $1{,}6\times3{,}0\times2{,}0=9{,}6$, nên $|q|vB=9{,}6\times10^{-14}\,\mathrm N$. Độ lớn lực là
 
 $$
 \begin{aligned}
 F &= |q|vB\sin\phi \\
-&= (1{,}6)(3{,}0)(2{,}0) \times10^{-14}\sin30^\circ\,\mathrm N \\
+&= (9{,}6\times10^{-14}\,\mathrm N)\sin30^\circ \\
 &= 4{,}8\times10^{-14}\,\mathrm{N}.
 \end{aligned}
 $$
@@ -140,13 +140,22 @@ v_z &= 2{,}60\times10^5\,\mathrm{m/s}.
 \end{aligned}
 $$
 
-Vì $\vec{B}=2{,}0\,\hat{k}\,\mathrm{T}$, chỉ thành phần vận tốc theo $x$ góp vào tích có hướng:
+Vì $\vec{B}=2{,}0\,\hat{k}\,\mathrm{T}$, hai tích có hướng của các vector đơn vị là:
+
+$$
+\begin{aligned}
+&\hat{\imath}\times\hat{k}=-\hat{\jmath},\\
+&\hat{k}\times\hat{k}=\vec0.
+\end{aligned}
+$$
+
+Thành phần theo z cho lực bằng không. Chỉ thành phần vận tốc theo x còn góp vào lực:
 
 $$
 \begin{aligned}
 \vec{F} &= q\,\vec{v}\times\vec{B} \\
-&= qv_xB\,(\hat{\imath}\times\hat{k}) +qv_zB\,(\hat{k}\times\hat{k}) \\
-&= -(1{,}6)(1{,}5)(2{,}0) \times10^{-14}\,\hat{\jmath}\,\mathrm N \\
+&= -qv_xB\,\hat{\jmath} \\
+&= -(1{,}6\times1{,}5\times2{,}0)10^{-14}\,\mathrm N\,\hat{\jmath} \\
 &= -4{,}8\times10^{-14}\,\hat{\jmath}\quad\mathrm{N}.
 \end{aligned}
 $$

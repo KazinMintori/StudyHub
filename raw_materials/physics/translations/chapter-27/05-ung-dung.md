@@ -54,7 +54,7 @@ Các đại lượng ở vế phải đều đo được, nên phép đo cho t�
 Giá trị độ chính xác cao được nêu cho tỉ số điện tích trên khối lượng là
 
 $$
-\frac{e}{m} = 1{,}758820024(11) \times10^{11}\,\mathrm{C/kg}.
+\frac{e}{m}=1{,}758820024(11)\times10^{11}\,\frac{\mathrm C}{\mathrm{kg}}.
 $$
 
 Mười lăm năm sau thí nghiệm của Thomson, nhà vật lý Hoa Kỳ Robert Millikan đo chính xác điện tích electron. Kết hợp điện tích ấy với tỉ số $e/m$, ta suy ra khối lượng electron. Giá trị khối lượng được nêu là

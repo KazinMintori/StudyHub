@@ -62,11 +62,12 @@ Dòng chia cho tiết diện vuông góc dòng cho $J_x$. Hiệu điện thế H
 
 #### Thực hiện
 
-Mật độ dòng:
+Đổi bề dày và bề rộng sang mét, ta có $t=2{,}0\times10^{-3}\,\mathrm m$ và $w=1{,}50\times10^{-2}\,\mathrm m$. Mật độ dòng:
 
 $$
 \begin{aligned}
-A &= (2{,}0\times10^{-3}) \times(1{,}50\times10^{-2})\,\mathrm{m^2} \\
+A &= tw\\
+&=(2{,}0)(1{,}50)\times10^{-5}\,\mathrm{m^2} \\
 &= 3{,}0\times10^{-5}\,\mathrm{m^2}, \\
 J_x &= I/A \\
 &= 2{,}5\times10^6\,\mathrm{A/m^2}.
@@ -87,7 +88,7 @@ Mật độ electron:
 $$
 \begin{aligned}
 n &= -\frac{J_xB_y}{qE_z} \\
-&= \frac{(2{,}5\times10^6)(0{,}40)}{(1{,}60\times10^{-19})(5{,}4\times10^{-5})} \\
+&= \frac{(2{,}5)(0{,}40)}{(1{,}60)(5{,}4)}\times10^{30}\,\mathrm{m^{-3}} \\
 &\approx 1{,}16\times10^{29}\,\mathrm{m^{-3}}.
 \end{aligned}
 $$

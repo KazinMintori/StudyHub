@@ -82,6 +82,11 @@
       "title": "Ví dụ 27.1: Lực từ tác dụng lên proton"
     },
     {
+      "source": "raw_materials/physics/translations/chapter-27/03-duong-suc-tu-thong.md",
+      "line": 110,
+      "title": "Ví dụ 27.2: Xác định từ trường từ từ thông"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-27/04-chuyen-dong-hat.md",
       "line": 80,
       "title": "Ví dụ 27.3: Chuyển động electron trong magnetron"
@@ -100,6 +105,36 @@
       "source": "raw_materials/physics/translations/chapter-27/05-ung-dung.md",
       "line": 123,
       "title": "Ví dụ 27.6: Tìm chỗ rò trong hệ chân không"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-27/06-luc-tu-len-day.md",
+      "line": 82,
+      "title": "Ví dụ 27.7: Lực lên thanh dẫn nằm ngang"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-27/06-luc-tu-len-day.md",
+      "line": 117,
+      "title": "Ví dụ 27.8: Lực tổng hợp trên dây gồm một cung bán nguyệt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
+      "line": 137,
+      "title": "Ví dụ 27.9: Mômen lực lên cuộn dây tròn"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
+      "line": 167,
+      "title": "Ví dụ 27.10: Năng lượng thế khi cuộn quay"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-27/08-dong-co-dien.md",
+      "line": 59,
+      "title": "Ví dụ 27.11: Động cơ một chiều kích từ nối tiếp"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-27/09-hieu-ung-hall.md",
+      "line": 55,
+      "title": "Ví dụ 27.12: Đo mật độ electron bằng hiệu ứng Hall"
     }
   ],
   "exercises": [
@@ -725,7 +760,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-27/02-tu-truong.md",
-      "line": 159,
+      "line": 168,
       "title": "Tự kiểm tra mục 27.2"
     },
     {
@@ -745,12 +780,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-27/08-dong-co-dien.md",
-      "line": 122,
+      "line": 134,
       "title": "Kiểm tra hiểu biết 27.8"
     },
     {
       "source": "raw_materials/physics/translations/chapter-27/09-hieu-ung-hall.md",
-      "line": 109,
+      "line": 110,
       "title": "Kiểm tra hiểu biết 27.9"
     }
   ],
@@ -1352,7 +1387,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-27/02-tu-truong.md",
-      "line": 163,
+      "line": 172,
       "title": ""
     },
     {
@@ -1372,12 +1407,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-27/08-dong-co-dien.md",
-      "line": 126,
+      "line": 138,
       "title": "Lời giải"
     },
     {
       "source": "raw_materials/physics/translations/chapter-27/09-hieu-ung-hall.md",
-      "line": 113,
+      "line": 114,
       "title": "Lời giải"
     }
   ],
@@ -1733,7 +1768,7 @@
     {
       "reference": "../img/young-27/tu-kiem-tra-27-02.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/02-tu-truong.md",
-      "line": 157,
+      "line": 166,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/tu-kiem-tra-27-02.png"
     },
     {
@@ -1871,55 +1906,55 @@
     {
       "reference": "../img/young-27/hinh-27-32.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 70,
+      "line": 73,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-32.png"
     },
     {
       "reference": "../img/young-27/hinh-27-33.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 93,
+      "line": 96,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-33.png"
     },
     {
       "reference": "../img/young-27/hinh-27-34.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 110,
+      "line": 113,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-34.png"
     },
     {
       "reference": "../img/young-27/ung-dung-mri.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 120,
+      "line": 123,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/ung-dung-mri.png"
     },
     {
       "reference": "../img/young-27/hinh-27-36.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 130,
+      "line": 133,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-36.png"
     },
     {
       "reference": "../img/young-27/hinh-27-35.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 136,
+      "line": 139,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-35.png"
     },
     {
       "reference": "../img/young-27/hinh-27-37.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 188,
+      "line": 191,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-37.png"
     },
     {
       "reference": "../img/young-27/hinh-27-38.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 192,
+      "line": 195,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-38.png"
     },
     {
       "reference": "../img/young-27/hinh-27-13.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
-      "line": 200,
+      "line": 203,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/hinh-27-13.png"
     },
     {
@@ -1943,13 +1978,13 @@
     {
       "reference": "../img/young-27/ung-dung-may-cheo-thuyen.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/09-hieu-ung-hall.md",
-      "line": 105,
+      "line": 106,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/ung-dung-may-cheo-thuyen.png"
     },
     {
       "reference": "../img/young-27/tu-kiem-tra-27-09.png",
       "declaredIn": "raw_materials/physics/translations/chapter-27/09-hieu-ung-hall.md",
-      "line": 116,
+      "line": 117,
       "source": "docs/vat-ly-2/bai-giang/img/young-27/tu-kiem-tra-27-09.png"
     }
   ]

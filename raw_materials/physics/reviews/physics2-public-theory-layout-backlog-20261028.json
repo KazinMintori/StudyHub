@@ -448,7 +448,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired andcurrentlocal wholechaptertheory50casesverified; publicreleasepending",
+        "report": "raw_materials/physics/reviews/ch27-theory-mobile-layout-repair-20261028.json"
+      }
     },
     {
       "chapter": 28,
