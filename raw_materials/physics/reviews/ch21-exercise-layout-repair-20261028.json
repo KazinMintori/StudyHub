@@ -66,5 +66,11 @@
     "warnings": 0,
     "skillToolsTests": 39
   },
-  "remaining": "Fullchapter21source/caption/prose/cheatsheet/Wiki audit and publicrelease ofthese fixes, plus thecomplete two-course audit."
+  "remaining": "Fullchapter21source/caption/prose/cheatsheet/Wiki audit and publicrelease ofthese fixes, plus thecomplete two-course audit.",
+  "publicLayoutVerification": {
+    "commit": "5e360c54e86bcde5f6b76bb4cc41027e9e0c2a2f",
+    "runId": 40552984997,
+    "status": "build-deploy-public-layout-passed",
+    "report": "raw_materials/physics/reviews/physics2-mobile-release-20261028.json"
+  }
 }

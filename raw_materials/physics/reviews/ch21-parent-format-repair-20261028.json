@@ -110,5 +110,11 @@
     "qa/physics-global-audit/ch21-parent-format-repair/math-30ex-with-actual-viewports.json": "7736ed529c74577845cfe5818ba44f7bd8226009016f3e69adf241a9f98ba29b",
     "qa/physics-global-audit/ch21-parent-format-repair/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
     "qa/physics-global-audit/ch21-parent-format-repair/skill-tests.log": "81a54e9897a7238405c83d18f3f62d6ecee8809930d5868817a37b5d389c1b18"
+  },
+  "publicLayoutVerification": {
+    "commit": "5e360c54e86bcde5f6b76bb4cc41027e9e0c2a2f",
+    "runId": 40552984997,
+    "status": "build-deploy-public-layout-passed",
+    "report": "raw_materials/physics/reviews/physics2-mobile-release-20261028.json"
   }
 }
