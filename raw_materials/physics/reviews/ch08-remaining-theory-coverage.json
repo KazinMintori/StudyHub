@@ -1,6 +1,6 @@
 {
   "chapter": 8,
-  "status": "theory-reviewed-exercises-incomplete",
+  "status": "complete-chapter8-source-reviewed-local-runtime-passed-pending-cloud",
   "sourcePDFPages": [
     255,
     280
@@ -8,35 +8,35 @@
   "fragments": [
     {
       "file": "raw_materials/physics/translations/chapter-08/00-mo-dau.md",
-      "sha256": "c727d68af1a150019b41cdc4247a7517c9214156520787ad86d5f0b7c032ebd9"
+      "sha256": "3a1a4790f82e70a8eb7d09e5dfe0bc36b543c0cae3cca2d6da68d614fd4e35fd"
     },
     {
       "file": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "sha256": "3411af8e64ba7d6ed8dbf30e8f6b1c2dace2d1fb6f2c763f390c8d0848ceced1"
+      "sha256": "415142655a524e85d57255436f6d54a712697f985c498a366816ef59084fe24f"
     },
     {
       "file": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "sha256": "09d3c51b07b1fd798d0ac56ac0a576c527b22bd8493ddd474fcf0f667c27225f"
+      "sha256": "3660aa427c5d78b4e7e5d12687a95bb0c4d4cab936b5f24a8385803a5351f1bb"
     },
     {
       "file": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "sha256": "7902257d7cb34528da673dee252f5e9a692a8f04b9ee3e5b48624f23a223e41d"
+      "sha256": "658e9b6461498abcd389a85531b23d861be0fa1b7cd8134770cc2aa689b47573"
     },
     {
       "file": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "sha256": "e8446fff78a5552a70b2b59400561d67f92b28fbf57d14828939327006552150"
+      "sha256": "55fd28214f9088dd721fd5d2c205cb3667021e116647b10b4db411d899aa76f3"
     },
     {
       "file": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "sha256": "e8c6612b64d192d6fc150420df7ac68fb9d2c6a071ada102519aa87581bfe211"
+      "sha256": "848c11504dc39db1049845a8042221945c7aa13af9af53f30f456e085462f5c2"
     },
     {
       "file": "raw_materials/physics/translations/chapter-08/06-muc-06.md",
-      "sha256": "9bca78341468ee690d31f97629f5bb7f3b6e63ef36621931bfb960e915704cb7"
+      "sha256": "68acc2af8bb86b3d79c52cbb67a15ee2e8da3d2030c127931e2f303992c324a9"
     },
     {
       "file": "raw_materials/physics/translations/chapter-08/17-tom-tat.md",
-      "sha256": "8e330e6d4ad17a8d5bb9e907fe18ca3d4808ac91408326d3735dd7201e0dbfa7"
+      "sha256": "4437c3fd698bcc353ed9a4a040248ff30939b53bf885a6408dd5582768de1504"
     }
   ],
   "sections": [
@@ -421,7 +421,7 @@
       "pdfPage": 278,
       "rectangle": [
         34.0,
-        134.0,
+        117.0,
         196.0,
         431.0
       ]
@@ -517,19 +517,22 @@
       ]
     }
   ],
-  "numericVerifier": "raw_materials/physics/verify_chapter08_remaining_theory.py",
+  "numericVerifier": "raw_materials/physics/verify_chapter08_parent_theory.py",
   "mathCounts": {
-    "display": 220,
-    "inline": 726,
+    "display": 226,
+    "inline": 762,
     "findings": 0
   },
-  "renderCases": 24,
+  "renderCases": 40,
   "renderViewports": [
     320,
+    360,
     375,
+    768,
     1440
   ],
   "browserStatus": "passed",
-  "completionBlocker": "Original end-of-chapter exercises remain incomplete. Chapter stays draft.",
-  "sourceReview": "raw_materials/physics/reviews/ch08-parent-theory-20261024.md"
+  "completionBlocker": "FullGitHub build/deploy and public release verification remain pending. Full two-course audit, final report and cleanup are separate.",
+  "sourceReview": "raw_materials/physics/reviews/physics1-chapter08-final-20261027.md",
+  "actualIntegratedRouteCases": 220
 }

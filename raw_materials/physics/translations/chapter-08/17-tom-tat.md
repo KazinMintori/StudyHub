@@ -60,10 +60,13 @@ Công thức (8.6).
 
 Nội lực là lực tương tác giữa các phần tử bên trong hệ. Ngoại lực là lực tác dụng từ môi trường bên ngoài lên các phần tử của hệ.
 
-Tổng động lượng $\vec{P}$ của hệ là tổng vector của tất cả động lượng của các chất điểm riêng lẻ trong hệ:
+Với hệ hữu hạn gồm $n$ chất điểm, đánh số từ 1 đến $n$, tổng động lượng $\vec P$ là tổng vector:
 
 $$
-\vec{P} = \vec{p}_A + \vec{p}_B + \dots = \sum_i \vec{p}_i
+\begin{aligned}
+\vec P&=\vec p_1+\vec p_2+\cdots+\vec p_n\\
+&=\sum_{i=1}^{n}\vec p_i.
+\end{aligned}
 $$
 
 **Định luật bảo toàn động lượng**: Nếu tổng ngoại lực tác dụng lên hệ bằng không ($\sum \vec{F}_{\text{ext}} = \vec{0}$), tổng động lượng của hệ được bảo toàn:
@@ -111,7 +114,7 @@ Công thức (8.25).
 Bán kính vector khối tâm $\vec{r}_{\text{cm}}$ của một hệ chất điểm là vị trí trung bình có trọng số theo khối lượng của các chất điểm:
 
 $$
-\vec{r}_{\text{cm}} = \frac{\sum_i m_i\vec{r}_i}{\sum_i m_i}
+\vec{r}_{\text{cm}} = \frac{\sum_{i=1}^{n} m_i\vec{r}_i}{\sum_{i=1}^{n} m_i}
 $$
 
 Công thức (8.29).
@@ -119,24 +122,24 @@ Công thức (8.29).
 Các tọa độ thành phần của khối tâm:
 
 $$
-x_{\text{cm}} = \frac{\sum_i m_i x_i}{\sum_i m_i}
+x_{\text{cm}} = \frac{\sum_{i=1}^{n} m_i x_i}{\sum_{i=1}^{n} m_i}
 $$
 
 Công thức (8.28a).
 
 $$
-y_{\text{cm}} = \frac{\sum_i m_i y_i}{\sum_i m_i}
+y_{\text{cm}} = \frac{\sum_{i=1}^{n} m_i y_i}{\sum_{i=1}^{n} m_i}
 $$
 
 Công thức (8.28b).
 
 $$
-z_{\text{cm}} = \frac{\sum_i m_i z_i}{\sum_i m_i}
+z_{\text{cm}} = \frac{\sum_{i=1}^{n} m_i z_i}{\sum_{i=1}^{n} m_i}
 $$
 
 Công thức (8.28c).
 
-Tổng động lượng $\vec{P}$ của hệ liên hệ trực tiếp với vận tốc khối tâm $\vec{v}_{\text{cm}}$ qua tổng khối lượng $M = \sum_i m_i$:
+Tổng động lượng $\vec{P}$ của hệ liên hệ với vận tốc khối tâm $\vec{v}_{\text{cm}}$ qua tổng khối lượng $M=\sum_{i=1}^{n}m_i$, với $M>0$:
 
 $$
 \vec{P} = M\vec{v}_{\text{cm}}

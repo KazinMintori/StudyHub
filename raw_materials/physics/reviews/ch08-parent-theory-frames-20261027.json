@@ -1,0 +1,753 @@
+{
+  "status": "parent-reviewed-complete-source-frames",
+  "scope": "44 chapter8 frames plus the original referenced Figure6.14. Source-context comparison and complete-panel/arrow/label review, not pixel equality alone.",
+  "manualReviewMethod": "Viewed all eight contact sheets with16PDFpoint context outside the public crop. Checked complete panels, axes, arrows, English labels and photo edges. Atlas frame was repaired and rechecked.",
+  "sourcePDFSHA256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
+  "frames": [
+    {
+      "asset": "r-theory-mo-dau",
+      "pdfPage": 255,
+      "rectangle": [
+        0.0,
+        0.0,
+        440.0,
+        245.5
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-mo-dau.png",
+      "sha256": "a9b884f9fa5457ba5f428b69723e29a8100849f47e392038356b792b079dd1c8",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-mo-dau-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-01",
+      "pdfPage": 256,
+      "rectangle": [
+        34.0,
+        267.0,
+        198.0,
+        387.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-01.png",
+      "sha256": "10bc0aa3d405d4275b3e98e8015832c021a2456bca30293a335c2cd1ac07560d",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-01-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-02",
+      "pdfPage": 256,
+      "rectangle": [
+        0.0,
+        594.0,
+        194.0,
+        746.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-02.png",
+      "sha256": "9a9b40027a20104c71092a55b1bb0d79976bff020688e06ec0e246bbf8db9a4d",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-02-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-03",
+      "pdfPage": 257,
+      "rectangle": [
+        454.0,
+        417.0,
+        640.0,
+        746.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-03.png",
+      "sha256": "c837083e58402d3aa1617b529038e10cfd9adbbec326ded49758317a4d66f568",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-03-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-04",
+      "pdfPage": 258,
+      "rectangle": [
+        34.0,
+        106.0,
+        196.0,
+        341.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-04.png",
+      "sha256": "061748c027245a65ccd616e8982cd7f57246c870ccd5bd8b27ab608d563942d2",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-04-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-05",
+      "pdfPage": 258,
+      "rectangle": [
+        34.0,
+        493.0,
+        196.0,
+        658.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-05.png",
+      "sha256": "b63fc516a9daafbd81ebcd7722fd10251364882671e65f57862e3fd9d3e7105c",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-05-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-06",
+      "pdfPage": 259,
+      "rectangle": [
+        76.0,
+        670.0,
+        342.0,
+        744.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-06.png",
+      "sha256": "b3175728a07722657cfd77ea7bb0e066eefd3f84d35e55d3f37bca551bf56b87",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-06-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-07",
+      "pdfPage": 259,
+      "rectangle": [
+        352.0,
+        505.0,
+        512.0,
+        744.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-07.png",
+      "sha256": "b07c816c006cb721ebe9455b28118c4ff62f84844a1de3f510c4f73d144a4864",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-07-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-08",
+      "pdfPage": 260,
+      "rectangle": [
+        34.0,
+        391.0,
+        298.0,
+        586.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-08.png",
+      "sha256": "1469306be44e4e619b26c19d7af9353d51827848792549582802942b85192d6f",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-08-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-09",
+      "pdfPage": 261,
+      "rectangle": [
+        454.0,
+        255.0,
+        618.0,
+        434.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-09.png",
+      "sha256": "40ef60467c04d8ff85e94b341b45e8d2b6629a8a693519295cf3b17a9395e44e",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-09-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-10",
+      "pdfPage": 261,
+      "rectangle": [
+        454.0,
+        498.0,
+        618.0,
+        753.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-10.png",
+      "sha256": "c0c2a32c2e4d36c46d6a924601cc45dbfdbaac9a5495780e4f6b7b6112bcb065",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-10-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-11",
+      "pdfPage": 262,
+      "rectangle": [
+        34.0,
+        326.0,
+        201.0,
+        564.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-11.png",
+      "sha256": "5100274d17d4356fe12045693cf7c5da4df924fbce3435d155879994f6159be9",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-11-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-12",
+      "pdfPage": 263,
+      "rectangle": [
+        76.0,
+        278.0,
+        342.0,
+        399.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-12.png",
+      "sha256": "ad266d220d467f12f6d4854826d1c0ff9813c9b498e8b819c64b6b3869773031",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-12-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-13",
+      "pdfPage": 263,
+      "rectangle": [
+        352.0,
+        472.0,
+        616.0,
+        647.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-13.png",
+      "sha256": "3991341b9ac259e3fa485c617ffaeaddf07a2b2595381317fa80c23e17ff5234",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-13-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-14",
+      "pdfPage": 264,
+      "rectangle": [
+        34.0,
+        480.0,
+        298.0,
+        700.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-14.png",
+      "sha256": "5f6e3ebccffa60db78f065ab268bae18f4913b260d8fd2fa31d7013bd255a99f",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-14-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-15",
+      "pdfPage": 265,
+      "rectangle": [
+        454.0,
+        332.0,
+        618.0,
+        594.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-15.png",
+      "sha256": "c52a8bbdc08261e6164679afeb0ffb861d2e4ca66040b238668e7050f4accc79",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-15-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-16",
+      "pdfPage": 265,
+      "rectangle": [
+        76.0,
+        658.0,
+        515.0,
+        746.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-16.png",
+      "sha256": "ad70f076f1e62514dcdef48e8e220ee65f2e055eff371323dc3393ce3aebcc0c",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-16-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-17",
+      "pdfPage": 266,
+      "rectangle": [
+        0.0,
+        233.0,
+        205.0,
+        406.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-17.png",
+      "sha256": "bdd65f5e6ea9975085f1e7b429cda5721d095a880b8254ead729f4ffee3a7957",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-17-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-18",
+      "pdfPage": 266,
+      "rectangle": [
+        310.0,
+        611.0,
+        575.0,
+        735.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-18.png",
+      "sha256": "e514a2670719f27c4dde14a30b39e1af47e5c43dc3ab94e18b925aac7ca98ae1",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-18-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-19",
+      "pdfPage": 267,
+      "rectangle": [
+        76.0,
+        512.0,
+        342.0,
+        740.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-19.png",
+      "sha256": "91b3dc3dc19912132f120032d5f4a92fb663d6cb963a4761119a87b7e4fea603",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-19-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-20",
+      "pdfPage": 268,
+      "rectangle": [
+        310.0,
+        104.0,
+        575.0,
+        275.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-20.png",
+      "sha256": "021f6a46f13b55e97ce88c418e4fc1ce7234cae2592be98efe93b9b003d911d2",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-20-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-21",
+      "pdfPage": 268,
+      "rectangle": [
+        137.0,
+        676.0,
+        575.0,
+        744.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-21.png",
+      "sha256": "cb584350423a6530432976d5dbd50ce2873f2d88614f0e0ac5c2aa92a2639bf5",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-21-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-22",
+      "pdfPage": 269,
+      "rectangle": [
+        455.0,
+        408.0,
+        648.0,
+        625.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-22.png",
+      "sha256": "3cd6ee8d9c5bc155e7cd1b2395b0f327cb43532d76e6a0dbbb797c5ff66435a5",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-22-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-23",
+      "pdfPage": 270,
+      "rectangle": [
+        34.0,
+        84.0,
+        201.0,
+        365.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-23.png",
+      "sha256": "fd1d94a76df3dbece422182ec45058b2916e07f7801163457ac38ad4c9df8de2",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-23-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-24",
+      "pdfPage": 270,
+      "rectangle": [
+        34.0,
+        418.0,
+        201.0,
+        550.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-24.png",
+      "sha256": "5ac98181fc2f934fc7faf977c6418617ac06bb6b8b590fed542d4bb3add3cfda",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-24-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-25",
+      "pdfPage": 271,
+      "rectangle": [
+        352.0,
+        175.0,
+        616.0,
+        285.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-25.png",
+      "sha256": "61f768cfc2aeaf3337a76c2e998c74361aff5c0e7001a6e33c2aa685a23f09d5",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-25-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-26",
+      "pdfPage": 271,
+      "rectangle": [
+        352.0,
+        556.0,
+        616.0,
+        688.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-26.png",
+      "sha256": "43a2fb0e63be7c862e786544308e6d888f3df76a9ebbcc3b13e54145512773ff",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-26-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-27",
+      "pdfPage": 272,
+      "rectangle": [
+        310.0,
+        227.0,
+        575.0,
+        399.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-27.png",
+      "sha256": "94528a51e30e93b0dd91f522123d41f088bdbf253d7aa5658c4de832a1d0d860",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-27-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-28",
+      "pdfPage": 273,
+      "rectangle": [
+        76.0,
+        602.0,
+        342.0,
+        731.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-28.png",
+      "sha256": "21fe9a7195999f47baac5b2b571976ec7ef57ebffe17d04e0d10469cff5d5b93",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-28-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-29",
+      "pdfPage": 274,
+      "rectangle": [
+        34.0,
+        84.0,
+        201.0,
+        302.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-29.png",
+      "sha256": "f9734e60898e2604f41b5a0cb630b743040828ea82b9ff3a938ed64f050297c4",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-29-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-30",
+      "pdfPage": 274,
+      "rectangle": [
+        34.0,
+        373.0,
+        196.0,
+        608.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-30.png",
+      "sha256": "4d45afbd3812e19ff6e5a04df4ed5904e60d99cd704a28b6770036f465e5eabd",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-30-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-31",
+      "pdfPage": 275,
+      "rectangle": [
+        76.0,
+        75.0,
+        342.0,
+        150.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-31.png",
+      "sha256": "ae9d3304f4261f2edabc716ace65ac600f452684e8cd35c7ae4324177d89b49d",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-31-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-32",
+      "pdfPage": 276,
+      "rectangle": [
+        207.0,
+        60.0,
+        576.0,
+        189.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-32.png",
+      "sha256": "d789935b3ca3412d5264046c420feb521ff4e40893808b43224bd8ddc3ce99d6",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-32-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-33",
+      "pdfPage": 277,
+      "rectangle": [
+        95.0,
+        60.0,
+        405.0,
+        212.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-33.png",
+      "sha256": "a46afb163a61b9754b90e67067b8298b00a50f44860c3a4ef741743ef62fb2da",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-33-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-hinh-8-34",
+      "pdfPage": 278,
+      "rectangle": [
+        34.0,
+        117.0,
+        196.0,
+        431.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-34.png",
+      "sha256": "c0500c2621ad35458ba6ff1c6df24ac26b368a6d7221f0bf23208b525a4d5de0",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-hinh-8-34-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-tom-tat-1",
+      "pdfPage": 280,
+      "rectangle": [
+        447.0,
+        92.0,
+        574.0,
+        171.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-1.png",
+      "sha256": "a09757a32fb188deb643cc26a0d5a442486935fa232cbe463ad9b84df354cc93",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-tom-tat-1-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-tom-tat-2",
+      "pdfPage": 280,
+      "rectangle": [
+        449.0,
+        188.0,
+        585.0,
+        277.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-2.png",
+      "sha256": "a73459a6dd180eae2500b0c0aa3738fc1c3e12740875accb4ca64aff32153a0b",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-tom-tat-2-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-ung-dung-go-kien",
+      "pdfPage": 257,
+      "rectangle": [
+        454.0,
+        216.0,
+        615.0,
+        377.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-ung-dung-go-kien.png",
+      "sha256": "b53e155d1d6bf8fc8b6194d8e66860905861fb8d691b5af1ca8668e176cef2bb",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-ung-dung-go-kien-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-ung-dung-ngoai-hanh-tinh",
+      "pdfPage": 276,
+      "rectangle": [
+        34.0,
+        419.0,
+        198.0,
+        480.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-ung-dung-ngoai-hanh-tinh.png",
+      "sha256": "513deac6d8c959e44c25e643d9cf603bb35ad01ea46915be9d5af3389e05cd3b",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-ung-dung-ngoai-hanh-tinh-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-ung-dung-muc",
+      "pdfPage": 277,
+      "rectangle": [
+        456.0,
+        610.0,
+        623.0,
+        744.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-ung-dung-muc.png",
+      "sha256": "b08b3da9af97d2fcaaba20086f82b4e006e7507103a2321b8ea77695ef711d3b",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-ung-dung-muc-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-tom-tat-3",
+      "pdfPage": 280,
+      "rectangle": [
+        447.0,
+        308.0,
+        573.0,
+        407.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-3.png",
+      "sha256": "703b3125d8f665d3e9f9224e092a393ae209b76934409c2af41211654df97e29",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-tom-tat-3-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-tom-tat-4",
+      "pdfPage": 280,
+      "rectangle": [
+        447.0,
+        423.0,
+        512.0,
+        477.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-4.png",
+      "sha256": "b33ffcca72815addf24de6dc8cb49f4a86c6ef6110900adfe5a5f15da885c90b",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-tom-tat-4-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-tom-tat-5",
+      "pdfPage": 280,
+      "rectangle": [
+        449.0,
+        500.0,
+        576.0,
+        565.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-5.png",
+      "sha256": "8e557b4dc20be1befcaefcb7a58a6bb155025d9d1a921e0296adf02174727d75",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-tom-tat-5-context.png",
+      "completeFrameVisuallyReviewed": true
+    },
+    {
+      "asset": "r-theory-tom-tat-6",
+      "pdfPage": 280,
+      "rectangle": [
+        448.0,
+        626.0,
+        560.0,
+        687.0
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-6.png",
+      "sha256": "ba10d934a0ec3595dc3aafe87b6688cc2dfcfe07140be66e375aa3575284dd61",
+      "scale": 2,
+      "exactPDFPixels": true,
+      "contextFile": "qa/physics1-remaining/ch08-whole148-20261027/frame-review/r-theory-tom-tat-6-context.png",
+      "completeFrameVisuallyReviewed": true
+    }
+  ],
+  "additionalReferencedFrame": {
+    "asset": "r-theory-06-14",
+    "pdfPage": 200,
+    "rectangle": [
+      80,
+      516,
+      250,
+      624
+    ],
+    "scale": 2.5,
+    "publicFile": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-14.png",
+    "sha256": "39ffd732980ab6f85022eb7db179572fe872f18bd781ed998a493f602feb823e",
+    "exactPDFPixels": true,
+    "completeFrameVisuallyReviewed": true
+  },
+  "repair": {
+    "status": "passed-complete-source-photo-restored",
+    "originalPhotoPDFBounds": [
+      36.0,
+      119.29998779296875,
+      192.0,
+      428.17999267578125
+    ],
+    "oldClip": [
+      34,
+      134,
+      196,
+      431
+    ],
+    "newClip": [
+      34.0,
+      117.0,
+      196.0,
+      431.0
+    ],
+    "addedTopPDFPoints": 17,
+    "addedTopPixels": 34,
+    "oldPixelsRetainedUnchanged": true,
+    "oldSHA256": "a0160aa6cba84c186f4630c1b84de8c70ce049fe5d9455ff7cc9e657e8be6f93",
+    "newSHA256": "c0500c2621ad35458ba6ff1c6df24ac26b368a6d7221f0bf23208b525a4d5de0"
+  }
+}

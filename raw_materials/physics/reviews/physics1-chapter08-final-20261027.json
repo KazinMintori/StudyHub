@@ -1,0 +1,118 @@
+{
+  "status": "chapter8-parent-source-reviewed-local-runtime-passed-pending-cloud",
+  "checkedUTC": "2026-10-27T16:42:41.092617+00:00",
+  "sourceChapter": 8,
+  "sourcePDFPagesTheory": [
+    255,
+    280
+  ],
+  "sourcePDFPagesExercises": [
+    280,
+    291
+  ],
+  "sourceUnits": {
+    "theorySections": 6,
+    "workedExamples": 16,
+    "immediateSelfchecks": 6,
+    "numberedEquations": 40,
+    "guided": 12,
+    "discussion": 26,
+    "numbered": 109,
+    "bridge": 1,
+    "bridgeParts": 6,
+    "bridgeGuideItems": 11,
+    "endTotal": 148
+  },
+  "theoryOriginalFrames": 44,
+  "additionalReferencedOriginalFrame": 1,
+  "exerciseOriginalFrames": 29,
+  "separateSolutionSVGs": 2,
+  "canonicalExerciseGroups": 27,
+  "generatedExerciseAssets": 31,
+  "cheatsheetFormulaRows": 39,
+  "prerequisites": 5,
+  "supportingConcepts": 3,
+  "linkedWikiRoutes": 8,
+  "actualTheoryRouteCases": 35,
+  "actualExerciseRouteCases": 135,
+  "actualCheatsheetFoundationWikiRouteCases": 50,
+  "actualRouteCasesTotal": 220,
+  "isolatedCanonicalTheoryCases": 40,
+  "isolatedCanonicalExerciseCases": 135,
+  "nativeSVGTextCases": 2,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "sourceHashMode": "CanonicalLFfor text, exact bytes for images",
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-08/00-mo-dau.md": "3a1a4790f82e70a8eb7d09e5dfe0bc36b543c0cae3cca2d6da68d614fd4e35fd",
+    "raw_materials/physics/translations/chapter-08/01-muc-01.md": "415142655a524e85d57255436f6d54a712697f985c498a366816ef59084fe24f",
+    "raw_materials/physics/translations/chapter-08/02-muc-02.md": "3660aa427c5d78b4e7e5d12687a95bb0c4d4cab936b5f24a8385803a5351f1bb",
+    "raw_materials/physics/translations/chapter-08/03-muc-03.md": "658e9b6461498abcd389a85531b23d861be0fa1b7cd8134770cc2aa689b47573",
+    "raw_materials/physics/translations/chapter-08/04-muc-04.md": "55fd28214f9088dd721fd5d2c205cb3667021e116647b10b4db411d899aa76f3",
+    "raw_materials/physics/translations/chapter-08/05-muc-05.md": "848c11504dc39db1049845a8042221945c7aa13af9af53f30f456e085462f5c2",
+    "raw_materials/physics/translations/chapter-08/06-muc-06.md": "68acc2af8bb86b3d79c52cbb67a15ee2e8da3d2030c127931e2f303992c324a9",
+    "raw_materials/physics/translations/chapter-08/17-tom-tat.md": "4437c3fd698bcc353ed9a4a040248ff30939b53bf885a6408dd5582768de1504",
+    "raw_materials/physics/translations/chapter-08/parent-09-luyen-tap-huong-dan.md": "14bb5fda633aebf675ff5806a2869487fbfb2c3536c4c440888ad882b84bde4f",
+    "raw_materials/physics/translations/chapter-08/parent-10-cau-hoi-thao-luan.md": "1d629a4e183ebfc8dafe1f2d4c7736b2b39c4be8f31a01155f1e690f819a2293",
+    "raw_materials/physics/translations/chapter-08/parent-11-bai-tap-001-055.md": "77d9ed2069de8a0adbcb37f2330ef4999110b0d863106230c439bf103dfb8a8d",
+    "raw_materials/physics/translations/chapter-08/parent-12-bai-tap-056-109.md": "1efb0faf45d430175e711b45c824df55de5bc11742b3261e9bd5b374fde978f3",
+    "raw_materials/physics/translations/chapter-08/parent-16-bai-tap-cau-noi.md": "ca7c04caa7cd17563de6c8613c860e66465022667636bb869a07227128b59782",
+    "docs/vat-ly-1/bai-giang/08-dong-luong-va-cham.md": "ff8f73332a3e325c6e241b5beaeea4635b72a78fcec6f356b126de7da5623fa3",
+    "docs/.vitepress/physics1-remaining-ch08-course.mjs": "3a955b9815a6098d7be93c519ab935ca10ad78515173823cff070c7e60432a58",
+    "docs/.vitepress/physics1-remaining-08-theory-image-annotations.mjs": "feae7f7f3f8342c5b2f626b909a9c2530d7ee886de3de56781af243175bd67e1",
+    "raw_materials/physics/verify_chapter08_parent_theory.py": "0b494fb7e265306ebac24a459c52d00391592870cf8483c5834e0085328eb075"
+  },
+  "physicalChecks": {
+    "theory": 352,
+    "numberedEarly": 270,
+    "numberedLate": 428,
+    "guidedDiscussionBridge": 232,
+    "wikiNumericalExamples": 25
+  },
+  "lightweightChecks": {
+    "lectureAll": {
+      "lectures": 133,
+      "topics": 354,
+      "errors": 0,
+      "warnings": 0
+    },
+    "skillToolsTests": 39
+  },
+  "sourceDiscrepancies": [
+    {
+      "unit": "Example8.16",
+      "printedTimeSeconds": 75.6,
+      "recomputedTimeSeconds": 75.85446705942692,
+      "learnerRoundedTimeSeconds": 75.9,
+      "method": "Constant mass flow m0/120 per second and velocity condition ln(m0/m)=1."
+    }
+  ],
+  "parentReviewDecisions": [
+    "Keep aligned mathematical derivation chains. A cosmetic flattening proposal would exceed mobile widths and is rejected.",
+    "Do not add a claimed missing gravity integration formula that the source does not derive in this section.",
+    "Unify seven center-of-mass subscripts across Notes, Wiki and cheatsheet. Explicitly unpack finite sums and retain the stationary-target inelastic energy ratio.",
+    "Correct the printed rocket-time numerical discrepancy by independent calculation. State75.9s in the learner solution.",
+    "Retain all original source image pixels and complete photo bounds; repair Atlas top edge without modifying retained pixels."
+  ],
+  "evidence": {
+    "qa/physics1-remaining/ch08-whole148-20261027/theory-math-final.json": "2a9fb4461e64b522eac0d63567033988a29e756533617c753642f76c6ec08d21",
+    "qa/physics1-remaining/ch08-whole148-20261027/cheatsheet-math-final.json": "dca3d738b618b153dd14de3c94fddec669b034f7bd7605a72823037c2a02e59e",
+    "qa/physics1-remaining/ch08-whole148-20261027/wiki-math-first.json": "a453e96a7054438896345aafd1389275dc8366d0bfaf71cffca04066eeef6d46",
+    "qa/physics1-remaining/ch08-whole148-20261027/wiki-source-sync-proof.json": "1d6f42de1dd7875358964e370ce4b1b0643c4d9c350eaee0eaf19fa77ddf43f7",
+    "qa/physics1-remaining/ch08-whole148-20261027/wiki-physical-checks.json": "511cc1ec95a5427403ac14a108cf422ebd44840a2b329acfb5cbcb6a3d900167",
+    "qa/physics1-remaining/ch08-whole148-20261027/index-refresh-proof.json": "5f471e57983cc5bd95d5785afa9a4a59ec69491d2006e5ad99473978dd3c09be",
+    "qa/physics1-remaining/ch08-whole148-20261027/route-theory/results.json": "f0db1f66156cd7e46a0e7852fc5413bf1a482ab72ff8f393c9f27230b395b13c",
+    "qa/physics1-remaining/ch08-whole148-20261027/route-exercises/results.json": "eaccbdaee0f45554314aa770ef8720c076d5535bbf111de0f62b9da6b35ab0a9",
+    "qa/physics1-remaining/ch08-whole148-20261027/support-route-review.json": "79ea97e3b9ba6bc86af1d0d8a484ee8d1824d0ce5c95da2169728b4566713e46",
+    "qa/physics1-remaining/ch08-whole148-20261027/theory-review/browser-canonical-review.json": "be36f84b655c4be54fff5e8d4e3af10422041e9731df53740eaf12a08f16a4f3",
+    "qa/physics1-remaining/ch08-whole148-20261027/exercise-review/browser-canonical-review.json": "da1c58f6d1272639d5ed79a8276a91ad2597d1ca7e98a4504c9b6015d89841d8",
+    "qa/physics1-remaining/ch08-whole148-20261027/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
+    "qa/physics1-remaining/ch08-whole148-20261027/skill-tests.log": "e7e4118da9ab30fa1936ece558cc1cf4c77d82399556b7f4e87ba0d80d6b14ea"
+  },
+  "scopeLimit": "This report certifies the reviewed chapter8 source and actual local routes only. Cloud build/deploy/public release, full Physics1and2audit, final report and cleanup remain pending."
+}

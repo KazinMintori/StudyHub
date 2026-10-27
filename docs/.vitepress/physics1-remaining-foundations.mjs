@@ -90,22 +90,45 @@ const records=[
   'Không. Động năng có thể chuyển thành thế năng trong khi tổng cơ năng không đổi.',
   d(String.raw`K_i+U_i=K_f+U_f`)+ '\n\nCần xác định rõ hệ và những lực thực hiện công. Nếu có công của lực không thế, chênh lệch cơ năng được quyết định bởi công đó. Cơ năng không bảo toàn không có nghĩa là tổng năng lượng không bảo toàn, vì còn có nội năng và những dạng truyền năng lượng khác.',
   ['the-nang-co-hoc','cong-nang-luong','noi-nang'],'7.1–7.3'],
- ['khoi-tam','Khối tâm',['khối tâm','tâm khối'],
-  'Điểm có vị trí là trung bình vị trí các phần tử, với trọng số bằng khối lượng. Với hệ có khối lượng không đổi trong hệ quy chiếu quán tính, khối lượng toàn hệ nhân gia tốc khối tâm bằng tổng ngoại lực.',
-  'Một vật ném đang quay có thể chuyển động quay phức tạp, trong khi khối tâm vẫn đi theo quỹ đạo do tổng ngoại lực quyết định.',
-  'Tách chuyển động toàn hệ khỏi chuyển động tương đối của các phần tử.',
-  'Khối tâm có nhất thiết nằm trong phần vật liệu của vật không?',
-  'Không. Chẳng hạn, khối tâm một vành tròn đồng chất ở tâm hình học, là nơi có thể không có vật liệu.',
-  'Với hai chất điểm:\n\n'+d(String.raw`x_{\mathrm{cm}}=\frac{m_1x_1+m_2x_2}{m_1+m_2}`)+'\n\nVới nhiều phần tử, thay tử số bằng tổng các tích khối lượng và tọa độ, mẫu số bằng tổng khối lượng. Áp dụng riêng theo từng tọa độ. Không đồng nhất khối tâm với trọng tâm trong một trường trọng lực không đều.',
-  ['dong-luong-vat-ly','trong-tam-vat-ran','luc'],'8.5'],
- ['va-cham-dan-hoi','Va chạm đàn hồi',['va chạm đàn hồi'],
-  'Va chạm mà tổng động năng trước và sau bằng nhau. Khi xung lượng ngoài có thể bỏ qua trong thời gian va chạm, tổng động lượng cũng bảo toàn.',
-  'Mô hình va chạm đàn hồi giữa các vật cho phép giải vận tốc sau va chạm bằng cả phương trình động lượng và phương trình động năng.',
-  'Phân biệt các điều kiện bảo toàn khi phân tích va chạm.',
-  'Bảo toàn động lượng có tự kéo theo va chạm đàn hồi không?',
-  'Không. Va chạm không đàn hồi vẫn có thể bảo toàn tổng động lượng khi xung lượng ngoài bằng không.',
-  'Kiểm tra hai điều kiện riêng: Tổng động lượng không đổi do điều kiện ngoại lực, còn tổng động năng không đổi là đặc trưng của mô hình va chạm đàn hồi. Không cộng trực tiếp các độ lớn động lượng nếu các vật chuyển động khác hướng. Với va chạm hoàn toàn không đàn hồi, các vật dính nhau sau va chạm và động năng nói chung giảm.',
-  ['dong-luong-vat-ly','cong-nang-luong','khoi-tam'],'8.3–8.4'],
+ [
+  "khoi-tam",
+  "Khối tâm",
+  [
+    "khối tâm",
+    "tâm khối"
+  ],
+  "Điểm có vị trí là trung bình vị trí các phần tử, với trọng số bằng khối lượng. Với hệ có khối lượng không đổi trong hệ quy chiếu quán tính, khối lượng toàn hệ nhân gia tốc khối tâm bằng tổng ngoại lực.",
+  "Một vật ném đang quay có thể chuyển động quay phức tạp, trong khi khối tâm vẫn đi theo quỹ đạo do tổng ngoại lực quyết định.",
+  "Tách chuyển động toàn hệ khỏi chuyển động tương đối của các phần tử.",
+  "Khối tâm có nhất thiết nằm trong phần vật liệu của vật không?",
+  "Không. Chẳng hạn, khối tâm một vành tròn đồng chất ở tâm hình học, là nơi có thể không có vật liệu.",
+  "Khối tâm là vị trí trung bình có trọng số khối lượng. Với hai chất điểm:\n\n$$\n\\vec r_{\\mathrm{cm}}=\\frac{m_1\\vec r_1+m_2\\vec r_2}{M}.\n$$\n\nTrong công thức này $M=m_1+m_2$. Với hệ gồm $n$ chất điểm khối lượng dương, không đổi và đánh số từ 1 đến $n$:\n\n$$\nM=m_1+m_2+\\cdots+m_n.\n$$\n\n$$\n\\vec r_{\\mathrm{cm}}=\\frac1M\\sum_{i=1}^{n}m_i\\vec r_i.\n$$\n\nTử số là tổng các vector $m_1\\vec r_1+m_2\\vec r_2+\\cdots+m_n\\vec r_n$. Áp dụng riêng theo từng tọa độ. Với vật có phân bố khối lượng liên tục, thay tổng bằng tích phân trên toàn vật:\n\n$$\n\\vec r_{\\mathrm{cm}}=\\frac1M\\int\\vec r\\,dm.\n$$\n\nVới tổng khối lượng không đổi, trong hệ quán tính:\n\n$$\n\\vec P=M\\vec v_{\\mathrm{cm}}.\n$$\n\n$$\n\\vec F_{\\mathrm{ext}}=M\\vec a_{\\mathrm{cm}}.\n$$\n\nKhông có hợp ngoại lực cho vận tốc khối tâm không đổi. Muốn kết luận vị trí khối tâm không đổi, còn cần vận tốc khối tâm ban đầu bằng không.\n\nNếu phân bố khối lượng đối xứng, khối tâm nằm trên trục hoặc tại tâm đối xứng tương ứng. Nó có thể ở ngoài phần vật chất, chẳng hạn tại tâm lỗ một vành tròn đồng chất. Không đồng nhất khối tâm với trọng tâm trong một trường trọng lực không đều.",
+  [
+    "dong-luong-vat-ly",
+    "trong-tam-vat-ran",
+    "luc"
+  ],
+  "8.5"
+],
+ [
+  "va-cham-dan-hoi",
+  "Va chạm đàn hồi",
+  [
+    "va chạm đàn hồi"
+  ],
+  "Va chạm mà tổng động năng trước và sau bằng nhau. Khi xung lượng ngoài có thể bỏ qua trong thời gian va chạm, tổng động lượng cũng bảo toàn.",
+  "Vật khối lượng $1\\,\\mathrm{kg}$ đi với $3\\,\\mathrm{m/s}$ va chạm đàn hồi trực diện với vật $2\\,\\mathrm{kg}$ đứng yên. Hai vận tốc cuối là $-1\\,\\mathrm{m/s}$ và $+2\\,\\mathrm{m/s}$.",
+  "Phân biệt các điều kiện bảo toàn khi phân tích va chạm.",
+  "Bảo toàn động lượng có tự kéo theo va chạm đàn hồi không?",
+  "Không. Va chạm không đàn hồi vẫn có thể bảo toàn tổng động lượng khi xung lượng ngoài bằng không.",
+  "Đặc trưng của va chạm đàn hồi là bảo toàn tổng động năng. Khi xung lượng ngoại lực có thể bỏ qua, tổng động lượng cũng bảo toàn. Phải kiểm tra hai điều kiện riêng.\n\nVới va chạm một chiều của hai vật A, B, các vận tốc cùng dùng một trục có chiều dương xác định. Vận tốc tương đối thỏa mãn:\n\n$$\nv_{B2}-v_{A2}=-(v_{B1}-v_{A1}).\n$$\n\nHai chỉ số 1, 2 chỉ trước và sau va chạm. Hai vật đang tiến lại gần rồi rời xa nhau, nên vận tốc tương đối đổi dấu.\n\nNếu B ban đầu đứng yên, với hai khối lượng dương:\n\n$$\nv_{A2}=\\frac{m_A-m_B}{m_A+m_B}v_{A1}.\n$$\n\n$$\nv_{B2}=\\frac{2m_A}{m_A+m_B}v_{A1}.\n$$\n\nKhông áp dụng trực tiếp hai công thức này nếu B chuyển động ban đầu. Trong hai chiều, phải bảo toàn từng thành phần động lượng và động năng. Độ lớn vận tốc tương đối giữ nguyên, nhưng hướng không nhất thiết đảo đúng một góc 180 độ.\n\nVa chạm không đàn hồi có thể vẫn bảo toàn tổng động lượng. Nếu hai vật dính nhau sau va chạm thì đó là va chạm hoàn toàn không đàn hồi, không phải đàn hồi.",
+  [
+    "dong-luong-vat-ly",
+    "cong-nang-luong",
+    "khoi-tam"
+  ],
+  "8.3–8.4"
+],
  ['khoi-luong-rieng','Khối lượng riêng',['khối lượng riêng','mật độ khối lượng'],
   String.raw`Khối lượng trên một đơn vị thể tích. Với vật đồng nhất, $\rho=m/V$. Đơn vị SI là $\mathrm{kg/m^3}$.`,
   'Hai khối vật có cùng thể tích nhưng làm từ vật liệu có khối lượng riêng khác nhau thì khối lượng khác nhau.',

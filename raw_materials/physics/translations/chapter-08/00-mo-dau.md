@@ -19,7 +19,7 @@ Hòn mưa đá nào sẽ gây ra thiệt hại cơ học lớn hơn cho mái ng�
 
 <details><summary>Xem lời giải thích</summary>
 
-**Đáp án đúng**: **(ii)**.
+**Đáp án đúng**: Chọn (ii).
 
 Cả hai hòn mưa đá đều có cùng độ lớn động lượng:
 $$

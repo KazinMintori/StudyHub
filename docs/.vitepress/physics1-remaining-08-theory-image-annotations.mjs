@@ -465,7 +465,7 @@ export const physics1RemainingChapter8TheoryImageAnnotations={
       "At time t, the rocket has mass m and x-component of velocity v."
     ],
     [
-      "Tại thời điểm t + dt, tên lửa có khối lượng m + dm (dm âm) và thành phần vận tốc theo x bằng v + dv. Nhiên liệu đã cháy có thành phần vận tốc v_fuel = v − v_ex và khối lượng −dm.",
+      "Tại thời điểm t + dt, tên lửa có khối lượng m + dm (dm âm) và thành phần vận tốc theo x bằng v + dv. Nhiên liệu đã cháy có thành phần vận tốc v_fuel = v − v_ex và khối lượng −dm. Dấu trừ làm khối lượng khí −dm dương vì dm âm.",
       "At time t + dt, the rocket has mass m + dm (where dm is inherently negative) and x-component of velocity v + dv. The burned fuel has x-component of velocity v_fuel = v − v_ex and mass −dm. (The minus sign is needed to make −dm positive because dm is negative.)"
     ]
   ],

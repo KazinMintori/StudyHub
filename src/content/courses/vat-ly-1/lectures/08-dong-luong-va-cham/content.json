@@ -51,82 +51,82 @@
   "examples": [
     {
       "source": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 202,
+      "line": 210,
       "title": "Ví dụ 8.1: Động lượng và động năng của hai thuyền buồm băng"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 250,
+      "line": 260,
       "title": "Ví dụ 8.2: Quả bóng đập vào tường gạch"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 315,
+      "line": 325,
       "title": "Ví dụ 8.3: Cú sút bóng đá"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "line": 143,
+      "line": 144,
       "title": "Ví dụ 8.4: Độ giật của súng trường"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "line": 217,
+      "line": 218,
       "title": "Ví dụ 8.5: Va chạm trên đệm khí theo đường thẳng"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "line": 277,
+      "line": 278,
       "title": "Ví dụ 8.6: Va chạm của hai robot trên mặt phẳng nằm ngang"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 93,
+      "line": 95,
       "title": "Ví dụ 8.7: Va chạm hoàn toàn mềm của hai xe trượt"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 162,
+      "line": 166,
       "title": "Ví dụ 8.8: Con lắc đạn đạo"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 218,
+      "line": 222,
       "title": "Ví dụ 8.9: Va chạm ô tô tại ngã tư"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 176,
+      "line": 184,
       "title": "Ví dụ 8.10: Va chạm đàn hồi trên đệm khí thẳng"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 253,
+      "line": 261,
       "title": "Ví dụ 8.11: Làm chậm neutron trong lò phản ứng hạt nhân"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 297,
+      "line": 305,
       "title": "Ví dụ 8.12: Va chạm đàn hồi hai chiều của hai đĩa khúc côn cầu"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 58,
+      "line": 66,
       "title": "Ví dụ 8.13: Khối tâm của phân tử nước"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 191,
+      "line": 201,
       "title": "Ví dụ 8.14: Kéo co trên mặt băng"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/06-muc-06.md",
-      "line": 146,
+      "line": 148,
       "title": "Ví dụ 8.15: Gia tốc ban đầu của tên lửa"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/06-muc-06.md",
-      "line": 177,
+      "line": 179,
       "title": "Ví dụ 8.16: Vận tốc cuối của tên lửa"
     }
   ],
@@ -139,32 +139,32 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 410,
+      "line": 420,
       "title": "Xem đáp án và lời giải chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "line": 365,
+      "line": 368,
       "title": "Xem đáp án và lời giải chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 304,
+      "line": 308,
       "title": "Xem đáp án và lời giải chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 380,
+      "line": 393,
       "title": "Xem đáp án và lời giải chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 318,
+      "line": 332,
       "title": "Xem đáp án và lời giải chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-08/06-muc-06.md",
-      "line": 218,
+      "line": 236,
       "title": "Xem đáp án và lời giải chi tiết"
     }
   ],
@@ -190,79 +190,85 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-3.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/17-tom-tat.md",
-      "line": 81,
+      "line": 84,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-3.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-4.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/17-tom-tat.md",
-      "line": 93,
+      "line": 96,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-4.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-5.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/17-tom-tat.md",
-      "line": 159,
+      "line": 162,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-5.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-6.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/17-tom-tat.md",
-      "line": 192,
+      "line": 195,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-tom-tat-6.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-01.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 31,
+      "line": 39,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-01.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-02.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 65,
+      "line": 73,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-02.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-ung-dung-go-kien.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 139,
+      "line": 147,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-ung-dung-go-kien.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-03.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 142,
+      "line": 150,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-03.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-04.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 144,
+      "line": 152,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-04.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-05.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 173,
+      "line": 181,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-05.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-06/r-theory-06-14.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
+      "line": 213,
+      "source": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-14.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-06.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 253,
+      "line": 263,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-06.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-07.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 255,
+      "line": 265,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-07.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-08.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
-      "line": 318,
+      "line": 328,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-08.png"
     },
     {
@@ -286,19 +292,19 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-12.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "line": 146,
+      "line": 147,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-12.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-13.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "line": 220,
+      "line": 221,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-13.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-14.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
-      "line": 280,
+      "line": 281,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-14.png"
     },
     {
@@ -322,25 +328,25 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-18.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 96,
+      "line": 98,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-18.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-19.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 165,
+      "line": 169,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-19.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-20.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 221,
+      "line": 225,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-20.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-21.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
-      "line": 295,
+      "line": 299,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-21.png"
     },
     {
@@ -352,67 +358,67 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-23.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 114,
+      "line": 122,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-23.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-24.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 116,
+      "line": 124,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-24.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-25.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 179,
+      "line": 187,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-25.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-26.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 258,
+      "line": 266,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-26.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-27.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
-      "line": 300,
+      "line": 308,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-27.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-28.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 62,
+      "line": 70,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-28.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-29.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 127,
+      "line": 135,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-29.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-30.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 189,
+      "line": 199,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-30.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-31.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 195,
+      "line": 205,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-31.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-32.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 277,
+      "line": 291,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-32.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-ung-dung-ngoai-hanh-tinh.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
-      "line": 286,
+      "line": 300,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-ung-dung-ngoai-hanh-tinh.png"
     },
     {
@@ -430,7 +436,7 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-34.png",
       "declaredIn": "raw_materials/physics/translations/chapter-08/06-muc-06.md",
-      "line": 107,
+      "line": 109,
       "source": "docs/vat-ly-1/bai-giang/img/young-08/r-theory-hinh-8-34.png"
     }
   ]

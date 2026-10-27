@@ -7,15 +7,27 @@ next: false
 
 # Hệ quy chiếu quán tính
 
-Hệ quy chiếu trong đó vật không chịu hợp lực giữ vận tốc không đổi. Các hệ chuyển động thẳng đều đối với một hệ quán tính cũng là quán tính.
+Hệ quy chiếu trong đó một vật không chịu hợp lực giữ vận tốc không đổi. Hệ tịnh tiến thẳng đều, không quay, đối với một hệ quán tính cũng là hệ quán tính.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Hệ quy chiếu quán tính xác định bằng chuyển động không chịu hợp lực, không bằng việc một hệ có vẻ đứng yên đối với người dùng. Hai hệ có vận tốc tương đối không đổi đều có thể dùng cùng dạng định luật vật lý.
+Hệ quy chiếu quán tính được xác định qua chuyển động không chịu hợp lực, không phải bằng việc người quan sát thấy một hệ có vẻ đứng yên.
 
-Hệ gắn mặt đất thường chỉ gần quán tính trong phạm vi một thí nghiệm. Hệ gắn tàu đang quay đầu hoặc tăng tốc không phải một hệ quán tính duy nhất cho toàn hành trình.
+Trong cơ học Newton, hai hệ có các trục song song và vận tốc tương đối không đổi $\vec U$ có:
+
+$$
+\vec v^{\,\prime}=\vec v-\vec U.
+$$
+
+$$
+\vec a^{\,\prime}=\vec a.
+$$
+
+Vì vậy, với khối lượng không đổi, chúng dùng cùng dạng định luật II Newton. Động lượng của một vật có thể khác giữa hai hệ, nhưng tốc độ biến thiên động lượng bằng nhau.
+
+Hệ gắn với mặt đất chỉ gần quán tính trong phạm vi thí nghiệm thích hợp. Hệ gắn tàu đang tăng tốc hoặc quay đầu không phải hệ quán tính trong khoảng ấy. Khi dùng thuyết tương đối hẹp, các hệ quán tính được nối bằng biến đổi Lorentz.
 
 ## Ví dụ
 
@@ -23,7 +35,7 @@ Một phòng kín trong tàu chuyển động thẳng đều có thể dùng cù
 
 ## Khi nào cần dùng?
 
-Phát biểu hai tiên đề tương đối hẹp và chọn hệ cho phép đo.
+Áp dụng các định luật Newton, xét bảo toàn động lượng và so sánh phép đo giữa các hệ.
 
 ## Câu hỏi ôn lại
 
@@ -43,4 +55,4 @@ Không. Khi tàu đổi vận tốc, hệ gắn với tàu không còn là cùng
 
 ## Tài liệu tham khảo
 
-Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 37, trang 1217–1244.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 4.2, 8.2 và 37.1.

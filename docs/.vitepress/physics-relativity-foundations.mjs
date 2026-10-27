@@ -5,9 +5,9 @@ export const relativityConcepts={
       "Hệ quy chiếu quán tính",
       "hệ quy chiếu quán tính"
     ],
-    "definition": "Hệ quy chiếu trong đó vật không chịu hợp lực giữ vận tốc không đổi. Các hệ chuyển động thẳng đều đối với một hệ quán tính cũng là quán tính.",
+    "definition": "Hệ quy chiếu trong đó một vật không chịu hợp lực giữ vận tốc không đổi. Hệ tịnh tiến thẳng đều, không quay, đối với một hệ quán tính cũng là hệ quán tính.",
     "example": "Một phòng kín trong tàu chuyển động thẳng đều có thể dùng cùng định luật cơ học với phòng thí nghiệm quán tính trên mặt đất.",
-    "use": "Phát biểu hai tiên đề tương đối hẹp và chọn hệ cho phép đo.",
+    "use": "Áp dụng các định luật Newton, xét bảo toàn động lượng và so sánh phép đo giữa các hệ.",
     "question": "Tàu đang quay đầu có thể giữ nguyên một hệ quán tính gắn với mình không?",
     "answer": "Không. Khi tàu đổi vận tốc, hệ gắn với tàu không còn là cùng một hệ quán tính chuyển động đều suốt quá trình."
   },
@@ -246,7 +246,7 @@ export const relativityWikiConnections={
 }
 
 export const relativityWikiDetails={
-  "he-quy-chieu-quan-tinh": "Hệ quy chiếu quán tính xác định bằng chuyển động không chịu hợp lực, không bằng việc một hệ có vẻ đứng yên đối với người dùng. Hai hệ có vận tốc tương đối không đổi đều có thể dùng cùng dạng định luật vật lý.\n\nHệ gắn mặt đất thường chỉ gần quán tính trong phạm vi một thí nghiệm. Hệ gắn tàu đang quay đầu hoặc tăng tốc không phải một hệ quán tính duy nhất cho toàn hành trình.",
+  "he-quy-chieu-quan-tinh": "Hệ quy chiếu quán tính được xác định qua chuyển động không chịu hợp lực, không phải bằng việc người quan sát thấy một hệ có vẻ đứng yên.\n\nTrong cơ học Newton, hai hệ có các trục song song và vận tốc tương đối không đổi $\\vec U$ có:\n\n$$\n\\vec v^{\\,\\prime}=\\vec v-\\vec U.\n$$\n\n$$\n\\vec a^{\\,\\prime}=\\vec a.\n$$\n\nVì vậy, với khối lượng không đổi, chúng dùng cùng dạng định luật II Newton. Động lượng của một vật có thể khác giữa hai hệ, nhưng tốc độ biến thiên động lượng bằng nhau.\n\nHệ gắn với mặt đất chỉ gần quán tính trong phạm vi thí nghiệm thích hợp. Hệ gắn tàu đang tăng tốc hoặc quay đầu không phải hệ quán tính trong khoảng ấy. Khi dùng thuyết tương đối hẹp, các hệ quán tính được nối bằng biến đổi Lorentz.",
   "su-kien-khong-thoi-gian": "Một sự kiện phải có cả vị trí lẫn thời điểm. Cần phân biệt việc nguồn phát ánh sáng với việc người ở xa nhận ánh sáng. Giữa hai sự kiện có thể có thời gian truyền hữu hạn.\n\nBiến đổi tọa độ luôn áp dụng cho cùng sự kiện. Nếu hai sự kiện trùng trong một hệ, các hiệu tọa độ bằng không và vẫn bằng không sau biến đổi Lorentz.",
   "dong-thoi-tuong-doi": "Xét S′ chuyển động theo +x với tốc độ u đối với S. Hai sự kiện đồng thời trong S có hiệu thời gian trong S′ phụ thuộc hiệu vị trí.\n\n$$\n\\Delta t'=-\\gamma u\\Delta x/c^2.\n$$\n\nNếu hiệu vị trí cũng bằng không, hai sự kiện vẫn đồng thời trong mọi hệ. Việc hai tín hiệu đến mắt cùng lúc chưa đủ kết luận hai sự kiện phát ở xa đồng thời.",
   "he-so-lorentz": "Đặt beta bằng tốc độ tương đối chia tốc độ ánh sáng. Hệ số Lorentz là đại lượng không thứ nguyên và chỉ được dùng cho tốc độ nhỏ hơn c.\n\n$$\n\\gamma=1/\\sqrt{1-\\beta^2}.\n$$\n\nKhi beta tiến về không, gamma tiến về một. Khi beta tiến về một từ phía dưới, gamma tăng không bị chặn. Phải xác định tốc độ nào đang đi vào gamma trong từng công thức.",

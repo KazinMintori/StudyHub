@@ -13,13 +13,41 @@ next: false
 
 ## Giải thích kỹ thuật
 
-Với hai chất điểm:
+Khối tâm là vị trí trung bình có trọng số khối lượng. Với hai chất điểm:
 
 $$
-x_{\mathrm{cm}}=\frac{m_1x_1+m_2x_2}{m_1+m_2}
+\vec r_{\mathrm{cm}}=\frac{m_1\vec r_1+m_2\vec r_2}{M}.
 $$
 
-Với nhiều phần tử, thay tử số bằng tổng các tích khối lượng và tọa độ, mẫu số bằng tổng khối lượng. Áp dụng riêng theo từng tọa độ. Không đồng nhất khối tâm với trọng tâm trong một trường trọng lực không đều.
+Trong công thức này $M=m_1+m_2$. Với hệ gồm $n$ chất điểm khối lượng dương, không đổi và đánh số từ 1 đến $n$:
+
+$$
+M=m_1+m_2+\cdots+m_n.
+$$
+
+$$
+\vec r_{\mathrm{cm}}=\frac1M\sum_{i=1}^{n}m_i\vec r_i.
+$$
+
+Tử số là tổng các vector $m_1\vec r_1+m_2\vec r_2+\cdots+m_n\vec r_n$. Áp dụng riêng theo từng tọa độ. Với vật có phân bố khối lượng liên tục, thay tổng bằng tích phân trên toàn vật:
+
+$$
+\vec r_{\mathrm{cm}}=\frac1M\int\vec r\,dm.
+$$
+
+Với tổng khối lượng không đổi, trong hệ quán tính:
+
+$$
+\vec P=M\vec v_{\mathrm{cm}}.
+$$
+
+$$
+\vec F_{\mathrm{ext}}=M\vec a_{\mathrm{cm}}.
+$$
+
+Không có hợp ngoại lực cho vận tốc khối tâm không đổi. Muốn kết luận vị trí khối tâm không đổi, còn cần vận tốc khối tâm ban đầu bằng không.
+
+Nếu phân bố khối lượng đối xứng, khối tâm nằm trên trục hoặc tại tâm đối xứng tương ứng. Nó có thể ở ngoài phần vật chất, chẳng hạn tại tâm lỗ một vành tròn đồng chất. Không đồng nhất khối tâm với trọng tâm trong một trường trọng lực không đều.
 
 ## Ví dụ
 

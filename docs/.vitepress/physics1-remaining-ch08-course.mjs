@@ -136,6 +136,10 @@ export const physics1RemainingChapter8Parent={
                 "formula": "$$\n\\vec P=\\sum_{i=1}^{n}\\vec p_i\n$$"
               },
               {
+                "label": "Dạng khai triển",
+                "formula": "$$\n\\vec P=\\vec p_1+\\vec p_2+\\dots+\\vec p_n\n$$"
+              },
+              {
                 "label": "Tốc độ biến thiên",
                 "formula": "$$\n\\frac{d\\vec P}{dt}=\\vec F_{\\mathrm{ext}}\n$$"
               },
@@ -144,7 +148,9 @@ export const physics1RemainingChapter8Parent={
                 "formula": "$$\n\\vec F_{\\mathrm{ext}}=\\vec0\\implies\\vec P_2=\\vec P_1\n$$"
               }
             ],
-            "variables": []
+            "variables": [
+              "Các chỉ số i từ 1 đến n: Những chất điểm trong hệ"
+            ]
           },
           {
             "name": "Bảo toàn theo từng phương",
@@ -190,9 +196,17 @@ export const physics1RemainingChapter8Parent={
               {
                 "label": "Vận tốc chung",
                 "formula": "$$\n\\vec V=\\frac{m_A\\vec v_{A1}+m_B\\vec v_{B1}}{m_A+m_B}\n$$"
+              },
+              {
+                "label": "Tỉ số động năng khi B ban đầu đứng yên",
+                "formula": "$$\n\\frac{K_2}{K_1}=\\frac{m_A}{m_A+m_B}\n$$"
               }
             ],
-            "variables": []
+            "variables": [
+              "$m_A,m_B>0$: Khối lượng hai vật",
+              "$K_1>0$: Tổng động năng trước va chạm",
+              "$K_2$: Tổng động năng sau va chạm"
+            ]
           }
         ]
       },
@@ -259,24 +273,29 @@ export const physics1RemainingChapter8Parent={
                 "formula": "$$\nM=\\sum_{i=1}^{n}m_i\n$$"
               },
               {
+                "label": "Dạng khai triển khối lượng",
+                "formula": "$$\nM=m_1+m_2+\\dots+m_n\n$$"
+              },
+              {
                 "label": "Vị trí vector",
-                "formula": "$$\n\\vec r_c=\\frac1M\\sum_{i=1}^{n}m_i\\vec r_i\n$$"
+                "formula": "$$\n\\vec r_{\\mathrm{cm}}=\\frac1M\\sum_{i=1}^{n}m_i\\vec r_i\n$$"
               },
               {
                 "label": "Hoành độ",
-                "formula": "$$\nx_c=\\frac1M\\sum_{i=1}^{n}m_ix_i\n$$"
+                "formula": "$$\nx_{\\mathrm{cm}}=\\frac1M\\sum_{i=1}^{n}m_ix_i\n$$"
               },
               {
                 "label": "Tung độ",
-                "formula": "$$\ny_c=\\frac1M\\sum_{i=1}^{n}m_iy_i\n$$"
+                "formula": "$$\ny_{\\mathrm{cm}}=\\frac1M\\sum_{i=1}^{n}m_iy_i\n$$"
               },
               {
                 "label": "Cao độ",
-                "formula": "$$\nz_c=\\frac1M\\sum_{i=1}^{n}m_iz_i\n$$"
+                "formula": "$$\nz_{\\mathrm{cm}}=\\frac1M\\sum_{i=1}^{n}m_iz_i\n$$"
               }
             ],
             "variables": [
-              "$c$: Chỉ số khối tâm, tương ứng cm trên sơ đồ",
+              "Chỉ số cm: Khối tâm",
+              "Các chỉ số i từ 1 đến n: Những phần tử của hệ",
               "$M>0$: Tổng khối lượng không đổi của hệ"
             ]
           },
@@ -286,15 +305,15 @@ export const physics1RemainingChapter8Parent={
             "formulaRows": [
               {
                 "label": "Tổng động lượng",
-                "formula": "$$\n\\vec P=M\\vec v_c\n$$"
+                "formula": "$$\n\\vec P=M\\vec v_{\\mathrm{cm}}\n$$"
               },
               {
                 "label": "Gia tốc khối tâm",
-                "formula": "$$\nM\\vec a_c=\\vec F_{\\mathrm{ext}}\n$$"
+                "formula": "$$\nM\\vec a_{\\mathrm{cm}}=\\vec F_{\\mathrm{ext}}\n$$"
               },
               {
                 "label": "Không có hợp ngoại lực",
-                "formula": "$$\n\\vec F_{\\mathrm{ext}}=\\vec0\\implies\\vec a_c=\\vec0\n$$"
+                "formula": "$$\n\\vec F_{\\mathrm{ext}}=\\vec0\\implies\\vec a_{\\mathrm{cm}}=\\vec0\n$$"
               }
             ],
             "variables": []
@@ -330,7 +349,8 @@ export const physics1RemainingChapter8Parent={
             "variables": [
               "$u$: Tốc độ phụt khí đối với tên lửa, tương ứng v_ex",
               "$dm/dt<0$: Tốc độ biến thiên khối lượng tên lửa",
-              "$m_0$: Khối lượng ban đầu, gồm cả nhiên liệu"
+              "$m_0$: Khối lượng ban đầu, gồm cả nhiên liệu",
+              "$0<m\\le m_0$: Khối lượng còn lại dương"
             ]
           }
         ]

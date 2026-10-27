@@ -486,9 +486,10 @@ export const physics1Course = {
     "khoi-tam",
     "va-cham-dan-hoi"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 8,
   "sourceChapter": 8,
+  "hasChapterExercises": true,
   "topicGroups": [
     {
       "title": "Động lượng, xung lượng và va chạm",
@@ -1470,6 +1471,42 @@ export const physics1Course = {
 }
   ],
   "slides": [
+  {
+    "note": "08-dong-luong-va-cham",
+    "title": "Xung lượng làm thay đổi động lượng",
+    "bullets": [
+      "Động lượng và xung lượng là các vector được xác định trong cùng hệ quy chiếu.",
+      "Khi hợp lực biến đổi, xung lượng được tính bằng tích phân theo thời gian."
+    ],
+    "formula": "$$\n\\vec J=\\vec p_2-\\vec p_1\n$$"
+  },
+  {
+    "note": "08-dong-luong-va-cham",
+    "title": "Hợp ngoại lực quyết định tổng động lượng",
+    "bullets": [
+      "Với hệ có khối lượng không đổi, nội lực tuân theo định luật III Newton triệt tiêu từng đôi khi cộng toàn hệ.",
+      "Tổng động lượng được bảo toàn khi hợp ngoại lực bằng không trong khoảng xét."
+    ],
+    "formula": "$$\n\\frac{d\\vec P}{dt}=\\vec F_{\\mathrm{ext}}\n$$"
+  },
+  {
+    "note": "08-dong-luong-va-cham",
+    "title": "Khối tâm có thể chuyển động khi tổng động lượng không đổi",
+    "bullets": [
+      "Với tổng khối lượng không đổi, vận tốc khối tâm bằng tổng động lượng chia tổng khối lượng.",
+      "Hợp ngoại lực bằng không cho vận tốc khối tâm không đổi. Khối tâm chỉ đứng yên nếu vận tốc ban đầu của nó bằng không."
+    ],
+    "formula": "$$\n\\vec P=M\\vec v_{\\mathrm{cm}}\n$$"
+  },
+  {
+    "note": "08-dong-luong-va-cham",
+    "title": "Phụt khí tạo lực đẩy tên lửa",
+    "bullets": [
+      "Tốc độ khí phụt được đo đối với tên lửa, còn khối lượng tức thời của tên lửa giảm.",
+      "Khi bỏ qua ngoại lực và tốc độ phụt khí tương đối không đổi, độ tăng vận tốc phụ thuộc tỉ số khối lượng."
+    ],
+    "formula": "$$\nv-v_0=u\\ln\\frac{m_0}{m}\n$$"
+  },
   {
     "note": "05-ung-dung-newton",
     "title": "Cân bằng trong hệ quy chiếu quán tính",
