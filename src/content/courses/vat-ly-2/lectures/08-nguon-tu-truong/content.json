@@ -79,7 +79,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
-      "line": 87,
+      "line": 84,
       "title": "Ví dụ 28.2 Từ trường của một đoạn dây"
     },
     {
@@ -88,9 +88,49 @@
       "title": "Ví dụ 28.3 Tìm khoảng cách đến dây dẫn"
     },
     {
+      "source": "raw_materials/physics/translations/chapter-28/03-day-thang.md",
+      "line": 100,
+      "title": "Ví dụ 28.4: Từ trường của hai dây"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-28/04-luc-hai-day.md",
       "line": 40,
       "title": "Ví dụ 28.5 Lực giữa hai dây siêu dẫn"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/05-vong-day-tron.md",
+      "line": 113,
+      "title": "Ví dụ 28.6: Trường của một cuộn dây nhiều vòng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 43,
+      "title": "Ví dụ 28.7: Trường của dây dẫn thẳng dài"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 56,
+      "title": "Ví dụ 28.8: Dây trụ đặc có dòng phân bố đều"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 126,
+      "title": "Ví dụ 28.9: Trường bên trong ống dây dài"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+      "line": 161,
+      "title": "Ví dụ 28.10: Trường của ống dây hình xuyến"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/08-vat-lieu-tu.md",
+      "line": 121,
+      "title": "Ví dụ 28.11: Năng lượng từ so với năng lượng nhiệt"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-28/08-vat-lieu-tu.md",
+      "line": 203,
+      "title": "Ví dụ 28.12: Từ trường của một nam châm sắt từ"
     }
   ],
   "exercises": [
@@ -1620,13 +1660,13 @@
     {
       "reference": "../img/young-28/ung-dung-tu-truong-hanh-tinh.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
-      "line": 69,
+      "line": 66,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/ung-dung-tu-truong-hanh-tinh.png"
     },
     {
       "reference": "../img/young-28/hinh-28-04.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
-      "line": 90,
+      "line": 87,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-04.png"
     },
     {
@@ -1644,19 +1684,19 @@
     {
       "reference": "../img/young-28/hinh-28-07.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/03-day-thang.md",
-      "line": 94,
+      "line": 104,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-07.png"
     },
     {
       "reference": "../img/young-28/hinh-28-08.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/03-day-thang.md",
-      "line": 150,
+      "line": 160,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-08.png"
     },
     {
       "reference": "../img/young-28/tu-kiem-tra-28-03.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/03-day-thang.md",
-      "line": 158,
+      "line": 168,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/tu-kiem-tra-28-03.png"
     },
     {
@@ -1752,43 +1792,43 @@
     {
       "reference": "../img/young-28/hinh-28-20.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
-      "line": 54,
+      "line": 58,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-20.png"
     },
     {
       "reference": "../img/young-28/hinh-28-21.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
-      "line": 102,
+      "line": 106,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-21.png"
     },
     {
       "reference": "../img/young-28/ung-dung-cap-dong-truc.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
-      "line": 110,
+      "line": 114,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/ung-dung-cap-dong-truc.png"
     },
     {
       "reference": "../img/young-28/hinh-28-22.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
-      "line": 124,
+      "line": 128,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-22.png"
     },
     {
       "reference": "../img/young-28/hinh-28-23.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
-      "line": 132,
+      "line": 136,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-23.png"
     },
     {
       "reference": "../img/young-28/hinh-28-24.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
-      "line": 153,
+      "line": 157,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-24.png"
     },
     {
       "reference": "../img/young-28/hinh-28-25.png",
       "declaredIn": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
-      "line": 159,
+      "line": 163,
       "source": "docs/vat-ly-2/bai-giang/img/young-28/hinh-28-25.png"
     },
     {

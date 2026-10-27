@@ -72,13 +72,23 @@ Mọi đường sức từ đi vào mặt kín đều phải đi ra khỏi mặt
 ::: example Ví dụ 28.3 Tìm khoảng cách đến dây dẫn
 Một dây dẫn thẳng, dài mang dòng $I=1{,}0\,\mathrm A$. Tại điểm cách trục dây một khoảng $r$, từ trường có độ lớn $B=0{,}5\times10^{-4}\,\mathrm T$, xấp xỉ từ trường Trái Đất ở Pittsburgh. Tìm $r$.
 
-Điều kiện “dài” nghĩa là chiều dài dây lớn hơn nhiều $r$, nên dùng phương trình (28.9). Giải phương trình theo $r$:
+Điều kiện “dài” nghĩa là chiều dài dây lớn hơn nhiều $r$, nên dùng phương trình (28.9). Hai thừa số cần dùng là:
+
+$$
+\frac{\mu_0}{2\pi}\approx2\times10^{-7}\,\frac{\mathrm{T\,m}}{\mathrm A},
+$$
+
+$$
+\frac IB=2\times10^4\,\frac{\mathrm A}{\mathrm T}.
+$$
+
+Giải phương trình theo r rồi nhân hai thừa số:
 
 $$
 \begin{aligned}
 r &= \frac{\mu_0 I}{2\pi B} \\
 &= \frac{\mu_0}{2\pi}\,\frac{I}{B} \\
-&= (2\times10^{-7}\,\mathrm{T\,m/A}) \times(2\times10^4\,\mathrm{A/T}) \\
+&=(2\times2)\times10^{-3}\,\mathrm m\\
 &= 4{,}0\times10^{-3}\,\mathrm m \\
 &= 4{,}0\,\mathrm{mm}.
 \end{aligned}
