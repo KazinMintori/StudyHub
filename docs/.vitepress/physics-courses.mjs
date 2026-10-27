@@ -324,7 +324,7 @@ export const physics1Course = {
     "dao-ham",
     "tich-phan"
   ],
-  "status": "draft",
+  "status": "ready",
   "number": 5,
   "sourceChapter": 5,
   "topicGroups": [
@@ -363,7 +363,8 @@ export const physics1Course = {
         }
       ]
     }
-  ]
+  ],
+  "hasChapterExercises": true
 },
     {
   "slug": "06-cong-dong-nang",
@@ -1469,6 +1470,42 @@ export const physics1Course = {
 }
   ],
   "slides": [
+  {
+    "note": "05-ung-dung-newton",
+    "title": "Cân bằng trong hệ quy chiếu quán tính",
+    "bullets": [
+      "Vật đứng yên hoặc chuyển động với vector vận tốc không đổi khi hợp lực bằng không.",
+      "Giản đồ lực chỉ gồm các lực tác dụng lên vật đang xét. Hai lực của một cặp tương tác tác dụng lên hai vật khác nhau."
+    ],
+    "formula": "$$\n\\sum\\vec F=\\vec0\n$$"
+  },
+  {
+    "note": "05-ung-dung-newton",
+    "title": "Hợp lực quyết định gia tốc",
+    "bullets": [
+      "Trong hệ quán tính, định luật II Newton áp dụng với khối lượng không đổi.",
+      "Với nhiều vật nối dây, viết phương trình cho từng vật rồi dùng ràng buộc do dây không dãn."
+    ],
+    "formula": "$$\n\\sum\\vec F=m\\vec a\n$$"
+  },
+  {
+    "note": "05-ung-dung-newton",
+    "title": "Ma sát nghỉ có một giới hạn",
+    "bullets": [
+      "Ma sát nghỉ thực tế được xác định từ điều kiện chuyển động, không tự động bằng giá trị cực đại.",
+      "Ma sát trượt ngược chiều trượt tương đối của hai bề mặt."
+    ],
+    "formula": "$$\nf_s\\le\\mu_s n\n$$"
+  },
+  {
+    "note": "05-ung-dung-newton",
+    "title": "Hướng tâm là vai trò của hợp lực",
+    "bullets": [
+      "Thành phần hợp lực hướng vào tâm tạo gia tốc hướng tâm. Không thêm một lực hướng tâm riêng vào giản đồ lực.",
+      "Khi tốc độ thay đổi, hợp lực còn có thành phần tiếp tuyến."
+    ],
+    "formula": "$$\n\\sum F_r=m\\frac{v^2}{R}\n$$"
+  },
   {
     "note": "02-chuyen-dong-thang",
     "title": "Vận tốc biểu diễn sự thay đổi vị trí",

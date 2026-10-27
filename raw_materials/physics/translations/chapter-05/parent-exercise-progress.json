@@ -1,17 +1,14 @@
 {
-  "status": "partially-reviewed-not-ready",
+  "status": "all159sourceunits-integrated-ready-local-publicpending",
   "chapter": 5,
-  "reviewedUnits": 41,
+  "reviewedUnits": 159,
   "expectedUnits": 159,
   "guided": 12,
   "discussion": 28,
   "bridge": 1,
   "actualBridgeGuideItems": 10,
-  "numberedReviewed": 0,
-  "numberedRemaining": [
-    1,
-    118
-  ],
+  "numberedReviewed": 118,
+  "numberedRemaining": [],
   "files": [
     {
       "file": "parent-09-luyen-tap-huong-dan.md",
@@ -578,5 +575,9 @@
     "GitHubpublication andpublicexerciseverification"
   ],
   "canonicalBrowserCases": 40,
-  "canonicalSVGTextBoundsAndOverlapCases": 2
+  "canonicalSVGTextBoundsAndOverlapCases": 2,
+  "publicationStatus": "ready-local-publicpending",
+  "fullChapterReview": "raw_materials/physics/reviews/physics1-chapter05-final-20261027.json",
+  "canonicalExerciseGroups": 28,
+  "actualExerciseRouteCases": 140
 }

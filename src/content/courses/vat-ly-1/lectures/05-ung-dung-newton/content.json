@@ -62,12 +62,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
-      "line": 253,
+      "line": 252,
       "title": "Ví dụ 5.4: Ô tô trên mặt phẳng nghiêng"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
-      "line": 298,
+      "line": 306,
       "title": "Ví dụ 5.5: Cân bằng của hai vật nối với nhau qua ròng rọc"
     },
     {
@@ -87,22 +87,22 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 205,
+      "line": 195,
       "title": "Ví dụ 5.9: Trọng lượng biểu kiến trong thang máy có gia tốc"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 263,
+      "line": 253,
       "title": "Ví dụ 5.10: Xe trượt tuyết lao dốc đồi không ma sát"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 313,
+      "line": 303,
       "title": "Ví dụ 5.11: Hai vật có cùng gia tốc"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 366,
+      "line": 356,
       "title": "Ví dụ 5.12: Hai vật có cùng độ lớn gia tốc"
     },
     {
@@ -112,27 +112,27 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 146,
+      "line": 140,
       "title": "Ví dụ 5.14: Lực ma sát nghỉ khi chưa đạt ngưỡng cực đại"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 180,
+      "line": 174,
       "title": "Ví dụ 5.15: Giảm ma sát trượt khi kéo xiên"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 269,
+      "line": 263,
       "title": "Ví dụ 5.16: Chuyển động trượt của xe trượt tuyết có ma sát: Trường hợp trượt đều"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 324,
+      "line": 318,
       "title": "Ví dụ 5.17: Chuyển động có gia tốc trên dốc dốc hơn"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 506,
+      "line": 500,
       "title": "Ví dụ 5.18: Tốc độ giới hạn của vận động viên nhảy dù"
     },
     {
@@ -169,17 +169,17 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
-      "line": 356,
+      "line": 364,
       "title": "Câu hỏi kiểm tra"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 426,
+      "line": 416,
       "title": "Câu hỏi kiểm tra"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 549,
+      "line": 543,
       "title": "Câu hỏi kiểm tra"
     },
     {
@@ -196,17 +196,17 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
-      "line": 366,
+      "line": 374,
       "title": "Lời giải"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 435,
+      "line": 425,
       "title": "Lời giải"
     },
     {
       "source": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 559,
+      "line": 553,
       "title": "Lời giải"
     },
     {
@@ -267,13 +267,13 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-04.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
-      "line": 256,
+      "line": 255,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-04.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-05.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
-      "line": 301,
+      "line": 309,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-05.png"
     },
     {
@@ -303,37 +303,37 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-10.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 208,
+      "line": 198,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-10.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-11.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 257,
+      "line": 247,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-11.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-12.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 266,
+      "line": 256,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-12.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-13.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 307,
+      "line": 297,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-13.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-14.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 316,
+      "line": 306,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-14.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-15.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "line": 369,
+      "line": 359,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-15.png"
     },
     {
@@ -375,49 +375,49 @@
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-21.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 183,
+      "line": 177,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-21.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-22.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 272,
+      "line": 266,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-22.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-23.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 327,
+      "line": 321,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-23.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-24.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 410,
+      "line": 404,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-24.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-25.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 485,
+      "line": 479,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-25.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-app-pollen.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 496,
+      "line": 490,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-app-pollen.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-27.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 502,
+      "line": 496,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-27.png"
     },
     {
       "reference": "/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-26.png",
       "declaredIn": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "line": 509,
+      "line": 503,
       "source": "docs/vat-ly-1/bai-giang/img/young-05/r-theory-hinh-05-26.png"
     },
     {

@@ -1,6 +1,6 @@
 {
   "chapter": 5,
-  "status": "theory-reviewed-exercises-incomplete",
+  "status": "theory-reviewed-exercises-complete-ready-local",
   "sourcePDFPages": [
     149,
     177
@@ -13,19 +13,19 @@
     },
     {
       "file": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
-      "sha256": "eaa629a3d9c5ef1c493dc3f5c3c33bd7fe0117b5b8482ffdd1063faecdb3f36d"
+      "sha256": "d529b47f1c629ed98ba4ca04164ded4f804b8d14aa3ba6c62e2ddaba7bfb002c"
     },
     {
       "file": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
-      "sha256": "f4f83b62aaefa30d90adffcc137cd0d8f39247e2bd4c0b67769b8a2c5f867f8c"
+      "sha256": "527b5a913358aeff13bc4f1305cfee5f860935e6e87640ede2e6961cca6d3ee4"
     },
     {
       "file": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
-      "sha256": "218cfab8673ba3f3e1b62e9f12d03a01842421e481ae748019e11531c8a416f2"
+      "sha256": "4215db96b8e12193695f8e6706b4f85ebd77c20ab8755e460fe7e80963cbbb72"
     },
     {
       "file": "raw_materials/physics/translations/chapter-05/04-muc-04.md",
-      "sha256": "f8562049d5d039251262361d2cdc91a91ad2a56421f0de611dedf38449ed0348"
+      "sha256": "1cb5717ad02dcfb35f287ba2292d5cda971d33d243be9b06115d1c2425276979"
     },
     {
       "file": "raw_materials/physics/translations/chapter-05/05-muc-05.md",
@@ -92,14 +92,15 @@
       "status": "passed"
     },
     "browser": {
-      "status": "passed",
-      "cases": 21
+      "status": "passed-currentactualroutes",
+      "cases": 30
     },
     "crops": {
       "status": "passed"
     }
   },
-  "publicationStatus": "draft",
-  "remaining": "End-of-chapter exercises require authoring and verification before this chapter can be marked complete.",
-  "sha256Normalization": "UTF-8 with LF line endings, matching Git content normalization"
+  "publicationStatus": "ready-local-publicpending",
+  "remaining": "Verify GitHub build/deploy and actual public chapter5 routes. Chapter8/all-course audit remain.",
+  "sha256Normalization": "UTF-8 with LF line endings, matching Git content normalization",
+  "finalChapterReview": "raw_materials/physics/reviews/physics1-chapter05-final-20261027.json"
 }

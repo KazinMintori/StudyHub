@@ -1,0 +1,103 @@
+{
+  "status": "chapter5-ready-local-public-release-pending",
+  "checkedUTC": "2026-10-27T10:20:00.461208+00:00",
+  "sourceChapter": 5,
+  "sourcePDFPagesTheory": [
+    149,
+    177
+  ],
+  "sourcePDFPagesExercises": [
+    177,
+    190
+  ],
+  "sourceUnits": {
+    "theorySections": 5,
+    "workedExamples": 23,
+    "immediateSelfchecks": 4,
+    "numberedEquations": 16,
+    "guided": 12,
+    "discussion": 28,
+    "numbered": 118,
+    "bridge": 1,
+    "bridgeGuideItems": 10,
+    "endTotal": 159
+  },
+  "theoryOriginalFrames": 46,
+  "exerciseOriginalFrames": 53,
+  "separateSolutionSVGs": 26,
+  "originalExerciseFigureOccurrences": 60,
+  "canonicalExerciseGroups": 28,
+  "generatedExerciseAssets": 79,
+  "cheatsheetFormulaRows": 36,
+  "prerequisites": 6,
+  "supportingConcepts": 6,
+  "linkedWikiRoutes": 12,
+  "canonicalGroupLayoutCases": 140,
+  "actualExerciseRouteCases": 140,
+  "actualTheoryRouteCases": 30,
+  "actualCheatsheetFoundationWikiRouteCases": 70,
+  "actualRouteCasesTotal": 240,
+  "nativeSVGTextBoundsAndOverlapCases": 26,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "sourceHashMode": "CanonicalLF matching Git for text, exact bytes forbinary",
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-05/00-mo-dau.md": "da25ec13c3b246ea23dfb32af6f611471b116ae0ccf2f72541c06d2abbfc445a",
+    "raw_materials/physics/translations/chapter-05/01-muc-01.md": "d529b47f1c629ed98ba4ca04164ded4f804b8d14aa3ba6c62e2ddaba7bfb002c",
+    "raw_materials/physics/translations/chapter-05/02-muc-02.md": "527b5a913358aeff13bc4f1305cfee5f860935e6e87640ede2e6961cca6d3ee4",
+    "raw_materials/physics/translations/chapter-05/03-muc-03.md": "4215db96b8e12193695f8e6706b4f85ebd77c20ab8755e460fe7e80963cbbb72",
+    "raw_materials/physics/translations/chapter-05/04-muc-04.md": "1cb5717ad02dcfb35f287ba2292d5cda971d33d243be9b06115d1c2425276979",
+    "raw_materials/physics/translations/chapter-05/05-muc-05.md": "c9079a24be6c038823ca2c3499f5c362adb3c0c845ad21508ba3a47af218cea4",
+    "raw_materials/physics/translations/chapter-05/17-tom-tat.md": "90b671192b649c31aa461c4d3c90a04374f0ebcfd6e453e0c8763cf82aac36d8",
+    "raw_materials/physics/translations/chapter-05/parent-09-luyen-tap-huong-dan.md": "88e3bb4234957e1d28c2f85f4848faddb1b658996765a6b7dc4e6076f87f4e36",
+    "raw_materials/physics/translations/chapter-05/parent-10-cau-hoi-thao-luan.md": "03247d855ed6f8595c904a4d17be793697777a6b4a411c2bef35d3fbfaacbbc6",
+    "raw_materials/physics/translations/chapter-05/parent-11-bai-tap-001-059.md": "0dd3cd37d47cf696ac4bfc1f0e59d686193fe42dcf2816af883c738d41fe9fc2",
+    "raw_materials/physics/translations/chapter-05/parent-12-bai-tap-060-118.md": "4f21660e06197ed90f998f56c3db4c9253af5a703e20f3cf0afdf12a400c7701",
+    "raw_materials/physics/translations/chapter-05/parent-16-bai-tap-cau-noi.md": "544f22d2c0106b598b7ee91b12a2fe6817a6bd0412d95911fc43c7fecd593a36"
+  },
+  "evidence": {
+    "qa/physics1-remaining/ch05-whole159-20261027/route-exercises/results.json": "21fe56d2ed6c1e40cd0b44930285a7dd3093cdcc0e1c290ac4e64d3c54416066",
+    "qa/physics1-remaining/ch05-whole159-20261027/route-theory/results.json": "200acf6c18a713c776de3b71371b78a7ffac957cbe41f95a5890809b1e63a60d",
+    "qa/physics1-remaining/ch05-whole159-20261027/support-route-review.json": "ac86fe31d03627d099d33c21d82ff92340c81299c88da3389a37cc41668621e8",
+    "qa/physics1-remaining/ch05-whole159-20261027/browser-canonical-review.json": "0e422107864a3b07695a45d8b3b29d45d71a4d12475585c3010d6dc70edd7107",
+    "qa/physics1-remaining/ch05-whole159-20261027/theory-frame-pixels.json": "81957027ab035ac53b32ce6881f5bcfbb27cd7a37547d0945a8772a31716bb4b",
+    "qa/physics1-remaining/ch05-whole159-20261027/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e"
+  },
+  "lightweightChecks": {
+    "lectureAll": {
+      "lectures": 133,
+      "topics": 354,
+      "errors": 0,
+      "warnings": 0
+    },
+    "skillToolsTests": 39,
+    "exerciseGroupingDevAndSourceTests": 12
+  },
+  "portableVerificationPrograms": [
+    "raw_materials/physics/verify_chapter05_theory_parent.py",
+    "raw_materials/physics/verify_chapter5_partial_exercises.py",
+    "raw_materials/physics/verify_chapter5_numbered_early.py",
+    "raw_materials/physics/verify_chapter5_numbered_late.py"
+  ],
+  "scopeLimits": [
+    "Current local chapter5 only; no publicdeployclaim.",
+    "No claim allPhysics1ready:chapter8stillincomplete.",
+    "WholePhysics1+2audit/finalreport/cleanupstillrequired."
+  ],
+  "localFullBuildRun": false,
+  "publication": {
+    "status": "pending-push-and-GitHubActions",
+    "lastVerifiedPublicCommit": "68ee041995d05688f602f644a262e625f7d3e60e"
+  },
+  "lessonsLearned": [
+    "Canonical text and manifests do not make a route usable without its actual component and Notes/exercise containers. The initial blank-route checks were retained and corrected.",
+    "Legacy course summaries required by validators remain internal; actual UI confirms no Slides tab.",
+    "Source diagram frame completeness needs full-source inspection in addition to exactpixel checks.",
+    "Ready status requires actual group/tab/Wiki routes and font/math visibility checks, not justcounts."
+  ]
+}
