@@ -79,22 +79,22 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
-      "line": 164,
+      "line": 167,
       "title": "Ví dụ 31.4: Biên độ và pha của mạch RLC"
     },
     {
       "source": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
-      "line": 217,
+      "line": 220,
       "title": "Ví dụ 31.5: Các điện áp tức thời"
     },
     {
       "source": "raw_materials/physics/translations/chapter-31/04-cong-suat-xoay-chieu.md",
-      "line": 137,
+      "line": 146,
       "title": "Ví dụ 31.6: Công suất máy sấy tóc"
     },
     {
       "source": "raw_materials/physics/translations/chapter-31/04-cong-suat-xoay-chieu.md",
-      "line": 175,
+      "line": 184,
       "title": "Ví dụ 31.7: Công suất mạch RLC"
     },
     {
@@ -657,6 +657,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-31/00-mo-dau.md",
+      "line": 17,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-31/10-luyen-tap-huong-dan.md",
       "line": 13,
       "title": "Lời giải chi tiết"
@@ -1175,6 +1180,36 @@
       "source": "raw_materials/physics/translations/chapter-31/15-nang-cao-mcat.md",
       "line": 652,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-31/01-gian-do-pha-hieu-dung.md",
+      "line": 162,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-31/02-dien-tro-dien-khang.md",
+      "line": 331,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
+      "line": 288,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-31/04-cong-suat-xoay-chieu.md",
+      "line": 230,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-31/05-cong-huong.md",
+      "line": 154,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-31/06-may-bien-ap.md",
+      "line": 201,
+      "title": "Xem đáp án và giải thích"
     }
   ],
   "assets": [
@@ -1439,19 +1474,19 @@
     {
       "reference": "../img/young-31/hinh-31-14.png",
       "declaredIn": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
-      "line": 93,
+      "line": 96,
       "source": "docs/vat-ly-2/bai-giang/img/young-31/hinh-31-14.png"
     },
     {
       "reference": "../img/young-31/ung-dung-31-do-thanh-phan-co-the.png",
       "declaredIn": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
-      "line": 123,
+      "line": 126,
       "source": "docs/vat-ly-2/bai-giang/img/young-31/ung-dung-31-do-thanh-phan-co-the.png"
     },
     {
       "reference": "../img/young-31/hinh-31-15.png",
       "declaredIn": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
-      "line": 265,
+      "line": 268,
       "source": "docs/vat-ly-2/bai-giang/img/young-31/hinh-31-15.png"
     },
     {
@@ -1463,7 +1498,7 @@
     {
       "reference": "../img/young-31/hinh-31-17.png",
       "declaredIn": "raw_materials/physics/translations/chapter-31/04-cong-suat-xoay-chieu.md",
-      "line": 106,
+      "line": 115,
       "source": "docs/vat-ly-2/bai-giang/img/young-31/hinh-31-17.png"
     },
     {

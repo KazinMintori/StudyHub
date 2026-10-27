@@ -166,23 +166,30 @@ Tần số góc $\omega$ của sóng là:
 
 $$
 \begin{aligned}
-\omega &= ck \\
-&= (3{,}00\times10^8) \times(5{,}93\times10^5)\,\mathrm{rad/s} \\
-&= 1{,}78\times10^{14}\,\mathrm{rad/s}.
+\omega&=ck\\
+&=(3{,}00)(5{,}93)\times10^{13}\,\mathrm{rad/s}\\
+&=1{,}78\times10^{14}\,\mathrm{rad/s}.
 \end{aligned}
 $$
 
 Thay các giá trị biên độ, số sóng và tần số góc vào hàm sóng, ta thu được các phương trình vector dưới đây. Trong biểu thức pha, dùng $x$ tính bằng mét, $t$ bằng giây và $\theta$ bằng radian:
 
-$$
-\begin{aligned}
-\theta &= (5{,}93\times10^5)x +(1{,}78\times10^{14})t, \\
-\vec E(x,t) &= \hat{k}(1{,}5\times10^6\,\mathrm{V/m})\cos\theta.
-\end{aligned}
-$$
+Các hệ số pha vừa tính là $k=5{,}93\times10^5\,\mathrm{rad/m}$ và $\omega=1{,}78\times10^{14}\,\mathrm{rad/s}$. Đặt:
 
 $$
-\vec B(x,t) =\hat{j}(5{,}0\times10^{-3}\,\mathrm T)\cos\theta.
+\theta=kx+\omega t.
+$$
+
+Với $E_{\max}=1{,}5\times10^6\,\mathrm{V/m}$:
+
+$$
+\vec E(x,t)=E_{\max}\cos\theta\,\hat{k}.
+$$
+
+Với $B_{\max}=5{,}0\times10^{-3}\,\mathrm T$:
+
+$$
+\vec B(x,t)=B_{\max}\cos\theta\,\hat{j}.
 $$
 
 #### Đánh giá kết quả

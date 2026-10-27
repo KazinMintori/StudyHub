@@ -898,7 +898,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired; allcurrenttheory35casespassed; publicreleasepending",
+        "report": "raw_materials/physics/reviews/ch31-theory-mobile-layout-repair-20261028.json"
+      }
     },
     {
       "chapter": 32,
@@ -1087,7 +1091,11 @@
             }
           ]
         }
-      ]
+      ],
+      "followup": {
+        "status": "matchingobserveddefects repaired; allcurrenttheory30casespassed; publicreleasepending",
+        "report": "raw_materials/physics/reviews/ch32-theory-mobile-layout-repair-20261028.json"
+      }
     },
     {
       "chapter": 33,

@@ -1,0 +1,48 @@
+{
+  "status": "theory-mobile-layout-repairs-verified-locally",
+  "checkedUTC": "2026-10-27T18:22:30.806966+00:00",
+  "chapter": 31,
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md": "ca02376501684891c18020c90d3ba7f3b026dcac61d0256ad98b0ee7e34414be",
+    "raw_materials/physics/translations/chapter-31/04-cong-suat-xoay-chieu.md": "ebf393ab2c6dd41b7e721850f87aa3714e542e7752b3c189167773a635ba9a99"
+  },
+  "actualViewportCases": 35,
+  "physicalChecks": 71,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "sourceMarkersUnchanged": [
+    {
+      "file": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
+      "headings": 9,
+      "figureReferences": 4,
+      "equationTags": 7
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-31/04-cong-suat-xoay-chieu.md",
+      "headings": 7,
+      "figureReferences": 2,
+      "equationTags": 5
+    }
+  ],
+  "portableVerifier": "raw_materials/physics/verify_chapter31_theory_layout_parent.py",
+  "evidence": {
+    "qa/physics-global-audit/runtime-selected-theory-repairs-20261028/ch31/theory/results.json": "3b9588c36c773083d488ad90bb99471dac893d95cab491155bf88733c282f0ea",
+    "qa/physics-global-audit/ch31-theory-layout-repair-20261028/numeric-checks.json": "85abad1e43a96f0e07e04bc1e1379b6ac04fef546f0e85eba2948d3e03d2a116",
+    "qa/physics-global-audit/ac-wave-layout-batch-20261028/index-refresh-proof.json": "a562e6033a01e7e97347cf5aa8a72a09921ff4cacded2a91d8f423de8d38a58d",
+    "qa/physics-global-audit/ac-wave-layout-batch-20261028/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
+    "qa/physics-global-audit/ac-wave-layout-batch-20261028/skill-tests.log": "590dca7deccda80207acc25015a7a4d77389aa8b7d08a1a5fa211dcfd22e5b5f"
+  },
+  "lightweightChecks": {
+    "lectures": 133,
+    "topics": 354,
+    "errors": 0,
+    "warnings": 0,
+    "skillToolsTests": 39
+  },
+  "scopeLimit": "Onlychanged source expressions/associatedmodels andactualalltheorylayout. Fullchapter source/figure/exercise/Wiki/cheatsheet audit andpublicrelease require separate proof."
+}

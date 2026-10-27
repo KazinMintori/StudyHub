@@ -48,7 +48,10 @@ Hình chiếu của tổng các vector bằng tổng hình chiếu của từng 
 Áp dụng định lý Pythagoras:
 
 $$
-V^2 = V_R^2+(V_L-V_C)^2, = I^2R^2 +I^2(X_L-X_C)^2.
+\begin{aligned}
+V^2&=V_R^2+(V_L-V_C)^2\\
+&=I^2R^2+I^2(X_L-X_C)^2.
+\end{aligned}
 $$
 
 Vì $I$ và $V$ là các biên độ không âm:

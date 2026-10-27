@@ -19,12 +19,24 @@ $$
 
 Thay hệ thức này vào biểu thức mật độ năng lượng:
 
+Mật độ năng lượng từ trường trở thành:
+
 $$
 \begin{aligned}
-u &= \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2\mu_0} (\sqrt{\epsilon_0 \mu_0} E)^2 \\
-&= \frac{1}{2}\epsilon_0 E^2 + \frac{1}{2}\epsilon_0 E^2 \\
-&= \epsilon_0 E^2
-\end{aligned} \tag{32.25}
+u_B&=\frac{B^2}{2\mu_0}\\
+&=\frac{\epsilon_0\mu_0E^2}{2\mu_0}\\
+&=\frac12\epsilon_0E^2.
+\end{aligned}
+$$
+
+Vì $u_E=\epsilon_0E^2/2$, mật độ tổng là:
+
+$$
+\begin{aligned}
+u&=u_E+u_B\\
+&=\epsilon_0E^2.
+\end{aligned}
+\tag{32.25}
 $$
 
 Mặt khác, vì $E = cB = B/\sqrt{\epsilon_0 \mu_0}$, ta cũng có thể viết:
@@ -89,22 +101,23 @@ $$
 
 ### Cường độ của sóng điện từ hình sin
 
-Với sóng điện từ hình sin lan truyền theo chiều dương trục $x$ trong chân không:
+Với sóng điện từ hình sin lan truyền theo chiều dương trục x trong chân không, đặt pha $\Phi=kx-\omega t$:
 
 $$
 \begin{aligned}
-\vec{E}(x, t) &= \hat{\jmath} E_{\max} \times \cos(kx - \omega t), \\
-\vec{B}(x, t) &= \hat{k} B_{\max} \times \cos(kx - \omega t)
+&\vec E(x,t)=E_{\max}\cos\Phi\,\hat{\jmath},\\
+&\vec B(x,t)=B_{\max}\cos\Phi\,\hat{k}.
 \end{aligned}
 $$
 
 Thay hai biểu thức này vào định nghĩa vector Poynting:
 
+Tích có hướng của hai vector đơn vị là $\hat{\jmath}\times\hat{k}=\hat{\imath}$. Gọi $S_0=E_{\max}B_{\max}/\mu_0$. Hai hệ số cosin được nhân với nhau:
+
 $$
 \begin{aligned}
-\vec{S}(x, t) &= \frac{1}{\mu_0} \vec{E} \times \vec{B} \\
-&= \frac{1}{\mu_0} [\hat{\jmath} E_{\max}] \times [\hat{k} B_{\max}] \times \cos^2(kx - \omega t) \\
-&= \hat{\imath} \frac{E_{\max} B_{\max}}{\mu_0} \times \cos^2(kx - \omega t)
+\vec S(x,t)&=\frac1{\mu_0}\vec E\times\vec B\\
+&=S_0\cos^2\Phi\,\hat{\imath}.
 \end{aligned}
 $$
 
@@ -112,8 +125,8 @@ Vì $\hat{\jmath} \times \hat{k} = \hat{\imath}$ và $\cos^2(kx - \omega t) \ge 
 
 $$
 \begin{aligned}
-S_x(x, t) &= \frac{E_{\max} B_{\max}}{\mu_0} \times \cos^2 \Phi \\
-&= \frac{E_{\max} B_{\max}}{2\mu_0} \times [1 + \cos 2\Phi]
+S_x(x,t)&=S_0\cos^2\Phi\\
+&=\frac{S_0}{2}(1+\cos2\Phi).
 \end{aligned}
 $$
 
@@ -241,9 +254,9 @@ $$
 
 $$
 \begin{aligned}
-S &= \epsilon_0 c E^2 \\
-&= (8{,}85 \times 10^{-12}) \times (3{,}00 \times 10^8)(100)^2 \\
-&= 26{,}5\,\mathrm{W/m^2}
+S&=\epsilon_0cE^2\\
+&=(26{,}55)\times10^{-4}(100)^2\,\mathrm{W/m^2}\\
+&=26{,}5\,\mathrm{W/m^2}.
 \end{aligned}
 $$
 
@@ -281,11 +294,19 @@ $$
 
 Vì $I = S_{\text{av}} = E_{\max}^2 / (2\mu_0 c)$, biên độ điện trường thu được là:
 
+Hệ số $2\mu_0c$ có giá trị xấp xỉ $754\,\Omega$. Khi nhân với $S_{\mathrm{av}}=7{,}96\times10^{-7}\,\mathrm{W/m^2}$, ta được:
+
+$$
+2\mu_0cS_{\mathrm{av}}\approx6{,}00\times10^{-4}\,\mathrm{V^2/m^2}.
+$$
+
+Do đó:
+
 $$
 \begin{aligned}
-E_{\max} &= \sqrt{2\mu_0 c S_{\text{av}}} \\
-&= [2 (4\pi \times 10^{-7}) \times (3{,}00 \times 10^8) \times (7{,}96 \times 10^{-7})]^{1/2} \\
-&= 2{,}45 \times 10^{-2}\,\mathrm{V/m}
+E_{\max}&=\sqrt{2\mu_0cS_{\mathrm{av}}}\\
+&=\sqrt{6{,}00\times10^{-4}}\,\mathrm{V/m}\\
+&=2{,}45\times10^{-2}\,\mathrm{V/m}.
 \end{aligned}
 $$
 
@@ -316,7 +337,7 @@ Công suất trung bình hấp thụ bởi các tấm pin:
 $$
 \begin{aligned}
 P &= I A \\
-&= (1{,}4 \times 10^3\,\mathrm{W/m^2}) \times (4{,}0\,\mathrm{m^2}) \\
+&=(1{,}4)(4{,}0)\times10^3\,\mathrm W \\
 &= 5{,}6 \times 10^3\,\mathrm{W} \\
 &= 5{,}6\,\mathrm{kW}
 \end{aligned}
@@ -337,7 +358,7 @@ Lực áp suất bức xạ tổng cộng tác dụng lên toàn bộ diện tí
 $$
 \begin{aligned}
 F &= p_{\text{rad}} A \\
-&= (4{,}7 \times 10^{-6}\,\mathrm{N/m^2}) \times (4{,}0\,\mathrm{m^2}) \\
+&=(4{,}7)(4{,}0)\times10^{-6}\,\mathrm N \\
 &= 1{,}9 \times 10^{-5}\,\mathrm{N}
 \end{aligned}
 $$

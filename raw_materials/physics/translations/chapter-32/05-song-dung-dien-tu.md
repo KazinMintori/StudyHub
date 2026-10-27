@@ -26,44 +26,66 @@ $$
 
 Dấu trừ trước biên độ điện trường phản xạ đảm bảo rằng tại mặt phẳng $x = 0$, hai điện trường tới và phản xạ luôn ngược pha và triệt tiêu lẫn nhau tại mọi thời điểm:
 
+Tại bề mặt, đặt $E_s(t)=E_{\max}\cos\omega t$. Vì cosin là hàm chẵn:
+
 $$
 \begin{aligned}
-E_y(0, t) &= E_{y,\text{inc}}(0, t) + E_{y,\text{ref}}(0, t) \\
-&= E_{\max} \cos(\omega t) - E_{\max} \cos(-\omega t) \\
-&= 0
+&E_{y,\mathrm{inc}}(0,t)=E_s(t),\\
+&E_{y,\mathrm{ref}}(0,t)=-E_s(t).
 \end{aligned}
+$$
+
+Hai đóng góp bằng nhau về độ lớn, trái dấu:
+
+$$
+E_y(0,t)=E_s(t)-E_s(t)=0.
 $$
 
 Theo nguyên lý chồng chất, điện trường và từ trường tổng cộng tại tọa độ $x$ bất kỳ là:
 
+Đặt hai pha và hai thừa số dao động:
+
 $$
 \begin{aligned}
-E_y &= E_{\max} [\cos(kx + \omega t) \\
-&\qquad - \cos(kx - \omega t)], \\
-B_z &= -B_{\max} [\cos(kx + \omega t) \\
-&\qquad + \cos(kx - \omega t)]
+&\Phi_+=kx+\omega t,\\
+&\Phi_-=kx-\omega t,\\
+&c_+=\cos\Phi_+,\\
+&c_-=\cos\Phi_-.
+\end{aligned}
+$$
+
+Theo nguyên lý chồng chất:
+
+$$
+\begin{aligned}
+&E_y=E_{\max}(c_+-c_-),\\
+&B_z=-B_{\max}(c_++c_-).
 \end{aligned}
 $$
 
 Áp dụng các công thức biến đổi lượng giác:
 
+Từ công thức cosin của tổng và hiệu, hai thừa số vừa định nghĩa thỏa mãn:
+
 $$
 \begin{aligned}
-\cos(A + B) - \cos(A - B) &= -2 \sin A \sin B, \\
-\cos(A + B) + \cos(A - B) &= 2 \cos A \cos B
+&c_+-c_-=-2\sin kx\sin\omega t,\\
+&c_++c_-=2\cos kx\cos\omega t.
 \end{aligned}
 $$
 
 Ta thu được phương trình của điện trường trong sóng dừng điện từ:
 
 $$
-E_y(x, t) = -2E_{\max} \times \sin kx \sin \omega t \tag{32.34}
+E_y=-2E_{\max}\sin kx\sin\omega t.
+\tag{32.34}
 $$
 
 Phương trình của từ trường trong sóng dừng điện từ là:
 
 $$
-B_z(x, t) = -2B_{\max} \times \cos kx \cos \omega t \tag{32.35}
+B_z=-2B_{\max}\cos kx\cos\omega t.
+\tag{32.35}
 $$
 
 Biểu thức của điện trường cho thấy tại các mặt phẳng vuông góc với trục $x$ mà $\sin kx = 0$, điện trường luôn triệt tiêu ở mọi thời điểm. Điều kiện $\sin kx = 0$ tương ứng với $kx = 0, \pi, 2\pi, \dots$ Vì số sóng $k = 2\pi/\lambda$, tọa độ của các mặt phẳng nút điện trường là:
@@ -130,18 +152,39 @@ Hãy xác định cường độ của sóng dừng điện từ biểu diễn b
 
 Thay các hàm sóng vào biểu thức vector Poynting:
 
+Đặt các thừa số hình học và thời gian:
+
 $$
 \begin{aligned}
-\vec{S}(x, t) &= \frac{1}{\mu_0} \vec{E} \times \vec{B} \\
-&= \frac{1}{\mu_0} [-\hat{\jmath} 2 E_{\max}] \times [\sin kx \sin \omega t] \times [-\hat{k} 2 B_{\max}] \times [\cos kx \cos \omega t] \\
-&= \hat{\imath} \frac{E_{\max} B_{\max}}{\mu_0} \times (2 \sin kx \cos kx) \times (2 \sin \omega t \cos \omega t)
+&a=\sin kx\sin\omega t,\\
+&b=\cos kx\cos\omega t.
 \end{aligned}
 $$
+
+Khi đó $\vec E=-2E_{\max}a\,\hat{\jmath}$ và $\vec B=-2B_{\max}b\,\hat{k}$. Hai dấu âm triệt tiêu trong tích có hướng. Với $S_0=E_{\max}B_{\max}/\mu_0$:
+
+$$
+\begin{aligned}
+\vec S(x,t)&=\frac1{\mu_0}\vec E\times\vec B\\
+&=4S_0ab\,\hat{\imath}.
+\end{aligned}
+$$
+
+Gom hai thừa số không gian và hai thừa số thời gian thành:
+
+$$
+\begin{aligned}
+&X=2\sin kx\cos kx,\\
+&T=2\sin\omega t\cos\omega t.
+\end{aligned}
+$$
+
+Theo định nghĩa a và b, tích vừa tính thỏa $4ab=XT$.
 
 Áp dụng hệ thức $\sin 2A = 2 \sin A \cos A$:
 
 $$
-S_x(x, t) = \frac{E_{\max} B_{\max}}{\mu_0} \times \sin 2kx \sin 2\omega t
+S_x(x,t)=S_0\sin2kx\sin2\omega t.
 $$
 
 Giá trị trung bình theo thời gian của hàm sin trong một hoặc nhiều chu kỳ nguyên vẹn luôn bằng không: $\langle \sin 2\omega t \rangle = 0$. Do đó, vector Poynting trung bình theo thời gian bằng không tại mọi điểm: $\langle \vec{S}(x, t) \rangle = \vec{0}$, kéo theo cường độ bức xạ triệt tiêu:

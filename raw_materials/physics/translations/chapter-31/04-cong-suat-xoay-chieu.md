@@ -80,19 +80,28 @@ $$
 p=VI\cos(\omega t+\phi)\cos\omega t.\tag{31.30}
 $$
 
-Để lấy trung bình, khai triển công thức cosin tổng:
+Để lấy trung bình, đặt $c=\cos\omega t$ và $s=\sin\omega t$. Hai ký hiệu này vẫn là các hàm thời gian. Công thức cosin tổng cho:
 
 $$
-\cos(\omega t+\phi) =\cos\omega t\cos\phi -\sin\omega t\sin\phi.
+\cos(\omega t+\phi)=c\cos\phi-s\sin\phi.
 $$
 
-Suy ra
+Khi nhân thêm $VIc$, tách công suất thành hai số hạng:
 
 $$
-p=VI\cos\phi\cos^2\omega t -VI\sin\phi\sin\omega t\cos\omega t.
+\begin{aligned}
+&p_1=VI\cos\phi\,c^2,\\
+&p_2=VI\sin\phi\,sc.
+\end{aligned}
 $$
 
-Trên một chu kỳ, trung bình $\cos^2\omega t$ bằng $1/2$. Vì tích sin với cos bằng một nửa $\sin2\omega t$, trung bình số hạng thứ hai bằng không. Do đó
+Vì vậy:
+
+$$
+p=p_1-p_2.
+$$
+
+Số hạng thứ nhất chứa $\cos^2\omega t$, còn số hạng thứ hai chứa $\sin\omega t\cos\omega t$. Trên một chu kỳ, trung bình $\cos^2\omega t$ bằng $1/2$. Vì tích sin với cos bằng một nửa $\sin2\omega t$, trung bình số hạng thứ hai bằng không. Do đó
 
 $$
 \begin{aligned}
