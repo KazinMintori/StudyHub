@@ -55,12 +55,23 @@ r &= 2{,}0\,\mathrm{cm} \\
 \end{aligned}
 $$
 
-Với $\mu_0=4\pi\times10^{-7}\,\mathrm{Wb/(A\,m)}$, ta có:
+Với $\mu_0=4\pi\times10^{-7}\,\mathrm{Wb/(A\,m)}$, tích $n(dI/dt)=500\times100$ cho:
+
+$$
+\begin{aligned}
+\frac{dB}{dt}&=\mu_0n\frac{dI}{dt}\\
+&=(4\pi)(5)\times10^{-3}\,\mathrm{T/s}\\
+&\approx6{,}283\times10^{-2}\,\mathrm{T/s}.
+\end{aligned}
+$$
+
+Từ đó:
 
 $$
 \begin{aligned}
 \mathcal{E} &= -\mu_0nA\frac{dI}{dt} \\
-&= -(4\pi\times10^{-7})(500) \times(4{,}0\times10^{-4})(100)\,\mathrm V \\
+&=-A\frac{dB}{dt}\\
+&=-(4{,}0)(6{,}283)\times10^{-6}\,\mathrm V\\
 &= -2{,}513\times10^{-5}\,\mathrm V \\
 &\approx -25\,\mu\mathrm V.
 \end{aligned}

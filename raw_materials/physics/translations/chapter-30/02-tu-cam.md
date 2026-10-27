@@ -164,12 +164,25 @@ $$
 L = \frac{N \Phi_B}{i} = \frac{\mu_0 N^2 A}{2\pi r}
 $$
 
-Biểu thức này cho thấy độ tự cảm của ống xuyến tỉ lệ thuận với bình phương số vòng dây $N^2$, tỉ lệ thuận với diện tích tiết diện $A$ và tỉ lệ nghịch với chu vi trung bình $2\pi r$. Thay các số liệu cụ thể vào:
+Biểu thức này cho thấy độ tự cảm của ống xuyến tỉ lệ thuận với bình phương số vòng dây $N^2$, tỉ lệ thuận với diện tích tiết diện $A$ và tỉ lệ nghịch với chu vi trung bình $2\pi r$. Hai thừa số có giá trị:
+
+$$
+\frac{\mu_0}{2\pi r}=2{,}0\times10^{-6}\,\frac{\mathrm H}{\mathrm{m^2}},
+$$
+
+$$
+\begin{aligned}
+N^2A&=(4{,}0)(5{,}0)\times10^{4-4}\,\mathrm{m^2}\\
+&=20\,\mathrm{m^2}.
+\end{aligned}
+$$
+
+Nhân hai thừa số:
 
 $$
 \begin{aligned}
 L &= \frac{\mu_0 N^2 A}{2\pi r} \\
-&= \frac{4\pi \times 10^{-7}\text{ T}\cdot\text{m/A}}{2\pi(0{,}10\text{ m})} \times (200)^2 \times (5{,}0 \times 10^{-4}\text{ m}^2) \\
+&=(2{,}0)(20)\times10^{-6}\,\mathrm H\\
 &= 4{,}0 \times 10^{-5}\text{ H} \\
 &= 40\ \mu\text{H}
 \end{aligned}
@@ -199,7 +212,7 @@ $$
 $$
 \begin{aligned}
 |\mathcal{E}| &= L \left|\frac{di}{dt}\right| \\
-&= (40 \times 10^{-6}\text{ H}) \times (2{,}0 \times 10^6\text{ A/s}) \\
+&=(40)(2{,}0)\times10^{-6+6}\,\mathrm V\\
 &= 80\text{ V}
 \end{aligned}
 $$
@@ -235,7 +248,7 @@ Ta lần lượt tính giá trị $V_{ab}$ cho từng trường hợp:
 
 $$
 \begin{aligned}
-V_{ab} &= (2{,}0 \times 10^{-6}\text{ H}) \times (2{,}0\text{ A/s}) \\
+V_{ab} &= (2{,}0)(2{,}0)\times10^{-6}\,\mathrm V\\
 &= 4{,}0\ \mu\text{V}
 \end{aligned}
 $$
@@ -244,7 +257,7 @@ $$
 
 $$
 \begin{aligned}
-V_{ab} &= (4{,}0 \times 10^{-6}\text{ H}) \times (-1{,}5\text{ A/s}) \\
+V_{ab} &= (4{,}0)(-1{,}5)\times10^{-6}\,\mathrm V\\
 &= -6{,}0\ \mu\text{V}
 \end{aligned}
 $$
@@ -255,11 +268,21 @@ $$
 
 $$
 \begin{aligned}
-V_{ab} &= (1{,}0 \times 10^{-6}\text{ H}) \times (16\text{ A/s}) \\
+V_{ab} &= (1{,}0)(16)\times10^{-6}\,\mathrm V\\
 &= 16\ \mu\text{V}
 \end{aligned}
 $$
 
-So sánh các giá trị tính được: $16\ \mu\text{V} > 4{,}0\ \mu\text{V} > 0 > -6{,}0\ \mu\text{V}$, tương ứng với thứ tự các cuộn cảm là (iv), (i), (iii), (ii).
+Các bất đẳng thức giữa các điện áp vừa tính là:
+
+$$
+\begin{aligned}
+&16\,\mu\mathrm V>4{,}0\,\mu\mathrm V,\\
+&4{,}0\,\mu\mathrm V>0,\\
+&0>-6{,}0\,\mu\mathrm V.
+\end{aligned}
+$$
+
+Vì vậy, thứ tự các cuộn cảm là (iv), (i), (iii), (ii).
 
 </details>

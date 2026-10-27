@@ -70,7 +70,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-30/01-ho-cam.md",
-      "line": 148,
+      "line": 161,
       "title": "Ví dụ 30.2: Suất điện động do hiện tượng hỗ cảm gây ra"
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-30/02-tu-cam.md",
-      "line": 181,
+      "line": 194,
       "title": "Ví dụ 30.4: Tính suất điện động tự cảm"
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-30/04-mach-rl.md",
-      "line": 291,
+      "line": 301,
       "title": "Ví dụ 30.7: Năng lượng trong mạch RL"
     },
     {
@@ -110,7 +110,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-30/06-mach-rlc.md",
-      "line": 162,
+      "line": 163,
+      "title": "Ví dụ minh họa"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/06-mach-rlc.md",
+      "line": 165,
       "title": "Ví dụ 30.10: Điện trở làm tần số dao động giảm một nửa"
     }
   ],
@@ -647,7 +652,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-30/04-mach-rl.md",
-      "line": 343,
+      "line": 353,
       "title": "Câu hỏi tự kiểm 30.4"
     },
     {
@@ -657,6 +662,11 @@
     }
   ],
   "solutions": [
+    {
+      "source": "raw_materials/physics/translations/chapter-30/00-mo-dau.md",
+      "line": 25,
+      "title": "Xem đáp án và giải thích"
+    },
     {
       "source": "raw_materials/physics/translations/chapter-30/10-luyen-tap-huong-dan.md",
       "line": 15,
@@ -1176,6 +1186,41 @@
       "source": "raw_materials/physics/translations/chapter-30/15-nang-cao-mcat.md",
       "line": 307,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/01-ho-cam.md",
+      "line": 233,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/02-tu-cam.md",
+      "line": 235,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/03-nang-luong-tu-truong.md",
+      "line": 143,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/04-mach-rl.md",
+      "line": 367,
+      "title": "Đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/05-mach-lc.md",
+      "line": 101,
+      "title": "Xem phép kiểm tra"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/05-mach-lc.md",
+      "line": 361,
+      "title": "Đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-30/06-mach-rlc.md",
+      "line": 96,
+      "title": "Xem quan hệ dùng để kiểm tra"
     }
   ],
   "assets": [

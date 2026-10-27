@@ -70,13 +70,13 @@ Nghiệm của phương trình vi phân tuyến tính thuần nhất bậc hai (
 
 ### 1. Chế độ dao động tắt dần (Underdamped)
 
-Khi điện trở thuần thỏa mãn điều kiện $R^2 < 4L/C$, nghiệm tổng quát của phương trình (30.27) có dạng:
+Khi điện trở thuần thỏa mãn điều kiện $R^2<4L/C$, đặt hệ số suy giảm $\alpha=R/(2L)$. Nghiệm tổng quát của phương trình (30.27) có dạng:
 
 $$
-q(t) = A e^{-(R/2L)t} \times \cos(\omega' t + \phi) \tag{30.28}
+q(t)=Ae^{-\alpha t}\cos(\omega't+\phi). \tag{30.28}
 $$
 
-Các hằng số $A$ và $\phi$ được xác định từ điện tích và dòng ban đầu. $A$ là hệ số của bao biên độ ở mốc đầu, không nhất thiết bằng $q(0)$. Với $\alpha=R/(2L)$,
+Các hằng số A và $\phi$ được xác định từ điện tích và dòng ban đầu. A là hệ số của bao biên độ ở mốc đầu, không nhất thiết bằng $q(0)$. Ta có:
 
 $$
 \begin{aligned}
@@ -95,16 +95,19 @@ $$
 
 <details><summary>Xem quan hệ dùng để kiểm tra</summary>
 
-Đặt $\alpha=R/(2L)$. Đạo hàm của nghiệm cho
+Đặt $\alpha=R/(2L)$ và $\omega_0^2=1/(LC)$. Tần số của nghiệm thỏa mãn:
 
 $$
-\begin{aligned}
-q'' &= -2\alpha q' -(\alpha^2+\omega'^2)q, \\
-\alpha^2+\omega'^2 &= \frac1{LC}.
-\end{aligned}
+\alpha^2+\omega'^2=\omega_0^2.
 $$
 
-Vì $2\alpha=R/L$, hai hệ thức này cho đúng phương trình (30.27).
+Lấy hai đạo hàm của nghiệm rồi dùng hệ thức trên:
+
+$$
+q''=-2\alpha q'-\omega_0^2q.
+$$
+
+Vì $2\alpha=R/L$ và $\omega_0^2=1/(LC)$, kết quả cho đúng phương trình (30.27).
 
 </details>
 

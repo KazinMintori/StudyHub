@@ -1,0 +1,55 @@
+{
+  "status": "theory-mobile-layout-repairs-verified-locally",
+  "checkedUTC": "2026-10-27T18:16:29.150783+00:00",
+  "chapter": 30,
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-30/01-ho-cam.md": "f20d06afb8e823a44bf1a478af96121dd38ef74910517a60e209052d47e8b632",
+    "raw_materials/physics/translations/chapter-30/02-tu-cam.md": "d9247bff0e956e9bc4ea2eaae7089bb35d4cea3efd9fb007027ca10a3c149772",
+    "raw_materials/physics/translations/chapter-30/06-mach-rlc.md": "00454ba728ec0923db80e6cc4b71c1101548975d55c6af283fcbc9d9e706a721"
+  },
+  "actualViewportCases": 35,
+  "physicalChecks": 52,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "sourceMarkersUnchanged": [
+    {
+      "file": "raw_materials/physics/translations/chapter-30/01-ho-cam.md",
+      "headings": 6,
+      "figureReferences": 3,
+      "equationTags": 5
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-30/02-tu-cam.md",
+      "headings": 6,
+      "figureReferences": 6,
+      "equationTags": 3
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-30/06-mach-rlc.md",
+      "headings": 8,
+      "figureReferences": 2,
+      "equationTags": 3
+    }
+  ],
+  "portableVerifier": "raw_materials/physics/verify_chapter30_theory_layout_parent.py",
+  "evidence": {
+    "qa/physics-global-audit/runtime-selected-theory-repairs-20261028/ch30/theory/results.json": "6967d6bc10dda7cb0b841d1c43dc08a861f00cb6df0647f73925d04b2eaeafd7",
+    "qa/physics-global-audit/ch30-theory-layout-repair-20261028/numeric-checks.json": "6219a60dc458d6bf53b26e16b9dfdcc492b1983ed889599a24f0fe7ad79ddd4d",
+    "qa/physics-global-audit/induction-layout-batch-20261028/index-refresh-proof.json": "72de6387c3a64f60c27a3ab99b65ead6e981f9a47db898c18a4499bc525e07e2",
+    "qa/physics-global-audit/induction-layout-batch-20261028/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
+    "qa/physics-global-audit/induction-layout-batch-20261028/skill-tests.log": "461ced9189d90550ff1a4a3f41ac0fe877947e8afe0affd3613ce4221a9cb3f6"
+  },
+  "lightweightChecks": {
+    "lectures": 133,
+    "topics": 354,
+    "errors": 0,
+    "warnings": 0,
+    "skillToolsTests": 39
+  },
+  "scopeLimit": "Onlychanged source expressions/associatedmodels andactualalltheorylayout. Fullchapter source/figure/exercise/Wiki/cheatsheet audit andpublicrelease require separate proof."
+}

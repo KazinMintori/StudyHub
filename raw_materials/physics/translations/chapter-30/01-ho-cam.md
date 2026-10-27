@@ -131,12 +131,25 @@ $$
 M = \frac{N_2 \Phi_{B2}}{i_1} = \frac{\mu_0 A N_1 N_2}{l}
 $$
 
-Biểu thức cho thấy $M$ tỉ lệ với tích số vòng $N_1N_2$, đồng thời phụ thuộc hình học và môi trường đã cố định. Trong mô hình tuyến tính này, $M$ không phụ thuộc độ lớn dòng. Thay các giá trị số vào biểu thức:
+Biểu thức cho thấy $M$ tỉ lệ với tích số vòng $N_1N_2$, đồng thời phụ thuộc hình học và môi trường đã cố định. Trong mô hình tuyến tính này, $M$ không phụ thuộc độ lớn dòng. Trước hết tính hai thừa số:
+
+$$
+\frac{\mu_0}{l}=8\pi\times10^{-7}\,\frac{\mathrm H}{\mathrm{m^2}},
+$$
+
+$$
+\begin{aligned}
+AN_1N_2&=(1{,}0\times10^{-3})(10^4)\,\mathrm{m^2}\\
+&=10\,\mathrm{m^2}.
+\end{aligned}
+$$
+
+Nhân hai kết quả:
 
 $$
 \begin{aligned}
 M &= \frac{\mu_0 A N_1 N_2}{l} \\
-&= \frac{4\pi \times 10^{-7}\text{ T}\cdot\text{m/A}}{0{,}50\text{ m}} \times (1{,}0 \times 10^{-3}\text{ m}^2) \times (1000)(10) \\
+&=(8\pi)(10)\times10^{-7}\,\mathrm H\\
 &= 2{,}513 \times 10^{-5}\text{ H} \\
 &\approx 25\ \mu\text{H}
 \end{aligned}
@@ -158,7 +171,7 @@ Ta đã biết hệ số hỗ cảm của hệ cuộn dây là $M = 25\ \mu\text
 
 $$
 \begin{aligned}
-i_2 &= (2{,}0 \times 10^6\text{ A/s}) \times (3{,}0 \times 10^{-6}\text{ s}) \\
+i_2 &= (2{,}0)(3{,}0)\times10^{6-6}\,\mathrm A\\
 &= 6{,}0\text{ A}
 \end{aligned}
 $$
@@ -177,7 +190,7 @@ Thay các giá trị $M = 25 \times 10^{-6}\text{ H}$, $i_2 = 6{,}0\text{ A}$ v�
 $$
 \begin{aligned}
 \Phi_{B1} &= \frac{M i_2}{N_1} \\
-&= \frac{1}{1000} \times (25 \times 10^{-6}\text{ H}) \times (6{,}0\text{ A}) \\
+&=\frac{(25)(6{,}0)}{1000}\times10^{-6}\,\mathrm{Wb}\\
 &= 1{,}5 \times 10^{-7}\text{ Wb}
 \end{aligned}
 $$
@@ -195,7 +208,7 @@ Suất điện động cảm ứng xuất hiện trong ống dây 1 được xá
 $$
 \begin{aligned}
 \mathcal{E}_1 &= -M \frac{di_2}{dt} \\
-&= -(25 \times 10^{-6}\text{ H}) \times (2{,}0 \times 10^6\text{ A/s}) \\
+&=-(25)(2{,}0)\times10^{-6+6}\,\mathrm V\\
 &= -50\text{ V}
 \end{aligned}
 $$

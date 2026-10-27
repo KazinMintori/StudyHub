@@ -44,7 +44,7 @@ $$
 Thông lượng điện biến thiên trong khe tụ đóng vai trò tương đương một dòng điện trong định luật Ampère. Ta cộng dòng dịch với dòng dẫn để được:
 
 $$
-\oint\vec B\cdot d\vec\ell=\mu_0(i_C)_{\mathrm{encl}} +\mu_0(i_D)_{\mathrm{encl}}. \tag{29.15}
+\oint\vec B\cdot d\vec\ell=\mu_0(i_C+i_D)_{\mathrm{encl}}. \tag{29.15}
 $$
 
 Với mặt phẳng, $i_D=0$. Với mặt cong qua khe tụ, $i_C=0$, còn dòng dịch bằng dòng dẫn của mặt phẳng. Vì vậy cả hai mặt cho cùng giá trị tích phân. Trong vật liệu từ, dạng này còn dùng được khi độ từ hóa tỉ lệ với trường ngoài, miễn là thay $\mu_0$ bằng $\mu$.
@@ -102,8 +102,10 @@ $$
 
 Định luật Ampère–Maxwell:
 
+Trong biểu thức này, $i_C$ là dòng dẫn xuyên qua mặt căng S của đường tích phân và $\Phi_E$ là điện thông qua cùng mặt đó. Đặt thừa số chung $\mu_0$ ra ngoài:
+
 $$
-\oint\vec B\cdot d\vec\ell = \mu_0(i_C)_{\mathrm{encl}} +\mu_0\varepsilon_0 \left(\frac{d\Phi_E}{dt}\right)_{\mathrm{encl}}. \tag{29.21}
+\oint\vec B\cdot d\vec\ell=\mu_0\left(i_C+\varepsilon_0\frac{d\Phi_E}{dt}\right). \tag{29.21}
 $$
 
 Điện trường tổng tại một điểm có thể gồm phần tĩnh $\vec E_c$ do các điện tích đứng yên và phần cảm ứng không tĩnh điện $\vec E_n$:

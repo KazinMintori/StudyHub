@@ -113,12 +113,12 @@ Một cuộn dây tròn có $500$ vòng và bán kính $4{,}00\,\mathrm{cm}$. Cu
 ![Hình 29.7: Cuộn dây nghiêng trong từ trường, với góc đề bài đo từ mặt phẳng cuộn.](../img/young-29/hinh-29-07.png)
 **Hướng đi hợp lý:** Đổi bán kính sang mét. Từ trường tạo góc $60^\circ$ với mặt phẳng, nên tạo góc $30^\circ$ với véc-tơ diện tích. Dùng công thức (29.4), chú ý $dB/dt<0$.
 
-Diện tích mỗi vòng là $A=\pi(0{,}0400\,\mathrm m)^2$. Vì $B$ đều và hướng cuộn không đổi:
+Diện tích mỗi vòng là $A=\pi(0{,}0400\,\mathrm m)^2$, xấp xỉ $5{,}03\times10^{-3}\,\mathrm{m^2}$. Giữ giá trị diện tích chưa làm tròn khi tính suất điện động. Với $-N(dB/dt)=100\,\mathrm{T/s}$, từ trường đều và hướng cuộn không đổi cho:
 
 $$
 \begin{aligned}
 \mathcal E &= -N\frac{dB}{dt}A\cos30^\circ \\
-&= -500(-0{,}200) \times\pi(0{,}0400)^2\cos30^\circ \\
+&=(100\,\mathrm{T/s})A\cos30^\circ\\
 &= +0{,}435\,\mathrm V.
 \end{aligned}
 $$
@@ -185,7 +185,11 @@ Một thanh kim loại dài $L$ trượt sang phải với tốc độ không đ
 **Hướng đi hợp lý:** Từ trường không đổi và vuông góc mặt mạch, nên $\Phi_B=BA$. Trong khoảng $dt$, thanh dịch chuyển $v\,dt$ và diện tích tăng $dA=L v\,dt$. Lấy đạo hàm từ thông rồi dùng quy ước dấu đã chọn.
 
 $$
-\mathcal E = -\frac{d\Phi_B}{dt} = -B\frac{dA}{dt} = -BLv.
+\begin{aligned}
+\mathcal E&=-\frac{d\Phi_B}{dt}\\
+&=-B\frac{dA}{dt}\\
+&=-BLv.
+\end{aligned}
 $$
 
 Dấu âm cho biết suất điện động ngược chiều dương đã chọn. Vì véc-tơ diện tích hướng vào trang, chiều dương theo quy tắc bàn tay phải là chiều kim đồng hồ. Do đó dòng cảm ứng chạy ngược chiều kim đồng hồ. Khi $v$ không đổi, suất điện động không đổi và thiết bị tạo dòng một chiều. Nếu thanh trượt rời khỏi ray chữ U thì mạch hở và dòng dừng.

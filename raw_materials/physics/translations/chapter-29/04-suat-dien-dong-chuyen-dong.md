@@ -94,7 +94,11 @@ $$
 Chiều dòng trong thanh từ $b$ lên $a$. Theo $\vec F=I\vec L\times\vec B$, lực từ hướng sang trái, ngược chiều chuyển động. Vì $\vec L$ vuông góc với $\vec B$, độ lớn lực là:
 
 $$
-F = ILB = (5{,}0)(0{,}10)(0{,}60) = 0{,}30\,\mathrm N.
+\begin{aligned}
+F&=ILB\\
+&=(5{,}0)(0{,}10)(0{,}60)\,\mathrm N\\
+&=0{,}30\,\mathrm N.
+\end{aligned}
 $$
 
 Lực cản từ phù hợp với định luật Lenz: Nó chống lại sự tăng diện tích và từ thông gây ra dòng cảm ứng.
