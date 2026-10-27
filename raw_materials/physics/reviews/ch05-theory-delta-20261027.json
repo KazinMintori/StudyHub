@@ -1,0 +1,54 @@
+{
+  "status": "accepted-seven-specific-theory-corrections-pending-full-chapter-audit",
+  "recordedUTC": "2026-10-27T09:10:16.450134+00:00",
+  "chapter": 5,
+  "inputReport": "Antigravity physics1-ch05-theory-independent-review-20261027, recovered despite unknown bridge handle; all7output files retained and worktree/baseline hashes unchanged.",
+  "parentAcceptedFindings": [
+    "F-05-CORRUPT-CHAR",
+    "F-05-OMISSION-EX0504",
+    "F-05-SYNTAX-01",
+    "F-05-SYNTAX-02",
+    "F-05-SYNTAX-DUPL",
+    "F-05-SYNTAX-03",
+    "F-05-MATH-LAYOUT"
+  ],
+  "notAppliedFinding": {
+    "id": "F-05-PEDAGOGY-OPENING",
+    "reason": "A short immediate theory question already has a direct complete answer. Imposing a long three-part template is a preference and not a demonstrated content omission."
+  },
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-05/01-muc-01.md": "d529b47f1c629ed98ba4ca04164ded4f804b8d14aa3ba6c62e2ddaba7bfb002c",
+    "raw_materials/physics/translations/chapter-05/02-muc-02.md": "527b5a913358aeff13bc4f1305cfee5f860935e6e87640ede2e6961cca6d3ee4",
+    "raw_materials/physics/translations/chapter-05/03-muc-03.md": "4215db96b8e12193695f8e6706b4f85ebd77c20ab8755e460fe7e80963cbbb72",
+    "raw_materials/physics/translations/chapter-05/04-muc-04.md": "1cb5717ad02dcfb35f287ba2292d5cda971d33d243be9b06115d1c2425276979"
+  },
+  "checks": [
+    {
+      "name": "lecture",
+      "exitCode": 0,
+      "log": "qa\\physics1-remaining\\ch05-theory-delta-20261027\\lecture.log"
+    },
+    {
+      "name": "skill-tools",
+      "exitCode": 0,
+      "log": "qa\\physics1-remaining\\ch05-theory-delta-20261027\\skill-tools.log"
+    }
+  ],
+  "skillTests": 39,
+  "lectureErrors": 0,
+  "lectureWarnings": 0,
+  "displayMath": 122,
+  "inlineMath": 590,
+  "strictMathStatus": "passed",
+  "actualViewportCases": 20,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "browserReportSHA256": "71ce716186c4e7d2e161b02605237346cb06a5db3faa955988adcfcccbcc9868",
+  "numericReviewSHA256": "bf693b5b47e1b84234d948cfadf57efa73629b27c6489efee17118cc1a267b6b",
+  "scopeLimit": "Accepts only these seven findings and the changed theory runtime. Does not certify all source units, end exercises or chapter readiness. No image assets changed. No local full build."
+}
