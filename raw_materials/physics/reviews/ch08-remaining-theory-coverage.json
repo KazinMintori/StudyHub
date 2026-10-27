@@ -1,6 +1,6 @@
 {
   "chapter": 8,
-  "status": "complete-chapter8-source-reviewed-local-runtime-passed-pending-cloud",
+  "status": "complete-chapter8-source-reviewed-and-publicly-verified",
   "sourcePDFPages": [
     255,
     280
@@ -532,7 +532,12 @@
     1440
   ],
   "browserStatus": "passed",
-  "completionBlocker": "FullGitHub build/deploy and public release verification remain pending. Full two-course audit, final report and cleanup are separate.",
+  "completionBlocker": "No chapter8-specific completion blocker. Fulltwo-course audit, final overall release/report and cleanup remain separate.",
   "sourceReview": "raw_materials/physics/reviews/physics1-chapter08-final-20261027.md",
-  "actualIntegratedRouteCases": 220
+  "actualIntegratedRouteCases": 220,
+  "publicRelease": {
+    "commit": "0f14d2d7b4ac4f49de8d3d73dbc5ced20c73ea0a",
+    "runId": 40544177425,
+    "status": "build-deploy-public-verification-passed"
+  }
 }

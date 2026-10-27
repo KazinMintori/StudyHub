@@ -1,6 +1,6 @@
 {
-  "status": "chapter8-parent-source-reviewed-local-runtime-passed-pending-cloud",
-  "checkedUTC": "2026-10-27T16:46:12.969491+00:00",
+  "status": "chapter8-source-reviewed-and-publicly-verified",
+  "checkedUTC": "2026-10-27T17:31:04.784191+00:00",
   "sourceChapter": 8,
   "sourcePDFPagesTheory": [
     255,
@@ -114,7 +114,7 @@
     "qa/physics1-remaining/ch08-whole148-20261027/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
     "qa/physics1-remaining/ch08-whole148-20261027/skill-tests.log": "e7e4118da9ab30fa1936ece558cc1cf4c77d82399556b7f4e87ba0d80d6b14ea"
   },
-  "scopeLimit": "This report certifies the reviewed chapter8 source and actual local routes only. Cloud build/deploy/public release, full Physics1and2audit, final report and cleanup remain pending.",
+  "scopeLimit": "Chapter8source, local and public runtime are verified. CompletePhysics1/Physics2source/exercise/support/format audit, final overall release/report/cleanup remain pending.",
   "mergedNavigationVerification": {
     "upstreamMain": "ace76ebe282a3541105deca009c4d67caed4a65c",
     "testedMerge": "206d5b6b",
@@ -128,5 +128,27 @@
     "checks": "Search, tab scroll reset, shared outline, deep-link reload, quick page jumps and study workspace selection/tabs.",
     "unitTests": 23,
     "logSHA256": "7c78cd5fd8ff2c29f40aec4b225176cf1323f9d12c48e31c7ebe8cfe57cadc71"
+  },
+  "publicRelease": {
+    "commit": "0f14d2d7b4ac4f49de8d3d73dbc5ced20c73ea0a",
+    "runId": 40544177425,
+    "url": "https://github.com/KazinMintori/StudyHub/actions/runs/40544177425",
+    "build": "success",
+    "deploy": "success",
+    "actualPublicTheoryCases": 35,
+    "actualPublicExerciseCases": 135,
+    "actualPublicSupportCases": 50,
+    "actualPublicCases": 220,
+    "originalAndSolutionImageBytesVerified": 76,
+    "sourceHashesMatchGit": true,
+    "all27groupsVerified": true,
+    "note": "Theoryassets resolved from actual emitted HTML URLs. Vite hashes bundled filenames; rawsource URL assumptions were rejected after404."
+  },
+  "publicEvidence": {
+    "qa/physics1-remaining/ch08-whole148-20261027/public-route-theory/results.json": "4a0afa49aa83e4e824787fabe3c6e34d6f479ef37cf0ae3c70c3517620eae559",
+    "qa/physics1-remaining/ch08-whole148-20261027/public-route-exercises/results.json": "eaccbdaee0f45554314aa770ef8720c076d5535bbf111de0f62b9da6b35ab0a9",
+    "qa/physics1-remaining/ch08-whole148-20261027/public-support-route-review.json": "2b229bf5a65c17fbcd114faa92ff9eda3e60f9af9399e85b0f869b9ec12208d9",
+    "qa/physics1-remaining/ch08-whole148-20261027/public-assets-review.json": "d0f119613232f60bbf32d07f5c1078e8b4bf80ef04c9c3508ceb53412c2aaca5",
+    "qa/physics1-remaining/ch08-whole148-20261027/cloud-release-status.json": "77d327799a392d4f21db03966d4fe6340131cf6028088e93158a11dff2da1e09"
   }
 }

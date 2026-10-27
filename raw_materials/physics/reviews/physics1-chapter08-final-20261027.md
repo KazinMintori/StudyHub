@@ -1,6 +1,6 @@
 # Hoàn thiện chương 8: Động lượng, xung lượng và va chạm
 
-Chương 8 đã hoàn tất phần nội dung và kiểm tra trên trang học cục bộ. Bài giảng được chuyển sang trạng thái sẵn sàng. Build, deploy và xác minh bản công khai đang chờ thực hiện trên GitHub. Báo cáo này chưa xác nhận hoàn tất đợt rà toàn bộ hai học phần.
+Chương 8 đã hoàn tất phần nội dung và kiểm tra trên trang học cục bộ lẫn bản công khai. Bài giảng đã ở trạng thái sẵn sàng. Build và deploy trên GitHub đã thành công. Báo cáo này chưa xác nhận hoàn tất đợt rà toàn bộ hai học phần.
 
 Giữ đủ sáu mục lý thuyết, 16 ví dụ có lời giải, sáu câu tự kiểm nằm trong mạch giảng và 40 phương trình đánh số. Đã đối chiếu lời dẫn, ứng dụng, giả thiết, các bước chứng minh và phần đánh giá kết quả với trang PDF 255–280. Phần giải thích phân biệt công với xung lượng, động lượng với động năng, vận tốc khối tâm không đổi với khối tâm đứng yên, vận tốc khí đối với tên lửa với vận tốc trong hệ quan sát.
 
@@ -28,3 +28,7 @@ Cheatsheet gồm 39 dòng công thức cùng các định nghĩa, tính chất, 
 - Chỉ mục chương 8 được sinh lại bằng chương trình hiện có với bộ lọc riêng. 137 chỉ mục còn lại giữ nguyên từng byte, bao gồm tệp chương 6 đã có thay đổi từ trước.
 
 Mã băm nguồn, phạm vi từng bằng chứng và các quyết định rà soát được lưu trong JSON đi kèm. Các kết quả trên chứng minh phạm vi chương 8 đã kiểm, không thay thế việc duyệt toàn bộ Vật lý đại cương 1 và 2.
+
+## Xác minh bản công khai
+
+Commit `0f14d2d7b4ac4f49de8d3d73dbc5ced20c73ea0a` đã build và deploy thành công trong [GitHub Actions 40544177425](https://github.com/KazinMintori/StudyHub/actions/runs/40544177425). Bản công khai đạt 220 trường hợp hiển thị thực tế, gồm đủ 148 mục trong 27 nhóm bài tập. Có 76 ảnh lý thuyết và bài tập khớp từng byte với commit được xuất bản. Đường dẫn ảnh lý thuyết được lấy từ HTML đã xuất bản vì Vite thêm mã băm vào tên tệp.
