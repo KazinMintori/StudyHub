@@ -1,0 +1,1466 @@
+{
+  "status": "allPhysics2chapters22–44observed-with-confirmed-layout-backlog",
+  "checkedUTC": "2026-10-27T17:30:20.170502+00:00",
+  "chapters": [
+    {
+      "chapter": 22,
+      "lesson": "03-dinh-luat-gauss",
+      "theoryPages": 6,
+      "cases": 30,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 23,
+      "lesson": "02-dien-the",
+      "theoryPages": 6,
+      "cases": 30,
+      "failedViewportCases": 1,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "the-nang-dien",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 296.984375,
+              "available": 280
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 24,
+      "lesson": "04-tu-dien-dien-moi",
+      "theoryPages": 7,
+      "cases": 35,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 25,
+      "lesson": "05-dong-dien-dien-tro",
+      "theoryPages": 7,
+      "cases": 35,
+      "failedViewportCases": 2,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "suat-dien-dong",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 328.3125,
+              "available": 318
+            }
+          ]
+        },
+        {
+          "topic": "suat-dien-dong",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 328.3125,
+              "available": 278
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 26,
+      "lesson": "06-mach-dien-mot-chieu",
+      "theoryPages": 6,
+      "cases": 30,
+      "failedViewportCases": 7,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "noi-tiep-song-song",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 519.859375,
+              "available": 335
+            },
+            {
+              "kind": "math-overflow",
+              "width": 397.5625,
+              "available": 335
+            },
+            {
+              "kind": "math-overflow",
+              "width": 371.59375,
+              "available": 335
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "noi-tiep-song-song",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 519.859375,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 397.5625,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 371.59375,
+              "available": 320
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "noi-tiep-song-song",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 315.4375,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 519.859375,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 290.5625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 313.03125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 397.5625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 371.59375,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 320.59375,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 292.96875,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 268.140625,
+              "available": 258
+            },
+            {
+              "kind": "math-overflow",
+              "width": 260.359375,
+              "available": 258
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "kirchhoff",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 441.578125,
+              "available": 335
+            },
+            {
+              "kind": "math-overflow",
+              "width": 391.953125,
+              "available": 335
+            },
+            {
+              "kind": "math-overflow",
+              "width": 411.734375,
+              "available": 335
+            },
+            {
+              "kind": "math-overflow",
+              "width": 469.6875,
+              "available": 333
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "kirchhoff",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 441.578125,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 322.625,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 332.21875,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 391.953125,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 411.734375,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 325.78125,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 469.6875,
+              "available": 318
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "kirchhoff",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 441.578125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 322.625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 332.21875,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 294.671875,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 391.953125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 411.734375,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 325.78125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 286,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 469.6875,
+              "available": 278
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "mach-rc",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 309.703125,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 27,
+      "lesson": "07-tu-truong-luc-tu",
+      "theoryPages": 10,
+      "cases": 50,
+      "failedViewportCases": 7,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "tu-truong",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 301.703125,
+              "available": 277
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "ung-dung-hat",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 295.703125,
+              "available": 280
+            }
+          ]
+        },
+        {
+          "topic": "vong-day-mo-men",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 289.765625,
+              "available": 280
+            }
+          ]
+        },
+        {
+          "topic": "dong-co-dien",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 357.078125,
+              "available": 335
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "dong-co-dien",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 357.078125,
+              "available": 320
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "dong-co-dien",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 357.078125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 287.15625,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "hall",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 308.171875,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 28,
+      "lesson": "08-nguon-tu-truong",
+      "theoryPages": 9,
+      "cases": 45,
+      "failedViewportCases": 3,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "tu-truong-day-thang",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 320.515625,
+              "available": 317
+            }
+          ]
+        },
+        {
+          "topic": "tu-truong-day-thang",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 320.515625,
+              "available": 277
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "ung-dung-ampere",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 290.515625,
+              "available": 280
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 29,
+      "lesson": "09-cam-ung-dien-tu",
+      "theoryPages": 9,
+      "cases": 45,
+      "failedViewportCases": 9,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "dinh-luat-faraday",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 324.234375,
+              "available": 320
+            }
+          ]
+        },
+        {
+          "topic": "dinh-luat-faraday",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 324.234375,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "suat-dien-dong-chuyen-dong",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 322.921875,
+              "available": 320
+            }
+          ]
+        },
+        {
+          "topic": "suat-dien-dong-chuyen-dong",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 322.921875,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "dien-truong-cam-ung",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 377.765625,
+              "available": 335
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "dien-truong-cam-ung",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 377.765625,
+              "available": 320
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "dien-truong-cam-ung",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 377.765625,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "dong-dien-dich-maxwell",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 335.046875,
+              "available": 320
+            }
+          ]
+        },
+        {
+          "topic": "dong-dien-dich-maxwell",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 335.046875,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 30,
+      "lesson": "10-tu-cam",
+      "theoryPages": 7,
+      "cases": 35,
+      "failedViewportCases": 7,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "ho-cam",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 473.171875,
+              "available": 332
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "ho-cam",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 473.171875,
+              "available": 317
+            },
+            {
+              "kind": "math-overflow",
+              "width": 325.265625,
+              "available": 317
+            },
+            {
+              "kind": "math-overflow",
+              "width": 324.078125,
+              "available": 317
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "ho-cam",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 473.171875,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 304.15625,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 325.265625,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 324.078125,
+              "available": 277
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "tu-cam-cuon-cam",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 430.75,
+              "available": 332
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "tu-cam-cuon-cam",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 430.75,
+              "available": 317
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "tu-cam-cuon-cam",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 430.75,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 312.140625,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 270.75,
+              "available": 246
+            },
+            {
+              "kind": "math-overflow",
+              "width": 285.671875,
+              "available": 246
+            },
+            {
+              "kind": "math-overflow",
+              "width": 265.40625,
+              "available": 246
+            },
+            {
+              "kind": "math-overflow",
+              "width": 249.25,
+              "available": 246
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "mach-rlc",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 266.296875,
+              "available": 246
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 31,
+      "lesson": "11-dong-dien-xoay-chieu",
+      "theoryPages": 7,
+      "cases": 35,
+      "failedViewportCases": 6,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "mach-rlc-noi-tiep",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 409.265625,
+              "available": 335
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "mach-rlc-noi-tiep",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 409.265625,
+              "available": 320
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "mach-rlc-noi-tiep",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 409.265625,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "cong-suat-xoay-chieu",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 356.734375,
+              "available": 335
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "cong-suat-xoay-chieu",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 326.890625,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 356.734375,
+              "available": 320
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "cong-suat-xoay-chieu",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 326.890625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 356.734375,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 32,
+      "lesson": "12-song-dien-tu",
+      "theoryPages": 6,
+      "cases": 30,
+      "failedViewportCases": 8,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "song-hinh-sin",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 335.109375,
+              "available": 320
+            }
+          ]
+        },
+        {
+          "topic": "song-hinh-sin",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 309.15625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 335.109375,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "nang-luong-dong-luong",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 386.890625,
+              "available": 335
+            },
+            {
+              "kind": "math-overflow",
+              "width": 463.296875,
+              "available": 332
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "nang-luong-dong-luong",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 386.890625,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 330.875,
+              "available": 317
+            },
+            {
+              "kind": "math-overflow",
+              "width": 463.296875,
+              "available": 317
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "nang-luong-dong-luong",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 386.890625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 298.328125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 330.875,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 463.296875,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 282.921875,
+              "available": 277
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "song-dung-dien-tu",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 353.6875,
+              "available": 335
+            },
+            {
+              "kind": "math-overflow",
+              "width": 565.75,
+              "available": 332
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "song-dung-dien-tu",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 333.59375,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 353.6875,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 565.75,
+              "available": 317
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "song-dung-dien-tu",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 333.59375,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 353.6875,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 565.75,
+              "available": 277
+            },
+            {
+              "kind": "math-overflow",
+              "width": 318.015625,
+              "available": 277
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 33,
+      "lesson": "13-truyen-anh-sang",
+      "theoryPages": 8,
+      "cases": 40,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 34,
+      "lesson": "14-quang-hinh-hoc",
+      "theoryPages": 9,
+      "cases": 45,
+      "failedViewportCases": 10,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "guong-phang",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 265.734375,
+              "available": 246
+            },
+            {
+              "kind": "math-overflow",
+              "width": 265.734375,
+              "available": 246
+            }
+          ]
+        },
+        {
+          "topic": "guong-cau",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 344.703125,
+              "available": 335
+            }
+          ]
+        },
+        {
+          "topic": "guong-cau",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 344.703125,
+              "available": 320
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "guong-cau",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 344.703125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 286.546875,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "khuc-xa-mat-cau",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 301,
+              "available": 280
+            }
+          ]
+        },
+        {
+          "topic": "thau-kinh-mong",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 322.015625,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 322.015625,
+              "available": 320
+            },
+            {
+              "kind": "math-overflow",
+              "width": 331.171875,
+              "available": 320
+            }
+          ]
+        },
+        {
+          "topic": "thau-kinh-mong",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 283.09375,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 322.015625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 322.015625,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 298.78125,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 331.171875,
+              "available": 280
+            },
+            {
+              "kind": "math-overflow",
+              "width": 299,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "may-anh",
+          "width": 375,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 456.234375,
+              "available": 335
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "may-anh",
+          "width": 360,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 456.234375,
+              "available": 320
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        },
+        {
+          "topic": "may-anh",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 456.234375,
+              "available": 280
+            },
+            {
+              "kind": "page-overflow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 35,
+      "lesson": "15-giao-thoa",
+      "theoryPages": 6,
+      "cases": 30,
+      "failedViewportCases": 1,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "cuong-do-giao-thoa",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 258.28125,
+              "available": 246
+            },
+            {
+              "kind": "math-overflow",
+              "width": 254.25,
+              "available": 246
+            },
+            {
+              "kind": "math-overflow",
+              "width": 275.921875,
+              "available": 246
+            },
+            {
+              "kind": "math-overflow",
+              "width": 267.859375,
+              "available": 246
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 36,
+      "lesson": "16-nhieu-xa",
+      "theoryPages": 9,
+      "cases": 45,
+      "failedViewportCases": 2,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "main-notes",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 301.390625,
+              "available": 280
+            }
+          ]
+        },
+        {
+          "topic": "nhieu-xa-mot-khe",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 229.46875,
+              "available": 226
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 37,
+      "lesson": "17-thuyet-tuong-doi",
+      "theoryPages": 10,
+      "cases": 50,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 38,
+      "lesson": "18-photon",
+      "theoryPages": 5,
+      "cases": 25,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 39,
+      "lesson": "19-song-vat-chat",
+      "theoryPages": 7,
+      "cases": 35,
+      "failedViewportCases": 1,
+      "status": "observed-layout-defects",
+      "defects": [
+        {
+          "topic": "muc-nang-luong-bohr",
+          "width": 320,
+          "errors": [
+            {
+              "kind": "math-overflow",
+              "width": 270.546875,
+              "available": 260
+            },
+            {
+              "kind": "math-overflow",
+              "width": 264.921875,
+              "available": 260
+            },
+            {
+              "kind": "math-overflow",
+              "width": 289.328125,
+              "available": 278
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 40,
+      "lesson": "20-ham-song-schrodinger",
+      "theoryPages": 7,
+      "cases": 35,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 41,
+      "lesson": "21-cau-truc-nguyen-tu",
+      "theoryPages": 9,
+      "cases": 45,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 42,
+      "lesson": "22-chat-ran-ban-dan",
+      "theoryPages": 9,
+      "cases": 45,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 43,
+      "lesson": "23-vat-ly-hat-nhan",
+      "theoryPages": 9,
+      "cases": 45,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    },
+    {
+      "chapter": 44,
+      "lesson": "24-hat-co-ban-vu-tru",
+      "theoryPages": 8,
+      "cases": 40,
+      "failedViewportCases": 0,
+      "status": "observed-layout-passed",
+      "defects": []
+    }
+  ],
+  "totalCases": 880,
+  "failedViewportCases": 64,
+  "evidence": {
+    "qa/physics-global-audit/runtime-physics2-20261028/ch22/theory/results.json": {
+      "sha256": "17323e46f35cba8ae570eceae18a17b07d69670c07b0e81bc571a599793c63e2",
+      "reportedStatus": "passed",
+      "scopeSelection": [
+        22
+      ],
+      "observation": "Completedreportforselectedscope."
+    },
+    "qa/physics-global-audit/runtime-physics2-20261028/chapters-23-to-44/theory/results.json": {
+      "sha256": "95f9bdda6ff890aef4120300f47df36af6aaf85062269a598fb536d2c0996438",
+      "reportedStatus": "running",
+      "scopeSelection": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "observation": "Theold23–44runner was interrupted after complete23–40andpartial41. Onlycomplete chapters23–40areaccepted as observations, not a successful overall run."
+    },
+    "qa/physics-global-audit/runtime-physics2-20261028-v2/chapters-41-to-44/theory/results.json": {
+      "sha256": "af95d8cd4da62e977d5f663900f21eba8ebf9fadc6cb0bf0db3ea668998052ad",
+      "reportedStatus": "passed",
+      "scopeSelection": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "observation": "Completedreportforselectedscope."
+    }
+  },
+  "scopeLimit": "Public Notes/topic layout observations only, before all future repairs. Does not prove source completeness, exact deployed revision, exercises, Wiki or cheatsheet. Chapter21currentlocal repairs are recorded separately."
+}
