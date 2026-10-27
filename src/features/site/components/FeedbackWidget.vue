@@ -12,7 +12,6 @@ const { dialog, trigger, descriptionInput, category, description, context, error
 <template>
   <button ref="trigger" type="button" class="feedback-trigger" aria-label="Góp ý hoặc báo lỗi bài học" aria-haspopup="dialog" aria-controls="feedback-dialog" title="Góp ý hoặc báo lỗi bài học" @click="show">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5A8.5 8.5 0 0 1 10.5 3h2A8.5 8.5 0 0 1 21 11.5Z" /><path d="M7 9h9M7 13h6" /></svg>
-    <span>Góp ý</span>
   </button>
   <Teleport to="body">
     <dialog id="feedback-dialog" ref="dialog" class="feedback-dialog" aria-labelledby="feedback-title" aria-describedby="feedback-help" @cancel.stop.prevent="close" @close="onClose" @click="onBackdropClick">
@@ -44,7 +43,7 @@ const { dialog, trigger, descriptionInput, category, description, context, error
 </template>
 
 <style scoped>
-.feedback-trigger { position: fixed; right: max(var(--space-4), env(safe-area-inset-right)); bottom: max(var(--space-4), env(safe-area-inset-bottom)); z-index: 22; display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-width: 44px; min-height: 44px; padding: 0 var(--space-3); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--paper); color: var(--ink-2); box-shadow: var(--shadow-soft); font: 500 var(--fs-meta)/1.4 var(--font-ui); cursor: pointer; transition: color var(--motion-fast), border-color var(--motion-fast); }
+.feedback-trigger { position: fixed; right: max(var(--space-4), env(safe-area-inset-right)); bottom: max(var(--space-4), env(safe-area-inset-bottom)); z-index: 22; display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); color: var(--ink-2); cursor: pointer; transition: color var(--motion-fast), border-color var(--motion-fast); }
 .feedback-trigger:hover { color: var(--tim); border-color: var(--tim); }
 .feedback-dialog { position: fixed; inset: auto var(--space-4) var(--space-4) auto; box-sizing: border-box; width: min(400px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); overflow-y: auto; margin: 0; padding: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-xl); background: var(--paper); color: var(--ink); box-shadow: var(--shadow); font: var(--fs-small)/1.6 var(--font-ui); }
 .feedback-dialog::backdrop { background: var(--scrim); opacity: .25; }

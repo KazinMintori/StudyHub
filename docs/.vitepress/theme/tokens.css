@@ -38,7 +38,9 @@
   --vp-c-warning-1: var(--vang); --vp-c-warning-soft: var(--vang-soft);
   --vp-c-danger-1: var(--do); --vp-c-danger-soft: var(--do-soft);
   --vp-code-block-bg: var(--canvas); --vp-code-bg: var(--sunken); --vp-code-color: var(--ink);
-  --vp-nav-height: 56px; --vp-sidebar-width: 272px; --vp-layout-max-width: 1440px;
+  --page-gutter: 32px; --reading-width: 880px; --reading-rail: 208px;
+  --reading-gap: 32px; --reading-shell: 1120px;
+  --vp-nav-height: 56px; --vp-sidebar-width: 248px; --vp-layout-max-width: 1440px;
   --vp-header-anchor-symbol: '';
 }
 .dark {
@@ -56,5 +58,5 @@
   --shadow-lift: 0 2px 4px rgb(0 0 0 / .25), 0 16px 36px rgb(0 0 0 / .35);
 }
 @media (max-width: 767px) {
-  :root { --fs-display: 30px; --fs-h1: 28px; --fs-h2: 22px; --fs-h3: 19px; --fs-read: 17px; }
+  :root { --page-gutter: 20px; --fs-display: 30px; --fs-h1: 28px; --fs-h2: 22px; --fs-h3: 19px; --fs-read: 17px; }
 }

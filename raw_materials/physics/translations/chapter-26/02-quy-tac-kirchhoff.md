@@ -115,7 +115,7 @@ Mạch chỉ có một vòng và không có nút phân nhánh, nên không cần
 
 #### Thực hiện
 
-**(a) Tìm dòng điện.** Bắt đầu tại $a$ và đi ngược chiều kim đồng hồ, cùng chiều dòng điện giả định. Ta lần lượt gặp các độ giảm thế trên điện trở và các độ tăng, giảm thế qua hai pin:
+**(a) Tìm dòng điện.** Bắt đầu tại $a$ và đi ngược chiều kim đồng hồ, cùng chiều dòng điện giả định. Tổng độ tăng thế do hai pin bằng tổng độ giảm thế trên bốn điện trở:
 
 Gọi hai tổng điện trở trên nhánh dưới và nhánh trên lần lượt là:
 
@@ -433,7 +433,7 @@ Cần trừ phương trình vòng (1) khỏi phương trình vòng (2), rồi x�
 
 #### Hướng đi
 
-Phép trừ cho
+Phép trừ và thu gọn các số hạng cho
 
 Chia phương trình hiệu cho $1\,\Omega$ như khi lập hệ:
 

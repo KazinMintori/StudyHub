@@ -14,10 +14,12 @@ function jump(end) {
 </template>
 
 <style scoped>
-.reading-page-controls { position: fixed; right: max(var(--space-3), env(safe-area-inset-right)); bottom: calc(max(var(--space-4), env(safe-area-inset-bottom)) + 56px); z-index: 22; display: grid; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow-soft); }
+.reading-page-controls { position: fixed; right: max(var(--space-4), env(safe-area-inset-right)); bottom: calc(max(var(--space-4), env(safe-area-inset-bottom)) + 56px); z-index: 22; display: grid; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); }
 button { display: grid; place-items: center; width: 44px; height: 44px; color: var(--ink-2); border-radius: var(--radius-sm); }
 button + button { border-top: 1px solid var(--rule); }
 button:hover { background: var(--tim-soft); color: var(--tim); }
 svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 1279px) { .reading-page-controls { position: static; display: flex; justify-content: center; width: fit-content; margin: var(--space-4) auto; } button + button { border-top: 0; border-left: 1px solid var(--rule); } }
+:global(html.study-zen-mode .reading-page-controls) { display: none; }
 @media print { .reading-page-controls { display: none; } }
 </style>

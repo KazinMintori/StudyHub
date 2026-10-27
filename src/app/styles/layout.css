@@ -1,5 +1,5 @@
 .VPNavBar .VPNavBarTitle .title { font-size: var(--fs-h3); font-family: var(--font-ui); font-weight: 700; letter-spacing: 0; color: var(--ink); }
-.VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-ui); }
+.VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-small); }
 .VPNavBar .VPNavBarSearch { display: none; }
 .VPNavBar .content-body { background: var(--paper); }
 .nav-extra-tools { display: inline-flex; flex: 0 0 auto; min-width: 0; align-items: center; gap: var(--space-2); margin-left: var(--space-3); }
@@ -34,9 +34,7 @@
   .Layout.sidebar-collapsed .VPSidebar { display: none; }
   .Layout.sidebar-collapsed .VPContent.has-sidebar { padding-inline: 0; }
   .Layout.sidebar-collapsed .VPLocalNav.has-sidebar { padding-left: 0; }
-  .Layout.sidebar-collapsed .VPLocalNav .container { max-width: calc(780px + 64px); margin-inline: auto; }
-  .Layout.sidebar-collapsed .VPDoc.has-sidebar .container { max-width: 1184px; justify-content: center; }
-  .Layout.sidebar-collapsed .VPDoc.has-sidebar .content-container { margin-inline: auto; }
+  .Layout.sidebar-collapsed .VPLocalNav .container { max-width: calc(var(--reading-width) + 64px); margin-inline: auto; }
   .Layout.sidebar-collapsed .VPContent.has-sidebar ~ .site-introduction { margin-inline: 0; }
 }
 @media print {
@@ -56,26 +54,32 @@
   .Layout.sidebar-collapsed .VPLocalNavOutlineDropdown .items { left: max(32px, calc((100% - 844px) / 2 + 32px)); }
 }
 .VPHome { padding-bottom: 0; margin-bottom: 0; }
-.study-home, .course-shell, .study-workspace { max-width: 1184px; margin: 0 auto; padding: var(--space-7) var(--space-6) var(--space-8); }
+.study-home, .course-shell, .study-workspace { max-width: 1184px; margin: 0 auto; padding: var(--space-6) var(--page-gutter) var(--space-8); }
 .site-footer { max-width: 1184px; margin: var(--space-6) auto 0; padding: var(--space-5) var(--space-6); border-top: 1px solid var(--rule); display: flex; justify-content: center; align-items: center; gap: var(--space-5); flex-wrap: wrap; font-size: var(--fs-small); color: var(--ink-3); }
 .site-footer a, .site-footer button { color: var(--tim); min-height: 44px; display: inline-flex; align-items: center; }
 .site-footer button:hover { color: var(--tim-hover); }
 .coffee-footer-btn { gap: var(--space-2); }
 .coffee-footer-icon { width: 18px; height: 18px; flex-shrink: 0; display: block; }
-.VPSidebar .VPSidebarItem .text { font-size: var(--fs-ui); line-height: 1.45; }
-.Layout .VPDoc .content-container { max-width: 780px; }
-.Layout .VPDoc.has-aside .content-container { max-width: 780px; }
+.VPSidebar .VPSidebarItem .text { font-size: var(--fs-small); line-height: 1.5; }
+/* A single reading grid replaces the nested VitePress paddings. Header, tabs,
+   article and footer share an edge; the outline only uses the remaining rail. */
+.Layout .VPDoc { padding: var(--space-6) var(--page-gutter) var(--space-8); }
+.Layout .VPDoc .container { display: flex; justify-content: center; gap: var(--reading-gap); max-width: var(--reading-shell); }
+.Layout .VPDoc .content { flex: 1 1 0; min-width: 0; max-width: var(--reading-width); padding: 0; margin: 0; }
+.Layout .VPDoc .content-container,
+.Layout .VPDoc.has-aside .content-container { width: 100%; max-width: var(--reading-width); margin-inline: 0; }
 .Layout .VPLocalNav button, .VPDocFooter .pager-link .desc { font-size: var(--fs-small); }
-.VPDoc .aside { width: 220px; padding-left: var(--space-6); }
+.Layout .VPDoc .aside { flex: 0 0 var(--reading-rail); width: var(--reading-rail); max-width: var(--reading-rail); padding: 0; }
 .VPDoc .aside-container {
   position: sticky !important;
   top: calc(var(--vp-nav-height) + 24px) !important;
-  width: 188px !important;
+  width: 100% !important;
   height: auto !important;
   max-height: calc(100vh - var(--vp-nav-height) - 48px) !important;
   overflow-y: auto !important;
   padding-top: 0 !important;
   scrollbar-width: thin;
+  scrollbar-color: var(--rule) transparent;
 }
 .VPDoc .aside-content {
   min-height: 0 !important;
@@ -89,18 +93,10 @@
 .VPDoc .outline-link.active { color: var(--tim); }
 .shared-reading-outline .VPDocAsideOutline,
 .shared-reading-outline .VPLocalNavOutlineDropdown { display: none !important; }
-.lecture-layout .VPDoc.has-sidebar .container { justify-content: flex-start; }
-.lecture-layout .VPDoc.has-sidebar .content-container { margin-left: 0; }
 .lecture-alt .main > .vp-doc, .lecture-alt .VPDocFooter { display: none; }
 .lecture-layout .VPDocFooter .prev-next { display: none; }
 .lecture-layout .VPDocFooter { padding-top: var(--space-4); margin-top: 0; }
 .lecture-layout .VPDocFooter .last-updated { display: none; }
-.lecture-layout .VPDoc.has-sidebar .content { padding-left: var(--space-5); padding-right: var(--space-5); }
-@media (min-width: 1440px) {
-  .Layout.lecture-layout:not(.lecture-alt) .VPDoc.has-aside .content-container { max-width: 840px; }
-  .lecture-layout .VPDoc .content { max-width: 888px; }
-  .lecture-layout .main > .vp-doc > div > :is(p, h2, h3, h4, ul, ol, blockquote) { max-width: 100%; }
-}
 @media (min-width: 768px) and (max-width: 1199px) {
   /* VitePress exposes no token for this intermediate menu breakpoint. */
   .VPNavBar .VPNavBarMenu, .VPNavBar .VPNavBarExtra, .VPNavBar .VPNavBarAppearance { display: none !important; }
@@ -110,18 +106,18 @@
 @media (max-width: 767px) {
   .study-home, .course-shell, .study-workspace { padding: var(--space-6) 20px var(--space-7); }
   .site-footer { padding: var(--space-5) 20px; gap: var(--space-3); }
-  .lecture-layout .VPDoc { padding: var(--space-3) 20px var(--space-7); }
-  .lecture-layout .VPDoc.has-sidebar .content { padding: 0; }
+  .Layout.lecture-layout .VPDoc { padding-top: var(--space-3); }
   .lecture-layout .VPLocalNav { display: none; }
 }
 
 @media (min-width: 960px) {
   html.study-zen-mode .VPSidebar { display: none !important; }
-  html.study-zen-mode .VPContent.has-sidebar { padding-left: 0 !important; margin-left: 0 !important; }
+  html.study-zen-mode .VPContent.has-sidebar { padding-inline: 0 !important; margin-left: 0 !important; }
+  html.study-zen-mode .Layout .site-introduction { margin-inline: 0; }
   html.study-zen-mode .VPDoc.has-aside .aside { display: none !important; }
   html.study-zen-mode .VPDoc .container { justify-content: center !important; }
   html.study-zen-mode .Layout .VPDoc .content-container,
-  html.study-zen-mode .Layout .VPDoc.has-aside .content-container { max-width: 780px !important; margin-inline: auto !important; }
+  html.study-zen-mode .Layout .VPDoc.has-aside .content-container { max-width: var(--reading-width) !important; margin-inline: auto !important; }
 }
 
 /* The reference pane gets its own space; it never covers the reading column. */

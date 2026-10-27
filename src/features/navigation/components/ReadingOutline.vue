@@ -24,12 +24,12 @@ watch(lecturePart, close)
 
 <style scoped>
 .reading-outline { font: var(--fs-small)/1.5 var(--font-ui); }
-.reading-outline-title { margin: 0 0 var(--space-3); color: var(--ink); font-weight: 600; }
-nav { display: grid; gap: var(--space-1); }
-nav a { display: block; padding: var(--space-2) 0; color: var(--ink-3); text-decoration: none; overflow-wrap: anywhere; }
-nav a.nested { padding-left: var(--space-3); }
+.reading-outline-title { margin: 0 0 var(--space-2); color: var(--ink-2); font-weight: 600; }
+nav { display: grid; gap: 0; border-left: 1px solid var(--rule); }
+nav a { display: block; padding: 6px var(--space-3); border-left: 2px solid transparent; margin-left: -1px; color: var(--ink-3); text-decoration: none; overflow-wrap: anywhere; }
+nav a.nested { padding-left: var(--space-5); }
 nav a:hover, nav a[aria-current] { color: var(--tim); }
-nav a[aria-current] { font-weight: 600; }
+nav a[aria-current] { border-left-color: var(--tim); font-weight: 500; }
 .reading-outline-dropdown { display: none; position: relative; margin-left: auto; }
 summary { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; padding-inline: var(--space-2); color: var(--tim); cursor: pointer; list-style: none; }
 summary::-webkit-details-marker { display: none; }
