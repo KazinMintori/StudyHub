@@ -1,0 +1,139 @@
+{
+  "assets": [
+    {
+      "key": "s-bridge-three-states",
+      "sha256": "9915714c46c1c5f88cbc58f64ac98e664d162823b600567c711c3ec76cee85c6",
+      "minimumFontUnits": 20,
+      "arrows": [
+        {
+          "state": 0,
+          "object": "A",
+          "startScreen": [
+            100,
+            90
+          ],
+          "velocityMps": [
+            4,
+            0
+          ],
+          "scale": 30,
+          "arrowDrawn": true
+        },
+        {
+          "state": 0,
+          "object": "B",
+          "startScreen": [
+            100,
+            165
+          ],
+          "velocityMps": [
+            2,
+            0
+          ],
+          "scale": 30,
+          "arrowDrawn": true
+        },
+        {
+          "state": 0,
+          "object": "C",
+          "startScreen": [
+            100,
+            240
+          ],
+          "velocityMps": [
+            0,
+            0
+          ],
+          "scale": 30,
+          "arrowDrawn": false
+        },
+        {
+          "state": 1,
+          "object": "A",
+          "startScreen": [
+            100,
+            90
+          ],
+          "velocityMps": [
+            1,
+            0
+          ],
+          "scale": 30,
+          "arrowDrawn": true
+        },
+        {
+          "state": 1,
+          "object": "B",
+          "startScreen": [
+            100,
+            165
+          ],
+          "velocityMps": [
+            3,
+            0
+          ],
+          "scale": 30,
+          "arrowDrawn": true
+        },
+        {
+          "state": 1,
+          "object": "C",
+          "startScreen": [
+            100,
+            240
+          ],
+          "velocityMps": [
+            0,
+            0
+          ],
+          "scale": 30,
+          "arrowDrawn": false
+        },
+        {
+          "state": 2,
+          "object": "A",
+          "startScreen": [
+            100,
+            90
+          ],
+          "velocityMps": [
+            1,
+            0
+          ],
+          "scale": 30,
+          "arrowDrawn": true
+        },
+        {
+          "state": 2,
+          "object": "B",
+          "startScreen": [
+            100,
+            165
+          ],
+          "velocityMps": [
+            1.8910371511986337,
+            0.6511363089143134
+          ],
+          "scale": 30,
+          "arrowDrawn": true
+        },
+        {
+          "state": 2,
+          "object": "C",
+          "startScreen": [
+            100,
+            240
+          ],
+          "velocityMps": [
+            1.6634442732020498,
+            -0.9767044633714702
+          ],
+          "scale": 30,
+          "arrowDrawn": true
+        }
+      ],
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-08/solution-s8-bridge-three-states.svg",
+      "generator": "scripts/generate-physics1-remaining-08-bridge-solution.py"
+    }
+  ]
+}
