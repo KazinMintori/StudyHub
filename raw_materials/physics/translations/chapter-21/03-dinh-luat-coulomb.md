@@ -40,8 +40,8 @@ Trong điện từ học ta dùng hệ SI, với các đơn vị quen thuộc nh
 
 $$
 \begin{aligned}
-k &= 8.987551787\times10^9\,\mathrm{N\,m^2/C^2} \\
-&\approx 8.988\times10^9\,\mathrm{N\,m^2/C^2}.
+k &= 8.987551787\times10^9\,\frac{\mathrm{N\,m^2}}{\mathrm C^2} \\
+&\approx 8.988\times10^9\,\frac{\mathrm{N\,m^2}}{\mathrm C^2}.
 \end{aligned}
 $$
 
@@ -60,8 +60,8 @@ Ta thường viết $k=1/(4\pi\varepsilon_0)$, với $\varepsilon_0$ gọi là h
 $$
 \begin{aligned}
 F &= k\frac{|q_1q_2|}{r^2}. \\
-\varepsilon_0 &\approx 8.854\times10^{-12}\,\mathrm{C^2/(N\,m^2)}, \\
-k &\approx 8.988\times10^9\,\mathrm{N\,m^2/C^2}.
+\varepsilon_0 &\approx 8.854\times10^{-12}\,\frac{\mathrm C^2}{\mathrm{N\,m^2}}, \\
+k &\approx 8.988\times10^9\,\frac{\mathrm{N\,m^2}}{\mathrm C^2}.
 \end{aligned}
 $$
 
@@ -92,10 +92,21 @@ $$
 
 **Thực hiện.** Cả hai tỷ lệ nghịch $r^2$, nên khoảng cách triệt tiêu trong tỷ số:
 
+Với $k=9.0\times10^9$ theo đơn vị SI và $G=6.67\times10^{-11}$ theo đơn vị SI, hai thừa số có giá trị:
+
+$$
+\frac{k}{G}\approx1.3493\times10^{20}\,\frac{\mathrm{kg^2}}{\mathrm C^2},
+$$
+
+$$
+\frac qm\approx4.8193\times10^7\,\frac{\mathrm C}{\mathrm{kg}}.
+$$
+
+Nhân thừa số thứ nhất với bình phương thừa số thứ hai:
+
 $$
 \begin{aligned}
-\frac{F_e}{F_g} &= \frac{k}{G}\frac{q^2}{m^2} \\
-&= \frac{9.0\times10^9}{6.67\times10^{-11}} \times\frac{(3.2\times10^{-19})^2}{(6.64\times10^{-27})^2} \\
+\frac{F_e}{F_g} &= \frac{k}{G}\left(\frac qm\right)^2 \\
 &\approx 3.1\times10^{35}.
 \end{aligned}
 $$
@@ -154,10 +165,16 @@ Hai điện tích $q_1=+25\,\mathrm{nC}$, $q_2=-75\,\mathrm{nC}$ cách nhau $r=3
 
 **Thực hiện (a).**
 
+Tích hai độ lớn điện tích có hệ số $25\times75=1875$, nên:
+
+$$
+|q_1q_2|=1.875\times10^{-15}\,\mathrm C^2.
+$$
+
 $$
 \begin{aligned}
 F_{1\to2} &= k\frac{|q_1q_2|}{r^2} \\
-&= 9.0\times10^9 \times\frac{|(25)(-75)10^{-18}|}{(0.030)^2}\,\mathrm N \\
+&= \frac{(9.0)(1.875)}{0.030^2}10^{-6}\,\mathrm N \\
 &\approx 0.019\,\mathrm N.
 \end{aligned}
 $$
@@ -184,13 +201,13 @@ Trên trục $x$, điện tích $q_1=1.0\,\mathrm{nC}$ ở $x=+2.0\,\mathrm{cm}$
 ::: solution Lời giải
 **Xác định và thiết lập.** Cộng hai lực lên $q_3$. $q_1$ cùng dấu đẩy $q_3$ sang $-x$, còn $q_2$ trái dấu hút $q_3$ sang $+x$.
 
-**Thực hiện.** Với khoảng cách $0.020\,\mathrm m$ và $0.040\,\mathrm m$:
+**Thực hiện.** Với khoảng cách $0.020\,\mathrm m$ và $0.040\,\mathrm m$, gọi hai độ lớn lực lần lượt là $F_1=F_{1\to3}$ và $F_2=F_{2\to3}$:
 
 $$
 \begin{aligned}
-F_{1\to3} &= \frac{(9.0)(1.0)(5.0)}{0.020^2}10^{-9}\,\mathrm N \\
+F_1 &= \frac{(9.0)(1.0)(5.0)}{0.020^2}10^{-9}\,\mathrm N \\
 &\approx 112\,\mu\mathrm N, \\
-F_{2\to3} &= \frac{(9.0)(3.0)(5.0)}{0.040^2}10^{-9}\,\mathrm N \\
+F_2 &= \frac{(9.0)(3.0)(5.0)}{0.040^2}10^{-9}\,\mathrm N \\
 &\approx 84\,\mu\mathrm N.
 \end{aligned}
 $$
@@ -223,7 +240,7 @@ Hai điện tích dương bằng nhau $q_1=q_2=2.0\,\mu\mathrm C$ ở $(0,0.30\,
 $$
 \begin{aligned}
 F_{1\to Q} &= F_{2\to Q} \\
-&= 9.0\times10^9 \times\frac{(4.0)(2.0)10^{-12}}{(0.50)^2}\,\mathrm N \\
+&= \frac{(9.0)(4.0)(2.0)}{0.50^2}10^{-3}\,\mathrm N \\
 &\approx 0.29\,\mathrm N.
 \end{aligned}
 $$

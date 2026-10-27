@@ -52,12 +52,22 @@ Proton và neutron tập trung trong hạt nhân rất nhỏ, có kích thước
 
 Các giá trị khối lượng cùng độ bất định được sử dụng trong bộ dữ kiện này là:
 
+Khối lượng electron $m_e$:
+
 $$
-\begin{aligned}
-m_e &= 9.10938356(11) \times10^{-31}\,\mathrm{kg}, \\
-m_p &= 1.672621898(21) \times10^{-27}\,\mathrm{kg}, \\
-m_n &= 1.674927471(21) \times10^{-27}\,\mathrm{kg}.
-\end{aligned}
+9.10938356(11)\times10^{-31}\,\mathrm{kg}.
+$$
+
+Khối lượng proton $m_p$:
+
+$$
+1.672621898(21)\times10^{-27}\,\mathrm{kg}.
+$$
+
+Khối lượng neutron $m_n$:
+
+$$
+1.674927471(21)\times10^{-27}\,\mathrm{kg}.
 $$
 
 Những số trong ngoặc chỉ độ bất định ở hai chữ số cuối. Khối lượng proton và neutron gần bằng nhau, và mỗi hạt nặng xấp xỉ 2000 lần electron. Vì thế hơn $99.9\%$ khối lượng nguyên tử tập trung trong hạt nhân.

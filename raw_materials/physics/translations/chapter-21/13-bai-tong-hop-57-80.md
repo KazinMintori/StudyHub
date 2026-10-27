@@ -27,8 +27,6 @@ $$
 
 Sơ đồ lực gồm hai mũi tên theo hai cạnh ra ngoài và một mũi tên theo đường chéo ra ngoài. Không gộp chúng trước khi thể hiện từng nguồn.
 
-![Ba lực đẩy trên một điện tích ở đỉnh hình vuông](img/young-21/loi-giai-21-57.svg)
-
 :::
 
 ::: exercise 21.58 •••
@@ -412,8 +410,6 @@ F = \frac{3kq^2}{L^2}\left(\sqrt2+\frac12\right).
 $$
 
 Hướng về tâm hình vuông.
-
-![Các lực hút lên −3q tại tâm và tại đỉnh còn trống](img/young-21/loi-giai-21-71.svg)
 
 :::
 

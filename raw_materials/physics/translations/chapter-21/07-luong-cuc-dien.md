@@ -121,10 +121,15 @@ Hướng $\vec p$ là từ âm đến dương, như hình.
 
 (c)
 
+Từ các giá trị của p và E, tích hai hệ số là $2.0\times5.0=10.0$, còn $10^{-29}10^5=10^{-24}$. Do đó:
+
+$$
+pE=1.0\times10^{-23}\,\mathrm{N\,m}.
+$$
+
 $$
 \begin{aligned}
 \tau &= pE\sin145^\circ \\
-&= (2.0\times10^{-29})(5.0\times10^5) \times\sin145^\circ\,\mathrm{N\,m} \\
 &= 5.7\times10^{-24}\,\mathrm{N\,m}.
 \end{aligned}
 $$
@@ -136,7 +141,6 @@ Quy tắc bàn tay phải cho hướng ra khỏi mặt hình, tương ứng quay
 $$
 \begin{aligned}
 U &= -pE\cos145^\circ \\
-&= -(2.0\times10^{-29})(5.0\times10^5) \times\cos145^\circ\,\mathrm J \\
 &= 8.2\times10^{-24}\,\mathrm J.
 \end{aligned}
 $$
@@ -165,34 +169,69 @@ Lưỡng cực có tâm tại gốc, $\vec p$ hướng $+y$. Tìm biểu thức 
 ::: solution Lời giải
 **Xác định và thiết lập.** Cộng hai thành phần có dấu rồi dùng $d/(2y)\ll1$.
 
+Gọi khoảng cách từ P đến điện tích dương và âm lần lượt là:
+
 $$
 \begin{aligned}
-E_y &= \frac{kq}{(y-d/2)^2} -\frac{kq}{(y+d/2)^2} \\
-&= \frac{kq}{y^2}\left(1-\frac d{2y}\right)^{-2} \\
--\frac{kq}{y^2} &\left(1+\frac d{2y}\right)^{-2}.
+&r_+=y-\frac d2,\\
+&r_-=y+\frac d2.
 \end{aligned}
 $$
 
-**Thực hiện gần đúng.** Với $|u|<1$, khai triển bắt đầu bằng:
+Vì P ở phía trên cả hai điện tích, trường do nguồn dương hướng lên, còn trường do nguồn âm hướng xuống:
 
 $$
-(1+u)^n = 1+nu +\frac{n(n-1)}2u^2+\cdots.
+E_y=\frac{kq}{r_+^2}-\frac{kq}{r_-^2}.
 $$
 
-Đặt $n=-2$ và giữ hai số hạng đầu vì $d/(2y)$ rất nhỏ:
+Đặt $u=d/(2y)$ và gọi hai thừa số không thứ nguyên là:
 
 $$
 \begin{aligned}
-&\left(1-\frac d{2y}\right)^{-2} \approx 1+\frac dy, \\
-&\left(1+\frac d{2y}\right)^{-2} \approx 1-\frac dy.
+&A=(1-u)^{-2},\\
+&B=(1+u)^{-2}.
 \end{aligned}
 $$
 
-Do đó:
+Tách $y^2$ khỏi mỗi mẫu cho biểu thức tương đương:
+
+$$
+E_y=\frac{kq}{y^2}(A-B).
+$$
+
+**Thực hiện gần đúng.** Với $|u|<1$, khai triển nhị thức gồm phần hằng, phần tuyến tính và phần còn lại từ bậc hai:
+
+$$
+(1+u)^n=1+nu+R_n(u),
+$$
+
+$$
+R_n(u)=\frac{n(n-1)}2u^2+\cdots.
+$$
+
+Đặt $n=-2$ và giữ hai số hạng đầu vì $u\ll1$:
 
 $$
 \begin{aligned}
-E_y &\approx \frac{kq}{y^2}\left[1+\frac dy-\left(1-\frac dy\right)\right] \\
+&A\approx1+2u,\\
+&B\approx1-2u.
+\end{aligned}
+$$
+
+Hiệu hai thừa số là:
+
+$$
+\begin{aligned}
+A-B&\approx1+2u-(1-2u)\\
+&=4u.
+\end{aligned}
+$$
+
+Thay $u=d/(2y)$ và $p=qd$:
+
+$$
+\begin{aligned}
+E_y &\approx \frac{4kqu}{y^2} \\
 &= \frac{2kqd}{y^3} \\
 &= \frac{p}{2\pi\varepsilon_0y^3}.
 \end{aligned}

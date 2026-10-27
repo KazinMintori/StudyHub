@@ -1,0 +1,114 @@
+{
+  "status": "parent-theory-layout-repair-verified-exercise-layout-still-in-progress",
+  "checkedUTC": "2026-10-27T17:09:07.964277+00:00",
+  "chapter": 21,
+  "scope": "Current source-format repairs only. Allchapter21source/figure/exercise/support acceptance remains separate.",
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-21/07-luong-cuc-dien.md": "cbce93cc88789644626dd5106cb4d28da221e2b32398625c2d9459ed41e27a1c",
+    "raw_materials/physics/translations/chapter-21/01-dien-tich.md": "065a8565571f5aa5f55616679c6adfc3617c26f9978e368c356732ffb312715b",
+    "raw_materials/physics/translations/chapter-21/03-dinh-luat-coulomb.md": "12855cf8a43626debe385f8d98f34b87b93eb61d1e9ca84d8b43013974cc6016",
+    "raw_materials/physics/translations/chapter-21/05-tinh-dien-truong.md": "30ff07af0ea1438e4a8593c6da5bf950734063914a50a570c395f5d33de6d56d",
+    "raw_materials/physics/translations/chapter-21/13-bai-tong-hop-57-80.md": "4d20fe3cd2687ff1e7383e7cc73fd3a0864e386d36653703d5223e1aacec20a8",
+    "docs/.vitepress/physics21-image-annotations.mjs": "bdba33ebf9a976ddaa9a890065feeaa136de921e16bcab13d6309ac818739b8a"
+  },
+  "independentModelAndStructureChecks": 76,
+  "actualTheoryCases": 40,
+  "viewports": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "actualFigureCaptionCases": 4,
+  "originalAgentDecisionReview": [
+    {
+      "finding": "Theory001",
+      "decision": "Confirmedand fixed. Both illegal line break and five intrinsic-wide dipole blocks repaired; actual other-theory overflows also fixed."
+    },
+    {
+      "finding": "Theory002",
+      "decision": "Rejectedmissing-caption diagnosis for21.24and21.25. Actual renderer yields exactlyone figcaption; surrounding explanations supply geometry."
+    },
+    {
+      "finding": "Theory003",
+      "decision": "Partlyconfirmed. Added actual English labels for21.2and onQsubscript of21.14. Visuallyreviewed21.5photo and21.22/24/25/31/34symbol-only diagrams; do not fabricate English labels."
+    },
+    {
+      "finding": "Theory004",
+      "decision": "Rejected. Allthree IDs exist in effective merged concepts. A search of one module missed imported registrations."
+    },
+    {
+      "finding": "Theory005",
+      "decision": "Fullprose cleanup remains in progress; raw semicolon counts are not sufficient evidence."
+    },
+    {
+      "finding": "Theory006",
+      "decision": "Visuallyconfirmed PDF713misprints electron charge exponent-9. Current course already correctlyuses-19; preserve it."
+    },
+    {
+      "finding": "Exercises01and02",
+      "decision": "Confirmedand fixed. SolutionSVGs21.57and21.71each occur once in actual exercise tab."
+    },
+    {
+      "finding": "Exercises03bee-erratum",
+      "decision": "Rejectedafter actualPDF736visual read. Source +(30plus/minus5)pC was mis-extracted as+130{52; existing course data are correct."
+    },
+    {
+      "finding": "Exercisesmath-layout-PASS",
+      "decision": "Rejectedwithout actualrender evidence. Parent browser found25/20/18issues at320/360/375. Correctioncall1 is nowlive on same account."
+    }
+  ],
+  "exerciseLayoutBacklog": [
+    {
+      "width": 320,
+      "issues": 25
+    },
+    {
+      "width": 360,
+      "issues": 20
+    },
+    {
+      "width": 375,
+      "issues": 18
+    },
+    {
+      "width": 768,
+      "issues": 0
+    },
+    {
+      "width": 1440,
+      "issues": 0
+    }
+  ],
+  "currentAgyCorrection": {
+    "id": "010cded4ddeb40fda7d5dbabff797a3a",
+    "task": "physics2-ch21-exercises-source-audit-20261026",
+    "callsUsed": 2,
+    "accountSwitchAllowed": false
+  },
+  "lightweightChecks": {
+    "lectures": 133,
+    "topics": 354,
+    "errors": 0,
+    "warnings": 0,
+    "skillTests": 39
+  },
+  "indexRefresh": {
+    "scope": "Existing generator filtered in memory to ONLY source chapter21; repository generator unchanged.",
+    "target": "src/content/courses/vat-ly-2/lectures/01-dien-truong-coulomb/content.json",
+    "before": "2e031be40f8e879b9cc0a3bb4df93c12337e9266ef4c2c7d34be7e202d29021e",
+    "after": "6cd967bc2d6a6af87bd191a8bed76e57ce3a31b7ec2a39459261041adbca9b3a",
+    "unrelatedIndexesUnchanged": 137
+  },
+  "evidence": {
+    "qa/physics-global-audit/ch21-parent-format-repair/numeric-checks.json": "dfd7bca8d608e5544cf9502e6779003ca211f906e9898f457d93efc565a6ed1b",
+    "qa/physics-global-audit/ch21-parent-format-repair/route-theory/results.json": "a07c2c33bbc271ce37295245cf26643edd26ff7281aa86b6ef21c5f6c40bc50f",
+    "qa/physics-global-audit/ch21-parent-format-repair/figure-captions.json": "50688913c44ca98aef577669be468d3da4c10dfc34fd2de1cda8014677c672b0",
+    "qa/physics-global-audit/ch21-parent-format-repair/route-exercises.json": "716952fc0a23b35767cc35f7d890c2795aa814409af85cf45f7ad5bc84426b04",
+    "qa/physics-global-audit/ch21-parent-format-repair/route-theory-before-parent.json": "bdbe8967f6fba96bbe63dab3f6cd6ea2ab344c91afbf65c7c51e0c144ed78363",
+    "qa/physics-global-audit/ch21-parent-format-repair/math-30ex-with-actual-viewports.json": "7736ed529c74577845cfe5818ba44f7bd8226009016f3e69adf241a9f98ba29b",
+    "qa/physics-global-audit/ch21-parent-format-repair/check-lecture-all.log": "6f12ae15ae310368dcd006809376b188e06cdf065d64f73d49469b2a8df7785e",
+    "qa/physics-global-audit/ch21-parent-format-repair/skill-tests.log": "81a54e9897a7238405c83d18f3f62d6ecee8809930d5868817a37b5d389c1b18"
+  }
+}

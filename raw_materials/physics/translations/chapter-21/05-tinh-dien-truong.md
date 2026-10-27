@@ -72,7 +72,7 @@ Hai điện tích $q_1=+12\,\mathrm{nC}$ và $q_2=-12\,\mathrm{nC}$ cách $0.100
 
 $$
 \begin{aligned}
-E_{1a} &= 9.0\times10^9\frac{12\times10^{-9}}{(0.060)^2}\,\mathrm{N/C} \\
+E_{1a} &= \frac{(9.0)(12)}{0.060^2}\,\mathrm{N/C} \\
 &= 3.0\times10^4\,\mathrm{N/C}.
 \end{aligned}
 $$
@@ -125,7 +125,7 @@ $$
 \vec E_c &= \frac{k}{r^2}(q_1\hat{\mathbf r}_1+q_2\hat{\mathbf r}_2) \\
 &= \frac{kq_1}{r^2}(\hat{\mathbf r}_1-\hat{\mathbf r}_2) \\
 &= \frac{2kq_1}{r^2}\cos\alpha\hat{\mathbf i} \\
-&= \frac{2(9.0\times10^9)(12\times10^{-9})}{(0.13)^2} \times\frac5{13}\,\mathrm{N/C}\,\hat{\mathbf i} \\
+&= 2E_{1cx}\hat{\mathbf i} \\
 &\approx (4.9\times10^3\,\mathrm{N/C})\hat{\mathbf i}.
 \end{aligned}
 $$
@@ -229,7 +229,7 @@ Hàm dưới tích phân đứng là hàm lẻ trên khoảng đối xứng, nê
 
 $$
 \begin{aligned}
-E_y &= -\frac{kQ}{2a}\int_{-a}^{a}\frac{y\,dy}{(x^2+y^2)^{3/2}} \\
+E_y &= -k\lambda\int_{-a}^{a}\frac{y\,dy}{(x^2+y^2)^{3/2}} \\
 &= 0.
 \end{aligned}
 $$
@@ -254,7 +254,7 @@ Trường ra xa đoạn nếu mật độ dương, và hướng về đoạn n�
 Để xét đoạn rất dài, viết kết quả theo mật độ dài:
 
 $$
-E_x = \frac{2k\lambda}{x} \times(1+x^2/a^2)^{-1/2}.
+E_x = \frac{2k\lambda}{x\sqrt{1+x^2/a^2}}.
 $$
 
 Vector trường vẫn dọc trục x:
@@ -294,16 +294,16 @@ $$
 E_x = \frac{\sigma x}{4\varepsilon_0}\int_0^R\frac{2r\,dr}{(x^2+r^2)^{3/2}}.
 $$
 
-Đặt $u=x^2+r^2$, $du=2r\,dr$. Cận mới là $x^2$ và $x^2+R^2$:
+Đặt $E_0=\sigma/(2\varepsilon_0)$ để tách hệ số không phụ thuộc vị trí. Với phép đổi biến $u=x^2+r^2$, ta có $du=2r\,dr$. Cận mới là $x^2$ và $x^2+R^2$:
 
 $$
 \begin{aligned}
-E_x &= \frac{\sigma x}{4\varepsilon_0}\int_{x^2}^{x^2+R^2}u^{-3/2}\,du \\
-&= \frac{\sigma x}{2\varepsilon_0}\left(\frac1x-\frac1{\sqrt{x^2+R^2}}\right).
+E_x &= \frac{E_0x}{2}\int_{x^2}^{x^2+R^2}u^{-3/2}\,du \\
+&= E_0x\left(\frac1x-\frac1{\sqrt{x^2+R^2}}\right).
 \end{aligned}
 $$
 
-Đặt $E_0=\frac{\sigma}{2\varepsilon_0}$ để tách hệ số không phụ thuộc vị trí. Phần còn lại là hệ số hình học:
+Phần còn lại là hệ số hình học:
 
 $$
 f(x)=1-\frac{x}{\sqrt{x^2+R^2}}.

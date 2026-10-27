@@ -1,6 +1,20 @@
 // English text printed inside chapter 21 images, translated and briefly explained.
 // The second item preserves the English label or callout used in the image.
 export const physics21ImageAnnotations = {
+  'young-21/hinh-21-2': [
+    ['Trống tạo ảnh quay', 'Rotating imaging drum'],
+    ['Bột mực mang điện dương', 'Toner (positively charged)'],
+    ['Giấy được đưa sang trái', 'Paper (feeding to left)'],
+    ['Dây phun ion lên trống, làm trống mang điện dương', 'Wire sprays ions onto drum, giving the drum a positive charge.'],
+    ['Chùm laser tạo những vùng mang điện âm trên trống tại vị trí sẽ có hình ảnh', 'Laser beam “writes” on the drum, leaving negatively charged areas where the image will be.'],
+    ['Con lăn đưa bột mực dương lên trống. Mực chỉ bám vào các vùng âm do laser tạo ra', 'Roller applies positively charged toner to drum. Toner adheres only to negatively charged areas of the drum “written” by the laser.'],
+    ['Dây làm giấy mang điện âm mạnh hơn để bột mực bám vào giấy', 'Wires spray a stronger negative charge on paper so toner will adhere to it.'],
+    ['Con lăn nhiệt làm nóng giấy để mực bám cố định', 'Fuser rollers heat paper so toner remains permanently attached.'],
+    ['Đèn phóng điện cho trống để chuẩn bị chu trình tiếp theo', 'Lamp discharges the drum, readying it to start the process over.'],
+  ],
+  'young-21/hinh-21-14': [
+    ['Chỉ số chỉ lực tác dụng lên điện tích Q', 'on Q'],
+  ],
   'young-21/hinh-21-1': [
     ['Thanh nhựa', 'Plastic'],
     ['Lông thú', 'Fur'],
