@@ -53,8 +53,8 @@ defineEmits(['show-introduction'])
 }
 @media (min-width: 1440px) {
   :global(.VPContent.has-sidebar ~ .site-introduction) {
-    margin-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width));
-    margin-right: calc((100vw - var(--vp-layout-max-width)) / 2);
+    margin-left: calc(max(0px, (100% - var(--vp-layout-max-width)) / 2) + var(--vp-sidebar-width));
+    margin-right: max(0px, calc((100% - var(--vp-layout-max-width)) / 2));
   }
 }
 @media (max-width: 1199px) {

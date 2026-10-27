@@ -99,7 +99,7 @@ onUnmounted(() => {
     </Teleport>
     <button ref="triggerRef" type="button" class="study-tools-trigger" :class="{ 'is-open': open }" aria-label="Công cụ học tập" aria-haspopup="dialog" :aria-expanded="open" aria-controls="study-tools-panel" @click="toggleTools">
       <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2" /><rect x="14" y="3" width="7" height="7" rx="2" /><rect x="3" y="14" width="7" height="7" rx="2" /><path d="M14 17.5h7m-3.5-3.5v7" /></svg>
-      <span>Công cụ học tập</span>
+      <span class="study-tools-label">Công cụ</span>
       <span v-if="running" class="tools-running-time">{{ display }}</span>
       <svg class="tools-chevron" viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
     </button>
@@ -165,7 +165,7 @@ onUnmounted(() => {
 
 <style scoped>
 .study-utility-widget { position:relative; flex-shrink:0; font-family:var(--font-ui); }
-.study-tools-trigger { display:inline-flex; align-items:center; gap:var(--space-2); min-height:44px; padding:0 var(--space-3); border:1px solid var(--rule); border-radius:var(--radius); background:var(--paper); color:var(--ink-2); font:600 var(--fs-small)/1.4 var(--font-ui); white-space:nowrap; cursor:pointer; transition:background var(--motion-fast) var(--ease),border-color var(--motion-fast) var(--ease); }
+.study-tools-trigger { display:inline-flex; align-items:center; justify-content:center; gap:var(--space-2); min-width:44px; min-height:44px; padding:0 var(--space-2); border:1px solid transparent; border-radius:var(--radius); background:transparent; color:var(--ink-2); font:500 var(--fs-small)/1.4 var(--font-ui); white-space:nowrap; cursor:pointer; transition:background var(--motion-fast) var(--ease),border-color var(--motion-fast) var(--ease); }
 .study-tools-trigger:hover,.study-tools-trigger.is-open { background:var(--tim-soft); color:var(--tim); border-color:var(--control); }
 .tools-chevron { flex-shrink:0; transition:transform var(--motion-fast) var(--ease); }
 .is-open .tools-chevron { transform:rotate(180deg); }
@@ -227,6 +227,7 @@ onUnmounted(() => {
 :is(button,textarea):focus-visible { outline:2px solid var(--tim); outline-offset:3px; }
 @media(max-width:959px) { .study-tools-panel { position:fixed; top:calc(var(--vp-nav-height) + var(--space-2)); left:16px; right:auto; max-height:calc(100dvh - var(--vp-nav-height) - var(--space-5)); }.scratchpad-textarea { font-size:16px; } }
 @media(max-width:479px) { .tools-running-time { display:none; } }
+@media(min-width:960px) and (max-width:1439px) { .study-tools-label,.tools-chevron { display:none; } }
 @media(prefers-reduced-motion:reduce) { .tools-chevron,.note-chevron,.study-tools-trigger { transition:none; } }
 </style>
 

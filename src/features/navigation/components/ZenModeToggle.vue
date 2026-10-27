@@ -66,9 +66,10 @@ onUnmounted(() => {
     :class="{ 'is-active': isZen }"
     :title="isZen ? 'Thoát Zen Mode tập trung (Phím F hoặc Esc)' : 'Bật Zen Mode tập trung đọc (Phím F)'"
     :aria-pressed="isZen"
+    :aria-label="isZen ? 'Thoát chế độ tập trung' : 'Bật chế độ tập trung'"
     @click="toggleZen"
   >
-    <span>{{ isZen ? 'Thoát Zen' : 'Zen (F)' }}</span>
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" /></svg>
   </button>
 </template>
 
@@ -85,8 +86,8 @@ onUnmounted(() => {
   font-size: var(--fs-small, 14px);
   font-weight: 500;
   color: var(--ink-2);
-  background: var(--canvas);
-  border: 1px solid var(--rule);
+  background: transparent;
+  border: 1px solid transparent;
   cursor: pointer;
   transition: all var(--motion-fast, 120ms) var(--ease);
   white-space: nowrap;

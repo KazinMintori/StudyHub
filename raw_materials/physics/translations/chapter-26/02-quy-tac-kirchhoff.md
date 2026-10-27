@@ -115,10 +115,10 @@ Mạch chỉ có một vòng và không có nút phân nhánh, nên không cần
 
 #### Thực hiện
 
-**(a) Tìm dòng điện.** Bắt đầu tại $a$ và đi ngược chiều kim đồng hồ, cùng chiều dòng điện giả định. Ta lần lượt gặp các độ giảm thế trên điện trở và các độ tăng, giảm thế qua hai pin:
+**(a) Tìm dòng điện.** Bắt đầu tại $a$ và đi ngược chiều kim đồng hồ, cùng chiều dòng điện giả định. Tổng độ tăng thế do hai pin bằng tổng độ giảm thế trên bốn điện trở:
 
 $$
--I(4\,\Omega)-4\,\mathrm V-I(7\,\Omega) +12\,\mathrm V-I(2\,\Omega)-I(3\,\Omega)=0.
+12\,\mathrm V-4\,\mathrm V = I(4+7+2+3)\,\Omega.
 $$
 
 Thu gọn các hạng tử:
@@ -133,7 +133,7 @@ Dòng điện tìm được dương, vì vậy chiều dòng điện thực đú
 
 $$
 \begin{aligned}
-V_{ab} &= (0{,}5\,\mathrm A)(7\,\Omega)+4\,\mathrm V +(0{,}5\,\mathrm A)(4\,\Omega) \\
+V_{ab} &= [0{,}5(7)+4+0{,}5(4)]\,\mathrm V \\
 &= 9{,}5\,\mathrm V.
 \end{aligned}
 $$
@@ -142,7 +142,7 @@ Vậy điện thế tại $a$ cao hơn tại $b$ $9{,}5\,\mathrm V$. Mọi số 
 
 $$
 \begin{aligned}
-V_{ab} &= 12\,\mathrm V-(0{,}5\,\mathrm A)(2\,\Omega) -(0{,}5\,\mathrm A)(3\,\Omega) \\
+V_{ab} &= [12-0{,}5(2)-0{,}5(3)]\,\mathrm V \\
 &= 9{,}5\,\mathrm V.
 \end{aligned}
 $$
@@ -203,13 +203,20 @@ $$
 Áp dụng quy tắc vòng kín cho vòng ngoài (1):
 
 $$
-12\,\mathrm V-(3\,\mathrm A)r = (2\,\mathrm A)(3\,\Omega) = 6\,\mathrm V \implies r = 2\,\Omega.
+\begin{aligned}
+12\,\mathrm V-(3\,\mathrm A)r &= (2\,\mathrm A)(3\,\Omega) \\
+&= 6\,\mathrm V, \\
+r &= 2\,\Omega.
+\end{aligned}
 $$
 
 Áp dụng quy tắc vòng kín cho vòng bên trái (2):
 
 $$
--\mathcal E+(1\,\mathrm A)(1\,\Omega) -(2\,\mathrm A)(3\,\Omega) = 0 \implies \mathcal E = -5\,\mathrm V.
+\begin{aligned}
+-\mathcal E+(1\,\mathrm A)(1\,\Omega) &= (2\,\mathrm A)(3\,\Omega), \\
+\mathcal E &= -5\,\mathrm V.
+\end{aligned}
 $$
 
 Suất điện động thực có cực tính ngược với giả định ở Hình 26.11. Pin đang được nạp như ở Ví dụ 26.3.
@@ -219,7 +226,7 @@ Suất điện động thực có cực tính ngược với giả định ở H
 Nếu dùng quy tắc nút tại $b$ hoặc đi theo chiều kim đồng hồ quanh vòng (1), ta vẫn tìm được cùng $I$ và $r$. Có thể kiểm tra $\mathcal E$ bằng vòng (3):
 
 $$
-12\,\mathrm V-(3\,\mathrm A)(2\,\Omega) -(1\,\mathrm A)(1\,\Omega)+\mathcal E = 0.
+12\,\mathrm V-6\,\mathrm V-1\,\mathrm V+\mathcal E = 0.
 $$
 
 phương trình này cũng cho $\mathcal E=-5\,\mathrm V$.
@@ -372,10 +379,10 @@ Cần trừ phương trình vòng (1) khỏi phương trình vòng (2), rồi x�
 
 #### Hướng đi
 
-Phép trừ cho
+Phép trừ và thu gọn các số hạng cho
 
 $$
--I_2(1\,\Omega) -(I_2+I_3)(2\,\Omega) +(I_1-I_3)(1\,\Omega)+I_1(1\,\Omega) = 0.
+(2I_1-I_3)\,\Omega = (3I_2+2I_3)\,\Omega.
 $$
 
 Đây chính là phương trình thu được khi đi theo vòng $c\to b\to d\to a\to c$. Nó không độc lập với các phương trình đã lập, vì có thể tạo ra bằng cách trừ hai phương trình kia. Do đó, phương trình này không giúp giải Ví dụ 26.6.

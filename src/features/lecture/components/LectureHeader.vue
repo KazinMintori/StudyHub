@@ -12,9 +12,8 @@ import { selectLecturePart } from '../../navigation/controllers/use-lecture-navi
 
 const { course, lesson, part } = useLecture(), { page } = useData()
 const currentPart = computed(() => course.value?.parts?.find(p => p.lessons.includes(lesson.value?.slug)))
-const orderedParts = computed(() => course.value?.id === 'xac-suat-thong-ke'
-  ? ['notes', 'kien-thuc-can-co', 'bai-tap', 'cheatsheet'].map(id => lectureParts.find(item => item.id === id))
-  : lectureParts)
+const orderedParts = computed(() => ['notes', 'kien-thuc-can-co', 'bai-tap', 'cheatsheet']
+  .map(id => lectureParts.find(item => item.id === id)))
 const updated = computed(() => page.value.lastUpdated ? new Date(page.value.lastUpdated).toLocaleDateString('vi-VN', { timeZone: 'Asia/Bangkok' }) : '')
 function openSidebar() { document.querySelector('.VPLocalNav .menu')?.click() }
 // Start downloading panel data as soon as the reader reaches for a tab.

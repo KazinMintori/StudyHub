@@ -92,6 +92,6 @@
 .lecture-header { position: relative; }
 .lecture-header-art { display: none; }
 @media (min-width: 1180px) {
-  .lecture-header:has(.lecture-header-art) { padding-right: 148px; }
-  .lecture-header-art { display: block; position: absolute; top: 4px; right: 0; width: 124px; border-radius: 14px; overflow: hidden; opacity: .95; }
+  .lecture-header:has(.lecture-header-art) { padding-right: 88px; }
+  .lecture-header-art { display: block; position: absolute; top: 4px; right: 0; width: 64px; border-radius: var(--radius); overflow: hidden; opacity: .8; }
 }
