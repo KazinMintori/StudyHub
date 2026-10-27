@@ -1,9 +1,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: 112px; }
 body { font-family: var(--font-ui); font-size: var(--fs-ui); line-height: 1.6; color: var(--ink); }
-/* Keep scrolling available without native scrollbar tracks or arrow buttons. */
-* { scrollbar-width: none !important; }
-*::-webkit-scrollbar { display:none!important;width:0!important;height:0!important; }
-*::-webkit-scrollbar-button { display:none!important;width:0!important;height:0!important; }
+/* Keep the page and reading panes draggable. Math hides its own scrollbars. */
+html { overflow-y: scroll; scrollbar-color: var(--ink-3) var(--paper); }
 button, input, select, textarea { font: inherit; }
 button, a, select { -webkit-tap-highlight-color: transparent; }
 button, summary { cursor: pointer; }

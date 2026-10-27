@@ -149,6 +149,7 @@
   font-weight: 600;
 }
 .mobile-lecture-nav { display: none; }
+@media (max-width: 767px) { .lecture-tabs-wrapper .tablet-reading-outline { display: none; } }
 .lecture-header h1 { font-size: var(--fs-h1); line-height: 1.2; font-weight: 700; margin: var(--space-3) 0; }
 .lecture-meta { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2) var(--space-4); font-size: var(--fs-small); color: var(--ink-3); font-variant-numeric: tabular-nums; }
 .lecture-meta a { color: var(--tim); }
@@ -286,9 +287,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .mobile-lecture-nav > details > summary { min-height: 44px; display: flex; align-items: center; color: var(--tim); cursor: pointer; }
-  .mobile-lecture-nav details nav { position: absolute; top: 44px; left: 0; right: 0; z-index: 30; max-height: 60vh; overflow-y: auto; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow); }
-  .mobile-lecture-nav details nav a { display: block; min-height: 44px; padding: var(--space-2) 0; }
   .lecture-header { margin-bottom: var(--space-1); }
   .lecture-header h1 { margin: var(--space-1) 0 var(--space-2); }
   .lecture-header .book-breadcrumbs, .lecture-meta { display: none; }

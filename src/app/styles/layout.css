@@ -1,6 +1,6 @@
 .VPNavBar .VPNavBarTitle .title { font-size: var(--fs-h3); font-family: var(--font-ui); font-weight: 700; letter-spacing: 0; color: var(--ink); }
 .VPNavBar .VPNavBarMenuLink, .VPNavBar .VPNavBarMenuGroup .button { font-size: var(--fs-ui); }
-.VPNavBar .VPNavBarSearch { display: none !important; }
+.VPNavBar .VPNavBarSearch { display: none; }
 .VPNavBar .content-body { background: var(--paper); }
 .nav-extra-tools { display: inline-flex; flex: 0 0 auto; min-width: 0; align-items: center; gap: var(--space-2); margin-left: var(--space-3); }
 .course-sidebar-toggle { display: none; }
@@ -87,12 +87,10 @@
 .VPDocAsideOutline .outline-link { font-size: var(--fs-small); white-space: normal; text-overflow: clip; line-height: 1.45; padding: var(--space-1) 0; color: var(--ink-3); }
 .VPDocAsideOutline .outline-title { font-size: var(--fs-small); }
 .VPDoc .outline-link.active { color: var(--tim); }
-.lecture-alt .VPDoc .aside { display: none; }
+.shared-reading-outline .VPDocAsideOutline,
+.shared-reading-outline .VPLocalNavOutlineDropdown { display: none !important; }
 .lecture-layout .VPDoc.has-sidebar .container { justify-content: flex-start; }
 .lecture-layout .VPDoc.has-sidebar .content-container { margin-left: 0; }
-.Layout.lecture-alt .VPDoc.has-aside .content { max-width: 100%; }
-.lecture-alt .VPDoc .content-container { max-width: 960px; }
-.Layout.lecture-alt .VPDoc.has-aside .content-container { max-width: 960px; }
 .lecture-alt .main > .vp-doc, .lecture-alt .VPDocFooter { display: none; }
 .lecture-layout .VPDocFooter .prev-next { display: none; }
 .lecture-layout .VPDocFooter { padding-top: var(--space-4); margin-top: 0; }
@@ -102,8 +100,6 @@
   .Layout.lecture-layout:not(.lecture-alt) .VPDoc.has-aside .content-container { max-width: 840px; }
   .lecture-layout .VPDoc .content { max-width: 888px; }
   .lecture-layout .main > .vp-doc > div > :is(p, h2, h3, h4, ul, ol, blockquote) { max-width: 100%; }
-  .Layout.lecture-alt .VPDoc.has-aside .content { max-width: 100%; }
-  .lecture-alt .VPDoc .content-container { max-width: 960px; }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   /* VitePress exposes no token for this intermediate menu breakpoint. */
@@ -142,11 +138,11 @@
    to float below a header that scrolled away, while local navigation moved
    into the same space. Keep the rows in one predictable stack instead. */
 @media (max-width:959px) {
- .Layout > .VPNav { position: fixed; inset: var(--vp-layout-top-height, 0px) auto auto 0; width: 100vw; background: var(--paper); transition: none; }
+ .Layout > .VPNav { position: fixed; inset: var(--vp-layout-top-height, 0px) auto auto 0; width: 100%; background: var(--paper); transition: none; }
  .Layout .VPNavBar, .Layout .VPNavBar .content-body { background: var(--paper); transition: none; }
  .Layout .VPNavBar .title { transition: none; }
  .Layout .VPNavBar .divider-line { background: var(--rule); transition: none; }
- .Layout .VPNavScreen { right: auto; width: 100vw; }
+ .Layout .VPNavScreen { right: auto; width: 100%; }
  .Layout .VPContent { padding-top: var(--vp-nav-height); }
  .Layout > .VPLocalNav { top: var(--vp-nav-height); }
  .Layout > .VPLocalNav.empty:not(.has-sidebar) { display: none; }

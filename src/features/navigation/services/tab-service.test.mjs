@@ -59,6 +59,13 @@ describe('tab-service: isValidLecturePartId', () => {
 })
 
 describe('tab-service: classifyLectureHash', () => {
+  test('panel heading links retain their owning tab without mounted panel content', () => {
+    for (const part of ['cheatsheet', 'bai-tap', 'kien-thuc-can-co']) {
+      assert.equal(classifyLectureHash(`#${part}--3`), part)
+      assert.equal(classifyLectureHash(`#${part}--3`, { allowedParts: ['notes'] }), 'notes')
+    }
+    assert.equal(classifyLectureHash('#cheatsheet-tong-hop'), 'notes')
+  })
   test('classifies direct tab hashes correctly', () => {
     assert.equal(classifyLectureHash('#slides'), 'notes')
     assert.equal(classifyLectureHash('#notes'), 'notes')
