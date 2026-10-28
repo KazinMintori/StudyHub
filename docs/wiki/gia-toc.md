@@ -15,7 +15,7 @@ Gia tốc là đại lượng vector mô tả sự biến thiên vận tốc. Tr
 
 Trong chuyển động thẳng, dấu của gia tốc cho biết vận tốc có dấu đang tăng hay giảm, không tự cho biết tốc độ tăng hay giảm. Khi $v_x$ và $a_x$ cùng dấu, vật nhanh dần. Khi trái dấu, vật chậm dần. Tại điểm đổi chiều, $v_x=0$ không bắt buộc $a_x=0$.
 
-Trên đồ thị v_x–t, gia tốc tức thời là độ dốc tiếp tuyến. Trên đồ thị x–t, gia tốc là đạo hàm bậc hai $a_x=d^2x/dt^2$. Với a_x không đổi, vận tốc là hàm tuyến tính của thời gian; công thức vận tốc trung bình bằng nửa tổng vận tốc đầu và cuối chỉ được dùng trong trường hợp này.
+Trên đồ thị v_x–t, gia tốc tức thời là độ dốc tiếp tuyến. Trên đồ thị x–t, gia tốc là đạo hàm bậc hai $a_x=d^2x/dt^2$. Khi gia tốc không đổi, vận tốc biến thiên tuyến tính theo thời gian nên vận tốc trung bình bằng nửa tổng vận tốc đầu và cuối. Với gia tốc thay đổi, đẳng thức này không được bảo đảm, dù có thể trùng đúng trên một khoảng cụ thể.
 
 Nguồn: Young & Freedman, ấn bản 15, mục 2.3–2.4, trang in 40–49, công thức (2.4)–(2.6), Bảng 2.3–2.4 và phương trình (2.10).
 

@@ -1,158 +1,160 @@
-## 2.2. Vận tốc tức thời và mối liên hệ với đạo hàm
+## 2.2. Vận tốc tức thời
 
-Vận tốc trung bình là một công cụ hữu ích để đánh giá bức tranh tổng thể của một hành trình, nhưng nó hoàn toàn bất lực trong việc cho ta biết: *Ngay tại thời điểm này, vật đang chạy nhanh hay chậm, và đang tiến hay lùi?*
+Trong một cuộc đua thẳng, đôi khi vận tốc trung bình đã đủ để xác định người thắng. Với cùng độ dời từ vạch xuất phát đến đích, người hoàn thành trong thời gian ngắn nhất có độ lớn vận tốc trung bình lớn nhất.
 
-Một vận động viên bơi lội giành huy chương vàng cự ly $50\,\mathrm m$ tự do (Hình 2.4) là người có độ lớn vận tốc trung bình cao nhất trên cả chặng đua. Nhưng trong suốt $50\,\mathrm m$ ấy, có lúc người đó đạp chân tăng tốc mạnh mẽ sau cú xuất phát, có lúc bơi đều, và có lúc chạm đích với tốc độ khác hẳn. Để mô tả trạng thái chuyển động tại từng khoảnh khắc thời gian cá biệt, vật lý học khai sinh khái niệm **vận tốc tức thời** (*instantaneous velocity*).
+![Hình 2.4: Người thắng cuộc đua bơi 50 m hoàn thành cùng độ dời trong thời gian ngắn nhất](img/young-02/hinh-2-4.png)
 
-![Hình 2.4: Cuộc thi bơi lội trên đường bơi 50 mét](img/young-02/hinh-2-4.png)
+Tuy nhiên, vận tốc trung bình của một khoảng thời gian không cho biết tại từng thời điểm vật chuyển động nhanh đến mức nào và theo hướng nào. Để mô tả điều đó, ta cần **vận tốc tức thời**.
 
-::: warning Một "thời điểm" kéo dài bao lâu?
-Trong ngôn ngữ đời thường, người ta hay nói *"chờ tôi một thoáng"* hay *"chỉ trong chớp mắt"* để chỉ một khoảng thời gian rất ngắn. Trong toán học và vật lý học, **một thời điểm ($t$) không có bất kỳ độ kéo dài nào**; nó là một nhát cắt thời gian tuyệt đối, một điểm duy nhất trên trục số thời gian.
+::: warning Thời điểm không phải một khoảng thời gian ngắn
+Trong lời nói, “một thoáng” có thể chỉ một khoảng thời gian rất ngắn. Trong vật lý, một thời điểm chỉ một giá trị xác định của t và không có độ dài thời gian.
 :::
 
----
+### Định nghĩa bằng giới hạn
 
-### Định nghĩa giải tích của vận tốc tức thời
+Muốn tìm vận tốc của xe đua tại vị trí $P_1$ trong Hình 2.1, cho vị trí $P_2$ tiến gần $P_1$. Vận tốc trung bình được tính trên những khoảng thời gian ngày càng ngắn. Cả $\Delta x$ và $\Delta t$ đều nhỏ đi, nhưng tỷ số của chúng không nhất thiết nhỏ đi.
 
-Để xác định vận tốc của chiếc xe đua ngay tại vị trí $P_1$ ($t_1$) ở Hình 2.1, ta quan sát vị trí $P_2$ ($t_2$) ở các khoảng thời gian $\Delta t = t_2 - t_1$ ngày càng thu hẹp lại: Từ $1\,\mathrm s$ xuống $0.1\,\mathrm s$, $0.01\,\mathrm s$, rồi $0.001\,\mathrm s$.
+Nếu hàm tọa độ khả vi tại thời điểm xét, giới hạn của tỷ số ấy là đạo hàm theo thời gian:
 
-Khi khoảng thời gian $\Delta t$ co dần về $0$, độ dời $\Delta x$ cũng co dần về $0$. Tuy nhiên, tỷ số $\frac{\Delta x}{\Delta t}$ giữa hai lượng vô cùng bé ấy không hề triệt tiêu, mà tiệm cận đến một giá trị hữu hạn xác định. Giới hạn toán học này chính là **đạo hàm của tọa độ $x$ theo thời gian $t$**:
-
-$$v_x = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt}.\tag{2.3}$$
-
-Thành phần vận tốc tức thời $v_x$ chính là **tốc độ biến thiên tức thời của tọa độ vị trí theo thời gian**:
-- Nếu $v_x > 0$: Tọa độ $x$ đang tăng, vật chuyển động theo **chiều dương**.
-- Nếu $v_x < 0$: Tọa độ $x$ đang giảm, vật chuyển động theo **chiều âm**.
-- Nếu $v_x = 0$: Vật dừng lại tức thời tại thời điểm đó (đổi chiều chuyển động hoặc đứng yên).
-
-![Hình 2.5: Dấu của vận tốc tức thời phụ thuộc vào cách chọn chiều dương hệ trục](img/young-02/hinh-2-5.png)
-
----
-
-### Phân biệt rạch ròi: Vận tốc tức thời và Tốc độ tức thời
-
-Trong đời sống, hai từ "vận tốc" và "tốc độ" thường bị dùng lẫn lộn như từ đồng nghĩa. Nhưng trong vật lý chuẩn tắc, chúng là hai khái niệm khác nhau về bản chất:
-1. **Vận tốc tức thời ($v_x$):** Là một **đại lượng vector** (trong chuyển động 1D, được biểu thị bằng một số có dấu). Nó mang đầy đủ thông tin: Độ nhanh chậm VÀ chiều chuyển động.
-2. **Tốc độ tức thời ($v$):** Là một **đại lượng vô hướng không âm**, chính là **độ lớn của vận tốc tức thời**:
-   $$v = |v_x|.$$
-   Đồng hồ đo tốc độ (*speedometer*) trên bảng táp-lô ô tô chỉ hiển thị tốc độ tức thời (ví dụ $80\,\mathrm{km/h}$); nó không hề biết bạn đang đi về phía bắc hay phía nam. Hai chiếc xe chạy ngược chiều nhau trên cùng một đoạn đường có thể có cùng tốc độ tức thời $20\,\mathrm{m/s}$, nhưng vận tốc tức thời của chúng mang dấu trái ngược: Chiếc này là $+20\,\mathrm{m/s}$ thì chiếc kia là $-20\,\mathrm{m/s}$.
-
-::: warning Tốc độ trung bình KHÔNG PHẢI là độ lớn của vận tốc trung bình!
-Đây là một cạm bẫy kinh điển:
-- Vận tốc trung bình $= \\dfrac{\Delta x}{\Delta t} = \dfrac{\Delta x}{\Delta t}$.
-- Tốc độ trung bình $= \\dfrac{s}{\Delta t} = \dfrac{s}{\Delta t}$.
-
-Năm 2009, kình ngư César Cielo lập kỷ lục thế giới bơi $100.0\,\mathrm m$ trong $46.91\,\mathrm s$. Trong bể bơi tiêu chuẩn dài $50\,\mathrm m$, anh bơi đi rồi bơi về, chạm thành bể đúng tại điểm xuất phát ban đầu. Độ dời tổng cộng $\Delta x = 0 \implies$ **vận tốc trung bình bằng đúng 0**! Trong khi đó, tổng quãng đường bơi là $100\,\mathrm m \implies$ **tốc độ trung bình là $100.0 / 46.91 \approx 2.132\,\mathrm{m/s}$**.
-:::
-
-*Ứng dụng đời sống — Súng bắn tốc độ laser (LIDAR):* Cảnh sát giao thông sử dụng súng bắn tốc độ laser phát ra hàng trăm xung ánh sáng hồng ngoại cực ngắn trong khoảng thời gian chưa đầy $0.3\,\mathrm s$. Bằng cách đo thời gian xung phản xạ quay về từ thân xe để tính liên tiếp các khoảng cách, bộ vi xử lý thực hiện phép tính vi phân giới hạn $\Delta x / \Delta t$ tức thời để bắt chính xác tốc độ của xe tại thời điểm bị bắn.
-
----
-
-### Ví dụ 2.1 — Vận tốc trung bình và tức thời
-
-::: exercise Bài toán
-Một con báo săn cheetah đang phục kích một đàn linh dương ở một vị trí cách xe quan sát của kiểm lâm $20\,\mathrm m$ về phía đông (Hình 2.6). Đúng thời điểm $t = 0$, con báo bắt đầu lao thẳng về phía đông để tấn công con linh dương cách xe $50\,\mathrm m$. Trong $2.0\,\mathrm s$ đầu tiên của đợt bứt tốc, tọa độ của con báo thay đổi theo quy luật hàm số:
-
-$$x(t) = 20\,\mathrm m + (5.0\,\mathrm{m/s^2})t^2.$$
-
-**(a)** Tính độ dời của con báo trong khoảng thời gian từ $t_1 = 1.0\,\mathrm s$ đến $t_2 = 2.0\,\mathrm s$.  
-**(b)** Tính vận tốc trung bình trong khoảng thời gian đó.  
-**(c)** Tìm vận tốc tức thời của con báo tại thời điểm $t_1 = 1.0\,\mathrm s$ bằng cách tính vận tốc trung bình trên các khoảng thời gian $\Delta t$ nhỏ dần: $0.1\,\mathrm s$, $0.01\,\mathrm s$ và $0.001\,\mathrm s$.  
-**(d)** Thiết lập biểu thức giải tích của vận tốc tức thời theo thời gian bằng đạo hàm, từ đó tính vận tốc tức thời tại $t = 1.0\,\mathrm s$ và $t = 2.0\,\mathrm s$.
-:::
-
-![Hình 2.6: Phân tích chuyển động săn mồi của báo cheetah trên hệ trục tọa độ](img/young-02/hinh-2-6.png)
-
-::: solution Hướng dẫn giải
-**Nhận diện và thiết lập:**
-Chọn trục $Ox$ hướng thẳng về phía đông, gốc $O$ đặt tại vị trí xe kiểm lâm. Chiều dương hướng từ xe tới đàn linh dương.
-Ta dùng công thức độ dời (2.1), vận tốc trung bình (2.2) và đạo hàm vận tốc tức thời (2.3).
-
-**Thực thi:**
-**(a)** Tọa độ của báo tại hai thời điểm:
 $$
-\begin{aligned}
-x(1.0\,\mathrm s) &= 20 + 5.0(1.0)^2 = 25.0\,\mathrm m, \\
-x(2.0\,\mathrm s) &= 20 + 5.0(2.0)^2 = 20 + 5.0(4.0) = 40.0\,\mathrm m.
-\end{aligned}
+v_x=\lim_{\Delta t\to0}\frac{\Delta x}{\Delta t}=\frac{dx}{dt}.
+\tag{2.3}
 $$
-Độ dời của báo là:
-$$\Delta x = x(2.0) - x(1.0) = 40.0\,\mathrm m - 25.0\,\mathrm m = +15.0\,\mathrm m.$$
 
-**(b)** Vận tốc trung bình trong khoảng $1.0\,\mathrm s$ đó:
-$$v_{\mathrm{av}-x} = \frac{\Delta x}{\Delta t} = \frac{15.0\,\mathrm m}{2.0\,\mathrm s - 1.0\,\mathrm s} = +15.0\,\mathrm{m/s}.$$
+Vận tốc tức thời theo trục x chính là tốc độ biến thiên tức thời của tọa độ. Khi xét mốc sau với $\Delta t>0$, dấu của tỷ số được quyết định bởi độ dời. Tọa độ tăng cho $v_x>0$, còn tọa độ giảm cho $v_x<0$.
 
-**(c)** Khảo sát quá trình tiệm cận giới hạn khi $\Delta t \to 0$:
-- Với $\Delta t = 0.1\,\mathrm s \implies t_2 = 1.1\,\mathrm s$:
-  $$x(1.1) = 20 + 5.0(1.1)^2 = 26.05\,\mathrm m \implies v_{\mathrm{av}-x} = \frac{26.05 - 25.0}{0.1} = 10.5\,\mathrm{m/s}.$$
-- Với $\Delta t = 0.01\,\mathrm s \implies t_2 = 1.01\,\mathrm s$:
-  $$x(1.01) = 20 + 5.0(1.01)^2 = 25.1005\,\mathrm m \implies v_{\mathrm{av}-x} = \frac{25.1005 - 25.0}{0.01} = 10.05\,\mathrm{m/s}.$$
-- Với $\Delta t = 0.001\,\mathrm s \implies t_2 = 1.001\,\mathrm s$:
-  $$x(1.001) = 20 + 5.0(1.001)^2 = 25.010005\,\mathrm m \implies v_{\mathrm{av}-x} = 10.005\,\mathrm{m/s}.$$
+Tọa độ cho biết vật ở đâu, còn vận tốc cho biết vật đang chuyển động thế nào. Vì thế vật có thể ở vị trí x dương nhưng có vận tốc âm, hoặc ở vị trí x âm nhưng có vận tốc dương. Bảng 2.1 cũng dùng được để đọc dấu của vận tốc tức thời.
 
-Khi $\Delta t$ tiến dần về $0$, vận tốc trung bình tiệm cận rõ ràng tới giá trị chính xác là **$10.0\,\mathrm{m/s}$**.
+![Hình 2.5: Người đi xe đạp sang trái có vận tốc âm hoặc dương tùy chiều trục được chọn](img/young-02/hinh-2-5.png)
 
-**(d)** Lấy đạo hàm trực tiếp của hàm vị trí:
-$$v_x(t) = \frac{dx}{dt} = \frac{d}{dt}\left[20 + 5.0t^2\right] = 0 + (5.0)(2t) = (10.0\,\mathrm{m/s^2})t.$$
+Vận tốc tức thời là vector. Trong chuyển động thẳng đang xét, chỉ thành phần x khác không. Khi dùng từ “vận tốc” mà không nói rõ “trung bình”, ta hiểu là vận tốc tức thời.
 
-Thay số:
-- Tại $t = 1.0\,\mathrm s$: $v_x(1.0) = 10.0 \times 1.0 = +10.0\,\mathrm{m/s}$ (hoàn toàn khớp với kết quả giới hạn ở câu c).
-- Tại $t = 2.0\,\mathrm s$: $v_x(2.0) = 10.0 \times 2.0 = +20.0\,\mathrm{m/s}$.
+### Vận tốc và tốc độ
 
-**Đánh giá:** Vận tốc tức thời tăng đều từ $0$ lên $10\,\mathrm{m/s}$ rồi $20\,\mathrm{m/s}$ phản ánh sức bứt tốc kinh hoàng của loài báo săn (đạt $72\,\mathrm{km/h}$ chỉ sau đúng 2 giây). Vận tốc trung bình trong cả khoảng ($15.0\,\mathrm{m/s}$) nằm chính xác ở trung điểm giữa vận tốc đầu ($10.0\,\mathrm{m/s}$) và vận tốc cuối ($20.0\,\mathrm{m/s}$).
+Vận tốc cho biết cả mức độ nhanh chậm lẫn hướng chuyển động. **Tốc độ tức thời** chỉ mức độ nhanh chậm, bằng độ lớn của vận tốc tức thời:
+
+$$
+v=|v_x|.
+$$
+
+Tốc độ không âm. Chẳng hạn, hai chất điểm có vận tốc $+25\,\mathrm{m/s}$ và $-25\,\mathrm{m/s}$ chuyển động ngược chiều, nhưng đều có tốc độ $25\,\mathrm{m/s}$. Tốc độ trung bình và tốc độ tức thời đều là đại lượng vô hướng vì không chứa thông tin về hướng.
+
+::: warning Tốc độ trung bình và độ lớn vận tốc trung bình
+Tốc độ trung bình bằng quãng đường đã đi chia cho thời gian, còn vận tốc trung bình được tính từ độ dời.
+
+Trong cuộc bơi 100,0 m với thành tích 46,91 s của César Cielo năm 2009, tốc độ trung bình là:
+
+$$
+\frac{100{,}0\,\mathrm m}{46{,}91\,\mathrm s}\approx2{,}132\,\mathrm{m/s}.
+$$
+
+Vì người bơi đi hai lượt trong bể dài 50 m nên điểm cuối trùng điểm đầu. Độ dời và vận tốc trung bình bằng không. Do đó tốc độ trung bình không đồng nhất với độ lớn vận tốc trung bình.
 :::
 
----
+### Ví dụ 2.1: Vận tốc trung bình và tức thời
 
-### Ý nghĩa hình học: Vận tốc tức thời là độ dốc của tiếp tuyến trên đồ thị $x-t$
+Một con báo ở cách xe quan sát 20 m về phía đông. Tại $t=0$, báo bắt đầu chạy về phía đông tới con linh dương cách xe 50 m. Trong 2,0 s đầu, tọa độ của báo là:
 
-Trên đồ thị tọa độ – thời gian ($x-t$), khi khoảng thời gian $\Delta t$ co dần về $0$, điểm $p_2$ trượt dọc theo đường cong tiến sát đến điểm $p_1$ (Hình 2.7a, b).
+$$
+x(t)=20\,\mathrm m+(5{,}0\,\mathrm{m/s^2})t^2.
+$$
 
-Đường cát tuyến nối $p_1p_2$ trong quá trình đó dần xoay và trở thành **đường tiếp tuyến** của đường cong tại điểm $p_1$ (Hình 2.7c).
+(a) Tìm độ dời từ $t_1=1{,}0\,\mathrm s$ đến $t_2=2{,}0\,\mathrm s$. (b) Tìm vận tốc trung bình trong khoảng đó. (c) Tìm vận tốc tức thời tại $t_1=1{,}0\,\mathrm s$ bằng các khoảng $\Delta t$ lần lượt bằng 0,1 s, 0,01 s và 0,001 s. (d) Lấy đạo hàm để tìm vận tốc theo thời gian, rồi tính tại 1,0 s và 2,0 s.
 
-$$\text{Slope of tangent at } p_1 = \left.\frac{dx}{dt}\right|_{t_1} = v_x(t_1).$$
-
-![Hình 2.7: Quá trình chuyển từ độ dốc cát tuyến sang độ dốc tiếp tuyến](img/young-02/hinh-2-7.png)
-
-Nguyên lý hình học cốt lõi: **Vận tốc tức thời tại một thời điểm bất kỳ bằng đúng độ dốc (hệ số góc) của tiếp tuyến với đồ thị $x-t$ tại thời điểm đó**:
-- **Tiếp tuyến dốc lên sang phải:** Độ dốc dương $\implies v_x > 0$ (vật chuyển động theo chiều dương).
-- **Tiếp tuyến nằm ngang:** Độ dốc bằng $0 \implies v_x = 0$ (vật dừng lại tức thời).
-- **Tiếp tuyến dốc xuống sang phải:** Độ dốc âm $\implies v_x < 0$ (vật chuyển động theo chiều âm).
-- Độ dốc càng dốc (độ lớn càng lớn), vật chuyển động càng nhanh; tiếp tuyến càng là là nằm ngang, vật chuyển động càng chậm (Hình 2.8).
-
-![Hình 2.8: Tương quan giữa đồ thị x-t và chuyển động thực tế qua các thời điểm](img/young-02/hinh-2-8.png)
-
----
-
-### Câu hỏi kiểm tra hiểu biết mục 2.2
-
-::: exercise Câu hỏi kiểm tra
-Hình 2.9 mô tả đồ thị vị trí theo thời gian ($x-t$) của một chất điểm.
-
-![Hình 2.9: Đồ thị x-t với bốn điểm khảo sát P, Q, R, S](img/young-02/hinh-2-9.png)
-
-**(a)** Hãy sắp xếp vận tốc tức thời $v_x$ tại các điểm P, Q, R, S theo thứ tự từ giá trị dương lớn nhất đến giá trị âm lớn nhất.  
-**(b)** Những điểm nào có $v_x > 0$?  
-**(c)** Những điểm nào có $v_x < 0$?  
-**(d)** Những điểm nào có $v_x = 0$?  
-**(e)** Hãy sắp xếp tốc độ tức thời tại các điểm theo thứ tự từ nhanh nhất đến chậm nhất.
-:::
+![Hình 2.6: Tình huống con báo săn linh dương, sơ đồ tọa độ và các bước chọn trục, gốc, vị trí, đại lượng đã biết](img/young-02/hinh-2-6.png)
 
 ::: solution Lời giải
-Bằng cách quan sát độ dốc tiếp tuyến tại từng điểm:
-- **Tại P:** Tiếp tuyến dốc lên sang phải $\implies v_x > 0$ (vận tốc dương).
-- **Tại Q và S:** Đây là các điểm cực trị (đỉnh cong) của đồ thị, tiếp tuyến nằm ngang hoàn toàn $\implies v_x = 0$.
-- **Tại R:** Tiếp tuyến dốc xuống sang phải $\implies v_x < 0$ (vận tốc âm).
+Chọn gốc tại xe và chiều dương hướng đông. Dùng độ dời cho (a), vận tốc trung bình cho (b), giới hạn các vận tốc trung bình cho (c), rồi đạo hàm cho (d).
 
-**(a)** Thứ tự đại số của vận tốc:
-$$v_P > v_Q = v_S (= 0) > v_R.$$
+(a) Thay hai thời điểm tính bằng giây vào hàm tọa độ, các giá trị tọa độ thu được tính bằng mét:
 
-**(b)** Điểm có $v_x > 0$ là: **P**.  
-**(c)** Điểm có $v_x < 0$ là: **R**.  
-**(d)** Điểm có $v_x = 0$ là: **Q và S**.
+$$
+\begin{aligned}
+x_1&=[20+5{,}0(1{,}0)^2]\,\mathrm m\\
+&=25\,\mathrm m,\\
+x_2&=[20+5{,}0(2{,}0)^2]\,\mathrm m\\
+&=40\,\mathrm m.
+\end{aligned}
+$$
 
-**(e) Tốc độ tức thời** là giá trị tuyệt đối của độ dốc ($|v_x|$). Quan sát hình vẽ, tại điểm R đường cong dốc đứng nhất (độ dốc âm rất dốc) $\implies |v_R|$ lớn nhất. Tiếp theo là P. Tại Q và S tốc độ triệt tiêu bằng 0.
-Thứ tự tốc độ:
-$$v_{ R} > v_{ P} > v_{ Q} = v_{ S} (= 0).$$
+Vậy $\Delta x=40\,\mathrm m-25\,\mathrm m=15\,\mathrm m$.
+
+(b) Khoảng thời gian là 1,0 s:
+
+$$
+v_{\mathrm{av}-x}=\frac{15\,\mathrm m}{1{,}0\,\mathrm s}=15\,\mathrm{m/s}.
+$$
+
+(c) Với $\Delta t=0{,}1\,\mathrm s$, mốc sau là $t_2=1{,}1\,\mathrm s$ và tọa độ sau là $x_2=26{,}05\,\mathrm m$. Do đó:
+
+$$
+\begin{aligned}
+v_{\mathrm{av}-x}&=\frac{(26{,}05-25)\,\mathrm m}{0{,}1\,\mathrm s}\\
+&=10{,}5\,\mathrm{m/s}.
+\end{aligned}
+$$
+
+Lặp lại phép tính với hai khoảng ngắn hơn:
+
+| Khoảng thời gian, đơn vị s | Tọa độ sau, đơn vị m | Vận tốc trung bình, đơn vị m/s |
+| --- | --- | --- |
+| 0,1 | 26,05 | 10,5 |
+| 0,01 | 25,1005 | 10,05 |
+| 0,001 | 25,010005 | 10,005 |
+
+Khi khoảng thời gian tiến về không, vận tốc trung bình tiến tới 10,0 m/s. Trong những phép tính giới hạn này, ta giữ thêm chữ số để quan sát sự hội tụ, thay vì làm tròn ngay theo quy tắc chữ số có nghĩa.
+
+(d) Đạo hàm của hằng số bằng không, còn đạo hàm của số hạng bậc hai đem hệ số 2 ra trước và giảm số mũ đi một:
+
+$$
+\begin{aligned}
+v_x(t)&=\frac{dx}{dt}\\
+&=0+2(5{,}0\,\mathrm{m/s^2})t\\
+&=(10\,\mathrm{m/s^2})t.
+\end{aligned}
+$$
+
+Tại 1,0 s, vận tốc là 10 m/s. Tại 2,0 s, vận tốc là 20 m/s. Kết quả đầu khớp giới hạn ở (c).
+
+Trong giây đầu, báo đi được 5 m. Trong giây thứ hai, báo đi thêm 15 m. Vận tốc tăng từ 0 lên 10 m/s rồi 20 m/s phù hợp với các quãng đường ấy. Muốn tìm vận tốc trung bình, dùng độ dời chia thời gian. Muốn tìm vận tốc tức thời từ hàm tọa độ, lấy đạo hàm.
+:::
+
+### Tìm vận tốc trên đồ thị tọa độ
+
+Khi $p_2$ tiến gần $p_1$ trên đồ thị tọa độ theo thời gian, cát tuyến tiến tới tiếp tuyến tại $p_1$. Vận tốc tức thời tại một thời điểm bằng độ dốc của tiếp tuyến tại điểm đồ thị tương ứng.
+
+![Hình 2.7: Vận tốc trung bình trên khoảng ngắn dần tiến tới độ dốc tiếp tuyến, tức vận tốc tức thời](img/young-02/hinh-2-7.png)
+
+Trong các hình (a) và (b), độ dốc cát tuyến lần lượt là 75 m/s và 55 m/s. Ở hình (c), chọn hai khoảng tương ứng trên tiếp tuyến cho:
+
+$$
+v_x=\frac{160\,\mathrm m}{4{,}0\,\mathrm s}=40\,\mathrm{m/s}.
+$$
+
+Tiếp tuyến dốc lên sang phải cho vận tốc dương. Tiếp tuyến dốc xuống sang phải cho vận tốc âm. Tiếp tuyến nằm ngang cho vận tốc bằng không. Độ lớn của độ dốc càng lớn thì tốc độ càng lớn.
+
+![Hình 2.8: Cùng một chuyển động được mô tả bằng đồ thị tọa độ và sơ đồ vị trí, vector vận tốc tại từng mốc](img/young-02/hinh-2-8.png)
+
+Ở mốc A, chất điểm có tọa độ âm nhưng chuyển động theo chiều dương. Từ A đến B, nó nhanh dần. Từ B đến C, nó chậm dần và dừng tức thời tại C.
+
+Từ C đến D, vật chuyển động theo chiều âm và nhanh dần. Từ D đến E, nó vẫn đi theo chiều âm nhưng chậm dần. Đồ thị tọa độ và sơ đồ chuyển động là hai cách bổ sung cho nhau, nên có thể vẽ cả hai khi giải bài.
+
+### Tự kiểm tra 2.2
+
+::: exercise Đọc vận tốc và tốc độ từ đồ thị
+Hình 2.9 là đồ thị tọa độ theo thời gian của một chất điểm.
+
+![Hình 2.9: Đồ thị tọa độ với bốn điểm P, Q, R và S](img/young-02/hinh-2-9.png)
+
+(a) Xếp vận tốc theo trục x tại P, Q, R, S từ dương lớn nhất đến âm nhỏ nhất. (b) Ở điểm nào vận tốc dương? (c) Ở điểm nào vận tốc âm? (d) Ở điểm nào vận tốc bằng không? (e) Xếp tốc độ từ lớn nhất đến nhỏ nhất.
+:::
+
+::: solution Giải thích
+Đọc dấu và độ lớn của độ dốc tiếp tuyến tại từng điểm.
+
+(a) P có vận tốc dương. Q và S có tiếp tuyến ngang nên vận tốc bằng không. R có vận tốc âm. Thứ tự là P, rồi Q và S bằng nhau, cuối cùng R.
+
+(b) Vận tốc dương tại P. (c) Vận tốc âm tại R. (d) Vận tốc bằng không tại Q và S.
+
+(e) Tốc độ là độ lớn vận tốc, nên dấu âm của độ dốc không làm tốc độ nhỏ hơn. Tiếp tuyến ở R dốc nhất về độ lớn, sau đó là P. Tại Q và S, tốc độ đều bằng không. Thứ tự tốc độ là R, P, rồi Q và S bằng nhau.
 :::

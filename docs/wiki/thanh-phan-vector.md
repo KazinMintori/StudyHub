@@ -33,7 +33,7 @@ Một thành phần âm có nghĩa độ lớn vector âm không?
 
 <details><summary>Xem đáp án</summary>
 
-Không. Thành phần âm chỉ hướng ngược chiều dương của trục; độ lớn vector không âm.
+Không. Thành phần âm chỉ hướng ngược chiều dương của trục, còn độ lớn vector không âm.
 
 </details>
 

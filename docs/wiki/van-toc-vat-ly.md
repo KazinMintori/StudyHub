@@ -15,13 +15,13 @@ Vận tốc là đại lượng vector. Trên trục x, vận tốc trung bình 
 
 Vận tốc trung bình dùng độ dời giữa hai đầu và cả khoảng thời gian. Vận tốc tức thời dùng giới hạn khi khoảng thời gian tiến tới không. Không lấy giá trị tại một thời điểm thay cho trung bình trên một khoảng nếu chưa biết đặc điểm chuyển động.
 
-Trên đồ thị x–t, độ dốc dây cung là vận tốc trung bình, còn độ dốc tiếp tuyến là vận tốc tức thời. Đường cong x–t không phải quỹ đạo thật của vật. Vận tốc bằng không khi tiếp tuyến nằm ngang; tọa độ tại đó có thể khác không.
+Trên đồ thị x–t, độ dốc dây cung là vận tốc trung bình, còn độ dốc tiếp tuyến là vận tốc tức thời. Đường cong x–t không phải quỹ đạo thật của vật. Vận tốc bằng không khi tiếp tuyến nằm ngang. Tọa độ tại đó có thể khác không.
 
 Nguồn: Young & Freedman, ấn bản 15, mục 2.1–2.2, trang in 34–40, công thức (2.2)–(2.3), Ví dụ 2.1; Ví dụ 2.5, trang in 49.
 
 ## Ví dụ
 
-Trong Ví dụ 2.1, từ 1,0 s đến 2,0 s báo có vận tốc trung bình 15 m/s; vận tốc tức thời ở 1,0 s là 10 m/s.
+Trong Ví dụ 2.1, từ 1,0 s đến 2,0 s báo có vận tốc trung bình 15 m/s, còn vận tốc tức thời ở 1,0 s là 10 m/s.
 
 ## Khi nào cần dùng?
 

@@ -13,9 +13,9 @@ Rơi tự do là chuyển động chỉ chịu tác dụng trọng lực. Gần 
 
 ## Giải thích kỹ thuật
 
-Độ lớn g là số dương; thành phần gia tốc có dấu phụ thuộc trục. Chọn +y hướng lên cho $a_y=-g$ ở cả nhánh đi lên và nhánh đi xuống, kể cả tại điểm cao nhất. Vận tốc thay đổi liên tục, còn gia tốc giữ nguyên trong mô hình của chương.
+Độ lớn g là số dương, còn thành phần gia tốc có dấu phụ thuộc trục. Chọn +y hướng lên cho $a_y=-g$ ở cả nhánh đi lên và nhánh đi xuống, kể cả tại điểm cao nhất. Vận tốc thay đổi liên tục, còn gia tốc giữ nguyên trong mô hình của chương.
 
-Dùng các phương trình gia tốc không đổi với x thay bằng y và a_x thay bằng −g. Trước khi thay số, xác định vị trí đầu, vận tốc đầu và mốc thời gian; một vật được thả từ khinh khí cầu đang đi lên không có vận tốc đầu bằng không so với mặt đất.
+Dùng các phương trình gia tốc không đổi với x thay bằng y và a_x thay bằng −g. Trước khi thay số, xác định vị trí đầu, vận tốc đầu và mốc thời gian. Một vật được thả từ khinh khí cầu đang đi lên không có vận tốc đầu bằng không so với mặt đất.
 
 Nguồn: Young & Freedman, ấn bản 15, mục 2.5, trang in 50–53, Ví dụ 2.6–2.8; bài 2.42, trang in 61.
 

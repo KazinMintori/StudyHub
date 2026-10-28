@@ -5,6 +5,7 @@ export const physicsMotionCheatsheet={
  sections:[
   {id:'definitions',title:'Định nghĩa và đơn vị',badge:'Mục 2.1–2.3',items:[
    {name:'Độ dời và vận tốc trung bình',formulaRows:[
+    {label:'Khoảng thời gian giữa hai thời điểm',formula:d(String.raw`\Delta t=t_2-t_1>0`)},
     {label:'Độ dời giữa hai thời điểm',formula:d(String.raw`\Delta x=x_2-x_1`)},
     {label:'Vận tốc trung bình, Δt > 0',formula:d(String.raw`v_{\mathrm{av}-x}=\Delta x/\Delta t`)}
    ],variables:[
@@ -14,6 +15,7 @@ export const physicsMotionCheatsheet={
     String.raw`$\Delta t$: Khoảng thời gian chuyển động ($\mathrm{s}$)`
    ],description:'Tọa độ và độ dời tính bằng mét, vận tốc tính bằng m/s. Độ dời và vận tốc theo trục có thể dương, âm hoặc bằng không.'},
    {name:'Vận tốc tức thời và tốc độ',formulaRows:[
+    {label:'Định nghĩa bằng giới hạn, khi giới hạn tồn tại',formula:d(String.raw`v_x=\lim_{\Delta t\to0}\frac{\Delta x}{\Delta t}`)},
     {label:'Vận tốc theo trục x',formula:d(String.raw`v_x=dx/dt`)},
     {label:'Tốc độ tức thời',formula:d(String.raw`v=|v_x|`)}
    ],variables:[
@@ -21,9 +23,15 @@ export const physicsMotionCheatsheet={
     String.raw`$x$: Tọa độ vị trí theo hàm thời gian $t$ ($\mathrm{m}$)`,
     String.raw`$t$: Thời điểm khảo sát chuyển động ($\mathrm{s}$)`,
     String.raw`$v$: Tốc độ tức thời ($\mathrm{m/s}$)`
-   ],description:'Tốc độ tức thời không âm. Tốc độ trung bình bằng toàn bộ quãng đường chia toàn bộ thời gian, khác độ lớn vận tốc trung bình khi hành trình đổi chiều.'},
+   ],description:'Tốc độ tức thời không âm. Vận tốc tức thời là độ dốc tiếp tuyến trên đồ thị tọa độ theo thời gian.'},
+   {name:'Tốc độ trung bình và quãng đường',formulaRows:[
+    {label:'Tốc độ trung bình trên khoảng Δt > 0',formula:d(String.raw`v_{\mathrm{tb}}=\frac{s}{\Delta t}`)},
+    {label:'Độ lớn vận tốc trung bình không vượt tốc độ trung bình',formula:d(String.raw`|v_{\mathrm{av}-x}|\le v_{\mathrm{tb}}`)}
+   ],variables:[String.raw`$s$: Tổng quãng đường đi được ($\mathrm m)`],description:'Quãng đường không âm và không nhỏ hơn độ lớn độ dời. Dấu bằng trong bất đẳng thức xảy ra khi chuyển động không đổi chiều trên khoảng xét, kể cả trường hợp vật đứng yên.'},
    {name:'Gia tốc trung bình và tức thời',formulaRows:[
+    {label:'Độ biến thiên vận tốc',formula:d(String.raw`\Delta v_x=v_{2x}-v_{1x}`)},
     {label:'Gia tốc trung bình, Δt > 0',formula:d(String.raw`a_{\mathrm{av}-x}=\Delta v_x/\Delta t`)},
+    {label:'Định nghĩa bằng giới hạn, khi giới hạn tồn tại',formula:d(String.raw`a_x=\lim_{\Delta t\to0}\frac{\Delta v_x}{\Delta t}`)},
     {label:'Đạo hàm của vận tốc',formula:d(String.raw`a_x=dv_x/dt`)},
     {label:'Đạo hàm bậc hai của vị trí',formula:d(String.raw`a_x=d^2x/dt^2`)}
    ],variables:[
@@ -31,7 +39,8 @@ export const physicsMotionCheatsheet={
     String.raw`$a_x$: Gia tốc tức thời theo trục $x$ ($\mathrm{m/s^2}$)`,
     String.raw`$\Delta v_x$: Độ biến thiên vận tốc theo trục $x$ ($\mathrm{m/s}$)`,
     String.raw`$\Delta t$: Khoảng thời gian xảy ra biến thiên vận tốc ($\mathrm{s}$)`
-   ],description:'Gia tốc có đơn vị m/s². Trong chuyển động thẳng, gia tốc và vận tốc cùng dấu thì tốc độ tăng, trái dấu thì tốc độ giảm.'}
+   ],description:'Gia tốc có đơn vị m/s². Trong chuyển động thẳng, gia tốc và vận tốc cùng dấu thì tốc độ tăng, trái dấu thì tốc độ giảm.'},
+   {name:'Độ giật',formula:d(String.raw`j_x=\frac{da_x}{dt}`),variables:[String.raw`$j_x$: Tốc độ biến thiên gia tốc theo thời gian ($\mathrm{m/s^3}$)`],description:'Độ giật được xác định tại những thời điểm gia tốc có đạo hàm.'}
   ]},
   {id:'constant-acceleration',title:'Gia tốc không đổi',badge:'Mục 2.4',items:[
    {name:'Bốn phương trình động học',formulaRows:[
@@ -47,10 +56,10 @@ export const physicsMotionCheatsheet={
     String.raw`$t$: Thời gian chuyển động ($\mathrm{s}$)`
    ],description:'Các phương trình dùng khi gia tốc không đổi trên toàn khoảng xét. Vị trí đầu và vận tốc đầu là điều kiện tại t = 0.'},
    {name:'Vận tốc trung bình trong trường hợp này',formula:d(String.raw`v_{\mathrm{av}-x}=\frac{v_{0x}+v_x}{2}`),variables:[
-    String.raw`$v_{\mathrm{av}-x}$: Vận tốc trung bình khi gia tốc biến thiên tuyến tính ($\mathrm{m/s}$)`,
+    String.raw`$v_{\mathrm{av}-x}$: Vận tốc trung bình khi gia tốc không đổi ($\mathrm{m/s}$)`,
     String.raw`$v_{0x}$: Vận tốc ban đầu ($\mathrm{m/s}$)`,
     String.raw`$v_x$: Vận tốc tức thời cuối khoảng xét ($\mathrm{m/s}$)`
-   ],description:'Quan hệ này theo vận tốc biến thiên tuyến tính theo thời gian, không dùng như định nghĩa tổng quát khi gia tốc thay đổi.'}
+   ],description:'Quan hệ được bảo đảm khi vận tốc biến thiên tuyến tính theo thời gian. Với gia tốc thay đổi, quan hệ có thể trùng đúng trên một khoảng cụ thể nhưng không phải công thức tổng quát.'}
   ]},
   {id:'free-fall',title:'Rơi tự do',badge:'Mục 2.5',items:[
    {name:'Chọn +y hướng lên',formulaRows:[
@@ -66,7 +75,13 @@ export const physicsMotionCheatsheet={
     String.raw`$v_{0y}$: Vận tốc ban đầu theo trục thẳng đứng ($\mathrm{m/s}$)`,
     String.raw`$y - y_0$: Độ dời thẳng đứng từ vị trí ban đầu $y_0$ ($\mathrm{m}$)`,
     String.raw`$t$: Thời gian rơi tự do ($\mathrm{s}$)`
-   ],description:'Bỏ lực cản không khí, xét quãng rơi nhỏ so với bán kính Trái Đất và bỏ ảnh hưởng quay. Gia tốc hướng xuống trong cả nhánh đi lên và đi xuống. Tại đỉnh vᵧ = 0 nhưng aᵧ = −g.'}
+   ],description:'Bỏ lực cản không khí, xét quãng rơi nhỏ so với bán kính Trái Đất và bỏ ảnh hưởng quay. Gia tốc hướng xuống trong cả nhánh đi lên và đi xuống. Tại đỉnh vᵧ = 0 nhưng aᵧ = −g.'},
+   {name:'Ném thẳng đứng lên rồi trở lại độ cao ban đầu',formulaRows:[
+    {label:'Thời gian lên tới đỉnh',formula:d(String.raw`t_{\mathrm{lên}}=\frac{v_{0y}}{g}`)},
+    {label:'Độ cao cực đại so với điểm ném',formula:d(String.raw`H=\frac{v_{0y}^{2}}{2g}`)},
+    {label:'Thời gian trở về độ cao ban đầu',formula:d(String.raw`T=\frac{2v_{0y}}{g}`)},
+    {label:'Vận tốc khi trở về độ cao ban đầu',formula:d(String.raw`v_{y,\mathrm{về}}=-v_{0y}`)}
+   ],description:'Chiều dương hướng lên, vận tốc ném ban đầu dương, gia tốc trọng trường không đổi và không có lực cản. Thời gian T tính đến lúc vật trở lại đúng độ cao đã ném.'}
   ]},
   {id:'graphs',title:'Đọc đồ thị',badge:'Mục 2.2–2.3, 2.6',table:{
    headers:['Đồ thị','Độ dốc tiếp tuyến','Diện tích có dấu'],
@@ -75,7 +90,9 @@ export const physicsMotionCheatsheet={
   {id:'integration',title:'Gia tốc biến thiên và điều kiện đầu',badge:'Mục 2.6',items:[
    {name:'Tích phân giữa hai thời điểm',formulaRows:[
     {label:'Độ biến thiên vận tốc',formula:d(String.raw`v_{2x}-v_{1x}=\int_{t_1}^{t_2}a_x\,dt`)},
-    {label:'Độ dời',formula:d(String.raw`x_2-x_1=\int_{t_1}^{t_2}v_x\,dt`)}
+    {label:'Độ dời',formula:d(String.raw`x_2-x_1=\int_{t_1}^{t_2}v_x\,dt`)},
+    {label:'Vận tốc từ điều kiện ban đầu tại t = 0',formula:d(String.raw`v_x(t)=v_{0x}+\int_0^t a_x(u)\,du`)},
+    {label:'Tọa độ từ điều kiện ban đầu tại t = 0',formula:d(String.raw`x(t)=x_0+\int_0^t v_x(u)\,du`)}
    ],variables:[
     String.raw`$v_{1x}, v_{2x}$: Vận tốc tức thời tại các thời điểm $t_1, t_2$ ($\mathrm{m/s}$)`,
     String.raw`$x_1, x_2$: Tọa độ vị trí tại các thời điểm $t_1, t_2$ ($\mathrm{m}$)`,

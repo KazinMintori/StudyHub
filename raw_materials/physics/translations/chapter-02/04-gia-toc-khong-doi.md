@@ -1,329 +1,376 @@
-## 2.4. Chuyển động thẳng với gia tốc không đổi
+## 2.4. Chuyển động với gia tốc không đổi
 
-Trường hợp chuyển động có gia tốc đơn giản và quan trọng nhất trong cơ học cổ điển là **chuyển động trên đường thẳng với gia tốc không đổi** ($a_x = \text{const}$), còn gọi là chuyển động thẳng biến đổi đều.
+Một vật rơi gần mặt đất có gia tốc gần như không đổi nếu có thể bỏ qua ảnh hưởng của không khí. Vật trượt trên mặt phẳng nghiêng, vật trượt trên mặt phẳng ngang nhám hoặc máy bay được phóng từ boong tàu sân bay cũng có thể được mô tả bằng mô hình này.
 
-Khi gia tốc là hằng số, vận tốc của chất điểm biến thiên với tốc độ hoàn toàn đều đặn theo thời gian. Ta bắt gặp mô hình này ở khắp mọi nơi trong tự nhiên và kỹ thuật:
-- Một vật thể rơi tự do trong trường trọng lực gần mặt đất khi lực cản không khí không đáng kể;
-- Một chiếc ô tô đạp phanh gấp với lực hãm ma sát trượt không đổi;
-- Một máy bay chiến đấu phản lực được máy phóng hơi nước đẩy vọt đi trên boong tàu sân bay.
+Trong chuyển động thẳng với gia tốc không đổi, vận tốc thay đổi cùng một lượng trong những khoảng thời gian bằng nhau. Hình 2.15 biểu diễn vị trí, vận tốc và gia tốc ở các thời điểm cách đều. Khoảng cách giữa các vị trí không bằng nhau vì vận tốc đang thay đổi.
 
-![Hình 2.15: Vị trí, vận tốc và gia tốc của chất điểm tại các thời điểm cách đều nhau](img/young-02/hinh-2-15.png)
+![Hình 2.15: Chất điểm chuyển động theo chiều dương với gia tốc dương không đổi](img/young-02/hinh-2-15.png)
 
-Trên Hình 2.15, sau những khoảng thời gian bằng nhau $\Delta t$, vận tốc của chất điểm tăng thêm những lượng bằng nhau $\Delta v_x = a_x\Delta t$. Tuy nhiên, quãng đường đi được trong mỗi khoảng thời gian lại ngày càng dài hơn, vì vận tốc tức thời của vật ngày càng lớn!
+Hình 2.16 và Hình 2.17 mô tả cùng chuyển động bằng đồ thị. Đồ thị gia tốc theo thời gian là đường nằm ngang. Đồ thị vận tốc theo thời gian có độ dốc không đổi nên là đường thẳng. Có thể dùng Bảng 2.4 ở cuối Mục 2.3 để đối chiếu ý nghĩa của giá trị, độ dốc và độ cong trên các đồ thị.
 
----
+![Hình 2.16: Đồ thị gia tốc theo thời gian khi gia tốc dương không đổi](img/young-02/hinh-2-16.png)
 
-### Hệ bốn phương trình động học cốt lõi
+![Hình 2.17: Đồ thị vận tốc theo thời gian của chuyển động có gia tốc dương không đổi](img/young-02/hinh-2-17.png)
 
-Vì gia tốc $a_x$ là hằng số không đổi trên toàn bộ hành trình, giá trị gia tốc trung bình trên bất kỳ khoảng thời gian nào cũng bằng chính gia tốc tức thời $a_x$:
+### Vận tốc theo thời gian
+
+Khi gia tốc không đổi, gia tốc trung bình trên mọi khoảng thời gian bằng gia tốc tức thời. Thay vào định nghĩa gia tốc trung bình:
 
 $$
-a_x = \frac{v_{2x} - v_{1x}}{t_2 - t_1}.
+a_x=\frac{v_{2x}-v_{1x}}{t_2-t_1}.
 \tag{2.7}
 $$
 
-Chọn thời điểm ban đầu $t_1 = 0$ với vận tốc ban đầu $v_{1x} = v_{0x}$, và thời điểm khảo sát lúc sau $t_2 = t$ với vận tốc tương ứng $v_{2x} = v_x$:
+Chọn thời điểm đầu là $t_1$ = 0. Gọi vận tốc đầu là $v_{0x}$ và vận tốc tại thời điểm t là $v_x$. Ta có:
 
 $$
-v_x = v_{0x} + a_xt.
+a_x=\frac{v_x-v_{0x}}{t}.
+$$
+
+Nhân hai vế với t rồi chuyển $v_{0x}$ sang vế phải:
+
+$$
+v_x=v_{0x}+a_xt.
 \tag{2.8}
 $$
 
-Phương trình (2.8) biểu thị quy luật tuyến tính: Vận tốc lúc sau bằng vận tốc ban đầu cộng với lượng biến thiên tích lũy $a_xt$. Trên đồ thị vận tốc – thời gian ($v_x-t$), phương trình này là một **đường thẳng** có hệ số góc bằng $a_x$ và tung độ gốc bằng $v_{0x}$ (Hình 2.17).
+Tích $a_x$t là gia tốc, tức tốc độ biến thiên vận tốc, nhân với thời gian. Nó bằng toàn bộ độ biến thiên vận tốc trong khoảng từ 0 đến t. Vì vậy, vận tốc cuối bằng vận tốc đầu cộng với độ biến thiên ấy.
 
-![Hình 2.16: Đồ thị gia tốc theo thời gian — diện tích hình chữ nhật là độ biến thiên vận tốc](img/young-02/hinh-2-16.png)
-
-![Hình 2.17: Đồ thị vận tốc theo thời gian — diện tích hình thang là độ dời](img/young-02/hinh-2-17.png)
-
-### Phương trình tọa độ vị trí theo thời gian
-
-Để tìm vị trí $x(t)$, ta xuất phát từ định nghĩa vận tốc trung bình:
+Trên Hình 2.16, hình chữ nhật dưới đồ thị có chiều cao $a_x$, chiều rộng t và diện tích $a_x$t. Diện tích này bằng độ biến thiên vận tốc:
 
 $$
-v_{\mathrm{av}-x} = \frac{x - x_0}{t}.
+v_x-v_{0x}=a_xt.
+$$
+
+Mối liên hệ giữa diện tích dưới đồ thị gia tốc và độ biến thiên vận tốc vẫn đúng khi gia tốc thay đổi. Khi ấy phải dùng tích phân ở Mục 2.6, thay cho phép nhân với một giá trị gia tốc cố định.
+
+### Tọa độ theo thời gian
+
+Ta tìm tọa độ bằng hai biểu thức của vận tốc trung bình trên cùng khoảng từ 0 đến t. Gọi $x_0$ là tọa độ đầu và x là tọa độ cuối. Định nghĩa vận tốc trung bình cho:
+
+$$
+v_{\mathrm{av}-x}=\frac{x-x_0}{t}.
 \tag{2.9}
 $$
 
-Chỉ riêng trong trường hợp đặc biệt khi gia tốc không đổi (vận tốc biến thiên hoàn toàn tuyến tính theo thời gian), vận tốc trung bình trong khoảng từ $0$ đến $t$ bằng đúng **trung bình cộng của vận tốc đầu và vận tốc cuối**:
+Định nghĩa này đúng cả khi gia tốc thay đổi. Riêng khi gia tốc không đổi, vận tốc biến thiên tuyến tính nên trung bình trên khoảng bằng trung bình cộng của hai giá trị đầu và cuối:
 
 $$
-v_{\mathrm{av}-x} = \frac{v_{0x} + v_x}{2}.
+v_{\mathrm{av}-x}=\frac{v_{0x}+v_x}{2}.
 \tag{2.10}
 $$
 
-Thay biểu thức $v_x = v_{0x} + a_xt$ từ (2.8) vào (2.10):
+::: warning Điều kiện dùng trung bình cộng hai vận tốc
+Công thức (2.10) được bảo đảm khi gia tốc không đổi trên toàn khoảng xét. Nếu gia tốc thay đổi, nó không còn là công thức tổng quát. Một chuyển động cụ thể vẫn có thể tình cờ thỏa đẳng thức trên một khoảng, nên không được dùng đẳng thức ấy để kết luận ngược rằng gia tốc chắc chắn không đổi.
+:::
+
+Thay công thức (2.8) vào (2.10):
 
 $$
 \begin{aligned}
-v_{\mathrm{av}-x} &= \frac{v_{0x} + (v_{0x} + a_xt)}{2} \\
-&= v_{0x} + \frac{1}{2}a_xt.
-\end{aligned} \tag{2.11}
+v_{\mathrm{av}-x}
+&=\frac{2v_{0x}+a_xt}{2}\\
+&=v_{0x}+\frac12a_xt.
+\end{aligned}
+\tag{2.11}
 $$
 
-Đồng nhất (2.9) với (2.11), ta rút ra phương trình tọa độ vị trí:
+Đồng nhất với (2.9):
 
 $$
-x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2.
+\frac{x-x_0}{t}=v_{0x}+\frac12a_xt.
+$$
+
+Nhân với t và cộng $x_0$ vào hai vế:
+
+$$
+x=x_0+v_{0x}t+\frac12a_xt^2.
 \tag{2.12}
 $$
 
-Phương trình (2.12) là một hàm số bậc hai của thời gian $t$. Trên đồ thị vị trí – thời gian ($x-t$), đường biểu diễn là một **nhánh parabol** (Hình 2.18 và Hình 2.19):
-- Nếu $a_x > 0$: Parabol có bề lõm quay lên trên.
-- Nếu $a_x < 0$: Parabol có bề lõm quay xuống dưới.
-- Nếu $a_x = 0$: Số hạng bậc hai triệt tiêu, đồ thị thoái hóa thành đường thẳng $x = x_0 + v_{0x}t$ (chuyển động thẳng đều).
+Tọa độ gồm ba phần. Phần thứ nhất là tọa độ đầu $x_0$. Phần thứ hai là độ dời $v_{0x}$t nếu vận tốc giữ nguyên giá trị đầu. Phần thứ ba là độ dời bổ sung do vận tốc thay đổi.
 
-![Hình 2.18: Đồ thị tọa độ x theo thời gian là đường parabol](img/young-02/hinh-2-18.png)
+![Hình 2.18: Chuyển động thẳng và đồ thị tọa độ khi tọa độ đầu, vận tốc đầu, gia tốc đều dương](img/young-02/hinh-2-18.png)
 
-![Hình 2.19: So sánh chuyển động thẳng đều và chuyển động có gia tốc không đổi](img/young-02/hinh-2-19.png)
+Với gia tốc khác không và không đổi, đồ thị của (2.12) là parabol. Giao điểm với trục tọa độ tại t = 0 cho $x_0$. Độ dốc tiếp tuyến lúc đầu cho $v_{0x}$, còn độ dốc tại thời điểm bất kỳ cho $v_x$. Gia tốc dương làm đồ thị lõm lên. Gia tốc âm làm đồ thị lõm xuống.
 
-*Ý nghĩa hình học của độ dời qua tích phân diện tích:*
-Quan sát Hình 2.17, độ dời $\Delta x = x - x_0$ chính bằng diện tích hình thang dưới đường đồ thị $v_x-t$. Ta có thể tách hình thang thành hai phần:
-- Diện tích hình chữ nhật bên dưới: $v_{0x}t$ (quãng đường đi được nếu giữ nguyên vận tốc ban đầu).
-- Diện tích tam giác vuông bên trên: $\frac{1}{2}(t)(a_xt) = \frac{1}{2}a_xt^2$ (quãng đường dôi ra do gia tốc làm tăng vận tốc).
-Tổng diện tích chính là $x - x_0 = v_{0x}t + \frac{1}{2}a_xt^2$, hoàn toàn trùng khớp với (2.12)!
+Nếu gia tốc bằng không, số hạng bậc hai mất đi và đồ thị tọa độ là đường thẳng. Đồng thời, đồ thị vận tốc là đường nằm ngang. Hình 2.19 cho thấy hai thay đổi xuất hiện khi thêm một gia tốc dương không đổi.
 
----
+![Hình 2.19: So sánh đồ thị tọa độ và vận tốc khi gia tốc bằng không và khi gia tốc dương không đổi](img/young-02/hinh-2-19.png)
 
-### Phương trình độc lập với thời gian (Hệ thức Torricelli)
-
-Trong vô số bài toán thực tế, đề bài cho biết quãng đường và vận tốc nhưng không hề đề cập đến thời gian $t$. Để thiết lập mối liên hệ trực tiếp không phụ thuộc thời gian, ta rút $t = \frac{v_x - v_{0x}}{a_x}$ từ (2.8) rồi thế vào (2.12):
+Cũng có thể suy ra (2.12) bằng diện tích dưới đồ thị vận tốc ở Hình 2.17. Hình chữ nhật có diện tích $v_{0x}$t. Tam giác có đáy t và chiều cao $a_x$t:
 
 $$
-x - x_0 = v_{0x}\left(\frac{v_x - v_{0x}}{a_x}\right) + \frac{1}{2}a_x\left(\frac{v_x - v_{0x}}{a_x}\right)^2.
+S_{\triangle}=\frac12(a_xt)t=\frac12a_xt^2.
 $$
 
-Nhân cả hai vế với $2a_x$ và khai triển hằng đẳng thức:
+Tổng diện tích cho độ dời:
 
 $$
-\begin{aligned}
-2a_x(x - x_0) &= 2v_{0x}v_x - 2v_{0x}^2 + v_x^2 - 2v_{0x}v_x + v_{0x}^2 \\
-&= v_x^2 - v_{0x}^2.
-\end{aligned}
+x-x_0=v_{0x}t+\frac12a_xt^2.
 $$
 
-Ta thu được hệ thức độc lập với thời gian kinh điển:
+Trong hình minh họa, các diện tích đều dương. Với vận tốc âm, phải dùng diện tích có dấu khi xác định độ dời.
+
+### Hệ thức không chứa thời gian
+
+Khi đã biết vận tốc đầu, vận tốc cuối và gia tốc, ta có thể loại thời gian khỏi hai phương trình. Đặt độ biến thiên vận tốc là u:
 
 $$
-v_x^2 = v_{0x}^2 + 2a_x(x - x_0).
+u=v_x-v_{0x}.
+$$
+
+Với gia tốc khác không, công thức (2.8) cho:
+
+$$
+t=\frac{u}{a_x}.
+$$
+
+Thay vào công thức độ dời:
+
+$$
+x-x_0=\frac{v_{0x}u}{a_x}+\frac{u^2}{2a_x}.
+$$
+
+Nhân hai vế với 2$a_x$:
+
+$$
+2a_x(x-x_0)=2v_{0x}u+u^2.
+$$
+
+Khai triển từng phần để thấy các số hạng triệt tiêu:
+
+$$
+2v_{0x}u=2v_{0x}v_x-2v_{0x}^2,
+$$
+
+$$
+u^2=v_x^2-2v_{0x}v_x+v_{0x}^2.
+$$
+
+Khi cộng hai biểu thức, hai số hạng chứa tích $v_{0x}v_x$ triệt tiêu. Hai số hạng chứa bình phương vận tốc đầu còn lại âm một lần bình phương ấy. Do đó:
+
+$$
+2a_x(x-x_0)=v_x^2-v_{0x}^2.
+$$
+
+Chuyển vế:
+
+$$
+v_x^2=v_{0x}^2+2a_x(x-x_0).
 \tag{2.13}
 $$
 
-Một hệ thức bổ trợ hữu ích khác nhận được khi ghép (2.9) và (2.10):
+Phép loại thời gian ở trên chia cho $a_x$ nên đã xét $a_x$ khác không. Khi $a_x$ = 0, vận tốc cuối bằng vận tốc đầu, và (2.13) vẫn đúng.
+
+Một hệ thức khác nhận được khi đồng nhất (2.9) với (2.10), rồi nhân với t:
 
 $$
-x - x_0 = \left(\frac{v_{0x} + v_x}{2}\right)t.
+x-x_0=\frac12(v_{0x}+v_x)t.
 \tag{2.14}
 $$
 
-### Bảng 2.5 — Bộ 4 phương trình chuyển động thẳng biến đổi đều
+Công thức này không chứa gia tốc. Nó hữu ích khi gia tốc không đổi nhưng chưa biết giá trị.
 
-| Phương trình | Số hiệu | Đại lượng vắng mặt (không cần biết) |
-| :--- | :--- | :--- |
-| $v_x = v_{0x} + a_xt$ | (2.8) | Vắng mặt tọa độ vị trí ($x - x_0$). |
-| $x = x_0 + v_{0x}t + \frac{1}{2}a_xt^2$ | (2.12) | Vắng mặt vận tốc lúc sau ($v_x$). |
-| $v_x^2 = v_{0x}^2 + 2a_x(x - x_0)$ | (2.13) | Vắng mặt thời gian ($t$). |
-| $x - x_0 = \frac{1}{2}(v_{0x} + v_x)t$ | (2.14) | Vắng mặt gia tốc ($a_x$). |
+### Bảng 2.5: Các phương trình chuyển động với gia tốc không đổi
 
-::: tip Bí quyết thực chiến chọn phương trình trong chớp mắt
-Mỗi phương trình trong Bảng 2.5 chỉ chứa đúng 4 trong số 5 đại lượng động học cốt lõi: $\Delta x, v_{0x}, v_x, a_x, t$.
-Khi đọc đề bài, hãy tự hỏi: **Đại lượng nào đề bài KHÔNG CHO mà cũng KHÔNG YÊU CẦU TÌM?**
-- Không cần $\Delta x \implies$ chọn ngay (2.8).
-- Không cần $v_x \implies$ chọn ngay (2.12).
-- Không cần $t \implies$ chọn ngay (2.13) (không bao giờ phải mất công giải phương trình bậc hai qua ẩn $t$!).
-- Không cần $a_x \implies$ chọn ngay (2.14).
+Bốn phương trình trên dùng tọa độ đầu và vận tốc đầu làm điều kiện đã xác định tại t = 0. Bảng dưới ghi các đại lượng cần liên hệ bên cạnh điều kiện ban đầu.
+
+| Số hiệu | Các đại lượng có mặt |
+| --- | --- |
+| (2.8) | Thời gian, vận tốc, gia tốc |
+| (2.12) | Thời gian, tọa độ, gia tốc |
+| (2.13) | Tọa độ, vận tốc, gia tốc |
+| (2.14) | Thời gian, tọa độ, vận tốc |
+
+Trong Hình 2.15–2.18, tọa độ đầu, vận tốc đầu và gia tốc đều dương. Hãy phác lại các hình khi một, hai hoặc cả ba đại lượng mang dấu âm để kiểm tra cách hiểu về trục và độ dốc.
+
+### Ứng dụng: Thử nghiệm ở gia tốc lớn
+
+![Ứng dụng 2.A: Chuỗi ảnh John Stapp trên xe trượt tên lửa trong thí nghiệm gia tốc lớn](img/young-02/ung-dung-gia-toc-lon.png)
+
+Trong các thí nghiệm của Không quân Hoa Kỳ vào những năm 1940 và 1950, người ngồi trên xe trượt tên lửa chịu các gia tốc có độ lớn tới 440 m/s². Ba ảnh đầu ghi lại bác sĩ John Stapp tăng tốc từ trạng thái nghỉ lên 188 m/s trong 5 s. Tốc độ ấy tương đương khoảng 678 km/h hoặc 421 dặm/h. Ba ảnh sau cho thấy giai đoạn xe hãm lại, với độ lớn gia tốc lớn hơn.
+
+### Phương pháp giải 2.1: Chuyển động với gia tốc không đổi
+
+Trước hết, xác định gia tốc có thể coi là không đổi hay không. Khi điều kiện này không thỏa, cần dùng cách khác, chẳng hạn tích phân ở Mục 2.6.
+
+1. Đọc đề và vẽ sơ đồ chuyển động ở các thời điểm cần xét. Chọn gốc tọa độ và chiều dương. Đặt vật ở gốc lúc t = 0 có thể giúp $x_0$ = 0. Chiều dương của trục đồng thời quy định dấu của thành phần vận tốc và gia tốc.
+2. Gán ký hiệu cho thời gian, tọa độ, vận tốc và gia tốc. Chuyển lời văn thành điều kiện toán học. Câu hỏi về thời điểm ở vị trí cao nhất yêu cầu tìm thời gian ứng với tọa độ cực đại. Câu hỏi về vị trí khi vận tốc bằng 25 m/s yêu cầu tìm tọa độ tại vận tốc đó. Cụm “xe đang dừng ở đèn đỏ” cung cấp vận tốc đầu bằng không.
+3. Liệt kê các đại lượng đã biết và chưa biết, rồi xác định chính xác đại lượng cần tìm. Chú ý đại lượng nào không xuất hiện trong dữ kiện hoặc yêu cầu.
+4. Dùng Bảng 2.5 chọn phương trình thích hợp. Thường nên chọn phương trình không chứa đại lượng vắng mặt. Có bài chỉ cần một phương trình với một ẩn, có bài cần giải đồng thời hai phương trình với hai ẩn.
+5. Phác đồ thị theo các phương trình đã chọn. Đồ thị vận tốc là đường thẳng có độ dốc bằng gia tốc. Đồ thị tọa độ là parabol lõm lên nếu gia tốc dương và lõm xuống nếu gia tốc âm.
+6. Dựa vào sơ đồ và đồ thị, dự đoán định tính hoặc ước lượng độ lớn của kết quả.
+
+Giải phương trình bằng ký hiệu trước, sau đó thay số kèm đơn vị. Nếu có hai ẩn, giải hệ để tìm đại lượng cần thiết. Cuối cùng, đối chiếu dấu và độ lớn với dự đoán ban đầu, đồng thời xem chúng có phù hợp tình huống vật lý hay không.
+
+### Ví dụ 2.4: Tính toán với gia tốc không đổi
+
+::: exercise Người lái mô tô qua ranh giới thị trấn
+Một người đi mô tô về phía đông tăng tốc với gia tốc không đổi 4,0 m/s² sau khi ra khỏi thị trấn. Tại t = 0, xe ở cách biển ranh giới 5,0 m về phía đông và đang đi về phía đông với tốc độ 15 m/s.
+
+(a) Tìm vị trí và vận tốc lúc t = 2,0 s. (b) Xe ở đâu khi tốc độ đạt 25 m/s?
 :::
 
----
+![Hình 2.20: Vị trí, vận tốc và gia tốc của mô tô đi về phía đông](img/young-02/hinh-2-20.png)
 
-### Ứng dụng thực tiễn — Khoảng cách phanh ô tô và Thử nghiệm gia tốc cực hạn
+::: solution Các bước tính toán
+Chọn gốc tại biển báo và chiều dương về phía đông. Khi ấy $x_0$ = 5,0 m, $v_{0x}$ = 15 m/s và $a_x$ = 4,0 m/s². Gia tốc không đổi nên dùng được bốn phương trình vừa thiết lập.
 
-![Hình ứng dụng: Đại tá John Stapp trên xe trượt tên lửa chịu gia tốc cực lớn](img/young-02/ung-dung-gia-toc-lon.png)
+(a) Vì thời gian đã biết, dùng (2.12) tìm tọa độ và (2.8) tìm vận tốc. Tại t = 2,0 s:
 
-1. **Vật lý an toàn giao thông — Khoảng cách phanh tỷ lệ với bình phương vận tốc:**
-   Khi một chiếc xe đang chạy với vận tốc ban đầu $v_0$ và tài xế đạp phanh khẩn cấp tạo gia tốc hãm $a_x = -a$ (không đổi), xe dừng lại hoàn toàn khi $v_x = 0$. Áp dụng hệ thức (2.13):
+$$
+x=x_0+v_{0x}t+\frac12a_xt^2.
+$$
+
+Hai phần độ dời lần lượt là:
+
+$$
+v_{0x}t=(15)(2{,}0)\,\mathrm m=30\,\mathrm m,
+$$
 
 $$
 \begin{aligned}
-0^2 &= v_0^2 + 2(-a)d \\
-\implies d &= \frac{v_0^2}{2a}.
+\frac12a_xt^2&=\frac12(4{,}0)(2{,}0)^2\,\mathrm m\\
+&=8{,}0\,\mathrm m.
 \end{aligned}
 $$
-   Khoảng cách dừng xe $d$ **tỷ lệ thuận với bình phương vận tốc đầu ($v_0^2$)**!
-   - Nếu bạn chạy xe ở tốc độ $50\,\mathrm{km/h}$, khoảng cách phanh mất khoảng $14\,\mathrm m$.
-   - Nếu bạn tăng tốc lên gấp đôi ($100\,\mathrm{km/h}$), khoảng cách phanh không phải tăng gấp đôi mà tăng vọt lên **gấp bốn lần ($56\,\mathrm m$)**!
-   Đây là minh chứng vật lý đanh thép giải thích tại sao phóng nhanh vượt ẩu lại làm giảm thảm khốc khả năng xử lý va chạm.
 
-2. **Giới hạn chịu đựng gia tốc của con người (Đại tá John Stapp):**
-   Trong những năm 1950, bác sĩ Không quân Hoa Kỳ John Stapp đã tự mình ngồi lên chiếc xe trượt đẩy bằng động cơ tên lửa để kiểm tra giới hạn sinh lý của phi công. Chiếc xe trượt tăng tốc lên $188\,\mathrm{m/s}$ ($678\,\mathrm{km/h}$) rồi bị máng nước hãm phanh dừng lại chỉ trong $1.4\,\mathrm s$, tạo ra gia tốc hãm kỷ lục lên tới $440\,\mathrm{m/s^2}$ (gấp $45$ lần gia tốc trọng trường $g$). Thí nghiệm lịch sử này chứng minh con người có thể sống sót sau các vụ va chạm cực mạnh nếu ghế ngồi và đai an toàn được thiết kế đúng chuẩn cơ học.
+Do đó:
 
----
+$$
+\begin{aligned}
+x&=(5{,}0+30+8{,}0)\,\mathrm m\\
+&=43\,\mathrm m.
+\end{aligned}
+$$
 
-### Ví dụ 2.4 — Tính toán với gia tốc không đổi
+Xe ở cách biển 43 m về phía đông. Vận tốc là:
 
-::: exercise Bài toán
-Một người lái mô tô đang chuyển động thẳng về phía đông. Vừa qua khỏi biển báo giới hạn tốc độ của thị trấn, người đó bắt đầu tăng ga với gia tốc cố định $4.0\,\mathrm{m/s^2}$ (Hình 2.20). Đúng tại thời điểm $t = 0$, chiếc xe cách biển báo ranh giới $5.0\,\mathrm m$ về phía đông và đang có vận tốc $15.0\,\mathrm{m/s}$.
+$$
+\begin{aligned}
+v_x&=[15+(4{,}0)(2{,}0)]\,\mathrm{m/s}\\
+&=23\,\mathrm{m/s}.
+\end{aligned}
+$$
 
-**(a)** Xác định tọa độ vị trí và vận tốc của người lái xe tại thời điểm $t = 2.0\,\mathrm s$.  
-**(b)** Khi tốc độ của xe đạt $25.0\,\mathrm{m/s}$, người đó đang ở vị trí cách biển báo ranh giới bao xa?
+(b) Chưa biết thời gian nên dùng (2.13). Giải theo x:
+
+$$
+x=x_0+\frac{v_x^2-v_{0x}^2}{2a_x}.
+$$
+
+Độ dời để tăng vận tốc từ 15 m/s lên 25 m/s là:
+
+$$
+\begin{aligned}
+x-x_0&=\frac{25^2-15^2}{2(4{,}0)}\,\mathrm m\\
+&=50\,\mathrm m.
+\end{aligned}
+$$
+
+Vì vậy, xe ở cách biển 55 m về phía đông. Có thể đối chiếu bằng thời gian:
+
+$$
+t=\frac{25-15}{4{,}0}\,\mathrm s=2{,}5\,\mathrm s.
+$$
+
+Thay thời gian này vào (2.12) cũng cho tọa độ 55 m. Cách dùng (2.13) tìm trực tiếp tọa độ cần ít bước hơn vì không phải tính thời gian trước.
 :::
 
-![Hình 2.20: Chuyển động tăng tốc của người lái mô tô qua biển báo ranh giới](img/young-02/hinh-2-20.png)
+### Ví dụ 2.5: Hai vật có gia tốc khác nhau
 
-::: solution Hướng dẫn giải
-**Nhận diện và thiết lập:**
-Chọn trục $Ox$ hướng thẳng về phía đông, gốc $O$ đặt tại vị trí biển báo ranh giới thị trấn. Chiều dương hướng về phía đông.
-Dữ kiện đã biết:
-- Vị trí ban đầu: $x_0 = +5.0\,\mathrm m$;
-- Vận tốc ban đầu: $v_{0x} = +15.0\,\mathrm{m/s}$;
-- Gia tốc: $a_x = +4.0\,\mathrm{m/s^2}$ (hằng số không đổi).
+::: exercise Mô tô cảnh sát đuổi ô tô
+Một ô tô đi với tốc độ không đổi 15 m/s, tương đương 54 km/h hoặc khoảng 34 dặm/h, qua chỗ học sinh sang đường. Giới hạn tốc độ tại đây là 10 m/s, tương đương 36 km/h hoặc khoảng 22 dặm/h. Đúng lúc ô tô qua biển báo, một cảnh sát trên mô tô đang dừng tại đó bắt đầu đuổi theo với gia tốc không đổi 3,0 m/s².
 
-**Thực thi câu (a):**
-Áp dụng trực tiếp phương trình vị trí (2.12) và phương trình vận tốc (2.8) tại $t = 2.0\,\mathrm s$:
+(a) Sau bao lâu cảnh sát vượt ô tô? (b) Tốc độ của cảnh sát lúc ấy bằng bao nhiêu? (c) Mỗi xe đã đi được bao xa?
+:::
+
+![Hình 2.21: Sơ đồ và đồ thị tọa độ của mô tô có gia tốc không đổi đuổi ô tô đi đều](img/young-02/hinh-2-21.png)
+
+::: solution Điều kiện gặp nhau
+Chọn gốc tại biển báo, chiều dương sang phải và t = 0 khi ô tô qua biển. Hai xe cùng xuất phát tại tọa độ 0. Ô tô có gia tốc bằng không, còn mô tô có gia tốc dương không đổi. Cả hai đều thỏa điều kiện dùng các công thức gia tốc không đổi.
+
+Gọi tọa độ của ô tô là $x_M$ và của cảnh sát là $x_P$. Với t đo bằng giây và tọa độ đo bằng mét:
+
 $$
-\begin{aligned}
-x(2.0\,\mathrm s) &= x_0 + v_{0x}t + \frac{1}{2}a_xt^2 \\
-&= 5.0 + (15.0)(2.0) + \frac{1}{2}(4.0)(2.0)^2 \\
-&= 5.0 + 30.0 + 8.0 \\
-&= 43.0\,\mathrm m. \\
-v_x(2.0\,\mathrm s) &= v_{0x} + a_xt \\
-&= 15.0 + (4.0)(2.0) \\
-&= 15.0 + 8.0 \\
-&= 23.0\,\mathrm{m/s}.
-\end{aligned}
+x_M=15t,\qquad x_P=1{,}5t^2.
 $$
 
-**Thực thi câu (b):**
-Ở câu này, ta cần tìm vị trí $x$ khi biết $v_x = 25.0\,\mathrm{m/s}$, không cần biết thời gian $t$. Áp dụng ngay hệ thức độc lập thời gian (2.13):
+Đồ thị ô tô là đường thẳng. Đồ thị mô tô là nửa parabol lõm lên. Phác họa cho thấy chúng cắt nhau khoảng 10 s, ở vị trí cách biển khoảng 150 m.
+
+(a) Hai xe gặp nhau khi tọa độ bằng nhau tại cùng thời điểm:
+
 $$
-\begin{aligned}
-v_x^2 &= v_{0x}^2 + 2a_x(x - x_0) \\
-\implies x &= x_0 + \frac{v_x^2 - v_{0x}^2}{2a_x}.
-\end{aligned}
+15t=1{,}5t^2.
+$$
+
+Phương trình có nghiệm t = 0 và:
+
+$$
+t=\frac{2v_{M0x}}{a_{Px}}.
 $$
 
 Thay số:
+
 $$
-\begin{aligned}
-x &= 5.0\,\mathrm m + \frac{(25.0\,\mathrm{m/s})^2 - (15.0\,\mathrm{m/s})^2}{2(4.0\,\mathrm{m/s^2})} \\
-&= 5.0 + \frac{625 - 225}{8.0} \\
-&= 5.0 + \frac{400}{8.0} \\
-&= 5.0 + 50.0 \\
-&= 55.0\,\mathrm m.
-\end{aligned}
+t=\frac{2(15)}{3{,}0}\,\mathrm s=10\,\mathrm s.
 $$
 
-**Đánh giá:** 
-Kiểm tra lại: Thời gian để tăng tốc từ $15\,\mathrm{m/s}$ lên $25\,\mathrm{m/s}$ là:
+Nghiệm 0 ứng với lúc ô tô vượt cảnh sát. Nghiệm 10 s ứng với lúc cảnh sát vượt ô tô.
+
+(b) Vận tốc của cảnh sát khi gặp là:
 
 $$
 \begin{aligned}
-t &= \frac{v_x - v_{0x}}{a_x} \\
-&= \frac{25 - 15}{4.0} \\
-&= 2.5\,\mathrm s.
+v_{Px}&=v_{P0x}+a_{Px}t\\
+&=(3{,}0)(10)\,\mathrm{m/s}\\
+&=30\,\mathrm{m/s}.
 \end{aligned}
 $$
 
-Thế $t = 2.5\,\mathrm s$ vào (2.12):
+Giá trị dương nên tốc độ cũng bằng 30 m/s.
+
+(c) Quãng đường ô tô và mô tô đi được lần lượt là:
+
+$$
+x_M=(15)(10)\,\mathrm m=150\,\mathrm m,
+$$
 
 $$
 \begin{aligned}
-x &= 5.0 + 15(2.5) + 0.5(4.0)(2.5)^2 \\
-&= 5.0 + 37.5 + 12.5 \\
-&= 55.0\,\mathrm m.
+x_P&=\frac12(3{,}0)(10)^2\,\mathrm m\\
+&=150\,\mathrm m.
 \end{aligned}
 $$
 
-Kết quả hoàn toàn trùng khớp, nhưng hệ thức (2.13) giúp ta giải quyết bài toán chỉ trong một dòng duy nhất!
+Các giá trị khớp với ước lượng từ đồ thị. Khi gặp nhau, hai xe có cùng tọa độ nhưng vận tốc khác nhau. Trên đồ thị, hai đường cắt nhau với hai độ dốc khác nhau.
+
+Tốc độ cảnh sát bằng hai lần tốc độ ô tô không phải sự trùng hợp. Ô tô đi đều với độ dời $v_{M0x}$t. Mô tô xuất phát nghỉ, có độ dời bằng một nửa tích của vận tốc cuối với thời gian. Độ dời bằng nhau nên:
+
+$$
+v_{M0x}t=\frac12v_{Px}t.
+$$
+
+Vì thời gian gặp lại dương:
+
+$$
+v_{Px}=2v_{M0x}.
+$$
+
+Kết quả này không phụ thuộc độ lớn gia tốc của cảnh sát, với điều kiện mô tô xuất phát nghỉ tại cùng vị trí, tăng tốc không đổi và ô tô giữ vận tốc không đổi.
 :::
 
----
+### Tự kiểm tra 2.4
 
-### Ví dụ 2.5 — Bài toán đuổi bắt giữa hai xe có gia tốc khác nhau
-
-::: exercise Bài toán
-Một chiếc ô tô con chạy quá tốc độ với vận tốc không đổi $15.0\,\mathrm{m/s}$ ($54\,\mathrm{km/h}$) qua một khu vực trường học có biển giới hạn tốc độ $10.0\,\mathrm{m/s}$ ($36\,\mathrm{km/h}$). Đúng lúc ô tô lướt qua biển báo, một cảnh sát giao thông đi mô tô đang dừng tại đó bắt đầu nổ máy đuổi theo với gia tốc không đổi $3.0\,\mathrm{m/s^2}$ (Hình 2.21a).
-
-**(a)** Sau bao lâu kể từ lúc xuất phát thì cảnh sát đuổi kịp chiếc ô tô?  
-**(b)** Tại thời điểm đuổi kịp, tốc độ của xe cảnh sát là bao nhiêu?  
-**(c)** Khi đó, mỗi xe đã đi được quãng đường bao xa tính từ biển báo?
+::: exercise Chọn đồ thị vận tốc của hai xe
+Bốn đồ thị dưới đây là các khả năng mô tả hai xe trong Ví dụ 2.5. Đồ thị nào đúng?
 :::
 
-![Hình 2.21: Hai xe chuyển động đuổi bắt nhau và giao điểm của hai đồ thị vị trí](img/young-02/hinh-2-21.png)
+![Tự kiểm tra 2.4: Bốn đồ thị vận tốc theo thời gian của ô tô và mô tô cảnh sát](img/young-02/cau-hoi-2-4.png)
 
-::: solution Hướng dẫn giải
-**Nhận diện và thiết lập:**
-Chọn gốc tọa độ $O$ tại biển báo ranh giới trường học, chiều dương trục $Ox$ hướng theo chiều chuyển động của hai xe. Thời điểm ban đầu $t = 0$ là lúc ô tô chạy ngang qua xe cảnh sát.
-Cả hai xe đều xuất phát từ $x_0 = 0$:
-- Ô tô chuyển động thẳng đều: $a_{Ox} = 0$, vận tốc $v_{O0x} = 15.0\,\mathrm{m/s}$ $\implies$ Phương trình chuyển động: $x_O(t) = v_{O0x}t = 15.0t$.
-- Mô tô cảnh sát chuyển động nhanh dần đều từ trạng thái nghỉ: $v_{P0x} = 0$, gia tốc $a_{Px} = 3.0\,\mathrm{m/s^2}$ $\implies$ Phương trình chuyển động: $x_P(t) = \frac{1}{2}a_{Px}t^2 = 1.5t^2$.
+::: solution Giải thích
+Chọn (b). Gia tốc của cảnh sát không đổi nên vận tốc tăng tuyến tính, còn vận tốc ô tô giữ nguyên. Khi gặp nhau ở 10 s, mô tô chạy nhanh hơn ô tô.
 
-**Thực thi câu (a):**
-Hai xe gặp nhau (cảnh sát đuổi kịp ô tô) khi và chỉ khi **chúng có cùng tọa độ vị trí**:
-$$
-\begin{aligned}
-x_P(t) &= x_O(t) \\
-\iff \frac{1}{2}a_{Px}t^2 &= v_{O0x}t \\
-\iff t\left(\frac{1}{2}a_{Px}t - v_{O0x}\right) &= 0.
-\end{aligned}
-$$
-
-Phương trình cho hai nghiệm:
-1. $t = 0$: Thời điểm ban đầu khi chiếc ô tô vượt qua xe cảnh sát tại vạch xuất phát.
-2. Thời điểm cảnh sát đuổi kịp:
-
-$$
-\begin{aligned}
-t &= \frac{2v_{O0x}}{a_{Px}} \\
-&= \frac{2(15.0\,\mathrm{m/s})}{3.0\,\mathrm{m/s^2}} \\
-&= 10.0\,\mathrm s.
-\end{aligned}
-$$
-
-**Thực thi câu (b):**
-Vận tốc của xe cảnh sát tại thời điểm $t = 10.0\,\mathrm s$:
-$$
-\begin{aligned}
-v_{Px} &= v_{P0x} + a_{Px}t \\
-&= 0 + (3.0\,\mathrm{m/s^2})(10.0\,\mathrm s) \\
-&= 30.0\,\mathrm{m/s}\quad (108\,\mathrm{km/h}).
-\end{aligned}
-$$
-
-**Thực thi câu (c):**
-Quãng đường mỗi xe đi được:
-$$
-\begin{aligned}
-x_O &= (15.0\,\mathrm{m/s})(10.0\,\mathrm s) \\
-&= 150\,\mathrm m, \\
-x_P &= \frac{1}{2}(3.0\,\mathrm{m/s^2})(10.0\,\mathrm s)^2 \\
-&= 1.5 \times 100 \\
-&= 150\,\mathrm m.
-\end{aligned}
-$$
-
-**Đánh giá bản chất sâu sắc:**
-Quan sát thấy: Tại thời điểm gặp nhau, vận tốc của cảnh sát ($30.0\,\mathrm{m/s}$) **gấp đúng 2 lần** vận tốc của chiếc ô tô ($15.0\,\mathrm{m/s}$)!
-Đây hoàn toàn không phải là sự trùng hợp ngẫu nhiên. Vì hai xe đi cùng một quãng đường trong cùng một khoảng thời gian, nên vận tốc trung bình của chúng phải bằng nhau:
-- Vận tốc trung bình của ô tô chạy đều là $v_O$.
-- Vận tốc trung bình của cảnh sát xuất phát từ nghỉ là $\frac{0 + v_P}{2} = \frac{v_P}{2}$.
-Đồng nhất hai vận tốc trung bình: $\frac{v_P}{2} = v_O \implies v_P = 2v_O$. Quy luật này luôn đúng cho mọi giá trị gia tốc trong mô hình đuổi bắt từ trạng thái nghỉ!
-:::
-
----
-
-### Câu hỏi kiểm tra hiểu biết mục 2.4
-
-::: exercise Câu hỏi kiểm tra
-Trong bốn đồ thị vận tốc – thời gian ($v_x-t$) ở hình dưới đây, đồ thị nào mô tả chính xác nhất diễn biến chuyển động của người lái xe ô tô và viên cảnh sát trong Ví dụ 2.5?
-
-![Hình câu hỏi: Các phương án đồ thị vận tốc theo thời gian](img/young-02/cau-hoi-2-4.png)
-:::
-
-::: solution Lời giải
-Đáp án đúng là **(b)**.
-
-*Phân tích bản chất:*
-1. Chiếc ô tô chạy với vận tốc không đổi $15\,\mathrm{m/s}$, do đó đồ thị vận tốc của nó phải là một **đường thẳng nằm ngang**.
-2. Mô tô cảnh sát tăng tốc với gia tốc không đổi $a_{Px} = 3.0\,\mathrm{m/s^2}$ từ trạng thái nghỉ ($v_0 = 0$), do đó đồ thị của nó là một **đường thẳng dốc lên xuất phát từ gốc tọa độ**.
-3. Tại thời điểm $t = 10\,\mathrm s$ khi hai xe gặp nhau, diện tích hình thang dưới hai đồ thị bằng nhau (cùng bằng quãng đường $150\,\mathrm m$), và tung độ của cảnh sát ($30\,\mathrm{m/s}$) cao gấp đôi tung độ của ô tô ($15\,\mathrm{m/s}$). Đồ thị (b) thể hiện chính xác tuyệt đối các tính chất này.
+Hai vận tốc bằng nhau ở 5 s, khi đường thẳng của mô tô cắt đường nằm ngang của ô tô. Hai xe chưa gặp nhau tại thời điểm đó. Đến 10 s, diện tích tam giác dưới đồ thị mô tô và diện tích hình chữ nhật dưới đồ thị ô tô cùng bằng 150 m, nên độ dời của chúng bằng nhau.
 :::

@@ -33,10 +33,9 @@ Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/07-tom-tat.md-->
 
 
-## Tài liệu tham khảo học thuật
+## Tài liệu tham khảo
 
 - Hugh D. Young & Roger A. Freedman, *University Physics with Modern Physics*, 15th Edition (Pearson).
-- Halliday, Resnick & Walker, *Fundamentals of Physics*, 11th Edition (Wiley).
 
 </div>
 
