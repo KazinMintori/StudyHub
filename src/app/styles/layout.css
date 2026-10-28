@@ -65,7 +65,7 @@
    article and footer share an edge; the outline only uses the remaining rail. */
 .Layout .VPDoc { padding: var(--space-6) var(--page-gutter) var(--space-8); }
 .Layout .VPDoc .container { display: flex; justify-content: center; gap: var(--reading-gap); max-width: var(--reading-shell); }
-.Layout .VPDoc .content { flex: 1 1 0; min-width: 0; max-width: var(--reading-width); padding: 0; margin: 0; }
+.Layout .VPDoc .container > .content { flex: 1 1 0; min-width: 0; max-width: var(--reading-width); padding: 0; margin: 0; }
 .Layout .VPDoc .content-container,
 .Layout .VPDoc.has-aside .content-container { width: 100%; max-width: var(--reading-width); margin-inline: 0; }
 .Layout .VPLocalNav button, .VPDocFooter .pager-link .desc { font-size: var(--fs-small); }
@@ -88,7 +88,9 @@
 .VPDoc .aside-curtain {
   display: none !important;
 }
-.VPDocAsideOutline .outline-link { font-size: var(--fs-small); white-space: normal; text-overflow: clip; line-height: 1.45; padding: var(--space-1) 0; color: var(--ink-3); }
+.VPDocAsideOutline .outline-link { font-size: var(--fs-small); white-space: normal; text-overflow: clip; line-height: 20px; padding: 6px 0; color: var(--ink-3); }
+/* VitePress places the active marker at link.offsetTop + 39px, which assumes 32px rows under a 32px title. */
+.VPDocAsideOutline .outline-title { line-height: 32px; }
 .VPDocAsideOutline .outline-title { font-size: var(--fs-small); }
 .VPDoc .outline-link.active { color: var(--tim); }
 .shared-reading-outline .VPDocAsideOutline,
@@ -124,7 +126,7 @@
 @media (min-width:1280px) {
  html.study-lookup-open .Layout .VPContent { padding-right:472px; }
  html.study-lookup-open .Layout .VPDoc .aside { display:none; }
- html.study-lookup-open .Layout .VPDoc .content,
+ html.study-lookup-open .Layout .VPDoc .container > .content,
  html.study-lookup-open .Layout .VPDoc .content-container { min-width:0;max-width:100%; }
 }
 @media (max-width:1279px) {

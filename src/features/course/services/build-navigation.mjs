@@ -65,7 +65,7 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
       ],
       '/guide/':[{text:'Hướng dẫn',items:[{text:'Phương pháp học',link:'/guide/'}]}]
     },
-    outline:{level:2,label:'Mục lục'},
+    outline:{level:[2,3],label:'Mục lục'},
     docFooter:{prev:'Bài trước',next:'Bài tiếp theo'},lastUpdated:{text:'Cập nhật lần cuối'},
   }
 }
