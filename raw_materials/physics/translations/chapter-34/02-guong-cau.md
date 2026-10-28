@@ -223,11 +223,22 @@ $$
 
 Thay số:
 
+Hai nghịch đảo khoảng cách có giá trị:
+
 $$
 \begin{aligned}
-\frac{1}{10{,}0\,\mathrm{cm}} {}+ \frac{1}{300\,\mathrm{cm}} &= \frac{2}{R} \\
-0{,}100\,\mathrm{cm}^{-1} {}+ 0{,}00333\,\mathrm{cm}^{-1} &= \frac{2}{R} \\
-0{,}10333\,\mathrm{cm}^{-1} &= \frac{2}{R}
+&\frac1s=0{,}100\,\mathrm{cm^{-1}},\\
+&\frac1{s'}\approx0{,}00333\,\mathrm{cm^{-1}}.
+\end{aligned}
+$$
+
+Từ phương trình gương cầu:
+
+$$
+\begin{aligned}
+\frac2R&=\frac1s+\frac1{s'}\\
+&\approx(0{,}100+0{,}00333)\,\mathrm{cm^{-1}}\\
+&=0{,}10333\,\mathrm{cm^{-1}}.
 \end{aligned}
 $$
 
@@ -263,7 +274,11 @@ $$
 Chiều cao của ảnh là:
 
 $$
-y' = m y = (-30{,}0)(0{,}500\,\mathrm{cm}) = -15{,}0\,\mathrm{cm}
+\begin{aligned}
+y'&=my\\
+&=(-30{,}0)(0{,}500\,\mathrm{cm})\\
+&=-15{,}0\,\mathrm{cm}.
+\end{aligned}
 $$
 
 **Đánh giá**: Giá trị âm của $m$ và $y'$ khẳng định ảnh tạo thành là ảnh ngược chiều so với vật. Chiều cao độ lớn của ảnh là $15{,}0\,\mathrm{cm}$, lớn gấp 30 lần kích thước vật ban đầu. Bán kính cong $R$ và tiêu cự $f$ đều mang dấu dương, hoàn toàn phù hợp với tính chất của gương cầu lõm.
@@ -341,12 +356,13 @@ $$
 
 Biến đổi tìm khoảng cách ảnh $s'$:
 
+Với $f=-1{,}80\,\mathrm{cm}$ và $s=75{,}0\,\mathrm{cm}$, hai nghịch đảo xấp xỉ là $1/f\approx-0{,}5556\,\mathrm{cm^{-1}}$ và $1/s\approx0{,}0133\,\mathrm{cm^{-1}}$:
+
 $$
 \begin{aligned}
-\frac{1}{s'} &= \frac{1}{f} - \frac{1}{s} \\
-&= \frac{1}{-1{,}80\,\mathrm{cm}} - \frac{1}{75{,}0\,\mathrm{cm}} \\
-&= -0{,}5556\,\mathrm{cm}^{-1} - 0{,}0133\,\mathrm{cm}^{-1} \\
-&= -0{,}5689\,\mathrm{cm}^{-1}
+\frac1{s'}&=\frac1f-\frac1s\\
+&\approx(-0{,}5556-0{,}0133)\,\mathrm{cm^{-1}}\\
+&=-0{,}5689\,\mathrm{cm^{-1}}.
 \end{aligned}
 $$
 

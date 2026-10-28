@@ -67,7 +67,78 @@
     "raw_materials/physics/translations/chapter-34/07-kinh-lup.md",
     "raw_materials/physics/translations/chapter-34/08-kinh-hien-vi-thien-van.md"
   ],
-  "examples": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
+      "line": 197,
+      "title": "Ví dụ 34.1: Tạo ảnh bằng gương cầu lõm"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
+      "line": 288,
+      "title": "Ví dụ 34.2: Một nửa gương bị phủ bồ hóng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
+      "line": 336,
+      "title": "Ví dụ 34.3: Bài toán tạo ảnh của ông già Noel"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
+      "line": 432,
+      "title": "Ví dụ 34.4: Tạo ảnh bằng gương cầu lõm ở các khoảng cách vật khác nhau"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
+      "line": 182,
+      "title": "Ví dụ 34.5: Tạo ảnh qua thanh thủy tinh đầu cầu đặt trong không khí"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
+      "line": 255,
+      "title": "Ví dụ 34.6: Thanh thủy tinh nhúng trong nước"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
+      "line": 326,
+      "title": "Ví dụ 34.7: Độ sâu biểu kiến của bể bơi"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+      "line": 199,
+      "title": "Ví dụ 34.8: Xác định tiêu cự của thấu kính"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+      "line": 281,
+      "title": "Ví dụ 34.9: Vị trí ảnh và độ phóng đại qua thấu kính hội tụ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+      "line": 380,
+      "title": "Ví dụ 34.10: Dựng ảnh qua thấu kính phân kỳ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+      "line": 432,
+      "title": "Ví dụ 34.11: Ảnh của một ảnh"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/05-may-anh.md",
+      "line": 91,
+      "title": "Ví dụ 34.12: Thời gian phơi sáng trong nhiếp ảnh"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/06-mat.md",
+      "line": 82,
+      "title": "Ví dụ 34.13: Khắc phục tật viễn thị"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/06-mat.md",
+      "line": 139,
+      "title": "Ví dụ 34.14: Khắc phục tật cận thị"
+    }
+  ],
   "exercises": [
     {
       "source": "raw_materials/physics/translations/chapter-34/10-luyen-tap-huong-dan.md",
@@ -837,6 +908,11 @@
   ],
   "solutions": [
     {
+      "source": "raw_materials/physics/translations/chapter-34/00-mo-dau.md",
+      "line": 18,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
       "source": "raw_materials/physics/translations/chapter-34/10-luyen-tap-huong-dan.md",
       "line": 11,
       "title": "Lời giải chi tiết"
@@ -1575,6 +1651,36 @@
       "source": "raw_materials/physics/translations/chapter-34/17-mcat.md",
       "line": 99,
       "title": "Lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/01-guong-phang.md",
+      "line": 87,
+      "title": "Xem giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/01-guong-phang.md",
+      "line": 103,
+      "title": "Xem chứng minh"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/01-guong-phang.md",
+      "line": 149,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
+      "line": 558,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
+      "line": 374,
+      "title": "Xem đáp án và giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+      "line": 527,
+      "title": "Xem đáp án và giải thích"
     }
   ],
   "assets": [
@@ -1935,31 +2041,31 @@
     {
       "reference": "../img/young-34/hinh-34-16.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
-      "line": 293,
+      "line": 308,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-16.png"
     },
     {
       "reference": "../img/young-34/hinh-34-17.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
-      "line": 315,
+      "line": 330,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-17.png"
     },
     {
       "reference": "../img/young-34/hinh-34-18.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
-      "line": 319,
+      "line": 334,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-18.png"
     },
     {
       "reference": "../img/young-34/hinh-34-19.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
-      "line": 393,
+      "line": 409,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-19.png"
     },
     {
       "reference": "../img/young-34/hinh-34-20.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
-      "line": 428,
+      "line": 444,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-20.png"
     },
     {
@@ -1989,19 +2095,19 @@
     {
       "reference": "../img/young-34/hinh-34-25.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
-      "line": 250,
+      "line": 259,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-25.png"
     },
     {
       "reference": "../img/young-34/hinh-34-26.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
-      "line": 312,
+      "line": 330,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-26.png"
     },
     {
       "reference": "../img/young-34/hinh-34-27.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
-      "line": 346,
+      "line": 364,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-27.png"
     },
     {
@@ -2043,49 +2149,49 @@
     {
       "reference": "../img/young-34/hinh-34-34.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 168,
+      "line": 180,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-34.png"
     },
     {
       "reference": "../img/young-34/hinh-34-35.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 170,
+      "line": 182,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-35.png"
     },
     {
       "reference": "../img/young-34/hinh-34-36.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 229,
+      "line": 257,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-36.png"
     },
     {
       "reference": "../img/young-34/hinh-34-37.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 238,
+      "line": 266,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-37.png"
     },
     {
       "reference": "../img/young-34/hinh-34-38.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 360,
+      "line": 388,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-38.png"
     },
     {
       "reference": "../img/young-34/hinh-34-39.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 404,
+      "line": 436,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-39.png"
     },
     {
       "reference": "../img/young-34/tu-kiem-34-4-de.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 477,
+      "line": 517,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/tu-kiem-34-4-de.png"
     },
     {
       "reference": "../img/young-34/tu-kiem-34-4-dap-an.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
-      "line": 499,
+      "line": 539,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/tu-kiem-34-4-dap-an.png"
     },
     {
@@ -2115,7 +2221,7 @@
     {
       "reference": "../img/young-34/hinh-34-43.png",
       "declaredIn": "raw_materials/physics/translations/chapter-34/05-may-anh.md",
-      "line": 81,
+      "line": 79,
       "source": "docs/vat-ly-2/bai-giang/img/young-34/hinh-34-43.png"
     },
     {

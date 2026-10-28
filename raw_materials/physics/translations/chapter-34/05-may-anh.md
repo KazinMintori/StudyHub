@@ -60,9 +60,7 @@ $$
 
 Đối với một ống kính có màn chắn thay đổi được, nếu ta tăng đường kính $D$ lên $\sqrt{2}$ lần thì chỉ số f $N$ sẽ giảm đi $\sqrt{2}$ lần, làm diện tích lỗ mở tăng gấp đôi và cường độ sáng tới cảm biến tăng gấp đôi. Do đó, các nấc chỉ số f trên vành ống kính (thường gọi là các nấc f-stop) được quy chuẩn theo một chuỗi cấp số nhân với công bội danh định $\sqrt{2} \approx 1{,}414$:
 
-$$
-f/1{,}4 \quad f/2 \quad f/2{,}8 f/4 \quad f/5{,}6 \quad f/8 f/11 \quad f/16 \quad f/22
-$$
+Các nấc theo thứ tự là $f/1{,}4$, $f/2$, $f/2{,}8$, $f/4$, $f/5{,}6$, $f/8$, $f/11$, $f/16$ và $f/22$.
 
 Chỉ số f càng lớn thì khẩu độ mở càng nhỏ, dẫn đến ánh sáng tới cảm biến càng yếu (Hình 34.42). Mỗi nấc dịch chuyển sang phải làm giảm cường độ sáng đi một nửa, trong khi mỗi nấc dịch chuyển sang trái làm tăng cường độ sáng lên gấp đôi.
 

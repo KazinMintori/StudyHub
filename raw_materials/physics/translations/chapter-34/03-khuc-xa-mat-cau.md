@@ -201,20 +201,29 @@ $$
 
 Thay các giá trị số vào:
 
+Đặt P là vế phải của phương trình tạo ảnh và Q là số hạng do vật:
+
 $$
 \begin{aligned}
-\frac{1{,}00}{8{,}00\,\mathrm{cm}} + \frac{1{,}52}{s'} &= \frac{1{,}52 - 1{,}00}{+2{,}00\,\mathrm{cm}} \\
-&= \frac{0{,}52}{2{,}00\,\mathrm{cm}} \\
-&= 0{,}260\,\mathrm{cm}^{-1}
+P&=\frac{n_b-n_a}{R}\\
+&=\frac{1{,}52-1{,}00}{2{,}00\,\mathrm{cm}}\\
+&=0{,}260\,\mathrm{cm^{-1}}.
 \end{aligned}
 $$
+
+$$
+Q=\frac{n_a}{s}=0{,}125\,\mathrm{cm^{-1}}.
+$$
+
+Phương trình tạo ảnh trở thành $n_b/s'=P-Q$.
 
 Chuyển vế:
 
 $$
 \begin{aligned}
-\frac{1{,}52}{s'} &= 0{,}260\,\mathrm{cm}^{-1} - 0{,}125\,\mathrm{cm}^{-1} \\
-&= 0{,}135\,\mathrm{cm}^{-1}
+\frac{1{,}52}{s'}&=P-Q\\
+&=(0{,}260-0{,}125)\,\mathrm{cm^{-1}}\\
+&=0{,}135\,\mathrm{cm^{-1}}.
 \end{aligned}
 $$
 
@@ -265,20 +274,29 @@ $$
 
 Thay số:
 
+Đặt P là vế phải của phương trình tạo ảnh và Q là số hạng do vật:
+
 $$
 \begin{aligned}
-\frac{1{,}33}{8{,}00\,\mathrm{cm}} + \frac{1{,}52}{s'} &= \frac{1{,}52 - 1{,}33}{+2{,}00\,\mathrm{cm}} \\
-&= \frac{0{,}19}{2{,}00\,\mathrm{cm}} \\
-&= 0{,}0950\,\mathrm{cm}^{-1}
+P&=\frac{n_b-n_a}{R}\\
+&=\frac{1{,}52-1{,}33}{2{,}00\,\mathrm{cm}}\\
+&=0{,}0950\,\mathrm{cm^{-1}}.
 \end{aligned}
 $$
+
+$$
+Q=\frac{n_a}{s}=0{,}16625\,\mathrm{cm^{-1}}.
+$$
+
+Phương trình tạo ảnh trở thành $n_b/s'=P-Q$.
 
 Chuyển vế:
 
 $$
 \begin{aligned}
-\frac{1{,}52}{s'} &= 0{,}0950\,\mathrm{cm}^{-1} - 0{,}16625\,\mathrm{cm}^{-1} \\
-&= -0{,}07125\,\mathrm{cm}^{-1}
+\frac{1{,}52}{s'}&=P-Q\\
+&=(0{,}0950-0{,}16625)\,\mathrm{cm^{-1}}\\
+&=-0{,}07125\,\mathrm{cm^{-1}}.
 \end{aligned}
 $$
 

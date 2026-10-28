@@ -104,14 +104,30 @@ Nếu đổi thứ tự, gương 1 dùng $P'_2$ làm vật. Trong cấu hình ha
 
 Đặt hai vết gương dọc các trục tọa độ vuông góc. Một phép phản xạ đổi dấu tọa độ vuông góc gương ngang, còn phép kia đổi dấu tọa độ vuông góc gương đứng:
 
+Lần phản xạ thứ nhất:
+
 $$
-(x,y)\longmapsto(x,-y) \longmapsto(-x,-y).
+(x,y)\longmapsto(x,-y).
+$$
+
+Lần phản xạ thứ hai:
+
+$$
+(x,-y)\longmapsto(-x,-y).
 $$
 
 Đổi thứ tự:
 
+Lần phản xạ thứ nhất:
+
 $$
-(x,y)\longmapsto(-x,y) \longmapsto(-x,-y).
+(x,y)\longmapsto(-x,y).
+$$
+
+Lần phản xạ thứ hai:
+
+$$
+(-x,y)\longmapsto(-x,-y).
 $$
 
 Hai tọa độ đổi dấu độc lập nên kết quả giống nhau. Kết luận về cùng điểm này dùng cấu hình hai gương vuông góc, không suy rộng cho mọi cặp mặt quang học.

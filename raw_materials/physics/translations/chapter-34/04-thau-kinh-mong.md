@@ -155,8 +155,20 @@ $$
 
 Cộng từng vế hai phương trình này, số hạng chứa ảnh trung gian $n/s_1'$ triệt tiêu hoàn toàn:
 
+Đặt hai đóng góp của độ cong các mặt:
+
 $$
-\frac{1}{s_1} + \frac{1}{s_2'} = (n - 1)\left(\frac{1}{R_1} - \frac{1}{R_2}\right). \tag{34.18}
+\begin{aligned}
+&P_1=\frac{n-1}{R_1},\\
+&P_2=-\frac{n-1}{R_2}.
+\end{aligned}
+$$
+
+Phương trình tổng sau khi khử ảnh trung gian là:
+
+$$
+\frac1{s_1}+\frac1{s_2'}=P_1+P_2.
+\tag{34.18}
 $$
 
 Gọi $s_1 = s$ là khoảng cách từ vật ban đầu tới thấu kính và $s_2' = s'$ là khoảng cách từ ảnh cuối cùng tới thấu kính. So sánh phương trình (34.18) với phương trình thấu kính mỏng (34.16), ta rút ra **công thức chế tạo thấu kính** (Lensmaker's Equation):
@@ -196,8 +208,16 @@ $$
 
 (a) Thấu kính ở Hình 34.35 là thấu kính hai mặt lồi: Tâm cong của mặt thứ nhất ($C_1$) nằm ở phía ánh sáng ra của thấu kính, do đó $R_1$ mang giá trị dương. Tâm cong của mặt thứ hai ($C_2$) nằm ở phía ánh sáng tới, do đó $R_2$ mang giá trị âm. Vì vậy, ta có $R_1 = +10\,\mathrm{cm}$ và $R_2 = -10\,\mathrm{cm}$. Áp dụng phương trình (34.19):
 
+Hai độ cong có dấu là $R_1=+10\,\mathrm{cm}$ và $R_2=-10\,\mathrm{cm}$:
+
 $$
-\frac{1}{f} = (1{,}52 - 1)\left(\frac{1}{+10\,\mathrm{cm}} - \frac{1}{-10\,\mathrm{cm}}\right)
+\frac1{R_1}-\frac1{R_2}=+0{,}200\,\mathrm{cm^{-1}}.
+$$
+
+Thay $n-1=0{,}52$:
+
+$$
+\frac1f=(0{,}52)(+0{,}200)\,\mathrm{cm^{-1}}.
 $$
 
 Suy ra:
@@ -208,8 +228,16 @@ $$
 
 (b) Thấu kính ở Hình 34.31 là thấu kính hai mặt lõm: Tâm cong của mặt thứ nhất nằm ở phía ánh sáng tới, do đó $R_1$ mang giá trị âm. Tâm cong của mặt thứ hai nằm ở phía ánh sáng ra, do đó $R_2$ mang giá trị dương. Vì vậy, trong trường hợp này ta có $R_1 = -10\,\mathrm{cm}$ và $R_2 = +10\,\mathrm{cm}$. Tiếp tục sử dụng phương trình (34.19):
 
+Hai độ cong có dấu là $R_1=-10\,\mathrm{cm}$ và $R_2=+10\,\mathrm{cm}$:
+
 $$
-\frac{1}{f} = (1{,}52 - 1)\left(\frac{1}{-10\,\mathrm{cm}} - \frac{1}{+10\,\mathrm{cm}}\right)
+\frac1{R_1}-\frac1{R_2}=-0{,}200\,\mathrm{cm^{-1}}.
+$$
+
+Thay $n-1=0{,}52$:
+
+$$
+\frac1f=(0{,}52)(-0{,}200)\,\mathrm{cm^{-1}}.
 $$
 
 Suy ra:
@@ -376,7 +404,11 @@ $$
 Suy ra:
 
 $$
-s = -2 f = -2(-20{,}0\,\mathrm{cm}) = 40{,}0\,\mathrm{cm}
+\begin{aligned}
+s&=-2f\\
+&=-2(-20{,}0\,\mathrm{cm})\\
+&=40{,}0\,\mathrm{cm}.
+\end{aligned}
 $$
 
 Vật cần được đặt cách thấu kính một khoảng $40{,}0\,\mathrm{cm}$. Khoảng cách ảnh sẽ là:
@@ -457,13 +489,21 @@ $$
 **Đánh giá**: Giá trị của $m_B$ cho thấy ảnh cuối cùng $I'$ có độ lớn bằng đúng ảnh thứ nhất $I$ nhưng có chiều ngược lại. Độ phóng đại tổng cộng của cả hệ thống là:
 
 $$
-M = m_A m_B = (-2{,}00)(-1{,}00) = +2{,}00
+\begin{aligned}
+M&=m_Am_B\\
+&=(-2{,}00)(-1{,}00)\\
+&=+2{,}00.
+\end{aligned}
 $$
 
 Vì vậy ảnh cuối cùng $I'$ có chiều cao:
 
 $$
-y' = M y = (+2{,}00)(8{,}0\,\mathrm{cm}) = 16\,\mathrm{cm}
+\begin{aligned}
+y'&=My\\
+&=(+2{,}00)(8{,}0\,\mathrm{cm})\\
+&=16\,\mathrm{cm}.
+\end{aligned}
 $$
 
 và có cùng chiều với vật $O$ ban đầu, hoàn toàn phù hợp với những gì biểu diễn trên Hình 34.39.
