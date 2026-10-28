@@ -13,15 +13,29 @@ Sự truyền qua một hàng rào thế với năng lượng thấp hơn đỉn
 
 ## Giải thích kỹ thuật
 
-Với hàng rào chữ nhật cao U₀, rộng L và năng lượng từ không đến U₀, nghiệm trong hàng rào chứa hàm mũ. Nối nghiệm ở hai mép tạo hệ số truyền qua khác không.
+Xét hạt có khối lượng m trong mô hình một chiều phi tương đối tính. Hàng rào thế chữ nhật cao $U_0$, rộng L. Chọn thế năng bằng không ở hai phía ngoài hàng rào và xét năng lượng $0<E<U_0$. Bên trong hàng rào, nghiệm chứa các hàm mũ. Điều kiện liên tục của hàm sóng và đạo hàm ở hai mép xác định hệ số truyền qua T.
 
-Trong giới hạn hàng rào đủ mờ đục,
+Hằng số suy giảm là
+
+$$
+\kappa=\frac{\sqrt{2m(U_0-E)}}{\hbar}.
+$$
+
+Ở đây $\hbar$ là hằng số Planck rút gọn. Hằng số $\kappa$ có đơn vị nghịch đảo mét khi dùng đơn vị SI. Tích $\kappa L$ không có đơn vị.
+
+Trong giới hạn hàng rào đủ mờ đục, với $\kappa L\gg1$ và xác suất truyền nhỏ,
 
 $$
 T\approx Ge^{-2\kappa L}.
 $$
 
-Hằng số suy giảm phụ thuộc căn bậc hai của tích khối lượng với phần năng lượng thiếu. Bởi L và hằng số này nằm trong số mũ, thay đổi nhỏ về bề rộng có thể làm hệ số truyền thay đổi nhiều bậc.
+Hệ số không có đơn vị G được xác định bởi tỉ số năng lượng:
+
+$$
+G=16\frac{E}{U_0}\left(1-\frac{E}{U_0}\right).
+$$
+
+G là hệ số đứng trước hàm mũ, không phải một xác suất riêng. Bởi bề rộng L và hằng số suy giảm nằm trong số mũ, thay đổi nhỏ về bề rộng có thể làm hệ số truyền thay đổi nhiều bậc.
 
 Phần truyền qua và phần phản xạ là các khả năng của kết quả đo, không phải bằng chứng một hạt electron bị chẻ thành hai mảnh. Với thế tĩnh, mô hình bảo toàn cơ năng và không mô tả sự tiêu hao khi hạt “đục” qua vách.
 

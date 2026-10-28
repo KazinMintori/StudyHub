@@ -1,0 +1,16 @@
+{
+  "status": "accepted-scoped-wiki-repair-only",
+  "actualSourcePDFPage": 1361,
+  "printedPage": 1341,
+  "equation": "40.42",
+  "files": [
+    "docs/.vitepress/physics-quantum-wave-foundations.mjs",
+    "docs/wiki/xuyen-ham-luong-tu.md"
+  ],
+  "wikiSHA256": "75a7867102b4ec85d6c9f2f413023bc4a889765e14a5cf7fd075e7296e104fa3",
+  "effectiveWikiDetailsMatchesPage": true,
+  "fix": "Defined previously unexplained G/kappa, energy domain, outside-potential convention, units and opaque-barrier approximation. G is a prefactor not a separate probability.",
+  "numericAssertions": 12,
+  "componentViewportCases": 5,
+  "limits": "ProductionMarkdown/CSScomponentreview in Notes-style measurement wrapper, not actualWikiusage/controller/publicroute. Parentread7modernWiki pages; this doesnotcertifyall37modernconcepts orallcourse sourcefidelity. No fullgoal completion."
+}
