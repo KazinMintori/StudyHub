@@ -1,7 +1,57 @@
 {
-  "047": { "examType": "official", "semester": 1, "academicYear": "2026–2027", "examDate": null },
-  "045": { "examType": "official", "semester": 1, "academicYear": "2026–2027", "examDate": null },
-  "046": { "examType": "official", "semester": 1, "academicYear": "2026–2027", "examDate": null },
-  "030": { "examType": "official", "semester": 1, "academicYear": "2025–2026", "examDate": null },
-  "001": { "examType": "practice", "semester": 1, "academicYear": "2026–2027", "examDate": null }
+  "047": {
+    "examType": "official",
+    "semester": 1,
+    "academicYear": "2026–2027",
+    "examDate": null
+  },
+  "045": {
+    "examType": "official",
+    "semester": 1,
+    "academicYear": "2026–2027",
+    "examDate": null
+  },
+  "046": {
+    "examType": "official",
+    "semester": 1,
+    "academicYear": "2026–2027",
+    "examDate": null
+  },
+  "030": {
+    "examType": "official",
+    "semester": 1,
+    "academicYear": "2025–2026",
+    "examDate": null
+  },
+  "001": {
+    "examType": "practice",
+    "semester": 1,
+    "academicYear": "2026–2027",
+    "examDate": null
+  },
+  "049": {
+    "examType": "unclassified",
+    "semester": null,
+    "academicYear": null,
+    "examDate": null,
+    "expectedTotal": 26,
+    "sourceComplete": false,
+    "sourcePages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "missingSourceNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverageNote": "Hiện có 18 câu (câu 9–26) từ trang 3–6. Chưa có trang 1–2, gồm câu 1–8. Giữ nguyên số câu trên đề. Chưa xác định học kỳ, năm học và ngày thi."
+  }
 }

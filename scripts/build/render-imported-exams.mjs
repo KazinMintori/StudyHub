@@ -16,15 +16,17 @@ const renderOriginal = await createExamMarkdownRenderer(root, { preserveProse: t
 const escapeProse = text => text.replace(/\\/g, '\\\\').replace(/[`*_{}[\]#$]/g, '\\$&')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 const itemMarkdown = item => item.kind === 'code'
-  ? `\`\`\`python\n${item.text}\n\`\`\`` : escapeProse(item.text)
+  ? `\`\`\`${item.language || 'python'}\n${item.text}\n\`\`\`` : escapeProse(item.text)
 const catalog = []
 const coverage = []
 for (const exam of source.exams) {
   const meta = metadata[exam.code]
-  if(!meta || !['official','practice'].includes(meta.examType)) throw new Error(`Missing exam metadata: ${exam.code}`)
+  if(!meta || !['official','practice','unclassified'].includes(meta.examType)) throw new Error(`Missing exam metadata: ${exam.code}`)
   if(meta.examDate && (!/^\d{4}-\d{2}-\d{2}$/.test(meta.examDate) || new Date(meta.examDate).toISOString().slice(0,10)!==meta.examDate)) throw new Error(`Invalid exam date: ${exam.code}`)
-  const examTypeLabel = meta.examType === 'official' ? 'Đề chính thức' : 'Đề luyện tập'
-  const academicTerm = `Học kỳ ${meta.semester}, năm học ${meta.academicYear}`
+  const examTypeLabel = { official: 'Đề chính thức', practice: 'Đề luyện tập', unclassified: 'Đề thi từ ảnh' }[meta.examType]
+  const academicTerm = meta.semester && meta.academicYear
+    ? `Học kỳ ${meta.semester}, năm học ${meta.academicYear}`
+    : 'Học kỳ và năm học: Chưa có thông tin'
   const examDateLabel = meta.examDate ? meta.examDate.split('-').reverse().join('/') : ''
   const paperInfo = {...meta, examTypeLabel, academicTerm, examDateLabel}
   const questions = exam.questions.map(q => {
@@ -40,7 +42,9 @@ for (const exam of source.exams) {
       html: renderOriginal(escapeProse(option.text)),
       explanationHtml: q.grading === 'manual'
         ? ''
-        : render(q.correctKeys.includes(option.label) ? 'Phương án đúng.' : 'Phương án này không phù hợp với kết quả đã kiểm chứng.') + summary,
+        : q.optionExplanations?.[option.label]
+          ? render(q.optionExplanations[option.label])
+          : render(q.correctKeys.includes(option.label) ? 'Phương án đúng.' : 'Phương án này không phù hợp với kết quả đã kiểm chứng.') + summary,
     }))
     return {
       id: q.id, kind: q.kind, sourceNumber: q.n, group: `${q.points} điểm`,
@@ -51,7 +55,8 @@ for (const exam of source.exams) {
   const bank = { id: exam.id, title: exam.title, code: exam.code, ...paperInfo, questions }
   await writeFile(path.join(output, `${exam.id}.json`), JSON.stringify(bank, null, 2) + '\n')
   catalog.push({ id: exam.id, slug: exam.id, title: exam.title, number: exam.number, code: exam.code,
-    ...paperInfo, description: `${examTypeLabel} · Mã đề ${exam.code} · ${academicTerm}${examDateLabel ? ` · Ngày thi: ${examDateLabel}` : ''}`, total: questions.length, quiz: 20, essay: 6 })
+    ...paperInfo, description: `${examTypeLabel} · Mã đề ${exam.code} · ${meta.sourceComplete === false ? `Câu ${exam.questions[0].n}–${exam.questions.at(-1).n} · ${questions.length}/${meta.expectedTotal} câu` : academicTerm}${examDateLabel ? ` · Ngày thi: ${examDateLabel}` : ''}`,
+    total: questions.length, quiz: questions.filter(q => q.kind === 'quiz').length, essay: questions.filter(q => q.kind === 'essay').length })
   coverage.push({ id: exam.id, questions: questions.map(q => q.id),
     sourceSha256: createHash('sha256').update(JSON.stringify(exam)).digest('hex'),
     metadataSha256: createHash('sha256').update(JSON.stringify(meta)).digest('hex'),

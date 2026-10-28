@@ -168,5 +168,31 @@
     "sourceSha256": "b7d901e5a3c843ccf324a4c99ff0d88bb012bc87562e25b82740f99c405add6a",
     "metadataSha256": "2b175b07f235cd6d73e37d2c337abf19b83e2a393c98c3d495d70ecb50e1807d",
     "renderedSha256": "67988603176ad227f6254e752a9995fb1f82fc1ac5c9f60ac3b358a0ff3a7ce2"
+  },
+  {
+    "id": "de-6",
+    "questions": [
+      "D6-009",
+      "D6-010",
+      "D6-011",
+      "D6-012",
+      "D6-013",
+      "D6-014",
+      "D6-015",
+      "D6-016",
+      "D6-017",
+      "D6-018",
+      "D6-019",
+      "D6-020",
+      "D6-021",
+      "D6-022",
+      "D6-023",
+      "D6-024",
+      "D6-025",
+      "D6-026"
+    ],
+    "sourceSha256": "d64f9b21ea7672a1eb14fc039b4d8a0b41cb76a8e18741312353db189ee73587",
+    "metadataSha256": "c5716d95ee63e34f3c76797a6111889c10c3b34979155a24c004236c402571c6",
+    "renderedSha256": "ff14b4222500d3c4b7ca0abbb77ae1f808be91309ac17b92c72864d76468eaf5"
   }
 ]

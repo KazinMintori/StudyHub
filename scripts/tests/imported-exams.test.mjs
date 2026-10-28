@@ -14,20 +14,20 @@ const banks = catalog.map(exam => load(`src/content/courses/xu-ly-du-lieu/de-thi
 const clean = text => htmlCodeText(text).replace(/\s+/g, ' ').trim()
 const sha = object => createHash('sha256').update(JSON.stringify(object)).digest('hex')
 
-test('Five papers contain every source question, choice and unchanged code block', () => {
-  assert.deepEqual(banks.map(bank => bank.code), ['047', '045', '046', '030', '001'])
-  assert.deepEqual(banks.map(bank => bank.title), ['Đề 1', 'Đề 2', 'Đề 3', 'Đề 4', 'Đề 5'])
+test('Imported papers contain every available source question, choice and unchanged code block', () => {
+  assert.deepEqual(banks.map(bank => bank.code), ['047', '045', '046', '030', '001', '049'])
+  assert.deepEqual(banks.map(bank => bank.title), ['Đề 1', 'Đề 2', 'Đề 3', 'Đề 4', 'Đề 5', 'Đề 6'])
   let questions = 0, choices = 0, blocks = 0
   for (const [i, bank] of banks.entries()) {
-    assert.equal(bank.questions.length, 26)
-    assert.equal(bank.questions.filter(q => q.kind === 'quiz').length, 20)
+    assert.equal(bank.questions.length, bank.sourceComplete === false ? 18 : 26)
+    assert.equal(bank.questions.filter(q => q.kind === 'quiz').length, bank.sourceComplete === false ? 12 : 20)
     assert.equal(bank.questions.filter(q => q.kind === 'essay').length, 6)
     assert.equal(coverage[i].sourceSha256, sha(source.exams[i]))
     assert.equal(coverage[i].metadataSha256, sha(metadata[bank.code]))
     assert.equal(coverage[i].renderedSha256, sha(bank))
     for (const [j, q] of bank.questions.entries()) {
       const original = source.exams[i].questions[j]
-      assert.equal(q.sourceNumber, j + 1)
+      assert.equal(q.sourceNumber, original.n)
       assert.equal(q.id, original.id)
       assert.ok(q.answerHtml.includes('Đáp án') && clean(q.answerHtml).length > 200, `${q.id}: detailed solution`)
       assert.ok(!/ZXQKEEP|data-mjx-error|<merror\b/.test(q.answerHtml), q.id)
@@ -49,19 +49,19 @@ test('Five papers contain every source question, choice and unchanged code block
       questions++; choices += originals.length; blocks += codes.length
     }
   }
-  assert.equal(questions, 130)
-  assert.equal(choices, 400)
-  assert.equal(blocks, 94)
+  assert.equal(questions, 148)
+  assert.equal(choices, 448)
+  assert.equal(blocks, source.exams.flatMap(exam => exam.questions).flatMap(q => q.items).filter(item => item.kind === 'code').length)
 })
 
-test('Only code 001 is a practice paper and unspecified dates are never invented', () => {
-  assert.deepEqual(banks.map(bank=>bank.examType), ['official','official','official','official','practice'])
+test('Paper types and unspecified dates are never invented', () => {
+  assert.deepEqual(banks.map(bank=>bank.examType), ['official','official','official','official','practice','unclassified'])
   assert.equal(banks[3].academicYear, '2025–2026')
   for(const [i,bank] of banks.entries()) {
     assert.equal(bank.examDate, metadata[bank.code].examDate)
     assert.equal(catalog[i].examDate, bank.examDate)
     assert.ok(catalog[i].description.includes(bank.examTypeLabel))
-    assert.ok(catalog[i].description.includes(bank.academicYear))
+    if (bank.academicYear) assert.ok(catalog[i].description.includes(bank.academicYear))
     assert.equal(bank.examDateLabel, bank.examDate ? bank.examDate.split('-').reverse().join('/') : '')
   }
 })
@@ -96,8 +96,43 @@ test('Reviewed source variants and independent page storage keys stay explicit',
     assert.ok(page.includes('ExamPractice'))
     return page.match(/session-key="([^"]+)"/)[1]
   })
-  assert.equal(new Set(keys).size, 5)
+  assert.equal(new Set(keys).size, 6)
   const pdf = readFileSync('docs/public/materials/xu-ly-du-lieu/de-thi/5-de-130-cau-loi-giai.pdf')
   assert.equal(pdf.subarray(0,5).toString(), '%PDF-')
   assert.ok(pdf.length > 500000)
+})
+
+test('Photo paper 049 preserves gaps and treats invalid printed code as manual review', () => {
+  const bank = banks.find(bank => bank.code === '049')
+  assert.deepEqual(bank.questions.map(q => q.sourceNumber), Array.from({ length: 18 }, (_, i) => i + 9))
+  assert.equal(bank.sourceComplete, false)
+  assert.deepEqual(bank.sourcePages, [3, 4, 5, 6])
+  assert.deepEqual(bank.missingSourceNumbers, [1, 2, 3, 4, 5, 6, 7, 8])
+  assert.ok(bank.coverageNote.includes('Chưa có trang 1–2'))
+  assert.equal(bank.semester, null)
+  assert.equal(bank.academicYear, null)
+  assert.equal(catalog.at(-1).total, 18)
+  assert.equal(catalog.at(-1).quiz, 12)
+  assert.equal(bank.questions.find(q => q.sourceNumber === 10).correctKey, 'B')
+  for (const n of [19]) {
+    const question = bank.questions.find(q => q.sourceNumber === n)
+    assert.equal(question.grading, 'manual')
+    assert.deepEqual(acceptedQuizKeys(question), [])
+    assert.ok(question.reviewNoteHtml.length > 100)
+  }
+  assert.equal(bank.questions.find(q => q.sourceNumber === 17).correctKey, 'A')
+  assert.ok(bank.questions.find(q => q.sourceNumber === 25).answerHtml.includes('57.98%'))
+  const evidence = load('raw_materials/xu-ly-du-lieu/exam-papers/verification-049.json')
+  assert.equal(evidence.verifiedQuestions, 18)
+  for (const question of source.exams.find(exam => exam.code === '049').questions) {
+    const verified = evidence.questions.find(item => item.id === question.id)
+    assert.equal(verified.solutionSha256, createHash('sha256').update(question.solutionMarkdown).digest('hex'), question.id)
+  }
+  const manifest = load('raw_materials/xu-ly-du-lieu/exam-papers/photos/049/manifest.json')
+  assert.deepEqual(manifest.missingPages, [1, 2])
+  assert.deepEqual(manifest.uniquePages.map(page => page.page), [3, 4, 5, 6])
+  for (const page of manifest.uniquePages) {
+    const bytes = readFileSync(`raw_materials/xu-ly-du-lieu/exam-papers/photos/049/${page.file}`)
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), page.sha256)
+  }
 })
