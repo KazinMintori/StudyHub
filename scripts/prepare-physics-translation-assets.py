@@ -68,6 +68,7 @@ for name,(printed,box) in figures.items():
 print(f'Preserved {len(figures)} original illustrations from the supplied PDF.')
 
 chapter2={
+    'hoc-lieu-chuong-2':(57,(306,59,614,101)),
     'mo-chuong-chay':(34,(207,0,648,253)),
     'hinh-2-1':(35,(97,76,429,213)),
     'hinh-2-2':(36,(220,55,550,189)),

@@ -1,5 +1,9 @@
 ## Luyện tập có hướng dẫn
 
+![Học liệu và bài tập bổ trợ chương 2, kèm mã QR](/vat-ly-1/bai-giang/img/young-02/hoc-lieu-chuong-2.png)
+
+Trước khi làm nhóm bài này, hãy đọc lại Ví dụ 2.5 ở Mục 2.4.
+
 ### VP2.5.1 Ô tô thể thao đuổi xe buýt
 
 Ô tô thể thao xuất phát nghỉ tại ngã tư và tăng tốc về phía đông trên đường thẳng với gia tốc 8,0 m/s². Đúng lúc ấy, một xe buýt đi về phía đông với tốc độ không đổi 18 m/s vượt qua ô tô. Khi ô tô đuổi kịp và vượt xe buýt: (a) Đã qua bao lâu? (b) Ô tô đã đi được bao xa?
@@ -195,6 +199,8 @@ Tọa độ dương vì các tham số đã cho dương. Tại thời điểm n�
 Kết quả giả sử gia tốc −aC tiếp tục có hiệu lực đến lúc gặp. Nếu ô tô chỉ hãm tới nghỉ rồi giữ nguyên vị trí, phải xét thêm chuyển động sau lúc dừng. Xe tải gặp trước hoặc đúng lúc ô tô dừng khi aT ≥ aC.
 
 </details>
+
+Trước khi làm nhóm bài này, hãy đọc lại Ví dụ 2.7 ở Mục 2.5.
 
 ### VP2.7.1 Ném bóng từ mép vách đá
 
@@ -428,6 +434,8 @@ $$
 Các tốc độ tại mỗi độ cao giống nhau ở nhánh đi lên và nhánh đi xuống.
 
 </details>
+
+Trước khi làm nhóm bài này, hãy đọc lại Ví dụ 2.8 ở Mục 2.5.
 
 ### VP2.8.1 Hai thời điểm tại cùng độ cao
 

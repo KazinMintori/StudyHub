@@ -1,0 +1,105 @@
+{
+  "status": "accepted-local-numbered78-92-only",
+  "chapter": 2,
+  "units": 15,
+  "actualSourcePDFPagesRead": [
+    84,
+    85
+  ],
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-14-bai-tap-078-092.md",
+  "sourceSHA256": "e2c6a3ddc0f396bb78ba6641f457b6fac5267c8244e41d73ad03c4a4647cc61c",
+  "numericChecks": 35,
+  "actualGroupViewportCases": 15,
+  "nativeSVGGeometryChecks": [
+    {
+      "file": "parent-drafts/img/solution-p2-84.svg",
+      "issues": [],
+      "textLabels": 17,
+      "width": 648,
+      "height": 360
+    },
+    {
+      "file": "parent-drafts/img/solution-p2-85.svg",
+      "issues": [],
+      "textLabels": 5,
+      "width": 648,
+      "height": 360
+    },
+    {
+      "file": "parent-drafts/img/solution-p2-86.svg",
+      "issues": [],
+      "textLabels": 30,
+      "width": 864,
+      "height": 360
+    },
+    {
+      "file": "parent-drafts/img/solution-p2-88.svg",
+      "issues": [],
+      "textLabels": 18,
+      "width": 648,
+      "height": 360
+    },
+    {
+      "file": "parent-drafts/img/solution-p2-89.svg",
+      "issues": [],
+      "textLabels": 15,
+      "width": 648,
+      "height": 360
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-p2-84",
+      "file": "parent-drafts/img/solution-p2-84.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-84.svg",
+      "sha256": "4140fd7675849e654f9e6ec3c228ed2e138bfe8737be086dc9ab8846b5cb5359",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-p2-85",
+      "file": "parent-drafts/img/solution-p2-85.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-85.svg",
+      "sha256": "43b313a18e361862680070cfc5503fe9ba65f3cc7714ea49d8808769ecfce5d8",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-p2-86",
+      "file": "parent-drafts/img/solution-p2-86.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-86.svg",
+      "sha256": "cd6de9d00f40c0e320b43adc62492e8925ada654fd9ae825fdca0004b8a863af",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-p2-88",
+      "file": "parent-drafts/img/solution-p2-88.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-88.svg",
+      "sha256": "16e9940e11107bc919a9d7ea4c0a864a317d9349061c07072620f0542af144cb",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-p2-89",
+      "file": "parent-drafts/img/solution-p2-89.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-89.svg",
+      "sha256": "43b264a895552ef6625c2c384b33c87aafa98ef7d05de49c423964c4910af488",
+      "minimumTextPoints": 14
+    }
+  ],
+  "sourceReview": [
+    "ActualPDF84/85 visually read, allsource questionparts,4options eachMCATunit andfullsharedpassage including all4heartchambers preserved.",
+    "Removed unsupported old source additions: Militaryhelicopter and downwardacceleration falsely calleddeceleration, squared-speeddrag assumption85, autonomous/MEMS additions86, inventedNBA/recordclaim87, iliacartery/Doppler additions91/92.",
+    "78 powerednetacceleration distinguished fromgravity,79 Powerscontinuesacceleratingdownwardat2m/s² and height184.6m atheliimpact.",
+    "80 totaldelay includesfallplusupwardsound,81 integratedvariableacceleration,82 aircollisionvaliditydomainmadeexplicit.",
+    "83 allmeetingroots0,4±sqrt3,relativevelocityzeros1and13/3,accelmatch8/3; nonsmoothabsolute-distancecuspsdistinguished.",
+    "84 lastsourcepoint isbelow0.90s, approximategraphread0.89used; roundedreadings/OLSchoiceanduncertaintyexplicit, noinventedexactmeasurements.",
+    "85 qualitativecurvature notnumericallyclaimeddragfit;86 exact6sourcedatafit6.026190476−.513142857t, v5=23.7166667,d64.6369048; bothgraphsprovided.",
+    "87 denominatorONEascendinglowerleg, ratio2(1+sqrt2)=4.828427, not2.414.",
+    "88 all6parts,first/secondrootandphysicalmeaning,negativeDfor3.5,tangencyminimumspeed3.6878178.",
+    "89 allpartswithstrictopenphysicaldomain4.9<v0<9.8, boththresholds excluded forpositiveheight, clocksTandT−1,1152m sensitive tog9.8.",
+    "90 choicec,91choiceb withsource sqrt(d_a)distractor retained,92choiced fromactualsourcevelocityslope/positivity."
+  ],
+  "wholeChapterSolvedUnits": 127,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 0,
+  "fullGoalComplete": false,
+  "limits": "All127nowauthored but completeChapterExercises route/controller/caption/allgroups/cloud/public acceptance stillpending. Failedmobile/SVGlabeloverlapreportsretained; fixes rerun15casesand5SVGpassed. No broadallcoursecompletionclaim."
+}

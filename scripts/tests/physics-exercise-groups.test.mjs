@@ -63,6 +63,9 @@ test('Chapter18 grouping retains exactly its actual130 source prompts',()=>{
 })
 test('Exercise assets reject traversal and preserve the GitHub Pages base',()=>{
  assert.equal(exerciseAssetPath(9,'numbered-a-01.json'),'/physics-exercises/ch09/numbered-a-01.json')
+ assert.equal(exerciseAssetPath(2,'numbered-c-05.json'),'/physics-exercises/ch02/numbered-c-05.json')
+ assert.equal(exerciseAssetPath(2,'numbered-d-03.json'),'/physics-exercises/ch02/numbered-d-03.json')
+ assert.throws(()=>exerciseAssetPath(2,'numbered-e-01.json'))
  assert.throws(()=>exerciseAssetPath(9,'../../secret.json'))
  assert.throws(()=>exerciseAssetPath(NaN))
  const html='<img src="/vat-ly-1/x.png"><a href="/wiki/x.html">X</a><a href="https://example.com">Y</a>'

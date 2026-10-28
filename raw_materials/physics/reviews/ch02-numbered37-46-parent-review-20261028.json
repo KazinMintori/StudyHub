@@ -1,0 +1,106 @@
+{
+  "status": "accepted-local-numbered37–46-only",
+  "chapter": 2,
+  "units": 10,
+  "actualSourcePDFPagesRead": [
+    81,
+    82
+  ],
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-12-bai-tap-027-052.md",
+  "sourceSHA256": "e13c356c480f32a1f755fdbadb293add197e7aa21dba9c595423a194132404e6",
+  "preservedOldTail": {
+    "units": "2.47–2.52",
+    "sha256": "df9ea1839a97c72287e278976cf2e1a511071162ee26a7473c7afd047a2d5ea2",
+    "hasNewDetailedSolutions": false
+  },
+  "numericChecks": 40,
+  "actualGroupViewportCases": 10,
+  "nativeSVGGeometryChecks": [
+    {
+      "file": "parent-drafts/img/solution-e2-38.svg",
+      "issues": [],
+      "textLabels": 42,
+      "width": 648,
+      "height": 720
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-41.svg",
+      "issues": [],
+      "textLabels": 42,
+      "width": 648,
+      "height": 720
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-42.svg",
+      "issues": [],
+      "textLabels": 42,
+      "width": 648,
+      "height": 720
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-44.svg",
+      "issues": [],
+      "textLabels": 34,
+      "width": 648,
+      "height": 720
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-46.svg",
+      "issues": [],
+      "textLabels": 46,
+      "width": 648,
+      "height": 720
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-e2-38",
+      "file": "parent-drafts/img/solution-e2-38.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-38.svg",
+      "sha256": "84e0a533a2d18d5a4bc81f2d59fc099096fd52edc487928cc277af054120d812",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-e2-41",
+      "file": "parent-drafts/img/solution-e2-41.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-41.svg",
+      "sha256": "bd94375b2816911e731b9380fc27fd7369dcbe4bc3375ade7be3a64246f17a70",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-e2-42",
+      "file": "parent-drafts/img/solution-e2-42.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-42.svg",
+      "sha256": "c766085c9852625dac60712e20297924cdf409d65eafdb4f6b2002a112974e26",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-e2-44",
+      "file": "parent-drafts/img/solution-e2-44.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-44.svg",
+      "sha256": "10a4687e2f3b5d49db2f09bf2c87935cd2c4d689e9fa845a30daf0abd6b9caf3",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-e2-46",
+      "file": "parent-drafts/img/solution-e2-46.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-46.svg",
+      "sha256": "66769da0937e979bfe42c6e8ae226bda792057069d8a369e1bde21b6376afea6",
+      "minimumTextPoints": 14
+    }
+  ],
+  "sourceReviewDecisions": [
+    "Retained every questionpart including bothzero-displacementtimes in2.46, notonlythereturntime.",
+    "2.41enginefailureusesfirst-stageNETacceleration+2.25m/s²; aftercutuses−g. Requestedtimeafterfailure distinguishedfromtotallaunchtime; curvesjoinposition/velocitycontinuously.",
+    "2.42initialvelocityis+5m/sfromrisingballoon, so bag continuesup beforefalling. Allfiveparts/threegraphsretained.",
+    "2.44explicitverticalapproximationdistinguishedfrompossibleunspecifiedsmallhorizontalcomponent; exact3Dspeedatpeakcannotbeinferredwithoutthatcomponent.",
+    "2.45inferredgravitycomesfromstatedsameheight/twotimes, mass15kgpreserved butnotneeded inkinematicmodel.",
+    "Allfiverequiredgraphfiguresprovidedinsidetheclosedsolutions, nooriginalsourceimagereplaced."
+  ],
+  "wholeChapterSolvedUnits": 81,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 46,
+  "fullGoalComplete": false,
+  "supersession": "Previous27–36 report fullfilehash/unchanged37–52tail is historical; first10acceptedunitcontent unchanged. New37–46replaceonlythepreviouslyunsolvedportion;47–52tailretained.",
+  "limits": "Only local productionMarkdown/CSSgroup andnativeSVGgeometryacceptance. Wholechapter/allcourses andpublicrouteacceptance remain separate."
+}

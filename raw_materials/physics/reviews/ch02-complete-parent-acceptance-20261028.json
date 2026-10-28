@@ -1,0 +1,67 @@
+{
+  "status": "accepted-current-local-chapter2-content-and-route",
+  "chapter": 2,
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md": "89b1d6ffe5855e66c208312073e56aeb3d044d584b5d797abb168a4dcd81afa0",
+    "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md": "5b258f38fb2402506323f9a884065154705e5a1ccf4e5b54a54561c877d39a4a",
+    "raw_materials/physics/translations/chapter-02/parent-11-bai-tap-001-026.md": "fa5b242382fce9d0cd4179029ea17f20237fb6f5b2e10d7c48048da6eaeb51cc",
+    "raw_materials/physics/translations/chapter-02/parent-12-bai-tap-027-052.md": "1173b1f2743e98b49b1076b9a378a91c37b722695d894a53d1f91a1a55faacac",
+    "raw_materials/physics/translations/chapter-02/parent-13-bai-tap-053-077.md": "a3c82e25b5f8313ed7c31eff13198c2133aba367842e36f402fed96f8a1e92ca",
+    "raw_materials/physics/translations/chapter-02/parent-14-bai-tap-078-092.md": "5f3bd197b7b3188c8cb850841d55012530f765443313627c15c49cc98de629ec",
+    "raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md": "cf711ed118a04980d0fc2c9cc418767b2c95ee6ff8698de33d253446377fdbf6"
+  },
+  "all127DetailedSolutions": true,
+  "sourceUnits": {
+    "guided": 12,
+    "discussion": 22,
+    "numbered": 92,
+    "bridge": 1,
+    "total": 127
+  },
+  "generatedGroups": 25,
+  "actualOriginalPDFFigures": 54,
+  "addedAnswerSVGs": 25,
+  "independentPythonChecks": {
+    "theory": 243,
+    "endExercises": 438,
+    "total": 681
+  },
+  "route": {
+    "uniqueCurrentGroupViewportCases": 125,
+    "viewports": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "changedGroupsRetested": [
+      "numbered-c-04",
+      "numbered-d-01",
+      "numbered-d-02"
+    ],
+    "firstFullRouteHadErrors": true,
+    "firstRouteAllowlistDefectFixed": true,
+    "currentErrors": [],
+    "currentRequestFailures": [],
+    "aggregateProof": "All25 actual routegroups first read with127exactIDs. Only3groupmarkdowns changed afterfullroute. Changedgroups independentlyretestedat5widths. SourcehashesandgeneratedJSONnowmatch."
+  },
+  "componentHarness": {
+    "priorAll127GroupCases": 125,
+    "nativeSVGGeometryChecks": 25,
+    "limits": "Componentharnessnotrouteacceptance; currentrouteverificationaboveisstrongerevidence."
+  },
+  "validation": {
+    "lectureChecker": "0errors0warnings",
+    "skillTests": 39,
+    "exerciseGroupingTests": 8,
+    "fullBuildOnLocal": false
+  },
+  "historicalReports": "Earlierch02reports record artifacts at the time reviewed. Current source hashes here supersede old fullfile hashes, not actual tested physics. Perfragmentandbranch limitations retained.",
+  "deployment": {
+    "status": "not-yet-pushed-this-acceptance",
+    "fullBuild": "GitHubActionsOnly"
+  },
+  "fullGoalComplete": false,
+  "remainingGlobalScope": "AllcoursePhysics1and2source/figure/exercise/Cheatsheet/Wikiacceptance, cloud/publicverification, finalVietnameseevaluationreportandownedcleanupremain."
+}

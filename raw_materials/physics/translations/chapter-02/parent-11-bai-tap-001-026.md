@@ -1,6 +1,16 @@
 ## Bài tập 2.1–2.26
 
-### 2.1 Độ dời của ô tô
+## Quy ước ký hiệu bài tập
+
+| Ký hiệu | Ý nghĩa |
+| --- | --- |
+| •, ••, ••• | Các mức độ khó của bài tập |
+| CP | Bài tập tích hợp nội dung các chương trước |
+| CALC | Bài cần dùng giải tích |
+| DATA | Bài dùng dữ liệu thực, bằng chứng khoa học, thiết kế thí nghiệm hoặc suy luận thống kê |
+| BIO | Bài liên quan khoa học sự sống |
+
+### 2.1 • Độ dời của ô tô
 
 Ô tô chuyển động theo chiều dương của trục x trên đường thẳng nằm ngang. Trong 4,00 s đầu tiên, vận tốc trung bình bằng 6,25 m/s. Ô tô đi được bao xa trong khoảng đó?
 
@@ -29,7 +39,7 @@ Quãng đường ô tô đi được là 25,0 m. Không cần giả thiết vậ
 
 </details>
 
-### 2.2 Chim bay về tổ
+### 2.2 •• Chim bay về tổ
 
 Trong một thí nghiệm, một con chim biển shearwater được đưa khỏi tổ, chở bằng máy bay tới nơi cách tổ 5150 km rồi thả. Chim trở về tổ sau 13,5 ngày kể từ lúc thả. Chọn gốc tại tổ và chiều dương của trục x hướng tới điểm thả. Tìm vận tốc trung bình theo m/s: (a) Trên chuyến bay trở về. (b) Trên toàn bộ hành trình từ lúc rời tổ tới lúc trở lại.
 
@@ -65,7 +75,7 @@ Dấu âm cho biết hướng về tổ, ngược chiều dương.
 
 </details>
 
-### 2.3 Chuyến đi khi tắc đường
+### 2.3 •• Chuyến đi khi tắc đường
 
 Thông thường bạn đi xa lộ giữa San Diego và Los Angeles với tốc độ trung bình 105 km/h, khoảng 65 dặm/h, mất 1 giờ 50 phút. Chiều thứ Sáu, giao thông đông làm tốc độ trung bình trên cùng quãng đường chỉ còn 70 km/h, khoảng 43 dặm/h. Chuyến đi kéo dài thêm bao lâu?
 
@@ -103,7 +113,7 @@ Chuyến đi mới mất 2 giờ 45 phút.
 
 </details>
 
-### 2.4 Chạy từ cột trụ tới cột mốc
+### 2.4 •• Chạy từ cột trụ tới cột mốc
 
 Xuất phát từ một cột trụ, bạn chạy 200 m về phía đông, theo chiều dương x, với tốc độ trung bình 5,0 m/s. Sau đó bạn chạy 280 m về phía tây với tốc độ trung bình 4,0 m/s tới một cột mốc. Tính: (a) Tốc độ trung bình trên toàn chặng. (b) Vận tốc trung bình từ cột trụ tới cột mốc.
 
@@ -151,7 +161,7 @@ Nó hướng tây. Nếu giữ hai chữ số có nghĩa, hai kết quả tươn
 
 </details>
 
-### 2.5 Đi từ nhà tới cối xay gió và ghế nghỉ
+### 2.5 • Đi từ nhà tới cối xay gió và ghế nghỉ
 
 Từ cửa trước một ngôi nhà ở trang trại, bạn đi 60,0 m về phía đông tới cối xay gió, quay lại và đi chậm 40,0 m về phía tây tới một ghế nghỉ để ngắm bình minh. Bạn mất 28,0 s từ nhà tới cối xay và 36,0 s từ đó tới ghế. Trên cả hành trình từ cửa nhà tới ghế, tính: (a) Vận tốc trung bình. (b) Tốc độ trung bình.
 
@@ -185,7 +195,7 @@ Tốc độ trung bình lớn hơn độ lớn vận tốc trung bình.
 
 </details>
 
-### 2.6 Vận tốc trung bình của Honda Civic
+### 2.6 •• Vận tốc trung bình của Honda Civic
 
 Một Honda Civic đi thẳng trên đường. Tọa độ x của xe so với biển dừng là:
 
@@ -246,7 +256,7 @@ $$
 
 </details>
 
-### 2.7 Ô tô rời đèn giao thông
+### 2.7 • CALC Ô tô rời đèn giao thông
 
 Ô tô đang dừng ở đèn giao thông rồi đi dọc đường thẳng. Tọa độ so với đèn được cho bởi:
 
@@ -307,7 +317,7 @@ $$
 
 </details>
 
-### 2.8 Vận tốc tức thời của chim
+### 2.8 • CALC Vận tốc tức thời của chim
 
 Chim bay về phía đông. Tọa độ x của nó so với một tòa nhà cao theo thời gian là:
 
@@ -342,7 +352,7 @@ Vận tốc dương, hướng về phía đông.
 
 </details>
 
-### 2.9 Vận tốc và tốc độ trung bình từ đồ thị
+### 2.9 •• Vận tốc và tốc độ trung bình từ đồ thị
 
 Một quả bóng chuyển động thẳng dọc trục x với đồ thị vận tốc trong Hình E2.9. (a) Tìm tốc độ trung bình và vận tốc trung bình trong 3,0 s đầu. (b) Nếu đoạn đồ thị sau 2,0 s có vận tốc −3,0 m/s thay vì +3,0 m/s, hai giá trị trung bình ấy bằng bao nhiêu?
 
@@ -390,7 +400,7 @@ Hai kết quả giữ ba chữ số để dễ đối chiếu, tương ứng kho
 
 </details>
 
-### 2.10 Người đi bộ quay về nhà
+### 2.10 •• Người đi bộ quay về nhà
 
 Một giảng viên vật lý rời nhà và đi dọc vỉa hè tới trường. Sau 5 phút trời bắt đầu mưa và người đó trở về nhà. Khoảng cách tới nhà theo thời gian trong Hình E2.10. Ở các điểm được đánh dấu, vận tốc: (a) Bằng không? (b) Dương và không đổi? (c) Âm và không đổi? (d) Tăng về độ lớn? (e) Giảm về độ lớn?
 
@@ -414,7 +424,7 @@ Không dùng giá trị tọa độ tại điểm để quyết định nhanh ha
 
 </details>
 
-### 2.11 Vận tốc tại bảy điểm
+### 2.11 •• Vận tốc tại bảy điểm
 
 Xe thử nghiệm chuyển động thẳng dọc trục x. Hình E2.11 cho tọa độ theo thời gian. Tìm vận tốc tức thời tại các điểm A đến G.
 
@@ -458,7 +468,7 @@ G ở đáy đường cong, tiếp tuyến ngang nên vG = 0. Vận tốc âm tr
 
 </details>
 
-### 2.12 Gia tốc của ô tô chạy năng lượng mặt trời
+### 2.12 • Gia tốc của ô tô chạy năng lượng mặt trời
 
 Hình E2.12 cho vận tốc của một ô tô chạy năng lượng mặt trời. Người lái tăng tốc từ biển dừng, giữ tốc độ 60 km/h trong 20 s rồi phanh tới nghỉ tại thời điểm 40 s kể từ xuất phát.
 
@@ -502,7 +512,7 @@ Trong 10–30 s, hai vận tốc bằng nhau nên gia tốc trung bình bằng k
 
 </details>
 
-### 2.13 Rùa bò trên đường thẳng
+### 2.13 • CALC Rùa bò trên đường thẳng
 
 Một con rùa bò dọc trục x, chiều dương sang phải. Tọa độ theo thời gian là:
 
@@ -562,7 +572,7 @@ $$
 t_1\approx6{,}20\,\mathrm s,\qquad t_2\approx25{,}8\,\mathrm s.
 $$
 
-Vận tốc tại hai nghiệm lần lượt là +√1,50 cm/s và −√1,50 cm/s. Độ lớn xấp xỉ 1,225 cm/s. Lần đầu rùa đi sang phải, lần sau đi sang trái.
+Vận tốc tại hai nghiệm lần lượt là +√1,50 cm/s và −√1,50 cm/s. Độ lớn trước khi làm tròn là khoảng 1,224745 cm/s, tương ứng 1,22 cm/s với ba chữ số có nghĩa. Lần đầu rùa đi sang phải, lần sau đi sang trái.
 
 Với d = −10,0 cm, biệt thức bằng 6,50 cm²/s². Hai nghiệm xấp xỉ −4,40 s và 36,4 s. Chỉ nghiệm dương thuộc khoảng đang xét. Tại đó:
 
@@ -581,7 +591,7 @@ Rùa đi sang trái với tốc độ 2,55 cm/s. Có tổng cộng ba thời đi
 
 </details>
 
-### 2.14 Gia tốc của xe đua
+### 2.14 •• CALC Gia tốc của xe đua
 
 Xe đua xuất phát nghỉ và đi về phía đông trên đường đua thẳng nằm ngang. Trong 5,0 s đầu, thành phần vận tốc hướng đông là:
 
@@ -623,7 +633,7 @@ Gia tốc hướng đông.
 
 </details>
 
-### 2.15 Vận tốc tăng theo bình phương thời gian
+### 2.15 • CALC Vận tốc tăng theo bình phương thời gian
 
 Vận tốc ô tô là:
 
@@ -673,7 +683,7 @@ Gia tốc lúc 0 bằng không. Lúc 5,00 s, gia tốc bằng 1,00 m/s².
 
 </details>
 
-### 2.16 Gia tốc của phi hành gia
+### 2.16 • Gia tốc của phi hành gia
 
 Một phi hành gia rời Trạm Vũ trụ Quốc tế để thử thiết bị di chuyển cá nhân mới. Người đồng hành đo các biến thiên vận tốc sau, mỗi biến thiên kéo dài 10 s. Chọn chiều dương sang phải. Tìm độ lớn, dấu đại số và hướng gia tốc trung bình:
 
@@ -722,7 +732,7 @@ $$
 
 </details>
 
-### 2.17 Chuyển động của cản trước ô tô
+### 2.17 •• CALC Chuyển động của cản trước ô tô
 
 Tọa độ cản trước của một ô tô thử nghiệm được điều khiển bằng bộ vi xử lý là:
 
@@ -773,7 +783,7 @@ x&=(21{,}37-6{,}40)\,\mathrm m\\
 \end{aligned}
 $$
 
-Gia tốc lúc ấy:
+Tọa độ cuối tương ứng xấp xỉ 15,0 m với ba chữ số có nghĩa. Gia tốc lúc ấy:
 
 $$
 \begin{aligned}
@@ -794,7 +804,7 @@ $$
 
 </details>
 
-### 2.18 Ước lượng quãng đường tăng tốc
+### 2.18 • Ước lượng quãng đường tăng tốc
 
 Ước lượng quãng đường, theo foot, ô tô đi trên đường nhánh vào xa lộ khi tăng tốc từ 30 dặm/h lên 70 dặm/h. Gia tốc trung bình trong chuyển động ấy bằng bao nhiêu?
 
@@ -838,7 +848,7 @@ Gia tốc tương đương khoảng 1,79 m/s². Chọn thời gian khác sẽ ch
 
 </details>
 
-### 2.19 Linh dương qua hai mốc
+### 2.19 •• Linh dương qua hai mốc
 
 Linh dương chuyển động với gia tốc không đổi, đi qua hai mốc cách nhau 70,0 m trong 6,00 s. Tốc độ tại mốc thứ hai là 15,0 m/s. Tìm: (a) Tốc độ tại mốc thứ nhất. (b) Gia tốc.
 
@@ -879,7 +889,7 @@ Gia tốc cùng chiều chuyển động. Vận tốc đầu và cuối đều d
 
 </details>
 
-### 2.20 Cú giao bóng tennis
+### 2.20 •• Cú giao bóng tennis
 
 Một cú giao bóng tennis được đo có tốc độ bóng rời vợt 73,14 m/s. Trong mô hình bài toán, bóng tiếp xúc vợt 30,0 ms, bắt đầu từ trạng thái nghỉ và có gia tốc không đổi. (a) Gia tốc bằng bao nhiêu? (b) Trong thời gian tiếp xúc, bóng đi được bao xa?
 
@@ -919,7 +929,7 @@ $$
 
 </details>
 
-### 2.21 Cú ném bóng chày
+### 2.21 • Cú ném bóng chày
 
 Một quả bóng chày rời tay người ném với tốc độ 45,0 m/s trong một cú ném nhanh được đo. Người ném tiếp xúc bóng trên quãng đường 1,50 m và tạo gia tốc không đổi. (a) Gia tốc truyền cho bóng bằng bao nhiêu? (b) Thời gian ném là bao nhiêu?
 
@@ -965,7 +975,7 @@ Hai dữ kiện vận tốc cuối và quãng đường riêng lẻ không xác 
 
 </details>
 
-### 2.22 Ước lượng thời gian và quãng đường phanh
+### 2.22 • Ước lượng thời gian và quãng đường phanh
 
 Bạn đi trên xa lộ ở giới hạn tốc độ 70 dặm/h thì thấy dòng xe phía trước đã dừng vì tai nạn. Bạn phanh để giảm tốc nhanh nhất có thể.
 
@@ -1021,7 +1031,7 @@ $$
 
 </details>
 
-### 2.23 Quãng hãm của túi khí
+### 2.23 •• BIO Quãng hãm của túi khí
 
 Xét mô hình dừng đột ngột, với ngưỡng độ lớn gia tốc được giả định là dưới 250 m/s². Một người đang chuyển động với ô tô ở tốc độ 105 km/h, khoảng 65 dặm/h, được túi khí từ bảng điều khiển hãm tới nghỉ. Theo mô hình này, quãng hãm tối thiểu là bao nhiêu để độ lớn gia tốc không vượt ngưỡng đã cho?
 
@@ -1062,7 +1072,7 @@ Nếu yêu cầu chặt b < 250 m/s² thì quãng hãm phải lớn hơn giá tr
 
 </details>
 
-### 2.24 Ô tô nhập làn xa lộ
+### 2.24 • Ô tô nhập làn xa lộ
 
 Ô tô dừng trên đường nhánh vào xa lộ để đợi khoảng trống. Sau đó xe tăng tốc không đổi từ nghỉ, đi thẳng trên nhánh dài 120 m và đạt tốc độ 20 m/s, khoảng 45 dặm/h, ở cuối nhánh.
 
@@ -1100,7 +1110,7 @@ Dòng xe đi xa gấp đôi ô tô trên nhánh trong cùng thời gian vì tố
 
 </details>
 
-### 2.25 Quãng dừng trong mô hình túi khí
+### 2.25 • BIO Quãng dừng trong mô hình túi khí
 
 Túi khí làm hành khách giảm tốc nhẹ hơn so với va trực tiếp vào kính hoặc vô lăng. Xét mức gia tốc 60g tác dụng trong 36 ms hoặc ngắn hơn. Một người đi được bao xa khi dừng hoàn toàn trong 36 ms với độ lớn gia tốc không đổi 60g?
 
@@ -1145,7 +1155,7 @@ Với hai chữ số có nghĩa, kết quả khoảng 0,38 m. Các mức gia t�
 
 </details>
 
-### 2.26 Mèo đi trên đường thẳng
+### 2.26 •• Mèo đi trên đường thẳng
 
 Mèo đi trên đường thẳng được chọn làm trục x, chiều dương sang phải. Bạn đo chuyển động và dựng đồ thị vận tốc trong Hình E2.26.
 

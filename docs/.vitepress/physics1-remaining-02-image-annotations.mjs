@@ -1,5 +1,9 @@
 // Các nhãn được đọc trực tiếp trên từng ảnh, giữ mỗi nhãn một lần.
 export const physics1RemainingChapter2ImageAnnotations = {
+  'young-02/hoc-lieu-chuong-2': [
+    ['Tài nguyên đa phương tiện chương 2', 'Chapter 2 Media Assets'],
+    ['Bài tập được giao và các học liệu khác có trên Mastering Physics.', 'For assigned homework and other learning materials, go to Mastering Physics.']
+  ],
   'young-02/mo-chuong-chay': [],
   'young-02/hinh-2-1': [
     ['Xuất phát', 'START'],

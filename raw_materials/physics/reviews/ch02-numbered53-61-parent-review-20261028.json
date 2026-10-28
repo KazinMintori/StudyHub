@@ -1,0 +1,50 @@
+{
+  "status": "accepted-local-numbered53–61-only",
+  "chapter": 2,
+  "units": 9,
+  "actualSourcePDFPagesRead": [
+    82
+  ],
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-13-bai-tap-053-077.md",
+  "sourceSHA256": "d1d07bcd22b2fdc1eee8a0d646420994e64345ce247fbfd6f57ae8d1fa993c2b",
+  "preservedUnsolvedTail": {
+    "units": "2.62–2.77",
+    "sha256": "9dc53bb29e6af889c5e009ebf44172c4575e28ee4fe32be13b8f37dd1d410fe4",
+    "hasNewDetailedSolutions": false
+  },
+  "numericChecks": 34,
+  "actualGroupViewportCases": 10,
+  "nativeSVGGeometryChecks": [
+    {
+      "file": "parent-drafts/img/solution-p2-61.svg",
+      "issues": [],
+      "textLabels": 15,
+      "width": 648,
+      "height": 360
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-p2-61",
+      "file": "parent-drafts/img/solution-p2-61.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-61.svg",
+      "sha256": "28e1f002bbab24db51fd5c49057ee914046e42e07a7b16d078a0fd4a99ebd3f4",
+      "minimumTextPoints": 14
+    }
+  ],
+  "sourceReview": [
+    "Allsubparts retained, actualdifficulty/categoryprefixesreadfromactualsourcefontlines.",
+    "2.53sprintseparatesaccelerationandcruise, usesentireracetimeforeachof3lengths.",
+    "2.54sourceheightlawonlyuntilfirstlanding, negativeimpactvelocitybranchselected, laterextrapolatedrootexcluded.",
+    "2.55P/Sspeedsand33seconddelayretained, distanceinferredfromsametravellength.",
+    "2.56symbolicpositiveinitialspeedsolvedusingtotal=3peaktime, unitssqrt(gH).",
+    "2.57differentaveragevelocityintervalscomputedwithoutinventingconstantacceleration.",
+    "2.58returnrootdistinguishedfromzero-velocitymaximumposition;2.59speedscaleswithsqrtdistance.",
+    "2.60all3subwaysegmentscomputedseparately;2.61positivevelocityareasgivebothdistance/displacement92m, accelerationundefinedat10svelocitycorner."
+  ],
+  "wholeChapterSolvedUnits": 96,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 31,
+  "fullGoalComplete": false,
+  "limits": "Local productionMarkdown/CSSgroupsandnativeSVGgeometryonly. No claimall25units inthisfilearesolved:62–77tailremainsoldprompts. Wholecourse/source/publicreviewstillpending."
+}

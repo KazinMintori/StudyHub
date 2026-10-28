@@ -13,7 +13,7 @@ description: "Chuyên đề động học chuyển động thẳng một chiều
 <div class="lecture-notes-content">
 
 ::: info Cấu trúc bài giảng
-Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), sơ đồ tóm tắt kiến thức, hệ thống bài tập rèn luyện kỹ năng, bài toán tổng hợp, câu hỏi thảo luận đào sâu bản chất, 92 bài tập tự luyện và bảng đáp số tham khảo đối chiếu.
+Phần Notes trình bày sáu mục lý thuyết, ví dụ và câu hỏi tự kiểm ngay sau từng mục. Tab Bài tập gồm bài luyện có hướng dẫn, câu hỏi thảo luận, 92 bài đánh số và bài tập cầu nối. Mỗi bài có lời giải mở khi cần xem.
 :::
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/00-mo-dau.md-->
@@ -39,26 +39,4 @@ Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), 
 
 </div>
 
-<div class="lecture-exercises-content" aria-label="Bài tập cuối chương Chuyển động thẳng">
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-11-bai-tap-001-026.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/11-bai-tap-27-52.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/12-bai-tong-hop-53-77.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/13-bai-tong-hop-nang-cao-mcat.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md-->
-
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/15-dap-so-bai-le.md-->
-
-
-
-</div>
+<ChapterExercises :chapter="2" />
