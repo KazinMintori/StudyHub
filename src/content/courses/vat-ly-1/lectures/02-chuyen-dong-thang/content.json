@@ -19,12 +19,13 @@
     "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
     "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
     "raw_materials/physics/translations/chapter-02/07-tom-tat.md",
-    "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-    "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
+    "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+    "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
     "raw_materials/physics/translations/chapter-02/10-bai-tap-01-26.md",
     "raw_materials/physics/translations/chapter-02/11-bai-tap-27-52.md",
     "raw_materials/physics/translations/chapter-02/12-bai-tong-hop-53-77.md",
     "raw_materials/physics/translations/chapter-02/13-bai-tong-hop-nang-cao-mcat.md",
+    "raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md",
     "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
     "raw_materials/physics/translations/chapter-02/15-dap-so-bai-le.md"
   ],
@@ -147,179 +148,174 @@
       "title": "Đồ thị khi gia tốc tăng theo thời gian"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 13,
-      "title": "VP2.5.1"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 3,
+      "title": "VP2.5.1 Ô tô thể thao đuổi xe buýt"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 19,
-      "title": "VP2.5.2"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 45,
+      "title": "VP2.5.2 Gia tốc của mô tô cảnh sát"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 25,
-      "title": "VP2.5.3"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 90,
+      "title": "VP2.5.3 Xe SUV giảm tốc"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 32,
-      "title": "VP2.5.4"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 151,
+      "title": "VP2.5.4 Hai xe với gia tốc khác nhau"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 42,
-      "title": "VP2.7.1"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 199,
+      "title": "VP2.7.1 Ném bóng từ mép vách đá"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 49,
-      "title": "VP2.7.2"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 272,
+      "title": "VP2.7.2 Ném đá từ đỉnh tháp"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 55,
-      "title": "VP2.7.3"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 323,
+      "title": "VP2.7.3 Ném bóng bầu dục"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 61,
-      "title": "VP2.7.4"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 373,
+      "title": "VP2.7.4 Độ cao cực đại của bóng tennis"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 72,
-      "title": "VP2.8.1"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 432,
+      "title": "VP2.8.1 Hai thời điểm tại cùng độ cao"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 78,
-      "title": "VP2.8.2"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 485,
+      "title": "VP2.8.2 Ném bóng rổ xuống"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 82,
-      "title": "VP2.8.3"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 514,
+      "title": "VP2.8.3 Số lần quả táo đi qua một vị trí"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 88,
-      "title": "VP2.8.4"
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 566,
+      "title": "VP2.8.4 Hai độ cao của quả cam"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 98,
-      "title": "Bài toán tổng hợp"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 3,
+      "title": "Q2.1 Đồng hồ tốc độ"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 9,
-      "title": "Q2.1"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 23,
+      "title": "Q2.2 Chuyển động của côn trùng"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 13,
-      "title": "Q2.2"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 43,
+      "title": "Q2.3 Đảo chiều với gia tốc không đổi"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 21,
-      "title": "Q2.3"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 71,
+      "title": "Q2.4 Vận tốc trung bình và tức thời"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 25,
-      "title": "Q2.4"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 101,
+      "title": "Q2.5 Tốc độ và độ lớn gia tốc"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 29,
-      "title": "Q2.5"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 147,
+      "title": "Q2.6 Độ lớn vận tốc trung bình và tốc độ trung bình"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 36,
-      "title": "Q2.6"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 171,
+      "title": "Q2.7 Hai xe đổi vị trí đầu và cuối"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 40,
-      "title": "Q2.7"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 191,
+      "title": "Q2.8 Hai xe chạy ngang hàng"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 44,
-      "title": "Q2.8"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 213,
+      "title": "Q2.9 Độ dời bằng không"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 48,
-      "title": "Q2.9"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 237,
+      "title": "Q2.10 Gia tốc bằng không"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 52,
-      "title": "Q2.10"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 259,
+      "title": "Q2.11 Vận tốc bằng không"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 56,
-      "title": "Q2.11"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 289,
+      "title": "Q2.12 Vận tốc hướng tây, gia tốc hướng đông"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 60,
-      "title": "Q2.12"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 303,
+      "title": "Q2.13 Hai đồ thị của xe tải"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 64,
-      "title": "Q2.13"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 347,
+      "title": "Q2.14 Trung bình cộng hai vận tốc"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 70,
-      "title": "Q2.14"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 379,
+      "title": "Q2.15 Gia tốc trong khi ném bóng"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 74,
-      "title": "Q2.15"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 415,
+      "title": "Q2.16 Tính đối xứng khi ném thẳng đứng"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 78,
-      "title": "Q2.16"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 461,
+      "title": "Q2.17 Khoảng cách giữa các giọt nước"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 84,
-      "title": "Q2.17"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 501,
+      "title": "Q2.18 Vị trí từ dữ liệu gia tốc"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 88,
-      "title": "Q2.18"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 527,
+      "title": "Q2.19 Ném lên và ném xuống từ mái nhà"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 92,
-      "title": "Q2.19"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 579,
+      "title": "Q2.20 Hai chặng chạy có cùng chiều dài"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 100,
-      "title": "Q2.20"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 612,
+      "title": "Q2.21 Gia tốc ở đỉnh quỹ đạo"
     },
     {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 104,
-      "title": "Q2.21"
-    },
-    {
-      "source": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 108,
-      "title": "Q2.22"
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 628,
+      "title": "Q2.22 Thả từ độ cao gấp ba"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/10-bai-tap-01-26.md",
@@ -800,6 +796,11 @@
       "source": "raw_materials/physics/translations/chapter-02/13-bai-tong-hop-nang-cao-mcat.md",
       "line": 129,
       "title": "2.92"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md",
+      "line": 1,
+      "title": "Bài tập cầu nối: Cú rơi của Green Lantern"
     }
   ],
   "solutions": [
@@ -882,6 +883,181 @@
       "source": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
       "line": 270,
       "title": "Giải thích"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 7,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 49,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 94,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 155,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 203,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 276,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 327,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 377,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 436,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 489,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 518,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "line": 574,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 7,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 29,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 47,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 75,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 105,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 151,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 175,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 195,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 217,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 241,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 263,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 293,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 311,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 351,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 383,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 419,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 465,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 505,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 531,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 583,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 616,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 632,
+      "title": "Xem lời giải chi tiết"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md",
+      "line": 15,
+      "title": "Xem lời giải chi tiết"
     },
     {
       "source": "raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md",
@@ -1173,16 +1349,40 @@
       "source": "docs/vat-ly-1/bai-giang/img/young-02/tom-tat-tich-phan.png"
     },
     {
-      "reference": "img/young-02/hinh-2-30.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md",
-      "line": 102,
-      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-30.png"
+      "reference": "/vat-ly-1/bai-giang/img/young-02/hinh-q2-2.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 27,
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-q2-2.png"
     },
     {
-      "reference": "img/young-02/hinh-q2-2.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md",
-      "line": 17,
-      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-q2-2.png"
+      "reference": "/vat-ly-1/bai-giang/img/young-02/q2-09-x-t.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 231,
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-09-x-t.svg"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-02/q2-10-vx-t.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 255,
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-10-vx-t.svg"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-02/q2-11-vx-t.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 283,
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-11-vx-t.svg"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-02/hinh-2-2.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 309,
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-2.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-02/q2-13-truck-x-t.svg",
+      "declaredIn": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "line": 319,
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-13-truck-x-t.svg"
     },
     {
       "reference": "img/young-02/hinh-e2-9.png",
@@ -1267,6 +1467,12 @@
       "declaredIn": "raw_materials/physics/translations/chapter-02/13-bai-tong-hop-nang-cao-mcat.md",
       "line": 137,
       "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-92.png"
+    },
+    {
+      "reference": "/vat-ly-1/bai-giang/img/young-02/hinh-2-30.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md",
+      "line": 5,
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-30.png"
     }
   ]
 }

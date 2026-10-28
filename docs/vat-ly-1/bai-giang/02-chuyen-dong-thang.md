@@ -41,9 +41,9 @@ Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), 
 
 <div class="lecture-exercises-content" aria-label="Bài tập cuối chương Chuyển động thẳng">
 
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/08-luyen-tap-huong-dan.md-->
+<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md-->
 
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/09-cau-hoi-thao-luan.md-->
+<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md-->
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/10-bai-tap-01-26.md-->
 
@@ -52,6 +52,8 @@ Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/12-bai-tong-hop-53-77.md-->
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/13-bai-tong-hop-nang-cao-mcat.md-->
+
+<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md-->
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/14-dap-an-cua-sach.md-->
 
