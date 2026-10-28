@@ -1,0 +1,760 @@
+{
+  "status": "accepted-numbering-and-structural-presence-only",
+  "chapters": [
+    {
+      "chapter": 1,
+      "numberedPrompts": 94,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 129,
+      "actualPDFMaxEvidence": {
+        "id": "1.94",
+        "pdfPage": 53,
+        "line": "1.94  Individuals vary considerably in total lung volume. Figure P1.94",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 2,
+      "numberedPrompts": 92,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 127,
+      "actualPDFMaxEvidence": {
+        "id": "2.92",
+        "pdfPage": 85,
+        "line": "2.92  The velocity of blood in the aorta can be measured directly with ul-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 3,
+      "numberedPrompts": 85,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 115,
+      "actualPDFMaxEvidence": {
+        "id": "3.85",
+        "pdfPage": 119,
+        "line": "3.85  A large number of seeds are observed, and their initial launch",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 4,
+      "numberedPrompts": 60,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 111,
+      "actualPDFMaxEvidence": {
+        "id": "4.60",
+        "pdfPage": 148,
+        "line": "4.60  The forces on a dancer can be measured directly when a dancer",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 5,
+      "numberedPrompts": 118,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 159,
+      "actualPDFMaxEvidence": {
+        "id": "5.118",
+        "pdfPage": 190,
+        "line": "5.118  A person wearing these shoes stands on a smooth, horizontal",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 6,
+      "numberedPrompts": 97,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 134,
+      "actualPDFMaxEvidence": {
+        "id": "6.97",
+        "pdfPage": 220,
+        "line": "6.97  How many times greater is the kinetic energy of the person when",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 7,
+      "numberedPrompts": 84,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 120,
+      "actualPDFMaxEvidence": {
+        "id": "7.84",
+        "pdfPage": 254,
+        "line": "7.84  The stage moves at a constant speed while stretching the DNA.",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 8,
+      "numberedPrompts": 109,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 148,
+      "actualPDFMaxEvidence": {
+        "id": "8.109",
+        "pdfPage": 291,
+        "line": "8.109  The fish shoots the drop of water at an insect that hovers on the",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 9,
+      "numberedPrompts": 95,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 130,
+      "actualPDFMaxEvidence": {
+        "id": "9.95",
+        "pdfPage": 321,
+        "line": "9.95  A new species of eel is found to have the same mass but one-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 10,
+      "numberedPrompts": 97,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 140,
+      "actualPDFMaxEvidence": {
+        "id": "10.97",
+        "pdfPage": 356,
+        "line": "10.97  If the body’s center of mass were not placed on the rotational",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 11,
+      "numberedPrompts": 95,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 133,
+      "actualPDFMaxEvidence": {
+        "id": "11.95",
+        "pdfPage": 385,
+        "line": "11.95  His body is leaning back at 30.0° to the vertical, but the coefficient",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 12,
+      "numberedPrompts": 92,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 135,
+      "actualPDFMaxEvidence": {
+        "id": "12.92",
+        "pdfPage": 414,
+        "line": "12.92  If the elephant were to snorkel in salt water, which is more dense",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 13,
+      "numberedPrompts": 84,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 118,
+      "actualPDFMaxEvidence": {
+        "id": "13.84",
+        "pdfPage": 448,
+        "line": "13.84  Observations of this planet over time show that it is in a nearly",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 14,
+      "numberedPrompts": 96,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 128,
+      "actualPDFMaxEvidence": {
+        "id": "14.96",
+        "pdfPage": 483,
+        "line": "14.96  By what percentage does the frequency of oscillation change if",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 15,
+      "numberedPrompts": 80,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 114,
+      "actualPDFMaxEvidence": {
+        "id": "15.80",
+        "pdfPage": 520,
+        "line": "15.80  The wave speed is measured for different vibration fre-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 16,
+      "numberedPrompts": 81,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 119,
+      "actualPDFMaxEvidence": {
+        "id": "16.81",
+        "pdfPage": 560,
+        "line": "16.81  For cranial ultrasound, why is it advantageous to use frequen-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 17,
+      "numberedPrompts": 119,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 160,
+      "actualPDFMaxEvidence": {
+        "id": "17.119",
+        "pdfPage": 598,
+        "line": "17.119  To measure the specific heat in the liquid phase of a newly de-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 18,
+      "numberedPrompts": 87,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 130,
+      "actualPDFMaxEvidence": {
+        "id": "18.87",
+        "pdfPage": 632,
+        "line": "18.87  The rate of effusion—that is, leakage of a gas through tiny",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 19,
+      "numberedPrompts": 66,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 103,
+      "actualPDFMaxEvidence": {
+        "id": "19.66",
+        "pdfPage": 660,
+        "line": "19.66  In a hospital, pure oxygen may be delivered at 50 psi (gauge",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 20,
+      "numberedPrompts": 62,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 98,
+      "actualPDFMaxEvidence": {
+        "id": "20.62",
+        "pdfPage": 697,
+        "line": "20.62  If the proposed plant is built and produces 10 MW but the rate at",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 21,
+      "numberedPrompts": 101,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 136,
+      "actualPDFMaxEvidence": {
+        "id": "21.101",
+        "pdfPage": 737,
+        "line": "21.101  In a follow-up experiment, a charge of +40 pC was placed at",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 22,
+      "numberedPrompts": 66,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 94,
+      "actualPDFMaxEvidence": {
+        "id": "22.66",
+        "pdfPage": 766,
+        "line": "22.66  Which statement is true about E",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 23,
+      "numberedPrompts": 86,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 120,
+      "actualPDFMaxEvidence": {
+        "id": "23.86",
+        "pdfPage": 800,
+        "line": "23.86  The maximum voltage at the center of a typical tandem elec-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 24,
+      "numberedPrompts": 76,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 109,
+      "actualPDFMaxEvidence": {
+        "id": "24.76",
+        "pdfPage": 831,
+        "line": "24.76  What is the minimum amount of work that must be done by the",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 25,
+      "numberedPrompts": 82,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 118,
+      "actualPDFMaxEvidence": {
+        "id": "25.82",
+        "pdfPage": 863,
+        "line": "25.82  In another experiment, a piece of the web is suspended so that it",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 26,
+      "numberedPrompts": 88,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 122,
+      "actualPDFMaxEvidence": {
+        "id": "26.88",
+        "pdfPage": 897,
+        "line": "26.88  Cell membranes across a wide variety of organisms have a ca-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 27,
+      "numberedPrompts": 85,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 116,
+      "actualPDFMaxEvidence": {
+        "id": "27.85",
+        "pdfPage": 937,
+        "line": "27.85  The large magnetic fields used in MRI can produce forces on",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 28,
+      "numberedPrompts": 83,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 116,
+      "actualPDFMaxEvidence": {
+        "id": "28.83",
+        "pdfPage": 972,
+        "line": "28.83  The solenoid is removed from the enclosure and then used in a",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 29,
+      "numberedPrompts": 74,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 108,
+      "actualPDFMaxEvidence": {
+        "id": "29.74",
+        "pdfPage": 1007,
+        "line": "29.74  Which graph in Fig. P29.74 best represents the time t depen-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 30,
+      "numberedPrompts": 75,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 104,
+      "actualPDFMaxEvidence": {
+        "id": "30.75",
+        "pdfPage": 1037,
+        "line": "30.75  If all of the magnetic energy stored in this MRI magnet is",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 31,
+      "numberedPrompts": 72,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 103,
+      "actualPDFMaxEvidence": {
+        "id": "31.72",
+        "pdfPage": 1067,
+        "line": "31.72  If the frequency at which the electrode is oscillated is increased",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 32,
+      "numberedPrompts": 56,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 82,
+      "actualPDFMaxEvidence": {
+        "id": "32.56",
+        "pdfPage": 1096,
+        "line": "32.56  The ICNIRP also has guidelines for magnetic-field exposure",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 33,
+      "numberedPrompts": 64,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 102,
+      "actualPDFMaxEvidence": {
+        "id": "33.64",
+        "pdfPage": 1129,
+        "line": "33.64  To vary the angle as well as the intensity of polarized light, or-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 34,
+      "numberedPrompts": 111,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 148,
+      "actualPDFMaxEvidence": {
+        "id": "34.111",
+        "pdfPage": 1178,
+        "line": "34.111  To determine whether a frog can judge distance by means of",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 35,
+      "numberedPrompts": 60,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 61,
+      "actualPDFMaxEvidence": {
+        "id": "35.60",
+        "pdfPage": 1204,
+        "line": "35.60  The professor once again returns the apparatus to its original",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 36,
+      "numberedPrompts": 71,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 103,
+      "actualPDFMaxEvidence": {
+        "id": "36.71",
+        "pdfPage": 1236,
+        "line": "36.71  When the light is passed through the bottom of the sample con-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 37,
+      "numberedPrompts": 74,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 102,
+      "actualPDFMaxEvidence": {
+        "id": "37.74",
+        "pdfPage": 1272,
+        "line": "37.74  In the alternate universe, how fast must an object be moving for it",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 38,
+      "numberedPrompts": 45,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 75,
+      "actualPDFMaxEvidence": {
+        "id": "38.45",
+        "pdfPage": 1298,
+        "line": "38.45  Higher-energy photons might be desirable for the treatment of",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 39,
+      "numberedPrompts": 91,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 126,
+      "actualPDFMaxEvidence": {
+        "id": "39.91",
+        "pdfPage": 1340,
+        "line": "39.91  In the second type of helium-ion microscope, a 1.2 MeV ion",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 40,
+      "numberedPrompts": 70,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 109,
+      "actualPDFMaxEvidence": {
+        "id": "40.70",
+        "pdfPage": 1379,
+        "line": "40.70  One advantage of the quantum dot is that, compared to many",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 41,
+      "numberedPrompts": 73,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 110,
+      "actualPDFMaxEvidence": {
+        "id": "41.73",
+        "pdfPage": 1427,
+        "line": "41.73  How many different possible electron states are there in the",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 42,
+      "numberedPrompts": 58,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 94,
+      "actualPDFMaxEvidence": {
+        "id": "42.58",
+        "pdfPage": 1460,
+        "line": "42.58  If the voltage rather than the current is kept constant, what hap-",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 43,
+      "numberedPrompts": 77,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 109,
+      "actualPDFMaxEvidence": {
+        "id": "43.77",
+        "pdfPage": 1502,
+        "line": "43.77  Why might 123I be preferred for imaging over 131I? (a) The",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    },
+    {
+      "chapter": 44,
+      "numberedPrompts": 59,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 84,
+      "actualPDFMaxEvidence": {
+        "id": "44.59",
+        "pdfPage": 1544,
+        "line": "44.59  If the annihilation photons come from a part of the body that is",
+        "font": "TradeGothicLTPro-Bd2",
+        "colorRGB": [
+          95,
+          141,
+          42
+        ]
+      },
+      "sourceObservedGaps": []
+    }
+  ],
+  "numberedPrompts": 3590,
+  "allObservedEndUnits": 5102,
+  "physics2SolutionStages": {
+    "units": 2551,
+    "missingStageLeads": 0
+  },
+  "limits": "Independent originalPDFleadinggreen-number extraction matched all44currentnumberedmaxima; numberedIDsequencescontinuouswithoutduplicates. P1groupvalidator checksoneclosedsolutionpersourceID. P2lexicalscan accepts solution/details containers and summary/direction labels. Not a proof fullquestiongivens/subparts, explanations, illustrations and numericalanswersarecomplete/correct. Sourcegreen-numberextractionalsoseeslowsectionheadings/answerprefixes; maximaevidence stored for human review. No fullgoalcompleteclaim."
+}
