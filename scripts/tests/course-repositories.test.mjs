@@ -56,6 +56,17 @@ test('duplicate ownership fails even when both packages have identical content',
   await assert.rejects(planInstall(root, [entry, entry]), /Two courses/)
 })
 
+test('Windows line-ending conversion is safe to synchronize while authored edits stay protected', async t => {
+  const { root, put } = await fixture(t)
+  const file = 'docs/sample/index.md'
+  await put(file, 'A lesson\r\nSecond line\r\n')
+  await put('incoming.md', 'A lesson\nSecond line\n')
+  const incoming = { file, hash: digest('A lesson\nSecond line\n'), source: path.join(root, 'incoming.md') }
+  assert.equal((await planInstall(root, [incoming])).operations.length, 1)
+  await put(file, 'Authored edits\r\nSecond line\r\n')
+  await assert.rejects(planInstall(root, [incoming]), /Local edits/)
+})
+
 test('authoring exports changed and new files, refreshes checksums and pins a committed revision', async t => {
   const { root, put } = await fixture(t)
   const directory = path.join(root, '.course-repositories/sample')

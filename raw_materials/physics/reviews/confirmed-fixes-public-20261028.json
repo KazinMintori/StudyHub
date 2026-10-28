@@ -1,0 +1,186 @@
+{
+  "status": "accepted-observed-public-fixes-only",
+  "deployedRevision": "05a8716c9ba4fe8317d665d1137b2bcc80368103",
+  "cloudRun": 40717464653,
+  "cases": [
+    {
+      "id": "photon",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "photon",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "photon",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "photon",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "photon",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "relativity",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "relativity",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "relativity",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "relativity",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "relativity",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "stress",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "stress",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "stress",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "stress",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "stress",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "frame10",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "frame10",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "frame10",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "frame10",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "frame10",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "frame18",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "frame18",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "frame18",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "frame18",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "frame18",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "heat17",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "heat17",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "heat17",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "heat17",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "heat17",
+      "width": 320,
+      "issues": []
+    }
+  ],
+  "imageProof": [
+    {
+      "id": "frame10",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/a-hinh-10-10.DTug0Xn3.png",
+      "glossRows": 2,
+      "text": "Hình 10.10: Lập riêng phương trình tịnh tiến cho vật treo và phương trình quay cho trụ.Chú thích:Trụ (Cylinder)Vật treo (Block)"
+    },
+    {
+      "id": "frame18",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/a-hinh-10-18.CJQ0Z1sy.png",
+      "glossRows": 0,
+      "text": "Hình 10.18: Trọng lực làm khối tâm gia tốc xuống, còn lực căng tạo mômen làm trụ quay."
+    },
+    {
+      "id": "heat17",
+      "url": "https://kazinmintori.github.io/StudyHub/physics-exercises/assets/769984299e068000-c-thanh-ghep-dan-nhiet.png",
+      "glossRows": 2,
+      "text": "Sơ đồ truyền nhiệt dẫn qua thanh hỗn hợp nối tiếpChú thích:Hình 17.26 (Figure 17.26)Sơ đồ bài toán truyền nhiệt dẫn qua thanh ghép nối tiếp (Our sketch for this problem.)"
+    }
+  ],
+  "checks": [
+    "Photon rate/flux heading and invariantJ description visible on actualCheatsheet routes.",
+    "Pressure scalar caution and absence of bareDeltaVTeX visible on actual11.4topic.",
+    "Two restoredchapter10servedPNGbytesmatchedgitblobofdeployedrevision.",
+    "17Cguidedfigurehasexactly2VN/EnglishglossrowsandOursketchlabelonlyonce."
+  ],
+  "harnessCorrection": "Initialframe18targetwronglyused10.4topic. Sourcecatalogplacesfigure10.18in10.3, not a missing productionasset. First20passingcasesretained; correctedremaining2routesretested10casesandpassed.",
+  "limits": "Named6fixesat5widths only, not allcoursecontent/sourcevalidation and not later6/7/20/Wiki changes deploymentacceptance.",
+  "fullGoalComplete": false
+}

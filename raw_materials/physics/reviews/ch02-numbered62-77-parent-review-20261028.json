@@ -1,0 +1,65 @@
+{
+  "status": "accepted-local-numbered62-77-only",
+  "chapter": 2,
+  "units": 16,
+  "actualSourcePDFPagesRead": [
+    83
+  ],
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-13-bai-tap-053-077.md",
+  "previousCanonicalSHA256": "7e568020bef0f41217d937277aa76c5541d09b901e4d0dae133ec71b36810903",
+  "sourceSHA256": "37b35ea7a70cae2c1abb5c933eed72daab3767d224a97a5860c428db53e0cd41",
+  "numericChecks": 37,
+  "actualGroupViewportCases": 15,
+  "nativeSVGGeometryChecks": [
+    {
+      "file": "parent-drafts/img/solution-p2-62.svg",
+      "issues": [],
+      "textLabels": 17,
+      "width": 648,
+      "height": 360
+    },
+    {
+      "file": "parent-drafts/img/solution-p2-65.svg",
+      "issues": [],
+      "textLabels": 16,
+      "width": 648,
+      "height": 360
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-p2-62",
+      "file": "parent-drafts/img/solution-p2-62.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-62.svg",
+      "sha256": "04572a46bf268711039bc6f606d80678bb6b4dad9d346dd935e0de0c24784acb",
+      "minimumTextPoints": 14
+    },
+    {
+      "key": "solution-p2-65",
+      "file": "parent-drafts/img/solution-p2-65.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-65.svg",
+      "sha256": "3205ea5ff3c824217a5de6b2399d6ac2625ba459c83d494b0bde766c57906277",
+      "minimumTextPoints": 14
+    }
+  ],
+  "sourceReview": [
+    "Actual source83 fullpage visually read, all16 original problem parts preserved, including three distance roots64 and both vehicle position sketches62/65.",
+    "Removed unsupported old prompt additions: Frictionless ball63, invented orbit76, fabricated emergency/hype language. Source constant acceleration and source difficulty/CALC labels preserved.",
+    "62 first collision22.5403s/x538.105m; later crossing not a physical aftercollision solution.",
+    "64 both signedpositions produce all3 positive times, velocities signed correctly.",
+    "66 positivecatchroot,74.1411m and11.9311m/s; ordinary-student feasibility discussed without invented population statistics.",
+    "68 constants have correct velocity/time-cubed units; maxposition from signchange,69 returned velocity and acceleration are both negative.",
+    "70 correct fallheight46−1.80, professor must be approaching target.",
+    "71 integrated time-varying acceleration twice; zero displacement does not mean zero final velocity.",
+    "72 total displacement negative; H→0limit and arithmetic endpoint-velocity identity demonstrated.",
+    "73/74 nonzero observed entryspeed determined before recovering prior dropdistance.",
+    "75 given push acceleration is already net; release clock1.41918s and optional push-start clock1.61042s explicitly distinguished.",
+    "76 source specifies constant phase1 but does not explicitly specify constant phase2: Numeric3.089km/38.6303s/246.077m/s are conditional on uniform phase2, otherwise phase2displacement needs the velocity integral.",
+    "77 time scales linearly and peakheight quadratically with launchspeed."
+  ],
+  "wholeChapterSolvedUnits": 112,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 15,
+  "fullGoalComplete": false,
+  "limits": "Local production Markdown/CSS group layout only, not route/controller/public deployment. First failed320px formula preserved separately, rewritten with same numerical acceleration coefficients as short named constants and all15 cases rerun passed. Existing53–61report is historical fullfile hash superseded here; its reviewed9unit body unchanged."
+}

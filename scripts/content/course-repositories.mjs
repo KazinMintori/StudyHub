@@ -79,7 +79,12 @@ export async function planInstall(root, entries, previous = {}) {
     const current = await optionalRead(path.join(root, entry.file))
     const hash = current && digest(current)
     if (hash === entry.hash) continue
-    if (hash && hash !== previous[entry.file]) throw Error(`Local edits must be exported before syncing: ${entry.file}`)
+    if (hash && hash !== previous[entry.file]) {
+      const source = entry.source && await readFile(entry.source)
+      const textFile = /\.(?:md|mjs|js|json|py|svg|html|css|txt|csv|yml|yaml)$/i.test(entry.file)
+      const lineEndingsOnly = textFile && source && current.toString().replaceAll('\r\n', '\n') === source.toString().replaceAll('\r\n', '\n')
+      if (!lineEndingsOnly) throw Error(`Local edits must be exported before syncing: ${entry.file}`)
+    }
     operations.push({ ...entry, action: 'copy' })
   }
   for (const [file, hash] of Object.entries(previous)) {

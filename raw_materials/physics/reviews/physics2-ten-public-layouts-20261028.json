@@ -1,0 +1,57 @@
+{
+  "status": "accepted-observed-public-layout-only",
+  "chapters": [
+    22,
+    24,
+    33,
+    37,
+    38,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "batches": [
+    {
+      "report": "qa/physics-global-audit/runtime-physics2-20261028-v2/chapters-22-to-33/theory/results.json",
+      "chapters": [
+        22,
+        24,
+        33
+      ],
+      "cases": 105
+    },
+    {
+      "report": "qa/physics-global-audit/runtime-physics2-20261028-v2/chapters-37-to-40/theory/results.json",
+      "chapters": [
+        37,
+        38,
+        40
+      ],
+      "cases": 110
+    },
+    {
+      "report": "qa/physics-global-audit/runtime-physics2-20261028-v2/chapters-41-to-44/theory/results.json",
+      "chapters": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "cases": 175
+    }
+  ],
+  "cases": 390,
+  "viewports": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "pageAndTopicRoutes": 78,
+  "errors": [],
+  "limits": "ActualpublicNotes/topicgeometry,renderedmath,imageavailabilityandhiddenassistiveMathMLonly. Not endexerciseacceptance, semantic/sourcecompleteness, completepictureframing, allWiki/Cheatsheetacceptance, or deploymentidentitybinding. Prior530cases for14otherchapters are separate historicalreleaseevidence; do not sum to certifyall24CURRENTchapters.",
+  "fullGoalComplete": false
+}

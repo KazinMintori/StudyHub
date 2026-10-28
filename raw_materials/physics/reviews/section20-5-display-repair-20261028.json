@@ -1,0 +1,10 @@
+{
+  "status": "accepted-format-fix-section20-5-only",
+  "file": "raw_materials/physics/translations/chapter-20/05-nguyen-ly-thu-hai.md",
+  "sha256": "0117f5d8afbc329d4ec89032570603ef933566b79f981aff6f143c8fd3a97dea",
+  "fix": "Added standalone displaymath delimiters around existing aligned algebra in Kelvin–Planck/Clausius equivalence argument, consistent3space listindent. No equationphysicschanged.",
+  "symbolicModelSampleAssertions": 9,
+  "viewportCases": 5,
+  "scanScope": "1002 activecurrent44lesson/include/topic/exercisefiles; detects only leadingbareTeXcommandsoutsidefences/displaymath. Before2leads(begin/end), after0. Not proof no math or sourcefidelity errors remain.",
+  "fullGoalComplete": false
+}

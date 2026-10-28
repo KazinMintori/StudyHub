@@ -1,0 +1,199 @@
+{
+  "status": "accepted-local-numbered13–26-only",
+  "chapter": 2,
+  "units": 14,
+  "sourcePDFPagesRead": [
+    80
+  ],
+  "sourceSHA256": "6d1793f83249def18d4a6714b54ffc67e2e0a100e26868b221002a7da54dba97",
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-11-bai-tap-001-026.md",
+  "numericChecks": 63,
+  "actualGroupViewportCases": 15,
+  "nativeSVGCases": [
+    {
+      "file": "parent-drafts/img/solution-e2-13.svg",
+      "issues": [],
+      "textLabels": 49,
+      "width": 648,
+      "height": 734.4000244140625
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-15.svg",
+      "issues": [],
+      "textLabels": 26,
+      "width": 648,
+      "height": 489.6000061035156
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-17.svg",
+      "issues": [],
+      "textLabels": 45,
+      "width": 648,
+      "height": 734.4000244140625
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-26.svg",
+      "issues": [],
+      "textLabels": 29,
+      "width": 648,
+      "height": 489.6000061035156
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-e2-13",
+      "file": "parent-drafts/img/solution-e2-13.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-13.svg",
+      "sha256": "5e041a4ba9822fca8b943663d2dfa7b127a86e9df5da736563f4f9b470a05795",
+      "textMinimumPoints": 14,
+      "sourceSHA256BeforeWhitespaceNormalization": "27ac1294f1d9e4a460d81687eaf7c2269989d6a7b736441d37bf9150196c98c3"
+    },
+    {
+      "key": "solution-e2-15",
+      "file": "parent-drafts/img/solution-e2-15.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-15.svg",
+      "sha256": "b6b6691786dee4706c7e4477da6a75fe7f0cfc8273811aedba44b0118ce769a0",
+      "textMinimumPoints": 14,
+      "sourceSHA256BeforeWhitespaceNormalization": "77b31f980f66f08216aa007b3cf7e2009fcec9e33839e38f9edb635fbbaffd36"
+    },
+    {
+      "key": "solution-e2-17",
+      "file": "parent-drafts/img/solution-e2-17.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-17.svg",
+      "sha256": "72a2e6319579880e662c6937b655640f2e6e8b11b67502d3584719e555f8adca",
+      "textMinimumPoints": 14,
+      "sourceSHA256BeforeWhitespaceNormalization": "def0aa18d2ef78cb84a3447cbaedf6461a587682be61570feaed602e8b34be8a"
+    },
+    {
+      "key": "solution-e2-26",
+      "file": "parent-drafts/img/solution-e2-26.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-26.svg",
+      "sha256": "20ed7f1896afdb2118efd8fdc60d452bf1a0ec023f770f6f953686ab0859d848",
+      "textMinimumPoints": 14,
+      "sourceSHA256BeforeWhitespaceNormalization": "ad1bb8ae1d00090571e286f1abea2bc7435595c768854e3de4f2920e350cb4bc"
+    }
+  ],
+  "sourceDecisions": [
+    "Retained all five2.13parts and signed-distancebranches, all2.17zero-velocityroots with explicit nonnegative-time domain, all2.26parts and distancevsdisplacement.",
+    "Original2.22prompt continuesatupperrightPDF80; read actual continuation, preservedadditionalstoppingtimeandtotaldistance questions.",
+    "2.18and2.22areestimates: Chosentime explicitly markedassumption, parametricformretained;sameaverageaccelerationdoesnotfixdistancewithoutamotionmodel.",
+    "2.21initialrestassumption explicit, general initialvelocitydependence retained.2.23strictthreshold distinguishedfromroundedlowerbound, no medicaloutcome guarantee.",
+    "Rejected AGY2.14acceleration6.88m/s²:Independentderivative/rootgives6.42495136168m/s².",
+    "Requiredgraphfigures2.13,2.15,2.17,2.26are nativeverifiedSVGsinsideclosedsolutions; allquestiondata/originalfiguresretained."
+  ],
+  "wholeChapterSolvedUnits": 61,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 66,
+  "previousReportSupersession": "Early12 report described old unsolved13–26tail and fullfilehash. That tail is now replaced by these14acceptedsolutions; first12unitcontent remains unchanged.",
+  "limitations": "Local productionMarkdown/CSSgroupsandSVGgeometry only. Source13–26completed, not completewholechapter orallcourses. Full route/cloud/public verification is separate.",
+  "svgWhitespaceNormalization": [
+    {
+      "asset": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-13.svg",
+      "beforeSHA256": "27ac1294f1d9e4a460d81687eaf7c2269989d6a7b736441d37bf9150196c98c3",
+      "sha256": "5e041a4ba9822fca8b943663d2dfa7b127a86e9df5da736563f4f9b470a05795",
+      "normalizedXMLIdentical": true
+    },
+    {
+      "asset": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-15.svg",
+      "beforeSHA256": "77b31f980f66f08216aa007b3cf7e2009fcec9e33839e38f9edb635fbbaffd36",
+      "sha256": "b6b6691786dee4706c7e4477da6a75fe7f0cfc8273811aedba44b0118ce769a0",
+      "normalizedXMLIdentical": true
+    },
+    {
+      "asset": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-17.svg",
+      "beforeSHA256": "def0aa18d2ef78cb84a3447cbaedf6461a587682be61570feaed602e8b34be8a",
+      "sha256": "72a2e6319579880e662c6937b655640f2e6e8b11b67502d3584719e555f8adca",
+      "normalizedXMLIdentical": true
+    },
+    {
+      "asset": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-26.svg",
+      "beforeSHA256": "ad1bb8ae1d00090571e286f1abea2bc7435595c768854e3de4f2920e350cb4bc",
+      "sha256": "20ed7f1896afdb2118efd8fdc60d452bf1a0ec023f770f6f953686ab0859d848",
+      "normalizedXMLIdentical": true
+    }
+  ],
+  "sourceSHA256BeforeRoundingReview": "95594eb6d90816a3abb399ab3df604a5fcb25995f93a07c074ce0ecc2189326e",
+  "independentAGYReview": {
+    "status": "recovered-report-independently-reviewed",
+    "bridgeState": "failed-NoneType",
+    "completeOriginalFilesPreserved": true,
+    "baselineGate": "AllfourworktreeHEAD/diffs/QA/untracked/inputhashes verifiedunchanged beforefollowupdispatch",
+    "independentValuesComputed": 55,
+    "actualParentCrossComparisons": 11,
+    "comparisons": [
+      {
+        "unit": "2.13",
+        "quantity": "initialposition",
+        "independent": 50.0,
+        "parent": 50.0
+      },
+      {
+        "unit": "2.13",
+        "quantity": "initialvelocity",
+        "independent": 2.0,
+        "parent": 1.9999999999953388
+      },
+      {
+        "unit": "2.13",
+        "quantity": "initialacceleration",
+        "independent": -0.125,
+        "parent": -0.12499999999970868
+      },
+      {
+        "unit": "2.13",
+        "quantity": "stoppingtime",
+        "independent": 16.0,
+        "parent": 16.0
+      },
+      {
+        "unit": "2.13",
+        "quantity": "returntime",
+        "independent": 32.0,
+        "parent": 31.999999999999996
+      },
+      {
+        "unit": "2.13",
+        "quantity": "maximumposition",
+        "independent": 66.0,
+        "parent": 66.0
+      },
+      {
+        "unit": "2.14",
+        "quantity": "targettime",
+        "independent": 3.735436838188142,
+        "parent": 3.735436838188146
+      },
+      {
+        "unit": "2.14",
+        "quantity": "instantacceleration",
+        "independent": 6.424951361683604,
+        "parent": 6.4249513617031795
+      },
+      {
+        "unit": "2.15",
+        "quantity": "meanaccel",
+        "independent": 0.5,
+        "parent": 0.5
+      },
+      {
+        "unit": "2.15",
+        "quantity": "instantaccel0",
+        "independent": 0.0,
+        "parent": 0.0
+      },
+      {
+        "unit": "2.15",
+        "quantity": "instantaccel5",
+        "independent": 1.0,
+        "parent": 0.9999999999976694
+      }
+    ],
+    "parentIndependentModelAssertions": 63,
+    "claimsRejected": "AGYverifiercomputes55values buthasnoexpected-valueassertions. Thus55PASSassertionsandfullcrosscheckclaimarenotaccepted. Parent63assertions andactualoverlappingcomparisonsareevidence.",
+    "acceptedSuggestions": [
+      "2.13finalspeedrounding1.22cm/sat3significantfigures",
+      "2.17finalposition15.0mwith3significantfigures,retain14.97mintermediate"
+    ],
+    "remaining": "Global finalsource/figure/exercises/cheatsheets/Wikiandpublicacceptance remain outstanding."
+  }
+}

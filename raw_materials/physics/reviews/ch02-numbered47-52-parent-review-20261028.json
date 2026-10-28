@@ -1,0 +1,45 @@
+{
+  "status": "accepted-local-numbered47–52-only",
+  "chapter": 2,
+  "units": 6,
+  "actualSourcePDFPagesRead": [
+    82
+  ],
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-12-bai-tap-027-052.md",
+  "sourceSHA256": "ad91cafd3dd0024d6cac7c4504ab519b1cbecff2b9f00a4091f638f035bfeedd",
+  "numericChecks": 29,
+  "actualGroupViewportCases": 5,
+  "nativeSVGChecks": [
+    {
+      "file": "parent-drafts/img/solution-e2-52.svg",
+      "issues": [],
+      "textLabels": 44,
+      "width": 648,
+      "height": 720
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-e2-52",
+      "file": "parent-drafts/img/solution-e2-52.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-52.svg",
+      "sha256": "38e56a79d1694dcdf7f96c90380fc8b46db8c340114ca39304c3025ee3362741",
+      "minimumTextPoints": 14
+    }
+  ],
+  "sourceReview": [
+    "ViewedactualPDF82formulas2.49–2.52 toverifyparentheses/signs/coefficients; sourceparser1/2glyphsarenotnumbersincoefficients.",
+    "2.47launchspeedfrom6secondreturntime, then28mnegative-displacementimpactbranch.",
+    "2.48areaunderpositivevelocityhasunitcm andequalsdistanceover0–6s; averagevelocity4cm/s.",
+    "2.49accelerationAtisalreadygivenasthenetkinematicacceleration; integratetwice,325mbranchat8.864siswithinthefirst10s.",
+    "2.50preservedleadingnegativein−k(15s−t), initialposition−14m andinitialvelocity8m/s; nestedquadraturegives47.3333m.",
+    "2.51maximumcheckedwithsignchange,notmerelyzeroacceleration; t0isnotvelocitymaximum.",
+    "2.52conditionsat1snot0; inferredC4.4m/s,D1.4m. Sourcegraphrequesthasay/vybutmotiongivenalongx, soaxisconsistentax/vx/xusedandprivateerratumrecorded."
+  ],
+  "wholeChapterSolvedUnits": 87,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 40,
+  "fullGoalComplete": false,
+  "supersession": "Allpreviousparent-12filehashesarehistoricalaftercompletion47–52; first20acceptedunits27–46retainedunchanged. All26units27–52nowhaveclosedsolutions.",
+  "limits": "Local productionMarkdown/CSSgroupsandnativeSVGgeometryonly; fullcourse/publicsourcefidelityreviewstillpending."
+}

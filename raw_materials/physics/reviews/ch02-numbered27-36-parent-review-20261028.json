@@ -1,0 +1,78 @@
+{
+  "status": "accepted-local-numbered27–36-only",
+  "chapter": 2,
+  "units": 10,
+  "actualSourcePDFPagesRead": [
+    80,
+    81
+  ],
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-12-bai-tap-027-052.md",
+  "sourceSHA256": "64713088e55af6f4a11f7b518e6e93917bc505d0cad916de704778471d303678",
+  "originalTailPreserved": {
+    "units": "2.37–2.52",
+    "sha256": "80eac22da3d754f6b40e57ee1f6b9b36655b4b70fa8de61dc2877da0dd243566",
+    "hasNewDetailedSolutions": false
+  },
+  "numericChecks": 30,
+  "actualGroupViewportCases": 10,
+  "svgCases": [
+    {
+      "file": "parent-drafts/img/solution-e2-28-motion.svg",
+      "issues": [],
+      "textLabels": 40,
+      "width": 648,
+      "height": 648
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-28-velocity.svg",
+      "issues": [],
+      "textLabels": 16,
+      "width": 648,
+      "height": 360
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-35.svg",
+      "issues": [],
+      "textLabels": 34,
+      "width": 648,
+      "height": 720
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-e2-28-motion",
+      "file": "parent-drafts/img/solution-e2-28-motion.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-28-motion.svg",
+      "sha256": "0f19c3446348d67dba6bab5cba082e9c19204ed703587e7ee60557fd2baab289",
+      "textMinimumPoints": 14
+    },
+    {
+      "key": "solution-e2-28-velocity",
+      "file": "parent-drafts/img/solution-e2-28-velocity.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-28-velocity.svg",
+      "sha256": "da433fb0941936c15727bb760209c078a981b07e34a2c52c3a65f185173df68e",
+      "textMinimumPoints": 14
+    },
+    {
+      "key": "solution-e2-35",
+      "file": "parent-drafts/img/solution-e2-35.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-35.svg",
+      "sha256": "04b4a03f0a0493323196ddd1b7cd0ca76fbebd2c1fe65621b91f41e5e69a25d1",
+      "textMinimumPoints": 14
+    }
+  ],
+  "sourceReviewDecisions": [
+    "Readactualsource2.27fullcontextincluding40%and450000gdata, comparisononlycannotprovehypothesis. RemovedoldaddedALHdiscoveryyear/sourceclaims.",
+    "ActualE2.28clearlystartsAatabout3mwhileBatorigin; rejectedAGYt0/3intersectionclaim. Intersectionsabout1/3seconds, commontangentabout2seconds.",
+    "E2.28isasketch, notanexactfunction. Motion/velocityanswersexplicitlyqualitativeandnativearrowlengthsillustrative. Donotclaimexactlaw3+t²as sourcedata.",
+    "E2.29allthreeaccelerationsandallthreeareasretained. Halfwayinclinespeeduses1/sqrt2factor.",
+    "2.31keepsunroundedtime0.599319s andexplainsrounding0.600afterroundedlaunchspeed.",
+    "2.34firstceilinghitselected, latermathematicalrootextrapolatespastcollision.",
+    "2.35requiredthreegraphsprovided.2.36heightandhandstrokeexplicitestimates, meanaccelerationrequiresconstant-equivalentmodeloradditionaldata."
+  ],
+  "wholeChapterSolvedUnits": 71,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 56,
+  "fullGoalComplete": false,
+  "limits": "LocalproductionMarkdown/CSSgroupandnativeSVGgeometryacceptanceonly. No wholechapter/allcourses/publicdeploymentcompletionclaim."
+}

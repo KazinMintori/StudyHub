@@ -69,6 +69,7 @@ jobs:
 
       - name: Verify browser navigation and responsive reading
         env:
+          BASE_PATH: /
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
         run: |
           npm run dev -- --host 127.0.0.1 --port 5173 > /tmp/studyhub-dev.log 2>&1 &

@@ -1,0 +1,33 @@
+{
+  "status": "accepted-local-section11-4-only",
+  "canonicalFile": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
+  "beforeSHA256": "318459ab014799fe3fa4f1aa2d2eb34533821ae71c7681aa040d7a417bb28dbe",
+  "afterSHA256": "3e2f8e19387ae69f629aadb39cdc336e06e522eede20ee35aa3e7c8a54e5c0dc",
+  "preservedSourceImageOrder": [
+    "b-hinh-11-12.png",
+    "b-hinh-11-13.png",
+    "b-hinh-11-14.png",
+    "b-hinh-11-15.png",
+    "b-ung-dung-11-gan-chan.png",
+    "b-hinh-11-16.png",
+    "b-hinh-11-17.png",
+    "b-ung-dung-11-ca-can-cau.png",
+    "b-hinh-11-18.png"
+  ],
+  "workedExamples": 3,
+  "immediateSelfchecks": 1,
+  "numericAssertions": 16,
+  "actualComponentViewportCases": 5,
+  "repaired": [
+    "Diver caption, not submarine.",
+    "Restored oilcompressibility20e−6atm−1.",
+    "Wrapped14bareTeX calculationlines.",
+    "Explained dimensionlesskΔp and originalvolume substitution.",
+    "Restored scalarpressure caution in staticfluid.",
+    "Qualified staticelastic shear without denying dynamicviscousshear.",
+    "Removedunsupportedrodmass estimate (source only neglects selfweight).",
+    "TypicalS/Yrange not unconditionaltheorem.",
+    "Three mobileformulaoverflows fixed with definedshortmaterialindices and relationbreaks."
+  ],
+  "limits": "Section componentMarkdown/CSSonly, no entirechapter11orpublicdeploymentacceptance. Agentpatchmanuallyreviewedandmodified; allcoursegoalremainsactive."
+}
