@@ -1,0 +1,438 @@
+{
+  "status": "accepted-local-confirmed-frames-only",
+  "figures": [
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-21/hinh-21-27.png",
+      "sourcePDFPage": 720,
+      "scale": 2,
+      "beforeBox": [
+        35,
+        122,
+        195,
+        236
+      ],
+      "completeBox": [
+        35,
+        114,
+        195,
+        236
+      ],
+      "allOldPixelsRetained": true,
+      "sha256": "20828fda1d9212cd895e44f6606b9545e3c94a44eebfb1101c45621347f48d12"
+    },
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-21/hinh-e21-39.png",
+      "sourcePDFPage": 731,
+      "scale": 2,
+      "beforeBox": [
+        77,
+        625,
+        339,
+        669
+      ],
+      "completeBox": [
+        77,
+        611,
+        339,
+        669
+      ],
+      "allOldPixelsRetained": true,
+      "sha256": "af7ab150254953bf7fa8a7f1385be71ce03bed77f8dceb51f2320ffc2b989abf"
+    },
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-21/tom-tat-chong-chat.png",
+      "sourcePDFPage": 726,
+      "scale": 2,
+      "beforeBox": [
+        455,
+        425,
+        555,
+        493
+      ],
+      "completeBox": [
+        455,
+        425,
+        559,
+        493
+      ],
+      "allOldPixelsRetained": true,
+      "sha256": "5796528167e75d1ed7e523bd08bb153d9263ab059607e4f68b221a35a2eebfce"
+    },
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-39/hinh-39-25.png",
+      "sourcePDFPage": 1317,
+      "scale": 3,
+      "beforeBox": [
+        76,
+        638,
+        432,
+        742
+      ],
+      "completeBox": [
+        76,
+        631,
+        570,
+        742
+      ],
+      "allOldPixelsRetained": true,
+      "sha256": "6524edc9f902a98e9013747d864b746433bd4dad3edeacfac7fb00ca72d049a8"
+    },
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-41/tom-tat-hop-ba-chieu.png",
+      "sourcePDFPage": 1419,
+      "scale": 3,
+      "beforeBox": [
+        492,
+        165,
+        614,
+        263
+      ],
+      "completeBox": [
+        492,
+        160,
+        620,
+        263
+      ],
+      "allOldPixelsRetained": true,
+      "sha256": "abb3813f3cf56c5fbfe408777d9873febc5bc52de70b816b519ed5b8daada3a7"
+    },
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-41/hinh-41-01.png",
+      "sourcePDFPage": 1382,
+      "scale": 2.5,
+      "beforeBox": [
+        34,
+        545,
+        195,
+        672
+      ],
+      "completeBox": [
+        34,
+        540,
+        195,
+        672
+      ],
+      "allOldPixelsRetained": true,
+      "sha256": "a536bcd24a549b016b443ba457e27f7c4f6f233feb7836111fc6340905dbf194"
+    },
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-complete.png",
+      "sourcePDFPage": 1366,
+      "scale": 3,
+      "completeBox": [
+        76,
+        104,
+        576,
+        221
+      ],
+      "allOriginalPanelsRetained": [
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n0.png",
+          "oldPixelsContainedInCompleteFigure": true
+        },
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n1.png",
+          "oldPixelsContainedInCompleteFigure": true
+        },
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n2.png",
+          "oldPixelsContainedInCompleteFigure": true
+        },
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n3.png",
+          "oldPixelsContainedInCompleteFigure": true
+        }
+      ],
+      "oldAssetsStillPreserved": true,
+      "sha256": "ee6c37561e2a95771316f9777275de51e2b5908b4ff33f4eba48e79986fa0eaa"
+    },
+    {
+      "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-complete.png",
+      "sourcePDFPage": 1366,
+      "scale": 3,
+      "completeBox": [
+        76,
+        282,
+        576,
+        356
+      ],
+      "allOriginalPanelsRetained": [
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n0.png",
+          "oldPixelsContainedInCompleteFigure": true
+        },
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n1.png",
+          "oldPixelsContainedInCompleteFigure": true
+        },
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n2.png",
+          "oldPixelsContainedInCompleteFigure": true
+        },
+        {
+          "asset": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n3.png",
+          "oldPixelsContainedInCompleteFigure": true
+        }
+      ],
+      "oldAssetsStillPreserved": true,
+      "sha256": "38d55e9d0633bb279e5a50695b9e5fd7b45c826781c409758c97946d8c8c12f9"
+    }
+  ],
+  "scope": "Only eight actual visually confirmed frames. All original pixels retained, no redraw. Other agent candidates not yet accepted.",
+  "actualCases": [
+    {
+      "chapter": 21,
+      "topic": "main-notes",
+      "width": 1440,
+      "errors": [],
+      "formulas": 14,
+      "images": 7
+    },
+    {
+      "chapter": 21,
+      "topic": "main-notes",
+      "width": 768,
+      "errors": [],
+      "formulas": 14,
+      "images": 7
+    },
+    {
+      "chapter": 21,
+      "topic": "main-notes",
+      "width": 375,
+      "errors": [],
+      "formulas": 14,
+      "images": 7
+    },
+    {
+      "chapter": 21,
+      "topic": "main-notes",
+      "width": 360,
+      "errors": [],
+      "formulas": 14,
+      "images": 7
+    },
+    {
+      "chapter": 21,
+      "topic": "main-notes",
+      "width": 320,
+      "errors": [],
+      "formulas": 14,
+      "images": 7
+    },
+    {
+      "chapter": 21,
+      "topic": "duong-suc-dien",
+      "width": 1440,
+      "errors": [],
+      "formulas": 5,
+      "images": 3
+    },
+    {
+      "chapter": 21,
+      "topic": "duong-suc-dien",
+      "width": 768,
+      "errors": [],
+      "formulas": 5,
+      "images": 3
+    },
+    {
+      "chapter": 21,
+      "topic": "duong-suc-dien",
+      "width": 375,
+      "errors": [],
+      "formulas": 5,
+      "images": 3
+    },
+    {
+      "chapter": 21,
+      "topic": "duong-suc-dien",
+      "width": 360,
+      "errors": [],
+      "formulas": 5,
+      "images": 3
+    },
+    {
+      "chapter": 21,
+      "topic": "duong-suc-dien",
+      "width": 320,
+      "errors": [],
+      "formulas": 5,
+      "images": 3
+    },
+    {
+      "chapter": 39,
+      "topic": "muc-nang-luong-bohr",
+      "width": 1440,
+      "errors": [],
+      "formulas": 310,
+      "images": 14
+    },
+    {
+      "chapter": 39,
+      "topic": "muc-nang-luong-bohr",
+      "width": 768,
+      "errors": [],
+      "formulas": 310,
+      "images": 14
+    },
+    {
+      "chapter": 39,
+      "topic": "muc-nang-luong-bohr",
+      "width": 375,
+      "errors": [],
+      "formulas": 310,
+      "images": 14
+    },
+    {
+      "chapter": 39,
+      "topic": "muc-nang-luong-bohr",
+      "width": 360,
+      "errors": [],
+      "formulas": 310,
+      "images": 14
+    },
+    {
+      "chapter": 39,
+      "topic": "muc-nang-luong-bohr",
+      "width": 320,
+      "errors": [],
+      "formulas": 310,
+      "images": 14
+    },
+    {
+      "chapter": 40,
+      "topic": "dao-dong-tu-dieu-hoa",
+      "width": 1440,
+      "errors": [],
+      "formulas": 106,
+      "images": 8
+    },
+    {
+      "chapter": 40,
+      "topic": "dao-dong-tu-dieu-hoa",
+      "width": 768,
+      "errors": [],
+      "formulas": 106,
+      "images": 8
+    },
+    {
+      "chapter": 40,
+      "topic": "dao-dong-tu-dieu-hoa",
+      "width": 375,
+      "errors": [],
+      "formulas": 106,
+      "images": 8
+    },
+    {
+      "chapter": 40,
+      "topic": "dao-dong-tu-dieu-hoa",
+      "width": 360,
+      "errors": [],
+      "formulas": 106,
+      "images": 8
+    },
+    {
+      "chapter": 40,
+      "topic": "dao-dong-tu-dieu-hoa",
+      "width": 320,
+      "errors": [],
+      "formulas": 106,
+      "images": 8
+    },
+    {
+      "chapter": 41,
+      "topic": "main-notes",
+      "width": 1440,
+      "errors": [],
+      "formulas": 62,
+      "images": 8
+    },
+    {
+      "chapter": 41,
+      "topic": "main-notes",
+      "width": 768,
+      "errors": [],
+      "formulas": 62,
+      "images": 8
+    },
+    {
+      "chapter": 41,
+      "topic": "main-notes",
+      "width": 375,
+      "errors": [],
+      "formulas": 62,
+      "images": 8
+    },
+    {
+      "chapter": 41,
+      "topic": "main-notes",
+      "width": 360,
+      "errors": [],
+      "formulas": 62,
+      "images": 8
+    },
+    {
+      "chapter": 41,
+      "topic": "main-notes",
+      "width": 320,
+      "errors": [],
+      "formulas": 62,
+      "images": 8
+    },
+    {
+      "chapter": 41,
+      "topic": "hop-ba-chieu",
+      "width": 1440,
+      "errors": [],
+      "formulas": 232,
+      "images": 4
+    },
+    {
+      "chapter": 41,
+      "topic": "hop-ba-chieu",
+      "width": 768,
+      "errors": [],
+      "formulas": 232,
+      "images": 4
+    },
+    {
+      "chapter": 41,
+      "topic": "hop-ba-chieu",
+      "width": 375,
+      "errors": [],
+      "formulas": 232,
+      "images": 4
+    },
+    {
+      "chapter": 41,
+      "topic": "hop-ba-chieu",
+      "width": 360,
+      "errors": [],
+      "formulas": 232,
+      "images": 4
+    },
+    {
+      "chapter": 41,
+      "topic": "hop-ba-chieu",
+      "width": 320,
+      "errors": [],
+      "formulas": 232,
+      "images": 4
+    }
+  ],
+  "actualCaseCount": 30,
+  "firstBatchFailure": {
+    "reason": "Node default4GBheap exhausted before chapter41",
+    "completedCasesRetained": 20,
+    "originalReportStatus": "running",
+    "recovery": "Fresh chapter41-only process completed10cases without raising heap or localfullbuild"
+  },
+  "sourceSHA256": {
+    "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md": "b9a0541407e7a34b9dbf8ff96585ccfaf26fd9d8872bf2e036f30b0d348a1629",
+    "docs/.vitepress/physics40-parent-image-annotations.mjs": "6132cce1306eb9f7503783bb969fb41b8c1ed3a86a31f1562527b57600f7d192",
+    "docs/.vitepress/physics39-theory-b-image-annotations.mjs": "c8c23f470afe21411c3ea7d10047687b517a62f1c8754301aae064f344b6bbc1",
+    "src/content/courses/vat-ly-2/lectures/20-ham-song-schrodinger/content.json": "86932d91078a70ce9779a004970f5e5e938de65bb62f8a4931e69996a25afcd0"
+  },
+  "limitations": "Only8confirmed figure frames and6actualchangedpages. No whole44chapter fidelity claim. Previouspixelhashes superseded by actualrestoredoriginals."
+}

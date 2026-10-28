@@ -14,7 +14,7 @@ SOURCE = LOCAL_SOURCE if LOCAL_SOURCE.is_file() else MAIN_SOURCE
 OUT = ROOT / "docs/vat-ly-2/bai-giang/img/young-41"
 
 CROPS = {
-    "hinh-41-01": (1382, (34, 545, 195, 672)),
+    "hinh-41-01": (1382, (34, 540, 195, 672)),
     "hinh-41-02": (1384, (34, 300, 195, 755)),
     "hinh-41-03": (1385, (400, 205, 560, 350)),
     "hinh-41-04": (1386, (245, 530, 528, 748)),

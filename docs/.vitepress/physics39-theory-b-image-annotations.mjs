@@ -180,7 +180,7 @@ export const physics39TheoryBImageAnnotations = {
   "young-39/hinh-39-25": [
     [
       "Hα, Hβ, Hγ và Hδ nằm trong vùng ánh sáng nhìn thấy của quang phổ. Toàn bộ các vạch Balmer vượt quá Hδ đều thuộc vùng quang phổ tử ngoại.",
-      "Ha, Hb, Hg, and Hd are in the visible region of the spectrum. All Balmer lines beyond Hd are in the ultraviolet spectrum."
+      "Hα, Hβ, Hγ, and Hδ are in the visible region of the spectrum. All Balmer lines beyond Hδ are in the ultraviolet spectrum."
     ]
   ],
   "young-39/hinh-39-26": [

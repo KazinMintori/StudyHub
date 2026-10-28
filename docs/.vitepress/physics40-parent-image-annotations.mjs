@@ -1,4 +1,6 @@
 export const physics40ParentImageAnnotations = {
+  'young-40/hinh-40-26-complete': [],
+  'young-40/hinh-40-27-complete': [],
   'young-40/mo-dau-cham-luong-tu': [],
   'young-40/ung-dung-polyacetylene': [
     ['Đơn vị monome C₂H₂', 'C₂H₂ monomer'],

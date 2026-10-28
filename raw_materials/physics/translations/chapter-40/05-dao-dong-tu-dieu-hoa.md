@@ -232,23 +232,15 @@ $$
 
 Bốn hàm sóng đầu tiên lần lượt có $1$, $2$, $3$ và $4$ cực trị hữu hạn. Tổng quát, hàm ở mức $n$ có $n+1$ cực trị. Mỗi đồ thị bên dưới còn đánh dấu hai biên độ cổ điển ứng với cùng năng lượng.
 
-![Hình 40.26, n = 0: Hàm sóng trạng thái cơ bản không có nút bên trong. Hai đường nét đứt đánh dấu biên độ cổ điển, nhưng hàm sóng vẫn kéo dài ra ngoài.](../img/young-40/hinh-40-26-n0.png)
+![Hình 40.26: Bốn hàm sóng ở các mức n = 0, 1, 2 và 3, với hai biên độ cổ điển được đánh dấu bằng nét đứt.](../img/young-40/hinh-40-26-complete.png)
 
-![Hình 40.26, n = 1: Hàm sóng có một nút và hai cực trị. Hàm khác không cả ở một phần miền bên ngoài biên độ cổ điển.](../img/young-40/hinh-40-26-n1.png)
-
-![Hình 40.26, n = 2: Hàm sóng có hai nút và ba cực trị hữu hạn.](../img/young-40/hinh-40-26-n2.png)
-
-![Hình 40.26, n = 3: Hàm sóng có ba nút và bốn cực trị hữu hạn.](../img/young-40/hinh-40-26-n3.png)
+Trạng thái cơ bản $n=0$ không có nút bên trong. Ở mức $n=1$, hàm sóng có một nút và hai cực trị. Ở mức $n=2$, có hai nút và ba cực trị hữu hạn. Ở mức $n=3$, có ba nút và bốn cực trị hữu hạn. Hàm sóng vẫn khác không ở một phần miền bên ngoài hai biên độ cổ điển.
 
 Bình phương độ lớn của các hàm sóng cho mật độ xác suất tìm thấy hạt. Các đường màu lam trong hình 40.27 biểu diễn phân bố cổ điển khi chọn một thời điểm ngẫu nhiên trong chu kỳ. Hạt cổ điển chuyển động chậm gần biên độ nên xác suất xuất hiện ở đó cao hơn.
 
-![Hình 40.27, n = 0: Mật độ xác suất lượng tử màu lục tập trung quanh cân bằng. Phân bố Newton màu lam lại tăng mạnh gần hai biên độ.](../img/young-40/hinh-40-27-n0.png)
+![Hình 40.27: Mật độ xác suất lượng tử màu lục và phân bố Newton màu lam ở bốn mức n = 0, 1, 2 và 3.](../img/young-40/hinh-40-27-complete.png)
 
-![Hình 40.27, n = 1: Mật độ xác suất lượng tử có nút tại tâm, trong khi đường Newton không có nút ấy.](../img/young-40/hinh-40-27-n1.png)
-
-![Hình 40.27, n = 2: Mật độ xác suất dao động theo vị trí. Trung bình trên nhiều gợn sẽ gần phân bố cổ điển hơn khi số lượng tử tăng.](../img/young-40/hinh-40-27-n2.png)
-
-![Hình 40.27, n = 3: Các đỉnh và nút lượng tử vẫn tồn tại, nhưng dáng bao của phân bố tiến gần dự đoán Newton.](../img/young-40/hinh-40-27-n3.png)
+Ở mức $n=0$, mật độ xác suất lượng tử tập trung quanh cân bằng, trong khi phân bố Newton tăng mạnh gần hai biên độ. Ở mức $n=1$, mật độ lượng tử có nút tại tâm, còn đường Newton không có nút ấy. Với $n=2$ và $n=3$, các đỉnh và nút lượng tử vẫn tồn tại. Khi số lượng tử tăng và xét trung bình trên nhiều gợn, phân bố lượng tử tiến gần dự đoán Newton hơn.
 
 Hình 40.28 cho trường hợp $n=10$. So sánh trên thang không phân giải từng gợn nhỏ, sự phù hợp với phân bố Newton rõ hơn. Đây là một biểu hiện của sự tương ứng giữa mô tả lượng tử và mô tả cổ điển ở số lượng tử lớn.
 

@@ -6,7 +6,7 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 CROPS={
  'mo-dau-liti-heli':(1380,(205,0,648,246)),
- 'tom-tat-hop-ba-chieu':(1419,(492,165,614,263)),
+ 'tom-tat-hop-ba-chieu':(1419,(492,160,620,263)),
  'tom-tat-momen-quy-dao':(1419,(492,280,615,389)),
  'tom-tat-zeeman':(1419,(492,475,616,574)),
  'tom-tat-spin':(1419,(492,588,620,700)),

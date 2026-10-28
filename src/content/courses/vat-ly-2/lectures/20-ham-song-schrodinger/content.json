@@ -1278,7 +1278,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 313,
+      "line": 305,
       "title": "Xem đáp án và giải thích"
     },
     {
@@ -1559,63 +1559,27 @@
       "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-25.png"
     },
     {
-      "reference": "../img/young-40/hinh-40-26-n0.png",
+      "reference": "../img/young-40/hinh-40-26-complete.png",
       "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
       "line": 235,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n0.png"
+      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-complete.png"
     },
     {
-      "reference": "../img/young-40/hinh-40-26-n1.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 237,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n1.png"
-    },
-    {
-      "reference": "../img/young-40/hinh-40-26-n2.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 239,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n2.png"
-    },
-    {
-      "reference": "../img/young-40/hinh-40-26-n3.png",
+      "reference": "../img/young-40/hinh-40-27-complete.png",
       "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
       "line": 241,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-26-n3.png"
-    },
-    {
-      "reference": "../img/young-40/hinh-40-27-n0.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 245,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n0.png"
-    },
-    {
-      "reference": "../img/young-40/hinh-40-27-n1.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 247,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n1.png"
-    },
-    {
-      "reference": "../img/young-40/hinh-40-27-n2.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 249,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n2.png"
-    },
-    {
-      "reference": "../img/young-40/hinh-40-27-n3.png",
-      "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 251,
-      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-n3.png"
+      "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-27-complete.png"
     },
     {
       "reference": "../img/young-40/hinh-40-28.png",
       "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 255,
+      "line": 247,
       "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-28.png"
     },
     {
       "reference": "../img/young-40/hinh-40-29.png",
       "declaredIn": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
-      "line": 301,
+      "line": 293,
       "source": "docs/vat-ly-2/bai-giang/img/young-40/hinh-40-29.png"
     },
     {
