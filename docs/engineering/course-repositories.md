@@ -8,6 +8,8 @@ Repo `KazinMintori/StudyHub` quản lý giao diện Vue, bộ máy VitePress, c�
 
 Mỗi repo học phần giữ nguyên cây đường dẫn tương đối, gồm `docs/<id>/`, `src/content/courses/<id>/` và các tài nguyên liên quan. Tệp `studyhub-course.json` ghi SHA-256 của từng tệp. Các module Wiki và cấu hình dùng chung vẫn nằm ở repo chính. Một số dữ liệu Vật lý dùng chung tiếp tục đi qua module tương thích hiện có.
 
+Ngày cập nhật của bài được giữ trong metadata nguồn. Việc chuyển repo không làm toàn bộ bài giảng mang cùng ngày cập nhật mới. Khi xuất nội dung đã sửa, công cụ chỉ cập nhật ngày của những tệp thay đổi.
+
 ```text
 Repo chính công khai
   config/course-repositories.json
