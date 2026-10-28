@@ -17,7 +17,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: ${{ github.event_name == 'workflow_dispatch' && inputs.verify_only && format('verify-{0}', github.ref) || 'pages' }}
   cancel-in-progress: false
 
 env:
