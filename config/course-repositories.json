@@ -41,7 +41,7 @@
     {
       "id": "xu-ly-du-lieu",
       "repository": "KazinMintori/StudyHub-course-xu-ly-du-lieu",
-      "revision": "2d4ae37ba9d8206646cc782311dc76cdeadff6cb",
+      "revision": "f360f0e1e5ac904cf56515dd22fdf933a22e9252",
       "paths": [
         "docs/.vitepress/data-processing-course.mjs",
         "docs/.vitepress/data-processing-foundations.mjs",
@@ -56,7 +56,7 @@
     {
       "id": "vat-ly-1",
       "repository": "KazinMintori/StudyHub-course-vat-ly-1",
-      "revision": "1dd4f67ee2f73fbc4d63c2c4a3ca11fa139e126c",
+      "revision": "2828d5bb9d5f1f38203bfbc0a4fe42891487f519",
       "paths": [
         "docs/.vitepress/physics1-09-exercises-c-image-annotations.mjs",
         "docs/.vitepress/physics1-09-exercises-d-image-annotations.mjs",
@@ -421,7 +421,7 @@
     {
       "id": "vat-ly-2",
       "repository": "KazinMintori/StudyHub-course-vat-ly-2",
-      "revision": "b7beb4045a5610c43357b99bb4f47b6df71a59bf",
+      "revision": "e043f23a3d3bd53318934b40d99f21b9b04bb804",
       "paths": [
         "docs/.vitepress/physics-ac-course.mjs",
         "docs/.vitepress/physics-ac-foundations.mjs",
