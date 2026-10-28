@@ -5,7 +5,7 @@
   "scope": "Threechanged theory fragments and actualNotes/allfivetopic layouts. Fullsource/content/image/exercise/cheatsheet/Wiki acceptance remains separate.",
   "sourceSHA256": {
     "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md": "5050ed1dd91aef81a643e5d7b674100dd8352217cdf0548ef143f76ef5197a74",
-    "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md": "a4c122707e5f4e6bf9495ff2c0d26ae321ccd63e4486466339d3cfe3519d68f2",
+    "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md": "d30b225d720917726d7736c40b2d2bcb49dac9ee6b852929fc3b5df9b32ee9ac",
     "raw_materials/physics/translations/chapter-26/04-mach-rc.md": "f1d6f1e2313bfbf769c030dff51d446208166522e4fadeb509a2f2b3ea8a3d5a"
   },
   "physicalModelChecks": 130,
@@ -54,5 +54,22 @@
     "skillToolsTests": 39
   },
   "portableVerifier": "raw_materials/physics/verify_chapter26_theory_layout_parent.py",
-  "remaining": "Cloudpublication/publicverification andcompletechapter source/prose/originalframes/exercises/cheatsheet/Wiki review."
+  "remaining": "Cloudpublication/publicverification andcompletechapter source/prose/originalframes/exercises/cheatsheet/Wiki review.",
+  "sourceSHA256BeforeMainMerge": {
+    "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md": "5050ed1dd91aef81a643e5d7b674100dd8352217cdf0548ef143f76ef5197a74",
+    "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md": "a4c122707e5f4e6bf9495ff2c0d26ae321ccd63e4486466339d3cfe3519d68f2",
+    "raw_materials/physics/translations/chapter-26/04-mach-rc.md": "f1d6f1e2313bfbf769c030dff51d446208166522e4fadeb509a2f2b3ea8a3d5a"
+  },
+  "postMainMergeVerification": {
+    "incomingMain": "b7789d1e014a1f3bf49f9c128ca3cae7dc82edcc",
+    "mergeCommit": "b8b5b45e09a4933e6e69aa2124394aa5d6aba886",
+    "sourceSHA256": {
+      "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md": "5050ed1dd91aef81a643e5d7b674100dd8352217cdf0548ef143f76ef5197a74",
+      "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md": "d30b225d720917726d7736c40b2d2bcb49dac9ee6b852929fc3b5df9b32ee9ac",
+      "raw_materials/physics/translations/chapter-26/04-mach-rc.md": "f1d6f1e2313bfbf769c030dff51d446208166522e4fadeb509a2f2b3ea8a3d5a"
+    },
+    "physicalChecks": 130,
+    "theoryCases": 30,
+    "report": "raw_materials/physics/reviews/merged-physics-ui-theory-layout-20261028.json"
+  }
 }

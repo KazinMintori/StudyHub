@@ -1,0 +1,188 @@
+{
+  "status": "mergedUI-and-currenttheory-layout-passed-for-reviewed15chapters",
+  "checkedUTC": "2026-10-28T05:08:09.851899+00:00",
+  "incomingMain": "b7789d1e014a1f3bf49f9c128ca3cae7dc82edcc",
+  "mergeCommit": "b8b5b45e09a4933e6e69aa2124394aa5d6aba886",
+  "cases": 565,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "chapters": [
+    {
+      "chapter": 8,
+      "cases": 35,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch8/theory/results.json",
+      "sha256": "f0db1f66156cd7e46a0e7852fc5413bf1a482ab72ff8f393c9f27230b395b13c"
+    },
+    {
+      "chapter": 21,
+      "cases": 40,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch21/theory/results.json",
+      "sha256": "9cc8a91fdb30447f843668af4a3eaf5d8c383066b2de269e95164b41172aa972"
+    },
+    {
+      "chapter": 23,
+      "cases": 30,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch23/theory/results.json",
+      "sha256": "2899a948200a05d9fbd1053ba9cc240674e09d7e6da70d1e15b4f1153f5cd8d8"
+    },
+    {
+      "chapter": 25,
+      "cases": 35,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch25/theory/results.json",
+      "sha256": "829244f92492ab646d9325b231ed80e81042f22eb7da282f81a0381be58686f2"
+    },
+    {
+      "chapter": 26,
+      "cases": 30,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch26/theory/results.json",
+      "sha256": "dcbd485baefcdfdc726fe27704051fb58046af9b5ab0a679060e1de1776c7c8f"
+    },
+    {
+      "chapter": 27,
+      "cases": 50,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch27/theory/results.json",
+      "sha256": "02032ee7e7d1bfe2f7ddebc9ffe9232214ff41581b9b831c4c020614bfc8941b"
+    },
+    {
+      "chapter": 28,
+      "cases": 45,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch28/theory/results.json",
+      "sha256": "248562e71519a3a2ab94a1759ddd9243e2e1dc0dd2d032c655dd24d646dc72ca"
+    },
+    {
+      "chapter": 29,
+      "cases": 45,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch29/theory/results.json",
+      "sha256": "8be972d1c4c9096c296529f3534889200655ec9d2a2d4c97255b80f8b369a059"
+    },
+    {
+      "chapter": 30,
+      "cases": 35,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch30/theory/results.json",
+      "sha256": "6a500104358c7bddee5af2ed128311ac77c39facc58fe61ad9ef407af5758878"
+    },
+    {
+      "chapter": 31,
+      "cases": 35,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch31/theory/results.json",
+      "sha256": "4320a8014e3d2eecc890c2777ee962c7aa1ec21ee68a4833b9444e54dbe2c7a3"
+    },
+    {
+      "chapter": 32,
+      "cases": 30,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch32/theory/results.json",
+      "sha256": "c3a0872288494fb6f6335bb7197e265ef2ee3c1cec48fbef55e39ba1e9f11172"
+    },
+    {
+      "chapter": 34,
+      "cases": 45,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch34/theory/results.json",
+      "sha256": "57b38514f6211186570efc8ea8ce0cd0216670dc17984ac6a858deff48acd453"
+    },
+    {
+      "chapter": 35,
+      "cases": 30,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch35/theory/results.json",
+      "sha256": "e43b5209d0a12bd6b414277d8f7039d31f369a41f3289c84dd61777e030c203d"
+    },
+    {
+      "chapter": 36,
+      "cases": 45,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch36/theory/results.json",
+      "sha256": "4bc63d1cb99db3b0054a10531f67162d29c361adae3b76d101bab7dd79acdba6"
+    },
+    {
+      "chapter": 39,
+      "cases": 35,
+      "report": "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch39/theory/results.json",
+      "sha256": "536453a064aa648292c051a75b4a258cfde9c56d78c4ab310abad7b3e1bdaf0e"
+    }
+  ],
+  "conflictResolution": {
+    "file": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+    "conflicts": 7,
+    "incomingMain": "b7789d1e014a1f3bf49f9c128ca3cae7dc82edcc",
+    "publicUIFilesRetained": true,
+    "mathBranch": "3c645cb5",
+    "decisions": [
+      {
+        "index": 1,
+        "ours": "\\begin{aligned}\n&R_A=4\\,\\Omega+7\\,\\Omega=11\\,\\Omega,\\\\\n&R_B=2\\,\\Omega+3\\,\\Omega=5\\,\\Omega.\n\\end{aligned}\n$$\n\nTrên chiều đi đã chọn, bốn điện trở đều làm giảm điện thế. Pin $4\\,\\mathrm V$ cũng làm giảm điện thế, còn pin $12\\,\\mathrm V$ làm tăng điện thế. Quy tắc vòng cho:\n\n$$\n12\\,\\mathrm V-4\\,\\mathrm V=I(R_A+R_B).\n",
+        "incoming": "12\\,\\mathrm V-4\\,\\mathrm V = I(4+7+2+3)\\,\\Omega.\n",
+        "decision": "Retainalreadyverified explicitphysicalcomponents/fullsteps; equivalent incomingcompressedarithmetic iscovered. PreserveincomingUIandallnonconflictingwording."
+      },
+      {
+        "index": 2,
+        "ours": "V_{ab}&=IR_A+4\\,\\mathrm V\\\\\n&=(0{,}5\\,\\mathrm A)(11\\,\\Omega)+4\\,\\mathrm V\\\\\n&=9{,}5\\,\\mathrm V.\n",
+        "incoming": "V_{ab} &= [0{,}5(7)+4+0{,}5(4)]\\,\\mathrm V \\\\\n&= 9{,}5\\,\\mathrm V.\n",
+        "decision": "Retainalreadyverified explicitphysicalcomponents/fullsteps; equivalent incomingcompressedarithmetic iscovered. PreserveincomingUIandallnonconflictingwording."
+      },
+      {
+        "index": 3,
+        "ours": "V_{ab}&=12\\,\\mathrm V-IR_B\\\\\n&=12\\,\\mathrm V-(0{,}5\\,\\mathrm A)(5\\,\\Omega)\\\\\n&=9{,}5\\,\\mathrm V.\n",
+        "incoming": "V_{ab} &= [12-0{,}5(2)-0{,}5(3)]\\,\\mathrm V \\\\\n&= 9{,}5\\,\\mathrm V.\n",
+        "decision": "Retainalreadyverified explicitphysicalcomponents/fullsteps; equivalent incomingcompressedarithmetic iscovered. PreserveincomingUIandallnonconflictingwording."
+      },
+      {
+        "index": 4,
+        "ours": "V_L=(2\\,\\mathrm A)(3\\,\\Omega)=6\\,\\mathrm V.\n$$\n\nTrên nhánh nguồn:\n\n$$\n12\\,\\mathrm V-(3\\,\\mathrm A)r=V_L.\n$$\n\nSuy ra:\n\n$$\nr=\\frac{12\\,\\mathrm V-6\\,\\mathrm V}{3\\,\\mathrm A}=2\\,\\Omega.\n",
+        "incoming": "\\begin{aligned}\n12\\,\\mathrm V-(3\\,\\mathrm A)r &= (2\\,\\mathrm A)(3\\,\\Omega) \\\\\n&= 6\\,\\mathrm V, \\\\\nr &= 2\\,\\Omega.\n\\end{aligned}\n",
+        "decision": "Retainalreadyverified explicitphysicalcomponents/fullsteps; equivalent incomingcompressedarithmetic iscovered. PreserveincomingUIandallnonconflictingwording."
+      },
+      {
+        "index": 5,
+        "ours": "V_r=(1\\,\\mathrm A)(1\\,\\Omega)=1\\,\\mathrm V.\n$$\n\nQuy tắc vòng cho:\n\n$$\n-\\mathcal E+V_r-V_L=0.\n$$\n\nDo đó:\n\n$$\n\\mathcal E=1\\,\\mathrm V-6\\,\\mathrm V=-5\\,\\mathrm V.\n",
+        "incoming": "\\begin{aligned}\n-\\mathcal E+(1\\,\\mathrm A)(1\\,\\Omega) &= (2\\,\\mathrm A)(3\\,\\Omega), \\\\\n\\mathcal E &= -5\\,\\mathrm V.\n\\end{aligned}\n",
+        "decision": "Retainalreadyverified explicitphysicalcomponents/fullsteps; equivalent incomingcompressedarithmetic iscovered. PreserveincomingUIandallnonconflictingwording."
+      },
+      {
+        "index": 6,
+        "ours": "V_s=(3\\,\\mathrm A)(2\\,\\Omega)=6\\,\\mathrm V.\n$$\n\nVòng thứ ba cho:\n\n$$\n\\begin{aligned}\n12\\,\\mathrm V-V_s-V_r+\\mathcal E&=0,\\\\\n12\\,\\mathrm V-6\\,\\mathrm V-1\\,\\mathrm V+\\mathcal E&=0.\n\\end{aligned}\n",
+        "incoming": "12\\,\\mathrm V-6\\,\\mathrm V-1\\,\\mathrm V+\\mathcal E = 0.\n",
+        "decision": "Retainalreadyverified explicitphysicalcomponents/fullsteps; equivalent incomingcompressedarithmetic iscovered. PreserveincomingUIandallnonconflictingwording."
+      },
+      {
+        "index": 7,
+        "ours": "\\begin{aligned}\n&I_1+I_1=2I_1,\\\\\n&-I_2-2I_2=-3I_2,\\\\\n&-2I_3-I_3=-3I_3.\n\\end{aligned}\n$$\n\nGom các số hạng theo từng dòng điện cho:\n\n$$\n2I_1-3I_2-3I_3=0.\n",
+        "incoming": "(2I_1-I_3)\\,\\Omega = (3I_2+2I_3)\\,\\Omega.\n",
+        "decision": "Retainalreadyverified explicitphysicalcomponents/fullsteps; equivalent incomingcompressedarithmetic iscovered. PreserveincomingUIandallnonconflictingwording."
+      }
+    ],
+    "resultSHA256": "d30b225d720917726d7736c40b2d2bcb49dac9ee6b852929fc3b5df9b32ee9ac"
+  },
+  "source26AfterMergeSHA256": {
+    "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md": "5050ed1dd91aef81a643e5d7b674100dd8352217cdf0548ef143f76ef5197a74",
+    "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md": "d30b225d720917726d7736c40b2d2bcb49dac9ee6b852929fc3b5df9b32ee9ac",
+    "raw_materials/physics/translations/chapter-26/04-mach-rc.md": "f1d6f1e2313bfbf769c030dff51d446208166522e4fadeb509a2f2b3ea8a3d5a"
+  },
+  "executionNotes": [
+    "ThefirstbatchstatusisFAILEDandkept. Itscompletedpassingchapterobservationsareusable; failuresare not countedasp passes.",
+    "Chapter39completedonitsnextfreshbrowser attempt; firstdetachedframefailure waskept.",
+    "Chapter31colddev neededlongerhydration than thedefault30secondDOMselectorwait. A120secondexplicitwaitcompleted35cases without increasingheap orchangingcoursecontent.",
+    "Astopwaspreparednearhighmemorybuttheownedrunner hadalreadycompletedandstoppedtheserver. No manualstoporOOM isclaimedforthat successfulchapter31attempt.",
+    "Chapter34wasretestedaftercorrectingapproximation signs andall45casespassed."
+  ],
+  "evidence": {
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch8/theory/results.json": "f0db1f66156cd7e46a0e7852fc5413bf1a482ab72ff8f393c9f27230b395b13c",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch21/theory/results.json": "9cc8a91fdb30447f843668af4a3eaf5d8c383066b2de269e95164b41172aa972",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch23/theory/results.json": "2899a948200a05d9fbd1053ba9cc240674e09d7e6da70d1e15b4f1153f5cd8d8",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch25/theory/results.json": "829244f92492ab646d9325b231ed80e81042f22eb7da282f81a0381be58686f2",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch26/theory/results.json": "dcbd485baefcdfdc726fe27704051fb58046af9b5ab0a679060e1de1776c7c8f",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch27/theory/results.json": "02032ee7e7d1bfe2f7ddebc9ffe9232214ff41581b9b831c4c020614bfc8941b",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch28/theory/results.json": "248562e71519a3a2ab94a1759ddd9243e2e1dc0dd2d032c655dd24d646dc72ca",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch29/theory/results.json": "8be972d1c4c9096c296529f3534889200655ec9d2a2d4c97255b80f8b369a059",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch30/theory/results.json": "6a500104358c7bddee5af2ed128311ac77c39facc58fe61ad9ef407af5758878",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch31/theory/results.json": "4320a8014e3d2eecc890c2777ee962c7aa1ec21ee68a4833b9444e54dbe2c7a3",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch32/theory/results.json": "c3a0872288494fb6f6335bb7197e265ef2ee3c1cec48fbef55e39ba1e9f11172",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch34/theory/results.json": "57b38514f6211186570efc8ea8ce0cd0216670dc17984ac6a858deff48acd453",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch35/theory/results.json": "e43b5209d0a12bd6b414277d8f7039d31f369a41f3289c84dd61777e030c203d",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch36/theory/results.json": "4bc63d1cb99db3b0054a10531f67162d29c361adae3b76d101bab7dd79acdba6",
+    "qa/physics-global-audit/merged-ui-b7789d1e-review-20261028/ch39/theory/results.json": "536453a064aa648292c051a75b4a258cfde9c56d78c4ab310abad7b3e1bdaf0e"
+  },
+  "scopeLimit": "Notes/theorylayout ofthese15chapters onlyafterUImerge. Exercises/support/semantic sourcecompleteness andallcoursefinalrelease/report/cleanup remain separate."
+}
