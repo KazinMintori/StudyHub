@@ -44,7 +44,7 @@ Năm 2009, Iran tổ chức cuộc bầu cử tổng thống đầy kịch tính
 
 <p align="center">
 
-  <img src="./img/stat20-19/4-candidates.png" alt="Bốn ứng viên tổng thống Iran năm 2009" width="420" />
+  <img src="./img/stat20-19/4-candidates.png" alt="Bốn ứng viên tổng thống Iran năm 2009" width="420"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -81,7 +81,7 @@ Nhiều nhà phân tích cho rằng: Nếu một cuộc bầu cử diễn ra cô
 
 <p align="center">
 
-  <img src="./img/stat20-19/unnamed-chunk-1-1.png" alt="Phân phối Luật Benford so với dữ liệu thực tế của Karroubi" width="700" />
+  <img src="./img/stat20-19/unnamed-chunk-1-1.png" alt="Phân phối Luật Benford so với dữ liệu thực tế của Karroubi" width="700"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -119,7 +119,7 @@ Mô phỏng máy tính tạo ra 9 mẫu ngẫu nhiên độc lập được minh
 
 <p align="center">
 
-  <img src="./img/stat20-19/unnamed-chunk-2-1.png" alt="Chín mẫu mô phỏng từ hộp Benford" width="720" />
+  <img src="./img/stat20-19/unnamed-chunk-2-1.png" alt="Chín mẫu mô phỏng từ hộp Benford" width="720"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -177,7 +177,7 @@ Khoảng cách tính được là $28.08$. Nhưng con số $28.08$ này là lớ
 
 <p align="center">
 
-  <img src="./img/stat20-19/unnamed-chunk-6-1.png" alt="Phân phối Null của thống kê Chi bình phương" width="550" />
+  <img src="./img/stat20-19/unnamed-chunk-6-1.png" alt="Phân phối Null của thống kê Chi bình phương" width="550"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -255,7 +255,7 @@ Năm 1929, nhà tâm lý học Wolfgang Köhler thực hiện một thí nghiệ
 
 <p align="center">
 
-  <img src="./img/stat20-19/bouba-kiki.svg" alt="Hai hình vẽ trong hiệu ứng Bouba/Kiki" width="460" />
+  <img src="./img/stat20-19/bouba-kiki.svg" alt="Hai hình vẽ trong hiệu ứng Bouba/Kiki" width="460"  style="display: block; margin: 0 auto;"/>
 
 </p>
 

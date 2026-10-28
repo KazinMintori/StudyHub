@@ -81,7 +81,7 @@ lm(y ~ x1 + x2 + ... + xp, data = my_data)
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-08/zagat-review.png" alt="Trang đánh giá nhà hàng Marea trong cẩm nang Zagat với điểm số đồ ăn, bài trí, dịch vụ và khu vực." style="max-width: min(100%, 540px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-08/zagat-review.png" alt="Trang đánh giá nhà hàng Marea trong cẩm nang Zagat với điểm số đồ ăn, bài trí, dịch vụ và khu vực." style="max-width: min(100%, 540px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -125,7 +125,7 @@ Trong bảng dữ liệu này, biến vị trí địa lý `geo` là một biế
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-08/zagat-scatter-geo.png" alt="Biểu đồ phân tán giá bữa ăn theo chất lượng đồ ăn, phân màu theo khu vực bờ Đông và bờ Tây." style="max-width: min(100%, 560px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-08/zagat-scatter-geo.png" alt="Biểu đồ phân tán giá bữa ăn theo chất lượng đồ ăn, phân màu theo khu vực bờ Đông và bờ Tây." style="max-width: min(100%, 560px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -139,7 +139,7 @@ Quan sát Hình 8.2, ta nhận thấy:
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-08/zagat-handdrawn.png" alt="Hai đường thẳng song song ước lượng bằng mắt thường cho bờ Đông và bờ Tây." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-08/zagat-handdrawn.png" alt="Hai đường thẳng song song ước lượng bằng mắt thường cho bờ Đông và bờ Tây." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -216,7 +216,7 @@ $$
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-08/zagat-parallel-lines.png" alt="Hai đường thẳng hồi quy song song chính xác khớp bởi phương pháp bình phương tối thiểu." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-08/zagat-parallel-lines.png" alt="Hai đường thẳng hồi quy song song chính xác khớp bởi phương pháp bình phương tối thiểu." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -224,7 +224,7 @@ $$
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-08/zagat-vertical-slice.png" alt="Lát cắt thẳng đứng tại điểm đồ ăn bằng 18 cho thấy khoảng cách giữa hai đường song song luôn là 1.46 USD." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-08/zagat-vertical-slice.png" alt="Lát cắt thẳng đứng tại điểm đồ ăn bằng 18 cho thấy khoảng cách giữa hai đường song song luôn là 1.46 USD." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 

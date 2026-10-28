@@ -61,7 +61,7 @@ Nếu ta tưởng tượng biểu đồ xác suất lý thuyết (Probability Hi
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-13/disc-unif-ev.png" alt="Điểm cân bằng kỳ vọng của xúc xắc cân bằng" style="max-width: min(100%, 440px); width: 100%;" />
+  <img src="./img/stat20-13/disc-unif-ev.png" alt="Điểm cân bằng kỳ vọng của xúc xắc cân bằng" style="max-width: min(100%, 440px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -113,7 +113,7 @@ $$
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-13/weighted-die-ev.png" alt="Biểu đồ xác suất của con xúc xắc lệch" style="max-width: min(100%, 520px); width: 100%;" />
+  <img src="./img/stat20-13/weighted-die-ev.png" alt="Biểu đồ xác suất của con xúc xắc lệch" style="max-width: min(100%, 520px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -141,7 +141,7 @@ Kỳ vọng của một biến chỉ báo Bernoulli chính là xác suất thàn
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-13/bernoulli-ev.png" alt="Kỳ vọng của biến ngẫu nhiên Bernoulli" style="max-width: min(100%, 720px); width: 100%;" />
+  <img src="./img/stat20-13/bernoulli-ev.png" alt="Kỳ vọng của biến ngẫu nhiên Bernoulli" style="max-width: min(100%, 720px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 

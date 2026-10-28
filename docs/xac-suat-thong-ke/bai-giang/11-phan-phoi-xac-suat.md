@@ -59,7 +59,7 @@ Xét một chiếc hộp chứa 5 tấm thẻ số: Một thẻ $\fbox{1}$, hai 
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/box.jpeg" alt="Chiếc hộp chứa 5 tấm thẻ" style="max-width: min(100%, 220px);" />
+  <img src="./img/stat20-11/box.jpeg" alt="Chiếc hộp chứa 5 tấm thẻ" style="max-width: min(100%, 220px); display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -107,7 +107,7 @@ Tổng diện tích của tất cả các cột trên biểu đồ luôn bằng 
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/unnamed-chunk-2-1.png" alt="Biểu đồ xác suất lý thuyết của hộp 5 thẻ" style="max-width: min(100%, 400px); width: 100%;" />
+  <img src="./img/stat20-11/unnamed-chunk-2-1.png" alt="Biểu đồ xác suất lý thuyết của hộp 5 thẻ" style="max-width: min(100%, 400px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 11.2: Biểu đồ xác suất lý thuyết (Probability Histogram) của chiếc hộp 5 tấm thẻ.</p>
 
@@ -133,7 +133,7 @@ Dựng biểu đồ biểu diễn các tỷ lệ thực nghiệm này, ta thu đ
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/unnamed-chunk-3-1.png" alt="Biểu đồ thực nghiệm sau 50 lần rút" style="max-width: min(100%, 400px); width: 100%;" />
+  <img src="./img/stat20-11/unnamed-chunk-3-1.png" alt="Biểu đồ thực nghiệm sau 50 lần rút" style="max-width: min(100%, 400px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 11.3: Biểu đồ thực nghiệm (Empirical Histogram) thu được từ 50 lần rút mẫu có hoàn lại.</p>
 
@@ -164,7 +164,7 @@ Bảng phân phối xác suất của $S$:
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/prob-hist-sum-dice.png" alt="Biểu đồ xác suất tổng số chấm khi gieo 2 xúc xắc" style="max-width: min(100%, 620px); width: 100%;" />
+  <img src="./img/stat20-11/prob-hist-sum-dice.png" alt="Biểu đồ xác suất tổng số chấm khi gieo 2 xúc xắc" style="max-width: min(100%, 620px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 11.4: Biểu đồ xác suất của tổng số chấm khi gieo 2 con xúc xắc có dạng hình tháp đối xứng đạt đỉnh tại 7.</p>
 
@@ -178,7 +178,7 @@ Tung một đồng xu 3 lần liên tiếp, có $2^3 = 8$ kết quả đồng kh
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/prob-hist-3-tosses.png" alt="Biểu đồ xác suất số mặt ngửa trong 3 lần tung" style="max-width: min(100%, 320px);" />
+  <img src="./img/stat20-11/prob-hist-3-tosses.png" alt="Biểu đồ xác suất số mặt ngửa trong 3 lần tung" style="max-width: min(100%, 320px); display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 11.5: Biểu đồ xác suất số mặt ngửa khi tung đồng xu cân bằng 3 lần.</p>
 
@@ -225,7 +225,7 @@ $$
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/geni-clothes.png" alt="Chú chim cánh cụt Geni chọn trang phục" style="max-width: min(100%, 420px); width: 100%;" />
+  <img src="./img/stat20-11/geni-clothes.png" alt="Chú chim cánh cụt Geni chọn trang phục" style="max-width: min(100%, 420px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -339,7 +339,7 @@ $$
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/prob-hist-coin-toss.png" alt="Biểu đồ xác suất Bernoulli với các giá trị p khác nhau" style="max-width: min(100%, 440px); width: 100%;" />
+  <img src="./img/stat20-11/prob-hist-coin-toss.png" alt="Biểu đồ xác suất Bernoulli với các giá trị p khác nhau" style="max-width: min(100%, 440px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -387,7 +387,7 @@ Vì các chuỗi này xung khắc từng đôi một, ta cộng xác suất củ
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-11/biased-coin-3-tosses.png" alt="Phân phối nhị thức khi tung đồng xu lệch 3 lần" style="max-width: min(100%, 620px); width: 100%;" />
+  <img src="./img/stat20-11/biased-coin-3-tosses.png" alt="Phân phối nhị thức khi tung đồng xu lệch 3 lần" style="max-width: min(100%, 620px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 

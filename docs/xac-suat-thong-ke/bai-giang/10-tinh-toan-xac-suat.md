@@ -24,7 +24,7 @@ Trong đời sống xã hội và khoa học thực nghiệm, việc ước lư�
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/sally-clark.png" alt="Sally Clark sau khi được minh oan" style="max-width: min(100%, 280px); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+  <img src="./img/stat20-10/sally-clark.png" alt="Sally Clark sau khi được minh oan" style="max-width: min(100%, 280px); display: block; margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.1: Sally Clark trước cổng tòa án sau phiên phúc thẩm minh oan năm 2003.</p>
 
@@ -43,10 +43,7 @@ Nhân chứng then chốt của bên công tố là Giáo sư Sir Roy Meadow, m�
 - Vì gia đình Clark có hai đứa con tử vong liên tiếp, Meadow thực hiện phép nhân trực tiếp:
 
 $$
-\begin{aligned}
-\frac{1}{8.543} \times \frac{1}{8.543} &\approx \frac{1}{72.982.849} \\
-&\approx \frac{1}{73\text{ million}}
-\end{aligned}
+\frac{1}{8.543} \times \frac{1}{8.543} \approx \frac{1}{72.982.849} \approx \frac{1}{73.000.000}
 $$
 
 Meadow tuyên bố trước tòa rằng xác suất hai cái chết tự nhiên xảy ra trong cùng một gia đình là 1 trên 73 triệu. Con số chấn động này khiến bồi thẩm đoàn tin rằng khả năng hai đứa trẻ chết tự nhiên gần như là con số không, và Sally Clark bị kết tội. Phải mất hơn 3 năm ngồi tù trong đau khổ tột cùng, Hiệp hội Thống kê Hoàng gia Anh (Royal Statistical Society - RSS) mới chính thức lên tiếng can thiệp, vạch trần hai sai lầm toán học nghiêm trọng của bên công tố:
@@ -67,7 +64,7 @@ Xét một chiếc hộp chứa 4 tấm thẻ giống hệt nhau về kích thư
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/box-red-blue.jpeg" alt="Hộp gồm 2 thẻ đỏ và 2 thẻ xanh" style="max-width: min(100%, 140px);" />
+  <img src="./img/stat20-10/box-red-blue.jpeg" alt="Hộp gồm 2 thẻ đỏ và 2 thẻ xanh" style="max-width: min(100%, 140px); display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -100,7 +97,7 @@ Khai triển tám kết quả:
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/rb-box-3-draws.jpeg" alt="Sơ đồ cây rút 3 lần có hoàn lại" style="max-width: min(100%, 620px); width: 100%;" />
+  <img src="./img/stat20-10/rb-box-3-draws.jpeg" alt="Sơ đồ cây rút 3 lần có hoàn lại" style="max-width: min(100%, 620px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.3: Không gian mẫu gồm 8 kết quả đồng khả năng khi rút có hoàn lại.</p>
 
@@ -134,7 +131,7 @@ Bây giờ, ta lặp lại thí nghiệm nhưng không bỏ thẻ trở lại h�
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/without-repl-1.jpeg" alt="Hộp giảm dần kích thước khi rút không hoàn lại" style="max-width: min(100%, 600px); width: 100%;" />
+  <img src="./img/stat20-10/without-repl-1.jpeg" alt="Hộp giảm dần kích thước khi rút không hoàn lại" style="max-width: min(100%, 600px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.4: Cơ cấu thành phần trong hộp thay đổi sau mỗi lần rút không hoàn lại.</p>
 
@@ -148,7 +145,7 @@ Quan sát điều gì xảy ra: Trong hộp ban đầu chỉ có 2 thẻ đỏ v
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/rb-box-3-draws-no-repl.jpeg" alt="Sơ đồ cây rút 3 lần không hoàn lại" style="max-width: min(100%, 560px); width: 100%;" />
+  <img src="./img/stat20-10/rb-box-3-draws-no-repl.jpeg" alt="Sơ đồ cây rút 3 lần không hoàn lại" style="max-width: min(100%, 560px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.5: Các kết quả khả dĩ khi rút 3 lần không hoàn lại từ hộp 4 thẻ.</p>
 
@@ -223,7 +220,7 @@ $$
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/venn-diagram-intersection.png" alt="Biểu đồ Venn của phần giao A và B" style="max-width: min(100%, 320px);" />
+  <img src="./img/stat20-10/venn-diagram-intersection.png" alt="Biểu đồ Venn của phần giao A và B" style="max-width: min(100%, 320px); display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -273,7 +270,7 @@ Quan sát biểu đồ Venn dưới đây:
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/pab_pba.png" alt="Phân biệt P(A|B) và P(B|A)" style="max-width: min(100%, 320px);" />
+  <img src="./img/stat20-10/pab_pba.png" alt="Phân biệt P(A|B) và P(B|A)" style="max-width: min(100%, 320px); display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -443,7 +440,7 @@ Xét một nhóm gồm 5 người: Alex, Emi, Fred, Max và Nan. Ta chọn ngẫ
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/committee.jpeg" alt="Chọn 2 người từ nhóm 5 người" style="max-width: min(100%, 600px); width: 100%;" />
+  <img src="./img/stat20-10/committee.jpeg" alt="Chọn 2 người từ nhóm 5 người" style="max-width: min(100%, 600px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.8: Không gian mẫu gồm 10 cặp thành viên phân biệt khi chọn 2 từ 5 người.</p>
 
@@ -488,7 +485,7 @@ Xét Hộp 1 chứa các tấm thẻ có cả màu sắc (Đỏ/Xanh) và con s�
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/indep-box.jpeg" alt="Kiểm tra độc lập giữa màu sắc và số trên thẻ" style="max-width: min(100%, 320px);" />
+  <img src="./img/stat20-10/indep-box.jpeg" alt="Kiểm tra độc lập giữa màu sắc và số trên thẻ" style="max-width: min(100%, 320px); display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.9: Phân bố số và màu sắc trên các thẻ của Hộp 1.</p>
 
@@ -514,7 +511,7 @@ Tiếp tục xét hai hộp chứa các thẻ mang hai chữ số:
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/box-2-number.jpeg" alt="Thẻ mang hai chữ số" style="max-width: min(100%, 420px); width: 100%;" />
+  <img src="./img/stat20-10/box-2-number.jpeg" alt="Thẻ mang hai chữ số" style="max-width: min(100%, 420px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.10: Cơ cấu hai chữ số trên mỗi tấm thẻ ở Hộp 1 và Hộp 2.</p>
 
@@ -522,7 +519,7 @@ Tiếp tục xét hai hộp chứa các thẻ mang hai chữ số:
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/box-2-number-cond.jpeg" alt="Thu hẹp không gian mẫu khi biết chữ số thứ nhất" style="max-width: min(100%, 680px); width: 100%;" />
+  <img src="./img/stat20-10/box-2-number-cond.jpeg" alt="Thu hẹp không gian mẫu khi biết chữ số thứ nhất" style="max-width: min(100%, 680px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 10.11: Không gian mẫu thu hẹp khi biết chữ số thứ nhất là 1.</p>
 
@@ -751,7 +748,7 @@ Khi hai biến cố $A$ và $B$ không xung khắc (vùng giao nhau khác rỗng
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-10/incl-excl.png" alt="Nguyên lý Bao hàm - Loại trừ trên biểu đồ Venn" style="max-width: min(100%, 380px);" />
+  <img src="./img/stat20-10/incl-excl.png" alt="Nguyên lý Bao hàm - Loại trừ trên biểu đồ Venn" style="max-width: min(100%, 380px); display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 

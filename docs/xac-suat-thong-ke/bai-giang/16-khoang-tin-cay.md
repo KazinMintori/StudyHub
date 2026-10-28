@@ -26,7 +26,7 @@ Tham số mà chúng ta quan tâm có thể là giá trị trung bình $\mu$, tr
 
 <p align="center">
 
-  <img src="./img/stat20-16/unnamed-chunk-2-1.png" alt="Phân phối chọn mẫu thể hiện Độ lệch và Phương sai" width="520" />
+  <img src="./img/stat20-16/unnamed-chunk-2-1.png" alt="Phân phối chọn mẫu thể hiện Độ lệch và Phương sai" width="520"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -58,7 +58,7 @@ Tổng thể nghiên cứu bao gồm toàn bộ các nhà hàng hoạt động t
 
 <p align="center">
 
-  <img src="./img/stat20-16/unnamed-chunk-3-1.png" alt="Phân phối của tổng thể điểm an toàn thực phẩm" width="450" />
+  <img src="./img/stat20-16/unnamed-chunk-3-1.png" alt="Phân phối của tổng thể điểm an toàn thực phẩm" width="450"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -80,7 +80,7 @@ Phân phối thực nghiệm của mẫu 100 nhà hàng này có dạng:
 
 <p align="center">
 
-  <img src="./img/stat20-16/unnamed-chunk-4-1.png" alt="Phân phối thực nghiệm của mẫu 100 nhà hàng" width="450" />
+  <img src="./img/stat20-16/unnamed-chunk-4-1.png" alt="Phân phối thực nghiệm của mẫu 100 nhà hàng" width="450"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -104,7 +104,7 @@ Tập hợp tất cả các giá trị có thể có của $\bar{x}$ khi rút m�
 
 <p align="center">
 
-  <img src="./img/stat20-16/unnamed-chunk-5-1.png" alt="Phân phối chọn mẫu của trung bình mẫu qua 100.000 lần rút" width="450" />
+  <img src="./img/stat20-16/unnamed-chunk-5-1.png" alt="Phân phối chọn mẫu của trung bình mẫu qua 100.000 lần rút" width="450"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -130,7 +130,7 @@ Hãy đặt ba khía cạnh của quá trình thống kê này cạnh nhau để
 
 <p align="center">
 
-  <img src="./img/stat20-16/unnamed-chunk-6-1.png" alt="Bộ ba bức tranh: Tổng thể, Thực nghiệm và Chọn mẫu" width="850" />
+  <img src="./img/stat20-16/unnamed-chunk-6-1.png" alt="Bộ ba bức tranh: Tổng thể, Thực nghiệm và Chọn mẫu" width="850"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -161,7 +161,7 @@ Chúng ta chỉ có duy nhất một bức tranh ở giữa: **Một mẫu dữ 
 
 <p align="center">
 
-  <img src="./img/stat20-16/triptych-sample-only.jpg" alt="Thực tế nghiên cứu: Ta chỉ quan sát được duy nhất mẫu dữ liệu" width="480" />
+  <img src="./img/stat20-16/triptych-sample-only.jpg" alt="Thực tế nghiên cứu: Ta chỉ quan sát được duy nhất mẫu dữ liệu" width="480"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -185,7 +185,7 @@ $$
 
 <p align="center">
 
-  <img src="./img/stat20-16/triptych-subs.jpg" alt="Phép thế thống kê từ mẫu sang phân phối chọn mẫu" width="480" />
+  <img src="./img/stat20-16/triptych-subs.jpg" alt="Phép thế thống kê từ mẫu sang phân phối chọn mẫu" width="480"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -295,7 +295,7 @@ Yếu tố ngẫu nhiên $95\%$ nằm ở **quy trình tạo ra khoảng**: Nế
 
 <p align="center">
 
-  <img src="./img/stat20-16/unnamed-chunk-7-1.png" alt="Mô phỏng 100 khoảng tin cậy 95%" width="460" />
+  <img src="./img/stat20-16/unnamed-chunk-7-1.png" alt="Mô phỏng 100 khoảng tin cậy 95%" width="460"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -374,7 +374,7 @@ Khoảng xấp xỉ là $[L,U]=[0{,}172,0{,}548]$.
 
 <p align="center">
 
-  <img src="./img/stat20-16/unnamed-chunk-9-1.png" alt="Bộ ba bức tranh cho bài toán tỉ lệ" width="850" />
+  <img src="./img/stat20-16/unnamed-chunk-9-1.png" alt="Bộ ba bức tranh cho bài toán tỉ lệ" width="850"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
