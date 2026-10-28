@@ -161,6 +161,21 @@ mjx-container[display=true]::-webkit-scrollbar,
 .lecture-figure { margin: var(--space-6) 0; }
 .lecture-figure img { display: block; margin: 0 auto; }
 .lecture-figure figcaption { font-family: var(--font-ui); font-size: var(--fs-small); line-height: 1.45; color: var(--ink-3); margin-top: var(--space-3); }
+/* Căn giữa có chọn lọc: Chỉ căn giữa hình ảnh khi nằm trong khối chứa được tác giả chỉ định căn giữa */
+.vp-doc :is(div, p)[style*="text-align: center"]:not(.lecture-figure-pair) > :is(img, a > img),
+.vp-doc :is(div, p)[style*="text-align:center"]:not(.lecture-figure-pair) > :is(img, a > img),
+.vp-doc p[align="center"]:not(.lecture-figure-pair) > :is(img, a > img) {
+  display: block;
+  margin-inline: auto;
+}
+.lecture-caption {
+  margin: var(--space-3) auto var(--space-6);
+  color: var(--ink-2);
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  text-align: center;
+}
+.lecture-caption p { margin: 0; }
 .lecture-figure .figure-labels { display: block; margin-top: var(--space-2); line-height: 1.65; }
 .lecture-figure .figure-label-list { margin: var(--space-2) 0 0; padding-left: var(--space-4); }
 .lecture-figure .figure-label-list li { font: inherit; margin: var(--space-1) 0; overflow-wrap: anywhere; }

@@ -92,7 +92,7 @@ Bên cạnh bảng số liệu, ta có thể trực quan hóa số đếm bằng
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-stacked-counts.png" alt="Biểu đồ cột xếp chồng biểu diễn số lượng cá thể theo loài và đảo." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-stacked-counts.png" alt="Biểu đồ cột xếp chồng biểu diễn số lượng cá thể theo loài và đảo." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ cột xếp chồng (Stacked Bar Chart).</p>
 
@@ -100,7 +100,7 @@ Bên cạnh bảng số liệu, ta có thể trực quan hóa số đếm bằng
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-dodged-counts.png" alt="Biểu đồ cột ghép biểu diễn số lượng cá thể phân tách theo đảo." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-dodged-counts.png" alt="Biểu đồ cột ghép biểu diễn số lượng cá thể phân tách theo đảo." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ cột ghép (Dodged / Side-by-Side Bar Chart).</p>
 
@@ -118,7 +118,7 @@ Mỗi phương pháp phục vụ một mục đích truyền đạt thông tin r
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-03/two-var.png" alt="Sơ đồ chuyển đổi từ Khung dữ liệu thô sang Bảng tần số chéo và Biểu đồ cột." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-03/two-var.png" alt="Sơ đồ chuyển đổi từ Khung dữ liệu thô sang Bảng tần số chéo và Biểu đồ cột." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -236,7 +236,7 @@ Khi quan tâm đến cơ cấu thành phần thay vì số lượng tuyệt đ�
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-normalized-by-species.png" alt="Biểu đồ cột chuẩn hóa theo loài: P(Đảo | Loài)." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-normalized-by-species.png" alt="Biểu đồ cột chuẩn hóa theo loài: P(Đảo | Loài)." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 Chuẩn hóa theo Loài: $P(\text{Island} \mid \text{Species})$.
 
@@ -244,7 +244,7 @@ Chuẩn hóa theo Loài: $P(\text{Island} \mid \text{Species})$.
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-normalized-by-island.png" alt="Biểu đồ cột chuẩn hóa theo đảo: P(Loài | Đảo)." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-normalized-by-island.png" alt="Biểu đồ cột chuẩn hóa theo đảo: P(Loài | Đảo)." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 Chuẩn hóa theo Đảo: $P(\text{Species} \mid \text{Island})$.
 
@@ -294,7 +294,7 @@ Ngược lại, nếu tỷ lệ có điều kiện giữ nguyên không đổi t
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-association-real.png" alt="Dữ liệu thực tế: Tồn tại mối liên hệ mạnh mẽ giữa loài và đảo." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-association-real.png" alt="Dữ liệu thực tế: Tồn tại mối liên hệ mạnh mẽ giữa loài và đảo." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Dữ liệu thực tế: Tồn tại mối liên hệ.</p>
 
@@ -302,7 +302,7 @@ Ngược lại, nếu tỷ lệ có điều kiện giữ nguyên không đổi t
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-03/bar-association-hypothetical.png" alt="Dữ liệu giả định: Không có mối liên hệ giữa loài và đảo." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-03/bar-association-hypothetical.png" alt="Dữ liệu giả định: Không có mối liên hệ giữa loài và đảo." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Dữ liệu giả định: Không có mối liên hệ.</p>
 
@@ -324,7 +324,7 @@ Việc kết hợp không cẩn trọng giữa số đếm tuyệt đối và t�
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-03/world-energy-supply.jpeg" alt="Biểu đồ năng lượng sơ cấp toàn cầu của Cơ quan Năng lượng Quốc tế IEA." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-03/world-energy-supply.jpeg" alt="Biểu đồ năng lượng sơ cấp toàn cầu của Cơ quan Năng lượng Quốc tế IEA." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -388,7 +388,7 @@ Một cuộc khảo sát được thực hiện trên một lớp học gồm $N
 
 <div style="text-align: center; margin: 12px 0;">
 
-  <img src="./img/stat20-03/marching-band-table.png" alt="Bảng tần số chéo ghi nhận sinh viên tham gia ban nhạc diễu hành theo năm học." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-03/marching-band-table.png" alt="Bảng tần số chéo ghi nhận sinh viên tham gia ban nhạc diễu hành theo năm học." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 

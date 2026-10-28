@@ -26,7 +26,7 @@ Tuy nhiên, trong phân tích dữ liệu hiện đại và suy rộng thống k
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-12/rv-picture.png" alt="Sơ đồ ánh xạ của biến ngẫu nhiên" style="max-width: min(100%, 460px); width: 100%;" />
+  <img src="./img/stat20-12/rv-picture.png" alt="Sơ đồ ánh xạ của biến ngẫu nhiên" style="max-width: min(100%, 460px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -104,7 +104,7 @@ Bàn cò quay kiểu Mỹ (American Roulette) có tổng cộng 38 ô số gồm
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-12/roulette-us.jpg" alt="Bàn cò quay Roulette kiểu Mỹ 38 ô" style="max-width: min(100%, 320px);" />
+  <img src="./img/stat20-12/roulette-us.jpg" alt="Bàn cò quay Roulette kiểu Mỹ 38 ô" style="max-width: min(100%, 320px); display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 12.2: Bàn cò quay Roulette kiểu Mỹ gồm 38 ô số phân bổ đỏ, đen và xanh.</p>
 
@@ -219,7 +219,7 @@ $$
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-12/bernoulli.png" alt="Biểu đồ xác suất của biến ngẫu nhiên Bernoulli" style="max-width: min(100%, 440px); width: 100%;" />
+  <img src="./img/stat20-12/bernoulli.png" alt="Biểu đồ xác suất của biến ngẫu nhiên Bernoulli" style="max-width: min(100%, 440px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -351,7 +351,7 @@ trong đó $e \approx 2{,}71828$ là cơ số logarit tự nhiên.
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-12/unnamed-chunk-7-1.png" alt="Biểu đồ phân phối Poisson dữ liệu kỵ binh Phổ" style="max-width: min(100%, 440px); width: 100%;" />
+  <img src="./img/stat20-12/unnamed-chunk-7-1.png" alt="Biểu đồ phân phối Poisson dữ liệu kỵ binh Phổ" style="max-width: min(100%, 440px); width: 100%; display: block; margin: 0 auto;" />
 
   <p style="font-size: 0.88rem; color: var(--vp-c-text-2); margin-top: 0.5rem;">Hình 12.4: Biểu đồ thực nghiệm của số lính kỵ binh Phổ tử vong vì ngựa đá mỗi năm (nghiên cứu kinh điển của Bortkiewicz năm 1898) khớp hoàn hảo với phân phối Poisson lệch phải.</p>
 
@@ -427,7 +427,7 @@ $$
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-12/cdf.png" alt="Đồ thị hàm phân phối tích lũy CDF của số mặt ngửa" style="max-width: min(100%, 520px); width: 100%;" />
+  <img src="./img/stat20-12/cdf.png" alt="Đồ thị hàm phân phối tích lũy CDF của số mặt ngửa" style="max-width: min(100%, 520px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -441,7 +441,7 @@ Hình 12.5: Đồ thị hàm phân phối tích lũy $F(x)$ có dạng bậc tha
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-12/cdf-bernoulli.png" alt="Đồ thị CDF của biến ngẫu nhiên Bernoulli" style="max-width: min(100%, 380px); width: 100%;" />
+  <img src="./img/stat20-12/cdf-bernoulli.png" alt="Đồ thị CDF của biến ngẫu nhiên Bernoulli" style="max-width: min(100%, 380px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 
@@ -504,7 +504,7 @@ Hàm CDF $F(x)$ tích lũy qua từng bước nhảy:
 
 <div style="text-align: center; margin: 1.5rem 0;">
 
-  <img src="./img/stat20-12/cdf-2.png" alt="Đồ thị CDF của biến ngẫu nhiên với 4 giá trị" style="max-width: min(100%, 480px); width: 100%;" />
+  <img src="./img/stat20-12/cdf-2.png" alt="Đồ thị CDF của biến ngẫu nhiên với 4 giá trị" style="max-width: min(100%, 480px); width: 100%; display: block; margin: 0 auto;" />
 
 <div class="lecture-caption">
 

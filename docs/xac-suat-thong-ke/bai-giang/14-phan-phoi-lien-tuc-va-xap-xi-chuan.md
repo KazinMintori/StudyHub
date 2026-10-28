@@ -26,7 +26,7 @@ Liệu sau $n$ phút, vị khách này sẽ dừng chân ở vị trí nào? Đ�
 
 <p align="center">
 
-  <img src="./img/stat20-14/drunkard-walk-drawing.png" alt="Minh họa bước đi ngẫu nhiên của người say rượu" width="500" />
+  <img src="./img/stat20-14/drunkard-walk-drawing.png" alt="Minh họa bước đi ngẫu nhiên của người say rượu" width="500"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -38,7 +38,7 @@ Tại mỗi bước thời gian (chẳng hạn mỗi phút), người say bướ
 
 <p align="center">
 
-  <img src="./img/stat20-14/unnamed-chunk-2-1.png" alt="Mô phỏng quỹ đạo bước đi ngẫu nhiên n = 30" width="700" />
+  <img src="./img/stat20-14/unnamed-chunk-2-1.png" alt="Mô phỏng quỹ đạo bước đi ngẫu nhiên n = 30" width="700"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -89,7 +89,7 @@ Một câu hỏi tự nhiên xuất hiện: Xác suất để người say dừn
 
 <p align="center">
 
-  <img src="./img/stat20-14/unnamed-chunk-3-1.png" alt="Phân phối thực nghiệm của vị trí sau 30 bước" width="550" />
+  <img src="./img/stat20-14/unnamed-chunk-3-1.png" alt="Phân phối thực nghiệm của vị trí sau 30 bước" width="550"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -125,7 +125,7 @@ Xét chiếc hộp chứa 10 tấm vé được minh họa dưới đây:
 
 <p align="center">
 
-  <img src="./img/stat20-14/box-1.png" alt="Hộp vé chứa 10 tấm vé mang số" width="380" />
+  <img src="./img/stat20-14/box-1.png" alt="Hộp vé chứa 10 tấm vé mang số" width="380"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -165,7 +165,7 @@ Mọi hiện tượng ngẫu nhiên quen thuộc đều có thể quy về mô h
 
 <p align="center">
 
-  <img src="./img/stat20-14/die.jpeg" alt="Con xúc xắc 6 mặt" width="180" />
+  <img src="./img/stat20-14/die.jpeg" alt="Con xúc xắc 6 mặt" width="180"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -501,7 +501,7 @@ $$
 
 <p align="center">
 
-  <img src="./img/stat20-14/unif-1.png" alt="Hàm mật độ phân phối đều Uniform(0,1)" width="520" />
+  <img src="./img/stat20-14/unif-1.png" alt="Hàm mật độ phân phối đều Uniform(0,1)" width="520"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -553,7 +553,7 @@ $$
 
 <p align="center">
 
-  <img src="./img/stat20-14/unnamed-chunk-10-1.png" alt="Phân phối chuẩn tắc và quy tắc thực nghiệm" width="420" />
+  <img src="./img/stat20-14/unnamed-chunk-10-1.png" alt="Phân phối chuẩn tắc và quy tắc thực nghiệm" width="420"  style="display: block; margin: 0 auto;"/>
 
 </p>
 

@@ -28,7 +28,7 @@ Tuy nhiên, mục tiêu tối thượng của khoa học dữ liệu không ch�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/538-pollster-ranking-snippet.png" alt="Bảng xếp hạng độ chính xác lịch sử và phương pháp luận của các tổ chức thăm dò dư luận trên trang FiveThirtyEight." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/538-pollster-ranking-snippet.png" alt="Bảng xếp hạng độ chính xác lịch sử và phương pháp luận của các tổ chức thăm dò dư luận trên trang FiveThirtyEight." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -44,7 +44,7 @@ Lý thuyết xác suất cổ điển không bắt đầu từ những phương 
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/dice-players-painting.jpeg" alt="Bức tranh sơn dầu thế kỷ 17 mô tả những người chơi xúc xắc may rủi tại châu Âu thời kỳ phục hưng." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/dice-players-painting.jpeg" alt="Bức tranh sơn dầu thế kỷ 17 mô tả những người chơi xúc xắc may rủi tại châu Âu thời kỳ phục hưng." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -123,7 +123,7 @@ Là một hành động hoặc quá trình thực nghiệm mang tính chất ng�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/us-quarter.png" alt="Đồng xu 25 cent của Mỹ với hai mặt: Mặt ngửa Heads và mặt sấp Tails." style="max-width: min(100%, 320px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/us-quarter.png" alt="Đồng xu 25 cent của Mỹ với hai mặt: Mặt ngửa Heads và mặt sấp Tails." style="max-width: min(100%, 320px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -219,7 +219,7 @@ $$
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/venn-disjoint.png" alt="Sơ đồ Venn của hai biến cố xung khắc rời nhau không có phần tử chung." style="max-width: min(100%, 460px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/venn-disjoint.png" alt="Sơ đồ Venn của hai biến cố xung khắc rời nhau không có phần tử chung." style="max-width: min(100%, 460px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -263,7 +263,7 @@ Khi hai biến cố $A$ và $B$ không xung khắc (có phần giao $A \cap B \n
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/venn-diagram-1.png" alt="Sơ đồ Venn tổng quát của hai biến cố có phần giao nhau." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/venn-diagram-1.png" alt="Sơ đồ Venn tổng quát của hai biến cố có phần giao nhau." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -316,7 +316,7 @@ Nhà thống kê học Jerzy Neyman đã sáng tạo ra phương pháp tư duy k
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/box-1.jpeg" alt="Chiếc hộp đựng các tấm vé đánh số gần như giống hệt nhau, mô hình Box Model kinh điển." style="max-width: min(100%, 380px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/box-1.jpeg" alt="Chiếc hộp đựng các tấm vé đánh số gần như giống hệt nhau, mô hình Box Model kinh điển." style="max-width: min(100%, 380px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -342,7 +342,7 @@ Phép thử tung đồng xu lệch 2 lần tương đương với việc rút v�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/biased-coin.png" alt="Bảng không gian mẫu 9 kết quả đồng khả năng khi rút hai vé từ hộp gồm hai vé ngửa và một vé sấp." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/biased-coin.png" alt="Bảng không gian mẫu 9 kết quả đồng khả năng khi rút hai vé từ hộp gồm hai vé ngửa và một vé sấp." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -375,7 +375,7 @@ Một bàn quay Roulette chuẩn của Mỹ gồm 38 ô số phân bổ đều t
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-09/roulette-us.jpg" alt="Bàn quay Roulette chuẩn của Mỹ gồm 38 ô với các màu đỏ, đen và xanh lá." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-09/roulette-us.jpg" alt="Bàn quay Roulette chuẩn của Mỹ gồm 38 ô với các màu đỏ, đen và xanh lá." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 

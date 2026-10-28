@@ -28,7 +28,7 @@ Trong các bài học trước, ta đã làm quen với việc tóm tắt phân 
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-07/two-scatter-plots.png" alt="Hai biểu đồ phân tán: Bên trái là dữ liệu thực tế có mối liên hệ nghịch, bên phải là dữ liệu xáo trộn ngẫu nhiên không có mối liên hệ." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-07/two-scatter-plots.png" alt="Hai biểu đồ phân tán: Bên trái là dữ liệu thực tế có mối liên hệ nghịch, bên phải là dữ liệu xáo trộn ngẫu nhiên không có mối liên hệ." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -50,7 +50,7 @@ Ta có thể phát hiện mối liên hệ định lượng trên biểu đồ p
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-07/conditional-densities.png" alt="Đường cong mật độ có điều kiện dịch chuyển rõ rệt giữa nhóm bang có tỷ lệ nghèo thấp và nhóm bang có tỷ lệ nghèo cao." style="max-width: min(100%, 680px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-07/conditional-densities.png" alt="Đường cong mật độ có điều kiện dịch chuyển rõ rệt giữa nhóm bang có tỷ lệ nghèo thấp và nhóm bang có tỷ lệ nghèo cao." style="max-width: min(100%, 680px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -214,7 +214,7 @@ Hệ số tương quan $r$ cho biết mức độ gắn kết tuyến tính, nh�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-07/handdrawn-line.png" alt="Đường thẳng mô hình hóa mối quan hệ vẽ ước lượng bằng mắt thường." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-07/handdrawn-line.png" alt="Đường thẳng mô hình hóa mối quan hệ vẽ ước lượng bằng mắt thường." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -249,7 +249,7 @@ $$
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-07/least-squares-line.png" alt="Đường hồi quy bình phương tối thiểu khớp chính xác trên biểu đồ phân tán thực tế." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-07/least-squares-line.png" alt="Đường hồi quy bình phương tối thiểu khớp chính xác trên biểu đồ phân tán thực tế." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -353,7 +353,7 @@ $$
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-07/residual-california.png" alt="Minh họa hình học phần dư của bang California bằng đoạn thẳng đứng màu đỏ nối từ đường hồi quy xuống điểm dữ liệu." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-07/residual-california.png" alt="Minh họa hình học phần dư của bang California bằng đoạn thẳng đứng màu đỏ nối từ đường hồi quy xuống điểm dữ liệu." style="max-width: min(100%, 480px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 

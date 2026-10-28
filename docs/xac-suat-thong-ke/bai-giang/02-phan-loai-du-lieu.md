@@ -132,7 +132,7 @@ Khi chuyển sang biến định tính, khả năng thực hiện phép toán s�
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-02/kristen-gorman.png" alt="Tiến sĩ Kristen Gorman ghi nhận số liệu chim cánh cụt ngoài thực địa." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-02/kristen-gorman.png" alt="Tiến sĩ Kristen Gorman ghi nhận số liệu chim cánh cụt ngoài thực địa." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Tiến sĩ Kristen Gorman ghi chép số liệu chim cánh cụt ngoài thực địa.</p>
 
@@ -140,7 +140,7 @@ Khi chuyển sang biến định tính, khả năng thực hiện phép toán s�
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-02/palmer-station.jpeg" alt="Toàn cảnh trạm nghiên cứu Palmer tại Nam Cực." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-02/palmer-station.jpeg" alt="Toàn cảnh trạm nghiên cứu Palmer tại Nam Cực." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Toàn cảnh Trạm nghiên cứu Palmer tại Nam Cực.</p>
 
@@ -156,7 +156,7 @@ Tại Trạm nghiên cứu Palmer do Quỹ Khoa học Quốc gia Hoa Kỳ (NSF) 
 
   <div style="flex: 1; min-width: 280px; max-width: 400px; text-align: center;">
 
-<img src="./img/stat20-02/culmen-depth.png" alt="Sơ đồ minh họa chiều dài mỏ và độ sâu sống mỏ của chim cánh cụt." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-02/culmen-depth.png" alt="Sơ đồ minh họa chiều dài mỏ và độ sâu sống mỏ của chim cánh cụt." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
   </div>
 
@@ -178,7 +178,7 @@ Tại Trạm nghiên cứu Palmer do Quỹ Khoa học Quốc gia Hoa Kỳ (NSF) 
 
   <div style="flex: 1; min-width: 280px; max-width: 400px; text-align: center;">
 
-<img src="./img/stat20-02/lter_penguins.png" alt="Ba loài chim cánh cụt được khảo sát: Adelie, Chinstrap và Gentoo." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-02/lter_penguins.png" alt="Ba loài chim cánh cụt được khảo sát: Adelie, Chinstrap và Gentoo." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
   </div>
 
@@ -257,7 +257,7 @@ Không phải mọi bảng số liệu trong đời sống đều là một Data
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-02/alien-contingency-table.png" alt="Bảng chéo tần số ghi nhận sinh vật ngoài hành tinh theo màu sắc và thời gian." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-02/alien-contingency-table.png" alt="Bảng chéo tần số ghi nhận sinh vật ngoài hành tinh theo màu sắc và thời gian." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -283,7 +283,7 @@ Một bức ảnh kỹ thuật số thực chất là một lưới gồm hàng 
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-02/shoebill-1.png" alt="Bức ảnh màu chụp loài chim mỏ giày với kích thước 1520 x 1012 điểm ảnh." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-02/shoebill-1.png" alt="Bức ảnh màu chụp loài chim mỏ giày với kích thước 1520 x 1012 điểm ảnh." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -311,7 +311,7 @@ Nếu chuyển đổi bức ảnh trên sang dạng ảnh thang xám, mỗi đi�
 
   <div style="flex: 1; min-width: 260px; max-width: 400px; text-align: center;">
 
-<img src="./img/stat20-02/shoebill-1-grayscale.png" alt="Ảnh chim mỏ giày ở định dạng thang xám độ phân giải cao." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-02/shoebill-1-grayscale.png" alt="Ảnh chim mỏ giày ở định dạng thang xám độ phân giải cao." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 Ảnh thang xám $1520 \times 1012 \times 1$.
 
@@ -319,7 +319,7 @@ Nếu chuyển đổi bức ảnh trên sang dạng ảnh thang xám, mỗi đi�
 
   <div style="flex: 0.8; min-width: 220px; max-width: 300px; text-align: center;">
 
-<img src="./img/stat20-02/shoebill-1-gray8.png" alt="Ảnh thu nhỏ kích thước 8 x 8 điểm ảnh ở định dạng thang xám." style="width: 100%; image-rendering: pixelated; border-radius: 8px;" />
+<img src="./img/stat20-02/shoebill-1-gray8.png" alt="Ảnh thu nhỏ kích thước 8 x 8 điểm ảnh ở định dạng thang xám." style="width: 100%; image-rendering: pixelated; border-radius: 8px; display: block; margin: 0 auto;" />
 
 Ảnh thang xám thu nhỏ $8 \times 8$.
 
@@ -345,7 +345,7 @@ Giả sử ta thu thập được 3 bức ảnh chim mỏ giày khác nhau, và 
 
   <div style="flex: 1; min-width: 160px; max-width: 240px; text-align: center;">
 
-<img src="./img/stat20-02/shoebill-1-gray8.png" alt="Ảnh chim mỏ giày số 1 thu nhỏ 8x8." style="width: 100%; image-rendering: pixelated; border-radius: 6px;" />
+<img src="./img/stat20-02/shoebill-1-gray8.png" alt="Ảnh chim mỏ giày số 1 thu nhỏ 8x8." style="width: 100%; image-rendering: pixelated; border-radius: 6px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.85em; color: var(--vp-c-text-2);">Ảnh quan sát số 1</p>
 
@@ -353,7 +353,7 @@ Giả sử ta thu thập được 3 bức ảnh chim mỏ giày khác nhau, và 
 
   <div style="flex: 1; min-width: 160px; max-width: 240px; text-align: center;">
 
-<img src="./img/stat20-02/shoebill-2-gray8.png" alt="Ảnh chim mỏ giày số 2 thu nhỏ 8x8." style="width: 100%; image-rendering: pixelated; border-radius: 6px;" />
+<img src="./img/stat20-02/shoebill-2-gray8.png" alt="Ảnh chim mỏ giày số 2 thu nhỏ 8x8." style="width: 100%; image-rendering: pixelated; border-radius: 6px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.85em; color: var(--vp-c-text-2);">Ảnh quan sát số 2</p>
 
@@ -361,7 +361,7 @@ Giả sử ta thu thập được 3 bức ảnh chim mỏ giày khác nhau, và 
 
   <div style="flex: 1; min-width: 160px; max-width: 240px; text-align: center;">
 
-<img src="./img/stat20-02/shoebill-3-gray8.png" alt="Ảnh chim mỏ giày số 3 thu nhỏ 8x8." style="width: 100%; image-rendering: pixelated; border-radius: 6px;" />
+<img src="./img/stat20-02/shoebill-3-gray8.png" alt="Ảnh chim mỏ giày số 3 thu nhỏ 8x8." style="width: 100%; image-rendering: pixelated; border-radius: 6px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.85em; color: var(--vp-c-text-2);">Ảnh quan sát số 3</p>
 

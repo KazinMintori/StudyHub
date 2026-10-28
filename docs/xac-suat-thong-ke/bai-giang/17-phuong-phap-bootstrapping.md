@@ -36,7 +36,7 @@ Trước kỷ nguyên bùng nổ của máy tính điện tử, các nhà thốn
 
 <p align="center">
 
-  <img src="./img/stat20-17/triptych-bootstrap.jpg" alt="Nguyên lý Bootstrapping trong bộ ba bức tranh thống kê" width="550" />
+  <img src="./img/stat20-17/triptych-bootstrap.jpg" alt="Nguyên lý Bootstrapping trong bộ ba bức tranh thống kê" width="550"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -82,7 +82,7 @@ Trực giác triết học đằng sau phương pháp Bootstrap:
 
 <p align="center">
 
-  <img src="./img/stat20-17/boot-penguins.png" alt="Minh họa quy trình rút mẫu Bootstrap từ 5 cá thể" width="550" />
+  <img src="./img/stat20-17/boot-penguins.png" alt="Minh họa quy trình rút mẫu Bootstrap từ 5 cá thể" width="550"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -144,7 +144,7 @@ Mẫu ban đầu gồm $n = 100$ nhà hàng có trung bình mẫu $\bar{x} = 86.
 
 <p align="center">
 
-  <img src="./img/stat20-17/unnamed-chunk-2-1.png" alt="Phân phối Bootstrap của điểm an toàn thực phẩm" width="480" />
+  <img src="./img/stat20-17/unnamed-chunk-2-1.png" alt="Phân phối Bootstrap của điểm an toàn thực phẩm" width="480"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -182,7 +182,7 @@ $$
 
 <p align="center">
 
-  <img src="./img/stat20-17/unnamed-chunk-3-1.png" alt="Biểu đồ phân tán và hai đường hồi quy song song theo giới tính" width="500" />
+  <img src="./img/stat20-17/unnamed-chunk-3-1.png" alt="Biểu đồ phân tán và hai đường hồi quy song song theo giới tính" width="500"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -206,7 +206,7 @@ Ta thực hiện thuật toán Bootstrap trên các dòng dữ liệu:
 
 <p align="center">
 
-  <img src="./img/stat20-17/unnamed-chunk-6-1.png" alt="Phân phối Bootstrap của hệ số chiều dài cánh" width="480" />
+  <img src="./img/stat20-17/unnamed-chunk-6-1.png" alt="Phân phối Bootstrap của hệ số chiều dài cánh" width="480"  style="display: block; margin: 0 auto;"/>
 
 </p>
 

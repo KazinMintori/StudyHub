@@ -26,7 +26,7 @@ Bên cạnh khía cạnh kỹ thuật, thống kê học còn sở hữu một p
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-05/plot-collage.png" alt="Bộ sưu tập các dạng biểu đồ thống kê đa dạng: Dot plot, Histogram, Density plot, Violin plot, Box plot, Bar chart." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/plot-collage.png" alt="Bộ sưu tập các dạng biểu đồ thống kê đa dạng: Dot plot, Histogram, Density plot, Violin plot, Box plot, Bar chart." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -50,7 +50,7 @@ Năm 1999, nhà thống kê học Leland Wilkinson đã xuất bản cuốn sác
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-05/grammar-of-graphics.png" alt="Kiến trúc tầng phân lớp của Ngữ pháp đồ họa The Grammar of Graphics." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/grammar-of-graphics.png" alt="Kiến trúc tầng phân lớp của Ngữ pháp đồ họa The Grammar of Graphics." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -74,7 +74,7 @@ Trong kiến trúc của Wickham, mọi biểu đồ thống kê đều có th�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-05/penguin-scatter-plot.png" alt="Biểu đồ phân tán Scatter Plot biểu diễn chiều dài mỏ và độ sâu mỏ của ba loài chim cánh cụt." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/penguin-scatter-plot.png" alt="Biểu đồ phân tán Scatter Plot biểu diễn chiều dài mỏ và độ sâu mỏ của ba loài chim cánh cụt." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -113,7 +113,7 @@ Quyết định mang tính quyết định nhất khi thiết kế biểu đồ 
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-05/mapping.png" alt="Sơ đồ minh họa quá trình ánh xạ thẩm mỹ từ các cột dữ liệu sang các thuộc tính thị giác." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/mapping.png" alt="Sơ đồ minh họa quá trình ánh xạ thẩm mỹ từ các cột dữ liệu sang các thuộc tính thị giác." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -151,7 +151,7 @@ Sức mạnh của Ngữ pháp đồ họa thể hiện ở chỗ: **Cùng một
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-05/violin-vs-box-same-mapping.png" alt="Hai biểu đồ có cùng dữ liệu và cùng ánh xạ thẩm mỹ nhưng khác hình học: Violin plot bên trái và Box plot bên phải." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/violin-vs-box-same-mapping.png" alt="Hai biểu đồ có cùng dữ liệu và cùng ánh xạ thẩm mỹ nhưng khác hình học: Violin plot bên trái và Box plot bên phải." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -198,7 +198,7 @@ Ta phân rã quy trình tạo biểu đồ chuỗi thời gian:
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-05/london-births-line.png" alt="Biểu đồ đường thể hiện tổng số ca sinh tại London qua các năm thế kỷ 17." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/london-births-line.png" alt="Biểu đồ đường thể hiện tổng số ca sinh tại London qua các năm thế kỷ 17." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -208,7 +208,7 @@ Ta phân rã quy trình tạo biểu đồ chuỗi thời gian:
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-05/london-births-points.png" alt="Biểu đồ phân tán điểm thể hiện số ca sinh tại London theo từng năm riêng lẻ." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/london-births-points.png" alt="Biểu đồ phân tán điểm thể hiện số ca sinh tại London theo từng năm riêng lẻ." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -228,7 +228,7 @@ Trong Ngữ pháp đồ họa, các hình học tương thích có thể đượ
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-05/london-births-both-geoms.png" alt="Biểu đồ kết hợp cả hình học đường và hình học điểm." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-05/london-births-both-geoms.png" alt="Biểu đồ kết hợp cả hình học đường và hình học điểm." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Kết hợp `geom_line() + geom_point()`.</p>
 
@@ -236,7 +236,7 @@ Trong Ngữ pháp đồ họa, các hình học tương thích có thể đượ
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-05/density-over-histogram.png" alt="Biểu đồ kết hợp đường mật độ density chồng lên cột histogram." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-05/density-over-histogram.png" alt="Biểu đồ kết hợp đường mật độ density chồng lên cột histogram." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Kết hợp `geom_histogram() + geom_density()`.</p>
 
@@ -258,7 +258,7 @@ Xem xét biểu đồ trực quan về tỷ lệ mắc bệnh truyền nhiễm t
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-05/bubble-chart.png" alt="Biểu đồ bong bóng Bubble Chart biểu diễn tỷ lệ mắc các bệnh truyền nhiễm năm 1989." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-05/bubble-chart.png" alt="Biểu đồ bong bóng Bubble Chart biểu diễn tỷ lệ mắc các bệnh truyền nhiễm năm 1989." style="max-width: min(100%, 500px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 

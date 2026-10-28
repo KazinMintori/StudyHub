@@ -72,7 +72,7 @@ Trong tập dữ liệu này:
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-06/scatter-msleep.png" alt="Biểu đồ phân tán thể hiện mối quan hệ giữa thời gian ngủ và khối lượng cơ thể ở 83 loài thú." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-06/scatter-msleep.png" alt="Biểu đồ phân tán thể hiện mối quan hệ giữa thời gian ngủ và khối lượng cơ thể ở 83 loài thú." style="max-width: min(100%, 620px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -295,7 +295,7 @@ Danh sách mở rộng xuất hiện thêm các loài thú có khối lượng t
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-06/venn-and-or.png" alt="Sơ đồ Venn phân biệt phép giao AND và phép hợp OR giữa hai tập hợp điều kiện." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-06/venn-and-or.png" alt="Sơ đồ Venn phân biệt phép giao AND và phép hợp OR giữa hai tập hợp điều kiện." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -429,7 +429,7 @@ Trong các bài toán thực tế, một phân tích dữ liệu hiếm khi ch�
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-06/pipeline-2.png" alt="Minh họa luồng chảy của đường ống dữ liệu Data Pipeline: Dữ liệu thô đi qua các bước biến đổi liên tiếp." style="max-width: min(100%, 580px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-06/pipeline-2.png" alt="Minh họa luồng chảy của đường ống dữ liệu Data Pipeline: Dữ liệu thô đi qua các bước biến đổi liên tiếp." style="max-width: min(100%, 580px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -557,7 +557,7 @@ arbuthnot |>
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-06/line-christenings.png" alt="Đồ thị đường thể hiện biến thiên tổng số lễ rửa tội tại London từ năm 1629 đến 1710." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-06/line-christenings.png" alt="Đồ thị đường thể hiện biến thiên tổng số lễ rửa tội tại London từ năm 1629 đến 1710." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -631,7 +631,7 @@ Bảng dữ liệu trả về trông hoàn toàn giống với bảng dữ liệ
 
 <div style="text-align: center; margin: 20px 0;">
 
-  <img src="./img/stat20-06/group-by.png" alt="Sơ đồ cơ chế chia - áp dụng - tổng hợp của hàm group_by và summarize." style="max-width: min(100%, 540px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-06/group-by.png" alt="Sơ đồ cơ chế chia - áp dụng - tổng hợp của hàm group_by và summarize." style="max-width: min(100%, 540px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 

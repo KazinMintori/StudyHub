@@ -54,7 +54,7 @@ Nếu ta yêu cầu đồ thị phải lưu giữ trọn vẹn từng điểm d�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/dotplot-bill-length.png" alt="Biểu đồ chấm biểu diễn chiều dài mỏ của 16 cá thể chim cánh cụt." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/dotplot-bill-length.png" alt="Biểu đồ chấm biểu diễn chiều dài mỏ của 16 cá thể chim cánh cụt." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -72,7 +72,7 @@ Tuy nhiên, khi kích thước mẫu tăng lên hàng nghìn quan sát, các ch�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/histogram-bill-length.png" alt="Biểu đồ phân bố tần số Histogram cho chiều dài mỏ của chim cánh cụt." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/histogram-bill-length.png" alt="Biểu đồ phân bố tần số Histogram cho chiều dài mỏ của chim cánh cụt." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -90,7 +90,7 @@ Mức độ gộp nhóm phụ thuộc hoàn toàn vào **độ rộng khoảng (
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/histograms-binwidths.png" alt="Bốn biểu đồ Histogram của cùng một tập dữ liệu với bốn độ rộng binwidth khác nhau." style="max-width: min(100%, 640px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/histograms-binwidths.png" alt="Bốn biểu đồ Histogram của cùng một tập dữ liệu với bốn độ rộng binwidth khác nhau." style="max-width: min(100%, 640px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -110,7 +110,7 @@ Hãy hình dung ta đặt một sợi mì spaghetti đã luộc chín uốn lư�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/density-plot-bill-length.png" alt="Biểu đồ mật độ Density Plot làm trơn phân bố thành đường cong liên tục." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/density-plot-bill-length.png" alt="Biểu đồ mật độ Density Plot làm trơn phân bố thành đường cong liên tục." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -126,7 +126,7 @@ Trên biểu đồ mật độ:
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/density-bandwidths.png" alt="Biểu đồ mật độ với ba giá trị băng thông bandwidth khác nhau." style="max-width: min(100%, 640px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/density-bandwidths.png" alt="Biểu đồ mật độ với ba giá trị băng thông bandwidth khác nhau." style="max-width: min(100%, 640px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -142,7 +142,7 @@ Khi cần so sánh phân phối của một biến định lượng giữa nhi�
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-04/violin-plot-species.png" alt="Biểu đồ vĩ cầm Violin Plot so sánh chiều dài mỏ giữa ba loài chim." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-04/violin-plot-species.png" alt="Biểu đồ vĩ cầm Violin Plot so sánh chiều dài mỏ giữa ba loài chim." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ vĩ cầm (Violin Plot).</p>
 
@@ -150,7 +150,7 @@ Khi cần so sánh phân phối của một biến định lượng giữa nhi�
 
   <div style="flex: 1; min-width: 280px; max-width: 440px; text-align: center;">
 
-<img src="./img/stat20-04/boxplot-species.png" alt="Biểu đồ hộp Box Plot thể hiện năm số tóm tắt của từng loài chim." style="width: 100%; border-radius: 8px;" />
+<img src="./img/stat20-04/boxplot-species.png" alt="Biểu đồ hộp Box Plot thể hiện năm số tóm tắt của từng loài chim." style="width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 <p style="font-size: 0.9em; color: var(--vp-c-text-2); margin-top: 6px;">Biểu đồ hộp (Box Plot).</p>
 
@@ -182,7 +182,7 @@ Số lượng các đỉnh nhô cao rõ rệt (các mốt) xuất hiện trên �
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/modality.png" alt="Minh họa phân phối đơn mốt Unimodal, hai mốt Bimodal và đa mốt Multimodal." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/modality.png" alt="Minh họa phân phối đơn mốt Unimodal, hai mốt Bimodal và đa mốt Multimodal." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -198,7 +198,7 @@ Chẳng hạn, phân phối chiều dài mỏ của $16$ con chim Adelie là đ�
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/unimodal-vs-bimodal.png" alt="Đối chiếu phân phối đơn đỉnh của 16 cá thể và phân phối hai đỉnh của 344 cá thể gộp chung." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/unimodal-vs-bimodal.png" alt="Đối chiếu phân phối đơn đỉnh của 16 cá thể và phân phối hai đỉnh của 344 cá thể gộp chung." style="max-width: min(100%, 600px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -218,7 +218,7 @@ Mô tả hành vi kéo dài của các đuôi phân phối về hai phía:
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/skew.png" alt="Phân loại ba dạng độ lệch: Lệch trái, đối xứng và lệch phải." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/skew.png" alt="Phân loại ba dạng độ lệch: Lệch trái, đối xứng và lệch phải." style="max-width: min(100%, 520px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -228,7 +228,7 @@ Một ví dụ thực tế tiêu biểu của phân phối lệch phải nghiêm
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/income-dist.png" alt="Phân bố thu nhập hộ gia đình tại Hoa Kỳ lệch phải nặng nề." style="max-width: min(100%, 540px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/income-dist.png" alt="Phân bố thu nhập hộ gia đình tại Hoa Kỳ lệch phải nặng nề." style="max-width: min(100%, 540px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 
@@ -244,7 +244,7 @@ Mọi đại lượng tóm tắt số học đều là một **thống kê (Stat
 
 <div style="text-align: center; margin: 16px 0;">
 
-  <img src="./img/stat20-04/function-machine.png" alt="Mô hình cỗ máy hàm số thống kê nhận đầu vào dữ liệu và xuất ra giá trị thống kê." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px;" />
+  <img src="./img/stat20-04/function-machine.png" alt="Mô hình cỗ máy hàm số thống kê nhận đầu vào dữ liệu và xuất ra giá trị thống kê." style="max-width: min(100%, 420px); width: 100%; border-radius: 8px; display: block; margin: 0 auto;" />
 
 </div>
 

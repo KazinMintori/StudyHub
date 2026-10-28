@@ -38,7 +38,7 @@ Năm 1989, sau khi vừa tốt nghiệp trường điều dưỡng, Kristen Gilb
 
 <p align="center">
 
-  <img src="./img/stat20-18/northampton-va.jpg" alt="Trung tâm Y tế Cựu chiến binh tại Northampton" width="480" />
+  <img src="./img/stat20-18/northampton-va.jpg" alt="Trung tâm Y tế Cựu chiến binh tại Northampton" width="480"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -56,7 +56,7 @@ Các nhà thống kê đã trực quan hóa dữ liệu lịch sử này qua bi�
 
 <p align="center">
 
-  <img src="./img/stat20-18/shift-deaths.jpeg" alt="Số ca tử vong theo ca trực qua các năm từ 1988 đến 1998" width="550" />
+  <img src="./img/stat20-18/shift-deaths.jpeg" alt="Số ca tử vong theo ca trực qua các năm từ 1988 đến 1998" width="550"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -122,7 +122,7 @@ Chênh lệch $13.1\%$ là rất lớn. Nhưng làm thế nào để khẳng đ�
 
 <p align="center">
 
-  <img src="./img/stat20-18/unnamed-chunk-2-1.png" alt="Phân phối của hiệu tỉ lệ dưới giả định ngẫu nhiên" width="480" />
+  <img src="./img/stat20-18/unnamed-chunk-2-1.png" alt="Phân phối của hiệu tỉ lệ dưới giả định ngẫu nhiên" width="480"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -140,7 +140,7 @@ Bây giờ, hãy đặt giá trị thực tế quan sát được ($0.131$) lên
 
 <p align="center">
 
-  <img src="./img/stat20-18/unnamed-chunk-3-1.png" alt="Đối chiếu giá trị quan sát được với phân phối ngẫu nhiên" width="480" />
+  <img src="./img/stat20-18/unnamed-chunk-3-1.png" alt="Đối chiếu giá trị quan sát được với phân phối ngẫu nhiên" width="480"  style="display: block; margin: 0 auto;"/>
 
 </p>
 

@@ -26,7 +26,7 @@ Suy rộng thống kê (**Generalization**) là tiến trình sử dụng một 
 
 <p align="center">
 
-  <img src="./img/stat20-15/generalization.png" alt="Sơ đồ quá trình suy rộng từ mẫu đến tổng thể" width="280" />
+  <img src="./img/stat20-15/generalization.png" alt="Sơ đồ quá trình suy rộng từ mẫu đến tổng thể" width="280"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -56,7 +56,7 @@ Vào buổi học đầu tiên của học kỳ, vị giáo sư bước vào gi�
 
 <p align="center">
 
-  <img src="./img/stat20-15/pimentel-sm.jpeg" alt="Giảng đường lớn Pimentel Hall" width="450" />
+  <img src="./img/stat20-15/pimentel-sm.jpeg" alt="Giảng đường lớn Pimentel Hall" width="450"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -78,7 +78,7 @@ $$
 
 <p align="center">
 
-  <img src="./img/stat20-15/unnamed-chunk-1-1.png" alt="Biểu đồ phân phối năm học của 18 sinh viên hàng đầu" width="350" />
+  <img src="./img/stat20-15/unnamed-chunk-1-1.png" alt="Biểu đồ phân phối năm học của 18 sinh viên hàng đầu" width="350"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -110,7 +110,7 @@ Khi dùng $\bar{x} = 1.77$ để ước lượng $\mu$, ta đã mắc phải bao
 
 <p align="center">
 
-  <img src="./img/stat20-15/bullseye.png" alt="Mô hình bia phi tiêu: Độ lệch và Độ biến thiên" width="460" />
+  <img src="./img/stat20-15/bullseye.png" alt="Mô hình bia phi tiêu: Độ lệch và Độ biến thiên" width="460"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -206,7 +206,7 @@ Biểu đồ dưới đây thể hiện phân phối thực sự của năm họ
 
 <p align="center">
 
-  <img src="./img/stat20-15/unnamed-chunk-3-1.png" alt="Phân phối thực tế của toàn bộ 527 sinh viên trong lớp" width="350" />
+  <img src="./img/stat20-15/unnamed-chunk-3-1.png" alt="Phân phối thực tế của toàn bộ 527 sinh viên trong lớp" width="350"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
@@ -236,7 +236,7 @@ Tiến hành rút mẫu 18 sinh viên theo trọng số nhiệt huyết này:
 
 <p align="center">
 
-  <img src="./img/stat20-15/unnamed-chunk-7-1.png" alt="Ba mẫu thực nghiệm và phân phối chọn mẫu của 500 mẫu" width="720" />
+  <img src="./img/stat20-15/unnamed-chunk-7-1.png" alt="Ba mẫu thực nghiệm và phân phối chọn mẫu của 500 mẫu" width="720"  style="display: block; margin: 0 auto;"/>
 
 </p>
 
