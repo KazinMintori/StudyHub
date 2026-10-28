@@ -1,0 +1,394 @@
+{
+  "status": "accepted-public-chapter2-release",
+  "revision": "a93b226b89ae71d04afd45051686f7b79007165b",
+  "cloudRunId": 40714490605,
+  "cloudURL": "https://github.com/KazinMintori/StudyHub/actions/runs/40714490605",
+  "buildAndDeploy": "success",
+  "publicURL": "https://kazinmintori.github.io/StudyHub/vat-ly-1/bai-giang/02-chuyen-dong-thang.html#bai-tap",
+  "sourceFiles": [
+    {
+      "file": "raw_materials/physics/translations/chapter-02/parent-09-luyen-tap-huong-dan.md",
+      "sha256": "26f74496070aacbe083fd8253e181faa2118ebf17f7b9ba3807dafe09ba8320c"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md",
+      "sha256": "8dc27ea38bd272a7fe80ce87358c0a088384110e7c63fc24b4cf75dc103108d2"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/parent-11-bai-tap-001-026.md",
+      "sha256": "fec623167ab38463064e826eb2da4e02f6dc41d2f2c0d8b0dfabffb294140c27"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/parent-12-bai-tap-027-052.md",
+      "sha256": "4f84fd369497fabcc6260777e7307f674ea5121476685eb76b7cd539d46bd6eb"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/parent-13-bai-tap-053-077.md",
+      "sha256": "60f5e0d6c3fc7a0b601822468805ed3ffa77cae10df2adfa44a69cc2527155de"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/parent-14-bai-tap-078-092.md",
+      "sha256": "bcc59ca00710868e2c3ffb495bab22b8e18a83f8d185dc7b47b1e61cd4df8609"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/parent-16-bai-tap-cau-noi.md",
+      "sha256": "cf711ed118a04980d0fc2c9cc418767b2c95ee6ff8698de33d253446377fdbf6"
+    }
+  ],
+  "groups": [
+    {
+      "id": "guided-01",
+      "units": 6,
+      "htmlSHA256": "1e419935d7bd1691965b38d5627021a558e8737adb694b1c5c1153735657509d"
+    },
+    {
+      "id": "guided-02",
+      "units": 6,
+      "htmlSHA256": "7cc511bff727645c7fa8437c8290159c061e27a910238710114eb1c08384c734"
+    },
+    {
+      "id": "discussion-02",
+      "units": 6,
+      "htmlSHA256": "8c96552157b0c075a44f44203d546b3840be86f7e53ff50e10db8f73f9c38aad"
+    },
+    {
+      "id": "discussion-01",
+      "units": 6,
+      "htmlSHA256": "9c9b31640f79a5c91e63775d88b081cdc54c2b4bcf487fa3198a1d48a2640848"
+    },
+    {
+      "id": "discussion-04",
+      "units": 4,
+      "htmlSHA256": "71871cc45055284c52a3df8d9c7f147b87d36de05eeda8f29e7b1d4fd97a8c98"
+    },
+    {
+      "id": "numbered-a-02",
+      "units": 6,
+      "htmlSHA256": "15995f113ff58d61af6e784b88ee41d363426d7bc8b8996b228fbf41e323a0a0"
+    },
+    {
+      "id": "discussion-03",
+      "units": 6,
+      "htmlSHA256": "2b7f559fd6360b7fc6744f28cb4bee15dad30e92862c74cae8789c783c67f4dc"
+    },
+    {
+      "id": "numbered-a-01",
+      "units": 6,
+      "htmlSHA256": "960c060cf504ec0c79118cc071de1bfd4d21058a20d5ab51b86d95f79ff51ba9"
+    },
+    {
+      "id": "numbered-a-03",
+      "units": 6,
+      "htmlSHA256": "af6f89c9435f26069223dc44d61d94d09444e426636da69f5f7c948133fe3a83"
+    },
+    {
+      "id": "numbered-b-01",
+      "units": 6,
+      "htmlSHA256": "9f2e728fcf6bad5c1cb37cd9dcfb225e3bcdb09ee9776a9b84c148f686f7ac3a"
+    },
+    {
+      "id": "numbered-a-05",
+      "units": 2,
+      "htmlSHA256": "d853792f644d8bdeb003aade6c6d97aec08ab70da44b1690d34fba4ec6c5e21e"
+    },
+    {
+      "id": "numbered-a-04",
+      "units": 6,
+      "htmlSHA256": "74925de2055768384d8a3fec60bab5c9b17ced976c0cccb37e4982e5d14369f0"
+    },
+    {
+      "id": "numbered-b-02",
+      "units": 6,
+      "htmlSHA256": "cc918af5896b71543b7a0402921853b3a9b5dd9211b92e42c5a35d8fd4407090"
+    },
+    {
+      "id": "numbered-b-05",
+      "units": 2,
+      "htmlSHA256": "58bfee1427432e9cd00ca45759a924d507e5f94d45e0a5bac103c7e441435bee"
+    },
+    {
+      "id": "numbered-b-03",
+      "units": 6,
+      "htmlSHA256": "e0adaf1474a0c60f1d8bd9d5c38580eb229e6ceccdf440d18f304d5a3a7f43d8"
+    },
+    {
+      "id": "numbered-b-04",
+      "units": 6,
+      "htmlSHA256": "65d36d80e8ccef04fffd5592f800a659c41b41bb726977a94f433f022f029dcb"
+    },
+    {
+      "id": "numbered-c-01",
+      "units": 6,
+      "htmlSHA256": "2c8342a8c70ded9cf944a0caef93a58921ec1a688f4efc91ba74955f1230e846"
+    },
+    {
+      "id": "numbered-c-03",
+      "units": 6,
+      "htmlSHA256": "fd9176249a1fe3c7ebf77cd02b5aadbc58f4cff0aed72e2c2c05cdf617b29613"
+    },
+    {
+      "id": "numbered-c-04",
+      "units": 6,
+      "htmlSHA256": "a439d24e934ccfcc95504a601ae1887c39ef28778ab5d6a29558371438830a2e"
+    },
+    {
+      "id": "numbered-c-02",
+      "units": 6,
+      "htmlSHA256": "cf9194ca82cb85b3dc3f5aeb7523584cc801174c7c469c034cb576d89c3dd2cb"
+    },
+    {
+      "id": "numbered-c-05",
+      "units": 1,
+      "htmlSHA256": "d04195386034d67ba806c18500f90df24dc6e9a6dcd31a155c01d2c6f6ecb799"
+    },
+    {
+      "id": "numbered-d-03",
+      "units": 3,
+      "htmlSHA256": "96b150e4c00f988f63134bfac6596f3a309d0aa2bb979844b42b2ad99cf89cd2"
+    },
+    {
+      "id": "numbered-d-01",
+      "units": 6,
+      "htmlSHA256": "f0ca1308506d3d39bd10d02a12a193fe616f2b6c97f4353ff4f31ed3a3ab762b"
+    },
+    {
+      "id": "numbered-d-02",
+      "units": 6,
+      "htmlSHA256": "d4f733b9dd9a5b9deeaf51080851a10e3680acc3c025599dadce43f00b5f7fd5"
+    },
+    {
+      "id": "bridge-01",
+      "units": 1,
+      "htmlSHA256": "12990a4cceb95485025066384c6ca75a45b6bda24ac1f690ee9376cb02f165f8"
+    }
+  ],
+  "publishedExerciseImages": [
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hoc-lieu-chuong-2.png",
+      "publicPath": "/physics-exercises/assets/bde99dbdcb60ee43-hoc-lieu-chuong-2.png",
+      "sha256": "bde99dbdcb60ee434b77d140505b4ce2a66d3c396b7f12682723e3f4b800bbff"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-q2-2.png",
+      "publicPath": "/physics-exercises/assets/a18dd850daa85dcf-hinh-q2-2.png",
+      "sha256": "a18dd850daa85dcf15ed2c9425a6d588d39fc5dcc358ad1609ca8bc56464c1f5"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-10-vx-t.svg",
+      "publicPath": "/physics-exercises/assets/4a1a21855c809acb-q2-10-vx-t.svg",
+      "sha256": "4a1a21855c809acba5b3c8ab28c206b5aae2849eb559e540cc61a76571f999a2"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-09-x-t.svg",
+      "publicPath": "/physics-exercises/assets/76747b7ae984a111-q2-09-x-t.svg",
+      "sha256": "76747b7ae984a11128d9317888cabd558185b54eac1b15d34bd67101514b4d6e"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-13-truck-x-t.svg",
+      "publicPath": "/physics-exercises/assets/74d127af6df14483-q2-13-truck-x-t.svg",
+      "sha256": "74d127af6df1448314e7427e6e007e1a8b1b67be2bded8f46a5f441deb9eca7b"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-9.png",
+      "publicPath": "/physics-exercises/assets/0a8c864d910b6727-hinh-e2-9.png",
+      "sha256": "0a8c864d910b67271848d52221439d2d82b070dbaea02652a8489cd3b34d7e42"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-2.png",
+      "publicPath": "/physics-exercises/assets/21ac8d4932d8d54e-hinh-2-2.png",
+      "sha256": "21ac8d4932d8d54e3b9605e7e13f82096a7ae6ae631b98f75903c5d30e900e70"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/q2-11-vx-t.svg",
+      "publicPath": "/physics-exercises/assets/b3ddfae42aa2468f-q2-11-vx-t.svg",
+      "sha256": "b3ddfae42aa2468f55adb43ad1c850d4ae63e22e3b4eb96988926aa637968386"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-11.png",
+      "publicPath": "/physics-exercises/assets/42bb9509ac70445f-hinh-e2-11.png",
+      "sha256": "42bb9509ac70445f96de17620bb88ec6e9c1e7fce4c76256fd5f18b0a0b5d3aa"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-12.png",
+      "publicPath": "/physics-exercises/assets/6b12153b9d494834-hinh-e2-12.png",
+      "sha256": "6b12153b9d494834d2b24a969096528b4786a52dfc400e59806413a586133bfe"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-10.png",
+      "publicPath": "/physics-exercises/assets/142b467c83da4ecc-hinh-e2-10.png",
+      "sha256": "142b467c83da4ecc269e880e125a353a651a1ebf5f491db16196107d4a03c285"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-13.svg",
+      "publicPath": "/physics-exercises/assets/5e041a4ba9822fca-solution-e2-13.svg",
+      "sha256": "5e041a4ba9822fca8b943663d2dfa7b127a86e9df5da736563f4f9b470a05795"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-15.svg",
+      "publicPath": "/physics-exercises/assets/b6b6691786dee470-solution-e2-15.svg",
+      "sha256": "b6b6691786dee4706c7e4477da6a75fe7f0cfc8273811aedba44b0118ce769a0"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-26.png",
+      "publicPath": "/physics-exercises/assets/3cbac825a781301f-hinh-e2-26.png",
+      "sha256": "3cbac825a781301fb3dfee9b0f507f1ae0cafd02e3d2e48532401be9d0c0f76d"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-26.svg",
+      "publicPath": "/physics-exercises/assets/20ed7f1896afdb21-solution-e2-26.svg",
+      "sha256": "20ed7f1896afdb2118efd8fdc60d452bf1a0ec023f770f6f953686ab0859d848"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-17.svg",
+      "publicPath": "/physics-exercises/assets/72a2e6319579880e-solution-e2-17.svg",
+      "sha256": "72a2e6319579880e662c6937b655640f2e6e8b11b67502d3584719e555f8adca"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-28.png",
+      "publicPath": "/physics-exercises/assets/48e1003478265c81-hinh-e2-28.png",
+      "sha256": "48e1003478265c81f3685fad354a6b4000fc601eca87bd50135edbfb83f306f0"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-29.png",
+      "publicPath": "/physics-exercises/assets/933ff8d3639bee99-hinh-e2-29.png",
+      "sha256": "933ff8d3639bee9989e3380b7ba21586389dea02a8de95286eb518e38612d6fd"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-28-velocity.svg",
+      "publicPath": "/physics-exercises/assets/f84632353a080d32-solution-e2-28-velocity.svg",
+      "sha256": "f84632353a080d321c396db105a24fbe581c6afaaeab70a58a53501cade90bd6"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-28-motion.svg",
+      "publicPath": "/physics-exercises/assets/a73af38793572f09-solution-e2-28-motion.svg",
+      "sha256": "a73af38793572f09d4b43d1d3716803709e45a10623c6cfeb57e5e9bbc441337"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-38.svg",
+      "publicPath": "/physics-exercises/assets/a46ed79388c02479-solution-e2-38.svg",
+      "sha256": "a46ed79388c02479036f813d921ff7f659935e1c54b3d078791c8777ba860751"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-41.svg",
+      "publicPath": "/physics-exercises/assets/9e7b81a96b613d9d-solution-e2-41.svg",
+      "sha256": "9e7b81a96b613d9d4d4bcc91d57923d3b44b81a918af1c901b1d12e570bcd288"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-35.svg",
+      "publicPath": "/physics-exercises/assets/63056331c4a227f3-solution-e2-35.svg",
+      "sha256": "63056331c4a227f306f3604cf9a237e5fbfb3d307529abf7143d6c603cbc4e32"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-40.png",
+      "publicPath": "/physics-exercises/assets/14827970fd1789d0-hinh-e2-40.png",
+      "sha256": "14827970fd1789d0c22ee01214ad089ca3dfe868b1220aa21f08f28c9dd50314"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-44.svg",
+      "publicPath": "/physics-exercises/assets/a7400ba80ce9ec92-solution-e2-44.svg",
+      "sha256": "a7400ba80ce9ec9234193fe99d68d8132fceb1c0b1cee432c33d8f912fc718ee"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-42.svg",
+      "publicPath": "/physics-exercises/assets/142325ff823fb60c-solution-e2-42.svg",
+      "sha256": "142325ff823fb60c0a82d647ec8b00dd26699ebc17e8076bf3da40c1541bf632"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-42.png",
+      "publicPath": "/physics-exercises/assets/a522906f0804e296-hinh-e2-42.png",
+      "sha256": "a522906f0804e29658ea612eeca049ce5527758c60d1bc26f21363b8414a20e3"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-46.svg",
+      "publicPath": "/physics-exercises/assets/50d081ebe2ba4c84-solution-e2-46.svg",
+      "sha256": "50d081ebe2ba4c84efa7ac64bfb2849266e08433cec56dd49ceaee9478999450"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-52.svg",
+      "publicPath": "/physics-exercises/assets/ac39db6a6d362898-solution-e2-52.svg",
+      "sha256": "ac39db6a6d36289887941e2211421606746f58f54f5b2afa92a54615237fab8f"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-61.svg",
+      "publicPath": "/physics-exercises/assets/95ac06e41877fe51-solution-p2-61.svg",
+      "sha256": "95ac06e41877fe514cb23961b092083839807e9bc79db00af6e267ba03fd7516"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-61.png",
+      "publicPath": "/physics-exercises/assets/c2c86ee2bfa2504b-hinh-p2-61.png",
+      "sha256": "c2c86ee2bfa2504ba058ba48d47133cfefe4dce610e7c63e29e57743fee5880e"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-62.png",
+      "publicPath": "/physics-exercises/assets/4c368018e277552b-hinh-p2-62.png",
+      "sha256": "4c368018e277552bf766abd0b04b49e9bd38fd0e158084e3c6632b2b561c5716"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-62.svg",
+      "publicPath": "/physics-exercises/assets/19c9ed5ae4e23b5b-solution-p2-62.svg",
+      "sha256": "19c9ed5ae4e23b5bce33fab98889b7e8f2990cbb2de95f8ea186988bff84d1dd"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-65.svg",
+      "publicPath": "/physics-exercises/assets/a984fb33eb35f20a-solution-p2-65.svg",
+      "sha256": "a984fb33eb35f20a58349630db1181392dccb0a84fedd0481a7e55ab57e4f297"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-70.png",
+      "publicPath": "/physics-exercises/assets/ca85d0ed55b1ef6b-hinh-p2-70.png",
+      "sha256": "ca85d0ed55b1ef6b63857b962d4ca45e410c401e3ac96949aae1c35aa62ea6fe"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-84.png",
+      "publicPath": "/physics-exercises/assets/e8296109ee2c6234-hinh-p2-84.png",
+      "sha256": "e8296109ee2c62340c428ddcc88c6a35c049661a857d349ba7e60b92b63f173f"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-88.svg",
+      "publicPath": "/physics-exercises/assets/305d30a08e7471ff-solution-p2-88.svg",
+      "sha256": "305d30a08e7471fffedb03d911d2936d24694e80a566544c25f285c5a5331c82"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-84.svg",
+      "publicPath": "/physics-exercises/assets/d3b7e52d3cdf7dec-solution-p2-84.svg",
+      "sha256": "d3b7e52d3cdf7dec983273d3541e3c5d18a4f3248f230a8ce5431406926c58e3"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-86.svg",
+      "publicPath": "/physics-exercises/assets/679b64186f9663d5-solution-p2-86.svg",
+      "sha256": "679b64186f9663d5d7358da93598c9d266f4ad5f9faae4486166613869137ba9"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-85.svg",
+      "publicPath": "/physics-exercises/assets/15727803e92d632c-solution-p2-85.svg",
+      "sha256": "15727803e92d632cbe10810bb4ecde51fc9007a661c3b2562a385a40ef0a975b"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-92.png",
+      "publicPath": "/physics-exercises/assets/6536005584114f4e-hinh-p2-92.png",
+      "sha256": "6536005584114f4e129584ca0ad21ef1275f73c3cc97305db3290420ddf013e5"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/solution-p2-89.svg",
+      "publicPath": "/physics-exercises/assets/beac3bfffd571194-solution-p2-89.svg",
+      "sha256": "beac3bfffd571194c6f64325a339831f86c7e23fcdabd80bd555474041a5cf98"
+    },
+    {
+      "source": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-30.png",
+      "publicPath": "/physics-exercises/assets/9bee0cf0b506e624-hinh-2-30.png",
+      "sha256": "9bee0cf0b506e624f70fda0848751bad253cf91159b5a3cad5c3a2270fe5f7d4"
+    }
+  ],
+  "sourceUnits": 127,
+  "uniqueActualRouteViewportCases": 125,
+  "viewports": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "sourceBinding": "All7publishedsourcehashesmatchedgitshowofdeployrevision(LFbytes). All25JSONgroupshaveexactIDlists,oneclosedsolutionpersourceunitandall3solutionstages. All43servedimagebytesmatchthepublishedSHAandcommittedsourceblob.",
+  "limits": "Source-byte/Gitbinding and all25publishedJSON closedsolutionstages plus125actualrouteviewportcases. This doesnot certifyallcoursephysics/sourcecompletion or futuredeployments.",
+  "fullGoalComplete": false
+}
