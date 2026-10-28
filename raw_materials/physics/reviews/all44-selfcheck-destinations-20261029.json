@@ -1,0 +1,3495 @@
+{
+  "status": "accepted-source-selfcheck-destinations-only",
+  "sourceSelfchecks": 280,
+  "unique": 280,
+  "unresolved": [],
+  "rows": [
+    {
+      "id": "1.5",
+      "pdfPage": 29,
+      "sourcePromptLead": "  The density of a material is equal to its  mass divided by its volume. What is the density 1in kg>m32 of a rock of mass 1.80 kg and volume  6.0 * 10-4 m3? (i)",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+          "line": 187,
+          "text": "### Câu hỏi tự kiểm tra hiểu bài 1.5"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+          "line": 189,
+          "text": "::: exercise Câu hỏi tự kiểm tra 1.5: Khối lượng riêng của hòn đá"
+        }
+      ]
+    },
+    {
+      "id": "1.6",
+      "pdfPage": 30,
+      "sourcePromptLead": "  Can you estimate the total number of teeth  in the mouths of all the students on your campus? (Hint: How many teeth are in your mouth?   Count them!) ANSWER A",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+          "line": 61,
+          "text": "### Câu hỏi tự kiểm tra hiểu bài 1.6"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+          "line": 63,
+          "text": "::: exercise Câu hỏi tự kiểm tra 1.6: Ước lượng tổng số răng của sinh viên trên giảng đường"
+        }
+      ]
+    },
+    {
+      "id": "1.7",
+      "pdfPage": 34,
+      "sourcePromptLead": "  Two displacement vectors, S S and T S, have  magnitudes S = 3 m and T = 4 m. Which of the following could be the magnitude of the differ- ence vector S S −T S",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+          "line": 179,
+          "text": "### Câu hỏi tự kiểm tra hiểu bài 1.7"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+          "line": 181,
+          "text": "::: exercise Câu hỏi tự kiểm tra 1.7: Độ lớn của hiệu hai vector"
+        }
+      ]
+    },
+    {
+      "id": "1.8",
+      "pdfPage": 38,
+      "sourcePromptLead": "  Two vectors A S and B S lie in the xy-plane.  (a) Can A S have the same magnitude as B S but different components? (b) Can A S have the same com- ponents as B",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+          "line": 356,
+          "text": "### Câu hỏi tự kiểm tra hiểu bài 1.8"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+          "line": 358,
+          "text": "::: exercise Câu hỏi tự kiểm tra 1.8: Quan hệ giữa độ lớn và các thành phần vector"
+        }
+      ]
+    },
+    {
+      "id": "1.9",
+      "pdfPage": 39,
+      "sourcePromptLead": "  Arrange the following vectors in order of  their magnitude, with the vector of largest magnitude first. (i) A S = (3dn + 5en −2kn) m;   (ii) B S = 1-3dn + 5en",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+          "line": 126,
+          "text": "### Câu hỏi tự kiểm tra hiểu bài 1.9"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+          "line": 128,
+          "text": "::: exercise Câu hỏi tự kiểm tra 1.9: So sánh độ lớn của các vector trong không gian"
+        }
+      ]
+    },
+    {
+      "id": "1.10",
+      "pdfPage": 44,
+      "sourcePromptLead": "  Vector A S has magnitude 2 and vector B S  has magnitude 3. The angle f between A S and B S is (i) 0°, (ii) 90°, or (iii) 180°. For each of the   following si",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+          "line": 427,
+          "text": "### Câu hỏi tự kiểm tra hiểu bài 1.10"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+          "line": 429,
+          "text": "::: exercise Câu hỏi tự kiểm tra 1.10: Giá trị của tích vô hướng và tích có hướng"
+        }
+      ]
+    },
+    {
+      "id": "2.1",
+      "pdfPage": 57,
+      "sourcePromptLead": "  Five cars, A, B, C, D, and E, each take  a trip that lasts one hour. The positive x-direction is to the east. (i) A travels 50 km due east. (ii)  B travels 50",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-02/01-do-doi-van-toc-trung-binh.md",
+          "line": 115,
+          "text": "### Tự kiểm tra 2.1"
+        }
+      ]
+    },
+    {
+      "id": "2.2",
+      "pdfPage": 60,
+      "sourcePromptLead": "  Figure 2.9 is an x-t graph of the motion  of a particle. (a) Rank the values of the particle’s x-velocity vx at points P, Q, R, and S from most  positive to m",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-02/02-van-toc-tuc-thoi.md",
+          "line": 142,
+          "text": "### Tự kiểm tra 2.2"
+        }
+      ]
+    },
+    {
+      "id": "2.3",
+      "pdfPage": 64,
+      "sourcePromptLead": "  Look again at the x-t graph in Fig. 2.9 at  the end of Section 2.2. (a) At which of the points P, Q, R, and S is the x-acceleration ax positive?   (b) At whic",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-02/03-gia-toc.md",
+          "line": 224,
+          "text": "### Tự kiểm tra 2.3"
+        }
+      ]
+    },
+    {
+      "id": "2.4",
+      "pdfPage": 69,
+      "sourcePromptLead": "  Four possible vx@t graphs are shown for the  two vehicles in Example 2.5. Which graph is correct? (a) (b) (c) (d) vx O 10 t (s) Motorist Officer vx O 10 t (s)",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
+          "line": 364,
+          "text": "### Tự kiểm tra 2.4"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
+          "line": 370,
+          "text": "![Tự kiểm tra 2.4: Bốn đồ thị vận tốc theo thời gian của ô tô và mô tô cảnh sát](img/young-02/cau-hoi-2-4.png)"
+        }
+      ]
+    },
+    {
+      "id": "2.5",
+      "pdfPage": 73,
+      "sourcePromptLead": "  If you toss a ball upward with a certain  initial speed, it falls freely and reaches a maximum height h a time t after it leaves your hand. (a) If  you throw ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
+          "line": 292,
+          "text": "### Tự kiểm tra 2.5"
+        }
+      ]
+    },
+    {
+      "id": "2.6",
+      "pdfPage": 75,
+      "sourcePromptLead": "  If the x-acceleration ax of an object  ­moving in straight-line motion is increasing with time, will the vx@t graph be (i) a straight line,  (ii) concave up (",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
+          "line": 264,
+          "text": "### Tự kiểm tra 2.6"
+        }
+      ]
+    },
+    {
+      "id": "3.1",
+      "pdfPage": 89,
+      "sourcePromptLead": "  In which of these situations would the  average velocity vector v S av over an interval be equal to the instantaneous velocity v S at the end of the  interval",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-03/01-muc-01.md",
+          "line": 271,
+          "text": "::: exercise Câu hỏi tự kiểm tra mục 3.1"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-03/01-muc-01.md",
+          "line": 284,
+          "text": "<summary>Đáp án và giải thích câu hỏi tự kiểm tra mục 3.1</summary>"
+        }
+      ]
+    },
+    {
+      "id": "3.2",
+      "pdfPage": 94,
+      "sourcePromptLead": "  A sled travels over the crest of a snow- covered hill. The sled slows down as it climbs up one side of the hill and gains speed as it descends  on the other s",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-03/02-muc-02.md",
+          "line": 371,
+          "text": "::: exercise Câu hỏi tự kiểm tra mục 3.2"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-03/02-muc-02.md",
+          "line": 374,
+          "text": "![Tự kiểm tra 3.2: Tám hướng gia tốc và lựa chọn gia tốc bằng không.](/vat-ly-1/bai-giang/img/young-03/r-theory-tu-kiem-3-2.png)"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-03/02-muc-02.md",
+          "line": 378,
+          "text": "<summary>Đáp án và giải thích câu hỏi tự kiểm tra mục 3.2</summary>"
+        }
+      ]
+    },
+    {
+      "id": "3.3",
+      "pdfPage": 101,
+      "sourcePromptLead": "  In Example 3.10, suppose the tranquilizer  dart has a relatively low muzzle velocity so that the dart reaches a maximum height at a point P be- fore striking ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-03/03-muc-03.md",
+          "line": 577,
+          "text": "::: exercise Câu hỏi tự kiểm tra mục 3.3"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-03/03-muc-03.md",
+          "line": 586,
+          "text": "![Tự kiểm tra 3.3: Các vị trí A, B và C của khỉ khi mũi tiêu đạt đỉnh quỹ đạo.](/vat-ly-1/bai-giang/img/young-03/r-theory-tu-kiem-3-3.png)"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-03/03-muc-03.md",
+          "line": 590,
+          "text": "<summary>Đáp án và giải thích câu hỏi tự kiểm tra mục 3.3</summary>"
+        }
+      ]
+    },
+    {
+      "id": "3.4",
+      "pdfPage": 104,
+      "sourcePromptLead": "  Suppose that the particle in Fig. 3.30  experiences four times the acceleration at the bottom of the loop as it does at the top of the  loop. Compared to its ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-03/04-muc-04.md",
+          "line": 252,
+          "text": "::: exercise Câu hỏi tự kiểm tra mục 3.4"
+        }
+      ]
+    },
+    {
+      "id": "3.5",
+      "pdfPage": 109,
+      "sourcePromptLead": "  Suppose the nose of an airplane is pointed  due east and the airplane has an airspeed of 150 km>h. Due to the wind, the airplane is moving due  north relative",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-03/05-muc-05.md",
+          "line": 343,
+          "text": "::: exercise Câu hỏi tự kiểm tra mục 3.5"
+        }
+      ]
+    },
+    {
+      "id": "4.1",
+      "pdfPage": 123,
+      "sourcePromptLead": "  Figure 4.5 shows a force F S acting on a  crate. (a) With the x- and y-axes shown in the figure, is the x-component of the gravitational force  that the earth",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-04/parent-01-luc-va-tuong-tac.md",
+          "line": 186,
+          "text": "### Câu tự kiểm 4.1"
+        }
+      ]
+    },
+    {
+      "id": "4.2",
+      "pdfPage": 127,
+      "sourcePromptLead": "  In which of the following situations is  there zero net external force on the object? (i) An airplane flying due north at a steady 120 m>s and  at a constant ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-04/parent-02-dinh-luat-thu-nhat.md",
+          "line": 140,
+          "text": "### Câu tự kiểm 4.2"
+        }
+      ]
+    },
+    {
+      "id": "4.3",
+      "pdfPage": 133,
+      "sourcePromptLead": "  Rank the following situations in order of  the magnitude of the object’s acceleration, from lowest to highest. Are there any cases that have the  same magnitu",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-04/parent-03-dinh-luat-thu-hai.md",
+          "line": 286,
+          "text": "### Câu tự kiểm 4.3"
+        }
+      ]
+    },
+    {
+      "id": "4.4",
+      "pdfPage": 135,
+      "sourcePromptLead": "  Suppose an astronaut landed on a planet  where g = 19.6 m>s2. Compared to earth, would it be easier, harder, or just as easy for her to walk  around? Would it",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-04/parent-04-khoi-luong-trong-luong.md",
+          "line": 133,
+          "text": "### Câu tự kiểm 4.4"
+        }
+      ]
+    },
+    {
+      "id": "4.5",
+      "pdfPage": 139,
+      "sourcePromptLead": "  You are driving a car on a country road  when a mosquito splatters on the windshield. Which has the greater magnitude: the force that the  car exerted on the ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
+          "line": 151,
+          "text": "### Câu tự kiểm 4.5"
+        }
+      ]
+    },
+    {
+      "id": "4.6",
+      "pdfPage": 140,
+      "sourcePromptLead": "  The buoyancy force shown in Fig. 4.29c is  one half of an action–reaction pair. What force is the other half of this pair? (i) The weight of the  swimmer; (ii",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-04/parent-06-so-do-luc.md",
+          "line": 45,
+          "text": "### Câu tự kiểm 4.6"
+        }
+      ]
+    },
+    {
+      "id": "5.1",
+      "pdfPage": 154,
+      "sourcePromptLead": "  A traffic light of weight w hangs from two  lightweight cables, one on each side of the light. Each cable hangs at a 45° angle from the horizon- tal. What is ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-05/01-muc-01.md",
+          "line": 362,
+          "text": "### Câu hỏi kiểm tra hiểu biết mục 5.1"
+        }
+      ]
+    },
+    {
+      "id": "5.2",
+      "pdfPage": 161,
+      "sourcePromptLead": "  Suppose you hold the glider in Example  5.12 so that it and the weight are initially at rest. You give the glider a push to the left in Fig. 5.15a  and then r",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-05/02-muc-02.md",
+          "line": 414,
+          "text": "### Câu hỏi kiểm tra hiểu biết mục 5.2"
+        }
+      ]
+    },
+    {
+      "id": "5.3",
+      "pdfPage": 169,
+      "sourcePromptLead": "  Consider a box that is placed on dif- ferent surfaces. (a) In which situation(s) is no friction force acting on the box? (b) In which  situation(s) is a stati",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-05/03-muc-03.md",
+          "line": 541,
+          "text": "### Câu hỏi kiểm tra hiểu biết mục 5.3"
+        }
+      ]
+    },
+    {
+      "id": "5.4",
+      "pdfPage": 174,
+      "sourcePromptLead": "  Satellites are held in orbit by the force of  our planet’s gravitational attraction. A satellite in a small-radius orbit moves at a higher speed than  a satel",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-05/04-muc-04.md",
+          "line": 431,
+          "text": "### Câu hỏi kiểm tra hiểu biết mục 5.4"
+        }
+      ]
+    },
+    {
+      "id": "6.1",
+      "pdfPage": 196,
+      "sourcePromptLead": "  An electron moves in a straight line to- ward the east with a constant speed of 8 * 107 m>s. It has electric, magnetic, and gravitational  forces acting on it",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-06/01-muc-01.md",
+          "line": 235,
+          "text": "::: tip TỰ KIỂM TRA 6.1"
+        }
+      ]
+    },
+    {
+      "id": "6.2",
+      "pdfPage": 201,
+      "sourcePromptLead": "  Rank the following objects in order of  their kinetic energy, from least to greatest. (i) A 2.0 kg object moving at 5.0 m>s; (ii) a 1.0 kg object  that initia",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-06/02-muc-02.md",
+          "line": 369,
+          "text": "::: tip TỰ KIỂM TRA 6.2"
+        }
+      ]
+    },
+    {
+      "id": "6.3",
+      "pdfPage": 207,
+      "sourcePromptLead": "  In Example 5.20 (Section 5.4) we examined  a conical pendulum. The speed of the pendulum bob remains constant as it travels around the circle  shown in Fig. 5",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-06/03-muc-03.md",
+          "line": 549,
+          "text": "::: tip TỰ KIỂM TRA 6.3"
+        }
+      ]
+    },
+    {
+      "id": "6.4",
+      "pdfPage": 209,
+      "sourcePromptLead": "  The air surrounding an airplane in  flight exerts a drag force that acts opposite to the airplane’s motion. When the Airbus A380 in  Example 6.9 is flying in ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-06/04-muc-04.md",
+          "line": 267,
+          "text": "::: tip TỰ KIỂM TRA 6.4"
+        }
+      ]
+    },
+    {
+      "id": "7.1",
+      "pdfPage": 230,
+      "sourcePromptLead": "  The figure shows two frictionless ramps.  The heights y1 and y2 are the same for both ramps. If a block of mass m is released from rest at   the left-hand end",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-07/01-muc-01.md",
+          "line": 614,
+          "text": "::: exercise Kiểm tra mức độ hiểu bài mục 7.1"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-07/01-muc-01.md",
+          "line": 617,
+          "text": "![Hình 7.11b: Câu hỏi kiểm tra mức độ hiểu bài mục 7.1](/vat-ly-1/bai-giang/img/young-07/r-theory-tyu-7-01.png)"
+        }
+      ]
+    },
+    {
+      "id": "7.2",
+      "pdfPage": 235,
+      "sourcePromptLead": "  Consider the situation in Example 7.9 at  the instant when the elevator is still moving downward and the spring is compressed by 1.00 m.  Which of the energy ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-07/02-muc-02.md",
+          "line": 348,
+          "text": "::: exercise Kiểm tra mức độ hiểu bài mục 7.2"
+        }
+      ]
+    },
+    {
+      "id": "7.3",
+      "pdfPage": 239,
+      "sourcePromptLead": "  In a hydroelectric generating station,  falling water is used to drive turbines (“water wheels”), which in turn run electric generators.  Compared to the amou",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-07/03-muc-03.md",
+          "line": 215,
+          "text": "::: exercise Kiểm tra mức độ hiểu bài mục 7.3"
+        }
+      ]
+    },
+    {
+      "id": "7.4",
+      "pdfPage": 242,
+      "sourcePromptLead": "  A particle moving along the x-axis is   acted on by a conservative force Fx  . At a certain point, the force is zero. (a) Which of the follow- ing statements ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-07/04-muc-04.md",
+          "line": 190,
+          "text": "::: exercise Kiểm tra mức độ hiểu bài mục 7.4"
+        }
+      ]
+    },
+    {
+      "id": "7.5",
+      "pdfPage": 243,
+      "sourcePromptLead": "  The curve in Fig. 7.24b has a maximum  at a point between x2 and x3  . Which statement correctly describes the particle’s acceleration (with  magnitude a) at ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-07/05-muc-05.md",
+          "line": 71,
+          "text": "::: exercise Kiểm tra mức độ hiểu bài mục 7.5"
+        }
+      ]
+    },
+    {
+      "id": "8.1",
+      "pdfPage": 260,
+      "sourcePromptLead": "  Rank the following situations according  to the magnitude of the impulse of the net external force, from largest value to smallest value. In  each situation a",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-08/01-muc-01.md",
+          "line": 411,
+          "text": "::: info Kiểm tra hiểu biết Mục 8.1"
+        }
+      ]
+    },
+    {
+      "id": "8.2",
+      "pdfPage": 265,
+      "sourcePromptLead": "  A spring-loaded toy sits at rest on a hori- zontal, frictionless surface. When the spring releases, the toy breaks into equal-mass pieces A, B,  and C, which ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-08/02-muc-02.md",
+          "line": 362,
+          "text": "::: info Kiểm tra hiểu biết Mục 8.2"
+        }
+      ]
+    },
+    {
+      "id": "8.3",
+      "pdfPage": 269,
+      "sourcePromptLead": "  For each situation, state whether the  ­collision is elastic or inelastic. If it is inelastic, state whether it is completely inelastic. (a) You  drop a ball ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-08/03-muc-03.md",
+          "line": 301,
+          "text": "::: info Kiểm tra hiểu biết Mục 8.3"
+        }
+      ]
+    },
+    {
+      "id": "8.4",
+      "pdfPage": 272,
+      "sourcePromptLead": "  Most present-day nuclear reactors use  water as a moderator (see Example 8.11). Are water molecules (mass mw = 18.0 u) a better or  worse moderator than carbo",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-08/04-muc-04.md",
+          "line": 390,
+          "text": "::: info Kiểm tra hiểu biết Mục 8.4"
+        }
+      ]
+    },
+    {
+      "id": "8.5",
+      "pdfPage": 276,
+      "sourcePromptLead": "  Will the center of mass in Fig. 8.32 continue  on the same parabolic trajectory even after one of the fragments hits the ground? Why or why not? Shell explode",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-08/05-muc-05.md",
+          "line": 329,
+          "text": "::: info Kiểm tra hiểu biết Mục 8.5"
+        }
+      ]
+    },
+    {
+      "id": "8.6",
+      "pdfPage": 279,
+      "sourcePromptLead": "  (a) If a rocket in gravity-free outer space  has the same thrust at all times, is its acceleration constant, increasing, or decreasing? (b) If the  rocket has",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-08/06-muc-06.md",
+          "line": 232,
+          "text": "::: info Kiểm tra hiểu biết Mục 8.6"
+        }
+      ]
+    },
+    {
+      "id": "9.1",
+      "pdfPage": 297,
+      "sourcePromptLead": "  The fig- ure shows a graph of vz and az versus time for a particular rotat- ing body. (a) During which time intervals is the rotation speeding  up? (i) 0 6 t ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-09/01-van-toc-va-gia-toc-goc.md",
+          "line": 317,
+          "text": "::: info Câu hỏi tự kiểm tra mục 9.1"
+        }
+      ]
+    },
+    {
+      "id": "9.2",
+      "pdfPage": 299,
+      "sourcePromptLead": "  Suppose the disc in Example 9.3 was  initially spinning at twice the rate (55.0 rad>s rather than 27.5 rad>s) and slowed down at twice the  rate (-20.0 rad>s2",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-09/02-quay-gia-toc-goc-khong-doi.md",
+          "line": 160,
+          "text": "::: info Câu hỏi tự kiểm tra mục 9.2"
+        }
+      ]
+    },
+    {
+      "id": "9.3",
+      "pdfPage": 302,
+      "sourcePromptLead": "  Information is stored on a Blu-ray disc  (see Fig. 9.8) in a coded pattern of tiny pits. The pits are arranged in a track that spirals outward  toward the rim",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-09/03-lien-he-dai-luong-dai-va-goc.md",
+          "line": 208,
+          "text": "### Kiểm tra hiểu biết mục 9.3"
+        }
+      ]
+    },
+    {
+      "id": "9.4",
+      "pdfPage": 307,
+      "sourcePromptLead": "  Suppose the cylinder and block in  Example 9.8 have the same mass, so m = M. Just before the block strikes the floor, which state- ment is correct about the r",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-09/04-dong-nang-va-momen-quan-tinh.md",
+          "line": 394,
+          "text": "### Kiểm tra hiểu biết mục 9.4"
+        }
+      ]
+    },
+    {
+      "id": "9.5",
+      "pdfPage": 308,
+      "sourcePromptLead": "  A pool cue is a wooden rod of uniform  composition and is tapered with a larger diameter at one end than at the other end. Use the parallel- axis theorem to d",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-09/05-dinh-ly-truc-song-song.md",
+          "line": 134,
+          "text": "### Kiểm tra hiểu biết mục 9.5"
+        }
+      ]
+    },
+    {
+      "id": "9.6",
+      "pdfPage": 310,
+      "sourcePromptLead": "  Two hollow cylinders have the same inner  and outer radii and the same mass, but they have different lengths. One is made of low-density wood  and the other o",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-09/06-tinh-momen-quan-tinh.md",
+          "line": 257,
+          "text": "### Kiểm tra hiểu biết mục 9.6"
+        }
+      ]
+    },
+    {
+      "id": "10.1",
+      "pdfPage": 325,
+      "sourcePromptLead": "  The accompanying figure shows a force  of magnitude P being applied to one end of a lever of length L. What is the magnitude of the torque  of this force abou",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-10/01-momen-luc.md",
+          "line": 85,
+          "text": "### Câu tự kiểm 10.1"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-10/01-momen-luc.md",
+          "line": 89,
+          "text": "![Câu tự kiểm 10.1: Cánh tay đòn của lực thẳng đứng là khoảng cách ngang từ A đến đường tác dụng.](../img/young-10/a-tu-kiem-10-01.png)"
+        }
+      ]
+    },
+    {
+      "id": "10.2",
+      "pdfPage": 328,
+      "sourcePromptLead": "  The figure shows a glider of mass m1 that  can slide without friction on a horizontal air track. It is attached to an object of mass m2 by a mass- less string",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-10/02-momen-luc-va-gia-toc-goc.md",
+          "line": 146,
+          "text": "### Câu tự kiểm 10.2"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-10/02-momen-luc-va-gia-toc-goc.md",
+          "line": 150,
+          "text": "![Câu tự kiểm 10.2: Ròng rọc có quán tính quay nên hai lực căng không bằng nhau khi hệ tăng tốc.](../img/young-10/a-tu-kiem-10-02.png)"
+        }
+      ]
+    },
+    {
+      "id": "10.3",
+      "pdfPage": 334,
+      "sourcePromptLead": "  Suppose the solid cylinder used as a  yo-yo in Example 10.6 is replaced by a hollow cylinder of the same mass and radius. (a) Will the  acceleration of the yo",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-10/03-quay-quanh-truc-chuyen-dong.md",
+          "line": 278,
+          "text": "### Câu tự kiểm 10.3"
+        }
+      ]
+    },
+    {
+      "id": "10.4",
+      "pdfPage": 336,
+      "sourcePromptLead": "  You apply equal torques to two different  cylinders. Cylinder 1 has a moment of inertia twice as large as cylinder 2. Each cylinder is initially  at rest. Aft",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-10/04-cong-va-cong-suat-quay.md",
+          "line": 107,
+          "text": "### Câu tự kiểm 10.4"
+        }
+      ]
+    },
+    {
+      "id": "10.5",
+      "pdfPage": 338,
+      "sourcePromptLead": "  A ball is attached to one end of a piece  of string. You hold the other end of the string and whirl the ball in a circle around your hand. (a) If  the ball mo",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-10/05-momen-dong-luong.md",
+          "line": 127,
+          "text": "### Câu tự kiểm 10.5"
+        }
+      ]
+    },
+    {
+      "id": "10.6",
+      "pdfPage": 341,
+      "sourcePromptLead": "  If the polar ice caps were to melt  ­completely due to global warming, the melted ice would redistribute itself over the earth. This  change would cause the l",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-10/06-bao-toan-momen-dong-luong.md",
+          "line": 148,
+          "text": "### Câu tự kiểm 10.6"
+        }
+      ]
+    },
+    {
+      "id": "10.7",
+      "pdfPage": 344,
+      "sourcePromptLead": "  Suppose the mass of the flywheel in   Fig. 10.34 is doubled but all other dimensions and the spin angular speed remain the same. What  effect would this chang",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-10/07-con-quay-va-tien-dong.md",
+          "line": 106,
+          "text": "### Câu tự kiểm 10.7"
+        }
+      ]
+    },
+    {
+      "id": "11.1",
+      "pdfPage": 358,
+      "sourcePromptLead": "  Which situation satisfies both the first  and second conditions for equilibrium? (i) A seagull gliding at a constant angle below the horizontal  and at a cons",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-11/01-dieu-kien-can-bang.md",
+          "line": 115,
+          "text": "::: question Kiểm tra hiểu biết 11.1"
+        }
+      ]
+    },
+    {
+      "id": "11.2",
+      "pdfPage": 361,
+      "sourcePromptLead": "  A rock is attached to the left end of a  uniform meter stick that has the same mass as the rock. In order for the combination of rock and  meter stick to bala",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-11/02-trong-tam.md",
+          "line": 289,
+          "text": "::: question Kiểm tra hiểu biết 11.2"
+        }
+      ]
+    },
+    {
+      "id": "11.3",
+      "pdfPage": 365,
+      "sourcePromptLead": "  A metal advertising sign (weight w)  for a specialty shop is suspended from the end of a horizontal rod of length L and negligible mass  (Fig. 11.11). The rod",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-11/03-giai-bai-toan-can-bang-vat-ran.md",
+          "line": 358,
+          "text": "::: question Kiểm tra hiểu biết 11.3"
+        }
+      ]
+    },
+    {
+      "id": "11.4",
+      "pdfPage": 371,
+      "sourcePromptLead": "  A copper rod of cross-sectional area  0.500 cm2 and length 1.00 m is elongated by 2.00 * 10-2 mm, and a steel rod of the same cross- sectional area but 0.100 ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
+          "line": 636,
+          "text": "### Kiểm Tra Mức Độ Hiểu Mục 11.4"
+        }
+      ]
+    },
+    {
+      "id": "11.5",
+      "pdfPage": 372,
+      "sourcePromptLead": "  While parking your car, you accidentally  back into a steel post. You pull forward until the car no longer touches the post and then get out to  inspect the d",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-11/05-dan-hoi-va-deo.md",
+          "line": 88,
+          "text": "### Kiểm Tra Mức Độ Hiểu Mục 11.5"
+        }
+      ]
+    },
+    {
+      "id": "12.1",
+      "pdfPage": 388,
+      "sourcePromptLead": "  Rank the following objects in order   from highest to lowest average density: (i) mass m = 4.00 kg, volume V = 1.60 * 10-3 m3;   (ii) m = 8.00 kg, V = 1.60 * ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+          "line": 167,
+          "text": "### Tự kiểm 12.1: So sánh các khối lượng riêng trung bình"
+        }
+      ]
+    },
+    {
+      "id": "12.2",
+      "pdfPage": 393,
+      "sourcePromptLead": "  Mercury is less dense at high tempera- tures than at low temperatures. Suppose you move a mercury barometer from the cold interior of  a tightly sealed refrig",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+          "line": 415,
+          "text": "### Tự kiểm 12.2: Cột thủy ngân không đổi chiều cao"
+        }
+      ]
+    },
+    {
+      "id": "12.3",
+      "pdfPage": 395,
+      "sourcePromptLead": "  You  place a container of seawater on a scale and note the reading on  the scale. You now suspend the statue of Example 12.5 in the  water (Fig. 12.17). How d",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+          "line": 224,
+          "text": "### Tự kiểm 12.3: Số chỉ cân khi nhúng tượng vào nước"
+        }
+      ]
+    },
+    {
+      "id": "12.4",
+      "pdfPage": 398,
+      "sourcePromptLead": "  A maintenance crew is working on a   section of a three-lane highway, leaving only one lane open to traffic. The result is much slower  traffic flow (a traffi",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+          "line": 160,
+          "text": "### Câu hỏi sau mục 12.4: Dòng xe qua đoạn đường bị thu hẹp"
+        }
+      ]
+    },
+    {
+      "id": "12.5",
+      "pdfPage": 402,
+      "sourcePromptLead": "  Which is the most accurate statement  of Bernoulli’s principle? (i) Fast-moving air causes lower pressure; (ii) lower pressure causes fast- moving air; (iii) ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+          "line": 358,
+          "text": "### Câu hỏi sau mục 12.5: Nguyên nhân làm dòng khí tăng tốc"
+        }
+      ]
+    },
+    {
+      "id": "12.6",
+      "pdfPage": 404,
+      "sourcePromptLead": "  How much more thumb pressure must  a nurse use to administer an injection with a hypodermic needle of inside diameter 0.30 mm com- pared to one with inside di",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+          "line": 105,
+          "text": "### Câu hỏi sau mục 12.6: Hai kim tiêm có đường kính khác nhau"
+        }
+      ]
+    },
+    {
+      "id": "13.1",
+      "pdfPage": 419,
+      "sourcePromptLead": "  The planet Saturn has about 100 times  the mass of the earth and is about 10 times farther from the sun than the earth is. Compared to the  acceleration of th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/01-muc-01.md",
+          "line": 246,
+          "text": "::: exercise Tự kiểm 13.1"
+        }
+      ]
+    },
+    {
+      "id": "13.2",
+      "pdfPage": 421,
+      "sourcePromptLead": "  Rank the following hypothetical  planets in order from highest to lowest value of g at the surface. (Here mP and RP are the mass  and radius of the planet, an",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/02-muc-02.md",
+          "line": 154,
+          "text": "::: exercise Tự kiểm 13.2"
+        }
+      ]
+    },
+    {
+      "id": "13.3",
+      "pdfPage": 424,
+      "sourcePromptLead": "  If a planet has the same surface gravity  as the earth (that is, the same value of g at the surface), what is its escape speed? (i) The same as the  earth’s; ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/03-muc-03.md",
+          "line": 199,
+          "text": "::: exercise Tự kiểm 13.3"
+        }
+      ]
+    },
+    {
+      "id": "13.4",
+      "pdfPage": 427,
+      "sourcePromptLead": "  Your personal spacecraft is in a low- altitude circular orbit around the earth. Air resistance from the outer regions of the atmosphere does  negative work on",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/04-muc-04.md",
+          "line": 220,
+          "text": "::: exercise Tự kiểm 13.4"
+        }
+      ]
+    },
+    {
+      "id": "13.5",
+      "pdfPage": 431,
+      "sourcePromptLead": "  The orbit of Comet X has a semi-major  axis that is four times longer than the semi-major axis of Comet Y. What is the ratio of the orbital  period of X to th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/05-muc-05.md",
+          "line": 254,
+          "text": "::: exercise Tự kiểm 13.5"
+        }
+      ]
+    },
+    {
+      "id": "13.6",
+      "pdfPage": 433,
+      "sourcePromptLead": "  In the classic 1913 science-fiction novel  At the Earth’s Core, by Edgar Rice Burroughs, explorers discover that the earth is a hollow sphere  and that an ent",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/06-muc-06.md",
+          "line": 231,
+          "text": "::: exercise Tự kiểm 13.6"
+        }
+      ]
+    },
+    {
+      "id": "13.7",
+      "pdfPage": 435,
+      "sourcePromptLead": "  Imagine a planet that has the same mass  and radius as the earth but that makes 10 rotations during the time the earth makes one rotation.  What would be the ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/07-muc-07.md",
+          "line": 106,
+          "text": "::: exercise Tự kiểm 13.7"
+        }
+      ]
+    },
+    {
+      "id": "13.8",
+      "pdfPage": 439,
+      "sourcePromptLead": "  If the sun somehow collapsed to form a  black hole, what effect would this event have on the orbit of the earth? The orbit would (i) shrink;  (ii) expand; (ii",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/08-muc-08.md",
+          "line": 156,
+          "text": "::: exercise Tự kiểm 13.8"
+        }
+      ]
+    },
+    {
+      "id": "14.1",
+      "pdfPage": 451,
+      "sourcePromptLead": "  An object like that shown in Fig. 14.2   oscillates back and forth. For each of the following values of the object’s x-velocity vx and  x-­acceleration ax  , ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/01-muc-01.md",
+          "line": 101,
+          "text": "::: exercise Tự kiểm 14.1"
+        }
+      ]
+    },
+    {
+      "id": "14.2",
+      "pdfPage": 458,
+      "sourcePromptLead": "  A glider is attached to a spring as shown  in Fig. 14.13. If the glider is moved to x = 0.10 m and released from rest at time t = 0, it will  oscillate with a",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/02-muc-02.md",
+          "line": 344,
+          "text": "::: exercise Tự kiểm 14.2"
+        }
+      ]
+    },
+    {
+      "id": "14.3",
+      "pdfPage": 461,
+      "sourcePromptLead": "  (a) To double the total energy for a  ­mass-spring system oscillating in SHM, by what factor must the amplitude increase? (i) 4; (ii) 2;   (iii) 12 = 1.414; (",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/03-muc-03.md",
+          "line": 246,
+          "text": "::: exercise Tự kiểm 14.3"
+        }
+      ]
+    },
+    {
+      "id": "14.4",
+      "pdfPage": 465,
+      "sourcePromptLead": "  A block attached to a hanging ideal  spring oscillates up and down with a period of 10 s on earth. If you take the block and spring to  Mars, where the accele",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/04-muc-04.md",
+          "line": 244,
+          "text": "::: exercise Tự kiểm 14.4"
+        }
+      ]
+    },
+    {
+      "id": "14.5",
+      "pdfPage": 467,
+      "sourcePromptLead": "  When an object oscillating on a horizon- tal spring passes through its equilibrium position, its acceleration is zero (see Fig. 14.2b). When the  bob of an os",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/05-muc-05.md",
+          "line": 147,
+          "text": "### Tự kiểm 14.5: Gia tốc tại vị trí thấp nhất"
+        }
+      ]
+    },
+    {
+      "id": "14.6",
+      "pdfPage": 469,
+      "sourcePromptLead": "  The center of gravity of a simple pen- dulum of mass m and length L is located at the pendulum bob, a distance L from the pivot point.  The center of gravity ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/06-muc-06.md",
+          "line": 184,
+          "text": "### Tự kiểm 14.6: Cùng vị trí trọng tâm có cùng chu kỳ không?"
+        }
+      ]
+    },
+    {
+      "id": "14.7",
+      "pdfPage": 471,
+      "sourcePromptLead": "  An airplane is flying in a straight line at  a constant altitude. If a wind gust strikes and raises the nose of the airplane, the nose will bob up  and down u",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/07-muc-07.md",
+          "line": 169,
+          "text": "### Tự kiểm 14.7: Mũi máy bay nhấp nhô rồi ổn định"
+        }
+      ]
+    },
+    {
+      "id": "14.8",
+      "pdfPage": 473,
+      "sourcePromptLead": "  When driven at a frequency near its  natural frequency, an oscillator with very little damping has a much greater response than the same  oscillator with more",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/08-muc-08.md",
+          "line": 125,
+          "text": "### Tự kiểm 14.8: So sánh hai mức lực cản ngoài vùng cộng hưởng"
+        }
+      ]
+    },
+    {
+      "id": "15.1",
+      "pdfPage": 486,
+      "sourcePromptLead": "  What type of wave is “the wave” shown  in Fig. 15.2? (i) Transverse; (ii) longitudinal; (iii) a combination of transverse and longitudinal. Figure 15.2  “Doin",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/01-muc-01.md",
+          "line": 57,
+          "text": "### Câu hỏi sau mục 15.1: Sóng trên khán đài"
+        }
+      ]
+    },
+    {
+      "id": "15.2",
+      "pdfPage": 489,
+      "sourcePromptLead": "  If you double the wavelength of a wave  on a particular string without changing the physical properties of the string, what happens to the  wave speed v and t",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/02-muc-02.md",
+          "line": 129,
+          "text": "### Câu hỏi sau mục 15.2: Tăng gấp đôi bước sóng"
+        }
+      ]
+    },
+    {
+      "id": "15.3",
+      "pdfPage": 494,
+      "sourcePromptLead": "  Figure 15.8 shows a sinusoidal wave of  period T on a string at times 0, 1 8 T, 2 8 T, 3 8 T, 4 8 T, 5 8 T, 6 8 T, 7 8 T, and T. (a) At which time is point A ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/03-muc-03.md",
+          "line": 357,
+          "text": "### Câu hỏi sau mục 15.3: Đọc chuyển động của A, B và C"
+        }
+      ]
+    },
+    {
+      "id": "15.4",
+      "pdfPage": 498,
+      "sourcePromptLead": "  The six strings of a guitar are the same  length and under nearly the same tension, but they have different thicknesses. On which string do  waves travel the ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/04-muc-04.md",
+          "line": 260,
+          "text": "### Câu hỏi sau mục 15.4: Sóng trên sáu dây guitar"
+        }
+      ]
+    },
+    {
+      "id": "15.5",
+      "pdfPage": 501,
+      "sourcePromptLead": "  Four identical strings each carry a sinu- soidal wave of frequency 10 Hz. The string tension and wave amplitude are different for different  strings. Rank the",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/05-muc-05.md",
+          "line": 221,
+          "text": "### Câu hỏi sau mục 15.5: So sánh công suất trên bốn dây"
+        }
+      ]
+    },
+    {
+      "id": "15.6",
+      "pdfPage": 502,
+      "sourcePromptLead": "   Figure 15.22 shows two wave pulses with different shapes  traveling in different directions along a string. Make a series of  sketches like Fig. 15.21 showin",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/06-muc-06.md",
+          "line": 72,
+          "text": "### Câu hỏi sau mục 15.6: Hai xung có hình dạng khác nhau"
+        }
+      ]
+    },
+    {
+      "id": "15.7",
+      "pdfPage": 506,
+      "sourcePromptLead": "  Suppose the frequency of the stand- ing wave in Example 15.6 were doubled from 440 Hz to 880 Hz. Would all of the nodes for  f = 440 Hz also be nodes for f = ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/07-muc-07.md",
+          "line": 218,
+          "text": "### Câu hỏi sau mục 15.7: Gấp đôi tần số"
+        }
+      ]
+    },
+    {
+      "id": "15.8",
+      "pdfPage": 510,
+      "sourcePromptLead": "  While a guitar string is vibrating, you  gently touch the midpoint of the string to ensure that the string does not vibrate at that point. Which  normal modes",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/08-muc-08.md",
+          "line": 233,
+          "text": "### Câu hỏi sau mục 15.8: Chạm nhẹ vào giữa dây"
+        }
+      ]
+    },
+    {
+      "id": "16.1",
+      "pdfPage": 526,
+      "sourcePromptLead": "  You use an electronic signal generator to  produce a sinusoidal sound wave in air. You then increase the frequency of the wave from 100 Hz to  400 Hz while ke",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+          "line": 217,
+          "text": "### Tự kiểm 16.1: Tăng tần số nhưng giữ biên độ áp suất"
+        }
+      ]
+    },
+    {
+      "id": "16.2",
+      "pdfPage": 529,
+      "sourcePromptLead": "  Mercury is 13.6 times denser than water.  Based on Table 16.1, at 20°C which of these liquids has the greater bulk modulus? (i) Mercury;   (ii) water; (iii) b",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+          "line": 206,
+          "text": "### Tự kiểm 16.2: Môđun nén của thủy ngân và nước"
+        }
+      ]
+    },
+    {
+      "id": "16.3",
+      "pdfPage": 534,
+      "sourcePromptLead": "  You double the intensity of a sound  wave in air while leaving the frequency unchanged. (The pressure, density, and temperature of the  air remain unchanged a",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+          "line": 284,
+          "text": "### Tự kiểm 16.3: Gấp đôi cường độ"
+        }
+      ]
+    },
+    {
+      "id": "16.4",
+      "pdfPage": 538,
+      "sourcePromptLead": "  If you connect a hose to one end of a  metal pipe and blow compressed air into it, the pipe produces a musical tone. If instead you blow  compressed helium in",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+          "line": 244,
+          "text": "### Tự kiểm 16.4: Thổi helium thay không khí"
+        }
+      ]
+    },
+    {
+      "id": "16.5",
+      "pdfPage": 540,
+      "sourcePromptLead": "  A stopped organ pipe of length L has a  fundamental frequency of 220 Hz. For which of the following organ pipes will there be a resonance  if a tuning fork of",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+          "line": 90,
+          "text": "### Tự kiểm 16.5: Ống nào cộng hưởng với âm thoa?"
+        }
+      ]
+    },
+    {
+      "id": "16.6",
+      "pdfPage": 542,
+      "sourcePromptLead": "  Suppose that speaker A in Fig. 16.23  emits a sinusoidal sound wave of frequency 500 Hz and speaker B emits a sinusoidal sound wave  of frequency 1000 Hz. Wha",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+          "line": 110,
+          "text": "### Tự kiểm 16.6: Hai loa phát hai tần số khác nhau"
+        }
+      ]
+    },
+    {
+      "id": "16.7",
+      "pdfPage": 544,
+      "sourcePromptLead": "  One tuning fork vibrates at 440 Hz,  while a second tuning fork vibrates at an unknown frequency. When both tuning forks are sounded  simultaneously, you hear",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+          "line": 91,
+          "text": "### Tự kiểm 16.7: Một âm thoa chưa biết tần số"
+        }
+      ]
+    },
+    {
+      "id": "16.8",
+      "pdfPage": 549,
+      "sourcePromptLead": "  You are at an outdoor concert with a  wind blowing at 10 m>s from the performers toward you. Is the sound you hear Doppler-shifted? If  so, is it shifted to l",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+          "line": 277,
+          "text": "### Tự kiểm 16.8: Gió có gây Doppler không?"
+        }
+      ]
+    },
+    {
+      "id": "16.9",
+      "pdfPage": 551,
+      "sourcePromptLead": "  What would you hear if you were di- rectly behind (to the left of) the supersonic airplane in Fig. 16.38? (i) A sonic boom; (ii) the sound  of the airplane, D",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+          "line": 107,
+          "text": "### Tự kiểm 16.9: Người nghe ở phía sau máy bay"
+        }
+      ]
+    },
+    {
+      "id": "17.1",
+      "pdfPage": 563,
+      "sourcePromptLead": "  You put a thermometer in a pot of hot  water and record the reading. What temperature have you recorded? (i) The temperature of the  water; (ii) the temperatu",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-17/01-nhiet-do-va-can-bang-nhiet.md",
+          "line": 50,
+          "text": "### Kiểm tra mức độ hiểu biết 17.1"
+        }
+      ]
+    },
+    {
+      "id": "17.2",
+      "pdfPage": 564,
+      "sourcePromptLead": "  Which of the following types of ther- mometers have to be in thermal equilibrium with the object being measured in order to give  accurate readings? (i) A bim",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-17/02-nhiet-ke-va-thang-nhiet-do.md",
+          "line": 72,
+          "text": "### Kiểm tra mức độ hiểu biết 17.2"
+        }
+      ]
+    },
+    {
+      "id": "17.3",
+      "pdfPage": 566,
+      "sourcePromptLead": "  Rank the following temperatures from  highest to lowest: (i) 0.00°C; (ii) 0.00°F; (iii) 260.00 K; (iv) 77.00 K; (v) -180.00°C. ANSWER Water boils Water freeze",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-17/03-nhiet-ke-khi-va-thang-kelvin.md",
+          "line": 186,
+          "text": "### Kiểm tra mức độ hiểu biết 17.3"
+        }
+      ]
+    },
+    {
+      "id": "17.4",
+      "pdfPage": 571,
+      "sourcePromptLead": "  In the bimetallic strip shown in  Fig. 17.3a, metal 1 is copper. Which of the following materials could be used for metal 2? (There  may be more than one corr",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-17/04-su-no-vi-nhiet.md",
+          "line": 411,
+          "text": "### Kiểm tra mức độ hiểu biết 17.4"
+        }
+      ]
+    },
+    {
+      "id": "17.5",
+      "pdfPage": 575,
+      "sourcePromptLead": "  You wish to raise the temperature of  each of the following samples from 20°C to 21°C. Rank these in order of the amount of heat needed  to do this, from high",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-17/05-nhiet-luong.md",
+          "line": 260,
+          "text": "### Câu hỏi tự kiểm tra 17.5"
+        }
+      ]
+    },
+    {
+      "id": "17.6",
+      "pdfPage": 580,
+      "sourcePromptLead": "  You take a block of ice at 0°C and add  heat to it at a steady rate. It takes a time t to completely convert the block of ice to steam at 100°C.  What do you ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-17/06-nhiet-luong-ke-va-chuyen-pha.md",
+          "line": 406,
+          "text": "### Câu hỏi tự kiểm tra 17.6"
+        }
+      ]
+    },
+    {
+      "id": "17.7",
+      "pdfPage": 587,
+      "sourcePromptLead": "  A room has one wall made of concrete,  one wall made of copper, and one wall made of steel. All of the walls are the same size and at the  same temperature of",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-17/07-cac-co-che-truyen-nhiet.md",
+          "line": 532,
+          "text": "### Kiểm tra hiểu biết",
+          "parentSourceComparison": "Three walls: Concrete, copper, steel; same size/20C; four options. Copper answer and conductivity explanation present."
+        }
+      ]
+    },
+    {
+      "id": "18.1",
+      "pdfPage": 605,
+      "sourcePromptLead": "  Rank the following ideal gases in order   from highest to lowest number of moles: (i) Pressure p = 1 atm, volume V = 1 L , temperature  T = 300 K; (ii) p = 2 ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-18/01-phuong-trinh-trang-thai.md",
+          "line": 399,
+          "text": "### Kiểm tra mức độ hiểu mục 18.1"
+        }
+      ]
+    },
+    {
+      "id": "18.2",
+      "pdfPage": 608,
+      "sourcePromptLead": "  Suppose you could adjust the value of r0  for the molecules of a certain chemical compound (Fig. 18.8) by turning a dial. If you doubled the  value of r0  , t",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-18/02-tinh-chat-phan-tu-vat-chat.md",
+          "line": 121,
+          "text": "### Câu tự kiểm tra 18.2"
+        }
+      ]
+    },
+    {
+      "id": "18.3",
+      "pdfPage": 614,
+      "sourcePromptLead": "  Rank the following gases in order from  (a) highest to lowest rms speed of molecules and (b) highest to lowest average translational kinetic  energy of a mole",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-18/03-mo-hinh-dong-hoc-khi-ly-tuong.md",
+          "line": 469,
+          "text": "### Câu tự kiểm tra 18.3"
+        }
+      ]
+    },
+    {
+      "id": "18.4",
+      "pdfPage": 617,
+      "sourcePromptLead": "  A cylinder with a fixed volume contains  hydrogen gas 1H22 at 25 K. You then add heat to the gas at a constant rate until its temperature  reaches 500 K. Does",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-18/04-nhiet-dung.md",
+          "line": 206,
+          "text": "::: info Câu hỏi kiểm tra mức độ hiểu mục 18.4"
+        }
+      ]
+    },
+    {
+      "id": "18.5",
+      "pdfPage": 619,
+      "sourcePromptLead": "  A quantity of gas containing N molecules  has a speed distribution function f 1v2. How many molecules have speeds between v1 and v2 7 v1?  (i) 1 v2 0 f 1v2 dv",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-18/05-toc-do-phan-tu.md",
+          "line": 211,
+          "text": "::: info Câu hỏi kiểm tra mức độ hiểu mục 18.5"
+        }
+      ]
+    },
+    {
+      "id": "18.6",
+      "pdfPage": 622,
+      "sourcePromptLead": "  The average atmospheric pressure on  Mars is 6.0 * 102 Pa. Could there be lakes of liquid water on the surface of Mars today? What  about in the past, when th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-18/06-cac-pha-cua-vat-chat.md",
+          "line": 102,
+          "text": "### Câu tự kiểm tra 18.6"
+        }
+      ]
+    },
+    {
+      "id": "19.1",
+      "pdfPage": 634,
+      "sourcePromptLead": "  In Example 17.7 (Section 17.6), what is  the sign of Q for the coffee? For the aluminum cup? If a block slides along a horizontal surface with  friction, what",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+          "line": 40,
+          "text": "::: exercise Tự kiểm tra 19.1"
+        }
+      ]
+    },
+    {
+      "id": "19.2",
+      "pdfPage": 637,
+      "sourcePromptLead": "  A quantity of ideal gas undergoes an  ­expansion that doubles its volume. Does the gas do more work on its surroundings if the expansion  is at constant press",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+          "line": 113,
+          "text": "::: exercise Tự kiểm tra 19.2"
+        }
+      ]
+    },
+    {
+      "id": "19.3",
+      "pdfPage": 638,
+      "sourcePromptLead": "  The system described in Fig. 19.7a un- dergoes four different thermodynamic processes. Each process is represented in a pV-diagram as a  straight line from th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/03-duong-di-giua-cac-trang-thai.md",
+          "line": 47,
+          "text": "::: exercise Tự kiểm tra 19.3"
+        }
+      ]
+    },
+    {
+      "id": "19.4",
+      "pdfPage": 643,
+      "sourcePromptLead": "  Rank the following thermodynamic  ­processes according to the change in internal energy in each process, from most positive to most  negative. (i) As you do 2",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+          "line": 476,
+          "text": "::: exercise Tự kiểm tra 19.4"
+        }
+      ]
+    },
+    {
+      "id": "19.5",
+      "pdfPage": 645,
+      "sourcePromptLead": "  Which of the processes in Fig. 19.7 are  isochoric? Which are isobaric? Is it possible to tell if any of the processes are isothermal or adiabatic? ANSWER O p",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+          "line": 122,
+          "text": "::: info Tự kiểm tra 19.5"
+        }
+      ]
+    },
+    {
+      "id": "19.6",
+      "pdfPage": 645,
+      "sourcePromptLead": "  Is the internal energy of a solid likely to be  independent of its volume, as is the case for an ideal gas? Explain your reasoning. (Hint: See Fig. 18.20.) AN",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/06-noi-nang-khi-ly-tuong.md",
+          "line": 65,
+          "text": "### Câu tự kiểm tra 19.6"
+        }
+      ]
+    },
+    {
+      "id": "19.7",
+      "pdfPage": 648,
+      "sourcePromptLead": "  You want to cool a storage cylinder  ­containing 10 moles of compressed gas from 30°C to 20°C. For which kind of gas would this be  easiest? (i) A monatomic g",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
+          "line": 253,
+          "text": "::: info Câu tự kiểm tra 19.7"
+        }
+      ]
+    },
+    {
+      "id": "19.8",
+      "pdfPage": 651,
+      "sourcePromptLead": "  You have four samples of ideal gas, each  of which contains the same number of moles of gas and has the same initial temperature, volume,  and pressure. You c",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md",
+          "line": 241,
+          "text": "::: info Tự kiểm tra 19.8"
+        }
+      ]
+    },
+    {
+      "id": "20.1",
+      "pdfPage": 664,
+      "sourcePromptLead": "  Your left and right hands are normally  at the same temperature, just like the metal box and ice in Fig. 20.1b. Is rubbing your hands  ­together to warm them ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/01-chieu-cua-qua-trinh-nhiet-dong.md",
+          "line": 27,
+          "text": "::: info Câu hỏi kiểm tra hiểu biết 20.1"
+        }
+      ]
+    },
+    {
+      "id": "20.2",
+      "pdfPage": 667,
+      "sourcePromptLead": "  Rank the following heat engines in order  from highest to lowest thermal efficiency. (i) An engine that in one cycle absorbs 5000 J of heat and  rejects 4500 ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/02-dong-co-nhiet.md",
+          "line": 208,
+          "text": "::: info Câu hỏi kiểm tra hiểu biết 20.2"
+        }
+      ]
+    },
+    {
+      "id": "20.3",
+      "pdfPage": 669,
+      "sourcePromptLead": "  For an Otto-cycle engine with cylinders  of a fixed size and a fixed compression ratio, which of the following aspects of the pV-diagram in  Fig. 20.6 would c",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/03-dong-co-dot-trong.md",
+          "line": 109,
+          "text": "::: info Câu hỏi kiểm tra hiểu biết 20.3"
+        }
+      ]
+    },
+    {
+      "id": "20.4",
+      "pdfPage": 671,
+      "sourcePromptLead": "  Can you cool your house by leaving the  refrigerator door open? ANSWER ? ❙  no  A refrigerator uses an input of work to transfer heat from one system (the ref",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/04-may-lanh.md",
+          "line": 98,
+          "text": "::: info Câu hỏi kiểm tra hiểu biết 20.4"
+        }
+      ]
+    },
+    {
+      "id": "20.5",
+      "pdfPage": 673,
+      "sourcePromptLead": "  Would a 100%-efficient engine (Fig. 20.11a)  violate the first law of thermodynamics? What about a workless refrigerator (Fig. 20.11b)? ANSWER Figure 20.12  T",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/05-nguyen-ly-thu-hai.md",
+          "line": 69,
+          "text": "### Tự kiểm tra kiến thức mục 20.5"
+        }
+      ]
+    },
+    {
+      "id": "20.6",
+      "pdfPage": 679,
+      "sourcePromptLead": "  An inventor looking for financial support  comes to you with an idea for a gasoline engine that runs on a novel type of thermodynamic cycle.  His design is ma",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/06-chu-trinh-carnot.md",
+          "line": 456,
+          "text": "### Tự kiểm tra kiến thức mục 20.6"
+        }
+      ]
+    },
+    {
+      "id": "20.7",
+      "pdfPage": 685,
+      "sourcePromptLead": "  Suppose 2.00 kg of water at 50°C spon- taneously changes temperature, so that half of the water cools to 0°C while the other half spontane- ously warms to 100",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/07-entropy.md",
+          "line": 349,
+          "text": "### Tự kiểm tra kiến thức mục 20.7"
+        }
+      ]
+    },
+    {
+      "id": "20.8",
+      "pdfPage": 688,
+      "sourcePromptLead": "  A quantity of N molecules of an ideal  gas initially occupies volume V. The gas then expands to volume 2V. The number of microscopic  states of the gas increa",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-20/08-giai-thich-vi-mo-entropy.md",
+          "line": 163,
+          "text": "### Tự kiểm tra kiến thức mục 20.8"
+        }
+      ]
+    },
+    {
+      "id": "21.1",
+      "pdfPage": 702,
+      "sourcePromptLead": "  Two charged objects repel each other  through the electric force. The charges on the objects are (i) one positive and one negative; (ii) both  positive; (iii)",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-21/01-dien-tich.md",
+          "line": 109,
+          "text": "::: exercise Câu hỏi ôn lại mục 21.1"
+        }
+      ]
+    },
+    {
+      "id": "21.2",
+      "pdfPage": 704,
+      "sourcePromptLead": "  You have two lightweight metal spheres,  each hanging from an insulating nylon thread. One of the spheres has a net negative charge, while  the other sphere h",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-21/02-vat-dan-cach-dien.md",
+          "line": 51,
+          "text": "::: exercise Câu hỏi ôn lại mục 21.2"
+        }
+      ]
+    },
+    {
+      "id": "21.3",
+      "pdfPage": 710,
+      "sourcePromptLead": "  Suppose that charge q2 in Example 21.4  were -2.0 mC. In this case, the total electric force on Q would be (i) in the positive x-direction; (ii)  in the negat",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-21/03-dinh-luat-coulomb.md",
+          "line": 268,
+          "text": "::: exercise Câu hỏi ôn lại mục 21.3"
+        }
+      ]
+    },
+    {
+      "id": "21.4",
+      "pdfPage": 714,
+      "sourcePromptLead": "  (a) A negative point charge moves along  a straight-line path directly toward a stationary positive point charge. Which aspect(s) of the electric  force on th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-21/04-dien-truong-luc-dien.md",
+          "line": 207,
+          "text": "::: exercise Câu hỏi ôn lại mục 21.4"
+        }
+      ]
+    },
+    {
+      "id": "21.5",
+      "pdfPage": 719,
+      "sourcePromptLead": "  Suppose that the line of charge in   Fig. 21.24 (Example 21.10) had charge +Q distributed uniformly between y = 0 and y = +a and  had charge -Q distributed un",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-21/05-tinh-dien-truong.md",
+          "line": 352,
+          "text": "::: exercise Câu hỏi ôn lại mục 21.5"
+        }
+      ]
+    },
+    {
+      "id": "21.6",
+      "pdfPage": 721,
+      "sourcePromptLead": "  Suppose the electric field lines in a  region of space are straight lines. If a charged particle is released from rest in that region, will the  trajectory of",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-21/06-duong-suc-dien.md",
+          "line": 43,
+          "text": "::: exercise Câu hỏi ôn lại mục 21.6"
+        }
+      ]
+    },
+    {
+      "id": "21.7",
+      "pdfPage": 725,
+      "sourcePromptLead": "  An electric dipole is placed in a region of  uniform electric field E S, with the electric dipole moment p S pointing in the direction opposite to E S.  Is th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-21/07-luong-cuc-dien.md",
+          "line": 245,
+          "text": "::: exercise Câu hỏi ôn lại mục 21.7"
+        }
+      ]
+    },
+    {
+      "id": "22.1",
+      "pdfPage": 741,
+      "sourcePromptLead": "  If all of the dimensions of the box in   Fig. 22.2a are increased by a factor of 3, how will the electric flux through the box change?   (i) The flux will be ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-22/01-dien-tich-dien-thong.md",
+          "line": 49,
+          "text": "::: exercise Câu hỏi ôn lại mục 22.1"
+        }
+      ]
+    },
+    {
+      "id": "22.2",
+      "pdfPage": 745,
+      "sourcePromptLead": "  Rank the following surfaces in  order from most positive to most negative electric flux: (i) a flat rectangular surface with vec- tor area A S = 16.0 m22dn in",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-22/02-tinh-dien-thong.md",
+          "line": 185,
+          "text": "::: exercise Câu hỏi ôn lại mục 22.2"
+        }
+      ]
+    },
+    {
+      "id": "22.3",
+      "pdfPage": 749,
+      "sourcePromptLead": "  Figure 22.16 shows six point charges  that all lie in the same plane. Five Gaussian surfaces—S1  , S2  , S3  , S4  , and S5— each enclose part of  this plane,",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-22/03-dinh-luat-gauss.md",
+          "line": 130,
+          "text": "::: exercise Câu hỏi ôn lại mục 22.3"
+        }
+      ]
+    },
+    {
+      "id": "22.4",
+      "pdfPage": 753,
+      "sourcePromptLead": "  You place a known amount of charge Q   on the irregularly shaped conductor shown in Fig. 22.17. If you know the size and shape of the conduc- tor, can you use",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-22/04-ung-dung-gauss.md",
+          "line": 184,
+          "text": "::: exercise Câu hỏi ôn lại mục 22.4"
+        }
+      ]
+    },
+    {
+      "id": "22.5",
+      "pdfPage": 757,
+      "sourcePromptLead": "  A hollow conducting sphere has no net  charge. There is a positive point charge q at the center of the spherical cavity within the sphere. You  connect a cond",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-22/05-dien-tich-vat-dan.md",
+          "line": 133,
+          "text": "::: exercise Câu hỏi ôn lại mục 22.5"
+        }
+      ]
+    },
+    {
+      "id": "23.1",
+      "pdfPage": 773,
+      "sourcePromptLead": "  Consider the system of three point  charges in Example 21.4 (Section 21.3) and shown in Fig. 21.14. (a) What is the sign of the total  potential energy of thi",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
+          "line": 167,
+          "text": "::: exercise Câu hỏi sau Ví dụ 23.1"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-23/01-the-nang-dien.md",
+          "line": 263,
+          "text": "::: exercise Câu hỏi ôn lại mục 23.1"
+        }
+      ]
+    },
+    {
+      "id": "23.2",
+      "pdfPage": 780,
+      "sourcePromptLead": "  If the electric potential at a certain point  is zero, does the electric field at that point have to be zero? (Hint: Consider point c in Examples 23.4  and 21",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-23/02-dien-the.md",
+          "line": 255,
+          "text": "::: exercise Câu hỏi ôn lại mục 23.2"
+        }
+      ]
+    },
+    {
+      "id": "23.3",
+      "pdfPage": 784,
+      "sourcePromptLead": "  If the electric field at a certain point is  zero, does the electric potential at that point have to be zero? (Hint: Consider the center of the ring  in Examp",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-23/03-tinh-dien-the.md",
+          "line": 161,
+          "text": "::: exercise Câu hỏi ôn lại mục 23.3"
+        }
+      ]
+    },
+    {
+      "id": "23.4",
+      "pdfPage": 787,
+      "sourcePromptLead": "  Would the shapes of the equipotential  surfaces in Fig. 23.23 change if the sign of each charge were reversed? ANSWER ❙  no  If the positive charges in Fig. 2",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-23/04-mat-dang-the.md",
+          "line": 57,
+          "text": "::: exercise Câu hỏi ôn lại mục 23.4"
+        }
+      ]
+    },
+    {
+      "id": "23.5",
+      "pdfPage": 789,
+      "sourcePromptLead": "  In a certain region of space the potential  is given by V = A + Bx + Cy3 + Dxy, where A, B, C, and D are positive constants. Which of  these statements about ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-23/05-gradient-dien-the.md",
+          "line": 125,
+          "text": "::: exercise Câu hỏi ôn lại mục 23.5"
+        }
+      ]
+    },
+    {
+      "id": "24.1",
+      "pdfPage": 806,
+      "sourcePromptLead": "  A capacitor has vacuum in the space be- tween the conductors. If you double the amount of charge on each conductor, what happens to the  capacitance? (i) It i",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-24/01-tu-dien-dien-dung.md",
+          "line": 195,
+          "text": "::: exercise Câu hỏi ôn lại mục 24.1"
+        }
+      ]
+    },
+    {
+      "id": "24.2",
+      "pdfPage": 809,
+      "sourcePromptLead": "  (a) How should you connect a 4 mF  ­capacitor and an 8 mF capacitor so that the 4 mF capacitor has a greater potential difference across  it than the 8 mF cap",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-24/02-mac-tu-dien.md",
+          "line": 176,
+          "text": "::: exercise Câu hỏi ôn lại mục 24.2"
+        }
+      ]
+    },
+    {
+      "id": "24.3",
+      "pdfPage": 813,
+      "sourcePromptLead": "  You want to connect a 4 mF capacitor   and an 8 mF capacitor. With which type of connection will the 4 mF capacitor have a greater  amount of stored energy th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-24/03-nang-luong-tu-dien.md",
+          "line": 169,
+          "text": "::: exercise Câu hỏi ôn lại mục 24.3"
+        }
+      ]
+    },
+    {
+      "id": "24.4",
+      "pdfPage": 819,
+      "sourcePromptLead": "  The space between the plates of an  isolated parallel-plate capacitor is filled by a slab of dielectric with dielectric constant K. The two  plates of the cap",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-24/04-dien-moi.md",
+          "line": 229,
+          "text": "::: exercise Câu hỏi ôn lại mục 24.4"
+        }
+      ]
+    },
+    {
+      "id": "24.5",
+      "pdfPage": 820,
+      "sourcePromptLead": "  A parallel-plate capacitor has charges Q  and -Q on its two plates. A dielectric slab with K = 3 is then inserted into the space between the  plates as shown ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-24/02-mac-tu-dien.md",
+          "line": 127,
+          "text": "::: exercise Câu hỏi sau Ví dụ 24.5"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-24/05-mo-hinh-phan-tu.md",
+          "line": 49,
+          "text": "::: exercise Câu hỏi ôn lại mục 24.5"
+        }
+      ]
+    },
+    {
+      "id": "24.6",
+      "pdfPage": 822,
+      "sourcePromptLead": "  A single point charge q is embedded in  a very large block of dielectric of dielectric constant K. At a point inside the dielectric a distance r  from the poi",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-24/06-gauss-trong-dien-moi.md",
+          "line": 80,
+          "text": "::: exercise Câu hỏi ôn lại mục 24.6"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-24/02-mac-tu-dien.md",
+          "line": 162,
+          "text": "::: exercise Câu hỏi sau Ví dụ 24.6"
+        }
+      ]
+    },
+    {
+      "id": "25.1",
+      "pdfPage": 836,
+      "sourcePromptLead": "  Suppose we replaced the wire in  Example 25.1 with 12 gauge copper wire, which has twice the diameter of 18 gauge wire. If the  current remains the same, what",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-25/01-dong-dien.md",
+          "line": 177,
+          "text": "::: exercise Kiểm tra hiểu mục 25.1"
+        }
+      ]
+    },
+    {
+      "id": "25.2",
+      "pdfPage": 839,
+      "sourcePromptLead": "  You maintain a constant electric field  inside a piece of semiconductor while lowering the semiconductor’s temperature. What happens  to the current density i",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-25/02-dien-tro-suat.md",
+          "line": 128,
+          "text": "::: exercise Kiểm tra hiểu mục 25.2"
+        }
+      ]
+    },
+    {
+      "id": "25.3",
+      "pdfPage": 842,
+      "sourcePromptLead": "  Suppose you increase the voltage across  the copper wire in Examples 25.2 and 25.3. The increased voltage causes more current to flow,  which makes the temper",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-25/03-dien-tro.md",
+          "line": 231,
+          "text": "#### Câu hỏi kiểm tra",
+          "parentSourceComparison": "Voltage doubling and heating of copper: Three current-factor options; less-than-two answer retains Ohm-condition reasoning."
+        }
+      ]
+    },
+    {
+      "id": "25.4",
+      "pdfPage": 847,
+      "sourcePromptLead": "  Rank the following circuits in order  from highest to lowest current: (i) A 1.4 Ω resistor connected to a 1.5 V battery that has an internal  resistance of 0.",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-25/04-suat-dien-dong.md",
+          "line": 295,
+          "text": "#### Câu hỏi kiểm tra",
+          "parentSourceComparison": "All three battery/resistor data sets and ranked-current solution present."
+        }
+      ]
+    },
+    {
+      "id": "25.5",
+      "pdfPage": 852,
+      "sourcePromptLead": "  Rank the following circuits in order from  highest to lowest values of the net power output of the battery. (i) A 1.4 Ω resistor connected to a  1.5 V battery",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-25/05-nang-luong-cong-suat.md",
+          "line": 231,
+          "text": "### Câu hỏi kiểm tra ngay sau mục 25.5"
+        }
+      ]
+    },
+    {
+      "id": "25.6",
+      "pdfPage": 854,
+      "sourcePromptLead": "  Which of the following factors will, if  increased, make it more difficult to produce a certain amount of current in a conductor? (There may  be more than one",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-25/06-mo-hinh-dan-dien-kim-loai.md",
+          "line": 122,
+          "text": "### Câu hỏi kiểm tra ngay sau mục 25.6"
+        }
+      ]
+    },
+    {
+      "id": "26.1",
+      "pdfPage": 869,
+      "sourcePromptLead": "  Suppose all three of the resistors shown  in Fig. 26.1 have the same resistance, so R1 = R2 = R3 = R. Rank the four arrangements shown in  parts (a)–(d) of Fi",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-26/01-dien-tro-noi-tiep-song-song.md",
+          "line": 321,
+          "text": "### Kiểm tra hiểu mục 26.1"
+        }
+      ]
+    },
+    {
+      "id": "26.2",
+      "pdfPage": 874,
+      "sourcePromptLead": "  Subtract Eq. (1) from Eq. (2) in  Example 26.6. To which loop in Fig. 26.12 does this equation correspond? Would this equation  have simplified the solution o",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-26/02-quy-tac-kirchhoff.md",
+          "line": 425,
+          "text": "### Kiểm tra hiểu mục 26.2"
+        }
+      ]
+    },
+    {
+      "id": "26.3",
+      "pdfPage": 878,
+      "sourcePromptLead": "  You want to measure the current  through and the potential difference across the 2 Ω resistor shown in Fig. 26.12 (Example 26.6 in  Section 26.2). (a) How sho",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-26/03-dung-cu-do-dien.md",
+          "line": 277,
+          "text": "#### Kiểm tra hiểu mục 26.3"
+        }
+      ]
+    },
+    {
+      "id": "26.4",
+      "pdfPage": 883,
+      "sourcePromptLead": "  The energy stored in a capacitor is  equal to q2>2C. When a capacitor is discharged, what fraction of the initial energy remains after an  elapsed time of one",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-26/04-mach-rc.md",
+          "line": 286,
+          "text": "#### Kiểm tra hiểu mục 26.4"
+        }
+      ]
+    },
+    {
+      "id": "26.5",
+      "pdfPage": 886,
+      "sourcePromptLead": "  To prevent the circuit breaker in  Example 26.14 from blowing, a home electrician replaces the circuit breaker with one rated at  40 A.  Is this a reasonable ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-26/05-he-thong-phan-phoi-dien.md",
+          "line": 120,
+          "text": "::: exercise Kiểm tra hiểu mục 26.5"
+        }
+      ]
+    },
+    {
+      "id": "27.1",
+      "pdfPage": 900,
+      "sourcePromptLead": "  Suppose you cut off the part of the com- pass needle shown in Fig. 27.5a that is painted gray. You discard this part, drill a hole in the remain- ing red part",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/01-tu-tinh.md",
+          "line": 57,
+          "text": "::: exercise Tự kiểm tra mục 27.1"
+        }
+      ]
+    },
+    {
+      "id": "27.2",
+      "pdfPage": 904,
+      "sourcePromptLead": "  The accompanying figure shows a uni- form magnetic field B S directed into the plane of the paper (shown by the blue *>s). A particle with  a negative charge ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/02-tu-truong.md",
+          "line": 168,
+          "text": "::: exercise Tự kiểm tra mục 27.2"
+        }
+      ]
+    },
+    {
+      "id": "27.3",
+      "pdfPage": 907,
+      "sourcePromptLead": "  Imagine moving along the axis of the  current-carrying loop in Fig. 27.13c, starting at a point well to the left of the loop and ending at a  point well to th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/03-duong-suc-tu-thong.md",
+          "line": 139,
+          "text": "::: exercise Kiểm tra hiểu biết 27.3"
+        }
+      ]
+    },
+    {
+      "id": "27.4",
+      "pdfPage": 911,
+      "sourcePromptLead": "  (a) If you double the speed of the  charged particle in Fig. 27.17a while keeping the magnetic field the same (as well as the charge and  the mass), how does ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/04-chuyen-dong-hat.md",
+          "line": 176,
+          "text": "::: exercise Tự kiểm tra mục 27.4"
+        }
+      ]
+    },
+    {
+      "id": "27.5",
+      "pdfPage": 913,
+      "sourcePromptLead": "  In Example 27.6 He+ ions with charge  +e move at 1.00 * 105 m>s in a straight line through a velocity selector. Suppose the He+ ions  were replaced with He2+ ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/05-ung-dung.md",
+          "line": 155,
+          "text": "::: exercise Tự kiểm tra mục 27.5"
+        }
+      ]
+    },
+    {
+      "id": "27.6",
+      "pdfPage": 916,
+      "sourcePromptLead": "  The accompanying figure shows a top  view of two conducting rails on which a conducting bar can slide. A uniform magnetic field is  directed perpendicular to ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/06-luc-tu-len-day.md",
+          "line": 151,
+          "text": "Hình tự kiểm tra 27.6: Hai cách đặt pin tạo dòng điện ngược chiều trong thanh dẫn, nên lực từ cũng đổi chiều."
+        }
+      ]
+    },
+    {
+      "id": "27.7",
+      "pdfPage": 922,
+      "sourcePromptLead": "  Figure 27.13c depicts the magnetic field  lines due to a circular current-carrying loop. (a) What is the direction of the magnetic moment of  this loop? (b) W",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/07-vong-day-mo-men.md",
+          "line": 199,
+          "text": "### Tự kiểm tra",
+          "parentSourceComparison": "Loop27.13c: Both moment direction and north/south sides answered; adjacent original image present."
+        }
+      ]
+    },
+    {
+      "id": "27.8",
+      "pdfPage": 924,
+      "sourcePromptLead": "  In the circuit shown in Fig. 27.39, you add a  switch in series with the source of emf so that the current can be turned on and off. When you close the  switc",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/08-dong-co-dien.md",
+          "line": 134,
+          "text": "::: exercise Kiểm tra hiểu biết 27.8"
+        }
+      ]
+    },
+    {
+      "id": "27.9",
+      "pdfPage": 925,
+      "sourcePromptLead": "  A copper wire of square cross section is  oriented vertically. The four sides of the wire face north, south, east, and west. There is a uniform  magnetic fiel",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-27/09-hieu-ung-hall.md",
+          "line": 110,
+          "text": "::: exercise Kiểm tra hiểu biết 27.9"
+        }
+      ]
+    },
+    {
+      "id": "28.1",
+      "pdfPage": 941,
+      "sourcePromptLead": "  (a) If two protons are traveling parallel   to each other in the same direction and at the same speed, is the magnetic force between them   (i) attractive or ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/01-dien-tich-chuyen-dong.md",
+          "line": 109,
+          "text": "### Tự kiểm tra 28.1"
+        }
+      ]
+    },
+    {
+      "id": "28.2",
+      "pdfPage": 943,
+      "sourcePromptLead": "  An infinitesimal current element located  at the origin 1x = y = z = 02 carries current I in the positive y-direction. Rank the following loca- tions in order",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/02-phan-tu-dong-dien.md",
+          "line": 119,
+          "text": "### Tự kiểm tra 28.2"
+        }
+      ]
+    },
+    {
+      "id": "28.3",
+      "pdfPage": 946,
+      "sourcePromptLead": "  The accompanying figure shows a circuit  that lies on a horizontal table. A compass is placed on top of the circuit as shown. A battery is to  be connected to",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/03-day-thang.md",
+          "line": 164,
+          "text": "### Tự kiểm tra 28.3"
+        }
+      ]
+    },
+    {
+      "id": "28.4",
+      "pdfPage": 947,
+      "sourcePromptLead": "  A solenoid is a wire wound into a helical coil.  The accompanying figure shows a solenoid that carries a current I. (a) Is the magnetic force that one turn  o",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/04-luc-hai-day.md",
+          "line": 62,
+          "text": "### Tự kiểm tra 28.4"
+        }
+      ]
+    },
+    {
+      "id": "28.5",
+      "pdfPage": 950,
+      "sourcePromptLead": "  Figure 28.12 shows the magnetic field  dB S produced at point P by a segment dl S that lies on the positive y-axis (at the top of the loop). This  field has c",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/05-vong-day-tron.md",
+          "line": 161,
+          "text": "### Tự kiểm tra 28.5"
+        }
+      ]
+    },
+    {
+      "id": "28.6",
+      "pdfPage": 953,
+      "sourcePromptLead": "  The accompanying figure shows mag- netic field lines through the center of a permanent magnet. The magnet is not connected to a source  of emf. One of the fie",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/06-dinh-luat-ampere.md",
+          "line": 95,
+          "text": "### Tự kiểm tra 28.6"
+        }
+      ]
+    },
+    {
+      "id": "28.7",
+      "pdfPage": 956,
+      "sourcePromptLead": "  In a coaxial cable (see photo), a conduct- ing wire runs along the central axis of a hollow conducting cylinder. (The cable that connects a tele- vision set t",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/07-ung-dung-ampere.md",
+          "line": 112,
+          "text": "### Tự kiểm tra 28.7: Cáp đồng trục"
+        }
+      ]
+    },
+    {
+      "id": "28.8",
+      "pdfPage": 961,
+      "sourcePromptLead": "  Which of the following materials are at- tracted to a magnet? (i) Sodium; (ii) bismuth; (iii) lead; (iv) uranium. ANSWER ❙  (i), (iv)  Sodium and uranium are ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-28/08-vat-lieu-tu.md",
+          "line": 234,
+          "text": "### Tự kiểm tra 28.8"
+        }
+      ]
+    },
+    {
+      "id": "29.2",
+      "pdfPage": 982,
+      "sourcePromptLead": "  The accompanying figure shows a wire  coil being squeezed in a uniform magnetic field. (a) While the coil is being squeezed, is the induced  emf in the coil (",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+          "line": 228,
+          "text": "### Tự kiểm tra Mục 29.2"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+          "line": 232,
+          "text": "![Tự kiểm 29.2: Bóp vòng dây tròn thành hình oval làm giảm diện tích trong từ trường đều hướng vào mặt hình.](../img/young-29/hinh-tu-kiem29-2.png)"
+        }
+      ]
+    },
+    {
+      "id": "29.3",
+      "pdfPage": 984,
+      "sourcePromptLead": "  (a) Suppose the magnet in Fig. 29.14a  were stationary and the loop of wire moved upward. Would the induced ­current in the loop be  (i) in the same direction",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-29/03-dinh-luat-lenz.md",
+          "line": 40,
+          "text": "### Tự kiểm tra Mục 29.3"
+        }
+      ]
+    },
+    {
+      "id": "29.4",
+      "pdfPage": 987,
+      "sourcePromptLead": "  The earth’s magnetic field points toward  (magnetic) north. For simplicity, assume that the field has no vertical component (as is the case near  the earth’s ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-29/04-suat-dien-dong-chuyen-dong.md",
+          "line": 130,
+          "text": "### Tự kiểm tra Mục 29.4"
+        }
+      ]
+    },
+    {
+      "id": "29.5",
+      "pdfPage": 989,
+      "sourcePromptLead": "  If you wiggle a magnet back and forth in  your hand, are you generating an electric field? If so, is this field conservative? ANSWER EXAMPLE 29.11  Induced el",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-29/05-dien-truong-cam-ung.md",
+          "line": 100,
+          "text": "### Tự kiểm 29.5"
+        }
+      ]
+    },
+    {
+      "id": "29.6",
+      "pdfPage": 990,
+      "sourcePromptLead": "  Suppose that the magnetic field in   Fig. 29.20 were directed out of the plane of the figure and the disk were rotating counterclockwise.  Compared to the dir",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-29/06-dong-dien-foucault.md",
+          "line": 21,
+          "text": "### Tự kiểm 29.6"
+        }
+      ]
+    },
+    {
+      "id": "29.7",
+      "pdfPage": 994,
+      "sourcePromptLead": "  (a) Which of Maxwell’s equations  ­explains how a credit card reader works? (b) Which one describes how a wire carrying a steady  ­current generates a magneti",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-29/07-dong-dien-dich-maxwell.md",
+          "line": 144,
+          "text": "### Tự kiểm 29.7"
+        }
+      ]
+    },
+    {
+      "id": "30.1",
+      "pdfPage": 1011,
+      "sourcePromptLead": "  Consider the Tesla coil described in  Example 30.1. If you make the solenoid out of twice as much wire, so that it has twice as many  turns and is twice as lo",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-30/01-ho-cam.md",
+          "line": 219,
+          "text": "### Câu hỏi ôn tập mục 30.1"
+        }
+      ]
+    },
+    {
+      "id": "30.2",
+      "pdfPage": 1015,
+      "sourcePromptLead": "  Rank the following inductors in order  of the potential difference Vab  , from most positive to most negative. In each case the inductor has  zero resistance ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-30/02-tu-cam.md",
+          "line": 223,
+          "text": "### Câu hỏi ôn tập mục 30.2"
+        }
+      ]
+    },
+    {
+      "id": "30.3",
+      "pdfPage": 1018,
+      "sourcePromptLead": "  The current in a solenoid is reversed in  direction while keeping the same magnitude. (a) Does this change the magnetic field within the so- lenoid? (b) Does ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-30/03-nang-luong-tu-truong.md",
+          "line": 137,
+          "text": "### Câu hỏi ôn tập mục 30.3"
+        }
+      ]
+    },
+    {
+      "id": "30.4",
+      "pdfPage": 1022,
+      "sourcePromptLead": "  (a) In Fig. 30.11, what are the alge- braic signs of the potential differences vab and vbc when switch S1 is closed and switch S2 is open?  (i) vab 7 0, vbc 7",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-30/04-mach-rl.md",
+          "line": 353,
+          "text": "::: exercise Câu hỏi tự kiểm 30.4"
+        }
+      ]
+    },
+    {
+      "id": "30.5",
+      "pdfPage": 1026,
+      "sourcePromptLead": "  One way to think about the energy stored  in an L-C circuit is to say that the circuit elements do positive or negative work on the charges that  move back an",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-30/05-mach-lc.md",
+          "line": 353,
+          "text": "::: exercise Câu hỏi tự kiểm 30.5"
+        }
+      ]
+    },
+    {
+      "id": "30.6",
+      "pdfPage": 1028,
+      "sourcePromptLead": "  An L-R-C series circuit includes a 2.0 Ω  resistor. At t = 0 the capacitor charge is 2.0 mC. For which of the following values of the induc- tance and capacit",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-30/06-mach-rlc.md",
+          "line": 246,
+          "text": "### Câu hỏi tự kiểm 30.6"
+        }
+      ]
+    },
+    {
+      "id": "31.1",
+      "pdfPage": 1041,
+      "sourcePromptLead": "  The accompanying figure shows four  different current phasors with the same angular frequency v. At the time shown, which phasor cor- responds to (a) a positi",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-31/01-gian-do-pha-hieu-dung.md",
+          "line": 156,
+          "text": "### Câu hỏi tự kiểm 31.1"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-31/01-gian-do-pha-hieu-dung.md",
+          "line": 160,
+          "text": "![Tự kiểm 31.1: Bốn vector pha A, B, C, D ở bốn vị trí góc khác nhau và cùng quay ngược chiều kim đồng hồ.](../img/young-31/tu-kiem-31-01.png)"
+        }
+      ]
+    },
+    {
+      "id": "31.2",
+      "pdfPage": 1046,
+      "sourcePromptLead": "  An oscillating voltage of fixed amplitude  is applied across a circuit element. If the frequency of this voltage is increased, will the amplitude  of the curr",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-31/02-dien-tro-dien-khang.md",
+          "line": 327,
+          "text": "### Câu hỏi tự kiểm 31.2"
+        }
+      ]
+    },
+    {
+      "id": "31.3",
+      "pdfPage": 1050,
+      "sourcePromptLead": "  Rank the following ac circuits in order of  their current amplitude, from highest to lowest value. (i) The circuit in Example 31.4; (ii) the circuit  in Examp",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-31/03-mach-rlc-noi-tiep.md",
+          "line": 282,
+          "text": "### Câu hỏi tự kiểm 31.3"
+        }
+      ]
+    },
+    {
+      "id": "31.4",
+      "pdfPage": 1053,
+      "sourcePromptLead": "  Figure 31.16d shows that during part of a  cycle of oscillation, the instantaneous power delivered to the circuit is negative. This means that energy  is bein",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-31/04-cong-suat-xoay-chieu.md",
+          "line": 222,
+          "text": "### Câu hỏi tự kiểm 31.4"
+        }
+      ]
+    },
+    {
+      "id": "31.5",
+      "pdfPage": 1056,
+      "sourcePromptLead": "  How does the resonance frequency of an  L-R-C series circuit change if the plates of the capacitor are brought closer together? (i) It increases;  (ii) it dec",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-31/05-cong-huong.md",
+          "line": 150,
+          "text": "### Câu hỏi tự kiểm 31.5"
+        }
+      ]
+    },
+    {
+      "id": "31.6",
+      "pdfPage": 1059,
+      "sourcePromptLead": "  Each of the following four transformers  has 1000 turns in its primary. Rank the transformers from largest to smallest number of turns in the  secondary. (i) ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-31/06-may-bien-ap.md",
+          "line": 195,
+          "text": "### Câu hỏi tự kiểm 31.6"
+        }
+      ]
+    },
+    {
+      "id": "32.1",
+      "pdfPage": 1072,
+      "sourcePromptLead": "  (a) Is it possible to have a purely electric  wave propagate through empty space—that is, a wave made up of an electric field but no magnetic  field? (b) What",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-32/01-maxwell-song-dien-tu.md",
+          "line": 112,
+          "text": "### Câu hỏi tự kiểm tra 32.1"
+        }
+      ]
+    },
+    {
+      "id": "32.2",
+      "pdfPage": 1077,
+      "sourcePromptLead": "  For each of the following electromagnetic  waves, state the direction of the magnetic field. (a) The wave is propagating in the positive z-direction,  and E S",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-32/02-song-phang-van-toc-anh-sang.md",
+          "line": 243,
+          "text": "### Câu hỏi tự kiểm tra 32.2"
+        }
+      ]
+    },
+    {
+      "id": "32.3",
+      "pdfPage": 1081,
+      "sourcePromptLead": "  The first of Eqs. (32.17) gives the elec- tric field for a plane wave as measured at points along the x-axis. For this plane wave, how does the  ­electric fie",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-32/03-song-hinh-sin.md",
+          "line": 335,
+          "text": "### Câu hỏi tự kiểm tra 32.3"
+        }
+      ]
+    },
+    {
+      "id": "32.4",
+      "pdfPage": 1086,
+      "sourcePromptLead": "  Figure 32.13 shows one wavelength of a  sinusoidal electromagnetic wave at time t = 0. For which of the following four values of x is (a) the  energy density ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-32/04-nang-luong-dong-luong.md",
+          "line": 369,
+          "text": "### Câu hỏi tự kiểm 32.4"
+        }
+      ]
+    },
+    {
+      "id": "32.5",
+      "pdfPage": 1089,
+      "sourcePromptLead": "  In the standing wave described in  Example 32.7, is there any point in the cavity where the energy density is zero at all times? If so,  where? If not, why no",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-32/05-song-dung-dien-tu.md",
+          "line": 237,
+          "text": "### Câu hỏi tự kiểm 32.5"
+        }
+      ]
+    },
+    {
+      "id": "33.1",
+      "pdfPage": 1099,
+      "sourcePromptLead": "  Some crystals are not isotropic: Light  travels through the crystal at a higher speed in some directions than in others. In a crystal in which  light travels ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-33/01-ban-chat-anh-sang.md",
+          "line": 55,
+          "text": "### Câu hỏi tự kiểm tra 33.1"
+        }
+      ]
+    },
+    {
+      "id": "33.2",
+      "pdfPage": 1105,
+      "sourcePromptLead": "  You are standing on the shore of a lake.  You spot a tasty fish swimming some distance below the lake surface. (a) If you want to spear the  fish, should you ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-33/02-phan-xa-khuc-xa.md",
+          "line": 303,
+          "text": "### Câu hỏi tự kiểm tra 33.2"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-33/02-phan-xa-khuc-xa.md",
+          "line": 319,
+          "text": "![Câu tự kiểm tra 33.2: Vị trí biểu kiến của cá cao hơn vị trí thật do khúc xạ tại mặt nước.](../img/young-33/tu-kiem-33-02.png)"
+        }
+      ]
+    },
+    {
+      "id": "33.3",
+      "pdfPage": 1108,
+      "sourcePromptLead": "  In which of the following situations is  there total internal reflection? (i) Light propagating in water 1n = 1.332 strikes a water–air in- terface at an inci",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-33/03-phan-xa-toan-phan.md",
+          "line": 124,
+          "text": "### Câu hỏi tự kiểm tra 33.3"
+        }
+      ]
+    },
+    {
+      "id": "33.5",
+      "pdfPage": 1117,
+      "sourcePromptLead": "  You are taking a photograph of a sunlit  office building at sunrise, so the plane of incidence is nearly horizontal. In order to minimize the  ­reflections fr",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-33/05-phan-cuc.md",
+          "line": 374,
+          "text": "### Câu hỏi tự kiểm 33.5"
+        }
+      ]
+    },
+    {
+      "id": "33.7",
+      "pdfPage": 1121,
+      "sourcePromptLead": "  Sound travels faster in warm air than in  cold air. Imagine a weather front that runs north-south, with warm air to the west of the front and  cold air to the",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-33/07-nguyen-ly-huygens.md",
+          "line": 126,
+          "text": "### Câu hỏi tự kiểm 33.7"
+        }
+      ]
+    },
+    {
+      "id": "34.1",
+      "pdfPage": 1133,
+      "sourcePromptLead": "  If you walk directly toward a plane mir- ror at a speed v, at what speed does your image approach you? (i) Slower than v; (ii) v; (iii) faster  than v but slo",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/01-guong-phang.md",
+          "line": 139,
+          "text": "### Câu tự kiểm tra 34.1"
+        }
+      ]
+    },
+    {
+      "id": "34.2",
+      "pdfPage": 1142,
+      "sourcePromptLead": "  A cosmetics mirror is designed so that  your reflection appears right-side up and enlarged. (a) Is the mirror concave or convex? (b) To see  an enlarged image",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/02-guong-cau.md",
+          "line": 547,
+          "text": "### Câu hỏi tự kiểm tra 34.2"
+        }
+      ]
+    },
+    {
+      "id": "34.3",
+      "pdfPage": 1146,
+      "sourcePromptLead": "  The water droplets in Fig. 34.23 have ­radius  of curvature R and index of refraction n = 1.33. Can they form an image of the sun on the leaf? ANSWER EXAMPLE ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/03-khuc-xa-mat-cau.md",
+          "line": 370,
+          "text": "### Câu hỏi tự kiểm tra 34.3"
+        }
+      ]
+    },
+    {
+      "id": "34.4",
+      "pdfPage": 1155,
+      "sourcePromptLead": "  A diverging lens and an object are posi- tioned as shown in the figure at right. Which of the rays A, B, C, and D could emanate from point Q  at the top of th",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+          "line": 513,
+          "text": "### Câu hỏi tự kiểm tra 34.4"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-34/04-thau-kinh-mong.md",
+          "line": 517,
+          "text": "![Câu hỏi tự kiểm tra 34.4: Các tia ló A, B, C, D của một thấu kính phân kỳ.](../img/young-34/tu-kiem-34-4-de.png)"
+        }
+      ]
+    },
+    {
+      "id": "34.5",
+      "pdfPage": 1158,
+      "sourcePromptLead": "  When used with 35 mm film (image area  24 mm * 36 mm), a lens with f = 50 mm gives a 45° angle of view and is called a “normal lens.”  When used with an elect",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/05-may-anh.md",
+          "line": 159,
+          "text": "### Câu hỏi tự kiểm tra 34.5"
+        }
+      ]
+    },
+    {
+      "id": "34.6",
+      "pdfPage": 1162,
+      "sourcePromptLead": "  A certain eyeglass lens is thin at its   center, even thinner at its top and bottom edges, and relatively thick at its left and right edges. What  defects of ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/06-mat.md",
+          "line": 224,
+          "text": "### Câu hỏi tự kiểm tra 34.6"
+        }
+      ]
+    },
+    {
+      "id": "34.7",
+      "pdfPage": 1163,
+      "sourcePromptLead": "  You are using a magnifier to examine a  gem. If you change to a different magnifier with twice the focal length of the first one, you’ll have to  hold the obj",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/07-kinh-lup.md",
+          "line": 59,
+          "text": "### Câu hỏi tự kiểm tra 34.7"
+        }
+      ]
+    },
+    {
+      "id": "34.8",
+      "pdfPage": 1167,
+      "sourcePromptLead": "  Which gives a lateral magnification of  greater absolute value? (i) The objective lens in a microscope (Fig. 34.52); (ii) the objective lens in  a refracting ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-34/08-kinh-hien-vi-thien-van.md",
+          "line": 131,
+          "text": "### Câu hỏi tự kiểm tra 34.8"
+        }
+      ]
+    },
+    {
+      "id": "35.1",
+      "pdfPage": 1182,
+      "sourcePromptLead": "  Consider a point in Fig. 35.3 on the posi- tive y@axis above S1  . Does this point lie on (i) an antinodal curve; (ii) a nodal curve; or (iii) neither?  (Hint",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-35/01-giao-thoa-nguon-ket-hop.md",
+          "line": 75,
+          "text": "### Câu hỏi tự kiểm tra 35.1"
+        }
+      ]
+    },
+    {
+      "id": "35.2",
+      "pdfPage": 1186,
+      "sourcePromptLead": "  You shine a tunable laser (whose wave- length can be adjusted by turning a knob) on a pair of closely spaced slits. The light emerging from  the two slits pro",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-35/02-giao-thoa-hai-nguon.md",
+          "line": 182,
+          "text": "### Câu hỏi tự kiểm tra 35.2"
+        }
+      ]
+    },
+    {
+      "id": "35.3",
+      "pdfPage": 1189,
+      "sourcePromptLead": "  A two-slit interference experiment uses  coherent light of wavelength 5.00 * 10-7 m. Rank the following points in the interference pattern  according to the i",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-35/03-cuong-do-giao-thoa.md",
+          "line": 297,
+          "text": "### Câu hỏi tự kiểm tra 35.3"
+        }
+      ]
+    },
+    {
+      "id": "35.4",
+      "pdfPage": 1195,
+      "sourcePromptLead": "  A thin layer of benzene 1n = 1.5012 lies  on top of a sheet of fluorite 1n = 1.4342. It is illuminated from above with light whose wavelength  in benzene is 4",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-35/04-giao-thoa-mang-mong.md",
+          "line": 361,
+          "text": "### Câu hỏi tự kiểm tra 35.4"
+        }
+      ]
+    },
+    {
+      "id": "35.5",
+      "pdfPage": 1196,
+      "sourcePromptLead": "  You are observing the pattern of fringes  in a Michelson interferometer like that shown in Fig. 35.19. If you change the index of refraction  (but not the thi",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-35/05-giao-thoa-ke-michelson.md",
+          "line": 69,
+          "text": "### Câu hỏi tự kiểm tra 35.5"
+        }
+      ]
+    },
+    {
+      "id": "36.1",
+      "pdfPage": 1207,
+      "sourcePromptLead": "  Can sound waves undergo diffraction  around an edge? ANSWER ❙  yes  When you hear the voice of someone standing around a corner, you are hearing sound waves  ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-36/01-nhieu-xa-fresnel-fraunhofer.md",
+          "line": 41,
+          "text": "### Câu hỏi tự kiểm tra 36.1"
+        }
+      ]
+    },
+    {
+      "id": "36.2",
+      "pdfPage": 1210,
+      "sourcePromptLead": "  Rank the following single-slit diffraction  experiments in order of the size of the angle from the center of the diffraction pattern to the first  dark fringe",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-36/02-nhieu-xa-mot-khe.md",
+          "line": 179,
+          "text": "### Câu hỏi tự kiểm tra 36.2"
+        }
+      ]
+    },
+    {
+      "id": "36.3",
+      "pdfPage": 1214,
+      "sourcePromptLead": "  Coherent electromagnetic radiation is  sent through a slit of width 0.0100 mm. For which of the following wavelengths will there be no  points in the diffract",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-36/03-cuong-do-nhieu-xa-mot-khe.md",
+          "line": 282,
+          "text": "### Câu hỏi tự kiểm tra 36.3"
+        }
+      ]
+    },
+    {
+      "id": "36.4",
+      "pdfPage": 1216,
+      "sourcePromptLead": "  Suppose two slits, each of width a, are  separated by a distance d = 2.5a. Are there any missing maxima in the interference pattern pro- duced by these slits?",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-36/04-nhieu-khe.md",
+          "line": 167,
+          "text": "### Câu hỏi tự kiểm tra 36.4"
+        }
+      ]
+    },
+    {
+      "id": "36.5",
+      "pdfPage": 1220,
+      "sourcePromptLead": "  What minimum number of slits would be  required in a grating to resolve the sodium doublet in the fourth order? (i) 250; (ii) 400; (iii) 1000;  (iv) 4000. ANS",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-36/05-cach-tu-nhieu-xa.md",
+          "line": 266,
+          "text": "### Câu hỏi tự kiểm tra 36.5"
+        }
+      ]
+    },
+    {
+      "id": "36.6",
+      "pdfPage": 1223,
+      "sourcePromptLead": "  You are doing an x-ray diffraction exper- iment with a crystal in which the atomic planes are 0.200 nm apart. You are using x rays of wave- length 0.0900 nm. ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-36/06-nhieu-xa-tia-x.md",
+          "line": 167,
+          "text": "### Câu hỏi tự kiểm tra 36.6"
+        }
+      ]
+    },
+    {
+      "id": "36.7",
+      "pdfPage": 1225,
+      "sourcePromptLead": "  You have been asked to compare four pro- posals for telescopes to be placed in orbit above the blurring effects of the earth’s atmosphere. Rank  the proposed ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-36/07-khau-do-tron-phan-giai.md",
+          "line": 177,
+          "text": "### Câu hỏi tự kiểm tra 36.7"
+        }
+      ]
+    },
+    {
+      "id": "37.1",
+      "pdfPage": 1240,
+      "sourcePromptLead": "  As a high-speed spaceship flies past you,  it fires a strobe light that sends out a pulse of light in all directions. An observer aboard the spaceship  measur",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-37/01-bat-bien-dinh-luat.md",
+          "line": 87,
+          "text": "### Câu hỏi tự kiểm tra 37.1"
+        }
+      ]
+    },
+    {
+      "id": "37.2",
+      "pdfPage": 1242,
+      "sourcePromptLead": "  Stanley, who works for the rail system  shown in Fig. 37.5, has carefully synchronized the clocks at all of the rail stations. At the moment  that Stanley mea",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-37/02-tinh-tuong-doi-dong-thoi.md",
+          "line": 39,
+          "text": "### Câu hỏi tự kiểm tra 37.2"
+        }
+      ]
+    },
+    {
+      "id": "37.3",
+      "pdfPage": 1247,
+      "sourcePromptLead": "  Samir (who is standing on the ground)  starts his stopwatch at the instant that Maria flies past him in her spaceship at a speed of 0.600c. At  the same insta",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-37/03-gian-thoi-gian.md",
+          "line": 204,
+          "text": "### Câu hỏi tự kiểm tra 37.3"
+        }
+      ]
+    },
+    {
+      "id": "37.4",
+      "pdfPage": 1251,
+      "sourcePromptLead": "  A miniature spaceship is flying past you,  moving horizontally at a substantial fraction of the speed of light. At a certain instant, you observe that  the no",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-37/04-co-chieu-dai.md",
+          "line": 159,
+          "text": "### Câu hỏi tự kiểm tra 37.4"
+        }
+      ]
+    },
+    {
+      "id": "37.5",
+      "pdfPage": 1254,
+      "sourcePromptLead": "  (a) In frame S events P1 and P2 occur  at the same x@, y@, and z@coordinates, but event P1 occurs before event P2. In frame S′, which  event occurs first? (b)",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-37/05-bien-doi-lorentz.md",
+          "line": 159,
+          "text": "### Câu hỏi tự kiểm tra 37.5"
+        }
+      ]
+    },
+    {
+      "id": "37.7",
+      "pdfPage": 1259,
+      "sourcePromptLead": "  According to relativistic mechanics, when  you double the speed of a particle, the magnitude of its momentum increases by (i) a factor of 2;   (ii) a factor g",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-37/07-dong-luong-tuong-doi.md",
+          "line": 124,
+          "text": "### Câu hỏi tự kiểm tra 37.7"
+        }
+      ]
+    },
+    {
+      "id": "37.8",
+      "pdfPage": 1262,
+      "sourcePromptLead": "  A proton is accelerated from rest by a  constant force that always points in the direction of the particle’s motion. Compared to the amount  of kinetic energy",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-37/08-cong-nang-luong-tuong-doi.md",
+          "line": 206,
+          "text": "### Câu hỏi tự kiểm tra 37.8"
+        }
+      ]
+    },
+    {
+      "id": "38.1",
+      "pdfPage": 1279,
+      "sourcePromptLead": "  Silicon films become better electri- cal conductors when illuminated by photons with energies of 1.14 eV or greater, an effect called  ­photoconductivity. Whi",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-38/01-quang-dien.md",
+          "line": 353,
+          "text": "### Câu hỏi tự kiểm tra 38.1"
+        }
+      ]
+    },
+    {
+      "id": "38.2",
+      "pdfPage": 1282,
+      "sourcePromptLead": "  In the apparatus shown in Fig. 38.7,  suppose you increase the number of electrons that are emitted from the cathode per second while  keeping the potential d",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-38/02-phat-tia-x.md",
+          "line": 117,
+          "text": "### Câu hỏi tự kiểm tra 38.2"
+        }
+      ]
+    },
+    {
+      "id": "38.3",
+      "pdfPage": 1285,
+      "sourcePromptLead": "  If you used visible-light photons in the  experiment shown in Fig. 38.11, would the photons undergo a wavelength shift due to the scatter- ing? If so, is it p",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-38/03-compton-tao-cap.md",
+          "line": 351,
+          "text": "### Câu hỏi tự kiểm tra 38.3"
+        }
+      ]
+    },
+    {
+      "id": "38.4",
+      "pdfPage": 1292,
+      "sourcePromptLead": "  Through which of the following angles  is a photon of wavelength l most likely to be deflected after passing through a slit of width a?  Assume that l is much",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-38/04-luong-tinh-bat-dinh.md",
+          "line": 327,
+          "text": "### Câu hỏi tự kiểm tra 38.4"
+        }
+      ]
+    },
+    {
+      "id": "39.1",
+      "pdfPage": 1305,
+      "sourcePromptLead": "  (a) A proton has a slightly smaller mass  than a neutron. Compared to the neutron described in Example 39.2, would a proton of the same  wavelength have (i) m",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-39/01-song-electron.md",
+          "line": 255,
+          "text": "### Câu hỏi tự kiểm tra 39.1"
+        }
+      ]
+    },
+    {
+      "id": "39.2",
+      "pdfPage": 1309,
+      "sourcePromptLead": "  Suppose you repeated Rutherford’s scat- tering experiment with a thin sheet of solid hydrogen in place of the gold foil. (Hydrogen is a solid  at temperatures",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-39/02-nguyen-tu-hat-nhan-pho.md",
+          "line": 181,
+          "text": "### Câu hỏi tự kiểm tra 39.2"
+        }
+      ]
+    },
+    {
+      "id": "39.3",
+      "pdfPage": 1320,
+      "sourcePromptLead": "  Consider the possible transitions ­between  energy levels in a He+ ion. For which of these transitions in He+ will the wavelength of the emit- ted photon be n",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-39/03-muc-nang-luong-bohr.md",
+          "line": 474,
+          "text": "### Câu hỏi tự kiểm tra 39.3"
+        }
+      ]
+    },
+    {
+      "id": "39.4",
+      "pdfPage": 1322,
+      "sourcePromptLead": "  An ordinary neon light fixture like those  used in advertising signs emits red light of wavelength 632.8 nm. Neon atoms are also used in a  helium–neon laser ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-39/04-laser.md",
+          "line": 111,
+          "text": "### Câu hỏi tự kiểm tra 39.4"
+        }
+      ]
+    },
+    {
+      "id": "39.5",
+      "pdfPage": 1328,
+      "sourcePromptLead": "  (a) Does a blackbody at 2000 K emit  x rays? (b) Does it emit radio waves? ANSWER ❙  (a) yes, (b) yes  The Planck radiation law, Eq. (39.24), shows that an id",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-39/05-pho-lien-tuc.md",
+          "line": 251,
+          "text": "### Câu hỏi tự kiểm tra 39.5"
+        }
+      ]
+    },
+    {
+      "id": "39.6",
+      "pdfPage": 1330,
+      "sourcePromptLead": "  Rank the following situations according  to the uncertainty in x-momentum, from largest to smallest. The mass of the proton is 1836 times  the mass of the ele",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-39/06-bat-dinh-vat-chat.md",
+          "line": 155,
+          "text": "### Câu hỏi tự kiểm tra 39.6"
+        }
+      ]
+    },
+    {
+      "id": "40.1",
+      "pdfPage": 1351,
+      "sourcePromptLead": "  Does a wave packet given by Eq. (40.19)  represent a stationary state? ANSWER ❙  no  Equation (40.19) represents a superposition of wave functions with differ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-40/01-ham-song-schrodinger.md",
+          "line": 501,
+          "text": "### Câu hỏi tự kiểm tra 40.1"
+        }
+      ]
+    },
+    {
+      "id": "40.2",
+      "pdfPage": 1356,
+      "sourcePromptLead": "  If a particle in a box is in the nth energy  level, what is the average value of its x-component of momentum px? (i) nh>2L; (ii) 112>22nh>L;  (iii) 11>122nh>L",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-40/02-hat-trong-hop.md",
+          "line": 305,
+          "text": "### Câu hỏi tự kiểm tra 40.2"
+        }
+      ]
+    },
+    {
+      "id": "40.3",
+      "pdfPage": 1360,
+      "sourcePromptLead": "  Suppose that the width of the finite po- tential well shown in Fig. 40.15 is reduced by one-half. How must the value of U0 change so that  there are still jus",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-40/03-gieng-the.md",
+          "line": 308,
+          "text": "### Câu hỏi tự kiểm tra 40.3"
+        }
+      ]
+    },
+    {
+      "id": "40.4",
+      "pdfPage": 1362,
+      "sourcePromptLead": "  Is it possible for a particle undergoing  tunneling to be found within the barrier rather than on either side of it? ANSWER (a) (b) L Probe Surface electrons ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-40/04-hang-rao-xuyen-ham.md",
+          "line": 182,
+          "text": "### Câu hỏi tự kiểm tra 40.4"
+        }
+      ]
+    },
+    {
+      "id": "40.5",
+      "pdfPage": 1367,
+      "sourcePromptLead": "  A quantum-mechanical system initially  in its ground level absorbs a photon and ends up in the first excited state. The system then absorbs a  second photon a",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-40/05-dao-dong-tu-dieu-hoa.md",
+          "line": 297,
+          "text": "### Câu hỏi tự kiểm tra 40.5"
+        }
+      ]
+    },
+    {
+      "id": "40.6",
+      "pdfPage": 1370,
+      "sourcePromptLead": "  A particle in a box is described by   a wave function that is a combination of the n = 1 and n = 2 stationary states: Ψ1x, t2 = Cc11x2e-iE1t>U + Dc21x2e-iE2t>",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-40/06-phep-do-luong-tu.md",
+          "line": 173,
+          "text": "### Câu hỏi tự kiểm tra 40.6"
+        }
+      ]
+    },
+    {
+      "id": "41.1",
+      "pdfPage": 1382,
+      "sourcePromptLead": "  In a certain region of space the  potential-energy function for a quantum-mechanical particle is zero. In this region the wave func- tion c1x, y, z2 for a cer",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/01-schrodinger-ba-chieu.md",
+          "line": 87,
+          "text": "### Câu tự kiểm tra 41.1"
+        }
+      ]
+    },
+    {
+      "id": "41.2",
+      "pdfPage": 1387,
+      "sourcePromptLead": "  Rank the following states of a particle  in a cubical box of side L in order from highest to lowest energy: (i) 1nX, nY, nZ2 = 12, 3, 22;  (ii) 1nX, nY, nZ2 =",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/02-hop-ba-chieu.md",
+          "line": 253,
+          "text": "### Câu tự kiểm tra 41.2"
+        }
+      ]
+    },
+    {
+      "id": "41.3",
+      "pdfPage": 1395,
+      "sourcePromptLead": "  Rank the following states of the  ­hydrogen atom in order from highest to lowest probability of finding the electron in the vicinity   of r = 5a: (i) n = 1, l",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/03-nguyen-tu-hydro.md",
+          "line": 416,
+          "text": "### Câu tự kiểm tra 41.3"
+        }
+      ]
+    },
+    {
+      "id": "41.4",
+      "pdfPage": 1398,
+      "sourcePromptLead": "  In this section we assumed that the  magnetic field points in the positive z@direction. Would the results be different if the magnetic field  pointed in the p",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/04-hieu-ung-zeeman.md",
+          "line": 261,
+          "text": "### Câu tự kiểm tra 41.4"
+        }
+      ]
+    },
+    {
+      "id": "41.5",
+      "pdfPage": 1405,
+      "sourcePromptLead": "  In which of the following situations  is the magnetic moment of an electron perfectly aligned with a magnetic field that points in the  ­positive z@direction?",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/05-spin-electron.md",
+          "line": 420,
+          "text": "### Câu tự kiểm tra 41.5"
+        }
+      ]
+    },
+    {
+      "id": "41.6",
+      "pdfPage": 1411,
+      "sourcePromptLead": "  If electrons did not obey the exclusion  principle, would it be easier or more difficult to remove the first electron from sodium? ANSWER ❙  more difficult  I",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/06-nguyen-tu-nhieu-electron.md",
+          "line": 267,
+          "text": "### Câu tự kiểm tra 41.6"
+        }
+      ]
+    },
+    {
+      "id": "41.7",
+      "pdfPage": 1415,
+      "sourcePromptLead": "  A beam of photons is passed through a  sample of high-temperature atomic hydrogen. At what photon energy would you expect there to be  an absorption edge like",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/07-pho-tia-x.md",
+          "line": 197,
+          "text": "### Câu tự kiểm tra 41.7"
+        }
+      ]
+    },
+    {
+      "id": "41.8",
+      "pdfPage": 1418,
+      "sourcePromptLead": "  Particle 1 is an electron that can be in   state C or D. Particle 2 is a proton that can be in state E or F. Is c1r S 1, r S 22 = 11>1223cC1r S 12cE1r S 22 + ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-41/08-roi-luong-tu.md",
+          "line": 81,
+          "text": "### Câu tự kiểm tra 41.8"
+        }
+      ]
+    },
+    {
+      "id": "42.1",
+      "pdfPage": 1431,
+      "sourcePromptLead": "  If electrons obeyed the exclusion prin- ciple but did not have spin, how many electrons could participate in a covalent bond? (i) One;  (ii) two; (iii) three;",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-42/01-lien-ket-phan-tu.md",
+          "line": 165,
+          "text": "### Câu tự kiểm tra 42.1"
+        }
+      ]
+    },
+    {
+      "id": "42.2",
+      "pdfPage": 1435,
+      "sourcePromptLead": "  A rotating diatomic molecule emits a  photon when it makes a transition from level (n, l) to level (n - 1, l - 1). If the value of l increases  but n is uncha",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-42/02-pho-phan-tu.md",
+          "line": 381,
+          "text": "### Câu tự kiểm tra 42.2"
+        }
+      ]
+    },
+    {
+      "id": "42.3",
+      "pdfPage": 1438,
+      "sourcePromptLead": "  If a is the distance in an NaCl crystal  from an Na+ ion to one of its nearest-neighbor Cl- ions, what is the distance from an Na+ ion to one  of its next-to-",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-42/03-cau-truc-chat-ran.md",
+          "line": 185,
+          "text": "### Câu tự kiểm tra 42.3"
+        }
+      ]
+    },
+    {
+      "id": "42.4",
+      "pdfPage": 1440,
+      "sourcePromptLead": "  One type of thermometer works by mea- suring the temperature-dependent electrical resistivity of a sample. Which of the following types  of material displays ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-42/04-dai-nang-luong.md",
+          "line": 102,
+          "text": "### Câu tự kiểm tra 42.4"
+        }
+      ]
+    },
+    {
+      "id": "42.5",
+      "pdfPage": 1445,
+      "sourcePromptLead": "  An ideal gas obeys the relationship  pV = nRT (see Section 18.1): For a given volume V and a number of moles n, as the temperature T  decreases, the pressure ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-42/05-mo-hinh-electron-tu-do.md",
+          "line": 442,
+          "text": "### Kiểm tra mức độ hiểu mục 42.5"
+        }
+      ]
+    },
+    {
+      "id": "42.6",
+      "pdfPage": 1448,
+      "sourcePromptLead": "  Would there be any advantage to adding  n-type or p-type impurities to copper? ANSWER (a) An acceptor (p-type) impurity atom has only three valence electrons,",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-42/06-chat-ban-dan.md",
+          "line": 232,
+          "text": "### Kiểm tra mức độ hiểu mục 42.6"
+        }
+      ]
+    },
+    {
+      "id": "42.7",
+      "pdfPage": 1452,
+      "sourcePromptLead": "  Suppose a negative charge is placed on  the gate of the MOSFET shown in Fig. 42.35. Will a substantial current flow between the source  and the drain? ANSWER ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-42/07-thiet-bi-ban-dan.md",
+          "line": 163,
+          "text": "### Kiểm tra mức độ hiểu mục 42.7"
+        }
+      ]
+    },
+    {
+      "id": "43.1",
+      "pdfPage": 1467,
+      "sourcePromptLead": "  (a) By what factor must the mass number of  a nucleus increase to double its volume? (i) 1 3 2; (ii) 12 ; (iii) 2; (iv) 4; (v) 8. (b) By what factor must  the",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/01-tinh-chat-hat-nhan.md",
+          "line": 495,
+          "text": "### Câu hỏi tự kiểm tra 43.1"
+        }
+      ]
+    },
+    {
+      "id": "43.2",
+      "pdfPage": 1472,
+      "sourcePromptLead": "  Rank the following nuclei in order from  largest to smallest value of the binding energy per nucleon. (i) 2 4He; (ii) 24 52Cr; (iii) 62 152Sm; (iv) 80 200Hg; ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/02-nang-luong-lien-ket.md",
+          "line": 231,
+          "text": "### Kiểm tra độ hiểu 43.2"
+        }
+      ]
+    },
+    {
+      "id": "43.3",
+      "pdfPage": 1479,
+      "sourcePromptLead": "  A nucleus with atomic number Z and neu- tron number N undergoes two decay processes. The result is a nucleus with atomic number Z - 3  and neutron number N - ",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/03-on-dinh-va-phong-xa.md",
+          "line": 244,
+          "text": "### Kiểm tra độ hiểu 43.3"
+        }
+      ]
+    },
+    {
+      "id": "43.4",
+      "pdfPage": 1482,
+      "sourcePromptLead": "  Which sample contains a greater number  of nuclei: a 5.00 mCi sample of 240Pu (half-life 6560 y) or a 4.45 mCi sample of 243Am (half-life  7370 y)? (i) The 24",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md",
+          "line": 323,
+          "text": "### Kiểm tra hiểu biết 43.4"
+        }
+      ]
+    },
+    {
+      "id": "43.5",
+      "pdfPage": 1485,
+      "sourcePromptLead": "  Alpha particles have 20 times the rela- tive biological effectiveness of 200 keV x rays. Which would be better to use to radiate tissue deep  inside the body?",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/05-tac-dung-sinh-hoc.md",
+          "line": 210,
+          "text": "### Kiểm tra hiểu biết 43.5"
+        }
+      ]
+    },
+    {
+      "id": "43.6",
+      "pdfPage": 1488,
+      "sourcePromptLead": "  The reaction described in part (a) of  Example 43.11 is exoergic. Can it happen naturally when a sample of solid lithium is placed in a  flask of hydrogen gas",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/06-phan-ung-hat-nhan.md",
+          "line": 223,
+          "text": "### Kiểm tra hiểu biết 43.6"
+        }
+      ]
+    },
+    {
+      "id": "43.7",
+      "pdfPage": 1492,
+      "sourcePromptLead": "  The fission of 235U can be triggered by  the absorption of a slow neutron by a nucleus. Can a slow proton be used to trigger 235U fission? ANSWER ❙  no  Becau",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/07-phan-hach.md",
+          "line": 173,
+          "text": "### Kiểm tra hiểu biết 43.7"
+        }
+      ]
+    },
+    {
+      "id": "43.8",
+      "pdfPage": 1494,
+      "sourcePromptLead": "  Are all fusion reactions exoergic? ANSWER Figure 43.18  This target chamber at the  National Ignition Facility in California has  apertures for 192 powerful l",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-43/08-nhiet-hach.md",
+          "line": 191,
+          "text": "### Kiểm tra hiểu biết 43.8"
+        }
+      ]
+    },
+    {
+      "id": "44.1",
+      "pdfPage": 1508,
+      "sourcePromptLead": "  Each of the following particles can be  exchanged between two protons, two neutrons, or a neutron and a proton as part of the nuclear  force. Rank the particl",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-44/01-lich-su-hat-co-ban.md",
+          "line": 163,
+          "text": "### Câu tự kiểm tra 44.1"
+        }
+      ]
+    },
+    {
+      "id": "44.2",
+      "pdfPage": 1512,
+      "sourcePromptLead": "  In a colliding-beam experiment, a  90 GeV electron collides head-on with a 90 GeV positron. The electron and the positron annihilate  each other, forming a si",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-44/02-may-gia-toc-va-detector.md",
+          "line": 287,
+          "text": "### Câu tự kiểm tra 44.2"
+        }
+      ]
+    },
+    {
+      "id": "44.3",
+      "pdfPage": 1518,
+      "sourcePromptLead": "  From conservation of energy, a particle  of mass m and rest energy mc2 can decay only if the decay products have a total mass less than m.  (The remaining ene",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-44/03-hat-va-tuong-tac.md",
+          "line": 622,
+          "text": "### Câu tự kiểm tra 44.3"
+        }
+      ]
+    },
+    {
+      "id": "44.4",
+      "pdfPage": 1522,
+      "sourcePromptLead": "  Is it possible to have a baryon with  charge Q = +e and strangeness S = -2? ANSWER ❙  no  Only the s quark, with S = -1, has nonzero strangeness. For a baryon",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-44/04-quark-va-gluon.md",
+          "line": 229,
+          "text": "### Câu tự kiểm tra 44.4"
+        }
+      ]
+    },
+    {
+      "id": "44.5",
+      "pdfPage": 1524,
+      "sourcePromptLead": "  One aspect of the standard model is  that a d quark can transform into a u quark, an electron, and an antineutrino by means of the weak  ­interaction. If this",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-44/05-mo-hinh-chuan.md",
+          "line": 55,
+          "text": "### Câu tự kiểm tra 44.5"
+        }
+      ]
+    },
+    {
+      "id": "44.6",
+      "pdfPage": 1531,
+      "sourcePromptLead": "  Is it accurate to say that your body is  made of “ordinary” matter? ANSWER ❙  yes. . . and no  The material of which your body is made is ordinary to us on ea",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-44/06-vu-tru-gian-no.md",
+          "line": 223,
+          "text": "### Câu tự kiểm tra 44.6"
+        }
+      ]
+    },
+    {
+      "id": "44.7",
+      "pdfPage": 1538,
+      "sourcePromptLead": "  Given a sufficiently powerful telescope,  could we detect photons emitted earlier than t = 380,000 y? ANSWER EXAMPLE 44.12  Expansion of the universe By appro",
+      "destinations": [
+        {
+          "file": "raw_materials/physics/translations/chapter-44/07-khoi-dau-thoi-gian.md",
+          "line": 266,
+          "text": "### Câu tự kiểm tra 44.7"
+        }
+      ]
+    }
+  ],
+  "limits": "All280 original selfcheck IDs mapped to active Notes question labels or manually compared generic headings. Formal destination presence only; this does not certify every translated option, calculation or its distance from the relevant explanation.",
+  "excludedSourceReference": {
+    "pdfPage": 852,
+    "id": "25.4",
+    "reason": "Answer to25.5 refers to earlier25.4, not a duplicate selfcheck."
+  },
+  "parentReadSourcePages": [
+    587,
+    842,
+    847,
+    852,
+    922
+  ]
+}

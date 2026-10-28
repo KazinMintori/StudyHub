@@ -1,0 +1,262 @@
+{
+  "status": "accepted-observed-public-fixes-only",
+  "observedAtUTC": "2026-10-28T18:53:32.331477+00:00",
+  "deployedRevision": "c5aed757de2beff268f2efce7a2b3eff34a1dc9f",
+  "cloudRun": 40743373435,
+  "cloudBuild": "success",
+  "cloudDeploy": "success",
+  "routeCount": 9,
+  "viewportCases": 45,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "cases": [
+    {
+      "id": "spring",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "spring",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "spring",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "spring",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "spring",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "gravity",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "gravity",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "gravity",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "gravity",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "gravity",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "heat-proof",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "heat-proof",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "heat-proof",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "heat-proof",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "heat-proof",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "tunneling",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "tunneling",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "tunneling",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "tunneling",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "tunneling",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "force-label",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "force-label",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "force-label",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "force-label",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "force-label",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "decay",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "decay",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "decay",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "decay",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "decay",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "thermal-boxes",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "thermal-boxes",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "thermal-boxes",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "thermal-boxes",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "thermal-boxes",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "particle-boxes",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "particle-boxes",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "particle-boxes",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "particle-boxes",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "particle-boxes",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "id": "otto",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "id": "otto",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "id": "otto",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "id": "otto",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "id": "otto",
+      "width": 320,
+      "issues": []
+    }
+  ],
+  "imagesByteIdenticalToDeployedGit": [
+    {
+      "id": "decay",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-43-08.K_Jeiuf9.png",
+      "glossRows": 0,
+      "text": "Hình 43.8: Số hạt nhân chưa phân rã giảm theo hàm mũ và còn một nửa sau mỗi chu kỳ bán rã.",
+      "servedSHA256": "2c6433eba0826ae1fbf5baece9bce4d8ce1667bdb28382365936954100f6c988"
+    },
+    {
+      "id": "otto",
+      "url": "https://kazinmintori.github.io/StudyHub/physics-exercises/assets/6f15eed6c1c06352-c-hinh-20-06.png",
+      "glossRows": 0,
+      "text": "",
+      "servedSHA256": "6f15eed6c1c0635294fa93906cb75ff819c952153deb102be0a14de1f246390d"
+    }
+  ],
+  "limits": "Named nine public routes and two image byte proofs only. Actual visible content and layout were observed. This is not semantic source validation for all 44 chapters or a cryptographic identity claim about every deployed file.",
+  "fullGoalComplete": false
+}
