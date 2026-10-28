@@ -1,0 +1,4475 @@
+{
+  "status": "accepted-formal-section-and-example-presence-only",
+  "chapters": [
+    {
+      "chapter": 1,
+      "sourceSections": [
+        {
+          "id": "1.1",
+          "pdfPage": 21,
+          "title": "1.1  THE NATURE OF PHYSICS"
+        },
+        {
+          "id": "1.2",
+          "pdfPage": 22,
+          "title": "1.2  SOLVING PHYSICS PROBLEMS"
+        },
+        {
+          "id": "1.3",
+          "pdfPage": 23,
+          "title": "1.3  STANDARDS AND UNITS"
+        },
+        {
+          "id": "1.4",
+          "pdfPage": 26,
+          "title": "1.4  USING AND CONVERTING UNITS"
+        },
+        {
+          "id": "1.5",
+          "pdfPage": 28,
+          "title": "1.5  UNCERTAINTY AND SIGNIFICANT FIGURES"
+        },
+        {
+          "id": "1.6",
+          "pdfPage": 30,
+          "title": "1.6  ESTIMATES AND ORDERS OF MAGNITUDE"
+        },
+        {
+          "id": "1.7",
+          "pdfPage": 30,
+          "title": "1.7  VECTORS AND VECTOR ADDITION"
+        },
+        {
+          "id": "1.8",
+          "pdfPage": 34,
+          "title": "1.8  COMPONENTS OF VECTORS"
+        },
+        {
+          "id": "1.9",
+          "pdfPage": 38,
+          "title": "1.9  UNIT VECTORS"
+        },
+        {
+          "id": "1.10",
+          "pdfPage": 39,
+          "title": "1.10  PRODUCTS OF VECTORS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "1.1",
+          "pdfPage": 27,
+          "title": "EXAMPLE 1.1  Converting speed units"
+        },
+        {
+          "id": "1.2",
+          "pdfPage": 27,
+          "title": "EXAMPLE 1.2  Converting volume units"
+        },
+        {
+          "id": "1.3",
+          "pdfPage": 29,
+          "title": "EXAMPLE 1.3  Significant figures in multiplication"
+        },
+        {
+          "id": "1.4",
+          "pdfPage": 30,
+          "title": "EXAMPLE 1.4  An order-of-magnitude estimate"
+        },
+        {
+          "id": "1.5",
+          "pdfPage": 33,
+          "title": "EXAMPLE 1.5  Adding two vectors at right angles"
+        },
+        {
+          "id": "1.6",
+          "pdfPage": 35,
+          "title": "EXAMPLE 1.6  Finding components"
+        },
+        {
+          "id": "1.7",
+          "pdfPage": 37,
+          "title": "EXAMPLE 1.7  Using components to add vectors"
+        },
+        {
+          "id": "1.8",
+          "pdfPage": 39,
+          "title": "EXAMPLE 1.8  Using unit vectors"
+        },
+        {
+          "id": "1.9",
+          "pdfPage": 41,
+          "title": "EXAMPLE 1.9  Calculating a scalar product"
+        },
+        {
+          "id": "1.10",
+          "pdfPage": 41,
+          "title": "EXAMPLE 1.10  Finding an angle with the scalar product"
+        },
+        {
+          "id": "1.11",
+          "pdfPage": 44,
+          "title": "EXAMPLE 1.11  Calculating a vector product"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 2,
+      "sourceSections": [
+        {
+          "id": "2.1",
+          "pdfPage": 54,
+          "title": "2.1  DISPLACEMENT, TIME, AND AVERAGE VELOCITY"
+        },
+        {
+          "id": "2.2",
+          "pdfPage": 57,
+          "title": "2.2  INSTANTANEOUS VELOCITY"
+        },
+        {
+          "id": "2.3",
+          "pdfPage": 60,
+          "title": "2.3  AVERAGE AND INSTANTANEOUS ACCELERATION"
+        },
+        {
+          "id": "2.4",
+          "pdfPage": 64,
+          "title": "2.4  MOTION WITH CONSTANT ACCELERATION"
+        },
+        {
+          "id": "2.5",
+          "pdfPage": 70,
+          "title": "2.5  FREELY FALLING OBJECTS"
+        },
+        {
+          "id": "2.6",
+          "pdfPage": 73,
+          "title": "2.6  VELOCITY AND POSITION BY INTEGRATION"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "2.1",
+          "pdfPage": 58,
+          "title": "EXAMPLE 2.1  Average and instantaneous velocities"
+        },
+        {
+          "id": "2.2",
+          "pdfPage": 61,
+          "title": "EXAMPLE 2.2  Average acceleration"
+        },
+        {
+          "id": "2.3",
+          "pdfPage": 62,
+          "title": "EXAMPLE 2.3  Average and instantaneous accelerations"
+        },
+        {
+          "id": "2.5",
+          "pdfPage": 68,
+          "title": "EXAMPLE 2.5  Two objects with different accelerations"
+        },
+        {
+          "id": "2.4",
+          "pdfPage": 68,
+          "title": "EXAMPLE 2.4  Constant-acceleration calculations"
+        },
+        {
+          "id": "2.6",
+          "pdfPage": 70,
+          "title": "EXAMPLE 2.6  A freely falling coin"
+        },
+        {
+          "id": "2.7",
+          "pdfPage": 71,
+          "title": "EXAMPLE 2.7  Up-and-down motion in free fall"
+        },
+        {
+          "id": "2.8",
+          "pdfPage": 72,
+          "title": "EXAMPLE 2.8  Two solutions or one?"
+        },
+        {
+          "id": "2.9",
+          "pdfPage": 75,
+          "title": "EXAMPLE 2.9  Motion with changing acceleration"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 3,
+      "sourceSections": [
+        {
+          "id": "3.1",
+          "pdfPage": 86,
+          "title": "3.1  POSITION AND VELOCITY VECTORS"
+        },
+        {
+          "id": "3.2",
+          "pdfPage": 89,
+          "title": "3.2  THE ACCELERATION VECTOR"
+        },
+        {
+          "id": "3.3",
+          "pdfPage": 94,
+          "title": "3.3  PROJECTILE MOTION"
+        },
+        {
+          "id": "3.4",
+          "pdfPage": 101,
+          "title": "3.4  MOTION IN A CIRCLE"
+        },
+        {
+          "id": "3.5",
+          "pdfPage": 104,
+          "title": "3.5  RELATIVE VELOCITY"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "3.1",
+          "pdfPage": 88,
+          "title": "EXAMPLE 3.1  Calculating average and instantaneous velocity"
+        },
+        {
+          "id": "3.2",
+          "pdfPage": 91,
+          "title": "EXAMPLE 3.2  Calculating average and instantaneous acceleration"
+        },
+        {
+          "id": "3.4",
+          "pdfPage": 93,
+          "title": "CONCEPTUAL EXAMPLE 3.4  Acceleration of a skier"
+        },
+        {
+          "id": "3.3",
+          "pdfPage": 93,
+          "title": "EXAMPLE 3.3  Calculating parallel and perpendicular components of acceleration"
+        },
+        {
+          "id": "3.5",
+          "pdfPage": 96,
+          "title": "CONCEPTUAL EXAMPLE 3.5  Acceleration of a skier, continued"
+        },
+        {
+          "id": "3.6",
+          "pdfPage": 97,
+          "title": "EXAMPLE 3.6  An object projected horizontally"
+        },
+        {
+          "id": "3.7",
+          "pdfPage": 98,
+          "title": "EXAMPLE 3.7  Height and range of a projectile I: A batted baseball"
+        },
+        {
+          "id": "3.9",
+          "pdfPage": 99,
+          "title": "EXAMPLE 3.9  Different initial and final heights"
+        },
+        {
+          "id": "3.8",
+          "pdfPage": 99,
+          "title": "EXAMPLE 3.8  Height and range of a projectile II: Maximum height, maximum range"
+        },
+        {
+          "id": "3.10",
+          "pdfPage": 100,
+          "title": "EXAMPLE 3.10  The zookeeper and the monkey"
+        },
+        {
+          "id": "3.12",
+          "pdfPage": 103,
+          "title": "EXAMPLE 3.12  Centripetal acceleration on a carnival ride"
+        },
+        {
+          "id": "3.11",
+          "pdfPage": 103,
+          "title": "EXAMPLE 3.11  Centripetal acceleration on a curved road"
+        },
+        {
+          "id": "3.13",
+          "pdfPage": 106,
+          "title": "EXAMPLE 3.13  Relative velocity on a straight road"
+        },
+        {
+          "id": "3.14",
+          "pdfPage": 108,
+          "title": "EXAMPLE 3.14  Flying in a crosswind"
+        },
+        {
+          "id": "3.15",
+          "pdfPage": 108,
+          "title": "EXAMPLE 3.15  Correcting for a crosswind"
+        }
+      ],
+      "resolvedHeadingStyleLeads": [
+        {
+          "id": "3.45",
+          "pdfPage": 115,
+          "title": "3.45 ••  CALC If r",
+          "disposition": "False sourceheading: Problem3.45CALC, not a section. Numericprefixfont/wholelineuppercaseheuristic misclassified it."
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "sourceSections": [
+        {
+          "id": "4.1",
+          "pdfPage": 120,
+          "title": "4.1  FORCE AND INTERACTIONS"
+        },
+        {
+          "id": "4.2",
+          "pdfPage": 123,
+          "title": "4.2  NEWTON’S FIRST LAW"
+        },
+        {
+          "id": "4.3",
+          "pdfPage": 127,
+          "title": "4.3  NEWTON’S SECOND LAW"
+        },
+        {
+          "id": "4.4",
+          "pdfPage": 133,
+          "title": "4.4  MASS AND WEIGHT"
+        },
+        {
+          "id": "4.5",
+          "pdfPage": 135,
+          "title": "4.5  NEWTON’S THIRD LAW"
+        },
+        {
+          "id": "4.6",
+          "pdfPage": 139,
+          "title": "4.6  FREE-BODY DIAGRAMS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "4.1",
+          "pdfPage": 123,
+          "title": "EXAMPLE 4.1  Superposition of forces: Finding the net force"
+        },
+        {
+          "id": "4.2",
+          "pdfPage": 125,
+          "title": "CONCEPTUAL EXAMPLE 4.2  Using Newton’s first law I"
+        },
+        {
+          "id": "4.3",
+          "pdfPage": 125,
+          "title": "CONCEPTUAL EXAMPLE 4.3  Using Newton’s first law II"
+        },
+        {
+          "id": "4.4",
+          "pdfPage": 131,
+          "title": "EXAMPLE 4.4  Newton’s second law I: Determining acceleration from force"
+        },
+        {
+          "id": "4.5",
+          "pdfPage": 131,
+          "title": "EXAMPLE 4.5  Newton’s second law II: Determining force from acceleration"
+        },
+        {
+          "id": "4.6",
+          "pdfPage": 134,
+          "title": "CONCEPTUAL EXAMPLE 4.6  Net external force and acceleration in free fall"
+        },
+        {
+          "id": "4.7",
+          "pdfPage": 135,
+          "title": "EXAMPLE 4.7  Mass and weight"
+        },
+        {
+          "id": "4.8",
+          "pdfPage": 136,
+          "title": "CONCEPTUAL EXAMPLE 4.8  Which force is greater?"
+        },
+        {
+          "id": "4.9",
+          "pdfPage": 136,
+          "title": "CONCEPTUAL EXAMPLE 4.9  Newton’s third law I: Objects at rest"
+        },
+        {
+          "id": "4.10",
+          "pdfPage": 137,
+          "title": "CONCEPTUAL EXAMPLE 4.10  Newton’s third law II: Objects in motion"
+        },
+        {
+          "id": "4.11",
+          "pdfPage": 138,
+          "title": "CONCEPTUAL EXAMPLE 4.11  A Newton’s third law paradox?"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 5,
+      "sourceSections": [
+        {
+          "id": "5.1",
+          "pdfPage": 149,
+          "title": "5.1  USING NEWTON’S FIRST LAW:"
+        },
+        {
+          "id": "5.2",
+          "pdfPage": 154,
+          "title": "5.2  USING NEWTON’S SECOND LAW:"
+        },
+        {
+          "id": "5.3",
+          "pdfPage": 161,
+          "title": "5.3  FRICTION FORCES"
+        },
+        {
+          "id": "5.4",
+          "pdfPage": 169,
+          "title": "5.4  DYNAMICS OF CIRCULAR MOTION"
+        },
+        {
+          "id": "5.5",
+          "pdfPage": 174,
+          "title": "5.5  THE FUNDAMENTAL FORCES OF NATURE"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "5.1",
+          "pdfPage": 150,
+          "title": "EXAMPLE 5.1  One-dimensional equilibrium: Tension in a massless rope"
+        },
+        {
+          "id": "5.2",
+          "pdfPage": 151,
+          "title": "EXAMPLE 5.2  One-dimensional equilibrium: Tension in a rope with mass"
+        },
+        {
+          "id": "5.3",
+          "pdfPage": 152,
+          "title": "EXAMPLE 5.3  Two-dimensional equilibrium"
+        },
+        {
+          "id": "5.4",
+          "pdfPage": 152,
+          "title": "EXAMPLE 5.4  An inclined plane"
+        },
+        {
+          "id": "5.5",
+          "pdfPage": 153,
+          "title": "EXAMPLE 5.5  Equilibrium of objects connected by cable and pulley"
+        },
+        {
+          "id": "5.6",
+          "pdfPage": 155,
+          "title": "EXAMPLE 5.6  Straight-line motion with a constant force"
+        },
+        {
+          "id": "5.7",
+          "pdfPage": 156,
+          "title": "EXAMPLE 5.7  Straight-line motion with friction"
+        },
+        {
+          "id": "5.8",
+          "pdfPage": 156,
+          "title": "EXAMPLE 5.8  Tension in an elevator cable"
+        },
+        {
+          "id": "5.9",
+          "pdfPage": 157,
+          "title": "EXAMPLE 5.9  Apparent weight in an accelerating elevator"
+        },
+        {
+          "id": "5.10",
+          "pdfPage": 158,
+          "title": "EXAMPLE 5.10  Acceleration down a hill"
+        },
+        {
+          "id": "5.11",
+          "pdfPage": 159,
+          "title": "EXAMPLE 5.11  Two objects with the same acceleration"
+        },
+        {
+          "id": "5.12",
+          "pdfPage": 160,
+          "title": "EXAMPLE 5.12  Two objects with the same magnitude of acceleration"
+        },
+        {
+          "id": "5.13",
+          "pdfPage": 164,
+          "title": "EXAMPLE 5.13  Friction in horizontal motion"
+        },
+        {
+          "id": "5.14",
+          "pdfPage": 164,
+          "title": "EXAMPLE 5.14  Static friction can be less than the maximum"
+        },
+        {
+          "id": "5.15",
+          "pdfPage": 164,
+          "title": "EXAMPLE 5.15  Minimizing kinetic friction"
+        },
+        {
+          "id": "5.16",
+          "pdfPage": 165,
+          "title": "EXAMPLE 5.16  Toboggan ride with friction I"
+        },
+        {
+          "id": "5.17",
+          "pdfPage": 165,
+          "title": "EXAMPLE 5.17  Toboggan ride with friction II"
+        },
+        {
+          "id": "5.18",
+          "pdfPage": 168,
+          "title": "EXAMPLE 5.18  Terminal speed of a skydiver"
+        },
+        {
+          "id": "5.19",
+          "pdfPage": 170,
+          "title": "EXAMPLE 5.19  Force in uniform circular motion"
+        },
+        {
+          "id": "5.20",
+          "pdfPage": 171,
+          "title": "EXAMPLE 5.20  A conical pendulum"
+        },
+        {
+          "id": "5.21",
+          "pdfPage": 171,
+          "title": "EXAMPLE 5.21  Rounding a flat curve"
+        },
+        {
+          "id": "5.22",
+          "pdfPage": 172,
+          "title": "EXAMPLE 5.22  Rounding a banked curve"
+        },
+        {
+          "id": "5.23",
+          "pdfPage": 173,
+          "title": "EXAMPLE 5.23  Uniform circular motion in a vertical circle"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 6,
+      "sourceSections": [
+        {
+          "id": "6.2",
+          "pdfPage": 196,
+          "title": "6.2  KINETIC ENERGY AND THE WORK–ENERGY THEOREM"
+        },
+        {
+          "id": "6.3",
+          "pdfPage": 201,
+          "title": "6.3  WORK AND ENERGY WITH VARYING FORCES"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "6.1",
+          "pdfPage": 193,
+          "title": "EXAMPLE 6.1  Work done by a constant force"
+        },
+        {
+          "id": "6.2",
+          "pdfPage": 195,
+          "title": "EXAMPLE 6.2  Work done by several forces"
+        },
+        {
+          "id": "6.3",
+          "pdfPage": 198,
+          "title": "EXAMPLE 6.3  Using work and energy to calculate speed"
+        },
+        {
+          "id": "6.4",
+          "pdfPage": 199,
+          "title": "EXAMPLE 6.4  Forces on a hammerhead"
+        },
+        {
+          "id": "6.5",
+          "pdfPage": 200,
+          "title": "CONCEPTUAL EXAMPLE 6.5  Comparing kinetic energies"
+        },
+        {
+          "id": "6.6",
+          "pdfPage": 203,
+          "title": "EXAMPLE 6.6  Work done on a spring scale"
+        },
+        {
+          "id": "6.7",
+          "pdfPage": 204,
+          "title": "EXAMPLE 6.7  Motion with a varying force"
+        },
+        {
+          "id": "6.8",
+          "pdfPage": 206,
+          "title": "EXAMPLE 6.8  Motion on a curved path"
+        },
+        {
+          "id": "6.9",
+          "pdfPage": 208,
+          "title": "EXAMPLE 6.9  Force and power"
+        },
+        {
+          "id": "6.10",
+          "pdfPage": 209,
+          "title": "EXAMPLE 6.10  A “power climb”"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 7,
+      "sourceSections": [
+        {
+          "id": "7.1",
+          "pdfPage": 221,
+          "title": "7.1  GRAVITATIONAL POTENTIAL ENERGY"
+        },
+        {
+          "id": "7.2",
+          "pdfPage": 230,
+          "title": "7.2  ELASTIC POTENTIAL ENERGY"
+        },
+        {
+          "id": "7.3",
+          "pdfPage": 235,
+          "title": "7.3  CONSERVATIVE AND NONCONSERVATIVE FORCES"
+        },
+        {
+          "id": "7.4",
+          "pdfPage": 239,
+          "title": "7.4  FORCE AND POTENTIAL ENERGY"
+        },
+        {
+          "id": "7.5",
+          "pdfPage": 242,
+          "title": "7.5  ENERGY DIAGRAMS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "7.1",
+          "pdfPage": 224,
+          "title": "EXAMPLE 7.1  Height of a baseball from energy conservation"
+        },
+        {
+          "id": "7.2",
+          "pdfPage": 225,
+          "title": "EXAMPLE 7.2  Work and energy in throwing a baseball"
+        },
+        {
+          "id": "7.3",
+          "pdfPage": 227,
+          "title": "CONCEPTUAL EXAMPLE 7.3  Energy in projectile motion"
+        },
+        {
+          "id": "7.4",
+          "pdfPage": 227,
+          "title": "EXAMPLE 7.4  Speed at the bottom of a vertical circle"
+        },
+        {
+          "id": "7.5",
+          "pdfPage": 228,
+          "title": "EXAMPLE 7.5  A vertical circle with friction"
+        },
+        {
+          "id": "7.6",
+          "pdfPage": 229,
+          "title": "EXAMPLE 7.6  An inclined plane with friction"
+        },
+        {
+          "id": "7.7",
+          "pdfPage": 233,
+          "title": "EXAMPLE 7.7  Motion with elastic potential energy"
+        },
+        {
+          "id": "7.8",
+          "pdfPage": 233,
+          "title": "EXAMPLE 7.8  Motion with elastic potential energy and work done by other forces"
+        },
+        {
+          "id": "7.9",
+          "pdfPage": 234,
+          "title": "EXAMPLE 7.9  Motion with gravitational, elastic, and friction forces"
+        },
+        {
+          "id": "7.10",
+          "pdfPage": 236,
+          "title": "EXAMPLE 7.10  Frictional work depends on the path"
+        },
+        {
+          "id": "7.11",
+          "pdfPage": 237,
+          "title": "EXAMPLE 7.11  Conservative or nonconservative?"
+        },
+        {
+          "id": "7.12",
+          "pdfPage": 238,
+          "title": "CONCEPTUAL EXAMPLE 7.12  Work done by friction"
+        },
+        {
+          "id": "7.13",
+          "pdfPage": 240,
+          "title": "EXAMPLE 7.13  An electric force and its potential energy"
+        },
+        {
+          "id": "7.14",
+          "pdfPage": 241,
+          "title": "EXAMPLE 7.14  Force and potential energy in two dimensions"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 8,
+      "sourceSections": [
+        {
+          "id": "8.1",
+          "pdfPage": 255,
+          "title": "8.1  MOMENTUM AND IMPULSE"
+        },
+        {
+          "id": "8.2",
+          "pdfPage": 261,
+          "title": "8.2  CONSERVATION OF MOMENTUM"
+        },
+        {
+          "id": "8.3",
+          "pdfPage": 265,
+          "title": "8.3  MOMENTUM CONSERVATION AND COLLISIONS"
+        },
+        {
+          "id": "8.4",
+          "pdfPage": 269,
+          "title": "8.4  ELASTIC COLLISIONS"
+        },
+        {
+          "id": "8.5",
+          "pdfPage": 273,
+          "title": "8.5  CENTER OF MASS"
+        },
+        {
+          "id": "8.6",
+          "pdfPage": 276,
+          "title": "8.6  ROCKET PROPULSION"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "8.1",
+          "pdfPage": 258,
+          "title": "CONCEPTUAL EXAMPLE 8.1  Momentum versus kinetic energy"
+        },
+        {
+          "id": "8.2",
+          "pdfPage": 259,
+          "title": "EXAMPLE 8.2  A ball hits a wall"
+        },
+        {
+          "id": "8.3",
+          "pdfPage": 260,
+          "title": "EXAMPLE 8.3  Kicking a soccer ball"
+        },
+        {
+          "id": "8.4",
+          "pdfPage": 263,
+          "title": "EXAMPLE 8.4  Recoil of a rifle"
+        },
+        {
+          "id": "8.5",
+          "pdfPage": 263,
+          "title": "EXAMPLE 8.5  Collision along a straight line"
+        },
+        {
+          "id": "8.6",
+          "pdfPage": 264,
+          "title": "EXAMPLE 8.6  Collision in a horizontal plane"
+        },
+        {
+          "id": "8.7",
+          "pdfPage": 266,
+          "title": "EXAMPLE 8.7  A completely inelastic collision"
+        },
+        {
+          "id": "8.8",
+          "pdfPage": 267,
+          "title": "EXAMPLE 8.8  The ballistic pendulum"
+        },
+        {
+          "id": "8.9",
+          "pdfPage": 268,
+          "title": "EXAMPLE 8.9  An automobile collision"
+        },
+        {
+          "id": "8.10",
+          "pdfPage": 271,
+          "title": "EXAMPLE 8.10  An elastic straight-line collision"
+        },
+        {
+          "id": "8.11",
+          "pdfPage": 271,
+          "title": "EXAMPLE 8.11  Moderating fission neutrons in a nuclear reactor"
+        },
+        {
+          "id": "8.12",
+          "pdfPage": 272,
+          "title": "EXAMPLE 8.12  A two-dimensional elastic collision"
+        },
+        {
+          "id": "8.13",
+          "pdfPage": 273,
+          "title": "EXAMPLE 8.13  Center of mass of a water molecule"
+        },
+        {
+          "id": "8.14",
+          "pdfPage": 274,
+          "title": "EXAMPLE 8.14  A tug-of-war on the ice"
+        },
+        {
+          "id": "8.15",
+          "pdfPage": 278,
+          "title": "EXAMPLE 8.15  Acceleration of a rocket"
+        },
+        {
+          "id": "8.16",
+          "pdfPage": 279,
+          "title": "EXAMPLE 8.16  Speed of a rocket"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 9,
+      "sourceSections": [
+        {
+          "id": "9.1",
+          "pdfPage": 292,
+          "title": "9.1   ANGULAR VELOCITY AND ACCELERATION"
+        },
+        {
+          "id": "9.2",
+          "pdfPage": 297,
+          "title": "9.2  ROTATION WITH CONSTANT ANGULAR ACCELERATION"
+        },
+        {
+          "id": "9.3",
+          "pdfPage": 299,
+          "title": "9.3  RELATING LINEAR AND ANGULAR KINEMATICS"
+        },
+        {
+          "id": "9.4",
+          "pdfPage": 302,
+          "title": "9.4  ENERGY IN ROTATIONAL MOTION"
+        },
+        {
+          "id": "9.5",
+          "pdfPage": 307,
+          "title": "9.5  PARALLEL-AXIS THEOREM"
+        },
+        {
+          "id": "9.6",
+          "pdfPage": 309,
+          "title": "9.6  MOMENT-OF-INERTIA CALCULATIONS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "9.1",
+          "pdfPage": 294,
+          "title": "EXAMPLE 9.1  Calculating angular velocity"
+        },
+        {
+          "id": "9.2",
+          "pdfPage": 296,
+          "title": "EXAMPLE 9.2  Calculating angular acceleration"
+        },
+        {
+          "id": "9.3",
+          "pdfPage": 298,
+          "title": "EXAMPLE 9.3  Rotation with constant angular acceleration"
+        },
+        {
+          "id": "9.4",
+          "pdfPage": 301,
+          "title": "EXAMPLE 9.4  Throwing a discus"
+        },
+        {
+          "id": "9.5",
+          "pdfPage": 302,
+          "title": "EXAMPLE 9.5  Designing a propeller"
+        },
+        {
+          "id": "9.6",
+          "pdfPage": 304,
+          "title": "EXAMPLE 9.6  Moments of inertia for different rotation axes"
+        },
+        {
+          "id": "9.7",
+          "pdfPage": 305,
+          "title": "EXAMPLE 9.7  An unwinding cable I"
+        },
+        {
+          "id": "9.8",
+          "pdfPage": 306,
+          "title": "EXAMPLE 9.8  An unwinding cable II"
+        },
+        {
+          "id": "9.9",
+          "pdfPage": 308,
+          "title": "EXAMPLE 9.9  Using the parallel-axis theorem"
+        },
+        {
+          "id": "9.10",
+          "pdfPage": 309,
+          "title": "EXAMPLE 9.10  Hollow or solid cylinder, rotating about axis of symmetry"
+        },
+        {
+          "id": "9.11",
+          "pdfPage": 310,
+          "title": "EXAMPLE 9.11  Uniform sphere with radius R, axis through center"
+        }
+      ],
+      "resolvedHeadingStyleLeads": [
+        {
+          "id": "9.1",
+          "pdfPage": 292,
+          "title": "9.1   ANGULAR VELOCITY AND ACCELERATION",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/09-dong-hoc-vat-ran/van-toc-va-gia-toc-goc.md",
+          "topicTitle": "Vận tốc góc và gia tốc góc"
+        },
+        {
+          "id": "9.2",
+          "pdfPage": 297,
+          "title": "9.2  ROTATION WITH CONSTANT ANGULAR ACCELERATION",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/09-dong-hoc-vat-ran/quay-gia-toc-goc-khong-doi.md",
+          "topicTitle": "Quay với gia tốc góc không đổi"
+        },
+        {
+          "id": "9.3",
+          "pdfPage": 299,
+          "title": "9.3  RELATING LINEAR AND ANGULAR KINEMATICS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/09-dong-hoc-vat-ran/lien-he-dai-luong-dai-va-goc.md",
+          "topicTitle": "Liên hệ đại lượng dài và đại lượng góc"
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "sourceSections": [
+        {
+          "id": "10.1",
+          "pdfPage": 322,
+          "title": "10.1  TORQUE"
+        },
+        {
+          "id": "10.2",
+          "pdfPage": 325,
+          "title": "10.2  TORQUE AND ANGULAR ACCELERATION"
+        },
+        {
+          "id": "10.3",
+          "pdfPage": 328,
+          "title": "10.3  RIGID-BODY ROTATION ABOUT A MOVING AXIS"
+        },
+        {
+          "id": "10.4",
+          "pdfPage": 334,
+          "title": "10.4  WORK AND POWER IN ROTATIONAL MOTION"
+        },
+        {
+          "id": "10.5",
+          "pdfPage": 336,
+          "title": "10.5  ANGULAR MOMENTUM"
+        },
+        {
+          "id": "10.6",
+          "pdfPage": 339,
+          "title": "10.6  CONSERVATION OF ANGULAR MOMENTUM"
+        },
+        {
+          "id": "10.7",
+          "pdfPage": 342,
+          "title": "10.7  GYROSCOPES AND PRECESSION"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "10.1",
+          "pdfPage": 324,
+          "title": "EXAMPLE 10.1  Applying a torque"
+        },
+        {
+          "id": "10.2",
+          "pdfPage": 327,
+          "title": "EXAMPLE 10.2  An unwinding cable I"
+        },
+        {
+          "id": "10.3",
+          "pdfPage": 327,
+          "title": "EXAMPLE 10.3  An unwinding cable II"
+        },
+        {
+          "id": "10.4",
+          "pdfPage": 330,
+          "title": "EXAMPLE 10.4  Speed of a primitive yo-yo"
+        },
+        {
+          "id": "10.5",
+          "pdfPage": 331,
+          "title": "EXAMPLE 10.5  Race of the rolling bodies"
+        },
+        {
+          "id": "10.6",
+          "pdfPage": 332,
+          "title": "EXAMPLE 10.6  Acceleration of a primitive yo-yo"
+        },
+        {
+          "id": "10.7",
+          "pdfPage": 333,
+          "title": "EXAMPLE 10.7  Acceleration of a rolling sphere"
+        },
+        {
+          "id": "10.8",
+          "pdfPage": 335,
+          "title": "EXAMPLE 10.8  Calculating power from torque"
+        },
+        {
+          "id": "10.9",
+          "pdfPage": 338,
+          "title": "EXAMPLE 10.9  Angular momentum and torque"
+        },
+        {
+          "id": "10.11",
+          "pdfPage": 340,
+          "title": "EXAMPLE 10.11  A rotational “collision”"
+        },
+        {
+          "id": "10.10",
+          "pdfPage": 340,
+          "title": "EXAMPLE 10.10  Anyone can be a ballerina"
+        },
+        {
+          "id": "10.12",
+          "pdfPage": 341,
+          "title": "EXAMPLE 10.12  Angular momentum in a crime bust"
+        },
+        {
+          "id": "10.13",
+          "pdfPage": 344,
+          "title": "EXAMPLE 10.13  A precessing gyroscope"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 11,
+      "sourceSections": [
+        {
+          "id": "11.1",
+          "pdfPage": 357,
+          "title": "11.1  CONDITIONS FOR EQUILIBRIUM"
+        },
+        {
+          "id": "11.2",
+          "pdfPage": 358,
+          "title": "11.2  CENTER OF GRAVITY"
+        },
+        {
+          "id": "11.3",
+          "pdfPage": 361,
+          "title": "11.3  SOLVING RIGID-BODY EQUILIBRIUM PROBLEMS"
+        },
+        {
+          "id": "11.4",
+          "pdfPage": 365,
+          "title": "11.4  STRESS, STRAIN, AND ELASTIC MODULI"
+        },
+        {
+          "id": "11.5",
+          "pdfPage": 371,
+          "title": "11.5  ELASTICITY AND PLASTICITY"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "11.1",
+          "pdfPage": 361,
+          "title": "EXAMPLE 11.1  Walking the plank"
+        },
+        {
+          "id": "11.2",
+          "pdfPage": 362,
+          "title": "EXAMPLE 11.2  Locating your center of gravity while you work out"
+        },
+        {
+          "id": "11.3",
+          "pdfPage": 363,
+          "title": "EXAMPLE 11.3  Will the ladder slip?"
+        },
+        {
+          "id": "11.4",
+          "pdfPage": 364,
+          "title": "EXAMPLE 11.4  Equilibrium and pumping iron"
+        },
+        {
+          "id": "11.5",
+          "pdfPage": 368,
+          "title": "EXAMPLE 11.5  Tensile stress and strain"
+        },
+        {
+          "id": "11.6",
+          "pdfPage": 369,
+          "title": "EXAMPLE 11.6  Bulk stress and strain"
+        },
+        {
+          "id": "11.7",
+          "pdfPage": 370,
+          "title": "EXAMPLE 11.7  Shear stress and strain"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 12,
+      "sourceSections": [
+        {
+          "id": "12.1",
+          "pdfPage": 386,
+          "title": "12.1   GASES, LIQUIDS, AND DENSITY"
+        },
+        {
+          "id": "12.2",
+          "pdfPage": 388,
+          "title": "12.2   PRESSURE IN A FLUID"
+        },
+        {
+          "id": "12.3",
+          "pdfPage": 393,
+          "title": "12.3   BUOYANCY"
+        },
+        {
+          "id": "12.4",
+          "pdfPage": 396,
+          "title": "12.4   FLUID FLOW"
+        },
+        {
+          "id": "12.5",
+          "pdfPage": 398,
+          "title": "12.5   BERNOULLI’S EQUATION"
+        },
+        {
+          "id": "12.6",
+          "pdfPage": 402,
+          "title": "12.6   VISCOSITY AND TURBULENCE"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "12.1",
+          "pdfPage": 387,
+          "title": "EXAMPLE 12.1  The weight of a roomful of air"
+        },
+        {
+          "id": "12.2",
+          "pdfPage": 389,
+          "title": "EXAMPLE 12.2  The force of air"
+        },
+        {
+          "id": "12.3",
+          "pdfPage": 391,
+          "title": "EXAMPLE 12.3  Finding absolute and gauge pressures"
+        },
+        {
+          "id": "12.4",
+          "pdfPage": 392,
+          "title": "EXAMPLE 12.4  A tale of two fluids"
+        },
+        {
+          "id": "12.5",
+          "pdfPage": 394,
+          "title": "EXAMPLE 12.5  Buoyancy"
+        },
+        {
+          "id": "12.6",
+          "pdfPage": 397,
+          "title": "EXAMPLE 12.6  Flow of an incompressible fluid"
+        },
+        {
+          "id": "12.7",
+          "pdfPage": 400,
+          "title": "EXAMPLE 12.7  Water pressure in the home"
+        },
+        {
+          "id": "12.8",
+          "pdfPage": 400,
+          "title": "EXAMPLE 12.8  Speed of efflux"
+        },
+        {
+          "id": "12.9",
+          "pdfPage": 401,
+          "title": "EXAMPLE 12.9  The Venturi meter"
+        },
+        {
+          "id": "12.10",
+          "pdfPage": 401,
+          "title": "CONCEPTUAL EXAMPLE 12.10  Lift on an airplane wing"
+        },
+        {
+          "id": "12.11",
+          "pdfPage": 404,
+          "title": "CONCEPTUAL EXAMPLE 12.11  The curve ball"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 13,
+      "sourceSections": [
+        {
+          "id": "13.1",
+          "pdfPage": 415,
+          "title": "13.1  NEWTON’S LAW OF GRAVITATION"
+        },
+        {
+          "id": "13.2",
+          "pdfPage": 419,
+          "title": "13.2   WEIGHT"
+        },
+        {
+          "id": "13.3",
+          "pdfPage": 422,
+          "title": "13.3   GRAVITATIONAL POTENTIAL ENERGY"
+        },
+        {
+          "id": "13.4",
+          "pdfPage": 424,
+          "title": "13.4   THE MOTION OF SATELLITES"
+        },
+        {
+          "id": "13.5",
+          "pdfPage": 427,
+          "title": "13.5   KEPLER’S LAWS AND THE MOTION OF PLANETS"
+        },
+        {
+          "id": "13.6",
+          "pdfPage": 431,
+          "title": "13.6   SPHERICAL MASS DISTRIBUTIONS"
+        },
+        {
+          "id": "13.7",
+          "pdfPage": 434,
+          "title": "13.7   APPARENT WEIGHT AND THE EARTH’S ROTATION"
+        },
+        {
+          "id": "13.8",
+          "pdfPage": 435,
+          "title": "13.8   BLACK HOLES"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "13.1",
+          "pdfPage": 417,
+          "title": "EXAMPLE 13.1  Calculating gravitational force"
+        },
+        {
+          "id": "13.2",
+          "pdfPage": 418,
+          "title": "EXAMPLE 13.2  Acceleration due to gravitational attraction"
+        },
+        {
+          "id": "13.3",
+          "pdfPage": 418,
+          "title": "EXAMPLE 13.3  Superposition of gravitational forces"
+        },
+        {
+          "id": "13.4",
+          "pdfPage": 421,
+          "title": "EXAMPLE 13.4  Gravity on Mars"
+        },
+        {
+          "id": "13.5",
+          "pdfPage": 423,
+          "title": "EXAMPLE 13.5  “From the earth to the moon”"
+        },
+        {
+          "id": "13.6",
+          "pdfPage": 426,
+          "title": "EXAMPLE 13.6  A satellite orbit"
+        },
+        {
+          "id": "13.7",
+          "pdfPage": 429,
+          "title": "CONCEPTUAL EXAMPLE 13.7  Orbital speeds"
+        },
+        {
+          "id": "13.8",
+          "pdfPage": 429,
+          "title": "EXAMPLE 13.8  Kepler’s third law"
+        },
+        {
+          "id": "13.9",
+          "pdfPage": 430,
+          "title": "EXAMPLE 13.9  Comet Halley"
+        },
+        {
+          "id": "13.10",
+          "pdfPage": 433,
+          "title": "EXAMPLE 13.10  “Journey to the center of the earth”"
+        },
+        {
+          "id": "13.11",
+          "pdfPage": 437,
+          "title": "EXAMPLE 13.11  Black hole calculations"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 14,
+      "sourceSections": [
+        {
+          "id": "14.1",
+          "pdfPage": 449,
+          "title": "14.1  DESCRIBING OSCILLATION"
+        },
+        {
+          "id": "14.2",
+          "pdfPage": 451,
+          "title": "14.2  SIMPLE HARMONIC MOTION"
+        },
+        {
+          "id": "14.3",
+          "pdfPage": 458,
+          "title": "14.3  ENERGY IN SIMPLE HARMONIC MOTION"
+        },
+        {
+          "id": "14.4",
+          "pdfPage": 462,
+          "title": "14.4  APPLICATIONS OF SIMPLE HARMONIC MOTION"
+        },
+        {
+          "id": "14.5",
+          "pdfPage": 466,
+          "title": "14.5  THE SIMPLE PENDULUM"
+        },
+        {
+          "id": "14.6",
+          "pdfPage": 467,
+          "title": "14.6  THE PHYSICAL PENDULUM"
+        },
+        {
+          "id": "14.7",
+          "pdfPage": 469,
+          "title": "14.7  DAMPED OSCILLATIONS"
+        },
+        {
+          "id": "14.8",
+          "pdfPage": 471,
+          "title": "14.8  FORCED OSCILLATIONS AND RESONANCE"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "14.1",
+          "pdfPage": 451,
+          "title": "EXAMPLE 14.1  Period, frequency, and angular frequency"
+        },
+        {
+          "id": "14.2",
+          "pdfPage": 454,
+          "title": "EXAMPLE 14.2  Angular frequency, frequency, and period in SHM"
+        },
+        {
+          "id": "14.3",
+          "pdfPage": 458,
+          "title": "EXAMPLE 14.3  Describing SHM"
+        },
+        {
+          "id": "14.4",
+          "pdfPage": 460,
+          "title": "EXAMPLE 14.4  Velocity, acceleration, and energy in SHM"
+        },
+        {
+          "id": "14.5",
+          "pdfPage": 461,
+          "title": "EXAMPLE 14.5  Energy and momentum in SHM"
+        },
+        {
+          "id": "14.6",
+          "pdfPage": 463,
+          "title": "EXAMPLE 14.6  Vertical SHM in an old car"
+        },
+        {
+          "id": "14.7",
+          "pdfPage": 465,
+          "title": "EXAMPLE 14.7  Molecular vibration"
+        },
+        {
+          "id": "14.8",
+          "pdfPage": 467,
+          "title": "EXAMPLE 14.8  A simple pendulum"
+        },
+        {
+          "id": "14.9",
+          "pdfPage": 468,
+          "title": "EXAMPLE 14.9  Physical pendulum versus simple pendulum"
+        },
+        {
+          "id": "14.10",
+          "pdfPage": 469,
+          "title": "EXAMPLE 14.10  Tyrannosaurus rex and the physical pendulum"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 15,
+      "sourceSections": [
+        {
+          "id": "15.1",
+          "pdfPage": 484,
+          "title": "15.1   TYPES OF MECHANICAL WAVES"
+        },
+        {
+          "id": "15.2",
+          "pdfPage": 486,
+          "title": "15.2   PERIODIC WAVES"
+        },
+        {
+          "id": "15.3",
+          "pdfPage": 489,
+          "title": "15.3   MATHEMATICAL DESCRIPTION OF A WAVE"
+        },
+        {
+          "id": "15.4",
+          "pdfPage": 494,
+          "title": "15.4   SPEED OF A TRANSVERSE WAVE"
+        },
+        {
+          "id": "15.5",
+          "pdfPage": 498,
+          "title": "15.5   ENERGY IN WAVE MOTION"
+        },
+        {
+          "id": "15.6",
+          "pdfPage": 501,
+          "title": "15.6   WAVE INTERFERENCE, BOUNDARY CONDITIONS,"
+        },
+        {
+          "id": "15.7",
+          "pdfPage": 503,
+          "title": "15.7   STANDING WAVES ON A STRING"
+        },
+        {
+          "id": "15.8",
+          "pdfPage": 506,
+          "title": "15.8   NORMAL MODES OF A STRING"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "15.1",
+          "pdfPage": 488,
+          "title": "EXAMPLE 15.1  Wavelength of a musical sound"
+        },
+        {
+          "id": "15.2",
+          "pdfPage": 492,
+          "title": "EXAMPLE 15.2  Wave on a clothesline"
+        },
+        {
+          "id": "15.3",
+          "pdfPage": 497,
+          "title": "EXAMPLE 15.3  Calculating wave speed"
+        },
+        {
+          "id": "15.4",
+          "pdfPage": 499,
+          "title": "EXAMPLE 15.4  Power in a wave"
+        },
+        {
+          "id": "15.5",
+          "pdfPage": 500,
+          "title": "EXAMPLE 15.5  The inverse-square law"
+        },
+        {
+          "id": "15.6",
+          "pdfPage": 506,
+          "title": "EXAMPLE 15.6  Standing waves on a guitar string"
+        },
+        {
+          "id": "15.7",
+          "pdfPage": 509,
+          "title": "EXAMPLE 15.7  A giant bass viol"
+        },
+        {
+          "id": "15.8",
+          "pdfPage": 510,
+          "title": "EXAMPLE 15.8  From waves on a string to sound waves in air"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 16,
+      "sourceSections": [
+        {
+          "id": "16.1",
+          "pdfPage": 521,
+          "title": "16.1   SOUND WAVES"
+        },
+        {
+          "id": "16.2",
+          "pdfPage": 526,
+          "title": "16.2   SPEED OF SOUND WAVES"
+        },
+        {
+          "id": "16.3",
+          "pdfPage": 530,
+          "title": "16.3   SOUND INTENSITY"
+        },
+        {
+          "id": "16.4",
+          "pdfPage": 534,
+          "title": "16.4   STANDING SOUND WAVES AND NORMAL MODES"
+        },
+        {
+          "id": "16.5",
+          "pdfPage": 538,
+          "title": "16.5   RESONANCE AND SOUND"
+        },
+        {
+          "id": "16.6",
+          "pdfPage": 540,
+          "title": "16.6   INTERFERENCE OF WAVES"
+        },
+        {
+          "id": "16.8",
+          "pdfPage": 544,
+          "title": "16.8   THE DOPPLER EFFECT"
+        },
+        {
+          "id": "16.9",
+          "pdfPage": 549,
+          "title": "16.9   SHOCK WAVES"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "16.1",
+          "pdfPage": 524,
+          "title": "EXAMPLE 16.1  Amplitude of a sound wave in air"
+        },
+        {
+          "id": "16.2",
+          "pdfPage": 524,
+          "title": "EXAMPLE 16.2  Amplitude of a sound wave in the inner ear"
+        },
+        {
+          "id": "16.3",
+          "pdfPage": 528,
+          "title": "EXAMPLE 16.3  Wavelength of sonar waves"
+        },
+        {
+          "id": "16.4",
+          "pdfPage": 529,
+          "title": "EXAMPLE 16.4  Speed of sound in air"
+        },
+        {
+          "id": "16.5",
+          "pdfPage": 531,
+          "title": "EXAMPLE 16.5  Intensity of a sound wave in air"
+        },
+        {
+          "id": "16.6",
+          "pdfPage": 532,
+          "title": "EXAMPLE 16.6  Same intensity, different frequencies"
+        },
+        {
+          "id": "16.7",
+          "pdfPage": 532,
+          "title": "EXAMPLE 16.7  “Play it loud!”"
+        },
+        {
+          "id": "16.8",
+          "pdfPage": 533,
+          "title": "EXAMPLE 16.8  Temporary—or permanent—hearing loss"
+        },
+        {
+          "id": "16.9",
+          "pdfPage": 533,
+          "title": "EXAMPLE 16.9  A bird sings in a meadow"
+        },
+        {
+          "id": "16.10",
+          "pdfPage": 535,
+          "title": "CONCEPTUAL EXAMPLE 16.10  The sound of silence"
+        },
+        {
+          "id": "16.11",
+          "pdfPage": 537,
+          "title": "EXAMPLE 16.11  A tale of two pipes"
+        },
+        {
+          "id": "16.12",
+          "pdfPage": 539,
+          "title": "EXAMPLE 16.12  An organ–guitar duet"
+        },
+        {
+          "id": "16.13",
+          "pdfPage": 541,
+          "title": "EXAMPLE 16.13  Loudspeaker interference"
+        },
+        {
+          "id": "16.14",
+          "pdfPage": 546,
+          "title": "EXAMPLE 16.14  Doppler effect I: Wavelengths"
+        },
+        {
+          "id": "16.16",
+          "pdfPage": 547,
+          "title": "EXAMPLE 16.16  Doppler effect III: A moving listener"
+        },
+        {
+          "id": "16.15",
+          "pdfPage": 547,
+          "title": "EXAMPLE 16.15  Doppler effect II: Frequencies"
+        },
+        {
+          "id": "16.17",
+          "pdfPage": 547,
+          "title": "EXAMPLE 16.17  Doppler effect IV: Moving source, moving listener"
+        },
+        {
+          "id": "16.18",
+          "pdfPage": 548,
+          "title": "EXAMPLE 16.18  Doppler effect V: A double Doppler shift"
+        },
+        {
+          "id": "16.19",
+          "pdfPage": 550,
+          "title": "EXAMPLE 16.19  Sonic boom from a supersonic airplane"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 17,
+      "sourceSections": [
+        {
+          "id": "17.1",
+          "pdfPage": 561,
+          "title": "17.1   TEMPERATURE AND THERMAL EQUILIBRIUM"
+        },
+        {
+          "id": "17.2",
+          "pdfPage": 563,
+          "title": "17.2   THERMOMETERS AND TEMPERATURE SCALES"
+        },
+        {
+          "id": "17.3",
+          "pdfPage": 565,
+          "title": "17.3   GAS THERMOMETERS AND THE KELVIN SCALE"
+        },
+        {
+          "id": "17.4",
+          "pdfPage": 567,
+          "title": "17.4  THERMAL EXPANSION"
+        },
+        {
+          "id": "17.5",
+          "pdfPage": 572,
+          "title": "17.5   QUANTITY OF HEAT"
+        },
+        {
+          "id": "17.6",
+          "pdfPage": 575,
+          "title": "17.6   CALORIMETRY AND PHASE CHANGES"
+        },
+        {
+          "id": "17.7",
+          "pdfPage": 581,
+          "title": "17.7   MECHANISMS OF HEAT TRANSFER"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "17.1",
+          "pdfPage": 566,
+          "title": "EXAMPLE 17.1  Body temperature"
+        },
+        {
+          "id": "17.2",
+          "pdfPage": 569,
+          "title": "EXAMPLE 17.2  Length change due to temperature change"
+        },
+        {
+          "id": "17.3",
+          "pdfPage": 570,
+          "title": "EXAMPLE 17.3  Volume change due to temperature change"
+        },
+        {
+          "id": "17.4",
+          "pdfPage": 571,
+          "title": "EXAMPLE 17.4  Thermal stress"
+        },
+        {
+          "id": "17.5",
+          "pdfPage": 573,
+          "title": "EXAMPLE 17.5  Feed a cold, starve a fever"
+        },
+        {
+          "id": "17.6",
+          "pdfPage": 573,
+          "title": "EXAMPLE 17.6  Overheating electronics"
+        },
+        {
+          "id": "17.7",
+          "pdfPage": 579,
+          "title": "EXAMPLE 17.7  A temperature change with no phase change"
+        },
+        {
+          "id": "17.8",
+          "pdfPage": 579,
+          "title": "EXAMPLE 17.8  Changes in both temperature and phase"
+        },
+        {
+          "id": "17.9",
+          "pdfPage": 580,
+          "title": "EXAMPLE 17.9  What’s cooking?"
+        },
+        {
+          "id": "17.10",
+          "pdfPage": 580,
+          "title": "EXAMPLE 17.10  Combustion, temperature change, and phase change"
+        },
+        {
+          "id": "17.11",
+          "pdfPage": 583,
+          "title": "EXAMPLE 17.11  Conduction into a picnic cooler"
+        },
+        {
+          "id": "17.12",
+          "pdfPage": 583,
+          "title": "EXAMPLE 17.12  Conduction through two bars I"
+        },
+        {
+          "id": "17.13",
+          "pdfPage": 584,
+          "title": "EXAMPLE 17.13  Conduction through two bars II"
+        },
+        {
+          "id": "17.14",
+          "pdfPage": 585,
+          "title": "EXAMPLE 17.14  Heat transfer by radiation"
+        },
+        {
+          "id": "17.15",
+          "pdfPage": 586,
+          "title": "EXAMPLE 17.15  Radiation from the human body"
+        }
+      ],
+      "resolvedHeadingStyleLeads": [
+        {
+          "id": "17.5",
+          "pdfPage": 572,
+          "title": "17.5   QUANTITY OF HEAT",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/17-nhiet-do-nhiet-luong/nhiet-luong.md",
+          "topicTitle": "Nhiệt lượng và nhiệt dung"
+        },
+        {
+          "id": "17.6",
+          "pdfPage": 575,
+          "title": "17.6   CALORIMETRY AND PHASE CHANGES",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/17-nhiet-do-nhiet-luong/nhiet-luong-ke-va-chuyen-pha.md",
+          "topicTitle": "Nhiệt lượng kế và chuyển pha"
+        },
+        {
+          "id": "17.7",
+          "pdfPage": 581,
+          "title": "17.7   MECHANISMS OF HEAT TRANSFER",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/17-nhiet-do-nhiet-luong/cac-co-che-truyen-nhiet.md",
+          "topicTitle": "Các cơ chế truyền nhiệt"
+        }
+      ]
+    },
+    {
+      "chapter": 18,
+      "sourceSections": [
+        {
+          "id": "18.1",
+          "pdfPage": 599,
+          "title": "18.1  EQUATIONS OF STATE"
+        },
+        {
+          "id": "18.2",
+          "pdfPage": 605,
+          "title": "18.2   MOLECULAR PROPERTIES OF MATTER"
+        },
+        {
+          "id": "18.3",
+          "pdfPage": 608,
+          "title": "18.3  KINETIC-MOLECULAR MODEL OF AN IDEAL GAS"
+        },
+        {
+          "id": "18.4",
+          "pdfPage": 614,
+          "title": "18.4   HEAT CAPACITIES"
+        },
+        {
+          "id": "18.5",
+          "pdfPage": 617,
+          "title": "18.5   MOLECULAR SPEEDS"
+        },
+        {
+          "id": "18.6",
+          "pdfPage": 619,
+          "title": "18.6   PHASES OF MATTER"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "18.1",
+          "pdfPage": 602,
+          "title": "EXAMPLE 18.1  Volume of an ideal gas at STP"
+        },
+        {
+          "id": "18.2",
+          "pdfPage": 602,
+          "title": "EXAMPLE 18.2  Compressing gas in an automobile engine"
+        },
+        {
+          "id": "18.3",
+          "pdfPage": 603,
+          "title": "EXAMPLE 18.3  Mass of air in a scuba tank"
+        },
+        {
+          "id": "18.4",
+          "pdfPage": 603,
+          "title": "EXAMPLE 18.4  Variation of atmospheric pressure with elevation"
+        },
+        {
+          "id": "18.5",
+          "pdfPage": 607,
+          "title": "EXAMPLE 18.5  Atomic and molecular mass"
+        },
+        {
+          "id": "18.6",
+          "pdfPage": 612,
+          "title": "EXAMPLE 18.6  Molecular kinetic energy and vrms"
+        },
+        {
+          "id": "18.7",
+          "pdfPage": 612,
+          "title": "EXAMPLE 18.7  Calculating rms and average speeds"
+        },
+        {
+          "id": "18.8",
+          "pdfPage": 613,
+          "title": "EXAMPLE 18.8  Calculating mean free path"
+        }
+      ],
+      "resolvedHeadingStyleLeads": [
+        {
+          "id": "18.2",
+          "pdfPage": 605,
+          "title": "18.2   MOLECULAR PROPERTIES OF MATTER",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi/tinh-chat-phan-tu-vat-chat.md",
+          "topicTitle": "Tính chất phân tử của vật chất"
+        },
+        {
+          "id": "18.3",
+          "pdfPage": 608,
+          "title": "18.3  KINETIC-MOLECULAR MODEL OF AN IDEAL GAS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi/mo-hinh-dong-hoc-khi-ly-tuong.md",
+          "topicTitle": "Mô hình động học phân tử của khí lý tưởng"
+        },
+        {
+          "id": "18.6",
+          "pdfPage": 619,
+          "title": "18.6   PHASES OF MATTER",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi/cac-pha-cua-vat-chat.md",
+          "topicTitle": "Các pha của vật chất"
+        }
+      ]
+    },
+    {
+      "chapter": 19,
+      "sourceSections": [
+        {
+          "id": "19.1",
+          "pdfPage": 633,
+          "title": "19.1   THERMODYNAMIC SYSTEMS"
+        },
+        {
+          "id": "19.2",
+          "pdfPage": 635,
+          "title": "19.2   WORK DONE DURING VOLUME CHANGES"
+        },
+        {
+          "id": "19.3",
+          "pdfPage": 637,
+          "title": "19.3  PATHS BETWEEN THERMODYNAMIC STATES"
+        },
+        {
+          "id": "19.4",
+          "pdfPage": 638,
+          "title": "19.4  INTERNAL ENERGY AND THE FIRST LAW"
+        },
+        {
+          "id": "19.5",
+          "pdfPage": 643,
+          "title": "19.5  KINDS OF THERMODYNAMIC PROCESSES"
+        },
+        {
+          "id": "19.6",
+          "pdfPage": 645,
+          "title": "19.6  INTERNAL ENERGY OF AN IDEAL GAS"
+        },
+        {
+          "id": "19.7",
+          "pdfPage": 646,
+          "title": "19.7  HEAT CAPACITIES OF AN IDEAL GAS"
+        },
+        {
+          "id": "19.8",
+          "pdfPage": 649,
+          "title": "19.8   ADIABATIC PROCESSES FOR AN IDEAL GAS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "19.1",
+          "pdfPage": 636,
+          "title": "EXAMPLE 19.1  Isothermal expansion of an ideal gas"
+        },
+        {
+          "id": "19.2",
+          "pdfPage": 641,
+          "title": "EXAMPLE 19.2  Working off your dessert"
+        },
+        {
+          "id": "19.3",
+          "pdfPage": 641,
+          "title": "EXAMPLE 19.3  A cyclic process"
+        },
+        {
+          "id": "19.4",
+          "pdfPage": 642,
+          "title": "EXAMPLE 19.4  Comparing thermodynamic processes"
+        },
+        {
+          "id": "19.5",
+          "pdfPage": 643,
+          "title": "EXAMPLE 19.5  Thermodynamics of boiling water"
+        },
+        {
+          "id": "19.6",
+          "pdfPage": 648,
+          "title": "EXAMPLE 19.6  Cooling your room"
+        },
+        {
+          "id": "19.7",
+          "pdfPage": 651,
+          "title": "EXAMPLE 19.7  Adiabatic compression in a diesel engine"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 20,
+      "sourceSections": [
+        {
+          "id": "20.1",
+          "pdfPage": 662,
+          "title": "20.1  DIRECTIONS OF THERMODYNAMIC PROCESSES"
+        },
+        {
+          "id": "20.2",
+          "pdfPage": 664,
+          "title": "20.2  HEAT ENGINES"
+        },
+        {
+          "id": "20.3",
+          "pdfPage": 667,
+          "title": "20.3  INTERNAL-COMBUSTION ENGINES"
+        },
+        {
+          "id": "20.4",
+          "pdfPage": 669,
+          "title": "20.4  REFRIGERATORS"
+        },
+        {
+          "id": "20.5",
+          "pdfPage": 671,
+          "title": "20.5  THE SECOND LAW OF THERMODYNAMICS"
+        },
+        {
+          "id": "20.6",
+          "pdfPage": 673,
+          "title": "20.6  THE CARNOT CYCLE"
+        },
+        {
+          "id": "20.7",
+          "pdfPage": 679,
+          "title": "20.7  ENTROPY"
+        },
+        {
+          "id": "20.8",
+          "pdfPage": 685,
+          "title": "20.8  MICROSCOPIC INTERPRETATION OF ENTROPY"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "20.1",
+          "pdfPage": 666,
+          "title": "EXAMPLE 20.1  Analyzing a heat engine"
+        },
+        {
+          "id": "20.2",
+          "pdfPage": 675,
+          "title": "EXAMPLE 20.2  Analyzing a Carnot engine I"
+        },
+        {
+          "id": "20.3",
+          "pdfPage": 676,
+          "title": "EXAMPLE 20.3  Analyzing a Carnot engine II"
+        },
+        {
+          "id": "20.4",
+          "pdfPage": 677,
+          "title": "EXAMPLE 20.4  Analyzing a Carnot refrigerator"
+        },
+        {
+          "id": "20.5",
+          "pdfPage": 680,
+          "title": "EXAMPLE 20.5  Entropy change in melting"
+        },
+        {
+          "id": "20.6",
+          "pdfPage": 681,
+          "title": "EXAMPLE 20.6  Entropy change in a temperature change"
+        },
+        {
+          "id": "20.8",
+          "pdfPage": 682,
+          "title": "EXAMPLE 20.8  Entropy change in a free expansion"
+        },
+        {
+          "id": "20.9",
+          "pdfPage": 682,
+          "title": "EXAMPLE 20.9  Entropy and the Carnot cycle"
+        },
+        {
+          "id": "20.7",
+          "pdfPage": 682,
+          "title": "CONCEPTUAL EXAMPLE 20.7  Entropy change in a reversible adiabatic process"
+        },
+        {
+          "id": "20.10",
+          "pdfPage": 684,
+          "title": "EXAMPLE 20.10  Entropy change in an irreversible process"
+        },
+        {
+          "id": "20.11",
+          "pdfPage": 687,
+          "title": "EXAMPLE 20.11  A microscopic calculation of entropy change"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 21,
+      "sourceSections": [
+        {
+          "id": "21.1",
+          "pdfPage": 699,
+          "title": "21.1  ELECTRIC CHARGE"
+        },
+        {
+          "id": "21.2",
+          "pdfPage": 702,
+          "title": "21.2  CONDUCTORS, INSULATORS,"
+        },
+        {
+          "id": "21.3",
+          "pdfPage": 705,
+          "title": "21.3  COULOMB’S LAW"
+        },
+        {
+          "id": "21.4",
+          "pdfPage": 710,
+          "title": "21.4  ELECTRIC FIELD AND ELECTRIC FORCES"
+        },
+        {
+          "id": "21.5",
+          "pdfPage": 714,
+          "title": "21.5  ELECTRIC-FIELD CALCULATIONS"
+        },
+        {
+          "id": "21.6",
+          "pdfPage": 720,
+          "title": "21.6  ELECTRIC FIELD LINES"
+        },
+        {
+          "id": "21.7",
+          "pdfPage": 721,
+          "title": "21.7  ELECTRIC DIPOLES"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "21.1",
+          "pdfPage": 707,
+          "title": "EXAMPLE 21.1  Electric force versus gravitational force"
+        },
+        {
+          "id": "21.2",
+          "pdfPage": 708,
+          "title": "EXAMPLE 21.2  Force between two point charges"
+        },
+        {
+          "id": "21.3",
+          "pdfPage": 709,
+          "title": "EXAMPLE 21.3  Vector addition of electric forces on a line"
+        },
+        {
+          "id": "21.4",
+          "pdfPage": 709,
+          "title": "EXAMPLE 21.4  Vector addition of electric forces in a plane"
+        },
+        {
+          "id": "21.5",
+          "pdfPage": 713,
+          "title": "EXAMPLE 21.5  Electric-field magnitude for a point charge"
+        },
+        {
+          "id": "21.7",
+          "pdfPage": 713,
+          "title": "EXAMPLE 21.7  Electron in a uniform field"
+        },
+        {
+          "id": "21.6",
+          "pdfPage": 713,
+          "title": "EXAMPLE 21.6  Electric-field vector for a point charge"
+        },
+        {
+          "id": "21.8",
+          "pdfPage": 716,
+          "title": "EXAMPLE 21.8  Field of an electric dipole"
+        },
+        {
+          "id": "21.9",
+          "pdfPage": 717,
+          "title": "EXAMPLE 21.9  Field of a ring of charge"
+        },
+        {
+          "id": "21.10",
+          "pdfPage": 717,
+          "title": "EXAMPLE 21.10  Field of a charged line segment"
+        },
+        {
+          "id": "21.11",
+          "pdfPage": 718,
+          "title": "EXAMPLE 21.11  Field of a uniformly charged disk"
+        },
+        {
+          "id": "21.12",
+          "pdfPage": 719,
+          "title": "EXAMPLE 21.12  Field of two oppositely charged infinite sheets"
+        },
+        {
+          "id": "21.13",
+          "pdfPage": 724,
+          "title": "EXAMPLE 21.13  Force and torque on an electric dipole"
+        },
+        {
+          "id": "21.14",
+          "pdfPage": 725,
+          "title": "EXAMPLE 21.14  Field of an electric dipole, revisited"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 22,
+      "sourceSections": [
+        {
+          "id": "22.1",
+          "pdfPage": 738,
+          "title": "22.1  CHARGE AND ELECTRIC FLUX"
+        },
+        {
+          "id": "22.2",
+          "pdfPage": 741,
+          "title": "22.2   CALCULATING ELECTRIC FLUX"
+        },
+        {
+          "id": "22.3",
+          "pdfPage": 745,
+          "title": "22.3   GAUSS’S LAW"
+        },
+        {
+          "id": "22.4",
+          "pdfPage": 749,
+          "title": "22.4  APPLICATIONS OF GAUSS’S LAW"
+        },
+        {
+          "id": "22.5",
+          "pdfPage": 754,
+          "title": "22.5  CHARGES ON CONDUCTORS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "22.1",
+          "pdfPage": 743,
+          "title": "EXAMPLE 22.1  Electric flux through a disk"
+        },
+        {
+          "id": "22.2",
+          "pdfPage": 744,
+          "title": "EXAMPLE 22.2  Electric flux through a cube"
+        },
+        {
+          "id": "22.3",
+          "pdfPage": 744,
+          "title": "EXAMPLE 22.3  Electric flux through a sphere"
+        },
+        {
+          "id": "22.4",
+          "pdfPage": 748,
+          "title": "CONCEPTUAL EXAMPLE 22.4  Electric flux and enclosed charge"
+        },
+        {
+          "id": "22.5",
+          "pdfPage": 750,
+          "title": "EXAMPLE 22.5  Field of a charged conducting sphere"
+        },
+        {
+          "id": "22.6",
+          "pdfPage": 751,
+          "title": "EXAMPLE 22.6  Field of a uniform line charge"
+        },
+        {
+          "id": "22.7",
+          "pdfPage": 751,
+          "title": "EXAMPLE 22.7  Field of an infinite plane sheet of charge"
+        },
+        {
+          "id": "22.8",
+          "pdfPage": 752,
+          "title": "EXAMPLE 22.8  Field between oppositely charged parallel conducting plates"
+        },
+        {
+          "id": "22.9",
+          "pdfPage": 752,
+          "title": "EXAMPLE 22.9  Field of a uniformly charged sphere"
+        },
+        {
+          "id": "22.10",
+          "pdfPage": 753,
+          "title": "EXAMPLE 22.10  Charge on a hollow sphere"
+        },
+        {
+          "id": "22.11",
+          "pdfPage": 754,
+          "title": "CONCEPTUAL EXAMPLE 22.11  A conductor with a cavity"
+        },
+        {
+          "id": "22.12",
+          "pdfPage": 757,
+          "title": "EXAMPLE 22.12  Electric field of the earth"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 23,
+      "sourceSections": [
+        {
+          "id": "23.1",
+          "pdfPage": 767,
+          "title": "23.1  ELECTRIC POTENTIAL ENERGY"
+        },
+        {
+          "id": "23.2",
+          "pdfPage": 774,
+          "title": "23.2  ELECTRIC POTENTIAL"
+        },
+        {
+          "id": "23.3",
+          "pdfPage": 780,
+          "title": "23.3  CALCULATING ELECTRIC POTENTIAL"
+        },
+        {
+          "id": "23.4",
+          "pdfPage": 784,
+          "title": "23.4  EQUIPOTENTIAL SURFACES"
+        },
+        {
+          "id": "23.5",
+          "pdfPage": 787,
+          "title": "23.5  POTENTIAL GRADIENT"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "23.1",
+          "pdfPage": 771,
+          "title": "EXAMPLE 23.1  Conservation of energy with electric forces"
+        },
+        {
+          "id": "23.2",
+          "pdfPage": 773,
+          "title": "EXAMPLE 23.2  A system of point charges"
+        },
+        {
+          "id": "23.3",
+          "pdfPage": 777,
+          "title": "EXAMPLE 23.3  Electric force and electric potential"
+        },
+        {
+          "id": "23.4",
+          "pdfPage": 778,
+          "title": "EXAMPLE 23.4  Potential due to two point charges"
+        },
+        {
+          "id": "23.5",
+          "pdfPage": 778,
+          "title": "EXAMPLE 23.5  Potential and potential energy"
+        },
+        {
+          "id": "23.7",
+          "pdfPage": 779,
+          "title": "EXAMPLE 23.7  Moving through a potential difference"
+        },
+        {
+          "id": "23.6",
+          "pdfPage": 779,
+          "title": "EXAMPLE 23.6  Finding potential by integration"
+        },
+        {
+          "id": "23.8",
+          "pdfPage": 781,
+          "title": "EXAMPLE 23.8  A charged conducting sphere"
+        },
+        {
+          "id": "23.9",
+          "pdfPage": 782,
+          "title": "EXAMPLE 23.9  Oppositely charged parallel plates"
+        },
+        {
+          "id": "23.11",
+          "pdfPage": 783,
+          "title": "EXAMPLE 23.11  A ring of charge"
+        },
+        {
+          "id": "23.10",
+          "pdfPage": 783,
+          "title": "EXAMPLE 23.10  An infinite line charge or charged conducting cylinder"
+        },
+        {
+          "id": "23.12",
+          "pdfPage": 784,
+          "title": "EXAMPLE 23.12  Potential of a line of charge"
+        },
+        {
+          "id": "23.14",
+          "pdfPage": 789,
+          "title": "EXAMPLE 23.14  Potential and field of a ring of charge"
+        },
+        {
+          "id": "23.13",
+          "pdfPage": 789,
+          "title": "EXAMPLE 23.13  Potential and field of a point charge"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 24,
+      "sourceSections": [
+        {
+          "id": "24.1",
+          "pdfPage": 802,
+          "title": "24.1  CAPACITORS AND CAPACITANCE"
+        },
+        {
+          "id": "24.2",
+          "pdfPage": 806,
+          "title": "24.2  CAPACITORS IN SERIES AND PARALLEL"
+        },
+        {
+          "id": "24.3",
+          "pdfPage": 810,
+          "title": "24.3  ENERGY STORAGE IN CAPACITORS"
+        },
+        {
+          "id": "24.4",
+          "pdfPage": 813,
+          "title": "24.4  DIELECTRICS"
+        },
+        {
+          "id": "24.5",
+          "pdfPage": 819,
+          "title": "24.5  MOLECULAR MODEL OF INDUCED CHARGE"
+        },
+        {
+          "id": "24.6",
+          "pdfPage": 821,
+          "title": "24.6  GAUSS’S LAW IN DIELECTRICS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "24.1",
+          "pdfPage": 804,
+          "title": "EXAMPLE 24.1  Size of a 1 F capacitor"
+        },
+        {
+          "id": "24.2",
+          "pdfPage": 804,
+          "title": "EXAMPLE 24.2  Properties of a parallel-plate capacitor"
+        },
+        {
+          "id": "24.3",
+          "pdfPage": 805,
+          "title": "EXAMPLE 24.3  A spherical capacitor"
+        },
+        {
+          "id": "24.4",
+          "pdfPage": 805,
+          "title": "EXAMPLE 24.4  A cylindrical capacitor"
+        },
+        {
+          "id": "24.5",
+          "pdfPage": 808,
+          "title": "EXAMPLE 24.5  Capacitors in series and in parallel"
+        },
+        {
+          "id": "24.6",
+          "pdfPage": 809,
+          "title": "EXAMPLE 24.6  A capacitor network"
+        },
+        {
+          "id": "24.7",
+          "pdfPage": 812,
+          "title": "EXAMPLE 24.7  Transferring charge and energy between capacitors"
+        },
+        {
+          "id": "24.8",
+          "pdfPage": 812,
+          "title": "EXAMPLE 24.8  Electric-field energy"
+        },
+        {
+          "id": "24.9",
+          "pdfPage": 813,
+          "title": "EXAMPLE 24.9  Two ways to calculate energy stored in a capacitor"
+        },
+        {
+          "id": "24.10",
+          "pdfPage": 816,
+          "title": "EXAMPLE 24.10  A capacitor with and without a dielectric"
+        },
+        {
+          "id": "24.11",
+          "pdfPage": 817,
+          "title": "EXAMPLE 24.11  Energy storage with and without a dielectric"
+        },
+        {
+          "id": "24.12",
+          "pdfPage": 822,
+          "title": "EXAMPLE 24.12  A spherical capacitor with dielectric"
+        }
+      ],
+      "resolvedHeadingStyleLeads": [
+        {
+          "id": "24.1",
+          "pdfPage": 802,
+          "title": "24.1  CAPACITORS AND CAPACITANCE",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/04-tu-dien-dien-moi/tu-dien-dien-dung.md",
+          "topicTitle": "Tụ điện và điện dung"
+        },
+        {
+          "id": "24.2",
+          "pdfPage": 806,
+          "title": "24.2  CAPACITORS IN SERIES AND PARALLEL",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/04-tu-dien-dien-moi/mac-tu-dien.md",
+          "topicTitle": "Tụ mắc nối tiếp và song song"
+        },
+        {
+          "id": "24.3",
+          "pdfPage": 810,
+          "title": "24.3  ENERGY STORAGE IN CAPACITORS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/04-tu-dien-dien-moi/nang-luong-tu-dien.md",
+          "topicTitle": "Năng lượng của tụ và điện trường"
+        },
+        {
+          "id": "24.4",
+          "pdfPage": 813,
+          "title": "24.4  DIELECTRICS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/04-tu-dien-dien-moi/dien-moi.md",
+          "topicTitle": "Điện môi"
+        },
+        {
+          "id": "24.5",
+          "pdfPage": 819,
+          "title": "24.5  MOLECULAR MODEL OF INDUCED CHARGE",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/04-tu-dien-dien-moi/mo-hinh-phan-tu.md",
+          "topicTitle": "Mô hình phân tử của điện tích cảm ứng"
+        },
+        {
+          "id": "24.6",
+          "pdfPage": 821,
+          "title": "24.6  GAUSS’S LAW IN DIELECTRICS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/04-tu-dien-dien-moi/gauss-trong-dien-moi.md",
+          "topicTitle": "Định luật Gauss trong điện môi"
+        }
+      ]
+    },
+    {
+      "chapter": 25,
+      "sourceSections": [
+        {
+          "id": "25.1",
+          "pdfPage": 833,
+          "title": "25.1  CURRENT"
+        },
+        {
+          "id": "25.2",
+          "pdfPage": 836,
+          "title": "25.2  RESISTIVITY"
+        },
+        {
+          "id": "25.3",
+          "pdfPage": 839,
+          "title": "25.3  RESISTANCE"
+        },
+        {
+          "id": "25.4",
+          "pdfPage": 842,
+          "title": "25.4  ELECTROMOTIVE FORCE AND CIRCUITS"
+        },
+        {
+          "id": "25.5",
+          "pdfPage": 848,
+          "title": "25.5  ENERGY AND POWER IN ELECTRIC CIRCUITS"
+        },
+        {
+          "id": "25.6",
+          "pdfPage": 852,
+          "title": "25.6  THEORY OF METALLIC CONDUCTION"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "25.1",
+          "pdfPage": 836,
+          "title": "EXAMPLE 25.1  Current density and drift velocity in a wire"
+        },
+        {
+          "id": "25.2",
+          "pdfPage": 841,
+          "title": "EXAMPLE 25.2  Electric field, potential difference, and resistance in a wire"
+        },
+        {
+          "id": "25.3",
+          "pdfPage": 841,
+          "title": "EXAMPLE 25.3  Temperature dependence of resistance"
+        },
+        {
+          "id": "25.4",
+          "pdfPage": 845,
+          "title": "CONCEPTUAL EXAMPLE 25.4  A source in an open circuit"
+        },
+        {
+          "id": "25.5",
+          "pdfPage": 845,
+          "title": "EXAMPLE 25.5  A source in a complete circuit"
+        },
+        {
+          "id": "25.6",
+          "pdfPage": 846,
+          "title": "CONCEPTUAL EXAMPLE 25.6  Using voltmeters and ammeters"
+        },
+        {
+          "id": "25.7",
+          "pdfPage": 846,
+          "title": "EXAMPLE 25.7  A source with a short circuit"
+        },
+        {
+          "id": "25.8",
+          "pdfPage": 850,
+          "title": "EXAMPLE 25.8  Power input and output in a complete circuit"
+        },
+        {
+          "id": "25.9",
+          "pdfPage": 851,
+          "title": "EXAMPLE 25.9  Increasing the resistance"
+        },
+        {
+          "id": "25.10",
+          "pdfPage": 851,
+          "title": "EXAMPLE 25.10  Power in a short circuit"
+        },
+        {
+          "id": "25.11",
+          "pdfPage": 854,
+          "title": "EXAMPLE 25.11  Mean free time in copper"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 26,
+      "sourceSections": [
+        {
+          "id": "26.1",
+          "pdfPage": 864,
+          "title": "26.1  RESISTORS IN SERIES AND PARALLEL"
+        },
+        {
+          "id": "26.2",
+          "pdfPage": 869,
+          "title": "26.2  KIRCHHOFF’S RULES"
+        },
+        {
+          "id": "26.3",
+          "pdfPage": 874,
+          "title": "26.3  ELECTRICAL MEASURING INSTRUMENTS"
+        },
+        {
+          "id": "26.4",
+          "pdfPage": 878,
+          "title": "26.4  R-C CIRCUITS"
+        },
+        {
+          "id": "26.5",
+          "pdfPage": 883,
+          "title": "26.5  POWER DISTRIBUTION SYSTEMS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "26.1",
+          "pdfPage": 867,
+          "title": "EXAMPLE 26.1  Equivalent resistance"
+        },
+        {
+          "id": "26.2",
+          "pdfPage": 868,
+          "title": "EXAMPLE 26.2  Series versus parallel combinations"
+        },
+        {
+          "id": "26.3",
+          "pdfPage": 871,
+          "title": "EXAMPLE 26.3  A single-loop circuit"
+        },
+        {
+          "id": "26.4",
+          "pdfPage": 872,
+          "title": "EXAMPLE 26.4  Charging a battery"
+        },
+        {
+          "id": "26.5",
+          "pdfPage": 873,
+          "title": "EXAMPLE 26.5  Power in a battery-charging circuit"
+        },
+        {
+          "id": "26.6",
+          "pdfPage": 873,
+          "title": "EXAMPLE 26.6  A complex network"
+        },
+        {
+          "id": "26.7",
+          "pdfPage": 874,
+          "title": "EXAMPLE 26.7  A potential difference in a complex network"
+        },
+        {
+          "id": "26.8",
+          "pdfPage": 875,
+          "title": "EXAMPLE 26.8  Designing an ammeter"
+        },
+        {
+          "id": "26.9",
+          "pdfPage": 876,
+          "title": "EXAMPLE 26.9  Designing a voltmeter"
+        },
+        {
+          "id": "26.10",
+          "pdfPage": 876,
+          "title": "EXAMPLE 26.10  Measuring resistance I"
+        },
+        {
+          "id": "26.11",
+          "pdfPage": 877,
+          "title": "EXAMPLE 26.11  Measuring resistance II"
+        },
+        {
+          "id": "26.12",
+          "pdfPage": 882,
+          "title": "EXAMPLE 26.12  Charging a capacitor"
+        },
+        {
+          "id": "26.13",
+          "pdfPage": 882,
+          "title": "EXAMPLE 26.13  Discharging a capacitor"
+        },
+        {
+          "id": "26.14",
+          "pdfPage": 886,
+          "title": "EXAMPLE 26.14  A kitchen circuit"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 27,
+      "sourceSections": [
+        {
+          "id": "27.1",
+          "pdfPage": 898,
+          "title": "27.1 MAGNETISM"
+        },
+        {
+          "id": "27.2",
+          "pdfPage": 900,
+          "title": "27.2  MAGNETIC FIELD"
+        },
+        {
+          "id": "27.3",
+          "pdfPage": 904,
+          "title": "27.3  MAGNETIC FIELD LINES AND MAGNETIC FLUX"
+        },
+        {
+          "id": "27.4",
+          "pdfPage": 908,
+          "title": "27.4  MOTION OF CHARGED PARTICLES IN A MAGNETIC FIELD"
+        },
+        {
+          "id": "27.5",
+          "pdfPage": 911,
+          "title": "27.5  APPLICATIONS OF MOTION OF CHARGED PARTICLES"
+        },
+        {
+          "id": "27.6",
+          "pdfPage": 913,
+          "title": "27.6  MAGNETIC FORCE ON A"
+        },
+        {
+          "id": "27.7",
+          "pdfPage": 917,
+          "title": "27.7  FORCE AND TORQUE ON A CURRENT LOOP"
+        },
+        {
+          "id": "27.8",
+          "pdfPage": 922,
+          "title": "27.8  THE DIRECT-CURRENT MOTOR"
+        },
+        {
+          "id": "27.9",
+          "pdfPage": 924,
+          "title": "27.9  THE HALL EFFECT"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "27.1",
+          "pdfPage": 903,
+          "title": "EXAMPLE 27.1  Magnetic force on a proton"
+        },
+        {
+          "id": "27.2",
+          "pdfPage": 907,
+          "title": "EXAMPLE 27.2  Magnetic flux calculations"
+        },
+        {
+          "id": "27.3",
+          "pdfPage": 910,
+          "title": "EXAMPLE 27.3  Electron motion in a magnetron"
+        },
+        {
+          "id": "27.4",
+          "pdfPage": 910,
+          "title": "EXAMPLE 27.4  Helical particle motion in a magnetic field"
+        },
+        {
+          "id": "27.5",
+          "pdfPage": 913,
+          "title": "EXAMPLE 27.5  An e,m demonstration experiment"
+        },
+        {
+          "id": "27.6",
+          "pdfPage": 913,
+          "title": "EXAMPLE 27.6  Finding leaks in a vacuum system"
+        },
+        {
+          "id": "27.7",
+          "pdfPage": 915,
+          "title": "EXAMPLE 27.7  Magnetic force on a straight conductor"
+        },
+        {
+          "id": "27.8",
+          "pdfPage": 916,
+          "title": "EXAMPLE 27.8  Magnetic force on a curved conductor"
+        },
+        {
+          "id": "27.9",
+          "pdfPage": 920,
+          "title": "EXAMPLE 27.9  Magnetic torque on a circular coil"
+        },
+        {
+          "id": "27.10",
+          "pdfPage": 920,
+          "title": "EXAMPLE 27.10  Potential energy for a coil in a magnetic field"
+        },
+        {
+          "id": "27.11",
+          "pdfPage": 923,
+          "title": "EXAMPLE 27.11  A series dc motor"
+        },
+        {
+          "id": "27.12",
+          "pdfPage": 925,
+          "title": "EXAMPLE 27.12  A Hall-effect measurement"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 28,
+      "sourceSections": [
+        {
+          "id": "28.1",
+          "pdfPage": 938,
+          "title": "28.1  MAGNETIC FIELD OF A MOVING CHARGE"
+        },
+        {
+          "id": "28.2",
+          "pdfPage": 941,
+          "title": "28.2  MAGNETIC FIELD OF A CURRENT ELEMENT"
+        },
+        {
+          "id": "28.3",
+          "pdfPage": 943,
+          "title": "28.3  MAGNETIC FIELD OF A STRAIGHT"
+        },
+        {
+          "id": "28.4",
+          "pdfPage": 946,
+          "title": "28.4  FORCE BETWEEN PARALLEL CONDUCTORS"
+        },
+        {
+          "id": "28.5",
+          "pdfPage": 947,
+          "title": "28.5  MAGNETIC FIELD OF A CIRCULAR CURRENT LOOP"
+        },
+        {
+          "id": "28.6",
+          "pdfPage": 950,
+          "title": "28.6  AMPERE’S LAW"
+        },
+        {
+          "id": "28.7",
+          "pdfPage": 953,
+          "title": "28.7  APPLICATIONS OF AMPERE’S LAW"
+        },
+        {
+          "id": "28.8",
+          "pdfPage": 957,
+          "title": "28.8  MAGNETIC MATERIALS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "28.1",
+          "pdfPage": 940,
+          "title": "EXAMPLE 28.1  Forces between two moving protons"
+        },
+        {
+          "id": "28.2",
+          "pdfPage": 943,
+          "title": "EXAMPLE 28.2  Magnetic field of a current segment"
+        },
+        {
+          "id": "28.3",
+          "pdfPage": 944,
+          "title": "EXAMPLE 28.3  Magnetic field of a single wire"
+        },
+        {
+          "id": "28.4",
+          "pdfPage": 945,
+          "title": "EXAMPLE 28.4  Magnetic field of two wires"
+        },
+        {
+          "id": "28.5",
+          "pdfPage": 947,
+          "title": "EXAMPLE 28.5  Forces between parallel wires"
+        },
+        {
+          "id": "28.6",
+          "pdfPage": 949,
+          "title": "EXAMPLE 28.6  Magnetic field of a coil"
+        },
+        {
+          "id": "28.7",
+          "pdfPage": 954,
+          "title": "EXAMPLE 28.7  Field of a long, straight, current-carrying conductor"
+        },
+        {
+          "id": "28.8",
+          "pdfPage": 954,
+          "title": "EXAMPLE 28.8  Field of a long cylindrical conductor"
+        },
+        {
+          "id": "28.9",
+          "pdfPage": 955,
+          "title": "EXAMPLE 28.9  Field of a solenoid"
+        },
+        {
+          "id": "28.10",
+          "pdfPage": 956,
+          "title": "EXAMPLE 28.10  Field of a toroidal solenoid"
+        },
+        {
+          "id": "28.11",
+          "pdfPage": 959,
+          "title": "EXAMPLE 28.11  Magnetic dipoles in a paramagnetic material"
+        },
+        {
+          "id": "28.12",
+          "pdfPage": 961,
+          "title": "EXAMPLE 28.12  A ferromagnetic material"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 29,
+      "sourceSections": [
+        {
+          "id": "29.1",
+          "pdfPage": 974,
+          "title": "29.1  INDUCTION EXPERIMENTS"
+        },
+        {
+          "id": "29.2",
+          "pdfPage": 975,
+          "title": "29.2  FARADAY’S LAW"
+        },
+        {
+          "id": "29.3",
+          "pdfPage": 982,
+          "title": "29.3  LENZ’S LAW"
+        },
+        {
+          "id": "29.4",
+          "pdfPage": 985,
+          "title": "29.4  MOTIONAL EMF"
+        },
+        {
+          "id": "29.5",
+          "pdfPage": 987,
+          "title": "29.5  INDUCED ELECTRIC FIELDS"
+        },
+        {
+          "id": "29.6",
+          "pdfPage": 989,
+          "title": "29.6  EDDY CURRENTS"
+        },
+        {
+          "id": "29.7",
+          "pdfPage": 990,
+          "title": "29.7  DISPLACEMENT CURRENT AND MAXWELL’S EQUATIONS"
+        },
+        {
+          "id": "29.8",
+          "pdfPage": 995,
+          "title": "29.8  SUPERCONDUCTIVITY"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "29.1",
+          "pdfPage": 976,
+          "title": "EXAMPLE 29.1  Emf and current induced in a loop"
+        },
+        {
+          "id": "29.2",
+          "pdfPage": 978,
+          "title": "EXAMPLE 29.2  Magnitude and direction of an induced emf"
+        },
+        {
+          "id": "29.3",
+          "pdfPage": 979,
+          "title": "EXAMPLE 29.3  Generator I: A simple alternator"
+        },
+        {
+          "id": "29.4",
+          "pdfPage": 980,
+          "title": "EXAMPLE 29.4  Generator II: A dc generator and back emf in a motor"
+        },
+        {
+          "id": "29.5",
+          "pdfPage": 981,
+          "title": "EXAMPLE 29.5  Generator III: The slidewire generator"
+        },
+        {
+          "id": "29.6",
+          "pdfPage": 981,
+          "title": "EXAMPLE 29.6  Work and power in the slidewire generator"
+        },
+        {
+          "id": "29.7",
+          "pdfPage": 983,
+          "title": "CONCEPTUAL EXAMPLE 29.7  Lenz’s law and the slidewire generator"
+        },
+        {
+          "id": "29.8",
+          "pdfPage": 983,
+          "title": "CONCEPTUAL EXAMPLE 29.8  Lenz’s law and the direction of induced current"
+        },
+        {
+          "id": "29.9",
+          "pdfPage": 986,
+          "title": "EXAMPLE 29.9  Motional emf in the slidewire generator"
+        },
+        {
+          "id": "29.10",
+          "pdfPage": 986,
+          "title": "EXAMPLE 29.10  The Faraday disk dynamo"
+        },
+        {
+          "id": "29.11",
+          "pdfPage": 989,
+          "title": "EXAMPLE 29.11  Induced electric fields"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 30,
+      "sourceSections": [
+        {
+          "id": "30.1",
+          "pdfPage": 1008,
+          "title": "30.1  MUTUAL INDUCTANCE"
+        },
+        {
+          "id": "30.2",
+          "pdfPage": 1012,
+          "title": "30.2  SELF-INDUCTANCE AND INDUCTORS"
+        },
+        {
+          "id": "30.3",
+          "pdfPage": 1015,
+          "title": "30.3  MAGNETIC-FIELD ENERGY"
+        },
+        {
+          "id": "30.4",
+          "pdfPage": 1018,
+          "title": "30.4  THE R-L CIRCUIT"
+        },
+        {
+          "id": "30.5",
+          "pdfPage": 1022,
+          "title": "30.5  THE L-C CIRCUIT"
+        },
+        {
+          "id": "30.6",
+          "pdfPage": 1027,
+          "title": "30.6  THE L-R-C SERIES CIRCUIT"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "30.1",
+          "pdfPage": 1010,
+          "title": "EXAMPLE 30.1  Calculating mutual inductance"
+        },
+        {
+          "id": "30.2",
+          "pdfPage": 1011,
+          "title": "EXAMPLE 30.2  Emf due to mutual inductance"
+        },
+        {
+          "id": "30.3",
+          "pdfPage": 1014,
+          "title": "EXAMPLE 30.3  Calculating self-inductance"
+        },
+        {
+          "id": "30.4",
+          "pdfPage": 1015,
+          "title": "EXAMPLE 30.4  Calculating self-induced emf"
+        },
+        {
+          "id": "30.5",
+          "pdfPage": 1018,
+          "title": "EXAMPLE 30.5  Storing energy in an inductor"
+        },
+        {
+          "id": "30.6",
+          "pdfPage": 1021,
+          "title": "EXAMPLE 30.6  Analyzing an R-L circuit"
+        },
+        {
+          "id": "30.7",
+          "pdfPage": 1022,
+          "title": "EXAMPLE 30.7  Energy in an R-L circuit"
+        },
+        {
+          "id": "30.8",
+          "pdfPage": 1025,
+          "title": "EXAMPLE 30.8  An oscillating circuit"
+        },
+        {
+          "id": "30.9",
+          "pdfPage": 1026,
+          "title": "EXAMPLE 30.9  Energy in an oscillating circuit"
+        },
+        {
+          "id": "30.10",
+          "pdfPage": 1028,
+          "title": "EXAMPLE 30.10  An underdamped L-R-C series circuit"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 31,
+      "sourceSections": [
+        {
+          "id": "31.1",
+          "pdfPage": 1038,
+          "title": "31.1  PHASORS AND ALTERNATING CURRENTS"
+        },
+        {
+          "id": "31.2",
+          "pdfPage": 1042,
+          "title": "31.2  RESISTANCE AND REACTANCE"
+        },
+        {
+          "id": "31.3",
+          "pdfPage": 1047,
+          "title": "31.3  THE L-R-C SERIES CIRCUIT"
+        },
+        {
+          "id": "31.4",
+          "pdfPage": 1051,
+          "title": "31.4  POWER IN ALTERNATING-CURRENT CIRCUITS"
+        },
+        {
+          "id": "31.5",
+          "pdfPage": 1054,
+          "title": "31.5  RESONANCE IN ALTERNATING-CURRENT CIRCUITS"
+        },
+        {
+          "id": "31.6",
+          "pdfPage": 1056,
+          "title": "31.6  TRANSFORMERS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "31.1",
+          "pdfPage": 1041,
+          "title": "EXAMPLE 31.1  Current in a desktop computer"
+        },
+        {
+          "id": "31.2",
+          "pdfPage": 1044,
+          "title": "EXAMPLE 31.2  An inductor in an ac circuit"
+        },
+        {
+          "id": "31.3",
+          "pdfPage": 1045,
+          "title": "EXAMPLE 31.3  A resistor and a capacitor in an ac circuit"
+        },
+        {
+          "id": "31.4",
+          "pdfPage": 1049,
+          "title": "EXAMPLE 31.4  An L-R-C series circuit I"
+        },
+        {
+          "id": "31.5",
+          "pdfPage": 1050,
+          "title": "EXAMPLE 31.5  An L-R-C series circuit II"
+        },
+        {
+          "id": "31.6",
+          "pdfPage": 1053,
+          "title": "EXAMPLE 31.6  Power in a hair dryer"
+        },
+        {
+          "id": "31.7",
+          "pdfPage": 1053,
+          "title": "EXAMPLE 31.7  Power in an L-R-C series circuit"
+        },
+        {
+          "id": "31.8",
+          "pdfPage": 1055,
+          "title": "EXAMPLE 31.8  Tuning a radio"
+        },
+        {
+          "id": "31.9",
+          "pdfPage": 1059,
+          "title": "EXAMPLE 31.9  “Wake up and smell the (transformer)!”"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 32,
+      "sourceSections": [
+        {
+          "id": "32.1",
+          "pdfPage": 1068,
+          "title": "32.1  MAXWELL’S EQUATIONS"
+        },
+        {
+          "id": "32.2",
+          "pdfPage": 1072,
+          "title": "32.2  PLANE ELECTROMAGNETIC WAVES"
+        },
+        {
+          "id": "32.3",
+          "pdfPage": 1077,
+          "title": "32.3  SINUSOIDAL ELECTROMAGNETIC WAVES"
+        },
+        {
+          "id": "32.4",
+          "pdfPage": 1081,
+          "title": "32.4  ENERGY AND MOMENTUM IN"
+        },
+        {
+          "id": "32.5",
+          "pdfPage": 1086,
+          "title": "32.5  STANDING ELECTROMAGNETIC WAVES"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "32.1",
+          "pdfPage": 1079,
+          "title": "EXAMPLE 32.1  Electric and magnetic fields of a laser beam"
+        },
+        {
+          "id": "32.2",
+          "pdfPage": 1081,
+          "title": "EXAMPLE 32.2  Electromagnetic waves in different materials"
+        },
+        {
+          "id": "32.3",
+          "pdfPage": 1084,
+          "title": "EXAMPLE 32.3  Energy in a nonsinusoidal wave"
+        },
+        {
+          "id": "32.4",
+          "pdfPage": 1084,
+          "title": "EXAMPLE 32.4  Energy in a sinusoidal wave"
+        },
+        {
+          "id": "32.5",
+          "pdfPage": 1085,
+          "title": "EXAMPLE 32.5  Power and pressure from sunlight"
+        },
+        {
+          "id": "32.6",
+          "pdfPage": 1088,
+          "title": "EXAMPLE 32.6  Intensity in a standing wave"
+        },
+        {
+          "id": "32.7",
+          "pdfPage": 1088,
+          "title": "EXAMPLE 32.7  Standing waves in a cavity"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 33,
+      "sourceSections": [
+        {
+          "id": "33.1",
+          "pdfPage": 1097,
+          "title": "33.1  THE NATURE OF LIGHT"
+        },
+        {
+          "id": "33.2",
+          "pdfPage": 1099,
+          "title": "33.2  REFLECTION AND REFRACTION"
+        },
+        {
+          "id": "33.3",
+          "pdfPage": 1105,
+          "title": "33.3  TOTAL INTERNAL REFLECTION"
+        },
+        {
+          "id": "33.4",
+          "pdfPage": 1108,
+          "title": "33.4  DISPERSION"
+        },
+        {
+          "id": "33.5",
+          "pdfPage": 1110,
+          "title": "33.5  POLARIZATION"
+        },
+        {
+          "id": "33.6",
+          "pdfPage": 1117,
+          "title": "33.6  SCATTERING OF LIGHT"
+        },
+        {
+          "id": "33.7",
+          "pdfPage": 1119,
+          "title": "33.7  HUYGENS’S PRINCIPLE"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "33.1",
+          "pdfPage": 1104,
+          "title": "EXAMPLE 33.1  Reflection and refraction"
+        },
+        {
+          "id": "33.2",
+          "pdfPage": 1104,
+          "title": "EXAMPLE 33.2  Index of refraction in the eye"
+        },
+        {
+          "id": "33.3",
+          "pdfPage": 1104,
+          "title": "EXAMPLE 33.3  A twice-reflected ray"
+        },
+        {
+          "id": "33.4",
+          "pdfPage": 1107,
+          "title": "CONCEPTUAL EXAMPLE 33.4  A leaky periscope"
+        },
+        {
+          "id": "33.5",
+          "pdfPage": 1113,
+          "title": "EXAMPLE 33.5  Two polarizers in combination"
+        },
+        {
+          "id": "33.6",
+          "pdfPage": 1115,
+          "title": "EXAMPLE 33.6  Reflection from a swimming pool’s surface"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 34,
+      "sourceSections": [
+        {
+          "id": "34.1",
+          "pdfPage": 1130,
+          "title": "34.1  REFLECTION AND REFRACTION AT A PLANE SURFACE"
+        },
+        {
+          "id": "34.2",
+          "pdfPage": 1134,
+          "title": "34.2  REFLECTION AT A SPHERICAL SURFACE"
+        },
+        {
+          "id": "34.3",
+          "pdfPage": 1142,
+          "title": "34.3  REFRACTION AT A SPHERICAL SURFACE"
+        },
+        {
+          "id": "34.4",
+          "pdfPage": 1147,
+          "title": "34.4  THIN LENSES"
+        },
+        {
+          "id": "34.5",
+          "pdfPage": 1155,
+          "title": "34.5  CAMERAS"
+        },
+        {
+          "id": "34.6",
+          "pdfPage": 1158,
+          "title": "34.6  THE EYE"
+        },
+        {
+          "id": "34.7",
+          "pdfPage": 1162,
+          "title": "34.7  THE MAGNIFIER"
+        },
+        {
+          "id": "34.8",
+          "pdfPage": 1163,
+          "title": "34.8  MICROSCOPES AND TELESCOPES"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "34.1",
+          "pdfPage": 1137,
+          "title": "EXAMPLE 34.1  Image formation by a concave mirror I"
+        },
+        {
+          "id": "34.2",
+          "pdfPage": 1138,
+          "title": "CONCEPTUAL EXAMPLE 34.2  Image formation by a concave mirror II"
+        },
+        {
+          "id": "34.3",
+          "pdfPage": 1139,
+          "title": "EXAMPLE 34.3  Santa’s image problem"
+        },
+        {
+          "id": "34.4",
+          "pdfPage": 1141,
+          "title": "EXAMPLE 34.4  Concave mirror with various object distances"
+        },
+        {
+          "id": "34.5",
+          "pdfPage": 1145,
+          "title": "EXAMPLE 34.5  Image formation by refraction I"
+        },
+        {
+          "id": "34.6",
+          "pdfPage": 1145,
+          "title": "EXAMPLE 34.6  Image formation by refraction II"
+        },
+        {
+          "id": "34.7",
+          "pdfPage": 1146,
+          "title": "EXAMPLE 34.7  Apparent depth of a swimming pool"
+        },
+        {
+          "id": "34.8",
+          "pdfPage": 1151,
+          "title": "EXAMPLE 34.8  Determining the focal length of a lens"
+        },
+        {
+          "id": "34.9",
+          "pdfPage": 1153,
+          "title": "EXAMPLE 34.9  Image position and magnification with a converging lens"
+        },
+        {
+          "id": "34.10",
+          "pdfPage": 1153,
+          "title": "EXAMPLE 34.10  Image formation by a diverging lens"
+        },
+        {
+          "id": "34.11",
+          "pdfPage": 1154,
+          "title": "EXAMPLE 34.11  An image of an image"
+        },
+        {
+          "id": "34.12",
+          "pdfPage": 1158,
+          "title": "EXAMPLE 34.12  Photographic exposures"
+        },
+        {
+          "id": "34.13",
+          "pdfPage": 1161,
+          "title": "EXAMPLE 34.13  Correcting for farsightedness"
+        },
+        {
+          "id": "34.14",
+          "pdfPage": 1161,
+          "title": "EXAMPLE 34.14  Correcting for nearsightedness"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 35,
+      "sourceSections": [
+        {
+          "id": "35.1",
+          "pdfPage": 1179,
+          "title": "35.1  INTERFERENCE AND COHERENT SOURCES"
+        },
+        {
+          "id": "35.2",
+          "pdfPage": 1183,
+          "title": "35.2  TWO-SOURCE INTERFERENCE OF LIGHT"
+        },
+        {
+          "id": "35.3",
+          "pdfPage": 1186,
+          "title": "35.3  INTENSITY IN INTERFERENCE PATTERNS"
+        },
+        {
+          "id": "35.4",
+          "pdfPage": 1190,
+          "title": "35.4  INTERFERENCE IN THIN FILMS"
+        },
+        {
+          "id": "35.5",
+          "pdfPage": 1195,
+          "title": "35.5  THE MICHELSON INTERFEROMETER"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "35.1",
+          "pdfPage": 1185,
+          "title": "EXAMPLE 35.1  Two-slit interference"
+        },
+        {
+          "id": "35.2",
+          "pdfPage": 1185,
+          "title": "EXAMPLE 35.2  Broadcast pattern of a radio station"
+        },
+        {
+          "id": "35.3",
+          "pdfPage": 1189,
+          "title": "EXAMPLE 35.3  A directional transmitting antenna array"
+        },
+        {
+          "id": "35.4",
+          "pdfPage": 1192,
+          "title": "EXAMPLE 35.4  Thin-film interference I"
+        },
+        {
+          "id": "35.5",
+          "pdfPage": 1193,
+          "title": "EXAMPLE 35.5  Thin-film interference II"
+        },
+        {
+          "id": "35.6",
+          "pdfPage": 1193,
+          "title": "EXAMPLE 35.6  Thin-film interference III"
+        },
+        {
+          "id": "35.7",
+          "pdfPage": 1194,
+          "title": "EXAMPLE 35.7  A nonreflective coating"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 36,
+      "sourceSections": [
+        {
+          "id": "36.1",
+          "pdfPage": 1205,
+          "title": "36.1  FRESNEL AND FRAUNHOFER DIFFRACTION"
+        },
+        {
+          "id": "36.2",
+          "pdfPage": 1207,
+          "title": "36.2  DIFFRACTION FROM A SINGLE SLIT"
+        },
+        {
+          "id": "36.3",
+          "pdfPage": 1210,
+          "title": "36.3  INTENSITY IN THE SINGLE-SLIT PATTERN"
+        },
+        {
+          "id": "36.4",
+          "pdfPage": 1214,
+          "title": "36.4  MULTIPLE SLITS"
+        },
+        {
+          "id": "36.5",
+          "pdfPage": 1216,
+          "title": "36.5  THE DIFFRACTION GRATING"
+        },
+        {
+          "id": "36.6",
+          "pdfPage": 1220,
+          "title": "36.6  X-RAY DIFFRACTION"
+        },
+        {
+          "id": "36.7",
+          "pdfPage": 1223,
+          "title": "36.7  CIRCULAR APERTURES AND RESOLVING POWER"
+        },
+        {
+          "id": "36.8",
+          "pdfPage": 1226,
+          "title": "36.8  HOLOGRAPHY"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "36.1",
+          "pdfPage": 1209,
+          "title": "EXAMPLE 36.1  Single-slit diffraction"
+        },
+        {
+          "id": "36.2",
+          "pdfPage": 1213,
+          "title": "EXAMPLE 36.2  Single-slit diffraction: Intensity I"
+        },
+        {
+          "id": "36.3",
+          "pdfPage": 1213,
+          "title": "EXAMPLE 36.3  Single-slit diffraction: Intensity II"
+        },
+        {
+          "id": "36.4",
+          "pdfPage": 1217,
+          "title": "EXAMPLE 36.4  Width of a grating spectrum"
+        },
+        {
+          "id": "36.5",
+          "pdfPage": 1222,
+          "title": "EXAMPLE 36.5  X-ray diffraction"
+        },
+        {
+          "id": "36.6",
+          "pdfPage": 1225,
+          "title": "EXAMPLE 36.6  Resolving power of a camera lens"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 37,
+      "sourceSections": [
+        {
+          "id": "37.1",
+          "pdfPage": 1237,
+          "title": "37.1  INVARIANCE OF PHYSICAL LAWS"
+        },
+        {
+          "id": "37.2",
+          "pdfPage": 1240,
+          "title": "37.2  RELATIVITY OF SIMULTANEITY"
+        },
+        {
+          "id": "37.3",
+          "pdfPage": 1242,
+          "title": "37.3  RELATIVITY OF TIME INTERVALS"
+        },
+        {
+          "id": "37.4",
+          "pdfPage": 1247,
+          "title": "37.4  RELATIVITY OF LENGTH"
+        },
+        {
+          "id": "37.5",
+          "pdfPage": 1251,
+          "title": "37.5  THE LORENTZ TRANSFORMATIONS"
+        },
+        {
+          "id": "37.6",
+          "pdfPage": 1255,
+          "title": "37.6  THE DOPPLER EFFECT FOR ELECTROMAGNETIC WAVES"
+        },
+        {
+          "id": "37.7",
+          "pdfPage": 1257,
+          "title": "37.7  RELATIVISTIC MOMENTUM"
+        },
+        {
+          "id": "37.8",
+          "pdfPage": 1259,
+          "title": "37.8  RELATIVISTIC WORK AND ENERGY"
+        },
+        {
+          "id": "37.9",
+          "pdfPage": 1263,
+          "title": "37.9  NEWTONIAN MECHANICS AND RELATIVITY"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "37.1",
+          "pdfPage": 1245,
+          "title": "EXAMPLE 37.1  Time dilation at 0.990c"
+        },
+        {
+          "id": "37.2",
+          "pdfPage": 1245,
+          "title": "EXAMPLE 37.2  Time dilation at airliner speeds"
+        },
+        {
+          "id": "37.3",
+          "pdfPage": 1246,
+          "title": "EXAMPLE 37.3  Just when is it proper?"
+        },
+        {
+          "id": "37.4",
+          "pdfPage": 1250,
+          "title": "EXAMPLE 37.4  How long is the spaceship?"
+        },
+        {
+          "id": "37.5",
+          "pdfPage": 1250,
+          "title": "EXAMPLE 37.5  How far apart are the observers?"
+        },
+        {
+          "id": "37.6",
+          "pdfPage": 1254,
+          "title": "EXAMPLE 37.6  Was it received before it was sent?"
+        },
+        {
+          "id": "37.7",
+          "pdfPage": 1254,
+          "title": "EXAMPLE 37.7  Relative velocities"
+        },
+        {
+          "id": "37.8",
+          "pdfPage": 1256,
+          "title": "EXAMPLE 37.8  A jet from a black hole"
+        },
+        {
+          "id": "37.9",
+          "pdfPage": 1259,
+          "title": "EXAMPLE 37.9  Relativistic dynamics of an electron"
+        },
+        {
+          "id": "37.10",
+          "pdfPage": 1261,
+          "title": "EXAMPLE 37.10  Energetic electrons"
+        },
+        {
+          "id": "37.11",
+          "pdfPage": 1262,
+          "title": "EXAMPLE 37.11  A relativistic collision"
+        }
+      ],
+      "resolvedHeadingStyleLeads": [
+        {
+          "id": "37.1",
+          "pdfPage": 1237,
+          "title": "37.1  INVARIANCE OF PHYSICAL LAWS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/bat-bien-dinh-luat.md",
+          "topicTitle": "Tính bất biến của định luật vật lý"
+        },
+        {
+          "id": "37.2",
+          "pdfPage": 1240,
+          "title": "37.2  RELATIVITY OF SIMULTANEITY",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/tinh-tuong-doi-dong-thoi.md",
+          "topicTitle": "Tính tương đối của đồng thời"
+        },
+        {
+          "id": "37.3",
+          "pdfPage": 1242,
+          "title": "37.3  RELATIVITY OF TIME INTERVALS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/gian-thoi-gian.md",
+          "topicTitle": "Giãn thời gian và thời gian riêng"
+        },
+        {
+          "id": "37.4",
+          "pdfPage": 1247,
+          "title": "37.4  RELATIVITY OF LENGTH",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/co-chieu-dai.md",
+          "topicTitle": "Co chiều dài và hình dạng quan sát"
+        },
+        {
+          "id": "37.5",
+          "pdfPage": 1251,
+          "title": "37.5  THE LORENTZ TRANSFORMATIONS",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/bien-doi-lorentz.md",
+          "topicTitle": "Biến đổi Lorentz"
+        },
+        {
+          "id": "37.6",
+          "pdfPage": 1255,
+          "title": "37.6  THE DOPPLER EFFECT FOR ELECTROMAGNETIC WAVES",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/doppler-dien-tu.md",
+          "topicTitle": "Doppler của sóng điện từ"
+        },
+        {
+          "id": "37.7",
+          "pdfPage": 1257,
+          "title": "37.7  RELATIVISTIC MOMENTUM",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/dong-luong-tuong-doi.md",
+          "topicTitle": "Động lượng và lực tương đối tính"
+        },
+        {
+          "id": "37.8",
+          "pdfPage": 1259,
+          "title": "37.8  RELATIVISTIC WORK AND ENERGY",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/cong-nang-luong-tuong-doi.md",
+          "topicTitle": "Công và năng lượng tương đối tính"
+        },
+        {
+          "id": "37.9",
+          "pdfPage": 1263,
+          "title": "37.9  NEWTONIAN MECHANICS AND RELATIVITY",
+          "disposition": "Dedicated catalog source-to-topic mapping; body uses descriptive heading rather than source-number heading.",
+          "topic": "docs/vat-ly-2/bai-giang/17-thuyet-tuong-doi/newton-va-tuong-doi-rong.md",
+          "topicTitle": "Cơ học Newton và thuyết tương đối rộng"
+        }
+      ]
+    },
+    {
+      "chapter": 38,
+      "sourceSections": [
+        {
+          "id": "38.1",
+          "pdfPage": 1273,
+          "title": "38.1  LIGHT ABSORBED AS PHOTONS:"
+        },
+        {
+          "id": "38.2",
+          "pdfPage": 1279,
+          "title": "38.2  LIGHT EMITTED AS PHOTONS: X-RAY PRODUCTION"
+        },
+        {
+          "id": "38.3",
+          "pdfPage": 1282,
+          "title": "38.3  LIGHT SCATTERED AS PHOTONS:"
+        },
+        {
+          "id": "38.4",
+          "pdfPage": 1285,
+          "title": "38.4   WAVE–PARTICLE DUALITY, PROBABILITY,"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "38.1",
+          "pdfPage": 1278,
+          "title": "EXAMPLE 38.1  Laser-pointer photons"
+        },
+        {
+          "id": "38.2",
+          "pdfPage": 1278,
+          "title": "EXAMPLE 38.2  A photoelectric-effect experiment"
+        },
+        {
+          "id": "38.3",
+          "pdfPage": 1278,
+          "title": "EXAMPLE 38.3  Determining F and h experimentally"
+        },
+        {
+          "id": "38.4",
+          "pdfPage": 1281,
+          "title": "EXAMPLE 38.4  Producing x rays"
+        },
+        {
+          "id": "38.5",
+          "pdfPage": 1284,
+          "title": "EXAMPLE 38.5  Compton scattering"
+        },
+        {
+          "id": "38.6",
+          "pdfPage": 1285,
+          "title": "EXAMPLE 38.6  Pair annihilation"
+        },
+        {
+          "id": "38.7",
+          "pdfPage": 1291,
+          "title": "EXAMPLE 38.7  Ultrashort laser pulses and the uncertainty principle"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 39,
+      "sourceSections": [
+        {
+          "id": "39.1",
+          "pdfPage": 1299,
+          "title": "39.1  ELECTRON WAVES"
+        },
+        {
+          "id": "39.2",
+          "pdfPage": 1305,
+          "title": "39.2   THE NUCLEAR ATOM AND ATOMIC SPECTRA"
+        },
+        {
+          "id": "39.3",
+          "pdfPage": 1310,
+          "title": "39.3   ENERGY LEVELS AND THE BOHR MODEL OF THE ATOM"
+        },
+        {
+          "id": "39.4",
+          "pdfPage": 1320,
+          "title": "39.4   THE LASER"
+        },
+        {
+          "id": "39.5",
+          "pdfPage": 1323,
+          "title": "39.5   CONTINUOUS SPECTRA"
+        },
+        {
+          "id": "39.6",
+          "pdfPage": 1328,
+          "title": "39.6   THE UNCERTAINTY PRINCIPLE REVISITED"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "39.1",
+          "pdfPage": 1302,
+          "title": "EXAMPLE 39.1  An electron-diffraction experiment"
+        },
+        {
+          "id": "39.2",
+          "pdfPage": 1302,
+          "title": "EXAMPLE 39.2  Energy of a thermal neutron"
+        },
+        {
+          "id": "39.3",
+          "pdfPage": 1304,
+          "title": "EXAMPLE 39.3  An electron microscope"
+        },
+        {
+          "id": "39.4",
+          "pdfPage": 1308,
+          "title": "EXAMPLE 39.4  A Rutherford experiment"
+        },
+        {
+          "id": "39.5",
+          "pdfPage": 1312,
+          "title": "EXAMPLE 39.5  Emission and absorption spectra"
+        },
+        {
+          "id": "39.6",
+          "pdfPage": 1318,
+          "title": "EXAMPLE 39.6  Exploring the Bohr model"
+        },
+        {
+          "id": "39.7",
+          "pdfPage": 1327,
+          "title": "EXAMPLE 39.7  Light from the sun"
+        },
+        {
+          "id": "39.8",
+          "pdfPage": 1327,
+          "title": "EXAMPLE 39.8  A slice of sunlight"
+        },
+        {
+          "id": "39.9",
+          "pdfPage": 1329,
+          "title": "EXAMPLE 39.9  The uncertainty principle: position and momentum"
+        },
+        {
+          "id": "39.10",
+          "pdfPage": 1329,
+          "title": "EXAMPLE 39.10  The uncertainty principle: energy and time"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 40,
+      "sourceSections": [
+        {
+          "id": "40.1",
+          "pdfPage": 1341,
+          "title": "40.1  WAVE FUNCTIONS AND THE ONE-DIMENSIONAL"
+        },
+        {
+          "id": "40.2",
+          "pdfPage": 1351,
+          "title": "40.2  PARTICLE IN A BOX"
+        },
+        {
+          "id": "40.3",
+          "pdfPage": 1356,
+          "title": "40.3  POTENTIAL WELLS"
+        },
+        {
+          "id": "40.4",
+          "pdfPage": 1360,
+          "title": "40.4  POTENTIAL BARRIERS AND TUNNELING"
+        },
+        {
+          "id": "40.5",
+          "pdfPage": 1363,
+          "title": "40.5  THE HARMONIC OSCILLATOR"
+        },
+        {
+          "id": "40.6",
+          "pdfPage": 1367,
+          "title": "40.6  MEASUREMENT IN QUANTUM MECHANICS"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "40.1",
+          "pdfPage": 1347,
+          "title": "EXAMPLE 40.1  A localized free-particle wave function"
+        },
+        {
+          "id": "40.2",
+          "pdfPage": 1350,
+          "title": "EXAMPLE 40.2  A stationary state"
+        },
+        {
+          "id": "40.3",
+          "pdfPage": 1354,
+          "title": "EXAMPLE 40.3  Electron in an atom-size box"
+        },
+        {
+          "id": "40.4",
+          "pdfPage": 1355,
+          "title": "EXAMPLE 40.4  A nonsinusoidal wave function?"
+        },
+        {
+          "id": "40.5",
+          "pdfPage": 1357,
+          "title": "EXAMPLE 40.5  Outside a finite well"
+        },
+        {
+          "id": "40.6",
+          "pdfPage": 1359,
+          "title": "EXAMPLE 40.6  An electron in a finite well"
+        },
+        {
+          "id": "40.7",
+          "pdfPage": 1361,
+          "title": "EXAMPLE 40.7  Tunneling through a barrier"
+        },
+        {
+          "id": "40.8",
+          "pdfPage": 1365,
+          "title": "EXAMPLE 40.8  Vibration in a crystal"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 41,
+      "sourceSections": [
+        {
+          "id": "41.1",
+          "pdfPage": 1380,
+          "title": "41.1  THE SCHRÖDINGER EQUATION IN THREE DIMENSIONS"
+        },
+        {
+          "id": "41.2",
+          "pdfPage": 1382,
+          "title": "41.2  PARTICLE IN A THREE-DIMENSIONAL BOX"
+        },
+        {
+          "id": "41.3",
+          "pdfPage": 1387,
+          "title": "41.3  THE HYDROGEN ATOM"
+        },
+        {
+          "id": "41.4",
+          "pdfPage": 1395,
+          "title": "41.4   THE ZEEMAN EFFECT"
+        },
+        {
+          "id": "41.5",
+          "pdfPage": 1398,
+          "title": "41.5  ELECTRON SPIN"
+        },
+        {
+          "id": "41.6",
+          "pdfPage": 1405,
+          "title": "41.6  MANY-ELECTRON ATOMS AND THE"
+        },
+        {
+          "id": "41.7",
+          "pdfPage": 1412,
+          "title": "41.7  X-RAY SPECTRA"
+        },
+        {
+          "id": "41.8",
+          "pdfPage": 1415,
+          "title": "41.8   QUANTUM ENTANGLEMENT"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "41.1",
+          "pdfPage": 1385,
+          "title": "EXAMPLE 41.1  Probability in a three-dimensional box"
+        },
+        {
+          "id": "41.2",
+          "pdfPage": 1392,
+          "title": "EXAMPLE 41.2  Counting hydrogen states"
+        },
+        {
+          "id": "41.3",
+          "pdfPage": 1392,
+          "title": "EXAMPLE 41.3  Angular momentum in an excited level of hydrogen"
+        },
+        {
+          "id": "41.4",
+          "pdfPage": 1394,
+          "title": "EXAMPLE 41.4  A hydrogen wave function"
+        },
+        {
+          "id": "41.5",
+          "pdfPage": 1397,
+          "title": "EXAMPLE 41.5  An atom in a magnetic field"
+        },
+        {
+          "id": "41.6",
+          "pdfPage": 1401,
+          "title": "EXAMPLE 41.6  Energy of electron spin in a magnetic field"
+        },
+        {
+          "id": "41.7",
+          "pdfPage": 1402,
+          "title": "EXAMPLE 41.7  An effective magnetic field"
+        },
+        {
+          "id": "41.8",
+          "pdfPage": 1403,
+          "title": "EXAMPLE 41.8  Fine structure and spectral-line splitting"
+        },
+        {
+          "id": "41.9",
+          "pdfPage": 1411,
+          "title": "EXAMPLE 41.9  Determining Zeff experimentally"
+        },
+        {
+          "id": "41.10",
+          "pdfPage": 1411,
+          "title": "EXAMPLE 41.10  Energies for a valence electron"
+        },
+        {
+          "id": "41.11",
+          "pdfPage": 1414,
+          "title": "EXAMPLE 41.11  Chemical analysis by x-ray emission"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 42,
+      "sourceSections": [
+        {
+          "id": "42.1",
+          "pdfPage": 1428,
+          "title": "42.1  TYPES OF MOLECULAR BONDS"
+        },
+        {
+          "id": "42.2",
+          "pdfPage": 1431,
+          "title": "42.2  MOLECULAR SPECTRA"
+        },
+        {
+          "id": "42.3",
+          "pdfPage": 1435,
+          "title": "42.3   STRUCTURE OF SOLIDS"
+        },
+        {
+          "id": "42.4",
+          "pdfPage": 1438,
+          "title": "42.4  ENERGY BANDS"
+        },
+        {
+          "id": "42.5",
+          "pdfPage": 1441,
+          "title": "42.5   FREE-ELECTRON MODEL OF METALS"
+        },
+        {
+          "id": "42.6",
+          "pdfPage": 1445,
+          "title": "42.6   SEMICONDUCTORS"
+        },
+        {
+          "id": "42.7",
+          "pdfPage": 1448,
+          "title": "42.7   SEMICONDUCTOR DEVICES"
+        },
+        {
+          "id": "42.8",
+          "pdfPage": 1453,
+          "title": "42.8   SUPERCONDUCTIVITY"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "42.1",
+          "pdfPage": 1429,
+          "title": "EXAMPLE 42.1  Electric potential energy of the NaCl molecule"
+        },
+        {
+          "id": "42.2",
+          "pdfPage": 1432,
+          "title": "EXAMPLE 42.2  Rotational spectrum of carbon monoxide"
+        },
+        {
+          "id": "42.3",
+          "pdfPage": 1434,
+          "title": "EXAMPLE 42.3  Vibration-rotation spectrum of carbon monoxide"
+        },
+        {
+          "id": "42.4",
+          "pdfPage": 1437,
+          "title": "EXAMPLE 42.4  Potential energy of an ionic crystal"
+        },
+        {
+          "id": "42.5",
+          "pdfPage": 1440,
+          "title": "EXAMPLE 42.5  Photoconductivity in germanium"
+        },
+        {
+          "id": "42.6",
+          "pdfPage": 1443,
+          "title": "EXAMPLE 42.6  Probabilities in the free-electron model"
+        },
+        {
+          "id": "42.7",
+          "pdfPage": 1444,
+          "title": "EXAMPLE 42.7  The Fermi energy in copper"
+        },
+        {
+          "id": "42.8",
+          "pdfPage": 1444,
+          "title": "EXAMPLE 42.8  Free-electron gas versus ideal gas"
+        },
+        {
+          "id": "42.9",
+          "pdfPage": 1446,
+          "title": "EXAMPLE 42.9  Jumping a band gap"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 43,
+      "sourceSections": [
+        {
+          "id": "43.1",
+          "pdfPage": 1462,
+          "title": "43.1   PROPERTIES OF NUCLEI"
+        },
+        {
+          "id": "43.2",
+          "pdfPage": 1467,
+          "title": "43.2   NUCLEAR BINDING AND NUCLEAR STRUCTURE"
+        },
+        {
+          "id": "43.3",
+          "pdfPage": 1472,
+          "title": "43.3  NUCLEAR STABILITY AND RADIOACTIVITY"
+        },
+        {
+          "id": "43.4",
+          "pdfPage": 1479,
+          "title": "43.4   ACTIVITIES AND HALF-LIVES"
+        },
+        {
+          "id": "43.5",
+          "pdfPage": 1483,
+          "title": "43.5  BIOLOGICAL EFFECTS OF RADIATION"
+        },
+        {
+          "id": "43.6",
+          "pdfPage": 1485,
+          "title": "43.6  NUCLEAR REACTIONS"
+        },
+        {
+          "id": "43.7",
+          "pdfPage": 1488,
+          "title": "43.7  NUCLEAR FISSION"
+        },
+        {
+          "id": "43.8",
+          "pdfPage": 1492,
+          "title": "43.8  NUCLEAR FUSION"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "43.1",
+          "pdfPage": 1463,
+          "title": "EXAMPLE 43.1  Calculating nuclear properties"
+        },
+        {
+          "id": "43.2",
+          "pdfPage": 1466,
+          "title": "EXAMPLE 43.2  Proton spin flips"
+        },
+        {
+          "id": "43.3",
+          "pdfPage": 1468,
+          "title": "EXAMPLE 43.3  The most strongly bound nuclide"
+        },
+        {
+          "id": "43.4",
+          "pdfPage": 1471,
+          "title": "EXAMPLE 43.4  Estimating binding energy and mass"
+        },
+        {
+          "id": "43.5",
+          "pdfPage": 1474,
+          "title": "EXAMPLE 43.5  Alpha decay of radium"
+        },
+        {
+          "id": "43.6",
+          "pdfPage": 1476,
+          "title": "EXAMPLE 43.6  Why cobalt-60 is a beta-minus emitter"
+        },
+        {
+          "id": "43.7",
+          "pdfPage": 1477,
+          "title": "EXAMPLE 43.7  Why cobalt-57 is not a beta-plus emitter"
+        },
+        {
+          "id": "43.8",
+          "pdfPage": 1480,
+          "title": "EXAMPLE 43.8  Activity of 57Co"
+        },
+        {
+          "id": "43.9",
+          "pdfPage": 1481,
+          "title": "EXAMPLE 43.9  Radiocarbon dating"
+        },
+        {
+          "id": "43.10",
+          "pdfPage": 1483,
+          "title": "EXAMPLE 43.10  Dose from a medical x ray"
+        },
+        {
+          "id": "43.11",
+          "pdfPage": 1486,
+          "title": "EXAMPLE 43.11  Exoergic and endoergic reactions"
+        },
+        {
+          "id": "43.12",
+          "pdfPage": 1491,
+          "title": "EXAMPLE 43.12  Uranium consumption in a nuclear reactor"
+        },
+        {
+          "id": "43.13",
+          "pdfPage": 1493,
+          "title": "EXAMPLE 43.13  A fusion reaction"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    },
+    {
+      "chapter": 44,
+      "sourceSections": [
+        {
+          "id": "44.1",
+          "pdfPage": 1503,
+          "title": "44.1  FUNDAMENTAL PARTICLES—A HISTORY"
+        },
+        {
+          "id": "44.2",
+          "pdfPage": 1508,
+          "title": "44.2  PARTICLE ACCELERATORS AND DETECTORS"
+        },
+        {
+          "id": "44.3",
+          "pdfPage": 1512,
+          "title": "44.3  PARTICLES AND INTERACTIONS"
+        },
+        {
+          "id": "44.4",
+          "pdfPage": 1518,
+          "title": "44.4  QUARKS AND GLUONS"
+        },
+        {
+          "id": "44.5",
+          "pdfPage": 1522,
+          "title": "44.5  THE STANDARD MODEL AND BEYOND"
+        },
+        {
+          "id": "44.6",
+          "pdfPage": 1524,
+          "title": "44.6  THE EXPANDING UNIVERSE"
+        },
+        {
+          "id": "44.7",
+          "pdfPage": 1531,
+          "title": "44.7  THE BEGINNING OF TIME"
+        }
+      ],
+      "sourceExamples": [
+        {
+          "id": "44.1",
+          "pdfPage": 1509,
+          "title": "EXAMPLE 44.1  Frequency and energy in a proton cyclotron"
+        },
+        {
+          "id": "44.2",
+          "pdfPage": 1511,
+          "title": "EXAMPLE 44.2  Threshold energy for pion production"
+        },
+        {
+          "id": "44.3",
+          "pdfPage": 1511,
+          "title": "EXAMPLE 44.3  Increasing the available energy"
+        },
+        {
+          "id": "44.4",
+          "pdfPage": 1515,
+          "title": "EXAMPLE 44.4  Lepton number conservation"
+        },
+        {
+          "id": "44.5",
+          "pdfPage": 1517,
+          "title": "EXAMPLE 44.5  Baryon number conservation"
+        },
+        {
+          "id": "44.6",
+          "pdfPage": 1517,
+          "title": "EXAMPLE 44.6  Antiproton creation"
+        },
+        {
+          "id": "44.7",
+          "pdfPage": 1519,
+          "title": "EXAMPLE 44.7  Determining the quark content of baryons"
+        },
+        {
+          "id": "44.8",
+          "pdfPage": 1525,
+          "title": "EXAMPLE 44.8  Recession speed of a galaxy"
+        },
+        {
+          "id": "44.9",
+          "pdfPage": 1526,
+          "title": "EXAMPLE 44.9  Determining distance with the Hubble law"
+        },
+        {
+          "id": "44.10",
+          "pdfPage": 1531,
+          "title": "EXAMPLE 44.10  Temperature and energy"
+        },
+        {
+          "id": "44.11",
+          "pdfPage": 1536,
+          "title": "CONCEPTUAL EXAMPLE 44.11  The relative abundance of hydrogen and helium in the universe"
+        },
+        {
+          "id": "44.12",
+          "pdfPage": 1538,
+          "title": "EXAMPLE 44.12  Expansion of the universe"
+        }
+      ],
+      "resolvedHeadingStyleLeads": []
+    }
+  ],
+  "sourceSectionCount": 290,
+  "sourceExampleCount": 492,
+  "remainingFormalIDLeads": [],
+  "limits": "Originallargeuppercase section headings/EXAMPLE markers reconciled with active Notes headings and dedicated catalog-linked substantive topic pages. This validates formal unit destinations, not every translated sentence/assumption. Original3.45CALC false section explicitly excluded; descriptive headings valid, no artificial renumbering added. No fullgoalcompletionclaim."
+}

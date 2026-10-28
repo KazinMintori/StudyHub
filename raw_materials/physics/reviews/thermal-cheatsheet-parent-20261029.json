@@ -1,0 +1,110 @@
+{
+  "status": "accepted-parent-chapter19-cheatsheet-additions-only",
+  "module": "docs/.vitepress/physics1-priority-course.mjs",
+  "moduleSHA256": "ca0959188a8949d7fc840500e6865ffec7d8ddc348ca233ce547bd49590423a2",
+  "parentVisuallyReadPDFPages": [
+    641,
+    647,
+    650,
+    652
+  ],
+  "acceptedAdditions": [
+    "First-law differential and explicit energy/sign definitions.",
+    "Volume-work-only applicability conditions for special processes.",
+    "Heat capacity definitions, units, QV/Qp and CV from gamma.",
+    "Isothermal Q equals W and isothermal compression wording.",
+    "Adiabatic work using initial/final temperatures."
+  ],
+  "rejectedOrDeferredAgentClaims": [
+    "Chapter19 incorrect printed/page references and overstatement that every equivalent formula must be a separate major omission.",
+    "Diatomic U formula proposal deferred: Requires rotational/vibrational temperature domain, not a universal formula for every diatomic gas.",
+    "Chapter20 report cites14th edition although actual input is15th. No full semantic source acceptance inferred from its blanket PASS.",
+    "Agent transport failedNoneType for both jobs; retained usable files and reran numeric scripts, no claim of successful AGY task completion."
+  ],
+  "parentNumericVerifier": "raw_materials/physics/verify_thermal_cheatsheet_parent_20261029.py",
+  "verification": "Passed independent Simpson pressure integration and heat-capacity/first-law relations. 39 skill tests passed. Scoped chapter19 integration check zero errors/warnings.",
+  "componentCases": [
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 320,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 360,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 375,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 768,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 1440,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 320,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 360,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 375,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 768,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 1440,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    }
+  ],
+  "limits": "Two actual Vue/CSS Cheatsheet components at five widths. Does not certify unchanged chapter20 source completeness, all44 supports or public release of this new module edit.",
+  "fullGoalComplete": false
+}
