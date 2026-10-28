@@ -1,0 +1,25 @@
+{
+  "status": "accepted-scoped-parent-repair-section7-1",
+  "file": "raw_materials/physics/translations/chapter-07/01-muc-01.md",
+  "beforeSHA256": "4e171d7ce35ed35ef9adee8b92106e8ef411b2924d76f94a5b8a8d89b0b7f0fd",
+  "afterSHA256": "a7297c1532a367a8e3450afb8d096e3e14ccf703e4c416f52d99e49b89828ae1",
+  "actualSourcePDFPagesParentVisuallyRead": [
+    222,
+    224,
+    225
+  ],
+  "preservedImages": 13,
+  "sourceImagePixelsChanged": false,
+  "exampleAndSelfcheckCountsPreserved": true,
+  "changes": [
+    "Corrected7.1basketballphoto caption.",
+    "Moved kingfisherapplication alongside gravity-onlymechanicalenergybeforeExample7.1.",
+    "Introduced generalnongravitywork7.6before7.7; explicitenergyterms fullyunpacked usingdefinedE2thenmathematicallyequivalentmassfactored7.7 tofitmobile. Reducedperunitmassequationnowlabelledasderivedequivalent,notprematureformula.",
+    "Added originalExample7.1checkwithorigin5m belowlaunchandshiftedpeak25.4m.",
+    "Restored3distinctcautions: Systemownership,referencelevelchoice,pathheightdependence. Existingcorrecttext retained."
+  ],
+  "proposalRejected": "BlanketmissingEnglishlabelclaimnotaccepted: EffectiveglobalannotationmodulealreadyprovidesEnglish/Vietnameseglosses, e.g7.5has6rows. Do notduplicate.",
+  "numericAssertions": 5,
+  "componentViewportCases": 5,
+  "limits": "Parent source/correction review for nameddefects and5componentwidths only. AGYtimedout1200swithusable30unitclaimedreport; notacceptedblanketwholechapterorall13sourceframings. No wholecourse/publicgoalcompletion."
+}
