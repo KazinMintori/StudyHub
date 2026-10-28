@@ -64,17 +64,17 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 227,
+      "line": 157,
       "title": "Ví dụ 11.5: Ứng suất kéo, biến dạng và độ dãn dài của thanh thép"
     },
     {
       "source": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 495,
+      "line": 379,
       "title": "Ví dụ 11.6: Ứng suất khối và biến dạng khối của dầu trong máy ép thủy lực"
     },
     {
       "source": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 669,
+      "line": 524,
       "title": "Ví dụ 11.7: Ứng suất trượt và lực cắt trong trận động đất"
     }
   ],
@@ -102,7 +102,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 819,
+      "line": 658,
       "title": "Xem lời giải thích"
     },
     {
@@ -209,57 +209,57 @@
       "source": "docs/vat-ly-1/bai-giang/img/young-11/a-hinh-11-11.png"
     },
     {
-      "reference": "../img/young-11/b-hinh-11-12.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-hinh-11-12.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 9,
+      "line": 5,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-hinh-11-12.png"
     },
     {
-      "reference": "../img/young-11/b-hinh-11-13.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-hinh-11-13.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 17,
+      "line": 9,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-hinh-11-13.png"
     },
     {
-      "reference": "../img/young-11/b-hinh-11-14.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-hinh-11-14.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 95,
+      "line": 63,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-hinh-11-14.png"
     },
     {
-      "reference": "../img/young-11/b-hinh-11-15.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-hinh-11-15.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 159,
+      "line": 113,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-hinh-11-15.png"
     },
     {
-      "reference": "../img/young-11/b-ung-dung-11-gan-chan.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-ung-dung-11-gan-chan.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 211,
+      "line": 149,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-ung-dung-11-gan-chan.png"
     },
     {
-      "reference": "../img/young-11/b-hinh-11-16.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-hinh-11-16.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 219,
+      "line": 153,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-hinh-11-16.png"
     },
     {
-      "reference": "../img/young-11/b-hinh-11-17.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-hinh-11-17.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 395,
+      "line": 305,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-hinh-11-17.png"
     },
     {
-      "reference": "../img/young-11/b-ung-dung-11-ca-can-cau.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-ung-dung-11-ca-can-cau.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 487,
+      "line": 375,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-ung-dung-11-ca-can-cau.png"
     },
     {
-      "reference": "../img/young-11/b-hinh-11-18.png",
+      "reference": "/vat-ly-1/bai-giang/img/young-11/b-hinh-11-18.png",
       "declaredIn": "raw_materials/physics/translations/chapter-11/04-ung-suat-bien-dang-modun.md",
-      "line": 597,
+      "line": 472,
       "source": "docs/vat-ly-1/bai-giang/img/young-11/b-hinh-11-18.png"
     },
     {
