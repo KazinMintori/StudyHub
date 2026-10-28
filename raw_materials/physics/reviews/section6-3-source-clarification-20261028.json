@@ -1,0 +1,63 @@
+{
+  "status": "accepted-scoped-local-clarifications",
+  "file": "raw_materials/physics/translations/chapter-06/03-muc-03.md",
+  "sourceSHA256": "a7c3268816a2927558adbacc7a9e144b14c3251f88bcf5af65855eaf4ed457db",
+  "actualSourcePDFPagesRead": [
+    203,
+    206
+  ],
+  "fixes": [
+    "Restored source CAUTION work ON spring versus work BY spring, with force/body and slow ideal deformation conditions.",
+    "Finite Delta-x pieces are small displacement segments, not yet differentials."
+  ],
+  "imageOrderPreserved": true,
+  "effectiveFigureGlossaries": [
+    {
+      "key": "young-06/r-theory-06-16",
+      "glossRows": 5
+    },
+    {
+      "key": "young-06/r-theory-06-17",
+      "glossRows": 1
+    },
+    {
+      "key": "young-06/r-theory-06-18",
+      "glossRows": 0
+    },
+    {
+      "key": "young-06/r-theory-06-19",
+      "glossRows": 1
+    },
+    {
+      "key": "young-06/r-theory-06-20",
+      "glossRows": 3
+    },
+    {
+      "key": "young-06/r-theory-06-21",
+      "glossRows": 1
+    },
+    {
+      "key": "young-06/r-theory-app-tendons",
+      "glossRows": 5
+    },
+    {
+      "key": "young-06/r-theory-06-22",
+      "glossRows": 3
+    },
+    {
+      "key": "young-06/r-theory-06-23",
+      "glossRows": 2
+    },
+    {
+      "key": "young-06/r-theory-06-24",
+      "glossRows": 1
+    }
+  ],
+  "agentProposalsNotAccepted": [
+    "Source206 proves theorem along curved path through tangent work. Existing2Dcomponent illustration explicitly restricted to plane is not evidence of missing source3Dproof. No unnecessary replacement by lengthy3Dcoordinate derivation.",
+    "Claim allEnglishfigurelabels missing rejected: Effective registeredglobalcaptiondata alreadycontainEnglish/Vietnameserows; do notduplicate eachcaption."
+  ],
+  "numericalAssertions": 6,
+  "componentWidthCases": 5,
+  "limits": "Wholechapter6semantic/figure/public acceptance notclaimed. Dirtypreexistingchapter6contentindexintentionallynotregenerated/staged; normalGitHubsync regeneratesdeploymentindex."
+}
