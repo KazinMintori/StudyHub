@@ -289,7 +289,7 @@ Buồng dây dùng những mảng dây đặt gần nhau để ghi điện tích
 Trong một thí nghiệm chùm hạt va chạm đối đầu, một electron mang năng lượng 90 GeV va chạm trực diện với một positron mang năng lượng 90 GeV. Cặp electron và positron hủy lẫn nhau, tạo thành một photon ảo duy nhất, sau đó photon ảo này biến đổi thành các hạt khác. Photon ảo này có tuân theo hệ thức liên hệ $E = pc$ giống như photon thực hay không?
 
 
-::: Details Lời giải chi tiết
+::: details Lời giải chi tiết
 **Đáp án:** Không. Photon trung gian trong trường hợp này không thỏa hệ thức của photon thực.
 
 Trong va chạm đối đầu trực diện giữa electron và positron có năng lượng bằng nhau:

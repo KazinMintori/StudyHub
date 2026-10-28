@@ -173,7 +173,7 @@ Các hạt sau có thể truyền tương tác hạt nhân giữa các nucleon. 
 (iv) Meson $\omega^0$ có khối lượng $783\,\text{MeV}/c^2$. Hãy sắp xếp các hạt này theo thứ tự giảm dần của bán kính tác dụng mà chúng truyền tương tác (từ bán kính lớn nhất đến nhỏ nhất).
 
 
-::: Details Lời giải chi tiết
+::: details Lời giải chi tiết
 **Đáp án:** Thứ tự giảm dần là (i), (iii), (ii), (iv).
 
 Tham số tầm tác dụng của thế Yukawa có thang $r_0\sim\hbar/(mc)$, nên giảm khi khối lượng hạt truyền tương tác tăng. Lập luận bất định và giả thiết chuyển động qua khoảng cách $r_0/2$ chỉ là ước lượng bậc độ lớn. Nó không gán cho mọi hạt ảo một thời gian sống vật lý có thể đo riêng.

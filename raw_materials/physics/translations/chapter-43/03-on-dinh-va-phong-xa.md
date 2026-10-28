@@ -250,7 +250,7 @@ Một hạt nhân có số hiệu nguyên tử $Z$ và số neutron $N$ trải q
 (iv) Một phân rã $\alpha$ và một phân rã $\beta^-$;
 (v) Một phân rã $\alpha$ và một phân rã $\beta^+$.
 
-::: Details Giải thích
+::: details Giải thích
 Đáp án đúng là (v): Một phân rã $\alpha$ và một phân rã $\beta^+$.
 
 Phân tích chi tiết:

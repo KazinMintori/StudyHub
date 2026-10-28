@@ -63,11 +63,11 @@ W = p(V_2 - V_1)
 \tag{19.3}
 $$
 
-::: Warning Cẩn trọng với chỉ số trạng thái ban đầu và trạng thái cuối
+::: warning Cẩn trọng với chỉ số trạng thái ban đầu và trạng thái cuối
 Trong phương trình (19.2), $V_1$ luôn là thể tích ban đầu và $V_2$ luôn là thể tích cuối cùng. Khi hệ bị nén ($V_2 < V_1$), cận trên nhỏ hơn cận dưới nên giá trị tích phân tự động mang dấu âm.
 :::
 
-::: Example Ví dụ 19.1: Giãn nở đẳng nhiệt của khí lý tưởng
+::: example Ví dụ 19.1: Giãn nở đẳng nhiệt của khí lý tưởng
 Một lượng khí lý tưởng trải qua quá trình giãn nở đẳng nhiệt ở nhiệt độ không đổi $T$, làm thể tích tăng từ $V_1$ đến $V_2$. Hãy xác định công do khối khí sinh ra.
 
 **Tóm tắt:**
@@ -110,7 +110,7 @@ $$
 Trong quá trình giãn nở ($V_2 > V_1$), tỷ số $V_2/V_1 > 1$ nên $\ln(V_2/V_1) > 0$, dẫn đến công $W > 0$ như mong đợi. Ngược lại, nếu khối khí bị nén đẳng nhiệt ($V_2 < V_1$), tỷ số $V_2/V_1 < 1$ làm logarit mang giá trị âm, dẫn đến công $W < 0$, hoàn toàn phù hợp với quy ước nhiệt động lực học.
 :::
 
-::: Exercise Tự kiểm tra 19.2
+::: exercise Tự kiểm tra 19.2
 Một lượng khí lý tưởng giãn nở làm thể tích tăng gấp đôi. Khí sinh công nhiều hơn khi giãn nở đẳng áp hay đẳng nhiệt?
 
 - (i) Đẳng áp.

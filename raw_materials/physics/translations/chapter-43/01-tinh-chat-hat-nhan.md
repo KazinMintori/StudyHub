@@ -508,7 +508,7 @@ Ngoài ra, momen từ của hạt nhân còn là nguồn phát ra từ trường
 (iv) $4$;
 (v) $8$.
 
-::: Details Hướng dẫn giải chi tiết
+::: details Hướng dẫn giải chi tiết
 **Phân tích câu (a)**:
 Thể tích hạt nhân tỉ lệ thuận trực tiếp với số khối $A$ theo hệ thức:
 $$

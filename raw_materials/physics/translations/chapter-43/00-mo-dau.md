@@ -12,7 +12,7 @@ Vì sao có thể dùng phóng xạ để xác định tuổi của những mẫ
 4. Mẫu vật sinh học không tiếp tục nhận thêm chất phóng xạ sau khi chết.
 5. Có nhiều hơn một phát biểu đúng trong các phát biểu trên.
 
-::: Details Giải thích
+::: details Giải thích
 Phát biểu (4) nêu giả thiết quan trọng của phép định tuổi này. Khi sinh vật còn sống, carbon trao đổi với môi trường. Khi quá trình ấy dừng, lượng carbon phóng xạ còn lại suy giảm. So sánh hoạt độ hiện tại với hoạt độ ban đầu phù hợp cho phép suy thời gian đã trôi qua.
 
 Trong thực nghiệm, nồng độ đồng vị ban đầu có thể thay đổi theo thời kỳ. Phép định tuổi cần những hiệu chỉnh và giả thiết phù hợp về quá trình trao đổi vật chất của mẫu.

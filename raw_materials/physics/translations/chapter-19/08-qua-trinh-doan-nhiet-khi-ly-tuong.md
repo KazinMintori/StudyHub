@@ -12,7 +12,7 @@ Không khí ở đầu ra máy nén dùng để bơm lốp hoặc nạp bình l�
 
 Khi mở một chai đồ uống có gas, phần khí ngay trên mặt chất lỏng giãn nở nhanh. Nhiệt độ của phần khí giảm trong mô hình giãn nở sinh công gần đoạn nhiệt. Hơi nước có thể ngưng tụ thành một đám mây nhỏ, như minh họa ở Hình 19.14.
 
-::: Warning Cảnh báo: Làm nóng và làm lạnh không cần nhiệt
+::: warning Cảnh báo: Làm nóng và làm lạnh không cần nhiệt
 Trong ngôn ngữ đời thường, người ta thường đồng nhất khái niệm "nóng lên" với việc "nhận thêm nhiệt lượng", và "lạnh đi" với việc "mất nhiệt lượng". Tuy nhiên trong nhiệt động lực học, nhiệt độ của một hệ hoàn toàn có thể tăng lên hoặc hạ xuống mà không cần có bất kỳ sự truyền nhiệt nào ($Q = 0$). Trong quá trình nén đoạn nhiệt, nhiệt độ của chất khí tăng lên hoàn toàn do công cơ học tác dụng lên nó được biến đổi trực tiếp thành nội năng.
 :::
 
@@ -144,7 +144,7 @@ $$
 
 Nếu quá trình là một sự giãn nở ($V_2 > V_1$), nhiệt độ và áp suất đều giảm, kéo theo $p_1 V_1 > p_2 V_2$ và công $W$ mang giá trị dương. Ngược lại, nếu quá trình là một sự nén khí ($V_2 < V_1$), công $W$ mang giá trị âm, phù hợp với quy ước công được thực hiện lên khối khí.
 
-::: Tip Ứng dụng sinh học: Thở ra khí ấm hay khí mát
+::: tip Ứng dụng sinh học: Thở ra khí ấm hay khí mát
 Hãy đưa bàn tay lại gần miệng một khoảng vài centimet, mở rộng miệng và phà hơi: Bạn sẽ cảm nhận luồng khí thở ra rất ấm áp. Bây giờ, hãy lặp lại thí nghiệm nhưng chúm môi lại thật nhỏ và thổi mạnh qua khe môi: Bạn sẽ thấy luồng khí mát hơn rõ rệt (Hình ứng dụng 19.1).
 
 ![Hình ứng dụng 19.1: Thở ra khí ấm khi mở rộng miệng và thổi ra khí mát khi chúm môi: Minh họa sinh động cho hiện tượng giãn nở đoạn nhiệt trong đời sống hàng ngày.](../img/young-19/b-ung-dung-01.png)
@@ -155,7 +155,7 @@ Khi mở rộng miệng và thở chậm, chênh lệch áp suất nhỏ hơn n�
 
 :::
 
-::: Example Ví dụ 19.7: Nén đoạn nhiệt trong động cơ diesel
+::: example Ví dụ 19.7: Nén đoạn nhiệt trong động cơ diesel
 Tỷ số nén của một động cơ diesel là $15{,}0 : 1$, nghĩa là không khí trong xi lanh bị nén từ thể tích ban đầu $V_1$ xuống thể tích nhỏ nhất lúc nén là $V_2 = V_1 / 15{,}0$ (Hình 19.21). Không khí đi vào buồng đốt ở áp suất ban đầu $p_1 = 1{,}01 \times 10^5\text{ Pa}$ và nhiệt độ ban đầu $T_1 = 27^\circ\text{C} = 300\text{ K}$. Coi không khí là khí lý tưởng có tỷ số nhiệt dung $\gamma = 1{,}40$ và nhiệt dung mol đẳng tích $C_V = 20{,}8\text{ J/(mol}\cdot\text{K)}$. Thể tích ban đầu của xi lanh là $V_1 = 1{,}00\text{ L}$ (tương ứng $1{,}00 \times 10^{-3}\text{ m}^3$).
 
 (a) Tính nhiệt độ cuối cùng $T_2$ và áp suất cuối cùng $p_2$ của khối không khí sau khi nén.
@@ -238,7 +238,7 @@ Dùng $C_V=20{,}8\,\mathrm{J/(mol\,K)}$ đã làm tròn cho công xấp xỉ $-4
 **Đánh giá:** Công mang dấu âm vì môi trường thực hiện công nén lên khí. Nếu nén đẳng nhiệt cùng tỉ số thể tích, áp suất cuối chỉ xấp xỉ 15 lần ban đầu. Nén đoạn nhiệt làm nhiệt độ tăng, nên áp suất cuối lớn hơn đáng kể. Nhiệt độ cao đạt được ở cuối hành trình nén cho phép nhiên liệu diesel được phun vào tự bốc cháy mà không cần bugi đánh lửa.
 :::
 
-::: Info Tự kiểm tra 19.8
+::: info Tự kiểm tra 19.8
 **Câu hỏi:** Bạn có bốn mẫu khí lý tưởng khác nhau, mỗi mẫu đều có cùng số mol khí, cùng nhiệt độ, thể tích và áp suất ban đầu. Nén mỗi mẫu khí về một nửa thể tích ban đầu ($V_2 = V_1 / 2$). Hãy sắp xếp bốn mẫu khí theo thứ tự áp suất cuối cùng từ cao nhất đến thấp nhất: (i) Khí đơn nguyên tử nén đẳng nhiệt. (ii) Khí đơn nguyên tử nén đoạn nhiệt. (iii) Khí lưỡng nguyên tử nén đẳng nhiệt. (iv) Khí lưỡng nguyên tử nén đoạn nhiệt.
 
 <details><summary>Xem lời giải thích</summary>

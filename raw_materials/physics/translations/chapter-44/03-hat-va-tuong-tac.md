@@ -624,7 +624,7 @@ Mỗi định luật bảo toàn đều gắn liền với một tính chất đ
 Theo định luật bảo toàn năng lượng, một hạt có khối lượng $m$ và năng lượng nghỉ $mc^2$ chỉ có thể phân rã tự phát nếu tổng khối lượng của các hạt sinh ra nhỏ hơn $m$. Proton có khối lượng lớn hơn nhiều loại meson. Một proton tự do có thể phân rã thành các hạt meson nhẹ hơn hay không?
 
 
-::: Details Lời giải chi tiết
+::: details Lời giải chi tiết
 **Đáp án:** Quá trình này bị cấm bởi bảo toàn số baryon trong mô hình đang khảo sát.
 
 Xét quá trình giả định một proton phân rã thành các meson:

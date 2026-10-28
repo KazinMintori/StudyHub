@@ -224,7 +224,7 @@ Phương pháp phân tích kích hoạt neutron (neutron activation analysis) c�
 
 Phản ứng được mô tả ở phần (a) của Ví dụ 43.11 là phản ứng tỏa năng lượng. Phản ứng này có thể tự nhiên diễn ra khi ta đặt một mẩu kim loại lithium rắn vào trong một bình chứa đầy khí hydrogen hay không?
 
-::: Details Giải thích
+::: details Giải thích
 **Đáp án đúng**: Không thể diễn ra tự nhiên.
 
 Phản ứng hạt nhân $^1_1\text{H} + ^7_3\text{Li} \rightarrow ^4_2\text{He} + ^4_2\text{He}$ chỉ có thể xảy ra khi một proton (tức hạt nhân của nguyên tử hydrogen) tiếp xúc trực tiếp với hạt nhân lithium ở cự ly của lực hạt nhân.

@@ -44,7 +44,7 @@ Hai quá trình xuất phát từ cùng một trạng thái ban đầu và kết
 
 Vì nhiệt lượng phụ thuộc vào quá trình biến đổi, việc nói một hệ "chứa một lượng nhiệt xác định" là cách hiểu hoàn toàn sai lầm. Nhiệt lượng không phải là thuộc tính trạng thái của vật chất. Ta chỉ có thể nói về nhiệt lượng khi có sự truyền năng lượng giữa hệ và môi trường xung quanh do chênh lệch nhiệt độ.
 
-::: Exercise Tự kiểm tra 19.3
+::: exercise Tự kiểm tra 19.3
 Xét hệ ở Hình 19.7a. Mỗi quá trình sau được biểu diễn bằng một đoạn thẳng nối trực tiếp trạng thái đầu và trạng thái cuối trên giản đồ $pV$. Hãy sắp xếp các quá trình sau theo thứ tự công do hệ sinh ra, từ giá trị dương lớn nhất đến giá trị âm lớn nhất: (i) $1 \to 2$. (ii) $2 \to 1$. (iii) $3 \to 4$. (iv) $4 \to 3$.
 
 <details><summary>Xem lời giải thích</summary>

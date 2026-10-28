@@ -267,7 +267,7 @@ Các thuyết thống nhất lớn (GUT) mở ra cơ chế giải thích điều
 
 Nếu có một kính viễn vọng với độ nhạy và độ phóng đại vô hạn, liệu chúng ta có thể quan sát trực tiếp các photon được phát ra trước thời điểm $t = 380.000\,\mathrm{năm}$ hay không?
 
-::: Details Lời giải chi tiết
+::: details Lời giải chi tiết
 **Đáp án đúng**: Không thể quan sát được.
 
 **Lập luận**:

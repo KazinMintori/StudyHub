@@ -66,7 +66,7 @@ Một khía cạnh của mô hình chuẩn là quark $d$ có thể biến đổi
 
 (v) Bất kỳ hạt nào trong số này
 
-::: Details Lời giải chi tiết
+::: details Lời giải chi tiết
 **Đáp án đúng**: (i).
 
 **Lập luận**:

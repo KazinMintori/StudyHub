@@ -33,11 +33,11 @@ Quy ước dấu chuẩn mực được xác định như sau:
 - $W > 0$: Công do hệ sinh ra tác dụng lên môi trường ngoài, chẳng hạn khối khí giãn nở đẩy pít-tông ra xa, tương ứng với năng lượng rời khỏi hệ.
 - $W < 0$: Công do ngoại lực thực hiện lên hệ, chẳng hạn môi trường nén khối khí lại, tương ứng với năng lượng từ môi trường đi vào hệ.
 
-::: Warning Cẩn trọng với dấu của công trong nhiệt động lực học
+::: warning Cẩn trọng với dấu của công trong nhiệt động lực học
 Quy ước dấu của công $W$ trong nhiệt động lực học ngược với quy ước thường dùng trong cơ học. Trong cơ học, ta thường gọi công là công do ngoại lực tác dụng lên vật. Trong nhiệt động lực học, việc quy ước $W$ là công do hệ sinh ra thuận tiện hơn nhiều: Khi hệ giãn nở, áp suất, độ biến thiên thể tích và công sinh ra đều mang dấu dương. Chúng ta cần áp dụng nhất quán quy ước dấu này trong toàn bộ các tính toán.
 :::
 
-::: Exercise Tự kiểm tra 19.1
+::: exercise Tự kiểm tra 19.1
 Trong bài toán rót cà phê nóng vào cốc nhôm ở điều kiện cách nhiệt với bên ngoài: Dấu của $Q$ đối với cà phê là gì? Đối với cốc nhôm là gì? Nếu một khối hộp trượt có ma sát trên sàn nằm ngang, dấu của $W$ đối với khối hộp theo nhiệt động lực học là gì?
 
 <details><summary>Xem lời giải thích</summary>

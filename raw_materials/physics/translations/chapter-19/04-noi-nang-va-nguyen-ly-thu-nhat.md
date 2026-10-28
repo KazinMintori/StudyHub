@@ -6,7 +6,7 @@ Nội năng là một trong những khái niệm nền tảng nhất của nhi�
 
 Ở cấp vi mô, **nội năng** gồm động năng hỗn loạn của các hạt và thế năng tương tác bên trong hệ. Phần động năng xét chuyển động tịnh tiến, quay và dao động tương đối so với khối tâm của hệ.
 
-::: Warning Nội năng không bao gồm cơ năng vĩ mô
+::: warning Nội năng không bao gồm cơ năng vĩ mô
 Nội năng không bao gồm thế năng hấp dẫn của toàn bộ hệ đối với các vật thể bên ngoài (chẳng hạn thế năng của khối khí so với mặt đất), cũng không bao gồm động năng chuyển động có hướng của khối tâm toàn hệ trong không gian. Nội năng chỉ đo lường năng lượng dự trữ bên trong hệ quy chiếu gắn với khối tâm của hệ.
 :::
 
@@ -141,7 +141,7 @@ Nội năng của một hệ cô lập luôn được bảo toàn tuyệt đối
   - Với chu trình khép kín, luôn ghi nhớ $\Delta U = 0$ và $Q = W$.
 - **Đánh giá kết quả:** Kiểm tra tính hợp lý của độ lớn và dấu của các đáp số.
 
-::: Example Ví dụ 19.2: Năng lượng của món tráng miệng và công leo cầu thang
+::: example Ví dụ 19.2: Năng lượng của món tráng miệng và công leo cầu thang
 
 Một ly kem sô-cô-la cung cấp $900$ calo thực phẩm, tức $900\,\mathrm{kcal}$. Một người có khối lượng $60{,}0\,\mathrm{kg}$ phải leo lên độ cao bao nhiêu nếu toàn bộ năng lượng này được dùng để nâng trọng tâm?
 
@@ -198,7 +198,7 @@ $$
 **Đánh giá:** Hai độ cao khác nhau vì hai giả thiết chuyển hóa năng lượng khác nhau. Đây là mô hình cơ học của một ngân sách năng lượng, không phải cách xác định mức vận động cần thiết cho một cá nhân.
 :::
 
-::: Example Ví dụ 19.3: Một quá trình chu trình
+::: example Ví dụ 19.3: Một quá trình chu trình
 
 Hình 19.12 biểu diễn một chu trình đi từ $a$ đến $b$, rồi trở về $a$, theo chiều ngược kim đồng hồ trên giản đồ $pV$. Công toàn phần do hệ sinh ra là $W=-500\,\mathrm J$.
 
@@ -246,7 +246,7 @@ Hệ đã truyền ra môi trường một nhiệt lượng tổng cộng $500\,
 </details>
 :::
 
-::: Example Ví dụ 19.4: So sánh các quá trình nhiệt động
+::: example Ví dụ 19.4: So sánh các quá trình nhiệt động
 Giản đồ $pV$ ở Hình 19.13 biểu diễn các quá trình nhiệt động nối giữa trạng thái $a$ và trạng thái $d$. Trong quá trình $ab$, hệ nhận nhiệt lượng $150\,\mathrm J$. Trong quá trình $bd$, hệ nhận nhiệt lượng $600\,\mathrm J$. Hãy xác định:
 
 (a) Độ biến thiên nội năng trong quá trình $ab$.
@@ -391,7 +391,7 @@ Bảng tổng hợp các giá trị năng lượng của các quá trình:
 Mặc dù hai đường đi $abd$ và $acd$ có cùng trạng thái đầu và cuối nên độ biến thiên nội năng hoàn toàn bằng nhau ($\Delta U = 510\,\mathrm J$), nhưng công sinh ra ($240\,\mathrm J$ so với $90\,\mathrm J$) và nhiệt lượng trao đổi ($750\,\mathrm J$ so với $600\,\mathrm J$) lại khác biệt rất lớn. Điều này củng cố trực giác: $Q$ và $W$ phụ thuộc vào đường đi, còn $\Delta U$ độc lập với đường đi.
 :::
 
-::: Example Ví dụ 19.5: Nhiệt động lực học của nước sôi
+::: example Ví dụ 19.5: Nhiệt động lực học của nước sôi
 Một gam nước lỏng ($1\,\mathrm{cm^3}$) khi đun sôi ở áp suất không đổi $1\,\mathrm{atm}$ ($1{,}013 \times 10^5\,\mathrm{Pa}$) chuyển thành $1671\,\mathrm{cm^3}$ hơi nước. Nhiệt hóa hơi của nước ở áp suất này là $L_v = 2{,}256 \times 10^6\,\mathrm{J/kg}$. Hãy tính:
 
 (a) Công do lượng nước thực hiện khi bay hơi.
@@ -473,7 +473,7 @@ dU = dQ - p\,dV
 \tag{19.7}
 $$
 
-::: Exercise Tự kiểm tra 19.4
+::: exercise Tự kiểm tra 19.4
 Hãy sắp xếp các quá trình nhiệt động sau theo thứ tự độ biến thiên nội năng $\Delta U$, từ giá trị dương lớn nhất đến giá trị âm lớn nhất:
 
 (i) Ngoại lực thực hiện công $250\,\mathrm J$ lên hệ, đồng thời hệ tỏa nhiệt lượng $250\,\mathrm J$ ra môi trường ngoài. (ii) Ngoại lực thực hiện công $250\,\mathrm J$ lên hệ, đồng thời hệ hấp thụ nhiệt lượng $250\,\mathrm J$ từ môi trường ngoài. (iii) Hệ thực hiện công $250\,\mathrm J$ lên môi trường ngoài, đồng thời hệ tỏa nhiệt lượng $250\,\mathrm J$ ra môi trường ngoài. (iv) Hệ thực hiện công $250\,\mathrm J$ lên môi trường ngoài, đồng thời hệ hấp thụ nhiệt lượng $250\,\mathrm J$ từ môi trường ngoài.

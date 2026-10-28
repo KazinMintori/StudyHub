@@ -8,7 +8,7 @@ Mỗi khi lái xe chạy bằng xăng, bật máy điều hòa không khí hoặ
 
 Nguyên lý thứ nhất của nhiệt động lực học giữ vai trò cốt lõi trong việc tìm hiểu các quá trình này, vốn là sự mở rộng của định luật bảo toàn năng lượng. Nguyên lý mở rộng sự bảo toàn năng lượng để bao hàm cả quá trình truyền năng lượng dưới dạng nhiệt và công cơ học, đồng thời đưa vào khái niệm nội năng của hệ. Định luật bảo toàn năng lượng có vai trò nền tảng trong mọi lĩnh vực khoa học tự nhiên, do đó nguyên lý thứ nhất có phạm vi ứng dụng rất rộng rãi. Để phát biểu các mối quan hệ năng lượng một cách chuẩn xác, ta cần xây dựng khái niệm hệ nhiệt động, đồng thời xem xét nhiệt lượng và công cơ học như hai phương thức truyền năng lượng qua ranh giới của hệ.
 
-::: Exercise Bài toán mở đầu: Động cơ hơi nước và sự ngưng tụ
+::: exercise Bài toán mở đầu: Động cơ hơi nước và sự ngưng tụ
 Đầu máy hơi nước vận hành dựa trên nguyên lý thứ nhất của nhiệt động lực học: Nước được đun nóng và sôi lên, rồi hơi nước giãn nở thực hiện công đẩy pít-tông làm đầu máy chuyển động. Liệu hơi nước có thể làm đầu máy chuyển động bằng cách thực hiện công khi ngưng tụ hay không?
 
 (i) Có thể. (ii) Không thể. (iii) Câu trả lời phụ thuộc vào các chi tiết cụ thể của quá trình ngưng tụ.

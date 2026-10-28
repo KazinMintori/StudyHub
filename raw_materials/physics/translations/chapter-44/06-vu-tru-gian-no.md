@@ -224,7 +224,7 @@ Khi tính đến cả tác dụng cản trở của vật chất và tác dụng
 
 Liệu có chính xác khi nói rằng cơ thể bạn được tạo thành từ vật chất "thông thường"?
 
-::: Details Lời giải chi tiết
+::: details Lời giải chi tiết
 **Đáp án đúng**: Vừa đúng... Lại vừa không đúng.
 
 **Lập luận**:

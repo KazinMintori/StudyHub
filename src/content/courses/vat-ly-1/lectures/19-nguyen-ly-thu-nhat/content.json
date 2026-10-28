@@ -57,8 +57,70 @@
     "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
     "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md"
   ],
-  "examples": [],
-  "exercises": [],
+  "examples": [
+    {
+      "source": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+      "line": 70,
+      "title": "Ví dụ 19.1: Giãn nở đẳng nhiệt của khí lý tưởng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 144,
+      "title": "Ví dụ 19.2: Năng lượng của món tráng miệng và công leo cầu thang"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 201,
+      "title": "Ví dụ 19.3: Một quá trình chu trình"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 249,
+      "title": "Ví dụ 19.4: So sánh các quá trình nhiệt động"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 394,
+      "title": "Ví dụ 19.5: Nhiệt động lực học của nước sôi"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
+      "line": 206,
+      "title": "Ví dụ 19.6: Làm mát căn phòng"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md",
+      "line": 158,
+      "title": "Ví dụ 19.7: Nén đoạn nhiệt trong động cơ diesel"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "raw_materials/physics/translations/chapter-19/00-mo-dau.md",
+      "line": 11,
+      "title": "Bài toán mở đầu: Động cơ hơi nước và sự ngưng tụ"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+      "line": 40,
+      "title": "Tự kiểm tra 19.1"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+      "line": 113,
+      "title": "Tự kiểm tra 19.2"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/03-duong-di-giua-cac-trang-thai.md",
+      "line": 47,
+      "title": "Tự kiểm tra 19.3"
+    },
+    {
+      "source": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "line": 476,
+      "title": "Tự kiểm tra 19.4"
+    }
+  ],
   "solutions": [
     {
       "source": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",

@@ -78,7 +78,7 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-43/01-tinh-chat-hat-nhan.md",
-      "line": 436,
+      "line": 438,
       "title": "Ví dụ 43.2: Sự đảo spin của proton"
     },
     {
@@ -108,12 +108,12 @@
     },
     {
       "source": "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md",
-      "line": 71,
+      "line": 75,
       "title": "Ví dụ 43.8: Hoạt độ của đồng vị cobalt-57"
     },
     {
       "source": "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md",
-      "line": 189,
+      "line": 193,
       "title": "Ví dụ 43.9: Định tuổi bằng carbon phóng xạ"
     },
     {
@@ -1415,7 +1415,7 @@
     {
       "reference": "../img/young-43/hinh-43-01.png",
       "declaredIn": "raw_materials/physics/translations/chapter-43/01-tinh-chat-hat-nhan.md",
-      "line": 484,
+      "line": 486,
       "source": "docs/vat-ly-2/bai-giang/img/young-43/hinh-43-01.png"
     },
     {
@@ -1459,6 +1459,12 @@
       "declaredIn": "raw_materials/physics/translations/chapter-43/03-on-dinh-va-phong-xa.md",
       "line": 236,
       "source": "docs/vat-ly-2/bai-giang/img/young-43/hinh-43-07.png"
+    },
+    {
+      "reference": "/vat-ly-2/bai-giang/img/young-43/hinh-43-08.png",
+      "declaredIn": "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md",
+      "line": 23,
+      "source": "docs/vat-ly-2/bai-giang/img/young-43/hinh-43-08.png"
     },
     {
       "reference": "../img/young-43/hinh-43-09.png",

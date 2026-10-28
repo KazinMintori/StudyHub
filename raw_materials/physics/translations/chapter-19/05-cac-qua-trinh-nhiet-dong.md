@@ -119,7 +119,7 @@ $$
 
 Do đó, nội năng của khối khí ở trạng thái cuối cùng hoàn toàn bằng nội năng ở trạng thái ban đầu. Vì nội năng của khí lý tưởng chỉ phụ thuộc vào nhiệt độ, nhiệt độ cuối cùng của khối khí cũng bằng nhiệt độ ban đầu. Tuy nhiên, đây là một quá trình không thuận nghịch và không cân bằng. Các trạng thái trung gian của khối khí có sự chuyển động xoáy cuộn hỗn loạn, áp suất và nhiệt độ không đồng nhất trên toàn thể tích. Vì vậy, ta không thể biểu diễn quá trình giãn nở tự do bằng một đường liên tục trên giản đồ $pV$.
 
-::: Info Tự kiểm tra 19.5
+::: info Tự kiểm tra 19.5
 **Câu hỏi:** Xét một chu trình nhiệt động trên giản đồ $pV$ gồm các trạng thái $1, 2, 3, 4$. Trong đó, đoạn $1 \to 4$ và $3 \to 2$ là các đoạn thẳng đứng. Đoạn $1 \to 3$ và $4 \to 2$ là các đoạn nằm ngang. Còn đoạn nối $1 \to 2$ là một đường cong. Quá trình nào là đẳng tích? Quá trình nào là đẳng áp? Quá trình cong $1 \to 2$ có phải là đẳng nhiệt không?
 
 <details><summary>Xem lời giải thích</summary>

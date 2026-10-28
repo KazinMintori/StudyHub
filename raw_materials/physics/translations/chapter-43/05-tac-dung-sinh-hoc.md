@@ -217,7 +217,7 @@ Hạt alpha có hệ số hiệu quả sinh học tương đối RBE lớn gấp
 
 (iii) Cả hai chùm bức xạ đều có hiệu quả tương đương nhau.
 
-::: Details Giải thích
+::: details Giải thích
 **Đáp án đúng**: (ii).
 
 Mặc dù hạt alpha có hệ số RBE rất lớn ($\text{RBE} = 20$), hạt alpha mang điện tích lớn ($+2e$) và khối lượng nặng nên tương tác ion hóa rất mãnh liệt với các electron nguyên tử ngay trên lớp bề mặt ngoài cùng. Hạt alpha bị mất toàn bộ động năng và dừng lại sau một quãng đường di chuyển ngắn (chỉ vài micromet trong mô mềm hoặc bị chặn lại hoàn toàn bởi lớp da ngoài). Chúng không thể thâm nhập sâu vào các cơ quan nội tạng từ bên ngoài.

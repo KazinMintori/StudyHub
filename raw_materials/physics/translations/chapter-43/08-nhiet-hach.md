@@ -192,7 +192,7 @@ Các nhà khoa học cũng nghiên cứu những phương pháp nhiệt hạch k
 
 Có phải tất cả các phản ứng nhiệt hạch giữa hai hạt nhân đều là phản ứng tỏa năng lượng hay không?
 
-::: Details Giải thích
+::: details Giải thích
 **Đáp án đúng**: Không phải tất cả phản ứng nhiệt hạch đều tỏa năng lượng.
 
 Phản ứng nhiệt hạch chỉ tỏa năng lượng (exoergic) khi các hạt nhân tham gia là những hạt nhân đủ nhẹ, có số khối $A$ nhỏ hơn khoảng 60. Đối với các hạt nhân nhẹ, đường cong năng lượng liên kết trên một nucleon $E_{\text{b}}/A$ có độ dốc tăng theo số khối, nên hạt nhân sản phẩm tạo thành có mức năng lượng liên kết trên mỗi nucleon lớn hơn hạt nhân ban đầu, dẫn tới khối lượng nghỉ giảm và năng lượng được giải phóng.

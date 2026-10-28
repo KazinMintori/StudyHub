@@ -1,0 +1,1658 @@
+{
+  "status": "accepted-container-and-linked-decay-figure-repairs",
+  "changedContainerFiles": [
+    {
+      "file": "raw_materials/physics/translations/chapter-19/00-mo-dau.md",
+      "changes": [
+        {
+          "line": 11,
+          "beforeType": "Exercise",
+          "afterType": "exercise"
+        }
+      ],
+      "beforeSHA256": "251803e87f83e34802acf134bd887f992e680f332eef5e32f0d57fa0d2215594",
+      "afterSHA256": "5260697de2736aa69cf0db57c9fbe9724d24b5e6263ab02b20ffe5dbad3bed1d"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-19/01-he-nhiet-dong.md",
+      "changes": [
+        {
+          "line": 36,
+          "beforeType": "Warning",
+          "afterType": "warning"
+        },
+        {
+          "line": 40,
+          "beforeType": "Exercise",
+          "afterType": "exercise"
+        }
+      ],
+      "beforeSHA256": "cad7eaa5db9deefb00af2088f6eba80ebf3edb55de8d063a82b3ed2e20378651",
+      "afterSHA256": "d931308bca66c6c920d89758445544ca77316e8bfedc3a5395133509a1452c0a"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-19/02-cong-khi-the-tich-thay-doi.md",
+      "changes": [
+        {
+          "line": 66,
+          "beforeType": "Warning",
+          "afterType": "warning"
+        },
+        {
+          "line": 70,
+          "beforeType": "Example",
+          "afterType": "example"
+        },
+        {
+          "line": 113,
+          "beforeType": "Exercise",
+          "afterType": "exercise"
+        }
+      ],
+      "beforeSHA256": "b3a99012a498472d53786c4f163de4f2686a3e010707682577b3f2626f9e8289",
+      "afterSHA256": "7ab2e1cca42fc03f7bcb29857af086f1e8e6fb90abdb32b4b6f2c00659e78406"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-19/03-duong-di-giua-cac-trang-thai.md",
+      "changes": [
+        {
+          "line": 47,
+          "beforeType": "Exercise",
+          "afterType": "exercise"
+        }
+      ],
+      "beforeSHA256": "8c66576b0ad6a49e32853cdf9cf76ab2dff49a193e36b75652c895f84f390324",
+      "afterSHA256": "40da5d2bdcaa434afabb354fcb68a8088f1afb0f664a21b430a41d9e16b2cff9"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-19/04-noi-nang-va-nguyen-ly-thu-nhat.md",
+      "changes": [
+        {
+          "line": 9,
+          "beforeType": "Warning",
+          "afterType": "warning"
+        },
+        {
+          "line": 144,
+          "beforeType": "Example",
+          "afterType": "example"
+        },
+        {
+          "line": 201,
+          "beforeType": "Example",
+          "afterType": "example"
+        },
+        {
+          "line": 249,
+          "beforeType": "Example",
+          "afterType": "example"
+        },
+        {
+          "line": 394,
+          "beforeType": "Example",
+          "afterType": "example"
+        },
+        {
+          "line": 476,
+          "beforeType": "Exercise",
+          "afterType": "exercise"
+        }
+      ],
+      "beforeSHA256": "d5ee63e69c7a3c2c06b30763f65fefd83a930f0b09db09a1d5d1d8777bd8cefe",
+      "afterSHA256": "19b46b8109bd503f9489060158955cd4994dfa0c707f0972fdf26bb00c422512"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-19/05-cac-qua-trinh-nhiet-dong.md",
+      "changes": [
+        {
+          "line": 122,
+          "beforeType": "Info",
+          "afterType": "info"
+        }
+      ],
+      "beforeSHA256": "9c4c5e21a028a66920a56dc84f2709f10df9eea2870d8bbb7155dc2943a1cbfd",
+      "afterSHA256": "78e53f68ba8fc46d9f01e7e919bf49f61a634db006f259f03e47dc9f09e9138e"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-19/07-nhiet-dung-khi-ly-tuong.md",
+      "changes": [
+        {
+          "line": 206,
+          "beforeType": "Example",
+          "afterType": "example"
+        },
+        {
+          "line": 253,
+          "beforeType": "Info",
+          "afterType": "info"
+        }
+      ],
+      "beforeSHA256": "5c8f47fbda487bf7def28d0224b88db18aa58fc4ba52ec79e7066f3d3b4a1340",
+      "afterSHA256": "131924db6ec8305bef6faf12c0fff29d8884eaa4d1b864e02b8df4f81f274416"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-19/08-qua-trinh-doan-nhiet-khi-ly-tuong.md",
+      "changes": [
+        {
+          "line": 15,
+          "beforeType": "Warning",
+          "afterType": "warning"
+        },
+        {
+          "line": 147,
+          "beforeType": "Tip",
+          "afterType": "tip"
+        },
+        {
+          "line": 158,
+          "beforeType": "Example",
+          "afterType": "example"
+        },
+        {
+          "line": 241,
+          "beforeType": "Info",
+          "afterType": "info"
+        }
+      ],
+      "beforeSHA256": "6d63ffee838d22e7a18b3368baa5734e0d5117a6c4ae2efaf1dcab7f4d50f3a0",
+      "afterSHA256": "4fd59df9824eece6e96855ff896a71ad55c0296dbc7ced66288bfca0612d13e8"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/00-mo-dau.md",
+      "changes": [
+        {
+          "line": 15,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "0f1b049ec69f35e8bc1f96b0b424beed7ffffdd6195a955e4ad5a6b5469db27a",
+      "afterSHA256": "295dac9611a53464e30fd47fa0be7468843e331bf2f10dc77ec7fbf875e51207"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/01-tinh-chat-hat-nhan.md",
+      "changes": [
+        {
+          "line": 511,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "7e8e44ec65b4588ac60b82788d5de9bb9c273e84be4f893a5d5019d2af12dacf",
+      "afterSHA256": "5b56fd6d5a5a6f0587b21f91d8b29f409bd8a02d53deae91c99a9a81251b4520"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/02-nang-luong-lien-ket.md",
+      "changes": [
+        {
+          "line": 240,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "0af544fcd8e90ab875d25a6a6e58e8ddb81ae627cef58e20b24a24b127ed9411",
+      "afterSHA256": "71152ca6028a78f84f86f2eade2dfe1e22c18193b63c6e7919d0cc706320f99a"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/03-on-dinh-va-phong-xa.md",
+      "changes": [
+        {
+          "line": 253,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "337db3f92575599c3b8004ecc151988c3c05a11f75f54fb647321b88ab3be51d",
+      "afterSHA256": "5d5cf5d182ffccf7600e150449b92e7f17a77d662bba8281a49c51d38c9e27ea"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md",
+      "changes": [
+        {
+          "line": 333,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "879a876a9d7c8f01b571fa3b4ea8ef0b7705e4b0c7caf103a7327a76edc388eb",
+      "afterSHA256": "e12829e330735d53274faaf09236132f2866a1376591a52eedc0ec5f36a2b675"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/05-tac-dung-sinh-hoc.md",
+      "changes": [
+        {
+          "line": 220,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "2f04193b346c81bcc7e6d271a0ecd5b2618387326da72b31c30d5e35ce21ac42",
+      "afterSHA256": "d086ddd37a326171dac4f4fa14ea7418603d9e64831d11d0409045a216c6b04c"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/06-phan-ung-hat-nhan.md",
+      "changes": [
+        {
+          "line": 227,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "eb56972d050813c3a89e3ece7731ac50f3286fbaedbe61da373789b4b4651a23",
+      "afterSHA256": "a6aca0491533dda766b3105bb0dbfa32688357dd27fbf115b68d9ff677f2a959"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/07-phan-hach.md",
+      "changes": [
+        {
+          "line": 51,
+          "beforeType": "Info",
+          "afterType": "info"
+        },
+        {
+          "line": 177,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "db84c0494e5fde921b65053002481fc9262b186d5b6706b91b21b0d5e6d4e3a2",
+      "afterSHA256": "eae8853425f2289c1669aec16af130daca0b565660e37c427c7cb8f6b7c96aa1"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/08-nhiet-hach.md",
+      "changes": [
+        {
+          "line": 195,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "2f32ce4ede2aa9e0cd2f687ba067c3b7ad1fe4158798a506953cbec304d75738",
+      "afterSHA256": "0c5061635faf78a4fcfe8e5b71f3550e9a91dfe2977d42c40a6d80bee4a1e29a"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/00-mo-dau.md",
+      "changes": [
+        {
+          "line": 15,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "ccc7cd784caa63af7a4b39d1fd15dd5a0a85c4d4e069b697a5a6e3689f5da628",
+      "afterSHA256": "023659b7d565a23c81c88d36c6cf0f8af6acc1e8c4593e3934be5dee9999d720"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/01-lich-su-hat-co-ban.md",
+      "changes": [
+        {
+          "line": 176,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "dc253b087469e38144a6126cb57c6f99c8414bd1f1296d4a2a276b185798f071",
+      "afterSHA256": "a76e0f5698ea723fe4bdb86cf33edeb4d6ae0a06a5442fd603503334d702d809"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/02-may-gia-toc-va-detector.md",
+      "changes": [
+        {
+          "line": 292,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "0b1253c55fe34ecaa7a226b91dd235132a3cd8b367921c1cb6efb539580a96c7",
+      "afterSHA256": "9173b36ab3591e467078398fdc8d1d907c9fa8abcc825bc2b819dafbbf71feab"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/03-hat-va-tuong-tac.md",
+      "changes": [
+        {
+          "line": 627,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "55b9262e586998c08a3102528f992ad254a662524aa8521f679707cbe6d5cbec",
+      "afterSHA256": "227517b460d97395f5f72727aecda425685452cea39e731935b6e1a36ed64f10"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/04-quark-va-gluon.md",
+      "changes": [
+        {
+          "line": 233,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "407f0447022561558717c5bdda60fc653769027cf475915eb7655875c11693b0",
+      "afterSHA256": "8a2e99e342d494971ad263d6f3dc5ed8975ab0dbb7f4191339ac96c43dcdeee5"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/05-mo-hinh-chuan.md",
+      "changes": [
+        {
+          "line": 69,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "7c397545ac7469c461aaaa64ee0239f5cf929a0421a65564fc56ef9a26ca4006",
+      "afterSHA256": "4a7ff616ca1d417c3efcd623c604b77f780d0b1082277a5140c2648776eaf6ce"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/06-vu-tru-gian-no.md",
+      "changes": [
+        {
+          "line": 227,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "29fa4646d13b3c44ed96277dbdd56c5438a8239f6021044230a397809e2b8fd0",
+      "afterSHA256": "066225d32b16797f0222b70aeab4a84647dfa89ee60fe2205ec680936fc0d259"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-44/07-khoi-dau-thoi-gian.md",
+      "changes": [
+        {
+          "line": 270,
+          "beforeType": "Details",
+          "afterType": "details"
+        }
+      ],
+      "beforeSHA256": "8407cc08c505981d4d09974141cf5801b75f9bef8b7bbcf7776f8a2b87e607eb",
+      "afterSHA256": "2b62520f1d09054f4f1e10cbd47e84f7357ad5c554c1395c42578876e0dbc9d0"
+    }
+  ],
+  "automaticNormalizedDeclarations": 38,
+  "additionalManualInfoNormalizationIn43_4": 1,
+  "bodyTextUnchangedByAutomaticNormalization": true,
+  "actualComponentCases": 125,
+  "sourceCases": [
+    {
+      "group": "theory-chapter-19-00-mo-dau",
+      "width": 320,
+      "issues": [],
+      "formulas": 1,
+      "visibleFormulas": 1,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-19-00-mo-dau",
+      "width": 360,
+      "issues": [],
+      "formulas": 1,
+      "visibleFormulas": 1,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-19-00-mo-dau",
+      "width": 375,
+      "issues": [],
+      "formulas": 1,
+      "visibleFormulas": 1,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-19-00-mo-dau",
+      "width": 768,
+      "issues": [],
+      "formulas": 1,
+      "visibleFormulas": 1,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-19-00-mo-dau",
+      "width": 1440,
+      "issues": [],
+      "formulas": 1,
+      "visibleFormulas": 1,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-19-01-he-nhiet-dong",
+      "width": 320,
+      "issues": [],
+      "formulas": 18,
+      "visibleFormulas": 18,
+      "units": 1,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-01-he-nhiet-dong",
+      "width": 360,
+      "issues": [],
+      "formulas": 18,
+      "visibleFormulas": 18,
+      "units": 1,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-01-he-nhiet-dong",
+      "width": 375,
+      "issues": [],
+      "formulas": 18,
+      "visibleFormulas": 18,
+      "units": 1,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-01-he-nhiet-dong",
+      "width": 768,
+      "issues": [],
+      "formulas": 18,
+      "visibleFormulas": 18,
+      "units": 1,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-01-he-nhiet-dong",
+      "width": 1440,
+      "issues": [],
+      "formulas": 18,
+      "visibleFormulas": 18,
+      "units": 1,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-02-cong-khi-the-tich-thay-doi",
+      "width": 320,
+      "issues": [],
+      "formulas": 86,
+      "visibleFormulas": 86,
+      "units": 2,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-02-cong-khi-the-tich-thay-doi",
+      "width": 360,
+      "issues": [],
+      "formulas": 86,
+      "visibleFormulas": 86,
+      "units": 2,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-02-cong-khi-the-tich-thay-doi",
+      "width": 375,
+      "issues": [],
+      "formulas": 86,
+      "visibleFormulas": 86,
+      "units": 2,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-02-cong-khi-the-tich-thay-doi",
+      "width": 768,
+      "issues": [],
+      "formulas": 86,
+      "visibleFormulas": 86,
+      "units": 2,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-02-cong-khi-the-tich-thay-doi",
+      "width": 1440,
+      "issues": [],
+      "formulas": 86,
+      "visibleFormulas": 86,
+      "units": 2,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-03-duong-di-giua-cac-trang-thai",
+      "width": 320,
+      "issues": [],
+      "formulas": 70,
+      "visibleFormulas": 70,
+      "units": 2,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-03-duong-di-giua-cac-trang-thai",
+      "width": 360,
+      "issues": [],
+      "formulas": 70,
+      "visibleFormulas": 70,
+      "units": 2,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-03-duong-di-giua-cac-trang-thai",
+      "width": 375,
+      "issues": [],
+      "formulas": 70,
+      "visibleFormulas": 70,
+      "units": 2,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-03-duong-di-giua-cac-trang-thai",
+      "width": 768,
+      "issues": [],
+      "formulas": 70,
+      "visibleFormulas": 70,
+      "units": 2,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-03-duong-di-giua-cac-trang-thai",
+      "width": 1440,
+      "issues": [],
+      "formulas": 70,
+      "visibleFormulas": 70,
+      "units": 2,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-05-cac-qua-trinh-nhiet-dong",
+      "width": 320,
+      "issues": [],
+      "formulas": 58,
+      "visibleFormulas": 58,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-19-05-cac-qua-trinh-nhiet-dong",
+      "width": 360,
+      "issues": [],
+      "formulas": 58,
+      "visibleFormulas": 58,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-19-05-cac-qua-trinh-nhiet-dong",
+      "width": 375,
+      "issues": [],
+      "formulas": 58,
+      "visibleFormulas": 58,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-19-05-cac-qua-trinh-nhiet-dong",
+      "width": 768,
+      "issues": [],
+      "formulas": 58,
+      "visibleFormulas": 58,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-19-05-cac-qua-trinh-nhiet-dong",
+      "width": 1440,
+      "issues": [],
+      "formulas": 58,
+      "visibleFormulas": 58,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-19-08-qua-trinh-doan-nhiet-khi-ly-tuong",
+      "width": 320,
+      "issues": [],
+      "formulas": 133,
+      "visibleFormulas": 133,
+      "units": 3,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-08-qua-trinh-doan-nhiet-khi-ly-tuong",
+      "width": 360,
+      "issues": [],
+      "formulas": 133,
+      "visibleFormulas": 133,
+      "units": 3,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-08-qua-trinh-doan-nhiet-khi-ly-tuong",
+      "width": 375,
+      "issues": [],
+      "formulas": 133,
+      "visibleFormulas": 133,
+      "units": 3,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-08-qua-trinh-doan-nhiet-khi-ly-tuong",
+      "width": 768,
+      "issues": [],
+      "formulas": 133,
+      "visibleFormulas": 133,
+      "units": 3,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-08-qua-trinh-doan-nhiet-khi-ly-tuong",
+      "width": 1440,
+      "issues": [],
+      "formulas": 133,
+      "visibleFormulas": 133,
+      "units": 3,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-19-04-noi-nang-va-nguyen-ly-thu-nhat",
+      "width": 320,
+      "issues": [],
+      "formulas": 269,
+      "visibleFormulas": 266,
+      "intentionallyHiddenLabelMath": 3,
+      "units": 5,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-19-04-noi-nang-va-nguyen-ly-thu-nhat",
+      "width": 360,
+      "issues": [],
+      "formulas": 269,
+      "visibleFormulas": 266,
+      "intentionallyHiddenLabelMath": 3,
+      "units": 5,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-19-04-noi-nang-va-nguyen-ly-thu-nhat",
+      "width": 375,
+      "issues": [],
+      "formulas": 269,
+      "visibleFormulas": 266,
+      "intentionallyHiddenLabelMath": 3,
+      "units": 5,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-19-04-noi-nang-va-nguyen-ly-thu-nhat",
+      "width": 768,
+      "issues": [],
+      "formulas": 269,
+      "visibleFormulas": 266,
+      "intentionallyHiddenLabelMath": 3,
+      "units": 5,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-19-04-noi-nang-va-nguyen-ly-thu-nhat",
+      "width": 1440,
+      "issues": [],
+      "formulas": 269,
+      "visibleFormulas": 251,
+      "intentionallyHiddenLabelMath": 18,
+      "units": 5,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-19-07-nhiet-dung-khi-ly-tuong",
+      "width": 320,
+      "issues": [],
+      "formulas": 158,
+      "visibleFormulas": 154,
+      "intentionallyHiddenLabelMath": 4,
+      "units": 4,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-07-nhiet-dung-khi-ly-tuong",
+      "width": 360,
+      "issues": [],
+      "formulas": 158,
+      "visibleFormulas": 154,
+      "intentionallyHiddenLabelMath": 4,
+      "units": 4,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-07-nhiet-dung-khi-ly-tuong",
+      "width": 375,
+      "issues": [],
+      "formulas": 158,
+      "visibleFormulas": 154,
+      "intentionallyHiddenLabelMath": 4,
+      "units": 4,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-07-nhiet-dung-khi-ly-tuong",
+      "width": 768,
+      "issues": [],
+      "formulas": 158,
+      "visibleFormulas": 154,
+      "intentionallyHiddenLabelMath": 4,
+      "units": 4,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-19-07-nhiet-dung-khi-ly-tuong",
+      "width": 1440,
+      "issues": [],
+      "formulas": 158,
+      "visibleFormulas": 122,
+      "intentionallyHiddenLabelMath": 36,
+      "units": 4,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-43-00-mo-dau",
+      "width": 320,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-00-mo-dau",
+      "width": 360,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-00-mo-dau",
+      "width": 375,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-00-mo-dau",
+      "width": 768,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-00-mo-dau",
+      "width": 1440,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-01-tinh-chat-hat-nhan",
+      "width": 320,
+      "issues": [],
+      "formulas": 342,
+      "visibleFormulas": 342,
+      "units": 9,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-43-01-tinh-chat-hat-nhan",
+      "width": 360,
+      "issues": [],
+      "formulas": 342,
+      "visibleFormulas": 342,
+      "units": 9,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-43-01-tinh-chat-hat-nhan",
+      "width": 375,
+      "issues": [],
+      "formulas": 342,
+      "visibleFormulas": 342,
+      "units": 9,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-43-01-tinh-chat-hat-nhan",
+      "width": 768,
+      "issues": [],
+      "formulas": 342,
+      "visibleFormulas": 342,
+      "units": 9,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-43-01-tinh-chat-hat-nhan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 342,
+      "visibleFormulas": 342,
+      "units": 9,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-43-02-nang-luong-lien-ket",
+      "width": 320,
+      "issues": [],
+      "formulas": 230,
+      "visibleFormulas": 230,
+      "units": 10,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-02-nang-luong-lien-ket",
+      "width": 360,
+      "issues": [],
+      "formulas": 230,
+      "visibleFormulas": 230,
+      "units": 10,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-02-nang-luong-lien-ket",
+      "width": 375,
+      "issues": [],
+      "formulas": 230,
+      "visibleFormulas": 230,
+      "units": 10,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-02-nang-luong-lien-ket",
+      "width": 768,
+      "issues": [],
+      "formulas": 230,
+      "visibleFormulas": 230,
+      "units": 10,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-02-nang-luong-lien-ket",
+      "width": 1440,
+      "issues": [],
+      "formulas": 230,
+      "visibleFormulas": 230,
+      "units": 10,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-03-on-dinh-va-phong-xa",
+      "width": 320,
+      "issues": [],
+      "formulas": 250,
+      "visibleFormulas": 250,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-43-03-on-dinh-va-phong-xa",
+      "width": 360,
+      "issues": [],
+      "formulas": 250,
+      "visibleFormulas": 250,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-43-03-on-dinh-va-phong-xa",
+      "width": 375,
+      "issues": [],
+      "formulas": 250,
+      "visibleFormulas": 250,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-43-03-on-dinh-va-phong-xa",
+      "width": 768,
+      "issues": [],
+      "formulas": 250,
+      "visibleFormulas": 250,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-43-03-on-dinh-va-phong-xa",
+      "width": 1440,
+      "issues": [],
+      "formulas": 250,
+      "visibleFormulas": 250,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-43-04-hoat-do-va-chu-ky-ban-ra",
+      "width": 320,
+      "issues": [],
+      "formulas": 214,
+      "visibleFormulas": 214,
+      "units": 6,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-04-hoat-do-va-chu-ky-ban-ra",
+      "width": 360,
+      "issues": [],
+      "formulas": 214,
+      "visibleFormulas": 214,
+      "units": 6,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-04-hoat-do-va-chu-ky-ban-ra",
+      "width": 375,
+      "issues": [],
+      "formulas": 214,
+      "visibleFormulas": 214,
+      "units": 6,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-04-hoat-do-va-chu-ky-ban-ra",
+      "width": 768,
+      "issues": [],
+      "formulas": 214,
+      "visibleFormulas": 214,
+      "units": 6,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-04-hoat-do-va-chu-ky-ban-ra",
+      "width": 1440,
+      "issues": [],
+      "formulas": 214,
+      "visibleFormulas": 214,
+      "units": 6,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-43-05-tac-dung-sinh-hoc",
+      "width": 320,
+      "issues": [],
+      "formulas": 92,
+      "visibleFormulas": 92,
+      "units": 5,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-05-tac-dung-sinh-hoc",
+      "width": 360,
+      "issues": [],
+      "formulas": 92,
+      "visibleFormulas": 92,
+      "units": 5,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-05-tac-dung-sinh-hoc",
+      "width": 375,
+      "issues": [],
+      "formulas": 92,
+      "visibleFormulas": 92,
+      "units": 5,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-05-tac-dung-sinh-hoc",
+      "width": 768,
+      "issues": [],
+      "formulas": 92,
+      "visibleFormulas": 92,
+      "units": 5,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-05-tac-dung-sinh-hoc",
+      "width": 1440,
+      "issues": [],
+      "formulas": 92,
+      "visibleFormulas": 92,
+      "units": 5,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-06-phan-ung-hat-nhan",
+      "width": 320,
+      "issues": [],
+      "formulas": 99,
+      "visibleFormulas": 99,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-43-06-phan-ung-hat-nhan",
+      "width": 360,
+      "issues": [],
+      "formulas": 99,
+      "visibleFormulas": 99,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-43-06-phan-ung-hat-nhan",
+      "width": 375,
+      "issues": [],
+      "formulas": 99,
+      "visibleFormulas": 99,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-43-06-phan-ung-hat-nhan",
+      "width": 768,
+      "issues": [],
+      "formulas": 99,
+      "visibleFormulas": 99,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-43-06-phan-ung-hat-nhan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 99,
+      "visibleFormulas": 99,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-43-07-phan-hach",
+      "width": 320,
+      "issues": [],
+      "formulas": 120,
+      "visibleFormulas": 120,
+      "units": 7,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-43-07-phan-hach",
+      "width": 360,
+      "issues": [],
+      "formulas": 120,
+      "visibleFormulas": 120,
+      "units": 7,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-43-07-phan-hach",
+      "width": 375,
+      "issues": [],
+      "formulas": 120,
+      "visibleFormulas": 120,
+      "units": 7,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-43-07-phan-hach",
+      "width": 768,
+      "issues": [],
+      "formulas": 120,
+      "visibleFormulas": 120,
+      "units": 7,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-43-07-phan-hach",
+      "width": 1440,
+      "issues": [],
+      "formulas": 120,
+      "visibleFormulas": 120,
+      "units": 7,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-43-08-nhiet-hach",
+      "width": 320,
+      "issues": [],
+      "formulas": 74,
+      "visibleFormulas": 74,
+      "units": 4,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-08-nhiet-hach",
+      "width": 360,
+      "issues": [],
+      "formulas": 74,
+      "visibleFormulas": 74,
+      "units": 4,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-08-nhiet-hach",
+      "width": 375,
+      "issues": [],
+      "formulas": 74,
+      "visibleFormulas": 74,
+      "units": 4,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-08-nhiet-hach",
+      "width": 768,
+      "issues": [],
+      "formulas": 74,
+      "visibleFormulas": 74,
+      "units": 4,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-43-08-nhiet-hach",
+      "width": 1440,
+      "issues": [],
+      "formulas": 74,
+      "visibleFormulas": 74,
+      "units": 4,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-chapter-44-00-mo-dau",
+      "width": 320,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-00-mo-dau",
+      "width": 360,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-00-mo-dau",
+      "width": 375,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-00-mo-dau",
+      "width": 768,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-00-mo-dau",
+      "width": 1440,
+      "issues": [],
+      "formulas": 0,
+      "visibleFormulas": 0,
+      "units": 0,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-01-lich-su-hat-co-ban",
+      "width": 320,
+      "issues": [],
+      "formulas": 89,
+      "visibleFormulas": 89,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-01-lich-su-hat-co-ban",
+      "width": 360,
+      "issues": [],
+      "formulas": 89,
+      "visibleFormulas": 89,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-01-lich-su-hat-co-ban",
+      "width": 375,
+      "issues": [],
+      "formulas": 89,
+      "visibleFormulas": 89,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-01-lich-su-hat-co-ban",
+      "width": 768,
+      "issues": [],
+      "formulas": 89,
+      "visibleFormulas": 89,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-01-lich-su-hat-co-ban",
+      "width": 1440,
+      "issues": [],
+      "formulas": 89,
+      "visibleFormulas": 89,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-02-may-gia-toc-va-detector",
+      "width": 320,
+      "issues": [],
+      "formulas": 136,
+      "visibleFormulas": 136,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-02-may-gia-toc-va-detector",
+      "width": 360,
+      "issues": [],
+      "formulas": 136,
+      "visibleFormulas": 136,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-02-may-gia-toc-va-detector",
+      "width": 375,
+      "issues": [],
+      "formulas": 136,
+      "visibleFormulas": 136,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-02-may-gia-toc-va-detector",
+      "width": 768,
+      "issues": [],
+      "formulas": 136,
+      "visibleFormulas": 136,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-02-may-gia-toc-va-detector",
+      "width": 1440,
+      "issues": [],
+      "formulas": 136,
+      "visibleFormulas": 136,
+      "units": 10,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-03-hat-va-tuong-tac",
+      "width": 320,
+      "issues": [],
+      "formulas": 457,
+      "visibleFormulas": 457,
+      "units": 10,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-03-hat-va-tuong-tac",
+      "width": 360,
+      "issues": [],
+      "formulas": 457,
+      "visibleFormulas": 457,
+      "units": 10,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-03-hat-va-tuong-tac",
+      "width": 375,
+      "issues": [],
+      "formulas": 457,
+      "visibleFormulas": 457,
+      "units": 10,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-03-hat-va-tuong-tac",
+      "width": 768,
+      "issues": [],
+      "formulas": 457,
+      "visibleFormulas": 457,
+      "units": 10,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-03-hat-va-tuong-tac",
+      "width": 1440,
+      "issues": [],
+      "formulas": 457,
+      "visibleFormulas": 457,
+      "units": 10,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-44-04-quark-va-gluon",
+      "width": 320,
+      "issues": [],
+      "formulas": 309,
+      "visibleFormulas": 309,
+      "units": 7,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-04-quark-va-gluon",
+      "width": 360,
+      "issues": [],
+      "formulas": 309,
+      "visibleFormulas": 309,
+      "units": 7,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-04-quark-va-gluon",
+      "width": 375,
+      "issues": [],
+      "formulas": 309,
+      "visibleFormulas": 309,
+      "units": 7,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-04-quark-va-gluon",
+      "width": 768,
+      "issues": [],
+      "formulas": 309,
+      "visibleFormulas": 309,
+      "units": 7,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-04-quark-va-gluon",
+      "width": 1440,
+      "issues": [],
+      "formulas": 309,
+      "visibleFormulas": 309,
+      "units": 7,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-chapter-44-05-mo-hinh-chuan",
+      "width": 320,
+      "issues": [],
+      "formulas": 24,
+      "visibleFormulas": 24,
+      "units": 5,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-44-05-mo-hinh-chuan",
+      "width": 360,
+      "issues": [],
+      "formulas": 24,
+      "visibleFormulas": 24,
+      "units": 5,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-44-05-mo-hinh-chuan",
+      "width": 375,
+      "issues": [],
+      "formulas": 24,
+      "visibleFormulas": 24,
+      "units": 5,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-44-05-mo-hinh-chuan",
+      "width": 768,
+      "issues": [],
+      "formulas": 24,
+      "visibleFormulas": 24,
+      "units": 5,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-44-05-mo-hinh-chuan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 24,
+      "visibleFormulas": 24,
+      "units": 5,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-44-06-vu-tru-gian-no",
+      "width": 320,
+      "issues": [],
+      "formulas": 88,
+      "visibleFormulas": 88,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-06-vu-tru-gian-no",
+      "width": 360,
+      "issues": [],
+      "formulas": 88,
+      "visibleFormulas": 88,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-06-vu-tru-gian-no",
+      "width": 375,
+      "issues": [],
+      "formulas": 88,
+      "visibleFormulas": 88,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-06-vu-tru-gian-no",
+      "width": 768,
+      "issues": [],
+      "formulas": 88,
+      "visibleFormulas": 88,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-06-vu-tru-gian-no",
+      "width": 1440,
+      "issues": [],
+      "formulas": 88,
+      "visibleFormulas": 88,
+      "units": 8,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-07-khoi-dau-thoi-gian",
+      "width": 320,
+      "issues": [],
+      "formulas": 145,
+      "visibleFormulas": 145,
+      "units": 11,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-07-khoi-dau-thoi-gian",
+      "width": 360,
+      "issues": [],
+      "formulas": 145,
+      "visibleFormulas": 145,
+      "units": 11,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-07-khoi-dau-thoi-gian",
+      "width": 375,
+      "issues": [],
+      "formulas": 145,
+      "visibleFormulas": 145,
+      "units": 11,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-07-khoi-dau-thoi-gian",
+      "width": 768,
+      "issues": [],
+      "formulas": 145,
+      "visibleFormulas": 145,
+      "units": 11,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "group": "theory-chapter-44-07-khoi-dau-thoi-gian",
+      "width": 1440,
+      "issues": [],
+      "formulas": 145,
+      "visibleFormulas": 145,
+      "units": 11,
+      "images": 6,
+      "captions": 6
+    }
+  ],
+  "restoredFigure": {
+    "id": "43.8",
+    "asset": "docs/vat-ly-2/bai-giang/img/young-43/hinh-43-08.png",
+    "sourcePDFPage": 1479,
+    "crop": [
+      468,
+      614,
+      605,
+      755
+    ],
+    "scale": 2.5,
+    "nativeOriginalRGBExact": true,
+    "sha256": "2c6433eba0826ae1fbf5baece9bce4d8ce1667bdb28382365936954100f6c988",
+    "action": "Existing exactsourcePNGwasunlinked; insertedafterdecaylawwithVNcaption. Symbolsonly,noinventedEnglishlabels."
+  },
+  "figurePresenceAudit": {
+    "originalNumberedIDs": 1952,
+    "matchedRenderedIDHints": 1952,
+    "limits": "Figure-ID presence hints, not authoritative missing-image verdict or completeframing/Englishlabelcoverage. Combinedpanels/alternativefilenames can producefalseleads. Unnumberedapplications/selfchecksnotcovered."
+  },
+  "testHarnessFix": "Intentionallyhiddenresponsivetableheader/labelMath is exempt ONLYwhen the same MathMLkey has a visible counterpart in EACH relevantmobile row or wideheader. No actualdata/formula suppression accepted. Initialfalsepositives retained.",
+  "limits": "Containercase/sourcebody-preservation and targetedcomponentlayout only; sourcefigureIDhints do not prove completeframing or unnumberedapplications, nor allphysicscorrect. No fullgoalcompletion."
+}

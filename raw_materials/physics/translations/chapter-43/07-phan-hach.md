@@ -48,7 +48,7 @@ $$
 
 Với tổng số 235 nucleon, tổng năng lượng giải phóng ước tính là $(235)(0{,}9\text{ MeV}) \approx 200\text{ MeV}$.
 
-::: Info Lưu ý: Năng lượng liên kết và năng lượng nghỉ
+::: info Lưu ý: Năng lượng liên kết và năng lượng nghỉ
 Việc năng lượng liên kết tăng đồng thời với động năng tăng trong phản ứng phân hạch không hề vi phạm định luật bảo toàn năng lượng. Năng lượng nghỉ của hạt nhân bằng tổng năng lượng nghỉ của các nucleon thành phần đứng riêng rẽ trừ đi năng lượng liên kết $E_{\text{b}}$. Vì vậy, sự gia tăng năng lượng liên kết đồng nghĩa với sự suy giảm năng lượng nghỉ của hệ. Phần năng lượng nghỉ hao hụt đó đã chuyển hóa thành động năng của các mảnh phân hạch và neutron sinh ra.
 :::
 
@@ -174,7 +174,7 @@ Nếu hệ thống làm mát khẩn cấp bị hỏng hoàn toàn dẫn tới m�
 
 Phản ứng phân hạch của hạt nhân $^{235}\text{U}$ có thể được kích hoạt bằng việc hấp thụ một neutron chậm. Có thể sử dụng một proton chậm để kích hoạt phản ứng phân hạch của $^{235}\text{U}$ hay không?
 
-::: Details Giải thích
+::: details Giải thích
 **Đáp án đúng**: Không thể sử dụng proton chậm.
 
 Hạt neutron là hạt trung hòa về điện, không mang điện tích. Do đó, nó không chịu bất kỳ lực đẩy tĩnh điện nào từ hạt nhân $^{235}\text{U}$. Một neutron chuyển động chậm có thể dễ dàng tiến sát, thâm nhập vào bên trong hạt nhân và truyền năng lượng kích thích để gây ra phân hạch.

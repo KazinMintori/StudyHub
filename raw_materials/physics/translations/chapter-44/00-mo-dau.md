@@ -12,7 +12,7 @@ Vật chất thông thường, tức các nguyên tử cùng thành phần của
 4. Từ 5% đến 25%.
 5. Dưới 5%.
 
-::: Details Giải thích
+::: details Giải thích
 Chọn (5). Bộ tham số được xét phân chia ngân sách thành 4,9% vật chất thông thường, 26,1% vật chất tối và 69,0% năng lượng tối. Đây là các tỉ phần suy trong mô hình và tập dữ liệu tương ứng, không phải các hằng số định nghĩa của tự nhiên.
 
 Vật chất tối được ràng buộc qua ảnh hưởng hấp dẫn và sự hình thành cấu trúc. Năng lượng tối là một thành phần khác trong mô tả động lực giãn nở gia tốc. Các quan sát không tự giải thích trọn vẹn bản chất vi mô của hai thành phần ấy.

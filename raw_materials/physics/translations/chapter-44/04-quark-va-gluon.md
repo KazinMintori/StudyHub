@@ -230,7 +230,7 @@ Bảng 44.5: Tính chất của sáu loại quark.
 
 Liệu có thể tồn tại một baryon có điện tích $Q = +e$ và mang độ lạ $S = -2$ hay không?
 
-::: Details Lời giải chi tiết
+::: details Lời giải chi tiết
 **Đáp án đúng**: Không thể tồn tại.
 
 **Lập luận**:

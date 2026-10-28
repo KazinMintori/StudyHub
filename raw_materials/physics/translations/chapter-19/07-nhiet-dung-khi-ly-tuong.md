@@ -203,7 +203,7 @@ Các cột nhiệt dung và hiệu nhiệt dung đều có đơn vị $\mathrm{J
 
 Các giá trị đo cho thấy $C_p-C_V$ gần $R$ ở nhiều khí, nhưng không hoàn toàn bằng nhau vì đây là khí thực. Ba cột đầu tương ứng với dữ liệu nhiệt dung đẳng tích đã xét ở chương trước.
 
-::: Example Ví dụ 19.6: Làm mát căn phòng
+::: example Ví dụ 19.6: Làm mát căn phòng
 
 Một phòng ở ký túc xá hoặc phòng ngủ điển hình chứa khoảng $2500$ mol không khí. Tìm độ biến thiên nội năng của lượng không khí này khi được làm nguội từ $35{,}0^\circ\mathrm C$ xuống $26{,}0^\circ\mathrm C$ ở áp suất không đổi $1{,}00\,\mathrm{atm}$. Coi không khí là khí lý tưởng có $\gamma=1{,}400$.
 
@@ -250,7 +250,7 @@ $$
 **Đánh giá:** Nội năng lượng không khí đã giảm khoảng $468\,\mathrm{kJ}$. Nhiệt lượng trao đổi trong quá trình đẳng áp còn liên hệ với công nén khi khí co lại, nên không được đồng nhất riêng $\Delta U$ với $Q$. Việc tính nội năng vẫn dùng $C_V$ cho cả quá trình đẳng tích lẫn đẳng áp.
 :::
 
-::: Info Câu tự kiểm tra 19.7
+::: info Câu tự kiểm tra 19.7
 
 Bạn muốn làm nguội một bình chứa $10$ mol khí nén từ $30^\circ\mathrm C$ xuống $20^\circ\mathrm C$. Loại khí nào cần truyền ra ít nhiệt lượng nhất trong mô hình khí lý tưởng?
 

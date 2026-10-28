@@ -20,6 +20,10 @@ $$
 N(t) = N_0 e^{-\lambda t} \tag{43.17}
 $$
 
+![Hình 43.8: Số hạt nhân chưa phân rã giảm theo hàm mũ và còn một nửa sau mỗi chu kỳ bán rã.](/vat-ly-2/bai-giang/img/young-43/hinh-43-08.png)
+
+Trục ngang biểu diễn thời gian t, trục đứng biểu diễn số hạt nhân $N(t)$. Các mức $N_0/2$, $N_0/4$, $N_0/8$ và $N_0/16$ tương ứng với các chu kỳ bán rã liên tiếp.
+
 Hàm số này mô tả đường cong suy giảm theo hàm mũ. Do hoạt độ tại mỗi thời điểm luôn tỉ lệ thuận với số hạt nhân, $-dN(t)/dt = \lambda N(t)$, hoạt độ của mẫu phóng xạ cũng suy giảm theo hàm mũ cùng dạng với số hạt nhân.
 
 Chu kỳ bán rã $T_{1/2}$ là khoảng thời gian cần thiết để số lượng hạt nhân phóng xạ giảm đi một nửa so với lượng ban đầu $N_0$. Sau mỗi khoảng thời gian $T_{1/2}$ kế tiếp, một nửa số hạt nhân còn lại sẽ tiếp tục phân rã. Số hạt nhân còn lại sau các chu kỳ bán rã liên tiếp lần lượt là $N_0/2$, $N_0/4$, $N_0/8$, và cứ tiếp tục như vậy.
@@ -52,7 +56,7 @@ Trong vật lý hạt cơ bản, tuổi thọ của một hạt không bền th�
 
 Do hoạt độ $-dN(t)/dt$ tại mọi thời điểm bằng $\lambda N(t)$, hoạt độ cũng biến thiên theo hàm số thời gian dưới dạng $e^{-\lambda t}$. Sau mỗi chu kỳ bán rã, hoạt độ của mẫu giảm còn một nửa, một phần tư, một phần tám so với hoạt độ ban đầu.
 
-::: Info Lưu ý: Một chu kỳ bán rã chưa thể đảm bảo mức an toàn
+::: info Lưu ý: Một chu kỳ bán rã chưa thể đảm bảo mức an toàn
 Đôi khi xuất hiện quan niệm chưa chính xác cho rằng mọi mẫu phóng xạ đều trở nên an toàn sau khi trải qua một chu kỳ bán rã. Nếu một lượng chất thải phóng xạ ban đầu có hoạt độ cao gấp 10 lần ngưỡng an toàn cho phép, sau một chu kỳ bán rã hoạt độ giảm một nửa nhưng vẫn còn vượt ngưỡng an toàn tới 5 lần. Thậm chí sau ba chu kỳ bán rã, mẫu vẫn còn $12{,}5\%$ lượng phóng xạ ban đầu, tức vẫn cao hơn ngưỡng an toàn $25\%$. Số hạt nhân phóng xạ và hoạt độ chỉ tiến dần về 0 khi thời gian tiến ra vô hạn.
 :::
 
@@ -326,7 +330,7 @@ Mẫu nào sau đây chứa số lượng hạt nhân lớn hơn: Mẫu $^{240}\
 
 (iii) Cả hai mẫu đều chứa số lượng hạt nhân bằng nhau.
 
-::: Details Giải thích
+::: details Giải thích
 **Đáp án đúng**: (iii).
 
 Hoạt độ $-dN(t)/dt$ của một mẫu phóng xạ là tích của số hạt nhân $N(t)$ và hằng số phân rã $\lambda = (\ln 2)/T_{1/2}$. Do đó, số hạt nhân có trong mẫu là:

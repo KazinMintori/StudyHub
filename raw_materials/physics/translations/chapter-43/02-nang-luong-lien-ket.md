@@ -237,7 +237,7 @@ Hãy sắp xếp các hạt nhân sau đây theo thứ tự giảm dần của n
 (iv) $^{200}\text{Hg}$;
 (v) $^{252}\text{Cf}$.
 
-::: Details Giải thích
+::: details Giải thích
 Thứ tự giảm dần chính xác là: (ii) > (iii) > (iv) > (v) > (i).
 
 Cụ thể:
