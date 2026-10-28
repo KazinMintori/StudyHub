@@ -1,0 +1,87 @@
+{
+  "status": "accepted-scoped-local-fixes-only",
+  "filesSHA256": {
+    "docs/.vitepress/physics-image-labels.mjs": "0e7bb42c7cf73dd5f6ad54ae22c711c6f2a146e1b41d0983ef54113fd77c143d",
+    "docs/.vitepress/physics-photon-course.mjs": "2ed5fe1c7614767a09082635be83458105f3a463e4399df5fccf7a4cbdc620c9",
+    "docs/.vitepress/physics-relativity-course.mjs": "8dc6706aec7e80917ec3748ba0e1f14419792d4000f513ac0962423d189e56a5",
+    "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-10.png": "9f07b3ca14c404fb9bb572d741897d4b13745cc59e2c09da1537645151f1f89b",
+    "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-18.png": "b8d0053655b05be3570c86411e1e769eb2c326a1a919127c8e8f598f93705b8a",
+    "scripts/prepare-physics1-10-theory-a-assets.py": "dbf959f29766ff28364a3508c70ddc1b6440cfeb4ef345f410047e4e90e6ee13",
+    "raw_materials/physics/verify_review_fixes_20261028.py": "87e762bc4182177b58926c68a55deaf2f66c2d3748a9c5d7779b15f99e2bb23b"
+  },
+  "originalFrameProof": {
+    "status": "originalframesrestored-pendingruntime",
+    "frames": [
+      {
+        "asset": "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-10.png",
+        "sourcePDFPage": 328,
+        "oldBox": [
+          34,
+          106,
+          300,
+          325
+        ],
+        "completeBox": [
+          34,
+          96,
+          300,
+          325
+        ],
+        "scale": 2.5,
+        "allOriginalContentRetained": true,
+        "oldPixelsByteIdentical": false,
+        "oldCropBoundaryAntialiasDifferences": [
+          {
+            "x": 468,
+            "y": 0,
+            "before": [
+              244,
+              244,
+              244
+            ],
+            "after": [
+              242,
+              241,
+              241
+            ]
+          }
+        ],
+        "nativePDFRasterExact": true,
+        "sha256": "9f07b3ca14c404fb9bb572d741897d4b13745cc59e2c09da1537645151f1f89b",
+        "actualVisualReview": "ParentopenedoldPNGandexpandedactualPDF. Restored(a)/(b) labelsinboth andupperYaxislabelin10.10. Figurecaptionnotclippedintonewcrop."
+      },
+      {
+        "asset": "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-18.png",
+        "sourcePDFPage": 332,
+        "oldBox": [
+          310,
+          438,
+          576,
+          615
+        ],
+        "completeBox": [
+          310,
+          427,
+          576,
+          615
+        ],
+        "scale": 2.5,
+        "allOriginalContentRetained": true,
+        "oldPixelsByteIdentical": true,
+        "oldCropBoundaryAntialiasDifferences": [],
+        "nativePDFRasterExact": true,
+        "sha256": "b8d0053655b05be3570c86411e1e769eb2c326a1a919127c8e8f598f93705b8a",
+        "actualVisualReview": "ParentopenedoldPNGandexpandedactualPDF. Restored(a)/(b) labelsinboth andupperYaxislabelin10.10. Figurecaptionnotclippedintonewcrop."
+      }
+    ],
+    "otherFindingsDisposition": "25sourceheadertrimproposalsrejected,5nearby-panellabelfalsepositivesrejected. Onlytwoactualvisuallyconfirmedframeschanged."
+  },
+  "effectiveCaptionRegistration": "Chapter17C module existed but was not imported/spread into active physicsImageLabels. Parent imported effective module and verified exactly2matchingglossrows through productionMarkdown.",
+  "photonTerminology": "Number emitted persecond and number perarea-persecond are rates/flux, not photon propagation speed. Renamed item, retained equations, added6quantity/unitdefinitions.",
+  "relativityDefinitions": "Defined local invariantJ with signedm² and stated y,z unchanged for boostalongx; retained existing equations and alignedmath.",
+  "renderedCases": {
+    "support-fixes-runtime.json": 15,
+    "mechanics-frames-runtime.json": 10
+  },
+  "limits": "ProductionMarkdown/CSS and actualLecturePanelsSSR only. No currentpublicdeploymentproof here, no wholechapter/currentallcoursefidelityacceptance. AGY suggestions to trim25originalheaders and5nearbyfalsepanelleads rejected. Original10.10reraster changesoneantialiasedoldboundarypixel; donotclaimoldbytesidentical."
+}

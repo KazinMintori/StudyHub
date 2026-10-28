@@ -1,4 +1,5 @@
 import {physics1RemainingChapter2ImageAnnotations} from './physics1-remaining-02-image-annotations.mjs'
+import {physics1Chapter17ExercisesCImageAnnotations} from './physics1-17-exercises-c-image-annotations.mjs'
 import {physics1RemainingChapter8GuidedDiscussionImageAnnotations} from './physics1-remaining-08-guided-discussion-image-annotations.mjs'
 import {physics1RemainingChapter8NumberedEarlyImageAnnotations} from './physics1-remaining-08-numbered-early-image-annotations.mjs'
 import {physics1RemainingChapter8NumberedLateImageAnnotations} from './physics1-remaining-08-numbered-late-image-annotations.mjs'
@@ -274,6 +275,7 @@ const originalLabels={
 }
 export const physicsImageLabels={
  ...physics1RemainingChapter2ImageAnnotations,
+ ...physics1Chapter17ExercisesCImageAnnotations,
  ...physics1RemainingChapter8GuidedDiscussionImageAnnotations,
  ...physics1RemainingChapter8NumberedEarlyImageAnnotations,
  ...physics1RemainingChapter8NumberedLateImageAnnotations,

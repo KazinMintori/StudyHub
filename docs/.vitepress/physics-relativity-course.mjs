@@ -54,13 +54,13 @@ export const relativityCheatsheet={
         },
         {
           "name": "Biến đổi ngược",
-          "description": "Cùng quy ước hai hệ như phép thuận.",
+          "description": "Cùng quy ước hai hệ như phép thuận. Các tọa độ ngang y và z không thay đổi giữa hai hệ.",
           "formula": "$$\n\\begin{aligned}x&=\\gamma(x'+ut')\\\\t&=\\gamma(t'+ux'/c^2).\\end{aligned}\n$$",
           "variables": []
         },
         {
           "name": "Hiệu tọa độ sự kiện",
-          "description": "Hiệu thời gian và vị trí thuộc cùng cặp sự kiện. Khoảng không thời gian một chiều là bất biến.",
+          "description": "Hiệu thời gian và vị trí thuộc cùng cặp sự kiện. J ký hiệu đại lượng khoảng không thời gian bất biến theo một chiều x, có đơn vị m² và có thể dương, âm hoặc bằng không.",
           "formula": "$$\n\\begin{aligned}\\Delta t'&=\\gamma(\\Delta t-u\\Delta x/c^2)\\\\J&=c^2\\Delta t^2-\\Delta x^2\\\\J&=c^2\\Delta t'^2-\\Delta x'^2.\\end{aligned}\n$$",
           "variables": []
         }

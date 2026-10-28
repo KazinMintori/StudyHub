@@ -30,10 +30,17 @@ export const photonCheatsheet={
           "variables": []
         },
         {
-          "name": "Tốc độ photon",
-          "description": "Nguồn đơn sắc có công suất quang học P, hoặc chùm có cường độ I. F là số photon qua một đơn vị diện tích mỗi giây.",
+          "name": "Suất phát photon và mật độ thông lượng photon",
+          "description": "Nguồn đơn sắc có công suất quang học P, hoặc chùm có cường độ I. Suất phát đếm số photon mỗi giây. F là số photon qua một đơn vị diện tích mỗi giây.",
           "formula": "$$\n\\begin{aligned}\\dot N&=P/(hf)\\\\F&=I/(hf).\\end{aligned}\n$$",
-          "variables": []
+          "variables": [
+            "$\\dot N$: Số photon phát ra mỗi giây (s⁻¹).",
+            "$F$: Số photon qua một đơn vị diện tích mỗi giây (m⁻²·s⁻¹).",
+            "$P$: Công suất quang học (W).",
+            "$I$: Cường độ chùm sáng (W/m²).",
+            "$h$: Hằng số Planck (J·s).",
+            "$f$: Tần số ánh sáng (Hz)."
+          ]
         }
       ]
     },
