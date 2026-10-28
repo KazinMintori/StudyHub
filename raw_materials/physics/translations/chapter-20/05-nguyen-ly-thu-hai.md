@@ -53,10 +53,12 @@ Ta có thể chứng minh tính tương đương này một cách chặt chẽ q
 
 
 
-\begin{aligned}
-|Q_H| - Q &= (Q_C + Q) - Q \\
-&= Q_C
-\end{aligned}
+   $$
+   \begin{aligned}
+   |Q_H| - Q &= (Q_C + Q) - Q \\
+   &= Q_C.
+   \end{aligned}
+   $$
 
 
 
