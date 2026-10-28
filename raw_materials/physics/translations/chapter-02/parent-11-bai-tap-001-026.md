@@ -502,102 +502,739 @@ Trong 10–30 s, hai vận tốc bằng nhau nên gia tốc trung bình bằng k
 
 </details>
 
+### 2.13 Rùa bò trên đường thẳng
 
-::: exercise 2.13 • CALC
-Một chú rùa bò dọc theo một đường thẳng chọn làm trục $x$ với chiều dương hướng sang phải. Phương trình tọa độ của rùa theo thời gian là:
+Một con rùa bò dọc trục x, chiều dương sang phải. Tọa độ theo thời gian là:
 
-$$x(t) = 50.0\,\mathrm{cm} + (2.00\,\mathrm{cm/s})t - (0.0625\,\mathrm{cm/s^2})t^2.$$
+$$
+x(t)=x_0+ut-kt^2,
+$$
 
-**(a)** Tìm tọa độ ban đầu, vận tốc ban đầu và gia tốc của rùa.
-**(b)** Vận tốc tức thời của rùa triệt tiêu vào thời điểm nào?
-**(c)** Sau bao lâu kể từ lúc bắt đầu bò, chú rùa quay trở lại đúng vị trí ban đầu?
-**(d)** Rùa cách vị trí ban đầu một khoảng $10.0\,\mathrm{cm}$ vào những thời điểm nào? Độ lớn và hướng vận tốc tại mỗi thời điểm đó ra sao?
-**(e)** Phác họa các đồ thị $x(t)$, $v_x(t)$, và $a_x(t)$ trong khoảng thời gian từ $t = 0$ đến $40\,\mathrm s$.
-:::
+với x₀ = 50,0 cm, u = 2,00 cm/s và k = 0,0625 cm/s².
 
-::: exercise 2.14 •• CALC
-Một chiếc xe đua xuất phát từ trạng thái nghỉ và lao về phía đông trên đường đua thẳng nằm ngang. Trong $5.0\,\mathrm s$ đầu tiên, thành phần vận tốc hướng đông của xe tuân theo hàm: $v_x(t) = (0.860\,\mathrm{m/s^3})t^2$. Gia tốc của xe tại khoảnh khắc vận tốc đạt $v_x = 12.0\,\mathrm{m/s}$ bằng bao nhiêu?
-:::
+(a) Tìm vận tốc đầu, tọa độ đầu và gia tốc đầu. (b) Khi nào vận tốc bằng không? (c) Sau bao lâu rùa trở lại vị trí đầu? (d) Khi nào rùa cách vị trí đầu 10,0 cm? Tìm độ lớn và hướng vận tốc ở mỗi thời điểm. (e) Phác các đồ thị tọa độ, vận tốc và gia tốc từ 0 tới 40 s.
 
-::: exercise 2.15 • CALC
-Vận tốc của một chiếc ô tô chuyển động thẳng được cho bởi biểu thức: $v_x(t) = \alpha + \beta t^2$, trong đó $\alpha = 3.00\,\mathrm{m/s}$ và $\beta = 0.100\,\mathrm{m/s^3}$.
-**(a)** Tính gia tốc trung bình trong khoảng thời gian từ $t = 0$ đến $t = 5.00\,\mathrm s$.
-**(b)** Tính gia tốc tức thời tại $t = 0$ và tại $t = 5.00\,\mathrm s$.
-**(c)** Phác họa đồ thị $v_x(t)$ và $a_x(t)$ trong khoảng thời gian nói trên.
-:::
+<details><summary>Xem lời giải chi tiết</summary>
 
-::: exercise 2.16 •
-Một nữ phi hành gia rời Trạm Vũ trụ Quốc tế (ISS) để thực hiện chuyến đi bộ ngoài không gian thử nghiệm thiết bị đẩy cá nhân mới. Các cảm biến đo được những biến thiên vận tốc sau, mỗi biến thiên diễn ra trong khoảng thời gian $10\,\mathrm s$. Hãy xác định độ lớn, dấu đại số và hướng của vector gia tốc trung bình trên mỗi khoảng (chọn chiều dương sang phải):
-**(a)** Ban đầu cô trôi sang phải dọc theo trục $x$ với tốc độ $15.0\,\mathrm{m/s}$, sau $10\,\mathrm s$ cô vẫn trôi sang phải nhưng tốc độ giảm còn $5.0\,\mathrm{m/s}$.
-**(b)** Ban đầu cô trôi sang trái với $5.0\,\mathrm{m/s}$, sau $10\,\mathrm s$ cô trôi sang trái với $15.0\,\mathrm{m/s}$.
-**(c)** Ban đầu cô trôi sang phải với $15.0\,\mathrm{m/s}$, sau $10\,\mathrm s$ cô đã đổi hướng trôi sang trái với $15.0\,\mathrm{m/s}$.
-:::
+**Tóm tắt đề bài:** Tọa độ là đa thức bậc hai với các hệ số đã cho. Xét các thời điểm kể từ t = 0.
 
-::: exercise 2.17 •• CALC
-Vị trí của cản trước trên một chiếc ô tô tự hành thử nghiệm được điều khiển bằng máy tính tuân theo hàm số:
+**Hướng đi:** Lấy đạo hàm để tìm vận tốc và gia tốc. Điều kiện cách điểm đầu 10,0 cm phải xét cả hai dấu của độ dời. Giải thời gian rồi kiểm tra chiều chuyển động bằng dấu vận tốc.
 
-$$x(t) = 2.17\,\mathrm m + (4.80\,\mathrm{m/s^2})t^2 - (0.100\,\mathrm{m/s^6})t^6.$$
+**Lời giải:** (a) Đạo hàm:
 
-**(a)** Hãy xác định vị trí và gia tốc của cản trước tại những thời điểm mà vận tốc của xe triệt tiêu ($v_x = 0$).
-**(b)** Phác họa các đồ thị $x(t)$, $v_x(t)$, và $a_x(t)$ của cản trước trong khoảng từ $t = 0$ đến $t = 2.00\,\mathrm s$.
-:::
+$$
+v_x=u-2kt,\qquad a_x=-2k.
+$$
 
----
+Tọa độ đầu là 50,0 cm, vận tốc đầu +2,00 cm/s và gia tốc đầu −0,125 cm/s². Gia tốc này không đổi.
 
-### Mục 2.4 — Chuyển động với gia tốc không đổi
+(b) Vận tốc bằng không khi:
 
-::: exercise 2.18 •
-Hãy ước lượng quãng đường (tính bằng foot) mà chiếc xe của bạn đi được trên một làn đường tăng tốc dẫn vào xa lộ khi tăng tốc từ tốc độ trong đô thị $30\,\mathrm{mi/h}$ lên tốc độ xa lộ $70\,\mathrm{mi/h}$. Gia tốc trung bình trong quá trình đó bằng bao nhiêu?
-:::
+$$
+t=\frac{u}{2k}=16{,}0\,\mathrm s.
+$$
 
-::: exercise 2.19 ••
-Một chú linh dương chạy thẳng với gia tốc không đổi, vượt qua hai điểm mốc cách nhau $70.0\,\mathrm m$ trong khoảng thời gian $6.00\,\mathrm s$. Tốc độ của linh dương khi vừa quét qua mốc thứ hai là $15.0\,\mathrm{m/s}$. Hãy xác định:
-**(a)** Tốc độ của linh dương khi đi qua mốc thứ nhất.
-**(b)** Gia tốc của linh dương trong suốt đoạn đường này.
-:::
+(c) Trở lại điểm đầu nghĩa là:
 
-::: exercise 2.20 •• — Động học của cú giao bóng tennis
-Trong các cú giao bóng sấm sét của các tay vợt hàng đầu thế giới, quả bóng tennis có thể rời mặt vợt với tốc độ lên tới $73.14\,\mathrm{m/s}$ ($263.3\,\mathrm{km/h}$). Quả bóng thường tiếp xúc và được tăng tốc trên mặt dây vợt trong khoảng thời gian cực ngắn cỡ $30.0\,\mathrm{ms}$, xuất phát từ trạng thái đứng yên tức thời. Giả sử gia tốc trong cú đánh là không đổi:
-**(a)** Gia tốc mà mặt vợt truyền cho quả bóng bằng bao nhiêu?
-**(b)** Quả bóng bị nén và dịch chuyển một đoạn bao xa trong thời gian tiếp xúc với vợt?
-:::
+$$
+ut-kt^2=0.
+$$
 
-::: exercise 2.21 • — Cú ném bóng chày siêu tốc
-Trong lịch sử bóng chày chuyên nghiệp, quả bóng trong cú ném nhanh kỷ lục rời tay vận động viên ném bóng (pitcher) với tốc độ $45.0\,\mathrm{m/s}$ ($162\,\mathrm{km/h}$). Cánh tay của vận động viên đã tăng tốc cho quả bóng trên một cung đường thẳng có chiều dài $1.50\,\mathrm m$ với gia tốc coi như không đổi.
-**(a)** Gia tốc truyền cho quả bóng chày bằng bao nhiêu?
-**(b)** Cú vung tay ném bóng diễn ra trong khoảng thời gian bao lâu?
-:::
+Ngoài nghiệm 0 lúc xuất phát, nghiệm dương:
 
-::: exercise 2.22 •
-Bạn đang lái xe trên xa lộ liên bang ở đúng tốc độ tối đa cho phép $70\,\mathrm{mi/h}$ thì bất ngờ nhận thấy dòng xe phía trước đang dừng hẳn lại do sự cố. Bạn đạp phanh khẩn cấp để giảm tốc nhanh nhất có thể.
-**(a)** Hãy ước lượng thời gian cần thiết để giảm tốc độ xuống $30\,\mathrm{mi/h}$ và tính độ lớn gia tốc hãm trung bình.
-**(b)** Với cùng gia tốc hãm đó, xe cần thêm bao nhiêu thời gian nữa để dừng lại hoàn toàn?
-**(c)** Tổng quãng đường xe trượt từ lúc đạp phanh đến khi dừng hẳn là bao nhiêu?
-:::
+$$
+t=\frac uk=32{,}0\,\mathrm s.
+$$
 
-::: exercise 2.23 •• BIO — Cơ chế bảo vệ của túi khí ô tô
-Theo các nghiên cứu y sinh học về chấn thương va chạm, cơ thể con người có khả năng sống sót cao sau một vụ tai nạn nếu độ lớn của gia tốc hãm tác dụng lên lồng ngực không vượt quá $250\,\mathrm{m/s^2}$ (khoảng $25g$). Nếu một chiếc xe gặp tai nạn khi đang chạy với tốc độ $105\,\mathrm{km/h}$ ($65\,\mathrm{mi/h}$) và túi khí bung ra từ vô lăng để hãm cơ thể người lái dừng lại: Quãng đường biến dạng tối thiểu mà túi khí phải tạo ra để bảo vệ tính mạng hành khách là bao nhiêu?
-:::
+(d) Đặt độ dời d = x − x₀. Phương trình và nghiệm là:
 
-::: exercise 2.24 • — Nhập làn xa lộ an toàn
-Một chiếc ô tô đang dừng chờ tại làn đường nhánh dẫn vào xa lộ, chờ đợi một khoảng trống an toàn trong dòng phương tiện. Khi có cơ hội, tài xế đạp ga tăng tốc đều từ trạng thái nghỉ dọc theo làn nhánh thẳng dài $120\,\mathrm m$ và đạt tốc độ $20\,\mathrm{m/s}$ ($72\,\mathrm{km/h}$) ở cuối làn để hòa vào dòng xe.
-**(a)** Gia tốc của chiếc xe trong làn nhánh bằng bao nhiêu?
-**(b)** Thời gian xe chạy hết chiều dài làn nhánh là bao lâu?
-**(c)** Giả sử dòng xe trên làn chính của xa lộ đang duy trì tốc độ đều $20\,\mathrm{m/s}$. Trong khoảng thời gian ô tô tăng tốc trên làn nhánh, dòng xe trên xa lộ đã di chuyển được một quãng đường bao xa?
-:::
+$$
+kt^2-ut+d=0,
+$$
 
-::: exercise 2.25 • BIO — Thử nghiệm an toàn va chạm với túi khí
-Khi xảy ra va chạm trực diện, túi khí ô tô bung ra trong tích tắc nhằm giảm thiểu tối đa lực va đập nguy hiểm so với việc đập trực tiếp vào vô lăng hay kính chắn gió. Theo các tiêu chuẩn thử nghiệm an toàn va chạm quốc tế, cơ thể người có thể chịu được gia tốc hãm cực đại lên tới $60g$ nếu thời gian tác dụng chỉ kéo dài trong khoảng $36\,\mathrm{ms}$ hoặc ngắn hơn. Hãy tính quãng đường mà một hành khách dịch chuyển trong khi dừng lại hoàn toàn trong $36\,\mathrm{ms}$ dưới gia tốc hãm không đổi có độ lớn $60g$.
-:::
+$$
+t=\frac{u\pm\sqrt{u^2-4kd}}{2k}.
+$$
 
-::: exercise 2.26 ••
-Một chú mèo đi lại trên một hành lang thẳng chọn làm trục $x$ với chiều dương hướng sang phải. Dữ liệu cảm biến chuyển động ghi lại đồ thị vận tốc của chú mèo theo thời gian như Hình E2.26.
-**(a)** Xác định vận tốc tức thời của chú mèo tại các thời điểm $t = 4.0\,\mathrm s$ và $t = 7.0\,\mathrm s$.
-**(b)** Gia tốc của chú mèo tại các thời điểm $t = 3.0\,\mathrm s$, $t = 6.0\,\mathrm s$ và $t = 7.0\,\mathrm s$ bằng bao nhiêu?
-**(c)** Chú mèo đi được quãng đường dài bao nhiêu trong $4.5\,\mathrm s$ đầu tiên, và trong toàn bộ khoảng thời gian từ $t = 0$ đến $t = 7.0\,\mathrm s$?
-**(d)** Giả thiết chú mèo xuất phát từ gốc tọa độ ($x_0 = 0$), hãy vẽ đồ thị gia tốc — thời gian $a_x(t)$ và tọa độ — thời gian $x(t)$ tương ứng.
-:::
+Với d = +10,0 cm, biệt thức bằng 1,50 cm²/s². Có hai nghiệm dương:
 
-![Hình E2.26: Đồ thị vận tốc theo thời gian của chú mèo chuyển động một chiều](img/young-02/hinh-e2-26.png)
+$$
+t_1\approx6{,}20\,\mathrm s,\qquad t_2\approx25{,}8\,\mathrm s.
+$$
 
-**Hình E2.26:** Trục tung $v_x$ đo bằng $\mathrm{cm/s}$, trục hoành $t$ đo bằng giây.
+Vận tốc tại hai nghiệm lần lượt là +√1,50 cm/s và −√1,50 cm/s. Độ lớn xấp xỉ 1,225 cm/s. Lần đầu rùa đi sang phải, lần sau đi sang trái.
+
+Với d = −10,0 cm, biệt thức bằng 6,50 cm²/s². Hai nghiệm xấp xỉ −4,40 s và 36,4 s. Chỉ nghiệm dương thuộc khoảng đang xét. Tại đó:
+
+$$
+\begin{aligned}
+v_x&=-\sqrt{6{,}50}\,\mathrm{cm/s}\\
+&\approx-2{,}55\,\mathrm{cm/s}.
+\end{aligned}
+$$
+
+Rùa đi sang trái với tốc độ 2,55 cm/s. Có tổng cộng ba thời điểm hợp lệ.
+
+(e) Đồ thị tọa độ là parabol lõm xuống, bắt đầu tại 50,0 cm, đạt cực đại 66,0 cm lúc 16,0 s rồi giảm. Đồ thị vận tốc là đường thẳng từ +2,00 cm/s lúc 0 tới −3,00 cm/s lúc 40 s. Gia tốc là đường nằm ngang tại −0,125 cm/s².
+
+![Lời giải 2.13: Ba đồ thị của rùa từ 0 tới 40 s, với vận tốc đổi dấu tại 16 s](/vat-ly-1/bai-giang/img/young-02/solution-e2-13.svg)
+
+</details>
+
+### 2.14 Gia tốc của xe đua
+
+Xe đua xuất phát nghỉ và đi về phía đông trên đường đua thẳng nằm ngang. Trong 5,0 s đầu, thành phần vận tốc hướng đông là:
+
+$$
+v_x=ct^2,
+$$
+
+$$
+c=0{,}860\,\mathrm{m/s^3}.
+$$
+
+Gia tốc khi vận tốc bằng 12,0 m/s là bao nhiêu?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Vận tốc phụ thuộc bình phương thời gian. Cần gia tốc tức thời tại một vận tốc đã cho.
+
+**Hướng đi:** Tìm thời gian từ phương trình vận tốc rồi thay vào đạo hàm của vận tốc. Không lấy vận tốc chia thời gian để thay cho gia tốc tức thời.
+
+**Lời giải:** Vì xe xuất phát ở t = 0, chọn nghiệm thời gian dương:
+
+$$
+t=\sqrt{\frac{12{,}0}{0{,}860}}\,\mathrm s\approx3{,}74\,\mathrm s.
+$$
+
+Thời điểm này nằm trong 5,0 s đầu nên công thức có hiệu lực. Gia tốc:
+
+$$
+a_x=\frac{dv_x}{dt}=2ct.
+$$
+
+Dùng giá trị thời gian chưa làm tròn:
+
+$$
+a_x=2\sqrt{cv_x}\approx6{,}42\,\mathrm{m/s^2}.
+$$
+
+Gia tốc hướng đông.
+
+</details>
+
+### 2.15 Vận tốc tăng theo bình phương thời gian
+
+Vận tốc ô tô là:
+
+$$
+v_x(t)=a+bt^2,
+$$
+
+với a = 3,00 m/s và b = 0,100 m/s³.
+
+(a) Tính gia tốc trung bình từ 0 tới 5,00 s. (b) Tính gia tốc tức thời lúc 0 và 5,00 s. (c) Vẽ đồ thị vận tốc và gia tốc trong khoảng đó.
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** a là hệ số vận tốc đầu, không phải ký hiệu gia tốc. Gia tốc cần tìm được ký hiệu aₓ.
+
+**Hướng đi:** Gia tốc trung bình dùng chênh lệch vận tốc, còn gia tốc tức thời dùng đạo hàm theo thời gian.
+
+**Lời giải:** (a) Vận tốc đầu bằng 3,00 m/s. Vận tốc lúc 5,00 s bằng:
+
+$$
+\begin{aligned}
+v_x(5\,\mathrm s)&=(3{,}00+2{,}50)\,\mathrm{m/s}\\
+&=5{,}50\,\mathrm{m/s}.
+\end{aligned}
+$$
+
+Ký hiệu gia tốc trung bình trên khoảng là ā:
+
+$$
+\begin{aligned}
+\bar a&=\frac{5{,}50-3{,}00}{5{,}00}\,\mathrm{m/s^2}\\
+&=0{,}500\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+(b) Đạo hàm:
+
+$$
+a_x(t)=2bt.
+$$
+
+Gia tốc lúc 0 bằng không. Lúc 5,00 s, gia tốc bằng 1,00 m/s².
+
+(c) Đồ thị vận tốc là parabol lõm lên, bắt đầu tại 3,00 m/s với tiếp tuyến ngang. Đồ thị gia tốc là đường thẳng đi qua gốc, tăng tới 1,00 m/s².
+
+![Lời giải 2.15: Vận tốc là parabol, gia tốc là đường thẳng tăng theo thời gian](/vat-ly-1/bai-giang/img/young-02/solution-e2-15.svg)
+
+</details>
+
+### 2.16 Gia tốc của phi hành gia
+
+Một phi hành gia rời Trạm Vũ trụ Quốc tế để thử thiết bị di chuyển cá nhân mới. Người đồng hành đo các biến thiên vận tốc sau, mỗi biến thiên kéo dài 10 s. Chọn chiều dương sang phải. Tìm độ lớn, dấu đại số và hướng gia tốc trung bình:
+
+(a) Từ 15,0 m/s sang phải tới 5,0 m/s sang phải. (b) Từ 5,0 m/s sang trái tới 15,0 m/s sang trái. (c) Từ 15,0 m/s sang phải tới 15,0 m/s sang trái.
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Mỗi khoảng có cùng thời gian 10 s. Đổi các vận tốc hướng trái thành thành phần âm.
+
+**Hướng đi:** Gia tốc trung bình bằng vận tốc cuối trừ vận tốc đầu, chia thời gian. Dấu của kết quả cho hướng theo trục đã chọn.
+
+**Lời giải:** Ký hiệu gia tốc trung bình là ā.
+
+(a) Vận tốc đầu +15,0 m/s, vận tốc cuối +5,0 m/s:
+
+$$
+\begin{aligned}
+\bar a&=\frac{5{,}0-15{,}0}{10}\,\mathrm{m/s^2}\\
+&=-1{,}0\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+Độ lớn 1,0 m/s², hướng trái.
+
+(b) Vận tốc đầu −5,0 m/s, vận tốc cuối −15,0 m/s:
+
+$$
+\begin{aligned}
+\bar a&=\frac{-15{,}0-(-5{,}0)}{10}\,\mathrm{m/s^2}\\
+&=-1{,}0\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+Độ lớn 1,0 m/s², hướng trái.
+
+(c) Vận tốc đầu +15,0 m/s, vận tốc cuối −15,0 m/s:
+
+$$
+\begin{aligned}
+\bar a&=\frac{-15{,}0-15{,}0}{10}\,\mathrm{m/s^2}\\
+&=-3{,}0\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+Độ lớn 3,0 m/s², hướng trái. Hai tốc độ đầu và cuối bằng nhau không làm độ biến thiên vận tốc bằng không.
+
+</details>
+
+### 2.17 Chuyển động của cản trước ô tô
+
+Tọa độ cản trước của một ô tô thử nghiệm được điều khiển bằng bộ vi xử lý là:
+
+$$
+x(t)=x_0+bt^2-ct^6,
+$$
+
+với x₀ = 2,17 m, b = 4,80 m/s² và c = 0,100 m/s⁶.
+
+(a) Tìm vị trí và gia tốc ở những thời điểm vận tốc bằng không. (b) Vẽ đồ thị tọa độ, vận tốc và gia tốc từ 0 tới 2,00 s.
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Tọa độ là đa thức bậc sáu. Xét thời gian kể từ mốc ban đầu t = 0.
+
+**Hướng đi:** Lấy đạo hàm hai lần. Giải phương trình vận tốc bằng không rồi thay từng nghiệm hợp lệ vào tọa độ và gia tốc.
+
+**Lời giải:** Đạo hàm:
+
+$$
+v_x=2bt-6ct^5,
+$$
+
+$$
+a_x=2b-30ct^4.
+$$
+
+(a) Điều kiện vận tốc bằng không:
+
+$$
+t(2b-6ct^4)=0.
+$$
+
+Có nghiệm t = 0. Các nghiệm khác thỏa:
+
+$$
+t^4=\frac{b}{3c}=16\,\mathrm{s^4}.
+$$
+
+Trong miền t ≥ 0, nghiệm còn lại là 2,00 s.
+
+Tại 0 s, tọa độ là 2,17 m và gia tốc +9,60 m/s². Tại 2,00 s, hai phần bt² và ct⁶ lần lượt bằng 19,2 m và 6,40 m. Tổng x₀ + bt² bằng 21,37 m:
+
+$$
+\begin{aligned}
+x&=(21{,}37-6{,}40)\,\mathrm m\\
+&=14{,}97\,\mathrm m.
+\end{aligned}
+$$
+
+Gia tốc lúc ấy:
+
+$$
+\begin{aligned}
+a_x&=(9{,}60-48{,}0)\,\mathrm{m/s^2}\\
+&=-38{,}4\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+Nếu ngoại suy đa thức về thời gian âm, t = −2,00 s cũng cho vận tốc bằng không và cùng giá trị tọa độ, gia tốc. Nghiệm ấy nằm ngoài khoảng chuyển động kể từ t = 0 đang khảo sát.
+
+(b) Tọa độ tăng từ 2,17 m tới 14,97 m, với tiếp tuyến ngang ở hai đầu. Vận tốc ban đầu bằng không, tăng tới một cực đại rồi giảm về không. Gia tốc giảm từ +9,60 m/s² tới −38,4 m/s² và đổi dấu tại:
+
+$$
+t=\left(\frac{b}{15c}\right)^{1/4}\approx1{,}34\,\mathrm s.
+$$
+
+![Lời giải 2.17: Ba đồ thị của cản trước ô tô từ 0 tới 2,00 s](/vat-ly-1/bai-giang/img/young-02/solution-e2-17.svg)
+
+</details>
+
+### 2.18 Ước lượng quãng đường tăng tốc
+
+Ước lượng quãng đường, theo foot, ô tô đi trên đường nhánh vào xa lộ khi tăng tốc từ 30 dặm/h lên 70 dặm/h. Gia tốc trung bình trong chuyển động ấy bằng bao nhiêu?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Hai tốc độ đã biết, nhưng thời gian tăng tốc hoặc đặc điểm xe chưa được cho. Đây là bài ước lượng.
+
+**Hướng đi:** Nêu một giả thiết về thời gian và mô hình vận tốc trước khi tính quãng đường. Độ biến thiên vận tốc chia thời gian cho gia tốc trung bình, còn quãng đường cần thêm cách vận tốc thay đổi.
+
+**Lời giải:** Gọi τ là thời gian tăng tốc và giả sử gia tốc gần như không đổi. Đổi sang foot mỗi giây:
+
+$$
+v_0=44{,}0\,\mathrm{ft/s},
+$$
+
+$$
+v_f\approx102{,}667\,\mathrm{ft/s}.
+$$
+
+Với τ tính bằng giây:
+
+$$
+\bar a=\frac{v_f-v_0}{\tau},
+$$
+
+$$
+d=\frac{v_0+v_f}{2}\tau.
+$$
+
+Chẳng hạn, chọn τ = 10 s cho một lần tăng tốc giả định:
+
+$$
+\bar a\approx5{,}87\,\mathrm{ft/s^2},
+$$
+
+$$
+d\approx733\,\mathrm{ft}.
+$$
+
+Gia tốc tương đương khoảng 1,79 m/s². Chọn thời gian khác sẽ cho ước lượng khác. Chỉ từ hai tốc độ đầu và cuối không thể xác định duy nhất quãng đường hoặc gia tốc trung bình.
+
+</details>
+
+### 2.19 Linh dương qua hai mốc
+
+Linh dương chuyển động với gia tốc không đổi, đi qua hai mốc cách nhau 70,0 m trong 6,00 s. Tốc độ tại mốc thứ hai là 15,0 m/s. Tìm: (a) Tốc độ tại mốc thứ nhất. (b) Gia tốc.
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Chọn chiều chuyển động từ mốc đầu tới mốc sau là chiều dương. Độ dời 70,0 m, thời gian 6,00 s, vận tốc cuối 15,0 m/s.
+
+**Hướng đi:** Gia tốc không đổi cho phép dùng vận tốc trung bình bằng nửa tổng vận tốc đầu và cuối. Sau đó dùng độ biến thiên vận tốc để tìm gia tốc.
+
+**Lời giải:** (a) Từ công thức độ dời:
+
+$$
+d=\frac{v_0+v_f}{2}t.
+$$
+
+Giải theo vận tốc đầu:
+
+$$
+v_0=\frac{2d}{t}-v_f.
+$$
+
+Thay số:
+
+$$
+\begin{aligned}
+v_0&=\left(\frac{140{,}0}{6{,}00}-15{,}0\right)\,\mathrm{m/s}\\
+&\approx8{,}33\,\mathrm{m/s}.
+\end{aligned}
+$$
+
+(b) Dùng giá trị vận tốc đầu chưa làm tròn:
+
+$$
+a=\frac{v_f-v_0}{t}\approx1{,}11\,\mathrm{m/s^2}.
+$$
+
+Gia tốc cùng chiều chuyển động. Vận tốc đầu và cuối đều dương nên trong mô hình này linh dương không đổi chiều giữa hai mốc.
+
+</details>
+
+### 2.20 Cú giao bóng tennis
+
+Một cú giao bóng tennis được đo có tốc độ bóng rời vợt 73,14 m/s. Trong mô hình bài toán, bóng tiếp xúc vợt 30,0 ms, bắt đầu từ trạng thái nghỉ và có gia tốc không đổi. (a) Gia tốc bằng bao nhiêu? (b) Trong thời gian tiếp xúc, bóng đi được bao xa?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Vận tốc đầu bằng không, vận tốc cuối 73,14 m/s, thời gian 0,0300 s.
+
+**Hướng đi:** Gia tốc không đổi cho phép lấy độ biến thiên vận tốc chia thời gian. Độ dời bằng vận tốc trung bình, tức nửa vận tốc cuối, nhân thời gian.
+
+**Lời giải:** (a)
+
+$$
+\begin{aligned}
+a&=\frac{73{,}14}{0{,}0300}\,\mathrm{m/s^2}\\
+&=2438\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+Với ba chữ số có nghĩa, gia tốc xấp xỉ 2,44 × 10³ m/s².
+
+(b)
+
+$$
+d=\frac12v_ft.
+$$
+
+Thay số:
+
+$$
+\begin{aligned}
+d&=\frac12(73{,}14)(0{,}0300)\,\mathrm m\\
+&\approx1{,}10\,\mathrm m.
+\end{aligned}
+$$
+
+Đây là độ dời của bóng trong thời gian tăng tốc theo giả thiết bài toán, không phải độ biến dạng của dây vợt hay quả bóng.
+
+</details>
+
+### 2.21 Cú ném bóng chày
+
+Một quả bóng chày rời tay người ném với tốc độ 45,0 m/s trong một cú ném nhanh được đo. Người ném tiếp xúc bóng trên quãng đường 1,50 m và tạo gia tốc không đổi. (a) Gia tốc truyền cho bóng bằng bao nhiêu? (b) Thời gian ném là bao nhiêu?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Tốc độ cuối 45,0 m/s, quãng tăng tốc 1,50 m. Để có kết quả số, mô hình cú ném lấy vận tốc đầu của bóng bằng không.
+
+**Hướng đi:** Dùng hệ thức không chứa thời gian để tìm gia tốc, sau đó dùng vận tốc để tìm thời gian. Nêu rõ điều kiện đầu vì kết quả phụ thuộc nó.
+
+**Lời giải:** (a) Với vận tốc đầu bằng không:
+
+$$
+v_f^2=2ad.
+$$
+
+Suy ra:
+
+$$
+\begin{aligned}
+a&=\frac{45{,}0^2}{2(1{,}50)}\,\mathrm{m/s^2}\\
+&=675\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+(b)
+
+$$
+t=\frac{v_f}{a}=\frac{45{,}0}{675}\,\mathrm s
+\approx0{,}0667\,\mathrm s.
+$$
+
+Thời gian khoảng 66,7 ms. Nếu vận tốc đầu v₀ khác không, phải dùng:
+
+$$
+a=\frac{v_f^2-v_0^2}{2d},
+$$
+
+$$
+t=\frac{2d}{v_0+v_f}.
+$$
+
+Hai dữ kiện vận tốc cuối và quãng đường riêng lẻ không xác định duy nhất gia tốc nếu chưa chọn vận tốc đầu.
+
+</details>
+
+### 2.22 Ước lượng thời gian và quãng đường phanh
+
+Bạn đi trên xa lộ ở giới hạn tốc độ 70 dặm/h thì thấy dòng xe phía trước đã dừng vì tai nạn. Bạn phanh để giảm tốc nhanh nhất có thể.
+
+(a) Ước lượng thời gian giảm xuống 30 dặm/h và độ lớn gia tốc trung bình. Với cùng gia tốc trung bình ấy: (b) Cần thêm bao lâu để dừng hẳn? (c) Tổng quãng đường từ lúc bắt đầu phanh tới khi dừng bằng bao nhiêu?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Thời gian ban đầu phải được ước lượng. Đổi 70 dặm/h thành 31,2928 m/s và 30 dặm/h thành 13,4112 m/s.
+
+**Hướng đi:** Gọi thời gian giảm từ 70 xuống 30 dặm/h là τ. Gia tốc trung bình suy từ độ biến thiên vận tốc. Muốn ước lượng cả quãng đường, thêm giả thiết gia tốc gần như không đổi trong toàn bộ lần phanh.
+
+**Lời giải:** (a) Độ giảm tốc độ là:
+
+$$
+\Delta v=17{,}8816\,\mathrm{m/s}.
+$$
+
+Độ lớn gia tốc trung bình:
+
+$$
+|\bar a|=\frac{\Delta v}{\tau}.
+$$
+
+Chọn τ = 5,0 s làm một ước lượng minh họa:
+
+$$
+|\bar a|\approx3{,}58\,\mathrm{m/s^2}.
+$$
+
+Thành phần gia tốc âm khi chiều chuyển động ban đầu là dương.
+
+(b) Với cùng gia tốc trung bình, thời gian còn lại t₂ thỏa:
+
+$$
+\frac{t_2}{\tau}=\frac{30}{70-30}=\frac34.
+$$
+
+Do đó t₂ = 3,75 s, xấp xỉ 3,8 s theo độ chính xác của thời gian đã chọn. Tổng thời gian dừng bằng 7τ/4, tức 8,75 s trong ví dụ.
+
+(c) Nếu coi gia tốc không đổi, vận tốc trung bình của toàn lần phanh bằng v₀/2:
+
+$$
+d=\frac{v_0}{2}\frac{7\tau}{4}.
+$$
+
+Với v₀ = 31,2928 m/s và τ = 5,0 s:
+
+$$
+d\approx137\,\mathrm m\approx449\,\mathrm{ft}.
+$$
+
+Đây là kết quả có điều kiện của mô hình ước lượng. Đổi thời gian τ hoặc cách gia tốc thay đổi sẽ làm quãng đường khác đi. Gia tốc trung bình riêng lẻ không đủ xác định chính xác quãng đường nếu không biết dạng chuyển động.
+
+</details>
+
+### 2.23 Quãng hãm của túi khí
+
+Xét mô hình dừng đột ngột, với ngưỡng độ lớn gia tốc được giả định là dưới 250 m/s². Một người đang chuyển động với ô tô ở tốc độ 105 km/h, khoảng 65 dặm/h, được túi khí từ bảng điều khiển hãm tới nghỉ. Theo mô hình này, quãng hãm tối thiểu là bao nhiêu để độ lớn gia tốc không vượt ngưỡng đã cho?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Tốc độ đầu 105 km/h, tốc độ cuối bằng không, độ lớn gia tốc hãm tối đa 250 m/s² trong mô hình.
+
+**Hướng đi:** Dùng hệ thức vận tốc theo quãng đường với gia tốc hãm không đổi. Gia tốc có độ lớn lớn nhất cho quãng hãm nhỏ nhất.
+
+**Lời giải:** Tốc độ đầu:
+
+$$
+v_0=\frac{105}{3{,}6}\,\mathrm{m/s}.
+$$
+
+Gọi b > 0 là độ lớn gia tốc hãm. Khi dừng:
+
+$$
+0=v_0^2-2bd.
+$$
+
+Suy ra:
+
+$$
+d=\frac{v_0^2}{2b}.
+$$
+
+Gọi quãng hãm tại ngưỡng b = 250 m/s² là d*:
+
+$$
+\begin{aligned}
+d_*&=\frac{(105/3{,}6)^2}{500}\,\mathrm m\\
+&\approx1{,}70\,\mathrm m.
+\end{aligned}
+$$
+
+Nếu yêu cầu chặt b < 250 m/s² thì quãng hãm phải lớn hơn giá trị ngưỡng chưa làm tròn. Con số chỉ mô tả điều kiện gia tốc của mô hình, không đủ để kết luận về kết cục chấn thương thực tế.
+
+</details>
+
+### 2.24 Ô tô nhập làn xa lộ
+
+Ô tô dừng trên đường nhánh vào xa lộ để đợi khoảng trống. Sau đó xe tăng tốc không đổi từ nghỉ, đi thẳng trên nhánh dài 120 m và đạt tốc độ 20 m/s, khoảng 45 dặm/h, ở cuối nhánh.
+
+(a) Gia tốc bằng bao nhiêu? (b) Thời gian đi hết nhánh là bao nhiêu? (c) Dòng xe trên xa lộ giữ tốc độ 20 m/s đi được bao xa trong thời gian ấy?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Xe từ nghỉ, đi 120 m với gia tốc không đổi tới vận tốc 20 m/s.
+
+**Hướng đi:** Hệ thức không chứa thời gian cho gia tốc. Vận tốc trung bình bằng 10 m/s cho thời gian. Dòng xe đi đều dùng quãng đường bằng vận tốc nhân thời gian.
+
+**Lời giải:** (a)
+
+$$
+\begin{aligned}
+a&=\frac{v_f^2}{2d}\\
+&=\frac{20^2}{2(120)}\,\mathrm{m/s^2}\\
+&\approx1{,}67\,\mathrm{m/s^2}.
+\end{aligned}
+$$
+
+(b)
+
+$$
+t=\frac{2d}{v_f}=\frac{240}{20}\,\mathrm s=12\,\mathrm s.
+$$
+
+(c)
+
+$$
+d_{\mathrm{dòng}}=(20)(12)\,\mathrm m=240\,\mathrm m.
+$$
+
+Dòng xe đi xa gấp đôi ô tô trên nhánh trong cùng thời gian vì tốc độ của nó bằng hai lần tốc độ trung bình của ô tô đang tăng tốc.
+
+</details>
+
+### 2.25 Quãng dừng trong mô hình túi khí
+
+Túi khí làm hành khách giảm tốc nhẹ hơn so với va trực tiếp vào kính hoặc vô lăng. Xét mức gia tốc 60g tác dụng trong 36 ms hoặc ngắn hơn. Một người đi được bao xa khi dừng hoàn toàn trong 36 ms với độ lớn gia tốc không đổi 60g?
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Độ lớn gia tốc hãm bằng 60g, thời gian 0,036 s và vận tốc cuối bằng không.
+
+**Hướng đi:** Từ gia tốc và thời gian suy ra vận tốc đầu. Độ dời bằng vận tốc trung bình nhân thời gian vì gia tốc không đổi.
+
+**Lời giải:** Gọi b = 60g. Với g = 9,80 m/s²:
+
+$$
+b=588\,\mathrm{m/s^2}.
+$$
+
+Vận tốc đầu:
+
+$$
+\begin{aligned}
+v_0&=bt\\
+&=(588)(0{,}036)\,\mathrm{m/s}\\
+&=21{,}168\,\mathrm{m/s}.
+\end{aligned}
+$$
+
+Quãng dừng:
+
+$$
+d=\frac12v_0t=\frac12bt^2.
+$$
+
+Thay số:
+
+$$
+\begin{aligned}
+d&=\frac12(588)(0{,}036)^2\,\mathrm m\\
+&\approx0{,}381\,\mathrm m.
+\end{aligned}
+$$
+
+Với hai chữ số có nghĩa, kết quả khoảng 0,38 m. Các mức gia tốc và thời gian ở đây là dữ kiện mô hình để tính chuyển động.
+
+</details>
+
+### 2.26 Mèo đi trên đường thẳng
+
+Mèo đi trên đường thẳng được chọn làm trục x, chiều dương sang phải. Bạn đo chuyển động và dựng đồ thị vận tốc trong Hình E2.26.
+
+(a) Tìm vận tốc lúc 4,0 s và 7,0 s. (b) Tìm gia tốc lúc 3,0 s, 6,0 s và 7,0 s. (c) Mèo đi được bao xa trong 4,5 s đầu và từ 0 tới 7,0 s? (d) Giả sử mèo xuất phát từ gốc, vẽ đồ thị gia tốc và tọa độ theo thời gian.
+
+![Hình E2.26: Vận tốc của mèo giảm tuyến tính từ 8 cm/s và đổi dấu tại 6 s](/vat-ly-1/bai-giang/img/young-02/hinh-e2-26.png)
+
+<details><summary>Xem lời giải chi tiết</summary>
+
+**Tóm tắt đề bài:** Trục vận tốc có đơn vị cm/s. Đường thẳng qua hai mốc 0 s, 8 cm/s và 6 s, 0 cm/s.
+
+**Hướng đi:** Hệ số góc cho gia tốc không đổi. Diện tích có dấu cho độ dời, còn quãng đường phải cộng độ lớn diện tích ở hai phía trục thời gian.
+
+**Lời giải:** Từ hai mốc:
+
+$$
+\begin{aligned}
+a_x&=\frac{0-8}{6-0}\,\mathrm{cm/s^2}\\
+&=-\frac43\,\mathrm{cm/s^2}.
+\end{aligned}
+$$
+
+Với t tính bằng giây, vận tốc là:
+
+$$
+v_x=\left(8-\frac43t\right)\,\mathrm{cm/s}.
+$$
+
+(a) Tại 4,0 s:
+
+$$
+v_x=\frac83\,\mathrm{cm/s}\approx2{,}67\,\mathrm{cm/s}.
+$$
+
+Tại 7,0 s:
+
+$$
+\begin{aligned}
+v_x&=-\frac43\,\mathrm{cm/s}\\
+&\approx-1{,}33\,\mathrm{cm/s}.
+\end{aligned}
+$$
+
+(b) Gia tốc ở cả ba thời điểm 3,0 s, 6,0 s và 7,0 s đều bằng −4/3 cm/s². Mèo dừng tức thời lúc 6,0 s nhưng gia tốc không bằng không.
+
+(c) Trong 4,5 s đầu, vận tốc còn dương. Vận tốc cuối khoảng bằng 2,0 cm/s nên quãng đường là diện tích hình thang:
+
+$$
+\begin{aligned}
+s&=\frac{8+2}{2}(4{,}5)\,\mathrm{cm}\\
+&=22{,}5\,\mathrm{cm}.
+\end{aligned}
+$$
+
+Từ 0 tới 6 s, quãng đường bằng diện tích tam giác:
+
+$$
+s_1=\frac12(6)(8)\,\mathrm{cm}=24\,\mathrm{cm}.
+$$
+
+Từ 6 tới 7 s, mèo đổi chiều và đi thêm:
+
+$$
+\begin{aligned}
+s_2&=\frac12(1)\left(\frac43\right)\,\mathrm{cm}\\
+&=\frac23\,\mathrm{cm}.
+\end{aligned}
+$$
+
+Tổng quãng đường:
+
+$$
+\begin{aligned}
+s&=s_1+s_2\\
+&=\frac{74}{3}\,\mathrm{cm}\\
+&\approx24{,}7\,\mathrm{cm}.
+\end{aligned}
+$$
+
+Độ dời trong cùng khoảng là 24 − 2/3 = 70/3 cm, khác tổng quãng đường.
+
+(d) Đồ thị gia tốc là đường nằm ngang âm. Với tọa độ đầu bằng không, tích phân vận tốc cho tọa độ:
+
+$$
+x=\left(8t-\frac23t^2\right)\,\mathrm{cm},
+$$
+
+trong đó t tính bằng giây. Đồ thị là parabol lõm xuống, đạt tọa độ lớn nhất 24 cm lúc 6 s rồi giảm.
+
+![Lời giải 2.26: Gia tốc không đổi và tọa độ đạt cực đại ở thời điểm mèo đổi chiều](/vat-ly-1/bai-giang/img/young-02/solution-e2-26.svg)
+
+</details>

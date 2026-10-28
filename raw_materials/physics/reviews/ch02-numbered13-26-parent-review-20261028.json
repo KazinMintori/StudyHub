@@ -1,0 +1,85 @@
+{
+  "status": "accepted-local-numbered13–26-only",
+  "chapter": 2,
+  "units": 14,
+  "sourcePDFPagesRead": [
+    80
+  ],
+  "sourceSHA256": "95594eb6d90816a3abb399ab3df604a5fcb25995f93a07c074ce0ecc2189326e",
+  "canonicalFile": "raw_materials/physics/translations/chapter-02/parent-11-bai-tap-001-026.md",
+  "numericChecks": 63,
+  "actualGroupViewportCases": 15,
+  "nativeSVGCases": [
+    {
+      "file": "parent-drafts/img/solution-e2-13.svg",
+      "issues": [],
+      "textLabels": 49,
+      "width": 648,
+      "height": 734.4000244140625
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-15.svg",
+      "issues": [],
+      "textLabels": 26,
+      "width": 648,
+      "height": 489.6000061035156
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-17.svg",
+      "issues": [],
+      "textLabels": 45,
+      "width": 648,
+      "height": 734.4000244140625
+    },
+    {
+      "file": "parent-drafts/img/solution-e2-26.svg",
+      "issues": [],
+      "textLabels": 29,
+      "width": 648,
+      "height": 489.6000061035156
+    }
+  ],
+  "nativeAssets": [
+    {
+      "key": "solution-e2-13",
+      "file": "parent-drafts/img/solution-e2-13.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-13.svg",
+      "sha256": "27ac1294f1d9e4a460d81687eaf7c2269989d6a7b736441d37bf9150196c98c3",
+      "textMinimumPoints": 14
+    },
+    {
+      "key": "solution-e2-15",
+      "file": "parent-drafts/img/solution-e2-15.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-15.svg",
+      "sha256": "77b31f980f66f08216aa007b3cf7e2009fcec9e33839e38f9edb635fbbaffd36",
+      "textMinimumPoints": 14
+    },
+    {
+      "key": "solution-e2-17",
+      "file": "parent-drafts/img/solution-e2-17.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-17.svg",
+      "sha256": "def0aa18d2ef78cb84a3447cbaedf6461a587682be61570feaed602e8b34be8a",
+      "textMinimumPoints": 14
+    },
+    {
+      "key": "solution-e2-26",
+      "file": "parent-drafts/img/solution-e2-26.svg",
+      "publicFile": "docs/vat-ly-1/bai-giang/img/young-02/solution-e2-26.svg",
+      "sha256": "ad1bb8ae1d00090571e286f1abea2bc7435595c768854e3de4f2920e350cb4bc",
+      "textMinimumPoints": 14
+    }
+  ],
+  "sourceDecisions": [
+    "Retained all five2.13parts and signed-distancebranches, all2.17zero-velocityroots with explicit nonnegative-time domain, all2.26parts and distancevsdisplacement.",
+    "Original2.22prompt continuesatupperrightPDF80; read actual continuation, preservedadditionalstoppingtimeandtotaldistance questions.",
+    "2.18and2.22areestimates: Chosentime explicitly markedassumption, parametricformretained;sameaverageaccelerationdoesnotfixdistancewithoutamotionmodel.",
+    "2.21initialrestassumption explicit, general initialvelocitydependence retained.2.23strictthreshold distinguishedfromroundedlowerbound, no medicaloutcome guarantee.",
+    "Rejected AGY2.14acceleration6.88m/s²:Independentderivative/rootgives6.42495136168m/s².",
+    "Requiredgraphfigures2.13,2.15,2.17,2.26are nativeverifiedSVGsinsideclosedsolutions; allquestiondata/originalfiguresretained."
+  ],
+  "wholeChapterSolvedUnits": 61,
+  "wholeChapterTotalUnits": 127,
+  "remainingDetailedSolutions": 66,
+  "previousReportSupersession": "Early12 report described old unsolved13–26tail and fullfilehash. That tail is now replaced by these14acceptedsolutions; first12unitcontent remains unchanged.",
+  "limitations": "Local productionMarkdown/CSSgroupsandSVGgeometry only. Source13–26completed, not completewholechapter orallcourses. Full route/cloud/public verification is separate."
+}
