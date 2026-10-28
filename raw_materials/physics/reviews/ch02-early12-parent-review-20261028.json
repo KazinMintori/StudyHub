@@ -1,0 +1,399 @@
+{
+  "status": "accepted-early12-locally-only",
+  "questionIDs": [
+    "2.1",
+    "2.2",
+    "2.3",
+    "2.4",
+    "2.5",
+    "2.6",
+    "2.7",
+    "2.8",
+    "2.9",
+    "2.10",
+    "2.11",
+    "2.12"
+  ],
+  "numericChecks": {
+    "status": "passed-independent-numeric-models-only",
+    "draftQuestions": 12,
+    "checks": [
+      {
+        "id": "2.1",
+        "quantity": "positive displacement",
+        "computed": 25.0,
+        "expected": 25
+      },
+      {
+        "id": "2.2",
+        "quantity": "return velocity",
+        "computed": -4.415294924554184,
+        "expected": -4.415294924554184
+      },
+      {
+        "id": "2.2",
+        "quantity": "wholeepisode netdisplacement",
+        "computed": 0,
+        "expected": 0
+      },
+      {
+        "id": "2.3",
+        "quantity": "original distance km",
+        "computed": 192.50000000000003,
+        "expected": 192.5
+      },
+      {
+        "id": "2.3",
+        "quantity": "newtime minutes",
+        "computed": 165.0,
+        "expected": 165
+      },
+      {
+        "id": "2.3",
+        "quantity": "extra minutes",
+        "computed": 55,
+        "expected": 55
+      },
+      {
+        "id": "2.4",
+        "quantity": "total time",
+        "computed": 110.0,
+        "expected": 110
+      },
+      {
+        "id": "2.4",
+        "quantity": "average speed",
+        "computed": 4.363636363636363,
+        "expected": 4.363636363636363
+      },
+      {
+        "id": "2.4",
+        "quantity": "average velocity",
+        "computed": -0.7272727272727273,
+        "expected": -0.7272727272727273
+      },
+      {
+        "id": "2.5",
+        "quantity": "average velocity",
+        "computed": 0.3125,
+        "expected": 0.3125
+      },
+      {
+        "id": "2.5",
+        "quantity": "average speed",
+        "computed": 1.5625,
+        "expected": 1.5625
+      },
+      {
+        "id": "2.6",
+        "quantity": "x2",
+        "computed": 5.6,
+        "expected": 5.6
+      },
+      {
+        "id": "2.6",
+        "quantity": "x4",
+        "computed": 20.8,
+        "expected": 20.8
+      },
+      {
+        "id": "2.6",
+        "quantity": "interval(0, 2)",
+        "computed": 2.8000000000000003,
+        "expected": 2.8
+      },
+      {
+        "id": "2.6",
+        "quantity": "interval(0, 4)",
+        "computed": 5.2,
+        "expected": 5.2
+      },
+      {
+        "id": "2.6",
+        "quantity": "interval(2, 4)",
+        "computed": 7.6000000000000005,
+        "expected": 7.6
+      },
+      {
+        "id": "2.7",
+        "quantity": "average0to10",
+        "computed": 12.0,
+        "expected": 12
+      },
+      {
+        "id": "2.7",
+        "quantity": "instantaneous at0",
+        "computed": 0.0,
+        "expected": 0
+      },
+      {
+        "id": "2.7",
+        "quantity": "instantaneous at5",
+        "computed": 15.0,
+        "expected": 15
+      },
+      {
+        "id": "2.7",
+        "quantity": "instantaneous at10",
+        "computed": 12.0,
+        "expected": 12
+      },
+      {
+        "id": "2.7",
+        "quantity": "rest-root",
+        "computed": 0.0,
+        "expected": 0
+      },
+      {
+        "id": "2.8",
+        "quantity": "instantaneous at8",
+        "computed": 3.76,
+        "expected": 3.76
+      },
+      {
+        "id": "2.9",
+        "quantity": "displacement tail3",
+        "computed": 7.0,
+        "expected": 7
+      },
+      {
+        "id": "2.9",
+        "quantity": "distance tail3",
+        "computed": 7.0,
+        "expected": 7
+      },
+      {
+        "id": "2.9",
+        "quantity": "displacement tail-3",
+        "computed": 1.0,
+        "expected": 1
+      },
+      {
+        "id": "2.9",
+        "quantity": "distance tail-3",
+        "computed": 7.0,
+        "expected": 7
+      },
+      {
+        "id": "2.11",
+        "quantity": "A/B slope",
+        "computed": 6.666666666666667,
+        "expected": 6.666666666666667
+      },
+      {
+        "id": "2.11",
+        "quantity": "D/E/F slope",
+        "computed": -40.0,
+        "expected": -40
+      },
+      {
+        "id": "2.12",
+        "quantity": "mean interval(0, 10)",
+        "computed": 1.6666666666666667,
+        "expected": 1.6666666666666667
+      },
+      {
+        "id": "2.12",
+        "quantity": "mean interval(30, 40)",
+        "computed": -1.6666666666666667,
+        "expected": -1.6666666666666667
+      },
+      {
+        "id": "2.12",
+        "quantity": "mean interval(10, 30)",
+        "computed": 0.0,
+        "expected": 0
+      },
+      {
+        "id": "2.12",
+        "quantity": "mean interval(0, 40)",
+        "computed": 0.0,
+        "expected": 0
+      }
+    ],
+    "count": 32,
+    "figureReview": "ActualsourcePDF79and originalE2.9/E2.10/E2.11/E2.12read. E2.10 firstsegment interpreted as nearly linear in source sketch, not exact fitteddata; rejectedAGYswappedI/II. E2.11 slopes source20mto40m over3s and40mto0m over1s."
+  },
+  "groupViewportCases": [
+    {
+      "group": "numbered-a-01",
+      "width": 320,
+      "issues": [],
+      "formulas": 22,
+      "visibleFormulas": 22,
+      "widestFormula": {
+        "width": 231.703125,
+        "available": 280,
+        "text": "x(2,00s)=(6,00−0,400)m=5,60m,"
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "numbered-a-01",
+      "width": 360,
+      "issues": [],
+      "formulas": 22,
+      "visibleFormulas": 22,
+      "widestFormula": {
+        "width": 231.703125,
+        "available": 320,
+        "text": "x(2,00s)=(6,00−0,400)m=5,60m,"
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "numbered-a-01",
+      "width": 375,
+      "issues": [],
+      "formulas": 22,
+      "visibleFormulas": 22,
+      "widestFormula": {
+        "width": 231.703125,
+        "available": 335,
+        "text": "x(2,00s)=(6,00−0,400)m=5,60m,"
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "numbered-a-01",
+      "width": 768,
+      "issues": [],
+      "formulas": 22,
+      "visibleFormulas": 22,
+      "widestFormula": {
+        "width": 245.328125,
+        "available": 672,
+        "text": "x(2,00s)=(6,00−0,400)m=5,60m,"
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "numbered-a-01",
+      "width": 1440,
+      "issues": [],
+      "formulas": 22,
+      "visibleFormulas": 22,
+      "widestFormula": {
+        "width": 245.328125,
+        "available": 848,
+        "text": "x(2,00s)=(6,00−0,400)m=5,60m,"
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "numbered-a-02",
+      "width": 320,
+      "issues": [],
+      "formulas": 20,
+      "visibleFormulas": 20,
+      "widestFormula": {
+        "width": 223.109375,
+        "available": 280,
+        "text": "t=2b3c=4,800,360s≈13,3s."
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "numbered-a-02",
+      "width": 360,
+      "issues": [],
+      "formulas": 20,
+      "visibleFormulas": 20,
+      "widestFormula": {
+        "width": 223.109375,
+        "available": 320,
+        "text": "t=2b3c=4,800,360s≈13,3s."
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "numbered-a-02",
+      "width": 375,
+      "issues": [],
+      "formulas": 20,
+      "visibleFormulas": 20,
+      "widestFormula": {
+        "width": 223.109375,
+        "available": 335,
+        "text": "t=2b3c=4,800,360s≈13,3s."
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "numbered-a-02",
+      "width": 768,
+      "issues": [],
+      "formulas": 20,
+      "visibleFormulas": 20,
+      "widestFormula": {
+        "width": 236.21875,
+        "available": 672,
+        "text": "t=2b3c=4,800,360s≈13,3s."
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "numbered-a-02",
+      "width": 1440,
+      "issues": [],
+      "formulas": 20,
+      "visibleFormulas": 20,
+      "widestFormula": {
+        "width": 236.21875,
+        "available": 848,
+        "text": "t=2b3c=4,800,360s≈13,3s."
+      },
+      "sourceGlossaries": 0,
+      "units": 6,
+      "images": 4,
+      "captions": 4
+    }
+  ],
+  "sourcePDFPagesRead": [
+    79
+  ],
+  "figuresRead": [
+    "E2.9",
+    "E2.10",
+    "E2.11",
+    "E2.12"
+  ],
+  "currentFile": "raw_materials/physics/translations/chapter-02/parent-11-bai-tap-001-026.md",
+  "currentSHA256": "b95c25fc0dd1999c0165b8d777d62463945cd6207b52a0c40d0475f97fa618f7",
+  "preservedUnreviewedTail": {
+    "units": "2.13–2.26",
+    "unchangedSHA256": "598fcd7f6584fcf734a20d9bee2369e7bb14b3cd45003b2ce36ee4d143327d5b",
+    "containsDetailedSolutions": false
+  },
+  "sourceInterpretation": "E2.10 is a qualitative sketch. AtIthe first rising segment is read as nearlystraight, atII steepening; rejected oldAGYswappedI/II. Exact measured curve not inferred.",
+  "remainingUnsuppliedDetailedSolutions": 80,
+  "fullGoalComplete": false,
+  "limits": "No claim that all26units in file have solutions. Only1–12authored and accepted;13–26originalprompttail retained unchanged."
+}

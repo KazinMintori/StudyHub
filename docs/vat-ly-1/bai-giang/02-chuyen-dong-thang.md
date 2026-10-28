@@ -45,7 +45,7 @@ Chuyên đề bao gồm hệ thống lý thuyết cốt lõi (mục 2.1–2.6), 
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-10-cau-hoi-thao-luan.md-->
 
-<!--@include: ../../../raw_materials/physics/translations/chapter-02/10-bai-tap-01-26.md-->
+<!--@include: ../../../raw_materials/physics/translations/chapter-02/parent-11-bai-tap-001-026.md-->
 
 <!--@include: ../../../raw_materials/physics/translations/chapter-02/11-bai-tap-27-52.md-->
 
