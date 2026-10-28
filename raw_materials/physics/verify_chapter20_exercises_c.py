@@ -239,7 +239,7 @@ def verify_image_assets():
     img_dir = ROOT / 'docs/vat-ly-1/bai-giang/img/young-20'
     crops = {
         'c-hinh-20-23.png': (774, 426),
-        'c-hinh-20-06.png': (477, 588),
+        'c-hinh-20-06.png': (486, 588),
         'c-hinh-20-09.png': (1602, 753),
         'c-hinh-20-13.png': (1335, 798),
     }

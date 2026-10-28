@@ -23,6 +23,7 @@ $$
 F &= (nA\ell)(qv_dB) \\
 &= (nqv_dA)(\ell B).
 \end{aligned}
+\tag{27.16}
 $$
 
 Mật độ dòng điện có độ lớn $J=nqv_d$, còn dòng điện qua tiết diện là $I=JA$. Thay vào biểu thức trên, ta được $F=I\ell B$ khi dây vuông góc với từ trường.

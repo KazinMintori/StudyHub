@@ -1,0 +1,84 @@
+{
+  "status": "screened-existing-verifiers-passed-with-targeted-repairs",
+  "initialExecuted": 124,
+  "initialPassed": 121,
+  "initialFailures": [
+    {
+      "file": "raw_materials/physics/verify_chapter17_theory_b.py",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\verify_chapter17_theory_b.py\", line 338, in <module>\n    assert arr_disk.shape == arr_fresh.shape, f\"Shape mismatch in {name}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Shape mismatch in b-hinh-17-27\n"
+    },
+    {
+      "file": "raw_materials/physics/verify_chapter20_exercises_c.py",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\verify_chapter20_exercises_c.py\", line 266, in <module>\n    verify_image_assets()\n    ~~~~~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\verify_chapter20_exercises_c.py\", line 257, in verify_image_assets\n    assert top == 0 and bottom == 0 and left == 0 and right == 0, f\"Ảnh {filename} bị chạm biên!\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Ảnh c-hinh-20-06.png bị chạm biên!\n"
+    },
+    {
+      "file": "raw_materials/physics/verify_chapter27_theory_cross.py",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\verify_chapter27_theory_cross.py\", line 138, in <module>\n    main()\n    ~~~~^^\n  File \"C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\verify_chapter27_theory_cross.py\", line 132, in main\n    verify_coverage()\n    ~~~~~~~~~~~~~~~^^\n  File \"C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\verify_chapter27_theory_cross.py\", line 32, in verify_coverage\n    assert tags == set(range(1, 31)), f\"Equation tags missing/extra: {sorted(tags)}\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Equation tags missing/extra: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]\n"
+    }
+  ],
+  "targetedReruns": [
+    {
+      "file": "raw_materials/physics/verify_chapter17_theory_b.py",
+      "sourceSHA256": "aa69419f2973f6b5e1900604af9b5d0e048c6ee90ee71f5157258272311fed43",
+      "exitCode": 0,
+      "stdoutSHA256": "fe32de9f74ab254e486dd3763fcdc3ea152ec8b2a404727ca9a837658ff49a52",
+      "stdout": "{\n  \"status\": \"passed\",\n  \"results\": {\n    \"mechanical_equivalent\": {\n      \"1_cal_J\": 4.186,\n      \"1_kcal_J\": 4186.0,\n      \"1_btu_J\": 1055.0\n    },\n    \"example17.5\": {\n      \"Q_water_J\": 670400.0,\n      \"Q_water_kcal\": 160.1528905876732,\n      \"Q_body_J\": 556800.0,\n      \"Q_body_kcal\": 133.01481127568084\n    },\n    \"example17.6\": {\n      \"dT_dt_K_per_s\": 0.45636756090040087,\n      \"dT_dt_K_per_min\": 27.382053654024052\n    },\n    \"molar_heat_capacity_water\": {\n      \"C_water_J_mol_K\": 75.41999999999999\n    },\n    \"test_understanding_17.5\": {\n      \"quantities_J\": {\n        \"i_mercury_1kg\": 138.0,\n        \"ii_ethanol_1kg\": 2428.0,\n        \"iii_mercury_1mol\": 27.7,\n        \"iv_ethanol_1mol\": 111.9\n      },\n      \"ranking\": [\n        \"ii\",\n        \"i\",\n        \"iv\",\n        \"iii\"\n      ]\n    },\n    \"phase_transition_comparison\": {\n      \"Q_warm_100C_J\": 419000.0,\n      \"L_v_water_J_per_kg\": 2256000.0,\n      \"ratio_Lv_to_Qwarm\": 5.384248210023866\n    },\n    \"example17.7\": {\n      \"T_fin"
+    },
+    {
+      "file": "raw_materials/physics/verify_chapter20_exercises_c.py",
+      "sourceSHA256": "f616ee8c9309e2df55fdec82d718aaca2a0944aa951cecff5c38128ddbae141a",
+      "exitCode": 0,
+      "stdoutSHA256": "21bce3d6c7bba49f8e71b51a30f7a876ed5aa3816a633b25ac185fc59ede1cc6",
+      "stdout": "Bắt đầu kiểm tra độc lập Chapter 20 Exercises C...\n✓ Xác minh thành công 12 bài luyện tập hướng dẫn (VP20.1.1 - VP20.10.4).\n✓ Xác minh thành công Bài tập cầu nối (Bridging Problem).\nĐã kiểm tra hai quan hệ số học hỗ trợ phần thảo luận. Không xác nhận toàn bộ lời văn bằng phép thử này.\n✓ Xác minh thành công 4 tệp ảnh cắt gốc và tính toàn vẹn biên trắng.\n==================================================\nCác phép tính đã liệt kê và kiểm tra ảnh đã hoàn tất. Rà nội dung khái niệm và đọc biên ảnh thực hiện riêng.\n"
+    },
+    {
+      "file": "raw_materials/physics/verify_chapter27_theory_cross.py",
+      "sourceSHA256": "729ea587d4538c8ec31f9fb9a991273773c8fddf50ddf60968be17d3e2da7add",
+      "exitCode": 0,
+      "stdoutSHA256": "1db3fc908b9bfa595e289fc98015a08311044c60d848280436d940774705b024",
+      "stdout": "Chapter 27 theory cross-check: equations 27.1–27.30, Examples 27.1–27.12, Figures 27.1–27.41, numeric and vector checks passed.\n"
+    }
+  ],
+  "allSelectedExistingAssertionsNowPass": true,
+  "repairs": [
+    "Chapter17verifier crop fixtures aligned with already-restored complete source17.27/17.30 images after actual original context review; all21RGBimages match nativePDF. No image or math altered in chapter17.",
+    "Chapter20Ottofigure circled1 leftedge truly clipped. Restored3sourcepoints onleft, target486x588, exactPDF-raster verified. Updated reproducible exporter and expectedsize; original3pixelwhiteborder assertions retained, all4assets pass.",
+    "Chapter27formula27.16 already mathematically present but its number missing. Restored tag after comparing originalPDF914/printed894. Fulltheorycrosscheck now passes1–30tags/12examples/41figureIDs and vector/numericcases."
+  ],
+  "restoredOttoSourceFrame": {
+    "asset": "docs/vat-ly-1/bai-giang/img/young-20/c-hinh-20-06.png",
+    "sourcePDFPage": 668,
+    "oldCrop": [
+      36,
+      94,
+      195,
+      290
+    ],
+    "newCrop": [
+      33,
+      94,
+      195,
+      290
+    ],
+    "scale": 3,
+    "oldSize": [
+      477,
+      588
+    ],
+    "newSize": [
+      486,
+      588
+    ],
+    "oldByteSHA256": "e5ee705e82f7603397dace362e99e9ed2b5fb982d3e6da6e45fbaaaeef687716",
+    "newByteSHA256": "6f15eed6c1c0635294fa93906cb75ff819c952153deb102be0a14de1f246390d",
+    "oldPixelsByteIdentical": false,
+    "nativeOriginalPDFExact": true,
+    "reason": "Sourcecontextvisuallyconfirmsfullcircled1callout startsleftofoldboundary. Extendleft3pointsto preservewholebluecircleglyph; no resizing/painting/redrawing."
+  },
+  "componentCases": {
+    "section27_6": 5,
+    "ottoFigure": 5
+  },
+  "executionLimits": "Initial315scripts statically screened;129eligible,5computed-only(noasserts)excluded;124runsequentially withsingleBLASthread andbounded30s.121initialpasses preserved plus3targetedrerunsafterrepairs. This doesNOTproveeveryscriptassertionisnumeric, everyquestiongivens/subpartcovered, or everyliveanswercorrect. Mutating/unreviewedimportscriptsnotexecuted. No local site build.",
+  "fullGoalComplete": false
+}
