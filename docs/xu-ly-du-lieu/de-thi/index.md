@@ -19,13 +19,13 @@ import catalog from '../../../src/content/courses/xu-ly-du-lieu/de-thi/catalog.j
   <header class="course-hero">
     <div class="course-hero-copy">
       <h1>Đề thi</h1>
-      <p class="course-description">Bốn đề giữa kỳ chính thức và một đề luyện tập, có đầy đủ câu hỏi và lời giải. Làm trắc nghiệm để đối chiếu đáp án hoặc mở phần tự luận để xem từng bước giải.</p>
+      <p class="course-description">Các đề thi và đề luyện tập kèm đáp án, lời giải từng bước. Đề chưa đủ trang được ghi rõ phạm vi câu hỏi hiện có. Làm trắc nghiệm để đối chiếu đáp án hoặc mở phần tự luận để xem cách giải.</p>
     </div>
   </header>
   <div class="course-meta">
-    <span>5 đề · 130 câu</span>
+    <span>{{ catalog.length }} đề · {{ catalog.reduce((sum, exam) => sum + exam.total, 0) }} câu hiện có</span>
     <a :href="withBase('/xu-ly-du-lieu/on-thi/')">Ngân hàng ôn thi</a>
-    <a :href="withBase('/materials/xu-ly-du-lieu/de-thi/5-de-130-cau-loi-giai.pdf')" download>Tải PDF tổng hợp 5 đề</a>
+    <a :href="withBase('/materials/xu-ly-du-lieu/de-thi/5-de-130-cau-loi-giai.pdf')" download>Tải PDF 5 đề đầy đủ (đề 1–5)</a>
   </div>
   <section class="course-part-section" aria-labelledby="exam-list-title">
     <header class="part-banner"><h2 id="exam-list-title">Danh sách đề</h2></header>

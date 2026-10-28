@@ -73,6 +73,7 @@
       <span v-if="bank.examDate">Ngày thi: <time :datetime="bank.examDate">{{ bank.examDateLabel }}</time></span>
       <span v-else-if="bank.examType === 'official'">Ngày thi: Chưa có thông tin</span>
     </div>
+    <p v-if="bank?.coverageNote" class="exam-source-note" role="note">{{ bank.coverageNote }}</p>
 
     <!-- Progress Row matching screenshot -->
     <div v-if="currentQuestion" class="exam-progress-row">

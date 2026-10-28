@@ -5431,6 +5431,836 @@
           "answerSummaryMarkdown": "a) Khóa format=\"\\%d/\\%m/\\%Y\". b) Đổi tần suất M thành ME trong pandas 3. c) Không dùng tháng 10 mới có dữ liệu đến ngày 10 để kết luận thay đổi của cả tháng."
         }
       ]
+    },
+    {
+      "id": "de-6",
+      "title": "Đề 6",
+      "code": "049",
+      "number": 6,
+      "description": "Mã đề 049 · Câu 9–26 · Chưa có trang 1–2",
+      "questions": [
+        {
+          "n": 9,
+          "points": 2,
+          "raw": "Câu 9. (2 điểm)\n\nMảng gio ghi số giờ ngủ hai đêm, mỗi đêm theo thứ tự An, Bình, Chi: Ba số đầu thuộc đêm thứ nhất, ba số sau thuộc đêm thứ hai. Đưa mỗi người về một hàng:\n\ngio = np.array([7, 6, 8, 5, 6, 9])\nbang = gio.reshape(3, 2)\nprint(bang[1])\n\nDòng cuối in ra gì?\n\nA. [6 6]\n\nB. [7 6]\n\nC. [8 5]\n\nD. [5 6 9]",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Mảng gio ghi số giờ ngủ hai đêm, mỗi đêm theo thứ tự An, Bình, Chi: Ba số đầu thuộc đêm thứ nhất, ba số sau thuộc đêm thứ hai. Đưa mỗi người về một hàng:"
+            },
+            {
+              "kind": "code",
+              "text": "gio = np.array([7, 6, 8, 5, 6, 9])\nbang = gio.reshape(3, 2)\nprint(bang[1])"
+            },
+            {
+              "kind": "prose",
+              "text": "Dòng cuối in ra gì?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "[6 6]"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "[7 6]"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "[8 5]"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "[5 6 9]"
+            }
+          ],
+          "id": "D6-009",
+          "kind": "quiz",
+          "correctKey": "C",
+          "correctKeys": [
+            "C"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nC. In ra `[8 5]`.\n\n### Giải thích\n\n`reshape(3, 2)` mặc định đọc các phần tử theo thứ tự hàng. Nó chia dãy thành ba hàng liên tiếp, mỗi hàng hai phần tử:\n\n```text\n[[7 6]\n [8 5]\n [6 9]]\n```\n\nChỉ số bắt đầu từ 0 nên `bang[1]` là hàng thứ hai. Chú ý rằng đoạn code chưa thực hiện đúng mục tiêu đưa mỗi người về một hàng. Với thứ tự dữ liệu theo từng đêm, cần dùng `gio.reshape(2, 3).T`. Khi đó các hàng lần lượt là An `[7, 5]`, Bình `[6, 6]` và Chi `[8, 9]`.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | `[6 6]` là dữ liệu của Bình sau khi tổ chức đúng theo người, nhưng không phải kết quả code đã cho. |\n| B | `[7 6]` là hàng có chỉ số 0. |\n| C | `[8 5]` đúng là hàng có chỉ số 1. |\n| D | Mỗi hàng có hai phần tử nên không thể in ra ba phần tử. |",
+          "answerSummaryMarkdown": "C. In ra `[8 5]`.",
+          "optionExplanations": {
+            "A": "`[6 6]` là dữ liệu của Bình sau khi tổ chức đúng theo người, nhưng không phải kết quả code đã cho.",
+            "B": "`[7 6]` là hàng có chỉ số 0.",
+            "C": "`[8 5]` đúng là hàng có chỉ số 1.",
+            "D": "Mỗi hàng có hai phần tử nên không thể in ra ba phần tử."
+          }
+        },
+        {
+          "n": 10,
+          "points": 2,
+          "raw": "Câu 10. (2 điểm)\n\nTệp raw/ve.csv ghi 6 vé xem phim đã bán của một suất chiếu, trong đó 2 vé có trang_thai là huy. Chạy:\n\nve = pd.read_csv(\"raw/ve.csv\")\nve.to_parquet(\"ve.parquet\", index=False)\nve = ve[ve[\"trang_thai\"] != \"huy\"]\na = duckdb.sql(\"SELECT COUNT(*) AS n FROM ve\").df()\nb = duckdb.sql(\"SELECT COUNT(*) AS n FROM ve.parquet\").df()\nprint(a[\"n\"][0], b[\"n\"][0])\n\nDòng cuối in ra gì?\n\nA. 4 4\n\nB. 4 6\n\nC. 6 6\n\nD. Báo lỗi: DuckDB không tìm thấy bảng ve",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Tệp raw/ve.csv ghi 6 vé xem phim đã bán của một suất chiếu, trong đó 2 vé có trang_thai là huy. Chạy:"
+            },
+            {
+              "kind": "code",
+              "text": "ve = pd.read_csv(\"raw/ve.csv\")\nve.to_parquet(\"ve.parquet\", index=False)\nve = ve[ve[\"trang_thai\"] != \"huy\"]\na = duckdb.sql(\"SELECT COUNT(*) AS n FROM ve\").df()\nb = duckdb.sql(\"SELECT COUNT(*) AS n FROM ve.parquet\").df()\nprint(a[\"n\"][0], b[\"n\"][0])"
+            },
+            {
+              "kind": "prose",
+              "text": "Dòng cuối in ra gì?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "4 4"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "4 6"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "6 6"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "Báo lỗi: DuckDB không tìm thấy bảng ve"
+            }
+          ],
+          "id": "D6-010",
+          "kind": "quiz",
+          "correctKey": "B",
+          "correctKeys": [
+            "B"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nB. In ra `4 6` khi chạy với DuckDB 2.0.0.\n\n### Giải thích\n\nTệp Parquet được ghi trước khi lọc nên vẫn chứa 6 vé. Biến `ve` sau phép lọc còn 4 hàng. DuckDB có thể truy vấn DataFrame Python qua tên `ve`, vì vậy truy vấn đầu trả về 4.\n\nTruy vấn thứ hai đọc tệp Parquet đã ghi, không đọc lại biến `ve` đã lọc. Với DuckDB 2.0.0, đoạn truy vấn `FROM ve.parquet` trong đề chạy được và trả về 6. Vì vậy dòng cuối in `4 6`.\n\nCách viết tên tệp có dấu nháy đơn hoặc dùng `read_parquet` cũng cho cùng kết quả:\n\n```python\nb = duckdb.sql(\"SELECT COUNT(*) AS n FROM 've.parquet'\").df()\nprint(a[\"n\"][0], b[\"n\"][0])\n```\n\n```text\n4 6\n```\n\nCũng có thể dùng `FROM read_parquet('ve.parquet')`. Việc lọc DataFrame sau khi ghi không sửa lại tệp trên đĩa. Nếu muốn tệp chỉ chứa vé chưa hủy, phải lọc trước khi gọi `to_parquet`.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Tệp được ghi trước khi lọc nên vẫn chứa 6 hàng. |\n| B | Đúng. DataFrame có 4 hàng và tệp có 6 hàng. |\n| C | DataFrame đã lọc còn 4 hàng nên truy vấn đầu không trả về 6. |\n| D | DuckDB tìm được DataFrame `ve`, đồng thời đọc được tệp Parquet trong môi trường đã kiểm chứng. |\n\n### Tài liệu tham khảo\n\n[DuckDB: Đọc tệp Parquet](https://duckdb.org/docs/2.0/data/parquet/overview.html), [DuckDB: Truy vấn DataFrame pandas](https://duckdb.org/docs/2.0/guides/python/sql_on_pandas.html).",
+          "answerSummaryMarkdown": "B. In ra `4 6` khi chạy với DuckDB 2.0.0.",
+          "optionExplanations": {
+            "A": "Tệp được ghi trước khi lọc nên vẫn chứa 6 hàng.",
+            "B": "Đúng. DataFrame có 4 hàng và tệp có 6 hàng.",
+            "C": "DataFrame đã lọc còn 4 hàng nên truy vấn đầu không trả về 6.",
+            "D": "DuckDB tìm được DataFrame `ve`, đồng thời đọc được tệp Parquet trong môi trường đã kiểm chứng."
+          }
+        },
+        {
+          "n": 11,
+          "points": 2,
+          "raw": "Câu 11. (2 điểm)\n\nBiển số ô tô đã bỏ dấu chấm có dạng 30A-12345, gồm hai chữ số, một chữ cái in hoa, dấu gạch ngang và năm chữ số. Cột biển số bs được kiểm tra bằng đoạn code sau:\n\nhop_le = bs.str.match(r\"\\d{2}[A-Z]-\\d{5}\")\n\nBiển nào sau đây sai dạng nhưng có hop_le là True?\n\nA. 30a-12345\n\nB. 30A-123456\n\nC. 130A-12345\n\nD. 30A-1234",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Biển số ô tô đã bỏ dấu chấm có dạng 30A-12345, gồm hai chữ số, một chữ cái in hoa, dấu gạch ngang và năm chữ số. Cột biển số bs được kiểm tra bằng đoạn code sau:"
+            },
+            {
+              "kind": "code",
+              "text": "hop_le = bs.str.match(r\"\\d{2}[A-Z]-\\d{5}\")"
+            },
+            {
+              "kind": "prose",
+              "text": "Biển nào sau đây sai dạng nhưng có hop_le là True?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "30a-12345"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "30A-123456"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "130A-12345"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "30A-1234"
+            }
+          ],
+          "id": "D6-011",
+          "kind": "quiz",
+          "correctKey": "B",
+          "correctKeys": [
+            "B"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nB. `30A-123456` vẫn cho `True`.\n\n### Giải thích\n\n`str.match` yêu cầu mẫu bắt đầu khớp từ đầu chuỗi, nhưng không yêu cầu dùng hết chuỗi. Mẫu khớp được tiền tố `30A-12345` và bỏ lại chữ số `6` ở cuối.\n\n```text\n30a-12345     False\n30A-123456     True\n130A-12345    False\n30A-1234      False\n```\n\nĐể kiểm tra toàn bộ biển số, dùng `bs.str.fullmatch(r\"\\d{2}[A-Z]-\\d{5}\")`. Nếu chỉ chấp nhận chữ số ASCII, thay `\\d` bằng `[0-9]`.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Chữ `a` thường không thuộc `[A-Z]`. |\n| B | Có tiền tố khớp mẫu và dư một chữ số ở cuối, nên vẫn được `match` chấp nhận. |\n| C | Sau hai chữ số `13`, mẫu cần một chữ hoa nhưng gặp `0`. |\n| D | Phần sau dấu gạch ngang chỉ có bốn chữ số. |",
+          "answerSummaryMarkdown": "B. `30A-123456` vẫn cho `True`.",
+          "optionExplanations": {
+            "A": "Chữ `a` thường không thuộc `[A-Z]`.",
+            "B": "Có tiền tố khớp mẫu và dư một chữ số ở cuối, nên vẫn được `match` chấp nhận.",
+            "C": "Sau hai chữ số `13`, mẫu cần một chữ hoa nhưng gặp `0`.",
+            "D": "Phần sau dấu gạch ngang chỉ có bốn chữ số."
+          }
+        },
+        {
+          "n": 12,
+          "points": 2,
+          "raw": "Câu 12. (2 điểm)\n\nBảng ks có chỉ mục là mã khách sạn. Ba cột của bảng lần lượt là hạng sao, số phòng và giá phòng một đêm (USD).\n\nks = pd.DataFrame(\n    [[3, 40, 55], [4, 25, 80], [5, 60, 150], [4, 32, 72]],\n    columns=[\"hang\", \"so_phong\", \"gia\"],\n    index=[\"K1\", \"K2\", \"K3\", \"K4\"])\nprint(ks.iloc[2, 1], ks.iloc[1, 2])\n\nDòng cuối in ra gì?\n\nA. 5 25\n\nB. 4 40\n\nC. 80 60\n\nD. 60 80",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Bảng ks có chỉ mục là mã khách sạn. Ba cột của bảng lần lượt là hạng sao, số phòng và giá phòng một đêm (USD)."
+            },
+            {
+              "kind": "code",
+              "text": "ks = pd.DataFrame(\n    [[3, 40, 55], [4, 25, 80], [5, 60, 150], [4, 32, 72]],\n    columns=[\"hang\", \"so_phong\", \"gia\"],\n    index=[\"K1\", \"K2\", \"K3\", \"K4\"])\nprint(ks.iloc[2, 1], ks.iloc[1, 2])"
+            },
+            {
+              "kind": "prose",
+              "text": "Dòng cuối in ra gì?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "5 25"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "4 40"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "80 60"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "60 80"
+            }
+          ],
+          "id": "D6-012",
+          "kind": "quiz",
+          "correctKey": "D",
+          "correctKeys": [
+            "D"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nD. In ra `60 80`.\n\n### Giải thích\n\n`iloc` chọn theo vị trí nguyên và đếm từ 0, không dùng mã khách sạn làm nhãn. Vị trí hàng 2 là K3, cột 1 là `so_phong`, nên giá trị đầu là 60. Vị trí hàng 1 là K2, cột 2 là `gia`, nên giá trị sau là 80.\n\n| Vị trí hàng | Khách sạn | hang | so_phong | gia |\n| --- | --- | --- | --- | --- |\n| 0 | K1 | 3 | 40 | 55 |\n| 1 | K2 | 4 | 25 | 80 |\n| 2 | K3 | 5 | 60 | 150 |\n| 3 | K4 | 4 | 32 | 72 |\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | 5 là hạng sao của K3, còn 25 là số phòng của K2. Cả hai đều sai cột. |\n| B | 4 và 40 không nằm tại hai tọa độ được yêu cầu. |\n| C | Đảo thứ tự hai giá trị được in. |\n| D | Đúng thứ tự số phòng của K3 rồi giá của K2. |",
+          "answerSummaryMarkdown": "D. In ra `60 80`.",
+          "optionExplanations": {
+            "A": "5 là hạng sao của K3, còn 25 là số phòng của K2. Cả hai đều sai cột.",
+            "B": "4 và 40 không nằm tại hai tọa độ được yêu cầu.",
+            "C": "Đảo thứ tự hai giá trị được in.",
+            "D": "Đúng thứ tự số phòng của K3 rồi giá của K2."
+          }
+        },
+        {
+          "n": 13,
+          "points": 2,
+          "raw": "Câu 13. (2 điểm)\n\nSeries gia ghi giá (USD) của bảy tour, có hai tour chưa có giá. Tour từ 500 USD trở lên thuộc nhóm cao cấp, còn lại thuộc nhóm tiết kiệm.\n\ngia = pd.Series([620, np.nan, 480, 500, 350, np.nan, 410])\ncao_cap = gia[gia >= 500]\ntiet_kiem = gia.drop(cao_cap.index)\nprint(len(cao_cap), len(tiet_kiem), tiet_kiem.isna().sum())\n\nDòng cuối in ra gì?\n\nA. 4 3 0\n\nB. 2 3 0\n\nC. 2 5 2\n\nD. 2 5 0",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Series gia ghi giá (USD) của bảy tour, có hai tour chưa có giá. Tour từ 500 USD trở lên thuộc nhóm cao cấp, còn lại thuộc nhóm tiết kiệm."
+            },
+            {
+              "kind": "code",
+              "text": "gia = pd.Series([620, np.nan, 480, 500, 350, np.nan, 410])\ncao_cap = gia[gia >= 500]\ntiet_kiem = gia.drop(cao_cap.index)\nprint(len(cao_cap), len(tiet_kiem), tiet_kiem.isna().sum())"
+            },
+            {
+              "kind": "prose",
+              "text": "Dòng cuối in ra gì?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "4 3 0"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "2 3 0"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "2 5 2"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "2 5 0"
+            }
+          ],
+          "id": "D6-013",
+          "kind": "quiz",
+          "correctKey": "C",
+          "correctKeys": [
+            "C"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nC. In ra `2 5 2`.\n\n### Giải thích\n\nĐiều kiện `gia >= 500` chọn hai giá 620 và 500 tại chỉ số 0 và 3. So sánh với `np.nan` không chọn hai vị trí thiếu giá.\n\n`drop(cao_cap.index)` xóa hai nhãn 0 và 3 khỏi Series ban đầu. Nó không xóa hai giá trị thiếu ở chỉ số 1 và 5. Do đó nhóm còn lại có năm phần tử, trong đó hai phần tử là `NaN`.\n\n```text\ncao_cap:   [620.0, 500.0]\ntiet_kiem: [nan, 480.0, 350.0, nan, 410.0]\n```\n\nVề nghiệp vụ, chưa có giá chưa đủ để kết luận tour thuộc nhóm tiết kiệm. Nếu cần chỉ chọn các tour đã biết giá và giá dưới 500, dùng `gia[gia < 500]`. Kết quả khi đó có ba phần tử và không có giá trị thiếu.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Chỉ hai giá đạt ngưỡng, không phải bốn. |\n| B | Đây là số lượng của cách lọc giá dưới 500, khác với thao tác `drop` trong đề. |\n| C | Đúng cả số tour cao cấp, số phần tử còn lại và số giá trị thiếu. |\n| D | Nhóm còn lại vẫn chứa hai ô thiếu giá. |",
+          "answerSummaryMarkdown": "C. In ra `2 5 2`.",
+          "optionExplanations": {
+            "A": "Chỉ hai giá đạt ngưỡng, không phải bốn.",
+            "B": "Đây là số lượng của cách lọc giá dưới 500, khác với thao tác `drop` trong đề.",
+            "C": "Đúng cả số tour cao cấp, số phần tử còn lại và số giá trị thiếu.",
+            "D": "Nhóm còn lại vẫn chứa hai ô thiếu giá."
+          }
+        },
+        {
+          "n": 14,
+          "points": 2,
+          "raw": "Câu 14. (2 điểm)\n\nMỗi thửa ruộng được bón phân bốn đợt. Lượng phân mỗi đợt (kg) bằng diện tích thửa (sào) nhân định mức đợt đó (kg/sào):\n\ndien_tich = np.array([2, 5, 3])  # ba thửa\ndinh_muc = np.array([8, 10, 12, 15])  # bốn đợt bón\nbang = dien_tich[:, None] * dinh_muc\nprint(bang.shape, bang[1].sum())\n\nDòng cuối in ra gì?\n\nA. (3, 4) 225\n\nB. (3, 4) 100\n\nC. (4, 3) 100\n\nD. Báo lỗi ValueError",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Mỗi thửa ruộng được bón phân bốn đợt. Lượng phân mỗi đợt (kg) bằng diện tích thửa (sào) nhân định mức đợt đó (kg/sào):"
+            },
+            {
+              "kind": "code",
+              "text": "dien_tich = np.array([2, 5, 3])  # ba thửa\ndinh_muc = np.array([8, 10, 12, 15])  # bốn đợt bón\nbang = dien_tich[:, None] * dinh_muc\nprint(bang.shape, bang[1].sum())"
+            },
+            {
+              "kind": "prose",
+              "text": "Dòng cuối in ra gì?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "(3, 4) 225"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "(3, 4) 100"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "(4, 3) 100"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "Báo lỗi ValueError"
+            }
+          ],
+          "id": "D6-014",
+          "kind": "quiz",
+          "correctKey": "A",
+          "correctKeys": [
+            "A"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nA. In ra `(3, 4) 225`.\n\n### Giải thích\n\n`dien_tich[:, None]` thêm một trục vào mảng diện tích, tạo dạng `(3, 1)`. Khi nhân với mảng định mức dạng `(4,)`, NumPy mở rộng hai mảng để tạo ba hàng và bốn cột. Mỗi hàng ứng với một thửa, mỗi cột ứng với một đợt.\n\n```text\n[[16 20 24 30]\n [40 50 60 75]\n [24 30 36 45]]\n```\n\nThửa có chỉ số 1 rộng 5 sào. Tổng lượng phân của thửa này là `40 + 50 + 60 + 75 = 225` kg. Không phải cộng một cột hay cộng toàn bộ bảng.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Đúng ba thửa, bốn đợt và tổng hàng thứ hai là 225 kg. |\n| B | Dạng mảng đúng nhưng tổng hàng sai. |\n| C | Đảo hai trục và tính sai tổng. |\n| D | Hai dạng `(3, 1)` và `(4,)` tương thích để broadcasting. |",
+          "answerSummaryMarkdown": "A. In ra `(3, 4) 225`.",
+          "optionExplanations": {
+            "A": "Đúng ba thửa, bốn đợt và tổng hàng thứ hai là 225 kg.",
+            "B": "Dạng mảng đúng nhưng tổng hàng sai.",
+            "C": "Đảo hai trục và tính sai tổng.",
+            "D": "Hai dạng `(3, 1)` và `(4,)` tương thích để broadcasting."
+          }
+        },
+        {
+          "n": 15,
+          "points": 2,
+          "raw": "Câu 15. (2 điểm)\n\nBảng goi ghi loại gói thuê xe, số ngày và giá cả gói (nghìn đồng). Cho đoạn code sau, gồm hai cách tìm các gói tự lái có giá mỗi ngày cao nhất:\n\ngoi = pd.DataFrame(\n    [[\"Tự lái\", 3, 2400], [\"Có tài xế\", 2, 3200], [\"Tự lái\", 4, 2800],\n     [\"Có tài xế\", 1, 1900], [\"Tự lái\", 2, 1900], [\"Tự lái\", 5, 3000]],\n    columns=[\"loai\", \"so_ngay\", \"gia\"],\n    index=[\"G1\", \"G2\", \"G3\", \"G4\", \"G5\", \"G6\"])\ngoi[\"gia_ngay\"] = goi[\"gia\"] / goi[\"so_ngay\"]\na = goi[goi[\"loai\"] == \"Tự lái\"].nlargest(2, \"gia_ngay\")\nb = goi.nlargest(2, \"gia_ngay\")\nc = b[b[\"loai\"] == \"Tự lái\"]\nprint(a.index.tolist(), len(c))\n\nDòng cuối in ra gì?\n\nA. ['G1', 'G5'] 2\n\nB. ['G1', 'G5'] 0\n\nC. ['G5', 'G1'] 0\n\nD. ['G5', 'G1'] 2",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Bảng goi ghi loại gói thuê xe, số ngày và giá cả gói (nghìn đồng). Cho đoạn code sau, gồm hai cách tìm các gói tự lái có giá mỗi ngày cao nhất:"
+            },
+            {
+              "kind": "code",
+              "text": "goi = pd.DataFrame(\n    [[\"Tự lái\", 3, 2400], [\"Có tài xế\", 2, 3200], [\"Tự lái\", 4, 2800],\n     [\"Có tài xế\", 1, 1900], [\"Tự lái\", 2, 1900], [\"Tự lái\", 5, 3000]],\n    columns=[\"loai\", \"so_ngay\", \"gia\"],\n    index=[\"G1\", \"G2\", \"G3\", \"G4\", \"G5\", \"G6\"])\ngoi[\"gia_ngay\"] = goi[\"gia\"] / goi[\"so_ngay\"]\na = goi[goi[\"loai\"] == \"Tự lái\"].nlargest(2, \"gia_ngay\")\nb = goi.nlargest(2, \"gia_ngay\")\nc = b[b[\"loai\"] == \"Tự lái\"]\nprint(a.index.tolist(), len(c))"
+            },
+            {
+              "kind": "prose",
+              "text": "Dòng cuối in ra gì?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "['G1', 'G5'] 2"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "['G1', 'G5'] 0"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "['G5', 'G1'] 0"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "['G5', 'G1'] 2"
+            }
+          ],
+          "id": "D6-015",
+          "kind": "quiz",
+          "correctKey": "C",
+          "correctKeys": [
+            "C"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nC. In ra `['G5', 'G1'] 0`.\n\n### Giải thích\n\nGiá mỗi ngày của G1 đến G6 lần lượt là 800, 1600, 700, 1900, 950 và 600 nghìn đồng.\n\nTrong `a`, lọc gói tự lái trước nên chỉ còn G1, G3, G5, G6. `nlargest` xếp giảm dần và lấy hai giá cao nhất, tương ứng G5 rồi G1.\n\nTrong `b`, chọn hai giá cao nhất của toàn bảng trước, tương ứng G4 và G2. Cả hai đều có tài xế nên lọc tiếp điều kiện tự lái cho bảng rỗng. Vì vậy `len(c)` bằng 0. Thứ tự lọc và chọn hai giá cao nhất làm thay đổi tập ứng viên.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Đảo thứ tự G5, G1 và đếm sai số hàng của `c`. |\n| B | Số hàng của `c` đúng nhưng thứ tự của `a` sai. |\n| C | Đúng thứ tự giảm dần trong nhóm tự lái và đúng bảng `c` rỗng. |\n| D | Thứ tự của `a` đúng nhưng hai hàng trong `b` đều không tự lái. |",
+          "answerSummaryMarkdown": "C. In ra `['G5', 'G1'] 0`.",
+          "optionExplanations": {
+            "A": "Đảo thứ tự G5, G1 và đếm sai số hàng của `c`.",
+            "B": "Số hàng của `c` đúng nhưng thứ tự của `a` sai.",
+            "C": "Đúng thứ tự giảm dần trong nhóm tự lái và đúng bảng `c` rỗng.",
+            "D": "Thứ tự của `a` đúng nhưng hai hàng trong `b` đều không tự lái."
+          }
+        },
+        {
+          "n": 16,
+          "points": 2,
+          "raw": "Câu 16. (2 điểm)\n\nHàm nghin(x) đổi số tiền từ đồng sang nghìn đồng, trả về x / 1000. Hàm nằm trong tệp quy_doi.py, cùng thư mục với notebook. Cách viết nào sau đây in ra 45.0?\n\nA. import quy_doi.nghin rồi print(nghin(45000))\n\nB. import quy_doi rồi print(nghin(45000))\n\nC. from quy_doi import nghin rồi print(quy_doi.nghin(45000))\n\nD. import quy_doi rồi print(quy_doi.nghin(45000))",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Hàm nghin(x) đổi số tiền từ đồng sang nghìn đồng, trả về x / 1000. Hàm nằm trong tệp quy_doi.py, cùng thư mục với notebook. Cách viết nào sau đây in ra 45.0?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "import quy_doi.nghin rồi print(nghin(45000))"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "import quy_doi rồi print(nghin(45000))"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "from quy_doi import nghin rồi print(quy_doi.nghin(45000))"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "import quy_doi rồi print(quy_doi.nghin(45000))"
+            }
+          ],
+          "id": "D6-016",
+          "kind": "quiz",
+          "correctKey": "D",
+          "correctKeys": [
+            "D"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nD. Nhập mô-đun rồi gọi `quy_doi.nghin(45000)`.\n\n### Giải thích\n\nTrong một phiên Python mới, `import quy_doi` tạo tên `quy_doi` trong phạm vi hiện tại. Hàm là thuộc tính của mô-đun nên phải truy cập qua `quy_doi.nghin`.\n\n```python\nimport quy_doi\nprint(quy_doi.nghin(45000))\n```\n\n```text\n45.0\n```\n\nCách khác cũng hợp lệ là `from quy_doi import nghin` rồi gọi `nghin(45000)`. Khi đó tên được nhập trực tiếp là `nghin`. Không nên dựa vào các tên còn sót lại từ lần chạy notebook trước.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | `nghin` là hàm trong tệp, không phải mô-đun con của một gói `quy_doi`. |\n| B | `import quy_doi` không đưa tên `nghin` vào phạm vi hiện tại. |\n| C | `from quy_doi import nghin` đưa tên `nghin` vào phạm vi hiện tại, không đưa tên `quy_doi` vào. |\n| D | Tên được nhập và cách truy cập hàm khớp nhau. |",
+          "answerSummaryMarkdown": "D. Nhập mô-đun rồi gọi `quy_doi.nghin(45000)`.",
+          "optionExplanations": {
+            "A": "`nghin` là hàm trong tệp, không phải mô-đun con của một gói `quy_doi`.",
+            "B": "`import quy_doi` không đưa tên `nghin` vào phạm vi hiện tại.",
+            "C": "`from quy_doi import nghin` đưa tên `nghin` vào phạm vi hiện tại, không đưa tên `quy_doi` vào.",
+            "D": "Tên được nhập và cách truy cập hàm khớp nhau."
+          }
+        },
+        {
+          "n": 17,
+          "points": 2,
+          "raw": "Câu 17. (2 điểm)\n\nBảng bd ghi điểm sinh viên ở cột diem (có thể vượt 10 do điểm thưởng), ban đầu có ít nhất 3 hàng. Mỗi ô chạy riêng ngay sau ô tạo bảng bd:\n\n# Ô 1: điểm vượt 10 ghi thành 10\nbd.loc[bd[\"diem\"] > 10, \"diem\"] = 10\n# Ô 2: chỉ giữ các sinh viên từ 5 điểm\nbd = bd[bd[\"diem\"] >= 5]\n# Ô 3: thêm cột đánh dấu đạt\nbd[\"dat\"] = bd[\"diem\"] >= 5\n# Ô 4: bỏ hàng đầu (hàng nhập thử)\nbd = bd.iloc[1:]\n\nChạy mỗi ô hai lần liên tiếp. Ô nào làm nội dung bd sau lần chạy thứ hai khác sau lần chạy thứ nhất?\n\nA. Ô 4\n\nB. Ô 2\n\nC. Ô 1\n\nD. Ô 3",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Bảng bd ghi điểm sinh viên ở cột diem (có thể vượt 10 do điểm thưởng), ban đầu có ít nhất 3 hàng. Mỗi ô chạy riêng ngay sau ô tạo bảng bd:"
+            },
+            {
+              "kind": "code",
+              "text": "# Ô 1: điểm vượt 10 ghi thành 10\nbd.loc[bd[\"diem\"] > 10, \"diem\"] = 10\n# Ô 2: chỉ giữ các sinh viên từ 5 điểm\nbd = bd[bd[\"diem\"] >= 5]\n# Ô 3: thêm cột đánh dấu đạt\nbd[\"dat\"] = bd[\"diem\"] >= 5\n# Ô 4: bỏ hàng đầu (hàng nhập thử)\nbd = bd.iloc[1:]"
+            },
+            {
+              "kind": "prose",
+              "text": "Chạy mỗi ô hai lần liên tiếp. Ô nào làm nội dung bd sau lần chạy thứ hai khác sau lần chạy thứ nhất?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "Ô 4"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "Ô 2"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "Ô 1"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "Ô 3"
+            }
+          ],
+          "id": "D6-017",
+          "kind": "quiz",
+          "correctKey": "A",
+          "correctKeys": [
+            "A"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nA. Ô 4 tiếp tục xóa thêm một hàng.\n\n### Giải thích\n\nMỗi ô được xét trên bảng mới tạo của riêng nó, không chạy nối cả bốn ô.\n\nÔ 1 chặn mọi điểm vượt 10 về 10. Chạy lần nữa không còn điểm vượt ngưỡng nên không đổi dữ liệu. Ô 2 đã loại hết điểm dưới 5 trong lần đầu, vì vậy lần sau giữ nguyên các hàng còn lại. Ô 3 tính lại đúng cùng cột Boolean từ cột điểm không đổi.\n\nNgược lại, `bd.iloc[1:]` luôn bỏ hàng đầu của bảng hiện tại. Nếu bắt đầu với ba hàng, lần đầu còn hai hàng và lần thứ hai còn một hàng. Đây là thao tác phụ thuộc số lần chạy notebook. Để chạy lại an toàn, có thể luôn lấy lát cắt từ một bảng gốc riêng được giữ nguyên.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Đúng. Mỗi lần chạy đều bỏ thêm một hàng đầu. |\n| B | Lần thứ hai không loại thêm hàng nào vì các hàng còn lại đều đạt điều kiện. |\n| C | Chặn về 10 lần nữa không thay đổi các điểm đã chặn. |\n| D | Gán lại cùng biểu thức Boolean không đổi kết quả. |",
+          "answerSummaryMarkdown": "A. Ô 4 tiếp tục xóa thêm một hàng.",
+          "optionExplanations": {
+            "A": "Đúng. Mỗi lần chạy đều bỏ thêm một hàng đầu.",
+            "B": "Lần thứ hai không loại thêm hàng nào vì các hàng còn lại đều đạt điều kiện.",
+            "C": "Chặn về 10 lần nữa không thay đổi các điểm đã chặn.",
+            "D": "Gán lại cùng biểu thức Boolean không đổi kết quả."
+          }
+        },
+        {
+          "n": 18,
+          "points": 2,
+          "raw": "Câu 18. (2 điểm)\n\nCho A = np.arange(12).reshape(3, 4) và bốn mảng tạo từ A:\n\nX1 = A[1:, ::2]\nX2 = A[[0, 2], 1:]\nX3 = A.T\nX4 = A.T.reshape(-1)\n\nNhững mảng nào sau đây làm np.shares_memory(A, X) trả về True?\n\nA. Chỉ X1\n\nB. X1 và X3\n\nC. X1 và X2\n\nD. X1, X3 và X4",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Cho A = np.arange(12).reshape(3, 4) và bốn mảng tạo từ A:"
+            },
+            {
+              "kind": "code",
+              "text": "X1 = A[1:, ::2]\nX2 = A[[0, 2], 1:]\nX3 = A.T\nX4 = A.T.reshape(-1)"
+            },
+            {
+              "kind": "prose",
+              "text": "Những mảng nào sau đây làm np.shares_memory(A, X) trả về True?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "Chỉ X1"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "X1 và X3"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "X1 và X2"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "X1, X3 và X4"
+            }
+          ],
+          "id": "D6-018",
+          "kind": "quiz",
+          "correctKey": "B",
+          "correctKeys": [
+            "B"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nB. `X1` và `X3` dùng chung bộ nhớ với `A`.\n\n### Giải thích\n\nLát cắt cơ bản `A[1:, ::2]` chỉ thay đổi cách nhìn vùng dữ liệu nên tạo một view. Phép chuyển vị `A.T` cũng chỉ đổi thông tin dạng mảng và bước nhảy trong bộ nhớ, vì vậy vẫn dùng cùng vùng dữ liệu.\n\n`A[[0, 2], 1:]` dùng danh sách chỉ số hàng, thuộc dạng advanced indexing và tạo bản sao. Với mảng `A` cụ thể trong đề, `A.T.reshape(-1)` phải sắp lại các phần tử theo thứ tự hàng của mảng đã chuyển vị nên cũng cần sao chép.\n\n```python\nprint([np.shares_memory(A, x) for x in [X1, X2, X3, X4]])\n```\n\n```text\n[True, False, True, False]\n```\n\nKhông được suy rộng rằng mọi phép `reshape` đều sao chép. Kết quả phụ thuộc cách các phần tử bố trí trong bộ nhớ và thứ tự duyệt được yêu cầu.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Bỏ sót view chuyển vị `X3`. |\n| B | Đúng hai mảng dùng chung dữ liệu. |\n| C | `X2` là bản sao và phương án còn bỏ sót `X3`. |\n| D | `X4` phải sao chép trong trường hợp cụ thể này. |\n\n### Tài liệu tham khảo\n\n[NumPy: Copies and views](https://numpy.org/doc/stable/user/basics.copies.html).",
+          "answerSummaryMarkdown": "B. `X1` và `X3` dùng chung bộ nhớ với `A`.",
+          "optionExplanations": {
+            "A": "Bỏ sót view chuyển vị `X3`.",
+            "B": "Đúng hai mảng dùng chung dữ liệu.",
+            "C": "`X2` là bản sao và phương án còn bỏ sót `X3`.",
+            "D": "`X4` phải sao chép trong trường hợp cụ thể này."
+          }
+        },
+        {
+          "n": 19,
+          "points": 2,
+          "raw": "Câu 19. (2 điểm)\n\nBảng may ghi dây chuyền, trạng thái (chinh_thuc là False với máy đang chạy thử) và số sản phẩm mỗi ca của các máy trong một xưởng. Hàm quy_doi đổi số sản phẩm thành điểm theo tỷ lệ, lấy số sản phẩm cao nhất trong bảng df mà hàm nhận được làm mốc 100.\n\nmay = pd.DataFrame([[\"D1\", True, 52], [\"D2\", True, 36],\n                    [\"D1\", True, 80], [\"D2\", True, 60],\n                    [\"D1\", False, 120]],\n                   columns=[\"day_chuyen\", \"chinh_thuc\", \"san_pham\"])\n\ndef quy_doi(s, df):\n    return s * 100 / df[\"san_pham\"].max()\n\nkq = (may.loc[may[\"chinh_thuc\"]]\n      .assign(diem=quy_doi)\n      .groupby(\"day_chuyen\")[\"diem\"].mean())\nprint(kq.to_dict())\n\nDòng cuối in ra gì?\n\nA. {'D1': 55.0, 'D2': 40.0}\n\nB. {'D1': 82.5, 'D2': 60.0}\n\nC. {'D1': 70.0, 'D2': 40.0}\n\nD. {'D1': 82.5, 'D2': 80.0}",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Bảng may ghi dây chuyền, trạng thái (chinh_thuc là False với máy đang chạy thử) và số sản phẩm mỗi ca của các máy trong một xưởng. Hàm quy_doi đổi số sản phẩm thành điểm theo tỷ lệ, lấy số sản phẩm cao nhất trong bảng df mà hàm nhận được làm mốc 100."
+            },
+            {
+              "kind": "code",
+              "text": "may = pd.DataFrame([[\"D1\", True, 52], [\"D2\", True, 36],\n                    [\"D1\", True, 80], [\"D2\", True, 60],\n                    [\"D1\", False, 120]],\n                   columns=[\"day_chuyen\", \"chinh_thuc\", \"san_pham\"])\n\ndef quy_doi(s, df):\n    return s * 100 / df[\"san_pham\"].max()\n\nkq = (may.loc[may[\"chinh_thuc\"]]\n      .assign(diem=quy_doi)\n      .groupby(\"day_chuyen\")[\"diem\"].mean())\nprint(kq.to_dict())"
+            },
+            {
+              "kind": "prose",
+              "text": "Dòng cuối in ra gì?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "{'D1': 55.0, 'D2': 40.0}"
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "{'D1': 82.5, 'D2': 60.0}"
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "{'D1': 70.0, 'D2': 40.0}"
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "{'D1': 82.5, 'D2': 80.0}"
+            }
+          ],
+          "id": "D6-019",
+          "kind": "quiz",
+          "correctKey": null,
+          "correctKeys": [],
+          "grading": "manual",
+          "reviewNote": "Hàm quy_doi có hai tham số, trong khi assign chỉ truyền một DataFrame. Code gốc báo TypeError. Phương án B là kết quả sau khi sửa lời gọi hàm.",
+          "solutionMarkdown": "### Đáp án\n\nCode gốc phát sinh `TypeError`, không có phương án A–D đúng.\n\n### Giải thích\n\n`DataFrame.assign` gọi hàm được truyền vào bằng đúng một đối số là DataFrame hiện tại. Trong đề, `quy_doi` đòi hai đối số `s` và `df`. Do đó `.assign(diem=quy_doi)` thiếu đối số `df` và dừng trước bước `groupby`.\n\nĐể thực hiện ý định quy đổi số sản phẩm sau khi loại máy chạy thử, cần truyền cả cột và bảng qua một hàm một đối số:\n\n```python\nkq = (may.loc[may[\"chinh_thuc\"]]\n      .assign(diem=lambda df: quy_doi(df[\"san_pham\"], df))\n      .groupby(\"day_chuyen\")[\"diem\"].mean())\nprint(kq.to_dict())\n```\n\n```text\n{'D1': 82.5, 'D2': 60.0}\n```\n\nSau khi lọc, số sản phẩm lớn nhất là 80. Điểm D1 lần lượt là 65 và 100, trung bình 82,5. Điểm D2 là 45 và 75, trung bình 60. Như vậy B chỉ đúng với code đã sửa, không phải code in trên đề. Nếu lấy mốc 120 từ cả máy chạy thử thì sẽ ra A, nhưng đó lại là cách tính khác.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Là kết quả khi dùng mốc 120 của bảng chưa lọc, nhưng code gốc chưa tính được điểm. |\n| B | Là kết quả theo ý định sau khi sửa hàm truyền cho `assign`. |\n| C | Không khớp phép tính quy đổi với mốc 80 hoặc 120. |\n| D | 80 là điểm sai cho trung bình D2 và code gốc vẫn thiếu đối số. |\n\n### Tài liệu tham khảo\n\n[pandas.DataFrame.assign](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.assign.html).",
+          "answerSummaryMarkdown": "Code gốc phát sinh `TypeError`, không có phương án A–D đúng.",
+          "optionExplanations": {
+            "A": "Là kết quả khi dùng mốc 120 của bảng chưa lọc, nhưng code gốc chưa tính được điểm.",
+            "B": "Là kết quả theo ý định sau khi sửa hàm truyền cho `assign`.",
+            "C": "Không khớp phép tính quy đổi với mốc 80 hoặc 120.",
+            "D": "80 là điểm sai cho trung bình D2 và code gốc vẫn thiếu đối số."
+          }
+        },
+        {
+          "n": 20,
+          "points": 2,
+          "raw": "Câu 20. (2 điểm)\n\nMột nhóm dùng code do AI gợi ý để gộp bảng tháng 10 vào bảng chung:\n\nbang = bang.append(bang_t10)\n\nTrên máy Hùng, môi trường .venv của dự án được cài theo requirements.txt với pandas 3.0.3. Code chạy trong môi trường này báo AttributeError: 'DataFrame' object has no attribute 'append' nhưng chạy được trên máy thành viên khác. Nhóm nên xử lý thế nào?\n\nA. Giữ pandas 3.0.3 như trong requirements.txt, sửa lệnh gộp theo tài liệu 3.0.3.\n\nB. Chạy notebook trên máy bạn kia rồi nộp kết quả, vì code đã chạy đúng ở máy đó.\n\nC. Hạ pandas trong .venv xuống bản đang có ở máy bạn kia, giữ nguyên requirements.txt.\n\nD. Xóa .venv của Hùng rồi tạo lại theo requirements.txt, vì .venv có thể đã hỏng.",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Một nhóm dùng code do AI gợi ý để gộp bảng tháng 10 vào bảng chung:"
+            },
+            {
+              "kind": "code",
+              "text": "bang = bang.append(bang_t10)"
+            },
+            {
+              "kind": "prose",
+              "text": "Trên máy Hùng, môi trường .venv của dự án được cài theo requirements.txt với pandas 3.0.3. Code chạy trong môi trường này báo AttributeError: 'DataFrame' object has no attribute 'append' nhưng chạy được trên máy thành viên khác. Nhóm nên xử lý thế nào?"
+            },
+            {
+              "kind": "choice",
+              "label": "A",
+              "text": "Giữ pandas 3.0.3 như trong requirements.txt, sửa lệnh gộp theo tài liệu 3.0.3."
+            },
+            {
+              "kind": "choice",
+              "label": "B",
+              "text": "Chạy notebook trên máy bạn kia rồi nộp kết quả, vì code đã chạy đúng ở máy đó."
+            },
+            {
+              "kind": "choice",
+              "label": "C",
+              "text": "Hạ pandas trong .venv xuống bản đang có ở máy bạn kia, giữ nguyên requirements.txt."
+            },
+            {
+              "kind": "choice",
+              "label": "D",
+              "text": "Xóa .venv của Hùng rồi tạo lại theo requirements.txt, vì .venv có thể đã hỏng."
+            }
+          ],
+          "id": "D6-020",
+          "kind": "quiz",
+          "correctKey": "A",
+          "correctKeys": [
+            "A"
+          ],
+          "grading": "automatic",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nA. Giữ môi trường đã thống nhất và sửa sang API được hỗ trợ.\n\n### Giải thích\n\n`DataFrame.append` đã bị loại khỏi pandas từ phiên bản 2.0. Vì vậy lỗi trên phù hợp với phiên bản 3.0.3 đã cài, không phải bằng chứng môi trường bị hỏng. Cách gộp theo hàng là:\n\n```python\nbang = pd.concat([bang, bang_t10])\n```\n\nLệnh này giữ các nhãn chỉ mục cũ, tương ứng mặc định của `append`. Chỉ thêm `ignore_index=True` nếu muốn đánh lại chỉ mục liên tiếp.\n\nViệc chạy được trên máy khác chưa bảo đảm cả nhóm tái lập được kết quả. Đổi phiên bản cài đặt mà giữ nguyên `requirements.txt` tạo ra sự lệch giữa môi trường thực tế và cấu hình dự án. Nếu nhóm chủ động đổi phiên bản, cần cập nhật cấu hình và kiểm tra lại cùng nhau.\n\n### Đối chiếu các phương án\n\n| Phương án | Phân tích |\n| --- | --- |\n| A | Giải quyết đúng sự khác biệt API và giữ môi trường dự án có thể tái lập. |\n| B | Không sửa được code cho môi trường chung của nhóm. |\n| C | Làm môi trường thực tế khác tệp cấu hình đã thống nhất. |\n| D | Cài lại cùng pandas vẫn không khôi phục phương thức đã bị loại bỏ. |\n\n### Tài liệu tham khảo\n\n[pandas 2.0: Các API đã loại bỏ](https://pandas.pydata.org/docs/whatsnew/v2.0.0.html#removal-of-prior-version-deprecations-changes).",
+          "answerSummaryMarkdown": "A. Giữ môi trường đã thống nhất và sửa sang API được hỗ trợ.",
+          "optionExplanations": {
+            "A": "Giải quyết đúng sự khác biệt API và giữ môi trường dự án có thể tái lập.",
+            "B": "Không sửa được code cho môi trường chung của nhóm.",
+            "C": "Làm môi trường thực tế khác tệp cấu hình đã thống nhất.",
+            "D": "Cài lại cùng pandas vẫn không khôi phục phương thức đã bị loại bỏ."
+          }
+        },
+        {
+          "n": 21,
+          "points": 10,
+          "raw": "Câu 21. (10 điểm)\n\nBảng bc ghi báo cáo tháng của hai chi nhánh bán trái cây \"Q1\" và \"Q7\", từ 01/2026 đến 06/2026. Q7 khai trương tháng 03/2026. Mỗi chi nhánh có một hàng cho mỗi tháng hoạt động. Các hàng xếp theo tháng, trong cùng tháng xếp theo chi nhánh. Các cột gồm:\n• thang: Chuỗi như \"2026-01\".\n• chi_nhanh: Chi nhánh.\n• doanh_thu: Doanh thu (triệu đồng), số dương, không thiếu.\n• kl: Cột kiểu chuỗi ghi khối lượng trái cây hỏng, như \"12 kg\", \"800 g\". Phần số là số nguyên không âm, cách đơn vị đúng một dấu cách, có ô thiếu.\n\na) (5 điểm) Viết code thêm cột số kg, ghi khối lượng hỏng theo kg (\"800 g\" là 0,8).\nb) (5 điểm) Viết code tạo cột tang: Tỷ lệ thay đổi doanh thu so với tháng liền trước của cùng chi nhánh (tăng 10% là 0,1, giảm 5% là -0,05). Tháng đầu tiên của mỗi chi nhánh là NaN.",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Bảng bc ghi báo cáo tháng của hai chi nhánh bán trái cây \"Q1\" và \"Q7\", từ 01/2026 đến 06/2026. Q7 khai trương tháng 03/2026. Mỗi chi nhánh có một hàng cho mỗi tháng hoạt động. Các hàng xếp theo tháng, trong cùng tháng xếp theo chi nhánh. Các cột gồm:\n• thang: Chuỗi như \"2026-01\".\n• chi_nhanh: Chi nhánh.\n• doanh_thu: Doanh thu (triệu đồng), số dương, không thiếu.\n• kl: Cột kiểu chuỗi ghi khối lượng trái cây hỏng, như \"12 kg\", \"800 g\". Phần số là số nguyên không âm, cách đơn vị đúng một dấu cách, có ô thiếu."
+            },
+            {
+              "kind": "prose",
+              "text": "a) (5 điểm) Viết code thêm cột số kg, ghi khối lượng hỏng theo kg (\"800 g\" là 0,8).\nb) (5 điểm) Viết code tạo cột tang: Tỷ lệ thay đổi doanh thu so với tháng liền trước của cùng chi nhánh (tăng 10% là 0,1, giảm 5% là -0,05). Tháng đầu tiên của mỗi chi nhánh là NaN."
+            }
+          ],
+          "id": "D6-021",
+          "kind": "essay",
+          "correctKey": null,
+          "correctKeys": [],
+          "grading": "manual",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nTách số và đơn vị để đổi về kg, sau đó tính `pct_change` trong từng chi nhánh.\n\n### Giải thích\n\n### a) Chuẩn hóa khối lượng\n\n```python\ntach = bc[\"kl\"].str.extract(r\"^([0-9]+) (kg|g)$\")\nso = pd.to_numeric(tach[0])\nhe_so = tach[1].map({\"kg\": 1.0, \"g\": 0.001})\nbc[\"kg\"] = so * he_so\n```\n\nNhóm bắt thứ nhất chứa phần số, nhóm thứ hai chứa đơn vị. Nhân với hệ số 1 đối với kg và 0,001 đối với g. Chẳng hạn `12 kg` trở thành 12,0 và `800 g` trở thành 0,8. Ô thiếu không khớp mẫu nên giữ giá trị thiếu, không tự biến thành 0.\n\n### b) So sánh doanh thu trong cùng chi nhánh\n\n```python\nbc[\"tang\"] = bc.groupby(\"chi_nhanh\")[\"doanh_thu\"].pct_change(\n    fill_method=None\n)\n```\n\nĐề đã bảo đảm thứ tự theo tháng và một hàng cho mỗi tháng hoạt động, nên không cần sắp xếp lại. Nhóm theo `chi_nhanh` ngăn việc so doanh thu Q7 với Q1 trong các hàng xen kẽ.\n\nTỷ lệ thay đổi bằng doanh thu tháng hiện tại chia doanh thu tháng trước, rồi trừ 1. Nếu doanh thu lần lượt là 100, 110 và 104,5 thì tỷ lệ là `NaN`, 0,1 và -0,05. Doanh thu luôn dương nên không có phép chia cho 0. Tháng đầu của Q1 là tháng 1, còn tháng đầu của Q7 là tháng 3, vì vậy cả hai hàng đầu nhóm đều nhận `NaN`.",
+          "answerSummaryMarkdown": "Tách số và đơn vị để đổi về kg, sau đó tính `pct_change` trong từng chi nhánh."
+        },
+        {
+          "n": 22,
+          "points": 10,
+          "raw": "Câu 22. (10 điểm)\n\nt9 ghi lượt khách tháng 9 (nghìn lượt) của năm bảo tàng theo mã 0, 1, 2, 3, 4. Báo cáo tháng 10 đổi thứ tự: ma10[k] là mã bảo tàng tại vị trí k, t10[k] là lượt khách tháng 10 tương ứng.\n\nt9 = np.array([45, 34, 30, 38, 40])\nma10 = np.array([4, 0, 1, 2, 3])\nt10 = np.array([44, 55, 29, 58, 49])\ntang = t10 - t9\nprint(np.arange(5)[tang > 10])\n\nLấy mã bảo tàng có lượt khách tháng 10 tăng thêm trên 10 nghìn lượt so với tháng 9. Kết quả đúng gồm hai mã 2 và 3, nhưng đoạn code sau in [1 3]. Viết lại code tính từ ba mảng đã cho, không dùng vòng lặp và không ghi sẵn mã kết quả.",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "t9 ghi lượt khách tháng 9 (nghìn lượt) của năm bảo tàng theo mã 0, 1, 2, 3, 4. Báo cáo tháng 10 đổi thứ tự: ma10[k] là mã bảo tàng tại vị trí k, t10[k] là lượt khách tháng 10 tương ứng."
+            },
+            {
+              "kind": "code",
+              "text": "t9 = np.array([45, 34, 30, 38, 40])\nma10 = np.array([4, 0, 1, 2, 3])\nt10 = np.array([44, 55, 29, 58, 49])\ntang = t10 - t9\nprint(np.arange(5)[tang > 10])"
+            },
+            {
+              "kind": "prose",
+              "text": "Lấy mã bảo tàng có lượt khách tháng 10 tăng thêm trên 10 nghìn lượt so với tháng 9. Kết quả đúng gồm hai mã 2 và 3, nhưng đoạn code sau in [1 3]. Viết lại code tính từ ba mảng đã cho, không dùng vòng lặp và không ghi sẵn mã kết quả."
+            }
+          ],
+          "id": "D6-022",
+          "kind": "essay",
+          "correctKey": null,
+          "correctKeys": [],
+          "grading": "manual",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nGhép dữ liệu theo mã bảo tàng trước khi trừ. Kết quả là `[2 3]`.\n\n### Giải thích\n\n`t9` được xếp theo mã, còn `t10` được xếp theo vị trí báo cáo. Phép trừ trực tiếp ghép sai bảo tàng.\n\n```python\ntang = t10 - t9[ma10]\nket_qua = ma10[tang > 10]\nprint(np.sort(ket_qua))\n```\n\n```text\n[2 3]\n```\n\n`t9[ma10]` tra số tháng 9 theo đúng mã xuất hiện ở từng vị trí tháng 10:\n\n| Vị trí báo cáo | Mã bảo tàng | Tháng 9 đã ghép | Tháng 10 | Mức tăng |\n| --- | --- | --- | --- | --- |\n| 0 | 4 | 40 | 44 | 4 |\n| 1 | 0 | 45 | 55 | 10 |\n| 2 | 1 | 34 | 29 | -5 |\n| 3 | 2 | 30 | 58 | 28 |\n| 4 | 3 | 38 | 49 | 11 |\n\nĐiều kiện là tăng **trên** 10 nên mã 0 có mức tăng đúng 10 bị loại. Mặt nạ phải áp vào `ma10` để lấy mã bảo tàng, không áp vào các vị trí `np.arange(5)`. `np.sort` chỉ sắp thứ tự kết quả để dễ đối chiếu.",
+          "answerSummaryMarkdown": "Ghép dữ liệu theo mã bảo tàng trước khi trừ. Kết quả là `[2 3]`."
+        },
+        {
+          "n": 23,
+          "points": 10,
+          "raw": "Câu 23. (10 điểm)\n\na) (5 điểm) Đoạn code gộp hai danh sách kho từ tệp cũ (mã như 101, 103) và tệp đối tác (mã như \"HN02\"), rồi lưu Parquet:\n\ncu = pd.read_csv(\"kho_cu.csv\")\nmoi = pd.read_csv(\"kho_moi.csv\")\nkho = pd.concat([cu, moi])\nkho.to_parquet(\"kho.parquet\", index=False)\n\nVì sao lệnh cuối báo lỗi ArrowInvalid: (\"Could not convert 'HN02' with type str: tried to convert to int64\", 'Conversion failed for column ma with type object')? Sửa để lưu được Parquet và giữ nguyên mọi mã kho.\nb) (5 điểm) Cho hai bảng:\n• cua_hang gồm các cột ma, ten, thanh_pho.\n• don_hang gồm ma_don, ma_shop (mã cửa hàng bán đơn), tien (nghìn đồng).\nCâu SQL sau tính tổng tiền theo thành phố:\n\nSELECT thanh_pho, SUM(tien) AS tong\nFROM don_hang LEFT JOIN cua_hang ON ma_shop = ma\nGROUP BY thanh_pho\n\nTổng cột tong là 2100, còn tổng tien trong don_hang là 1800. Dữ liệu nào gây ra chênh lệch? Viết SQL kiểm tra nguyên nhân.",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "a) (5 điểm) Đoạn code gộp hai danh sách kho từ tệp cũ (mã như 101, 103) và tệp đối tác (mã như \"HN02\"), rồi lưu Parquet:"
+            },
+            {
+              "kind": "code",
+              "text": "cu = pd.read_csv(\"kho_cu.csv\")\nmoi = pd.read_csv(\"kho_moi.csv\")\nkho = pd.concat([cu, moi])\nkho.to_parquet(\"kho.parquet\", index=False)"
+            },
+            {
+              "kind": "prose",
+              "text": "Vì sao lệnh cuối báo lỗi ArrowInvalid: (\"Could not convert 'HN02' with type str: tried to convert to int64\", 'Conversion failed for column ma with type object')? Sửa để lưu được Parquet và giữ nguyên mọi mã kho.\nb) (5 điểm) Cho hai bảng:\n• cua_hang gồm các cột ma, ten, thanh_pho.\n• don_hang gồm ma_don, ma_shop (mã cửa hàng bán đơn), tien (nghìn đồng).\nCâu SQL sau tính tổng tiền theo thành phố:"
+            },
+            {
+              "kind": "code",
+              "language": "sql",
+              "text": "SELECT thanh_pho, SUM(tien) AS tong\nFROM don_hang LEFT JOIN cua_hang ON ma_shop = ma\nGROUP BY thanh_pho"
+            },
+            {
+              "kind": "prose",
+              "text": "Tổng cột tong là 2100, còn tổng tien trong don_hang là 1800. Dữ liệu nào gây ra chênh lệch? Viết SQL kiểm tra nguyên nhân."
+            }
+          ],
+          "id": "D6-023",
+          "kind": "essay",
+          "correctKey": null,
+          "correctKeys": [],
+          "grading": "manual",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nĐọc mã kho dưới dạng chuỗi ngay từ đầu. Với phép nối SQL, kiểm tra mã cửa hàng trùng làm nhân bản các dòng đơn hàng.\n\n### Giải thích\n\n### a) Thống nhất kiểu cột mã trước khi gộp\n\n```python\ncu = pd.read_csv(\"kho_cu.csv\", dtype={\"ma\": \"string\"})\nmoi = pd.read_csv(\"kho_moi.csv\", dtype={\"ma\": \"string\"})\nkho = pd.concat([cu, moi], ignore_index=True)\nkho.to_parquet(\"kho.parquet\", index=False)\n```\n\nNếu một bảng có mã nguyên còn bảng kia có mã chuỗi, cột `object` sau gộp có thể chứa cả số Python lẫn chuỗi. Arrow cần một kiểu nhất quán cho cột và không thể chuyển `HN02` thành số nguyên.\n\nMã kho là định danh nên chọn kiểu chuỗi. Cần chỉ định kiểu ngay khi đọc CSV để giữ cả số 0 đầu mã, chẳng hạn `00101`. Nếu đã đọc thành số nguyên, chuyển lại bằng `astype(\"string\")` không khôi phục được số 0 đã mất. Cách chuyển sau khi gộp chỉ đủ khi chắc chắn bước đọc chưa làm mất biểu diễn mã.\n\n### b) Kiểm tra số hàng khớp của khóa nối\n\nMột đơn hàng khớp hai dòng trong `cua_hang` sẽ xuất hiện hai lần sau `LEFT JOIN`, khiến tiền của đơn được cộng lặp. Cần kiểm tra mã cửa hàng trùng, đặc biệt các mã thực sự được tham chiếu từ `don_hang`:\n\n```sql\nSELECT ma, COUNT(*) AS so_dong\nFROM cua_hang\nGROUP BY ma\nHAVING COUNT(*) > 1;\n```\n\nĐể xác định các đơn và số tiền bị cộng thêm, tổng hợp số bản ghi cửa hàng theo mã rồi nối vào từng đơn:\n\n```sql\nWITH dem AS (\n    SELECT ma, COUNT(*) AS so_khop\n    FROM cua_hang\n    GROUP BY ma\n)\nSELECT d.ma_don, d.ma_shop, d.tien, dem.so_khop,\n       d.tien * (dem.so_khop - 1) AS tien_cong_them\nFROM don_hang AS d\nJOIN dem ON d.ma_shop = dem.ma\nWHERE dem.so_khop > 1;\n```\n\nTổng `tien_cong_them` cần bằng `2100 - 1800 = 300` nghìn đồng. Ví dụ minh họa, một đơn 300 nghìn đồng khớp hai bản ghi cùng mã cửa hàng làm tổng tăng đúng 300 nghìn đồng. Đây là một bộ dữ liệu có thể gây chênh lệch, không đủ thông tin để khẳng định đó chính là đơn thực tế.\n\nĐơn không tìm được cửa hàng vẫn được `LEFT JOIN` giữ lại một lần với thành phố thiếu, nên tự nó không làm tổng tăng. Cần sửa tính duy nhất của khóa cửa hàng theo nghiệp vụ. Dùng `SUM(DISTINCT tien)` sẽ làm mất cả các đơn khác nhau có cùng số tiền.",
+          "answerSummaryMarkdown": "Đọc mã kho dưới dạng chuỗi ngay từ đầu. Với phép nối SQL, kiểm tra mã cửa hàng trùng làm nhân bản các dòng đơn hàng."
+        },
+        {
+          "n": 24,
+          "points": 10,
+          "raw": "Câu 24. (10 điểm)\n\nPhí trả sách trễ là 2.000 đồng/ngày. Số ngày trễ so_ngay âm nếu trả trước hạn, bằng 0 nếu trả đúng hạn và là None nếu chưa trả sách. Hàm trả 6000 khi gọi phi_tre(3):\n\ndef phi_tre(so_ngay):\n    return so_ngay * 2000\n\na) (5 điểm) Nêu giá trị trả về hoặc tên lỗi của từng lời gọi phi_tre(-2) và phi_tre(None).\nb) (5 điểm) Viết lại hàm: Chưa trả sách thì trả về None, trả đúng hoặc trước hạn thì phí là 0, còn lại tính như cũ. Nếu dùng try/except, chỉ bắt đúng loại lỗi cần xử lý.",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Phí trả sách trễ là 2.000 đồng/ngày. Số ngày trễ so_ngay âm nếu trả trước hạn, bằng 0 nếu trả đúng hạn và là None nếu chưa trả sách. Hàm trả 6000 khi gọi phi_tre(3):"
+            },
+            {
+              "kind": "code",
+              "text": "def phi_tre(so_ngay):\n    return so_ngay * 2000"
+            },
+            {
+              "kind": "prose",
+              "text": "a) (5 điểm) Nêu giá trị trả về hoặc tên lỗi của từng lời gọi phi_tre(-2) và phi_tre(None).\nb) (5 điểm) Viết lại hàm: Chưa trả sách thì trả về None, trả đúng hoặc trước hạn thì phí là 0, còn lại tính như cũ. Nếu dùng try/except, chỉ bắt đúng loại lỗi cần xử lý."
+            }
+          ],
+          "id": "D6-024",
+          "kind": "essay",
+          "correctKey": null,
+          "correctKeys": [],
+          "grading": "manual",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\n`phi_tre(-2)` trả về `-4000`. `phi_tre(None)` phát sinh `TypeError`. Kiểm tra `None` trước rồi mới tính phí.\n\n### Giải thích\n\n### a) Đánh giá hàm ban đầu\n\nSố nguyên âm vẫn nhân được với 2000 nên lời gọi thứ nhất trả về -4000. Đây là kết quả hợp lệ về phép toán nhưng sai quy tắc thu phí. `None` biểu diễn tình trạng chưa trả sách và không hỗ trợ phép nhân với số nguyên, nên lời gọi thứ hai gây `TypeError`.\n\n### b) Cài đặt đúng quy tắc\n\n```python\ndef phi_tre(so_ngay):\n    if so_ngay is None:\n        return None\n    if so_ngay <= 0:\n        return 0\n    return so_ngay * 2000\n\nprint([phi_tre(x) for x in [None, -2, 0, 3]])\n```\n\n```text\n[None, 0, 0, 6000]\n```\n\nPhải kiểm tra `None` trước phép so sánh vì `None <= 0` cũng gây `TypeError`. Với miền đầu vào đề đã nêu, các nhánh điều kiện là đủ, không cần bắt ngoại lệ. Không nên dùng `except Exception` để biến mọi lỗi nhập dữ liệu hoặc lập trình thành kết quả chưa trả sách.",
+          "answerSummaryMarkdown": "`phi_tre(-2)` trả về `-4000`. `phi_tre(None)` phát sinh `TypeError`. Kiểm tra `None` trước rồi mới tính phí."
+        },
+        {
+          "n": 25,
+          "points": 10,
+          "raw": "Câu 25. (10 điểm)\n\nBảng ch ghi số đêm mở bán (dem_mo_ban) và số đêm có khách (dem_co_khach) trong tháng 10 của sáu căn hộ dịch vụ ở Đà Nẵng. Ô dem_mo_ban trống nghĩa là chưa báo số đêm mở bán, ô dem_co_khach trống nghĩa là cả tháng không có khách.\n\nch = pd.DataFrame(\n    [[24, 22], [26, np.nan], [np.nan, 13],\n     [31, 12], [18, 18], [20, 17]],\n    columns=[\"dem_mo_ban\", \"dem_co_khach\"],\n    index=[\"C1\", \"C2\", \"C3\", \"C4\", \"C5\", \"C6\"])\n\nViết code pandas tính tỷ lệ lấp đầy chung, bằng tổng số đêm có khách chia tổng số đêm mở bán, chỉ xét các căn hộ đã báo số đêm mở bán.",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Bảng ch ghi số đêm mở bán (dem_mo_ban) và số đêm có khách (dem_co_khach) trong tháng 10 của sáu căn hộ dịch vụ ở Đà Nẵng. Ô dem_mo_ban trống nghĩa là chưa báo số đêm mở bán, ô dem_co_khach trống nghĩa là cả tháng không có khách."
+            },
+            {
+              "kind": "code",
+              "text": "ch = pd.DataFrame(\n    [[24, 22], [26, np.nan], [np.nan, 13],\n     [31, 12], [18, 18], [20, 17]],\n    columns=[\"dem_mo_ban\", \"dem_co_khach\"],\n    index=[\"C1\", \"C2\", \"C3\", \"C4\", \"C5\", \"C6\"])"
+            },
+            {
+              "kind": "prose",
+              "text": "Viết code pandas tính tỷ lệ lấp đầy chung, bằng tổng số đêm có khách chia tổng số đêm mở bán, chỉ xét các căn hộ đã báo số đêm mở bán."
+            }
+          ],
+          "id": "D6-025",
+          "kind": "essay",
+          "correctKey": null,
+          "correctKeys": [],
+          "grading": "manual",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nTỷ lệ lấp đầy chung bằng `69 / 119`, xấp xỉ `57,98%`.\n\n### Giải thích\n\nCần chọn cùng một tập căn hộ cho cả tử số và mẫu số. C3 chưa báo số đêm mở bán nên bị loại khỏi cả hai tổng. C2 đã báo 26 đêm mở bán và không có khách nên vẫn phải được giữ lại với tử số bằng 0.\n\n```python\nhop_le = ch.loc[ch[\"dem_mo_ban\"].notna()]\nso_dem_co_khach = hop_le[\"dem_co_khach\"].fillna(0).sum()\nso_dem_mo_ban = hop_le[\"dem_mo_ban\"].sum()\nty_le = so_dem_co_khach / so_dem_mo_ban\nprint(so_dem_co_khach, so_dem_mo_ban)\nprint(f\"{ty_le:.2%}\")\n```\n\n```text\n69.0 119.0\n57.98%\n```\n\nTử số là `22 + 0 + 12 + 18 + 17 = 69`. Mẫu số là `24 + 26 + 31 + 18 + 20 = 119`. Không dùng `dropna()` trên cả hai cột vì sẽ loại nhầm C2. Cũng không cộng 13 đêm có khách của C3 vào tử số khi đã loại căn hộ đó khỏi mẫu số.\n\nTrung bình các tỷ lệ riêng từng căn hộ là phép tính khác vì mỗi căn có số đêm mở bán khác nhau. Đề yêu cầu tỷ lệ của hai tổng. Nếu áp dụng cho bảng khác có tổng số đêm mở bán bằng 0, cần quy định kết quả chưa xác định trước khi chia.",
+          "answerSummaryMarkdown": "Tỷ lệ lấp đầy chung bằng `69 / 119`, xấp xỉ `57,98%`."
+        },
+        {
+          "n": 26,
+          "points": 10,
+          "raw": "Câu 26. (10 điểm)\n\nBảng nv ghi mỗi nhân viên một hàng, gồm các cột nhom (tổ), nghi (số ngày nghỉ trong quý), tn (số năm thâm niên) và diem (điểm đánh giá năm, để trống nếu chưa đánh giá). Hàm phu_cap tính phụ cấp chuyên cần.\n\nnv = pd.DataFrame([[\"T1\", 0, 3, np.nan], [\"T1\", 2, 1, 7.0],\n                   [\"T2\", 1, 5, 8.0], [\"T2\", 0, 1, 8.5],\n                   [\"T2\", 0, 2, np.nan], [\"T3\", 3, 8, 7.5]],\n                  columns=[\"nhom\", \"nghi\", \"tn\", \"diem\"])\n\ndef phu_cap(nghi, tn):\n    if nghi == 0:\n        return 500 + 100 * tn\n    return 300 if nghi <= 2 else 0\n\na) (5 điểm) Dùng hàm phu_cap thêm cột pc vào nv, ghi phụ cấp của từng nhân viên.\nb) (5 điểm) Viết code tính điểm trung bình của từng tổ có hơn một nửa số nhân viên đã được đánh giá.",
+          "items": [
+            {
+              "kind": "prose",
+              "text": "Bảng nv ghi mỗi nhân viên một hàng, gồm các cột nhom (tổ), nghi (số ngày nghỉ trong quý), tn (số năm thâm niên) và diem (điểm đánh giá năm, để trống nếu chưa đánh giá). Hàm phu_cap tính phụ cấp chuyên cần."
+            },
+            {
+              "kind": "code",
+              "text": "nv = pd.DataFrame([[\"T1\", 0, 3, np.nan], [\"T1\", 2, 1, 7.0],\n                   [\"T2\", 1, 5, 8.0], [\"T2\", 0, 1, 8.5],\n                   [\"T2\", 0, 2, np.nan], [\"T3\", 3, 8, 7.5]],\n                  columns=[\"nhom\", \"nghi\", \"tn\", \"diem\"])"
+            },
+            {
+              "kind": "code",
+              "text": "def phu_cap(nghi, tn):\n    if nghi == 0:\n        return 500 + 100 * tn\n    return 300 if nghi <= 2 else 0"
+            },
+            {
+              "kind": "prose",
+              "text": "a) (5 điểm) Dùng hàm phu_cap thêm cột pc vào nv, ghi phụ cấp của từng nhân viên.\nb) (5 điểm) Viết code tính điểm trung bình của từng tổ có hơn một nửa số nhân viên đã được đánh giá."
+            }
+          ],
+          "id": "D6-026",
+          "kind": "essay",
+          "correctKey": null,
+          "correctKeys": [],
+          "grading": "manual",
+          "reviewNote": "",
+          "solutionMarkdown": "### Đáp án\n\nCột `pc` là `[800, 300, 300, 600, 700, 0]`. Các tổ đủ điều kiện là T2 với điểm 8,25 và T3 với điểm 7,5.\n\n### Giải thích\n\n### a) Gọi hàm với hai giá trị trên từng hàng\n\n```python\nnv[\"pc\"] = nv.apply(\n    lambda hang: phu_cap(hang[\"nghi\"], hang[\"tn\"]), axis=1\n)\nprint(nv[\"pc\"].tolist())\n```\n\n```text\n[800, 300, 300, 600, 700, 0]\n```\n\n`axis=1` truyền từng hàng cho hàm lambda. Khi không nghỉ, phụ cấp bằng 500 cộng 100 lần thâm niên. Khi có nghỉ từ một đến hai ngày, phụ cấp là 300. Nghỉ ba ngày cho kết quả 0. Hàm chỉ nhận `nghi` và `tn`, không dùng điểm đánh giá.\n\n### b) Đếm số nhân viên và số điểm không thiếu\n\n```python\nthong_ke = nv.groupby(\"nhom\")[\"diem\"].agg(\n    so_nv=\"size\", da_danh_gia=\"count\", diem_tb=\"mean\"\n)\nket_qua = thong_ke.loc[\n    thong_ke[\"da_danh_gia\"] > thong_ke[\"so_nv\"] / 2,\n    \"diem_tb\"\n]\nprint(ket_qua.to_dict())\n```\n\n```text\n{'T2': 8.25, 'T3': 7.5}\n```\n\n| Tổ | Tổng nhân viên | Đã đánh giá | Điều kiện hơn một nửa | Điểm trung bình được giữ |\n| --- | --- | --- | --- | --- |\n| T1 | 2 | 1 | Không, chỉ bằng một nửa | Không giữ |\n| T2 | 3 | 2 | Có | 8,25 |\n| T3 | 1 | 1 | Có | 7,5 |\n\n`size` đếm mọi hàng, còn `count` đếm điểm không thiếu. Phải giữ cả nhân viên chưa có điểm khi xác định tổng số người. `mean` tự bỏ điểm thiếu khi tính trung bình. Điều kiện là `>` chứ không phải `>=`, nên T1 bị loại.",
+          "answerSummaryMarkdown": "Cột `pc` là `[800, 300, 300, 600, 700, 0]`. Các tổ đủ điều kiện là T2 với điểm 8,25 và T3 với điểm 7,5."
+        }
+      ]
     }
   ],
   "sourceVersions": {
