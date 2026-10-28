@@ -61,11 +61,16 @@ Xem [ARCHITECTURE.md](ARCHITECTURE.md) để tìm nơi sửa từng chức năng
 # 1. Cài đặt các gói phụ thuộc
 npm ci
 
-# 2. Khởi chạy máy chủ phát triển cục bộ
+# 2. Đồng bộ nội dung từ các repo học phần riêng tư
+npm run courses:sync
+
+# 3. Khởi chạy máy chủ phát triển cục bộ
 npm run dev
 ```
 
 Sau khi chạy lệnh, truy cập `http://localhost:5173` trên trình duyệt. Khi chỉnh sửa nội dung trong `docs/`, trang web sẽ tự động cập nhật (Hot Module Replacement).
+
+Git trên máy cần quyền đọc các repo học phần. Repo chính công khai quản lý giao diện và xuất bản, còn nội dung học phần được khóa theo commit trong `config/course-repositories.json`. Xem [quy trình biên soạn và đồng bộ học phần](docs/engineering/course-repositories.md).
 
 ### Đóng gói & Xem trước bản tĩnh
 

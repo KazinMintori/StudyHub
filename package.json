@@ -4,6 +4,11 @@
   "description": "Kho tài liệu và bài giảng ôn tập môn học UET",
   "type": "module",
   "scripts": {
+    "courses:sync": "node scripts/content/course-repositories.mjs",
+    "courses:check": "node scripts/content/course-repositories.mjs --check",
+    "courses:export": "node scripts/content/course-repositories.mjs export",
+    "courses:pin": "node scripts/content/course-repositories.mjs pin",
+    "verify:navigation": "node scripts/verification/verify-navigation-stability.mjs",
     "audit:tokens": "node scripts/check-design-tokens.mjs",
     "audit:ui": "node scripts/audit-ui.mjs",
     "verify:redesign": "node scripts/verify-redesign.mjs",

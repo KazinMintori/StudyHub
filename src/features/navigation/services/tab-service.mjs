@@ -82,6 +82,7 @@ export function classifyLectureHash(rawHash, options = {}) {
   // Panel headings keep their tab when linked directly, including after reload.
   const panelPart = ['cheatsheet', 'kien-thuc-can-co', 'bai-tap'].find(part => decodedId.startsWith(`${part}--`))
   if (panelPart && isValidLecturePartId(panelPart, allowedParts)) return panelPart
+  if (/^(?:foundation-group-|nen-tang-)/.test(decodedId) && isValidLecturePartId('kien-thuc-can-co', allowedParts)) return 'kien-thuc-can-co'
 
   if (typeof isExerciseAnchor === 'function') {
     try {
@@ -115,7 +116,7 @@ export function isSamePageLectureLink(targetHref, currentHref, allowedHashes = L
     const current = new URL(currentHref)
 
     const isSameOrigin = url.origin === current.origin
-    const isSamePath = url.pathname === current.pathname
+    const isSamePath = url.pathname === current.pathname && url.search === current.search
     const isAllowedHash = allowedHashes.includes(url.hash)
 
     if (isSameOrigin && isSamePath && isAllowedHash) {

@@ -7,6 +7,15 @@ import {
   isSamePageLectureLink,
   shouldIgnoreNavigationClick
 } from './tab-service.mjs'
+
+test('foundation anchors retain their tab before lazy content is mounted', () => {
+  for (const hash of ['#foundation-group-required', '#foundation-group-supporting', '#nen-tang-vector']) assert.equal(classifyLectureHash(hash), 'kien-thuc-can-co')
+  assert.equal(classifyLectureHash('#foundation-group-required', { allowedParts: ['notes'] }), 'notes')
+})
+
+test('lecture links with a different query are page navigation', () => {
+  assert.equal(isSamePageLectureLink('https://study.test/lesson.html?version=2#notes', 'https://study.test/lesson.html?version=1#notes').isMatch, false)
+})
 import {
   DEFAULT_LECTURE_PART,
   EXERCISE_LECTURE_PART,

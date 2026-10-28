@@ -82,14 +82,20 @@ Một số module trong `docs/.vitepress/` là điểm truy cập tương thích
 
 ## Tải dữ liệu theo nhu cầu
 
-Mỗi lần chuyển trang là một lần tải lại tài liệu (xem `src/app/theme.mjs`), nên chunk `theme` được tải ở mọi trang. Chunk này chỉ chứa mã giao diện và danh mục môn học rút gọn, khoảng 280 kB thay vì hơn 25 MB trước đây.
+Website dùng điều hướng SPA của VitePress. Layout và các công cụ dùng chung tồn tại xuyên suốt phiên đọc. Trạng thái tab được cập nhật cùng dữ liệu trang đích, tránh hiển thị dữ liệu của học phần trước. Các tab và mục lục do StudyHub quản lý dùng `vp-raw` để chỉ có một nơi xử lý cuộn. Chunk `theme` chỉ chứa mã giao diện và danh mục môn học rút gọn.
 
 - `scripts/build/lite-catalog-plugin.mjs`: Trong bản build phía trình duyệt, `src/content/catalog.mjs` được thay bằng bản JSON giữ các trường điều hướng và bỏ `slides`. SSR, script Node và máy chủ dev vẫn dùng module gốc.
 - `src/features/lecture/services/lecture-payload.mjs`: Slides, Cheatsheet, Lab và Kiến thức nền chỉ tải khi người đọc mở tab tương ứng. Mỗi môn là một chunk riêng. Tab bắt đầu tải khi con trỏ chạm vào thanh tab.
 - `src/features/lecture/services/cheatsheet-loaders.mjs`: Bản lazy của bảng cheatsheet trong `cheatsheet-service.mjs`. Khi thêm cheatsheet mới, thêm vào cả hai nơi; `scripts/tests/bundle-splitting.test.mjs` kiểm tra hai bảng khớp nhau.
 - `src/features/wiki/services/concept-loader.mjs`: Từ điển khái niệm tải khi người đọc rê chuột, chạm vào thuật ngữ, hoặc khi trình duyệt rảnh trên thiết bị có chuột. Component Wiki được đăng ký bất đồng bộ.
 - `scripts/math-text-plugin.mjs`: Công thức dựng sẵn được gắn vào từng `export const`, nên export nào không được dùng sẽ bị loại cùng SVG của nó. Các export `*WikiDetails` chỉ dùng khi sinh trang Wiki, nên bản trình duyệt không mang SVG của chúng.
-- `docs/.vitepress/config.mjs`: Tắt prefetch chunk JavaScript của VitePress (site không dùng chuyển trang SPA), thêm Speculation Rules để trình duyệt tải trước trang khi con trỏ dừng trên liên kết, và bỏ preload Mermaid ở trang không có sơ đồ.
+- `docs/.vitepress/config.mjs`: Tắt prefetch hàng loạt các bài chưa được mở và bỏ preload Mermaid ở trang không có sơ đồ. Trang đích được tải khi điều hướng, trong khi layout dùng chung tiếp tục hoạt động.
+
+## Repo học phần riêng tư
+
+`config/course-repositories.json` khóa commit của các repo học phần. `npm run courses:sync` ghép nguồn vào các đường dẫn cũ trước khi chạy kiểm tra hoặc build. Bản ghép và cache `.course-repositories/` được Git bỏ qua. Script kiểm SHA-256, quyền sở hữu đường dẫn, dữ liệu trùng và chỉnh sửa chưa lưu trước khi cập nhật workspace.
+
+Repo chính giữ giao diện, công cụ kiểm tra, Wiki dùng chung và workflow xuất bản. Các repo học phần giữ nội dung, module bài học và tài nguyên riêng. GitHub Actions đọc từng repo bằng khóa chỉ đọc rồi xuất bản một website duy nhất. Xem [quy trình biên soạn và cập nhật pin](docs/engineering/course-repositories.md).
 
 Không import tĩnh `concepts.mjs`, `wiki-content.mjs`, `cheatsheet-service.mjs` hay module dữ liệu Vật lý từ layout, header hoặc controller dùng chung.
 

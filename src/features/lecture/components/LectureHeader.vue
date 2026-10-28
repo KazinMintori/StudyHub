@@ -82,11 +82,11 @@ onUnmounted(() => {
 
   <div v-if="course && lesson" class="lecture-tabs-wrapper">
     <nav
-      class="course-tabs lecture-tabs"
+      class="course-tabs lecture-tabs vp-raw"
       aria-label="Các phần của bài giảng"
-      @pointerenter.once="warmPanels"
-      @focusin.once="warmPanels"
-      @touchstart.once.passive="warmPanels"
+      @pointerenter="warmPanels"
+      @focusin="warmPanels"
+      @touchstart.passive="warmPanels"
     >
       <a
         v-for="(item, index) in orderedParts"

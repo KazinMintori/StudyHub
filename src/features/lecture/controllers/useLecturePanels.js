@@ -1,6 +1,7 @@
 import { panelHasContent } from '../services/panel-rules.mjs'
-import { computed, ref, shallowRef, watch } from 'vue'
+import { computed, ref, shallowRef, watch, onBeforeUnmount } from 'vue'
 import { useLecture } from '../../navigation/index.mjs'
+import { selectLecturePart } from '../../navigation/controllers/use-lecture-navigation.mjs'
 import { loadLecturePayload } from '../services/lecture-payload.mjs'
 import { studyLink } from '../../../core/routing/links.js'
 
@@ -26,14 +27,19 @@ export function useLecturePanels() {
       payloadState.value = 'error'
     }
   }
-  const cheatsheet = computed(() => payload.value?.cheatsheet ?? null)
-  const lab = computed(() => payload.value?.lab ?? null)
-  const concepts = computed(() => payload.value?.concepts ?? {})
-  const foundationGroups = computed(() => payload.value?.foundationGroups ?? [])
+  const currentPayload = computed(() => payload.value?.key === `${course.value?.id}/${lesson.value?.slug}` ? payload.value : null)
+  const cheatsheet = computed(() => currentPayload.value?.cheatsheet ?? null)
+  const lab = computed(() => currentPayload.value?.lab ?? null)
+  const concepts = computed(() => currentPayload.value?.concepts ?? {})
+  const foundationGroups = computed(() => currentPayload.value?.foundationGroups ?? [])
   const allFoundations = computed(() => foundationGroups.value.flatMap(group => group.ids))
   const hasPanelContent = computed(() => panelHasContent(course.value, lesson.value, part.value))
-  const panelReady = computed(() => payloadState.value === 'ready')
-  watch([hasPanelContent, () => lesson.value?.slug], ([visible]) => { if (visible && !import.meta.env.SSR) ensurePayload() }, { immediate: true })
+  const panelReady = computed(() => Boolean(currentPayload.value) && payloadState.value === 'ready')
+  watch([hasPanelContent, () => course.value?.id, () => lesson.value?.slug], ([visible]) => {
+    requestId++
+    if (visible && !import.meta.env.SSR) ensurePayload()
+  }, { immediate: true })
+  onBeforeUnmount(() => { requestId++ })
   function printCheatsheet() {
     if (typeof window !== 'undefined') window.print()
   }
@@ -46,10 +52,7 @@ export function useLecturePanels() {
 
   function selectNotes(event) {
     if (event) event.preventDefault()
-    part.value = 'notes'
-    if (typeof window !== 'undefined') {
-      window.location.hash = '#notes'
-    }
+    return selectLecturePart('notes')
   }
 
 

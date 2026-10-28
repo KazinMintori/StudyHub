@@ -13,6 +13,7 @@ import { generateFontPreloads } from '../../scripts/build/font-preloads.mjs'
 import { liteCatalogPlugin } from '../../scripts/build/lite-catalog-plugin.mjs'
 import { dropUnusedPreloads } from '../../scripts/build/page-preloads.mjs'
 import { physicsExercisesDevPlugin } from '../../scripts/build/physics-exercises-dev.mjs'
+import { applyCourseTimestamp } from '../../scripts/build/course-timestamps.mjs'
 
 const tokenSource = readFileSync(new URL('./theme/tokens.css', import.meta.url), 'utf8')
 const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`))[1].trim()
@@ -27,13 +28,9 @@ export default withMermaid(defineConfig({
   head:[
     ['link',{rel:'icon',href:`${base}favicon.svg`}],
     ['link',{rel:'icon',type:'image/png',href:`${base}favicon.png`}],
-    ['meta',{name:'theme-color',content:colorToken('paper')}],
-    // Every page change is a full document load (see src/app/theme.mjs).
-    // Supporting browsers fetch the next page while the pointer rests on a link.
-    ['script',{type:'speculationrules'},JSON.stringify({prefetch:[{source:'document',where:{and:[{href_matches:`${base}*`},{not:{selector_matches:'[target=_blank],[download]'}}]},eagerness:'moderate'}]})]
+    ['meta',{name:'theme-color',content:colorToken('paper')}]
   ],
-  // VitePress would prefetch the JavaScript of every visible link for SPA
-  // navigation, which this site does not use, so those requests are wasted.
+  // Keep SPA navigation, but avoid fetching every linked lecture in advance.
   router:{ prefetchLinks:false },
   transformHead(context) {
     return generateFontPreloads(context)
@@ -41,6 +38,7 @@ export default withMermaid(defineConfig({
   transformHtml(html) {
     return dropUnusedPreloads(html)
   },
+  transformPageData: applyCourseTimestamp,
   markdown:{
     // A local font cache lets each formula reuse its repeated glyph paths
     // through <use>, which shrinks long lecture pages considerably.

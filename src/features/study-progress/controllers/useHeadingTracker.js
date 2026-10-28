@@ -1,4 +1,5 @@
 import { onMounted, onBeforeUnmount, onUnmounted, watch, nextTick } from 'vue'
+import { onContentUpdated } from 'vitepress'
 import { readStored, writeStored } from '../../../core/storage/index.js'
 import { calculateProgressKey } from '../services/progress-key.js'
 import {
@@ -22,9 +23,18 @@ export function useHeadingTracker({
   let frame = null
   let trackedPath = ''
   let trackedTitle = ''
+  let headings = []
+  let lastHeading = null
+  let loadVersion = 0
+
+  function refreshHeadings() {
+    headings = [...document.querySelectorAll('.main > .vp-doc h2[id]')]
+  }
 
   async function load() {
+    const version = ++loadVersion
     await nextTick()
+    if (version !== loadVersion) return
     const isReadable = typeof readable?.value === 'boolean' ? readable.value : lesson?.value?.status === 'ready'
     if (!isReadable) {
       trackedPath = ''
@@ -35,6 +45,8 @@ export function useHeadingTracker({
     trackedTitle = lesson?.value?.title || ''
     const previous = read('studyhub_last_lesson', null)
     const retained = previous?.path === trackedPath ? previous : {}
+    lastHeading = retained.heading ?? null
+    refreshHeadings()
     write('studyhub_last_lesson', {
       ...retained,
       path: trackedPath,
@@ -48,15 +60,15 @@ export function useHeadingTracker({
     // Navigation can reset scroll before this component finishes unmounting.
     if (window.location.pathname !== studyLink(trackedPath)) return
 
-    const headings = [...document.querySelectorAll('.main > .vp-doc h2[id]')]
     if (!headings.length) return
 
     const heading = findActiveHeading(headings, 160)
-    const previous = read('studyhub_last_lesson', {}) || {}
     const headingId = heading?.id || ''
+    if (headingId === lastHeading) return
+    const previous = read('studyhub_last_lesson', {}) || {}
     const headingTitle = cleanHeadingTitle(heading?.textContent || '')
 
-    write(
+    const saved = write(
       'studyhub_last_lesson',
       buildLastLessonPayload({
         previous,
@@ -66,12 +78,13 @@ export function useHeadingTracker({
         headingTitle
       })
     )
+    if (saved !== false) lastHeading = headingId
   }
 
   function scroll() {
     if (typeof window === 'undefined') return
-    if (frame) cancelAnimationFrame(frame)
-    frame = requestAnimationFrame(recordHeading)
+    // Bookmark only a changed heading, with at most five layout reads/second.
+    if (!frame) frame = setTimeout(() => { frame = null; recordHeading() }, 200)
   }
 
   onMounted(() => {
@@ -83,10 +96,12 @@ export function useHeadingTracker({
   })
 
   onBeforeUnmount(recordHeading)
+  onContentUpdated(refreshHeadings)
 
   onUnmounted(() => {
     if (typeof window !== 'undefined') {
-      if (frame) cancelAnimationFrame(frame)
+      loadVersion++
+      if (frame) clearTimeout(frame)
       window.removeEventListener('scroll', scroll)
       window.removeEventListener('pagehide', recordHeading)
     }
