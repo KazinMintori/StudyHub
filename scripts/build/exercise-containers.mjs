@@ -58,17 +58,18 @@ export function normalizeExerciseTitle(rawTitle, activeHeading = null) {
   }
 
   // e.g. 1. subject, 1: subject, 1.2.1: subject
-  const mNum = raw.match(/^(\d+(?:[.\-_]\d+)*)\s*[:.]\s*(.*)$/)
+  const mNum = raw.match(/^(\d+(?:[.\-_]\d+)*)\s*(?::|\.(?=\s|$))\s*(.*)$/)
   if (mNum) {
     const num = mNum[1]
     const rest = mNum[2].trim()
     return `Bài tập ${num}${rest ? `: ${rest}` : ''}`
   }
 
-  // e.g. 1, 1.2.1
-  const mSingleNum = raw.match(/^(\d+(?:[.\-_]\d+)*)$/)
-  if (mSingleNum) {
-    return `Bài tập ${mSingleNum[1]}`
+  // A decimal identifier remains intact when followed by difficulty or a subject.
+  // e.g. 1, 1.2.1, 21.45 ••• CALC
+  const mNumber = raw.match(/^(\d+(?:[.\-_]\d+)*)(?:\s+(.*))?$/)
+  if (mNumber) {
+    return `Bài tập ${mNumber[1]}${mNumber[2] ? `: ${mNumber[2]}` : ''}`
   }
 
   // 2. Bare container (no rawTitle)

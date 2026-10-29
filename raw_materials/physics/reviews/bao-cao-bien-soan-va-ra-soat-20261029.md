@@ -10,7 +10,7 @@ Cập nhật ngày 29/10/2026. Đây là báo cáo đang hoàn thiện. Đã có
 | Cấu trúc nội dung đang sử dụng | 44 bài, các trang chủ đề, nguồn được chèn vào bài, ảnh, Cheatsheet và liên kết khái niệm đều được kiểm kê. Không phát hiện đường dẫn ảnh, khái niệm hoặc trang Wiki bị thiếu trong lượt này. | Tệp tồn tại chưa chứng minh nội dung tệp chính xác. |
 | Mục lý thuyết và ví dụ | Đã tìm được nơi hiển thị của 290 mục lý thuyết và 492 ví dụ có số hiệu. | Chưa dùng kết quả này để xác nhận từng câu, giả thiết và bước suy luận. |
 | Câu hỏi khi giảng | 280 câu tự kiểm tra có nơi đến trong Notes. Những tiêu đề không ghi số đã được phân biệt với trường hợp thiếu câu hỏi. | Việc đối chiếu toàn bộ lựa chọn và lời giải của từng câu cần bằng chứng riêng. |
-| Bài tập cuối chương | Đối chiếu số thứ tự với bản PDF gốc cho cả 44 chương, gồm 3.590 bài có số. Tổng đơn vị cuối chương quan sát được là 5.102, có thêm câu thảo luận, luyện tập hướng dẫn và bài cầu nối. | Không cộng các loại này rồi gọi tất cả là bài đánh số. Số lượng đúng chưa chứng minh các ý nhỏ và mọi lời giải đều đúng. |
+| Bài tập cuối chương | Đối chiếu số thứ tự với bản PDF gốc cho cả 44 chương, gồm 3.590 bài có số. Tổng đơn vị cuối chương quan sát được là 5.111, có thêm câu thảo luận, luyện tập hướng dẫn và bài cầu nối. | Không cộng các loại này rồi gọi tất cả là bài đánh số. Số lượng đúng chưa chứng minh các ý nhỏ và mọi lời giải đều đúng. |
 | Hình có số hiệu | Đã tìm được dấu vết sử dụng của 1.952 hình trong nội dung đang hiển thị. | Chưa đủ để kết luận mọi khung ảnh đều trọn vẹn, hay mọi hình không đánh số đều được kiểm tra. |
 | Chương 2 Vật lý 1 | Đã hoàn thiện 127 đơn vị cuối chương, kiểm tra 125 trường hợp hiển thị trên trang thực tế và chạy lại 681 phép kiểm tra Python của chương. | Đây là bằng chứng của chương 2, không đại diện cho toàn bộ 44 chương. |
 | Các chương trình kiểm chứng hiện có | Đã sàng lọc và chạy 124 chương trình có phép khẳng định kiểm tra. Ban đầu 121 chương trình đạt, ba trường hợp lỗi đã được điều tra và chạy lại đạt. | Các chương trình có phạm vi khác nhau. Không dùng số chương trình đạt để suy ra tỷ lệ đúng của mọi phép tính. |
@@ -104,3 +104,11 @@ Báo cáo sẽ được chốt sau các bước này. Những tệp riêng của
 Lượt sửa Vật lý 2 tiếp theo đã kiểm tra 45 trường hợp hiển thị của các phần được sửa tại chương 23, 26, 29, 30, 32 và 42. Các phép tính liên quan được kiểm lại bằng Python, giữ nguyên chuỗi khai báo hình. Chương 42 được điều chỉnh phát biểu về điện tích trong vật liệu bán dẫn để phân biệt miền trung hòa và vùng điện tích không gian. Một công thức bị agent báo dài nhưng thực tế đạt giới hạn đã được giữ nguyên.
 
 Bản nguồn riêng tư được ghim tại commit `1b7fb77d67f468e492a46782dd2137edda8dc8b7`. Kiểm tra toán toàn dự án và build của chính bản ghim này chờ lượt GitHub Actions, không được suy ra từ kết quả của commit trước. Hồ sơ gồm `physics1-all-public-exercises-20261029.json` và `physics2-observed-formula-followup-20261029.json`.
+
+## Giữ đúng số hiệu và kiểm tra các trang đọc
+
+Đã rà thêm 375 trang công khai, gồm 44 trang Notes đầu chương, 287 trang lý thuyết riêng và 44 Cheatsheet. Tổng cộng 1.875 trường hợp tại năm chiều rộng không ghi nhận lỗi tràn công thức, MathML phụ bị lộ hoặc ảnh tải thất bại. Đây là lượt trên bản công khai trước khi bản `9edd8705` xuất bản, không phải chứng nhận mọi bản nguồn về sau.
+
+Đã sửa lỗi bộ chuẩn hóa tiêu đề đổi số hiệu như `21.45` thành `21: 45` khi đi cùng ký hiệu độ khó. Bộ xử lý mới giữ nguyên số hiệu nhiều cấp và vẫn phân biệt dấu chấm kết thúc nhãn với dấu chấm trong mã bài. Kiểm tra trình xử lý đạt 62 trường hợp, bộ kỹ năng đạt 39 kiểm thử. Lượt cloud và bản web của thay đổi này cần xác nhận riêng.
+
+Đã sửa một sai sót trong báo cáo đếm: Chín bài cầu nối có sẵn bị bỏ qua do cách đặt tiêu đề. Đối chiếu lại mục bài cầu nối trên PDF và nguồn hiệu lực cho tổng 2.560 đơn vị cuối chương Vật lý 2, thay cho số đếm cũ 2.551. Tổng hai môn là 5.111, trong khi số bài đánh số vẫn là 3.590. Việc sửa bộ đếm không được mô tả như bổ sung chín bài mới.

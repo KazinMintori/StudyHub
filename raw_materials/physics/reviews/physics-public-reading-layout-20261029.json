@@ -1,0 +1,3708 @@
+{
+  "status": "passed-observed-reading-layout-baseline",
+  "scope": "Public chapter Notes landing pages, individual theory topics and Cheatsheets at five viewport widths. Original frames and source semantics require separate review. Collected while 9edd full build was pending, after prior40de deployment. Not acceptance of the new title-parser patch or latest deployed exercises.",
+  "lastCompletedDeploymentAtStart": "40de0be21f7e611e04de9cb54e13f0a222bec496",
+  "groups": [
+    {
+      "kind": "chapter-notes",
+      "pages": 44,
+      "cases": 220,
+      "startedUTC": "2026-10-29T08:00:15.229Z",
+      "completedUTC": "2026-10-29T08:03:59.609Z",
+      "entries": [
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "05337d31febb524bdd5471c531656f9becb650e60a99e17fd58a4ab2ce0b1d84"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 2,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "16da4467db723cf0aed11f5ac7bd0901b6c05942ece95ce7683d438a56743dc1"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 3,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "75be1c6d87c34966f73df2fa60bd6b057ab8de9899fb62eb0c93bba79d126c9b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ccf8292d105ba362ed0c01b084722ee1032cb2ad461f8cbf385aaaf7b6f59e0c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 5,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "83d0b4f2f059f7a71c49e412ca9b8697dd2a998ce7a0a655f494dc86edcda900"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 6,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5d2fe57bab544172920372ef3e3e49c1a007b7a939cbbff6b43b756a6be8af76"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 7,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "cc29187e8d4cc459369fdd92c24297edb250900588fe262fa66c8fe4e5ee68c6"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f27f6c9ec999b4cc6f16104d15152b991edd1a7c61a65e2634c8ad15e94b8eb4"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "cc11ab43943b7b30b7aeeb4ab254000fe8802d8957ff55496677cd223a70907b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7ec13847d7e172793aa212ed644a92f7e26bc825acd4e02b317b460a608f3a70"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 11,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f563c27b6603f1e7315ce95f5ba3d66f4c3f1211b60725630d6ae4861197c602"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "317d6e2d3c9d6436da7284a678b9c7bcdac8da5b13d970a9eb1c54a073636f1d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "18880dfdec45f6d73147c29e850d75930d847634cfd40d9c30894751b81dbee0"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d52b561d324428c4fbc37efb436cfca45983b816f9c1d57ca816b07c44d2d51b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3313fbb765cdcb0c07a4aac7f462b020481331cbc052addf7b9ebd012f5c6fe6"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a479c86cc37d14210b5d182ae75a967951fe8efa8cd029eb26f48bd25c227474"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5a0d2f92193abc2439927e2179fe714bf5a39fa62bcb3441d602393e3077153c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "95a439545fd4eef625d044c8fd1212a05ec3db9a4476bea1773d3773ff717525"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a55e9ee4ad44ba1990f100d1068e0063d4f4b11b23094759b51faf54d29e2110"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e9ac1e16535abb8fdf2fa85788260c8e33343e0aaf0e039df76fc7f70622544b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e84ec44d1aaa0377f4a568b5dbfa879d060ec337fbb11b98b607d173260f7d35"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 22,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "45a261ff3ac3ef21bccf9b86195d2762d38e934d0c0b245aabb0d6b72e21ff1e"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 23,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "68985c2d46ba21c38bb93b1ebe7fefdf656c8ed589fe36c7cb68bfc146292796"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f3d5df4057076eae257c8bdfcaf59bf027ed78ecb746b02f349ae3b75d267028"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "701e3bec82f2aaf200960c43c09d3547a0c28e546d2f7b3588a6f56da0255aec"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 26,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "69a8bf60050231fedbe250bdcdfe752dae252e0ff694497571ac1e0e9a157421"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "cdf734247a263dc3b8389fdffe8fb972d29e053a7db2a00a70ec57c40214318a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d05412248c9ad9e9f37e137dc44d432d9be4e21a96751427d3b87def0f6d5d0b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d63ab950e522c0b33ef23d4a69d89d628bfb1172da283cedd727af00d0e6181e"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9edb3acb092a1870a1e77b8150a345b05b773f5fd5ea919097b133e83d488740"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "95797df1b147bc7a0fcc1fdc789fb2f7ce9e423f2cdb1ae1c728cd5c5c38d286"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 32,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "72a43d4bd8dc436a05f3cd9d565b5f86a6d8f6fccb6f798a3d0d7980c845ea7a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "261c7bada0c451cbc82913512fa55112167af2a39d4aef314754d405bf5f7e11"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "acc1a759895e1e200d459eb4d4c2f0fa98d76e001884281d55e16d2e13cc3749"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 35,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f8c5cc89ba371454ebb8017aaa4f85fda3aeefdd506abd03cbe0423abee3caf7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ce4000638d6ad2cb34ffdf31265d789f54c8ca9955e4208024b46b380d9d6ab8"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "44f5c5b657e429dd624a4ac08ed781db4c290a1d467692da588163ad77a03e0d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 38,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "eab72af216943309438f93bc1ba3f6ad64a3e8afb669d807069d7845ffac725e"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1d325dc90abf124a370657bf4fafe7f1dcc75f3096aedcb052e5101798bf6f7a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b59c1b1cc7238a56d08650eceb9f63af5e3b38af1306b2b24b42718c45d3ea7d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d3d26aee30a3adf9983b8e62701cdb49c612eff328de986310034ece27144e02"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9d08d2d0c42755ff97706a00ca5d02ac3b8415b430d839fe76033695ea97c508"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ba99da2cf3811b60a620c6e8866a98950d6a197b10dbd59718b4f341d4ba847a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "485da919f99e2290b18121a68192e92415f3401b9640cdc0472fb76e0dc0e7f2"
+        }
+      ]
+    },
+    {
+      "kind": "theory-topics",
+      "pages": 287,
+      "cases": 1435,
+      "startedUTC": "2026-10-29T08:01:49.341Z",
+      "completedUTC": "2026-10-29T08:09:24.828Z",
+      "entries": [
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "ban-chat-vat-ly",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1abe92c3483f96fd912f65e03f069c1a80ec2c14a342386a2dc45a6fc5652e8b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "giai-bai-toan-vat-ly",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "35a9d27ed973667de308c7782086f740be56bde8d019652992f2148e74ff5ec8"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "chuan-va-don-vi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5e62d93bbd5b5666157b64cd932a2abb25772985601f4cca1ce97010207da54f"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "su-dung-doi-don-vi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b3827e9b44c2944021a6fc8e2f45cdcf35ba14f231df21e6f70b0315c3f1f98b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "do-bat-dinh-chu-so",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ca37b0badca46058d1557845bf3e43f1b4f490e25f17e1a33e983f3337f0c157"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "uoc-luong-bac-do-lon",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "af4524c446321b15c445494873d191d5e2a5418d20ad1357057d8576870930c6"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "vector-va-phep-cong-vector",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "12f851ba16cc403d61d7a800bbcbaf89abde89031123d2a082030ee8d3c73cab"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "thanh-phan-vector",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8443262cf5ad284b055e84130911559001b177c5b3b566f1e347d3153e6fd79f"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "vector-don-vi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "22733aa6d12073ee5e09733fcaf7e79972c9aace565c6815e7aaddb0e8cfad1c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "topic": "cac-phep-nhan-vector",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "14cccdbaf95ead1d6c37b3282d76914f3c12464870961160392d138e92ce6910"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 3,
+          "topic": "vector-vi-tri-va-van-toc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "449291ab479b278b136b4e8e3bd94cd2d2c3568b303a7b0d99f55b879ece4bbf"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 3,
+          "topic": "vector-gia-toc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f1544f77092dd76abd2ef754ddb0d696e411245478eca787ebf21d500d89c05c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 3,
+          "topic": "chuyen-dong-nem",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3dad433fd76e4ca9be52a5335e75298dc4f74273cb5f488dc564a3c10309fe90"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 3,
+          "topic": "chuyen-dong-tron",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e5e83c74f03b23a853c1fbc9e4b4735998ea5d857346f9237998332669a3da6e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 3,
+          "topic": "van-toc-tuong-doi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "45c43e3249a588d2f099f558139662172445f022a2af118fb586d18eb2ee113d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "topic": "luc-va-tuong-tac",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5539408815a6ea351275e129c7f6d88cfc128c572dd34d0cfd7ed96a3cca6bf8"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "topic": "dinh-luat-thu-nhat-newton",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8ded276bb95eac4b68b111167421055443ba45e8b949b5441bdc67496f8e851a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "topic": "dinh-luat-thu-hai-newton",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9f3b6db525006497a376982a5fd74f8717aa37b5a61a96bc357db3c6843b22b7"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "topic": "khoi-luong-va-trong-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b80019eb0db3aebaa13fee42448a67725017b8ea54ef53f40585ce1e3c3038d2"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "topic": "dinh-luat-thu-ba-newton",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "468b33a97fa78d377ef6b7cceea8ae13cddf4bb7901a28272201abcda44e5e00"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "topic": "so-do-luc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c74d98c5bc8f1431f580c3a569b68ab9b1b9269ef28c3e692059ab20d4976a2a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 5,
+          "topic": "can-bang-chat-diem-dinh-luat-1",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b7d85854d78845cc5ffaecd9a0163f7350771e578617290980d28e684d270654"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 5,
+          "topic": "dong-luc-hoc-chat-diem-dinh-luat-2",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "23741f49273bedd90c2a9e5e0f026384cae5c4bb8ea5bc8a1127718b322acd21"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 5,
+          "topic": "luc-ma-sat-va-luc-can",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "994ca76a4bb9b0faa3c952050ced71bc68e840fea259dbee34dad6c970cc3918"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 5,
+          "topic": "dong-luc-hoc-chuyen-dong-tron",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d23ece560b48f4e524e52fdde575569230b60d292801593e513ed834f703a80e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 5,
+          "topic": "cac-luc-co-ban-trong-tu-nhien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "91e592f59187a3be6c9d85d96697698bee19de7a3bc7b1f2c0926a1931e3b38b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 6,
+          "topic": "cong-co-hoc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8d360e3aa6e05373022b23a6d5e455309bcc1d5402dcc4371adf8682a7ace110"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 6,
+          "topic": "dong-nang-va-dinh-ly-cong-dong-nang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2abb59799226a19a5f982277e4e5d9f321bc727dc0622251afc625590051c0fb"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 6,
+          "topic": "cong-va-nang-luong-voi-luc-bien-doi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3f2effd19fc413fbc838c1d617b7bb6466ce355ef2da683c291d62c73b71565e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 6,
+          "topic": "cong-suat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1fa9a4eaa4b232cd824e1ceadd9eb5e0a72d704abddca1cefe604a0a7b33dde6"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 7,
+          "topic": "the-nang-trong-truong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "83538653e3fae975368e7a0a3c7002fd286202d1c5db96f584732139176107fb"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 7,
+          "topic": "the-nang-dan-hoi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "41feb23b90bfc4224b567df6105c19a0d6fd33f2e31a5a71a9515506b2c38561"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 7,
+          "topic": "luc-bao-toan-va-khong-bao-toan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a2bbecaf85e0836b1b39f6bc5dc19d5854d64ee096090bd066912cbcda92543f"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 7,
+          "topic": "luc-va-the-nang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "307d39c3c7d3d5432f81c8206e2f57127d9748e432c2be7c51b52cfc5eee6801"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 7,
+          "topic": "do-thi-nang-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6188b347388f483c71d6c150d8094b85d1f4186c2db6bf893912a3fe91e44b52"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "topic": "dong-luong-va-xung-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "668aab916d76409cd96677c0e4d7325cf8ec204ea50140b4bb332700173b851d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "topic": "dinh-luat-bao-toan-dong-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b621e4048b532e6231ccf39f6797cad8a5fe60b8d34e64306d260c9a72f77f9b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "topic": "bao-toan-dong-luong-va-va-cham",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c306aa56c327378be4c1f6963232a124c0c9b452f1f55e7d89d6de5be01be561"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "topic": "va-cham-dan-hoi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "fe426b0cd70353916ba42c177ef24bb8347c028c9d4ac88c51edb5994de3dcc8"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "topic": "khoi-tam",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ff1445c1222cc053c643527f13ddbb1891649be128540065bff9ffe86dc7455e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "topic": "chuyen-dong-phan-luc-ten-lua",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4c7c4860567a2e0ea0b6dd1fc80c950654b7da4a26a41c27dfd319a5b3d0f421"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "topic": "van-toc-va-gia-toc-goc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "078946453b911721bf78b6481ad0aa3cfd512fbb4bd51922272b4455c240a62c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "topic": "quay-gia-toc-goc-khong-doi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7acc2b1f7cbfbef9cbe8fcbe869c47338719fb2bd4aa86a8afafc0292333d6b1"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "topic": "lien-he-dai-luong-dai-va-goc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3150ecd47d80203bec960bc7ce8fdb655244da999135fea956175e62f6e67ae3"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "topic": "dong-nang-va-momen-quan-tinh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "bb6c8fd7d673ffc7e60f51336590789dc0b79ba13be039179be8c5163463aadc"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "topic": "dinh-ly-truc-song-song",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "64ed75587b4f909d3674aa23824da1b50872533c34f33cfaaf8afb07a1685c64"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "topic": "tinh-momen-quan-tinh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "472299ed678e31c970dec3b5d7e49947a4279a27d3bca6618283eb1ff08fccdf"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "topic": "momen-luc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "42fa1a4c43ee5576ed3a7583cdc937d359fe7f6d6a97909ef6cee88aa5c57a2e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "topic": "momen-luc-va-gia-toc-goc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6f8045224c15da57c6ffea621b88643bafdadf95c167a5ae728b42effc0f3c8d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "topic": "quay-quanh-truc-chuyen-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "24a3aee8cf545c3d41bb7df7d8ecfa7db4593e1487af353b1648c4bf40b27ece"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "topic": "cong-va-cong-suat-quay",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "916ba555877cf4607a63b407d6764f54811f4f8e97a1dcadb68bab93dc90dfbb"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "topic": "momen-dong-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1df87e60ae8671ef6008a23b56def702c4aa3ecf8df6ff4d5201c83d22fcfc8d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "topic": "bao-toan-momen-dong-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f64d118750d9b702044d6477c5e4bca374b426d03f14791e00eeff8380fd764a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "topic": "con-quay-va-tien-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c1f45703706cf9e31d6cc113789c0804163f85b9b2c78f005619656ff3be445c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 11,
+          "topic": "dieu-kien-can-bang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d6ebb54e2e64766e4f11740da6f1fa17d64894b6cd03f71115a31a3d453ef1a5"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 11,
+          "topic": "trong-tam",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "16fdb0f1c9790395c4ed476535594b19050ee9d1a8ed25f70d7641db5432e00d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 11,
+          "topic": "giai-bai-toan-can-bang-vat-ran",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8ef98c9f5fd62eeb26c6f1c063a411732a425f570125cd52ea7b5d29ae287b5e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 11,
+          "topic": "ung-suat-bien-dang-modun",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d00432240e8b7555ddb5c3835287c1aeb7b2ad19283ca3fc7762331000529bfe"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 11,
+          "topic": "dan-hoi-va-deo",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "88ccf997981d0e6e03ac01470cf8175b8f1347d645449107aba8ed3f5168d76e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "topic": "chat-khi-chat-long-va-khoi-luong-rieng",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "fef164aa4ca86fc2e80afee4f4d90d6432d07f70e83ce67c6aa10c49ddd24595"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "topic": "ap-suat-trong-chat-luu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "48d9451b5ce531b1ff5edc708eed36aa89ddddf73ac65a8d9312b2fb9f74801d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "topic": "luc-day-archimedes-va-suc-cang-be-mat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3abb3d9beefb6e879297a4482c3f294dc9e6c6798d8484966d9493c9e9174568"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "topic": "dong-chay-chat-luu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "185e7b508fa446de1b03e289c94a67823ab918a16bfdb5beec81e9a530667c71"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "topic": "phuong-trinh-bernoulli",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b84f746d40e57d7779770d5ebd5a45793686be9196e73490d704511d11630b22"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "topic": "do-nhot-va-chay-roi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ca1ea441473a0bff11e573085311df5ce6d82f21f5d9ba266b7abda19138cb10"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "dinh-luat-van-vat-hap-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "95968e5d5af272bb4972bfebeaed275b4ca00e2a48c63bd489b7fcd903534a5b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "trong-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9f7ed734eb691a9fe961b28e0da6b9a6c82b9d7494a7744391c4145a5c166d98"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "the-nang-hap-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a8401be23a620fe8da26f5d35de60a8923f85b44baa1db324623fcc21d86d811"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "chuyen-dong-ve-tinh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9885948b81cf55ded7dfa0823d5419bf25d375f3ee64931df2704e09df6416e0"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "cac-dinh-luat-kepler-va-chuyen-dong-hanh-tinh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "75431df3754b73de6cf72b144245932bbfe915cb6e3000a1214674574e8f5aca"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "phan-bo-khoi-luong-doi-xung-cau",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6e1f5cf657264f852d879044dfdb2398967663896067239c1f0914aab3572486"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "trong-luong-bieu-kien-va-su-quay-trai-dat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "fe4b5cd8e0b26c61bc4273d487d7a1bd4cc19cde1efb972f596a065f1fcd0cb5"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "topic": "ho-den",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "95d2615bc12e2c1c66739ff54f4168a7c659d91124bb9d656efdca9eabe326ed"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "mo-ta-dao-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "45b49f30dc873a2be926925b2328fb52591dfd6507f2bdffb76a1f4c913036a0"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "dao-dong-dieu-hoa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7715ab8c34ed0c38f7484489aba2f4bdc3d4cee0efc9dc4e38e013e645d05e3b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "co-nang-dao-dong-dieu-hoa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "799fbf8f093d89020c1ab436d0ab0a7f8395f06658576a95ecdfb57722fe5987"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "ung-dung-dao-dong-dieu-hoa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1afb58cb51e869398f26faf8f7d7a9e794529fac559babd2ae67e7a16f2cea34"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "con-lac-don",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b329e3a971a6004cf66c0372d14914135a02efd263503adb1b7f6d8ef3bf662d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "con-lac-vat-ly",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "799ce45358e1327d39c015d9455ce6fc0e0fffce4cb830598026363d9918de07"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "dao-dong-tat-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7fd8141aa6353493ebb417383bb6c4ff33cf1031742ee92c304ad81666e93608"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "topic": "dao-dong-cuong-buc-va-cong-huong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9612d63c7f79573cd9379748f5e5b3acb578c57cfd371137d916fbdf6d95fdda"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "cac-loai-song-co",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f2117e74fd7a1f8b5c9342d3af72d88f054d5c8ebdb46b5e34b2dd38025e0754"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "song-tuan-hoan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "989a15150cca56edd96148bf4f3f06b439c21b0c25074793bb5d632c7bd26b96"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "ham-song",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5393bce20857399dfbe6fb049ce22e58ec7b92bdbefc6767156d1346d7e9434e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "toc-do-song-tren-day",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "17a46aa06c59d956c77fbfb220c898e141a363b315a4fddde3f2298b18c1e1c5"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "nang-luong-trong-chuyen-dong-song",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9dc6b5104f4eafeacf4cbeb53bb24fde7502d1a21575b737a63e0d33e36b654d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "giao-thoa-dieu-kien-bien-va-chong-chat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "349b5a9e31ef282472ffa6db4b20f53d59caec6b5969f3b529b4d9bc61672731"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "song-dung-tren-day",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b6990a5394fdae1f6f5577cd91978464acbb2870bb70b4fb13f49db947ece674"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "topic": "cac-dang-dao-dong-rieng-cua-day",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "91f6b648d84a39c424b3d3be7ac9dd4e58fd2f604cb53a8d4c48cd99900f2e1d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "song-am",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "082e20ef198b176a2ed02989e3208c1273208c8dd1bba6cc2a769defbae73e90"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "toc-do-truyen-am",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8857b348e0f0afc421e02514c2ef7a982f9c805e581fa930cda08f8716d57495"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "cuong-do-va-muc-cuong-do-am",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7e20bbe19d4b285e69271a5faab12aed1f3abf568d1ef0a1ccd62c25c3e85260"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "song-am-dung-va-cac-dang-rieng",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b5a2cc695e64f1791e5cf82b8969e0c530f90c12ad5f2eadaa7b59c143003d78"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "cong-huong-am",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "79fcc53617d2d732585372b961d77ba0720d45dd4b55de491bbd310e65c118b6"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "giao-thoa-song-am",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e51961b0707938f488633c182be3ad53eab22f29c7a3bb7e796361aae82dbb24"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "phach",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "45f5f30b1e5d1d87fc29de755d6caf1a1613762b3001d35642549a114da22396"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "hieu-ung-doppler",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7a2a4279b9979e8bc0990011b30900a1761139d167ac2af41a4e7ea2ddd16db4"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "topic": "song-xung-kich",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5f1040b5079e266283be0e27ef985f1e4398ea4b89ccdeb36bab397c07d7f704"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "topic": "nhiet-do-va-can-bang-nhiet",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1185d1401ce07dd961d442746e5b22de036fe6f09c97e01e6a3499009de8e3ba"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "topic": "nhiet-ke-va-thang-nhiet-do",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c3b2dca84a37dbeaf73ce8e99b0ec3f9cfa531df7275697d5f45150b69ff0a4e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "topic": "nhiet-ke-khi-va-thang-kelvin",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ca6ce0095132afe9574308fd8bb05bd83d2f9379acb9c669c347489fe33f5ab9"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "topic": "su-no-vi-nhiet",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c3dd0428185e255aacc1e502ff2c1dd693d22902714643466dffddd3c7813df9"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "topic": "nhiet-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9ea8272a8bb8ff772dc45f8fbd35ae8a11a8982e2cbcaa2726acbc60a3b03b57"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "topic": "nhiet-luong-ke-va-chuyen-pha",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "02b5d91e675dc155984846e8a2cef9868556261f032e4875c35100c1e23aee45"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "topic": "cac-co-che-truyen-nhiet",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "14a991c9b3fe07409f1a7e5234a7db4028485383ae7794d5a181e10130d8261d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "topic": "phuong-trinh-trang-thai",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "861dcf2cde8ab9d496ab62fdc2e89e5f2623a2bcc44c1ccdb30f9c89457eb6f6"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "topic": "tinh-chat-phan-tu-vat-chat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d15d773e5e8db230623b0d479f551d66205867be110d468563f9338c2a6c9a0b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "topic": "mo-hinh-dong-hoc-khi-ly-tuong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1eda2a12d7027d9e82b41e1b906f21191d648a78f5c571cb39dbc80fa3861e71"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "topic": "nhiet-dung",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2dfc093e600977db6c381b658b066de396bbd3d90cc1e3ca845be6c2bb18521e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "topic": "toc-do-phan-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f1d29a6a72f5ac4aa7970cc22608c5a76c2f8f47f57c8c16686b5afd8b1ec9e8"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "topic": "cac-pha-cua-vat-chat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ad6f95351f8a63b38bcc0357aa0e1751526597f94727a6e7ffdb2583046c382a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "he-nhiet-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "aa174b7f7e2b1f4ebe093c80d65c6054a262a2d60ae14d374d93c9ac705eb1db"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "cong-khi-the-tich-thay-doi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e0bd4582f4ccfa554f046acb1fb67e0f2b738ab4660d2753d8f324c49635404c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "duong-di-giua-cac-trang-thai",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d0200f7a1fbff84138906cd37b6c2dcf514d18ae174128aa03014d7f4ae5e71e"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "noi-nang-va-nguyen-ly-thu-nhat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2af7df529596bc9cd2f2439bde50f6930e2247f8dae96d2041013b09096f9e27"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "cac-qua-trinh-nhiet-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "478d2c0d90f2e59f40b3ea78ad9196e375089b3c610309a2fb37732d2c6d67c6"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "noi-nang-khi-ly-tuong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "278a2b341b05790c78a589750dec7b81a262f655b8000d0a62f5025fcdcbd6a9"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "nhiet-dung-khi-ly-tuong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f7b270195290af0acb0edb52ed23bb0ddd4c2672bb1558567fde0bf2402dc5b4"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "topic": "qua-trinh-doan-nhiet-khi-ly-tuong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6e4ecc5d043c40440c3a733204eac5ce8557872e903b823387c59a11ae561344"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "chieu-cua-qua-trinh-nhiet-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "10c7830a8c45b2354239ebc1b03a40a8e52c52ec30fc007a9c5e831190c6634d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "dong-co-nhiet",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "15a68c73fd9433ac8066c949cc3ca6c98d33840ac8f93777d677e524b304a5fe"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "dong-co-dot-trong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1a13a2c8858d98fa96d747a65bde1916052f60d6c3c79a66e6baf66dd75d83c8"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "may-lanh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "726e43cbe8b653e05247d815930085e35ba5fc2a4dddc6b877e9fcb3607c3d45"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "nguyen-ly-thu-hai",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "88472930d567b61e2c76c95bf4dfb1aa66a05d773f345182faf6517d3fb26460"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "chu-trinh-carnot",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6ac2fa5e660d2bb5b846988af016d0f4f7b0df323e4b7b83149abdd125a92238"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "entropy",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "0ebd8cd3a0516a8ecf09581e12694c3144b608114ba1f6fc2950b5c5c848fb74"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "topic": "giai-thich-vi-mo-entropy",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "aea5f048dd3d072c60246df1d7e453f24313e6a89056c6101a2cc3f2cb5d0b99"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "topic": "dien-tich",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "fdbc0887752ac40f8958cad9b0767ffbf053912fc9cf56f86566f2be1d489d7b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "topic": "vat-dan-cach-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8d8bc40268f38cb9ff4e226d83bb089aeced8f095f78ce2ba013dc01b3328ae6"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "topic": "dinh-luat-coulomb",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "021e07867baa0a09c202449489b6f190b502a78b5147187ac7d2f53e83012ece"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "topic": "dien-truong-luc-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "30d70135ef74279708e3009fb8d911a88f1f8d9498c88eee578499517ebff519"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "topic": "tinh-dien-truong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e466a4689b7e037d8c77ca0793e468d27fe6b96e158fa6ba7d61e722b6ca171f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "topic": "duong-suc-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a3a7b0347ee9013bade6f7f0331811e70be7fb683865fb3fcac1c9b49b2a7863"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "topic": "luong-cuc-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "df2db0c5b648e159f940a3c2de8c6b0ea7a3ccf16ef9efe5367d60915a03c598"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 22,
+          "topic": "dien-tich-dien-thong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "577789cb817708a41258e2c22f1d061156f7886b9d92df1f038c5b2bb6404be8"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 22,
+          "topic": "tinh-dien-thong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "fef4cc0d3cb4601159a14212f15ac625e22b58da2c00e0b90d57111b32c235f5"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 22,
+          "topic": "dinh-luat-gauss",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d778cb51fed44bfe9d74749e33c4934ce2b0ec62bb4efcea8907243bf03e31bd"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 22,
+          "topic": "ung-dung-gauss",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8795b4830ae3cb97bda3ff2339f20a2be5f86666b0e0611ec171e9f9146415ba"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 22,
+          "topic": "dien-tich-vat-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "310e31614dcac0e06117503f217ca4d1296ebeae6498a893e89b5106732f2227"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 23,
+          "topic": "the-nang-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d8c8945991668e22f6b34bc5be1f30d2b3fda04f261865f01a2adb613c9958ef"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 23,
+          "topic": "dien-the",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ea18ce96851a40094518b4cd422647bc068b5fe7dda59303072dd584ede6888a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 23,
+          "topic": "tinh-dien-the",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "84ebde7a3792f40b5f9bf172b99aa7097c75a0f887b3714eb2df05d582b437dd"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 23,
+          "topic": "mat-dang-the",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "221b9816576a5b7b9722b3e70c48bd7212384153b7e63d114b0b23f36c2b75f5"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 23,
+          "topic": "gradient-dien-the",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "54e3b825435a3c72b14e7f34d4c59f5203fa5b0f22ebb2791e41d0a6eb0c284b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "topic": "tu-dien-dien-dung",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "18c872744818eea91d535bc528bf4a6e576e9b662deca1f0d4334a02b038bfdd"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "topic": "mac-tu-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6421defec7e4f3bc984bca541a92c3f4fa2b5cab6ef84ea120ef9a9ca306a296"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "topic": "nang-luong-tu-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "78a6a8fa3264489bf457b612846aa2bf8b65ddbad14c6e8c549461c218efb494"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "topic": "dien-moi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "19210fde89361a8a5b4532b4e33f79a0be5ead775e5a3e4c20fd06379f40d40d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "topic": "mo-hinh-phan-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1ded9566b19a1289d5eef03bc71d3c42f9c72a11aa4e2e7838636046f64c61c5"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "topic": "gauss-trong-dien-moi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "107e6490942947d13391610f27efee9df84fe2697be3a0cd9dd6f2a8a638f0f0"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "topic": "dong-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e5ef19d5543eb889c625297280fac3abc60f4d27de923647aa83432432f50859"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "topic": "dien-tro-suat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f4f19b81b1f02f4b4a31eaa9a816f575c1f66469b4b971f4ddf672065a308b4d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "topic": "dien-tro",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6261392111d187577574f046b9d41fa2eabdb19a7e1c0a6cb6684ca72103ad62"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "topic": "suat-dien-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9855c09ae767a25c726f420da206251b778bac872af61b8eac5b4c56ab9a16ca"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "topic": "nang-luong-cong-suat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "0d7a5ae9d031e44d4fcce7f6605903368b528e0e0ec37a41df42a2e2789b3d5a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "topic": "dan-dien-kim-loai",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "72cb971807442bc6ee49e7d96825389e62c499ea82e079b00301f9be7c207b0b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 26,
+          "topic": "noi-tiep-song-song",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "847443cc2f7eca09d6cbfa58da10e2c24b56d3425a634b56dd265aaa0f97dc77"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 26,
+          "topic": "kirchhoff",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e4839fb9fe5eb24617a99683de91bf005b7265ae91f75521f3e94e115fc8505b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 26,
+          "topic": "dung-cu-do",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d7a44518bf00cef7502b74a2069ab2256f040a3c48e8f6a8757f9a419d28f43d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 26,
+          "topic": "mach-rc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "021099b5962e7a79f0884d56d291da728cf3fbb39f477b29cc067adc829146ff"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 26,
+          "topic": "phan-phoi-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8a51877bca607f3394a27e9666ccba7f4ed47e4371d6ff5c311cc579db9f88b7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "tu-tinh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ede5442df2f00753814e279ef66aadd768b5698964c9e4ea741575117104dabc"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "tu-truong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "eacd138f224a699db47b9bf4ec9b7511b469d3675b338d0c413907260236f860"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "duong-suc-tu-thong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c7ef4f74b7215bc9d533cf7cb4b78fbd97182edf55f2124285e32dba51a3e768"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "chuyen-dong-hat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f58cc36f1c36fa5f6ce1a62f03a2fecd0540b2841604f98625fcb5d03e2deca6"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "ung-dung-hat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5d0eceb289a743a20c58bc541c9edd3d07bcce855e97fa25b5e74626861c0068"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "luc-len-day",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "32e227af429a34897086a48cce451e6abcaffb29d198008c14eb271fe83aea80"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "vong-day-mo-men",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "685e37b4c0f747a8afc060bc1740bed40d91108914335b3f53bc7aace9bb0d3f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "dong-co-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "265b2cfb9b36fb8cca2269b5bf851a8d1b44590a220c3799ba410bd6478f9a49"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "topic": "hall",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1f7e1e0d3e4697fe76b41c6433d34f2821cb9dbd5c39c4d25d7f083bdb4b595f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "dien-tich-chuyen-dong-tu-truong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b01cd0a9d9a58aa4b4ad9d9a5cfc860554af2d45ef499408488b4604f780cae2"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "tu-truong-biot-savart",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e252d0e7b0945b5be2b47ce80591f110f8a14e19603ecf75a6e9f2eb11fa307c"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "tu-truong-day-thang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "0b7131decc1a8cc6bfaae62a52a2ade69fbe8e92de433fb2dd8c70d2613e60ff"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "luc-tu-hai-day",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f9e08dfc91776b2c2a08b176a708c367307cf8d327d40fc21067313fd6728ae7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "tu-truong-vong-day",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3b5b843e3621aad814cbae4dff9a888fc8905226aa1d6776277ca020059fc270"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "dinh-luat-ampere",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ee2324074dfce784044003d8e795d2752538678cd33bbe862735c620d1565a0b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "ung-dung-ampere",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1fa2ab32ae733be9ab483137e9f6b414b79694c26bc1be7550fcd1c963f7653d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "topic": "vat-lieu-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "631db68099b825785ab2f44f5ac7a253180e5d013fd0ff849ea75bf4c9969ef9"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "thi-nghiem-cam-ung",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "11bd589fb337d688f842f323d794e5ed8ba6a1e24b514c7c028242f38168ed80"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "dinh-luat-faraday",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "14e8af59c95cae46afc4b8c849ac2cb63669be30fb270cc64f36ec8a063d3368"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "dinh-luat-lenz",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4ef5b3894b198b2f8d1fbb598070438cfca9a29713d772a4fbee3c28bd036a46"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "suat-dien-dong-chuyen-dong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ed440b621c8a793eedf194a5903361177df08212c8fee39e71fd0fefbadcfb6b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "dien-truong-cam-ung",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "0fa4131a3e2a5b7d3e7b39b0c2178af4d7163a8844eacc3ae2d95d23b39dfac1"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "dong-dien-foucault",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ae4bca0e864bc55f9981c458fd3de60b062a1620e4a746736d72d9dfe3901d3c"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "dong-dien-dich-maxwell",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c45199aa9bfdb147c83a2afe2760d41c2c4ff14e594d95afaaec049d8f6180fe"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "topic": "sieu-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a850d5a2b582f174583ea34e92bf64c9885e688c95e64223678dfc97e754befe"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "topic": "ho-cam",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "484d6f4603ef358c318ff3f970ea687f01c7f02f5494feb867dc2fb2271fdc3e"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "topic": "tu-cam-cuon-cam",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ee36499a340fe89f3b415569d061dce95f96295ddbbae41125324c893ca93fe5"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "topic": "nang-luong-tu-truong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a83cbf056af167d7e54317fc5d563a0e52d91a7616fda6365ab3f943b398c02c"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "topic": "mach-rl",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1d7d04e684e8c138635d749f4894ef894943a8d14233b312d4f5b6f8a3fd8d28"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "topic": "mach-lc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4781f90984399c8b1f873c0a068c9777bdb48c0e7e6c0eee23f2fa3d18be9df2"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "topic": "mach-rlc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1c7dd49b64592ca0d9a1e845ceb719250c275d5c8098842de75458f4668aa8d6"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "topic": "gian-do-pha-hieu-dung",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "217b0edf2a78a1f6ccaae18872ad320acc30a05c8425379c11bdc84337db8ae0"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "topic": "dien-tro-dien-khang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7f3ee5f79f91a9d40cfdffa3691919e0b6f4540f52629be345ff6de79105f57e"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "topic": "mach-rlc-noi-tiep",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9c32da8ac26238789e31b31581216b747792069093ffae0acd4fad45196caea5"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "topic": "cong-suat-xoay-chieu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8416c9990a8f25a12e714412662f79b49734ae1a2c3b02163a6d43a18dd8711a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "topic": "cong-huong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f287cebe522595aea17c18156ba252c4ea883f832e1126242735da17255af7de"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "topic": "may-bien-ap",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3d9093f170b86d66abc8b8be9acd28b930c582e1281ea4e13842a27b049a6553"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 32,
+          "topic": "maxwell-song-dien-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2e81d6b0409d7e27b976f8b975db9e41953b3e10f3f3f5cfa65c57a127f7a7a2"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 32,
+          "topic": "song-phang-van-toc-anh-sang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d47dc368104a645bd52152a337163c793f3ecc83d81dacc0ebde306114d7a22b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 32,
+          "topic": "song-hinh-sin",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "295d03cb54180116f263e6f83b24dcc5cd487d12a66a22cbb48d29e4fd995ab8"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 32,
+          "topic": "nang-luong-dong-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9fc9ed8f0259764364005b5ebe75f5d763c2970392ac3278421ecdbba707113a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 32,
+          "topic": "song-dung-dien-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e5b7d5c9742b9295e0a27a81af142da0a6203375960c51c96d7d7688d5bd85a5"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "topic": "ban-chat-anh-sang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "38b5832ab1d9543911c7b1894751d1c16c1520cfe847ebbccb9ef3f45258f1a6"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "topic": "phan-xa-khuc-xa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "57fdf0dd6942fa21b1655799c0d2555f77c1cd33a042fb83d2097a5577a05fe7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "topic": "phan-xa-toan-phan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7d2317fd0b78ab1f3eda89446cd3144752e278ac16bff4b26ea84774e515eedf"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "topic": "tan-sac",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "72524488522bcc7758c2e01dfc6bf0ea6bef483b4d0b07e21e197ba1a1bea141"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "topic": "phan-cuc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "62196f965c0276c17dc08582b55628a3a524c6064fafa936600913bb27eef49b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "topic": "tan-xa-anh-sang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "916c97164b51c6157239fe5ea6e92f664bbe69e1cf08599d8b4444922104311b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "topic": "nguyen-ly-huygens",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "39afdcc0c40d908acdfe8208f1e53b0c9a66ac06d3e1688520e53a32594befde"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "guong-phang",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a49eb558492f9e13a61780f143393d3bda587be64afeaeba6ad807d73278e0ed"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "guong-cau",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9ad29151eb763181814088236c7fe8121e9abaac287f6d1694af993169c12e2f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "khuc-xa-mat-cau",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2b53231b5358f7a3c4addb7c477b08b5fee689f6154ecafaef54f47c5c36451c"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "thau-kinh-mong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "67437a40ac1f126795f3171f3fa5942e480b61825231aa4b69e4075863c55a75"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "may-anh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "84ce390150f6c5ec88fd7e24d28c8813e5a8f976ca30577439750b153c3157e2"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "mat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c8637f7e41b6a3afd0a50ce5a240c0fd5b7b45c371e77e0cde97bc59974c704e"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "kinh-lup",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e6a08aa0988df54c1ad7bcf059cc1849089afc6320e0f7f0b69122b15c028c96"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "topic": "kinh-hien-vi-thien-van",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "26a6511c91e5d9075be3f3bfb61e9f86c1422fbdaa58666e45bd6a9c072169e8"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 35,
+          "topic": "giao-thoa-nguon-ket-hop",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e484cce655674ed5952f5fa1c46f1b518e548aedafd11f0c407d3eb90e027245"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 35,
+          "topic": "giao-thoa-hai-nguon",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "096f55218c84a94da05dcbbb69d4b6c73d892ae116bace78169800b2a5b1d183"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 35,
+          "topic": "cuong-do-giao-thoa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3cc6cc5e33e02ecfd54186fa83287e1c4dbc763e39253ea4568e1ecc3192cb74"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 35,
+          "topic": "giao-thoa-mang-mong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d1e177b5ea9bbea5b59eb61bfed77f12aaa05323f6a76d0ee13c7ff6bb166a3f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 35,
+          "topic": "giao-thoa-ke-michelson",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4c68887e769e23bb8570389d005a07335d159a10da4c5261b18ab5ce27291ff4"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "nhieu-xa-fresnel-fraunhofer",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7958d677f0b39b608e04c226db8d8f30fc0d2346968d798077e12969e29925ef"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "nhieu-xa-mot-khe",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4596dc7127815d0d7bd3c8956c123a2eb72a26ce5c3a4e91bbd010a3e18913bd"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "cuong-do-nhieu-xa-mot-khe",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "0e2928d4f0030393d1ec2b627db8300aff1fcc1bab5524d0e8f2842cf5e657e2"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "nhieu-khe",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b5f2482ea7c89c5424aadec1d7784bd03b259e7289935fbee37bcf29fb79322e"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "cach-tu-nhieu-xa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4a4e0262893e9d496c96cec06f1f6260ad29166ae2a4d16133d700855c8ce629"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "nhieu-xa-tia-x",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "607a6a3d844f10533a091078a4e99f15569cceb4e1ccb4ec15fe007f55fc0e19"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "khau-do-tron-phan-giai",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2937c75535b5606abce9d15cde242ce14b91a1d3a735836280da5704353ecf2d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "topic": "anh-toan-ky",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "233a378b58a5ff1081e6d02d68b7fb4d2cc0d07fb834dd04f2751a6109b1b8d7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "bat-bien-dinh-luat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6621f3a59f390927bbd24de23eb3b71e1514414d7cd3b42ae7c281cc8e0cf865"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "tinh-tuong-doi-dong-thoi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "0584aee575d3ade9d648823a8926103c6d406c5e461deeb1f8e40aa79b35e844"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "gian-thoi-gian",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "58ed9f1e9a4aaf4e1b61262e74d341c8abf666eac6d7baa75dc4d61e99fb1e50"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "co-chieu-dai",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f426bfc137054e71c02df993172e2fbda0157dff4847beef22a3239716e4a198"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "bien-doi-lorentz",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "720f3a0478a4f72e32a385c5ddee8e031772d829c50fac399ed64b173b0cc5d2"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "doppler-dien-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9b07e49d72b0a31f3d68d2ed63977f10ecde07ec3c5c28359b25aba8fd8cf333"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "dong-luong-tuong-doi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "937b9e97462d4fe141f5a8fb6499d6a4c8ab92a49a9c587d63764b4f3c7b6669"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "cong-nang-luong-tuong-doi",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e6b473ec08af0d68a6e55d32b98952f1aa9ad690b13d01d01b868a3a82e7571f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "topic": "newton-va-tuong-doi-rong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "59b094e0d6182ffe2ddb8f0f3eb9bb051ec15dda73889de890912a45b15f4b10"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 38,
+          "topic": "quang-dien",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ccc6fecdf4f4881907d45ab7d11b861d281dec127a495c06947b69c54b93edc0"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 38,
+          "topic": "phat-tia-x",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "74e3eee3bec67a4122903140b4eef6835efa8c5e3532789e6cca1bfaeed95a4a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 38,
+          "topic": "compton-tao-cap",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4ebb2a361ef6bfc1a8a6a1688a923c43bfae38921e81bb32741c03c354987ec7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 38,
+          "topic": "luong-tinh-bat-dinh",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "3e1e20a98180294d633e82502bb88831a5911b149a05acdc9c4384eaa5a0be59"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "topic": "song-electron",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e0afdbbecbd442f4137aeb3988c784f64cfb714e0777f23471b77eb0805747d1"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "topic": "nguyen-tu-hat-nhan-pho",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "909f7aac01cce6103ef39074fdd482646496b916868b317eea94af2469826b60"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "topic": "muc-nang-luong-bohr",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "df7050c89c74af543e0f96b00943ede91f30685d9a102a887d1f18606ccdbc57"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "topic": "laser",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "04c6cee4a3812e8d8d6cbc4257afd08a103b437bfef84724945d9568b7283a01"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "topic": "pho-lien-tuc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7ffe4002fcc9a45e0bc7d1c8962ded4c5f17e8820f6c00ffae6d33945b43b027"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "topic": "bat-dinh-vat-chat",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8138524f211b37478c1a896ede0bb94422d68da99690b42624f2570f8e98d08a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "topic": "ham-song-schrodinger",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "0a5c5cee8f742b6d8f550d967dff13736c57b65cffb729642b34f8b977e127fb"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "topic": "hat-trong-hop",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4e679078ff285b5c8e664ae128c2fcf16b412a96750a65988550237f300ece41"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "topic": "gieng-the-huu-han",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d0b928db6cd2210f223bd7abd889fb957a5b99338aa7a83b86631d24cc6d596f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "topic": "hang-rao-xuyen-ham",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7433fdab476c99e6a5f7e94d9a8790f39b22c48995e7325d9e828901fe54b7ef"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "topic": "dao-dong-tu-dieu-hoa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8b0658d542472bf202c8118b801269b176799b034baba9bc89ea7a9d62c390fa"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "topic": "phep-do-luong-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2d24a3286f45c893c28580bab13d64d70eccd999944061ba664d4297e31c075a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "schrodinger-ba-chieu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7456a557722e61f157357b34b27d7dbf82ea29c08e0d22632c416cc15b99658a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "hop-ba-chieu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "1a5b4988624803b0ced229fc79dc3128f7e6b5f4c2491cb634ea41240a1fd77b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "nguyen-tu-hydro",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8b0e661816af91753e6b07ab27b6c96291e4d43f7ec27a1f9b25e002bf053849"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "hieu-ung-zeeman",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "aee13013981bb2a3b9a1eea5b833fa803771141a91ea1dbe3fc6501f0b3c3330"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "spin-electron",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8e8cd759fff72e4997271bb3ab4949158fbb5e24812b3eb6faa3347f64d1ca9f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "nguyen-tu-nhieu-electron",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "54849cbf58cf787c514bbd7cb4da264613a02cff78970157209169c2cc75f6c1"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "pho-tia-x",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "19a34616eb5a6d457ab52da179d5c8d31f3274e47f5afcba8c0a403483879997"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "topic": "roi-luong-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "29073dbc1586d6c8ebae84085e27f9374a14260035e76a7c4e3fe46a4a20b982"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "lien-ket-phan-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2ee7a0c2428c197ee3236294bb87be952a8a0f8dd969cb49a77dbe4e90405ec3"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "pho-phan-tu",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e801637c1cbc1d7b293b7cfbe3ba1448c9440323a9706bc12df6797586749080"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "cau-truc-chat-ran",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9279837418aedbaeba38788c0a9fbb286d4c050407b14c1daeca48fd88b27fe3"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "dai-nang-luong",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "802ee539f1d46072201a70a5f075c5d0a3f6bff4f03fdfc4324095ea4bb61c3c"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "mo-hinh-electron-tu-do",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9d4099b35bcecf5d7fb80d68900cd5ad6e2428a0c5a8778a3cd50419d112ac7d"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "chat-ban-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "eea3b0bb638d59cb26fb71256b7169b410c5b37424209f847426d198d8784192"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "thiet-bi-ban-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a25e2dd75f0d179d92463157c03eb2828b557dacf75525dfe18cb38ced1be8d6"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "topic": "sieu-dan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b456fafb980b18b42b364a9aa031b38f61323f9370939a36461d9d40299a039c"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "tinh-chat-hat-nhan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5ecfb69a749cc73c68ba3fbe8ddb2c44b9f1eb95f283f337175c076aeaa6d967"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "nang-luong-lien-ket",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b003fe5b1caffc70342c6b571a6e0c912a581cbc60d06e53ae6621fb0f18be44"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "on-dinh-va-phong-xa",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f99790da6a38b4dba692af693cf4a30fc2cdc747d9bcd96db04d7aa6024573d7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "hoat-do-va-chu-ky-ban-ra",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "39bb8032b404620c1e406330b7f13993202c22a75a7493d25cbc19052982b6da"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "tac-dung-sinh-hoc",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4ea49532c765ab0242cb5a10173ff37b52d203bc7926e42747cd24267a1744ad"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "phan-ung-hat-nhan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "38ef2d7ffb92f507f8440dbf765eeb196b276e17cd04dbd7b80d4c4cd9be3d62"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "phan-hach",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "eeb9fd255032cdaa327a70c3100f6fa868ddd3e20911a518a6dc00142ef1920b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "topic": "nhiet-hach",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d82c114643fa621261e10259e8dbfd99e052464705cb562e95f4c7c12cb05059"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "topic": "lich-su-hat-co-ban",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7b423b460aeb5e9e69ef852fddc1911c70ff6804a1574f6e0a6a026f74a568bd"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "topic": "may-gia-toc-va-detector",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b75527e33b3d75057c69df113f84c2912de259b1c155f14963ffcee37acb6f69"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "topic": "hat-va-tuong-tac",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5dc54b100f2cbe641b40caa4704635b07c65b8af5d5778c5565282aeb0d0aa81"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "topic": "quark-va-gluon",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5156ea3e2978fb5f36830fe86fdc93e6681255175f447d7b73bd199b36942c0f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "topic": "mo-hinh-chuan",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f28a175d5261f4db73350f83bfaa4d1a172d70a3a2aaf8cda93748d80456715c"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "topic": "vu-tru-gian-no",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ec56d1f04faa9d89c567ab97c632c7fb6e3a632cb2e6d4d5f2251a2cdf9e38d7"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "topic": "khoi-dau-thoi-gian",
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c8ea48e9784d14c5d5c41b63691cf6cb342b1328767fa6459e4170ea7db46273"
+        }
+      ]
+    },
+    {
+      "kind": "cheatsheets",
+      "pages": 44,
+      "cases": 220,
+      "startedUTC": "2026-10-29T08:04:08.278Z",
+      "completedUTC": "2026-10-29T08:06:31.484Z",
+      "entries": [
+        {
+          "course": "vat-ly-1",
+          "chapter": 1,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "840faa0c6c5b1ae32a0ce1df2479b9dcbdd3498b3c6a38ec0a7d06894734651b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 2,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "03d037383f4442020e47e88f62cd248d49745b6ec14486e78dcde953d0fa9162"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 3,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "46e2affdbabf417cb34d73baf7871ec75a826998dca47600e288364998d9c192"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 4,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "cbbfe6d7c97926597e5b507b70b41be87520426a12b391153e7568eb4a63a26a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 5,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "7a1e270c49c89cae8686f09b3d63873462d8a50486f4621f592d89e2144d2e03"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 6,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b73f10a3146a1880b195013ffcd5527d185d6bca8aecfb76849d48a8569e3a12"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 7,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "97519ad0e684a00e8526b63a00394e749f680bb13791a446e6739d95b5a94a63"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 8,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4d70480d6d27add2b403e769c8abf7ee7900c56b8726d6035f35824610782e2b"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 9,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "fbb512e2556e25d2558877a239be37111d72c2508e064a5502efff1ee3f58d0a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 10,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "45e07f67cca394e1592012e3b927c343914bc771b3d42e957405b3411fe30785"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 11,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "561165c4c54dc90a136cc5cd5c3f84f18beaf3bd32a885798c2e551d0431d5f1"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 12,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "dd75466a462f9bc0af0d841685b939bbf2a6f269d90cb2a39fa7c60e19231e1d"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 13,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8f1ef8aea60b5e2501be919a785aca7d625f37cc8741ec05d83edce899ad092a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 14,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "10d87c9b012812e8fb8533c39d3c65d5543068e259af59bde8b543704acc9b26"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 15,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8a743be82063d359132e21048430831ef1b4e20a56d9d47fb023239160c4367a"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 16,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f20447aa99ed4e9c63cfb2a7deee5e7fe94142ea0f5cf5f663bfb47981efac0c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 17,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "76e9162cedcef68ae50465ff3992b437b9c4fcc0abd799dc1306c8c862671d6c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 18,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "befe5c42b6157552e8ac7c57b21425ce7b8d995f9a24209cc3e70be6172c528c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 19,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b18a6e5e8b9c8b53050b12caffeea8cc65d05e7436caac78517154cf2d2f6e2c"
+        },
+        {
+          "course": "vat-ly-1",
+          "chapter": 20,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "68ee8099091eabb1f2a2babb63082324bf7d497f068d26e6c0d5b7ce1e191749"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 21,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5ed92e22020b592df21bda2208a0fc3a67ef34711b618d892a8875d126878fde"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 22,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "15b2e91e4ed14629f3aa96ca7d1da02b49239330da2fcb7c020fe161c79fcb45"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 23,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d9688b1a8f188c9840893262dca1011e359b14e0d6788dd444e52d1fdb5faa1b"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 24,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "8c145df66054de9740c37f6f72f4c431dcdbbefd978eb44e89c6701232f37052"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 25,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "fc046f9febde611a8421159c2588aaa435b516383d96d57c193b7a1eb29c05ae"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 26,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "14fb0736f0b89a5f00ce20e2930ed03ccfd963ea0310b496504d7d874ebb43c8"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 27,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "20dae53753598ec9448b6444e8d59e2ea80b263e61a9b5062b812a5591848d70"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 28,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "e471851f41b79c67f352a0fcced5950a1ad49c12b1e32114bbc8f90e7c39c88f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 29,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "35dddcc2f230fba527e61fadee41f7525be53276d9c933ee5f7d7b6374d9f87f"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 30,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "b1be1ebd6e126cbea4d9031ec456cbf24ae1e194bd6216d00bb341a17b91c938"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 31,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "c0c5109c54e60e0df687a5dfd336273026f75d8af112108027d13b813cc52624"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 32,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d973de48c08bad432e514b2ded4b0cff968cf6a67cc20dd24f9ab60eac892d47"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 33,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "94221861b2f14e7e2108103d1601887708c4dd429268bb5b5ccaf402c581f364"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 34,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "9bcec017838f302d93d362242527b7bfafd06100561867dc19ac8721eed944aa"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 35,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "d2d61f62ba33fb128085c28f0fd75a3964b9532d3da217556f32d40a7b131c80"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 36,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "5c6ef32a1f434b3c1d30c7b3898bcdb2800d8bcd06b4c9c24df7e803ad03af2a"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 37,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "6693ff15cd9f160770ef94cd97ad3eecae6e89c23f9b8d59300b46c274d73f34"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 38,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2ed9b73415ffce21ebd59a3234b61ea91349dc3a82ba368b7964e2f70b674ca0"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 39,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "2dd53c14427e40c2c2e572b3d4c6101f302986d6af36ab276f6b656d7f0fbc60"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 40,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "ed99335e32bd9cf890effb117be3eaf57ae83f33593d22180f8e2976e8b24a56"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 41,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "4b08c21ace5572acbf3b8b40a450d47a09f0c59d14d4d8fb7267c439c1b995ee"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 42,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "a07bec03d41f5b73cce72f824af14a2d687ca2ebb2d166339527464e436711cf"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 43,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "568c08581ac8df7828445b9c2b838894154b4082982f03f6a92606738cd12277"
+        },
+        {
+          "course": "vat-ly-2",
+          "chapter": 44,
+          "status": "passed-observed-layout",
+          "cases": 5,
+          "issueObservations": 0,
+          "requestFailures": 0,
+          "detailSHA256": "f17fc72f5de5448719e47ba08497d4fb8e20a87cc6cf982596394ac8a067e1cb"
+        }
+      ]
+    }
+  ],
+  "pages": 375,
+  "cases": 1875,
+  "titleParserRepair": {
+    "reproduction": {
+      "input": "21.45 ••• CALC",
+      "before": "Bài tập 21: 45 ••• CALC",
+      "after": "Bài tập 21.45: ••• CALC"
+    },
+    "verifiedRendererCases": 62,
+    "skillTests": 39,
+    "cloudAndPublicVerification": "pending"
+  }
+}

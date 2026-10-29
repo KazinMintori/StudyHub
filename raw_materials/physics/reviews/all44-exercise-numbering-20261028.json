@@ -361,7 +361,7 @@
     {
       "chapter": 22,
       "numberedPrompts": 66,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 94,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 95,
       "actualPDFMaxEvidence": {
         "id": "22.66",
         "pdfPage": 766,
@@ -373,12 +373,16 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 759
+      }
     },
     {
       "chapter": 23,
       "numberedPrompts": 86,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 120,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 121,
       "actualPDFMaxEvidence": {
         "id": "23.86",
         "pdfPage": 800,
@@ -390,12 +394,16 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 792
+      }
     },
     {
       "chapter": 24,
       "numberedPrompts": 76,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 109,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 110,
       "actualPDFMaxEvidence": {
         "id": "24.76",
         "pdfPage": 831,
@@ -407,12 +415,16 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 824
+      }
     },
     {
       "chapter": 25,
       "numberedPrompts": 82,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 118,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 119,
       "actualPDFMaxEvidence": {
         "id": "25.82",
         "pdfPage": 863,
@@ -424,7 +436,11 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 856
+      }
     },
     {
       "chapter": 26,
@@ -667,7 +683,7 @@
     {
       "chapter": 40,
       "numberedPrompts": 70,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 109,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 110,
       "actualPDFMaxEvidence": {
         "id": "40.70",
         "pdfPage": 1379,
@@ -679,12 +695,16 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 1372
+      }
     },
     {
       "chapter": 41,
       "numberedPrompts": 73,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 110,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 111,
       "actualPDFMaxEvidence": {
         "id": "41.73",
         "pdfPage": 1427,
@@ -696,12 +716,16 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 1421
+      }
     },
     {
       "chapter": 42,
       "numberedPrompts": 58,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 94,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 95,
       "actualPDFMaxEvidence": {
         "id": "42.58",
         "pdfPage": 1460,
@@ -713,12 +737,16 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 1455
+      }
     },
     {
       "chapter": 43,
       "numberedPrompts": 77,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 109,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 110,
       "actualPDFMaxEvidence": {
         "id": "43.77",
         "pdfPage": 1502,
@@ -730,12 +758,16 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 1496
+      }
     },
     {
       "chapter": 44,
       "numberedPrompts": 59,
-      "observedEndUnitsIncludingGuidedDiscussionBridge": 84,
+      "observedEndUnitsIncludingGuidedDiscussionBridge": 85,
       "actualPDFMaxEvidence": {
         "id": "44.59",
         "pdfPage": 1544,
@@ -747,14 +779,89 @@
           42
         ]
       },
-      "sourceObservedGaps": []
+      "sourceObservedGaps": [],
+      "counterCorrection20261029": {
+        "existingBridgePreviouslyUncounted": true,
+        "sourceBridgePDFPage": 1540
+      }
     }
   ],
   "numberedPrompts": 3590,
-  "allObservedEndUnits": 5102,
+  "allObservedEndUnits": 5111,
   "physics2SolutionStages": {
     "units": 2551,
-    "missingStageLeads": 0
+    "missingStageLeads": 0,
+    "scope": "Historical lexical stage scan of 2551 units. The 9 now-counted existing bridging units need separate stage acceptance."
   },
-  "limits": "Independent originalPDFleadinggreen-number extraction matched all44currentnumberedmaxima; numberedIDsequencescontinuouswithoutduplicates. P1groupvalidator checksoneclosedsolutionpersourceID. P2lexicalscan accepts solution/details containers and summary/direction labels. Not a proof fullquestiongivens/subparts, explanations, illustrations and numericalanswersarecomplete/correct. Sourcegreen-numberextractionalsoseeslowsectionheadings/answerprefixes; maximaevidence stored for human review. No fullgoalcompleteclaim."
+  "limits": "Independent originalPDFleadinggreen-number extraction matched all44currentnumberedmaxima; numberedIDsequencescontinuouswithoutduplicates. P1groupvalidator checksoneclosedsolutionpersourceID. P2lexicalscan accepts solution/details containers and summary/direction labels. Not a proof fullquestiongivens/subparts, explanations, illustrations and numericalanswersarecomplete/correct. Sourcegreen-numberextractionalsoseeslowsectionheadings/answerprefixes; maximaevidence stored for human review. No fullgoalcompleteclaim.",
+  "countCorrection20261029": {
+    "scope": "Correct historical structural counters only, not proof of semantic correctness. All current end-unit identifiers collected from effective includes, answer appendices excluded.",
+    "totalCurrentUnits": 2560,
+    "historicalTotal": 2551,
+    "corrections": [
+      {
+        "chapter": 22,
+        "oldObserved": 94,
+        "currentObserved": 95,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 759
+      },
+      {
+        "chapter": 23,
+        "oldObserved": 120,
+        "currentObserved": 121,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 792
+      },
+      {
+        "chapter": 24,
+        "oldObserved": 109,
+        "currentObserved": 110,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 824
+      },
+      {
+        "chapter": 25,
+        "oldObserved": 118,
+        "currentObserved": 119,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 856
+      },
+      {
+        "chapter": 40,
+        "oldObserved": 109,
+        "currentObserved": 110,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 1372
+      },
+      {
+        "chapter": 41,
+        "oldObserved": 110,
+        "currentObserved": 111,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 1421
+      },
+      {
+        "chapter": 42,
+        "oldObserved": 94,
+        "currentObserved": 95,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 1455
+      },
+      {
+        "chapter": 43,
+        "oldObserved": 109,
+        "currentObserved": 110,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 1496
+      },
+      {
+        "chapter": 44,
+        "oldObserved": 84,
+        "currentObserved": 85,
+        "reason": "Existing bridging problem omitted by historical counter for this heading style. Current named unit retained once. Numbered sequence independently matches recorded actual PDF maximum.",
+        "sourceBridgePDFPage": 1540
+      }
+    ]
+  }
 }

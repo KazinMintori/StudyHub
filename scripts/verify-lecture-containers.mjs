@@ -41,7 +41,13 @@ const normalizationCases = [
   ['1: Nhận diện bốn thành phần', 'Bài tập 1: Nhận diện bốn thành phần'],
   ['1', 'Bài tập 1'],
   ['Bài 1', 'Bài tập 1'],
-  ['Bài tập 1', 'Bài tập 1']
+  ['Bài tập 1', 'Bài tập 1'],
+  ['21.1 ••', 'Bài tập 21.1: ••'],
+  ['21.45 ••• CALC', 'Bài tập 21.45: ••• CALC'],
+  ['21.45. Hai thanh tích điện', 'Bài tập 21.45: Hai thanh tích điện'],
+  ['1.2.1 Tính công', 'Bài tập 1.2.1: Tính công'],
+  ['VP21.4.1', 'Bài tập: VP21.4.1'],
+  ['Q21.1', 'Bài tập: Q21.1']
 ]
 
 for (const [inputTitle, expectedTitle] of normalizationCases) {
