@@ -28,6 +28,8 @@ Không dùng các kiểm tra Notes trước đây để suy ra tab Bài tập c�
 
 Các phát hiện về bảng ở Q40.25 và bài 40.60 đã được sửa bằng cách hiển thị theo hàng trên điện thoại. Bảng số liệu truyền qua được chuyển từ hàng ngang sang năm cặp giá trị theo cột. Mọi giá trị được giữ nguyên. Ba phần bài tập giao thoa cũng đã được sửa, đạt thêm 25 trường hợp hiển thị cùng hai phần lượng tử. Các kiểm tra toán chạy lại đạt 32/32 và bộ kỹ năng đạt 39/39.
 
+Lượt sửa chương 39 tiếp theo đạt 30 trường hợp hiển thị ở sáu phần nội dung. Các công thức dài trong câu được tách tại quan hệ suy luận hoặc chuyển sang khối toán, giữ đủ dữ kiện và đơn vị. Bài 39.44 giữ ước lượng theo bề rộng phòng nhưng phân biệt rõ thang độ đó với độ lệch chuẩn của vị trí. Một nhận xét về tốc độ bay của muỗi không được dữ kiện hỗ trợ đã được bỏ. Những phép đổi đơn vị, phổ chuyển mức và giới hạn độ lệch chuẩn được kiểm lại bằng Python.
+
 ## Những lỗi thực tế đã sửa
 
 - Chương 2 có đề nhưng chưa đủ lời giải chi tiết. Đã bổ sung trọn bộ 127 đơn vị cuối chương, tách nhóm bài tập đúng cơ chế của trang và sửa các công thức bị tràn trong khung lời giải trên điện thoại.

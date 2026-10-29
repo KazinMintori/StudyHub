@@ -1,0 +1,411 @@
+{
+  "status": "accepted-private-course-update-awaiting-public-release",
+  "files": [
+    {
+      "file": "raw_materials/physics/translations/chapter-39/07-luyen-tap-huong-dan.md",
+      "oldSHA256": "42411794899886df1dc4fb50420bed381d4fff85e8c796101e8ec9f9c39516cd",
+      "newSHA256": "8645d0f45238a8ce894cae29eff4715b9a7ebdbc3a4cd89567a81192da6ed9d9",
+      "backup": "qa/physics-private-release-20261029/ch39-inline/07-luyen-tap-huong-dan.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-39/09-bai-tap-01-15.md",
+      "oldSHA256": "c423ddeb0ac9ee1aa50d8acb1800534054a2f00018dff6e35464a07182ed91d5",
+      "newSHA256": "8f5c950121c6b1b96f84e98ffaebed6e6ed53ab0718b4845604d6d93a01de5fd",
+      "backup": "qa/physics-private-release-20261029/ch39-inline/09-bai-tap-01-15.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-39/10-bai-tap-16-30.md",
+      "oldSHA256": "834bf4b9627a7857eb8f486fb1bfa6640fb3cd392b16ea7b1bb2f5435469f203",
+      "newSHA256": "44fd2c1ea115a2d42f88c2ca6fd857f5f7e9e585275e277fc186f29b3ecaf3bb",
+      "backup": "qa/physics-private-release-20261029/ch39-inline/10-bai-tap-16-30.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-39/11-bai-tap-31-45.md",
+      "oldSHA256": "777b6ad466bfc63bdb6507cb0a5d12f25fe1f07a5c47daf286287748abbc82cd",
+      "newSHA256": "122c6594b6b1e336459379b488e3bbd5f279415b66c94c308f06bcaf264529c6",
+      "backup": "qa/physics-private-release-20261029/ch39-inline/11-bai-tap-31-45.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-39/12-bai-tap-46-60.md",
+      "oldSHA256": "075ec0f86121435ba7587bcdeeb4c8fc4d184b6b2df01aa693edefb7050bfef3",
+      "newSHA256": "be9b96c47628ecc75c75e0b5da2658ae9b423fcda86159f901410ce9ff9cdab2",
+      "backup": "qa/physics-private-release-20261029/ch39-inline/12-bai-tap-46-60.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-39/13-bai-tap-61-75.md",
+      "oldSHA256": "99cafb7888eee0c23e6095d54da71a42c6e824a3fc8a7902e429bee3d25d5fc5",
+      "newSHA256": "c2e37b6d2b6847765a96fee4dec29a909b23c5aa3e01ddd2150c3e7429fa76ca",
+      "backup": "qa/physics-private-release-20261029/ch39-inline/13-bai-tap-61-75.md.before"
+    },
+    {
+      "file": "src/content/courses/vat-ly-2/lectures/19-song-vat-chat/content.json",
+      "oldSHA256": "771cb2b599b23a5a121e0558307f9ea991a1e1a3cd694176329f40aea1d711cf",
+      "newSHA256": "62a7ad85a19b2e951de07c7c637449a12e22f40ef8a315f7e6263f58b8bdfb90",
+      "backup": "qa/physics-private-release-20261029/ch39-inline/content-index.before.json",
+      "upstreamMetadataPreservedOnlyAffectedLinesUpdated": true
+    }
+  ],
+  "sourcePDFPagesRead": [
+    1334,
+    1336
+  ],
+  "preserved": "All exercise headings, containers, image declarations, original givens and requested subparts.",
+  "semanticClarification": "39.44 preserves the original room-scale estimate but distinguishes it from a maximal standard deviation. Removed an unsupported mosquito-speed statistic and an absolute measurement claim.",
+  "cases": [
+    {
+      "group": "theory-07-luyen-tap-huong-dan",
+      "width": 320,
+      "issues": [],
+      "formulas": 206,
+      "visibleFormulas": 206,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-07-luyen-tap-huong-dan",
+      "width": 360,
+      "issues": [],
+      "formulas": 206,
+      "visibleFormulas": 206,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-07-luyen-tap-huong-dan",
+      "width": 375,
+      "issues": [],
+      "formulas": 206,
+      "visibleFormulas": 206,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-07-luyen-tap-huong-dan",
+      "width": 768,
+      "issues": [],
+      "formulas": 206,
+      "visibleFormulas": 206,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-07-luyen-tap-huong-dan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 206,
+      "visibleFormulas": 206,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-09-bai-tap-01-15",
+      "width": 320,
+      "issues": [],
+      "formulas": 220,
+      "visibleFormulas": 220,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-09-bai-tap-01-15",
+      "width": 360,
+      "issues": [],
+      "formulas": 220,
+      "visibleFormulas": 220,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-09-bai-tap-01-15",
+      "width": 375,
+      "issues": [],
+      "formulas": 220,
+      "visibleFormulas": 220,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-09-bai-tap-01-15",
+      "width": 768,
+      "issues": [],
+      "formulas": 220,
+      "visibleFormulas": 220,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-09-bai-tap-01-15",
+      "width": 1440,
+      "issues": [],
+      "formulas": 220,
+      "visibleFormulas": 220,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-10-bai-tap-16-30",
+      "width": 320,
+      "issues": [],
+      "formulas": 387,
+      "visibleFormulas": 387,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-10-bai-tap-16-30",
+      "width": 360,
+      "issues": [],
+      "formulas": 387,
+      "visibleFormulas": 387,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-10-bai-tap-16-30",
+      "width": 375,
+      "issues": [],
+      "formulas": 387,
+      "visibleFormulas": 387,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-10-bai-tap-16-30",
+      "width": 768,
+      "issues": [],
+      "formulas": 387,
+      "visibleFormulas": 387,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-10-bai-tap-16-30",
+      "width": 1440,
+      "issues": [],
+      "formulas": 387,
+      "visibleFormulas": 387,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-11-bai-tap-31-45",
+      "width": 320,
+      "issues": [],
+      "formulas": 315,
+      "visibleFormulas": 315,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-11-bai-tap-31-45",
+      "width": 360,
+      "issues": [],
+      "formulas": 315,
+      "visibleFormulas": 315,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-11-bai-tap-31-45",
+      "width": 375,
+      "issues": [],
+      "formulas": 315,
+      "visibleFormulas": 315,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-11-bai-tap-31-45",
+      "width": 768,
+      "issues": [],
+      "formulas": 315,
+      "visibleFormulas": 315,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-11-bai-tap-31-45",
+      "width": 1440,
+      "issues": [],
+      "formulas": 315,
+      "visibleFormulas": 315,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-12-bai-tap-46-60",
+      "width": 320,
+      "issues": [],
+      "formulas": 385,
+      "visibleFormulas": 385,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-12-bai-tap-46-60",
+      "width": 360,
+      "issues": [],
+      "formulas": 385,
+      "visibleFormulas": 385,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-12-bai-tap-46-60",
+      "width": 375,
+      "issues": [],
+      "formulas": 385,
+      "visibleFormulas": 385,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-12-bai-tap-46-60",
+      "width": 768,
+      "issues": [],
+      "formulas": 385,
+      "visibleFormulas": 385,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-12-bai-tap-46-60",
+      "width": 1440,
+      "issues": [],
+      "formulas": 385,
+      "visibleFormulas": 385,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-13-bai-tap-61-75",
+      "width": 320,
+      "issues": [],
+      "formulas": 340,
+      "visibleFormulas": 340,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 1,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-13-bai-tap-61-75",
+      "width": 360,
+      "issues": [],
+      "formulas": 340,
+      "visibleFormulas": 340,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 1,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-13-bai-tap-61-75",
+      "width": 375,
+      "issues": [],
+      "formulas": 340,
+      "visibleFormulas": 340,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 1,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-13-bai-tap-61-75",
+      "width": 768,
+      "issues": [],
+      "formulas": 340,
+      "visibleFormulas": 340,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 1,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-13-bai-tap-61-75",
+      "width": 1440,
+      "issues": [],
+      "formulas": 340,
+      "visibleFormulas": 340,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 1,
+      "images": 0,
+      "captions": 0
+    }
+  ],
+  "parentNumericVerifier": "qa/physics-private-release-20261029/ch39-inline/verify-parent.py",
+  "limits": "Six corrected fragments at five widths only. Complete public course behavior and source-semantic coverage remain separate.",
+  "privateRevision": "6142de4abeb8bf71026b854a2efce631f25c78ab",
+  "newOwnedVerifierPath": "raw_materials/physics/verify_chapter39_layout_parent_20261029.py",
+  "fullMathCheck": {
+    "exitCode": 0,
+    "tests": 32,
+    "pages": 1508,
+    "includes": 588,
+    "uniqueAllDataFormulas": 58382,
+    "uniqueMarkdownMathTokens": 56106
+  },
+  "skillTests": {
+    "tests": 39,
+    "exitCode": 0
+  },
+  "lectureCheck": {
+    "lessons": 1,
+    "topics": 6,
+    "errors": 0,
+    "warnings": 0
+  },
+  "allOtherManifestEntriesAndTimestampsPreserved": true,
+  "exactPrivateSourceBinding": "All eight modified source/index/verifier files match the pinned package manifest.",
+  "fullGoalComplete": false
+}

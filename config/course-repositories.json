@@ -422,7 +422,7 @@
     {
       "id": "vat-ly-2",
       "repository": "KazinMintori/StudyHub-course-vat-ly-2",
-      "revision": "3648ed43f4e7ef92d8eb760f277a542b4d8dbbaa",
+      "revision": "6142de4abeb8bf71026b854a2efce631f25c78ab",
       "paths": [
         "docs/.vitepress/physics-ac-course.mjs",
         "docs/.vitepress/physics-ac-foundations.mjs",
@@ -932,7 +932,8 @@
         "raw_materials/physics/verify_chapter44_theory_b.py",
         "raw_materials/vat-ly-2/**",
         "src/content/courses/vat-ly-2/**",
-        "raw_materials/physics/verify_late_math_parent_20261029.py"
+        "raw_materials/physics/verify_late_math_parent_20261029.py",
+        "raw_materials/physics/verify_chapter39_layout_parent_20261029.py"
       ]
     },
     {
