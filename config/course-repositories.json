@@ -41,7 +41,7 @@
     {
       "id": "xu-ly-du-lieu",
       "repository": "KazinMintori/StudyHub-course-xu-ly-du-lieu",
-      "revision": "ce14804bf591fb694955ba24ffe808642fc2c183",
+      "revision": "7ff393eaa5a6f54c2dd138d4fa3537e5745a211c",
       "paths": [
         "docs/.vitepress/data-processing-course.mjs",
         "docs/.vitepress/data-processing-foundations.mjs",
@@ -50,7 +50,8 @@
         "docs/public/materials/xu-ly-du-lieu/**",
         "docs/xu-ly-du-lieu/**",
         "raw_materials/xu-ly-du-lieu/**",
-        "src/content/courses/xu-ly-du-lieu/**"
+        "src/content/courses/xu-ly-du-lieu/**",
+        "examples/airbnb-porto/**"
       ]
     },
     {
@@ -936,13 +937,14 @@
     {
       "id": "giai-thuat-du-lieu",
       "repository": "KazinMintori/StudyHub-course-giai-thuat-du-lieu",
-      "revision": "f698cbba6f774b33dede1f0d83deb8d18cb3feb7",
+      "revision": "ab205116d826e4a9e1d58e1f01ca803cba883c6f",
       "paths": [
         "docs/giai-thuat-du-lieu/**",
         "docs/public/img/**",
         "docs/public/materials/lec-03/**",
         "raw_materials/giai-thuat-du-lieu/**",
-        "src/content/courses/giai-thuat-du-lieu/**"
+        "src/content/courses/giai-thuat-du-lieu/**",
+        "materials/lec-03/code/**"
       ]
     },
     {

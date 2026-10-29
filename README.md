@@ -1,130 +1,47 @@
-# StudyHub — Nền Tảng Bài Giảng & Ôn Tập UET
+# StudyHub
 
-**StudyHub** là website tài liệu học tập, giáo trình chuyên sâu và bài giảng ôn tập chất lượng cao dành cho sinh viên trường Đại học Công nghệ (UET) - Đại học Quốc gia Hà Nội. Trang web được xây dựng nhằm mang đến trải nghiệm học tập tập trung, khoa học và trực quan trên nền tảng VitePress.
+StudyHub là website bài giảng và tài liệu học tập dành cho sinh viên Trường Đại học Công nghệ, Đại học Quốc gia Hà Nội. Bạn có thể đọc bài theo từng học phần, ôn lại kiến thức nền và luyện tập qua các bài có hướng dẫn giải.
 
-- **Website trực tuyến**: [kazinmintori.github.io/StudyHub](https://kazinmintori.github.io/StudyHub/)
-- **Mã nguồn**: [KazinMintori/StudyHub](https://github.com/KazinMintori/StudyHub)
+**[Truy cập StudyHub](https://kazinmintori.github.io/StudyHub/)**
 
----
+## Đọc bài và hiểu kiến thức
 
-## 1. Điểm Nổi Bật
+Các học phần bao quát toán học, trí tuệ nhân tạo, thuật toán, xử lý dữ liệu, vật lý và triết học. Bài học được sắp xếp theo trình tự của từng môn để bạn dễ chọn điểm bắt đầu và theo dõi phần đang học.
 
-### Mô hình bài giảng 4-trong-1
-Mỗi bài học trên StudyHub là một thực thể hoàn chỉnh, tích hợp 4 góc độ tiếp cận trên cùng một giao diện:
-- **Notes (Giáo trình chi tiết)**: Lập luận chặt chẽ, mở các bước biến đổi toán học/thuật toán phức tạp, gắn liền bản chất lý thuyết với bài toán thực tiễn.
-- **Slides (Thẻ ôn tập nhanh)**: Dàn ý chắt lọc, công thức trọng tâm và ví dụ then chốt, giúp sinh viên nắm bắt nhanh cấu trúc bài học và ôn tập trước kỳ thi.
-- **Cheatsheet (Bảng tra cứu)**: Tổng hợp nhanh công thức cốt lõi, bảng tra cứu, quy tắc tính và các "bẫy thi" thường gặp.
-- **Kiến thức nền & Wiki Thuật ngữ**: Liên kết đa chiều giữa bài giảng và hệ thống Bách khoa khái niệm (`docs/wiki/`). Tự động nhận diện thuật ngữ, cung cấp định nghĩa, trực giác, ví dụ và câu hỏi tự kiểm tra.
+Tùy nội dung, mỗi bài có những phần hỗ trợ sau:
 
-### Chuẩn mực hiển thị toán học & Đồ họa
-- **Công thức TeX/KaTeX chuẩn mực**: Hiển thị sắc nét, tối ưu hóa giao diện chống tràn (tuyệt đối không xuất hiện thanh cuộn ngang) trên mọi kích thước màn hình, bao gồm cả thiết bị di động.
-- **Sơ đồ Mermaid & Mô phỏng tương tác**: Trực quan hóa các khái niệm trừu tượng thông qua component `<CodeIllustration />` (Tìm kiếm không gian trạng thái, Gradient Descent, Định lý Bayes, Mô phỏng điện trường, MapReduce,...).
+- **Notes**: Lời giảng chi tiết, ví dụ minh họa và các bước giải thích.
+- **Kiến thức nền**: Những khái niệm cần ôn trước hoặc tra cứu khi đọc bài.
+- **Bài tập**: Câu hỏi luyện tập, gợi ý và lời giải để tự đối chiếu.
+- **Cheatsheet**: Công thức, quy tắc và ký hiệu để tra cứu nhanh.
 
-### Góc học tập cá nhân hóa
-- **Đồng hồ Pomodoro**: Chế độ tập trung 25/50 phút, tự động duy trì thời gian khi chuyển trang hoặc tải lại.
-- **Bộ Flashcards**: Hệ thống thẻ phản xạ kiến thức theo từng học phần, lưu trữ tiến độ ghi nhớ.
-- **Sổ tay Markdown**: Ghi chú cá nhân riêng cho từng môn học, tự động lưu cục bộ (Local Storage), xem trước an toàn và hỗ trợ xuất file `.md`.
-- **Theo dõi tiến độ**: Đánh dấu bài đã học, tự động ghi nhớ và gợi ý tiếp tục bài học gần nhất từ trang chủ.
+Một số bài có sơ đồ hoặc mô phỏng tương tác để quan sát cách mô hình và thuật toán hoạt động.
 
----
+## Tra cứu khi cần
 
-## 2. Cấu Trúc Dự Án
+[Wiki thuật ngữ](https://kazinmintori.github.io/StudyHub/wiki/) giúp bạn tìm lại định nghĩa, ký hiệu, ví dụ và mối liên hệ giữa các khái niệm. Bạn cũng có thể dùng ô tìm kiếm trên website để tìm học phần, bài giảng hoặc chủ đề, kể cả khi gõ không dấu.
 
-```text
-StudyHub/
-├── src/
-│   ├── app/                  # Ghép giao diện và stylesheet
-│   ├── features/             # Chức năng, mỗi vùng có components/controllers/services
-│   ├── core/                 # Lưu trữ, đường dẫn, toán và sơ đồ dùng chung
-│   ├── config/               # Cấu hình tương tác
-│   └── content/courses/      # Mỗi môn và mỗi bài có module riêng
-├── config/                   # Cấu hình build và giữ sản phẩm sinh
-├── docs/                     # Markdown công khai, giữ nguyên URL
-│   └── .vitepress/           # Adapter VitePress và các điểm truy cập tương thích
-├── raw_materials/            # Nguồn biên soạn và đoạn được include trực tiếp
-└── scripts/                  # Đồng bộ nội dung, kiểm chứng và bảo trì
-```
+## Góc học tập của bạn
 
-Xem [ARCHITECTURE.md](ARCHITECTURE.md) để tìm nơi sửa từng chức năng, ranh giới giữa controller và service, cùng cấu trúc dữ liệu của từng bài giảng.
+[Góc học tập](https://kazinmintori.github.io/StudyHub/goc-hoc-tap.html) tập hợp các công cụ để tự học theo từng môn:
 
----
+- Ghi chú và lưu lại những điều cần nhớ.
+- Ôn tập bằng thẻ câu hỏi và đáp án.
+- Lập danh sách việc học và theo dõi phần đã hoàn thành.
+- Hẹn giờ tập trung theo thời lượng phù hợp.
+- Mở các mô phỏng của học phần.
 
-## 3. Cài Đặt & Chạy Cục Bộ
+Trang chủ có mục học tiếp để quay lại bài và đề mục bạn đang đọc. Giao diện hỗ trợ máy tính, điện thoại và chế độ sáng hoặc tối.
 
-### Yêu cầu môi trường
-- **Node.js**: Phiên bản 20 hoặc 22 trở lên.
-- **npm**: Đi kèm với Node.js.
+## Bắt đầu học
 
-### Khởi chạy môi trường phát triển
+1. Chọn một học phần ở [trang chủ](https://kazinmintori.github.io/StudyHub/).
+2. Mở bài cần học và xem phần kiến thức nền nếu cần ôn lại.
+3. Đọc Notes, tự làm bài tập rồi đối chiếu lời giải.
+4. Dùng Cheatsheet để hệ thống lại các ý chính và ghi chú phần còn vướng.
 
-```sh
-# 1. Cài đặt các gói phụ thuộc
-npm ci
+Bạn có thể xem thêm [hướng dẫn học](https://kazinmintori.github.io/StudyHub/guide/) để làm quen với các tiện ích trên website.
 
-# 2. Đồng bộ nội dung từ các repo học phần riêng tư
-npm run courses:sync
+## Góp ý cho bài học
 
-# 3. Khởi chạy máy chủ phát triển cục bộ
-npm run dev
-```
-
-Sau khi chạy lệnh, truy cập `http://localhost:5173` trên trình duyệt. Khi chỉnh sửa nội dung trong `docs/`, trang web sẽ tự động cập nhật (Hot Module Replacement).
-
-Git trên máy cần quyền đọc các repo học phần. Repo chính công khai quản lý giao diện và xuất bản, còn nội dung học phần được khóa theo commit trong `config/course-repositories.json`. Xem [quy trình biên soạn và đồng bộ học phần](docs/engineering/course-repositories.md).
-
-### Đóng gói & Xem trước bản tĩnh
-
-```sh
-# Xem trước bản đóng gói đã có trong docs/.vitepress/dist/
-npm run preview
-```
-
-Để chạy thử bản tĩnh bằng máy chủ HTTP đơn giản:
-
-```sh
-python -m http.server 8080 --directory docs/.vitepress/dist
-```
-
-Build toàn bộ chỉ được chạy trên GitHub Actions. Khi đã có bản đóng gói và cần thêm bản chuyển giao trong `dist/`, chạy `npm run export:static`. Đo dung lượng bằng `npm run audit:storage`.
-
-Mỗi khi có commit được đẩy lên nhánh `main`, quy trình GitHub Actions sẽ tự động kiểm tra, chạy `npm run ci:build` và xuất bản website lên GitHub Pages.
-
----
-
-## 4. Kiểm Thử & Đảm Bảo Chất Lượng
-
-Dự án áp dụng quy trình kiểm định nghiêm ngặt để đảm bảo chất lượng bài giảng và tính toàn vẹn của hệ thống:
-
-```sh
-# 1. Kiểm tra công thức, kể cả nội dung được chèn từ file nguồn
-npm run verify:math
-
-# 2. Kiểm tra liên kết catalog, Wiki, hình ảnh và cấu trúc bài giảng
-node .agents/skills/studyhub-lecture/scripts/check_lecture.mjs --all
-
-# 3. Chạy bộ bài kiểm thử tự động của skill biên soạn
-python -I .agents/skills/studyhub-lecture/scripts/tests/test_tools.py
-
-# 4. Kiểm tra cấu trúc, mô hình và quy tắc xử lý
-npm run verify:architecture
-node scripts/verification/verify-content-model.mjs
-npm test
-npm run test:features
-
-# 5. Chạy dev trên cổng 5183, rồi kiểm tra bằng terminal khác
-npm run dev -- --port 5183
-# PowerShell trong terminal kiểm tra:
-# $env:QA_URL = "http://127.0.0.1:5183"
-# npm run verify:refactor
-```
-
-Build toàn bộ và deploy được thực hiện trên GitHub Actions sau khi push lên `main`. Không chạy build toàn bộ trên máy cục bộ. Xem [Quy chuẩn hiển thị công thức](docs/engineering/math-rendering.md) để kiểm tra delimiter, nguồn include và bố cục toán trên điện thoại.
-
----
-
-## 5. Tiêu Chuẩn Sư Phạm & Biên Soạn
-
-Mọi bài giảng trên StudyHub tuân theo chuẩn mực:
-- **Chủ quyền bài giảng**: Là tài liệu giảng dạy độc lập, hoàn chỉnh, dẫn dắt trực quan từ bản chất vấn đề đến mô hình toán học và thuật toán.
-- **Chính xác tuyệt đối**: Giữ đúng giả thiết, miền xác định, các bước suy luận và số liệu tính toán.
-- **Không thanh cuộn trên công thức**: Mọi công thức toán học dài đều được bẻ dòng bằng `\begin{aligned}` với `\\` và `&`, đảm bảo giao diện đọc thoáng đãng trên cả máy tính lẫn điện thoại di động.
+Nếu thấy chỗ chưa rõ, lỗi hiển thị hoặc nội dung cần sửa, hãy dùng nút góp ý trên trang đang đọc. Nêu tên bài và vị trí cụ thể sẽ giúp việc kiểm tra thuận tiện hơn.

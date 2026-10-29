@@ -28,7 +28,7 @@ export function validateLock(lock) {
     if (!Array.isArray(course.paths) || !course.paths.length) throw Error(`Missing owned paths for ${course.id}`)
     for (const pattern of course.paths) {
       safePath(pattern)
-      if (!['docs/', 'src/content/courses/', 'raw_materials/'].some(prefix => pattern.startsWith(prefix)) || pattern.startsWith('docs/.vitepress/theme/') || pattern === 'docs/.vitepress/config.mjs') throw Error(`Course cannot own application code: ${pattern}`)
+      if (!['docs/', 'src/content/courses/', 'raw_materials/', 'examples/', 'materials/'].some(prefix => pattern.startsWith(prefix)) || pattern.startsWith('docs/.vitepress/theme/') || pattern === 'docs/.vitepress/config.mjs') throw Error(`Course cannot own application code: ${pattern}`)
     }
     ids.add(course.id); repositories.add(course.repository)
   }

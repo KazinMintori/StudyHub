@@ -1,9 +1,0 @@
-data/
-figures/
-reports/
-runs/
-cache/
-latest-run.json
-.env
-__pycache__/
-*.pyc
