@@ -16,7 +16,7 @@ export function sharedFrameworkAlias(file) {
 // Independently compiled VitePress batches can emit different framework
 // hashes. A second framework creates different injection symbols and Vue
 // effects. All page chunks must keep using the first document's runtime.
-export function sharedFrameworkPlugin() {
+export function sharedFrameworkPlugin({ buildRevision = buildKey } = {}) {
   let clientBuild = false
   return {
     name: 'studyhub-shared-framework',
@@ -37,13 +37,18 @@ export function sharedFrameworkPlugin() {
     buildStart() {
       if (clientBuild) this.emitFile({ type: 'chunk', id: entry, name: 'studyhub-runtime-exports', preserveSignature: 'strict' })
     },
+    // The alias contains the deployment revision. Salt consumer hashes before
+    // filenames are finalized so cached chunks cannot retain an older alias.
+    augmentChunkHash(chunk) {
+      if (clientBuild && chunk.name !== 'framework') return `studyhub-runtime:${buildRevision}`
+    },
     generateBundle(_options, bundle) {
       if (!clientBuild) return
       const framework = Object.values(bundle).find(chunk => chunk.type === 'chunk' && chunk.name === 'framework')
       if (!framework) throw Error('VitePress framework chunk was not emitted')
       if (framework.imports.length) throw Error('The shared framework must remain self-contained')
       const name = path.posix.basename(framework.fileName)
-      const proxyName = `framework-shared.${buildKey}.js`
+      const proxyName = `framework-shared.${buildRevision}.js`
       for (const chunk of Object.values(bundle)) {
         if (chunk.type === 'chunk' && chunk !== framework) chunk.code = chunk.code.replaceAll(name, proxyName)
       }
