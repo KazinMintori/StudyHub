@@ -93,6 +93,12 @@ try {
   const writes = await page.evaluate(() => window.navigationProbe.writes)
   assert(writes <= 1, `Repeated writes within one heading: ${writes}`)
   results.push('Scrolling within one heading does not repeatedly write storage')
+  const visibleHeading = await page.$eval('.lecture-notes-content h2[id]', element => {
+    scrollTo({ top: scrollY + element.getBoundingClientRect().top - 130, behavior: 'instant' })
+    return element.id
+  })
+  await page.waitForFunction(id => JSON.parse(localStorage.getItem('studyhub_last_lesson'))?.heading === id, {}, visibleHeading)
+  results.push('Bookmarks retain the visible Notes heading instead of a hidden exercise heading')
   await page.evaluate(() => scrollTo({ top: 900, behavior: 'instant' }))
   await delay(250)
   const savedY = await page.evaluate(() => scrollY)

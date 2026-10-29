@@ -371,6 +371,13 @@ test('cleanHeadingTitle strips zero-width spaces and whitespace', () => {
   assert.strictEqual(cleanHeadingTitle(null), '')
 })
 
+test('bookmarks ignore hidden exercise headings and closed solution headings', () => {
+  const reading = { id: 'reading', getBoundingClientRect: () => ({ top: 120, height: 32 }) }
+  const exercise = { id: 'exercise', getBoundingClientRect: () => ({ top: 0, height: 0 }) }
+  assert.equal(findActiveHeading([reading, exercise]), reading)
+  assert.equal(findActiveHeading([exercise]), null)
+})
+
 test('findActiveHeading returns the last heading at or above maxTop threshold', () => {
   const headings = [
     { id: 'h1', top: 50 },
