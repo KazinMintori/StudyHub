@@ -96,3 +96,11 @@ Việc lưu trữ nên tách rõ sản phẩm, bằng chứng cần giữ và t�
 - Sau khi bảo quản đầy đủ bằng chứng, mới dọn những worktree, tệp và tiến trình do công việc này tạo ra mà không còn cần thiết. Chưa tiến hành xóa các worktree đang cần giữ để kiểm tra.
 
 Báo cáo sẽ được chốt sau các bước này. Những tệp riêng của người dùng, bản PDF gốc và dữ liệu nền chưa được nhận không thuộc phạm vi tự ý xóa.
+
+## Lượt kiểm tra bổ sung ngày 29/10/2026
+
+Đã kiểm tra tab Bài tập của toàn bộ 20 chương Vật lý 1 trên bản công khai, gồm 2.551 đơn vị và 2.320 trường hợp hiển thị. Mỗi đơn vị được đối chiếu với danh mục đang dùng, có đúng một lời giải đóng mặc định, phần tóm tắt và hướng đi. Lượt này không ghi nhận lỗi tải tài nguyên hay hình học hiển thị. Kết quả không thay thế việc đối chiếu từng lập luận và phép tính.
+
+Lượt sửa Vật lý 2 tiếp theo đã kiểm tra 45 trường hợp hiển thị của các phần được sửa tại chương 23, 26, 29, 30, 32 và 42. Các phép tính liên quan được kiểm lại bằng Python, giữ nguyên chuỗi khai báo hình. Chương 42 được điều chỉnh phát biểu về điện tích trong vật liệu bán dẫn để phân biệt miền trung hòa và vùng điện tích không gian. Một công thức bị agent báo dài nhưng thực tế đạt giới hạn đã được giữ nguyên.
+
+Bản nguồn riêng tư được ghim tại commit `1b7fb77d67f468e492a46782dd2137edda8dc8b7`. Kiểm tra toán toàn dự án và build của chính bản ghim này chờ lượt GitHub Actions, không được suy ra từ kết quả của commit trước. Hồ sơ gồm `physics1-all-public-exercises-20261029.json` và `physics2-observed-formula-followup-20261029.json`.

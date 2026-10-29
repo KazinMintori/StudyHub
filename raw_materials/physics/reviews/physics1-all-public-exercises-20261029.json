@@ -1,0 +1,218 @@
+{
+  "status": "accepted-observed-public-physics1-exercise-layout-and-structure",
+  "scope": "All20Physics1 public exercise controllers, every published group/unit and every solution opened atfivewidths. P1privatepin7cdc8deafbcf301f12fd1e73055b59172fa3e885unchanged.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "status": "passed-observed-layout-and-structure",
+      "units": 129,
+      "expectedUnits": 129,
+      "cases": 120,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "6624ed5d097186632c0a74146ebedb4a1227627e54b5db0ce231dcd98a974d61"
+    },
+    {
+      "chapter": 2,
+      "status": "passed-observed-layout-and-structure",
+      "units": 127,
+      "expectedUnits": 127,
+      "cases": 125,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "f143693fd2d97189110986ad33be91296af73dede52379cefcf9458639fb8c90"
+    },
+    {
+      "chapter": 3,
+      "status": "passed-observed-layout-and-structure",
+      "units": 115,
+      "expectedUnits": 115,
+      "cases": 110,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "558be3b49b27b3490dea3fec751707a31ebfd6b047126d41ab3c5d3a11412026"
+    },
+    {
+      "chapter": 4,
+      "status": "passed-observed-layout-and-structure",
+      "units": 111,
+      "expectedUnits": 111,
+      "cases": 100,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "f78c39bcdaaaa551b8042e3b7acfe2d2eb72f8f0c564a08fe5ecc42a41de8e92"
+    },
+    {
+      "chapter": 5,
+      "status": "passed-observed-layout-and-structure",
+      "units": 159,
+      "expectedUnits": 159,
+      "cases": 140,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "0773e0195816f58fd2297eb1ed05251ef8fb9a8011cfba6de1f1d7b806c1ecd3"
+    },
+    {
+      "chapter": 6,
+      "status": "passed-observed-layout-and-structure",
+      "units": 134,
+      "expectedUnits": 134,
+      "cases": 120,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "e207fb44048d155a67c0f2cbb1382f2c62dc6c4dfdae5f1d4d11af17b326a6d1"
+    },
+    {
+      "chapter": 7,
+      "status": "passed-observed-layout-and-structure",
+      "units": 120,
+      "expectedUnits": 120,
+      "cases": 105,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "80e2c0fad9104ababed7244082f90747ce4a134fa6c9c938c1d10470fcc38537"
+    },
+    {
+      "chapter": 8,
+      "status": "passed-observed-layout-and-structure",
+      "units": 148,
+      "expectedUnits": 148,
+      "cases": 135,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "184938c29e8a921ca40429b9899ef0eae9854447af5db53c1f425adc3397385b"
+    },
+    {
+      "chapter": 9,
+      "status": "passed-observed-layout-and-structure",
+      "units": 130,
+      "expectedUnits": 130,
+      "cases": 115,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "c66fea4839ac50091860dd5fc7a06e301789af68f4d3ca8023035f6d2e405f79"
+    },
+    {
+      "chapter": 10,
+      "status": "passed-observed-layout-and-structure",
+      "units": 140,
+      "expectedUnits": 140,
+      "cases": 125,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "22ee8369193eaf91342ea33e2fe17e40fbaf7acde78c1a8c4aa990a7a9feb773"
+    },
+    {
+      "chapter": 11,
+      "status": "passed-observed-layout-and-structure",
+      "units": 133,
+      "expectedUnits": 133,
+      "cases": 120,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "2f811229e606465c4341264f47319dce8eaeaf6ede4c9ddbd543d8560ad254f6"
+    },
+    {
+      "chapter": 12,
+      "status": "passed-observed-layout-and-structure",
+      "units": 135,
+      "expectedUnits": 135,
+      "cases": 120,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "40839bf45d68203c1eb9a4918c4d407d4b0f4536253010f140db1d9a18782f81"
+    },
+    {
+      "chapter": 13,
+      "status": "passed-observed-layout-and-structure",
+      "units": 118,
+      "expectedUnits": 118,
+      "cases": 105,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "a5d1bd851c56259138bf21f0fa9fcf8f01d22077e2421a472d84c0dbc7dcab57"
+    },
+    {
+      "chapter": 14,
+      "status": "passed-observed-layout-and-structure",
+      "units": 128,
+      "expectedUnits": 128,
+      "cases": 115,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "2fb7c466fb5da6c2cb083d5af7902e67ae694541e7610cbda17a6fb954aca636"
+    },
+    {
+      "chapter": 15,
+      "status": "passed-observed-layout-and-structure",
+      "units": 114,
+      "expectedUnits": 114,
+      "cases": 105,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "a93b46c32db2e2d6f0868b46b14967715cb2c0999bcfb8154d252ddfcc6df0fd"
+    },
+    {
+      "chapter": 16,
+      "status": "passed-observed-layout-and-structure",
+      "units": 119,
+      "expectedUnits": 119,
+      "cases": 110,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "c53a148b6739774173976bbd98f9a5085b5642e908a9ad3986619c26e994265f"
+    },
+    {
+      "chapter": 17,
+      "status": "passed-observed-layout-and-structure",
+      "units": 160,
+      "expectedUnits": 160,
+      "cases": 140,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "97f8cef5ed8e94ea444dd936fb325fa3c79958266ffce3babada0e8fed85ae44"
+    },
+    {
+      "chapter": 18,
+      "status": "passed-observed-layout-and-structure",
+      "units": 130,
+      "expectedUnits": 130,
+      "cases": 120,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "628e5c5f8a3c5c9951fb108e0b8673e5caf94f70a3f908bbfa64f1c526b78e9a"
+    },
+    {
+      "chapter": 19,
+      "status": "passed-observed-layout-and-structure",
+      "units": 103,
+      "expectedUnits": 103,
+      "cases": 95,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "fd0683a9140248c0ca6137bdee322954d0ed38836ad3bcc3bb18904f9830f85a"
+    },
+    {
+      "chapter": 20,
+      "status": "passed-observed-layout-and-structure",
+      "units": 98,
+      "expectedUnits": 98,
+      "cases": 95,
+      "issues": 0,
+      "requestFailures": 0,
+      "detailEvidenceSHA256": "0c45943c46fe35ace94d8b19c9da01552bbc2fc5b2f08930bc6de0dde87439bd"
+    }
+  ],
+  "units": 2551,
+  "viewportCases": 2320,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "eachUnitHasOneInitiallyClosedSolutionAndSummaryDirectionLabels": true,
+  "limits": "UnitIDs/groupcompleteness andobservablelayout/structure only. Not every source assumption/calc/frame fidelity proved. Source/numeric/source-image acceptance remains separate.",
+  "fullGoalComplete": false
+}
