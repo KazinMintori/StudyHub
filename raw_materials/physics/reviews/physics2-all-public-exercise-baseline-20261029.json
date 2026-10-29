@@ -1,0 +1,4131 @@
+{
+  "status": "actual-public-exercise-findings-before-local-repair",
+  "scope": "All24Physics2 public exercise tabs, with all solutions opened at320/360/375/768/1440. Observation baseline before new local39-fragment fixes, not a current remaining-defect count.",
+  "chapters": [
+    {
+      "chapter": 21,
+      "status": "passed-layout-only",
+      "cases": 5,
+      "initial": {
+        "count": 154,
+        "allClosed": true
+      },
+      "issueCount": 0
+    },
+    {
+      "chapter": 22,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 97,
+        "allClosed": true
+      },
+      "issueCount": 2
+    },
+    {
+      "chapter": 23,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 123,
+        "allClosed": true
+      },
+      "issueCount": 29
+    },
+    {
+      "chapter": 24,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 112,
+        "allClosed": true
+      },
+      "issueCount": 10
+    },
+    {
+      "chapter": 25,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 121,
+        "allClosed": true
+      },
+      "issueCount": 20
+    },
+    {
+      "chapter": 26,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 124,
+        "allClosed": true
+      },
+      "issueCount": 35
+    },
+    {
+      "chapter": 27,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 118,
+        "allClosed": true
+      },
+      "issueCount": 33
+    },
+    {
+      "chapter": 28,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 121,
+        "allClosed": true
+      },
+      "issueCount": 21
+    },
+    {
+      "chapter": 29,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 112,
+        "allClosed": true
+      },
+      "issueCount": 23
+    },
+    {
+      "chapter": 30,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 104,
+        "allClosed": true
+      },
+      "issueCount": 7
+    },
+    {
+      "chapter": 31,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 104,
+        "allClosed": true
+      },
+      "issueCount": 91
+    },
+    {
+      "chapter": 32,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 82,
+        "allClosed": true
+      },
+      "issueCount": 21
+    },
+    {
+      "chapter": 33,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 102,
+        "allClosed": true
+      },
+      "issueCount": 9
+    },
+    {
+      "chapter": 34,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 148,
+        "allClosed": true
+      },
+      "issueCount": 2
+    },
+    {
+      "chapter": 35,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 91,
+        "allClosed": true
+      },
+      "issueCount": 6
+    },
+    {
+      "chapter": 36,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 103,
+        "allClosed": true
+      },
+      "issueCount": 2
+    },
+    {
+      "chapter": 37,
+      "status": "passed-layout-only",
+      "cases": 5,
+      "initial": {
+        "count": 102,
+        "allClosed": true
+      },
+      "issueCount": 0
+    },
+    {
+      "chapter": 38,
+      "status": "passed-layout-only",
+      "cases": 5,
+      "initial": {
+        "count": 75,
+        "allClosed": true
+      },
+      "issueCount": 0
+    },
+    {
+      "chapter": 39,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 126,
+        "allClosed": true
+      },
+      "issueCount": 13
+    },
+    {
+      "chapter": 40,
+      "status": "findings",
+      "cases": 5,
+      "initial": {
+        "count": 110,
+        "allClosed": true
+      },
+      "issueCount": 40
+    },
+    {
+      "chapter": 41,
+      "status": "passed-layout-only",
+      "cases": 5,
+      "initial": {
+        "count": 111,
+        "allClosed": true
+      },
+      "issueCount": 0
+    },
+    {
+      "chapter": 42,
+      "status": "passed-layout-only",
+      "cases": 5,
+      "initial": {
+        "count": 95,
+        "allClosed": true
+      },
+      "issueCount": 0
+    },
+    {
+      "chapter": 43,
+      "status": "passed-layout-only",
+      "cases": 5,
+      "initial": {
+        "count": 110,
+        "allClosed": true
+      },
+      "issueCount": 0
+    },
+    {
+      "chapter": 44,
+      "status": "passed-layout-only",
+      "cases": 5,
+      "initial": {
+        "count": 85,
+        "allClosed": true
+      },
+      "issueCount": 0
+    }
+  ],
+  "viewportCases": 120,
+  "chaptersWithFindings": 17,
+  "initialSolutionBoxes": 2630,
+  "allInitiallyClosed": true,
+  "cases": [
+    {
+      "chapter": 21,
+      "width": 320,
+      "issues": [],
+      "visibleFormulas": 1163,
+      "images": 40,
+      "solutions": 154
+    },
+    {
+      "chapter": 21,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 1163,
+      "images": 40,
+      "solutions": 154
+    },
+    {
+      "chapter": 21,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 1163,
+      "images": 40,
+      "solutions": 154
+    },
+    {
+      "chapter": 21,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 1163,
+      "images": 40,
+      "solutions": 154
+    },
+    {
+      "chapter": 21,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 1163,
+      "images": 40,
+      "solutions": 154
+    },
+    {
+      "chapter": 22,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 287.046875,
+          "available": 280,
+          "left": 21,
+          "right": 308.046875,
+          "unitId": "22.47"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 285.5,
+          "available": 280,
+          "left": 21,
+          "right": 306.5,
+          "unitId": "22.64"
+        }
+      ],
+      "visibleFormulas": 341,
+      "images": 32,
+      "solutions": 97
+    },
+    {
+      "chapter": 22,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 341,
+      "images": 32,
+      "solutions": 97
+    },
+    {
+      "chapter": 22,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 341,
+      "images": 32,
+      "solutions": 97
+    },
+    {
+      "chapter": 22,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 341,
+      "images": 32,
+      "solutions": 97
+    },
+    {
+      "chapter": 22,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 341,
+      "images": 32,
+      "solutions": 97
+    },
+    {
+      "chapter": 23,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 348.765625,
+          "available": 280,
+          "left": 21,
+          "right": 369.765625,
+          "unitId": "VP23.7.4"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.109375,
+          "available": 280,
+          "left": 21,
+          "right": 351.109375,
+          "unitId": "VP23.12.3"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 302.359375,
+          "available": 280,
+          "left": 21,
+          "right": 323.359375,
+          "unitId": "23.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 400.46875,
+          "available": 280,
+          "left": 21,
+          "right": 421.46875,
+          "unitId": "23.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 401.828125,
+          "available": 280,
+          "left": 21,
+          "right": 422.828125,
+          "unitId": "23.11"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 290.421875,
+          "available": 280,
+          "left": 21,
+          "right": 311.421875,
+          "unitId": "23.16"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 399.75,
+          "available": 280,
+          "left": 21,
+          "right": 420.75,
+          "unitId": "23.33"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 353.6875,
+          "available": 280,
+          "left": 21,
+          "right": 374.6875,
+          "unitId": "23.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 359.015625,
+          "available": 280,
+          "left": 21,
+          "right": 380.015625,
+          "unitId": "23.47"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 441.484375,
+          "available": 280,
+          "left": 21,
+          "right": 462.484375,
+          "unitId": "23.49"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 306.171875,
+          "available": 280,
+          "left": 21,
+          "right": 327.171875,
+          "unitId": "23.61"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 293.9375,
+          "available": 280,
+          "left": 21,
+          "right": 314.9375,
+          "unitId": "23.62"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 291.484375,
+          "available": 280,
+          "left": 21,
+          "right": 312.484375,
+          "unitId": "23.64"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 296.4375,
+          "available": 280,
+          "left": 21,
+          "right": 317.4375,
+          "unitId": "23.80"
+        }
+      ],
+      "visibleFormulas": 257,
+      "images": 21,
+      "solutions": 123
+    },
+    {
+      "chapter": 23,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 348.765625,
+          "available": 320,
+          "left": 21,
+          "right": 369.765625,
+          "unitId": "VP23.7.4"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.109375,
+          "available": 320,
+          "left": 21,
+          "right": 351.109375,
+          "unitId": "VP23.12.3"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 400.46875,
+          "available": 320,
+          "left": 21,
+          "right": 421.46875,
+          "unitId": "23.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 401.828125,
+          "available": 320,
+          "left": 21,
+          "right": 422.828125,
+          "unitId": "23.11"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 399.75,
+          "available": 320,
+          "left": 21,
+          "right": 420.75,
+          "unitId": "23.33"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 353.6875,
+          "available": 320,
+          "left": 21,
+          "right": 374.6875,
+          "unitId": "23.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 359.015625,
+          "available": 320,
+          "left": 21,
+          "right": 380.015625,
+          "unitId": "23.47"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 441.484375,
+          "available": 320,
+          "left": 21,
+          "right": 462.484375,
+          "unitId": "23.49"
+        }
+      ],
+      "visibleFormulas": 257,
+      "images": 21,
+      "solutions": 123
+    },
+    {
+      "chapter": 23,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 348.765625,
+          "available": 335,
+          "left": 21,
+          "right": 369.765625,
+          "unitId": "VP23.7.4"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 400.46875,
+          "available": 335,
+          "left": 21,
+          "right": 421.46875,
+          "unitId": "23.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 401.828125,
+          "available": 335,
+          "left": 21,
+          "right": 422.828125,
+          "unitId": "23.11"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 399.75,
+          "available": 335,
+          "left": 21,
+          "right": 420.75,
+          "unitId": "23.33"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 353.6875,
+          "available": 335,
+          "left": 21,
+          "right": 374.6875,
+          "unitId": "23.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 359.015625,
+          "available": 335,
+          "left": 21,
+          "right": 380.015625,
+          "unitId": "23.47"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 441.484375,
+          "available": 335,
+          "left": 21,
+          "right": 462.484375,
+          "unitId": "23.49"
+        }
+      ],
+      "visibleFormulas": 257,
+      "images": 21,
+      "solutions": 123
+    },
+    {
+      "chapter": 23,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 257,
+      "images": 21,
+      "solutions": 123
+    },
+    {
+      "chapter": 23,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 257,
+      "images": 21,
+      "solutions": 123
+    },
+    {
+      "chapter": 24,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 284.078125,
+          "available": 280,
+          "left": 21,
+          "right": 305.078125,
+          "unitId": "24.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 333.96875,
+          "available": 280,
+          "left": 21,
+          "right": 354.96875,
+          "unitId": "24.57"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 298.140625,
+          "available": 280,
+          "left": 21,
+          "right": 319.140625,
+          "unitId": "24.63"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 298.921875,
+          "available": 280,
+          "left": 21,
+          "right": 319.921875,
+          "unitId": "24.70"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 315.203125,
+          "available": 280,
+          "left": 21,
+          "right": 336.203125,
+          "unitId": "24.72"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.125,
+          "available": 280,
+          "left": 21,
+          "right": 351.125,
+          "unitId": "24.72"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.0625,
+          "available": 280,
+          "left": 21,
+          "right": 304.0625,
+          "unitId": "24.72"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 320.484375,
+          "available": 280,
+          "left": 21,
+          "right": 341.484375,
+          "unitId": "24.74"
+        }
+      ],
+      "visibleFormulas": 654,
+      "images": 24,
+      "solutions": 112
+    },
+    {
+      "chapter": 24,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 333.96875,
+          "available": 320,
+          "left": 21,
+          "right": 354.96875,
+          "unitId": "24.57"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.125,
+          "available": 320,
+          "left": 21,
+          "right": 351.125,
+          "unitId": "24.72"
+        }
+      ],
+      "visibleFormulas": 654,
+      "images": 24,
+      "solutions": 112
+    },
+    {
+      "chapter": 24,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 654,
+      "images": 24,
+      "solutions": 112
+    },
+    {
+      "chapter": 24,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 654,
+      "images": 24,
+      "solutions": 112
+    },
+    {
+      "chapter": 24,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 654,
+      "images": 24,
+      "solutions": 112
+    },
+    {
+      "chapter": 25,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 343.171875,
+          "available": 280,
+          "left": 21,
+          "right": 364.171875,
+          "unitId": "25.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 288.8125,
+          "available": 278,
+          "left": 21,
+          "right": 309.8125,
+          "unitId": "25.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 460.1875,
+          "available": 280,
+          "left": 21,
+          "right": 481.1875,
+          "unitId": "25.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 305.390625,
+          "available": 280,
+          "left": 21,
+          "right": 326.390625,
+          "unitId": "25.31"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 284.328125,
+          "available": 280,
+          "left": 21,
+          "right": 305.328125,
+          "unitId": "25.31"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 294.546875,
+          "available": 280,
+          "left": 21,
+          "right": 315.546875,
+          "unitId": "25.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 378,
+          "available": 280,
+          "left": 21,
+          "right": 399,
+          "unitId": "25.52"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 383.015625,
+          "available": 280,
+          "left": 21,
+          "right": 404.015625,
+          "unitId": "25.55"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 284.21875,
+          "available": 280,
+          "left": 21,
+          "right": 305.21875,
+          "unitId": "25.61"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 315.96875,
+          "available": 280,
+          "left": 21,
+          "right": 336.96875,
+          "unitId": "25.62"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 299.296875,
+          "available": 278,
+          "left": 21,
+          "right": 320.296875,
+          "unitId": "25.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 315.53125,
+          "available": 280,
+          "left": 21,
+          "right": 336.53125,
+          "unitId": "25.77"
+        }
+      ],
+      "visibleFormulas": 982,
+      "images": 21,
+      "solutions": 121
+    },
+    {
+      "chapter": 25,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 343.171875,
+          "available": 320,
+          "left": 21,
+          "right": 364.171875,
+          "unitId": "25.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 460.1875,
+          "available": 320,
+          "left": 21,
+          "right": 481.1875,
+          "unitId": "25.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 378,
+          "available": 320,
+          "left": 21,
+          "right": 399,
+          "unitId": "25.52"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 383.015625,
+          "available": 320,
+          "left": 21,
+          "right": 404.015625,
+          "unitId": "25.55"
+        }
+      ],
+      "visibleFormulas": 982,
+      "images": 21,
+      "solutions": 121
+    },
+    {
+      "chapter": 25,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 343.171875,
+          "available": 335,
+          "left": 21,
+          "right": 364.171875,
+          "unitId": "25.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 460.1875,
+          "available": 335,
+          "left": 21,
+          "right": 481.1875,
+          "unitId": "25.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 378,
+          "available": 335,
+          "left": 21,
+          "right": 399,
+          "unitId": "25.52"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 383.015625,
+          "available": 335,
+          "left": 21,
+          "right": 404.015625,
+          "unitId": "25.55"
+        }
+      ],
+      "visibleFormulas": 982,
+      "images": 21,
+      "solutions": 121
+    },
+    {
+      "chapter": 25,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 982,
+      "images": 21,
+      "solutions": 121
+    },
+    {
+      "chapter": 25,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 982,
+      "images": 21,
+      "solutions": 121
+    },
+    {
+      "chapter": 26,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 289.046875,
+          "available": 280,
+          "left": 21,
+          "right": 310.046875,
+          "unitId": "VP26.2.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 351.390625,
+          "available": 280,
+          "left": 21,
+          "right": 372.390625,
+          "unitId": "VP26.7.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 319.578125,
+          "available": 280,
+          "left": 21,
+          "right": 340.578125,
+          "unitId": "VP26.7.3"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 324.078125,
+          "available": 280,
+          "left": 21,
+          "right": 345.078125,
+          "unitId": "26.26"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 293.8125,
+          "available": 280,
+          "left": 21,
+          "right": 314.8125,
+          "unitId": "26.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 307.6875,
+          "available": 280,
+          "left": 21,
+          "right": 328.6875,
+          "unitId": "26.32"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 300.671875,
+          "available": 280,
+          "left": 21,
+          "right": 321.671875,
+          "unitId": "26.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 320.9375,
+          "available": 280,
+          "left": 21,
+          "right": 341.9375,
+          "unitId": "26.45"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.4375,
+          "available": 280,
+          "left": 21,
+          "right": 304.4375,
+          "unitId": "26.47"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 399.21875,
+          "available": 280,
+          "left": 21,
+          "right": 420.21875,
+          "unitId": "26.57"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 432.296875,
+          "available": 280,
+          "left": 21,
+          "right": 453.296875,
+          "unitId": "26.59"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 286.328125,
+          "available": 280,
+          "left": 21,
+          "right": 307.328125,
+          "unitId": "26.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 288.8125,
+          "available": 280,
+          "left": 21,
+          "right": 309.8125,
+          "unitId": "26.63"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 379.359375,
+          "available": 280,
+          "left": 21,
+          "right": 400.359375,
+          "unitId": "26.66"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 493.875,
+          "available": 280,
+          "left": 21,
+          "right": 514.875,
+          "unitId": "26.68"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 332.203125,
+          "available": 280,
+          "left": 21,
+          "right": 353.203125,
+          "unitId": "26.71"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 329.34375,
+          "available": 280,
+          "left": 21,
+          "right": 350.34375,
+          "unitId": "26.83"
+        },
+        {
+          "kind": "missing-image",
+          "src": "https://kazinmintori.github.io/StudyHub/assets/hinh-e26-07.BNx1iCvK.png",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 2171,
+      "images": 82,
+      "solutions": 124
+    },
+    {
+      "chapter": 26,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 351.390625,
+          "available": 320,
+          "left": 21,
+          "right": 372.390625,
+          "unitId": "VP26.7.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 324.078125,
+          "available": 320,
+          "left": 21,
+          "right": 345.078125,
+          "unitId": "26.26"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 399.21875,
+          "available": 320,
+          "left": 21,
+          "right": 420.21875,
+          "unitId": "26.57"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 432.296875,
+          "available": 320,
+          "left": 21,
+          "right": 453.296875,
+          "unitId": "26.59"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 379.359375,
+          "available": 320,
+          "left": 21,
+          "right": 400.359375,
+          "unitId": "26.66"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 493.875,
+          "available": 320,
+          "left": 21,
+          "right": 514.875,
+          "unitId": "26.68"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 332.203125,
+          "available": 320,
+          "left": 21,
+          "right": 353.203125,
+          "unitId": "26.71"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 329.34375,
+          "available": 320,
+          "left": 21,
+          "right": 350.34375,
+          "unitId": "26.83"
+        },
+        {
+          "kind": "missing-image",
+          "src": "https://kazinmintori.github.io/StudyHub/assets/hinh-e26-07.BNx1iCvK.png",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 2171,
+      "images": 82,
+      "solutions": 124
+    },
+    {
+      "chapter": 26,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 351.390625,
+          "available": 335,
+          "left": 21,
+          "right": 372.390625,
+          "unitId": "VP26.7.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 399.21875,
+          "available": 335,
+          "left": 21,
+          "right": 420.21875,
+          "unitId": "26.57"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 432.296875,
+          "available": 335,
+          "left": 21,
+          "right": 453.296875,
+          "unitId": "26.59"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 379.359375,
+          "available": 335,
+          "left": 21,
+          "right": 400.359375,
+          "unitId": "26.66"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 493.875,
+          "available": 335,
+          "left": 21,
+          "right": 514.875,
+          "unitId": "26.68"
+        },
+        {
+          "kind": "missing-image",
+          "src": "https://kazinmintori.github.io/StudyHub/assets/hinh-e26-07.BNx1iCvK.png",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 2171,
+      "images": 82,
+      "solutions": 124
+    },
+    {
+      "chapter": 26,
+      "width": 768,
+      "issues": [
+        {
+          "kind": "missing-image",
+          "src": "https://kazinmintori.github.io/StudyHub/assets/hinh-e26-07.BNx1iCvK.png",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 2171,
+      "images": 82,
+      "solutions": 124
+    },
+    {
+      "chapter": 26,
+      "width": 1440,
+      "issues": [
+        {
+          "kind": "missing-image",
+          "src": "https://kazinmintori.github.io/StudyHub/assets/hinh-e26-07.BNx1iCvK.png",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 2171,
+      "images": 82,
+      "solutions": 124
+    },
+    {
+      "chapter": 27,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 325.84375,
+          "available": 280,
+          "left": 20,
+          "right": 345.84375,
+          "unitId": "27.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.75,
+          "available": 278,
+          "left": 21,
+          "right": 304.75,
+          "unitId": "27.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 290.53125,
+          "available": 278,
+          "left": 21,
+          "right": 311.53125,
+          "unitId": "27.9"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 298.65625,
+          "available": 280,
+          "left": 21,
+          "right": 319.65625,
+          "unitId": "27.13"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 326.859375,
+          "available": 280,
+          "left": 21,
+          "right": 347.859375,
+          "unitId": "27.13"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 370.890625,
+          "available": 280,
+          "left": 21,
+          "right": 391.890625,
+          "unitId": "27.32"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 303.140625,
+          "available": 280,
+          "left": 21,
+          "right": 324.140625,
+          "unitId": "27.37"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 358.171875,
+          "available": 280,
+          "left": 21,
+          "right": 379.171875,
+          "unitId": "27.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 309.03125,
+          "available": 280,
+          "left": 21,
+          "right": 330.03125,
+          "unitId": "27.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 291.765625,
+          "available": 280,
+          "left": 21,
+          "right": 312.765625,
+          "unitId": "27.44"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 294.046875,
+          "available": 280,
+          "left": 21,
+          "right": 315.046875,
+          "unitId": "27.47"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.53125,
+          "available": 280,
+          "left": 21,
+          "right": 351.53125,
+          "unitId": "27.64"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 282.578125,
+          "available": 280,
+          "left": 21,
+          "right": 303.578125,
+          "unitId": "27.65"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 374.84375,
+          "available": 280,
+          "left": 21,
+          "right": 395.84375,
+          "unitId": null
+        },
+        {
+          "kind": "math-overflow",
+          "width": 411.125,
+          "available": 280,
+          "left": 21,
+          "right": 432.125,
+          "unitId": "27.70"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 303.53125,
+          "available": 280,
+          "left": 21,
+          "right": 324.53125,
+          "unitId": "27.73"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 301.078125,
+          "available": 280,
+          "left": 21,
+          "right": 322.078125,
+          "unitId": "27.73"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 331.046875,
+          "available": 280,
+          "left": 21,
+          "right": 352.046875,
+          "unitId": "27.75"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 301.8125,
+          "available": 280,
+          "left": 21,
+          "right": 322.8125,
+          "unitId": "27.77"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 309.484375,
+          "available": 280,
+          "left": 21,
+          "right": 330.484375,
+          "unitId": "27.81"
+        },
+        {
+          "kind": "page-overflow",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 2038,
+      "images": 38,
+      "solutions": 118
+    },
+    {
+      "chapter": 27,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 325.84375,
+          "available": 320,
+          "left": 20,
+          "right": 345.84375,
+          "unitId": "27.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 326.859375,
+          "available": 320,
+          "left": 21,
+          "right": 347.859375,
+          "unitId": "27.13"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 370.890625,
+          "available": 320,
+          "left": 21,
+          "right": 391.890625,
+          "unitId": "27.32"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 358.171875,
+          "available": 320,
+          "left": 21,
+          "right": 379.171875,
+          "unitId": "27.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.53125,
+          "available": 320,
+          "left": 21,
+          "right": 351.53125,
+          "unitId": "27.64"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 374.84375,
+          "available": 320,
+          "left": 21,
+          "right": 395.84375,
+          "unitId": null
+        },
+        {
+          "kind": "math-overflow",
+          "width": 411.125,
+          "available": 320,
+          "left": 21,
+          "right": 432.125,
+          "unitId": "27.70"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 331.046875,
+          "available": 320,
+          "left": 21,
+          "right": 352.046875,
+          "unitId": "27.75"
+        }
+      ],
+      "visibleFormulas": 2038,
+      "images": 38,
+      "solutions": 118
+    },
+    {
+      "chapter": 27,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 370.890625,
+          "available": 335,
+          "left": 21,
+          "right": 391.890625,
+          "unitId": "27.32"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 358.171875,
+          "available": 335,
+          "left": 21,
+          "right": 379.171875,
+          "unitId": "27.39"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 374.84375,
+          "available": 335,
+          "left": 21,
+          "right": 395.84375,
+          "unitId": null
+        },
+        {
+          "kind": "math-overflow",
+          "width": 411.125,
+          "available": 335,
+          "left": 21,
+          "right": 432.125,
+          "unitId": "27.70"
+        }
+      ],
+      "visibleFormulas": 2038,
+      "images": 38,
+      "solutions": 118
+    },
+    {
+      "chapter": 27,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 2038,
+      "images": 38,
+      "solutions": 118
+    },
+    {
+      "chapter": 27,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 2038,
+      "images": 38,
+      "solutions": 118
+    },
+    {
+      "chapter": 28,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 294.703125,
+          "available": 280,
+          "left": 21,
+          "right": 315.703125,
+          "unitId": "28.21"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 299.078125,
+          "available": 278,
+          "left": 21,
+          "right": 320.078125,
+          "unitId": "28.26"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 372,
+          "available": 280,
+          "left": 21,
+          "right": 393,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 370.28125,
+          "available": 280,
+          "left": 21,
+          "right": 391.28125,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 483.328125,
+          "available": 280,
+          "left": 21,
+          "right": 504.328125,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 532.71875,
+          "available": 280,
+          "left": 21,
+          "right": 553.71875,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 308.59375,
+          "available": 280,
+          "left": 21,
+          "right": 329.59375,
+          "unitId": "28.53"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 280.3125,
+          "available": 278,
+          "left": 21,
+          "right": 301.3125,
+          "unitId": "28.56"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 295.09375,
+          "available": 278,
+          "left": 21,
+          "right": 316.09375,
+          "unitId": "28.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 297.328125,
+          "available": 280,
+          "left": 21,
+          "right": 318.328125,
+          "unitId": "28.76"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 295.625,
+          "available": 280,
+          "left": 21,
+          "right": 316.625,
+          "unitId": "28.78"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 292.875,
+          "available": 280,
+          "left": 21,
+          "right": 313.875,
+          "unitId": "28.78"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 297.328125,
+          "available": 280,
+          "left": 21,
+          "right": 318.328125,
+          "unitId": "28.78"
+        }
+      ],
+      "visibleFormulas": 2003,
+      "images": 42,
+      "solutions": 121
+    },
+    {
+      "chapter": 28,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 372,
+          "available": 320,
+          "left": 21,
+          "right": 393,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 370.28125,
+          "available": 320,
+          "left": 21,
+          "right": 391.28125,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 483.328125,
+          "available": 320,
+          "left": 21,
+          "right": 504.328125,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 532.71875,
+          "available": 320,
+          "left": 21,
+          "right": 553.71875,
+          "unitId": "28.38"
+        }
+      ],
+      "visibleFormulas": 2003,
+      "images": 42,
+      "solutions": 121
+    },
+    {
+      "chapter": 28,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 372,
+          "available": 335,
+          "left": 21,
+          "right": 393,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 370.28125,
+          "available": 335,
+          "left": 21,
+          "right": 391.28125,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 483.328125,
+          "available": 335,
+          "left": 21,
+          "right": 504.328125,
+          "unitId": "28.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 532.71875,
+          "available": 335,
+          "left": 21,
+          "right": 553.71875,
+          "unitId": "28.38"
+        }
+      ],
+      "visibleFormulas": 2003,
+      "images": 42,
+      "solutions": 121
+    },
+    {
+      "chapter": 28,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 2003,
+      "images": 42,
+      "solutions": 121
+    },
+    {
+      "chapter": 28,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 2003,
+      "images": 42,
+      "solutions": 121
+    },
+    {
+      "chapter": 29,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 296.578125,
+          "available": 280,
+          "left": 20,
+          "right": 316.578125,
+          "unitId": "VP29.8.3"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 368.578125,
+          "available": 280,
+          "left": 20,
+          "right": 388.578125,
+          "unitId": "29.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 343.28125,
+          "available": 280,
+          "left": 21,
+          "right": 364.28125,
+          "unitId": "29.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 319.078125,
+          "available": 280,
+          "left": 21,
+          "right": 340.078125,
+          "unitId": "29.29"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 292.453125,
+          "available": 280,
+          "left": 21,
+          "right": 313.453125,
+          "unitId": "29.41"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 351.875,
+          "available": 280,
+          "left": 20,
+          "right": 371.875,
+          "unitId": "29.58"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 348.40625,
+          "available": 280,
+          "left": 21,
+          "right": 369.40625,
+          "unitId": "29.58"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 338.03125,
+          "available": 280,
+          "left": 21,
+          "right": 359.03125,
+          "unitId": "29.62"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 324.625,
+          "available": 280,
+          "left": 21,
+          "right": 345.625,
+          "unitId": "29.66"
+        },
+        {
+          "kind": "page-overflow",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 1334,
+      "images": 51,
+      "solutions": 112
+    },
+    {
+      "chapter": 29,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 368.578125,
+          "available": 320,
+          "left": 20,
+          "right": 388.578125,
+          "unitId": "29.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 343.28125,
+          "available": 320,
+          "left": 21,
+          "right": 364.28125,
+          "unitId": "29.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 351.875,
+          "available": 320,
+          "left": 20,
+          "right": 371.875,
+          "unitId": "29.58"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 348.40625,
+          "available": 320,
+          "left": 21,
+          "right": 369.40625,
+          "unitId": "29.58"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 338.03125,
+          "available": 320,
+          "left": 21,
+          "right": 359.03125,
+          "unitId": "29.62"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 324.625,
+          "available": 320,
+          "left": 21,
+          "right": 345.625,
+          "unitId": "29.66"
+        },
+        {
+          "kind": "page-overflow",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 1334,
+      "images": 51,
+      "solutions": 112
+    },
+    {
+      "chapter": 29,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 368.578125,
+          "available": 335,
+          "left": 20,
+          "right": 388.578125,
+          "unitId": "29.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 343.28125,
+          "available": 335,
+          "left": 21,
+          "right": 364.28125,
+          "unitId": "29.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 351.875,
+          "available": 335,
+          "left": 20,
+          "right": 371.875,
+          "unitId": "29.58"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 348.40625,
+          "available": 335,
+          "left": 21,
+          "right": 369.40625,
+          "unitId": "29.58"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 338.03125,
+          "available": 335,
+          "left": 21,
+          "right": 359.03125,
+          "unitId": "29.62"
+        },
+        {
+          "kind": "page-overflow",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 1334,
+      "images": 51,
+      "solutions": 112
+    },
+    {
+      "chapter": 29,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 1334,
+      "images": 51,
+      "solutions": 112
+    },
+    {
+      "chapter": 29,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 1334,
+      "images": 51,
+      "solutions": 112
+    },
+    {
+      "chapter": 30,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 282.234375,
+          "available": 280,
+          "left": 21,
+          "right": 303.234375,
+          "unitId": "30.52"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 326.140625,
+          "available": 280,
+          "left": 21,
+          "right": 347.140625,
+          "unitId": "30.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 299.859375,
+          "available": 280,
+          "left": 21,
+          "right": 320.859375,
+          "unitId": "30.69"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 299.859375,
+          "available": 280,
+          "left": 21,
+          "right": 320.859375,
+          "unitId": "30.69"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.984375,
+          "available": 280,
+          "left": 21,
+          "right": 348.984375,
+          "unitId": "30.71"
+        }
+      ],
+      "visibleFormulas": 1340,
+      "images": 29,
+      "solutions": 104
+    },
+    {
+      "chapter": 30,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 326.140625,
+          "available": 320,
+          "left": 21,
+          "right": 347.140625,
+          "unitId": "30.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.984375,
+          "available": 320,
+          "left": 21,
+          "right": 348.984375,
+          "unitId": "30.71"
+        }
+      ],
+      "visibleFormulas": 1340,
+      "images": 29,
+      "solutions": 104
+    },
+    {
+      "chapter": 30,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 1340,
+      "images": 29,
+      "solutions": 104
+    },
+    {
+      "chapter": 30,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 1340,
+      "images": 29,
+      "solutions": 104
+    },
+    {
+      "chapter": 30,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 1340,
+      "images": 29,
+      "solutions": 104
+    },
+    {
+      "chapter": 31,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 318.609375,
+          "available": 280,
+          "left": 21,
+          "right": 339.609375,
+          "unitId": "VP31.3.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.375,
+          "available": 280,
+          "left": 21,
+          "right": 304.375,
+          "unitId": "VP31.5.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 284.375,
+          "available": 280,
+          "left": 21,
+          "right": 305.375,
+          "unitId": "VP31.5.2"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.375,
+          "available": 280,
+          "left": 21,
+          "right": 304.375,
+          "unitId": "VP31.7.3"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.390625,
+          "available": 280,
+          "left": 21,
+          "right": 304.390625,
+          "unitId": "Q31.8"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 357.765625,
+          "available": 280,
+          "left": 21,
+          "right": 378.765625,
+          "unitId": "Q31.8"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 452.390625,
+          "available": 280,
+          "left": 21,
+          "right": 473.390625,
+          "unitId": "Q31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 453.46875,
+          "available": 280,
+          "left": 21,
+          "right": 474.46875,
+          "unitId": "Q31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 408.6875,
+          "available": 280,
+          "left": 21,
+          "right": 429.6875,
+          "unitId": "Q31.18"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 340.140625,
+          "available": 280,
+          "left": 21,
+          "right": 361.140625,
+          "unitId": "31.13"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.375,
+          "available": 280,
+          "left": 21,
+          "right": 304.375,
+          "unitId": "31.13"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 340.140625,
+          "available": 280,
+          "left": 21,
+          "right": 361.140625,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 295.328125,
+          "available": 280,
+          "left": 21,
+          "right": 316.328125,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 334.859375,
+          "available": 280,
+          "left": 21,
+          "right": 355.859375,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 312.203125,
+          "available": 280,
+          "left": 21,
+          "right": 333.203125,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 301.875,
+          "available": 280,
+          "left": 21,
+          "right": 322.875,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 291.765625,
+          "available": 280,
+          "left": 21,
+          "right": 312.765625,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.109375,
+          "available": 280,
+          "left": 21,
+          "right": 348.109375,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 313.25,
+          "available": 280,
+          "left": 21,
+          "right": 334.25,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 335.921875,
+          "available": 280,
+          "left": 21,
+          "right": 356.921875,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 287.578125,
+          "available": 280,
+          "left": 21,
+          "right": 308.578125,
+          "unitId": "31.17"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 311.5,
+          "available": 280,
+          "left": 21,
+          "right": 332.5,
+          "unitId": "31.20"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 355.0625,
+          "available": 280,
+          "left": 21,
+          "right": 376.0625,
+          "unitId": "31.20"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 295.328125,
+          "available": 280,
+          "left": 21,
+          "right": 316.328125,
+          "unitId": "31.20"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 301.90625,
+          "available": 280,
+          "left": 21,
+          "right": 322.90625,
+          "unitId": "31.23"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.546875,
+          "available": 280,
+          "left": 21,
+          "right": 351.546875,
+          "unitId": "31.23"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 283.375,
+          "available": 280,
+          "left": 21,
+          "right": 304.375,
+          "unitId": "31.23"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 355.0625,
+          "available": 280,
+          "left": 21,
+          "right": 376.0625,
+          "unitId": "31.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 295.328125,
+          "available": 280,
+          "left": 21,
+          "right": 316.328125,
+          "unitId": "31.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 310.28125,
+          "available": 280,
+          "left": 21,
+          "right": 331.28125,
+          "unitId": "31.27"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.296875,
+          "available": 280,
+          "left": 21,
+          "right": 348.296875,
+          "unitId": "31.27"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 361.453125,
+          "available": 280,
+          "left": 21,
+          "right": 382.453125,
+          "unitId": "31.28"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 302.59375,
+          "available": 280,
+          "left": 21,
+          "right": 323.59375,
+          "unitId": "31.28"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 316.734375,
+          "available": 280,
+          "left": 21,
+          "right": 337.734375,
+          "unitId": "31.28"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 362.515625,
+          "available": 280,
+          "left": 21,
+          "right": 383.515625,
+          "unitId": "31.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 342.78125,
+          "available": 280,
+          "left": 21,
+          "right": 363.78125,
+          "unitId": "31.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 306.40625,
+          "available": 280,
+          "left": 21,
+          "right": 327.40625,
+          "unitId": "31.43"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 350.296875,
+          "available": 280,
+          "left": 21,
+          "right": 371.296875,
+          "unitId": "31.53"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 323.875,
+          "available": 280,
+          "left": 21,
+          "right": 344.875,
+          "unitId": "31.54"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.9375,
+          "available": 280,
+          "left": 21,
+          "right": 348.9375,
+          "unitId": "31.54"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 298.296875,
+          "available": 280,
+          "left": 21,
+          "right": 319.296875,
+          "unitId": "31.58"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 445.109375,
+          "available": 280,
+          "left": 21,
+          "right": 466.109375,
+          "unitId": "31.59"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 299.9375,
+          "available": 280,
+          "left": 21,
+          "right": 320.9375,
+          "unitId": "31.59"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 422.390625,
+          "available": 280,
+          "left": 21,
+          "right": 443.390625,
+          "unitId": "31.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 423.5625,
+          "available": 280,
+          "left": 21,
+          "right": 444.5625,
+          "unitId": "31.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 304.125,
+          "available": 280,
+          "left": 21,
+          "right": 325.125,
+          "unitId": "31.68"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 311.015625,
+          "available": 280,
+          "left": 21,
+          "right": 332.015625,
+          "unitId": "31.68"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 354.203125,
+          "available": 280,
+          "left": 21,
+          "right": 375.203125,
+          "unitId": "31.68"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 272.0625,
+          "available": 258,
+          "left": 41,
+          "right": 313.0625,
+          "unitId": "31.70"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 271.0625,
+          "available": 258,
+          "left": 41,
+          "right": 312.0625,
+          "unitId": "31.72"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 264.890625,
+          "available": 260,
+          "left": 40,
+          "right": 304.890625,
+          "unitId": null
+        },
+        {
+          "kind": "math-overflow",
+          "width": 271.6875,
+          "available": 260,
+          "left": 40,
+          "right": 311.6875,
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 2945,
+      "images": 20,
+      "solutions": 104
+    },
+    {
+      "chapter": 31,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 357.765625,
+          "available": 320,
+          "left": 21,
+          "right": 378.765625,
+          "unitId": "Q31.8"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 452.390625,
+          "available": 320,
+          "left": 21,
+          "right": 473.390625,
+          "unitId": "Q31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 453.46875,
+          "available": 320,
+          "left": 21,
+          "right": 474.46875,
+          "unitId": "Q31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 408.6875,
+          "available": 320,
+          "left": 21,
+          "right": 429.6875,
+          "unitId": "Q31.18"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 340.140625,
+          "available": 320,
+          "left": 21,
+          "right": 361.140625,
+          "unitId": "31.13"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 340.140625,
+          "available": 320,
+          "left": 21,
+          "right": 361.140625,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 334.859375,
+          "available": 320,
+          "left": 21,
+          "right": 355.859375,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.109375,
+          "available": 320,
+          "left": 21,
+          "right": 348.109375,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 335.921875,
+          "available": 320,
+          "left": 21,
+          "right": 356.921875,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 355.0625,
+          "available": 320,
+          "left": 21,
+          "right": 376.0625,
+          "unitId": "31.20"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 330.546875,
+          "available": 320,
+          "left": 21,
+          "right": 351.546875,
+          "unitId": "31.23"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 355.0625,
+          "available": 320,
+          "left": 21,
+          "right": 376.0625,
+          "unitId": "31.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.296875,
+          "available": 320,
+          "left": 21,
+          "right": 348.296875,
+          "unitId": "31.27"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 361.453125,
+          "available": 320,
+          "left": 21,
+          "right": 382.453125,
+          "unitId": "31.28"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 362.515625,
+          "available": 320,
+          "left": 21,
+          "right": 383.515625,
+          "unitId": "31.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 342.78125,
+          "available": 320,
+          "left": 21,
+          "right": 363.78125,
+          "unitId": "31.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 350.296875,
+          "available": 320,
+          "left": 21,
+          "right": 371.296875,
+          "unitId": "31.53"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 323.875,
+          "available": 320,
+          "left": 21,
+          "right": 344.875,
+          "unitId": "31.54"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 327.9375,
+          "available": 320,
+          "left": 21,
+          "right": 348.9375,
+          "unitId": "31.54"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 445.109375,
+          "available": 320,
+          "left": 21,
+          "right": 466.109375,
+          "unitId": "31.59"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 422.390625,
+          "available": 320,
+          "left": 21,
+          "right": 443.390625,
+          "unitId": "31.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 423.5625,
+          "available": 320,
+          "left": 21,
+          "right": 444.5625,
+          "unitId": "31.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 354.203125,
+          "available": 320,
+          "left": 21,
+          "right": 375.203125,
+          "unitId": "31.68"
+        }
+      ],
+      "visibleFormulas": 2945,
+      "images": 20,
+      "solutions": 104
+    },
+    {
+      "chapter": 31,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 357.765625,
+          "available": 335,
+          "left": 21,
+          "right": 378.765625,
+          "unitId": "Q31.8"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 452.390625,
+          "available": 335,
+          "left": 21,
+          "right": 473.390625,
+          "unitId": "Q31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 453.46875,
+          "available": 335,
+          "left": 21,
+          "right": 474.46875,
+          "unitId": "Q31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 408.6875,
+          "available": 335,
+          "left": 21,
+          "right": 429.6875,
+          "unitId": "Q31.18"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 340.140625,
+          "available": 335,
+          "left": 21,
+          "right": 361.140625,
+          "unitId": "31.13"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 340.140625,
+          "available": 335,
+          "left": 21,
+          "right": 361.140625,
+          "unitId": "31.14"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 355.0625,
+          "available": 335,
+          "left": 21,
+          "right": 376.0625,
+          "unitId": "31.20"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 355.0625,
+          "available": 335,
+          "left": 21,
+          "right": 376.0625,
+          "unitId": "31.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 361.453125,
+          "available": 335,
+          "left": 21,
+          "right": 382.453125,
+          "unitId": "31.28"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 362.515625,
+          "available": 335,
+          "left": 21,
+          "right": 383.515625,
+          "unitId": "31.38"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 342.78125,
+          "available": 335,
+          "left": 21,
+          "right": 363.78125,
+          "unitId": "31.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 350.296875,
+          "available": 335,
+          "left": 21,
+          "right": 371.296875,
+          "unitId": "31.53"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 445.109375,
+          "available": 335,
+          "left": 21,
+          "right": 466.109375,
+          "unitId": "31.59"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 422.390625,
+          "available": 335,
+          "left": 21,
+          "right": 443.390625,
+          "unitId": "31.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 423.5625,
+          "available": 335,
+          "left": 21,
+          "right": 444.5625,
+          "unitId": "31.67"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 354.203125,
+          "available": 335,
+          "left": 21,
+          "right": 375.203125,
+          "unitId": "31.68"
+        }
+      ],
+      "visibleFormulas": 2945,
+      "images": 20,
+      "solutions": 104
+    },
+    {
+      "chapter": 31,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 2945,
+      "images": 20,
+      "solutions": 104
+    },
+    {
+      "chapter": 31,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 2945,
+      "images": 20,
+      "solutions": 104
+    },
+    {
+      "chapter": 32,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 308.28125,
+          "available": 280,
+          "left": 20,
+          "right": 328.28125,
+          "unitId": "VP32.7.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 347.234375,
+          "available": 280,
+          "left": 21,
+          "right": 368.234375,
+          "unitId": "VP32.7.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 492.21875,
+          "available": 280,
+          "left": 21,
+          "right": 513.21875,
+          "unitId": "32.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 540.734375,
+          "available": 280,
+          "left": 21,
+          "right": 561.734375,
+          "unitId": "32.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 415.828125,
+          "available": 280,
+          "left": 21,
+          "right": 436.828125,
+          "unitId": "32.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 336.65625,
+          "available": 280,
+          "left": 21,
+          "right": 357.65625,
+          "unitId": "32.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 290.578125,
+          "available": 280,
+          "left": 21,
+          "right": 311.578125,
+          "unitId": "32.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 318.21875,
+          "available": 280,
+          "left": 21,
+          "right": 339.21875,
+          "unitId": "32.50"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 396.625,
+          "available": 280,
+          "left": 21,
+          "right": 417.625,
+          "unitId": "32.53"
+        },
+        {
+          "kind": "page-overflow",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 1131,
+      "images": 7,
+      "solutions": 82
+    },
+    {
+      "chapter": 32,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 347.234375,
+          "available": 320,
+          "left": 21,
+          "right": 368.234375,
+          "unitId": "VP32.7.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 492.21875,
+          "available": 320,
+          "left": 21,
+          "right": 513.21875,
+          "unitId": "32.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 540.734375,
+          "available": 320,
+          "left": 21,
+          "right": 561.734375,
+          "unitId": "32.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 415.828125,
+          "available": 320,
+          "left": 21,
+          "right": 436.828125,
+          "unitId": "32.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 336.65625,
+          "available": 320,
+          "left": 21,
+          "right": 357.65625,
+          "unitId": "32.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 396.625,
+          "available": 320,
+          "left": 21,
+          "right": 417.625,
+          "unitId": "32.53"
+        }
+      ],
+      "visibleFormulas": 1131,
+      "images": 7,
+      "solutions": 82
+    },
+    {
+      "chapter": 32,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 347.234375,
+          "available": 335,
+          "left": 21,
+          "right": 368.234375,
+          "unitId": "VP32.7.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 492.21875,
+          "available": 335,
+          "left": 21,
+          "right": 513.21875,
+          "unitId": "32.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 540.734375,
+          "available": 335,
+          "left": 21,
+          "right": 561.734375,
+          "unitId": "32.6"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 415.828125,
+          "available": 335,
+          "left": 21,
+          "right": 436.828125,
+          "unitId": "32.30"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 396.625,
+          "available": 335,
+          "left": 21,
+          "right": 417.625,
+          "unitId": "32.53"
+        }
+      ],
+      "visibleFormulas": 1131,
+      "images": 7,
+      "solutions": 82
+    },
+    {
+      "chapter": 32,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 1131,
+      "images": 7,
+      "solutions": 82
+    },
+    {
+      "chapter": 32,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 1131,
+      "images": 7,
+      "solutions": 82
+    },
+    {
+      "chapter": 33,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 357.75,
+          "available": 280,
+          "left": 21,
+          "right": 378.75,
+          "unitId": "VP33.5.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 317.875,
+          "available": 280,
+          "left": 21,
+          "right": 338.875,
+          "unitId": "VP33.6.3"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 291.25,
+          "available": 280,
+          "left": 21,
+          "right": 312.25,
+          "unitId": "33.50"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 333.015625,
+          "available": 280,
+          "left": 20,
+          "right": 353.015625,
+          "unitId": "33.54"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 318.984375,
+          "available": 280,
+          "left": 21,
+          "right": 339.984375,
+          "unitId": "33.60"
+        },
+        {
+          "kind": "page-overflow",
+          "unitId": null
+        }
+      ],
+      "visibleFormulas": 852,
+      "images": 30,
+      "solutions": 102
+    },
+    {
+      "chapter": 33,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 357.75,
+          "available": 320,
+          "left": 21,
+          "right": 378.75,
+          "unitId": "VP33.5.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 333.015625,
+          "available": 320,
+          "left": 20,
+          "right": 353.015625,
+          "unitId": "33.54"
+        }
+      ],
+      "visibleFormulas": 852,
+      "images": 30,
+      "solutions": 102
+    },
+    {
+      "chapter": 33,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 357.75,
+          "available": 335,
+          "left": 21,
+          "right": 378.75,
+          "unitId": "VP33.5.1"
+        }
+      ],
+      "visibleFormulas": 852,
+      "images": 30,
+      "solutions": 102
+    },
+    {
+      "chapter": 33,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 852,
+      "images": 30,
+      "solutions": 102
+    },
+    {
+      "chapter": 33,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 852,
+      "images": 30,
+      "solutions": 102
+    },
+    {
+      "chapter": 34,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 288.5,
+          "available": 280,
+          "left": 21,
+          "right": 309.5,
+          "unitId": "34.64"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 288.203125,
+          "available": 280,
+          "left": 21,
+          "right": 309.203125,
+          "unitId": "34.107"
+        }
+      ],
+      "visibleFormulas": 1509,
+      "images": 33,
+      "solutions": 148
+    },
+    {
+      "chapter": 34,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 1509,
+      "images": 33,
+      "solutions": 148
+    },
+    {
+      "chapter": 34,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 1509,
+      "images": 33,
+      "solutions": 148
+    },
+    {
+      "chapter": 34,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 1509,
+      "images": 33,
+      "solutions": 148
+    },
+    {
+      "chapter": 34,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 1509,
+      "images": 33,
+      "solutions": 148
+    },
+    {
+      "chapter": 35,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 300.921875,
+          "available": 280,
+          "left": 21,
+          "right": 321.921875,
+          "unitId": "35.41"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 277.390625,
+          "available": 258,
+          "left": 41,
+          "right": 318.390625,
+          "unitId": "35.52"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 424.1875,
+          "available": 280,
+          "left": 21,
+          "right": 445.1875,
+          "unitId": "35.54"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 296.9375,
+          "available": 280,
+          "left": 21,
+          "right": 317.9375,
+          "unitId": "35.55"
+        }
+      ],
+      "visibleFormulas": 860,
+      "images": 11,
+      "solutions": 91
+    },
+    {
+      "chapter": 35,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 424.1875,
+          "available": 320,
+          "left": 21,
+          "right": 445.1875,
+          "unitId": "35.54"
+        }
+      ],
+      "visibleFormulas": 860,
+      "images": 11,
+      "solutions": 91
+    },
+    {
+      "chapter": 35,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 424.1875,
+          "available": 335,
+          "left": 21,
+          "right": 445.1875,
+          "unitId": "35.54"
+        }
+      ],
+      "visibleFormulas": 860,
+      "images": 11,
+      "solutions": 91
+    },
+    {
+      "chapter": 35,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 860,
+      "images": 11,
+      "solutions": 91
+    },
+    {
+      "chapter": 35,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 860,
+      "images": 11,
+      "solutions": 91
+    },
+    {
+      "chapter": 36,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 294.703125,
+          "available": 280,
+          "left": 21,
+          "right": 315.703125,
+          "unitId": "36.52"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 286,
+          "available": 280,
+          "left": 21,
+          "right": 307,
+          "unitId": "36.66"
+        }
+      ],
+      "visibleFormulas": 1125,
+      "images": 12,
+      "solutions": 103
+    },
+    {
+      "chapter": 36,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 1125,
+      "images": 12,
+      "solutions": 103
+    },
+    {
+      "chapter": 36,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 1125,
+      "images": 12,
+      "solutions": 103
+    },
+    {
+      "chapter": 36,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 1125,
+      "images": 12,
+      "solutions": 103
+    },
+    {
+      "chapter": 36,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 1125,
+      "images": 12,
+      "solutions": 103
+    },
+    {
+      "chapter": 37,
+      "width": 320,
+      "issues": [],
+      "visibleFormulas": 1440,
+      "images": 10,
+      "solutions": 102
+    },
+    {
+      "chapter": 37,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 1440,
+      "images": 10,
+      "solutions": 102
+    },
+    {
+      "chapter": 37,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 1440,
+      "images": 10,
+      "solutions": 102
+    },
+    {
+      "chapter": 37,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 1440,
+      "images": 10,
+      "solutions": 102
+    },
+    {
+      "chapter": 37,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 1440,
+      "images": 10,
+      "solutions": 102
+    },
+    {
+      "chapter": 38,
+      "width": 320,
+      "issues": [],
+      "visibleFormulas": 896,
+      "images": 6,
+      "solutions": 75
+    },
+    {
+      "chapter": 38,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 896,
+      "images": 6,
+      "solutions": 75
+    },
+    {
+      "chapter": 38,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 896,
+      "images": 6,
+      "solutions": 75
+    },
+    {
+      "chapter": 38,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 896,
+      "images": 6,
+      "solutions": 75
+    },
+    {
+      "chapter": 38,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 896,
+      "images": 6,
+      "solutions": 75
+    },
+    {
+      "chapter": 39,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 263,
+          "available": 258,
+          "left": 41,
+          "right": 304,
+          "unitId": "VP39.2.1"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 296.53125,
+          "available": 278,
+          "left": 21,
+          "right": 317.53125,
+          "unitId": "VP39.8.2"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 265.875,
+          "available": 258,
+          "left": 41,
+          "right": 306.875,
+          "unitId": "39.15"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 297.78125,
+          "available": 280,
+          "left": 20,
+          "right": 317.78125,
+          "unitId": "39.15"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 275.5625,
+          "available": 258,
+          "left": 41,
+          "right": 316.5625,
+          "unitId": "39.20"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 263.328125,
+          "available": 258,
+          "left": 41,
+          "right": 304.328125,
+          "unitId": "39.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 263.328125,
+          "available": 258,
+          "left": 41,
+          "right": 304.328125,
+          "unitId": "39.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 272.453125,
+          "available": 258,
+          "left": 41,
+          "right": 313.453125,
+          "unitId": "39.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 261.875,
+          "available": 258,
+          "left": 41,
+          "right": 302.875,
+          "unitId": "39.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 261.59375,
+          "available": 258,
+          "left": 41,
+          "right": 302.59375,
+          "unitId": "39.42"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 263.453125,
+          "available": 258,
+          "left": 41,
+          "right": 304.453125,
+          "unitId": "39.44"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 282.15625,
+          "available": 280,
+          "left": 20,
+          "right": 302.15625,
+          "unitId": "39.51"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 293.921875,
+          "available": 278,
+          "left": 21,
+          "right": 314.921875,
+          "unitId": "39.66"
+        }
+      ],
+      "visibleFormulas": 2541,
+      "images": 5,
+      "solutions": 126
+    },
+    {
+      "chapter": 39,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 2541,
+      "images": 5,
+      "solutions": 126
+    },
+    {
+      "chapter": 39,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 2541,
+      "images": 5,
+      "solutions": 126
+    },
+    {
+      "chapter": 39,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 2541,
+      "images": 5,
+      "solutions": 126
+    },
+    {
+      "chapter": 39,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 2541,
+      "images": 5,
+      "solutions": 126
+    },
+    {
+      "chapter": 40,
+      "width": 320,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 107.84375,
+          "available": 113.984375,
+          "left": 275.734375,
+          "right": 383.578125,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 107.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 529.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 91.328125,
+          "available": 113.984375,
+          "left": 275.734375,
+          "right": 367.0625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 99.71875,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 521.4375,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.296875,
+          "available": 113.984375,
+          "left": 275.734375,
+          "right": 351.03125,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.296875,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 497.015625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 21.4375,
+          "available": 21.4375,
+          "left": 331.359375,
+          "right": 352.796875,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 21.4375,
+          "available": 21.4375,
+          "left": 438.671875,
+          "right": 460.109375,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 21.4375,
+          "available": 21.4375,
+          "left": 545.984375,
+          "right": 567.421875,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 331.359375,
+          "right": 406.671875,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 438.671875,
+          "right": 513.984375,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 545.984375,
+          "right": 621.296875,
+          "unitId": "40.60"
+        }
+      ],
+      "visibleFormulas": 3319,
+      "images": 10,
+      "solutions": 110
+    },
+    {
+      "chapter": 40,
+      "width": 360,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 107.84375,
+          "available": 113.984375,
+          "left": 275.734375,
+          "right": 383.578125,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 107.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 529.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 91.328125,
+          "available": 113.984375,
+          "left": 275.734375,
+          "right": 367.0625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 99.71875,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 521.4375,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.296875,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 497.015625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 21.4375,
+          "available": 21.4375,
+          "left": 438.671875,
+          "right": 460.109375,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 21.4375,
+          "available": 21.4375,
+          "left": 545.984375,
+          "right": 567.421875,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 331.359375,
+          "right": 406.671875,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 438.671875,
+          "right": 513.984375,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 545.984375,
+          "right": 621.296875,
+          "unitId": "40.60"
+        }
+      ],
+      "visibleFormulas": 3319,
+      "images": 10,
+      "solutions": 110
+    },
+    {
+      "chapter": 40,
+      "width": 375,
+      "issues": [
+        {
+          "kind": "math-overflow",
+          "width": 107.84375,
+          "available": 113.984375,
+          "left": 275.734375,
+          "right": 383.578125,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 107.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 529.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 99.71875,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 521.4375,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 40.84375,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 462.5625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.296875,
+          "available": 113.984375,
+          "left": 421.71875,
+          "right": 497.015625,
+          "unitId": "Q40.25"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 21.4375,
+          "available": 21.4375,
+          "left": 438.671875,
+          "right": 460.109375,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 21.4375,
+          "available": 21.4375,
+          "left": 545.984375,
+          "right": 567.421875,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 331.359375,
+          "right": 406.671875,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 438.671875,
+          "right": 513.984375,
+          "unitId": "40.60"
+        },
+        {
+          "kind": "math-overflow",
+          "width": 75.3125,
+          "available": 75.3125,
+          "left": 545.984375,
+          "right": 621.296875,
+          "unitId": "40.60"
+        }
+      ],
+      "visibleFormulas": 3319,
+      "images": 10,
+      "solutions": 110
+    },
+    {
+      "chapter": 40,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 3319,
+      "images": 10,
+      "solutions": 110
+    },
+    {
+      "chapter": 40,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 3319,
+      "images": 10,
+      "solutions": 110
+    },
+    {
+      "chapter": 41,
+      "width": 320,
+      "issues": [],
+      "visibleFormulas": 4169,
+      "images": 23,
+      "solutions": 111
+    },
+    {
+      "chapter": 41,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 4169,
+      "images": 23,
+      "solutions": 111
+    },
+    {
+      "chapter": 41,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 4169,
+      "images": 23,
+      "solutions": 111
+    },
+    {
+      "chapter": 41,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 4169,
+      "images": 23,
+      "solutions": 111
+    },
+    {
+      "chapter": 41,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 4169,
+      "images": 23,
+      "solutions": 111
+    },
+    {
+      "chapter": 42,
+      "width": 320,
+      "issues": [],
+      "visibleFormulas": 3452,
+      "images": 25,
+      "solutions": 95
+    },
+    {
+      "chapter": 42,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 3452,
+      "images": 25,
+      "solutions": 95
+    },
+    {
+      "chapter": 42,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 3452,
+      "images": 25,
+      "solutions": 95
+    },
+    {
+      "chapter": 42,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 3452,
+      "images": 25,
+      "solutions": 95
+    },
+    {
+      "chapter": 42,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 3452,
+      "images": 25,
+      "solutions": 95
+    },
+    {
+      "chapter": 43,
+      "width": 320,
+      "issues": [],
+      "visibleFormulas": 3082,
+      "images": 19,
+      "solutions": 110
+    },
+    {
+      "chapter": 43,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 3082,
+      "images": 19,
+      "solutions": 110
+    },
+    {
+      "chapter": 43,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 3082,
+      "images": 19,
+      "solutions": 110
+    },
+    {
+      "chapter": 43,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 3082,
+      "images": 19,
+      "solutions": 110
+    },
+    {
+      "chapter": 43,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 3082,
+      "images": 19,
+      "solutions": 110
+    },
+    {
+      "chapter": 44,
+      "width": 320,
+      "issues": [],
+      "visibleFormulas": 2264,
+      "images": 18,
+      "solutions": 85
+    },
+    {
+      "chapter": 44,
+      "width": 360,
+      "issues": [],
+      "visibleFormulas": 2264,
+      "images": 18,
+      "solutions": 85
+    },
+    {
+      "chapter": 44,
+      "width": 375,
+      "issues": [],
+      "visibleFormulas": 2264,
+      "images": 18,
+      "solutions": 85
+    },
+    {
+      "chapter": 44,
+      "width": 768,
+      "issues": [],
+      "visibleFormulas": 2264,
+      "images": 18,
+      "solutions": 85
+    },
+    {
+      "chapter": 44,
+      "width": 1440,
+      "issues": [],
+      "visibleFormulas": 2264,
+      "images": 18,
+      "solutions": 85
+    }
+  ],
+  "limits": "Math/image geometry and observable initial solution closure only. Does not prove every problem prompt, source subpart, original frame or solution calculation is correct. Source-unit ID inventories remain separate.",
+  "fullGoalComplete": false,
+  "detailEvidence": "Exact formula observations remain in the local QA baseline; public metadata includes only identifiers, geometry and counts."
+}

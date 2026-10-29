@@ -14,9 +14,17 @@ Cập nhật ngày 29/10/2026. Đây là báo cáo đang hoàn thiện. Đã có
 | Hình có số hiệu | Đã tìm được dấu vết sử dụng của 1.952 hình trong nội dung đang hiển thị. | Chưa đủ để kết luận mọi khung ảnh đều trọn vẹn, hay mọi hình không đánh số đều được kiểm tra. |
 | Chương 2 Vật lý 1 | Đã hoàn thiện 127 đơn vị cuối chương, kiểm tra 125 trường hợp hiển thị trên trang thực tế và chạy lại 681 phép kiểm tra Python của chương. | Đây là bằng chứng của chương 2, không đại diện cho toàn bộ 44 chương. |
 | Các chương trình kiểm chứng hiện có | Đã sàng lọc và chạy 124 chương trình có phép khẳng định kiểm tra. Ban đầu 121 chương trình đạt, ba trường hợp lỗi đã được điều tra và chạy lại đạt. | Các chương trình có phạm vi khác nhau. Không dùng số chương trình đạt để suy ra tỷ lệ đúng của mọi phép tính. |
-| Bản sửa xuất bản gần nhất | Commit `c5aed757de2beff268f2efce7a2b3eff34a1dc9f` đã build và deploy thành công, lượt GitHub Actions `40743373435`. Chín đường dẫn sửa mới đã qua 45 trường hợp kiểm tra trên web, tại chiều rộng 320, 360, 375, 768 và 1440 px. | Đây là kiểm tra các sửa đổi được nêu, không phải chứng nhận mọi trang công khai. |
+| Bản sửa xuất bản gần nhất | Commit `72ea66e2b3fb6f8d44a6ff7e5d6d0e11f6d7040d` đã build và deploy thành công, lượt GitHub Actions `40750654800`. Hai Cheatsheet nhiệt đã qua 10 trường hợp trên web. Toàn bộ 22 dòng công thức chương 19 được đối chiếu MathML với dữ liệu đang dùng. | Đây là kiểm tra các sửa đổi được nêu, không phải chứng nhận mọi trang công khai. |
 
 Hồ sơ đối chiếu nằm cùng thư mục với báo cáo này, gồm `all44-formal-section-example-presence-20261029.json`, `all44-selfcheck-destinations-20261029.json`, `all44-exercise-numbering-20261028.json`, `container-and-decay-figure-repair-20261029.json`, `screened-verifier-reruns-20261028.json` và `latest-content-public-20261029.json`.
+
+## Kết quả rà giao diện bài tập toàn môn Vật lý 2
+
+Đã mở toàn bộ lời giải trên tab Bài tập của cả 24 chương và kiểm tra tại năm chiều rộng màn hình. Tổng cộng có 120 trường hợp quan sát trên bản web. Lượt này còn ghi nhận vấn đề hiển thị ở 17 chương, với 206 quan sát khác nhau sau khi loại bản lặp giữa các kích thước màn hình. Một quan sát có thể là tràn trang, không nhất thiết tương ứng với một công thức độc lập.
+
+Không dùng các kiểm tra Notes trước đây để suy ra tab Bài tập cũng đạt. Đợt sửa tiếp theo hiện đã qua 195 trường hợp hiển thị của 39 phần nội dung bằng trình xử lý Markdown và CSS thực tế. Trong đó, 57 chuỗi công thức được bẻ tại dấu quan hệ và giữ nguyên thứ tự các ký hiệu trong MathML. Những biểu thức cần đặt đại lượng trung gian được kiểm tra riêng bằng Python. Đã giữ nguyên chuỗi khai báo ảnh ở cả 39 phần.
+
+Đây vẫn là bằng chứng cục bộ của những phần đã sửa. Sau khi xuất bản cần đo lại bản web để xác định các lỗi còn lại. Chương 31 được xử lý riêng vì đề xuất của agent còn 11 chỗ tràn khi chạy kiểm tra thực tế, dù báo cáo của agent nói đã sửa hết.
 
 ## Những lỗi thực tế đã sửa
 
@@ -53,6 +61,16 @@ Chưa có cơ sở để cam kết độ chính xác bằng một tỷ lệ ph�
 7. Đọc đầu ra thực tế của hệ thống. Chú thích ảnh có thể được thêm từ mô-đun toàn cục. Kết luận thiếu chú thích từ một tệp Markdown riêng lẻ có thể sai và dẫn đến lặp chú thích.
 8. Phân biệt lỗi công cụ với chất lượng nội dung. Một agent mất kết nối có thể đã lưu tệp dùng được, nhưng phải kiểm tra phạm vi sửa và kết quả trước khi nhận. Ngược lại, tiến trình thoát thành công không đảm bảo kết quả có nội dung đúng.
 9. Sau khi push, kiểm tra riêng ba bước: Commit đã tới GitHub, build/deploy đã thành công, bản web thật hiển thị đúng nội dung và ảnh. Không thay bước cuối bằng một dấu tích xanh của CI.
+
+## Thích ứng với việc tách kho nguồn học phần
+
+Trong lúc hoàn thiện lượt rà, dự án chuyển tài liệu môn học sang các kho Git riêng tư. Các bản sửa Vật lý 2 vì vậy được đưa vào `StudyHub-course-vat-ly-2`, còn kho giao diện chỉ cập nhật commit được ghim cùng báo cáo nghiệm thu. Không đưa lại nội dung môn học vào kho công khai.
+
+Đã kiểm từng checksum trước khi ghép nguồn để kiểm tra. Những dữ liệu ví dụ và chỉ mục được cải thiện trong quá trình chuyển kho được giữ lại. Chỉ cập nhật số dòng tham chiếu bị thay đổi bởi lần biên tập này, thay vì ghi đè toàn bộ chỉ mục bằng bản cũ. Các ngày cập nhật của tệp không thay đổi cũng được giữ nguyên.
+
+Lượt xuất đầu tiên bị chuyển LF thành CRLF trên Windows. Đã chuẩn hóa và kiểm lại checksum của bản Git được dùng để ghim. Đây là lỗi cần ngăn ngay ở công cụ xuất: Quy định kiểu xuống dòng và kiểm tệp đã stage trước khi commit, thay vì chỉ kiểm bản đang mở trong thư mục làm việc.
+
+Sau khi ghép đủ 10 kho học phần theo commit được khóa, lệnh `npm run verify:math` đạt cả 32 kiểm thử. Bộ kiểm tra đã phân tích 1.508 trang cùng 588 lệnh chèn nguồn và kiểm tra 58.352 công thức khác nhau trên toàn bộ dữ liệu. Kết quả này chứng minh tính hợp lệ của cú pháp và bộ hiển thị trong phạm vi đã chạy, không chứng minh mọi công thức đều đúng về mặt vật lý.
 
 ## Đề xuất cải thiện
 
