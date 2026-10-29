@@ -1,5 +1,12 @@
 # StudyHub (UET) — Hướng Dẫn Chung Cho Mọi Trợ Lý AI (AI Agents)
 
+## Tiết kiệm dung lượng và thực thi trực tuyến
+
+- Ưu tiên `npm run verify:cloud -- fixture` để kiểm tra giao diện và build nhỏ trên GitHub. Dùng `npm run verify:cloud -- full` khi cần kiểm tra toàn bộ. Commit trước khi chạy. Hai lệnh đẩy nhánh hiện tại lên GitHub, chỉ kiểm tra và không xuất bản.
+- Chỉ tải phụ thuộc và nội dung riêng tư khi tác vụ cần: `npm run workspace:prepare`. Khi cần xem cục bộ, dùng `npm run dev:temporary` để tự dọn cache và checkout học phần sạch đã xác nhận trên GitHub sau khi dừng. Nếu phiên bị ngắt đột ngột, chạy `npm run workspace:clean`.
+- Giữ một bộ phụ thuộc dùng lại, không nhân bản `node_modules` hay tải thêm trình duyệt cho mỗi worktree. Không xóa nguồn, checkout có sửa đổi hoặc commit chưa xuất bản, tài liệu gốc và bằng chứng QA. Dùng chức năng lưu trữ worktree của ứng dụng khi kết thúc công việc.
+- Đọc kết quả kiểm tra bằng script và báo cáo ngắn. Chỉ tải artifact cụ thể khi điều tra lỗi, không sao chép toàn bộ lịch sử QA về máy.
+
 Tài liệu này là quy ước tiêu chuẩn (Agent Instruction Standard) dành cho mọi hệ thống AI (Claude, Antigravity/Gemini, OpenAI Codex, Cursor, Windsurf, OpenCode, Cline, Roo Code, v.v.) khi làm việc trong kho lưu trữ StudyHub.
 
 ---

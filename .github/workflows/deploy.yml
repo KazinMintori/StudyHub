@@ -95,6 +95,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: browser-verification
+          retention-days: 7
           path: |
             qa/navigation-stability/
             qa/lecture-usability/
@@ -121,6 +122,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: batch-fixture-diagnostics
+          retention-days: 7
           path: qa/batch-build-fixture/
           if-no-files-found: ignore
 
