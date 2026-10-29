@@ -9,9 +9,10 @@ const output = 'qa/navigation-stability'
 await mkdir(output, { recursive: true })
 const browser = await puppeteer.launch({ headless: true, ignoreDefaultArgs: ['--hide-scrollbars'] })
 const errors = [], timings = [], results = []
+let page
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 try {
-  const page = await browser.newPage()
+  page = await browser.newPage()
   page.setDefaultTimeout(60000)
   page.on('pageerror', error => errors.push(error.message))
   let documents = 0
@@ -110,8 +111,26 @@ try {
   await delay(400)
   assert(Math.abs(await page.evaluate(() => scrollY) - y) < 3)
   results.push('Late content updates preserve the reader position')
+  await page.setViewport({ width: 375, height: 900 })
+  await page.goto(base + '/triet-hoc-mac-lenin/bai-giang/chuong-1-triet-hoc-va-vai-tro/doi-tuong-chuc-nang-vai-tro.html', { waitUntil: 'networkidle0' })
+  await page.waitForSelector('.philosophy-topic-practice')
+  await page.evaluate(() => {
+    scrollTo({ top: document.body.scrollHeight, behavior: 'instant' })
+    window.navigationProbe.scrolls = []
+    document.querySelector('.philosophy-topic-practice').click()
+  })
+  await page.waitForFunction(() => location.hash === '#bai-tap' && scrollY < 2 && document.querySelector('.philosophy-topic-tabs [aria-selected="true"]')?.textContent.trim() === 'Bài tập')
+  assert.equal(await page.evaluate(() => window.navigationProbe.scrolls.length), 1)
+  results.push('The Philosophy practice link uses the same single top reset as lecture tabs')
   assert.deepEqual(errors, [])
   await writeFile(`${output}/report.json`, JSON.stringify({ results, timings, writes, documents, errors }, null, 2))
   for (const result of results) console.log('PASS', result)
   console.log(JSON.stringify({ timings, writes, documents, runtimeErrors: errors.length }))
+} catch (error) {
+  const state = page ? await page.evaluate(() => ({ url: location.href, titles: [...document.querySelectorAll('h1')].map(element => element.textContent), text: document.querySelector('.VPContent')?.textContent.slice(0, 1000) })).catch(() => ({})) : {}
+  const diagnostic = { message: error.message, errors, results, timings, ...state }
+  console.error(JSON.stringify(diagnostic, null, 2))
+  await writeFile(`${output}/failure.json`, JSON.stringify(diagnostic, null, 2))
+  await page?.screenshot({ path: `${output}/failure.png` }).catch(() => {})
+  throw error
 } finally { await browser.close() }

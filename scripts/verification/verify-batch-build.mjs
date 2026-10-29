@@ -1,6 +1,6 @@
 // A four-page fixture runs on GitHub before the full site build. It checks
 // hydration and navigation between independently compiled batches.
-import { mkdir, mkdtemp, writeFile, readFile, rm } from 'node:fs/promises'
+import { mkdir, mkdtemp, writeFile, readFile, rm, cp } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { spawn } from 'node:child_process'
@@ -17,7 +17,10 @@ await mkdir(temporaryRoot, { recursive: true })
 const fixture = await mkdtemp(path.join(temporaryRoot, 'batch-build-fixture-'))
 const docs = path.join(fixture, 'docs')
 const output = path.join(fixture, 'merged')
-let browser, server
+const realTheme = process.env.QA_REAL_THEME === '1'
+const report = path.join(root, 'qa/batch-build-fixture')
+let browser, server, page
+const errors = []
 const run = args => new Promise((resolve, reject) => {
   const child = spawn(process.execPath, args, { cwd: root, stdio: 'inherit', windowsHide: true })
   child.once('error', reject)
@@ -33,15 +36,28 @@ export default { base:'/StudyHub/', title:'Kiểm tra chia đợt', lastUpdated:
   markdown:{math:true,config:md=>md.use(staticMathPlugin)},
   themeConfig:{nav:[{text:'Đến B',link:'/b'}]}, buildConcurrency:1 }
 `)
+  if (realTheme) {
+    await mkdir(path.join(docs, '.vitepress/theme'), { recursive: true })
+    await writeFile(path.join(docs, '.vitepress/theme/index.js'), `export { default } from ${JSON.stringify(path.join(root, 'src/app/theme.mjs').replaceAll('\\', '/'))}`)
+    await writeFile(path.join(docs, '.vitepress/config.mjs'), `
+import config from ${JSON.stringify(path.join(root, 'docs/.vitepress/config.mjs').replaceAll('\\', '/'))}
+export default { ...config, base:'/StudyHub/', lastUpdated:false, srcExclude:[],
+  themeConfig:{...config.themeConfig,nav:[{text:'Đến B',link:'/b'}]},buildConcurrency:1 }
+`)
+  }
   const interactive = `
 <script setup>
 import { ref } from 'vue'
+import { useData } from 'vitepress'
 const count=ref(0)
+const { frontmatter } = useData()
 </script>
 <button id="counter" @click="count++">{{ count }}</button>
+<p id="frontmatter-probe">{{ frontmatter.course }}</p>
 `
   for (const [name, target] of [['index', 'b'], ['a', 'b'], ['b', 'a'], ['C', 'a']]) {
-    await writeFile(path.join(docs, name + '.md'), `# Trang ${name}\n\n[Chuyển trang](/${target})\n\n$$\nE=mc^2\n$$\n\n<details><summary>Lời giải</summary><p>Điện thế bằng công trên điện tích.</p></details>\n\n![Hình: Tọa độ và năng lượng](/figure.svg)\n\n${interactive}`)
+    const course = ['b', 'C'].includes(name) ? 'toan-cho-ai' : 'bieu-dien-tri-thuc'
+    await writeFile(path.join(docs, name + '.md'), `---\ncourse: ${course}\n---\n\n${realTheme ? '<CourseOverview />' : '# Trang ' + name}\n\n[Chuyển trang](/${target})\n\n$$\nE=mc^2\n$$\n\n<details><summary>Lời giải</summary><p>Điện thế bằng công trên điện tích.</p></details>\n\n![Hình: Tọa độ và năng lượng](/figure.svg)\n\n${interactive}\n${name === 'a' ? '<div v-memo="[count]">{{ count }}</div>' : ''}`)
   }
   await writeFile(path.join(docs, 'public/figure.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="20"><text x="1" y="15">Energy</text></svg>')
   await writeFile(path.join(docs, 'public/embedded.html'), '<p>Tài liệu nhúng</p>')
@@ -62,8 +78,8 @@ const count=ref(0)
   server = await preview({ configFile:false, root:docs, base:'/StudyHub/', build:{outDir:output}, preview:{host:'127.0.0.1',port:0} })
   const port = server.httpServer.address().port
   browser = await puppeteer.launch({ executablePath:process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/google-chrome', headless:true, args:['--no-sandbox'] })
-  const page = await browser.newPage()
-  const errors = []
+  page = await browser.newPage()
+  await page.evaluateOnNewDocument(() => sessionStorage.setItem('studyhub_welcome_seen', '1'))
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (message.type() === 'error' || /hydration.*mismatch/i.test(message.text())) errors.push(message.text()) })
   await page.goto(`http://127.0.0.1:${port}/StudyHub/a.html`, {waitUntil:'networkidle0'})
@@ -72,7 +88,7 @@ const count=ref(0)
   await page.waitForFunction(() => document.querySelector('#counter').textContent === '1')
   await page.evaluate(() => { window.fixtureNavigationMarker = 'same-document' })
   await page.click('.vp-doc a[href$="/b.html"]')
-  await page.waitForFunction(() => location.pathname.endsWith('/b.html') && document.querySelector('.vp-doc h1')?.textContent.includes('Trang b'))
+  await page.waitForFunction(() => location.pathname.endsWith('/b.html') && document.querySelector('#frontmatter-probe')?.textContent.trim() === 'toan-cho-ai')
   if (await page.evaluate(() => window.fixtureNavigationMarker) !== 'same-document') throw new Error('Cross-batch navigation reloaded the document')
   await page.waitForSelector('.static-math svg')
   await page.click('#counter')
@@ -82,6 +98,14 @@ const count=ref(0)
   if (!await page.$eval('.vp-doc img', node => node.complete && node.naturalWidth > 0)) throw new Error('Figure failed to load')
   if (errors.length) throw new Error(errors.join('\n'))
   console.log('Batched build fixture passed: Both routes, SPA navigation, hydration, math, figure and collapsed solution')
+} catch (error) {
+  await mkdir(report, { recursive: true })
+  const diagnostic = { message: error.message, errors, ...(page ? await page.evaluate(() => ({ url: location.href, titles: [...document.querySelectorAll('h1')].map(element => element.textContent), probe: document.querySelector('#frontmatter-probe')?.textContent, text: document.body.textContent.slice(0, 1800) })).catch(() => ({})) : {}) }
+  console.error(JSON.stringify(diagnostic, null, 2))
+  await writeFile(path.join(report, 'failure.json'), JSON.stringify(diagnostic, null, 2))
+  await page?.screenshot({ path: path.join(report, 'failure.png') }).catch(() => {})
+  await cp(output, path.join(report, 'site'), { recursive: true }).catch(() => {})
+  throw error
 } finally {
   await browser?.close()
   if (server) await new Promise(resolve => server.httpServer.close(resolve))

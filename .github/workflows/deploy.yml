@@ -10,6 +10,11 @@ on:
         required: false
         type: boolean
         default: false
+      fixture_only:
+        description: Verify the small production-theme fixture without a full site build
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -17,7 +22,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: ${{ github.event_name == 'workflow_dispatch' && inputs.verify_only && format('verify-{0}', github.ref) || 'pages' }}
+  group: ${{ github.event_name == 'workflow_dispatch' && (inputs.verify_only || inputs.fixture_only) && format('verify-{0}', github.ref) || 'pages' }}
   cancel-in-progress: false
 
 env:
@@ -63,11 +68,13 @@ jobs:
           node scripts/verification/verify-content-model.mjs
 
       - name: Verify feature rules and rendering
+        if: '!inputs.fixture_only'
         run: |
           npm run test:features
           npm test
 
       - name: Verify browser navigation and responsive reading
+        if: '!inputs.fixture_only'
         env:
           BASE_PATH: /
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
@@ -92,6 +99,7 @@ jobs:
             qa/navigation-stability/
             qa/lecture-usability/
             qa/course-workspace/
+            qa/batch-build-fixture/
           if-no-files-found: ignore
 
       - name: Configure GitHub Pages
@@ -101,18 +109,29 @@ jobs:
 
       - name: Verify batched build integration
         env:
+          QA_REAL_THEME: '1'
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
         run: node scripts/verification/verify-batch-build.mjs
 
       - name: Show build runner memory
         run: free -h
 
+      - name: Save batch fixture diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: batch-fixture-diagnostics
+          path: qa/batch-build-fixture/
+          if-no-files-found: ignore
+
       - name: Build with VitePress
+        if: '!inputs.fixture_only'
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run ci:build
 
       - name: Verify built-site navigation with the production base path
+        if: '!inputs.fixture_only'
         env:
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
           QA_URL: http://127.0.0.1:4173/${{ github.event.repository.name }}
@@ -127,12 +146,13 @@ jobs:
           npm run verify:navigation
 
       - name: Upload Pages artifact
+        if: always() && !inputs.fixture_only
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
 
   deploy:
-    if: github.event_name != 'workflow_dispatch' || !inputs.verify_only
+    if: success() && (github.event_name != 'workflow_dispatch' || (!inputs.verify_only && !inputs.fixture_only))
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
