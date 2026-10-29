@@ -1,0 +1,389 @@
+{
+  "status": "accepted-chapter31-parent-local-repairs-only",
+  "sourceFragments": [
+    {
+      "file": "raw_materials/physics/translations/chapter-31/10-luyen-tap-huong-dan.md",
+      "sha256": "9d7036444b0f1fb99c4a65e99a2c316d6bdd67d3f7d3b3a2a37ba99eb3e12f23"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-31/11-cau-hoi-thao-luan.md",
+      "sha256": "d3e45c4671025fe7609d49459506cc46da3d58202ee4267c2b990b49660c6dce"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-31/12-bai-tap-01-36.md",
+      "sha256": "dc7ab602b8733c92e800856e11656c94c1f74971258625a34e3092376b935df6"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-31/13-bai-tap-37-65.md",
+      "sha256": "046053ed4eb8dd7f8a45e52e126e414ff66533efe09b8ecfec4efd50f3f37e5a"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-31/15-nang-cao-mcat.md",
+      "sha256": "64d130f5d28956ca42986ab5d6108b46c1d8b43aada5076ce290532932d4e1e6"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-31/16-dap-so.md",
+      "sha256": "04e9e8290a472fa30cf84ac147c4c327492e50ba065cfb78b4bd35c50bf0e02e"
+    }
+  ],
+  "componentViewportCases": [
+    {
+      "group": "theory-chapter-31-10-luyen-tap-huong-dan",
+      "width": 320,
+      "issues": [],
+      "formulas": 156,
+      "visibleFormulas": 156,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-10-luyen-tap-huong-dan",
+      "width": 360,
+      "issues": [],
+      "formulas": 156,
+      "visibleFormulas": 156,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-10-luyen-tap-huong-dan",
+      "width": 375,
+      "issues": [],
+      "formulas": 156,
+      "visibleFormulas": 156,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-10-luyen-tap-huong-dan",
+      "width": 768,
+      "issues": [],
+      "formulas": 156,
+      "visibleFormulas": 156,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-10-luyen-tap-huong-dan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 156,
+      "visibleFormulas": 156,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-11-cau-hoi-thao-luan",
+      "width": 320,
+      "issues": [],
+      "formulas": 509,
+      "visibleFormulas": 509,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-11-cau-hoi-thao-luan",
+      "width": 360,
+      "issues": [],
+      "formulas": 509,
+      "visibleFormulas": 509,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-11-cau-hoi-thao-luan",
+      "width": 375,
+      "issues": [],
+      "formulas": 509,
+      "visibleFormulas": 509,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-11-cau-hoi-thao-luan",
+      "width": 768,
+      "issues": [],
+      "formulas": 509,
+      "visibleFormulas": 509,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-11-cau-hoi-thao-luan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 509,
+      "visibleFormulas": 509,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-12-bai-tap-01-36",
+      "width": 320,
+      "issues": [],
+      "formulas": 910,
+      "visibleFormulas": 910,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 6,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-12-bai-tap-01-36",
+      "width": 360,
+      "issues": [],
+      "formulas": 910,
+      "visibleFormulas": 910,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 6,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-12-bai-tap-01-36",
+      "width": 375,
+      "issues": [],
+      "formulas": 910,
+      "visibleFormulas": 910,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 6,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-12-bai-tap-01-36",
+      "width": 768,
+      "issues": [],
+      "formulas": 910,
+      "visibleFormulas": 910,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 6,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-12-bai-tap-01-36",
+      "width": 1440,
+      "issues": [],
+      "formulas": 910,
+      "visibleFormulas": 910,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 6,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-chapter-31-13-bai-tap-37-65",
+      "width": 320,
+      "issues": [],
+      "formulas": 986,
+      "visibleFormulas": 986,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 13,
+      "captions": 13
+    },
+    {
+      "group": "theory-chapter-31-13-bai-tap-37-65",
+      "width": 360,
+      "issues": [],
+      "formulas": 986,
+      "visibleFormulas": 986,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 13,
+      "captions": 13
+    },
+    {
+      "group": "theory-chapter-31-13-bai-tap-37-65",
+      "width": 375,
+      "issues": [],
+      "formulas": 986,
+      "visibleFormulas": 986,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 13,
+      "captions": 13
+    },
+    {
+      "group": "theory-chapter-31-13-bai-tap-37-65",
+      "width": 768,
+      "issues": [],
+      "formulas": 986,
+      "visibleFormulas": 986,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 13,
+      "captions": 13
+    },
+    {
+      "group": "theory-chapter-31-13-bai-tap-37-65",
+      "width": 1440,
+      "issues": [],
+      "formulas": 986,
+      "visibleFormulas": 986,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 13,
+      "captions": 13
+    },
+    {
+      "group": "theory-chapter-31-15-nang-cao-mcat",
+      "width": 320,
+      "issues": [],
+      "formulas": 268,
+      "visibleFormulas": 268,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-31-15-nang-cao-mcat",
+      "width": 360,
+      "issues": [],
+      "formulas": 268,
+      "visibleFormulas": 268,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-31-15-nang-cao-mcat",
+      "width": 375,
+      "issues": [],
+      "formulas": 268,
+      "visibleFormulas": 268,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-31-15-nang-cao-mcat",
+      "width": 768,
+      "issues": [],
+      "formulas": 268,
+      "visibleFormulas": 268,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-31-15-nang-cao-mcat",
+      "width": 1440,
+      "issues": [],
+      "formulas": 268,
+      "visibleFormulas": 268,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 2,
+      "images": 1,
+      "captions": 1
+    },
+    {
+      "group": "theory-chapter-31-16-dap-so",
+      "width": 320,
+      "issues": [],
+      "formulas": 146,
+      "visibleFormulas": 146,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-31-16-dap-so",
+      "width": 360,
+      "issues": [],
+      "formulas": 146,
+      "visibleFormulas": 146,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-31-16-dap-so",
+      "width": 375,
+      "issues": [],
+      "formulas": 146,
+      "visibleFormulas": 146,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-31-16-dap-so",
+      "width": 768,
+      "issues": [],
+      "formulas": 146,
+      "visibleFormulas": 146,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    },
+    {
+      "group": "theory-chapter-31-16-dap-so",
+      "width": 1440,
+      "issues": [],
+      "formulas": 146,
+      "visibleFormulas": 146,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 3,
+      "images": 0,
+      "captions": 0
+    }
+  ],
+  "scope": "Six chapter31 exercise/answer fragments, all relevant detailed solutions opened, production Markdown/CSS including migrated scrollbar styles.",
+  "preserved": "Exercise containers/headings, original image declarations and all stated givens/subparts. Restored unexpanded polynomial forms and reciprocal frequency factors omitted by initial proposal.",
+  "numericEvidence": "qa/physics-private-release-20261029/ch31-parent-numeric-proof.json",
+  "checks": {
+    "independentPython": "passed",
+    "scopedLectureCheck": "1lesson6topics,zeroerrorswarnings",
+    "skillTests": "39passed",
+    "fullMathCheck": {
+      "command": "npm run verify:math",
+      "exitCode": 0,
+      "tests": 32,
+      "pages": 1508,
+      "includes": 588,
+      "uniqueMarkdownMathTokens": 56091,
+      "uniqueAllDataFormulas": 58365
+    }
+  },
+  "agentLimit": "Call3/max3 exhausted, lost handle with no new call3 artifacts. Parent repaired and measured eleven remaining/new overflows; no successful AGY call3 claim.",
+  "limits": "Local fragment acceptance only. Not allchapter31originalsource semanticcertification, not yet currentpublicrouteacceptance.",
+  "fullGoalComplete": false,
+  "privateCourseRevision": "88d64c0687b8047e78e92bbeec0cf4b86f816fdf",
+  "privatePackageIntegrity": "Seven staged source/index blobs match the manifest. All other entries and timestamps preserved.",
+  "integrationBase": "830e83a712e6aef1f2b8aed6a3baaa7bae0d7880",
+  "preservedUpstream": "Learner README, private course examples, cache-invalidating framework runtime changes and all other course pins.",
+  "privateAndSharedFrameworkTests": {
+    "tests": 10,
+    "exitCode": 0
+  }
+}

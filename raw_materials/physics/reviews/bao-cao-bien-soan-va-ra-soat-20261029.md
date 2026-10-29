@@ -24,7 +24,7 @@ Hồ sơ đối chiếu nằm cùng thư mục với báo cáo này, gồm `all4
 
 Không dùng các kiểm tra Notes trước đây để suy ra tab Bài tập cũng đạt. Đợt sửa tiếp theo hiện đã qua 195 trường hợp hiển thị của 39 phần nội dung bằng trình xử lý Markdown và CSS thực tế. Trong đó, 57 chuỗi công thức được bẻ tại dấu quan hệ và giữ nguyên thứ tự các ký hiệu trong MathML. Những biểu thức cần đặt đại lượng trung gian được kiểm tra riêng bằng Python. Đã giữ nguyên chuỗi khai báo ảnh ở cả 39 phần.
 
-Đây vẫn là bằng chứng cục bộ của những phần đã sửa. Sau khi xuất bản cần đo lại bản web để xác định các lỗi còn lại. Chương 31 được xử lý riêng vì đề xuất của agent còn 11 chỗ tràn khi chạy kiểm tra thực tế, dù báo cáo của agent nói đã sửa hết.
+Đây vẫn là bằng chứng cục bộ của những phần đã sửa. Sau khi xuất bản cần đo lại bản web để xác định các lỗi còn lại. Chương 31 được xử lý riêng vì đề xuất của agent còn 11 chỗ tràn khi chạy kiểm tra thực tế, dù báo cáo của agent nói đã sửa hết. Các chỗ này đã được sửa và đo lại, đạt 30 trường hợp hiển thị của sáu phần nội dung. Những bước khai triển đa thức và quan hệ tần số bị rút mất trong đề xuất ban đầu đã được khôi phục. Kiểm tra toán toàn dự án chạy lại đạt cả 32 kiểm thử, cùng các phép kiểm chứng Python độc lập cho mạch RLC.
 
 ## Những lỗi thực tế đã sửa
 
