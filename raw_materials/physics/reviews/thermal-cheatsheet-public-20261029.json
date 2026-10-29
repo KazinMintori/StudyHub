@@ -1,0 +1,291 @@
+{
+  "status": "accepted-public-chapter19-cheatsheet-updates-only",
+  "deployedRevision": "72ea66e2b3fb6f8d44a6ff7e5d6d0e11f6d7040d",
+  "cloudRun": 40750654800,
+  "cloudBuild": "success",
+  "cloudDeploy": "success",
+  "publicCases": [
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 320,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 360,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 375,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 768,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "width": 1440,
+      "issues": [],
+      "formulas": 22,
+      "items": 8,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 320,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 360,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 375,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 768,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    },
+    {
+      "key": "vat-ly-1/20-nguyen-ly-thu-hai-entropy",
+      "width": 1440,
+      "issues": [],
+      "formulas": 17,
+      "items": 10,
+      "cards": 3
+    }
+  ],
+  "newChapter19FormulaRowsMatch": [
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 0,
+      "item": 0,
+      "row": 0,
+      "matches": true,
+      "actual": "ΔU=Q−W",
+      "expected": "ΔU=Q−W"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 0,
+      "item": 0,
+      "row": 1,
+      "matches": true,
+      "actual": "dU=δQ−δW",
+      "expected": "dU=δQ−δW"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 0,
+      "item": 1,
+      "row": 0,
+      "matches": true,
+      "actual": "δW=pdV",
+      "expected": "δW=pdV"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 0,
+      "item": 1,
+      "row": 1,
+      "matches": true,
+      "actual": "W=∫V1V2pdV",
+      "expected": "W=∫V1V2pdV"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 0,
+      "item": 1,
+      "row": 2,
+      "matches": true,
+      "actual": "W=p(V2−V1)",
+      "expected": "W=p(V2−V1)"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 0,
+      "row": 0,
+      "matches": true,
+      "actual": "W=0⟹ΔU=Q",
+      "expected": "W=0⟹ΔU=Q"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 0,
+      "row": 1,
+      "matches": true,
+      "actual": "Q=0⟹ΔU=−W",
+      "expected": "Q=0⟹ΔU=−W"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 0,
+      "row": 2,
+      "matches": true,
+      "actual": "ΔU=0⟹Q=W",
+      "expected": "ΔU=0⟹Q=W"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 1,
+      "row": 0,
+      "matches": true,
+      "actual": "ΔU=nCVΔT",
+      "expected": "ΔU=nCVΔT"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 1,
+      "row": 1,
+      "matches": true,
+      "actual": "U=32nRT",
+      "expected": "U=32nRT"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 2,
+      "row": 0,
+      "matches": true,
+      "actual": "QV=nCVΔT",
+      "expected": "QV=nCVΔT"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 2,
+      "row": 1,
+      "matches": true,
+      "actual": "Qp=nCpΔT",
+      "expected": "Qp=nCpΔT"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 2,
+      "row": 2,
+      "matches": true,
+      "actual": "Cp−CV=R",
+      "expected": "Cp−CV=R"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 2,
+      "row": 3,
+      "matches": true,
+      "actual": "γ=Cp/CV",
+      "expected": "γ=Cp/CV"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 2,
+      "row": 4,
+      "matches": true,
+      "actual": "CV=Rγ−1",
+      "expected": "CV=Rγ−1"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 3,
+      "row": 0,
+      "matches": true,
+      "actual": "W=nRTln⁡(V2/V1)",
+      "expected": "W=nRTln⁡(V2/V1)"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 3,
+      "row": 1,
+      "matches": true,
+      "actual": "ΔU=0",
+      "expected": "ΔU=0"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 1,
+      "item": 3,
+      "row": 2,
+      "matches": true,
+      "actual": "Q=W",
+      "expected": "Q=W"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 2,
+      "item": 0,
+      "row": 0,
+      "matches": true,
+      "actual": "pVγ=const",
+      "expected": "pVγ=const"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 2,
+      "item": 0,
+      "row": 1,
+      "matches": true,
+      "actual": "TVγ−1=const",
+      "expected": "TVγ−1=const"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 2,
+      "item": 0,
+      "row": 2,
+      "matches": true,
+      "actual": "W=nCV(T1−T2)",
+      "expected": "W=nCV(T1−T2)"
+    },
+    {
+      "key": "vat-ly-1/19-nguyen-ly-thu-nhat",
+      "section": 2,
+      "item": 0,
+      "row": 3,
+      "matches": true,
+      "actual": "W=p1V1−p2V2γ−1",
+      "expected": "W=p1V1−p2V2γ−1"
+    }
+  ],
+  "limits": "Two actual public Cheatsheets at five widths and22 chapter19 MathML row comparisons only. No wholecourse source/semantic acceptance.",
+  "fullGoalComplete": false
+}
