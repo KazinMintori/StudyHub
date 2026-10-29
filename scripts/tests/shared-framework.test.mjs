@@ -4,7 +4,8 @@ import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { pathToFileURL } from 'node:url'
-import { sharedFrameworkAlias } from '../build/shared-framework-plugin.mjs'
+import { sharedFrameworkAlias, sharedFrameworkPlugin } from '../build/shared-framework-plugin.mjs'
+import { rollup } from 'rollup'
 import { mergeBatch, replaceFrameworkPreloads } from '../build/merge-batches.mjs'
 
 async function fixture(t) {
@@ -47,4 +48,21 @@ test('a batch cannot require helpers missing from the shared runtime', async t =
 test('HTML preloads use the canonical runtime rather than another batch copy', () => {
   const html = '<link rel="modulepreload" href="/StudyHub/assets/chunks/framework.other.js"><script src="/StudyHub/assets/app.js"></script>'
   assert.equal(replaceFrameworkPreloads(html, { alias: 'assets/chunks/framework-shared.abcdef.js' }), '<link rel="modulepreload" href="/StudyHub/assets/chunks/framework-shared.abcdef.js"><script src="/StudyHub/assets/app.js"></script>')
+})
+
+test('a new deployment changes consumer filenames even when its application code is unchanged', async t => {
+  const bundle = await rollup({
+    input: 'memory-entry',
+    plugins: [{ name: 'memory-fixture', resolveId: id => id === 'memory-entry' ? id : null, load: id => id === 'memory-entry' ? 'export const value = 1' : null }]
+  })
+  t.after(() => bundle.close())
+  async function filename(revision) {
+    const plugin = sharedFrameworkPlugin({ buildRevision: revision })
+    plugin.configResolved({ command: 'build', build: { ssr: false, rollupOptions: { output: {} } } })
+    const generated = await bundle.generate({ format: 'es', entryFileNames: '[name].[hash].js', plugins: [{ name: 'runtime-cache-key', augmentChunkHash: plugin.augmentChunkHash }] })
+    return generated.output[0].fileName
+  }
+  const before = await filename('a'.repeat(16))
+  assert.equal(before, await filename('a'.repeat(16)))
+  assert.notEqual(before, await filename('b'.repeat(16)))
 })
