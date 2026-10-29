@@ -121,7 +121,7 @@ onUnmounted(() => { cancelInitialSimulation(); window.removeEventListener('popst
       <div v-if="currentCourse" class="workspace-course-links"><a class="text-link" :href="withBase(`/${currentCourse.id}/`)">Bài giảng của môn</a><a class="text-link" :href="withBase(`/${currentCourse.id}/${currentCourse.presentation === 'philosophy' ? 'on-thi/' : 'bai-tap.html'}`)">{{ currentCourse.presentation === 'philosophy' ? 'Ôn thi' : 'Bài tập của môn' }}</a></div>
       <p v-else>Chọn một môn để mở đúng sổ ghi chú, bộ thẻ và danh sách việc học.</p>
     </section>
-    <nav class="workspace-tabs" aria-label="Công cụ học tập">
+    <nav class="workspace-tabs vp-raw" aria-label="Công cụ học tập">
       <a
         v-for="tab in tabs"
         :key="tab.id"
@@ -149,7 +149,7 @@ onUnmounted(() => { cancelInitialSimulation(); window.removeEventListener('popst
       </section>
       <details v-if="simulations.length" ref="simulationDirectory" class="workspace-simulation-directory" :open="!selectedSimulation">
         <summary>{{ selectedSimulation ? 'Đổi mô phỏng' : 'Chọn mô phỏng' }}<span>{{ simulations.length }} lựa chọn</span></summary>
-        <div class="workspace-simulation-grid">
+          <div class="workspace-simulation-grid vp-raw">
           <a v-for="simulation in simulations" :key="simulation.id" :href="withBase(workspacePath(selectedCourse, 'simulation', simulation.id))" :aria-current="selectedSimulation?.id === simulation.id ? 'true' : undefined" @click="openSimulation(simulation, $event)"><strong>{{ simulation.title }}</strong><span>{{ simulation.description }}</span><span class="workspace-simulation-open">Mở mô phỏng <span aria-hidden="true">→</span></span></a>
         </div>
       </details>

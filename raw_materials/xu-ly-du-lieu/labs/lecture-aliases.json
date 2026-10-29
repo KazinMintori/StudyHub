@@ -1,8 +1,0 @@
-[
-  {
-    "sourceAnchor": "iai-03-bai-5",
-    "canonicalExercise": "data-lab-03-05",
-    "file": "lab-03.md",
-    "reason": "Same matrix, column increments and row increments. First-row check is retained in the canonical lab question and both implementations."
-  }
-]

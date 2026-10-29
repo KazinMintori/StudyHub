@@ -1,10 +1,11 @@
 <script setup>
-import { nextTick, onMounted, onUnmounted, ref } from 'vue'
-import { onContentUpdated, useData } from 'vitepress'
+import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { onContentUpdated, useData, useRoute } from 'vitepress'
 import { stabilizeInitialHeading } from '../services/initial-heading-stabilizer.mjs'
 import { LECTURE_PART_HASHES } from '../../../config/navigation.mjs'
 
 const { frontmatter } = useData()
+const route = useRoute()
 const height = ref(134)
 let observer
 let initialHeading
@@ -33,14 +34,19 @@ function observe() {
   measure()
 }
 
-onMounted(() => {
-  observe()
-  window.addEventListener('resize', measure)
+function followHeading() {
+  initialHeading?.stop()
   initialHeading = stabilizeInitialHeading({
     ...(LECTURE_PART_HASHES.includes(window.location.hash) ? { targetId: '' } : {}),
     getOffset() { measure(); return height.value }
   })
+}
+onMounted(() => {
+  observe()
+  window.addEventListener('resize', measure)
+  followHeading()
 })
+watch(() => route.path, async () => { await nextTick(); observe(); followHeading() })
 onContentUpdated(async () => {
   await nextTick()
   observe()

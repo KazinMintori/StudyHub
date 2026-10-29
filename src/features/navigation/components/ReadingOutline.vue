@@ -2,12 +2,18 @@
 import { inject, ref, watch } from 'vue'
 import { readingOutlineKey } from '../controllers/use-reading-outline.mjs'
 import { lecturePart } from '../controllers/use-lecture-navigation.mjs'
+import { shouldIgnoreNavigationClick } from '../services/tab-service.mjs'
 
 defineProps({ dropdown: Boolean })
 const { headings, active, navigate } = inject(readingOutlineKey)
 const disclosure = ref(null)
 function close() { if (disclosure.value) disclosure.value.open = false }
-function select(id) { close(); navigate(id) }
+function select(id, event) {
+  if (shouldIgnoreNavigationClick(event)) return
+  event.preventDefault()
+  close()
+  navigate(id)
+}
 watch(lecturePart, close)
 </script>
 
@@ -15,8 +21,8 @@ watch(lecturePart, close)
   <component :is="dropdown ? 'details' : 'div'" ref="disclosure" :class="['reading-outline', { 'reading-outline-dropdown': dropdown }]" @keydown.esc="close">
     <summary v-if="dropdown">Mục lục</summary>
     <p v-else class="reading-outline-title">Mục lục</p>
-    <nav aria-label="Mục lục phần đang đọc">
-      <a v-for="heading in headings" :key="heading.id" :href="`#${encodeURIComponent(heading.id)}`" :class="{ nested: heading.level === 3 }" :aria-current="active === heading.id ? 'location' : undefined" @click.prevent.stop="select(heading.id)">{{ heading.title }}</a>
+    <nav class="vp-raw" aria-label="Mục lục phần đang đọc">
+      <a v-for="heading in headings" :key="heading.id" :href="`#${encodeURIComponent(heading.id)}`" :class="{ nested: heading.level === 3 }" :aria-current="active === heading.id ? 'location' : undefined" @click="select(heading.id, $event)">{{ heading.title }}</a>
       <p v-if="!headings.length" class="small">Phần này chưa có đề mục.</p>
     </nav>
   </component>

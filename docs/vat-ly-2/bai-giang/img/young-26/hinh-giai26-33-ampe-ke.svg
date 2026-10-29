@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" role="img"><style>text{font:14px sans-serif;fill:#172f49}path,line,circle,rect{stroke:#172f49;stroke-width:2;fill:white}</style><title>Điện trở rẽ song song cuộn điện kế</title>
-<path d="M15 80H65V40H130M170 40H235V80H285M65 80V120H120M180 120H235V80" fill="none"/>
-<circle cx="150" cy="40" r="20"/><text x="145" y="45">G</text>
-<rect x="120" y="108" width="60" height="24"/><text x="136" y="151">R_sh</text>
-<text x="12" y="102">a</text><text x="277" y="102">b</text>
-<text x="82" y="17">Cuộn điện kế R_G</text></svg>

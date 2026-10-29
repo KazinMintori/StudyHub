@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 160" role="img"><style>text{font:14px sans-serif;fill:#172f49}path,line,circle,rect{stroke:#172f49;stroke-width:2;fill:white}</style><title>Điện trở phụ nối tiếp cuộn điện kế</title>
-<path d="M15 80H70M130 80H185M225 80H285" fill="none"/>
-<rect x="70" y="68" width="60" height="24"/><circle cx="205" cy="80" r="20"/>
-<text x="200" y="85">G</text><text x="90" y="116">R_s</text>
-<text x="12" y="103">a</text><text x="277" y="103">b</text>
-<text x="142" y="40">Cuộn điện kế R_G</text></svg>

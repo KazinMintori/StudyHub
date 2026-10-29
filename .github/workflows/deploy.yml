@@ -4,6 +4,17 @@ on:
   push:
     branches: [main, master]
   workflow_dispatch:
+    inputs:
+      verify_only:
+        description: Build and verify without publishing GitHub Pages
+        required: false
+        type: boolean
+        default: false
+      fixture_only:
+        description: Verify the small production-theme fixture without a full site build
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -11,7 +22,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: ${{ github.event_name == 'workflow_dispatch' && (inputs.verify_only || inputs.fixture_only) && format('verify-{0}', github.ref) || 'pages' }}
   cancel-in-progress: false
 
 env:
@@ -36,6 +47,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Assemble pinned private course sources
+        env:
+          COURSE_DEPLOY_KEYS: ${{ secrets.STUDYHUB_COURSE_DEPLOY_KEYS }}
+        run: npm run courses:sync
+
       - name: Check interface design tokens
         run: npm run audit:tokens
 
@@ -52,9 +68,39 @@ jobs:
           node scripts/verification/verify-content-model.mjs
 
       - name: Verify feature rules and rendering
+        if: '!inputs.fixture_only'
         run: |
           npm run test:features
           npm test
+
+      - name: Verify browser navigation and responsive reading
+        if: '!inputs.fixture_only'
+        env:
+          BASE_PATH: /
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: |
+          npm run dev -- --host 127.0.0.1 --port 5173 > /tmp/studyhub-dev.log 2>&1 &
+          DEV_PID=$!
+          trap 'kill "$DEV_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://127.0.0.1:5173/ > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run verify:navigation
+          node scripts/verification/verify-course-workspace.mjs
+          node scripts/verification/verify-lecture-usability.mjs
+
+      - name: Save browser verification reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-verification
+          path: |
+            qa/navigation-stability/
+            qa/lecture-usability/
+            qa/course-workspace/
+            qa/batch-build-fixture/
+          if-no-files-found: ignore
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -63,23 +109,50 @@ jobs:
 
       - name: Verify batched build integration
         env:
+          QA_REAL_THEME: '1'
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
         run: node scripts/verification/verify-batch-build.mjs
 
       - name: Show build runner memory
         run: free -h
 
+      - name: Save batch fixture diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: batch-fixture-diagnostics
+          path: qa/batch-build-fixture/
+          if-no-files-found: ignore
+
       - name: Build with VitePress
+        if: '!inputs.fixture_only'
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
         run: npm run ci:build
 
+      - name: Verify built-site navigation with the production base path
+        if: '!inputs.fixture_only'
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+          QA_URL: http://127.0.0.1:4173/${{ github.event.repository.name }}
+        run: |
+          npm run preview -- --host 127.0.0.1 --port 4173 > /tmp/studyhub-preview.log 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent "$QA_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          npm run verify:navigation
+
       - name: Upload Pages artifact
+        if: always() && !inputs.fixture_only
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
 
   deploy:
+    if: success() && (github.event_name != 'workflow_dispatch' || (!inputs.verify_only && !inputs.fixture_only))
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

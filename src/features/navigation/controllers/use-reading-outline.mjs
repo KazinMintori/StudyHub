@@ -8,15 +8,19 @@ export function provideReadingOutline(page) {
   const headings = ref([])
   const active = ref('')
   let observer, frame = 0, scrollFrame = 0, disposed = false
+  let positions = []
+  let resizeObserver
 
   function updateActive() {
     scrollFrame = 0
-    let current = ''
-    for (const heading of headings.value) {
-      const element = document.getElementById(heading.id)
-      if (element?.getBoundingClientRect().top <= getScrollOffset() + 8) current = heading.id
+    const top = window.scrollY + getScrollOffset() + 8
+    let low = 0, high = positions.length
+    while (low < high) {
+      const mid = (low + high) >>> 1
+      if (positions[mid].top <= top) low = mid + 1
+      else high = mid
     }
-    active.value = current
+    active.value = positions[low - 1]?.id || ''
   }
 
   function onScroll() {
@@ -38,6 +42,8 @@ export function provideReadingOutline(page) {
       }).filter(heading => heading.id)
     // The observer also sees the outline render. Avoid feeding it another update.
     if (JSON.stringify(next) !== JSON.stringify(headings.value)) headings.value = next
+    positions = next.map(heading => ({ id: heading.id, top: window.scrollY + document.getElementById(heading.id).getBoundingClientRect().top }))
+      .sort((a, b) => a.top - b.top)
     updateActive()
   }
 
@@ -49,15 +55,20 @@ export function provideReadingOutline(page) {
     await nextTick()
     if (disposed) return
     observer?.disconnect()
+    resizeObserver?.disconnect()
     const root = document.querySelector('.VPDoc .content-container')
-    if (root) observer.observe(root, { childList: true, subtree: true })
+    if (root) {
+      observer.observe(root, { childList: true, subtree: true })
+      resizeObserver.observe(root)
+    }
     schedule()
   }
 
   async function navigate(id) {
     const hash = `#${encodeURIComponent(id)}`
     if (window.location.hash !== hash) {
-      window.history.pushState(window.history.state, '', hash)
+      window.history.replaceState({ ...window.history.state, scrollPosition: window.scrollY }, '')
+      window.history.pushState({}, '', hash)
       window.dispatchEvent(new HashChangeEvent('hashchange'))
     }
     await nextTick()
@@ -71,6 +82,7 @@ export function provideReadingOutline(page) {
 
   onMounted(() => {
     observer = new MutationObserver(schedule)
+    resizeObserver = new ResizeObserver(schedule)
     observe()
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', schedule)
@@ -80,6 +92,7 @@ export function provideReadingOutline(page) {
   onUnmounted(() => {
     disposed = true
     observer?.disconnect()
+    resizeObserver?.disconnect()
     cancelAnimationFrame(frame)
     cancelAnimationFrame(scrollFrame)
     window.removeEventListener('scroll', onScroll)

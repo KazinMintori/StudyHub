@@ -3,7 +3,8 @@ import { computed } from 'vue'
 import { useData } from 'vitepress'
 import { findCourse } from '../../../content/catalog.mjs'
 import { studyLink } from '../../../core/routing/links.js'
-import { lecturePart } from '../../navigation/controllers/use-lecture-navigation.mjs'
+import { lecturePart, selectLecturePart } from '../../navigation/controllers/use-lecture-navigation.mjs'
+import { shouldIgnoreNavigationClick } from '../../navigation/services/tab-service.mjs'
 const { frontmatter } = useData()
 const course = computed(() => findCourse(frontmatter.value.course))
 const chapter = computed(() => course.value?.lessons.find(item => item.slug === frontmatter.value.lecture))
@@ -13,11 +14,16 @@ const previous = computed(() => topics.value[index.value - 1])
 const next = computed(() => topics.value[index.value + 1])
 const nextChapter = computed(() => course.value?.lessons[course.value.lessons.indexOf(chapter.value) + 1])
 const path = topic => studyLink(`/triet-hoc-mac-lenin/bai-giang/${chapter.value.slug}/${topic.slug}`)
+function practice(event) {
+  if (shouldIgnoreNavigationClick(event)) return
+  event.preventDefault()
+  return selectLecturePart('bai-tap')
+}
 </script>
 
 <template>
   <div v-if="chapter && index >= 0" class="philosophy-topic-footer">
-  <a v-if="lecturePart !== 'bai-tap'" class="philosophy-topic-practice" href="#bai-tap">Làm bài tập của chủ đề <span aria-hidden="true">→</span></a>
+  <a v-if="lecturePart !== 'bai-tap'" class="philosophy-topic-practice vp-raw" href="#bai-tap" @click="practice">Làm bài tập của chủ đề <span aria-hidden="true">→</span></a>
   <nav class="philosophy-topic-nav" aria-label="Chuyển chủ đề">
     <a v-if="previous" :href="path(previous)"><span>← Chủ đề trước</span><strong>{{ previous.title }}</strong></a>
     <a v-else :href="studyLink(`/triet-hoc-mac-lenin/bai-giang/${chapter.slug}`)"><span>← Mục lục chương</span><strong>{{ chapter.title }}</strong></a>

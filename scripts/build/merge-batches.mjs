@@ -24,13 +24,24 @@ export function replacePageMap(html, pageMap) {
 }
 
 export async function mergeBatch(source, target, state) {
+  const batchFiles = []
+  for await (const file of filesIn(source)) batchFiles.push(file)
+  const surfaceFiles = batchFiles.filter(file => /\/framework-surface\.[^/]+\.json$/.test(file))
+  if (surfaceFiles.length > 1) throw new Error('A batch must have exactly one shared framework')
+  if (surfaceFiles.length) {
+    const framework = JSON.parse(await readFile(path.join(source, surfaceFiles[0]), 'utf8'))
+    if (!Array.isArray(framework.exports) || !/^assets\/chunks\/framework-shared\.[a-f0-9]+\.js$/.test(framework.alias)) throw new Error('Invalid shared framework surface')
+    if (state.sharedFramework) {
+      if (state.sharedFramework.alias !== framework.alias || framework.exports.some(name => !state.sharedFramework.exports.includes(name))) throw new Error('Incompatible framework exports across build batches')
+    } else state.sharedFramework = framework
+  }
   const pageMap = JSON.parse(await readFile(path.join(source, 'hashmap.json'), 'utf8'))
   for (const [key, value] of Object.entries(pageMap)) {
     if (state.pageMap[key] && state.pageMap[key] !== value && key !== '404.md') throw new Error(`Conflicting page hash: ${key}`)
     // Keep the first 404 together with its matching HTML and page hash.
     state.pageMap[key] ??= value
   }
-  for await (const file of filesIn(source)) {
+  for (const file of batchFiles) {
     if (file === 'hashmap.json') continue
     const data = await readFile(path.join(source, file))
     if (file === 'vp-icons.css') {
@@ -40,6 +51,7 @@ export async function mergeBatch(source, target, state) {
     const hash = digest(data)
     if (state.files.has(file)) {
       if (file === '404.html') continue
+      if (file === state.sharedFramework?.alias) continue
       if (state.files.get(file) !== hash) throw new Error(`Build output collision: ${file}`)
       continue
     }
@@ -48,6 +60,12 @@ export async function mergeBatch(source, target, state) {
     await mkdir(path.dirname(destination), { recursive: true })
     await copyFile(path.join(source, file), destination)
   }
+}
+
+export function replaceFrameworkPreloads(html, framework) {
+  if (!framework) return html
+  const name = path.posix.basename(framework.alias)
+  return html.replace(/(href="[^"\n]*\/chunks\/)framework\.[^/"\n]+\.js"/g, (_, prefix) => `${prefix}${name}"`)
 }
 
 export async function finalizeBatches(target, plan, state) {
@@ -76,7 +94,7 @@ export async function finalizeBatches(target, plan, state) {
   for (const file of rendered) {
     if (!state.files.has(file)) continue
     const location = path.join(target, file)
-    await writeFile(location, replacePageMap(await readFile(location, 'utf8'), pageMap))
+    await writeFile(location, replaceFrameworkPreloads(replacePageMap(await readFile(location, 'utf8'), pageMap), state.sharedFramework))
   }
   await writeFile(path.join(target, 'hashmap.json'), JSON.stringify(pageMap))
   await writeFile(path.join(target, 'vp-icons.css'), [...state.icons].join('\n'))

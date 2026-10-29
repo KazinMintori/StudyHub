@@ -1,5 +1,6 @@
 <script setup>
-import { nextTick, onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
+import { selectLecturePart } from '../../navigation/controllers/use-lecture-navigation.mjs'
 
 const props = defineProps({ topicId: { type: String, required: true } })
 const active = ref('notes')
@@ -12,21 +13,12 @@ async function syncHash() {
   let hash
   try { hash = decodeURIComponent(window.location.hash.slice(1)) } catch { return }
   const exercise = hash === 'bai-tap' || hash === `${props.topicId}-bai-tap`
-  const changed = active.value !== (exercise ? 'bai-tap' : 'notes')
   active.value = exercise ? 'bai-tap' : 'notes'
-  if (exercise && changed) {
-    await nextTick()
-    // Wait for Notes to leave the layout before positioning the shorter exercise panel.
-    requestAnimationFrame(() => requestAnimationFrame(() => tablist.value?.scrollIntoView({ block: 'start', behavior: 'instant' })))
-  }
 }
 
-function select(id) {
-  if (active.value === id) return
+async function select(id) {
   active.value = id
-  const hash = id
-  window.history.pushState(window.history.state, '', `#${hash}`)
-  window.dispatchEvent(new Event('hashchange'))
+  await selectLecturePart(id)
 }
 
 function keyboard(event, index) {

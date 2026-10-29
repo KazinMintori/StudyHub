@@ -16,13 +16,33 @@ import {
  */
 export const lecturePart = ref('notes')
 
+export function prepareLectureNavigation(to) {
+  const target = new URL(to, window.location.href)
+  lecturePart.value = classifyLectureHash(target.hash === '#slides' ? '#notes' : target.hash, { allowedParts: lectureParts })
+}
+
+export async function settleLectureNavigation() {
+  if (!LECTURE_PART_HASHES.includes(window.location.hash) || window.history.state?.scrollPosition != null) return
+  const destination = window.location.href
+  await nextTick()
+  const frame = requestAnimationFrame(() => {
+    if (window.location.href === destination) window.scrollTo({ top: 0, behavior: 'instant' })
+    cleanup()
+  })
+  function cancel() { cancelAnimationFrame(frame); cleanup() }
+  function cleanup() { for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) window.removeEventListener(type, cancel, true) }
+  for (const type of ['wheel', 'touchstart', 'pointerdown', 'keydown']) window.addEventListener(type, cancel, { capture: true, passive: true, once: true })
+}
+
 // Tab hashes are state, not article anchors (the exercise content also has an
 // element named bai-tap). Bypass the router's automatic anchor scrolling.
 export async function selectLecturePart(part) {
+  if (!lectureParts.some(item => item.id === part)) return
   lecturePart.value = part
   const hash = `#${part}`
   if (window.location.hash !== hash) {
-    window.history.pushState(window.history.state, '', hash)
+    window.history.replaceState({ ...window.history.state, scrollPosition: window.scrollY }, '')
+    window.history.pushState({}, '', hash)
     window.dispatchEvent(new HashChangeEvent('hashchange'))
   }
   await nextTick()
@@ -52,9 +72,8 @@ export function syncLecturePart() {
       return Boolean(anchor?.closest(NAVIGATION_SELECTORS.exerciseContent))
     }
   })
-  if (LECTURE_PART_HASHES.includes(rawHash) && document.querySelector('.shared-reading-outline')) {
-    nextTick(() => requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'instant' })))
-  }
+  // Synchronizing state must never move the reader. Clicks own their one
+  // scroll reset, while VitePress owns page/history/heading restoration.
 }
 
 /**
@@ -89,6 +108,9 @@ export function useLectureNavigation() {
   onMounted(() => {
     if (typeof window === 'undefined') return
     syncLecturePart()
+    // A tab hash is state, never the identically named exercise heading.
+    // Run only once on entry, after VitePress's initial anchor callback.
+    settleLectureNavigation()
     window.addEventListener('hashchange', syncLecturePart)
     window.addEventListener('popstate', syncLecturePart)
     document.addEventListener('click', syncLink, true)

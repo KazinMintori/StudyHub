@@ -1,4 +1,6 @@
-html { scroll-behavior: smooth; scroll-padding-top: 112px; }
+/* Router/history resets must finish before the destination is painted.
+   Heading links can request smooth scrolling explicitly when appropriate. */
+html { scroll-behavior: auto; scroll-padding-top: 112px; }
 body { font-family: var(--font-ui); font-size: var(--fs-ui); line-height: 1.6; color: var(--ink); }
 /* Keep the page and reading panes draggable. Math hides its own scrollbars. */
 html { overflow-y: scroll; scrollbar-color: var(--ink-3) var(--paper); }
