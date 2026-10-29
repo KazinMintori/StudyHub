@@ -26,6 +26,8 @@ Không dùng các kiểm tra Notes trước đây để suy ra tab Bài tập c�
 
 Đây vẫn là bằng chứng cục bộ của những phần đã sửa. Sau khi xuất bản cần đo lại bản web để xác định các lỗi còn lại. Chương 31 được xử lý riêng vì đề xuất của agent còn 11 chỗ tràn khi chạy kiểm tra thực tế, dù báo cáo của agent nói đã sửa hết. Các chỗ này đã được sửa và đo lại, đạt 30 trường hợp hiển thị của sáu phần nội dung. Những bước khai triển đa thức và quan hệ tần số bị rút mất trong đề xuất ban đầu đã được khôi phục. Kiểm tra toán toàn dự án chạy lại đạt cả 32 kiểm thử, cùng các phép kiểm chứng Python độc lập cho mạch RLC.
 
+Các phát hiện về bảng ở Q40.25 và bài 40.60 đã được sửa bằng cách hiển thị theo hàng trên điện thoại. Bảng số liệu truyền qua được chuyển từ hàng ngang sang năm cặp giá trị theo cột. Mọi giá trị được giữ nguyên. Ba phần bài tập giao thoa cũng đã được sửa, đạt thêm 25 trường hợp hiển thị cùng hai phần lượng tử. Các kiểm tra toán chạy lại đạt 32/32 và bộ kỹ năng đạt 39/39.
+
 ## Những lỗi thực tế đã sửa
 
 - Chương 2 có đề nhưng chưa đủ lời giải chi tiết. Đã bổ sung trọn bộ 127 đơn vị cuối chương, tách nhóm bài tập đúng cơ chế của trang và sửa các công thức bị tràn trong khung lời giải trên điện thoại.

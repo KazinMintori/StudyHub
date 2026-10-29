@@ -1,0 +1,359 @@
+{
+  "status": "accepted-private-course-update-awaiting-public-release",
+  "files": [
+    {
+      "file": "raw_materials/physics/translations/chapter-35/14-bai-tap-32-44.md",
+      "oldSHA256": "08e9e1be84fdc39f13b5376a70688262fe1c833f1988b3478df72aeabd6e285f",
+      "newSHA256": "783f44d3d3bb88d820f10b1bbd484e2594e4fa464d2f9cb6819270319aadbc10",
+      "backup": "qa/physics-private-release-20261029/ch35-format/14-bai-tap-32-44.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-35/15-bai-tap-45-53.md",
+      "oldSHA256": "5f8d4b634ece11b3dc5ad15a0df782d64e413f78319a42d57adcddd786d475e5",
+      "newSHA256": "4ee89867985bca2cfdaa4ef09549365060218cf7128b8cb3a382972b0df337b9",
+      "backup": "qa/physics-private-release-20261029/ch35-format/15-bai-tap-45-53.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-35/16-bai-tap-nang-cao.md",
+      "oldSHA256": "407d86812c3f94cf58d1343ae0a16c1680d640a3ed508e81e05a39ff862761a2",
+      "newSHA256": "5ecb0dcc9615fe496608cb0bdfec09b32ec5f5bfac02e6d6a5236aa7326ea897",
+      "backup": "qa/physics-private-release-20261029/ch35-format/16-bai-tap-nang-cao.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-40/08-cau-hoi-thao-luan.md",
+      "oldSHA256": "ff606551be2d7fb7dd9337ae3dc2e5a5b32bbe3f4f222f734b01ba902df29da3",
+      "newSHA256": "71f60c6070838f6174a26ed3d85510a39d61fa25b50bcae065584107f2a42e39",
+      "tableProof": {
+        "allCellsUnchanged": true
+      },
+      "backup": "qa/physics-private-release-20261029/ch40-tables/08-cau-hoi-thao-luan.md.before"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-40/13-bai-tap-51-66.md",
+      "oldSHA256": "ffd16d07d33d305b17a6faa329300d6c300551592b589096f414c4520e549d95",
+      "newSHA256": "94e6ec117b9ecb8e40b525c6a899635f827610a570eedc4232ef86dfd6081a17",
+      "tableProof": {
+        "allFiveEnergyTransmissionPairsUnchanged": true
+      },
+      "backup": "qa/physics-private-release-20261029/ch40-tables/13-bai-tap-51-66.md.before"
+    },
+    {
+      "file": "src/content/courses/vat-ly-2/lectures/15-giao-thoa/content.json",
+      "backup": "qa/physics-private-release-20261029/next-format-index-backups/15-giao-thoa/content.json",
+      "oldSHA256": "0733bd8fc01568648557fe3d7990b6886ef48b66d36386a959940f72e5be99d7",
+      "newSHA256": "d31b7cf06c217cfe4504d133a3f56b5fcc150beb0bfbd4a2872c5954287c5b9a",
+      "preservedAllFieldsExceptAffectedLineNumbers": true
+    },
+    {
+      "file": "src/content/courses/vat-ly-2/lectures/20-ham-song-schrodinger/content.json",
+      "backup": "qa/physics-private-release-20261029/next-format-index-backups/20-ham-song-schrodinger/content.json",
+      "oldSHA256": "86932d91078a70ce9779a004970f5e5e938de65bb62f8a4931e69996a25afcd0",
+      "newSHA256": "28bc89b94cd5601c09b708eac20267513c544190cb2ab2b65b43ed255ce933bb",
+      "preservedAllFieldsExceptAffectedLineNumbers": true
+    }
+  ],
+  "cases": [
+    {
+      "group": "theory-14-bai-tap-32-44",
+      "width": 320,
+      "issues": [],
+      "formulas": 147,
+      "visibleFormulas": 147,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-14-bai-tap-32-44",
+      "width": 360,
+      "issues": [],
+      "formulas": 147,
+      "visibleFormulas": 147,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-14-bai-tap-32-44",
+      "width": 375,
+      "issues": [],
+      "formulas": 147,
+      "visibleFormulas": 147,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-14-bai-tap-32-44",
+      "width": 768,
+      "issues": [],
+      "formulas": 147,
+      "visibleFormulas": 147,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-14-bai-tap-32-44",
+      "width": 1440,
+      "issues": [],
+      "formulas": 147,
+      "visibleFormulas": 147,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-15-bai-tap-45-53",
+      "width": 320,
+      "issues": [],
+      "formulas": 109,
+      "visibleFormulas": 109,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-15-bai-tap-45-53",
+      "width": 360,
+      "issues": [],
+      "formulas": 109,
+      "visibleFormulas": 109,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-15-bai-tap-45-53",
+      "width": 375,
+      "issues": [],
+      "formulas": 109,
+      "visibleFormulas": 109,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-15-bai-tap-45-53",
+      "width": 768,
+      "issues": [],
+      "formulas": 109,
+      "visibleFormulas": 109,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-15-bai-tap-45-53",
+      "width": 1440,
+      "issues": [],
+      "formulas": 109,
+      "visibleFormulas": 109,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 4,
+      "captions": 4
+    },
+    {
+      "group": "theory-16-bai-tap-nang-cao",
+      "width": 320,
+      "issues": [],
+      "formulas": 72,
+      "visibleFormulas": 72,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-16-bai-tap-nang-cao",
+      "width": 360,
+      "issues": [],
+      "formulas": 72,
+      "visibleFormulas": 72,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-16-bai-tap-nang-cao",
+      "width": 375,
+      "issues": [],
+      "formulas": 72,
+      "visibleFormulas": 72,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-16-bai-tap-nang-cao",
+      "width": 768,
+      "issues": [],
+      "formulas": 72,
+      "visibleFormulas": 72,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-16-bai-tap-nang-cao",
+      "width": 1440,
+      "issues": [],
+      "formulas": 72,
+      "visibleFormulas": 72,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 0,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-08-cau-hoi-thao-luan",
+      "width": 320,
+      "issues": [],
+      "formulas": 417,
+      "visibleFormulas": 417,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 27,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-08-cau-hoi-thao-luan",
+      "width": 360,
+      "issues": [],
+      "formulas": 417,
+      "visibleFormulas": 417,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 27,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-08-cau-hoi-thao-luan",
+      "width": 375,
+      "issues": [],
+      "formulas": 417,
+      "visibleFormulas": 417,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 27,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-08-cau-hoi-thao-luan",
+      "width": 768,
+      "issues": [],
+      "formulas": 417,
+      "visibleFormulas": 417,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 27,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-08-cau-hoi-thao-luan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 417,
+      "visibleFormulas": 417,
+      "intentionallyHiddenLabelMath": 0,
+      "units": 27,
+      "images": 2,
+      "captions": 2
+    },
+    {
+      "group": "theory-13-bai-tap-51-66",
+      "width": 320,
+      "issues": [],
+      "formulas": 724,
+      "visibleFormulas": 722,
+      "intentionallyHiddenLabelMath": 2,
+      "units": 16,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-13-bai-tap-51-66",
+      "width": 360,
+      "issues": [],
+      "formulas": 724,
+      "visibleFormulas": 722,
+      "intentionallyHiddenLabelMath": 2,
+      "units": 16,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-13-bai-tap-51-66",
+      "width": 375,
+      "issues": [],
+      "formulas": 724,
+      "visibleFormulas": 722,
+      "intentionallyHiddenLabelMath": 2,
+      "units": 16,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-13-bai-tap-51-66",
+      "width": 768,
+      "issues": [],
+      "formulas": 724,
+      "visibleFormulas": 722,
+      "intentionallyHiddenLabelMath": 2,
+      "units": 16,
+      "images": 3,
+      "captions": 3
+    },
+    {
+      "group": "theory-13-bai-tap-51-66",
+      "width": 1440,
+      "issues": [],
+      "formulas": 724,
+      "visibleFormulas": 714,
+      "intentionallyHiddenLabelMath": 10,
+      "units": 16,
+      "images": 3,
+      "captions": 3
+    }
+  ],
+  "scope": "Three chapter35 exercise fragments and two chapter40 exercise fragments. Two overflowing quantum tables and four interference formula leads plus an invalid derivative break.",
+  "physicsChecks": "Three coherent field superposition, optical-path product-rule derivative, exact two-source path geometry and unchanged quantum table values recomputed in Python.",
+  "sourcePreservation": "Every original image declaration, original data pair and source term preserved. Named intermediate fields and optical derivative factor defined explicitly.",
+  "limits": "Local production Markdown/CSS fragment geometry only; current publicrouteacceptance after publication stillrequired.",
+  "fullGoalComplete": false,
+  "privateRevision": "3648ed43f4e7ef92d8eb760f277a542b4d8dbbaa",
+  "fullMathCheck": {
+    "exitCode": 0,
+    "tests": 32,
+    "pages": 1508,
+    "includes": 588,
+    "uniqueAllDataFormulas": 58370,
+    "uniqueMarkdownMathTokens": 56095
+  },
+  "skillTests": {
+    "tests": 39,
+    "exitCode": 0
+  },
+  "scopedLectureCheck": {
+    "lessons": 2,
+    "topics": 11,
+    "errors": 0,
+    "warnings": 0
+  },
+  "allOtherManifestEntriesAndTimestampsPreserved": true,
+  "privateRepository": "KazinMintori/StudyHub-course-vat-ly-2",
+  "sourceDataDisposition": "Exact before/after cells and numerical check evidence retained in local QA. This public report contains only hashes, IDs and verification metadata."
+}
