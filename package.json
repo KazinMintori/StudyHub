@@ -4,6 +4,10 @@
   "description": "Kho tài liệu và bài giảng ôn tập môn học UET",
   "type": "module",
   "scripts": {
+    "verify:cloud": "node scripts/maintenance/cloud-verify.mjs",
+    "workspace:prepare": "node scripts/maintenance/workspace.mjs prepare",
+    "workspace:clean": "node scripts/maintenance/workspace.mjs clean",
+    "dev:temporary": "node scripts/maintenance/workspace.mjs dev",
     "courses:sync": "node scripts/content/course-repositories.mjs",
     "courses:check": "node scripts/content/course-repositories.mjs --check",
     "courses:export": "node scripts/content/course-repositories.mjs export",
