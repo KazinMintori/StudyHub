@@ -1,0 +1,16 @@
+Status: READY_FOR_AGY
+
+Task scope: Two independent read-only evidence-continuity reviews for Physics1 supporting material. Task A covers chapters1–8; task B covers chapters9–20. These are evidence reconstruction tasks, not retries of prior chapter authoring or unknown chapter18 source-review jobs.
+Risk: Read-only. Owned files: None, including no QA writes. Return report through task output only.
+Workdir A: C:/Users/Ai/.codex/worktrees/physics1-remaining-ch01-theory-20261023/StudyHub
+Workdir B: C:/Users/Ai/.codex/worktrees/physics1-ch17-theory-review-20261023/StudyHub
+Authorization: User explicitly enabled Antigravity delegation and automatic permission approval for ongoing trusted bounded work. This plan applies that standing grant to exactly these read-only scopes and existing isolated worktrees. Do not switch accounts.
+Permission mode: dangerously_skip_permissions=true. All filesystem data remains read-only in both tasks.
+Baselines: Stored at C:/Users/Ai/.codex/worktrees/physics-final-acceptance-20261031/StudyHub/qa/physics-final-20261101/support-review-worktree-baselines.json. Preserve every dirty/untracked authored file in both worktrees. Their source versions are not assumed current.
+Current authoritative manifest: C:/Users/Ai/.codex/worktrees/physics1-private-fixes-20261031/studyhub-course.json, revisionec53e79d1e8b4b2a9720aaf0cc9bb6c1edc4d1e3.
+Current public sources: C:/Users/Ai/.codex/worktrees/physics-final-acceptance-20261031/StudyHub.
+Historical review evidence: C:/Users/Ai/.codex/worktrees/physics1-priority-20261022/StudyHub/raw_materials/physics/reviews/ and qa/physics1-remaining/ plus qa/physics1-priority/. Shared C:/Users/Ai/Documents/StudyHub/.course-repositories/vat-ly-1 files may only be used if their exact bytes (or explicit LF/CRLF normalization) match the locked manifest. Do not change that cache.
+Acceptance criteria: For every chapter in assigned range, locate explicit semantic Cheatsheet/Wiki/prerequisite review receipts. Identify exact support file paths, reviewed hashes or proof of identity at the review commit, compare to locked manifest/current public Wiki. Accept only original reviewed scope, with separate unaccepted later deltas. Count/presence/browser pass alone is not semantic acceptance. If a receipt covers only theory, do not infer exercises. Do not downgrade a valid unchanged historical receipt merely because old; do not accept unverified unchanged claims. Report finite residual files/units, contradictions and best concrete next action.
+Verification commands: Read-only git show/log/status, Python hashlib/JSON and bounded reads. Read actual relevant evidence, not only search hits. No source/PDF rerender, build, install, network, browser, Git mutation, push/deploy, credentials, cleanup or account changes. Report final git status and forbidden-change check.
+Output: Compact JSON object with task/range, lockedRevision, each chapter (acceptedScope, evidencePaths, exactSHA or reviewCommit+identityProof, laterDeltas, missingEvidence, nextAction), blockers, permissionErrors, finalStatus. Do not claim whole-goal completion. Return usable non-null text.
+Call budget: Initial1of3 per scope, at most2 reproducible corrections. Unknown is not success; do not restart blindly. Never exceed3calls.
