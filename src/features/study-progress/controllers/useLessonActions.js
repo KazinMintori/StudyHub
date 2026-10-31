@@ -12,10 +12,10 @@ export function useLessonActions(options = {}) {
   const part = options.part || lectureState.part
 
   const readable = computed(() => lesson.value?.status === 'ready')
+  const lessonIndex = computed(() => course.value?.lessons?.findIndex(item => item.slug === lesson.value?.slug) ?? -1)
+  const previousLesson = computed(() => lessonIndex.value > 0 ? course.value.lessons[lessonIndex.value - 1] : undefined)
   const nextLesson = computed(() => {
-    if (!course.value?.lessons || !lesson.value) return undefined
-    const idx = course.value.lessons.indexOf(lesson.value)
-    return idx >= 0 ? course.value.lessons[idx + 1] : undefined
+    return lessonIndex.value >= 0 ? course.value.lessons[lessonIndex.value + 1] : undefined
   })
 
   useHeadingTracker({
@@ -31,6 +31,7 @@ export function useLessonActions(options = {}) {
     lesson,
     part,
     readable,
+    previousLesson,
     nextLesson,
     storageMessage
   }

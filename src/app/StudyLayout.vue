@@ -108,7 +108,7 @@ const layoutClasses = computed(() => ({
       <CourseNav v-else />
       <LecturePanels v-if="frontmatter.section === 'lecture' && !isPhilosophy" />
     </template>
-    <template #doc-after><LessonActions v-if="frontmatter.section === 'lecture' && !isPhilosophy" /><PhilosophyTopicNav v-if="frontmatter.section === 'topic' && isPhilosophy" /><TopicNav v-else-if="frontmatter.section === 'topic'" /><WikiFooter v-if="frontmatter.wikiTerm" /></template>
+    <template #doc-after><LessonActions v-if="frontmatter.section === 'lecture'" /><PhilosophyTopicNav v-if="frontmatter.section === 'topic' && isPhilosophy" /><TopicNav v-else-if="frontmatter.section === 'topic'" /><WikiFooter v-if="frontmatter.wikiTerm" /></template>
     <template #layout-bottom>
       <ReadingPageControls v-if="['lecture', 'topic'].includes(frontmatter.section)" />
       <DiagramLightbox />

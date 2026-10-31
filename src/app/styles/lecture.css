@@ -197,7 +197,21 @@
   padding-left: 0;
 }
 .lesson-actions { margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--rule); font-family: var(--font-ui); }
-.lesson-actions nav { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-5); }
+.lesson-page-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+.lesson-page-link { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; min-height: 72px; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); text-decoration: none; overflow-wrap: anywhere; transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.lesson-page-link.previous { grid-column: 1; }
+.lesson-page-link.next { grid-column: 2; text-align: right; }
+.lesson-page-label { display: flex; align-items: center; gap: var(--space-2); color: var(--ink-2); font-size: var(--fs-small); line-height: 1.5; }
+.lesson-page-link.next .lesson-page-label { justify-content: flex-end; }
+.lesson-page-label svg { flex-shrink: 0; }
+.lesson-page-title { color: var(--tim); font-size: var(--fs-ui); font-weight: 600; line-height: 1.5; }
+.lesson-page-link:hover { border-color: var(--tim); background: var(--canvas); }
+.lesson-page-link:focus-visible { outline: 2px solid var(--tim); outline-offset: 3px; }
+@media (max-width: 600px) {
+  .lesson-page-nav { grid-template-columns: minmax(0, 1fr); }
+  .lesson-page-link.next { grid-column: 1; text-align: left; }
+  .lesson-page-link.next .lesson-page-label { justify-content: flex-start; }
+}
 .lecture-slides > .eyebrow { font-size: 11px; letter-spacing: 1.6px; font-weight: 600; color: var(--ink-2); }
 .course-slide { border: 1px solid var(--rule); border-radius: 8px; padding: 36px; background: var(--paper); min-height: 430px; }
 .course-slide .eyebrow { font-size: 11px; line-height: 1.7; letter-spacing: 1.6px; color: var(--ink-2); }
@@ -889,8 +903,6 @@
   }
 }
 
-.next-lesson-nav { display: flex; justify-content: flex-end; margin-top: var(--space-5); }
-.next-lesson-link { min-width: 0; overflow-wrap: anywhere; }
 
 /* Reserve space for complete equations on narrow phones without reducing math type. */
 @media (max-width: 360px) {
