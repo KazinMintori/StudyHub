@@ -112,3 +112,13 @@ Bản nguồn riêng tư được ghim tại commit `1b7fb77d67f468e492a46782dd2
 Đã sửa lỗi bộ chuẩn hóa tiêu đề đổi số hiệu như `21.45` thành `21: 45` khi đi cùng ký hiệu độ khó. Bộ xử lý mới giữ nguyên số hiệu nhiều cấp và vẫn phân biệt dấu chấm kết thúc nhãn với dấu chấm trong mã bài. Kiểm tra trình xử lý đạt 62 trường hợp, bộ kỹ năng đạt 39 kiểm thử. Lượt cloud và bản web của thay đổi này cần xác nhận riêng.
 
 Đã sửa một sai sót trong báo cáo đếm: Chín bài cầu nối có sẵn bị bỏ qua do cách đặt tiêu đề. Đối chiếu lại mục bài cầu nối trên PDF và nguồn hiệu lực cho tổng 2.560 đơn vị cuối chương Vật lý 2, thay cho số đếm cũ 2.551. Tổng hai môn là 5.111, trong khi số bài đánh số vẫn là 3.590. Việc sửa bộ đếm không được mô tả như bổ sung chín bài mới.
+
+## Cập nhật ngày 31/10/2026
+
+Đã xác nhận commit `4085f71365aefdf7b2f2a81cc9975eaf100c36ba` build và deploy thành công trong lượt GitHub Actions `40842075479`. Bản trước `9edd8705` cũng đã build và deploy thành công. Hai lượt này bao gồm nguồn công thức đã ghim ngày 29/10 và bản sửa số hiệu bài tập.
+
+Đối chiếu trực tiếp hai mục 43.1–43.2 với PDF phát hiện các điểm cần sửa về dấu tương tác từ, điều kiện spin, phân biệt khối lượng nguyên tử với khối lượng hạt nhân và các phát biểu quá tuyệt đối trong mô hình liên kết. Đã sửa 19 khối nội dung, bổ sung năng lượng liên kết deuteron trên mỗi nucleon và ý nghĩa số hạng thể tích. Hai chú thích tiếng Anh được sửa ký hiệu chia và ký hiệu đồng vị. Đường dẫn hình và các tệp ảnh gốc được giữ nguyên.
+
+Các sửa đổi được rà độc lập theo đúng phạm vi, chạy 31 phép kiểm số học, mô hình và sự hiện diện của điều kiện. Hai mục đã qua 10 trường hợp hiển thị với quy tắc Markdown, công thức, chú thích hình và CSS thực tế. Phần liên kết thuật ngữ tự động được bỏ qua trong bộ kiểm cục bộ này, nên vẫn cần CI đầy đủ và kiểm trang sau triển khai. Bộ kỹ năng chạy đạt 39 kiểm thử.
+
+Một báo cáo agent cũ ghi sai nguyên tố của ví dụ, từ trường, nội dung ứng dụng đồng vị và một số câu hỏi. Các chi tiết đó không được dùng làm căn cứ sửa. Bài học là phải kiểm chính dữ kiện trong PDF, kể cả khi một báo cáo có vẻ đầy đủ và có nhiều con số kiểm tra. Hồ sơ nghiệm thu hiện tại là `nuclear-corrections-20261031.json`, với bằng chứng chi tiết được bảo quản trong kho nguồn riêng tư. Đợt sửa mới chưa được gọi là đã xuất bản cho đến khi CI và bản web tương ứng được xác nhận.

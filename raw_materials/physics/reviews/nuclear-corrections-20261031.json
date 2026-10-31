@@ -1,0 +1,193 @@
+{
+  "status": "source-reviewed-local-render-passed-pending-exact-cloud-and-public",
+  "scope": "Corrections to sections43.1–43.2 and two figure glosses. Not allchapter or allcourse semantic certification.",
+  "sourcePDFPages": [
+    1462,
+    1472
+  ],
+  "privateSourceRevision": "76861bed703973e1fb4162c433a08904480dc98c",
+  "corrections": [
+    "Use one interaction law for both signed spin projections.",
+    "Restore nuclear spin parity and even-even ground-state conditions.",
+    "Use the actual Fe56 radius for the added atomic/nuclear volume comparison.",
+    "Separate atomic and nuclear masses, electron rest-mass cancellation and neglected electronic binding corrections.",
+    "Restore deuteron binding per nucleon and the physical interpretation of the drop-model volume term.",
+    "Qualify binding-curve ranges, charge independence, fusion energy balance and the role of the asymmetry term.",
+    "Use a diffuse well without an exact cutoff at the nominal radius.",
+    "Remove unsupported stable/exhaustive language from doubly magic examples.",
+    "Correct FM band description and retain the source heavy-water plant condition.",
+    "Restore the division slash and helium isotope in two English image annotations."
+  ],
+  "changedSourceBlocks": 19,
+  "originalImageFilesChanged": 0,
+  "imageReferencesAndHeadingsAndDisclosuresPreserved": true,
+  "independentReview": "Passed scoped source comparison against actual PDF, with current source SHA256 retained in private evidence.",
+  "numericalChecks": {
+    "passed": 31,
+    "scope": "26 numerical/model checks and5 source-presence checks, not31 wholechapter conclusions."
+  },
+  "render": {
+    "cases": [
+      {
+        "name": "01-tinh-chat-hat-nhan.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 349,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "01-tinh-chat-hat-nhan.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 349,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "01-tinh-chat-hat-nhan.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 349,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "01-tinh-chat-hat-nhan.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 349,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "01-tinh-chat-hat-nhan.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 349,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "02-nang-luong-lien-ket.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 219,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "02-nang-luong-lien-ket.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 219,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "02-nang-luong-lien-ket.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 219,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "02-nang-luong-lien-ket.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 219,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "02-nang-luong-lien-ket.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 219,
+        "images": 3,
+        "captions": 3
+      }
+    ],
+    "scope": "Current proposed source with production Markdown/math/figure/responsive-table rules injected into actual public topic layout and CSS. Glossary term autolinking omitted; full cloud integration and exact deployed pages require separate acceptance.",
+    "files": [
+      {
+        "name": "01-tinh-chat-hat-nhan.md",
+        "sha256": "c1edee69b7c3cf86ec897d58aeb218298918a3554844c763b2cce4c7ef1bcd04",
+        "formulas": 349
+      },
+      {
+        "name": "02-nang-luong-lien-ket.md",
+        "sha256": "362f726e3faf65724bdc58c6e1f4b1d30c64dfcabccea69b81dada1078bc206f",
+        "formulas": 219
+      }
+    ]
+  },
+  "sourceAndIndexChecksums": [
+    {
+      "file": "docs/.vitepress/physics43-theory-a-image-annotations.mjs",
+      "sha256": "1a599064ccabc48c629525b7e2b91ad2237cefdfd37b267e48cd466c3b803d35"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/applied-corrections.json",
+      "sha256": "bdb7664a6a8434a218e0ff3c4b4bcb17178a3c44a27db12b8dd83862e6319604"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/independent-numeric-results.json",
+      "sha256": "13861616ed72fd1b35fa5d11f775bed85179c11132f89141dae807381f78b95b"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/independent-results.json",
+      "sha256": "0cf201ab6596b1417cc2fc53c5ecbc3f1380b980fac1f2d4b2436132a2bdda46"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/independent-review.md",
+      "sha256": "738f3bfc3c334fda8073ecf2db99c86153c1bcf43aeb779edc249eeb538128e7"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/independent-review.py",
+      "sha256": "7e62f7d312244ea991230b0de50ea44e453b509b68043f3c6deec39b06c95d48"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/line-index-update.json",
+      "sha256": "4c1992295b2daa26aa87a1f54b7264840e7a465c5348279b91774644c1971260"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/numeric-results.json",
+      "sha256": "13861616ed72fd1b35fa5d11f775bed85179c11132f89141dae807381f78b95b"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/nuclear/render-results.json",
+      "sha256": "fb443b72359ec1766577b95e74b3719ca2c11ca45977fd937189f470b4de24cd"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/01-tinh-chat-hat-nhan.md",
+      "sha256": "c1edee69b7c3cf86ec897d58aeb218298918a3554844c763b2cce4c7ef1bcd04"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/02-nang-luong-lien-ket.md",
+      "sha256": "362f726e3faf65724bdc58c6e1f4b1d30c64dfcabccea69b81dada1078bc206f"
+    },
+    {
+      "file": "raw_materials/physics/verify_nuclear_source_parent_20261031.py",
+      "sha256": "fb096f9a5c3f2943e47a83c7b0084450a9ecbe6c4b1ce95426d1d0a5e6628057"
+    },
+    {
+      "file": "src/content/courses/vat-ly-2/lectures/23-vat-ly-hat-nhan/content.json",
+      "sha256": "f88c86972bda6fc6350e57e0cd9547b8c338ef86474886d4a0bcde921874220b"
+    }
+  ],
+  "skillToolTests": {
+    "tests": 39,
+    "exitCode": 0,
+    "scope": "Skill tool regression suite, not physics correctness."
+  },
+  "globalMathAndBuild": "Pending exact commit GitHub full pipeline. No local full build.",
+  "lastPriorPublicRelease": {
+    "sha": "4085f71365aefdf7b2f2a81cc9975eaf100c36ba",
+    "run": 40842075479,
+    "build": "success",
+    "deploy": "success"
+  },
+  "sourceReviewLimits": "Prior AGY chapter43 inventory contained incorrect source particulars. Actual PDF, not that inventory, controls the accepted edits. Further chapters and support content remain under review."
+}
