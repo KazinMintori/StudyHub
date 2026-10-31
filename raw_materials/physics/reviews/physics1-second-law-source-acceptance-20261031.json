@@ -1,0 +1,215 @@
+{
+  "status": "parent-source-accepted-scoped-pending-cloud-and-public-release",
+  "chapter20Section": "20.5",
+  "sourcePDFPages": [
+    671,
+    672,
+    673
+  ],
+  "sourceBeforeSHA256": "20c1ea3c3e50f2e43b1787e0668dab661b79915445575768a1042f567727a3cc",
+  "sourceAfterSHA256": "6ffa28ac0a2a780a5e421a6ea4633432596b9f1a0e07081061d65021da8da1a2",
+  "sourceUnits": [
+    {
+      "unit": "Kelvin–Planck statement, cycle returning to its initial state",
+      "pages": [
+        671
+      ],
+      "disposition": "Retained valid statement."
+    },
+    {
+      "unit": "Organized macroscopic motion versus random molecular kinetic and potential energy",
+      "pages": [
+        671
+      ],
+      "disposition": "Restored explicit distinction."
+    },
+    {
+      "unit": "Friction converts organized motion into random molecular motion",
+      "pages": [
+        671
+      ],
+      "disposition": "Restored mechanism and qualification on complete cyclic conversion."
+    },
+    {
+      "unit": "Automobile/power plant cooling surrounding air and independence from first law",
+      "pages": [
+        672
+      ],
+      "disposition": "Restored actual examples and independent-law explanation."
+    },
+    {
+      "unit": "Clausius sole-result statement applies to a process",
+      "pages": [
+        672
+      ],
+      "disposition": "Restored process scope; preserved sole-result qualifier in following explanation, restricted work-input claim to compressor model."
+    },
+    {
+      "unit": "Both equivalence directions with reservoir and work cancellation",
+      "pages": [
+        672,
+        673
+      ],
+      "disposition": "Existing detailed proof retained; first-law bookkeeping recomputed."
+    },
+    {
+      "unit": "Figure20.11 both complete panels and explanatory caption",
+      "pages": [
+        672
+      ],
+      "disposition": "Original reference unchanged; source page visually inspected, existing figure/gloss registry retained."
+    },
+    {
+      "unit": "Work-to-heat conversion and heat transfer through finite temperature difference",
+      "pages": [
+        673
+      ],
+      "disposition": "Restored irreversible-process discussion."
+    },
+    {
+      "unit": "Pressure-driven gas flow and spontaneous mixing of miscible substances",
+      "pages": [
+        673
+      ],
+      "disposition": "Restored examples and external-change condition for reversal."
+    },
+    {
+      "unit": "Energy conversion in life and technology",
+      "pages": [
+        673
+      ],
+      "disposition": "Restored significance without invented quantitative claims."
+    },
+    {
+      "unit": "TYU20.5: Both hypothetical devices conserve energy but violate second law",
+      "pages": [
+        673
+      ],
+      "disposition": "Question and answer retained; both cyclic energy balances recomputed."
+    }
+  ],
+  "originalImagesChanged": 0,
+  "originalExamplesOrEndExercisesChanged": 0,
+  "contentIndexLineChanges": [
+    [
+      74,
+      84
+    ]
+  ],
+  "relatedAcceptedDeltas": [
+    {
+      "chapter": 6,
+      "file": "raw_materials/physics/translations/chapter-06/03-muc-03.md",
+      "reviewedSHA256": "7a50e8a876dfc991b15fb2fdc12c914b46d5c1649353a6d63cf2be2e990ed8de",
+      "lockedSHA256": "d380b62605cd818dcfcfa0e3f55c1e55dbbaf331500ce654ffc578a32db8743c",
+      "sourcePDFPages": [
+        203,
+        205
+      ],
+      "disposition": "Accepted correction of finite-delta wording and source caution distinguishing external/spring work. Exact source cautions inspected; integrals/signs recomputed."
+    },
+    {
+      "chapter": 9,
+      "file": "raw_materials/physics/translations/chapter-09/03-lien-he-dai-luong-dai-va-goc.md",
+      "reviewedSHA256": "b457ab5b392d3f83327686a84a60030717cae5f58bcc19875217c27b1c97658f",
+      "lockedSHA256": "bcbe578a59fe27fa9c4e9afcecb3aacac947f9bfa583832e067f87795decd746",
+      "disposition": "Exact prior bytes recovered from retained theory worktree. Only trailing whitespace removed on four prose lines; existing semantic receipt carried forward."
+    }
+  ],
+  "numericChecks": {
+    "status": "passed",
+    "scope": "Exact Simpson integration of linear Hooke forces, actual example6.6 inputs, and first-law energy bookkeeping for both hypothetical second-law violations. These calculations do not establish all chapter solutions or prove the empirical second law.",
+    "checks": 24,
+    "predicates": [
+      "external integral 0->1/10",
+      "opposite spring work 0->1/10",
+      "external integral 0->-1/10",
+      "opposite spring work 0->-1/10",
+      "external integral 1/10->0",
+      "opposite spring work 1/10->0",
+      "external integral -1/10->0",
+      "opposite spring work -1/10->0",
+      "external integral -1/5->3/10",
+      "opposite spring work -1/5->3/10",
+      "external integral 3/10->-1/5",
+      "opposite spring work 3/10->-1/5",
+      "compression from relaxed state requires positive external work",
+      "extension from relaxed state requires positive external work",
+      "example6.6 stiffness from actual600N and1cm",
+      "example6.6 compression work",
+      "Clausius violation -> engine bookkeeping 100,60",
+      "Kelvin violation -> refrigerator bookkeeping 100,60",
+      "Clausius violation -> engine bookkeeping 45/2,11/2",
+      "Kelvin violation -> refrigerator bookkeeping 45/2,11/2",
+      "Clausius violation -> engine bookkeeping 2000,500",
+      "Kelvin violation -> refrigerator bookkeeping 2000,500",
+      "ideal100percent engine obeys first-law cycle balance",
+      "workless refrigerator obeys first-law cycle balance"
+    ]
+  },
+  "rendering": {
+    "status": "passed-scoped-render",
+    "scope": "Current proposed source with production Markdown/math/figure/responsive-table rules injected into actual public topic layout and CSS. Glossary term autolinking omitted; full cloud integration and exact deployed pages require separate acceptance.",
+    "files": [
+      {
+        "name": "05-nguyen-ly-thu-hai.md",
+        "sha256": "6ffa28ac0a2a780a5e421a6ea4633432596b9f1a0e07081061d65021da8da1a2",
+        "formulas": 42
+      }
+    ],
+    "cases": [
+      {
+        "name": "05-nguyen-ly-thu-hai.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 42,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "05-nguyen-ly-thu-hai.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 42,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "05-nguyen-ly-thu-hai.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 42,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "05-nguyen-ly-thu-hai.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 42,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "05-nguyen-ly-thu-hai.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 42,
+        "images": 1,
+        "captions": 1
+      }
+    ]
+  },
+  "skillTests": 39,
+  "limitations": [
+    "No whole-course semantic acceptance inferred. Chapter18 residual files are under separate independent review. Full build/global math only on GitHub; exact new public deployment pending."
+  ],
+  "privateRevision": "545d18c102c5512833edbb2faef79019ab1781de",
+  "evidence": {
+    "evidenceFiles": 43,
+    "archiveBytes": 1245936,
+    "archiveSHA256": "74f5c6b2fd6a9d8d9cbb401c2bdc32b549f7f58d9f59a41ec2ca1e81625be53f",
+    "privatePath": "raw_materials/physics/reviews/private-physics1-acceptance-20261031"
+  },
+  "localIntegrationCheck": "Attempted check_lecture.mjs; unable to load unrelated private course bieu-dien-tri-thuc in intentionally partial checkout. Not counted as a passing integration check. Exact full assembled integration and global math remain GitHub gates."
+}

@@ -57,7 +57,7 @@
     {
       "id": "vat-ly-1",
       "repository": "KazinMintori/StudyHub-course-vat-ly-1",
-      "revision": "7cdc8deafbcf301f12fd1e73055b59172fa3e885",
+      "revision": "545d18c102c5512833edbb2faef79019ab1781de",
       "paths": [
         "docs/.vitepress/physics1-09-exercises-c-image-annotations.mjs",
         "docs/.vitepress/physics1-09-exercises-d-image-annotations.mjs",
@@ -416,7 +416,8 @@
         "raw_materials/physics/verify_priority_ch19_theory.py",
         "raw_materials/physics/verify_priority_ch20_numbered.py",
         "raw_materials/vat-ly-1/**",
-        "src/content/courses/vat-ly-1/**"
+        "src/content/courses/vat-ly-1/**",
+        "raw_materials/physics/reviews/private-physics1-acceptance-20261031/**"
       ]
     },
     {
