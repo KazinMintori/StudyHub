@@ -1,0 +1,643 @@
+{
+  "privateEvidenceRevision": "c49051c9de5a145a92754e5ea38cd1570e6d818f",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/active-reference-and-chapter13-16-images-20261101.tar.gz",
+  "archiveSHA256": "d78a5878200610905de4affa545ebbd25a3defff43d5fcfcbceca25099b10b55",
+  "wholeGoalComplete": false,
+  "status": "accepted-active-cheatsheet-source-audit-and-local-clarifications-scoped",
+  "coverage": {
+    "status": "passed-actual-active-reference-coverage",
+    "chapters": [
+      {
+        "chapter": 1,
+        "items": 19,
+        "formulaRows": 33,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 3,
+        "items": 12,
+        "formulaRows": 29,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 4,
+        "items": 11,
+        "formulaRows": 20,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 6,
+        "items": 12,
+        "formulaRows": 28,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 7,
+        "items": 10,
+        "formulaRows": 29,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 9,
+        "items": 11,
+        "formulaRows": 28,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 10,
+        "items": 9,
+        "formulaRows": 16,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 11,
+        "items": 7,
+        "formulaRows": 11,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      },
+      {
+        "chapter": 17,
+        "items": 12,
+        "formulaRows": 19,
+        "allActualItemNamesRowLabelsTeXDescriptionsAndPrerequisitesMatched": true
+      }
+    ],
+    "items": 103,
+    "formulaRows": 213,
+    "AGYTransport": "Call2 handles missing after bridge reset/NoneType. Durable artifacts recovered and audited directly; no transport-success claim or restart inferred.",
+    "limitations": "Coverage identity is not mathematical proof. Parent reading identified local clarification needs despite AGY allaccepted verdict. Optional steel-values/cooling-law suggestions are not required and are not adopted."
+  },
+  "corrections": {
+    "status": "clarifications-implemented-pending-source-byte-and-render-acceptance",
+    "chapters": [
+      3,
+      11,
+      17
+    ],
+    "changes": [
+      {
+        "file": "docs/.vitepress/physics1-remaining-ch03-course.mjs",
+        "beforeCanonicalSHA256": "4d6facb036ca4eaa6f1080c9ed02bf03f615ac7fca7b724bb4ce96c1fe0b8e9c",
+        "afterSHA256": "a8cef014ed36eb80a5e08f54f0ee9129f67b7d95301cfc0016be3579c9e84f59",
+        "textChanges": [
+          [
+            "Vận tốc trung bình cùng hướng với độ dời. vận tốc tức thời tiếp tuyến với quỹ đạo.",
+            "Vận tốc trung bình cùng hướng với độ dời. Vận tốc tức thời tiếp tuyến với quỹ đạo."
+          ],
+          [
+            "Thành phần tiếp tuyến làm đổi tốc độ. thành phần pháp tuyến làm đổi phương chuyển động.",
+            "Thành phần tiếp tuyến làm đổi tốc độ. Thành phần pháp tuyến làm đổi phương chuyển động."
+          ],
+          [
+            "Bỏ qua sức cản không khí, gia tốc ngang triệt tiêu và gia tốc đứng hướng xuống với độ lớn g.",
+            "Chọn điểm ném làm gốc tọa độ và t = 0 lúc vật rời tay. Bỏ qua sức cản không khí, gia tốc ngang bằng không và gia tốc đứng hướng xuống với độ lớn g không đổi."
+          ],
+          [
+            "Áp dụng khi điểm rơi có cùng cao độ với điểm ném ban đầu ($y = 0$).",
+            "Vật được ném lên từ gốc tọa độ với tốc độ ban đầu dương. Điểm rơi có cùng cao độ với điểm ném ($y = 0$), gia tốc trọng trường không đổi và sức cản không khí được bỏ qua."
+          ]
+        ]
+      },
+      {
+        "file": "docs/.vitepress/physics1-priority-course.mjs",
+        "beforeCanonicalSHA256": "7b0a715d48aec39107c68fef842de03d59825969f83106c3d6f0165dbc559654",
+        "afterSHA256": "6e72d5d85da9b3d6d55efe7538fa687db9f93b00123fb5b84f2a553986e55a3a",
+        "textChanges": [
+          [
+            "F⊥ là độ lớn lực pháp tuyến trên tiết diện A. Công thức môđun áp dụng trong miền tỉ lệ tuyến tính.",
+            "Các công thức này dùng độ lớn của ứng suất, biến dạng và độ thay đổi chiều dài, cả khi kéo lẫn nén. F⊥ là độ lớn lực pháp tuyến trên tiết diện A. Môđun Young áp dụng trong miền tỉ lệ tuyến tính."
+          ],
+          [
+            "['Độ dãn',d(String.raw",
+            "['Độ dãn hoặc độ co',d(String.raw"
+          ],
+          [
+            "Không chuyển pha. c hoặc C có thể coi không đổi trong khoảng khảo sát. Nhiệt lượng dương khi hệ nhận năng lượng bằng truyền nhiệt.",
+            "Không chuyển pha. c là nhiệt dung riêng, còn C là nhiệt dung mol. M là khối lượng mol. Các nhiệt dung được coi không đổi trong khoảng khảo sát. Nhiệt lượng dương khi hệ nhận năng lượng bằng truyền nhiệt."
+          ]
+        ]
+      }
+    ],
+    "formulasUnchanged": true,
+    "sourcePDFTextEvidence": [
+      {
+        "PDFPage": 94,
+        "textSHA256": "ec6e9d328627fb60095729d503f2b6de1609aa9c2e3d80f1376adf67445c46db"
+      },
+      {
+        "PDFPage": 95,
+        "textSHA256": "d8e2de8382a11d1431c5e367fe9695b4f6a74feb60454aba6073de6faa96df61"
+      },
+      {
+        "PDFPage": 96,
+        "textSHA256": "97819f996eaff20331c4ac022d2b55a4c449a49223dcd968eb173d6e9668f9e1"
+      },
+      {
+        "PDFPage": 97,
+        "textSHA256": "57cbc3286c550c295617afd4d1c544dfc948044cb82c97f3592339b1698678bb"
+      },
+      {
+        "PDFPage": 98,
+        "textSHA256": "e0f38cb69be7332592733e8553a9c1e21ce75d13a13d19d1ed5ce5ca3c5f5ed0"
+      },
+      {
+        "PDFPage": 366,
+        "textSHA256": "c2a27580b2cef4bb99755de43fc64ea911e313d7397825a631e5bfe4901759b2"
+      },
+      {
+        "PDFPage": 367,
+        "textSHA256": "2a5b4ef65d58439564a07e274a1734bee8c4f5469587f5eba33fb6349f261a19"
+      },
+      {
+        "PDFPage": 574,
+        "textSHA256": "2b75f55fc9b753d1c8dab79c82f9d05d111f42bdfc39e13aa784eb087820b6e8"
+      }
+    ],
+    "numericChecks": [
+      "same-height positive-flight 15",
+      "same-height positive-flight 30",
+      "same-height positive-flight 45",
+      "same-height positive-flight 60",
+      "same-height positive-flight 75",
+      "same-height positive-flight 90",
+      "compression/tension consistent magnitude/sign 100.0 -1",
+      "compression/tension consistent magnitude/sign 100.0 1",
+      "compression/tension consistent magnitude/sign 5390.0 -1",
+      "compression/tension consistent magnitude/sign 5390.0 1",
+      "molar-specific heat units/relation 0.018",
+      "molar-specific heat units/relation 0.028"
+    ],
+    "numericCheckCount": 12,
+    "parentDecision": "AGY broad acceptance preserved only after actual213row/103item coverage identity checks. These local clarifications add missing coordinate/initialcondition and magnitude conventions, plus one symbol definition. Optional new content not adopted. No research workflow.",
+    "sourceEvidenceCorrection": "Parent checked actualPDF574(printed554) for molarheatcapacityC=Mc; initially saved592–595were endexercises and are preserved as nonacceptance evidence, not used to support this definition."
+  },
+  "focusedRender": {
+    "status": "passed-scoped-render",
+    "scope": "Production MathText/cheatsheet markup including variables, current changed descriptions injected into actual public layouts. No full local build. Cloud assembled and exact deployed-version gates separate.",
+    "cases": [
+      {
+        "chapter": 3,
+        "width": 320,
+        "issues": [],
+        "formulas": 63
+      },
+      {
+        "chapter": 3,
+        "width": 360,
+        "issues": [],
+        "formulas": 63
+      },
+      {
+        "chapter": 3,
+        "width": 375,
+        "issues": [],
+        "formulas": 63
+      },
+      {
+        "chapter": 3,
+        "width": 768,
+        "issues": [],
+        "formulas": 63
+      },
+      {
+        "chapter": 3,
+        "width": 1440,
+        "issues": [],
+        "formulas": 63
+      },
+      {
+        "chapter": 11,
+        "width": 320,
+        "issues": [],
+        "formulas": 11
+      },
+      {
+        "chapter": 11,
+        "width": 360,
+        "issues": [],
+        "formulas": 11
+      },
+      {
+        "chapter": 11,
+        "width": 375,
+        "issues": [],
+        "formulas": 11
+      },
+      {
+        "chapter": 11,
+        "width": 768,
+        "issues": [],
+        "formulas": 11
+      },
+      {
+        "chapter": 11,
+        "width": 1440,
+        "issues": [],
+        "formulas": 11
+      },
+      {
+        "chapter": 17,
+        "width": 320,
+        "issues": [],
+        "formulas": 19
+      },
+      {
+        "chapter": 17,
+        "width": 360,
+        "issues": [],
+        "formulas": 19
+      },
+      {
+        "chapter": 17,
+        "width": 375,
+        "issues": [],
+        "formulas": 19
+      },
+      {
+        "chapter": 17,
+        "width": 768,
+        "issues": [],
+        "formulas": 19
+      },
+      {
+        "chapter": 17,
+        "width": 1440,
+        "issues": [],
+        "formulas": 19
+      }
+    ],
+    "files": [
+      {
+        "file": "docs/.vitepress/physics1-priority-course.mjs",
+        "sha256": "6e72d5d85da9b3d6d55efe7538fa687db9f93b00123fb5b84f2a553986e55a3a"
+      },
+      {
+        "file": "docs/.vitepress/physics1-remaining-ch03-course.mjs",
+        "sha256": "a8cef014ed36eb80a5e08f54f0ee9129f67b7d95301cfc0016be3579c9e84f59"
+      }
+    ]
+  },
+  "numericRerun": {
+    "status": "passed-parent-rerun",
+    "ASourceSHA256": "2cf8409c7fb2a947b8ac517e1a0a9f3b4fb926a358aa2aa5f9902bfa00ea8c49",
+    "BSourceSHA256": "a7bd5c9d08a2e651fa854a8bbc76307154bea9e6c33c1f1d518e32b9277aa811",
+    "AResult": {
+      "si_constants_and_units": {
+        "speed_of_light_m_s": 299792458,
+        "cesium_133_cycles_per_s": 9192631770,
+        "planck_h_J_s": 6.62607015e-34,
+        "dyne_to_newton": 1e-05,
+        "lbf_exact_N": 4.4482216152605,
+        "lbf_cheatsheet_N": 4.44822161526,
+        "lbf_absolute_difference_N": 5.000444502911705e-13,
+        "lbf_accuracy_passed": true
+      },
+      "vector_algebra": {
+        "2d_magnitude_reconstruction_passed": true,
+        "dot_product_match_passed": true,
+        "cross_product_np_match_passed": true,
+        "cross_orthogonality_to_A_passed": true,
+        "cross_orthogonality_to_B_passed": true,
+        "cross_magnitude_sin_phi_passed": true,
+        "lagrange_identity_passed": true
+      },
+      "kinematics_and_projectiles": {
+        "projectile_time_of_flight_s": 2.551020408163265,
+        "projectile_h_max_m": 7.9719387755102025,
+        "projectile_range_m": 55.23121197604838,
+        "trajectory_y_landing_is_zero": true,
+        "maximum_range_angle_deg": 45,
+        "maximum_range_at_45deg_passed": true,
+        "circular_motion_v_m_s": 18.84955592153876,
+        "circular_motion_a_rad_from_v": 29.608813203268074,
+        "circular_motion_a_rad_from_T": 29.608813203268074,
+        "circular_acceleration_form_equivalence_passed": true
+      },
+      "newtons_laws_and_dynamics": {
+        "mass_accel_inverse_proportion_passed": true,
+        "weight_mass_relation_passed": true,
+        "action_reaction_cancellation_passed": true
+      }
+    },
+    "BResult": {
+      "ch06_work_const_force": {
+        "formula": "W = F * s * cos(phi)",
+        "inputs": {
+          "F_N": 50.0,
+          "s_m": 4.0
+        },
+        "w_phi_0_J": 200.0,
+        "w_phi_60_J": 100.00000000000003,
+        "w_phi_90_J": 1.2246467991473532e-14,
+        "w_phi_180_J": -200.0,
+        "units": "J = N*m = kg*m^2/s^2",
+        "verified": true
+      },
+      "ch06_spring_work": {
+        "formula_ext": "W_ext = 0.5 * k * (x2^2 - x1^2)",
+        "formula_spr": "W_spr = 0.5 * k * (x1^2 - x2^2)",
+        "inputs": {
+          "k_N_per_m": 250.0,
+          "x1_m": 0.04,
+          "x2_m": 0.12
+        },
+        "w_ext_J": 1.5999999999999999,
+        "w_spr_J": -1.5999999999999999,
+        "units": "J = (N/m) * m^2 = N*m",
+        "verified": true
+      },
+      "ch06_work_kinetic_energy": {
+        "formula": "W_tot = K2 - K1 = 0.5 * m * (v2^2 - v1^2)",
+        "inputs": {
+          "m_kg": 2.5,
+          "v1_m_s": 4.0,
+          "v2_m_s": 10.0
+        },
+        "k1_J": 20.0,
+        "k2_J": 125.0,
+        "delta_k_J": 105.0,
+        "units": "J = kg * (m/s)^2",
+        "verified": true
+      },
+      "ch06_power": {
+        "formula": "P = F * v",
+        "inputs": {
+          "F_N": 600.0,
+          "v_m_s": 25.0
+        },
+        "P_W": 15000.0,
+        "P_hp": 20.10723860589812,
+        "1_kWh_in_J": 3600000.0,
+        "units": "W = J/s = N*m/s",
+        "verified": true
+      },
+      "ch07_gravitational_potential": {
+        "formula": "U_g = m * g * y, W_g = -Delta U_g",
+        "inputs": {
+          "m_kg": 8.0,
+          "g_m_s2": 9.8,
+          "y1_m": 5.0,
+          "y2_m": 15.0
+        },
+        "U1_J": 392.0,
+        "U2_J": 1176.0,
+        "delta_U_J": 784.0,
+        "W_grav_J": -784.0,
+        "units": "J = kg * (m/s^2) * m",
+        "verified": true
+      },
+      "ch07_elastic_potential": {
+        "formula": "U_e = 0.5 * k * x^2",
+        "inputs": {
+          "k_N_per_m": 500.0,
+          "x_m": 0.2
+        },
+        "U_e_J": 10.000000000000002,
+        "units": "J = 1/2 * (N/m) * m^2",
+        "verified": true
+      },
+      "ch07_energy_conservation_and_friction": {
+        "formula": "E2 - E1 = W_other, Delta U_int = f_k * s",
+        "inputs": {
+          "E1_J": 200.0,
+          "f_k_N": 15.0,
+          "s_m": 6.0
+        },
+        "W_friction_J": -90.0,
+        "Delta_Uint_J": 90.0,
+        "E2_J": 110.0,
+        "units": "J",
+        "verified": true
+      },
+      "ch07_force_gradient": {
+        "formula": "F_x = -dU/dx",
+        "test_function": "U(x) = 0.5 * k * x^2",
+        "F_calc_N": -37.5,
+        "units": "N = -d(J)/d(m)",
+        "verified": true
+      },
+      "ch07_stability_turning_points": {
+        "potential_model": "U(x) = a*x^4 - b*x^2",
+        "U_double_prime_at_0": -16.0,
+        "U_double_prime_at_min": 32.0,
+        "stable_check": true,
+        "unstable_check": true,
+        "verified": true
+      },
+      "ch09_rotational_kinematics": {
+        "formulae": [
+          "omega = omega0 + alpha*t",
+          "theta = omega0*t + 0.5*alpha*t^2",
+          "omega^2 - omega0^2 = 2*alpha*theta"
+        ],
+        "inputs": {
+          "omega0_rad_s": 8.0,
+          "alpha_rad_s2": 3.0,
+          "t_s": 4.0
+        },
+        "omega_final_rad_s": 20.0,
+        "theta_disp_rad": 56.0,
+        "omega_sq_diff": 336.0,
+        "two_alpha_theta": 336.0,
+        "verified": true
+      },
+      "ch09_linear_angular": {
+        "formulae": [
+          "v = r*omega",
+          "a_t = r*alpha",
+          "a_r = r*omega^2",
+          "a = sqrt(a_t^2 + a_r^2)"
+        ],
+        "inputs": {
+          "r_m": 0.4,
+          "omega_rad_s": 15.0,
+          "alpha_rad_s2": 5.0
+        },
+        "v_m_s": 6.0,
+        "a_t_m_s2": 2.0,
+        "a_r_m_s2": 90.0,
+        "a_tot_m_s2": 90.0222194794152,
+        "verified": true
+      },
+      "ch09_moment_of_inertia_standard_bodies": {
+        "I_hoop": 1.5,
+        "I_solid_cylinder": 0.75,
+        "I_solid_sphere": 0.6000000000000001,
+        "I_thin_shell": 1.0,
+        "I_rod_cm": 0.72,
+        "I_rod_end": 2.88,
+        "units": "kg*m^2",
+        "verified": true
+      },
+      "ch09_parallel_axis_theorem": {
+        "formula": "I = I_cm + M * d^2",
+        "I_cm": 0.72,
+        "M_d_sq": 2.16,
+        "I_calculated": 2.88,
+        "I_expected": 2.88,
+        "verified": true
+      },
+      "ch10_torque": {
+        "formula": "tau = r * F * sin(phi) = F * l",
+        "inputs": {
+          "r_m": 0.8,
+          "F_N": 50.0,
+          "phi_deg": 30.0
+        },
+        "tau_N_m": 19.999999999999996,
+        "verified": true
+      },
+      "ch10_rolling_incline": {
+        "formula": "a_cm = (g * sin(beta)) / (1 + I_cm / (M*R^2))",
+        "a_cylinder_m_s2": 3.266666666666666,
+        "a_sphere_m_s2": 3.5,
+        "sphere_faster_than_cylinder": true,
+        "verified": true
+      },
+      "ch10_angular_momentum_conservation": {
+        "formula": "I1 * omega1 = I2 * omega2",
+        "inputs": {
+          "I1": 4.0,
+          "omega1": 2.0,
+          "I2": 1.0
+        },
+        "omega2_calc": 8.0,
+        "K1_rot_J": 8.0,
+        "K2_rot_J": 32.0,
+        "kinetic_energy_ratio": 4.0,
+        "verified": true
+      },
+      "ch10_gyroscope_precession": {
+        "formula": "Omega = (M * g * r) / (I * omega)",
+        "inputs": {
+          "M_kg": 0.5,
+          "r_m": 0.1,
+          "I_kg_m2": 0.002,
+          "omega_rad_s": 100.0
+        },
+        "Omega_rad_s": 2.45,
+        "verified": true
+      },
+      "ch11_equilibrium": {
+        "problem": "Ladder leaning on frictionless wall at angle theta to horizontal",
+        "formula": "mu_s_min = 1 / (2 * tan(theta))",
+        "theta_deg": 60.0,
+        "mu_s_min_calc": 0.288675134594813,
+        "verified": true
+      },
+      "ch11_elastic_moduli": {
+        "Young_elongation_m": 0.02,
+        "Young_strain": 0.01,
+        "Bulk_volume_change_m3": -0.00045454545454545455,
+        "Compressibility_Pa_inv": 4.5454545454545455e-10,
+        "verified": true
+      },
+      "ch17_temperature_scales": {
+        "water_boiling_C": 100.0,
+        "water_boiling_F": 212.0,
+        "water_boiling_K": 373.15,
+        "crossing_point_C": -40.0,
+        "crossing_point_F": -40.0,
+        "verified": true
+      },
+      "ch17_thermal_expansion_and_stress": {
+        "delta_L_m": 0.0036,
+        "beta_approx": 3.6e-05,
+        "thermal_stress_Pa": -72000000.0,
+        "verified": true
+      },
+      "ch17_calorimetry": {
+        "Q_melting_J": 66800.0,
+        "Q_warming_J": 16760.0,
+        "Q_total_J": 83560.0,
+        "verified": true
+      },
+      "ch17_fourier_conduction": {
+        "H_conduction_W": 4800.000000000001,
+        "R_thermal_K_per_W": 0.004166666666666666,
+        "H_from_R_W": 4800.000000000001,
+        "verified": true
+      },
+      "ch17_stefan_boltzmann": {
+        "P_emitted_W": 944.4377610811418,
+        "P_net_W": 190.65570451410198,
+        "verified": true
+      }
+    },
+    "BChecks": 24,
+    "scope": "Executed actual formula/vector/kinematics/work-energy/rotation/elasticity/thermal checks only; no reliance on cached PASS flags. Not every213formula an independent physical experiment. Parent12additional coordinate/magnitude/molarchecks separate."
+  },
+  "wikiReferencePlacement": {
+    "status": "accepted-reference-placement-only",
+    "files": [
+      {
+        "file": "docs/wiki/do-doi.md",
+        "beforeSHA256": "a37ea3506a3430c9d170ddd57a6aed174a2f57dc194a616a51b0835c40e8ca37",
+        "beforeCanonicalSHA256": "62bbbbadc301899d0df4e6f07e7ec2e495c8243a09187e6c577e82da5ae88e7b",
+        "afterSHA256": "8f34cc53053dffd84d6745831401282198d8e75e83c8fa64e3315f2fb32e2369",
+        "change": "Move existing source citation to final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/thanh-phan-vector.md",
+        "beforeSHA256": "4fb1304ecbc135dd5ec1c3bf5b911fe5635d3a263e3a0df14491df0de5b28316",
+        "beforeCanonicalSHA256": "151d00d0b3c615a4226da411fe576e128507ba50489fd453c76cc0c7e238d72b",
+        "afterSHA256": "b49d9e4b8d4303e3a3ff616b6c5d615f9dddd763a826cb3138afde6ef758f787",
+        "change": "Move existing source citation to final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/van-toc-vat-ly.md",
+        "beforeSHA256": "7cdec58270b495d1f6e4f412a4bb4d47373754912978a22ccafa111530ca1aa4",
+        "beforeCanonicalSHA256": "e7609dd8a40bab5370ec26ad86e88f8959baf8477c1f75dd35930d1037a30952",
+        "afterSHA256": "ac998ee4d6fc041ae183c901eca9b2985fd1c31494a9f2b1b92ac26ecda7c550",
+        "change": "Move existing source citation to final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/toc-do-chuyen-dong.md",
+        "beforeSHA256": "0b92b99ed0beb27a6989cab2beb53e263efb5465c64aadd72fcd7a795f6cfcfa",
+        "beforeCanonicalSHA256": "d0fe87457658fd6ee65b2ef38f74772eea5dc6932ba61195d2ae75b3848d5323",
+        "afterSHA256": "c07d09720410a523df562dadc050645c41df98971b7788239f25609c097bd79f",
+        "change": "Move existing source citation to final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/gia-toc.md",
+        "beforeSHA256": "b449f93221749715b3ba6bcf60eca9996768e7c68a03cfeced4cea5ff0181687",
+        "beforeCanonicalSHA256": "2921b6d1f3844e0f7e4ffcbf2c4936d4d362e0f7cde68927a659b71928f4108c",
+        "afterSHA256": "d495699259d5476463c8eed872d0d22388cd3f94939164a70e8e9d1bdacf1bae",
+        "change": "Move existing source citation to final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/roi-tu-do.md",
+        "beforeSHA256": "cf714dce85dda1946e9b1ec818dd33eedd6b9ac66fdd88da913d95283461f31f",
+        "beforeCanonicalSHA256": "0cd574e8b09ab3debabb59964dc86d18fcfb9cc6aa6b60cbb9a273c547e60e0e",
+        "afterSHA256": "2ff4ab7f32a04431df04af5be50d8c77295d491cc64dd01e992f4dee3b014f79",
+        "change": "Move existing source citation to final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/dao-ham.md",
+        "beforeSHA256": "839a67eea884940443cf33816a328bab70316a84edc09cb83d7a7f54a57d41de",
+        "beforeCanonicalSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+        "afterSHA256": "598e807d231f9db5e97b8eee7f8d0e0d0676f0e3658b68b3ce6822b91d373dec",
+        "change": "Add actual matching chapter2 source section in final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/tich-phan.md",
+        "beforeSHA256": "ca8531e10a6b2c8eb1e5f26e3e756587241218e0cab80077cc7c5ab860144520",
+        "beforeCanonicalSHA256": "3280e4219f4b1fa7ada28ed084b4250f5a1e26e08ec629fcb50a538219cd8200",
+        "afterSHA256": "583f3fa14a1409010972048ebf606628e1dd71225c7a377bec17865526ab23ab",
+        "change": "Add actual matching chapter2 source section in final academic bibliography",
+        "technicalBodyAndMathUnchanged": true
+      }
+    ],
+    "scope": "Eight motion Wiki pages: Reference positioning/addition only. Exact technicalbody, examples,selfchecks, formulas and crosslinks preserved. Not a new semantic rewrite."
+  },
+  "parentDisposition": "All actual active103items/213formula rows were matched to reported names, labels,TeX,descriptions/prerequisites. Parent read active definitions, conditions,variables/formulas and made7specific text/label clarifications without formula changes. Six sharedWiki accepted separately; actual4motionprerequisite Wiki technical bodies parent-read. B38Wiki technical body audit remains explicitly pending: Frontmatter existence flags were rejected as semantic proof.",
+  "sourceCitationLimitations": "Raw AGY-A explanatory metadata has wrong PDF size in one prose summary and some PDFpage offset citations. Actual source65530283bytes and parent PDF94–98,366–367,574 are bound separately. Raw claims retained, not used as exact source metadata.",
+  "remaining": "Finish B38Wiki actual technical-body audit, remaining perchapter figure/support gates, exact current deployed reference revision and final wholegoal report/cleanup."
+}

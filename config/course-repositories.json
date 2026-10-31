@@ -57,7 +57,7 @@
     {
       "id": "vat-ly-1",
       "repository": "KazinMintori/StudyHub-course-vat-ly-1",
-      "revision": "ec53e79d1e8b4b2a9720aaf0cc9bb6c1edc4d1e3",
+      "revision": "c49051c9de5a145a92754e5ea38cd1570e6d818f",
       "paths": [
         "docs/.vitepress/physics1-09-exercises-c-image-annotations.mjs",
         "docs/.vitepress/physics1-09-exercises-d-image-annotations.mjs",

@@ -46,3 +46,7 @@ $f(x)=x^2$ có $f'(x)=2x$. Tại $x = 3$, tốc độ thay đổi là 6.
 - [Gradient](./gradient.md)
 - [Tích phân](./tich-phan.md)
 - [Quy tắc chuỗi](./quy-tac-chuoi.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, University Physics with Modern Physics, ấn bản 15, mục 2.2.

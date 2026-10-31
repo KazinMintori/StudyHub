@@ -17,8 +17,6 @@ Rơi tự do là chuyển động chỉ chịu tác dụng trọng lực. Gần 
 
 Dùng các phương trình gia tốc không đổi với x thay bằng y và a_x thay bằng −g. Trước khi thay số, xác định vị trí đầu, vận tốc đầu và mốc thời gian. Một vật được thả từ khinh khí cầu đang đi lên không có vận tốc đầu bằng không so với mặt đất.
 
-Nguồn: Young & Freedman, ấn bản 15, mục 2.5, trang in 50–53, Ví dụ 2.6–2.8; bài 2.42, trang in 61.
-
 ## Ví dụ
 
 Trong Ví dụ 2.7, bóng ném thẳng lên có vận tốc bằng không ở đỉnh nhưng gia tốc vẫn hướng xuống.
@@ -42,3 +40,7 @@ Có, nếu từ đó chỉ trọng lực tác dụng. Rơi tự do không đòi 
 - [Gia tốc](./gia-toc.md)
 - [Vận tốc](./van-toc-vat-ly.md)
 - [Thành phần vector](./thanh-phan-vector.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, mục 2.5, trang in 50–53, Ví dụ 2.6–2.8; bài 2.42, trang in 61.

@@ -40,3 +40,7 @@ Tích phân $\int_0^1 2\,dx$ bằng bao nhiêu?
 - [Quy tắc chuỗi](./quy-tac-chuoi.md)
 - [Gradient](./gradient.md)
 - [Vector](./vector.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, University Physics with Modern Physics, ấn bản 15, mục 2.6.

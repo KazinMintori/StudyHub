@@ -1,0 +1,292 @@
+{
+  "privateEvidenceRevision": "c49051c9de5a145a92754e5ea38cd1570e6d818f",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/active-reference-and-chapter13-16-images-20261101.tar.gz",
+  "archiveSHA256": "d78a5878200610905de4affa545ebbd25a3defff43d5fcfcbceca25099b10b55",
+  "wholeGoalComplete": false,
+  "status": "passed-exact-deployed43scope",
+  "sourceMain": "48fed5f2196211a498e0a5c5069a8584e811d33b",
+  "privateP2": "49c804b98f5f8376b809a14543f1163b21482fee",
+  "githubBuildDeploy": {
+    "run": 41225746098,
+    "build": "success",
+    "deploy": "success"
+  },
+  "actualPublicVerification": {
+    "status": "passed-deployed-scope",
+    "sourceMain": "48fed5f2196211a498e0a5c5069a8584e811d33b",
+    "privateP2": "49c804b98f5f8376b809a14543f1163b21482fee",
+    "scope": "Actual deployed six nuclear43.3–43.8topics; source-specific restored text, visible math/images and layout at five widths. No injected content and no whole-course semantic claim.",
+    "pages": [
+      {
+        "id": "on-dinh-va-phong-xa",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/on-dinh-va-phong-xa.html",
+        "formulas": 237,
+        "images": 4,
+        "items": 0,
+        "sourceMarkers": [
+          "thời gian sống trung bình khoảng 15 phút",
+          "Sự chuyển proton và electron thành neutron"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.D_-dsMXl.js"
+        ],
+        "errors": []
+      },
+      {
+        "id": "hoat-do-va-chu-ky-ban-ra",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/hoat-do-va-chu-ky-ban-ra.html",
+        "formulas": 213,
+        "images": 1,
+        "items": 0,
+        "sourceMarkers": [
+          "thời gian sống trung bình thay vì chu kỳ bán rã"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.D_-dsMXl.js"
+        ],
+        "errors": []
+      },
+      {
+        "id": "tac-dung-sinh-hoc",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/tac-dung-sinh-hoc.html",
+        "formulas": 91,
+        "images": 3,
+        "items": 0,
+        "sourceMarkers": [
+          "tính chất hóa học gần như giống"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.D_-dsMXl.js"
+        ],
+        "errors": []
+      },
+      {
+        "id": "phan-ung-hat-nhan",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/phan-ung-hat-nhan.html",
+        "formulas": 99,
+        "images": 0,
+        "items": 0,
+        "sourceMarkers": [
+          "Đặt một mẩu lithium trong bình hydrogen"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.D_-dsMXl.js"
+        ],
+        "errors": []
+      },
+      {
+        "id": "phan-hach",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/phan-hach.html",
+        "formulas": 128,
+        "images": 6,
+        "items": 0,
+        "sourceMarkers": [
+          "cerium-140 bền",
+          "phân hạch vẫn có thể xảy ra nhờ xuyên hầm"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.D_-dsMXl.js"
+        ],
+        "errors": []
+      },
+      {
+        "id": "nhiet-hach",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/nhiet-hach.html",
+        "formulas": 75,
+        "images": 3,
+        "items": 0,
+        "sourceMarkers": [
+          "thặng dư ở cấp bia",
+          "không phải thặng dư năng lượng"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.D_-dsMXl.js"
+        ],
+        "errors": []
+      }
+    ],
+    "cases": [
+      {
+        "id": "on-dinh-va-phong-xa",
+        "width": 320,
+        "formulas": 237,
+        "issues": []
+      },
+      {
+        "id": "on-dinh-va-phong-xa",
+        "width": 360,
+        "formulas": 237,
+        "issues": []
+      },
+      {
+        "id": "on-dinh-va-phong-xa",
+        "width": 375,
+        "formulas": 237,
+        "issues": []
+      },
+      {
+        "id": "on-dinh-va-phong-xa",
+        "width": 768,
+        "formulas": 237,
+        "issues": []
+      },
+      {
+        "id": "on-dinh-va-phong-xa",
+        "width": 1440,
+        "formulas": 237,
+        "issues": []
+      },
+      {
+        "id": "hoat-do-va-chu-ky-ban-ra",
+        "width": 320,
+        "formulas": 213,
+        "issues": []
+      },
+      {
+        "id": "hoat-do-va-chu-ky-ban-ra",
+        "width": 360,
+        "formulas": 213,
+        "issues": []
+      },
+      {
+        "id": "hoat-do-va-chu-ky-ban-ra",
+        "width": 375,
+        "formulas": 213,
+        "issues": []
+      },
+      {
+        "id": "hoat-do-va-chu-ky-ban-ra",
+        "width": 768,
+        "formulas": 213,
+        "issues": []
+      },
+      {
+        "id": "hoat-do-va-chu-ky-ban-ra",
+        "width": 1440,
+        "formulas": 213,
+        "issues": []
+      },
+      {
+        "id": "tac-dung-sinh-hoc",
+        "width": 320,
+        "formulas": 91,
+        "issues": []
+      },
+      {
+        "id": "tac-dung-sinh-hoc",
+        "width": 360,
+        "formulas": 91,
+        "issues": []
+      },
+      {
+        "id": "tac-dung-sinh-hoc",
+        "width": 375,
+        "formulas": 91,
+        "issues": []
+      },
+      {
+        "id": "tac-dung-sinh-hoc",
+        "width": 768,
+        "formulas": 91,
+        "issues": []
+      },
+      {
+        "id": "tac-dung-sinh-hoc",
+        "width": 1440,
+        "formulas": 91,
+        "issues": []
+      },
+      {
+        "id": "phan-ung-hat-nhan",
+        "width": 320,
+        "formulas": 99,
+        "issues": []
+      },
+      {
+        "id": "phan-ung-hat-nhan",
+        "width": 360,
+        "formulas": 99,
+        "issues": []
+      },
+      {
+        "id": "phan-ung-hat-nhan",
+        "width": 375,
+        "formulas": 99,
+        "issues": []
+      },
+      {
+        "id": "phan-ung-hat-nhan",
+        "width": 768,
+        "formulas": 99,
+        "issues": []
+      },
+      {
+        "id": "phan-ung-hat-nhan",
+        "width": 1440,
+        "formulas": 99,
+        "issues": []
+      },
+      {
+        "id": "phan-hach",
+        "width": 320,
+        "formulas": 128,
+        "issues": []
+      },
+      {
+        "id": "phan-hach",
+        "width": 360,
+        "formulas": 128,
+        "issues": []
+      },
+      {
+        "id": "phan-hach",
+        "width": 375,
+        "formulas": 128,
+        "issues": []
+      },
+      {
+        "id": "phan-hach",
+        "width": 768,
+        "formulas": 128,
+        "issues": []
+      },
+      {
+        "id": "phan-hach",
+        "width": 1440,
+        "formulas": 128,
+        "issues": []
+      },
+      {
+        "id": "nhiet-hach",
+        "width": 320,
+        "formulas": 75,
+        "issues": []
+      },
+      {
+        "id": "nhiet-hach",
+        "width": 360,
+        "formulas": 75,
+        "issues": []
+      },
+      {
+        "id": "nhiet-hach",
+        "width": 375,
+        "formulas": 75,
+        "issues": []
+      },
+      {
+        "id": "nhiet-hach",
+        "width": 768,
+        "formulas": 75,
+        "issues": []
+      },
+      {
+        "id": "nhiet-hach",
+        "width": 1440,
+        "formulas": 75,
+        "issues": []
+      }
+    ]
+  },
+  "remaining": "This closes updated43.3–.8 publictext/layout only. Current22/23images andnewP1reference cloud/deployed gates separate."
+}

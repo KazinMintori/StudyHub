@@ -17,8 +17,6 @@ Trong chuyển động thẳng, dấu của gia tốc cho biết vận tốc có
 
 Trên đồ thị v_x–t, gia tốc tức thời là độ dốc tiếp tuyến. Trên đồ thị x–t, gia tốc là đạo hàm bậc hai $a_x=d^2x/dt^2$. Khi gia tốc không đổi, vận tốc biến thiên tuyến tính theo thời gian nên vận tốc trung bình bằng nửa tổng vận tốc đầu và cuối. Với gia tốc thay đổi, đẳng thức này không được bảo đảm, dù có thể trùng đúng trên một khoảng cụ thể.
 
-Nguồn: Young & Freedman, ấn bản 15, mục 2.3–2.4, trang in 40–49, công thức (2.4)–(2.6), Bảng 2.3–2.4 và phương trình (2.10).
-
 ## Ví dụ
 
 Trong Ví dụ 2.2(c), vận tốc từ $-0.4\,\mathrm{m/s}$ đến $-1.0\,\mathrm{m/s}$ trong $2.0\,\mathrm s$ cho gia tốc trung bình $-0.3\,\mathrm{m/s^2}$, trong khi tốc độ tăng.
@@ -42,3 +40,7 @@ Tốc độ giảm trên khoảng chúng trái dấu. Cùng dấu thì tốc đ�
 - [Vận tốc](./van-toc-vat-ly.md)
 - [Đạo hàm](./dao-ham.md)
 - [Rơi tự do](./roi-tu-do.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, mục 2.3–2.4, trang in 40–49, công thức (2.4)–(2.6), Bảng 2.3–2.4 và phương trình (2.10).

@@ -17,8 +17,6 @@ Góc θ trong $A_x=A\cos\theta$ và $A_y=A\sin\theta$ phải đo từ chiều +x
 
 Trong chương 2, vật chỉ đi trên trục x, nên $v_y=v_z=0$ và $a_y=a_z=0$ khi dùng trục x cho chuyển động. Với bài rơi tự do dùng trục y, thành phần cần xét chuyển sang y.
 
-Nguồn: Young & Freedman, ấn bản 15, mục 1.8–1.9, trang in 14–19; mục 2.1–2.3, trang in 34–44.
-
 ## Ví dụ
 
 Trong chuyển động dọc trục x, các thành phần y và z của độ dời bằng không, như mục 2.1.
@@ -42,3 +40,7 @@ Không. Thành phần âm chỉ hướng ngược chiều dương của trục, 
 - [Vector](./vector.md)
 - [Độ dời](./do-doi.md)
 - [Vận tốc](./van-toc-vat-ly.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, mục 1.8–1.9, trang in 14–19; mục 2.1–2.3, trang in 34–44.
