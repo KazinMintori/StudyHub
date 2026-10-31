@@ -1,0 +1,318 @@
+{
+  "status": "source-published-focused-render-passed-pending-exact-cloud-and-public-acceptance",
+  "chapter": 18,
+  "scope": "Two exact remaining theory sections18.4/18.5 and all43late exercises18.45–18.87; prior chapter source receipts retained. No fresh wholechapterframe/CSWiki/publicweb approval inferred.",
+  "files": [
+    {
+      "file": "raw_materials/physics/translations/chapter-18/04-nhiet-dung.md",
+      "beforeSHA256": "fe28a40a0afb7411b38bc422319981b87cc6ca7451461d04e5347e312903ee32",
+      "afterSHA256": "4f36533ec7566704c07a44b47e44ba0705c1a1b80f51c3e5b447c1e6cb10a197"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-18/05-toc-do-phan-tu.md",
+      "beforeSHA256": "f87e7c6a6e22bdb649d36af3529542363842231add60af0e18f07045389d8254",
+      "afterSHA256": "7b9c8c149accf5203148c98305ba9fc0e4af9799177d403dbfd264ee611f11d1"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-18/12-bai-tap-045-087.md",
+      "beforeSHA256": "d4da5a7f51d14483209a44d7f001ce1bc558fa68663cb03ff2609d78a026130f",
+      "afterSHA256": "7dd37be5e37a4be8623212b69a13d51cea8fca7be0595f7a6b4f84fc4d2d2f1e"
+    }
+  ],
+  "sourceFindingsResolved": [
+    "Complex molecules: Vibrational level spacing and three rotations for nonlinear polyatomic molecules.",
+    "Vapor condensation rate versus pressure and pressure-temperature prediction from equilibrium rates.",
+    "P18.79 row22C corrected2.64to2.65kPa with no change to used interpolation intervals/results.",
+    "P18.80 prompt(c), summary/direction and variance explanation restored.",
+    "Unsupported categorical medical claim removed from P18.49; physical volume estimate retained.",
+    "P18.58 closure/cooling states and chosen gas-law conditions clarified.",
+    "P18.50 duplicate comma removed.",
+    "P18.69 actual atom-layer deposition context restored."
+  ],
+  "originalImageFilesChanged": 0,
+  "originalImageReferencesAndTagsRetained": true,
+  "closedSolutionsRetained": 43,
+  "numericalVerification": [
+    {
+      "checks": 38,
+      "scope": "Printed heat capacities, all10Table18.2 rows, Maxwell moments/normalizations/modes/Jacobian, TYU relations and selector model. Arbitrary scales are explicitly model tests, not textbook-numbered examples."
+    },
+    {
+      "checks": 119,
+      "scope": "Independent numeric or explicit model/qualitative predicate for every45–87. This is not a replacement for per-subpart source reading. Known prompt/table errors are reported separately; passing arithmetic does not accept them."
+    }
+  ],
+  "numericCountsAreNotUniqueProblemCounts": true,
+  "focusedRendering": {
+    "cases": 15,
+    "theoryCases": 10,
+    "combinedSixExercisePayloadCases": 5,
+    "reports": [
+      {
+        "status": "passed-scoped-render",
+        "scope": "Current proposed source with production Markdown/math/figure/responsive-table rules injected into actual public topic layout and CSS. Glossary term autolinking omitted. Responsive table header/row-label duplicates may hide only when an equivalent visible formula remains; total formula count and text must persist. Full cloud integration and exact deployed pages require separate acceptance.",
+        "files": [
+          {
+            "name": "04-nhiet-dung.md",
+            "sha256": "4f36533ec7566704c07a44b47e44ba0705c1a1b80f51c3e5b447c1e6cb10a197",
+            "formulas": 148
+          },
+          {
+            "name": "05-toc-do-phan-tu.md",
+            "sha256": "7b9c8c149accf5203148c98305ba9fc0e4af9799177d403dbfd264ee611f11d1",
+            "formulas": 169
+          }
+        ],
+        "cases": [
+          {
+            "name": "04-nhiet-dung.md",
+            "width": 320,
+            "issues": [],
+            "formulas": 146,
+            "totalFormulas": 148,
+            "images": 5,
+            "captions": 5
+          },
+          {
+            "name": "04-nhiet-dung.md",
+            "width": 360,
+            "issues": [],
+            "formulas": 146,
+            "totalFormulas": 148,
+            "images": 5,
+            "captions": 5
+          },
+          {
+            "name": "04-nhiet-dung.md",
+            "width": 375,
+            "issues": [],
+            "formulas": 146,
+            "totalFormulas": 148,
+            "images": 5,
+            "captions": 5
+          },
+          {
+            "name": "04-nhiet-dung.md",
+            "width": 768,
+            "issues": [],
+            "formulas": 146,
+            "totalFormulas": 148,
+            "images": 5,
+            "captions": 5
+          },
+          {
+            "name": "04-nhiet-dung.md",
+            "width": 1440,
+            "issues": [],
+            "formulas": 130,
+            "totalFormulas": 148,
+            "images": 5,
+            "captions": 5
+          },
+          {
+            "name": "05-toc-do-phan-tu.md",
+            "width": 320,
+            "issues": [],
+            "formulas": 168,
+            "totalFormulas": 169,
+            "images": 3,
+            "captions": 3
+          },
+          {
+            "name": "05-toc-do-phan-tu.md",
+            "width": 360,
+            "issues": [],
+            "formulas": 168,
+            "totalFormulas": 169,
+            "images": 3,
+            "captions": 3
+          },
+          {
+            "name": "05-toc-do-phan-tu.md",
+            "width": 375,
+            "issues": [],
+            "formulas": 168,
+            "totalFormulas": 169,
+            "images": 3,
+            "captions": 3
+          },
+          {
+            "name": "05-toc-do-phan-tu.md",
+            "width": 768,
+            "issues": [],
+            "formulas": 168,
+            "totalFormulas": 169,
+            "images": 3,
+            "captions": 3
+          },
+          {
+            "name": "05-toc-do-phan-tu.md",
+            "width": 1440,
+            "issues": [],
+            "formulas": 159,
+            "totalFormulas": 169,
+            "images": 3,
+            "captions": 3
+          }
+        ]
+      },
+      {
+        "status": "passed-scoped-render",
+        "scope": "Six changed proposed exercise bodies18.49/50/58/69/79/80 rendered with production Markdown/math/figure/responsive-table rules in actual public exercise-content CSS/layout. OriginalPNGbytes embedded for this focused layout check; exact deployed assets need separate acceptance. Glossary term autolinking omitted. Responsive table header/row-label duplicates may hide only when an equivalent visible formula remains; total formula count and text must persist. Full cloud integration and exact deployed pages require separate acceptance.",
+        "files": [
+          {
+            "name": "12-bai-tap-045-087.md",
+            "sha256": "7dd37be5e37a4be8623212b69a13d51cea8fca7be0595f7a6b4f84fc4d2d2f1e",
+            "renderedFragmentSHA256": "2d69048d83c535a735b1d34078a7f7fe45a87bdc0038bd3e7ea334d0f1573361",
+            "formulas": 307
+          }
+        ],
+        "cases": [
+          {
+            "name": "12-bai-tap-045-087.md",
+            "width": 320,
+            "issues": [],
+            "formulas": 301,
+            "totalFormulas": 307,
+            "images": 1,
+            "captions": 1
+          },
+          {
+            "name": "12-bai-tap-045-087.md",
+            "width": 360,
+            "issues": [],
+            "formulas": 301,
+            "totalFormulas": 307,
+            "images": 1,
+            "captions": 1
+          },
+          {
+            "name": "12-bai-tap-045-087.md",
+            "width": 375,
+            "issues": [],
+            "formulas": 301,
+            "totalFormulas": 307,
+            "images": 1,
+            "captions": 1
+          },
+          {
+            "name": "12-bai-tap-045-087.md",
+            "width": 768,
+            "issues": [],
+            "formulas": 301,
+            "totalFormulas": 307,
+            "images": 1,
+            "captions": 1
+          },
+          {
+            "name": "12-bai-tap-045-087.md",
+            "width": 1440,
+            "issues": [],
+            "formulas": 241,
+            "totalFormulas": 307,
+            "images": 1,
+            "captions": 1
+          }
+        ]
+      }
+    ],
+    "limitations": "Injected proposed source with production rules/CSS; exact deployed pages are separate. Responsive table formula duplicates hide only if an equivalent formula is actually visible; total formula count and text must persist."
+  },
+  "parentRMSRecalculation": {
+    "N": 150,
+    "S1": 8190,
+    "S2": 559500,
+    "mean": 54.6,
+    "rms": 61.07372593840988,
+    "variance": 748.8399999999997,
+    "predicateStatus": "passed",
+    "scope": "ActualP18.80distributionandnew(c)explanation;18.79tableimpactcheckedseparatelybyindependentreview."
+  },
+  "independentAfterReview": {
+    "theory": {
+      "status": "accepted-exact-two-source-corrections",
+      "scope": "Independent second pass of onlyF1andF2integrated by parent, using exact current private filebytes and already visually read source PDF616/619. Not a new wholechapter18 or44chapter acceptance.",
+      "files": [
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-private-fixes-20261031\\raw_materials\\physics\\translations\\chapter-18\\04-nhiet-dung.md",
+          "beforeSHA256": "fe28a40a0afb7411b38bc422319981b87cc6ca7451461d04e5347e312903ee32",
+          "acceptedAfterSHA256": "4f36533ec7566704c07a44b47e44ba0705c1a1b80f51c3e5b447c1e6cb10a197",
+          "sourcePDFPage": 616,
+          "sourceNoMeaningLost": true,
+          "exactChangesOnlyApprovedAdditions": true,
+          "allOriginalImageReferencesMathHeadingsAndDisclosuresPreserved": true
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-private-fixes-20261031\\raw_materials\\physics\\translations\\chapter-18\\05-toc-do-phan-tu.md",
+          "beforeSHA256": "f87e7c6a6e22bdb649d36af3529542363842231add60af0e18f07045389d8254",
+          "acceptedAfterSHA256": "7b9c8c149accf5203148c98305ba9fc0e4af9799177d403dbfd264ee611f11d1",
+          "sourcePDFPage": 619,
+          "sourceNoMeaningLost": true,
+          "exactChangesOnlyApprovedAdditions": true,
+          "allOriginalImageReferencesMathHeadingsAndDisclosuresPreserved": true
+        }
+      ],
+      "findingsResolved": [
+        "F1: Smaller vibrational energy gaps in complex molecules and3rotational degrees for nonlinear polyatomic molecules.",
+        "F2: Condensation rate proportional to vapor pressure at a fixed temperature, and theoretical prediction of vapor pressure versus temperature from phase-equilibrium rates."
+      ],
+      "remainingSourceCorrectionBlockersInThisTwoParagraphScope": [],
+      "optionalCaption18_19": "Not edited; prior optional clarification remains optional and is not converted into a blocking defect.",
+      "numerics": "No formula or numeric input changed; existing38assertions remain retained numerical evidence. No redundant new numerical run claimed.",
+      "rendering": "Parent reports10cases5width; independent second pass here did not rerun a browser and does not assert a new display pass.",
+      "authoredSourceEditedByReviewer": false
+    },
+    "exercises": {
+      "status": "four-parent-corrections-accepted-scoped",
+      "reviewedCorrectedSHA256": "aca19ab4df524f652f3943a79faaca17bde72ec01aa7986c45bbe169579acf80",
+      "sourcePDFPages": [
+        628,
+        630
+      ],
+      "acceptedFindingIds": [
+        "F01",
+        "F02",
+        "F03",
+        "F04"
+      ],
+      "parentCorrectionScope": "Restored18.80(c) with summary/direction and variance explanation; corrected22C table to2.65kPa; removed blanket medical advice18.49; renamed550K state18.58.",
+      "varianceCheck": {
+        "count": 150,
+        "sum": 8190,
+        "sumSquares": 559500,
+        "mean": 54.6,
+        "meanSquare": 3730.0,
+        "variance": 748.8399999999997,
+        "predicatePassed": true
+      },
+      "remainingMinorFindingIds": [
+        "F05",
+        "F06"
+      ],
+      "remainingDescriptions": [
+        "18.50 double comma remains.",
+        "18.69 original one-atomic-layer deposition context remains absent; restore one sentence if full source context is required."
+      ],
+      "sourceOrProjectFilesModifiedByReviewer": false
+    },
+    "exerciseReviewLimits": "Independent after-review accepted firstfourcorrections at recorded priorSHA. Two finalminor source/punctuation fixes and state-wording were source-checked by parent separately, no new independent hash acceptance invented."
+  },
+  "indexLineChanges": [
+    {
+      "file": "raw_materials/physics/translations/chapter-18/04-nhiet-dung.md",
+      "before": 210,
+      "after": 212
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-18/05-toc-do-phan-tu.md",
+      "before": 227,
+      "after": 227
+    }
+  ],
+  "remaining": "Exact fully assembled CI/globalmath and actualdeployed acceptance of current3source files. Other44chapter figure/caption/support gates remain separate.",
+  "skillTests": 39,
+  "privateRevision": "151e212f5bfb2bc363f941ad31f83c1cc52d9224",
+  "evidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter18-source-and-ch12-images.tar.gz",
+  "evidenceArchiveSHA256": "fa21714c1ca454b3ca6aa0fcfe26e90e854a7d1a46db3a01131757ae6efc5b33",
+  "preservedEvidenceFiles": 90
+}

@@ -1,0 +1,966 @@
+{
+  "status": "parent-visual-review-continuity-and-fresh-rgb-passed",
+  "chapter": 12,
+  "originalFrames": 56,
+  "images": [
+    {
+      "name": "r-theory-mo-dau",
+      "pdfPage": 386,
+      "rectangle": [
+        209,
+        0,
+        648,
+        246
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-mo-dau.png",
+      "sha256": "fc792968381cb623de75c814100e9d9dc060d7c1a4ab8cf9dbfd873a2a1592f7",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-01",
+      "pdfPage": 387,
+      "rectangle": [
+        459,
+        97,
+        609,
+        244
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-01.png",
+      "sha256": "f71bcf0b72456d042884b1119e60937c8baa6aeb78c3e747a89efc2bd9d99714",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-app-trees",
+      "pdfPage": 387,
+      "rectangle": [
+        456,
+        369,
+        583,
+        555
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-app-trees.png",
+      "sha256": "3df800a08a7964b4619b52bf0d2840fb51cba10031c5df421fcbc131ba8031f4",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-02",
+      "pdfPage": 388,
+      "rectangle": [
+        36,
+        370,
+        195,
+        516
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-02.png",
+      "sha256": "0c36401ae7a0ddd72ec86c007c4af71ad23e2722236012ed724b307c069b0288",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-03",
+      "pdfPage": 388,
+      "rectangle": [
+        35,
+        606,
+        195,
+        741
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-03.png",
+      "sha256": "7caa2a371c41d306cfdba6b74a5f2c1da9fedd1d7e1367995015971d778db72e",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-04",
+      "pdfPage": 389,
+      "rectangle": [
+        455,
+        390,
+        614,
+        673
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-04.png",
+      "sha256": "a05af5dafec33832bebf42af59b0e134317eeaa52853364c7e741a925ebc135e",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-05",
+      "pdfPage": 390,
+      "rectangle": [
+        36,
+        87,
+        195,
+        234
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-05.png",
+      "sha256": "864f051fd34c7cd49dd546622155b9c10028c592d1f8a960a2f87bc0216f47a0",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-06",
+      "pdfPage": 390,
+      "rectangle": [
+        36,
+        303,
+        195,
+        486
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-06.png",
+      "sha256": "ab037a470d9cf642ab38c2d85983456f462942673d7052a325a3621072f373cb",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-07",
+      "pdfPage": 390,
+      "rectangle": [
+        36,
+        568,
+        195,
+        745
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-07.png",
+      "sha256": "6d5bfc7792393ac702c7f289db5876f08680e146358a1fab14f6d5ffdba8c2ff",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-app-blood-pressure",
+      "pdfPage": 391,
+      "rectangle": [
+        455,
+        366,
+        613,
+        467
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-app-blood-pressure.png",
+      "sha256": "205a78ee70fbcd63d9dee652e11c2e6b18c34ca1714b1d647afdcd2edb638709",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-08",
+      "pdfPage": 391,
+      "rectangle": [
+        93,
+        512,
+        419,
+        741
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-08.png",
+      "sha256": "28870a07da9f3c9ea5339dd2ad9207feed08755fdb6a18cca5698858082cdd5c",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-09",
+      "pdfPage": 392,
+      "rectangle": [
+        227,
+        107,
+        553,
+        265
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-09.png",
+      "sha256": "688652ebbb81d8113e7bff0669f7a072353926e947f552a9853a34774c7f8279",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-10",
+      "pdfPage": 392,
+      "rectangle": [
+        115,
+        652,
+        211,
+        731
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-10.png",
+      "sha256": "46fcbc8841609830e0795b5102a68b00a6bb57c9c47aa80ace5ec6d741d94f32",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-11",
+      "pdfPage": 393,
+      "rectangle": [
+        96,
+        604,
+        441,
+        744
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-11.png",
+      "sha256": "23da29d7cb3c6e8386e9771553288ed41a68fd370dc91d9f2be93b161afa80b6",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-12",
+      "pdfPage": 394,
+      "rectangle": [
+        39,
+        87,
+        193,
+        348
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-12.png",
+      "sha256": "24c350eb316bc0badcba66c990007d72d7eaf99505543945e41272864f944539",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-13",
+      "pdfPage": 394,
+      "rectangle": [
+        52,
+        571,
+        293,
+        744
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-13.png",
+      "sha256": "8369a5a7f1ba7d32a0224dd36d92825539f1c2adc566850c1f6c41e7ad7ef6bd",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-14",
+      "pdfPage": 395,
+      "rectangle": [
+        455,
+        201,
+        648,
+        304
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-14.png",
+      "sha256": "689f4c10e0f3bf597f5eb7c15b107b651c307b6aa19150dedeef57f14547ab22",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-15",
+      "pdfPage": 395,
+      "rectangle": [
+        456,
+        369,
+        611,
+        566
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-15.png",
+      "sha256": "1534a8d95adc932e64d13117275704985a32447065f69128bb584c0d95012bf7",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-16",
+      "pdfPage": 395,
+      "rectangle": [
+        471,
+        658,
+        596,
+        718
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-16.png",
+      "sha256": "e3a6e20a6bf9b35347c1eda57a72cc2a68ca63995bb9364affc2a818fa908997",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-17",
+      "pdfPage": 395,
+      "rectangle": [
+        321,
+        508,
+        439,
+        617
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-17.png",
+      "sha256": "dd1097f9e881722224939fa73b393dc662bbd956839a977acd4c701b94c3839f",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-18",
+      "pdfPage": 396,
+      "rectangle": [
+        37,
+        97,
+        195,
+        183
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-18.png",
+      "sha256": "a41932a32de6543c8aa37c4ede79bbf5fd994c9f8218218e84e0f7ab00d638a3",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-19",
+      "pdfPage": 396,
+      "rectangle": [
+        243,
+        87,
+        361,
+        242
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-19.png",
+      "sha256": "bd34dae293ca7e7027a5a9f01c1693ca52228d951bd69a9f12bae368896e8f25",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-20",
+      "pdfPage": 396,
+      "rectangle": [
+        413,
+        98,
+        571,
+        252
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-20.png",
+      "sha256": "523d205778cfd542518744c35150d1bda0704810593dc3826806d99a52b2c0a0",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-21",
+      "pdfPage": 396,
+      "rectangle": [
+        40,
+        522,
+        187,
+        744
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-21.png",
+      "sha256": "58f9d1405be4bb6c4c67353e6185c38a71caf11ff40d8f64cb543f4e09057b96",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-22",
+      "pdfPage": 397,
+      "rectangle": [
+        457,
+        239,
+        605,
+        468
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-22.png",
+      "sha256": "d0c571b1ed4fde78cd94c508d7513b1ac52d77052f9523ddb05522d353200581",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-23",
+      "pdfPage": 398,
+      "rectangle": [
+        43,
+        499,
+        194,
+        732
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-23.png",
+      "sha256": "32f74edc90b561ec247c81176fe47b384944ef67c1a98f7eff8327c7a60485c0",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-app-giraffes",
+      "pdfPage": 399,
+      "rectangle": [
+        455,
+        216,
+        613,
+        453
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-app-giraffes.png",
+      "sha256": "f15e403966f03d611742f023c1a5f81d011de904be92dd009aa06dedd52a13f4",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-24",
+      "pdfPage": 400,
+      "rectangle": [
+        51,
+        251,
+        273,
+        478
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-24.png",
+      "sha256": "47807f6a9770e5527ab0c0fea42cc946c829dc2b7c63a7694bbdb58dc24a59ae",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-25",
+      "pdfPage": 400,
+      "rectangle": [
+        381,
+        558,
+        491,
+        689
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-25.png",
+      "sha256": "2d604576bb75781501635494ac3108cd622f55203135bb09603eeb33da685e20",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-26",
+      "pdfPage": 401,
+      "rectangle": [
+        125,
+        372,
+        284,
+        486
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-26.png",
+      "sha256": "1c6535a35119b39b039b887c97d84239bc56d1065b325d69397b969024afbb8f",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-27",
+      "pdfPage": 402,
+      "rectangle": [
+        35,
+        77,
+        572,
+        230
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-27.png",
+      "sha256": "0bbb92e86d9a7580c92d5000778476daba86441d893e9c3b9b913650c927c972",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-28",
+      "pdfPage": 402,
+      "rectangle": [
+        0,
+        599,
+        193,
+        743
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-28.png",
+      "sha256": "bff989f3a1e84a8d83d804abd90f73926b2ec3dbf5db284b3f1fb823a5cda601",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-29",
+      "pdfPage": 403,
+      "rectangle": [
+        471,
+        87,
+        600,
+        212
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-29.png",
+      "sha256": "c2dad3368be766502c508cfcb9e0a29cd51260a95b0a04bf908ecc8619a663d5",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-app-turbulent-blood",
+      "pdfPage": 403,
+      "rectangle": [
+        458,
+        409,
+        611,
+        586
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-app-turbulent-blood.png",
+      "sha256": "f757726be1a593c4a02117dee3b17ff794bb0097d316ec8c189962023fec5961",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-30",
+      "pdfPage": 403,
+      "rectangle": [
+        179,
+        615,
+        338,
+        743
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-30.png",
+      "sha256": "f961e846466d07c484bd081ac11143ab25f3b575a00d1d40f735986f7f1ca671",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-12-31",
+      "pdfPage": 404,
+      "rectangle": [
+        61,
+        339,
+        545,
+        580
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-12-31.png",
+      "sha256": "286c4a1bf201811ad895539663cff1c4bf2bcea015b0f41412116ecdaf27b475",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-summary-01",
+      "pdfPage": 405,
+      "rectangle": [
+        500,
+        94,
+        611,
+        186
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-summary-01.png",
+      "sha256": "df5e274c1f07204dde9bac96368b2a6cefc9f4145708c051cc7891f8b7e0768e",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-summary-02",
+      "pdfPage": 405,
+      "rectangle": [
+        500,
+        239,
+        578,
+        320
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-summary-02.png",
+      "sha256": "e6c95cbe71c49cb3a2f1de4ca74dd34350d3d0cd43201a764f5942e88df0911b",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-summary-03",
+      "pdfPage": 405,
+      "rectangle": [
+        500,
+        340,
+        611,
+        418
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-summary-03.png",
+      "sha256": "d218ea2ed05e0cd2da31165b2a2cce8938df40f67dfdeec51f3de43b57be01bc",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-theory-summary-04",
+      "pdfPage": 405,
+      "rectangle": [
+        500,
+        443,
+        580,
+        573
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-theory-summary-04.png",
+      "sha256": "59967433beb73b8258d5a2d864ca14295d193bf5188543eec8bc42d5f6a615ee",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-12-32",
+      "pdfPage": 406,
+      "rectangle": [
+        336,
+        601,
+        546,
+        716.1
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-12-32.png",
+      "sha256": "a195c8dacb19ec3335efccb5e1aaa37f43abdf4fc35422287c03d1e5e6097462",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-q12-30",
+      "pdfPage": 408,
+      "rectangle": [
+        178,
+        232,
+        295,
+        355
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-q12-30.png",
+      "sha256": "a4b8b852b4414cef9013bd00fadbf074ed93455a9f9943db94c74cee72d6259f",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-e12-15",
+      "pdfPage": 408,
+      "rectangle": [
+        497,
+        473,
+        572,
+        612
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-e12-15.png",
+      "sha256": "f871bb407680f5febd9abf7445c6f30077be6aa178da950cf75267f4deafdfe6",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-e12-19",
+      "pdfPage": 409,
+      "rectangle": [
+        217,
+        135,
+        334,
+        300
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-e12-19.png",
+      "sha256": "65551ca281e78444554e854c696252ab3c21f8b1ea7d64d39027ec8ada0069a0",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-e12-33",
+      "pdfPage": 409,
+      "rectangle": [
+        508,
+        258,
+        615,
+        350
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-e12-33.png",
+      "sha256": "e59deac44834c680b26008661b4f930f489015bbe65007d6761e72891c6071bc",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-57",
+      "pdfPage": 410,
+      "rectangle": [
+        458,
+        497,
+        573,
+        565
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-57.png",
+      "sha256": "7bd386663c891baee326b2290d7a6d5717c313521de964511c96fb93e831c58e",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-62",
+      "pdfPage": 411,
+      "rectangle": [
+        227,
+        311,
+        329,
+        423
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-62.png",
+      "sha256": "42fe351c20a8889465d9767ba21280710b634160a62a392f82a919ea1f0edb56",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-63",
+      "pdfPage": 411,
+      "rectangle": [
+        218,
+        477,
+        333,
+        585
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-63.png",
+      "sha256": "e78f09bcd421d676c573bffaded31ccb2bc381d1089f6b059cc940e33b9725ab",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-67",
+      "pdfPage": 411,
+      "rectangle": [
+        501,
+        223,
+        614,
+        274.5
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-67.png",
+      "sha256": "c6f658574e58648e4d6a0dcb9535c484639a0fa7c412be3aac5a3f2ad82b1c98",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-72",
+      "pdfPage": 411,
+      "rectangle": [
+        507,
+        585,
+        614,
+        723
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-72.png",
+      "sha256": "36dc84914d55bc6d2d992d7d8598e3d357f2c1e21ec021c1bd5a780a04d76b7c",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-77",
+      "pdfPage": 412,
+      "rectangle": [
+        164,
+        421,
+        295,
+        506
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-77.png",
+      "sha256": "d99675961d916d74ca9ae00098181b0717cd111992c2686ef6c56d4d39e8f428",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-81",
+      "pdfPage": 412,
+      "rectangle": [
+        361,
+        162,
+        522,
+        282
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-81.png",
+      "sha256": "9ae8e0054c2bbc4d28f63854604563fa2b39ef83aea3d3292bd347731beafaa3",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-83",
+      "pdfPage": 412,
+      "rectangle": [
+        353,
+        522,
+        514,
+        630
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-83.png",
+      "sha256": "801080623b9cd48a5f611b2b54936a3467a49963ddfe2b52fb59d21bb992657d",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-86",
+      "pdfPage": 413,
+      "rectangle": [
+        130,
+        323,
+        281,
+        447
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-86.png",
+      "sha256": "e39958f3936e4ca2df283559310608ea12d42834386d49ea0245c31a148fcc45",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-fig-p12-88",
+      "pdfPage": 413,
+      "rectangle": [
+        424,
+        224,
+        538,
+        317
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-fig-p12-88.png",
+      "sha256": "7e4632d1bd423e18dfe7119affce7834bc5ddeefe4e9a95e0e914a5991550098",
+      "freshRGBExact": true
+    },
+    {
+      "name": "r-exercises-mcat-elephant",
+      "pdfPage": 413,
+      "rectangle": [
+        423,
+        500,
+        540,
+        610
+      ],
+      "scale": 2.5,
+      "pixelMatch": true,
+      "file": "docs/vat-ly-1/bai-giang/img/young-12/r-exercises-mcat-elephant.png",
+      "sha256": "0779b9e12d652758b2ecc8c9155301d8828262a1ddeff6fa5fccb707b59521c2",
+      "freshRGBExact": true
+    }
+  ],
+  "evidence": [
+    {
+      "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\qa\\physics1-remaining\\ch12\\theory-crop-pixels.json",
+      "sha256": "32892413ec630ef88f30d218a04c7647b522c6652668838ca6ec2fa2927a545f"
+    },
+    {
+      "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\qa\\physics1-remaining\\ch12\\exercises-crop-pixels.json",
+      "sha256": "661b35170dc24ff55a576f8a050a33ef3a8d710b7c6545d996a6166288ad9812"
+    },
+    {
+      "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch12-remaining-theory-20261025.md",
+      "sha256": "19d4d678b4d987717b02b6e61ea371c32bd45670fcbbe017333fabfc01161269",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "scope": "Explicit prior review of complete frames, actual labels and once-per-image captions."
+    },
+    {
+      "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch12-parent-exercises-20261025.md",
+      "sha256": "d177304cd961ecd2899140a09fde5a7b70ca8ca985e0565f307717f157a587c7",
+      "reviewCommit": "9176c28117b4146e450e480cb2717c5316229736",
+      "scope": "Explicit prior review of complete frames, actual labels and once-per-image captions."
+    }
+  ],
+  "captionAndAnnotationContinuity": [
+    {
+      "file": "raw_materials/physics/translations/chapter-12/00-mo-dau.md",
+      "lockedSHA256": "9df0249d8ae9aa6c639d7d5b09d4a0e776e8d2c3de5e81af7df193ea0e11d76d",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+      "lockedSHA256": "d5586b872b8452d09dad11e17a8ff6a04c5154d2e6d07f571aebee68c24338a3",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+      "lockedSHA256": "c515146392590bab565db8ef0b8212e4718ab07739c9c019b284c42f70c696ec",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+      "lockedSHA256": "1446574206f036252937dfa10bafbfa6c3bdddacb757c37225896ad631d4a37b",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+      "lockedSHA256": "9af8a56ca6af9590f2688b426330f154a82cf70c4651cf37e05ea4a7d219a45f",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+      "lockedSHA256": "11aac75aaecc50ac220dc8343745615e70ba4721e07d26fb008b7033447618e8",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+      "lockedSHA256": "5677982a402aa6673340458e47fde0f0d21ddfa6a5fc4a2d61caac3b7eac9a8c",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/17-tom-tat.md",
+      "lockedSHA256": "04a7017223e169ef29ca8019211f8f9294e222c028cf37faec9d0234c7548cdb",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/parent-09-luyen-tap-huong-dan.md",
+      "lockedSHA256": "06c537907e23747aa6aabdedf514e55bd606df1e16b28454e5823d1b11dd7eea",
+      "reviewCommit": "9176c28117b4146e450e480cb2717c5316229736",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/parent-10-cau-hoi-thao-luan.md",
+      "lockedSHA256": "d8b00593f6a66a462df71cd9fe9999614dbc5a919b8e5748f6996751440bbb7f",
+      "reviewCommit": "9176c28117b4146e450e480cb2717c5316229736",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/parent-11-bai-tap-001-046.md",
+      "lockedSHA256": "597a0c27268ccd5807e0ee563801edafc753bdcaec35f639a1dcfc3068fa8538",
+      "reviewCommit": "9176c28117b4146e450e480cb2717c5316229736",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/parent-12-bai-tap-047-092.md",
+      "lockedSHA256": "f1748ca81a030b687d18e0f44b3b5116bc8acda4f74976ba8203df7a91e38cab",
+      "reviewCommit": "9176c28117b4146e450e480cb2717c5316229736",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-12/parent-16-bai-tap-cau-noi.md",
+      "lockedSHA256": "e4c979b60c73808ca8b85fe662032bfb7adc2065137ac0b395e905da8b0b899f",
+      "reviewCommit": "9176c28117b4146e450e480cb2717c5316229736",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "docs/.vitepress/physics1-remaining-12-exercises-image-annotations.mjs",
+      "lockedSHA256": "c673a127760a227ca6a09fa1e0fcc7652c625712cda3edb54a26452ca43eae6f",
+      "reviewCommit": "9176c28117b4146e450e480cb2717c5316229736",
+      "matchingLineEnding": "CRLF"
+    },
+    {
+      "file": "docs/.vitepress/physics1-remaining-12-theory-image-annotations.mjs",
+      "lockedSHA256": "9c91cc478c5cebd0d65e84ff4b20d403b389e42e48b648c9a991e336c3de8ffb",
+      "reviewCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "matchingLineEnding": "CRLF"
+    }
+  ],
+  "limits": "Complete-frame/caption acceptance carried from explicit parent visual reviews bound to same geometry and exact current Markdown/annotation bytes. Fresh RGB verification alone is not presented as visual completeness; no new inspection of all56frames claimed. Supplementary solution diagrams excluded.",
+  "verifiedSourcePin": "f71a29277f13ad0181b40952431c60fee9f92cb8",
+  "publishedPrivatePin": "151e212f5bfb2bc363f941ad31f83c1cc52d9224",
+  "evidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter18-source-and-ch12-images.tar.gz",
+  "evidenceArchiveSHA256": "fa21714c1ca454b3ca6aa0fcfe26e90e854a7d1a46db3a01131757ae6efc5b33"
+}
