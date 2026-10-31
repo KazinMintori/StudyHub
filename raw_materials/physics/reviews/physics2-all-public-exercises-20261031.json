@@ -1,0 +1,331 @@
+{
+  "status": "passed-structure-and-layout",
+  "observedPublicSourceBase": "4085f71365aefdf7b2f2a81cc9975eaf100c36ba",
+  "scope": "Actual public Physics2 prompts, numbered sequence, unit count, one closed solution with summary/direction, and opened math/images at five widths. Source counts alone do not establish semantic correctness.",
+  "startedUTC": "2026-10-31T06:51:03.669Z",
+  "completedUTC": "2026-10-31T06:57:15.441Z",
+  "chapters": [
+    {
+      "chapter": 21,
+      "status": "passed-structure-and-layout",
+      "units": 136,
+      "expectedUnits": 136,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 22,
+      "status": "passed-structure-and-layout",
+      "units": 95,
+      "expectedUnits": 95,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 23,
+      "status": "passed-structure-and-layout",
+      "units": 121,
+      "expectedUnits": 121,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 24,
+      "status": "passed-structure-and-layout",
+      "units": 110,
+      "expectedUnits": 110,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 25,
+      "status": "passed-structure-and-layout",
+      "units": 119,
+      "expectedUnits": 119,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 26,
+      "status": "passed-structure-and-layout",
+      "units": 122,
+      "expectedUnits": 122,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 27,
+      "status": "passed-structure-and-layout",
+      "units": 116,
+      "expectedUnits": 116,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 28,
+      "status": "passed-structure-and-layout",
+      "units": 116,
+      "expectedUnits": 116,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 29,
+      "status": "passed-structure-and-layout",
+      "units": 108,
+      "expectedUnits": 108,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 30,
+      "status": "passed-structure-and-layout",
+      "units": 104,
+      "expectedUnits": 104,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 31,
+      "status": "passed-structure-and-layout",
+      "units": 103,
+      "expectedUnits": 103,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 32,
+      "status": "passed-structure-and-layout",
+      "units": 82,
+      "expectedUnits": 82,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 33,
+      "status": "passed-structure-and-layout",
+      "units": 102,
+      "expectedUnits": 102,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 34,
+      "status": "passed-structure-and-layout",
+      "units": 148,
+      "expectedUnits": 148,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 35,
+      "status": "passed-structure-and-layout",
+      "units": 61,
+      "expectedUnits": 61,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 36,
+      "status": "passed-structure-and-layout",
+      "units": 103,
+      "expectedUnits": 103,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 37,
+      "status": "passed-structure-and-layout",
+      "units": 102,
+      "expectedUnits": 102,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 38,
+      "status": "passed-structure-and-layout",
+      "units": 75,
+      "expectedUnits": 75,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 39,
+      "status": "passed-structure-and-layout",
+      "units": 126,
+      "expectedUnits": 126,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 40,
+      "status": "passed-structure-and-layout",
+      "units": 110,
+      "expectedUnits": 110,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 41,
+      "status": "passed-structure-and-layout",
+      "units": 111,
+      "expectedUnits": 111,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 42,
+      "status": "passed-structure-and-layout",
+      "units": 95,
+      "expectedUnits": 95,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 43,
+      "status": "passed-structure-and-layout",
+      "units": 110,
+      "expectedUnits": 110,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    },
+    {
+      "chapter": 44,
+      "status": "passed-structure-and-layout",
+      "units": 85,
+      "expectedUnits": 85,
+      "cases": 5,
+      "errors": 0,
+      "requestFailures": 0
+    }
+  ],
+  "units": 2560,
+  "cases": 120,
+  "issues": 0,
+  "detailedEvidencePrivateRevision": "66ecbe8b1e6973842b44373346e8c612dccc2bae",
+  "details": [
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/summary.json",
+      "sha256": "46b8f3b5228e69cc22befcbc593d7c2949a7892632080dac46253265bf7668cf"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch21.json",
+      "sha256": "26f11b2ec84dccbb2447b064d1449179cc33848762e8af4faa944bdeafe15d3f"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch22.json",
+      "sha256": "b113c36631d0d7256e8f7fe1301589638b0b1051acbf7fa17c0a923afc7147d9"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch23.json",
+      "sha256": "3f4dbed1b04b354c3d65f22498f443f150aece0af678242ba7c3624fba3f4f03"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch24.json",
+      "sha256": "1baba144d4fcdd890718008ff7f264da5179bfd59e6236e0e357b95a53e33455"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch25.json",
+      "sha256": "9d893d26e1bec661d68ada9366c4fe9a0a1334acf25f417477cb625e886c9f09"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch26.json",
+      "sha256": "14f39f029519210ec9d8d3a5780fbfbb1b9f10bf0a7463a045ff01d49fde16c5"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch27.json",
+      "sha256": "d48eefe11940128dacf855bc5b9c8b47d2a3984e27197abb909c0499abec5257"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch28.json",
+      "sha256": "568c10126d3828c2cf8a8022fb419d0c38266bfd27d95ec88aaa5edb035eb6a9"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch29.json",
+      "sha256": "e3542774bbbf22b3b52c37d0a74b1e8c0e2a7c563f2ea674d9a45bc83b3c5a6a"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch30.json",
+      "sha256": "f32efab3493f50c79946b2b0af68d0ae5ccea5596c7c4b5a91fb1bc8cd2e6fef"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch31.json",
+      "sha256": "95bafeb62968d069946494679271d5cb040c30d6edd9b0c9f67b4142777af3a9"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch32.json",
+      "sha256": "f2816b3d264efaaf09b57048d3731cae8b46617f9385f56fde6becc22e440f47"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch33.json",
+      "sha256": "5bcccc7aaeaa204d92109b0fb9321e9a812d37fe913ecdbff75592917e4f0813"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch34.json",
+      "sha256": "8fe0d1bb1fa31a045d7b0d217e7055ddc5027f9c340f5cbccdb0963f3ee5c6d4"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch35.json",
+      "sha256": "31bf4a660db562039d0d8d741b49f4e53ad37c638ae230a3d615ac714ec554f2"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch36.json",
+      "sha256": "5d722fd98496fc646c45c838ac20cbfb8dd1290ad4488bcfe39f3828b44183b3"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch37.json",
+      "sha256": "8f9db000d6bd19fb53cb026e7c4ee5d06f0142692869a5f189cc5b3ba693edc0"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch38.json",
+      "sha256": "8040724911608a6275c5b8b4b2aa828d78ce5a68fb70bd779a32704dc959e0ef"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch39.json",
+      "sha256": "75eb71d5881a96db72de1d45f2b99ca3fe774f4437e385952953b35428283d15"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch40.json",
+      "sha256": "fb4e32550a178b02df1bb6957b864eb6520cb2bdf767eceb7599b85f36936f2d"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch41.json",
+      "sha256": "043da5190be4da9c6d4b9f2d8bd3745d4301b3fb210c798b52bb77da0b584d63"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch42.json",
+      "sha256": "ba39b6666a3be550c4ee0c8352b8e3e899203b6c78ccc087f0d53f5d29e590a9"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch43.json",
+      "sha256": "c1c9b853fbb6bebad078b7ca5724350c8b0dd484068d07d8861a93791a5bc1d8"
+    },
+    {
+      "file": "raw_materials/physics/reviews/private-acceptance-20261031/public-physics2/ch44.json",
+      "sha256": "1de0dcfea6ec2cb7726664dd2561fba9eb07954c89f73af1a3e6e9b3b4b9f920"
+    }
+  ]
+}

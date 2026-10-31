@@ -1,0 +1,345 @@
+{
+  "status": "reviewed-scoped-render-passed-pending-exact-cloud-and-deployed-acceptance",
+  "scope": "Source explanations44.6–44.7 and supporting reference material43.1–43.2; no entire44chapter semantic claim.",
+  "privateRevision": "c90f1711266beb092a06d46866792ac6bc426746",
+  "sourcePDFPages": {
+    "cosmology": [
+      1524,
+      1538
+    ],
+    "nuclearSupport": [
+      1462,
+      1472
+    ]
+  },
+  "restoredCosmologyBlocks": 22,
+  "originalExamplesPreserved": 5,
+  "originalSelfchecksPreserved": 2,
+  "originalImageReferencesPreserved": 12,
+  "originalEquationTagsPreserved": 10,
+  "originalImageFilesChanged": 0,
+  "restoredContent": [
+    "Hubble-time extrapolation assumption and expansion-history limits.",
+    "Large-redshift scale/volume example, domain of Doppler substitution, local motion versus metric recession, observable horizon.",
+    "Newtonian critical-density derivation and model qualifications.",
+    "High-energy photon tail and delayed deuteron survival.",
+    "Unstable-beryllium intermediate in triple-alpha synthesis and the iron-group fusion qualification.",
+    "Conditional early-universe unification and baryon-asymmetry survival.",
+    "Per-wavelength CMB peak and comoving-volume qualifications."
+  ],
+  "referenceMaterial": {
+    "cheatsheetSections": 2,
+    "cheatsheetItems": 28,
+    "wikiTechnicalSections": 5,
+    "existingExamplesQuestionsConnectionsAndOtherSectionsRetained": true,
+    "publicWikiFiles": [
+      {
+        "file": "docs/wiki/spin-hat-nhan.md",
+        "sha256": "750c79f6b3bc0f44e5f1c60e01f2b72b5917d273f213cc9997ef485f619d29cb"
+      },
+      {
+        "file": "docs/wiki/magneton-hat-nhan.md",
+        "sha256": "ee02b69574e7f8e389480dd40e809c7d2a5705003e4fa8e72f5d181078586286"
+      },
+      {
+        "file": "docs/wiki/nang-luong-lien-ket-hat-nhan.md",
+        "sha256": "a8a900058da1aab916d5fe1dba617e114882c483df71146d262f6d3116092529"
+      },
+      {
+        "file": "docs/wiki/mo-hinh-giot-chat-long.md",
+        "sha256": "7693f47343dbf9731a62469e21d81068570a439a75163477624357855016ca5d"
+      },
+      {
+        "file": "docs/wiki/mo-hinh-vo-hat-nhan.md",
+        "sha256": "a6f6b313c68dc339572b7cc3ce27d4707b54d79c17ca089d25a806e2ea170f1f"
+      }
+    ]
+  },
+  "independentSourceReview": "Accepted exact corrected blocks/support after resolving notation and vector/magnitude wording. Detailed source maps and source hashes retained privately.",
+  "numericalChecks": {
+    "passed": 42,
+    "scope": "Source-specific givens and physical model relations, not42 wholechapter approvals."
+  },
+  "currentRenderCases": [
+    {
+      "name": "06-vu-tru-gian-no.md",
+      "width": 320,
+      "issues": [],
+      "formulas": 104,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "06-vu-tru-gian-no.md",
+      "width": 360,
+      "issues": [],
+      "formulas": 104,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "06-vu-tru-gian-no.md",
+      "width": 375,
+      "issues": [],
+      "formulas": 104,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "06-vu-tru-gian-no.md",
+      "width": 768,
+      "issues": [],
+      "formulas": 104,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "06-vu-tru-gian-no.md",
+      "width": 1440,
+      "issues": [],
+      "formulas": 104,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "07-khoi-dau-thoi-gian.md",
+      "width": 320,
+      "issues": [],
+      "formulas": 150,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "07-khoi-dau-thoi-gian.md",
+      "width": 360,
+      "issues": [],
+      "formulas": 150,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "07-khoi-dau-thoi-gian.md",
+      "width": 375,
+      "issues": [],
+      "formulas": 150,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "07-khoi-dau-thoi-gian.md",
+      "width": 768,
+      "issues": [],
+      "formulas": 150,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "name": "07-khoi-dau-thoi-gian.md",
+      "width": 1440,
+      "issues": [],
+      "formulas": 150,
+      "images": 6,
+      "captions": 6
+    },
+    {
+      "id": "spin-hat-nhan",
+      "width": 320,
+      "issues": [],
+      "formulas": 3
+    },
+    {
+      "id": "spin-hat-nhan",
+      "width": 360,
+      "issues": [],
+      "formulas": 3
+    },
+    {
+      "id": "spin-hat-nhan",
+      "width": 375,
+      "issues": [],
+      "formulas": 3
+    },
+    {
+      "id": "spin-hat-nhan",
+      "width": 768,
+      "issues": [],
+      "formulas": 3
+    },
+    {
+      "id": "spin-hat-nhan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 3
+    },
+    {
+      "id": "magneton-hat-nhan",
+      "width": 320,
+      "issues": [],
+      "formulas": 8
+    },
+    {
+      "id": "magneton-hat-nhan",
+      "width": 360,
+      "issues": [],
+      "formulas": 8
+    },
+    {
+      "id": "magneton-hat-nhan",
+      "width": 375,
+      "issues": [],
+      "formulas": 8
+    },
+    {
+      "id": "magneton-hat-nhan",
+      "width": 768,
+      "issues": [],
+      "formulas": 8
+    },
+    {
+      "id": "magneton-hat-nhan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 8
+    },
+    {
+      "id": "nang-luong-lien-ket-hat-nhan",
+      "width": 320,
+      "issues": [],
+      "formulas": 9
+    },
+    {
+      "id": "nang-luong-lien-ket-hat-nhan",
+      "width": 360,
+      "issues": [],
+      "formulas": 9
+    },
+    {
+      "id": "nang-luong-lien-ket-hat-nhan",
+      "width": 375,
+      "issues": [],
+      "formulas": 9
+    },
+    {
+      "id": "nang-luong-lien-ket-hat-nhan",
+      "width": 768,
+      "issues": [],
+      "formulas": 9
+    },
+    {
+      "id": "nang-luong-lien-ket-hat-nhan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 9
+    },
+    {
+      "id": "mo-hinh-giot-chat-long",
+      "width": 320,
+      "issues": [],
+      "formulas": 6
+    },
+    {
+      "id": "mo-hinh-giot-chat-long",
+      "width": 360,
+      "issues": [],
+      "formulas": 6
+    },
+    {
+      "id": "mo-hinh-giot-chat-long",
+      "width": 375,
+      "issues": [],
+      "formulas": 6
+    },
+    {
+      "id": "mo-hinh-giot-chat-long",
+      "width": 768,
+      "issues": [],
+      "formulas": 6
+    },
+    {
+      "id": "mo-hinh-giot-chat-long",
+      "width": 1440,
+      "issues": [],
+      "formulas": 6
+    },
+    {
+      "id": "mo-hinh-vo-hat-nhan",
+      "width": 320,
+      "issues": [],
+      "formulas": 5
+    },
+    {
+      "id": "mo-hinh-vo-hat-nhan",
+      "width": 360,
+      "issues": [],
+      "formulas": 5
+    },
+    {
+      "id": "mo-hinh-vo-hat-nhan",
+      "width": 375,
+      "issues": [],
+      "formulas": 5
+    },
+    {
+      "id": "mo-hinh-vo-hat-nhan",
+      "width": 768,
+      "issues": [],
+      "formulas": 5
+    },
+    {
+      "id": "mo-hinh-vo-hat-nhan",
+      "width": 1440,
+      "issues": [],
+      "formulas": 5
+    },
+    {
+      "id": "cheatsheet",
+      "width": 320,
+      "issues": [],
+      "formulas": 35
+    },
+    {
+      "id": "cheatsheet",
+      "width": 360,
+      "issues": [],
+      "formulas": 35
+    },
+    {
+      "id": "cheatsheet",
+      "width": 375,
+      "issues": [],
+      "formulas": 35
+    },
+    {
+      "id": "cheatsheet",
+      "width": 768,
+      "issues": [],
+      "formulas": 35
+    },
+    {
+      "id": "cheatsheet",
+      "width": 1440,
+      "issues": [],
+      "formulas": 35
+    }
+  ],
+  "distinctRenderCases": 40,
+  "scopedRendererLimits": [
+    "Current proposed source with production Markdown/math/figure/responsive-table rules injected into actual public topic layout and CSS. Glossary term autolinking omitted; full cloud integration and exact deployed pages require separate acceptance.",
+    "Actual public reading layout/CSS with proposed Cheatsheet using production MathText renderer, and proposed Wiki using production Markdown/math rules. Glossary autolinking omitted for Wiki; exact full integration/public release separate."
+  ],
+  "evidenceRetained": {
+    "privateRevision": "c90f1711266beb092a06d46866792ac6bc426746",
+    "originalTextBytesCompressedLosslessly": 66,
+    "archiveIndex": "raw_materials/physics/reviews/private-acceptance-20261031/integration/evidence-archive-index.json"
+  },
+  "sourceIllustrationClarification": {
+    "originalImageRetained": true,
+    "reason": "The early-nucleosynthesis diagram label must not be interpreted as1percent primordial heavy-element yield. A source-backed explanatory note was added instead of altering original artwork.",
+    "supportingPrimaryReference": "https://pdg.lbl.gov/2025/reviews/rpp2025-rev-bbang-nucleosynthesis.pdf",
+    "pages": [
+      1,
+      2
+    ]
+  },
+  "cloudMathAndBuild": "Pending full exact-commit GitHub pipeline. No local full build."
+}

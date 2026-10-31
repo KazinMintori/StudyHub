@@ -13,9 +13,33 @@ Mômen động lượng nội tại tổng cộng của hạt nhân, hình thàn
 
 ## Giải thích kỹ thuật
 
-Spin tổng cộng của hạt nhân khác với spin của một nucleon riêng lẻ. Sự ghép đôi proton và neutron có thể làm nhiều đóng góp triệt tiêu. Thành phần dọc theo một trục nhận các giá trị rời rạc.
+Spin hạt nhân là số lượng tử j đặc trưng cho mômen động lượng toàn phần của hạt nhân. Mômen động lượng này gồm cả spin và chuyển động quỹ đạo của các nucleon, được cộng theo quy tắc lượng tử.
 
-Mômen từ liên quan đến cấu trúc hạt nhân, nhưng không thể suy toàn bộ giá trị thực nghiệm từ một mô hình quả cầu tích điện quay. Đặc biệt, neutron trung hòa vẫn có mômen từ.
+Proton và neutron đều có số lượng tử spin s = 1/2. Độ lớn mômen động lượng spin của một nucleon và hình chiếu lên trục z là:
+
+$$
+\begin{aligned}
+&S=\frac{\sqrt3}{2}\hbar,\\
+&S_z=\pm\frac{\hbar}{2}.
+\end{aligned}
+$$
+
+Độ lớn mômen động lượng toàn phần hạt nhân và hình chiếu của nó được xác định bởi:
+
+$$
+\begin{aligned}
+&J=\sqrt{j(j+1)}\hbar,\\
+&J_z=m_j\hbar.
+\end{aligned}
+$$
+
+Các giá trị của $m_j$ là −j, −j+1, …, j−1, j. Vì vậy, với một j xác định, hình chiếu có 2j+1 giá trị. Không thể cộng các độ lớn spin như những số dương thông thường để tìm J.
+
+Nếu số nucleon A chẵn thì j là số nguyên. Nếu A lẻ thì j là số bán nguyên. Hạt nhân có cả Z và N chẵn có j = 0 ở trạng thái cơ bản. Điều kiện trạng thái cơ bản là thiết yếu vì các trạng thái kích thích của hạt nhân chẵn–chẵn có thể mang spin khác không.
+
+Mômen từ liên quan đến cấu trúc hạt nhân. Proton có mômen từ cùng chiều spin, còn neutron có mômen từ ngược chiều spin dù điện tích tổng cộng bằng không.
+
+Mômen từ liên quan đến cấu trúc hạt nhân, nhưng không thể suy toàn bộ giá trị thực nghiệm từ một mô hình quả cầu tích điện quay.
 
 ## Ví dụ
 

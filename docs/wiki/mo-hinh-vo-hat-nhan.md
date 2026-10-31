@@ -13,9 +13,25 @@ Mô hình trong đó từng nucleon chuyển động trong thế hiệu dụng t
 
 ## Giải thích kỹ thuật
 
-Thế hiệu dụng gom tác dụng trung bình của những nucleon còn lại. Proton còn chịu lực đẩy điện, nên thế proton khác thế neutron dù phần tương tác hạt nhân có những nét gần nhau.
+Trong mô hình vỏ, từng nucleon chuyển động trong thế hiệu dụng trung bình của các nucleon còn lại. Phần thế hạt nhân có thể mô tả gần đúng bằng một giếng thế đối xứng cầu với bờ bo tròn. Hạt nhân không có một mặt cầu cứng với biên sắc nét.
 
-Proton và neutron điền các tập trạng thái tương ứng với các ràng buộc lượng tử. Những cấu hình vỏ kín giải thích các xu hướng bền liên kết đặc biệt. Một số ma thuật không tự bảo đảm mọi hạt nhân mang số ấy đều bền trước mọi phân rã.
+Trong gần đúng này, phần thế hạt nhân có cùng dạng đối với proton và neutron. Proton còn chịu lực đẩy điện của Z−1 proton khác. Nếu gọi các phần thế là $U_{\rm nuc}$ và $U_{\rm el}$, thế toàn phần đối với proton là:
+
+$$
+U_{\rm tot}=U_{\rm nuc}+U_{\rm el}.
+$$
+
+Đối với neutron trung hòa, thế toàn phần trong mô hình này là $U_{\rm nuc}$. Nguyên lý Pauli áp dụng riêng cho từng loại nucleon. Không có hai proton cùng chiếm một trạng thái lượng tử hoàn chỉnh, và điều tương tự đúng với hai neutron.
+
+Các số ma thuật là những số proton hoặc neutron tương ứng với vỏ hay phân vỏ kín:
+
+$$
+2,\ 8,\ 20,\ 28,\ 50,\ 82,\ 126.
+$$
+
+Sau một cấu hình kín có khoảng cách năng lượng tương đối lớn tới mức tiếp theo. Vì vậy, cấu hình kín có tính bền liên kết nổi bật so với các cấu hình lân cận. Dãy số ma thuật hạt nhân khác dãy số electron của các khí hiếm vì thế hiệu dụng khác nhau và tương tác spin–quỹ đạo trong hạt nhân mạnh hơn, đồng thời có dấu ngược với trường hợp nguyên tử.
+
+Hạt nhân có cả Z và N là số ma thuật được gọi là ma thuật kép. Các cấu hình heli-4, oxy-16, canxi-40, canxi-48 và chì-208 đều thuộc nhóm này và có spin toàn phần bằng không ở trạng thái cơ bản. Tính bền liên kết của một cấu hình kín không đồng nghĩa mọi kênh phân rã của mọi hạt nhân có số ma thuật đều bị cấm.
 
 ## Ví dụ
 
