@@ -31,9 +31,10 @@ try {
   await mkdir(path.join(docs, 'public'), { recursive: true })
   await writeFile(path.join(docs, '.vitepress/config.mjs'), `
 import { staticMathPlugin } from ${JSON.stringify(path.join(root, 'scripts/static-math-plugin.mjs').replaceAll('\\', '/'))}
+import { vietnameseMathOptions } from ${JSON.stringify(path.join(root, 'scripts/math-fonts/vietnamese.mjs').replaceAll('\\', '/'))}
 export default { base:'/StudyHub/', title:'Kiểm tra chia đợt', lastUpdated:false, ignoreDeadLinks:true,
   head:[['link',{rel:'icon',href:'/StudyHub/figure.svg'}]],
-  markdown:{math:true,config:md=>md.use(staticMathPlugin)},
+  markdown:{math:vietnameseMathOptions,config:md=>md.use(staticMathPlugin)},
   themeConfig:{nav:[{text:'Đến B',link:'/b'}]}, buildConcurrency:1 }
 `)
   if (realTheme) {
@@ -55,9 +56,10 @@ const { frontmatter } = useData()
 <button id="counter" @click="count++">{{ count }}</button>
 <p id="frontmatter-probe">{{ frontmatter.course }}</p>
 `
+  const vietnameseFormula = String.raw`$P(\text{một chuỗi})=p^k(1-p)^{n-k}$`
   for (const [name, target] of [['index', 'b'], ['a', 'b'], ['b', 'a'], ['C', 'a']]) {
     const course = ['b', 'C'].includes(name) ? 'toan-cho-ai' : 'bieu-dien-tri-thuc'
-    await writeFile(path.join(docs, name + '.md'), `---\ncourse: ${course}\n---\n\n${realTheme ? '<CourseOverview />' : '# Trang ' + name}\n\n[Chuyển trang](/${target})\n\n$$\nE=mc^2\n$$\n\n<details><summary>Lời giải</summary><p>Điện thế bằng công trên điện tích.</p></details>\n\n![Hình: Tọa độ và năng lượng](/figure.svg)\n\n${interactive}\n${name === 'a' ? '<div v-memo="[count]">{{ count }}</div>' : ''}`)
+    await writeFile(path.join(docs, name + '.md'), `---\ncourse: ${course}\n---\n\n${realTheme ? '<CourseOverview />' : '# Trang ' + name}\n\n[Chuyển trang](/${target})\n\n$$\nE=mc^2\n$$\n\n${vietnameseFormula}\n\n<details><summary>Lời giải</summary><p>Điện thế bằng công trên điện tích.</p></details>\n\n![Hình: Tọa độ và năng lượng](/figure.svg)\n\n${interactive}\n${name === 'a' ? '<div v-memo="[count]">{{ count }}</div>' : ''}`)
   }
   await writeFile(path.join(docs, 'public/figure.svg'), '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="20"><text x="1" y="15">Energy</text></svg>')
   await writeFile(path.join(docs, 'public/embedded.html'), '<p>Tài liệu nhúng</p>')
@@ -86,6 +88,8 @@ const { frontmatter } = useData()
   page.on('console', message => { if (message.type() === 'error' || /hydration.*mismatch/i.test(message.text())) errors.push(message.text()) })
   await page.goto(`http://127.0.0.1:${port}/StudyHub/a.html`, {waitUntil:'networkidle0'})
   await page.waitForSelector('.static-math svg')
+  await page.waitForSelector('.static-math svg [data-c="1ED9"]')
+  if (await page.$('.static-math svg text')) throw Error('Vietnamese math fell back to unmeasured browser glyphs')
   await page.click('#counter')
   await page.waitForFunction(() => document.querySelector('#counter').textContent === '1')
   await page.evaluate(() => { window.fixtureNavigationMarker = 'same-document' })

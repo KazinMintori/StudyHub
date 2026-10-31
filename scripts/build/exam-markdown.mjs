@@ -2,11 +2,12 @@ import {createMarkdownRenderer} from 'vitepress'
 import path from 'node:path'
 import {configureStudyMarkdown} from './markdown-presentation.mjs'
 import {examProsePlugin} from './exam-prose.mjs'
+import {vietnameseMathOptions} from '../math-fonts/vietnamese.mjs'
 const proseRenderers = new WeakSet()
 
 export async function createExamMarkdownRenderer(root, { preserveProse = false } = {}) {
   const md=await createMarkdownRenderer(path.join(root,'docs'),{
-    html:true,math:true,lineNumbers:false,
+    html:true,math:vietnameseMathOptions,lineNumbers:false,
     config:renderer=>configureStudyMarkdown(renderer,{base:'/'})
   })
   // VitePress shares one MarkdownIt instance. Set the prose policy per render,
