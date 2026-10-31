@@ -27,7 +27,7 @@
     {
       "id": "xac-suat-thong-ke",
       "repository": "KazinMintori/StudyHub-course-xac-suat-thong-ke",
-      "revision": "9dcf9f1a2d5891710b855938edf2b662ce916443",
+      "revision": "602b2361a15c33eb914444d079fd681849508b4c",
       "paths": [
         "docs/.vitepress/probability-source-library.mjs",
         "docs/.vitepress/xac-suat-thong-ke-course.mjs",
