@@ -1,0 +1,216 @@
+{
+  "status": "published-source-and-scoped-render-passed-pending-exact-cloud-and-deployed-acceptance",
+  "scope": "Five added chapter20 reference items, differential entropy definition, statistical entropy difference, and conditions/units. Existing chapter20 items retained; separate Wiki acceptance remains open. Other six priority chapters unchanged by deep comparison.",
+  "sourceEdition": 15,
+  "sourcePDFPages": [
+    665,
+    670,
+    671,
+    680,
+    681,
+    682,
+    683,
+    684,
+    685,
+    686,
+    687
+  ],
+  "newItems": [
+    {
+      "name": "Công suất và tốc độ lấy nhiệt",
+      "pages": [
+        665,
+        670,
+        671
+      ],
+      "relations": [
+        "P=W/t",
+        "H=Qc/t",
+        "K=H/P"
+      ]
+    },
+    {
+      "name": "Nhiệt độ biến thiên",
+      "pages": [
+        681
+      ],
+      "relations": [
+        "DeltaS=mc ln(T2/T1)"
+      ],
+      "conditions": "Constant mass and specific heat, no phase change, kelvin temperatures."
+    },
+    {
+      "name": "Chuyển pha ở nhiệt độ không đổi",
+      "pages": [
+        680
+      ],
+      "relations": [
+        "abs(DeltaS)=mL/T"
+      ],
+      "conditions": "Reversible isothermal phase change; entropy sign follows heat received/rejected."
+    },
+    {
+      "name": "Đoạn nhiệt thuận nghịch",
+      "pages": [
+        682
+      ],
+      "relations": [
+        "DeltaS=0"
+      ],
+      "conditions": "Both adiabatic and reversible; adiabatic alone insufficient."
+    },
+    {
+      "name": "Entropy trong chu trình",
+      "pages": [
+        682,
+        683
+      ],
+      "relations": [
+        "DeltaS_cycle=0",
+        "closed integral(deltaQrev/T)=0"
+      ],
+      "conditions": "State returns to same value in any cycle; reversible-heat integral restricted to reversible cycle. Entropy of entire environment included separately."
+    }
+  ],
+  "augmentedExistingDefinitions": [
+    {
+      "name": "Độ biến thiên entropy",
+      "pages": [
+        680,
+        681
+      ],
+      "addition": "Differential dS=deltaQrev/T, state-function property, J/K and sign/temperature conditions."
+    },
+    {
+      "name": "Diễn giải thống kê",
+      "pages": [
+        686,
+        687
+      ],
+      "addition": "Dimensionless microstate count, Boltzmann-constant units and entropy difference kB ln(Omega2/Omega1)."
+    }
+  ],
+  "items": 15,
+  "originalItemsRetained": 10,
+  "originalImagesChanged": 0,
+  "notesOrExercisesChanged": 0,
+  "sourceModuleSHA256": "9de79806c939a69e1a633b8e849237cd67732408c446bbe43dabab1fbcd83ee4",
+  "numericalVerification": {
+    "status": "passed",
+    "checks": 16,
+    "scope": "Source-specific entropy examples20.5/20.6/20.8/20.9/20.10/20.11 and mathematical model identities. No whole-chapter exercise approval or empirical-law proof inferred.",
+    "results": [
+      {
+        "name": "PDF681 example20.6 integral agrees with logarithm",
+        "value": 1307.7267564826059
+      },
+      {
+        "name": "PDF681 rounded entropy1.31e3J/K",
+        "value": 1307.7267564826059
+      },
+      {
+        "name": "PDF680 example20.5 melting entropy1.22e3J/K",
+        "value": 1223.4432234432234
+      },
+      {
+        "name": "Reversing the isothermal phase change reverses entropy",
+        "value": null
+      },
+      {
+        "name": "Using Q/Tfinal for heating gives a different result",
+        "value": null
+      },
+      {
+        "name": "Reversible ideal-gas adiabatic entropy terms cancel",
+        "value": 0.0
+      },
+      {
+        "name": "PDF682 example20.8 free-expansion entropy5.76J/K",
+        "value": 5.762825659175385
+      },
+      {
+        "name": "Free expansion is adiabatic but not isentropic",
+        "value": null
+      },
+      {
+        "name": "PDF682 example20.9 hot isothermal contribution",
+        "value": null
+      },
+      {
+        "name": "PDF682 example20.9 cold isothermal contribution",
+        "value": null
+      },
+      {
+        "name": "Carnot cycle entropy of working substance returns to zero",
+        "value": null
+      },
+      {
+        "name": "Carnot engine and reservoir entropy sums both vanish",
+        "value": null
+      },
+      {
+        "name": "PDF684 example20.10 irreversible mixture entropy rounds102J/K",
+        "value": 101.62606847329357
+      },
+      {
+        "name": "Every1K exchange step towards equilibrium increases total entropy",
+        "value": null
+      },
+      {
+        "name": "PDF687 microscopic doubling agrees with thermodynamic result",
+        "value": null
+      },
+      {
+        "name": "Entropy changes telescope around a closed state cycle",
+        "value": 1.0231815394945443e-12
+      }
+    ]
+  },
+  "rendering": {
+    "status": "passed-scoped-render",
+    "scope": "Production MathText and formulaRows markup injected into actual public chapter20 Cheatsheet layout/CSS. Full assembled cloud integration and exact deployed version remain separate.",
+    "cases": [
+      {
+        "id": "cheatsheet20",
+        "width": 320,
+        "issues": [],
+        "formulas": 41
+      },
+      {
+        "id": "cheatsheet20",
+        "width": 360,
+        "issues": [],
+        "formulas": 41
+      },
+      {
+        "id": "cheatsheet20",
+        "width": 375,
+        "issues": [],
+        "formulas": 41
+      },
+      {
+        "id": "cheatsheet20",
+        "width": 768,
+        "issues": [],
+        "formulas": 41
+      },
+      {
+        "id": "cheatsheet20",
+        "width": 1440,
+        "issues": [],
+        "formulas": 41
+      }
+    ],
+    "files": [
+      {
+        "file": "docs/.vitepress/physics1-priority-course.mjs",
+        "sha256": "9de79806c939a69e1a633b8e849237cd67732408c446bbe43dabab1fbcd83ee4"
+      }
+    ],
+    "cheatsheetItems": 15
+  },
+  "remaining": "Exact fully assembled GitHub pipeline, deployed acceptance, and seven related Wiki technical definitions not accepted by this scoped addition report.",
+  "privateRevision": "ebe7468f301ef926d324776341f243a1dd90a0ab",
+  "evidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter20-and-images-followup.tar.gz",
+  "evidenceArchiveSHA256": "c4f314b2579967f91dfd07e7f62b67d53aa6df1bff5fabd999a970ac7297d513"
+}
