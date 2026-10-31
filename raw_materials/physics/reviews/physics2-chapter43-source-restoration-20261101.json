@@ -1,0 +1,498 @@
+{
+  "status": "source-restoration-and-independent-acceptance-complete-scoped-private-published-public-pin-ready",
+  "chapter": 43,
+  "scope": "Sections43.3–43.8: Six sourcefiles,11initialconfirmedcorrections+30restoration/qualificationblocks and onecaptionsemanticfix. Retained43.1–43.2acceptance separate; wholechapterfigure/endexercise/CSWiki/publicgates not inferred.",
+  "independentSourceUnits": 86,
+  "files": [
+    {
+      "file": "raw_materials/physics/translations/chapter-43/03-on-dinh-va-phong-xa.md",
+      "sha256": "8795c28af25bc7d5b90076005dc5edcfa2b39e46d561376c9072eedefae211cc",
+      "sourceBytes": 29567,
+      "paragraphs": 74,
+      "unchangedWholeParagraphsRetainedInOrder": 53
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md",
+      "sha256": "71b3f12ddf5b4f705fff17aeea05cb3c65aa9ff00fc6683c6d9625ab64375f9e",
+      "sourceBytes": 22603,
+      "paragraphs": 135,
+      "unchangedWholeParagraphsRetainedInOrder": 135
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/05-tac-dung-sinh-hoc.md",
+      "sha256": "950751aab2253a00caf0db73da27f06429c116bdc1e0118d8e8ac5203bdd8399",
+      "sourceBytes": 21190,
+      "paragraphs": 89,
+      "unchangedWholeParagraphsRetainedInOrder": 82
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/06-phan-ung-hat-nhan.md",
+      "sha256": "833533d9cf16eaac566688472f2d3e8886bed0976941e072b1e5e45e535618bb",
+      "sourceBytes": 16610,
+      "paragraphs": 94,
+      "unchangedWholeParagraphsRetainedInOrder": 93
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/07-phan-hach.md",
+      "sha256": "f6140144498cece00c2a1ad8ae11e1e60df33fe0540079df7c6e3c9878a4bf49",
+      "sourceBytes": 23497,
+      "paragraphs": 87,
+      "unchangedWholeParagraphsRetainedInOrder": 78
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-43/08-nhiet-hach.md",
+      "sha256": "44fa96a17f7112c8c55ec040b960effb1c8e1de3becc0d8859ba83b8f9d2a7ff",
+      "sourceBytes": 16177,
+      "paragraphs": 83,
+      "unchangedWholeParagraphsRetainedInOrder": 79
+    }
+  ],
+  "sourceUnitsAllHaveDestinationOrGuard": true,
+  "originalWorkedExamplesRetained": 9,
+  "selfcheckQuestionsAndChoicesRetained": 6,
+  "originalImageReferencesRetained": 17,
+  "originalImageFilesChanged": 0,
+  "originalEquationTagsRetained": 12,
+  "primaryCorrections": [
+    "Tc99mreferencegamma-line143to140.511keV; nuclearlevelenergy not equated to one directgamma.",
+    "K40correct1.248e9year-totalhalf-life/10.72percentbranch retained, not reverted to source2.4e8year typo.",
+    "A96actualdiagramlabel used with observed/longlived qualification, not sourceA94texttypo.",
+    "1953earlyneutrinoexperiment distinguishedfrom1956confirmation.",
+    "NIF2022targetgain distinguishedfromwholefacilityenergy accounting.",
+    "Chernobyl reactorreactivity/test description distinguishedfrom residualdecayheat."
+  ],
+  "numericalEvidence": [
+    {
+      "checks": 45,
+      "kind": "Re-executed prior source-specific verifier, copied into thisQA to avoidwritingoutsideownedfolder.",
+      "file": "prior_source_numbers.py",
+      "scope": "Actual source example43.5–43.13 givens, six TYU/model conservation checks and source numeric comparisons. Qualitative source/figure/caption completeness is reviewed separately. No current medical/regulatory recommendation."
+    },
+    {
+      "checks": 30,
+      "kind": "New independent bookkeeping/model/arithmetic predicates.",
+      "file": "verify_restored_models.py",
+      "scope": "Restored meanlife, isobaricchain, electronmass bookkeeping, neutron/thermal models, dated targetgain, and illustration arithmetic. None is an independent measurement of nuclear constants or proof of source/figure completeness."
+    },
+    {
+      "checks": 21,
+      "scope": "Neutral-atom bookkeeping uses arbitrary algebraic model inputs, not new nuclide data. Other checks use actual source/primary numbers or explicitly illustrative pulse duration. This is not a wholechapter clinical/safety/semantic approval.",
+      "kind": "Parentadditionalchecks, overlappingmodelsnotindependentmeasurements."
+    }
+  ],
+  "numericalCountsAreNotUniqueExercises": true,
+  "focusedRender": {
+    "status": "passed-current-scoped-render",
+    "scope": "Current proposed source with production Markdown/math/figure/responsive-table rules injected into actual public topic layout and CSS. Glossary term autolinking omitted. Responsive table header/row-label duplicates may hide only when an equivalent visible formula remains; total formula count and text must persist. Full cloud integration and exact deployed pages require separate acceptance.",
+    "files": [
+      {
+        "name": "04-hoat-do-va-chu-ky-ban-ra.md",
+        "sha256": "71b3f12ddf5b4f705fff17aeea05cb3c65aa9ff00fc6683c6d9625ab64375f9e",
+        "formulas": 213
+      },
+      {
+        "name": "05-tac-dung-sinh-hoc.md",
+        "sha256": "950751aab2253a00caf0db73da27f06429c116bdc1e0118d8e8ac5203bdd8399",
+        "formulas": 91
+      },
+      {
+        "name": "06-phan-ung-hat-nhan.md",
+        "sha256": "833533d9cf16eaac566688472f2d3e8886bed0976941e072b1e5e45e535618bb",
+        "formulas": 99
+      },
+      {
+        "name": "07-phan-hach.md",
+        "sha256": "f6140144498cece00c2a1ad8ae11e1e60df33fe0540079df7c6e3c9878a4bf49",
+        "formulas": 128
+      },
+      {
+        "name": "08-nhiet-hach.md",
+        "sha256": "44fa96a17f7112c8c55ec040b960effb1c8e1de3becc0d8859ba83b8f9d2a7ff",
+        "formulas": 75
+      },
+      {
+        "name": "03-on-dinh-va-phong-xa.md",
+        "sha256": "8795c28af25bc7d5b90076005dc5edcfa2b39e46d561376c9072eedefae211cc",
+        "formulas": 237
+      }
+    ],
+    "cases": [
+      {
+        "name": "04-hoat-do-va-chu-ky-ban-ra.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 213,
+        "totalFormulas": 213,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "04-hoat-do-va-chu-ky-ban-ra.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 213,
+        "totalFormulas": 213,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "04-hoat-do-va-chu-ky-ban-ra.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 213,
+        "totalFormulas": 213,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "04-hoat-do-va-chu-ky-ban-ra.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 213,
+        "totalFormulas": 213,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "04-hoat-do-va-chu-ky-ban-ra.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 213,
+        "totalFormulas": 213,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "05-tac-dung-sinh-hoc.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 91,
+        "totalFormulas": 91,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "05-tac-dung-sinh-hoc.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 91,
+        "totalFormulas": 91,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "05-tac-dung-sinh-hoc.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 91,
+        "totalFormulas": 91,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "05-tac-dung-sinh-hoc.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 91,
+        "totalFormulas": 91,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "05-tac-dung-sinh-hoc.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 91,
+        "totalFormulas": 91,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "06-phan-ung-hat-nhan.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 99,
+        "totalFormulas": 99,
+        "images": 0,
+        "captions": 0
+      },
+      {
+        "name": "06-phan-ung-hat-nhan.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 99,
+        "totalFormulas": 99,
+        "images": 0,
+        "captions": 0
+      },
+      {
+        "name": "06-phan-ung-hat-nhan.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 99,
+        "totalFormulas": 99,
+        "images": 0,
+        "captions": 0
+      },
+      {
+        "name": "06-phan-ung-hat-nhan.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 99,
+        "totalFormulas": 99,
+        "images": 0,
+        "captions": 0
+      },
+      {
+        "name": "06-phan-ung-hat-nhan.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 99,
+        "totalFormulas": 99,
+        "images": 0,
+        "captions": 0
+      },
+      {
+        "name": "07-phan-hach.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 128,
+        "totalFormulas": 128,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "07-phan-hach.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 128,
+        "totalFormulas": 128,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "07-phan-hach.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 128,
+        "totalFormulas": 128,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "07-phan-hach.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 128,
+        "totalFormulas": 128,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "07-phan-hach.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 128,
+        "totalFormulas": 128,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "08-nhiet-hach.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 75,
+        "totalFormulas": 75,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "08-nhiet-hach.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 75,
+        "totalFormulas": 75,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "08-nhiet-hach.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 75,
+        "totalFormulas": 75,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "08-nhiet-hach.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 75,
+        "totalFormulas": 75,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "08-nhiet-hach.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 75,
+        "totalFormulas": 75,
+        "images": 3,
+        "captions": 3
+      },
+      {
+        "name": "03-on-dinh-va-phong-xa.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 237,
+        "totalFormulas": 237,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "03-on-dinh-va-phong-xa.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 237,
+        "totalFormulas": 237,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "03-on-dinh-va-phong-xa.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 237,
+        "totalFormulas": 237,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "03-on-dinh-va-phong-xa.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 237,
+        "totalFormulas": 237,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "03-on-dinh-va-phong-xa.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 237,
+        "totalFormulas": 237,
+        "images": 4,
+        "captions": 4
+      }
+    ],
+    "distinctCurrentCases": 30,
+    "replacementSubsetCases": 5,
+    "originalImageFilesChanged": 0,
+    "sources": [
+      {
+        "file": "render-results.json",
+        "sha256": "23586ae687b5a0dd9d9ad1b204d4f9ba3cd382176883bc9c21f0994345cfb6cc"
+      },
+      {
+        "file": "render-results-on-dinh-va-phong-xa.json",
+        "sha256": "c3e3a3e13ab6d7a24e02a2f38a64ac3fe9b0bd2ecf290ce182892427bc6bf34c"
+      }
+    ],
+    "limits": "Focusedinjectedsource/CSSmathfigurecheckonly. Actualpublishedversion and originalframe/labelsemanticacceptance remain separate."
+  },
+  "skillTests": 39,
+  "languageHeuristics": "21advisoryfindings retained; sourceMCQromanlabels/semicolonlists and some quantifiedphysicalphrases are not blanketprosefailures. No new wholecourse languageclean claim.",
+  "sourceReview": {
+    "status": "accepted-exact30restorationblocks-and11confirmed-source-corrections",
+    "primaryChecks": [
+      {
+        "topic": "Tc99m gamma",
+        "url": "https://www.nndc.bnl.gov/nudat3/getdecaydataset.jsp?dsid=99tc+it+decay+(6.0072+h)&nucleus=99TC",
+        "facts": "Directdataset140.511keV gamma;isomer142.6836keV/6.0072h and2.17keVinitialtransition."
+      },
+      {
+        "topic": "K40",
+        "url": "https://www.nndc.bnl.gov/ensnds/40/Ar/ec_decay_1.248e%2B9_y.pdf",
+        "facts": "Directevaluateddataset gives total1.248e9years andEC+beta+10.72percent, not2.4e8years."
+      },
+      {
+        "topic": "96Zr",
+        "url": "https://www.nndc.bnl.gov/ensnds/96/Zr/adopted.pdf",
+        "facts": "Directevaluatedleveldata documentsdoublebeta-decaymeasurement; observedstabilitynotinfinite."
+      },
+      {
+        "topic": "1953/1956",
+        "urls": [
+          "https://journals.aps.org/pr/abstract/10.1103/PhysRev.92.830",
+          "https://neutrinos.fnal.gov/faq/how-were-neutrinos-discovered/"
+        ],
+        "facts": "DirectAPSmetadata records1953paper, Fermilab assigns experimentaldiscoveryto1956; preservefirststeps/confirmationdistinction."
+      },
+      {
+        "topic": "2022NIF",
+        "url": "https://lmf.llnl.gov/science/achieving-fusion-ignition",
+        "facts": "DirectLLNLpage3.15MJ/2.05MJ targetenergies datedDec5,2022. No facilitynetgain inferred."
+      }
+    ],
+    "notAcceptedByIndependentTask": [
+      "Wholechapterorwhole44chaptercompletion",
+      "FulloriginalcropframeoractualEnglishlabelregistrysemanticcoverage",
+      "End-of-chapterexerciseanswers",
+      "Cheatsheet/Wiki",
+      "BrowserlayoutorMathJaxrendering",
+      "FullyassembledCI/globalmath",
+      "GitHubpush/deployment/publicwebsite"
+    ]
+  },
+  "primaryReferences": {
+    "neutrinoConfirmation": "https://neutrinos.fnal.gov/faq/how-were-neutrinos-discovered/",
+    "rareStableChartNuclide": "https://www.nndc.bnl.gov/ensnds/96/Zr/adopted.pdf",
+    "potassium40ExistingCorrectValuesRetained": "https://www.nndc.bnl.gov/ensdf/getadopted.jsp?nuc=40K",
+    "technetiumGammaLine": "https://www.nndc.bnl.gov/ensnds/99/Tc/adopted.pdf",
+    "chernobylMechanism": "https://www-pub.iaea.org/mtcd/publications/pdf/pub913e_web.pdf",
+    "targetVersusFacilityGain": "https://doi.org/10.1103/PhysRevLett.132.065102",
+    "NIF2022EnergyValues": "https://lmf.llnl.gov/science/achieving-fusion-ignition"
+  },
+  "indexAnchorProofCount": 9,
+  "remaining": "Full GitHub build/deploy and actual public-page verification for this revision remain pending. This report does not accept the remaining whole-course image, support-material, or exercise semantic gates.",
+  "privatePublication": {
+    "revision": "49c804b98f5f8376b809a14543f1163b21482fee",
+    "parentRevision": "1936a82183bea4fb5eba0b402af6207cb32efe9f",
+    "sourceFiles": [
+      "raw_materials/physics/translations/chapter-43/03-on-dinh-va-phong-xa.md",
+      "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md",
+      "raw_materials/physics/translations/chapter-43/05-tac-dung-sinh-hoc.md",
+      "raw_materials/physics/translations/chapter-43/06-phan-ung-hat-nhan.md",
+      "raw_materials/physics/translations/chapter-43/07-phan-hach.md",
+      "raw_materials/physics/translations/chapter-43/08-nhiet-hach.md",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/on-dinh-va-phong-xa.md",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/hoat-do-va-chu-ky-ban-ra.md",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/tac-dung-sinh-hoc.md",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/phan-hach.md",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/nhiet-hach.md",
+      "src/content/courses/vat-ly-2/lectures/23-vat-ly-hat-nhan/content.json"
+    ],
+    "sourceHashes": {
+      "raw_materials/physics/translations/chapter-43/03-on-dinh-va-phong-xa.md": "8795c28af25bc7d5b90076005dc5edcfa2b39e46d561376c9072eedefae211cc",
+      "raw_materials/physics/translations/chapter-43/04-hoat-do-va-chu-ky-ban-ra.md": "71b3f12ddf5b4f705fff17aeea05cb3c65aa9ff00fc6683c6d9625ab64375f9e",
+      "raw_materials/physics/translations/chapter-43/05-tac-dung-sinh-hoc.md": "950751aab2253a00caf0db73da27f06429c116bdc1e0118d8e8ac5203bdd8399",
+      "raw_materials/physics/translations/chapter-43/06-phan-ung-hat-nhan.md": "833533d9cf16eaac566688472f2d3e8886bed0976941e072b1e5e45e535618bb",
+      "raw_materials/physics/translations/chapter-43/07-phan-hach.md": "f6140144498cece00c2a1ad8ae11e1e60df33fe0540079df7c6e3c9878a4bf49",
+      "raw_materials/physics/translations/chapter-43/08-nhiet-hach.md": "44fa96a17f7112c8c55ec040b960effb1c8e1de3becc0d8859ba83b8f9d2a7ff",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/on-dinh-va-phong-xa.md": "27a30faba62bc54c108f0760a7b0ea84c1a15e21bdd141623e8f5e1315486515",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/hoat-do-va-chu-ky-ban-ra.md": "90dc7b9931d25b12292cda4d248d94d9af2222cae3f2a2b7e273d2e55ec00812",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/tac-dung-sinh-hoc.md": "078659258209988605a48c434064513da05b33ba2c00c05d3dfc3e292f40dace",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/phan-hach.md": "215ca1ae5a196169fb333617a82641205adef47b1cafc1654629af1284bbe68c",
+      "docs/vat-ly-2/bai-giang/23-vat-ly-hat-nhan/nhiet-hach.md": "93e88abfd6f649c13d667aa45fa8cf1885a7c3a4b8379ffa8a2d8f12e72fe51e",
+      "src/content/courses/vat-ly-2/lectures/23-vat-ly-hat-nhan/content.json": "12ea5eee9bde13fdae38c01cdb22c2cab0d1c004893c1d79819fab7ee0b84985"
+    },
+    "evidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/chapter43-restoration-20261101.tar.gz",
+    "evidenceArchiveSHA256": "635aaa92f89a8adf96e3fed6f057c040372638ea63a9da35e9a47ca2708421a7",
+    "archiveBytes": 3482166,
+    "evidenceFiles": 149,
+    "publicPinAndCloudAcceptance": "pending"
+  }
+}
