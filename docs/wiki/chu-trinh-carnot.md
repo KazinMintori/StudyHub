@@ -13,13 +13,19 @@ Chu trình thuận nghịch gồm hai quá trình đẳng nhiệt và hai quá t
 
 ## Giải thích kỹ thuật
 
-Với hai nguồn ở nhiệt độ tuyệt đối Th và Tc, hiệu suất thuận nghịch:
+Hai nguồn nhiệt có nhiệt độ tuyệt đối $T_h>T_c>0$, đo bằng kelvin. Chu trình Carnot gồm hai quá trình đẳng nhiệt và hai quá trình đoạn nhiệt, tất cả đều thuận nghịch. Hiệu suất của động cơ Carnot là:
 
 $$
 e_C=1-T_c/T_h.
 $$
 
-Nhiệt độ phải tính bằng kelvin. Giới hạn không chỉ phụ thuộc môi chất hay hình dạng chu trình trên đồ thị. Tính thuận nghịch là điều kiện quyết định để đạt dấu bằng.
+Hiệu suất này chỉ phụ thuộc nhiệt độ hai nguồn, không phụ thuộc môi chất. Với mọi động cơ chỉ trao đổi nhiệt với cùng hai nguồn ấy, nguyên lý thứ hai cho giới hạn:
+
+$$
+e\le e_C.
+$$
+
+Dấu bằng đạt được khi chu trình thuận nghịch. Không được thay trực tiếp nhiệt độ Celsius vào tỉ số nhiệt độ. Khi đảo chiều chu trình Carnot, thiết bị trở thành máy lạnh thuận nghịch giữa chính hai nguồn đó.
 
 ## Ví dụ
 

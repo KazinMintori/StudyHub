@@ -1,0 +1,384 @@
+{
+  "status": "source-published-and-focused-render-passed-pending-exact-cloud-and-deployed-acceptance",
+  "scope": "All seven listed chapter20 Wiki concept pages read against relevant source sections, with three technical-section corrections. This is supporting-concept acceptance, not whole20chapter or whole44chapter approval.",
+  "sourceEdition": 15,
+  "sourceUnits": [
+    {
+      "id": "dong-co-nhiet",
+      "pages": [
+        664,
+        665,
+        671
+      ],
+      "disposition": "Cyclic working substance, positive magnitudes of heat, work balance, sole-result Kelvin–Planck qualifier, and noncyclic distinction are present. Retained."
+    },
+    {
+      "id": "hieu-suat-nhiet",
+      "pages": [
+        665
+      ],
+      "disposition": "Efficiency definition, two-reservoir balance and signed-versus-magnitude distinction correct. Retained."
+    },
+    {
+      "id": "he-so-lam-lanh",
+      "pages": [
+        669,
+        670,
+        671,
+        677
+      ],
+      "disposition": "Replaced unformatted shorthand with explicit positive magnitudes, balance, K and Kh, Kh=K+1, units and useful-output distinction."
+    },
+    {
+      "id": "chu-trinh-carnot",
+      "pages": [
+        673,
+        675,
+        677,
+        678
+      ],
+      "disposition": "Corrected misleading dependence-on-working-substance sentence. Restored only temperature dependence, Kelvin domain, same-two-reservoir limit and reversible equality condition."
+    },
+    {
+      "id": "entropy-nhiet-dong",
+      "pages": [
+        680,
+        681,
+        682,
+        683,
+        684,
+        685,
+        686,
+        687
+      ],
+      "disposition": "Expanded differential/integral definition, reversible reference path, J/K, state versus environment/cycle distinction, statistical domains and bibliography. Review answer changed only for natural Vietnamese, matching Notebook."
+    },
+    {
+      "id": "qua-trinh-thuan-nghich",
+      "pages": [
+        673,
+        678,
+        684
+      ],
+      "disposition": "Both system and surroundings return, no entropy generation and quasistatic-versus-reversible distinction correct. Retained."
+    },
+    {
+      "id": "so-trang-thai-vi-mo",
+      "pages": [
+        686,
+        687,
+        688
+      ],
+      "disposition": "Constrained equiprobable microstates, independent multiplicities, additive entropy and probabilistic/accessibility qualifications present. Retained."
+    }
+  ],
+  "changedTechnicalBodies": 3,
+  "privateNotebookFallbackBodies": 2,
+  "publicNotebookFallbackBodies": 1,
+  "publicConceptReviewAnswerLanguageOnly": 1,
+  "files": [
+    {
+      "file": "docs/wiki/dong-co-nhiet.md",
+      "sha256": "1bf1504aafd4075547ef871b022142207f2a13b1b810061520fa492f906c7c0c"
+    },
+    {
+      "file": "docs/wiki/hieu-suat-nhiet.md",
+      "sha256": "0748a5fc05d669174868107b3f204ae65cca9743c70c17e1c3058127ae6a8489"
+    },
+    {
+      "file": "docs/wiki/he-so-lam-lanh.md",
+      "sha256": "913c56496ef9d53b59b8ac5ef0fd2faa9cc81d564fa9e8a1db803ca8b3680210"
+    },
+    {
+      "file": "docs/wiki/chu-trinh-carnot.md",
+      "sha256": "e46325405757e27fb8479231f63d96852ea165aed800c442b6ba9a62c7d55cd9"
+    },
+    {
+      "file": "docs/wiki/entropy-nhiet-dong.md",
+      "sha256": "1fe14e40576989c7a75fef4c1c7104c1dfb2f12438ccc49ce90ad7903daa68e3"
+    },
+    {
+      "file": "docs/wiki/qua-trinh-thuan-nghich.md",
+      "sha256": "9c45b31aca2d9f681bf7af945c82253f426058b0142fca0d414ab93179934706"
+    },
+    {
+      "file": "docs/wiki/so-trang-thai-vi-mo.md",
+      "sha256": "de69214ba68091427b8f2d8f6d9f3e1287156222bf9d6704a053cee8ec9a02ab"
+    }
+  ],
+  "sourceBoundary": "Source text/figures are data; no instructions in the PDF executed. Existing examples/questions/answers/links retained except explicitly recorded entropy answer wording and added bibliography.",
+  "numericChecks": 16,
+  "numericScope": "Actual Carnot example givens, refrigerator/heat-pump bookkeeping and entropy model identities. Numerical checks do not independently prove the empirical second law or all Wiki statements.",
+  "renderCases": 35,
+  "renderReport": {
+    "status": "passed-scoped-render",
+    "scope": "Seven current Wiki pages with production Markdown/math rules and actual public Wiki CSS/layout. Glossary autolinks and WikiUsage component omitted from injected markup; full cloud integration and exact deployed acceptance separate.",
+    "files": [
+      {
+        "file": "docs/wiki/dong-co-nhiet.md",
+        "sha256": "1bf1504aafd4075547ef871b022142207f2a13b1b810061520fa492f906c7c0c"
+      },
+      {
+        "file": "docs/wiki/hieu-suat-nhiet.md",
+        "sha256": "0748a5fc05d669174868107b3f204ae65cca9743c70c17e1c3058127ae6a8489"
+      },
+      {
+        "file": "docs/wiki/he-so-lam-lanh.md",
+        "sha256": "913c56496ef9d53b59b8ac5ef0fd2faa9cc81d564fa9e8a1db803ca8b3680210"
+      },
+      {
+        "file": "docs/wiki/chu-trinh-carnot.md",
+        "sha256": "e46325405757e27fb8479231f63d96852ea165aed800c442b6ba9a62c7d55cd9"
+      },
+      {
+        "file": "docs/wiki/entropy-nhiet-dong.md",
+        "sha256": "1fe14e40576989c7a75fef4c1c7104c1dfb2f12438ccc49ce90ad7903daa68e3"
+      },
+      {
+        "file": "docs/wiki/qua-trinh-thuan-nghich.md",
+        "sha256": "9c45b31aca2d9f681bf7af945c82253f426058b0142fca0d414ab93179934706"
+      },
+      {
+        "file": "docs/wiki/so-trang-thai-vi-mo.md",
+        "sha256": "de69214ba68091427b8f2d8f6d9f3e1287156222bf9d6704a053cee8ec9a02ab"
+      }
+    ],
+    "cases": [
+      {
+        "id": "dong-co-nhiet",
+        "width": 320,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "dong-co-nhiet",
+        "width": 360,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "dong-co-nhiet",
+        "width": 375,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "dong-co-nhiet",
+        "width": 768,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "dong-co-nhiet",
+        "width": 1440,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "hieu-suat-nhiet",
+        "width": 320,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "hieu-suat-nhiet",
+        "width": 360,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "hieu-suat-nhiet",
+        "width": 375,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "hieu-suat-nhiet",
+        "width": 768,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "hieu-suat-nhiet",
+        "width": 1440,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "he-so-lam-lanh",
+        "width": 320,
+        "formulas": 6,
+        "issues": []
+      },
+      {
+        "id": "he-so-lam-lanh",
+        "width": 360,
+        "formulas": 6,
+        "issues": []
+      },
+      {
+        "id": "he-so-lam-lanh",
+        "width": 375,
+        "formulas": 6,
+        "issues": []
+      },
+      {
+        "id": "he-so-lam-lanh",
+        "width": 768,
+        "formulas": 6,
+        "issues": []
+      },
+      {
+        "id": "he-so-lam-lanh",
+        "width": 1440,
+        "formulas": 6,
+        "issues": []
+      },
+      {
+        "id": "chu-trinh-carnot",
+        "width": 320,
+        "formulas": 3,
+        "issues": []
+      },
+      {
+        "id": "chu-trinh-carnot",
+        "width": 360,
+        "formulas": 3,
+        "issues": []
+      },
+      {
+        "id": "chu-trinh-carnot",
+        "width": 375,
+        "formulas": 3,
+        "issues": []
+      },
+      {
+        "id": "chu-trinh-carnot",
+        "width": 768,
+        "formulas": 3,
+        "issues": []
+      },
+      {
+        "id": "chu-trinh-carnot",
+        "width": 1440,
+        "formulas": 3,
+        "issues": []
+      },
+      {
+        "id": "entropy-nhiet-dong",
+        "width": 320,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "entropy-nhiet-dong",
+        "width": 360,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "entropy-nhiet-dong",
+        "width": 375,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "entropy-nhiet-dong",
+        "width": 768,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "entropy-nhiet-dong",
+        "width": 1440,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "qua-trinh-thuan-nghich",
+        "width": 320,
+        "formulas": 0,
+        "issues": []
+      },
+      {
+        "id": "qua-trinh-thuan-nghich",
+        "width": 360,
+        "formulas": 0,
+        "issues": []
+      },
+      {
+        "id": "qua-trinh-thuan-nghich",
+        "width": 375,
+        "formulas": 0,
+        "issues": []
+      },
+      {
+        "id": "qua-trinh-thuan-nghich",
+        "width": 768,
+        "formulas": 0,
+        "issues": []
+      },
+      {
+        "id": "qua-trinh-thuan-nghich",
+        "width": 1440,
+        "formulas": 0,
+        "issues": []
+      },
+      {
+        "id": "so-trang-thai-vi-mo",
+        "width": 320,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "so-trang-thai-vi-mo",
+        "width": 360,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "so-trang-thai-vi-mo",
+        "width": 375,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "so-trang-thai-vi-mo",
+        "width": 768,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "so-trang-thai-vi-mo",
+        "width": 1440,
+        "formulas": 1,
+        "issues": []
+      }
+    ]
+  },
+  "previousPublishedChapter20Acceptance": {
+    "main": "a0fcdd927e5fdafb09179bc3a73a02ece5428be8",
+    "ciRun": 41183468076,
+    "build": "success",
+    "deploy": "success",
+    "actualPublicPages": 2,
+    "actualPublicCases": 10,
+    "issues": 0,
+    "scope": "Actual deployed second-law topic and chapter20 Cheatsheet; source-specific restored text, visible math/images and layout at five widths. No injected content and no whole-course semantic claim."
+  },
+  "evidenceRecovery": {
+    "oldPublicCheckoutDisappearedBeforeReadback": true,
+    "committedChangesRetained": true,
+    "privateArchivedQARecoveredByChecksum": true,
+    "unpublishedThreeWikiEditsReconstructedAndRerendered": true,
+    "agySecondCallState": "unknown-job-not-found",
+    "agyRestarted": false
+  },
+  "remaining": "Exact GitHub full assembled build/math and actual deployed changed Wiki/Notebook acceptance for this new batch remain pending. Whole-course remaining content/figures/support and final cleanup still open.",
+  "privateRevision": "f71a29277f13ad0181b40952431c60fee9f92cb8",
+  "privateFallbackSHA256": "d1f9ec400b47e78b62fc86032e82444af938ebbeb2ad3ce539cf648cfede383c",
+  "evidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter20-wiki-and-deployed.tar.gz",
+  "evidenceArchiveSHA256": "95ab622bfbe455cf03425b905b4182347094b3255f947297b80ba6aa82bfa1c9",
+  "preservedEvidenceFiles": 60,
+  "skillTests": 39
+}
