@@ -1,0 +1,575 @@
+{
+  "privateEvidenceRevision": "d805e1a00ba74fa210d5ab4802330481e497e99d",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/chapter22-23-images-and-reference-continuity-20261101.tar.gz",
+  "privateEvidenceArchiveSHA256": "348e54d58c1aff82f14a3f3c8526036300f3f40ff86bafd4f87a7c22af909656",
+  "wholeGoalComplete": false,
+  "status": "passed-actual-deployed-scope",
+  "sourceMain": "ad051728d288adf7319de40883837180d620930e",
+  "scope": "60 actual deployed cases on12pages, no content injection: Chapter2 Notes/Cheatsheet,4thermal Wiki,Chapter18 Cheatsheet,5earlyChapter44topics. This predates current22/23image and43source revisions, which remain separate cloud/public gates.",
+  "results": [
+    {
+      "status": "passed-deployed-scope",
+      "sourceMain": "ad051728d288adf7319de40883837180d620930e",
+      "privateP1": "ec53e79d1e8b4b2a9720aaf0cc9bb6c1edc4d1e3",
+      "privateP2": "1936a82183bea4fb5eba0b402af6207cb32efe9f",
+      "scope": "Actual deployed chapter2 Notes with opened examples/selfchecks and Cheatsheet; original37 theory images/captions; source-specific restored text, visible math/images and layout at five widths. No injected content and no whole-course semantic claim.",
+      "pages": [
+        {
+          "id": "notes2",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-1/bai-giang/02-chuyen-dong-thang.html#notes",
+          "formulas": 279,
+          "images": 37,
+          "items": 0,
+          "sourceMarkers": [
+            "Phần Notes trình bày sáu mục lý thuyết",
+            "Vận tốc tức thời"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "cheatsheet2",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-1/bai-giang/02-chuyen-dong-thang.html#cheatsheet",
+          "formulas": 121,
+          "images": 0,
+          "items": 11,
+          "sourceMarkers": [
+            "Độ giật",
+            "Hai vật gặp nhau",
+            "Đọc đồ thị"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        }
+      ],
+      "cases": [
+        {
+          "id": "notes2",
+          "width": 320,
+          "formulas": 279,
+          "issues": []
+        },
+        {
+          "id": "notes2",
+          "width": 360,
+          "formulas": 279,
+          "issues": []
+        },
+        {
+          "id": "notes2",
+          "width": 375,
+          "formulas": 279,
+          "issues": []
+        },
+        {
+          "id": "notes2",
+          "width": 768,
+          "formulas": 279,
+          "issues": []
+        },
+        {
+          "id": "notes2",
+          "width": 1440,
+          "formulas": 279,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet2",
+          "width": 320,
+          "formulas": 121,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet2",
+          "width": 360,
+          "formulas": 121,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet2",
+          "width": 375,
+          "formulas": 121,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet2",
+          "width": 768,
+          "formulas": 121,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet2",
+          "width": 1440,
+          "formulas": 121,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "status": "passed-deployed-scope",
+      "sourceMain": "ad051728d288adf7319de40883837180d620930e",
+      "privateP1": "ec53e79d1e8b4b2a9720aaf0cc9bb6c1edc4d1e3",
+      "privateP2": "1936a82183bea4fb5eba0b402af6207cb32efe9f",
+      "scope": "Actual deployed four kinetic-theory Wiki pages, chapter18 Cheatsheet and five early chapter44 topics; source-specific restored text, visible math/images and layout at five widths. No injected content and no whole-course semantic claim.",
+      "pages": [
+        {
+          "id": "khi-ly-tuong",
+          "url": "https://kazinmintori.github.io/StudyHub/wiki/khi-ly-tuong.html",
+          "formulas": 12,
+          "images": 0,
+          "items": 0,
+          "sourceMarkers": [
+            "hai trạng thái cân bằng",
+            "thành phần không đổi"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "url": "https://kazinmintori.github.io/StudyHub/wiki/nhiet-do-tuyet-doi.html",
+          "formulas": 2,
+          "images": 0,
+          "items": 0,
+          "sourceMarkers": [
+            "Nguyên lý không",
+            "không kèm ký hiệu độ"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "url": "https://kazinmintori.github.io/StudyHub/wiki/phan-bo-maxwell.html",
+          "formulas": 25,
+          "images": 0,
+          "items": 0,
+          "sourceMarkers": [
+            "không phải xác suất",
+            "Phân bố được chuẩn hóa"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "url": "https://kazinmintori.github.io/StudyHub/wiki/phuong-trinh-van-der-waals.html",
+          "formulas": 14,
+          "images": 0,
+          "items": 0,
+          "sourceMarkers": [
+            "mô hình hiệu dụng",
+            "không phải mô tả chính xác mọi pha"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "cheatsheet18",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-1/bai-giang/18-thuyet-dong-hoc-chat-khi.html#cheatsheet",
+          "formulas": 60,
+          "images": 0,
+          "items": 8,
+          "sourceMarkers": [
+            "Hai trạng thái của cùng lượng khí",
+            "Chuẩn hóa",
+            "Số phân tử"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "lich-su-hat-co-ban",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru/lich-su-hat-co-ban.html",
+          "formulas": 88,
+          "images": 6,
+          "items": 0,
+          "sourceMarkers": [
+            "Pion trung hòa được nhận diện",
+            "1950"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "may-gia-toc-va-detector",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru/may-gia-toc-va-detector.html",
+          "formulas": 141,
+          "images": 4,
+          "items": 0,
+          "sourceMarkers": [
+            "cấu hình thiết kế này, mỗi chùm",
+            "2808"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "hat-va-tuong-tac",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru/hat-va-tuong-tac.html",
+          "formulas": 459,
+          "images": 1,
+          "items": 0,
+          "sourceMarkers": [
+            "giải Nobel năm 1984",
+            "giải năm 1979"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "quark-va-gluon",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru/quark-va-gluon.html",
+          "formulas": 317,
+          "images": 4,
+          "items": 0,
+          "sourceMarkers": [
+            "Các tính chất tương tự charmonium",
+            "Các trạng thái kích thích của hệ này"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        },
+        {
+          "id": "mo-hinh-chuan",
+          "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/24-hat-co-ban-vu-tru/mo-hinh-chuan.html",
+          "formulas": 32,
+          "images": 2,
+          "items": 0,
+          "sourceMarkers": [
+            "giá trị nền của trường",
+            "không phải một vật nhỏ chạy trong không gian"
+          ],
+          "assets": [
+            "https://kazinmintori.github.io/StudyHub/assets/app.Cc-QOVak.js"
+          ],
+          "errors": []
+        }
+      ],
+      "cases": [
+        {
+          "id": "khi-ly-tuong",
+          "width": 320,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 360,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 375,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 768,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 1440,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 320,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 360,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 375,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 768,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 1440,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 320,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 360,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 375,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 768,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 1440,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 320,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 360,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 375,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 768,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 1440,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 320,
+          "formulas": 60,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 360,
+          "formulas": 60,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 375,
+          "formulas": 60,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 768,
+          "formulas": 60,
+          "issues": []
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 1440,
+          "formulas": 60,
+          "issues": []
+        },
+        {
+          "id": "lich-su-hat-co-ban",
+          "width": 320,
+          "formulas": 88,
+          "issues": []
+        },
+        {
+          "id": "lich-su-hat-co-ban",
+          "width": 360,
+          "formulas": 88,
+          "issues": []
+        },
+        {
+          "id": "lich-su-hat-co-ban",
+          "width": 375,
+          "formulas": 88,
+          "issues": []
+        },
+        {
+          "id": "lich-su-hat-co-ban",
+          "width": 768,
+          "formulas": 88,
+          "issues": []
+        },
+        {
+          "id": "lich-su-hat-co-ban",
+          "width": 1440,
+          "formulas": 88,
+          "issues": []
+        },
+        {
+          "id": "may-gia-toc-va-detector",
+          "width": 320,
+          "formulas": 141,
+          "issues": []
+        },
+        {
+          "id": "may-gia-toc-va-detector",
+          "width": 360,
+          "formulas": 141,
+          "issues": []
+        },
+        {
+          "id": "may-gia-toc-va-detector",
+          "width": 375,
+          "formulas": 141,
+          "issues": []
+        },
+        {
+          "id": "may-gia-toc-va-detector",
+          "width": 768,
+          "formulas": 141,
+          "issues": []
+        },
+        {
+          "id": "may-gia-toc-va-detector",
+          "width": 1440,
+          "formulas": 141,
+          "issues": []
+        },
+        {
+          "id": "hat-va-tuong-tac",
+          "width": 320,
+          "formulas": 459,
+          "issues": []
+        },
+        {
+          "id": "hat-va-tuong-tac",
+          "width": 360,
+          "formulas": 459,
+          "issues": []
+        },
+        {
+          "id": "hat-va-tuong-tac",
+          "width": 375,
+          "formulas": 459,
+          "issues": []
+        },
+        {
+          "id": "hat-va-tuong-tac",
+          "width": 768,
+          "formulas": 459,
+          "issues": []
+        },
+        {
+          "id": "hat-va-tuong-tac",
+          "width": 1440,
+          "formulas": 459,
+          "issues": []
+        },
+        {
+          "id": "quark-va-gluon",
+          "width": 320,
+          "formulas": 317,
+          "issues": []
+        },
+        {
+          "id": "quark-va-gluon",
+          "width": 360,
+          "formulas": 317,
+          "issues": []
+        },
+        {
+          "id": "quark-va-gluon",
+          "width": 375,
+          "formulas": 317,
+          "issues": []
+        },
+        {
+          "id": "quark-va-gluon",
+          "width": 768,
+          "formulas": 317,
+          "issues": []
+        },
+        {
+          "id": "quark-va-gluon",
+          "width": 1440,
+          "formulas": 317,
+          "issues": []
+        },
+        {
+          "id": "mo-hinh-chuan",
+          "width": 320,
+          "formulas": 32,
+          "issues": []
+        },
+        {
+          "id": "mo-hinh-chuan",
+          "width": 360,
+          "formulas": 32,
+          "issues": []
+        },
+        {
+          "id": "mo-hinh-chuan",
+          "width": 375,
+          "formulas": 32,
+          "issues": []
+        },
+        {
+          "id": "mo-hinh-chuan",
+          "width": 768,
+          "formulas": 32,
+          "issues": []
+        },
+        {
+          "id": "mo-hinh-chuan",
+          "width": 1440,
+          "formulas": 32,
+          "issues": []
+        }
+      ]
+    }
+  ]
+}

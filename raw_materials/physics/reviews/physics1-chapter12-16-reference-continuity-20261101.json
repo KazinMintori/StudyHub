@@ -1,0 +1,1911 @@
+{
+  "privateEvidenceRevision": "d805e1a00ba74fa210d5ab4802330481e497e99d",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/chapter22-23-images-and-reference-continuity-20261101.tar.gz",
+  "privateEvidenceArchiveSHA256": "348e54d58c1aff82f14a3f3c8526036300f3f40ff86bafd4f87a7c22af909656",
+  "wholeGoalComplete": false,
+  "status": "accepted-current-source-reviewed-reference-continuity-scoped",
+  "chapters": [
+    {
+      "chapter": 12,
+      "coverageReceipt": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch12-remaining-theory-coverage.json",
+      "coverageSHA256": "e402048a3028ae51c4203788ebd5dfa3eb743bccd3032a58d735f13d39c45fbf",
+      "receiptStatus": "theory-reviewed-exercises-incomplete",
+      "supportScope": {
+        "cheatsheet": {
+          "definitionPropertyFormulaConditionItems": 43,
+          "formulaRows": 60
+        },
+        "wiki": {
+          "newConcepts": 11,
+          "existingDefinitionRevised": "duong-dong-chat-luu",
+          "aliasCorrection": "Streamtube,pathlineandflowratearenotsynonymsforstreamline/continuitylaw."
+        }
+      },
+      "files": [
+        {
+          "file": "raw_materials/physics/translations/chapter-12/00-mo-dau.md",
+          "reviewedSHA256": "b578d4857386ea74b81bc08d7a88de79fe09f28ee177c974bfd038183231acd9",
+          "owners": [
+            [
+              "P1",
+              "9df0249d8ae9aa6c639d7d5b09d4a0e776e8d2c3de5e81af7df193ea0e11d76d"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\00-mo-dau.md",
+          "currentSHA256": "b578d4857386ea74b81bc08d7a88de79fe09f28ee177c974bfd038183231acd9"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-12/01-muc-01.md",
+          "reviewedSHA256": "4c29039b784a40733e8eb009fc3b7838914b03e99876f8898aea15f7ccb8815e",
+          "owners": [
+            [
+              "P1",
+              "d5586b872b8452d09dad11e17a8ff6a04c5154d2e6d07f571aebee68c24338a3"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\01-muc-01.md",
+          "currentSHA256": "4c29039b784a40733e8eb009fc3b7838914b03e99876f8898aea15f7ccb8815e"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-12/02-muc-02.md",
+          "reviewedSHA256": "984271f28ae64cc29dcc79461fd741817cd80e7ab0e54e125307d5b70d8bcf5c",
+          "owners": [
+            [
+              "P1",
+              "c515146392590bab565db8ef0b8212e4718ab07739c9c019b284c42f70c696ec"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\02-muc-02.md",
+          "currentSHA256": "984271f28ae64cc29dcc79461fd741817cd80e7ab0e54e125307d5b70d8bcf5c"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-12/03-muc-03.md",
+          "reviewedSHA256": "cd4ec1b1b8f2de82602f7c13cb5346e2e2a9ea00efed86cfaddcaafd103eddb3",
+          "owners": [
+            [
+              "P1",
+              "1446574206f036252937dfa10bafbfa6c3bdddacb757c37225896ad631d4a37b"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\03-muc-03.md",
+          "currentSHA256": "cd4ec1b1b8f2de82602f7c13cb5346e2e2a9ea00efed86cfaddcaafd103eddb3"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-12/04-muc-04.md",
+          "reviewedSHA256": "851b076811cdf01f79a06ed3427327e12aa6919603a1dfdd037e242506f474c3",
+          "owners": [
+            [
+              "P1",
+              "9af8a56ca6af9590f2688b426330f154a82cf70c4651cf37e05ea4a7d219a45f"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\04-muc-04.md",
+          "currentSHA256": "851b076811cdf01f79a06ed3427327e12aa6919603a1dfdd037e242506f474c3"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-12/05-muc-05.md",
+          "reviewedSHA256": "336256df447056cafaf044d26c94d028aacdd03a31a5f7d51d68707e06c984aa",
+          "owners": [
+            [
+              "P1",
+              "11aac75aaecc50ac220dc8343745615e70ba4721e07d26fb008b7033447618e8"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\05-muc-05.md",
+          "currentSHA256": "336256df447056cafaf044d26c94d028aacdd03a31a5f7d51d68707e06c984aa"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-12/06-muc-06.md",
+          "reviewedSHA256": "ff01c70805ecd9ba98ba70cf218179898c7ff27eb5da4c49725d5ee62d6ee1ab",
+          "owners": [
+            [
+              "P1",
+              "5677982a402aa6673340458e47fde0f0d21ddfa6a5fc4a2d61caac3b7eac9a8c"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\06-muc-06.md",
+          "currentSHA256": "ff01c70805ecd9ba98ba70cf218179898c7ff27eb5da4c49725d5ee62d6ee1ab"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-12/17-tom-tat.md",
+          "reviewedSHA256": "a90779ad69ddbee9969ee205e0450e80e22d40c112086d506f3d92d7f1d7bc22",
+          "owners": [
+            [
+              "P1",
+              "04a7017223e169ef29ca8019211f8f9294e222c028cf37faec9d0234c7548cdb"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-12\\17-tom-tat.md",
+          "currentSHA256": "a90779ad69ddbee9969ee205e0450e80e22d40c112086d506f3d92d7f1d7bc22"
+        }
+      ],
+      "pendingDeltas": [],
+      "status": "accepted-current-source-reviewed-cheatsheet-foundations-and-linkedwiki",
+      "reviewedSupportCommit": "1d7d310af824d98658d3acf3a533afdd1835c3af",
+      "supportContinuity": [
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch12-course.mjs",
+          "field": "cheatsheet",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch12-course.mjs",
+          "field": "prerequisites",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch12-course.mjs",
+          "field": "supportingConcepts",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-fluid-foundations.mjs",
+          "match": true,
+          "currentSHA256": "8c2fe82a8fbaaad70761d01aee8cd19d665cbc24b92d7defa189191564d9df65",
+          "reviewedSHA256": "8c2fe82a8fbaaad70761d01aee8cd19d665cbc24b92d7defa189191564d9df65"
+        }
+      ],
+      "wikiContinuity": [
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "don-vi",
+          "file": "docs/wiki/don-vi.md",
+          "match": true,
+          "currentSHA256": "e7c1d773a7f57798f992b3c53a38fc832c21fc27afeee8a54d477ecfddce78ce",
+          "reviewedSHA256": "e7c1d773a7f57798f992b3c53a38fc832c21fc27afeee8a54d477ecfddce78ce"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        },
+        {
+          "id": "khoi-luong-rieng",
+          "file": "docs/wiki/khoi-luong-rieng.md",
+          "match": true,
+          "currentSHA256": "318d45be8900c82648938006d24c8d627d206af5e44fbc90eee5581ea74357f4",
+          "reviewedSHA256": "318d45be8900c82648938006d24c8d627d206af5e44fbc90eee5581ea74357f4"
+        },
+        {
+          "id": "ty-khoi",
+          "file": "docs/wiki/ty-khoi.md",
+          "match": true,
+          "currentSHA256": "4bcd7db12a61ea424a44d7184bf89e6fd51829d272ab4ddbef1aad8f4fc130aa",
+          "reviewedSHA256": "4bcd7db12a61ea424a44d7184bf89e6fd51829d272ab4ddbef1aad8f4fc130aa"
+        },
+        {
+          "id": "ap-suat-chat-luu",
+          "file": "docs/wiki/ap-suat-chat-luu.md",
+          "match": true,
+          "currentSHA256": "64eb039a53bc95705255990fd79ecf96a7aa8e950522889b73770595a46cff0e",
+          "reviewedSHA256": "64eb039a53bc95705255990fd79ecf96a7aa8e950522889b73770595a46cff0e"
+        },
+        {
+          "id": "nguyen-ly-pascal",
+          "file": "docs/wiki/nguyen-ly-pascal.md",
+          "match": true,
+          "currentSHA256": "7bbbf4231e362eb88e1f4ff7ba83971564a50816d9bc31e7188cda8569408995",
+          "reviewedSHA256": "7bbbf4231e362eb88e1f4ff7ba83971564a50816d9bc31e7188cda8569408995"
+        },
+        {
+          "id": "ap-suat-tuyet-doi-va-ap-suat-du",
+          "file": "docs/wiki/ap-suat-tuyet-doi-va-ap-suat-du.md",
+          "match": true,
+          "currentSHA256": "0ad574bd4cbc793a5318dc6f8062b7def4f348b8bb2bac3d683eb7773fcff8f4",
+          "reviewedSHA256": "0ad574bd4cbc793a5318dc6f8062b7def4f348b8bb2bac3d683eb7773fcff8f4"
+        },
+        {
+          "id": "luc-day-archimedes",
+          "file": "docs/wiki/luc-day-archimedes.md",
+          "match": true,
+          "currentSHA256": "3938f6c110bd410f05f8618903622306ffc694f2d6e7766e6dbd866dc9b3bb82",
+          "reviewedSHA256": "3938f6c110bd410f05f8618903622306ffc694f2d6e7766e6dbd866dc9b3bb82"
+        },
+        {
+          "id": "suc-cang-be-mat",
+          "file": "docs/wiki/suc-cang-be-mat.md",
+          "match": true,
+          "currentSHA256": "c8027fc4bb1b37b41bc2513600bedb54ca6c7af1fad4f09edf2b9adff635abf8",
+          "reviewedSHA256": "c8027fc4bb1b37b41bc2513600bedb54ca6c7af1fad4f09edf2b9adff635abf8"
+        },
+        {
+          "id": "chat-luu-ly-tuong",
+          "file": "docs/wiki/chat-luu-ly-tuong.md",
+          "match": true,
+          "currentSHA256": "7eb2601a00ab31f07b3c01d84c9d4f33c2723d2ddf0415aa1c4d61b84d048d26",
+          "reviewedSHA256": "7eb2601a00ab31f07b3c01d84c9d4f33c2723d2ddf0415aa1c4d61b84d048d26"
+        },
+        {
+          "id": "duong-dong-chat-luu",
+          "file": "docs/wiki/duong-dong-chat-luu.md",
+          "match": true,
+          "currentSHA256": "13eda389ae330457b694ff7ab33683550527029f5ab5cd416e90daf4a57c120b",
+          "reviewedSHA256": "13eda389ae330457b694ff7ab33683550527029f5ab5cd416e90daf4a57c120b"
+        },
+        {
+          "id": "phuong-trinh-lien-tuc",
+          "file": "docs/wiki/phuong-trinh-lien-tuc.md",
+          "match": true,
+          "currentSHA256": "bf52ea616abc7577cbe625b8ca72427c202245a5495f87ac480595caf80fa3c2",
+          "reviewedSHA256": "bf52ea616abc7577cbe625b8ca72427c202245a5495f87ac480595caf80fa3c2"
+        },
+        {
+          "id": "phuong-trinh-bernoulli",
+          "file": "docs/wiki/phuong-trinh-bernoulli.md",
+          "match": true,
+          "currentSHA256": "477c415810d844374efb40d49837facb575a149b9ed5da07806a768064c04825",
+          "reviewedSHA256": "477c415810d844374efb40d49837facb575a149b9ed5da07806a768064c04825"
+        },
+        {
+          "id": "do-nhot-chat-luu",
+          "file": "docs/wiki/do-nhot-chat-luu.md",
+          "match": true,
+          "currentSHA256": "6c82e6ce7726b3c2b0f759888b1e01c08b7be46083d54e518b3add72f878742e",
+          "reviewedSHA256": "6c82e6ce7726b3c2b0f759888b1e01c08b7be46083d54e518b3add72f878742e"
+        },
+        {
+          "id": "chay-tang-va-chay-roi",
+          "file": "docs/wiki/chay-tang-va-chay-roi.md",
+          "match": true,
+          "currentSHA256": "b82547e077d60e20ea7261430dfc3cbb3b37fc883e7781a584ddcc7dc963295a",
+          "reviewedSHA256": "b82547e077d60e20ea7261430dfc3cbb3b37fc883e7781a584ddcc7dc963295a"
+        },
+        {
+          "id": "dong-nhot-trong-ong-tru",
+          "file": "docs/wiki/dong-nhot-trong-ong-tru.md",
+          "match": true,
+          "currentSHA256": "9d9f95ae5cfd55d1054e9b684f37a4c1f0a5d2672a037953dd72bfd5d55ca644",
+          "reviewedSHA256": "9d9f95ae5cfd55d1054e9b684f37a4c1f0a5d2672a037953dd72bfd5d55ca644"
+        },
+        {
+          "id": "ong-dong-chat-luu",
+          "file": "docs/wiki/ong-dong-chat-luu.md",
+          "match": true,
+          "currentSHA256": "9e93a9bca004fc49ab265ec0b0dfeecec08524ea86206bf7b57aba06c05aba99",
+          "reviewedSHA256": "9e93a9bca004fc49ab265ec0b0dfeecec08524ea86206bf7b57aba06c05aba99"
+        },
+        {
+          "id": "duong-di-phan-tu-chat-luu",
+          "file": "docs/wiki/duong-di-phan-tu-chat-luu.md",
+          "match": true,
+          "currentSHA256": "d9ce637062fdc3a2195ba7a387a4f71ad7efb0ac66117a365056bb855194641a",
+          "reviewedSHA256": "d9ce637062fdc3a2195ba7a387a4f71ad7efb0ac66117a365056bb855194641a"
+        },
+        {
+          "id": "luu-luong-chat-luu",
+          "file": "docs/wiki/luu-luong-chat-luu.md",
+          "match": true,
+          "currentSHA256": "9f2861faf0cd468e0212c1e052052032608e6cfaa8ef78b27b781749a29972bb",
+          "reviewedSHA256": "9f2861faf0cd468e0212c1e052052032608e6cfaa8ef78b27b781749a29972bb"
+        }
+      ],
+      "pendingSupportDeltas": [
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        }
+      ],
+      "supportStatus": "specific-support-deltas-need-review",
+      "sharedWikiDeltaDisposition": "Accepted by complete parent reading of current6 unique Wiki pages and29 numerical/algebra/model checks, no source rewrite needed.",
+      "remaining": "This accepts supporting-material semantic continuity; fullchapter originalframes/endexercises and actualpublicversion retain separate evidence."
+    },
+    {
+      "chapter": 13,
+      "coverageReceipt": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch13-remaining-theory-coverage.json",
+      "coverageSHA256": "3858b0569255684f0f4952ac0c43054128ed3e566292417fea6a8eb74b0300ae",
+      "receiptStatus": "theory-reviewed-exercises-incomplete",
+      "supportScope": {
+        "newWiki": 9,
+        "cheatsheetItems": 38,
+        "formulaRows": 60,
+        "prerequisites": 9,
+        "supportingConcepts": 11
+      },
+      "files": [
+        {
+          "file": "raw_materials/physics/translations/chapter-13/00-mo-dau.md",
+          "reviewedSHA256": "9385cbd6d6cf2ae9d2e6b397698fe93ff71935c560676580b920604dc7258da8",
+          "owners": [
+            [
+              "P1",
+              "9b0ab6ca31ed16a1171c620828d20141e503e381a44135046a2e4d2a76581e7b"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\00-mo-dau.md",
+          "currentSHA256": "9385cbd6d6cf2ae9d2e6b397698fe93ff71935c560676580b920604dc7258da8"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/01-muc-01.md",
+          "reviewedSHA256": "21e03df7b07436a8cb0f202e4478c46c3e4ccd7de686769aa5295afd0fa42c11",
+          "owners": [
+            [
+              "P1",
+              "e572b7efbf5cd3bb20532ed49cd6b1c2a5eca0d270467792c86cc28da4be8e8a"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\01-muc-01.md",
+          "currentSHA256": "21e03df7b07436a8cb0f202e4478c46c3e4ccd7de686769aa5295afd0fa42c11"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/02-muc-02.md",
+          "reviewedSHA256": "06c8f37520f682befdbc1a3086f939e9f9c7775eafb6ef03aa4d085f8593d6f7",
+          "owners": [
+            [
+              "P1",
+              "71e370cb9c0367f60c0e1ba49713f065c33fb8b5deaf06598cebac5362eb7ab9"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\02-muc-02.md",
+          "currentSHA256": "06c8f37520f682befdbc1a3086f939e9f9c7775eafb6ef03aa4d085f8593d6f7"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/03-muc-03.md",
+          "reviewedSHA256": "8563ab361331e69f996269c4fb8a3c8631e35438f18f39ad99670f501632159e",
+          "owners": [
+            [
+              "P1",
+              "8b067489d1b69d183c2ca9f066d98785fb858d9b76e01c874a5a5d2695a39bf7"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\03-muc-03.md",
+          "currentSHA256": "8563ab361331e69f996269c4fb8a3c8631e35438f18f39ad99670f501632159e"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/04-muc-04.md",
+          "reviewedSHA256": "82b6cddc2c7c857cde5347c969b2c89e3fcdcd3820a212b27cc23494d653107d",
+          "owners": [
+            [
+              "P1",
+              "d15456261249e5366184fffb5d821fe155ab94ef580d11d39ee03b440c7c5810"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\04-muc-04.md",
+          "currentSHA256": "82b6cddc2c7c857cde5347c969b2c89e3fcdcd3820a212b27cc23494d653107d"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/05-muc-05.md",
+          "reviewedSHA256": "a4ce5dbec0b24f14e610137d82ac35894cbcfd0645c15a25315a7d7d27a231bc",
+          "owners": [
+            [
+              "P1",
+              "24a09305c0b6f0050ac8df47a4f363ce83725a891432fbd40d3e384338d3a5f1"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\05-muc-05.md",
+          "currentSHA256": "a4ce5dbec0b24f14e610137d82ac35894cbcfd0645c15a25315a7d7d27a231bc"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/06-muc-06.md",
+          "reviewedSHA256": "1ee4549904e25a2dbd1f6c7c962e54deea459099958af1faa04637c8a6d07a50",
+          "owners": [
+            [
+              "P1",
+              "42a0dd37fa9e85a030434302a7305ea62565e77704029531e979add745b8804c"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\06-muc-06.md",
+          "currentSHA256": "1ee4549904e25a2dbd1f6c7c962e54deea459099958af1faa04637c8a6d07a50"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/07-muc-07.md",
+          "reviewedSHA256": "1ee04b4c7fb34f60738812eff02a0dda528242a19377792ac53c13c67f7cd472",
+          "owners": [
+            [
+              "P1",
+              "585440bdc4947fc86d1637c546ec418e65f83a15ef8f806b5989362b60091dd0"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\07-muc-07.md",
+          "currentSHA256": "1ee04b4c7fb34f60738812eff02a0dda528242a19377792ac53c13c67f7cd472"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/08-muc-08.md",
+          "reviewedSHA256": "d5e3f66698cd7f9a16d4ca6ddc28c783e8264343be104af8accf51b92b4d8e4f",
+          "owners": [
+            [
+              "P1",
+              "1397895c08d9c785668c207bd2dbaee44f6f114ca1aff5af6b31149fcacb9157"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\08-muc-08.md",
+          "currentSHA256": "d5e3f66698cd7f9a16d4ca6ddc28c783e8264343be104af8accf51b92b4d8e4f"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-13/17-tom-tat.md",
+          "reviewedSHA256": "11a6814e03a1e1e33805be3522451482af1e8c5c584e8c89849c4362ab3dc38f",
+          "owners": [
+            [
+              "P1",
+              "794f7bbccf84ab0cb63cfc26c63497d0c598c1449611aaceeb10aadb753f0136"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-13\\17-tom-tat.md",
+          "currentSHA256": "11a6814e03a1e1e33805be3522451482af1e8c5c584e8c89849c4362ab3dc38f"
+        }
+      ],
+      "pendingDeltas": [],
+      "status": "accepted-current-source-reviewed-cheatsheet-foundations-and-linkedwiki",
+      "reviewedSupportCommit": "6d3e5650e14781e4a8950160d0404e5e5f6e22a8",
+      "supportContinuity": [
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch13-course.mjs",
+          "field": "cheatsheet",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch13-course.mjs",
+          "field": "prerequisites",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch13-course.mjs",
+          "field": "supportingConcepts",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-gravity-foundations.mjs",
+          "match": true,
+          "currentSHA256": "ef33e6c599c2c4c11cc28fdf12d44f3170bbf45b94114d1d7b6c8e07bdf7cf19",
+          "reviewedSHA256": "ef33e6c599c2c4c11cc28fdf12d44f3170bbf45b94114d1d7b6c8e07bdf7cf19"
+        }
+      ],
+      "wikiContinuity": [
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "vector",
+          "file": "docs/wiki/vector.md",
+          "match": false,
+          "currentSHA256": "84351278b5d4b0697520af57d27e91741231db75056ccae206d98504b974c664",
+          "reviewedSHA256": "5da7534408a5e31df2a1b370d89e466d8ac9410b21255dd7d5feed9e58648ded"
+        },
+        {
+          "id": "gia-toc-huong-tam",
+          "file": "docs/wiki/gia-toc-huong-tam.md",
+          "match": true,
+          "currentSHA256": "5da452d9de7ded2a36aad1fccb8bbce09b49d5bfd54e49e4a74fd233ccee6cde",
+          "reviewedSHA256": "5da452d9de7ded2a36aad1fccb8bbce09b49d5bfd54e49e4a74fd233ccee6cde"
+        },
+        {
+          "id": "momen-luc",
+          "file": "docs/wiki/momen-luc.md",
+          "match": true,
+          "currentSHA256": "7ec1b5e02c0da0d9d7600953ab59025f48aa31fa4e87671a9b159bfb70ba5903",
+          "reviewedSHA256": "7ec1b5e02c0da0d9d7600953ab59025f48aa31fa4e87671a9b159bfb70ba5903"
+        },
+        {
+          "id": "momen-dong-luong",
+          "file": "docs/wiki/momen-dong-luong.md",
+          "match": true,
+          "currentSHA256": "f22f57e9ae75b4fa3d32b1e27ceb9486b9407a390c1aab39232fc20645ea9607",
+          "reviewedSHA256": "f22f57e9ae75b4fa3d32b1e27ceb9486b9407a390c1aab39232fc20645ea9607"
+        },
+        {
+          "id": "khoi-tam",
+          "file": "docs/wiki/khoi-tam.md",
+          "match": false,
+          "currentSHA256": "4519752233f7e8844ba7d2cb7cc12d32087ac613b584a7e9fbc00f494b20b145",
+          "reviewedSHA256": "dd0cd0066422401344dbc944c760d3b8f044e1c78e609427dfff8fc8774b3d8e"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        },
+        {
+          "id": "tich-phan",
+          "file": "docs/wiki/tich-phan.md",
+          "match": true,
+          "currentSHA256": "3280e4219f4b1fa7ada28ed084b4250f5a1e26e08ec629fcb50a538219cd8200",
+          "reviewedSHA256": "3280e4219f4b1fa7ada28ed084b4250f5a1e26e08ec629fcb50a538219cd8200"
+        },
+        {
+          "id": "dinh-luat-van-vat-hap-dan",
+          "file": "docs/wiki/dinh-luat-van-vat-hap-dan.md",
+          "match": true,
+          "currentSHA256": "be8471ff4dd761d00028b985e9dceea81b9c0a02378ded188686dde896beb5f9",
+          "reviewedSHA256": "be8471ff4dd761d00028b985e9dceea81b9c0a02378ded188686dde896beb5f9"
+        },
+        {
+          "id": "the-nang-hap-dan",
+          "file": "docs/wiki/the-nang-hap-dan.md",
+          "match": true,
+          "currentSHA256": "87204749b6f2b56280a15f03fc6c92a8e001b33509cb625c3a909d045f07b8af",
+          "reviewedSHA256": "87204749b6f2b56280a15f03fc6c92a8e001b33509cb625c3a909d045f07b8af"
+        },
+        {
+          "id": "toc-do-thoat",
+          "file": "docs/wiki/toc-do-thoat.md",
+          "match": true,
+          "currentSHA256": "628923e5782fb3a3476647050db24632b7b788785d4058d0a2c480fcfe198aaf",
+          "reviewedSHA256": "628923e5782fb3a3476647050db24632b7b788785d4058d0a2c480fcfe198aaf"
+        },
+        {
+          "id": "quy-dao-ve-tinh",
+          "file": "docs/wiki/quy-dao-ve-tinh.md",
+          "match": true,
+          "currentSHA256": "460d0700fd9880e433660752385b7ff32abc4a57dfd1f360117bc92210a11994",
+          "reviewedSHA256": "460d0700fd9880e433660752385b7ff32abc4a57dfd1f360117bc92210a11994"
+        },
+        {
+          "id": "dinh-luat-kepler",
+          "file": "docs/wiki/dinh-luat-kepler.md",
+          "match": true,
+          "currentSHA256": "6f4641083a46c959791c5f65bfd70d8d878686824402240d4bcb220c2e6e6b4f",
+          "reviewedSHA256": "6f4641083a46c959791c5f65bfd70d8d878686824402240d4bcb220c2e6e6b4f"
+        },
+        {
+          "id": "luc-xuyen-tam",
+          "file": "docs/wiki/luc-xuyen-tam.md",
+          "match": true,
+          "currentSHA256": "39dc258b37a5e26f6797232d901bdf7a376e1f5522a726c55f744b07a0df14a1",
+          "reviewedSHA256": "39dc258b37a5e26f6797232d901bdf7a376e1f5522a726c55f744b07a0df14a1"
+        },
+        {
+          "id": "dinh-ly-vo-cau",
+          "file": "docs/wiki/dinh-ly-vo-cau.md",
+          "match": true,
+          "currentSHA256": "287266585da29a5db5d3503edd1206d81d872bab61c6ca93e31986d68e745ec6",
+          "reviewedSHA256": "287266585da29a5db5d3503edd1206d81d872bab61c6ca93e31986d68e745ec6"
+        },
+        {
+          "id": "trong-luong-bieu-kien",
+          "file": "docs/wiki/trong-luong-bieu-kien.md",
+          "match": true,
+          "currentSHA256": "6963d799d6112edbeeedf80c9cf0cb67d47ceb9436b11233ca73a06d4d9ff9d5",
+          "reviewedSHA256": "6963d799d6112edbeeedf80c9cf0cb67d47ceb9436b11233ca73a06d4d9ff9d5"
+        },
+        {
+          "id": "ban-kinh-schwarzschild",
+          "file": "docs/wiki/ban-kinh-schwarzschild.md",
+          "match": true,
+          "currentSHA256": "44eaefdcf2c7276f48b08733230fc1aadef2dc4b204b01045e2d688dd8714b23",
+          "reviewedSHA256": "44eaefdcf2c7276f48b08733230fc1aadef2dc4b204b01045e2d688dd8714b23"
+        },
+        {
+          "id": "chan-troi-su-kien",
+          "file": "docs/wiki/chan-troi-su-kien.md",
+          "match": true,
+          "currentSHA256": "f620ac90ea5738691ef8e728edd2d68b9801ebd486a37dbeaee5849b9eefd442",
+          "reviewedSHA256": "f620ac90ea5738691ef8e728edd2d68b9801ebd486a37dbeaee5849b9eefd442"
+        },
+        {
+          "id": "ho-den",
+          "file": "docs/wiki/ho-den.md",
+          "match": true,
+          "currentSHA256": "24070fb00eefc004f07a4416627c7d2bf70ce638ca8c7517bba68f630c1cfd8d",
+          "reviewedSHA256": "24070fb00eefc004f07a4416627c7d2bf70ce638ca8c7517bba68f630c1cfd8d"
+        }
+      ],
+      "pendingSupportDeltas": [
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "vector",
+          "file": "docs/wiki/vector.md",
+          "match": false,
+          "currentSHA256": "84351278b5d4b0697520af57d27e91741231db75056ccae206d98504b974c664",
+          "reviewedSHA256": "5da7534408a5e31df2a1b370d89e466d8ac9410b21255dd7d5feed9e58648ded"
+        },
+        {
+          "id": "khoi-tam",
+          "file": "docs/wiki/khoi-tam.md",
+          "match": false,
+          "currentSHA256": "4519752233f7e8844ba7d2cb7cc12d32087ac613b584a7e9fbc00f494b20b145",
+          "reviewedSHA256": "dd0cd0066422401344dbc944c760d3b8f044e1c78e609427dfff8fc8774b3d8e"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        }
+      ],
+      "supportStatus": "specific-support-deltas-need-review",
+      "sharedWikiDeltaDisposition": "Accepted by complete parent reading of current6 unique Wiki pages and29 numerical/algebra/model checks, no source rewrite needed.",
+      "remaining": "This accepts supporting-material semantic continuity; fullchapter originalframes/endexercises and actualpublicversion retain separate evidence."
+    },
+    {
+      "chapter": 14,
+      "coverageReceipt": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch14-remaining-theory-coverage.json",
+      "coverageSHA256": "5dce8380c65dadf70e307a6fe3133533adff9dd36bf79134abbdc257a40e838d",
+      "receiptStatus": "theory-reviewed-exercises-incomplete",
+      "supportScope": {
+        "newWiki": 7,
+        "revisedWiki": [
+          "tat-dan-toi-han"
+        ],
+        "cheatsheetItems": 32,
+        "formulaRows": 64,
+        "prerequisites": 8,
+        "supportingConcepts": 14
+      },
+      "files": [
+        {
+          "file": "raw_materials/physics/translations/chapter-14/00-mo-dau.md",
+          "reviewedSHA256": "e77fa376ff793313c667f04727cf00265fe993bf8f8735c3af49c2f88f5f8ca3",
+          "owners": [
+            [
+              "P1",
+              "cfa6ae3087234d5eb69276d215eab4024bf05c73686325c4f33315329ae0f00b"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\00-mo-dau.md",
+          "currentSHA256": "e77fa376ff793313c667f04727cf00265fe993bf8f8735c3af49c2f88f5f8ca3"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/01-muc-01.md",
+          "reviewedSHA256": "c739d69820148eb07ef6afaa57e7dde44483206402e8571caba7c8f6cba1cbb8",
+          "owners": [
+            [
+              "P1",
+              "d966244a7f10f60ce24b75d7e1e7cd528cb7224159511985dafd76e4e05f93a7"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\01-muc-01.md",
+          "currentSHA256": "c739d69820148eb07ef6afaa57e7dde44483206402e8571caba7c8f6cba1cbb8"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/02-muc-02.md",
+          "reviewedSHA256": "d98af94f6d8f6afda09984394d26df407b0d7f4f7b3f1583548914e8f4d00b98",
+          "owners": [
+            [
+              "P1",
+              "51e5d4587eaf7a0887e179cdb8b89e3e0a502aa132b6fc6e4d164e69facc448b"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\02-muc-02.md",
+          "currentSHA256": "d98af94f6d8f6afda09984394d26df407b0d7f4f7b3f1583548914e8f4d00b98"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/03-muc-03.md",
+          "reviewedSHA256": "6d6c20a137db1751bb03acbc76e5703cdc6d05b413f637a433ad717376addd4d",
+          "owners": [
+            [
+              "P1",
+              "6197540ce2d0a97261821ab0d096fe0d00b68a4617690870a9b07fa6c3d381a4"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\03-muc-03.md",
+          "currentSHA256": "6d6c20a137db1751bb03acbc76e5703cdc6d05b413f637a433ad717376addd4d"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/04-muc-04.md",
+          "reviewedSHA256": "502e48c0f91b1e42d44799deb92e0e51c48f9fa04af1eadf38f733a745d0c7b1",
+          "owners": [
+            [
+              "P1",
+              "450feac0e83fcf78ca49a154fec18f808552b77f3ead916088825d4f42946ecd"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\04-muc-04.md",
+          "currentSHA256": "502e48c0f91b1e42d44799deb92e0e51c48f9fa04af1eadf38f733a745d0c7b1"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/05-muc-05.md",
+          "reviewedSHA256": "02fd67b1ce93f99e0b1256991118f4cb4bb17fc5e05bc1e5dc884211427871d7",
+          "owners": [
+            [
+              "P1",
+              "1db40cc3fe521e889ec5ca6111f21a9f9bab8ed1b072f269cb43900cf4fc65c2"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\05-muc-05.md",
+          "currentSHA256": "02fd67b1ce93f99e0b1256991118f4cb4bb17fc5e05bc1e5dc884211427871d7"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/06-muc-06.md",
+          "reviewedSHA256": "9e4b26832eb8b22130407e81ee3f0a957c07791429ab3b7396099c6858d5c2bb",
+          "owners": [
+            [
+              "P1",
+              "25e25cf12c681a161ee3071f24f61c8162a67b1dc2ca48a8ca1a9767274ab9bf"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\06-muc-06.md",
+          "currentSHA256": "9e4b26832eb8b22130407e81ee3f0a957c07791429ab3b7396099c6858d5c2bb"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/07-muc-07.md",
+          "reviewedSHA256": "f53e4c558f8a533aa1dd87726d949b07ce184971045151a58dbef0d8ca8159f8",
+          "owners": [
+            [
+              "P1",
+              "a71b9b988db8394beaec62e7c5231e0faef632d53242d9f63658a30ebb9b89a8"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\07-muc-07.md",
+          "currentSHA256": "f53e4c558f8a533aa1dd87726d949b07ce184971045151a58dbef0d8ca8159f8"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/08-muc-08.md",
+          "reviewedSHA256": "2fd8a262df064f7fa6849dbae3b1c8de28925d2a553245a7129f8194cab99185",
+          "owners": [
+            [
+              "P1",
+              "074f387e0a18c65a932a29740332bb1545f36da66495a50b95a164bfa4e76ec2"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\08-muc-08.md",
+          "currentSHA256": "2fd8a262df064f7fa6849dbae3b1c8de28925d2a553245a7129f8194cab99185"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-14/17-tom-tat.md",
+          "reviewedSHA256": "ab8473dac71d7a83e0dd9c16398a55212e81fcb0a7657d177e21f6994eda4cfb",
+          "owners": [
+            [
+              "P1",
+              "162a2733b16957741b843770f34f429513cac081a74aa4518c692f93c8045a2c"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-14\\17-tom-tat.md",
+          "currentSHA256": "ab8473dac71d7a83e0dd9c16398a55212e81fcb0a7657d177e21f6994eda4cfb"
+        }
+      ],
+      "pendingDeltas": [],
+      "status": "accepted-current-source-reviewed-cheatsheet-foundations-and-linkedwiki",
+      "reviewedSupportCommit": "db107c7148f1136cb9fb6cc1abd559c3e5f54db3",
+      "supportContinuity": [
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch14-course.mjs",
+          "field": "cheatsheet",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch14-course.mjs",
+          "field": "prerequisites",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch14-course.mjs",
+          "field": "supportingConcepts",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-oscillation-foundations.mjs",
+          "match": true,
+          "currentSHA256": "65eaa421dfcf91ad01a32e072c03c7c96a08fdf742d31161c5c99899b67b6543",
+          "reviewedSHA256": "65eaa421dfcf91ad01a32e072c03c7c96a08fdf742d31161c5c99899b67b6543"
+        }
+      ],
+      "wikiContinuity": [
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "bao-toan-co-nang",
+          "file": "docs/wiki/bao-toan-co-nang.md",
+          "match": true,
+          "currentSHA256": "8938ea06c8dce48f287cda2fac4c4fc663d9ae996caf4843a5c74fb1b226cae4",
+          "reviewedSHA256": "8938ea06c8dce48f287cda2fac4c4fc663d9ae996caf4843a5c74fb1b226cae4"
+        },
+        {
+          "id": "gia-toc-huong-tam",
+          "file": "docs/wiki/gia-toc-huong-tam.md",
+          "match": true,
+          "currentSHA256": "5da452d9de7ded2a36aad1fccb8bbce09b49d5bfd54e49e4a74fd233ccee6cde",
+          "reviewedSHA256": "5da452d9de7ded2a36aad1fccb8bbce09b49d5bfd54e49e4a74fd233ccee6cde"
+        },
+        {
+          "id": "momen-luc",
+          "file": "docs/wiki/momen-luc.md",
+          "match": true,
+          "currentSHA256": "7ec1b5e02c0da0d9d7600953ab59025f48aa31fa4e87671a9b159bfb70ba5903",
+          "reviewedSHA256": "7ec1b5e02c0da0d9d7600953ab59025f48aa31fa4e87671a9b159bfb70ba5903"
+        },
+        {
+          "id": "momen-quan-tinh",
+          "file": "docs/wiki/momen-quan-tinh.md",
+          "match": true,
+          "currentSHA256": "d123fc565be0196d9a6b3042b11fa450fffb1d0be365955ac020574f40305149",
+          "reviewedSHA256": "d123fc565be0196d9a6b3042b11fa450fffb1d0be365955ac020574f40305149"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        },
+        {
+          "id": "dong-luong-vat-ly",
+          "file": "docs/wiki/dong-luong-vat-ly.md",
+          "match": false,
+          "currentSHA256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+          "reviewedSHA256": "83e18d72bf39aadf22348708bf8f0e71534f62afd55dab1c9f64f6c851e603ad"
+        },
+        {
+          "id": "dao-dong-dieu-hoa",
+          "file": "docs/wiki/dao-dong-dieu-hoa.md",
+          "match": true,
+          "currentSHA256": "7f105496b1e579505cfd8033f34908ac11e6b06fff942eaa0281dd03b8d94f58",
+          "reviewedSHA256": "7f105496b1e579505cfd8033f34908ac11e6b06fff942eaa0281dd03b8d94f58"
+        },
+        {
+          "id": "dao-dong-tat-dan",
+          "file": "docs/wiki/dao-dong-tat-dan.md",
+          "match": true,
+          "currentSHA256": "e6afa98727087d6dc0fae735dbfab61e675e110c8aef61de20a9875a8c1060db",
+          "reviewedSHA256": "e6afa98727087d6dc0fae735dbfab61e675e110c8aef61de20a9875a8c1060db"
+        },
+        {
+          "id": "cong-huong-co-hoc",
+          "file": "docs/wiki/cong-huong-co-hoc.md",
+          "match": true,
+          "currentSHA256": "258fcfad8da9e65863edd55de3192d203401a0271233e8756d8138fa463b7cc2",
+          "reviewedSHA256": "258fcfad8da9e65863edd55de3192d203401a0271233e8756d8138fa463b7cc2"
+        },
+        {
+          "id": "can-bang-co-hoc",
+          "file": "docs/wiki/can-bang-co-hoc.md",
+          "match": true,
+          "currentSHA256": "3e767b2f721ac57c782687565322741e6ce0009f8b2fc46df4408c889031d889",
+          "reviewedSHA256": "3e767b2f721ac57c782687565322741e6ce0009f8b2fc46df4408c889031d889"
+        },
+        {
+          "id": "luc-can-tuyen-tinh",
+          "file": "docs/wiki/luc-can-tuyen-tinh.md",
+          "match": true,
+          "currentSHA256": "651e643253409f8150c27ff4e75da391096185b0a0a18d1c44d0c4c9a0d06b7d",
+          "reviewedSHA256": "651e643253409f8150c27ff4e75da391096185b0a0a18d1c44d0c4c9a0d06b7d"
+        },
+        {
+          "id": "khoi-luong-rut-gon",
+          "file": "docs/wiki/khoi-luong-rut-gon.md",
+          "match": true,
+          "currentSHA256": "578afff1e65867cd14f1f03071852d38f2ba546184a2bce904946bb1feac63cb",
+          "reviewedSHA256": "578afff1e65867cd14f1f03071852d38f2ba546184a2bce904946bb1feac63cb"
+        },
+        {
+          "id": "chu-ky-va-tan-so-dao-dong",
+          "file": "docs/wiki/chu-ky-va-tan-so-dao-dong.md",
+          "match": true,
+          "currentSHA256": "5ada562bb9b5b47a35de36653fd0a67f24be0634be57380720460d222486a13e",
+          "reviewedSHA256": "5ada562bb9b5b47a35de36653fd0a67f24be0634be57380720460d222486a13e"
+        },
+        {
+          "id": "tan-so-goc-dao-dong",
+          "file": "docs/wiki/tan-so-goc-dao-dong.md",
+          "match": true,
+          "currentSHA256": "054b0a09c78bc3b3d3eb262d3556fe2e8589a37fd93409eb6d1107b4f99cdfd5",
+          "reviewedSHA256": "054b0a09c78bc3b3d3eb262d3556fe2e8589a37fd93409eb6d1107b4f99cdfd5"
+        },
+        {
+          "id": "pha-dao-dong-co-hoc",
+          "file": "docs/wiki/pha-dao-dong-co-hoc.md",
+          "match": true,
+          "currentSHA256": "3ad2e19fd25675c7b7adc86586c6db8567d7443a23a1b145efee3e596473867b",
+          "reviewedSHA256": "3ad2e19fd25675c7b7adc86586c6db8567d7443a23a1b145efee3e596473867b"
+        },
+        {
+          "id": "dao-dong-dieu-hoa-goc",
+          "file": "docs/wiki/dao-dong-dieu-hoa-goc.md",
+          "match": true,
+          "currentSHA256": "3cd7dbeb1f03b00cfdd7c374669c65b75bfcefec5961c11bb4fcb484abb4e7c7",
+          "reviewedSHA256": "3cd7dbeb1f03b00cfdd7c374669c65b75bfcefec5961c11bb4fcb484abb4e7c7"
+        },
+        {
+          "id": "con-lac-don",
+          "file": "docs/wiki/con-lac-don.md",
+          "match": true,
+          "currentSHA256": "b85ee59a86ffd417844110f2196810ab74c985c961816ebb59bed60da1fe1680",
+          "reviewedSHA256": "b85ee59a86ffd417844110f2196810ab74c985c961816ebb59bed60da1fe1680"
+        },
+        {
+          "id": "con-lac-vat-ly",
+          "file": "docs/wiki/con-lac-vat-ly.md",
+          "match": true,
+          "currentSHA256": "21d918a70e6bf3e6caf59e3a0e26e8cb195f5521f3ea366714384cdd5c102920",
+          "reviewedSHA256": "21d918a70e6bf3e6caf59e3a0e26e8cb195f5521f3ea366714384cdd5c102920"
+        },
+        {
+          "id": "dao-dong-cuong-buc",
+          "file": "docs/wiki/dao-dong-cuong-buc.md",
+          "match": true,
+          "currentSHA256": "820b4f8771a345d06fab2cb65a6f71459d3ff34cc2a1459186da9bf8f692c53f",
+          "reviewedSHA256": "820b4f8771a345d06fab2cb65a6f71459d3ff34cc2a1459186da9bf8f692c53f"
+        },
+        {
+          "id": "tat-dan-toi-han",
+          "file": "docs/wiki/tat-dan-toi-han.md",
+          "match": true,
+          "currentSHA256": "7ff9e5f2668423f2873068cbfcd6105739ef88ad110115070c8fe5bea9f3e018",
+          "reviewedSHA256": "7ff9e5f2668423f2873068cbfcd6105739ef88ad110115070c8fe5bea9f3e018"
+        }
+      ],
+      "pendingSupportDeltas": [
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        },
+        {
+          "id": "dong-luong-vat-ly",
+          "file": "docs/wiki/dong-luong-vat-ly.md",
+          "match": false,
+          "currentSHA256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+          "reviewedSHA256": "83e18d72bf39aadf22348708bf8f0e71534f62afd55dab1c9f64f6c851e603ad"
+        }
+      ],
+      "supportStatus": "specific-support-deltas-need-review",
+      "sharedWikiDeltaDisposition": "Accepted by complete parent reading of current6 unique Wiki pages and29 numerical/algebra/model checks, no source rewrite needed.",
+      "remaining": "This accepts supporting-material semantic continuity; fullchapter originalframes/endexercises and actualpublicversion retain separate evidence."
+    },
+    {
+      "chapter": 15,
+      "coverageReceipt": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch15-remaining-theory-coverage.json",
+      "coverageSHA256": "b7c5dda7b45f1a7398ecb4b224d5a4c75b79e5d356ae322378f3f9def086e2b6",
+      "receiptStatus": "theory-reviewed-exercises-incomplete",
+      "supportScope": {
+        "newWiki": 13,
+        "revisedWiki": [
+          "song-dung-co-hoc"
+        ],
+        "cheatsheetItems": 36,
+        "formulaRows": 52
+      },
+      "files": [
+        {
+          "file": "raw_materials/physics/translations/chapter-15/00-mo-dau.md",
+          "reviewedSHA256": "bd80b94bafaa94ff9cf2a0b53e2d3f9733083de5664abe5924ede98a7cdd38f1",
+          "owners": [
+            [
+              "P1",
+              "a60c11a0392ee74e15182fd7aaf1f8c7f5cce022b1f507d5083de7b6b01d0e0e"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\00-mo-dau.md",
+          "currentSHA256": "bd80b94bafaa94ff9cf2a0b53e2d3f9733083de5664abe5924ede98a7cdd38f1"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/01-muc-01.md",
+          "reviewedSHA256": "867e32c115ab00548bd93af9eb7b71b9d1e3b74540fcec5ef46bebc974f6a33d",
+          "owners": [
+            [
+              "P1",
+              "bf6c91e9bb880ff7f2c6bc20e8d1dd149ee39060f1a83fedddea49f0a8f36963"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\01-muc-01.md",
+          "currentSHA256": "867e32c115ab00548bd93af9eb7b71b9d1e3b74540fcec5ef46bebc974f6a33d"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/02-muc-02.md",
+          "reviewedSHA256": "5fa3a0d9a65c73baddb151d9f72a4996f756bd03e155dca92890435533afd60c",
+          "owners": [
+            [
+              "P1",
+              "bbc4d366db7acc7ae29da0473a45cf58072d56cf3c4a10256afe11bf933b3a99"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\02-muc-02.md",
+          "currentSHA256": "5fa3a0d9a65c73baddb151d9f72a4996f756bd03e155dca92890435533afd60c"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/03-muc-03.md",
+          "reviewedSHA256": "b52121e3386ab2d58d5bc4b48efb6f1779d2ca492d73bc1c89b0ad377d073c42",
+          "owners": [
+            [
+              "P1",
+              "42838456cceb6e2e6af85d6c0c61a59ecdb5db21f57b7ff24970dea5977b73d4"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\03-muc-03.md",
+          "currentSHA256": "b52121e3386ab2d58d5bc4b48efb6f1779d2ca492d73bc1c89b0ad377d073c42"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/04-muc-04.md",
+          "reviewedSHA256": "4dfcf61d012d6cb02da288f136e760a06c49c98cd15c379cd22809d02e289c6d",
+          "owners": [
+            [
+              "P1",
+              "d4045b53c482a636f8bb209ff361690beaad2fa6408c45b9515a288e1b5a79c5"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\04-muc-04.md",
+          "currentSHA256": "4dfcf61d012d6cb02da288f136e760a06c49c98cd15c379cd22809d02e289c6d"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/05-muc-05.md",
+          "reviewedSHA256": "938e101661055e9cc9329c7bbacaa81def3df50071b0a728882971771974a1cb",
+          "owners": [
+            [
+              "P1",
+              "454bec98d021e95fe82b401f38b61eb8053e97d7b0bf7e59f8016173c095d504"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\05-muc-05.md",
+          "currentSHA256": "938e101661055e9cc9329c7bbacaa81def3df50071b0a728882971771974a1cb"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/06-muc-06.md",
+          "reviewedSHA256": "28a08ce8b6800e19481d5d09f833402470cb93563d1fd7d479def7d10ee12fcd",
+          "owners": [
+            [
+              "P1",
+              "c5c060581d7007e9d8bef06decbf8eb4d2ff7ed844813cacd5cbfc90d5d863bf"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\06-muc-06.md",
+          "currentSHA256": "28a08ce8b6800e19481d5d09f833402470cb93563d1fd7d479def7d10ee12fcd"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/07-muc-07.md",
+          "reviewedSHA256": "ed47647089ca3c0840fd2729d1cd6f62b80964b6f5ec8c1844f3069e951cdd89",
+          "owners": [
+            [
+              "P1",
+              "b7c7600f56e238ebe713603c155cf08698bb4c12c288969fba4ebba6bd9f7f93"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\07-muc-07.md",
+          "currentSHA256": "ed47647089ca3c0840fd2729d1cd6f62b80964b6f5ec8c1844f3069e951cdd89"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/08-muc-08.md",
+          "reviewedSHA256": "a0999075b3ea3c1a09827d9eb9780bb486b6ee100575fb2d75a0c399188717ea",
+          "owners": [
+            [
+              "P1",
+              "b0c6a55859de72aba03fd29c0bacc13c0127bff9b91ba49e06be8c3f918c0da0"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\08-muc-08.md",
+          "currentSHA256": "a0999075b3ea3c1a09827d9eb9780bb486b6ee100575fb2d75a0c399188717ea"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-15/17-tom-tat.md",
+          "reviewedSHA256": "ead2b3f5fcd76f40634785508b99eced635c5e627af56ceabae91a27422e0826",
+          "owners": [
+            [
+              "P1",
+              "cf3a67dea7b721b187813575ed4b5c8d8d12085eeaea2b84e0f1b872553a2d92"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-15\\17-tom-tat.md",
+          "currentSHA256": "ead2b3f5fcd76f40634785508b99eced635c5e627af56ceabae91a27422e0826"
+        }
+      ],
+      "pendingDeltas": [],
+      "status": "accepted-current-source-reviewed-cheatsheet-foundations-and-linkedwiki",
+      "reviewedSupportCommit": "f5f47392ef67cdd3a465fb6462b2a07085d09f73",
+      "supportContinuity": [
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch15-course.mjs",
+          "field": "cheatsheet",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch15-course.mjs",
+          "field": "prerequisites",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch15-course.mjs",
+          "field": "supportingConcepts",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-wave-foundations.mjs",
+          "match": true,
+          "currentSHA256": "368d0cbf19a7bc199e6912875034d22c2ef0b7061d186a39d547a63ee33699c5",
+          "reviewedSHA256": "368d0cbf19a7bc199e6912875034d22c2ef0b7061d186a39d547a63ee33699c5"
+        }
+      ],
+      "wikiContinuity": [
+        {
+          "id": "dao-dong-dieu-hoa",
+          "file": "docs/wiki/dao-dong-dieu-hoa.md",
+          "match": true,
+          "currentSHA256": "7f105496b1e579505cfd8033f34908ac11e6b06fff942eaa0281dd03b8d94f58",
+          "reviewedSHA256": "7f105496b1e579505cfd8033f34908ac11e6b06fff942eaa0281dd03b8d94f58"
+        },
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        },
+        {
+          "id": "dong-luong-vat-ly",
+          "file": "docs/wiki/dong-luong-vat-ly.md",
+          "match": false,
+          "currentSHA256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+          "reviewedSHA256": "83e18d72bf39aadf22348708bf8f0e71534f62afd55dab1c9f64f6c851e603ad"
+        },
+        {
+          "id": "song-co-hoc",
+          "file": "docs/wiki/song-co-hoc.md",
+          "match": true,
+          "currentSHA256": "bb74413342ce95e9cf5552b9921e25034e010eafd5156da0a7a276a74d3079b5",
+          "reviewedSHA256": "bb74413342ce95e9cf5552b9921e25034e010eafd5156da0a7a276a74d3079b5"
+        },
+        {
+          "id": "buoc-song-co-hoc",
+          "file": "docs/wiki/buoc-song-co-hoc.md",
+          "match": true,
+          "currentSHA256": "c1c500d44990daf8631e56d31afbc9d04a39b57869c00eba630216c9c8d46c9c",
+          "reviewedSHA256": "c1c500d44990daf8631e56d31afbc9d04a39b57869c00eba630216c9c8d46c9c"
+        },
+        {
+          "id": "so-song",
+          "file": "docs/wiki/so-song.md",
+          "match": true,
+          "currentSHA256": "e06b4b8ec7bf75b5c583cb7cea40d7f14c653d7f628a58f608b995153ff08084",
+          "reviewedSHA256": "e06b4b8ec7bf75b5c583cb7cea40d7f14c653d7f628a58f608b995153ff08084"
+        },
+        {
+          "id": "ham-song-co-hoc",
+          "file": "docs/wiki/ham-song-co-hoc.md",
+          "match": true,
+          "currentSHA256": "1adb60efc9fcd1832f86da7ab5821906ffd6cd763b6010782a6da7899e469a7c",
+          "reviewedSHA256": "1adb60efc9fcd1832f86da7ab5821906ffd6cd763b6010782a6da7899e469a7c"
+        },
+        {
+          "id": "toc-do-song-ngang-tren-day",
+          "file": "docs/wiki/toc-do-song-ngang-tren-day.md",
+          "match": true,
+          "currentSHA256": "54511d171696f8af84dfb8cf5496a94139f3467b87ea37aaf8132abae7bd34b2",
+          "reviewedSHA256": "54511d171696f8af84dfb8cf5496a94139f3467b87ea37aaf8132abae7bd34b2"
+        },
+        {
+          "id": "cong-suat-song-co",
+          "file": "docs/wiki/cong-suat-song-co.md",
+          "match": true,
+          "currentSHA256": "2bf36ef553f5b38bc72eb63af6716fd2e57cda2ae876809ca5c8f9424e53f51b",
+          "reviewedSHA256": "2bf36ef553f5b38bc72eb63af6716fd2e57cda2ae876809ca5c8f9424e53f51b"
+        },
+        {
+          "id": "cuong-do-song-co",
+          "file": "docs/wiki/cuong-do-song-co.md",
+          "match": true,
+          "currentSHA256": "8046c8fb23d476a4976383a68411e8dd7f91747e07693b6bc917c9947aee261f",
+          "reviewedSHA256": "8046c8fb23d476a4976383a68411e8dd7f91747e07693b6bc917c9947aee261f"
+        },
+        {
+          "id": "chong-chat-song-tuyen-tinh",
+          "file": "docs/wiki/chong-chat-song-tuyen-tinh.md",
+          "match": true,
+          "currentSHA256": "97235773e96d027b7d5d987194be0b21343ad277d865d12b9577715f95db5c46",
+          "reviewedSHA256": "97235773e96d027b7d5d987194be0b21343ad277d865d12b9577715f95db5c46"
+        },
+        {
+          "id": "dieu-kien-bien-cua-day",
+          "file": "docs/wiki/dieu-kien-bien-cua-day.md",
+          "match": true,
+          "currentSHA256": "6238f35fe9f48ce9bd720ae73e11fdb605694afbd82841f228a22f42b6fe5620",
+          "reviewedSHA256": "6238f35fe9f48ce9bd720ae73e11fdb605694afbd82841f228a22f42b6fe5620"
+        },
+        {
+          "id": "song-dung-co-hoc",
+          "file": "docs/wiki/song-dung-co-hoc.md",
+          "match": true,
+          "currentSHA256": "74a3a0909fd71a42b3b7afe4b447287ca49bad975594f2a7cd8ce95b3f7e9c32",
+          "reviewedSHA256": "74a3a0909fd71a42b3b7afe4b447287ca49bad975594f2a7cd8ce95b3f7e9c32"
+        },
+        {
+          "id": "nut-va-bung-song",
+          "file": "docs/wiki/nut-va-bung-song.md",
+          "match": true,
+          "currentSHA256": "27ec02bc0bfe15a177fdb00c5f11db1fa6baff9631dafecb372c20973623361f",
+          "reviewedSHA256": "27ec02bc0bfe15a177fdb00c5f11db1fa6baff9631dafecb372c20973623361f"
+        },
+        {
+          "id": "dang-dao-dong-rieng-cua-day",
+          "file": "docs/wiki/dang-dao-dong-rieng-cua-day.md",
+          "match": true,
+          "currentSHA256": "c5a4ac13b84e373cdbad87b02904ef4a3a0644179b7a4db1a6c4cfb1db964eb3",
+          "reviewedSHA256": "c5a4ac13b84e373cdbad87b02904ef4a3a0644179b7a4db1a6c4cfb1db964eb3"
+        },
+        {
+          "id": "hoa-am-va-am-boi",
+          "file": "docs/wiki/hoa-am-va-am-boi.md",
+          "match": true,
+          "currentSHA256": "8b05ac24452683f364a0ace9f872e7fb8a06e11ea6075acfd28e43eb43d0e0d9",
+          "reviewedSHA256": "8b05ac24452683f364a0ace9f872e7fb8a06e11ea6075acfd28e43eb43d0e0d9"
+        },
+        {
+          "id": "phan-tich-hoa-am-cua-day",
+          "file": "docs/wiki/phan-tich-hoa-am-cua-day.md",
+          "match": true,
+          "currentSHA256": "685a10744a6b90193a3693967dcbf60677b5e38597663f376019426d6432fd48",
+          "reviewedSHA256": "685a10744a6b90193a3693967dcbf60677b5e38597663f376019426d6432fd48"
+        },
+        {
+          "id": "pha-song",
+          "file": "docs/wiki/pha-song.md",
+          "match": true,
+          "currentSHA256": "8ce8f8790276bb06ded9cb367c548595bc9c6f9ec0b007edd909dce474e3e21e",
+          "reviewedSHA256": "8ce8f8790276bb06ded9cb367c548595bc9c6f9ec0b007edd909dce474e3e21e"
+        },
+        {
+          "id": "giao-thoa-song",
+          "file": "docs/wiki/giao-thoa-song.md",
+          "match": true,
+          "currentSHA256": "a5a945755247c1ad6e339ce12891d951d58aac2dd379b5e8657371fc16035a57",
+          "reviewedSHA256": "a5a945755247c1ad6e339ce12891d951d58aac2dd379b5e8657371fc16035a57"
+        },
+        {
+          "id": "dao-ham-rieng",
+          "file": "docs/wiki/dao-ham-rieng.md",
+          "match": true,
+          "currentSHA256": "0e67d8386682e06730a13d271e8f1661760c27ac3a83260e49266ca2f2dd9d9e",
+          "reviewedSHA256": "0e67d8386682e06730a13d271e8f1661760c27ac3a83260e49266ca2f2dd9d9e"
+        }
+      ],
+      "pendingSupportDeltas": [
+        {
+          "id": "luc",
+          "file": "docs/wiki/luc.md",
+          "match": false,
+          "currentSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+          "reviewedSHA256": "049f1736183996180c9775e8103f806c45a88e9b8a7e7cbc129329eea4aa9ba7"
+        },
+        {
+          "id": "cong-nang-luong",
+          "file": "docs/wiki/cong-nang-luong.md",
+          "match": false,
+          "currentSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+          "reviewedSHA256": "664b8ec6f1f324aeefc5f7c5224cd16df91ff19f6a5693d89dc5041e81025290"
+        },
+        {
+          "id": "dao-ham",
+          "file": "docs/wiki/dao-ham.md",
+          "match": false,
+          "currentSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+          "reviewedSHA256": "d80dc3422f35ee0bf791b169340c5447d3c704c843e2e61008fab3b828437dc2"
+        },
+        {
+          "id": "dong-luong-vat-ly",
+          "file": "docs/wiki/dong-luong-vat-ly.md",
+          "match": false,
+          "currentSHA256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+          "reviewedSHA256": "83e18d72bf39aadf22348708bf8f0e71534f62afd55dab1c9f64f6c851e603ad"
+        }
+      ],
+      "supportStatus": "specific-support-deltas-need-review",
+      "sharedWikiDeltaDisposition": "Accepted by complete parent reading of current6 unique Wiki pages and29 numerical/algebra/model checks, no source rewrite needed.",
+      "remaining": "This accepts supporting-material semantic continuity; fullchapter originalframes/endexercises and actualpublicversion retain separate evidence."
+    },
+    {
+      "chapter": 16,
+      "coverageReceipt": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch16-remaining-theory-coverage.json",
+      "coverageSHA256": "4eac25bda092d0f51bda5990f90ec66df2480b0f9562c0bc0d6fb393ae818d03",
+      "receiptStatus": "theory-reviewed-exercises-incomplete",
+      "supportScope": {
+        "newWiki": 13,
+        "revisedWiki": [
+          "hieu-ung-doppler-am"
+        ],
+        "cheatsheetItems": 34,
+        "formulaRows": 49,
+        "oldDopplerTechnicalExplanationPreserved": true
+      },
+      "files": [
+        {
+          "file": "raw_materials/physics/translations/chapter-16/00-mo-dau.md",
+          "reviewedSHA256": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082",
+          "owners": [
+            [
+              "P1",
+              "f9e8cfc705bfa8a9a6a7450db238699b3c3488d058c6ae14bd8c3ab543e72060"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\00-mo-dau.md",
+          "currentSHA256": "e5f6f273a281e63fba1fe3afb723d3132756088160209dd2acb7da89b65e3082"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/01-muc-01.md",
+          "reviewedSHA256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23",
+          "owners": [
+            [
+              "P1",
+              "0e7875a3e1911ed1cd7998a383b865dec27a62d1236c904ab406cd7822df99d8"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\01-muc-01.md",
+          "currentSHA256": "c0950362ddf0e8151606d34cc93806138077f17c3c59c4f363bab6c87b2d3e23"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/02-muc-02.md",
+          "reviewedSHA256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624",
+          "owners": [
+            [
+              "P1",
+              "098c484c7474d97065476459e11a5a555cf3f7bd5b208bbbe9c95ca6e017149a"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\02-muc-02.md",
+          "currentSHA256": "dba2dcd9219b691e675f563bff44e534b592e7436e3faeaaf95204a82c67c624"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/03-muc-03.md",
+          "reviewedSHA256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c",
+          "owners": [
+            [
+              "P1",
+              "8f19886c9eb95a69395828f27ec1c0534bd993beb4e3124bab16287d235f6f35"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\03-muc-03.md",
+          "currentSHA256": "4dfad3f06781ea7fd666ea24c56526f73879ae6b919f6453fcf4a2c37e5f552c"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/04-muc-04.md",
+          "reviewedSHA256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba",
+          "owners": [
+            [
+              "P1",
+              "30d2e1e96669124da1843d0b704716afab70f445f82c5e2df27aa10d00d5db7b"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\04-muc-04.md",
+          "currentSHA256": "fb3436ee379342bc7c76a202280c30a01cbd4a9494f9b7d594a4c28d10ebddba"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/05-muc-05.md",
+          "reviewedSHA256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee",
+          "owners": [
+            [
+              "P1",
+              "8c0c92ff7a83f329114fff04f4f2c8fa49a66d72374bae806b5f1c48eed78ea0"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\05-muc-05.md",
+          "currentSHA256": "c88c94c8eb09d5e5a3e835f61f40d7907d8f09bf73137875b7cc3f25af366eee"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/06-muc-06.md",
+          "reviewedSHA256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010",
+          "owners": [
+            [
+              "P1",
+              "904044d95b4e335e411031f7d35a02594fdaf7c7fdddde0dd51002feccf7d55c"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\06-muc-06.md",
+          "currentSHA256": "a173bad27237291526ae964e2bdb9dadcb222242e8241ab76579a8da9cda6010"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/07-muc-07.md",
+          "reviewedSHA256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8",
+          "owners": [
+            [
+              "P1",
+              "2b945fe12eb40430c15b25a835f0813c905520e25db62cc7d99f603789a328c3"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\07-muc-07.md",
+          "currentSHA256": "bd1097ae4bf893b16db856784f630b7bad9974883c9ef30005812890e06965b8"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/08-muc-08.md",
+          "reviewedSHA256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72",
+          "owners": [
+            [
+              "P1",
+              "50ad89ff276c98191298e55bb7f5ae5a0c8729620b4b96277211319ca301b87f"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\08-muc-08.md",
+          "currentSHA256": "dbe54909ff67808a30fd3bef8c4b9f2cd193a323f2580b3e809316e43ae95a72"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/09-muc-09.md",
+          "reviewedSHA256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e",
+          "owners": [
+            [
+              "P1",
+              "bb5dcceca33ccd4cabeed1757f2618be91947b9117d2a8ced45df84c46b00e87"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\09-muc-09.md",
+          "currentSHA256": "050b14c93aaa00cb192b8384f47c17935b6691bf5f85ab8283e815d1de42ee2e"
+        },
+        {
+          "file": "raw_materials/physics/translations/chapter-16/17-tom-tat.md",
+          "reviewedSHA256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204",
+          "owners": [
+            [
+              "P1",
+              "ba890205f2f15568570e55c987a3589bba8421922eefd9c9547e438d2a43467b"
+            ]
+          ],
+          "status": "matched-reviewed-bytes",
+          "candidate": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-16\\17-tom-tat.md",
+          "currentSHA256": "ed914dfad53d69cabffffd85e91316491c9c870b3669efed5e65838f28e54204"
+        }
+      ],
+      "pendingDeltas": [],
+      "status": "accepted-current-source-reviewed-cheatsheet-foundations-and-linkedwiki",
+      "reviewedSupportCommit": "6d4102310b5ae2e531770a82e8593d7d99de1886",
+      "supportContinuity": [
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch16-course.mjs",
+          "field": "cheatsheet",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch16-course.mjs",
+          "field": "prerequisites",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-remaining-ch16-course.mjs",
+          "field": "supportingConcepts",
+          "match": true,
+          "present": true
+        },
+        {
+          "file": "docs/.vitepress/physics1-sound-foundations.mjs",
+          "match": true,
+          "currentSHA256": "f0baaf335747c0aebb680c4e0f5b7c09f64ac44e4e3ce19e46bd86268a8e2f40",
+          "reviewedSHA256": "f0baaf335747c0aebb680c4e0f5b7c09f64ac44e4e3ce19e46bd86268a8e2f40"
+        }
+      ],
+      "wikiContinuity": [
+        {
+          "id": "cong-suat-co-hoc",
+          "file": "docs/wiki/cong-suat-co-hoc.md",
+          "match": true,
+          "currentSHA256": "8bc084a63df89ab41e66d54f2e4c13b7de571d9e14b8ef5f75dff5beac69a29d",
+          "reviewedSHA256": "8bc084a63df89ab41e66d54f2e4c13b7de571d9e14b8ef5f75dff5beac69a29d"
+        },
+        {
+          "id": "dong-luong-vat-ly",
+          "file": "docs/wiki/dong-luong-vat-ly.md",
+          "match": false,
+          "currentSHA256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+          "reviewedSHA256": "83e18d72bf39aadf22348708bf8f0e71534f62afd55dab1c9f64f6c851e603ad"
+        },
+        {
+          "id": "modun-khoi",
+          "file": "docs/wiki/modun-khoi.md",
+          "match": true,
+          "currentSHA256": "551a8c444f49c38e3099037324ccdab85dcf617bf47bfeb3a466d8abecedd00f",
+          "reviewedSHA256": "551a8c444f49c38e3099037324ccdab85dcf617bf47bfeb3a466d8abecedd00f"
+        },
+        {
+          "id": "modun-young",
+          "file": "docs/wiki/modun-young.md",
+          "match": true,
+          "currentSHA256": "b623dab723458b6a7201c87c8ecd8e527fab86e4bd4e4b491c601621de7ae8e5",
+          "reviewedSHA256": "b623dab723458b6a7201c87c8ecd8e527fab86e4bd4e4b491c601621de7ae8e5"
+        },
+        {
+          "id": "ap-suat-tuyet-doi-va-ap-suat-du",
+          "file": "docs/wiki/ap-suat-tuyet-doi-va-ap-suat-du.md",
+          "match": true,
+          "currentSHA256": "0ad574bd4cbc793a5318dc6f8062b7def4f348b8bb2bac3d683eb7773fcff8f4",
+          "reviewedSHA256": "0ad574bd4cbc793a5318dc6f8062b7def4f348b8bb2bac3d683eb7773fcff8f4"
+        },
+        {
+          "id": "dao-dong-cuong-buc",
+          "file": "docs/wiki/dao-dong-cuong-buc.md",
+          "match": true,
+          "currentSHA256": "820b4f8771a345d06fab2cb65a6f71459d3ff34cc2a1459186da9bf8f692c53f",
+          "reviewedSHA256": "820b4f8771a345d06fab2cb65a6f71459d3ff34cc2a1459186da9bf8f692c53f"
+        },
+        {
+          "id": "cong-huong-co-hoc",
+          "file": "docs/wiki/cong-huong-co-hoc.md",
+          "match": true,
+          "currentSHA256": "258fcfad8da9e65863edd55de3192d203401a0271233e8756d8138fa463b7cc2",
+          "reviewedSHA256": "258fcfad8da9e65863edd55de3192d203401a0271233e8756d8138fa463b7cc2"
+        },
+        {
+          "id": "song-co-hoc",
+          "file": "docs/wiki/song-co-hoc.md",
+          "match": true,
+          "currentSHA256": "bb74413342ce95e9cf5552b9921e25034e010eafd5156da0a7a276a74d3079b5",
+          "reviewedSHA256": "bb74413342ce95e9cf5552b9921e25034e010eafd5156da0a7a276a74d3079b5"
+        },
+        {
+          "id": "ham-song-co-hoc",
+          "file": "docs/wiki/ham-song-co-hoc.md",
+          "match": true,
+          "currentSHA256": "1adb60efc9fcd1832f86da7ab5821906ffd6cd763b6010782a6da7899e469a7c",
+          "reviewedSHA256": "1adb60efc9fcd1832f86da7ab5821906ffd6cd763b6010782a6da7899e469a7c"
+        },
+        {
+          "id": "buoc-song-co-hoc",
+          "file": "docs/wiki/buoc-song-co-hoc.md",
+          "match": true,
+          "currentSHA256": "c1c500d44990daf8631e56d31afbc9d04a39b57869c00eba630216c9c8d46c9c",
+          "reviewedSHA256": "c1c500d44990daf8631e56d31afbc9d04a39b57869c00eba630216c9c8d46c9c"
+        },
+        {
+          "id": "so-song",
+          "file": "docs/wiki/so-song.md",
+          "match": true,
+          "currentSHA256": "e06b4b8ec7bf75b5c583cb7cea40d7f14c653d7f628a58f608b995153ff08084",
+          "reviewedSHA256": "e06b4b8ec7bf75b5c583cb7cea40d7f14c653d7f628a58f608b995153ff08084"
+        },
+        {
+          "id": "chong-chat-song-tuyen-tinh",
+          "file": "docs/wiki/chong-chat-song-tuyen-tinh.md",
+          "match": true,
+          "currentSHA256": "97235773e96d027b7d5d987194be0b21343ad277d865d12b9577715f95db5c46",
+          "reviewedSHA256": "97235773e96d027b7d5d987194be0b21343ad277d865d12b9577715f95db5c46"
+        },
+        {
+          "id": "cuong-do-song-co",
+          "file": "docs/wiki/cuong-do-song-co.md",
+          "match": true,
+          "currentSHA256": "8046c8fb23d476a4976383a68411e8dd7f91747e07693b6bc917c9947aee261f",
+          "reviewedSHA256": "8046c8fb23d476a4976383a68411e8dd7f91747e07693b6bc917c9947aee261f"
+        },
+        {
+          "id": "dao-ham-rieng",
+          "file": "docs/wiki/dao-ham-rieng.md",
+          "match": true,
+          "currentSHA256": "0e67d8386682e06730a13d271e8f1661760c27ac3a83260e49266ca2f2dd9d9e",
+          "reviewedSHA256": "0e67d8386682e06730a13d271e8f1661760c27ac3a83260e49266ca2f2dd9d9e"
+        },
+        {
+          "id": "song-am",
+          "file": "docs/wiki/song-am.md",
+          "match": true,
+          "currentSHA256": "a1fc2fa1f7ee1206df9dd34c7c6d3b9e3c0f49715587fbe35dce4421719a2533",
+          "reviewedSHA256": "a1fc2fa1f7ee1206df9dd34c7c6d3b9e3c0f49715587fbe35dce4421719a2533"
+        },
+        {
+          "id": "ap-suat-am",
+          "file": "docs/wiki/ap-suat-am.md",
+          "match": true,
+          "currentSHA256": "71be080d098daf9e16b3cd0650fca276943f37a6772b6debaf297e099dc4b853",
+          "reviewedSHA256": "71be080d098daf9e16b3cd0650fca276943f37a6772b6debaf297e099dc4b853"
+        },
+        {
+          "id": "toc-do-truyen-am",
+          "file": "docs/wiki/toc-do-truyen-am.md",
+          "match": true,
+          "currentSHA256": "22dc4270e2ec49793d5827f07b1b1cabd9be0d105285a0b93ce970c4e282f63a",
+          "reviewedSHA256": "22dc4270e2ec49793d5827f07b1b1cabd9be0d105285a0b93ce970c4e282f63a"
+        },
+        {
+          "id": "cuong-do-am",
+          "file": "docs/wiki/cuong-do-am.md",
+          "match": true,
+          "currentSHA256": "29b8875082b5d612e68fedb5fe4406ac3be551d28be08b6c0d556d3f4fd7bdff",
+          "reviewedSHA256": "29b8875082b5d612e68fedb5fe4406ac3be551d28be08b6c0d556d3f4fd7bdff"
+        },
+        {
+          "id": "muc-cuong-do-am",
+          "file": "docs/wiki/muc-cuong-do-am.md",
+          "match": true,
+          "currentSHA256": "0a8de8dd29396b19476163f544a1dad8deef81e36e14ca2dfa8030b68291b852",
+          "reviewedSHA256": "0a8de8dd29396b19476163f544a1dad8deef81e36e14ca2dfa8030b68291b852"
+        },
+        {
+          "id": "cao-do-am",
+          "file": "docs/wiki/cao-do-am.md",
+          "match": true,
+          "currentSHA256": "d11f11967ad05673016a8b4bf25ade7520c2ab6c5a931f2f362f6bc93973041a",
+          "reviewedSHA256": "d11f11967ad05673016a8b4bf25ade7520c2ab6c5a931f2f362f6bc93973041a"
+        },
+        {
+          "id": "am-sac",
+          "file": "docs/wiki/am-sac.md",
+          "match": true,
+          "currentSHA256": "6d92b1b0452cf13ca681e2aa0ee92b5635836956b04c84a367293d61970fbacd",
+          "reviewedSHA256": "6d92b1b0452cf13ca681e2aa0ee92b5635836956b04c84a367293d61970fbacd"
+        },
+        {
+          "id": "song-dung-trong-cot-khi",
+          "file": "docs/wiki/song-dung-trong-cot-khi.md",
+          "match": true,
+          "currentSHA256": "1122862e983bc8d85bf2094fec307da04906e5ce582ff4dbdf77cd1d8b9775e1",
+          "reviewedSHA256": "1122862e983bc8d85bf2094fec307da04906e5ce582ff4dbdf77cd1d8b9775e1"
+        },
+        {
+          "id": "cong-huong-am",
+          "file": "docs/wiki/cong-huong-am.md",
+          "match": true,
+          "currentSHA256": "71690fd4c6d77c849334569cb3aee4fb324125cde07dfcbd0c494d4734eaa0fe",
+          "reviewedSHA256": "71690fd4c6d77c849334569cb3aee4fb324125cde07dfcbd0c494d4734eaa0fe"
+        },
+        {
+          "id": "phach",
+          "file": "docs/wiki/phach.md",
+          "match": true,
+          "currentSHA256": "4aba4652331fc9636e45ee351d45b11bda859d0a1f23464233fe59d2109a0290",
+          "reviewedSHA256": "4aba4652331fc9636e45ee351d45b11bda859d0a1f23464233fe59d2109a0290"
+        },
+        {
+          "id": "hieu-ung-doppler-am",
+          "file": "docs/wiki/hieu-ung-doppler-am.md",
+          "match": true,
+          "currentSHA256": "1a3be314c9bb04e29190e54be8f39cc3d0d2e9ae7f287252fd8397d8a196906e",
+          "reviewedSHA256": "1a3be314c9bb04e29190e54be8f39cc3d0d2e9ae7f287252fd8397d8a196906e"
+        },
+        {
+          "id": "doppler-dien-tu",
+          "file": "docs/wiki/doppler-dien-tu.md",
+          "match": true,
+          "currentSHA256": "a66c3e7f6a599fe8dc42a98b5ce6c0737e0004f93d786b94eaa1e54a4a7c2b21",
+          "reviewedSHA256": "a66c3e7f6a599fe8dc42a98b5ce6c0737e0004f93d786b94eaa1e54a4a7c2b21"
+        },
+        {
+          "id": "song-xung-kich",
+          "file": "docs/wiki/song-xung-kich.md",
+          "match": true,
+          "currentSHA256": "93a93dbdaa131c63ef8ba57bafbfe88809a925ce7b005188bb628d26b86165e7",
+          "reviewedSHA256": "93a93dbdaa131c63ef8ba57bafbfe88809a925ce7b005188bb628d26b86165e7"
+        },
+        {
+          "id": "so-mach",
+          "file": "docs/wiki/so-mach.md",
+          "match": true,
+          "currentSHA256": "607878e4318270307cf8fe0843f77010a4d73426720a38a5f07a224ae2868289",
+          "reviewedSHA256": "607878e4318270307cf8fe0843f77010a4d73426720a38a5f07a224ae2868289"
+        },
+        {
+          "id": "tieng-no-vuot-am",
+          "file": "docs/wiki/tieng-no-vuot-am.md",
+          "match": true,
+          "currentSHA256": "e9a1dd465ce05cb69fa889c72f98fa7f818ade0a327bed1870c14ab42a31562c",
+          "reviewedSHA256": "e9a1dd465ce05cb69fa889c72f98fa7f818ade0a327bed1870c14ab42a31562c"
+        },
+        {
+          "id": "nut-va-bung-song",
+          "file": "docs/wiki/nut-va-bung-song.md",
+          "match": true,
+          "currentSHA256": "27ec02bc0bfe15a177fdb00c5f11db1fa6baff9631dafecb372c20973623361f",
+          "reviewedSHA256": "27ec02bc0bfe15a177fdb00c5f11db1fa6baff9631dafecb372c20973623361f"
+        },
+        {
+          "id": "hoa-am-va-am-boi",
+          "file": "docs/wiki/hoa-am-va-am-boi.md",
+          "match": true,
+          "currentSHA256": "8b05ac24452683f364a0ace9f872e7fb8a06e11ea6075acfd28e43eb43d0e0d9",
+          "reviewedSHA256": "8b05ac24452683f364a0ace9f872e7fb8a06e11ea6075acfd28e43eb43d0e0d9"
+        }
+      ],
+      "pendingSupportDeltas": [
+        {
+          "id": "dong-luong-vat-ly",
+          "file": "docs/wiki/dong-luong-vat-ly.md",
+          "match": false,
+          "currentSHA256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+          "reviewedSHA256": "83e18d72bf39aadf22348708bf8f0e71534f62afd55dab1c9f64f6c851e603ad"
+        }
+      ],
+      "supportStatus": "specific-support-deltas-need-review",
+      "sharedWikiDeltaDisposition": "Accepted by complete parent reading of current6 unique Wiki pages and29 numerical/algebra/model checks, no source rewrite needed.",
+      "remaining": "This accepts supporting-material semantic continuity; fullchapter originalframes/endexercises and actualpublicversion retain separate evidence."
+    }
+  ],
+  "sharedWikiDeltaReview": {
+    "status": "accepted-current-shared-wiki-technical-content-scoped",
+    "reviewedFiles": [
+      {
+        "file": "docs/wiki/luc.md",
+        "sha256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+        "rawSHA256": "414ac982f88dbb5d107d9a8a0eef972d8703abc1f4f03f5b3bed595e8e8b8fc4"
+      },
+      {
+        "file": "docs/wiki/cong-nang-luong.md",
+        "sha256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+        "rawSHA256": "8b3bfdc14a72fecdf1c1ecbf0e25c0bc2b60839005caef89ffafcd7b9c4ef94d"
+      },
+      {
+        "file": "docs/wiki/dao-ham.md",
+        "sha256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+        "rawSHA256": "839a67eea884940443cf33816a328bab70316a84edc09cb83d7a7f54a57d41de"
+      },
+      {
+        "file": "docs/wiki/vector.md",
+        "sha256": "84351278b5d4b0697520af57d27e91741231db75056ccae206d98504b974c664",
+        "rawSHA256": "46154fa0719a0790b65c421cdb3729a0b8563376ab8f14eb13f70f25598938b8"
+      },
+      {
+        "file": "docs/wiki/khoi-tam.md",
+        "sha256": "4519752233f7e8844ba7d2cb7cc12d32087ac613b584a7e9fbc00f494b20b145",
+        "rawSHA256": "e46461c0308c275c172ba07f94e9eae89f83a902e845315e71ea59c6a53d0233"
+      },
+      {
+        "file": "docs/wiki/dong-luong-vat-ly.md",
+        "sha256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+        "rawSHA256": "cd8fc9f86ca57d9f4bd566b531b4dd91ab2331a8d1ee9c6ac52cac7b772fa55f"
+      }
+    ],
+    "actualParentReading": "All6 current Wiki pages read in full. Assumptions, vector versus scalar statements, units, constant-mass inertial-frame qualifications, work/potential signs, derivative existence, centreofmass and impulse conservation statements inspected. No substantive scientific defect found in this scoped pass.",
+    "pythonChecks": [
+      "Force example adds vector components",
+      "Newton second law uses nonzero constant mass",
+      "Magnetic force perpendicular to velocity [1, 2, 3]",
+      "Magnetic force perpendicular to velocity [2, 0, 1]",
+      "Magnetic force perpendicular to velocity [-3, 1, 2]",
+      "Work example gives6joules",
+      "Perpendicular force has zero dot product",
+      "Varying conservative force work agrees endpointpotential",
+      "Work energy uses sum of forces",
+      "Potential additiveconstant cancels",
+      "Electric conservative work sign",
+      "Vector addition example",
+      "Scalar multiplication example",
+      "Vector negative example",
+      "Nonzero vector normalization",
+      "Changing orthonormalbasis preserves magnitude",
+      "Derivative x squared at3",
+      "Affine derivative is3",
+      "Absolute value has unequal one-sidedquotients",
+      "Stationary x cube not local extremum",
+      "Two-body mass weighting",
+      "Centre ofmass convexhull forpositivemass",
+      "Centre ofmass momentum relation",
+      "Internal equalopposite forces cancel",
+      "Opposite momenta totalzero",
+      "Opposite moving bodies stillpositivekineticenergy",
+      "Zero intervalimpulse permitsnonzero instantaneousforce",
+      "Relativistic gamma at0.6c",
+      "Lowvelocity Newtonlimit"
+    ],
+    "checkCount": 29,
+    "scope": "These shared technical Wiki deltas only. Does not certify all site Wiki, figures, endexercise answers or deployment."
+  }
+}

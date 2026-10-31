@@ -1,0 +1,784 @@
+{
+  "status": "accepted-current-chapter2-theory-reference-and54-original-image-continuity",
+  "chapter": 2,
+  "privateP1Revision": "ec53e79d1e8b4b2a9720aaf0cc9bb6c1edc4d1e3",
+  "privateP2Revision": "49c804b98f5f8376b809a14543f1163b21482fee",
+  "receiptSHA256": "badcdf1cc2ee36823479ddf6ea408eb193076539f0a7eed68959f9ab9ea7429b",
+  "sourceFiles": [
+    {
+      "file": "raw_materials/physics/translations/chapter-02/00-mo-dau.md",
+      "reviewedSHA256": "2493f03acc24aee9dc7031de3426bf153a08f55fca1075b2ead2ce43a31e8dc6",
+      "owners": [
+        [
+          "P1",
+          "c99bfabc7a73699e27fabd221b04c968c06ed95715fa17e0955588d3ed3d2600"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\00-mo-dau.md",
+          "sha256": "2493f03acc24aee9dc7031de3426bf153a08f55fca1075b2ead2ce43a31e8dc6"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\00-mo-dau.md",
+          "sha256": "2493f03acc24aee9dc7031de3426bf153a08f55fca1075b2ead2ce43a31e8dc6"
+        }
+      ]
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/01-do-doi-van-toc-trung-binh.md",
+      "reviewedSHA256": "c0c9fb2b6e8a83c6579516ba977bf5ce93785b9c85f6d5302aad4b64266b98bf",
+      "owners": [
+        [
+          "P1",
+          "06b1f6195465020e954501583629c834b122962458735da64492b8e43ede0f0e"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\01-do-doi-van-toc-trung-binh.md",
+          "sha256": "c0c9fb2b6e8a83c6579516ba977bf5ce93785b9c85f6d5302aad4b64266b98bf"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\01-do-doi-van-toc-trung-binh.md",
+          "sha256": "c0c9fb2b6e8a83c6579516ba977bf5ce93785b9c85f6d5302aad4b64266b98bf"
+        }
+      ]
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/02-van-toc-tuc-thoi.md",
+      "reviewedSHA256": "4670b0bc4d940e1b1ebf4d842fac978eeafe5d5371c153cc322793dab4edd7f3",
+      "owners": [
+        [
+          "P1",
+          "6e8ab10da732b1ce6544f447414aac94319d999a5415376f0c7aebb00ba2588c"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\02-van-toc-tuc-thoi.md",
+          "sha256": "4670b0bc4d940e1b1ebf4d842fac978eeafe5d5371c153cc322793dab4edd7f3"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\02-van-toc-tuc-thoi.md",
+          "sha256": "4670b0bc4d940e1b1ebf4d842fac978eeafe5d5371c153cc322793dab4edd7f3"
+        }
+      ]
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/03-gia-toc.md",
+      "reviewedSHA256": "193fcc1e87a9db696d42e1dcbfbeeecfe14b5e9eb898d206a05abc62624f8455",
+      "owners": [
+        [
+          "P1",
+          "2273f5f179d9e2e1272176880b4c04f0348cc8b764971f56e4d9223f46fa8f0a"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\03-gia-toc.md",
+          "sha256": "193fcc1e87a9db696d42e1dcbfbeeecfe14b5e9eb898d206a05abc62624f8455"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\03-gia-toc.md",
+          "sha256": "193fcc1e87a9db696d42e1dcbfbeeecfe14b5e9eb898d206a05abc62624f8455"
+        }
+      ]
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/04-gia-toc-khong-doi.md",
+      "reviewedSHA256": "0e505867ebec3cafda5d793ce7b5bc50e0cacc7339fedc200295d8594ee060ac",
+      "owners": [
+        [
+          "P1",
+          "c7c6225f42f733125ff2ace3d7cdcdfa28b750e166fae9a3a15b38f190d6f3a9"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\04-gia-toc-khong-doi.md",
+          "sha256": "0e505867ebec3cafda5d793ce7b5bc50e0cacc7339fedc200295d8594ee060ac"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\04-gia-toc-khong-doi.md",
+          "sha256": "0e505867ebec3cafda5d793ce7b5bc50e0cacc7339fedc200295d8594ee060ac"
+        }
+      ]
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/05-roi-tu-do.md",
+      "reviewedSHA256": "2b4d7075a2943b5e342e0ad19773c002928325e35b542d6ef265331c06b8a3e0",
+      "owners": [
+        [
+          "P1",
+          "7ada28b4f84c246e774d3f9eb0ecf57d8fb515c1a0b809ab838cbc426fadbfd1"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\05-roi-tu-do.md",
+          "sha256": "2b4d7075a2943b5e342e0ad19773c002928325e35b542d6ef265331c06b8a3e0"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\05-roi-tu-do.md",
+          "sha256": "2b4d7075a2943b5e342e0ad19773c002928325e35b542d6ef265331c06b8a3e0"
+        }
+      ]
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/06-tich-phan-van-toc-vi-tri.md",
+      "reviewedSHA256": "6d42ad1a831da3701b1732e2869ca6f5d3876d3fc568a785dcc8b4eec1992463",
+      "owners": [
+        [
+          "P1",
+          "88c7d895b71f1db5bd4e32f7765691195ce566ab812cba143ac05d3b3e14bca6"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\06-tich-phan-van-toc-vi-tri.md",
+          "sha256": "6d42ad1a831da3701b1732e2869ca6f5d3876d3fc568a785dcc8b4eec1992463"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\06-tich-phan-van-toc-vi-tri.md",
+          "sha256": "6d42ad1a831da3701b1732e2869ca6f5d3876d3fc568a785dcc8b4eec1992463"
+        }
+      ]
+    },
+    {
+      "file": "raw_materials/physics/translations/chapter-02/07-tom-tat.md",
+      "reviewedSHA256": "e1fa039cf9afdb2fe84481c263de9e16df70ba234db53a7f16bb9dcc2d511c6c",
+      "owners": [
+        [
+          "P1",
+          "8bbce9b6dc1133741418696b9036efe210de636cbbc306eb31618a8ded5af026"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\Documents\\StudyHub\\.course-repositories\\vat-ly-1\\raw_materials\\physics\\translations\\chapter-02\\07-tom-tat.md",
+          "sha256": "e1fa039cf9afdb2fe84481c263de9e16df70ba234db53a7f16bb9dcc2d511c6c"
+        },
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\translations\\chapter-02\\07-tom-tat.md",
+          "sha256": "e1fa039cf9afdb2fe84481c263de9e16df70ba234db53a7f16bb9dcc2d511c6c"
+        }
+      ]
+    },
+    {
+      "file": "docs/.vitepress/physics-motion-course.mjs",
+      "reviewedSHA256": "7515ce343cc027d65d1e88c080a6c96c417e868ff8f8691d9db856f57d1a1ce2",
+      "owners": [
+        [
+          "P2",
+          "6653c9368eb16881407627a202c328e60c65423859bf771f50544a44ef62933b"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics-motion-course.mjs",
+          "sha256": "7515ce343cc027d65d1e88c080a6c96c417e868ff8f8691d9db856f57d1a1ce2"
+        }
+      ]
+    },
+    {
+      "file": "docs/.vitepress/physics-motion-foundations.mjs",
+      "reviewedSHA256": "22bb8fdf072d5b74c0724b8390582650d751c138f077d18fad8bbffa3d612a13",
+      "owners": [
+        [
+          "P2",
+          "d69c6b83677bf903d08e8aa5e94089365a7869e3be53945da3752cf5617618ce"
+        ]
+      ],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics-motion-foundations.mjs",
+          "sha256": "22bb8fdf072d5b74c0724b8390582650d751c138f077d18fad8bbffa3d612a13"
+        }
+      ]
+    },
+    {
+      "file": "docs/.vitepress/physics1-remaining-02-image-annotations.mjs",
+      "reviewedSHA256": "594c9b6dfc3d4f3bc3ae5fbb7fb14f96cc3df0ff750ab437683dd90f71a5303c",
+      "owners": [
+        [
+          "P1",
+          "5efe01744d0597b954b786209c19ebb7b5541b577284e574aad49aa4160060a2"
+        ]
+      ],
+      "status": "delta-needs-review",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics1-remaining-02-image-annotations.mjs",
+          "sha256": "5efe01744d0597b954b786209c19ebb7b5541b577284e574aad49aa4160060a2"
+        }
+      ]
+    },
+    {
+      "file": "docs/.vitepress/physics-image-labels.mjs",
+      "reviewedSHA256": "e5ec23e8e8023cef7a676e36b771194e7fbbeb2bfd90bc4af12c11161f63f91b",
+      "owners": [],
+      "status": "delta-needs-review",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\.vitepress\\physics-image-labels.mjs",
+          "sha256": "0e7bb42c7cf73dd5f6ad54ae22c711c6f2a146e1b41d0983ef54113fd77c143d"
+        }
+      ]
+    },
+    {
+      "file": "docs/.vitepress/concepts.mjs",
+      "reviewedSHA256": "89116f8dff0c1ae5f042ff7e0e63daef289d2e5f00dfb25d0f2a84b96b00de25",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\.vitepress\\concepts.mjs",
+          "sha256": "89116f8dff0c1ae5f042ff7e0e63daef289d2e5f00dfb25d0f2a84b96b00de25"
+        }
+      ]
+    },
+    {
+      "file": "docs/.vitepress/wiki-content.mjs",
+      "reviewedSHA256": "c3f58a53b291f05cf34b968cf08a9b3fc26b882d446b573ee6cab9ed0b729a22",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\.vitepress\\wiki-content.mjs",
+          "sha256": "c3f58a53b291f05cf34b968cf08a9b3fc26b882d446b573ee6cab9ed0b729a22"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/do-doi.md",
+      "reviewedSHA256": "62bbbbadc301899d0df4e6f07e7ec2e495c8243a09187e6c577e82da5ae88e7b",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\do-doi.md",
+          "sha256": "62bbbbadc301899d0df4e6f07e7ec2e495c8243a09187e6c577e82da5ae88e7b"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/thanh-phan-vector.md",
+      "reviewedSHA256": "151d00d0b3c615a4226da411fe576e128507ba50489fd453c76cc0c7e238d72b",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\thanh-phan-vector.md",
+          "sha256": "151d00d0b3c615a4226da411fe576e128507ba50489fd453c76cc0c7e238d72b"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/van-toc-vat-ly.md",
+      "reviewedSHA256": "e7609dd8a40bab5370ec26ad86e88f8959baf8477c1f75dd35930d1037a30952",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\van-toc-vat-ly.md",
+          "sha256": "e7609dd8a40bab5370ec26ad86e88f8959baf8477c1f75dd35930d1037a30952"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/toc-do-chuyen-dong.md",
+      "reviewedSHA256": "d0fe87457658fd6ee65b2ef38f74772eea5dc6932ba61195d2ae75b3848d5323",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\toc-do-chuyen-dong.md",
+          "sha256": "d0fe87457658fd6ee65b2ef38f74772eea5dc6932ba61195d2ae75b3848d5323"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/gia-toc.md",
+      "reviewedSHA256": "2921b6d1f3844e0f7e4ffcbf2c4936d4d362e0f7cde68927a659b71928f4108c",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\gia-toc.md",
+          "sha256": "2921b6d1f3844e0f7e4ffcbf2c4936d4d362e0f7cde68927a659b71928f4108c"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/roi-tu-do.md",
+      "reviewedSHA256": "0cd574e8b09ab3debabb59964dc86d18fcfb9cc6aa6b60cbb9a273c547e60e0e",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\roi-tu-do.md",
+          "sha256": "0cd574e8b09ab3debabb59964dc86d18fcfb9cc6aa6b60cbb9a273c547e60e0e"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/dao-ham.md",
+      "reviewedSHA256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dao-ham.md",
+          "sha256": "584169b592766db7d5a051bcc8314bcb123336f55dca66ea8107e18bb62392c8"
+        }
+      ]
+    },
+    {
+      "file": "docs/wiki/tich-phan.md",
+      "reviewedSHA256": "3280e4219f4b1fa7ada28ed084b4250f5a1e26e08ec629fcb50a538219cd8200",
+      "owners": [],
+      "status": "reviewed-bytes-match-current",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\tich-phan.md",
+          "sha256": "3280e4219f4b1fa7ada28ed084b4250f5a1e26e08ec629fcb50a538219cd8200"
+        }
+      ]
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/02-chuyen-dong-thang.md",
+      "reviewedSHA256": "f915dd5e1994681b186800a3260bfd909c34b7db72f6404e8239d4b08292f1bc",
+      "owners": [
+        [
+          "P1",
+          "f8b63bc0175f420bfe044ae48d57d928c4c87f51b9bc3af896cf82c128b39eb1"
+        ]
+      ],
+      "status": "delta-needs-review",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-1\\bai-giang\\02-chuyen-dong-thang.md",
+          "sha256": "f8b63bc0175f420bfe044ae48d57d928c4c87f51b9bc3af896cf82c128b39eb1"
+        }
+      ]
+    },
+    {
+      "file": "scripts/prepare-physics-translation-assets.py",
+      "reviewedSHA256": "b79f9d63687c9b4cec9b04fba437681972badabd094830c33be669897a3b407b",
+      "owners": [],
+      "status": "delta-needs-review",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\scripts\\prepare-physics-translation-assets.py",
+          "sha256": "637fb9ffc0ed83de012084e31e3d4d3c4c2cba16e2c183ba9d4e1ca205849be8"
+        }
+      ]
+    },
+    {
+      "file": "src/content/courses/vat-ly-1/lectures/02-chuyen-dong-thang/content.json",
+      "reviewedSHA256": "0d21691eb284da0b828d34bb2fee8e353330a507bd94a71c942e52a00593d91a",
+      "owners": [
+        [
+          "P1",
+          "2ae5ceb644967dfb5429f66fceadea9426e540d69ce5ce60897ef709be4cd694"
+        ]
+      ],
+      "status": "delta-needs-review",
+      "currentCandidates": [
+        {
+          "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\src\\content\\courses\\vat-ly-1\\lectures\\02-chuyen-dong-thang\\content.json",
+          "sha256": "2ae5ceb644967dfb5429f66fceadea9426e540d69ce5ce60897ef709be4cd694"
+        }
+      ]
+    }
+  ],
+  "originalImages": [
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/mo-chuong-chay.png",
+      "sha256": "6141b553061f8508a8b7fcc92f267b59de23c43242e4c73f63d7a3a52e7d290f",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 54
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-1.png",
+      "sha256": "844ef0583df513658f855c6fbccd304346fbe1d8893035485203575f20617bea",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 55
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-2.png",
+      "sha256": "21ac8d4932d8d54e3b9605e7e13f82096a7ae6ae631b98f75903c5d30e900e70",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 56
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-3.png",
+      "sha256": "231590d0c050664b946cc30ac8dee6821029968842d7148178053347f5ba2f24",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 56
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-4.png",
+      "sha256": "92594dcd522e06c614166788eda7534bdae9364a2b7151f9141d6e8581c7f35c",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 57
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-5.png",
+      "sha256": "217defb3d193e1fbb48152211a211765ab31b017f016f86ce01fbee43178003e",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 57
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-6.png",
+      "sha256": "3f1d23cf3012b4f9cbb7e30299ee34eeb8b2034407c7055fa8d129f165db3c1e",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 58
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-7.png",
+      "sha256": "2b7d853a42b82d34c6e3c9b3198e8a04935bc677f230ad6cf735769582cbea70",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 59
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-8.png",
+      "sha256": "0f894078afb6f10bf9a95d158c24ffa060068380e9ccc3c95c672dcada747362",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 59
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-9.png",
+      "sha256": "b52886cf59af1d86a4929250e932038fddd1b7b5e72238dda3dcf4df4432a0c7",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 60
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-10.png",
+      "sha256": "e136c337c499744462a1fde53c0ec4f6e37a5a919a08f6b4597074935ed00cef",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 61
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-11.png",
+      "sha256": "1caede9195f8704377cd4efe12cdf4a60fc0ae984d4bcac9f749cfd43361b5dd",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 61
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-12.png",
+      "sha256": "9472a5a6ad5d01c1357654c9d473bfa4bb7e61215e1158dccb5efb5ac27ac78c",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 63
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-13.png",
+      "sha256": "14bf4e59eb697ec35af4d534e99834aca82f50501c40346a5c2e7436cf0e2b77",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 63
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-14.png",
+      "sha256": "e341aaed2d2b39719ca1432e3ec532a8be3701354dd9198360fd26bbcbbb1802",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 64
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-15.png",
+      "sha256": "c0e1f9178627e61e95ef0bba48d576d076341de38ac0fa5a0840937484c94c02",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 64
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-16.png",
+      "sha256": "e0e7d7e1dab6661fca797d3d057afe49e4601b748ff36f72bace0dd7c95e9ce8",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 65
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-17.png",
+      "sha256": "da0ec112f0475b1e2e3517d840ab3dad1d849f8514a78f6a2acf0153232b0d07",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 65
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-18.png",
+      "sha256": "1a6cedef56565e93f4bd11005073ea2cb6db8314a810a4fc0ceceac3ff0975fa",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 66
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-19.png",
+      "sha256": "3761a25e47410669757c14c67c2f7c60718ef37db251b704c37781de374d3d0e",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 67
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/ung-dung-gia-toc-lon.png",
+      "sha256": "57bc38146b6490e8b479bb1914b39285ac8787884eccc8f222a0edb3bbd10971",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 66
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-20.png",
+      "sha256": "8e6cf44b72550e2f6c812f08c39a74ba5e118b205ec442a2972c1dc420ed076f",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 68
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-21.png",
+      "sha256": "976bb2ac5aa3ddfcf9f8ac6d837c53ed2ec5830a81a6cf1a45a9981f00e4110d",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 69
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/cau-hoi-2-4.png",
+      "sha256": "526cc00d8f4c6be0c77ee13a2ba37b63ccdd1b5056d3c1124da6b96dbf1eeec3",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 69
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-22.png",
+      "sha256": "cb5dca299fba9051862ca423c39d8f5d2bc52b30fe29c4ae8f31a60edd181a06",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 70
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-23.png",
+      "sha256": "3e136ef3d8cbcd3dd7ba1fd28ec08fe685b6a20694880cc62087ffd9485ddea8",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 71
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-24.png",
+      "sha256": "48fc8288af8098e3a047707e0126bc9787fdbe704dc3d3a2dc55562927108979",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 71
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-25.png",
+      "sha256": "cb690af769afe3f75a1793714b91324bfe815ba9b082298f9313baa4216155e6",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 72
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-26.png",
+      "sha256": "97819120c8bc647181960364047f8d8cb06ada84f90c9acb7ab317d416e07521",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 73
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-27.png",
+      "sha256": "3b0a9d5ff3333be7c84debbc060d4b16f56f58ed96811f373d967c22e8237b3b",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 73
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-28.png",
+      "sha256": "c6e1f33d91bbc868b1ac81c8db9d528c14e72d38073c655b716612100510c9b9",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 74
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-29.png",
+      "sha256": "698805e8e368ab1cd849eb2e5a3cc60db15ba5d8b3315f6ce63626b21c31352c",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 75
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/tom-tat-van-toc.png",
+      "sha256": "0cde8385e52021dfd2c4d0c18b61fecf73964feda1123aa504c646a42cdcc613",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 76
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/tom-tat-gia-toc.png",
+      "sha256": "b4527440a8c5b48d8c6577d2c3721abd7943e76c483d319a2ed33e8b11c72658",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 76
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/tom-tat-gia-toc-khong-doi.png",
+      "sha256": "6ced2498797e17f262f66ee8f26b561b1af5b326bba812a11ea4e31ee7a82cc7",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 76
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/tom-tat-roi-tu-do.png",
+      "sha256": "e2496fca5b530910913e62e43ad5a629ada909a4a413e69c64de60044812f84e",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 76
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/tom-tat-tich-phan.png",
+      "sha256": "6b1438ebd21fd33239a56ce2a60058dd77b43309b58e6088532ad681f909308a",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 76
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-2-30.png",
+      "sha256": "9bee0cf0b506e624f70fda0848751bad253cf91159b5a3cad5c3a2270fe5f7d4",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 78
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-q2-2.png",
+      "sha256": "a18dd850daa85dcf15ed2c9425a6d588d39fc5dcc358ad1609ca8bc56464c1f5",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 78
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-9.png",
+      "sha256": "0a8c864d910b67271848d52221439d2d82b070dbaea02652a8489cd3b34d7e42",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 79
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-10.png",
+      "sha256": "142b467c83da4ecc269e880e125a353a651a1ebf5f491db16196107d4a03c285",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 79
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-11.png",
+      "sha256": "42bb9509ac70445f96de17620bb88ec6e9c1e7fce4c76256fd5f18b0a0b5d3aa",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 79
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-12.png",
+      "sha256": "6b12153b9d494834d2b24a969096528b4786a52dfc400e59806413a586133bfe",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 79
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-26.png",
+      "sha256": "3cbac825a781301fb3dfee9b0f507f1ae0cafd02e3d2e48532401be9d0c0f76d",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 80
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-28.png",
+      "sha256": "48e1003478265c81f3685fad354a6b4000fc601eca87bd50135edbfb83f306f0",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 81
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-29.png",
+      "sha256": "933ff8d3639bee9989e3380b7ba21586389dea02a8de95286eb518e38612d6fd",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 81
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-40.png",
+      "sha256": "14827970fd1789d0c22ee01214ad089ca3dfe868b1220aa21f08f28c9dd50314",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 81
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-e2-42.png",
+      "sha256": "a522906f0804e29658ea612eeca049ce5527758c60d1bc26f21363b8414a20e3",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 81
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-61.png",
+      "sha256": "c2c86ee2bfa2504ba058ba48d47133cfefe4dce610e7c63e29e57743fee5880e",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 82
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-62.png",
+      "sha256": "4c368018e277552bf766abd0b04b49e9bd38fd0e158084e3c6632b2b561c5716",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 83
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-70.png",
+      "sha256": "ca85d0ed55b1ef6b63857b962d4ca45e410c401e3ac96949aae1c35aa62ea6fe",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 83
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-84.png",
+      "sha256": "e8296109ee2c62340c428ddcc88c6a35c049661a857d349ba7e60b92b63f173f",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 84
+    },
+    {
+      "file": "docs/vat-ly-1/bai-giang/img/young-02/hinh-p2-92.png",
+      "sha256": "6536005584114f4e129584ca0ad21ef1275f73c3cc97305db3290420ddf013e5",
+      "preservedPriorFullFrameAndCaptionReview": true,
+      "pdfPage": 85
+    }
+  ],
+  "scope": "Current byte continuity to prior explicit source, fullframe and supporting-material semantic review, not new independent semantic review. Shared modules may belong P2; cache HEAD is not authoritative.",
+  "pendingDeltas": [],
+  "deltaDisposition": {
+    "annotations": "Only media key added; original53 entries identical. Extra crop and two complete English labels visually reviewed on2026-11-01; Vietnamese pair translations checked once per image.",
+    "globalLabelRegistry": "Only chapter17 import/spread added, and its locked module cannot override young-02 keys.",
+    "wrapper": "Theory includes unchanged; orientation paragraph explains actual tab placement. Exercises move to chapter component covered by separate public127-unit receipt.",
+    "assetScript": "Only media crop added. No existing figure crop changed.",
+    "contentIndex": "Exactly retained theory fragments/examples/exercises/selfchecks/assets. End-exercise metadata moved out of Notes as intended; this does not reaccept exercise semantics."
+  },
+  "checks": [
+    "Annotation delta adds only one media key; all53 prior label arrays byte-equivalent",
+    "Global registry changes only chapter17 module, retaining chapter2 precedence",
+    "New chapter17 import has no key that can override chapter2 labels",
+    "Added imported annotation module matches lockedP1 manifest",
+    "Notes wrapper preserves all theory includes/content except accurate UI orientation paragraph",
+    "Exercises wrapper uses supported separate chapter component",
+    "Original asset preparation crops unchanged apart from one extra media crop",
+    "Notes fragments exactly first8 reviewed theory sources",
+    "Unchanged Notes metadata: course",
+    "Unchanged Notes metadata: lecture",
+    "Unchanged Notes metadata: route",
+    "Unchanged Notes metadata: notes",
+    "Unchanged Notes metadata: topics",
+    "Unchanged Notes metadata: slides",
+    "Unchanged Notes metadata: cheatsheet",
+    "Unchanged Notes metadata: prerequisites",
+    "Unchanged Notes metadata: examples",
+    "Current index keeps every reviewed theory exercises",
+    "Current index keeps every reviewed theory solutions",
+    "Current index keeps every reviewed theory assets",
+    "Extra media image byte-match to locked manifest",
+    "Extra media crop RGB identical to supplied PDF page77",
+    "Both complete English labels retained in crop"
+  ],
+  "extraMediaImage": {
+    "asset": "docs/vat-ly-1/bai-giang/img/young-02/hoc-lieu-chuong-2.png",
+    "pdfPage": 77,
+    "crop": [
+      306,
+      59,
+      614,
+      101
+    ],
+    "originalPixelMatch": true,
+    "sha256": "bde99dbdcb60ee434b77d140505b4ce2a66d3c396b7f12682723e3f4b800bbff",
+    "freshRGBScale": 2,
+    "pixelSize": [
+      616,
+      84
+    ]
+  },
+  "fullFrameEvidence": "Prior explicit context/axis/label review for original53 figures is preserved by exact hashes; media crop freshRGB rechecked and visually inspected with both complete instruction and QR. Pixel matching alone is not used as proof of full frame.",
+  "cheatsheetAndWikiScope": "Unchanged reviewed33 formula blocks and8 actual Wiki pages, including definitions/conditions/units, tied through20 matching source files. Shared physics-motion course/foundations live in privateP2; no migration or duplicated content needed.",
+  "remaining": "Current chapter2 public-page runtime remains covered only by preserved baseline; no new whole-course, end-answer, or deployment acceptance inferred.",
+  "privateEvidenceRevision": "d805e1a00ba74fa210d5ab4802330481e497e99d",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/chapter22-23-images-and-reference-continuity-20261101.tar.gz",
+  "privateEvidenceArchiveSHA256": "348e54d58c1aff82f14a3f3c8526036300f3f40ff86bafd4f87a7c22af909656",
+  "wholeGoalComplete": false
+}

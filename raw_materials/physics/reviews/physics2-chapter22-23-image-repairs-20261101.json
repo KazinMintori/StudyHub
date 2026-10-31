@@ -1,0 +1,2840 @@
+{
+  "privateEvidenceRevision": "d805e1a00ba74fa210d5ab4802330481e497e99d",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/chapter22-23-images-and-reference-continuity-20261101.tar.gz",
+  "privateEvidenceArchiveSHA256": "348e54d58c1aff82f14a3f3c8526036300f3f40ff86bafd4f87a7c22af909656",
+  "wholeGoalComplete": false,
+  "status": "accepted-source-image-corrections-pending-cloud-and-actual-deployed-verification",
+  "originalPNGs": 94,
+  "repairedCrops": 34,
+  "changedLabelImageKeys": 7,
+  "originalPhotosRedrawn": false,
+  "chapters": [
+    {
+      "sourceChapter": 22,
+      "originalReviewSHA256": "b515f15fecc9f1f744895952f3ee7d36a5d31b9e888f880a7e8ec4d64d0e223b",
+      "afterreviewSHA256": "2396ed94b5ae8bd102f597875f240333b584395f0c6160f4b2425dcc74124e55",
+      "originalScopeCounts": {
+        "original_png_assets": 47,
+        "referenced_original_png_assets": 47,
+        "original_png_references": 52,
+        "unreferenced_original_png_assets": 0,
+        "frame_needs_fix": 18,
+        "caption_meaning_needs_fix": 1,
+        "label_registry_needs_fix": 4,
+        "overall_needs_fix": 19,
+        "overall_pass": 28,
+        "supplemental_svg_assets": 14
+      },
+      "afterreview": {
+        "status": "pass-bounded-afterreview",
+        "scope": "Bounded after-review of 18 corrected chapter22 PNGs and four registry keys only. No whole-course/source-theorem/end-answer/browser acceptance.",
+        "bound_to": "Unpublished privateP2 bytes bound to exact integration afterSHA256 values; old manifest intentionally not treated as current for changed files.",
+        "integration_file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\qa\\physics-final-20261101\\image-repairs\\integration.json",
+        "integration_sha256": "682de779b44ce9176b7d4dcde98091bbe47e3efe4d26e2c8a068496464eac5ed",
+        "source_pdf_sha256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
+        "source_script_sha256": "fe6d6b7510aadbac69e0e54928ab625a606cfef1d2aba52f3830c5c4fa836b81",
+        "changed_pngs": [
+          {
+            "image": "hinh-22-3",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-3.png",
+            "current_sha256": "a5d2252088a3ff94e94aedba635d3a6b800e6261de2b617c3274a6b1c5c86074",
+            "expected_after_sha256": "a5d2252088a3ff94e94aedba635d3a6b800e6261de2b617c3274a6b1c5c86074",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 720,
+            "pdf_index": 739,
+            "new_crop_pdf_points": [
+              207,
+              96,
+              575,
+              245
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "Top of panel headings (a), (b), (c) is shaved by the y=100 crop. The full source headings start at approximately y=98.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-1.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-6",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-6.png",
+            "current_sha256": "389a6efca824efd0b35a803086f50a09a931e7e1102243389d55d8f879ad3313",
+            "expected_after_sha256": "389a6efca824efd0b35a803086f50a09a931e7e1102243389d55d8f879ad3313",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 722,
+            "pdf_index": 741,
+            "new_crop_pdf_points": [
+              35,
+              190,
+              195,
+              744
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "Entire panel (a) English heading and explanation of parallel E/A and flux EA are outside the crop. The remaining flux equation is cut at y=225.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-1.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-7",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-7.png",
+            "current_sha256": "0a5c5a5ac6c6ae0f189e929d151571f0d98dfd0368782d8e121bd11bb496ebe0",
+            "expected_after_sha256": "0a5c5a5ac6c6ae0f189e929d151571f0d98dfd0368782d8e121bd11bb496ebe0",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 723,
+            "pdf_index": 742,
+            "new_crop_pdf_points": [
+              125,
+              660,
+              284,
+              740
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "Right-side vector E label at x=274.9–280.2 is wholly omitted, and field-line arrowheads at the right border are trimmed.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-1.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-8",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-8.png",
+            "current_sha256": "508c504c0ae12625a50f665dfc993142e7f36fe4445c49ee0ce896531b1e5768",
+            "expected_after_sha256": "508c504c0ae12625a50f665dfc993142e7f36fe4445c49ee0ce896531b1e5768",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 724,
+            "pdf_index": 743,
+            "new_crop_pdf_points": [
+              334,
+              116,
+              540,
+              220
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The top panel labels (a)/(b), normals n3/n5 and parts of n2, left cube/field lines are outside the crop. Current bottom also picks up fragments of the following worked equation.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-1.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-9",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-9.png",
+            "current_sha256": "d84a355bfff29ba370d8aa59a06c5fd06f160cdca89333891468ce43ba825285",
+            "expected_after_sha256": "d84a355bfff29ba370d8aa59a06c5fd06f160cdca89333891468ce43ba825285",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 724,
+            "pdf_index": 743,
+            "new_crop_pdf_points": [
+              385,
+              499,
+              500,
+              601
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The dA vector label at y=501.4 and tops of outward field arrows are cut by y=509.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-1.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-10",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-10.png",
+            "current_sha256": "c5f49dc78340e4ebe890447044c4f458f41707a89420543e64b4945940929c90",
+            "expected_after_sha256": "c5f49dc78340e4ebe890447044c4f458f41707a89420543e64b4945940929c90",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 725,
+            "pdf_index": 744,
+            "new_crop_pdf_points": [
+              197,
+              589,
+              319,
+              742
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The source portrait raster is x=197.981–317.981, y=589.800–741.000. Current x=210–310 crops both sides of the portrait.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-1.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-11",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-11.png",
+            "current_sha256": "8aa512d9e315e672f792fe2c90f96bc38a3559e9e198ebcf71e78ef1109173a0",
+            "expected_after_sha256": "8aa512d9e315e672f792fe2c90f96bc38a3559e9e198ebcf71e78ef1109173a0",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 726,
+            "pdf_index": 745,
+            "new_crop_pdf_points": [
+              35,
+              116,
+              195,
+              317
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The blue two-line annotation about equal numbers of field lines and equal flux, plus the starts of the dotted explanatory arrows, is excluded above y=144.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-2.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-12",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-12.png",
+            "current_sha256": "5372cd828b1f20ebc0ef633109981d6f13484994053e066f9368842ef19ef513",
+            "expected_after_sha256": "5372cd828b1f20ebc0ef633109981d6f13484994053e066f9368842ef19ef513",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 726,
+            "pdf_index": 745,
+            "new_crop_pdf_points": [
+              210,
+              556,
+              570,
+              744
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The top line of the blue outward-normal annotation and panel identifiers is shaved by y=560. Source text begins y=558.2 and panel markers at y=557.7.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-2.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-14",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-14.png",
+            "current_sha256": "039b1ee52cdfd0657141b51ab88b98e86d08ea90f7b0dffb2a7e2d10d97d043f",
+            "expected_after_sha256": "039b1ee52cdfd0657141b51ab88b98e86d08ea90f7b0dffb2a7e2d10d97d043f",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 728,
+            "pdf_index": 747,
+            "new_crop_pdf_points": [
+              35,
+              98,
+              195,
+              385
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "Panel (a) heading and its positive/outward-flux statement are wholly excluded above y=120; the corresponding negative panel heading remains.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-2.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-15",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-15.png",
+            "current_sha256": "e6dff2918d1cf3d824920fdd0d4f657318904555dc64e7e8bbd158c1d990710e",
+            "expected_after_sha256": "e6dff2918d1cf3d824920fdd0d4f657318904555dc64e7e8bbd158c1d990710e",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 728,
+            "pdf_index": 747,
+            "new_crop_pdf_points": [
+              70,
+              592,
+              310,
+              740
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "Left edge of the outer closed surface C and the horizontal field-line segment at the left are cut. The present image begins inside the purple surface.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-2.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-18",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-18.png",
+            "current_sha256": "26459cf1d3e507a84e91438455070195a50d6435a3d9cfe626eeb3ec2a1d200a",
+            "expected_after_sha256": "26459cf1d3e507a84e91438455070195a50d6435a3d9cfe626eeb3ec2a1d200a",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 730,
+            "pdf_index": 749,
+            "new_crop_pdf_points": [
+              322,
+              290,
+              558,
+              480
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "Left graph E(R) label and the start of the inside-zero-field explanation are truncated. The upper tip of the larger spherical Gaussian-surface arc is also cut at the top.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-2.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-22-26",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-26.png",
+            "current_sha256": "b2c38e114d3aca196d0bc455a7fe78691e829f446fa52814fa6fd002de05cc66",
+            "expected_after_sha256": "b2c38e114d3aca196d0bc455a7fe78691e829f446fa52814fa6fd002de05cc66",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 735,
+            "pdf_index": 754,
+            "new_crop_pdf_points": [
+              455,
+              450,
+              615,
+              744
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "Conducting shell label and its leader line are completely excluded above y=477. Several positive charge signs above the shell are also trimmed.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-2.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "ung-dung-ca-nham",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\ung-dung-ca-nham.png",
+            "current_sha256": "1867908b1cca5c41db24c5f3b1d3c861a45833013dad1c6253ddcee3e62cf35f",
+            "expected_after_sha256": "1867908b1cca5c41db24c5f3b1d3c861a45833013dad1c6253ddcee3e62cf35f",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 723,
+            "pdf_index": 742,
+            "new_crop_pdf_points": [
+              455,
+              266,
+              648,
+              415
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The photo raster starts y=266.894, but current y=281 loses its upper strip (including the upper tip of the shark). Current bottom adds blank space below the photo.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-3.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "ung-dung-set",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\ung-dung-set.png",
+            "current_sha256": "63c2ed8ecee4cff0349b2c5d0ff82636b3a8984835d76512868962182891e625",
+            "expected_after_sha256": "63c2ed8ecee4cff0349b2c5d0ff82636b3a8984835d76512868962182891e625",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 736,
+            "pdf_index": 755,
+            "new_crop_pdf_points": [
+              0,
+              589,
+              192,
+              742
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The photo raster starts y=589.066. Current y=600 loses the upper strip of the lightning photograph.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-3.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-e22-2",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-e22-2.png",
+            "current_sha256": "4946af1e143608356b28e35ace1b7132aef01432a452fee4bbafa45392174f70",
+            "expected_after_sha256": "4946af1e143608356b28e35ace1b7132aef01432a452fee4bbafa45392174f70",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 741,
+            "pdf_index": 760,
+            "new_crop_pdf_points": [
+              136,
+              608,
+              280,
+              670
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The vector accent and top of the E label (source y=609.1–619.3) are cut by y=613.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-3.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-e22-6",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-e22-6.png",
+            "current_sha256": "b6d733e4a9f61ce4ebe93fdc224df7817c70ab588d76365567e133eec787a670",
+            "expected_after_sha256": "b6d733e4a9f61ce4ebe93fdc224df7817c70ab588d76365567e133eec787a670",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 741,
+            "pdf_index": 760,
+            "new_crop_pdf_points": [
+              413,
+              278,
+              553,
+              386
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The z-axis label (source y=280.1–289.2) is shaved at y=285, while the bottom face subscripts sit against the lower edge.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-3.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "hinh-p22-57",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-57.png",
+            "current_sha256": "997c9dc2a1545df23466108a623c715860563b5d849ba889b1563cab16720ab2",
+            "expected_after_sha256": "997c9dc2a1545df23466108a623c715860563b5d849ba889b1563cab16720ab2",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 745,
+            "pdf_index": 764,
+            "new_crop_pdf_points": [
+              212,
+              642,
+              341,
+              744
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The right-hand r(mm) axis unit is cut after x=337 (source mm extends to x=338.3). The top edge includes a fragment of Figure P22.57 above the diagram.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-3.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          },
+          {
+            "image": "tom-tat-gauss",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\tom-tat-gauss.png",
+            "current_sha256": "4da736f11e70937d60138ded6b82f7977d032e4b230cb1b3108464b3fed0a59a",
+            "expected_after_sha256": "4da736f11e70937d60138ded6b82f7977d032e4b230cb1b3108464b3fed0a59a",
+            "matches_integration_after_hash": true,
+            "prior_hash_matches_integration_before": true,
+            "printed_page": 738,
+            "pdf_index": 757,
+            "new_crop_pdf_points": [
+              450,
+              209,
+              570,
+              346
+            ],
+            "script_coordinates_match": true,
+            "matches_requested_proposal": true,
+            "dimensions_match": true,
+            "source_render_pixel_equality": true,
+            "visual_verdict": "pass",
+            "original_finding": "The first line Outward normal is clipped at y=217 (source y=210.6–219.5), leaving only its lower fragments before to surface.",
+            "visual_basis": "Inspected actual corrected private PNG against expanded source PDF context in afterreview-pairs-3.jpg. Previously identified omission restored. Full relevant panels, diagram boundaries, axes, arrows and in-image text remain present; removed regions are unrelated whitespace or adjacent source prose/equation fragments."
+          }
+        ],
+        "unchanged_png_continuity": [
+          {
+            "image": "mo-chuong",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\mo-chuong.png",
+            "private_worktree_file_present": false,
+            "sha256": "31b556eb0ae9ecd8882c15eb099f093f84596b6b2cb9ab33cd691a6e983a9689",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-1",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-1.png",
+            "private_worktree_file_present": false,
+            "sha256": "fa68c5cce31bcc18ed8b76fe1714603ea140a7562f24a0257008ea1ec69cd146",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-2",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-2.png",
+            "private_worktree_file_present": false,
+            "sha256": "3243807f05b191ed46fad6cd2f1abe530eb25dda882155c7f383b41e350eb99f",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-4",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-4.png",
+            "private_worktree_file_present": false,
+            "sha256": "2ac70fe0598fe261a4035732865ec1c0f9be09455f4bf74ee721bf061b9ef5c0",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-5",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-5.png",
+            "private_worktree_file_present": false,
+            "sha256": "5029774e86d512b8c4e8bf5d48bb6724fe8f14e32e9735f38f3ee30272e143fd",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-13",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-13.png",
+            "private_worktree_file_present": false,
+            "sha256": "d629abe9131e32f08faa6c9ea5af63c36ea0b1cd06fab96db0c7dbc622455f5b",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-16",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-16.png",
+            "private_worktree_file_present": false,
+            "sha256": "aaf345fab0cb774c38fe09537d74127104dda00ac9e8302991922437c680e366",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-17",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-17.png",
+            "private_worktree_file_present": false,
+            "sha256": "b02bcfe95f7dede73f8557e75081e24ae86ecd77a43cc8568326bdbe999d26ff",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-19",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-19.png",
+            "private_worktree_file_present": false,
+            "sha256": "00b073c1462d9bcb4b1d262c04357b768dafb76824c361632a7ef0e68f40caec",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-20",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-20.png",
+            "private_worktree_file_present": false,
+            "sha256": "4fe66c9ba107d28f0c702ce4510db25b44309defa4dcb63ef7b56515b6a56cf8",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-21",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-21.png",
+            "private_worktree_file_present": false,
+            "sha256": "e5dfd05dbf1e20d6e0f2e2a1673644ae0c7b9f99ac45f324ea82991f9e832998",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-22",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-22.png",
+            "private_worktree_file_present": false,
+            "sha256": "9a851f02b7b31c163268201d96a8c65b68e9feddcef1b6bee00977d1dbcf07d2",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-23",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-23.png",
+            "private_worktree_file_present": false,
+            "sha256": "3b710555fefd1faced3408ae1f328237c8677e1251cacbec47cfa3bfe5e56f8e",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-24",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-24.png",
+            "private_worktree_file_present": false,
+            "sha256": "4191cd9678b86b33664c01a72645d4c66091740c7b34577d24621783b017d89b",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-25",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-25.png",
+            "private_worktree_file_present": false,
+            "sha256": "18a43bb800d9b47713bfdda6fd56c1ae08183f878f145c31b7d5efbd2a7a64a3",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-27",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-27.png",
+            "private_worktree_file_present": false,
+            "sha256": "4fd19b443e5fc81ce0c06dfb86de7e951de0f74223b7b13082a1ef489cbd0c2f",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-28",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-28.png",
+            "private_worktree_file_present": false,
+            "sha256": "383136e00a0c9fbc1b70d5e4710686e84ce24829ebc6094c5a456ba1d07dca35",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-22-29",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-22-29.png",
+            "private_worktree_file_present": false,
+            "sha256": "b0956d56fa96bba73bbb4268e3b0f8fdd102a923dbc0bb86b1571f1255e5ca5e",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "ung-dung-neuron",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\ung-dung-neuron.png",
+            "private_worktree_file_present": false,
+            "sha256": "aec1ca2d286aa02cf370375dfc473f73b91d9779c0d7b2d6083b8c8fa16bc76f",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-e22-8",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-e22-8.png",
+            "private_worktree_file_present": false,
+            "sha256": "8d6f85a39e71d1d585383c317494633fd309abfe0e24968ebf0ab685bc577b73",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-e22-28",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-e22-28.png",
+            "private_worktree_file_present": false,
+            "sha256": "43c05c7af2c161745953a164a0b510a3e3793a53a7abe90c570f2fb288da5fd4",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-p22-31",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-31.png",
+            "private_worktree_file_present": false,
+            "sha256": "bf8a221250239a0670d9c38b1d5a72549980481242788583e214c0bc43f7bf84",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-p22-33",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-33.png",
+            "private_worktree_file_present": false,
+            "sha256": "60025c982fc7487ceae6b424e4810a38d8bbf3271859edffb6a5496b9693a4cd",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-p22-42",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-42.png",
+            "private_worktree_file_present": false,
+            "sha256": "e144097bad8f366e0ffad91ec50cfc6c3741ab225eed71b96a328f1a9f177156",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-p22-43",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-43.png",
+            "private_worktree_file_present": false,
+            "sha256": "ca59104de59ea4ceb758e7fa0246e6be2a7b91937cb59a1e3448f1e5800ed95d",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-p22-53",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-53.png",
+            "private_worktree_file_present": false,
+            "sha256": "96ac768a0a4df2ea3dbd7532160240d0f7363671d7655d9fac1f6fb35cff7d89",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-p22-54",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-54.png",
+            "private_worktree_file_present": false,
+            "sha256": "91c80062da985ed711856cbed76d9f3e3249fd0739dd20411a4909c7f417cad3",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "hinh-p22-56",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\hinh-p22-56.png",
+            "private_worktree_file_present": false,
+            "sha256": "dc3676fb3b4aa75d0c5aeda873f7e8316a067aa204fc4e8400b9fb6e66bb7826",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          },
+          {
+            "image": "tom-tat-dien-thong",
+            "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-22\\tom-tat-dien-thong.png",
+            "private_worktree_file_present": false,
+            "sha256": "73f1a2419b0834292d2117b24a8f9aaab7427205e39d9fd23dfdfc63594a2f70",
+            "matches_original_manifest_bound_review": true,
+            "basis": "Retained original bytes still match prior locked-manifest review. Current private file absent; integration declares no crop change. No private blob fetch attempted."
+          }
+        ],
+        "registry": {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\.vitepress\\physics22-image-annotations.mjs",
+          "current_sha256": "3766484a56c7b26df949c92460f7d377e6ebb8f6e1a7e2e74993e96a5169bcd5",
+          "expected_after_sha256": "3766484a56c7b26df949c92460f7d377e6ebb8f6e1a7e2e74993e96a5169bcd5",
+          "matches_integration_after_hash": true,
+          "actual_changed_keys": [
+            "young-22/hinh-22-11",
+            "young-22/hinh-22-14",
+            "young-22/hinh-22-26",
+            "young-22/hinh-22-4"
+          ],
+          "expected_changed_keys": [
+            "young-22/hinh-22-11",
+            "young-22/hinh-22-14",
+            "young-22/hinh-22-26",
+            "young-22/hinh-22-4"
+          ],
+          "changed_keys_match": true,
+          "duplicate_english_pairs_within_image": [],
+          "changed_pairs": {
+            "young-22/hinh-22-11": [
+              [
+                "Cùng số đường sức và cùng điện thông đi qua hai phần tử diện tích này.",
+                "The same number of field lines and the same flux pass through both of these area elements."
+              ]
+            ],
+            "young-22/hinh-22-14": [
+              [
+                "(b) Mặt Gauss bao điện tích âm, điện thông âm và hướng vào.",
+                "(b) Gaussian surface around negative charge: negative (inward) flux"
+              ],
+              [
+                "(a) Mặt Gauss bao điện tích dương, điện thông dương và hướng ra ngoài.",
+                "(a) Gaussian surface around positive charge: positive (outward) flux"
+              ]
+            ],
+            "young-22/hinh-22-26": [
+              [
+                "Động cơ kéo đai.",
+                "Motor for belt"
+              ],
+              [
+                "Bộ phận thu electron.",
+                "Electron sink"
+              ],
+              [
+                "Trụ đỡ cách điện.",
+                "Insulating support"
+              ],
+              [
+                "Đai cách điện.",
+                "Insulating belt"
+              ],
+              [
+                "Vỏ dẫn điện.",
+                "Conducting shell"
+              ]
+            ],
+            "young-22/hinh-22-4": [
+              [
+                "Hộp chứa điện tích điểm dương +q.",
+                "(a) A box containing a positive point charge +q"
+              ],
+              [
+                "Điện thông đi ra khỏi mặt kín.",
+                "There is outward electric flux through the surface."
+              ],
+              [
+                "Cùng chiếc hộp ở (a), nhưng bên trong có điện tích điểm dương +2q.",
+                "(b) The same box as in (a), but containing a positive point charge +2q"
+              ],
+              [
+                "Khi điện tích được bao tăng gấp đôi, độ lớn điện trường trên mặt cũng tăng gấp đôi, nên điện thông qua mặt tăng gấp đôi so với (a).",
+                "Doubling the enclosed charge also doubles the magnitude of the electric field on the surface, so the electric flux through the surface is twice as great as in (a)."
+              ],
+              [
+                "Cùng điện tích điểm dương +q, nhưng được bao bởi chiếc hộp có mọi kích thước gấp đôi.",
+                "(c) The same positive point charge +q, but enclosed by a box with twice the dimensions"
+              ],
+              [
+                "Điện thông bằng giá trị ở (a). Độ lớn điện trường trên mặt chỉ bằng một phần tư giá trị ở (a), còn diện tích mà trường xuyên qua lớn gấp bốn.",
+                "The electric flux is the same as in (a): The magnitude of the electric field on the surface is 1/4 as great as in (a), but the area through which the field “flows” is 4 times greater."
+              ]
+            ]
+          },
+          "verdict": "pass",
+          "meaning_basis": "All four changed image keys preserve source meaning. 22.4 now explicitly states one quarter field magnitude and fourfold area in both EN and VN, with unchanged flux. Restored 22.11 equal-flux,22.14 positive/outward-flux and22.26 conducting-shell labels each have one bilingual pair. No duplicate English pair within any image key. Other registry keys remain identical in parsed data."
+        },
+        "remaining_source_confirmed_defects_in_changed_scope": [],
+        "summary": {
+          "changed_pngs_passed": 18,
+          "registry_keys_passed": 4,
+          "unchanged_png_continuity_records": 29,
+          "private_unchanged_files_present": 0,
+          "all_29_retained_or_present_bytes_match_original_review": true,
+          "source_script_coordinates_match_all_18": true,
+          "all_18_after_hashes_match_integration": true,
+          "new_png_pixels_match_source_recipe_all_18": true
+        },
+        "limitations": [
+          "The unchanged29PNG files are absent from the sparse private worktree. Retained original bytes still match the locked-manifest prior review, and integration does not list changes to them. No missing private blobs were fetched.",
+          "No authored files were edited during afterreview. No website/mobile/browser acceptance, theorem or exercise-answer approval is implied."
+        ]
+      }
+    },
+    {
+      "sourceChapter": 23,
+      "originalReviewSHA256": "3def0c0afbcd820c52fd5ab441e86a03814bf5b383f34269bb5e4f8e4083b737",
+      "afterreviewSHA256": "5ef13ab6242ab3086d63aa32fc6f15c0b7d8660ba16dde206fdb0b1befc5c54a",
+      "originalScopeCounts": {
+        "original_pngs": 47,
+        "sha256_matches": 47,
+        "pixel_equal_declared_crop": 47,
+        "referenced_original_pngs": 47,
+        "reference_occurrences": 51,
+        "unreferenced_original_pngs": 0,
+        "frame_pass": 31,
+        "frame_fail": 16,
+        "caption_pass_in_context": 47,
+        "registered_label_pass": 44,
+        "registered_label_incomplete": 3,
+        "registered_pairs_reviewed": 62,
+        "duplicate_registered_english_labels": 0,
+        "missing_distinct_registered_pairs": 14,
+        "overall_image_pass_scoped": 29,
+        "overall_images_needing_fix": 18
+      },
+      "afterreview": {
+        "scope": "Bounded after-review:16 changed chapter23 PNGs and14 added label pairs only;31 original frame passes carried by byte hash continuity.",
+        "integration_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\qa\\physics-final-20261101\\image-repairs\\integration.json",
+        "integration_sha256": "682de779b44ce9176b7d4dcde98091bbe47e3efe4d26e2c8a068496464eac5ed",
+        "parent_private_revision": "49c804b98f5f8376b809a14543f1163b21482fee",
+        "pdf": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\source\\young-freedman-15.pdf",
+        "pdf_sha256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
+        "scripts": [
+          {
+            "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\scripts\\prepare-physics23-theory-assets.py",
+            "sha256": "dcf1f17a6881c4b276fd5b4ed91bfe598ae8f33becc2bed4022214c907858c06"
+          },
+          {
+            "path": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\scripts\\prepare-physics23-exercise-assets.py",
+            "sha256": "e9bf6045c4f88d6b9a8baf601b16897e7e3efafcb5b391913dd8078aa153e1cf"
+          }
+        ],
+        "images": [
+          {
+            "chapter": 23,
+            "image": "hinh-23-3",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-3.png",
+            "beforeSHA256": "f9cd560cc95e495f6be83ed163b5feb2443e8347d80222663afed1caffe68265",
+            "afterSHA256": "810d101fce550ab6970ddc8352ac616548a0bba6609e7df22372af2892e70633",
+            "printedPage": 749,
+            "pdfIndex": 768,
+            "oldCrop": [
+              77,
+              89,
+              403,
+              276
+            ],
+            "newCrop": [
+              77,
+              84,
+              403,
+              276
+            ],
+            "pixels": [
+              652,
+              384
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-3.png",
+            "actual_after_sha256": "810d101fce550ab6970ddc8352ac616548a0bba6609e7df22372af2892e70633",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-3-context.png",
+              "after-context-sheet-01.jpg",
+              "after-actual-sheet-01.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete vector accent above E in panel(b) now sits inside the top margin; both full panels, axes, work/U labels and force arrows remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-4",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-4.png",
+            "beforeSHA256": "a2a011a4e33b0b434b1b150156c182397918bea8486a29c00819dc9ffe285dfe",
+            "afterSHA256": "9cb1d457ff2303aee9e87c20a11934337a5d8fee1bfcd034e26e762bdc3dfacd",
+            "printedPage": 749,
+            "pdfIndex": 768,
+            "oldCrop": [
+              455,
+              108,
+              615,
+              467
+            ],
+            "newCrop": [
+              455,
+              102,
+              623,
+              467
+            ],
+            "pixels": [
+              336,
+              730
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-4.png",
+            "actual_after_sha256": "9cb1d457ff2303aee9e87c20a11934337a5d8fee1bfcd034e26e762bdc3dfacd",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-4-context.png",
+              "after-context-sheet-01.jpg",
+              "after-actual-sheet-01.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete panel(a) E vector label and colon now fit inside the widened right/top bounds. Both full negative-charge panels remain present, with no stray clipped source-caption text."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-7",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-7.png",
+            "beforeSHA256": "7db31e4b3f4348a2f5c15cbdcba1e30b1d563dd6d556a5dc0f0959ee35c65bad",
+            "afterSHA256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104",
+            "printedPage": 750,
+            "pdfIndex": 769,
+            "oldCrop": [
+              35,
+              466,
+              195,
+              745
+            ],
+            "newCrop": [
+              35,
+              462,
+              195,
+              745
+            ],
+            "pixels": [
+              320,
+              566
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-7.png",
+            "actual_after_sha256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-7-context.png",
+              "after-context-sheet-01.jpg",
+              "after-actual-sheet-01.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete(a) marker now has clear top padding. Both U(r) graphs, all charge alternatives, limit callouts, axes and arrows remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-11",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-11.png",
+            "beforeSHA256": "396757b9b76b3737cfb2d8fb9fd90beaecde659b15252fc53211f23d9f843618",
+            "afterSHA256": "ad1534c16198ea701de176d71d4e45ca29224cfdd998a82a4b09d688c7a8d4c0",
+            "printedPage": 754,
+            "pdfIndex": 773,
+            "oldCrop": [
+              35,
+              552,
+              195,
+              678
+            ],
+            "newCrop": [
+              35,
+              547,
+              195,
+              678
+            ],
+            "pixels": [
+              320,
+              262
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-11.png",
+            "actual_after_sha256": "ad1534c16198ea701de176d71d4e45ca29224cfdd998a82a4b09d688c7a8d4c0",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-11-context.png",
+              "after-context-sheet-01.jpg",
+              "after-actual-sheet-01.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete Point a (positive terminal) label is restored above the battery. Both terminals, voltage arrow/value and negative-terminal label remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-12",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-12.png",
+            "beforeSHA256": "6b7551bf6b2ee6074866c7fd81b750995c939dea1a60fa93ed33fa9e89b309ef",
+            "afterSHA256": "721618ce2fda04e0cceede494379d124a6f2591c62b344cd2ee557f68ae86ad0",
+            "printedPage": 756,
+            "pdfIndex": 775,
+            "oldCrop": [
+              35,
+              287,
+              195,
+              550
+            ],
+            "newCrop": [
+              35,
+              281,
+              195,
+              550
+            ],
+            "pixels": [
+              320,
+              538
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-12.png",
+            "actual_after_sha256": "721618ce2fda04e0cceede494379d124a6f2591c62b344cd2ee557f68ae86ad0",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-12-context.png",
+              "after-context-sheet-02.jpg",
+              "after-actual-sheet-02.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete(a) A positive point charge heading now fits. Both radial-field panels and all four inward/outward V labels/arrows remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-15",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-15.png",
+            "beforeSHA256": "b84ff87b4df6996872d4eedc331363bf7faabf06570707896cf5f18d348f3443",
+            "afterSHA256": "7f1a1a03cfd6b661a621f895b35688cf8025231c3b89e043944d496ffab43403",
+            "printedPage": 759,
+            "pdfIndex": 778,
+            "oldCrop": [
+              400,
+              455,
+              566,
+              510
+            ],
+            "newCrop": [
+              400,
+              450,
+              566,
+              510
+            ],
+            "pixels": [
+              332,
+              120
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-15.png",
+            "actual_after_sha256": "7f1a1a03cfd6b661a621f895b35688cf8025231c3b89e043944d496ffab43403",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-15-context.png",
+              "after-context-sheet-02.jpg",
+              "after-actual-sheet-02.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "Particle now has clear top padding. Both source charges/signs, a/b, particle/velocity arrow and all three distances remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-19",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-19.png",
+            "beforeSHA256": "03a7e919323c677349074b9f66cc42f8917ce3d0efba3dc6e1a8e17ad7290941",
+            "afterSHA256": "7722c6e43ed04a6548c2bb24bbbe4867cff44614be899e7e69b39b4eb7ff1e8c",
+            "printedPage": 763,
+            "pdfIndex": 782,
+            "oldCrop": [
+              354,
+              114,
+              615,
+              239
+            ],
+            "newCrop": [
+              354,
+              109,
+              615,
+              239
+            ],
+            "pixels": [
+              522,
+              260
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-19.png",
+            "actual_after_sha256": "7722c6e43ed04a6548c2bb24bbbe4867cff44614be899e7e69b39b4eb7ff1e8c",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-19-context.png",
+              "after-context-sheet-02.jpg",
+              "after-actual-sheet-02.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete(a)/(b) markers now fit above both wire/cylinder diagrams. Both radial Er arrows and r/R labels remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-21",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-21.png",
+            "beforeSHA256": "c72c17c51c4da1d6ca47d9a38e8f204e44951d35476a9d8339c8582465721251",
+            "afterSHA256": "0d4b3a070ca50d18392172295607d7e07216a0e32349125d99125ae5ce40230e",
+            "printedPage": 764,
+            "pdfIndex": 783,
+            "oldCrop": [
+              385,
+              102,
+              510,
+              263
+            ],
+            "newCrop": [
+              380,
+              102,
+              510,
+              263
+            ],
+            "pixels": [
+              260,
+              322
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-21.png",
+            "actual_after_sha256": "0d4b3a070ca50d18392172295607d7e07216a0e32349125d99125ae5ce40230e",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-21-context.png",
+              "after-context-sheet-02.jpg",
+              "after-actual-sheet-02.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "Full handwritten dy and origin O are restored to the left of the rod. The a/-a endpoints, dQ, Q, P, r, x/y axes and dashed distance line remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-23-23",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-23.png",
+            "beforeSHA256": "a56284d8eb1fc7f0e5dae189771d232c39fc7c46e62e239a41a25083f0252783",
+            "afterSHA256": "adc25b94997c244f9ba53a5d72dc781c52546a8e4a8274aef991f313c6a135fe",
+            "printedPage": 765,
+            "pdfIndex": 784,
+            "oldCrop": [
+              77,
+              570,
+              575,
+              744
+            ],
+            "newCrop": [
+              77,
+              564,
+              575,
+              744
+            ],
+            "pixels": [
+              996,
+              360
+            ],
+            "sourceScript": "scripts/prepare-physics23-theory-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-23.png",
+            "actual_after_sha256": "adc25b94997c244f9ba53a5d72dc781c52546a8e4a8274aef991f313c6a135fe",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-23-23-context.png",
+              "after-context-sheet-03.jpg",
+              "after-actual-sheet-03.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "All three complete panel titles now have top padding. Every configuration, voltage value, field/equipotential line and legend remains present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-e23-19",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-e23-19.png",
+            "beforeSHA256": "8694a6ee1db9b74aa697973aa695191ff4c2b92f69f6c1f5a950da713a6c9336",
+            "afterSHA256": "468a18a012ef3b941866ffd46f86bf7da836d04a2f1f3a9747de6f2aa687c414",
+            "printedPage": 774,
+            "pdfIndex": 793,
+            "oldCrop": [
+              180,
+              369,
+              298,
+              438
+            ],
+            "newCrop": [
+              180,
+              363,
+              298,
+              438
+            ],
+            "pixels": [
+              236,
+              150
+            ],
+            "sourceScript": "scripts/prepare-physics23-exercise-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-e23-19.png",
+            "actual_after_sha256": "468a18a012ef3b941866ffd46f86bf7da836d04a2f1f3a9747de6f2aa687c414",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-e23-19-context.png",
+              "after-context-sheet-03.jpg",
+              "after-actual-sheet-03.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "Point label B is fully restored above the upper point. A, q1/q2 signs and all four distance labels/arrows remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-p23-57",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-57.png",
+            "beforeSHA256": "21de6051cb01c4a9f0bceca52922bf1da355bba0947a22a36154f4ec83239a33",
+            "afterSHA256": "ed8d2506a4137fbd8bab2c223392fdc7ccb512d60d77269b18e04be687753cd5",
+            "printedPage": 776,
+            "pdfIndex": 795,
+            "oldCrop": [
+              452,
+              177,
+              565,
+              294
+            ],
+            "newCrop": [
+              447,
+              172,
+              565,
+              294
+            ],
+            "pixels": [
+              236,
+              244
+            ],
+            "sourceScript": "scripts/prepare-physics23-exercise-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-57.png",
+            "actual_after_sha256": "ed8d2506a4137fbd8bab2c223392fdc7ccb512d60d77269b18e04be687753cd5",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-p23-57-context.png",
+              "after-context-sheet-03.jpg",
+              "after-actual-sheet-03.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "Both leftmost -q/+q labels and their signs are fully restored. All eight charges, cube edges and d labels remain present. No neighboring prose is introduced."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-p23-62",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-62.png",
+            "beforeSHA256": "5e34e0b4b4d3c5432f4744fe218683e91c6e21ff375f3c20bf80df5ff4e4fffc",
+            "afterSHA256": "12caea13825b6402b247db3db2250728c27c77ccfb84aaa641c9a9e7fc7252aa",
+            "printedPage": 777,
+            "pdfIndex": 796,
+            "oldCrop": [
+              77,
+              452,
+              316,
+              570
+            ],
+            "newCrop": [
+              77,
+              452,
+              322,
+              570
+            ],
+            "pixels": [
+              490,
+              236
+            ],
+            "sourceScript": "scripts/prepare-physics23-exercise-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-62.png",
+            "actual_after_sha256": "12caea13825b6402b247db3db2250728c27c77ccfb84aaa641c9a9e7fc7252aa",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-p23-62-context.png",
+              "after-context-sheet-03.jpg",
+              "after-actual-sheet-03.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete Radiation word now fits with a right margin. The incoming arrow, free electron, detector, battery, counter and all wiring remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-p23-71",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-71.png",
+            "beforeSHA256": "a486f395ce13e6f6951d020398e69842560c5c2b5a17b84ba9cb38b3b6bbc0d0",
+            "afterSHA256": "322893b1556e99120233a6c8494f804766357f986749e2116b7e59639b796315",
+            "printedPage": 778,
+            "pdfIndex": 797,
+            "oldCrop": [
+              178,
+              80,
+              295,
+              129
+            ],
+            "newCrop": [
+              178,
+              75,
+              295,
+              129
+            ],
+            "pixels": [
+              234,
+              108
+            ],
+            "sourceScript": "scripts/prepare-physics23-exercise-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-71.png",
+            "actual_after_sha256": "322893b1556e99120233a6c8494f804766357f986749e2116b7e59639b796315",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-p23-71-context.png",
+              "after-context-sheet-04.jpg",
+              "after-actual-sheet-04.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "R is fully restored above the upper point. The full charged rod, Q, P, a, x/y and dimension arrows remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-p23-72",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-72.png",
+            "beforeSHA256": "b5e5e13909ce879eef3f94d639da16cfa0286232cdcec03ed60a835d6378fac3",
+            "afterSHA256": "c2c6e108097954363588ed11f5be37740d7b2312fdcddecfd3adf2a170b2b872",
+            "printedPage": 778,
+            "pdfIndex": 797,
+            "oldCrop": [
+              193,
+              191,
+              296,
+              264
+            ],
+            "newCrop": [
+              193,
+              184,
+              296,
+              264
+            ],
+            "pixels": [
+              206,
+              160
+            ],
+            "sourceScript": "scripts/prepare-physics23-exercise-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-72.png",
+            "actual_after_sha256": "c2c6e108097954363588ed11f5be37740d7b2312fdcddecfd3adf2a170b2b872",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-p23-72-context.png",
+              "after-context-sheet-04.jpg",
+              "after-actual-sheet-04.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete Bar of mass M label has top padding. The entire bar, field vector, pivot, theta, Q, L and x/y axes remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-p23-78",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-78.png",
+            "beforeSHA256": "cf6ae7be80972bda408ce687ce154b50f80d29620f448eb13d1db1202ac8fdb3",
+            "afterSHA256": "99fe94dab18f7c0965655357b68ec2bc115946fdce80acd970351a46a385a3ed",
+            "printedPage": 778,
+            "pdfIndex": 797,
+            "oldCrop": [
+              354,
+              604,
+              564,
+              713
+            ],
+            "newCrop": [
+              354,
+              596,
+              564,
+              713
+            ],
+            "pixels": [
+              420,
+              234
+            ],
+            "sourceScript": "scripts/prepare-physics23-exercise-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-78.png",
+            "actual_after_sha256": "99fe94dab18f7c0965655357b68ec2bc115946fdce80acd970351a46a385a3ed",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-p23-78-context.png",
+              "after-context-sheet-04.jpg",
+              "after-actual-sheet-04.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete v² (m²/s²) axis title and superscripts now fit above the graph. All points, line, grid, numeric axes and1/x (m⁻¹) title remain present."
+          },
+          {
+            "chapter": 23,
+            "image": "hinh-p23-80",
+            "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-80.png",
+            "beforeSHA256": "61f70bf767dc7501d6f389badc36ba0a7392fc202506b559cd13685af95d8f76",
+            "afterSHA256": "9558fb14933cec02cf49688ef84c097cd560e733f14a1a54cf2fcc6d53411f6c",
+            "printedPage": 779,
+            "pdfIndex": 798,
+            "oldCrop": [
+              222,
+              623,
+              338,
+              726
+            ],
+            "newCrop": [
+              222,
+              613,
+              338,
+              726
+            ],
+            "pixels": [
+              232,
+              226
+            ],
+            "sourceScript": "scripts/prepare-physics23-exercise-assets.py",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-80.png",
+            "actual_after_sha256": "9558fb14933cec02cf49688ef84c097cd560e733f14a1a54cf2fcc6d53411f6c",
+            "matches_integration_after_sha": true,
+            "source_script_coordinates_match": true,
+            "source_matrix": [
+              2,
+              2
+            ],
+            "pixels_equal_actual_pdf_crop": true,
+            "frame_verdict": "pass",
+            "visual_evidence": [
+              "after-hinh-p23-80-context.png",
+              "after-context-sheet-04.jpg",
+              "after-actual-sheet-04.jpg"
+            ],
+            "prior_issue_closed": true,
+            "new_source_confirmed_cut_found": false,
+            "visual_basis": "The complete z label is restored above the axis. The annulus, sigma, O, a/b dimensions, x/y axes and arrows remain present."
+          }
+        ],
+        "unchanged_images": [
+          {
+            "image": "mo-chuong",
+            "sha256": "1e9341aca8ac85d520c698123428f4f18b12a3ba7a83930c99fb95c1ba271498",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\mo-chuong.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-1",
+            "sha256": "091474da34402878b05fdc2deb39b397caff4f4650e8112b88efaa92e4210f47",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-1.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-2",
+            "sha256": "3e8403498b104ef2bcd7d6761f53d4ea5800341bb721b7132bedcd24141df28d",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-2.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-5",
+            "sha256": "12e0af8293a59142516b6d6b67d1ec1e95c04e15a5e175f88e9aa269c43d0ad8",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-5.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-6",
+            "sha256": "5ff0948c38db7c2b18f359634d3df21141953dbd57fd73a78c5dc1faf5fca330",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-6.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-8",
+            "sha256": "7691b329e9590ecfcecf4a413f3aea1de8223af2039a64cae62b954d2798b4e8",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-8.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-9",
+            "sha256": "ef77fa32680035252650bb130fce35f6e0e3cd3adb4f29c87b65f4639f330ab7",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-9.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-10",
+            "sha256": "105eb684727b2f7bc9a9c7fb3a36be2c81ea5667db2f0cb2bfec210694b5299f",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-10.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-13",
+            "sha256": "6a7c78d3826e9698867125542942c871bb505471c4b56bdd0367b23592a1cc42",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-13.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-14",
+            "sha256": "8eaf44d9739ec621103692e20c6dfa22769362f56ba4e6d1074de4f77f2e0fce",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-14.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-16",
+            "sha256": "13e2f05b8f3501a60645537979b24e4ecb71400a51a4cd9c2217a878be0c14ba",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-16.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-17",
+            "sha256": "985b8d5d073ab21fd92d049ccc99ae807f3ad7a48229edfedebf311d7cc6b7db",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-17.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-18",
+            "sha256": "80e4e5f5b6dc7d437dbef84840f31022f02cb371e191ef9059d727eb42d63390",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-18.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-20",
+            "sha256": "3a2cb43e489af15062a76095dadeb256347fed6592ae888888cf8c6374935d59",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-20.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-22",
+            "sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-22.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-24",
+            "sha256": "e4d5eaa83dc8f65efc14897e15b6b59814aba05ae56426ec01cd0554908c94fa",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-24.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-25",
+            "sha256": "b28bd2e1df1d12e6ca7dfea408ac798afb6322e5f35c8f456b36610074b76209",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-25.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-26",
+            "sha256": "5e662f45e20c6c4bbd5940cd5590e56577df009e1be404ea334c7489aa12ff0f",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-26.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "ung-dung-dien-tam-do",
+            "sha256": "4569f0d2a6ddee58fb58ee6aa102ef8aeede06c72cd8a019040e90c02151db18",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\ung-dung-dien-tam-do.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "ung-dung-xa-tri",
+            "sha256": "609eff0eb68fe33057dd929bb9375abd3ba97a4f5b3da1e33f7c5957d73eb9cc",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\ung-dung-xa-tri.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "ung-dung-mang-te-bao",
+            "sha256": "4a8c5246180a4f5da45be6582e6a8c57dd68b64c66095c83240a9344fb9259ec",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\ung-dung-mang-te-bao.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-23-27",
+            "sha256": "76beb6698670a3e16aaa3c605d0d7d45d60bf246b0923e4bb79c0aea97b102a1",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-23-27.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-q23-9",
+            "sha256": "d30cf431761c5b50cf6699fab1eda71e911e043697cd298e29fb30d89b943544",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-q23-9.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-e23-5",
+            "sha256": "daab72079953aa1e541205e1dcd537959b0ba02bb65ff7e0a8f1ee05511c8fc6",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-e23-5.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-p23-59",
+            "sha256": "0569e44c98341e889861f2105f3dbeaba3b52f05f273cbbf8f3933b0bca5a86a",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-59.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-p23-63",
+            "sha256": "17372ed4e3f643686c021fbe448b90886d470189389059660dda2ba01332f9fb",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-63.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-p23-65",
+            "sha256": "4facb6d61507e8e5d0a35c72ec3536f554e1d698945d4e7ff565c05f3617adb1",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-65.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "hinh-p23-81",
+            "sha256": "1be8e8a8688e0e4f422ea51fa187f97101449bcad05ff4a96c7285ca93b851a1",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\hinh-p23-81.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "tom-tat-the-nang",
+            "sha256": "d9c6353a6b5eb30d168210280b4e4dcb3b06654b3ea75240ac771fd462df4f18",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\tom-tat-the-nang.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "tom-tat-dien-the",
+            "sha256": "89cc12f22fd5d301384981145d957583ca6f7a66a76e168d608d5210df94887a",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\tom-tat-dien-the.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          },
+          {
+            "image": "tom-tat-dang-the",
+            "sha256": "953029ac613e92a1b800e901fb1fbd7da9e31b09e751a681ea70e3a92d03b54a",
+            "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\vat-ly-2\\bai-giang\\img\\young-23\\tom-tat-dang-the.png",
+            "frame_verdict": "prior_pass_preserved_by_hash",
+            "no_visual_rereview": true
+          }
+        ],
+        "registry": {
+          "file": "docs/.vitepress/physics23-24-image-annotations.mjs",
+          "beforeSHA256": "f8f875c586ca07bc860ebfa5c06ce1aea9f431d5029eb583ee158ab77c588796",
+          "afterSHA256": "fc5442a9d84abf5f3e21d6969c7ae62d10b09e33c99993439b62d08af48ed6cf",
+          "changedImageKeys": [
+            "young-23/hinh-23-7",
+            "young-23/hinh-23-14",
+            "young-23/hinh-23-22"
+          ],
+          "unchangedOtherEntriesAndChapter24": true,
+          "actual_path": "C:\\Users\\Ai\\.codex\\worktrees\\physics2-private-fixes-20261029\\docs\\.vitepress\\physics23-24-image-annotations.mjs",
+          "actual_sha256": "fc5442a9d84abf5f3e21d6969c7ae62d10b09e33c99993439b62d08af48ed6cf",
+          "verdict": "pass",
+          "new_pairs": [
+            {
+              "image_key": "young-23/hinh-23-7",
+              "vietnamese": "Hoặc",
+              "english": "or",
+              "verdict": "pass",
+              "basis": "Matches the English source-image label without changing its meaning.",
+              "source_image_sha256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104"
+            },
+            {
+              "image_key": "young-23/hinh-23-7",
+              "vietnamese": "Khi r tiến tới 0, U tiến tới dương vô cùng",
+              "english": "As r → 0, U → +∞.",
+              "verdict": "pass",
+              "basis": "Matches the source callout. The limit direction, variable and sign of infinity are preserved.",
+              "source_image_sha256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104"
+            },
+            {
+              "image_key": "young-23/hinh-23-7",
+              "vietnamese": "Khi r tiến tới vô cùng, U tiến tới 0",
+              "english": "As r → ∞, U → 0.",
+              "verdict": "pass",
+              "basis": "Matches the source callout. The limit direction, variable and sign of infinity are preserved.",
+              "source_image_sha256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104"
+            },
+            {
+              "image_key": "young-23/hinh-23-7",
+              "vietnamese": "Khi r tiến tới 0, U tiến tới âm vô cùng",
+              "english": "As r → 0, U → −∞.",
+              "verdict": "pass",
+              "basis": "Matches the source callout. The limit direction, variable and sign of infinity are preserved.",
+              "source_image_sha256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104"
+            },
+            {
+              "image_key": "young-23/hinh-23-14",
+              "vietnamese": "Đến điểm b ở vô cùng",
+              "english": "To point b at infinity",
+              "verdict": "pass",
+              "basis": "Matches the English source-image label without changing its meaning.",
+              "source_image_sha256": "8eaf44d9739ec621103692e20c6dfa22769362f56ba4e6d1074de4f77f2e0fce"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Hẻm núi Oso",
+              "english": "Oso Canyon",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Hẻm núi Lewis",
+              "english": "Lewis Canyon",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Khu cắm trại Lower Oso",
+              "english": "Lower Oso Campground",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Trại nam sinh Los Prietos",
+              "english": "Los Prietos Boys Camp",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Sông Santa Ynez",
+              "english": "Santa Ynez River",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Trại Four-H",
+              "english": "Four-H Camp",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Khu cắm trại White Oaks",
+              "english": "White Oaks Campground",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Đường Paradise",
+              "english": "Paradise Road",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            },
+            {
+              "image_key": "young-23/hinh-23-22",
+              "vietnamese": "Đường Arroyo Burro",
+              "english": "Arroyo Burro Road",
+              "verdict": "pass",
+              "basis": "Matches the distinct English source-image label and preserves its meaning. Names remain unchanged while English geographic descriptors are translated.",
+              "source_image_sha256": "d1775bb752168436ea676cf4884fa621d0eae18cb4f9fdc6f7d1db13211ff730"
+            }
+          ],
+          "existing_pairs_unchanged": 62,
+          "total_after_pairs": 76,
+          "duplicate_english_labels": 0,
+          "chapter24_export_deep_equal": true,
+          "changed_keys_match_integration": true,
+          "wording_note": "Three Vietnamese limit labels use tiến tới consistently. The wording preserves the original r and U limits and signs."
+        },
+        "original_review_preserved": "review.json",
+        "status": "pass_scoped_afterreview_bound_to_integration_bytes",
+        "summary": {
+          "changed_frames_inspected": 16,
+          "changed_frames_pass": 16,
+          "prior_unchanged_frames_by_hash": 31,
+          "new_label_pairs_inspected": 14,
+          "new_label_pairs_pass": 14,
+          "existing_pairs_preserved": 62,
+          "total_registered_pairs": 76,
+          "duplicates": 0,
+          "chapter24_export_identical": true,
+          "source_confirmed_remaining_image_issues": 0,
+          "effective_original_png_frame_passes": 47
+        },
+        "limitations": [
+          "This after-review binds the16 changed PNGs and changed annotation file to integration afterSHA256, not to an updated manifest or unpublished commit.",
+          "The31 unchanged original frame passes are carried from review.json by matching SHA256. They were not visually reviewed again. If an unchanged sparse-checkout file is absent, its locked-parent retained bytes are named explicitly.",
+          "The original47-caption semantic review remains in review.json. This after-review checks only repaired frames and added labels, with no new chapter-physics/end-answer/project acceptance.",
+          "Only own QA files were written. No authored files, Git operations, installs, builds, dev servers, account operations, source corrections or research workflow were performed."
+        ]
+      }
+    }
+  ],
+  "changes": {
+    "status": "implemented-pending-afterreview-and-publication",
+    "privateParent": "49c804b98f5f8376b809a14543f1163b21482fee",
+    "cropChanges": [
+      {
+        "chapter": 22,
+        "image": "hinh-22-3",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-3.png",
+        "beforeSHA256": "f71b28a2b61c836b50201679ab74cf8ee2b53369b687126dd1d3ce979db10c08",
+        "afterSHA256": "a5d2252088a3ff94e94aedba635d3a6b800e6261de2b617c3274a6b1c5c86074",
+        "printedPage": 720,
+        "pdfIndex": 739,
+        "oldCrop": [
+          209,
+          100,
+          575,
+          245
+        ],
+        "newCrop": [
+          207,
+          96,
+          575,
+          245
+        ],
+        "pixels": [
+          736,
+          298
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-6",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-6.png",
+        "beforeSHA256": "d535804f4db2d4d187b27803ec3b9e9687bf54f5fb21785541ff372b68406798",
+        "afterSHA256": "389a6efca824efd0b35a803086f50a09a931e7e1102243389d55d8f879ad3313",
+        "printedPage": 722,
+        "pdfIndex": 741,
+        "oldCrop": [
+          35,
+          225,
+          195,
+          744
+        ],
+        "newCrop": [
+          35,
+          190,
+          195,
+          744
+        ],
+        "pixels": [
+          320,
+          1108
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-7",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-7.png",
+        "beforeSHA256": "1d6f72c3f857c6f946f7b64e5f6e5543b5a0e27c584a0b7ff64a97144a2c4fb1",
+        "afterSHA256": "0a5c5a5ac6c6ae0f189e929d151571f0d98dfd0368782d8e121bd11bb496ebe0",
+        "printedPage": 723,
+        "pdfIndex": 742,
+        "oldCrop": [
+          77,
+          660,
+          270,
+          740
+        ],
+        "newCrop": [
+          125,
+          660,
+          284,
+          740
+        ],
+        "pixels": [
+          318,
+          160
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-8",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-8.png",
+        "beforeSHA256": "59b8cf28ab3745245d4272bb685f15e572fc72a729f176a6dcb1add0e29c2e29",
+        "afterSHA256": "508c504c0ae12625a50f665dfc993142e7f36fe4445c49ee0ce896531b1e5768",
+        "printedPage": 724,
+        "pdfIndex": 743,
+        "oldCrop": [
+          354,
+          143,
+          615,
+          237
+        ],
+        "newCrop": [
+          334,
+          116,
+          540,
+          220
+        ],
+        "pixels": [
+          412,
+          208
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-9",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-9.png",
+        "beforeSHA256": "8c5ef93dab3567e2bb1072b7792c4933a712a46b5d7a99058e58e184dc11e2d4",
+        "afterSHA256": "d84a355bfff29ba370d8aa59a06c5fd06f160cdca89333891468ce43ba825285",
+        "printedPage": 724,
+        "pdfIndex": 743,
+        "oldCrop": [
+          354,
+          509,
+          615,
+          601
+        ],
+        "newCrop": [
+          385,
+          499,
+          500,
+          601
+        ],
+        "pixels": [
+          230,
+          204
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-10",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-10.png",
+        "beforeSHA256": "6379b5f373e4de4dc282213379bb348646a0ea09bd5d30e36362e2ab32ad06a4",
+        "afterSHA256": "c5f49dc78340e4ebe890447044c4f458f41707a89420543e64b4945940929c90",
+        "printedPage": 725,
+        "pdfIndex": 744,
+        "oldCrop": [
+          210,
+          589,
+          310,
+          744
+        ],
+        "newCrop": [
+          197,
+          589,
+          319,
+          742
+        ],
+        "pixels": [
+          244,
+          306
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-11",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-11.png",
+        "beforeSHA256": "2a97d8caa55794812754786e6b1a6f1bc8bf724ee5fc0a18fad229af927c7b3e",
+        "afterSHA256": "8aa512d9e315e672f792fe2c90f96bc38a3559e9e198ebcf71e78ef1109173a0",
+        "printedPage": 726,
+        "pdfIndex": 745,
+        "oldCrop": [
+          35,
+          144,
+          195,
+          317
+        ],
+        "newCrop": [
+          35,
+          116,
+          195,
+          317
+        ],
+        "pixels": [
+          320,
+          402
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-12",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-12.png",
+        "beforeSHA256": "95b3806e341c35a81fdb046da99257c050cd73d3bf18abaa1f4a71d6b456202f",
+        "afterSHA256": "5372cd828b1f20ebc0ef633109981d6f13484994053e066f9368842ef19ef513",
+        "printedPage": 726,
+        "pdfIndex": 745,
+        "oldCrop": [
+          210,
+          560,
+          570,
+          744
+        ],
+        "newCrop": [
+          210,
+          556,
+          570,
+          744
+        ],
+        "pixels": [
+          720,
+          376
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-14",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-14.png",
+        "beforeSHA256": "eb5a1bc306ce1230ba71fcaed928b2a43bc998e0e837c2ddff8e3b8ce7ef09cf",
+        "afterSHA256": "039b1ee52cdfd0657141b51ab88b98e86d08ea90f7b0dffb2a7e2d10d97d043f",
+        "printedPage": 728,
+        "pdfIndex": 747,
+        "oldCrop": [
+          35,
+          120,
+          195,
+          385
+        ],
+        "newCrop": [
+          35,
+          98,
+          195,
+          385
+        ],
+        "pixels": [
+          320,
+          574
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-15",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-15.png",
+        "beforeSHA256": "babf10ece0d5228a430295baf700a5a8953192a77fa5c5ccfbdbb6a5c127de09",
+        "afterSHA256": "e6dff2918d1cf3d824920fdd0d4f657318904555dc64e7e8bbd158c1d990710e",
+        "printedPage": 728,
+        "pdfIndex": 747,
+        "oldCrop": [
+          77,
+          596,
+          298,
+          738
+        ],
+        "newCrop": [
+          70,
+          592,
+          310,
+          740
+        ],
+        "pixels": [
+          480,
+          296
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-18",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-18.png",
+        "beforeSHA256": "4d907a96ed75744dd61892e2c01d8f3dec5c379d42a3175e9a13fdbe6359e47b",
+        "afterSHA256": "26459cf1d3e507a84e91438455070195a50d6435a3d9cfe626eeb3ec2a1d200a",
+        "printedPage": 730,
+        "pdfIndex": 749,
+        "oldCrop": [
+          340,
+          297,
+          615,
+          486
+        ],
+        "newCrop": [
+          322,
+          290,
+          558,
+          480
+        ],
+        "pixels": [
+          472,
+          380
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-22-26",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-22-26.png",
+        "beforeSHA256": "aa4b5bb9cfbf207b11cab91403f93cb28d4918a001438a58468901429a2ed1d9",
+        "afterSHA256": "b2c38e114d3aca196d0bc455a7fe78691e829f446fa52814fa6fd002de05cc66",
+        "printedPage": 735,
+        "pdfIndex": 754,
+        "oldCrop": [
+          455,
+          477,
+          615,
+          744
+        ],
+        "newCrop": [
+          455,
+          450,
+          615,
+          744
+        ],
+        "pixels": [
+          320,
+          588
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "ung-dung-ca-nham",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/ung-dung-ca-nham.png",
+        "beforeSHA256": "416b3eeb24e186885b0ac967cdf5756ca775c68196245209b03eb3e6440a0b64",
+        "afterSHA256": "1867908b1cca5c41db24c5f3b1d3c861a45833013dad1c6253ddcee3e62cf35f",
+        "printedPage": 723,
+        "pdfIndex": 742,
+        "oldCrop": [
+          455,
+          281,
+          648,
+          450
+        ],
+        "newCrop": [
+          455,
+          266,
+          648,
+          415
+        ],
+        "pixels": [
+          386,
+          298
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "ung-dung-set",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/ung-dung-set.png",
+        "beforeSHA256": "5cf9632c832450be32c83b9155b63f027c2b686b42aa3db9d74d1d562641c389",
+        "afterSHA256": "63c2ed8ecee4cff0349b2c5d0ff82636b3a8984835d76512868962182891e625",
+        "printedPage": 736,
+        "pdfIndex": 755,
+        "oldCrop": [
+          0,
+          600,
+          192,
+          744
+        ],
+        "newCrop": [
+          0,
+          589,
+          192,
+          742
+        ],
+        "pixels": [
+          384,
+          306
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-e22-2",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-e22-2.png",
+        "beforeSHA256": "b09c0cdc6bd1eb5599d63f61b0be282d546339992200c60151919ba131c9fdb8",
+        "afterSHA256": "4946af1e143608356b28e35ace1b7132aef01432a452fee4bbafa45392174f70",
+        "printedPage": 741,
+        "pdfIndex": 760,
+        "oldCrop": [
+          136,
+          613,
+          280,
+          670
+        ],
+        "newCrop": [
+          136,
+          608,
+          280,
+          670
+        ],
+        "pixels": [
+          288,
+          124
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-e22-6",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-e22-6.png",
+        "beforeSHA256": "0b856f2e1f2ffbf2356d612ae46b1bef0b563a54473d98a210f84f57f9c09f1e",
+        "afterSHA256": "b6d733e4a9f61ce4ebe93fdc224df7817c70ab588d76365567e133eec787a670",
+        "printedPage": 741,
+        "pdfIndex": 760,
+        "oldCrop": [
+          413,
+          285,
+          553,
+          384
+        ],
+        "newCrop": [
+          413,
+          278,
+          553,
+          386
+        ],
+        "pixels": [
+          280,
+          216
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "hinh-p22-57",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/hinh-p22-57.png",
+        "beforeSHA256": "63ffb48ea65193f8b30bc8b94e83a26b7d3e84b6d676c87717a955777b011936",
+        "afterSHA256": "997c9dc2a1545df23466108a623c715860563b5d849ba889b1563cab16720ab2",
+        "printedPage": 745,
+        "pdfIndex": 764,
+        "oldCrop": [
+          212,
+          634,
+          337,
+          744
+        ],
+        "newCrop": [
+          212,
+          642,
+          341,
+          744
+        ],
+        "pixels": [
+          258,
+          204
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 22,
+        "image": "tom-tat-gauss",
+        "file": "docs/vat-ly-2/bai-giang/img/young-22/tom-tat-gauss.png",
+        "beforeSHA256": "8300234e0cee99aa21672364a048e1316f7b4ee0b70e17ae8f52902daedeceeb",
+        "afterSHA256": "4da736f11e70937d60138ded6b82f7977d032e4b230cb1b3108464b3fed0a59a",
+        "printedPage": 738,
+        "pdfIndex": 757,
+        "oldCrop": [
+          450,
+          217,
+          570,
+          346
+        ],
+        "newCrop": [
+          450,
+          209,
+          570,
+          346
+        ],
+        "pixels": [
+          240,
+          274
+        ],
+        "sourceScript": "scripts/prepare-physics22-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-3",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-3.png",
+        "beforeSHA256": "f9cd560cc95e495f6be83ed163b5feb2443e8347d80222663afed1caffe68265",
+        "afterSHA256": "810d101fce550ab6970ddc8352ac616548a0bba6609e7df22372af2892e70633",
+        "printedPage": 749,
+        "pdfIndex": 768,
+        "oldCrop": [
+          77,
+          89,
+          403,
+          276
+        ],
+        "newCrop": [
+          77,
+          84,
+          403,
+          276
+        ],
+        "pixels": [
+          652,
+          384
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-4",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-4.png",
+        "beforeSHA256": "a2a011a4e33b0b434b1b150156c182397918bea8486a29c00819dc9ffe285dfe",
+        "afterSHA256": "9cb1d457ff2303aee9e87c20a11934337a5d8fee1bfcd034e26e762bdc3dfacd",
+        "printedPage": 749,
+        "pdfIndex": 768,
+        "oldCrop": [
+          455,
+          108,
+          615,
+          467
+        ],
+        "newCrop": [
+          455,
+          102,
+          623,
+          467
+        ],
+        "pixels": [
+          336,
+          730
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-7",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-7.png",
+        "beforeSHA256": "7db31e4b3f4348a2f5c15cbdcba1e30b1d563dd6d556a5dc0f0959ee35c65bad",
+        "afterSHA256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104",
+        "printedPage": 750,
+        "pdfIndex": 769,
+        "oldCrop": [
+          35,
+          466,
+          195,
+          745
+        ],
+        "newCrop": [
+          35,
+          462,
+          195,
+          745
+        ],
+        "pixels": [
+          320,
+          566
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-11",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-11.png",
+        "beforeSHA256": "396757b9b76b3737cfb2d8fb9fd90beaecde659b15252fc53211f23d9f843618",
+        "afterSHA256": "ad1534c16198ea701de176d71d4e45ca29224cfdd998a82a4b09d688c7a8d4c0",
+        "printedPage": 754,
+        "pdfIndex": 773,
+        "oldCrop": [
+          35,
+          552,
+          195,
+          678
+        ],
+        "newCrop": [
+          35,
+          547,
+          195,
+          678
+        ],
+        "pixels": [
+          320,
+          262
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-12",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-12.png",
+        "beforeSHA256": "6b7551bf6b2ee6074866c7fd81b750995c939dea1a60fa93ed33fa9e89b309ef",
+        "afterSHA256": "721618ce2fda04e0cceede494379d124a6f2591c62b344cd2ee557f68ae86ad0",
+        "printedPage": 756,
+        "pdfIndex": 775,
+        "oldCrop": [
+          35,
+          287,
+          195,
+          550
+        ],
+        "newCrop": [
+          35,
+          281,
+          195,
+          550
+        ],
+        "pixels": [
+          320,
+          538
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-15",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-15.png",
+        "beforeSHA256": "b84ff87b4df6996872d4eedc331363bf7faabf06570707896cf5f18d348f3443",
+        "afterSHA256": "7f1a1a03cfd6b661a621f895b35688cf8025231c3b89e043944d496ffab43403",
+        "printedPage": 759,
+        "pdfIndex": 778,
+        "oldCrop": [
+          400,
+          455,
+          566,
+          510
+        ],
+        "newCrop": [
+          400,
+          450,
+          566,
+          510
+        ],
+        "pixels": [
+          332,
+          120
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-19",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-19.png",
+        "beforeSHA256": "03a7e919323c677349074b9f66cc42f8917ce3d0efba3dc6e1a8e17ad7290941",
+        "afterSHA256": "7722c6e43ed04a6548c2bb24bbbe4867cff44614be899e7e69b39b4eb7ff1e8c",
+        "printedPage": 763,
+        "pdfIndex": 782,
+        "oldCrop": [
+          354,
+          114,
+          615,
+          239
+        ],
+        "newCrop": [
+          354,
+          109,
+          615,
+          239
+        ],
+        "pixels": [
+          522,
+          260
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-21",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-21.png",
+        "beforeSHA256": "c72c17c51c4da1d6ca47d9a38e8f204e44951d35476a9d8339c8582465721251",
+        "afterSHA256": "0d4b3a070ca50d18392172295607d7e07216a0e32349125d99125ae5ce40230e",
+        "printedPage": 764,
+        "pdfIndex": 783,
+        "oldCrop": [
+          385,
+          102,
+          510,
+          263
+        ],
+        "newCrop": [
+          380,
+          102,
+          510,
+          263
+        ],
+        "pixels": [
+          260,
+          322
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-23-23",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-23-23.png",
+        "beforeSHA256": "a56284d8eb1fc7f0e5dae189771d232c39fc7c46e62e239a41a25083f0252783",
+        "afterSHA256": "adc25b94997c244f9ba53a5d72dc781c52546a8e4a8274aef991f313c6a135fe",
+        "printedPage": 765,
+        "pdfIndex": 784,
+        "oldCrop": [
+          77,
+          570,
+          575,
+          744
+        ],
+        "newCrop": [
+          77,
+          564,
+          575,
+          744
+        ],
+        "pixels": [
+          996,
+          360
+        ],
+        "sourceScript": "scripts/prepare-physics23-theory-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-e23-19",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-e23-19.png",
+        "beforeSHA256": "8694a6ee1db9b74aa697973aa695191ff4c2b92f69f6c1f5a950da713a6c9336",
+        "afterSHA256": "468a18a012ef3b941866ffd46f86bf7da836d04a2f1f3a9747de6f2aa687c414",
+        "printedPage": 774,
+        "pdfIndex": 793,
+        "oldCrop": [
+          180,
+          369,
+          298,
+          438
+        ],
+        "newCrop": [
+          180,
+          363,
+          298,
+          438
+        ],
+        "pixels": [
+          236,
+          150
+        ],
+        "sourceScript": "scripts/prepare-physics23-exercise-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-p23-57",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-57.png",
+        "beforeSHA256": "21de6051cb01c4a9f0bceca52922bf1da355bba0947a22a36154f4ec83239a33",
+        "afterSHA256": "ed8d2506a4137fbd8bab2c223392fdc7ccb512d60d77269b18e04be687753cd5",
+        "printedPage": 776,
+        "pdfIndex": 795,
+        "oldCrop": [
+          452,
+          177,
+          565,
+          294
+        ],
+        "newCrop": [
+          447,
+          172,
+          565,
+          294
+        ],
+        "pixels": [
+          236,
+          244
+        ],
+        "sourceScript": "scripts/prepare-physics23-exercise-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-p23-62",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-62.png",
+        "beforeSHA256": "5e34e0b4b4d3c5432f4744fe218683e91c6e21ff375f3c20bf80df5ff4e4fffc",
+        "afterSHA256": "12caea13825b6402b247db3db2250728c27c77ccfb84aaa641c9a9e7fc7252aa",
+        "printedPage": 777,
+        "pdfIndex": 796,
+        "oldCrop": [
+          77,
+          452,
+          316,
+          570
+        ],
+        "newCrop": [
+          77,
+          452,
+          322,
+          570
+        ],
+        "pixels": [
+          490,
+          236
+        ],
+        "sourceScript": "scripts/prepare-physics23-exercise-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-p23-71",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-71.png",
+        "beforeSHA256": "a486f395ce13e6f6951d020398e69842560c5c2b5a17b84ba9cb38b3b6bbc0d0",
+        "afterSHA256": "322893b1556e99120233a6c8494f804766357f986749e2116b7e59639b796315",
+        "printedPage": 778,
+        "pdfIndex": 797,
+        "oldCrop": [
+          178,
+          80,
+          295,
+          129
+        ],
+        "newCrop": [
+          178,
+          75,
+          295,
+          129
+        ],
+        "pixels": [
+          234,
+          108
+        ],
+        "sourceScript": "scripts/prepare-physics23-exercise-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-p23-72",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-72.png",
+        "beforeSHA256": "b5e5e13909ce879eef3f94d639da16cfa0286232cdcec03ed60a835d6378fac3",
+        "afterSHA256": "c2c6e108097954363588ed11f5be37740d7b2312fdcddecfd3adf2a170b2b872",
+        "printedPage": 778,
+        "pdfIndex": 797,
+        "oldCrop": [
+          193,
+          191,
+          296,
+          264
+        ],
+        "newCrop": [
+          193,
+          184,
+          296,
+          264
+        ],
+        "pixels": [
+          206,
+          160
+        ],
+        "sourceScript": "scripts/prepare-physics23-exercise-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-p23-78",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-78.png",
+        "beforeSHA256": "cf6ae7be80972bda408ce687ce154b50f80d29620f448eb13d1db1202ac8fdb3",
+        "afterSHA256": "99fe94dab18f7c0965655357b68ec2bc115946fdce80acd970351a46a385a3ed",
+        "printedPage": 778,
+        "pdfIndex": 797,
+        "oldCrop": [
+          354,
+          604,
+          564,
+          713
+        ],
+        "newCrop": [
+          354,
+          596,
+          564,
+          713
+        ],
+        "pixels": [
+          420,
+          234
+        ],
+        "sourceScript": "scripts/prepare-physics23-exercise-assets.py"
+      },
+      {
+        "chapter": 23,
+        "image": "hinh-p23-80",
+        "file": "docs/vat-ly-2/bai-giang/img/young-23/hinh-p23-80.png",
+        "beforeSHA256": "61f70bf767dc7501d6f389badc36ba0a7392fc202506b559cd13685af95d8f76",
+        "afterSHA256": "9558fb14933cec02cf49688ef84c097cd560e733f14a1a54cf2fcc6d53411f6c",
+        "printedPage": 779,
+        "pdfIndex": 798,
+        "oldCrop": [
+          222,
+          623,
+          338,
+          726
+        ],
+        "newCrop": [
+          222,
+          613,
+          338,
+          726
+        ],
+        "pixels": [
+          232,
+          226
+        ],
+        "sourceScript": "scripts/prepare-physics23-exercise-assets.py"
+      }
+    ],
+    "registries": [
+      {
+        "file": "docs/.vitepress/physics22-image-annotations.mjs",
+        "beforeSHA256": "8825f1c5c0a483208c810c281de560be5ef594d9a0d0a67453825ea18dfb4e53",
+        "afterSHA256": "3766484a56c7b26df949c92460f7d377e6ebb8f6e1a7e2e74993e96a5169bcd5",
+        "changedImageKeys": [
+          "young-22/hinh-22-4",
+          "young-22/hinh-22-11",
+          "young-22/hinh-22-14",
+          "young-22/hinh-22-26"
+        ],
+        "unchangedOtherEntriesAndChapter24": true
+      },
+      {
+        "file": "docs/.vitepress/physics23-24-image-annotations.mjs",
+        "beforeSHA256": "f8f875c586ca07bc860ebfa5c06ce1aea9f431d5029eb583ee158ab77c588796",
+        "afterSHA256": "fc5442a9d84abf5f3e21d6969c7ae62d10b09e33c99993439b62d08af48ed6cf",
+        "changedImageKeys": [
+          "young-23/hinh-23-7",
+          "young-23/hinh-23-14",
+          "young-23/hinh-23-22"
+        ],
+        "unchangedOtherEntriesAndChapter24": true
+      }
+    ],
+    "publicScripts": [
+      "scripts/prepare-physics22-assets.py",
+      "scripts/prepare-physics23-theory-assets.py",
+      "scripts/prepare-physics23-exercise-assets.py"
+    ],
+    "sourcePhotosRedrawn": false,
+    "newFormulaOrExerciseContent": false
+  },
+  "pythonCoulombScaling": {
+    "status": "passed",
+    "scope": "Coulomb homothety doubles distance, quarters field, quadruples area; local flux unchanged at corresponding points. Existing source property, not new authored exercise.",
+    "checks": 10
+  }
+}
