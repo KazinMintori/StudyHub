@@ -1,6 +1,6 @@
 # Báo cáo biên soạn và rà soát Vật lý đại cương 1, 2
 
-Cập nhật ngày 29/10/2026. Đây là báo cáo đang hoàn thiện. Đã có đủ bản soạn của 20 chương Vật lý đại cương 1 và 24 chương Vật lý đại cương 2. Việc nghiệm thu toàn bộ nội dung theo từng yêu cầu và việc dọn dẹp cuối cùng vẫn chưa kết thúc.
+Cập nhật ngày 31/10/2026. Đây là báo cáo đang hoàn thiện. Đã có đủ bản soạn của 20 chương Vật lý đại cương 1 và 24 chương Vật lý đại cương 2. Việc nghiệm thu toàn bộ nội dung theo từng yêu cầu và việc dọn dẹp cuối cùng vẫn chưa kết thúc.
 
 ## Kết quả có bằng chứng
 
@@ -150,3 +150,13 @@ Cheatsheet chương 20 bổ sung năm mục còn thiếu về công suất và t
 Hồ sơ hình chương 9, 18 và 19 đã được nối tới bản đang ghim. Cả 155 ảnh gốc giữ đúng checksum trong các lần kiểm pixel và biên bản xem mép hình trước đó. Các bảng dịch nhãn cùng đoạn chú thích được đối chiếu riêng, kể cả khi phần văn bản khác của tệp đã thay đổi. Ba đồ thị lời giải bổ sung của chương 9 không được tính là ảnh gốc. Không gọi đây là một lượt xem hình mới. Hình 19.12 còn một ký tự tiếp nối rất nhỏ ở mép ngoài, nhưng toàn bộ đồ thị và nhãn được giữ. Hồ sơ nêu rõ hạn chế này trong `physics1-image-review-continuity-20261031.json`.
 
 Bằng chứng mới được nén không mất dữ liệu và đối chiếu lại checksum từng tệp. Trong 89 tệp được bảo quản, 44 tệp dùng lại bản đã lưu trước đó để tránh nhân đôi dữ liệu. Lượt rà độc lập chương 18 đầu tiên của Antigravity bị lỗi cầu nối `NoneType`, không trả được biên bản dùng được và không được tính là đạt. Tệp trong worktree không bị đổi. Một lượt hiệu chỉnh có giới hạn đang tiếp tục, giữ nguyên phạm vi và tài khoản.
+
+## Đối chiếu Wiki chương 20 và xác nhận bản web
+
+Đã đọc lại bảy Wiki liên quan đến chương 20. Wiki Carnot có một câu sai nghĩa về sự phụ thuộc vào môi chất. Câu này được sửa thành hiệu suất chỉ phụ thuộc nhiệt độ hai nguồn, với điều kiện cùng hai nguồn và chu trình thuận nghịch để đạt giới hạn. Wiki hệ số làm lạnh bổ sung ký hiệu nhiệt lượng dương, quan hệ của bơm nhiệt và đơn vị. Wiki entropy mở rõ định nghĩa vi phân, tích phân theo đường thuận nghịch, hàm trạng thái và ranh giới giữa entropy của riêng môi chất với tổng entropy của môi trường. Ba phần kỹ thuật đã được đồng bộ với nội dung dùng trong Notebook. Bốn Wiki còn lại giữ nguyên sau đối chiếu. Ví dụ, câu hỏi và liên kết cũ được giữ, ngoài một câu đáp án entropy được viết lại cùng nghĩa cho tự nhiên và bổ sung mục tham khảo.
+
+Bản hiện tại qua 35 trường hợp hiển thị của bảy trang Wiki và 16 phép tính Python riêng cho quan hệ Carnot, máy lạnh, bơm nhiệt và entropy. Bộ công cụ đạt 39 kiểm thử. Những kết quả này có phạm vi cụ thể, không được dùng để suy ra mọi chương đều đầy đủ. Hồ sơ là `physics1-chapter20-wiki-acceptance-20261031.json`.
+
+Commit `a0fcdd927e5fdafb09179bc3a73a02ece5428be8` đã build và deploy thành công tại lượt GitHub Actions `41183468076`. Đã kiểm tra trực tiếp Notes mục 20.5 và Cheatsheet chương 20 đang xuất bản tại năm chiều rộng. Mười trường hợp đều giữ đủ nội dung mới, công thức và hình, không có lỗi hiển thị được ghi nhận. Đây là kiểm tra trang công khai, không phải nội dung đề xuất chèn vào trang cũ. Ba Wiki vừa sửa vẫn cần lượt CI và kiểm tra bản triển khai mới tương ứng.
+
+Thư mục làm việc công khai trước đó bị thiếu tệp khi đọc lại, dù phiên này không chạy lệnh xóa hoặc dọn thư mục đó. Đã tạo lại checkout từ commit đã push, kiểm checksum và khôi phục bằng chứng đã lưu riêng. Ba sửa đổi Wiki chưa kịp bảo quản được dựng lại, kiểm tra và lưu riêng trước khi tiếp tục. Tác vụ Antigravity chương 18 lượt hiệu chỉnh hiện trả trạng thái không tìm thấy tác vụ. Không gọi đây là thành công và không khởi chạy lại chỉ vì mất khả năng quan sát. Công việc đối chiếu chương 18 vẫn còn mở. Đây là một lý do cần lưu bằng chứng sớm theo từng phần, thay vì chỉ lưu ở cuối dự án.
