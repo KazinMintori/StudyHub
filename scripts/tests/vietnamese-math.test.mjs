@@ -5,6 +5,10 @@ import mathjax from 'markdown-it-mathjax3'
 import { TeXFont } from 'mathjax-full/js/output/svg/fonts/tex.js'
 import { createVietnameseMathFont, vietnameseMathOptions } from '../math-fonts/vietnamese.mjs'
 import { renderMathInStrings, mathTextPlugin } from '../math-text-plugin.mjs'
+import { mkdtemp, writeFile, readFile, rm } from 'node:fs/promises'
+import { execFileSync } from 'node:child_process'
+import { tmpdir } from 'node:os'
+import path from 'node:path'
 
 const vietnamese = 'àáảãạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵđ'
 const md = new MarkdownIt().use(mathjax, vietnameseMathOptions)
@@ -48,4 +52,15 @@ test('slide, cheatsheet and generated catalog renderers use the same Vietnamese 
   const result = mathTextPlugin().transform(`export const value=${JSON.stringify(expression)}`, '/course-catalog.mjs')
   assert(result?.code.includes('studyRenderedMath'))
   assert.doesNotMatch(result.code, /<text\b/)
+})
+
+test('published physics exercise groups retain the same Vietnamese SVG glyphs', async t => {
+  const directory = await mkdtemp(path.join(tmpdir(), 'studyhub-vietnamese-math-'))
+  t.after(() => rm(directory, { recursive: true, force: true }))
+  const input = path.join(directory, 'input.json'), output = path.join(directory, 'output.json')
+  await writeFile(input, JSON.stringify({ id: 'glyphs', title: 'Kiểm tra chữ', ids: [], markdown: expression }))
+  execFileSync(process.execPath, ['scripts/content/render-physics-exercise-group.mjs', input, output])
+  const { html } = JSON.parse(await readFile(output, 'utf8'))
+  assert.doesNotMatch(html, /<text\b|v-html=/)
+  assert.match(html, /<mtext>một chuỗi<\/mtext>/)
 })

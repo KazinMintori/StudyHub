@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import { resolve } from 'node:path'
 import { splitPhysicsExercises } from '../content/physics-exercise-groups.mjs'
 import { physicsExerciseConfigs, physicsExerciseFiles, validatePhysicsExerciseIds } from '../content/physics-exercise-config.mjs'
+import { vietnameseMathOptions } from '../math-fonts/vietnamese.mjs'
 
 // Production publishes these JSON files during the cloud build. In development,
 // render only the requested group, so a fresh checkout needs no full generation.
@@ -35,7 +36,7 @@ export function physicsExercisesDevPlugin({ base = '/', root = process.cwd() } =
     if (!renderer) renderer = Promise.all([
       import('markdown-it'), import('markdown-it-mathjax3'), import('./markdown-presentation.mjs')
     ]).then(([{ default: MarkdownIt }, { default: mathjax }, { configureStudyMarkdown }]) => {
-      const md = new MarkdownIt({ html: true }).use(mathjax)
+      const md = new MarkdownIt({ html: true }).use(mathjax, vietnameseMathOptions)
       configureStudyMarkdown(md, { base: '/', vueBinding: false })
       return md
     })
