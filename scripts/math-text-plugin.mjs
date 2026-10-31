@@ -2,6 +2,7 @@ import MarkdownIt from 'markdown-it'
 import mathjax from 'markdown-it-mathjax3'
 import { parseAst } from 'rollup/parseAst'
 import { mathSegments } from '../docs/.vitepress/math-text.mjs'
+import { vietnameseMathOptions } from './math-fonts/vietnamese.mjs'
 
 // Exports that only build scripts and server rendering read.
 export const CLIENT_UNUSED_EXPORT = /WikiDetails$/
@@ -11,7 +12,7 @@ let sharedRenderer
 // same MathJax setup as the data-module transform. Used by build-time modules
 // that synthesise data (for example the lightweight client catalog).
 export function renderMathInStrings(values) {
-  sharedRenderer ??= new MarkdownIt({ html: false }).use(mathjax)
+  sharedRenderer ??= new MarkdownIt({ html: false }).use(mathjax, vietnameseMathOptions)
   const rendered = {}
   for (const value of values) {
     for (const segment of mathSegments(value)) {
@@ -28,7 +29,7 @@ export function renderMathInStrings(values) {
 // Each data module carries only the expressions it uses.
 export function mathTextPlugin() {
   const id = '\0study-math-renderer'
-  const md = new MarkdownIt({ html: false }).use(mathjax)
+  const md = new MarkdownIt({ html: false }).use(mathjax, vietnameseMathOptions)
   const cache = new Map()
   return {
     name: 'study-math-text',

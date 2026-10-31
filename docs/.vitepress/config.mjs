@@ -15,6 +15,7 @@ import { dropUnusedPreloads } from '../../scripts/build/page-preloads.mjs'
 import { physicsExercisesDevPlugin } from '../../scripts/build/physics-exercises-dev.mjs'
 import { applyCourseTimestamp } from '../../scripts/build/course-timestamps.mjs'
 import { sharedFrameworkPlugin } from '../../scripts/build/shared-framework-plugin.mjs'
+import { vietnameseMathOptions } from '../../scripts/math-fonts/vietnamese.mjs'
 
 const tokenSource = readFileSync(new URL('./theme/tokens.css', import.meta.url), 'utf8')
 const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`))[1].trim()
@@ -43,7 +44,7 @@ export default withMermaid(defineConfig({
   markdown:{
     // A local font cache lets each formula reuse its repeated glyph paths
     // through <use>, which shrinks long lecture pages considerably.
-    math:{ svg:{ fontCache:'local' } },
+    math:{ svg:{ ...vietnameseMathOptions.svg, fontCache:'local' } },
     lineNumbers:false,
     config:md => configureStudyMarkdown(md, { base })
   },

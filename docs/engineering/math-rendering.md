@@ -39,6 +39,8 @@ Không thụt lề riêng delimiter mở rồi đưa thân công thức và deli
 
 ## Bộ hiển thị và bước chặn lỗi
 
+Ký tự tiếng Việt trong công thức phải có đủ nét chữ và kích thước chuẩn. Bộ SVG dùng chung bổ sung những ký tự còn thiếu trong font TeX, để dấu không bị tách và chữ không bị giãn sai. Notes, dữ liệu Slides/Cheatsheet và bài thi đều dùng cùng bộ ký tự này. Không sửa lỗi font bằng cách bỏ dấu tiếng Việt hoặc đổi kích thước công thức.
+
 Notes được phân tích bằng cấu hình Markdown của VitePress. `staticMathPlugin` giữ SVG trong một binding HTML và từ chối công thức rỗng, công thức nuốt Markdown hoặc kết quả MathJax có lỗi. Kiểm tra này áp dụng cả đầu ra Vue và HTML bài tập.
 
 Slides, Cheatsheet, ghi chú nhanh và lời giải trong bài thực hành dùng `mathTextPlugin` để biên dịch công thức từ module dữ liệu. Module riêng theo môn, kể cả module được tải khi mở Cheatsheet và module trong `docs/.vitepress/labs/`, phải được plugin nhận diện và đăng ký công thức đã biên dịch.
