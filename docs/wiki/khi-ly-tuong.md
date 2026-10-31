@@ -13,11 +13,29 @@ Khí lý tưởng là mô hình bỏ thể tích riêng và tương tác phân t
 
 ## Giải thích kỹ thuật
 
-$pV=nRT=Nk_BT$ dùng số mol $n$ hoặc số phân tử $N$, không trộn hai đại lượng. Với lượng khí cố định, cần thêm điều kiện đẳng tích, đẳng áp hoặc đẳng nhiệt để nối hai trạng thái.
+Khí lý tưởng là mô hình coi các phân tử như chất điểm và bỏ qua tương tác giữa chúng ngoài những va chạm. Với một trạng thái cân bằng:
 
-Nội năng khí lý tưởng phụ thuộc nhiệt độ, nhưng nhiệt dung còn phụ thuộc bậc tự do được kích hoạt. Không mặc định mọi khí có nhiệt dung của khí đơn nguyên tử.
+$$
+pV=nRT.
+$$
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 18. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
+Ở dạng phân tử, cùng hệ thức ấy là:
+
+$$
+pV=Nk_BT.
+$$
+
+Áp suất $p$ là áp suất tuyệt đối, không phải áp suất đo so với khí quyển. Trong hệ SI, $p$ đo bằng Pa, $V$ bằng m³, $T$ bằng K và $n$ bằng mol. $N$ là số phân tử, $R$ có đơn vị J/(mol K), còn $k_B$ có đơn vị J/K.
+
+Với cùng một lượng khí có thành phần không đổi, hai trạng thái cân bằng thỏa mãn:
+
+$$
+\frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}.
+$$
+
+Hệ thức này không đòi hỏi quá trình phải đẳng tích, đẳng áp hay đẳng nhiệt. Các điều kiện ấy chỉ cho những trường hợp riêng đơn giản hơn. Khi giải bài, phải có đủ dữ kiện để xác định đại lượng còn thiếu.
+
+Khí thực thường gần mô hình lý tưởng khi đủ loãng và xa điều kiện ngưng tụ. Nội năng của khí lý tưởng với thành phần cố định chỉ phụ thuộc nhiệt độ, nhưng nhiệt dung còn phụ thuộc những bậc tự do được kích thích. Không mặc định mọi khí có nhiệt dung của khí đơn nguyên tử.
 
 ## Ví dụ
 
@@ -42,3 +60,7 @@ Không. Tương tác giữa phân tử cần được xét để mô tả chuy�
 - [Nhiệt độ tuyệt đối](./nhiet-do-tuyet-doi.md)
 - [Nội năng](./noi-nang.md)
 - [Entropy trong nhiệt động lực học](./entropy-nhiet-dong.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 18.1 và 18.3–18.4.

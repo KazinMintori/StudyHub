@@ -13,13 +13,25 @@ Mô hình phương trình trạng thái có hiệu chỉnh tương tác hút ph�
 
 ## Giải thích kỹ thuật
 
-Với n mol khí, đặt áp suất hiệu chỉnh p* bằng p cộng a nhân n bình phương chia V bình phương. Đặt thể tích hiệu chỉnh V* bằng V trừ nb. Khi đó mô hình dùng:
+Phương trình van der Waals hiệu chỉnh mô hình khí lý tưởng bằng lực hút giữa các phân tử và thể tích hữu hạn của chúng. Với $n$ mol khí, đặt:
+
+$$
+p_*=p+\frac{an^2}{V^2},
+$$
+
+$$
+V_*=V-nb.
+$$
+
+Khi đó phương trình trạng thái là:
 
 $$
 p_*V_*=nRT.
 $$
 
-Số hạng chứa a hiệu chỉnh áp suất do lực hút. Số hạng nb giảm thể tích có thể dùng cho chuyển động phân tử. Đây là mô hình hiệu dụng, không phải mô tả chính xác mọi pha hoặc mọi miền nhiệt độ và mật độ.
+Áp suất $p$ là áp suất tuyệt đối và $T$ là nhiệt độ kelvin. Thể tích khả dụng $V_*$ phải dương, tức $V>nb$. Trong hệ SI, $V$ đo bằng m³, $n$ bằng mol, $a$ có đơn vị J·m³/mol² và $b$ có đơn vị m³/mol.
+
+Số hạng chứa $a$ hiệu chỉnh sự giảm áp suất do lực hút phân tử. Số hạng $nb$ trừ phần thể tích không còn khả dụng cho chuyển động phân tử. Hai hằng số phụ thuộc chất khí. Đây là mô hình hiệu dụng, không phải mô tả chính xác mọi pha hoặc mọi miền nhiệt độ và mật độ. Khi khí đủ loãng để hai hiệu chỉnh không đáng kể, mô hình tiến gần phương trình khí lý tưởng.
 
 ## Ví dụ
 

@@ -17,8 +17,6 @@ Nguyên lý không của nhiệt động lực học làm cơ sở so nhiệt đ
 
 Nhiệt độ mô tả trạng thái, không phải tổng nội năng hay nhiệt lượng chứa trong một vật. Hai hệ cùng nhiệt độ vẫn có thể có nội năng khác nhau.
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 17. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
-
 ## Ví dụ
 
 Độ chênh nhiệt độ trên thang kelvin bằng độ chênh tương ứng trên thang Celsius, nhưng tỷ số hai nhiệt độ không bằng nhau.
@@ -42,3 +40,7 @@ Không. Phải đổi hai nhiệt độ sang kelvin.
 - [Khí lý tưởng](./khi-ly-tuong.md)
 - [Nội năng](./noi-nang.md)
 - [Entropy trong nhiệt động lực học](./entropy-nhiet-dong.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 17 và mục 18.1, 18.3.

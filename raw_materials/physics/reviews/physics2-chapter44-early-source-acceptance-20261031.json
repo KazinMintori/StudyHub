@@ -1,0 +1,384 @@
+{
+  "status": "source-published-and-focused-render-passed-pending-exact-cloud-and-deployed-acceptance",
+  "scope": "Sections44.1–44.5 source-explanation repairs and17visiblecaptions; no full44chapter frame/caption-semantic/endexercise/CSWiki acceptance inferred.",
+  "privateRevision": "1936a82183bea4fb5eba0b402af6207cb32efe9f",
+  "sourceUnitsReviewed": 119,
+  "examplesRetained": 7,
+  "selfchecksRetained": 5,
+  "sourceBlocks": 23,
+  "additionalHistoricalCorrections": {
+    "file": "raw_materials/physics/translations/chapter-44/01-lich-su-hat-co-ban.md",
+    "reason": "Charged-pion1947 and neutral-pion1950 discoveries are distinct; original sentence groupedallthreein1947.",
+    "primaryReferences": [
+      "https://www.nature.com/articles/159694a0",
+      "https://journals.aps.org/pr/abstract/10.1103/PhysRev.78.802"
+    ],
+    "existingMuon1936RetainedReference": "https://drupal-timeline.web.cern.ch/anderson-and-neddermeyer-discover-muon"
+  },
+  "integration": {
+    "status": "integrated-pending-render-and-second-review",
+    "changes": [
+      {
+        "file": "raw_materials/physics/translations/chapter-44/01-lich-su-hat-co-ban.md",
+        "beforeSHA256": "a76e0f5698ea723fe4bdb86cf33edeb4d6ae0a06a5442fd603503334d702d809",
+        "afterSHA256": "18f7a4aa583bab5e245dae0e471bf87f49ffcb4d0d78536c485ff053a91e83a0",
+        "edits": [
+          "M01",
+          "M02"
+        ],
+        "figureParagraphsSeparated": 6,
+        "originalBlankLinesRetained": true
+      },
+      {
+        "file": "raw_materials/physics/translations/chapter-44/02-may-gia-toc-va-detector.md",
+        "beforeSHA256": "9173b36ab3591e467078398fdc8d1d907c9fa8abcc825bc2b819dafbbf71feab",
+        "afterSHA256": "5c206076b789a8d95f5426df93205c5c7cf441899a7481ba508bfea26f4e5236",
+        "edits": [
+          "F01",
+          "F02",
+          "M03",
+          "M04",
+          "M05",
+          "M06",
+          "M07"
+        ],
+        "figureParagraphsSeparated": 4,
+        "originalBlankLinesRetained": true
+      },
+      {
+        "file": "raw_materials/physics/translations/chapter-44/03-hat-va-tuong-tac.md",
+        "beforeSHA256": "227517b460d97395f5f72727aecda425685452cea39e731935b6e1a36ed64f10",
+        "afterSHA256": "a2d9a735372a3e48e0d308978e9cc484fc131cd74a17f2238177250473fe1df8",
+        "edits": [
+          "F03",
+          "F04",
+          "M08",
+          "M09",
+          "M10",
+          "M11"
+        ],
+        "figureParagraphsSeparated": 1,
+        "originalBlankLinesRetained": true
+      },
+      {
+        "file": "raw_materials/physics/translations/chapter-44/04-quark-va-gluon.md",
+        "beforeSHA256": "8a2e99e342d494971ad263d6f3dc5ed8975ab0dbb7f4191339ac96c43dcdeee5",
+        "afterSHA256": "362fce7f00ca5c4fbf41b4215772ca8b1049a323715af4e76cb1914558e09b23",
+        "edits": [
+          "F05",
+          "M12",
+          "M13",
+          "M14",
+          "M15",
+          "M16"
+        ],
+        "figureParagraphsSeparated": 4,
+        "originalBlankLinesRetained": true
+      },
+      {
+        "file": "raw_materials/physics/translations/chapter-44/05-mo-hinh-chuan.md",
+        "beforeSHA256": "4a7ff616ca1d417c3efcd623c604b77f780d0b1082277a5140c2648776eaf6ce",
+        "afterSHA256": "81dfa9d0320c6ef6dab06313aa031eea433072a1ab11445756b5dc6679beef9f",
+        "edits": [
+          "M17",
+          "M18"
+        ],
+        "figureParagraphsSeparated": 2,
+        "originalBlankLinesRetained": true
+      }
+    ],
+    "blocks": 23,
+    "sourceImagesChanged": 0,
+    "sourceExamplesAndSelfchecksRetained": true,
+    "parentRefinements": [
+      "M02 explicitly scopes photon statement to charge conservation, preserving energy/momentum.",
+      "F03 retains original illustrative time scales with nonuniversal scope.",
+      "M05 restores2808bunches PER BEAM for design configuration per CERN, not total/operational2026claim.",
+      "M09 preserves observational proton-stability qualifier.",
+      "M16 uses proper primed quantum-number notation."
+    ],
+    "primaryDesignReference": "https://cdarve.web.cern.ch/Publications_CD/CERN_brochure-2006-003-eng.pdf",
+    "captionFormattingRepair": {
+      "imageParagraphs": 17,
+      "reason": "Separate image paragraphs so production figure/visiblecaption/gloss rules apply, without changing original image declarations or bytes. All pre-existing blank lines retained.",
+      "requiredRenderingExpectation": "One visiblefigcaption per image reference."
+    },
+    "additionalHistoricalCorrection": {
+      "file": "raw_materials/physics/translations/chapter-44/01-lich-su-hat-co-ban.md",
+      "reason": "Charged-pion1947 and neutral-pion1950 discoveries are distinct; original sentence groupedallthreein1947.",
+      "primaryReferences": [
+        "https://www.nature.com/articles/159694a0",
+        "https://journals.aps.org/pr/abstract/10.1103/PhysRev.78.802"
+      ],
+      "existingMuon1936RetainedReference": "https://drupal-timeline.web.cern.ch/anderson-and-neddermeyer-discover-muon"
+    }
+  },
+  "independentSecondReview": "Exact23blocks/fiveparentrefinements/original454unchangedparagraphs and17imageparagraphboundaries accepted at recordedSHAs. Parent then verified one extra charged/neutralpion chronology correction with1947/1950primarypapers. No new independent afterSHA acceptance invented.",
+  "originalImagesChanged": 0,
+  "visibleFiguresAndCaptions": 17,
+  "numericChecks": 56,
+  "numericScope": "Actual given examples, additivequantumnumbers and model relations; not56entirechapter approvals.",
+  "focusedRenderCases": 25,
+  "renderReport": {
+    "status": "passed-scoped-render",
+    "scope": "Current proposed source with production Markdown/math/figure/responsive-table rules injected into actual public topic layout and CSS. Glossary term autolinking omitted. Responsive table header/row-label duplicates may hide only when an equivalent visible formula remains; total formula count and text must persist. Full cloud integration and exact deployed pages require separate acceptance.",
+    "files": [
+      {
+        "name": "01-lich-su-hat-co-ban.md",
+        "sha256": "18f7a4aa583bab5e245dae0e471bf87f49ffcb4d0d78536c485ff053a91e83a0",
+        "formulas": 88
+      },
+      {
+        "name": "02-may-gia-toc-va-detector.md",
+        "sha256": "5c206076b789a8d95f5426df93205c5c7cf441899a7481ba508bfea26f4e5236",
+        "formulas": 141
+      },
+      {
+        "name": "03-hat-va-tuong-tac.md",
+        "sha256": "a2d9a735372a3e48e0d308978e9cc484fc131cd74a17f2238177250473fe1df8",
+        "formulas": 459
+      },
+      {
+        "name": "04-quark-va-gluon.md",
+        "sha256": "362fce7f00ca5c4fbf41b4215772ca8b1049a323715af4e76cb1914558e09b23",
+        "formulas": 317
+      },
+      {
+        "name": "05-mo-hinh-chuan.md",
+        "sha256": "81dfa9d0320c6ef6dab06313aa031eea433072a1ab11445756b5dc6679beef9f",
+        "formulas": 32
+      }
+    ],
+    "cases": [
+      {
+        "name": "01-lich-su-hat-co-ban.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 88,
+        "totalFormulas": 88,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "01-lich-su-hat-co-ban.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 88,
+        "totalFormulas": 88,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "01-lich-su-hat-co-ban.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 88,
+        "totalFormulas": 88,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "01-lich-su-hat-co-ban.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 88,
+        "totalFormulas": 88,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "01-lich-su-hat-co-ban.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 88,
+        "totalFormulas": 88,
+        "images": 6,
+        "captions": 6
+      },
+      {
+        "name": "02-may-gia-toc-va-detector.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 141,
+        "totalFormulas": 141,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "02-may-gia-toc-va-detector.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 141,
+        "totalFormulas": 141,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "02-may-gia-toc-va-detector.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 141,
+        "totalFormulas": 141,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "02-may-gia-toc-va-detector.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 141,
+        "totalFormulas": 141,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "02-may-gia-toc-va-detector.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 141,
+        "totalFormulas": 141,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "03-hat-va-tuong-tac.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 459,
+        "totalFormulas": 459,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "03-hat-va-tuong-tac.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 459,
+        "totalFormulas": 459,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "03-hat-va-tuong-tac.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 459,
+        "totalFormulas": 459,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "03-hat-va-tuong-tac.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 459,
+        "totalFormulas": 459,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "03-hat-va-tuong-tac.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 459,
+        "totalFormulas": 459,
+        "images": 1,
+        "captions": 1
+      },
+      {
+        "name": "04-quark-va-gluon.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 317,
+        "totalFormulas": 317,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "04-quark-va-gluon.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 317,
+        "totalFormulas": 317,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "04-quark-va-gluon.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 317,
+        "totalFormulas": 317,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "04-quark-va-gluon.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 317,
+        "totalFormulas": 317,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "04-quark-va-gluon.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 317,
+        "totalFormulas": 317,
+        "images": 4,
+        "captions": 4
+      },
+      {
+        "name": "05-mo-hinh-chuan.md",
+        "width": 320,
+        "issues": [],
+        "formulas": 32,
+        "totalFormulas": 32,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "05-mo-hinh-chuan.md",
+        "width": 360,
+        "issues": [],
+        "formulas": 32,
+        "totalFormulas": 32,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "05-mo-hinh-chuan.md",
+        "width": 375,
+        "issues": [],
+        "formulas": 32,
+        "totalFormulas": 32,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "05-mo-hinh-chuan.md",
+        "width": 768,
+        "issues": [],
+        "formulas": 32,
+        "totalFormulas": 32,
+        "images": 2,
+        "captions": 2
+      },
+      {
+        "name": "05-mo-hinh-chuan.md",
+        "width": 1440,
+        "issues": [],
+        "formulas": 32,
+        "totalFormulas": 32,
+        "images": 2,
+        "captions": 2
+      }
+    ]
+  },
+  "skillTests": 39,
+  "evidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/chapter44-early-source-and-ch43-review.tar.gz",
+  "evidenceArchiveSHA256": "96343b8fa8cc4400cf7bf83c87307c82cf59935a7f0e530b38501859c86dd94d",
+  "remaining": "Full assembled CI/globalmath and actualdeployed verification for exactnewpin. Chapter43remaining omissions stored inprivateQA, not corrected or accepted by this44batch."
+}

@@ -57,7 +57,7 @@
     {
       "id": "vat-ly-1",
       "repository": "KazinMintori/StudyHub-course-vat-ly-1",
-      "revision": "151e212f5bfb2bc363f941ad31f83c1cc52d9224",
+      "revision": "ec53e79d1e8b4b2a9720aaf0cc9bb6c1edc4d1e3",
       "paths": [
         "docs/.vitepress/physics1-09-exercises-c-image-annotations.mjs",
         "docs/.vitepress/physics1-09-exercises-d-image-annotations.mjs",
@@ -423,7 +423,7 @@
     {
       "id": "vat-ly-2",
       "repository": "KazinMintori/StudyHub-course-vat-ly-2",
-      "revision": "c90f1711266beb092a06d46866792ac6bc426746",
+      "revision": "1936a82183bea4fb5eba0b402af6207cb32efe9f",
       "paths": [
         "docs/.vitepress/physics-ac-course.mjs",
         "docs/.vitepress/physics-ac-foundations.mjs",

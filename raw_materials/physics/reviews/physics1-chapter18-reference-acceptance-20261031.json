@@ -1,0 +1,243 @@
+{
+  "status": "source-published-and-focused-render-passed-pending-exact-cloud-and-deployed-acceptance",
+  "scope": "Chapter18 reference conditions, four Wiki technical explanations and matching Notebook fallback bodies. No chapter-wide or whole44chapter acceptance inferred.",
+  "privateRevision": "ec53e79d1e8b4b2a9720aaf0cc9bb6c1edc4d1e3",
+  "referenceItemsRetained": 8,
+  "referenceDescriptionsExpanded": 5,
+  "referenceFormulaRowsAdded": 3,
+  "originalFormulaRowsRetained": true,
+  "unchangedPriorityChapters": [
+    9,
+    10,
+    11,
+    17,
+    19,
+    20
+  ],
+  "sourceFindings": [
+    "Fixed extraisoprocess condition: Fixedamountideal gas general2state relation does not require isochoric/isobaric/isothermal path.",
+    "Defined absolute pressure/Kelvin and coherent molecularversusmolarmass units.",
+    "Defined activequadraticdegreesoffreedom with classicalmodel domains.",
+    "Completed Maxwell density/normalization/intervalcounts and van der Waals domain/units.",
+    "Moved sourcecitations into final academicreference sections for twoWiki pages."
+  ],
+  "wikiFiles": [
+    {
+      "file": "docs/wiki/khi-ly-tuong.md",
+      "beforeSHA256": "7ccd0c10c4bf3e4468021fee2a8c4357844a72160044816c6d743a23aec4afca",
+      "afterSHA256": "ed75d5a5f4a985addf3a3c0b9021ebf6f5e002eb37e1f91c21823f95517dbea0"
+    },
+    {
+      "file": "docs/wiki/phan-bo-maxwell.md",
+      "beforeSHA256": "608a97773e2905a1605b3bbb269426e4fdb46a61757615f74b11abaf14055b5d",
+      "afterSHA256": "cc060d775d8b4fc71426ce734a2c9f5c3fc37f590305821b08fc2f3e1debd764"
+    },
+    {
+      "file": "docs/wiki/phuong-trinh-van-der-waals.md",
+      "beforeSHA256": "ada8acb14fdc283276a5bd96a66a9ffe864e0aa9249cd2c8d440425f70f5a735",
+      "afterSHA256": "09525d2f8855e1b71d542947d35cc4b556a58e7924822b85962bacf6ce7f9807"
+    },
+    {
+      "file": "docs/wiki/nhiet-do-tuyet-doi.md",
+      "beforeSHA256": "78970a7909379733535c6f532e8afe0456440efe965ae2aa09c605164098fbd3",
+      "afterSHA256": "d78fabcb53331dd70a4857284b9116f1679389ab5fb7812a8f41c9c179979df8"
+    }
+  ],
+  "numericChecks": 31,
+  "numericScope": "Existing/proposed reference-formula algebra, Maxwellmoments, heatcapacitymodels, fixed-sourceSTPexample and existingWikiwork/momentumexamples. Modelinputsareexplicitlynotnewtextbooknumberedgivens. No empirical-lawproof or fullchapterapproval inferred.",
+  "focusedRenderCases": 25,
+  "renderReports": [
+    {
+      "status": "passed-scoped-render",
+      "scope": "Four changed chapter18 Wiki pages with production Markdown/math rules and actual public Wiki CSS/layout. Glossary autolinks and WikiUsage component omitted from injected markup; full cloud integration and exact deployed acceptance separate.",
+      "files": [
+        {
+          "file": "docs/wiki/khi-ly-tuong.md",
+          "sha256": "ed75d5a5f4a985addf3a3c0b9021ebf6f5e002eb37e1f91c21823f95517dbea0"
+        },
+        {
+          "file": "docs/wiki/nhiet-do-tuyet-doi.md",
+          "sha256": "d78fabcb53331dd70a4857284b9116f1679389ab5fb7812a8f41c9c179979df8"
+        },
+        {
+          "file": "docs/wiki/phan-bo-maxwell.md",
+          "sha256": "cc060d775d8b4fc71426ce734a2c9f5c3fc37f590305821b08fc2f3e1debd764"
+        },
+        {
+          "file": "docs/wiki/phuong-trinh-van-der-waals.md",
+          "sha256": "09525d2f8855e1b71d542947d35cc4b556a58e7924822b85962bacf6ce7f9807"
+        }
+      ],
+      "cases": [
+        {
+          "id": "khi-ly-tuong",
+          "width": 320,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 360,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 375,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 768,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "khi-ly-tuong",
+          "width": 1440,
+          "formulas": 12,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 320,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 360,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 375,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 768,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "nhiet-do-tuyet-doi",
+          "width": 1440,
+          "formulas": 2,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 320,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 360,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 375,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 768,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phan-bo-maxwell",
+          "width": 1440,
+          "formulas": 25,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 320,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 360,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 375,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 768,
+          "formulas": 14,
+          "issues": []
+        },
+        {
+          "id": "phuong-trinh-van-der-waals",
+          "width": 1440,
+          "formulas": 14,
+          "issues": []
+        }
+      ]
+    },
+    {
+      "status": "passed-scoped-render",
+      "scope": "Production MathText and formulaRows markup injected into actual public chapter18 Cheatsheet layout/CSS. Full assembled cloud integration and exact deployed version remain separate.",
+      "cases": [
+        {
+          "id": "cheatsheet18",
+          "width": 320,
+          "issues": [],
+          "formulas": 60
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 360,
+          "issues": [],
+          "formulas": 60
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 375,
+          "issues": [],
+          "formulas": 60
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 768,
+          "issues": [],
+          "formulas": 60
+        },
+        {
+          "id": "cheatsheet18",
+          "width": 1440,
+          "issues": [],
+          "formulas": 60
+        }
+      ],
+      "files": [
+        {
+          "file": "docs/.vitepress/physics1-priority-course.mjs",
+          "sha256": "7b0a715d48aec39107c68fef842de03d59825969f83106c3d6f0165dbc559654"
+        }
+      ],
+      "cheatsheetItems": 8
+    }
+  ],
+  "skillTests": 39,
+  "localGlobalMathGate": "Attempted npm run verify:math in partial checkout. Eight cache tests passed, two suites could not load omitted privatecourse modules. Not claimed as a green globalmath result. Exact fully assembled GitHub run required.",
+  "evidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter18-reference-and-wiki.tar.gz",
+  "evidenceArchiveSHA256": "07875f19296825ebb5ef2710253fa56f98b88c49fee4ccf23d5ec994a7c4352f",
+  "remaining": "Exact cloud/globalmath and actual publicWiki/Cheatsheet/Notebook integration; other chapter18 supportingconcepts retain their existing scope."
+}
