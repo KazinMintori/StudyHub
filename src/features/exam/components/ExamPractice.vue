@@ -395,6 +395,7 @@ import {
 } from '../services/exam-session.mjs';
 
 const props = defineProps({
+  revealAnswers: { type: Boolean, default: false },
   backLinkText: { type: String, default: '← Chọn bài ôn thi' },
   courseLink: { type: String, default: '/xu-ly-du-lieu/on-thi/' },
   sessionKey: { type: String, default: '' },
@@ -493,7 +494,7 @@ const currentAnswer = computed(() => {
   return getAnswer(sessionState, currentQuestion.value.id);
 });
 
-const isAnswered = computed(() => Boolean(currentAnswer.value));
+const isAnswered = computed(() => props.revealAnswers || Boolean(currentAnswer.value));
 const isManualReview = computed(() => currentQuestion.value?.grading === 'manual');
 const selectedKey = computed(() => currentAnswer.value?.selectedKey || null);
 

@@ -10,7 +10,7 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
     ],
     sidebar:{
       ...Object.fromEntries(courseCatalog.map(course=>[`/${course.id}/`,course.presentation === 'philosophy' ? [
-        {text:course.name,items:[{text:'Học tập',link:`/${course.id}/`},{text:'Ôn thi',link:`/${course.id}/on-thi/`,items:course.lessons.map(chapter=>({text:`Chương ${['I','II','III'][chapter.number-1] || chapter.number}`,link:`/${course.id}/on-thi/chuong-${chapter.number}`}))}]},
+        {text:course.name,items:[{text:'Học tập',link:`/${course.id}/`},{text:'Ôn thi',link:`/${course.id}/on-thi/`,items:[...course.lessons.map(chapter=>({text:`Chương ${['I','II','III'][chapter.number-1] || chapter.number}`,link:`/${course.id}/on-thi/chuong-${chapter.number}`,items:[{text:'Điền từ',link:`/${course.id}/on-thi/chuong-${chapter.number}/dien-tu`}]})),{text:'Đề thi trắc nghiệm',link:`/${course.id}/on-thi/de-thi/`}]}]},
         ...course.lessons.map(chapter=>({
           text:`Chương ${chapter.number}. ${chapter.title}`,link:`/${course.id}/bai-giang/${chapter.slug}`,collapsed:true,
           items:chapter.topics.map(topic=>({text:topic.title,link:`/${course.id}/bai-giang/${chapter.slug}/${topic.slug}`}))
