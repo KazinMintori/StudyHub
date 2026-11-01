@@ -177,6 +177,17 @@ jobs:
           done
           npm run verify:navigation
 
+          node scripts/verification/verify-assessment-navigation.mjs
+
+      - name: Save built assessment and card verification
+        if: always() && !inputs.fixture_only
+        uses: actions/upload-artifact@v4
+        with:
+          name: assessment-navigation
+          retention-days: 3
+          path: qa/assessment-navigation/
+          if-no-files-found: ignore
+
       - name: Upload Pages artifact
         if: success() && !inputs.fixture_only && !inputs.verify_only
         uses: actions/upload-pages-artifact@v3
