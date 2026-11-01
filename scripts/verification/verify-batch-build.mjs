@@ -47,6 +47,11 @@ export default { ...config, base:'/StudyHub/', lastUpdated:false, srcExclude:[],
 `)
   }
   const interactive = name => `
+<style scoped>
+.batch-style-${name}{border:7px solid purple;padding:19px;display:flex}
+@media(max-width:600px){.batch-style-${name}{padding:11px}}
+</style>
+
 <script setup>
 import { ref } from 'vue'
 import { useData } from 'vitepress'
@@ -62,10 +67,6 @@ const { frontmatter } = useData()
 <button id="counter" @click="count++">{{ count }}</button>
 <p id="frontmatter-probe">{{ frontmatter.course }}</p>
 <div class="batch-style-${name}">Card ${name}</div>
-<style scoped>
-.batch-style-${name}{border:7px solid purple;padding:19px;display:flex}
-@media(max-width:600px){.batch-style-${name}{padding:11px}}
-</style>
 ${realTheme && name === 'a' ? '<PhilosophyPracticeChapter chapter-id="chuong-1" />' : ''}
 ${realTheme && name === 'b' ? '<ExamPractice :bank="bank" />' : ''}
 `
