@@ -19,6 +19,8 @@ $$
 Y=\sigma/\varepsilon.
 $$
 
+Trong hệ thức này, ứng suất và biến dạng phải dùng cùng quy ước dấu: Kéo dương, nén âm. Nếu dùng độ lớn thì cả tử và mẫu đều phải là độ lớn.
+
 Với thanh tiết diện đều A và chiều dài tự nhiên L₀, độ dãn do lực pháp F là FL₀ chia YA. Môđun là tính chất vật liệu trong điều kiện xét, còn độ cứng của cả thanh còn phụ thuộc hình học.
 
 ## Ví dụ

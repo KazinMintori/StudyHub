@@ -13,11 +13,18 @@ Mômen quán tính đối với một trục là $I=\int r^2dm$, với r là kho
 
 ## Giải thích kỹ thuật
 
-Với $n$ phần tử, $I=m_1r_1^2+\cdots+m_nr_n^2=\sum_{i=1}^nm_ir_i^2$. Đơn vị là kilôgam mét vuông. Với trục cố định và $I$ không đổi, $K=I\omega^2/2$ và $\sum\tau_z=I\alpha_z$.
+Với $n$ phần tử, mômen quán tính được khai triển rồi viết gọn như sau:
+
+$$
+\begin{aligned}
+I &= m_1r_1^2+\cdots+m_nr_n^2 \\
+&= \sum_{i=1}^nm_ir_i^2.
+\end{aligned}
+$$
+
+Đơn vị là kilôgam mét vuông. Với trục cố định và $I$ không đổi, $K=I\omega^2/2$ và $\sum\tau_z=I\alpha_z$.
 
 Định lý $I=I_{\mathrm{cm}}+Md^2$ dùng hai trục song song, một trục qua khối tâm. Không áp dụng nó cho hai trục bất kỳ.
-
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 9. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
 
 ## Ví dụ
 
@@ -42,3 +49,7 @@ Không. Cần phân bố khối lượng và trục được chọn.
 - [Mômen lực](./momen-luc.md)
 - [Công &amp; năng lượng](./cong-nang-luong.md)
 - [Dao động điều hòa](./dao-dong-dieu-hoa.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 9.

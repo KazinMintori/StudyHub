@@ -40,3 +40,7 @@ $2\times 10^{-6} C$.
 - [Sóng &amp; pha](./song.md)
 - [Thông lượng](./thong-luong.md)
 - [Điện tích](./dien-tich.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 1.3–1.5.

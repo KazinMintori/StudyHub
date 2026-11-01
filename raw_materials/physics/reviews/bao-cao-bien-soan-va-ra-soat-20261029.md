@@ -206,3 +206,15 @@ Một phần báo cáo Wiki chỉ chứa tiêu đề và metadata nhưng gắn c
 Đã chốt thêm 210 ảnh gốc của chương 13–16 bằng các biên bản đã xem đầy đủ khung cùng đối chiếu byte của bản đang dùng. Mười một khung đã đổi sau biên bản cũ được xem riêng cạnh vùng PDF mở rộng. Một chú thích pha ban đầu được kiểm với đồ thị. Không lặp lại toàn bộ phép kiểm cho 199 ảnh giữ nguyên. Đây là cách giảm thời gian mà vẫn giữ được phạm vi chứng minh.
 
 Bản Hạt nhân tại commit 48fed5f2196211a498e0a5c5069a8584e811d33b đã build và deploy thành công. Sáu trang 43.3–43.8 có 30 trường hợp kiểm trực tiếp đạt, gồm các câu đã khôi phục, công thức, ảnh và chú thích ở năm chiều rộng. Kết quả này không được dùng để xác nhận ảnh chương 22–23 hoặc phần tra cứu mới khi chúng chưa triển khai. Báo cáo vẫn là bản đang hoàn thiện, chưa chứng nhận xong toàn bộ mục tiêu.
+
+## Kết quả rà Wiki và ảnh đã triển khai
+
+Đã đọc phần kỹ thuật của 38 Wiki được dùng ở các chương cơ học quay, đàn hồi và nhiệt. Parent kiểm lại 17 quan hệ và ví dụ, đồng thời loại bốn nhận xét sai trong bản rà: Trọng trường đều là điều kiện đủ để hai tâm trùng nhau, không phải điều kiện cần trong mọi cấu hình. Nhiệt trở phải giữ diện tích truyền nhiệt. Giới hạn tuyến tính thuộc quan hệ ứng suất–biến dạng, không phải định nghĩa hình học của biến dạng. Nhận xét ma sát không truyền công phải giữ mô hình tiếp xúc lý tưởng với mặt đứng yên. Các trang thực tế đã có những giới hạn đúng đó nên không sửa khoa học chỉ để khớp nhận xét sai.
+
+Lượt xem 38 Wiki công khai ở năm chiều rộng có 190 trường hợp, phát hiện một công thức mômen quán tính vượt khung nội dung tại 320 px. Chuỗi khai triển và ký hiệu tổng được chuyển thành khối toán, chỉ ngắt tại dấu bằng. Bảy trang sau sửa đạt 35 trường hợp kiểm với luật Markdown, toán, CSS và phông thực tế. Đã nói rõ quy ước dấu trong môđun Young, đưa tài liệu tham khảo về cuối các trang liên quan và giữ các biểu thức ngắn vốn vừa khung. Không dùng cách ẩn, cắt hay thu nhỏ công thức để che lỗi.
+
+Đã thử verify:math ở checkout rút gọn: 12 kiểm thử đạt, ba kiểm thử không nạp được module riêng tư chưa lắp tại đây. Kết quả này không được ghi thành đạt toàn dự án. Các công thức và trang bị sửa đã được kiểm riêng, còn kiểm toàn bộ phải chạy trên GitHub với đủ học phần.
+
+Bản sửa ảnh tại c3b726b7bc80dbf0b0b10f66386d286e2a959227 đã build và deploy thành công. Trên website, 34 tệp PNG có đúng mã băm bản sửa, bảy bộ nhãn xuất hiện mỗi cặp đúng một lần và 65 trường hợp ở năm chiều rộng đạt. Một ảnh nhỏ được Vite nhúng thành dữ liệu PNG trong HTML, khiến trình kiểm theo URL ban đầu bỏ sót. Sau khi đối chiếu DOM và giải mã byte ảnh nhúng, xác nhận ảnh cùng chú thích vẫn có đủ. Không sửa nội dung website để đáp ứng một lỗi của công cụ kiểm.
+
+Đã nối thêm 296 ảnh nguồn của chương 1, 3, 4, 6 và 7 với biên bản parent thực sự đã xem đủ khung. Chương 11 còn cần bằng chứng xem khung độc lập vì một bản rà chỉ dùng kết quả khớp pixel rồi kết luận đầy đủ. Các nhận xét ấy chưa được nhận, dù tệp ảnh đúng nguồn. Công việc toàn bộ tiếp tục, chưa thực hiện dọn nguồn hoặc worktree.

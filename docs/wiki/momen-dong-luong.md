@@ -66,4 +66,4 @@ Không. Nếu vector vị trí cùng phương với động lượng, tích có 
 
 ## Tài liệu tham khảo
 
-Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 28, trang 918–943.
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 10.5–10.7 và chương 28.

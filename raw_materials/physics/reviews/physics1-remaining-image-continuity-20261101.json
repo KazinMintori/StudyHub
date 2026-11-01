@@ -1,0 +1,3660 @@
+{
+  "status": "accepted-current-source-frame-and-caption-evidence-5chapters",
+  "privateP1Revision": "c49051c9de5a145a92754e5ea38cd1570e6d818f",
+  "chapters": [
+    {
+      "chapter": 1,
+      "status": "accepted-original-frame-and-caption-continuity-current",
+      "originalPNGAssets": 67,
+      "imageProof": [
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-10.png",
+          "currentSHA256": "776c566ae1ba11a543f3caa8913d9d709cd45f3be927eb41e6bd2ebc81fbd0d5",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "776c566ae1ba11a543f3caa8913d9d709cd45f3be927eb41e6bd2ebc81fbd0d5",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-11.png",
+          "currentSHA256": "9b6b2b2add032911b99177a514ca72e38609f387e04a292f0d232903a1b0fff1",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "9b6b2b2add032911b99177a514ca72e38609f387e04a292f0d232903a1b0fff1",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-12.png",
+          "currentSHA256": "96cb25886816cb6271092da9d10f8c88b58332706005879df4fcbbc0fc6dd83d",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "96cb25886816cb6271092da9d10f8c88b58332706005879df4fcbbc0fc6dd83d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-13.png",
+          "currentSHA256": "50ae7c7cb2e941d6a95e87909a55a83a4f47aeac81a8ac83d7e9870f0cacea67",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "50ae7c7cb2e941d6a95e87909a55a83a4f47aeac81a8ac83d7e9870f0cacea67",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-14.png",
+          "currentSHA256": "7e23d19597137b5fd3e76f908622f90971136c477bc112982e42adfa2d4fff33",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "7e23d19597137b5fd3e76f908622f90971136c477bc112982e42adfa2d4fff33",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-15.png",
+          "currentSHA256": "ac2f990e0ec8fc06516399c08aaa83b850447dc2bee7bf6b8e267ddaec734ee7",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "ac2f990e0ec8fc06516399c08aaa83b850447dc2bee7bf6b8e267ddaec734ee7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-16.png",
+          "currentSHA256": "7c6b574b5055e603aaebe8972d1ae784b904854d9e56a6ba4e50f01a17913b43",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "7c6b574b5055e603aaebe8972d1ae784b904854d9e56a6ba4e50f01a17913b43",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-17.png",
+          "currentSHA256": "6710e7be8895ea391e46f64bfa1a20784228e5a738f957a9e48c72b001e190fe",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "6710e7be8895ea391e46f64bfa1a20784228e5a738f957a9e48c72b001e190fe",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-18.png",
+          "currentSHA256": "1df8c25a41c52237a3d818067fa452b4707ad5f04a7b47a4bbfae90434cad625",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "1df8c25a41c52237a3d818067fa452b4707ad5f04a7b47a4bbfae90434cad625",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-19.png",
+          "currentSHA256": "38a749ec73cda217f9248200fffa85ead83cdde703ddc9ca3096597281d9d8a9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "38a749ec73cda217f9248200fffa85ead83cdde703ddc9ca3096597281d9d8a9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-1a.png",
+          "currentSHA256": "1912133db433586be0850f06899cea3d70c8eb319de47b29d3f90717dd7d76cd",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "1912133db433586be0850f06899cea3d70c8eb319de47b29d3f90717dd7d76cd",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-1b.png",
+          "currentSHA256": "794bf3b59b0498dfc7fc336e1e08080f6061dd064dfac2d02874ad4fded21cbf",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "794bf3b59b0498dfc7fc336e1e08080f6061dd064dfac2d02874ad4fded21cbf",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-2.png",
+          "currentSHA256": "e76333762c3fc1762794902bb725d404b91ea15e5a86d8866791e7ed9f26479d",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "e76333762c3fc1762794902bb725d404b91ea15e5a86d8866791e7ed9f26479d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-20.png",
+          "currentSHA256": "ded6085fe2e93924689caf4034c54223a11e36cbfcb435cdd97622b3fe925f4d",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "ded6085fe2e93924689caf4034c54223a11e36cbfcb435cdd97622b3fe925f4d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-21.png",
+          "currentSHA256": "986e187adbe1d69e013bbdc3821fd108b821b98e717897ebbd4cf440cb7c4aa9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "986e187adbe1d69e013bbdc3821fd108b821b98e717897ebbd4cf440cb7c4aa9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-22.png",
+          "currentSHA256": "0055971967cf6267b3dd80ccd1adf89fdf7a0908c074fad6bb9061ab9f62f0e9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "0055971967cf6267b3dd80ccd1adf89fdf7a0908c074fad6bb9061ab9f62f0e9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-23.png",
+          "currentSHA256": "c62ff338b823571e68a4f5e19012cf598c6318e274c1524a7775a019651a4c90",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "c62ff338b823571e68a4f5e19012cf598c6318e274c1524a7775a019651a4c90",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-24.png",
+          "currentSHA256": "9f6990de06a4cac7ecebd5a7089cccb404cf412c935dc7399a379bc787ccad7b",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "9f6990de06a4cac7ecebd5a7089cccb404cf412c935dc7399a379bc787ccad7b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-25.png",
+          "currentSHA256": "e5f2aa31705fc7c92e40230dc112e1f5fed0623a506800d23723bb3ac31e8e08",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "e5f2aa31705fc7c92e40230dc112e1f5fed0623a506800d23723bb3ac31e8e08",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-26.png",
+          "currentSHA256": "a3a11c722fd594e02877f7e4c525404327a5549c4cfa1cc8e50821a241cd4e49",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "a3a11c722fd594e02877f7e4c525404327a5549c4cfa1cc8e50821a241cd4e49",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-27.png",
+          "currentSHA256": "5e26e8f70ae65c6e7c090bb34606a04cc3b687beb8b0a562fd120ed245b86231",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "5e26e8f70ae65c6e7c090bb34606a04cc3b687beb8b0a562fd120ed245b86231",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-28.png",
+          "currentSHA256": "ef9019ffd69354e82829a445c7e051d388c622ea1a5ff71086c487b56cb6abb8",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "ef9019ffd69354e82829a445c7e051d388c622ea1a5ff71086c487b56cb6abb8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-29.png",
+          "currentSHA256": "1ee32197696275fe93dcfba6d1588eaee22f6811f1fc034ceece9b03b4ae99ab",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "1ee32197696275fe93dcfba6d1588eaee22f6811f1fc034ceece9b03b4ae99ab",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-3.png",
+          "currentSHA256": "c2a53406fa27d85e92289be587cfa6666e97956a99f631add6ca1e2c75ec8004",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "c2a53406fa27d85e92289be587cfa6666e97956a99f631add6ca1e2c75ec8004",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-30.png",
+          "currentSHA256": "5fa77202d963d2414308381409f1ac9787b3e3a67615f68cfc56aaa5fc9f4a52",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "5fa77202d963d2414308381409f1ac9787b3e3a67615f68cfc56aaa5fc9f4a52",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-31.png",
+          "currentSHA256": "196d520b96bb65a993eb97288087e39f0b13f669f0a0fab53334c96c14f82bbd",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "196d520b96bb65a993eb97288087e39f0b13f669f0a0fab53334c96c14f82bbd",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-32.png",
+          "currentSHA256": "da30857730e7fcd4ffa488e976af0dfbf03195048be5096d7d9b59371ffeac6f",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "da30857730e7fcd4ffa488e976af0dfbf03195048be5096d7d9b59371ffeac6f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-33.png",
+          "currentSHA256": "12ba85fd3402fb50b3b773ab8a166c64507ee3d0dd63f40eeb88eba5de1b09c6",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "12ba85fd3402fb50b3b773ab8a166c64507ee3d0dd63f40eeb88eba5de1b09c6",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-34.png",
+          "currentSHA256": "c843bb694a0606039530ddc74bf559a0c6fef341b76aeb124780f36400c71aaf",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "c843bb694a0606039530ddc74bf559a0c6fef341b76aeb124780f36400c71aaf",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-4.png",
+          "currentSHA256": "8cf2b6c352197c263a4f16f04ed516f6d2cf61516c60ef3c2ea205e2422d0021",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "8cf2b6c352197c263a4f16f04ed516f6d2cf61516c60ef3c2ea205e2422d0021",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-5.png",
+          "currentSHA256": "518345dea3de7f0da9268a5f18e799482220dee6d23811d0d018ca2d1fbde869",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "518345dea3de7f0da9268a5f18e799482220dee6d23811d0d018ca2d1fbde869",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-6.png",
+          "currentSHA256": "133bd3e1ac0aedd889129c9c8bd64e213f25b6cda2dcceb33b50e229600387ca",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "133bd3e1ac0aedd889129c9c8bd64e213f25b6cda2dcceb33b50e229600387ca",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-7.png",
+          "currentSHA256": "7d6a1d22eaca5f604dcca0dce6270c063ef93053518a2cb14e3e35df7a67a0f9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "7d6a1d22eaca5f604dcca0dce6270c063ef93053518a2cb14e3e35df7a67a0f9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-8.png",
+          "currentSHA256": "2640514518a6c24d8fdbe39af45d13ff48a414524064cb1a8469c53cde1283bf",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "2640514518a6c24d8fdbe39af45d13ff48a414524064cb1a8469c53cde1283bf",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-1-9.png",
+          "currentSHA256": "48a42d0853df2c87b007da069a1c1fb6278090760440d9f8a7f2f3a8b81a4baf",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "48a42d0853df2c87b007da069a1c1fb6278090760440d9f8a7f2f3a8b81a4baf",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-e1-21.png",
+          "currentSHA256": "8b1999d17d1da6e98dd8890f2367f66da958f0a7e0460674f0cb4cbec4c35df9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "8b1999d17d1da6e98dd8890f2367f66da958f0a7e0460674f0cb4cbec4c35df9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-e1-22.png",
+          "currentSHA256": "549421cd93d59ba2600f35bb630aa50bc568a1c799863040b32f361b26158a61",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "549421cd93d59ba2600f35bb630aa50bc568a1c799863040b32f361b26158a61",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-e1-33.png",
+          "currentSHA256": "8fab0856a9bf01e2821a92c30d00daee0220d9480f79c9a3f680a22adf229358",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "8fab0856a9bf01e2821a92c30d00daee0220d9480f79c9a3f680a22adf229358",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-e1-37.png",
+          "currentSHA256": "c714eaa92ec68bd1447c23b791118e3b7dffc13ba699f7ec0f96cbb836d2190b",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "c714eaa92ec68bd1447c23b791118e3b7dffc13ba699f7ec0f96cbb836d2190b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-p1-56.png",
+          "currentSHA256": "2cfb1e617bbcb343501944e7393b5f81f2c37a1defd3ff9c26d3155e006054bd",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "2cfb1e617bbcb343501944e7393b5f81f2c37a1defd3ff9c26d3155e006054bd",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-p1-60.png",
+          "currentSHA256": "a130a7f4bf654e1c855cd767a267faefe2ea49cb679ff6593d57ecfc7dd789f0",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "a130a7f4bf654e1c855cd767a267faefe2ea49cb679ff6593d57ecfc7dd789f0",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-p1-61.png",
+          "currentSHA256": "56db68a2f93ff7c292f1bf57c65a4f71d5f74ce617998131d5b8d24e66abb77b",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "56db68a2f93ff7c292f1bf57c65a4f71d5f74ce617998131d5b8d24e66abb77b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-p1-62.png",
+          "currentSHA256": "7e88f84a4d8022b424061e029eaf0921b0dc135dac9c9bd90937499be01570cd",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "7e88f84a4d8022b424061e029eaf0921b0dc135dac9c9bd90937499be01570cd",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-p1-91.png",
+          "currentSHA256": "25cdc4a3b74eaea134177a519cf7186942c455549583bdd9a986a89b42e50dee",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "25cdc4a3b74eaea134177a519cf7186942c455549583bdd9a986a89b42e50dee",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/hinh-p1-94.png",
+          "currentSHA256": "c20c5b54ac66481d6299f3c4d40306765c2dfbcc31309315aaf6fc1704eb0efa",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "c20c5b54ac66481d6299f3c4d40306765c2dfbcc31309315aaf6fc1704eb0efa",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/mo-chuong-loc-xoay.png",
+          "currentSHA256": "0d5775a62809bd470c36496645c38f5eca5ce0bd5ae649457ed3b0181c16d2af",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "0d5775a62809bd470c36496645c38f5eca5ce0bd5ae649457ed3b0181c16d2af",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-bridge-fig-1-34.png",
+          "currentSHA256": "5cc4af490b2709f84f63da4057a65cc1726652331507ccda7208661f5f792ea6",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "5cc4af490b2709f84f63da4057a65cc1726652331507ccda7208661f5f792ea6",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-21.png",
+          "currentSHA256": "4bfab86599b7bf8383b1a36cb9ea45af94637b1298042532c255d1784496a3a8",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "4bfab86599b7bf8383b1a36cb9ea45af94637b1298042532c255d1784496a3a8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-22.png",
+          "currentSHA256": "ebc9ec681537f09f02d76d0c5b2e36b3fd9eeecc11bd63843fa4f73f734b22b8",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "ebc9ec681537f09f02d76d0c5b2e36b3fd9eeecc11bd63843fa4f73f734b22b8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-33.png",
+          "currentSHA256": "36c2424cdc1b805110ecfd563326f6efc9e20e3f21144bc5e7ad1c26add2aaf7",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "36c2424cdc1b805110ecfd563326f6efc9e20e3f21144bc5e7ad1c26add2aaf7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-e1-37.png",
+          "currentSHA256": "74c13cff3049f698efeb3325ca706b0f1e41a3ca7bfaae0f83c98c8bf7228e47",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "74c13cff3049f698efeb3325ca706b0f1e41a3ca7bfaae0f83c98c8bf7228e47",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-guided-media-qr.png",
+          "currentSHA256": "bf4fcb29f201a86e097f54c62b239afcbba3bf407a114b6b0ac87731d012f26e",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "bf4fcb29f201a86e097f54c62b239afcbba3bf407a114b6b0ac87731d012f26e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-exercises-q1-21-figure-1-7.png",
+          "currentSHA256": "7d6a1d22eaca5f604dcca0dce6270c063ef93053518a2cb14e3e35df7a67a0f9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "7d6a1d22eaca5f604dcca0dce6270c063ef93053518a2cb14e3e35df7a67a0f9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-late-p1-56.png",
+          "currentSHA256": "c266f88729227fa45a22baf9fd9f5842b051249bd879644f2275c079d90df686",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "c266f88729227fa45a22baf9fd9f5842b051249bd879644f2275c079d90df686",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-late-p1-60.png",
+          "currentSHA256": "fbd2e74602e06bed0eb4b4ba53b2efdab73e002473b871d2de950689d8078708",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "fbd2e74602e06bed0eb4b4ba53b2efdab73e002473b871d2de950689d8078708",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-late-p1-61.png",
+          "currentSHA256": "cf49fc1485712ff14d42ba7408b2f21396cbb8bcd7869e32c1287bd36e7ad142",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "cf49fc1485712ff14d42ba7408b2f21396cbb8bcd7869e32c1287bd36e7ad142",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-late-p1-62.png",
+          "currentSHA256": "e4f8d62e41587f576f50ec8a42a5afbe6858fb9f2a9941fc37ed5c61a9222dd3",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "e4f8d62e41587f576f50ec8a42a5afbe6858fb9f2a9941fc37ed5c61a9222dd3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-late-p1-91.png",
+          "currentSHA256": "16a72fa62a1187b02bb369582de9abf79a6b1be150000d1280e16ed903f0874e",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "16a72fa62a1187b02bb369582de9abf79a6b1be150000d1280e16ed903f0874e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/r-late-p1-94.png",
+          "currentSHA256": "82700dc6df76f38e4e151b54c640ecd880aebe26597499090c13ae1c6cd0d65b",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "82700dc6df76f38e4e151b54c640ecd880aebe26597499090c13ae1c6cd0d65b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/tai-nguyen-chuong-1.png",
+          "currentSHA256": "8b895a6bc295149060cdd4d033260939f405ff04fe344f1a0ebd5ab72c73900f",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "8b895a6bc295149060cdd4d033260939f405ff04fe344f1a0ebd5ab72c73900f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-chu-so.png",
+          "currentSHA256": "f6ac89cab30e4af7569e6c9ee4d4c5e1c0cc762a142d8cb29c9759144f26a7a5",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "f6ac89cab30e4af7569e6c9ee4d4c5e1c0cc762a142d8cb29c9759144f26a7a5",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-cong-vector.png",
+          "currentSHA256": "0f0cf7fc67309d36d31bce78ae3d0376e6a2db53e3ec7754ee95d54007045a1a",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "0f0cf7fc67309d36d31bce78ae3d0376e6a2db53e3ec7754ee95d54007045a1a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-thanh-phan.png",
+          "currentSHA256": "57cd8f766b7f95e038a7a4d8638adcd8b34ef46689b8414f897b54edadd91dc4",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "57cd8f766b7f95e038a7a4d8638adcd8b34ef46689b8414f897b54edadd91dc4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-tich-co-huong.png",
+          "currentSHA256": "aee411cc91098e7c82c6ea4442e6f27e99528a281557908b10788c21b05829b7",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "aee411cc91098e7c82c6ea4442e6f27e99528a281557908b10788c21b05829b7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-tich-vo-huong.png",
+          "currentSHA256": "a7ad58eeba2b487c5308992030143558f53cfff805b214376a788600932ddb51",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "a7ad58eeba2b487c5308992030143558f53cfff805b214376a788600932ddb51",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/tom-tat-vector-don-vi.png",
+          "currentSHA256": "74c8ce0e94dcff0664548a716e1a720916ab2f2cd563cddf5cec5f7163634164",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "74c8ce0e94dcff0664548a716e1a720916ab2f2cd563cddf5cec5f7163634164",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/vat-ly-1/bai-giang/img/young-01/ung-dung-nhiet-do-gio.png",
+          "currentSHA256": "48aebe0cf711a5b691ecc7600a5fa2d5400e520bd3d172dc11505c2188a57926",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "48aebe0cf711a5b691ecc7600a5fa2d5400e520bd3d172dc11505c2188a57926",
+          "sameAsHistory": true
+        }
+      ],
+      "markdownAndRegistryProof": [
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/00-mo-dau.md",
+          "currentCanonicalSHA256": "49d394ddbfc2aa30a6f3633101b0a9a8a5306d9630f667acf1b5547ece560807",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "49d394ddbfc2aa30a6f3633101b0a9a8a5306d9630f667acf1b5547ece560807",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/01-ban-chat-vat-ly.md",
+          "currentCanonicalSHA256": "1aa53a9ca930b517db7672085e81f5b4f0b8d73a3f1fe37082f43c8848a04d84",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "1aa53a9ca930b517db7672085e81f5b4f0b8d73a3f1fe37082f43c8848a04d84",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/02-giai-bai-toan.md",
+          "currentCanonicalSHA256": "c29eb7b81f3ee236d576ccbf68234c62a1185adf625ae2bd54edbbac9ebe1b22",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "c29eb7b81f3ee236d576ccbf68234c62a1185adf625ae2bd54edbbac9ebe1b22",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/03-chuan-va-don-vi.md",
+          "currentCanonicalSHA256": "ed7116b6169a317b3b0d120a6355e8762d4cfa4ae20bbb961b291e5140b3ffb6",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "ed7116b6169a317b3b0d120a6355e8762d4cfa4ae20bbb961b291e5140b3ffb6",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/04-su-dung-doi-don-vi.md",
+          "currentCanonicalSHA256": "298af264900a8d3375949b753e0aace76e35ebb5c5ddd62927b3b7834ff7edc1",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "298af264900a8d3375949b753e0aace76e35ebb5c5ddd62927b3b7834ff7edc1",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/05-do-bat-dinh-chu-so.md",
+          "currentCanonicalSHA256": "475f2882beda9b0cb0b5bd966c1fb13edfe9cfad81436d9c2a9dc7929c2297c9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "475f2882beda9b0cb0b5bd966c1fb13edfe9cfad81436d9c2a9dc7929c2297c9",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/06-uoc-luong.md",
+          "currentCanonicalSHA256": "9728874f30dc13811d3b11262ec1403e9a4af014a42638dbc295c81f4b3c83f9",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "9728874f30dc13811d3b11262ec1403e9a4af014a42638dbc295c81f4b3c83f9",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/07-vector-cong-vector.md",
+          "currentCanonicalSHA256": "5df97feba799d481a11882c0e2ef1b22ab5ac3480e22c108e8ab49361d165c43",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "5df97feba799d481a11882c0e2ef1b22ab5ac3480e22c108e8ab49361d165c43",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/08-thanh-phan-vector.md",
+          "currentCanonicalSHA256": "8b463e6ec17055305268203b5b8d3d4224cf163af49948b98f627d9115467da2",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "8b463e6ec17055305268203b5b8d3d4224cf163af49948b98f627d9115467da2",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/09-vector-don-vi.md",
+          "currentCanonicalSHA256": "b1b7c3d1a7d3140ecd8a214214feb77990c3056d086966ef31f87b414e19ea1a",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "b1b7c3d1a7d3140ecd8a214214feb77990c3056d086966ef31f87b414e19ea1a",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/10-tich-vector.md",
+          "currentCanonicalSHA256": "d5bf54456197c41bdde5ceeadf582b81bf647eb9475790c7f4ef7886d611e5b5",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "d5bf54456197c41bdde5ceeadf582b81bf647eb9475790c7f4ef7886d611e5b5",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/11-tom-tat.md",
+          "currentCanonicalSHA256": "06f84f1cb472009fbbd6f70d9ee001126855514f1bcc799f44a8038710af3a92",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "06f84f1cb472009fbbd6f70d9ee001126855514f1bcc799f44a8038710af3a92",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/12-luyen-tap-huong-dan.md",
+          "currentCanonicalSHA256": "af067d00e604d27094b44eec276ae47b2791b1d80f9847c3dfa8b92e74e61e56",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "af067d00e604d27094b44eec276ae47b2791b1d80f9847c3dfa8b92e74e61e56",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/13-cau-hoi-thao-luan.md",
+          "currentCanonicalSHA256": "7a10c43ff99b57f5599b2af45ddd227b1cd048a78052167a24e4e5bc9bdfb1b1",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "7a10c43ff99b57f5599b2af45ddd227b1cd048a78052167a24e4e5bc9bdfb1b1",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/14-bai-tap-01-48.md",
+          "currentCanonicalSHA256": "900119d946d995cd8960a4709ff429cc737b95a898f2665f787cc7f6b74cfcf3",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "900119d946d995cd8960a4709ff429cc737b95a898f2665f787cc7f6b74cfcf3",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/15-bai-tap-49-89.md",
+          "currentCanonicalSHA256": "a8c8aaa114d84d2c8479c3b3312ab733cced33fc3082e3e780efa89a48a09634",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "a8c8aaa114d84d2c8479c3b3312ab733cced33fc3082e3e780efa89a48a09634",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/16-bai-nang-cao-mcat.md",
+          "currentCanonicalSHA256": "f1d6a3b0ed4e2ab662e19caf3ef83678ac3a136226832b2682631f4fc9ae53bd",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "f1d6a3b0ed4e2ab662e19caf3ef83678ac3a136226832b2682631f4fc9ae53bd",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/17-dap-an-cua-sach.md",
+          "currentCanonicalSHA256": "a0f7143914872217d9efaa24e8a4bdbe6f7f23614a4bc2441b187655b123adef",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "a0f7143914872217d9efaa24e8a4bdbe6f7f23614a4bc2441b187655b123adef",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/18-dap-so-bai-le.md",
+          "currentCanonicalSHA256": "243421321115b99edbbe63fc2b4f5f0d53dc5fa4712f9eb5e9994a5aec7fec6e",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "243421321115b99edbbe63fc2b4f5f0d53dc5fa4712f9eb5e9994a5aec7fec6e",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/parent-09-luyen-tap-huong-dan.md",
+          "currentCanonicalSHA256": "71b6c239f52565f38da146b9cbc0c8646e6ddeeb8449a6506e3739021e431310",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "71b6c239f52565f38da146b9cbc0c8646e6ddeeb8449a6506e3739021e431310",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/parent-10-cau-hoi-thao-luan.md",
+          "currentCanonicalSHA256": "d674b3e979d0fd7701f4a7ef922f1f5c545ad3338b45d6c464843b0636b6188a",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "d674b3e979d0fd7701f4a7ef922f1f5c545ad3338b45d6c464843b0636b6188a",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/parent-11-bai-tap-001-047.md",
+          "currentCanonicalSHA256": "f56df0fb862b3335e0ba6d0927e8ad37be3dfd538c1947d83520aa25b1e677c0",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "f56df0fb862b3335e0ba6d0927e8ad37be3dfd538c1947d83520aa25b1e677c0",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/parent-12-bai-tap-048-094.md",
+          "currentCanonicalSHA256": "19b2d32865066d5d52f994eb3710fcdf7f35fefab910131ab56e81691b3dd3c4",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "19b2d32865066d5d52f994eb3710fcdf7f35fefab910131ab56e81691b3dd3c4",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "raw_materials/physics/translations/chapter-01/parent-16-bai-tap-cau-noi.md",
+          "currentCanonicalSHA256": "6dc134b46d364801de54a050cd2537559a32d68e41efb394ec1c7a23c48b287a",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "6dc134b46d364801de54a050cd2537559a32d68e41efb394ec1c7a23c48b287a",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/.vitepress/physics1-remaining-01-exercises-image-annotations.mjs",
+          "currentCanonicalSHA256": "d105eb5a57534c6750a3925104b57af4e65a11c356dd9d29e41e3c69b7297df6",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "d105eb5a57534c6750a3925104b57af4e65a11c356dd9d29e41e3c69b7297df6",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/.vitepress/physics1-remaining-01-late-exercises-image-annotations.mjs",
+          "currentCanonicalSHA256": "f2c9a1ba0bf74b8133ec38640bce176864f5d62f1d3f50dc9c9e484b43622a78",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "f2c9a1ba0bf74b8133ec38640bce176864f5d62f1d3f50dc9c9e484b43622a78",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 1,
+          "file": "docs/.vitepress/physics1-remaining-01-theory-image-annotations.mjs",
+          "currentCanonicalSHA256": "a72f63034c9a0183a7657ecf75866210a94c16ca3446523c7513be473d5651f5",
+          "historyCommit": "e1ca8af7cdecf721d258ae49ecb3a33a871e6241",
+          "historyAvailable": true,
+          "historySHA256": "a72f63034c9a0183a7657ecf75866210a94c16ca3446523c7513be473d5651f5",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        }
+      ],
+      "explicitPriorEvidence": [
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch01-remaining-theory-20261023.md",
+          "sha256": "21446a08371a26a07c106204a847619e5841f66a9cee4f80408426bf94629bdf",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch01-parent-exercises-20261026.md",
+          "sha256": "643d9fa25735b274f70335e3a16b8b131f1307f752fa01169008b45d81983b38",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\physics1-chapter01-public-20261026.json",
+          "sha256": "f565983068f3b1a104cd11135f23864939fecf16fe860d6199b4902f5525fa47",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        }
+      ],
+      "deltaDisposition": "Ch3trailingblanklineonly;Ch6lineintegralnotation/sourceclarification preservesallimage/captiondeclarations;Ch7caption/sourcearrangement accepted by exactafterSHA of parentPDFrepair. Otherimagecontext/registries match historicalacceptance.",
+      "limits": "PNGinventory includes retained source assets; authoredSVGs separately inventoried and notsubstituted. No sourceanswer/wholecourse acceptance fromimagegate."
+    },
+    {
+      "chapter": 3,
+      "status": "accepted-original-frame-and-caption-continuity-current",
+      "originalPNGAssets": 66,
+      "imageProof": [
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-exercises-chapter3-media-qr.png",
+          "currentSHA256": "10e9e1a47b2997193e422926b1f027c55a8c3b5aba954c310a407bc447bf498c",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "10e9e1a47b2997193e422926b1f027c55a8c3b5aba954c310a407bc447bf498c",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-exercises-figure-3-11.png",
+          "currentSHA256": "ff218d1c5b34a1197c97b884f556df19f45ce6aa5bf8d075ca2187b770c048ec",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "ff218d1c5b34a1197c97b884f556df19f45ce6aa5bf8d075ca2187b770c048ec",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-exercises-figure-3-37.png",
+          "currentSHA256": "a8c76124f2d2cf8777d4e69ae7258ae76cee7196945066aafb96695aba7083f2",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "a8c76124f2d2cf8777d4e69ae7258ae76cee7196945066aafb96695aba7083f2",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-exercises-figure-q3-16.png",
+          "currentSHA256": "1fff8f3a4186796c3e0c9ee90c66b76df4741cb35cafd9b970e32ba213a911ef",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "1fff8f3a4186796c3e0c9ee90c66b76df4741cb35cafd9b970e32ba213a911ef",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-early-e3-10.png",
+          "currentSHA256": "404bd80e6fe23d216fb9121094828a0beed142b86ab89c40882763066846f1ac",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "404bd80e6fe23d216fb9121094828a0beed142b86ab89c40882763066846f1ac",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-early-e3-19.png",
+          "currentSHA256": "d104cacd9a02a594e642f2d2522a06a8f1df3979fb53d3190a53bde0901d72a8",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d104cacd9a02a594e642f2d2522a06a8f1df3979fb53d3190a53bde0901d72a8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-early-e3-29.png",
+          "currentSHA256": "a376f9891fac272b50cd927a3b79b0897da64694d483b5f066459ee39c6eaa08",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "a376f9891fac272b50cd927a3b79b0897da64694d483b5f066459ee39c6eaa08",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-early-e3-31.png",
+          "currentSHA256": "97179cb98840cb22d7bb0ea334e1cfab7966e79089212af5e7254247076f2eed",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "97179cb98840cb22d7bb0ea334e1cfab7966e79089212af5e7254247076f2eed",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-early-e3-36.png",
+          "currentSHA256": "8e4f7ca76f775378c9966b493f5cbf6c11bcd3c4c6ae43fb1b40538cd262f722",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "8e4f7ca76f775378c9966b493f5cbf6c11bcd3c4c6ae43fb1b40538cd262f722",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-early-e3-38.png",
+          "currentSHA256": "86ab03a1568d5a32b589a7b69c8e13bdc2d7c5d6b4d9c78a2a00dc290177140d",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "86ab03a1568d5a32b589a7b69c8e13bdc2d7c5d6b4d9c78a2a00dc290177140d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-47.png",
+          "currentSHA256": "95be4314e072f0aaf29a9b16411947ba441992d3b43a615e6117f1e508597dce",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "95be4314e072f0aaf29a9b16411947ba441992d3b43a615e6117f1e508597dce",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-54.png",
+          "currentSHA256": "77085eed36dee6f96ec26a49133747f068ab5a194300635c2585043b74d275ad",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "77085eed36dee6f96ec26a49133747f068ab5a194300635c2585043b74d275ad",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-57.png",
+          "currentSHA256": "578079ac0300d37c1dacd018a3a840afcdcb2e656191523d393b58d704758ba8",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "578079ac0300d37c1dacd018a3a840afcdcb2e656191523d393b58d704758ba8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-58.png",
+          "currentSHA256": "b662d0cefba51d8fa5c828b386c86c0f40cf3da9b92b2a8f9956d04d61985357",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "b662d0cefba51d8fa5c828b386c86c0f40cf3da9b92b2a8f9956d04d61985357",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-60.png",
+          "currentSHA256": "bb69a4e007b940144ad70f145d2d674d214601269a85e42cd19b25710ed40756",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "bb69a4e007b940144ad70f145d2d674d214601269a85e42cd19b25710ed40756",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-61.png",
+          "currentSHA256": "7f649ff59ae7a0771796c9468b955fb87397d168742fe51486e3b8ca4aca8282",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "7f649ff59ae7a0771796c9468b955fb87397d168742fe51486e3b8ca4aca8282",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-63.png",
+          "currentSHA256": "43007c6bd9fc1644f9b1bdadabff4de51630899101ebf28ce632d8ed46a4a0a4",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "43007c6bd9fc1644f9b1bdadabff4de51630899101ebf28ce632d8ed46a4a0a4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-65.png",
+          "currentSHA256": "5a6057cd1557af3686ab837e998da110bd107ae8a8af0428c2d0f3b4cb14e3a2",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "5a6057cd1557af3686ab837e998da110bd107ae8a8af0428c2d0f3b4cb14e3a2",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-numbered-late-p3-76.png",
+          "currentSHA256": "04cc3d18492ee2b2cbc86d3cf228fb59d600540b7cd6f56ef7f5d2375bedae7e",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "04cc3d18492ee2b2cbc86d3cf228fb59d600540b7cd6f56ef7f5d2375bedae7e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-01.png",
+          "currentSHA256": "f3fd227c4fc62e4a27f9d75a9e273ef909865a41d3aadd7623050d5e8c9581f9",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "f3fd227c4fc62e4a27f9d75a9e273ef909865a41d3aadd7623050d5e8c9581f9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-02.png",
+          "currentSHA256": "f6d75209f21b5042035f900c9a3f88b7c3d4d1b3c362aaadf1c1365ece34b023",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "f6d75209f21b5042035f900c9a3f88b7c3d4d1b3c362aaadf1c1365ece34b023",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-03.png",
+          "currentSHA256": "fbd54cf3961165f883e7551fcc1fe16bab5715ae09dad97a1f5ad13484fa13e9",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "fbd54cf3961165f883e7551fcc1fe16bab5715ae09dad97a1f5ad13484fa13e9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-04.png",
+          "currentSHA256": "0b146e9d3fdda41e63cd985406e50d2c20ffea6e9f365317d2dab5ee266b413f",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "0b146e9d3fdda41e63cd985406e50d2c20ffea6e9f365317d2dab5ee266b413f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-05.png",
+          "currentSHA256": "e218e30f92a88fc7897e18ee4186cbf977f98d54ebc1e378bb4e1e4ed37c3908",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "e218e30f92a88fc7897e18ee4186cbf977f98d54ebc1e378bb4e1e4ed37c3908",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-06.png",
+          "currentSHA256": "74a70e302c8211d760b2c68516db18d1d51e9b02adef6390414d1f89379b8207",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "74a70e302c8211d760b2c68516db18d1d51e9b02adef6390414d1f89379b8207",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-07.png",
+          "currentSHA256": "6e36b6268ca8e05f52bc579def660f824b0d6d856695b2f63b8f95c339fd7f8b",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "6e36b6268ca8e05f52bc579def660f824b0d6d856695b2f63b8f95c339fd7f8b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-08.png",
+          "currentSHA256": "79af8b518001710bceac6cf298a2a0713812b119c1ed8e57872812a865a3702f",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "79af8b518001710bceac6cf298a2a0713812b119c1ed8e57872812a865a3702f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-09.png",
+          "currentSHA256": "e3127427d49fd09b8ca09fc533d847612326122af3997a9180496bd0628d0f22",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "e3127427d49fd09b8ca09fc533d847612326122af3997a9180496bd0628d0f22",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-10.png",
+          "currentSHA256": "d27bfcd715c8479c35055d93074fc6a128ac0978ae6d0ebf3a2bfef4c096bddc",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d27bfcd715c8479c35055d93074fc6a128ac0978ae6d0ebf3a2bfef4c096bddc",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-11.png",
+          "currentSHA256": "45495f97b3886e0195bcf2fde3024b4b50f4ce327e6820a225ec6337a8b16216",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "45495f97b3886e0195bcf2fde3024b4b50f4ce327e6820a225ec6337a8b16216",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-12.png",
+          "currentSHA256": "acd5f06e2c747419ba629f381adf0da0759dc3a4b9056a2cfeb13d4b87a5702b",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "acd5f06e2c747419ba629f381adf0da0759dc3a4b9056a2cfeb13d4b87a5702b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-13.png",
+          "currentSHA256": "87542e422698278b59aeeeaa97e3637ba80403e9c41af591b3f1b25b7c537e50",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "87542e422698278b59aeeeaa97e3637ba80403e9c41af591b3f1b25b7c537e50",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-14.png",
+          "currentSHA256": "eca105e550371f3703870423bb86430d494f56366b674370e98ab67a0feef885",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "eca105e550371f3703870423bb86430d494f56366b674370e98ab67a0feef885",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-15.png",
+          "currentSHA256": "371fb7ad2657edc6dc47bf55b61cd88ccbaf46ada6ee2e1bffd59343e33d2c2e",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "371fb7ad2657edc6dc47bf55b61cd88ccbaf46ada6ee2e1bffd59343e33d2c2e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-16.png",
+          "currentSHA256": "3ddd5067cc01e1bff65d648e312eee526bfa7b3ee9ee68f86da7853c1702fa6d",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "3ddd5067cc01e1bff65d648e312eee526bfa7b3ee9ee68f86da7853c1702fa6d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-17.png",
+          "currentSHA256": "c8b1d4e3ee82448e973f63f49b7fdedbf2caf8abd710159f4b392c84597bd9c1",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "c8b1d4e3ee82448e973f63f49b7fdedbf2caf8abd710159f4b392c84597bd9c1",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-18.png",
+          "currentSHA256": "6b2d3992dee08ec0bddfa0584b3a4f16c43695ff3edf4151c8c0d5d27f28077f",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "6b2d3992dee08ec0bddfa0584b3a4f16c43695ff3edf4151c8c0d5d27f28077f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-19.png",
+          "currentSHA256": "7454411354bbaa6c4138a3e9c7909034dc664df20b2d0fbdaee4ebdaeed2ee2c",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "7454411354bbaa6c4138a3e9c7909034dc664df20b2d0fbdaee4ebdaeed2ee2c",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-20.png",
+          "currentSHA256": "ae77e20a1ed8c714a84d54941aba288c7f19690f280997a9af81c992e8ac0b5f",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "ae77e20a1ed8c714a84d54941aba288c7f19690f280997a9af81c992e8ac0b5f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-21.png",
+          "currentSHA256": "8e53dabb4e38a0003da167eccd3cf925a6a347f41c6cd2efe3f857ffbf21e996",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "8e53dabb4e38a0003da167eccd3cf925a6a347f41c6cd2efe3f857ffbf21e996",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-22.png",
+          "currentSHA256": "b04b350cf8153725d8c9fa3c3584e2abc9fb925f2e2e324967c2eb54ca61dcf3",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "b04b350cf8153725d8c9fa3c3584e2abc9fb925f2e2e324967c2eb54ca61dcf3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-23.png",
+          "currentSHA256": "4da006ad854a8b933bd8b9d1035abbdc95ab15c7f4503e04e5a7dfbb78005a0a",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "4da006ad854a8b933bd8b9d1035abbdc95ab15c7f4503e04e5a7dfbb78005a0a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-24.png",
+          "currentSHA256": "d2473a8fbcdce23090d8d656ccd54dd9c729ce78a381c5024c7aa214bf9da9f4",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d2473a8fbcdce23090d8d656ccd54dd9c729ce78a381c5024c7aa214bf9da9f4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-25.png",
+          "currentSHA256": "3da53a968cca6bd5a7bbc679ce0dcb1b942b220e758237eb1920ea6bc691b915",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "3da53a968cca6bd5a7bbc679ce0dcb1b942b220e758237eb1920ea6bc691b915",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-26.png",
+          "currentSHA256": "e81f0a9c09147eb3dc8ecb83b824d932081be93bceacdfde2cd08995542435cd",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "e81f0a9c09147eb3dc8ecb83b824d932081be93bceacdfde2cd08995542435cd",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-27.png",
+          "currentSHA256": "13c08bdd404126d99ee7427b71ad1876bbe65a30a089178ec6daced371d79448",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "13c08bdd404126d99ee7427b71ad1876bbe65a30a089178ec6daced371d79448",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-28.png",
+          "currentSHA256": "d5b7c74df8b95677739879b5dba988dbb8a56e6ddae399143da4f54e9e11eda2",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d5b7c74df8b95677739879b5dba988dbb8a56e6ddae399143da4f54e9e11eda2",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-29.png",
+          "currentSHA256": "cc3afab9f43bcdd03d409acd2b947a29b16df222ad2908d3c245fff8dfda2f84",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "cc3afab9f43bcdd03d409acd2b947a29b16df222ad2908d3c245fff8dfda2f84",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-30.png",
+          "currentSHA256": "39ea25b61d2a25c40a7e2b1da097bd3179d7a7b1f7b4f7da98840a09ea4543ad",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "39ea25b61d2a25c40a7e2b1da097bd3179d7a7b1f7b4f7da98840a09ea4543ad",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-31.png",
+          "currentSHA256": "39596cedc6506adf7f15c1338158f99f3683f11537c78bb90222458edc9dc48a",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "39596cedc6506adf7f15c1338158f99f3683f11537c78bb90222458edc9dc48a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-32.png",
+          "currentSHA256": "d737bc73167ee34cda480d82890bb28a41d82f8557508950f2c833f8dfda8d7b",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d737bc73167ee34cda480d82890bb28a41d82f8557508950f2c833f8dfda8d7b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-33.png",
+          "currentSHA256": "5402b4c01953166fb00dd953aa8a3c208a6dc876616e79d781d9e477065bd944",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "5402b4c01953166fb00dd953aa8a3c208a6dc876616e79d781d9e477065bd944",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-34.png",
+          "currentSHA256": "0b310cba1b258a7241e9b28dc41c04e8f20ada8b01a2babc60527f89d7dbba06",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "0b310cba1b258a7241e9b28dc41c04e8f20ada8b01a2babc60527f89d7dbba06",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-35.png",
+          "currentSHA256": "cb7680544cd393dbb5eabad07c2422595824b1dd437383b2520d9d07ad560302",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "cb7680544cd393dbb5eabad07c2422595824b1dd437383b2520d9d07ad560302",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-hinh-03-36.png",
+          "currentSHA256": "ef7e632f15cdf2a589e330a8e273aeda15b919fcde4623767750fab8ddcf2cbe",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "ef7e632f15cdf2a589e330a8e273aeda15b919fcde4623767750fab8ddcf2cbe",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-mo-dau.png",
+          "currentSHA256": "eeb7850672fcf46889361ad8b22c3d28f42f7c4707d0a060d5138524c57af28d",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "eeb7850672fcf46889361ad8b22c3d28f42f7c4707d0a060d5138524c57af28d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-tom-tat-01.png",
+          "currentSHA256": "3709d62093e062786594a3ae6c9c832c62925833f1423adf343accb409190b8d",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "3709d62093e062786594a3ae6c9c832c62925833f1423adf343accb409190b8d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-tom-tat-02.png",
+          "currentSHA256": "ac9434ff742ffd01adba3abcb6d70cccc4e966180841751be4d223e585700650",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "ac9434ff742ffd01adba3abcb6d70cccc4e966180841751be4d223e585700650",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-tom-tat-03.png",
+          "currentSHA256": "d6211028d10eb2bfa0b055d8ba94b64ebd78c503a3ad058d122fde3eaa02b5a0",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d6211028d10eb2bfa0b055d8ba94b64ebd78c503a3ad058d122fde3eaa02b5a0",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-tom-tat-04.png",
+          "currentSHA256": "3a57f410dce2c2d4bb4968a542f18112710fb7451adfee16697fdf316a6458ef",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "3a57f410dce2c2d4bb4968a542f18112710fb7451adfee16697fdf316a6458ef",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-tu-kiem-3-2.png",
+          "currentSHA256": "9e2787f38d65778b79a58320cd2409c1361997fa35abcfd2252f0ea19b7f7556",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "9e2787f38d65778b79a58320cd2409c1361997fa35abcfd2252f0ea19b7f7556",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-tu-kiem-3-3.png",
+          "currentSHA256": "d615facf4e95933ed268c4c4363673f3b089b2cd70893d2269a935c91af69aa0",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d615facf4e95933ed268c4c4363673f3b089b2cd70893d2269a935c91af69aa0",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-ung-dung-ngua.png",
+          "currentSHA256": "eb5f0047fe249f5bf9ce5dc4c131e0c728cad24a67d8c5e06b1d66fc5424c02e",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "eb5f0047fe249f5bf9ce5dc4c131e0c728cad24a67d8c5e06b1d66fc5424c02e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-ung-dung-sao-moc.png",
+          "currentSHA256": "b8b8afea7fc404ab4a820581d7f85631c6bd0dc709511838826ecd74f5644f1c",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "b8b8afea7fc404ab4a820581d7f85631c6bd0dc709511838826ecd74f5644f1c",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-ung-dung-tau-luon.png",
+          "currentSHA256": "0bd0d4a19b4bff9e6158da108d77aa3208446eae54c755171d46ea4b9cdaddc2",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "0bd0d4a19b4bff9e6158da108d77aa3208446eae54c755171d46ea4b9cdaddc2",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/vat-ly-1/bai-giang/img/young-03/r-theory-ung-dung-tuong-doi.png",
+          "currentSHA256": "c2d9906c30301a7adbe340606ec859fd28c0f6bf56331f86797c33f83b3e1c94",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "c2d9906c30301a7adbe340606ec859fd28c0f6bf56331f86797c33f83b3e1c94",
+          "sameAsHistory": true
+        }
+      ],
+      "markdownAndRegistryProof": [
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/00-mo-dau.md",
+          "currentCanonicalSHA256": "1c61be0464e0203e1710ad687df09413d8a2c92cb9d43b343a9d90fd5c2a9e1f",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "1c61be0464e0203e1710ad687df09413d8a2c92cb9d43b343a9d90fd5c2a9e1f",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/01-muc-01.md",
+          "currentCanonicalSHA256": "be8b1888e40319732e070a497c89b02fe1b4f03f49b3930e3baec33a5480f62b",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "be8b1888e40319732e070a497c89b02fe1b4f03f49b3930e3baec33a5480f62b",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/02-muc-02.md",
+          "currentCanonicalSHA256": "19b5ee91f8b15d385a6d0ef8ef4c5986956b79c7ac0fe88758abe8ef13e98e56",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "19b5ee91f8b15d385a6d0ef8ef4c5986956b79c7ac0fe88758abe8ef13e98e56",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/03-muc-03.md",
+          "currentCanonicalSHA256": "6c4bccb693b3a70e9cbfd8de89282977ae65119d88b3e3ce46e2a33fafe4713d",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "6c4bccb693b3a70e9cbfd8de89282977ae65119d88b3e3ce46e2a33fafe4713d",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/04-muc-04.md",
+          "currentCanonicalSHA256": "9dffb8146394e71d1b4983139ea6e3dc7d2b75e7949e1ae6b27d7913dfd48142",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "9dffb8146394e71d1b4983139ea6e3dc7d2b75e7949e1ae6b27d7913dfd48142",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/05-muc-05.md",
+          "currentCanonicalSHA256": "140f40fc7ad3047ea3bbdc71b98b60d2fe7a8e6af0edadafbcef6bcd5ccf738b",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "140f40fc7ad3047ea3bbdc71b98b60d2fe7a8e6af0edadafbcef6bcd5ccf738b",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/17-tom-tat.md",
+          "currentCanonicalSHA256": "c5586aa11a5cbecf6f983da8eedaf0e9372523cd06a9c938166d6fe65a566f6b",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "c5586aa11a5cbecf6f983da8eedaf0e9372523cd06a9c938166d6fe65a566f6b",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/parent-09-luyen-tap-huong-dan.md",
+          "currentCanonicalSHA256": "8349aafb33e8243b7d516bfffddd47512fac099209a21c45fe2f01c452743bda",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "8349aafb33e8243b7d516bfffddd47512fac099209a21c45fe2f01c452743bda",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/parent-10-cau-hoi-thao-luan.md",
+          "currentCanonicalSHA256": "fbc867218cbfe78cdffe5db651dd8935118a14b2bb07b3abfb79ed1fb6c4952d",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "fbc867218cbfe78cdffe5db651dd8935118a14b2bb07b3abfb79ed1fb6c4952d",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/parent-11-bai-tap-001-043.md",
+          "currentCanonicalSHA256": "3b52ba97bf07618d1e734fd575ad6633be1dab0c72fc94a48004ac53e5e9c994",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "3b52ba97bf07618d1e734fd575ad6633be1dab0c72fc94a48004ac53e5e9c994",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/parent-12-bai-tap-044-085.md",
+          "currentCanonicalSHA256": "df2965725f4d6898c02a665fee4dd47160675ed891ba99fd114217db5bc294b7",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "1644873a72532b1313549ddd51c16bc182803a178aa13f58fffcb889b7eaa459",
+          "sameAsHistory": false,
+          "imageDeclarationsIdentical": true,
+          "diffFile": "3-parent-12-bai-tap-044-085.md.diff"
+        },
+        {
+          "chapter": 3,
+          "file": "raw_materials/physics/translations/chapter-03/parent-16-bai-tap-cau-noi.md",
+          "currentCanonicalSHA256": "27eadad373b884a6f74a8868e0fc026f55ae1c9c8edef8aa8cb53a6737e680fb",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "27eadad373b884a6f74a8868e0fc026f55ae1c9c8edef8aa8cb53a6737e680fb",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/.vitepress/physics1-remaining-03-exercises-image-annotations.mjs",
+          "currentCanonicalSHA256": "f2a2983643a9c450fc6d3c2f0a754fbf060b0e84678d73afc146d0be736656ff",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "f2a2983643a9c450fc6d3c2f0a754fbf060b0e84678d73afc146d0be736656ff",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/.vitepress/physics1-remaining-03-numbered-exercises-image-annotations.mjs",
+          "currentCanonicalSHA256": "d13b5afc3098d9d18891bcd222e5faa22b7da6386c8ecbba5a8e606b0f669f13",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "d13b5afc3098d9d18891bcd222e5faa22b7da6386c8ecbba5a8e606b0f669f13",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 3,
+          "file": "docs/.vitepress/physics1-remaining-03-parent-labels.mjs",
+          "currentCanonicalSHA256": "97434f762f90a9ca9bfd9e528b8894968eef5f6522b9f96d80f08a83915b6aae",
+          "historyCommit": "96f002270359a77a4320ee0effcaf92cd7647943",
+          "historyAvailable": true,
+          "historySHA256": "97434f762f90a9ca9bfd9e528b8894968eef5f6522b9f96d80f08a83915b6aae",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        }
+      ],
+      "explicitPriorEvidence": [
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch03-parent-theory-20261024.md",
+          "sha256": "0ae0d9721492d7a50e839a674b91f318002e4d052c06e839fd5d2d0e659f9857",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch03-parent-exercises-20261026.md",
+          "sha256": "1f9be23d9a0eed63d9b6cde7d5d4276247257e03368bb1c4dbf6e899e691afcf",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\physics1-chapter03-public-20261027.json",
+          "sha256": "4b87fa2feba5a5836f32c58543d0f19357e7c96cb9f46423801277efb9d3c8cc",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        }
+      ],
+      "deltaDisposition": "Ch3trailingblanklineonly;Ch6lineintegralnotation/sourceclarification preservesallimage/captiondeclarations;Ch7caption/sourcearrangement accepted by exactafterSHA of parentPDFrepair. Otherimagecontext/registries match historicalacceptance.",
+      "limits": "PNGinventory includes retained source assets; authoredSVGs separately inventoried and notsubstituted. No sourceanswer/wholecourse acceptance fromimagegate."
+    },
+    {
+      "chapter": 4,
+      "status": "accepted-original-frame-and-caption-continuity-current",
+      "originalPNGAssets": 51,
+      "imageProof": [
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ex-hinh-e4-26.png",
+          "currentSHA256": "c1eb29f0ed96e4182c261065435c3ce4f0ef4c9e7e24214463b7869c0aabf3cd",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "c1eb29f0ed96e4182c261065435c3ce4f0ef4c9e7e24214463b7869c0aabf3cd",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ex-hinh-p4-35.png",
+          "currentSHA256": "c0fe2011779b972d0654c4d68eba206d40f1e942fb3407707e7e57eb1fa80b87",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "c0fe2011779b972d0654c4d68eba206d40f1e942fb3407707e7e57eb1fa80b87",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ex-hinh-p4-37.png",
+          "currentSHA256": "7bc186214aeffe69c762cdd1b66c27b8326ec2bea2cc06228363dd03b7fb7612",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "7bc186214aeffe69c762cdd1b66c27b8326ec2bea2cc06228363dd03b7fb7612",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ex-hinh-p4-38.png",
+          "currentSHA256": "4d01ed5b4bfb402ecbb04134f9c3904cb83986ef6477f69130b778d3ad641f3e",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "4d01ed5b4bfb402ecbb04134f9c3904cb83986ef6477f69130b778d3ad641f3e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ex-hinh-p4-45.png",
+          "currentSHA256": "9c6cbf5d5649f501b53a58045a8204289dc9a3fac3c8846bdd3ed3655193c038",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "9c6cbf5d5649f501b53a58045a8204289dc9a3fac3c8846bdd3ed3655193c038",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ex-hinh-p4-46.png",
+          "currentSHA256": "1c78caddcaf50d3cfec45420d8bb4578bcdfb464caafa2703d3355b106732bdc",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "1c78caddcaf50d3cfec45420d8bb4578bcdfb464caafa2703d3355b106732bdc",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ex-hinh-p4-60.png",
+          "currentSHA256": "cdff4b9ba7251628a6ce93b42db1a99e408e1838c0609c2f4628e2e6ad697834",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "cdff4b9ba7251628a6ce93b42db1a99e408e1838c0609c2f4628e2e6ad697834",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-01.png",
+          "currentSHA256": "794ff04f4476f00db337b3297f2abde0bbc790dba353da6c9e896925d7e5dc1a",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "794ff04f4476f00db337b3297f2abde0bbc790dba353da6c9e896925d7e5dc1a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-02.png",
+          "currentSHA256": "e67ae2740f4afda3382554abc32cf2a5e765a00dff7f06fe48befe2068e94788",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e67ae2740f4afda3382554abc32cf2a5e765a00dff7f06fe48befe2068e94788",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-03.png",
+          "currentSHA256": "8ffba3d74c746af16aa0e3d8912f78cc9ce6c70269a4ad97cd0806309eb3b89e",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "8ffba3d74c746af16aa0e3d8912f78cc9ce6c70269a4ad97cd0806309eb3b89e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-04.png",
+          "currentSHA256": "7115a03db37a276e25b8a3533ada50e28c0ea85fd2c470d5fa5304373678387c",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "7115a03db37a276e25b8a3533ada50e28c0ea85fd2c470d5fa5304373678387c",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-05.png",
+          "currentSHA256": "a7dbba8b7101a5a30f81a2ae94570a85d6e8fd9c0f13150934daab33a197b75f",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "a7dbba8b7101a5a30f81a2ae94570a85d6e8fd9c0f13150934daab33a197b75f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-06.png",
+          "currentSHA256": "851a03d5a4b862d416769acc956dbea8833aabe46438b4af2d9bf152a9230a67",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "851a03d5a4b862d416769acc956dbea8833aabe46438b4af2d9bf152a9230a67",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-07.png",
+          "currentSHA256": "af6765f5971effcf6b040e636f4da8792b36eb2b1c437b297c550f5b2b2b53e8",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "af6765f5971effcf6b040e636f4da8792b36eb2b1c437b297c550f5b2b2b53e8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-08.png",
+          "currentSHA256": "a84a0ba3f509be7788ab3438bdf7e8de1a8d7eac30266bb9893021cdd4bb15f7",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "a84a0ba3f509be7788ab3438bdf7e8de1a8d7eac30266bb9893021cdd4bb15f7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-09.png",
+          "currentSHA256": "c5a6040bd97f3a0397ef9e7585c3e948b2b965094095893a401a936eee5b9609",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "c5a6040bd97f3a0397ef9e7585c3e948b2b965094095893a401a936eee5b9609",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-10.png",
+          "currentSHA256": "4d57f42485984f3597acf560258d668100d51230ac8af8d04ef9ea932586eeab",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "4d57f42485984f3597acf560258d668100d51230ac8af8d04ef9ea932586eeab",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-11.png",
+          "currentSHA256": "075e107cfe7e0d2d94a2060ec84a997c04bdb3f6ec27573daa6d44c59d09ad8f",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "075e107cfe7e0d2d94a2060ec84a997c04bdb3f6ec27573daa6d44c59d09ad8f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-12.png",
+          "currentSHA256": "67d33fb926f4c62243ece9ecdc07480cbab0cd3cd4c7d2550ba6239a52f278c7",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "67d33fb926f4c62243ece9ecdc07480cbab0cd3cd4c7d2550ba6239a52f278c7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-13.png",
+          "currentSHA256": "98619711c6356f293a781efc1701081576dae68bd56f4a093767eb12fbeee9f9",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "98619711c6356f293a781efc1701081576dae68bd56f4a093767eb12fbeee9f9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-14.png",
+          "currentSHA256": "cf60e31e1d559bbb0018ede63612ce02f0730de22c17e136dae6a6d79c27062d",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "cf60e31e1d559bbb0018ede63612ce02f0730de22c17e136dae6a6d79c27062d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-15.png",
+          "currentSHA256": "e6b466a0c252274839f17699ea20086c12bb77a7b679b436262ba883630ec484",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e6b466a0c252274839f17699ea20086c12bb77a7b679b436262ba883630ec484",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-16.png",
+          "currentSHA256": "261763386f29f0550622c348b59a13df2abaf6dcc983eb3b22e4fabf224319d3",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "261763386f29f0550622c348b59a13df2abaf6dcc983eb3b22e4fabf224319d3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-17.png",
+          "currentSHA256": "19ec918be83b8ffeca7b5a133685242f4c49f6f302e539defcf7a1122056ff7d",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "19ec918be83b8ffeca7b5a133685242f4c49f6f302e539defcf7a1122056ff7d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-18.png",
+          "currentSHA256": "e90665a598d6647aa1df95ce774101488164ad43a7402e9fcfd583774fd9f66d",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e90665a598d6647aa1df95ce774101488164ad43a7402e9fcfd583774fd9f66d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-19.png",
+          "currentSHA256": "79a8bf95699b2d01f99fe6f985a3c4a4a54a856095ab49aab950cc430c699b6a",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "79a8bf95699b2d01f99fe6f985a3c4a4a54a856095ab49aab950cc430c699b6a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-20.png",
+          "currentSHA256": "e05c9de70cb71f19de53c5eabf05f459541df8ca281ab67cb68bb59a912477f9",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e05c9de70cb71f19de53c5eabf05f459541df8ca281ab67cb68bb59a912477f9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-21.png",
+          "currentSHA256": "43f7ba4c15cd02e55fc30afdae2f1c7a6224f188795888088d77f7b63d2acb53",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "43f7ba4c15cd02e55fc30afdae2f1c7a6224f188795888088d77f7b63d2acb53",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-22.png",
+          "currentSHA256": "db2790dbab6baee48f58f3f0023e41fc3d4f46177b6f373c1f0959c0205af226",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "db2790dbab6baee48f58f3f0023e41fc3d4f46177b6f373c1f0959c0205af226",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-23.png",
+          "currentSHA256": "a95edc60a5e67fc34cc4bbfdd8e5373a8c458eda6f18306f62760866a995514a",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "a95edc60a5e67fc34cc4bbfdd8e5373a8c458eda6f18306f62760866a995514a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-24.png",
+          "currentSHA256": "203db81d4651c7710cf56a621eb074be7f3600efbec85646d4b5fcb901651b19",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "203db81d4651c7710cf56a621eb074be7f3600efbec85646d4b5fcb901651b19",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-25.png",
+          "currentSHA256": "01a6556b9a09ff87c392d8adc02c6b39577693650e63a037d26d434dabe97f7d",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "01a6556b9a09ff87c392d8adc02c6b39577693650e63a037d26d434dabe97f7d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-26.png",
+          "currentSHA256": "d38fbda9f691ed9657af8724aeaa215c45b2b854075c412df614fc5fae11b175",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "d38fbda9f691ed9657af8724aeaa215c45b2b854075c412df614fc5fae11b175",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-27.png",
+          "currentSHA256": "dcb3760370652f2a8d4a4578ad678069fafc190314edfd2bef899824cf6b5485",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "dcb3760370652f2a8d4a4578ad678069fafc190314edfd2bef899824cf6b5485",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-28.png",
+          "currentSHA256": "9ae2b64abf238874a67c2770621139a9c5be2e298d99984c675b6f68622fc116",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "9ae2b64abf238874a67c2770621139a9c5be2e298d99984c675b6f68622fc116",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-hinh-4-29.png",
+          "currentSHA256": "e4bbdd10396ed633df7439601b52ee48aba1656195be7c5671a74bdf9efa11d9",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e4bbdd10396ed633df7439601b52ee48aba1656195be7c5671a74bdf9efa11d9",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-mo-dau.png",
+          "currentSHA256": "b0f2820a644af60210865f10d3e2b340273976098fa08ca96899b0caf8df4f77",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "b0f2820a644af60210865f10d3e2b340273976098fa08ca96899b0caf8df4f77",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-tom-tat-can-bang.png",
+          "currentSHA256": "825a1b328d498ebc40e1263c0703ff57f8f9327424bf3d26ea96da1ef2289854",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "825a1b328d498ebc40e1263c0703ff57f8f9327424bf3d26ea96da1ef2289854",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-tom-tat-dinh-luat-ba.png",
+          "currentSHA256": "f467d6c0d0d4a9803f6859e3b9b0b3a7ec6611aec8678774960f4a3c09693573",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "f467d6c0d0d4a9803f6859e3b9b0b3a7ec6611aec8678774960f4a3c09693573",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-tom-tat-dinh-luat-hai.png",
+          "currentSHA256": "83dff932a915ff0f6d9412bad811096b97b5855f51c2e71d27778c8b164c8fd4",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "83dff932a915ff0f6d9412bad811096b97b5855f51c2e71d27778c8b164c8fd4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-tom-tat-hop-luc.png",
+          "currentSHA256": "bdc6c88bc8d2f32f32a9df4fd394baba84f6bd618dab0ac763ad175526f61a74",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "bdc6c88bc8d2f32f32a9df4fd394baba84f6bd618dab0ac763ad175526f61a74",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-tom-tat-trong-luong.png",
+          "currentSHA256": "dc40164a3af311feea10889837798c4eacde5559314cae3a43fbae31da571528",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "dc40164a3af311feea10889837798c4eacde5559314cae3a43fbae31da571528",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ung-dung-va-cham.png",
+          "currentSHA256": "66310a6eb39fc5bda1a19ee40c2e6ae2b9f3a9c38d862ef4a657c0377a617a82",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "66310a6eb39fc5bda1a19ee40c2e6ae2b9f3a9c38d862ef4a657c0377a617a82",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/parent-ung-dung-xe-truot.png",
+          "currentSHA256": "f9f8d4f7450ef9de73bd115efbd36e6f5bc698ec824d3fb3d5989a30f706f569",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "f9f8d4f7450ef9de73bd115efbd36e6f5bc698ec824d3fb3d5989a30f706f569",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/r-exercises-e4-13.png",
+          "currentSHA256": "427afcbebd847d378b19a2cfe3d72cfb0a64cb8edb7686965d408c8ed0872903",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "427afcbebd847d378b19a2cfe3d72cfb0a64cb8edb7686965d408c8ed0872903",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/r-exercises-e4-14.png",
+          "currentSHA256": "bb45ef4496008886d36290d78d747cc182e8a5f51d0d305e1e0fee5440c1b223",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "bb45ef4496008886d36290d78d747cc182e8a5f51d0d305e1e0fee5440c1b223",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/r-exercises-e4-2.png",
+          "currentSHA256": "d4f1eaa3a78ebc115d8aa47988e02e329c06a91014f3a2b575a3d131717dbde1",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "d4f1eaa3a78ebc115d8aa47988e02e329c06a91014f3a2b575a3d131717dbde1",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/r-exercises-e4-23.png",
+          "currentSHA256": "e3fb852f985b1c80eae6653e8eb224f885ea1a7846e77a1e63c7679b2cf15589",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e3fb852f985b1c80eae6653e8eb224f885ea1a7846e77a1e63c7679b2cf15589",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/r-exercises-e4-3.png",
+          "currentSHA256": "43ddd7003c8937270b4edc304da78b805af46d94c3fc637e999c5afcc5922fde",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "43ddd7003c8937270b4edc304da78b805af46d94c3fc637e999c5afcc5922fde",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/r-exercises-e4-4.png",
+          "currentSHA256": "25b13d4ef273f2e044987001de32a79e2a54a671d7a3fa06db6be3b1aa20b78a",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "25b13d4ef273f2e044987001de32a79e2a54a671d7a3fa06db6be3b1aa20b78a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/vat-ly-1/bai-giang/img/young-04/r-exercises-q4-31.png",
+          "currentSHA256": "58a8d492320aed47e6b4e7b4b5594f7907d21d927377ab110da77d4f7092c4d7",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "58a8d492320aed47e6b4e7b4b5594f7907d21d927377ab110da77d4f7092c4d7",
+          "sameAsHistory": true
+        }
+      ],
+      "markdownAndRegistryProof": [
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-00-mo-dau.md",
+          "currentCanonicalSHA256": "bd2f95e12f0e236db76d051eddba1588a6a5632e9680a7fabe0c23a0679fd91d",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "bd2f95e12f0e236db76d051eddba1588a6a5632e9680a7fabe0c23a0679fd91d",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-01-luc-va-tuong-tac.md",
+          "currentCanonicalSHA256": "3ab5c991b8c85cc49eed15acd426f578243ca6d507409ddf75400f7190127b41",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "3ab5c991b8c85cc49eed15acd426f578243ca6d507409ddf75400f7190127b41",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-02-dinh-luat-thu-nhat.md",
+          "currentCanonicalSHA256": "4b8aa911b3889dc879a45abb4ea45ee0302f7c2c4903ebbe259aa10892419aca",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "4b8aa911b3889dc879a45abb4ea45ee0302f7c2c4903ebbe259aa10892419aca",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-03-dinh-luat-thu-hai.md",
+          "currentCanonicalSHA256": "f2f7012494b0f5863e1eec6fe8f8c353177c231a5726454455f5d9ca7c9377d3",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "f2f7012494b0f5863e1eec6fe8f8c353177c231a5726454455f5d9ca7c9377d3",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-04-khoi-luong-trong-luong.md",
+          "currentCanonicalSHA256": "f70958a4a5111534bd31ea2ecab240d8ec0065f0590434bb8bec786dc1007cbc",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "f70958a4a5111534bd31ea2ecab240d8ec0065f0590434bb8bec786dc1007cbc",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-05-dinh-luat-thu-ba.md",
+          "currentCanonicalSHA256": "e79b6904fda6e74d935d034e359c6207edf1db7df40d5bc11cdd93f66fc80af9",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e79b6904fda6e74d935d034e359c6207edf1db7df40d5bc11cdd93f66fc80af9",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-06-so-do-luc.md",
+          "currentCanonicalSHA256": "aba7478acde652f92210e13098a39ec630f81d2acb536857585cfec1de50b495",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "aba7478acde652f92210e13098a39ec630f81d2acb536857585cfec1de50b495",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-09-luyen-tap-huong-dan.md",
+          "currentCanonicalSHA256": "7b772f424dbfa2c454d30e9630b41f372d903952ba8c05fe43905129a5eeab85",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "7b772f424dbfa2c454d30e9630b41f372d903952ba8c05fe43905129a5eeab85",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-10-cau-hoi-thao-luan.md",
+          "currentCanonicalSHA256": "7f9418c364ab22a74428615b0bafdf41e49b3053ca23212e28c43b91f25a6fdc",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "7f9418c364ab22a74428615b0bafdf41e49b3053ca23212e28c43b91f25a6fdc",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-11-bai-tap-001-030.md",
+          "currentCanonicalSHA256": "244ee49536660dc181219b66ac4e412f655d6b4283f70062ff0e9fd1561a6382",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "244ee49536660dc181219b66ac4e412f655d6b4283f70062ff0e9fd1561a6382",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-12-bai-tap-031-060.md",
+          "currentCanonicalSHA256": "fd25c240e3c744405f58e35df7a68acdddd375234e2d32ecca68a988687de0c3",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "fd25c240e3c744405f58e35df7a68acdddd375234e2d32ecca68a988687de0c3",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-16-bai-tap-cau-noi.md",
+          "currentCanonicalSHA256": "9b99a19de92ea36e5a82b3fca0fb8c9f0a731e0e875412d63c7856cb4ebdf71a",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "9b99a19de92ea36e5a82b3fca0fb8c9f0a731e0e875412d63c7856cb4ebdf71a",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-17-tom-tat.md",
+          "currentCanonicalSHA256": "9bfa52f37db4e0df0058b33bae61368326eeb85b654066c35de2682ad45f03c4",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "9bfa52f37db4e0df0058b33bae61368326eeb85b654066c35de2682ad45f03c4",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "raw_materials/physics/translations/chapter-04/parent-18-dap-so-luyen-tap.md",
+          "currentCanonicalSHA256": "e2a222db72f2081e2b4449142684f6e7218eb3b3466b1f1ac887a6fcc937e300",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "e2a222db72f2081e2b4449142684f6e7218eb3b3466b1f1ac887a6fcc937e300",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 4,
+          "file": "docs/.vitepress/physics1-remaining-04-parent-image-annotations.mjs",
+          "currentCanonicalSHA256": "da1819268168da904b229b58abf0a3fdc4072e417b4c6f3b262185371926230b",
+          "historyCommit": "d07f686bf1560a20d4350635d953b85a6494c002",
+          "historyAvailable": true,
+          "historySHA256": "da1819268168da904b229b58abf0a3fdc4072e417b4c6f3b262185371926230b",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        }
+      ],
+      "explicitPriorEvidence": [
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch04-parent-theory-20261023.md",
+          "sha256": "05dbe8c952dd900185c13bf095a75e16be9f31f2d9720d243bcb03be6819dc20",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch04-parent-final-20261024.md",
+          "sha256": "00ca1c2f0ed3469529371bef72a46108e864cb04f0a6b025c2ef798150b17c96",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        }
+      ],
+      "deltaDisposition": "Ch3trailingblanklineonly;Ch6lineintegralnotation/sourceclarification preservesallimage/captiondeclarations;Ch7caption/sourcearrangement accepted by exactafterSHA of parentPDFrepair. Otherimagecontext/registries match historicalacceptance.",
+      "limits": "PNGinventory includes retained source assets; authoredSVGs separately inventoried and notsubstituted. No sourceanswer/wholecourse acceptance fromimagegate."
+    },
+    {
+      "chapter": 6,
+      "status": "accepted-original-frame-and-caption-continuity-current",
+      "originalPNGAssets": 52,
+      "imageProof": [
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-6-29.png",
+          "currentSHA256": "42e318db9c69ac85cd88aae62ff22aef7778694c6f00b9d277506cb1e09cc27a",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "42e318db9c69ac85cd88aae62ff22aef7778694c6f00b9d277506cb1e09cc27a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-e6-33.png",
+          "currentSHA256": "8e37b7e5820cc0e276bd333e10badbf2e621a1dfda3b1cade2d4a95ad93bd9a8",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "8e37b7e5820cc0e276bd333e10badbf2e621a1dfda3b1cade2d4a95ad93bd9a8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-e6-34.png",
+          "currentSHA256": "8b9e3c0c0f722a6a4698406c367cd072757f4e221511ec5b1354753f073cc1d4",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "8b9e3c0c0f722a6a4698406c367cd072757f4e221511ec5b1354753f073cc1d4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-e6-41.png",
+          "currentSHA256": "9b03edc0b637afbb3e9d168899948d2cb30db412bad9a033109b609353c4911e",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "9b03edc0b637afbb3e9d168899948d2cb30db412bad9a033109b609353c4911e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-e6-7.png",
+          "currentSHA256": "f9c3e8b484fd739c2b5dbc6402a86085dec278166e08504a83a3edb4ecd9074a",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "f9c3e8b484fd739c2b5dbc6402a86085dec278166e08504a83a3edb4ecd9074a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-p6-71.png",
+          "currentSHA256": "ae1bcc6a78f3ef831c0c75c62961017742dad212cdff6b7cd12520379ec009b2",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "ae1bcc6a78f3ef831c0c75c62961017742dad212cdff6b7cd12520379ec009b2",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-p6-74.png",
+          "currentSHA256": "6a166110f703ca23cf219577ae94fbdd4af006c8a083f2976be219d9b2c7ac24",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "6a166110f703ca23cf219577ae94fbdd4af006c8a083f2976be219d9b2c7ac24",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-p6-79.png",
+          "currentSHA256": "1d6b737cafc29c36fd13ce17bff73da0d6f8e193d130d5e2527902f2cbf9e5a6",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "1d6b737cafc29c36fd13ce17bff73da0d6f8e193d130d5e2527902f2cbf9e5a6",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-p6-81.png",
+          "currentSHA256": "471ab64b173a8ca9006e8f921577e71f500889bc403d60da8a6f0a8f24627114",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "471ab64b173a8ca9006e8f921577e71f500889bc403d60da8a6f0a8f24627114",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-p6-90.png",
+          "currentSHA256": "0ac34a0f034812ddf7b7923ad75cb6cedc73f7315d1a1a12845fc29ebe929971",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "0ac34a0f034812ddf7b7923ad75cb6cedc73f7315d1a1a12845fc29ebe929971",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-p6-92.png",
+          "currentSHA256": "f84f449e62399cb7fbeba9ec92f73d47555d898c9a3408eca8ea2f65a077efa1",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "f84f449e62399cb7fbeba9ec92f73d47555d898c9a3408eca8ea2f65a077efa1",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-p6-94.png",
+          "currentSHA256": "ca297f232626b2a726f2d03b8279536683e5441e6b16732a757efb284cd5c602",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "ca297f232626b2a726f2d03b8279536683e5441e6b16732a757efb284cd5c602",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-fig-q6-8.png",
+          "currentSHA256": "1af0e863dae5ae705ec537e23a92084af3c2148621f98de31217438309e889fd",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "1af0e863dae5ae705ec537e23a92084af3c2148621f98de31217438309e889fd",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-ref-fig-5-32.png",
+          "currentSHA256": "472b7595ea7e1180fffd5a6d59f4403570aba7143fe680b5fee08addcaf74fd4",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "472b7595ea7e1180fffd5a6d59f4403570aba7143fe680b5fee08addcaf74fd4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-exercises-ref-fig-5-5.png",
+          "currentSHA256": "9288a7e460c8481262574b695ce532c1daee13b3d452ca2ef58d7b6196a77172",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "9288a7e460c8481262574b695ce532c1daee13b3d452ca2ef58d7b6196a77172",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-01.png",
+          "currentSHA256": "492344f6db92536c756a4fd0e41937b08e6421279bedee70ba4ce7e086be6410",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "492344f6db92536c756a4fd0e41937b08e6421279bedee70ba4ce7e086be6410",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-02.png",
+          "currentSHA256": "74f294f035bc6e899df451dc27ccd352086c3b4789179ebea0b980cd268deb2f",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "74f294f035bc6e899df451dc27ccd352086c3b4789179ebea0b980cd268deb2f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-03.png",
+          "currentSHA256": "a40b5049d175fc884b03e52954599735abac066bf377eed7f47f72ad4019c8d7",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "a40b5049d175fc884b03e52954599735abac066bf377eed7f47f72ad4019c8d7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-04.png",
+          "currentSHA256": "f415a45cede09127b47da85b34d1511a28d3bb905251128a3fb56e22b1ae40b2",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "f415a45cede09127b47da85b34d1511a28d3bb905251128a3fb56e22b1ae40b2",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-05.png",
+          "currentSHA256": "e90b2ac3bda7f11c82627c04f79a465e98e2f069b5867df18af835e7804340ce",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "e90b2ac3bda7f11c82627c04f79a465e98e2f069b5867df18af835e7804340ce",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-06.png",
+          "currentSHA256": "04ead9d66fc3228c5b00ff6f0802112124d14a92ba440cea10e71b8f3918bfa8",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "04ead9d66fc3228c5b00ff6f0802112124d14a92ba440cea10e71b8f3918bfa8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-07.png",
+          "currentSHA256": "faf95ce0ae3396dd9008d61abecb08c9bf541ca3d48db0af960010fc644b65ff",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "faf95ce0ae3396dd9008d61abecb08c9bf541ca3d48db0af960010fc644b65ff",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-08.png",
+          "currentSHA256": "5c6b07cc7ccea9aee8dee021230ac072fc997f0c0c441aa20d0795435d39f140",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "5c6b07cc7ccea9aee8dee021230ac072fc997f0c0c441aa20d0795435d39f140",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-09.png",
+          "currentSHA256": "66ee34aa1475c47682622445a4ec6a47653d922ef0001bb0daa955ac17bc2ee7",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "66ee34aa1475c47682622445a4ec6a47653d922ef0001bb0daa955ac17bc2ee7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-10.png",
+          "currentSHA256": "d71fa303e25cae59d2a1db09e2bc5318ce6f0db637102693f5404801679219da",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "d71fa303e25cae59d2a1db09e2bc5318ce6f0db637102693f5404801679219da",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-11.png",
+          "currentSHA256": "05a75e1dbfc0191120a8e9fa4597342b01133a71aded9078d108234e5b306356",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "05a75e1dbfc0191120a8e9fa4597342b01133a71aded9078d108234e5b306356",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-12.png",
+          "currentSHA256": "24a1811e70b1c4efd9107dcfaa9d31066ef75e4f495c54a9348f45edd4361cbf",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "24a1811e70b1c4efd9107dcfaa9d31066ef75e4f495c54a9348f45edd4361cbf",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-13.png",
+          "currentSHA256": "74c55cfe82c77f65ec1d2efb8b3844d4d97344f688e00b3ed57b28baf3992c20",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "74c55cfe82c77f65ec1d2efb8b3844d4d97344f688e00b3ed57b28baf3992c20",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-14.png",
+          "currentSHA256": "39ffd732980ab6f85022eb7db179572fe872f18bd781ed998a493f602feb823e",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "39ffd732980ab6f85022eb7db179572fe872f18bd781ed998a493f602feb823e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-15.png",
+          "currentSHA256": "2a6f0c3ae04eb25a52e9a04d667a1dd9201a8e43c9a537282ec9848afe210ea3",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "2a6f0c3ae04eb25a52e9a04d667a1dd9201a8e43c9a537282ec9848afe210ea3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-16.png",
+          "currentSHA256": "b540fb84693fab2fd993e0c58a760110ba7224cc2eb5e387cf1906cf28f06441",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "b540fb84693fab2fd993e0c58a760110ba7224cc2eb5e387cf1906cf28f06441",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-17.png",
+          "currentSHA256": "cc15b8853979b6b8ea933f32146f1ab387cd0724b515efc9fbdf10db942f1b6f",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "cc15b8853979b6b8ea933f32146f1ab387cd0724b515efc9fbdf10db942f1b6f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-18.png",
+          "currentSHA256": "bba400bfdd359320c41f0fecd32ff6e661547017b328b6a4c55251364295e4b4",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "bba400bfdd359320c41f0fecd32ff6e661547017b328b6a4c55251364295e4b4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-19.png",
+          "currentSHA256": "6a203a3a50f2357d1e7eda0f273056e82c610a421f3ed95db54d27c038511171",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "6a203a3a50f2357d1e7eda0f273056e82c610a421f3ed95db54d27c038511171",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-20.png",
+          "currentSHA256": "d5a92613a06e59764fee6b4d954947f04511d1b61495286efab150513a7dc78d",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "d5a92613a06e59764fee6b4d954947f04511d1b61495286efab150513a7dc78d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-21.png",
+          "currentSHA256": "a4fd9892c69399a144f48bd7f73109fd31b8f917704bff208edb4577293ac2bf",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "a4fd9892c69399a144f48bd7f73109fd31b8f917704bff208edb4577293ac2bf",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-22.png",
+          "currentSHA256": "a8294de2959a34f06a0f20717172b04c5d778478bf54c1111f4a9b2f803db043",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "a8294de2959a34f06a0f20717172b04c5d778478bf54c1111f4a9b2f803db043",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-23.png",
+          "currentSHA256": "da4d7cb09318ab406adfe6761e43db16d65e3f54bd86c781d066bbc93fa5e8e7",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "da4d7cb09318ab406adfe6761e43db16d65e3f54bd86c781d066bbc93fa5e8e7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-24.png",
+          "currentSHA256": "9596185cbd512afa3e63ca87f5e8a13c6208f772ec806b4717fcc31e76bb2f2b",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "9596185cbd512afa3e63ca87f5e8a13c6208f772ec806b4717fcc31e76bb2f2b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-25.png",
+          "currentSHA256": "3a1e6390b63dffd1c28380828138301230fb51b61272f5042e79e95f6b7f8971",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "3a1e6390b63dffd1c28380828138301230fb51b61272f5042e79e95f6b7f8971",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-26.png",
+          "currentSHA256": "26fbc27b797190df1dd9f5368645b2b49c6a743d461142f51a778a38ce840906",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "26fbc27b797190df1dd9f5368645b2b49c6a743d461142f51a778a38ce840906",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-27.png",
+          "currentSHA256": "d5bd0b72e531c9ea89a177f679ab5a1f5358f3322e1c4c4bb0b88868cf2a39e8",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "d5bd0b72e531c9ea89a177f679ab5a1f5358f3322e1c4c4bb0b88868cf2a39e8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-06-28.png",
+          "currentSHA256": "06531e1c35966471b8c56b2284980b2c148000092ed22862ac9319340ef9be0e",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "06531e1c35966471b8c56b2284980b2c148000092ed22862ac9319340ef9be0e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-app-muscle.png",
+          "currentSHA256": "952a175e23634d1597ad2ee866ebbe27190c72b044a66f06547012b336b8ed13",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "952a175e23634d1597ad2ee866ebbe27190c72b044a66f06547012b336b8ed13",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-app-running.png",
+          "currentSHA256": "f1b47ae7764d71052fd97eb5692ce1b91c1915fea4d41d20bf9d5cba1bacb06d",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "f1b47ae7764d71052fd97eb5692ce1b91c1915fea4d41d20bf9d5cba1bacb06d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-app-tendons.png",
+          "currentSHA256": "5fe98d00ac7238b41df9dcc5faa0aa6994255d18a6135fd943c7fe0cb709cec4",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "5fe98d00ac7238b41df9dcc5faa0aa6994255d18a6135fd943c7fe0cb709cec4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-mo-dau.png",
+          "currentSHA256": "e06a3a6b0f3238679782d5488785d6b40d50bb9168d7a16e4111342c26a8c3cc",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "e06a3a6b0f3238679782d5488785d6b40d50bb9168d7a16e4111342c26a8c3cc",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-summary-01.png",
+          "currentSHA256": "7f9ffc556e9f701daa971b12c694fcfc5f3e69ed9bb5c8e60a91128478e44cdc",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "7f9ffc556e9f701daa971b12c694fcfc5f3e69ed9bb5c8e60a91128478e44cdc",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-summary-02.png",
+          "currentSHA256": "b2ce9e1e8bb854cce30f09b90e15054b08be8238a50868f10b428d5d5f3e50c2",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "b2ce9e1e8bb854cce30f09b90e15054b08be8238a50868f10b428d5d5f3e50c2",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-summary-03.png",
+          "currentSHA256": "309f567053bf835dc346457b8d14eaeeea3efba5b4358b6b1d85a1d9b9167922",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "309f567053bf835dc346457b8d14eaeeea3efba5b4358b6b1d85a1d9b9167922",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-summary-04.png",
+          "currentSHA256": "60aa45e88f17e46eac3b94df7ad7f936e084abf5997983e8164f40a087408132",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "60aa45e88f17e46eac3b94df7ad7f936e084abf5997983e8164f40a087408132",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/vat-ly-1/bai-giang/img/young-06/r-theory-summary-05.png",
+          "currentSHA256": "8ae70a103666602095734047d2ffa66778dc953214021b8947f1495b13ab179b",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "8ae70a103666602095734047d2ffa66778dc953214021b8947f1495b13ab179b",
+          "sameAsHistory": true
+        }
+      ],
+      "markdownAndRegistryProof": [
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/00-mo-dau.md",
+          "currentCanonicalSHA256": "d7a4a7c64cc879142bea51d31a13e08586fa04099e0aa9c595aa0d9236355a21",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "d7a4a7c64cc879142bea51d31a13e08586fa04099e0aa9c595aa0d9236355a21",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/01-muc-01.md",
+          "currentCanonicalSHA256": "1d726d03c07393c1cf42a93d9ef1f2874884ccf05a018f1c8ad1bcba0857d6d6",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "1d726d03c07393c1cf42a93d9ef1f2874884ccf05a018f1c8ad1bcba0857d6d6",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/02-muc-02.md",
+          "currentCanonicalSHA256": "ff5f91d70f9cd7f8b57217d5ee3ee1b4e6874a4e6850068c9701d45106c1ab8d",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "ff5f91d70f9cd7f8b57217d5ee3ee1b4e6874a4e6850068c9701d45106c1ab8d",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/03-muc-03.md",
+          "currentCanonicalSHA256": "d380b62605cd818dcfcfa0e3f55c1e55dbbaf331500ce654ffc578a32db8743c",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "7a50e8a876dfc991b15fb2fdc12c914b46d5c1649353a6d63cf2be2e990ed8de",
+          "sameAsHistory": false,
+          "imageDeclarationsIdentical": true,
+          "diffFile": "6-03-muc-03.md.diff"
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/04-muc-04.md",
+          "currentCanonicalSHA256": "4627407a7376d9ebd8bf59773d168778a801f72eaa0a57f4d5780c2e40bca429",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "4627407a7376d9ebd8bf59773d168778a801f72eaa0a57f4d5780c2e40bca429",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/17-tom-tat.md",
+          "currentCanonicalSHA256": "b70aabb8bc591d6f8b55a7ebded98d44912d685921821553fa544d6ee498a83e",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "b70aabb8bc591d6f8b55a7ebded98d44912d685921821553fa544d6ee498a83e",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/parent-09-luyen-tap-huong-dan.md",
+          "currentCanonicalSHA256": "0662794f1a0ee15e41e04ab5752d34edcc39c7b0190e04e75f120d7c3260837d",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "0662794f1a0ee15e41e04ab5752d34edcc39c7b0190e04e75f120d7c3260837d",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/parent-10-cau-hoi-thao-luan.md",
+          "currentCanonicalSHA256": "5b3713b18355bcf58091f0883208dfa98c33a28fa3b42c577c01d0e4ec0b299d",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "5b3713b18355bcf58091f0883208dfa98c33a28fa3b42c577c01d0e4ec0b299d",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/parent-11-bai-tap-001-049.md",
+          "currentCanonicalSHA256": "b9b675dd994a439bbfddfcba6ccc9b78e6b3676b5db5f12a83299e10d9dd766f",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "b9b675dd994a439bbfddfcba6ccc9b78e6b3676b5db5f12a83299e10d9dd766f",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/parent-12-bai-tap-050-097.md",
+          "currentCanonicalSHA256": "e836496b62901a66dbfd92693288dcac6d7f0f9ffebe48bdf71c94091f18c9b9",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "e836496b62901a66dbfd92693288dcac6d7f0f9ffebe48bdf71c94091f18c9b9",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "raw_materials/physics/translations/chapter-06/parent-16-bai-tap-cau-noi.md",
+          "currentCanonicalSHA256": "5a50f4d133234ce649236db2c91c68f868660c95bec71a670f1aa0d5b3fef655",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "5a50f4d133234ce649236db2c91c68f868660c95bec71a670f1aa0d5b3fef655",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/.vitepress/physics1-remaining-06-exercises-image-annotations.mjs",
+          "currentCanonicalSHA256": "f38edf0cbc40656fdf7a4e930e5566faa1d789fc1516427a41dff809e1c5ae75",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "f38edf0cbc40656fdf7a4e930e5566faa1d789fc1516427a41dff809e1c5ae75",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 6,
+          "file": "docs/.vitepress/physics1-remaining-06-theory-image-annotations.mjs",
+          "currentCanonicalSHA256": "bcadda040eb87e1a5fb893a4c9c1529a61925c10830ca7b969134be1f39d044d",
+          "historyCommit": "393735adcbabc45b046fde44f54f56890c7babc0",
+          "historyAvailable": true,
+          "historySHA256": "bcadda040eb87e1a5fb893a4c9c1529a61925c10830ca7b969134be1f39d044d",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        }
+      ],
+      "explicitPriorEvidence": [
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch06-remaining-theory-20261023.md",
+          "sha256": "2375c2d611b56c93ca8428ebb64c095306f7e3f2fc47269f7d1a2055c21c093f",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch06-parent-exercises-20261025.md",
+          "sha256": "9f67d57186b7622aa5c87260d1c3381eceb66559fe2d413fa1fa3e3cc30d61d0",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        }
+      ],
+      "deltaDisposition": "Ch3trailingblanklineonly;Ch6lineintegralnotation/sourceclarification preservesallimage/captiondeclarations;Ch7caption/sourcearrangement accepted by exactafterSHA of parentPDFrepair. Otherimagecontext/registries match historicalacceptance.",
+      "limits": "PNGinventory includes retained source assets; authoredSVGs separately inventoried and notsubstituted. No sourceanswer/wholecourse acceptance fromimagegate."
+    },
+    {
+      "chapter": 7,
+      "status": "accepted-original-frame-and-caption-continuity-current",
+      "originalPNGAssets": 60,
+      "imageProof": [
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-bridge-force-diagrams.png",
+          "currentSHA256": "b0b762a44f2611f88e7e31dcbfbfb688c9e70271a2d9d909d4fac92445022f11",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "b0b762a44f2611f88e7e31dcbfbfb688c9e70271a2d9d909d4fac92445022f11",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-7-25.png",
+          "currentSHA256": "2289e7dac9f214d0864336c9443424bf176a67ee0dfc23917d959e3ef47f6b58",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "2289e7dac9f214d0864336c9443424bf176a67ee0dfc23917d959e3ef47f6b58",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-dna-apparatus.png",
+          "currentSHA256": "61402c6a4e25c95f45418c3dfa6caf5ce8adc4bfd9616fe26a9373b05bf9f37e",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "61402c6a4e25c95f45418c3dfa6caf5ce8adc4bfd9616fe26a9373b05bf9f37e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-e7-09.png",
+          "currentSHA256": "d2b224694f9b99e6aaa6a7256dae4e9c25b03f2adacaeaf7d7c8a60be41516f4",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "d2b224694f9b99e6aaa6a7256dae4e9c25b03f2adacaeaf7d7c8a60be41516f4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-e7-36.png",
+          "currentSHA256": "d043d7928a532e346d2555045505f071a46638923140f05d07cbe118cae30ce3",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "d043d7928a532e346d2555045505f071a46638923140f05d07cbe118cae30ce3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-37.png",
+          "currentSHA256": "249f1d53f53c5db8968f5358e5c52be023160a95f32a6722b0aae9e86cc45986",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "249f1d53f53c5db8968f5358e5c52be023160a95f32a6722b0aae9e86cc45986",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-39.png",
+          "currentSHA256": "87186de51e11c5997112b4e1a82662e81358be7b060004423df4860db7d15905",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "87186de51e11c5997112b4e1a82662e81358be7b060004423df4860db7d15905",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-40.png",
+          "currentSHA256": "7a80c4acc6997d4ced93e9cd33274bf51607627c1e3237025d53d84a784b3ef7",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "7a80c4acc6997d4ced93e9cd33274bf51607627c1e3237025d53d84a784b3ef7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-41.png",
+          "currentSHA256": "756e9d5bd55c1b66424cea974742dbe713217ddf86cd59ef4b59d6e152368d6a",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "756e9d5bd55c1b66424cea974742dbe713217ddf86cd59ef4b59d6e152368d6a",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-43.png",
+          "currentSHA256": "c93f6487868064323eff9c0dde2a165db727f4e2003921d4e036767a259f261f",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "c93f6487868064323eff9c0dde2a165db727f4e2003921d4e036767a259f261f",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-45.png",
+          "currentSHA256": "97780b1c087bd21fbd48979f19dfc203c93f65bd66d7cb356a5926affb7732a6",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "97780b1c087bd21fbd48979f19dfc203c93f65bd66d7cb356a5926affb7732a6",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-46.png",
+          "currentSHA256": "1b555b320a88ea08d8a4b7da67a53aed7097c907992d4271e2a1958113148438",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "1b555b320a88ea08d8a4b7da67a53aed7097c907992d4271e2a1958113148438",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-50.png",
+          "currentSHA256": "798e83abdffc8fbd05e9937aef4046c3f8bfabd7820e200aa73100e9a5dd83ec",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "798e83abdffc8fbd05e9937aef4046c3f8bfabd7820e200aa73100e9a5dd83ec",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-51.png",
+          "currentSHA256": "3e33d53d210a701a811dfa1922219234c3d40703fafb5db0610e3cc74d434f92",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "3e33d53d210a701a811dfa1922219234c3d40703fafb5db0610e3cc74d434f92",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-55.png",
+          "currentSHA256": "49757bf32b5af1e513ee9f2ceb683c8b256cb17f613a67197cbc2f3e22c19a5d",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "49757bf32b5af1e513ee9f2ceb683c8b256cb17f613a67197cbc2f3e22c19a5d",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-57.png",
+          "currentSHA256": "c4bd1207a0ab8bf96e68312ff180b725339f0bbee1662e78662f21d5eb8d7ad7",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "c4bd1207a0ab8bf96e68312ff180b725339f0bbee1662e78662f21d5eb8d7ad7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-58.png",
+          "currentSHA256": "fe47e4b00c43d83b5c5ec1cb0557405e9f2a8d70826bc74a455e7646e806f738",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "fe47e4b00c43d83b5c5ec1cb0557405e9f2a8d70826bc74a455e7646e806f738",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-60.png",
+          "currentSHA256": "4ee588062fefb6b1f9f5d041d33cf4f5feb2502f3b7975619864bff97429ae24",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "4ee588062fefb6b1f9f5d041d33cf4f5feb2502f3b7975619864bff97429ae24",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-69.png",
+          "currentSHA256": "5057460c794b398045559272c52f3e439e1655c42de20b86118345b3d3012543",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "5057460c794b398045559272c52f3e439e1655c42de20b86118345b3d3012543",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-76.png",
+          "currentSHA256": "a2847c59f67acd7a553ad88c52f02e9b3509318e346085a31a0dd9450941a8c0",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "a2847c59f67acd7a553ad88c52f02e9b3509318e346085a31a0dd9450941a8c0",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-79.png",
+          "currentSHA256": "3590d4f223cc63c344b3e3575770fc63244a267c4474b4d394de63a6409e1574",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "3590d4f223cc63c344b3e3575770fc63244a267c4474b4d394de63a6409e1574",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-82.png",
+          "currentSHA256": "db2d47a56b1c41f75a0274f1a054b2d6828a5e45b5086b3168a47ea77577f7e3",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "db2d47a56b1c41f75a0274f1a054b2d6828a5e45b5086b3168a47ea77577f7e3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-exercises-fig-p7-84.png",
+          "currentSHA256": "6fc60bf74ff8808059ccf2c0adb4639c812c29047f66b4bd8d27f75d17c2447b",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "6fc60bf74ff8808059ccf2c0adb4639c812c29047f66b4bd8d27f75d17c2447b",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-01.png",
+          "currentSHA256": "5aec1659d187911f504379c152a18220a613e2df154fabebf21c81cc8c9eb6fa",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "5aec1659d187911f504379c152a18220a613e2df154fabebf21c81cc8c9eb6fa",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-02.png",
+          "currentSHA256": "49884fe18d3402529012f764c6af891e4e874617f4670adeacb4279411de2d40",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "49884fe18d3402529012f764c6af891e4e874617f4670adeacb4279411de2d40",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-03.png",
+          "currentSHA256": "eee81e7ee4ae576561348d603cffe268c3692be4d822af4e1619b7277d78d97c",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "eee81e7ee4ae576561348d603cffe268c3692be4d822af4e1619b7277d78d97c",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-04.png",
+          "currentSHA256": "200b7a84aefaad26386d4465ed2f5fc2e2f8275d9541f016be3a06218b7e9da1",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "200b7a84aefaad26386d4465ed2f5fc2e2f8275d9541f016be3a06218b7e9da1",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-05.png",
+          "currentSHA256": "4352439b9e591b5907139c8ee92571843866f061aaa28c9ff89dd61eac48b541",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "4352439b9e591b5907139c8ee92571843866f061aaa28c9ff89dd61eac48b541",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-06.png",
+          "currentSHA256": "0002ce219cab03022185a33a1c9d3ca8b9f79f56d1e04645961e7f30c7319c86",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "0002ce219cab03022185a33a1c9d3ca8b9f79f56d1e04645961e7f30c7319c86",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-07.png",
+          "currentSHA256": "9247299bb6930c774c7fc840733cecda4bdbc55c49e592079ccba9682b5706e3",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "9247299bb6930c774c7fc840733cecda4bdbc55c49e592079ccba9682b5706e3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-08.png",
+          "currentSHA256": "7a5eff0440eb44d4e525045c7b99cdefadb24c394efe6f42e1ad0de18f6ac3e3",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "7a5eff0440eb44d4e525045c7b99cdefadb24c394efe6f42e1ad0de18f6ac3e3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-09.png",
+          "currentSHA256": "b3ba46f51f103700fcaa59153a610da881078bf03139a66441d1b6739f6d3565",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "b3ba46f51f103700fcaa59153a610da881078bf03139a66441d1b6739f6d3565",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-10.png",
+          "currentSHA256": "7cafe92396d7cd0d2456c3edd9165a426bdb4bce7d5e9bae0e8c3927f12e9a49",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "7cafe92396d7cd0d2456c3edd9165a426bdb4bce7d5e9bae0e8c3927f12e9a49",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-11.png",
+          "currentSHA256": "e65744ff26346053af992f8ff0cb6d4d670e54feafef62cbeeb58e01475460fc",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "e65744ff26346053af992f8ff0cb6d4d670e54feafef62cbeeb58e01475460fc",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-12.png",
+          "currentSHA256": "c2311489266a04131a8dc45ef5938e1caf744e63e36e50d9a56088e12b7ce3fc",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "c2311489266a04131a8dc45ef5938e1caf744e63e36e50d9a56088e12b7ce3fc",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-13.png",
+          "currentSHA256": "bebe297c9958a1b16277c1a1b385351ad74af1820d3aa76c7b06fe7936600de8",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "bebe297c9958a1b16277c1a1b385351ad74af1820d3aa76c7b06fe7936600de8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-14.png",
+          "currentSHA256": "4b5f8c248236c5e3af39c5150de05da40e9127c8be66225511b4ebeccfb23eaa",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "4b5f8c248236c5e3af39c5150de05da40e9127c8be66225511b4ebeccfb23eaa",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-15.png",
+          "currentSHA256": "7cf5ae76d28f245af70737fa7aedbbe914a2140a89e5b033f18bdef072174253",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "7cf5ae76d28f245af70737fa7aedbbe914a2140a89e5b033f18bdef072174253",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-16.png",
+          "currentSHA256": "83d59e32361a66ab39758a4d7bb07be9f7bf83f2c5d643ca082b290376de4fe1",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "83d59e32361a66ab39758a4d7bb07be9f7bf83f2c5d643ca082b290376de4fe1",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-17.png",
+          "currentSHA256": "611e84c7191ccf946e2d27c237258f03a9b45ca3fd8659fe4f101859814620e3",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "611e84c7191ccf946e2d27c237258f03a9b45ca3fd8659fe4f101859814620e3",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-18.png",
+          "currentSHA256": "9f032da3a07bc80f277a63e1752df1cd2c69741e1edce574e09678ccb1f0f2f4",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "9f032da3a07bc80f277a63e1752df1cd2c69741e1edce574e09678ccb1f0f2f4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-19.png",
+          "currentSHA256": "664bd58a86d2bca7cbb7c53f64cf2cc1863bceb15a949e49c2636fbf397cb1a8",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "664bd58a86d2bca7cbb7c53f64cf2cc1863bceb15a949e49c2636fbf397cb1a8",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-20.png",
+          "currentSHA256": "3847d9509f209d465f4bbf33b55101975e56b5cc5c01d7e77e68f47c566cacd1",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "3847d9509f209d465f4bbf33b55101975e56b5cc5c01d7e77e68f47c566cacd1",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-21.png",
+          "currentSHA256": "071d796d8b4e82eff04b35a1c4c002646adc3bac269cdcf832de2fa2d5569b25",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "071d796d8b4e82eff04b35a1c4c002646adc3bac269cdcf832de2fa2d5569b25",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-22.png",
+          "currentSHA256": "433b1f785add6607e3ab86622e128b7ec0d1156f42975c5901ead5f521071a06",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "433b1f785add6607e3ab86622e128b7ec0d1156f42975c5901ead5f521071a06",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-23.png",
+          "currentSHA256": "c280339798dfc027cff81e1e0fb1df21a1b953e0f029d944d002bdf460f74965",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "c280339798dfc027cff81e1e0fb1df21a1b953e0f029d944d002bdf460f74965",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-hinh-7-24.png",
+          "currentSHA256": "fee35e36b7a2125ebf894beecf33e1fc068f7c049e4b525ca7056bad2d75972c",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "fee35e36b7a2125ebf894beecf33e1fc068f7c049e4b525ca7056bad2d75972c",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-mo-dau.png",
+          "currentSHA256": "a1ddd4429d1ef96a94f58a27d0d7c5fff6bf44e93f26bb60fa1fd3f6da2c68ef",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "a1ddd4429d1ef96a94f58a27d0d7c5fff6bf44e93f26bb60fa1fd3f6da2c68ef",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-tom-tat-01.png",
+          "currentSHA256": "99c70b229567db24544945a8fcd5dc0be629b5bf744e93918d6c0a7f63c9442e",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "99c70b229567db24544945a8fcd5dc0be629b5bf744e93918d6c0a7f63c9442e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-tom-tat-02.png",
+          "currentSHA256": "a391e33681bf35259a3d0a377722646a4008228e675c3768d511e4b27b497c63",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "a391e33681bf35259a3d0a377722646a4008228e675c3768d511e4b27b497c63",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-tom-tat-03.png",
+          "currentSHA256": "4529ee9aa3f5545974be1988308c5e9ddfd02d89438d1fe6d4dcf14f039f49f4",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "4529ee9aa3f5545974be1988308c5e9ddfd02d89438d1fe6d4dcf14f039f49f4",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-tom-tat-04.png",
+          "currentSHA256": "a4485153881a562a9b943a6c74c43fc022467ef3377b583f0966a4148ec4c70e",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "a4485153881a562a9b943a6c74c43fc022467ef3377b583f0966a4148ec4c70e",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-tom-tat-05.png",
+          "currentSHA256": "ba7c6e03c734f009f55ec779a71fbaa9a8bd138d4e7f8c7c4d593698d37c1c47",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "ba7c6e03c734f009f55ec779a71fbaa9a8bd138d4e7f8c7c4d593698d37c1c47",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-tyu-7-01.png",
+          "currentSHA256": "ac4768b5f364247d9412604bfd35c206f69dadc2d5529946a4437ae76e7c56e7",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "ac4768b5f364247d9412604bfd35c206f69dadc2d5529946a4437ae76e7c56e7",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-tyu-7-02.png",
+          "currentSHA256": "e6cbe17ccf3323fd2a60fb57e4d04d55c18bfcc0714376abcdc2415a6c7c96db",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "e6cbe17ccf3323fd2a60fb57e4d04d55c18bfcc0714376abcdc2415a6c7c96db",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-ung-dung-7-01.png",
+          "currentSHA256": "902d781395c2fa8c6b4dc94e9f857cb5e2bb842bef28cef1cff3b1cd104b3762",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "902d781395c2fa8c6b4dc94e9f857cb5e2bb842bef28cef1cff3b1cd104b3762",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-ung-dung-bao-ghe-pa.png",
+          "currentSHA256": "911515880cf8eebb790460da1703f77ed99a33824a6cb9327fd4aa83e1c45a0c",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "911515880cf8eebb790460da1703f77ed99a33824a6cb9327fd4aa83e1c45a0c",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-ung-dung-chim-boi-ca.png",
+          "currentSHA256": "9ac23a2e9e964d7c5e4b039e3ac4c187394b6fb9ac8ed23486b6569828ee69cf",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "9ac23a2e9e964d7c5e4b039e3ac4c187394b6fb9ac8ed23486b6569828ee69cf",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-ung-dung-dia-hinh.png",
+          "currentSHA256": "98b192acde37bbbd8062229e3da03703a17fe6a2b90b9f79eb0a6a09873b95ee",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "98b192acde37bbbd8062229e3da03703a17fe6a2b90b9f79eb0a6a09873b95ee",
+          "sameAsHistory": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/vat-ly-1/bai-giang/img/young-07/r-theory-ung-dung-lop-xe.png",
+          "currentSHA256": "10adbe04eae2601d261abce2fc296e577cf3788b78dea65879ee4e6ef6523957",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "10adbe04eae2601d261abce2fc296e577cf3788b78dea65879ee4e6ef6523957",
+          "sameAsHistory": true
+        }
+      ],
+      "markdownAndRegistryProof": [
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/00-mo-dau.md",
+          "currentCanonicalSHA256": "20896a62552f3385b7fb2f88909736ae30caa08d95f5700a52386bff3cefa05e",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "20896a62552f3385b7fb2f88909736ae30caa08d95f5700a52386bff3cefa05e",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/01-muc-01.md",
+          "currentCanonicalSHA256": "a7297c1532a367a8e3450afb8d096e3e14ccf703e4c416f52d99e49b89828ae1",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "4e171d7ce35ed35ef9adee8b92106e8ef411b2924d76f94a5b8a8d89b0b7f0fd",
+          "sameAsHistory": false,
+          "imageDeclarationsIdentical": false,
+          "diffFile": "7-01-muc-01.md.diff"
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/02-muc-02.md",
+          "currentCanonicalSHA256": "f6ce30e8e8653fef3cd123f2cfd2e6c2908509c0d553f347c3f969a9de5a7efd",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "f6ce30e8e8653fef3cd123f2cfd2e6c2908509c0d553f347c3f969a9de5a7efd",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/03-muc-03.md",
+          "currentCanonicalSHA256": "c16da020cb2739ff2b26640afada57bfdeeca48baa37bfd996113ac6b3171645",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "c16da020cb2739ff2b26640afada57bfdeeca48baa37bfd996113ac6b3171645",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/04-muc-04.md",
+          "currentCanonicalSHA256": "a53d47c7f86493af80e1950237766aa7025a6fad6c171d9f3a1bea4a2113fb27",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "a53d47c7f86493af80e1950237766aa7025a6fad6c171d9f3a1bea4a2113fb27",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/05-muc-05.md",
+          "currentCanonicalSHA256": "e4830307b16157bda299857cf6dcd8bf2140bc93460bf959e136b0a349221322",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "e4830307b16157bda299857cf6dcd8bf2140bc93460bf959e136b0a349221322",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/17-tom-tat.md",
+          "currentCanonicalSHA256": "4d208b2919cdef279d3e0479803fe552e9c32eb6692b5c18e6a357a7d7bd109c",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "4d208b2919cdef279d3e0479803fe552e9c32eb6692b5c18e6a357a7d7bd109c",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/parent-09-luyen-tap-huong-dan.md",
+          "currentCanonicalSHA256": "2b89f616c6ffb98cbf7d3e3c8eabfd1e3adc7a56383b330fb7d56082f69aa233",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "2b89f616c6ffb98cbf7d3e3c8eabfd1e3adc7a56383b330fb7d56082f69aa233",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/parent-10-cau-hoi-thao-luan.md",
+          "currentCanonicalSHA256": "6282d0e390aa025188e2edc611331679549b90824e9aa7f0ec0e1810befbf14a",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "6282d0e390aa025188e2edc611331679549b90824e9aa7f0ec0e1810befbf14a",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/parent-11-bai-tap-001-042.md",
+          "currentCanonicalSHA256": "c9c11120a8e5241b5bc4f9fe0b558cc83b4d5dd8bf6a6ae6003ed466c4667fce",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "c9c11120a8e5241b5bc4f9fe0b558cc83b4d5dd8bf6a6ae6003ed466c4667fce",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/parent-12-bai-tap-043-084.md",
+          "currentCanonicalSHA256": "5859946fb77bcb271e66d64ac7175cdfa55248b7d2abe1ab718a02f61adf6483",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "5859946fb77bcb271e66d64ac7175cdfa55248b7d2abe1ab718a02f61adf6483",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/parent-16-bai-tap-cau-noi.md",
+          "currentCanonicalSHA256": "d2b0f00d546ac75081bf7ee3337fec604ba82e9646da2a042c72e5b8df199e2c",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "d2b0f00d546ac75081bf7ee3337fec604ba82e9646da2a042c72e5b8df199e2c",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "raw_materials/physics/translations/chapter-07/parent-18-dap-an-cuoi-chuong.md",
+          "currentCanonicalSHA256": "0098b7e279cee745b507b13124656f57de08e50d4e61e6298ffdf51c54a1d8fa",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "0098b7e279cee745b507b13124656f57de08e50d4e61e6298ffdf51c54a1d8fa",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/.vitepress/physics1-remaining-07-exercises-image-annotations.mjs",
+          "currentCanonicalSHA256": "5edb306d028d63ee522210445c4544ddb311c55c9ae7f9d90edeaaeb158a9c84",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "5edb306d028d63ee522210445c4544ddb311c55c9ae7f9d90edeaaeb158a9c84",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        },
+        {
+          "chapter": 7,
+          "file": "docs/.vitepress/physics1-remaining-07-theory-image-annotations.mjs",
+          "currentCanonicalSHA256": "f036d5407826754fb487915027f2ba95b35f83d72b9b45f37a072283918e36d2",
+          "historyCommit": "dcc003c31a478e9fef6a18ab667fb7b4696e77b3",
+          "historyAvailable": true,
+          "historySHA256": "f036d5407826754fb487915027f2ba95b35f83d72b9b45f37a072283918e36d2",
+          "sameAsHistory": true,
+          "imageDeclarationsIdentical": true
+        }
+      ],
+      "explicitPriorEvidence": [
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch07-parent-theory-20261024.md",
+          "sha256": "69cf2bc47502595e3bc237fc2c5bfd67edd0eea9fa9d934f67a48acfb0d8f285",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\ch07-parent-exercises-20261024.md",
+          "sha256": "595be4630b77108946674fc96596ec6f67a3c9d44e2c78580a9f75d850f3ec86",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        },
+        {
+          "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\reviews\\section7-1-parent-repair-20261028.json",
+          "sha256": "e5e0f6ed0c59a29bb0f4c1f16a23b0d01b1c3869bcf44d569cd97c752550fbeb",
+          "scope": "Parent-reviewed actual source/frame/caption or source-unit acceptance; fullscope read, not authorcountalone."
+        }
+      ],
+      "deltaDisposition": "Ch3trailingblanklineonly;Ch6lineintegralnotation/sourceclarification preservesallimage/captiondeclarations;Ch7caption/sourcearrangement accepted by exactafterSHA of parentPDFrepair. Otherimagecontext/registries match historicalacceptance.",
+      "limits": "PNGinventory includes retained source assets; authoredSVGs separately inventoried and notsubstituted. No sourceanswer/wholecourse acceptance fromimagegate."
+    }
+  ],
+  "originalPNGs": 296,
+  "AGYDisposition": "RawA184image binaryflags independently verified. RawA prose counts/labels are internallyinconsistent (67vs42+13 in chapter1, report152vsactual219labelrows), so no suchcount accepted. currentsource manifests and this exactimage list are authoritative. RawC splitdeletioncommit/fullframepixel-only claims rejected; 6/7accepted from actualparentreceipts andhashcontinuity. Chapter11needsnewvisualreview,10/20captiongate separate.",
+  "noNewResearchWorkflow": true,
+  "privateEvidenceRevision": "6d750680d00d80d0b95b1d894000ba6ff2d342ba",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/wiki-body-and-remaining-image-evidence-20261101.tar.gz",
+  "privateEvidenceArchiveSHA256": "63c323d2489a64b68489fe5b42372758212955e19e00adaccdf6c8775d893e63",
+  "wholeGoalComplete": false
+}

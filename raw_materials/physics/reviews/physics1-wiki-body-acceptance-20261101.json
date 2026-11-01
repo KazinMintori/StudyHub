@@ -1,0 +1,2499 @@
+{
+  "status": "accepted38-technical-wiki-bodies-with7current-public-source-corrections",
+  "rawAGYTransport": "Finalcall3 returnedfailedNoneType; no fourthcall. Durable text artifacts recovered, rawstatus not claimed successful. Parent acceptance relies on actualfile identities, reading and executablechecks.",
+  "rawReviewSHA256": "2f3599c1077126f4bee0c31a2db8474b0b33bd3994bfa975bab5a46ccca0e932",
+  "sourceConfirmedAuthoredScientificCorrections": 0,
+  "wikiPages": [
+    {
+      "id": "ban-kinh-quan-tinh",
+      "file": "docs/wiki/ban-kinh-quan-tinh.md",
+      "currentRawSHA256": "f18ed325398098acadb70c2e8643966a1ecdfad1cbc3fc3ee622aff610cde68e",
+      "currentCanonicalSHA256": "78efe62cdd6283dffdc9f2d2e4a06ddbaaf4720c0a6c6c99d66f58c9695acdf9",
+      "actualTechnicalDefinition": "Khoảng cách tương đương k để toàn bộ khối lượng M đặt cách trục một khoảng k cho cùng mômen quán tính I.",
+      "reportedFormulaExpressions": [
+        "I=Mk^2."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 9 & 10 (Rotation of Rigid Bodies / Dynamics of Rotational Motion)",
+        "section": "Sec 9.5 & Sec 10.3",
+        "book_pages": "pp. 294-297, 318-321",
+        "pdf_pages": "pp. 314-317, 338-341"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "bien-dang-tuong-doi",
+      "file": "docs/wiki/bien-dang-tuong-doi.md",
+      "currentRawSHA256": "5e4240f7a5bb52902ae85daa19bfe7b8232ed6dc32f495a0e3a97614192372ab",
+      "currentCanonicalSHA256": "e225d6b4c7d67a3b39c13f63aa3082ad52baab7957537140a5ec973d07fc3ede",
+      "actualTechnicalDefinition": "Tỉ số độ thay đổi một kích thước với kích thước tham chiếu, hoặc đại lượng hình học tương ứng cho biến dạng thể tích và trượt.",
+      "reportedFormulaExpressions": [
+        "\\varepsilon=\\Delta L/L_0."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 11 (Equilibrium and Elasticity)",
+        "section": "Sec 11.4 (Stress, Strain, and Elastic Moduli)",
+        "book_pages": "pp. 352-358",
+        "pdf_pages": "pp. 372-378"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "buc-xa-nhiet",
+      "file": "docs/wiki/buc-xa-nhiet.md",
+      "currentRawSHA256": "ae73b205408263a5d1fcaebd74ae531c7dbb4719236f7f2fdfd7a4add8014ff6",
+      "currentCanonicalSHA256": "069660bcd38e979f74d1420d8a32afeb188138dd6657e4233e6185c6ab14c208",
+      "actualTechnicalDefinition": "Bức xạ điện từ phát ra do trạng thái nhiệt của vật. Nó có thể truyền năng lượng qua chân không, khác dẫn nhiệt và đối lưu cần môi trường vật chất.",
+      "reportedFormulaExpressions": [
+        "P=e\\sigma AT^4."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.7 (Mechanisms of Heat Transfer - Radiation)",
+        "book_pages": "pp. 565-568",
+        "pdf_pages": "pp. 585-588"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "can-bang-co-hoc",
+      "file": "docs/wiki/can-bang-co-hoc.md",
+      "currentRawSHA256": "57e87125792262c0441a807bbfadee14117e5dfd4a3a4fe2abe94350044d2f8b",
+      "currentCanonicalSHA256": "57e87125792262c0441a807bbfadee14117e5dfd4a3a4fe2abe94350044d2f8b",
+      "actualTechnicalDefinition": "Cân bằng bền có xu hướng trở về khi bị lệch nhỏ, còn cân bằng không bền có xu hướng đi xa hơn sau lệch nhỏ. Với tọa độ tự do đang xét, cực tiểu thế năng gắn với cân bằng bền và cực đại với cân bằng không bền.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 7 & 11 (Potential Energy / Equilibrium and Elasticity)",
+        "section": "Sec 7.5 & Sec 11.1-11.3",
+        "book_pages": "pp. 222-226, 342-351",
+        "pdf_pages": "pp. 242-246, 362-371"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "can-bang-nhiet",
+      "file": "docs/wiki/can-bang-nhiet.md",
+      "currentRawSHA256": "981669006ee7c84e96e4acfb8c8d53f10c317b63a99d0bd0293f8b0240b1428c",
+      "currentCanonicalSHA256": "bf0dd621c8bcc682fbf29e702fac1ebfc9f33d2389da5bdff641a8554a37500e",
+      "actualTechnicalDefinition": "Trạng thái mà các hệ tiếp xúc qua một liên kết truyền nhiệt thích hợp không còn trao đổi năng lượng ròng do chênh lệch nhiệt độ.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.1 (Temperature and Thermal Equilibrium)",
+        "book_pages": "pp. 544-546",
+        "pdf_pages": "pp. 564-566"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "con-quay-tien-dong",
+      "file": "docs/wiki/con-quay-tien-dong.md",
+      "currentRawSHA256": "eaf4703c5e7f6dce56ecc7a2889ca2cb7a50a5c169238211e80b81ba5332770f",
+      "currentCanonicalSHA256": "c1c90df60ce70030ebc286c71f38351c00648c67f0457db066ced7f84414e43f",
+      "actualTechnicalDefinition": "Sự thay đổi hướng của trục quay và mômen động lượng dưới tác dụng mômen ngoại lực, có thể xảy ra khi độ lớn mômen động lượng gần không đổi.",
+      "reportedFormulaExpressions": [
+        "d\\vec L/dt=\\vec\\tau_{\\mathrm{ext}}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 10 (Dynamics of Rotational Motion)",
+        "section": "Sec 10.7 (Gyroscopes and Precession)",
+        "book_pages": "pp. 330-333",
+        "pdf_pages": "pp. 350-353"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "cong-nang-luong",
+      "file": "docs/wiki/cong-nang-luong.md",
+      "currentRawSHA256": "8b3bfdc14a72fecdf1c1ecbf0e25c0bc2b60839005caef89ffafcd7b9c4ef94d",
+      "currentCanonicalSHA256": "509a55115f363a76048f722f9140f74f70ef1fd5b83ca25600ebe8960a9484ef",
+      "actualTechnicalDefinition": "Công của một lực đo phần năng lượng được truyền qua tác dụng của lực trên độ dời. Với lực không đổi, công là tích vô hướng của lực và độ dời. Tổng công của các lực bằng độ biến thiên động năng của chất điểm. Với lực thế, công bằng độ giảm thế năng.",
+      "reportedFormulaExpressions": [
+        "W=\\vec F\\cdot\\Delta\\vec r.",
+        "W=\\int_A^B\\vec F\\cdot d\\vec r.",
+        "W_{\\mathrm{net}}=K_B-K_A.",
+        "W_{A\\to B}=U_A-U_B.",
+        "W_{A\\to B}=q(V_A-V_B)."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 6 & 7 (Work and Kinetic Energy / Potential Energy)",
+        "section": "Sec 6.1-6.3 & Sec 7.1-7.3",
+        "book_pages": "pp. 173-186, 205-218",
+        "pdf_pages": "pp. 193-206, 225-238"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "dan-nhiet",
+      "file": "docs/wiki/dan-nhiet.md",
+      "currentRawSHA256": "f63f47f7fa27f56da63f752306ca4aacb11cc7bd29605f7b59e8206576567ab8",
+      "currentCanonicalSHA256": "9c70453c38c7956da4afb88233ea9eee77727d9aea756c80582177251ca8a20b",
+      "actualTechnicalDefinition": "Dẫn nhiệt là truyền năng lượng từ vùng nhiệt độ cao sang vùng nhiệt độ thấp trong một vật hoặc giữa các vật tiếp xúc. Năng lượng truyền đi mà không cần khối vật chất chuyển từ vùng này sang vùng kia.",
+      "reportedFormulaExpressions": [
+        "\\begin{aligned}\nH &= \\frac{dQ}{dt}, \\\\\nH &= \\frac{kA(T_H-T_C)}{L}.\n\\end{aligned}",
+        "H=-kA\\frac{dT}{dx}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.7 (Mechanisms of Heat Transfer - Conduction)",
+        "book_pages": "pp. 561-564",
+        "pdf_pages": "pp. 581-584"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "dao-ham",
+      "file": "docs/wiki/dao-ham.md",
+      "currentRawSHA256": "598e807d231f9db5e97b8eee7f8d0e0d0676f0e3658b68b3ce6822b91d373dec",
+      "currentCanonicalSHA256": "598e807d231f9db5e97b8eee7f8d0e0d0676f0e3658b68b3ce6822b91d373dec",
+      "actualTechnicalDefinition": "Đạo hàm $f'(x)$ là tốc độ thay đổi tức thời của f theo x, được định nghĩa bằng giới hạn tỷ số $[f(x+h)-f(x)]/h$ khi $h \\to  0$. Nó là hệ số góc tiếp tuyến. Nếu đạo hàm dương trên một khoảng thì hàm tăng trên khoảng ấy. Nếu đạo hàm âm trên một khoảng thì hàm giảm trên khoảng ấy.",
+      "reportedFormulaExpressions": [
+        "f'(x)=\\lim_{h\\to0}\\frac{f(x+h)-f(x)}{h}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 2 & Appendix B (Motion Along a Straight Line / Calculus)",
+        "section": "Sec 2.2 & Appendix B",
+        "book_pages": "pp. 38-42, A-8",
+        "pdf_pages": "pp. 58-62, 1600"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "dinh-ly-truc-song-song",
+      "file": "docs/wiki/dinh-ly-truc-song-song.md",
+      "currentRawSHA256": "ebcdebd45d0e773a19f2688f1e69291dfc3e07c0e460fa456d6c99c1f8bab310",
+      "currentCanonicalSHA256": "c3823dcf73a46a85522f3178035329fd45b36284d2e49dec3c79495d318602fd",
+      "actualTechnicalDefinition": "Liên hệ mômen quán tính đối với một trục với mômen quán tính đối với trục song song đi qua khối tâm.",
+      "reportedFormulaExpressions": [
+        "I=I_{\\mathrm{cm}}+Md^2."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 9 (Rotation of Rigid Bodies)",
+        "section": "Sec 9.5 (Parallel-Axis Theorem)",
+        "book_pages": "pp. 297-299",
+        "pdf_pages": "pp. 317-319"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "doi-luu-nhiet",
+      "file": "docs/wiki/doi-luu-nhiet.md",
+      "currentRawSHA256": "5fc6bd17b045a94f80aeb0695b90a2a0e8a3ba1f2ea1a76dacfe77779a8a42ff",
+      "currentCanonicalSHA256": "c90c742019c74592e49a8cf85a950604a0afdf87727c0c35948c6b58c8757f9a",
+      "actualTechnicalDefinition": "Truyền năng lượng kèm chuyển động vĩ mô của chất lưu. Chuyển động có thể tự hình thành do lực nổi hoặc do thiết bị cưỡng bức.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.7 (Mechanisms of Heat Transfer - Convection)",
+        "book_pages": "pp. 564-565",
+        "pdf_pages": "pp. 584-585"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "don-vi",
+      "file": "docs/wiki/don-vi.md",
+      "currentRawSHA256": "235c0dcbb9b3bc39534d21051f9c5261cc389bef097359aa84352b087d6333fa",
+      "currentCanonicalSHA256": "235c0dcbb9b3bc39534d21051f9c5261cc389bef097359aa84352b087d6333fa",
+      "actualTechnicalDefinition": "Mỗi đại lượng cần đơn vị để diễn giải con số. Các đại lượng chỉ cộng được khi cùng thứ nguyên. Hai vế phương trình phải cùng thứ nguyên. Các tiền tố như milli = $10^{-3}$, micro = 10⁻⁶ cần được đổi thống nhất trước khi tính.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 1 (Units, Physical Quantities, and Vectors)",
+        "section": "Sec 1.3-1.5 (Standards and Units, Unit Consistency)",
+        "book_pages": "pp. 4-10",
+        "pdf_pages": "pp. 24-30"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "dong-luong-vat-ly",
+      "file": "docs/wiki/dong-luong-vat-ly.md",
+      "currentRawSHA256": "cd8fc9f86ca57d9f4bd566b531b4dd91ab2331a8d1ee9c6ac52cac7b772fa55f",
+      "currentCanonicalSHA256": "f42438faa757e4e9eb39729967d9e0a32c8eb8d8f98cf365d29ce569a1799595",
+      "actualTechnicalDefinition": "Trong cơ học Newton, động lượng chất điểm là vector $\\vec p=m\\vec v$. Tổng động lượng của hệ thay đổi bằng xung lượng ngoại lực. Nếu xung lượng ngoại lực bằng không trong khoảng xét, tổng động lượng đầu và cuối bằng nhau.",
+      "reportedFormulaExpressions": [
+        "\\vec p=m\\vec v.",
+        "\\vec P=\\sum_{i=1}^{n}\\vec p_i.",
+        "\\Delta\\vec P=\\int_{t_1}^{t_2}\\vec F_{\\mathrm{ext}}\\,dt.",
+        "\\vec p=\\gamma m\\vec v.",
+        "\\gamma=\\frac1{\\sqrt{1-v^2/c^2}}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 9 (Momentum, Impulse, and Collisions)",
+        "section": "Sec 9.1-9.3",
+        "book_pages": "pp. 270-282",
+        "pdf_pages": "pp. 290-302"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "gia-toc",
+      "file": "docs/wiki/gia-toc.md",
+      "currentRawSHA256": "d495699259d5476463c8eed872d0d22388cd3f94939164a70e8e9d1bdacf1bae",
+      "currentCanonicalSHA256": "d495699259d5476463c8eed872d0d22388cd3f94939164a70e8e9d1bdacf1bae",
+      "actualTechnicalDefinition": "Gia tốc là đại lượng vector mô tả sự biến thiên vận tốc. Trên trục x, $a_{\\mathrm{av}-x}=\\Delta v_x/\\Delta t$ với $\\Delta t>0$, còn $a_x=dv_x/dt$. Gia tốc dương không tự có nghĩa vật nhanh dần.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 2 & 3 (Motion Along a Straight Line / Motion in Two or Three Dimensions)",
+        "section": "Sec 2.3, 3.2, 3.4",
+        "book_pages": "pp. 42-47, 72-84",
+        "pdf_pages": "pp. 62-67, 92-104"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "gia-toc-goc",
+      "file": "docs/wiki/gia-toc-goc.md",
+      "currentRawSHA256": "c8519a8ed2238b92cf4b80501871fe48d0da9429d1d7b2eb5af8375f3e15d845",
+      "currentCanonicalSHA256": "23fcec57a75eaa51173b9eeac4991a673fe8e7e5646cf76557e01297bcafa171",
+      "actualTechnicalDefinition": "Tốc độ biến thiên vận tốc góc theo thời gian. Trong chuyển động quanh trục cố định, thành phần gia tốc góc có thể cùng hoặc trái dấu với vận tốc góc.",
+      "reportedFormulaExpressions": [
+        "\\alpha_z=d\\omega_z/dt."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 9 (Rotation of Rigid Bodies)",
+        "section": "Sec 9.1-9.3",
+        "book_pages": "pp. 286-291",
+        "pdf_pages": "pp. 306-311"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "gioi-han-dan-hoi",
+      "file": "docs/wiki/gioi-han-dan-hoi.md",
+      "currentRawSHA256": "2b3b92657a2a6d859ebd1320fd8d79ac06cde1847bdbafcf1ab5f67527837868",
+      "currentCanonicalSHA256": "7ee4d7c2b37cfd360a9678ff5a5cab17a5171c12dc5cab16e16c4cc68d62cb0e",
+      "actualTechnicalDefinition": "Ranh giới ứng xử mà vật còn phục hồi hoàn toàn sau khi bỏ tải. Nó không nhất thiết trùng giới hạn của quan hệ ứng suất–biến dạng tuyến tính.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 11 (Equilibrium and Elasticity)",
+        "section": "Sec 11.5 (Elasticity and Plasticity)",
+        "book_pages": "pp. 358-360",
+        "pdf_pages": "pp. 378-380"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "lan-khong-truot",
+      "file": "docs/wiki/lan-khong-truot.md",
+      "currentRawSHA256": "8a6fba76f0d12e5e55744d2d63ed705b86eae8cf6f8e7fe83380af7998175077",
+      "currentCanonicalSHA256": "2b9cbfc6a6ec1419800a6beb25341652bcee5600cf2e763c8fecb22edc0b535c",
+      "actualTechnicalDefinition": "Chuyển động trong đó điểm tiếp xúc của vật có vận tốc tương đối bằng không đối với mặt tiếp xúc tại thời điểm xét.",
+      "reportedFormulaExpressions": [
+        "v_{\\mathrm{cm}}=R\\omega."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 10 (Dynamics of Rotational Motion)",
+        "section": "Sec 10.3 (Rolling Motion)",
+        "book_pages": "pp. 317-322",
+        "pdf_pages": "pp. 337-342"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "luc",
+      "file": "docs/wiki/luc.md",
+      "currentRawSHA256": "414ac982f88dbb5d107d9a8a0eef972d8703abc1f4f03f5b3bed595e8e8b8fc4",
+      "currentCanonicalSHA256": "fabdb7942cf4fc3ae66867ceea2516d3c66054338dadb6411ed165ebe20ddee7",
+      "actualTechnicalDefinition": "Lực là vector mô tả tương tác. Trong hệ quy chiếu quán tính và với khối lượng không đổi, hợp lực bằng khối lượng nhân gia tốc. Hợp lực bằng không cho vận tốc không đổi, có thể bằng không hoặc khác không.",
+      "reportedFormulaExpressions": [
+        "\\vec F_{\\mathrm{net}}=\\vec F_1+\\vec F_2.",
+        "\\vec F_{\\mathrm{net}}=m\\vec a.",
+        "\\vec F_{B\\to A}=-\\vec F_{A\\to B}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 4 (Newton's Laws of Motion)",
+        "section": "Sec 4.1-4.6",
+        "book_pages": "pp. 102-125",
+        "pdf_pages": "pp. 122-145"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "modun-khoi",
+      "file": "docs/wiki/modun-khoi.md",
+      "currentRawSHA256": "b8972e9b94f92abc2664bc0a408d4f64317ed584782011a5d83a5b288a3b1fe1",
+      "currentCanonicalSHA256": "551a8c444f49c38e3099037324ccdab85dcf617bf47bfeb3a466d8abecedd00f",
+      "actualTechnicalDefinition": "Đại lượng đặc trưng sức chống lại biến đổi thể tích dưới tác dụng áp suất đều từ mọi hướng.",
+      "reportedFormulaExpressions": [
+        "B=-\\frac{\\Delta p}{\\Delta V/V_0}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 11 (Equilibrium and Elasticity)",
+        "section": "Sec 11.4 (Bulk Modulus)",
+        "book_pages": "pp. 355-357",
+        "pdf_pages": "pp. 375-377"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "modun-truot",
+      "file": "docs/wiki/modun-truot.md",
+      "currentRawSHA256": "acccc7370af403492d76cd6db027021c10686261908667a9984d9b55bd7bcf30",
+      "currentCanonicalSHA256": "6b8db4327582fdef6c1e2a22cda9752c60815031c273c0a88928b31841b024f4",
+      "actualTechnicalDefinition": "Tỉ số ứng suất tiếp tuyến với biến dạng trượt trong miền đàn hồi tuyến tính.",
+      "reportedFormulaExpressions": [
+        "S=\\frac{F_\\parallel/A}{x/h}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 11 (Equilibrium and Elasticity)",
+        "section": "Sec 11.4 (Shear Modulus)",
+        "book_pages": "pp. 354-355",
+        "pdf_pages": "pp. 374-375"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "modun-young",
+      "file": "docs/wiki/modun-young.md",
+      "currentRawSHA256": "66c731a00789472b8160411f0bf944f9fdf4d6a90e0b96618a9b998dc90c3b78",
+      "currentCanonicalSHA256": "b623dab723458b6a7201c87c8ecd8e527fab86e4bd4e4b491c601621de7ae8e5",
+      "actualTechnicalDefinition": "Tỉ số ứng suất pháp với biến dạng dài trong miền đàn hồi tuyến tính của vật liệu.",
+      "reportedFormulaExpressions": [
+        "Y=\\sigma/\\varepsilon."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 11 (Equilibrium and Elasticity)",
+        "section": "Sec 11.4 (Tensile and Compressive Stress and Strain)",
+        "book_pages": "pp. 352-354",
+        "pdf_pages": "pp. 372-374"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "momen-dong-luong",
+      "file": "docs/wiki/momen-dong-luong.md",
+      "currentRawSHA256": "e69474fbc167d2be8b033133c2c0c5c9a374a43e2e2b3735769a7b84dd5eb619",
+      "currentCanonicalSHA256": "e69474fbc167d2be8b033133c2c0c5c9a374a43e2e2b3735769a7b84dd5eb619",
+      "actualTechnicalDefinition": "Mômen động lượng của một hạt đối với gốc đã chọn là $\\vec L=\\vec r\\times\\vec p$. Vector vị trí $\\vec r$ tính từ gốc đến hạt, còn $\\vec p$ là động lượng. Đại lượng này phụ thuộc gốc chọn và có đơn vị $\\mathrm{kg\\,m^2/s}$.",
+      "reportedFormulaExpressions": [
+        "\\vec L=\\vec r\\times\\vec p.",
+        "\\begin{aligned}\n\\vec L_{\\mathrm{tot}} &= \\vec L_1+\\vec L_2+\\cdots+\\vec L_n, \\\\\n\\vec L_i &= \\vec r_i\\times\\vec p_i.\n\\end{aligned}",
+        "\\vec\\tau_{\\mathrm{ext}}=\\frac{d\\vec L_{\\mathrm{tot}}}{dt}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 10 (Dynamics of Rotational Motion)",
+        "section": "Sec 10.5-10.6 (Angular Momentum / Conservation of Angular Momentum)",
+        "book_pages": "pp. 324-330",
+        "pdf_pages": "pp. 344-350"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "momen-luc",
+      "file": "docs/wiki/momen-luc.md",
+      "currentRawSHA256": "8e556b62f0dd0a2ae6e0d3ca9622cc822e4b207c575b33ab389e71ae61447c67",
+      "currentCanonicalSHA256": "8e556b62f0dd0a2ae6e0d3ca9622cc822e4b207c575b33ab389e71ae61447c67",
+      "actualTechnicalDefinition": "Mômen của lực đối với gốc O là $\\boldsymbol\\tau=\\mathbf r\\times\\mathbf F$. Nó mô tả tác dụng làm quay và phụ thuộc cả lực lẫn vị trí đường tác dụng đối với gốc.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 10 & 11 (Dynamics of Rotational Motion / Equilibrium)",
+        "section": "Sec 10.1 & Sec 11.1",
+        "book_pages": "pp. 308-312, 342-344",
+        "pdf_pages": "pp. 328-332, 362-364"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "momen-quan-tinh",
+      "file": "docs/wiki/momen-quan-tinh.md",
+      "currentRawSHA256": "e67c940789776d869acb1bbba125d061adf5451aaded42da022d8ee7c930ee2f",
+      "currentCanonicalSHA256": "e67c940789776d869acb1bbba125d061adf5451aaded42da022d8ee7c930ee2f",
+      "actualTechnicalDefinition": "Mômen quán tính đối với một trục là $I=\\int r^2dm$, với r là khoảng cách vuông góc tới trục. Nó đo mức quán tính quay và phụ thuộc phân bố khối lượng.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 9 (Rotation of Rigid Bodies)",
+        "section": "Sec 9.4-9.5 (Energy in Rotational Motion / Parallel-Axis Theorem)",
+        "book_pages": "pp. 291-299",
+        "pdf_pages": "pp. 311-319"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "nguyen-ly-khong-nhiet-dong",
+      "file": "docs/wiki/nguyen-ly-khong-nhiet-dong.md",
+      "currentRawSHA256": "8a18c68e2b1f49c15abffa31219ccd4c07bd1448e1918e5e8f6f14aed7aa878b",
+      "currentCanonicalSHA256": "da8e9c4fc24708fc72a6048434e6261ad12fab1347c8c6e61cfd02e09ac39b07",
+      "actualTechnicalDefinition": "Nếu hai hệ cùng cân bằng nhiệt với hệ thứ ba thì chúng cân bằng nhiệt với nhau.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.1 (The Zeroth Law of Thermodynamics)",
+        "book_pages": "pp. 544-546",
+        "pdf_pages": "pp. 564-566"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "nhiet-an-chuyen-pha",
+      "file": "docs/wiki/nhiet-an-chuyen-pha.md",
+      "currentRawSHA256": "83c4137bca336d8250fb99f3840e9f2deffd8fa567c43e7165b25710e73b74ca",
+      "currentCanonicalSHA256": "90501fef6696fbfe4244aa3764570bd188e86ea1c0537394a68d9b05ac6e841a",
+      "actualTechnicalDefinition": "Năng lượng trao đổi trên một đơn vị khối lượng trong một chuyển pha xác định ở những điều kiện xác định.",
+      "reportedFormulaExpressions": [
+        "|Q|=mL."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.6 (Phase Changes)",
+        "book_pages": "pp. 556-560",
+        "pdf_pages": "pp. 576-580"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "nhiet-do-tuyet-doi",
+      "file": "docs/wiki/nhiet-do-tuyet-doi.md",
+      "currentRawSHA256": "d78fabcb53331dd70a4857284b9116f1679389ab5fb7812a8f41c9c179979df8",
+      "currentCanonicalSHA256": "d78fabcb53331dd70a4857284b9116f1679389ab5fb7812a8f41c9c179979df8",
+      "actualTechnicalDefinition": "Nhiệt độ tuyệt đối T dùng thang kelvin. Tỷ số nhiệt độ trong phương trình khí và giới hạn Carnot phải dùng thang này, với $T(\\mathrm K)=t(^\\circ\\mathrm C)+273.15$.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.2-17.3 (Thermometers and the Kelvin Scale)",
+        "book_pages": "pp. 546-550",
+        "pdf_pages": "pp. 566-570"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "nhiet-dung-rieng",
+      "file": "docs/wiki/nhiet-dung-rieng.md",
+      "currentRawSHA256": "f6a67b77ca213267641b709e35ed4b8215028fcd708b5cdd3a6d9d6e6735cd31",
+      "currentCanonicalSHA256": "481399a6ea7d7b316ef7805f5ee7dcb02c7d51c461768b84a57de1dd18815688",
+      "actualTechnicalDefinition": "Đại lượng liên hệ lượng nhiệt trao đổi với biến thiên nhiệt độ trên một đơn vị khối lượng, trong một quá trình và miền điều kiện xác định.",
+      "reportedFormulaExpressions": [
+        "Q=mc\\Delta T."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.5 (Quantity of Heat / Specific Heat)",
+        "book_pages": "pp. 552-556",
+        "pdf_pages": "pp. 572-576"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "nhiet-luong",
+      "file": "docs/wiki/nhiet-luong.md",
+      "currentRawSHA256": "1eb8a740e074cd871e5da435beb2cbb3761b8bfc8a39f4f409a0bb8dde15bba3",
+      "currentCanonicalSHA256": "d57fa51171a94eecb1dcdf75863d34ddc79e72dd971ca5ac0419893bbe54a245",
+      "actualTechnicalDefinition": "Năng lượng truyền qua ranh giới hệ do chênh lệch nhiệt độ. Nhiệt lượng gắn với một quá trình trao đổi, không phải một đại lượng mà vật chứa sẵn.",
+      "reportedFormulaExpressions": [
+        "\\Delta U=Q-W."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.5 (Quantity of Heat)",
+        "book_pages": "pp. 552-554",
+        "pdf_pages": "pp. 572-574"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "nhiet-tro",
+      "file": "docs/wiki/nhiet-tro.md",
+      "currentRawSHA256": "d78f2d65aecf0dc40ca3a80c7fb623eba1e51e2cbea488bf5c3f28e52282caa8",
+      "currentCanonicalSHA256": "50e0deec97412c1ec5c235008482f1d567ec91efb69291fb56bc6ccec6b783e4",
+      "actualTechnicalDefinition": "Tỉ số chênh lệch nhiệt độ với dòng nhiệt trong một mô hình truyền nhiệt tuyến tính ổn định.",
+      "reportedFormulaExpressions": [
+        "R_{\\mathrm{th}}=L/(kA)."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.7 (Mechanisms of Heat Transfer - Thermal Resistance / R-value)",
+        "book_pages": "pp. 562-563",
+        "pdf_pages": "pp. 582-583"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "su-no-vi-nhiet",
+      "file": "docs/wiki/su-no-vi-nhiet.md",
+      "currentRawSHA256": "08a5be6a47c2fb50082c76b0155360992e919924c9211e2becbd4f111ce8565c",
+      "currentCanonicalSHA256": "382b2dd3613dbdfe29b9244aec59af9aa9fcc9155d513d89eb183060a265f6e3",
+      "actualTechnicalDefinition": "Sự thay đổi kích thước hoặc thể tích khi nhiệt độ thay đổi, phụ thuộc chất, trạng thái và các điều kiện cơ học.",
+      "reportedFormulaExpressions": [
+        "\\Delta L=\\alpha L_0\\Delta T."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 17 (Temperature and Heat)",
+        "section": "Sec 17.4 (Thermal Expansion)",
+        "book_pages": "pp. 550-552",
+        "pdf_pages": "pp. 570-572"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "tich-phan",
+      "file": "docs/wiki/tich-phan.md",
+      "currentRawSHA256": "583f3fa14a1409010972048ebf606628e1dd71225c7a377bec17865526ab23ab",
+      "currentCanonicalSHA256": "583f3fa14a1409010972048ebf606628e1dd71225c7a377bec17865526ab23ab",
+      "actualTechnicalDefinition": "Tích phân xác định cộng dồn các đóng góp rất nhỏ trên một miền. Trong một biến, $\\int_a^b f(x)\\,dx$ là diện tích có dấu dưới đồ thị. Khi $f$ có nguyên hàm $F$ phù hợp, giá trị này bằng $F(b)-F(a)$. Tích phân đường và mặt mở rộng ý tưởng cộng dồn dọc đường hoặc trên mặt.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 6 & Appendix B (Work and Kinetic Energy / Calculus)",
+        "section": "Sec 6.2 & Appendix B",
+        "book_pages": "pp. 177-181, A-9",
+        "pdf_pages": "pp. 197-201, 1601"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "tich-vo-huong",
+      "file": "docs/wiki/tich-vo-huong.md",
+      "currentRawSHA256": "538bbce4fb8bb730fc7b19578edca71cddc3970bf17f5f52d57e07008df76064",
+      "currentCanonicalSHA256": "538bbce4fb8bb730fc7b19578edca71cddc3970bf17f5f52d57e07008df76064",
+      "actualTechnicalDefinition": "Tích vô hướng $u\\cdot v$ là tổng các tích thành phần tương ứng. Với vector Euclid, $u\\cdot v = \\|u\\|\\|v\\|\\cos \\theta$, liên hệ với góc giữa hai vector. Tích bằng 0 với hai vector khác 0 nghĩa là chúng vuông góc.",
+      "reportedFormulaExpressions": [
+        "(1,2)\\cdot(3,4) = 1\\cdot3 + 2\\cdot4 = 11."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 1 (Units, Physical Quantities, and Vectors)",
+        "section": "Sec 1.10 (Products of Vectors - Scalar Product)",
+        "book_pages": "pp. 20-23",
+        "pdf_pages": "pp. 40-43"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "toa-do-goc",
+      "file": "docs/wiki/toa-do-goc.md",
+      "currentRawSHA256": "09a500924312c866107453412a7bda43f179fb96366919463bbe40745573d5cb",
+      "currentCanonicalSHA256": "aea7e0344401f3854cdb7e2a69fb4557259b8171c83146b7c3b65910dd9099e8",
+      "actualTechnicalDefinition": "Góc xác định vị trí của một đường cố định trên vật rắn so với phương mốc quanh trục quay đã chọn. Độ dời góc là hiệu hai tọa độ góc.",
+      "reportedFormulaExpressions": [
+        "\\theta=s/r"
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 9 (Rotation of Rigid Bodies)",
+        "section": "Sec 9.1 (Angular Velocity and Acceleration)",
+        "book_pages": "pp. 286-288",
+        "pdf_pages": "pp. 306-308"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "trong-tam-vat-ran",
+      "file": "docs/wiki/trong-tam-vat-ran.md",
+      "currentRawSHA256": "b89b59b3ce72721aab837586134b1c4572589e6396b056c83f6ab657e2e6f019",
+      "currentCanonicalSHA256": "e92fe96c4013b095beec5e1411e5f6777da0dd285a60560ee55bb6769c594c7d",
+      "actualTechnicalDefinition": "Điểm đặt tương đương của hợp lực trọng trường khi có thể thay hệ trọng lực phân bố bằng một lực cùng tác dụng lực và mômen.",
+      "reportedFormulaExpressions": [],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 11 (Equilibrium and Elasticity)",
+        "section": "Sec 11.2 (Center of Gravity)",
+        "book_pages": "pp. 344-347",
+        "pdf_pages": "pp. 364-367"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "ung-suat",
+      "file": "docs/wiki/ung-suat.md",
+      "currentRawSHA256": "7f70bfa06fb1cb6f10430acf98581a8430192d82991dfbfbe2dc027cd6c3df4c",
+      "currentCanonicalSHA256": "20c7107f38bfd705d13c0ebdcd58370375d690738861b4918450dab2083bda78",
+      "actualTechnicalDefinition": "Đại lượng mô tả lực nội phân bố trên một đơn vị diện tích mặt cắt. Thành phần pháp tuyến gây kéo hoặc nén, thành phần tiếp tuyến gây trượt.",
+      "reportedFormulaExpressions": [
+        "\\sigma=F_\\perp/A."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 11 (Equilibrium and Elasticity)",
+        "section": "Sec 11.4 (Stress, Strain, and Elastic Moduli)",
+        "book_pages": "pp. 352-358",
+        "pdf_pages": "pp. 372-378"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "van-toc-goc",
+      "file": "docs/wiki/van-toc-goc.md",
+      "currentRawSHA256": "1ce96c49416ac17e7bf0fa81a7833370049da6dd871e235a9e3768652dac95de",
+      "currentCanonicalSHA256": "5ab01ca528cd899436687036e6da07d06bbdf147b05129ef48b6ed289bc0bfaa",
+      "actualTechnicalDefinition": "Tốc độ biến thiên tọa độ góc theo thời gian. Thành phần theo trục có dấu, còn tốc độ góc là độ lớn không âm.",
+      "reportedFormulaExpressions": [
+        "\\omega_z=d\\theta/dt.",
+        "v=r|\\omega_z|."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 9 (Rotation of Rigid Bodies)",
+        "section": "Sec 9.1-9.3",
+        "book_pages": "pp. 286-291",
+        "pdf_pages": "pp. 306-311"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    },
+    {
+      "id": "vector",
+      "file": "docs/wiki/vector.md",
+      "currentRawSHA256": "46154fa0719a0790b65c421cdb3729a0b8563376ab8f14eb13f70f25598938b8",
+      "currentCanonicalSHA256": "84351278b5d4b0697520af57d27e91741231db75056ccae206d98504b974c664",
+      "actualTechnicalDefinition": "Khi đã chọn cơ sở, một vector được biểu diễn bằng một bộ thành phần có thứ tự. Cộng hai vector cùng cơ sở bằng cách cộng các thành phần tương ứng. Nhân vector với một số bằng cách nhân từng thành phần với số ấy. Trong hình học và cơ học, vector có ý nghĩa về độ lớn và hướng.",
+      "reportedFormulaExpressions": [
+        "\\vec u+\\vec v=(u_x+v_x,\\,u_y+v_y).",
+        "\\|\\vec v\\|=\\sqrt{v_x^2+v_y^2}.",
+        "\\hat v=\\frac{\\vec v}{\\|\\vec v\\|}."
+      ],
+      "sourceSection": {
+        "textbook": "Young & Freedman, University Physics with Modern Physics, 15th Edition",
+        "chapter": "Chapter 1 (Units, Physical Quantities, and Vectors)",
+        "section": "Sec 1.7-1.9",
+        "book_pages": "pp. 11-20",
+        "pdf_pages": "pp. 31-40"
+      },
+      "sourceBodyMatchedOrBibliographyOnlyDelta": true
+    }
+  ],
+  "reportAnnotationCorrections": [
+    {
+      "id": "trong-tam-vat-ran",
+      "rawReportProblem": "Domain note says coincidence ifandonlyifuniformgravity.",
+      "parentDisposition": "Reject necessity. ActualWiki correctly gives uniformfield as sufficient and says nonuniformcase must be examined separately; threepositivepointmasses in nonuniformsymmetricgravity provide counterexample. AuthoredWiki unchanged."
+    },
+    {
+      "id": "nhiet-tro",
+      "rawReportProblem": "One domainnote dropsarea andwritesR=L/k.",
+      "parentDisposition": "PublishedWiki explicitly usesRth=L/(kA). Accept actualK/Wresistance, distinguish arealRvalue L/k. Do notcopy incorrectreportshorthand."
+    },
+    {
+      "id": "bien-dang-tuong-doi",
+      "rawReportProblem": "Domainnote restricts straindefinition tolinearelasticity.",
+      "parentDisposition": "ActualWiki defines geometricratio generally and restricts onlylinearstressrelation to smallstrain. No authoredscientificcorrection needed."
+    },
+    {
+      "id": "lan-khong-truot",
+      "rawReportProblem": "Domainnote saysstaticfriction neverdoeswork withoutfixedsurfacemodel qualifier.",
+      "parentDisposition": "ActualWiki explicitly qualifiesidealcontact withstationarysupport. Preserve that condition; no broad claim adopted."
+    }
+  ],
+  "pythonChecks": [
+    "Published angularmomentum example",
+    "Published dotproduct example",
+    "Published perpendicularvector example",
+    "Published acceleration example",
+    "Published millicoulomb example",
+    "Published microcoulomb example",
+    "Published microcoulomb selfcheck",
+    "Strain is dimensionless andsignedcompressionnegative",
+    "Geometric strain definition doesnotrequirelinearelasticity",
+    "Thermalresistance includesarea",
+    "Same temperature radiationnetzero withnonzeroemission",
+    "Parallelaxis theorem rodexample",
+    "Uniformgravity sufficient butnotnecessary forCoGequalsCoM",
+    "Zero contactvelocity zero idealfixedsurfacefrictionpower",
+    "Translational speed linked angularspeed magnitude",
+    "Magnitude ofangularspeed grows whenomega andalpha bothnegative",
+    "Variableheat capacity integral reducesconstantlaw"
+  ],
+  "pythonCheckCount": 17,
+  "parentReading": "Parent read all actualtechnicalbodies/examples/selfchecks across this38concept set, reused alreadyread exact6shared bodies and4motionprerequisites. Metadata trueflags not accepted alone. Rawsourcepage mappings inAGY report are locators; no unsupportedexactpagecitation newlyadded to authoredpages.",
+  "bibliographyOnlyChanges": {
+    "status": "accepted-bibliography-only-changes",
+    "files": [
+      {
+        "file": "docs/wiki/don-vi.md",
+        "beforeSHA256": "d01b7768a81017546fe23bbd79fc579a095be474ed83bb5d789222e0ff534ba1",
+        "beforeCanonicalSHA256": "e7c1d773a7f57798f992b3c53a38fc832c21fc27afeee8a54d477ecfddce78ce",
+        "afterSHA256": "235c0dcbb9b3bc39534d21051f9c5261cc389bef097359aa84352b087d6333fa",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/tich-vo-huong.md",
+        "beforeSHA256": "802c8e65c152de957d9801c11d9e0e75ea5288c3dc764e3d903d33dae044e81c",
+        "beforeCanonicalSHA256": "b88472280efd9125e5e39d31851f12a49a94a7e00b3f433fdae96332bf1cf689",
+        "afterSHA256": "538bbce4fb8bb730fc7b19578edca71cddc3970bf17f5f52d57e07008df76064",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/momen-luc.md",
+        "beforeSHA256": "91c0e770d8438d50c008995198006f1fecd14777c07cd6a33608186cc277ef55",
+        "beforeCanonicalSHA256": "7ec1b5e02c0da0d9d7600953ab59025f48aa31fa4e87671a9b159bfb70ba5903",
+        "afterSHA256": "8e556b62f0dd0a2ae6e0d3ca9622cc822e4b207c575b33ab389e71ae61447c67",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/momen-quan-tinh.md",
+        "beforeSHA256": "c4b7737731646a2d9f123b263e81c6280ef037bf60b6e1889b3e83caeb4d3c91",
+        "beforeCanonicalSHA256": "d123fc565be0196d9a6b3042b11fa450fffb1d0be365955ac020574f40305149",
+        "afterSHA256": "e67c940789776d869acb1bbba125d061adf5451aaded42da022d8ee7c930ee2f",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/can-bang-co-hoc.md",
+        "beforeSHA256": "d909d7e181777d22e65afab530f73da083de57c60198eb64cf515b6a063839c4",
+        "beforeCanonicalSHA256": "3e767b2f721ac57c782687565322741e6ce0009f8b2fc46df4408c889031d889",
+        "afterSHA256": "57e87125792262c0441a807bbfadee14117e5dfd4a3a4fe2abe94350044d2f8b",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/momen-dong-luong.md",
+        "beforeSHA256": "a0d4050dba4629a22a3e90ff49e7be16f6211825c65b00900398843172eed628",
+        "beforeCanonicalSHA256": "f22f57e9ae75b4fa3d32b1e27ceb9486b9407a390c1aab39232fc20645ea9607",
+        "afterSHA256": "e69474fbc167d2be8b033133c2c0c5c9a374a43e2e2b3735769a7b84dd5eb619",
+        "technicalBodyAndMathUnchanged": true
+      }
+    ],
+    "technicalContentChanged": false
+  },
+  "limits": "Only these38Wiki bodies and scoped listed source relationships accepted, not all Wiki or all44chapters. No researchworkflow, no newcoursecontent beyond bibliography placement.",
+  "privateEvidenceRevision": "6d750680d00d80d0b95b1d894000ba6ff2d342ba",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/wiki-body-and-remaining-image-evidence-20261101.tar.gz",
+  "privateEvidenceArchiveSHA256": "63c323d2489a64b68489fe5b42372758212955e19e00adaccdf6c8775d893e63",
+  "wholeGoalComplete": false,
+  "postReadingCorrections": [
+    {
+      "file": "docs/wiki/momen-quan-tinh.md",
+      "reason": "Actualpublic320px SVG290.09px exceeded280px contentbox. Move expanded-to-indexedsum inline chain todisplayaligned, breakonlyatequality, allterms/indexlimitsunchanged.",
+      "formulaEquivalencePython": {
+        "masses": [
+          2,
+          3,
+          4
+        ],
+        "radii": [
+          0.2,
+          0.5,
+          1
+        ],
+        "expandedAndDotProduct": 4.83
+      },
+      "afterSHA256": "bb5a39d95c7b685e0152f084e8ce112d60beaec93927e29a33d422aecdbd2ac3"
+    },
+    {
+      "file": "docs/wiki/modun-young.md",
+      "reason": "Clarify common tensilepositive/compressivenegative convention; whenusingmagnitudes bothstress/strain mustbemagnitudes. No equationchange.",
+      "pythonCheck": {
+        "sigma": -10000000.0,
+        "strain": -5e-05,
+        "ratio": 200000000000.0,
+        "magnitudeRatio": 200000000000.0
+      },
+      "afterSHA256": "989d0fdb04c91e8c2f36f5d35ad2c980433c891995ba57a3fb45aa3a5160c136"
+    }
+  ],
+  "bibliographyChanges": {
+    "status": "accepted-bibliography-only-changes",
+    "files": [
+      {
+        "file": "docs/wiki/don-vi.md",
+        "beforeSHA256": "d01b7768a81017546fe23bbd79fc579a095be474ed83bb5d789222e0ff534ba1",
+        "beforeCanonicalSHA256": "e7c1d773a7f57798f992b3c53a38fc832c21fc27afeee8a54d477ecfddce78ce",
+        "afterSHA256": "235c0dcbb9b3bc39534d21051f9c5261cc389bef097359aa84352b087d6333fa",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/tich-vo-huong.md",
+        "beforeSHA256": "802c8e65c152de957d9801c11d9e0e75ea5288c3dc764e3d903d33dae044e81c",
+        "beforeCanonicalSHA256": "b88472280efd9125e5e39d31851f12a49a94a7e00b3f433fdae96332bf1cf689",
+        "afterSHA256": "538bbce4fb8bb730fc7b19578edca71cddc3970bf17f5f52d57e07008df76064",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/momen-luc.md",
+        "beforeSHA256": "91c0e770d8438d50c008995198006f1fecd14777c07cd6a33608186cc277ef55",
+        "beforeCanonicalSHA256": "7ec1b5e02c0da0d9d7600953ab59025f48aa31fa4e87671a9b159bfb70ba5903",
+        "afterSHA256": "8e556b62f0dd0a2ae6e0d3ca9622cc822e4b207c575b33ab389e71ae61447c67",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/momen-quan-tinh.md",
+        "beforeSHA256": "c4b7737731646a2d9f123b263e81c6280ef037bf60b6e1889b3e83caeb4d3c91",
+        "beforeCanonicalSHA256": "d123fc565be0196d9a6b3042b11fa450fffb1d0be365955ac020574f40305149",
+        "afterSHA256": "e67c940789776d869acb1bbba125d061adf5451aaded42da022d8ee7c930ee2f",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/can-bang-co-hoc.md",
+        "beforeSHA256": "d909d7e181777d22e65afab530f73da083de57c60198eb64cf515b6a063839c4",
+        "beforeCanonicalSHA256": "3e767b2f721ac57c782687565322741e6ce0009f8b2fc46df4408c889031d889",
+        "afterSHA256": "57e87125792262c0441a807bbfadee14117e5dfd4a3a4fe2abe94350044d2f8b",
+        "technicalBodyAndMathUnchanged": true
+      },
+      {
+        "file": "docs/wiki/momen-dong-luong.md",
+        "beforeSHA256": "a0d4050dba4629a22a3e90ff49e7be16f6211825c65b00900398843172eed628",
+        "beforeCanonicalSHA256": "f22f57e9ae75b4fa3d32b1e27ceb9486b9407a390c1aab39232fc20645ea9607",
+        "afterSHA256": "e69474fbc167d2be8b033133c2c0c5c9a374a43e2e2b3735769a7b84dd5eb619",
+        "technicalBodyAndMathUnchanged": true
+      }
+    ],
+    "technicalContentChanged": false
+  },
+  "currentFocusedRender": {
+    "status": "passed-scoped-render",
+    "scope": "Seven current changed motion/rotation Wiki pages with production Markdown/math rules and actual public Wiki CSS/layout. Glossary autolinks and WikiUsage component omitted from injected markup; full cloud integration and exact deployed acceptance separate.",
+    "files": [
+      {
+        "file": "docs/wiki/momen-quan-tinh.md",
+        "sha256": "bb5a39d95c7b685e0152f084e8ce112d60beaec93927e29a33d422aecdbd2ac3"
+      },
+      {
+        "file": "docs/wiki/modun-young.md",
+        "sha256": "989d0fdb04c91e8c2f36f5d35ad2c980433c891995ba57a3fb45aa3a5160c136"
+      },
+      {
+        "file": "docs/wiki/don-vi.md",
+        "sha256": "235c0dcbb9b3bc39534d21051f9c5261cc389bef097359aa84352b087d6333fa"
+      },
+      {
+        "file": "docs/wiki/tich-vo-huong.md",
+        "sha256": "538bbce4fb8bb730fc7b19578edca71cddc3970bf17f5f52d57e07008df76064"
+      },
+      {
+        "file": "docs/wiki/momen-luc.md",
+        "sha256": "8e556b62f0dd0a2ae6e0d3ca9622cc822e4b207c575b33ab389e71ae61447c67"
+      },
+      {
+        "file": "docs/wiki/can-bang-co-hoc.md",
+        "sha256": "57e87125792262c0441a807bbfadee14117e5dfd4a3a4fe2abe94350044d2f8b"
+      },
+      {
+        "file": "docs/wiki/momen-dong-luong.md",
+        "sha256": "e69474fbc167d2be8b033133c2c0c5c9a374a43e2e2b3735769a7b84dd5eb619"
+      }
+    ],
+    "cases": [
+      {
+        "id": "momen-quan-tinh",
+        "width": 320,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 360,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 375,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 768,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 1440,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "modun-young",
+        "width": 320,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "modun-young",
+        "width": 360,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "modun-young",
+        "width": 375,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "modun-young",
+        "width": 768,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "modun-young",
+        "width": 1440,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "don-vi",
+        "width": 320,
+        "formulas": 10,
+        "issues": []
+      },
+      {
+        "id": "don-vi",
+        "width": 360,
+        "formulas": 10,
+        "issues": []
+      },
+      {
+        "id": "don-vi",
+        "width": 375,
+        "formulas": 10,
+        "issues": []
+      },
+      {
+        "id": "don-vi",
+        "width": 768,
+        "formulas": 10,
+        "issues": []
+      },
+      {
+        "id": "don-vi",
+        "width": 1440,
+        "formulas": 10,
+        "issues": []
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 320,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 360,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 375,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 768,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 1440,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "momen-luc",
+        "width": 320,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "momen-luc",
+        "width": 360,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "momen-luc",
+        "width": 375,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "momen-luc",
+        "width": 768,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "momen-luc",
+        "width": 1440,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 320,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 360,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 375,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 768,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 1440,
+        "formulas": 1,
+        "issues": []
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 320,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 360,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 375,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 768,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 1440,
+        "formulas": 11,
+        "issues": []
+      }
+    ]
+  },
+  "actualPublicBaseline": {
+    "status": "findings",
+    "scope": "Actual public technical Wiki bodies/math at5widths, all details open and content retained. Reference-placement changes require separate newest-version check; unchanged technicalbody layout only. No injection or localbuild.",
+    "pages": [
+      {
+        "id": "ban-kinh-quan-tinh",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/ban-kinh-quan-tinh.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "bien-dang-tuong-doi",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/bien-dang-tuong-doi.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "buc-xa-nhiet",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/buc-xa-nhiet.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/can-bang-co-hoc.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "can-bang-nhiet",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/can-bang-nhiet.html",
+        "formulas": 0,
+        "errors": []
+      },
+      {
+        "id": "con-quay-tien-dong",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/con-quay-tien-dong.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "cong-nang-luong",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/cong-nang-luong.html",
+        "formulas": 16,
+        "errors": []
+      },
+      {
+        "id": "dan-nhiet",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/dan-nhiet.html",
+        "formulas": 2,
+        "errors": []
+      },
+      {
+        "id": "dao-ham",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/dao-ham.html",
+        "formulas": 12,
+        "errors": []
+      },
+      {
+        "id": "dinh-ly-truc-song-song",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/dinh-ly-truc-song-song.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "doi-luu-nhiet",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/doi-luu-nhiet.html",
+        "formulas": 0,
+        "errors": []
+      },
+      {
+        "id": "don-vi",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/don-vi.html",
+        "formulas": 10,
+        "errors": []
+      },
+      {
+        "id": "dong-luong-vat-ly",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/dong-luong-vat-ly.html",
+        "formulas": 16,
+        "errors": []
+      },
+      {
+        "id": "gia-toc",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/gia-toc.html",
+        "formulas": 12,
+        "errors": []
+      },
+      {
+        "id": "gia-toc-goc",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/gia-toc-goc.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "gioi-han-dan-hoi",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/gioi-han-dan-hoi.html",
+        "formulas": 0,
+        "errors": []
+      },
+      {
+        "id": "lan-khong-truot",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/lan-khong-truot.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "luc",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/luc.html",
+        "formulas": 9,
+        "errors": []
+      },
+      {
+        "id": "modun-khoi",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/modun-khoi.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "modun-truot",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/modun-truot.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "modun-young",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/modun-young.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "momen-dong-luong",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/momen-dong-luong.html",
+        "formulas": 11,
+        "errors": []
+      },
+      {
+        "id": "momen-luc",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/momen-luc.html",
+        "formulas": 4,
+        "errors": []
+      },
+      {
+        "id": "momen-quan-tinh",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/momen-quan-tinh.html",
+        "formulas": 7,
+        "errors": []
+      },
+      {
+        "id": "nguyen-ly-khong-nhiet-dong",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/nguyen-ly-khong-nhiet-dong.html",
+        "formulas": 0,
+        "errors": []
+      },
+      {
+        "id": "nhiet-an-chuyen-pha",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/nhiet-an-chuyen-pha.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "nhiet-do-tuyet-doi",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/nhiet-do-tuyet-doi.html",
+        "formulas": 2,
+        "errors": []
+      },
+      {
+        "id": "nhiet-dung-rieng",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/nhiet-dung-rieng.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "nhiet-luong",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/nhiet-luong.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "nhiet-tro",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/nhiet-tro.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "su-no-vi-nhiet",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/su-no-vi-nhiet.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "tich-phan",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/tich-phan.html",
+        "formulas": 7,
+        "errors": []
+      },
+      {
+        "id": "tich-vo-huong",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/tich-vo-huong.html",
+        "formulas": 4,
+        "errors": []
+      },
+      {
+        "id": "toa-do-goc",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/toa-do-goc.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "trong-tam-vat-ran",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/trong-tam-vat-ran.html",
+        "formulas": 0,
+        "errors": []
+      },
+      {
+        "id": "ung-suat",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/ung-suat.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "van-toc-goc",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/van-toc-goc.html",
+        "formulas": 2,
+        "errors": []
+      },
+      {
+        "id": "vector",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/vector.html",
+        "formulas": 9,
+        "errors": []
+      }
+    ],
+    "cases": [
+      {
+        "id": "ban-kinh-quan-tinh",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ban-kinh-quan-tinh",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ban-kinh-quan-tinh",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ban-kinh-quan-tinh",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ban-kinh-quan-tinh",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "bien-dang-tuong-doi",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "bien-dang-tuong-doi",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "bien-dang-tuong-doi",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "bien-dang-tuong-doi",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "bien-dang-tuong-doi",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "buc-xa-nhiet",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "buc-xa-nhiet",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "buc-xa-nhiet",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "buc-xa-nhiet",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "buc-xa-nhiet",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "can-bang-co-hoc",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "can-bang-nhiet",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "can-bang-nhiet",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "can-bang-nhiet",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "can-bang-nhiet",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "can-bang-nhiet",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "con-quay-tien-dong",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "con-quay-tien-dong",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "con-quay-tien-dong",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "con-quay-tien-dong",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "con-quay-tien-dong",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "cong-nang-luong",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "cong-nang-luong",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "cong-nang-luong",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "cong-nang-luong",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "cong-nang-luong",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "dan-nhiet",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "dan-nhiet",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "dan-nhiet",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "dan-nhiet",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "dan-nhiet",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "dao-ham",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "dao-ham",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "dao-ham",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "dao-ham",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "dao-ham",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "dinh-ly-truc-song-song",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "dinh-ly-truc-song-song",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "dinh-ly-truc-song-song",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "dinh-ly-truc-song-song",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "dinh-ly-truc-song-song",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "doi-luu-nhiet",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "doi-luu-nhiet",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "doi-luu-nhiet",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "doi-luu-nhiet",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "doi-luu-nhiet",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "don-vi",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 10
+      },
+      {
+        "id": "don-vi",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 10
+      },
+      {
+        "id": "don-vi",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 10
+      },
+      {
+        "id": "don-vi",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 10
+      },
+      {
+        "id": "don-vi",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 10
+      },
+      {
+        "id": "dong-luong-vat-ly",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "dong-luong-vat-ly",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "dong-luong-vat-ly",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "dong-luong-vat-ly",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "dong-luong-vat-ly",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 16
+      },
+      {
+        "id": "gia-toc",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "gia-toc",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "gia-toc",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "gia-toc",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "gia-toc",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 12
+      },
+      {
+        "id": "gia-toc-goc",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "gia-toc-goc",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "gia-toc-goc",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "gia-toc-goc",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "gia-toc-goc",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "gioi-han-dan-hoi",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "gioi-han-dan-hoi",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "gioi-han-dan-hoi",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "gioi-han-dan-hoi",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "gioi-han-dan-hoi",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "lan-khong-truot",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "lan-khong-truot",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "lan-khong-truot",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "lan-khong-truot",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "lan-khong-truot",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "luc",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "luc",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "luc",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "luc",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "luc",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "modun-khoi",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-khoi",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-khoi",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-khoi",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-khoi",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-truot",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-truot",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-truot",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-truot",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-truot",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-young",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-young",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-young",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-young",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "modun-young",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 11
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 11
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 11
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 11
+      },
+      {
+        "id": "momen-dong-luong",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 11
+      },
+      {
+        "id": "momen-luc",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "momen-luc",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "momen-luc",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "momen-luc",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "momen-luc",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 320,
+        "issues": [
+          {
+            "kind": "math-overflow",
+            "width": 290.09375,
+            "available": 280,
+            "left": 20,
+            "right": 310.09375,
+            "math": "I=m1r12+⋯+mnrn2=∑i=1nmiri2"
+          }
+        ],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "momen-quan-tinh",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "nguyen-ly-khong-nhiet-dong",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "nguyen-ly-khong-nhiet-dong",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "nguyen-ly-khong-nhiet-dong",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "nguyen-ly-khong-nhiet-dong",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "nguyen-ly-khong-nhiet-dong",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "nhiet-an-chuyen-pha",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-an-chuyen-pha",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-an-chuyen-pha",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-an-chuyen-pha",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-an-chuyen-pha",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-do-tuyet-doi",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "nhiet-do-tuyet-doi",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "nhiet-do-tuyet-doi",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "nhiet-do-tuyet-doi",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "nhiet-do-tuyet-doi",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "nhiet-dung-rieng",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-dung-rieng",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-dung-rieng",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-dung-rieng",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-dung-rieng",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-luong",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-luong",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-luong",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-luong",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-luong",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-tro",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-tro",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-tro",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-tro",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nhiet-tro",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "su-no-vi-nhiet",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "su-no-vi-nhiet",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "su-no-vi-nhiet",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "su-no-vi-nhiet",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "su-no-vi-nhiet",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "tich-phan",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "tich-phan",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "tich-phan",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "tich-phan",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "tich-phan",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 7
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "tich-vo-huong",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 4
+      },
+      {
+        "id": "toa-do-goc",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "toa-do-goc",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "toa-do-goc",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "toa-do-goc",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "toa-do-goc",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "trong-tam-vat-ran",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "trong-tam-vat-ran",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "trong-tam-vat-ran",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "trong-tam-vat-ran",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "trong-tam-vat-ran",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "ung-suat",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ung-suat",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ung-suat",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ung-suat",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "ung-suat",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "van-toc-goc",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "van-toc-goc",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "van-toc-goc",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "van-toc-goc",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "van-toc-goc",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 2
+      },
+      {
+        "id": "vector",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "vector",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "vector",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "vector",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 9
+      },
+      {
+        "id": "vector",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 9
+      }
+    ]
+  },
+  "localGlobalMathAttempt": {
+    "command": "npm run verify:math",
+    "passed": false,
+    "testsPassed": 12,
+    "testsFailed": 3,
+    "reason": "Partialcheckout missing privatecourse bieu-dien-tri-thuc/course.mjs and physics1-sound-foundations.mjs. FullyassembledGitHub checks required. Not a globalPASS.",
+    "narrowWidthProbe": "25exdisplay threshold flags existing26.113ex angularmomentum and31.177exdotproduct formulas; actual5viewport render confirms bothfit. Do notbreak shortfit equations merelytopass narrowerprobe."
+  },
+  "remaining": "ExactnewWiki revision cloudglobalmath/deploy/publiccheck; remainingchapter11fullframe/10and20caption evidence; otherP2gates andfinalreport/cleanup."
+}

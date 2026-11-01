@@ -1,0 +1,928 @@
+{
+  "status": "passed-exact-deployed-image-and-caption-scope",
+  "scope": "Actual deployed exact34repairedPNG bytes and7updatedlabelregistry keys, fullimage aspect/no cropping andcaption/label geometry at5widths. No injection, no localbuild and no source theorem/endanswer reacceptance.",
+  "privateP2": "d805e1a00ba74fa210d5ab4802330481e497e99d",
+  "sourcePublicRevision": "c3b726b7bc80dbf0b0b10f66386d286e2a959227",
+  "pages": [
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#notes",
+      "targetFigures": 8
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#bai-tap",
+      "targetFigures": 8
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-dien-thong.html",
+      "targetFigures": 2
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/tinh-dien-thong.html",
+      "targetFigures": 5
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "targetFigures": 5
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/ung-dung-gauss.html",
+      "targetFigures": 1
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-vat-dan.html",
+      "targetFigures": 2
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#notes",
+      "targetFigures": 9
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#bai-tap",
+      "targetFigures": 9
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/the-nang-dien.html",
+      "targetFigures": 3
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/dien-the.html",
+      "targetFigures": 4
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/tinh-dien-the.html",
+      "targetFigures": 2
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/mat-dang-the.html",
+      "targetFigures": 2
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/gradient-dien-the.html",
+      "targetFigures": 0
+    }
+  ],
+  "images": [
+    {
+      "image": "tom-tat-gauss",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/tom-tat-gauss.DgtoM5W1.png",
+      "embeddedPNG": false,
+      "actualSHA256": "4da736f11e70937d60138ded6b82f7977d032e4b230cb1b3108464b3fed0a59a",
+      "expectedSHA256": "4da736f11e70937d60138ded6b82f7977d032e4b230cb1b3108464b3fed0a59a",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-15",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-15.k7WKpDyS.png",
+      "embeddedPNG": false,
+      "actualSHA256": "e6dff2918d1cf3d824920fdd0d4f657318904555dc64e7e8bbd158c1d990710e",
+      "expectedSHA256": "e6dff2918d1cf3d824920fdd0d4f657318904555dc64e7e8bbd158c1d990710e",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-26",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-26.ctRk3Iuk.png",
+      "embeddedPNG": false,
+      "actualSHA256": "b2c38e114d3aca196d0bc455a7fe78691e829f446fa52814fa6fd002de05cc66",
+      "expectedSHA256": "b2c38e114d3aca196d0bc455a7fe78691e829f446fa52814fa6fd002de05cc66",
+      "matches": true
+    },
+    {
+      "image": "hinh-e22-2",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-e22-2.DaMZb2Q5.png",
+      "embeddedPNG": false,
+      "actualSHA256": "4946af1e143608356b28e35ace1b7132aef01432a452fee4bbafa45392174f70",
+      "expectedSHA256": "4946af1e143608356b28e35ace1b7132aef01432a452fee4bbafa45392174f70",
+      "matches": true
+    },
+    {
+      "image": "hinh-e22-6",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-e22-6.BHRqL0cq.png",
+      "embeddedPNG": false,
+      "actualSHA256": "b6d733e4a9f61ce4ebe93fdc224df7817c70ab588d76365567e133eec787a670",
+      "expectedSHA256": "b6d733e4a9f61ce4ebe93fdc224df7817c70ab588d76365567e133eec787a670",
+      "matches": true
+    },
+    {
+      "image": "hinh-p22-57",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-p22-57.DxzkAQ_o.png",
+      "embeddedPNG": false,
+      "actualSHA256": "997c9dc2a1545df23466108a623c715860563b5d849ba889b1563cab16720ab2",
+      "expectedSHA256": "997c9dc2a1545df23466108a623c715860563b5d849ba889b1563cab16720ab2",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-3",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-3.CP5u2ev3.png",
+      "embeddedPNG": false,
+      "actualSHA256": "a5d2252088a3ff94e94aedba635d3a6b800e6261de2b617c3274a6b1c5c86074",
+      "expectedSHA256": "a5d2252088a3ff94e94aedba635d3a6b800e6261de2b617c3274a6b1c5c86074",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-6",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-6.DOZbVYdE.png",
+      "embeddedPNG": false,
+      "actualSHA256": "389a6efca824efd0b35a803086f50a09a931e7e1102243389d55d8f879ad3313",
+      "expectedSHA256": "389a6efca824efd0b35a803086f50a09a931e7e1102243389d55d8f879ad3313",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-7",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-7.XPewXmBS.png",
+      "embeddedPNG": false,
+      "actualSHA256": "0a5c5a5ac6c6ae0f189e929d151571f0d98dfd0368782d8e121bd11bb496ebe0",
+      "expectedSHA256": "0a5c5a5ac6c6ae0f189e929d151571f0d98dfd0368782d8e121bd11bb496ebe0",
+      "matches": true
+    },
+    {
+      "image": "ung-dung-ca-nham",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/ung-dung-ca-nham.CQYanQsC.png",
+      "embeddedPNG": false,
+      "actualSHA256": "1867908b1cca5c41db24c5f3b1d3c861a45833013dad1c6253ddcee3e62cf35f",
+      "expectedSHA256": "1867908b1cca5c41db24c5f3b1d3c861a45833013dad1c6253ddcee3e62cf35f",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-8",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-8.DfpjCB7z.png",
+      "embeddedPNG": false,
+      "actualSHA256": "508c504c0ae12625a50f665dfc993142e7f36fe4445c49ee0ce896531b1e5768",
+      "expectedSHA256": "508c504c0ae12625a50f665dfc993142e7f36fe4445c49ee0ce896531b1e5768",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-9",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-9.BAUer8hm.png",
+      "embeddedPNG": false,
+      "actualSHA256": "d84a355bfff29ba370d8aa59a06c5fd06f160cdca89333891468ce43ba825285",
+      "expectedSHA256": "d84a355bfff29ba370d8aa59a06c5fd06f160cdca89333891468ce43ba825285",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-10",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-10.D7GiBHoq.png",
+      "embeddedPNG": false,
+      "actualSHA256": "c5f49dc78340e4ebe890447044c4f458f41707a89420543e64b4945940929c90",
+      "expectedSHA256": "c5f49dc78340e4ebe890447044c4f458f41707a89420543e64b4945940929c90",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-11",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-11.6FTJTy9a.png",
+      "embeddedPNG": false,
+      "actualSHA256": "8aa512d9e315e672f792fe2c90f96bc38a3559e9e198ebcf71e78ef1109173a0",
+      "expectedSHA256": "8aa512d9e315e672f792fe2c90f96bc38a3559e9e198ebcf71e78ef1109173a0",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-12",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-12.D1SEqbMZ.png",
+      "embeddedPNG": false,
+      "actualSHA256": "5372cd828b1f20ebc0ef633109981d6f13484994053e066f9368842ef19ef513",
+      "expectedSHA256": "5372cd828b1f20ebc0ef633109981d6f13484994053e066f9368842ef19ef513",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-14",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-14.D9cTJ3w0.png",
+      "embeddedPNG": false,
+      "actualSHA256": "039b1ee52cdfd0657141b51ab88b98e86d08ea90f7b0dffb2a7e2d10d97d043f",
+      "expectedSHA256": "039b1ee52cdfd0657141b51ab88b98e86d08ea90f7b0dffb2a7e2d10d97d043f",
+      "matches": true
+    },
+    {
+      "image": "hinh-22-18",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-22-18.DtM4gQHe.png",
+      "embeddedPNG": false,
+      "actualSHA256": "26459cf1d3e507a84e91438455070195a50d6435a3d9cfe626eeb3ec2a1d200a",
+      "expectedSHA256": "26459cf1d3e507a84e91438455070195a50d6435a3d9cfe626eeb3ec2a1d200a",
+      "matches": true
+    },
+    {
+      "image": "ung-dung-set",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/ung-dung-set.DJ4PJgF_.png",
+      "embeddedPNG": false,
+      "actualSHA256": "63c2ed8ecee4cff0349b2c5d0ff82636b3a8984835d76512868962182891e625",
+      "expectedSHA256": "63c2ed8ecee4cff0349b2c5d0ff82636b3a8984835d76512868962182891e625",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-23",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-23.DN_kp4FL.png",
+      "embeddedPNG": false,
+      "actualSHA256": "adc25b94997c244f9ba53a5d72dc781c52546a8e4a8274aef991f313c6a135fe",
+      "expectedSHA256": "adc25b94997c244f9ba53a5d72dc781c52546a8e4a8274aef991f313c6a135fe",
+      "matches": true
+    },
+    {
+      "image": "hinh-e23-19",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-e23-19.jwTO9sfH.png",
+      "embeddedPNG": false,
+      "actualSHA256": "468a18a012ef3b941866ffd46f86bf7da836d04a2f1f3a9747de6f2aa687c414",
+      "expectedSHA256": "468a18a012ef3b941866ffd46f86bf7da836d04a2f1f3a9747de6f2aa687c414",
+      "matches": true
+    },
+    {
+      "image": "hinh-p23-57",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-p23-57.D7809_G-.png",
+      "embeddedPNG": false,
+      "actualSHA256": "ed8d2506a4137fbd8bab2c223392fdc7ccb512d60d77269b18e04be687753cd5",
+      "expectedSHA256": "ed8d2506a4137fbd8bab2c223392fdc7ccb512d60d77269b18e04be687753cd5",
+      "matches": true
+    },
+    {
+      "image": "hinh-p23-62",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-p23-62.DfovmENt.png",
+      "embeddedPNG": false,
+      "actualSHA256": "12caea13825b6402b247db3db2250728c27c77ccfb84aaa641c9a9e7fc7252aa",
+      "expectedSHA256": "12caea13825b6402b247db3db2250728c27c77ccfb84aaa641c9a9e7fc7252aa",
+      "matches": true
+    },
+    {
+      "image": "hinh-p23-71",
+      "url": "inline PNG data URL",
+      "embeddedPNG": true,
+      "actualSHA256": "322893b1556e99120233a6c8494f804766357f986749e2116b7e59639b796315",
+      "expectedSHA256": "322893b1556e99120233a6c8494f804766357f986749e2116b7e59639b796315",
+      "matches": true
+    },
+    {
+      "image": "hinh-p23-72",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-p23-72.BtkTJ-5j.png",
+      "embeddedPNG": false,
+      "actualSHA256": "c2c6e108097954363588ed11f5be37740d7b2312fdcddecfd3adf2a170b2b872",
+      "expectedSHA256": "c2c6e108097954363588ed11f5be37740d7b2312fdcddecfd3adf2a170b2b872",
+      "matches": true
+    },
+    {
+      "image": "hinh-p23-78",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-p23-78.DTQIyHDw.png",
+      "embeddedPNG": false,
+      "actualSHA256": "99fe94dab18f7c0965655357b68ec2bc115946fdce80acd970351a46a385a3ed",
+      "expectedSHA256": "99fe94dab18f7c0965655357b68ec2bc115946fdce80acd970351a46a385a3ed",
+      "matches": true
+    },
+    {
+      "image": "hinh-p23-80",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-p23-80.nmIpRbgM.png",
+      "embeddedPNG": false,
+      "actualSHA256": "9558fb14933cec02cf49688ef84c097cd560e733f14a1a54cf2fcc6d53411f6c",
+      "expectedSHA256": "9558fb14933cec02cf49688ef84c097cd560e733f14a1a54cf2fcc6d53411f6c",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-3",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-3.Dr8AGxGl.png",
+      "embeddedPNG": false,
+      "actualSHA256": "810d101fce550ab6970ddc8352ac616548a0bba6609e7df22372af2892e70633",
+      "expectedSHA256": "810d101fce550ab6970ddc8352ac616548a0bba6609e7df22372af2892e70633",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-4",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-4.BsVn1EzB.png",
+      "embeddedPNG": false,
+      "actualSHA256": "9cb1d457ff2303aee9e87c20a11934337a5d8fee1bfcd034e26e762bdc3dfacd",
+      "expectedSHA256": "9cb1d457ff2303aee9e87c20a11934337a5d8fee1bfcd034e26e762bdc3dfacd",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-7",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-7.DKowlsOE.png",
+      "embeddedPNG": false,
+      "actualSHA256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104",
+      "expectedSHA256": "7758c9649ed976ca58206d1b0884e9a54c05cde0ecb2e6ab25629e04d74c3104",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-11",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-11.CQlWTxvY.png",
+      "embeddedPNG": false,
+      "actualSHA256": "ad1534c16198ea701de176d71d4e45ca29224cfdd998a82a4b09d688c7a8d4c0",
+      "expectedSHA256": "ad1534c16198ea701de176d71d4e45ca29224cfdd998a82a4b09d688c7a8d4c0",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-12",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-12.pv9Oa73S.png",
+      "embeddedPNG": false,
+      "actualSHA256": "721618ce2fda04e0cceede494379d124a6f2591c62b344cd2ee557f68ae86ad0",
+      "expectedSHA256": "721618ce2fda04e0cceede494379d124a6f2591c62b344cd2ee557f68ae86ad0",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-15",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-15.wzcdqwdk.png",
+      "embeddedPNG": false,
+      "actualSHA256": "7f1a1a03cfd6b661a621f895b35688cf8025231c3b89e043944d496ffab43403",
+      "expectedSHA256": "7f1a1a03cfd6b661a621f895b35688cf8025231c3b89e043944d496ffab43403",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-19",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-19.CL_xPcSC.png",
+      "embeddedPNG": false,
+      "actualSHA256": "7722c6e43ed04a6548c2bb24bbbe4867cff44614be899e7e69b39b4eb7ff1e8c",
+      "expectedSHA256": "7722c6e43ed04a6548c2bb24bbbe4867cff44614be899e7e69b39b4eb7ff1e8c",
+      "matches": true
+    },
+    {
+      "image": "hinh-23-21",
+      "url": "https://kazinmintori.github.io/StudyHub/assets/hinh-23-21.DZGLSreA.png",
+      "embeddedPNG": false,
+      "actualSHA256": "0d4b3a070ca50d18392172295607d7e07216a0e32349125d99125ae5ce40230e",
+      "expectedSHA256": "0d4b3a070ca50d18392172295607d7e07216a0e32349125d99125ae5ce40230e",
+      "matches": true
+    }
+  ],
+  "captions": [
+    {
+      "key": "young-22/hinh-22-26",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#notes",
+      "expectedPairs": [
+        "Động cơ kéo đai. (Motor for belt)",
+        "Bộ phận thu electron. (Electron sink)",
+        "Trụ đỡ cách điện. (Insulating support)",
+        "Đai cách điện. (Insulating belt)",
+        "Vỏ dẫn điện. (Conducting shell)"
+      ],
+      "actualPairs": [
+        "Động cơ kéo đai. (Motor for belt)",
+        "Bộ phận thu electron. (Electron sink)",
+        "Trụ đỡ cách điện. (Insulating support)",
+        "Đai cách điện. (Insulating belt)",
+        "Vỏ dẫn điện. (Conducting shell)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-22/hinh-22-26",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#bai-tap",
+      "expectedPairs": [
+        "Động cơ kéo đai. (Motor for belt)",
+        "Bộ phận thu electron. (Electron sink)",
+        "Trụ đỡ cách điện. (Insulating support)",
+        "Đai cách điện. (Insulating belt)",
+        "Vỏ dẫn điện. (Conducting shell)"
+      ],
+      "actualPairs": [
+        "Động cơ kéo đai. (Motor for belt)",
+        "Bộ phận thu electron. (Electron sink)",
+        "Trụ đỡ cách điện. (Insulating support)",
+        "Đai cách điện. (Insulating belt)",
+        "Vỏ dẫn điện. (Conducting shell)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-22/hinh-22-4",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-dien-thong.html",
+      "expectedPairs": [
+        "Hộp chứa điện tích điểm dương +q. ((a) A box containing a positive point charge +q)",
+        "Điện thông đi ra khỏi mặt kín. (There is outward electric flux through the surface.)",
+        "Cùng chiếc hộp ở (a), nhưng bên trong có điện tích điểm dương +2q. ((b) The same box as in (a), but containing a positive point charge +2q)",
+        "Khi điện tích được bao tăng gấp đôi, độ lớn điện trường trên mặt cũng tăng gấp đôi, nên điện thông qua mặt tăng gấp đôi so với (a). (Doubling the enclosed charge also doubles the magnitude of the electric field on the surface, so the electric flux through the surface is twice as great as in (a).)",
+        "Cùng điện tích điểm dương +q, nhưng được bao bởi chiếc hộp có mọi kích thước gấp đôi. ((c) The same positive point charge +q, but enclosed by a box with twice the dimensions)",
+        "Điện thông bằng giá trị ở (a). Độ lớn điện trường trên mặt chỉ bằng một phần tư giá trị ở (a), còn diện tích mà trường xuyên qua lớn gấp bốn. (The electric flux is the same as in (a): The magnitude of the electric field on the surface is 1/4 as great as in (a), but the area through which the field “flows” is 4 times greater.)"
+      ],
+      "actualPairs": [
+        "Hộp chứa điện tích điểm dương +q. ((a) A box containing a positive point charge +q)",
+        "Điện thông đi ra khỏi mặt kín. (There is outward electric flux through the surface.)",
+        "Cùng chiếc hộp ở (a), nhưng bên trong có điện tích điểm dương +2q. ((b) The same box as in (a), but containing a positive point charge +2q)",
+        "Khi điện tích được bao tăng gấp đôi, độ lớn điện trường trên mặt cũng tăng gấp đôi, nên điện thông qua mặt tăng gấp đôi so với (a). (Doubling the enclosed charge also doubles the magnitude of the electric field on the surface, so the electric flux through the surface is twice as great as in (a).)",
+        "Cùng điện tích điểm dương +q, nhưng được bao bởi chiếc hộp có mọi kích thước gấp đôi. ((c) The same positive point charge +q, but enclosed by a box with twice the dimensions)",
+        "Điện thông bằng giá trị ở (a). Độ lớn điện trường trên mặt chỉ bằng một phần tư giá trị ở (a), còn diện tích mà trường xuyên qua lớn gấp bốn. (The electric flux is the same as in (a): The magnitude of the electric field on the surface is 1/4 as great as in (a), but the area through which the field “flows” is 4 times greater.)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-22/hinh-22-11",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "expectedPairs": [
+        "Cùng số đường sức và cùng điện thông đi qua hai phần tử diện tích này. (The same number of field lines and the same flux pass through both of these area elements.)"
+      ],
+      "actualPairs": [
+        "Cùng số đường sức và cùng điện thông đi qua hai phần tử diện tích này. (The same number of field lines and the same flux pass through both of these area elements.)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-22/hinh-22-14",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "expectedPairs": [
+        "(b) Mặt Gauss bao điện tích âm, điện thông âm và hướng vào. ((b) Gaussian surface around negative charge: negative (inward) flux)",
+        "(a) Mặt Gauss bao điện tích dương, điện thông dương và hướng ra ngoài. ((a) Gaussian surface around positive charge: positive (outward) flux)"
+      ],
+      "actualPairs": [
+        "(b) Mặt Gauss bao điện tích âm, điện thông âm và hướng vào. ((b) Gaussian surface around negative charge: negative (inward) flux)",
+        "(a) Mặt Gauss bao điện tích dương, điện thông dương và hướng ra ngoài. ((a) Gaussian surface around positive charge: positive (outward) flux)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-22/hinh-22-26",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-vat-dan.html",
+      "expectedPairs": [
+        "Động cơ kéo đai. (Motor for belt)",
+        "Bộ phận thu electron. (Electron sink)",
+        "Trụ đỡ cách điện. (Insulating support)",
+        "Đai cách điện. (Insulating belt)",
+        "Vỏ dẫn điện. (Conducting shell)"
+      ],
+      "actualPairs": [
+        "Động cơ kéo đai. (Motor for belt)",
+        "Bộ phận thu electron. (Electron sink)",
+        "Trụ đỡ cách điện. (Insulating support)",
+        "Đai cách điện. (Insulating belt)",
+        "Vỏ dẫn điện. (Conducting shell)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-23/hinh-23-7",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/the-nang-dien.html",
+      "expectedPairs": [
+        "Hai điện tích q và q₀ cùng dấu ((a) q and q0 have the same sign)",
+        "Hai điện tích q và q₀ trái dấu ((b) q and q0 have opposite signs)",
+        "Hoặc (or)",
+        "Khi r tiến tới 0, U tiến tới dương vô cùng (As r → 0, U → +∞.)",
+        "Khi r tiến tới vô cùng, U tiến tới 0 (As r → ∞, U → 0.)",
+        "Khi r tiến tới 0, U tiến tới âm vô cùng (As r → 0, U → −∞.)"
+      ],
+      "actualPairs": [
+        "Hai điện tích q và q₀ cùng dấu ((a) q and q0 have the same sign)",
+        "Hai điện tích q và q₀ trái dấu ((b) q and q0 have opposite signs)",
+        "Hoặc (or)",
+        "Khi r tiến tới 0, U tiến tới dương vô cùng (As r → 0, U → +∞.)",
+        "Khi r tiến tới vô cùng, U tiến tới 0 (As r → ∞, U → 0.)",
+        "Khi r tiến tới 0, U tiến tới âm vô cùng (As r → 0, U → −∞.)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-23/hinh-23-14",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/dien-the.html",
+      "expectedPairs": [
+        "Đến điểm b ở vô cùng (To point b at infinity)"
+      ],
+      "actualPairs": [
+        "Đến điểm b ở vô cùng (To point b at infinity)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    },
+    {
+      "key": "young-23/hinh-23-22",
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/mat-dang-the.html",
+      "expectedPairs": [
+        "Hẻm núi Oso (Oso Canyon)",
+        "Hẻm núi Lewis (Lewis Canyon)",
+        "Khu cắm trại Lower Oso (Lower Oso Campground)",
+        "Trại nam sinh Los Prietos (Los Prietos Boys Camp)",
+        "Sông Santa Ynez (Santa Ynez River)",
+        "Trại Four-H (Four-H Camp)",
+        "Khu cắm trại White Oaks (White Oaks Campground)",
+        "Đường Paradise (Paradise Road)",
+        "Đường Arroyo Burro (Arroyo Burro Road)"
+      ],
+      "actualPairs": [
+        "Hẻm núi Oso (Oso Canyon)",
+        "Hẻm núi Lewis (Lewis Canyon)",
+        "Khu cắm trại Lower Oso (Lower Oso Campground)",
+        "Trại nam sinh Los Prietos (Los Prietos Boys Camp)",
+        "Sông Santa Ynez (Santa Ynez River)",
+        "Trại Four-H (Four-H Camp)",
+        "Khu cắm trại White Oaks (White Oaks Campground)",
+        "Đường Paradise (Paradise Road)",
+        "Đường Arroyo Burro (Arroyo Burro Road)"
+      ],
+      "oneEach": true,
+      "exactEntries": true
+    }
+  ],
+  "cases": [
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#notes",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#notes",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#notes",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#notes",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#notes",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#bai-tap",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#bai-tap",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#bai-tap",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#bai-tap",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss.html#bai-tap",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-dien-thong.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-dien-thong.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-dien-thong.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-dien-thong.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-dien-thong.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/tinh-dien-thong.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/tinh-dien-thong.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/tinh-dien-thong.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/tinh-dien-thong.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/tinh-dien-thong.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dinh-luat-gauss.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/ung-dung-gauss.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/ung-dung-gauss.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/ung-dung-gauss.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/ung-dung-gauss.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/ung-dung-gauss.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-vat-dan.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-vat-dan.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-vat-dan.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-vat-dan.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 22,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/03-dinh-luat-gauss/dien-tich-vat-dan.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#notes",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#notes",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#notes",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#notes",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#notes",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#bai-tap",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#bai-tap",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#bai-tap",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#bai-tap",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the.html#bai-tap",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/the-nang-dien.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/the-nang-dien.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/the-nang-dien.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/the-nang-dien.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/the-nang-dien.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/dien-the.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/dien-the.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/dien-the.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/dien-the.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/dien-the.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/tinh-dien-the.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/tinh-dien-the.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/tinh-dien-the.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/tinh-dien-the.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/tinh-dien-the.html",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/mat-dang-the.html",
+      "width": 320,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/mat-dang-the.html",
+      "width": 360,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/mat-dang-the.html",
+      "width": 375,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/mat-dang-the.html",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "chapter": 23,
+      "url": "https://kazinmintori.github.io/StudyHub/vat-ly-2/bai-giang/02-dien-the/mat-dang-the.html",
+      "width": 1440,
+      "issues": []
+    }
+  ],
+  "issues": [],
+  "privateEvidenceRevision": "6d750680d00d80d0b95b1d894000ba6ff2d342ba",
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/wiki-body-and-remaining-image-evidence-20261101.tar.gz",
+  "privateEvidenceArchiveSHA256": "63c323d2489a64b68489fe5b42372758212955e19e00adaccdf6c8775d893e63",
+  "wholeGoalComplete": false,
+  "githubBuildDeploy": {
+    "run": 41228331785,
+    "revision": "c3b726b7bc80dbf0b0b10f66386d286e2a959227",
+    "build": "success",
+    "deploy": "success"
+  },
+  "inlineImageDiscoveryCorrection": "OnePNGP23.71isdataURIencodedbyVite. FirstURL-onlydiscoverymissedit; actualDOMprovedfigure+captionpresent. Harnessnowmapsexactalttoauthoritativeasset anddecodesinlinePNGbytes,all34actualimages matchSHA. No authoredimage orcaption fixneeded."
+}

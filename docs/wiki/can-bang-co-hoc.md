@@ -15,8 +15,6 @@ Cân bằng bền có xu hướng trở về khi bị lệch nhỏ, còn cân b�
 
 Một hướng có mômen lực bằng không mới chỉ là vị trí cân bằng. Để xét bền, quay lệch một góc nhỏ và xác định chiều mômen sau lệch. Với lưỡng cực trong trường đều, $U=-pE\cos\varphi$. Cùng chiều trường cho thế năng nhỏ nhất −pE, còn ngược chiều cho thế năng lớn nhất +pE.
 
-Tài liệu tham khảo: Young & Freedman, ấn bản 15, mục 7.5 và mục 21.7, trang 703–705.
-
 ## Ví dụ
 
 Lưỡng cực có mômen cùng chiều trường đều ở cân bằng bền; ngược chiều ở cân bằng không bền.
@@ -40,3 +38,7 @@ Không. Phải xét sự đáp ứng sau một lệch nhỏ.
 - [Lưỡng cực điện](./luong-cuc-dien.md)
 - [Mômen lực](./momen-luc.md)
 - [Công &amp; năng lượng](./cong-nang-luong.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, mục 7.5 và mục 21.7, trang 703–705.

@@ -17,8 +17,6 @@ Mômen của lực đối với gốc O là $\boldsymbol\tau=\mathbf r\times\mat
 
 Đơn vị là newton mét; mômen là vector, khác công là số vô hướng. Trong hệ quán tính với gốc cố định, tổng mômen ngoài quyết định đạo hàm mômen động lượng đối với cùng gốc.
 
-Nguồn: Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 10. Bài giảng tương ứng trong Vật lý đại cương 1 hoặc 2 ghi đầy đủ các mục và trang của chương.
-
 ## Ví dụ
 
 Đẩy cửa gần mép tạo mômen lớn hơn đẩy gần bản lề với cùng lực vuông góc cửa.
@@ -42,3 +40,7 @@ Có. Khi đường tác dụng đi qua gốc tính mômen, cánh tay đòn bằn
 - [Lực &amp; định luật Newton](./luc.md)
 - [Mômen quán tính](./momen-quan-tinh.md)
 - [Động lượng trong vật lý](./dong-luong-vat-ly.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 10.

@@ -44,3 +44,7 @@ Có, vì tích vô hướng bằng 0.
 - [Chuẩn vector](./chuan.md)
 - [Ma trận](./ma-tran.md)
 - [Vector](./vector.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 1.10.
