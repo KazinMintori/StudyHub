@@ -105,6 +105,32 @@ jobs:
             qa/course-workspace/
             qa/toan-ai-homework/
             qa/batch-build-fixture/
+            qa/philosophy-formats/
+          if-no-files-found: ignore
+
+      - name: Verify philosophy fill practice and mock exams
+        env:
+          BASE_PATH: /
+          QA_BASE_URL: http://127.0.0.1:5174
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: |
+          node --test scripts/tests/philosophy*.test.mjs
+          npm run dev -- --host 127.0.0.1 --port 5174 > /tmp/studyhub-philosophy.log 2>&1 &
+          DEV_PID=$!
+          trap 'kill "$DEV_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/verification/verify-philosophy-exam-formats.mjs
+
+      - name: Save philosophy assessment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: philosophy-assessment-verification
+          retention-days: 3
+          path: qa/philosophy-formats/
           if-no-files-found: ignore
 
       - name: Configure GitHub Pages
