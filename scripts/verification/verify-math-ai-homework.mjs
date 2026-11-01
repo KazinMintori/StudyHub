@@ -43,16 +43,25 @@ try {
       await page.evaluate(async()=>{
         await document.fonts.ready
         document.querySelectorAll('.vp-doc details').forEach(el=>el.open=true)
+        await Promise.all([...document.querySelectorAll('.vp-doc img')].map(async image=>{
+          image.loading='eager'
+          await image.decode().catch(()=>{})
+        }))
         await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)))
       })
       const metrics=await page.evaluate(()=>({
         pageWidth:document.documentElement.scrollWidth,
-        errors:document.querySelectorAll('[data-mjx-error],mjx-merror').length,
+        errors:document.querySelectorAll('[data-mjx-error],merror,[data-mml-node="merror"]').length,
+        scrollbars:[...document.querySelectorAll('.vp-doc mjx-container')].filter(el=>el.checkVisibility()&&(['auto','scroll'].includes(getComputedStyle(el).overflowX)||['auto','scroll'].includes(getComputedStyle(el).overflowY))).length,
+        visibleMathML:[...document.querySelectorAll('.vp-doc mjx-assistive-mml')].filter(el=>el.checkVisibility()).length,
         overflow:[...document.querySelectorAll('.vp-doc mjx-container')].filter(el=>el.checkVisibility()).flatMap((el,index)=>{
           const svg=el.querySelector('svg'),r=svg?.getBoundingClientRect(),box=el.closest('.custom-block')||el.closest('.vp-doc')
           const b=box.getBoundingClientRect()
+          const style=getComputedStyle(box)
+          const left=b.left+parseFloat(style.paddingLeft)+parseFloat(style.borderLeftWidth)
+          const right=b.right-parseFloat(style.paddingRight)-parseFloat(style.borderRightWidth)
           if(!r || r.width<1)return []
-          return el.scrollWidth>el.clientWidth+2 || r.left<b.left-2 || r.right>b.right+2 || r.left<0 || r.right>innerWidth+1
+          return el.scrollWidth>el.clientWidth+2 || r.left<left-2 || r.right>right+2 || r.left<0 || r.right>innerWidth+1
             ? [{index,left:r.left,right:r.right,container:el.clientWidth,scroll:el.scrollWidth,formula:el.textContent.slice(0,220)}] : []
         }),
         estimates:/phút đọc|thời gian đọc|tổng cộng khoảng \d+ phút/i.test(document.body.innerText),
@@ -61,6 +70,8 @@ try {
       results.push({width,route,...metrics})
       assert.equal(metrics.pageWidth<=width+1,true,JSON.stringify(results.at(-1)))
       assert.equal(metrics.errors,0,route)
+      assert.equal(metrics.scrollbars,0,`Math scrollbars: ${route}`)
+      assert.equal(metrics.visibleMathML,0,`Visible assistive MathML: ${route}`)
       assert.deepEqual(metrics.overflow,[],JSON.stringify(results.at(-1)))
       assert.equal(metrics.estimates,false)
       assert(metrics.images.every(im=>im.ok),`Images: ${route}`)
