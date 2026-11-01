@@ -36,6 +36,33 @@
 .vp-doc .study-link-cards li > a:focus-visible { outline: none; }
 /* Term previews in a description remain reachable above the stretched link. */
 .vp-doc .study-link-cards button.study-term { position: relative; z-index: 1; }
+
+/* The classical directory separates in-page navigation from lesson actions. */
+.vp-doc .classical-supplement .supplement-jump {
+  margin: var(--space-6) 0;
+  padding: var(--space-4) 0;
+  border-block: 1px solid var(--rule);
+  font: var(--fs-ui)/1.6 var(--font-ui);
+}
+.supplement-jump > span { color: var(--ink-2); font-weight: 600; }
+.vp-doc .supplement-jump ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2) var(--space-5); margin-bottom: 0; }
+.vp-doc .supplement-jump li { margin: 0; min-width: 0; }
+.supplement-jump a { display: inline-flex; align-items: center; min-height: 44px; }
+.vp-doc .classical-supplement > h2 { scroll-margin-top: calc(var(--vp-nav-height) + var(--space-5)); }
+.vp-doc .supplement-lessons { list-style: none; padding: 0; margin: var(--space-5) 0 var(--space-7); }
+.vp-doc .supplement-lessons > li { display: flex; align-items: flex-start; gap: var(--space-4); margin: 0; padding: var(--space-5) 0; border-top: 1px solid var(--rule); }
+.supplement-number { flex: 0 0 3rem; color: var(--ink-3); font: 600 var(--fs-ui)/1.6 var(--font-ui); font-variant-numeric: tabular-nums; padding-top: var(--space-1); }
+.supplement-copy { min-width: 0; flex: 1; }
+.vp-doc .supplement-copy h3 { margin: 0; font: 600 var(--fs-read)/1.5 var(--font-ui); }
+.vp-doc .supplement-copy p { margin: var(--space-2) 0; color: var(--ink-2); font: var(--fs-ui)/1.75 var(--font-ui); }
+.vp-doc .supplement-open { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font: 600 var(--fs-ui)/1.5 var(--font-ui); text-underline-offset: 4px; }
+.supplement-open:focus-visible, .supplement-jump a:focus-visible { outline: 2px solid var(--tim); outline-offset: 4px; }
+.supplement-review { padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius); font-size: var(--fs-ui); }
+.supplement-review summary { cursor: pointer; font-family: var(--font-ui); font-weight: 600; min-height: 44px; align-content: center; }
+@media (max-width: 600px) {
+  .vp-doc .supplement-jump ol { grid-template-columns: minmax(0, 1fr); }
+  .vp-doc .supplement-lessons > li { gap: var(--space-3); }
+}
 @media (max-width: 767px) {
   .lecture-row { gap: var(--space-3); flex-wrap: wrap; }
   .lesson-status { margin-left: 48px; }
