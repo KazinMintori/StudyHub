@@ -1,0 +1,24 @@
+{
+  "status": "confirmed-in-progress-findings-fixed-source-checked",
+  "userDirection": "Ngừng tìm thêm lỗi. Sửa nốt các lỗi đang xử lý, viết report và dọn dẹp.",
+  "privateP2": "060e8a40aa5b76c742a1b3bff5854399d3f941f1",
+  "privateP1": "94d17d0947db46215e1b72b57a0a0674fa520b58",
+  "sourceModules": 15,
+  "publicWikiFiles": 41,
+  "globalConceptFiles": 1,
+  "focusedResponsiveCases": 280,
+  "widths": [
+    320,
+    360,
+    375,
+    768,
+    1440
+  ],
+  "responsiveIssues": 0,
+  "skillTests": 39,
+  "localMath": "12pass/3environment-loadingfail; global cloud gate required, not reported green locally",
+  "priorVerifiedPublic": "abebe25f8ecdeb8437c1f1e7910de4fb991fadb5",
+  "evidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/confirmed-support-fixes-final-20261101.tar.gz",
+  "noAdditionalAudit": true,
+  "report": "raw_materials/physics/reviews/bao-cao-bien-soan-va-ra-soat-20261029.md"
+}

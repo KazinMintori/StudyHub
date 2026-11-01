@@ -23,7 +23,7 @@ Bề mặt nhám vẫn phản xạ theo các pháp tuyến địa phương, như
 
 ## Ví dụ
 
-Hai gương vuông góc đảo hai thành phần phương của tia trong mặt phẳng vuông góc giao tuyến, làm tia ra song song và ngược chiều tia vào.
+Với tia tới vuông góc giao tuyến của hai gương vuông góc, mỗi lần phản xạ đảo một thành phần phương. Sau hai lần phản xạ, tia ra song song và ngược chiều tia vào.
 
 ## Khi nào cần dùng?
 
