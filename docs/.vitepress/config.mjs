@@ -5,7 +5,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 import { courseCatalog } from './course-catalog.mjs'
 import { wikiGroups } from './wiki-content.mjs'
 import { concepts } from './concepts.mjs'
-import { readFileSync, mkdirSync } from 'node:fs'
+import { readFileSync, mkdirSync, realpathSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { mathTextPlugin } from '../../scripts/math-text-plugin.mjs'
@@ -51,7 +51,10 @@ export default withMermaid(defineConfig({
   mermaid:{theme:'base',themeVariables:{fontSize:'15px',fontFamily:'Be Vietnam Pro, sans-serif',primaryColor:colorToken('tim-soft'),primaryBorderColor:colorToken('tim'),primaryTextColor:colorToken('ink')},flowchart:{htmlLabels:true,padding:18,curve:'basis'}},
   appearance:true,
   vite:{
-    server:{watch:{ignored:['**/.vitepress/dist/**','**/.vitepress/.temp/**']}},
+    server:{
+      fs:{allow:[fileURLToPath(new URL('../../',import.meta.url)),realpathSync(fileURLToPath(new URL('../../node_modules',import.meta.url)))]},
+      watch:{ignored:['**/.vitepress/dist/**','**/.vitepress/.temp/**']}
+    },
     build:{
       chunkSizeWarningLimit: 2000,
       rollupOptions:{
