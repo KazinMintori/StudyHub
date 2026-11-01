@@ -11,7 +11,7 @@
 .part-description { color: var(--ink-2); font-size: var(--fs-ui); margin-bottom: var(--space-4); }
 .lecture-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
 .lecture-list > article { display: flex; min-width: 0; }
-.lecture-row { display: flex; align-items: center; gap: var(--space-4); width: 100%; min-height: 88px; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--paper); transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
+.lecture-row, .vp-doc .supplement-lessons > li { display: flex; align-items: center; gap: var(--space-4); width: 100%; min-height: 88px; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--paper); transition: border-color var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
 .lecture-row:hover { border-color: var(--tim); background: var(--tim-soft); }
 .lecture-row:focus-visible { border-color: var(--tim); outline: 2px solid var(--tim); outline-offset: 3px; }
 .lesson-number { display: grid; place-items: center; flex: 0 0 36px; min-height: 36px; padding: var(--space-1); border-radius: var(--radius); background: var(--tim-soft); color: var(--tim); font-size: var(--fs-ui); font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -40,7 +40,7 @@
 /* The classical directory separates in-page navigation from lesson actions. */
 .vp-doc .classical-supplement .supplement-jump {
   margin: var(--space-6) 0;
-  padding: var(--space-5);
+  padding: var(--space-4);
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
   background: var(--paper);
@@ -52,7 +52,7 @@
 .supplement-jump a { display: inline-flex; align-items: center; min-height: 44px; }
 .vp-doc .classical-supplement > h2 { scroll-margin-top: calc(var(--vp-nav-height) + var(--space-5)); }
 .vp-doc .supplement-hero, .vp-doc .supplement-group-intro, .vp-doc .supplement-resources {
-  padding: var(--space-5);
+  padding: var(--space-4);
   border: 1px solid var(--rule);
   border-radius: var(--radius-lg);
   background: var(--paper);
@@ -63,10 +63,10 @@
 .vp-doc .supplement-group-intro h2, .vp-doc .supplement-resources h2 { margin: 0 0 var(--space-3); padding: 0; border: 0; scroll-margin-top: calc(var(--vp-nav-height) + var(--space-5)); }
 .vp-doc .supplement-resources { margin-top: var(--space-6); }
 .vp-doc .supplement-lessons { display: grid; gap: var(--space-3); list-style: none; padding: 0; margin: var(--space-3) 0 var(--space-7); }
-.vp-doc .supplement-lessons > li { display: flex; align-items: flex-start; gap: var(--space-4); margin: 0; padding: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--canvas); }
-.supplement-number { flex: 0 0 3rem; color: var(--ink-3); font: 600 var(--fs-ui)/1.6 var(--font-ui); font-variant-numeric: tabular-nums; padding-top: var(--space-1); }
+.vp-doc .supplement-lessons > li { align-items: flex-start; margin: 0; }
+.supplement-number { flex-basis: 3rem; font-family: var(--font-ui); }
 .supplement-copy { min-width: 0; flex: 1; }
-.vp-doc .supplement-copy h3 { margin: 0; font: 600 var(--fs-read)/1.5 var(--font-ui); }
+.vp-doc .supplement-copy h3 { margin: 0; font: 600 var(--fs-read)/1.45 var(--font-ui); }
 .vp-doc .supplement-copy p { margin: var(--space-2) 0; color: var(--ink-2); font: var(--fs-ui)/1.75 var(--font-ui); }
 .vp-doc .supplement-open { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font: 600 var(--fs-ui)/1.5 var(--font-ui); text-underline-offset: 4px; }
 .supplement-open:focus-visible, .supplement-jump a:focus-visible { outline: 2px solid var(--tim); outline-offset: 4px; }
@@ -80,3 +80,7 @@
   .lecture-row { gap: var(--space-3); flex-wrap: wrap; }
   .lesson-status { margin-left: 48px; }
 }
+
+/* Match the course overview typography and established numbered lesson cards. */
+.vp-doc .classical-supplement .supplement-group-intro h2, .vp-doc .classical-supplement .supplement-resources h2 { font: 600 var(--fs-h3)/1.35 var(--font-ui); }
+.vp-doc .supplement-hero p, .vp-doc .supplement-group-intro p { font: var(--fs-ui)/1.75 var(--font-ui); color: var(--ink-2); }
