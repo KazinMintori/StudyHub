@@ -3,6 +3,8 @@ name: Deploy UETệ to GitHub Pages
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
     inputs:
       verify_only:
@@ -96,7 +98,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: browser-verification
-          retention-days: 7
+          retention-days: 3
           path: |
             qa/navigation-stability/
             qa/lecture-usability/
@@ -124,7 +126,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: batch-fixture-diagnostics
-          retention-days: 7
+          retention-days: 3
           path: qa/batch-build-fixture/
           if-no-files-found: ignore
 
@@ -150,10 +152,11 @@ jobs:
           npm run verify:navigation
 
       - name: Upload Pages artifact
-        if: always() && !inputs.fixture_only
+        if: success() && !inputs.fixture_only && !inputs.verify_only
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
+          retention-days: 1
 
   deploy:
     if: success() && (github.event_name != 'workflow_dispatch' || (!inputs.verify_only && !inputs.fixture_only))
@@ -166,3 +169,41 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  clean-old-pages-artifacts:
+    name: Remove superseded Pages build archives
+    needs: deploy
+    if: needs.deploy.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Keep the current deployment archive and verification reports
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const current = await github.rest.actions.getWorkflowRun({
+              owner, repo, run_id: context.runId
+            });
+            const cutoff = Date.parse(current.data.created_at);
+            if (!Number.isFinite(cutoff)) throw new Error('Missing current run timestamp');
+            const artifacts = await github.paginate(
+              github.rest.actions.listArtifactsForRepo,
+              { owner, repo, per_page: 100 }
+            );
+            for (const artifact of artifacts) {
+              const previousRun = artifact.workflow_run?.id;
+              if (artifact.name !== 'github-pages' || artifact.expired ||
+                  !previousRun || previousRun === context.runId ||
+                  !(Date.parse(artifact.created_at) < cutoff)) continue;
+              const previous = await github.rest.actions.getWorkflowRun({
+                owner, repo, run_id: previousRun
+              });
+              if (previous.data.status !== 'completed') continue;
+              await github.rest.actions.deleteArtifact({
+                owner, repo, artifact_id: artifact.id
+              });
+              core.info(`Removed superseded Pages artifact ${artifact.id}`);
+            }

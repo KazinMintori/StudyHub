@@ -31,7 +31,7 @@ Build toàn bộ và deploy chạy trên GitHub. Checkout rút gọn trên máy 
 
 Các báo cáo đọc nhầm module cũ, chỉ kiểm mã băm hoặc chỉ kiểm ảnh khớp vùng cắt đã bị loại khỏi bằng chứng nghiệm thu ý nghĩa. Những trường hợp biên chưa đủ căn cứ không được đổi thành đạt chỉ để đóng bảng theo dõi. Báo cáo này không đưa ra tỷ lệ chính xác tuyệt đối vì không có phép đo độc lập cho một tỷ lệ như vậy.
 
-Một lượt rà bổ sung dữ liệu tra cứu chương 33–44 được dừng theo yêu cầu chốt của người dùng. Bộ đầu vào gồm 353 mục Cheatsheet và 227 Wiki đã được khóa phiên bản, nhưng không được ghi thành một lượt đọc ý nghĩa độc lập đã hoàn tất. Các giới hạn này được giữ trong bằng chứng thay vì đổi cờ trạng thái để tạo cảm giác đã kiểm hết.
+Phần tra cứu chương 33–44 đã được đọc theo phiên bản hiện hành, gồm 353 mục Cheatsheet và 227 Wiki riêng biệt cùng ghi chú nhanh. Ba nhóm kiểm đã chạy 138 phép kiểm Python trong phạm vi các nhận định được ghi rõ. Các lỗi xác nhận được sửa theo yêu cầu chốt, rồi dừng tìm lỗi mới. Kết quả này không được suy rộng thành chứng nhận độc lập cho mọi phép tính của toàn bộ 44 chương.
 
 ## 4. Đánh giá cách thực hiện
 
@@ -65,3 +65,18 @@ Mỗi đợt nên gom các thay đổi liên quan thành một commit đủ lớ
 Theo yêu cầu cuối của người dùng, không mở thêm vòng rà mới hoặc thêm tính năng. Đợt chốt xử lý các lỗi đã xác nhận, lưu các giới hạn kiểm chứng và theo dõi build, deploy của phiên bản bàn giao.
 
 Chỉ dọn tệp tạm có thể tạo lại và worktree đã xác nhận không còn nội dung riêng chưa xuất bản. Giữ PDF gốc, nội dung đã soạn, thay đổi chưa xuất bản, trạng thái của các tác vụ khác và bằng chứng cần truy nguyên. Nhật ký dọn dẹp ghi rõ đường dẫn, căn cứ và dung lượng thực tế, không suy đoán mức giảm lag.
+
+
+## 8. Sửa nốt các lỗi đang xử lý và kết thúc rà
+
+Theo yêu cầu cuối, chỉ xử lý các lỗi đã xác nhận trong lượt đang làm. Không tiếp tục mở vòng tìm lỗi, thêm tính năng hoặc sửa giao diện.
+
+Các thay đổi gồm bổ sung điều kiện tới gần vuông góc cho giao thoa màng mỏng, điều kiện hàng rào đủ dày cho xấp xỉ xuyên hầm và điều kiện công lực điện. Định nghĩa quang trình phân biệt chiều dài tương đương trong chân không với phần chênh quang trình. Ví dụ hai gương vuông góc và công thức ảnh toàn ký giữ đầy đủ điều kiện hình học, pha.
+
+Các khối toán Wiki bị mất môi trường căn dòng hoặc mất ký hiệu Hy Lạp được khôi phục. Các vế dài được viết qua đại lượng trung gian khi cần, không bẻ ở dấu cộng hoặc nhân. Phần tra cứu được bổ sung hai định nghĩa còn thiếu đã xác nhận: Liên kết kim loại và đầu dò hạt dựa trên ion hóa. Nội dung chỉ gồm định nghĩa, tính chất và công thức.
+
+Lượt sửa này thay đổi 15 module nội dung riêng tư và 42 tệp công khai, gồm 41 Wiki và dữ liệu khái niệm chung. Kiểm hiển thị đúng phần sửa đạt 280 trường hợp tại 320, 360, 375, 768 và 1440 px, không có lỗi trong phạm vi ấy. 39 kiểm thử công cụ đều đạt. Kiểm toán toàn dự án cục bộ bị giới hạn bởi module riêng tư thiếu và thư mục tạm sandbox, nên không ghi thành đạt toàn bộ. CI đầy đủ được chạy trên GitHub sau khi push.
+
+Bản phát hành trước lượt sửa này, commit abebe25f, đã build và deploy thành công. Kiểm web trước đó xác nhận 159 ảnh cập nhật, 317 lần xuất hiện chú thích và 325 trường hợp bố cục. Lượt sửa tra cứu giữ nguyên toàn bộ ảnh.
+
+Đã xóa 935 bản sao ảnh QA đã có bản lưu trữ trùng mã băm và hồ sơ Chrome tạm của phiên kiểm trước, tổng dung lượng logic 212.886.843 byte. Đã bảo toàn 698 tệp bằng chứng bị Git bỏ qua trước khi thử lưu trữ 12 worktree. Ứng dụng từ chối vì chat khác vẫn dùng các worktree ấy, nên chúng được giữ nguyên. PDF gốc, nội dung riêng chưa xuất bản và dữ liệu của người dùng không bị xóa. Dung lượng logic tệp đã xóa không phải phép đo mức giảm lag của máy.

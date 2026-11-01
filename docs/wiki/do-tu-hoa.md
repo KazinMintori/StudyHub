@@ -7,7 +7,7 @@ next: false
 
 # Độ từ hóa
 
-Độ từ hóa $\vec M$ là mômen từ tổng cộng trên một đơn vị thể tích. Trong mô hình môi trường đang xét, đóng góp của từ hóa vào trường là $\mu_0\vec M$, nên $\vec B=\vec B_0+\mu_0\vec M$.
+Độ từ hóa $\vec M$ là mômen từ tổng cộng trên một đơn vị thể tích. Khi bỏ qua trường khử từ, chẳng hạn trong vùng giữa ống dây dài có vật liệu lấp đầy, trường tổng là $\vec B=\vec B_0+\mu_0\vec M$. $\vec B_0$ là trường khi chưa có vật liệu.
 
 <WikiUsage />
 
@@ -19,7 +19,7 @@ $$
 \vec M=\frac{\vec\mu_{\mathrm{total}}}{V}.
 $$
 
-Đơn vị SI là ampere trên mét. Trong mô tả vật liệu tuyến tính cơ bản, trường tổng là $\vec B=\vec B_0+\mu_0\vec M$, với $\vec B_0$ do các dòng ngoài vật liệu tạo nên.
+Đơn vị SI là ampere trên mét. Quan hệ $\vec B=\vec B_0+\mu_0\vec M$ áp dụng khi có thể bỏ qua trường khử từ, chẳng hạn vùng giữa ống dây dài có vật liệu lấp đầy. $\vec B_0$ là trường của dòng tự do khi chưa có vật liệu. Với mẫu hữu hạn có hình dạng khác, cần xét thêm ảnh hưởng của biên vật liệu.
 
 ## Ví dụ
 

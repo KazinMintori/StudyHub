@@ -13,7 +13,7 @@ next: false
 
 ## Giải thích kỹ thuật
 
-Với sóng chuẩn phẳng tới vuông góc và điểm vật cách phim $b_0$, các vành sáng thỏa $b_m-b_0=m\lambda$. Hình học cho:
+Xét sóng chuẩn phẳng tới vuông góc và sóng cầu từ điểm vật cách phim $b_0$. Hai sóng đơn sắc, kết hợp và cùng pha tại tâm phim. Khi đó, các vành sáng thỏa $b_m-b_0=m\lambda$. Hình học cho:
 
 $$
 r_m^2=2m\lambda b_0+m^2\lambda^2.

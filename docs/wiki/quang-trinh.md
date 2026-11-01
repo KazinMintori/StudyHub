@@ -7,16 +7,25 @@ next: false
 
 # Quang trình
 
-Quang trình của một đoạn dài L trong môi trường đồng nhất có chiết suất n là nL. Nó biểu thị độ trễ pha so với truyền trong chân không, với bước sóng chân không làm chuẩn.
+Quang trình của một đoạn dài L trong môi trường đồng nhất có chiết suất n là nL. Đây là chiều dài truyền tương đương trong chân không gây cùng độ biến thiên pha, với bước sóng chân không làm chuẩn.
 
 <WikiUsage />
 
 ## Giải thích kỹ thuật
 
-Hai đoạn liên tiếp có quang trình $n_1L_1+n_2L_2$. Với k đoạn, khai triển và dạng gọn là:
+Hai đoạn liên tiếp có quang trình $n_1L_1+n_2L_2$. Với k đoạn, đặt quang trình của đoạn thứ j là:
 
 $$
-\mathcal L =n_1L_1+n_2L_2\\ \quad+\cdots+n_kL_k\\ =\sum_{j=1}^{k}n_jL_j.
+a_j=n_jL_j.
+$$
+
+Chỉ số j chạy từ 1 đến k. Tổng quang trình được khai triển rồi viết gọn như sau:
+
+$$
+\begin{aligned}
+\mathcal L&=a_1+a_2+\cdots+a_k\\
+&=\sum_{j=1}^{k}a_j.
+\end{aligned}
 $$
 
 Phần pha do truyền là $2\pi\mathcal L/\lambda_0$. Ở màng tới vuông góc, hai tia phản xạ chính có phần đường đi thêm trong màng bằng 2t, nên hiệu quang trình là 2nt. Dùng bước sóng trong màng $\lambda=\lambda_0/n$ cũng cho cùng pha, nhưng không được nhân n thêm lần nữa.
