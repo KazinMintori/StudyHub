@@ -1,0 +1,27 @@
+{
+  "status": "passed-deployed-original-images-and-caption-scope",
+  "sourcePublicRevision": "5b35e4498e5c4dc6b56031b92a9fbda285bb053a",
+  "laterPublicRevisionWithSameP2ImageAndCaptionBytes": "b985e4ed490b2cc5d9fe5d800dc72e29f92ec251",
+  "fullCloud": {
+    "5b35": 41267006475,
+    "b985": 41268229393,
+    "bothBuildAndDeploy": "success"
+  },
+  "exactOriginalPNGBytes": 57,
+  "affectedUniqueFigures": 81,
+  "renderedCaptionVariants": 87,
+  "actualCaptionOccurrences": 129,
+  "visitedPages": 53,
+  "baselineViewportCases": 165,
+  "correctedRegistryFollowupViewportCases": 20,
+  "issues": 0,
+  "harnessCorrection": "Initialexpectedregistryomittedunchangedexerciseregistriesandthusreported6falsepairmismatcheson3figures. Sourcecaptiontextsalreadyexact. Rebuiltactualproductionaggregatorwithmanifest-boundimports andchecked3affectedfigures/6occurrencesagain. Noauthoredwebsitechangeforthisharnessissue. Originalfailurepreserved.",
+  "initialEvidence": "results.json",
+  "followupEvidence": "corrected-registry-results.json",
+  "registrySourceBinding": "current-registry-proof.json",
+  "limits": [
+    "Counts cover the exact repaired assets and affected captions, not chapter-wide source/physics completeness.",
+    "PublicP1native13frames and newlyrestored27/29captions require separateexactdeployedverification.",
+    "RemainingP2imageandreferencegates,finalreportandcleanupincomplete."
+  ]
+}

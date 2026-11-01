@@ -1,0 +1,59 @@
+{
+  "status": "implemented-and-production-render-verified-awaiting-cloud-public-runtime",
+  "wholeGoalComplete": false,
+  "privateRevision": "b87215dba3d9a44379eedc17e20333433ec597e9",
+  "sourceFiles": [
+    "raw_materials/physics/translations/chapter-27/14-bai-tap-31-60.md",
+    "raw_materials/physics/translations/chapter-29/01-hien-tuong-cam-ung.md",
+    "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md",
+    "raw_materials/physics/translations/chapter-29/03-dinh-luat-lenz.md",
+    "raw_materials/physics/translations/chapter-29/04-suat-dien-dong-chuyen-dong.md",
+    "src/content/courses/vat-ly-2/lectures/07-tu-truong-luc-tu/content.json",
+    "src/content/courses/vat-ly-2/lectures/09-cam-ung-dien-tu/content.json",
+    "docs/.vitepress/physics-gauss-course.mjs",
+    "docs/.vitepress/physics-potential-course.mjs",
+    "docs/.vitepress/physics-potential-foundations.mjs"
+  ],
+  "sourceHashes": {
+    "raw_materials/physics/translations/chapter-27/14-bai-tap-31-60.md": "ad0917ec62fa0f48fbd3b1cfa4854205169dd071099929e1cadbae01d9e1fd28",
+    "raw_materials/physics/translations/chapter-29/01-hien-tuong-cam-ung.md": "b0a6eb004f8242dc822748406d87ca471b3b7718041ea586fadda227df3a49a7",
+    "raw_materials/physics/translations/chapter-29/02-dinh-luat-faraday.md": "304f06293e7606841f5ec65c337f7bd7e5253b5d66e1867191838b0f87a714fb",
+    "raw_materials/physics/translations/chapter-29/03-dinh-luat-lenz.md": "ef8b6de3746c061ebb860e8a5deb1dbc7d4a96fb8393b621198257dd0d9930ab",
+    "raw_materials/physics/translations/chapter-29/04-suat-dien-dong-chuyen-dong.md": "8f1e9e47533ffbaf388447edd71e9d235fe08ff35b9b47314f64f2f7f25c540d",
+    "src/content/courses/vat-ly-2/lectures/07-tu-truong-luc-tu/content.json": "1606d1e85aa423f836d76298ddde29d8192e5d694822980a71efc870081afd53",
+    "src/content/courses/vat-ly-2/lectures/09-cam-ung-dien-tu/content.json": "49f5bbffd1f065659abc387d89976722644958d770015895baca814f3b77deb9",
+    "docs/.vitepress/physics-gauss-course.mjs": "7a711af70df4e20810a023072e16c0dff4a6ab9b7c80c2bdfc943f1a370e8910",
+    "docs/.vitepress/physics-potential-course.mjs": "4d2a296266026a3df1c5620b087009aa8327387aa5933a5268f5f3d1a24545ce",
+    "docs/.vitepress/physics-potential-foundations.mjs": "03bc7f92fac903259916213f2bbba3045af9e3c023cf225d7a5f6f42d5d1db1a"
+  },
+  "restoredCaptionOccurrences": 20,
+  "changedMarkdownFiles": 5,
+  "rebasedIndexAnchors": 109,
+  "indexItemCountsUnchanged": true,
+  "bodyTokensImageURLsAltFormulasUnchanged": true,
+  "productionFullParse": {
+    "actualImageOccurrences25to32": 570,
+    "captionEmitted": 564,
+    "nonCaptionedGeneratedSymbolTableCells": 6,
+    "missingNonTable": 0
+  },
+  "focusedResponsive": {
+    "occurrences": 20,
+    "uniqueImages": 19,
+    "cases": 100,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "issues": 0
+  },
+  "archive": "raw_materials/physics/reviews/private-acceptance-20261031/runtime-caption-and-reference-repairs-20261101.tar.gz",
+  "archiveSHA256": "0072779fc94a26b60c6264c1f6d2d5780bc35f96b8fb1aa9b0f60ff631e903da",
+  "limits": [
+    "Originalsourceframecorrectnessforremainingimagesseparate.",
+    "Exactnewdeployedcaptionvisibilityandanchorcheckpending."
+  ]
+}

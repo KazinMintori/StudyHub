@@ -1,0 +1,2226 @@
+{
+  "status": "accepted-scoped-current-reference-review-with-corrections-awaiting-cloud-public-runtime",
+  "wholeGoalComplete": false,
+  "reviewedBaseline": "QA-only current explicitCS and15unique prerequisite/supportingWiki for P2sourcechapters22/23",
+  "privateRevision": "b87215dba3d9a44379eedc17e20333433ec597e9",
+  "sourceReview": {
+    "scope": "QA-only current explicitCS and15unique prerequisite/supportingWiki for P2sourcechapters22/23",
+    "status": "review-complete-confirmed-conditions-and-quick-format-findings-unapplied",
+    "routing": {
+      "service": "src/features/lecture/services/cheatsheet-service.mjs",
+      "maps": {
+        "vat-ly-2/03-dinh-luat-gauss": "gaussCheatsheet",
+        "vat-ly-2/02-dien-the": "potentialCheatsheet"
+      },
+      "source_chapters": [
+        22,
+        23
+      ],
+      "lesson_order_and_roles": [
+        {
+          "slug": "03-dinh-luat-gauss",
+          "title": "Định luật Gauss",
+          "prerequisites": [
+            "dien-truong",
+            "tich-vo-huong",
+            "tich-phan",
+            "vat-dan-cach-dien"
+          ],
+          "supportingConcepts": [
+            "dien-tich",
+            "dien-thong",
+            "dinh-luat-gauss",
+            "mat-gauss",
+            "che-chan-tinh-dien"
+          ],
+          "status": "ready",
+          "number": 2,
+          "sourceChapter": 22,
+          "topicGroups": [
+            {
+              "title": "Điện tích và điện thông",
+              "topics": [
+                {
+                  "slug": "dien-tich-dien-thong",
+                  "title": "Điện tích và điện thông",
+                  "question": "Trường bên ngoài cho biết gì về điện tích bên trong?",
+                  "source": "22.1"
+                },
+                {
+                  "slug": "tinh-dien-thong",
+                  "title": "Tính điện thông",
+                  "question": "Diện tích, pháp tuyến và trường đi vào tích phân như thế nào?",
+                  "source": "22.2"
+                }
+              ]
+            },
+            {
+              "title": "Định luật và các cấu hình đối xứng",
+              "topics": [
+                {
+                  "slug": "dinh-luat-gauss",
+                  "title": "Định luật Gauss",
+                  "question": "Vì sao điện thông tổng chỉ phụ thuộc điện tích được bao?",
+                  "source": "22.3"
+                },
+                {
+                  "slug": "ung-dung-gauss",
+                  "title": "Áp dụng định luật Gauss",
+                  "question": "Chọn mặt Gauss thế nào để tìm điện trường?",
+                  "source": "22.4"
+                }
+              ]
+            },
+            {
+              "title": "Điện tích trên vật dẫn",
+              "topics": [
+                {
+                  "slug": "dien-tich-vat-dan",
+                  "title": "Điện tích và che chắn tĩnh điện trên vật dẫn",
+                  "question": "Điện tích mặt trong, mặt ngoài và trường trong hốc liên hệ thế nào?",
+                  "source": "22.5"
+                }
+              ]
+            }
+          ],
+          "hasChapterExercises": true
+        },
+        {
+          "slug": "02-dien-the",
+          "title": "Điện thế",
+          "prerequisites": [
+            "cong-nang-luong",
+            "dien-truong",
+            "tich-phan",
+            "gradient"
+          ],
+          "supportingConcepts": [
+            "dien-the",
+            "the-nang-dien",
+            "electron-volt",
+            "mat-dang-the",
+            "dinh-luat-gauss",
+            "vat-dan-cach-dien"
+          ],
+          "status": "ready",
+          "number": 3,
+          "sourceChapter": 23,
+          "topicGroups": [
+            {
+              "title": "Thế năng và điện thế",
+              "topics": [
+                {
+                  "slug": "the-nang-dien",
+                  "title": "Thế năng điện",
+                  "question": "Công lực điện và năng lượng của hệ liên hệ như thế nào?",
+                  "source": "23.1"
+                },
+                {
+                  "slug": "dien-the",
+                  "title": "Điện thế và hiệu điện thế",
+                  "question": "Đại lượng nào thuộc trường và đại lượng nào còn phụ thuộc điện tích thử?",
+                  "source": "23.2"
+                }
+              ]
+            },
+            {
+              "title": "Tính toán và hình học điện thế",
+              "topics": [
+                {
+                  "slug": "tinh-dien-the",
+                  "title": "Tính điện thế của các phân bố nguồn",
+                  "question": "Tìm điện thế của cầu, vòng, thanh và hai bản như thế nào?",
+                  "source": "23.3"
+                },
+                {
+                  "slug": "mat-dang-the",
+                  "title": "Mặt đẳng thế và vật dẫn",
+                  "question": "Vì sao đường sức vuông góc mặt đẳng thế?",
+                  "source": "23.4"
+                },
+                {
+                  "slug": "gradient-dien-the",
+                  "title": "Gradient điện thế",
+                  "question": "Từ hàm điện thế suy ra từng thành phần điện trường ra sao?",
+                  "source": "23.5"
+                }
+              ]
+            }
+          ],
+          "hasChapterExercises": true
+        }
+      ],
+      "precedence": "Explicit CS returned directly by buildLectureCheatsheet before any slide/concept synthesis. Quickconcepts respect publicconcepts localoverrides after physicsConcepts spreads. FulltechnicalWiki bodies readfrom actualpublicdocs/wiki files."
+    },
+    "source_pdf": {
+      "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\raw_materials\\physics\\source\\young-freedman-15.pdf",
+      "sha256": "f4ea22dc8d5113f47ec8fd8a2b9f71f7be78ee3db069971aace4b7cda04175ff",
+      "mapping": "PDF1based=printedpage+20",
+      "visual_pages_viewed": [
+        758,
+        790
+      ],
+      "text_evidence_file": "source-pages.json"
+    },
+    "file_proof": [
+      {
+        "file": "docs/.vitepress/physics-gauss-course.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics-gauss-course.mjs",
+        "sha256": "ab330722133e25654cfa19be08786ed9407b8c12e7dc21264d00154cb012219f",
+        "basis": "locked-private-manifest-equivalent-retained",
+        "manifest_sha256": "ab330722133e25654cfa19be08786ed9407b8c12e7dc21264d00154cb012219f"
+      },
+      {
+        "file": "docs/.vitepress/physics-gauss-foundations.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics-gauss-foundations.mjs",
+        "sha256": "73280a6897b5493d1c40e1f9fa8e17631486c1441d7e5f4c10aa5f7e2000cf41",
+        "basis": "locked-private-manifest-equivalent-retained",
+        "manifest_sha256": "73280a6897b5493d1c40e1f9fa8e17631486c1441d7e5f4c10aa5f7e2000cf41"
+      },
+      {
+        "file": "docs/.vitepress/physics-potential-course.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics-potential-course.mjs",
+        "sha256": "b5c1b8e881a891aeced4b0380bdf95492b49c1ef127d18fddbd695b6218e72b9",
+        "basis": "locked-private-manifest-equivalent-retained",
+        "manifest_sha256": "b5c1b8e881a891aeced4b0380bdf95492b49c1ef127d18fddbd695b6218e72b9"
+      },
+      {
+        "file": "docs/.vitepress/physics-potential-foundations.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics-potential-foundations.mjs",
+        "sha256": "306215eaf016bc46404985b49e19bf6a10854b9b64fff74ae794fad690f485fe",
+        "basis": "locked-private-manifest-equivalent-retained",
+        "manifest_sha256": "306215eaf016bc46404985b49e19bf6a10854b9b64fff74ae794fad690f485fe"
+      },
+      {
+        "file": "docs/.vitepress/physics-courses.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\.vitepress\\physics-courses.mjs",
+        "sha256": "a13c0a5a63382a180fdbad8b61235432fee513653a944b33d4fe183c24e782df",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/dien-truong.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-truong.md",
+        "sha256": "d709ac8e8c5faf481dcd7da1cfd3a32788fa937e230a13ea3011eeedc34dadbe",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/tich-vo-huong.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\tich-vo-huong.md",
+        "sha256": "538bbce4fb8bb730fc7b19578edca71cddc3970bf17f5f52d57e07008df76064",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/tich-phan.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\tich-phan.md",
+        "sha256": "7c09c98d8eac096abaa81c5e4a19470a72aa49039f1a184ace2f26177f685e46",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/vat-dan-cach-dien.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\vat-dan-cach-dien.md",
+        "sha256": "bfcb15a893d2d82e5ea66bd293f0ddbee788b489c57525cfc163ceed219e3403",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/dien-tich.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-tich.md",
+        "sha256": "d4d03e1f5819c27b6b5d1124f0fb156874850cb2cd1c51d2282f6f87e2be6f23",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/dien-thong.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-thong.md",
+        "sha256": "47570d2166828a34dbe067ca2a1c51d1e06498ae364352cae1fad36e90eee84b",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/dinh-luat-gauss.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dinh-luat-gauss.md",
+        "sha256": "b23d68b417afa41195c94621cf840aba98d6bbb30525e365ca240e56a314389f",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/mat-gauss.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\mat-gauss.md",
+        "sha256": "f19060a565f5b19a99f9f8a8344f5971503933bd9b1084a323d726fe6bccd454",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/che-chan-tinh-dien.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\che-chan-tinh-dien.md",
+        "sha256": "682c89ab3d808693135b96818ffb12fb5f263f6272ea4864f3525d690e75ee12",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/cong-nang-luong.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\cong-nang-luong.md",
+        "sha256": "8b3bfdc14a72fecdf1c1ecbf0e25c0bc2b60839005caef89ffafcd7b9c4ef94d",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/gradient.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\gradient.md",
+        "sha256": "d0028ca03aee92850bc6d458d241cecc1d1931c61c6be19c8ba9a54c6b56672c",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/dien-the.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-the.md",
+        "sha256": "0212c6096126a5f764ca55314a98764e6c19378df59bf08a0488826ce7755132",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/the-nang-dien.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\the-nang-dien.md",
+        "sha256": "4372242af5f37bad78f31df0077c198fe8b87fb18c294504542d7de136064f7c",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/electron-volt.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\electron-volt.md",
+        "sha256": "781442a0e3e3e4683b49e0069a9e5fdb6f90ec58026dd896a242dfe20452faf0",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/wiki/mat-dang-the.md",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\mat-dang-the.md",
+        "sha256": "7b034835cb8ddc4d68cbd6bf8c8491899bad64891cec17a042853f7cd49d3c43",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "src/features/lecture/services/cheatsheet-service.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\src\\features\\lecture\\services\\cheatsheet-service.mjs",
+        "sha256": "a848ee275169f7a3043103db44fc510d1f214fb3b59d6c093f92b8112ed45131",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "src/features/lecture/services/cheatsheet-builder.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\src\\features\\lecture\\services\\cheatsheet-builder.mjs",
+        "sha256": "73cb923a5b7c23f681c0a4f3d8a613a62c3e5b368b6c2e7a631155a9095d2e8d",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/.vitepress/concepts.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\.vitepress\\concepts.mjs",
+        "sha256": "9bbb98b7ebcf2f646d75b298d6dc66ff1e27aa1d3b8b209cf5b1645062258d23",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/.vitepress/physics-foundations.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\.vitepress\\physics-foundations.mjs",
+        "sha256": "b5fb5685809ea026595ba6f5b02edbb7da58692659ac293d98f8c7e6efd88b23",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/.vitepress/wiki-content.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\.vitepress\\wiki-content.mjs",
+        "sha256": "4a93f4335c138bde11a4fc8cc85a5d52c345939633acd800388a0225374b2f38",
+        "basis": "actual-current-public",
+        "manifest_sha256": null
+      },
+      {
+        "file": "docs/.vitepress/physics-electrostatics-foundations.mjs",
+        "read_from": "C:\\Users\\Ai\\.codex\\worktrees\\physics1-priority-20261022\\StudyHub\\docs\\.vitepress\\physics-electrostatics-foundations.mjs",
+        "sha256": "18fe9d887fdcd5ad9801462b2fc64b1f676a7c82bd03138fc189db756496631c",
+        "basis": "locked-private-manifest-equivalent-retained",
+        "manifest_sha256": "18fe9d887fdcd5ad9801462b2fc64b1f676a7c82bd03138fc189db756496631c"
+      }
+    ],
+    "cheatsheet_items": [
+      {
+        "id": "gauss/flux/Mặt phẳng, trường đều",
+        "section_index": 0,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Mặt phẳng, trường đều",
+          "formula": "$$\n\\begin{aligned}\n&\\vec A = A\\hat{\\mathbf n},\\\\\n&\\Phi_E = EA\\cos\\varphi = \\vec E\\cdot\\vec A.\n\\end{aligned}\n$$",
+          "variables": [
+            "$\\Phi_E$: Điện thông gửi qua bề mặt phẳng $A$ ($\\mathrm{N\\cdot m^2/C}$ hoặc $\\mathrm{V\\cdot m}$)",
+            "$E$: Cường độ điện trường đều ($\\mathrm{V/m}$ hoặc $\\mathrm{N/C}$)",
+            "$A$: Diện tích của bề mặt phẳng ($\\mathrm{m^2}$)",
+            "$\\hat{\\mathbf n}$: Vector pháp tuyến đơn vị của mặt phẳng (Không có đơn vị)",
+            "$\\varphi$: Góc hợp bởi vector điện trường $\\vec E$ và vector pháp tuyến $\\hat{\\mathbf n}$ ($\\mathrm{rad}$ hoặc độ)"
+          ],
+          "description": "φ là góc với pháp tuyến. Đơn vị điện thông là N m²/C. Mặt kín chọn pháp tuyến ra ngoài."
+        },
+        "full_item_sha256": "a2d98970daef4391e80c883415463c9d41c78ee80104ede94de46baff1b85067",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          742,
+          743
+        ],
+        "source_section": "22.2 Eq22.1–22.5",
+        "independent_read": "Signed component; oriented normal, Euniform, SI N m²/C=Vm.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "gauss/flux/Mặt bất kỳ",
+        "section_index": 0,
+        "item_index": 1,
+        "actual_full_item": {
+          "name": "Mặt bất kỳ",
+          "formula": "$$\n\\Phi_E = \\int_A E_\\perp\\,dA = \\int_A\\vec E\\cdot d\\vec A\n$$",
+          "variables": [
+            "$\\Phi_E$: Điện thông toàn phần gửi qua mặt cong $A$ ($\\mathrm{V\\cdot m}$)",
+            "$E_\\perp$: Thành phần của điện trường vuông góc với vi phân diện tích $dA$ ($\\mathrm{V/m}$)",
+            "$d\\vec A$: Vector vi phân diện tích ($d\\vec A = dA\\,\\hat{\\mathbf n}$) ($\\mathrm{m^2}$)"
+          ],
+          "description": "Trường và vector diện tích được xét tại từng điểm mặt."
+        },
+        "full_item_sha256": "f576130617d456490e396217b4d7620350c4cbbe1e691256917e8e129992908a",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          743
+        ],
+        "source_section": "22.2 Eq22.5",
+        "independent_read": "Local normal and nonuniform field retained inside surface integral.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "gauss/gauss/Điện tích được bao và điện thông",
+        "section_index": 1,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Điện tích được bao và điện thông",
+          "formula": "$$\n\\begin{aligned}\n&Q_{\\mathrm{trong}} = \\sum_{i=1}^{n}q_i,\\\\\n&\\Phi_E = \\oint\\vec E\\cdot d\\vec A = \\frac{Q_{\\mathrm{trong}}}{\\varepsilon_0}.\n\\end{aligned}\n$$",
+          "variables": [
+            "$\\Phi_E$: Điện thông toàn phần qua mặt kín Gauss bất kỳ ($\\mathrm{V\\cdot m}$)",
+            "$Q_{\\mathrm{trong}}$: Tổng đại số điện tích thực nằm bên trong mặt kín Gauss ($\\mathrm{C}$)",
+            "$q_i$: Điện tích thành phần thứ $i$ nằm trong mặt kín ($\\mathrm{C}$)",
+            "$\\varepsilon_0$: Hằng số điện môi chân không ($\\approx 8{,}854\\times10^{-12}\\,\\mathrm{F/m}$)"
+          ],
+          "description": "i chạy từ 1 đến n qua các nguồn bên trong. Trường là trường tổng. Nguồn ngoài cho điện thông tổng bằng không. Điện thông không không buộc trường không."
+        },
+        "full_item_sha256": "f088a7abb0771ba748001d6e4fe9cb4774c430c68074688a7f53c5ca226f67a3",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          745,
+          746,
+          747
+        ],
+        "source_section": "22.3 Eq22.8–22.9",
+        "independent_read": "All-source field with enclosed signed net charge,closed outward normal.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "gauss/symmetry/Cầu và dây dài",
+        "section_index": 2,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Cầu và dây dài",
+          "formula": "$$\n\\begin{aligned}\n&E_r = \\frac{kQ_{\\mathrm{trong}}(r)}{r^2},\\\\\n&E_{r,\\mathrm{wire}} = \\frac{\\lambda}{2\\pi\\varepsilon_0r}.\n\\end{aligned}\n$$",
+          "variables": [
+            "$E_r$: Cường độ điện trường theo phương bán kính của phân bố đối xứng cầu ($\\mathrm{V/m}$)",
+            "$Q_{\\mathrm{trong}}(r)$: Tổng điện tích nằm bên trong mặt cầu bán kính $r$ ($\\mathrm{C}$)",
+            "$E_{r,\\mathrm{wire}}$: Cường độ điện trường quanh dây dẫn thẳng dài vô hạn ($\\mathrm{V/m}$)",
+            "$\\lambda$: Mật độ điện tích dài của dây dẫn ($\\mathrm{C/m}$)",
+            "$r$: Khoảng cách từ tâm hoặc trục đối xứng đến điểm khảo sát ($\\mathrm{m}$)"
+          ],
+          "description": "Cầu dùng mặt cầu đồng tâm. Dây vô hạn và trụ dài dùng mặt trụ đồng trục."
+        },
+        "full_item_sha256": "e34470e5427cb0531ea5d6c2a814554adf374c6c229b50eff38f84364eba929a",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          750,
+          751,
+          753
+        ],
+        "source_section": "22.4",
+        "independent_read": "Signed radial component; spherical symmetry/infinitewire. k=1/(4πε0) implicit from prerequisiteCoulomb.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "gauss/symmetry/Nguồn đều trong thể tích",
+        "section_index": 2,
+        "item_index": 1,
+        "actual_full_item": {
+          "name": "Nguồn đều trong thể tích",
+          "formula": "$$\n\\begin{aligned}\n&E_{r,\\mathrm{sphere}} = \\frac{\\rho r}{3\\varepsilon_0},\\\\\n&E_{r,\\mathrm{cylinder}} = \\frac{\\rho r}{2\\varepsilon_0}.\n\\end{aligned}\n$$",
+          "variables": [
+            "$E_{r,\\mathrm{sphere}}$: Điện trường bên trong khối cầu cách điện tích điện đều ($r \\le R$) ($\\mathrm{V/m}$)",
+            "$E_{r,\\mathrm{cylinder}}$: Điện trường bên trong khối trụ cách điện tích điện đều ($r \\le R$) ($\\mathrm{V/m}$)",
+            "$\\rho$: Mật độ điện tích thể tích không đổi ($\\mathrm{C/m^3}$)",
+            "$r$: Khoảng cách từ tâm cầu hoặc trục trụ đến điểm khảo sát ($\\mathrm{m}$)"
+          ],
+          "description": "Các biểu thức trong vật cách điện có mật độ thể tích đều. Bên ngoài dùng toàn điện tích hoặc mật độ dài được bao."
+        },
+        "full_item_sha256": "0af9ee7e0c8f5498a129503cdc6c578863ae573a84a0d1ef8d53111b8dfbd44a",
+        "verdict": "needs-condition-correction",
+        "finding_ids": [
+          "REF22-01"
+        ],
+        "source_pages_1based": [
+          752,
+          753
+        ],
+        "source_section": "22.4",
+        "independent_read": "Sphere correct; cylinder missing infinite/longcondition flagged.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "gauss/symmetry/Mặt vô hạn và hai bản đối diện",
+        "section_index": 2,
+        "item_index": 2,
+        "actual_full_item": {
+          "name": "Mặt vô hạn và hai bản đối diện",
+          "formula": "$$\n\\begin{aligned}\n&E_{\\mathrm{sheet}} = \\frac{|\\sigma|}{2\\varepsilon_0},\\\\\n&E_{\\mathrm{khe}} = \\frac{|\\sigma|}{\\varepsilon_0}.\n\\end{aligned}\n$$",
+          "variables": [
+            "$E_{\\mathrm{sheet}}$: Cường độ điện trường do một mặt phẳng rộng vô hạn mang điện đều sinh ra ($\\mathrm{V/m}$)",
+            "$E_{\\mathrm{khe}}$: Điện trường trong khe giữa hai bản dẫn song song tích điện trái dấu ($\\mathrm{V/m}$)",
+            "$|\\sigma|$: Độ lớn mật độ điện tích mặt trên bản dẫn ($\\mathrm{C/m^2}$)"
+          ],
+          "description": "Một mặt đều cho trường hai phía. Hai bản dẫn lớn song song trái dấu cho trường giữa từ dương đến âm và trường ngoài bằng không trong mô hình vô hạn."
+        },
+        "full_item_sha256": "f7a4605b64b5ed8aa6c91b03d012f5ce2c0e4e34d4c3d06536f7597759a7ac8b",
+        "verdict": "needs-condition-correction",
+        "finding_ids": [
+          "REF22-02"
+        ],
+        "source_pages_1based": [
+          751,
+          752
+        ],
+        "source_section": "22.4",
+        "independent_read": "Single sheet correct; capacitor equalmagnitudescondition flagged.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "gauss/conductor/Cân bằng tĩnh điện",
+        "section_index": 3,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Cân bằng tĩnh điện",
+          "formula": "$$\n\\begin{aligned}\n&\\vec E_{\\mathrm{trong}} = 0,\\\\\n&Q_{\\mathrm{trong}} = -q,\\\\\n&Q_{\\mathrm{ngoai}} = q_C+q,\\\\\n&E_\\perp = \\frac{\\sigma}{\\varepsilon_0}.\n\\end{aligned}\n$$",
+          "variables": [
+            "$\\vec E_{\\mathrm{trong}}$: Điện trường bên trong khối vật liệu dẫn cân bằng tĩnh điện ($\\mathrm{V/m}$)",
+            "$Q_{\\mathrm{trong}}$: Tổng điện tích cảm ứng trên thành hốc kín mang điện ($\\mathrm{C}$)",
+            "$q$: Điện tích của nguồn riêng đặt cô lập bên trong hốc ($\\mathrm{C}$)",
+            "$Q_{\\mathrm{ngoai}}$: Tổng điện tích trên bề mặt ngoài của vật dẫn ($\\mathrm{C}$)",
+            "$q_C$: Tổng điện tích ban đầu của vật dẫn cô lập ($\\mathrm{C}$)",
+            "$E_\\perp$: Điện trường ngay sát mặt ngoài vật dẫn vuông góc với bề mặt ($\\mathrm{V/m}$)",
+            "$\\sigma$: Mật độ điện tích mặt tại vị trí khảo sát trên mặt vật dẫn ($\\mathrm{C/m^2}$)"
+          ],
+          "description": "q là tổng nguồn riêng trong hốc, qC là tổng điện tích vật dẫn cô lập. Nối đất cho phép trao đổi điện tích. Trường ngay ngoài vuông góc mặt dẫn. Hốc kín không chứa nguồn được che chắn khỏi trường ngoài."
+        },
+        "full_item_sha256": "69119d0082973215f28eb50ea8a66d543bf6df5a3c40a5c6c3de23c40e2f097a",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          754,
+          755,
+          756
+        ],
+        "source_section": "22.5",
+        "independent_read": "MaterialE0,cavitycharge−q,isolatedtotalqC,outerqC+q,signednormalEσ/eps.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/energy/Trường tĩnh điện và bảo toàn cơ năng",
+        "section_index": 0,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Trường tĩnh điện và bảo toàn cơ năng",
+          "formulaRows": [
+            {
+              "label": "Công lực điện",
+              "formula": "$$\nW_{a\\to b}=U_a-U_b=-\\Delta U\n$$"
+            },
+            {
+              "label": "Công lực ngoài khi chuyển động chậm",
+              "formula": "$$\nW_{\\mathrm{ngoai}}=\\Delta U\n$$"
+            },
+            {
+              "label": "Cơ năng khi chỉ lực thế sinh công",
+              "formula": "$$\nK_a+U_a=K_b+U_b\n$$"
+            }
+          ],
+          "variables": [
+            "$\\Delta U$: Độ biến thiên thế năng tĩnh điện ($\\mathrm{J}$)",
+            "$W_{a\\to b}$: Công của lực tĩnh điện khi dịch chuyển điện tích từ $a$ đến $b$ ($\\mathrm{J}$)",
+            "$W_{\\mathrm{ngoai}}$: Công của ngoại lực dịch chuyển điện tích chậm không gia tốc ($\\mathrm{J}$)",
+            "$K_a, K_b$: Động năng của hạt mang điện tại vị trí $a$ và $b$ ($\\mathrm{J}$)",
+            "$U_a, U_b$: Thế năng tĩnh điện tại vị trí $a$ và $b$ ($\\mathrm{J}$)"
+          ],
+          "description": "Lực điện trong trường tĩnh là lực thế. Công ngoài chậm có động năng không đổi. Bảo toàn cơ năng khi chỉ lực thế sinh công."
+        },
+        "full_item_sha256": "a816679ada05eaf6331e6b2eb9f5063dbc0f6cdb0e5cbefb309611cb64dff103",
+        "verdict": "needs-condition-correction",
+        "finding_ids": [
+          "REF23-01"
+        ],
+        "source_pages_1based": [
+          768,
+          773,
+          779
+        ],
+        "source_section": "23.1–23.2",
+        "independent_read": "Formula correct when conditions repaired,electric-onlyU restriction flagged.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/energy/Hai điện tích điểm",
+        "section_index": 0,
+        "item_index": 1,
+        "actual_full_item": {
+          "name": "Hai điện tích điểm",
+          "formula": "$$\nU=\\frac{kqq_0}{r}\n$$",
+          "variables": [
+            "$U$: Thế năng tĩnh điện tương tác giữa hai điện tích điểm ($\\mathrm{J}$)",
+            "$q, q_0$: Điện tích đại số của hai hạt mang điện ($\\mathrm{C}$)",
+            "$r$: Khoảng cách giữa hai điện tích điểm ($\\mathrm{m}$)",
+            "$k$: Hằng số tĩnh điện Coulomb ($\\approx 8{,}99\\times10^9\\,\\mathrm{N\\cdot m^2/C^2}$)"
+          ],
+          "description": "r là khoảng cách hai nguồn, k = 1/(4πε₀). Mốc thế năng bằng không ở khoảng cách vô hạn. Tích qq₀ được giữ dấu."
+        },
+        "full_item_sha256": "697f327bd1f36c47de62a46a59bbe87b26d8d3c4bb3d3c6ee3a6a0b8c962d969",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          770,
+          771
+        ],
+        "source_section": "23.1 Eq23.9",
+        "independent_read": "Finite point charges,r>0,zeroUatinfinity,signedproduct.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/energy/Ba điện tích và tổng các cặp",
+        "section_index": 0,
+        "item_index": 2,
+        "actual_full_item": {
+          "name": "Ba điện tích và tổng các cặp",
+          "formulaRows": [
+            {
+              "label": "Hệ ba điện tích điểm",
+              "formula": "$$\n\\begin{aligned}\n&U_{12}=\\frac{kq_1q_2}{r_{12}},\\\\\n&U_{13}=\\frac{kq_1q_3}{r_{13}},\\\\\n&U_{23}=\\frac{kq_2q_3}{r_{23}},\\\\\n&U_{123}=U_{12}+U_{13}+U_{23}.\n\\end{aligned}\n$$"
+            },
+            {
+              "label": "Tổng quát cho hệ n điện tích",
+              "formula": "$$\nU=k\\sum_{i=1}^{n-1}\\sum_{j=i+1}^{n}\\frac{q_iq_j}{r_{ij}}\n$$"
+            }
+          ],
+          "variables": [
+            "$U_{123}$: Thế năng tương tác của hệ ba điện tích điểm ($\\mathrm{J}$)",
+            "$U_{12}, U_{13}, U_{23}$: Thế năng của từng cặp điện tích tương ứng ($\\mathrm{J}$)",
+            "$q_i, q_j$: Điện tích của hạt thứ $i$ và thứ $j$ trong hệ ($\\mathrm{C}$)",
+            "$r_{ij}$: Khoảng cách giữa hạt thứ $i$ và hạt thứ $j$ ($\\mathrm{m}$)",
+            "$U$: Tổng thế năng tĩnh điện của hệ $n$ điện tích điểm ($\\mathrm{J}$)"
+          ],
+          "description": "i chạy từ 1 đến n − 1, j từ i + 1 đến n. Mỗi cặp xuất hiện một lần. Mốc ứng với mọi điện tích ở xa vô hạn."
+        },
+        "full_item_sha256": "1fba2b1a382863bc45e271d2a50c635d128371e7d920acd5b7e25613ae35acf5",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          772
+        ],
+        "source_section": "23.1",
+        "independent_read": "Distinct unorderedpairs counted once,multipleindicesexplicit.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/potential/Định nghĩa và đơn vị",
+        "section_index": 1,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Định nghĩa và đơn vị",
+          "formulaRows": [
+            {
+              "label": "Điện thế",
+              "formula": "$$\nV=\\frac{U}{q_0}\n$$"
+            },
+            {
+              "label": "Hiệu điện thế",
+              "formula": "$$\nV_a-V_b=\\frac{W_{a\\to b}}{q_0}\n$$"
+            },
+            {
+              "label": "Đơn vị điện thế",
+              "formula": "$$\n1\\,\\mathrm V=1\\,\\mathrm{J/C}\n$$"
+            },
+            {
+              "label": "Đơn vị điện trường",
+              "formula": "$$\n1\\,\\mathrm{V/m}=1\\,\\mathrm{N/C}\n$$"
+            }
+          ],
+          "variables": [
+            "$V$: Điện thế tại một điểm trong điện trường ($\\mathrm{V}$)",
+            "$U$: Thế năng tĩnh điện của điện tích thử $q_0$ tại điểm đó ($\\mathrm{J}$)",
+            "$q_0$: Điện tích thử dương khác không ($\\mathrm{C}$)",
+            "$V_a - V_b$: Hiệu điện thế giữa hai điểm $a$ và $b$ ($\\mathrm{V}$)",
+            "$W_{a\\to b}$: Công của lực tĩnh điện khi dịch chuyển $q_0$ từ $a$ đến $b$ ($\\mathrm{J}$)"
+          ],
+          "description": "q₀ là điện tích thử khác không, đủ nhỏ để không làm đổi phân bố nguồn. Chỉ hiệu điện thế có ý nghĩa độc lập với mốc."
+        },
+        "full_item_sha256": "8e7f72c61eefa8a1b074a97a64ddd2ce9c9b6595364c33b542130a2f2d4540d0",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          774,
+          775,
+          776
+        ],
+        "source_section": "23.2 Eq23.12–23.13",
+        "independent_read": "Nonzero perturbativelysmalltestcharge,VoltsJ/C. Positiveq0 convention is sufficient though formula works for either sign.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/potential/Công, động năng và electron-volt",
+        "section_index": 1,
+        "item_index": 1,
+        "actual_full_item": {
+          "name": "Công, động năng và electron-volt",
+          "formula": "$$\n\\begin{aligned}\n&W_{a\\to b}=q_0(V_a-V_b),\\\\\n&\\Delta K=-q_0\\Delta V,\\\\\n&1\\,\\mathrm{eV}=1.602176634\\times10^{-19}\\,\\mathrm J.\n\\end{aligned}\n$$",
+          "variables": [
+            "$\\Delta K$: Độ biến thiên động năng của hạt mang điện ($\\mathrm{J}$)",
+            "$\\Delta V$: Hiệu điện thế giữa điểm cuối và điểm đầu ($\\Delta V = V_b - V_a$) ($\\mathrm{V}$)",
+            "$1\\,\\mathrm{eV}$: Đơn vị năng lượng electron-volt ($\\approx 1{,}602\\times10^{-19}\\,\\mathrm{J}$)"
+          ],
+          "description": "Công thức động năng áp dụng khi chỉ lực điện sinh công. Electron-volt là đơn vị năng lượng, bằng năng lượng một điện tích có độ lớn e nhận qua hiệu điện thế có độ lớn 1 V."
+        },
+        "full_item_sha256": "5e9745590c84843d35a176476f17b559de205c257636fa53517714515914270d",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          775,
+          777,
+          779
+        ],
+        "source_section": "23.2",
+        "independent_read": "ΔV=Vb−Va,ΔK=−qΔV requires electricworkonly,eVisenergy.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/potential/Nguồn điểm và nhiều nguồn",
+        "section_index": 1,
+        "item_index": 2,
+        "actual_full_item": {
+          "name": "Nguồn điểm và nhiều nguồn",
+          "formula": "$$\n\\begin{aligned}\n&V = \\frac{kq}{r},\\\\\n&V_{123} = \\frac{kq_1}{r_1}+\\frac{kq_2}{r_2}+\\frac{kq_3}{r_3},\\\\\n&V = k\\sum_{i=1}^{n}\\frac{q_i}{r_i}.\n\\end{aligned}\n$$",
+          "variables": [
+            "$V$: Điện thế tại điểm khảo sát do các điện tích nguồn tạo ra ($\\mathrm{V}$)",
+            "$q_i$: Điện tích nguồn thứ $i$ mang dấu đại số ($\\mathrm{C}$)",
+            "$r_i$: Khoảng cách từ nguồn thứ $i$ đến điểm khảo sát ($\\mathrm{m}$)"
+          ],
+          "description": "Mốc ở vô hạn với hệ nguồn hữu hạn. Tổng có dấu. i chạy qua n nguồn, rᵢ là khoảng cách từ nguồn i tới điểm khảo sát."
+        },
+        "full_item_sha256": "9de70e606f0fea678df536e63f5fa297d7dd8910a0fb5361b8b3d7dcbd229a47",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          775
+        ],
+        "source_section": "23.2 Eq23.14–23.15",
+        "independent_read": "Scalar signed sum,finite sources and infinityreference,exclude singularsourcepoints.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/potential/Phân bố liên tục",
+        "section_index": 1,
+        "item_index": 3,
+        "actual_full_item": {
+          "name": "Phân bố liên tục",
+          "formulaRows": [
+            {
+              "label": "Điện thế của toàn nguồn",
+              "formula": "$$\nV=k\\int \\frac{dq}{r}\n$$"
+            },
+            {
+              "label": "Phần tử nguồn theo chiều dài",
+              "formula": "$$\ndq=\\lambda\\,d\\ell\n$$"
+            },
+            {
+              "label": "Phần tử nguồn trên mặt",
+              "formula": "$$\ndq=\\sigma\\,dA\n$$"
+            },
+            {
+              "label": "Phần tử nguồn trong thể tích",
+              "formula": "$$\ndq=\\rho\\,d\\mathcal V\n$$"
+            }
+          ],
+          "variables": [
+            "$V$: Điện thế do phân bố điện tích liên tục tạo ra ($\\mathrm{V}$)",
+            "$dq$: Phần tử điện tích vi phân ($\\mathrm{C}$)",
+            "$\\lambda$: Mật độ điện tích dài ($\\mathrm{C/m}$)",
+            "$\\sigma$: Mật độ điện tích mặt ($\\mathrm{C/m^2}$)",
+            "$\\rho$: Mật độ điện tích thể tích ($\\mathrm{C/m^3}$)",
+            "$r$: Khoảng cách từ phần tử $dq$ đến điểm khảo sát ($\\mathrm{m}$)"
+          ],
+          "description": "r đo từ từng phần nguồn tới điểm khảo sát. λ, σ, ρ là mật độ dài, mặt, thể tích. Chọn công thức dq theo hình học nguồn."
+        },
+        "full_item_sha256": "8f0479e24b5d89bfa4db2af245beec3428df558ef41519c4797f872ca18743ed",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          775,
+          780
+        ],
+        "source_section": "23.2–23.3 Eq23.16",
+        "independent_read": "dqgeometryanddensityunitscorrect. Infinityreference valid forfinite/convergentdistribution,notinfinitewire.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/field/Tích phân dọc đường",
+        "section_index": 2,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Tích phân dọc đường",
+          "formula": "$$\n\\begin{aligned}\n&V_a-V_b = \\int_a^b\\vec E\\cdot d\\vec\\ell,\\\\\n&dV = -\\vec E\\cdot d\\vec\\ell,\\\\\n&\\Delta V = -\\vec E\\cdot\\Delta\\vec r.\n\\end{aligned}\n$$",
+          "variables": [
+            "$V_a - V_b$: Hiệu điện thế giữa hai điểm $a$ và $b$ ($\\mathrm{V}$)",
+            "$\\vec E$: Vector cường độ điện trường ($\\mathrm{V/m}$ hoặc $\\mathrm{N/C}$)",
+            "$d\\vec\\ell$: Vector vi phân dịch chuyển trên đường tích phân ($\\mathrm{m}$)",
+            "$\\Delta\\vec r$: Vector độ dời trong điện trường đều ($\\mathrm{m}$)"
+          ],
+          "description": "Hai công thức đầu áp dụng trường tĩnh. Công thức cuối cần trường đều trên đường đi. Đường tích phân tránh điểm kỳ dị của mô hình nguồn."
+        },
+        "full_item_sha256": "64ce034637f46c7272a92a61d67d10ae387b4013d66b59b5f4504cc5529f9462",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          776,
+          787
+        ],
+        "source_section": "23.2 Eq23.17–23.18;23.5",
+        "independent_read": "Signs and pathorientationcorrect;lastrowexplicituniformcondition.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/field/Mặt đẳng thế và vật dẫn",
+        "section_index": 2,
+        "item_index": 1,
+        "actual_full_item": {
+          "name": "Mặt đẳng thế và vật dẫn",
+          "formula": "",
+          "description": "Điện thế không đổi trên mặt đẳng thế. Trường vuông góc mặt tại điểm trường khác không. Toàn vật dẫn cân bằng tĩnh điện đẳng thế. Hốc kín không có nguồn riêng có cùng thế với thành hốc và trường bằng không."
+        },
+        "full_item_sha256": "4aacb2987435279060a2d905df4c1c796d16ebb77564078b3dacb2ff16a27383",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          785,
+          786,
+          787
+        ],
+        "source_section": "23.4",
+        "independent_read": "NonzeroE normal,singleconnected conductor and closedemptycavity assumptions.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/field/Gradient trong tọa độ Descartes",
+        "section_index": 2,
+        "item_index": 2,
+        "actual_full_item": {
+          "name": "Gradient trong tọa độ Descartes",
+          "formula": "$$\n\\begin{aligned}\n&E_x = -\\frac{\\partial V}{\\partial x},\\\\\n&E_y = -\\frac{\\partial V}{\\partial y},\\\\\n&E_z = -\\frac{\\partial V}{\\partial z},\\\\\n&\\vec E = -\\nabla V.\n\\end{aligned}\n$$",
+          "variables": [
+            "$\\vec E$: Vector cường độ điện trường ($\\mathrm{V/m}$)",
+            "$E_x, E_y, E_z$: Các thành phần của vector điện trường theo các trục tọa độ ($\\mathrm{V/m}$)",
+            "$V$: Hàm điện thế phụ thuộc tọa độ không gian $x, y, z$ ($\\mathrm{V}$)"
+          ],
+          "description": "Cần V khả vi trong vùng khảo sát. Gradient hướng tăng thế nhanh nhất, điện trường hướng ngược lại. Đổi mốc bằng hằng số không đổi trường."
+        },
+        "full_item_sha256": "97fa812a329e094208bc481e241670822763d4275c80152368be7b090287e6ec",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          787,
+          788,
+          789
+        ],
+        "source_section": "23.5 Eq23.19–23.23",
+        "independent_read": "Negativepartialderivatives,gaugeconstantinvariance,differentiableregion.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/sources/Cầu dẫn và vỏ cầu đều",
+        "section_index": 3,
+        "item_index": 0,
+        "actual_full_item": {
+          "name": "Cầu dẫn và vỏ cầu đều",
+          "formulaRows": [
+            {
+              "label": "Ngoài cầu, r ≥ R",
+              "formula": "$$\nV(r)=\\frac{kQ}{r}\n$$"
+            },
+            {
+              "label": "Trong cầu, r ≤ R",
+              "formula": "$$\nV(r)=\\frac{kQ}{R}\n$$"
+            }
+          ],
+          "variables": [
+            "$V(r)$: Điện thế tại khoảng cách $r$ tính từ tâm quả cầu hoặc vỏ cầu dẫn ($\\mathrm{V}$)",
+            "$Q$: Tổng điện tích trên quả cầu hoặc vỏ cầu dẫn ($\\mathrm{C}$)",
+            "$R$: Bán kính của quả cầu dẫn hoặc vỏ cầu mỏng ($\\mathrm{m}$)",
+            "$r$: Khoảng cách từ tâm quả cầu đến điểm khảo sát ($\\mathrm{m}$)"
+          ],
+          "description": "Cầu dẫn cô lập đối xứng hoặc vỏ cầu mỏng tích điện đều, bán kính R. Mốc ở vô hạn. Không áp dụng công thức trong cho cầu cách điện đều theo thể tích."
+        },
+        "full_item_sha256": "cbc2f674228f1f70212ef4517643d4d3b5852f4976412349feda4f571b608db0",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          781
+        ],
+        "source_section": "23.3 Example23.8",
+        "independent_read": "Isolatedsphericalconductor/uniformthinshell,infinityreference,constantinside.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/sources/Cầu cách điện đều theo thể tích",
+        "section_index": 3,
+        "item_index": 1,
+        "actual_full_item": {
+          "name": "Cầu cách điện đều theo thể tích",
+          "formulaRows": [
+            {
+              "label": "Ngoài cầu và trên mặt, r ≥ R",
+              "formula": "$$\nV(r)=\\frac{kQ}{r}\n$$"
+            },
+            {
+              "label": "Trong cầu, r ≤ R",
+              "formula": "$$\nV(r)=\\frac{kQ}{2R}\\left(3-\\frac{r^2}{R^2}\\right)\n$$"
+            }
+          ],
+          "variables": [
+            "$V(r)$: Điện thế tại khoảng cách $r$ tính từ tâm khối cầu cách điện ($\\mathrm{V}$)",
+            "$Q$: Tổng điện tích phân bố đều trong toàn bộ khối cầu ($\\mathrm{C}$)",
+            "$R$: Bán kính của khối cầu cách điện ($\\mathrm{m}$)",
+            "$r$: Khoảng cách từ tâm đến điểm khảo sát bên trong hoặc bên ngoài quả cầu ($\\mathrm{m}$)"
+          ],
+          "description": "Q đều trong thể tích cầu bán kính R. Mốc ở vô hạn. Điện thế và thành phần trường liên tục tại R."
+        },
+        "full_item_sha256": "5d9b4a9813d6b8e728d821b319171d524545cda31fa2a279da88522d42c9a3a4",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          752,
+          753,
+          781
+        ],
+        "source_section": "22.4 Example22.9 plus23.3 integrationmethod",
+        "independent_read": "Checked by integrating actual Gaussfield and matchingV(R),not copied fromconductorshellformula.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/sources/Vòng đều trên trục",
+        "section_index": 3,
+        "item_index": 2,
+        "actual_full_item": {
+          "name": "Vòng đều trên trục",
+          "formula": "$$\n\\begin{aligned}\n&V(x) = \\frac{kQ}{\\sqrt{x^2+a^2}},\\\\\n&E_x = \\frac{kQx}{(x^2+a^2)^{3/2}}.\n\\end{aligned}\n$$",
+          "variables": [
+            "$V(x)$: Điện thế tại điểm trên trục cách tâm vòng dây khoảng cách $x$ ($\\mathrm{V}$)",
+            "$E_x$: Cường độ điện trường dọc theo trục đối xứng ($\\mathrm{V/m}$)",
+            "$Q$: Tổng điện tích phân bố đều trên vòng dây tròn ($\\mathrm{C}$)",
+            "$a$: Bán kính của vòng dây tròn mang điện ($\\mathrm{m}$)",
+            "$x$: Khoảng cách trên trục đo từ tâm vòng dây đến điểm khảo sát ($\\mathrm{m}$)"
+          ],
+          "description": "a là bán kính vòng, x đo dọc trục từ tâm. Mốc ở vô hạn. Công thức điện thế trên trục không cho phép lấy đạo hàm theo tọa độ ngoài trục."
+        },
+        "full_item_sha256": "4dec7a01886862682592a28f8dd6fd53ffd661c449da128e87039d965c2f7385",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          783,
+          789
+        ],
+        "source_section": "23.3 Example23.11;23.5 Example23.14",
+        "independent_read": "Axis-onlydomain,signedx,EzeroatcenterVnotzero.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/sources/Thanh đều, điểm trên đường trung trực",
+        "section_index": 3,
+        "item_index": 3,
+        "actual_full_item": {
+          "name": "Thanh đều, điểm trên đường trung trực",
+          "formulaRows": [
+            {
+              "label": "Khoảng cách s từ điểm khảo sát đến mỗi đầu thanh",
+              "formula": "$$\ns=\\sqrt{x^2+a^2}\n$$"
+            },
+            {
+              "label": "Điện thế tại điểm khảo sát",
+              "formula": "$$\nV(x)=\\frac{kQ}{2a}\\ln\\left(\\frac{s+a}{s-a}\\right)\n$$"
+            }
+          ],
+          "variables": [
+            "$V(x)$: Điện thế tại điểm trên đường trung trực của thanh thẳng mang điện ($\\mathrm{V}$)",
+            "$Q$: Tổng điện tích phân bố đều trên thanh dài $2a$ ($\\mathrm{C}$)",
+            "$a$: Nửa chiều dài của thanh thẳng mang điện ($\\mathrm{m}$)",
+            "$x$: Khoảng cách vuông góc từ điểm khảo sát đến tâm thanh ($x > 0$) ($\\mathrm{m}$)",
+            "$s$: Khoảng cách từ điểm khảo sát đến mỗi đầu mút của thanh ($\\mathrm{m}$)"
+          ],
+          "description": "Thanh dài 2a, x là khoảng cách vuông góc đến tâm, x khác không. s là khoảng cách tới mỗi đầu thanh, không phải một tọa độ độc lập. Mốc ở vô hạn."
+        },
+        "full_item_sha256": "8f598cc503eae70ce01354660d5087c195f5545c9ce7b1177621fad45c745fce",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          784
+        ],
+        "source_section": "23.3 Example23.12",
+        "independent_read": "Length2a,x>0,sdependent,dimensionlesspositivelog,infinityreference.",
+        "no_exercise_or_proof_in_item": true
+      },
+      {
+        "id": "potential/sources/Dây vô hạn và hai bản",
+        "section_index": 3,
+        "item_index": 4,
+        "actual_full_item": {
+          "name": "Dây vô hạn và hai bản",
+          "formulaRows": [
+            {
+              "label": "Hiệu điện thế của dây vô hạn",
+              "formula": "$$\n\\Delta V=2k\\lambda\\ln\\left(\\frac{r_2}{r_1}\\right)\n$$"
+            },
+            {
+              "label": "Thứ tự hai điểm trong hiệu điện thế",
+              "formula": "$$\n\\Delta V=V(r_1)-V(r_2)\n$$"
+            },
+            {
+              "label": "Điện thế giữa hai bản, trường đều",
+              "formula": "$$\nV(y)=V(0)-E_y y\n$$"
+            }
+          ],
+          "variables": [
+            "$\\Delta V$: Hiệu điện thế giữa hai điểm khảo sát ($\\Delta V = V(r_1) - V(r_2)$) ($\\mathrm{V}$)",
+            "$\\lambda$: Mật độ điện tích dài của dây thẳng vô hạn ($\\mathrm{C/m}$)",
+            "$r_1, r_2$: Khoảng cách từ hai điểm khảo sát đến trục dây dẫn ($r_2 > r_1$) ($\\mathrm{m}$)",
+            "$E_y$: Cường độ điện trường đều trong khe giữa hai bản phẳng song song ($\\mathrm{V/m}$)",
+            "$y$: Khoảng cách tính từ bản gốc tọa độ mang điện thế $V(0)$ ($\\mathrm{m}$)"
+          ],
+          "description": "Dây thẳng vô hạn có r₁, r₂ dương, không dùng mốc vô hạn. Hai bản lớn song song dùng trường đều trong khe khi bỏ hiệu ứng mép."
+        },
+        "full_item_sha256": "fa8530eb59b05d05ef3aa30fee9692af16cfc92e0869e070067271bfc8231415",
+        "verdict": "accepted-semantic-formula-domain-unit-review",
+        "finding_ids": [],
+        "source_pages_1based": [
+          782,
+          783
+        ],
+        "source_section": "23.3 Example23.9–23.10",
+        "independent_read": "ExplicitVa−Vb convention makes logpositiveforpositiveλandlarger r2. No infinityreference,lineaxisexcluded.",
+        "no_exercise_or_proof_in_item": true
+      }
+    ],
+    "wiki_terms": [
+      {
+        "id": "dien-truong",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-truong.md",
+        "full_markdown": "---\r\ntitle: \"Điện trường\"\r\nwikiTerm: dien-truong\r\nprev: false\r\nnext: false\r\n---\r\n\r\n# Điện trường\r\n\r\nĐiện trường là vector mô tả lực điện trên một đơn vị điện tích thử: $\\vec F=q\\vec E$. Trường do nguồn quyết định, trong khi dấu q quyết định chiều của lực điện.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nĐơn vị điện trường là newton trên coulomb, tương đương volt trên mét. Điện trường nhiều nguồn cộng vector tại cùng điểm. Trong tĩnh điện, $\\vec E=-\\nabla V$.\r\n\r\nĐường sức biểu diễn hướng trường, không phải quỹ đạo bắt buộc của hạt có vận tốc ban đầu. Điện trường cảm ứng có thể không là gradient của điện thế tĩnh đơn trị.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 21.\r\n\r\n## Ví dụ\r\n\r\nĐiện tích âm chịu lực ngược chiều điện trường tại cùng điểm.\r\n\r\n## Khi nào cần dùng?\r\n\r\nTính tương tác điện, thông lượng và quan hệ với điện thế.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nĐổi dấu điện tích thử có đổi chiều điện trường nguồn không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông nếu điện tích thử không làm thay đổi phân bố nguồn.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Điện tích](./dien-tich.md)\r\n- [Điện thế](./dien-the.md)\r\n- [Thông lượng](./thong-luong.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "d709ac8e8c5faf481dcd7da1cfd3a32788fa937e230a13ea3011eeedc34dadbe",
+        "quick_actual_all_fields": {
+          "name": "Điện trường",
+          "aliases": [
+            "Điện trường",
+            "điện trường",
+            "cường độ điện trường"
+          ],
+          "definition": "Điện trường là vector mô tả lực điện trên một đơn vị điện tích thử: $\\mathbf F=q\\mathbf E$. Trường do nguồn quyết định; dấu q quyết định chiều lực.",
+          "example": "Điện tích âm chịu lực ngược chiều điện trường tại cùng điểm.",
+          "use": "Tính tương tác điện, thông lượng và quan hệ với điện thế.",
+          "question": "Đổi dấu điện tích thử có đổi chiều điện trường nguồn không?",
+          "answer": "Không nếu điện tích thử không làm thay đổi phân bố nguồn."
+        },
+        "quick_fields_sha256": "2113455604721f5fcdb4b1f29fe533bafd500a3f8becd7d1cfbd7ad730e39a35",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "tich-vo-huong",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\tich-vo-huong.md",
+        "full_markdown": "---\ntitle: \"Tích vô hướng\"\nwikiTerm: tich-vo-huong\nprev: false\nnext: false\n---\n\n# Tích vô hướng\n\nTích vô hướng $u\\cdot v$ là tổng các tích thành phần tương ứng. Với vector Euclid, $u\\cdot v = \\|u\\|\\|v\\|\\cos \\theta$, liên hệ với góc giữa hai vector. Tích bằng 0 với hai vector khác 0 nghĩa là chúng vuông góc.\n\n<WikiUsage />\n\n## Giải thích kỹ thuật\n\n**Góc, chiếu và dấu.** Tích vô hướng dương khi góc nhỏ hơn 90°, âm khi góc lớn hơn 90°, bằng 0 khi hai vector khác 0 vuông góc. Hình chiếu vô hướng của u lên hướng đơn vị n là $u\\cdot n$.\n\nĐiều này xuất hiện trong công của lực và thông lượng: Chỉ thành phần cùng hướng độ dời hoặc pháp tuyến mới đóng góp. Công thức góc cần hai vector khác 0.\n\n## Ví dụ\n\nTích vô hướng của hai vector được tính theo từng thành phần:\n\n$$\n(1,2)\\cdot(3,4) = 1\\cdot3 + 2\\cdot4 = 11.\n$$\n\n## Khi nào cần dùng?\n\nĐọc tích ma trận, siêu phẳng, công và thông lượng.\n\n## Tự kiểm tra\n\n(1, 0) và (0, 1) có vuông góc không?\n\n<details><summary>Xem đáp án</summary>\n\nCó, vì tích vô hướng bằng 0.\n\n</details>\n\n## Thuật ngữ liên quan\n\n- [Chuẩn vector](./chuan.md)\n- [Ma trận](./ma-tran.md)\n- [Vector](./vector.md)\n\n## Tài liệu tham khảo\n\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, mục 1.10.\n",
+        "full_body": "\n**Góc, chiếu và dấu.** Tích vô hướng dương khi góc nhỏ hơn 90°, âm khi góc lớn hơn 90°, bằng 0 khi hai vector khác 0 vuông góc. Hình chiếu vô hướng của u lên hướng đơn vị n là $u\\cdot n$.\n\nĐiều này xuất hiện trong công của lực và thông lượng: Chỉ thành phần cùng hướng độ dời hoặc pháp tuyến mới đóng góp. Công thức góc cần hai vector khác 0.\n",
+        "full_body_chars": 344,
+        "body_sha256": "36c17c3ea09b590038603de90fb3ad1c9b531001294284a029c50d105f435f13",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "538bbce4fb8bb730fc7b19578edca71cddc3970bf17f5f52d57e07008df76064",
+        "quick_actual_all_fields": {
+          "name": "Tích vô hướng",
+          "aliases": [
+            "Tích vô hướng",
+            "tích vô hướng",
+            "dot product"
+          ],
+          "definition": "Tích vô hướng $u\\cdot v$ là tổng các tích thành phần tương ứng. Với vector Euclid, $u\\cdot v = \\|u\\|\\|v\\|\\cos \\theta$, liên hệ với góc giữa hai vector. Tích bằng 0 với hai vector khác 0 nghĩa là chúng vuông góc.",
+          "example": "Tích vô hướng của hai vector được tính theo từng thành phần:\n\n$$\n\\begin{aligned}&\n(1,2)\\cdot(3,4) = 1\\cdot3\\\\&\n \\quad+2\\cdot4\\\\&\n = 11.\n\\end{aligned}\n$$",
+          "use": "Đọc tích ma trận, siêu phẳng, công và thông lượng.",
+          "question": "(1, 0) và (0, 1) có vuông góc không?",
+          "answer": "Có, vì tích vô hướng bằng 0."
+        },
+        "quick_fields_sha256": "f8f12fb7e13eb81712f49cfffec61a5c507fb5b2093dc56b139ff57692cfc3e8",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "needs-format-correction",
+        "finding_ids": [
+          "REF22-03"
+        ]
+      },
+      {
+        "id": "tich-phan",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\tich-phan.md",
+        "full_markdown": "---\ntitle: \"Tích phân\"\nwikiTerm: tich-phan\nprev: false\nnext: false\n---\n\n# Tích phân\n\nTích phân xác định cộng dồn các đóng góp rất nhỏ trên một miền. Trong một biến, $\\int_a^b f(x)\\,dx$ là diện tích có dấu dưới đồ thị. Khi $f$ có nguyên hàm $F$ phù hợp, giá trị này bằng $F(b)-F(a)$. Tích phân đường và mặt mở rộng ý tưởng cộng dồn dọc đường hoặc trên mặt.\n\n<WikiUsage />\n\n## Giải thích kỹ thuật\n\n**Tích phân có dấu và đổi cận.** Đổi thứ tự cận làm đổi dấu. Nếu f âm trên một khoảng, phần đóng góp tích phân ở đó âm. Diện tích hình học cần xét |f|.\n\nĐịnh lý cơ bản của giải tích nối tích phân với đạo hàm: Khi F là nguyên hàm phù hợp của f, $\\int_a^b f(x)\\,dx=F(b)-F(a)$. Với phân phối liên tục, tích phân của mật độ xác suất trên toàn miền phải bằng 1.\n\n## Ví dụ\n\n$\\int_0^2 x\\,dx=\\left[\\frac{x^2}{2}\\right]_0^2=2$. Nếu f là mật độ xác suất, tích phân trên một khoảng cho xác suất của khoảng đó.\n\n## Khi nào cần dùng?\n\nHiểu phân phối liên tục, điện thế, thông lượng và trường của phân bố điện tích.\n\n## Tự kiểm tra\n\nTích phân $\\int_0^1 2\\,dx$ bằng bao nhiêu?\n\n<details><summary>Xem đáp án</summary>\n\n2.\n\n</details>\n\n## Thuật ngữ liên quan\n\n- [Quy tắc chuỗi](./quy-tac-chuoi.md)\n- [Gradient](./gradient.md)\n- [Vector](./vector.md)\n\n## Tài liệu tham khảo\n\nYoung & Freedman, University Physics with Modern Physics, ấn bản 15, mục 2.6.\n",
+        "full_body": "\n**Tích phân có dấu và đổi cận.** Đổi thứ tự cận làm đổi dấu. Nếu f âm trên một khoảng, phần đóng góp tích phân ở đó âm. Diện tích hình học cần xét |f|.\n\nĐịnh lý cơ bản của giải tích nối tích phân với đạo hàm: Khi F là nguyên hàm phù hợp của f, $\\int_a^b f(x)\\,dx=F(b)-F(a)$. Với phân phối liên tục, tích phân của mật độ xác suất trên toàn miền phải bằng 1.\n",
+        "full_body_chars": 358,
+        "body_sha256": "3349d5dd2b80d4d3e9dfb7c84cfd73dfce5046a2d43b228e7447fcb11283a7bc",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "7c09c98d8eac096abaa81c5e4a19470a72aa49039f1a184ace2f26177f685e46",
+        "quick_actual_all_fields": {
+          "name": "Tích phân",
+          "aliases": [
+            "Tích phân",
+            "tích phân",
+            "integral"
+          ],
+          "definition": "Tích phân xác định cộng dồn các đóng góp rất nhỏ trên một miền. Trong một biến, $\\int_a^b f(x)\\,dx$ là diện tích có dấu dưới đồ thị. Khi $f$ có nguyên hàm $F$ phù hợp, giá trị này bằng $F(b)-F(a)$. Tích phân đường và mặt mở rộng ý tưởng cộng dồn dọc đường hoặc trên mặt.",
+          "example": "$\\int_0^2 x\\,dx=\\left[\\frac{x^2}{2}\\right]_0^2=2$. Nếu f là mật độ xác suất, tích phân trên một khoảng cho xác suất của khoảng đó.",
+          "use": "Hiểu phân phối liên tục, điện thế, thông lượng và trường của phân bố điện tích.",
+          "question": "Tích phân $\\int_0^1 2\\,dx$ bằng bao nhiêu?",
+          "answer": "2."
+        },
+        "quick_fields_sha256": "7483c2a2a70a9f3d4a126af07af9a86dfe9d7683c372583201a74b16991b2308",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "vat-dan-cach-dien",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\vat-dan-cach-dien.md",
+        "full_markdown": "---\r\ntitle: \"Vật dẫn và vật cách điện\"\r\nwikiTerm: vat-dan-cach-dien\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Vật dẫn và vật cách điện\r\n\r\nVật dẫn cho điện tích dễ chuyển động qua vật, còn vật cách điện thì không. Kim loại có electron tự do. Ở cân bằng tĩnh điện, trường bên trong vật liệu dẫn bằng không.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nTrong kim loại, một phần electron ngoài cùng có thể di chuyển khắp vật, còn các hạt nhân nằm gần vị trí cố định. Trong chất cách điện, điện tích vẫn có thể dịch tương đối một khoảng nhỏ, gây phân cực, dù không chạy tự do qua toàn vật.\r\n\r\nỞ cân bằng tĩnh điện, trường trong vật liệu dẫn phải bằng không vì nếu khác không, các điện tích tự do sẽ chịu lực và có chuyển động tổng. Điều kiện này cần được nêu cùng kết luận.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, mục 21.2, trang 682–684 và mục 21.4, trang 692.\r\n\r\n## Ví dụ\r\n\r\nDây đồng truyền điện tích đến cầu kim loại, còn sợi nylon treo cầu ngăn điện tích thoát qua giá đỡ.\r\n\r\n## Khi nào cần dùng?\r\n\r\nGiải thích nhiễm điện tiếp xúc, nối đất và cân bằng tĩnh điện.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nTrường trong vật liệu dẫn bằng không có tự bảo đảm trường trong mọi lỗ rỗng bằng không không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Phải xét điện tích và cấu hình của lỗ rỗng riêng.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Điện tích](./dien-tich.md)\r\n- [Điện trường](./dien-truong.md)\r\n- [Phân cực điện](./phan-cuc-dien.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "bfcb15a893d2d82e5ea66bd293f0ddbee788b489c57525cfc163ceed219e3403",
+        "quick_actual_all_fields": {
+          "name": "Vật dẫn và vật cách điện",
+          "aliases": [
+            "vật dẫn",
+            "vật cách điện",
+            "electron tự do"
+          ],
+          "definition": "Vật dẫn cho điện tích dễ chuyển động qua vật, còn vật cách điện thì không. Kim loại có electron tự do. Ở cân bằng tĩnh điện, trường bên trong vật liệu dẫn bằng không.",
+          "example": "Dây đồng truyền điện tích đến cầu kim loại, còn sợi nylon treo cầu ngăn điện tích thoát qua giá đỡ.",
+          "use": "Giải thích nhiễm điện tiếp xúc, nối đất và cân bằng tĩnh điện.",
+          "question": "Trường trong vật liệu dẫn bằng không có tự bảo đảm trường trong mọi lỗ rỗng bằng không không?",
+          "answer": "Không. Phải xét điện tích và cấu hình của lỗ rỗng riêng."
+        },
+        "quick_fields_sha256": "f44d069cb4e46029bfad17731e6541f025fbfbc3f4287412f48918caa63817c4",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "dien-tich",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-tich.md",
+        "full_markdown": "---\r\ntitle: \"Điện tích\"\r\nwikiTerm: dien-tich\r\nprev: false\r\nnext: false\r\n---\r\n\r\n# Điện tích\r\n\r\nĐiện tích là đại lượng vật lý có hai dấu dương và âm, đo bằng coulomb (C). Cùng dấu đẩy nhau, trái dấu hút nhau trong tương tác tĩnh điện. Tổng điện tích của hệ cô lập được bảo toàn. Dấu và độ lớn là hai thông tin riêng.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\n**Nguồn và điện tích thử.** Điện tích nguồn tạo điện trường. Điện tích thử được dùng để mô tả lực tại điểm xét. Định nghĩa E dùng điện tích thử dương đủ nhỏ để không làm thay đổi phân bố nguồn trong mô hình.\r\n\r\nCộng điện tích là cộng đại số theo dấu, còn cộng điện trường là cộng vector. Hệ có tổng điện tích bằng 0 vẫn có thể tạo điện trường khác 0.\r\n\r\n## Ví dụ\r\n\r\nProton mang +e, electron mang −e, với $e \\approx  1.602\\times 10^{-19} C$. Hai điện tích +q và −q có tổng bằng 0.\r\n\r\n## Khi nào cần dùng?\r\n\r\nThiết lập lực Coulomb và phân biệt nguồn trường với điện tích thử.\r\n\r\n## Tự kiểm tra\r\n\r\nĐổi q từ dương sang âm có làm đảo chiều lực qE không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nCó, nếu điện trường E giữ nguyên.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Lực &amp; định luật Newton](./luc.md)\r\n- [Sóng &amp; pha](./song.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "d4d03e1f5819c27b6b5d1124f0fb156874850cb2cd1c51d2282f6f87e2be6f23",
+        "quick_actual_all_fields": {
+          "name": "Điện tích",
+          "aliases": [
+            "Điện tích",
+            "điện tích"
+          ],
+          "definition": "Điện tích là đại lượng vật lý có hai dấu dương và âm, đo bằng coulomb (C). Cùng dấu đẩy nhau, trái dấu hút nhau trong tương tác tĩnh điện. Tổng điện tích của hệ cô lập được bảo toàn. Dấu và độ lớn là hai thông tin riêng.",
+          "example": "Proton mang +e, electron mang −e, với $e \\approx  1.602\\times 10^{-19} C$. Hai điện tích +q và −q có tổng bằng 0.",
+          "use": "Thiết lập lực Coulomb và phân biệt nguồn trường với điện tích thử.",
+          "question": "Đổi q từ dương sang âm có làm đảo chiều lực qE không?",
+          "answer": "Có, nếu điện trường E giữ nguyên."
+        },
+        "quick_fields_sha256": "8165fc079db2d0e050dfc7fe3bbbe0592fc5bf8347226e5679b2af4b85969c23",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "dien-thong",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-thong.md",
+        "full_markdown": "---\r\ntitle: \"Điện thông\"\r\nwikiTerm: dien-thong\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Điện thông\r\n\r\nĐiện thông là tích phân thành phần điện trường theo pháp tuyến qua một mặt. Với mặt phẳng trong trường đều, $\\Phi_E=EA\\cos\\varphi$. Góc φ đo với pháp tuyến đã chọn.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nChia mặt thành phần nhỏ và cộng các tích vô hướng. Với mặt hở phải nêu hướng pháp tuyến, mặt kín luôn chọn ra ngoài. Đơn vị là N m²/C.\r\n\r\n$$\r\n\\Phi_E=\\int_A\\vec E\\cdot d\\vec A.\r\n$$\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 22, trang 718–737.\r\n\r\n## Ví dụ\r\n\r\nTrường đi xuyên hộp có thể cho điện thông âm ở mặt này, dương ở mặt đối diện và tổng bằng không.\r\n\r\n## Khi nào cần dùng?\r\n\r\nPhân biệt trường tại điểm với tích phân trường qua mặt.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nĐiện thông không có buộc trường không không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Phần đi vào có thể bù phần đi ra.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Thông lượng](./thong-luong.md)\r\n- [Tích vô hướng](./tich-vo-huong.md)\r\n- [Điện trường](./dien-truong.md)\r\n- [Định luật Gauss](./dinh-luat-gauss.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "47570d2166828a34dbe067ca2a1c51d1e06498ae364352cae1fad36e90eee84b",
+        "quick_actual_all_fields": {
+          "name": "Điện thông",
+          "aliases": [
+            "điện thông"
+          ],
+          "definition": "Điện thông là tích phân thành phần điện trường theo pháp tuyến qua một mặt. Với mặt phẳng trong trường đều, $\\Phi_E=EA\\cos\\varphi$. Góc φ đo với pháp tuyến đã chọn.",
+          "example": "Trường đi xuyên hộp có thể cho điện thông âm ở mặt này, dương ở mặt đối diện và tổng bằng không.",
+          "use": "Phân biệt trường tại điểm với tích phân trường qua mặt.",
+          "question": "Điện thông không có buộc trường không không?",
+          "answer": "Không. Phần đi vào có thể bù phần đi ra."
+        },
+        "quick_fields_sha256": "76a5437e7017a7e435f146267f6a89db36445a10000f91e6001cbd4d871d97dd",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "dinh-luat-gauss",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dinh-luat-gauss.md",
+        "full_markdown": "---\r\ntitle: \"Định luật Gauss\"\r\nwikiTerm: dinh-luat-gauss\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Định luật Gauss\r\n\r\nĐiện thông tổng qua mặt kín bằng tổng đại số điện tích bên trong chia $\\varepsilon_0$. Trường trong tích phân là trường của mọi nguồn. Nguồn ngoài không góp điện thông tổng.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nDạng tích phân là:\r\n\r\n$$\r\n\\Phi_E = \\oint\\vec E\\cdot d\\vec A = \\frac{Q_{\\mathrm{trong}}}{\\varepsilon_0}.\r\n$$\r\n\r\nNguồn ngoài có thể thay đổi trường tại từng điểm nhưng không đổi điện thông tổng. Chỉ rút E ra ngoài tích phân khi thành phần pháp tuyến không đổi trên phần mặt đang xét.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 22, trang 718–737.\r\n\r\n## Ví dụ\r\n\r\nMặt kín bao +q và −q có điện thông tổng bằng không dù trường trên mặt khác không.\r\n\r\n## Khi nào cần dùng?\r\n\r\nTìm điện tích được bao hoặc tìm trường khi có đủ đối xứng.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nBiết điện thông có luôn tìm được trường tại từng điểm không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Cần thêm thông tin về đối xứng hoặc phân bố trường.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Điện thông](./dien-thong.md)\r\n- [Mặt Gauss](./mat-gauss.md)\r\n- [Điện tích](./dien-tich.md)\r\n- [Vật dẫn và vật cách điện](./vat-dan-cach-dien.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "b23d68b417afa41195c94621cf840aba98d6bbb30525e365ca240e56a314389f",
+        "quick_actual_all_fields": {
+          "name": "Định luật Gauss",
+          "aliases": [
+            "định luật Gauss"
+          ],
+          "definition": "Điện thông tổng qua mặt kín bằng tổng đại số điện tích bên trong chia $\\varepsilon_0$. Trường trong tích phân là trường của mọi nguồn. Nguồn ngoài không góp điện thông tổng.",
+          "example": "Mặt kín bao +q và −q có điện thông tổng bằng không dù trường trên mặt khác không.",
+          "use": "Tìm điện tích được bao hoặc tìm trường khi có đủ đối xứng.",
+          "question": "Biết điện thông có luôn tìm được trường tại từng điểm không?",
+          "answer": "Không. Cần thêm thông tin về đối xứng hoặc phân bố trường."
+        },
+        "quick_fields_sha256": "b15a68e427bf43feb54f47b15d4a7f24edf7e415d5c0ba64457065e86f8a7378",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "mat-gauss",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\mat-gauss.md",
+        "full_markdown": "---\r\ntitle: \"Mặt Gauss\"\r\nwikiTerm: mat-gauss\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Mặt Gauss\r\n\r\nMặt Gauss là mặt kín tưởng tượng được chọn để áp dụng định luật Gauss. Pháp tuyến hướng ra ngoài. Không cần có một vật thể thật ở vị trí mặt.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nĐối xứng cầu dùng cầu đồng tâm. Đối xứng trụ dùng trụ đồng trục. Đối xứng phẳng dùng hình trụ xuyên mặt nguồn với hai đáy song song mặt nguồn. Muốn tính trường tại một điểm, chọn mặt đi qua điểm ấy. Định luật đúng với mọi mặt kín, nhưng chỉ một số lựa chọn làm tích phân đơn giản.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 22, trang 718–737.\r\n\r\n## Ví dụ\r\n\r\nMặt trụ đồng trục với dây vô hạn có trường vuông góc mặt bên và song song hai đáy.\r\n\r\n## Khi nào cần dùng?\r\n\r\nChọn mặt có hình học phù hợp đối xứng nguồn để tính điện thông.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nMặt cầu có tự làm trường của nguồn không đối xứng trở nên đều không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Đối xứng phải thuộc toàn cấu hình nguồn.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Định luật Gauss](./dinh-luat-gauss.md)\r\n- [Tích phân](./tich-phan.md)\r\n- [Vector](./vector.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "f19060a565f5b19a99f9f8a8344f5971503933bd9b1084a323d726fe6bccd454",
+        "quick_actual_all_fields": {
+          "name": "Mặt Gauss",
+          "aliases": [
+            "mặt Gauss",
+            "mặt Gaussian"
+          ],
+          "definition": "Mặt Gauss là mặt kín tưởng tượng được chọn để áp dụng định luật Gauss. Pháp tuyến hướng ra ngoài. Không cần có một vật thể thật ở vị trí mặt.",
+          "example": "Mặt trụ đồng trục với dây vô hạn có trường vuông góc mặt bên và song song hai đáy.",
+          "use": "Chọn mặt có hình học phù hợp đối xứng nguồn để tính điện thông.",
+          "question": "Mặt cầu có tự làm trường của nguồn không đối xứng trở nên đều không?",
+          "answer": "Không. Đối xứng phải thuộc toàn cấu hình nguồn."
+        },
+        "quick_fields_sha256": "d2552c72539baf11db43be6a1a8d1ae8d37ccc937f523436f603d81705092a90",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "che-chan-tinh-dien",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\che-chan-tinh-dien.md",
+        "full_markdown": "---\r\ntitle: \"Che chắn tĩnh điện\"\r\nwikiTerm: che-chan-tinh-dien\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Che chắn tĩnh điện\r\n\r\nỞ cân bằng tĩnh điện, điện tích vật dẫn kín tái phân bố để trường trong vật liệu dẫn bằng không. Hốc kín không chứa nguồn riêng cũng được che chắn khỏi trường ngoài.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nNếu hốc chứa nguồn q, mặt Gauss trong vật liệu dẫn cho điện tích thành hốc −q. Vật dẫn cô lập có tổng qC thì mặt ngoài mang qC + q. Nối đất cho phép trao đổi điện tích, nên tổng điện tích vật dẫn không còn cố định. Hốc trống có trường bằng không, còn hốc có nguồn nói chung có trường khác không.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 22, trang 718–737.\r\n\r\n## Ví dụ\r\n\r\nHộp kim loại bao thiết bị đo che chắn điện trường tĩnh bên ngoài khỏi khoang trong.\r\n\r\n## Khi nào cần dùng?\r\n\r\nPhân biệt vật liệu dẫn, hốc có nguồn, hốc trống và nối đất.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nHốc chứa nguồn q có nhất thiết có trường bằng không không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Thành hốc cảm ứng tổng −q nhưng trường trong hốc có thể khác không.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Vật dẫn và vật cách điện](./vat-dan-cach-dien.md)\r\n- [Định luật Gauss](./dinh-luat-gauss.md)\r\n- [Phân cực điện](./phan-cuc-dien.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "682c89ab3d808693135b96818ffb12fb5f263f6272ea4864f3525d690e75ee12",
+        "quick_actual_all_fields": {
+          "name": "Che chắn tĩnh điện",
+          "aliases": [
+            "che chắn tĩnh điện",
+            "lồng Faraday"
+          ],
+          "definition": "Ở cân bằng tĩnh điện, điện tích vật dẫn kín tái phân bố để trường trong vật liệu dẫn bằng không. Hốc kín không chứa nguồn riêng cũng được che chắn khỏi trường ngoài.",
+          "example": "Hộp kim loại bao thiết bị đo che chắn điện trường tĩnh bên ngoài khỏi khoang trong.",
+          "use": "Phân biệt vật liệu dẫn, hốc có nguồn, hốc trống và nối đất.",
+          "question": "Hốc chứa nguồn q có nhất thiết có trường bằng không không?",
+          "answer": "Không. Thành hốc cảm ứng tổng −q nhưng trường trong hốc có thể khác không."
+        },
+        "quick_fields_sha256": "a144e76a02cea6bb20b872336637cc5bee1709eef3f926572a06eb4e146587c3",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "cong-nang-luong",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\cong-nang-luong.md",
+        "full_markdown": "---\r\ntitle: \"Công & năng lượng\"\r\nwikiTerm: \"cong-nang-luong\"\r\nprev: false\r\nnext: false\r\n---\r\n\r\n# Công & năng lượng\r\n\r\nCông của một lực đo phần năng lượng được truyền qua tác dụng của lực trên độ dời. Với lực không đổi, công là tích vô hướng của lực và độ dời. Tổng công của các lực bằng độ biến thiên động năng của chất điểm. Với lực thế, công bằng độ giảm thế năng.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nVới lực không đổi và độ dời $\\Delta\\vec r$, công là:\r\n\r\n$$\r\nW=\\vec F\\cdot\\Delta\\vec r.\r\n$$\r\n\r\nNếu góc giữa lực và độ dời là $\\theta$, có thể viết $W=Fs\\cos\\theta$, với $s=\\|\\Delta\\vec r\\|$. Khi lực thay đổi, dùng tích phân dọc quỹ đạo:\r\n\r\n$$\r\nW=\\int_A^B\\vec F\\cdot d\\vec r.\r\n$$\r\n\r\nCông có thể dương, âm hoặc bằng không. Đơn vị SI là joule, với $1\\,\\mathrm J=1\\,\\mathrm{N\\,m}$.\r\n\r\nVới chất điểm có khối lượng không đổi, tổng công của các lực thỏa mãn định lý công–động năng:\r\n\r\n$$\r\nW_{\\mathrm{net}}=K_B-K_A.\r\n$$\r\n\r\nTrong cơ học Newton, $K=\\tfrac12mv^2$. Đây là công của hợp lực, không phải công của tùy ý một lực riêng lẻ.\r\n\r\nVới lực thế:\r\n\r\n$$\r\nW_{A\\to B}=U_A-U_B.\r\n$$\r\n\r\nCông này không phụ thuộc đường đi. Thế năng phụ thuộc mốc chọn, nhưng hiệu thế năng không đổi khi thêm cùng một hằng số vào mọi giá trị thế năng. Trong trường tĩnh điện, $U=qV$, nên:\r\n\r\n$$\r\nW_{A\\to B}=q(V_A-V_B).\r\n$$\r\n\r\nKhi chỉ có lực thế sinh công, tổng $K+U$ không đổi. Nếu có ma sát làm tăng nội năng, phải tính phần chuyển hóa ấy khi xét tổng năng lượng.\r\n\r\n## Ví dụ\r\n\r\nLực $2\\,\\mathrm N$ cùng hướng độ dời $3\\,\\mathrm m$ sinh công $6\\,\\mathrm J$. Lực vuông góc độ dời không sinh công.\r\n\r\n## Khi nào cần dùng?\r\n\r\nDùng định lý công–động năng, xét bảo toàn cơ năng và liên hệ công điện với hiệu điện thế.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nLực luôn vuông góc độ dời có sinh công không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông, tích vô hướng bằng 0.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Lực &amp; định luật Newton](./luc.md)\r\n- [Tích vô hướng](./tich-vo-huong.md)\r\n- [Điện thế](./dien-the.md)\r\n\r\n## Tài liệu tham khảo\r\n\r\nYoung & Freedman, *University Physics with Modern Physics*, ấn bản 15, chương 6–7 và mục 23.1–23.2.\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "8b3bfdc14a72fecdf1c1ecbf0e25c0bc2b60839005caef89ffafcd7b9c4ef94d",
+        "quick_actual_all_fields": {
+          "name": "Công & năng lượng",
+          "aliases": [
+            "Công & năng lượng",
+            "công của lực",
+            "thế năng",
+            "năng lượng",
+            "work"
+          ],
+          "definition": "Công của một lực đo phần năng lượng được truyền qua tác dụng của lực trên độ dời. Với lực không đổi, công là tích vô hướng của lực và độ dời. Tổng công của các lực bằng độ biến thiên động năng của chất điểm. Với lực thế, công bằng độ giảm thế năng.",
+          "example": "Lực $2\\,\\mathrm N$ cùng hướng độ dời $3\\,\\mathrm m$ sinh công $6\\,\\mathrm J$. Lực vuông góc độ dời không sinh công.",
+          "use": "Dùng định lý công–động năng, xét bảo toàn cơ năng và liên hệ công điện với hiệu điện thế.",
+          "question": "Lực luôn vuông góc độ dời có sinh công không?",
+          "answer": "Không, tích vô hướng bằng 0."
+        },
+        "quick_fields_sha256": "c3a5343dc4bbdb4b5456574cd61815401a241f8f5f2075b63bb7a7a8112a8741",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "gradient",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\gradient.md",
+        "full_markdown": "---\r\ntitle: \"Gradient\"\r\nwikiTerm: gradient\r\nprev: false\r\nnext: false\r\n---\r\n\r\n# Gradient\r\n\r\nGradient $\\nabla f$ là vector các đạo hàm riêng. Tại điểm khả vi, nó chỉ hướng tăng nhanh nhất của f theo khoảng cách Euclid. Hướng $-\\nabla f$ là hướng giảm nhanh nhất tại điểm đó. Một bước quá dài theo hướng này vẫn có thể làm giá trị tăng.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\n**Công thức và xấp xỉ cục bộ.** Với hàm khả vi $f:\\mathbb{R}^n\\to\\mathbb{R}$, gradient là:\r\n\r\n$$\\nabla f(x)=\\left(\\frac{\\partial f}{\\partial x_1},\\ldots,\\frac{\\partial f}{\\partial x_n}\\right).$$\r\n\r\nVới độ dời nhỏ $\\Delta x$, ta có $f(x+\\Delta x)\\approx f(x)+\\nabla f(x)\\cdot\\Delta x$. Đạo hàm theo hướng đơn vị u bằng $\\nabla f(x)\\cdot u$, lớn nhất khi u cùng hướng gradient nếu gradient khác 0. Khi gradient bằng 0, không có một hướng tăng nhanh nhất được xác định từ công thức này.\r\n\r\n**Gradient Descent** cập nhật $x_{k+1}=x_k-\\eta\\nabla f(x_k)$. Hướng giảm là thông tin cục bộ. Bước $\\eta$ quá dài vẫn có thể làm f tăng. Với hàm $f(x)=x^2$, hệ thức lặp là $x_{k+1}=(1-2\\eta)x_k$, trong đó khoảng $0<\\eta<1$ làm $|x|$ giảm, $\\eta=1$ làm đổi dấu nhưng giữ nguyên độ lớn, còn $\\eta>1$ có thể gây phân kỳ.\r\n\r\n## Ví dụ\r\n\r\n$f(x,y)=x^2+y^2$: $\\nabla f=(2x,2y)$. Tại (1, 2), gradient là (2, 4).\r\n\r\n## Khi nào cần dùng?\r\n\r\nHiểu Gradient Descent và $\\mathbf{E}=-\\nabla V$.\r\n\r\n## Tự kiểm tra\r\n\r\nGradient của $f(x,y) = x+2y$ là gì?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\n(1, 2).\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Đạo hàm riêng](./dao-ham-rieng.md)\r\n- [Vector](./vector.md)\r\n- [Đạo hàm](./dao-ham.md)\r\n- [Chuẩn vector](./chuan.md)\r\n- [Điện thế](./dien-the.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "d0028ca03aee92850bc6d458d241cecc1d1931c61c6be19c8ba9a54c6b56672c",
+        "quick_actual_all_fields": {
+          "name": "Gradient",
+          "aliases": [
+            "Gradient",
+            "gradient",
+            "∇V"
+          ],
+          "definition": "Gradient $\\nabla f$ là vector các đạo hàm riêng. Tại điểm khả vi, nó chỉ hướng tăng nhanh nhất của f theo khoảng cách Euclid. Hướng −$\\nabla f$ là hướng giảm nhanh nhất tại điểm đó. Một bước quá dài theo hướng này vẫn có thể làm giá trị tăng.",
+          "example": "$f(x,y) = x^{2}+y^{2}$: $\\nabla f = (2x, 2y)$. Tại (1, 2), gradient là (2, 4).",
+          "use": "Hiểu Gradient Descent và $E = -\\nabla V$.",
+          "question": "Gradient của $f(x,y) = x+2y$ là gì?",
+          "answer": "(1, 2)."
+        },
+        "quick_fields_sha256": "8ab193a06349467827a4f8e8370366262478c93a0da76e8d80f589383c2993c3",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "dien-the",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\dien-the.md",
+        "full_markdown": "---\r\ntitle: \"Điện thế\"\r\nwikiTerm: dien-the\r\nprev: false\r\nnext: false\r\n---\r\n\r\n# Điện thế\r\n\r\nĐiện thế $V$ là thế năng điện trên một đơn vị điện tích thử, xác định bởi biểu thức $V=\\frac{U}{q}$ trong mô hình tĩnh điện, với mốc thế năng đã chọn. Hiệu điện thế $\\Delta V$ có ý nghĩa trực tiếp hơn giá trị tuyệt đối V. Đơn vị volt ($1\\,\\mathrm V=1\\,\\frac{\\mathrm J}{\\mathrm C}$). Trong trường tĩnh điện, $\\Delta V=-\\int\\vec E\\cdot d\\vec\\ell$.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\n**Quan hệ cục bộ với trường.** Trong tĩnh điện:\r\n\r\n$$\r\n\\begin{aligned}\r\nV_B-V_A &= -\\int_A^B\\vec E\\cdot d\\vec\\ell, \\\\\r\n\\vec E &= -\\nabla V.\r\n\\end{aligned}\r\n$$\r\n\r\nV là vô hướng, E là vector. $V=0$ tại một điểm không kéo theo $E=0$ vì gradient đo biến thiên không gian của V. Trong vật dẫn liên thông ở cân bằng tĩnh điện, $E=0$ trong lòng và V không đổi. Với trường biến thiên theo thời gian, cần mô hình rộng hơn để mô tả đầy đủ điện trường.\r\n\r\n## Ví dụ\r\n\r\nĐiện tích +2 C đi từ điểm có điện thế 5 V đến 3 V: Thế năng thay đổi $2\\times (3-5)=-4 J$.\r\n\r\n## Khi nào cần dùng?\r\n\r\nHiểu liên hệ $E=-\\nabla V$, tụ điện và công của điện trường.\r\n\r\n## Tự kiểm tra\r\n\r\n1 volt tương đương bao nhiêu joule trên coulomb?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\n$1 J/C$.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Công &amp; năng lượng](./cong-nang-luong.md)\r\n- [Điện tích](./dien-tich.md)\r\n- [Gradient](./gradient.md)\r\n- [Tích phân](./tich-phan.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "0212c6096126a5f764ca55314a98764e6c19378df59bf08a0488826ce7755132",
+        "quick_actual_all_fields": {
+          "name": "Điện thế",
+          "aliases": [
+            "Điện thế",
+            "điện thế",
+            "hiệu điện thế"
+          ],
+          "definition": "Điện thế V là thế năng điện trên một đơn vị điện tích thử: $V=\\frac{U}{q}$ trong mô hình tĩnh điện, với mốc thế năng đã chọn. Hiệu điện thế $\\Delta V$ có ý nghĩa trực tiếp hơn giá trị tuyệt đối V. Đơn vị volt $(V)=J/C$. Trong trường tĩnh điện, $\\Delta V=-\\int\\mathbf E\\cdot d\\mathbf l$.",
+          "example": "Điện tích +2 C đi từ điểm có điện thế 5 V đến 3 V: Thế năng thay đổi $2\\times (3-5)=-4 J$.",
+          "use": "Hiểu liên hệ $E=-\\nabla V$, tụ điện và công của điện trường.",
+          "question": "1 volt tương đương bao nhiêu joule trên coulomb?",
+          "answer": "$1 J/C$."
+        },
+        "quick_fields_sha256": "c11df4b64c6b23b6561b031ece62244b9ff27dd24a9b2899004e1f34799d13bc",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      },
+      {
+        "id": "the-nang-dien",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\the-nang-dien.md",
+        "full_markdown": "---\r\ntitle: \"Thế năng điện\"\r\nwikiTerm: the-nang-dien\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Thế năng điện\r\n\r\nThế năng điện là năng lượng tương tác của một hệ điện tích trong trường tĩnh. Công lực điện từ a đến b bằng $U_a-U_b$. Với hai nguồn điểm và mốc ở vô hạn, $U=\\frac{kqq_0}{r}$.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nThế năng chỉ xác định đến một hằng số cộng. Với hai nguồn điểm hữu hạn, mốc ở vô hạn cho:\r\n\r\n$$\r\nU=\\frac{kqq_0}{r}.\r\n$$\r\n\r\nCông lực điện bằng độ giảm thế năng, còn công lực ngoài khi di chuyển chậm bằng độ tăng thế năng. Với ba nguồn phải đếm ba cặp khác nhau:\r\n\r\n$$\r\nU_{123} = \\frac{kq_1q_2}{r_{12}} + \\frac{kq_1q_3}{r_{13}} + \\frac{kq_2q_3}{r_{23}}.\r\n$$\r\n\r\nĐiện thế V thuộc phân bố nguồn, còn thế năng của điện tích thử còn phụ thuộc q₀ qua U = q₀V. Vì vậy hạt âm đi về thế cao có thể giảm thế năng.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 23, trang 747–769.\r\n\r\n## Ví dụ\r\n\r\nHai nguồn cùng dấu có thế năng dương với mốc ở vô hạn. Thả tự do cho khoảng cách tăng thì thế năng giảm và động năng tăng.\r\n\r\n## Khi nào cần dùng?\r\n\r\nTính công, lắp ráp hệ nguồn và tốc độ hạt khi chỉ lực điện sinh công.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nThế năng chỉ thuộc riêng hạt đang chuyển động không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Nó thuộc tương tác của hệ gồm hạt và các nguồn tạo trường.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Điện thế](./dien-the.md)\r\n- [Công &amp; năng lượng](./cong-nang-luong.md)\r\n- [Điện trường](./dien-truong.md)\r\n- [Điện tích](./dien-tich.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "4372242af5f37bad78f31df0077c198fe8b87fb18c294504542d7de136064f7c",
+        "quick_actual_all_fields": {
+          "name": "Thế năng điện",
+          "aliases": [
+            "thế năng điện"
+          ],
+          "definition": "Thế năng điện là năng lượng tương tác của một hệ điện tích trong trường tĩnh. Công lực điện từ a đến b bằng $U_a-U_b$. Với hai nguồn điểm và mốc ở vô hạn, $U=\\frac{kqq_0}{r}$. Với ba nguồn điểm, phải cộng ba cặp tương tác khác nhau:\n\n$$\n\\begin{aligned}\n&U_{123} = \\frac{kq_1q_2}{r_{12}}\\\\\n&\\quad+\\frac{kq_1q_3}{r_{13}}\\\\\n&\\quad+\\frac{kq_2q_3}{r_{23}}.\n\\end{aligned}\n$$",
+          "example": "Hai nguồn cùng dấu có thế năng dương với mốc ở vô hạn. Thả tự do cho khoảng cách tăng thì thế năng giảm và động năng tăng.",
+          "use": "Tính công, lắp ráp hệ nguồn và tốc độ hạt khi chỉ lực điện sinh công.",
+          "question": "Thế năng chỉ thuộc riêng hạt đang chuyển động không?",
+          "answer": "Không. Nó thuộc tương tác của hệ gồm hạt và các nguồn tạo trường."
+        },
+        "quick_fields_sha256": "f2012a43e568b83dc7090426a727fcd48ab8356acec93c440d11a9aea49ed6b7",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "needs-format-correction",
+        "finding_ids": [
+          "REF23-02"
+        ]
+      },
+      {
+        "id": "electron-volt",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\electron-volt.md",
+        "full_markdown": "---\r\ntitle: \"Electron-volt\"\r\nwikiTerm: electron-volt\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Electron-volt\r\n\r\nElectron-volt, ký hiệu eV, là đơn vị năng lượng. Nó bằng độ lớn năng lượng mà một điện tích có độ lớn e nhận khi đi qua hiệu điện thế có độ lớn 1 V.\r\n\r\n$$\r\n1\\,\\mathrm{eV} = 1.602176634\\times10^{-19}\\,\\mathrm J.\r\n$$\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nĐiện tích có độ lớn e qua chênh thế có độ lớn ΔV nhận năng lượng e|ΔV| khi lực điện làm nó tăng tốc. Định nghĩa đơn vị là:\r\n\r\n$$\r\n\\begin{aligned}\r\n1\\,\\mathrm{eV} &= 1.602176634\\times10^{-19}\\,\\mathrm J, \\\\\r\n1\\,\\mathrm{keV} &= 10^3\\,\\mathrm{eV}, \\\\\r\n1\\,\\mathrm{MeV} &= 10^6\\,\\mathrm{eV}, \\\\\r\n1\\,\\mathrm{GeV} &= 10^9\\,\\mathrm{eV}.\r\n\\end{aligned}\r\n$$\r\n\r\nVới ion có điện tích ze, độ tăng động năng là |z|e|ΔV| khi chuyển động theo chiều được gia tốc. Dấu công được xác định bằng q(V_đầu − V_cuối), không bằng riêng độ lớn hiệu điện thế.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 23, trang 747–769.\r\n\r\n## Ví dụ\r\n\r\nMột ion mang +2e nhận 2 keV khi được gia tốc qua chênh thế có độ lớn 1 kV.\r\n\r\n## Khi nào cần dùng?\r\n\r\nDiễn tả năng lượng nguyên tử, hạt nhân và chùm hạt, đổi sang SI khi dùng khối lượng kg.\r\n\r\n## Câu hỏi ôn lại\r\n\r\neV có phải đơn vị điện thế không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Volt là điện thế, electron-volt là năng lượng.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Điện thế](./dien-the.md)\r\n- [Công &amp; năng lượng](./cong-nang-luong.md)\r\n- [Điện tích](./dien-tich.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "781442a0e3e3e4683b49e0069a9e5fdb6f90ec58026dd896a242dfe20452faf0",
+        "quick_actual_all_fields": {
+          "name": "Electron-volt",
+          "aliases": [
+            "electron-volt",
+            "electron volt"
+          ],
+          "definition": "Electron-volt, ký hiệu eV, là đơn vị năng lượng. Nó bằng độ lớn năng lượng mà một điện tích có độ lớn e nhận khi đi qua hiệu điện thế có độ lớn 1 V. Giá trị chính xác theo SI là:\n$$\n\\begin{aligned}\n&1\\,\\mathrm{eV} = 1.602176634\\\\\n&\\quad\\times10^{-19}\\,\\mathrm J.\n\\end{aligned}\n$$",
+          "example": "Một ion mang +2e nhận 2 keV khi được gia tốc qua chênh thế có độ lớn 1 kV.",
+          "use": "Diễn tả năng lượng nguyên tử, hạt nhân và chùm hạt, đổi sang SI khi dùng khối lượng kg.",
+          "question": "eV có phải đơn vị điện thế không?",
+          "answer": "Không. Volt là điện thế, electron-volt là năng lượng."
+        },
+        "quick_fields_sha256": "452c94e3e7be493b495e9596e8e1ca1c477a0ea750c563aed040bf644214be16",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "needs-format-correction",
+        "finding_ids": [
+          "REF23-03"
+        ]
+      },
+      {
+        "id": "mat-dang-the",
+        "file": "C:\\Users\\Ai\\.codex\\worktrees\\physics-final-acceptance-20261031\\StudyHub\\docs\\wiki\\mat-dang-the.md",
+        "full_markdown": "---\r\ntitle: \"Mặt đẳng thế\"\r\nwikiTerm: mat-dang-the\r\nprev: False\r\nnext: False\r\n---\r\n\r\n# Mặt đẳng thế\r\n\r\nMặt đẳng thế là tập điểm có cùng điện thế. Dịch chuyển trên mặt không làm lực điện sinh công. Tại điểm điện trường khác không, điện trường vuông góc mặt.\r\n\r\n<WikiUsage />\r\n\r\n## Giải thích kỹ thuật\r\n\r\nTrên một mặt đẳng thế, thay đổi điện thế bằng không. Quan hệ vi phân là:\r\n\r\n$$\r\ndV=-\\vec E\\cdot d\\vec\\ell.\r\n$$\r\n\r\nMọi dịch chuyển tiếp tuyến cho tích vô hướng bằng không, nên trường khác không phải theo pháp tuyến. Các mặt đẳng thế không cắt nhau ở vùng V là hàm đơn trị. Khi nhiều mặt được vẽ với cùng bước chênh thế, các mặt sát nhau hơn biểu thị trường mạnh hơn trong giới hạn bước nhỏ.\r\n\r\nToàn vật dẫn cân bằng tĩnh điện có cùng V. Hốc kín không chứa nguồn riêng cũng có V bằng thành hốc và trường bằng không. Hốc có nguồn riêng thường không đẳng thế trong thể tích.\r\n\r\nTài liệu tham khảo: Young & Freedman, ấn bản 15, chương 23, trang 747–769.\r\n\r\n## Ví dụ\r\n\r\nNguồn điểm tạo các mặt đẳng thế cầu đồng tâm và đường sức xuyên tâm.\r\n\r\n## Khi nào cần dùng?\r\n\r\nĐọc hình học điện thế, liên hệ mật độ các mức điện thế với độ lớn trường.\r\n\r\n## Câu hỏi ôn lại\r\n\r\nỞ điểm trường bằng không, có xác định hướng vuông góc của trường được không?\r\n\r\n<details><summary>Xem đáp án</summary>\r\n\r\nKhông. Vector không không có hướng, nên phát biểu về hướng cần trường khác không.\r\n\r\n</details>\r\n\r\n## Thuật ngữ liên quan\r\n\r\n- [Điện thế](./dien-the.md)\r\n- [Điện trường](./dien-truong.md)\r\n- [Gradient](./gradient.md)\r\n- [Vật dẫn và vật cách điện](./vat-dan-cach-dien.md)\r\n",
+        "full_body": null,
+        "full_body_chars": 0,
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fullbody_read": true,
+        "full_public_markdown_sha256": "7b034835cb8ddc4d68cbd6bf8c8491899bad64891cec17a042853f7cd49d3c43",
+        "quick_actual_all_fields": {
+          "name": "Mặt đẳng thế",
+          "aliases": [
+            "mặt đẳng thế",
+            "đường đẳng thế"
+          ],
+          "definition": "Mặt đẳng thế là tập điểm có cùng điện thế. Dịch chuyển trên mặt không làm lực điện sinh công. Tại điểm điện trường khác không, điện trường vuông góc mặt.",
+          "example": "Nguồn điểm tạo các mặt đẳng thế cầu đồng tâm và đường sức xuyên tâm.",
+          "use": "Đọc hình học điện thế, liên hệ mật độ các mức điện thế với độ lớn trường.",
+          "question": "Ở điểm trường bằng không, có xác định hướng vuông góc của trường được không?",
+          "answer": "Không. Vector không không có hướng, nên phát biểu về hướng cần trường khác không."
+        },
+        "quick_fields_sha256": "8a29f53194b70c4344a4566f5fb909166d901e1183b1dcd25d45acd55c486761",
+        "public_technical_body_verdict": "accepted-semantic-definition-domain-review",
+        "quick_reference_verdict": "accepted-semantic-read",
+        "finding_ids": []
+      }
+    ],
+    "findings": [
+      {
+        "id": "REF22-01",
+        "severity": "P2",
+        "category": "missing-necessary-condition",
+        "field": "docs/.vitepress/physics-gauss-course.mjs → gaussCheatsheet.sections[symmetry].items[Nguồn đều trong thể tích]",
+        "problem": "The cylinder formula rho*r/(2epsilon0) is listed for a uniformly charged insulating cylinder without an infinite-length/away-from-ends condition. A finite cylinder generally has a nonzero axial component.",
+        "exact_proposed_change": {
+          "variables[1]": "$E_{r,\\mathrm{cylinder}}$: Thành phần điện trường theo phương bán kính bên trong khối trụ cách điện dài vô hạn tích điện đều ($r \\le R$) ($\\mathrm{V/m}$)",
+          "description": "Các biểu thức trong vật cách điện có mật độ thể tích đều. Công thức cho khối trụ giả thiết trụ dài vô hạn, hoặc áp dụng gần đúng ở vùng cách xa hai đầu của trụ rất dài. Bên ngoài dùng toàn điện tích hoặc mật độ dài được bao."
+        },
+        "source_basis": [
+          {
+            "pdf_page_1based": 751,
+            "printed_page": 731,
+            "section": "22.4, Example22.6",
+            "basis": "Source explicitly assumes an infinitely long wire, explains finite wire loses uniform cylindrical-surface field, and extends translational symmetry to a long uniform cylinder."
+          },
+          {
+            "pdf_page_1based": 758,
+            "printed_page": 738,
+            "section": "Chapter22summary",
+            "basis": "The conducting-cylinder comparison is explicitly infinite; finite-sphere formulas are separate."
+          }
+        ],
+        "numeric_check_ids": [
+          "volume_symmetries",
+          "finite_cylinder_counterexample"
+        ],
+        "status": "confirmed-unapplied"
+      },
+      {
+        "id": "REF22-02",
+        "severity": "P2",
+        "category": "missing-necessary-condition",
+        "field": "docs/.vitepress/physics-gauss-course.mjs → gaussCheatsheet.sections[symmetry].items[Mặt vô hạn và hai bản đối diện]",
+        "problem": "The gap formula and zero-outside claim describe plates merely as opposite-sign. Equal magnitude ±sigma and no external field are necessary to specify the ideal capacitor case; opposite signs alone do not guarantee outside cancellation.",
+        "exact_proposed_change": {
+          "variables[1]": "$E_{\\mathrm{khe}}$: Độ lớn điện trường trong khe giữa hai bản dẫn phẳng song song rất lớn, mang mật độ điện tích đối diện $+\\sigma$ và $-\\sigma$ có cùng độ lớn, khi bỏ hiệu ứng mép và không có trường ngoài ($\\mathrm{V/m}$)",
+          "description": "Một mặt phẳng vô hạn tích điện đều cho trường hai phía. Với hai bản dẫn phẳng song song rất lớn mang điện tích bằng nhau về độ lớn và trái dấu, không có trường ngoài và bỏ hiệu ứng mép, trường giữa hai bản hướng từ dương đến âm, còn trường ngoài bằng không."
+        },
+        "source_basis": [
+          {
+            "pdf_page_1based": 752,
+            "printed_page": 732,
+            "section": "22.4, Example22.8",
+            "basis": "First sentence explicitly gives equal magnitude and opposite signs, +sigma/-sigma; following text states large plates compared with separation and negligible fringing."
+          }
+        ],
+        "numeric_check_ids": [
+          "sheet_and_plate_conditions"
+        ],
+        "status": "confirmed-unapplied"
+      },
+      {
+        "id": "REF23-01",
+        "severity": "P2",
+        "category": "missing-necessary-condition",
+        "field": "docs/.vitepress/physics-potential-course.mjs → potentialCheatsheet.sections[energy].items[Trường tĩnh điện và bảo toàn cơ năng]",
+        "problem": "The conservation row says only conservative forces do work, but U_a/U_b variables are explicitly electric potential energy. Gravity also conservative can change K+Uelectric. Slow external-work equality similarly needs other-force work excluded.",
+        "exact_proposed_change": {
+          "formulaRows[1].label": "Công lực ngoài khi di chuyển chậm, không có lực khác sinh công",
+          "formulaRows[2].label": "Cơ năng khi chỉ lực điện sinh công",
+          "variables[2]": "$W_{\\mathrm{ngoai}}$: Công của ngoại lực cân bằng lực điện khi di chuyển điện tích với động năng không đổi và không có lực khác sinh công ($\\mathrm{J}$)",
+          "description": "Lực điện trong trường tĩnh là lực thế. Với U là thế năng tĩnh điện, công lực ngoài bằng độ tăng U khi động năng không đổi và các lực khác không sinh công. Tổng K + U được bảo toàn khi chỉ lực điện sinh công. Nếu có lực thế khác sinh công, phải cộng cả thế năng tương ứng."
+        },
+        "source_basis": [
+          {
+            "pdf_page_1based": 768,
+            "printed_page": 748,
+            "section": "23.1, Eq23.2–23.3",
+            "basis": "General conservation uses total potential energy for all conservative forces; electric-only U is a specialization."
+          },
+          {
+            "pdf_page_1based": 773,
+            "printed_page": 753,
+            "section": "23.1, external-work paragraph",
+            "basis": "External force is equal and opposite to electric-field force and moves slowly without increasing kinetic energy."
+          },
+          {
+            "pdf_page_1based": 779,
+            "printed_page": 759,
+            "section": "23.2, Example23.7",
+            "basis": "Source explicitly states only conservative electric force acts before using Ka+Ua=Kb+Ub with U=qV."
+          }
+        ],
+        "numeric_check_ids": [
+          "electric_only_U_counterexample",
+          "work_energy_charge_sign"
+        ],
+        "status": "confirmed-unapplied"
+      },
+      {
+        "id": "REF23-02",
+        "severity": "P2",
+        "category": "active-quick-reference-format",
+        "field": "docs/.vitepress/physics-potential-foundations.mjs → potentialConcepts[the-nang-dien].definition",
+        "problem": "The active quick-popover definition breaks the sum before +terms into three aligned lines, violating the project relation-only line-break rule. The actual public Wiki body already has an intact one-line equality.",
+        "exact_proposed_change": {
+          "replace_math_block": "$$\nU_{123} = \\frac{kq_1q_2}{r_{12}} + \\frac{kq_1q_3}{r_{13}} + \\frac{kq_2q_3}{r_{23}}.\n$$",
+          "alternative_for_narrow_views": "Name U12,U13,U23 on separate equality lines, then U123=U12+U13+U23, as the existing explicit CS does. Do not break before addition operators."
+        },
+        "source_basis": [
+          {
+            "pdf_page_1based": 772,
+            "printed_page": 752,
+            "section": "23.1, energy of a system of point charges",
+            "basis": "Distinct pair energies are summed once."
+          },
+          {
+            "pdf_page_1based": 790,
+            "printed_page": 770,
+            "section": "Chapter23summary",
+            "basis": "Potential energies remain scalar sums; source does not motivate broken operator transcription."
+          }
+        ],
+        "numeric_check_ids": [
+          "pair_energy_once"
+        ],
+        "status": "confirmed-unapplied"
+      },
+      {
+        "id": "REF23-03",
+        "severity": "P2",
+        "category": "active-quick-reference-format",
+        "field": "docs/.vitepress/physics-potential-foundations.mjs → potentialConcepts[electron-volt].definition and potentialWikiDetails[electron-volt]",
+        "problem": "Both active quick definition and module technical-detail text split the mantissa from ×10^-19 across lines. Public docs/wiki/electron-volt.md already keeps the exact SI factor together.",
+        "exact_proposed_change": {
+          "definition_math": "$$\n1\\,\\mathrm{eV} = 1.602176634\\times10^{-19}\\,\\mathrm J.\n$$",
+          "technical_detail_math": "$$\n\\begin{aligned}\n1\\,\\mathrm{eV} &= 1.602176634\\times10^{-19}\\,\\mathrm J, \\\\\n1\\,\\mathrm{keV} &= 10^3\\,\\mathrm{eV}, \\\\\n1\\,\\mathrm{MeV} &= 10^6\\,\\mathrm{eV}, \\\\\n1\\,\\mathrm{GeV} &= 10^9\\,\\mathrm{eV}.\n\\end{aligned}\n$$"
+        },
+        "source_basis": [
+          {
+            "pdf_page_1based": 777,
+            "printed_page": 757,
+            "section": "23.2, Electron Volts",
+            "basis": "Source defines energy e×1V and powers of energy units, does not separate multiplier from mantissa. Exact1.602176634 is supported as the input SI constant, source rounds1.602."
+          }
+        ],
+        "numeric_check_ids": [
+          "electron_volt"
+        ],
+        "status": "confirmed-unapplied"
+      },
+      {
+        "id": "REF22-03",
+        "severity": "P2",
+        "category": "active-quick-reference-format",
+        "field": "docs/.vitepress/concepts.mjs → concepts[tich-vo-huong].example",
+        "problem": "The effective prerequisite quick example breaks (1,2)·(3,4)=1·3 before +2·4; public docs/wiki/tich-vo-huong.md already has the complete short equality on one line.",
+        "exact_proposed_change": {
+          "example": "Tích vô hướng của hai vector được tính theo từng thành phần:\n\n$$\n(1,2)\\cdot(3,4) = 1\\cdot3 + 2\\cdot4 = 11.\n$$"
+        },
+        "source_basis": [
+          {
+            "pdf_page_1based": 743,
+            "printed_page": 723,
+            "section": "22.2, Eq22.5",
+            "basis": "Electric flux uses an ordinary dot product, with the complete component contributions."
+          }
+        ],
+        "numeric_check_ids": [
+          "prerequisite_examples"
+        ],
+        "status": "confirmed-unapplied"
+      }
+    ],
+    "numeric_checks": {
+      "epsilon0_used_F_m": 8.8541878128e-12,
+      "k_used_SI": 8987551792.261171,
+      "checks": [
+        {
+          "id": "signed_flux",
+          "actual_result": {
+            "open_flux_N_m2_C": 1.0,
+            "opposite_orientation_flux": -1.0,
+            "closed_uniform_flux": 0.0,
+            "field_norm_N_C": 5.385164807134504
+          },
+          "checked_claim": "Normals/signs are essential. Zero total flux does not imply zero field.",
+          "status": "passed"
+        },
+        {
+          "id": "gauss_all_sources",
+          "actual_result": {
+            "inside_charge_C": 2e-09,
+            "inside_flux": 225.88181347460397,
+            "q_over_eps": 225.88181347460383,
+            "external_charge_flux": -2.4604199466841334e-13
+          },
+          "checked_claim": "Gauss encloses signed charge; external charge changes local field but zero net closed flux.",
+          "status": "passed"
+        },
+        {
+          "id": "infinite_wire_signed",
+          "actual_result": {
+            "lambda_C_m": -3e-09,
+            "radius_m": 0.07,
+            "Er_V_m": -770.3615821938146,
+            "cylindrical_flux": -135.52908808476226,
+            "enclosed_charge_over_eps": -135.5290880847623
+          },
+          "checked_claim": "Er is signed outward component, not nonnegative magnitude; requires infinite translationally symmetric line or long-wire approximation away ends.",
+          "status": "passed"
+        },
+        {
+          "id": "volume_symmetries",
+          "actual_result": {
+            "rho_C_m3": -4e-09,
+            "sphere_Er": -4.517636269492076,
+            "infinite_cylinder_Er": -6.776454404238114,
+            "ratio_cylinder_to_sphere": 1.5
+          },
+          "checked_claim": "Sphere and infinite-cylinder formulas follow their different enclosed volumes. Finite cylinder has an axial end field and is not described by rho*r/(2eps).",
+          "status": "passed"
+        },
+        {
+          "id": "finite_cylinder_counterexample",
+          "actual_result": {
+            "radius_m": 0.05,
+            "half_length_m": 0.1,
+            "axis_z_m": 0.2,
+            "rho_C_m3": 1e-08,
+            "actual_axis_Ez_V_m": 4.328614053678217,
+            "rho_r_over_2eps_on_axis": 0.0
+          },
+          "checked_claim": "A finite cylinder cannot use an infinite-cylinder radial-only formula without stated end-effect approximation.",
+          "status": "passed"
+        },
+        {
+          "id": "sheet_and_plate_conditions",
+          "actual_result": {
+            "single_sheet_E_magnitude": 112.94090673730192,
+            "equal_opposite_sheets_gap_E": 225.88181347460383,
+            "equal_opposite_sheets_outside_E": 0.0,
+            "unequal_plus2nC_minus1nC_sheet_outside_E": 56.47045336865096,
+            "added_external_uniform_E": 100.0
+          },
+          "checked_claim": "Cancellation outside needs equal opposite sheet charges and absence of an added external field. Opposite signs alone do not specify the ideal capacitor configuration.",
+          "status": "passed"
+        },
+        {
+          "id": "conductor_cavity",
+          "actual_result": {
+            "q_C": 3e-09,
+            "conductor_total_C": -1e-09,
+            "inner_wall_C": -3e-09,
+            "outer_surface_C": 1.9999999999999997e-09,
+            "sum_surface_C": -1.0000000000000003e-09
+          },
+          "checked_claim": "E=0 in conductor material does not imply E=0 in a charged cavity. Grounding permits changing conductor total charge.",
+          "status": "passed"
+        },
+        {
+          "id": "work_energy_charge_sign",
+          "actual_result": [
+            {
+              "q_C": 2e-09,
+              "deltaU_J": -3.0000000000000004e-07,
+              "Welectric_J": 3.0000000000000004e-07,
+              "deltaK_only_electric_J": 3.0000000000000004e-07
+            },
+            {
+              "q_C": -2e-09,
+              "deltaU_J": 3.0000000000000004e-07,
+              "Welectric_J": -3.0000000000000004e-07,
+              "deltaK_only_electric_J": -3.0000000000000004e-07
+            }
+          ],
+          "checked_claim": "Positive charge gains kinetic energy moving to lower V; negative charge moving same way loses kinetic energy if electric force alone does work.",
+          "status": "passed"
+        },
+        {
+          "id": "electric_only_U_counterexample",
+          "actual_result": {
+            "gravity_drop_m": 1.0,
+            "mass_kg": 1.0,
+            "deltaK_J": 9.81,
+            "electric_deltaU_J": 0.0,
+            "delta_K_plus_Uelectric_J": 9.81
+          },
+          "checked_claim": "Only conservative forces is insufficient for conservation of K+Uelectric when gravity also does work. Include all potential energies or restrict work to electric force.",
+          "status": "passed"
+        },
+        {
+          "id": "electron_volt",
+          "actual_result": {
+            "one_eV_J_exact": 1.602176634e-19,
+            "two_e_ion_over_1kV_J": 3.204353268e-16,
+            "energy_eV": 2000.0,
+            "wikiexample_dU_J": -4
+          },
+          "checked_claim": "eV is energy; ion gain2keV at accelerating1kV. Wiki charge2C5V→3V gives−4J.",
+          "status": "passed"
+        },
+        {
+          "id": "pair_energy_once",
+          "actual_result": {
+            "pair_energies_J": [
+              -5.392531075356703e-07,
+              8.987551792261172e-08,
+              -8.987551792261172e-08
+            ],
+            "sum_J": -5.392531075356703e-07,
+            "pair_count": 3
+          },
+          "checked_claim": "Three charges have three distinct pair energies, not the sum of q_i V_i without1/2.",
+          "status": "passed"
+        },
+        {
+          "id": "uniform_sphere_V_E_boundary",
+          "actual_result": [
+            {
+              "r_m": 0.03,
+              "V_V": 523.0755143096003,
+              "minus_derivative_Er": 1078.5062150944213,
+              "Gauss_Er": 1078.5062150713404
+            },
+            {
+              "r_m": 0.1,
+              "V_V": 359.5020716904469,
+              "minus_derivative_Er": 3594.9937544330623,
+              "Gauss_Er": 3595.0207169044684
+            },
+            {
+              "r_m": 0.2,
+              "V_V": 179.75103584522344,
+              "minus_derivative_Er": 898.7551792500881,
+              "Gauss_Er": 898.755179226117
+            }
+          ],
+          "checked_claim": "Uniform solid sphere V is not constant inside; V and E continuous at surface, conductor V constant inside.",
+          "status": "passed"
+        },
+        {
+          "id": "ring_axis_gradient",
+          "actual_result": [
+            {
+              "x_m": -0.04,
+              "V": -280.7239547132222,
+              "Ex": 2738.770289539616
+            },
+            {
+              "x_m": 0,
+              "V": -359.5020716904469,
+              "Ex": -0.0
+            },
+            {
+              "x_m": 0.04,
+              "V": -280.7239547132222,
+              "Ex": -2738.770289539616
+            }
+          ],
+          "checked_claim": "Signed x derivative gives signed axial component. Nonzero V at center can coexist with zero field. Off-axis derivatives cannot follow from axis-only V.",
+          "status": "passed"
+        },
+        {
+          "id": "finite_rod_log_potential",
+          "actual_result": {
+            "x_m": 0.06,
+            "half_length_a_m": 0.08,
+            "analytic_V": 370.2688066507206,
+            "quadrature_V": 370.26880665072025,
+            "log_argument": 8.999999999999998
+          },
+          "checked_claim": "x>0,a>0 and s=sqrt(x²+a²) ensure positive dimensionless logarithm; s is dependent, not an independent coordinate.",
+          "status": "passed"
+        },
+        {
+          "id": "infinite_line_potential_sign",
+          "actual_result": {
+            "V_r1_minus_V_r2": 74.75635421930777,
+            "V_r2_minus_V_r1": -74.75635421930777,
+            "r1": 0.03,
+            "r2": 0.12,
+            "lambda": 3e-09
+          },
+          "checked_claim": "Current CS explicitly uses V(r1)−V(r2), making positive log ratio correct. No zero-at-infinity choice for infinite line.",
+          "status": "passed"
+        },
+        {
+          "id": "full_cartesian_gradient",
+          "actual_result": {
+            "point": [
+              0.2,
+              0.3,
+              0.4
+            ],
+            "numeric_E": [
+              -3.4999999996010445,
+              -1.8100000001020078,
+              -0.0
+            ],
+            "analytic_E": [
+              -3.5,
+              -1.81,
+              0
+            ],
+            "E_at_origin": [
+              -2,
+              0,
+              0
+            ],
+            "constant_offset_effect": 0
+          },
+          "checked_claim": "Negative gradient,partial components,gauge-constant invariance; Ez=0 does not mean field zero at origin.",
+          "status": "passed"
+        },
+        {
+          "id": "prerequisite_examples",
+          "actual_result": {
+            "dot_product": 11,
+            "integral_x_0_2": 2.0,
+            "integral_2_0_1": 2,
+            "gradient_x2_y2_at1_2": [
+              2,
+              4
+            ],
+            "gradient_x_plus_2y": [
+              1,
+              2
+            ],
+            "work_2N_3m": 6
+          },
+          "checked_claim": "Full prerequisite examples recalculated.",
+          "status": "passed"
+        }
+      ]
+    },
+    "summary": {
+      "CS_items_read_full": 22,
+      "CS_items_with_condition_findings": 3,
+      "CS_items_accepted": 19,
+      "Wiki_unique_terms_fullbody_read": 15,
+      "Wiki_public_technical_bodies_semantically_accepted": 15,
+      "quick_reference_terms_with_format_findings": 3,
+      "confirmed_findings": 6,
+      "independent_python_checks": 17,
+      "all_checks_ran": true,
+      "blanket_pass": false
+    },
+    "limits": [
+      "No authored,Git,manifest,index,otherQA,build,dev,network,fetch,install orcleanup changes.",
+      "No browser/responsive QA for CS/QuickWiki performed here. Exacttext operatorbreak findings follow project rules; no claimed renderedoverflow.",
+      "Relevant quickobjectprecedence evaluated with irrelevant importedfamilies stubbed; not a fullapplicationmoduleimport. FullWikiMarkdown independentlyread andhashbound.",
+      "AllsourcePDFnumericexamples outside boundedCS/Wiki scope are excluded. Pythonchecks demonstrate principles/formulas andcounterexamples rather than claiming fullchapterexerciseverification.",
+      "SI exacteconstant kept from currentcontent; suppliedtextbook rounds1.602×10^-19. Noexternalstandardbrowse performed.",
+      "Only current listedprerequisite/supportingterms were reviewed; transitive relatedWiki links not expanded."
+    ]
+  },
+  "numericRerun": {
+    "epsilon0_used_F_m": 8.8541878128e-12,
+    "k_used_SI": 8987551792.261171,
+    "checks": [
+      {
+        "id": "signed_flux",
+        "actual_result": {
+          "open_flux_N_m2_C": 1.0,
+          "opposite_orientation_flux": -1.0,
+          "closed_uniform_flux": 0.0,
+          "field_norm_N_C": 5.385164807134504
+        },
+        "checked_claim": "Normals/signs are essential. Zero total flux does not imply zero field.",
+        "status": "passed"
+      },
+      {
+        "id": "gauss_all_sources",
+        "actual_result": {
+          "inside_charge_C": 2e-09,
+          "inside_flux": 225.88181347460397,
+          "q_over_eps": 225.88181347460383,
+          "external_charge_flux": -2.4604199466841334e-13
+        },
+        "checked_claim": "Gauss encloses signed charge; external charge changes local field but zero net closed flux.",
+        "status": "passed"
+      },
+      {
+        "id": "infinite_wire_signed",
+        "actual_result": {
+          "lambda_C_m": -3e-09,
+          "radius_m": 0.07,
+          "Er_V_m": -770.3615821938146,
+          "cylindrical_flux": -135.52908808476226,
+          "enclosed_charge_over_eps": -135.5290880847623
+        },
+        "checked_claim": "Er is signed outward component, not nonnegative magnitude; requires infinite translationally symmetric line or long-wire approximation away ends.",
+        "status": "passed"
+      },
+      {
+        "id": "volume_symmetries",
+        "actual_result": {
+          "rho_C_m3": -4e-09,
+          "sphere_Er": -4.517636269492076,
+          "infinite_cylinder_Er": -6.776454404238114,
+          "ratio_cylinder_to_sphere": 1.5
+        },
+        "checked_claim": "Sphere and infinite-cylinder formulas follow their different enclosed volumes. Finite cylinder has an axial end field and is not described by rho*r/(2eps).",
+        "status": "passed"
+      },
+      {
+        "id": "finite_cylinder_counterexample",
+        "actual_result": {
+          "radius_m": 0.05,
+          "half_length_m": 0.1,
+          "axis_z_m": 0.2,
+          "rho_C_m3": 1e-08,
+          "actual_axis_Ez_V_m": 4.328614053678217,
+          "rho_r_over_2eps_on_axis": 0.0
+        },
+        "checked_claim": "A finite cylinder cannot use an infinite-cylinder radial-only formula without stated end-effect approximation.",
+        "status": "passed"
+      },
+      {
+        "id": "sheet_and_plate_conditions",
+        "actual_result": {
+          "single_sheet_E_magnitude": 112.94090673730192,
+          "equal_opposite_sheets_gap_E": 225.88181347460383,
+          "equal_opposite_sheets_outside_E": 0.0,
+          "unequal_plus2nC_minus1nC_sheet_outside_E": 56.47045336865096,
+          "added_external_uniform_E": 100.0
+        },
+        "checked_claim": "Cancellation outside needs equal opposite sheet charges and absence of an added external field. Opposite signs alone do not specify the ideal capacitor configuration.",
+        "status": "passed"
+      },
+      {
+        "id": "conductor_cavity",
+        "actual_result": {
+          "q_C": 3e-09,
+          "conductor_total_C": -1e-09,
+          "inner_wall_C": -3e-09,
+          "outer_surface_C": 1.9999999999999997e-09,
+          "sum_surface_C": -1.0000000000000003e-09
+        },
+        "checked_claim": "E=0 in conductor material does not imply E=0 in a charged cavity. Grounding permits changing conductor total charge.",
+        "status": "passed"
+      },
+      {
+        "id": "work_energy_charge_sign",
+        "actual_result": [
+          {
+            "q_C": 2e-09,
+            "deltaU_J": -3.0000000000000004e-07,
+            "Welectric_J": 3.0000000000000004e-07,
+            "deltaK_only_electric_J": 3.0000000000000004e-07
+          },
+          {
+            "q_C": -2e-09,
+            "deltaU_J": 3.0000000000000004e-07,
+            "Welectric_J": -3.0000000000000004e-07,
+            "deltaK_only_electric_J": -3.0000000000000004e-07
+          }
+        ],
+        "checked_claim": "Positive charge gains kinetic energy moving to lower V; negative charge moving same way loses kinetic energy if electric force alone does work.",
+        "status": "passed"
+      },
+      {
+        "id": "electric_only_U_counterexample",
+        "actual_result": {
+          "gravity_drop_m": 1.0,
+          "mass_kg": 1.0,
+          "deltaK_J": 9.81,
+          "electric_deltaU_J": 0.0,
+          "delta_K_plus_Uelectric_J": 9.81
+        },
+        "checked_claim": "Only conservative forces is insufficient for conservation of K+Uelectric when gravity also does work. Include all potential energies or restrict work to electric force.",
+        "status": "passed"
+      },
+      {
+        "id": "electron_volt",
+        "actual_result": {
+          "one_eV_J_exact": 1.602176634e-19,
+          "two_e_ion_over_1kV_J": 3.204353268e-16,
+          "energy_eV": 2000.0,
+          "wikiexample_dU_J": -4
+        },
+        "checked_claim": "eV is energy; ion gain2keV at accelerating1kV. Wiki charge2C5V→3V gives−4J.",
+        "status": "passed"
+      },
+      {
+        "id": "pair_energy_once",
+        "actual_result": {
+          "pair_energies_J": [
+            -5.392531075356703e-07,
+            8.987551792261172e-08,
+            -8.987551792261172e-08
+          ],
+          "sum_J": -5.392531075356703e-07,
+          "pair_count": 3
+        },
+        "checked_claim": "Three charges have three distinct pair energies, not the sum of q_i V_i without1/2.",
+        "status": "passed"
+      },
+      {
+        "id": "uniform_sphere_V_E_boundary",
+        "actual_result": [
+          {
+            "r_m": 0.03,
+            "V_V": 523.0755143096003,
+            "minus_derivative_Er": 1078.5062150944213,
+            "Gauss_Er": 1078.5062150713404
+          },
+          {
+            "r_m": 0.1,
+            "V_V": 359.5020716904469,
+            "minus_derivative_Er": 3594.9937544330623,
+            "Gauss_Er": 3595.0207169044684
+          },
+          {
+            "r_m": 0.2,
+            "V_V": 179.75103584522344,
+            "minus_derivative_Er": 898.7551792500881,
+            "Gauss_Er": 898.755179226117
+          }
+        ],
+        "checked_claim": "Uniform solid sphere V is not constant inside; V and E continuous at surface, conductor V constant inside.",
+        "status": "passed"
+      },
+      {
+        "id": "ring_axis_gradient",
+        "actual_result": [
+          {
+            "x_m": -0.04,
+            "V": -280.7239547132222,
+            "Ex": 2738.770289539616
+          },
+          {
+            "x_m": 0,
+            "V": -359.5020716904469,
+            "Ex": -0.0
+          },
+          {
+            "x_m": 0.04,
+            "V": -280.7239547132222,
+            "Ex": -2738.770289539616
+          }
+        ],
+        "checked_claim": "Signed x derivative gives signed axial component. Nonzero V at center can coexist with zero field. Off-axis derivatives cannot follow from axis-only V.",
+        "status": "passed"
+      },
+      {
+        "id": "finite_rod_log_potential",
+        "actual_result": {
+          "x_m": 0.06,
+          "half_length_a_m": 0.08,
+          "analytic_V": 370.2688066507206,
+          "quadrature_V": 370.26880665072025,
+          "log_argument": 8.999999999999998
+        },
+        "checked_claim": "x>0,a>0 and s=sqrt(x²+a²) ensure positive dimensionless logarithm; s is dependent, not an independent coordinate.",
+        "status": "passed"
+      },
+      {
+        "id": "infinite_line_potential_sign",
+        "actual_result": {
+          "V_r1_minus_V_r2": 74.75635421930777,
+          "V_r2_minus_V_r1": -74.75635421930777,
+          "r1": 0.03,
+          "r2": 0.12,
+          "lambda": 3e-09
+        },
+        "checked_claim": "Current CS explicitly uses V(r1)−V(r2), making positive log ratio correct. No zero-at-infinity choice for infinite line.",
+        "status": "passed"
+      },
+      {
+        "id": "full_cartesian_gradient",
+        "actual_result": {
+          "point": [
+            0.2,
+            0.3,
+            0.4
+          ],
+          "numeric_E": [
+            -3.4999999996010445,
+            -1.8100000001020078,
+            -0.0
+          ],
+          "analytic_E": [
+            -3.5,
+            -1.81,
+            0
+          ],
+          "E_at_origin": [
+            -2,
+            0,
+            0
+          ],
+          "constant_offset_effect": 0
+        },
+        "checked_claim": "Negative gradient,partial components,gauge-constant invariance; Ez=0 does not mean field zero at origin.",
+        "status": "passed"
+      },
+      {
+        "id": "prerequisite_examples",
+        "actual_result": {
+          "dot_product": 11,
+          "integral_x_0_2": 2.0,
+          "integral_2_0_1": 2,
+          "gradient_x2_y2_at1_2": [
+            2,
+            4
+          ],
+          "gradient_x_plus_2y": [
+            1,
+            2
+          ],
+          "work_2N_3m": 6
+        },
+        "checked_claim": "Full prerequisite examples recalculated.",
+        "status": "passed"
+      }
+    ]
+  },
+  "parentQualification": "Workerfinitecylinderexampleusespointoutsidefinitecylinder,soaloneisnotacounterexampletoinsideformula. Parentindependentlycheckednonzeroaxialfieldataninterioroffmidplane point analyticallyandbyquadrature. Missinginfinite/long-away-endconditionstillconfirmed.",
+  "parentCounterexamples": {
+    "scope": "Independent counterexamples establish missing conditions, not a new empirical physics claim. Dimensionless rho/epsilon scale used for sheet and cylinder geometry checks.",
+    "electricEnergyWithConservativeGravity": {
+      "electricWorkJ": 0.002,
+      "gravityWorkJ": 0.019600000000000003,
+      "deltaKJ": 0.0216,
+      "deltaElectricPotentialJ": -0.002,
+      "deltaGravityPotentialJ": -0.019600000000000003,
+      "deltaKPlusElectricU": 0.0196,
+      "deltaKPlusAllPotential": -3.469446951953614e-18
+    },
+    "unequalSheets": {
+      "sigma1": 2.0,
+      "sigma2": -1.0,
+      "outsideField": 0.5,
+      "betweenField": 1.5
+    },
+    "finiteCylinder": {
+      "z": 0.4,
+      "L": 1.0,
+      "R": 0.2,
+      "axialFieldAnalytic": 0.05082617601034513,
+      "axialFieldQuadrature": 0.05082617601034513,
+      "pureRadialInfiniteApproximationDoesNotApplyExactly": true
+    },
+    "allChecksPassed": true
+  },
+  "appliedCorrections": [
+    "REF22-01 infinite/long-away-end cylindercondition",
+    "REF22-02 equaloppositeplatecharge/nofieldcondition",
+    "REF23-01 electricUonlyconservation/externalworkscope",
+    "REF23-02 namedpairenergies before sum,nooperatorlinebreak",
+    "REF23-03 exacteVfactor one line, fallbackunitconversions atrelations",
+    "REF22-03 quickdotproductbreakatouterequalityafteractualdesktop262pxoverflow"
+  ],
+  "currentFocusedRender": {
+    "cheatsheetPages": 2,
+    "cheatsheetCases": 10,
+    "quickDefinitionFallbackCases": 20,
+    "quickPopoverWidths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "issues": 0
+  },
+  "privateEvidenceArchive": "raw_materials/physics/reviews/private-acceptance-20261031/runtime-caption-and-reference-repairs-20261101.tar.gz",
+  "privateArchiveSHA256": "0072779fc94a26b60c6264c1f6d2d5780bc35f96b8fb1aa9b0f60ff631e903da",
+  "publicDotProductChange": {
+    "file": "docs/.vitepress/concepts.mjs",
+    "key": "tich-vo-huong",
+    "field": "example",
+    "beforeSHA256": "9bbb98b7ebcf2f646d75b298d6dc66ff1e27aa1d3b8b209cf5b1645062258d23",
+    "afterSHA256": "6a188b0e8cad7d68be42b862d1f922f4a6ee2344f3e9d641b9e30d29de8b904d",
+    "before": "Tích vô hướng của hai vector được tính theo từng thành phần:\n\n$$\n\\begin{aligned}&\n(1,2)\\cdot(3,4) = 1\\cdot3\\\\&\n \\quad+2\\cdot4\\\\&\n = 11.\n\\end{aligned}\n$$",
+    "after": "Tích vô hướng của hai vector được tính theo từng thành phần:\n\n$$\n\\begin{aligned}\n(1,2)\\cdot(3,4) &= 1\\cdot3+2\\cdot4\\\\\n&=11.\n\\end{aligned}\n$$",
+    "unchangedOtherKeysAndFields": true,
+    "numericResult": 11,
+    "status": "source-adjusted-after-actual-desktop-popover-overflow",
+    "observedSingleLineOverflow": {
+      "svgWidth": 264.328125,
+      "available": 262,
+      "reason": "Actualnarrowdesktoppopover; splitonlyatsecondouterequality, noaddendbreak."
+    }
+  },
+  "localMathAttempt": {
+    "command": "npm run verify:math",
+    "passed": false,
+    "testsPassed": 12,
+    "testsFailed": 3,
+    "reason": "Partialcheckoutmissingprivatebieu-dien-tri-thuc/course.mjs andphysics1-sound-foundations.mjs; newfullyassembledcloudcheckrequired."
+  },
+  "limits": [
+    "CurrentexplicitCS+listedprerequisite/supportWiki only, no transitiveWikiorwholechapterexercisecertification.",
+    "Focusedrender sourceinjection isnotexactnewdeployedversionacceptance."
+  ]
+}
