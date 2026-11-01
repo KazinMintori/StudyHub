@@ -7,7 +7,7 @@ next: false
 
 # Phân cực elip
 
-Trong phân cực elip, đầu vectơ điện trường tại một điểm vạch elip trong mặt phẳng ngang. Với hai thành phần cùng tần số khác không, elip không suy biến khi độ lệch pha không phải bội nguyên của pi. Phân cực tròn là trường hợp đặc biệt.
+Trong phân cực elip, đầu vectơ điện trường tại một điểm vạch elip trong mặt phẳng vuông góc với hướng truyền. Với hai thành phần cùng tần số khác không, elip không suy biến khi độ lệch pha không phải bội nguyên của pi. Phân cực tròn là trường hợp đặc biệt.
 
 <WikiUsage />
 

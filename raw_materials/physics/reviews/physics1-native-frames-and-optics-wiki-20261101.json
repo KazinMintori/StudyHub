@@ -1,0 +1,122 @@
+{
+  "status": "actual169frames-reviewed-13repairs-private-pushed-public-runtime-pending",
+  "wholeGoalComplete": false,
+  "P1": {
+    "directory": "p1-final-frame-parent",
+    "revision": "94d17d0947db46215e1b72b57a0a0674fa520b58",
+    "parentRevision": "41301eb954c1e66a8e55436153c35e473e7b5192",
+    "sourceFiles": [
+      "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-21.png",
+      "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-22.png",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-e10-04.png",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-e10-07.png",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-p10-61.png",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-p10-74.png",
+      "docs/vat-ly-1/bai-giang/img/young-17/a-hinh-17-01.png",
+      "docs/vat-ly-1/bai-giang/img/young-17/a-hinh-17-12.png",
+      "docs/vat-ly-1/bai-giang/img/young-17/b-hinh-17-18.png",
+      "docs/vat-ly-1/bai-giang/img/young-17/b-hinh-17-21.png",
+      "docs/vat-ly-1/bai-giang/img/young-17/e-p17-113.png",
+      "docs/vat-ly-1/bai-giang/img/young-20/a-hinh-20-10.png",
+      "docs/vat-ly-1/bai-giang/img/young-20/e-do-thi-doc-hieu20-59.png"
+    ],
+    "sourceHashes": {
+      "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-21.png": "572d6e36e058e8ee88c024ae9882422c57960a52e1b4cc5434a2081d69364b19",
+      "docs/vat-ly-1/bai-giang/img/young-10/a-hinh-10-22.png": "0f60144115369952a011d62bbd5fe9c95900325e1378b27f585ee684416cefe3",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-e10-04.png": "3e14b39bd5b86971ce9f2884603d1f7357a3aea2f57e047a8dc134bd7680c7a8",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-e10-07.png": "3d39a9001209fc0dec59c19940e008960f6493a24091ef93672d42f57d5bca05",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-p10-61.png": "fb656055c0efa11df90c5d5a18304efa6baabc3a47912e484c0fc1fdef93909d",
+      "docs/vat-ly-1/bai-giang/img/young-10/d-hinh-p10-74.png": "5bc7f2c754c1bb47d043086e37370607a5aca88ab8b526854f8974cd63953c3f",
+      "docs/vat-ly-1/bai-giang/img/young-17/a-hinh-17-01.png": "a9e7d8c18aaf5fc74aa26cc91183187e3254f0e4de57286f1834ea931a3fd20d",
+      "docs/vat-ly-1/bai-giang/img/young-17/a-hinh-17-12.png": "97d950a62e197a257eda58e78d914ef86b8e282a2780542d9a2caa8db4ade6e9",
+      "docs/vat-ly-1/bai-giang/img/young-17/b-hinh-17-18.png": "2b5c16145b59ab9f23ec8955051969ce97db942153a1b3f9fbb55fdca79d6169",
+      "docs/vat-ly-1/bai-giang/img/young-17/b-hinh-17-21.png": "f10c2346ec75809671671fcb08701271044afc4c2ed6ffc38f39ee392b83da5a",
+      "docs/vat-ly-1/bai-giang/img/young-17/e-p17-113.png": "3a19e5de0c3f12f556634a2f376e38991cac5e62cc16495c282a024be3ded34d",
+      "docs/vat-ly-1/bai-giang/img/young-20/a-hinh-20-10.png": "e52611fe46adecab9faf9b56993ac840767752c59ea2f920c41b4696deddbfb7",
+      "docs/vat-ly-1/bai-giang/img/young-20/e-do-thi-doc-hieu20-59.png": "4f244a33c37e28c6fe85ca199b554c93e177462857e937cd0b8e8283b6ec96af"
+    },
+    "archive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter10-17-20-native-frames-20261101.tar.gz",
+    "archiveSHA256": "8c297d4baf6633a0baff4d0241297c4c2a38f4f27cbc23e780d6249cb2436810",
+    "archiveBytes": 17771781,
+    "evidenceFiles": 139,
+    "scope": "Parentactuallyviewed169currentoriginalPNGs besideexpandedsource on43sheets,20nativefollowups,13confirmedrepairs and7rejections.70focusedcasesPASS, allactualcaption/labeloccurrences. Noformula/Markdown/bodychanges. Publicexactdeploypending;wholegoalnotcomplete."
+  },
+  "P2": {
+    "directory": "p2-reference-parent",
+    "revision": "c5ac4030c05075c7b7578250bdf791b2cd843907",
+    "parentRevision": "16ebff5918877b0f5f61f9c99faf6205cba3e4b0",
+    "sourceFiles": [
+      "docs/.vitepress/physics-optics-foundations.mjs"
+    ],
+    "sourceHashes": {
+      "docs/.vitepress/physics-optics-foundations.mjs": "3e325acfd05735cd5fc80340c779fc48b33677860d72cd43c8062643fd34ca94"
+    },
+    "archive": "raw_materials/physics/reviews/private-acceptance-20261031/optical-transverse-definition-20261101.tar.gz",
+    "archiveSHA256": "3583e030d32befc20a2d114d9630b0762a67ce507ddcbe92102de81aaf5d0f8c",
+    "archiveBytes": 285995,
+    "evidenceFiles": 24,
+    "scope": "Onecurrentopticsfoundationdefinitionclarification boundtoPDF1110–1112. PublictwoWiki counterparts10focusedcasesPASS; noformula changed. Otherreadingextracts areworkingnotes, notacceptedfullCS/Wikireview."
+  },
+  "nativeFollowups": {
+    "count": 20,
+    "confirmed": 13,
+    "rejected": [
+      {
+        "key": "young-10/a-hinh-10-20",
+        "reason": "Actual cap/parenthesis ink allinside. Freshsourceaboveoldy582containszeroink; fontbboxextendsbeyondink. No paddingedit."
+      },
+      {
+        "key": "young-10/d-hinh-e10-29",
+        "reason": "Nativeview confirmsfullouterring/dimension. No object loss demonstrated."
+      },
+      {
+        "key": "young-17/a-hinh-17-07",
+        "reason": "Alltemperatures/ticksvisible. Freshsourceoutsideoldx196containszeroink."
+      },
+      {
+        "key": "young-20/b-hinh-20-14",
+        "reason": "AllhandwrittenJ/questionmarksvisible. Freshsourceoutsideoldx522containszeroink."
+      },
+      {
+        "key": "young-20/e-hinh-p20-34",
+        "reason": "492K andVvisible; zeroinkoutsideoldx294. No paddingedit."
+      },
+      {
+        "key": "young-20/e-hinh-p20-39",
+        "reason": "Retainedpixelreceiptoldboundsstale; currentrecipealreadyextendsrightto570 andcurrentVvisible. Nochange."
+      },
+      {
+        "key": "young-20/e-hinh-p20-55",
+        "reason": "Retainedpixelreceiptoldboundsstale; currentrecipealreadyextendsrightto570 andcurrentVvisible. Nochange."
+      }
+    ]
+  },
+  "currentSourceResponsive": {
+    "P1": {
+      "cases": 70,
+      "occurrences": 14,
+      "images": 13,
+      "widths": [
+        320,
+        360,
+        375,
+        768,
+        1440
+      ],
+      "issues": 0
+    },
+    "P2Wiki": {
+      "pages": 2,
+      "cases": 10,
+      "issues": 0
+    }
+  },
+  "noAuthoredImageRedraw": true,
+  "bodyFormulaSolutionChanges": 0,
+  "remaining": [
+    "New fullcloud/deploy and actual public-source verification",
+    "P2confirmed25–32 frame/caption fixes",
+    "P2remaining37–44 image review andreference audit",
+    "Finalwholecourse report andsafeownedcleanup"
+  ]
+}

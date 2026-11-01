@@ -7,7 +7,7 @@ next: false
 
 # Ánh sáng không phân cực
 
-Ánh sáng không phân cực không có phương dao động ngang ưu tiên khi lấy trung bình theo thời gian quan sát. Các thành phần theo hai phương ngang vuông góc bất kỳ mang cường độ trung bình bằng nhau.
+Ánh sáng không phân cực không có phương dao động ưu tiên trong mặt phẳng vuông góc với hướng truyền khi lấy trung bình theo thời gian quan sát. Các thành phần theo hai phương vuông góc bất kỳ trong mặt phẳng ấy mang cường độ trung bình bằng nhau.
 
 <WikiUsage />
 
@@ -17,7 +17,7 @@ $$
 I_{\rm out}=I_{\rm in}/2.
 $$
 
-Hệ số một nửa thuộc kính phân cực lý tưởng và ánh sáng tới chưa phân cực. Có thể xem ánh sáng tới là các trạng thái phương ngang biến đổi theo thời gian, với trung bình bình phương phép chiếu bằng một nửa.
+Hệ số một nửa thuộc kính phân cực lý tưởng và ánh sáng tới chưa phân cực. Có thể xem ánh sáng tới là các trạng thái phân cực trong mặt phẳng vuông góc với hướng truyền biến đổi theo thời gian, với trung bình bình phương phép chiếu bằng một nửa.
 
 Chùm phân cực một phần được mô tả bằng thành phần chưa phân cực cộng với thành phần có trạng thái phân cực xác định. Khi hai phần không kết hợp, cộng cường độ của chúng. Không gán một góc Malus duy nhất cho toàn bộ phần chưa phân cực.
 
