@@ -423,7 +423,7 @@
     {
       "id": "vat-ly-2",
       "repository": "KazinMintori/StudyHub-course-vat-ly-2",
-      "revision": "b87215dba3d9a44379eedc17e20333433ec597e9",
+      "revision": "344756ef4bf5aed8db83d293a1a5c363e1e2047a",
       "paths": [
         "docs/.vitepress/physics-ac-course.mjs",
         "docs/.vitepress/physics-ac-foundations.mjs",

@@ -96,3 +96,23 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# Final source frames verified against the original PDF, 2026-11-01.
+_studyhub_final_frame_specs = [{'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-13.png', 'pdfPage': 929, 'bounds': [495, 343, 640, 449], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-14.png', 'pdfPage': 929, 'bounds': [495, 481, 620, 558], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-19.png', 'pdfPage': 930, 'bounds': [213, 170, 305, 250], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-22.png', 'pdfPage': 930, 'bounds': [205, 393, 300, 485], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-31.png', 'pdfPage': 930, 'bounds': [455, 565, 640, 647], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-33.png', 'pdfPage': 931, 'bounds': [225, 75, 340, 175], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-41.png', 'pdfPage': 931, 'bounds': [487, 558, 615, 608], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-e27-45.png', 'pdfPage': 932, 'bounds': [75, 415, 240, 500], 'scale': 2.5, 'masks': [[75, 415, 94, 430]]}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-p27-55.png', 'pdfPage': 933, 'bounds': [223, 78, 390, 150], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-p27-69.png', 'pdfPage': 934, 'bounds': [375, 487, 495, 595], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-27/hinh-p27-77.png', 'pdfPage': 935, 'bounds': [490, 604, 635, 698], 'scale': 2.5, 'masks': []}]
+if __name__ == "__main__":
+    from pathlib import Path as _StudyHubPath
+    import pymupdf as _studyhub_pdf
+    from PIL import Image as _StudyHubImage, ImageDraw as _StudyHubImageDraw
+    _studyhub_root = _StudyHubPath(__file__).resolve().parents[1]
+    with _studyhub_pdf.open(_studyhub_root / 'raw_materials/physics/source/young-freedman-15.pdf') as _studyhub_document:
+        for _studyhub_spec in _studyhub_final_frame_specs:
+            _studyhub_box = _studyhub_spec['bounds']
+            _studyhub_scale = _studyhub_spec['scale']
+            _studyhub_pix = _studyhub_document[_studyhub_spec['pdfPage'] - 1].get_pixmap(matrix=_studyhub_pdf.Matrix(_studyhub_scale, _studyhub_scale), clip=_studyhub_pdf.Rect(_studyhub_box), alpha=False)
+            _studyhub_image = _StudyHubImage.frombytes('RGB', (_studyhub_pix.width, _studyhub_pix.height), _studyhub_pix.samples)
+            for _studyhub_mask in _studyhub_spec['masks']:
+                _StudyHubImageDraw.Draw(_studyhub_image).rectangle([(_studyhub_mask[0] - _studyhub_box[0]) * _studyhub_scale, (_studyhub_mask[1] - _studyhub_box[1]) * _studyhub_scale, (_studyhub_mask[2] - _studyhub_box[0]) * _studyhub_scale, (_studyhub_mask[3] - _studyhub_box[1]) * _studyhub_scale], fill='white')
+            _studyhub_destination = _studyhub_root / _studyhub_spec['file']
+            _studyhub_destination.parent.mkdir(parents=True, exist_ok=True)
+            _studyhub_image.save(_studyhub_destination)
