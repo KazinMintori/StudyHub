@@ -218,3 +218,15 @@ Lượt xem 38 Wiki công khai ở năm chiều rộng có 190 trường hợp, 
 Bản sửa ảnh tại c3b726b7bc80dbf0b0b10f66386d286e2a959227 đã build và deploy thành công. Trên website, 34 tệp PNG có đúng mã băm bản sửa, bảy bộ nhãn xuất hiện mỗi cặp đúng một lần và 65 trường hợp ở năm chiều rộng đạt. Một ảnh nhỏ được Vite nhúng thành dữ liệu PNG trong HTML, khiến trình kiểm theo URL ban đầu bỏ sót. Sau khi đối chiếu DOM và giải mã byte ảnh nhúng, xác nhận ảnh cùng chú thích vẫn có đủ. Không sửa nội dung website để đáp ứng một lỗi của công cụ kiểm.
 
 Đã nối thêm 296 ảnh nguồn của chương 1, 3, 4, 6 và 7 với biên bản parent thực sự đã xem đủ khung. Chương 11 còn cần bằng chứng xem khung độc lập vì một bản rà chỉ dùng kết quả khớp pixel rồi kết luận đầy đủ. Các nhận xét ấy chưa được nhận, dù tệp ảnh đúng nguồn. Công việc toàn bộ tiếp tục, chưa thực hiện dọn nguồn hoặc worktree.
+
+## Đợt chốt chú thích và khung ảnh ngày 1/11
+
+Đã khôi phục 12 chú thích và phần giải nghĩa nhãn chưa xuất hiện ở chương 11, sửa bốn hộp câu hỏi không được trình dựng trang hỗ trợ và kiểm lại 79 khung ảnh. Ba đề nghị mở rộng khung bị bác bỏ sau khi xem nét in thực tế. Nhận xét đổi tên vật liệu ở một bài cầu nối cũng bị rút lại vì trang nguồn nói rõ thanh đồng. Đây là ví dụ về việc phải kiểm cả hình lẫn ngữ cảnh trước khi sửa.
+
+Chương 10 và 20 được đọc lại chú thích của 124 ảnh, sửa sáu sai lệch về nhãn hoặc nghĩa và khôi phục năm lần xuất chú thích. Hình 10.5 được mở đúng vùng PDF để lấy trọn hai tiêu đề tiểu hình. 75 trường hợp trình bày chú thích và năm trường hợp dùng khung mới đạt ở các chiều rộng từ 320 đến 1440 px.
+
+Vật lý 2 có thêm 57 khung ảnh gốc được sửa ở chương 21, 24 và 33–36. Parent trích lại độc lập cả 57 vùng từ PDF và đối chiếu byte ảnh đã sửa. Riêng việc khớp vùng cắt không chứng minh đủ khung, nên kết quả này đi cùng biên bản xem ảnh và vùng PDF mở rộng. Các chú thích tương ứng đạt 435 trường hợp kiểm bố cục đọc. Đây chưa phải kết luận đạt toàn bộ website.
+
+Hình 33.25 có mâu thuẫn giữa lời chú thích in và chính hai ảnh chụp. Ảnh được giữ nguyên, còn chú thích tiếng Việt được sửa cho đúng hướng kính và cường độ truyền qua theo định luật Malus. Dữ liệu rà cũng cho thấy có bản báo cáo đọc nhầm module cũ trong worktree. Kết quả đó không được dùng để chứng nhận nội dung đang xuất bản. Cần khóa mã băm tệp đang dùng trước khi nhận bất kỳ báo cáo nào.
+
+Công việc toàn bộ vẫn chưa hoàn tất: Các nhóm ảnh còn lại, dữ liệu tra cứu, bản báo cáo cuối và việc dọn dẹp phải được chốt riêng. Không xóa nguồn, bản chưa xuất bản hoặc bằng chứng để làm sạch trạng thái dự án.

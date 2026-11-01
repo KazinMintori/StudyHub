@@ -1,0 +1,65 @@
+{
+  "status": "source-reviewed-and-private-pushed-awaiting-cloud-and-public-runtime",
+  "wholeGoalComplete": false,
+  "privateRevision": "41301eb954c1e66a8e55436153c35e473e7b5192",
+  "includesChapter11Revision": "a7f507abc1f3250ecdbf766ecbf62003409cc990",
+  "chapters": [
+    10,
+    11,
+    20
+  ],
+  "chapter11": {
+    "originalFramesActuallyViewed": 79,
+    "originalPNGChanges": 0,
+    "registeredPairsRead": 122,
+    "liveCaptionsRestored": 12,
+    "captionFactualCorrections": [
+      "Petronas centre-of-gravity displacement2cm",
+      "Projection of centre of gravity relative to support base"
+    ],
+    "unsupportedQuestionContainersFixed": 4,
+    "sourceRenderCases": 20,
+    "visibleCaptions": 12,
+    "visibleGlossaryRows": 30,
+    "indexAnchorsRebased": 20,
+    "skillTests": 39,
+    "archive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter11-live-captions-and-parent-frames-20261101.tar.gz",
+    "archiveSHA256": "d5069e17b9ad0f83e296c83a45f3e90172f0d90ee5b639d860f8c03299614ebe",
+    "rejectedSuggestions": [
+      "Three proposed crop defects rejected after actual ink/source context inspection",
+      "Copper wording retained after sourcePDF374 explicitly confirmed material"
+    ]
+  },
+  "chapters10And20": {
+    "originalImagesCaptionLabelReviewed": 124,
+    "semanticFindingsCorrected": 6,
+    "runtimeCaptionOccurrencesRestored": 5,
+    "focusedResponsiveCases": 75,
+    "widths": [
+      320,
+      360,
+      375,
+      768,
+      1440
+    ],
+    "figure10_5": {
+      "repair": "Restore complete original panel headings using originalPDF324 rectangle34,594,578,750 atscale2.5",
+      "sha256": "d7a3462dc221a5551189a89102a235053856942500577b027d41d283fc2bd4e3",
+      "oldPixelsPreservedBelowAddedRows": 25,
+      "additionalResponsiveCases": 5
+    },
+    "archive": "raw_materials/physics/reviews/private-physics1-acceptance-20261031/chapter10-20-caption-and-frame-final-20261101.tar.gz",
+    "archiveSHA256": "8d767207d596488f2c7c8ae42b897fb857ed432546ad5f0b6fd5b6f79af58603"
+  },
+  "unchanged": [
+    "Other body derivations/questions/solutions in this caption batch",
+    "Chapter10/20 Markdown linecounts",
+    "Original drawing content, no redraw"
+  ],
+  "verificationLimits": [
+    "Focused source-render reading harness is not deployed-site acceptance",
+    "Prior baseline exercise/source acceptance retains its original scope",
+    "New source pin requires full cloud CI and exact deployed-page verification",
+    "Remaining Physics2 frame/caption/reference review and final report/cleanup are incomplete"
+  ]
+}
