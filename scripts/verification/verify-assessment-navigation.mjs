@@ -26,13 +26,19 @@ try {
     const documentId = await page.evaluate(() => window.assessmentDocument)
     async function follow(route, selector) {
       const href = basePath + route
+      const previousTitle = await page.title()
       await page.evaluate(href => {
         const link = [...document.querySelectorAll('a[href]')].find(el => el.getAttribute('href') === href)
         if (!link) throw Error('Missing navigation link: ' + href)
         link.click()
       }, href)
       await page.waitForFunction(path => location.pathname === path, {}, new URL(base + route).pathname)
+      // History changes before VitePress commits its destination component.
+      // Lists on consecutive courses share selectors, so wait for the new
+      // page title as well instead of accidentally checking the old cards.
+      await page.waitForFunction(title => document.title !== title, {}, previousTitle)
       await page.waitForSelector(selector)
+      await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))
       assert.equal(await page.evaluate(() => window.assessmentDocument), documentId, 'navigation must keep the document')
     }
     async function cards(selector, minimum = 1) {
