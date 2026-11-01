@@ -109,3 +109,23 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# Final source frames verified against the original PDF, 2026-11-01.
+_studyhub_final_frame_specs = [{'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-13.png', 'pdfPage': 966, 'bounds': [160, 442, 285, 544], 'scale': 2.5, 'masks': [[160, 442, 225, 460]]}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-19.png', 'pdfPage': 966, 'bounds': [460, 350, 578, 485], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-24.png', 'pdfPage': 967, 'bounds': [215, 220, 345, 318], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-25.png', 'pdfPage': 967, 'bounds': [115, 365, 270, 500], 'scale': 2.5, 'masks': [[115, 365, 180, 372]]}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-27.png', 'pdfPage': 967, 'bounds': [215, 610, 338, 685], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-3.png', 'pdfPage': 965, 'bounds': [542, 245, 622, 325], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-38.png', 'pdfPage': 968, 'bounds': [185, 140, 300, 254], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-39.png', 'pdfPage': 968, 'bounds': [185, 315, 300, 402], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-e28-9.png', 'pdfPage': 966, 'bounds': [180, 198, 298, 260], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-58.png', 'pdfPage': 969, 'bounds': [225, 405, 338, 523], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-61.png', 'pdfPage': 969, 'bounds': [400, 300, 568, 400], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-64.png', 'pdfPage': 970, 'bounds': [180, 75, 310, 237], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-66.png', 'pdfPage': 970, 'bounds': [195, 340, 303, 393], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-68.png', 'pdfPage': 970, 'bounds': [180, 595, 298, 675], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-69.png', 'pdfPage': 970, 'bounds': [383, 110, 500, 170], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-70.png', 'pdfPage': 970, 'bounds': [465, 190, 580, 282], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-71.png', 'pdfPage': 970, 'bounds': [450, 345, 590, 469], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-74.png', 'pdfPage': 971, 'bounds': [265, 380, 335, 437], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-p28-79.png', 'pdfPage': 972, 'bounds': [180, 75, 300, 187], 'scale': 2.5, 'masks': []}, {'file': 'docs/vat-ly-2/bai-giang/img/young-28/hinh-q28-13.png', 'pdfPage': 965, 'bounds': [255, 350, 335, 410], 'scale': 2.5, 'masks': []}]
+if __name__ == "__main__":
+    from pathlib import Path as _StudyHubPath
+    import pymupdf as _studyhub_pdf
+    from PIL import Image as _StudyHubImage, ImageDraw as _StudyHubImageDraw
+    _studyhub_root = _StudyHubPath(__file__).resolve().parents[1]
+    with _studyhub_pdf.open(_studyhub_root / 'raw_materials/physics/source/young-freedman-15.pdf') as _studyhub_document:
+        for _studyhub_spec in _studyhub_final_frame_specs:
+            _studyhub_box = _studyhub_spec['bounds']
+            _studyhub_scale = _studyhub_spec['scale']
+            _studyhub_pix = _studyhub_document[_studyhub_spec['pdfPage'] - 1].get_pixmap(matrix=_studyhub_pdf.Matrix(_studyhub_scale, _studyhub_scale), clip=_studyhub_pdf.Rect(_studyhub_box), alpha=False)
+            _studyhub_image = _StudyHubImage.frombytes('RGB', (_studyhub_pix.width, _studyhub_pix.height), _studyhub_pix.samples)
+            for _studyhub_mask in _studyhub_spec['masks']:
+                _StudyHubImageDraw.Draw(_studyhub_image).rectangle([(_studyhub_mask[0] - _studyhub_box[0]) * _studyhub_scale, (_studyhub_mask[1] - _studyhub_box[1]) * _studyhub_scale, (_studyhub_mask[2] - _studyhub_box[0]) * _studyhub_scale, (_studyhub_mask[3] - _studyhub_box[1]) * _studyhub_scale], fill='white')
+            _studyhub_destination = _studyhub_root / _studyhub_spec['file']
+            _studyhub_destination.parent.mkdir(parents=True, exist_ok=True)
+            _studyhub_image.save(_studyhub_destination)
