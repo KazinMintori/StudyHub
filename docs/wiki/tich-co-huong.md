@@ -25,8 +25,6 @@ $$
 
 Độ lớn tích bằng không khi hai vector song song, ngược chiều hoặc một vector bằng không. Tích có hướng khác tích vô hướng: Tích vô hướng là số, còn tích có hướng là vector.
 
-Tài liệu tham khảo: Young & Freedman, ấn bản 15, mục 1.10, trang 19–24 và mục 21.7, trang 702–703.
-
 ## Ví dụ
 
 Mômen lực lên lưỡng cực là $\vec\tau=\vec p\times\vec E$. Mômen bằng không khi hai vector song song hoặc ngược chiều.
@@ -50,3 +48,7 @@ Không. Kết quả đổi dấu, tức đảo hướng nếu khác vector khôn
 - [Vector](./vector.md)
 - [Tích vô hướng](./tich-vo-huong.md)
 - [Mômen lực](./momen-luc.md)
+
+## Tài liệu tham khảo
+
+Young & Freedman, ấn bản 15, mục 1.10 và 21.7.

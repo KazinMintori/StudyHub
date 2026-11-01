@@ -1,0 +1,519 @@
+{
+  "status": "accepted-motion-kinetic-support-scoped-pending-cloud-and-newdeployed-wording",
+  "wholeGoalComplete": false,
+  "motion": {
+    "status": "accepted-motion-and-newton-support-scoped",
+    "chapters": [
+      1,
+      3,
+      4
+    ],
+    "additionalWikiBodiesRead": [
+      {
+        "id": "tich-co-huong",
+        "file": "docs/wiki/tich-co-huong.md",
+        "sha256": "fd78db076c62faaef8f13790ec3b5f37496c86924b7b3d1c3985dd6b3588f981"
+      },
+      {
+        "id": "vector-vi-tri",
+        "file": "docs/wiki/vector-vi-tri.md",
+        "sha256": "4e72b38502818a4cbd99afa039b61ce1fa3961e8c9e68c524a6851d0bd9f6964"
+      },
+      {
+        "id": "gia-toc-huong-tam",
+        "file": "docs/wiki/gia-toc-huong-tam.md",
+        "sha256": "0d203c48bb81196fc0f738baf9b21f354970e914095e4b0366b1976a3f140c6e"
+      },
+      {
+        "id": "chuyen-dong-nem",
+        "file": "docs/wiki/chuyen-dong-nem.md",
+        "sha256": "6511362234fc9186922a7634388e80d0caf8533a57a62002833ab85724ae62ba"
+      },
+      {
+        "id": "van-toc-tuong-doi",
+        "file": "docs/wiki/van-toc-tuong-doi.md",
+        "sha256": "601ef8430d8d72ff3b1a2ca3b8f0ca74aa39c70527fe43a93ebf8a140dd2b820"
+      },
+      {
+        "id": "he-quy-chieu-quan-tinh",
+        "file": "docs/wiki/he-quy-chieu-quan-tinh.md",
+        "sha256": "479cac97c349cce72509c3ede22fc8ec7a2fdb4664ee8319d9e9241ce5158dd8"
+      },
+      {
+        "id": "luc-phap-tuyen",
+        "file": "docs/wiki/luc-phap-tuyen.md",
+        "sha256": "27c2c5657690925259df3353d0159d40d5e39fd7a49cbe569b2cfb0e1956b047"
+      },
+      {
+        "id": "ma-sat-nghi",
+        "file": "docs/wiki/ma-sat-nghi.md",
+        "sha256": "71064329908d08441b6ad70fe7d6d8f2b7f297b423712fcf33765d68e9473468"
+      },
+      {
+        "id": "ma-sat-truot",
+        "file": "docs/wiki/ma-sat-truot.md",
+        "sha256": "3461065b7d3d9fc5bcbb50b8812584784d5a47347d7d6b60927d3dd067bea632"
+      }
+    ],
+    "sourceBinding": {
+      "vector": "YoungFreedman1.7–1.10; unchangedcurrent1/3/4actualsourceparentreview receipts",
+      "motion": "3.1–3.5; Notesparentreviewcb9ec731 andsourceclarifications ofcurrentc4903course",
+      "Newton": "4.1–4.6and5.3; actualparent4theoryabb7d856,4finald07f686b andmatchedcurrentWiki sourcefacts"
+    },
+    "readDecision": "Actual9Wiki technicalbodies/examples/selfchecks parentread; remainingprerequisites/supportingWiki alreadyreadin38body andchapter2/8supportreceipts, not reacceptedbyexistence alone. Crossproductandframeconditions, radiusandnonzerohorizontalvelocity qualifiers, constantmass/relativevelocity andapproximatefrictionmodel checked.",
+    "edits": [
+      {
+        "file": "docs/wiki/tich-co-huong.md",
+        "scope": "Bibliography movedtofinalsection withouttechnicalorformula edits."
+      },
+      {
+        "file": "docs/wiki/tich-phan.md",
+        "scope": "Replace ambiguoussumofdensity wording byintegralofprobabilitydensity overentiredomain; allmathunchanged."
+      }
+    ],
+    "pythonChecks": [
+      "Crossproduct perpendicular tobothvectors",
+      "Crossproduct anti-commutative",
+      "Crossproduct parallel andzero limits",
+      "Displacement invariant underorigintranslation",
+      "Closedpath displacement zero despitepositivepathlength",
+      "Circularacceleration finite-difference",
+      "Projectile returnssameheight",
+      "Galilean velocity composition",
+      "Galilean inverseframevelocity",
+      "Normalforce neednot equalweight",
+      "Staticfrictionbelowlimit sufficient forrestonincline",
+      "Staticfriction threshold inclination",
+      "Slidingfriction relative-directionexample",
+      "Quotedswimmermeanspeed",
+      "Integralexample andselfcheck",
+      "Densitynormalization usesintegralnotpointwisesum"
+    ],
+    "pythonCheckCount": 16,
+    "remaining": "Current2editedWiki render/cloud/deployed acceptance separate. Allchapter11images andremainingP2scope not inferred."
+  },
+  "kinetic": {
+    "status": "accepted-chapter18-remaining-support-wiki-bodies-scoped",
+    "chapter": 18,
+    "additionalWikiPages": [
+      {
+        "id": "nguyen-ly-phan-bo-deu-nang-luong",
+        "file": "docs/wiki/nguyen-ly-phan-bo-deu-nang-luong.md",
+        "sha256": "39385c05f63598c08a379feaddfd5d4918877c2cdde1bd788ab314979056aa61"
+      },
+      {
+        "id": "quang-duong-tu-do-trung-binh",
+        "file": "docs/wiki/quang-duong-tu-do-trung-binh.md",
+        "sha256": "9e47c1f2e5ae51e6d9950016d0a08afe7108dc2e2def8da9223053c3f482e70c"
+      },
+      {
+        "id": "diem-ba",
+        "file": "docs/wiki/diem-ba.md",
+        "sha256": "6f6424e42f028719f28eedd3096f515f7ca1cf6aca8fe584aaa961fa4043de35"
+      },
+      {
+        "id": "diem-toi-han-chat",
+        "file": "docs/wiki/diem-toi-han-chat.md",
+        "sha256": "9ac3628f70c3562c487d56e3582fe0576114ed40010fdff35da8dbf9731505dc"
+      }
+    ],
+    "parentReading": "All4actualtechnicalbodies/examples/selfchecks read. Equipartition explicitlyclassical/equilibrium/activequadraticterms; harmonicvibration counts kinetic+potential. Meanfreepath explicitlydilutehardspheres/numberdensity. Triplepoint requires3phasesofpurematerialatfixedT,p and distinguishespreviouskelvindefinition. Criticalpoint liquidvapor notsuperconductingtemperature. No authoredscientificedit needed.",
+    "otherChapter18Wiki": "Fourkinetic/temperatureWiki andactualcheatsheet alreadyaccepted/source-boundec53andactualpublic50cases; sharedworkenergy/momentum technicalbodies accepted by38Wikiread. No unrelatedWiki scope inferred.",
+    "sourceSections": "YoungFreedman18.1,18.3–18.6; actualsource chapter18repair/sourceacceptance receipts andcurrentunchangedtechnicalWiki.",
+    "numericChecks": [
+      "Classicalactivequadraticterms heatcapacityf=3",
+      "Classicalactivequadraticterms heatcapacityf=5",
+      "Classicalactivequadraticterms heatcapacityf=6",
+      "Classicalactivequadraticterms heatcapacityf=7",
+      "Hard-spheremeanfreepath inversedensity 1e+24",
+      "Hard-spheremeanfreepath inversedensity 2e+24",
+      "KelvinCelsius equaltemperatureinterval 0.0",
+      "KelvinCelsius equaltemperatureinterval 20.0"
+    ],
+    "numericCheckCount": 8,
+    "remaining": "Actualpublicthese4unchangedWiki bodylayout checked separately; fullgoal notcomplete."
+  },
+  "motionFocusedRender": {
+    "status": "passed-scoped-render",
+    "scope": "Two current motion Wiki pages with bibliography/density-wording corrections with production Markdown/math rules and actual public Wiki CSS/layout. Glossary autolinks and WikiUsage component omitted from injected markup; full cloud integration and exact deployed acceptance separate.",
+    "files": [
+      {
+        "file": "docs/wiki/tich-co-huong.md",
+        "sha256": "fd78db076c62faaef8f13790ec3b5f37496c86924b7b3d1c3985dd6b3588f981"
+      },
+      {
+        "file": "docs/wiki/tich-phan.md",
+        "sha256": "7c09c98d8eac096abaa81c5e4a19470a72aa49039f1a184ace2f26177f685e46"
+      }
+    ],
+    "cases": [
+      {
+        "id": "tich-co-huong",
+        "width": 320,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-co-huong",
+        "width": 360,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-co-huong",
+        "width": 375,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-co-huong",
+        "width": 768,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-co-huong",
+        "width": 1440,
+        "formulas": 4,
+        "issues": []
+      },
+      {
+        "id": "tich-phan",
+        "width": 320,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "tich-phan",
+        "width": 360,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "tich-phan",
+        "width": 375,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "tich-phan",
+        "width": 768,
+        "formulas": 7,
+        "issues": []
+      },
+      {
+        "id": "tich-phan",
+        "width": 1440,
+        "formulas": 7,
+        "issues": []
+      }
+    ]
+  },
+  "motionWidthProbe": {
+    "status": "passed",
+    "scope": "Draft math and syntax probe; final viewport checks determine actual fit.",
+    "displayLimitEx": 25,
+    "inlineLimitEx": 27,
+    "display": 1,
+    "inline": 10,
+    "findings": []
+  },
+  "actualPublicKineticWiki": {
+    "status": "passed-deployed-wiki-body-scope",
+    "scope": "Actual public technical Wiki bodies/math at5widths, all details open and content retained. Reference-placement changes require separate newest-version check; unchanged technicalbody layout only. No injection or localbuild.",
+    "pages": [
+      {
+        "id": "nguyen-ly-phan-bo-deu-nang-luong",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/nguyen-ly-phan-bo-deu-nang-luong.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "quang-duong-tu-do-trung-binh",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/quang-duong-tu-do-trung-binh.html",
+        "formulas": 1,
+        "errors": []
+      },
+      {
+        "id": "diem-ba",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/diem-ba.html",
+        "formulas": 0,
+        "errors": []
+      },
+      {
+        "id": "diem-toi-han-chat",
+        "url": "https://kazinmintori.github.io/StudyHub/wiki/diem-toi-han-chat.html",
+        "formulas": 0,
+        "errors": []
+      }
+    ],
+    "cases": [
+      {
+        "id": "nguyen-ly-phan-bo-deu-nang-luong",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nguyen-ly-phan-bo-deu-nang-luong",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nguyen-ly-phan-bo-deu-nang-luong",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nguyen-ly-phan-bo-deu-nang-luong",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "nguyen-ly-phan-bo-deu-nang-luong",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "quang-duong-tu-do-trung-binh",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "quang-duong-tu-do-trung-binh",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "quang-duong-tu-do-trung-binh",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "quang-duong-tu-do-trung-binh",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "quang-duong-tu-do-trung-binh",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 1
+      },
+      {
+        "id": "diem-ba",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-ba",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-ba",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-ba",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-ba",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-toi-han-chat",
+        "width": 320,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-toi-han-chat",
+        "width": 360,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-toi-han-chat",
+        "width": 375,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-toi-han-chat",
+        "width": 768,
+        "issues": [],
+        "visibleFormulas": 0
+      },
+      {
+        "id": "diem-toi-han-chat",
+        "width": 1440,
+        "issues": [],
+        "visibleFormulas": 0
+      }
+    ]
+  },
+  "actualPublicReference": {
+    "status": "passed-deployed-scope",
+    "sourceMain": "edcde6477513414e6e0ea14ab6950d030cf73e62",
+    "privateP1": "c49051c9de5a145a92754e5ea38cd1570e6d818f",
+    "scope": "Actual deployed three clarified chapter3/11/17 Cheatsheets; source-specific restored text, visible math/images and layout at five widths. No injected content and no whole-course semantic claim.",
+    "pages": [
+      {
+        "id": "cheatsheet3",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-1/bai-giang/03-chuyen-dong-khong-gian.html#cheatsheet",
+        "formulas": 63,
+        "images": 0,
+        "items": 12,
+        "sourceMarkers": [
+          "Chọn điểm ném làm gốc tọa độ",
+          "Vật được ném lên từ gốc tọa độ với tốc độ ban đầu dương."
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.B-Ea4iyF.js"
+        ],
+        "errors": []
+      },
+      {
+        "id": "cheatsheet11",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-1/bai-giang/11-can-bang-dan-hoi.html#cheatsheet",
+        "formulas": 11,
+        "images": 0,
+        "items": 7,
+        "sourceMarkers": [
+          "Các công thức này dùng độ lớn của ứng suất",
+          "Độ dãn hoặc độ co"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.B-Ea4iyF.js"
+        ],
+        "errors": []
+      },
+      {
+        "id": "cheatsheet17",
+        "url": "https://kazinmintori.github.io/StudyHub/vat-ly-1/bai-giang/17-nhiet-do-nhiet-luong.html#cheatsheet",
+        "formulas": 19,
+        "images": 0,
+        "items": 12,
+        "sourceMarkers": [
+          "M là khối lượng mol.",
+          "nhiệt dung mol"
+        ],
+        "assets": [
+          "https://kazinmintori.github.io/StudyHub/assets/app.B-Ea4iyF.js"
+        ],
+        "errors": []
+      }
+    ],
+    "cases": [
+      {
+        "id": "cheatsheet3",
+        "width": 320,
+        "formulas": 63,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet3",
+        "width": 360,
+        "formulas": 63,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet3",
+        "width": 375,
+        "formulas": 63,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet3",
+        "width": 768,
+        "formulas": 63,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet3",
+        "width": 1440,
+        "formulas": 63,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet11",
+        "width": 320,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet11",
+        "width": 360,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet11",
+        "width": 375,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet11",
+        "width": 768,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet11",
+        "width": 1440,
+        "formulas": 11,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet17",
+        "width": 320,
+        "formulas": 19,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet17",
+        "width": 360,
+        "formulas": 19,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet17",
+        "width": 375,
+        "formulas": 19,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet17",
+        "width": 768,
+        "formulas": 19,
+        "issues": []
+      },
+      {
+        "id": "cheatsheet17",
+        "width": 1440,
+        "formulas": 19,
+        "issues": []
+      }
+    ]
+  },
+  "remaining": "No new formula content; twoBibliography/prose corrections need fixture/fullcloud andactualpublic version. Source/paragraph endpoints and allformula counts preserved. Chapter11sourceimages andremainingP2evidence still open."
+}
