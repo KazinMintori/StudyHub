@@ -89,6 +89,7 @@ jobs:
           npm run verify:navigation
           node scripts/verification/verify-course-workspace.mjs
           node scripts/verification/verify-lecture-usability.mjs
+          node scripts/verification/verify-math-ai-homework.mjs
 
       - name: Save browser verification reports
         if: always()
@@ -100,6 +101,7 @@ jobs:
             qa/navigation-stability/
             qa/lecture-usability/
             qa/course-workspace/
+            qa/toan-ai-homework/
             qa/batch-build-fixture/
           if-no-files-found: ignore
 

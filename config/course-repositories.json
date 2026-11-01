@@ -20,6 +20,7 @@
         "docs/.vitepress/math-ai-foundations.mjs",
         "docs/.vitepress/math-ai-review-course.mjs",
         "docs/toan-cho-ai/**",
+        "docs/public/materials/toan-cho-ai/**",
         "raw_materials/toan-cho-ai/**",
         "src/content/courses/toan-cho-ai/**"
       ]
