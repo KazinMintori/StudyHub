@@ -66,8 +66,6 @@ Secret `STUDYHUB_COURSE_DEPLOY_KEYS` ở repo chính chứa bảng khóa SSH the
 
 Học phần `ai-nen-tang-tac-tu` được lưu ở repo riêng tư `StudyHub-course-ai-nen-tang-tac-tu`. Deploy key chỉ đọc của repo này được giữ trong Actions secret `STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY`; workflow ghép ánh xạ bổ sung từ `COURSE_DEPLOY_KEYS_EXTRA` cùng khóa chính, từ chối ID trùng và không ghi nội dung secret vào log.
 
-Ánh xạ từ `STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY` được hợp nhất riêng khi chạy đồng bộ; không thay thế bảng khóa của các học phần hiện hữu. Khóa trong secret này chỉ có quyền đọc repo ArtInt. Deploy key có tiêu đề `StudyHub main Pages read-only: ai-nen-tang-tac-tu`.
-
 Script kiểm khóa máy chủ SSH của GitHub qua API HTTPS, tải đúng commit đã pin, kiểm checksum rồi mới cập nhật workspace. Repo thiếu quyền đọc hoặc nội dung không khớp sẽ làm bước kiểm tra thất bại. Hệ thống không âm thầm sử dụng bản nguồn cũ.
 
 GitHub Pages Free xuất bản từ repo chính công khai. Các repo học phần có thể riêng tư vì chúng không tự chạy Pages. Nội dung đã xuất bản trên website vẫn công khai. Lịch sử từng được công khai ở repo chính không bị xóa bởi việc tách nguồn.
@@ -83,4 +81,3 @@ Chạy đồng bộ cùng toàn bộ kiểm tra nguồn trước khi phát hành
 - [GitHub Pages và phạm vi gói Free](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 - [Deploy key và quyền chỉ đọc theo repo](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys).
 - [Khóa commit của repo phụ trong mô hình Git](https://git-scm.com/docs/gitsubmodules).
-
