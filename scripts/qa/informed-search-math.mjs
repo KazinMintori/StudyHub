@@ -1,0 +1,12 @@
+import {readFile,readdir} from 'node:fs/promises'
+import {createMathValidator} from '../verification/math-validator.mjs'
+import {mathSegments} from '../../docs/.vitepress/math-text.mjs'
+const root='docs/bieu-dien-tri-thuc/bai-giang/03-tim-kiem-kinh-nghiem',validate=createMathValidator()
+const files=[root+'.md',...(await readdir(root)).filter(p=>p.endsWith('.md')).map(p=>root+'/'+p)]
+let count=0
+for(const file of files)for(const segment of mathSegments(await readFile(file,'utf8'))){
+ if(!segment.startsWith('$'))continue
+ const display=segment.startsWith('$$'),n=display?2:1
+ validate(segment.slice(n,-n),display,file);count++
+}
+console.log('PASS '+count+' math expressions across '+files.length+' Notes pages')
