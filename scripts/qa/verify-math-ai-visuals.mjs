@@ -94,6 +94,7 @@ async function sourceManifest() {
     'src/features/labs/components/SlackLiftLab.vue','src/features/labs/components/MaxEpigraphLab.vue',
     'src/features/labs/components/EliminationLab.vue',
     'src/features/labs/components/SensorWeightsLab.vue',
+    'src/features/labs/components/BisectionLab.vue','src/features/labs/components/MinimaxRatioLab.vue','src/features/labs/services/apollonius-feasibility.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -314,6 +315,13 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  minimax:[
+   [0,'Miền X trong R²'],[0,'Thử t = 0.125'],[0,'Thử t = 0.25'],[0,'Đưa P tới điểm chứng Q'],[0,'Thử mức tiếp xúc'],[0,'Thử t = 1'],
+   [0,'Bắt đầu lại'],[0,'Chia đôi tới độ rộng 0.01'],
+   [0,'Khối X trong R³'],[0,'Lát x₃ = −1'],[0,'Lát x₃ = 1'],[0,'Lát x₃ = 0'],[0,'Thử t = 0.125'],[0,'Thử t = 0.25'],[0,'Đưa P tới điểm chứng Q'],[0,'Thử mức tiếp xúc'],[0,'Thử t = 1'],
+   [0,'Bắt đầu lại'],[0,'Chia đôi tới độ rộng 0.01'],
+   [1,'Bắt đầu lại'],[1,'Chia đôi bước tiếp'],[1,'Chia đôi bước tiếp'],[1,'Chia đôi bước tiếp'],[1,'Chia đôi bước tiếp'],[1,'Xem điểm tối ưu chính xác']
+  ],
   elimination:[
    [0,'Phương sai (1, 2, 3)'],[0,'Trọng số tối ưu'],[0,'Ví dụ có trọng số âm'],[0,'Thêm điều kiện trọng số không âm'],[0,'Chia đều ba trọng số'],
    [0,'Cảm biến thứ ba nhiễu lớn'],[0,'Trọng số tối ưu'],[0,'Phương sai (1, 2, 3)'],
@@ -346,6 +354,18 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='minimax'&&index===0){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Thử t = 0.125')assert(text.includes('Ngay cả điểm tốt nhất trong X cũng không đạt mức.'),'The low ratio level must be infeasible')
+   if(label==='Thử t = 0.25')assert(text.includes('Có điểm chứng khả thi.'),'The upper ratio trial must have a real feasible witness')
+   if(label==='Thử mức tiếp xúc')assert(text.includes('Cần xét dung sai'),'Near-contact oracle must report its numeric uncertainty')
+   if(label==='Thử t = 1')assert(text.includes('nửa không gian'),'The level-one limit must be handled as a halfspace')
+   if(label==='Chia đôi tới độ rộng 0.01'){
+    assert(text.includes('[0.234375, 0.242188]'),'The geometric bisection did not retain the verified bracket')
+    assert(text.includes('sau 7 bước'),'The initial unit interval should need seven bisections')
+   }
+   if(label.startsWith('Miền X')||label.startsWith('Khối X')||label.startsWith('Lát x₃'))await interact(touch,index)
+  }
   if(name==='elimination'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0&&label==='Ví dụ có trọng số âm')assert(readout.includes('−0.2000'),'The negative-weight example must preserve an explicit negative weight')
