@@ -1,143 +1,129 @@
 <script setup>
-import { computed, ref, useId } from 'vue'
-import { makeView, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import {computed,ref,useId} from 'vue'
+import LabPointControls from './LabPointControls.vue'
+import {createDragger,makeView,fmt,fmtPoint} from '../controllers/svg-drag.js'
+import {polyhedronInBox,dot} from '../services/convex-geometry.mjs'
+import {clipSegment} from '../services/svg-clipping.mjs'
+import {lpShapes,lpHalfspaces,planarLp} from '../services/linear-program-geometry.mjs'
+import {placePointLabels} from '../services/diagram-labels.mjs'
 
-// Hình học của LP (chủ đề 4, Lecture 02): cực tiểu cᵀx trên một đa diện cho bằng đỉnh và tia.
-// Đa diện bị chặn: ngũ giác tự đặt. Đa diện không bị chặn: conv{v₁, v₂, v₃} + cone{r_a, r_b}.
-// Bài toán không bị chặn dưới khi cᵀr < 0 với một tia r. Nếu không, nghiệm là đỉnh có cᵀv nhỏ nhất,
-// và cả một cạnh tối ưu khi c vuông góc với cạnh đó.
-const shapes = {
-  bounded: { label: 'ngũ giác bị chặn', vertices: [[0.5, 0.5], [3.5, 0.5], [4.5, 2.2], [2.8, 3.8], [0.8, 3.0]], rays: [] },
-  unbounded: { label: 'đa diện không bị chặn', vertices: [[0.5, 2.5], [1.5, 0.8], [3.5, 0.5]], rays: [{ from: 0, d: [-0.3, 1] }, { from: 2, d: [1, 0.1] }] }
+const svg=ref(null),key=ref('bounded'),c=ref([-.7,-.7]),arrowId=useId()
+const shape=computed(()=>lpShapes[key.value]),result=computed(()=>planarLp(key.value,c.value))
+const view=makeView({x0:-1.5,x1:5.8,y0:-1.2,y1:5.6,width:360,height:330,pad:27})
+const controls=makeView({x0:-1.8,x1:1.8,y0:-1.8,y1:1.8,width:360,height:280,pad:38})
+const controlView=computed(()=>controls)
+const drag=createDragger(svg,controlView,(_,p)=>{c.value=p},{step:.05})
+const length=computed(()=>Math.hypot(...c.value))
+const zero=computed(()=>c.value.every(v=>Math.abs(v)<=(result.value.tolerance||1e-10)))
+const frame={x0:27,x1:333,y0:27,y1:303}
+const region=computed(()=>polyhedronInBox(lpHalfspaces(key.value),[-1.5,5.8,-1.2,5.6]))
+const poly=points=>points.map(p=>view.point(p).join(',')).join(' ')
+const segment=(p,q)=>clipSegment([view.point(p),view.point(q)],frame)
+function levelLine(value){
+ if(length.value<1e-10)return null
+ const square=dot(c.value,c.value),base=c.value.map(v=>value*v/square),direction=[-c.value[1],c.value[0]],extent=30/length.value
+ return segment(base.map((v,i)=>v-extent*direction[i]),base.map((v,i)=>v+extent*direction[i]))
 }
-const key = ref('bounded'), angle = ref(225)
-const shape = computed(() => shapes[key.value])
-const c = computed(() => [Math.cos((angle.value * Math.PI) / 180), Math.sin((angle.value * Math.PI) / 180)])
-const dot = (u, v) => u[0] * v[0] + u[1] * v[1]
-const TOL = 1e-9
-const result = computed(() => {
-  const V = shape.value.vertices, cc = c.value
-  const badRay = shape.value.rays.find(r => dot(cc, r.d) < -TOL)
-  if (badRay) return { status: 'unbounded', ray: badRay }
-  const vals = V.map(v => dot(cc, v)), m = Math.min(...vals)
-  const best = vals.map((v, i) => [v, i]).filter(([v]) => v <= m + 1e-6).map(([, i]) => i)
-  const flatRay = shape.value.rays.find(r => Math.abs(dot(cc, r.d)) <= TOL && best.includes(r.from))
-  return { status: 'optimal', value: m, best, flatRay }
+const levels=computed(()=>{
+ if(zero.value)return []
+ const values=[[-1.5,-1.2],[5.8,-1.2],[5.8,5.6],[-1.5,5.6]].map(p=>dot(c.value,p)),lo=Math.min(...values),hi=Math.max(...values)
+ return Array.from({length:7},(_,i)=>levelLine(lo+(hi-lo)*(i+1)/8)).filter(Boolean)
 })
-// Cạnh kề đỉnh tối ưu có hướng gần vuông góc với c nhất, để nút "xoay vuông góc" chọn đúng cạnh.
-const nearestEdgeNormal = computed(() => {
-  const V = shape.value.vertices
-  if (result.value.status !== 'optimal') return null
-  const i = result.value.best[0], cand = [], rays = shape.value.rays
-  if (key.value === 'bounded') cand.push([V[(i + V.length - 1) % V.length], V[i]], [V[i], V[(i + 1) % V.length]])
-  else { if (i > 0) cand.push([V[i - 1], V[i]]); if (i < V.length - 1) cand.push([V[i], V[i + 1]]) }
-  for (const r of rays) if (r.from === i) cand.push([V[i], [V[i][0] + r.d[0], V[i][1] + r.d[1]]])
-  let bestAngle = null, bestErr = Infinity
-  for (const [p, q] of cand) {
-    const e = [q[0] - p[0], q[1] - p[1]], len = Math.hypot(...e)
-    for (const s of [1, -1]) {
-      const n = [s * e[1] / len, -s * e[0] / len]
-      // Pháp tuyến n phải làm đỉnh i (và cả cạnh) tối ưu: n·(v − V[i]) ≥ 0 với mọi đỉnh v, và n·r ≥ 0 với mọi tia r.
-      if (V.every(v => dot(n, [v[0] - V[i][0], v[1] - V[i][1]]) >= -1e-9) && rays.every(r => dot(n, r.d) >= -1e-9)) {
-        const a = (Math.atan2(n[1], n[0]) * 180) / Math.PI, a360 = (a + 360) % 360
-        const err = Math.abs(((a360 - angle.value + 540) % 360) - 180)
-        if (err < bestErr) { bestErr = err; bestAngle = a360 }
-      }
-    }
-  }
-  return bestAngle
+const optimumLine=computed(()=>result.value.status==='optimal'?levelLine(result.value.value):null)
+const optimalSegments=computed(()=>{
+ const r=result.value,out=[]
+ if(r.status!=='optimal'||r.whole)return out
+ if(r.lineDirection){const d=r.lineDirection;out.push(segment(r.point.map((v,i)=>v-20*d[i]),r.point.map((v,i)=>v+20*d[i])))}
+ if(r.best?.length>1)out.push(segment(shape.value.vertices[r.best[0]],shape.value.vertices[r.best.at(-1)]))
+ for(const d of r.flatRays||[])out.push(segment(r.point,r.point.map((v,i)=>v+30*d[i])))
+ return out.filter(Boolean)
 })
-// Giữ nguyên độ chính xác của góc, để hai đỉnh của cạnh cho đúng cùng một giá trị.
-function snapToEdge() { if (nearestEdgeNormal.value !== null) angle.value = nearestEdgeNormal.value }
-
-const view = makeView({ x0: -0.8, x1: 5.6, y0: -0.6, y1: 4.6, width: 460, height: 372 })
-const P = (p) => [view.sx(p[0]), view.sy(p[1])]
-const clip = `${useId()}-lp-clip`
-const regionPts = computed(() => {
-  const s = shape.value, V = s.vertices
-  if (!s.rays.length) return V.map(v => P(v).join(',')).join(' ')
-  const far = 30, [ra, rb] = s.rays
-  const pa = [V[ra.from][0] + far * ra.d[0], V[ra.from][1] + far * ra.d[1]]
-  const pb = [V[rb.from][0] + far * rb.d[0], V[rb.from][1] + far * rb.d[1]]
-  const mid = V[1], q = [mid[0] + far * (ra.d[0] + rb.d[0]), mid[1] + far * (ra.d[1] + rb.d[1])]
-  return [pa, ...V, pb, q].map(p => P(p).join(',')).join(' ')
-})
-// Các đường mức cᵀx = k, cắt theo khung nhìn.
-const levelLine = (k) => {
-  const cc = c.value, base = [k * cc[0], k * cc[1]], t = [-cc[1], cc[0]]
-  return [P([base[0] - 20 * t[0], base[1] - 20 * t[1]]), P([base[0] + 20 * t[0], base[1] + 20 * t[1]])]
-}
-const levels = computed(() => {
-  const vals = shape.value.vertices.map(v => dot(c.value, v))
-  const lo = Math.min(...vals) - 1.5, hi = Math.max(...vals) + 1.5, out = []
-  for (let k = Math.ceil(lo * 2) / 2; k <= hi; k += 0.5) out.push(k)
-  return out
-})
-const centroid = computed(() => {
-  const V = shape.value.vertices
-  return [V.reduce((s, v) => s + v[0], 0) / V.length, V.reduce((s, v) => s + v[1], 0) / V.length]
-})
-const arrowTip = computed(() => [centroid.value[0] - 1.1 * c.value[0], centroid.value[1] - 1.1 * c.value[1]])
-const optEdge = computed(() => {
-  const r = result.value
-  if (r.status !== 'optimal') return null
-  const V = shape.value.vertices
-  if (r.flatRay) { const v = V[r.flatRay.from]; return [v, [v[0] + 30 * r.flatRay.d[0], v[1] + 30 * r.flatRay.d[1]]] }
-  if (r.best.length >= 2) return [V[r.best[0]], V[r.best[1]]]
-  return null
-})
+const badRay=computed(()=>result.value.status==='unbounded'?segment(result.value.point,result.value.point.map((v,i)=>v+30*result.value.ray[i])):null)
+const center=computed(()=>key.value==='strip'||key.value==='infeasible'?[2,2]:[0,1].map(i=>shape.value.vertices.reduce((s,p)=>s+p[i],0)/shape.value.vertices.length))
+const tip=computed(()=>zero.value?center.value:center.value.map((v,i)=>v-1.05*c.value[i]/length.value))
+const directionLabel=computed(()=>placePointLabels([{key:'direction',text:'−c',point:view.point(tip.value),width:32}],{
+ width:360,height:330,reserved:[
+ ...[...shape.value.vertices,...(result.value.point?[result.value.point]:[])].map(p=>({x:view.sx(p[0])-11,y:view.sy(p[1])-11,width:22,height:22})),
+ {x:334,y:view.sy(0)-5,width:26,height:32},{x:view.sx(0)+3,y:0,width:36,height:31}
+ ]}).direction)
+const boundaryLines=computed(()=>key.value==='infeasible'?[segment([0,-1.2],[0,5.6]),segment([1,-1.2],[1,5.6])]:[])
+function preset(kind,vector){key.value=kind;c.value=vector}
 </script>
 
 <template>
-  <figure class="study-lab" aria-label="Hình học của quy hoạch tuyến tính: Đẩy đường mức theo hướng giảm">
-    <p class="lab-title">Đẩy đường mức theo hướng −c</p>
-    <p class="lab-lead">Mỗi đường nét đứt là một đường mức cᵀx = hằng số, vuông góc với c. Cực tiểu cᵀx nghĩa là đẩy đường mức theo hướng mũi tên −c cho tới khi nó sắp rời khỏi miền khả thi.</p>
-    <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Miền khả thi, các đường mức của hàm mục tiêu, hướng giảm và điểm hoặc cạnh tối ưu">
-      <defs><clipPath :id="clip"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
-      <g :clip-path="`url(#${clip})`">
-        <line v-for="t in [0, 1, 2, 3, 4, 5]" :key="`gx${t}`" :x1="view.sx(t)" :x2="view.sx(t)" y1="0" :y2="view.height" class="lab-grid" />
-        <line v-for="t in [0, 1, 2, 3, 4]" :key="`gy${t}`" x1="0" :x2="view.width" :y1="view.sy(t)" :y2="view.sy(t)" class="lab-grid" />
-        <polygon :points="regionPts" class="lab-region" />
-        <line v-for="k in levels" :key="`k${k}`" :x1="levelLine(k)[0][0]" :y1="levelLine(k)[0][1]" :x2="levelLine(k)[1][0]" :y2="levelLine(k)[1][1]" class="lab-guide" style="opacity: 0.55" />
-        <template v-if="result.status === 'optimal'">
-          <line :x1="levelLine(result.value)[0][0]" :y1="levelLine(result.value)[0][1]" :x2="levelLine(result.value)[1][0]" :y2="levelLine(result.value)[1][1]" class="lab-warn" />
-          <line v-if="optEdge" :x1="P(optEdge[0])[0]" :y1="P(optEdge[0])[1]" :x2="P(optEdge[1])[0]" :y2="P(optEdge[1])[1]" class="lab-good" style="stroke-width: 6" />
-          <circle v-for="i in result.best" :key="`b${i}`" :cx="P(shape.vertices[i])[0]" :cy="P(shape.vertices[i])[1]" r="7" class="lab-dot-warn" />
-        </template>
-        <template v-else>
-          <line :x1="P(shape.vertices[result.ray.from])[0]" :y1="P(shape.vertices[result.ray.from])[1]" :x2="P([shape.vertices[result.ray.from][0] + 30 * result.ray.d[0], shape.vertices[result.ray.from][1] + 30 * result.ray.d[1]])[0]" :y2="P([shape.vertices[result.ray.from][0] + 30 * result.ray.d[0], shape.vertices[result.ray.from][1] + 30 * result.ray.d[1]])[1]" class="lab-bad" />
-        </template>
-        <circle v-for="(v, i) in shape.vertices" :key="`v${i}`" :cx="P(v)[0]" :cy="P(v)[1]" r="4" class="lab-dot" />
-        <line :x1="P(centroid)[0]" :y1="P(centroid)[1]" :x2="P(arrowTip)[0]" :y2="P(arrowTip)[1]" class="lab-accent" />
-        <circle :cx="P(arrowTip)[0]" :cy="P(arrowTip)[1]" r="5" class="lab-dot-accent" />
-        <text :x="P(arrowTip)[0] + 8" :y="P(arrowTip)[1] - 6" class="lab-small">−c</text>
-      </g>
-    </svg>
-    <p class="lab-legend"><span class="legend-accent">hướng giảm −c</span><span class="legend-guide">đường mức</span><span class="legend-warn">đường mức tối ưu</span><span class="legend-good">tập nghiệm khi có nhiều nghiệm</span><span class="legend-bad">tia làm hàm giảm mãi</span></p>
-    <div class="lab-controls">
-      <label>Hướng của c: {{ fmt(angle, 1) }}°<input v-model.number="angle" type="range" min="0" max="359.9" step="0.1" /></label>
-      <label>Miền khả thi<select v-model="key"><option v-for="(s, k) in shapes" :key="k" :value="k">{{ s.label }}</option></select></label>
-    </div>
-    <div class="lab-buttons">
-      <button type="button" :disabled="nearestEdgeNormal === null" @click="snapToEdge">Xoay c vuông góc với cạnh kề nghiệm</button>
-    </div>
-    <div class="lab-readout" role="status">
-      <p>c = {{ fmtPoint(c) }}. Bài toán: cực tiểu cᵀx trên {{ shape.label }}.</p>
-      <template v-if="result.status === 'optimal'">
-        <p v-if="result.flatRay" class="is-good">Giá trị tối ưu {{ fmt(result.value, 3) }}, đạt trên cả một tia xuất phát từ đỉnh {{ fmtPoint(shape.vertices[result.flatRay.from]) }}: c vuông góc với hướng của tia.</p>
-        <p v-else-if="result.best.length >= 2" class="is-good">Giá trị tối ưu {{ fmt(result.value, 3) }}, đạt trên cả cạnh nối {{ fmtPoint(shape.vertices[result.best[0]]) }} và {{ fmtPoint(shape.vertices[result.best[1]]) }}: mọi điểm của cạnh đều là nghiệm.</p>
-        <p v-else>Nghiệm duy nhất tại đỉnh {{ fmtPoint(shape.vertices[result.best[0]]) }}, giá trị tối ưu <span class="is-accent">{{ fmt(result.value, 3) }}</span>. Hai ràng buộc gặp nhau ở đỉnh này là hai ràng buộc chặt.</p>
-      </template>
-      <p v-else class="is-bad">Theo tia xuất phát từ {{ fmtPoint(shape.vertices[result.ray.from]) }} với hướng {{ fmtPoint(result.ray.d) }}, ta có cᵀr = {{ fmt(dot(c, result.ray.d), 3) }} &lt; 0: giá trị giảm mãi, bài toán không bị chặn dưới.</p>
-    </div>
-    <details class="lab-tasks">
-      <summary>Gợi ý thao tác</summary>
-      <ol>
-        <li>Xoay c một vòng. Đỉnh tối ưu nhảy từ đỉnh này sang đỉnh kề, và giữa hai lần nhảy luôn có một hướng làm cả cạnh tối ưu. Bấm nút để tìm hướng ấy.</li>
-        <li>Đổi sang đa diện không bị chặn. Với những hướng nào bài toán vẫn có nghiệm? Hãy so các hướng đó với hai tia của đa diện.</li>
-        <li>Với đa diện không bị chặn, tìm hướng c làm cả một tia trở thành tập nghiệm. Giá trị tối ưu khi đó có hữu hạn không?</li>
-        <li>Vì sao nghiệm không bao giờ nằm hẳn bên trong miền khả thi, trừ khi c = 0?</li>
-      </ol>
-    </details>
-  </figure>
+ <figure class="study-lab" aria-label="Hình học LP với hướng mục tiêu kéo trực tiếp và các miền khả thi khác nhau">
+  <figcaption class="lab-title">Kéo vector mục tiêu, quan sát giá trị có còn bị chặn dưới không</figcaption>
+  <p class="lab-lead">Cực tiểu cᵀx là tịnh tiến đường mức theo hướng −c, vuông góc với đường đó. Kéo đầu vector c trong hình điều khiển. Miền không bị chặn không tự có nghĩa mục tiêu giảm về âm vô hạn.</p>
+  <svg viewBox="0 0 360 330" role="img" aria-label="Miền khả thi, đường mức, nghiệm tối ưu hoặc tia làm giảm mục tiêu">
+   <defs><marker :id="arrowId" viewBox="0 0 8 8" markerWidth="6" markerHeight="6" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8Z" class="arrow-head"/></marker></defs>
+   <polygon v-if="region.length" :points="poly(region)" :class="result.whole?'whole-optimum':'region'"/>
+   <line v-for="(line,i) in levels" :key="i" :x1="line[0][0]" :y1="line[0][1]" :x2="line[1][0]" :y2="line[1][1]" class="level"/>
+   <line x1="23" :y1="view.sy(0)" x2="337" :y2="view.sy(0)" class="lab-axis"/>
+   <line :x1="view.sx(0)" y1="22" :x2="view.sx(0)" y2="308" class="lab-axis"/>
+   <line v-if="optimumLine" :x1="optimumLine[0][0]" :y1="optimumLine[0][1]" :x2="optimumLine[1][0]" :y2="optimumLine[1][1]" class="optimum-level"/>
+   <line v-for="(line,i) in optimalSegments" :key="i" :x1="line[0][0]" :y1="line[0][1]" :x2="line[1][0]" :y2="line[1][1]" class="optimal-edge"/>
+   <line v-if="badRay" :x1="badRay[0][0]" :y1="badRay[0][1]" :x2="badRay[1][0]" :y2="badRay[1][1]" class="bad-ray" :marker-end="'url(#'+arrowId+')'"/>
+   <line v-for="(line,i) in boundaryLines" :key="i" :x1="line[0][0]" :y1="line[0][1]" :x2="line[1][0]" :y2="line[1][1]" :class="i?'bad-boundary':'first-boundary'"/>
+   <circle v-for="(p,i) in shape.vertices" :key="i" :cx="view.sx(p[0])" :cy="view.sy(p[1])" r="4" class="lab-dot"/>
+   <circle v-if="result.status==='optimal'&&!result.whole" :cx="view.sx(result.point[0])" :cy="view.sy(result.point[1])" r="7" class="lab-dot-warn"/>
+   <line v-if="!zero" :x1="view.sx(center[0])" :y1="view.sy(center[1])" :x2="view.sx(tip[0])" :y2="view.sy(tip[1])" class="descent" :marker-end="'url(#'+arrowId+')'"/>
+   <text v-if="!zero" :x="directionLabel.x" :y="directionLabel.y" :text-anchor="directionLabel.anchor">−c</text>
+   <text x="338" :y="view.sy(0)+21">x₁</text><text :x="view.sx(0)+9" y="23">x₂</text>
+  </svg>
+  <p class="lab-legend"><span class="legend-accent">Miền khả thi và hướng giảm</span><span class="legend-guide">Đường mức</span><span class="legend-good">Cạnh, tia hoặc cả miền tối ưu</span><span class="legend-bad">Hướng làm mục tiêu giảm mãi</span></p>
+  <svg ref="svg" viewBox="0 0 360 280" role="group" aria-label="Vector hệ số c kéo trực tiếp trên mặt phẳng c1 và c2" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+   <line x1="30" :y1="controls.sy(0)" x2="330" :y2="controls.sy(0)" class="lab-axis"/>
+   <line :x1="controls.sx(0)" y1="28" :x2="controls.sx(0)" y2="250" class="lab-axis"/>
+   <line :x1="controls.sx(0)" :y1="controls.sy(0)" :x2="controls.sx(c[0])" :y2="controls.sy(c[1])" class="descent" :marker-end="'url(#'+arrowId+')'"/>
+   <circle :cx="controls.sx(c[0])" :cy="controls.sy(c[1])" r="7" class="lab-dot-accent"/>
+   <circle :cx="controls.sx(c[0])" :cy="controls.sy(c[1])" r="27" class="lab-handle hit" tabindex="0" role="slider" aria-label="Vector mục tiêu c1 và c2" :aria-valuetext="fmtPoint(c,4)" @pointerdown="drag.start('c',$event)" @keydown="drag.key('c',c,$event)"/>
+   <text x="331" :y="controls.sy(0)+22">c₁</text><text :x="controls.sx(0)+10" y="23">c₂</text>
+   <text x="18" y="268">Kéo đầu c, gốc là (0, 0)</text>
+  </svg>
+  <details class="lab-tasks"><summary>Điều chỉnh vector bằng nút</summary><LabPointControls :svg="svg"/></details>
+  <div class="lab-controls"><label>Miền khả thi<select v-model="key"><option v-for="(item,id) in lpShapes" :key="id" :value="id">{{item.label}}</option></select></label></div>
+  <div class="lab-buttons" role="group" aria-label="Các trạng thái LP để đối chiếu">
+   <button type="button" @click="preset('bounded',[-.7,-.7])">Nghiệm tại một đỉnh</button>
+   <button type="button" @click="preset('bounded',[-1.6,-1.7])">Cả cạnh tối ưu</button>
+   <button type="button" @click="preset('unbounded',[1,1])">Miền vô hạn, tối ưu hữu hạn</button>
+   <button type="button" @click="preset('unbounded',[-1,-1])">Mục tiêu giảm không bị chặn</button>
+   <button type="button" @click="preset('unbounded',[1,.3])">Cả tia là nghiệm</button>
+   <button type="button" @click="preset('strip',[1,-1])">Có nghiệm nhưng không có đỉnh</button>
+   <button type="button" @click="preset('infeasible',[1,1])">Miền khả thi rỗng</button>
+   <button type="button" @click="c=[0,0]">Mục tiêu bằng không</button>
+  </div>
+  <div class="lab-readout" role="status">
+   <p>c = {{fmtPoint(c,4)}}. Bài toán cực tiểu cᵀx trên {{shape.label.toLowerCase()}}.</p>
+   <template v-if="result.status==='optimal'">
+    <p>Giá trị tối ưu = {{fmt(result.value,6)}}. Một nghiệm là {{fmtPoint(result.point,4)}}.</p>
+    <p v-if="result.whole" class="is-good">Mục tiêu bằng 0: Mọi điểm khả thi đều tối ưu, không chỉ các đỉnh.</p>
+    <p v-else-if="key==='strip'" class="is-good">Dải không có đỉnh, nhưng cả đường thẳng qua nghiệm theo hướng (1, 1) đều tối ưu.</p>
+    <p v-else-if="result.flatRays.length" class="is-good">Có tia tối ưu vì cᵀr bằng 0 trên một hướng lùi xa. Giá trị tối ưu vẫn hữu hạn.</p>
+    <p v-else-if="result.best.length>1" class="is-good">Có {{result.best.length}} đỉnh cùng tối ưu. Mọi điểm trên cạnh nối chúng cũng tối ưu.</p>
+    <p v-else>Nghiệm duy nhất là một đỉnh. Đường mức tối ưu tựa vào miền tại đỉnh ấy.</p>
+   </template>
+   <p v-else-if="result.status==='unbounded'" class="is-bad">Không bị chặn dưới. Từ {{fmtPoint(result.point)}} đi theo r = {{fmtPoint(result.ray)}} vẫn khả thi, với cᵀr = {{fmt(result.slope,6)}} &lt; 0.</p>
+   <p v-else class="is-bad">Bất khả thi: Điều kiện x₁ ≤ 0 và x₁ ≥ 1 mâu thuẫn, không có điểm nào thỏa đồng thời.</p>
+   <p v-if="key==='infeasible'">Đường tím là x₁ = 0, phía hợp lệ về bên trái. Đường đỏ là x₁ = 1, phía hợp lệ về bên phải. Không có phần giao để tô.</p>
+   <p>Hình chỉ vẽ phần miền nằm trong khung. Cắt hình không thêm ràng buộc cho bài toán. Các mũi tên hướng đã chuẩn hóa độ dài để dễ nhìn.</p>
+   <p v-if="result.tolerance">So sánh bằng số dùng dung sai {{result.tolerance.toExponential(1)}}. Các giá trị gần bằng nhau có thể được phân loại cùng một mặt tối ưu trong phạm vi này.</p>
+  </div>
+  <details class="lab-tasks"><summary>Thử và giải thích</summary><ol><li>Chọn cả cạnh tối ưu rồi kéo c một chút. Vì sao nghiệm có thể chuyển ngay về một đầu cạnh?</li><li>Đổi giữa hai cấu hình của miền vô hạn. Đại lượng cᵀr quyết định điều gì?</li><li>Chọn dải không có đỉnh, rồi đặt mục tiêu bằng 0. Tập nghiệm mở rộng thế nào?</li><li>Thử c = 0 trên miền rỗng. Mục tiêu đơn giản có làm bài toán khả thi không?</li></ol></details>
+ </figure>
 </template>
+
+<style scoped>
+svg text{font-size:18px}
+.region{fill:var(--tim-soft);stroke:var(--tim);stroke-width:1.5}
+.whole-optimum{fill:var(--xanh-soft);stroke:var(--xanh);stroke-width:1.5}
+.level{stroke:var(--ink-3);stroke-width:.85;stroke-dasharray:4 5;opacity:.65}
+.optimum-level{stroke:var(--vang);stroke-width:1.6}
+.optimal-edge{stroke:var(--xanh);stroke-width:2.8}
+.bad-ray{stroke:var(--do);stroke-width:2}
+.descent{stroke:var(--tim);stroke-width:2}
+.arrow-head{fill:var(--ink);stroke:none}
+.first-boundary{stroke:var(--tim);stroke-width:2}.bad-boundary{stroke:var(--do);stroke-width:2}
+svg :is(line,path,polygon,polyline,text),svg circle:not(.hit){pointer-events:none}
+.hit{fill:transparent!important;stroke:transparent;touch-action:none}
+.hit:focus-visible{stroke:var(--vang)}
+</style>
