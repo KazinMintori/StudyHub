@@ -13,48 +13,24 @@
   "jobs": [
     {
       "task": "ui",
-      "job": "3df91a2acd414fa48691ff5fc254284d",
-      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-ui-20261102",
-      "attempt": 2,
-      "state": "running"
-    },
-    {
-      "task": "a",
-      "chapters": "1–6",
-      "job": "84baf0b323374e1a8688d266689730f3",
-      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-a-20261102",
-      "attempt": 1,
-      "state": "stopped-user-priority-change"
-    },
-    {
-      "task": "b",
-      "chapters": "7–14",
-      "job": "d8eeed2bb13f4c6bad2d4da762d5b032",
-      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-b-20261102",
-      "attempt": 1,
-      "state": "stopped-user-priority-change"
-    },
-    {
-      "task": "c",
-      "chapters": "15–19 và phụ lục",
-      "job": "49fa5e9eabe54469919139165c980a4f",
-      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-c-20261102",
-      "attempt": 1,
-      "state": "stopped-user-priority-change"
+      "job": "f4fa04d7bcda49f5adea7b1416fd81d6",
+      "attempt": 3,
+      "state": "bridge-failed-files-retained-and-reviewed",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-ui-20261102"
     },
     {
       "task": "chapter-5",
-      "job": "33aa20d386944bb78758b6df49abb81c",
-      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-a-20261102",
-      "attempt": 1,
-      "state": "running"
+      "job": "68ff1759a9dc41068c8b701bf0c70ce0",
+      "attempt": 3,
+      "state": "running-final-correction",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-a-20261102"
     },
     {
       "task": "chapter-15",
-      "job": "a8188194daaf43e7a974baa1097d3496",
-      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-c-20261102",
-      "attempt": 1,
-      "state": "running"
+      "job": "482bc07202b245018e68e0855f04abdf",
+      "attempt": 3,
+      "state": "running-final-correction",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-c-20261102"
     }
   ],
   "notes": [
@@ -62,7 +38,13 @@
     "Không sửa worktree chính, có nhiều thay đổi không liên quan đang dở.",
     "Worktree tích hợp đã dùng lại 435 module runtime .mjs của các môn riêng từ primary checkout, đều nằm trong vùng gitignored, không tải nguyên tài liệu riêng.",
     "Chưa tích hợp nội dung AGY. Chưa kiểm chứng hiển thị hoặc build. Không gọi bản dịch hoàn tất khi thiếu nguồn.",
-    "Build toàn site chỉ được chạy cloud. Script kiểm phủ nguồn tạo review signals, không chứng nhận đúng ngữ nghĩa."
+    "Build toàn site chỉ được chạy cloud. Script kiểm phủ nguồn tạo review signals, không chứng nhận đúng ngữ nghĩa.",
+    "UI patch integrated with git apply --3way; navigation conflict resolved preserving main Homework links. Supervisor restored original quick-link behavior and corrected UI draft publication count. No further AGY UI calls allowed.",
+    "Latest main merged as 3b194c3c; only unrelated philosophy prose conflict kept origin/main text. Main checkout untouched.",
+    "Final chapter-5 correction must fix deduction/induction confusion, missing example 5.19, invalid supportingConcepts, wrong slides. Final chapter-15 correction must restore omitted original examples and grammar figures and remove claims of 100% accuracy/termination.",
+    "Each chapter task has reached three AGY calls counting the initial lost job; do not issue a fourth. UI also reached three calls. Preserve worktrees on failures.",
+    "node_modules junction shares primary dependencies. Runtime modules of private courses copied only .mjs and left gitignored; full private Notes not downloaded.",
+    "Existing skill regression had 38 pass and one preexisting root-repository slide failure. Focused logic assertions pass. UI Vue SFC compile and audit:tokens pass. Chapter math check caught wide inline TeX; all math syntax checked so far valid."
   ],
   "next": "Hoàn tất UI, rà và tích hợp chỉ chương 5/15, bổ sung flashcard/Wiki scope, kiểm tra nội dung + browser, cloud build rồi xuất bản lên web. Không dịch tiếp chương khác."
 }

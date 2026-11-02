@@ -18,7 +18,8 @@ const pageComponents = {
   ChapterExercises: () => import('../features/lecture/components/ChapterExercises.vue'),
   PhilosophyTopic: () => import('../features/philosophy/components/PhilosophyTopic.vue'),
   DataDiagram: () => import('../features/illustrations/components/DataDiagram.vue'),
-  NotebookExecution: () => import('../features/illustrations/components/NotebookExecution.vue')
+  NotebookExecution: () => import('../features/illustrations/components/NotebookExecution.vue'),
+  ExtendedLibrary: () => import('../features/collections/components/ExtendedLibrary.vue')
 }
 
 // Mọi mô phỏng tương tác đặt tên dạng <Tên>Lab.vue được đăng ký toàn cục theo đúng tên file,

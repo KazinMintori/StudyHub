@@ -11,6 +11,7 @@ const {
   courseCategories,
   visibleCourses,
   catalog,
+  extendedCount,
   resume,
   activeResume,
   activeResumeLink,
@@ -21,7 +22,7 @@ const {
   getLessonDetailTitle
 } = useStudyHome()
 
-const totalLessons = catalog.reduce((sum, course) => sum + course.lessons.length, 0)
+const totalLessons = catalog.reduce((sum, course) => sum + (course.lessons ? course.lessons.length : 0), 0)
 const tools = [
   { name: 'wiki', tone: 'lam', title: 'Wiki thuật ngữ', text: 'Tra định nghĩa, ví dụ và câu hỏi ôn lại của từng khái niệm nền.', href: '/wiki/' },
   { name: 'tools', tone: 'hong', title: 'Góc học tập', text: 'Flashcard, sổ ghi chú và hẹn giờ tập trung trong một chỗ.', href: '/goc-hoc-tap' },
@@ -142,7 +143,7 @@ const tools = [
           </div>
           <span class="course-end">
             <span class="course-tag-pill">{{ getCourseCategoryLabel(course.id) }}</span>
-            <span class="course-lesson-count">{{ course.lessons.length }}&nbsp;{{ course.presentation === 'philosophy' ? 'chương' : 'bài' }}</span>
+            <span class="course-lesson-count">{{ course.lessons ? course.lessons.length : 0 }}&nbsp;{{ course.presentation === 'philosophy' ? 'chương' : 'bài' }}</span>
             <span class="course-open" aria-hidden="true">→</span>
           </span>
         </a>
@@ -150,6 +151,30 @@ const tools = [
       <div v-if="!visibleCourses.length" class="empty-state empty-state-art" role="status">
         <SpotArt name="empty" />
         <p>Không tìm thấy học phần. Thử tên môn hoặc chủ đề khác.</p>
+      </div>
+    </section>
+
+    <section class="home-extended-portal" aria-labelledby="extended-portal-heading">
+      <div class="extended-portal-card">
+        <div class="extended-portal-art">
+          <SpotArt name="tools" tone="lam" />
+        </div>
+        <div class="extended-portal-copy">
+          <div class="extended-portal-header">
+            <span class="extended-portal-badge">Học liệu mở rộng</span>
+            <span v-if="extendedCount" class="extended-portal-count">{{ extendedCount }} tài liệu</span>
+          </div>
+          <h2 id="extended-portal-heading" class="extended-portal-title">Thư viện học liệu mở rộng</h2>
+          <p class="extended-portal-desc">
+            Sách và học phần ngoài chương trình UET, bao gồm giáo trình chuyên sâu và sách chuyên khảo.
+          </p>
+        </div>
+        <div class="extended-portal-action">
+          <a class="study-button primary extended-portal-btn" :href="studyLink('/hoc-lieu-mo-rong/')">
+            <span>Khám phá thư viện mở rộng</span>
+            <span class="cta-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
 

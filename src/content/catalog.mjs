@@ -8,6 +8,7 @@ import { course as course6 } from './courses/giai-thuat-du-lieu/course.mjs'
 import { course as course7 } from './courses/dsa/course.mjs'
 import { course as course8 } from './courses/discrete-math/course.mjs'
 import { course as course9 } from './courses/triet-hoc-mac-lenin/course.mjs'
+import { course as course10 } from './courses/ai-nen-tang-tac-tu/course.mjs'
 
-export const courseCatalog = [course0, course1, course2, course3, course4, course5, course6, course7, course8, course9]
+export const courseCatalog = [course0, course1, course2, course3, course4, course5, course6, course7, course8, course9, course10]
 export const findCourse = id => courseCatalog.find(course => course.id === id)

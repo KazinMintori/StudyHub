@@ -1,0 +1,388 @@
+{
+  "course": "ai-nen-tang-tac-tu",
+  "lecture": "15-ca-the-va-quan-he",
+  "route": "/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he",
+  "notes": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he.md",
+  "topics": [
+    {
+      "slug": "15-1-khai-thac-cau-truc-quan-he",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-1-khai-thac-cau-truc-quan-he.md"
+    },
+    {
+      "slug": "15-2-ky-hieu-va-ngu-nghia",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-2-ky-hieu-va-ngu-nghia.md"
+    },
+    {
+      "slug": "15-3-logic-vi-tu",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md"
+    },
+    {
+      "slug": "15-4-datalog-ngon-ngu-luat-quan-he",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-4-datalog-ngon-ngu-luat-quan-he.md"
+    },
+    {
+      "slug": "15-5-chung-minh-va-phep-the",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md"
+    },
+    {
+      "slug": "15-6-ky-hieu-ham-va-cau-truc-du-lieu",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md"
+    },
+    {
+      "slug": "15-7-ung-dung-trong-ngon-ngu-tu-nhien",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md"
+    },
+    {
+      "slug": "15-8-dang-thuc",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-8-dang-thuc.md"
+    },
+    {
+      "slug": "15-9-gia-dinh-tri-thuc-day-du",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md"
+    },
+    {
+      "slug": "15-10-tac-dong-xa-hoi",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-10-tac-dong-xa-hoi.md"
+    },
+    {
+      "slug": "15-11-on-tap",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-11-on-tap.md"
+    },
+    {
+      "slug": "15-12-tai-lieu-tham-khao",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-12-tai-lieu-tham-khao.md"
+    },
+    {
+      "slug": "15-13-bai-tap",
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md"
+    }
+  ],
+  "slides": "src/content/courses/ai-nen-tang-tac-tu/lectures/15-ca-the-va-quan-he/slides.mjs",
+  "cheatsheet": "docs/.vitepress/cheatsheets.mjs",
+  "prerequisites": [],
+  "fragments": [],
+  "examples": [
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-1-khai-thac-cau-truc-quan-he.md",
+      "line": 17,
+      "title": "Ví dụ 15.1: Cấu trúc hóa miền bài toán mạch điện"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-2-ky-hieu-va-ngu-nghia.md",
+      "line": 20,
+      "title": "Ví dụ 15.2: Phân tách ý nghĩa và cơ chế tính toán"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md",
+      "line": 30,
+      "title": "Ví dụ 15.3: Các công thức logic vị từ"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md",
+      "line": 68,
+      "title": "Ví dụ 15.4: Diễn giải trên một bàn học cụ thể"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md",
+      "line": 120,
+      "title": "Ví dụ 15.5: Diễn giải ngữ nghĩa tòa nhà công nghệ thông tin"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md",
+      "line": 142,
+      "title": "Ví dụ 15.6: Giá trị chân lý của các nguyên tử không biến"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md",
+      "line": 171,
+      "title": "Ví dụ 15.7: Đánh giá chân lý của các công thức có lượng từ"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md",
+      "line": 187,
+      "title": "Ví dụ 15.8: Kiểm tra hệ quả logic"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-3-logic-vi-tu.md",
+      "line": 222,
+      "title": "Ví dụ 15.9: Đa dạng trong sự khái niệm hóa"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-4-datalog-ngon-ngu-luat-quan-he.md",
+      "line": 37,
+      "title": "Ví dụ 15.10: Biểu diễn quan hệ bảng thời khóa biểu"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-4-datalog-ngon-ngu-luat-quan-he.md",
+      "line": 65,
+      "title": "Ví dụ 15.11: Tách biệt tri thức miền và dữ liệu ngôi nhà cụ thể"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-4-datalog-ngon-ngu-luat-quan-he.md",
+      "line": 111,
+      "title": "Ví dụ 15.12: Cơ sở dữ liệu địa lý Nam Mỹ"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-4-datalog-ngon-ngu-luat-quan-he.md",
+      "line": 183,
+      "title": "Ví dụ 15.13: Phân biệt cá thể thực tế và chuỗi ký tự tên gọi"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 27,
+      "title": "Ví dụ 15.14: Phép thế dạng chuẩn"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 41,
+      "title": "Ví dụ 15.15: Áp dụng phép thế"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 68,
+      "title": "Ví dụ 15.16: Hợp nhất hai nguyên tử"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 80,
+      "title": "Ví dụ 15.17: Các bộ hợp nhất khả dĩ của hai nguyên tử"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 96,
+      "title": "Ví dụ 15.18: Bộ hợp nhất tổng quát nhất"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 119,
+      "title": "Ví dụ 15.19: Dẫn xuất tiến trên tập thể hiện không biến"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 149,
+      "title": "Ví dụ 15.20: Trường hợp truy vấn không chứa hằng số"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 201,
+      "title": "Ví dụ 15.21: Lần vết thuật toán Unify"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
+      "line": 246,
+      "title": "Ví dụ 15.22: Cây dẫn xuất SLD tìm nơi sinh của Shakira"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 12,
+      "title": "Ví dụ 15.23: Biểu diễn thời gian và ngày tháng"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 20,
+      "title": "Ví dụ 15.24: Biểu diễn câu trong xử lý ngôn ngữ tự nhiên"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 34,
+      "title": "Ví dụ 15.25: Biểu diễn ngày tháng với ký hiệu hàm"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 76,
+      "title": "Ví dụ 15.26: Cấu trúc dữ liệu cây"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 102,
+      "title": "Ví dụ 15.27: Biểu diễn danh sách"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 152,
+      "title": "Ví dụ 15.28: Tầm quan trọng của tính công bằng trong suy diễn tiến"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 171,
+      "title": "Ví dụ 15.29: Mất tính đúng đắn khi bỏ qua occurs check"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 189,
+      "title": "Ví dụ 15.30: Chi tiết phân giải SLD với ký hiệu hàm"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
+      "line": 239,
+      "title": "Ví dụ 15.31: Phân giải SLD với ký pháp danh sách trong Prolog"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md",
+      "line": 78,
+      "title": "Ví dụ 15.32: Danh sách sai phân cho ngữ danh từ"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md",
+      "line": 156,
+      "title": "Ví dụ 15.33: Quy tắc viết lại hỗn hợp gồm ký hiệu kết thúc và không kết thúc"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md",
+      "line": 237,
+      "title": "Ví dụ 15.34: Phân tích cú pháp ngữ danh từ trong câu hỏi địa lý"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md",
+      "line": 280,
+      "title": "Ví dụ 15.35: Chuyển đổi câu hỏi thành truy vấn cơ sở dữ liệu"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md",
+      "line": 341,
+      "title": "Ví dụ 15.36: Trả lời trực tiếp câu hỏi bằng văn phạm DCG"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md",
+      "line": 439,
+      "title": "Ví dụ 15.37: Xây dựng dạng logic trung gian cho câu hỏi"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-8-dang-thuc.md",
+      "line": 24,
+      "title": "Ví dụ 15.38: Hai chiếc ghế và quan hệ đẳng thức"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-8-dang-thuc.md",
+      "line": 50,
+      "title": "Ví dụ 15.39: Nhu cầu về giả định tên duy nhất trong quản lý đào tạo"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-8-dang-thuc.md",
+      "line": 88,
+      "title": "Ví dụ 15.40: Trì hoãn bất đẳng thức trong thủ tục chứng minh"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
+      "line": 14,
+      "title": "Ví dụ 15.41: Giả định tri thức đầy đủ về tập sinh viên"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
+      "line": 74,
+      "title": "Ví dụ 15.42: Bao đóng Clark cho vị từ sinh viên"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
+      "line": 100,
+      "title": "Ví dụ 15.43: Dạng chuẩn và bao đóng Clark cho vị từ đệ quy"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
+      "line": 127,
+      "title": "Ví dụ 15.44: Định nghĩa quan hệ khóa học rỗng bằng phủ định"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
+      "line": 154,
+      "title": "Ví dụ 15.45: Rủi ro khi có biến tự do trong mục tiêu phủ định"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
+      "line": 176,
+      "title": "Ví dụ 15.46: Hiện tượng tắc nghẽn và phân tích trường hợp"
+    }
+  ],
+  "exercises": [
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 12,
+      "title": "Bài tập 15.1: Đếm diễn giải và mô hình trong miền hai cá thể"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 70,
+      "title": "Bài tập 15.2: Đếm mô hình với miền bốn cá thể"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 137,
+      "title": "Bài tập 15.3: Thứ tự dẫn xuất trong thủ tục suy diễn tiến"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 200,
+      "title": "Bài tập 15.4: Dẫn xuất SLD và truy vấn quyền truy cập"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 286,
+      "title": "Bài tập 15.5: Thực thi phép thế trên biểu thức"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 312,
+      "title": "Bài tập 15.6: Tìm bộ hợp nhất tổng quát nhất (MGU)"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 344,
+      "title": "Bài tập 15.7: Kiểm tra tính hợp nhất của các nguyên tử"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 387,
+      "title": "Bài tập 15.8: Liệt kê hệ quả logic nguyên tử không biến"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 418,
+      "title": "Bài tập 15.9: Dẫn xuất phân giải loại bỏ phần tử trùng liền kề"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 482,
+      "title": "Bài tập 15.10: Suy diễn quan hệ kề cận với danh sách"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 530,
+      "title": "Bài tập 15.11: Lập trình logic thao tác trên danh sách"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 603,
+      "title": "Bài tập 15.12: Thiết kế bài trình chiếu video tự động"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 666,
+      "title": "Bài tập 15.13: Biểu diễn ngôn ngữ $a^n b^n c^n$ bằng văn phạm DCG"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 699,
+      "title": "Bài tập 15.14: Xây dựng cơ sở tri thức hỏi đáp địa lý bằng DCG"
+    },
+    {
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-13-bai-tap.md",
+      "line": 717,
+      "title": "Bài tập 15.15: Rủi ro khi đưa biến tự do vào phủ định thất bại"
+    }
+  ],
+  "solutions": [],
+  "assets": [
+    {
+      "reference": "figures/x155.png",
+      "declaredIn": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-2-ky-hieu-va-ngu-nghia.md",
+      "line": 16,
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/figures/x155.png"
+    },
+    {
+      "reference": "figures/x156.png",
+      "declaredIn": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-8-dang-thuc.md",
+      "line": 20,
+      "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/figures/x156.png"
+    }
+  ]
+}

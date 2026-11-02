@@ -41,8 +41,9 @@ def main() -> None:
             original = (source / "text" / page["filename"].replace(".html", ".md")).read_text(encoding="utf-8")
             source_words = len(original.split())
             target_words = len(target_text.split())
-            source_examples = sorted(set(re.findall(r"Example\s+(\d+\.\d+)", original)))
-            target_examples = sorted(set(re.findall(r"(?:Ví dụ|Example)\s+(\d+\.\d+)", target_text, re.I)))
+            source_examples = sorted(set(re.findall(r"^#{1,6}\s+Example\s+(\d+\.\d+)", original, re.M)))
+            target_examples = sorted(set(re.findall(
+                r"^(?:#{1,6}\s+|:::\s+example\s+)(?:Ví dụ\s+)?(\d+\.\d+)", target_text, re.M | re.I)))
             missing_examples = [n for n in source_examples if n not in target_examples]
             flags = []
             if not targets:
