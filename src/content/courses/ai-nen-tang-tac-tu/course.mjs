@@ -38,7 +38,8 @@ export const parts = [
   {
     title: 'Phần III: Học máy và suy luận trong điều kiện bất định',
     lessons: [
-      '07-hoc-may-co-giam-sat'
+      '07-hoc-may-co-giam-sat',
+      '08-mang-no-ron-va-hoc-sau'
     ]
   },
   {

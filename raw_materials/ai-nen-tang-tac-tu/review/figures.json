@@ -308,5 +308,70 @@
     "source": "https://artint.info/3e/html/x60.png",
     "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x60.png",
     "caption": "Hình 7.10: Cơ chế kết hợp mô hình Gradient Boosted Trees trên phần dư"
+  },
+  "08-mang-no-ron-va-hoc-sau/x219.png": {
+    "source": "https://artint.info/3e/html/x219.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x219.png",
+    "caption": "Hình 8.1: Kiến trúc mạng nơ-ron truyền thẳng độ sâu 3 tầng"
+  },
+  "08-mang-no-ron-va-hoc-sau/x220.png": {
+    "source": "https://artint.info/3e/html/x220.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x220.png",
+    "caption": "Hình 8.2: Mạng nơ-ron một tầng ẩn cho hàm điều kiện if-then-else"
+  },
+  "08-mang-no-ron-va-hoc-sau/x63.png": {
+    "source": "https://artint.info/3e/html/x63.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x63.png",
+    "caption": "Hình 8.3a: Các mẫu huấn luyện MNIST được dự đoán chính xác"
+  },
+  "08-mang-no-ron-va-hoc-sau/x64.png": {
+    "source": "https://artint.info/3e/html/x64.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x64.png",
+    "caption": "Hình 8.3b: Các mẫu kiểm thử MNIST có mất mát logarit cao nhất"
+  },
+  "08-mang-no-ron-va-hoc-sau/x65.png": {
+    "source": "https://artint.info/3e/html/x65.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x65.png",
+    "caption": "Hình 8.4a: Các mẫu huấn luyện MNIST có mất mát logarit cao nhất"
+  },
+  "08-mang-no-ron-va-hoc-sau/x66.png": {
+    "source": "https://artint.info/3e/html/x66.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x66.png",
+    "caption": "Hình 8.4b: Các mẫu kiểm thử MNIST nhầm lẫn nhãn dự đoán"
+  },
+  "08-mang-no-ron-va-hoc-sau/x221.png": {
+    "source": "https://artint.info/3e/html/x221.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x221.png",
+    "caption": "Hình 8.5: Bề mặt địa hình hẻm núi tham số minh họa dao động của SGD"
+  },
+  "08-mang-no-ron-va-hoc-sau/x68.png": {
+    "source": "https://artint.info/3e/html/x68.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x68.png",
+    "caption": "Hình 8.6: Tác động của các bộ lọc kernel tích chập một chiều"
+  },
+  "08-mang-no-ron-va-hoc-sau/x222.png": {
+    "source": "https://artint.info/3e/html/x222.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x222.png",
+    "caption": "Hình 8.7: Mạng nơ-ron nông học biểu diễn không gian nhúng từ"
+  },
+  "08-mang-no-ron-va-hoc-sau/x223.png": {
+    "source": "https://artint.info/3e/html/x223.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x223.png",
+    "caption": "Hình 8.8: Mạng nơ-ron hồi quy với chuỗi đầu vào đầu ra đồng bộ độ dài"
+  },
+  "08-mang-no-ron-va-hoc-sau/x191.png": {
+    "source": "https://artint.info/3e/html/x191.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x191.png",
+    "caption": "Hình 8.9: Mạng nơ-ron hồi quy dạng Many-to-One phân loại chuỗi"
+  },
+  "08-mang-no-ron-va-hoc-sau/x192.png": {
+    "source": "https://artint.info/3e/html/x192.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x192.png",
+    "caption": "Hình 8.10: Kiến trúc mạng hồi quy mã hóa - giải mã (Encoder-Decoder)"
+  },
+  "08-mang-no-ron-va-hoc-sau/x193.png": {
+    "source": "https://artint.info/3e/html/x193.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x193.png",
+    "caption": "Hình 8.11: Cấu trúc bên trong của ô nhớ LSTM với các cổng điều khiển"
   }
 }

@@ -119,5 +119,40 @@ export const flashcards = [
     "back": "GBDT huấn luyện chuỗi cây quyết định tuần tự, trong đó mỗi cây mới học cách khớp trực tiếp với vector gradient âm (phần dư) của hàm mất mát từ các cây trước đó.",
     "category": "Học máy có giám sát",
     "lecture": "07-hoc-may-co-giam-sat"
+  },
+  {
+    "id": "fc-artint-ch8-01",
+    "front": "Định lý xấp xỉ phổ quát (Universal Approximation Theorem) khẳng định điều gì về mạng nơ-ron truyền thẳng?",
+    "back": "Một mạng nơ-ron chỉ với một tầng ẩn phi tuyến duy nhất chứa đủ số lượng nơ-ron có thể xấp xỉ bất kỳ hàm liên tục nào trên một tập compact trong R^d với độ chính xác tùy ý.",
+    "category": "Mạng nơ-ron và học sâu",
+    "lecture": "08-mang-no-ron-va-hoc-sau"
+  },
+  {
+    "id": "fc-artint-ch8-02",
+    "front": "Cơ chế hoạt động cốt lõi của thuật toán Adam (Adaptive Moment Estimation) là gì?",
+    "back": "Adam kết hợp động lượng bậc một (Momentum) để duy trì hướng đi theo quán tính và động lượng bậc hai (RMS-Prop) để tự động điều chỉnh tốc độ học riêng biệt cho từng tham số theo bình phương gradient lịch sử.",
+    "category": "Mạng nơ-ron và học sâu",
+    "lecture": "08-mang-no-ron-va-hoc-sau"
+  },
+  {
+    "id": "fc-artint-ch8-03",
+    "front": "Hai đặc tính then chốt giúp mạng nơ-ron tích chập (CNN) xử lý hình ảnh vượt trội hơn mạng truyền thẳng (FNN) là gì?",
+    "back": "Trường tiếp nhận cục bộ (Local Receptive Fields) giúp nắm bắt tương quan không gian gần, và chia sẻ trọng số (Weight Sharing) giúp tạo tính bất biến tịnh tiến đồng thời giảm đột biến số lượng tham số.",
+    "category": "Mạng nơ-ron và học sâu",
+    "lecture": "08-mang-no-ron-va-hoc-sau"
+  },
+  {
+    "id": "fc-artint-ch8-04",
+    "front": "Khối tàn dư (Residual Block) trong kiến trúc ResNet giải quyết vấn đề suy thoái mạng sâu như thế nào?",
+    "back": "Thông qua đường tắt đồng nhất H(x) = F(x) + x, gradient có thể chảy trực tiếp ngược về các tầng nông mà không bị triệt tiêu, giúp mạng chỉ cần học phần biến đổi vi sai F(x) thay vì toàn bộ hàm ánh xạ.",
+    "category": "Mạng nơ-ron và học sâu",
+    "lecture": "08-mang-no-ron-va-hoc-sau"
+  },
+  {
+    "id": "fc-artint-ch8-05",
+    "front": "Cơ chế Tự chú ý (Self-Attention) trong Transformer khắc phục nhược điểm cốt lõi nào của RNN/LSTM?",
+    "back": "Cho phép mọi cặp từ vựng trong chuỗi tương tác trực tiếp với độ dài đường dẫn O(1) bất kể khoảng cách, đồng thời xử lý song song toàn bộ ngữ cảnh mà không bị nghẽn cổ chai tuần tự.",
+    "category": "Mạng nơ-ron và học sâu",
+    "lecture": "08-mang-no-ron-va-hoc-sau"
   }
 ]
