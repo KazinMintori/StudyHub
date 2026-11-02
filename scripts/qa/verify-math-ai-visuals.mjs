@@ -51,6 +51,7 @@ const routes = [
   ['duality-overview','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
   ['equivalence','/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-tuong-duong.html'],
   ['elimination','/toan-cho-ai/bai-giang/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.html'],
+  ['linear-program','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-tuyen-tinh.html'],
   ['function-operations','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.html'],
   ['optimality','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.html'],
   ['ml-models','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.html'],
@@ -95,6 +96,7 @@ async function sourceManifest() {
     'src/features/labs/components/EliminationLab.vue',
     'src/features/labs/components/SensorWeightsLab.vue',
     'src/features/labs/components/BisectionLab.vue','src/features/labs/components/MinimaxRatioLab.vue','src/features/labs/services/apollonius-feasibility.mjs',
+    'src/features/labs/components/LPDirectionLab.vue','src/features/labs/components/LpCubeLab.vue','src/features/labs/services/linear-program-geometry.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -315,6 +317,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'linear-program':[
+   [0,'Nghiệm tại một đỉnh'],[0,'Cả cạnh tối ưu'],[0,'Mục tiêu bằng không'],[0,'Miền vô hạn, tối ưu hữu hạn'],[0,'Mục tiêu giảm không bị chặn'],
+   [0,'Cả tia là nghiệm'],[0,'Có nghiệm nhưng không có đỉnh'],[0,'Miền khả thi rỗng'],[0,'Mục tiêu bằng không'],[0,'Nghiệm tại một đỉnh'],
+   [1,'Một đỉnh tối ưu'],[1,'Một cạnh tối ưu'],[1,'Một mặt tối ưu'],[1,'Toàn khối tối ưu'],[1,'Đổi dấu hai hệ số'],[1,'Góc nhìn thứ hai'],[1,'Góc nhìn thứ nhất']
+  ],
   minimax:[
    [0,'Miền X trong R²'],[0,'Thử t = 0.125'],[0,'Thử t = 0.25'],[0,'Đưa P tới điểm chứng Q'],[0,'Thử mức tiếp xúc'],[0,'Thử t = 1'],
    [0,'Bắt đầu lại'],[0,'Chia đôi tới độ rộng 0.01'],
@@ -354,6 +361,19 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='linear-program'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===0){
+    if(label==='Cả cạnh tối ưu')assert(readout.includes('Có 2 đỉnh cùng tối ưu'),'The pentagon supporting edge must retain both endpoint optima')
+    if(label==='Mục tiêu giảm không bị chặn')assert(readout.includes('Không bị chặn dưới.'),'A negative recession slope must give an unbounded objective')
+    if(label==='Cả tia là nghiệm')assert(readout.includes('Có tia tối ưu'),'A flat recession direction must be included in the optimal set')
+    if(label==='Có nghiệm nhưng không có đỉnh')assert(readout.includes('Dải không có đỉnh'),'The no-vertex example must not be reduced to displayed window corners')
+    if(label==='Miền khả thi rỗng')assert(readout.includes('Bất khả thi'),'Contradictory constraints must remain infeasible')
+   }else{
+    const dimension={'Một đỉnh tối ưu':0,'Một cạnh tối ưu':1,'Một mặt tối ưu':2,'Toàn khối tối ưu':3}[label]
+    if(dimension!==undefined)assert(readout.includes('số chiều '+dimension),'The cube optimum has the wrong affine dimension')
+   }
+  }
   if(name==='minimax'&&index===0){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Thử t = 0.125')assert(text.includes('Ngay cả điểm tốt nhất trong X cũng không đạt mức.'),'The low ratio level must be infeasible')
@@ -408,6 +428,10 @@ async function exercisePresets(name,touch){
    interactions.push({url:page.url(),width:page.viewport().width,input:touch?'touch':'mouse',coincidentVectorSelector:true})
   }
   interactions.push({url:page.url(),width:page.viewport().width,input:touch?'touch':'mouse',preset:label,lab:index,readout:await labs[index].$eval('.lab-readout',e=>e.innerText)})
+  if(name==='linear-program'&&(label.startsWith('Nghiệm tại')||label.startsWith('Miền vô hạn')||label.startsWith('Có nghiệm')||index===1&&label==='Toàn khối tối ưu')){
+   await interact(touch,index)
+   await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+label)
+  }
  }
  if(name==='equality-qp'){
   const select=await labs[0].$('.lab-controls select'),options=await select.$$eval('option',rows=>rows.map(e=>e.value))
