@@ -259,5 +259,40 @@ export const flashcards = [
   "back": "(1) Bắt cóc (Abduction): Cập nhật phân phối hậu nghiệm P(U | e) của các biến ngoại sinh theo bằng chứng thực tế; (2) Can thiệp (Action): Thay thế phương trình của X bằng X=x' tạo mô hình Mx'; (3) Dự đoán (Prediction): Dùng mô hình Mx' và P(U | e) tính phân phối kết quả Y.",
   "category": "Quan hệ nhân quả",
   "lecture": "11-quan-he-nhan-qua"
+},
+  {
+  "id": "fc-artint-ch12-01",
+  "front": "Định lý kỳ vọng hữu dụng của von Neumann – Morgenstern khẳng định điều gì?",
+  "back": "Nếu sở thích của tác tử thỏa mãn 6 tiên đề duy lý (Đầy đủ, Bắc cầu, Đơn điệu, Phân rã, Liên tục, Thay thế), thì tồn tại hàm giá trị thực u sao cho mức ưa thích đối với mọi xổ số bằng đúng kỳ vọng toán học của hữu dụng.",
+  "category": "Lập kế hoạch bất định",
+  "lecture": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch12-02",
+  "front": "Thái độ né tránh rủi ro (Risk-averse) được thể hiện như thế nào qua hàm hữu dụng tiền tệ?",
+  "back": "Hàm hữu dụng tiền tệ u(M) là hàm lõm (đạo hàm bậc hai âm). Khi đó mức tương đương chắc chắn nhỏ hơn kỳ vọng tiền tệ (CE < E[M]) và phần bù rủi ro dương (RP > 0).",
+  "category": "Lập kế hoạch bất định",
+  "lecture": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch12-03",
+  "front": "Ý nghĩa của một cung có hướng đi vào nút quyết định trong mạng quyết định là gì?",
+  "back": "Là cung thông tin (information link): Chỉ định rằng giá trị của nút cha đó đã được tác tử quan sát và biết trước khi đưa ra quyết định tại nút hiện tại.",
+  "category": "Lập kế hoạch bất định",
+  "lecture": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch12-04",
+  "front": "Giá trị của thông tin hoàn hảo (VPI) có tính chất căn bản gì và tại sao?",
+  "back": "VPI luôn không âm (VPI >= 0) vì trong trường hợp xấu nhất tác tử luôn có thể phớt lờ thông tin mới. VPI là chặn trên lý thuyết cho giá trị của mọi cảm biến có nhiễu.",
+  "category": "Lập kế hoạch bất định",
+  "lecture": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch12-05",
+  "front": "Sự khác biệt cốt lõi giữa thuật toán Lặp giá trị (Value Iteration) và Lặp chính sách (Policy Iteration) là gì?",
+  "back": "Lặp giá trị cập nhật hàm V qua toán tử co Bellman cho đến khi hội tụ số học; Lặp chính sách luân phiên giữa Đánh giá chính sách (giải hệ phương trình tuyến tính) và Cải tiến chính sách (tham lam), luôn tìm ra chính sách tối ưu chính xác sau số bước hữu hạn.",
+  "category": "Lập kế hoạch bất định",
+  "lecture": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh"
 }
 ]

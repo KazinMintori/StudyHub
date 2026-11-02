@@ -328,6 +328,68 @@ export const lessons = [
       ]
     }
   ]
+},
+  {
+  "number": 12,
+  "slug": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh",
+  "title": "Lập kế hoạch trong điều kiện bất định",
+  "prerequisites": [],
+  "supportingConcepts": [],
+  "status": "ready",
+  "lessonStatus": "ready",
+  "description": "Lý thuyết quyết định, tiên đề hữu dụng von Neumann - Morgenstern, mạng quyết định, giá trị thông tin hoàn hảo (VPI), quá trình quyết định Markov (MDP), thuật toán lặp giá trị và lặp chính sách.",
+  "topicGroups": [
+    {
+      "title": "Các chủ đề trong chương",
+      "topics": [
+        {
+          "slug": "12-1-so-thich-va-ham-huu-dung",
+          "title": "12.1 Sở thích và hàm hữu dụng",
+          "question": "Hệ tiên đề von Neumann - Morgenstern và định lý kỳ vọng hữu dụng định hình hành vi duy lý ra sao?"
+        },
+        {
+          "slug": "12-2-quyet-dinh-mot-lan",
+          "title": "12.2 Quyết định một lần và mạng quyết định",
+          "question": "Mạng quyết định một giai đoạn và thuật toán khử biến tính kỳ vọng hữu dụng (MEU) như thế nào?"
+        },
+        {
+          "slug": "12-3-quyet-dinh-tuan-tu",
+          "title": "12.3 Quyết định tuần tự",
+          "question": "Nguyên lý quy nạp ngược (Backward Induction) tối ưu hóa chuỗi quyết định tuần tự có quan sát ra sao?"
+        },
+        {
+          "slug": "12-4-gia-tri-thong-tin-va-quyen-kiem-soat",
+          "title": "12.4 Giá trị của thông tin và quyền kiểm soát",
+          "question": "Giá trị của thông tin hoàn hảo (VPI) và giá trị của quyền kiểm soát (VOC) được định lượng như thế nào?"
+        },
+        {
+          "slug": "12-5-qua-trinh-quyet-dinh-markov",
+          "title": "12.5 Quá trình quyết định Markov",
+          "question": "Phương trình Bellman, thuật toán Lặp giá trị và Lặp chính sách giải quyết MDP chân trời vô hạn ra sao?"
+        },
+        {
+          "slug": "12-6-tac-dong-xa-hoi",
+          "title": "12.6 Tác động xã hội và đạo đức máy móc",
+          "question": "Thước đo QALY, định giá sinh mạng thống kê (VSL) và bài toán xe goòng đặt ra những thách thức đạo đức nào cho AI?"
+        },
+        {
+          "slug": "12-7-on-tap",
+          "title": "12.7 Ôn tập và hệ thống hóa kiến thức",
+          "question": "Làm thế nào để hệ thống hóa và lựa chọn đúng đắn mô hình giải quyết bài toán ra quyết định bất định?"
+        },
+        {
+          "slug": "12-8-tai-lieu-tham-khao-va-doc-them",
+          "title": "12.8 Tài liệu tham khảo và đọc thêm",
+          "question": "Những công trình khoa học nào từ Pascal, von Neumann đến Bellman và Howard đã định hình lý thuyết quyết định?"
+        },
+        {
+          "slug": "12-9-bai-tap",
+          "title": "12.9 Bài tập và lời giải chi tiết",
+          "question": "Làm thế nào tính toán chính xác các ngưỡng chuyển đổi chính sách của hệ số chiết khấu trong MDP?"
+        }
+      ]
+    }
+  ]
 }
 ]
 
@@ -579,6 +641,56 @@ export const slides = [
     "Quy trình ba bước chuẩn mực: Bắt cóc chân dung cá thể P(U | e), Can thiệp sửa đổi mô hình Mx', và Dự đoán kết quả Y."
   ],
   "note": "11-quan-he-nhan-qua",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Hệ tiên đề Duy lý von Neumann – Morgenstern",
+  "bullets": [
+    "Hệ 6 tiên đề (Đầy đủ, Bắc cầu, Đơn điệu, Phân rã, Liên tục, Thay thế) là cơ sở toán học chứng minh sự tồn tại của hàm hữu dụng.",
+    "Thang đo hữu dụng bất biến qua phép biến đổi afin dương; độ lõm của hàm hữu dụng tiền tệ xác định thái độ né tránh rủi ro."
+  ],
+  "note": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Mạng quyết định và Khử biến (VE-SSDN)",
+  "bullets": [
+    "Mở rộng mạng Bayes với nút quyết định (hình vuông) và nút hữu dụng (hình thoi); biểu diễn dựa trên đặc trưng tránh bùng nổ tổ hợp.",
+    "Thuật toán khử biến tổng gom các biến ngẫu nhiên qua các nhân tố xác suất và hữu dụng để tìm quyết định tối ưu cực đại MEU."
+  ],
+  "note": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Quyết định tuần tự và Quy nạp ngược (Backward Induction)",
+  "bullets": [
+    "Chính sách là tập hợp các hàm quyết định mapping từ thông tin quan sát sẵn có đến hành động thực thi tại mỗi giai đoạn.",
+    "Quy nạp ngược tối ưu hóa lùi từ quyết định cuối cùng về quyết định đầu tiên theo nguyên lý quy hoạch động."
+  ],
+  "note": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Giá trị của Thông tin Hoàn hảo (VPI)",
+  "bullets": [
+    "VPI đo lường mức gia tăng kỳ vọng hữu dụng khi tác tử biết trước giá trị của một biến ngẫu nhiên trước khi hành động.",
+    "Định lý cốt lõi: VPI luôn không âm (VPI >= 0) và là chặn trên lý thuyết tuyệt đối cho chi phí của mọi cảm biến có nhiễu."
+  ],
+  "note": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Quá trình quyết định Markov (MDP) và Phương trình Bellman",
+  "bullets": [
+    "MDP mô hình hóa tiến trình tuần tự chân trời vô hạn với hệ số chiết khấu gamma; hàm giá trị tối ưu thỏa mãn phương trình Bellman.",
+    "Lặp giá trị (Value Iteration) hội tụ theo định lý ánh xạ co Banach; Lặp chính sách (Policy Iteration) đạt nghiệm chính xác sau hữu hạn bước."
+  ],
+  "note": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh",
   "formula": "",
   "example": ""
 }

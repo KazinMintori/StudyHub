@@ -47,7 +47,8 @@ export const parts = [
   {
     title: 'Phần IV: Lập kế hoạch và hành động trong điều kiện bất định',
     lessons: [
-      '11-quan-he-nhan-qua'
+      '11-quan-he-nhan-qua',
+      '12-lap-ke-hoach-trong-dieu-kien-bat-dinh'
     ]
   },
   {
