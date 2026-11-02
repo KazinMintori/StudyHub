@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { mkdir, writeFile } from 'node:fs/promises'
 import puppeteer from 'puppeteer'
 import { courseCatalog } from '../../src/content/catalog.mjs'
+import { isExtendedCourse } from '../../src/content/collections.mjs'
 
 const base = (process.env.QA_URL || 'http://127.0.0.1:5173').replace(/\/$/, '')
 const basePath = new URL(base).pathname.replace(/\/$/, '')
@@ -52,6 +53,7 @@ try {
       results.push({ width, url: page.url(), selector, cards: inspected.length })
     }
     for (const course of courseCatalog) {
+      if (isExtendedCourse(course)) await follow('/hoc-lieu-mo-rong/', '.extended-library')
       await follow(`/${course.id}/`, course.id === 'triet-hoc-mac-lenin' ? '.philosophy-topic-link' : '.lecture-row')
       await cards(course.id === 'triet-hoc-mac-lenin' ? '.philosophy-topic-link' : '.lecture-row')
       await follow('/', '.study-home')

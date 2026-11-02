@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 import { mkdir, writeFile } from 'node:fs/promises'
 import { courseCatalog } from '../../src/content/catalog.mjs'
+import { getUetCourses } from '../../src/content/collections.mjs'
 
 const base = process.env.QA_URL || 'http://127.0.0.1:5173'
 const output = 'qa/refactor'
@@ -38,7 +39,7 @@ try {
   await page.setViewport({ width: 1440, height: 900 })
   await go('/')
   await check('All current courses and Vietnamese filtering are preserved', async () => {
-    assert.equal(await page.$$eval('.course-row', rows => rows.length), courseCatalog.length)
+    assert.equal(await page.$$eval('.course-row', rows => rows.length), getUetCourses(courseCatalog).length)
     await page.type('.course-search input', 'xu ly du lieu')
     await page.waitForFunction(() => document.querySelectorAll('.course-row').length === 1)
     assert.equal(await page.$$eval('.course-row', rows => rows.length), 1)
