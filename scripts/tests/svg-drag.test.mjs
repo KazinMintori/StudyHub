@@ -53,6 +53,25 @@ test('secondary buttons and non-primary touches do not start drags or prevent pa
   assert.deepEqual(moves, [])
 })
 
+test('off-center touch keeps its grab offset on a scaled canvas and cancellation releases it', () => {
+  const svg = surface(), moves = []
+  const handle = { ...svg, getBoundingClientRect: () => ({ x: 30, y: 30, width: 40, height: 40 }) }
+  const view = { value: makeView({ x0: 0, x1: 10, y0: 0, y1: 10, width: 200, height: 200 }) }
+  const drag = createDragger({ value: svg }, view, (_, point) => moves.push(point))
+  drag.start('point', event(7, { clientX: 60, clientY: 45, currentTarget: handle }))
+  drag.move(event(7, { clientX: 60, clientY: 45 }))
+  assert.deepEqual(moves.at(-1), [5, 5])
+  drag.move(event(7, { clientX: 70, clientY: 40 }))
+  assert.deepEqual(moves.at(-1), [6, 5.5])
+  drag.end(event(7, { type: 'pointercancel' }))
+  assert.equal(handle.hasPointerCapture(7), false)
+  drag.move(event(7, { clientX: 80, clientY: 20 }))
+  assert.equal(moves.length, 2)
+  drag.start('point', event(8, { clientX: 50, clientY: 50, currentTarget: handle }))
+  drag.move(event(8, { clientX: 40, clientY: 50 }))
+  assert.deepEqual(moves.at(-1), [4, 5])
+})
+
 test('keyboard and direction buttons share snapping, bounds and the model constraint callback', () => {
   let position = [1, 2]
   const view = { value: makeView({ x0: 0, x1: 3, y0: 0, y1: 3.98 }) }

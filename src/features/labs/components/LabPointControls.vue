@@ -45,6 +45,7 @@ function disconnect() {
 function connect(svg) {
   disconnect()
   observedSvg = svg
+  if (svg && !svg.id) svg.id = `${controlsId}-canvas`
   refresh()
   if (!svg) return
   svg.addEventListener('pointerdown', pick, true)
@@ -67,7 +68,7 @@ onBeforeUnmount(disconnect)
 </script>
 
 <template>
-  <div v-if="handles.length" class="lab-point-controls" role="group" :aria-labelledby="`${controlsId}-title`">
+  <div v-if="handles.length" class="lab-point-controls" role="group" :aria-labelledby="`${controlsId}-title`" :aria-controls="props.svg?.id">
     <p :id="`${controlsId}-title`" class="lab-point-heading">Di chuyển điểm không cần kéo</p>
     <div class="lab-point-options">
       <label :for="`${controlsId}-select`">Điểm cần điều chỉnh

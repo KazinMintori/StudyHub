@@ -3,7 +3,7 @@
 .study-lab .lab-title { font-size: var(--fs-read); font-weight: 600; margin: 0 0 var(--space-2); line-height: 1.4; }
 .study-lab .lab-lead { font: var(--fs-ui)/1.6 var(--font-read); color: var(--ink-2); margin: 0 0 var(--space-4); }
 .study-lab svg { display: block; width: 100%; height: auto; max-height: 420px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); }
-.study-lab > svg { touch-action: pan-y pinch-zoom; }
+.study-lab > svg, .study-lab > .lab-pair > svg { touch-action: pan-y pinch-zoom; }
 .study-lab svg text { font: 15px var(--font-ui); fill: var(--ink); }
 .study-lab svg .lab-small { font-size: 13px; fill: var(--ink-2); }
 .study-lab .lab-grid { stroke: var(--grid); stroke-width: 1; }

@@ -3,6 +3,7 @@ import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, sub, scale, dot, norm2, barycentric, combination } from '../services/convex-geometry.mjs'
+import { lineParameter } from '../services/foundation-geometry.mjs'
 
 // type: line (đường thẳng qua hai điểm), combination (tổ hợp affine của ba điểm),
 // origin (vì sao tổng hệ số bằng 1), solutions (tập nghiệm của một phương trình tuyến tính).
@@ -38,12 +39,20 @@ const points = ref({
   p1: [-1, -1], p2: [4, 0], p3: [1, 4], y: [5, 3],
   o: [0, 0]
 })
-const drag = createDragger(svg, view, (name, value) => { points.value = { ...points.value, [name]: value } }, { step: 0.25, snap: 0.25 })
+const drag = createDragger(svg, view, (name, value) => {
+  if (name === 'line-result') {
+    const t = lineParameter(value, points.value.x2, points.value.x1)
+    if (t !== null) theta.value = Math.max(-1, Math.min(2, t))
+  } else if (name === 'solution-result') {
+    if (!degenerate.value) tParam.value = Math.max(-4, Math.min(4, dot(sub(value, x0.value), dirUnit.value)))
+  } else points.value = { ...points.value, [name]: value }
+}, { step: 0.1, snap: 0 })
 
 // --- line ---
 const theta = ref(0.5)
 const lineDir = computed(() => sub(points.value.x1, points.value.x2))
 const yLine = computed(() => add(points.value.x2, scale(theta.value, lineDir.value)))
+const inView = p => p[0] >= view.value.x0 && p[0] <= view.value.x1 && p[1] >= view.value.y0 && p[1] <= view.value.y1
 const fullLine = computed(() => norm2(lineDir.value) < 1e-9 ? null : clipLine(points.value.x2, lineDir.value))
 const ticks = [-0.5, 0, 0.5, 1, 1.5].map(t => ({ t, label: t === 0.5 ? '½' : t === 1.5 ? '1.5' : t === -0.5 ? '−½' : String(t) }))
 const lineStatus = computed(() => {
@@ -93,7 +102,9 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
 <template>
   <figure class="study-lab" :aria-label="titles[type]">
     <p class="lab-title">{{ titles[type] }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="titles[type]" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p v-if="type === 'line'" class="lab-lead">Kéo x₁ hoặc x₂ để đổi đường thẳng. Kéo điểm y để đổi θ ngay trên đường. Nếu hai điểm mốc trùng nhau, đường thẳng không được xác định.</p>
+    <p v-if="type === 'solutions'" class="lab-lead">Kéo điểm màu vàng dọc đường nghiệm để đổi t. Đường nét đứt qua gốc có cùng phương, nhưng giải hệ thuần nhất.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="titles[type]" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs>
         <marker :id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-head" /></marker>
         <marker :id="arrowAccent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-accent" /></marker>
@@ -110,10 +121,11 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
           <circle :cx="P(add(points.x2, scale(tick.t, lineDir)))[0]" :cy="P(add(points.x2, scale(tick.t, lineDir)))[1]" r="3" class="lab-dot" />
           <text :x="P(add(points.x2, scale(tick.t, lineDir)))[0] + 8" :y="P(add(points.x2, scale(tick.t, lineDir)))[1] + 18" class="lab-small">θ={{ tick.label }}</text>
         </g>
-        <circle :cx="P(yLine)[0]" :cy="P(yLine)[1]" r="8" class="lab-dot-warn" />
+        <circle v-if="inView(yLine) && norm2(lineDir) > 1e-9" :cx="P(yLine)[0]" :cy="P(yLine)[1]" r="23" class="lab-handle result-handle" tabindex="0" role="slider" aria-label="Điểm y, thay đổi hệ số θ" aria-valuemin="-1" aria-valuemax="2" :aria-valuenow="theta" :aria-valuetext="`θ = ${fmt(theta)}, y = ${fmtPoint(yLine)}`" @pointerdown="drag.start('line-result', $event)" @keydown="drag.key('line-result', yLine, $event)" />
+        <circle :cx="P(yLine)[0]" :cy="P(yLine)[1]" r="8" class="lab-dot-warn" pointer-events="none" />
         <text :x="P(yLine)[0] - 6" :y="P(yLine)[1] - 14">y</text>
-        <circle :cx="P(points.x1)[0]" :cy="P(points.x1)[1]" r="9" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x₁, kéo hoặc dùng phím mũi tên" @pointerdown="drag.start('x1', $event)" @keydown="drag.key('x1', points.x1, $event)" />
-        <circle :cx="P(points.x2)[0]" :cy="P(points.x2)[1]" r="9" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x₂, kéo hoặc dùng phím mũi tên" @pointerdown="drag.start('x2', $event)" @keydown="drag.key('x2', points.x2, $event)" />
+        <circle :cx="P(points.x1)[0]" :cy="P(points.x1)[1]" r="9" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x₁, kéo hoặc dùng phím mũi tên" :aria-valuetext="fmtPoint(points.x1)" @pointerdown="drag.start('x1', $event)" @keydown="drag.key('x1', points.x1, $event)" />
+        <circle :cx="P(points.x2)[0]" :cy="P(points.x2)[1]" r="9" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x₂, kéo hoặc dùng phím mũi tên" :aria-valuetext="fmtPoint(points.x2)" @pointerdown="drag.start('x2', $event)" @keydown="drag.key('x2', points.x2, $event)" />
         <text :x="P(points.x1)[0] + 12" :y="P(points.x1)[1] - 10">x₁</text>
         <text :x="P(points.x2)[0] + 12" :y="P(points.x2)[1] - 10">x₂</text>
       </template>
@@ -122,37 +134,39 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
         <line v-for="(seg, i) in edgeLines" :key="`e${i}`" :x1="P(seg[0])[0]" :y1="P(seg[0])[1]" :x2="P(seg[1])[0]" :y2="P(seg[1])[1]" class="lab-guide" />
         <polygon :points="triangle.map(p => P(p).join(',')).join(' ')" class="lab-region" />
         <line v-for="(p, i) in triangle" :key="`s${i}`" :x1="P(points.y)[0]" :y1="P(points.y)[1]" :x2="P(p)[0]" :y2="P(p)[1]" class="lab-line" stroke-dasharray="2 4" />
-        <circle v-for="(name, i) in ['p1', 'p2', 'p3']" :key="name" :cx="P(points[name])[0]" :cy="P(points[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm p${i + 1}`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, points[name], $event)" />
+        <circle v-for="(name, i) in ['p1', 'p2', 'p3']" :key="name" :cx="P(points[name])[0]" :cy="P(points[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm p${i + 1}`" :aria-valuetext="fmtPoint(points[name])" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, points[name], $event)" />
         <text v-for="(name, i) in ['p1', 'p2', 'p3']" :key="`t${name}`" :x="P(points[name])[0] + 12" :y="P(points[name])[1] - 10">p{{ ['₁', '₂', '₃'][i] }}</text>
-        <circle :cx="P(points.y)[0]" :cy="P(points.y)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Điểm y cần biểu diễn" @pointerdown="drag.start('y', $event)" @keydown="drag.key('y', points.y, $event)" />
+        <circle :cx="P(points.y)[0]" :cy="P(points.y)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Điểm y cần biểu diễn" :aria-valuetext="fmtPoint(points.y)" @pointerdown="drag.start('y', $event)" @keydown="drag.key('y', points.y, $event)" />
         <text :x="P(points.y)[0] + 12" :y="P(points.y)[1] + 20">y</text>
       </template>
 
       <template v-else-if="type === 'origin'">
         <polygon :points="triangle.map(p => P(p).join(',')).join(' ')" class="lab-region-soft" />
         <line v-for="(p, i) in triangle" :key="`v${i}`" :x1="P(points.o)[0]" :y1="P(points.o)[1]" :x2="P(p)[0]" :y2="P(p)[1]" class="lab-line" :marker-end="`url(#${arrow})`" />
-        <circle v-for="(name, i) in ['p1', 'p2', 'p3']" :key="name" :cx="P(points[name])[0]" :cy="P(points[name])[1]" r="8" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm p${i + 1}`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, points[name], $event)" />
+        <circle v-for="(name, i) in ['p1', 'p2', 'p3']" :key="name" :cx="P(points[name])[0]" :cy="P(points[name])[1]" r="8" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm p${i + 1}`" :aria-valuetext="fmtPoint(points[name])" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, points[name], $event)" />
         <text v-for="(name, i) in ['p1', 'p2', 'p3']" :key="`t${name}`" :x="P(points[name])[0] + 12" :y="P(points[name])[1] - 10">p{{ ['₁', '₂', '₃'][i] }}</text>
         <circle :cx="P(affinePoint)[0]" :cy="P(affinePoint)[1]" r="7" class="lab-dot-accent" />
-        <text :x="P(affinePoint)[0] + 10" :y="P(affinePoint)[1] + 20" class="lab-small">tổ hợp affine</text>
+        <text :x="P(affinePoint)[0] + 12" :y="P(affinePoint)[1] + 24">A</text>
         <circle :cx="P(otherPoint)[0]" :cy="P(otherPoint)[1]" r="7" :class="Math.abs(otherSum - 1) < 1e-9 ? 'lab-dot-accent' : 'lab-dot-bad'" />
-        <text :x="P(otherPoint)[0] + 10" :y="P(otherPoint)[1] - 10" class="lab-small">{{ Math.abs(otherSum - 1) < 1e-9 ? 'trọng tâm' : 'tổ hợp thứ hai' }}</text>
-        <circle :cx="P(points.o)[0]" :cy="P(points.o)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Gốc tọa độ O, kéo để dời gốc" @pointerdown="drag.start('o', $event)" @keydown="drag.key('o', points.o, $event)" />
-        <text :x="P(points.o)[0] - 26" :y="P(points.o)[1] + 22">O</text>
+        <text :x="P(otherPoint)[0] + 12" :y="P(otherPoint)[1] - 12">B</text>
+        <circle :cx="P(points.o)[0]" :cy="P(points.o)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Gốc tọa độ O, kéo để dời gốc" :aria-valuetext="fmtPoint(points.o)" @pointerdown="drag.start('o', $event)" @keydown="drag.key('o', points.o, $event)" />
+        <text :x="P(points.o)[0] + 14" :y="P(points.o)[1] - 14">O</text>
       </template>
 
       <template v-else-if="type === 'solutions'">
+        <rect v-if="degenerate && Math.abs(rhs) < 1e-9" x="0" y="0" :width="view.width" :height="view.height" class="lab-region-soft" />
         <line v-if="nullLine" :x1="P(nullLine[0])[0]" :y1="P(nullLine[0])[1]" :x2="P(nullLine[1])[0]" :y2="P(nullLine[1])[1]" class="lab-guide" />
         <line v-if="solutionLine" :x1="P(solutionLine[0])[0]" :y1="P(solutionLine[0])[1]" :x2="P(solutionLine[1])[0]" :y2="P(solutionLine[1])[1]" class="lab-accent" />
         <line v-if="!degenerate" :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(x0)[0]" :y2="P(x0)[1]" class="lab-line" :marker-end="`url(#${arrow})`" />
         <line v-if="!degenerate && Math.abs(tParam) > 0.05" :x1="P(x0)[0]" :y1="P(x0)[1]" :x2="P(xt)[0]" :y2="P(xt)[1]" class="lab-warn" :marker-end="`url(#${arrow})`" />
-        <circle :cx="P(x0)[0]" :cy="P(x0)[1]" r="6" class="lab-dot" />
-        <text :x="P(x0)[0] + 10" :y="P(x0)[1] + 20">x₀</text>
-        <circle :cx="P(xt)[0]" :cy="P(xt)[1]" r="8" class="lab-dot-warn" />
-        <text :x="P(xt)[0] + 10" :y="P(xt)[1] - 10">x₀ + t·d</text>
+        <circle v-if="!degenerate && inView(x0)" :cx="P(x0)[0]" :cy="P(x0)[1]" r="6" class="lab-dot" />
+        <text v-if="!degenerate && inView(x0)" :x="P(x0)[0] + 10" :y="P(x0)[1] + 20">x₀</text>
+        <circle v-if="!degenerate && inView(xt)" :cx="P(xt)[0]" :cy="P(xt)[1]" r="24" class="lab-handle result-handle" tabindex="0" role="slider" aria-label="Điểm trên đường nghiệm" aria-valuemin="-4" aria-valuemax="4" :aria-valuenow="tParam" :aria-valuetext="`t = ${fmt(tParam)}, x = ${fmtPoint(xt)}`" @pointerdown="drag.start('solution-result', $event)" @keydown="drag.key('solution-result', xt, $event)" />
+        <circle v-if="!degenerate && inView(xt)" :cx="P(xt)[0]" :cy="P(xt)[1]" r="8" class="lab-dot-warn" pointer-events="none" />
+        <text v-if="!degenerate && inView(xt)" :x="P(xt)[0] + 10" :y="P(xt)[1] - 10">x₀ + t·d</text>
       </template>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" /></details>
 
     <div v-if="type === 'line'" class="lab-controls">
       <label>θ = {{ fmt(theta) }}<input v-model.number="theta" type="range" min="-1" max="2" step="0.05" /></label>
@@ -174,6 +188,7 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
         <p>y = θx₁ + (1 − θ)x₂ = <span class="is-accent">{{ fmtPoint(yLine) }}</span></p>
         <p>Viết theo cách thứ hai: y = x₂ + θ(x₁ − x₂), tức là xuất phát từ x₂ = {{ fmtPoint(points.x2) }} rồi đi θ = {{ fmt(theta) }} lần vector x₁ − x₂ = {{ fmtPoint(lineDir) }}.</p>
         <p>{{ lineStatus }}</p>
+        <p v-if="!inView(yLine)">y đang nằm ngoài khung nhìn. Giảm độ lớn của θ hoặc đưa hai điểm mốc gần nhau hơn để xem lại y.</p>
       </template>
       <template v-else-if="type === 'combination'">
         <template v-if="weights">
@@ -184,7 +199,7 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
         <p v-else class="is-bad">Ba điểm đang thẳng hàng. Khi đó các tổ hợp affine của chúng chỉ phủ một đường thẳng, nên không phải điểm y nào cũng biểu diễn được.</p>
       </template>
       <template v-else-if="type === 'origin'">
-        <p>Tổ hợp affine 0.2p₁ + 0.5p₂ + 0.3p₃ = <span class="is-accent">{{ fmtPoint(affinePoint) }}</span>. Dời O đi đâu, điểm này cũng đứng yên.</p>
+        <p>Điểm A là tổ hợp affine 0.2p₁ + 0.5p₂ + 0.3p₃ = <span class="is-accent">{{ fmtPoint(affinePoint) }}</span>. Dời O đi đâu, điểm này cũng đứng yên. Điểm B là tổ hợp thứ hai theo bộ hệ số đang chọn.</p>
         <p v-if="Math.abs(otherSum - 1) > 1e-9">Tổ hợp thứ hai có tổng hệ số {{ fmt(otherSum, 1) }} cho điểm <span class="is-bad">{{ fmtPoint(otherPoint) }}</span>. Khi O dịch một vector v, điểm này dịch (1 − {{ fmt(otherSum, 1) }})v, nghĩa là kết quả phụ thuộc vào chỗ ta đặt gốc.</p>
         <p v-else>Tổ hợp thứ hai cũng có tổng hệ số bằng 1, nên trọng tâm {{ fmtPoint(otherPoint) }} cũng không đổi khi dời gốc.</p>
       </template>
@@ -192,7 +207,8 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
         <p v-if="degenerate" class="is-bad">Với a₁ = a₂ = 0, phương trình thành 0 = b: vô nghiệm nếu b ≠ 0, và mọi điểm đều là nghiệm nếu b = 0.</p>
         <template v-else>
           <p>Phương trình {{ fmt(a1, 1) }}x₁ + {{ fmt(a2, 1) }}x₂ = {{ fmt(rhs, 1) }}. Nghiệm riêng gần gốc nhất x₀ = {{ fmtPoint(x0) }}.</p>
-          <p>Hướng d = {{ fmtPoint(dirUnit) }} thỏa a₁d₁ + a₂d₂ = 0, nên mọi điểm x₀ + t·d vẫn là nghiệm: với t = {{ fmt(tParam, 1) }}, vế trái bằng <span class="is-good">{{ fmt(dot(normal, xt)) }}</span>.</p>
+          <p>Hướng d = {{ fmtPoint(dirUnit) }} thỏa a₁d₁ + a₂d₂ = 0, nên mọi điểm x₀ + t·d vẫn là nghiệm: Với t = {{ fmt(tParam, 1) }}, vế trái bằng <span class="is-good">{{ fmt(dot(normal, xt)) }}</span>.</p>
+          <p v-if="!inView(xt)">Điểm nghiệm đang nằm ngoài khung nhìn. Đưa t gần 0 hoặc giảm độ lớn của b để nhìn thấy điểm.</p>
           <p>Đường nét đứt đi qua gốc là tập nghiệm của phương trình thuần nhất (b = 0). Tập nghiệm của phương trình ban đầu chính là đường đó tịnh tiến thêm x₀.</p>
         </template>
       </template>
@@ -222,3 +238,12 @@ const arrow = `${uid}-arrow`, arrowAccent = `${uid}-arrow-accent`
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg text { pointer-events: none;font-size:20px; }
+svg .lab-small{font-size:18px}
+.lab-handle:not(.result-handle) { stroke: transparent; stroke-width: 36; paint-order: stroke; }
+.lab-handle:not(.result-handle):focus-visible { stroke: var(--vang); stroke-width: 4; }
+.result-handle { fill: transparent !important; stroke: transparent; }
+.result-handle:focus-visible { stroke: var(--vang); }
+</style>

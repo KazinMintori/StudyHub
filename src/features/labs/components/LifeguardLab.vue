@@ -62,20 +62,23 @@ const plot = computed(() => {
   const py = t => 26 + (1 - (t - lo) / (hi - lo || 1)) * 106
   return { px, py, lo, hi, pts: grid.map((g, i) => `${px(g)},${py(vals[i])}`).join(' ') }
 })
+const plotSvg=ref(null)
+const plotView=ref({x0:0,x1:60,y0:0,y1:1,toWorld:(px)=>[(px-34)*60/(PW-56),0]})
+const plotDrag=createDragger(plotSvg,plotView,(_,p)=>{x.value=p[0]},{step:.5,snap:.1})
 </script>
 
 <template>
   <figure class="study-lab" aria-label="Người cứu hộ chọn điểm xuống nước">
     <p class="lab-title">Chạy bao xa rồi mới bơi?</p>
-    <p class="lab-lead">Kéo điểm P dọc mép nước. Đồ thị bên dưới cho biết tổng thời gian T(x) ứng với mỗi điểm xuống nước.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Bãi cát phía trên, mặt nước phía dưới, người cứu hộ A, người bị nạn B, điểm xuống nước P và hai góc so với pháp tuyến" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p class="lab-lead">Kéo P dọc mép nước hoặc kéo chấm trên đồ thị thời gian phía dưới. Hai hình dùng cùng vị trí xuống nước x.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Bãi cát phía trên, mặt nước phía dưới, người cứu hộ A, người bị nạn B, điểm xuống nước P và hai góc so với pháp tuyến" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <!-- Khung rộng hơn tỉ lệ viewBox thì hình được canh giữa: cát và nước kéo dài ra hai bên để không lộ dải trống. -->
       <rect x="-400" y="0" :width="view.width + 800" :height="view.sy(0)" class="lab-sand" />
       <rect x="-400" :y="view.sy(0)" :width="view.width + 800" :height="view.height - view.sy(0)" class="lab-water" />
       <line v-for="g in [0, 10, 20, 30, 40, 50, 60]" :key="`g${g}`" :x1="view.sx(g)" :x2="view.sx(g)" y1="0" :y2="view.height" class="lab-grid" style="opacity: 0.6" />
       <line x1="-400" :x2="view.width + 400" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" style="stroke-width: 2" />
       <text v-for="g in [0, 20, 40, 60]" :key="`t${g}`" :x="view.sx(g) + 4" :y="view.sy(0) - 6" class="lab-small">{{ g }}</text>
-      <text :x="view.sx(48)" :y="view.sy(38)" class="lab-small">cát, v₁ = {{ fmt(v1, 1) }} m/s</text>
+      <text :x="view.sx(21)" :y="view.sy(36)" class="lab-small">Cát, v₁ = {{ fmt(v1, 1) }} m/s</text>
       <text :x="view.sx(-12)" :y="view.sy(-32)" class="lab-small">nước, v₂ = {{ fmt(v2, 1) }} m/s</text>
       <line :x1="S(A)[0]" :y1="S(A)[1]" :x2="S(B)[0]" :y2="S(B)[1]" class="lab-guide" />
       <polyline v-if="showBest" :points="path(best)" class="lab-good" style="stroke-width: 2.5; opacity: 0.8" />
@@ -92,18 +95,19 @@ const plot = computed(() => {
       <circle :cx="arcs.c[0]" :cy="arcs.c[1]" r="10" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm xuống nước P" :aria-valuetext="`x = ${fmt(x, 1)} mét`" @pointerdown="drag.start('p', $event)" @keydown="drag.key('p', [x, 0], $event)" />
       <text :x="arcs.c[0] - 26" :y="arcs.c[1] + 24">P</text>
     </svg>
-    <LabPointControls :svg="svg" axes="x" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" axes="x" /></details>
     <p class="lab-legend"><span class="legend-accent">đường đang chọn</span><span class="legend-guide">đoạn thẳng AB</span><span v-if="showBest" class="legend-good">đường nhanh nhất</span><span class="legend-warn">góc với pháp tuyến</span></p>
-    <svg :viewBox="`0 0 ${PW} ${PH}`" role="img" aria-label="Đồ thị tổng thời gian T theo vị trí điểm xuống nước x" style="margin-top: var(--space-3)">
+    <svg ref="plotSvg" :viewBox="`0 0 ${PW} ${PH}`" role="group" aria-label="Đồ thị tổng thời gian T theo vị trí xuống nước x, chấm kéo được" style="margin-top: var(--space-3)" @pointermove="plotDrag.move" @pointerup="plotDrag.end" @pointercancel="plotDrag.end" @lostpointercapture="plotDrag.end">
       <line x1="34" :x2="PW - 22" :y1="AXIS" :y2="AXIS" class="lab-axis" />
       <text v-for="g in [0, 20, 40, 60]" :key="`p${g}`" :x="plot.px(g) - 6" :y="AXIS + 18" class="lab-small">{{ g }}</text>
-      <text x="8" y="16" class="lab-small">T(x), giây</text>
+      <text x="8" y="22" class="lab-small">T(x), giây</text>
       <text :x="PW / 2" :y="PH - 8" class="lab-small" text-anchor="middle">x, vị trí xuống nước (m)</text>
       <polyline :points="plot.pts" class="lab-line" />
       <line v-if="showBest" x1="34" :x2="PW - 22" :y1="plot.py(T(best))" :y2="plot.py(T(best))" class="lab-guide" />
       <circle v-if="showBest" :cx="plot.px(best)" :cy="plot.py(T(best))" r="6" class="lab-dot-hollow" />
       <line :x1="plot.px(x)" :x2="plot.px(x)" :y1="plot.py(state.total)" :y2="AXIS" class="lab-guide" />
       <circle :cx="plot.px(x)" :cy="plot.py(state.total)" r="7" class="lab-dot-accent" />
+      <circle :cx="plot.px(x)" :cy="plot.py(state.total)" r="36" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Vị trí xuống nước x trên đồ thị thời gian" aria-valuemin="0" aria-valuemax="60" :aria-valuenow="x" :aria-valuetext="`x = ${fmt(x,1)} mét, T = ${fmt(state.total,2)} giây`" @pointerdown="plotDrag.start('x',$event)" @keydown="plotDrag.key('x',[x,0],$event)"/>
     </svg>
     <div class="lab-controls">
       <label>Vận tốc chạy trên cát v₁ = {{ fmt(v1, 1) }} m/s<input v-model.number="v1" type="range" min="1" max="8" step="0.1" /></label>
@@ -118,7 +122,7 @@ const plot = computed(() => {
     <div class="lab-readout" role="status">
       <p>Xuống nước tại x = {{ fmt(x, 1) }} m. Chạy {{ fmt(state.r, 1) }} m mất {{ fmt(state.tr, 2) }} s, bơi {{ fmt(state.s, 1) }} m mất {{ fmt(state.ts, 2) }} s, tổng cộng <span class="is-accent">T = {{ fmt(state.total, 2) }} s</span>.</p>
       <p>Góc θ₁ ≈ {{ fmt(state.th1, 1) }}°, θ₂ ≈ {{ fmt(state.th2, 1) }}°. Hai tỉ số sin θ₁ / v₁ = {{ fmt(state.s1 / v1, 4) }} và sin θ₂ / v₂ = {{ fmt(state.s2 / v2, 4) }}.</p>
-      <p v-if="atBest" class="is-good">Hai tỉ số bằng nhau, tức T′(x) = 0. Đó là định luật khúc xạ Snell, và vì T là hàm lồi nên điểm này nhanh nhất.</p>
+      <p v-if="atBest" class="is-good">Điểm đang chọn gần vị trí tối ưu: Hai tỉ số xấp xỉ bằng nhau và T′(x) gần 0. Ở nghiệm chính xác, chúng bằng nhau theo điều kiện Snell. Hàm T lồi ngặt nên chỉ có một điểm cực tiểu.</p>
       <p v-else-if="slope < 0">Tỉ số thứ nhất nhỏ hơn, nên T′(x) &lt; 0. Dời P sang phải thì quãng chạy dài thêm, nhưng thời gian bơi giảm nhiều hơn thời gian chạy tăng.</p>
       <p v-else>Tỉ số thứ nhất lớn hơn, nên T′(x) &gt; 0. Dời P sang trái sẽ tới nơi sớm hơn.</p>
       <p v-if="showBest">Nhanh nhất: x* = {{ fmt(best, 2) }} m, T* = {{ fmt(T(best), 2) }} s. Đi theo đoạn thẳng AB mất {{ fmt(T(xLine), 2) }} s, chạy tới x = 60 rồi bơi thẳng mất {{ fmt(T(60), 2) }} s.</p>
@@ -135,3 +139,12 @@ const plot = computed(() => {
     </details>
   </figure>
 </template>
+
+<style scoped>
+.lab-handle:not(.point-hit){stroke:transparent;stroke-width:50;paint-order:stroke}
+.lab-handle:not(.point-hit):focus-visible{stroke:var(--vang);stroke-width:4}
+.point-hit{fill:transparent!important;stroke:transparent}
+.point-hit:focus-visible{stroke:var(--vang)}
+svg text{pointer-events:none}
+svg .lab-small{font-size:19px}
+</style>

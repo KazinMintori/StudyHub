@@ -29,7 +29,15 @@ export function createDragger(svgRef, view, onMove, { step = 0.1, snap = 0 } = {
   return {
     start(name, event) {
       if (active || event.isPrimary === false || (event.button !== undefined && event.button !== 0)) return
-      active = { name, pointerId: event.pointerId, target: event.currentTarget }
+      // Keep the grabbed position relative to the handle. A large touch target
+      // must not pull the point to the finger on the first movement.
+      const pointer = svgRef.value && svgPoint(svgRef.value, event)
+      const box = event.currentTarget?.getBoundingClientRect?.()
+      const center = box && svgRef.value && svgPoint(svgRef.value, {
+        clientX: box.x + box.width / 2, clientY: box.y + box.height / 2
+      })
+      const offset = pointer && center ? [pointer.x - center.x, pointer.y - center.y] : [0, 0]
+      active = { name, pointerId: event.pointerId, target: event.currentTarget, offset }
       event.currentTarget?.setPointerCapture?.(event.pointerId)
       event.preventDefault()
     },
@@ -37,7 +45,7 @@ export function createDragger(svgRef, view, onMove, { step = 0.1, snap = 0 } = {
       if (!active || event.pointerId !== active.pointerId || !svgRef.value) return
       const p = svgPoint(svgRef.value, event)
       if (!p) return
-      const [x, y] = view.value.toWorld(p.x, p.y)
+      const [x, y] = view.value.toWorld(p.x - active.offset[0], p.y - active.offset[1])
       onMove(active.name, constrained([x, y], view.value))
     },
     end(event) {

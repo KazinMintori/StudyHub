@@ -23,7 +23,7 @@ const label = q => (q === Infinity ? '∞' : String(q))
 <template>
   <figure class="study-lab" aria-label="Quả cầu đơn vị của chuẩn p">
     <p class="lab-title">Quả cầu đơn vị của ‖x‖ₚ khi p thay đổi</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Biên của tập ‖x‖ₚ ≤ 1, ba đường tham chiếu p = 1, 2, vô cùng và một điểm thử" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Biên của tập ‖x‖ₚ ≤ 1, ba đường tham chiếu p = 1, 2, vô cùng và một điểm thử" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line :x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" /><line :y1="0" :y2="view.height" :x1="view.sx(0)" :x2="view.sx(0)" class="lab-axis" />
       <polygon v-for="r in refs" :key="r.q" :points="r.pts.map(q => P(q).join(',')).join(' ')" class="lab-guide" />
       <polygon :points="ball.map(q => P(q).join(',')).join(' ')" class="lab-region" />
@@ -34,10 +34,11 @@ const label = q => (q === Infinity ? '∞' : String(q))
       </template>
       <text :x="P([1, 0])[0] + 6" :y="P([1, 0])[1] + 18" class="lab-small">1</text>
       <text :x="P([0, 1])[0] + 6" :y="P([0, 1])[1] - 6" class="lab-small">1</text>
-      <circle :cx="P(pt.x)[0]" :cy="P(pt.x)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Điểm thử x" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', pt.x, $event)" />
+      <circle :cx="P(pt.x)[0]" :cy="P(pt.x)[1]" r="9" class="lab-dot-warn" pointer-events="none" />
+      <circle :cx="P(pt.x)[0]" :cy="P(pt.x)[1]" r="32" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Điểm thử x" :aria-valuetext="fmtPoint(pt.x)" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', pt.x, $event)" />
       <text :x="P(pt.x)[0] + 12" :y="P(pt.x)[1] - 8">x</text>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks lab-alternative"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" /></details>
     <div class="lab-controls">
       <label>p = {{ infinite ? '∞' : fmt(exponent, 2) }}<input v-model.number="exponent" type="range" min="0.5" max="8" step="0.05" :disabled="infinite" /></label>
       <label class="lab-check"><input v-model="infinite" type="checkbox" /> Lấy p = ∞</label>
@@ -57,3 +58,9 @@ const label = q => (q === Infinity ? '∞' : String(q))
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg text,svg .lab-small{font-size:18px;pointer-events:none}
+.point-hit { fill: transparent !important; stroke: transparent; }
+.point-hit:focus-visible { stroke: var(--vang); }
+</style>

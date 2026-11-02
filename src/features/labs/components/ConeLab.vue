@@ -2,7 +2,8 @@
 import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
-import { add, scale, dot, norm2, cross2 } from '../services/convex-geometry.mjs'
+import { add, scale, dot, norm2, cross2, clipPolygon, polyhedronInBox } from '../services/convex-geometry.mjs'
+import { planeParameters } from '../services/foundation-geometry.mjs'
 const clipId = `${useId()}-clip`
 
 // type="conic": nón sinh bởi hai hoặc ba vector, và tổ hợp nón θ₁v₁ + θ₂v₂.
@@ -14,7 +15,12 @@ const P = p => view.value.point(p)
 const vecs = ref({ v1: [2, 0.5], v2: [0.8, 2], v3: [-2, -1.5], y: [1.5, -1] })
 const useThird = ref(false)
 const t1 = ref(1), t2 = ref(0.5)
-const drag = createDragger(svg, view, (name, value) => { vecs.value = { ...vecs.value, [name]: value } }, { step: 0.1, snap: 0.1 })
+const drag = createDragger(svg, view, (name, value) => {
+  if(name==='combination'){
+    const weights=planeParameters(value,[0,0],vecs.value.v1,vecs.value.v2)
+    if(weights){t1.value=Math.max(0,Math.min(2,weights[0]));t2.value=Math.max(0,Math.min(2,weights[1]))}
+  }else vecs.value = { ...vecs.value, [name]: value }
+}, { step: 0.1, snap: 0.05 })
 
 // Mô tả nón sinh bởi các vector trong R² bằng các khoảng góc. Trả về { kind, from, sweep }.
 const TWO_PI = 2 * Math.PI
@@ -38,17 +44,24 @@ function wedgePolygon(cone, radius = 9) {
   if (cone.kind === 'origin') return []
   const steps = Math.max(2, Math.ceil(cone.sweep / 0.05))
   const arc = Array.from({ length: steps + 1 }, (_, i) => { const a = cone.from + (cone.sweep * i) / steps; return [radius * Math.cos(a), radius * Math.sin(a)] })
-  return cone.kind === 'plane' ? arc : [[0, 0], ...arc]
+  let poly=cone.kind === 'plane' ? arc : [[0, 0], ...arc]
+  for(const [a,b]of [[[1,0],4],[[-1,0],4],[[0,1],3],[[0,-1],3]]) poly=clipPolygon(poly,a,b)
+  return poly
 }
 
 // --- conic ---
 const gens = computed(() => (useThird.value ? [vecs.value.v1, vecs.value.v2, vecs.value.v3] : [vecs.value.v1, vecs.value.v2]))
 const cone = computed(() => planarCone(gens.value))
-const isLine = computed(() => !useThird.value && Math.abs(cross2(vecs.value.v1, vecs.value.v2)) < 1e-9 && dot(vecs.value.v1, vecs.value.v2) < 0)
+const isLine = computed(() => {
+  const vs=gens.value.filter(v=>norm2(v)>1e-9)
+  return vs.length>1&&vs.every(v=>Math.abs(cross2(vs[0],v))<1e-9)&&vs.some(v=>dot(vs[0],v)<0)
+})
 const combo = computed(() => add(scale(t1.value, vecs.value.v1), scale(t2.value, vecs.value.v2)))
+const lineVector=computed(()=>gens.value.find(v=>norm2(v)>1e-9)||[0,0])
 const coneLabel = computed(() => {
   if (isLine.value) return 'Hai vector ngược hướng nhau: tổ hợp nón của chúng phủ cả một đường thẳng qua gốc, tức là một không gian con.'
   const k = cone.value.kind
+  if(k==='origin')return 'Mọi vector sinh đều bằng 0: Nón chỉ gồm gốc tọa độ.'
   if (k === 'plane') return 'Ba vector này sinh ra toàn bộ mặt phẳng: mọi vector đều là một tổ hợp với hệ số không âm của chúng.'
   if (k === 'halfplane-or-line') return 'Các vector sinh ra một nửa mặt phẳng đóng có biên đi qua gốc.'
   if (k === 'ray') return 'Các vector cùng hướng: nón chỉ là một tia xuất phát từ gốc.'
@@ -64,42 +77,45 @@ const dualGens = computed(() => {
 })
 const dualCone = computed(() => (dualGens.value ? planarCone(dualGens.value) : null))
 const yIn = computed(() => dot(vecs.value.y, vecs.value.v1) >= -1e-9 && dot(vecs.value.y, vecs.value.v2) >= -1e-9)
-const halfplaneOfY = computed(() => planarCone([[-vecs.value.y[1], vecs.value.y[0]], vecs.value.y, [vecs.value.y[1], -vecs.value.y[0]]]))
+const halfplaneOfY = computed(() => norm2(vecs.value.y)<1e-9?{kind:'plane',from:0,sweep:TWO_PI}:planarCone([[-vecs.value.y[1], vecs.value.y[0]], vecs.value.y, [vecs.value.y[1], -vecs.value.y[0]]]))
+const dualPolygon=computed(()=>polyhedronInBox([vecs.value.v1,vecs.value.v2].map(a=>({a:scale(-1,a),b:0})),[-4,4,-3,3]))
 </script>
 
 <template>
   <figure class="study-lab" :aria-label="type === 'conic' ? 'Nón sinh bởi các vector' : 'Nón và nón đối ngẫu'">
     <p class="lab-title">{{ type === 'conic' ? 'Tổ hợp với hệ số không âm' : 'Nón K và nón đối ngẫu K*' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'conic' ? 'Hình quạt sinh bởi các vector và một tổ hợp nón' : 'Nón K, nón đối ngẫu K và vector thử y'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p v-if="type==='conic'" class="lab-lead">Kéo các vector sinh để đổi nón. Với hai vector không cùng phương, kéo điểm tổ hợp màu vàng để thay các hệ số không âm. Miền màu chỉ bị cắt bởi khung xem, không phải một miền bị chặn.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="type === 'conic' ? 'Hình quạt sinh bởi các vector và một tổ hợp nón' : 'Nón K, nón đối ngẫu K và vector thử y'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clipId"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <line :x1="view.sx(-4)" :x2="view.sx(4)" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
       <line :x1="view.sx(0)" :x2="view.sx(0)" :y1="view.sy(-3)" :y2="view.sy(3)" class="lab-axis" />
       <g :clip-path="`url(#${clipId})`">
         <template v-if="type === 'conic'">
-          <line v-if="isLine" :x1="P(scale(-9, vecs.v1))[0]" :y1="P(scale(-9, vecs.v1))[1]" :x2="P(scale(9, vecs.v1))[0]" :y2="P(scale(9, vecs.v1))[1]" class="lab-accent" />
+          <line v-if="isLine" :x1="P(scale(-9, lineVector))[0]" :y1="P(scale(-9, lineVector))[1]" :x2="P(scale(9, lineVector))[0]" :y2="P(scale(9, lineVector))[1]" class="lab-accent" />
           <polygon v-else :points="wedgePolygon(cone).map(p => P(p).join(',')).join(' ')" class="lab-region" />
           <template v-if="!useThird">
             <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(scale(t1, vecs.v1))[0]" :y2="P(scale(t1, vecs.v1))[1]" class="lab-guide" />
             <line :x1="P(scale(t1, vecs.v1))[0]" :y1="P(scale(t1, vecs.v1))[1]" :x2="P(combo)[0]" :y2="P(combo)[1]" class="lab-guide" />
-            <circle :cx="P(combo)[0]" :cy="P(combo)[1]" r="7" class="lab-dot-warn" />
+            <circle v-if="Math.abs(cross2(vecs.v1,vecs.v2))>1e-9&&Math.abs(combo[0])<3.9&&Math.abs(combo[1])<2.9" :cx="P(combo)[0]" :cy="P(combo)[1]" r="30" class="lab-handle combo-hit" tabindex="0" role="slider" aria-label="Điểm tổ hợp nón" :aria-valuetext="`θ₁ = ${fmt(t1)}, θ₂ = ${fmt(t2)}, x = ${fmtPoint(combo)}`" @pointerdown="drag.start('combination',$event)" @keydown="drag.key('combination',combo,$event)"/>
+            <circle :cx="P(combo)[0]" :cy="P(combo)[1]" r="7" class="lab-dot-warn" pointer-events="none" />
           </template>
         </template>
         <template v-else>
           <polygon v-if="halfplaneOfY" :points="wedgePolygon(halfplaneOfY).map(p => P(p).join(',')).join(' ')" class="lab-region-soft" />
           <polygon :points="wedgePolygon(planarCone([vecs.v1, vecs.v2])).map(p => P(p).join(',')).join(' ')" class="lab-region" />
-          <polygon v-if="dualCone" :points="wedgePolygon(dualCone).map(p => P(p).join(',')).join(' ')" class="lab-good-fill" opacity="0.55" />
+          <polygon :points="dualPolygon.map(p => P(p).join(',')).join(' ')" class="lab-good-fill" opacity="0.55" />
           <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(vecs.y)[0]" :y2="P(vecs.y)[1]" :class="yIn ? 'lab-good' : 'lab-bad'" />
         </template>
       </g>
       <line v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="`l${name}`" :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(vecs[name])[0]" :y2="P(vecs[name])[1]" class="lab-line" />
-      <circle v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="name" :cx="P(vecs[name])[0]" :cy="P(vecs[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Vector ${name}`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, vecs[name], $event)" />
-      <text v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="`t${name}`" :x="P(vecs[name])[0] + 12" :y="P(vecs[name])[1] - 8">{{ name === 'v1' ? 'v₁' : name === 'v2' ? 'v₂' : 'v₃' }}</text>
+      <circle v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="name" :cx="P(vecs[name])[0]" :cy="P(vecs[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Vector ${name}`" :aria-valuetext="fmtPoint(vecs[name])" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, vecs[name], $event)" />
+      <text v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="`t${name}`" :x="Math.min(view.width-25,P(vecs[name])[0]+12)" :y="Math.max(20,P(vecs[name])[1]-8)">{{ name === 'v1' ? 'v₁' : name === 'v2' ? 'v₂' : 'v₃' }}</text>
       <template v-if="type === 'dual'">
-        <circle :cx="P(vecs.y)[0]" :cy="P(vecs.y)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Vector thử y" @pointerdown="drag.start('y', $event)" @keydown="drag.key('y', vecs.y, $event)" />
+        <circle :cx="P(vecs.y)[0]" :cy="P(vecs.y)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Vector thử y" :aria-valuetext="fmtPoint(vecs.y)" @pointerdown="drag.start('y', $event)" @keydown="drag.key('y', vecs.y, $event)" />
         <text :x="P(vecs.y)[0] + 12" :y="P(vecs.y)[1] + 18">y</text>
       </template>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" /></details>
     <div v-if="type === 'conic'" class="lab-controls">
       <label>θ₁ = {{ fmt(t1) }}<input v-model.number="t1" type="range" min="0" max="2" step="0.05" :disabled="useThird" /></label>
       <label>θ₂ = {{ fmt(t2) }}<input v-model.number="t2" type="range" min="0" max="2" step="0.05" :disabled="useThird" /></label>
@@ -132,3 +148,11 @@ const halfplaneOfY = computed(() => planarCone([[-vecs.value.y[1], vecs.value.y[
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg :is(text,line,polygon,path),svg circle:not(.lab-handle){pointer-events:none}
+.lab-handle:not(.combo-hit){stroke:transparent;stroke-width:34;paint-order:stroke}
+.lab-handle:not(.combo-hit):focus-visible{stroke:var(--vang);stroke-width:4}
+.combo-hit{fill:transparent!important;stroke:transparent}
+.combo-hit:focus-visible{stroke:var(--vang)}
+</style>
