@@ -50,6 +50,7 @@ const routes = [
   ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
   ['duality-overview','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
   ['equivalence','/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-tuong-duong.html'],
+  ['elimination','/toan-cho-ai/bai-giang/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.html'],
   ['function-operations','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.html'],
   ['optimality','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.html'],
   ['ml-models','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.html'],
@@ -90,6 +91,8 @@ const routes = [
 async function sourceManifest() {
   const paths = [
     ...routes.map(([,route])=>'docs'+route.replace(/\.html$/,'.md')),
+    'src/features/labs/components/SlackLiftLab.vue','src/features/labs/components/MaxEpigraphLab.vue',
+    'src/features/labs/components/EliminationLab.vue',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -122,6 +125,11 @@ async function inspect(label) {
       if (clipped || scrolling) bad.push({ type: 'math', text: el.querySelector('mjx-assistive-mml')?.textContent || el.textContent, width: r.width, svg: s?.width, available: parent.width })
     }
     if (document.documentElement.scrollWidth > targetWidth + 2) bad.push({ type: 'page-overflow', width: document.documentElement.scrollWidth,expected:targetWidth })
+    for(const img of document.querySelectorAll('.vp-doc img')){
+      const rect=img.getBoundingClientRect()
+      if(!img.complete||!img.naturalWidth)bad.push({type:'image-unloaded',source:img.getAttribute('src')})
+      if(rect.width&&(rect.left < -2||rect.right>targetWidth+2))bad.push({type:'image-overflow',source:img.getAttribute('src'),width:rect.width})
+    }
     for(const element of document.querySelectorAll('.vp-doc math.math-matrix')){
       const rect=element.getBoundingClientRect()
       if(rect.width&&(rect.right>targetWidth+2||rect.left < -2))bad.push({type:'matrix-overflow',text:element.textContent,width:rect.width})
@@ -143,9 +151,10 @@ async function inspect(label) {
   issues.push(...(await page.evaluate(inspectDiagramClarity)).map(x=>({label,...x})))
 }
 
-async function interact(touch) {
+async function interact(touch,onlyLab=null) {
   const labs = await page.$$('figure.study-lab')
   for (let i = 0; i < labs.length; i++) {
+    if(onlyLab!==null&&onlyLab!==i)continue
     const lab = labs[i], handles = await lab.$$('.lab-handle')
     if(!handles.length&&await lab.$('input,select')){
       issues.push({label:page.url(),type:'interactive-lab-without-direct-handle',lab:await lab.evaluate(e=>e.getAttribute('aria-label')),width:page.viewport().width})
@@ -304,6 +313,13 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  elimination:[[0,'Ví dụ x₁ + x₂ = 1'],[0,'Đưa z tới nghiệm'],[0,'Đi qua nghiệm tự do'],[0,'Pháp tuyến ngang'],[0,'Pháp tuyến dọc']],
+  equivalence:[
+   [1,'Đầu vào R, cung trong R²'],[1,'Kéo A'],[1,'Kéo B'],[1,'Cho B trùng A'],[1,'Hai điểm đối xứng'],
+   [1,'Đầu vào R², mặt trong R³'],[1,'Kéo A'],[1,'Kéo B'],[1,'Cho B trùng A'],[1,'Hai điểm đối xứng'],
+   [2,'Đầu vào R, epigraph trong R²'],[2,'Đặt t sát đồ thị'],[2,'Nghiệm tối ưu'],[2,'Dưới giá trị tối ưu'],[2,'Nâng t lên 5'],
+   [2,'Đầu vào R², epigraph trong R³'],[2,'Đổi góc nhìn'],[2,'Nghiệm tối ưu'],[2,'Dưới giá trị tối ưu'],[2,'Nâng t lên 5'],[2,'Đặt t sát đồ thị']
+  ],
   optimality:[[0,'Đặt x vào nghiệm'],[0,'Đi một bước gradient có chiếu']],
   'ml-models':[[0,'Dữ liệu tách được, λ = 0'],[0,'Thêm ridge λ = 0.05'],[0,'Đặt (a, b) vào nghiệm'],[0,'Dữ liệu chồng lấn']],
   'known-functions':[[0,'a = −1'],[0,'a = 0'],[0,'a = 1/2'],[0,'a = 1'],[0,'a = 2'],[2,'Ma trận đơn vị'],[2,'t = 1/2'],[2,'Chạm biên PSD'],[2,'Ra ngoài miền']],
@@ -325,6 +341,24 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='elimination'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Đưa z tới nghiệm')assert(readout.includes('f(x*) = 2.667'),'The exact normalized constraint should recover objective 8/3')
+   if(label==='Đi qua nghiệm tự do')assert(readout.includes('f(x*) = 0.000'),'Passing through the unconstrained optimum must give zero loss')
+   if(label.startsWith('Pháp tuyến')||label==='Ví dụ x₁ + x₂ = 1')await interact(touch,index)
+  }
+  if(name==='equivalence'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===1&&label==='Cho B trùng A')assert(readout.includes('G − M = 0.0000'),'Coincident points must close the lifting gap')
+   if(index===2&&label==='Nghiệm tối ưu'){
+    assert(readout.includes('P thỏa cả ba ràng buộc.'),'The epigraph optimum must be feasible')
+    assert(readout.includes('0.000, 0.000, 1.750'),'The epigraph optimum has the wrong active constraints')
+   }
+   if(index===2&&label==='Dưới giá trị tối ưu')assert(readout.includes('Không có x khả thi'),'A level below 2.25 cannot be feasible')
+   if(label.startsWith('Đầu vào')||label.startsWith('Kéo ')||label==='Cho B trùng A'){
+    await interact(touch,index)
+   }
+  }
   await inspect(`${name}-${page.viewport().width}-${touch?'touch':'mouse'}-preset-${label}`)
   const panels=await labs[index].$$(':scope > svg,:scope > .lab-pair > svg')
   for(const [panelIndex,diagram]of panels.entries()){
@@ -391,6 +425,7 @@ try {
       await page.waitForSelector(process.env.QA_LAYOUT_ONLY||overview?'.vp-doc, vite-error-overlay':'.study-lab .lab-handle, vite-error-overlay', { timeout: 60000 })
       assert(!await page.$('vite-error-overlay'),`Preview compilation failed at ${route}; inspect qa-dev.log`)
       await page.evaluate(() => document.fonts.ready)
+      await page.$$eval('.vp-doc img',images=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})))
       await page.evaluate(theme => document.documentElement.classList.toggle('dark', theme === 'dark'), theme)
       await inspect(`${name}-${width}-${theme}-initial`)
       if(!process.env.QA_LAYOUT_ONLY&&!overview){await interact(touch);if(name==='odd-cycle')await checkCycleButtons(touch);await checkPageScroll(touch);await exercisePresets(name,touch);await exerciseFunctionChoices(name,touch)}
@@ -410,6 +445,14 @@ try {
           assert(figure, imageName)
           await figure.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}))
           await figure.screenshot({path:`${evidencePath}/${imageName}-375.png`})
+        }
+      }
+      if(name==='equivalence'&&width===375){
+        for(const imageName of ['slack-lift-2d','slack-lift-3d']){
+          const figure=await page.$(`.vp-doc img[src$="/${imageName}.svg"]`)
+          assert(figure,imageName)
+          await figure.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}))
+          await figure.screenshot({path:`${evidencePath}/${imageName}-375-${theme}.png`})
         }
       }
       const labs = await page.$$('figure.study-lab')
