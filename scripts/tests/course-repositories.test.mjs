@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { mkdtemp, mkdir, writeFile, readFile, symlink, rm } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
-import { digest, git, safePath, matchesPath, validateLock, verifyPackage, planInstall, exportCourse, pinCourse } from '../content/course-repositories.mjs'
+import { digest, git, safePath, matchesPath, validateLock, parseCourseDeployKeys, verifyPackage, planInstall, exportCourse, pinCourse } from '../content/course-repositories.mjs'
 
 const course = { id: 'sample', repository: 'StudyHub/sample', revision: 'a'.repeat(40), paths: ['docs/sample/**', 'src/content/courses/sample/**'] }
 async function fixture(t) {
@@ -19,6 +19,13 @@ test('repository pins reject branches, duplicate courses and application paths',
   for (const file of ['../secrets', '/absolute', 'docs/../app', 'docs\\sample', 'C:/app', 'docs/.git/config', 'docs/CON.txt']) assert.throws(() => safePath(file))
   assert(matchesPath('docs/sample/lesson/image.svg', 'docs/sample/**'))
   assert(!matchesPath('docs/another/lesson.md', 'docs/sample/**'))
+})
+
+test('deploy key maps merge and reject collisions or malformed values', () => {
+  assert.deepEqual(parseCourseDeployKeys({ COURSE_DEPLOY_KEYS: '{"physics":"p"}', COURSE_DEPLOY_KEYS_EXTRA: '{"ai-book":"q"}' }), { physics: 'p', 'ai-book': 'q' })
+  assert.throws(() => parseCourseDeployKeys({ COURSE_DEPLOY_KEYS: '{', COURSE_DEPLOY_KEYS_EXTRA: '{}' }), /JSON/)
+  assert.throws(() => parseCourseDeployKeys({ COURSE_DEPLOY_KEYS: '{"ai-book":"p"}', COURSE_DEPLOY_KEYS_EXTRA: '{"ai-book":"q"}' }), /twice/)
+  assert.throws(() => parseCourseDeployKeys({ COURSE_DEPLOY_KEYS: '{"../bad":"p"}' }), /invalid/)
 })
 
 test('packages require complete, owned and checksum-verified sources', async t => {
@@ -91,3 +98,4 @@ test('authoring exports changed and new files, refreshes checksums and pins a co
   await pinCourse('sample', revision, { root })
   assert.equal(JSON.parse(await readFile(path.join(root, 'config/course-repositories.json'), 'utf8')).courses[0].revision, revision)
 })
+
