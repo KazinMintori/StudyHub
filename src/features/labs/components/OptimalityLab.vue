@@ -24,7 +24,7 @@ const project = p => {
 const state = ref({ x: [0.2, -0.4], c: [2.6, 2.2] })
 const drag = createDragger(svg, view, (name, value) => {
   state.value = { ...state.value, [name]: name === 'x' ? project(value) : value }
-}, { step: 0.1, snap: 0.05 })
+}, { step: 0.1 })
 const x = computed(() => state.value.x), c = computed(() => state.value.c)
 const Qv = v => [Q[0][0] * v[0] + Q[0][1] * v[1], Q[1][0] * v[0] + Q[1][1] * v[1]]
 const f = y => { const d = sub(y, c.value); return dot(d, Qv(d)) }
@@ -61,7 +61,7 @@ const line = s => `${P(s[0])[0]},${P(s[0])[1]} ${P(s[1])[0]},${P(s[1])[1]}`
 <template>
   <figure class="study-lab" aria-label="Điều kiện tối ưu bậc nhất trên một đa giác">
     <p class="lab-title">Khi nào không còn hướng khả thi nào làm f giảm</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đa giác khả thi, đường mức của f, điểm x, hướng ngược gradient và vùng các điểm khả thi tốt hơn theo bậc nhất" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Đa giác khả thi, đường mức của f, điểm x, hướng ngược gradient và vùng các điểm khả thi tốt hơn theo bậc nhất" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs>
         <clipPath :id="clip"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath>
         <marker :id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-accent" /></marker>
@@ -78,7 +78,7 @@ const line = s => `${P(s[0])[0]},${P(s[0])[1]} ${P(s[1])[0]},${P(s[1])[1]}`
         <circle :cx="P(x)[0]" :cy="P(x)[1]" r="8" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm khả thi x" :aria-valuetext="fmtPoint(x)" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', x, $event)" />
       </g>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <p class="lab-legend"><span class="legend-accent">hướng −∇f(x)</span><span class="legend-warn">đường mức qua x</span><span class="legend-bad">điểm khả thi tốt hơn theo bậc nhất</span><span class="legend-guide">đường vuông góc với gradient</span></p>
     <div class="lab-buttons">
       <button type="button" @click="state = { ...state, x: xStar }">Đặt x vào nghiệm</button>
@@ -87,9 +87,9 @@ const line = s => `${P(s[0])[0]},${P(s[0])[1]} ${P(s[1])[0]},${P(s[1])[1]}`
     <div class="lab-readout" role="status">
       <p>f(y) = (y − c)ᵀQ(y − c) với c = {{ fmtPoint(c) }} (chấm vàng, kéo được). Tại x = {{ fmtPoint(x) }}: f(x) = {{ fmt(fx, 3) }}, ∇f(x) = {{ fmtPoint(g, 2) }}.</p>
       <p>Giá trị nhỏ nhất của ∇f(x)ᵀ(y − x) trên đa giác là {{ fmt(worst, 3) }}, đạt tại một đỉnh.</p>
-      <p v-if="optimal" class="is-good">Không còn điểm khả thi nào làm ∇f(x)ᵀ(y − x) âm: x tối ưu, và đường nét đứt tựa vào đa giác tại x.</p>
-      <p v-else class="is-bad">Đi từ x về phía bất kỳ điểm nào trong vùng đỏ, f giảm ngay từ đầu, nên x chưa tối ưu. Nghiệm thật là vòng tròn rỗng tại {{ fmtPoint(xStar) }}.</p>
-      <p>Một bước gradient có chiếu với độ dài bước {{ step }} đưa x tới {{ fmtPoint(pgPoint) }}, cách x một khoảng {{ fmt(pgMove, 3) }}{{ pgMove < 1e-3 ? ': x là điểm bất động, đúng như điều kiện tối ưu dự báo' : '' }}.</p>
+      <p v-if="optimal" class="is-good">Điều kiện bậc nhất đạt trong ngưỡng sai số số học đang dùng. Với gradient khác 0, đường nét đứt xấp xỉ một đường tựa của đa giác; với gradient bằng 0, điểm hiện tại là tâm c.</p>
+      <p v-else class="is-bad">Đi từ x về phía bất kỳ điểm nào trong vùng đỏ, f giảm ngay từ đầu, nên x chưa tối ưu. Nghiệm tính gần đúng là vòng tròn rỗng tại {{ fmtPoint(xStar) }}.</p>
+      <p>Một bước gradient có chiếu với độ dài bước {{ step }} đưa x tới {{ fmtPoint(pgPoint) }}, cách x một khoảng {{ fmt(pgMove, 3) }}{{ pgMove < 1e-3 ? ': độ dịch chuyển nhỏ trong ngưỡng tính toán' : '' }}.</p>
     </div>
     <details class="lab-tasks">
       <summary>Gợi ý thao tác</summary>
@@ -101,3 +101,7 @@ const line = s => `${P(s[0])[0]},${P(s[0])[1]} ${P(s[1])[0]},${P(s[1])[1]}`
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg :is(line,path,polyline,polygon),svg circle:not(.lab-handle){pointer-events:none}.lab-handle{stroke:transparent;stroke-width:28;paint-order:stroke}.lab-handle:focus-visible{stroke:var(--vang);stroke-width:4}
+</style>

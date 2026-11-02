@@ -122,6 +122,49 @@ for residual in [.5,3]:
     value=.5*(residual-auxiliary)**2+abs(auxiliary)
     assert np.isclose(value,.125 if residual==.5 else 2.5)
 
+# The sparse-set counterexample works for all k < d, without a 2k <= d restriction.
+for dimension in range(2,12):
+    for count in range(1,dimension):
+        first=np.zeros(dimension);first[:count]=1
+        second=first.copy();second[count-1]=0;second[count]=1
+        assert np.count_nonzero(first)==np.count_nonzero(second)==count
+        assert np.count_nonzero((first+second)/2)==count+1
+from itertools import product
+sparse_target=np.array([.4,-.7]);corner_mean=np.zeros(2);mean_count=0;total_probability=0
+for bits in product([0,1],repeat=2):
+    corner=np.sign(sparse_target)*np.array(bits)
+    probability=np.prod([abs(sparse_target[i]) if bits[i] else 1-abs(sparse_target[i]) for i in range(2)])
+    corner_mean+=probability*corner;mean_count+=probability*np.count_nonzero(corner);total_probability+=probability
+assert np.allclose(corner_mean,sparse_target) and np.isclose(mean_count,1.1) and np.isclose(total_probability,1)
+report['sparse_hull_example']={'mean':corner_mean.tolist(),'expected_count':float(mean_count)}
+
+# Exact overview regression and constraint certificates.
+from fractions import Fraction as F
+features=np.arange(-2,3);observations=np.array([-2,-1,3,1,2]);design=np.column_stack([features,np.ones(5)])
+assert np.allclose(design.T@design,np.diag([10,5])) and np.allclose(design.T@observations,[10,3])
+def overview_error(a,b):
+    return sum((F(a)*int(u)+F(b)-int(y))**2 for u,y in zip(features,observations))
+assert overview_error(1,F(3,5))==F(36,5)
+assert overview_error(F(1,2),F(3,5))==F(97,10)
+assert overview_error(F(2,3),F(3,10))==F(1577,180)
+ridge_norm=F(2,3)**2+F(3,10)**2
+assert ridge_norm==F(481,900) and overview_error(F(2,3),F(3,10))+5*ridge_norm==F(343,30)
+assert F(4,3)*2+F(1,3)==3 and F(4,3)+2*F(1,3)==2
+for penalty in [0,6,20,30]:
+    a=max(1-penalty/20,0);b=max((6-penalty)/10,0)
+    if a:assert abs(20*(a-1)+penalty)<1e-12
+    else:assert abs(-20)<=penalty
+    if b:assert abs(10*(b-.6)+penalty)<1e-12
+    else:assert abs(-6)<=penalty
+hinge_inputs=np.array([-2,-1,1,2]);hinge_labels=np.array([-1,1,-1,1])
+for threshold in [-3,-2,-1.5,-1,0,1,1.5,2,3]:
+    margins=hinge_labels*(hinge_inputs-threshold)
+    count=np.count_nonzero(margins<=0);hinge=np.maximum(0,1-margins).sum()
+    assert count==(1 if -2<threshold<-1 or 1<threshold<2 else 2)
+    assert hinge>=4
+    assert (abs(threshold)<=1)==bool(hinge==4)
+report['overview_ridge']={'data_error':'1577/180','squared_norm':'481/900','penalized_value':'343/30'}
+
 output=Path('qa/math-ai-visuals/convex-functions-numerical.json')
 output.parent.mkdir(parents=True,exist_ok=True)
 output.write_text(json.dumps(report,indent=2),encoding='utf-8')

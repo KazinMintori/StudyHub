@@ -1,6 +1,8 @@
 <script setup>
 import { computed, ref, useId } from 'vue'
-import { makeView } from '../controllers/svg-drag.js'
+import {clipPolyline} from '../services/svg-clipping.mjs'
+import LabPointControls from './LabPointControls.vue'
+import { makeView, createDragger, fmt } from '../controllers/svg-drag.js'
 
 // Thử quy tắc hợp hàm f(x) = h(g(x)). Quy tắc chỉ là điều kiện đủ: lab so sánh điều quy tắc
 // dự đoán với hình dạng thật của f trên khung nhìn (kiểm bằng sai phân bậc hai trên lưới).
@@ -24,7 +26,7 @@ const gs = {
   cap: { label: '4 − x²', f: x => 4 - x * x, curv: 'concave' },
   tent: { label: '3 − |x|', f: x => 3 - Math.abs(x), curv: 'concave' }
 }
-const hKey = ref('exp'), gKey = ref('sq')
+const hKey=ref('exp'),gKey=ref('sq'),svg=ref(null),probe=ref(.5)
 const h = computed(() => hs[hKey.value]), g = computed(() => gs[gKey.value])
 const clip = `${useId()}-comp-clip`
 const N = 400, X0 = -2.5, X1 = 2.5
@@ -72,35 +74,43 @@ const yRange = computed(() => {
   const lo = vs[0], hi = vs[Math.floor(0.97 * (vs.length - 1))]
   return hi - lo < 1e-9 ? [lo - 1, hi + 1] : [lo - 0.08 * (hi - lo), hi + 0.08 * (hi - lo)]
 })
-const view = computed(() => makeView({ x0: X0, x1: X1, y0: yRange.value[0], y1: yRange.value[1], width: 440, height: 260 }))
+const view = computed(() => makeView({ x0: X0, x1: X1, y0: yRange.value[0], y1: yRange.value[1], width: 400, height: 300, pad:28 }))
 const path = computed(() => {
   const segs = [[]]
   for (const s of samples.value) { if (!Number.isFinite(s.v)) { if (segs.at(-1).length) segs.push([]); continue } segs.at(-1).push(`${view.value.sx(s.x)},${view.value.sy(s.v)}`) }
-  return segs.filter(s => s.length > 1).map(s => s.join(' '))
+  return segs.filter(s=>s.length>1).flatMap(line=>clipPolyline(line.map(p=>p.split(',').map(Number)),{x0:0,x1:400,y0:0,y1:300})).map(line=>line.map(p=>p.join(',')).join(' '))
 })
+const probeInner=computed(()=>g.value.f(probe.value))
+const probeValue=computed(()=>h.value.dom(probeInner.value)?h.value.f(probeInner.value):NaN)
+const probeY=computed(()=>Number.isFinite(probeValue.value)?Math.min(view.value.y1,Math.max(view.value.y0,probeValue.value)):Math.max(view.value.y0,Math.min(view.value.y1,0)))
+const drag=createDragger(svg,view,(_,p)=>{probe.value=p[0]},{step:.1})
 const agree = computed(() => predicted.value.verdict === null || predicted.value.verdict === actual.value || (actual.value === 'affine'))
 </script>
 
 <template>
   <figure class="study-lab" aria-label="Thử các quy tắc hợp hàm">
-    <p class="lab-title">Quy tắc hợp hàm: dự đoán và thực tế</p>
-    <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="`Đồ thị của h(g(x)) với h = ${h.label}, g = ${g.label}`">
+    <p class="lab-title">Quy tắc hợp hàm: Dự đoán và phép thử số</p>
+    <svg ref="svg" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="`Đồ thị của h(g(x)) với h = ${h.label}, g = ${g.label}`">
       <defs><clipPath :id="clip"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <g :clip-path="`url(#${clip})`">
         <line v-if="yRange[0] < 0 && yRange[1] > 0" x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
         <line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" :y2="view.height" class="lab-axis" />
         <polyline v-for="(seg, i) in path" :key="i" :points="seg" class="lab-accent" />
       </g>
+      <circle :cx="view.sx(probe)" :cy="view.sy(probeY)" r="7" class="lab-dot-warn"/>
+      <circle :cx="view.sx(probe)" :cy="view.sy(probeY)" r="28" class="lab-handle hit" tabindex="0" role="slider" aria-label="Đầu vào x của chuỗi hợp hàm" :aria-valuetext="fmt(probe,4)" @pointerdown="drag.start('probe',$event)" @keydown="drag.key('probe',[probe,probeY],$event)"/>
     </svg>
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <div class="lab-controls">
       <label>Hàm ngoài h(u) = <select v-model="hKey"><option v-for="(item, key) in hs" :key="key" :value="key">{{ item.label }}</option></select></label>
       <label>Hàm trong g(x) = <select v-model="gKey"><option v-for="(item, key) in gs" :key="key" :value="key">{{ item.label }}</option></select></label>
     </div>
     <div class="lab-readout" role="status">
+      <p>Kéo điểm để tính theo từng bước: x = {{fmt(probe)}}, g(x) = {{fmt(probeInner)}}, h(g(x)) = {{Number.isFinite(probeValue)?fmt(probeValue):'Không xác định'}}. Nếu điểm ra ngoài thang dọc, nút kéo nằm ở mép, không phải giá trị đã bị đổi.</p>
       <p>f(x) = h(g(x)), trong đó h {{ h.note }}, còn g {{ g.curv === 'convex' ? 'lồi' : g.curv === 'concave' ? 'lõm' : 'affine' }}.</p>
       <p>Quy tắc: {{ predicted.rule }}<span v-if="predicted.verdict">, nên dự đoán f <strong>{{ words[predicted.verdict] }}</strong></span>.</p>
-      <p :class="actual === 'convex' || actual === 'concave' || actual === 'affine' ? 'is-good' : 'is-bad'">Thực tế trên đoạn [−2.5, 2.5]: f {{ words[actual] }}.</p>
-      <p v-if="predicted.verdict === null && (actual === 'convex' || actual === 'concave')">Không quy tắc nào áp dụng, vậy mà f vẫn {{ words[actual] }}. Quy tắc hợp hàm là điều kiện đủ, không phải điều kiện cần.</p>
+      <p :class="actual === 'convex' || actual === 'concave' || actual === 'affine' ? 'is-good' : 'is-bad'">Theo phép thử sai phân trên lưới [−2.5, 2.5]: f {{ words[actual] }}.</p>
+      <p v-if="predicted.verdict === null && (actual === 'convex' || actual === 'concave')">Quy tắc hiện tại chưa kết luận, còn lưới số gợi ý f {{ words[actual] }}. Muốn kết luận cần kiểm bằng giải tích hoặc định nghĩa. Quy tắc hợp hàm là điều kiện đủ, không phải điều kiện cần.</p>
       <p v-if="!agree" class="is-bad">Dự đoán và thực tế không khớp. Hãy kiểm tra lại giả thiết của quy tắc.</p>
     </div>
     <details class="lab-tasks">
@@ -114,3 +124,7 @@ const agree = computed(() => predicted.value.verdict === null || predicted.value
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg :is(line,path,polyline),svg circle:not(.hit){pointer-events:none}.hit{fill:transparent!important;stroke:transparent}.hit:focus-visible{stroke:var(--vang)}
+</style>

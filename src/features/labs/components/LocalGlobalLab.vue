@@ -64,7 +64,7 @@ const handleY=computed(()=>Math.max(26,Math.min(view.value.height-28,view.value.
       <g :clip-path="`url(#${clip})`">
         <rect :x="view.sx(x0 - R)" y="0" :width="view.sx(x0 + R) - view.sx(x0 - R)" :height="view.height" class="lab-region-soft" style="opacity: 0.45" />
         <line x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
-        <line v-for="(p, i) in S.pieces" :key="`s${i}`" :x1="view.sx(p[0])" :x2="view.sx(p[1])" :y1="view.height - 6" :y2="view.height - 6" class="lab-good" style="stroke-width: 6" />
+        <line v-for="(p, i) in S.pieces" :key="`s${i}`" :x1="view.sx(p[0])" :x2="view.sx(p[1])" :y1="view.height - 6" :y2="view.height - 6" class="lab-good" style="stroke-width: 3.2" />
         <polyline v-for="(segment,index) in curve" :key="'curve'+index" :points="segment" class="lab-line" style="stroke-width: 2.5" />
         <template v-if="proof">
           <line :x1="P(x0, fx)[0]" :y1="P(x0, fx)[1]" :x2="P(proof.y, fn.f(proof.y))[0]" :y2="P(proof.y, fn.f(proof.y))[1]" class="lab-accent" style="stroke-width: 2" />

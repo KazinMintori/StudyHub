@@ -19,6 +19,11 @@ export function inspectDiagramClarity(){
    const scale=matrix?Math.hypot(matrix.c,matrix.d):1
    if(size*scale<10)issues.push({type:'diagram-small-label',lab,diagram:index,text:label.text,pixels:size*scale})
   }
+  const markers=[...svg.querySelectorAll('circle[class*="lab-dot"]')].filter(e=>visible(e)&&!e.classList.contains('lab-handle'))
+  for(const label of labels)for(const marker of markers){
+   const overlap=intersects(label.box,marker.getBoundingClientRect())
+   if(overlap.w>1.5&&overlap.h>1.5)issues.push({type:'diagram-label-over-point',lab,diagram:index,text:label.text,overlap})
+  }
   for(const element of svg.querySelectorAll('line,path,polyline,polygon')){
    if(element.closest('.lab-handle')||!visible(element))continue
    const style=getComputedStyle(element)

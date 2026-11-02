@@ -47,6 +47,10 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['function-operations','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.html'],
+  ['optimality','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.html'],
+  ['ml-models','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.html'],
+  ['local-global','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cuc-bo-va-toan-cuc.html'],
   ['known-functions','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.html'],
   ['convex-function','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/ham-loi.html'],
   ['epigraph','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.html'],
@@ -84,7 +88,7 @@ async function sourceManifest() {
   const paths = [
     ...routes.map(([,route])=>'docs'+route.replace(/\.html$/,'.md')),
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
-    ...['LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
+    ...['EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
   for(const [,route]of routes){
     const notes='docs'+route.replace(/\.html$/,'.md'),source=await readFile(notes,'utf8')
@@ -297,6 +301,8 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  optimality:[[0,'Đặt x vào nghiệm'],[0,'Đi một bước gradient có chiếu']],
+  'ml-models':[[0,'Dữ liệu tách được, λ = 0'],[0,'Thêm ridge λ = 0.05'],[0,'Đặt (a, b) vào nghiệm'],[0,'Dữ liệu chồng lấn']],
   'known-functions':[[0,'a = −1'],[0,'a = 0'],[0,'a = 1/2'],[0,'a = 1'],[0,'a = 2'],[2,'Ma trận đơn vị'],[2,'t = 1/2'],[2,'Chạm biên PSD'],[2,'Ra ngoài miền']],
   'convex-function':[[1,'Yên ngựa vi phạm dây cung'],[1,'Cái bát lồi']],
   epigraph:[[2,'q = (0.5, 0.5)'],[2,'q = (0.1, 0.9)'],[2,'Hậu nghiệm (0.25, 0.75)'],[2,'Một xác suất bằng 0']],
@@ -355,7 +361,7 @@ async function exercisePresets(name,touch){
 }
 
 async function exerciseFunctionChoices(name,touch){
- if(!['convex-function','epigraph','first-order','second-order'].includes(name))return
+ if(!['convex-function','epigraph','first-order','second-order','function-operations','ml-models'].includes(name))return
  const selects=await page.$$('figure.study-lab .lab-controls select')
  for(const [index,select]of selects.entries()){
   const original=await select.evaluate(e=>e.value)
