@@ -19,6 +19,12 @@ export const source = {
 
 export const parts = [
   {
+    title: 'Phần I: Tác tử trong thế giới thực',
+    lessons: [
+      '01-tri-tue-nhan-tao-va-tac-tu'
+    ]
+  },
+  {
     title: 'Phần II: Suy luận và lập kế hoạch trong điều kiện chắc chắn',
     lessons: [
       '05-menh-de-va-suy-dien'

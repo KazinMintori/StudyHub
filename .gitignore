@@ -1,5 +1,8 @@
 node_modules/
 .course-repositories/
+/docs/ai-nen-tang-tac-tu/**
+/raw_materials/ai-nen-tang-tac-tu/**
+/src/content/courses/ai-nen-tang-tac-tu/**
 .DS_Store
 Thumbs.db
 

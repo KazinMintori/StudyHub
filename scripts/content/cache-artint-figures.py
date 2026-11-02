@@ -11,7 +11,7 @@ root = Path(__file__).resolve().parents[2]
 notes = root / "docs/ai-nen-tang-tac-tu/bai-giang"
 manifest_path = root / "raw_materials/ai-nen-tang-tac-tu/review/figures.json"
 records = {}
-for chapter in ["05-menh-de-va-suy-dien", "15-ca-the-va-quan-he"]:
+for chapter in ["01-tri-tue-nhan-tao-va-tac-tu", "05-menh-de-va-suy-dien", "15-ca-the-va-quan-he"]:
     directory = notes / chapter
     if not directory.exists():
         continue

@@ -52,6 +52,7 @@ jobs:
       - name: Assemble pinned private course sources
         env:
           COURSE_DEPLOY_KEYS: ${{ secrets.STUDYHUB_COURSE_DEPLOY_KEYS }}
+          COURSE_DEPLOY_KEYS_EXTRA: ${{ secrets.STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY }}
         run: npm run courses:sync
 
       - name: Check interface design tokens

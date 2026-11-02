@@ -28,5 +28,30 @@
     "source": "https://artint.info/3e/html/x156.png",
     "sha256": "743c8d1f700e622d279724b126ca660e535a56f51592893154fdb0ddbdd2cf95",
     "bytes": 17233
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/01-tri-tue-nhan-tao-va-tac-tu/figures/x1.png": {
+    "source": "https://artint.info/3e/html/x1.png",
+    "sha256": "712c153121cf3bef0e363130008c0a6eb9e4fa0dc483ffd4944609c74fcbfb77",
+    "bytes": 165364
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/01-tri-tue-nhan-tao-va-tac-tu/figures/x2.png": {
+    "source": "https://artint.info/3e/html/x2.png",
+    "sha256": "8a1dd7deefc84d70e5776e5298a2ac146935d6d38a8a3b9781fba0d42851a9ca",
+    "bytes": 42034
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/01-tri-tue-nhan-tao-va-tac-tu/figures/x3.png": {
+    "source": "https://artint.info/3e/html/x3.png",
+    "sha256": "2a7aaeedd18b6f1b8135d53fc64a902f44c30ad5dfb3c20476f0da67bf4c0dc9",
+    "bytes": 67369
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/01-tri-tue-nhan-tao-va-tac-tu/figures/x4.png": {
+    "source": "https://artint.info/3e/html/x4.png",
+    "sha256": "7d07fb0b5d73f64bff781b4ee71a06a79da62aa751af1313035db91470402de5",
+    "bytes": 43039
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/01-tri-tue-nhan-tao-va-tac-tu/figures/x5.png": {
+    "source": "https://artint.info/3e/html/x5.png",
+    "sha256": "434bdcd14e17f6ec1a28fab0250d414118790deb78707bd481d289888b6fe259",
+    "bytes": 21892
   }
 }

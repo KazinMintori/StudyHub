@@ -1,8 +1,13 @@
 const course = 'ai-nen-tang-tac-tu'
+const intro = '01-tri-tue-nhan-tao-va-tac-tu'
 const logic = '05-menh-de-va-suy-dien'
 const relations = '15-ca-the-va-quan-he'
 
 export const flashcards = [
+  { course, lesson: intro, q: 'Tác tử tính toán được định nghĩa thế nào và đánh giá ra sao?', a: 'Tác tử tính toán là tác tử mà các quyết định hành động có thể phân rã thành các phép toán nguyên thủy hiện thực hóa trên thiết bị vật lý. Tác tử được đánh giá duy nhất dựa trên cách thức nó hành động trong môi trường.' },
+  { course, lesson: intro, q: 'Năm luồng đầu vào quyết định hành động của tác tử trong mô hình hộp đen gồm những gì?', a: 'Tri thức tiên nghiệm, kích thích từ môi trường, lịch sử kinh nghiệm quá khứ, mục tiêu hoặc sở thích, và năng lực hành động nguyên thủy.' },
+  { course, lesson: intro, q: 'Mười chiều kích phức tạp trong không gian thiết kế tác tử có ý nghĩa gì?', a: 'Định hình cấu trúc và năng lực tác tử gồm: Tính mô đun, tầm nhìn lập kế hoạch, phương thức biểu diễn, giới hạn tính toán, khả năng học tập, tính bất định, cấu trúc sở thích, số lượng tác tử, tính tương tác và sự tương tác giữa các chiều.' },
+  { course, lesson: intro, q: 'Bốn lớp giải pháp thường gặp trong AI khác nhau thế nào?', a: 'Nghiệm tối ưu (tốt nhất theo hàm mục tiêu), nghiệm thỏa mãn (đủ tốt theo tiêu chuẩn), nghiệm xấp xỉ tối ưu (nằm trong dung sai bảo đảm so với tối ưu), và nghiệm có xác suất đúng cao (lý thuyết PAC).' },
   { course, lesson: logic, q: 'Hệ quả logic và một thủ tục suy diễn khác nhau thế nào?', a: 'Hệ quả logic là quan hệ ngữ nghĩa: Kết luận đúng trong mọi mô hình của cơ sở tri thức. Thủ tục suy diễn là cách thao tác trên biểu thức để tìm chứng minh. Tính đúng đắn bảo đảm kết luận tìm được là hệ quả logic; tính đầy đủ bảo đảm tìm được mọi hệ quả trong phạm vi đã nêu.' },
   { course, lesson: logic, q: 'Một mệnh đề xác định gồm những thành phần nào?', a: 'Gồm một nguyên tử ở đầu và một hội các nguyên tử ở thân, đọc là đầu đúng nếu mọi nguyên tử trong thân đúng. Thân rỗng tạo thành một sự kiện. Mệnh đề tương đương một tuyển chứa đúng một literal dương.' },
   { course, lesson: logic, q: 'Không chứng minh được một nguyên tử có đồng nghĩa với chứng minh phủ định của nó không?', a: 'Không. Trong ngữ nghĩa thông thường, một nguyên tử có thể đúng ở mô hình này và sai ở mô hình khác. Muốn dùng sự thất bại của chứng minh để kết luận phủ định, phải nêu rõ giả định tri thức đầy đủ và các điều kiện của thủ tục tìm kiếm.' },
