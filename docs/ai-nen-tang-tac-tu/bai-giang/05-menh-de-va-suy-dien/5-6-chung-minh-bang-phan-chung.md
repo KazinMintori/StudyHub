@@ -282,9 +282,7 @@ Hình 5.10: Thuật toán suy diễn lùi từ trên xuống tìm tập xung đ�
 ::: example Ví dụ 5.24: Dẫn xuất suy diễn lùi tìm xung đột
 Bắt đầu với $G_{0} = \{\mathit{false}\}$, thuật toán chọn phân giải với ràng buộc $\mathit{false} \leftarrow \mathit{dark\_l}_{1} \wedge \mathit{lit\_l}_{1}$. Vì $\mathit{dark\_l}_{1}$ là sự kiện quan sát đã biết, tập mục tiêu thu hẹp về $\{\mathit{lit\_l}_{1}\}$. Tiếp tục phân giải qua các quy tắc của mạch điện, $G$ lần lượt nhận các giá trị cho đến khi chỉ còn lại toàn các nguyên tử khả giả định:
 
-$$
-G = \{\mathit{ok\_cb}_{1}, \mathit{ok\_s}_{1}, \mathit{ok\_s}_{2}, \mathit{ok\_l}_{1}\}.
-$$
+<pre class="logic-expression">G = {ok_cb_1, ok_s_1, ok_s_2, ok_l_1}.</pre>
 
 Thuật toán dừng và trả về tập này dưới dạng một xung đột hoàn chỉnh.
 :::
