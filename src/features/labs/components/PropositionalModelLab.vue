@@ -1,0 +1,27 @@
+<script setup>
+import {computed,ref,watch} from 'vue'
+import SimulationControls from './SimulationControls.vue'
+import {modelExamples,analyzeKnowledge} from '../services/propositional-logic.mjs'
+const props=defineProps({initialExample:{type:String,default:'rain'}})
+const preset=ref(props.initialExample),data=ref(modelExamples.find(e=>e.id===props.initialExample)||modelExamples[0]),kbText=ref(''),queryText=ref(''),step=ref(0),error=ref('')
+watch(preset,()=>{data.value=modelExamples.find(e=>e.id===preset.value);kbText.value=data.value.kb.join('\n');queryText.value=data.value.query;step.value=0;error.value=''},{immediate:true})
+const analysis=computed(()=>analyzeKnowledge(data.value.kb,data.value.query)),row=computed(()=>analysis.value.rows[step.value])
+const examined=computed(()=>analysis.value.rows.slice(0,step.value+1)),counter=computed(()=>examined.value.find(r=>r.counter)),resetKey=computed(()=>JSON.stringify(data.value))
+function apply(){try{const e={kb:kbText.value.split('\n').map(s=>s.trim()).filter(Boolean),query:queryText.value.trim()};analyzeKnowledge(e.kb,e.query);data.value=e;step.value=0;error.value=''}catch(e){error.value=e.message}}
+const tf=v=>v?'Đ':'S'
+const finalText=computed(()=>({entailed:'KB hàm nghĩa truy vấn.',negated:'KB hàm nghĩa phủ định của truy vấn.',unknown:'KB không hàm nghĩa truy vấn và cũng không hàm nghĩa phủ định của nó.',inconsistent:'KB không có mô hình. Theo logic cổ điển, cả truy vấn lẫn phủ định đều là hệ quả. Cần xử lý mâu thuẫn của tri thức.'}[analysis.value.status]))
+</script>
+<template>
+<figure class="lab prop-model" aria-label="Kiểm chứng mô hình logic mệnh đề từng phép gán">
+ <label>Ví dụ<select v-model="preset"><option v-for="e in modelExamples" :key="e.id" :value="e.id">{{ e.title }}</option></select></label>
+ <p>Thứ tự ký hiệu: {{ analysis.symbols.join(', ')||'Không có ký hiệu' }}. Có {{ analysis.rows.length }} phép gán. Đ = Đúng, S = Sai. Bộ xem hỗ trợ tối đa sáu ký hiệu và kiểm cả ký hiệu chỉ xuất hiện trong truy vấn.</p>
+ <SimulationControls v-model="step" :max="analysis.rows.length-1" :reset-key="resetKey" label="Phép gán"/>
+ <section class="model-current"><h4>Phép gán đang xét</h4><p>{{ Object.entries(row.model).map(([k,v])=>k+' = '+tf(v)).join(' · ')||'Phép gán rỗng' }}</p><ul><li v-for="(s,i) in data.kb" :key="i">{{ s }}: {{ tf(row.values[i]) }}</li></ul><p>Toàn bộ KB: {{ tf(row.kb) }}. Truy vấn {{ data.query }}: {{ tf(row.query) }}.</p><p role="status">{{ !row.kb?'Bỏ qua hàng này khi xét hệ quả, vì KB không đúng trong phép gán này.':row.query?'Hàng này là mô hình của KB và làm truy vấn đúng.':'Đã tìm thấy phản mô hình: KB đúng nhưng truy vấn sai.' }}</p></section>
+ <p class="model-conclusion" role="status"><template v-if="counter">Đã có phản mô hình, đủ kết luận KB không hàm nghĩa truy vấn. Phải xét thêm các hàng nếu muốn xác định phủ định của truy vấn có là hệ quả không.</template><template v-else-if="step<analysis.rows.length-1">Chưa có phản mô hình trong các hàng đã xét. Cần kiểm tra tiếp.</template><template v-else>{{ finalText }}</template></p>
+ <details><summary>Xem toàn bộ các phép gán</summary><p>{{ analysis.modelCount }} mô hình của KB. {{ finalText }}</p><ol class="model-rows"><li v-for="(r,i) in analysis.rows" :key="i" :class="{active:i===step,counter:r.counter}"><button type="button" @click="step=i">Hàng {{ i+1 }}</button><span>{{ Object.entries(r.model).map(([k,v])=>k+': '+tf(v)).join(' · ') }}</span><span>KB {{ tf(r.kb) }} · Truy vấn {{ tf(r.query) }}{{ r.counter?' · Phản mô hình':'' }}</span></li></ol></details>
+ <details class="model-edit"><summary>Nhập tri thức và truy vấn</summary><p>Mỗi dòng là một công thức. Dùng ! hoặc ¬, &amp; hoặc ∧, | hoặc ∨, -&gt; hoặc ⇒, &lt;-&gt; hoặc ⇔. Dùng TRUE/FALSE cho hằng logic. Thứ tự ưu tiên: Phủ định, hội, tuyển, kéo theo, tương đương. Nên đặt ngoặc để chỉ rõ ý nghĩa.</p><label>KB<textarea v-model="kbText" rows="5" spellcheck="false"/></label><label>Truy vấn<input v-model="queryText" type="text" spellcheck="false"/></label><button type="button" @click="apply">Áp dụng</button><p v-if="error" role="alert">{{ error }}</p></details>
+</figure>
+</template>
+<style scoped>
+.prop-model{min-width:0}.prop-model label{display:grid;gap:6px}.prop-model :is(select,input,textarea,button){min-height:44px;max-width:100%;box-sizing:border-box;border:1px solid var(--control);border-radius:var(--radius);padding:8px;background:var(--paper);color:var(--ink);font:var(--fs-small)/1.6 var(--font-ui)}.prop-model :is(select,input,textarea){width:100%}.prop-model :is(button,select,input,textarea):focus-visible{outline:3px solid var(--tim);outline-offset:3px}.prop-model p,.prop-model li,.prop-model summary{font:var(--fs-small)/1.7 var(--font-ui);overflow-wrap:anywhere}.prop-model h4{font:600 var(--fs-ui)/1.6 var(--font-ui)}.model-current{border:1px solid var(--rule);border-radius:var(--radius);padding:12px}.model-conclusion{padding:12px;background:var(--tim-soft);border-left:3px solid var(--tim)}.prop-model details{margin-top:16px}.prop-model summary{min-height:44px;cursor:pointer}.model-rows{list-style:none;padding:0!important;display:grid;gap:8px}.model-rows li{display:grid;gap:5px;padding:8px;border:1px solid var(--rule);border-radius:var(--radius)}.model-rows .active{border-color:var(--tim);background:var(--tim-soft)}.model-rows .counter{border-left:3px solid var(--do)}.model-rows button{justify-self:start;cursor:pointer}.model-edit label{margin:10px 0}.model-edit textarea{font:13px/1.7 var(--font-code)}@media(max-width:600px){.prop-model{padding:12px}}
+</style>
