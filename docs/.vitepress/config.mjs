@@ -52,9 +52,7 @@ export default withMermaid(defineConfig({
   appearance:true,
   vite:{
     server:{
-      // Worktrees reuse the primary dependency installation. Its resolved path
-      // must be served so fonts do not silently fall back during local QA.
-      fs:{allow:[fileURLToPath(new URL('../../',import.meta.url)),realpathSync(new URL('../../node_modules',import.meta.url))]},
+      fs:{allow:[fileURLToPath(new URL('../../',import.meta.url)),realpathSync(fileURLToPath(new URL('../../node_modules',import.meta.url)))]},
       watch:{ignored:['**/.vitepress/dist/**','**/.vitepress/.temp/**']}
     },
     build:{

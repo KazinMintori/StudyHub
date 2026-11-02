@@ -79,18 +79,15 @@ try {
 
   await go('/toan-cho-ai/bai-tap.html')
   const exerciseLinks = await page.$$eval('.vp-doc table a', links => links.map(link => link.href))
-  assert.equal(exerciseLinks.length, 8)
-  for (const href of [exerciseLinks[0], exerciseLinks[3]]) {
+  assert.equal(exerciseLinks.length, 5)
+  for (const href of exerciseLinks) {
     const url = new URL(href, page.url())
-    assert.equal(url.hash, '#bai-tap-tu-luyen')
+    assert.match(url.pathname, /\/toan-cho-ai\/problem-set\/homework-0[1-5](?:\.html)?$/)
     await page.goto(url.href, { waitUntil: 'networkidle0', timeout: 60000 })
-    await page.waitForFunction(() => !!document.getElementById('bai-tap-tu-luyen')?.checkVisibility())
-    assert(await page.$eval('#bai-tap-tu-luyen', el => {
-      const rect = el.getBoundingClientRect()
-      return rect.top >= 0 && rect.top < innerHeight
-    }))
+    await page.waitForSelector('.vp-doc .exercise')
+    assert(await page.$eval('.vp-doc h1', el => /Homework/.test(el.textContent)))
   }
-  record('Math for AI exercise links scroll to authored exercise headings')
+  record('Math for AI homework hub opens all five authored sets')
 
   const vectorTopic = '/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.html'
   await page.setViewport({ width: 768, height: 600 })
@@ -103,6 +100,10 @@ try {
   assert(preview.top >= 0 && preview.bottom <= 600 && preview.right <= 768, JSON.stringify(preview))
   await page.click(vector)
   await page.waitForSelector('.term-preview.is-pinned')
+  // Pinning focuses the close control after Vue commits the dialog. Wait for
+  // that handoff and leave the hovered term before testing keyboard dismissal.
+  await page.waitForFunction(() => document.activeElement?.classList.contains('term-preview-close'))
+  await page.mouse.move(760, 590)
   await page.keyboard.press('Escape')
   await page.waitForFunction(() => !document.querySelector('.term-preview'))
   assert(await page.$eval(vector, el => el === document.activeElement))

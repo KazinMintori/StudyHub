@@ -52,6 +52,7 @@ jobs:
       - name: Assemble pinned private course sources
         env:
           COURSE_DEPLOY_KEYS: ${{ secrets.STUDYHUB_COURSE_DEPLOY_KEYS }}
+          COURSE_DEPLOY_KEYS_EXTRA: ${{ secrets.STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY }}
         run: npm run courses:sync
 
       - name: Check interface design tokens
@@ -91,6 +92,7 @@ jobs:
           npm run verify:navigation
           node scripts/verification/verify-course-workspace.mjs
           node scripts/verification/verify-lecture-usability.mjs
+          node scripts/verification/verify-math-ai-homework.mjs
 
       - name: Save browser verification reports
         if: always()
@@ -102,7 +104,34 @@ jobs:
             qa/navigation-stability/
             qa/lecture-usability/
             qa/course-workspace/
+            qa/toan-ai-homework/
             qa/batch-build-fixture/
+            qa/philosophy-formats/
+          if-no-files-found: ignore
+
+      - name: Verify philosophy fill practice and mock exams
+        env:
+          BASE_PATH: /
+          QA_BASE_URL: http://127.0.0.1:5174
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+        run: |
+          node --test scripts/tests/philosophy*.test.mjs
+          npm run dev -- --host 127.0.0.1 --port 5174 > /tmp/studyhub-philosophy.log 2>&1 &
+          DEV_PID=$!
+          trap 'kill "$DEV_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent "$QA_BASE_URL/" > /dev/null; then break; fi
+            sleep 1
+          done
+          node scripts/verification/verify-philosophy-exam-formats.mjs
+
+      - name: Save philosophy assessment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: philosophy-assessment-verification
+          retention-days: 3
+          path: qa/philosophy-formats/
           if-no-files-found: ignore
 
       - name: Configure GitHub Pages
@@ -148,6 +177,17 @@ jobs:
             sleep 1
           done
           npm run verify:navigation
+
+          node scripts/verification/verify-assessment-navigation.mjs
+
+      - name: Save built assessment and card verification
+        if: always() && !inputs.fixture_only
+        uses: actions/upload-artifact@v4
+        with:
+          name: assessment-navigation
+          retention-days: 3
+          path: qa/assessment-navigation/
+          if-no-files-found: ignore
 
       - name: Upload Pages artifact
         if: success() && !inputs.fixture_only && !inputs.verify_only
@@ -205,3 +245,4 @@ jobs:
               });
               core.info(`Removed superseded Pages artifact ${artifact.id}`);
             }
+

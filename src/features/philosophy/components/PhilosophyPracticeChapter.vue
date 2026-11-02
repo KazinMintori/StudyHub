@@ -10,7 +10,8 @@ const tests = computed(() => chapterPracticeTests(chapter.value))
 
 <template>
   <section v-if="chapter" class="practice-chapter" aria-label="Chọn bài kiểm tra">
-    <p class="practice-description">{{ chapter.count }} câu hỏi được chia thành {{ tests.length }} bài. Chọn một bài để bắt đầu hoặc tiếp tục phần đang làm.</p>
+    <p class="practice-description">{{ chapter.count }} câu trắc nghiệm được chia thành {{ tests.length }} bài. Chọn một bài để bắt đầu hoặc tiếp tục phần đang làm.</p>
+    <a class="practice-fill-link" :href="studyLink(`/triet-hoc-mac-lenin/on-thi/${chapter.id}/dien-tu`)">Luyện điền từ của chương này →</a>
     <ol class="practice-test-list">
       <li v-for="test in tests" :key="test.id">
         <a :href="studyLink(test.path)"><span class="practice-test-number" aria-hidden="true">{{ test.testNumber }}</span><span class="practice-test-copy"><strong>{{ test.title }}</strong><span>{{ test.count }} câu hỏi</span></span><span class="practice-test-arrow" aria-hidden="true">→</span></a>
@@ -21,6 +22,7 @@ const tests = computed(() => chapterPracticeTests(chapter.value))
 
 <style scoped>
 .practice-description { color: var(--ink-2); line-height: 1.8; margin: 0 0 var(--space-6); }
+.practice-fill-link{display:inline-flex;align-items:center;min-height:44px;margin-bottom:var(--space-5);color:var(--tim);font:600 var(--fs-ui)/1.7 var(--font-ui)}.practice-fill-link:focus-visible{outline:2px solid var(--tim);outline-offset:3px}
 .practice-test-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin: 0 !important; padding: 0 !important; list-style: none !important; }
 .practice-test-list li { margin: 0; min-width: 0; }
 .practice-test-list a { display: flex; gap: var(--space-4); align-items: center; min-height: 96px; height: 100%; padding: var(--space-4); border: 1px solid var(--rule); border-radius: var(--radius-lg); text-decoration: none; font-family: var(--font-ui); }

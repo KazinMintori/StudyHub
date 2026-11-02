@@ -1,6 +1,7 @@
 import { readFile, writeFile, readdir, mkdir, copyFile } from 'node:fs/promises'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
+import { linkedStylesheets, mergeStylesheets, replaceStylesheetLinks } from './shared-styles.mjs'
 
 export async function* filesIn(directory, prefix = '') {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -26,6 +27,8 @@ export function replacePageMap(html, pageMap) {
 export async function mergeBatch(source, target, state) {
   const batchFiles = []
   for await (const file of filesIn(source)) batchFiles.push(file)
+  const cssFiles = batchFiles.filter(file => file.endsWith('.css') && file !== 'vp-icons.css')
+  state.stylesheets ??= new Map()
   const surfaceFiles = batchFiles.filter(file => /\/framework-surface\.[^/]+\.json$/.test(file))
   if (surfaceFiles.length > 1) throw new Error('A batch must have exactly one shared framework')
   if (surfaceFiles.length) {
@@ -44,6 +47,11 @@ export async function mergeBatch(source, target, state) {
   for (const file of batchFiles) {
     if (file === 'hashmap.json') continue
     const data = await readFile(path.join(source, file))
+    if (file.endsWith('.html') && data.includes('window.__VP_HASH_MAP__=JSON.parse(')) {
+      for (const stylesheet of linkedStylesheets(data.toString(), cssFiles)) {
+        state.stylesheets.set(stylesheet, await readFile(path.join(source, stylesheet), 'utf8'))
+      }
+    }
     if (file === 'vp-icons.css') {
       state.icons.add(data.toString())
       continue
@@ -91,12 +99,26 @@ export async function finalizeBatches(target, plan, state) {
       if (!chunks.has(key + '\0' + hash + (suffix === '.lean.js' ? '.lean' : ''))) throw new Error(`Missing page chunk: ${file}`)
     }
   }
+  const stylesheets = [...(state.stylesheets?.keys() || [])]
+  let sharedStylesheet
+  let cssBytes = 0
+  if (stylesheets.length) {
+    // Keep CSS beside its original assets: Font and image URLs stay relative
+    // to the same directory. Never rewrite standalone public HTML or its CSS.
+    if (stylesheets.some(file => path.posix.dirname(file) !== plan.assetsDir)) throw Error('Unexpected stylesheet directory')
+    const css = mergeStylesheets(state.stylesheets.values())
+    cssBytes = Buffer.byteLength(css)
+    sharedStylesheet = `${plan.assetsDir}/style-shared.${digest(css).slice(0, 16)}.css`
+    await writeFile(path.join(target, sharedStylesheet), css)
+  }
   for (const file of rendered) {
     if (!state.files.has(file)) continue
     const location = path.join(target, file)
-    await writeFile(location, replaceFrameworkPreloads(replacePageMap(await readFile(location, 'utf8'), pageMap), state.sharedFramework))
+    let html = replaceFrameworkPreloads(replacePageMap(await readFile(location, 'utf8'), pageMap), state.sharedFramework)
+    if (sharedStylesheet) html = replaceStylesheetLinks(html, stylesheets, sharedStylesheet)
+    await writeFile(location, html)
   }
   await writeFile(path.join(target, 'hashmap.json'), JSON.stringify(pageMap))
   await writeFile(path.join(target, 'vp-icons.css'), [...state.icons].join('\n'))
-  return { pages: plan.pages.length, chunks: Object.keys(pageMap).length }
+  return { pages: plan.pages.length, chunks: Object.keys(pageMap).length, stylesheets: stylesheets.length, cssBytes }
 }

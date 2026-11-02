@@ -83,6 +83,41 @@ test('merge rejects a differing shared asset rather than overwriting it', async 
   assert.equal(await readFile(path.join(target, 'shared.js'), 'utf8'), 'first')
 }))
 
+test('every generated route shares the complete deduplicated CSS, including 404 and rewritten paths', async () => temporary(async folder => {
+  const state = { pageMap: {}, files: new Map(), icons: new Set() }
+  const target = path.join(folder, 'merged')
+  const common = '@font-face{font-family:Study;src:url(./font.woff2)}.theme{color:purple}'
+  const publicHtml = '<link rel="stylesheet" href="/StudyHub/materials/private.css"><p>Embedded document</p>'
+  for (const name of ['a', 'b']) {
+    const source = path.join(folder, name)
+    await mkdir(path.join(source, 'assets'), { recursive: true })
+    await mkdir(path.join(source, 'materials'))
+    await writeFile(path.join(source, 'hashmap.json'), JSON.stringify({ [`${name}.md`]: name }))
+    const html = `<link rel="preload stylesheet" href="/StudyHub/assets/style.${name}.css" as="style">` + metadata({ [`${name}.md`]: name })
+    await writeFile(path.join(source, `${name === 'b' ? 'renamed' : name}.html`), html)
+    await writeFile(path.join(source, '404.html'), html)
+    await writeFile(path.join(source, 'embedded.html'), publicHtml)
+    await writeFile(path.join(source, 'materials/private.css'), '.embedded{color:red}')
+    await writeFile(path.join(source, `assets/style.${name}.css`), common + `.${name}[data-v-${name}]{display:grid}`)
+    for (const suffix of ['.js', '.lean.js']) await writeFile(path.join(source, `assets/${name}.md.${name}${suffix}`), 'export default 1')
+    await mergeBatch(source, target, state)
+  }
+  const report = await finalizeBatches(target, { pages: ['a.md', 'b.md'], rewrites: { 'b.md': 'renamed.md' }, assetsDir: 'assets' }, state)
+  assert.equal(report.stylesheets, 2)
+  let shared
+  for (const name of ['a', 'renamed', '404']) {
+    const html = await readFile(path.join(target, `${name}.html`), 'utf8')
+    const href = html.match(/href="\/StudyHub\/(assets\/style-shared\.[a-f0-9]+\.css)"/)[1]
+    shared ??= href
+    assert.equal(href, shared)
+    assert(!html.includes('style.a.css') && !html.includes('style.b.css'))
+  }
+  const css = await readFile(path.join(target, shared), 'utf8')
+  assert.equal(css, common + '.a[data-v-a]{display:grid}.b[data-v-b]{display:grid}')
+  assert.equal(report.cssBytes, Buffer.byteLength(css))
+  assert.equal(await readFile(path.join(target, 'embedded.html'), 'utf8'), publicHtml)
+}))
+
 test('lowercase route map verifies mixed-case filenames without changing hash case', async () => temporary(async folder => {
   const source = path.join(folder, 'source'), target = path.join(folder, 'merged')
   await mkdir(path.join(source, 'assets'), { recursive:true })

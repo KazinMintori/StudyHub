@@ -2,9 +2,19 @@
   "version": 1,
   "courses": [
     {
+      "id": "ai-nen-tang-tac-tu",
+      "repository": "KazinMintori/StudyHub-course-ai-nen-tang-tac-tu",
+      "revision": "98ba8ab415b5a738f1d8ac6e453ebe58be9f2fe6",
+      "paths": [
+        "docs/ai-nen-tang-tac-tu/**",
+        "raw_materials/ai-nen-tang-tac-tu/**",
+        "src/content/courses/ai-nen-tang-tac-tu/**"
+      ]
+    },
+    {
       "id": "bieu-dien-tri-thuc",
       "repository": "KazinMintori/StudyHub-course-bieu-dien-tri-thuc",
-      "revision": "84cc8fff477dd176fe809e934d3c6edf342f5d59",
+      "revision": "195db9fe8f2bcc54de8c041ceafa4d460b2543bb",
       "paths": [
         "docs/bieu-dien-tri-thuc/**",
         "raw_materials/bieu-dien-tri-thuc/**",
@@ -28,7 +38,7 @@
     {
       "id": "xac-suat-thong-ke",
       "repository": "KazinMintori/StudyHub-course-xac-suat-thong-ke",
-      "revision": "167b160209d5fed3353e4f1babb3361dc1f1c8f0",
+      "revision": "ce234f48e78486d000dbf87078fa81406f242194",
       "paths": [
         "docs/.vitepress/probability-source-library.mjs",
         "docs/.vitepress/xac-suat-thong-ke-course.mjs",
@@ -978,7 +988,7 @@
     {
       "id": "triet-hoc-mac-lenin",
       "repository": "KazinMintori/StudyHub-course-triet-hoc-mac-lenin",
-      "revision": "ca2db8983eb2e9916f741363130dd0805561433b",
+      "revision": "db92e4c4dc660f6a173b23fe7033dcf1b7f7405e",
       "paths": [
         "docs/triet-hoc-mac-lenin/**",
         "raw_materials/triet-hoc-mac-lenin/**",

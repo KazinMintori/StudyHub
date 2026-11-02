@@ -35,6 +35,23 @@ export function validateLock(lock) {
   return lock
 }
 
+export function parseCourseDeployKeys(env = process.env) {
+  const parse = (value, name) => {
+    const keys = JSON.parse(value || '{}')
+    if (!keys || typeof keys !== 'object' || Array.isArray(keys)) throw Error(`${name} must be a JSON object`)
+    for (const [id, key] of Object.entries(keys)) {
+      if (!/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(id) || typeof key !== 'string' || !key.trim()) {
+        throw Error(`${name} contains an invalid course key entry`)
+      }
+    }
+    return keys
+  }
+  const base = parse(env.COURSE_DEPLOY_KEYS, 'COURSE_DEPLOY_KEYS')
+  const extra = parse(env.COURSE_DEPLOY_KEYS_EXTRA, 'COURSE_DEPLOY_KEYS_EXTRA')
+  for (const id of Object.keys(extra)) if (Object.hasOwn(base, id)) throw Error(`Deploy key configured twice for ${id}`)
+  return { ...base, ...extra }
+}
+
 export async function verifyPackage(course, directory) {
   const manifest = JSON.parse(await readFile(path.join(directory, 'studyhub-course.json'), 'utf8'))
   if (manifest.version !== 1 || manifest.id !== course.id || !manifest.files || Array.isArray(manifest.files)) throw Error(`Invalid package for ${course.id}`)
@@ -112,7 +129,7 @@ export async function syncCourses({ root = repositoryRoot, check = false } = {})
   const lock = validateLock(JSON.parse(await readFile(path.join(root, 'config/course-repositories.json'), 'utf8')))
   const cache = path.join(root, '.course-repositories')
   await mkdir(cache, { recursive: true })
-  const keys = JSON.parse(process.env.COURSE_DEPLOY_KEYS || '{}')
+  const keys = parseCourseDeployKeys(process.env)
   const entries = [], secrets = []
   try {
     for (const course of lock.courses) {
@@ -234,3 +251,4 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   else if (args.length === 0 || args.length === 1 && args[0] === '--check') await syncCourses({ check: args.includes('--check') })
   else throw Error('Usage: course-repositories.mjs [--check | export <course> | pin <course> <commit>]')
 }
+

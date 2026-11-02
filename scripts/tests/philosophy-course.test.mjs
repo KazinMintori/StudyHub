@@ -103,7 +103,7 @@ test('Exam is independent and the sidebar routes to individual topic pages', asy
   const config = buildThemeConfig({ courseCatalog: [course], wikiGroups: [], concepts: {} })
   const sidebar = config.sidebar[`/${course.id}/`]
   assert.deepEqual(sidebar[0].items.map(item => item.text), ['Học tập', 'Ôn thi'])
-  assert.deepEqual(sidebar[0].items[1].items.map(item=>item.text), ['Chương I','Chương II','Chương III'])
+  assert.deepEqual(sidebar[0].items[1].items.map(item=>item.text), ['Chương I','Chương II','Chương III','Đề thi trắc nghiệm'])
   await access(`docs${sidebar[0].items[1].items[2].link}.md`)
   assert.equal(sidebar.length, 4)
   assert.equal(sidebar.slice(1).flatMap(chapter => chapter.items).length, 19)

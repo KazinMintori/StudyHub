@@ -2,6 +2,7 @@
 // 160 × 120 view box; colours come from CSS tokens (see illustrations.css).
 
 export const COURSE_MOTIFS = {
+  'ai-nen-tang-tac-tu': { motif: 'network', tone: 'tim' },
   'bieu-dien-tri-thuc': { motif: 'tree', tone: 'tim' },
   'toan-cho-ai': { motif: 'contour', tone: 'lam' },
   'xac-suat-thong-ke': { motif: 'bell', tone: 'hong' },
