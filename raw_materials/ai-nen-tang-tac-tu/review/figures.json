@@ -553,5 +553,65 @@
     "source": "https://artint.info/3e/html/x109.png",
     "local": "docs/ai-nen-tang-tac-tu/bai-giang/10-hoc-may-trong-dieu-kien-bat-dinh/figures/x109.png",
     "caption": "Hình 10.6: Suy diễn và học tham số xác suất trong mạng niềm tin khi xuất hiện biến ẩn E"
+  },
+  "11-quan-he-nhan-qua/x110.png": {
+    "source": "https://artint.info/3e/html/x110.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x110.png",
+    "caption": "Hình 11.1: Mạng nhân quả nguyên nhân làm cỏ ướt và đồ thị can thiệp do(Vòi phun = bật)"
+  },
+  "11-quan-he-nhan-qua/x111.png": {
+    "source": "https://artint.info/3e/html/x111.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x111.png",
+    "caption": "Hình 11.2: Đồ thị nhân quả khả dĩ cho giả thuyết chất dẫn đường"
+  },
+  "11-quan-he-nhan-qua/x112.png": {
+    "source": "https://artint.info/3e/html/x112.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x112.png",
+    "caption": "Hình 11.3: Ba dạng giao nhau cơ bản giữa các cung: Chuỗi liên hoàn, nhánh rẽ và điểm va chạm"
+  },
+  "11-quan-he-nhan-qua/x113.png": {
+    "source": "https://artint.info/3e/html/x113.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x113.png",
+    "caption": "Hình 11.4: Mạng niềm tin minh họa tính phân tách d (d-separation)"
+  },
+  "11-quan-he-nhan-qua/x114.png": {
+    "source": "https://artint.info/3e/html/x114.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x114.png",
+    "caption": "Hình 11.5: Đồ thị nhân quả biểu diễn cơ chế dữ liệu khuyết thiếu"
+  },
+  "11-quan-he-nhan-qua/x115.png": {
+    "source": "https://artint.info/3e/html/x115.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x115.png",
+    "caption": "Hình 11.6: Dữ liệu khuyết thiếu: Trình độ học vấn quan sát được và Thu nhập bị khuyết"
+  },
+  "11-quan-he-nhan-qua/x116.png": {
+    "source": "https://artint.info/3e/html/x116.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x116.png",
+    "caption": "Hình 11.7: Đo lường hiệu quả điều trị của thuốc khi có biến gây nhiễu"
+  },
+  "11-quan-he-nhan-qua/x117.png": {
+    "source": "https://artint.info/3e/html/x117.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x117.png",
+    "caption": "Hình 11.8: Mạng nhân quả tổng quát minh họa tiêu chuẩn cửa trước (Front-door Criterion)"
+  },
+  "11-quan-he-nhan-qua/x118.png": {
+    "source": "https://artint.info/3e/html/x118.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x118.png",
+    "caption": "Hình 11.9: Hai mô hình nhân quả khả dĩ giải thích nghịch lý Simpson"
+  },
+  "11-quan-he-nhan-qua/x119.png": {
+    "source": "https://artint.info/3e/html/x119.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x119.png",
+    "caption": "Hình 11.10: Biến chỉ định ngẫu nhiên đóng vai trò là biến công cụ (Instrumental Variable)"
+  },
+  "11-quan-he-nhan-qua/x120.png": {
+    "source": "https://artint.info/3e/html/x120.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x120.png",
+    "caption": "Hình 11.11: Mạng nhân quả dùng trong suy luận phản thực tế (Counterfactual Reasoning)"
+  },
+  "11-quan-he-nhan-qua/x121.png": {
+    "source": "https://artint.info/3e/html/x121.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/11-quan-he-nhan-qua/figures/x121.png",
+    "caption": "Hình 11.12: Mạng nhân quả mẫu trong Bài tập 11.2"
   }
 }

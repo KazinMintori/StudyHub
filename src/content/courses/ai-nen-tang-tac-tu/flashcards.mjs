@@ -224,5 +224,40 @@ export const flashcards = [
   "back": "Bước E sử dụng tham số hiện tại để suy luận phân phối xác suất hậu nghiệm (trách nhiệm mềm) của các biến tiềm ẩn. Bước M sử dụng các trách nhiệm mềm này như số đếm quan sát để cập nhật lại bộ tham số mới tối đa hóa log-hợp lý kỳ vọng.",
   "category": "Học máy trong điều kiện bất định",
   "lecture": "10-hoc-may-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch11-01",
+  "front": "Sự khác biệt căn bản giữa xác suất quan sát P(Y | X) và xác suất can thiệp P(Y | do(X)) là gì?",
+  "back": "P(Y | X) đo lường tương quan thụ động, cho phép suy luận cả xuôi dòng (nguyên nhân sang kết quả) lẫn ngược dòng (chẩn đoán). P(Y | do(X)) mô tả hành vi dùng ngoại lực ép X nhận giá trị cụ thể, cắt đứt các cơ chế tự nhiên trước đó và chỉ truyền thông tin nhân quả xuôi dòng.",
+  "category": "Quan hệ nhân quả",
+  "lecture": "11-quan-he-nhan-qua"
+},
+  {
+  "id": "fc-artint-ch11-02",
+  "front": "Hành vi can thiệp do(X=x) làm thay đổi cấu trúc đồ thị mạng nhân quả như thế nào?",
+  "back": "Tạo ra đồ thị bị cắt cụt (mutilated graph) bằng cách xóa bỏ hoàn toàn tất cả các cung có hướng đi vào X từ các nút cha Parents(X), giải phóng X khỏi sự chi phối của các biến tiền nhân.",
+  "category": "Quan hệ nhân quả",
+  "lecture": "11-quan-he-nhan-qua"
+},
+  {
+  "id": "fc-artint-ch11-03",
+  "front": "Điểm va chạm (Collider: A -> B <- C) có tính chất gì đặc biệt trong tính phân tách d?",
+  "back": "Khác với chuỗi liên hoàn và nhánh rẽ, điểm va chạm tự động bị chặn khi không quan sát B. Nhưng khi điều kiện hóa theo B (hoặc con cháu của B), đường đi lại bị mở thông, tạo ra tương quan phụ thuộc giả giữa hai nguyên nhân độc lập (hiệu ứng giải thích loại trừ).",
+  "category": "Quan hệ nhân quả",
+  "lecture": "11-quan-he-nhan-qua"
+},
+  {
+  "id": "fc-artint-ch11-04",
+  "front": "Hai điều kiện của Tiêu chuẩn Cửa sau (Backdoor Criterion) đối với cặp (X, Y) là gì?",
+  "back": "(1) Tập biến Z không chứa bất kỳ con cháu nào của biến can thiệp X; (2) Tập biến Z chặn mọi đường đi cửa sau (đường đi bắt đầu bằng mũi tên đi vào X) nối giữa X và Y.",
+  "category": "Quan hệ nhân quả",
+  "lecture": "11-quan-he-nhan-qua"
+},
+  {
+  "id": "fc-artint-ch11-05",
+  "front": "Quy trình ba bước chuẩn mực để tính toán một mệnh đề phản thực tế là gì?",
+  "back": "(1) Bắt cóc (Abduction): Cập nhật phân phối hậu nghiệm P(U | e) của các biến ngoại sinh theo bằng chứng thực tế; (2) Can thiệp (Action): Thay thế phương trình của X bằng X=x' tạo mô hình Mx'; (3) Dự đoán (Prediction): Dùng mô hình Mx' và P(U | e) tính phân phối kết quả Y.",
+  "category": "Quan hệ nhân quả",
+  "lecture": "11-quan-he-nhan-qua"
 }
 ]

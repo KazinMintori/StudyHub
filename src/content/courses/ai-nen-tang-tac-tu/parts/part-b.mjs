@@ -266,6 +266,68 @@ export const lessons = [
       ]
     }
   ]
+},
+  {
+  "number": 11,
+  "slug": "11-quan-he-nhan-qua",
+  "title": "Quan hệ nhân quả",
+  "prerequisites": [],
+  "supportingConcepts": [],
+  "status": "ready",
+  "lessonStatus": "ready",
+  "description": "Mô hình nhân quả xác suất, phân biệt giữa tương quan quan sát P(Y|X) và can thiệp chủ động P(Y|do(X)), tính phân tách d (d-separation), tiêu chuẩn cửa sau (Backdoor), tiêu chuẩn cửa trước (Front-Door), giải tích can thiệp (Do-calculus), biến công cụ và suy luận phản thực tế.",
+  "topicGroups": [
+    {
+      "title": "Các chủ đề trong chương",
+      "topics": [
+        {
+          "slug": "11-1-mo-hinh-nhan-qua-xac-suat",
+          "title": "11.1 Mô hình nhân quả xác suất và phép can thiệp",
+          "question": "Toán tử can thiệp do(X), đồ thị cắt cụt và tính phân tách d giải quyết sự bất đối xứng nhân quả ra sao?"
+        },
+        {
+          "slug": "11-2-du-lieu-khuyet-thieu-duoi-goc-nhin-nhan-qua",
+          "title": "11.2 Dữ liệu khuyết thiếu dưới góc nhìn nhân quả",
+          "question": "Làm thế nào đồ thị nhân quả phân biệt rạch ròi ba cơ chế khuyết thiếu MCAR, MAR và NMAR?"
+        },
+        {
+          "slug": "11-3-suy-dien-nhan-qua-va-giai-tich-can-thiep",
+          "title": "11.3 Suy diễn nhân quả và giải tích can thiệp",
+          "question": "Tiêu chuẩn cửa sau, tiêu chuẩn cửa trước và hệ Do-calculus giúp nhận dạng hiệu quả nhân quả như thế nào?"
+        },
+        {
+          "slug": "11-4-bien-cong-cu",
+          "title": "11.4 Biến công cụ và biến gây nhiễu chưa quan sát",
+          "question": "Phương pháp biến công cụ bóc tách hiệu quả điều trị trung bình cục bộ (LATE) khi có biến gây nhiễu ẩn ra sao?"
+        },
+        {
+          "slug": "11-5-suy-luan-phan-thuc-te",
+          "title": "11.5 Suy luận phản thực tế (Counterfactual Reasoning)",
+          "question": "Quy trình ba bước Bắt cóc - Can thiệp - Dự đoán trên mô hình SCM trả lời câu hỏi 'Chuyện gì sẽ xảy ra nếu...?' như thế nào?"
+        },
+        {
+          "slug": "11-6-tac-dong-xa-hoi",
+          "title": "11.6 Tác động xã hội và tính công bằng thuật toán",
+          "question": "Lý thuyết nhân quả đóng góp gì cho hoạch định chính sách công và tính công bằng phản thực tế của AI?"
+        },
+        {
+          "slug": "11-7-on-tap",
+          "title": "11.7 Ôn tập và hệ thống hóa kiến thức",
+          "question": "Làm thế nào để hệ thống hóa và lựa chọn đúng đắn phương pháp nhận dạng hiệu quả nhân quả?"
+        },
+        {
+          "slug": "11-8-tai-lieu-tham-khao-va-doc-them",
+          "title": "11.8 Tài liệu tham khảo và đọc thêm",
+          "question": "Những công trình khoa học kinh điển nào đã xây dựng nên nền tảng của lý thuyết nhân quả hiện đại?"
+        },
+        {
+          "slug": "11-9-bai-tap",
+          "title": "11.9 Bài tập và lời giải chi tiết",
+          "question": "Làm thế nào giải mã Nghịch lý Simpson trong vụ tuyển sinh UC Berkeley và tính toán xác suất phản thực tế?"
+        }
+      ]
+    }
+  ]
 }
 ]
 
@@ -467,6 +529,56 @@ export const slides = [
     "Dữ liệu khuyết thiếu MCAR và MAR cho phép ước lượng nhất quán qua EM; dữ liệu NMAR bắt buộc mô hình hóa biến chỉ thị khuyết."
   ],
   "note": "10-hoc-may-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Mô hình Nhân quả và Toán tử Can thiệp do(X)",
+  "bullets": [
+    "Tương quan không đồng nghĩa với nhân quả; can thiệp ép biến X nhận giá trị cụ thể cắt đứt mọi cung nhân quả đi vào X.",
+    "Đồ thị cắt cụt (mutilated graph) phản ánh cấu trúc hệ thống sau can thiệp, bảo toàn tính mô-đun của các cơ chế độc lập."
+  ],
+  "note": "11-quan-he-nhan-qua",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Tính Phân tách d và Điểm va chạm Collider",
+  "bullets": [
+    "Chuỗi liên hoàn và nhánh rẽ bị chặn khi biết nút trung gian; điểm va chạm (collider) ngược lại bị mở thông khi biết nút con.",
+    "Hiệu ứng giải thích loại trừ (Berkson's bias) tạo ra tương quan giả giữa hai nguyên nhân độc lập khi quan sát hệ quả chung."
+  ],
+  "note": "11-quan-he-nhan-qua",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Tiêu chuẩn Cửa sau và Cửa trước (Pearl)",
+  "bullets": [
+    "Tiêu chuẩn Cửa sau điều kiện hóa theo tập biến chặn mọi đường đi giả mạo nối giữa nguyên nhân và kết quả.",
+    "Tiêu chuẩn Cửa trước cho phép bóc tách hiệu quả nhân quả thông qua biến trung gian ngay cả khi có biến gây nhiễu ẩn."
+  ],
+  "note": "11-quan-he-nhan-qua",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Phương pháp Biến công cụ (Instrumental Variables)",
+  "bullets": [
+    "Biến công cụ Z tác động vào X, ngoại sinh với biến gây nhiễu ẩn U và chỉ tác động tới Y duy nhất qua ngả X.",
+    "Công thức LATE của Angrist-Imbens định lượng chính xác hiệu quả điều trị cục bộ trên nhóm đối tượng tuân thủ (Compliers)."
+  ],
+  "note": "11-quan-he-nhan-qua",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Suy luận Phản thực tế và Mô hình Cấu trúc (SCM)",
+  "bullets": [
+    "Nấc thang thứ 3 của Judea Pearl: Trả lời câu hỏi 'Chuyện gì sẽ xảy ra nếu quá khứ diễn ra khác đi?' trên một cá thể cụ thể.",
+    "Quy trình ba bước chuẩn mực: Bắt cóc chân dung cá thể P(U | e), Can thiệp sửa đổi mô hình Mx', và Dự đoán kết quả Y."
+  ],
+  "note": "11-quan-he-nhan-qua",
   "formula": "",
   "example": ""
 }
