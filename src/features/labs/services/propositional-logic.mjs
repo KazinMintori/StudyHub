@@ -64,12 +64,13 @@ export function eliminateArrows(n){
  if(n.op==='iff')return binary('and',binary('or',{op:'not',arg:a},b),binary('or',{op:'not',arg:b},a))
  return binary(n.op,a,b)
 }
-export function negationNormal(n,negative=false){
+export function negationNormal(n,negative=false,budget={nodes:0}){
+ if(++budget.nodes>2048)throw Error('Phép biến đổi mở rộng quá lớn. Hãy dùng công thức ngắn hơn trong bộ xem.')
  if(n.op==='constant')return {op:'constant',value:negative?!n.value:n.value}
  if(n.op==='atom')return negative?{op:'not',arg:n}:n
- if(n.op==='not')return negationNormal(n.arg,!negative)
+ if(n.op==='not')return negationNormal(n.arg,!negative,budget)
  const op=negative?(n.op==='and'?'or':'and'):n.op
- return binary(op,negationNormal(n.left,negative),negationNormal(n.right,negative))
+ return binary(op,negationNormal(n.left,negative,budget),negationNormal(n.right,negative,budget))
 }
 export const negateLiteral=x=>x.startsWith('!')?x.slice(1):'!'+x
 export function normalizeClause(clause){const c=[...new Set(clause)].sort();return c.some(x=>c.includes(negateLiteral(x)))?null:c}

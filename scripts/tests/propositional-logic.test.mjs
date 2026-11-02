@@ -29,6 +29,7 @@ test('CNF transformations preserve every valuation on seeded formula trees',()=>
  const d=convertCnf('P <-> (Q & R)');assert.deepEqual(d.clauses,[['!P','Q'],['!P','R'],['!Q','!R','P']])
  assert.deepEqual(convertCnf('TRUE').clauses,[]);assert.deepEqual(convertCnf('FALSE').clauses,[[]])
  assert.deepEqual(convertCnf('P | !P').clauses,[]);assert.equal(normalizeClause(['P','!P']),null)
+ assert.throws(()=>convertCnf(Array(18).fill('P').join(' <-> ')),/mở rộng quá lớn/)
 })
 test('Forward trace uses indexed counts, duplicate guards, and AND premises',()=>{
  const frames=traceHorn(hornExamples[0]),last=frames.at(-1)
