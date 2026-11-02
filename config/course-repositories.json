@@ -4,7 +4,7 @@
     {
       "id": "ai-nen-tang-tac-tu",
       "repository": "KazinMintori/StudyHub-course-ai-nen-tang-tac-tu",
-      "revision": "98ba8ab415b5a738f1d8ac6e453ebe58be9f2fe6",
+      "revision": "072aa7dc2fb7e8495c55995f8c3b4c56645ccbf5",
       "paths": [
         "docs/ai-nen-tang-tac-tu/**",
         "raw_materials/ai-nen-tang-tac-tu/**",
@@ -997,3 +997,4 @@
     }
   ]
 }
+
