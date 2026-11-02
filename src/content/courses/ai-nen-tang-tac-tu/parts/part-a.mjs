@@ -362,7 +362,69 @@ export const lessons = [
         ]
       }
     ]
-  }
+  },
+  {
+    "number": 6,
+    "slug": "06-lap-ke-hoach-tien-dinh",
+    "title": "Lập kế hoạch tiền định",
+    "prerequisites": [],
+    "supportingConcepts": [],
+    "status": "ready",
+    "lessonStatus": "ready",
+    "description": "Mô hình hóa bài toán lập kế hoạch tiền định, biểu diễn STRIPS, biểu diễn hành động theo đặc trưng, các giải thuật lập kế hoạch xuôi, ngược, lập kế hoạch thứ tự từng phần và CSP.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "6-1-bieu-dien-trang-thai-hanh-dong-va-muc-tieu",
+            "title": "6.1 Biểu diễn trạng thái, hành động và mục tiêu",
+            "question": "Vì sao không gian trạng thái tường minh thất bại và biểu diễn STRIPS khắc phục điều đó như thế nào?"
+          },
+          {
+            "slug": "6-2-lap-ke-hoach-xuoi",
+            "title": "6.2 Lập kế hoạch xuôi",
+            "question": "Thuật toán lập kế hoạch xuôi (progression) sinh động đồ thị trạng thái và thiết kế heuristic nới lỏng ra sao?"
+          },
+          {
+            "slug": "6-3-lap-ke-hoach-nguoc",
+            "title": "6.3 Lập kế hoạch ngược",
+            "question": "Nguyên lý tìm kiếm hồi quy (regression) và công thức tính tiền điều kiện yếu nhất vận hành thế nào?"
+          },
+          {
+            "slug": "6-4-lap-ke-hoach-duoi-dang-csp",
+            "title": "6.4 Lập kế hoạch dưới dạng CSP",
+            "question": "Cách trải phẳng bài toán lập kế hoạch theo đường chân trời thời gian k và ràng buộc mutex được mô hình hóa ra sao?"
+          },
+          {
+            "slug": "6-5-lap-ke-hoach-thu-tu-tung-phan",
+            "title": "6.5 Lập kế hoạch thứ tự từng phần",
+            "question": "Tìm kiếm trong không gian kế hoạch, liên kết nhân quả và hai phương án bảo vệ liên kết trước nguy cơ đe dọa là gì?"
+          },
+          {
+            "slug": "6-6-tac-dong-xa-hoi",
+            "title": "6.6 Tác động xã hội",
+            "question": "Công nghệ lập kế hoạch AI (GOAP, HTN) đã thúc đẩy cuộc cách mạng trong ngành công nghiệp game và mô phỏng thế nào?"
+          },
+          {
+            "slug": "6-7-on-tap",
+            "title": "6.7 Ôn tập",
+            "question": "Ma trận so sánh bốn phương pháp lập kế hoạch chính cho thấy tiêu chí lựa chọn thuật toán nào là phù hợp?"
+          },
+          {
+            "slug": "6-8-tai-lieu-tham-khao-va-doc-them",
+            "title": "6.8 Tài liệu tham khảo và đọc thêm",
+            "question": "Lược sử học thuật từ STRIPS (1971), Graphplan (1997) đến cuộc thi lập kế hoạch quốc tế IPC là gì?"
+          },
+          {
+            "slug": "6-9-bai-tap",
+            "title": "6.9 Bài tập",
+            "question": "Phương pháp giải bài toán robot giao hàng, đại số hành động phức hợp và cấu trúc dữ liệu thứ tự từng phần là gì?"
+          }
+        ]
+      }
+    ]
+  },
 ]
 export const slides = [
   {
@@ -615,5 +677,55 @@ export const slides = [
     "note": "05-menh-de-va-suy-dien",
     "formula": "",
     "example": ""
-  }
+  },
+  {
+    "title": "Hành động tiền định và biểu diễn STRIPS",
+    "bullets": [
+      "Hành động là hàm từng phần từ trạng thái sang trạng thái; tiền điều kiện quy định khi nào hành động khả thi, hiệu ứng quy định sự biến đổi.",
+      "Giả thiết STRIPS giải quyết vấn đề quy tắc khung: Mọi đặc trưng không xuất hiện trong danh sách hiệu ứng mặc định bảo toàn giá trị cũ."
+    ],
+    "note": "06-lap-ke-hoach-tien-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Lập kế hoạch xuôi và nới lỏng bài toán",
+    "bullets": [
+      "Lập kế hoạch xuôi coi bài toán là tìm đường đi trong đồ thị trạng thái từ trạng thái ban đầu, sinh động các nút trên đường đi.",
+      "Heuristic danh sách xóa rỗng (Empty-Delete-List Heuristic) nới lỏng bài toán để tính cận dưới chi phí trong thời gian đa thức."
+    ],
+    "note": "06-lap-ke-hoach-tien-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Lập kế hoạch ngược và tiền điều kiện yếu nhất",
+    "bullets": [
+      "Tìm kiếm hồi quy khởi hành từ mục tiêu và truy ngược về trạng thái ban đầu trên không gian các mục tiêu phụ.",
+      "Tiền điều kiện yếu nhất wp(g, a) = Pre(a) U (g \\ Eff(a)) xác định trạng thái bắt buộc ngay trước hành động cuối cùng a."
+    ],
+    "note": "06-lap-ke-hoach-tien-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Lập kế hoạch dưới dạng CSP trải phẳng thời gian",
+    "bullets": [
+      "Trải phẳng bài toán theo đường chân trời k, cho phép lan truyền ràng buộc từ cả trạng thái ban đầu và mục tiêu cùng lúc.",
+      "Phân rã đặc trưng hành động cho phép mô hình hóa các hành động đồng thời và kiểm soát xung đột qua ràng buộc mutex."
+    ],
+    "note": "06-lap-ke-hoach-tien-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Lập kế hoạch thứ tự từng phần (POP)",
+    "bullets": [
+      "Tìm kiếm trong không gian kế hoạch thay vì không gian trạng thái; chỉ ấn định trật tự giữa các hành động khi thực sự bị bắt buộc.",
+      "Liên kết nhân quả <a0, P, a1> được bảo vệ trước hành động đe dọa A bằng kỹ thuật giáng cấp (A < a0) hoặc thúc đẩy (a1 < A)."
+    ],
+    "note": "06-lap-ke-hoach-tien-dinh",
+    "formula": "",
+    "example": ""
+  },
 ]

@@ -29,8 +29,9 @@ export const parts = [
     title: 'Phần II: Suy luận và lập kế hoạch trong điều kiện chắc chắn',
     lessons: [
       '03-tim-kiem-loi-giai',
-        '04-suy-luan-voi-rang-buoc',
-      '05-menh-de-va-suy-dien'
+      '04-suy-luan-voi-rang-buoc',
+      '05-menh-de-va-suy-dien',
+      '06-lap-ke-hoach-tien-dinh'
     ]
   },
   {

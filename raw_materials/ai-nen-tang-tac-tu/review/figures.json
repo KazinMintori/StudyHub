@@ -233,5 +233,30 @@
     "source": "https://artint.info/3e/html/x41.png",
     "sha256": "048d7daf15cca2a8984814475a24a2228683e1535e312dbf538894b6d0469191",
     "bytes": 13191
+  },
+  "06-lap-ke-hoach-tien-dinh/x46.png": {
+    "source": "https://artint.info/3e/html/x46.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/06-lap-ke-hoach-tien-dinh/figures/x46.png",
+    "caption": "Hình 6.1: Cây tìm kiếm lập kế hoạch xuôi hoặc phân rã không gian trạng thái"
+  },
+  "06-lap-ke-hoach-tien-dinh/x47.png": {
+    "source": "https://artint.info/3e/html/x47.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/06-lap-ke-hoach-tien-dinh/figures/x47.png",
+    "caption": "Hình 6.2: Tìm kiếm xuôi trong bài toán thế giới các khối hộp"
+  },
+  "06-lap-ke-hoach-tien-dinh/x216.png": {
+    "source": "https://artint.info/3e/html/x216.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/06-lap-ke-hoach-tien-dinh/figures/x216.png",
+    "caption": "Hình 6.3: Cây tìm kiếm lập kế hoạch ngược với tiền điều kiện yếu nhất"
+  },
+  "06-lap-ke-hoach-tien-dinh/x217.png": {
+    "source": "https://artint.info/3e/html/x217.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/06-lap-ke-hoach-tien-dinh/figures/x217.png",
+    "caption": "Hình 6.4: Mô hình hóa lập kế hoạch tiền định dưới dạng bài toán CSP trải phẳng theo thời gian"
+  },
+  "06-lap-ke-hoach-tien-dinh/x218.png": {
+    "source": "https://artint.info/3e/html/x218.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/06-lap-ke-hoach-tien-dinh/figures/x218.png",
+    "caption": "Hình 6.5: Mạng ràng buộc với đặc trưng hành động và biến trạng thái"
   }
 }

@@ -49,5 +49,40 @@ export const flashcards = [
   { course, lesson: relations, q: 'Hằng ký hiệu và cá thể mà nó biểu thị có phải cùng một đối tượng không?', a: 'Không. Hằng là một ký hiệu của ngôn ngữ. Phép diễn giải ánh xạ hằng đó tới một cá thể trong miền. Hai hằng khác nhau vẫn có thể biểu thị cùng một cá thể nếu không giả định tên duy nhất.' },
   { course, lesson: relations, q: 'Một biểu thức không biến (ground) có đặc điểm gì?', a: 'Biểu thức không chứa biến logic. Một thể hiện không biến thu được bằng cách thay nhất quán mọi biến trong biểu thức bằng các hạng không biến.' },
   { course, lesson: relations, q: 'Phép thế tác động thế nào khi một biến xuất hiện nhiều lần?', a: 'Mọi lần xuất hiện của biến đó đều được thay bằng cùng một hạng. Phép áp dụng là đồng thời, không tự động áp dụng lại phép thế bên trong hạng vừa thay vào.' },
-  { course, lesson: relations, q: 'Một phép hợp nhất tổng quát nhất bảo đảm điều gì?', a: 'Nó làm hai biểu thức trở nên giống hệt nhau và giữ lại mức tổng quát lớn nhất. Mọi phép hợp nhất khác đều có thể thu được bằng cách áp dụng thêm một phép thế vào kết quả tổng quát nhất, trong phạm vi các biến đang xét.' }
+  { course, lesson: relations, q: 'Một phép hợp nhất tổng quát nhất bảo đảm điều gì?', a: 'Nó làm hai biểu thức trở nên giống hệt nhau và giữ lại mức tổng quát lớn nhất. Mọi phép hợp nhất khác đều có thể thu được bằng cách áp dụng thêm một phép thế vào kết quả tổng quát nhất, trong phạm vi các biến đang xét.' },
+  {
+    "id": "fc-artint-ch6-01",
+    "front": "Giả thiết STRIPS (STRIPS Assumption) phát biểu điều gì?",
+    "back": "Mọi đặc trưng nguyên thủy không xuất hiện trong danh sách hiệu ứng (effects) của một hành động thì mặc định giữ nguyên vẹn giá trị như ở trạng thái ngay trước đó.",
+    "category": "Lập kế hoạch tiền định",
+    "lecture": "06-lap-ke-hoach-tien-dinh"
+  },
+  {
+    "id": "fc-artint-ch6-02",
+    "front": "Công thức tính tiền điều kiện yếu nhất (weakest precondition) wp(g, act) trong STRIPS là gì?",
+    "back": "wp(g, act) = Precondition(act) ∪ (g \\ Effects(act)), với điều kiện act là hữu ích và không chứa hiệu ứng làm sai lệch bất kỳ mệnh đề nào của g.",
+    "category": "Lập kế hoạch tiền định",
+    "lecture": "06-lap-ke-hoach-tien-dinh"
+  },
+  {
+    "id": "fc-artint-ch6-03",
+    "front": "Trong lập kế hoạch thứ tự từng phần (POP), khi một liên kết nhân quả <act_0, P, act_1> bị đe dọa bởi hành động A, có hai phương án bảo vệ nào?",
+    "back": "Giáng cấp (Demotion): Ép buộc A < act_0; hoặc Thúc đẩy (Promotion): Ép buộc act_1 < A.",
+    "category": "Lập kế hoạch tiền định",
+    "lecture": "06-lap-ke-hoach-tien-dinh"
+  },
+  {
+    "id": "fc-artint-ch6-04",
+    "front": "Vì sao tìm kiếm lùi trong không gian trạng thái thuần túy lại bất khả thi đối với các bài toán thực tế?",
+    "back": "Vì mục tiêu chỉ là phép gán từng phần cho một số đặc trưng, số lượng trạng thái thỏa mãn mục tiêu rất lớn (hàng triệu trạng thái), khiến tập biên ban đầu bùng nổ ngay lập tức.",
+    "category": "Lập kế hoạch tiền định",
+    "lecture": "06-lap-ke-hoach-tien-dinh"
+  },
+  {
+    "id": "fc-artint-ch6-05",
+    "front": "Heuristic danh sách xóa rỗng (Empty-Delete-List Heuristic) được tính toán như thế nào?",
+    "back": "Nới lỏng bài toán bằng cách loại bỏ toàn bộ danh sách xóa trong STRIPS (các sự kiện đã đạt được không bao giờ bị mất), từ đó tìm kế hoạch tối ưu cho bài toán nới lỏng trong thời gian đa thức.",
+    "category": "Lập kế hoạch tiền định",
+    "lecture": "06-lap-ke-hoach-tien-dinh"
+  },
 ]
