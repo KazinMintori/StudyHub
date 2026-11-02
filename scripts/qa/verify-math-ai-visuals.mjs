@@ -47,6 +47,9 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
+  ['duality-overview','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
+  ['equivalence','/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-tuong-duong.html'],
   ['function-operations','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.html'],
   ['optimality','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.html'],
   ['ml-models','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.html'],
@@ -88,7 +91,7 @@ async function sourceManifest() {
   const paths = [
     ...routes.map(([,route])=>'docs'+route.replace(/\.html$/,'.md')),
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
-    ...['EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
+    ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
   for(const [,route]of routes){
     const notes='docs'+route.replace(/\.html$/,'.md'),source=await readFile(notes,'utf8')
@@ -384,12 +387,13 @@ try {
     for (const [name, route] of routes) {
       const response = await page.goto(base + route, { waitUntil: 'networkidle0', timeout: 120000 })
       assert.equal(response.status(), 200)
-      await page.waitForSelector('.study-lab .lab-handle, vite-error-overlay', { timeout: 60000 })
+      const overview=['optimization-overview','duality-overview'].includes(name)
+      await page.waitForSelector(process.env.QA_LAYOUT_ONLY||overview?'.vp-doc, vite-error-overlay':'.study-lab .lab-handle, vite-error-overlay', { timeout: 60000 })
       assert(!await page.$('vite-error-overlay'),`Preview compilation failed at ${route}; inspect qa-dev.log`)
       await page.evaluate(() => document.fonts.ready)
       await page.evaluate(theme => document.documentElement.classList.toggle('dark', theme === 'dark'), theme)
       await inspect(`${name}-${width}-${theme}-initial`)
-      if(!process.env.QA_LAYOUT_ONLY){await interact(touch);if(name==='odd-cycle')await checkCycleButtons(touch);await checkPageScroll(touch);await exercisePresets(name,touch);await exerciseFunctionChoices(name,touch)}
+      if(!process.env.QA_LAYOUT_ONLY&&!overview){await interact(touch);if(name==='odd-cycle')await checkCycleButtons(touch);await checkPageScroll(touch);await exercisePresets(name,touch);await exerciseFunctionChoices(name,touch)}
       // Exercise 3D/2D mode switches and singular/degenerate presets via controls.
       if (name === 'lecture00') {
         for (const text of ['Vector dự đoán trong R³', 'Miền đầu vào R²', 'Mặt mật độ trong R³']) {

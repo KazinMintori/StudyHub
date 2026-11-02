@@ -22,6 +22,9 @@ for(const name of files){
  sources[name]=createHash('sha256').update(data).digest('hex')
  for(const token of mathTokens(pageRenderer.parse(source,{path:resolved,relativePath:name.slice(5)}))){
   if(swallowedMarkdown(token))issues.push({file:name,type:'markdown-swallowed-by-math',line:(token.map?.[0]||0)+1})
+  // List indentation can split a valid source expression into invalid parser
+  // tokens. Validate the expression that the real Notes renderer receives too.
+  try{validate(token.content,token.type==='math_block',name)}catch(error){issues.push({file:name,type:'markdown-invalid-tex',line:(token.map?.[0]||0)+1,message:error.message})}
  }
  for(const segment of mathSegments(source)){
   if(!segment.startsWith('$'))continue
