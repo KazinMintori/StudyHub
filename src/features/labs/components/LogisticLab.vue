@@ -41,7 +41,7 @@ const solution = computed(() => {
   }
   return th
 })
-const finite = computed(() => Math.hypot(...solution.value) < 40)
+const finite=computed(()=>dKey.value==='overlap'||lam.value>0)
 const uid = useId()
 const clip = `${uid}-log-clip`
 const svg = ref(null)
@@ -53,15 +53,17 @@ const th = computed(() => state.value.th)
 const levels = [0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.8, 1.2, 2]
 const contours = computed(() => levels.map(c => ({ c, segs: contourSegments(L, { x0: -1, x1: 7, y0: -17, y1: 3, n: 70 }, c) })))
 const right = makeView({ x0: 0, x1: 4.5, y0: -0.08, y1: 1.08, width: 300, height: 300 })
-const curve = computed(() => Array.from({ length: 121 }, (_, i) => { const s = (4.5 * i) / 120; return `${320 + right.sx(s)},${right.sy(sigma(th.value[0] * s + th.value[1]))}` }).join(' '))
+const curve = computed(() => Array.from({ length: 121 }, (_, i) => { const s = (4.5 * i) / 120; return `${right.sx(s)},${right.sy(sigma(th.value[0] * s + th.value[1]))}` }).join(' '))
 const eig = computed(() => eigSym2(...hess(th.value)).values)
 const line = s => `${PL(s[0])[0]},${PL(s[0])[1]} ${PL(s[1])[0]},${PL(s[1])[1]}`
 </script>
 
 <template>
   <figure class="study-lab" aria-label="Hàm mất mát của hồi quy logistic theo hai tham số">
-    <p class="lab-title">Hồi quy logistic: một cái bát theo tham số (a, b)</p>
-    <svg ref="svg" viewBox="0 0 620 300" role="img" aria-label="Bên trái đường mức của hàm mất mát theo a và b, bên phải dữ liệu và đường cong xác suất" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p class="lab-title">Hồi quy logistic: Mất mát theo tham số (a, b)</p>
+    <p class="lab-lead">Kéo điểm trong khung tham số để đổi đồng thời độ dốc a và hệ số chặn b. Đường xác suất ở khung thứ hai cập nhật theo cùng tham số. Trên điện thoại, hai khung xếp dọc để giữ chữ và điểm đủ lớn.</p>
+    <div class="lab-pair">
+    <svg ref="svg" viewBox="0 0 300 300" role="group" aria-label="Đường mức của mất mát theo tham số a và b" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clip"><rect x="0" y="0" width="300" height="300" /></clipPath></defs>
       <g :clip-path="`url(#${clip})`">
         <line x1="0" x2="300" :y1="left.sy(0)" :y2="left.sy(0)" class="lab-axis" /><line :x1="left.sx(0)" :x2="left.sx(0)" y1="0" y2="300" class="lab-axis" />
@@ -69,28 +71,31 @@ const line = s => `${PL(s[0])[0]},${PL(s[0])[1]} ${PL(s[1])[0]},${PL(s[1])[1]}`
         <circle v-if="finite" :cx="PL(solution)[0]" :cy="PL(solution)[1]" r="7" class="lab-dot-hollow" />
         <circle :cx="PL(th)[0]" :cy="PL(th)[1]" r="8" class="lab-handle" tabindex="0" role="slider" aria-label="Tham số (a, b)" :aria-valuetext="fmtPoint(th)" @pointerdown="drag.start('th', $event)" @keydown="drag.key('th', th, $event)" />
         <text x="290" :y="left.sy(0) - 6" class="lab-small" text-anchor="end">a</text>
-        <text :x="left.sx(0) + 6" y="14" class="lab-small">b</text>
-      </g>
-      <g>
-        <rect x="320" y="0" width="300" height="300" class="lab-region-soft" style="opacity: 0.25" />
-        <line x1="320" x2="620" :y1="right.sy(0)" :y2="right.sy(0)" class="lab-axis" /><line x1="320" x2="620" :y1="right.sy(1)" :y2="right.sy(1)" class="lab-grid" />
-        <line x1="320" x2="620" :y1="right.sy(0.5)" :y2="right.sy(0.5)" class="lab-guide" />
-        <polyline :points="curve" class="lab-accent" />
-        <circle v-for="(ui, i) in u" :key="`d${i}`" :cx="320 + right.sx(ui)" :cy="right.sy(y[i])" r="6" :class="y[i] ? 'lab-dot-accent' : 'lab-dot'" />
-        <text x="326" y="16" class="lab-small">p(u) = σ(a·u + b)</text>
-        <text x="612" :y="right.sy(0) + 16" class="lab-small" text-anchor="end">u</text>
+        <text :x="left.sx(0) + 6" y="26" class="lab-small">b</text>
       </g>
     </svg>
-    <LabPointControls :svg="svg" />
+    <svg viewBox="0 0 300 300" role="img" aria-label="Dữ liệu và xác suất logistic theo đầu vào u">
+      <g>
+        <rect x="0" y="0" width="300" height="300" class="lab-region-soft" style="opacity: 0.25" />
+        <line x1="0" x2="300" :y1="right.sy(0)" :y2="right.sy(0)" class="lab-axis" /><line x1="0" x2="300" :y1="right.sy(1)" :y2="right.sy(1)" class="lab-grid" />
+        <line x1="0" x2="300" :y1="right.sy(0.5)" :y2="right.sy(0.5)" class="lab-guide" />
+        <polyline :points="curve" class="lab-accent" />
+        <circle v-for="(ui, i) in u" :key="`d${i}`" :cx="right.sx(ui)" :cy="right.sy(y[i])" r="6" :class="y[i] ? 'lab-dot-accent' : 'lab-dot'" />
+        <text x="292" :y="right.sy(0) + 16" class="lab-small" text-anchor="end">u</text>
+      </g>
+    </svg>
+    </div>
+    <p class="lab-lead">Khung xác suất dùng p(u) = σ(a·u + b). Các chấm có tung độ 0 hoặc 1 là nhãn quan sát, không phải điểm trên đường xác suất.</p>
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <div class="lab-controls">
       <label>Dữ liệu <select v-model="dKey"><option v-for="(item, key) in datasets" :key="key" :value="key">{{ item.label }}</option></select></label>
       <label>Điều chuẩn λ = {{ fmt(lam, 2) }}<input v-model.number="lam" type="range" min="0" max="0.3" step="0.01" /></label>
     </div>
-    <div class="lab-buttons"><button type="button" :disabled="!finite" @click="state = { th: solution }">Đặt (a, b) vào nghiệm</button></div>
+    <div class="lab-buttons"><button type="button" @click="dKey='separable';lam=0;state={th:[1,-2.25]}">Dữ liệu tách được, λ = 0</button><button type="button" @click="dKey='separable';lam=.05">Thêm ridge λ = 0.05</button><button type="button" @click="dKey='overlap';lam=0">Dữ liệu chồng lấn</button><button type="button" :disabled="!finite" @click="state = { th: solution }">Đặt (a, b) vào nghiệm</button></div>
     <div class="lab-readout" role="status">
       <p>Tại (a, b) = {{ fmtPoint(th) }}: L = {{ fmt(L(th), 4) }}. Hessian có trị riêng {{ fmt(eig[0], 4) }} và {{ fmt(eig[1], 4) }}, cả hai không âm ở mọi điểm.</p>
       <p v-if="finite" class="is-good">Nghiệm (vòng tròn rỗng): (a, b) ≈ {{ fmtPoint(solution, 3) }} với L ≈ {{ fmt(L(solution), 4) }}.</p>
-      <p v-else class="is-bad">Không có nghiệm hữu hạn: dữ liệu tách được và λ = 0, nên L giảm mãi về 0 khi (a, b) chạy ra xa theo hướng làm ngưỡng −b/a nằm giữa hai lớp. Tăng λ một chút để thấy nghiệm xuất hiện.</p>
+      <p v-else class="is-bad">Không có nghiệm hữu hạn: Dữ liệu tách được và λ = 0, nên L giảm mãi về 0 khi (a, b) chạy ra xa theo hướng làm ngưỡng −b/a nằm giữa hai lớp. Tăng λ một chút để thấy nghiệm xuất hiện.</p>
     </div>
     <details class="lab-tasks">
       <summary>Gợi ý thao tác</summary>
@@ -102,3 +107,7 @@ const line = s => `${PL(s[0])[0]},${PL(s[0])[1]} ${PL(s[1])[0]},${PL(s[1])[1]}`
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg text{font-size:18px;pointer-events:none}svg .lab-small{font-size:18px}svg :is(line,path,polyline,rect),svg circle:not(.lab-handle){pointer-events:none}.lab-handle{stroke:transparent;stroke-width:28;paint-order:stroke}.lab-handle:focus-visible{stroke:var(--vang);stroke-width:4}
+</style>

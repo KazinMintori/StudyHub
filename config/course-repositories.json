@@ -2,6 +2,16 @@
   "version": 1,
   "courses": [
     {
+      "id": "ai-nen-tang-tac-tu",
+      "repository": "KazinMintori/StudyHub-course-ai-nen-tang-tac-tu",
+      "revision": "072aa7dc2fb7e8495c55995f8c3b4c56645ccbf5",
+      "paths": [
+        "docs/ai-nen-tang-tac-tu/**",
+        "raw_materials/ai-nen-tang-tac-tu/**",
+        "src/content/courses/ai-nen-tang-tac-tu/**"
+      ]
+    },
+    {
       "id": "bieu-dien-tri-thuc",
       "repository": "KazinMintori/StudyHub-course-bieu-dien-tri-thuc",
       "revision": "195db9fe8f2bcc54de8c041ceafa4d460b2543bb",
@@ -14,7 +24,7 @@
     {
       "id": "toan-cho-ai",
       "repository": "KazinMintori/StudyHub-course-toan-cho-ai",
-      "revision": "224e33dc68959c54373e9357682862dba64309a6",
+      "revision": "a25633832d3c0f4ed70c534b78e6794a8d4be43c",
       "paths": [
         "docs/.vitepress/math-ai-course.mjs",
         "docs/.vitepress/math-ai-foundations.mjs",

@@ -1,76 +1,40 @@
 <script setup>
-import { computed, ref, useId } from 'vue'
-import { makeView, fmt } from '../controllers/svg-drag.js'
-
-// Họ hàm lũy thừa x^a trên x > 0. Đạo hàm bậc hai a(a − 1)x^(a − 2) có dấu của a(a − 1),
-// nên hàm lồi khi a ≤ 0 hoặc a ≥ 1 và lõm khi 0 ≤ a ≤ 1. Hình nhỏ bên phải vẽ chính parabol a(a − 1).
-const a = ref(0.5)
-const clip = `${useId()}-power-clip`
-const view = makeView({ x0: 0, x1: 3, y0: -0.4, y1: 4, width: 300, height: 260 })
-const inset = makeView({ x0: -2, x1: 3, y0: -0.6, y1: 6.5, width: 140, height: 260 })
-const f = x => x ** a.value
-const curve = computed(() => {
-  const pts = []
-  for (let i = 1; i <= 300; i++) {
-    const x = (3 * i) / 300, y = f(x)
-    pts.push([view.sx(x), view.sy(Math.min(Math.max(y, -1), 5))])
-  }
-  return pts.map(p => p.join(',')).join(' ')
-})
-const u = 0.4, v = 2.6
-const chord = computed(() => [[view.sx(u), view.sy(Math.min(f(u), 5))], [view.sx(v), view.sy(Math.min(f(v), 5))]])
-const mid = (u + v) / 2
-const gapAtMid = computed(() => (f(u) + f(v)) / 2 - f(mid))
-const curvature = computed(() => a.value * (a.value - 1))
-const kind = computed(() => {
-  const k = curvature.value
-  if (Math.abs(k) < 1e-9) return Math.abs(a.value) < 1e-9 ? 'là hằng số, vừa lồi vừa lõm' : 'tuyến tính, vừa lồi vừa lõm'
-  return k > 0 ? 'lồi' : 'lõm'
-})
-const parabola = Array.from({ length: 101 }, (_, i) => { const s = -2 + (5 * i) / 100; return [inset.sx(s), inset.sy(s * (s - 1))].join(',') }).join(' ')
+import {computed,ref,useId} from 'vue'
+import LabPointControls from './LabPointControls.vue'
+import {makeView,createDragger,fmt} from '../controllers/svg-drag.js'
+const a=ref(.5),svg=ref(null),clip=useId()+'-power'
+const graph=makeView({x0:0,x1:3,y0:-.4,y1:4,width:400,height:300,pad:28})
+const view=ref(makeView({x0:-2,x1:3,y0:-.6,y1:6.5,width:400,height:300,pad:28}))
+const f=x=>x**a.value,curvature=computed(()=>a.value*(a.value-1))
+const curve=computed(()=>Array.from({length:600},(_,i)=>{const x=.005+2.995*i/599;return [x,f(x)]}).filter(p=>p[1]>=graph.y0&&p[1]<=graph.y1).map(p=>graph.point(p).join(',')).join(' '))
+const parabola=Array.from({length:201},(_,i)=>{const t=-2+5*i/200;return view.value.point([t,t*(t-1)]).join(',')}).join(' ')
+const u=.4,v=2.6,mid=1.5,gap=computed(()=>(f(u)+f(v))/2-f(mid))
+const kind=computed(()=>Math.abs(curvature.value)<1e-10?'Vừa lồi vừa lõm':curvature.value>0?'Lồi':'Lõm')
+const drag=createDragger(svg,view,(_,p)=>{a.value=p[0]},{step:.1})
 </script>
-
 <template>
-  <figure class="study-lab" aria-label="Họ hàm lũy thừa x mũ a trên nửa trục dương">
-    <p class="lab-title">Lũy thừa xᵃ: lồi hay lõm tùy số mũ</p>
-    <svg viewBox="0 0 460 260" role="img" :aria-label="`Đồ thị x mũ ${fmt(a, 1)} và parabol a(a − 1)`">
-      <defs><clipPath :id="clip"><rect x="0" y="0" width="300" height="260" /></clipPath></defs>
-      <g :clip-path="`url(#${clip})`">
-        <line v-for="x in [1, 2]" :key="`g${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" y2="260" class="lab-grid" />
-        <line x1="0" x2="300" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" /><line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" y2="260" class="lab-axis" />
-        <line x1="0" x2="300" :y1="view.sy(1)" :y2="view.sy(1)" class="lab-grid" />
-        <polyline :points="curve" class="lab-line" style="stroke-width: 2.5" />
-        <line :x1="chord[0][0]" :y1="chord[0][1]" :x2="chord[1][0]" :y2="chord[1][1]" class="lab-accent" style="stroke-width: 2" />
-        <line :x1="view.sx(mid)" :x2="view.sx(mid)" :y1="view.sy(Math.min(f(mid), 5))" :y2="view.sy(Math.min((f(u) + f(v)) / 2, 5))" :class="gapAtMid >= -1e-9 ? 'lab-good' : 'lab-bad'" />
-        <text :x="view.sx(1) - 4" :y="view.sy(0) + 16" class="lab-small">1</text>
-        <text :x="view.sx(2) - 4" :y="view.sy(0) + 16" class="lab-small">2</text>
-      </g>
-      <g transform="translate(316, 0)">
-        <rect x="0" y="0" width="140" height="260" class="lab-region-soft" style="opacity: 0.3" />
-        <rect :x="inset.sx(0)" y="0" :width="inset.sx(1) - inset.sx(0)" height="260" class="lab-bad-fill" style="stroke: none; opacity: 0.5" />
-        <line x1="0" x2="140" :y1="inset.sy(0)" :y2="inset.sy(0)" class="lab-axis" />
-        <polyline :points="parabola" class="lab-line" />
-        <circle :cx="inset.sx(a)" :cy="inset.sy(curvature)" r="5" class="lab-dot-warn" />
-        <text x="6" y="16" class="lab-small">a(a − 1)</text>
-        <text :x="inset.sx(0) - 4" :y="inset.sy(0) + 16" class="lab-small">0</text>
-        <text :x="inset.sx(1) - 4" :y="inset.sy(0) + 16" class="lab-small">1</text>
-      </g>
-    </svg>
-    <div class="lab-controls">
-      <label>Số mũ a = {{ fmt(a, 1) }}<input v-model.number="a" type="range" min="-2" max="3" step="0.1" /></label>
-    </div>
-    <div class="lab-readout" role="status">
-      <p>f(x) = x^{{ fmt(a, 1) }}, f''(x) = a(a − 1)x^(a − 2) với a(a − 1) = {{ fmt(curvature, 2) }}. Trên x &gt; 0, hàm <span :class="kind === 'lõm' ? 'is-bad' : 'is-good'">{{ kind }}</span>.</p>
-      <p v-if="gapAtMid >= -1e-9">Dây cung nối x = {{ u }} và x = {{ v }}: tại trung điểm, dây cung nằm trên đồ thị một khoảng {{ fmt(gapAtMid, 3) }}.</p>
-      <p v-else>Dây cung nối x = {{ u }} và x = {{ v }}: tại trung điểm, đồ thị vượt lên trên dây cung một khoảng {{ fmt(-gapAtMid, 3) }}.</p>
-    </div>
-    <details class="lab-tasks">
-      <summary>Gợi ý thao tác</summary>
-      <ol>
-        <li>Kéo a từ 3 xuống −2. Hai giá trị nào của a làm hàm đổi từ lồi sang lõm rồi lại sang lồi? Hàm trông thế nào đúng tại hai giá trị đó?</li>
-        <li>Vì sao a = −1 (hàm 1/x) và a = 2 (hàm x²) cùng lồi, dù một hàm giảm và một hàm tăng?</li>
-        <li>Đặt a = 0.5. Dây cung nằm dưới đồ thị bao nhiêu tại trung điểm?</li>
-      </ol>
-    </details>
-  </figure>
+ <figure class="study-lab" aria-label="Họ hàm lũy thừa x mũ a trên nửa trục dương">
+  <figcaption class="lab-title">Lũy thừa xᵃ: Lồi hay lõm tùy số mũ</figcaption>
+  <p class="lab-lead">Kéo điểm trên đồ thị a(a − 1) để đổi số mũ a. Hai khung xếp dọc trên điện thoại: Một khung cho hàm, một khung cho dấu đạo hàm bậc hai.</p>
+  <div class="lab-pair">
+   <svg viewBox="0 0 400 300" role="img" aria-label="Đồ thị lũy thừa và dây cung nối hai đầu vào cố định">
+    <defs><clipPath :id="clip"><rect x="0" y="0" width="400" height="300"/></clipPath></defs>
+    <line x1="28" x2="372" :y1="graph.sy(0)" :y2="graph.sy(0)" class="lab-axis"/>
+    <g :clip-path="`url(#${clip})`"><polyline :points="curve" class="lab-line"/><line :x1="graph.sx(u)" :y1="graph.sy(f(u))" :x2="graph.sx(v)" :y2="graph.sy(f(v))" class="lab-accent"/><line :x1="graph.sx(mid)" :x2="graph.sx(mid)" :y1="graph.sy(f(mid))" :y2="graph.sy((f(u)+f(v))/2)" :class="gap>=0?'lab-good':'lab-bad'"/></g>
+    <text x="35" y="28">f(x) = xᵃ</text><text :x="graph.sx(1)" y="289">1</text><text :x="graph.sx(2)" y="289">2</text>
+   </svg>
+   <svg ref="svg" viewBox="0 0 400 300" role="group" aria-label="Parabol của hệ số a nhân a trừ 1 với điểm số mũ kéo được" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <rect :x="view.sx(0)" y="28" :width="view.sx(1)-view.sx(0)" height="244" class="shade"/><line x1="28" x2="372" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis"/><polyline :points="parabola" class="lab-line"/>
+    <circle :cx="view.sx(a)" :cy="view.sy(curvature)" r="8" class="lab-dot-warn"/><circle :cx="view.sx(a)" :cy="view.sy(curvature)" r="28" class="lab-handle hit" tabindex="0" role="slider" aria-label="Số mũ a" :aria-valuetext="fmt(a,4)" @pointerdown="drag.start('a',$event)" @keydown="drag.key('a',[a,curvature],$event)"/>
+    <text x="32" y="28">a(a − 1)</text><text :x="view.sx(0)-6" y="290">0</text><text :x="view.sx(1)-6" y="290">1</text>
+   </svg>
+  </div>
+  <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
+  <div class="lab-buttons"><button type="button" @click="a=-1">a = −1</button><button type="button" @click="a=0">a = 0</button><button type="button" @click="a=.5">a = 1/2</button><button type="button" @click="a=1">a = 1</button><button type="button" @click="a=2">a = 2</button></div>
+  <div class="lab-controls"><label>Số mũ a = {{fmt(a)}}<input v-model.number="a" type="range" min="-2" max="3" step=".1"/></label></div>
+  <div class="lab-readout" role="status"><p>a(a − 1) = {{fmt(curvature,4)}}. Vì x &gt; 0, thừa số xᵃ⁻² dương, nên dấu của f'' là dấu hệ số này. Hàm đang {{kind.toLowerCase()}}.</p><p>Dây cung tại trung điểm của 0.4 và 2.6 trừ giá trị đồ thị bằng {{fmt(gap,4)}}. Giá trị dương ứng với dây cung ở trên, giá trị âm ứng với dây cung ở dưới.</p><p>Khung chỉ cắt phần đồ thị vượt độ cao đang xem. Các giá trị tính toán không bị kẹp theo mép khung. Tại a = 0 hoặc a = 1, đạo hàm bậc hai bằng 0 trên toàn miền.</p></div>
+ </figure>
 </template>
+<style scoped>
+svg text{font-size:20px;pointer-events:none}.shade{fill:var(--do-soft);opacity:.6}svg :is(line,rect,polyline),svg circle:not(.hit){pointer-events:none}.hit{fill:transparent!important;stroke:transparent}.hit:focus-visible{stroke:var(--vang)}
+</style>

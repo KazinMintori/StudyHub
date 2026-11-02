@@ -6,6 +6,9 @@ import { fileURLToPath } from 'node:url'
 
 export const repositoryRoot = fileURLToPath(new URL('../../', import.meta.url))
 export const digest = data => createHash('sha256').update(data).digest('hex')
+export function digestFile(data, file) {
+  return digest(data)
+}
 const optionalRead = file => readFile(file).catch(error => { if (error.code === 'ENOENT') return null; throw error })
 
 export function safePath(value) {
@@ -35,6 +38,23 @@ export function validateLock(lock) {
   return lock
 }
 
+export function parseCourseDeployKeys(env = process.env) {
+  const parse = (value, name) => {
+    const keys = JSON.parse(value || '{}')
+    if (!keys || typeof keys !== 'object' || Array.isArray(keys)) throw Error(`${name} must be a JSON object`)
+    for (const [id, key] of Object.entries(keys)) {
+      if (!/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/.test(id) || typeof key !== 'string' || !key.trim()) {
+        throw Error(`${name} contains an invalid course key entry`)
+      }
+    }
+    return keys
+  }
+  const base = parse(env.COURSE_DEPLOY_KEYS, 'COURSE_DEPLOY_KEYS')
+  const extra = parse(env.COURSE_DEPLOY_KEYS_EXTRA, 'COURSE_DEPLOY_KEYS_EXTRA')
+  for (const id of Object.keys(extra)) if (Object.hasOwn(base, id)) throw Error(`Deploy key configured twice for ${id}`)
+  return { ...base, ...extra }
+}
+
 export async function verifyPackage(course, directory) {
   const manifest = JSON.parse(await readFile(path.join(directory, 'studyhub-course.json'), 'utf8'))
   if (manifest.version !== 1 || manifest.id !== course.id || !manifest.files || Array.isArray(manifest.files)) throw Error(`Invalid package for ${course.id}`)
@@ -46,7 +66,7 @@ export async function verifyPackage(course, directory) {
     const absolute = path.join(directory, file)
     await assertNoLinks(directory, file, checked)
     const data = await readFile(absolute)
-    if (digest(data) !== hash) throw Error(`Content checksum mismatch: ${file}`)
+    if (digestFile(data, file) !== hash) throw Error(`Content checksum mismatch: ${file}`)
     const updatedAt = manifest.updatedAt?.[file]
     if (updatedAt != null && (!Number.isFinite(updatedAt) || updatedAt <= 0)) throw Error(`Invalid source timestamp: ${file}`)
     files.push({ file, hash, source: absolute, ...(updatedAt ? { updatedAt } : {}) })
@@ -77,7 +97,7 @@ export async function planInstall(root, entries, previous = {}) {
     files.set(entry.file, entry.hash)
     await assertNoLinks(root, entry.file, checked)
     const current = await optionalRead(path.join(root, entry.file))
-    const hash = current && digest(current)
+    const hash = current && digestFile(current, entry.file)
     if (hash === entry.hash) continue
     if (hash && hash !== previous[entry.file]) {
       const source = entry.source && await readFile(entry.source)
@@ -92,7 +112,7 @@ export async function planInstall(root, entries, previous = {}) {
     if (files.has(file)) continue
     await assertNoLinks(root, file, checked)
     const current = await optionalRead(path.join(root, file))
-    if (current && digest(current) !== hash) throw Error(`Locally edited file was removed upstream: ${file}`)
+    if (current && digestFile(current, file) !== hash) throw Error(`Locally edited file was removed upstream: ${file}`)
     if (current) operations.push({ file, action: 'delete' })
   }
   return { operations, files: Object.fromEntries(files) }
@@ -112,7 +132,7 @@ export async function syncCourses({ root = repositoryRoot, check = false } = {})
   const lock = validateLock(JSON.parse(await readFile(path.join(root, 'config/course-repositories.json'), 'utf8')))
   const cache = path.join(root, '.course-repositories')
   await mkdir(cache, { recursive: true })
-  const keys = JSON.parse(process.env.COURSE_DEPLOY_KEYS || '{}')
+  const keys = parseCourseDeployKeys(process.env)
   const entries = [], secrets = []
   try {
     for (const course of lock.courses) {
@@ -198,7 +218,7 @@ export async function exportCourse(id, { root = repositoryRoot } = {}) {
   for (const file of [...candidates].sort()) {
     const data = await readFile(path.join(root, file))
     if (data.length > 50 * 1024 * 1024) throw Error(`Use external document storage for files over 50 MiB: ${file}`)
-    files[file] = digest(data)
+    files[file] = digestFile(data, file)
   }
   if (!files[`src/content/courses/${id}/course.mjs`]) throw Error('Cannot export an incomplete course')
   for (const file of Object.keys(previous.files)) if (!files[file]) await unlink(path.join(directory, safePath(file)))

@@ -29,8 +29,8 @@ const tip = computed(() => [x.value[0] + 1.2 * w.value[0], x.value[1] + 1.2 * w.
 
 <template>
   <figure class="study-lab" aria-label="Log-sum-exp như một phiên bản trơn của hàm max">
-    <p class="lab-title">Log-sum-exp: hàm max được làm trơn</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đường mức của hàm max và của log-sum-exp, cùng gradient softmax tại một điểm" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p class="lab-title">Log-sum-exp: Hàm max được làm trơn</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Đường mức của hàm max và của log-sum-exp, cùng gradient softmax tại một điểm" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs>
         <clipPath :id="clip"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath>
         <marker :id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-accent" /></marker>
@@ -46,7 +46,7 @@ const tip = computed(() => [x.value[0] + 1.2 * w.value[0], x.value[1] + 1.2 * w.
         <circle :cx="P(x)[0]" :cy="P(x)[1]" r="8" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x" :aria-valuetext="fmtPoint(x)" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', x, $event)" />
       </g>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <p class="lab-legend"><span class="legend-guide">đường mức của max{x₁, x₂} tại −1, 0, 1, 2</span><span class="legend-warn">đường mức của lse_β</span><span class="legend-accent">gradient = softmax(βx)</span></p>
     <div class="lab-controls">
       <label>β = {{ fmt(beta, 1) }}<input v-model.number="beta" type="range" min="0.5" max="10" step="0.5" /></label>
@@ -65,3 +65,7 @@ const tip = computed(() => [x.value[0] + 1.2 * w.value[0], x.value[1] + 1.2 * w.
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg :is(line,path,polyline),svg circle:not(.lab-handle){pointer-events:none}.lab-handle{stroke:transparent;stroke-width:32;paint-order:stroke}.lab-handle:focus-visible{stroke:var(--vang);stroke-width:4}
+</style>

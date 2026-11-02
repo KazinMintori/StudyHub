@@ -1,6 +1,8 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { makeView, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import LabPointControls from './LabPointControls.vue'
+import MathMatrix from '../../../core/math/components/MathMatrix.vue'
 import { eigSym2, isPsd2, isPd2, scale } from '../services/convex-geometry.mjs'
 
 // Ma trận đối xứng X = [[x, y], [y, z]]. Hình vẽ giá trị vᵀXv trên mọi hướng đơn vị v:
@@ -18,12 +20,16 @@ const circle = Array.from({ length: 120 }, (_, i) => [Math.cos((2 * Math.PI * i)
 const psd = computed(() => isPsd2(x.value, y.value, z.value)), pd = computed(() => isPd2(x.value, y.value, z.value))
 const det = computed(() => x.value * z.value - y.value * y.value)
 const worst = computed(() => eig.value.vectors[1])
+const svg=ref(null),direction=ref([Math.sqrt(.75),.5])
+const dragView=ref(view)
+const drag=createDragger(svg,dragView,(_,p)=>{const length=Math.hypot(...p);if(length>1e-8)direction.value=p.map(v=>v/length)},{step:.05})
 </script>
 
 <template>
   <figure class="study-lab" aria-label="Ma trận đối xứng 2x2 và dạng toàn phương của nó">
     <p class="lab-title">Dạng toàn phương vᵀXv trên mọi hướng</p>
-    <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đường tròn đơn vị với các vạch thể hiện giá trị dạng toàn phương theo từng hướng và hai hướng riêng">
+    <p class="lab-lead">Kéo v quanh đường tròn đơn vị để chọn một hướng thử. Mỗi vạch thể hiện giá trị vᵀXv theo một hướng. Một hướng có giá trị âm đã đủ để bác bỏ tính PSD.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Đường tròn đơn vị với các vạch thể hiện giá trị dạng toàn phương theo từng hướng và hai hướng riêng" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line :x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" /><line :y1="0" :y2="view.height" :x1="view.sx(0)" :x2="view.sx(0)" class="lab-axis" />
       <polygon :points="circle.map(p => P(p).join(',')).join(' ')" class="lab-guide" />
       <line v-for="(b, i) in bars" :key="i" :x1="P(b.from)[0]" :y1="P(b.from)[1]" :x2="P(b.to)[0]" :y2="P(b.to)[1]" :class="b.positive ? 'lab-good' : 'lab-bad'" style="stroke-width: 2.5" />
@@ -31,14 +37,20 @@ const worst = computed(() => eig.value.vectors[1])
       <line :x1="P(scale(-1.9, eig.vectors[1]))[0]" :y1="P(scale(-1.9, eig.vectors[1]))[1]" :x2="P(scale(1.9, eig.vectors[1]))[0]" :y2="P(scale(1.9, eig.vectors[1]))[1]" class="lab-warn" style="stroke-width: 1.5" />
       <text :x="P(scale(1.95, eig.vectors[0]))[0] + 4" :y="P(scale(1.95, eig.vectors[0]))[1]" class="lab-small">λ₁</text>
       <text :x="P(scale(1.95, eig.vectors[1]))[0] + 4" :y="P(scale(1.95, eig.vectors[1]))[1]" class="lab-small">λ₂</text>
+      <line :x1="P([0,0])[0]" :y1="P([0,0])[1]" :x2="P(direction)[0]" :y2="P(direction)[1]" class="lab-accent"/>
+      <circle :cx="P(direction)[0]" :cy="P(direction)[1]" r="8" class="lab-dot-accent" pointer-events="none"/>
+      <text :x="P(direction)[0]+12" :y="P(direction)[1]-12">v</text>
+      <circle :cx="P(direction)[0]" :cy="P(direction)[1]" r="32" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Hướng thử v trên đường tròn đơn vị" :aria-valuetext="fmtPoint(direction)" @pointerdown="drag.start('v',$event)" @keydown="drag.key('v',direction,$event)"/>
     </svg>
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <div class="lab-controls">
       <label>x = {{ fmt(x, 1) }}<input v-model.number="x" type="range" min="-2" max="3" step="0.1" /></label>
       <label>y = {{ fmt(y, 1) }}<input v-model.number="y" type="range" min="-2.5" max="2.5" step="0.1" /></label>
       <label>z = {{ fmt(z, 1) }}<input v-model.number="z" type="range" min="-2" max="3" step="0.1" /></label>
     </div>
     <div class="lab-readout" role="status">
-      <p>X = [[{{ fmt(x, 1) }}, {{ fmt(y, 1) }}], [{{ fmt(y, 1) }}, {{ fmt(z, 1) }}]] có trị riêng λ₁ = {{ fmt(eig.values[0]) }} và λ₂ = {{ fmt(eig.values[1]) }}, định thức xz − y² = {{ fmt(det) }}.</p>
+      <p>X = <MathMatrix :rows="[[x,y],[y,z]]" label="Ma trận đối xứng X"/> có trị riêng λ₁ = {{ fmt(eig.values[0]) }} và λ₂ = {{ fmt(eig.values[1]) }}, định thức xz − y² = {{ fmt(det) }}.</p>
+      <p>Hướng đang thử v = {{fmtPoint(direction)}}, có vᵀXv = {{fmt(q(direction),4)}}. Một hướng không âm chưa chứng minh ma trận PSD. Hai trị riêng bên trên kiểm tra các giá trị nhỏ nhất và lớn nhất trên mọi hướng đơn vị.</p>
       <p>Ba điều kiện của Ví dụ 2.6: x ≥ 0 <span :class="x >= 0 ? 'is-good' : 'is-bad'">{{ x >= 0 ? 'đúng' : 'sai' }}</span>, z ≥ 0 <span :class="z >= 0 ? 'is-good' : 'is-bad'">{{ z >= 0 ? 'đúng' : 'sai' }}</span>, xz ≥ y² <span :class="det >= -1e-12 ? 'is-good' : 'is-bad'">{{ det >= -1e-12 ? 'đúng' : 'sai' }}</span>.</p>
       <p v-if="pd"><span class="is-good">X xác định dương:</span> mọi vạch đều hướng ra ngoài, vᵀXv &gt; 0 với mọi v ≠ 0.</p>
       <p v-else-if="psd"><span class="is-good">X nửa xác định dương nhưng suy biến:</span> theo hướng {{ fmtPoint(worst) }}, vᵀXv = 0 và vạch biến mất.</p>
@@ -54,3 +66,9 @@ const worst = computed(() => eig.value.vectors[1])
     </details>
   </figure>
 </template>
+
+<style scoped>
+.point-hit{fill:transparent!important;stroke:transparent}
+.point-hit:focus-visible{stroke:var(--vang)}
+svg text{pointer-events:none}
+</style>

@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { makeView, fmt } from '../controllers/svg-drag.js'
+import { makeView, createDragger, fmt } from '../controllers/svg-drag.js'
+import LabPointControls from './LabPointControls.vue'
 
 // Bài toán một biến: minimize f(x) trên miền khả thi {x trong dom f : l <= x <= u}.
 // Kết luận về p*, việc đạt nghiệm và ràng buộc chặt được suy luận theo tính chất giải tích của từng hàm,
@@ -56,18 +57,29 @@ const curve = computed(() => {
   for (let i = 0; i <= 400; i++) {
     const x = view.x0 + (i / 400) * (view.x1 - view.x0)
     const y = fn.value.positive && x <= 0.005 ? NaN : f(x)
-    if (Number.isFinite(y) && y >= view.y0 - 1 && y <= view.y1 + 1) segs.at(-1).push(`${view.sx(x)},${view.sy(y)}`)
+    if (Number.isFinite(y) && y >= view.y0 && y <= view.y1) segs.at(-1).push(`${view.sx(x)},${view.sy(y)}`)
     else if (segs.at(-1).length) segs.push([])
   }
   return segs.filter(s => s.length > 1).map(s => s.join(' '))
 })
 const feasibleSeg = computed(() => infeasible.value ? null : [Math.max(lo.value, view.x0), Math.min(hi.value, view.x1)])
+const svg=ref(null),trial=ref(1.8),dragView=ref(view)
+const drag=createDragger(svg,dragView,(name,p)=>{
+ if(name==='lower')lower.value=p[0]
+ else if(name==='upper')upper.value=p[0]
+ else trial.value=p[0]
+},{step:.1,snap:.05})
+const inDomain=computed(()=>!fn.value.positive||trial.value>0)
+const trialValue=computed(()=>inDomain.value?fn.value.f(trial.value):NaN)
+const trialFeasible=computed(()=>inDomain.value&&!infeasible.value&&trial.value>=lo.value&&trial.value<=hi.value)
+const onGraph=(x,value)=>Number.isFinite(value)&&x>=view.x0&&x<=view.x1&&value>=view.y0&&value<=view.y1
 </script>
 
 <template>
   <figure class="study-lab" aria-label="Giá trị tối ưu của một bài toán một biến">
     <p class="lab-title">Miền khả thi quyết định nghiệm</p>
-    <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đồ thị hàm mục tiêu, miền khả thi tô trên trục hoành và điểm tối ưu nếu có">
+    <p class="lab-lead">Kéo l hoặc u trên trục ngang để đổi cận đang bật. Kéo điểm thử x ở hàng dưới trục để so sánh với nghiệm tối ưu. Điểm có giá trị mục tiêu thấp hơn vẫn có thể bị loại nếu vi phạm ràng buộc.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Đồ thị hàm mục tiêu, miền khả thi và các cận cùng điểm thử kéo được" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line v-for="x in [-2, -1, 1, 2, 3, 4]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line :x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
       <line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" :y2="view.height" class="lab-axis" />
@@ -75,12 +87,23 @@ const feasibleSeg = computed(() => infeasible.value ? null : [Math.max(lo.value,
       <rect v-if="feasibleSeg" :x="view.sx(feasibleSeg[0])" :y="view.sy(0) - 6" :width="Math.max(0, view.sx(feasibleSeg[1]) - view.sx(feasibleSeg[0]))" height="12" class="lab-region" />
       <circle v-if="feasibleSeg && loOpen && lo >= view.x0" :cx="view.sx(lo)" :cy="view.sy(0)" r="6" class="lab-dot-hollow" />
       <polyline v-for="(pts, i) in curve" :key="i" :points="pts" class="lab-line" />
-      <template v-if="analysis.status === 'attained'">
+      <template v-if="analysis.status === 'attained'&&onGraph(analysis.x,analysis.value)">
         <line :x1="view.sx(analysis.x)" :x2="view.sx(analysis.x)" :y1="view.sy(0)" :y2="view.sy(Math.max(view.y0, Math.min(view.y1, analysis.value)))" class="lab-guide" />
         <circle :cx="view.sx(analysis.x)" :cy="view.sy(Math.max(view.y0, Math.min(view.y1, analysis.value)))" r="8" class="lab-dot-accent" />
       </template>
       <circle v-for="x in localMins" :key="x" :cx="view.sx(x)" :cy="view.sy(Math.max(view.y0, fn.f(x)))" r="6" class="lab-dot-hollow" />
+      <template v-for="bound in [{name:'lower',value:lower,on:hasLower,label:'l'},{name:'upper',value:upper,on:hasUpper,label:'u'}]" :key="bound.name">
+        <circle v-if="bound.on" :cx="view.sx(bound.value)" :cy="view.sy(0)" r="6" class="lab-dot" pointer-events="none"/>
+        <text v-if="bound.on" :x="Math.min(view.width-20,Math.max(12,view.sx(bound.value)+9))" :y="view.sy(0)-15">{{bound.label}}</text>
+        <circle v-if="bound.on" :cx="view.sx(bound.value)" :cy="view.sy(0)" r="34" class="lab-handle point-hit" tabindex="0" role="slider" :aria-label="`Cận ${bound.label}`" :aria-valuemin="-3" :aria-valuemax="5" :aria-valuenow="bound.value" :aria-valuetext="`${bound.label} = ${fmt(bound.value)}`" @pointerdown="drag.start(bound.name,$event)" @keydown="drag.key(bound.name,[bound.value,0],$event)"/>
+      </template>
+      <line v-if="onGraph(trial,trialValue)" :x1="view.sx(trial)" :x2="view.sx(trial)" :y1="view.sy(0)" :y2="view.sy(trialValue)" class="lab-guide"/>
+      <circle v-if="onGraph(trial,trialValue)" :cx="view.sx(trial)" :cy="view.sy(trialValue)" r="6" :class="trialFeasible?'lab-dot-warn':'lab-dot-bad'"/>
+      <circle :cx="view.sx(trial)" :cy="view.sy(0)+40" r="7" :class="trialFeasible?'lab-dot-warn':'lab-dot-bad'" pointer-events="none"/>
+      <text :x="Math.min(view.width-20,Math.max(12,view.sx(trial)+12))" :y="view.sy(0)+47">x</text>
+      <circle :cx="view.sx(trial)" :cy="view.sy(0)+40" r="34" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Điểm thử x trên miền một chiều" :aria-valuemin="-3" :aria-valuemax="5" :aria-valuenow="trial" :aria-valuetext="`x = ${fmt(trial)}`" @pointerdown="drag.start('trial',$event)" @keydown="drag.key('trial',[trial,0],$event)"/>
     </svg>
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" axes="x"/></details>
     <div class="lab-controls">
       <label>Hàm mục tiêu
         <select v-model="choice"><option v-for="(item, key) in fns" :key="key" :value="key">{{ item.label }}</option></select>
@@ -91,10 +114,13 @@ const feasibleSeg = computed(() => infeasible.value ? null : [Math.max(lo.value,
       <label v-if="hasUpper">u = {{ fmt(upper, 1) }}<input v-model.number="upper" type="range" min="-3" max="5" step="0.1" /></label>
     </div>
     <div class="lab-readout" role="status">
+      <p v-if="!inDomain">Điểm thử x = {{fmt(trial)}} nằm ngoài miền xác định của hàm.</p>
+      <p v-else>Điểm thử x = {{fmt(trial)}} cho f(x) = {{fmt(trialValue,4)}}. {{trialFeasible?'Điểm khả thi.':'Điểm không khả thi.'}}</p>
+      <p v-if="inDomain&&!onGraph(trial,trialValue)">Giá trị của điểm thử nằm ngoài thang dọc đang vẽ. Chỉ vị trí x được đánh dấu dưới trục, không đặt giả một điểm trên biên khung thay cho giá trị hàm.</p>
       <p v-if="analysis.status === 'infeasible'" class="is-bad">Miền khả thi rỗng: không có x nào thỏa đồng thời mọi điều kiện. Theo quy ước, p* = +∞.</p>
       <template v-else-if="analysis.status === 'attained'">
         <p>Giá trị tối ưu p* = <span class="is-accent">{{ fmt(analysis.value, 4) }}</span>, đạt tại x* = {{ fmt(analysis.x, 4) }}.</p>
-        <p v-if="activeBound">Nghiệm nằm đúng trên cận {{ activeBound }}, nên ràng buộc đó chặt (active) tại x*. Bỏ ràng buộc này đi thì nghiệm sẽ thay đổi.</p>
+        <p v-if="activeBound">Nghiệm nằm trên cận {{activeBound}}, nên ràng buộc đó chặt tại x*. Điều này chưa đủ để khẳng định bỏ ràng buộc sẽ đổi nghiệm, chẳng hạn khi nghiệm tự do cũng nằm đúng trên cận.</p>
         <p v-else>Không ràng buộc nào chặt tại x*: nghiệm nằm bên trong miền khả thi.</p>
         <p v-if="localMins.length > 1">Trên miền này có hai điểm cực tiểu cục bộ (vòng tròn rỗng). Chỉ một điểm là tối ưu toàn cục.</p>
       </template>
@@ -113,3 +139,9 @@ const feasibleSeg = computed(() => infeasible.value ? null : [Math.max(lo.value,
     </details>
   </figure>
 </template>
+
+<style scoped>
+.point-hit{fill:transparent!important;stroke:transparent}
+.point-hit:focus-visible{stroke:var(--vang)}
+svg :is(text,line,polyline,rect){pointer-events:none}
+</style>

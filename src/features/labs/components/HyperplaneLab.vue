@@ -14,6 +14,7 @@ const P = p => view.value.point(p)
 const pts = ref({ a: [1.2, 0.9], x: [2.5, 2], p: [-1.5, -0.5], q: [1.5, 1.5], z: [0.5, -2] })
 const b = ref(2), b2 = ref(-1), showParallel = ref(false)
 const drag = createDragger(svg, view, (name, value) => {
+  if (name === 'plane-offset') { b.value=Math.max(-4,Math.min(4,dot(pts.value.a,value))); return }
   if (name === 'a' && norm2(value) < 0.3) return
   pts.value = { ...pts.value, [name]: value }
 }, { step: 0.1, snap: 0.1 })
@@ -46,12 +47,13 @@ const a = computed(() => pts.value.a)
 const na = computed(() => norm2(a.value))
 const x0 = computed(() => scale(b.value / (na.value * na.value), a.value))
 const dir = computed(() => [-a.value[1] / na.value, a.value[0] / na.value])
+const offsetAnchor=computed(()=>add(x0.value,scale(1.7,dir.value)))
+const inView=p=>p[0]>=view.value.x0+.25&&p[0]<=view.value.x1-.25&&p[1]>=view.value.y0+.25&&p[1]<=view.value.y1-.25
 const hyper = computed(() => clipLine(x0.value, dir.value))
 const hyper2 = computed(() => clipLine(scale(b2.value / (na.value * na.value), a.value), dir.value))
 const value = computed(() => dot(a.value, pts.value.x))
 const signed = computed(() => (value.value - b.value) / na.value)
 const foot = computed(() => sub(pts.value.x, scale(signed.value / na.value, a.value)))
-const normalTip = computed(() => add(x0.value, scale(1.4 / na.value, a.value)))
 
 // --- voronoi ---
 const vor = computed(() => {
@@ -60,13 +62,15 @@ const vor = computed(() => {
 })
 const vorLine = computed(() => norm2(vor.value.n) < 1e-9 ? null : clipLine(vor.value.mid, [-vor.value.n[1] / norm2(vor.value.n), vor.value.n[0] / norm2(vor.value.n)]))
 const zCloser = computed(() => norm2(sub(pts.value.z, pts.value.p)) <= norm2(sub(pts.value.z, pts.value.q)))
+const equalDistance = computed(()=>Math.abs(norm2(sub(pts.value.z,pts.value.p))-norm2(sub(pts.value.z,pts.value.q)))<1e-8)
 const arrow = `${uid}-arrow`
 </script>
 
 <template>
   <figure class="study-lab" :aria-label="type === 'halfspace' ? 'Siêu phẳng và nửa không gian' : 'Nửa không gian các điểm gần một điểm hơn'">
     <p class="lab-title">{{ type === 'halfspace' ? 'Siêu phẳng aᵀx = b và nửa không gian aᵀx ≤ b' : 'Những điểm gần p hơn gần q' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'halfspace' ? 'Đường thẳng aᵀx = b, phần tô là nửa mặt phẳng aᵀx ≤ b, vector pháp tuyến a và điểm thử x' : 'Hai điểm p, q, đường trung trực và nửa mặt phẳng gần p hơn'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p v-if="type==='halfspace'" class="lab-lead">Kéo a để đổi pháp tuyến, kéo x để thử vị trí. Kéo điểm q trên đường biên để đổi b và tịnh tiến đường biên theo phương pháp tuyến. Điểm x₀ gần gốc nhất được tính lại theo a và b.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="type === 'halfspace' ? 'Đường thẳng aᵀx = b, phần tô là nửa mặt phẳng aᵀx ≤ b, vector pháp tuyến a và điểm thử x' : 'Hai điểm p, q, đường trung trực và nửa mặt phẳng gần p hơn'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><marker :id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-accent" /></marker></defs>
       <line v-for="x in [-4, -3, -2, -1, 1, 2, 3, 4]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="y in [-3, -2, -1, 1, 2, 3]" :key="`gy${y}`" :y1="view.sy(y)" :y2="view.sy(y)" x1="0" :x2="view.width" class="lab-grid" />
@@ -77,14 +81,16 @@ const arrow = `${uid}-arrow`
         <line v-if="hyper" :x1="P(hyper[0])[0]" :y1="P(hyper[0])[1]" :x2="P(hyper[1])[0]" :y2="P(hyper[1])[1]" class="lab-accent" />
         <line v-if="showParallel && hyper2" :x1="P(hyper2[0])[0]" :y1="P(hyper2[0])[1]" :x2="P(hyper2[1])[0]" :y2="P(hyper2[1])[1]" class="lab-warn" />
         <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(x0)[0]" :y2="P(x0)[1]" class="lab-guide" />
-        <line :x1="P(x0)[0]" :y1="P(x0)[1]" :x2="P(normalTip)[0]" :y2="P(normalTip)[1]" class="lab-accent" :marker-end="`url(#${arrow})`" />
         <line :x1="P(pts.x)[0]" :y1="P(pts.x)[1]" :x2="P(foot)[0]" :y2="P(foot)[1]" class="lab-guide" />
-        <circle :cx="P(x0)[0]" :cy="P(x0)[1]" r="5" class="lab-dot" />
-        <text :x="P(x0)[0] - 30" :y="P(x0)[1] + 18">x₀</text>
-        <circle :cx="P(a)[0]" :cy="P(a)[1]" r="9" class="lab-handle" tabindex="0" role="slider" aria-label="Đầu mút vector pháp tuyến a tính từ gốc" @pointerdown="drag.start('a', $event)" @keydown="drag.key('a', a, $event)" />
-        <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(a)[0]" :y2="P(a)[1]" class="lab-line" />
+        <circle v-if="inView(offsetAnchor)" :cx="P(offsetAnchor)[0]" :cy="P(offsetAnchor)[1]" r="7" class="lab-dot-hollow"/>
+        <circle v-if="inView(offsetAnchor)" :cx="P(offsetAnchor)[0]" :cy="P(offsetAnchor)[1]" r="32" class="lab-handle offset-hit" tabindex="0" role="slider" aria-label="Điểm q trên đường biên, thay đổi b" :aria-valuetext="`b = ${fmt(b)}, q = ${fmtPoint(offsetAnchor)}`" @pointerdown="drag.start('plane-offset',$event)" @keydown="drag.key('plane-offset',offsetAnchor,$event)"/>
+        <text v-if="inView(offsetAnchor)" :x="P(offsetAnchor)[0]-25" :y="P(offsetAnchor)[1]-13">q</text>
+        <circle v-if="inView(x0)" :cx="P(x0)[0]" :cy="P(x0)[1]" r="5" class="lab-dot" pointer-events="none" />
+        <text v-if="inView(x0)" :x="P(x0)[0] - 30" :y="P(x0)[1] + 24">x₀</text>
+        <circle :cx="P(a)[0]" :cy="P(a)[1]" r="9" class="lab-handle" tabindex="0" role="slider" aria-label="Đầu mút vector pháp tuyến a tính từ gốc" :aria-valuetext="fmtPoint(a)" @pointerdown="drag.start('a', $event)" @keydown="drag.key('a', a, $event)" />
+        <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(a)[0]" :y2="P(a)[1]" class="normal-vector" :marker-end="`url(#${arrow})`"/>
         <text :x="P(a)[0] + 12" :y="P(a)[1] - 8">a</text>
-        <circle :cx="P(pts.x)[0]" :cy="P(pts.x)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Điểm thử x" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', pts.x, $event)" />
+        <circle :cx="P(pts.x)[0]" :cy="P(pts.x)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Điểm thử x" :aria-valuetext="fmtPoint(pts.x)" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', pts.x, $event)" />
         <text :x="P(pts.x)[0] + 12" :y="P(pts.x)[1] - 8">x</text>
       </template>
 
@@ -94,13 +100,13 @@ const arrow = `${uid}-arrow`
         <line :x1="P(pts.p)[0]" :y1="P(pts.p)[1]" :x2="P(pts.q)[0]" :y2="P(pts.q)[1]" class="lab-guide" />
         <line :x1="P(pts.z)[0]" :y1="P(pts.z)[1]" :x2="P(pts.p)[0]" :y2="P(pts.p)[1]" :class="zCloser ? 'lab-good' : 'lab-line'" />
         <line :x1="P(pts.z)[0]" :y1="P(pts.z)[1]" :x2="P(pts.q)[0]" :y2="P(pts.q)[1]" :class="zCloser ? 'lab-line' : 'lab-bad'" />
-        <circle v-for="name in ['p', 'q']" :key="name" :cx="P(pts[name])[0]" :cy="P(pts[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm ${name}`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, pts[name], $event)" />
+        <circle v-for="name in ['p', 'q']" :key="name" :cx="P(pts[name])[0]" :cy="P(pts[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm ${name}`" :aria-valuetext="fmtPoint(pts[name])" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, pts[name], $event)" />
         <text v-for="name in ['p', 'q']" :key="`t${name}`" :x="P(pts[name])[0] + 12" :y="P(pts[name])[1] - 8">{{ name }}</text>
-        <circle :cx="P(pts.z)[0]" :cy="P(pts.z)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Điểm thử z" @pointerdown="drag.start('z', $event)" @keydown="drag.key('z', pts.z, $event)" />
+        <circle :cx="P(pts.z)[0]" :cy="P(pts.z)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Điểm thử z" :aria-valuetext="fmtPoint(pts.z)" @pointerdown="drag.start('z', $event)" @keydown="drag.key('z', pts.z, $event)" />
         <text :x="P(pts.z)[0] + 12" :y="P(pts.z)[1] + 18">z</text>
       </template>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" /></details>
 
     <div v-if="type === 'halfspace'" class="lab-controls">
       <label>b = {{ fmt(b, 1) }}<input v-model.number="b" type="range" min="-4" max="4" step="0.1" /></label>
@@ -115,7 +121,8 @@ const arrow = `${uid}-arrow`
       </template>
       <template v-else>
         <p>Vùng tô là {z : ‖z − p‖₂ ≤ ‖z − q‖₂}. Nó là nửa mặt phẳng (q − p)ᵀz ≤ (‖q‖² − ‖p‖²)/2, với (q − p) = {{ fmtPoint(vor.n, 1) }} và vế phải {{ fmt(vor.c) }}.</p>
-        <p>Điểm thử z cách p một khoảng {{ fmt(norm2(sub(pts.z, pts.p))) }} và cách q một khoảng {{ fmt(norm2(sub(pts.z, pts.q))) }}, nên z <span :class="zCloser ? 'is-good' : 'is-bad'">{{ zCloser ? 'gần p hơn' : 'gần q hơn' }}</span>.</p>
+        <p>Điểm thử z cách p một khoảng {{ fmt(norm2(sub(pts.z, pts.p))) }} và cách q một khoảng {{ fmt(norm2(sub(pts.z, pts.q))) }}, nên z <span :class="zCloser ? 'is-good' : 'is-bad'">{{ equalDistance ? 'cách đều p và q' : zCloser ? 'gần p hơn' : 'gần q hơn' }}</span>.</p>
+        <p v-if="norm2(vor.n)<1e-9">p và q trùng nhau. Mọi điểm đều có cùng khoảng cách tới p và q, nên miền tô là toàn mặt phẳng và không có đường trung trực duy nhất.</p>
       </template>
     </div>
     <details class="lab-tasks">
@@ -133,3 +140,13 @@ const arrow = `${uid}-arrow`
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg text { pointer-events:none;font-size:20px; }
+svg :is(line,polyline,polygon,path), svg circle:not(.lab-handle) { pointer-events:none; }
+.lab-handle:not(.offset-hit) { stroke:transparent; stroke-width:36; paint-order:stroke; }
+.lab-handle:not(.offset-hit):focus-visible { stroke:var(--vang); stroke-width:4; }
+.offset-hit { fill:transparent!important; stroke:transparent; }
+.offset-hit:focus-visible { stroke:var(--vang); }
+.normal-vector{stroke:var(--tim);stroke-width:2.5;fill:none}
+</style>

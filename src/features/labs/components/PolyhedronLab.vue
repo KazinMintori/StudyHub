@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, useId } from 'vue'
-import { makeView, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import LabPointControls from './LabPointControls.vue'
 import { polyhedronInBox, add, scale, sub, dot } from '../services/convex-geometry.mjs'
 const clipId = `${useId()}-clip`
 
@@ -30,12 +31,17 @@ function boundaryLine({ a, b }) {
   return pts
 }
 const tight = p => active.value.filter(c => Math.abs(dot(c.a, p) - c.b) < 1e-7).map(c => c.label)
+const svg=ref(null),point=ref([1,1]),dragView=ref(view)
+const drag=createDragger(svg,dragView,(_,p)=>{point.value=p},{step:.1,snap:.05})
+const feasible=computed(()=>active.value.every(c=>dot(c.a,point.value)<=c.b+1e-9))
+const violated=computed(()=>active.value.filter(c=>dot(c.a,point.value)>c.b+1e-9).map(c=>c.label))
 </script>
 
 <template>
   <figure class="study-lab" aria-label="Đa diện là giao của các nửa mặt phẳng">
     <p class="lab-title">Ghép đa diện từ từng nửa mặt phẳng</p>
-    <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Các đường biên của ràng buộc, miền đa diện tô màu và các đỉnh">
+    <p class="lab-lead">Bật hoặc tắt từng ràng buộc để xem miền giao. Kéo x qua các đường biên để kiểm tra ràng buộc nào đang bị vi phạm.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Các đường biên của ràng buộc, miền đa diện tô màu, các đỉnh và điểm x kéo được" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clipId"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <line v-for="x in [-1, 1, 2, 3, 4, 5]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="y in [-1, 1, 2, 3, 4]" :key="`gy${y}`" :y1="view.sy(y)" :y2="view.sy(y)" x1="0" :x2="view.width" class="lab-grid" />
@@ -48,11 +54,15 @@ const tight = p => active.value.filter(c => Math.abs(dot(c.a, p) - c.b) < 1e-7).
         <circle v-if="v[0] >= view.x0 && v[0] <= view.x1 && v[1] >= view.y0 && v[1] <= view.y1" :cx="P(v)[0]" :cy="P(v)[1]" r="6" class="lab-dot-accent" />
         <text v-if="v[0] >= view.x0 && v[0] <= view.x1 && v[1] >= view.y0 && v[1] <= view.y1" :x="P(v)[0] + 8" :y="P(v)[1] - 8" class="lab-small">{{ fmtPoint(v, 1) }}</text>
       </g>
+      <circle :cx="P(point)[0]" :cy="P(point)[1]" r="8" :class="feasible?'lab-dot-accent':'lab-dot-bad'" pointer-events="none"/><text :x="Math.min(view.width-20,P(point)[0]+12)" :y="Math.max(20,P(point)[1]-12)">x</text>
+      <circle :cx="P(point)[0]" :cy="P(point)[1]" r="32" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Điểm x để thử tính khả thi" :aria-valuetext="fmtPoint(point)" @pointerdown="drag.start('x',$event)" @keydown="drag.key('x',point,$event)"/>
     </svg>
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <div class="lab-controls">
       <label v-for="c in constraints" :key="c.label" class="lab-check"><input v-model="c.on" type="checkbox" /> {{ c.label }}</label>
     </div>
     <div class="lab-readout" role="status">
+      <p>x = {{fmtPoint(point)}}. {{feasible?'Thỏa mọi ràng buộc đang bật.':`Vi phạm: ${violated.join(', ')}.`}}</p>
       <p v-if="empty" class="is-bad">Các ràng buộc đang bật mâu thuẫn nhau: đa diện rỗng. Bài toán tối ưu với miền khả thi này là bất khả thi.</p>
       <template v-else>
         <p>Đa diện là giao của {{ active.length }} nửa mặt phẳng{{ unbounded ? ' và không bị chặn: nó kéo dài ra vô hạn theo ít nhất một hướng.' : ', bị chặn, nên là một đa giác lồi.' }}</p>
@@ -71,3 +81,9 @@ const tight = p => active.value.filter(c => Math.abs(dot(c.a, p) - c.b) < 1e-7).
     </details>
   </figure>
 </template>
+
+<style scoped>
+.point-hit{fill:transparent!important;stroke:transparent}
+.point-hit:focus-visible{stroke:var(--vang)}
+svg text{pointer-events:none}
+</style>

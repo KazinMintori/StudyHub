@@ -59,7 +59,7 @@ const clip = `${uid}-cut-clip`
 <template>
   <figure class="study-lab" aria-label="Gradient tại một điểm loại bỏ nửa mặt phẳng">
     <p class="lab-title">Một gradient loại bỏ nửa mặt phẳng</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đường đồng mức, điểm x, gradient tại x và nửa mặt phẳng bị loại" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Đường đồng mức, điểm x, gradient tại x và nửa mặt phẳng bị loại" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs>
         <marker :id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="lab-arrow-accent" /></marker>
         <clipPath :id="clip"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath>
@@ -77,19 +77,19 @@ const clip = `${uid}-cut-clip`
         <circle :cx="P(x)[0]" :cy="P(x)[1]" r="9" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x" :aria-valuetext="fmtPoint(x)" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', x, $event)" />
       </g>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <p class="lab-legend"><span class="legend-warn">đường mức qua x</span><span class="legend-accent">hướng ∇f(x)</span><span class="legend-guide">đường vuông góc với gradient</span><span class="legend-bad">nửa mặt phẳng bị loại</span></p>
     <div class="lab-controls">
       <label>Hàm f = <select v-model="choice"><option v-for="(item, key) in catalog" :key="key" :value="key">{{ item.label }}</option></select></label>
     </div>
     <div class="lab-readout" role="status">
       <p>x = {{ fmtPoint(x) }}, f(x) = {{ fmt(fx, 3) }}, ∇f(x) = {{ fmtPoint(g, 3) }}.</p>
-      <p v-if="stationary && fn.convex">Gradient bằng 0 (hoặc gần như bằng 0) tại x. Với hàm lồi, điểm có gradient bằng 0 là một điểm cực tiểu toàn cục.</p>
+      <p v-if="stationary && fn.convex">Gradient đang nhỏ. Chỉ khi gradient đúng bằng 0 mới suy ra ngay cực tiểu toàn cục của hàm lồi; một ngưỡng số học chưa tự chứng minh điều đó.</p>
       <p v-else-if="stationary && fn.quasi" class="is-bad">Gradient gần như bằng 0, dù x còn rất xa điểm cực tiểu tại gốc. Xa gốc, hàm gần như phẳng, giống vùng bão hòa của hàm sigmoid, nên gradient hầu như không còn chỉ đường.</p>
       <p v-else-if="stationary" class="is-bad">Gradient bằng 0 (hoặc gần như bằng 0) tại x, nhưng hàm không lồi nên điều đó không bảo đảm x là cực tiểu. Hãy so f(x) với các đường mức xung quanh.</p>
       <p v-if="!degenerate && violators.length" class="is-bad">Có những điểm tốt hơn x nằm ngay trong nửa mặt phẳng tô đỏ (chấm đỏ). Với hàm không lồi, một gradient không đủ để loại bỏ nửa mặt phẳng.</p>
-      <p v-else-if="!degenerate" class="is-good">Mọi điểm y có f(y) &lt; f(x) đều nằm ở phía ∇f(x)ᵀ(y − x) &lt; 0. Chỉ một lần tính gradient đã loại được cả nửa mặt phẳng tô đỏ.</p>
-      <p v-if="fn.quasi && !degenerate && !violators.length">Hàm này không lồi, vậy mà phép loại vẫn đúng: điều được dùng thật sự là mọi tập mức dưới của nó đều lồi.</p>
+      <p v-else-if="!degenerate" class="is-good">Chưa thấy điểm tốt hơn trong vùng đỏ trên lưới lấy mẫu. Với hàm lồi, lý thuyết bảo đảm vùng ∇f(x)ᵀ(y − x) ≥ 0 không chứa điểm tốt hơn. Với hàm tựa lồi, bảo đảm tổng quát là tích vô hướng ≤ 0 tại các điểm không kém hơn.</p>
+      <p v-if="fn.quasi && !degenerate && !violators.length">Hàm này không lồi, vậy mà phép loại vẫn đúng: Tựa lồi bảo đảm nửa không gian không ngặt. Với riêng hàm này, có thể kiểm tra thêm tính ngặt ngoài điểm dừng.</p>
     </div>
     <details class="lab-tasks">
       <summary>Gợi ý thao tác</summary>
@@ -102,3 +102,8 @@ const clip = `${uid}-cut-clip`
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg :is(line,path,polygon),svg circle:not(.lab-handle){pointer-events:none}
+.lab-handle{stroke:transparent;stroke-width:32;paint-order:stroke}.lab-handle:focus-visible{stroke:var(--vang);stroke-width:4}
+</style>

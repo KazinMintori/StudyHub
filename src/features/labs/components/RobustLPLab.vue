@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { makeView, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import LabPointControls from './LabPointControls.vue'
 
 // LP bền vững (ví dụ tự đặt của chủ đề 8, Lecture 02): cực đại x₁ + 2x₂ với aᵢᵀx ≤ bᵢ, trong đó mỗi aᵢ chỉ biết
 // thuộc hình tròn tâm āᵢ bán kính ρ. Ràng buộc bền vững āᵢᵀx + ρ‖x‖₂ ≤ bᵢ là ràng buộc nón bậc hai.
@@ -38,6 +39,9 @@ const worstViolation = computed(() => {
 })
 const view = makeView({ x0: -1.6, x1: 3.6, y0: -1.6, y1: 2.6, width: 460, height: 372 })
 const P = (p) => [view.sx(p[0]), view.sy(p[1])]
+const svg=ref(null),trial=ref([1.2,1.1]),dragView=ref(view)
+const drag=createDragger(svg,dragView,(_,p)=>{trial.value=p},{step:.05,snap:.01})
+const trialSlacks=computed(()=>A.map((a,i)=>B[i]-dot(a,trial.value)-rho.value*Math.hypot(...trial.value)))
 const pts = (arr) => arr.map(p => P(p).join(',')).join(' ')
 const nominalPoly = boundary(0)
 const robustPoly = computed(() => boundary(rho.value))
@@ -47,8 +51,8 @@ const label = (i) => ['x₁ ≤ 3', 'x₂ ≤ 2', 'x₁ + x₂ ≤ 4', '−x₁ 
 <template>
   <figure class="study-lab" aria-label="LP bền vững với hệ số bất định trong hình tròn">
     <p class="lab-title">Cái giá của việc an toàn với mọi hệ số</p>
-    <p class="lab-lead">Miền nhạt là miền khả thi khi các hệ số aᵢ được biết chính xác. Khi mỗi aᵢ chỉ biết nằm trong một hình tròn bán kính ρ, các điểm phải thỏa ràng buộc với mọi hệ số có thể, và miền khả thi co lại thành miền tô đậm có biên cong.</p>
-    <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Miền khả thi danh nghĩa, miền khả thi bền vững, nghiệm danh nghĩa và nghiệm bền vững">
+    <p class="lab-lead">Kéo điểm thử x để kiểm tra từng ràng buộc. Miền nhạt là miền danh định. Khi mỗi hệ số aᵢ có thể lệch trong một hình tròn bán kính ρ, miền vững tô đậm giữ những điểm thỏa mọi hệ số có thể.</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Miền khả thi danh định, miền vững và điểm thử x kéo được" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line v-for="t in [-1, 0, 1, 2, 3]" :key="`gx${t}`" :x1="view.sx(t)" :x2="view.sx(t)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="t in [-1, 0, 1, 2]" :key="`gy${t}`" x1="0" :x2="view.width" :y1="view.sy(t)" :y2="view.sy(t)" class="lab-grid" />
       <line x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
@@ -60,12 +64,16 @@ const label = (i) => ['x₁ ≤ 3', 'x₂ ≤ 2', 'x₁ + x₂ ≤ 4', '−x₁ 
       <circle :cx="P(robust.x)[0]" :cy="P(robust.x)[1]" r="7" class="lab-dot-warn" />
       <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P([0.45, 0.9])[0]" :y2="P([0.45, 0.9])[1]" class="lab-accent" />
       <text :x="P([0.45, 0.9])[0] + 6" :y="P([0.45, 0.9])[1]" class="lab-small">c</text>
+      <circle :cx="P(trial)[0]" :cy="P(trial)[1]" r="7" :class="trialSlacks.every(v=>v>=-1e-9)?'lab-dot-accent':'lab-dot-bad'"/>
+      <circle :cx="P(trial)[0]" :cy="P(trial)[1]" r="35" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Điểm thử x của LP bền vững" :aria-valuetext="fmtPoint(trial)" @pointerdown="drag.start('x',$event)" @keydown="drag.key('x',trial,$event)"/>
     </svg>
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <p class="lab-legend"><span class="legend-accent">miền bền vững, hướng c</span><span class="legend-warn">nghiệm bền vững</span><span class="legend-guide">miền danh nghĩa (nhạt)</span></p>
     <div class="lab-controls">
       <label>Bán kính bất định ρ = {{ fmt(rho, 2) }}<input v-model.number="rho" type="range" min="0" max="0.6" step="0.01" /></label>
     </div>
     <div class="lab-readout" role="status">
+      <p>Điểm thử x = {{fmtPoint(trial)}}. {{trialSlacks.every(v=>v>=-1e-9)?'Điểm khả thi vững.':'Điểm chưa khả thi vững.'}} Độ dư nhỏ nhất bằng {{fmt(Math.min(...trialSlacks),3)}}. Độ dư âm nghĩa là có ràng buộc bị vượt trong trường hợp xấu nhất.</p>
       <p>Nghiệm danh nghĩa (ρ = 0): (2, 2), giá trị x₁ + 2x₂ = 6.</p>
       <p>Nghiệm bền vững: x = {{ fmtPoint(robust.x, 3) }}, giá trị <span class="is-accent">{{ fmt(robust.value, 3) }}</span>, thấp hơn {{ fmt(nominal.value - robust.value, 3) }} so với danh nghĩa. Ràng buộc chặt: {{ active.map(label).join(', ') || 'không có' }}.</p>
       <p v-if="rho > 0" :class="worstViolation > 1e-9 ? 'is-bad' : ''">Nếu vẫn dùng nghiệm danh nghĩa (2, 2), trong trường hợp xấu nhất có ràng buộc bị vượt {{ fmt(worstViolation, 3) }}, vì số hạng ρ‖x‖₂ = {{ fmt(rho * Math.hypot(2, 2), 3) }}.</p>
@@ -81,3 +89,10 @@ const label = (i) => ['x₁ ≤ 3', 'x₂ ≤ 2', 'x₁ + x₂ ≤ 4', '−x₁ 
     </details>
   </figure>
 </template>
+
+<style scoped>
+.point-hit{fill:transparent!important;stroke:transparent}
+.point-hit:focus-visible{stroke:var(--vang)}
+svg text{pointer-events:none}
+svg .lab-small{font-size:19px}
+</style>

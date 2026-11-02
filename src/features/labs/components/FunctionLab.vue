@@ -1,6 +1,9 @@
 <script setup>
 import { computed, ref, watch, useId } from 'vue'
-import { makeView, fmt } from '../controllers/svg-drag.js'
+import LabPointControls from './LabPointControls.vue'
+import {convexHull,clipPolygon} from '../services/convex-geometry.mjs'
+import { makeView, createDragger, fmt } from '../controllers/svg-drag.js'
+const svg=ref(null)
 const clipId = `${useId()}-clip`
 
 // Mô phỏng cho hàm một biến.
@@ -28,7 +31,7 @@ const lists = {
 }
 const choice = ref(props.initial && lists[props.type].includes(props.initial) ? props.initial : lists[props.type][0])
 const fn = computed(() => catalog[choice.value])
-const view = computed(() => makeView({ x0: -3, x1: 3, y0: fn.value.y[0], y1: fn.value.y[1], width: 440, height: 300 }))
+const view = computed(() => makeView({ x0: -3, x1: 3, y0: fn.value.y[0], y1: fn.value.y[1], width: 400, height: 300, pad:24 }))
 const P = (x, y) => [view.value.sx(x), view.value.sy(y)]
 const inView = y => y >= view.value.y0 - 0.5 && y <= view.value.y1 + 0.5
 const curveSegments = computed(() => {
@@ -45,7 +48,7 @@ const curveSegments = computed(() => {
 const a = ref(-1.5), b = ref(2), theta = ref(0.4)
 const z = computed(() => theta.value * a.value + (1 - theta.value) * b.value)
 const endpointsOk = computed(() => fn.value.dom(a.value) && fn.value.dom(b.value))
-const segmentInDomain = computed(() => { for (let i = 0; i <= 200; i++) { const t = i / 200; if (!fn.value.dom(t * a.value + (1 - t) * b.value)) return false } return true })
+const segmentInDomain=computed(()=>endpointsOk.value&&(choice.value!=='invSq'||a.value*b.value>0))
 const chordValue = computed(() => theta.value * fn.value.f(a.value) + (1 - theta.value) * fn.value.f(b.value))
 const graphValue = computed(() => (fn.value.dom(z.value) ? fn.value.f(z.value) : NaN))
 const worstGap = computed(() => {
@@ -75,10 +78,10 @@ const epiPolygons = computed(() => {
   for (let i = 0; i <= 480; i++) {
     const x = -3 + (6 * i) / 480
     if (!fn.value.dom(x)) { if (polys.at(-1).length) polys.push([]); continue }
-    const y = Math.min(Math.max(fn.value.f(x), v.y0 - 1), v.y1 + 1)
+    const y = Math.min(Math.max(fn.value.f(x), v.y0), v.y1)
     polys.at(-1).push([v.sx(x), v.sy(y)])
   }
-  return polys.filter(p => p.length > 1).map(p => [[p[0][0], -10], ...p, [p.at(-1)[0], -10]].map(q => q.join(',')).join(' '))
+  return polys.filter(p=>p.length>1).map(p=>clipFrame([[p[0][0],24],...p,[p.at(-1)[0],24]]).map(q=>q.join(',')).join(' '))
 })
 const sublevel = computed(() => {
   const intervals = []
@@ -95,18 +98,37 @@ const sublevel = computed(() => {
 // --- jensen ---
 const pts = ref([-2, 0.5, 2]), probs = ref([0.3, 0.5])
 const p3 = computed(() => Math.max(0, 1 - probs.value[0] - probs.value[1]))
+watch(()=>probs.value[0],p=>{probs.value[1]=Math.min(probs.value[1],1-p)})
+watch(()=>probs.value[1],p=>{probs.value[0]=Math.min(probs.value[0],1-p)})
 const weights = computed(() => { const raw = [probs.value[0], probs.value[1], p3.value], s = raw.reduce((u, v) => u + v, 0); return raw.map(v => v / s) })
 const jensenOk = computed(() => pts.value.every(x => fn.value.dom(x)))
 const mean = computed(() => weights.value.reduce((s, w, i) => s + w * pts.value[i], 0))
 const meanF = computed(() => weights.value.reduce((s, w, i) => s + w * fn.value.f(pts.value[i]), 0))
 const fMean = computed(() => fn.value.f(mean.value))
+
+const handleY=x=>fn.value.dom(x)&&fn.value.f(x)>=view.value.y0&&fn.value.f(x)<=view.value.y1?fn.value.f(x):0
+const handles=computed(()=>props.type==='chord'?[{key:'a',point:[a.value,handleY(a.value)],label:'Đầu mút a'},{key:'b',point:[b.value,handleY(b.value)],label:'Đầu mút b'}]:props.type==='tangent'?[{key:'x0',point:[x0.value,handleY(x0.value)],label:'Điểm tiếp xúc x₀'}]:props.type==='epigraph'?[{key:'alpha',point:[2.45,alpha.value],label:'Mức α của lát cắt'}]:pts.value.map((x,i)=>({key:String(i),point:[x,handleY(x)],label:`Giá trị x${i+1}`})))
+const handleText=h=>h.key==='alpha'?`α = ${fmt(alpha.value,4)}`:`x = ${fmt(h.point[0],4)}`
+const drag=createDragger(svg,view,(name,p)=>{
+ const x=Math.max(-2.8,Math.min(2.8,p[0]))
+ if(name==='a')a.value=x
+ else if(name==='b')b.value=x
+ else if(name==='x0')x0.value=x
+ else if(name==='alpha')alpha.value=p[1]
+ else pts.value=pts.value.map((v,i)=>String(i)===name?x:v)
+},{step:.1})
+const clipFrame=poly=>{for(const [a,b]of [[[1,0],400],[[-1,0],0],[[0,1],300],[[0,-1],0]])poly=clipPolygon(poly,a,b);return poly}
+const jensenHull=computed(()=>jensenOk.value?clipFrame(convexHull(pts.value.map(x=>P(x,fn.value.f(x))))):[])
+const clippedCurves=computed(()=>curveSegments.value.map(segment=>segment.split(' ').map(p=>p.split(',').map(Number)).filter(p=>p[1]>=0&&p[1]<=300).map(p=>p.join(',')).join(' ')))
+
 const titles = { chord: 'Đồ thị và dây cung', tangent: 'Tiếp tuyến tại một điểm', epigraph: 'Epigraph và tập mức dưới', jensen: 'Bất đẳng thức Jensen' }
 </script>
 
 <template>
   <figure class="study-lab" :aria-label="titles[type]">
     <p class="lab-title">{{ titles[type] }}</p>
-    <svg :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="`Đồ thị hàm ${fn.label}`">
+    <p class="lab-lead">Kéo trực tiếp chấm tím để đổi vị trí hoặc mức cắt. Nếu giá trị hàm ra ngoài khung hoặc không xác định, nút kéo nằm trên trục hoành để bạn vẫn đổi được đầu vào. Nút này không đại diện cho giá trị hàm khi ở trên trục.</p>
+    <svg ref="svg" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="`Đồ thị hàm ${fn.label}`">
       <defs><clipPath :id="clipId"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <line v-for="x in [-2, -1, 1, 2]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" /><line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" :y2="view.height" class="lab-axis" />
@@ -115,9 +137,9 @@ const titles = { chord: 'Đồ thị và dây cung', tangent: 'Tiếp tuyến t�
         <template v-if="type === 'epigraph'">
           <polygon v-for="(poly, i) in epiPolygons" :key="`e${i}`" :points="poly" class="lab-region-soft" />
           <line x1="0" :x2="view.width" :y1="view.sy(alpha)" :y2="view.sy(alpha)" class="lab-warn" />
-          <line v-for="(iv, i) in sublevel" :key="`s${i}`" :x1="view.sx(iv[0])" :x2="view.sx(iv[1])" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-good" style="stroke-width: 6" />
+          <line v-for="(iv, i) in sublevel" :key="`s${i}`" :x1="view.sx(iv[0])" :x2="view.sx(iv[1])" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-good" style="stroke-width: 3" />
         </template>
-        <polyline v-for="(seg, i) in curveSegments" :key="i" :points="seg" class="lab-line" style="stroke-width: 2.5" />
+        <polyline v-for="(seg, i) in clippedCurves" :key="i" :points="seg" class="lab-line" style="stroke-width: 2.5" />
         <template v-if="type === 'chord' && endpointsOk">
           <line :x1="P(a, fn.f(a))[0]" :y1="P(a, fn.f(a))[1]" :x2="P(b, fn.f(b))[0]" :y2="P(b, fn.f(b))[1]" class="lab-accent" />
           <line v-if="Number.isFinite(graphValue)" :x1="P(z, graphValue)[0]" :y1="P(z, graphValue)[1]" :x2="P(z, chordValue)[0]" :y2="P(z, chordValue)[1]" :class="graphValue <= chordValue + 1e-9 ? 'lab-good' : 'lab-bad'" />
@@ -131,14 +153,19 @@ const titles = { chord: 'Đồ thị và dây cung', tangent: 'Tiếp tuyến t�
           <circle :cx="P(x0, fn.f(x0))[0]" :cy="P(x0, fn.f(x0))[1]" r="7" class="lab-dot-warn" />
         </template>
         <template v-if="type === 'jensen' && jensenOk">
-          <polygon :points="pts.map(x => P(x, fn.f(x)).join(',')).join(' ')" class="lab-region-soft" />
+          <polygon :points="jensenHull.map(p=>p.join(',')).join(' ')" class="lab-region-soft" />
           <circle v-for="(x, i) in pts" :key="`j${i}`" :cx="P(x, fn.f(x))[0]" :cy="P(x, fn.f(x))[1]" :r="4 + 10 * weights[i]" class="lab-dot" />
           <line :x1="P(mean, fMean)[0]" :y1="P(mean, fMean)[1]" :x2="P(mean, meanF)[0]" :y2="P(mean, meanF)[1]" :class="meanF >= fMean - 1e-9 ? 'lab-good' : 'lab-bad'" />
           <circle :cx="P(mean, fMean)[0]" :cy="P(mean, fMean)[1]" r="6" class="lab-dot-warn" />
           <circle :cx="P(mean, meanF)[0]" :cy="P(mean, meanF)[1]" r="6" class="lab-dot-hollow" />
         </template>
       </g>
+      <g v-for="h in handles" :key="h.key">
+        <circle :cx="P(...h.point)[0]" :cy="P(...h.point)[1]" r="7" class="lab-dot-accent"/>
+        <circle :cx="P(...h.point)[0]" :cy="P(...h.point)[1]" r="27" class="lab-handle hit" tabindex="0" role="slider" :aria-label="h.label" :aria-valuetext="handleText(h)" @pointerdown="drag.start(h.key,$event)" @keydown="drag.key(h.key,h.point,$event)"/>
+      </g>
     </svg>
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <div class="lab-controls">
       <label>Hàm f(x) = <select v-model="choice"><option v-for="key in lists[type]" :key="key" :value="key">{{ catalog[key].label }}</option></select></label>
       <template v-if="type === 'chord'">
@@ -163,8 +190,8 @@ const titles = { chord: 'Đồ thị và dây cung', tangent: 'Tiếp tuyến t�
         <p v-else-if="!segmentInDomain" class="is-bad">Đoạn [a, b] đi qua điểm không thuộc miền xác định: miền không lồi, nên hàm không thể lồi dù đạo hàm bậc hai dương ở mọi nơi nó xác định.</p>
         <template v-else>
           <p>Tại z = θa + (1 − θ)b = {{ fmt(z) }}: f(z) = {{ fmt(graphValue) }}, còn dây cung cho θf(a) + (1 − θ)f(b) = {{ fmt(chordValue) }}. <span :class="graphValue <= chordValue + 1e-9 ? 'is-good' : 'is-bad'">{{ graphValue <= chordValue + 1e-9 ? 'Đồ thị nằm dưới dây cung.' : 'Đồ thị vượt lên trên dây cung.' }}</span></p>
-          <p v-if="worstGap && worstGap.gap > 1e-6" class="is-bad">Với cặp a, b này, đồ thị vượt dây cung nhiều nhất {{ fmt(worstGap.gap, 3) }} tại θ ≈ {{ fmt(worstGap.t) }}. Chỉ một vi phạm là đủ để kết luận hàm không lồi.</p>
-          <p v-else>Với cặp a, b này, đồ thị không vượt dây cung ở đâu cả. Định nghĩa còn đòi điều đó với mọi cặp a, b.</p>
+          <p v-if="worstGap && worstGap.gap > 1e-6" class="is-bad">Với cặp a, b này, mức vi phạm lớn nhất trên lưới lấy mẫu là {{ fmt(worstGap.gap, 3) }} tại θ ≈ {{ fmt(worstGap.t) }}. Chỉ một vi phạm là đủ để kết luận hàm không lồi.</p>
+          <p v-else>Các điểm lấy mẫu trên đoạn này chưa vi phạm dây cung. Đây là phép thử hữu hạn, không phải chứng minh cho cả đoạn. Định nghĩa còn đòi điều đó với mọi cặp a, b.</p>
         </template>
       </template>
       <template v-if="type === 'tangent'">
@@ -177,8 +204,8 @@ const titles = { chord: 'Đồ thị và dây cung', tangent: 'Tiếp tuyến t�
         </template>
       </template>
       <template v-if="type === 'epigraph'">
-        <p>Tập mức dưới {x : f(x) ≤ {{ fmt(alpha) }}} (vạch xanh trên trục) gồm {{ sublevel.length }} khoảng{{ sublevel.length ? ': ' + sublevel.map(iv => `[${fmt(iv[0])}, ${fmt(iv[1])}]`).join(', ') : '' }}{{ sublevel.some(iv => iv[1] >= 2.99 || iv[0] <= -2.99) ? ' (kéo dài ra ngoài khung nhìn)' : '' }}.</p>
-        <p>{{ sublevel.length <= 1 ? 'Tập mức dưới là một khoảng, tức là một tập lồi.' : 'Tập mức dưới gồm nhiều khoảng rời nhau, không lồi.' }} {{ choice === 'negExp' ? 'Hàm −eˣ lõm, vậy mà mọi tập mức dưới của nó đều lồi: chiều ngược của mệnh đề không đúng.' : '' }}</p>
+        <p>Phần tập mức dưới trong khung {x : f(x) ≤ {{ fmt(alpha) }}} (vạch xanh trên trục) gồm {{ sublevel.length }} khoảng{{ sublevel.length ? ': ' + sublevel.map(iv => `[${fmt(iv[0])}, ${fmt(iv[1])}]`).join(', ') : '' }}{{ sublevel.some(iv => iv[1] >= 2.99 || iv[0] <= -2.99) ? ' (kéo dài ra ngoài khung nhìn)' : '' }}.</p>
+        <p>{{ sublevel.length <= 1 ? 'Phần tập mức dưới trong khung là một khoảng hoặc rỗng, nên lồi.' : 'Tập mức dưới gồm nhiều khoảng rời nhau, không lồi.' }} {{ choice === 'negExp' ? 'Hàm −eˣ lõm, vậy mà mọi tập mức dưới của nó đều lồi: chiều ngược của mệnh đề không đúng.' : '' }}</p>
       </template>
       <template v-if="type === 'jensen'">
         <p v-if="!jensenOk" class="is-bad">Có điểm nằm ngoài miền xác định.</p>
@@ -190,3 +217,9 @@ const titles = { chord: 'Đồ thị và dây cung', tangent: 'Tiếp tuyến t�
     </div>
   </figure>
 </template>
+
+<style scoped>
+svg text{font-size:20px;pointer-events:none}svg .lab-small{font-size:18px}
+svg :is(line,path,polyline,polygon),svg circle:not(.lab-handle){pointer-events:none}
+.hit{fill:transparent!important;stroke:transparent}.hit:focus-visible{stroke:var(--vang)}
+</style>
