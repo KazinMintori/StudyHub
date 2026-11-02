@@ -40,7 +40,8 @@ export const parts = [
     lessons: [
       '07-hoc-may-co-giam-sat',
       '08-mang-no-ron-va-hoc-sau',
-      '09-suy-luan-trong-dieu-kien-bat-dinh'
+      '09-suy-luan-trong-dieu-kien-bat-dinh',
+      '10-hoc-may-trong-dieu-kien-bat-dinh'
     ]
   },
   {

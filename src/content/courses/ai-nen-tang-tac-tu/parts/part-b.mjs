@@ -204,7 +204,69 @@ export const lessons = [
         ]
       }
     ]
-  }
+  },
+  {
+  "number": 10,
+  "slug": "10-hoc-may-trong-dieu-kien-bat-dinh",
+  "title": "Học máy trong điều kiện bất định",
+  "prerequisites": [],
+  "supportingConcepts": [],
+  "status": "ready",
+  "lessonStatus": "ready",
+  "description": "Mô hình hóa bài toán học máy dưới lăng kính xác suất, học tham số qua phân phối Beta và Dirichlet, bộ phân loại Naive Bayes, cây quyết định xác suất, nguyên lý MDL, tiêu chí BIC, giải thuật k-means và EM cho phân cụm, học mạng niềm tin với biến ẩn và dữ liệu khuyết thiếu.",
+  "topicGroups": [
+    {
+      "title": "Các chủ đề trong chương",
+      "topics": [
+        {
+          "slug": "10-1-hoc-xac-suat",
+          "title": "10.1 Học xác suất và nguyên lý Bayes",
+          "question": "Nguyên lý Bayes và phân phối tiên nghiệm giải quyết hiện tượng quá khớp của ước lượng hợp lý cực đại (MLE) ra sao?"
+        },
+        {
+          "slug": "10-2-hoc-theo-quan-diem-bayes",
+          "title": "10.2 Học tham số và mô hình theo quan điểm Bayes",
+          "question": "Phân phối Beta, Dirichlet và bộ phân loại Naive Bayes cập nhật niềm tin xác suất và xử lý tần số bằng 0 như thế nào?"
+        },
+        {
+          "slug": "10-3-hoc-xac-suat-cay-quyet-dinh-va-do-dai-mo-ta",
+          "title": "10.3 Cây quyết định xác suất và độ dài mô tả tối thiểu",
+          "question": "Nguyên lý độ dài mô tả tối thiểu (MDL) và tiêu chí BIC thiết lập mối liên hệ giữa nén dữ liệu và suy diễn thống kê ra sao?"
+        },
+        {
+          "slug": "10-4-hoc-khong-giam-sat-va-phan-cum",
+          "title": "10.4 Học không giám sát và các giải thuật phân cụm",
+          "question": "Giải thuật k-means phân cụm cứng và giải thuật EM phân cụm mềm tối ưu hóa hàm mục tiêu luân phiên như thế nào?"
+        },
+        {
+          "slug": "10-5-hoc-mang-niem-tin",
+          "title": "10.5 Học mạng niềm tin với biến ẩn và dữ liệu khuyết thiếu",
+          "question": "Làm thế nào để học tham số và cấu trúc mạng niềm tin khi xuất hiện biến tiềm ẩn và các cơ chế dữ liệu khuyết thiếu?"
+        },
+        {
+          "slug": "10-6-tac-dong-xa-hoi",
+          "title": "10.6 Tác động xã hội và các hệ thống học máy tương tác",
+          "question": "Các mô hình Bayes hỗ trợ học cá nhân hóa bộ lọc thư rác và đối phó với tác tử đối kháng ra sao?"
+        },
+        {
+          "slug": "10-7-on-tap",
+          "title": "10.7 Ôn tập và hệ thống hóa kiến thức",
+          "question": "Làm thế nào để hệ thống hóa và lựa chọn đúng đắn giữa MLE, MAP, Full Bayesian, k-means, EM và BIC?"
+        },
+        {
+          "slug": "10-8-tai-lieu-tham-khao-va-doc-them",
+          "title": "10.8 Tài liệu tham khảo và đọc thêm",
+          "question": "Những công trình học thuật kinh điển nào đã định hình nên lý thuyết học máy xác suất và suy diễn đồ thị?"
+        },
+        {
+          "slug": "10-9-bai-tap",
+          "title": "10.9 Bài tập và lời giải chi tiết",
+          "question": "Phương pháp giải quyết lỗi chia cho 0 trong Naive Bayes, tối ưu hóa truy vấn O(|q|) và phân tích tính ổn định của k-means là gì?"
+        }
+      ]
+    }
+  ]
+}
 ]
 
 export const slides = [
@@ -357,5 +419,55 @@ export const slides = [
     "note": "09-suy-luan-trong-dieu-kien-bat-dinh",
     "formula": "",
     "example": ""
-  }
+  },
+  {
+  "title": "Học máy xác suất và Nguyên lý Bayes",
+  "bullets": [
+    "Ước lượng hợp lý cực đại (MLE) dễ dẫn tới quá khớp nghiêm trọng khi không gian mô hình đủ linh hoạt.",
+    "Ước lượng hậu nghiệm cực đại (MAP) tích hợp tiên nghiệm P(m) đóng vai trò là số hạng điều chuẩn tự nhiên theo Occam."
+  ],
+  "note": "10-hoc-may-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Phân phối Beta, Dirichlet và Naive Bayes",
+  "bullets": [
+    "Phân phối Beta và Dirichlet là các phân phối tiên nghiệm liên hợp, cập nhật hậu nghiệm bằng phép cộng số đếm giả.",
+    "Bộ phân loại Naive Bayes giả định các đặc trưng độc lập có điều kiện khi biết lớp; làm trơn Laplace ngăn chặn lỗi chia cho 0."
+  ],
+  "note": "10-hoc-may-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Nguyên lý Độ dài Mô tả Tối thiểu (MDL) và Tiêu chí BIC",
+  "bullets": [
+    "Shannon thiết lập liên hệ giữa xác suất và độ dài nén mã hóa; mô hình tốt nhất tối thiểu hóa tổng độ dài thông điệp hai phần.",
+    "Tiêu chí BIC xấp xỉ tiệm cận log-xác suất hậu nghiệm, phạt độ phức tạp mô hình bằng hình phạt (k/2) * ln(N) bit."
+  ],
+  "note": "10-hoc-may-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Phân cụm k-means và Giải thuật Cực đại hóa Kỳ vọng (EM)",
+  "bullets": [
+    "k-means tối ưu hóa luân phiên tổng bình phương khoảng cách Euclid giữa các điểm và tâm cụm (phân cụm cứng).",
+    "EM tổng quát hóa k-means trên không gian xác suất, luân phiên tính trách nhiệm mềm (bước E) và cập nhật tham số (bước M)."
+  ],
+  "note": "10-hoc-may-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+},
+  {
+  "title": "Học Mạng Niềm tin và Cơ chế Dữ liệu Khuyết thiếu",
+  "bullets": [
+    "Biến tiềm ẩn giúp giảm mạnh số lượng tham số CPT; giải thuật EM kết hợp Khử biến suy luận số đếm kỳ vọng.",
+    "Dữ liệu khuyết thiếu MCAR và MAR cho phép ước lượng nhất quán qua EM; dữ liệu NMAR bắt buộc mô hình hóa biến chỉ thị khuyết."
+  ],
+  "note": "10-hoc-may-trong-dieu-kien-bat-dinh",
+  "formula": "",
+  "example": ""
+}
 ]

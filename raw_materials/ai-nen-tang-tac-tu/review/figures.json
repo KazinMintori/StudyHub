@@ -523,5 +523,35 @@
     "source": "https://artint.info/3e/html/x103.png",
     "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x103.png",
     "caption": "Hình 9.30: Mô hình HMM đa cảm biến trong Bài tập 9.13"
+  },
+  "10-hoc-may-trong-dieu-kien-bat-dinh/x230.png": {
+    "source": "https://artint.info/3e/html/x230.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/10-hoc-may-trong-dieu-kien-bat-dinh/figures/x230.png",
+    "caption": "Hình 10.1: Giả định quan sát độc lập cùng phân phối (i.i.d.) biểu diễn bằng mạng niềm tin Bayes"
+  },
+  "10-hoc-may-trong-dieu-kien-bat-dinh/x105.png": {
+    "source": "https://artint.info/3e/html/x105.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/10-hoc-may-trong-dieu-kien-bat-dinh/figures/x105.png",
+    "caption": "Hình 10.2: Hai kết quả có thể xảy ra khi tung đinh ghim: Mặt sấp (Tails) và mặt ngửa (Heads)"
+  },
+  "10-hoc-may-trong-dieu-kien-bat-dinh/x106.png": {
+    "source": "https://artint.info/3e/html/x106.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/10-hoc-may-trong-dieu-kien-bat-dinh/figures/x106.png",
+    "caption": "Hình 10.3: Các dạng hàm mật độ xác suất của phân phối Beta ứng với các số lần đếm mẫu quan sát khác nhau"
+  },
+  "10-hoc-may-trong-dieu-kien-bat-dinh/x207.png": {
+    "source": "https://artint.info/3e/html/x207.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/10-hoc-may-trong-dieu-kien-bat-dinh/figures/x207.png",
+    "caption": "Hình 10.4: Mạng niềm tin tương ứng với bộ phân loại Bayes ngây thơ (Naive Bayes)"
+  },
+  "10-hoc-may-trong-dieu-kien-bat-dinh/x108.png": {
+    "source": "https://artint.info/3e/html/x108.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/10-hoc-may-trong-dieu-kien-bat-dinh/figures/x108.png",
+    "caption": "Hình 10.5: Giải thuật EM: Bộ phân loại Bayes với thuộc tính phân lớp tiềm ẩn (Hidden Class)"
+  },
+  "10-hoc-may-trong-dieu-kien-bat-dinh/x109.png": {
+    "source": "https://artint.info/3e/html/x109.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/10-hoc-may-trong-dieu-kien-bat-dinh/figures/x109.png",
+    "caption": "Hình 10.6: Suy diễn và học tham số xác suất trong mạng niềm tin khi xuất hiện biến ẩn E"
   }
 }

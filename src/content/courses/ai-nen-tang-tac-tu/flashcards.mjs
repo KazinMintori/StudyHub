@@ -189,5 +189,40 @@ export const flashcards = [
     "back": "Không bao giờ loại bỏ mẫu. Các biến bằng chứng được gán cứng theo giá trị quan sát và trọng số mẫu được tích lũy bằng tích xác suất các bằng chứng, tránh lãng phí khi bằng chứng hiếm gặp.",
     "category": "Suy luận trong điều kiện bất định",
     "lecture": "09-suy-luan-trong-dieu-kien-bat-dinh"
-  }
+  },
+  {
+  "id": "fc-artint-ch10-01",
+  "front": "Điểm khác biệt cốt lõi giữa Ước lượng hợp lý cực đại (MLE) và Ước lượng hậu nghiệm cực đại (MAP) là gì?",
+  "back": "MLE chỉ tối đa hóa xác suất dữ liệu P(E | m) nên dễ bị quá khớp khi không gian mô hình phong phú. MAP tối đa hóa tích P(E | m)P(m), trong đó tiên nghiệm P(m) đóng vai trò là số hạng điều chuẩn tự nhiên theo nguyên lý Dao cạo Occam.",
+  "category": "Học máy trong điều kiện bất định",
+  "lecture": "10-hoc-may-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch10-02",
+  "front": "Tại sao phân phối Beta và Dirichlet được gọi là phân phối tiên nghiệm liên hợp?",
+  "back": "Vì khi kết hợp với hàm hợp lý nhị thức hoặc đa thức, phân phối hậu nghiệm thu được vẫn thuộc cùng một họ phân phối (Beta hoặc Dirichlet), và việc cập nhật niềm tin được thực hiện trực tiếp bằng phép cộng số đếm thực nghiệm vào số đếm giả.",
+  "category": "Học máy trong điều kiện bất định",
+  "lecture": "10-hoc-may-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch10-03",
+  "front": "Tại sao bộ phân loại Naive Bayes bắt buộc phải sử dụng làm trơn Laplace?",
+  "back": "Nếu một từ vựng chưa từng xuất hiện cùng một lớp trong tập huấn luyện, tần suất thực nghiệm bằng 0 sẽ triệt tiêu toàn bộ tích xác suất của văn bản về 0, dẫn tới lỗi chia cho 0 khi chuẩn hóa. Làm trơn Laplace gán một xác suất nhỏ đồng đều để giải thuật vận hành ổn định.",
+  "category": "Học máy trong điều kiện bất định",
+  "lecture": "10-hoc-may-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch10-04",
+  "front": "Mối quan hệ toán học giữa Nguyên lý độ dài mô tả tối thiểu (MDL) và suy diễn Bayes là gì?",
+  "back": "Nguyên lý MDL (tối thiểu hóa tổng độ dài thông điệp hai phần gồm mô tả mô hình và dữ liệu nén qua mô hình) hoàn toàn tương đương với ước lượng hậu nghiệm cực đại MAP trong thang logarit cơ số 2.",
+  "category": "Học máy trong điều kiện bất định",
+  "lecture": "10-hoc-may-trong-dieu-kien-bat-dinh"
+},
+  {
+  "id": "fc-artint-ch10-05",
+  "front": "Bản chất của hai bước lặp (E-step và M-step) trong giải thuật EM là gì?",
+  "back": "Bước E sử dụng tham số hiện tại để suy luận phân phối xác suất hậu nghiệm (trách nhiệm mềm) của các biến tiềm ẩn. Bước M sử dụng các trách nhiệm mềm này như số đếm quan sát để cập nhật lại bộ tham số mới tối đa hóa log-hợp lý kỳ vọng.",
+  "category": "Học máy trong điều kiện bất định",
+  "lecture": "10-hoc-may-trong-dieu-kien-bat-dinh"
+}
 ]
