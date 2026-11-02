@@ -1,0 +1,9 @@
+import puppeteer from 'puppeteer'
+import {writeFile,mkdir} from 'node:fs/promises'
+import assert from 'node:assert/strict'
+const browser=await puppeteer.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'}),checks=[]
+try{const p=await browser.newPage();for(const width of [1280,375,360])for(const slug of ['05-tim-kiem-cuc-bo','05-csp']){
+ await p.setViewport({width,height:900});await p.goto(`http://127.0.0.1:5198/bieu-dien-tri-thuc/bai-giang/${slug}.html`,{waitUntil:'networkidle0',timeout:120000});await p.waitForSelector('.knowledge-review select');const count=await p.$$eval('.knowledge-review option',es=>es.length);assert.equal(count,slug==='05-csp'?12:15)
+ for(let i=0;i<count;i++){await p.select('.knowledge-review select',String(i));await p.waitForFunction(i=>document.querySelector('.review-counter').textContent.trim().startsWith(String(i+1)+' /'),{},i);const m=await p.$eval('.review-card',root=>({math:[...root.querySelectorAll('mjx-container')].flatMap(e=>{const svg=e.querySelector('svg')?.getBoundingClientRect(),r=e.parentElement.getBoundingClientRect();return svg&&(svg.width>r.width+2||svg.right>innerWidth+1)?[{text:e.textContent,svg:svg.width,parent:r.width}]:[]})}));checks.push({width,slug,card:i+1,...m});assert.deepEqual(m.math,[])}
+ await p.goto(`http://127.0.0.1:5198/bieu-dien-tri-thuc/bai-giang/${slug}.html#cheatsheet`,{waitUntil:'networkidle0',timeout:120000});await p.waitForSelector('.lecture-cheatsheet');assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);checks.push({width,slug,tab:'cheatsheet'})
+ }await mkdir('raw_materials/bieu-dien-tri-thuc/reviews/bai-06',{recursive:true});await writeFile('raw_materials/bieu-dien-tri-thuc/reviews/bai-06/review-panels.json',JSON.stringify({checks},null,2)+'\n');console.log(`PASS ${checks.length} complete review card and cheatsheet checks`)}finally{await browser.close()}
