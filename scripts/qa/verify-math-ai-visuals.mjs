@@ -93,6 +93,7 @@ async function sourceManifest() {
     ...routes.map(([,route])=>'docs'+route.replace(/\.html$/,'.md')),
     'src/features/labs/components/SlackLiftLab.vue','src/features/labs/components/MaxEpigraphLab.vue',
     'src/features/labs/components/EliminationLab.vue',
+    'src/features/labs/components/SensorWeightsLab.vue',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -313,7 +314,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
-  elimination:[[0,'Ví dụ x₁ + x₂ = 1'],[0,'Đưa z tới nghiệm'],[0,'Đi qua nghiệm tự do'],[0,'Pháp tuyến ngang'],[0,'Pháp tuyến dọc']],
+  elimination:[
+   [0,'Phương sai (1, 2, 3)'],[0,'Trọng số tối ưu'],[0,'Ví dụ có trọng số âm'],[0,'Thêm điều kiện trọng số không âm'],[0,'Chia đều ba trọng số'],
+   [0,'Cảm biến thứ ba nhiễu lớn'],[0,'Trọng số tối ưu'],[0,'Phương sai (1, 2, 3)'],
+   [1,'Ví dụ x₁ + x₂ = 1'],[1,'Đưa z tới nghiệm'],[1,'Đi qua nghiệm tự do'],[1,'Pháp tuyến ngang'],[1,'Pháp tuyến dọc']
+  ],
   equivalence:[
    [1,'Đầu vào R, cung trong R²'],[1,'Kéo A'],[1,'Kéo B'],[1,'Cho B trùng A'],[1,'Hai điểm đối xứng'],
    [1,'Đầu vào R², mặt trong R³'],[1,'Kéo A'],[1,'Kéo B'],[1,'Cho B trùng A'],[1,'Hai điểm đối xứng'],
@@ -343,9 +348,12 @@ async function exercisePresets(name,touch){
   await clickControl(found,touch)
   if(name==='elimination'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===0&&label==='Ví dụ có trọng số âm')assert(readout.includes('−0.2000'),'The negative-weight example must preserve an explicit negative weight')
+   if(index===0&&label==='Thêm điều kiện trọng số không âm')assert(readout.includes('Điểm bị giữ trong tam giác không âm.'),'The nonnegative condition must be active: '+readout)
+   if(index===0&&label==='Trọng số tối ưu')assert(/Phương sai tổng hợp = (0\.545455|0\.666223)/.test(readout),'Inverse-variance weights must match the independent optimum')
    if(label==='Đưa z tới nghiệm')assert(readout.includes('f(x*) = 2.667'),'The exact normalized constraint should recover objective 8/3')
    if(label==='Đi qua nghiệm tự do')assert(readout.includes('f(x*) = 0.000'),'Passing through the unconstrained optimum must give zero loss')
-   if(label.startsWith('Pháp tuyến')||label==='Ví dụ x₁ + x₂ = 1')await interact(touch,index)
+   if(label.startsWith('Pháp tuyến')||label==='Ví dụ x₁ + x₂ = 1'||index===0)await interact(touch,index)
   }
   if(name==='equivalence'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)

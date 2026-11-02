@@ -10,6 +10,26 @@ basis=np.array([[-1,-1],[1,0],[0,1]])
 assert np.array_equal(np.ones((1,3))@basis,[[0,0]])
 assert np.array_equal(basis.T@np.diag([2,4,6])@basis,[[6,2],[2,8]])
 assert F(1,1000)/(F(1)+F(1,2)+F(1,1000))==F(1,1501)
+sensor_gaps=0
+for variances in [[F(1),F(2),F(3)],[F(1),F(2),F(1000)]]:
+ inverse=[1/value for value in variances];normalization=sum(inverse)
+ best=[value/normalization for value in inverse];minimum=1/normalization
+ assert sum(best)==1 and all(value>0 for value in best)
+ for j in range(-2,11):
+  for k in range(-2,11):
+   weights=[1-F(j,10)-F(k,10),F(j,10),F(k,10)]
+   value=sum(v*x*x for v,x in zip(variances,weights))
+   excess=sum(v*(x-y)**2 for v,x,y in zip(variances,weights,best))
+   assert value-minimum==excess
+   sensor_gaps+=1
+ G=np.array([[float(variances[0]+variances[1]),float(variances[0])],[float(variances[0]),float(variances[0]+variances[2])]])
+ assert np.linalg.eigvalsh(G).min()>0
+ lower=np.linalg.cholesky(G)
+ for angle in np.linspace(0,2*math.pi,49):
+  for level in [.02,.08,.2,.5]:
+   q=np.array([math.cos(angle),math.sin(angle)])*math.sqrt(level)
+   delta=np.linalg.solve(lower.T,q)
+   assert math.isclose(float(delta@G@delta),level,rel_tol=1e-10,abs_tol=1e-12)
 
 for x in [F(-3),F(-1,2),F(0),F(1),F(5,2)]:
  y=-x/2
@@ -44,6 +64,6 @@ sequence=[math.exp(-k) for k in [1,2,4,8,16]]
 assert all(value>0 for value in sequence) and all(b<a for a,b in zip(sequence,sequence[1:]))
 # Orthonormal change of nullspace coordinates preserves the represented point.
 assert np.array_equal(np.array([1,2,3])@np.array([1,2,3]),14)
-report={'scope':'Independent numerical and algebraic source checks; no browser or AGY acceptance','sensor_weights':list(map(str,sensor)),'sensor_variance':'6/11','noisy_sensor_weight':'1/1501','regressions':regressions,'KKT_sign_examples':18,'unattained_inner_infimum_sequence':sequence}
+report={'scope':'Independent numerical and algebraic source checks; no browser or AGY acceptance','sensor_weights':list(map(str,sensor)),'sensor_variance':'6/11','noisy_sensor_weight':'1/1501','sensor_gap_certificates':sensor_gaps,'regressions':regressions,'KKT_sign_examples':18,'unattained_inner_infimum_sequence':sequence}
 Path('qa/math-ai-visuals/elimination-numerical.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
 print('PASS: sensor weights, nullspace Hessian, Schur elimination, centered regressions, KKT sign and unattained inner infimum.')
