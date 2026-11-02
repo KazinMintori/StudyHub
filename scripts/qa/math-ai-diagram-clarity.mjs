@@ -5,7 +5,7 @@ export function inspectDiagramClarity(){
  const issues=[]
  const visible=e=>{const s=getComputedStyle(e);return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0}
  const intersects=(a,b)=>({w:Math.min(a.right,b.right)-Math.max(a.left,b.left),h:Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)})
- for(const [index,svg]of [...document.querySelectorAll('.study-lab > svg,.study-lab > .lab-pair > svg')].entries()){
+ for(const [index,svg]of [...document.querySelectorAll('.study-lab > svg,.study-lab > .lab-pair > svg,.study-lab > .cooper-pair > div > svg')].entries()){
   const frame=svg.getBoundingClientRect()
   if(!frame.width||!frame.height)continue
   const lab=svg.closest('figure').getAttribute('aria-label')

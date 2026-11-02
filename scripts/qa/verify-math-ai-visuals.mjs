@@ -53,6 +53,7 @@ const routes = [
   ['elimination','/toan-cho-ai/bai-giang/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.html'],
   ['linear-program','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-tuyen-tinh.html'],
   ['lp-models','/toan-cho-ai/bai-giang/bai-02-tap-loi/mo-hinh-lp.html'],
+  ['fractional','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-phan-tuyen-tinh.html'],
   ['function-operations','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.html'],
   ['optimality','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.html'],
   ['ml-models','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.html'],
@@ -99,6 +100,7 @@ async function sourceManifest() {
     'src/features/labs/components/BisectionLab.vue','src/features/labs/components/MinimaxRatioLab.vue','src/features/labs/services/apollonius-feasibility.mjs',
     'src/features/labs/components/LPDirectionLab.vue','src/features/labs/components/LpCubeLab.vue','src/features/labs/services/linear-program-geometry.mjs',
     'src/features/labs/components/ChebyshevCenterLab.vue','src/features/labs/components/ChebyshevSpaceLab.vue','src/features/labs/components/MomentBoundsLab.vue','src/features/labs/services/lp-models-geometry.mjs',
+    'src/features/labs/components/FractionalLab.vue','src/features/labs/components/CharnesCooperLab.vue','src/features/labs/components/FractionalLimitLab.vue','src/features/labs/services/fractional-geometry.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -142,7 +144,7 @@ async function inspect(label) {
     }
     if (document.querySelector('mjx-merror,[data-mml-node="merror"]')) bad.push({ type: 'math-error' })
     for(const matrix of document.querySelectorAll('math.math-matrix'))if(/NaN|undefined/.test(matrix.textContent))bad.push({type:'matrix-invalid-number',text:matrix.textContent})
-    for (const svg of document.querySelectorAll('.study-lab > svg,.study-lab > .lab-pair > svg')) {
+    for (const svg of document.querySelectorAll('.study-lab > svg,.study-lab > .lab-pair > svg,.study-lab > .cooper-pair > div > svg')) {
       const vb = svg.viewBox.baseVal
       const outside = [...svg.querySelectorAll('text,polyline,polygon')].filter(e => {
         if (!e.getClientRects().length) return false
@@ -260,7 +262,7 @@ async function interact(touch,onlyLab=null) {
 }
 
 async function checkPageScroll(touch) {
-  const diagrams=await page.$$('.study-lab > svg,.study-lab > .lab-pair > svg')
+  const diagrams=await page.$$('.study-lab > svg,.study-lab > .lab-pair > svg,.study-lab > .cooper-pair > div > svg')
   for(const [index,svg]of diagrams.entries()){
     await page.evaluate(()=>document.activeElement?.blur())
     await svg.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}))
@@ -319,6 +321,12 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  fractional:[
+   [0,'Đỉnh cực đại'],[0,'Đỉnh cực tiểu'],[0,'Ngưỡng không đạt'],[0,'Điểm bên trong'],
+   [1,'Nghiệm cực đại'],[1,'Nghiệm cực tiểu'],[1,'Đổi góc nhìn R³'],[1,'Điểm ở trong miền'],
+   [2,'Tỉ số (x + 2)/(x + 1)'],[2,'Điểm giới hạn z = 0'],[2,'Một điểm rất xa'],[2,'Điểm hữu hạn x = 1'],
+   [2,'Tỉ số (x + 1)/(x + 1)'],[2,'Điểm giới hạn z = 0'],[2,'Điểm hữu hạn x = 1']
+  ],
   'lp-models':[
    [0,'Ngũ giác ban đầu'],[0,'Hình chữ nhật, nhiều tâm'],[0,'Kéo để chọn một tâm tối ưu'],[0,'Miền rỗng'],[0,'Ngũ giác ban đầu'],
    [1,'Bán kính bằng 0'],[1,'Một điểm khả thi'],[1,'Đỉnh tối ưu của LP'],[1,'Bán kính quá lớn'],[1,'Đổi góc nhìn'],[1,'Một điểm khả thi'],
@@ -369,6 +377,20 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='fractional'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===0){
+    if(label==='Đỉnh cực đại')assert(readout.includes('f(Q) = 2.75000'),'The maximum threshold must retain its singleton optimum')
+    if(label==='Đỉnh cực tiểu')assert(readout.includes('f(Q) = 1.14286'),'The minimum threshold must retain its singleton optimum')
+    if(label==='Ngưỡng không đạt')assert(readout.includes('Không có điểm trong tứ giác'),'An unattainable threshold must be empty')
+   }
+   if(index===1){
+    assert(readout.includes('Chuẩn hóa y₁ + 0.5y₂ + z = 1.000000'),'The projected point left its normalization plane')
+    if(label==='Nghiệm cực đại')assert(readout.includes('Tỉ số gốc f(x) = 2.750000'),'Changed variables must preserve the maximum')
+    if(label==='Nghiệm cực tiểu')assert(readout.includes('Tỉ số gốc f(x) = 1.142857'),'Changed variables must preserve the minimum')
+   }
+   if(index===2&&label==='Điểm giới hạn z = 0')assert(readout.includes('Không có x hữu hạn ứng với điểm đang chọn.'),'Zero z must never produce a finite inverse')
+  }
   if(name==='lp-models'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0&&label==='Hình chữ nhật, nhiều tâm')assert(readout.includes('r = 1.000000')&&readout.includes('tâm không duy nhất'),'Rectangle must retain the optimal center segment')
@@ -456,6 +478,10 @@ async function exercisePresets(name,touch){
    await interact(touch,index)
    await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+index+'-'+label)
   }
+  if(name==='fractional'&&(label==='Điểm bên trong'||label==='Điểm ở trong miền'||label==='Điểm hữu hạn x = 1')){
+   await interact(touch,index)
+   await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+index+'-'+label)
+  }
  }
  if(name==='equality-qp'){
   const select=await labs[0].$('.lab-controls select'),options=await select.$$eval('option',rows=>rows.map(e=>e.value))
@@ -533,7 +559,7 @@ try {
       }
       const labs = await page.$$('figure.study-lab')
       for (let i = 0; i < labs.length; i++) {
-       const panels=await labs[i].$$(':scope > svg,:scope > .lab-pair > svg')
+       const panels=await labs[i].$$(':scope > svg,:scope > .lab-pair > svg,:scope > .cooper-pair > div > svg')
        for(const [panelIndex,diagram]of panels.entries()){
         await diagram.evaluate(e => e.scrollIntoView({ block: 'center', behavior: 'instant' }))
         const box = await diagram.evaluate(e => { const r = e.getBoundingClientRect(); return { x: r.left + scrollX, y: r.top + scrollY, width: r.width, height: r.height } })
