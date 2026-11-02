@@ -154,5 +154,40 @@ export const flashcards = [
     "back": "Cho phép mọi cặp từ vựng trong chuỗi tương tác trực tiếp với độ dài đường dẫn O(1) bất kể khoảng cách, đồng thời xử lý song song toàn bộ ngữ cảnh mà không bị nghẽn cổ chai tuần tự.",
     "category": "Mạng nơ-ron và học sâu",
     "lecture": "08-mang-no-ron-va-hoc-sau"
+  },
+  {
+    "id": "fc-artint-ch9-01",
+    "front": "Bản chất nhận thức luận của xác suất Bayes trong trí tuệ nhân tạo là gì?",
+    "back": "Xác suất là thước đo mức độ thiếu tri thức của tác tử về thế giới, không phải đặc tính vật lý khách quan của vật thể. Định lý Bayes cập nhật niềm tin tiên nghiệm thành hậu nghiệm khi có bằng chứng mới.",
+    "category": "Suy luận trong điều kiện bất định",
+    "lecture": "09-suy-luan-trong-dieu-kien-bat-dinh"
+  },
+  {
+    "id": "fc-artint-ch9-02",
+    "front": "Tại sao tính độc lập có điều kiện lại có vai trò quyết định trong việc xây dựng mạng niềm tin?",
+    "back": "Nó cho phép phân rã phân phối đồng thời khổng lồ 2^n - 1 tham số thành tích các phân phối có điều kiện cục bộ P(Xi | parents(Xi)), giúp biểu diễn và tính toán trong thời gian đa thức.",
+    "category": "Suy luận trong điều kiện bất định",
+    "lecture": "09-suy-luan-trong-dieu-kien-bat-dinh"
+  },
+  {
+    "id": "fc-artint-ch9-03",
+    "front": "Cơ chế hoạt động cốt lõi của giải thuật Khử biến (Variable Elimination) là gì?",
+    "back": "Sử dụng tính chất phân phối để đẩy phép tính tổng cận biên vào sâu trong biểu thức tích, khử từng biến ẩn bằng cách nhân các nhân tử liên quan rồi cộng tổng, với độ phức tạp theo độ rộng cây.",
+    "category": "Suy luận trong điều kiện bất định",
+    "lecture": "09-suy-luan-trong-dieu-kien-bat-dinh"
+  },
+  {
+    "id": "fc-artint-ch9-04",
+    "front": "Hai giả thiết cơ bản tạo nên cấu trúc của Mô hình Markov ẩn (HMM) là gì?",
+    "back": "Giả thiết Markov (trạng thái hiện tại chỉ phụ thuộc trạng thái ngay trước đó) và giả thiết cảm biến (quan sát hiện tại chỉ phụ thuộc trạng thái ẩn hiện tại và độc lập với lịch sử đo đạc).",
+    "category": "Suy luận trong điều kiện bất định",
+    "lecture": "09-suy-luan-trong-dieu-kien-bat-dinh"
+  },
+  {
+    "id": "fc-artint-ch9-05",
+    "front": "Ưu điểm cốt lõi của giải thuật Likelihood Weighting so với Rejection Sampling là gì?",
+    "back": "Không bao giờ loại bỏ mẫu. Các biến bằng chứng được gán cứng theo giá trị quan sát và trọng số mẫu được tích lũy bằng tích xác suất các bằng chứng, tránh lãng phí khi bằng chứng hiếm gặp.",
+    "category": "Suy luận trong điều kiện bất định",
+    "lecture": "09-suy-luan-trong-dieu-kien-bat-dinh"
   }
 ]

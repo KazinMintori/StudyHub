@@ -132,6 +132,78 @@ export const lessons = [
         ]
       }
     ]
+  },
+  {
+    "number": 9,
+    "slug": "09-suy-luan-trong-dieu-kien-bat-dinh",
+    "title": "Suy luận trong điều kiện bất định",
+    "prerequisites": [],
+    "supportingConcepts": [],
+    "status": "ready",
+    "lessonStatus": "ready",
+    "description": "Nền tảng xác suất, tính độc lập có điều kiện, mạng niềm tin Bayes, các dạng bài toán suy luận xác suất, giải thuật Khử biến (Variable Elimination), xích Markov, HMM, định vị robot, mô hình ngôn ngữ n-gram, mô phỏng Monte Carlo và tác động xã hội.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "9-1-nen-tang-xac-suat",
+            "title": "9.1 Nền tảng xác suất",
+            "question": "Bản chất nhận thức luận của xác suất Bayes là gì và làm thế nào để cập nhật niềm tin khi có bằng chứng mới?"
+          },
+          {
+            "slug": "9-2-tinh-doc-lap-va-doc-lap-co-dieu-kien",
+            "title": "9.2 Tính độc lập và độc lập có điều kiện",
+            "question": "Làm thế nào tính độc lập có điều kiện phá vỡ sự bùng nổ hàm mũ của số lượng tham số xác suất?"
+          },
+          {
+            "slug": "9-3-mang-niem-tin-bayes",
+            "title": "9.3 Mạng niềm tin Bayes",
+            "question": "Cấu trúc đồ thị DAG và bảng CPD biểu diễn mối quan hệ nhân quả và nhân tử hóa phân phối đồng thời ra sao?"
+          },
+          {
+            "slug": "9-4-cac-dang-bai-toan-suy-luan-xac-suat",
+            "title": "9.4 Các dạng bài toán suy luận xác suất",
+            "question": "Tại sao suy luận xác suất chính xác lại thuộc lớp bài toán #P-hard và có những hướng tiếp cận nào?"
+          },
+          {
+            "slug": "9-5-suy-luan-xac-suat-chinh-xac",
+            "title": "9.5 Suy luận xác suất chính xác",
+            "question": "Thuật toán Khử biến (Variable Elimination) tối ưu hóa các phép toán trên nhân tử theo độ rộng cây như thế nào?"
+          },
+          {
+            "slug": "9-6-mo-hinh-xac-suat-theo-chuoi-thoi-gian",
+            "title": "9.6 Mô hình xác suất theo chuỗi thời gian",
+            "question": "Từ xích Markov, HMM đến mạng niềm tin động (DBN) đã giải quyết bài toán định vị robot và mô hình ngôn ngữ ra sao?"
+          },
+          {
+            "slug": "9-7-mo-phong-ngau-nhien-va-xap-xi",
+            "title": "9.7 Mô phỏng ngẫu nhiên và suy luận xấp xỉ",
+            "question": "Các phương pháp lấy mẫu thuận, lấy mẫu loại bỏ, lấy mẫu theo hàm hợp lý và MCMC/Gibbs sampling hoạt động như thế nào?"
+          },
+          {
+            "slug": "9-8-tac-dong-xa-hoi",
+            "title": "9.8 Tác động xã hội và đạo đức của suy luận trong điều kiện bất định",
+            "question": "Ứng dụng định vị thực tế trong GPS, xe tự hành và những cạm bẫy đạo đức, ngụy biện tư pháp nào đặt ra?"
+          },
+          {
+            "slug": "9-9-on-tap",
+            "title": "9.9 Ôn tập và tổng kết chương",
+            "question": "Làm thế nào để hệ thống hóa và lựa chọn thuật toán suy luận xác suất phù hợp nhất cho bài toán thực tế?"
+          },
+          {
+            "slug": "9-10-tai-lieu-tham-khao-va-doc-them",
+            "title": "9.10 Tài liệu tham khảo và đọc thêm",
+            "question": "Lược sử phát triển và các cột mốc học thuật của suy luận xác suất trong AI đã diễn ra như thế nào?"
+          },
+          {
+            "slug": "9-11-bai-tap",
+            "title": "9.11 Bài tập và lời giải chi tiết",
+            "question": "Phương pháp giải các bài toán chứng minh độc lập, mạng chẩn đoán lâm sàng, nghịch lý xe taxi và thuật toán Khử biến?"
+          }
+        ]
+      }
+    ]
   }
 ]
 
@@ -233,6 +305,56 @@ export const slides = [
       "Transformer loại bỏ hoàn toàn cấu trúc hồi quy tuần tự, mở ra kỷ nguyên huấn luyện song song quy mô lớn cho các mô hình nền tảng."
     ],
     "note": "08-mang-no-ron-va-hoc-sau",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Bản chất nhận thức luận của Xác suất Bayes",
+    "bullets": [
+      "Xác suất không phải là đặc tính vật lý khách quan mà là thước đo mức độ thiếu tri thức của tác tử trước thế giới.",
+      "Định lý Bayes cung cấp cơ chế toán học chặt chẽ để chuyển hóa niềm tin tiên nghiệm P(h) thành niềm tin hậu nghiệm P(h|e)."
+    ],
+    "note": "09-suy-luan-trong-dieu-kien-bat-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Mạng niềm tin Bayes và Nhân tử hóa",
+    "bullets": [
+      "Đồ thị có hướng không chu trình (DAG) mô hình hóa cấu trúc phụ thuộc nhân quả trực tiếp giữa các biến ngẫu nhiên.",
+      "Mỗi biến độc lập có điều kiện với các biến đứng trước khi biết tập nút cha, thu gọn phân phối đồng thời thành tích các nhân tử cục bộ."
+    ],
+    "note": "09-suy-luan-trong-dieu-kien-bat-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Thuật toán Khử biến (Variable Elimination)",
+    "bullets": [
+      "Quy hoạch động đẩy phép tính tổng cận biên vào sâu bên trong các tích nhân tử, tránh tính toán lặp thừa.",
+      "Độ phức tạp thời gian và không gian phụ thuộc trực tiếp vào độ rộng cây (Treewidth) của đồ thị mạng niềm tin."
+    ],
+    "note": "09-suy-luan-trong-dieu-kien-bat-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Mô hình Markov ẩn (HMM) và Định vị Robot",
+    "bullets": [
+      "Phân tách thế giới thành trạng thái ẩn tiến hóa theo thời gian và tín hiệu cảm biến quan sát được có nhiễu đo đạc.",
+      "Giải thuật Lọc Forward-Backward cho phép theo dõi và định vị vị trí robot chính xác theo thời gian thực."
+    ],
+    "note": "09-suy-luan-trong-dieu-kien-bat-dinh",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Mô phỏng ngẫu nhiên và MCMC",
+    "bullets": [
+      "Likelihood Weighting khắc phục tình trạng loại bỏ mẫu hiếm bằng cách gán cố định bằng chứng và tích lũy trọng số.",
+      "Lấy mẫu Gibbs thực hiện bước đi ngẫu nhiên qua Vùng đệm Markov (Markov Blanket), hội tụ tiệm cận về phân phối hậu nghiệm đúng."
+    ],
+    "note": "09-suy-luan-trong-dieu-kien-bat-dinh",
     "formula": "",
     "example": ""
   }

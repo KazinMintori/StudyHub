@@ -373,5 +373,155 @@
     "source": "https://artint.info/3e/html/x193.png",
     "local": "docs/ai-nen-tang-tac-tu/bai-giang/08-mang-no-ron-va-hoc-sau/figures/x193.png",
     "caption": "Hình 8.11: Cấu trúc bên trong của ô nhớ LSTM với các cổng điều khiển"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x74.png": {
+    "source": "https://artint.info/3e/html/x74.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x74.png",
+    "caption": "Hình 9.1: Không gian mười thế giới khả dĩ mô tả bởi hai biến ngẫu nhiên Boolean"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x75.png": {
+    "source": "https://artint.info/3e/html/x75.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x75.png",
+    "caption": "Hình 9.2: Mạng niềm tin Bayes cho bài toán chẩn đoán kết quả bài thi"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x76.png": {
+    "source": "https://artint.info/3e/html/x76.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x76.png",
+    "caption": "Hình 9.3: Mạng niềm tin cho bài toán báo động rời phòng"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x77.png": {
+    "source": "https://artint.info/3e/html/x77.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x77.png",
+    "caption": "Hình 9.4: Mạng niềm tin cho bài toán chẩn đoán y tế bệnh cúm"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x78.png": {
+    "source": "https://artint.info/3e/html/x78.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x78.png",
+    "caption": "Hình 9.5: Mạng niềm tin biểu diễn miền mạch điện và các thiết bị đóng ngắt"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x172.png": {
+    "source": "https://artint.info/3e/html/x172.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x172.png",
+    "caption": "Hình 9.6: Cây quyết định biểu diễn tính độc lập đặc thù ngữ cảnh (Context-specific)"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x80.png": {
+    "source": "https://artint.info/3e/html/x80.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x80.png",
+    "caption": "Hình 9.7: Cổng Noisy-OR biểu diễn phân phối xác suất có điều kiện nhiều biến cha"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x81.png": {
+    "source": "https://artint.info/3e/html/x81.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x81.png",
+    "caption": "Hình 9.8: Mạng niềm tin dạng chuỗi đơn giản minh họa thuật toán khử biến"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x224.png": {
+    "source": "https://artint.info/3e/html/x224.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x224.png",
+    "caption": "Hình 9.9: Không gian tìm kiếm của giải thuật ngây thơ và giải thuật khử biến đệ quy"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x83.png": {
+    "source": "https://artint.info/3e/html/x83.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x83.png",
+    "caption": "Hình 9.10: Xích Markov bậc một biểu diễn dưới dạng mạng niềm tin"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x84.png": {
+    "source": "https://artint.info/3e/html/x84.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x84.png",
+    "caption": "Hình 9.11: Mô hình Markov ẩn (HMM) với trạng thái ẩn và các biến quan sát"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x85.png": {
+    "source": "https://artint.info/3e/html/x85.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x85.png",
+    "caption": "Hình 9.12: Mạng niềm tin định vị vị trí robot di động trong không gian"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x86.png": {
+    "source": "https://artint.info/3e/html/x86.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x86.png",
+    "caption": "Hình 9.13: Miền không gian định vị của robot trong hành lang thực nghiệm"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x87.png": {
+    "source": "https://artint.info/3e/html/x87.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x87.png",
+    "caption": "Hình 9.14: Phân phối hậu nghiệm xác suất vị trí robot sau khi nhận quan sát cảm biến"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x88.png": {
+    "source": "https://artint.info/3e/html/x88.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x88.png",
+    "caption": "Hình 9.15: Định vị robot tích hợp đa cảm biến đồng thời"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x89.png": {
+    "source": "https://artint.info/3e/html/x89.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x89.png",
+    "caption": "Hình 9.16: Mạng niềm tin động hai giai đoạn (2TBN) dự báo giá nguyên liệu giấy"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x90.png": {
+    "source": "https://artint.info/3e/html/x90.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x90.png",
+    "caption": "Hình 9.17: Mạng niềm tin động mở rộng trải theo trục thời gian"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x225.png": {
+    "source": "https://artint.info/3e/html/x225.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x225.png",
+    "caption": "Hình 9.18: Mô hình ngôn ngữ tập hợp từ (Set-of-words)"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x92.png": {
+    "source": "https://artint.info/3e/html/x92.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x92.png",
+    "caption": "Hình 9.19: Mạng Bayes ngây thơ kết hợp mô hình tập hợp từ cho phân loại văn bản"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x226.png": {
+    "source": "https://artint.info/3e/html/x226.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x226.png",
+    "caption": "Hình 9.20: Mô hình túi từ (Bag-of-words / Unigram)"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x227.png": {
+    "source": "https://artint.info/3e/html/x227.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x227.png",
+    "caption": "Hình 9.21: Mô hình ngôn ngữ Bigram (chuỗi phụ thuộc bậc một)"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x228.png": {
+    "source": "https://artint.info/3e/html/x228.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x228.png",
+    "caption": "Hình 9.22: Mô hình ngôn ngữ Trigram (chuỗi phụ thuộc bậc hai)"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x229.png": {
+    "source": "https://artint.info/3e/html/x229.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x229.png",
+    "caption": "Hình 9.23: Mô hình gõ bàn phím dự đoán từ tiếp theo"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x200.png": {
+    "source": "https://artint.info/3e/html/x200.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x200.png",
+    "caption": "Hình 9.24: Mô hình chủ đề phân bổ Dirichlet tiềm ẩn (Topic Model)"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x201.png": {
+    "source": "https://artint.info/3e/html/x201.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x201.png",
+    "caption": "Hình 9.25: Hàm phân phối xác suất tích lũy (CDF) và phương pháp lấy mẫu nghịch đảo"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x202.png": {
+    "source": "https://artint.info/3e/html/x202.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x202.png",
+    "caption": "Hình 9.26: Mạng niềm tin chẩn đoán đơn giản trong Bài tập 9.4"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x203.png": {
+    "source": "https://artint.info/3e/html/x203.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x203.png",
+    "caption": "Hình 9.27: Mạng niềm tin chẩn đoán máy chiếu trong Bài tập 9.5"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x204.png": {
+    "source": "https://artint.info/3e/html/x204.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x204.png",
+    "caption": "Hình 9.28: Mạng niềm tin năm biến trong Bài tập 9.7"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x205.png": {
+    "source": "https://artint.info/3e/html/x205.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x205.png",
+    "caption": "Hình 9.29: Mạng niềm tin hệ thống van tàu ngầm hạt nhân trong Bài tập 9.6"
+  },
+  "09-suy-luan-trong-dieu-kien-bat-dinh/x103.png": {
+    "source": "https://artint.info/3e/html/x103.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/09-suy-luan-trong-dieu-kien-bat-dinh/figures/x103.png",
+    "caption": "Hình 9.30: Mô hình HMM đa cảm biến trong Bài tập 9.13"
   }
 }
