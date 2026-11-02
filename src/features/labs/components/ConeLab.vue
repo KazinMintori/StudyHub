@@ -3,6 +3,7 @@ import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, scale, dot, norm2, cross2, clipPolygon, polyhedronInBox } from '../services/convex-geometry.mjs'
+import {placePointLabels} from '../services/diagram-labels.mjs'
 import { planeParameters } from '../services/foundation-geometry.mjs'
 const clipId = `${useId()}-clip`
 
@@ -78,6 +79,8 @@ const dualGens = computed(() => {
 const dualCone = computed(() => (dualGens.value ? planarCone(dualGens.value) : null))
 const yIn = computed(() => dot(vecs.value.y, vecs.value.v1) >= -1e-9 && dot(vecs.value.y, vecs.value.v2) >= -1e-9)
 const halfplaneOfY = computed(() => norm2(vecs.value.y)<1e-9?{kind:'plane',from:0,sweep:TWO_PI}:planarCone([[-vecs.value.y[1], vecs.value.y[0]], vecs.value.y, [vecs.value.y[1], -vecs.value.y[0]]]))
+const isDualLine=computed(()=>Math.abs(cross2(vecs.value.v1,vecs.value.v2))<1e-9&&dot(vecs.value.v1,vecs.value.v2)<0)
+const labels=computed(()=>placePointLabels((props.type==='dual'?['v1','v2','y']:useThird.value?['v1','v2','v3']:['v1','v2']).map(name=>({key:name,text:name==='y'?'y':name==='v1'?'v₁':name==='v2'?'v₂':'v₃',point:P(vecs.value[name])})),{width:440,height:330}))
 const dualPolygon=computed(()=>polyhedronInBox([vecs.value.v1,vecs.value.v2].map(a=>({a:scale(-1,a),b:0})),[-4,4,-3,3]))
 </script>
 
@@ -102,17 +105,17 @@ const dualPolygon=computed(()=>polyhedronInBox([vecs.value.v1,vecs.value.v2].map
         </template>
         <template v-else>
           <polygon v-if="halfplaneOfY" :points="wedgePolygon(halfplaneOfY).map(p => P(p).join(',')).join(' ')" class="lab-region-soft" />
-          <polygon :points="wedgePolygon(planarCone([vecs.v1, vecs.v2])).map(p => P(p).join(',')).join(' ')" class="lab-region" />
+          <line v-if="isDualLine" :x1="P(scale(-9,vecs.v1))[0]" :y1="P(scale(-9,vecs.v1))[1]" :x2="P(scale(9,vecs.v1))[0]" :y2="P(scale(9,vecs.v1))[1]" class="lab-accent"/><polygon v-else :points="wedgePolygon(planarCone([vecs.v1, vecs.v2])).map(p => P(p).join(',')).join(' ')" class="lab-region" />
           <polygon :points="dualPolygon.map(p => P(p).join(',')).join(' ')" class="lab-good-fill" opacity="0.55" />
           <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(vecs.y)[0]" :y2="P(vecs.y)[1]" :class="yIn ? 'lab-good' : 'lab-bad'" />
         </template>
       </g>
       <line v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="`l${name}`" :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P(vecs[name])[0]" :y2="P(vecs[name])[1]" class="lab-line" />
       <circle v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="name" :cx="P(vecs[name])[0]" :cy="P(vecs[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Vector ${name}`" :aria-valuetext="fmtPoint(vecs[name])" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, vecs[name], $event)" />
-      <text v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="`t${name}`" :x="Math.min(view.width-25,P(vecs[name])[0]+12)" :y="Math.max(20,P(vecs[name])[1]-8)">{{ name === 'v1' ? 'v₁' : name === 'v2' ? 'v₂' : 'v₃' }}</text>
+      <text v-for="name in (type === 'conic' && useThird ? ['v1', 'v2', 'v3'] : ['v1', 'v2'])" :key="`t${name}`" :x="labels[name].x" :y="labels[name].y" :text-anchor="labels[name].anchor">{{ name === 'v1' ? 'v₁' : name === 'v2' ? 'v₂' : 'v₃' }}</text>
       <template v-if="type === 'dual'">
         <circle :cx="P(vecs.y)[0]" :cy="P(vecs.y)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Vector thử y" :aria-valuetext="fmtPoint(vecs.y)" @pointerdown="drag.start('y', $event)" @keydown="drag.key('y', vecs.y, $event)" />
-        <text :x="P(vecs.y)[0] + 12" :y="P(vecs.y)[1] + 18">y</text>
+        <text :x="labels.y.x" :y="labels.y.y" :text-anchor="labels.y.anchor">y</text>
       </template>
     </svg>
     <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" /></details>
@@ -130,7 +133,7 @@ const dualPolygon=computed(()=>polyhedronInBox([vecs.value.v1,vecs.value.v2].map
         <p>yᵀv₁ = {{ fmt(dot(vecs.y, vecs.v1)) }} và yᵀv₂ = {{ fmt(dot(vecs.y, vecs.v2)) }}.</p>
         <p v-if="yIn"><span class="is-good">Cả hai tích vô hướng đều không âm, nên y thuộc K*.</span> Nửa mặt phẳng nhạt {x : yᵀx ≥ 0} chứa trọn nón K.</p>
         <p v-else><span class="is-bad">Có một tích vô hướng âm, nên y không thuộc K*.</span> Nửa mặt phẳng nhạt {x : yᵀx ≥ 0} không chứa trọn K.</p>
-        <p v-if="!dualCone">Hai vector sinh thẳng hàng. Hãy kéo chúng ra để nón K có góc mở dương.</p>
+        <p v-if="!dualCone">Hai vector sinh thẳng hàng hoặc có vector bằng 0. Điều kiện tích vô hướng vẫn xác định nón đối ngẫu, dù hình học có thể là một tia, một đường thẳng, một nửa mặt phẳng hoặc cả mặt phẳng.</p>
       </template>
     </div>
     <details class="lab-tasks">
@@ -150,6 +153,7 @@ const dualPolygon=computed(()=>polyhedronInBox([vecs.value.v1,vecs.value.v2].map
 </template>
 
 <style scoped>
+svg text{font-size:20px}svg .lab-small{font-size:18px}
 svg :is(text,line,polygon,path),svg circle:not(.lab-handle){pointer-events:none}
 .lab-handle:not(.combo-hit){stroke:transparent;stroke-width:34;paint-order:stroke}
 .lab-handle:not(.combo-hit):focus-visible{stroke:var(--vang);stroke-width:4}

@@ -1,6 +1,7 @@
 <script setup>
 import LabPointControls from './LabPointControls.vue'
 import { computed, ref } from 'vue'
+import {placePointLabels} from '../services/diagram-labels.mjs'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { add, sub, scale, dot, norm2, convexHull, closestPolygons, polygonsIntersect, insideConvexPolygon } from '../services/convex-geometry.mjs'
 
@@ -69,8 +70,30 @@ const normal = computed(() => {
   return [Math.cos(a), Math.sin(a)]
 })
 const supportOk = computed(() => pentagon.every(v => dot(normal.value, v) <= dot(normal.value, boundary.value.point) + 1e-9))
-const centerHandle = name => name
+const supportLabels=computed(()=>placePointLabels([
+ {key:'point',text:'x₀',point:P(boundary.value.point)},
+ {key:'normal',text:'a',point:P(add(boundary.value.point,scale(1.7,normal.value)))}
+],{width:view.value.width,height:view.value.height}))
+const normalTip=computed(()=>add(boundary.value.point,scale(1.7,normal.value)))
+function moveBoundary(value){
+ let best=null,walk=0
+ for(let i=0;i<pentagon.length;i++){
+  const a=pentagon[i],d=sub(pentagon[(i+1)%pentagon.length],a)
+  const t=Math.max(0,Math.min(1,dot(sub(value,a),d)/dot(d,d)))
+  const p=add(a,scale(t,d)),distance=norm2(sub(value,p))
+  if(!best||distance<best.distance)best={distance,parameter:(walk+t*perimeter[i])/total}
+  walk+=perimeter[i]
+ }
+ sParam.value=Math.min(.999,best.parameter)
+}
 const drag = createDragger(svg, view, (name, value) => {
+  if(name==='boundary'){moveBoundary(value);return}
+  if(name==='normal'&&boundary.value.vertex!==undefined){
+    const vertex=boundary.value.vertex,n1=outward((vertex+pentagon.length-1)%pentagon.length),n2=outward(vertex)
+    const from=Math.atan2(n1[1],n1[0]);let to=Math.atan2(n2[1],n2[0]);while(to<from)to+=2*Math.PI
+    const d=sub(value,boundary.value.point);let angle=Math.atan2(d[1],d[0]);while(angle<from-Math.PI)angle+=2*Math.PI;while(angle>from+Math.PI)angle-=2*Math.PI
+    fan.value=Math.max(0,Math.min(1,(angle-from)/(to-from)));return
+  }
   if (name === 'A' || name === 'B') centers.value = { ...centers.value, [name]: value }
   else if (name.startsWith('x')) classX.value = classX.value.map((p, i) => (`x${i}` === name ? value : p))
   else if (name.startsWith('y')) classY.value = classY.value.map((p, i) => (`y${i}` === name ? value : p))
@@ -79,8 +102,8 @@ const drag = createDragger(svg, view, (name, value) => {
 
 <template>
   <figure class="study-lab" :aria-label="type === 'support' ? 'Siêu phẳng tựa của một đa giác lồi' : 'Siêu phẳng phân tách hai tập lồi'">
-    <p class="lab-title">{{ type === 'sets' ? 'Một siêu phẳng giữa hai tập lồi rời nhau' : type === 'data' ? 'Tách hai lớp dữ liệu với lề lớn nhất' : 'Siêu phẳng tựa tại một điểm biên' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'support' ? 'Ngũ giác lồi, một điểm trên biên và đường thẳng tựa tại điểm đó' : 'Hai tập, cặp điểm gần nhất và đường thẳng phân tách'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p class="lab-title">{{ type === 'sets' ? 'Một siêu phẳng giữa hai tập lồi rời nhau' : type === 'data' ? 'Tách hai nhóm dữ liệu với lề lớn nhất' : 'Siêu phẳng tựa tại một điểm biên' }}</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="type === 'support' ? 'Ngũ giác lồi, một điểm trên biên và đường thẳng tựa tại điểm đó' : 'Hai tập, cặp điểm gần nhất và đường thẳng phân tách'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line :x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-grid" /><line :y1="0" :y2="view.height" :x1="view.sx(0)" :x2="view.sx(0)" class="lab-grid" />
 
       <template v-if="type === 'sets'">
@@ -92,7 +115,7 @@ const drag = createDragger(svg, view, (name, value) => {
           <circle :cx="P(closest.p)[0]" :cy="P(closest.p)[1]" r="5" class="lab-dot" /><circle :cx="P(closest.q)[0]" :cy="P(closest.q)[1]" r="5" class="lab-dot" />
           <text :x="P(closest.p)[0] - 14" :y="P(closest.p)[1] + 18">c</text><text :x="P(closest.q)[0] + 6" :y="P(closest.q)[1] + 18">d</text>
         </template>
-        <circle v-for="name in ['A', 'B']" :key="name" :cx="P(centers[name])[0]" :cy="P(centers[name])[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" :aria-label="`Tâm của tập ${name === 'A' ? 'C' : 'D'}, kéo để dời tập`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, centers[name], $event)" />
+        <circle v-for="name in ['A', 'B']" :key="name" :cx="P(centers[name])[0]" :cy="P(centers[name])[1]" r="9" class="lab-handle lab-handle-alt" :aria-valuetext="fmtPoint(centers[name],3)" tabindex="0" role="slider" :aria-label="`Tâm của tập ${name === 'A' ? 'C' : 'D'}, kéo để dời tập`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, centers[name], $event)" />
         <text :x="P(centers.A)[0] - 6" :y="P(centers.A)[1] - 14">C</text><text :x="P(centers.B)[0] - 6" :y="P(centers.B)[1] - 14">D</text>
       </template>
 
@@ -105,21 +128,25 @@ const drag = createDragger(svg, view, (name, value) => {
           </template>
           <line :x1="P(gap.p)[0]" :y1="P(gap.p)[1]" :x2="P(gap.q)[0]" :y2="P(gap.q)[1]" class="lab-warn" />
         </template>
-        <circle v-for="(p, i) in classX" :key="`x${i}`" :cx="P(p)[0]" :cy="P(p)[1]" r="8" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm lớp thứ nhất số ${i + 1}`" @pointerdown="drag.start(`x${i}`, $event)" @keydown="drag.key(`x${i}`, p, $event)" />
-        <rect v-for="(p, i) in classY" :key="`y${i}`" :x="P(p)[0] - 8" :y="P(p)[1] - 8" width="16" height="16" class="lab-handle lab-handle-alt" tabindex="0" role="slider" :aria-label="`Điểm lớp thứ hai số ${i + 1}`" @pointerdown="drag.start(`y${i}`, $event)" @keydown="drag.key(`y${i}`, p, $event)" />
+        <circle v-for="(p, i) in classX" :key="`x${i}`" :cx="P(p)[0]" :cy="P(p)[1]" r="8" class="lab-handle" :aria-valuetext="fmtPoint(p,3)" tabindex="0" role="slider" :aria-label="`Điểm lớp thứ nhất số ${i + 1}`" @pointerdown="drag.start(`x${i}`, $event)" @keydown="drag.key(`x${i}`, p, $event)" />
+        <rect v-for="(p, i) in classY" :key="`y${i}`" :x="P(p)[0] - 8" :y="P(p)[1] - 8" width="16" height="16" class="lab-handle lab-handle-alt" :aria-valuetext="fmtPoint(p,3)" tabindex="0" role="slider" :aria-label="`Điểm lớp thứ hai số ${i + 1}`" @pointerdown="drag.start(`y${i}`, $event)" @keydown="drag.key(`y${i}`, p, $event)" />
       </template>
 
       <template v-else>
         <polygon :points="pentagon.map(p => P(p).join(',')).join(' ')" class="lab-region" />
         <line v-if="linePath(boundary.point, [-normal[1], normal[0]])" v-bind="linePath(boundary.point, [-normal[1], normal[0]])" :class="supportOk ? 'lab-accent' : 'lab-bad'" />
         <line :x1="P(boundary.point)[0]" :y1="P(boundary.point)[1]" :x2="P(add(boundary.point, scale(1.2, normal)))[0]" :y2="P(add(boundary.point, scale(1.2, normal)))[1]" class="lab-warn" />
-        <text :x="P(add(boundary.point, scale(1.35, normal)))[0]" :y="P(add(boundary.point, scale(1.35, normal)))[1]" class="lab-small">a</text>
-        <circle :cx="P(boundary.point)[0]" :cy="P(boundary.point)[1]" r="7" class="lab-dot-warn" />
-        <text :x="P(boundary.point)[0] + 8" :y="P(boundary.point)[1] + 18">x₀</text>
+        <text :x="supportLabels.normal.x" :y="supportLabels.normal.y" :text-anchor="supportLabels.normal.anchor">a</text>
+        <circle :cx="P(boundary.point)[0]" :cy="P(boundary.point)[1]" r="8" class="lab-dot-warn"/>
+        <text :x="supportLabels.point.x" :y="supportLabels.point.y" :text-anchor="supportLabels.point.anchor">x₀</text>
+        <circle :cx="P(boundary.point)[0]" :cy="P(boundary.point)[1]" r="29" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Điểm x₀ trên biên đa giác" :aria-valuetext="fmtPoint(boundary.point,4)" @pointerdown="drag.start('boundary',$event)" @keydown="drag.key('boundary',boundary.point,$event)"/>
+        <circle v-if="boundary.vertex!==undefined" :cx="P(normalTip)[0]" :cy="P(normalTip)[1]" r="7" class="lab-dot-accent"/>
+
       </template>
     </svg>
     <LabPointControls :svg="svg" />
 
+    <div v-if="type==='support'" class="lab-buttons"><button type="button" @click="sParam=0">Tựa tại đỉnh</button><button type="button" @click="sParam=.5*perimeter[0]/total">Tựa giữa cạnh</button></div>
     <div v-if="type === 'support'" class="lab-controls">
       <label>Vị trí x₀ trên biên: {{ fmt(sParam) }}<input v-model.number="sParam" type="range" min="0" max="0.999" step="0.004" /></label>
       <label v-if="boundary.vertex !== undefined">Chọn pháp tuyến trong chùm: {{ fmt(fan) }}<input v-model.number="fan" type="range" min="0" max="1" step="0.02" /></label>
@@ -133,10 +160,10 @@ const drag = createDragger(svg, view, (name, value) => {
         </template>
       </template>
       <template v-else-if="type === 'data'">
-        <p v-if="dataIntersect" class="is-bad">Hai bao lồi giao nhau, nên không đường thẳng nào tách được hai lớp: có một điểm nằm trong bao lồi của cả hai lớp.</p>
+        <p v-if="dataIntersect" class="is-bad">Hai bao lồi giao nhau, nên không đường thẳng nào phân tách nghiêm ngặt hai lớp: Có một điểm nằm trong bao lồi của cả hai lớp.</p>
         <template v-else>
           <p>Hai bao lồi cách nhau {{ fmt(gap.distance) }}. Đường tím là trung trực của đoạn nối hai điểm gần nhất, và dải giữa hai đường nét đứt có bề rộng bằng đúng khoảng cách đó.</p>
-          <p>Theo §8.6.1 của sách, đây là đường tách có lề lớn nhất: lề (một nửa bề rộng dải) bằng {{ fmt(gap.distance / 2) }}.</p>
+          <p>Đây là đường tách có lề lớn nhất. Lề, tức một nửa bề rộng dải, bằng {{ fmt(gap.distance / 2) }}.</p>
         </template>
       </template>
       <template v-else>
@@ -161,3 +188,11 @@ const drag = createDragger(svg, view, (name, value) => {
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg text{font-size:20px;pointer-events:none}svg .lab-small{font-size:18px}
+svg :is(line,polygon,path),svg circle:not(.lab-handle){pointer-events:none}
+.lab-handle:not(.point-hit){stroke:transparent;stroke-width:30;paint-order:stroke}
+.lab-handle:not(.point-hit):focus-visible{stroke:var(--vang);stroke-width:4}
+.point-hit{fill:transparent!important;stroke:transparent}.point-hit:focus-visible{stroke:var(--vang)}
+</style>

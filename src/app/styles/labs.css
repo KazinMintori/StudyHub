@@ -1,5 +1,5 @@
 /* Khung chung cho các mô phỏng tương tác của chương tối ưu lồi. Chỉ dùng biến token. */
-.study-lab { margin: 32px 0; padding: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--canvas); color: var(--ink); font-family: var(--font-ui); }
+.study-lab { margin: 32px 0; padding: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-lg); background: var(--canvas); color: var(--ink); font-family: var(--font-ui); overflow-anchor: none; }
 .study-lab .lab-title { font-size: var(--fs-read); font-weight: 600; margin: 0 0 var(--space-2); line-height: 1.4; }
 .study-lab .lab-lead { font: var(--fs-ui)/1.6 var(--font-read); color: var(--ink-2); margin: 0 0 var(--space-4); }
 .study-lab svg { display: block; width: 100%; height: auto; max-height: 420px; background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); }

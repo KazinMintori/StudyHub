@@ -47,6 +47,15 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['known-functions','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/cac-ham-loi-quen-thuoc.html'],
+  ['convex-function','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/ham-loi.html'],
+  ['epigraph','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/epigraph-tap-muc-duoi-jensen.html'],
+  ['first-order','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-nhat.html'],
+  ['second-order','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-bac-hai.html'],
+  ['perspective','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phoi-canh-va-phan-tuyen-tinh.html'],
+  ['order','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/bat-dang-thuc-tong-quat.html'],
+  ['separation','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/sieu-phang-phan-tach-va-tua.html'],
+  ['dual-cone','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/non-doi-ngau.html'],
   ['lecture00', '/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang.html'],
   ['least-norm', '/toan-cho-ai/bai-giang/bai-00-on-tap-nen-tang/he-thieu-xac-dinh-va-giai-tich-ma-tran.html'],
   ['affine', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/duong-thang-va-tap-affine.html'],
@@ -75,7 +84,7 @@ async function sourceManifest() {
   const paths = [
     ...routes.map(([,route])=>'docs'+route.replace(/\.html$/,'.md')),
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
-    ...['FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
+    ...['PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
   for(const [,route]of routes){
     const notes='docs'+route.replace(/\.html$/,'.md'),source=await readFile(notes,'utf8')
@@ -111,6 +120,7 @@ async function inspect(label) {
       if(rect.width&&(rect.right>targetWidth+2||rect.left < -2))bad.push({type:'matrix-overflow',text:element.textContent,width:rect.width})
     }
     if (document.querySelector('mjx-merror,[data-mml-node="merror"]')) bad.push({ type: 'math-error' })
+    for(const matrix of document.querySelectorAll('math.math-matrix'))if(/NaN|undefined/.test(matrix.textContent))bad.push({type:'matrix-invalid-number',text:matrix.textContent})
     for (const svg of document.querySelectorAll('.study-lab > svg,.study-lab > .lab-pair > svg')) {
       const vb = svg.viewBox.baseVal
       const outside = [...svg.querySelectorAll('text,polyline,polygon')].filter(e => {
@@ -186,7 +196,13 @@ async function interact(touch) {
     const events=await page.evaluate(()=>window.__labPointerEvents)
     assert(events.some(e=>e.type==='pointerdown'&&e.pointerType===(touch?'touch':'mouse')&&e.trusted),'Expected real input pointer events')
     assert(events.some(e=>e.type==='pointermove'&&e.captured),`Pointer was not captured during drag: ${page.url()}, lab ${i}, handle ${handleIndex}, ${JSON.stringify(events)}`)
-    assert(Math.abs((await page.evaluate(()=>scrollY))-initialScroll)<2,'Dragging a handle scrolled the page')
+    const finalScroll=await page.evaluate(()=>scrollY)
+    if(Math.abs(finalScroll-initialScroll)>=2){
+      const diagnostic={url:page.url(),lab:i,handle:handleIndex,initialScroll,finalScroll,box,before,after,events,viewport:await page.evaluate(()=>({height:innerHeight,visualHeight:visualViewport.height,visualTop:visualViewport.offsetTop,scale:visualViewport.scale,active:document.activeElement?.outerHTML.slice(0,250)}))}
+      await writeFile(`${evidencePath}/scroll-during-drag.json`,JSON.stringify(diagnostic,null,2))
+      console.log(JSON.stringify(diagnostic))
+    }
+    assert(Math.abs(finalScroll-initialScroll)<2,'Dragging a handle scrolled the page')
     interactions.push({url:page.url(),width:page.viewport().width,input:touch?'touch':'mouse',lab:i,handle:handleIndex,before,after,offCenterGrab:true,pageStayedStill:true,events})
     await handle.evaluate(e => e.focus())
     for (const key of ['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft']) {
@@ -281,6 +297,12 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'known-functions':[[0,'a = −1'],[0,'a = 0'],[0,'a = 1/2'],[0,'a = 1'],[0,'a = 2']],
+  'convex-function':[[1,'Yên ngựa vi phạm dây cung'],[1,'Cái bát lồi']],
+  epigraph:[[2,'q = (0.5, 0.5)'],[2,'q = (0.1, 0.9)'],[2,'Hậu nghiệm (0.25, 0.75)'],[2,'Một xác suất bằng 0']],
+  perspective:[[2,'Hai khối lượng bằng nhau'],[2,'Biến cố có xác suất 0'],[2,'Ví dụ 5/9']],
+  separation:[[1,'Chỉ phân tách không ngặt'],[1,'Ngặt, khoảng cách bằng 0'],[1,'Mạnh, có dải đệm'],[2,'Tựa tại đỉnh'],[2,'Tựa giữa cạnh'],[4,'R³: Thêm đặc trưng tích'],[4,'R²: XOR chưa tách được']],
+  'dual-cone':[[1,'K*: Có cả biên'],[1,'K**: Bao đóng của K'],[1,'K: Thiếu hai tia biên'],[1,'Điểm trên tia biên'],[1,'Điểm trong K'],[1,'Gốc thuộc cả ba nón']],
   'equality-qp':[[0,'Đưa x về tối ưu'],[0,'Đưa ν về tối ưu']],
   sensitivity:[[0,'Chỉ dùng hai ràng buộc đầu'],[0,'Chỉ dùng ràng buộc thứ ba'],[1,'b = 1'],[1,'b = 3'],[1,'b = 2.2, neo tại 2']],
   certificates:[[0,'Đường tối ưu'],[0,'Chứng chỉ tối ưu'],[1,'Phân phối tối ưu'],[1,'Nhân tử tối ưu']],
@@ -295,6 +317,25 @@ async function exercisePresets(name,touch){
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
   await inspect(`${name}-${page.viewport().width}-${touch?'touch':'mouse'}-preset-${label}`)
+  const panels=await labs[index].$$(':scope > svg,:scope > .lab-pair > svg')
+  for(const [panelIndex,diagram]of panels.entries()){
+    await diagram.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}))
+    const stateName=label.replace(/[^\p{L}\p{N}-]+/gu,'-').slice(0,85)
+    const theme=await page.evaluate(()=>document.documentElement.classList.contains('dark')?'dark':'light')
+    await diagram.screenshot({path:`${evidencePath}/${name}-${page.viewport().width}-${theme}-preset-${stateName}-${panelIndex}.png`})
+  }
+  if(name==='odd-cycle'&&label==='Đưa phân hoạch thành Gram hạng 1'){
+   const select=await labs[index].$('.lab-point-options select'),handle=(await labs[index].$$('.lab-handle'))[0]
+   await select.evaluate(e=>{e.closest('details').open=true})
+   await select.select('0')
+   const before=await handle.evaluate(e=>e.getAttribute('aria-valuetext'))
+   const up=await labs[index].$('.lab-point-directions button[aria-label="Dịch điểm lên trên"]')
+   await clickControl(up,touch)
+   assert.notEqual(await handle.evaluate(e=>e.getAttribute('aria-valuetext')),before,'Cannot adjust an individual vector when its endpoint overlaps the others')
+   await select.evaluate(e=>{e.blur();e.closest('details').open=false})
+   await inspect(`${name}-separate-one-coincident-vector`)
+   interactions.push({url:page.url(),width:page.viewport().width,input:touch?'touch':'mouse',coincidentVectorSelector:true})
+  }
   interactions.push({url:page.url(),width:page.viewport().width,input:touch?'touch':'mouse',preset:label,lab:index,readout:await labs[index].$eval('.lab-readout',e=>e.innerText)})
  }
  if(name==='equality-qp'){
@@ -313,6 +354,23 @@ async function exercisePresets(name,touch){
  if(name==='odd-cycle')assert((await labs[0].$eval('.lab-readout',e=>e.innerText)).includes('bằng 0.000000'),'SDP optimal preset did not reach its certified bound')
 }
 
+async function exerciseFunctionChoices(name,touch){
+ if(!['convex-function','epigraph','first-order','second-order'].includes(name))return
+ const selects=await page.$$('figure.study-lab .lab-controls select')
+ for(const [index,select]of selects.entries()){
+  const original=await select.evaluate(e=>e.value)
+  const options=await select.$$eval('option',rows=>rows.map(e=>e.value))
+  for(const option of options){
+   await select.select(option)
+   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))
+   assert.equal(await select.evaluate(e=>e.value),option)
+   await inspect(`${name}-${page.viewport().width}-function-${index}-${option}`)
+   results.push(`${name}-function-${index}-${option}`)
+  }
+  await select.select(original)
+ }
+}
+
 try {
   for (const theme of (process.env.QA_THEMES || 'light,dark').split(',')) for (const width of (process.env.QA_WIDTHS || '360,375,1440').split(',').map(Number)) {
     const touch=process.env.QA_INPUT?process.env.QA_INPUT==='touch':width<600
@@ -320,11 +378,12 @@ try {
     for (const [name, route] of routes) {
       const response = await page.goto(base + route, { waitUntil: 'networkidle0', timeout: 120000 })
       assert.equal(response.status(), 200)
-      await page.waitForSelector('.study-lab .lab-handle', { timeout: 60000 })
+      await page.waitForSelector('.study-lab .lab-handle, vite-error-overlay', { timeout: 60000 })
+      assert(!await page.$('vite-error-overlay'),`Preview compilation failed at ${route}; inspect qa-dev.log`)
       await page.evaluate(() => document.fonts.ready)
       await page.evaluate(theme => document.documentElement.classList.toggle('dark', theme === 'dark'), theme)
       await inspect(`${name}-${width}-${theme}-initial`)
-      if(!process.env.QA_LAYOUT_ONLY){await interact(touch);if(name==='odd-cycle')await checkCycleButtons(touch);await checkPageScroll(touch);await exercisePresets(name,touch)}
+      if(!process.env.QA_LAYOUT_ONLY){await interact(touch);if(name==='odd-cycle')await checkCycleButtons(touch);await checkPageScroll(touch);await exercisePresets(name,touch);await exerciseFunctionChoices(name,touch)}
       // Exercise 3D/2D mode switches and singular/degenerate presets via controls.
       if (name === 'lecture00') {
         for (const text of ['Vector dự đoán trong R³', 'Miền đầu vào R²', 'Mặt mật độ trong R³']) {

@@ -19,6 +19,7 @@ const placeholders = {
 <template>
   <button ref="trigger" type="button" class="feedback-trigger" aria-label="Góp ý hoặc báo lỗi" aria-haspopup="dialog" aria-controls="feedback-dialog" title="Góp ý hoặc báo lỗi" @click="show">
     <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5A8.5 8.5 0 0 1 10.5 3h2A8.5 8.5 0 0 1 21 11.5Z" /><path d="M7 9h9M7 13h6" /></svg>
+    <span>Góp ý hoặc báo lỗi</span>
   </button>
   <Teleport to="body">
     <dialog id="feedback-dialog" ref="dialog" class="feedback-dialog" aria-labelledby="feedback-title" @cancel.stop.prevent="close" @close="onClose" @click="onBackdropClick">
@@ -87,6 +88,11 @@ const placeholders = {
 <style scoped>
 .feedback-trigger { position: fixed; right: max(var(--space-4), env(safe-area-inset-right)); bottom: max(var(--space-4), env(safe-area-inset-bottom)); z-index: 22; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; width: 46px; height: 46px; padding: 0; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--paper); color: var(--ink-2); cursor: pointer; transition: color var(--motion-fast), border-color var(--motion-fast); }
 .feedback-trigger:hover { color: var(--tim); border-color: var(--tim); }
+.feedback-trigger span { display: none; }
+@media (max-width: 1279px) {
+  .feedback-trigger { position: static; display: flex; width: fit-content; min-width: 46px; min-height: 46px; height: auto; margin: var(--space-4) auto; padding: var(--space-2) var(--space-4); gap: var(--space-2); }
+  .feedback-trigger span { display: inline; }
+}
 svg { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .feedback-dialog { position: fixed; inset: auto var(--space-4) var(--space-4) auto; box-sizing: border-box; width: min(420px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); overflow-y: auto; margin: 0; padding: var(--space-5); border: 1px solid var(--rule); border-radius: var(--radius-xl); background: var(--paper); color: var(--ink); box-shadow: var(--shadow); font: var(--fs-small)/1.6 var(--font-ui); }
 .feedback-dialog::backdrop { background: var(--scrim); opacity: .25; }

@@ -1,8 +1,9 @@
 <script setup>
 import LabPointControls from './LabPointControls.vue'
 import { computed, ref, useId } from 'vue'
+import {placePointLabels} from '../services/diagram-labels.mjs'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
-import { add, scale, sub, dot } from '../services/convex-geometry.mjs'
+import { add, scale, sub, dot, clipPolygon } from '../services/convex-geometry.mjs'
 const clipId = `${useId()}-clip`
 
 // Thứ tự sinh bởi nón K = cone{k₁, k₂} trong R²: x ⪯ y khi y − x ∈ K.
@@ -14,7 +15,10 @@ const view = ref(makeView({ x0: -0.5, x1: 7, y0: -0.5, y1: 7, width: 400, height
 const P = p => view.value.point(p)
 const pts = ref([[1, 6.5], [2.5, 4], [4.5, 2.5], [3.5, 6], [5.5, 4.5], [6.5, 1], [6, 6]])
 const selected = ref(1)
-const drag = createDragger(svg, view, (name, value) => { pts.value = pts.value.map((p, i) => (String(i) === name ? value : p)) }, { step: 0.1, snap: 0.1 })
+const drag = createDragger(svg, view, (name, value) => {
+ if(name==='lambda'){lamAngle.value=Math.max(-30,Math.min(120,Math.atan2(value[1]-.3,value[0]-.3)*180/Math.PI));return}
+ pts.value = pts.value.map((p, i) => (String(i) === name ? value : p))
+}, { step: 0.1 })
 const ang1 = ref(0), ang2 = ref(90), lamAngle = ref(40)
 const dir = a => [Math.cos((a * Math.PI) / 180), Math.sin((a * Math.PI) / 180)]
 const k1 = computed(() => dir(ang1.value)), k2 = computed(() => dir(ang2.value))
@@ -28,7 +32,11 @@ function inK(v) {
 const precedes = (x, y) => inK(sub(y, x))
 const minimal = computed(() => pts.value.map((x, i) => !pts.value.some((y, j) => j !== i && precedes(y, x) && !precedes(x, y))))
 const minimum = computed(() => pts.value.findIndex(x => pts.value.every(y => precedes(x, y))))
-const wedge = (x, sign) => [x, add(x, scale(sign * 12, k1.value)), add(x, scale(sign * 12, add(k1.value, k2.value))), add(x, scale(sign * 12, k2.value))]
+const wedge = (x, sign) => {
+ let polygon=[x,add(x,scale(sign*12,k1.value)),add(x,scale(sign*12,add(k1.value,k2.value))),add(x,scale(sign*12,k2.value))]
+ for(const [a,b]of [[[1,0],7],[[-1,0],.5],[[0,1],7],[[0,-1],.5]])polygon=clipPolygon(polygon,a,b)
+ return polygon
+}
 const lambda = computed(() => dir(lamAngle.value))
 const values = computed(() => pts.value.map(p => dot(lambda.value, p)))
 const best = computed(() => values.value.indexOf(Math.min(...values.value)))
@@ -38,12 +46,14 @@ const levelLine = computed(() => {
 })
 const dualOk = computed(() => dot(lambda.value, k1.value) > 1e-9 && dot(lambda.value, k2.value) > 1e-9)
 const label = i => String.fromCharCode(65 + i)
+const labels=computed(()=>placePointLabels(pts.value.map((p,i)=>({key:i,text:label(i),point:P(p)})),{width:400,height:400}))
+const lambdaTip=computed(()=>add([.3,.3],scale(1.5,lambda.value)))
 </script>
 
 <template>
   <figure class="study-lab" :aria-label="type === 'order' ? 'Thứ tự sinh bởi một nón và các phần tử tối thiểu' : 'Tìm phần tử tối thiểu bằng tổng có trọng số'">
     <p class="lab-title">{{ type === 'order' ? 'So sánh các điểm theo một nón' : 'Vô hướng hóa: cực tiểu λᵀz trên tập điểm' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Tập điểm, nón dời tới một điểm đang chọn và các phần tử tối thiểu" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Tập điểm, nón dời tới một điểm đang chọn và các phần tử tối thiểu" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clipId"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <line v-for="x in [1, 2, 3, 4, 5, 6]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line v-for="y in [1, 2, 3, 4, 5, 6]" :key="`gy${y}`" :y1="view.sy(y)" :y2="view.sy(y)" x1="0" :x2="view.width" class="lab-grid" />
@@ -59,17 +69,18 @@ const label = i => String.fromCharCode(65 + i)
       </g>
       <g v-for="(p, i) in pts" :key="i">
         <circle v-if="type === 'order' && minimum === i" :cx="P(p)[0]" :cy="P(p)[1]" r="15" class="lab-warn" />
-        <circle :cx="P(p)[0]" :cy="P(p)[1]" :r="(type === 'pareto' && best === i) || selected === i ? 11 : 9" :class="minimal[i] ? 'lab-handle' : 'lab-handle lab-handle-alt'" tabindex="0" role="slider" :aria-label="`Điểm ${label(i)}`" @pointerdown="selected = i; drag.start(String(i), $event)" @keydown="drag.key(String(i), p, $event)" @focus="selected = i" />
-        <text :x="P(p)[0] + 12" :y="P(p)[1] - 10">{{ label(i) }}</text>
+        <circle :cx="P(p)[0]" :cy="P(p)[1]" :r="(type === 'pareto' && best === i) || selected === i ? 11 : 9" :class="minimal[i] ? 'lab-handle' : 'lab-handle lab-handle-alt'" tabindex="0" role="slider" :aria-label="`Điểm ${label(i)}`" :aria-valuetext="fmtPoint(p,3)" @pointerdown="selected = i; drag.start(String(i), $event)" @keydown="drag.key(String(i), p, $event)" @focus="selected = i" />
+        <text :x="labels[i].x" :y="labels[i].y" :text-anchor="labels[i].anchor">{{ label(i) }}</text>
       </g>
       <line v-if="type === 'pareto'" :x1="view.sx(0.3)" :y1="view.sy(0.3)" :x2="P(add([0.3, 0.3], scale(1.2, lambda)))[0]" :y2="P(add([0.3, 0.3], scale(1.2, lambda)))[1]" class="lab-accent" />
-      <text v-if="type === 'pareto'" :x="P(add([0.3, 0.3], scale(1.35, lambda)))[0]" :y="P(add([0.3, 0.3], scale(1.35, lambda)))[1]" class="lab-small">λ</text>
+      <circle v-if="type==='pareto'" :cx="P(lambdaTip)[0]" :cy="P(lambdaTip)[1]" r="9" class="lab-handle lab-handle-alt" tabindex="0" role="slider" aria-label="Hướng của trọng số λ" :aria-valuetext="fmt(lamAngle,3)" @pointerdown="drag.start('lambda',$event)" @keydown="drag.key('lambda',lambdaTip,$event)"/>
+      <text v-if="type === 'pareto'" :x="P(lambdaTip)[0]+20" :y="P(lambdaTip)[1]-15" class="lab-small">λ</text>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <div class="lab-controls">
       <template v-if="type === 'order'">
-        <label>Góc của k₁: {{ ang1 }}°<input v-model.number="ang1" type="range" min="-60" max="80" step="5" @input="ang2 = Math.max(ang2, ang1 + 10)" /></label>
-        <label>Góc của k₂: {{ ang2 }}°<input v-model.number="ang2" type="range" min="10" max="170" step="5" @input="ang1 = Math.min(ang1, ang2 - 10)" /></label>
+        <label>Góc của k₁: {{ ang1 }}°<input v-model.number="ang1" type="range" min="-60" max="80" step="5" @input="ang2 = Math.min(ang1+170,Math.max(ang2, ang1 + 10))" /></label>
+        <label>Góc của k₂: {{ ang2 }}°<input v-model.number="ang2" type="range" min="10" max="170" step="5" @input="ang1 = Math.max(ang2-170,Math.min(ang1, ang2 - 10))" /></label>
       </template>
       <label v-else>Hướng của λ: {{ lamAngle }}°<input v-model.number="lamAngle" type="range" min="-30" max="120" step="1" /></label>
     </div>
@@ -99,3 +110,9 @@ const label = i => String.fromCharCode(65 + i)
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg text{font-size:20px;pointer-events:none}svg .lab-small{font-size:20px}
+svg :is(line,polygon,path),svg circle:not(.lab-handle){pointer-events:none}
+.lab-handle{stroke:transparent;stroke-width:28;paint-order:stroke}.lab-handle:focus-visible{stroke:var(--vang);stroke-width:4}
+</style>

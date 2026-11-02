@@ -1,5 +1,6 @@
 <script setup>
 import LabPointControls from './LabPointControls.vue'
+import MathMatrix from '../../../core/math/components/MathMatrix.vue'
 import { computed, ref, useId } from 'vue'
 import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
 import { contourSegments } from '../services/contour.mjs'
@@ -74,8 +75,8 @@ const shape = computed(() => {
 
 <template>
   <figure class="study-lab" aria-label="Bản đồ những điểm mà Hessian không nửa xác định dương">
-    <p class="lab-title">Tính lồi hỏng ở đâu: bản đồ Hessian</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đường đồng mức, vùng Hessian không nửa xác định dương và hai hướng riêng tại x" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <p class="lab-title">Tính lồi hỏng ở đâu: Bản đồ Hessian</p>
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Đường đồng mức, vùng Hessian không nửa xác định dương và hai hướng riêng tại x" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <defs><clipPath :id="clip"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <g :clip-path="`url(#${clip})`">
         <rect v-for="(r, i) in outside" :key="`o${i}`" x="0" :y="view.sy(r.y1)" :width="view.width" :height="view.sy(r.y0) - view.sy(r.y1)" class="lab-grid" style="fill: var(--rule); opacity: 0.5" />
@@ -88,7 +89,7 @@ const shape = computed(() => {
         <circle :cx="P(x)[0]" :cy="P(x)[1]" r="8" class="lab-handle" tabindex="0" role="slider" aria-label="Điểm x" :aria-valuetext="fmtPoint(x)" @pointerdown="drag.start('x', $event)" @keydown="drag.key('x', x, $event)" />
       </g>
     </svg>
-    <LabPointControls :svg="svg" />
+    <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <p class="lab-legend"><span class="legend-bad">vùng Hessian có trị riêng âm</span><span class="legend-good">hướng cong lên</span><span class="legend-guide">hướng có độ cong 0</span></p>
     <div class="lab-controls">
       <label>Hàm f = <select v-model="choice"><option v-for="(item, key) in catalog" :key="key" :value="key">{{ item.label }}</option></select></label>
@@ -96,7 +97,7 @@ const shape = computed(() => {
     <div class="lab-readout" role="status">
       <p v-if="!here" class="is-bad">x = {{ fmtPoint(x) }} nằm ngoài miền xác định (phần tô xám).</p>
       <template v-else>
-        <p>Tại x = {{ fmtPoint(x) }}: ∇²f(x) = [[{{ fmt(here[0], 2) }}, {{ fmt(here[1], 2) }}], [{{ fmt(here[1], 2) }}, {{ fmt(here[2], 2) }}]], hai trị riêng {{ fmt(eig.values[0], 3) }} và {{ fmt(eig.values[1], 3) }}.</p>
+        <p>Tại x = {{ fmtPoint(x) }}: Hessian là <MathMatrix label="Ma trận Hessian đối xứng hai chiều" :rows="[[Number(here[0].toFixed(2)),Number(here[1].toFixed(2))],[Number(here[1].toFixed(2)),Number(here[2].toFixed(2))]]"/>, hai trị riêng {{ fmt(eig.values[0], 3) }} và {{ fmt(eig.values[1], 3) }}.</p>
         <p>{{ shape }}</p>
       </template>
       <p v-if="badRects.length" class="is-bad">Trong khung nhìn có những điểm mà Hessian có trị riêng âm (vùng đỏ). Chỉ cần một điểm như vậy, hàm đã không lồi.</p>
@@ -113,3 +114,8 @@ const shape = computed(() => {
     </details>
   </figure>
 </template>
+
+<style scoped>
+svg :is(line,path,polygon,rect),svg circle:not(.lab-handle){pointer-events:none}
+.lab-handle{stroke:transparent;stroke-width:32;paint-order:stroke}.lab-handle:focus-visible{stroke:var(--vang);stroke-width:4}
+</style>
