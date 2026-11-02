@@ -127,17 +127,17 @@ Logic bậc một được gọi là *bậc một* (first order) vì nó cho ph�
 
 Logic bậc hai (Second-order logic) cho phép lượng từ hóa trên các quan hệ bậc một, và cho phép các vị từ nhận đối số là các quan hệ bậc một. Đây là các quan hệ bậc hai. Ví dụ, công thức logic bậc hai sau:
 
-<pre class="logic-expression">∀ R symmetric(R) ↔ (∀ X ∀ Y R(X, Y) → R(Y, X))</pre>
+<span class="logic-expression logic-block">∀ R symmetric(R) ↔ (∀ X ∀ Y R(X, Y) → R(Y, X))</span>
 
 định nghĩa quan hệ bậc hai $symmetric$, vốn đúng nếu đối số của nó là một quan hệ đối xứng.
 
 Logic bậc hai dường như là cần thiết trong nhiều ứng dụng vì bao đóng bắc cầu (transitive closure) không thể định nghĩa được trong logic bậc một. Chẳng hạn, giả sử ta muốn $before$ là bao đóng bắc cầu của $next$, trong đó $next(X, s(X))$ là đúng. Hãy hình dung $next$ mang ý nghĩa "mili-giây tiếp theo" và $before$ biểu thị "trước". Định nghĩa tự nhiên trong logic bậc một sẽ là:
 
-<pre class="logic-expression">∀ X ∀ Y before(X, Y) ↔ (Y = s(X) ∨ before(s(X), Y))</pre>
+<span class="logic-expression logic-block">∀ X ∀ Y before(X, Y) ↔ (Y = s(X) ∨ before(s(X), Y))</span>
 
 Biểu thức này không nắm bắt chính xác định nghĩa trên, bởi vì chẳng hạn:
 
-<pre class="logic-expression">∀ X ∀ Y before(X, Y) → ∃ W Y = s(W)</pre>
+<span class="logic-expression logic-block">∀ X ∀ Y before(X, Y) → ∃ W Y = s(W)</span>
 
 không suy diễn được một cách logic từ công thức trên. Lý do là tồn tại các mô hình phi chuẩn (nonstandard models) của công thức, trong đó $Y$ biểu thị giá trị *vô hạn* ($\infty$). Để nắm bắt bao đóng bắc cầu, ta cần một công thức khẳng định rằng $before$ là vị từ cực tiểu thỏa mãn định nghĩa. Điều này chỉ có thể phát biểu được bằng cách sử dụng logic bậc hai.
 
@@ -196,33 +196,33 @@ append(nil, Z, Z).
 
 Ở đây, ta tạm thời bỏ qua ý nghĩa trực giác của các ký hiệu này. Tương tự như máy tính, ta xem đây thuần túy là một bài toán thao tác trên các ký hiệu. Xét câu truy vấn sau:
 
-<pre class="logic-expression">ask  append(F, c(L, nil), c(l, c(i, c(s, c(t, nil))))).</pre>
+<span class="logic-expression logic-block">ask  append(F, c(L, nil), c(l, c(i, c(s, c(t, nil))))).</span>
 
 Quá trình dẫn xuất diễn ra như sau:
 
 1. Câu tuyển trả lời khởi đầu:
-   <pre class="logic-expression">yes(F, L) ← append(F, c(L, nil), c(l, c(i, c(s, c(t, nil)))))</pre>
+   <span class="logic-expression logic-block">yes(F, L) ← append(F, c(L, nil), c(l, c(i, c(s, c(t, nil)))))</span>
 2. Phân giải với câu tuyển <code class="logic-expression">append(c(A_1, X_1), Y_1, c(A_1, Z_1)) ← append(X_1, Y_1, Z_1)</code>:
    - Phép thế hợp nhất:
-     <pre class="logic-expression">{F/c(l, X_1), Y_1/c(L, nil), A_1/l, Z_1/c(i, c(s, c(t, nil)))}</pre>
+     <span class="logic-expression logic-block">{F/c(l, X_1), Y_1/c(L, nil), A_1/l, Z_1/c(i, c(s, c(t, nil)))}</span>
    - Câu tuyển mục tiêu thu được:
-     <pre class="logic-expression">yes(c(l, X_1), L) ← append(X_1, c(L, nil), c(i, c(s, c(t, nil))))</pre>
+     <span class="logic-expression logic-block">yes(c(l, X_1), L) ← append(X_1, c(L, nil), c(i, c(s, c(t, nil))))</span>
 3. Phân giải tiếp với <code class="logic-expression">append(c(A_2, X_2), Y_2, c(A_2, Z_2)) ← append(X_2, Y_2, Z_2)</code>:
    - Phép thế hợp nhất:
-     <pre class="logic-expression">{X_1/c(i, X_2), Y_2/c(L, nil), A_2/i, Z_2/c(s, c(t, nil))}</pre>
+     <span class="logic-expression logic-block">{X_1/c(i, X_2), Y_2/c(L, nil), A_2/i, Z_2/c(s, c(t, nil))}</span>
    - Câu tuyển mục tiêu thu được:
-     <pre class="logic-expression">yes(c(l, c(i, X_2)), L) ← append(X_2, c(L, nil), c(s, c(t, nil))))</pre>
+     <span class="logic-expression logic-block">yes(c(l, c(i, X_2)), L) ← append(X_2, c(L, nil), c(s, c(t, nil))))</span>
 4. Phân giải tiếp với <code class="logic-expression">append(c(A_3, X_3), Y_3, c(A_3, Z_3)) ← append(X_3, Y_3, Z_3)</code>:
    - Phép thế hợp nhất:
-     <pre class="logic-expression">{X_2/c(s, X_3), Y_3/c(L, nil), A_3/s, Z_3/c(t, nil)}</pre>
+     <span class="logic-expression logic-block">{X_2/c(s, X_3), Y_3/c(L, nil), A_3/s, Z_3/c(t, nil)}</span>
    - Câu tuyển mục tiêu thu được:
-     <pre class="logic-expression">yes(c(l, c(i, c(s, X_3))), L) ← append(X_3, c(L, nil), c(t, nil))</pre>
+     <span class="logic-expression logic-block">yes(c(l, c(i, c(s, X_3))), L) ← append(X_3, c(L, nil), c(t, nil))</span>
 
 Tại giai đoạn này, cả hai câu tuyển đều có thể áp dụng được. Nếu chọn câu tuyển thứ nhất:
 - Phân giải với <code class="logic-expression">append(c(A_4, X_4), Y_4, c(A_4, Z_4)) ← append(X_4, Y_4, Z_4)</code>:
   - Phép thế: <code class="logic-expression">{X_3/c(t, X_4), Y_4/c(L, nil), A_4/t, Z_4/nil}</code>
   - Mục tiêu thu được:
-    <pre class="logic-expression">yes(c(l, c(i, c(s, X_3))), L) ← append(X_4, c(L, nil), nil)</pre>
+    <span class="logic-expression logic-block">yes(c(l, c(i, c(s, X_3))), L) ← append(X_4, c(L, nil), nil)</span>
   - Tại đây, không có câu tuyển nào có phần đầu hợp nhất được với nguyên tử trong thân câu tuyển mục tiêu. Nhánh chứng minh này thất bại.
 
 Nếu chọn câu tuyển thứ hai thay vì câu tuyển thứ nhất:

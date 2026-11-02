@@ -68,11 +68,11 @@ Xét lại bài toán mạch điện gia đình. Bằng cách tiếp cận quan 
 1. **Tri thức tổng quát về nguyên lý vận hành của mạch điện**:
    - Một bóng đèn phát sáng nếu nó là bóng đèn, có dòng điện chạy vào và không bị hỏng:
 
-     <pre class="logic-expression">lit(L) ← light(L) ∧ live(L) ∧ ok(L)</pre>
+     <span class="logic-expression logic-block">lit(L) ← light(L) ∧ live(L) ∧ ok(L)</span>
 
    - Dòng điện lan truyền đệ quy qua các dây dẫn nối tiếp nhau:
 
-     <pre class="logic-expression">live(X) ← connected_to(X, Y) ∧ live(Y)</pre>
+     <span class="logic-expression logic-block">live(X) ← connected_to(X, Y) ∧ live(Y)</span>
 
    - Nguồn điện lưới bên ngoài luôn có điện:
 
@@ -175,7 +175,7 @@ Khi người dùng đặt câu hỏi truy vấn:
    - $\text{ask } borders(X, Y)$ trả về toàn bộ $6 \times 2 = 12$ cặp biên giới hai chiều.
 5. Truy vấn kết hợp điều kiện số học: "Tìm quốc gia giáp ranh với Chile có diện tích lớn hơn 2.000.000 km²":
 
-   <pre class="logic-expression">ask  borders(chile, Y) ∧ area(Y, A) ∧ A &gt; 2000000</pre>
+   <span class="logic-expression logic-block">ask  borders(chile, Y) ∧ area(Y, A) ∧ A &gt; 2000000</span>
 
    Hệ thống kết hợp thông tin biên giới và diện tích để trả về kết quả duy nhất: $Y = argentina, A = 2780400$.
 :::
@@ -200,7 +200,7 @@ Cần phân biệt rõ giữa hằng số thực thể $chile$ (chỉ quốc gia
 
 Để truy vấn tên chuỗi của thủ đô nước Chile, ta kết hợp hai nguyên tử vị từ:
 
-<pre class="logic-expression">ask  capital(chile, C) ∧ name(C, N)</pre>
+<span class="logic-expression logic-block">ask  capital(chile, C) ∧ name(C, N)</span>
 
 Hệ thống suy ra biến thực thể $C = santiago$ và rút trích được chuỗi tên gọi $N = \text{"Santiago"}$.
 :::

@@ -22,13 +22,13 @@ student(karan).
 
 Giả định tri thức đầy đủ sẽ phát biểu rằng ba người này là những sinh viên duy nhất:
 
-<pre class="logic-expression">student(X) ↔ X = huan ∨ X = manpreet ∨ X = karan</pre>
+<span class="logic-expression logic-block">student(X) ↔ X = huan ∨ X = manpreet ∨ X = karan</span>
 
 Nghĩa là, nếu $X$ là $huan$, $manpreet$, hoặc $karan$, thì $X$ là một sinh viên, và nếu $X$ là một sinh viên thì $X$ bắt buộc phải là một trong ba người này. Cụ thể, $kim$ không phải là một sinh viên.
 
 Để kết luận $\neg student(kim)$, hệ thống đòi hỏi phải chứng minh được:
 
-<pre class="logic-expression">kim ≠ huan ∧ kim ≠ manpreet ∧ kim ≠ karan</pre>
+<span class="logic-expression logic-block">kim ≠ huan ∧ kim ≠ manpreet ∧ kim ≠ karan</span>
 
 Để dẫn xuất các bất đẳng thức này, ta bắt buộc phải sử dụng giả định tên duy nhất (UNA). Như vậy, giả định tri thức đầy đủ bao hàm cả giả định tên duy nhất.
 :::
@@ -41,7 +41,7 @@ $$
 
 là câu tuyển có dạng:
 
-<pre class="logic-expression">p(V_1, …, V_k) ← ∃ W_1 … ∃ W_m V_1 = t_1 ∧ … ∧ V_k = t_k ∧ B</pre>
+<span class="logic-expression logic-block">p(V_1, …, V_k) ← ∃ W_1 … ∃ W_m V_1 = t_1 ∧ … ∧ V_k = t_k ∧ B</span>
 
 trong đó $V_{1}, \ldots, V_{k}$ là $k$ biến mới không xuất hiện trong câu tuyển gốc, và $W_{1}, \ldots, W_{m}$ là các biến ban đầu trong câu tuyển. Ký hiệu "$\exists$" có nghĩa là "tồn tại". Khi câu tuyển là một câu tuyển nguyên tử (sự kiện), thân $B$ nhận giá trị $true$.
 
@@ -65,7 +65,7 @@ Phép kéo theo này tương đương logic với tập hợp các câu tuyển 
 
 Bao đóng Clark (Clark's completion) của vị từ $p$ là mệnh đề tương đương:
 
-<pre class="logic-expression">∀ V_1 … ∀ V_k p(V_1, …, V_k) ↔ B_1 ∨ … ∨ B_n</pre>
+<span class="logic-expression logic-block">∀ V_1 … ∀ V_k p(V_1, …, V_k) ↔ B_1 ∨ … ∨ B_n</span>
 
 trong đó phủ định như một sự thất bại ($\sim$) trong thân câu tuyển được thay thế bằng phủ định logic chuẩn ($\neg$). Bao đóng này khẳng định rằng $p(V_{1}, \ldots, V_{k})$ là đúng khi và chỉ khi có ít nhất một thân câu tuyển $B_{i}$ là đúng.
 
@@ -90,11 +90,11 @@ student(V) :- V = karan.
 
 tương đương với:
 
-<pre class="logic-expression">student(V) ← V = huan ∨ V = manpreet ∨ V = karan</pre>
+<span class="logic-expression logic-block">student(V) ← V = huan ∨ V = manpreet ∨ V = karan</span>
 
 Bao đóng Clark của vị từ $student$ là:
 
-<pre class="logic-expression">∀ V student(V) ↔ V = huan ∨ V = manpreet ∨ V = karan</pre>
+<span class="logic-expression logic-block">∀ V student(V) ↔ V = huan ∨ V = manpreet ∨ V = karan</span>
 :::
 
 ::: example Ví dụ 15.43: Dạng chuẩn và bao đóng Clark cho vị từ đệ quy
@@ -117,9 +117,7 @@ passed_each(L, S, M) :-
 
 Bao đóng Clark của $passed\_each$ là:
 
-<pre class="logic-expression">∀ L ∀ S ∀ M passed_each(L, S, M) ↔ 
-
-  L = [ ] ∨ ∃ C ∃ R (L = [C | R] ∧ passed(S, C, M) ∧ passed_each(R, S, M))</pre>
+<span class="logic-expression logic-block">∀ L ∀ S ∀ M passed_each(L, S, M) ↔ &#10;&#10;  L = [ ] ∨ ∃ C ∃ R (L = [C | R] ∧ passed(S, C, M) ∧ passed_each(R, S, M))</span>
 :::
 
 Dưới giả định tri thức đầy đủ, các quan hệ không thể định nghĩa được chỉ bằng các câu tuyển xác định nay đã có thể định nghĩa được.
@@ -140,9 +138,9 @@ has_enrollment(C) :-
 
 Bao đóng Clark của hệ luật này là:
 
-<pre class="logic-expression">∀ C empty_course(C) ↔ course(C) ∧ ¬ has_enrollment(C)</pre>
+<span class="logic-expression logic-block">∀ C empty_course(C) ↔ course(C) ∧ ¬ has_enrollment(C)</span>
 
-<pre class="logic-expression">∀ C has_enrollment(C) ↔ ∃ S enrolled(S, C)</pre>
+<span class="logic-expression logic-block">∀ C has_enrollment(C) ↔ ∃ S enrolled(S, C)</span>
 
 Như một lời lưu ý cẩn trọng, ta cần hết sức thận trọng khi đưa các biến tự do vào bên trong phép phủ định thất bại. Chúng thường không mang ý nghĩa như người ta thoạt nghĩ. Vị từ $has\_enrollment$ được đưa vào trong ví dụ trên chính là nhằm tránh việc xuất hiện biến tự do bên trong toán tử phủ định thất bại.
 :::

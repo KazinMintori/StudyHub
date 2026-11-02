@@ -44,7 +44,7 @@ Dấu ngoặc đơn có thể được sử dụng để loại bỏ tính nhậ
 
 Do đó, một mệnh đề phức hợp không chứa dấu ngoặc có thể được xác định tường minh bằng cách bổ sung các cặp ngoặc đơn theo thứ tự ưu tiên đã nêu. Ví dụ: Biểu thức $\neg a \vee b \land c \rightarrow d \land \neg e \vee f$ chính là cách viết rút gọn của biểu thức đầy đủ:
 
-<pre class="logic-expression">((¬ a) ∨ (b ∧ c)) → ((d ∧ (¬ e)) ∨ f).</pre>
+<span class="logic-expression logic-block">((¬ a) ∨ (b ∧ c)) → ((d ∧ (¬ e)) ∨ f).</span>
 
 ## 5.1.2 Ngữ nghĩa của giải tích mệnh đề
 
@@ -77,7 +77,7 @@ Giả sử có ba nguyên tử: $\mathit{ai\_is\_fun}$, $\mathit{happy}$, và $\
 
 Xét diễn giải $I_{1}$ gán giá trị $\mathit{true}$ cho $\mathit{ai\_is\_fun}$, $\mathit{false}$ cho $\mathit{happy}$, và $\mathit{true}$ cho $\mathit{light\_on}$. Tức là diễn giải $I_{1}$ được xác định bởi hàm $\pi_{1}$:
 
-<pre class="logic-expression">π_1(ai_is_fun) = true,   π_1(happy) = false,   π_1(light_on) = true.</pre>
+<span class="logic-expression logic-block">π_1(ai_is_fun) = true,   π_1(happy) = false,   π_1(light_on) = true.</span>
 
 Khi đó, giá trị chân lý của các mệnh đề trong diễn giải $I_{1}$ như sau:
 
@@ -117,19 +117,7 @@ nếu $g$ nhận giá trị đúng trong mọi mô hình của $\mathit{KB}$. Ng
 ::: example Ví dụ 5.2: Cơ sở tri thức và quan hệ kéo theo logic
 Xét cơ sở tri thức $\mathit{KB}$ gồm các tiên đề sau:
 
-<pre class="logic-expression">sam_is_happy. 
-
-ai_is_fun. 
-
-worms_live_underground. 
-
-night_time. 
-
-bird_eats_apple. 
-
-apple_is_eaten ← bird_eats_apple. 
-
-switch_1_is_up ← someone_is_in_room ∧ night_time.</pre>
+<span class="logic-expression logic-block">sam_is_happy. &#10;&#10;ai_is_fun. &#10;&#10;worms_live_underground. &#10;&#10;night_time. &#10;&#10;bird_eats_apple. &#10;&#10;apple_is_eaten ← bird_eats_apple. &#10;&#10;switch_1_is_up ← someone_is_in_room ∧ night_time.</span>
 
 Với cơ sở tri thức này:
 

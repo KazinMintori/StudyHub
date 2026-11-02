@@ -44,23 +44,7 @@ Cần lưu ý rằng một lời giải thích giả thuyết không được b�
 ::: example Ví dụ 5.31: Chẩn đoán y khoa bằng suy luận giả thuyết
 Xem xét cơ sở tri thức đơn giản sau cho một hệ thống trợ lý chẩn đoán:
 
-<pre class="logic-expression">bronchitis ← influenza. 
-
-bronchitis ← smokes. 
-
-coughing ← bronchitis. 
-
-wheezing ← bronchitis. 
-
-fever ← influenza. 
-
-fever ← infection. 
-
-sore_throat ← influenza. 
-
-false ← smokes ∧ nonsmoker. 
-
-assumable   smokes, nonsmoker, influenza, infection.</pre>
+<span class="logic-expression logic-block">bronchitis ← influenza. &#10;&#10;bronchitis ← smokes. &#10;&#10;coughing ← bronchitis. &#10;&#10;wheezing ← bronchitis. &#10;&#10;fever ← influenza. &#10;&#10;fever ← infection. &#10;&#10;sore_throat ← influenza. &#10;&#10;false ← smokes ∧ nonsmoker. &#10;&#10;assumable   smokes, nonsmoker, influenza, infection.</span>
 
 1. Nếu bệnh nhân có triệu chứng thở khò khè ($\mathit{wheezing}$), có hai lời giải thích tối tiểu độc lập:
   
@@ -71,7 +55,7 @@ assumable   smokes, nonsmoker, influenza, infection.</pre>
    Cả hai giả thuyết này đều giải thích được chứng viêm phế quản ($\mathit{bronchitis}$) và ho ($\mathit{coughing}$).
 2. Nếu quan sát thấy bệnh nhân vừa thở khò khè vừa sốt ($\mathit{wheezing} \wedge \mathit{fever}$), các lời giải thích tối tiểu là:
   
-  <pre class="logic-expression">{influenza}   và   {smokes, infection}.</pre>
+  <span class="logic-expression logic-block">{influenza}   và   {smokes, infection}.</span>
    Giả thuyết cúm ($\mathit{influenza}$) là một lời giải thích duy nhất bao quát được cả hai triệu chứng, trong khi nếu do hút thuốc thì bắt buộc phải kết hợp thêm với giả thuyết nhiễm trùng ($\mathit{infection}$) để giải thích triệu chứng sốt.
 3. Nếu quan sát thấy bệnh nhân thở khò khè nhưng lại không hút thuốc ($\mathit{wheezing} \wedge \mathit{nonsmoker}$), ta chỉ còn duy nhất một lời giải thích tối tiểu:
   

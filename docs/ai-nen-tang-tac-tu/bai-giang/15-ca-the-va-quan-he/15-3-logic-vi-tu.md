@@ -30,11 +30,11 @@ Một công thức logic được xây dựng từ các nguyên tử bằng các
 ::: example Ví dụ 15.3: Các công thức logic vị từ
 Các biểu thức sau đây là những công thức logic:
 
-<pre class="logic-expression">∀ G (grandfather(sam, G) ← ∃ P (father(sam, P) ∧ parent(P, G)))</pre>
+<span class="logic-expression logic-block">∀ G (grandfather(sam, G) ← ∃ P (father(sam, P) ∧ parent(P, G)))</span>
 
-<pre class="logic-expression">in(X, Y) ← part_of(Z, Y) ∧ in(X, Z)</pre>
+<span class="logic-expression logic-block">in(X, Y) ← part_of(Z, Y) ∧ in(X, Z)</span>
 
-<pre class="logic-expression">slithy(toves) ← ∀ Raths (mimsy ∧ borogroves ∧ outgrabe(mome, Raths))</pre>
+<span class="logic-expression logic-block">slithy(toves) ← ∀ Raths (mimsy ∧ borogroves ∧ outgrabe(mome, Raths))</span>
 
 Dựa vào ngữ cảnh: `sam`, `toves` và `mome` là các hằng số; `grandfather`, `father`, `parent`, `in`, `part_of`, `slithy`, `mimsy`, `borogroves` và `outgrabe` là các ký hiệu vị từ; còn $G, P, X, Y, Z$ và $Raths$ là các biến logic.
 
@@ -84,7 +84,7 @@ Một ví dụ về diễn giải biểu diễn các cá thể trên bàn như s
 
 - Ánh xạ hằng số:
 
-  <pre class="logic-expression">φ(plane) = ✈,   φ(pencil) = ✎,   φ(model) = ✈</pre>
+  <span class="logic-expression logic-block">φ(plane) = ✈,   φ(pencil) = ✎,   φ(model) = ✈</span>
 
 - Ánh xạ vị từ:
 
@@ -171,13 +171,13 @@ Một công thức chứa một biến không nằm trong phạm vi của lượ
 ::: example Ví dụ 15.7: Đánh giá chân lý của các công thức có lượng từ
 Công thức:
 
-<pre class="logic-expression">∀ X ∀ Y (part_of(X, Y) ← in(X, Y))</pre>
+<span class="logic-expression logic-block">∀ X ∀ Y (part_of(X, Y) ← in(X, Y))</span>
 
 nhận giá trị $false$ trong diễn giải của [Ví dụ 15.5](https://artint.info/3e/html/ArtInt3e.Ch15.S3.html#Ch15.Thmciexamplered5), bởi vì dưới phép gán biến trong đó $X$ biểu thị Kim và $Y$ biểu thị phòng 123, mệnh đề $in(X, Y)$ nhận giá trị $true$ nhưng $part\_of(X, Y)$ nhận giá trị $false$.
 
 Ngược lại, công thức:
 
-<pre class="logic-expression">∀ X ∀ Y ∀ Z (in(X, Y) ← part_of(Z, Y) ∧ in(X, Z))</pre>
+<span class="logic-expression logic-block">∀ X ∀ Y ∀ Z (in(X, Y) ← part_of(Z, Y) ∧ in(X, Z))</span>
 
 nhận giá trị $true$ trong diễn giải đó, bởi vì $in(X, Y)$ nhận giá trị $true$ trong mọi phép gán biến mà $part\_of(Z, Y) \wedge in(X, Z)$ nhận giá trị $true$.
 :::
@@ -199,7 +199,7 @@ Ta xem xét các khẳng định hệ quả logic:
 - $KB \not\models in(kim, r023)$: Khẳng định này đúng (tức $in(kim, r023)$ không phải là hệ quả logic), bởi vì diễn giải trong Ví dụ 15.5 là một mô hình của $KB$ mà trong đó $in(kim, r023)$ nhận giá trị $false$.
 - $KB \not\models part\_of(r023, cs\_building)$: Khẳng định này đúng (không phải là hệ quả logic). Mặc dù $part\_of(r023, cs\_building)$ nhận giá trị $true$ trong diễn giải của Ví dụ 15.5, nhưng vẫn tồn tại một mô hình khác của $KB$ trong đó $part\_of(r023, cs\_building)$ nhận giá trị $false$. Cụ thể, một diễn giải tương tự như Ví dụ 15.5 nhưng gán:
 
-  <pre class="logic-expression">π(part_of)(⟨ φ(r023), φ(cs_building) ⟩) = false</pre>
+  <span class="logic-expression logic-block">π(part_of)(⟨ φ(r023), φ(cs_building) ⟩) = false</span>
 
   vẫn là một mô hình hợp lệ của $KB$ mà trong đó $part\_of(r023, cs\_building)$ nhận giá trị $false$.
 - $KB \models in(kim, cs\_building)$: Khẳng định này đúng. Nếu các công thức trong $KB$ đều nhận giá trị $true$ trong diễn giải $I$, thì $in(kim, cs\_building)$ bắt buộc phải nhận giá trị $true$ trong $I$, nếu không sẽ tồn tại một trường hợp cụ thể hóa của công thức thứ ba trong $KB$ nhận giá trị $false$ trong $I$ — mâu thuẫn với giả thiết $I$ là một mô hình của $KB$.

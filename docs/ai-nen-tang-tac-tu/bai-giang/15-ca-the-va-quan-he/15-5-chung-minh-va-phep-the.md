@@ -54,7 +54,7 @@ $$
 
 cho kết quả:
 
-<pre class="logic-expression">p(Y, Y) ← q(peru, peru, Y, Y, peru)</pre>
+<span class="logic-expression logic-block">p(Y, Y) ← q(peru, peru, Y, Y, peru)</span>
 :::
 
 Một phép thế $\sigma$ được gọi là một **bộ hợp nhất** (unifier) của hai biểu thức $e_{1}$ và $e_{2}$ nếu:
@@ -74,7 +74,7 @@ $$
 
 Tương tự, phép thế $\{X/a, Y/b\}$ là một bộ hợp nhất của $t(a, Y, c)$ và $t(X, b, c)$:
 
-<pre class="logic-expression">t(a, Y, c){X/a, Y/b} = t(X, b, c){X/a, Y/b} = t(a, b, c)</pre>
+<span class="logic-expression logic-block">t(a, Y, c){X/a, Y/b} = t(X, b, c){X/a, Y/b} = t(a, b, c)</span>
 :::
 
 ::: example Ví dụ 15.17: Các bộ hợp nhất khả dĩ của hai nguyên tử
@@ -101,11 +101,11 @@ Xét lại hai nguyên tử $p(X, Y)$ và $p(Z, Z)$:
 
 Kết quả khi áp dụng các phép thế này lần lượt là:
 
-<pre class="logic-expression">p(X, Y){X/Z, Y/Z} = p(Z, Z){X/Z, Y/Z} = p(Z, Z)</pre>
+<span class="logic-expression logic-block">p(X, Y){X/Z, Y/Z} = p(Z, Z){X/Z, Y/Z} = p(Z, Z)</span>
 
-<pre class="logic-expression">p(X, Y){Z/X, Y/X} = p(Z, Z){Z/X, Y/X} = p(X, X)</pre>
+<span class="logic-expression logic-block">p(X, Y){Z/X, Y/X} = p(Z, Z){Z/X, Y/X} = p(X, X)</span>
 
-<pre class="logic-expression">p(X, Y){X/a, Y/a, Z/a} = p(Z, Z){X/a, Y/a, Z/a} = p(a, a)</pre>
+<span class="logic-expression logic-block">p(X, Y){X/a, Y/a, Z/a} = p(Z, Z){X/a, Y/a, Z/a} = p(a, a)</span>
 
 Biểu thức $p(a, a)$ là một thể hiện của $p(Z, Z)$, nhưng $p(Z, Z)$ không thể là một thể hiện của $p(a, a)$.
 :::
@@ -143,7 +143,7 @@ p(b, b) :- q(b), s(b).
 
 Áp dụng thủ tục suy diễn tiến mệnh đề lên tập thể hiện không biến này, ta lần lượt rút ra các hệ quả logic không biến:
 
-<pre class="logic-expression">q(a),   q(b),   r(a),   s(a),   p(a, a),   p(b, a)</pre>
+<span class="logic-expression logic-block">q(a),   q(b),   r(a),   s(a),   p(a, a),   p(b, a)</span>
 :::
 
 ::: example Ví dụ 15.20: Trường hợp truy vấn không chứa hằng số
@@ -221,7 +221,7 @@ Thủ tục suy diễn lùi tìm kiếm câu trả lời bằng phương pháp p
 
 - **Mệnh đề câu trả lời tổng quát (Generalized Answer Clause)**: Có dạng:
 
-  <pre class="logic-expression">yes(V_1, …, V_k) ← a_1 ∧ a_2 ∧ … ∧ a_m</pre>
+  <span class="logic-expression logic-block">yes(V_1, …, V_k) ← a_1 ∧ a_2 ∧ … ∧ a_m</span>
 
   Các đối số của vị từ đặc biệt $yes$ lưu giữ các giá trị cụ thể hóa của các biến trong truy vấn ban đầu.
 - **Quy tắc đổi tên biến (Standardizing Apart)**: Khi chọn một luật $a \leftarrow b_1 \wedge \ldots \wedge b_p$ từ $KB$ để phân giải, ta bắt buộc phải **đổi tên toàn bộ các biến** trong luật đó sang các tên biến mới chưa từng xuất hiện. Điều này loại bỏ hiện tượng xung đột tên biến và cho phép tái sử dụng cùng một luật nhiều lần trong cùng một cây chứng minh.
@@ -266,7 +266,7 @@ Quá trình dẫn xuất SLD diễn ra tuần tự như sau:
 
 2. **Phân giải bước 1**: Chọn luật 2, đổi tên biến thành $P_1, L_1, S_1$. Hợp nhất $born\_in(P, colombia)$ với $born\_in(P_1, L_1)$ bằng MGU $\sigma_1 = \{P_1/P, L_1/colombia\}$:
 
-   <pre class="logic-expression">yes(P) ← part_of(S_1, colombia) ∧ born_in(P, S_1)</pre>
+   <span class="logic-expression logic-block">yes(P) ← part_of(S_1, colombia) ∧ born_in(P, S_1)</span>
 
 3. **Phân giải bước 2**: Chọn nguyên tử đầu tiên $part\_of(S_1, colombia)$. Hợp nhất với sự kiện 4 ($part\_of(atlantico, colombia)$) bằng MGU $\sigma_2 = \{S_1/atlantico\}$:
 
@@ -276,11 +276,11 @@ Quá trình dẫn xuất SLD diễn ra tuần tự như sau:
 
 4. **Phân giải bước 3**: Tiếp tục phân giải với bản sao mới của luật 2 ($P_2, L_2, S_2$) bằng MGU $\sigma_3 = \{P_2/P, L_2/atlantico\}$:
 
-   <pre class="logic-expression">yes(P) ← part_of(S_2, atlantico) ∧ born_in(P, S_2)</pre>
+   <span class="logic-expression logic-block">yes(P) ← part_of(S_2, atlantico) ∧ born_in(P, S_2)</span>
 
 5. **Phân giải bước 4**: Hợp nhất $part\_of(S_2, atlantico)$ với sự kiện 3 ($part\_of(barranquilla, atlantico)$) bằng MGU $\sigma_4 = \{S_2/barranquilla\}$:
 
-   <pre class="logic-expression">yes(P) ← born_in(P, barranquilla)</pre>
+   <span class="logic-expression logic-block">yes(P) ← born_in(P, barranquilla)</span>
 
 6. **Phân giải bước 5**: Hợp nhất với sự kiện 1 ($born\_in(shakira, barranquilla)$) bằng MGU $\sigma_5 = \{P/shakira\}$:
 

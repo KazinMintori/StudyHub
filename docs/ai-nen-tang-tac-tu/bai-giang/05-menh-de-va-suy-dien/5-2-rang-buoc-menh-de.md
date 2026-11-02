@@ -47,17 +47,13 @@ Xét hai biến $A$ và $B$, mỗi biến đều có miền giá trị $\{1, 2, 
 
 Đối với biến $A$, ta khởi tạo bốn biến Boolean $a_{1}, a_{2}, a_{3}$, và $a_{4}$, trong đó $a_{1}$ đúng khi $A = 1$, $a_{2}$ đúng khi $A = 2$, $a_{3}$ đúng khi $A = 3$, và $a_{4}$ đúng khi $A = 4$. Bốn biến này thỏa mãn tính chất đôi một rời nhau và bao phủ toàn bộ miền giá trị, dẫn đến hệ gồm 7 câu tuyển:
 
-<pre class="logic-expression">¬ a_1 ∨ ¬ a_2,   ¬ a_1 ∨ ¬ a_3,   ¬ a_1 ∨ ¬ a_4, 
-
-¬ a_2 ∨ ¬ a_3,   ¬ a_2 ∨ ¬ a_4,   ¬ a_3 ∨ ¬ a_4, 
-
-a_1 ∨ a_2 ∨ a_3 ∨ a_4.</pre>
+<span class="logic-expression logic-block">¬ a_1 ∨ ¬ a_2,   ¬ a_1 ∨ ¬ a_3,   ¬ a_1 ∨ ¬ a_4, &#10;&#10;¬ a_2 ∨ ¬ a_3,   ¬ a_2 ∨ ¬ a_4,   ¬ a_3 ∨ ¬ a_4, &#10;&#10;a_1 ∨ a_2 ∨ a_3 ∨ a_4.</span>
 
 Tương tự, đối với biến $B$, ta cũng thu được hệ 7 câu tuyển tương ứng cho các biến chỉ báo $b_{1}, b_{2}, b_{3}, b_{4}$.
 
 Ràng buộc $A < B$ kéo theo rằng $a_{4}$ bắt buộc phải sai (vì không có giá trị nào trong miền của $B$ lớn hơn 4), $b_{1}$ bắt buộc phải sai (vì không có giá trị nào trong miền của $A$ nhỏ hơn 1). Các cặp giá trị khác vi phạm điều kiện $A < B$ cũng bị loại trừ, tạo nên hệ 5 câu tuyển bổ sung:
 
-<pre class="logic-expression">¬ a_4,   ¬ b_1,   ¬ a_2 ∨ ¬ b_2,   ¬ a_3 ∨ ¬ b_3,   ¬ a_3 ∨ ¬ b_2.</pre>
+<span class="logic-expression logic-block">¬ a_4,   ¬ b_1,   ¬ a_2 ∨ ¬ b_2,   ¬ a_3 ∨ ¬ b_3,   ¬ a_3 ∨ ¬ b_2.</span>
 
 Lưu ý rằng ta không cần đưa vào câu tuyển $\neg a_{1} \vee \neg b_{1}$, bởi vì câu tuyển này đã được suy ra trực tiếp từ sự kiện đơn vị $\neg b_{1}$.
 :::

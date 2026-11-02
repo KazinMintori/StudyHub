@@ -74,7 +74,7 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-1-menh-de.md",
-      "line": 164,
+      "line": 152,
       "title": "Ví dụ 5.3: Khác biệt giữa góc nhìn con người và máy tính"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-2-rang-buoc-menh-de.md",
-      "line": 74,
+      "line": 70,
       "title": "Ví dụ 5.6: Quá trình rút gọn câu tuyển và tỉa miền giá trị"
     },
     {
@@ -169,17 +169,17 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-6-chung-minh-bang-phan-chung.md",
-      "line": 186,
+      "line": 184,
       "title": "Ví dụ 5.22: Phân tích chẩn đoán tối tiểu dưới dạng chuẩn tuyển"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-6-chung-minh-bang-phan-chung.md",
-      "line": 242,
+      "line": 232,
       "title": "Ví dụ 5.23: Các bước tích lũy cặp giả định trong ATMS"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-6-chung-minh-bang-phan-chung.md",
-      "line": 282,
+      "line": 272,
       "title": "Ví dụ 5.24: Dẫn xuất suy diễn lùi tìm xung đột"
     },
     {
@@ -194,22 +194,22 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-7-gia-thiet-tri-thuc-day-du.md",
-      "line": 104,
+      "line": 72,
       "title": "Ví dụ 5.27: Khai báo mặc định bằng phủ định như một thất bại"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-7-gia-thiet-tri-thuc-day-du.md",
-      "line": 144,
+      "line": 112,
       "title": "Ví dụ 5.28: Lập luận phi đơn điệu trong tư vấn du lịch"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-7-gia-thiet-tri-thuc-day-du.md",
-      "line": 206,
+      "line": 174,
       "title": "Ví dụ 5.29: Từng bước tích lũy trong suy diễn tiến NAF"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-7-gia-thiet-tri-thuc-day-du.md",
-      "line": 266,
+      "line": 234,
       "title": "Ví dụ 5.30: Dẫn xuất suy diễn lùi với truy vấn phủ định"
     },
     {
@@ -219,12 +219,12 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-8-suy-luan-quy-nap-dao.md",
-      "line": 85,
+      "line": 69,
       "title": "Ví dụ 5.32: Hiện tượng giải thích triệt tiêu (Explaining Away)"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-8-suy-luan-quy-nap-dao.md",
-      "line": 122,
+      "line": 106,
       "title": "Ví dụ 5.33: Mô hình hóa suy luận giả thuyết cho hệ thống mạch điện"
     },
     {
@@ -246,82 +246,82 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 114,
+      "line": 88,
       "title": "Bài tập 5.3: Phân tích mô hình và hệ quả logic"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 138,
+      "line": 112,
       "title": "Bài tập 5.4: Suy diễn tiến và lùi trên mệnh đề xác định"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 168,
+      "line": 142,
       "title": "Bài tập 5.5: Cơ chế hỏi người dùng tối ưu trong suy diễn tiến"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 179,
+      "line": 153,
       "title": "Bài tập 5.6: Gỡ lỗi chương trình mạch điện ở mức tri thức"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 193,
+      "line": 167,
       "title": "Bài tập 5.7: Giải thích hành vi đáng ngờ bằng suy luận quy nạp đảo"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 234,
+      "line": 190,
       "title": "Bài tập 5.8: Chẩn đoán bệnh bằng suy luận quy nạp đảo"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 258,
+      "line": 210,
       "title": "Bài tập 5.9: Tìm xung đột tối tiểu từ ràng buộc toàn vẹn"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 282,
+      "line": 234,
       "title": "Bài tập 5.10: Mô hình hóa hệ thống đẩy tàu vũ trụ Deep Space One"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 312,
+      "line": 264,
       "title": "Bài tập 5.11: Chẩn đoán quy nạp đảo nâng cao với cảm biến rò rỉ khí"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 329,
+      "line": 281,
       "title": "Bài tập 5.12: Phân chia tri thức trong hệ thống ống nước cho người thuê nhà"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 345,
+      "line": 297,
       "title": "Bài tập 5.13: Đánh giá độ tin cậy của các nguồn thông tin trên Web"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 372,
+      "line": 324,
       "title": "Bài tập 5.14: So sánh CBD và suy luận quy nạp đảo trong hệ gia sư vật lý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 388,
+      "line": 340,
       "title": "Bài tập 5.15: Cập nhật động trong suy diễn tiến NAF"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 401,
+      "line": 353,
       "title": "Bài tập 5.16: Cập nhật động các lời giải thích trong ATMS"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 410,
+      "line": 362,
       "title": "Bài tập 5.17: Chẩn đoán sự cố mạng truyền thông tàu vũ trụ"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 465,
+      "line": 401,
       "title": "Bài tập 5.18: Mở rộng mô hình mạng truyền thông với tín hiệu nhiễu"
     }
   ],
@@ -333,87 +333,87 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 92,
+      "line": 80,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 131,
+      "line": 105,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 154,
+      "line": 128,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 172,
+      "line": 146,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 185,
+      "line": 159,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 223,
+      "line": 179,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 242,
+      "line": 198,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 272,
+      "line": 224,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 297,
+      "line": 249,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 319,
+      "line": 271,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 339,
+      "line": 291,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 363,
+      "line": 315,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 381,
+      "line": 333,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 392,
+      "line": 344,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 405,
+      "line": 357,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 446,
+      "line": 382,
       "title": "Lời giải gợi ý"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 470,
+      "line": 406,
       "title": "Lời giải gợi ý"
     }
   ],
@@ -433,13 +433,13 @@
     {
       "reference": "figures/x44.png",
       "declaredIn": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 285,
+      "line": 237,
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/figures/x44.png"
     },
     {
       "reference": "figures/x45.png",
       "declaredIn": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/5-13-bai-tap.md",
-      "line": 413,
+      "line": 365,
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/05-menh-de-va-suy-dien/figures/x45.png"
     }
   ]

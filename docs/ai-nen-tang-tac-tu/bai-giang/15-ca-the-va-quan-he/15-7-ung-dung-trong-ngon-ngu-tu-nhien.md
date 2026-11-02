@@ -59,13 +59,13 @@ Ngôn ngữ được định nghĩa thông qua các câu hợp lệ của ngôn 
 
 Các câu hợp lệ được đặc tả bởi một văn phạm. Một văn phạm phi ngữ cảnh (Context-free grammar — CFG) được định nghĩa bởi một tập hợp các quy tắc viết lại (rewrite rules), chuyển đổi các ký hiệu không kết thúc (non-terminal symbols) thành một chuỗi các ký hiệu kết thúc và không kết thúc. Một câu của ngôn ngữ là một chuỗi các ký hiệu kết thúc được sinh ra bởi các quy tắc viết lại như vậy. Ví dụ, quy tắc văn phạm:
 
-<pre class="logic-expression">sentence ↦ noun_phrase, verb_phrase</pre>
+<span class="logic-expression logic-block">sentence ↦ noun_phrase, verb_phrase</span>
 
 có nghĩa là ký hiệu không kết thúc $sentence$ có thể là một $noun\_phrase$ theo sau bởi một $verb\_phrase$. Ký hiệu "$\longmapsto$" có nghĩa là "có thể được viết lại thành".
 
 Văn phạm phi ngữ cảnh cung cấp một phép xấp xỉ bước đầu cho văn phạm của một số ngôn ngữ tự nhiên. Đối với ngôn ngữ tự nhiên, các ký hiệu kết thúc là các thẻ từ vựng của ngôn ngữ. Nếu một câu của ngôn ngữ tự nhiên được biểu diễn dưới dạng một danh sách các thẻ, câu tuyển xác định sau đây phát biểu rằng một danh sách các từ là một câu nếu nó gồm một ngữ danh từ theo sau bởi một ngữ động từ:
 
-<pre class="logic-expression">sentence(S) ← noun_phrase(N) ∧ verb_phrase(V) ∧ append(N, V, S).</pre>
+<span class="logic-expression logic-block">sentence(S) ← noun_phrase(N) ∧ verb_phrase(V) ∧ append(N, V, S).</span>
 
 Để phát biểu rằng từ "country" là một danh từ, ta có thể viết:
 
@@ -99,7 +99,7 @@ cũng đúng vì "large country bordering Paraguay" tạo thành một ngữ dan
 
 Quy tắc văn phạm:
 
-<pre class="logic-expression">sentence ↦ noun_phrase, verb_phrase</pre>
+<span class="logic-expression logic-block">sentence ↦ noun_phrase, verb_phrase</span>
 
 có nghĩa là tồn tại một câu nằm giữa $L_{0}$ và $L_{2}$ nếu tồn tại một ngữ danh từ nằm giữa $L_{0}$ và $L_{1}$, cùng một ngữ động từ nằm giữa $L_{1}$ và $L_{2}$:
 
@@ -245,7 +245,7 @@ ask noun_phrase(["large", "country", "bordering", "Paraguay", "borders", "Chile"
 
 sẽ có câu trả lời là:
 
-<pre class="logic-expression">R = [&quot;bordering&quot;, &quot;Paraguay&quot;, &quot;borders&quot;, &quot;Chile&quot;]</pre>
+<span class="logic-expression logic-block">R = [&quot;bordering&quot;, &quot;Paraguay&quot;, &quot;borders&quot;, &quot;Chile&quot;]</span>
 
 nghĩa là "large country" là một ngữ danh từ.
 
@@ -280,7 +280,7 @@ Trong trường hợp này, một ngữ danh từ đại diện cho một cá th
 ::: example Ví dụ 15.35: Chuyển đổi câu hỏi thành truy vấn cơ sở dữ liệu
 Trong câu *"What large country borders Chile?"*, cụm từ "large country" là chủ ngữ của động từ "borders" và "Chile" là tân ngữ. Giả sử cơ sở dữ liệu địa lý ở Mục 15.4 được sử dụng. Đối với cá thể $S$ đóng vai trò chủ ngữ, $large(S)$ và $country(S)$ là đúng. Tân ngữ là cá thể $chile$, và động từ chỉ định quan hệ $borders(S, chile)$. Do đó, câu hỏi *"What large country borders Chile?"* có thể được chuyển đổi thành câu truy vấn:
 
-<pre class="logic-expression">ask  large(S) ∧ country(S) ∧ borders(S, chile)</pre>
+<span class="logic-expression logic-block">ask  large(S) ∧ country(S) ∧ borders(S, chile)</span>
 
 trong đó $large$ là một vị từ có thể đúng đối với các quốc gia có diện tích lớn hơn hai triệu kilômét vuông.
 

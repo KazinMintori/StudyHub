@@ -90,7 +90,7 @@ Miền xác định có $|\mathcal{D}| = 4$.
 - Số phần mở rộng khả dĩ của vị từ $p$: Là số tập con của $\mathcal{D} \implies 2^4 = 16$ cách chọn $\pi(p)$.
 - Số phần mở rộng khả dĩ của vị từ $q$: $2^4 = 16$ cách chọn $\pi(q)$.
 - Tổng số diễn giải:
-  <pre class="logic-expression">N_total = 64 × 16 × 16 = 16,384  diễn giải.</pre>
+  <span class="logic-expression logic-block">N_total = 64 × 16 × 16 = 16,384  diễn giải.</span>
 
 **(b) Số mô hình của $KB_1 = \{p(a)\}$:**
 - $KB_1$ chỉ đòi hỏi $\phi(a) \in \pi(p)$.
@@ -98,7 +98,7 @@ Miền xác định có $|\mathcal{D}| = 4$.
 - Để $d \in \pi(p)$, tập con $\pi(p)$ bắt buộc phải chứa $d$, và 3 phần tử còn lại có thể thuộc hoặc không thuộc $\pi(p)$ $\implies 2^{4-1} = 2^3 = 8$ cách chọn $\pi(p)$.
 - Vị từ $q$ không bị ràng buộc bởi $KB_1 \implies 16$ cách chọn $\pi(q)$.
 - Số mô hình của $KB_1$:
-  <pre class="logic-expression">N_KB_1 = 64 × 8 × 16 = 8,192  mô hình.</pre>
+  <span class="logic-expression logic-block">N_KB_1 = 64 × 8 × 16 = 8,192  mô hình.</span>
 
 **(c) Số mô hình của $KB_2 = \{p(X) \leftarrow q(X)\}$:**
 - $KB_2$ đòi hỏi $\pi(q) \subseteq \pi(p)$.
@@ -130,7 +130,7 @@ Ta xét hai trường hợp gán hằng số:
   - Số mô hình: $48 \times 18 = 864$.
 
 Tổng số mô hình của $KB_3$:
-<pre class="logic-expression">N_KB_3 = 432 + 864 = 1,296  mô hình.</pre>
+<span class="logic-expression logic-block">N_KB_3 = 432 + 864 = 1,296  mô hình.</span>
 :::
 :::
 
@@ -153,7 +153,7 @@ Hãy chỉ ra tập hợp các hệ quả nguyên tử không biến dẫn xuấ
 
 ::: details Lời giải chi tiết
 Tập các sự kiện ban đầu:
-<pre class="logic-expression">C_0 = {r(a), r(e), p(c), q(b), s(a, b), s(d, b), s(e, d)}</pre>
+<span class="logic-expression logic-block">C_0 = {r(a), r(e), p(c), q(b), s(a, b), s(d, b), s(e, d)}</span>
 
 Hai luật suy diễn cần xét:
 - Luật 1: $p(X) \leftarrow q(X) \wedge r(X)$.
@@ -232,7 +232,7 @@ parent(karen, todd).
 2. Phân giải với luật 3: <code class="logic-expression">has_access(X_1, library) ← parent(Y_1, X_1) ∧ has_access(Y_1, library)</code>
    - Phép thế: $\{X_1/todd\}$
    - Mục tiêu mới:
-     <pre class="logic-expression">yes ← parent(Y_1, todd) ∧ has_access(Y_1, library)</pre>
+     <span class="logic-expression logic-block">yes ← parent(Y_1, todd) ∧ has_access(Y_1, library)</span>
 3. Phân giải với sự kiện $parent(karen, todd)$:
    - Phép thế: $\{Y_1/karen\}$
    - Mục tiêu mới:
@@ -240,7 +240,7 @@ parent(karen, todd).
 4. Phân giải tiếp với luật 3: <code class="logic-expression">has_access(X_2, library) ← parent(Y_2, X_2) ∧ has_access(Y_2, library)</code>
    - Phép thế: $\{X_2/karen\}$
    - Mục tiêu mới:
-     <pre class="logic-expression">yes ← parent(Y_2, karen) ∧ has_access(Y_2, library)</pre>
+     <span class="logic-expression logic-block">yes ← parent(Y_2, karen) ∧ has_access(Y_2, library)</span>
 5. Phân giải với sự kiện $parent(diane, karen)$:
    - Phép thế: $\{Y_2/diane\}$
    - Mục tiêu mới:
@@ -293,19 +293,19 @@ Hãy xác định kết quả của các phép áp dụng thế sau đây:
 ::: details Lời giải chi tiết
 **(a)**
 - Thay thế biến $A$ bằng $X$, thay thế biến $Y$ bằng $c$ (biến $Z$ không xuất hiện trong biểu thức nên bỏ qua):
-  <pre class="logic-expression">f(A, X, Y, X, Y){A/X, Z/b, Y/c} = f(X, X, c, X, c)</pre>
+  <span class="logic-expression logic-block">f(A, X, Y, X, Y){A/X, Z/b, Y/c} = f(X, X, c, X, c)</span>
 
 **(b)**
 - Trong câu tuyển này, các biến có mặt là $F$ và $L$.
 - Phép thế chứa $F/c(l, X_1)$. Biến $L$ không bị thay thế. Các phép gán cho $Y_1, A_1, Z_1$ không ảnh hưởng vì các biến này không có mặt trong biểu thức ban đầu.
 - Kết quả:
-  <pre class="logic-expression">yes(c(l, X_1), L) ← append(c(l, X_1), c(L, nil), c(l, c(i, c(s, c(t, nil)))))</pre>
+  <span class="logic-expression logic-block">yes(c(l, X_1), L) ← append(c(l, X_1), c(L, nil), c(l, c(i, c(s, c(t, nil)))))</span>
 
 **(c)**
 - Các biến có mặt trong câu tuyển là $A_1, X_1, Y_1, Z_1$.
 - Áp dụng các phép thế tương ứng: $A_1 \to l$, $Y_1 \to c(L, nil)$, $Z_1 \to c(i, c(s, c(t, nil)))$. Biến $X_1$ giữ nguyên.
 - Kết quả:
-  <pre class="logic-expression">append(c(l, X_1), c(L, nil), c(l, c(i, c(s, c(t, nil))))) ← append(X_1, c(L, nil), c(i, c(s, c(t, nil))))</pre>
+  <span class="logic-expression logic-block">append(c(l, X_1), c(L, nil), c(l, c(i, c(s, c(t, nil))))) ← append(X_1, c(L, nil), c(i, c(s, c(t, nil))))</span>
 :::
 :::
 
@@ -371,7 +371,7 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - Đối số 2: $[a, z \mid X]$ và $W$. Thế $X$ vào ta được $W / [a, z, i, n, g]$.
 - Đối số 1: $Z$ và $[a, m \mid W]$. Thế $W$ vào ta được $Z / [a, m, a, z, i, n, g]$.
 - Hợp nhất thành công. MGU:
-  <pre class="logic-expression">σ = {X / [i, n, g], W / [a, z, i, n, g], Z / [a, m, a, z, i, n, g]}</pre>
+  <span class="logic-expression logic-block">σ = {X / [i, n, g], W / [a, z, i, n, g], Z / [a, m, a, z, i, n, g]}</span>
 
 **(d)**
 - Đối số 3: $c(a, c(b, c(a, emp)))$ và $c(H1, R1)$:
@@ -380,7 +380,7 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - Đối số 1: $F0$ và $c(H1, T1)$. Với $H1 = a$, ta có $F0 / c(a, T1)$.
 - Đối số 2: $c(b, c(B0, L0))$ và $L1 \implies L1 / c(b, c(B0, L0))$.
 - Hợp nhất thành công. MGU:
-  <pre class="logic-expression">σ = {H1/a, R1/c(b, c(a, emp)), L1/c(b, c(B0, L0)), F0/c(a, T1)}</pre>
+  <span class="logic-expression logic-block">σ = {H1/a, R1/c(b, c(a, emp)), L1/c(b, c(B0, L0)), F0/c(a, T1)}</span>
 :::
 :::
 
@@ -398,7 +398,7 @@ r(b).
 
 ::: details Lời giải chi tiết
 1. **Các sự kiện có sẵn trong $KB$**:
-   <pre class="logic-expression">s(f(a), b),   s(f(b), b),   s(c, b),   r(b)</pre>
+   <span class="logic-expression logic-block">s(f(a), b),   s(f(b), b),   s(c, b),   r(b)</span>
 2. **Áp dụng luật $q(Y) \leftarrow s(Y, Z) \wedge r(Z)$**:
    - Ta có sự kiện $r(b)$, nên chọn $Z = b$.
    - Các sự kiện khớp $s(Y, b)$ gồm:
@@ -411,7 +411,7 @@ r(b).
    - Đối với $q(c)$, số hạng $c$ không có dạng $f(X)$ nên không kích hoạt thêm câu nào.
 
 **Toàn bộ các hệ quả nguyên tử không biến tất suy từ $KB$ là:**
-<pre class="logic-expression">{s(f(a), b), s(f(b), b), s(c, b), r(b), q(f(a)), q(f(b)), q(c), p(a), p(b)}</pre>
+<span class="logic-expression logic-block">{s(f(a), b), s(f(b), b), s(c, b), r(b), q(f(a)), q(f(b)), q(c), p(a), p(b)}</span>
 :::
 :::
 
@@ -425,7 +425,7 @@ rd(cons(H, T), cons(H, R)) :- rd(T, R).
 
 Hãy trình bày dẫn xuất từ trên xuống (top-down), chỉ rõ toàn bộ các phép thế cho truy vấn:
 
-<pre class="logic-expression">ask  rd(cons(a, cons(cons(a, X), cons(B, cons(c, Z)))), W).</pre>
+<span class="logic-expression logic-block">ask  rd(cons(a, cons(cons(a, X), cons(B, cons(c, Z)))), W).</span>
 
 - Câu trả lời tương ứng với dẫn xuất này là gì?
 - Có tồn tại câu trả lời thứ hai hay không? Nếu có, hãy trình bày dẫn xuất; nếu không, hãy giải thích lý do.
@@ -436,7 +436,7 @@ Ký hiệu hai câu tuyển trong chương trình:
 - $(C_2)$: <code class="logic-expression">rd(cons(H_2, T_2), cons(H_2, R_2)) ← rd(T_2, R_2).</code>
 
 Truy vấn khởi đầu:
-<pre class="logic-expression">yes(W) ← rd(cons(a, cons(cons(a, X), cons(B, cons(c, Z)))), W)</pre>
+<span class="logic-expression logic-block">yes(W) ← rd(cons(a, cons(cons(a, X), cons(B, cons(c, Z)))), W)</span>
 
 Danh sách đầu vào có phần tử đầu là $a$, phần tử thứ hai là $cons(a, X)$. Vì $a$ (hằng số) và $cons(a, X)$ (cấu trúc hàm) không thể hợp nhất với nhau, nên câu tuyển cơ sở $(C_1)$ không thể áp dụng ở bước đầu tiên. Bắt buộc phải chọn $(C_2)$:
 
@@ -446,7 +446,7 @@ Danh sách đầu vào có phần tử đầu là $a$, phần tử thứ hai là
   - <code class="logic-expression">T_2 = cons(cons(a, X), cons(B, cons(c, Z)))</code>
   - $W = cons(a, R_2)$
 - Mục tiêu mới:
-  <pre class="logic-expression">yes(cons(a, R_2)) ← rd(cons(cons(a, X), cons(B, cons(c, Z))), R_2)</pre>
+  <span class="logic-expression logic-block">yes(cons(a, R_2)) ← rd(cons(cons(a, X), cons(B, cons(c, Z))), R_2)</span>
 
 Tại bước này, danh sách mục tiêu có hai phần tử đầu là $cons(a, X)$ và $B$.
 Ta có hai khả năng chọn câu tuyển:
@@ -460,7 +460,7 @@ Ta có hai khả năng chọn câu tuyển:
 - Thân mục tiêu trở thành rỗng:
   $$yes(cons(a, cons(c, Z))) \leftarrow$$
 - Câu trả lời thứ nhất:
-  <pre class="logic-expression">W = cons(a, cons(c, Z)),   B = cons(a, X)</pre>
+  <span class="logic-expression logic-block">W = cons(a, cons(c, Z)),   B = cons(a, X)</span>
 
 **Nhánh dẫn xuất 2: Chọn câu tuyển $(C_2)$**
 - Hợp nhất với $(C_2)$:
@@ -468,12 +468,12 @@ Ta có hai khả năng chọn câu tuyển:
   - $T_3 = cons(B, cons(c, Z))$
   - $R_2 = cons(cons(a, X), R_3)$
 - Mục tiêu mới:
-  <pre class="logic-expression">yes(cons(a, cons(cons(a, X), R_3))) ← rd(cons(B, cons(c, Z)), R_3)</pre>
+  <span class="logic-expression logic-block">yes(cons(a, cons(cons(a, X), R_3))) ← rd(cons(B, cons(c, Z)), R_3)</span>
 - Tiếp tục phân giải mục tiêu này:
   - Nếu chọn $(C_1)$: Hợp nhất $B$ với $c \implies B = c$, và $T_4 = Z, R_3 = Z$.
     Thân mục tiêu trở thành rỗng.
     Ta thu được câu trả lời thứ hai:
-    <pre class="logic-expression">W = cons(a, cons(cons(a, X), Z)),   B = c</pre>
+    <span class="logic-expression logic-block">W = cons(a, cons(cons(a, X), Z)),   B = c</span>
 
 Như vậy, **có tồn tại câu trả lời thứ hai**. Cả hai câu trả lời phản ánh hai vị trí khác nhau trong danh sách mà tại đó hai phần tử liên tiếp có thể được hợp nhất để loại bỏ trùng lặp.
 :::
@@ -489,7 +489,7 @@ adj(A, B, L) :- ap(F, c(A, c(B, E)), L).
 ```
 
 - (a) Hãy trình bày dẫn xuất từ trên xuống (bao gồm mọi phép thế) cho một câu trả lời của truy vấn:
-  <pre class="logic-expression">ask  adj(b, Y, c(a, c(b, c(b, c(a, emp))))).</pre>
+  <span class="logic-expression logic-block">ask  adj(b, Y, c(a, c(b, c(b, c(a, emp))))).</span>
 - (b) Có câu trả lời nào khác không? Nếu có, hãy giải thích điểm rẽ nhánh trong dẫn xuất và tiếp tục dẫn xuất để chỉ ra câu trả lời đó. Nếu không, hãy giải thích tại sao.
 
 ::: details Lời giải chi tiết
@@ -497,13 +497,13 @@ adj(A, B, L) :- ap(F, c(A, c(B, E)), L).
 
 **(a) Dẫn xuất câu trả lời thứ nhất:**
 1. Khởi đầu:
-   <pre class="logic-expression">yes(Y) ← adj(b, Y, c(a, c(b, c(b, c(a, emp)))))</pre>
+   <span class="logic-expression logic-block">yes(Y) ← adj(b, Y, c(a, c(b, c(b, c(a, emp)))))</span>
 2. Áp dụng luật $adj$:
-   <pre class="logic-expression">yes(Y) ← ap(F, c(b, c(Y, E)), c(a, c(b, c(b, c(a, emp)))))</pre>
+   <span class="logic-expression logic-block">yes(Y) ← ap(F, c(b, c(Y, E)), c(a, c(b, c(b, c(a, emp)))))</span>
 3. Với mục tiêu $ap$, phần tử đầu của danh sách kết quả là $a$, trong khi phần tử đầu của đối số thứ hai là $b$. Vì $a \neq b$, câu tuyển $ap(emp, L, L)$ không thể áp dụng được ngay. Buộc phải chọn câu tuyển đệ quy của $ap$:
    - Hợp nhất: <code class="logic-expression">F = c(a, T_1), H_1 = a, R_1 = c(b, c(b, c(a, emp)))</code>.
    - Mục tiêu mới:
-     <pre class="logic-expression">yes(Y) ← ap(T_1, c(b, c(Y, E)), c(b, c(b, c(a, emp))))</pre>
+     <span class="logic-expression logic-block">yes(Y) ← ap(T_1, c(b, c(Y, E)), c(b, c(b, c(a, emp))))</span>
 4. Tại bước này, ta có thể chọn câu tuyển cơ sở $ap(emp, L, L)$:
    - Hợp nhất: $T_1 = emp$, <code class="logic-expression">L = c(b, c(Y, E)) = c(b, c(b, c(a, emp)))</code>.
    - So khớp: $b = b$, $Y = b$, $E = c(a, emp)$.
@@ -515,7 +515,7 @@ adj(A, B, L) :- ap(F, c(A, c(B, E)), L).
 Tại bước 4 ở trên, thay vì chọn $ap(emp, L, L)$, ta có thể tiếp tục chọn câu tuyển đệ quy của $ap$:
 - Hợp nhất: <code class="logic-expression">T_1 = c(b, T_2), H_2 = b, R_2 = c(b, c(a, emp))</code>.
 - Mục tiêu mới:
-  <pre class="logic-expression">yes(Y) ← ap(T_2, c(b, c(Y, E)), c(b, c(a, emp)))</pre>
+  <span class="logic-expression logic-block">yes(Y) ← ap(T_2, c(b, c(Y, E)), c(b, c(a, emp)))</span>
 - Bây giờ chọn câu tuyển cơ sở $ap(emp, L, L)$:
   - Hợp nhất: $T_2 = emp$, $c(b, c(Y, E)) = c(b, c(a, emp))$.
   - So khớp: $b = b$, $Y = a$, $E = emp$.
@@ -603,7 +603,7 @@ subsequence(L1, [_ | T2]) :-
 ::: exercise Bài tập 15.12: Thiết kế bài trình chiếu video tự động
 Giả sử các phân đoạn video được chú thích thông qua quan hệ:
 
-<pre class="logic-expression">segment(SegId, Duration, Covers)</pre>
+<span class="logic-expression logic-block">segment(SegId, Duration, Covers)</span>
 
 trong đó $SegId$ là định danh phân đoạn, $Duration$ là thời lượng (giây), và $Covers$ là danh sách các chủ đề được phân đoạn đó đề cập. Xét cơ sở dữ liệu sau:
 
@@ -737,18 +737,18 @@ enrolled(sally, cs486).
 - (a) Bao đóng Clark của câu tuyển định nghĩa $empty\_course$ là gì?
 - (b) Hãy chỉ ra một phản ví dụ về tính đúng đắn của bao đóng này: Nêu một thể hiện cụ thể mà ở đó thân câu tuyển nhận giá trị đúng nhưng đầu câu tuyển nhận giá trị sai.
 - (c) Trình thông dịch Prolog thực tế sẽ trả về kết quả gì? So sánh với trường hợp đảo thứ tự mục tiêu trong thân câu tuyển:
-  <pre class="logic-expression">empty_course(C) ← $∼$enrolled(S, C) ∧ course(C).</pre>
+  <span class="logic-expression logic-block">empty_course(C) ← $∼$enrolled(S, C) ∧ course(C).</span>
 
 ::: details Lời giải chi tiết
 **(a) Bao đóng Clark của câu tuyển:**
 Vì biến $S$ chỉ xuất hiện ở thân câu tuyển mà không có mặt ở đầu câu tuyển, nên ở dạng chuẩn Clark nó được lượng từ hóa tồn tại:
-<pre class="logic-expression">∀ C (empty_course(C) ↔ course(C) ∧ ∃ S ¬ enrolled(S, C))</pre>
+<span class="logic-expression logic-block">∀ C (empty_course(C) ↔ course(C) ∧ ∃ S ¬ enrolled(S, C))</span>
 
 **(b) Phản ví dụ chứng minh sự vi phạm tính đúng đắn:**
 - Xét khóa học $C = cs422$.
 - Rõ ràng khóa học này **không rỗng** vì đã có sinh viên Huan đăng ký ($enrolled(huan, cs422)$). Do đó, về mặt ngữ nghĩa thế giới thực, $empty\_course(cs422)$ phải nhận giá trị **sai** ($false$).
 - Tuy nhiên, hãy xét biểu thức thân của bao đóng Clark:
-  <pre class="logic-expression">course(cs422) ∧ ∃ S ¬ enrolled(S, cs422)</pre>
+  <span class="logic-expression logic-block">course(cs422) ∧ ∃ S ¬ enrolled(S, cs422)</span>
   - $course(cs422)$ là đúng ($true$).
   - Tồn tại sinh viên $S$ không đăng ký $cs422$ không? Có! Chẳng hạn chọn $S = sally$. Rõ ràng $enrolled(sally, cs422)$ là sai, nên $\neg enrolled(sally, cs422)$ là đúng!
   - Như vậy mệnh đề $\exists S~\neg enrolled(S, cs422)$ nhận giá trị **đúng** ($true$)!

@@ -167,7 +167,7 @@ $$
 
 Giả sử người dùng quan sát thấy cả ba công tắc đều đang gạt lên, nhưng cả hai bóng đèn $l_{1}$ và $l_{2}$ đều tối:
 
-<pre class="logic-expression">up_s_1.   up_s_2.   up_s_3.   dark_l_1.   dark_l_2.</pre>
+<span class="logic-expression logic-block">up_s_1.   up_s_2.   up_s_3.   dark_l_1.   dark_l_2.</span>
 
 Từ cơ sở tri thức và các quan sát này, hệ thống phát hiện hai xung đột tối tiểu:
 
@@ -176,9 +176,7 @@ Từ cơ sở tri thức và các quan sát này, hệ thống phát hiện hai 
 
 Từ đó kéo theo:
 
-<pre class="logic-expression">KB ⊨ ¬ ok_cb_1 ∨ ¬ ok_s_1 ∨ ¬ ok_s_2 ∨ ¬ ok_l_1, 
-
-KB ⊨ ¬ ok_cb_1 ∨ ¬ ok_s_3 ∨ ¬ ok_l_2.</pre>
+<span class="logic-expression logic-block">KB ⊨ ¬ ok_cb_1 ∨ ¬ ok_s_1 ∨ ¬ ok_s_2 ∨ ¬ ok_l_1, &#10;&#10;KB ⊨ ¬ ok_cb_1 ∨ ¬ ok_s_3 ∨ ¬ ok_l_2.</span>
 :::
 
 Một **chẩn đoán dựa trên tính nhất quán** (consistency-based diagnosis) là một tập hợp các nguyên tử khả giả định chứa ít nhất một phần tử của mỗi xung đột tối tiểu; đây chính là bài toán tìm **tập đánh trúng** (hitting set) của tập các xung đột tối tiểu. Một **chẩn đoán tối tiểu** (minimal diagnosis) là một chẩn đoán tối tiểu theo quan hệ bao hàm tập hợp (inclusion-minimal), tức là không có bất kỳ tập con thực sự nào của nó cũng là một chẩn đoán (phân biệt với khái niệm tập có số lượng phần tử ít nhất - minimum cardinality).
@@ -186,25 +184,17 @@ Một **chẩn đoán dựa trên tính nhất quán** (consistency-based diagno
 ::: example Ví dụ 5.22: Phân tích chẩn đoán tối tiểu dưới dạng chuẩn tuyển
 Từ hai xung đột trong Ví dụ 5.21, ta có biểu thức dạng chuẩn hội (CNF):
 
-<pre class="logic-expression">(¬ ok_cb_1 ∨ ¬ ok_s_1 ∨ ¬ ok_s_2 ∨ ¬ ok_l_1) ∧ (¬ ok_cb_1 ∨ ¬ ok_s_3 ∨ ¬ ok_l_2).</pre>
+<span class="logic-expression logic-block">(¬ ok_cb_1 ∨ ¬ ok_s_1 ∨ ¬ ok_s_2 ∨ ¬ ok_l_1) ∧ (¬ ok_cb_1 ∨ ¬ ok_s_3 ∨ ¬ ok_l_2).</span>
 
 Khai triển phân phối biểu thức này sang dạng chuẩn tuyển (DNF), tức là phép tuyển của các phép hội các nguyên tử phủ định, ta thu được:
 
-<pre class="logic-expression">¬ ok_cb_1 ∨ 
-
-(¬ ok_s_1 ∧ ¬ ok_s_3) ∨ (¬ ok_s_1 ∧ ¬ ok_l_2) ∨ 
-
-(¬ ok_s_2 ∧ ¬ ok_s_3) ∨ (¬ ok_s_2 ∧ ¬ ok_l_2) ∨ 
-
-(¬ ok_l_1 ∧ ¬ ok_s_3) ∨ (¬ ok_l_1 ∧ ¬ ok_l_2).</pre>
+<span class="logic-expression logic-block">¬ ok_cb_1 ∨ &#10;&#10;(¬ ok_s_1 ∧ ¬ ok_s_3) ∨ (¬ ok_s_1 ∧ ¬ ok_l_2) ∨ &#10;&#10;(¬ ok_s_2 ∧ ¬ ok_s_3) ∨ (¬ ok_s_2 ∧ ¬ ok_l_2) ∨ &#10;&#10;(¬ ok_l_1 ∧ ¬ ok_s_3) ∨ (¬ ok_l_1 ∧ ¬ ok_l_2).</span>
 
 Như vậy, hệ thống chứng minh được rằng sự cố bắt nguồn từ một lỗi đơn lẻ duy nhất là cầu dao $cb_{1}$ bị hỏng, hoặc rơi vào ít nhất một trong sáu tổ hợp lỗi kép của hai linh kiện.
 
 Các số hạng hội này tương ứng chính xác với 7 chẩn đoán tối tiểu của hệ thống:
 
-<pre class="logic-expression">{ok_cb_1},   {ok_s_1, ok_s_3},   {ok_s_1, ok_l_2}, 
-
-{ok_s_2, ok_s_3},   {ok_s_2, ok_l_2},   {ok_l_1, ok_s_3},   {ok_l_1, ok_l_2}.</pre>
+<span class="logic-expression logic-block">{ok_cb_1},   {ok_s_1, ok_s_3},   {ok_s_1, ok_l_2}, &#10;&#10;{ok_s_2, ok_s_3},   {ok_s_2, ok_l_2},   {ok_l_1, ok_s_3},   {ok_l_1, ok_l_2}.</span>
 :::
 
 ## 5.6.4 Thuật toán tìm tập xung đột
@@ -282,7 +272,7 @@ Hình 5.10: Thuật toán suy diễn lùi từ trên xuống tìm tập xung đ�
 ::: example Ví dụ 5.24: Dẫn xuất suy diễn lùi tìm xung đột
 Bắt đầu với $G_{0} = \{\mathit{false}\}$, thuật toán chọn phân giải với ràng buộc $\mathit{false} \leftarrow \mathit{dark\_l}_{1} \wedge \mathit{lit\_l}_{1}$. Vì $\mathit{dark\_l}_{1}$ là sự kiện quan sát đã biết, tập mục tiêu thu hẹp về $\{\mathit{lit\_l}_{1}\}$. Tiếp tục phân giải qua các quy tắc của mạch điện, $G$ lần lượt nhận các giá trị cho đến khi chỉ còn lại toàn các nguyên tử khả giả định:
 
-<pre class="logic-expression">G = {ok_cb_1, ok_s_1, ok_s_2, ok_l_1}.</pre>
+<span class="logic-expression logic-block">G = {ok_cb_1, ok_s_1, ok_s_2, ok_l_1}.</span>
 
 Thuật toán dừng và trả về tập này dưới dạng một xung đột hoàn chỉnh.
 :::

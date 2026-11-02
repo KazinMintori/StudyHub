@@ -56,43 +56,11 @@ Nếu một nguyên tử $a$ hoàn toàn không có mệnh đề nào quy địn
 ::: example Ví dụ 5.26: Phép bao đóng Clark cho hệ thống mạch điện
 Xét các mệnh đề trong hệ thống mạch điện:
 
-<pre class="logic-expression">down_s_1.   up_s_2.   ok_cb_1.   live_outside. 
-
-live_l_1 ← live_w_0. 
-
-live_w_0 ← live_w_1 ∧ up_s_2. 
-
-live_w_0 ← live_w_2 ∧ down_s_2. 
-
-live_w_1 ← live_w_3 ∧ up_s_1. 
-
-live_w_2 ← live_w_3 ∧ down_s_1. 
-
-live_w_3 ← live_outside ∧ ok_cb_1.</pre>
+<span class="logic-expression logic-block">down_s_1.   up_s_2.   ok_cb_1.   live_outside. &#10;&#10;live_l_1 ← live_w_0. &#10;&#10;live_w_0 ← live_w_1 ∧ up_s_2. &#10;&#10;live_w_0 ← live_w_2 ∧ down_s_2. &#10;&#10;live_w_1 ← live_w_3 ∧ up_s_1. &#10;&#10;live_w_2 ← live_w_3 ∧ down_s_1. &#10;&#10;live_w_3 ← live_outside ∧ ok_cb_1.</span>
 
 Giả sử không có quy tắc nào cho các nguyên tử $\mathit{up\_s}_{1}$ và $\mathit{down\_s}_{2}$. Khi đó phép bao đóng Clark của các nguyên tử là:
 
-<pre class="logic-expression">down_s_1 ↔ true. 
-
-up_s_1 ↔ false. 
-
-up_s_2 ↔ true. 
-
-down_s_2 ↔ false. 
-
-ok_cb_1 ↔ true. 
-
-live_l_1 ↔ live_w_0. 
-
-live_w_0 ↔ (live_w_1 ∧ up_s_2) ∨ (live_w_2 ∧ down_s_2). 
-
-live_w_1 ↔ live_w_3 ∧ up_s_1. 
-
-live_w_2 ↔ live_w_3 ∧ down_s_1. 
-
-live_w_3 ↔ live_outside ∧ ok_cb_1. 
-
-live_outside ↔ true.</pre>
+<span class="logic-expression logic-block">down_s_1 ↔ true. &#10;&#10;up_s_1 ↔ false. &#10;&#10;up_s_2 ↔ true. &#10;&#10;down_s_2 ↔ false. &#10;&#10;ok_cb_1 ↔ true. &#10;&#10;live_l_1 ↔ live_w_0. &#10;&#10;live_w_0 ↔ (live_w_1 ∧ up_s_2) ∨ (live_w_2 ∧ down_s_2). &#10;&#10;live_w_1 ↔ live_w_3 ∧ up_s_1. &#10;&#10;live_w_2 ↔ live_w_3 ∧ down_s_1. &#10;&#10;live_w_3 ↔ live_outside ∧ ok_cb_1. &#10;&#10;live_outside ↔ true.</span>
 
 Phép bao đóng này kéo theo rằng $\mathit{up\_s}_{1}$ sai, $\mathit{live\_w}_{1}$ sai, và $\mathit{live\_w}_{2}$ đúng.
 :::
@@ -152,16 +120,16 @@ Xét tác tử hỗ trợ mua sắm các gói kỳ nghỉ:
  $$
 - Nếu ở sát biển, khách mặc định có lối đi ra biển:
  
- <pre class="logic-expression">beach_access ← on_beach ∧ ∼ ab_beach_access.</pre>
+ <span class="logic-expression logic-block">beach_access ← on_beach ∧ ∼ ab_beach_access.</span>
 - Nếu có lối ra biển, khách mặc định có thể bơi lội:
  
- <pre class="logic-expression">swim_at_beach ← beach_access ∧ ∼ ab_swim_at_beach.</pre>
+ <span class="logic-expression logic-block">swim_at_beach ← beach_access ∧ ∼ ab_swim_at_beach.</span>
 - Tuy nhiên, nếu khu nghỉ dưỡng nằm trong vịnh kín cạnh một thành phố lớn, thì mặc định nước bị ô nhiễm và không được bơi:
  
- <pre class="logic-expression">ab_swim_at_beach ← enclosed_bay ∧ big_city ∧ ∼ ab_no_swimming_near_city.</pre>
+ <span class="logic-expression logic-block">ab_swim_at_beach ← enclosed_bay ∧ big_city ∧ ∼ ab_no_swimming_near_city.</span>
 - Nhưng nếu thành phố đó thuộc tỉnh British Columbia (BC, nơi xử lý nước thải rất nghiêm ngặt), ngoại lệ này lại bị hủy bỏ và du khách vẫn bơi được:
  
- <pre class="logic-expression">ab_no_swimming_near_city ← in_BC ∧ ∼ ab_BC_beaches.</pre>
+ <span class="logic-expression logic-block">ab_no_swimming_near_city ← in_BC ∧ ∼ ab_BC_beaches.</span>
 Chuỗi suy luận phi đơn điệu thể hiện tính thích ứng linh hoạt:
 
 1. Ban đầu chỉ có các luật, tác tử suy ra $\mathit{away\_from\_beach}$.

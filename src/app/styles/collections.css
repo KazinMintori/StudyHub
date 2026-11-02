@@ -716,3 +716,5 @@
   background: var(--canvas);
   color: var(--ink);
 }
+
+.vp-doc .logic-block { display: block; padding: var(--space-3); background: var(--canvas); border: 1px solid var(--rule); border-radius: var(--radius); }

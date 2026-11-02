@@ -67,19 +67,7 @@ Giả sử có các nguyên tử sau:
 
 Hệ thống mệnh đề xác định mô tả dòng nước chảy xuống cống $d_{1}$ khi các vòi $t_{1}, t_{2}$ mở và bồn tắm không đậy nút:
 
-<pre class="logic-expression">pressurized_p_1. 
-
-pressurized_p_2 ← on_t_1 ∧ pressurized_p_1. 
-
-flow_shower ← on_t_2 ∧ pressurized_p_2. 
-
-wet_bath ← flow_shower. 
-
-flow_d_2 ← wet_bath ∧ unplugged_bath. 
-
-flow_d_1 ← flow_d_2. 
-
-on_t_1.   on_t_2.   unplugged_bath.</pre>
+<span class="logic-expression logic-block">pressurized_p_1. &#10;&#10;pressurized_p_2 ← on_t_1 ∧ pressurized_p_1. &#10;&#10;flow_shower ← on_t_2 ∧ pressurized_p_2. &#10;&#10;wet_bath ← flow_shower. &#10;&#10;flow_d_2 ← wet_bath ∧ unplugged_bath. &#10;&#10;flow_d_1 ← flow_d_2. &#10;&#10;on_t_1.   on_t_2.   unplugged_bath.</span>
 
 Yêu cầu:
 
@@ -91,24 +79,10 @@ Yêu cầu:
 
 ::: solution Lời giải gợi ý
 - (a) Bổ sung quy tắc cho nhánh bồn rửa qua ống $p_{3}$ và vòi $t_{3}$:
-  <pre class="logic-expression">pressurized_p_3 ← on_t_1 ∧ pressurized_p_1. 
-
-flow_sink ← on_t_3 ∧ pressurized_p_3. 
-
-wet_sink ← flow_sink. 
-
-flow_d_3 ← wet_sink ∧ unplugged_sink. 
-
-flow_d_1 ← flow_d_3.</pre>
+  <span class="logic-expression logic-block">pressurized_p_3 ← on_t_1 ∧ pressurized_p_1. &#10;&#10;flow_sink ← on_t_3 ∧ pressurized_p_3. &#10;&#10;wet_sink ← flow_sink. &#10;&#10;flow_d_3 ← wet_sink ∧ unplugged_sink. &#10;&#10;flow_d_1 ← flow_d_3.</span>
 - (b) Người cư ngụ có thể quan sát trực tiếp trạng thái vòi nước và nút chặn: $\mathit{on\_t}_{i}$, $\mathit{off\_t}_{i}$, $\mathit{plugged\_sink}$, $\mathit{unplugged\_sink}$, $\mathit{plugged\_bath}$, $\mathit{unplugged\_bath}$. Đây là các nguyên tử khả vấn.
 - (c) Mô hình hóa tràn nước và ướt sàn:
-  <pre class="logic-expression">overflow_sink ← flow_sink ∧ plugged_sink. 
-
-overflow_bath ← flow_shower ∧ plugged_bath. 
-
-wet_floor ← overflow_sink. 
-
-wet_floor ← overflow_bath.</pre>
+  <span class="logic-expression logic-block">overflow_sink ← flow_sink ∧ plugged_sink. &#10;&#10;overflow_bath ← flow_shower ∧ plugged_bath. &#10;&#10;wet_floor ← overflow_sink. &#10;&#10;wet_floor ← overflow_bath.</span>
 :::
 
 ::: exercise Bài tập 5.3: Phân tích mô hình và hệ quả logic
@@ -154,7 +128,7 @@ $$
 ::: solution Lời giải gợi ý
 - (a) Chuỗi tích lũy của tập $C$ trong thuật toán từ dưới lên:
  
- <pre class="logic-expression">C_0 = {} → C_1 = {c} → C_2 = {c, e} → C_3 = {b, c, e} → C_4 = {a, b, c, e} → C_5 = {a, b, c, e, j}.</pre>
+ <span class="logic-expression logic-block">C_0 = {} → C_1 = {c} → C_2 = {c, e} → C_3 = {b, c, e} → C_4 = {a, b, c, e} → C_5 = {a, b, c, e, j}.</span>
   Tập toàn bộ các hệ quả logic là $\{a, b, c, e, j\}$.
 - (b) Mô hình tối tiểu gán $\mathit{true}$ cho $\{a, b, c, e, j\}$ và gán $\mathit{false}$ cho $\{d, f, g, h, k\}$ là một mô hình của $\mathit{KB}$ mà trong đó $f$ nhận giá trị sai.
 - (c) Dẫn xuất SLD từ trên xuống cho $\mathbf{ask} \; a$:
@@ -193,25 +167,7 @@ Sử dụng thuật toán `Debug_false`:
 ::: exercise Bài tập 5.7: Giải thích hành vi đáng ngờ bằng suy luận quy nạp đảo
 Xét cơ sở tri thức giải thích hành vi đáng ngờ:
 
-<pre class="logic-expression">goto_forest ← walking. 
-
-get_gun ← hunting. 
-
-goto_forest ← hunting. 
-
-get_gun ← robbing. 
-
-goto_bank ← robbing. 
-
-goto_bank ← banking. 
-
-fill_withdrawal_form ← banking. 
-
-false ← banking ∧ robbing. 
-
-false ← wearing_good_shoes ∧ goto_forest. 
-
-assumable   walking, hunting, robbing, banking.</pre>
+<span class="logic-expression logic-block">goto_forest ← walking. &#10;&#10;get_gun ← hunting. &#10;&#10;goto_forest ← hunting. &#10;&#10;get_gun ← robbing. &#10;&#10;goto_bank ← robbing. &#10;&#10;goto_bank ← banking. &#10;&#10;fill_withdrawal_form ← banking. &#10;&#10;false ← banking ∧ robbing. &#10;&#10;false ← wearing_good_shoes ∧ goto_forest. &#10;&#10;assumable   walking, hunting, robbing, banking.</span>
 
 - (a) Nếu quan sát thấy đối tượng lấy súng ($\mathit{get\_gun}$), hãy tìm tất cả các lời giải thích tối tiểu.
 - (b) Nếu quan sát thấy đối tượng vừa lấy súng vừa đi đến ngân hàng ($\mathit{get\_gun} \wedge \mathit{goto\_bank}$), tìm các lời giải thích tối tiểu.
@@ -241,11 +197,7 @@ Một bệnh nhân có thể mắc một trong bốn bệnh: $p, q, r, s$. Bện
 
 ::: solution Lời giải gợi ý
 - (a) Cơ sở tri thức:
-  <pre class="logic-expression">spots ← p.   spots ← q. 
-
-fever ← q.   fever ← r.   fever ← s. 
-
-assumable   p, q, r, s.</pre>
+  <span class="logic-expression logic-block">spots ← p.   spots ← q. &#10;&#10;fever ← q.   fever ← r.   fever ← s. &#10;&#10;assumable   p, q, r, s.</span>
 - (b) Truy vấn: Giải thích $\mathit{spots} \wedge \mathit{fever}$.
   Các lời giải thích tối tiểu:
   1. $\{q\}$ (bệnh $q$ giải thích cả phát ban lẫn sốt).
@@ -297,7 +249,7 @@ Yêu cầu:
 ::: solution Lời giải gợi ý
 - (a) Trong CBD: Một van cấp áp suất cho đường ống sau nó nếu nó mở và hoạt động tốt:
  
- <pre class="logic-expression">pressurized_v_i ← pressurized_in_v_i ∧ open_v_i ∧ ok_v_i.</pre>
+ <span class="logic-expression logic-block">pressurized_v_i ← pressurized_in_v_i ∧ open_v_i ∧ ok_v_i.</span>
   Động cơ $e_{1}$ có lực đẩy nếu cả nhánh nhiên liệu và oxy hóa đều có áp suất đến buồng đốt:
  
  $$
@@ -319,7 +271,7 @@ Mở rộng bài toán động cơ DS1 với các trạng thái chi tiết của
 ::: solution Lời giải gợi ý
 - (a) Mô hình hóa khí rò rỉ tại khu vực 3:
  
- <pre class="logic-expression">gas_detected_s_3 ← pressurized_in_v_k ∧ leaking_v_k   (∀ v_k ∈ {v_13, …, v_16}).</pre>
+ <span class="logic-expression logic-block">gas_detected_s_3 ← pressurized_in_v_k ∧ leaking_v_k   (∀ v_k ∈ {v_13, …, v_16}).</span>
   Khi động cơ mất lực đẩy và cảm biến 3 báo rò rỉ, hệ thống quy nạp đảo sẽ tìm các kịch bản trong đó một van thuộc cụm 3 bị rò rỉ làm tụt áp suất buồng đốt.
 - (b) Để kiểm soát bùng nổ tổ hợp:
   1. Áp dụng xác suất tiên nghiệm cho từng dạng lỗi (tìm kiếm kịch bản có xác suất cao nhất trước).
@@ -418,23 +370,7 @@ Hai kênh băng thông cao được chuyển tiếp qua các vệ tinh ($s_{1}, 
 
 Cơ sở tri thức mô tả mạng truyền thông:
 
-<pre class="logic-expression">send_signal_lg_sc ← ok_sc_lg ∧ alive_sc. 
-
-send_signal_hg_sc ← ok_sc_hg ∧ alive_sc. 
-
-get_signal_s_1 ← send_signal_hg_sc ∧ ok_s_1_ant. 
-
-get_signal_s_2 ← send_signal_hg_sc ∧ ok_s_2_ant. 
-
-send_signal_s_1 ← get_signal_s_1 ∧ ok_s_1_trans. 
-
-send_signal_s_2 ← get_signal_s_2 ∧ ok_s_2_trans. 
-
-get_signal_gc ← send_signal_s_1 ∧ ok_a_1. 
-
-get_signal_gc ← send_signal_s_2 ∧ ok_a_2. 
-
-get_signal_gc ← send_signal_lg_sc ∧ ok_a_3 ∧ no_dist.</pre>
+<span class="logic-expression logic-block">send_signal_lg_sc ← ok_sc_lg ∧ alive_sc. &#10;&#10;send_signal_hg_sc ← ok_sc_hg ∧ alive_sc. &#10;&#10;get_signal_s_1 ← send_signal_hg_sc ∧ ok_s_1_ant. &#10;&#10;get_signal_s_2 ← send_signal_hg_sc ∧ ok_s_2_ant. &#10;&#10;send_signal_s_1 ← get_signal_s_1 ∧ ok_s_1_trans. &#10;&#10;send_signal_s_2 ← get_signal_s_2 ∧ ok_s_2_trans. &#10;&#10;get_signal_gc ← send_signal_s_1 ∧ ok_a_1. &#10;&#10;get_signal_gc ← send_signal_s_2 ∧ ok_a_2. &#10;&#10;get_signal_gc ← send_signal_lg_sc ∧ ok_a_3 ∧ no_dist.</span>
 
 Mặt đất không nhận được tín hiệu ($\mathit{no\_signal\_gc}$). Biết chắc chắn các ăng ten mặt đất đều tốt ($\mathit{ok\_a}_{1}, \mathit{ok\_a}_{2}, \mathit{ok\_a}_{3}$) và bộ phát của vệ tinh 1 tốt ($\mathit{ok\_s}_{1}\mathit{\_trans}$).
 
@@ -471,7 +407,7 @@ Mặt đất không nhận được tín hiệu ($\mathit{no\_signal\_gc}$). Bi�
 - (a) NASA ưu tiên quy nạp đảo vì các kỹ sư cần giải thích chính xác nguyên nhân cụ thể gây mất tín hiệu (ví dụ do nhiễu thời tiết hay do hỏng bộ phát tần số cao) để đưa ra hành động khắc phục tương ứng (như chuyển tần số hoặc tái khởi động thiết bị).
 - (b) Mở rộng cơ sở tri thức cho tín hiệu tĩnh vô tuyến:
  
- <pre class="logic-expression">static_gc ← alive_sc ∧ ok_sc_lg ∧ ok_a_3 ∧ dist.</pre>
+ <span class="logic-expression logic-block">static_gc ← alive_sc ∧ ok_sc_lg ∧ ok_a_3 ∧ dist.</span>
   Khi trạm mặt đất thu được tín hiệu tĩnh vô tuyến ($\mathit{static\_gc}$), quy nạp đảo giải thích ngay rằng tàu vũ trụ vẫn hoạt động bình thường ($\mathit{alive\_sc}$), bộ phát thấp tầng tốt, và nguyên nhân mất dữ liệu là do nhiễu khí quyển ($\mathit{dist}$).
 :::
 
