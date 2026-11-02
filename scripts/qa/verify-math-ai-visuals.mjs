@@ -52,6 +52,7 @@ const routes = [
   ['equivalence','/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-tuong-duong.html'],
   ['elimination','/toan-cho-ai/bai-giang/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.html'],
   ['linear-program','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-tuyen-tinh.html'],
+  ['lp-models','/toan-cho-ai/bai-giang/bai-02-tap-loi/mo-hinh-lp.html'],
   ['function-operations','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.html'],
   ['optimality','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.html'],
   ['ml-models','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.html'],
@@ -97,6 +98,7 @@ async function sourceManifest() {
     'src/features/labs/components/SensorWeightsLab.vue',
     'src/features/labs/components/BisectionLab.vue','src/features/labs/components/MinimaxRatioLab.vue','src/features/labs/services/apollonius-feasibility.mjs',
     'src/features/labs/components/LPDirectionLab.vue','src/features/labs/components/LpCubeLab.vue','src/features/labs/services/linear-program-geometry.mjs',
+    'src/features/labs/components/ChebyshevCenterLab.vue','src/features/labs/components/ChebyshevSpaceLab.vue','src/features/labs/components/MomentBoundsLab.vue','src/features/labs/services/lp-models-geometry.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -317,6 +319,12 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'lp-models':[
+   [0,'Ngũ giác ban đầu'],[0,'Hình chữ nhật, nhiều tâm'],[0,'Kéo để chọn một tâm tối ưu'],[0,'Miền rỗng'],[0,'Ngũ giác ban đầu'],
+   [1,'Bán kính bằng 0'],[1,'Một điểm khả thi'],[1,'Đỉnh tối ưu của LP'],[1,'Bán kính quá lớn'],[1,'Đổi góc nhìn'],[1,'Một điểm khả thi'],
+   [2,'Chỉ biết E[X] = 1'],[2,'Xác suất đuôi lớn nhất'],[2,'Xác suất đuôi nhỏ nhất'],[2,'Phân phối ở giữa'],
+   [2,'Thêm E[X²] = 2'],[2,'Xác suất đuôi lớn nhất'],[2,'Xác suất đuôi nhỏ nhất'],[2,'Phân phối ở giữa']
+  ],
   'linear-program':[
    [0,'Nghiệm tại một đỉnh'],[0,'Cả cạnh tối ưu'],[0,'Mục tiêu bằng không'],[0,'Miền vô hạn, tối ưu hữu hạn'],[0,'Mục tiêu giảm không bị chặn'],
    [0,'Cả tia là nghiệm'],[0,'Có nghiệm nhưng không có đỉnh'],[0,'Miền khả thi rỗng'],[0,'Mục tiêu bằng không'],[0,'Nghiệm tại một đỉnh'],
@@ -361,6 +369,18 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='lp-models'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===0&&label==='Hình chữ nhật, nhiều tâm')assert(readout.includes('r = 1.000000')&&readout.includes('tâm không duy nhất'),'Rectangle must retain the optimal center segment')
+   if(index===0&&label==='Miền rỗng')assert(readout.includes('Không có hình tròn nào'),'Empty constraints must not produce a negative-radius circle')
+   if(index===1&&label==='Bán kính quá lớn')assert(readout.includes('Lát khả thi ở độ cao này rỗng'),'An oversized radius has no feasible center')
+   if(index===1&&label==='Đỉnh tối ưu của LP')assert(readout.includes('Năm bất đẳng thức đều thỏa.'),'The lifted optimum must satisfy every LP inequality')
+   if(index===2){
+    assert(readout.includes('E[X] = 1.000000'),'Probability presets must preserve the first moment')
+    if(label==='Xác suất đuôi lớn nhất')assert(/P\(X ≥ 3\) = (0\.333333|0\.166667)/.test(readout),'Wrong sharp probability endpoint')
+    if(label==='Thêm E[X²] = 2')assert(readout.includes('E[X²] = 2.000000'),'Second-moment mode must keep its additional equality')
+   }
+  }
   if(name==='linear-program'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0){
@@ -431,6 +451,10 @@ async function exercisePresets(name,touch){
   if(name==='linear-program'&&(label.startsWith('Nghiệm tại')||label.startsWith('Miền vô hạn')||label.startsWith('Có nghiệm')||index===1&&label==='Toàn khối tối ưu')){
    await interact(touch,index)
    await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+label)
+  }
+  if(name==='lp-models'&&(index===0&&label==='Kéo để chọn một tâm tối ưu'||index===1&&label==='Một điểm khả thi'||index===2&&label==='Phân phối ở giữa')){
+   await interact(touch,index)
+   await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+index+'-'+label)
   }
  }
  if(name==='equality-qp'){

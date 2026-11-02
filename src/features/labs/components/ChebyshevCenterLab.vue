@@ -1,134 +1,118 @@
 <script setup>
+import {computed,ref,watch} from 'vue'
 import LabPointControls from './LabPointControls.vue'
-import { computed, ref } from 'vue'
-import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import {createDragger,makeView,fmt,fmtPoint} from '../controllers/svg-drag.js'
+import {dot,polyhedronInBox,closestOnSegment,convexHull,insideConvexPolygon,clipPolygon} from '../services/convex-geometry.mjs'
+import {clipSegment,clipPolyline} from '../services/svg-clipping.mjs'
+import {chebyshevShapes,chebyshevModel,polygonCentroid} from '../services/lp-models-geometry.mjs'
 
-// Tâm Chebyshev của đa giác {x : aᵢᵀx ≤ bᵢ} (chủ đề 5, Lecture 02): cực đại r với aᵢᵀx_c + r‖aᵢ‖ ≤ bᵢ.
-// LP ba biến (x_c, r) được giải đúng bằng cách xét mọi bộ ba ràng buộc chặt: nghiệm của LP có giá trị hữu hạn
-// luôn đạt tại một đỉnh, và mỗi đỉnh của miền khả thi trong R³ là giao của ba mặt.
-const DEFAULT = [
-  { a: [-1, 0], b: 0 }, { a: [0, -1], b: 0 }, { a: [1, 2], b: 8 }, { a: [3, 1], b: 12 }, { a: [-1, 1], b: 3 }
-]
-const cons = ref(DEFAULT.map(c => ({ ...c })))
-const showCentroid = ref(false)
-const norm = (a) => Math.hypot(a[0], a[1])
-const dot = (u, v) => u[0] * v[0] + u[1] * v[1]
-
-function solve3(M, rhs) {
-  const det = (m) => m[0][0] * (m[1][1] * m[2][2] - m[1][2] * m[2][1]) - m[0][1] * (m[1][0] * m[2][2] - m[1][2] * m[2][0]) + m[0][2] * (m[1][0] * m[2][1] - m[1][1] * m[2][0])
-  const D = det(M)
-  if (Math.abs(D) < 1e-10) return null
-  return [0, 1, 2].map(k => det(M.map((row, i) => row.map((v, j) => (j === k ? rhs[i] : v)))) / D)
-}
-const center = computed(() => {
-  const C = cons.value
-  let best = null
-  for (let i = 0; i < C.length; i++) for (let j = i + 1; j < C.length; j++) for (let k = j + 1; k < C.length; k++) {
-    const rows = [C[i], C[j], C[k]]
-    const sol = solve3(rows.map(c => [c.a[0], c.a[1], norm(c.a)]), rows.map(c => c.b))
-    if (!sol || sol[2] < -1e-9) continue
-    const ok = C.every(c => dot(c.a, sol) + sol[2] * norm(c.a) <= c.b + 1e-7)
-    if (ok && (!best || sol[2] > best.r + 1e-12)) best = { x: [sol[0], sol[1]], r: sol[2] }
+const svg=ref(null),constraints=ref(chebyshevShapes.pentagon.map(row=>({a:[...row.a],b:row.b})))
+const selected=ref(0),centerMode=ref(false),showCentroid=ref(false),chosen=ref([2,2])
+const model=computed(()=>chebyshevModel(constraints.value))
+const centroid=computed(()=>polygonCentroid(constraints.value))
+watch(model,next=>{chosen.value=next?.center||[2,2];if(!next||next.centers.length<2)centerMode.value=false},{immediate:true})
+const view=makeView({x0:-1,x1:5,y0:-1,y1:5,width:360,height:360,pad:34})
+const world=computed(()=>view),frame={x0:34,x1:326,y0:34,y1:326}
+const P=p=>view.point(p),poly=points=>points.map(p=>P(p).join(',')).join(' ')
+const polygon=computed(()=>polyhedronInBox(constraints.value,[-1,5,-1,5]))
+const normalLength=row=>Math.hypot(...row.a)
+const row=computed(()=>constraints.value[selected.value])
+const edgePoint=computed(()=>{
+ const reference=[2,2],denom=dot(row.value.a,row.value.a),distance=(row.value.b-dot(row.value.a,reference))/denom
+ return reference.map((v,i)=>v+distance*row.value.a[i])
+})
+const handle=computed(()=>centerMode.value?chosen.value:edgePoint.value)
+function move(_,point){
+ if(centerMode.value){
+  const hull=convexHull(model.value.centers)
+  if(hull.length>2&&insideConvexPolygon(point,hull)){chosen.value=point;return}
+  const candidates=hull.map((a,i)=>closestOnSegment(point,a,hull[(i+1)%hull.length]))
+  candidates.sort((a,b)=>a.distance-b.distance);chosen.value=candidates[0].point
+ }else{
+  const unit=row.value.a.map(value=>value/normalLength(row.value)),reference=[2,2]
+  let lower=-Infinity,upper=Infinity
+  for(let i=0;i<2;i++)if(Math.abs(unit[i])>1e-12){
+   const ends=[(-.8-reference[i])/unit[i],(4.8-reference[i])/unit[i]].sort((a,b)=>a-b)
+   lower=Math.max(lower,ends[0]);upper=Math.min(upper,ends[1])
   }
-  return best
-})
-const active = computed(() => {
-  const s = center.value
-  if (!s) return []
-  return cons.value.map((c, i) => (Math.abs(dot(c.a, s.x) + s.r * norm(c.a) - c.b) < 1e-6 ? i : -1)).filter(i => i >= 0)
-})
-// Đa giác khả thi: cắt một hình vuông lớn bởi từng nửa mặt phẳng (thuật toán Sutherland–Hodgman).
-const polygon = computed(() => {
-  let poly = [[-10, -10], [10, -10], [10, 10], [-10, 10]]
-  for (const c of cons.value) {
-    const out = [], val = (p) => dot(c.a, p) - c.b
-    for (let i = 0; i < poly.length; i++) {
-      const p = poly[i], q = poly[(i + 1) % poly.length], vp = val(p), vq = val(q)
-      if (vp <= 0) out.push(p)
-      if ((vp < 0 && vq > 0) || (vp > 0 && vq < 0)) { const t = vp / (vp - vq); out.push([p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])]) }
-    }
-    poly = out
-    if (!poly.length) break
-  }
-  return poly
-})
-const centroid = computed(() => {
-  const V = polygon.value
-  if (V.length < 3) return null
-  let A = 0, cx = 0, cy = 0
-  for (let i = 0; i < V.length; i++) {
-    const [x0, y0] = V[i], [x1, y1] = V[(i + 1) % V.length], cr = x0 * y1 - x1 * y0
-    A += cr; cx += (x0 + x1) * cr; cy += (y0 + y1) * cr
-  }
-  return Math.abs(A) < 1e-12 ? null : { x: [cx / (3 * A), cy / (3 * A)], area: Math.abs(A) / 2 }
-})
-
-const view = ref(makeView({ x0: -1, x1: 5, y0: -1, y1: 4.6, width: 460, height: 429 }))
-const svg = ref(null)
-const P = (p) => [view.value.sx(p[0]), view.value.sy(p[1])]
-// Tay nắm của ràng buộc i: chân đường vuông góc hạ từ tâm (hoặc từ điểm tham chiếu) xuống cạnh i.
-const ref0 = computed(() => (center.value ? center.value.x : [1.5, 1.5]))
-const handle = (i) => {
-  const c = cons.value[i], n2 = dot(c.a, c.a), s = (c.b - dot(c.a, ref0.value)) / n2
-  return [ref0.value[0] + s * c.a[0], ref0.value[1] + s * c.a[1]]
+  const distance=Math.max(lower,Math.min(upper,(dot(row.value.a,point)-dot(row.value.a,reference))/normalLength(row.value)))
+  constraints.value=constraints.value.map((item,index)=>index===selected.value?{a:item.a,b:dot(row.value.a,reference)+distance*normalLength(row.value)}:item)
+ }
 }
-const drag = createDragger(svg, view, (name, p) => {
-  const i = Number(name.slice(1)), c = cons.value[i]
-  cons.value = cons.value.map((cc, k) => (k === i ? { ...cc, b: Math.round(dot(c.a, p) * 100) / 100 } : cc))
-}, { step: 0.1 })
-const lineEnds = (c) => {
-  const n2 = dot(c.a, c.a), base = [(c.b * c.a[0]) / n2, (c.b * c.a[1]) / n2], t = [-c.a[1], c.a[0]], L = 30 / Math.sqrt(n2)
-  return [P([base[0] - L * t[0], base[1] - L * t[1]]), P([base[0] + L * t[0], base[1] + L * t[1]])]
-}
-// Viết ràng buộc thành chữ: bỏ hệ số 0, không viết hệ số ±1.
-const label = (c) => {
-  const parts = [[c.a[0], 'x₁'], [c.a[1], 'x₂']].filter(([k]) => k !== 0)
-  const text = parts.map(([k, name], i) => {
-    const mag = Math.abs(k) === 1 ? name : `${Math.abs(k)}${name}`
-    return i === 0 ? (k < 0 ? `−${mag}` : mag) : (k < 0 ? ` − ${mag}` : ` + ${mag}`)
-  }).join('')
-  return `${text} ≤ ${fmt(c.b, 2)}`
-}
+const drag=createDragger(svg,world,move,{step:.05})
+const lines=computed(()=>constraints.value.map(item=>{
+ const square=dot(item.a,item.a),base=item.a.map(value=>value*item.b/square),direction=[-item.a[1],item.a[0]],extent=30/normalLength(item)
+ return clipSegment([P(base.map((v,i)=>v-extent*direction[i])),P(base.map((v,i)=>v+extent*direction[i]))],frame)
+}))
+const circlePoints=computed(()=>model.value?Array.from({length:161},(_,i)=>{
+ const angle=i*Math.PI/80;return [chosen.value[0]+model.value.radius*Math.cos(angle),chosen.value[1]+model.value.radius*Math.sin(angle)]
+}):[])
+const circleLines=computed(()=>clipPolyline(circlePoints.value.map(P),frame).map(points=>points.map(p=>p.join(',')).join(' ')))
+const circleRegion=computed(()=>{
+ let polygon=circlePoints.value
+ for(const item of [{a:[1,0],b:5},{a:[-1,0],b:1},{a:[0,1],b:5},{a:[0,-1],b:1}])polygon=clipPolygon(polygon,item.a,item.b)
+ return polygon
+})
+const slacks=computed(()=>model.value?constraints.value.map(item=>item.b-dot(item.a,chosen.value)-model.value.radius*normalLength(item)):[])
+const active=computed(()=>slacks.value.map((v,i)=>Math.abs(v)<1e-7?i:-1).filter(i=>i>=0))
+function load(kind){constraints.value=chebyshevShapes[kind].map(item=>({a:[...item.a],b:item.b}));selected.value=0;centerMode.value=false}
+const label=item=>fmtPoint(item.a,0)+' · x ≤ '+fmt(item.b,3)
 </script>
 
 <template>
-  <figure class="study-lab" aria-label="Tâm Chebyshev của một đa giác">
-    <p class="lab-title">Hình tròn lớn nhất nằm trong đa giác</p>
-    <p class="lab-lead">Kéo các chấm tròn để dịch từng cạnh song song với chính nó. Hình tròn lớn nhất nằm trong đa giác là nghiệm của một LP ba biến: hai tọa độ của tâm và bán kính.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Đa giác khả thi, các đường ràng buộc, hình tròn lớn nhất và tâm Chebyshev" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
-      <line v-for="t in [0, 1, 2, 3, 4]" :key="`gx${t}`" :x1="view.sx(t)" :x2="view.sx(t)" y1="0" :y2="view.height" class="lab-grid" />
-      <line v-for="t in [0, 1, 2, 3, 4]" :key="`gy${t}`" x1="0" :x2="view.width" :y1="view.sy(t)" :y2="view.sy(t)" class="lab-grid" />
-      <line v-for="(c, i) in cons" :key="`l${i}`" :x1="lineEnds(c)[0][0]" :y1="lineEnds(c)[0][1]" :x2="lineEnds(c)[1][0]" :y2="lineEnds(c)[1][1]" :class="active.includes(i) ? 'lab-warn' : 'lab-guide'" />
-      <polygon v-if="polygon.length >= 3" :points="polygon.map(p => P(p).join(',')).join(' ')" class="lab-region" />
-      <template v-if="center">
-        <circle :cx="P(center.x)[0]" :cy="P(center.x)[1]" :r="center.r * (view.sx(1) - view.sx(0))" class="lab-good-fill" style="opacity: 0.75" />
-        <circle :cx="P(center.x)[0]" :cy="P(center.x)[1]" r="5" class="lab-dot" />
-      </template>
-      <circle v-if="showCentroid && centroid" :cx="P(centroid.x)[0]" :cy="P(centroid.x)[1]" r="6" class="lab-dot-hollow" />
-      <circle v-for="(c, i) in cons" :key="`h${i}`" :cx="P(handle(i))[0]" :cy="P(handle(i))[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Cạnh ${i + 1}: ${label(c)}`" :aria-valuetext="`b = ${fmt(c.b, 2)}`" @pointerdown="drag.start(`c${i}`, $event)" @keydown="drag.key(`c${i}`, handle(i), $event)" />
-    </svg>
-    <LabPointControls :svg="svg" />
-    <p class="lab-legend"><span class="legend-accent">đa giác khả thi</span><span class="legend-good">hình tròn lớn nhất</span><span class="legend-warn">ràng buộc chặt</span><span class="legend-guide">ràng buộc còn dư</span></p>
-    <div class="lab-controls">
-      <label class="lab-check"><input v-model="showCentroid" type="checkbox" /> Hiện trọng tâm của đa giác</label>
-    </div>
-    <div class="lab-buttons"><button type="button" @click="cons = DEFAULT.map(c => ({ ...c }))">Khôi phục đa giác ban đầu</button></div>
-    <div class="lab-readout" role="status">
-      <p v-if="!center" class="is-bad">Các ràng buộc mâu thuẫn: đa giác rỗng, LP bất khả thi.</p>
-      <template v-else>
-        <p>Tâm Chebyshev x_c = {{ fmtPoint(center.x, 3) }}, bán kính r = <span class="is-accent">{{ fmt(center.r, 3) }}</span>.</p>
-        <p>Ràng buộc chặt: {{ active.map(i => `(${i + 1}) ${label(cons[i])}`).join(', ') }}. Hình tròn tiếp xúc đúng các cạnh này, còn các cạnh khác có thể dịch mà không đổi nghiệm, chừng nào chúng chưa chạm hình tròn.</p>
-        <p v-if="showCentroid && centroid">Trọng tâm diện tích {{ fmtPoint(centroid.x, 3) }} nói chung khác tâm Chebyshev: tâm Chebyshev là điểm nằm sâu nhất, xa biên nhất, chứ không phải điểm cân bằng của diện tích.</p>
-      </template>
-    </div>
-    <details class="lab-tasks">
-      <summary>Gợi ý thao tác</summary>
-      <ol>
-        <li>Đếm số cạnh mà hình tròn chạm. Vì sao trong mặt phẳng, thường có đúng ba cạnh chạm?</li>
-        <li>Kéo một cạnh đang màu xám (còn dư) vào trong. Nghiệm có đổi không cho tới khi cạnh ấy chạm hình tròn?</li>
-        <li>Kéo hai cạnh (3) và (4) ra xa. Hình tròn lớn lên tới đâu, và từ lúc nào ràng buộc (5) bắt đầu chặt?</li>
-        <li>Bật trọng tâm. Tìm một hình dạng làm trọng tâm và tâm Chebyshev cách xa nhau.</li>
-      </ol>
-    </details>
-  </figure>
+ <figure class="study-lab" aria-label="Tâm Chebyshev, hình tròn nội tiếp lớn nhất và trường hợp tâm không duy nhất">
+  <figcaption class="lab-title">Dịch từng cạnh và quan sát bán kính lớn nhất</figcaption>
+  <p class="lab-lead">Chọn một ràng buộc rồi kéo điểm tím để dịch cạnh song song với chính nó. Miền hình tròn lớn nhất được tính bằng LP theo hai tọa độ tâm và r ≥ 0. Hình dùng cùng thang đo trên hai trục, nên đường tròn không bị kéo thành ellipse.</p>
+  <svg ref="svg" viewBox="0 0 360 360" role="group" aria-label="Đa giác, đường tròn lớn nhất và một tay nắm dịch cạnh hoặc chọn tâm" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+   <polygon v-if="polygon.length>=3" :points="poly(polygon)" class="domain"/>
+   <template v-for="(line,index) in lines" :key="index"><line v-if="line" :x1="line[0][0]" :y1="line[0][1]" :x2="line[1][0]" :y2="line[1][1]" :class="active.includes(index)?'active-edge':'other-edge'"/></template>
+   <polygon v-if="model" :points="poly(circleRegion)" class="ball-fill"/>
+   <polyline v-for="(points,index) in circleLines" :key="index" :points="points" class="ball-edge"/>
+   <line v-if="model&&model.centers.length===2" :x1="P(model.centers[0])[0]" :y1="P(model.centers[0])[1]" :x2="P(model.centers[1])[0]" :y2="P(model.centers[1])[1]" class="center-set"/>
+   <circle v-if="model" :cx="P(chosen)[0]" :cy="P(chosen)[1]" r="5" class="lab-dot"/>
+   <circle v-if="showCentroid&&centroid" :cx="P(centroid)[0]" :cy="P(centroid)[1]" r="6" class="lab-dot-hollow"/>
+   <circle :cx="P(handle)[0]" :cy="P(handle)[1]" r="6" class="lab-dot-accent"/>
+   <circle :cx="P(handle)[0]" :cy="P(handle)[1]" r="27" class="lab-handle hit" tabindex="0" role="slider" :aria-label="centerMode?'Tâm tối ưu trên tập các tâm':'Vế phải của ràng buộc đã chọn'" :aria-valuetext="centerMode?fmtPoint(chosen,4):fmt(row.b,5)" @pointerdown="drag.start('handle',$event)" @keydown="drag.key('handle',handle,$event)"/>
+   <text x="333" :y="view.sy(0)+22">x₁</text><text :x="view.sx(0)+9" y="24">x₂</text>
+  </svg>
+  <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
+  <div class="lab-controls">
+   <label>Ràng buộc cần dịch<select v-model.number="selected" @change="centerMode=false"><option v-for="(item,index) in constraints" :key="index" :value="index">Cạnh {{index+1}}: {{label(item)}}</option></select></label>
+   <label class="lab-check"><input v-model="showCentroid" type="checkbox"/> Hiện trọng tâm diện tích</label>
+  </div>
+  <div class="lab-buttons" role="group" aria-label="Đa giác và cách chọn tâm">
+   <button type="button" @click="load('pentagon')">Ngũ giác ban đầu</button>
+   <button type="button" @click="load('rectangle')">Hình chữ nhật, nhiều tâm</button>
+   <button type="button" @click="load('empty')">Miền rỗng</button>
+   <button type="button" :disabled="!model||model.centers.length<2" :aria-pressed="centerMode" @click="centerMode=!centerMode">Kéo để chọn một tâm tối ưu</button>
+  </div>
+  <p class="lab-legend"><span class="legend-accent">Miền khả thi</span><span class="legend-good">Đường tròn lớn nhất</span><span class="legend-warn">Ràng buộc chặt</span></p>
+  <div class="lab-readout" role="status">
+   <template v-if="model">
+    <p>Tâm đang vẽ = {{fmtPoint(chosen,5)}}. Bán kính tối ưu r = {{fmt(model.radius,6)}}.</p>
+    <p>Có {{active.length}} ràng buộc chặt tại tâm này: {{active.map(i=>i+1).join(', ')}}. Các độ dư của LP là {{slacks.map(v=>fmt(v,5)).join(', ')}}.</p>
+    <p v-if="model.centers.length>1">Bán kính là duy nhất về giá trị, còn tâm không duy nhất. Đoạn xanh biểu diễn các tâm tối ưu trong ví dụ này. Chọn chế độ kéo tâm để đổi tâm mà giữ nguyên bán kính.</p>
+    <p v-if="showCentroid&&centroid">Trọng tâm diện tích = {{fmtPoint(centroid,5)}}. Nó cân bằng diện tích, không tự cực đại khoảng cách nhỏ nhất tới các cạnh.</p>
+   </template>
+   <p v-else class="is-bad">Miền rỗng trong họ ràng buộc đang xét: Không có hình tròn nào với r ≥ 0 thỏa toàn bộ điều kiện.</p>
+   <p v-if="centerMode">Kéo tâm trên tập các tâm tối ưu. Thao tác này không dịch cạnh và không đổi r.</p>
+   <p v-else>Tay nắm tím chỉ dịch ràng buộc {{selected+1}} theo pháp tuyến, với vế phải b = {{fmt(row.b,5)}}. Các cạnh khác được giữ nguyên.</p>
+   <p>Các họ pháp tuyến trong mô phỏng này luôn bao kín nếu miền khác rỗng. Việc xét các bộ ba ràng buộc độc lập phù hợp với ví dụ nhỏ này, không phải cách giải LP quy mô lớn. Hình được cắt theo khung, không thêm cận cho bài toán.</p>
+   <p>Các độ dư hiển thị được làm tròn. Phép kiểm các bất đẳng thức của LP dùng dung sai 10⁻⁸, còn việc đánh dấu tiếp xúc dùng dung sai 10⁻⁷.</p>
+  </div>
+  <details class="lab-tasks"><summary>Thử và giải thích</summary><ol><li>Chọn hình chữ nhật rồi kéo tâm. Vì sao hình tròn chỉ chạm hai cạnh ở các tâm bên trong đoạn tối ưu?</li><li>Ở ngũ giác, dịch một cạnh còn dư vào trong. Khi nào bán kính bắt đầu giảm?</li><li>Chọn miền rỗng rồi dịch ràng buộc trái. Tại sao phải giữ r ≥ 0 khi xét khả thi?</li></ol></details>
+ </figure>
 </template>
+
+<style scoped>
+svg text{font-size:18px}
+.domain{fill:var(--tim-soft);stroke:var(--tim);stroke-width:1.3}
+.active-edge{stroke:var(--vang);stroke-width:1.6}
+.other-edge{stroke:var(--ink-3);stroke-width:1;stroke-dasharray:4 5}
+.ball-fill{fill:var(--xanh-soft);stroke:none}
+.ball-edge{fill:none;stroke:var(--xanh);stroke-width:1.8}
+.center-set{stroke:var(--xanh);stroke-width:2.7}
+svg :is(line,polyline,polygon,path,text),svg circle:not(.hit){pointer-events:none}
+.hit{fill:transparent!important;stroke:transparent;touch-action:none}
+.hit:focus-visible{stroke:var(--vang)}
+</style>
