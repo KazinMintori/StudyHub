@@ -3,9 +3,11 @@ import {createHash} from 'node:crypto'
 import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 
-const output=`qa/math-ai-visuals/runs/slack-svg-${new Date().toISOString().replace(/[^0-9]/g,'')}`
+const selected=process.argv.slice(2)
+if(selected.some(name=>!/^[a-z0-9-]+$/.test(name)))throw Error('Use SVG basenames without folders or extensions')
+const output=`qa/math-ai-visuals/runs/${selected.length?'svg-fonts':'slack-svg'}-${new Date().toISOString().replace(/[^0-9]/g,'')}`
 await mkdir(output,{recursive:true})
-const files=['slack-lift-2d','slack-lift-3d'].map(name=>`../math-ai-visual-content/docs/toan-cho-ai/bai-giang/img/lec-02/${name}.svg`)
+const files=(selected.length?selected:['slack-lift-2d','slack-lift-3d']).map(name=>`../math-ai-visual-content/docs/toan-cho-ai/bai-giang/img/lec-02/${name}.svg`)
 const browser=await puppeteer.launch({headless:true,userDataDir:'qa/math-ai-visuals/browser-profile',executablePath:process.env.CHROME_PATH||'C:/Program Files/Google/Chrome/Application/chrome.exe'})
 const page=await browser.newPage(),results=[],issues=[],sources={}
 try{
