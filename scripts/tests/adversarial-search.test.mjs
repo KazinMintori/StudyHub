@@ -1,9 +1,12 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import {readFile} from 'node:fs/promises'
 import {adversarialExamples,createGameTree,exactGameValue,adversarialSearch,adversarialCode,traceAdversarial} from '../../src/features/labs/services/adversarial-search.mjs'
 import {winningLines,ticTacToeTerminal,ticTacToeEvaluate,ticTacToeExamples,analyzeTicTacToe,reachableTicTacToe,validateTicTacToe} from '../../src/features/labs/services/tic-tac-toe.mjs'
+import {ticTacToeCode} from '../../src/features/labs/services/tic-tac-toe-code.mjs'
 const get=id=>createGameTree(adversarialExamples.find(e=>e.id===id).tree)
 test('Executed code and displayed source are identical',()=>assert.deepEqual(adversarialCode,adversarialSearch.toString().split('\n')))
+test('Displayed tic-tac-toe code matches the executable module',async()=>assert.equal(ticTacToeCode.join('\n'),await readFile(new URL('../../src/features/labs/services/tic-tac-toe.mjs',import.meta.url),'utf8')))
 test('Source trees preserve root values and show genuine pruning counts',()=>{
  for(const [id,value,mm,ab] of [['classic',3,9,7],['small',8,4,3],['deep',10,8,5],['hidden',10,8,5],['equal',5,4,3],['negative',-4,4,4]]){
   const tree=get(id),m=traceAdversarial(tree,'minimax').at(-1),a=traceAdversarial(tree).at(-1)

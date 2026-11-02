@@ -1,7 +1,8 @@
 <script setup>
 import {computed,ref,watch} from 'vue'
 import {ticTacToeExamples,ticTacToeTerminal,ticTacToeTurn,ticTacToeFeatures,analyzeTicTacToe,validateTicTacToe} from '../services/tic-tac-toe.mjs'
-import ticTacToeSource from '../services/tic-tac-toe.mjs?raw'
+import {ticTacToeCode} from '../services/tic-tac-toe-code.mjs'
+const ticTacToeSource=ticTacToeCode.join('\n')
 const preset=ref('empty'),board=ref(Array(9).fill('')),mode=ref('alphabeta'),depth=ref(9),history=ref([]),input=ref('.........'),error=ref(''),w1=ref(1),w2=ref(4),copied=ref(false)
 watch(preset,()=>{board.value=[...ticTacToeExamples.find(e=>e.id===preset.value).board];history.value=[];error.value='';input.value=board.value.map(v=>v||'.').join('')})
 const end=computed(()=>ticTacToeTerminal(board.value)),turn=computed(()=>ticTacToeTurn(board.value))
