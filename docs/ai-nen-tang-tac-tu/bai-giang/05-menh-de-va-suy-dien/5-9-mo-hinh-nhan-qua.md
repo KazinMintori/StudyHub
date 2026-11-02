@@ -58,24 +58,13 @@ Tuy nhiên, trong thế giới vật lý thực tế, mối quan hệ giữa cá
 
 Trong mô hình nhân quả cấu trúc, ta biểu diễn chiều tác động tự nhiên bằng logic vị từ với phủ định như một thất bại:
 
-$$
-\begin{aligned}
-&\mathit{lit\_l}_{1} \leftarrow \mathit{up\_s}_{1} \wedge \mathit{up\_s}_{2}. \\
-&\mathit{lit\_l}_{1} \leftarrow \sim \mathit{up\_s}_{1} \wedge \sim \mathit{up\_s}_{2}. \\
-&\mathit{up\_s}_{1}.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">lit_l_1 ← up_s_1 ∧ up_s_2. &#10;&#10;lit_l_1 ← ∼ up_s_1 ∧ ∼ up_s_2. &#10;&#10;up_s_1.</span>
 
 Khi ta thực hiện một can thiệp lên công tắc, ta chỉ cần thay đổi các sự kiện khẳng định vị trí công tắc, và trạng thái bóng đèn sẽ tự động thích ứng chính xác. Nếu ta can thiệp để làm cho đèn tắt (chẳng hạn tháo bóng đèn ra hoặc đập vỡ bóng), ta thay thế các mệnh đề định nghĩa $\mathit{lit\_l}_{1}$ bằng khẳng định $\mathit{false}$; can thiệp này hoàn toàn không làm thay đổi vị trí của các công tắc.
 
 Ngược lại, nếu sử dụng một mô hình bằng chứng:
 
-$$
-\begin{aligned}
-&\mathit{up\_s}_{1} \leftarrow \mathit{lit\_l}_{1} \wedge \mathit{up\_s}_{2}. \\
-&\mathit{up\_s}_{1} \leftarrow \sim \mathit{lit\_l}_{1} \wedge \sim \mathit{up\_s}_{2}.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">up_s_1 ← lit_l_1 ∧ up_s_2. &#10;&#10;up_s_1 ← ∼ lit_l_1 ∧ ∼ up_s_2.</span>
 
 Mô hình này có thể trả lời tốt câu hỏi suy đoán vị trí của $s_{1}$ khi biết trạng thái của đèn và công tắc $s_{2}$, nhưng nó sẽ đưa ra những dự đoán sai lầm hoàn toàn nếu ta can thiệp làm thay đổi trạng thái của đèn.
 :::

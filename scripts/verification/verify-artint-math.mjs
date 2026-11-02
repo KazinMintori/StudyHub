@@ -40,7 +40,7 @@ for (const directory of targets) for await (const file of files(path.resolve(dir
           cache.set(token.content, Number(html.match(/width="([\d.]+)ex"/)?.[1] || 0))
         }
         const width = cache.get(token.content)
-        if (width > (token.type === 'math_inline' ? 38 : 34)) issues.push({ file: relative, kind: token.type === 'math_inline' ? 'inline-width' : 'display-width', width, tex: token.content })
+        if (width > (token.type === 'math_inline' ? 32 : 26)) issues.push({ file: relative, kind: token.type === 'math_inline' ? 'inline-width' : 'display-width', width, tex: token.content })
       }
     } catch (error) { issues.push({ file: relative, kind: 'invalid-math', message: error.message, tex: token.content }) }
   }

@@ -14,7 +14,7 @@ commands = dict(leftarrow='←', rightarrow='→', leftrightarrow='↔', wedge='
                 vee='∨', neg='¬', forall='∀', exists='∃', mapsto='↦', longmapsto='↦',
                 langle='⟨', rangle='⟩', ldots='…', dots='…', to='→', sim='∼', phi='φ',
                 pi='π', times='×', implies='⇒', neq='≠', models='⊨', sigma='σ',
-                mid='|', **{'in':'∈'})
+                mid='|', cup='∪', subseteq='⊆', **{'in':'∈'})
 
 def symbolic(tex):
     t = re.sub(r'\\(?:begin|end)\{(?:aligned|array)\}', '', tex)
@@ -28,6 +28,7 @@ def symbolic(tex):
         t = re.sub(r'\\' + key + r'(?![A-Za-z])', lambda _: value, t)
     t = t.replace('{', '').replace('}', '').replace('⦃', '{').replace('⦄', '}')
     t = t.replace('~', ' ').replace(r'\;', ' ').replace(r'\,', ' ').replace('\\ ', ' ')
+    t = t.replace(r'\not⊨', '⊭')
     if '\\' in t:
         raise ValueError(f'Unconverted command: {t}')
     return t.strip()
@@ -39,8 +40,9 @@ for issue in report['issues']:
     p = root / issue['file']
     text = p.read_text(encoding='utf-8')
     tex = issue['tex']
-    tag = 'code' if issue['kind'] == 'inline-width' else 'pre'
-    rendered = '<' + tag + ' class="logic-expression">' + html.escape(symbolic(tex)) + '</' + tag + '>'
+    tag = 'code' if issue['kind'] == 'inline-width' else 'span'
+    classes = 'logic-expression' + (' logic-block' if tag == 'span' else '')
+    rendered = '<' + tag + ' class="' + classes + '">' + html.escape(symbolic(tex)).replace('\n', '&#10;') + '</' + tag + '>'
     if tag == 'code':
         text, count = text.replace('$' + tex + '$', rendered), text.count('$' + tex + '$')
     else:

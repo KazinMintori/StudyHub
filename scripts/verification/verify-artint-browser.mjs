@@ -63,7 +63,7 @@ try {
   assert(await page.$('.book-breadcrumbs a[href*="hoc-lieu-mo-rong"]'))
   checks.push('Course overview has the correct collection breadcrumb and original chapter numbers 5/15')
 
-  for (const width of [1280, 375, 360]) {
+  for (const width of (process.env.QA_WIDTHS || '1280,375,360').split(',').map(Number)) {
     await page.setViewport({ width, height: 960 })
     for (const route of ['/', '/hoc-lieu-mo-rong/', `/${course.id}/`]) {
       await go(route)

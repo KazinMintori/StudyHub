@@ -150,16 +150,12 @@ Khi người dùng đặt câu hỏi truy vấn:
 
 1. Truy vấn kiểm tra không biến:
 
-   $$
-   \text{ask } language(chile, spanish)
-   $$
+   <span class="logic-expression logic-block">ask  language(chile, spanish)</span>
 
    Hệ thống trả lời: `yes`.
 2. Truy vấn ngoài phạm vi tri thức:
 
-   $$
-   \text{ask } language(venezuela, spanish)
-   $$
+   <span class="logic-expression logic-block">ask  language(venezuela, spanish)</span>
 
    Hệ thống trả lời: `no` (do cơ sở dữ liệu chưa có thông tin về Venezuela).
 3. Truy vấn tìm kiếm cá thể:

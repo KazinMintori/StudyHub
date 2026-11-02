@@ -232,14 +232,7 @@ Mỗi khi một cặp $\langle \mathit{false}, A \rangle$ được sinh ra, tậ
 ::: example Ví dụ 5.23: Các bước tích lũy cặp giả định trong ATMS
 Trong môi trường mạch điện ở Hình 5.8, ban đầu $C$ chứa các cặp $\langle \mathit{ok}, \{\mathit{ok}\} \rangle$. Khi các sự kiện quan sát được đưa vào, chuỗi suy diễn tiến sinh ra các cặp:
 
-$$
-\begin{aligned}
-&\langle \mathit{live\_w}_{3}, \{\mathit{ok\_cb}_{1}\} \rangle \\
-&\langle \mathit{live\_w}_{4}, \{\mathit{ok\_cb}_{1}, \mathit{ok\_s}_{3}\} \rangle \\
-&\langle \mathit{lit\_l}_{2}, \{\mathit{ok\_cb}_{1}, \mathit{ok\_s}_{3}, \mathit{ok\_l}_{2}\} \rangle \\
-&\langle \mathit{false}, \{\mathit{ok\_cb}_{1}, \mathit{ok\_s}_{3}, \mathit{ok\_l}_{2}\} \rangle
-\end{aligned}
-$$
+<span class="logic-expression logic-block">⟨ live_w_3, {ok_cb_1} ⟩ &#10;&#10;⟨ live_w_4, {ok_cb_1, ok_s_3} ⟩ &#10;&#10;⟨ lit_l_2, {ok_cb_1, ok_s_3, ok_l_2} ⟩ &#10;&#10;⟨ false, {ok_cb_1, ok_s_3, ok_l_2} ⟩</span>
 
 Do đó, tập $\{\mathit{ok\_cb}_{1}, \mathit{ok\_s}_{3}, \mathit{ok\_l}_{2}\}$ được kết luận là một xung đột.
 :::

@@ -48,9 +48,7 @@ Xét các phép áp dụng sau:
 
 Phép thế áp dụng đồng nhất lên cả câu tuyển: Áp dụng $\{X/Y, Z/peru\}$ lên câu tuyển:
 
-$$
-p(X, Y) \leftarrow q(peru, Z, X, Y, Z)
-$$
+<span class="logic-expression logic-block">p(X, Y) ← q(peru, Z, X, Y, Z)</span>
 
 cho kết quả:
 
@@ -252,7 +250,7 @@ Xét cơ sở tri thức địa lý:
 2. <code class="logic-expression">born_in(P, L) ← part_of(S, L) ∧ born_in(P, S)</code>
 3. $part\_of(barranquilla, atlantico)$
 4. $part\_of(atlantico, colombia)$
-5. $part\_of(colombia, south\_america)$
+5. <code class="logic-expression">part_of(colombia, south_america)</code>
 
 Truy vấn đặt ra: "Ai sinh ra ở Colombia?" $\rightarrow \text{ask } born\_in(P, colombia)$.
 
@@ -260,9 +258,7 @@ Quá trình dẫn xuất SLD diễn ra tuần tự như sau:
 
 1. **Trạng thái ban đầu**:
 
-   $$
-   yes(P) \leftarrow born\_in(P, colombia)
-   $$
+   <span class="logic-expression logic-block">yes(P) ← born_in(P, colombia)</span>
 
 2. **Phân giải bước 1**: Chọn luật 2, đổi tên biến thành $P_1, L_1, S_1$. Hợp nhất $born\_in(P, colombia)$ với $born\_in(P_1, L_1)$ bằng MGU $\sigma_1 = \{P_1/P, L_1/colombia\}$:
 
@@ -270,9 +266,7 @@ Quá trình dẫn xuất SLD diễn ra tuần tự như sau:
 
 3. **Phân giải bước 2**: Chọn nguyên tử đầu tiên $part\_of(S_1, colombia)$. Hợp nhất với sự kiện 4 ($part\_of(atlantico, colombia)$) bằng MGU $\sigma_2 = \{S_1/atlantico\}$:
 
-   $$
-   yes(P) \leftarrow born\_in(P, atlantico)
-   $$
+   <span class="logic-expression logic-block">yes(P) ← born_in(P, atlantico)</span>
 
 4. **Phân giải bước 3**: Tiếp tục phân giải với bản sao mới của luật 2 ($P_2, L_2, S_2$) bằng MGU $\sigma_3 = \{P_2/P, L_2/atlantico\}$:
 

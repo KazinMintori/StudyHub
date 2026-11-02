@@ -102,9 +102,7 @@ in_tree(L, node(N, LT, RT)) :-
 ::: example Ví dụ 15.27: Biểu diễn danh sách
 Danh sách là một dãy có thứ tự gồm các phần tử. Ta có thể suy luận về danh sách chỉ bằng các ký hiệu hàm và hằng số, mà không cần khái niệm danh sách phải được định nghĩa sẵn trong ngôn ngữ. Một danh sách hoặc là danh sách rỗng, hoặc là một phần tử đứng trước một danh sách. Ta có thể đặt ra một hằng số để biểu thị danh sách rỗng, chẳng hạn dùng hằng số $nil$. Ta chọn một ký hiệu hàm, chẳng hạn $cons(Hd, Tl)$, với diễn giải dự định rằng nó biểu thị một danh sách có phần tử đầu tiên là $Hd$ và phần còn lại của danh sách là $Tl$. Danh sách chứa các phần tử $a, b, c$ khi đó được biểu diễn là:
 
-$$
-cons(a, cons(b, cons(c, nil)))
-$$
+<span class="logic-expression logic-block">cons(a, cons(b, cons(c, nil)))</span>
 
 Để sử dụng danh sách, ta cần viết các vị từ thao tác trên chúng. Chẳng hạn, quan hệ $append(X, Y, Z)$ đúng khi $X, Y, Z$ là các danh sách sao cho $Z$ chứa các phần tử của $X$ được tiếp nối bởi các phần tử của $Y$. Quan hệ này được định nghĩa đệ quy như sau:
 
@@ -229,9 +227,9 @@ Nếu chọn câu tuyển thứ hai thay vì câu tuyển thứ nhất:
 - Phân giải với $append(nil, Z_5, Z_5)$:
   - Phép thế hợp nhất: $\{Z_5/c(t, nil), X_3/nil, L/t\}$
   - Câu tuyển mục tiêu thu được:
-    $$yes(c(l, c(i, c(s, nil))), t) \leftarrow$$
+    <span class="logic-expression logic-block">yes(c(l, c(i, c(s, nil))), t) ←</span>
   - Tại điểm này, việc chứng minh thành công, với câu trả lời:
-    $$F = c(l, c(i, c(s, nil))), \quad L = t$$
+    <span class="logic-expression logic-block">F = c(l, c(i, c(s, nil))),   L = t</span>
 :::
 
 Trong phần còn lại của chương này, ta sử dụng ký hiệu "đường cú pháp" (syntactic sugar) của ngôn ngữ Prolog để biểu diễn danh sách. Danh sách rỗng $nil$ được viết là $[\,]$. Danh sách có phần tử đầu tiên $E$ và phần còn lại $R$ (vốn là $cons(E, R)$ trong Ví dụ 15.27) được viết là $[E \mid R]$. Ngoài ra còn có một quy ước đơn giản hóa ký hiệu: $[X \mid [Y]]$ được viết là $[X, Y]$, trong đó $Y$ có thể là một chuỗi các giá trị. Ví dụ, $[a \mid [\,]]$ được viết là $[a]$, và $[b \mid [a \mid [\,]]]$ được viết là $[b, a]$. Số hạng $[a \mid [b \mid C]]$ được viết là $[a, b \mid C]$.
@@ -247,9 +245,7 @@ append([], Z, Z).
 
 Câu truy vấn:
 
-$$
-\text{ask } append(F, [L], [l, i, s, t])
-$$
+<span class="logic-expression logic-block">ask  append(F, [L], [l, i, s, t])</span>
 
 sẽ có câu trả lời là:
 

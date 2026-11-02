@@ -72,40 +72,15 @@ Người thiết kế chọn các nguyên tử biểu diễn các mệnh đề:
 
 Sau khi đã quy ước ý nghĩa các ký hiệu, ta nạp các mệnh đề xác định mô tả tri thức nền về thế giới. Trước hết là các sự kiện không có phần thân:
 
-$$
-\begin{aligned}
-&\mathit{light\_l}_{1}. \quad \mathit{light\_l}_{2}. \quad \mathit{ok\_l}_{1}. \\
-&\mathit{ok\_l}_{2}. \quad \mathit{ok\_cb}_{1}. \quad \mathit{ok\_cb}_{2}. \\
-&\mathit{live\_outside}.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">light_l_1.   light_l_2.   ok_l_1. &#10;&#10;ok_l_2.   ok_cb_1.   ok_cb_2. &#10;&#10;live_outside.</span>
 
 Tiếp theo là các quy tắc thể hiện mối quan hệ nhân quả và kết nối vật lý:
 
-$$
-\begin{aligned}
-&\mathit{live\_l}_{1} \leftarrow \mathit{live\_w}_{0}. \\
-&\mathit{live\_w}_{0} \leftarrow \mathit{live\_w}_{1} \wedge \mathit{up\_s}_{2}. \\
-&\mathit{live\_w}_{0} \leftarrow \mathit{live\_w}_{2} \wedge \mathit{down\_s}_{2}. \\
-&\mathit{live\_w}_{1} \leftarrow \mathit{live\_w}_{3} \wedge \mathit{up\_s}_{1}. \\
-&\mathit{live\_w}_{2} \leftarrow \mathit{live\_w}_{3} \wedge \mathit{down\_s}_{1}. \\
-&\mathit{live\_l}_{2} \leftarrow \mathit{live\_w}_{4}. \\
-&\mathit{live\_w}_{4} \leftarrow \mathit{live\_w}_{3} \wedge \mathit{up\_s}_{3}. \\
-&\mathit{live\_p}_{1} \leftarrow \mathit{live\_w}_{3}. \\
-&\mathit{live\_w}_{3} \leftarrow \mathit{live\_w}_{5} \wedge \mathit{ok\_cb}_{1}. \\
-&\mathit{live\_p}_{2} \leftarrow \mathit{live\_w}_{6}. \\
-&\mathit{live\_w}_{6} \leftarrow \mathit{live\_w}_{5} \wedge \mathit{ok\_cb}_{2}. \\
-&\mathit{live\_w}_{5} \leftarrow \mathit{live\_outside}. \\
-&\mathit{lit\_l}_{1} \leftarrow \mathit{light\_l}_{1} \wedge \mathit{live\_l}_{1} \wedge \mathit{ok\_l}_{1}. \\
-&\mathit{lit\_l}_{2} \leftarrow \mathit{light\_l}_{2} \wedge \mathit{live\_l}_{2} \wedge \mathit{ok\_l}_{2}.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">live_l_1 ← live_w_0. &#10;&#10;live_w_0 ← live_w_1 ∧ up_s_2. &#10;&#10;live_w_0 ← live_w_2 ∧ down_s_2. &#10;&#10;live_w_1 ← live_w_3 ∧ up_s_1. &#10;&#10;live_w_2 ← live_w_3 ∧ down_s_1. &#10;&#10;live_l_2 ← live_w_4. &#10;&#10;live_w_4 ← live_w_3 ∧ up_s_3. &#10;&#10;live_p_1 ← live_w_3. &#10;&#10;live_w_3 ← live_w_5 ∧ ok_cb_1. &#10;&#10;live_p_2 ← live_w_6. &#10;&#10;live_w_6 ← live_w_5 ∧ ok_cb_2. &#10;&#10;live_w_5 ← live_outside. &#10;&#10;lit_l_1 ← light_l_1 ∧ live_l_1 ∧ ok_l_1. &#10;&#10;lit_l_2 ← light_l_2 ∧ live_l_2 ∧ ok_l_2.</span>
 
 Trong quá trình vận hành, người dùng cung cấp các quan sát về trạng thái hiện tại của các công tắc, chẳng hạn:
 
-$$
-\mathit{down\_s}_{1}. \quad \mathit{up\_s}_{2}. \quad \mathit{up\_s}_{3}.
-$$
+<span class="logic-expression logic-block">down_s_1.   up_s_2.   up_s_3.</span>
 
 Cơ sở tri thức hoàn chỉnh bao gồm tất cả các mệnh đề xác định, bất kể được nhập vào dưới dạng tri thức nền hay dữ liệu quan sát tức thời.
 :::
@@ -231,9 +206,7 @@ $$
 
 Tại mỗi bước, thuật toán chọn một nguyên tử trong phần thân của câu tuyển trả lời, gọi là một **mục tiêu phụ** (subgoal). Giả sử chọn nguyên tử $a_{1}$. Thuật toán thực hiện một bước phân giải bằng cách tìm một mệnh đề xác định trong $\mathit{KB}$ có $a_{1}$ ở phần đầu, ví dụ $a_{1} \leftarrow b_{1} \wedge \ldots \wedge b_{p}$. Khi đó, **câu tuyển phân giải** (resolvent) thu được sẽ là:
 
-$$
-\mathit{yes} \leftarrow b_{1} \wedge \ldots \wedge b_{p} \wedge a_{2} \wedge \ldots \wedge a_{m}.
-$$
+<span class="logic-expression logic-block">yes ← b_1 ∧ … ∧ b_p ∧ a_2 ∧ … ∧ a_m.</span>
 
 Tức là mục tiêu phụ $a_{1}$ đã được thay thế bằng các điều kiện tiên quyết để chứng minh nó. Một câu trả lời hoàn chỉnh đạt được khi phần thân trở nên rỗng ($m = 0$), tức là dẫn về câu tuyển $\mathit{yes} \leftarrow$.
 
@@ -309,15 +282,7 @@ Hình 5.5: Đồ thị không gian tìm kiếm cho dẫn xuất SLD từ trên x
 ::: example Ví dụ 5.12: Đồ thị tìm kiếm dẫn xuất SLD
 Xét cơ sở tri thức sau:
 
-$$
-\begin{aligned}
-&a \leftarrow b \wedge c. \quad a \leftarrow g. \quad a \leftarrow h. \\
-&b \leftarrow j. \quad b \leftarrow k. \quad d \leftarrow m. \\
-&d \leftarrow p. \quad f \leftarrow m. \quad f \leftarrow p. \\
-&g \leftarrow m. \quad g \leftarrow f. \quad k \leftarrow m. \\
-&h \leftarrow m. \quad p.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">a ← b ∧ c.   a ← g.   a ← h. &#10;&#10;b ← j.   b ← k.   d ← m. &#10;&#10;d ← p.   f ← m.   f ← p. &#10;&#10;g ← m.   g ← f.   k ← m. &#10;&#10;h ← m.   p.</span>
 
 Với truy vấn $\mathbf{ask} \; a \wedge d$, đồ thị tìm kiếm được minh họa chi tiết trong Hình 5.5. Bằng cách duyệt theo nhánh $a \leftarrow g$, tiếp theo là $g \leftarrow f$, $f \leftarrow p$, rồi giải quyết $p$ và tiếp tục phân giải $d \leftarrow p$, ta dẫn về được câu tuyển rỗng $\mathit{yes} \leftarrow$, chứng minh thành công rằng $a \wedge d$ là hệ quả logic.
 :::

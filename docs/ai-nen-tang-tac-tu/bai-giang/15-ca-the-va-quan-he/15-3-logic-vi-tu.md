@@ -197,7 +197,7 @@ Ta xem xét các khẳng định hệ quả logic:
 
 - $KB \models in(kim, r123)$: Khẳng định này đúng, vì sự kiện này được phát biểu trực tiếp trong cơ sở tri thức. Nếu mọi công thức trong $KB$ đều đúng trong một diễn giải, thì $in(kim, r123)$ chắc chắn phải đúng trong diễn giải đó.
 - $KB \not\models in(kim, r023)$: Khẳng định này đúng (tức $in(kim, r023)$ không phải là hệ quả logic), bởi vì diễn giải trong Ví dụ 15.5 là một mô hình của $KB$ mà trong đó $in(kim, r023)$ nhận giá trị $false$.
-- $KB \not\models part\_of(r023, cs\_building)$: Khẳng định này đúng (không phải là hệ quả logic). Mặc dù $part\_of(r023, cs\_building)$ nhận giá trị $true$ trong diễn giải của Ví dụ 15.5, nhưng vẫn tồn tại một mô hình khác của $KB$ trong đó $part\_of(r023, cs\_building)$ nhận giá trị $false$. Cụ thể, một diễn giải tương tự như Ví dụ 15.5 nhưng gán:
+- <code class="logic-expression">KB ⊭ part_of(r023, cs_building)</code>: Khẳng định này đúng (không phải là hệ quả logic). Mặc dù $part\_of(r023, cs\_building)$ nhận giá trị $true$ trong diễn giải của Ví dụ 15.5, nhưng vẫn tồn tại một mô hình khác của $KB$ trong đó $part\_of(r023, cs\_building)$ nhận giá trị $false$. Cụ thể, một diễn giải tương tự như Ví dụ 15.5 nhưng gán:
 
   <span class="logic-expression logic-block">π(part_of)(⟨ φ(r023), φ(cs_building) ⟩) = false</span>
 

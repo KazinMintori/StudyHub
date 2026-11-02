@@ -124,7 +124,7 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-4-datalog-ngon-ngu-luat-quan-he.md",
-      "line": 183,
+      "line": 179,
       "title": "Ví dụ 15.13: Phân biệt cá thể thực tế và chuỗi ký tự tên gọi"
     },
     {
@@ -139,37 +139,37 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
-      "line": 68,
+      "line": 66,
       "title": "Ví dụ 15.16: Hợp nhất hai nguyên tử"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
-      "line": 80,
+      "line": 78,
       "title": "Ví dụ 15.17: Các bộ hợp nhất khả dĩ của hai nguyên tử"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
-      "line": 96,
+      "line": 94,
       "title": "Ví dụ 15.18: Bộ hợp nhất tổng quát nhất"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
-      "line": 119,
+      "line": 117,
       "title": "Ví dụ 15.19: Dẫn xuất tiến trên tập thể hiện không biến"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
-      "line": 149,
+      "line": 147,
       "title": "Ví dụ 15.20: Trường hợp truy vấn không chứa hằng số"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
-      "line": 201,
+      "line": 199,
       "title": "Ví dụ 15.21: Lần vết thuật toán Unify"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-5-chung-minh-va-phep-the.md",
-      "line": 246,
+      "line": 244,
       "title": "Ví dụ 15.22: Cây dẫn xuất SLD tìm nơi sinh của Shakira"
     },
     {
@@ -199,22 +199,22 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
-      "line": 152,
+      "line": 150,
       "title": "Ví dụ 15.28: Tầm quan trọng của tính công bằng trong suy diễn tiến"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
-      "line": 171,
+      "line": 169,
       "title": "Ví dụ 15.29: Mất tính đúng đắn khi bỏ qua occurs check"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
-      "line": 189,
+      "line": 187,
       "title": "Ví dụ 15.30: Chi tiết phân giải SLD với ký hiệu hàm"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-6-ky-hieu-ham-va-cau-truc-du-lieu.md",
-      "line": 239,
+      "line": 237,
       "title": "Ví dụ 15.31: Phân giải SLD với ký pháp danh sách trong Prolog"
     },
     {
@@ -244,7 +244,7 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-7-ung-dung-trong-ngon-ngu-tu-nhien.md",
-      "line": 439,
+      "line": 437,
       "title": "Ví dụ 15.37: Xây dựng dạng logic trung gian cho câu hỏi"
     },
     {
@@ -269,27 +269,27 @@
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
-      "line": 74,
+      "line": 72,
       "title": "Ví dụ 15.42: Bao đóng Clark cho vị từ sinh viên"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
-      "line": 100,
+      "line": 98,
       "title": "Ví dụ 15.43: Dạng chuẩn và bao đóng Clark cho vị từ đệ quy"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
-      "line": 125,
+      "line": 123,
       "title": "Ví dụ 15.44: Định nghĩa quan hệ khóa học rỗng bằng phủ định"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
-      "line": 152,
+      "line": 150,
       "title": "Ví dụ 15.45: Rủi ro khi có biến tự do trong mục tiêu phủ định"
     },
     {
       "source": "docs/ai-nen-tang-tac-tu/bai-giang/15-ca-the-va-quan-he/15-9-gia-dinh-tri-thuc-day-du.md",
-      "line": 174,
+      "line": 172,
       "title": "Ví dụ 15.46: Hiện tượng tắc nghẽn và phân tích trường hợp"
     }
   ],

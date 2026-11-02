@@ -88,13 +88,7 @@ Yêu cầu:
 ::: exercise Bài tập 5.3: Phân tích mô hình và hệ quả logic
 Cho cơ sở tri thức $\mathit{KB}$:
 
-$$
-\begin{aligned}
-&a \leftarrow b \wedge c. \quad b \leftarrow d. \quad d \leftarrow h. \\
-&a \leftarrow e \wedge f. \quad b \leftarrow f \wedge h. \quad f \leftarrow g. \\
-&c \leftarrow e. \quad e. \quad g \leftarrow c.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">a ← b ∧ c.   b ← d.   d ← h. &#10;&#10;a ← e ∧ f.   b ← f ∧ h.   f ← g. &#10;&#10;c ← e.   e.   g ← c.</span>
 
 - (a) Hãy chỉ ra một mô hình của cơ sở tri thức.
 - (b) Hãy chỉ ra một diễn giải không phải là mô hình của cơ sở tri thức.
@@ -112,13 +106,7 @@ $$
 ::: exercise Bài tập 5.4: Suy diễn tiến và lùi trên mệnh đề xác định
 Cho cơ sở tri thức $\mathit{KB}$:
 
-$$
-\begin{aligned}
-&a \leftarrow b \wedge c. \quad c. \quad f \leftarrow g \wedge b. \\
-&b \leftarrow d. \quad d \leftarrow h. \quad g \leftarrow c \wedge k. \\
-&b \leftarrow e. \quad e. \quad j \leftarrow a \wedge b.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">a ← b ∧ c.   c.   f ← g ∧ b. &#10;&#10;b ← d.   d ← h.   g ← c ∧ k. &#10;&#10;b ← e.   e.   j ← a ∧ b.</span>
 
 - (a) Minh họa từng bước thực thi của thuật toán chứng minh từ dưới lên. Liệt kê toàn bộ các hệ quả logic của $\mathit{KB}$.
 - (b) Nguyên tử $f$ không phải là hệ quả logic của $\mathit{KB}$. Hãy chỉ ra một mô hình của $\mathit{KB}$ mà trong đó $f$ mang giá trị sai.
@@ -210,13 +198,7 @@ Một bệnh nhân có thể mắc một trong bốn bệnh: $p, q, r, s$. Bện
 ::: exercise Bài tập 5.9: Tìm xung đột tối tiểu từ ràng buộc toàn vẹn
 Cho các mệnh đề và ràng buộc toàn vẹn:
 
-$$
-\begin{aligned}
-&\mathit{false} \leftarrow a \wedge b. \quad a \leftarrow d. \quad b \leftarrow d. \\
-&\mathit{false} \leftarrow c. \quad a \leftarrow g. \quad b \leftarrow e. \\
-&c \leftarrow h. \quad a \leftarrow h.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">false ← a ∧ b.   a ← d.   b ← d. &#10;&#10;false ← c.   a ← g.   b ← e. &#10;&#10;c ← h.   a ← h.</span>
 
 Giả sử tập nguyên tử khả giả định là $\{d, e, f, g, h, i\}$. Hãy tìm tất cả các xung đột tối tiểu.
 :::
@@ -252,10 +234,7 @@ Yêu cầu:
  <span class="logic-expression logic-block">pressurized_v_i ← pressurized_in_v_i ∧ open_v_i ∧ ok_v_i.</span>
   Động cơ $e_{1}$ có lực đẩy nếu cả nhánh nhiên liệu và oxy hóa đều có áp suất đến buồng đốt:
  
- $$
-  \mathit{thrust\_e}_{1} \leftarrow \mathit{fuel\_e}_{1} \wedge \mathit{oxidizer\_e}_{1}.
- 
- $$
+ <span class="logic-expression logic-block">thrust_e_1 ← fuel_e_1 ∧ oxidizer_e_1.</span>
   Ràng buộc toàn vẹn khi quan sát mất lực đẩy: $\mathit{false} \leftarrow \mathit{thrust\_e}_{1} \wedge \mathit{nothrust\_e}_{1}$.
   Các xung đột tìm được sẽ chỉ ra những van trên tuyến cấp khí nghi ngờ bị hỏng (kẹt đóng).
 - (b) Trong thiết kế bằng quy nạp đảo: Coi $\mathit{thrust\_e}_{1}$ là mục tiêu cần giải thích, các hành động mở van $\mathit{open\_v}_{i}$ là khả giả định, hệ thống sẽ tìm kịch bản tối tiểu các van cần mở để thiết lập đường dẫn khí thông suốt.
@@ -380,12 +359,12 @@ Mặt đất không nhận được tín hiệu ($\mathit{no\_signal\_gc}$). Bi�
 :::
 
 ::: solution Lời giải gợi ý
-- (a) Ràng buộc toàn vẹn: $\mathit{false} \leftarrow \mathit{get\_signal\_gc} \wedge \mathit{no\_signal\_gc}$.
+- (a) Ràng buộc toàn vẹn: <code class="logic-expression">false ← get_signal_gc ∧ no_signal_gc</code>.
   Tập khả giả định: <code class="logic-expression">{alive_sc, ok_sc_hg, ok_sc_lg, ok_s_1_ant, ok_s_2_ant, ok_s_2_trans, no_dist}</code>.
 - (b) Ba xung đột tối tiểu tương ứng với 3 tuyến truyền tin:
-  1. $C_{1} = \{\mathit{alive\_sc}, \mathit{ok\_sc\_hg}, \mathit{ok\_s}_{1}\mathit{\_ant}\}$.
+  1. <code class="logic-expression">C_1 = {alive_sc, ok_sc_hg, ok_s_1_ant}</code>.
   2. <code class="logic-expression">C_2 = {alive_sc, ok_sc_hg, ok_s_2_ant, ok_s_2_trans}</code>.
-  3. $C_{3} = \{\mathit{alive\_sc}, \mathit{ok\_sc\_lg}, \mathit{no\_dist}\}$.
+  3. <code class="logic-expression">C_3 = {alive_sc, ok_sc_lg, no_dist}</code>.
 - (c) Các chẩn đoán tối tiểu (tập đánh trúng giao với cả 3 xung đột):
   - Lỗi đơn (1 chẩn đoán): $\{\mathit{alive\_sc}\}$ (tàu vũ trụ ngừng hoạt động).
   - Lỗi kép (2 chẩn đoán):
@@ -393,9 +372,9 @@ Mặt đất không nhận được tín hiệu ($\mathit{no\_signal\_gc}$). Bi�
     - $\{\mathit{ok\_sc\_hg}, \mathit{ok\_sc\_lg}\}$
   - Lỗi ba (4 chẩn đoán):
     - $\{\mathit{ok\_s}_{1}\mathit{\_ant}, \mathit{ok\_s}_{2}\mathit{\_ant}, \mathit{no\_dist}\}$
-    - $\{\mathit{ok\_s}_{1}\mathit{\_ant}, \mathit{ok\_s}_{2}\mathit{\_trans}, \mathit{no\_dist}\}$
-    - $\{\mathit{ok\_s}_{1}\mathit{\_ant}, \mathit{ok\_s}_{2}\mathit{\_ant}, \mathit{ok\_sc\_lg}\}$
-    - $\{\mathit{ok\_s}_{1}\mathit{\_ant}, \mathit{ok\_s}_{2}\mathit{\_trans}, \mathit{ok\_sc\_lg}\}$
+    - <code class="logic-expression">{ok_s_1_ant, ok_s_2_trans, no_dist}</code>
+    - <code class="logic-expression">{ok_s_1_ant, ok_s_2_ant, ok_sc_lg}</code>
+    - <code class="logic-expression">{ok_s_1_ant, ok_s_2_trans, ok_sc_lg}</code>
 :::
 
 ::: exercise Bài tập 5.18: Mở rộng mô hình mạng truyền thông với tín hiệu nhiễu

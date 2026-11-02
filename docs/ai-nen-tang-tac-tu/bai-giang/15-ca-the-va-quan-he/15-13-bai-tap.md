@@ -45,7 +45,7 @@ Một diễn giải $I = \langle\mathcal{D}, \phi, \pi\rangle$ được xác đ�
 - Vị từ $p$: Có $2^{|\mathcal{D}|} = 2^2 = 4$ tập con khả dĩ cho $\pi(p)$.
 - Vị từ $q$: Có $2^{|\mathcal{D}|} = 2^2 = 4$ tập con khả dĩ cho $\pi(q)$.
 - Tổng số diễn giải:
-  $$N_{\text{total}} = 8 \times 4 \times 4 = 128 \text{ diễn giải.}$$
+  <span class="logic-expression logic-block">N_total = 8 × 4 × 4 = 128  diễn giải.</span>
 
 **(d) Số lượng mô hình của $KB$:**
 Để một diễn giải là mô hình của $KB$, nó phải thỏa mãn đồng thời hai điều kiện:
@@ -56,14 +56,14 @@ Ta phân loại theo kích thước của $\pi(q)$:
 - **Trường hợp 1**: $|\pi(q)| = 1$. Có 2 cách chọn tập $\pi(q)$ (hoặc $\{✂\}$ hoặc $\{☎\}$).
   - Với mỗi cách chọn $\pi(q)$, điều kiện $\pi(q) \subseteq \pi(p)$ đòi hỏi $\pi(p)$ phải chứa phần tử duy nhất đó của $\pi(q)$. Do đó $\pi(p)$ có 2 lựa chọn (chính tập đó hoặc cả miền $\mathcal{D}$). Vậy có $2 \times 2 = 4$ cặp $(\pi(p), \pi(q))$.
   - Với mỗi cặp này, điều kiện $\phi(a) \in \pi(q)$ buộc $\phi(a)$ phải là phần tử duy nhất của $\pi(q)$ (1 cách chọn). Hai hằng số còn lại $\phi(b)$ và $\phi(c)$ mỗi hằng số có 2 cách chọn tùy ý trong $\mathcal{D}$. Vậy có $1 \times 2 \times 2 = 4$ cách gán $\phi$.
-  - Số mô hình trong trường hợp 1: $4 \text{ cặp} \times 4 \text{ cách gán } \phi = 16 \text{ mô hình}$.
+  - Số mô hình trong trường hợp 1: <code class="logic-expression">4  cặp × 4  cách gán  φ = 16  mô hình</code>.
 - **Trường hợp 2**: $|\pi(q)| = 2$, tức $\pi(q) = \mathcal{D}$. Có duy nhất 1 cách chọn $\pi(q)$.
   - Điều kiện $\pi(q) \subseteq \pi(p)$ buộc $\pi(p) = \mathcal{D}$ (1 cách chọn). Vậy có duy nhất 1 cặp $(\pi(p), \pi(q))$.
   - Điều kiện $\phi(a) \in \pi(q) = \mathcal{D}$ luôn được thỏa mãn với mọi phần tử của $\mathcal{D}$, nên $\phi(a)$ có 2 cách chọn, $\phi(b)$ có 2 cách chọn, $\phi(c)$ có 2 cách chọn $\implies 2 \times 2 \times 2 = 8$ cách gán $\phi$.
   - Số mô hình trong trường hợp 2: $1 \times 8 = 8 \text{ mô hình}$.
 
 Tổng số mô hình của $KB$:
-$$N_{\text{models}} = 16 + 8 = 24 \text{ mô hình.}$$
+<span class="logic-expression logic-block">N_models = 16 + 8 = 24  mô hình.</span>
 :::
 :::
 
@@ -106,9 +106,9 @@ Miền xác định có $|\mathcal{D}| = 4$.
 - Với 4 cá thể, có $3^4 = 81$ cặp phần mở rộng $(\pi(p), \pi(q))$ thỏa mãn $\pi(q) \subseteq \pi(p)$.
 - Các hằng số hoàn toàn không xuất hiện trong $KB_2$, nên có $4^3 = 64$ cách gán $\phi$ tùy ý.
 - Số mô hình của $KB_2$:
-  $$N_{KB_2} = 64 \times 81 = 5{,}184 \text{ mô hình.}$$
+  <span class="logic-expression logic-block">N_KB_2 = 64 × 81 = 5,184  mô hình.</span>
 
-**(d) Số mô hình của $KB_3 = \{p(X) \leftarrow q(X), p(a), q(b)\}$:**
+**(d) Số mô hình của <code class="logic-expression">KB_3 = {p(X) ← q(X), p(a), q(b)}</code>:**
 Ba điều kiện cần thỏa mãn:
 1. $\pi(q) \subseteq \pi(p)$.
 2. $\phi(a) \in \pi(p)$.
@@ -228,7 +228,7 @@ parent(karen, todd).
 ::: details Lời giải chi tiết
 **(a) Dẫn xuất SLD cho $has\_access(todd, library)$:**
 1. Câu tuyển mục tiêu khởi đầu:
-   $$yes \leftarrow has\_access(todd, library)$$
+   <span class="logic-expression logic-block">yes ← has_access(todd, library)</span>
 2. Phân giải với luật 3: <code class="logic-expression">has_access(X_1, library) ← parent(Y_1, X_1) ∧ has_access(Y_1, library)</code>
    - Phép thế: $\{X_1/todd\}$
    - Mục tiêu mới:
@@ -236,7 +236,7 @@ parent(karen, todd).
 3. Phân giải với sự kiện $parent(karen, todd)$:
    - Phép thế: $\{Y_1/karen\}$
    - Mục tiêu mới:
-     $$yes \leftarrow has\_access(karen, library)$$
+     <span class="logic-expression logic-block">yes ← has_access(karen, library)</span>
 4. Phân giải tiếp với luật 3: <code class="logic-expression">has_access(X_2, library) ← parent(Y_2, X_2) ∧ has_access(Y_2, library)</code>
    - Phép thế: $\{X_2/karen\}$
    - Mục tiêu mới:
@@ -244,7 +244,7 @@ parent(karen, todd).
 5. Phân giải với sự kiện $parent(diane, karen)$:
    - Phép thế: $\{Y_2/diane\}$
    - Mục tiêu mới:
-     $$yes \leftarrow has\_access(diane, library)$$
+     <span class="logic-expression logic-block">yes ← has_access(diane, library)</span>
 6. Phân giải với luật 2: <code class="logic-expression">has_access(X_3, library) ← faculty(X_3)</code>
    - Phép thế: $\{X_3/diane\}$
    - Mục tiêu mới:
@@ -256,11 +256,11 @@ parent(karen, todd).
 
 **(b) Hai nhánh dẫn xuất SLD cho $has\_access(mary, library)$:**
 - **Nhánh 1 (Thành công)**:
-  $$yes \leftarrow has\_access(mary, library)$$
+  <span class="logic-expression logic-block">yes ← has_access(mary, library)</span>
   $$yes \leftarrow student(mary)$$
   $$yes \leftarrow$$
 - **Nhánh 2 (Thất bại)**:
-  $$yes \leftarrow has\_access(mary, library)$$
+  <span class="logic-expression logic-block">yes ← has_access(mary, library)</span>
   $$yes \leftarrow faculty(mary)$$
   Thất bại (do không có sự kiện $faculty(mary)$).
   (Nếu xét nhánh qua luật bắc cầu phụ huynh: <code class="logic-expression">yes ← parent(Y, mary) ∧ has_access(Y, library)</code> cũng thất bại ngay vì không có ai là phụ huynh của Mary).
@@ -286,7 +286,7 @@ Không tồn tại bất kỳ dẫn xuất thành công nào.
 ::: exercise Bài tập 15.5: Thực thi phép thế trên biểu thức
 Hãy xác định kết quả của các phép áp dụng thế sau đây:
 
-- (a) $f(A, X, Y, X, Y) \{A/X, Z/b, Y/c\}$
+- (a) <code class="logic-expression">f(A, X, Y, X, Y) {A/X, Z/b, Y/c}</code>
 - (b) <code class="logic-expression">(yes(F, L) ← append(F, c(L, nil), c(l, c(i, c(s, c(t, nil)))))) {F/c(l, X_1), Y_1/c(L, nil), A_1/l, Z_1/c(i, c(s, c(t, nil)))}</code>
 - (c) <code class="logic-expression">(append(c(A_1, X_1), Y_1, c(A_1, Z_1)) ← append(X_1, Y_1, Z_1)) {F/c(l, X_1), Y_1/c(L, nil), A_1/l, Z_1/c(i, c(s, c(t, nil)))}</code>
 
@@ -337,7 +337,7 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - So khớp đối số 1: $val(X, bb)$ và $P \implies P / val(X, bb)$.
 - So khớp đối số 2: $Z$ và $P$. Vì $P$ đã liên kết với $val(X, bb)$, ta có $Z / val(X, bb)$.
 - MGU:
-  $$\sigma = \{P / val(X, bb), Z / val(X, bb)\}$$
+  <span class="logic-expression logic-block">σ = {P / val(X, bb), Z / val(X, bb)}</span>
 :::
 :::
 
@@ -357,7 +357,7 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - Đối số 4: $b$ và $G \implies G / b$.
 - Đối số 5: $W$ và $F$. Do $F = a \implies W / a$.
 - Hợp nhất thành công. MGU:
-  $$\sigma = \{E/X, Y/c, F/a, G/b, W/a\}$$
+  <span class="logic-expression logic-block">σ = {E/X, Y/c, F/a, G/b, W/a}</span>
 
 **(b)**
 - Đối số 1: $Y$ và $c \implies Y / c$.
@@ -458,7 +458,7 @@ Ta có hai khả năng chọn câu tuyển:
   - $T_1 = cons(c, Z)$
   - $R_2 = T_1 = cons(c, Z)$
 - Thân mục tiêu trở thành rỗng:
-  $$yes(cons(a, cons(c, Z))) \leftarrow$$
+  <span class="logic-expression logic-block">yes(cons(a, cons(c, Z))) ←</span>
 - Câu trả lời thứ nhất:
   <span class="logic-expression logic-block">W = cons(a, cons(c, Z)),   B = cons(a, X)</span>
 
@@ -536,9 +536,9 @@ Như vậy có hai câu trả lời: $Y = b$ (ứng với cặp phần tử th�
   - <code class="logic-expression">ask  remove(p(X), [a, p(a), p(p(a)), p(p(p(a)))], R).</code>
 - (c) Hãy viết quan hệ $subsequence(L1, L2)$ đúng nếu danh sách $L1$ là một dãy con của $L2$ (các phần tử xuất hiện cùng thứ tự).
 - (d) Có bao nhiêu phép chứng minh khác nhau cho mỗi truy vấn sau:
-  - $\text{ask } subsequence([a, d], [b, a, d, a]).$
-  - $\text{ask } subsequence([b, a], [b, a, d, a]).$
-  - $\text{ask } subsequence([X, Y], [b, a, d, a]).$
+  - <code class="logic-expression">ask  subsequence([a, d], [b, a, d, a]).</code>
+  - <code class="logic-expression">ask  subsequence([b, a], [b, a, d, a]).</code>
+  - <code class="logic-expression">ask  subsequence([X, Y], [b, a, d, a]).</code>
   - $\text{ask } subsequence(S, [b, a, d, a]).$
 
 ::: details Lời giải chi tiết

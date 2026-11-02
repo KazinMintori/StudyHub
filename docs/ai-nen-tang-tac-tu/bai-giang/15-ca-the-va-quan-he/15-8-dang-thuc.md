@@ -104,9 +104,7 @@ grade(sam, phys101, 89).
 
 Đối với câu truy vấn:
 
-$$
-\text{ask } passed\_two\_courses(sam)
-$$
+<span class="logic-expression logic-block">ask  passed_two_courses(sam)</span>
 
 mục tiêu con $C_{1} \neq C_{2}$ ban đầu chưa thể xác định được vì cả hai đều là biến tự do, do đó nó phải bị trì hoãn lại.
 

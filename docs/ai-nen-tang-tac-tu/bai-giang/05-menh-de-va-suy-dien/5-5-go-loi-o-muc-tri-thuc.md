@@ -51,18 +51,13 @@ Thuật toán trong Hình 5.6 chỉ yêu cầu người dùng trả lời các c
 ::: example Ví dụ 5.15: Định vị quy tắc lỗi trong hệ thống mạch điện
 Xem xét lại môi trường mạch điện trong Ví dụ 5.8, nhưng giả định rằng cơ sở tri thức đã bị cài đặt sai sót do chuyên gia nhầm lẫn: Thay vì quy định dây $w_{1}$ nối với $w_{3}$ qua công tắc $s_{1}$, họ lại viết nhầm thành công tắc $s_{3}$. Cụ thể, cơ sở tri thức chứa quy tắc sai:
 
-$$
-\mathit{live\_w}_{1} \leftarrow \mathit{live\_w}_{3} \wedge \mathit{up\_s}_{3}.
-$$
+<span class="logic-expression logic-block">live_w_1 ← live_w_3 ∧ up_s_3.</span>
 
 Các tiên đề khác đều giữ nguyên như trong Ví dụ 5.8. Khi người dùng truy vấn, hệ thống chứng minh được rằng $\mathit{lit\_l}_{1}$ là đúng, nhưng trong thực tế đèn $l_{1}$ đang tắt. Quá trình gỡ lỗi diễn ra từng bước:
 
 1. Nguyên tử $\mathit{lit\_l}_{1}$ được suy ra từ quy tắc:
   
-  $$
-   \mathit{lit\_l}_{1} \leftarrow \mathit{light\_l}_{1} \wedge \mathit{live\_l}_{1} \wedge \mathit{ok\_l}_{1}.
-  
-  $$
+  <span class="logic-expression logic-block">lit_l_1 ← light_l_1 ∧ live_l_1 ∧ ok_l_1.</span>
    Người dùng xác nhận $\mathit{light\_l}_{1}$ và $\mathit{ok\_l}_{1}$ đều đúng, nhưng $\mathit{live\_l}_{1}$ bị sai.
 2. Tiếp tục kiểm tra $\mathit{live\_l}_{1}$, nguyên tử này được suy ra từ quy tắc:
   
@@ -73,17 +68,11 @@ Các tiên đề khác đều giữ nguyên như trong Ví dụ 5.8. Khi ngườ
    Người dùng xác nhận $\mathit{live\_w}_{0}$ bị sai.
 3. Tiếp tục kiểm tra $\mathit{live\_w}_{0}$, nguyên tử này được suy ra từ quy tắc:
   
-  $$
-   \mathit{live\_w}_{0} \leftarrow \mathit{up\_s}_{2} \wedge \mathit{live\_w}_{1}.
-  
-  $$
+  <span class="logic-expression logic-block">live_w_0 ← up_s_2 ∧ live_w_1.</span>
    Người dùng xác nhận $\mathit{up\_s}_{2}$ đúng nhưng $\mathit{live\_w}_{1}$ bị sai.
 4. Tiếp tục kiểm tra $\mathit{live\_w}_{1}$, nguyên tử này được suy ra từ quy tắc:
   
-  $$
-   \mathit{live\_w}_{1} \leftarrow \mathit{up\_s}_{3} \wedge \mathit{live\_w}_{3}.
-  
-  $$
+  <span class="logic-expression logic-block">live_w_1 ← up_s_3 ∧ live_w_3.</span>
    Người dùng xác nhận cả $\mathit{up\_s}_{3}$ và $\mathit{live\_w}_{3}$ đều thực sự đúng trong thực tế.
 
 Tại thời điểm này, phần thân gồm $\mathit{up\_s}_{3} \wedge \mathit{live\_w}_{3}$ là đúng nhưng phần đầu $\mathit{live\_w}_{1}$ lại sai. Thuật toán kết luận chính xác rằng đây là quy tắc bị lỗi và trả về quy tắc này để người lập trình sửa lại.
@@ -122,10 +111,7 @@ Quá trình gỡ lỗi diễn ra như sau:
 
 1. Xét quy tắc duy nhất có đầu là $\mathit{lit\_l}_{1}$:
   
-  $$
-   \mathit{lit\_l}_{1} \leftarrow \mathit{light\_l}_{1} \wedge \mathit{live\_l}_{1} \wedge \mathit{ok\_l}_{1}.
-  
-  $$
+  <span class="logic-expression logic-block">lit_l_1 ← light_l_1 ∧ live_l_1 ∧ ok_l_1.</span>
    Cả ba điều kiện đều đúng trong thực tế. Trong đó $\mathit{light\_l}_{1}$ và $\mathit{ok\_l}_{1}$ đều chứng minh được, chỉ riêng $\mathit{live\_l}_{1}$ thất bại. Thuật toán đệ quy gỡ lỗi cho $\mathit{live\_l}_{1}$.
 2. Xét quy tắc duy nhất có đầu là $\mathit{live\_l}_{1}$:
   
@@ -135,12 +121,7 @@ Quá trình gỡ lỗi diễn ra như sau:
   $$
    Nguyên tử $\mathit{live\_w}_{0}$ đúng trong thực tế nhưng không chứng minh được.
 3. Xét hai quy tắc có đầu là $\mathit{live\_w}_{0}$:
-   $$
-   \begin{aligned}
-   &\mathit{live\_w}_{0} \leftarrow \mathit{live\_w}_{1} \wedge \mathit{up\_s}_{2}. \\
-   &\mathit{live\_w}_{0} \leftarrow \mathit{live\_w}_{2} \wedge \mathit{down\_s}_{2}.
-   \end{aligned}
-   $$
+   <span class="logic-expression logic-block">live_w_0 ← live_w_1 ∧ up_s_2. &#10;&#10;live_w_0 ← live_w_2 ∧ down_s_2.</span>
    Chuyên gia xác định phần thân của quy tắc thứ hai là đúng trong thực tế. Trong quy tắc này, nguyên tử $\mathit{live\_w}_{2}$ đã có chứng minh thành công, nhưng $\mathit{down\_s}_{2}$ thì không thể chứng minh được vì không có quy tắc hay sự kiện nào có đầu là $\mathit{down\_s}_{2}$.
 
 Thuật toán dừng lại và trả về nguyên tử $\mathit{down\_s}_{2}$. Biện pháp khắc phục là bổ sung sự kiện $\mathit{down\_s}_{2}.$ vào cơ sở tri thức.

@@ -114,10 +114,7 @@ Xét tác tử hỗ trợ mua sắm các gói kỳ nghỉ:
 
 - Một khu nghỉ dưỡng mặc định được xem là ở xa bãi biển nếu không có thông tin khẳng định nó nằm sát biển:
  
- $$
-  \mathit{away\_from\_beach} \leftarrow \sim \mathit{on\_beach}.
- 
- $$
+ <span class="logic-expression logic-block">away_from_beach ← ∼ on_beach.</span>
 - Nếu ở sát biển, khách mặc định có lối đi ra biển:
  
  <span class="logic-expression logic-block">beach_access ← on_beach ∧ ∼ ab_beach_access.</span>

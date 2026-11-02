@@ -30,3 +30,7 @@ Phạm vi hiện tại: Chỉ chương 5 và 15. Mọi bản nháp chương khá
 `test_tools.py`: 38 kiểm tra công cụ đạt, một kiểm tra toàn kho hiện có thất bại do bốn bài Biểu diễn tri thức cũ được đánh dấu ready nhưng không còn slide. Kiểm tra này chạy với repo tại vị trí skill, không phải bản dịch mới. Chưa sửa nội dung học phần khác.
 
 Chưa kiểm chứng trọn chương hoặc giao diện bản phát hành. Trạng thái này sẽ cập nhật sau khi nhận đủ nội dung.
+
+## Cập nhật sau tích hợp
+
+Các lỗi thuật ngữ và ví dụ nêu trên đã được sửa trong nhánh tích hợp. Kiểm tra 28 trang nguồn có đích, đủ 80 ví dụ được đánh số. Bản ghi tự động không thay cho đánh giá ngữ nghĩa. Có 48 kiểm tra danh mục/tiến độ đạt và kiểm chứng Python riêng. Còn chờ CI full và xác nhận Pages. Sau khi xuất bản hai chương phải tạm dừng theo yêu cầu người dùng.

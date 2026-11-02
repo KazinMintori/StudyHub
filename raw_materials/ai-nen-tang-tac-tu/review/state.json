@@ -15,21 +15,21 @@
       "task": "ui",
       "job": "f4fa04d7bcda49f5adea7b1416fd81d6",
       "attempt": 3,
-      "state": "bridge-failed-files-retained-and-reviewed",
+      "state": "stopped-files-preserved",
       "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-ui-20261102"
     },
     {
       "task": "chapter-5",
       "job": "68ff1759a9dc41068c8b701bf0c70ce0",
       "attempt": 3,
-      "state": "running-final-correction",
+      "state": "stopped-files-preserved",
       "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-a-20261102"
     },
     {
       "task": "chapter-15",
       "job": "482bc07202b245018e68e0855f04abdf",
       "attempt": 3,
-      "state": "running-final-correction",
+      "state": "stopped-files-preserved",
       "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-c-20261102"
     }
   ],
@@ -44,7 +44,12 @@
     "Final chapter-5 correction must fix deduction/induction confusion, missing example 5.19, invalid supportingConcepts, wrong slides. Final chapter-15 correction must restore omitted original examples and grammar figures and remove claims of 100% accuracy/termination.",
     "Each chapter task has reached three AGY calls counting the initial lost job; do not issue a fourth. UI also reached three calls. Preserve worktrees on failures.",
     "node_modules junction shares primary dependencies. Runtime modules of private courses copied only .mjs and left gitignored; full private Notes not downloaded.",
-    "Existing skill regression had 38 pass and one preexisting root-repository slide failure. Focused logic assertions pass. UI Vue SFC compile and audit:tokens pass. Chapter math check caught wide inline TeX; all math syntax checked so far valid."
+    "Existing skill regression had 38 pass and one preexisting root-repository slide failure. Focused logic assertions pass. UI Vue SFC compile and audit:tokens pass. Chapter math check caught wide inline TeX; all math syntax checked so far valid.",
+    "Integrated 28 pages with 26 topics, 80 source-numbered examples, 63788 Vietnamese whitespace-separated words before final formatting. Source coverage has no missing mapped pages/examples.",
+    "48 collection/progress tests pass; 8 flashcard tests passed; independent source logic assertions and 7 chapter5 Python suites pass; lecture checker reports 0 errors and one missing-solution warning in original chapter15 exercises.",
+    "Focused math validator covers2432 expressions with0 errors or width warnings. Verbose logic program notation is wrapping symbolic code; no math shrink/hide. Graphify AST rebuilt5799nodes11595edges.",
+    "Local verify:math whole-repo invocation failed due missing private-source Notes in isolated workspace and broken sandbox temp path. Full cloud verification assembles pinned sources and is authoritative for site-wide tests.",
+    "User explicitly requested temporary stop AFTER completing chapters5/15 and publication. Do not stop before publication unless genuine blocker. Do not continue any other chapter afterward."
   ],
-  "next": "Hoàn tất UI, rà và tích hợp chỉ chương 5/15, bổ sung flashcard/Wiki scope, kiểm tra nội dung + browser, cloud build rồi xuất bản lên web. Không dịch tiếp chương khác."
+  "next": "Đợi browser QA và CI full run 41407803561. Khi đạt: Commit chỉnh hiển thị cuối, push nhánh và main an toàn, đợi Pages, xác nhận URL hai chương. Sau đó tạm dừng theo yêu cầu, không dịch chương khác."
 }

@@ -57,9 +57,7 @@ $$
 
 điều này tương đương với:
 
-$$
-p(V_{1}, \ldots, V_{k}) \leftarrow B_{1} \vee \ldots \vee B_{n}
-$$
+<span class="logic-expression logic-block">p(V_1, …, V_k) ← B_1 ∨ … ∨ B_n</span>
 
 Phép kéo theo này tương đương logic với tập hợp các câu tuyển ban đầu.
 

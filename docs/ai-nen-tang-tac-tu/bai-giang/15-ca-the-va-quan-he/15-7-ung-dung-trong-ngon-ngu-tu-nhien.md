@@ -406,9 +406,7 @@ omp(L0, L1, Ind, C0, C1) :-
 
 Biểu thức:
 
-$$
-noun\_phrase(L_{0}, L_{1}, Ind, C_{0}, C_{1})
-$$
+<span class="logic-expression logic-block">noun_phrase(L_0, L_1, Ind, C_0, C_1)</span>
 
 có nghĩa là danh sách $L_{1}$ là phần kết thúc của danh sách $L_{0}$, và các từ trong $L_{0}$ đứng trước $L_{1}$ tạo thành một ngữ danh từ quy chiếu tới cá thể $Ind$. $C_{1}$ là phần đuôi của danh sách ràng buộc $C_{0}$, và các công thức trong $C_{0}$ đứng trước $C_{1}$ là các ràng buộc áp đặt lên cá thể $Ind$ bởi ngữ danh từ đó.
 

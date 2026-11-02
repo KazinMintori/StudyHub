@@ -48,10 +48,7 @@ Xem xét cơ sở tri thức đơn giản sau cho một hệ thống trợ lý c
 
 1. Nếu bệnh nhân có triệu chứng thở khò khè ($\mathit{wheezing}$), có hai lời giải thích tối tiểu độc lập:
   
-  $$
-   \{\mathit{influenza}\} \quad \text{và} \quad \{\mathit{smokes}\}.
-  
-  $$
+  <span class="logic-expression logic-block">{influenza}   và   {smokes}.</span>
    Cả hai giả thuyết này đều giải thích được chứng viêm phế quản ($\mathit{bronchitis}$) và ho ($\mathit{coughing}$).
 2. Nếu quan sát thấy bệnh nhân vừa thở khò khè vừa sốt ($\mathit{wheezing} \wedge \mathit{fever}$), các lời giải thích tối tiểu là:
   
@@ -106,15 +103,7 @@ Hơn nữa, suy luận giả thuyết còn được ứng dụng rất hiệu qu
 ::: example Ví dụ 5.33: Mô hình hóa suy luận giả thuyết cho hệ thống mạch điện
 Trong môi trường mạch điện ở Hình 5.2, để thực hiện chẩn đoán giả thuyết, ta phải tiên đề hóa tường minh cả hai chiều hoạt động:
 
-$$
-\begin{aligned}
-&\mathit{lit\_l}_{1} \leftarrow \mathit{live\_w}_{0} \wedge \mathit{ok\_l}_{1}. \\
-&\mathit{dark\_l}_{1} \leftarrow \mathit{broken\_l}_{1}. \\
-&\mathit{dark\_l}_{1} \leftarrow \mathit{dead\_w}_{0}. \\
-&\mathbf{assumable} \; \mathit{ok\_l}_{1}, \mathit{broken\_l}_{1}. \\
-&\mathit{false} \leftarrow \mathit{ok\_l}_{1} \wedge \mathit{broken\_l}_{1}.
-\end{aligned}
-$$
+<span class="logic-expression logic-block">lit_l_1 ← live_w_0 ∧ ok_l_1. &#10;&#10;dark_l_1 ← broken_l_1. &#10;&#10;dark_l_1 ← dead_w_0. &#10;&#10;assumable   ok_l_1, broken_l_1. &#10;&#10;false ← ok_l_1 ∧ broken_l_1.</span>
 
 Khi người dùng quan sát thấy đèn $l_{1}$ bị tối ($\mathit{dark\_l}_{1}$), quy trình suy luận giả thuyết sẽ tìm kiếm các kịch bản tối tiểu giải thích trực tiếp cho sự kiện này (chẳng hạn $\{\mathit{broken\_l}_{1}\}$ hoặc các kịch bản dẫn đến mất điện dây $w_{0}$).
 :::
