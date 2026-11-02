@@ -20,6 +20,7 @@ export const wikiGroups = [
 ]
 
 export const courseWikiScopes = {
+  'ai-nen-tang-tac-tu':['discrete-math','algorithms','mathematics','probability'],
   'vat-ly-1':['physics','mathematics','probability'],
   'toan-cho-ai':['optimization','optimization-algorithms','planning','mathematics','probability','data-analysis','discrete-math','algorithms','physics'],
   'xu-ly-du-lieu':['programming','data-analysis'],

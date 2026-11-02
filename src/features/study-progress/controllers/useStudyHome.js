@@ -1,5 +1,6 @@
 import { ref, computed } from 'vue'
 import { courseCatalog as defaultCatalog } from '../../../content/catalog.mjs'
+import { getUetCourses, getExtendedCourses, filterCoursesByCollection } from '../../../content/collections.mjs'
 import { useStudyProgress } from './useStudyProgress.js'
 import { filterCourses } from '../services/course-filter.js'
 import {
@@ -61,7 +62,11 @@ export function getCourseQuickLinks(course) {
 }
 
 export function useStudyHome(options = {}) {
-  const catalog = options.catalog || defaultCatalog
+  const fullCatalog = options.catalog || defaultCatalog
+  const uetCourses = getUetCourses(fullCatalog)
+  const extendedCourses = getExtendedCourses(fullCatalog)
+  const catalog = options.collection === 'all' ? fullCatalog
+    : filterCoursesByCollection(fullCatalog, options.collection || 'uet')
   const query = ref('')
   const selectedCategory = ref('all')
   const lastLesson = options.lastLesson !== undefined
@@ -81,7 +86,7 @@ export function useStudyHome(options = {}) {
     return catalog.filter(c => COURSE_CATEGORY_MAP[c.id] === catId).length
   }
 
-  const resume = computed(() => resolveResumeLesson(lastLesson.value, catalog))
+  const resume = computed(() => resolveResumeLesson(lastLesson.value, fullCatalog))
   const resumeLink = computed(() => resolveResumeLink(resume.value))
 
   const defaultStarter = computed(() => resolveDefaultReadyLesson(catalog))
@@ -107,6 +112,10 @@ export function useStudyHome(options = {}) {
     courseCategories: COURSE_CATEGORIES,
     visibleCourses,
     catalog,
+    fullCatalog,
+    uetCourses,
+    extendedCourses,
+    extendedCount: extendedCourses.length,
     lastLesson,
     resume,
     resumeLink,
