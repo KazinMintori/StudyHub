@@ -79,7 +79,50 @@ for sign in [1,-1]:
         gap=(theta*(a@P@a)+(1-theta)*(b@P@b)-z@P@z)/2
         assert np.isclose(gap,theta*(1-theta)*((a-b)@P@(a-b))/2)
 
+# Recompute the remaining Lecture 01 examples and log-determinant path.
+inputs=np.arange(.5,4.01,.5);design=np.column_stack([inputs,np.ones(8)])
+overlap=np.array([0,0,1,0,1,0,1,1]);separable=np.array([0,0,0,0,1,1,1,1])
+def logistic_solution(labels,penalty):
+    parameters=np.zeros(2)
+    for _ in range(50):
+        scores=design@parameters;probabilities=1/(1+np.exp(-scores))
+        gradient=design.T@(probabilities-labels)/8+penalty*parameters
+        hessian=design.T@((probabilities*(1-probabilities))[:,None]*design)/8+penalty*np.eye(2)
+        if np.linalg.norm(gradient)<1e-12:break
+        parameters-=np.linalg.solve(hessian,gradient)
+    loss=np.logaddexp(0,-(2*labels-1)*(design@parameters)).mean()+penalty*(parameters@parameters)/2
+    return parameters,float(loss)
+parameters,loss=logistic_solution(overlap,0)
+assert np.allclose(parameters,[1.18816872,-2.67337962]) and isclose(loss,.5280988171795706)
+regularized,regularized_loss=logistic_solution(separable,.05)
+assert np.allclose(regularized,[.9536357,-1.70484656])
+separable_losses=[float(np.logaddexp(0,-(2*separable-1)*(design@(t*np.array([1,-2.25])))).mean()) for t in [1,4,16]]
+assert np.allclose(separable_losses,[.34374091444430094,.0923689635087143,.004539018543283133])
+report['logistic']={'overlap_parameters':parameters.tolist(),'overlap_loss':loss,'regularized_parameters':regularized.tolist(),'separable_losses':separable_losses}
+vector=np.array([3,1,0])
+gaps=[float(np.log(np.exp(beta*(vector-3)).sum())/beta) for beta in [1,2,5]]
+assert np.allclose(gaps,[.16984601955628564,.01029056947366458,.000009140957520692439])
+report['LSE_gaps']=gaps
+V=np.array([[1,1],[1,-1]])
+for t in [-.5,0,.5,1/np.sqrt(2),.85]:
+    matrix=np.eye(2)+t*V
+    assert np.allclose(np.linalg.eigvalsh(matrix),sorted([1+np.sqrt(2)*t,1-np.sqrt(2)*t]))
+    assert np.isclose(np.linalg.det(matrix),1-2*t*t)
+    if abs(t)<1/np.sqrt(2)-1e-10:assert np.isclose(np.log(np.linalg.det(matrix)),np.log(1-2*t*t))
+roots=np.sort(np.roots([1,0,-2,.3]))
+assert np.allclose(roots,[-1.48396789,.15174716,1.33222074])
+report['double_well_stationary']=roots.tolist()
+for t in [0,.25,.5,.75,1]:
+    w1,w2=1-2*t,-1+2*t
+    predictions=np.array([max(0,w1*x)+max(0,w2*x) for x in [-1,1]])
+    assert np.allclose(predictions,abs(1-2*t))
+    assert np.isclose(np.mean((predictions-1)**2),(1-abs(1-2*t))**2)
+for residual in [.5,3]:
+    auxiliary=np.clip(residual-1,0,None)
+    value=.5*(residual-auxiliary)**2+abs(auxiliary)
+    assert np.isclose(value,.125 if residual==.5 else 2.5)
+
 output=Path('qa/math-ai-visuals/convex-functions-numerical.json')
 output.parent.mkdir(parents=True,exist_ok=True)
 output.write_text(json.dumps(report,indent=2),encoding='utf-8')
-print('PASS: chords, Jensen, ELBO, entropy, sublevels, ridge, Hessians, line-search and spatial quadratic gaps')
+print('PASS: convex-function examples, spatial chords, ELBO, logistic, LSE, log det, Huber and neural-network symmetry')

@@ -7,15 +7,22 @@ import MarkdownIt from 'markdown-it'
 import mathjax from 'markdown-it-mathjax3'
 import {mathSegments} from '../../docs/.vitepress/math-text.mjs'
 import {createMathValidator} from '../verification/math-validator.mjs'
+import {createMarkdownRenderer} from 'vitepress'
+import config from '../../docs/.vitepress/config.mjs'
+import {mathTokens,swallowedMarkdown} from '../math-integrity.mjs'
 const root=process.cwd(),base='docs/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange'
 const files=process.argv.slice(2).length?process.argv.slice(2):(await readdir(base)).filter(name=>name.endsWith('.md')).map(name=>`${base}/${name}`)
 const md=new MarkdownIt().use(mathjax),validate=createMathValidator(),issues=[],sources={}
+const pageRenderer=await createMarkdownRenderer(path.resolve('docs'),config.markdown)
 let formulas=0
 for(const name of files){
  const resolved=path.resolve(name)
  if(!resolved.startsWith(path.join(root,'docs')+path.sep))throw Error('Only workspace documentation can be inspected')
  const data=await readFile(resolved),source=data.toString('utf8')
  sources[name]=createHash('sha256').update(data).digest('hex')
+ for(const token of mathTokens(pageRenderer.parse(source,{path:resolved,relativePath:name.slice(5)}))){
+  if(swallowedMarkdown(token))issues.push({file:name,type:'markdown-swallowed-by-math',line:(token.map?.[0]||0)+1})
+ }
  for(const segment of mathSegments(source)){
   if(!segment.startsWith('$'))continue
   const display=segment.startsWith('$$'),delimiter=display?2:1,tex=segment.slice(delimiter,-delimiter)
