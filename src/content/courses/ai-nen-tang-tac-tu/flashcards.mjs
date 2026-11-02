@@ -6,6 +6,30 @@ const logic = '05-menh-de-va-suy-dien'
 const relations = '15-ca-the-va-quan-he'
 
 export const flashcards = [
+  {
+    "id": "ai-nen-tang-tac-tu-ch04-fc01",
+    "front": "Bài toán thỏa mãn ràng buộc (CSP) được cấu thành bởi những thành phần nào?",
+    "back": "Gồm bộ ba: Tập hợp các biến đại số (V), miền giá trị của từng biến (dom), và tập các ràng buộc cứng/mềm (C). Nghiệm là một phép gán toàn phần thỏa mãn toàn bộ ràng buộc.",
+    "category": "ai-nen-tang-tac-tu"
+  },
+  {
+    "id": "ai-nen-tang-tac-tu-ch04-fc02",
+    "front": "Khi nào một cung <X, c> trong mạng ràng buộc được gọi là nhất quán cung (Arc Consistent)?",
+    "back": "Khi với mọi giá trị x trong dom[X], luôn tìm được ít nhất một bộ giá trị tương thích của các biến lân cận trong phạm vi của c sao cho ràng buộc c được thỏa mãn.",
+    "category": "ai-nen-tang-tac-tu"
+  },
+  {
+    "id": "ai-nen-tang-tac-tu-ch04-fc03",
+    "front": "Độ phức tạp tính toán của thuật toán Khử biến (Variable Elimination) phụ thuộc vào yếu tố nào?",
+    "back": "Tỷ lệ tuyến tính với số lượng biến n, nhưng tăng theo hàm mũ theo độ rộng cây (treewidth) của đồ thị ràng buộc ứng với thứ tự khử biến được chọn.",
+    "category": "ai-nen-tang-tac-tu"
+  },
+  {
+    "id": "ai-nen-tang-tac-tu-ch04-fc04",
+    "front": "Cơ chế nào giúp Luyện kim mô phỏng (Simulated Annealing) thoát khỏi cực tiểu cục bộ?",
+    "back": "Xác suất chấp nhận bước đi làm xấu đi P = exp(-delta_h / T). Ở nhiệt độ T cao, thuật toán tự do nhảy qua rào cản thế năng; khi T giảm dần, thuật toán hội tụ tham lam về cực tiểu.",
+    "category": "ai-nen-tang-tac-tu"
+  },
   { course, lesson: intro, q: 'Tác tử tính toán được định nghĩa thế nào và đánh giá ra sao?', a: 'Tác tử tính toán là tác tử mà các quyết định hành động có thể phân rã thành các phép toán nguyên thủy hiện thực hóa trên thiết bị vật lý. Tác tử được đánh giá duy nhất dựa trên cách thức nó hành động trong môi trường.' },
   { course, lesson: intro, q: 'Năm luồng đầu vào quyết định hành động của tác tử trong mô hình hộp đen gồm những gì?', a: 'Tri thức tiên nghiệm, kích thích từ môi trường, lịch sử kinh nghiệm quá khứ, mục tiêu hoặc sở thích, và năng lực hành động nguyên thủy.' },
   { course, lesson: intro, q: 'Mười chiều kích phức tạp trong không gian thiết kế tác tử có ý nghĩa gì?', a: 'Định hình cấu trúc và năng lực tác tử gồm: Tính mô đun, tầm nhìn lập kế hoạch, phương thức biểu diễn, giới hạn tính toán, khả năng học tập, tính bất định, cấu trúc sở thích, số lượng tác tử, tính tương tác và sự tương tác giữa các chiều.' },

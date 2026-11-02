@@ -178,5 +178,60 @@
     "source": "https://artint.info/3e/html/x30.png",
     "sha256": "4ecc78e2d9b23f1c2ca96f5468a6e9a3d48c4ba40746108155c0f159c174dcd2",
     "bytes": 3513
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x31.png": {
+    "source": "https://artint.info/3e/html/x31.png",
+    "sha256": "f7fcaf7a772b4d5bccf0fe8e982ad920252ac6d5be121fb71448f0fb0bc84b29",
+    "bytes": 70092
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x32.png": {
+    "source": "https://artint.info/3e/html/x32.png",
+    "sha256": "4ee169b31431f1b4ddd029ff101b0a6684bfe0bf5359b9e2227d8bce9e430bc8",
+    "bytes": 6119
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x33.png": {
+    "source": "https://artint.info/3e/html/x33.png",
+    "sha256": "d6264bb9474e1aca8856f4030b9cbd57d22b2af827d5a1a29079556245b1b0a0",
+    "bytes": 99615
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x34.png": {
+    "source": "https://artint.info/3e/html/x34.png",
+    "sha256": "9136338936e1fb51d2ce6417b9ce5e962dc69005c0604e9a28c56de7b93ef66d",
+    "bytes": 61704
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x35.png": {
+    "source": "https://artint.info/3e/html/x35.png",
+    "sha256": "a09576c723b037e8e230f2abf2e2b3b465884944e078eb5901de21d1faaec865",
+    "bytes": 142334
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x36.png": {
+    "source": "https://artint.info/3e/html/x36.png",
+    "sha256": "0ad4be9319f9a19d431b071d5ac90e27c5bcf90ee9140edf1a06897321fb7e08",
+    "bytes": 16578
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x37.png": {
+    "source": "https://artint.info/3e/html/x37.png",
+    "sha256": "c9b1defc36fc1b96f311e7cb1268bc89546045ed40a84c9795d4036b9903f95d",
+    "bytes": 1498
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x38.png": {
+    "source": "https://artint.info/3e/html/x38.png",
+    "sha256": "cb68f742e6580c81bd6c6cf2e0bdebb8a9b09d5b34583a8f9e58da36dd5e4a5d",
+    "bytes": 2416
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x39.png": {
+    "source": "https://artint.info/3e/html/x39.png",
+    "sha256": "54992a21c3bc1dbb59e6ce112c79709dc9d7ee2902e79987852f4082a09692ec",
+    "bytes": 6396
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x40.png": {
+    "source": "https://artint.info/3e/html/x40.png",
+    "sha256": "167097cfeabce78e00f499a367ebeaa1cfac97b4d8a5098ef5813923991cfa64",
+    "bytes": 8974
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/04-suy-luan-voi-rang-buoc/figures/x41.png": {
+    "source": "https://artint.info/3e/html/x41.png",
+    "sha256": "048d7daf15cca2a8984814475a24a2228683e1535e312dbf538894b6d0469191",
+    "bytes": 13191
   }
 }

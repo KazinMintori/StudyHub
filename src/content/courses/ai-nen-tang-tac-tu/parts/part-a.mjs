@@ -201,6 +201,83 @@ export const lessons = [
     ]
   },
   {
+    "number": 4,
+    "slug": "04-suy-luan-voi-rang-buoc",
+    "title": "Suy luận với ràng buộc",
+    "prerequisites": [],
+    "supportingConcepts": [],
+    "status": "ready",
+    "lessonStatus": "ready",
+    "description": "Biểu diễn bài toán dựa trên biến đại số và ràng buộc, thuật toán nhất quán cung AC-3, phân tách miền giá trị, phương pháp khử biến, tìm kiếm cục bộ và tối ưu hóa tổ hợp.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "4-1-bien-va-rang-buoc",
+            "title": "4.1 Biến và ràng buộc",
+            "question": "Tại sao biểu diễn dựa trên biến đại số lại tiết kiệm lũy thừa không gian so với biểu diễn trạng thái nguyên khối?"
+          },
+          {
+            "slug": "4-2-giai-csp-bang-tim-kiem",
+            "title": "4.2 Giải CSP bằng tìm kiếm",
+            "question": "Kỹ thuật cắt tỉa sớm trên không gian phép gán từng phần giúp giảm chi phí tính toán như thế nào?"
+          },
+          {
+            "slug": "4-3-cac-thuat-toan-nhat-quan",
+            "title": "4.3 Các thuật toán tính nhất quán",
+            "question": "Thuật toán AC-3 vận hành cơ chế hàng đợi lan truyền cung và thu hẹp miền giá trị ra sao?"
+          },
+          {
+            "slug": "4-4-phan-tach-mien-gia-tri",
+            "title": "4.4 Phân tách miền giá trị",
+            "question": "Sự kết hợp giữa nhất quán cung và phân tách miền (Domain Splitting) mang lại ưu thế gì?"
+          },
+          {
+            "slug": "4-5-khu-bien",
+            "title": "4.5 Khử biến",
+            "question": "Phương pháp khử biến (Variable Elimination) sử dụng phép kết nối và chiếu để rút gọn đồ thị như thế nào?"
+          },
+          {
+            "slug": "4-6-tim-kiem-cuc-bo",
+            "title": "4.6 Tìm kiếm cục bộ",
+            "question": "Luyện kim mô phỏng (Simulated Annealing) và tìm kiếm Tabu giúp vượt qua cực tiểu cục bộ bằng cơ chế nào?"
+          },
+          {
+            "slug": "4-7-phuong-phap-quan-the",
+            "title": "4.7 Các phương pháp dựa trên quần thể",
+            "question": "Toán tử chọn lọc, lai ghép một điểm và đột biến trong giải thuật di truyền mô phỏng tiến hóa tự nhiên ra sao?"
+          },
+          {
+            "slug": "4-8-toi-uu-hoa",
+            "title": "4.8 Tối ưu hóa",
+            "question": "Thuật toán Nhánh và Cận (Branch-and-Bound) và giải thuật hạ độ dốc (Gradient Descent) giải bài toán tối ưu như thế nào?"
+          },
+          {
+            "slug": "4-9-tac-dong-xa-hoi",
+            "title": "4.9 Tác động xã hội",
+            "question": "Trách nhiệm đạo đức và tính minh bạch của hàm mục tiêu trong các bài toán lập lịch và phân bổ tài nguyên là gì?"
+          },
+          {
+            "slug": "4-10-on-tap",
+            "title": "4.10 Ôn tập",
+            "question": "Ma trận so sánh các phương pháp giải quyết bài toán CSP cho thấy tiêu chí lựa chọn thuật toán nào là phù hợp?"
+          },
+          {
+            "slug": "4-11-tai-lieu-tham-khao-va-doc-them",
+            "title": "4.11 Tài liệu tham khảo và đọc thêm",
+            "question": "Lược sử phát triển của lý thuyết xử lý ràng buộc và các công trình khoa học nền tảng từ Mackworth đến Dechter là gì?"
+          },
+          {
+            "slug": "4-12-bai-tap",
+            "title": "4.12 Bài tập",
+            "question": "Phương pháp giải chi tiết các bài toán ô chữ, SEND+MORE=MONEY và phân tích độ phức tạp GAC là gì?"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "number": 5,
     "slug": "05-menh-de-va-suy-dien",
     "title": "Mệnh đề và suy diễn",
@@ -436,6 +513,56 @@ export const slides = [
       "Quy hoạch động tính toán bảng chi phí tối ưu từ mọi nút tới đích, cho phép tác tử hành động thời gian thực O(1)."
     ],
     "note": "03-tim-kiem-loi-giai",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Biểu diễn bài toán thỏa mãn ràng buộc (CSP)",
+    "bullets": [
+      "Mô hình hóa trạng thái qua biến đại số giúp biểu diễn d^n trạng thái chỉ với n biến kích thước miền d.",
+      "Một bài toán CSP gồm tập biến, miền giá trị và tập các ràng buộc cứng/mềm; nghiệm là phép gán toàn phần thỏa mãn mọi ràng buộc."
+    ],
+    "note": "04-suy-luan-voi-rang-buoc",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Thuật toán nhất quán cung AC-3",
+    "bullets": [
+      "Một cung <X, c> nhất quán nếu mọi giá trị trong dom[X] đều tìm được bộ giá trị hỗ trợ tương thích từ các biến lân cận.",
+      "AC-3 lan truyền thu hẹp miền với độ phức tạp thời gian O(c * d^3), loại trừ mâu thuẫn cục bộ trước khi tìm kiếm."
+    ],
+    "note": "04-suy-luan-voi-rang-buoc",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Phân tách miền giá trị và khử biến (VE)",
+    "bullets": [
+      "Phân tách miền kết hợp AC-3 giúp giải quyết triệt để các mạng phức tạp bằng phân nhánh tìm kiếm có cắt tỉa.",
+      "Khử biến loại bỏ tuần tự từng biến bằng phép kết nối và chiếu; độ phức tạp thời gian tỷ lệ hàm mũ với độ rộng cây (treewidth)."
+    ],
+    "note": "04-suy-luan-voi-rang-buoc",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Tìm kiếm cục bộ ngẫu nhiên hóa (SLS)",
+    "bullets": [
+      "Hoạt động trên không gian phép gán toàn phần, phù hợp cho các bài toán công nghiệp quy mô hàng trăm nghìn biến.",
+      "Luyện kim mô phỏng (Simulated Annealing) dùng nhiệt độ Boltzmann và tái khởi động ngẫu nhiên để vượt qua cực tiểu cục bộ."
+    ],
+    "note": "04-suy-luan-voi-rang-buoc",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Tối ưu hóa ràng buộc và giải thuật hạ độ dốc",
+    "bullets": [
+      "Tối ưu hóa tổ hợp rời rạc sử dụng phương pháp Nhánh và Cận (Branch-and-Bound) hoặc khử biến kết hợp toán tử min.",
+      "Đối với biến liên tục khả vi, giải thuật hạ độ dốc (Gradient Descent) cập nhật x := x - eta * grad(f) để tìm điểm cực tiểu."
+    ],
+    "note": "04-suy-luan-voi-rang-buoc",
     "formula": "",
     "example": ""
   },
