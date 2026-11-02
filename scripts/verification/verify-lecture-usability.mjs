@@ -100,6 +100,10 @@ try {
   assert(preview.top >= 0 && preview.bottom <= 600 && preview.right <= 768, JSON.stringify(preview))
   await page.click(vector)
   await page.waitForSelector('.term-preview.is-pinned')
+  // Pinning focuses the close control after Vue commits the dialog. Wait for
+  // that handoff and leave the hovered term before testing keyboard dismissal.
+  await page.waitForFunction(() => document.activeElement?.classList.contains('term-preview-close'))
+  await page.mouse.move(760, 590)
   await page.keyboard.press('Escape')
   await page.waitForFunction(() => !document.querySelector('.term-preview'))
   assert(await page.$eval(vector, el => el === document.activeElement))
