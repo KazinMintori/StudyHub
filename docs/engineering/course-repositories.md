@@ -66,7 +66,7 @@ Secret `STUDYHUB_COURSE_DEPLOY_KEYS` ở repo chính chứa bảng khóa SSH the
 
 Học phần `ai-nen-tang-tac-tu` được lưu ở repo riêng tư `StudyHub-course-ai-nen-tang-tac-tu`. Deploy key chỉ đọc của repo này được giữ trong Actions secret `STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY`; workflow ghép ánh xạ bổ sung từ `COURSE_DEPLOY_KEYS_EXTRA` cùng khóa chính, từ chối ID trùng và không ghi nội dung secret vào log.
 
-Ánh xạ từ `STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY` được hợp nhất riêng khi chạy đồng bộ; không thay thế bảng khóa của các học phần hiện hữu. Khóa trong secret này chỉ có quyền đọc repo ArtInt.
+Ánh xạ từ `STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY` được hợp nhất riêng khi chạy đồng bộ; không thay thế bảng khóa của các học phần hiện hữu. Khóa trong secret này chỉ có quyền đọc repo ArtInt. Deploy key có tiêu đề `StudyHub main Pages read-only: ai-nen-tang-tac-tu`.
 
 Script kiểm khóa máy chủ SSH của GitHub qua API HTTPS, tải đúng commit đã pin, kiểm checksum rồi mới cập nhật workspace. Repo thiếu quyền đọc hoặc nội dung không khớp sẽ làm bước kiểm tra thất bại. Hệ thống không âm thầm sử dụng bản nguồn cũ.
 
