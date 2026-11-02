@@ -1,5 +1,6 @@
 const course = 'ai-nen-tang-tac-tu'
 const intro = '01-tri-tue-nhan-tao-va-tac-tu'
+const arch = '02-kien-truc-tac-tu-va-dieu-khien-phan-cap'
 const logic = '05-menh-de-va-suy-dien'
 const relations = '15-ca-the-va-quan-he'
 
@@ -8,6 +9,10 @@ export const flashcards = [
   { course, lesson: intro, q: 'Năm luồng đầu vào quyết định hành động của tác tử trong mô hình hộp đen gồm những gì?', a: 'Tri thức tiên nghiệm, kích thích từ môi trường, lịch sử kinh nghiệm quá khứ, mục tiêu hoặc sở thích, và năng lực hành động nguyên thủy.' },
   { course, lesson: intro, q: 'Mười chiều kích phức tạp trong không gian thiết kế tác tử có ý nghĩa gì?', a: 'Định hình cấu trúc và năng lực tác tử gồm: Tính mô đun, tầm nhìn lập kế hoạch, phương thức biểu diễn, giới hạn tính toán, khả năng học tập, tính bất định, cấu trúc sở thích, số lượng tác tử, tính tương tác và sự tương tác giữa các chiều.' },
   { course, lesson: intro, q: 'Bốn lớp giải pháp thường gặp trong AI khác nhau thế nào?', a: 'Nghiệm tối ưu (tốt nhất theo hàm mục tiêu), nghiệm thỏa mãn (đủ tốt theo tiêu chuẩn), nghiệm xấp xỉ tối ưu (nằm trong dung sai bảo đảm so với tối ưu), và nghiệm có xác suất đúng cao (lý thuyết PAC).' },
+  { course, lesson: arch, q: 'Thân thể và bộ điều khiển tác tử tương tác với nhau qua những thành phần nào?', a: 'Thân thể gồm cảm biến chuyển đổi kích thích môi trường thành nhận thức gửi lên bộ điều khiển, và cơ cấu chấp hành nhận lệnh từ bộ điều khiển để chuyển thành hành động vật lý tác động lên môi trường.' },
+  { course, lesson: arch, q: 'Vì sao tác tử cần trạng thái niềm tin thay vì lưu trữ toàn bộ lịch sử?', a: 'Vì dòng lịch sử tương tác kéo dài vô hạn trong khi dung lượng bộ nhớ tác tử là hữu hạn. Trạng thái niềm tin cô đọng toàn bộ thông tin quá khứ cần thiết phục vụ cho các quyết định hành động ở hiện tại và tương lai.' },
+  { course, lesson: arch, q: 'Hai hàm tác tử hình thức remember và command có vai trò gì?', a: 'Hàm remember: S x P -> S cập nhật trạng thái niềm tin khi có nhận thức mới; hàm command: S x P -> C xác định lệnh điều khiển dựa trên trạng thái niềm tin hiện tại và nhận thức tức thời.' },
+  { course, lesson: arch, q: 'Lợi ích cốt lõi của kiến trúc điều khiển phân cấp là gì?', a: 'Tách biệt các tầng theo tầm nhìn thời gian và mức độ trừu tượng. Tầng thấp phản xạ nhanh chóng với biến cố tức thời, che giấu chi tiết phần cứng để tầng cao tập trung hoạch định chiến lược dài hạn.' },
   { course, lesson: logic, q: 'Hệ quả logic và một thủ tục suy diễn khác nhau thế nào?', a: 'Hệ quả logic là quan hệ ngữ nghĩa: Kết luận đúng trong mọi mô hình của cơ sở tri thức. Thủ tục suy diễn là cách thao tác trên biểu thức để tìm chứng minh. Tính đúng đắn bảo đảm kết luận tìm được là hệ quả logic; tính đầy đủ bảo đảm tìm được mọi hệ quả trong phạm vi đã nêu.' },
   { course, lesson: logic, q: 'Một mệnh đề xác định gồm những thành phần nào?', a: 'Gồm một nguyên tử ở đầu và một hội các nguyên tử ở thân, đọc là đầu đúng nếu mọi nguyên tử trong thân đúng. Thân rỗng tạo thành một sự kiện. Mệnh đề tương đương một tuyển chứa đúng một literal dương.' },
   { course, lesson: logic, q: 'Không chứng minh được một nguyên tử có đồng nghĩa với chứng minh phủ định của nó không?', a: 'Không. Trong ngữ nghĩa thông thường, một nguyên tử có thể đúng ở mô hình này và sai ở mô hình khác. Muốn dùng sự thất bại của chứng minh để kết luận phủ định, phải nêu rõ giả định tri thức đầy đủ và các điều kiện của thủ tục tìm kiếm.' },

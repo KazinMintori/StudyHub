@@ -53,5 +53,55 @@
     "source": "https://artint.info/3e/html/x5.png",
     "sha256": "434bdcd14e17f6ec1a28fab0250d414118790deb78707bd481d289888b6fe259",
     "bytes": 21892
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x10.png": {
+    "source": "https://artint.info/3e/html/x10.png",
+    "sha256": "f3e46728ca315a1b839a965c44806305fff77043cde81494e8ad4c51cdf6fd42",
+    "bytes": 21055
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x11.png": {
+    "source": "https://artint.info/3e/html/x11.png",
+    "sha256": "cf75bf91dbf7e5ff7aff82a8861ba795a0190928289e0067197c62cc431d8d35",
+    "bytes": 43854
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x12.png": {
+    "source": "https://artint.info/3e/html/x12.png",
+    "sha256": "72ab59f384442d1d1286b3eedf37b3254fa67629ee88bfddeb086c0b52492b91",
+    "bytes": 10619
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x13.png": {
+    "source": "https://artint.info/3e/html/x13.png",
+    "sha256": "254e08c025f3a61e6fadde59c784f4d7f72e484ec08524cfbd22ff191abc5d23",
+    "bytes": 60746
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x14.png": {
+    "source": "https://artint.info/3e/html/x14.png",
+    "sha256": "2f63501c3bf6d998bf3be213baa779aa86285e66dcce43afc96e72471cc80a2e",
+    "bytes": 25402
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x15.png": {
+    "source": "https://artint.info/3e/html/x15.png",
+    "sha256": "38d8568addb04be51c3bc4e569a707a93e9653fd350320d5372398de4e519e33",
+    "bytes": 8265
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x6.png": {
+    "source": "https://artint.info/3e/html/x6.png",
+    "sha256": "2dd1968048d7f352a50b0f9d07207a2b49726f617a8112101de2096ad442a410",
+    "bytes": 14088
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x7.png": {
+    "source": "https://artint.info/3e/html/x7.png",
+    "sha256": "61e06b2221e11d007c8ef0c10bcd7a3eb463a9fa527ceca192271a84f6a18386",
+    "bytes": 26812
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x8.png": {
+    "source": "https://artint.info/3e/html/x8.png",
+    "sha256": "442555203d9e02e7294261da9aa131342a471189489393ae0562f700545de789",
+    "bytes": 24626
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/02-kien-truc-tac-tu-va-dieu-khien-phan-cap/figures/x9.png": {
+    "source": "https://artint.info/3e/html/x9.png",
+    "sha256": "5ed48bd8ba5a19c1e81e85812a246e9fc942e55c8c1b326dc68b1ae7f6b32146",
+    "bytes": 19239
   }
 }

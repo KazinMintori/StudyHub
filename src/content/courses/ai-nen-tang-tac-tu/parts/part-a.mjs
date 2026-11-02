@@ -72,6 +72,58 @@ export const lessons = [
     ]
   },
   {
+    "number": 2,
+    "slug": "02-kien-truc-tac-tu-va-dieu-khien-phan-cap",
+    "title": "Kiến trúc tác tử và điều khiển phân cấp",
+    "prerequisites": [],
+    "supportingConcepts": [],
+    "status": "ready",
+    "lessonStatus": "ready",
+    "description": "Cấu trúc nội tại của tác tử, thân thể và bộ điều khiển, trạng thái niềm tin, hàm tác tử và kiến trúc điều khiển phân tầng.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "2-1-tac-tu-va-moi-truong",
+            "title": "2.1 Tác tử và môi trường",
+            "question": "Thân thể và bộ điều khiển tương tác qua những kênh nào và trạng thái niềm tin được mô hình hóa ra sao?"
+          },
+          {
+            "slug": "2-2-dieu-khien-phan-cap",
+            "title": "2.2 Điều khiển phân cấp",
+            "question": "Vì sao kiến trúc phân cấp vượt trội so với kiến trúc phẳng và ba hàm của mỗi tầng vận hành thế nào?"
+          },
+          {
+            "slug": "2-3-thiet-ke-tac-tu",
+            "title": "2.3 Thiết kế tác tử",
+            "question": "Lập luận định tính khác định lượng ra sao và tính toán được phân rã ngoại tuyến - trực tuyến như thế nào?"
+          },
+          {
+            "slug": "2-4-tac-dong-xa-hoi",
+            "title": "2.4 Tác động xã hội",
+            "question": "Những thách thức đạo đức nào nảy sinh khi giao phó quyền tự hành cho xe tự lái trong bài toán đoàn tàu?"
+          },
+          {
+            "slug": "2-5-on-tap",
+            "title": "2.5 Ôn tập",
+            "question": "Tám nguyên lý kiến trúc tác tử cốt lõi nào định hình toàn bộ nội dung của Chương 2?"
+          },
+          {
+            "slug": "2-6-tai-lieu-tham-khao-va-doc-them",
+            "title": "2.6 Tài liệu tham khảo và đọc thêm",
+            "question": "Những nghiên cứu kinh điển nào từ Albus, Brooks đến Kahneman đặt nền móng cho kiến trúc tác tử phân cấp?"
+          },
+          {
+            "slug": "2-7-bai-tap",
+            "title": "2.7 Bài tập",
+            "question": "Làm thế nào để thiết kế bộ điều khiển thoát bẫy vật cản và giải quyết các bài toán đạo đức xe tự hành?"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "number": 5,
     "slug": "05-menh-de-va-suy-dien",
     "title": "Mệnh đề và suy diễn",
@@ -206,6 +258,56 @@ export const slides = [
       "Hệ thống AI phải minh bạch, giải trình được lý do quyết định và hòa hợp với các giá trị đạo đức nhân văn của xã hội."
     ],
     "note": "01-tri-tue-nhan-tao-va-tac-tu",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Thân thể và bộ điều khiển tác tử",
+    "bullets": [
+      "Tác tử gồm thân thể tương tác vật lý và bộ điều khiển xử lý tính toán.",
+      "Cảm biến chuyển kích thích thành nhận thức, còn cơ cấu chấp hành chuyển lệnh thành hành động."
+    ],
+    "note": "02-kien-truc-tac-tu-va-dieu-khien-phan-cap",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Trạng thái niềm tin và hàm tác tử",
+    "bullets": [
+      "Tác tử không thể lưu toàn bộ lịch sử mà cô đọng vào trạng thái niềm tin nội tại.",
+      "Bộ điều khiển được hình thức hóa qua cặp hàm remember và command."
+    ],
+    "note": "02-kien-truc-tac-tu-va-dieu-khien-phan-cap",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Nguyên lý điều khiển phân cấp",
+    "bullets": [
+      "Mỗi tầng điều khiển coi các tầng dưới là thân thể ảo, che giấu chi tiết phần cứng.",
+      "Tầng thấp phản xạ nhanh với tầm nhìn ngắn, trong khi tầng cao hoạch định chậm với tầm nhìn dài."
+    ],
+    "note": "02-kien-truc-tac-tu-va-dieu-khien-phan-cap",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Lập luận định tính và tính toán ngoại tuyến",
+    "bullets": [
+      "Lập luận định tính xử lý các mốc chuẩn và bậc độ lớn trước khi tính toán định lượng vi tích phân.",
+      "Phân rã tính toán: Ngoại tuyến học mô hình từ dữ liệu, trực tuyến hành động linh hoạt theo bối cảnh."
+    ],
+    "note": "02-kien-truc-tac-tu-va-dieu-khien-phan-cap",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Đạo đức máy và chuẩn mực xã hội",
+    "bullets": [
+      "Xe tự lái đối mặt với bài toán đoàn tàu khi phải chọn lựa giữa các tổn thất không thể tránh khỏi.",
+      "Chuẩn mực đạo đức phải do xã hội và luật pháp quy định, không thể phó mặc cho cá nhân tự cài đặt."
+    ],
+    "note": "02-kien-truc-tac-tu-va-dieu-khien-phan-cap",
     "formula": "",
     "example": ""
   },

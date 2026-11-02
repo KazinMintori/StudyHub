@@ -21,7 +21,8 @@ export const parts = [
   {
     title: 'Phần I: Tác tử trong thế giới thực',
     lessons: [
-      '01-tri-tue-nhan-tao-va-tac-tu'
+      '01-tri-tue-nhan-tao-va-tac-tu',
+      '02-kien-truc-tac-tu-va-dieu-khien-phan-cap'
     ]
   },
   {
