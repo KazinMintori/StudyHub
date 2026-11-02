@@ -7,10 +7,7 @@ import { fileURLToPath } from 'node:url'
 export const repositoryRoot = fileURLToPath(new URL('../../', import.meta.url))
 export const digest = data => createHash('sha256').update(data).digest('hex')
 export function digestFile(data, file) {
-  const bytes = Buffer.isBuffer(data) ? data : Buffer.from(data)
-  return /\.(?:md|mjs|js|json|py|svg|html|css|txt|csv|yml|yaml)$/i.test(file)
-    ? digest(bytes.toString('utf8').replaceAll('\r\n', '\n'))
-    : digest(bytes)
+  return digest(data)
 }
 const optionalRead = file => readFile(file).catch(error => { if (error.code === 'ENOENT') return null; throw error })
 

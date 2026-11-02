@@ -28,9 +28,10 @@ test('deploy key maps merge and reject collisions or malformed values', () => {
   assert.throws(() => parseCourseDeployKeys({ COURSE_DEPLOY_KEYS: '{"../bad":"p"}' }), /invalid/)
 })
 
-test('text package checksums ignore checkout line endings while binary hashes stay byte exact', () => {
-  assert.equal(digestFile(Buffer.from('mệnh đề\r\nlogic\r\n'), 'docs/sample/lesson.md'), digest(Buffer.from('mệnh đề\nlogic\n')))
-  assert.notEqual(digestFile(Buffer.from([0, 13, 10, 255]), 'docs/sample/figure.png'), digest(Buffer.from([0, 10, 255])))
+test('package checksums are exact for text and binary sources', () => {
+  assert.equal(digestFile(Buffer.from('mệnh đề\r\nlogic\r\n'), 'docs/sample/lesson.md'), digest(Buffer.from('mệnh đề\r\nlogic\r\n')))
+  assert.notEqual(digestFile(Buffer.from('mệnh đề\r\nlogic\r\n'), 'docs/sample/lesson.md'), digest(Buffer.from('mệnh đề\nlogic\n')))
+  assert.equal(digestFile(Buffer.from([0, 13, 10, 255]), 'docs/sample/figure.png'), digest(Buffer.from([0, 13, 10, 255])))
 })
 
 test('packages require complete, owned and checksum-verified sources', async t => {
