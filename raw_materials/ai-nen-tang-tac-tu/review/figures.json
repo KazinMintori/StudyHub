@@ -258,5 +258,55 @@
     "source": "https://artint.info/3e/html/x218.png",
     "local": "docs/ai-nen-tang-tac-tu/bai-giang/06-lap-ke-hoach-tien-dinh/figures/x218.png",
     "caption": "Hình 6.5: Mạng ràng buộc với đặc trưng hành động và biến trạng thái"
+  },
+  "07-hoc-may-co-giam-sat/x51.png": {
+    "source": "https://artint.info/3e/html/x51.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x51.png",
+    "caption": "Hình 7.1: Cây quyết định phân loại người dùng quan tâm đến sản phẩm"
+  },
+  "07-hoc-may-co-giam-sat/x52.png": {
+    "source": "https://artint.info/3e/html/x52.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x52.png",
+    "caption": "Hình 7.2: Phân chia không gian đặc trưng bằng cây quyết định"
+  },
+  "07-hoc-may-co-giam-sat/x53.png": {
+    "source": "https://artint.info/3e/html/x53.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x53.png",
+    "caption": "Hình 7.3: Hàm entropy theo xác suất p"
+  },
+  "07-hoc-may-co-giam-sat/x54.png": {
+    "source": "https://artint.info/3e/html/x54.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x54.png",
+    "caption": "Hình 7.4: Mặt ranh giới quyết định tuyến tính trong không gian 2D"
+  },
+  "07-hoc-may-co-giam-sat/x55.png": {
+    "source": "https://artint.info/3e/html/x55.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x55.png",
+    "caption": "Hình 7.5: Đường cong sigmoid của hồi quy logistic"
+  },
+  "07-hoc-may-co-giam-sat/x56.png": {
+    "source": "https://artint.info/3e/html/x56.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x56.png",
+    "caption": "Hình 7.6: Hiện tượng quá khớp theo độ sâu cây quyết định"
+  },
+  "07-hoc-may-co-giam-sat/x57.png": {
+    "source": "https://artint.info/3e/html/x57.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x57.png",
+    "caption": "Hình 7.7: Đồ thị sai số huấn luyện và sai số kiểm thử theo độ phức tạp mô hình"
+  },
+  "07-hoc-may-co-giam-sat/x180.png": {
+    "source": "https://artint.info/3e/html/x180.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x180.png",
+    "caption": "Hình 7.8: Đánh giá chéo k-fold"
+  },
+  "07-hoc-may-co-giam-sat/x59.png": {
+    "source": "https://artint.info/3e/html/x59.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x59.png",
+    "caption": "Hình 7.9: Điều chuẩn L1 (Lasso) và L2 (Ridge) trong tối ưu hóa tham số"
+  },
+  "07-hoc-may-co-giam-sat/x60.png": {
+    "source": "https://artint.info/3e/html/x60.png",
+    "local": "docs/ai-nen-tang-tac-tu/bai-giang/07-hoc-may-co-giam-sat/figures/x60.png",
+    "caption": "Hình 7.10: Cơ chế kết hợp mô hình Gradient Boosted Trees trên phần dư"
   }
 }

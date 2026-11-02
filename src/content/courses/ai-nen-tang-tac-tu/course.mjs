@@ -1,4 +1,5 @@
 import { lessons as lessonsA, slides as slidesA } from './parts/part-a.mjs'
+import { lessons as lessonsB, slides as slidesB } from './parts/part-b.mjs'
 import { lessons as lessonsC, slides as slidesC } from './parts/part-c.mjs'
 
 export const id = 'ai-nen-tang-tac-tu'
@@ -35,6 +36,12 @@ export const parts = [
     ]
   },
   {
+    title: 'Phần III: Học máy và suy luận trong điều kiện bất định',
+    lessons: [
+      '07-hoc-may-co-giam-sat'
+    ]
+  },
+  {
     title: 'Phần V: Biểu diễn cá thể và quan hệ',
     lessons: [
       '15-ca-the-va-quan-he'
@@ -44,11 +51,13 @@ export const parts = [
 
 export const lessons = [
   ...(lessonsA || []),
+  ...(lessonsB || []),
   ...(lessonsC || [])
 ]
 
 export const slides = [
   ...(slidesA || []),
+  ...(slidesB || []),
   ...(slidesC || [])
 ]
 

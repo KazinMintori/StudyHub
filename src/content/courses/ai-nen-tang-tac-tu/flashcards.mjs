@@ -85,4 +85,39 @@ export const flashcards = [
     "category": "Lập kế hoạch tiền định",
     "lecture": "06-lap-ke-hoach-tien-dinh"
   },
+  {
+    "id": "fc-artint-ch7-01",
+    "front": "Mục tiêu tối thượng của học máy trong kiến trúc tác tử tính toán là gì?",
+    "back": "Mục tiêu không phải là ghi nhớ dữ liệu huấn luyện, mà là xây dựng mô hình về cơ chế sinh dữ liệu của thế giới để cải thiện hành vi và ra quyết định tối ưu trong tương lai.",
+    "category": "Học máy có giám sát",
+    "lecture": "07-hoc-may-co-giam-sat"
+  },
+  {
+    "id": "fc-artint-ch7-02",
+    "front": "Điểm dự đoán tối ưu trên tập dữ liệu tương ứng với các hàm mất mát L0, L1 và L2 là gì?",
+    "back": "Dưới mất mát L0 (0-1), điểm dự đoán tối ưu là Yếu vị (Mode); dưới mất mát L1 (sai số tuyệt đối), tối ưu là Trung vị (Median); dưới mất mát L2 (bình phương), tối ưu là Kỳ vọng (Mean).",
+    "category": "Học máy có giám sát",
+    "lecture": "07-hoc-may-co-giam-sat"
+  },
+  {
+    "id": "fc-artint-ch7-03",
+    "front": "Độ lợi thông tin (Information Gain) trong cây quyết định được tính như thế nào?",
+    "back": "Gain(E, c) bằng Entropy của tập mẫu trước phân tách trừ đi tổng Entropy có trọng số của các nhánh con sau khi kiểm tra điều kiện Boolean c.",
+    "category": "Học máy có giám sát",
+    "lecture": "07-hoc-may-co-giam-sat"
+  },
+  {
+    "id": "fc-artint-ch7-04",
+    "front": "Sự khác biệt bản chất giữa điều chuẩn L1 (Lasso) và điều chuẩn L2 (Ridge) là gì?",
+    "back": "L2 thu hẹp độ lớn trọng số về gần 0 nhưng không triệt tiêu; L1 nhờ vào hình học đa diện góc nhọn có thể triệt tiêu hoàn toàn nhiều trọng số về đúng 0, tạo tính thưa và tự động chọn đặc trưng.",
+    "category": "Học máy có giám sát",
+    "lecture": "07-hoc-may-co-giam-sat"
+  },
+  {
+    "id": "fc-artint-ch7-05",
+    "front": "Cơ chế hoạt động cốt lõi của Cây tăng cường Gradient (GBDT) là gì?",
+    "back": "GBDT huấn luyện chuỗi cây quyết định tuần tự, trong đó mỗi cây mới học cách khớp trực tiếp với vector gradient âm (phần dư) của hàm mất mát từ các cây trước đó.",
+    "category": "Học máy có giám sát",
+    "lecture": "07-hoc-may-co-giam-sat"
+  }
 ]
