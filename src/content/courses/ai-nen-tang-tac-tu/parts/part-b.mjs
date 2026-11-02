@@ -390,7 +390,89 @@ export const lessons = [
       ]
     }
   ]
-}
+},
+  {
+    "number": 13,
+    "slug": "13-hoc-tang-cuong",
+    "title": "Học tăng cường",
+    "prerequisites": [],
+    "supportingConcepts": [],
+    "status": "ready",
+    "lessonStatus": "ready",
+    "description": "Mô hình học tăng cường từ tương tác, bài toán gán tín nhiệm, giải thuật tiến hóa, sai phân thời gian (TD), Q-learning, chiến lược khám phá và khai thác, SARSA, học tăng cường dựa trên mô hình (Dyna), và tổng quát hóa với Deep Q-Networks.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "13-1-bai-toan-hoc-tang-cuong",
+            "title": "13.1 Bài toán học tăng cường",
+            "question": "Làm thế nào để tác tử tự học quy luật thế giới từ chuỗi trải nghiệm mà không có giáo viên chỉ dẫn?"
+          },
+          {
+            "slug": "13-2-giai-thuat-tien-hoa",
+            "title": "13.2 Giải thuật tiến hóa",
+            "question": "Tại sao việc tìm kiếm trực tiếp trong không gian chính sách bằng thuật toán di truyền lại lãng phí dữ liệu mẫu?"
+          },
+          {
+            "slug": "13-3-sai-phan-thoi-gian",
+            "title": "13.3 Sai phân thời gian",
+            "question": "Cơ chế sai số sai phân thời gian (TD error) và điều kiện Robbins – Monro bảo đảm sự hội tụ của trung bình trực tuyến như thế nào?"
+          },
+          {
+            "slug": "13-4-hoc-tu-trai-nghiem-va-q-learning",
+            "title": "13.4 Học từ trải nghiệm và Q-learning",
+            "question": "Tại sao Q-learning có thể học được chính sách tối ưu lý thuyết ngay cả khi đang hành động ngẫu nhiên?"
+          },
+          {
+            "slug": "13-5-kham-pha-va-khai-thac",
+            "title": "13.5 Khám phá và khai thác",
+            "question": "Làm thế nào để dung hòa giữa việc thu hoạch phần thưởng ngắn hạn và tìm kiếm cơ hội dài hạn bằng epsilon-greedy, khởi tạo lạc quan, Softmax và UCB?"
+          },
+          {
+            "slug": "13-6-danh-gia-giai-thuat-hoc-tang-cuong",
+            "title": "13.6 Đánh giá giải thuật học tăng cường",
+            "question": "Đồ thị phần thưởng tích lũy theo thời gian phản ánh độ dốc tiệm cận, đáy tổn thất và thời điểm hoàn vốn ra sao?"
+          },
+          {
+            "slug": "13-7-hoc-tren-chinh-sach-va-sarsa",
+            "title": "13.7 Học trên chính sách và SARSA",
+            "question": "Tại sao SARSA lại an toàn hơn Q-learning trong các môi trường có rủi ro tai họa như Cliff Walking?"
+          },
+          {
+            "slug": "13-8-hoc-tang-cuong-dua-tren-mo-hinh",
+            "title": "13.8 Học tăng cường dựa trên mô hình",
+            "question": "Kiến trúc Dyna-Q và thuật toán Quét ưu tiên (Prioritized Sweeping) tận dụng thời gian nhàn rỗi để tăng tốc độ học như thế nào?"
+          },
+          {
+            "slug": "13-9-tong-quat-hoa-va-deep-rl",
+            "title": "13.9 Tổng quát hóa và Deep RL",
+            "question": "Bộ đệm tái hiện trải nghiệm và mạng mục tiêu giúp DQN vượt qua nan đề 'Bộ ba chết người' như thế nào?"
+          },
+          {
+            "slug": "13-10-tac-dong-xa-hoi",
+            "title": "13.10 Tác động xã hội và an toàn trong học tăng cường",
+            "question": "Hiện tượng gian lận phần thưởng (Reward Hacking) và Wireheading đặt ra những thách thức gì cho việc căn chỉnh an toàn AI?"
+          },
+          {
+            "slug": "13-11-on-tap",
+            "title": "13.11 Ôn tập và hệ thống hóa kiến thức",
+            "question": "Làm thế nào để hệ thống hóa và lựa chọn giải thuật học tăng cường tối ưu cho từng bài toán thực tế?"
+          },
+          {
+            "slug": "13-12-tai-lieu-tham-khao-va-doc-them",
+            "title": "13.12 Tài liệu tham khảo và đọc thêm",
+            "question": "Các ý tưởng nền tảng của học tăng cường đã phát triển từ Arthur Samuel, Sutton & Barto đến DeepMind như thế nào?"
+          },
+          {
+            "slug": "13-13-bai-tap",
+            "title": "13.13 Bài tập và lời giải chi tiết",
+            "question": "Làm thế nào để giải quyết các bài toán phân tích kiến trúc tác tử, cập nhật giá trị và thiết kế đặc trưng trong học tăng cường?"
+          }
+        ]
+      }
+    ]
+  }
 ]
 
 export const slides = [
@@ -693,5 +775,55 @@ export const slides = [
   "note": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh",
   "formula": "",
   "example": ""
-}
+},
+  {
+    "title": "Bản chất Học tăng cường & Dữ liệu Trải nghiệm",
+    "bullets": [
+      "Học tăng cường (RL) là quá trình tác tử tối ưu hóa hành vi từ tương tác thử và sai mà không có mô hình chuyển trạng thái hay hàm thưởng cho trước.",
+      "Mọi tri thức được chắt lọc từ các bộ tứ trải nghiệm <s, a, r, s'>, giải quyết bài toán gán tín nhiệm thời gian qua các bước lan truyền giá trị."
+    ],
+    "note": "13-hoc-tang-cuong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Sai phân Thời gian (TD) & Điều kiện Robbins – Monro",
+    "bullets": [
+      "Phương trình sai phân thời gian cập nhật giá trị trực tuyến: Mới = Cũ + alpha * (Mục tiêu - Cũ) với chi phí bộ nhớ và thời gian O(1).",
+      "Điều kiện Robbins – Monro (tổng alpha = vô cùng, tổng alpha^2 hữu hạn) bảo đảm triệt tiêu phương sai và hội tụ hầu chắc về kỳ vọng thực tế."
+    ],
+    "note": "13-hoc-tang-cuong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Q-learning & Bản chất Ngoài chính sách (Off-Policy)",
+    "bullets": [
+      "Q-learning cập nhật theo toán tử cực đại max_{a'} Q[s', a'], độc lập với chính sách hành vi mà tác tử thực tế đang dùng để khám phá.",
+      "Định lý Watkins – Dayan chứng minh bảng Q hội tụ về chính sách tối ưu toàn cục khi mọi cặp trạng thái - hành động được thăm viếng vô hạn lần."
+    ],
+    "note": "13-hoc-tang-cuong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "SARSA & Bản chất Trên chính sách (On-Policy)",
+    "bullets": [
+      "SARSA cập nhật dựa trên hành động thực tế tiếp theo a' theo chính sách hành vi hiện hành, phản ánh trung thực rủi ro của các bước đi ngẫu nhiên.",
+      "Trong bài toán Cliff Walking, SARSA chọn đường vòng an toàn tránh mép vực, đạt tổng phần thưởng tích lũy trực tuyến vượt trội so với Q-learning."
+    ],
+    "note": "13-hoc-tang-cuong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Deep Q-Networks (DQN) & Kiến trúc Dyna-Q",
+    "bullets": [
+      "Dyna-Q kết hợp tương tác thực và lập kế hoạch mô phỏng trong tâm trí, tăng tốc độ học gấp hàng chục lần về số lượng mẫu thực tế.",
+      "DQN sử dụng Bộ đệm tái hiện trải nghiệm (Experience Replay) và Mạng mục tiêu (Target Network) để ghìm giữ sự ổn định trước 'Bộ ba chết người'."
+    ],
+    "note": "13-hoc-tang-cuong",
+    "formula": "",
+    "example": ""
+  }
 ]

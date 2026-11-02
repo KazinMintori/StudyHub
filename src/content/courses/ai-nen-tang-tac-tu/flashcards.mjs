@@ -294,5 +294,45 @@ export const flashcards = [
   "back": "Lặp giá trị cập nhật hàm V qua toán tử co Bellman cho đến khi hội tụ số học; Lặp chính sách luân phiên giữa Đánh giá chính sách (giải hệ phương trình tuyến tính) và Cải tiến chính sách (tham lam), luôn tìm ra chính sách tối ưu chính xác sau số bước hữu hạn.",
   "category": "Lập kế hoạch bất định",
   "lecture": "12-lap-ke-hoach-trong-dieu-kien-bat-dinh"
-}
+},
+  {
+    "id": "fc-artint-ch13-01",
+    "front": "Điểm khác biệt cốt lõi giữa Học có giám sát (Supervised Learning) và Học tăng cường (Reinforcement Learning) là gì?",
+    "back": "Học có giám sát nhận phản hồi chỉ dẫn (Instructive) từ nhãn đúng của giáo viên và dữ liệu tĩnh; Học tăng cường chỉ nhận phản hồi đánh giá (Evaluative) qua tín hiệu phần thưởng trễ hạn (Delayed Reward), và hành động của tác tử quyết định trực tiếp phân phối dữ liệu tương lai.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "13-hoc-tang-cuong",
+    "tags": ["rl", "supervised-learning", "credit-assignment"]
+  },
+  {
+    "id": "fc-artint-ch13-02",
+    "front": "Phương trình cập nhật của Q-learning là gì và tại sao nó là một giải thuật Ngoài chính sách (Off-Policy)?",
+    "back": "Q[s, a] <- Q[s, a] + alpha * (r + gamma * max_{a'} Q[s', a'] - Q[s, a]). Là Off-Policy vì mục tiêu sử dụng toán tử max_{a'} của chính sách tối ưu lý thuyết, hoàn toàn độc lập với chính sách hành vi thực tế (như epsilon-greedy) mà tác tử đang dùng để khám phá.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "13-hoc-tang-cuong",
+    "tags": ["q-learning", "off-policy", "temporal-difference"]
+  },
+  {
+    "id": "fc-artint-ch13-03",
+    "front": "Tại sao trong bài toán Đi bộ bên bờ vực (Cliff Walking), SARSA lại đạt hiệu năng trực tuyến tốt hơn Q-learning khi có epsilon-greedy?",
+    "back": "SARSA là On-Policy, cập nhật dựa trên hành động thực tế tiếp theo a', nên nó tính đến cả rủi ro rơi vực do các bước đi ngẫu nhiên epsilon và chọn đường vòng an toàn; Q-learning chọn đường men sát mép vực nên liên tục rơi vực trong quá trình học.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "13-hoc-tang-cuong",
+    "tags": ["sarsa", "cliff-walking", "on-policy"]
+  },
+  {
+    "id": "fc-artint-ch13-04",
+    "front": "Kiến trúc Dyna-Q và thuật toán Quét ưu tiên (Prioritized Sweeping) giải quyết vấn đề gì trong học tăng cường?",
+    "back": "Giải quyết sự lãng phí thời gian tính toán nhàn rỗi giữa các bước vật lý. Dyna-Q học mô hình thế giới P, R rồi chạy mô phỏng trong tâm trí; Prioritized Sweeping dùng hàng đợi ưu tiên theo sai số Bellman để lan truyền giá trị ngược nhanh chóng, tối đa hóa hiệu quả sử dụng mẫu (Sample Efficiency).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "13-hoc-tang-cuong",
+    "tags": ["dyna-q", "prioritized-sweeping", "model-based"]
+  },
+  {
+    "id": "fc-artint-ch13-05",
+    "front": "Hai giải pháp kiến trúc then chốt giúp Deep Q-Networks (DQN) ổn định quá trình huấn luyện mạng nơ-ron sâu là gì?",
+    "back": "1. Bộ đệm tái hiện trải nghiệm (Experience Replay Buffer): Lấy mẫu ngẫu nhiên theo mini-batch để phá vỡ tương quan thời gian giữa các mẫu liên tiếp.\n2. Mạng mục tiêu độc lập (Target Network): Đóng băng trọng số w- để cố định mục tiêu TD, tránh hiện tượng mục tiêu dịch chuyển liên tục.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "13-hoc-tang-cuong",
+    "tags": ["dqn", "experience-replay", "target-network", "deep-rl"]
+  }
 ]

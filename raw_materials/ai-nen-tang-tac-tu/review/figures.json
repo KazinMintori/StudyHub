@@ -723,5 +723,20 @@
     "source": "https://artint.info/3e/html/x235.png",
     "sha256": "2f15534c54d294e140475287d0d6cfae45db03acb671c2ff2b4e647898baa13f",
     "bytes": 109547
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/13-hoc-tang-cuong/figures/x144.png": {
+    "source": "https://artint.info/3e/html/x144.png",
+    "sha256": "d1f66885cb5425fea72fff887f77cd625fe0d36fc695768038e7fecaca47f606",
+    "bytes": 4391
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/13-hoc-tang-cuong/figures/x145.png": {
+    "source": "https://artint.info/3e/html/x145.png",
+    "sha256": "ec480d10dfc2de1e56a4f0ba766e9a1495946bd235d8c40c888fd21d1b93c7d1",
+    "bytes": 4480
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/13-hoc-tang-cuong/figures/x146.png": {
+    "source": "https://artint.info/3e/html/x146.png",
+    "sha256": "761de8bae0fd0d799b3e6b277ebb31ac52adba18297f2496385c6fdc6c435e4a",
+    "bytes": 47686
   }
 }
