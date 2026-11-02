@@ -6,6 +6,12 @@ import { fileURLToPath } from 'node:url'
 
 export const repositoryRoot = fileURLToPath(new URL('../../', import.meta.url))
 export const digest = data => createHash('sha256').update(data).digest('hex')
+export function digestFile(data, file) {
+  const bytes = Buffer.isBuffer(data) ? data : Buffer.from(data)
+  return /\.(?:md|mjs|js|json|py|svg|html|css|txt|csv|yml|yaml)$/i.test(file)
+    ? digest(bytes.toString('utf8').replaceAll('\r\n', '\n'))
+    : digest(bytes)
+}
 const optionalRead = file => readFile(file).catch(error => { if (error.code === 'ENOENT') return null; throw error })
 
 export function safePath(value) {
@@ -63,7 +69,7 @@ export async function verifyPackage(course, directory) {
     const absolute = path.join(directory, file)
     await assertNoLinks(directory, file, checked)
     const data = await readFile(absolute)
-    if (digest(data) !== hash) throw Error(`Content checksum mismatch: ${file}`)
+    if (digestFile(data, file) !== hash) throw Error(`Content checksum mismatch: ${file}`)
     const updatedAt = manifest.updatedAt?.[file]
     if (updatedAt != null && (!Number.isFinite(updatedAt) || updatedAt <= 0)) throw Error(`Invalid source timestamp: ${file}`)
     files.push({ file, hash, source: absolute, ...(updatedAt ? { updatedAt } : {}) })
@@ -94,7 +100,7 @@ export async function planInstall(root, entries, previous = {}) {
     files.set(entry.file, entry.hash)
     await assertNoLinks(root, entry.file, checked)
     const current = await optionalRead(path.join(root, entry.file))
-    const hash = current && digest(current)
+    const hash = current && digestFile(current, entry.file)
     if (hash === entry.hash) continue
     if (hash && hash !== previous[entry.file]) {
       const source = entry.source && await readFile(entry.source)
@@ -109,7 +115,7 @@ export async function planInstall(root, entries, previous = {}) {
     if (files.has(file)) continue
     await assertNoLinks(root, file, checked)
     const current = await optionalRead(path.join(root, file))
-    if (current && digest(current) !== hash) throw Error(`Locally edited file was removed upstream: ${file}`)
+    if (current && digestFile(current, file) !== hash) throw Error(`Locally edited file was removed upstream: ${file}`)
     if (current) operations.push({ file, action: 'delete' })
   }
   return { operations, files: Object.fromEntries(files) }
@@ -215,7 +221,7 @@ export async function exportCourse(id, { root = repositoryRoot } = {}) {
   for (const file of [...candidates].sort()) {
     const data = await readFile(path.join(root, file))
     if (data.length > 50 * 1024 * 1024) throw Error(`Use external document storage for files over 50 MiB: ${file}`)
-    files[file] = digest(data)
+    files[file] = digestFile(data, file)
   }
   if (!files[`src/content/courses/${id}/course.mjs`]) throw Error('Cannot export an incomplete course')
   for (const file of Object.keys(previous.files)) if (!files[file]) await unlink(path.join(directory, safePath(file)))
@@ -251,4 +257,3 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   else if (args.length === 0 || args.length === 1 && args[0] === '--check') await syncCourses({ check: args.includes('--check') })
   else throw Error('Usage: course-repositories.mjs [--check | export <course> | pin <course> <commit>]')
 }
-

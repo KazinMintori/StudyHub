@@ -6,7 +6,7 @@ Repo `KazinMintori/StudyHub` quản lý giao diện Vue, bộ máy VitePress, c�
 
 `config/course-repositories.json` ghi repo, mã commit đầy đủ và phạm vi đường dẫn của từng học phần. Mỗi lần xuất bản chỉ sử dụng các commit đã khóa. Thay đổi trên nhánh `main` của repo học phần chưa tự động trở thành nội dung đang phát hành.
 
-Mỗi repo học phần giữ nguyên cây đường dẫn tương đối, gồm `docs/<id>/`, `src/content/courses/<id>/` và các tài nguyên liên quan. Tệp `studyhub-course.json` ghi SHA-256 của từng tệp theo byte Git blob đã commit để đồng bộ ổn định giữa Windows và Linux. Các module Wiki và cấu hình dùng chung vẫn nằm ở repo chính. Một số dữ liệu Vật lý dùng chung tiếp tục đi qua module tương thích hiện có.
+Mỗi repo học phần giữ nguyên cây đường dẫn tương đối, gồm `docs/<id>/`, `src/content/courses/<id>/` và các tài nguyên liên quan. Tệp `studyhub-course.json` ghi SHA-256 của từng tệp. Các module Wiki và cấu hình dùng chung vẫn nằm ở repo chính. Checksum đối chiếu theo byte Git blob. Khác biệt CRLF/LF giữa máy Windows và runner Linux không làm sai SHA-256 của cùng tệp văn bản; checksum của hình và dữ liệu nhị phân vẫn kiểm theo byte nguyên gốc. Một số dữ liệu Vật lý dùng chung tiếp tục đi qua module tương thích hiện có.
 
 Ngày cập nhật của bài được giữ trong metadata nguồn. Việc chuyển repo không làm toàn bộ bài giảng mang cùng ngày cập nhật mới. Khi xuất nội dung đã sửa, công cụ chỉ cập nhật ngày của những tệp thay đổi.
 
@@ -66,8 +66,6 @@ Secret `STUDYHUB_COURSE_DEPLOY_KEYS` ở repo chính chứa bảng khóa SSH the
 
 Học phần `ai-nen-tang-tac-tu` được lưu ở repo riêng tư `StudyHub-course-ai-nen-tang-tac-tu`. Deploy key chỉ đọc của repo này được giữ trong Actions secret `STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY`; workflow ghép ánh xạ bổ sung từ `COURSE_DEPLOY_KEYS_EXTRA` cùng khóa chính, từ chối ID trùng và không ghi nội dung secret vào log.
 
-Ánh xạ từ `STUDYHUB_ARTINT3_COURSE_DEPLOY_KEY` được hợp nhất riêng khi chạy đồng bộ; không thay thế bảng khóa của các học phần hiện hữu. Khóa trong secret này chỉ có quyền đọc repo ArtInt. Deploy key có tiêu đề `StudyHub main Pages read-only: ai-nen-tang-tac-tu`.
-
 Script kiểm khóa máy chủ SSH của GitHub qua API HTTPS, tải đúng commit đã pin, kiểm checksum rồi mới cập nhật workspace. Repo thiếu quyền đọc hoặc nội dung không khớp sẽ làm bước kiểm tra thất bại. Hệ thống không âm thầm sử dụng bản nguồn cũ.
 
 GitHub Pages Free xuất bản từ repo chính công khai. Các repo học phần có thể riêng tư vì chúng không tự chạy Pages. Nội dung đã xuất bản trên website vẫn công khai. Lịch sử từng được công khai ở repo chính không bị xóa bởi việc tách nguồn.
@@ -83,4 +81,3 @@ Chạy đồng bộ cùng toàn bộ kiểm tra nguồn trước khi phát hành
 - [GitHub Pages và phạm vi gói Free](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages).
 - [Deploy key và quyền chỉ đọc theo repo](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys).
 - [Khóa commit của repo phụ trong mô hình Git](https://git-scm.com/docs/gitsubmodules).
-
