@@ -91,6 +91,7 @@ jobs:
           npm run verify:navigation
           node scripts/verification/verify-course-workspace.mjs
           node scripts/verification/verify-lecture-usability.mjs
+          node scripts/verification/verify-math-ai-homework.mjs
 
       - name: Save browser verification reports
         if: always()
@@ -102,6 +103,7 @@ jobs:
             qa/navigation-stability/
             qa/lecture-usability/
             qa/course-workspace/
+            qa/toan-ai-homework/
             qa/batch-build-fixture/
             qa/philosophy-formats/
           if-no-files-found: ignore
@@ -174,6 +176,17 @@ jobs:
             sleep 1
           done
           npm run verify:navigation
+
+          node scripts/verification/verify-assessment-navigation.mjs
+
+      - name: Save built assessment and card verification
+        if: always() && !inputs.fixture_only
+        uses: actions/upload-artifact@v4
+        with:
+          name: assessment-navigation
+          retention-days: 3
+          path: qa/assessment-navigation/
+          if-no-files-found: ignore
 
       - name: Upload Pages artifact
         if: success() && !inputs.fixture_only && !inputs.verify_only

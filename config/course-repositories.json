@@ -14,12 +14,13 @@
     {
       "id": "toan-cho-ai",
       "repository": "KazinMintori/StudyHub-course-toan-cho-ai",
-      "revision": "0c6e6366fe69b760e39e294c4e860da58718be6e",
+      "revision": "224e33dc68959c54373e9357682862dba64309a6",
       "paths": [
         "docs/.vitepress/math-ai-course.mjs",
         "docs/.vitepress/math-ai-foundations.mjs",
         "docs/.vitepress/math-ai-review-course.mjs",
         "docs/toan-cho-ai/**",
+        "docs/public/materials/toan-cho-ai/**",
         "raw_materials/toan-cho-ai/**",
         "src/content/courses/toan-cho-ai/**"
       ]
@@ -27,7 +28,7 @@
     {
       "id": "xac-suat-thong-ke",
       "repository": "KazinMintori/StudyHub-course-xac-suat-thong-ke",
-      "revision": "8a22d62db61ca778eabc29232b304a74bcb578e4",
+      "revision": "af4575fab8cd162f8ac0dddd412ebaea2ae4f21f",
       "paths": [
         "docs/.vitepress/probability-source-library.mjs",
         "docs/.vitepress/xac-suat-thong-ke-course.mjs",

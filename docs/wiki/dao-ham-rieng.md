@@ -19,9 +19,7 @@ Có các đạo hàm riêng tại một điểm chưa tự bảo đảm hàm kh�
 
 ## Ví dụ
 
-Với $f(x,y)=x^2+3y$, các đạo hàm riêng là:
-
-$$\frac{\partial f}{\partial x}=2x,\qquad\frac{\partial f}{\partial y}=3.$$
+Với $f(x,y)=x^2+3y$, đạo hàm theo x là $\frac{\partial f}{\partial x}=2x$. Đạo hàm theo y là $\frac{\partial f}{\partial y}=3$.
 
 ## Khi nào cần dùng?
 

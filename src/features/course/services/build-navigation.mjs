@@ -37,7 +37,10 @@ export function buildThemeConfig({ courseCatalog, wikiGroups, concepts }) {
             {text:'Tổng quan ôn luyện',link:`/${course.id}/on-luyen`},
             ...course.review.topicGroups.map(group=>({text:group.title,collapsed:true,items:group.topics.map(topic=>({text:topic.title,link:`/${course.id}/on-luyen/${topic.slug}`}))}))
           ]},
-          {text:'Bài tập ôn luyện',items:[{text:'Bài tập',link:`/${course.id}/bai-tap`}]}
+          {text:course.problemSets ? 'Homework' : 'Bài tập ôn luyện',items:[
+            {text:'Bài tập',link:`/${course.id}/bai-tap`},
+            ...(course.problemSets || []).map(set=>({text:set.title,link:`/${course.id}/problem-set/${set.slug}`}))
+          ]}
         ] : []),
         ...(course.parts ? course.parts.map(part=>({
           text: part.title,
