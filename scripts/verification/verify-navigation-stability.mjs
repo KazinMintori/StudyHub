@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer'
 import assert from 'node:assert/strict'
 import { mkdir, writeFile } from 'node:fs/promises'
 import { courseCatalog } from '../../src/content/catalog.mjs'
+import { isExtendedCourse } from '../../src/content/collections.mjs'
 
 const base = (process.env.QA_URL || 'http://127.0.0.1:5173').replace(/\/$/, '')
 const basePath = new URL(base).pathname.replace(/\/$/, '')
@@ -45,9 +46,12 @@ try {
     assert.equal(await page.evaluate(() => window.navigationProbe.id), documentId)
     assert.equal(await page.evaluate(() => scrollY), 0)
   }
-  for (const course of courseCatalog) await coursePage(course)
+  for (const course of courseCatalog.filter(course => !isExtendedCourse(course))) await coursePage(course)
+  await clickLink('/hoc-lieu-mo-rong/')
+  await page.waitForSelector('.extended-library')
+  for (const course of courseCatalog.filter(isExtendedCourse)) await coursePage(course)
   assert.equal(documents, initialDocuments, 'Internal links must retain the current document')
-  results.push('All ten course links commit without reloading the document')
+  results.push('UET and extended-library course links commit without reloading the document')
   const lecture = '/xac-suat-thong-ke/bai-giang/01-hieu-the-gioi-bang-du-lieu.html'
   await coursePage(courseCatalog.find(course => course.id === 'xac-suat-thong-ke'))
   await clickLink(lecture)
