@@ -1,3 +1,4 @@
+import { localCspWikiDetails } from './local-csp-foundations.mjs'
 import { physicsConceptIds, physicsWikiDetails, physicsWikiConnections } from './physics-foundations.mjs'
 import { formatWikiMath } from '../../scripts/wiki-math.mjs'
 import { concepts } from './concepts.mjs'
@@ -11,7 +12,7 @@ export const wikiGroups = [
   { id:'optimization-algorithms', name:'Thuật toán tối ưu', ids:['tim-kiem-duong','tu-tuong-hop','gradient-ngau-nhien','momentum-nesterov','adagrad','rmsprop','adam','gradient-lien-hop','bfgs'] },
   { id:'planning', name:'Quy hoạch', ids:['nghiem-co-so','quy-hoach-dong'] },
   { id:'discrete-math', name:'Logic & toán rời rạc', ids:['tap-hop','ham-so','menh-de','he-qua-logic','dang-chuan-cnf','luong-tu','quy-nap','to-hop','quan-he'] },
-  { id:'algorithms', name:'Giải thuật & cấu trúc dữ liệu', ids:['do-thi','cay','trang-thai','hang-doi','ngan-xep','hang-doi-uu-tien','do-phuc-tap','heuristic','mang','con-tro','de-quy','bam'] },
+  { id:'algorithms', name:'Giải thuật & cấu trúc dữ liệu', ids:['cuc-tri-dia-phuong','nhat-quan-cung','do-thi','cay','trang-thai','hang-doi','ngan-xep','hang-doi-uu-tien','do-phuc-tap','heuristic','mang','con-tro','de-quy','bam'] },
   { id:'mathematics', name:'Đại số & giải tích', ids:['vector','ma-tran','tich-vo-huong','chuan','gioi-han','do-thi-ham-so','dao-ham','dao-ham-rieng','gradient','tich-phan','quy-tac-chuoi','tri-rieng','to-hop-loi'] },
   { id:'data-analysis', name:'Phân tích & mô tả dữ liệu', ids:['thong-ke-mo-ta','suy-rong-thong-ke','ket-luan-nhan-qua','du-doan-thong-ke','mau-tong-the'] },
   { id:'probability', name:'Xác suất & thống kê', ids:['khong-gian-mau','xac-suat-co-dieu-kien','doc-lap','bien-ngau-nhien','ky-vong','phuong-sai','phan-phoi-gauss','ma-tran-hiep-phuong-sai','likelihood', ...Object.keys(xstkConcepts)] },
@@ -142,7 +143,7 @@ export function relatedConcepts(id) {
 }
 // Object.assign + PURE lets bundlers drop article bodies (and their rendered
 // math) from client pages that only need the concept dictionary.
-export const wikiDetails = /*#__PURE__*/ Object.assign({}, physicsWikiDetails, mathAiWikiDetails, dataProcessingWikiDetails, xstkWikiDetails, propositionalWikiDetails, {
+export const wikiDetails = /*#__PURE__*/ Object.assign({}, physicsWikiDetails, mathAiWikiDetails, dataProcessingWikiDetails, xstkWikiDetails, propositionalWikiDetails, localCspWikiDetails, {
   'thong-ke-mo-ta':'**Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\\%$. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.\n\nMô tả không chỉ gồm phép tính: Bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu.',
   'suy-rong-thong-ke':'**Tập đối tượng trong kết luận rộng hơn tập đã quan sát.** Cùng con số 70%, câu về người trả lời khảo sát là mô tả, còn câu về toàn bộ sinh viên của trường là suy rộng. Muốn đánh giá kết luận sau, cần biết cách chọn mẫu, nhóm nào có cơ hội tham gia và ai được mời nhưng không trả lời.\n\nMột mẫu lớn vẫn có thể khác tổng thể một cách có hệ thống. Nhận diện phát biểu là suy rộng không chứng minh rằng bước suy rộng hợp lệ, và cũng không có nghĩa mọi bước suy rộng đều sai.',
   'ket-luan-nhan-qua':'**Phân biệt quan sát với can thiệp.** Nếu người tham gia câu lạc bộ có điểm cao hơn, dữ liệu mô tả khác biệt giữa các nhóm. Để nói việc tham gia làm điểm tăng, cần căn cứ về tác động của thay đổi này, thay vì chỉ dựa vào khác biệt đã thấy. Những người tham gia có thể đã có nhiều kinh nghiệm hơn từ trước.\n\nThí nghiệm ngẫu nhiên có đối chứng phân người tham gia ngẫu nhiên vào các nhóm để so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc khác biệt có sẵn quyết định ai nhận can thiệp. Kết luận vẫn cần đi cùng thiết kế, cách đo và phạm vi nghiên cứu.',
