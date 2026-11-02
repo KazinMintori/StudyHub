@@ -124,6 +124,83 @@ export const lessons = [
     ]
   },
   {
+    "number": 3,
+    "slug": "03-tim-kiem-loi-giai",
+    "title": "Tìm kiếm lời giải",
+    "prerequisites": [],
+    "supportingConcepts": [],
+    "status": "ready",
+    "lessonStatus": "ready",
+    "description": "Không gian trạng thái, tìm kiếm trên đồ thị, các chiến lược tìm kiếm không thông tin (BFS, DFS, UCS, IDS), tìm kiếm heuristic (A*), cắt tỉa không gian và quy hoạch động.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "3-1-giai-quyet-van-de-nhu-tim-kiem",
+            "title": "3.1 Giải quyết vấn đề như tìm kiếm",
+            "question": "Bài toán lập kế hoạch được trừu tượng hóa thành bài toán tìm kiếm trên đồ thị như thế nào?"
+          },
+          {
+            "slug": "3-2-khong-gian-trang-thai",
+            "title": "3.2 Không gian trạng thái",
+            "question": "Bốn thành phần cấu thành một không gian trạng thái hoàn chỉnh là gì?"
+          },
+          {
+            "slug": "3-3-tim-kiem-tren-do-thi",
+            "title": "3.3 Tìm kiếm trên đồ thị",
+            "question": "Đường đi, chu trình và chi phí tích lũy trên đồ thị có hướng được định nghĩa ra sao?"
+          },
+          {
+            "slug": "3-4-thuat-toan-tim-kiem-tong-quat",
+            "title": "3.4 Thuật toán tìm kiếm tổng quát",
+            "question": "Cấu trúc vòng lặp tổng quát và vai trò của tập biên (frontier) là gì?"
+          },
+          {
+            "slug": "3-5-chien-luoc-tim-kiem-khong-thong-tin",
+            "title": "3.5 Chiến lược tìm kiếm không thông tin",
+            "question": "So sánh ưu nhược điểm về thời gian và không gian giữa BFS, DFS, UCS và IDS?"
+          },
+          {
+            "slug": "3-6-tim-kiem-co-thong-tin-heuristic",
+            "title": "3.6 Tìm kiếm có thông tin (Heuristic)",
+            "question": "Tính chấp nhận được và tính đơn điệu bảo đảm tính tối ưu toàn cục của thuật toán A* như thế nào?"
+          },
+          {
+            "slug": "3-7-cat-tia-khong-gian-tim-kiem",
+            "title": "3.7 Cắt tỉa không gian tìm kiếm",
+            "question": "Cắt tỉa chu trình và cắt tỉa đa đường đi ngăn chặn bùng nổ tổ hợp ra sao?"
+          },
+          {
+            "slug": "3-8-cac-cai-tien-thuat-toan-tim-kiem",
+            "title": "3.8 Các cải tiến thuật toán tìm kiếm",
+            "question": "Tìm kiếm hai chiều, tìm kiếm theo hòn đảo và quy hoạch động tối ưu hóa việc giải bài toán như thế nào?"
+          },
+          {
+            "slug": "3-9-tac-dong-xa-hoi",
+            "title": "3.9 Tác động xã hội của thuật toán tìm kiếm",
+            "question": "Hệ thống định tuyến thực tế gây ra những ngoại ứng tiêu cực nào và cần lưu ý gì về quyền riêng tư?"
+          },
+          {
+            "slug": "3-10-on-tap",
+            "title": "3.10 Ôn tập",
+            "question": "Những nguyên lý cốt lõi nào cần ghi nhớ sau khi học xong Chương 3?"
+          },
+          {
+            "slug": "3-11-tai-lieu-tham-khao-va-doc-them",
+            "title": "3.11 Tài liệu tham khảo và đọc thêm",
+            "question": "Những công trình nghiên cứu kinh điển nào đặt nền móng cho lý thuyết tìm kiếm trong AI?"
+          },
+          {
+            "slug": "3-12-bai-tap",
+            "title": "3.12 Bài tập",
+            "question": "Làm thế nào để vận dụng lý thuyết giải quyết trọn vẹn 11 bài tập tìm kiếm trên đồ thị và lưới ô vuông?"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "number": 5,
     "slug": "05-menh-de-va-suy-dien",
     "title": "Mệnh đề và suy diễn",
@@ -308,6 +385,57 @@ export const slides = [
       "Chuẩn mực đạo đức phải do xã hội và luật pháp quy định, không thể phó mặc cho cá nhân tự cài đặt."
     ],
     "note": "02-kien-truc-tac-tu-va-dieu-khien-phan-cap",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Tìm kiếm trong không gian trạng thái",
+    "bullets": [
+      "Trừu tượng hóa bài toán AI thành việc tìm đường đi từ trạng thái xuất phát đến trạng thái đích trên đồ thị có hướng.",
+      "Tập biên (frontier) lưu giữ các đường đi ứng viên chờ mở rộng, quyết định toàn bộ đặc tính của thuật toán tìm kiếm."
+    ],
+    "note": "03-tim-kiem-loi-giai",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Tìm kiếm không thông tin: BFS, DFS và IDS",
+    "bullets": [
+      "BFS tìm đường đi ít cung nhất nhưng tốn bộ nhớ cấp số nhân O(b^d).",
+      "DFS tiết kiệm bộ nhớ tuyến tính O(bm) nhưng không tối ưu và có thể kẹt trong chu trình vô tận.",
+      "IDS kết hợp ưu thế trọn vẹn: Đạt tính tối ưu và hoàn chỉnh của BFS với mức tiêu thụ bộ nhớ tuyến tính của DFS."
+    ],
+    "note": "03-tim-kiem-loi-giai",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Thuật toán A* và tính chấp nhận được",
+    "bullets": [
+      "Hàm đánh giá f(p) = cost(p) + h(p) kết hợp chi phí thực tế đã đi với ước lượng khoảng cách tới đích.",
+      "Khi heuristic h(n) chấp nhận được (h(n) <= cost*(n)) và chi phí cung dương, A* bảo đảm tìm ra nghiệm tối ưu toàn cục."
+    ],
+    "note": "03-tim-kiem-loi-giai",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Cắt tỉa không gian và tính đơn điệu",
+    "bullets": [
+      "Cắt tỉa chu trình loại bỏ vòng lặp trên nhánh hiện tại mà không tốn thêm bộ nhớ.",
+      "Cắt tỉa đa đường đi duy trì tập explored, loại bỏ trạng thái trùng lặp và an toàn tuyệt đối khi hàm heuristic đơn điệu."
+    ],
+    "note": "03-tim-kiem-loi-giai",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Quy hoạch động và tìm kiếm hai chiều",
+    "bullets": [
+      "Tìm kiếm hai chiều đồng thời từ điểm xuất phát và điểm đích, giảm số nút duyệt từ b^d xuống 2 * b^(d/2).",
+      "Quy hoạch động tính toán bảng chi phí tối ưu từ mọi nút tới đích, cho phép tác tử hành động thời gian thực O(1)."
+    ],
+    "note": "03-tim-kiem-loi-giai",
     "formula": "",
     "example": ""
   },

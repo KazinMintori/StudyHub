@@ -103,5 +103,80 @@
     "source": "https://artint.info/3e/html/x9.png",
     "sha256": "5ed48bd8ba5a19c1e81e85812a246e9fc942e55c8c1b326dc68b1ae7f6b32146",
     "bytes": 19239
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x16.png": {
+    "source": "https://artint.info/3e/html/x16.png",
+    "sha256": "d649979d252f7f143a567c4992b19df46e28eeca251a2a5370694b90633955c3",
+    "bytes": 7562
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x17.png": {
+    "source": "https://artint.info/3e/html/x17.png",
+    "sha256": "93abffbef397c08fd10bd16d921b202d9a25046a075ef68741b3a6ea32fdcce9",
+    "bytes": 53043
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x18.png": {
+    "source": "https://artint.info/3e/html/x18.png",
+    "sha256": "9d082a3b3a5e48e3da02767fb1461a24a934dcf5016c15783cbe7e12d4f4cbc4",
+    "bytes": 16282
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x19.png": {
+    "source": "https://artint.info/3e/html/x19.png",
+    "sha256": "6308df3d11cc4a54125f6a7d06d16c28889154e7693107b041fddbe0543fb377",
+    "bytes": 178053
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x20.png": {
+    "source": "https://artint.info/3e/html/x20.png",
+    "sha256": "82ef310301b838d3c0d3515ee809f1b54760d4dfa595311d59fe297bf3ce8799",
+    "bytes": 73426
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x21.png": {
+    "source": "https://artint.info/3e/html/x21.png",
+    "sha256": "fb9993019b2b1fb008572767bf05dbf4b4a8b5ae2365f0fecfb9a4cb09120c7f",
+    "bytes": 13941
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x22.png": {
+    "source": "https://artint.info/3e/html/x22.png",
+    "sha256": "d9bba6ea3ca33365cf9976d63bef0be900b50e29032d24b7b20de500f1ce835f",
+    "bytes": 73638
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x23.png": {
+    "source": "https://artint.info/3e/html/x23.png",
+    "sha256": "53161e253b732e721b0e1a127e752253b613b7e429698d0b2e808c8b881ef58d",
+    "bytes": 17049
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x24.png": {
+    "source": "https://artint.info/3e/html/x24.png",
+    "sha256": "ec4b5165192c4d6d28ea584d8462c36837301bd89ec580c35b02d461b8db954d",
+    "bytes": 16817
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x25.png": {
+    "source": "https://artint.info/3e/html/x25.png",
+    "sha256": "037add43dd434c473ad82192d1540917a92d54e8f4c4f3d2248607d12ccd00c2",
+    "bytes": 18356
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x26.png": {
+    "source": "https://artint.info/3e/html/x26.png",
+    "sha256": "0534d6ba47e54c2ab911d999f3334f8cf32ccbb84b9a5298321aec30aa873914",
+    "bytes": 73363
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x27.png": {
+    "source": "https://artint.info/3e/html/x27.png",
+    "sha256": "a60adffd056832aec46d1226ec57d892588191d10827d39dbf3698a3d629202b",
+    "bytes": 8498
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x28.png": {
+    "source": "https://artint.info/3e/html/x28.png",
+    "sha256": "823b9f8cef36b4153142c291fc2ccf25921feca07e415b62ce63fceb315e655c",
+    "bytes": 18765
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x29.png": {
+    "source": "https://artint.info/3e/html/x29.png",
+    "sha256": "82ac2aeb3603fc733f3cbc3f800bea53597d9445bca547dd531e9f1179f6dec1",
+    "bytes": 5243
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/03-tim-kiem-loi-giai/figures/x30.png": {
+    "source": "https://artint.info/3e/html/x30.png",
+    "sha256": "4ecc78e2d9b23f1c2ca96f5468a6e9a3d48c4ba40746108155c0f159c174dcd2",
+    "bytes": 3513
   }
 }

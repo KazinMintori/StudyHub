@@ -1,6 +1,7 @@
 const course = 'ai-nen-tang-tac-tu'
 const intro = '01-tri-tue-nhan-tao-va-tac-tu'
 const arch = '02-kien-truc-tac-tu-va-dieu-khien-phan-cap'
+const search = '03-tim-kiem-loi-giai'
 const logic = '05-menh-de-va-suy-dien'
 const relations = '15-ca-the-va-quan-he'
 
@@ -13,6 +14,10 @@ export const flashcards = [
   { course, lesson: arch, q: 'Vì sao tác tử cần trạng thái niềm tin thay vì lưu trữ toàn bộ lịch sử?', a: 'Vì dòng lịch sử tương tác kéo dài vô hạn trong khi dung lượng bộ nhớ tác tử là hữu hạn. Trạng thái niềm tin cô đọng toàn bộ thông tin quá khứ cần thiết phục vụ cho các quyết định hành động ở hiện tại và tương lai.' },
   { course, lesson: arch, q: 'Hai hàm tác tử hình thức remember và command có vai trò gì?', a: 'Hàm remember: S x P -> S cập nhật trạng thái niềm tin khi có nhận thức mới; hàm command: S x P -> C xác định lệnh điều khiển dựa trên trạng thái niềm tin hiện tại và nhận thức tức thời.' },
   { course, lesson: arch, q: 'Lợi ích cốt lõi của kiến trúc điều khiển phân cấp là gì?', a: 'Tách biệt các tầng theo tầm nhìn thời gian và mức độ trừu tượng. Tầng thấp phản xạ nhanh chóng với biến cố tức thời, che giấu chi tiết phần cứng để tầng cao tập trung hoạch định chiến lược dài hạn.' },
+  { course, lesson: search, q: 'Không gian trạng thái hoàn chỉnh gồm những thành phần nào và đường đi nghiệm được xác định ra sao?', a: 'Gồm tập trạng thái, trạng thái xuất phát, tập các hành động hợp lệ sinh trạng thái láng giềng, vị từ kiểm tra trạng thái mục tiêu và hàm chi phí cung. Nghiệm là một chuỗi hành động dẫn từ trạng thái xuất phát đến trạng thái mục tiêu.' },
+  { course, lesson: search, q: 'Vì sao tìm kiếm sâu dần (IDS) kết hợp được ưu điểm của cả BFS và DFS?', a: 'IDS lặp lại DFS với ngưỡng độ sâu tăng dần. Nó bảo đảm tính hoàn chỉnh và tìm ra nghiệm tối ưu (ít cung nhất) như BFS, nhưng chỉ tiêu thụ bộ nhớ tuyến tính O(bm) như DFS.' },
+  { course, lesson: search, q: 'Hàm heuristic chấp nhận được và hàm heuristic đơn điệu khác nhau thế nào trong thuật toán A*?', a: 'Heuristic chấp nhận được không bao giờ ước tính vượt quá chi phí thực tế (h(n) <= cost*(n)), bảo đảm tính tối ưu của A*. Heuristic đơn điệu thỏa mãn bất đẳng thức tam giác (h(n) <= cost(n, n\') + h(n\')), bảo đảm giá trị f tăng đơn điệu và cho phép cắt tỉa đa đường đi an toàn tuyệt đối.' },
+  { course, lesson: search, q: 'Cắt tỉa chu trình và cắt tỉa đa đường đi khác nhau thế nào về bộ nhớ và phạm vi bảo vệ?', a: 'Cắt tỉa chu trình kiểm tra nút lặp trên chính đường đi hiện tại (tốn 0 bộ nhớ phụ, không chống được trùng trạng thái giữa các nhánh). Cắt tỉa đa đường đi lưu tập explored toàn cục để loại bỏ mọi đường đi tới sau (tốn bộ nhớ cấp số nhân, triệt tiêu bùng nổ tổ hợp trên đồ thị dày).' },
   { course, lesson: logic, q: 'Hệ quả logic và một thủ tục suy diễn khác nhau thế nào?', a: 'Hệ quả logic là quan hệ ngữ nghĩa: Kết luận đúng trong mọi mô hình của cơ sở tri thức. Thủ tục suy diễn là cách thao tác trên biểu thức để tìm chứng minh. Tính đúng đắn bảo đảm kết luận tìm được là hệ quả logic; tính đầy đủ bảo đảm tìm được mọi hệ quả trong phạm vi đã nêu.' },
   { course, lesson: logic, q: 'Một mệnh đề xác định gồm những thành phần nào?', a: 'Gồm một nguyên tử ở đầu và một hội các nguyên tử ở thân, đọc là đầu đúng nếu mọi nguyên tử trong thân đúng. Thân rỗng tạo thành một sự kiện. Mệnh đề tương đương một tuyển chứa đúng một literal dương.' },
   { course, lesson: logic, q: 'Không chứng minh được một nguyên tử có đồng nghĩa với chứng minh phủ định của nó không?', a: 'Không. Trong ngữ nghĩa thông thường, một nguyên tử có thể đúng ở mô hình này và sai ở mô hình khác. Muốn dùng sự thất bại của chứng minh để kết luận phủ định, phải nêu rõ giả định tri thức đầy đủ và các điều kiện của thủ tục tìm kiếm.' },
