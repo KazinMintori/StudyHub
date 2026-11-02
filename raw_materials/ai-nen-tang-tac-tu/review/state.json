@@ -1,0 +1,68 @@
+{
+  "updated": "2026-11-02",
+  "objective": "Dịch đầy đủ chương 5 và 15, kiểm chứng và xuất bản trước để người dùng đọc, tạm dừng các chương khác",
+  "integration": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-integration-20261102",
+  "branch": "codex/artint3e-20261102",
+  "baseline": "fde7e5ff",
+  "planCommit": "1ac67cbc",
+  "userConfirmedTranslationRights": true,
+  "userExplicitlyAuthorizedAgyPermissionBypass": true,
+  "permissionScope": "Chỉ bốn worktree ui/content-a/content-b/content-c, mã giao diện và bản dịch, không push/deploy/xóa/truy cập bí mật",
+  "source": "source/manifest.json",
+  "sourcePages": 215,
+  "jobs": [
+    {
+      "task": "ui",
+      "job": "3df91a2acd414fa48691ff5fc254284d",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-ui-20261102",
+      "attempt": 2,
+      "state": "running"
+    },
+    {
+      "task": "a",
+      "chapters": "1–6",
+      "job": "84baf0b323374e1a8688d266689730f3",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-a-20261102",
+      "attempt": 1,
+      "state": "stopped-user-priority-change"
+    },
+    {
+      "task": "b",
+      "chapters": "7–14",
+      "job": "d8eeed2bb13f4c6bad2d4da762d5b032",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-b-20261102",
+      "attempt": 1,
+      "state": "stopped-user-priority-change"
+    },
+    {
+      "task": "c",
+      "chapters": "15–19 và phụ lục",
+      "job": "49fa5e9eabe54469919139165c980a4f",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-c-20261102",
+      "attempt": 1,
+      "state": "stopped-user-priority-change"
+    },
+    {
+      "task": "chapter-5",
+      "job": "33aa20d386944bb78758b6df49abb81c",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-a-20261102",
+      "attempt": 1,
+      "state": "running"
+    },
+    {
+      "task": "chapter-15",
+      "job": "a8188194daaf43e7a974baa1097d3496",
+      "worktree": "C:/Users/Ai/Documents/StudyHub/tmp/artint3e-content-c-20261102",
+      "attempt": 1,
+      "state": "running"
+    }
+  ],
+  "notes": [
+    "Lần UI đầu d18a763ccc674214bbbb74b818dbfe14 bị chặn command permission, không thành công. User đã cho phép retry true trong đúng phạm vi.",
+    "Không sửa worktree chính, có nhiều thay đổi không liên quan đang dở.",
+    "Worktree tích hợp đã dùng lại 435 module runtime .mjs của các môn riêng từ primary checkout, đều nằm trong vùng gitignored, không tải nguyên tài liệu riêng.",
+    "Chưa tích hợp nội dung AGY. Chưa kiểm chứng hiển thị hoặc build. Không gọi bản dịch hoàn tất khi thiếu nguồn.",
+    "Build toàn site chỉ được chạy cloud. Script kiểm phủ nguồn tạo review signals, không chứng nhận đúng ngữ nghĩa."
+  ],
+  "next": "Hoàn tất UI, rà và tích hợp chỉ chương 5/15, bổ sung flashcard/Wiki scope, kiểm tra nội dung + browser, cloud build rồi xuất bản lên web. Không dịch tiếp chương khác."
+}
