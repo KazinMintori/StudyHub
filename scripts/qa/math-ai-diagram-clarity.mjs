@@ -19,7 +19,9 @@ export function inspectDiagramClarity(){
    const scale=matrix?Math.hypot(matrix.c,matrix.d):1
    if(size*scale<10)issues.push({type:'diagram-small-label',lab,diagram:index,text:label.text,pixels:size*scale})
   }
-  const markers=[...svg.querySelectorAll('circle[class*="lab-dot"]')].filter(e=>visible(e)&&!e.classList.contains('lab-handle'))
+  // Text inside a labelled graph-node button is intentional control content.
+  // This check targets plotted data markers, not the backgrounds of buttons.
+  const markers=[...svg.querySelectorAll('circle[class*="lab-dot"]')].filter(e=>visible(e)&&!e.classList.contains('lab-handle')&&!e.matches('[role=button]'))
   for(const label of labels)for(const marker of markers){
    const overlap=intersects(label.box,marker.getBoundingClientRect())
    if(overlap.w>1.5&&overlap.h>1.5)issues.push({type:'diagram-label-over-point',lab,diagram:index,text:label.text,overlap})
