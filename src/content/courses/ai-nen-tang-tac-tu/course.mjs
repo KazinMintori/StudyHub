@@ -49,7 +49,8 @@ export const parts = [
     lessons: [
       '11-quan-he-nhan-qua',
       '12-lap-ke-hoach-trong-dieu-kien-bat-dinh',
-      '13-hoc-tang-cuong'
+      '13-hoc-tang-cuong',
+      '14-he-da-tac-tu'
     ]
   },
   {

@@ -738,5 +738,53 @@
     "source": "https://artint.info/3e/html/x146.png",
     "sha256": "761de8bae0fd0d799b3e6b277ebb31ac52adba18297f2496385c6fdc6c435e4a",
     "bytes": 47686
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x147.png": {
+    "source": "https://artint.info/3e/html/x147.png",
+    "sha256": "2cbf7c503bd4e9ac74e0f3cc320c483447e69922739d7027b1fbe374c5f02ad9",
+    "bytes": 20110,
+    "caption": "Dạng mở rộng của trò chơi chia sẻ (Sharing game) với các nút quyết định của Andy và Barb"
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x148.png": {
+    "source": "https://artint.info/3e/html/x148.png",
+    "sha256": "395527c9451fa58f01975b1832f637662a7a045363313c49eb7f18b38f5bfc14",
+    "bytes": 19549,
+    "caption": "Dạng mở rộng của trò chơi oẳn tù tì với tập thông tin (Information set) nét đứt"
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x149.png": {
+    "source": "https://artint.info/3e/html/x149.png",
+    "sha256": "92e4cf1c6df33325e88d9d8291582788d7aecf836df07d8b8337cff61655cd74",
+    "bytes": 29400,
+    "caption": "Mạng quyết định đa tác tử (Multiagent decision network) cho hệ thống báo cháy"
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x150.png": {
+    "source": "https://artint.info/3e/html/x150.png",
+    "sha256": "3648de1353be0fa6ad771451d9137de5a2519e26cc57a942da784eeb87f0c1bd",
+    "bytes": 25725,
+    "caption": "Cây trò chơi tổng bằng không minh họa các nhánh bị cắt tỉa bởi thuật toán Alpha-Beta"
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x151.png": {
+    "source": "https://artint.info/3e/html/x151.png",
+    "sha256": "b73e6e68972f1d0a9014a3a8ef4dd56e2e0821f973d57d089d93824f2f42c5b5",
+    "bytes": 510456,
+    "caption": "Trò chơi sút phạt đền (Soccer penalty kick) giữa cầu thủ sút và thủ môn"
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x152.png": {
+    "source": "https://artint.info/3e/html/x152.png",
+    "sha256": "c44ce24ea7d07eb1cf3354415352ee9a842d6dd3ab2f511def539b95c59afcdc",
+    "bytes": 15041,
+    "caption": "Xác suất ghi bàn phụ thuộc vào phân phối xác suất hành động của cầu thủ sút phạt và thủ môn"
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x153.png": {
+    "source": "https://artint.info/3e/html/x153.png",
+    "sha256": "b2cb83e613c98e767fff19d5226838b06b3bda44054ae9cea152c54b790c07ec",
+    "bytes": 35858,
+    "caption": "Quỹ đạo hội tụ chính sách trong học tăng cường đa tác tử cho trò chơi hai đấu thủ"
+  },
+  "docs/ai-nen-tang-tac-tu/bai-giang/14-he-da-tac-tu/figures/x154.png": {
+    "source": "https://artint.info/3e/html/x154.png",
+    "sha256": "1ffe7b225b9c80ac525cf0ca75f86415ecefaad41ed4017346580a8f22265284",
+    "bytes": 8353,
+    "caption": "Cây trò chơi cờ ca-rô (Tic-tac-toe) tại trạng thái người chơi X lựa chọn nước đi thứ tư"
   }
 }

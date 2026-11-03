@@ -472,6 +472,78 @@ export const lessons = [
         ]
       }
     ]
+  },
+  {
+    "number": 14,
+    "slug": "14-he-da-tac-tu",
+    "title": "Hệ đa tác tử",
+    "prerequisites": [],
+    "supportingConcepts": [],
+    "status": "ready",
+    "lessonStatus": "ready",
+    "description": "Mô hình tương tác đa tác tử, trò chơi dạng chuẩn, dạng mở rộng và mạng quyết định, quy nạp ngược và cắt tỉa Alpha-Beta, Cân bằng Nash và chiến lược hỗn hợp, hàm lựa chọn xã hội và Định lý Arrow, thiết kế cơ chế VCG và đấu giá Vickrey, học tăng cường đa tác tử và các hệ thống AI đỉnh cao.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "14-1-khung-mo-hinh-da-tac-tu",
+            "title": "14.1 Khung mô hình đa tác tử",
+            "question": "Những giả định nền tảng nào phân biệt một đối thủ chiến lược với tự nhiên vô tư lự?"
+          },
+          {
+            "slug": "14-2-bieu-dien-tro-choi",
+            "title": "14.2 Biểu diễn trò chơi",
+            "question": "Dạng chuẩn, dạng mở rộng với tập thông tin và mạng quyết định đa tác tử mô hình hóa cấu trúc tương tác như thế nào?"
+          },
+          {
+            "slug": "14-3-giai-tro-choi-thong-tin-hoan-hao",
+            "title": "14.3 Giải trò chơi thông tin hoàn hảo",
+            "question": "Làm thế nào quy nạp ngược và kỹ thuật cắt tỉa Alpha-Beta giúp giải quyết trò chơi đối kháng với độ sâu tìm kiếm tăng gấp đôi?"
+          },
+          {
+            "slug": "14-4-suy-luan-trong-tro-choi-thong-tin-khong-hoan-hao",
+            "title": "14.4 Suy luận trong trò chơi thông tin không hoàn hảo",
+            "question": "Tại sao chiến lược ngẫu nhiên hóa và Cân bằng Nash lại là lời giải duy nhất triệt tiêu nan đề suy luận hồi quy vô hạn?"
+          },
+          {
+            "slug": "14-5-ra-quyet-dinh-nhom",
+            "title": "14.5 Ra quyết định nhóm",
+            "question": "Nghịch lý Condorcet và Định lý bất khả của Arrow đặt ra những giới hạn toán học bất biến nào cho các cơ chế bầu cử?"
+          },
+          {
+            "slug": "14-6-thiet-ke-co-che",
+            "title": "14.6 Thiết kế cơ chế",
+            "question": "Cơ chế VCG và đấu giá giá thứ hai Vickrey đạt được tính trung thực và hiệu quả kinh tế tối đa nhờ nguyên lý thuế Clarke ra sao?"
+          },
+          {
+            "slug": "14-7-hoc-tang-cuong-da-tac-tu",
+            "title": "14.7 Học tăng cường đa tác tử",
+            "question": "Thuật toán lặp chính sách ngẫu nhiên Dirichlet SARSA vận hành như thế nào và tại sao hiện tượng xoay vòng chiến lược lại xuất hiện?"
+          },
+          {
+            "slug": "14-8-tac-dong-xa-hoi",
+            "title": "14.8 Tác động xã hội và Đạo đức",
+            "question": "Làm thế nào để hóa giải Bi kịch của tài nguyên chung và ứng dụng trò chơi an ninh Stackelberg vào bảo tồn thiên nhiên, y tế cộng đồng?"
+          },
+          {
+            "slug": "14-9-on-tap",
+            "title": "14.9 Ôn tập và hệ thống hóa kiến thức",
+            "question": "Làm thế nào để hệ thống hóa và lựa chọn giải thuật tối ưu cho từng loại trò chơi đa tác tử trong thực tế?"
+          },
+          {
+            "slug": "14-10-tai-lieu-tham-khao-va-doc-them",
+            "title": "14.10 Tài liệu tham khảo và đọc thêm",
+            "question": "Dòng chảy tri thức lý thuyết trò chơi đã phát triển từ von Neumann, John Nash đến AlphaZero, Pluribus và Cicero như thế nào?"
+          },
+          {
+            "slug": "14-11-bai-tap",
+            "title": "14.11 Bài tập và lời giải chi tiết",
+            "question": "Làm thế nào để tính toán chính xác Cân bằng Nash hỗn hợp, phân tích cây Minimax Tic-Tac-Toe và thiết lập chiến lược Tit-for-Tat?"
+          }
+        ]
+      }
+    ]
   }
 ]
 
@@ -823,6 +895,56 @@ export const slides = [
       "DQN sử dụng Bộ đệm tái hiện trải nghiệm (Experience Replay) và Mạng mục tiêu (Target Network) để ghìm giữ sự ổn định trước 'Bộ ba chết người'."
     ],
     "note": "13-hoc-tang-cuong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Khung mô hình đa tác tử & Phân loại tương tác",
+    "bullets": [
+      "Hệ đa tác tử gồm các chủ thể tự chủ, tối đa hóa hàm độ thỏa dụng riêng; kết cục chung phụ thuộc vào tổ hợp hành động của tất cả các bên.",
+      "Tuyệt đối không coi đối thủ chiến lược là tự nhiên tĩnh; dải phổ tương tác trải rộng từ hợp tác toàn phần, cạnh tranh tổng bằng không đến tương tác hỗn hợp."
+    ],
+    "note": "14-he-da-tac-tu",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Quy nạp ngược & Kỹ thuật cắt tỉa Alpha-Beta",
+    "bullets": [
+      "Trong trò chơi thông tin hoàn hảo, quy nạp ngược đi từ các nút lá về nút gốc để xác định nhánh đi tối ưu cho từng tác tử.",
+      "Cắt tỉa Alpha-Beta loại bỏ các nhánh không ảnh hưởng đến kết cục tối ưu, giảm không gian tìm kiếm từ O(b^d) xuống O(b^{d/2}) trong kịch bản lý tưởng."
+    ],
+    "note": "14-he-da-tac-tu",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Chiến lược hỗn hợp & Cân bằng Nash",
+    "bullets": [
+      "Trong thông tin không hoàn hảo hoặc hành động đồng thời, tác tử bắt buộc phải ngẫu nhiên hóa hành động để tránh bị đối phương bắt bài.",
+      "Cân bằng Nash là hồ sơ chiến lược mà không bên nào có thể cải thiện độ thỏa dụng nếu đơn phương đi trệch khỏi trạng thái cân bằng."
+    ],
+    "note": "14-he-da-tac-tu",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Thiết kế cơ chế VCG & Đấu giá giá thứ hai Vickrey",
+    "bullets": [
+      "Cơ chế VCG áp dụng thuế Clarke tương đương với thiệt hại ngoại tác mà sự hiện diện của một tác tử gây ra cho xã hội.",
+      "Đấu giá Vickrey trao giải cho người trả giá cao nhất nhưng chỉ thu mức giá của người cao thứ hai, bảo đảm trung thực là chiến lược trội tuyệt đối."
+    ],
+    "note": "14-he-da-tac-tu",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Học tăng cường đa tác tử & Hiện tượng xoay vòng",
+    "bullets": [
+      "Thuật toán Dirichlet SARSA duy trì các biến đếm giả định để cập nhật chính sách ngẫu nhiên, giúp tác tử tự khám phá Cân bằng Nash.",
+      "Tại trạng thái cân bằng, mọi hành động trong tập giá đỡ đều có cùng giá trị kỳ vọng, dẫn đến hiện tượng quỹ đạo chiến lược xoay vòng liên tục quanh điểm cân bằng."
+    ],
+    "note": "14-he-da-tac-tu",
     "formula": "",
     "example": ""
   }

@@ -334,5 +334,45 @@ export const flashcards = [
     "category": "ai-nen-tang-tac-tu",
     "lecture": "13-hoc-tang-cuong",
     "tags": ["dqn", "experience-replay", "target-network", "deep-rl"]
+  },
+  {
+    "id": "fc-artint-ch14-01",
+    "front": "Sự khác biệt bản chất giữa Tự nhiên (Nature) và một Đối thủ chiến lược (Strategic Agent) trong thiết kế hệ thống AI là gì?",
+    "back": "Tự nhiên là chủ thể vô tư lự, không có sở thích cá nhân, không có hàm độ thỏa dụng và hành động ngẫu nhiên theo quy luật vật lý (có thể mô hình hóa bằng MDP tĩnh). Đối thủ chiến lược sở hữu mục tiêu riêng, chủ động tối đa hóa lợi ích cá nhân, có khả năng dự đoán và thích nghi để khai thác điểm yếu của ta nếu ta coi họ là tĩnh.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "14-he-da-tac-tu",
+    "tags": ["multiagent", "game-theory", "strategic-agent"]
+  },
+  {
+    "id": "fc-artint-ch14-02",
+    "front": "Ý nghĩa của hai tham số ngưỡng alpha và beta trong thuật toán Cắt tỉa Alpha-Beta là gì?",
+    "back": "Alpha là giá trị tốt nhất (lớn nhất) mà người chơi MAX đã bảo đảm được dọc theo đường đi từ gốc; nhánh nút MIN nào trả về giá trị <= alpha sẽ bị cắt tỉa ngay (alpha-cutoff). Beta là giá trị tốt nhất (nhỏ nhất) mà người chơi MIN đã bảo đảm được; nhánh nút MAX nào trả về giá trị >= beta sẽ bị cắt tỉa ngay (beta-cutoff).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "14-he-da-tac-tu",
+    "tags": ["alpha-beta", "minimax", "game-tree"]
+  },
+  {
+    "id": "fc-artint-ch14-03",
+    "front": "Định nghĩa Cân bằng Nash (Nash Equilibrium) và phát biểu Định lý tồn tại của John Nash?",
+    "back": "Cân bằng Nash là một hồ sơ chiến lược mà không có bất kỳ tác tử nào có động cơ đơn phương đi trệch khỏi chiến lược của mình (mỗi chiến lược là một phản ứng tốt nhất trước chiến lược của đối thủ). Định lý Nash (1950) chứng minh rằng mọi trò chơi hữu hạn luôn tồn tại ít nhất một Cân bằng Nash (trong không gian chiến lược thuần túy hoặc hỗn hợp).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "14-he-da-tac-tu",
+    "tags": ["nash-equilibrium", "game-theory", "best-response"]
+  },
+  {
+    "id": "fc-artint-ch14-04",
+    "front": "Khoản thuế Clarke trong Cơ chế VCG và nguyên lý Đấu giá giá thứ hai Vickrey vận hành như thế nào?",
+    "back": "Thuế Clarke buộc mỗi tác tử phải trả khoản tiền bằng đúng mức thiệt hại ngoại tác mà sự tham gia của tác tử đó gây ra cho các thành viên còn lại trong xã hội, bảo đảm khai báo trung thực là chiến lược trội. Đấu giá Vickrey trao giải cho người trả giá cao nhất nhưng chỉ thu mức giá của người cao thứ hai, là trường hợp đặc biệt của VCG cho một món hàng.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "14-he-da-tac-tu",
+    "tags": ["vcg", "mechanism-design", "vickrey-auction"]
+  },
+  {
+    "id": "fc-artint-ch14-05",
+    "front": "Định lý bất khả của Kenneth Arrow (1951) khẳng định điều gì về các cơ chế lựa chọn xã hội?",
+    "back": "Với từ ba phương án trở lên, không tồn tại bất kỳ hàm lựa chọn xã hội nào thỏa mãn đồng thời cả 5 tiêu chí: 1. Đầy đủ và bắc cầu; 2. Miền xác định không hạn chế; 3. Hiệu quả Pareto; 4. Độc lập với các phương án không liên quan (IIA); và 5. Phi độc tài. Bất kỳ quy tắc bầu cử nào thỏa mãn 4 tiêu chí đầu đều là chế độ độc tài.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "14-he-da-tac-tu",
+    "tags": ["arrow-theorem", "social-choice", "voting"]
   }
 ]
