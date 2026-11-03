@@ -4,7 +4,7 @@
     {
       "id": "ai-nen-tang-tac-tu",
       "repository": "KazinMintori/StudyHub-course-ai-nen-tang-tac-tu",
-      "revision": "9923131e0cac116148b0f237e3744041f5ab39bd",
+      "revision": "12da0dc2de971af473db16e517f47ea1e27eada6",
       "paths": [
         "docs/ai-nen-tang-tac-tu/**",
         "raw_materials/ai-nen-tang-tac-tu/**",
@@ -24,7 +24,7 @@
     {
       "id": "toan-cho-ai",
       "repository": "KazinMintori/StudyHub-course-toan-cho-ai",
-      "revision": "3eeed7c30f149a02a7eca53a8ec7a06430ccfa93",
+      "revision": "934ac5417f34f4dc797c94fc38598a88d641b84d",
       "paths": [
         "docs/.vitepress/math-ai-course.mjs",
         "docs/.vitepress/math-ai-foundations.mjs",
