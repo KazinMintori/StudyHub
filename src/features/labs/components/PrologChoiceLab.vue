@@ -6,10 +6,12 @@ const cut = ref(false)
 const step = ref(0)
 const courses = ['csc135', 'csc131']
 const enrollments = [
+  { student: 'arthur', course: 'csc135' },
   { student: 'charlie', course: 'csc135' },
   { student: 'olivia', course: 'csc135' },
   { student: 'jack', course: 'csc131' }
 ]
+const eligible = ['charlie', 'olivia', 'jack']
 const trace = computed(() => {
   const answers = []
   const frames = []
@@ -22,6 +24,11 @@ const trace = computed(() => {
     if (cut.value) record('!', course, 'Bỏ các lựa chọn còn lại của teaches/2')
     for (const row of enrollments.filter(row => row.course === course)) {
       record(`studies(X, ${course})`, course, 'Thử sự thực phù hợp')
+      record(`eligible(${row.student})`, course, `Thử với X = ${row.student}`)
+      if (!eligible.includes(row.student)) {
+        record(`studies(X, ${course})`, course, 'Mục tiêu thất bại. Gỡ ràng buộc X rồi thử sinh viên tiếp theo')
+        continue
+      }
       answers.push(row.student)
       record('□', course, `Trả lời X = ${row.student}`)
       record(`studies(X, ${course})`, course, 'Quay lui để tìm câu trả lời tiếp theo')
@@ -39,11 +46,12 @@ watch(cut, () => { step.value = 0 })
 <template>
   <section class="math-lab" aria-label="Vết chạy quay lui trong Prolog">
     <label><input v-model="cut" type="checkbox"> Đặt dấu cắt sau teaches/2</label>
-    <pre><code>student(X) :- teaches(kirke, C), {{ cut ? '!, ' : '' }}studies(X, C).</code></pre>
+    <pre><code>student(X) :- teaches(kirke, C), {{ cut ? '!, ' : '' }}studies(X, C), eligible(X).</code></pre>
     <details>
       <summary>Sự thực và truy vấn</summary>
       <pre><code>{{ courses.map(course => 'teaches(kirke, ' + course + ').').join('\n') }}
 {{ enrollments.map(row => 'studies(' + row.student + ', ' + row.course + ').').join('\n') }}
+{{ eligible.map(student => 'eligible(' + student + ').').join('\n') }}
 
 ?- student(X).</code></pre>
     </details>
