@@ -82,6 +82,7 @@ const routes = [
   ,['models', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.html']
   ,['operations', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.html']
   ,['robust', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-non-bac-hai.html']
+  ,['detector', '/toan-cho-ai/bai-giang/bai-02-tap-loi/uoc-luong-phi-tham-so-va-kiem-dinh.html']
   ,['fitting', '/toan-cho-ai/bai-giang/bai-02-tap-loi/khop-ham-va-noi-suy.html']
   ,['pareto', '/toan-cho-ai/bai-giang/bai-02-tap-loi/toi-uu-vector-va-danh-doi.html']
   ,['minimax', '/toan-cho-ai/bai-giang/bai-02-tap-loi/toi-uu-tua-loi.html']
@@ -110,6 +111,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    ...['DetectorRocLab','MaxEntropySimplexLab','MonotoneCountsLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/detector-roc.mjs',
     ...['DerivativeGridLab','SmoothingSplineLab','ConvexInterpolationLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/smoothing-spline.mjs',
     'src/features/labs/components/ParetoPlansLab.vue','src/features/labs/components/TradeoffLab.vue','src/features/labs/services/regularization-path.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
@@ -339,6 +341,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  detector:[
+   [0,'Về ví dụ (1, 5, 4)'],[0,'Gộp khối kế tiếp'],[0,'Gộp khối kế tiếp'],[0,'Tới nghiệm'],
+   [1,'Biên trái'],[1,'Phân phối đều'],[1,'Ví dụ kỳ vọng 0,2'],[1,'Biên phải'],[1,'Ví dụ kỳ vọng 0,2'],
+   [2,'Dùng hết nhóm 3'],[2,'Báo động giả 20%'],[2,'Xem khối quyết định R³'],[2,'Hai lỗi bằng nhau'],[2,'Báo động giả 20%']
+  ],
   fitting:[
    [0,'Nút x = 0'],[0,'Giữa x = 0,5'],[0,'Nút x = 1'],
    [1,'Nội suy'],[1,'Phạt nhẹ'],[1,'Phạt mạnh'],[1,'Giới hạn đường thẳng'],[1,'Phạt vừa'],
@@ -427,6 +434,16 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='detector'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Tới nghiệm')assert(readout.includes('(0.3333, 0.3333, 0.3333)'))
+   if(label==='Biên trái')assert(readout.includes('(1.0000, 0.0000, 0.0000)'))
+   if(label==='Biên phải')assert(readout.includes('(0.0000, 0.0000, 1.0000)'))
+   if(label==='Ví dụ kỳ vọng 0,2')assert(readout.includes('(0.2384, 0.3233, 0.4384)'))
+   if(label==='Báo động giả 20%')assert(readout.includes('67.50%')&&readout.includes('25.00%'))
+   if(label==='Hai lỗi bằng nhau')assert.equal((readout.match(/27\.14%/g)||[]).length,2)
+   if(label==='Xem khối quyết định R³')assert(await labs[index].$('svg .roc-cut'))
+  }
   if(name==='fitting'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Giữa x = 0,5')assert(readout.includes('0.0625')&&readout.includes('Đạo hàm âm'))
