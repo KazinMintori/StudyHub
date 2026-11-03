@@ -497,5 +497,125 @@ export const flashcards = [
       "record-linkage",
       "identity-uncertainty"
     ]
+  },
+  {
+    "id": "fc-artint-ch18-01",
+    "front": "Nhận định mang tính tiên tri của Herbert Simon (1971) về nền kinh tế chú ý (attention economy) là gì?",
+    "back": "Trong một thế giới giàu có về thông tin, sự thừa thãi thông tin sẽ tạo ra sự khan hiếm của thứ mà thông tin tiêu thụ: Đó chính là sự chú ý của con người. Do đó, sự chú ý trở thành một đơn vị tiền tệ khan hiếm cần được phân bổ hiệu quả.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "tags": [
+      "attention-economy",
+      "digital-economy",
+      "social-impact"
+    ]
+  },
+  {
+    "id": "fc-artint-ch18-02",
+    "front": "Sự khác biệt cốt lõi giữa thiên kiến kỹ thuật (inductive bias) và định kiến xã hội (social prejudice) trong AI là gì?",
+    "back": "Thiên kiến kỹ thuật (inductive bias) mang tính trung lập toán học, là tập giả định cần thiết để thuật toán tổng quát hóa từ dữ liệu (theo định lý No-Free-Lunch). Định kiến xã hội (social prejudice) là sự thiên lệch bất công chống lại một nhóm người cụ thể, phát sinh do dữ liệu huấn luyện kế thừa các định kiến lịch sử.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "tags": [
+      "inductive-bias",
+      "social-bias",
+      "fairness"
+    ]
+  },
+  {
+    "id": "fc-artint-ch18-03",
+    "front": "Giải pháp cốt lõi của Stuart Russell đối với bài toán đồng chỉnh giá trị (value alignment problem) là gì?",
+    "back": "Tác tử AI không được lập trình mục tiêu cứng nhắc cố định, mà phải luôn nhận thức được sự bất định về các giá trị và sở thích thực sự của con người. Tác tử phải liên tục học hỏi sở thích nhân văn thông qua việc quan sát hành vi thực tế của con người (Inverse Reinforcement Learning).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "tags": [
+      "value-alignment",
+      "human-centred-ai",
+      "safety"
+    ]
+  },
+  {
+    "id": "fc-artint-ch18-04",
+    "front": "Nghịch lý Jevons (Jevons Paradox) trong tính bền vững của trí tuệ nhân tạo chỉ ra điều gì?",
+    "back": "Khi hiệu quả tính toán trên mỗi watt điện của phần cứng AI tăng lên (chi phí tính toán rẻ hơn), tổng nhu cầu và quy mô sử dụng AI lại bùng nổ theo cấp số nhân, dẫn đến việc tổng lượng năng lượng tiêu thụ và phát thải carbon của toàn ngành tăng vọt thay vì giảm.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "tags": [
+      "sustainability",
+      "jevons-paradox",
+      "green-ai"
+    ]
+  },
+  {
+    "id": "fc-artint-ch18-05",
+    "front": "Bốn cấp độ rủi ro trong Đạo luật Trí tuệ Nhân tạo của Liên minh Châu Âu (EU AI Act) được phân chia như thế nào?",
+    "back": "1. Rủi ro không thể chấp nhận (cấm tuyệt đối: Chấm điểm công dân, thao túng tâm lý); 2. Rủi ro cao (kiểm soát ngặt nghèo: Tuyển dụng, y tế, giáo dục, tư pháp); 3. Rủi ro hạn chế (bắt buộc minh bạch: Gắn nhãn chatbot, deepfake); 4. Rủi ro tối thiểu (tự do phát triển: Bộ lọc spam, trò chơi điện tử).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "tags": [
+      "eu-ai-act",
+      "governance",
+      "regulation"
+    ]
+  },
+  {
+    "id": "fc-artint-ch19-01",
+    "front": "Trong cây quyết định triển khai AI, khi nào một bài toán được phân loại là rủi ro cao (High stakes)?",
+    "back": "Khi sai số của quyết định có thể gây thương vong cho con người, hủy hoại môi trường hoặc tiêu tốn chi phí khổng lồ; hoặc khi bài toán lặp lại hàng triệu lần mỗi ngày khiến các biến cố hy hữu (phân phối đuôi dài) gần như chắc chắn sẽ xảy ra.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "19-nhin-lai-va-trien-vong",
+    "tags": [
+      "deployment",
+      "high-stakes",
+      "risk-analysis"
+    ]
+  },
+  {
+    "id": "fc-artint-ch19-02",
+    "front": "Vì sao mô hình nhân quả (Causal Models) bắt buộc phải được sử dụng khi giả định phân phối huấn luyện bị vi phạm trong triển khai?",
+    "back": "Vì dữ liệu quan sát lịch sử P(Y|X) không đủ để dự đoán hệ quả của hành động can thiệp P(Y|do(X)) (như nghịch lý Simpson). Khi thế giới biến động hoặc mục đích ra quyết định là làm cho tương lai khác quá khứ, chỉ có cấu trúc nhân quả mới bảo đảm tính suy luận đúng đắn.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "19-nhin-lai-va-trien-vong",
+    "tags": [
+      "causality",
+      "data-drift",
+      "deployment"
+    ]
+  },
+  {
+    "id": "fc-artint-ch19-03",
+    "front": "Mảnh ghép còn thiếu lớn nhất trong các mô hình lập kế hoạch kinh điển khi đối chiếu với không gian thiết kế tác tử là gì?",
+    "back": "Điều khiển phân cấp (Hierarchical Control). Các thuật toán lập kế hoạch hiện tại đều vận hành trên một tầng thời gian phẳng; trong khi tác tử thông minh thực sự cần cơ chế Hệ thống 1 (phản xạ nhanh ở quy mô mili-giây) và Hệ thống 2 (suy luận chiến lược chậm ở quy mô giây/phút).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "19-nhin-lai-va-trien-vong",
+    "tags": [
+      "agent-design-space",
+      "hierarchical-control",
+      "system-1-2"
+    ]
+  },
+  {
+    "id": "fc-artint-ch19-04",
+    "front": "Vì sao một tác tử không thể học cách ra quyết định thông minh thực thụ chỉ từ việc quan sát thụ động qua văn bản hoặc video?",
+    "back": "1. Văn bản chỉ ghi lại điều bất thường và bỏ qua toàn bộ tri thức hiển nhiên của thế giới vật lý; 2. Video không chỉ rõ hành động và không cung cấp khả năng suy luận phản thực tế ('điều gì xảy ra nếu tác tử hành động khác đi?'); 3. Trong thế giới thực, tác tử không bao giờ ở trong cùng một trạng thái hai lần.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "19-nhin-lai-va-trien-vong",
+    "tags": [
+      "embodied-ai",
+      "common-sense",
+      "counterfactuals"
+    ]
+  },
+  {
+    "id": "fc-artint-ch19-05",
+    "front": "Bản chất khoa học của việc dự đoán thời điểm xuất hiện của điểm kỳ dị công nghệ (Singularity) là gì?",
+    "back": "Khái niệm 'máy tính thông minh hơn con người' rất khó định nghĩa chính xác do nội hàm đa dạng của 'con người' và 'máy tính'. Trí tuệ tương lai là sự cộng sinh tăng cường (IA); và tương lai tốt đẹp hay đen tối hoàn toàn phụ thuộc vào chuẩn mực đạo đức và khung pháp lý do chính con người kiến tạo hôm nay.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "19-nhin-lai-va-trien-vong",
+    "tags": [
+      "singularity",
+      "agi",
+      "future-of-ai"
+    ]
   }
 ]

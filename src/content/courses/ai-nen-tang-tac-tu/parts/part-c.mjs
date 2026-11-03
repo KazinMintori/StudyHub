@@ -199,6 +199,118 @@ export const lessons = [
           ]
         }
       ]
+    },
+    {
+      "number": 18,
+      "slug": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+      "title": "Tác động xã hội của trí tuệ nhân tạo",
+      "prerequisites": [],
+      "supportingConcepts": [],
+      "status": "ready",
+      "description": "Phân tích toàn diện tác động kinh tế số, thiên kiến thuật toán, trí tuệ nhân tạo lấy con người làm trung tâm, việc làm, tính bền vững môi trường, đạo đức học và quản trị pháp lý của AI.",
+      "topicGroups": [
+        {
+          "title": "Các chủ đề trong chương",
+          "topics": [
+            {
+              "slug": "18-1-kinh-te-so",
+              "title": "18.1 Kinh tế số",
+              "question": ""
+            },
+            {
+              "slug": "18-2-gia-tri-va-dinh-kien",
+              "title": "18.2 Giá trị và định kiến",
+              "question": ""
+            },
+            {
+              "slug": "18-3-tri-tue-nhan-tao-lay-con-nguoi-lam-trung-tam",
+              "title": "18.3 Trí tuệ nhân tạo lấy con người làm trung tâm",
+              "question": ""
+            },
+            {
+              "slug": "18-4-viec-lam-va-tu-dong-hoa",
+              "title": "18.4 Việc làm và tự động hóa",
+              "question": ""
+            },
+            {
+              "slug": "18-5-giao-thong-van-tai",
+              "title": "18.5 Giao thông vận tải",
+              "question": ""
+            },
+            {
+              "slug": "18-6-tinh-ben-vung-va-moi-truong",
+              "title": "18.6 Tính bền vững và môi trường",
+              "question": ""
+            },
+            {
+              "slug": "18-7-dao-duc-hoc-ai",
+              "title": "18.7 Đạo đức học AI",
+              "question": ""
+            },
+            {
+              "slug": "18-8-quan-tri-va-quy-dinh-phap-ly",
+              "title": "18.8 Quản trị và quy định pháp lý",
+              "question": ""
+            },
+            {
+              "slug": "18-9-on-tap",
+              "title": "18.9 Ôn tập toàn diện Chương 18",
+              "question": ""
+            },
+            {
+              "slug": "18-10-tai-lieu-tham-khao",
+              "title": "18.10 Tài liệu tham khảo",
+              "question": ""
+            },
+            {
+              "slug": "18-11-bai-tap",
+              "title": "18.11 Bài tập",
+              "question": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "slug": "19-nhin-lai-va-trien-vong",
+      "title": "Nhìn lại và triển vọng",
+      "prerequisites": [],
+      "supportingConcepts": [],
+      "status": "ready",
+      "description": "Đánh giá toàn cảnh triển khai AI trong thực tế, hệ thống hóa không gian thiết kế tác tử qua 10 chiều kích phức tạp, và thảo luận triển vọng tương lai của AGI cùng sự kỳ dị công nghệ.",
+      "topicGroups": [
+        {
+          "title": "Các chủ đề trong chương",
+          "topics": [
+            {
+              "slug": "19-1-trien-khai-ai",
+              "title": "19.1 Triển khai AI trong thực tế",
+              "question": ""
+            },
+            {
+              "slug": "19-2-khong-gian-thiet-ke-tac-tu",
+              "title": "19.2 Không gian thiết kế tác tử",
+              "question": ""
+            },
+            {
+              "slug": "19-3-trien-vong-tuong-lai",
+              "title": "19.3 Triển vọng tương lai",
+              "question": ""
+            },
+            {
+              "slug": "19-4-tai-lieu-tham-khao",
+              "title": "19.4 Tài liệu tham khảo",
+              "question": ""
+            },
+            {
+              "slug": "19-5-bai-tap",
+              "title": "19.5 Bài tập",
+              "question": ""
+            }
+          ]
+        }
+      ]
     }
 ]
 export const slides = [
@@ -349,6 +461,106 @@ export const slides = [
       "Ngôn ngữ như BLOG cho phép suy luận xác suất về số lượng và sự tồn tại của các cá thể chưa từng quan sát."
     ],
     "note": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Kinh tế số và Nền kinh tế chú ý",
+    "bullets": [
+      "Sự dịch chuyển từ nguyên tử sang bit (atoms-to-bits) làm giảm ma sát giao dịch và thúc đẩy loại bỏ trung gian.",
+      "Sự giàu có về thông tin dẫn đến sự nghèo nàn về chú ý; dữ liệu hành vi trở thành tài sản thương mại."
+    ],
+    "note": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Thiên kiến quy nạp và Định kiến xã hội",
+    "bullets": [
+      "Thiên kiến quy nạp là điều kiện toán học bắt buộc để học máy tổng quát hóa ngoài tập huấn luyện.",
+      "Học trên dữ liệu lịch sử vô tình kế thừa và khuếch đại định kiến xã hội bất công sang tương lai."
+    ],
+    "note": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "AI lấy con người làm trung tâm (HCAI)",
+    "bullets": [
+      "AI được thiết kế để tăng cường năng lực con người (IA) thay vì thay thế toàn diện con người.",
+      "Bài toán đồng chỉnh giá trị đòi hỏi tác tử nhận thức sự bất định về sở thích thực sự của con người."
+    ],
+    "note": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Tự động hóa, việc làm và môi trường",
+    "bullets": [
+      "Công việc phân rã thành tập hợp kỹ năng; các nhiệm vụ lặp lại quy tắc bị tự động hóa mạnh nhất.",
+      "Mô hình học sâu khổng lồ có dấu chân carbon lớn; Green AI đặt hiệu quả sinh thái làm thước đo cốt lõi."
+    ],
+    "note": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Đạo đức học quy chuẩn và Quản trị pháp lý",
+    "bullets": [
+      "Vận dụng đạo đức đức hạnh, thuyết công lợi và đạo đức nghĩa vụ để thiết lập lằn ranh đỏ cho tác tử.",
+      "Đạo luật EU AI Act phân tầng 4 cấp độ rủi ro, chuyển dịch từ tự điều chỉnh sang luật pháp có chế tài."
+    ],
+    "note": "18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Cây quyết định lựa chọn công nghệ AI",
+    "bullets": [
+      "Phân nhánh theo mức độ rủi ro (stakes), tính phong phú và tính đồng nhất của nguồn dữ liệu.",
+      "Dữ liệu dồi dào, đồng nhất dùng học sâu; dữ liệu khan hiếm cần mô hình nhân quả và tri thức chuyên gia."
+    ],
+    "note": "19-nhin-lai-va-trien-vong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Mô hình nhân quả và Giả định phân phối",
+    "bullets": [
+      "Môi trường triển khai thực tế thường vi phạm giả định đồng phân phối dữ liệu (IID) do biến động thế giới.",
+      "Dữ liệu quan sát thuần túy không đủ để dự đoán can thiệp; mô hình nhân quả phân định P(Y|X) và P(Y|do(X))."
+    ],
+    "note": "19-nhin-lai-va-trien-vong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Không gian thiết kế tác tử (Agent Design Space)",
+    "bullets": [
+      "10 chiều kích phức tạp định vị năng lực và giới hạn của các mô hình từ tìm kiếm đến học tăng cường sâu.",
+      "Điều khiển phân cấp (hệ thống 1 phản xạ, hệ thống 2 suy luận) là mảnh ghép còn thiếu trong các bộ lập kế hoạch phẳng."
+    ],
+    "note": "19-nhin-lai-va-trien-vong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Tác tử hiện thân và Lý lẽ thường thức",
+    "bullets": [
+      "Tác tử không thể đạt trí tuệ thực thụ nếu chỉ học từ quan sát thụ động qua văn bản hay video trên Internet.",
+      "Tác tử hiện thân (embodied agent) tương tác trực tiếp với vật lý và cần lý lẽ thường thức để ứng phó bất ngờ."
+    ],
+    "note": "19-nhin-lai-va-trien-vong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Điểm kỳ dị công nghệ và Trách nhiệm nhân loại",
+    "bullets": [
+      "Khái niệm máy tính thông minh hơn con người mang tính tương đối khi con người liên tục cộng sinh cùng công nghệ.",
+      "Tương lai AI (lý tưởng hay đen tối) hoàn toàn phụ thuộc vào chuẩn mực đạo đức và khung pháp lý do con người kiến tạo."
+    ],
+    "note": "19-nhin-lai-va-trien-vong",
     "formula": "",
     "example": ""
   }

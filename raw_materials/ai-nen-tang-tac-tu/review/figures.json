@@ -870,5 +870,12 @@
     "url": "https://artint.info/3e/html/x170.png",
     "bytes": 23523,
     "sha256": "0c28db7051c54151280e471170dfa714bfe436e1f2429696bacf690848a0e786"
+  },
+  "x236.png": {
+    "file": "x236.png",
+    "sha256": "406a80e760ae5bc2ef1d106a7e0d34dd21d01a4d5f56cbbcdcb4207c0bc5855d",
+    "sourceUrl": "https://artint.info/3e/html/x236.png",
+    "chapter": 19,
+    "caption": "Vòng đời triển khai và giám sát hệ thống AI"
   }
 }

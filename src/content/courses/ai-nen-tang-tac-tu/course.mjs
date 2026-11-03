@@ -60,6 +60,13 @@ export const parts = [
       '16-do-thi-tri-thuc-va-ban-the-luan',
       '17-hoc-quan-he-va-suy-luan-xac-suat'
     ]
+  },
+  {
+    title: 'Phần VI: Toàn cảnh',
+    lessons: [
+      '18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao',
+      '19-nhin-lai-va-trien-vong'
+    ]
   }
 ]
 
