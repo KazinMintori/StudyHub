@@ -32,8 +32,8 @@ const x = t => 25 + t * 17
       </g>
       <text x="5" y="34" fill="currentColor">I</text>
       <text x="5" y="72" fill="currentColor">J</text>
-      <rect :x="x(start)" y="21" :width="x(end)-x(start)" height="16" rx="3" fill="#4a82da"/>
-      <rect :x="x(fixedStart)" y="59" :width="x(fixedEnd)-x(fixedStart)" height="16" rx="3" fill="#168e83"/>
+      <rect :x="x(start)" y="21" :width="x(end)-x(start)" height="16" rx="3" fill="var(--lam)"/>
+      <rect :x="x(fixedStart)" y="59" :width="x(fixedEnd)-x(fixedStart)" height="16" rx="3" fill="var(--ngoc)"/>
     </svg>
     <p aria-live="polite"><strong>{{ relation }}</strong> · I [{{ start }}, {{ end }}], J [5, 9]</p>
   </section>
