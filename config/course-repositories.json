@@ -14,7 +14,7 @@
     {
       "id": "bieu-dien-tri-thuc",
       "repository": "KazinMintori/StudyHub-course-bieu-dien-tri-thuc",
-      "revision": "6b25ce24d7d9b4699c56af2e9ad1d32fa219bc22",
+      "revision": "c71a237b56ceae71f7a15f0f450f03811813c9a4",
       "paths": [
         "docs/bieu-dien-tri-thuc/**",
         "raw_materials/bieu-dien-tri-thuc/**",
@@ -38,7 +38,7 @@
     {
       "id": "xac-suat-thong-ke",
       "repository": "KazinMintori/StudyHub-course-xac-suat-thong-ke",
-      "revision": "2f8f9571f6970259cfc7b3f2942fd2ec80ef61f4",
+      "revision": "ab9a210404cb49c1b4259d65429b340a1223a112",
       "paths": [
         "docs/.vitepress/probability-source-library.mjs",
         "docs/.vitepress/xac-suat-thong-ke-course.mjs",
