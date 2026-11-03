@@ -47,6 +47,7 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['training','/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.html'],
   ['primal-dual','/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.html'],
   ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
   ['conic-complexity','/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.html'],
@@ -122,6 +123,7 @@ async function sourceManifest() {
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
     'src/features/labs/components/BarrierScalingLab.vue','src/features/labs/components/PrimalDualStepLab.vue',
+    ...['MiniBatchNoiseLab','MomentumStateLab','OptimizerPathLab','InitializationFlowLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['PhaseOneSlackLab','ViolationSumLab'].map(name=>'src/features/labs/components/'+name+'.vue'),
     ...['SteepestDirectionLab','ArmijoStepLab','NewtonModelLab','SimplexBarrierLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/LagrangeBoundLab.vue',
@@ -364,6 +366,12 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  training:[
+   [0,'Đưa θ về nghiệm'],[0,'B = 1'],[0,'Cập nhật theo lô đang chọn'],[0,'B = 4'],[0,'Không hoàn lại'],
+   [1,'Quán tính đi ra xa'],[1,'Quán tính đi về nghiệm'],[1,'Vận tốc bằng 0'],
+   [2,'Khôi phục ví dụ'],[2,'Xem mặt trong R³'],[2,'Nesterov'],[2,'Xem bước 10'],[2,'Về đường đồng mức R²'],[2,'Thử bước gradient quá lớn'],[2,'Xem bước 10'],
+   [3,'Glorot'],[3,'ReLU'],[3,'He'],[3,'Xen kẽ 8 và 4'],[3,'Tuyến tính']
+  ],
   'primal-dual':[
    [0,'Ví dụ (2, 1)'],[0,'Đi một bước'],[0,'Đặt lại mục tiêu η'],
    [0,'Thử λ = 0,5'],[0,'Đích bù trừ bằng 0'],[0,'Đi một bước']
@@ -502,6 +510,14 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='training'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Không hoàn lại')assert(readout.includes('nhiễu bằng 0'))
+   if(label==='Quán tính đi ra xa')assert(readout.includes('1.800')&&readout.includes('1.710')&&readout.match(/Mất mát tăng/g)?.length===2)
+   if(label==='Xem bước 10')assert(readout.includes('Bước 10'))
+   if(label==='He')assert(readout.includes('q₁₂ / q₀ = 1.0000'))
+   if(label==='Xem mặt trong R³')await interact(touch,index)
+  }
   if(name==='primal-dual'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Ví dụ (2, 1)')assert(text.includes('Khoảng cách đối ngẫu bằng xλ = 2.0000'))
