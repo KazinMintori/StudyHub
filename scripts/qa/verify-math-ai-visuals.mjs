@@ -82,6 +82,7 @@ const routes = [
   ,['models', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.html']
   ,['operations', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.html']
   ,['robust', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-non-bac-hai.html']
+  ,['experiment','/toan-cho-ai/bai-giang/bai-02-tap-loi/thiet-ke-thi-nghiem-toi-uu.html']
   ,['floorplan','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-mat-bang.html']
   ,['tail-bounds', '/toan-cho-ai/bai-giang/bai-02-tap-loi/can-chebyshev-va-chernoff.html']
   ,['detector', '/toan-cho-ai/bai-giang/bai-02-tap-loi/uoc-luong-phi-tham-so-va-kiem-dinh.html']
@@ -113,6 +114,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    'src/features/labs/components/ExperimentDesignLab.vue',
     ...['SlicingFloorplanLab','FloorWireLab','FloorOverlapLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['QuadraticTailLab','ChernoffGaussianLab','CantelliBoundLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['DetectorRocLab','MaxEntropySimplexLab','MonotoneCountsLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/detector-roc.mjs',
@@ -345,6 +347,7 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  experiment:[[0,'Tối ưu D'],[0,'Tối ưu A'],[0,'Tối ưu E'],[0,'Chỉ đo ngang'],[0,'Tối ưu D']],
   floorplan:[[0,'H = 2'],[0,'H = 2,5'],[0,'H = √8'],[1,'Đưa C đến điểm tối ưu'],[1,'Thêm hoặc bỏ D'],[1,'Đưa C đến điểm tối ưu'],[2,'Chạm cạnh trái'],[2,'Chạm cạnh phải'],[2,'Thử trung điểm']],
   'tail-bounds':[
    [0,'Tâm elip'],[0,'Xem mặt chặn trong R³'],[0,'Biên elip'],[0,'Ngoài elip'],
@@ -444,6 +447,13 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='experiment'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Tối ưu D')assert(readout.includes('Định thức 0.3333'))
+   if(label==='Tối ưu A')assert(readout.includes('(0.4226, 0.4226, 0.1547)'))
+   if(label==='Tối ưu E')assert(readout.includes('Trị riêng nhỏ nhất 0.5000'))
+   if(label==='Chỉ đo ngang')assert(readout.includes('Ma trận suy biến'))
+  }
   if(name==='floorplan'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0)assert(readout.includes('Diện tích khung bao 12.00'))
