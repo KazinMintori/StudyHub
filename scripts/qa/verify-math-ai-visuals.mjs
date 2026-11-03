@@ -85,6 +85,7 @@ const routes = [
   ,['pareto', '/toan-cho-ai/bai-giang/bai-02-tap-loi/toi-uu-vector-va-danh-doi.html']
   ,['minimax', '/toan-cho-ai/bai-giang/bai-02-tap-loi/toi-uu-tua-loi.html']
   ,['gp', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-hinh-hoc.html']
+  ,['sdp', '/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-dang-non-va-sdp.html']
   ,['equality-qp', '/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange/qp-dang-thuc-va-mien-doi-ngau.html']
   ,['sensitivity', '/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange/rang-buoc-thua-va-do-nhay.html']
   ,['certificates', '/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange/chung-chi-chebyshev-va-doi-ngau-entropy.html']
@@ -105,6 +106,7 @@ async function sourceManifest() {
     ...['QpGeometryLab','ConstrainedFitLab','PolyDistanceLab','BoxDistanceSpaceLab','VarianceDistributionLab','PortfolioLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/qp-geometry.mjs',
     ...['SocpSliceLab','RotatedConeLab','RobustLPLab','RobustEllipsoidLab','ChanceConstraintLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/GPLab.vue',
+    'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -332,6 +334,7 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  sdp:[[0,'Lát tròn'],[0,'Biên dưới 0.28'],[0,'Ngoài miền PSD'],[0,'Lát ρ₂₃ = 1'],[0,'Lát ρ₂₃ = −1'],[1,'Điểm (1, 2)'],[1,'Điểm (2, 3)'],[1,'Điểm trên biên']],
   gp:[
    [0,'Thử trung điểm cộng'],[0,'Thử trung bình nhân'],[0,'x₁x₂ = 1'],[0,'Thử trung điểm cộng'],[0,'Áp phích có lề'],[0,'√x₁ + √x₂ ≤ 2'],
    [1,'Ba biến, a = 1'],[1,'Ba biến, a = 8'],[1,'Đúng tại ngưỡng'],
@@ -408,6 +411,17 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='sdp'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Biên dưới 0.28')assert(readout.includes('[0.280, 1.000]')&&readout.includes('hợp lệ'))
+   if(label==='Ngoài miền PSD')assert(readout.includes('Có trị riêng âm'))
+   if(label.startsWith('Lát ρ₂₃')){
+    assert(readout.includes('đoạn thẳng')&&readout.includes('diện tích 0'))
+    assert.equal(await labs[index].$eval('svg .slice-line',e=>e.getAttribute('points').trim().split(/\s+/).length),2)
+   }
+   if(label==='Điểm (2, 3)')assert(readout.includes('−1.0000')&&readout.includes('trị riêng âm'))
+   if(label==='Điểm trên biên')assert(readout.includes('0.0000')&&readout.includes('nửa xác định dương'))
+  }
   if(name==='gp' && label==='Áp phích có lề'){
    const shapes=await labs[index].$$eval('svg .cost',nodes=>nodes.map(node=>node.getAttribute('points')))
    assert.equal(shapes.length,2)
