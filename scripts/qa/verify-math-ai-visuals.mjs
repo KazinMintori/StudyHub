@@ -82,6 +82,7 @@ const routes = [
   ,['models', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.html']
   ,['operations', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.html']
   ,['robust', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-non-bac-hai.html']
+  ,['location','/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-dinh-vi-va-mang-luoi.html']
   ,['extreme-ellipsoid','/toan-cho-ai/bai-giang/bai-02-tap-loi/ellipsoid-cuc-tri-va-tam-hinh-hoc.html']
   ,['experiment','/toan-cho-ai/bai-giang/bai-02-tap-loi/thiet-ke-thi-nghiem-toi-uu.html']
   ,['floorplan','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-mat-bang.html']
@@ -115,6 +116,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    ...['LocationCostsLab','AnchoredNetworkLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EllipsoidAxesLab','SimplexSpheresLab','AnalyticCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/ExperimentDesignLab.vue',
     ...['SlicingFloorplanLab','FloorWireLab','FloorOverlapLab'].map(name=>`src/features/labs/components/${name}.vue`),
@@ -349,6 +351,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  location:[
+   [0,'Đưa về cân bằng'],[0,'Đổi có neo và bỏ neo'],[0,'Đưa về cân bằng'],[0,'Tịnh tiến cả hai tới 3'],
+   [1,'Nghiệm toàn phương'],[1,'Nghiệm Euclid'],[1,'Một nghiệm Manhattan'],[1,'Đổi R² và R³'],
+   [1,'Nghiệm toàn phương'],[1,'Lát z = 0'],[1,'Một nghiệm Manhattan'],[1,'Nghiệm Euclid']
+  ],
   'extreme-ellipsoid':[
    [0,'Quả cầu đơn vị'],[0,'Kéo trục ngang gấp đôi'],[0,'Mở sang R³'],[0,'Bán trục 3 = 2'],
    [1,'Tam giác đều R²'],[1,'Tứ diện đều R³'],[1,'Xoay tứ diện'],
@@ -454,6 +461,17 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='location'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===0&&label==='Đưa về cân bằng')assert(text.includes('Gradient (0.000, 0.000)'))
+   if(label==='Tịnh tiến cả hai tới 3')assert(text.includes('Năng lượng 0.0000'))
+   if(label==='Đổi R² và R³'){
+    assert(text.includes('Tập nghiệm Manhattan có x = 0'))
+    await interact(touch,index)
+   }
+   if(label==='Nghiệm toàn phương')assert(text.includes('Tổng bình phương 28.000')||text.includes('Tổng bình phương 37.000'))
+   if(label==='Một nghiệm Manhattan')assert(text.includes('tổng Manhattan 12.000')||text.includes('tổng Manhattan 18.000'))
+  }
   if(name==='extreme-ellipsoid'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Quả cầu đơn vị')assert(text.includes('Định thức B = 1.000'))
