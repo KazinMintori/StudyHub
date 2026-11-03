@@ -47,6 +47,7 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['primal-dual','/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.html'],
   ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
   ['conic-complexity','/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.html'],
   ['phase-one','/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.html'],
@@ -120,7 +121,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
-    'src/features/labs/components/BarrierScalingLab.vue',
+    'src/features/labs/components/BarrierScalingLab.vue','src/features/labs/components/PrimalDualStepLab.vue',
     ...['PhaseOneSlackLab','ViolationSumLab'].map(name=>'src/features/labs/components/'+name+'.vue'),
     ...['SteepestDirectionLab','ArmijoStepLab','NewtonModelLab','SimplexBarrierLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/LagrangeBoundLab.vue',
@@ -363,6 +364,10 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'primal-dual':[
+   [0,'Ví dụ (2, 1)'],[0,'Đi một bước'],[0,'Đặt lại mục tiêu η'],
+   [0,'Thử λ = 0,5'],[0,'Đích bù trừ bằng 0'],[0,'Đi một bước']
+  ],
   'conic-complexity':[
    [0,'Nón Lorentz R³'],[0,'Co một nửa'],[0,'Phóng gấp đôi'],
    [0,'Ma trận cỡ 2'],[0,'Ma trận cỡ 3'],[0,'Co một nửa']
@@ -497,6 +502,14 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='primal-dual'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Ví dụ (2, 1)')assert(text.includes('Khoảng cách đối ngẫu bằng xλ = 2.0000'))
+   if(label==='Đi một bước'&&text.includes('Khoảng cách đối ngẫu'))assert(text.includes('1.2000'))
+   if(label==='Đặt lại mục tiêu η')assert(text.includes('η = 0.6000'))
+   if(label==='Thử λ = 0,5')assert(text.includes('infimum −∞'))
+   if(label==='Đích bù trừ bằng 0')assert(text.includes('η = 0.0000'))
+  }
   if(name==='conic-complexity'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Phóng gấp đôi')assert(text.includes('−1.3863'))
