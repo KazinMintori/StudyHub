@@ -120,7 +120,7 @@ export async function planInstall(root, entries, previous = {}) {
 
 export function git(args, { cwd = repositoryRoot, env = process.env } = {}) {
   return new Promise((resolve, reject) => {
-    const child = spawn('git', args, { cwd, env: { ...env, GIT_TERMINAL_PROMPT: '0', GCM_INTERACTIVE: 'never' }, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] })
+    const child = spawn(process.platform === 'win32' ? 'C:\\Program Files\\Git\\cmd\\git.exe' : 'git', args, { cwd, env: { ...env, GIT_TERMINAL_PROMPT: '0', GCM_INTERACTIVE: 'never' }, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] })
     const output = [], errors = []
     child.stdout.on('data', chunk => output.push(chunk)); child.stderr.on('data', chunk => errors.push(chunk))
     child.once('error', reject)

@@ -21,8 +21,9 @@ q(a).
 - (b) Hãy chỉ ra một diễn giải không phải là mô hình của $KB$.
 - (c) Có tổng cộng bao nhiêu diễn giải khả dĩ? Trình bày lập luận giải thích ngắn gọn.
 - (d) Có bao nhiêu diễn giải trong số đó là mô hình của $KB$? Trình bày lập luận giải thích ngắn gọn.
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 Một diễn giải $I = \langle\mathcal{D}, \phi, \pi\rangle$ được xác định bởi:
 - Ánh xạ hằng số $\phi: \{a, b, c\} \to \mathcal{D}$.
 - Ánh xạ phần mở rộng vị từ $\pi$, gán cho mỗi vị từ một ngôi một tập con của $\mathcal{D}$.
@@ -65,7 +66,6 @@ Ta phân loại theo kích thước của $\pi(q)$:
 Tổng số mô hình của $KB$:
 <span class="logic-expression logic-block">N_models = 16 + 8 = 24  mô hình.</span>
 :::
-:::
 
 ::: exercise Bài tập 15.2: Đếm mô hình với miền bốn cá thể
 Giả sử một ngôn ngữ có ba ký hiệu hằng số $a, b, c$; hai ký hiệu vị từ một ngôi $p$ và $q$; không có ký hiệu hàm. Xét ba cơ sở tri thức sau:
@@ -81,8 +81,9 @@ $$\mathcal{D} = \{✂, ☎, ✈, ✎\}$$
 - (b) Trong số các diễn giải trên, có bao nhiêu diễn giải là mô hình của $KB_1$?
 - (c) Có bao nhiêu diễn giải là mô hình của $KB_2$?
 - (d) Có bao nhiêu diễn giải là mô hình của $KB_3$?
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 Miền xác định có $|\mathcal{D}| = 4$.
 
 **(a) Tổng số diễn giải:**
@@ -132,7 +133,6 @@ Ta xét hai trường hợp gán hằng số:
 Tổng số mô hình của $KB_3$:
 <span class="logic-expression logic-block">N_KB_3 = 432 + 864 = 1,296  mô hình.</span>
 :::
-:::
 
 ::: exercise Bài tập 15.3: Thứ tự dẫn xuất trong thủ tục suy diễn tiến
 Xét cơ sở tri thức sau:
@@ -150,8 +150,9 @@ q(X) :- s(X, Y), q(Y).
 ```
 
 Hãy chỉ ra tập hợp các hệ quả nguyên tử không biến dẫn xuất được từ cơ sở tri thức này bằng thủ tục suy diễn tiến (bottom-up). Giả định rằng tại mỗi bước lặp, câu tuyển đầu tiên có thể áp dụng được theo thứ tự liệt kê sẽ được chọn. Ngoài ra, nếu có nhiều phép thế hằng số cùng áp dụng được cho câu tuyển đó, phép thế theo thứ tự bảng chữ cái sẽ được ưu tiên chọn trước (ví dụ $X/a$ trước $X/b$). Hãy nêu rõ thứ tự các hệ quả được dẫn xuất.
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 Tập các sự kiện ban đầu:
 <span class="logic-expression logic-block">C_0 = {r(a), r(e), p(c), q(b), s(a, b), s(d, b), s(e, d)}</span>
 
@@ -195,7 +196,6 @@ Hai luật suy diễn cần xét:
   4. $q(e)$
   5. $p(e)$
 :::
-:::
 
 ::: exercise Bài tập 15.4: Dẫn xuất SLD và truy vấn quyền truy cập
 Xét cơ sở tri thức sau:
@@ -224,8 +224,9 @@ parent(karen, todd).
 - (c) Có tồn tại dẫn xuất thành công cho truy vấn $has\_access(ariel, library)$ hay không? Giải thích lý do.
 - (d) Giải thích tại sao tập câu trả lời cho truy vấn $has\_access(X, office)$ là rỗng.
 - (e) Giả sử bổ sung câu tuyển $has\_keys(X) \leftarrow faculty(X)$ vào cơ sở tri thức. Khi đó câu trả lời cho truy vấn $has\_access(X, office)$ là gì?
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 **(a) Dẫn xuất SLD cho $has\_access(todd, library)$:**
 1. Câu tuyển mục tiêu khởi đầu:
    <span class="logic-expression logic-block">yes ← has_access(todd, library)</span>
@@ -281,7 +282,6 @@ Không tồn tại bất kỳ dẫn xuất thành công nào.
 - Do đó, tập các câu trả lời cho truy vấn $has\_access(X, office)$ là:
   $$\{X = diane, X = ming\}$$
 :::
-:::
 
 ::: exercise Bài tập 15.5: Thực thi phép thế trên biểu thức
 Hãy xác định kết quả của các phép áp dụng thế sau đây:
@@ -289,8 +289,9 @@ Hãy xác định kết quả của các phép áp dụng thế sau đây:
 - (a) <code class="logic-expression">f(A, X, Y, X, Y) {A/X, Z/b, Y/c}</code>
 - (b) <code class="logic-expression">(yes(F, L) ← append(F, c(L, nil), c(l, c(i, c(s, c(t, nil)))))) {F/c(l, X_1), Y_1/c(L, nil), A_1/l, Z_1/c(i, c(s, c(t, nil)))}</code>
 - (c) <code class="logic-expression">(append(c(A_1, X_1), Y_1, c(A_1, Z_1)) ← append(X_1, Y_1, Z_1)) {F/c(l, X_1), Y_1/c(L, nil), A_1/l, Z_1/c(i, c(s, c(t, nil)))}</code>
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 **(a)**
 - Thay thế biến $A$ bằng $X$, thay thế biến $Y$ bằng $c$ (biến $Z$ không xuất hiện trong biểu thức nên bỏ qua):
   <span class="logic-expression logic-block">f(A, X, Y, X, Y){A/X, Z/b, Y/c} = f(X, X, c, X, c)</span>
@@ -307,7 +308,6 @@ Hãy xác định kết quả của các phép áp dụng thế sau đây:
 - Kết quả:
   <span class="logic-expression logic-block">append(c(l, X_1), c(L, nil), c(l, c(i, c(s, c(t, nil))))) ← append(X_1, c(L, nil), c(i, c(s, c(t, nil))))</span>
 :::
-:::
 
 ::: exercise Bài tập 15.6: Tìm bộ hợp nhất tổng quát nhất (MGU)
 Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu thức sau:
@@ -315,8 +315,9 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - (a) $p(f(X), g(g(b)))$ và $p(Z, g(Y))$
 - (b) $g(f(X), r(X), t)$ và $g(W, r(Q), Q)$
 - (c) $bar(val(X, bb), Z)$ và $bar(P, P)$
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 **(a) Cặp $p(f(X), g(g(b)))$ và $p(Z, g(Y))$:**
 - So khớp đối số 1: $f(X)$ và $Z \implies Z / f(X)$.
 - So khớp đối số 2: $g(g(b))$ và $g(Y) \implies Y / g(b)$.
@@ -339,7 +340,6 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - MGU:
   <span class="logic-expression logic-block">σ = {P / val(X, bb), Z / val(X, bb)}</span>
 :::
-:::
 
 ::: exercise Bài tập 15.7: Kiểm tra tính hợp nhất của các nguyên tử
 Đối với mỗi cặp nguyên tử sau, hãy chỉ ra bộ hợp nhất tổng quát nhất hoặc giải thích lý do tại sao không tồn tại bộ hợp nhất:
@@ -348,8 +348,9 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - (b) $p(Y, a, b, Y)$ và $p(c, F, G, F)$
 - (c) $foo(Z, [a, z \mid X], X)$ và $foo([a, m \mid W], W, [i, n, g])$
 - (d) <code class="logic-expression">ap(F0, c(b, c(B0, L0)), c(a, c(b, c(a, emp))))</code> và $ap(c(H1, T1), L1, c(H1, R1))$
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 **(a)**
 - Đối số 1: $X$ và $E \implies E / X$.
 - Đối số 2: $Y$ và $c \implies Y / c$.
@@ -382,7 +383,6 @@ Hãy tìm bộ hợp nhất tổng quát nhất (MGU) cho từng cặp biểu th
 - Hợp nhất thành công. MGU:
   <span class="logic-expression logic-block">σ = {H1/a, R1/c(b, c(a, emp)), L1/c(b, c(B0, L0)), F0/c(a, T1)}</span>
 :::
-:::
 
 ::: exercise Bài tập 15.8: Liệt kê hệ quả logic nguyên tử không biến
 Hãy liệt kê tất cả các hệ quả logic nguyên tử không biến của cơ sở tri thức sau:
@@ -395,8 +395,9 @@ s(f(b), b).
 s(c, b).
 r(b).
 ```
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 1. **Các sự kiện có sẵn trong $KB$**:
    <span class="logic-expression logic-block">s(f(a), b),   s(f(b), b),   s(c, b),   r(b)</span>
 2. **Áp dụng luật $q(Y) \leftarrow s(Y, Z) \wedge r(Z)$**:
@@ -413,7 +414,6 @@ r(b).
 **Toàn bộ các hệ quả nguyên tử không biến tất suy từ $KB$ là:**
 <span class="logic-expression logic-block">{s(f(a), b), s(f(b), b), s(c, b), r(b), q(f(a)), q(f(b)), q(c), p(a), p(b)}</span>
 :::
-:::
 
 ::: exercise Bài tập 15.9: Dẫn xuất phân giải loại bỏ phần tử trùng liền kề
 Xét chương trình logic sau:
@@ -429,8 +429,9 @@ Hãy trình bày dẫn xuất từ trên xuống (top-down), chỉ rõ toàn b�
 
 - Câu trả lời tương ứng với dẫn xuất này là gì?
 - Có tồn tại câu trả lời thứ hai hay không? Nếu có, hãy trình bày dẫn xuất; nếu không, hãy giải thích lý do.
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 Ký hiệu hai câu tuyển trong chương trình:
 - $(C_1)$: $rd(cons(H_1, cons(H_1, T_1)), T_1).$
 - $(C_2)$: <code class="logic-expression">rd(cons(H_2, T_2), cons(H_2, R_2)) ← rd(T_2, R_2).</code>
@@ -477,7 +478,6 @@ Ta có hai khả năng chọn câu tuyển:
 
 Như vậy, **có tồn tại câu trả lời thứ hai**. Cả hai câu trả lời phản ánh hai vị trí khác nhau trong danh sách mà tại đó hai phần tử liên tiếp có thể được hợp nhất để loại bỏ trùng lặp.
 :::
-:::
 
 ::: exercise Bài tập 15.10: Suy diễn quan hệ kề cận với danh sách
 Xét chương trình logic sau:
@@ -491,8 +491,9 @@ adj(A, B, L) :- ap(F, c(A, c(B, E)), L).
 - (a) Hãy trình bày dẫn xuất từ trên xuống (bao gồm mọi phép thế) cho một câu trả lời của truy vấn:
   <span class="logic-expression logic-block">ask  adj(b, Y, c(a, c(b, c(b, c(a, emp))))).</span>
 - (b) Có câu trả lời nào khác không? Nếu có, hãy giải thích điểm rẽ nhánh trong dẫn xuất và tiếp tục dẫn xuất để chỉ ra câu trả lời đó. Nếu không, hãy giải thích tại sao.
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 *(Gợi ý: Đọc $ap$ là append, $c$ là cons, $emp$ là danh sách rỗng, $adj(A, B, L)$ là $A$ đứng liền trước $B$ trong danh sách $L$). Danh sách đầu vào tương ứng với chuỗi $[a, b, b, a]$.*
 
 **(a) Dẫn xuất câu trả lời thứ nhất:**
@@ -525,7 +526,6 @@ Tại bước 4 ở trên, thay vì chọn $ap(emp, L, L)$, ta có thể tiếp 
 
 Như vậy có hai câu trả lời: $Y = b$ (ứng với cặp phần tử thứ 2 và thứ 3 trong $[a, b, b, a]$) và $Y = a$ (ứng với cặp phần tử thứ 3 và thứ 4).
 :::
-:::
 
 ::: exercise Bài tập 15.11: Lập trình logic thao tác trên danh sách
 - (a) Hãy viết quan hệ $remove(E, L, R)$ đúng nếu $R$ là danh sách thu được từ việc loại bỏ chính xác một lần xuất hiện của phần tử $E$ khỏi danh sách $L$. Quan hệ nhận giá trị sai nếu $E$ không thuộc $L$.
@@ -540,8 +540,9 @@ Như vậy có hai câu trả lời: $Y = b$ (ứng với cặp phần tử th�
   - <code class="logic-expression">ask  subsequence([b, a], [b, a, d, a]).</code>
   - <code class="logic-expression">ask  subsequence([X, Y], [b, a, d, a]).</code>
   - $\text{ask } subsequence(S, [b, a, d, a]).$
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 **(a) Định nghĩa quan hệ $remove(E, L, R)$:**
 ```prolog
 % Trường hợp cơ sở: Loại bỏ E ở ngay đầu danh sách
@@ -598,7 +599,6 @@ subsequence(L1, [_ | T2]) :-
    - Tổng số phép chứng minh bằng số tập con của tập 4 phần tử: $2^4 = 16$.
    - Có **16 phép chứng minh**.
 :::
-:::
 
 ::: exercise Bài tập 15.12: Thiết kế bài trình chiếu video tự động
 Giả sử các phân đoạn video được chú thích thông qua quan hệ:
@@ -617,8 +617,9 @@ segment(seg4, 50, [skiing, robots]).
 
 - (a) Hãy tiên đề hóa vị từ <code class="logic-expression">presentation(MustCover, Maxtime, Segments)</code> vốn đúng nếu $Segments$ là một danh sách phân đoạn có tổng thời lượng không vượt quá $Maxtime$ giây và bao quát toàn bộ các chủ đề trong danh sách $MustCover$. Minh họa và kiểm tra truy vấn với <code class="logic-expression">MustCover = [welcome, skiing, robots]</code> và $Maxtime = 90$.
 - (b) Nêu ba tính năng quan trọng mà hệ thống trên chưa đáp ứng được trong một ứng dụng biên tập video thực tế.
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 **(a) Tiên đề hóa trong Prolog:**
 ```prolog
 % presentation(MustCover, MaxTime, Segments)
@@ -661,12 +662,12 @@ total_time([Seg | Rest], Time) :-
 2. **Không xử lý trùng lặp nội dung**: Hai phân đoạn có thể cùng nói về một chủ đề dẫn tới việc người xem phải nghe lại cùng một thông tin thừa.
 3. **Chưa có hàm tối ưu hóa**: Hệ thống chỉ kiểm tra điều kiện $Time \le MaxTime$ mà không tối ưu hóa các tiêu chí thẩm mỹ, chất lượng hình ảnh hoặc độ liền mạch của âm thanh giữa các phân đoạn.
 :::
-:::
 
 ::: exercise Bài tập 15.13: Biểu diễn ngôn ngữ $a^n b^n c^n$ bằng văn phạm DCG
 Ngôn ngữ $L = \{a^n b^n c^n \mid n \ge 0\}$ gồm các chuỗi chứa một số lượng ký tự $a$, theo sau bởi cùng một số lượng ký tự $b$, và theo sau bởi cùng một số lượng ký tự $c$. Đây là ngôn ngữ phi ngữ cảnh kinh điển không thể biểu diễn được bằng văn phạm phi ngữ cảnh thông thường. Hãy định nghĩa ngôn ngữ này bằng văn phạm mệnh đề xác định (DCG).
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 Bằng cách sử dụng các đối số bổ sung để đếm số lượng ký tự thông qua ký hiệu số Peano ($0$ và $s(N)$), văn phạm DCG có thể biểu diễn hoàn hảo ngôn ngữ này:
 
 ```prolog
@@ -694,12 +695,12 @@ cs(s(N), ["c" | L0], L1) :-
 
 Ví dụ, câu `["a", "a", "b", "b", "c", "c"]` sẽ thành công với biến đếm $N = s(s(0))$, trong khi chuỗi bất đối xứng như `["a", "b", "c", "c"]` sẽ thất bại.
 :::
-:::
 
 ::: exercise Bài tập 15.14: Xây dựng cơ sở tri thức hỏi đáp địa lý bằng DCG
 Xây dựng một cơ sở tri thức và từ điển dựa trên văn phạm ở Hình 15.11 và 15.12 của giáo trình để trả lời các câu hỏi địa lý tự nhiên. Đối với mỗi câu hỏi, hãy chỉ ra cách hệ thống trả lời hoặc giải thích lý do tại sao câu hỏi đó gặp khó khăn với các công cụ đã học.
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 Văn phạm DCG ở Mục 15.7 có thể xử lý tốt các câu hỏi có cấu trúc trực diện:
 - *"What country borders Chile?"* $\implies$ Hợp nhất vị từ quan hệ $borders(Sub, chile)$ và tìm các cá thể $Sub$ thỏa mãn.
 - *"What large country borders Argentina?"* $\implies$ Thêm điều kiện $large(Sub)$ và $borders(Sub, argentina)$.
@@ -711,7 +712,6 @@ Các dạng câu hỏi gặp khó khăn và nguyên nhân:
    - *Khó khăn*: Cần đếm số lượng nghiệm thỏa mãn, đòi hỏi cơ chế ngoài logic như `findall` hoặc `aggregate`.
 3. **Câu hỏi phủ định**: *"Which country does not border the ocean?"*
    - *Khó khăn*: Đòi hỏi phủ định thất bại và giả định tri thức đầy đủ, cần xử lý cẩn trọng để tránh hiện tượng tắc nghẽn (floundering).
-:::
 :::
 
 ::: exercise Bài tập 15.15: Rủi ro khi đưa biến tự do vào phủ định thất bại
@@ -738,8 +738,9 @@ enrolled(sally, cs486).
 - (b) Hãy chỉ ra một phản ví dụ về tính đúng đắn của bao đóng này: Nêu một thể hiện cụ thể mà ở đó thân câu tuyển nhận giá trị đúng nhưng đầu câu tuyển nhận giá trị sai.
 - (c) Trình thông dịch Prolog thực tế sẽ trả về kết quả gì? So sánh với trường hợp đảo thứ tự mục tiêu trong thân câu tuyển:
   <span class="logic-expression logic-block">empty_course(C) ← $∼$enrolled(S, C) ∧ course(C).</span>
+:::
 
-::: details Lời giải chi tiết
+::: solution Lời giải chi tiết
 **(a) Bao đóng Clark của câu tuyển:**
 Vì biến $S$ chỉ xuất hiện ở thân câu tuyển mà không có mặt ở đầu câu tuyển, nên ở dạng chuẩn Clark nó được lượng từ hóa tồn tại:
 <span class="logic-expression logic-block">∀ C (empty_course(C) ↔ course(C) ∧ ∃ S ¬ enrolled(S, C))</span>
@@ -778,7 +779,6 @@ Vì biến $S$ chỉ xuất hiện ở thân câu tuyển mà không có mặt �
   4. Toàn bộ câu truy vấn `empty_course(C)` thất bại và trả về `no`, bỏ sót hoàn toàn khóa học rỗng thực sự là $cs987$!
 
 Ví dụ kinh điển này minh chứng sâu sắc lý do tại sao không bao giờ được phép để biến tự do xuất hiện trong toán tử phủ định thất bại mà chưa được ràng buộc bởi các mục tiêu khẳng định khác.
-:::
 :::
 
 ## Tài liệu tham khảo
