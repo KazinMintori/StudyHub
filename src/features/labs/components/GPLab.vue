@@ -1,125 +1,120 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { makeView, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import LabPointControls from './LabPointControls.vue'
+import { createDragger, fmtPoint, makeView } from '../controllers/svg-drag.js'
 
-// Quy hoạch hình học (chủ đề 9, Lecture 02): cùng một tập, nhìn trong biến x > 0 và trong biến y = log x.
-// Đoạn thẳng trong biến y ứng với đường "trung bình nhân" x(θ) = p^{1−θ} q^θ trong biến x.
-// Ba tập tự đặt: √x₁ + √x₂ ≤ 2 (không lồi theo x), x₁x₂ = 1 (đường cong theo x, đường thẳng theo log x),
-// và bài toán áp phích: phần chữ w·h ≥ 600 với tập mức (w + 4)(h + 6) ≤ 864 của hàm mục tiêu.
-const presets = {
-  sqrt: {
-    label: '√x₁ + √x₂ ≤ 2',
-    xr: [0, 4.4], yr: [0, 4.4], lr: [-3.2, 1.9],
-    p: [0.16, 2.56], q: [2.56, 0.16],
-    inside: (x) => Math.sqrt(x[0]) + Math.sqrt(x[1]) <= 2 + 1e-12,
-    // biên: x = (s², (2 − s)²), 0 ≤ s ≤ 2
-    edge: (s) => [s * s, (2 - s) * (2 - s)], sRange: [0, 2], closeX: [[0, 0]]
-  },
-  mono: {
-    label: 'x₁x₂ = 1',
-    xr: [0, 4.4], yr: [0, 4.4], lr: [-2.2, 2.2],
-    p: [0.5, 2], q: [2, 0.5],
-    inside: (x) => Math.abs(x[0] * x[1] - 1) < 1e-9,
-    edge: (s) => [s, 1 / s], sRange: [0.23, 4.4], closeX: null
-  },
-  poster: {
-    label: 'áp phích: wh ≥ 600, (w + 4)(h + 6) ≤ 864',
-    xr: [0, 62], yr: [0, 62], lr: [1.5, 4.2],
-    p: null, q: null,
-    inside: (x) => x[0] * x[1] >= 600 - 1e-9,
-    edge: (s) => [s, 600 / s], sRange: [9.7, 62], closeX: [[62, 62], [9.7, 62]]
-  }
+const examples = {
+  sqrt: { label: '√x₁ + √x₂ ≤ 2', limits: [.04, 4.4], point: [.64, .64],
+    endpoints: [[.16, 2.56], [2.56, .16]],
+    boundary: x => Math.max(0, 2 - Math.sqrt(x)) ** 2,
+    inside: ([x, y]) => Math.sqrt(x) + Math.sqrt(y) <= 2 + 1e-9 },
+  mono: { label: 'x₁x₂ = 1', limits: [.2, 5], point: [1, 1],
+    endpoints: [[.5, 2], [2, .5]], boundary: x => 1 / x,
+    inside: ([x, y]) => Math.abs(x * y - 1) < 1e-9 },
+  poster: { label: 'Áp phích có lề', limits: [6, 70], point: [20, 30],
+    boundary: x => 600 / x, inside: ([x, y]) => x * y >= 600 - 1e-9 },
 }
-const key = ref('sqrt'), showPath = ref(true)
-const pr = computed(() => presets[key.value])
-const vx = computed(() => makeView({ x0: pr.value.xr[0], x1: pr.value.xr[1], y0: pr.value.yr[0], y1: pr.value.yr[1], width: 230, height: 230 }))
-const vl = computed(() => makeView({ x0: pr.value.lr[0], x1: pr.value.lr[1], y0: pr.value.lr[0], y1: pr.value.lr[1], width: 230, height: 230 }))
-const PX = (p) => [vx.value.sx(p[0]), vx.value.sy(p[1])]
-const PL = (p) => [vl.value.sx(p[0]), vl.value.sy(p[1])]
-const lg = (p) => [Math.log(p[0]), Math.log(p[1])]
-const samples = (n) => Array.from({ length: n + 1 }, (_, i) => i / n)
-const edgeX = computed(() => samples(240).map(t => pr.value.edge(pr.value.sRange[0] + t * (pr.value.sRange[1] - pr.value.sRange[0]))))
-const regionX = computed(() => (pr.value.closeX ? [...edgeX.value, ...pr.value.closeX] : null))
-// Trong biến log, biên là ảnh log của cùng đường cong. Tập được đóng lại bằng góc của khung nhìn.
-const edgeL = computed(() => edgeX.value.filter(p => p[0] > 0 && p[1] > 0).map(lg).filter(p => p.every(Number.isFinite)))
-const regionL = computed(() => {
-  const L = pr.value.lr
-  if (key.value === 'sqrt') return [...edgeL.value.filter(p => p[0] >= L[0] - 1 && p[1] >= L[0] - 1), [L[0] - 1, L[0] - 1]]
-  if (key.value === 'poster') return [...edgeL.value, [L[1] + 1, L[1] + 1]]
-  return null
+const mode = ref('sqrt')
+const example = computed(() => examples[mode.value])
+const point = ref([...examples.sqrt.point])
+const originalSvg = ref(null)
+const logSvg = ref(null)
+const logPoint = computed(() => point.value.map(Math.log))
+const make = ([low, high]) => makeView({ x0:low, x1:high, y0:low, y1:high, width:360, height:320, pad:34 })
+const originalView = computed(() => make(example.value.limits))
+const logView = computed(() => make(example.value.limits.map(Math.log)))
+const originalDrag = createDragger(originalSvg, originalView, (_, next) => { point.value = next }, {step:.05})
+const logDrag = createDragger(logSvg, logView, (_, next) => { point.value = next.map(Math.exp) }, {step:.05})
+function choose(key) {
+  mode.value = key
+  point.value = [...examples[key].point]
+}
+const original = { svg: originalSvg, view: originalView, point, drag: originalDrag, transform: p => p }
+const logarithmic = { svg: logSvg, view: logView, point: logPoint, drag: logDrag, transform: p => p.map(Math.log) }
+const samples = (low, high, fn) => Array.from({length:161}, (_, i) => {
+  const x = low + (high-low)*i/160
+  return [x, fn(x)]
 })
-// Tập mức (w + 4)(h + 6) ≤ 864 của bài toán áp phích: dưới đường h = 864/(w + 4) − 6.
-const levelX = computed(() => (key.value === 'poster' ? samples(200).map(t => { const w = 0.5 + t * 61; return [w, 864 / (w + 4) - 6] }).filter(p => p[1] > 0) : []))
-const levelL = computed(() => levelX.value.map(lg))
-const OPT = [20, 30]
-const geoPath = (p, q) => samples(60).map(t => [p[0] ** (1 - t) * q[0] ** t, p[1] ** (1 - t) * q[1] ** t])
-const linePath = (p, q) => samples(60).map(t => [p[0] + t * (q[0] - p[0]), p[1] + t * (q[1] - p[1])])
-const pts = (arr, P) => arr.map(p => P(p).join(',')).join(' ')
-const mid = computed(() => (pr.value.p ? [(pr.value.p[0] + pr.value.q[0]) / 2, (pr.value.p[1] + pr.value.q[1]) / 2] : null))
-const gmean = computed(() => (pr.value.p ? [Math.sqrt(pr.value.p[0] * pr.value.q[0]), Math.sqrt(pr.value.p[1] * pr.value.q[1])] : null))
-const ok = (x) => pr.value.inside(x)
+const edge = computed(() => {
+  const [low, high] = example.value.limits
+  if (mode.value === 'sqrt') return samples(low, (2-Math.sqrt(low))**2, example.value.boundary)
+  return samples(mode.value === 'poster' ? 600/high : low, high, example.value.boundary)
+})
+const region = computed(() => {
+  const [low, high] = example.value.limits
+  if (mode.value === 'sqrt') return [...edge.value, [low,low]]
+  if (mode.value === 'poster') return [...edge.value, [high,high]]
+  return []
+})
+const costEdge = computed(() => mode.value === 'poster' ? samples(864/76-4, 68, x=>864/(x+4)-6) : [])
+const paths = computed(() => {
+  if (!example.value.endpoints) return [[], []]
+  const [p,q] = example.value.endpoints
+  const interpolate = (fn) => Array.from({length:81},(_,i)=>p.map((value,j)=>fn(value,q[j],i/80)))
+  return [
+    interpolate((a,b,t)=>(1-t)*a+t*b),
+    interpolate((a,b,t)=>a**(1-t)*b**t),
+  ]
+})
+const points = (values, panel) => values.map(p=>panel.view.value.point(panel.transform(p)).join(',')).join(' ')
+const feasible = computed(() => example.value.inside(point.value))
+const panels = computed(() => [original, logarithmic].map(panel => ({
+  source: panel,
+  coordinate: panel.point.value,
+  marker: panel.view.value.point(panel.point.value),
+  region: points(region.value, panel),
+  edge: points(edge.value, panel),
+  cost: points(costEdge.value, panel),
+  additive: points(paths.value[0], panel),
+  geometric: points(paths.value[1], panel),
+})))
+function bind(panel, element) { panel.source.svg.value = element }
 </script>
 
 <template>
-  <figure class="study-lab" aria-label="Một tập trong biến x và trong biến log x">
-    <p class="lab-title">Đổi sang thang logarit</p>
-    <p class="lab-lead">Bên trái là tập trong biến gốc x, bên phải là cùng tập ấy sau phép đổi biến y = log x. Đoạn thẳng nối hai điểm bên phải ứng với đường trung bình nhân bên trái.</p>
-    <div class="lab-pair">
-      <svg :viewBox="`0 0 ${vx.width} ${vx.height}`" role="img" aria-label="Tập trong biến gốc x">
-        <line x1="0" :x2="vx.width" :y1="vx.sy(0)" :y2="vx.sy(0)" class="lab-axis" />
-        <line :x1="vx.sx(0)" :x2="vx.sx(0)" y1="0" :y2="vx.height" class="lab-axis" />
-        <text x="8" y="16" class="lab-small">biến x</text>
-        <polygon v-if="regionX" :points="pts(regionX, PX)" class="lab-region" />
-        <polyline :points="pts(edgeX, PX)" class="lab-accent" style="stroke-width: 2.5" />
-        <polyline v-if="levelX.length" :points="pts(levelX, PX)" class="lab-warn" />
-        <circle v-if="key === 'poster'" :cx="PX(OPT)[0]" :cy="PX(OPT)[1]" r="6" class="lab-dot-warn" />
-        <template v-if="pr.p">
-          <polyline :points="pts(linePath(pr.p, pr.q), PX)" class="lab-bad" style="stroke-width: 2" />
-          <polyline v-if="showPath" :points="pts(geoPath(pr.p, pr.q), PX)" class="lab-good" style="stroke-width: 2.5" />
-          <circle :cx="PX(mid)[0]" :cy="PX(mid)[1]" r="5" :class="ok(mid) ? 'lab-dot' : 'lab-dot-bad'" />
-          <circle :cx="PX(gmean)[0]" :cy="PX(gmean)[1]" r="5" class="lab-dot-warn" />
-          <circle :cx="PX(pr.p)[0]" :cy="PX(pr.p)[1]" r="5" class="lab-dot" /><circle :cx="PX(pr.q)[0]" :cy="PX(pr.q)[1]" r="5" class="lab-dot" />
-        </template>
-      </svg>
-      <svg :viewBox="`0 0 ${vl.width} ${vl.height}`" role="img" aria-label="Cùng tập trong biến y bằng log x">
-        <line x1="0" :x2="vl.width" :y1="vl.sy(0)" :y2="vl.sy(0)" class="lab-axis" />
-        <line :x1="vl.sx(0)" :x2="vl.sx(0)" y1="0" :y2="vl.height" class="lab-axis" />
-        <text x="8" y="16" class="lab-small">biến y = log x</text>
-        <polygon v-if="regionL" :points="pts(regionL, PL)" class="lab-region" />
-        <polyline :points="pts(edgeL, PL)" class="lab-accent" style="stroke-width: 2.5" />
-        <polyline v-if="levelL.length" :points="pts(levelL, PL)" class="lab-warn" />
-        <circle v-if="key === 'poster'" :cx="PL(lg(OPT))[0]" :cy="PL(lg(OPT))[1]" r="6" class="lab-dot-warn" />
-        <template v-if="pr.p">
-          <polyline :points="pts(linePath(pr.p, pr.q).map(lg), PL)" class="lab-bad" style="stroke-width: 2" />
-          <polyline v-if="showPath" :points="pts(geoPath(pr.p, pr.q).map(lg), PL)" class="lab-good" style="stroke-width: 2.5" />
-          <circle :cx="PL(lg(gmean))[0]" :cy="PL(lg(gmean))[1]" r="5" class="lab-dot-warn" />
-          <circle :cx="PL(lg(pr.p))[0]" :cy="PL(lg(pr.p))[1]" r="5" class="lab-dot" /><circle :cx="PL(lg(pr.q))[0]" :cy="PL(lg(pr.q))[1]" r="5" class="lab-dot" />
-        </template>
-      </svg>
-    </div>
-    <p class="lab-legend"><span class="legend-accent">tập (hoặc biên của tập)</span><span v-if="pr.p" class="legend-bad">đoạn thẳng trong biến x</span><span v-if="pr.p && showPath" class="legend-good">đoạn thẳng trong biến log x</span><span v-if="key === 'poster'" class="legend-warn">tập mức của hàm mục tiêu và nghiệm</span></p>
-    <div class="lab-controls">
-      <label>Tập<select v-model="key"><option v-for="(s, k) in presets" :key="k" :value="k">{{ s.label }}</option></select></label>
-      <label v-if="pr.p" class="lab-check"><input v-model="showPath" type="checkbox" /> Hiện đường trung bình nhân</label>
-    </div>
-    <div class="lab-readout" role="status">
-      <template v-if="pr.p">
-        <p>Hai điểm p = {{ fmtPoint(pr.p) }} và q = {{ fmtPoint(pr.q) }} đều thuộc tập.</p>
-        <p :class="ok(mid) ? '' : 'is-bad'">Trung điểm cộng {{ fmtPoint(mid) }} {{ ok(mid) ? 'thuộc tập' : 'không thuộc tập' }}: trong biến x, tập {{ ok(mid) ? 'có thể lồi' : 'không lồi' }}.</p>
-        <p class="is-good">Trung bình nhân {{ fmtPoint(gmean) }} thuộc tập. Nó là trung điểm của đoạn thẳng trong biến log x, nơi tập là lồi.</p>
-      </template>
-      <template v-else>
-        <p>Ràng buộc wh ≥ 600 trở thành nửa mặt phẳng log w + log h ≥ log 600. Tập mức (w + 4)(h + 6) ≤ 864 không lồi trong biến (w, h) nhưng lồi trong biến log.</p>
-        <p class="is-accent">Nghiệm (w, h) = (20, 30), diện tích giấy 864 cm²: tập mức chạm ràng buộc tại đúng một điểm.</p>
-      </template>
-    </div>
-    <details class="lab-tasks">
-      <summary>Gợi ý thao tác</summary>
-      <ol>
-        <li>Với tập √x₁ + √x₂ ≤ 2, vì sao đoạn thẳng đỏ đi ra ngoài tập, còn đường xanh thì không?</li>
-        <li>Với x₁x₂ = 1, tập là một đường cong trong biến x. Trong biến log x nó trở thành gì, và vì sao ràng buộc đẳng thức monomial là "affine trá hình"?</li>
-        <li>Với bài toán áp phích, so sánh hình dạng tập mức của hàm mục tiêu ở hai bên. Bên nào cho thấy bài toán là lồi?</li>
-      </ol>
-    </details>
-  </figure>
+ <figure class="study-lab" aria-label="Miền khả thi trong biến gốc và biến logarit">
+  <figcaption class="lab-title">Kéo cùng một điểm qua hai hệ tọa độ</figcaption>
+  <p class="lab-lead">Kéo chấm tím trong một trong hai hình. Hình kia cập nhật qua logarit hoặc hàm mũ. Hai khung cùng hiển thị một cửa sổ tọa độ dương.</p>
+  <div class="lab-pair">
+   <svg v-for="(panel,i) in panels" :key="i" :ref="element=>bind(panel,element)" viewBox="0 0 360 320" role="group" :aria-label="i===0?'Tọa độ gốc':'Tọa độ logarit'" @pointermove="panel.source.drag.move" @pointerup="panel.source.drag.end" @pointercancel="panel.source.drag.end" @lostpointercapture="panel.source.drag.end">
+    <text x="34" y="25">{{i===0?'Biến gốc x':'Biến y = log x'}}</text>
+    <rect x="34" y="34" width="292" height="252" class="frame"/>
+    <polygon :points="panel.region" class="lab-region"/>
+    <polyline :points="panel.edge" class="boundary"/>
+    <polyline :points="panel.cost" class="cost"/>
+    <polyline :points="panel.additive" class="additive"/>
+    <polyline :points="panel.geometric" class="geometric"/>
+    <text x="325" y="309" text-anchor="end">{{i===0?'x₁':'y₁'}}</text>
+    <text x="16" y="55">{{i===0?'x₂':'y₂'}}</text>
+    <circle :cx="panel.marker[0]" :cy="panel.marker[1]" r="6" class="lab-dot-accent"/>
+    <circle :cx="panel.marker[0]" :cy="panel.marker[1]" r="28" class="lab-handle hit" tabindex="0" role="slider" :aria-label="i===0?'Điểm thử trong biến gốc':'Điểm thử trong biến logarit'" :aria-valuetext="fmtPoint(panel.coordinate,4)" @pointerdown="panel.source.drag.start('point',$event)" @keydown="panel.source.drag.key('point',panel.coordinate,$event)"/>
+   </svg>
+  </div>
+  <div class="lab-buttons">
+   <button v-for="(item,key) in examples" :key="key" type="button" :aria-pressed="mode===key" @click="choose(key)">{{item.label}}</button>
+  </div>
+  <div v-if="example.endpoints" class="lab-buttons">
+   <button type="button" @click="point=example.endpoints[0].map((v,i)=>(v+example.endpoints[1][i])/2)">Thử trung điểm cộng</button>
+   <button type="button" @click="point=example.endpoints[0].map((v,i)=>Math.sqrt(v*example.endpoints[1][i]))">Thử trung bình nhân</button>
+  </div>
+  <details class="lab-tasks"><summary>Điều chỉnh bằng nút</summary><LabPointControls :svg="originalSvg"/><LabPointControls :svg="logSvg"/></details>
+  <p class="lab-legend"><span class="legend-accent">Miền khả thi hoặc đường đẳng thức</span><span v-if="example.endpoints" class="legend-bad">Đoạn thẳng trong biến gốc</span><span v-if="example.endpoints" class="legend-good">Đoạn thẳng trong biến log</span><span v-if="mode==='poster'" class="legend-warn">Biên diện tích giấy 864 cm²</span></p>
+  <div class="lab-readout" role="status">
+   <p>x = {{fmtPoint(point,4)}}, log x = {{fmtPoint(logPoint,4)}}. {{feasible?'Điểm thỏa ràng buộc.':'Điểm vi phạm ràng buộc.'}}</p>
+   <p v-if="example.endpoints">Hai đường nối cùng hai điểm khả thi. Trung điểm của đường xanh trong biến log cho trung bình nhân theo từng tọa độ.</p>
+   <p v-else>Miền tím giữ diện tích chữ ít nhất 600 cm². Biên vàng có diện tích giấy 864 cm² và tiếp xúc miền tại (20, 30).</p>
+  </div>
+ </figure>
 </template>
+
+<style scoped>
+svg text{font-size:18px;pointer-events:none}
+.frame{fill:none;stroke:var(--ink-3);stroke-width:1}
+.boundary,.cost,.additive,.geometric{fill:none;stroke-width:1.65}
+.boundary{stroke:var(--tim)}
+.cost{stroke:var(--vang)}
+.additive{stroke:var(--do);stroke-dasharray:5 4}
+.geometric{stroke:var(--xanh)}
+.hit{fill:transparent!important;stroke:transparent;touch-action:none}
+.hit:focus-visible{stroke:var(--vang)}
+</style>

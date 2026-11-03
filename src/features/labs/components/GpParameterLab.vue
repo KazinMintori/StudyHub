@@ -23,8 +23,7 @@ const curve=computed(()=>Array.from({length:156},(_,i)=>{const a=.25+i*.05;retur
    <circle :cx="view.sx(bound)" :cy="view.sy(row.value)" r="34" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Tham số cận dưới a" :aria-valuetext="`a = ${fmt(bound,3)}, C* = ${fmt(row.value,3)}`" @pointerdown="drag.start('a',$event)" @keydown="drag.key('a',[bound,0],$event)"/>
    <text x="12" y="23">Giá trị tối ưu C*</text><text x="414" y="310">a</text>
    <text v-for="a in [0,2,4,6,8]" :key="a" :x="view.sx(a)-5" y="313">{{a}}</text>
-   <text :x="view.sx(row.threshold)+8" y="47">Ngưỡng</text>
-   <text x="36" :y="view.sy(dimension*row.threshold)-12">{{fmt(dimension*row.threshold,2)}}</text>
+   <text :x="view.sx(row.threshold)+8" y="67">Ngưỡng</text>
   </svg>
   <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg" axes="x"/></details>
   <div class="lab-controls"><label>Số biến dương n<select v-model.number="dimension"><option v-for="n in [2,3,4,5,6]" :key="n" :value="n">{{n}}</option></select></label></div>

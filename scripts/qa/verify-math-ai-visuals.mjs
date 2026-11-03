@@ -104,6 +104,7 @@ async function sourceManifest() {
     'src/features/labs/components/FractionalLab.vue','src/features/labs/components/CharnesCooperLab.vue','src/features/labs/components/FractionalLimitLab.vue','src/features/labs/services/fractional-geometry.mjs',
     ...['QpGeometryLab','ConstrainedFitLab','PolyDistanceLab','BoxDistanceSpaceLab','VarianceDistributionLab','PortfolioLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/qp-geometry.mjs',
     ...['SocpSliceLab','RotatedConeLab','RobustLPLab','RobustEllipsoidLab','ChanceConstraintLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    'src/features/labs/components/GPLab.vue',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -331,6 +332,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  gp:[
+   [0,'Thử trung điểm cộng'],[0,'Thử trung bình nhân'],[0,'x₁x₂ = 1'],[0,'Thử trung điểm cộng'],[0,'Áp phích có lề'],[0,'√x₁ + √x₂ ≤ 2'],
+   [1,'Ba biến, a = 1'],[1,'Ba biến, a = 8'],[1,'Đúng tại ngưỡng'],
+   [2,'t = 2, v = (1, 1)'],[2,'Chọn vector Perron'],[2,'Thiết kế tối ưu'],[2,'Một thiết kế có ρ > 1']
+  ],
   robust:[
    [0,'Điểm trong nón dưới'],[0,'Lát y₂ = 1'],[0,'Điểm trong nón trên'],[0,'Lát y₂ = 0'],
    [1,'Không có bất định'],[1,'Bất định lớn'],[1,'Chứng nhận tại ρ = 0.2'],
@@ -402,6 +408,14 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='gp' && label==='Áp phích có lề'){
+   const shapes=await labs[index].$$eval('svg .cost',nodes=>nodes.map(node=>node.getAttribute('points')))
+   assert.equal(shapes.length,2)
+   assert(shapes.every(points=>points?.length>100),'Both SVGs must draw the poster cost boundary')
+   const markers=await labs[index].$$eval('.lab-handle',nodes=>nodes.map(node=>Number(node.getAttribute('cx'))))
+   assert(Math.abs(markers[0]-(34+292*(20-6)/64))<1e-6,'Original marker must move to the poster optimum')
+   assert(Math.abs(markers[1]-(34+292*Math.log(20/6)/Math.log(70/6)))<1e-6,'Log marker must match the same optimum')
+  }
   if(name==='robust'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Điểm trong nón dưới')assert(readout.includes('Chỉ thỏa bất đẳng thức đã bình phương'))
