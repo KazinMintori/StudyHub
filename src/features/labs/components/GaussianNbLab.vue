@@ -13,8 +13,8 @@ const posterior = computed(() => scores.value[0]/(scores.value[0]+scores.value[1
     <label>Tiên nghiệm nhãn A <select v-model.number="prior"><option :value="0.5">0,5</option><option :value="0.8">0,8</option></select></label>
     <svg viewBox="0 0 350 190" width="100%" role="img" aria-label="Hai đường mật độ Gaussian có trung bình 3 và 7">
       <path d="M25 160H325" stroke="currentColor" fill="none"/>
-      <path :d="curve(3)" stroke="#4a82da" stroke-width="1.8" fill="none"/>
-      <path :d="curve(7)" stroke="#168e83" stroke-width="1.8" fill="none"/>
+      <path :d="curve(3)" stroke="var(--vp-c-brand-1)" stroke-width="1.8" fill="none"/>
+      <path :d="curve(7)" stroke="var(--vp-c-tip-1)" stroke-width="1.8" fill="none"/>
       <path :d="'M'+(25+30*x)+',12 V160'" stroke="currentColor" stroke-dasharray="3 3" fill="none"/>
       <text x="115" y="183" text-anchor="middle" fill="currentColor">A · μ = 3</text>
       <text x="235" y="183" text-anchor="middle" fill="currentColor">B · μ = 7</text>
