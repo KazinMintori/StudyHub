@@ -2,15 +2,15 @@
 import { computed, ref, watch } from 'vue'
 import SimulationControls from './SimulationControls.vue'
 import { attentionStep } from '../services/learning-models.mjs'
-const query = ref('balanced'), mask = ref(false), step = ref(0)
-const state = computed(() => attentionStep(query.value === 'balanced' ? [1, 1] : [2, 0], mask.value))
+const query = ref('balanced'), mask = ref('none'), step = ref(0)
+const state = computed(() => attentionStep(query.value === 'balanced' ? [1, 1] : [2, 0], mask.value === 'causal'))
 const fmt = value => Number.isFinite(value) ? value.toFixed(4) : '−∞'
 watch([query, mask], () => { step.value = 0 })
 </script>
 <template>
   <section class="math-lab attention-scores" aria-label="Tính attention từng bước">
     <label>Truy vấn <select v-model="query"><option value="balanced">q = (1, 1)</option><option value="left">q = (2, 0)</option></select></label>
-    <label><input type="checkbox" v-model="mask"> Che vị trí thứ hai</label>
+    <label>Mặt nạ <select v-model="mask"><option value="none">Xét cả hai vị trí</option><option value="causal">Che vị trí thứ hai</option></select></label>
     <p>k₁ = (1, 0), k₂ = (0, 1). v₁ = (1, 0), v₂ = (0, 2).</p>
     <SimulationControls v-model="step" :max="3" :reset-key="query + mask" />
     <div aria-live="polite">
