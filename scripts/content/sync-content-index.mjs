@@ -83,11 +83,16 @@ for (const course of indexedCourses) {
       const item = await inspect(path.join(root, source))
       for (const key of Object.keys(indexed)) indexed[key].push(...item[key])
     }
+    const lectureSlides = `src/content/courses/${course.id}/lectures/${lesson.slug}/slides.mjs`
+    // AI foundations can provide slides through the course's part modules.
+    const artintSlides = course.id === 'ai-nen-tang-tac-tu' && !await exists(path.join(root, lectureSlides))
+      ? 'src/content/courses/ai-nen-tang-tac-tu/course.mjs'
+      : lectureSlides
     const manifest = {
       course: course.id, lecture: lesson.slug,
       route: review ? `/${course.id}/on-luyen/tong-hop` : `/${course.id}/bai-giang/${lesson.slug}`,
       notes, topics,
-      slides: course.presentation === 'philosophy' ? null : review ? 'docs/.vitepress/math-ai-review-course.mjs' : course.id.startsWith('vat-ly-') ? 'docs/.vitepress/physics-courses.mjs' : `src/content/courses/${course.id}/lectures/${lesson.slug}/slides.mjs`,
+      slides: course.presentation === 'philosophy' ? null : review ? 'docs/.vitepress/math-ai-review-course.mjs' : course.id.startsWith('vat-ly-') ? 'docs/.vitepress/physics-courses.mjs' : artintSlides,
       cheatsheet: course.presentation === 'philosophy' ? null : 'docs/.vitepress/cheatsheets.mjs',
       prerequisites: lesson.prerequisites || [],
       fragments: [...new Set(indexed.fragments)],

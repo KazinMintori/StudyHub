@@ -24,7 +24,7 @@
     {
       "id": "toan-cho-ai",
       "repository": "KazinMintori/StudyHub-course-toan-cho-ai",
-      "revision": "b4f9f915b0ee36e0997f05bd5b86a0cbc8617022",
+      "revision": "3eeed7c30f149a02a7eca53a8ec7a06430ccfa93",
       "paths": [
         "docs/.vitepress/math-ai-course.mjs",
         "docs/.vitepress/math-ai-foundations.mjs",
