@@ -48,6 +48,7 @@ await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
   ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
+  ['lagrange-bound','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
   ['duality-overview','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
   ['equivalence','/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-tuong-duong.html'],
   ['elimination','/toan-cho-ai/bai-giang/bai-02-tap-loi/khu-rang-buoc-va-toi-uu-tung-phan.html'],
@@ -116,6 +117,10 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    'src/features/labs/components/LagrangeBoundLab.vue',
+    'src/features/labs/components/FenchelSupportLab.vue',
+    'src/features/labs/components/DualSupportLab.vue',
+    ...['LagrangeSaddleLab','FarkasCertificateLab','SLemmaCertificateLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/EllipsoidLab.vue',
     ...['LocationCostsLab','AnchoredNetworkLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EllipsoidAxesLab','SimplexSpheresLab','AnalyticCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
@@ -352,6 +357,14 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'lagrange-bound':[
+   [0,'λ = 0'],[0,'λ = 1'],[0,'λ = 2'],[0,'λ = 4'],
+   [1,'Bình phương'],[1,'Đưa x về điểm chạm'],[1,'Trị tuyệt đối'],[1,'Độ dốc 1,5'],[1,'Độ dốc 1'],[1,'Đưa x về điểm chạm'],
+   [2,'Đường tựa λ = 0'],[2,'Đường tựa λ = 1'],[2,'Đường tựa λ = 2'],[2,'Đường tựa λ = 4'],
+   [3,'Điểm yên ngựa'],[3,'Xem mặt trong R³'],[3,'Dọc lát λ = 2'],[3,'Dọc lát x = 1'],
+   [4,'Có miền nghiệm'],[4,'Chỉ còn gốc tọa độ'],[4,'Hiện chứng chỉ vô nghiệm'],
+   [5,'Chọn λ = 1'],[5,'Thử điểm kiểm chứng'],[5,'Chọn λ = 3'],[5,'Thử điểm kiểm chứng'],[5,'Chọn λ = 2']
+  ],
   ellipsoid:[[0,'Quả cầu đơn vị'],[0,'Suy biến thành đoạn'],[0,'Suy biến thành điểm'],[0,'Trị riêng 4 và 1']],
   location:[
    [0,'Đưa về cân bằng'],[0,'Đổi có neo và bỏ neo'],[0,'Đưa về cân bằng'],[0,'Tịnh tiến cả hai tới 3'],
@@ -463,6 +476,24 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='lagrange-bound'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='λ = 1')assert(text.includes('0.7500')&&text.includes('vi phạm'))
+   if(label==='λ = 2')assert(text.includes('g(λ) = 1.0000')&&text.includes('0.0000'))
+   if(label==='Đưa x về điểm chạm')assert(text.includes('bằng 0.0000'))
+   if(label==='Độ dốc 1,5')assert(text.includes('f*(y) = +∞'))
+   if(label==='Độ dốc 1')assert(text.includes('trùng với cả một nhánh'))
+   if(label==='Đường tựa λ = 1')assert(text.includes('0.7500'))
+   if(label==='Đường tựa λ = 2')assert(text.includes('Đường tựa đi qua điểm này.'))
+   if(label==='Điểm yên ngựa'||label==='Dọc lát x = 1')assert(text.includes('L = 1.0000'))
+   if(label==='Dọc lát λ = 2')assert(text.includes('L = 2.0000'))
+   if(label==='Hiện chứng chỉ vô nghiệm')assert(text.includes('0 ≤ −1.00'))
+   if(label==='Chỉ còn gốc tọa độ')assert(text.includes('Nghiệm duy nhất'))
+   if(label==='Chọn λ = 2')assert(text.includes('hiệu bằng y²'))
+   if(label==='Thử điểm kiểm chứng')assert(text.includes('−1.250')||text.includes('−1.000'))
+
+
+  }
   if(name==='ellipsoid'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Suy biến thành đoạn')assert(text.includes('ép thành một đoạn thẳng'))
