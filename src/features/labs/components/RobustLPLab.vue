@@ -41,6 +41,9 @@ const view = makeView({ x0: -1.6, x1: 3.6, y0: -1.6, y1: 2.6, width: 460, height
 const P = (p) => [view.sx(p[0]), view.sy(p[1])]
 const svg=ref(null),trial=ref([1.2,1.1]),dragView=ref(view)
 const drag=createDragger(svg,dragView,(_,p)=>{trial.value=p},{step:.05,snap:.01})
+const radiusSvg = ref(null)
+const radiusView = makeView({x0:0,x1:.6,y0:0,y1:1,width:360,height:105,pad:33})
+const radiusDrag = createDragger(radiusSvg, ref(radiusView), (_, [next]) => { rho.value = next }, {step:.01,snap:.01})
 const trialSlacks=computed(()=>A.map((a,i)=>B[i]-dot(a,trial.value)-rho.value*Math.hypot(...trial.value)))
 const pts = (arr) => arr.map(p => P(p).join(',')).join(' ')
 const nominalPoly = boundary(0)
@@ -60,7 +63,6 @@ const label = (i) => ['x₁ ≤ 3', 'x₂ ≤ 2', 'x₁ + x₂ ≤ 4', '−x₁ 
       <polygon :points="pts(nominalPoly)" class="lab-region-soft" style="opacity: 0.45" />
       <polygon :points="pts(robustPoly)" class="lab-region" />
       <circle :cx="P(nominal.x)[0]" :cy="P(nominal.x)[1]" r="6" class="lab-dot-hollow" />
-      <text :x="P(nominal.x)[0] + 8" :y="P(nominal.x)[1] - 8" class="lab-small">danh nghĩa</text>
       <circle :cx="P(robust.x)[0]" :cy="P(robust.x)[1]" r="7" class="lab-dot-warn" />
       <line :x1="P([0, 0])[0]" :y1="P([0, 0])[1]" :x2="P([0.45, 0.9])[0]" :y2="P([0.45, 0.9])[1]" class="lab-accent" />
       <text :x="P([0.45, 0.9])[0] + 6" :y="P([0.45, 0.9])[1]" class="lab-small">c</text>
@@ -69,13 +71,24 @@ const label = (i) => ['x₁ ≤ 3', 'x₂ ≤ 2', 'x₁ + x₂ ≤ 4', '−x₁ 
     </svg>
     <details class="lab-tasks"><summary>Điều chỉnh bằng nút thay cho kéo</summary><LabPointControls :svg="svg"/></details>
     <p class="lab-legend"><span class="legend-accent">miền bền vững, hướng c</span><span class="legend-warn">nghiệm bền vững</span><span class="legend-guide">miền danh nghĩa (nhạt)</span></p>
-    <div class="lab-controls">
-      <label>Bán kính bất định ρ = {{ fmt(rho, 2) }}<input v-model.number="rho" type="range" min="0" max="0.6" step="0.01" /></label>
+    <svg ref="radiusSvg" viewBox="0 0 360 105" role="group" aria-label="Thước kéo bán kính bất định" @pointermove="radiusDrag.move" @pointerup="radiusDrag.end" @pointercancel="radiusDrag.end" @lostpointercapture="radiusDrag.end">
+      <text x="180" y="22" text-anchor="middle" class="lab-small">Bán kính ρ</text>
+      <line x1="33" x2="327" y1="55" y2="55" class="lab-axis"/>
+      <text x="33" y="94" text-anchor="middle" class="lab-small">0</text>
+      <text x="327" y="94" text-anchor="middle" class="lab-small">0.6</text>
+      <circle :cx="radiusView.sx(rho)" cy="55" r="6" class="lab-dot-accent"/>
+      <circle :cx="radiusView.sx(rho)" cy="55" r="28" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Bán kính bất định rho" :aria-valuetext="fmt(rho,2)" @pointerdown="radiusDrag.start('rho',$event)" @keydown="radiusDrag.key('rho',[rho,.5],$event)"/>
+    </svg>
+    <div class="lab-buttons">
+      <button type="button" @click="rho=0">Không có bất định</button>
+      <button type="button" @click="rho=.2;trial=[2,1.5]">Chứng nhận tại ρ = 0.2</button>
+      <button type="button" @click="rho=.6">Bất định lớn</button>
     </div>
+    <details class="lab-tasks"><summary>Đổi bán kính bằng nút</summary><LabPointControls :svg="radiusSvg" axes="x"/></details>
     <div class="lab-readout" role="status">
       <p>Điểm thử x = {{fmtPoint(trial)}}. {{trialSlacks.every(v=>v>=-1e-9)?'Điểm khả thi vững.':'Điểm chưa khả thi vững.'}} Độ dư nhỏ nhất bằng {{fmt(Math.min(...trialSlacks),3)}}. Độ dư âm nghĩa là có ràng buộc bị vượt trong trường hợp xấu nhất.</p>
       <p>Nghiệm danh nghĩa (ρ = 0): (2, 2), giá trị x₁ + 2x₂ = 6.</p>
-      <p>Nghiệm bền vững: x = {{ fmtPoint(robust.x, 3) }}, giá trị <span class="is-accent">{{ fmt(robust.value, 3) }}</span>, thấp hơn {{ fmt(nominal.value - robust.value, 3) }} so với danh nghĩa. Ràng buộc chặt: {{ active.map(label).join(', ') || 'không có' }}.</p>
+      <p>Quét biên theo hướng cho nghiệm xấp xỉ {{ fmtPoint(robust.x, 3) }} với giá trị <span class="is-accent">{{ fmt(robust.value, 3) }}</span>. Các ràng buộc gần chặt gồm {{ active.map(label).join(', ') || 'không có' }}. Phần lời giảng chứng nhận chính xác giá trị 5 khi ρ = 0.2.</p>
       <p v-if="rho > 0" :class="worstViolation > 1e-9 ? 'is-bad' : ''">Nếu vẫn dùng nghiệm danh nghĩa (2, 2), trong trường hợp xấu nhất có ràng buộc bị vượt {{ fmt(worstViolation, 3) }}, vì số hạng ρ‖x‖₂ = {{ fmt(rho * Math.hypot(2, 2), 3) }}.</p>
     </div>
     <details class="lab-tasks">
@@ -91,7 +104,7 @@ const label = (i) => ['x₁ ≤ 3', 'x₂ ≤ 2', 'x₁ + x₂ ≤ 4', '−x₁ 
 </template>
 
 <style scoped>
-.point-hit{fill:transparent!important;stroke:transparent}
+.point-hit{fill:transparent!important;stroke:transparent;touch-action:none}
 .point-hit:focus-visible{stroke:var(--vang)}
 svg text{pointer-events:none}
 svg .lab-small{font-size:19px}

@@ -42,7 +42,7 @@ const matrix=computed(()=>[[row.value.t,...row.value.z],[row.value.z[0],row.valu
     <line x1="30" y1="370" x2="370" y2="370" class="lab-axis"/><line x1="30" y1="30" x2="30" y2="370" class="lab-axis"/>
     <polygon :points="ellipse.map(p=>A(p).join(',')).join(' ')" class="lab-region"/>
     <line :x1="A([2,5])[0]" :y1="A([2,5])[1]" :x2="A([8,5])[0]" :y2="A([8,5])[1]" class="lab-guide"/><line :x1="A([5,1])[0]" :y1="A([5,1])[1]" :x2="A([5,9])[0]" :y2="A([5,9])[1]" class="lab-guide"/>
-    <circle :cx="A([5,5])[0]" :cy="A([5,5])[1]" r="5" class="lab-dot"/><text x="140" y="228">(5, 5)</text>
+    <circle :cx="A([5,5])[0]" :cy="A([5,5])[1]" r="5" class="lab-dot"/><text x="140" y="245">(5, 5)</text>
     <circle :cx="A(row.coefficient)[0]" :cy="A(row.coefficient)[1]" r="10" class="lab-dot-hollow"/><text :x="Math.min(300,A(row.coefficient)[0]+13)" :y="A(row.coefficient)[1]-16">Xấu nhất</text>
     <circle :cx="A(coefficient)[0]" :cy="A(coefficient)[1]" r="7" :class="selectedCost<=37?'lab-dot-accent':'lab-dot-bad'"/>
     <circle :cx="A(coefficient)[0]" :cy="A(coefficient)[1]" r="34" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Hệ số a bên trong ellipsoid bất định" :aria-valuetext="fmtPoint(coefficient)" @pointerdown="coefficientDrag.start('a',$event)" @keydown="coefficientDrag.key('a',coefficient,$event)"/>

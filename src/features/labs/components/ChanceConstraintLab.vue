@@ -38,7 +38,7 @@ const tail=computed(()=>{
    <line v-else :x1="view.sx(0)" :x2="view.sx(0)" :y1="view.sy(0)" :y2="view.sy(1)" class="lab-accent"/>
    <line :x1="view.sx(threshold)" :x2="view.sx(threshold)" :y1="view.sy(0)" :y2="view.sy(1.1)" class="lab-bad"/>
    <line :x1="view.sx(required)" :x2="view.sx(required)" :y1="view.sy(0)" :y2="view.sy(.45)" class="lab-good"/>
-   <text x="12" y="23">Phân phối của Y = ax</text><text x="390" :y="view.sy(0)+22">Y</text>
+   <text x="12" y="23">Phân phối của Y = ax</text><text x="418" :y="view.sy(0)-10">Y</text>
    <text v-for="value in [0,5,10,15,20]" :key="value" :x="view.sx(value)-5" :y="view.sy(0)+21">{{value}}</text>
    <circle :cx="view.sx(mean)" :cy="view.sy(1)" r="7" class="lab-dot-accent"/>
    <text :x="view.sx(mean)+12" :y="view.sy(1)-12">μ = 2x</text>

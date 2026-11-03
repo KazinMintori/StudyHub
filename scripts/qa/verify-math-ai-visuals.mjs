@@ -103,6 +103,7 @@ async function sourceManifest() {
     'src/features/labs/components/ChebyshevCenterLab.vue','src/features/labs/components/ChebyshevSpaceLab.vue','src/features/labs/components/MomentBoundsLab.vue','src/features/labs/services/lp-models-geometry.mjs',
     'src/features/labs/components/FractionalLab.vue','src/features/labs/components/CharnesCooperLab.vue','src/features/labs/components/FractionalLimitLab.vue','src/features/labs/services/fractional-geometry.mjs',
     ...['QpGeometryLab','ConstrainedFitLab','PolyDistanceLab','BoxDistanceSpaceLab','VarianceDistributionLab','PortfolioLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/qp-geometry.mjs',
+    ...['SocpSliceLab','RotatedConeLab','RobustLPLab','RobustEllipsoidLab','ChanceConstraintLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -330,6 +331,13 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  robust:[
+   [0,'Điểm trong nón dưới'],[0,'Lát y₂ = 1'],[0,'Điểm trong nón trên'],[0,'Lát y₂ = 0'],
+   [1,'Không có bất định'],[1,'Bất định lớn'],[1,'Chứng nhận tại ρ = 0.2'],
+   [2,'Thử x = (3, 3)'],[2,'Thử kịch bản xấu nhất'],[2,'Đưa về nghiệm x*'],[2,'Thử x = 0'],
+   [3,'x = 5, b = 10'],[3,'Đưa về cận xác suất'],[3,'x = 0'],
+   [4,'Biên x khác 0, y = 0'],[4,'Biên x = 0, y = 0'],[4,'Độ dài x bằng 1.5']
+  ],
   qp:[
    [0,'Nghiệm trong miền'],[0,'Nghiệm giữa cạnh'],[0,'Nghiệm tại đỉnh'],[0,'PSD suy biến, nhiều nghiệm'],[0,'Nghiệm giữa cạnh'],
    [1,'Nghiệm tự do'],[1,'Thử a = 0.5'],[1,'Nghiệm với 0 ≤ a ≤ 1'],[1,'Thử a = 0.5'],
@@ -394,6 +402,15 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='robust'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Điểm trong nón dưới')assert(readout.includes('Chỉ thỏa bất đẳng thức đã bình phương'))
+   if(label==='Chứng nhận tại ρ = 0.2')assert(readout.includes('Điểm khả thi vững.')&&readout.includes('5.000'))
+   if(label==='x = 5, b = 10')assert(readout.includes('50.00%'))
+   if(label==='Đưa về cận xác suất')assert(readout.includes('5.00%'))
+   if(label==='Biên x khác 0, y = 0')assert(readout.includes('Vi phạm điều kiện nón xoay.'))
+   if(label==='Biên x = 0, y = 0')assert(readout.includes('Thỏa điều kiện nón xoay.'))
+  }
   if(name==='qp'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0&&label==='Nghiệm giữa cạnh')assert(text.includes('(2.00000, 1.60000)')&&text.includes('0.640000'),'The coupled box QP must not clip the center componentwise')
@@ -539,7 +556,7 @@ async function exercisePresets(name,touch){
 }
 
 async function exerciseFunctionChoices(name,touch){
- if(!['convex-function','epigraph','first-order','second-order','function-operations','ml-models'].includes(name))return
+ if(!['convex-function','epigraph','first-order','second-order','function-operations','ml-models','robust'].includes(name))return
  const selects=await page.$$('figure.study-lab .lab-controls select')
  for(const [index,select]of selects.entries()){
   const original=await select.evaluate(e=>e.value)
