@@ -1,92 +1,54 @@
 <script setup>
+import {computed,ref} from 'vue'
 import LabPointControls from './LabPointControls.vue'
-import { computed, ref } from 'vue'
-import { makeView, createDragger, fmt, fmtPoint } from '../controllers/svg-drag.js'
-
-// Khoảng cách giữa hai đa giác lồi (chủ đề 7, Lecture 02): QP cực tiểu ‖x₁ − x₂‖² với x₁ ∈ P₁, x₂ ∈ P₂.
-// Trong mặt phẳng, nghiệm của QP được tính đúng bằng hình học: nếu hai đa giác rời nhau (kiểm bằng trục tách),
-// cặp điểm gần nhất là một đỉnh của đa giác này và điểm gần nhất trên một cạnh của đa giác kia.
-const P1 = [[0.5, 0.5], [2.5, 0.8], [2.0, 2.6], [0.6, 2.0]]
-const SHAPE2 = [[-0.8, -0.6], [0.9, -0.4], [0.6, 0.9], [-0.7, 0.7]]
-const c2 = ref([4.5, 2.2])
-const P2 = computed(() => SHAPE2.map(([a, b]) => [c2.value[0] + a, c2.value[1] + b]))
-const sub = (a, b) => [a[0] - b[0], a[1] - b[1]]
-const dot = (a, b) => a[0] * b[0] + a[1] * b[1]
-const closestOnSeg = (p, a, b) => {
-  const ab = sub(b, a), t = Math.min(1, Math.max(0, dot(sub(p, a), ab) / dot(ab, ab)))
-  return [a[0] + t * ab[0], a[1] + t * ab[1]]
-}
-const separated = (A, B) => {
-  for (const poly of [A, B]) for (let i = 0; i < poly.length; i++) {
-    const e = sub(poly[(i + 1) % poly.length], poly[i]), n = [-e[1], e[0]]
-    const pa = A.map(p => dot(n, p)), pb = B.map(p => dot(n, p))
-    if (Math.max(...pa) < Math.min(...pb) || Math.max(...pb) < Math.min(...pa)) return true
-  }
-  return false
-}
-const result = computed(() => {
-  const A = P1, B = P2.value
-  if (!separated(A, B)) return { d: 0 }
-  let best = { d: Infinity }
-  const scan = (V, W, flip) => {
-    for (const v of V) for (let i = 0; i < W.length; i++) {
-      const q = closestOnSeg(v, W[i], W[(i + 1) % W.length]), d = Math.hypot(...sub(v, q))
-      if (d < best.d) best = { d, x1: flip ? q : v, x2: flip ? v : q }
-    }
-  }
-  scan(A, B, false); scan(B, A, true)
-  return best
+import {createDragger,makeView,fmt,fmtPoint} from '../controllers/svg-drag.js'
+import {convexPolygonDistance} from '../services/qp-geometry.mjs'
+import {clipSegment} from '../services/svg-clipping.mjs'
+import {placePointLabels} from '../services/diagram-labels.mjs'
+const svg=ref(null),center=ref([4.5,2.2])
+const a=[[.5,.5],[2.5,.8],[2,2.6],[.6,2]],shape=[[-.8,-.6],[.9,-.4],[.6,.9],[-.7,.7]]
+const b=computed(()=>shape.map(p=>p.map((v,i)=>v+center.value[i])))
+const result=computed(()=>convexPolygonDistance(a,b.value))
+const flat=makeView({x0:-.7,x1:6.9,y0:-.8,y1:5.8,width:360,height:320,pad:28}),P=flat.point
+const view=computed(()=>({...flat,x0:.3,x1:5.8,y0:.2,y1:4.7}))
+const drag=createDragger(svg,view,(_,p)=>{center.value=p},{step:.05})
+const bisector=computed(()=>{
+ if(result.value.distance<1e-10)return null
+ const {p,q}=result.value,m=p.map((v,i)=>(v+q[i])/2),d=[-(q[1]-p[1]),q[0]-p[0]]
+ return clipSegment([-20,20].map(t=>m.map((v,i)=>v+t*d[i])),flat)
 })
-// Đường trung trực của đoạn nối hai điểm gần nhất là một siêu phẳng tách hai đa giác.
-const bisector = computed(() => {
-  const r = result.value
-  if (!r.x1) return null
-  const m = [(r.x1[0] + r.x2[0]) / 2, (r.x1[1] + r.x2[1]) / 2], d = sub(r.x2, r.x1), t = [-d[1], d[0]], L = 20 / Math.hypot(...t)
-  return [[m[0] - L * t[0], m[1] - L * t[1]], [m[0] + L * t[0], m[1] + L * t[1]]]
-})
-const view = ref(makeView({ x0: -0.5, x1: 6.5, y0: -0.5, y1: 4.5, width: 460, height: 329 }))
-const svg = ref(null)
-const P = (p) => [view.value.sx(p[0]), view.value.sy(p[1])]
-const drag = createDragger(svg, view, (_, p) => { c2.value = p }, { step: 0.1, snap: 0.05 })
+const labels=computed(()=>placePointLabels([{key:'a',text:'P₁',point:P([1.3,1.4])},{key:'b',text:'P₂',point:P(center.value)}],{width:360,height:320,reserved:[result.value.p,result.value.q,center.value].map(p=>{const [x,y]=P(p);return{x:x-9,y:y-9,width:18,height:18}})}))
 </script>
-
 <template>
-  <figure class="study-lab" aria-label="Khoảng cách giữa hai đa giác lồi là nghiệm của một quy hoạch toàn phương">
-    <p class="lab-title">Hai điểm gần nhau nhất của hai đa giác</p>
-    <p class="lab-lead">Kéo đa giác bên phải. Cặp điểm gần nhau nhất là nghiệm của một QP bốn biến, và đường trung trực của đoạn nối chúng tách hai đa giác.</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" aria-label="Hai đa giác, đoạn nối hai điểm gần nhất và đường thẳng tách" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
-      <line v-for="t in [0, 1, 2, 3, 4, 5, 6]" :key="`gx${t}`" :x1="view.sx(t)" :x2="view.sx(t)" y1="0" :y2="view.height" class="lab-grid" />
-      <line v-for="t in [0, 1, 2, 3, 4]" :key="`gy${t}`" x1="0" :x2="view.width" :y1="view.sy(t)" :y2="view.sy(t)" class="lab-grid" />
-      <line v-if="bisector" :x1="P(bisector[0])[0]" :y1="P(bisector[0])[1]" :x2="P(bisector[1])[0]" :y2="P(bisector[1])[1]" class="lab-guide" />
-      <polygon :points="P1.map(p => P(p).join(',')).join(' ')" class="lab-region" />
-      <polygon :points="P2.map(p => P(p).join(',')).join(' ')" :class="result.d === 0 ? 'lab-bad-fill' : 'lab-good-fill'" style="opacity: 0.85" />
-      <template v-if="result.x1">
-        <line :x1="P(result.x1)[0]" :y1="P(result.x1)[1]" :x2="P(result.x2)[0]" :y2="P(result.x2)[1]" class="lab-warn" />
-        <circle :cx="P(result.x1)[0]" :cy="P(result.x1)[1]" r="6" class="lab-dot-warn" />
-        <circle :cx="P(result.x2)[0]" :cy="P(result.x2)[1]" r="6" class="lab-dot-warn" />
-      </template>
-      <text :x="P([1.2, 1.4])[0]" :y="P([1.2, 1.4])[1]" class="lab-small">P₁</text>
-      <circle :cx="P(c2)[0]" :cy="P(c2)[1]" r="10" class="lab-handle" tabindex="0" role="slider" aria-label="Kéo đa giác P₂" :aria-valuetext="`tâm ${fmtPoint(c2)}`" @pointerdown="drag.start('c2', $event)" @keydown="drag.key('c2', c2, $event)" />
-      <text :x="P(c2)[0] + 12" :y="P(c2)[1] - 10" class="lab-small">P₂</text>
-    </svg>
-    <LabPointControls :svg="svg" />
-    <p class="lab-legend"><span class="legend-accent">P₁</span><span class="legend-good">P₂ (rời P₁)</span><span class="legend-bad">P₂ chồng lên P₁</span><span class="legend-warn">đoạn ngắn nhất</span><span class="legend-guide">đường thẳng tách</span></p>
-    <div class="lab-readout" role="status">
-      <p>QP: cực tiểu ‖x₁ − x₂‖² với x₁ ∈ P₁ và x₂ ∈ P₂, gồm 4 biến và 8 bất đẳng thức tuyến tính.</p>
-      <p v-if="result.d === 0" class="is-bad">Hai đa giác giao nhau: giá trị tối ưu bằng 0, và mọi điểm chung đều cho x₁ = x₂ tối ưu.</p>
-      <template v-else>
-        <p>Khoảng cách <span class="is-accent">{{ fmt(result.d, 3) }}</span>, đạt tại x₁ = {{ fmtPoint(result.x1) }} và x₂ = {{ fmtPoint(result.x2) }}.</p>
-        <p>Đường trung trực của đoạn x₁x₂ tách hẳn hai đa giác: đây là một siêu phẳng tách, dựng được từ nghiệm của QP.</p>
-      </template>
-    </div>
-    <details class="lab-tasks">
-      <summary>Gợi ý thao tác</summary>
-      <ol>
-        <li>Kéo P₂ quanh P₁. Cặp điểm gần nhất khi thì là hai đỉnh, khi thì là một đỉnh và một điểm giữa cạnh. Khi nào xảy ra trường hợp nào?</li>
-        <li>Khi điểm gần nhất nằm giữa một cạnh, đoạn ngắn nhất tạo với cạnh ấy góc bao nhiêu?</li>
-        <li>Kéo hai đa giác cho chạm nhau. Nghiệm của QP còn duy nhất không?</li>
-        <li>Kéo P₂ dọc một đường thẳng đi ngang qua P₁ và theo dõi khoảng cách. Vì sao khoảng cách, xem như hàm của vị trí P₂, là một hàm lồi?</li>
-      </ol>
-    </details>
-  </figure>
+ <figure class="study-lab" aria-label="QP khoảng cách giữa hai đa giác lồi">
+  <figcaption class="lab-title">QP trả về d², còn độ dài đoạn nối là d</figcaption>
+  <p class="lab-lead">Kéo chấm tím ở P₂ để tịnh tiến đa giác. Hai chấm vàng là một cặp gần nhau nhất. Khi hai miền giao nhau, chấm xanh đánh dấu một điểm chung thật sự.</p>
+  <svg ref="svg" viewBox="0 0 360 320" role="group" aria-label="Hai đa giác, cặp điểm tối ưu và đường phân tách đã cắt đúng khung" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+   <polygon :points="a.map(p=>P(p).join(',')).join(' ')" class="lab-region"/>
+   <polygon :points="b.map(p=>P(p).join(',')).join(' ')" class="second"/>
+   <line v-if="bisector" :x1="P(bisector[0])[0]" :y1="P(bisector[0])[1]" :x2="P(bisector[1])[0]" :y2="P(bisector[1])[1]" class="lab-guide"/>
+   <line :x1="P(result.p)[0]" :y1="P(result.p)[1]" :x2="P(result.q)[0]" :y2="P(result.q)[1]" class="shortest"/>
+   <circle v-for="(p,i) in result.distance>1e-10?[result.p,result.q]:[result.p]" :key="i" :cx="P(p)[0]" :cy="P(p)[1]" r="5" :class="result.distance>1e-10?'lab-dot-warn':'common'"/>
+   <text v-for="(label,id) in labels" :key="id" :x="label.x" :y="label.y" :text-anchor="label.anchor">{{id==='a'?'P₁':'P₂'}}</text>
+   <circle :cx="P(center)[0]" :cy="P(center)[1]" r="6" class="lab-dot-accent"/>
+   <circle :cx="P(center)[0]" :cy="P(center)[1]" r="27" class="lab-handle hit" role="slider" tabindex="0" aria-label="Vị trí tịnh tiến của P2" :aria-valuetext="fmtPoint(center,4)" @pointerdown="drag.start('center',$event)" @keydown="drag.key('center',center,$event)"/>
+  </svg>
+  <div class="lab-buttons"><button type="button" @click="center=[4.5,2.2]">Hai miền rời nhau</button><button type="button" @click="center=[1.4,1.4]">Hai miền giao nhau</button><button type="button" @click="center=[3.3,1.4]">Cho hai đỉnh chạm nhau</button></div>
+  <details class="lab-tasks"><summary>Dịch P₂ bằng nút</summary><LabPointControls :svg="svg"/></details>
+  <p class="lab-legend"><span class="legend-accent">P₁</span><span class="legend-good">P₂</span><span class="legend-warn">Đoạn ngắn nhất</span></p>
+  <div class="lab-readout" role="status">
+   <p>Giá trị tối ưu QP d² = {{fmt(result.squared,6)}}. Khoảng cách Euclid d = {{fmt(result.distance,6)}}.</p>
+   <p>Một cặp tối ưu là {{fmtPoint(result.p,4)}} và {{fmtPoint(result.q,4)}}. {{result.distance<1e-10?'Hai miền có điểm chung.':'Đường nét đứt là đường trung trực phân tách hai miền.'}}</p>
+   <p>Độ dài được tính từ tọa độ toán học. Hai trục dùng cùng một tỉ lệ, nên góc vuông ở cặp điểm trên cạnh được giữ đúng trên hình. Cặp điểm tối ưu không nhất thiết duy nhất. So sánh hình học dùng dung sai 10⁻¹⁰.</p>
+  </div>
+ </figure>
 </template>
+<style scoped>
+svg text{font-size:18px}
+.second{fill:var(--xanh-soft);stroke:var(--xanh);stroke-width:1.5}
+.common{fill:var(--xanh)}
+.shortest{stroke:var(--vang);stroke-width:2}
+svg :is(line,polygon,text),svg circle:not(.hit){pointer-events:none}
+.hit{fill:transparent!important;stroke:transparent;touch-action:none}
+.hit:focus-visible{stroke:var(--vang)}
+</style>

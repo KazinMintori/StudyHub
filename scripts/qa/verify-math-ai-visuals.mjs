@@ -54,6 +54,7 @@ const routes = [
   ['linear-program','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-tuyen-tinh.html'],
   ['lp-models','/toan-cho-ai/bai-giang/bai-02-tap-loi/mo-hinh-lp.html'],
   ['fractional','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-phan-tuyen-tinh.html'],
+  ['qp','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-toan-phuong.html'],
   ['function-operations','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi-cua-ham.html'],
   ['optimality','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/dieu-kien-toi-uu.html'],
   ['ml-models','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tinh-loi-trong-mo-hinh-hoc-may.html'],
@@ -101,6 +102,7 @@ async function sourceManifest() {
     'src/features/labs/components/LPDirectionLab.vue','src/features/labs/components/LpCubeLab.vue','src/features/labs/services/linear-program-geometry.mjs',
     'src/features/labs/components/ChebyshevCenterLab.vue','src/features/labs/components/ChebyshevSpaceLab.vue','src/features/labs/components/MomentBoundsLab.vue','src/features/labs/services/lp-models-geometry.mjs',
     'src/features/labs/components/FractionalLab.vue','src/features/labs/components/CharnesCooperLab.vue','src/features/labs/components/FractionalLimitLab.vue','src/features/labs/services/fractional-geometry.mjs',
+    ...['QpGeometryLab','ConstrainedFitLab','PolyDistanceLab','BoxDistanceSpaceLab','VarianceDistributionLab','PortfolioLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/qp-geometry.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -193,6 +195,7 @@ async function interact(touch,onlyLab=null) {
     // Grab slightly away from the center, then send a zero-displacement move.
     // The point should retain its position inside the larger touch target.
     const grabX=x+Math.min(7,box.width/5),grabY=y-Math.min(5,box.height/5)
+    let reversedAtBoundary=false
     if (touch) {
       const client = await page.createCDPSession()
       await client.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x:grabX, y:grabY }] })
@@ -201,6 +204,10 @@ async function interact(touch,onlyLab=null) {
       const stationary=await handle.evaluate(e=>{const r=e.getBoundingClientRect();return [r.x+r.width/2,r.y+r.height/2]})
       assert(Math.hypot(stationary[0]-clientPoint.x,stationary[1]-clientPoint.y)<2.5,`Point jumped at off-center touch: lab ${i}`)
       await client.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: grabX + 24, y: grabY - 21 }] })
+      if(await handle.evaluate(e=>e.getAttribute('aria-valuetext'))===before){
+        reversedAtBoundary=true
+        await client.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:grabX-24,y:grabY+21}]})
+      }
       await client.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] })
       await client.detach()
     } else {
@@ -208,7 +215,9 @@ async function interact(touch,onlyLab=null) {
       await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(resolve)))
       const stationary=await handle.evaluate(e=>{const r=e.getBoundingClientRect();return [r.x+r.width/2,r.y+r.height/2]})
       assert(Math.hypot(stationary[0]-clientPoint.x,stationary[1]-clientPoint.y)<2.5,`Point jumped at off-center mouse grab: lab ${i}`)
-      await page.mouse.move(grabX+24,grabY-21,{steps:6});await page.mouse.up()
+      await page.mouse.move(grabX+24,grabY-21,{steps:6})
+      if(await handle.evaluate(e=>e.getAttribute('aria-valuetext'))===before){reversedAtBoundary=true;await page.mouse.move(grabX-24,grabY+21,{steps:6})}
+      await page.mouse.up()
     }
     const after = await handle.evaluate(e => e.getAttribute('aria-valuetext'))
     if (after === before) {
@@ -227,7 +236,7 @@ async function interact(touch,onlyLab=null) {
       console.log(JSON.stringify(diagnostic))
     }
     assert(Math.abs(finalScroll-initialScroll)<2,'Dragging a handle scrolled the page')
-    interactions.push({url:page.url(),width:page.viewport().width,input:touch?'touch':'mouse',lab:i,handle:handleIndex,before,after,offCenterGrab:true,pageStayedStill:true,events})
+    interactions.push({url:page.url(),width:page.viewport().width,input:touch?'touch':'mouse',lab:i,handle:handleIndex,before,after,offCenterGrab:true,reversedAtBoundary,pageStayedStill:true,events})
     await handle.evaluate(e => e.focus())
     for (const key of ['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft']) {
       await page.keyboard.press(key)
@@ -321,6 +330,14 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  qp:[
+   [0,'Nghiệm trong miền'],[0,'Nghiệm giữa cạnh'],[0,'Nghiệm tại đỉnh'],[0,'PSD suy biến, nhiều nghiệm'],[0,'Nghiệm giữa cạnh'],
+   [1,'Nghiệm tự do'],[1,'Thử a = 0.5'],[1,'Nghiệm với 0 ≤ a ≤ 1'],[1,'Thử a = 0.5'],
+   [2,'Hai miền rời nhau'],[2,'Hai miền giao nhau'],[2,'Cho hai đỉnh chạm nhau'],[2,'Hai miền rời nhau'],
+   [3,'Cách nhau theo ba trục'],[3,'Hai mặt gần nhất'],[3,'Hai mặt chạm nhau'],[3,'Hai khối giao nhau'],[3,'Đáy x₃ = 2'],[3,'Đáy x₃ = 0'],[3,'Cách nhau theo ba trục'],
+   [4,'Phương sai lớn nhất'],[4,'Dồn toàn bộ vào 2'],[4,'Trung bình bằng 1'],[4,'Phân phối bên trong'],
+   [5,'Danh mục ít rủi ro nhất'],[5,'Yêu cầu ít nhất 7%'],[5,'Yêu cầu không khả thi'],[5,'Chỉ tài sản B'],[5,'Chỉ tài sản A'],[5,'Yêu cầu ít nhất 7%']
+  ],
   fractional:[
    [0,'Đỉnh cực đại'],[0,'Đỉnh cực tiểu'],[0,'Ngưỡng không đạt'],[0,'Điểm bên trong'],
    [1,'Nghiệm cực đại'],[1,'Nghiệm cực tiểu'],[1,'Đổi góc nhìn R³'],[1,'Điểm ở trong miền'],
@@ -377,6 +394,24 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='qp'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===0&&label==='Nghiệm giữa cạnh')assert(text.includes('(2.00000, 1.60000)')&&text.includes('0.640000'),'The coupled box QP must not clip the center componentwise')
+   if(index===0&&label==='PSD suy biến, nhiều nghiệm')assert(text.includes('mọi điểm trên đoạn đều tối ưu'),'The singular case must retain an optimal segment')
+   if(index===1&&label==='Nghiệm tự do')assert(text.includes('J = 0.050000'),'Free LS must recover the exact residual sum')
+   if(index===1&&label==='Nghiệm với 0 ≤ a ≤ 1')assert(text.includes('J = 2.500000'),'The slope constraint must adjust the intercept too')
+   if(index===2&&label==='Cho hai đỉnh chạm nhau')assert(text.includes('d² = 0.000000')&&text.includes('Hai miền có điểm chung.'),'Contact must return an actual common witness')
+   if(index===3&&label==='Cách nhau theo ba trục')assert(text.includes('d² = 3.610000')&&text.includes('d = 1.900000'),'3D distance must distinguish its square')
+   if(index===3&&label==='Hai mặt chạm nhau')assert(text.includes('d² = 0.000000'),'Touching cubes must have zero distance')
+   if(index===4){
+    assert(text.includes('Tổng = 1.000000'),'Probability mass must be conserved')
+    if(label==='Phương sai lớn nhất')assert(text.includes('= 4.000000'),'The sharp global variance bound must be attained')
+    if(label==='Dồn toàn bộ vào 2')assert(text.includes('= 0.000000'),'A deterministic value must have zero variance')
+   }
+   if(index===5&&label==='Danh mục ít rủi ro nhất')assert(text.includes('w* = 0.142857')&&text.includes('4.3916%'),'The diversification optimum must match the independent calculation')
+   if(index===5&&label==='Yêu cầu ít nhất 7%')assert(text.includes('w* = 0.500000')&&text.includes('7.4162%'),'The 7-percent return constraint must bind at the correct weight')
+   if(index===5&&label==='Yêu cầu không khả thi')assert(text.includes('Bất khả thi:'),'A target above the available returns cannot create an optimum')
+  }
   if(name==='fractional'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0){
@@ -479,6 +514,10 @@ async function exercisePresets(name,touch){
    await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+index+'-'+label)
   }
   if(name==='fractional'&&(label==='Điểm bên trong'||label==='Điểm ở trong miền'||label==='Điểm hữu hạn x = 1')){
+   await interact(touch,index)
+   await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+index+'-'+label)
+  }
+  if(name==='qp'&&['Nghiệm giữa cạnh','Thử a = 0.5','Hai miền rời nhau','Cách nhau theo ba trục','Phân phối bên trong','Yêu cầu ít nhất 7%'].includes(label)){
    await interact(touch,index)
    await inspect(name+'-after-direct-input-'+page.viewport().width+'-'+index+'-'+label)
   }
