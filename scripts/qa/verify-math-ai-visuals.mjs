@@ -48,6 +48,7 @@ await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
   ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
+  ['conic-complexity','/toan-cho-ai/bai-giang/bai-04-gradient-newton/do-phuc-tap-va-bat-dang-thuc-tong-quat.html'],
   ['phase-one','/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-pha-1-va-khoi-tao.html'],
   ['newton-hub','/toan-cho-ai/bai-giang/bai-04-gradient-newton.html'],
   ['lagrange-bound','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
@@ -119,6 +120,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    'src/features/labs/components/BarrierScalingLab.vue',
     ...['PhaseOneSlackLab','ViolationSumLab'].map(name=>'src/features/labs/components/'+name+'.vue'),
     ...['SteepestDirectionLab','ArmijoStepLab','NewtonModelLab','SimplexBarrierLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/LagrangeBoundLab.vue',
@@ -361,6 +363,10 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'conic-complexity':[
+   [0,'Nón Lorentz R³'],[0,'Co một nửa'],[0,'Phóng gấp đôi'],
+   [0,'Ma trận cỡ 2'],[0,'Ma trận cỡ 3'],[0,'Co một nửa']
+  ],
   'phase-one':[
    [0,'a = −2'],[0,'Đưa x về cực tiểu'],[0,'a = 0'],[0,'Đưa x về cực tiểu'],
    [0,'a = 2'],[0,'Đưa x về cực tiểu'],[0,'Ví dụ không đạt infimum'],
@@ -491,6 +497,12 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='conic-complexity'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Phóng gấp đôi')assert(text.includes('−1.3863'))
+   if(label==='Ma trận cỡ 3')assert(text.includes('ν = 3')&&text.includes('−2.0794'))
+   if(label==='Co một nửa')assert(text.includes('1.3863')||text.includes('2.0794'))
+  }
   if(name==='phase-one'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Đưa x về cực tiểu')assert(text.includes('−1.0000')||text.includes('0.0000')||text.includes('1.0000'))
