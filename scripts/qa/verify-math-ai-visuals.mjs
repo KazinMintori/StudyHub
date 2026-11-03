@@ -82,6 +82,7 @@ const routes = [
   ,['models', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.html']
   ,['operations', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.html']
   ,['robust', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-non-bac-hai.html']
+  ,['tail-bounds', '/toan-cho-ai/bai-giang/bai-02-tap-loi/can-chebyshev-va-chernoff.html']
   ,['detector', '/toan-cho-ai/bai-giang/bai-02-tap-loi/uoc-luong-phi-tham-so-va-kiem-dinh.html']
   ,['fitting', '/toan-cho-ai/bai-giang/bai-02-tap-loi/khop-ham-va-noi-suy.html']
   ,['pareto', '/toan-cho-ai/bai-giang/bai-02-tap-loi/toi-uu-vector-va-danh-doi.html']
@@ -111,6 +112,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    ...['QuadraticTailLab','ChernoffGaussianLab','CantelliBoundLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['DetectorRocLab','MaxEntropySimplexLab','MonotoneCountsLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/detector-roc.mjs',
     ...['DerivativeGridLab','SmoothingSplineLab','ConvexInterpolationLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/smoothing-spline.mjs',
     'src/features/labs/components/ParetoPlansLab.vue','src/features/labs/components/TradeoffLab.vue','src/features/labs/services/regularization-path.mjs',
@@ -341,6 +343,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'tail-bounds':[
+   [0,'Tâm elip'],[0,'Xem mặt chặn trong R³'],[0,'Biên elip'],[0,'Ngoài elip'],
+   [1,'Thử t = 2'],[1,'Đưa λ về tối ưu'],[1,'Thử t = −1'],[1,'Thử t = 2'],
+   [2,'Đặt đỉnh tại −1/a'],[2,'Ví dụ a = 2']
+  ],
   detector:[
    [0,'Về ví dụ (1, 5, 4)'],[0,'Gộp khối kế tiếp'],[0,'Gộp khối kế tiếp'],[0,'Tới nghiệm'],
    [1,'Biên trái'],[1,'Phân phối đều'],[1,'Ví dụ kỳ vọng 0,2'],[1,'Biên phải'],[1,'Ví dụ kỳ vọng 0,2'],
@@ -434,6 +441,15 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='tail-bounds'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Tâm elip')assert(readout.includes('f = 0.000')&&readout.includes('chỉ thị bằng 0'))
+   if(label==='Biên elip')assert(readout.includes('f = 1.000')&&readout.includes('chỉ thị bằng 1'))
+   if(label==='Xem mặt chặn trong R³')assert(await labs[index].$('svg .tail-level'))
+   if(label==='Đưa λ về tối ưu')assert(readout.includes('0.1353'))
+   if(label==='Thử t = −1')assert(readout.includes('1.0000 tại λ = 0.00'))
+   if(label==='Ví dụ a = 2')assert(readout.includes('parabol 0.2000'))
+  }
   if(name==='detector'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Tới nghiệm')assert(readout.includes('(0.3333, 0.3333, 0.3333)'))
