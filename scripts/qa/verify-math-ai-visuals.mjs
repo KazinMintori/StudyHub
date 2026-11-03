@@ -116,6 +116,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    'src/features/labs/components/EllipsoidLab.vue',
     ...['LocationCostsLab','AnchoredNetworkLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EllipsoidAxesLab','SimplexSpheresLab','AnalyticCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/ExperimentDesignLab.vue',
@@ -351,6 +352,7 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  ellipsoid:[[0,'Quả cầu đơn vị'],[0,'Suy biến thành đoạn'],[0,'Suy biến thành điểm'],[0,'Trị riêng 4 và 1']],
   location:[
    [0,'Đưa về cân bằng'],[0,'Đổi có neo và bỏ neo'],[0,'Đưa về cân bằng'],[0,'Tịnh tiến cả hai tới 3'],
    [1,'Nghiệm toàn phương'],[1,'Nghiệm Euclid'],[1,'Một nghiệm Manhattan'],[1,'Đổi R² và R³'],
@@ -461,6 +463,12 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='ellipsoid'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Suy biến thành đoạn')assert(text.includes('ép thành một đoạn thẳng'))
+   if(label==='Suy biến thành điểm')assert(text.includes('ép thành một điểm'))
+   if(label==='Quả cầu đơn vị')assert(text.includes('(Au)ᵀP⁻¹(Au) = 1.0000'))
+  }
   if(name==='location'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0&&label==='Đưa về cân bằng')assert(text.includes('Gradient (0.000, 0.000)'))
