@@ -47,6 +47,7 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['adaptive','/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.html'],
   ['training','/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.html'],
   ['primal-dual','/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.html'],
   ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
@@ -124,6 +125,8 @@ async function sourceManifest() {
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
     'src/features/labs/components/BarrierScalingLab.vue','src/features/labs/components/PrimalDualStepLab.vue',
     ...['MiniBatchNoiseLab','MomentumStateLab','OptimizerPathLab','InitializationFlowLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    ...['AdaptiveMemoryLab','ConjugateDirectionsLab','BfgsSecantLab','BatchNormScaleLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    ...['adaptive-sequence','conjugate-directions'].map(name=>`src/features/labs/services/${name}.mjs`),
     ...['PhaseOneSlackLab','ViolationSumLab'].map(name=>'src/features/labs/components/'+name+'.vue'),
     ...['SteepestDirectionLab','ArmijoStepLab','NewtonModelLab','SimplexBarrierLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/LagrangeBoundLab.vue',
@@ -366,6 +369,12 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  adaptive:[
+   [0,'Ví dụ 2 rồi 1'],[0,'Một xung rồi im lặng'],[0,'Đổi dấu liên tục'],
+   [1,'AdaGrad'],[1,'RMSProp'],[1,'Adam'],[1,'Xem mặt trong R³'],[1,'Xem bước 10'],
+   [2,'Xuất phát tại gốc'],[2,'Tiến một bước'],[2,'Tiến một bước'],[2,'Hệ ba chiều'],[2,'Tiến một bước'],[2,'Tiến một bước'],[2,'Tiến một bước'],
+   [3,'c = −2'],[3,'Bước dọc'],[3,'Bước ngang'],[4,'ε = 0'],[4,'α = 2'],[4,'ε = 1']
+  ],
   training:[
    [0,'Đưa θ về nghiệm'],[0,'B = 1'],[0,'Cập nhật theo lô đang chọn'],[0,'B = 4'],[0,'Không hoàn lại'],
    [1,'Quán tính đi ra xa'],[1,'Quán tính đi về nghiệm'],[1,'Vận tốc bằng 0'],
@@ -510,6 +519,15 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='adaptive'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Ví dụ 2 rồi 1')assert(readout.includes('0.09322'))
+   if(label==='Xem mặt trong R³')await interact(touch,index)
+   if(label==='Tiến một bước'&&readout.includes('Bước 3.'))assert(readout.includes('Chuẩn phần dư 0.000000'))
+   if(label==='Bước dọc')assert(readout.includes('không đạt'))
+   if(label==='Bước ngang')assert(readout.includes('trùng với s'))
+   if(label==='ε = 1')assert(readout.includes('0.8944'))
+  }
   if(name==='training'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Không hoàn lại')assert(readout.includes('nhiễu bằng 0'))

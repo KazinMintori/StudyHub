@@ -7,7 +7,10 @@ import {createDragger,fmt,fmtPoint,makeView} from '../controllers/svg-drag.js'
 import {clipPolyline,clipSegment} from '../services/svg-clipping.mjs'
 import {project3,unprojectPlane} from '../services/foundation-geometry.mjs'
 
-const svg=ref(null),start=ref([2,2]),method=ref('momentum'),rate=ref(0.1),kappa=ref(10),momentum=ref(0.9),step=ref(0)
+const props=defineProps({adaptive:Boolean})
+const defaultMethod=props.adaptive?'adam':'momentum'
+const extraMethods={newton:'Newton',adagrad:'AdaGrad',rmsprop:'RMSProp',adam:'Adam'}
+const svg=ref(null),start=ref([2,2]),method=ref(defaultMethod),rate=ref(0.1),kappa=ref(10),momentum=ref(0.9),step=ref(0)
 const bounds={x0:-3.2,x1:3.2,y0:-3.2,y1:3.2}
 const flat=makeView({...bounds,width:400,height:340,pad:36})
 const space=ref(false)
@@ -36,11 +39,11 @@ const mesh=computed(()=>[-3,-2,-1,0,1,2,3].flatMap(fixed=>[0,1].map(axis=>{
 })))
 watch([start,method,rate,kappa,momentum],()=>{step.value=0})
 const drag=createDragger(svg,view,(_,p)=>{start.value=p.map(x=>Math.max(-2.7,Math.min(2.7,x)));step.value=0},{step:0.1})
-function stable(){start.value=[2,2];method.value='momentum';rate.value=0.1;kappa.value=10;momentum.value=0.9;step.value=0}
+function stable(){start.value=[2,2];method.value=defaultMethod;rate.value=0.1;kappa.value=10;momentum.value=0.9;step.value=0}
 </script>
 
 <template>
-  <figure class="study-lab" aria-label="Đường cập nhật gradient toàn phần, Momentum và Nesterov">
+  <figure class="study-lab" aria-label="Đường cập nhật trên hàm toàn phương">
     <figcaption class="lab-title">Đổi điểm xuất phát trực tiếp trên đường đồng mức</figcaption>
     <p class="lab-lead">Hàm f(x, y) = (x² + κy²)/2 dùng gradient toàn phần. Kéo điểm xuất phát màu vàng rồi xem từng bước. Ở chế độ R³, lưới biểu diễn độ cao của hàm và các bước nằm trên mặt phẳng tham số bên dưới.</p>
     <svg ref="svg" viewBox="0 0 400 340" role="group" aria-label="Điểm xuất phát kéo được trên mặt phẳng tham số"
@@ -60,15 +63,18 @@ function stable(){start.value=[2,2];method.value='momentum';rate.value=0.1;kappa
     </svg>
     <details class="lab-tasks"><summary>Điều chỉnh điểm xuất phát bằng nút</summary><LabPointControls :svg="svg" /></details>
     <div class="lab-controls">
-      <label>η = {{fmt(rate)}}<input v-model.number="rate" type="range" min="0.01" max="0.4" step="0.01" /></label>
+      <label>η = {{fmt(rate)}}<input v-model.number="rate" type="range" min="0.01" max="0.4" step="0.01" :disabled="method==='newton'" /></label>
       <label>κ = {{kappa}}<input v-model.number="kappa" type="range" min="1" max="20" step="1" /></label>
-      <label>μ = {{fmt(momentum)}}<input v-model.number="momentum" type="range" min="0" max="0.95" step="0.05" :disabled="method==='gd'" /></label>
+      <label>μ = {{fmt(momentum)}}<input v-model.number="momentum" type="range" min="0" max="0.95" step="0.05" :disabled="method!=='momentum'&&method!=='nesterov'" /></label>
     </div>
     <div class="lab-buttons">
       <button type="button" :aria-pressed="space" @click="space=!space">{{space?'Về đường đồng mức R²':'Xem mặt trong R³'}}</button>
       <button type="button" :aria-pressed="method==='gd'" @click="method='gd'">Gradient toàn phần</button>
       <button type="button" :aria-pressed="method==='momentum'" @click="method='momentum'">Momentum</button>
       <button type="button" :aria-pressed="method==='nesterov'" @click="method='nesterov'">Nesterov</button>
+      <template v-if="adaptive">
+        <button v-for="(label,key) in extraMethods" :key="key" type="button" :aria-pressed="method===key" @click="method=key">{{label}}</button>
+      </template>
       <button type="button" @click="stable">Khôi phục ví dụ</button>
       <button type="button" @click="step=10">Xem bước 10</button>
       <button type="button" @click="method='gd';rate=0.3;kappa=10;step=0">Thử bước gradient quá lớn</button>
@@ -76,6 +82,9 @@ function stable(){start.value=[2,2];method.value='momentum';rate.value=0.1;kappa
     <SimulationControls v-model="step" :max="trace.length-1" :reset-key="trace" />
     <div class="lab-readout" role="status">
       <p>Bước {{step}}, vị trí {{fmtPoint(row.x,4)}}, f = {{fmt(row.value,4)}}. Khởi đầu {{fmtPoint(start)}}.</p>
+      <p v-if="method==='adagrad'">Tổng bình phương gradient {{fmtPoint(row.sum,4)}}.</p>
+      <p v-if="method==='rmsprop'">Trung bình mũ của bình phương gradient {{fmtPoint(row.v,4)}}.</p>
+      <p v-if="method==='adam'">Mômen trước hiệu chỉnh m = {{fmtPoint(row.m,4)}}, v = {{fmtPoint(row.v,4)}}.</p>
       <p v-if="!inside(row.x)">Điểm hiện tại vượt miền vẽ. Bảng vẫn tính giá trị. Hình giữ các bước có đầu hoặc cuối trong khung và cắt chúng tại biên.</p>
       <p v-else>Kéo vòng tại điểm xuất phát để tạo một lần chạy mới. Vận tốc đầu được đặt lại bằng 0.</p>
       <p>Thay đổi η, μ hoặc κ có thể làm thuật toán dao động hay phân kỳ. Mô phỏng hữu hạn không chứng minh tốc độ hội tụ cho mọi hàm.</p>
