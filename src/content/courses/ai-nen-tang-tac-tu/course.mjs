@@ -56,7 +56,8 @@ export const parts = [
   {
     title: 'Phần V: Biểu diễn cá thể và quan hệ',
     lessons: [
-      '15-ca-the-va-quan-he'
+      '15-ca-the-va-quan-he',
+      '16-do-thi-tri-thuc-va-ban-the-luan'
     ]
   }
 ]

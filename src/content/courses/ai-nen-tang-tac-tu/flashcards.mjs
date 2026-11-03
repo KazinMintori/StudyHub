@@ -374,5 +374,66 @@ export const flashcards = [
     "category": "ai-nen-tang-tac-tu",
     "lecture": "14-he-da-tac-tu",
     "tags": ["arrow-theorem", "social-choice", "voting"]
+  },
+  {
+    "id": "fc-artint-ch16-01",
+    "front": "Mô hình biểu diễn bộ ba (Triples) trong đồ thị tri thức có cấu trúc và ưu điểm gì?",
+    "back": "Mỗi sự kiện nguyên tử được biểu diễn bằng bộ ba <Chủ thể, Thuộc tính, Giá trị> (hay prop(Ind, Prop, Val)). Ưu điểm: Lược đồ mở không ràng buộc (schema-free), dễ dàng tích hợp các nguồn dữ liệu phân tán, có thể bổ sung thuộc tính mới mà không cần sửa bảng cấu trúc.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "tags": [
+      "knowledge-graph",
+      "triples",
+      "rdf"
+    ]
+  },
+  {
+    "id": "fc-artint-ch16-02",
+    "front": "Kỹ thuật Hiện thực hóa quan hệ (Reification) giải quyết bài toán gì trong đồ thị tri thức?",
+    "back": "Chuyển đổi một mối quan hệ n-ngôi, một sự kiện hoặc một phát biểu thành một cá thể độc lập trung gian. Kỹ thuật này cho phép gắn thêm các thuộc tính phụ (như thời gian, địa điểm, độ tin cậy, nguồn gốc) mà không làm bùng nổ số lượng vị từ trong cơ sở tri thức.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "tags": [
+      "reification",
+      "knowledge-graph",
+      "n-ary-relation"
+    ]
+  },
+  {
+    "id": "fc-artint-ch16-03",
+    "front": "Sự khác biệt căn bản giữa TBox và ABox trong Logic Mô Tả (Description Logics) là gì?",
+    "back": "TBox (Terminological Box) chứa các định nghĩa thuật ngữ, phân cấp lớp và tiên đề cấu trúc của bản thể luận (ổn định, thiết kế lúc đầu). ABox (Assertional Box) chứa các khẳng định dữ liệu thực tế về các cá thể cụ thể trong thế giới (biến động liên tục trong thời gian chạy).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "tags": [
+      "description-logic",
+      "tbox",
+      "abox",
+      "owl"
+    ]
+  },
+  {
+    "id": "fc-artint-ch16-04",
+    "front": "Giả định thế giới mở (Open World Assumption - OWA) trong Semantic Web khác gì với CWA?",
+    "back": "Dưới OWA, một sự kiện chưa được phát biểu thì được coi là chưa biết (unknown), không mặc định xem là sai. Điều này đối lập với CWA (Closed World Assumption) trong cơ sở dữ liệu quan hệ và Prolog vốn suy diễn cái gì không tìm thấy thì là sai.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "tags": [
+      "open-world-assumption",
+      "semantic-web",
+      "owl"
+    ]
+  },
+  {
+    "id": "fc-artint-ch16-05",
+    "front": "Bốn nguyên tắc của chuẩn dữ liệu khoa học FAIR bao gồm những gì?",
+    "back": "1. Findable (Dễ tìm kiếm qua định danh bền vững PID/IRI); 2. Accessible (Dễ truy cập qua giao thức chuẩn mở); 3. Interoperable (Tương tác được qua bản thể luận hình thức); 4. Reusable (Tái sử dụng được với siêu dữ liệu xuất xứ và giấy phép mở).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "tags": [
+      "fair-data",
+      "provenance",
+      "social-impact"
+    ]
   }
 ]

@@ -84,6 +84,61 @@ export const lessons = [
         ]
       }
     ]
+  },
+  {
+    "number": 16,
+    "slug": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "title": "Đồ thị tri thức và bản thể luận",
+    "prerequisites": [],
+    "supportingConcepts": [
+      "menh-de",
+      "tap-hop",
+      "quan-he"
+    ],
+    "status": "ready",
+    "description": "Khám phá đồ thị tri thức, biểu diễn bộ ba, mạng ngữ nghĩa, cấu trúc phân cấp lớp và bản thể luận phục vụ chia sẻ tri thức phân tán trên quy mô web.",
+    "topicGroups": [
+      {
+        "title": "Các chủ đề trong chương",
+        "topics": [
+          {
+            "slug": "16-1-do-thi-tri-thuc",
+            "title": "16.1 Đồ thị tri thức",
+            "question": ""
+          },
+          {
+            "slug": "16-2-lop-va-thuoc-tinh",
+            "title": "16.2 Lớp và thuộc tính",
+            "question": ""
+          },
+          {
+            "slug": "16-3-ban-the-luan-va-chia-se-tri-thuc",
+            "title": "16.3 Bản thể luận và chia sẻ tri thức",
+            "question": ""
+          },
+          {
+            "slug": "16-4-tac-dong-xa-hoi",
+            "title": "16.4 Tác động xã hội",
+            "question": ""
+          },
+          {
+            "slug": "16-5-on-tap",
+            "title": "16.5 Ôn tập",
+            "question": ""
+          },
+          {
+            "slug": "16-6-tai-lieu-tham-khao",
+            "title": "16.6 Tài liệu tham khảo",
+            "question": ""
+          },
+          {
+            "slug": "16-7-bai-tap",
+            "title": "16.7 Bài tập",
+            "question": ""
+          }
+        ]
+      }
+    ]
   }
 ]
 export const slides = [
@@ -134,6 +189,56 @@ export const slides = [
       "Thứ tự tìm kiếm và chu trình ảnh hưởng đến việc tìm ra câu trả lời."
     ],
     "note": "15-ca-the-va-quan-he",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Bộ ba và đồ thị tri thức",
+    "bullets": [
+      "Bộ ba biểu diễn sự kiện nguyên tử dưới dạng Chủ thể - Thuộc tính - Giá trị.",
+      "Mọi đồ thị tri thức là tập hợp các bộ ba cạnh có hướng nối các đỉnh cá thể."
+    ],
+    "note": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Tái hóa quan hệ (Reification)",
+    "bullets": [
+      "Biến quan hệ n-ngôi hoặc sự kiện thành cá thể độc lập trong đồ thị.",
+      "Cho phép gán ngữ cảnh thời gian, địa điểm và độ tin cậy mà không làm bùng nổ số lượng vị từ."
+    ],
+    "note": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Lớp và kế thừa thuộc tính",
+    "bullets": [
+      "Lớp là tập hợp các cá thể thỏa mãn điều kiện nội hàm hoặc ngoại diên.",
+      "Quan hệ subClassOf cho phép cá thể lớp con tự động kế thừa thuộc tính của lớp cha."
+    ],
+    "note": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Bản thể luận và Logic mô tả",
+    "bullets": [
+      "Bản thể luận đặc tả hình thức sự khái niệm hóa ngữ nghĩa của các ký hiệu.",
+      "TBox xác định thuật ngữ và tiên đề; ABox lưu trữ các khẳng định dữ liệu thực tế."
+    ],
+    "note": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Bản thể luận cấp cao và nguyên tắc FAIR",
+    "bullets": [
+      "Bản thể luận cấp cao định hình khung phân loại trừu tượng (Continuant vs Occurrent) tích hợp các miền.",
+      "Nguyên tắc dữ liệu FAIR và nguồn gốc xuất xứ bảo đảm tính minh bạch và tái lập của tri thức."
+    ],
+    "note": "16-do-thi-tri-thuc-va-ban-the-luan",
     "formula": "",
     "example": ""
   }
