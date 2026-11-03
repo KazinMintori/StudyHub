@@ -1,7 +1,13 @@
 import { flashcards as agentFoundationsCards } from '../../../content/courses/ai-nen-tang-tac-tu/flashcards.mjs'
 
 export const flashcards = [
-  ...agentFoundationsCards,
+  ...agentFoundationsCards.map(card => ({
+    ...card,
+    course: card.course ?? 'ai-nen-tang-tac-tu',
+    q: card.q ?? card.front,
+    a: card.a ?? card.back,
+    lesson: card.lesson ?? card.lecture
+  })),
   { course: 'bieu-dien-tri-thuc', q: 'BFS và DFS khác nhau ở cấu trúc lưu các nút chờ thế nào?', a: 'BFS dùng hàng đợi FIFO, duyệt theo từng tầng. DFS dùng ngăn xếp LIFO hoặc đệ quy, đi sâu một nhánh trước.', lesson: '02-tim-kiem-mu' },
   { course: 'bieu-dien-tri-thuc', q: 'Hàm đánh giá của A* là gì?', a: 'f(n) = g(n) + h(n). g(n) là chi phí đã đi từ trạng thái đầu; h(n) ước lượng chi phí còn lại tới đích.', lesson: '03-tim-kiem-kinh-nghiem' },
   { course: 'bieu-dien-tri-thuc', q: 'Khi nào Alpha–Beta có thể cắt nhánh?', a: 'Khi α ≥ β. Nhánh đó không thể làm thay đổi lựa chọn của nút tổ tiên theo Minimax.', lesson: '04-tim-kiem-doi-khang' },
