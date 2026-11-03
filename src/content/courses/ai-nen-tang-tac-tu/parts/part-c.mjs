@@ -311,6 +311,68 @@ export const lessons = [
           ]
         }
       ]
+    },
+    {
+      "number": 20,
+      "slug": "20-kien-thuc-toan",
+      "title": "Kiến thức toán học và ký hiệu",
+      "prerequisites": [],
+      "supportingConcepts": [],
+      "status": "ready",
+      "description": "Tổng hợp các định nghĩa toán học và cấu trúc dữ liệu nền tảng sử dụng xuyên suốt giáo trình: Trung bình trượt, toán học rời rạc, nhân tử và đại số quan hệ.",
+      "topicGroups": [
+        {
+          "title": "Các chủ đề trong chương",
+          "topics": [
+            {
+              "slug": "20-1-trung-binh-truot",
+              "title": "20.1 Trung bình trượt",
+              "question": ""
+            },
+            {
+              "slug": "20-2-toan-hoc-roi-rac",
+              "title": "20.2 Toán học rời rạc",
+              "question": ""
+            },
+            {
+              "slug": "20-3-ham-nhan-to-va-mang",
+              "title": "20.3 Hàm, nhân tử và mảng",
+              "question": ""
+            },
+            {
+              "slug": "20-4-quan-he-va-dai-so-quan-he",
+              "title": "20.4 Quan hệ và đại số quan hệ",
+              "question": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "slug": "21-goi-ma-nguon-mo",
+      "title": "Đối chiếu với các gói mã nguồn mở",
+      "prerequisites": [],
+      "supportingConcepts": [],
+      "status": "ready",
+      "description": "Bảng đối chiếu tường minh giữa ký hiệu toán học và thuật toán trong giáo trình với các tham số, lớp và bộ tối ưu hóa trong các thư viện AI mã nguồn mở hàng đầu: XGBoost, LightGBM, PyTorch và Keras.",
+      "topicGroups": [
+        {
+          "title": "Các chủ đề trong chương",
+          "topics": [
+            {
+              "slug": "21-1-cay-tang-cuong-gradient",
+              "title": "21.1 Cây tăng cường gradient",
+              "question": ""
+            },
+            {
+              "slug": "21-2-hoc-sau",
+              "title": "21.2 Học sâu",
+              "question": ""
+            }
+          ]
+        }
+      ]
     }
 ]
 export const slides = [
@@ -561,6 +623,56 @@ export const slides = [
       "Tương lai AI (lý tưởng hay đen tối) hoàn toàn phụ thuộc vào chuẩn mực đạo đức và khung pháp lý do con người kiến tạo."
     ],
     "note": "19-nhin-lai-va-trien-vong",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Trung bình trượt và Sai số dự đoán",
+    "bullets": [
+      "Công thức cập nhật tăng dần: A_k = A_{k-1} + alpha_k (v_k - A_{k-1}) với bộ nhớ O(1).",
+      "Sai số (v_k - A_{k-1}) là nền tảng nguyên thủy của quy tắc học trong gradient descent và RL."
+    ],
+    "note": "20-kien-thuc-toan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Điều kiện hội tụ Robbins–Monro",
+    "bullets": [
+      "Dãy bước nhảy phải thỏa mãn tổng phân kỳ để vượt qua sai lệch ban đầu.",
+      "Tổng bình phương phải hội tụ để triệt tiêu phương sai nhiễu ngẫu nhiên."
+    ],
+    "note": "20-kien-thuc-toan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Nhân tử (Factors) và Đại số quan hệ",
+    "bullets": [
+      "Nhân tử xác định trên tập biến có tên (scope), hỗ trợ phép nhân điểm và phép gán một phần.",
+      "Đại số quan hệ gồm phép chọn sigma, phép chiếu pi và phép kết nối tự nhiên bowtie."
+    ],
+    "note": "20-kien-thuc-toan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Đối chiếu siêu tham số Gradient Boosting",
+    "bullets": [
+      "Số vòng lặp K tương ứng num_boost_round (XGBoost) và num_iterations (LightGBM).",
+      "Điều chuẩn L2 tương ứng lambda_reg (XGBoost) và lambda_l2 (LightGBM); tốc độ học tương ứng eta."
+    ],
+    "note": "21-goi-ma-nguon-mo",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Đối chiếu khung học sâu Keras và PyTorch",
+    "bullets": [
+      "Lớp kết nối đầy đủ: Dense (Keras suy diễn ngầm số chiều vào) vs Linear (PyTorch bắt buộc in_features).",
+      "Bộ tối ưu RMSprop: Keras đặt epsilon trong căn bậc hai, PyTorch đặt epsilon bên ngoài căn bậc hai."
+    ],
+    "note": "21-goi-ma-nguon-mo",
     "formula": "",
     "example": ""
   }

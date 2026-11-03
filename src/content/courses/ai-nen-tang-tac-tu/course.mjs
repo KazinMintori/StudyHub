@@ -67,6 +67,13 @@ export const parts = [
       '18-tac-dong-xa-hoi-cua-tri-tue-nhan-tao',
       '19-nhin-lai-va-trien-vong'
     ]
+  },
+  {
+    title: 'Phần VII: Phụ lục',
+    lessons: [
+      '20-kien-thuc-toan',
+      '21-goi-ma-nguon-mo'
+    ]
   }
 ]
 

@@ -617,5 +617,67 @@ export const flashcards = [
       "agi",
       "future-of-ai"
     ]
+  },
+  {
+    "id": "fc-artint-ch20-01",
+    "front": "Công thức cập nhật tăng dần của trung bình trượt có ý nghĩa gì đối với các giải thuật học máy?",
+    "back": "A_k = A_{k-1} + alpha_k (v_k - A_{k-1}). Ước lượng mới bằng ước lượng cũ cộng một phần của sai số dự đoán. Đây là nguyên mẫu toán học của hạ độ dốc (Gradient Descent), Perceptron và học tăng cường (TD, Q-learning).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "20-kien-thuc-toan",
+    "tags": [
+      "rolling-average",
+      "incremental-update",
+      "math-foundations"
+    ]
+  },
+  {
+    "id": "fc-artint-ch20-02",
+    "front": "Hai điều kiện Robbins–Monro bảo đảm sự hội tụ của thuật toán xấp xỉ ngẫu nhiên là gì?",
+    "back": "1. sum_{k=1}^infty alpha_k = infty (bước nhảy phân kỳ vô hạn để vượt qua sai lệch ban đầu); 2. sum_{k=1}^infty alpha_k^2 < infty (tổng bình phương hội tụ để triệt tiêu phương sai nhiễu ngẫu nhiên).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "20-kien-thuc-toan",
+    "tags": [
+      "robbins-monro",
+      "convergence",
+      "stochastic-approximation"
+    ]
+  },
+  {
+    "id": "fc-artint-ch20-03",
+    "front": "Điểm khác biệt cốt lõi giữa nhân tử (Factor) trong AI và hàm số đa biến thông thường là gì?",
+    "back": "Nhân tử được xác định trên một tập các biến có tên (scope). Phép tra cứu và tính toán dựa vào chính tên biến chứ không phụ thuộc vào vị trí số nguyên thứ tự của biến trong danh sách tham số.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "20-kien-thuc-toan",
+    "tags": [
+      "factor",
+      "scope",
+      "variable-elimination"
+    ]
+  },
+  {
+    "id": "fc-artint-ch21-01",
+    "front": "Các siêu tham số gradient boosting cốt lõi trong giáo trình (K, lambda, eta) ánh xạ sang XGBoost và LightGBM như thế nào?",
+    "back": "K tương ứng num_boost_round (XGBoost) và num_iterations (LightGBM); lambda (L2) tương ứng lambda_reg / reg_lambda; eta (learning rate) tương ứng eta (XGBoost) và learning_rate (LightGBM).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "21-goi-ma-nguon-mo",
+    "tags": [
+      "gradient-boosting",
+      "xgboost",
+      "lightgbm"
+    ]
+  },
+  {
+    "id": "fc-artint-ch21-02",
+    "front": "Điểm dị biệt toán học trong công thức cập nhật của bộ tối ưu hóa RMSprop giữa Keras và PyTorch là gì?",
+    "back": "Keras đặt hằng số epsilon bên trong dấu căn bậc hai: g / sqrt(v + epsilon) (theo định nghĩa gốc); còn PyTorch đặt epsilon bên ngoài dấu căn bậc hai: g / (sqrt(v) + epsilon) (tương tự như Adam).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "21-goi-ma-nguon-mo",
+    "tags": [
+      "deep-learning",
+      "optimizers",
+      "rmsprop",
+      "pytorch",
+      "keras"
+    ]
   }
 ]
