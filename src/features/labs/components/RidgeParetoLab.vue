@@ -29,8 +29,8 @@ const support=computed(()=>{
    <line v-if="support" :x1="P(support[0])[0]" :y1="P(support[0])[1]" :x2="P(support[1])[0]" :y2="P(support[1])[1]" class="lab-guide"/>
    <circle :cx="P(current)[0]" :cy="P(current)[1]" r="8" class="lab-dot-warn"/>
    <circle :cx="P(current)[0]" :cy="P(current)[1]" r="34" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Điểm mục tiêu trên biên Pareto" :aria-valuetext="`w = ${fmt(w,3)}, F₁ = ${fmt(row.f1,3)}, F₂ = ${fmt(row.f2,3)}`" @pointerdown="drag.start('front',$event)" @keydown="drag.key('front',current,$event)"/>
-   <text x="12" y="23">Không gian mục tiêu R²</text><text x="346" :y="P([0,0])[1]-12">F₁</text><text :x="P([0,0])[0]+12" y="48">F₂</text>
-   <text :x="P([20,0])[0]-9" :y="P([20,0])[1]+24">20</text><text :x="P([0,4])[0]-24" :y="P([0,4])[1]+6">4</text><text :x="P([0,0])[0]-15" :y="P([0,0])[1]+24">0</text>
+   <text x="12" y="23">Không gian mục tiêu R²</text><text x="346" :y="P([0,0])[1]-27">F₁</text><text :x="P([0,0])[0]+12" y="48">F₂</text>
+   <text :x="P([20,0])[0]-9" :y="P([20,0])[1]+32">20</text><text :x="P([0,4])[0]-24" :y="P([0,4])[1]+6">4</text><text :x="P([0,0])[0]-15" :y="P([0,0])[1]+24">0</text>
   </svg>
   <svg ref="parameterSvg" viewBox="0 0 400 140" role="group" aria-label="Tham số w kéo được trên đoạn từ 0 đến 2" @pointermove="parameterDrag.move" @pointerup="parameterDrag.end" @pointercancel="parameterDrag.end" @lostpointercapture="parameterDrag.end">
    <text x="12" y="23">Không gian tham số R</text>
@@ -57,4 +57,5 @@ const support=computed(()=>{
 .point-hit:focus-visible{stroke:var(--vang)}
 svg text{font-size:20px;pointer-events:none}
 figure>svg+svg{margin-top:var(--space-3)}
+svg .lab-good{stroke-width:1.5}
 </style>

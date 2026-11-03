@@ -1,109 +1,103 @@
 <script setup>
 import { computed, ref } from 'vue'
-import { makeView, fmt, fmtPoint } from '../controllers/svg-drag.js'
+import LabPointControls from './LabPointControls.vue'
+import { createDragger, fmt, fmtPoint, makeView } from '../controllers/svg-drag.js'
+import { clipSegment } from '../services/svg-clipping.mjs'
+import { nearestPathWeight, regularizationObjectives, regularizationPoint, regularizationWeights } from '../services/regularization-path.mjs'
 
-// Đường đánh đổi của bình phương tối thiểu có điều chuẩn (ví dụ tự đặt của chủ đề 12, Lecture 02).
-// Dữ liệu A (4×2), b. Hai mục tiêu F₁ = ‖Ax − b‖², F₂ = ‖x‖₂² (ridge) hoặc ‖x‖₁ (lasso).
-// Vô hướng hóa với trọng số (1, μ): ridge có nghiệm đóng x(μ) = (AᵀA + μI)⁻¹Aᵀb; lasso giải bằng hạ theo
-// tọa độ với ngưỡng mềm, khởi động từ nghiệm của μ trước. Đã đối chiếu với Python (x₂ về 0 tại μ = 86/7).
-const A = [[1, 2], [2, 1], [1, 1], [3, 1]], b = [3, 1, 2, 4]
-const mode = ref('ridge'), logMu = ref(0.5)
-const mu = computed(() => 10 ** logMu.value)
-const F1 = (x) => A.reduce((s, row, i) => s + (row[0] * x[0] + row[1] * x[1] - b[i]) ** 2, 0)
-const F2 = (x, m) => (m === 'ridge' ? x[0] * x[0] + x[1] * x[1] : Math.abs(x[0]) + Math.abs(x[1]))
-const AtA = [[15, 8], [8, 7]], Atb = [19, 13]
-const ridge = (m) => {
-  const a = AtA[0][0] + m, d = AtA[1][1] + m, c = AtA[0][1], det = a * d - c * c
-  return [(d * Atb[0] - c * Atb[1]) / det, (a * Atb[1] - c * Atb[0]) / det]
-}
-const soft = (z, t) => Math.sign(z) * Math.max(Math.abs(z) - t, 0)
-const lasso = (m, start = [0, 0]) => {
-  const x = [...start]
-  for (let it = 0; it < 400; it++) for (let j = 0; j < 2; j++) {
-    let rho = 0, nn = 0
-    for (let i = 0; i < 4; i++) { const r = b[i] - A[i][0] * x[0] - A[i][1] * x[1] + A[i][j] * x[j]; rho += A[i][j] * r; nn += A[i][j] ** 2 }
-    x[j] = soft(rho, m / 2) / nn
-  }
-  return x
-}
-const LOGS = Array.from({ length: 161 }, (_, i) => -2 + (4.5 * i) / 160)
-const path = computed(() => {
-  let prev = [0, 0]
-  return LOGS.map(l => {
-    const m = 10 ** l, x = mode.value === 'ridge' ? ridge(m) : (prev = lasso(m, prev))
-    return { x, f1: F1(x), f2: F2(x, mode.value) }
-  })
-})
-const cur = computed(() => {
-  const x = mode.value === 'ridge' ? ridge(mu.value) : lasso(mu.value, [0.7, 1])
-  return { x, f1: F1(x), f2: F2(x, mode.value) }
-})
-// Đám mây các giá trị đạt được: (F₁, F₂) tại một lưới điểm x.
+const mode = ref('ridge')
+const weight = ref(.5)
+const objectiveSvg = ref(null)
+const parameterSvg = ref(null)
+const weightSvg = ref(null)
+const objectiveView = makeView({ x0: 0, x1: 32, y0: 0, y1: 2.3, width: 360, height: 320, pad: 35 })
+const parameterView = makeView({ x0: -.15, x1: 1.2, y0: -.15, y1: 1.2, width: 360, height: 320, pad: 35 })
+const rail = makeView({ x0: 0, x1: 1, y0: 0, y1: 1, width: 360, height: 105, pad: 32 })
+const current = computed(() => regularizationPoint(mode.value, weight.value))
+const path = computed(() => regularizationWeights.map(value => regularizationPoint(mode.value, value)))
+const objectivePoint = row => objectiveView.point([row.error, row.size])
+const parameterPoint = row => parameterView.point(row.point)
+const objectivePath = computed(() => path.value.map(row => objectivePoint(row).join(',')).join(' '))
+const parameterPath = computed(() => path.value.map(row => parameterPoint(row).join(',')).join(' '))
+const objectiveDragView = computed(() => ({ x0: 0, x1: 1, y0: 0, y1: 1,
+  toWorld: (x, y) => [nearestPathWeight([x, y], path.value, objectivePoint), 0] }))
+const parameterDragView = computed(() => ({ x0: 0, x1: 1, y0: 0, y1: 1,
+  toWorld: (x, y) => [nearestPathWeight([x, y], path.value, parameterPoint), 0] }))
+const update = (_, next) => { weight.value = next[0] }
+const objectiveDrag = createDragger(objectiveSvg, objectiveDragView, update, { step: .02 })
+const parameterDrag = createDragger(parameterSvg, parameterDragView, update, { step: .02 })
+const railView = computed(() => rail)
+const weightDrag = createDragger(weightSvg, railView, update, { step: .02 })
 const cloud = computed(() => {
-  const pts = []
-  for (let i = 0; i <= 26; i++) for (let j = 0; j <= 26; j++) {
-    const x = [-0.4 + (1.6 * i) / 26, -0.4 + (1.8 * j) / 26]
-    pts.push([F1(x), F2(x, mode.value)])
+  const samples = []
+  for (let first = 0; first <= 16; first++) for (let second = 0; second <= 16; second++) {
+    const row = regularizationObjectives([-.3 + first / 10, -.3 + second / 10], mode.value)
+    if (row.error <= 32 && row.size <= 2.3) samples.push(objectiveView.point([row.error, row.size]))
   }
-  return pts
+  return samples
 })
-const ov = computed(() => makeView({ x0: 0, x1: 32, y0: 0, y1: mode.value === 'ridge' ? 2.2 : 2.1, width: 230, height: 230 }))
-const pv = makeView({ x0: -0.15, x1: 1.15, y0: -0.15, y1: 1.15, width: 230, height: 230 })
-const PO = (p) => [ov.value.sx(p[0]), ov.value.sy(p[1])]
-const PP = (p) => [pv.sx(p[0]), pv.sy(p[1])]
-// Đường tựa: F₁ + μF₂ = hằng số, tiếp xúc với tập giá trị đạt được tại điểm Pareto.
 const support = computed(() => {
-  const c = cur.value.f1 + mu.value * cur.value.f2
-  return [PO([0, c / mu.value]), PO([c, 0])]
+  if (weight.value === 1) return [[0, 0], [32, 0]]
+  const { error, size, penalty } = current.value
+  if (penalty === 0) return [[error, 0], [error, 2.3]]
+  const intercept = error + penalty * size
+  return clipSegment([[0, intercept / penalty], [32, (intercept - 32) / penalty]], objectiveView)
 })
-const zeroNote = computed(() => (mode.value === 'lasso' ? cur.value.x.map((v, i) => (Math.abs(v) < 1e-9 ? i + 1 : 0)).filter(Boolean) : []))
+function choose(penalty, nextMode = mode.value) {
+  mode.value = nextMode
+  weight.value = penalty === Infinity ? 1 : penalty / (1 + penalty)
+}
 </script>
 
 <template>
-  <figure class="study-lab" aria-label="Đường đánh đổi giữa sai số khớp và độ lớn tham số">
-    <p class="lab-title">Đánh đổi giữa khớp dữ liệu và giữ tham số nhỏ</p>
-    <p class="lab-lead">Bên trái là không gian mục tiêu: mỗi chấm nhạt là cặp (F₁, F₂) của một điểm x. Đường đậm là đường đánh đổi Pareto. Bên phải là đường đi của nghiệm x(μ) khi trọng số μ thay đổi.</p>
-    <div class="lab-pair">
-      <svg :viewBox="`0 0 ${ov.width} ${ov.height}`" role="img" aria-label="Tập giá trị mục tiêu đạt được, đường Pareto và đường tựa">
-        <line x1="0" :x2="ov.width" :y1="ov.sy(0)" :y2="ov.sy(0)" class="lab-axis" />
-        <line :x1="ov.sx(0)" :x2="ov.sx(0)" y1="0" :y2="ov.height" class="lab-axis" />
-        <text :x="ov.width - 70" :y="ov.sy(0) - 6" class="lab-small">F₁ = ‖Ax − b‖²</text>
-        <text x="6" y="14" class="lab-small">{{ mode === 'ridge' ? 'F₂ = ‖x‖²' : 'F₂ = ‖x‖₁' }}</text>
-        <circle v-for="(p, i) in cloud" :key="i" :cx="PO(p)[0]" :cy="PO(p)[1]" r="1.6" class="lab-dot" style="opacity: 0.25" />
-        <polyline :points="path.map(q => PO([q.f1, q.f2]).join(',')).join(' ')" class="lab-accent" />
-        <line :x1="support[0][0]" :y1="support[0][1]" :x2="support[1][0]" :y2="support[1][1]" class="lab-guide" />
-        <circle :cx="PO([cur.f1, cur.f2])[0]" :cy="PO([cur.f1, cur.f2])[1]" r="6" class="lab-dot-warn" />
-      </svg>
-      <svg :viewBox="`0 0 ${pv.width} ${pv.height}`" role="img" aria-label="Đường đi của nghiệm theo trọng số trong không gian tham số">
-        <line x1="0" :x2="pv.width" :y1="pv.sy(0)" :y2="pv.sy(0)" class="lab-axis" />
-        <line :x1="pv.sx(0)" :x2="pv.sx(0)" y1="0" :y2="pv.height" class="lab-axis" />
-        <text :x="pv.width - 22" :y="pv.sy(0) - 6" class="lab-small">x₁</text>
-        <text :x="pv.sx(0) + 6" y="14" class="lab-small">x₂</text>
-        <polyline :points="path.map(q => PP(q.x).join(',')).join(' ')" class="lab-good" style="stroke-width: 2.5" />
-        <circle :cx="PP(path[0].x)[0]" :cy="PP(path[0].x)[1]" r="4" class="lab-dot" />
-        <circle :cx="PP([0, 0])[0]" :cy="PP([0, 0])[1]" r="4" class="lab-dot" />
-        <circle :cx="PP(cur.x)[0]" :cy="PP(cur.x)[1]" r="6" class="lab-dot-warn" />
-      </svg>
-    </div>
-    <p class="lab-legend"><span class="legend-accent">đường đánh đổi</span><span class="legend-guide">đường tựa F₁ + μF₂ = hằng số</span><span class="legend-good">đường đi của x(μ)</span><span class="legend-warn">nghiệm hiện tại</span></p>
-    <div class="lab-controls">
-      <label>Trọng số μ = {{ fmt(mu, mu < 1 ? 3 : 2) }}<input v-model.number="logMu" type="range" min="-2" max="2.5" step="0.01" /></label>
-      <label>Mục tiêu thứ hai<select v-model="mode"><option value="ridge">‖x‖₂² (ridge)</option><option value="lasso">‖x‖₁ (lasso)</option></select></label>
-    </div>
-    <div class="lab-readout" role="status">
-      <p>x(μ) = {{ fmtPoint(cur.x, 4) }}, F₁ = {{ fmt(cur.f1, 3) }}, F₂ = {{ fmt(cur.f2, 3) }}.</p>
-      <p>Đường tựa có hệ số góc −1/μ = {{ fmt(-1 / mu, 3) }}: quanh điểm này, giảm F₂ một đơn vị phải trả khoảng {{ fmt(mu, 2) }} đơn vị F₁.</p>
-      <p v-if="zeroNote.length" class="is-accent">Thành phần x{{ zeroNote.join(', x') }} bằng đúng 0: chuẩn ℓ₁ cho nghiệm thưa.</p>
-      <p v-else-if="mode === 'ridge'">Với ridge, các thành phần co dần về 0 nhưng không bao giờ bằng đúng 0 khi μ hữu hạn.</p>
-    </div>
-    <details class="lab-tasks">
-      <summary>Gợi ý thao tác</summary>
-      <ol>
-        <li>Kéo μ từ nhỏ đến lớn. Hai đầu của đường đánh đổi ứng với nghiệm nào?</li>
-        <li>Đường tựa luôn chạm đám mây giá trị ở đúng một điểm của đường đánh đổi, và cả đám mây nằm về một phía. Vì sao?</li>
-        <li>Đổi sang lasso. Với μ khoảng 12.3 trở lên, x₂ bằng đúng 0. Trong khi đó x₁ có luôn giảm khi μ tăng không?</li>
-        <li>So hai đường đi bên phải: đường của ridge cong mềm, đường của lasso gãy khúc và chạm trục. Điều này gợi ý gì về việc chọn đặc trưng?</li>
-      </ol>
-    </details>
-  </figure>
+ <figure class="study-lab" aria-label="Đường Pareto và nghiệm ridge hoặc lasso kéo được">
+  <figcaption class="lab-title">Một trọng số chọn đồng thời cặp mục tiêu và vector nghiệm</figcaption>
+  <p class="lab-lead">Kéo chấm vàng trên một trong hai đường, hoặc kéo trọng số s trên thước. Các điểm trên hình mục tiêu và hình tham số cập nhật cùng nhau. Thước dùng tổng (1 − s)F₁ + sF₂, nên hai đầu s = 0 và s = 1 có ý nghĩa riêng.</p>
+  <div class="lab-pair">
+   <svg ref="objectiveSvg" viewBox="0 0 360 320" role="group" aria-label="Không gian mục tiêu, đường Pareto và điểm kéo" @pointermove="objectiveDrag.move" @pointerup="objectiveDrag.end" @pointercancel="objectiveDrag.end" @lostpointercapture="objectiveDrag.end">
+    <text x="35" y="24">Hai mục tiêu (F₁, F₂)</text>
+    <line x1="35" x2="325" y1="285" y2="285" class="lab-axis"/><line x1="35" x2="35" y1="35" y2="285" class="lab-axis"/>
+    <circle v-for="(point, index) in cloud" :key="index" :cx="point[0]" :cy="point[1]" r="1.3" class="sample"/>
+    <polyline :points="objectivePath" class="frontier"/>
+    <line v-if="support" :x1="objectiveView.sx(support[0][0])" :y1="objectiveView.sy(support[0][1])" :x2="objectiveView.sx(support[1][0])" :y2="objectiveView.sy(support[1][1])" class="lab-guide"/>
+    <text x="330" y="309">F₁</text><text x="8" y="48">F₂</text>
+    <circle :cx="objectivePoint(current)[0]" :cy="objectivePoint(current)[1]" r="6" class="lab-dot-warn"/>
+    <circle :cx="objectivePoint(current)[0]" :cy="objectivePoint(current)[1]" r="28" class="lab-handle hit" tabindex="0" role="slider" aria-label="Điểm đang chọn trên đường Pareto" :aria-valuetext="fmt(weight,5)" @pointerdown="objectiveDrag.start('s',$event)" @keydown="objectiveDrag.key('s',[weight,0],$event)"/>
+   </svg>
+   <svg ref="parameterSvg" viewBox="0 0 360 320" role="group" aria-label="Đường nghiệm trong không gian hai tham số và điểm kéo" @pointermove="parameterDrag.move" @pointerup="parameterDrag.end" @pointercancel="parameterDrag.end" @lostpointercapture="parameterDrag.end">
+    <text x="35" y="24">Hai tham số (x₁, x₂)</text>
+    <line x1="35" x2="325" :y1="parameterView.sy(0)" :y2="parameterView.sy(0)" class="lab-axis"/><line :x1="parameterView.sx(0)" :x2="parameterView.sx(0)" y1="35" y2="285" class="lab-axis"/>
+    <polyline :points="parameterPath" class="solution-path"/>
+    <text x="330" y="309">x₁</text><text x="8" y="48">x₂</text>
+    <circle :cx="parameterPoint(current)[0]" :cy="parameterPoint(current)[1]" r="6" class="lab-dot-warn"/>
+    <circle :cx="parameterPoint(current)[0]" :cy="parameterPoint(current)[1]" r="28" class="lab-handle hit" tabindex="0" role="slider" aria-label="Điểm đang chọn trên đường nghiệm" :aria-valuetext="fmt(weight,5)" @pointerdown="parameterDrag.start('s',$event)" @keydown="parameterDrag.key('s',[weight,0],$event)"/>
+   </svg>
+  </div>
+  <svg ref="weightSvg" viewBox="0 0 360 105" role="group" aria-label="Thước kéo trọng số s" @pointermove="weightDrag.move" @pointerup="weightDrag.end" @pointercancel="weightDrag.end" @lostpointercapture="weightDrag.end">
+   <text x="180" y="23" text-anchor="middle">Trọng số s</text><line x1="32" x2="328" y1="54" y2="54" class="lab-axis"/>
+   <text x="32" y="94" text-anchor="middle">0</text><text x="328" y="94" text-anchor="middle">1</text>
+   <circle :cx="rail.sx(weight)" cy="54" r="6" class="lab-dot-warn"/>
+   <circle :cx="rail.sx(weight)" cy="54" r="28" class="lab-handle hit" tabindex="0" role="slider" aria-label="Trọng số s trên thước" :aria-valuetext="fmt(weight,5)" @pointerdown="weightDrag.start('s',$event)" @keydown="weightDrag.key('s',[weight,.5],$event)"/>
+  </svg>
+  <div class="lab-controls"><label>Đại lượng phạt<select v-model="mode"><option value="ridge">Ridge, F₂ = bình phương chuẩn L₂</option><option value="lasso">Lasso, F₂ = chuẩn L₁</option></select></label></div>
+  <div class="lab-buttons"><button type="button" @click="choose(0)">Chỉ cực tiểu sai số</button><button type="button" @click="choose(1)">μ = 1</button><button type="button" @click="choose(86/7,'lasso')">Lasso chạm trục</button><button type="button" @click="choose(38,'lasso')">Lasso bằng 0</button><button type="button" @click="choose(Infinity)">Chỉ cực tiểu độ lớn</button></div>
+  <details class="lab-tasks"><summary>Điều chỉnh bằng nút</summary><LabPointControls :svg="objectiveSvg" axes="x"/><LabPointControls :svg="parameterSvg" axes="x"/><LabPointControls :svg="weightSvg" axes="x"/></details>
+  <div class="lab-readout" role="status">
+   <p>s = {{fmt(weight,5)}}. x = {{fmtPoint(current.point,5)}}, F₁ = {{fmt(current.error,5)}}, F₂ = {{fmt(current.size,5)}}.</p>
+   <p v-if="weight<1">Chia tổng cho 1 − s cho F₁ + μF₂ với μ = {{fmt(current.penalty,5)}}. Đường tựa đi qua cặp mục tiêu đang chọn.</p><p v-else>Trọng số (0, 1) chỉ cực tiểu F₂ và chọn x = (0, 0).</p>
+   <p v-if="mode==='lasso'">Với dữ liệu cố định của bài, khi μ ≥ 86/7 thì x₂ = 0, và khi μ ≥ 38 thì cả hai tọa độ bằng 0. Tại ngưỡng, nhiều trọng số có thể cùng chọn một nghiệm.</p>
+   <p v-else>Ridge dùng công thức nghiệm của hệ hai biến. Với dữ liệu này, mỗi tọa độ dương khi μ hữu hạn. Các dữ liệu khác vẫn có thể cho một tọa độ bằng 0.</p>
+   <p>Chấm nhạt là các mẫu mục tiêu đạt được. Đường biên chỉ vẽ họ nghiệm của bài toán đang xét. Khi kéo, điểm được giữ trên đường và số đọc tính lại từ công thức nghiệm.</p>
+  </div>
+ </figure>
 </template>
+
+<style scoped>
+svg text{font-size:18px;pointer-events:none}
+.sample{fill:var(--ink-3);opacity:.18}
+.frontier,.solution-path{fill:none;stroke-width:1.8}
+.frontier{stroke:var(--tim)}
+.solution-path{stroke:var(--xanh)}
+.hit{fill:transparent!important;stroke:transparent;touch-action:none}
+.hit:focus-visible{stroke:var(--vang)}
+</style>

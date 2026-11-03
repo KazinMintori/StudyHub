@@ -109,6 +109,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    'src/features/labs/components/ParetoPlansLab.vue','src/features/labs/components/TradeoffLab.vue','src/features/labs/services/regularization-path.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
@@ -336,6 +337,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  pareto:[
+   [0,'Hai mục tiêu'],[0,'G'],[0,'Ba mục tiêu'],[0,'G'],[0,'λ₃ = 4'],[0,'Chỉ trọng số F₁'],[0,'H'],[0,'Mọi trọng số dương'],
+   [1,'γ = 0'],[1,'γ = 5'],[1,'Đầu mút w = 0'],[1,'γ = 5'],
+   [2,'Chỉ cực tiểu sai số'],[2,'μ = 1'],[2,'Lasso chạm trục'],[2,'Lasso bằng 0'],[2,'Chỉ cực tiểu độ lớn'],[2,'μ = 1']
+  ],
   schur:[[0,'Phần bù dương'],[0,'Phần bù bằng 0'],[0,'Phần bù âm'],[0,'Đưa u tới cực tiểu'],[1,'Trị riêng gặp nhau'],[1,'Trị riêng tách nhau'],[1,'Điểm thử x = 0']],
   sdp:[[0,'Lát tròn'],[0,'Biên dưới 0.28'],[0,'Ngoài miền PSD'],[0,'Lát ρ₂₃ = 1'],[0,'Lát ρ₂₃ = −1'],[1,'Điểm (1, 2)'],[1,'Điểm (2, 3)'],[1,'Điểm trên biên']],
   gp:[
@@ -414,6 +420,16 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='pareto'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===0&&label==='Hai mục tiêu')assert(text.includes('Pareto là A, B, C, D.'),'Unexpected two-objective Pareto set')
+   if(index===0&&label==='Ba mục tiêu')assert(text.includes('Pareto là A, B, C, D, G.'),'The third objective must make G Pareto')
+   if(index===0&&label==='Chỉ trọng số F₁')assert(text.includes('tổng chọn A, H.'),'A zero second/third weight must retain both minimizers')
+   if(index===1&&label==='γ = 5')assert(text.includes('F₁ = 5.0000')&&text.includes('F₂ = 1.0000'),'Scalar ridge certificate differs from its exact value')
+   if(index===2&&label==='Chỉ cực tiểu sai số')assert(text.includes('(0.70732, 1.04878)'),'Least-squares endpoint changed')
+   if(index===2&&label==='Lasso chạm trục')assert(text.includes('(0.85714, 0.00000)'),'Lasso must reach its axis at the exact threshold')
+   if(index===2&&label==='Lasso bằng 0')assert(text.includes('(0.00000, 0.00000)'),'Lasso must reach zero at penalty38')
+  }
   if(name==='schur'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Phần bù bằng 0')assert(readout.includes('PSD và suy biến'))
