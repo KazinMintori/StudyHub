@@ -82,6 +82,7 @@ const routes = [
   ,['models', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.html']
   ,['operations', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.html']
   ,['robust', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-non-bac-hai.html']
+  ,['extreme-ellipsoid','/toan-cho-ai/bai-giang/bai-02-tap-loi/ellipsoid-cuc-tri-va-tam-hinh-hoc.html']
   ,['experiment','/toan-cho-ai/bai-giang/bai-02-tap-loi/thiet-ke-thi-nghiem-toi-uu.html']
   ,['floorplan','/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-mat-bang.html']
   ,['tail-bounds', '/toan-cho-ai/bai-giang/bai-02-tap-loi/can-chebyshev-va-chernoff.html']
@@ -114,6 +115,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    ...['EllipsoidAxesLab','SimplexSpheresLab','AnalyticCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/ExperimentDesignLab.vue',
     ...['SlicingFloorplanLab','FloorWireLab','FloorOverlapLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['QuadraticTailLab','ChernoffGaussianLab','CantelliBoundLab'].map(name=>`src/features/labs/components/${name}.vue`),
@@ -347,6 +349,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'extreme-ellipsoid':[
+   [0,'Quả cầu đơn vị'],[0,'Kéo trục ngang gấp đôi'],[0,'Mở sang R³'],[0,'Bán trục 3 = 2'],
+   [1,'Tam giác đều R²'],[1,'Tứ diện đều R³'],[1,'Xoay tứ diện'],
+   [2,'Mỗi cạnh một lần'],[2,'Đưa điểm thử tới tâm giải tích'],[2,'Lặp cạnh trái'],[2,'Đưa điểm thử tới tâm giải tích']
+  ],
   experiment:[[0,'Tối ưu D'],[0,'Tối ưu A'],[0,'Tối ưu E'],[0,'Chỉ đo ngang'],[0,'Tối ưu D']],
   floorplan:[[0,'H = 2'],[0,'H = 2,5'],[0,'H = √8'],[1,'Đưa C đến điểm tối ưu'],[1,'Thêm hoặc bỏ D'],[1,'Đưa C đến điểm tối ưu'],[2,'Chạm cạnh trái'],[2,'Chạm cạnh phải'],[2,'Thử trung điểm']],
   'tail-bounds':[
@@ -447,6 +454,14 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='extreme-ellipsoid'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Quả cầu đơn vị')assert(text.includes('Định thức B = 1.000'))
+   if(label==='Bán trục 3 = 2')assert(text.includes('Định thức B = 4.000'))
+   if(label==='Đưa điểm thử tới tâm giải tích')assert(text.includes('gradient (0.000, 0.000)'))
+   if(label==='Lặp cạnh trái')assert(text.includes('(0.5000, 0.2500)'))
+   if(label==='Tứ diện đều R³')assert(text.includes('một phần ba'))
+  }
   if(name==='experiment'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Tối ưu D')assert(readout.includes('Định thức 0.3333'))

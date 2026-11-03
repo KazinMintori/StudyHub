@@ -23,6 +23,7 @@
 .study-lab .lab-cutout { fill: var(--paper); stroke: var(--tim); stroke-width: 2; stroke-dasharray: 4 4; }
 .study-lab .lab-dot { fill: var(--ink); }
 .study-lab .lab-dot-accent { fill: var(--tim); }
+.study-lab .lab-dot-good { fill: var(--xanh); }
 .study-lab .lab-dot-warn { fill: var(--vang); }
 .study-lab .lab-dot-bad { fill: var(--do); }
 .study-lab .lab-dot-hollow { fill: var(--paper); stroke: var(--ink); stroke-width: 2; }
