@@ -107,7 +107,7 @@ const sourceHostname = computed(() => {
         <div class="lecture-list">
           <article v-for="lesson in group.entries" :key="lesson.slug">
             <a class="lecture-row" :href="studyLink(lecturePath(course.id, lesson.slug))">
-              <span class="lesson-number">{{ lesson.displayNumber ?? lesson.number ?? course.lessons.indexOf(lesson) + 1 }}</span>
+              <span class="lesson-number">{{ lesson.displayNumber ?? lesson.number ?? (course?.lessons ? course.lessons.indexOf(lesson) + 1 : '') }}</span>
               <div class="lecture-list-copy">
                 <h3>{{ lesson.title }}</h3>
               </div>

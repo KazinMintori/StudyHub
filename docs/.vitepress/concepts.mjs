@@ -1,3 +1,4 @@
+import { decisionConcepts } from './decision-foundations.mjs'
 import { predicateConcepts } from './predicate-foundations.mjs'
 import { localCspConcepts } from './local-csp-foundations.mjs'
 import { physicsConcepts } from './physics-foundations.mjs'
@@ -7,6 +8,7 @@ import { xstkConcepts } from './xstk-foundations.mjs'
 import { propositionalConcepts } from './propositional-foundations.mjs'
 const term = (name, aliases, definition, example, use, question, answer, meta = {}) => ({ name, aliases: [name, ...aliases], definition, example, use, question, answer, ...meta })
 export const concepts = {
+  ...decisionConcepts,
   ...predicateConcepts,
   ...localCspConcepts,
   ...propositionalConcepts,

@@ -4,7 +4,7 @@
     {
       "id": "ai-nen-tang-tac-tu",
       "repository": "KazinMintori/StudyHub-course-ai-nen-tang-tac-tu",
-      "revision": "072aa7dc2fb7e8495c55995f8c3b4c56645ccbf5",
+      "revision": "c8f1311a09c163df8b6e1dfe844c195bae6bd433",
       "paths": [
         "docs/ai-nen-tang-tac-tu/**",
         "raw_materials/ai-nen-tang-tac-tu/**",
@@ -14,7 +14,7 @@
     {
       "id": "bieu-dien-tri-thuc",
       "repository": "KazinMintori/StudyHub-course-bieu-dien-tri-thuc",
-      "revision": "c782188cf97f0a41eaa887a6410817e0aee43fb8",
+      "revision": "6b25ce24d7d9b4699c56af2e9ad1d32fa219bc22",
       "paths": [
         "docs/bieu-dien-tri-thuc/**",
         "raw_materials/bieu-dien-tri-thuc/**",
