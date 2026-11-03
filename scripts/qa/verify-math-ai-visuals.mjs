@@ -82,6 +82,7 @@ const routes = [
   ,['models', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/hai-lop-bai-toan-kinh-dien.html']
   ,['operations', '/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/phep-toan-giu-tinh-loi.html']
   ,['robust', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-non-bac-hai.html']
+  ,['fitting', '/toan-cho-ai/bai-giang/bai-02-tap-loi/khop-ham-va-noi-suy.html']
   ,['pareto', '/toan-cho-ai/bai-giang/bai-02-tap-loi/toi-uu-vector-va-danh-doi.html']
   ,['minimax', '/toan-cho-ai/bai-giang/bai-02-tap-loi/toi-uu-tua-loi.html']
   ,['gp', '/toan-cho-ai/bai-giang/bai-02-tap-loi/quy-hoach-hinh-hoc.html']
@@ -109,6 +110,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    ...['DerivativeGridLab','SmoothingSplineLab','ConvexInterpolationLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/features/labs/services/smoothing-spline.mjs',
     'src/features/labs/components/ParetoPlansLab.vue','src/features/labs/components/TradeoffLab.vue','src/features/labs/services/regularization-path.mjs',
     ...['AffinePlaneLab','AffineLab','RelintLab','NormBallLab','PredictionSpaceLab','SvdGeometryLab','QuadraticSpaceLab','LeastNormLab','GaussianGeometryLab','LikelihoodLab','HyperplaneLab','HyperplaneSpaceLab','Cone3DLab','ConeLab','NormSpaceLab','PsdLab','PolyhedronLab','SimplexSpaceLab','LeastSquaresSpaceLab','OptimumLab','LifeguardLab','LocalGlobalLab','SlabLab','AffineImageLab','LabPointControls'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
@@ -337,6 +339,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  fitting:[
+   [0,'Nút x = 0'],[0,'Giữa x = 0,5'],[0,'Nút x = 1'],
+   [1,'Nội suy'],[1,'Phạt nhẹ'],[1,'Phạt mạnh'],[1,'Giới hạn đường thẳng'],[1,'Phạt vừa'],
+   [2,'Dưới dây cung'],[2,'Xem mặt trong R³'],[2,'Trên dây cung'],[2,'Cao hơn dây cung'],[2,'Dưới dây cung']
+  ],
   pareto:[
    [0,'Hai mục tiêu'],[0,'G'],[0,'Ba mục tiêu'],[0,'G'],[0,'λ₃ = 4'],[0,'Chỉ trọng số F₁'],[0,'H'],[0,'Mọi trọng số dương'],
    [1,'γ = 0'],[1,'γ = 5'],[1,'Đầu mút w = 0'],[1,'γ = 5'],
@@ -420,6 +427,18 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='fitting'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Giữa x = 0,5')assert(readout.includes('0.0625')&&readout.includes('Đạo hàm âm'))
+   if(label==='Nội suy')assert(readout.includes('phần dư 0.000'))
+   if(label==='Giới hạn đường thẳng')assert(readout.includes('đạo hàm bậc hai 0.000'))
+   if(label==='Xem mặt trong R³')assert.equal((await labs[index].$$('svg polygon')).length,4)
+   if(label==='Trên dây cung')assert(readout.includes('0.333')&&readout.includes('không giảm'))
+   if(label==='Cao hơn dây cung'){
+    assert(readout.includes('bị vi phạm'))
+    assert.equal((await labs[index].$$('svg polygon')).length,0)
+   }
+  }
   if(name==='pareto'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===0&&label==='Hai mục tiêu')assert(text.includes('Pareto là A, B, C, D.'),'Unexpected two-objective Pareto set')
