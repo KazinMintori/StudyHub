@@ -64,3 +64,7 @@ watch(cut, () => { step.value = 0 })
     </dl>
   </section>
 </template>
+
+<style scoped>
+pre, code { white-space: pre-wrap; overflow-wrap: anywhere; }
+</style>

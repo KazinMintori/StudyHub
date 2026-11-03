@@ -22,8 +22,8 @@ const x = t => 25 + t * 17
 
 <template>
   <section class="math-lab" aria-label="Quan hệ giữa hai khoảng thời gian">
-    <label>Điểm đầu I {{ start }} <input v-model.number="start" type="range" min="0" max="12"></label>
-    <label>Độ dài I {{ length }} <input v-model.number="length" type="range" min="1" max="5"></label>
+    <label>Điểm đầu I {{ start }} <input v-model.number="start" type="range" min="0" max="10"></label>
+    <label>Độ dài I {{ length }} <input v-model.number="length" type="range" min="1" max="7"></label>
     <svg viewBox="0 0 330 118" width="100%" role="img" :aria-label="'Khoảng I từ ' + start + ' đến ' + end + ', khoảng J từ 5 đến 9'">
       <path d="M25 101 H314" stroke="currentColor" stroke-width="1"/>
       <g v-for="t in [0, 5, 9, 17]" :key="t">
