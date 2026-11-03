@@ -48,6 +48,7 @@ await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
   ['optimization-overview','/toan-cho-ai/bai-giang/bai-02-tap-loi.html'],
+  ['newton-hub','/toan-cho-ai/bai-giang/bai-04-gradient-newton.html'],
   ['lagrange-bound','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
   ['duality-overview','/toan-cho-ai/bai-giang/bai-03-doi-ngau-lagrange.html'],
   ['equivalence','/toan-cho-ai/bai-giang/bai-02-tap-loi/bai-toan-tuong-duong.html'],
@@ -117,6 +118,7 @@ async function sourceManifest() {
     'src/features/labs/components/GPLab.vue',
     'src/features/labs/components/CorrelationLab.vue','src/features/labs/components/SdpParabolaLab.vue',
     'src/features/labs/components/SchurSurfaceLab.vue','src/features/labs/components/EigenLab.vue',
+    ...['SteepestDirectionLab','ArmijoStepLab','NewtonModelLab','SimplexBarrierLab'].map(name=>`src/features/labs/components/${name}.vue`),
     'src/features/labs/components/LagrangeBoundLab.vue',
     'src/features/labs/components/FenchelSupportLab.vue',
     'src/features/labs/components/DualSupportLab.vue',
@@ -357,6 +359,12 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'newton-hub':[
+   [0,'Chuẩn ℓ₁'],[0,'Hai thành phần bằng nhau'],[0,'Chuẩn ℓ∞'],[0,'Một thành phần bằng 0'],[0,'Gradient bằng 0'],
+   [1,'Hướng d = −4'],[1,'Giảm bước còn một nửa'],[1,'Giảm bước còn một nửa'],[1,'Hướng d = −1'],
+   [2,'Bắt đầu ở 1,4'],[2,'Đi một bước Newton'],[2,'Đặt tại nghiệm'],
+   [3,'t = 0.1'],[3,'t = 2'],[3,'t = 20']
+  ],
   'lagrange-bound':[
    [0,'λ = 0'],[0,'λ = 1'],[0,'λ = 2'],[0,'λ = 4'],
    [1,'Bình phương'],[1,'Đưa x về điểm chạm'],[1,'Trị tuyệt đối'],[1,'Độ dốc 1,5'],[1,'Độ dốc 1'],[1,'Đưa x về điểm chạm'],
@@ -476,6 +484,15 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='newton-hub'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Hai thành phần bằng nhau')assert(text.includes('Mọi điểm trên cạnh xanh'))
+   if(label==='Gradient bằng 0')assert(text.includes('đạo hàm định hướng bằng 0'))
+   if(label==='Hướng d = −4')assert(text.includes('Bước chưa giảm đủ'))
+   if(label==='Hướng d = −1')assert(text.includes('Chấp nhận bước này'))
+   if(label==='Đặt tại nghiệm')assert(text.includes('giảm 0.00000'))
+   if(label==='t = 20')assert(text.includes('3/t = 0.1500'))
+  }
   if(name==='lagrange-bound'){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='λ = 1')assert(text.includes('0.7500')&&text.includes('vi phạm'))
