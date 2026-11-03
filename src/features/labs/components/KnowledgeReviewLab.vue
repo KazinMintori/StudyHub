@@ -2,7 +2,8 @@
 import {computed,ref,onMounted,watch} from 'vue'
 import MathText from '../../../core/math/components/MathText.vue'
 const props=defineProps({lesson:{type:String,required:true}}),slides=ref([]),index=ref(0),error=ref('')
-async function load(){try{const module=props.lesson==='05-csp'?await import('../../../content/courses/bieu-dien-tri-thuc/lectures/05-csp/slides.mjs'):await import('../../../content/courses/bieu-dien-tri-thuc/lectures/05-tim-kiem-cuc-bo/slides.mjs');slides.value=module.slides;index.value=0;error.value=''}catch{error.value='Chưa tải được thẻ ôn tập. Hãy mở lại trang khi có kết nối.'}}
+const decks=import.meta.glob('../../../content/courses/bieu-dien-tri-thuc/lectures/*/slides.mjs')
+async function load(){try{const read=decks['../../../content/courses/bieu-dien-tri-thuc/lectures/'+props.lesson+'/slides.mjs'];if(!read)throw Error('Unknown lesson');const module=await read();slides.value=module.slides;index.value=0;error.value=''}catch{error.value='Chưa tải được thẻ ôn tập. Hãy mở lại trang khi có kết nối.'}}
 onMounted(load);watch(()=>props.lesson,load)
 const slide=computed(()=>slides.value[index.value])
 </script>
