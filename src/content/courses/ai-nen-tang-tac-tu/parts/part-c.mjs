@@ -139,7 +139,67 @@ export const lessons = [
         ]
       }
     ]
-  }
+  },
+    {
+      "number": 17,
+      "slug": "17-hoc-quan-he-va-suy-luan-xac-suat",
+      "title": "Học quan hệ và suy luận xác suất",
+      "prerequisites": [],
+      "supportingConcepts": [
+        "quan-he",
+        "menh-de",
+        "tap-hop"
+      ],
+      "status": "ready",
+      "description": "Nghiên cứu trí tuệ nhân tạo quan hệ thống kê (StarAI), nhúng đồ thị tri thức, mô hình quan hệ xác suất (PRMs) và giải quyết bất định về định danh cùng sự tồn tại.",
+      "topicGroups": [
+        {
+          "title": "Các chủ đề trong chương",
+          "topics": [
+            {
+              "slug": "17-1-tu-quan-he-den-dac-trung-va-bien-ngau-nhien",
+              "title": "17.1 Từ quan hệ đến đặc trưng và biến ngẫu nhiên",
+              "question": ""
+            },
+            {
+              "slug": "17-2-hoc-quan-he",
+              "title": "17.2 Học quan hệ và nhúng đồ thị tri thức",
+              "question": ""
+            },
+            {
+              "slug": "17-3-mo-hinh-quan-he-xac-suat",
+              "title": "17.3 Mô hình quan hệ xác suất",
+              "question": ""
+            },
+            {
+              "slug": "17-4-danh-tinh-va-ton-tai",
+              "title": "17.4 Bất định về định danh và tồn tại",
+              "question": ""
+            },
+            {
+              "slug": "17-5-tac-dong-xa-hoi",
+              "title": "17.5 Tác động xã hội",
+              "question": ""
+            },
+            {
+              "slug": "17-6-on-tap",
+              "title": "17.6 Ôn tập toàn diện Chương 17",
+              "question": ""
+            },
+            {
+              "slug": "17-7-tai-lieu-tham-khao",
+              "title": "17.7 Tài liệu tham khảo",
+              "question": ""
+            },
+            {
+              "slug": "17-8-bai-tap",
+              "title": "17.8 Bài tập",
+              "question": ""
+            }
+          ]
+        }
+      ]
+    }
 ]
 export const slides = [
   {
@@ -239,6 +299,56 @@ export const slides = [
       "Nguyên tắc dữ liệu FAIR và nguồn gốc xuất xứ bảo đảm tính minh bạch và tái lập của tri thức."
     ],
     "note": "16-do-thi-tri-thuc-va-ban-the-luan",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Từ quan hệ sang biến ngẫu nhiên",
+    "bullets": [
+      "Biến logic biểu diễn cá thể, còn biến ngẫu nhiên nhận giá trị xác suất trong miền cụ thể.",
+      "Thuộc tính đơn trị ánh xạ thành biến ngẫu nhiên; quan hệ n-ngôi được mô hình hóa qua biến Boolean hoặc biến hàm."
+    ],
+    "note": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Phân rã ma trận và lọc cộng tác",
+    "bullets": [
+      "Dự đoán sở thích bằng cách xấp xỉ ma trận đánh giá thưa qua tích vô hướng các vector đặc trưng ẩn.",
+      "Chính quy hóa L2 trên từng thực thể giúp tránh quá khớp với người dùng hoặc vật phẩm có ít đánh giá."
+    ],
+    "note": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Nhúng đồ thị tri thức (KGE)",
+    "bullets": [
+      "Biểu diễn thực thể và quan hệ trong không gian vector liên tục để hoàn thiện tri thức bị thiếu.",
+      "TransE tịnh tiến vector quan hệ; ComplEx và RotatE dùng số phức mô hình hóa quan hệ bất đối xứng."
+    ],
+    "note": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Mô hình đĩa và AI quan hệ thống kê (StarAI)",
+    "bullets": [
+      "Ký hiệu đĩa (Plates) nhân bản tham số mạng Bayes trên toàn bộ quần thể cá thể.",
+      "Suy luận nâng cao (Lifted Inference) tận dụng đối xứng để tính toán trực tiếp mà không cần cụ thể hóa bùng nổ."
+    ],
+    "note": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "formula": "",
+    "example": ""
+  },
+  {
+    "title": "Bất định về định danh và sự tồn tại",
+    "bullets": [
+      "Bài toán đối soát thực thể (Record Linkage) xác định các mô tả khác nhau có cùng quy chiếu một cá thể hay không.",
+      "Ngôn ngữ như BLOG cho phép suy luận xác suất về số lượng và sự tồn tại của các cá thể chưa từng quan sát."
+    ],
+    "note": "17-hoc-quan-he-va-suy-luan-xac-suat",
     "formula": "",
     "example": ""
   }

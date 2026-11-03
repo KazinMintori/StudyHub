@@ -804,5 +804,71 @@
     "sha256": "6a851400ca1bfa11f773d3ffbbb26fe1b90c41fd98dcf60275e0b8b95b2653c6",
     "bytes": 1064753,
     "caption": "Hình 16.3: Ánh xạ từ khái niệm hóa trong thế giới thực sang ký hiệu biểu diễn trong bản thể luận"
+  },
+  "x160.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x160.png",
+    "url": "https://artint.info/3e/html/x160.png",
+    "bytes": 59115,
+    "sha256": "bc452284e780856524fc9765d7be54b2c39643dd3c19dfa094010009ce747a50"
+  },
+  "x161.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x161.png",
+    "url": "https://artint.info/3e/html/x161.png",
+    "bytes": 7970,
+    "sha256": "609d0de6faac49a2346b1ede2b8b1ed3679d71fab5546a9d82787074b20ec9d5"
+  },
+  "x162.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x162.png",
+    "url": "https://artint.info/3e/html/x162.png",
+    "bytes": 66059,
+    "sha256": "ef32d8254269adb9caef48fbf83774b3d30b1f4702d5ba7fc468e92db54eb390"
+  },
+  "x163.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x163.png",
+    "url": "https://artint.info/3e/html/x163.png",
+    "bytes": 73235,
+    "sha256": "14560f135cc95ef7425f43b44350d46ff87237eafa271f703528e5a4df749801"
+  },
+  "x164.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x164.png",
+    "url": "https://artint.info/3e/html/x164.png",
+    "bytes": 20260,
+    "sha256": "e114fa2be6999734fee76d2b5512800d35b56bd644d2f8ab405688cdd259b414"
+  },
+  "x165.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x165.png",
+    "url": "https://artint.info/3e/html/x165.png",
+    "bytes": 12316,
+    "sha256": "5068e80fbd7dcf40cc943d477061472bce9cec8fde83126dab63daad091a8ad0"
+  },
+  "x166.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x166.png",
+    "url": "https://artint.info/3e/html/x166.png",
+    "bytes": 5842,
+    "sha256": "4146d75a9865077cb013fc3a3efe465cd625cf87f83718768897979cacaca117"
+  },
+  "x167.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x167.png",
+    "url": "https://artint.info/3e/html/x167.png",
+    "bytes": 6262,
+    "sha256": "a3ed912be4ac3519e8c055d463bbc0bd87af30d3b41d890dfac2327dbe4d017d"
+  },
+  "x168.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x168.png",
+    "url": "https://artint.info/3e/html/x168.png",
+    "bytes": 6039,
+    "sha256": "f544ed8753c8ff6186c77d0a9cdc064f9e53d9b6cb9814be147bd0d352a56db1"
+  },
+  "x169.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x169.png",
+    "url": "https://artint.info/3e/html/x169.png",
+    "bytes": 7781,
+    "sha256": "58a0ca3780605ea23422ee2b15203a865abbc591c145ff41e9ce1e43b54e7be1"
+  },
+  "x170.png": {
+    "file": "docs/ai-nen-tang-tac-tu/bai-giang/17-hoc-quan-he-va-suy-luan-xac-suat/figures/x170.png",
+    "url": "https://artint.info/3e/html/x170.png",
+    "bytes": 23523,
+    "sha256": "0c28db7051c54151280e471170dfa714bfe436e1f2429696bacf690848a0e786"
   }
 }

@@ -435,5 +435,67 @@ export const flashcards = [
       "provenance",
       "social-impact"
     ]
+  },
+  {
+    "id": "fc-artint-ch17-01",
+    "front": "Sự khác biệt cốt lõi giữa biến logic (logical variable) và biến ngẫu nhiên (random variable) trong AI quan hệ thống kê là gì?",
+    "back": "Biến logic biểu thị một cá thể trong miền đối tượng (chẳng hạn X trong Person). Biến ngẫu nhiên biểu thị một thuộc tính hoặc mệnh đề có thể đúng/sai hoặc nhận giá trị trạng thái chưa chắc chắn (chẳng hạn likes(sam, avatar) nhận giá trị Boolean).",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "tags": [
+      "starai",
+      "logical-variable",
+      "random-variable"
+    ]
+  },
+  {
+    "id": "fc-artint-ch17-02",
+    "front": "Tại sao trong lọc cộng tác bằng phân rã ma trận, ta cần chính quy hóa L2 trên từng thực thể độc lập thay vì phạt theo số lần đánh giá?",
+    "back": "Chính quy hóa trên từng thực thể giúp co cụm các thực thể có ít dữ liệu về mức trung bình an toàn để tránh quá khớp, trong khi cho phép thực thể có nhiều dữ liệu tự do khớp chính xác với sở thích thực tế. Phạt theo số lần đánh giá sẽ trừng phạt nặng nhất những người dùng tích cực nhất, làm méo mó dự đoán.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "tags": [
+      "collaborative-filtering",
+      "matrix-factorization",
+      "regularization"
+    ]
+  },
+  {
+    "id": "fc-artint-ch17-03",
+    "front": "Mô hình ComplEx và RotatE khắc phục nhược điểm gì của TransE và DistMult trong việc học nhúng đồ thị tri thức?",
+    "back": "TransE và DistMult chỉ xử lý tốt quan hệ đối xứng hoặc tịnh tiến đơn giản, thất bại trước các quan hệ một-nhiều, bất đối xứng (antisymmetric) hoặc bắc cầu. ComplEx và RotatE biểu diễn thực thể trong không gian số phức, sử dụng phép nhân số phức liên hợp hoặc phép xoay góc Euler để phân biệt chiều xuôi-ngược chính xác.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "tags": [
+      "knowledge-graph-embeddings",
+      "complex",
+      "rotate",
+      "transe"
+    ]
+  },
+  {
+    "id": "fc-artint-ch17-04",
+    "front": "Ký hiệu đĩa (plate notation) trong mạng Bayes biểu diễn điều gì và khi nào nó gây bùng nổ độ rộng cây (treewidth)?",
+    "back": "Ký hiệu đĩa biểu diễn việc nhân bản các biến ngẫu nhiên có cùng cấu trúc phụ thuộc và chia sẻ chung CPT cho mọi cá thể trong quần thể. Độ rộng cây bùng nổ khi các biến quan sát tạo ra đồ thị hai phía kết nối dày đặc giữa hai đĩa (như người dùng và phim), liên kết tất cả các biến ẩn vào một clique khổng lồ.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "tags": [
+      "plate-models",
+      "treewidth",
+      "starai",
+      "bayesian-networks"
+    ]
+  },
+  {
+    "id": "fc-artint-ch17-05",
+    "front": "Bài toán đối soát thực thể (entity resolution / record linkage) giải quyết thách thức gì về định danh trong suy luận quan hệ?",
+    "back": "Giải quyết sự bất định về định danh khi các hệ thống khác nhau hoặc các văn bản khác nhau sử dụng các tên gọi/mô tả khác nhau (ví dụ: 'D. Poole', 'David Poole') nhưng cùng trỏ về một cá thể thực tế duy nhất, hoặc cùng một tên gọi nhưng trỏ về hai cá thể khác nhau.",
+    "category": "ai-nen-tang-tac-tu",
+    "lecture": "17-hoc-quan-he-va-suy-luan-xac-suat",
+    "tags": [
+      "entity-resolution",
+      "record-linkage",
+      "identity-uncertainty"
+    ]
   }
 ]
