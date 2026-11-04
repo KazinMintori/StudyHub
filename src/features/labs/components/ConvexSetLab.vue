@@ -27,7 +27,7 @@ function pickShape(key) { shapeKey.value = key; const [a, b] = shapes[key].pair;
 
 const points = ref([[-2.6, -1.2], [-1.2, 1.9], [0.4, 0.3], [1.5, 2.1], [2.8, 0.2], [1.6, -1.8], [-0.6, -2.1], [0.9, -0.4]])
 const drag = createDragger(svg, view, (name, value) => {
-  value=[Math.max(-3.3,Math.min(3.3,value[0])),Math.max(-2.3,Math.min(2.3,value[1]))]
+  value=[Math.max(-3.3,Math.min(3.3,value[0])),Math.max(-2.4,Math.min(2.4,value[1]))]
   if (name === 'a' || name === 'b') pts.value = { ...pts.value, [name]: value }
   else points.value = points.value.map((p, i) => (String(i) === name ? value : p))
 }, { step: 0.1, snap: 0.05 })
