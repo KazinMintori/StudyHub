@@ -50,6 +50,12 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['review-hub','/toan-cho-ai/on-luyen/tong-hop.html'],
+  ['review-cheatsheet','/toan-cho-ai/on-luyen/tong-hop.html#cheatsheet'],
+  ['review-dual','/toan-cho-ai/on-luyen/doi-ngau-lagrange.html'],
+  ['review-constrained','/toan-cho-ai/on-luyen/bai-tap-rang-buoc.html'],
+  ['review-chain','/toan-cho-ai/on-luyen/quy-tac-chuoi-va-taylor.html'],
+  ['review-algorithms','/toan-cho-ai/on-luyen/gradient-backtracking-newton.html'],
   ['review-lp','/toan-cho-ai/on-luyen/quy-hoach-tuyen-tinh.html'],
   ['review-cos','/toan-cho-ai/on-luyen/bai-tap-cos.html'],
   ['review-kkt','/toan-cho-ai/on-luyen/dieu-kien-kkt.html'],
@@ -123,7 +129,9 @@ const routes = [
 ].filter(([name]) => !process.env.QA_CASES || process.env.QA_CASES.split(',').includes(name))
 async function sourceManifest() {
   const paths = [
-    ...routes.map(([,route])=>'docs'+route.replace(/\.html$/,'.md')),
+    ...routes.map(([,route])=>'docs'+route.split('#')[0].replace(/\.html$/,'.md')),
+    'src/content/courses/toan-cho-ai/lectures/on-luyen/review-course.mjs',
+    'src/features/lecture/components/LectureHeader.vue','src/features/lecture/services/cheatsheet-loaders.mjs',
     'src/features/labs/components/SlackLiftLab.vue','src/features/labs/components/MaxEpigraphLab.vue',
     'src/features/labs/components/EliminationLab.vue',
     'src/features/labs/components/SensorWeightsLab.vue',
@@ -142,6 +150,7 @@ async function sourceManifest() {
     ...['BellmanPotentialLab','LpBasisLab','MinimumNormFaceLab','NormApproximationLab','LPDirectionLab','LpCubeLab','ChebyshevCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['CenteredRegressionLab','MeanValueLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['KktBalanceLab','KktAllocationLab','CosStationaryLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    ...['ChainPathLab','ArmijoQuadraticLab','CubicConstraintLab','DualQuadraticLab','Restrict2DLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['bellman-potentials','lp-bases'].map(name=>`src/features/labs/services/${name}.mjs`),
     ...['adaptive-sequence','conjugate-directions'].map(name=>`src/features/labs/services/${name}.mjs`),
     ...['PhaseOneSlackLab','ViolationSumLab'].map(name=>'src/features/labs/components/'+name+'.vue'),
@@ -163,7 +172,7 @@ async function sourceManifest() {
     ...['EquivalenceLab','EnvelopeLab','CompositionLab','OptimalityLab','LogisticLab','LogDetLab','PowerLab','SoftmaxLab','FunctionLab','ConvexSurfaceLab','ElboLab','Restrict2DLab','GradientCutLab','HessianMapLab','PerspectiveLab','PerspectiveSpaceLab','ConditionalMixLab','SeparationLab','SeparationGapLab','XorLiftLab','OrderLab','ConeClosureLab','FitLab','RobustBoxLab','RobustEllipsoidLab','RobustLPLab','ChanceConstraintLab','RidgeParetoLab','MinimaxRatioLab','GpParameterLab','EqualityQpDualLab','ResourceSensitivityLab','RedundantMultiplierLab','ChebyshevCertificateLab','EntropyDualLab','SlaterGapLab','WeightedWaterfillLab','OddCycleSdpLab','PerronGpLab'].map(name=>`src/features/labs/components/${name}.vue`),'src/core/math/components/MathMatrix.vue','src/features/site/components/FeedbackWidget.vue','src/features/labs/services/foundation-geometry.mjs','src/features/labs/services/convex-geometry.mjs','src/features/labs/services/diagram-labels.mjs','src/features/labs/services/svg-clipping.mjs','src/features/labs/controllers/svg-drag.js','src/app/styles/labs.css','docs/.vitepress/theme/tokens.css','scripts/qa/verify-math-ai-visuals.mjs','scripts/qa/math-ai-diagram-clarity.mjs'
   ]
   for(const [,route]of routes){
-    const notes='docs'+route.replace(/\.html$/,'.md'),source=await readFile(notes,'utf8')
+    const notes='docs'+route.split('#')[0].replace(/\.html$/,'.md'),source=await readFile(notes,'utf8')
     const references=[...[...source.matchAll(/!\[[^\]]*\]\(<?([^\s)>]+)/g)].map(m=>m[1]),...[...source.matchAll(/<img\b[^>]*\bsrc=["']([^"']+)/g)].map(m=>m[1])]
     for(const reference of references){
       if(/^(?:https?:|data:|\/\/)/i.test(reference))continue
@@ -182,7 +191,7 @@ async function inspect(label) {
   const found = await page.evaluate(targetWidth => {
     document.querySelectorAll('.vp-doc details:not(.lab-tasks)').forEach(e => { e.open = true })
     const bad = []
-    for (const el of document.querySelectorAll('.vp-doc mjx-container')) {
+    for (const el of document.querySelectorAll('.vp-doc mjx-container,.lecture-cheatsheet mjx-container')) {
       const r = el.getBoundingClientRect(), s = el.querySelector('svg')?.getBoundingClientRect()
       if (!r.width) continue
       const parent = el.parentElement.getBoundingClientRect()
@@ -387,6 +396,15 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'review-dual':[[0,'Một biến'],[0,'Nhân tử tối ưu'],[0,'Nhân tử bằng 0'],[0,'Hai biến'],[0,'Nhân tử tối ưu']],
+  'review-constrained':[[0,'Gốc thỏa KKT'],[0,'Đi một đoạn âm nhỏ'],[0,'Nghiệm toàn cục trên trục'],[0,'Trục x2'],[0,'Trục x3']],
+  'review-chain':[[0,'t = 0'],[0,'t = 0,5'],[0,'t = 1']],
+  'review-algorithms':[
+   [0,'Vòng một tại (2, 1)'],[0,'Chia đôi bước thử'],[0,'Nhận bước này'],
+   [0,'Vòng hai tại (0, −1)'],[0,'Chia đôi bước thử'],[0,'Chia đôi bước thử'],[0,'Nhận bước này'],
+   [0,'Vòng một tại (2, 1)'],[0,'Đổi gradient và Newton'],[0,'Nhận bước này'],
+   [1,'AdaGrad'],[1,'RMSProp'],[1,'Adam'],[1,'Xem mặt trong R³'],[1,'Xem bước 10']
+  ],
   'review-lp':[[0,'Cả cạnh tối ưu'],[0,'Mục tiêu bằng không'],[1,'Một cạnh tối ưu'],[1,'Một mặt tối ưu']],
   'review-cos':[[0,'Điểm dừng tại 0'],[0,'Thử x = 1'],[0,'Thử x = −1']],
   'review-kkt':[[0,'Đích ở ngoài đĩa'],[0,'Đích ở trong đĩa'],[0,'Đích ngay trên biên']],
@@ -556,6 +574,16 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='convex-hull-old'&&label==='Ngôi sao năm cánh')await interact(touch,index)
+  if(name==='review-dual'&&label==='Nhân tử tối ưu')assert((await labs[index].$eval('.lab-readout',e=>e.innerText)).includes('Chênh lệch = 0.0000'))
+  if(name==='review-chain'&&label==='t = 1')assert((await labs[index].$eval('.lab-readout',e=>e.innerText)).includes('g′(t) = 12.0000'))
+  if(name==='review-constrained'&&label==='Nghiệm toàn cục trên trục')assert((await labs[index].$eval('.lab-readout',e=>e.innerText)).includes('−8.00000'))
+  if(name==='review-algorithms'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Vòng một tại (2, 1)')assert(readout.includes('Mục tiêu thật 22.0000'))
+   if(label==='Nhận bước này')assert(readout.includes('(0.0000, −1.0000)')||readout.includes('(0.0000, 0.0000)'))
+   if(label==='Xem mặt trong R³')await interact(touch,index)
+  }
   if(name==='review-cos'&&label==='Điểm dừng tại 0')assert((await labs[index].$eval('.lab-readout',e=>e.innerText)).includes('F(x) = 1.00000'))
   if(name==='review-kkt'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
@@ -932,14 +960,32 @@ try {
     const touch=process.env.QA_INPUT?process.env.QA_INPUT==='touch':width<600
     await page.setViewport({ width, height:Number(process.env.QA_HEIGHT||900),hasTouch:touch,isMobile:touch })
     for (const [name, route] of routes) {
+      const previousUrl=new URL(page.url()),targetUrl=new URL(base+route)
       const response = await page.goto(base + route, { waitUntil: 'networkidle0', timeout: 120000 })
-      assert.equal(response.status(), 200)
+      if(response)assert.equal(response.status(),200)
+      else{
+        assert.equal(previousUrl.origin+previousUrl.pathname,targetUrl.origin+targetUrl.pathname,'Only same-page hash navigation may omit the HTTP response')
+        assert.equal(page.url(),targetUrl.href,'Hash navigation did not reach the requested panel')
+      }
       const overview=['optimization-overview','duality-overview'].includes(name)
-      await page.waitForSelector(process.env.QA_LAYOUT_ONLY||overview?'.vp-doc, vite-error-overlay':'.study-lab .lab-handle, vite-error-overlay', { timeout: 60000 })
+      const pageSelector=name==='review-cheatsheet'?'.lecture-cheatsheet .cheatsheet-card, vite-error-overlay':process.env.QA_LAYOUT_ONLY||overview?'.vp-doc, vite-error-overlay':'.study-lab .lab-handle, vite-error-overlay'
+      await page.waitForSelector(pageSelector, { timeout: 60000 })
       assert(!await page.$('vite-error-overlay'),`Preview compilation failed at ${route}; inspect qa-dev.log`)
       await page.evaluate(() => document.fonts.ready)
       await page.$$eval('.vp-doc img',images=>Promise.all(images.map(img=>{img.loading='eager';return img.decode().catch(()=>{})})))
       await page.evaluate(theme => document.documentElement.classList.toggle('dark', theme === 'dark'), theme)
+      if(name==='review-hub'||name==='review-cheatsheet'){
+        assert.equal(await page.$$eval('h1',nodes=>nodes.filter(node=>node.getBoundingClientRect().width>0).length),1,'Review hub must have one visible title')
+        assert((await page.$eval('.lecture-meta',node=>node.innerText)).includes('Ôn luyện'),'Review hub has an incorrect lesson label')
+      }
+      if(name==='review-cheatsheet'){
+        const item=await page.$('.cheatsheet-item::-p-text(Backtracking Armijo)')
+        assert(item,'The authored Armijo cheatsheet item did not load')
+        if(width===375){
+          await item.evaluate(node=>node.scrollIntoView({block:'center',behavior:'instant'}))
+          await item.screenshot({path:`${evidencePath}/review-armijo-cheatsheet-375-${theme}.png`})
+        }
+      }
       await inspect(`${name}-${width}-${theme}-initial`)
       if(!process.env.QA_LAYOUT_ONLY&&!overview){await interact(touch);if(name==='odd-cycle')await checkCycleButtons(touch);await checkPageScroll(touch);await exercisePresets(name,touch);await exerciseFunctionChoices(name,touch)}
       // Exercise 3D/2D mode switches and singular/degenerate presets via controls.

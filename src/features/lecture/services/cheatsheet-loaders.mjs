@@ -2,6 +2,7 @@
 // cheatsheet-service.mjs. Each lecture downloads only its own data module.
 // scripts/tests/cheatsheet-loaders.test.mjs keeps both registries in sync.
 export const cheatsheetLoaders = {
+  'toan-cho-ai/on-luyen': () => import('../../../content/courses/toan-cho-ai/lectures/on-luyen/review-course.mjs').then(module => module.mathAiReviewCheatsheet),
   'vat-ly-2/18-photon': () => import('../../../../docs/.vitepress/physics-photon-course.mjs').then(module => module.photonCheatsheet),
   'vat-ly-2/17-thuyet-tuong-doi': () => import('../../../../docs/.vitepress/physics-relativity-course.mjs').then(module => module.relativityCheatsheet),
   'vat-ly-2/16-nhieu-xa': () => import('../../../../docs/.vitepress/physics-diffraction-course.mjs').then(module => module.diffractionCheatsheet),

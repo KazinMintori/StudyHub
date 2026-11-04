@@ -73,6 +73,7 @@ onUnmounted(() => {
     <h1>{{ lesson.title }}</h1>
     <div class="lecture-meta">
       <span v-if="lesson.supplementary">Chuyên đề bổ trợ {{ lesson.supplementNumber }}</span>
+      <span v-else-if="lesson.kind === 'review'">Ôn luyện</span>
       <span v-else>Bài {{ lesson.number ?? course.lessons.indexOf(lesson) + 1 }}</span>
       <span v-if="updated" class="updated-date">Cập nhật {{ updated }}</span>
       <a :href="studyLink(workspacePath(course.id, 'notes'))">Ghi chú của bạn</a>
