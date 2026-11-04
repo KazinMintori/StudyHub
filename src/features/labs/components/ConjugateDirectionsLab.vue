@@ -19,11 +19,13 @@ watch([start,space,steepest],()=>{step.value=0})
 
 const bounds={x0:-1.9,x1:3.5,y0:-1.4,y1:4.1}
 const flat=makeView({...bounds,width:400,height:350,pad:34})
-const camera={yaw:33,pitch:29,scale:49,origin:[174,218]}
+const camera={yaw:33,pitch:29,scale:80,origin:[175,190]}
 const project=point=>space.value?project3(point,camera):flat.point(point)
-const view=computed(()=>space.value?{...bounds,toWorld:(x,y)=>unprojectPlane([x,y],start.value[2],camera)}:flat)
+const view=computed(()=>space.value?{
+  x0:-0.5,x1:2,y0:-0.5,y1:2,toWorld:(x,y)=>unprojectPlane([x,y],start.value[2],camera)
+}:flat)
 const drag=createDragger(svg,view,(_,p)=>{
-  start.value=[Math.max(-1,Math.min(2.5,p[0])),Math.max(-0.8,Math.min(3,p[1])),start.value[2]]
+  start.value=space.value?[p[0],p[1],start.value[2]]:[Math.max(-1,Math.min(2.5,p[0])),Math.max(-0.8,Math.min(3,p[1])),start.value[2]]
   step.value=0
 },{step:0.05})
 const poly=points=>points.map(p=>project(p).join(',')).join(' ')

@@ -10,6 +10,9 @@ import {inspectDiagramClarity} from './math-ai-diagram-clarity.mjs'
 
 const base = process.env.QA_URL || 'http://127.0.0.1:5195'
 const output = 'qa/math-ai-visuals'
+const selectedLabIndices=process.env.QA_LABS?process.env.QA_LABS.split(',').map(Number):null
+if(selectedLabIndices)assert(selectedLabIndices.every(index=>Number.isInteger(index)&&index>=0),'QA_LABS must list nonnegative lab indices')
+const selectedLab=index=>!selectedLabIndices||selectedLabIndices.includes(index)
 await mkdir(output, { recursive: true })
 const runId=new Date().toISOString().replace(/[^0-9]/g,'')
 const evidencePath=`${output}/runs/${runId}`
@@ -203,6 +206,7 @@ async function inspect(label) {
 async function interact(touch,onlyLab=null) {
   const labs = await page.$$('figure.study-lab')
   for (let i = 0; i < labs.length; i++) {
+    if(!selectedLab(i))continue
     if(onlyLab!==null&&onlyLab!==i)continue
     const lab = labs[i], handles = await lab.$$('.lab-handle')
     if(!handles.length&&await lab.$('input,select')){
@@ -514,6 +518,7 @@ async function exercisePresets(name,touch){
   'odd-cycle':[[0,'Tất cả cùng nhóm'],[0,'Đưa phân hoạch thành Gram hạng 1'],[0,'Một phân hoạch tối ưu'],[0,'Vector SDP tối ưu']]
  }[name]||[]
  for(const [index,label]of cases){
+  if(!selectedLab(index))continue
   const buttons=await labs[index].$$('.lab-buttons button')
   let found
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
@@ -922,7 +927,7 @@ try {
 } finally {
   const sources=await sourceManifest()
   if(JSON.stringify(sources)!==JSON.stringify(sourcesAtStart)) errors.push('Source changed during browser verification; rerun the affected cases against a fixed source snapshot.')
-  const report=JSON.stringify({base,evidencePath,viewportHeight:Number(process.env.QA_HEIGHT||900),inputOverride:process.env.QA_INPUT||null,mode:process.env.QA_LAYOUT_ONLY?'layout-only':'interaction-and-layout',verifiedAt:new Date().toISOString(),sources,results,interactions,errors,issues},null,2)
+  const report=JSON.stringify({base,evidencePath,viewportHeight:Number(process.env.QA_HEIGHT||900),inputOverride:process.env.QA_INPUT||null,labFilter:selectedLabIndices,mode:process.env.QA_LAYOUT_ONLY?'layout-only':'interaction-and-layout',verifiedAt:new Date().toISOString(),sources,results,interactions,errors,issues},null,2)
   const latest=`${output}/browser-results${process.env.QA_CASES?'-'+process.env.QA_CASES.replaceAll(',','-'):''}${process.env.QA_LAYOUT_ONLY?'-layout':''}.json`
   try{await writeFile(`${evidencePath}/previous-report.json`,await readFile(latest))}catch(error){if(error.code!=='ENOENT')throw error}
   await writeFile(`${evidencePath}/report.json`,report)
