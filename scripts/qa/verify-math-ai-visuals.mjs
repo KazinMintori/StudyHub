@@ -50,6 +50,7 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['lp-dp','/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.html'],
   ['adaptive','/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.html'],
   ['training','/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.html'],
   ['primal-dual','/toan-cho-ai/bai-giang/bai-04-gradient-newton/phuong-phap-primal-dual.html'],
@@ -129,6 +130,8 @@ async function sourceManifest() {
     'src/features/labs/components/BarrierScalingLab.vue','src/features/labs/components/PrimalDualStepLab.vue',
     ...['MiniBatchNoiseLab','MomentumStateLab','OptimizerPathLab','InitializationFlowLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['AdaptiveMemoryLab','ConjugateDirectionsLab','BfgsSecantLab','BatchNormScaleLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    ...['BellmanPotentialLab','LpBasisLab','MinimumNormFaceLab','NormApproximationLab','LPDirectionLab','LpCubeLab','ChebyshevCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    ...['bellman-potentials','lp-bases'].map(name=>`src/features/labs/services/${name}.mjs`),
     ...['adaptive-sequence','conjugate-directions'].map(name=>`src/features/labs/services/${name}.mjs`),
     ...['PhaseOneSlackLab','ViolationSumLab'].map(name=>'src/features/labs/components/'+name+'.vue'),
     ...['SteepestDirectionLab','ArmijoStepLab','NewtonModelLab','SimplexBarrierLab'].map(name=>`src/features/labs/components/${name}.vue`),
@@ -373,6 +376,15 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'lp-dp':[
+   [0,'Cả cạnh tối ưu'],[0,'Có nghiệm nhưng không có đỉnh'],[0,'Nghiệm tại một đỉnh'],
+   [1,'Một mặt tối ưu'],[1,'Toàn khối tối ưu'],
+   [2,'b = 2'],[2,'x, y'],[2,'x, s₁'],[2,'x, s₂'],[2,'y, s₁'],
+   [3,'Nghiệm chuẩn cực đại'],[3,'Điểm trong tam giác L₁'],
+   [4,'Hai tọa độ'],[4,'Một nghiệm thưa'],[4,'Ba tọa độ'],[4,'Nghiệm Euclid'],
+   [5,'Hình chữ nhật, nhiều tâm'],[5,'Kéo để chọn một tâm tối ưu'],
+   [7,'Tính nút kế tiếp'],[7,'Hai đường cùng tối ưu'],[7,'Tính tất cả'],[7,'Một bộ thế năng tối ưu khác']
+  ],
   adaptive:[
    [0,'Ví dụ 2 rồi 1'],[0,'Một xung rồi im lặng'],[0,'Đổi dấu liên tục'],
    [1,'AdaGrad'],[1,'RMSProp'],[1,'Adam'],[1,'Xem mặt trong R³'],[1,'Xem bước 10'],
@@ -524,6 +536,17 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='lp-dp'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(index===2&&['x, y','x, s₁','x, s₂'].includes(label))assert(readout.includes('suy biến'))
+   if(label==='y, s₁')assert(readout.includes('không tạo cơ sở'))
+   if(label==='Nghiệm chuẩn cực đại')assert(readout.includes('0.6667'))
+   if(label==='Điểm trong tam giác L₁')assert(readout.includes('= 2.0000'))
+   if(label==='Hai tọa độ')await interact(touch,index)
+   if(label==='Nghiệm Euclid')assert(readout.includes('1.7321'))
+   if(label==='Tính tất cả')assert(readout.includes('A hoặc B'))
+   if(label==='Một bộ thế năng tối ưu khác')assert(readout.includes('bộ thế năng hiện tại tối ưu'))
+  }
   if(name==='adaptive'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='Ví dụ 2 rồi 1')assert(readout.includes('0.09322'))
