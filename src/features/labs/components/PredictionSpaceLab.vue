@@ -39,7 +39,7 @@ const drag = createDragger(svg, screenView, update, { step: 6 })
         <line :x1="P([0, 0, 0])[0]" :y1="P([0, 0, 0])[1]" :x2="P(a.map(v => v * 1.5))[0]" :y2="P(a.map(v => v * 1.5))[1]" class="lab-accent" />
         <line :x1="P(b)[0]" :y1="P(b)[1]" :x2="handle[0]" :y2="handle[1]" class="lab-bad" />
         <circle :cx="P(b)[0]" :cy="P(b)[1]" r="6" class="lab-dot" /><text :x="P(b)[0] + 12" :y="P(b)[1] + 18">b</text>
-        <circle :cx="P(a.map(v => v * optimum))[0]" :cy="P(a.map(v => v * optimum))[1]" r="6" class="lab-dot-hollow" /><text :x="P(a.map(v => v * optimum))[0] - 38" :y="P(a.map(v => v * optimum))[1] - 12">Aw*</text>
+        <circle :cx="P(a.map(v => v * optimum))[0]" :cy="P(a.map(v => v * optimum))[1]" r="6" class="lab-dot-hollow" /><text :x="P(a.map(v => v * optimum))[0] - 18" :y="P(a.map(v => v * optimum))[1] - 20" text-anchor="end">Aw*</text>
         <text :x="P([0, 0, 0])[0] - 20" :y="P([0, 0, 0])[1] + 20">O</text>
       </template>
       <circle :cx="handle[0]" :cy="handle[1]" r="8" class="lab-dot-accent" />

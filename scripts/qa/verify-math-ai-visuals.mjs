@@ -50,6 +50,11 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['convex-hull-old','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu/tap-loi-va-bao-loi.html'],
+  ['review-space','/toan-cho-ai/on-luyen/khong-gian-va-ma-tran.html'],
+  ['review-derivatives','/toan-cho-ai/on-luyen/dao-ham-va-cuc-tri.html'],
+  ['review-convexity','/toan-cho-ai/on-luyen/tinh-loi-va-toi-uu.html'],
+  ['review-regression','/toan-cho-ai/on-luyen/mo-hinh-va-hoi-quy.html'],
   ['lp-dp','/toan-cho-ai/bai-giang/bai-07-quy-hoach-tuyen-tinh-va-dong.html'],
   ['adaptive','/toan-cho-ai/bai-giang/bai-06-phuong-phap-thich-nghi.html'],
   ['training','/toan-cho-ai/bai-giang/bai-05-toi-uu-huan-luyen.html'],
@@ -131,6 +136,7 @@ async function sourceManifest() {
     ...['MiniBatchNoiseLab','MomentumStateLab','OptimizerPathLab','InitializationFlowLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['AdaptiveMemoryLab','ConjugateDirectionsLab','BfgsSecantLab','BatchNormScaleLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['BellmanPotentialLab','LpBasisLab','MinimumNormFaceLab','NormApproximationLab','LPDirectionLab','LpCubeLab','ChebyshevCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    ...['CenteredRegressionLab','MeanValueLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['bellman-potentials','lp-bases'].map(name=>`src/features/labs/services/${name}.mjs`),
     ...['adaptive-sequence','conjugate-directions'].map(name=>`src/features/labs/services/${name}.mjs`),
     ...['PhaseOneSlackLab','ViolationSumLab'].map(name=>'src/features/labs/components/'+name+'.vue'),
@@ -376,6 +382,11 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'convex-hull-old':[[0,'Lục giác đều (kể cả biên)'],[0,'Hình trăng khuyết'],[0,'Ngôi sao năm cánh'],[1,'Lấy một tổ hợp lồi ngẫu nhiên']],
+  'review-convexity':[[0,'Lục giác đều (kể cả biên)'],[0,'Elip đặc'],[0,'Hợp của hai hình tròn rời nhau']],
+  'review-space':[[2,'Đưa x ra biên tương đối'],[2,'Đưa x về giữa'],[2,'Chọn r nhỏ vừa đủ']],
+  'review-derivatives':[[0,'Dây cung nằm ngang'],[0,'Hai đầu mút gần nhau'],[1,'Bắt đầu ở 1,4'],[1,'Đi một bước Newton']],
+  'review-regression':[[0,'Đường nằm ngang'],[0,'Hệ số góc tối ưu'],[0,'Hệ số góc bằng 1'],[1,'Vector dự đoán trong R³'],[1,'Tìm w tối ưu']],
   'lp-dp':[
    [0,'Cả cạnh tối ưu'],[0,'Có nghiệm nhưng không có đỉnh'],[0,'Nghiệm tại một đỉnh'],
    [1,'Một mặt tối ưu'],[1,'Toàn khối tối ưu'],
@@ -536,6 +547,12 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='review-regression'){
+   const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Hệ số góc tối ưu')assert(readout.includes('0.055556'))
+   if(label==='Vector dự đoán trong R³')await interact(touch,index)
+  }
+  if(name==='review-derivatives'&&label==='Dây cung nằm ngang')assert((await labs[index].$eval('.lab-readout',e=>e.innerText)).includes('2z = 0.0000'))
   if(name==='lp-dp'){
    const readout=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(index===2&&['x, y','x, s₁','x, s₂'].includes(label))assert(readout.includes('suy biến'))

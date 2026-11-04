@@ -27,6 +27,7 @@ function pickShape(key) { shapeKey.value = key; const [a, b] = shapes[key].pair;
 
 const points = ref([[-2.6, -1.2], [-1.2, 1.9], [0.4, 0.3], [1.5, 2.1], [2.8, 0.2], [1.6, -1.8], [-0.6, -2.1], [0.9, -0.4]])
 const drag = createDragger(svg, view, (name, value) => {
+  value=[Math.max(-3.3,Math.min(3.3,value[0])),Math.max(-2.3,Math.min(2.3,value[1]))]
   if (name === 'a' || name === 'b') pts.value = { ...pts.value, [name]: value }
   else points.value = points.value.map((p, i) => (String(i) === name ? value : p))
 }, { step: 0.1, snap: 0.05 })
@@ -66,7 +67,7 @@ function removePoint() { if (points.value.length > 3) points.value = points.valu
 <template>
   <figure class="study-lab" :aria-label="type === 'test' ? 'Kiểm tra định nghĩa tập lồi bằng hai điểm' : 'Bao lồi của một tập điểm'">
     <p class="lab-title">{{ type === 'test' ? 'Đoạn nối hai điểm có ở lại trong tập không?' : 'Bao lồi: sợi dây chun quanh các điểm' }}</p>
-    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="img" :aria-label="type === 'test' ? `Hình ${shape.label} và đoạn nối hai điểm` : 'Các điểm, bao lồi tô màu và các đỉnh của bao lồi'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
+    <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="type === 'test' ? `Hình ${shape.label} và đoạn nối hai điểm` : 'Các điểm, bao lồi tô màu và các đỉnh của bao lồi'" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <template v-if="type === 'test'">
         <template v-if="shapeKey === 'crescent'">
           <circle :cx="view.sx(0)" :cy="view.sy(0)" :r="2.5 * view.width / 8" class="lab-region" />
@@ -74,13 +75,19 @@ function removePoint() { if (points.value.length > 3) points.value = points.valu
         </template>
         <polygon v-for="(poly, i) in (shapeKey === 'crescent' ? [] : shape.outline)" :key="i" :points="poly.map(p => P(p).join(',')).join(' ')" class="lab-region" />
         <line v-for="(piece, i) in pieces" :key="`p${i}`" :x1="P(piece.from)[0]" :y1="P(piece.from)[1]" :x2="P(piece.to)[0]" :y2="P(piece.to)[1]" :class="piece.ok ? 'lab-good' : 'lab-bad'" />
-        <circle v-for="name in ['a', 'b']" :key="name" :cx="P(pts[name])[0]" :cy="P(pts[name])[1]" r="9" class="lab-handle" tabindex="0" role="slider" :aria-label="`Điểm ${name === 'a' ? 'x' : 'y'}`" @pointerdown="drag.start(name, $event)" @keydown="drag.key(name, pts[name], $event)" />
-        <text :x="P(pts.a)[0] + 12" :y="P(pts.a)[1] - 8">x</text><text :x="P(pts.b)[0] + 12" :y="P(pts.b)[1] - 8">y</text>
+        <g v-for="name in ['a','b']" :key="name">
+          <circle :cx="P(pts[name])[0]" :cy="P(pts[name])[1]" r="7" class="lab-dot-accent" />
+          <circle :cx="P(pts[name])[0]" :cy="P(pts[name])[1]" r="36" class="lab-handle convex-hit" tabindex="0" role="slider" :aria-label="`Điểm ${name === 'a' ? 'x' : 'y'}`" :aria-valuetext="fmtPoint(pts[name])" @pointerdown="drag.start(name,$event)" @keydown="drag.key(name,pts[name],$event)" />
+          <text :x="Math.min(410,P(pts[name])[0]+14)" :y="Math.max(22,P(pts[name])[1]-12)">{{name==='a'?'x':'y'}}</text>
+        </g>
       </template>
       <template v-else>
         <polygon v-if="hull.length >= 3" :points="hull.map(p => P(p).join(',')).join(' ')" class="lab-region" />
         <circle v-if="mixPoint" :cx="P(mixPoint)[0]" :cy="P(mixPoint)[1]" r="7" class="lab-dot-warn" />
-        <circle v-for="(p, i) in points" :key="i" :cx="P(p)[0]" :cy="P(p)[1]" :r="isVertex(p) ? 9 : 7" :class="isVertex(p) ? 'lab-handle' : 'lab-handle lab-handle-alt'" tabindex="0" role="slider" :aria-label="`Điểm thứ ${i + 1}`" @pointerdown="drag.start(String(i), $event)" @keydown="drag.key(String(i), p, $event)" />
+        <g v-for="(p,i) in points" :key="i">
+          <circle :cx="P(p)[0]" :cy="P(p)[1]" r="6" :class="isVertex(p)?'lab-dot-accent':'lab-dot-warn'" />
+          <circle :cx="P(p)[0]" :cy="P(p)[1]" r="36" class="lab-handle convex-hit" tabindex="0" role="slider" :aria-label="`Điểm thứ ${i+1}`" :aria-valuetext="fmtPoint(p)" @pointerdown="drag.start(String(i),$event)" @keydown="drag.key(String(i),p,$event)" />
+        </g>
       </template>
     </svg>
     <LabPointControls :svg="svg" />
@@ -95,8 +102,8 @@ function removePoint() { if (points.value.length > 3) points.value = points.valu
     <div class="lab-readout" role="status">
       <template v-if="type === 'test'">
         <p v-if="!endpointsInside" class="is-bad">Có ít nhất một đầu mút nằm ngoài tập. Định nghĩa chỉ xét các cặp điểm thuộc tập, nên hãy kéo cả hai điểm vào vùng tô.</p>
-        <p v-else-if="segmentOk"><span class="is-good">Cả đoạn [x, y] nằm trong tập.</span> Một cặp điểm tốt chưa chứng minh được tập lồi, vì định nghĩa đòi điều này với mọi cặp điểm.</p>
-        <p v-else><span class="is-bad">Khoảng {{ Math.round(outsideFraction * 100) }}% đoạn [x, y] nằm ngoài tập.</span> Chỉ một cặp điểm như vậy là đủ để kết luận tập không lồi.</p>
+        <p v-else-if="segmentOk"><span class="is-good">Cả 121 điểm lấy mẫu trên đoạn đều nằm trong tập.</span> Định nghĩa tính lồi yêu cầu toàn bộ đoạn nối của mọi cặp điểm thuộc tập.</p>
+        <p v-else><span class="is-bad">Khoảng {{Math.round(outsideFraction*100)}}% trong 121 điểm lấy mẫu trên đoạn nằm ngoài tập.</span> Hai đầu mút ở trong tập và có điểm ở giữa nằm ngoài đã đủ để bác bỏ tính lồi.</p>
         <p>Hình đang chọn {{ shape.convex ? 'là tập lồi: bạn sẽ không tìm được cặp điểm nào làm đoạn nối đi ra ngoài.' : 'không lồi: hãy tìm thêm những cặp điểm khác làm đoạn nối đi ra ngoài.' }}</p>
       </template>
       <template v-else>
@@ -119,3 +126,9 @@ function removePoint() { if (points.value.length > 3) points.value = points.valu
     </details>
   </figure>
 </template>
+
+<style scoped>
+.convex-hit { fill: transparent !important; stroke: transparent; }
+.convex-hit:focus-visible { stroke: var(--vang); }
+svg text { font-size: 19px; pointer-events: none; }
+</style>
