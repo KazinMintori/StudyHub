@@ -14,7 +14,11 @@ const gap=computed(()=>chord.value-f(mix.value))
 const mesh=computed(()=>Array.from({length:9},(_,i)=>-1.4+i*.35).flatMap(fixed=>[0,1].map(axis=>Array.from({length:33},(_,j)=>{const moving=-1.4+j*2.8/32,p=axis?[moving,fixed]:[fixed,moving];return P(p,f(p)).join(',')}).join(' '))))
 const view=ref({x0:-1.4,x1:1.4,y0:-1.4,y1:1.4,toWorld:(x,y)=>unprojectPlane([x,y],0,camera)})
 const drag=createDragger(svg,view,(name,p)=>{if(name==='a')a.value=p;else b.value=p},{step:.1})
-const labels=computed(()=>placePointLabels([{key:'a',text:'A',point:P(a.value,f(a.value))},{key:'b',text:'B',point:P(b.value,f(b.value))},{key:'mix',text:'z',point:P(mix.value,f(mix.value))}],{width:400,height:340}))
+const labels=computed(()=>{
+ const lifted=[P(a.value,f(a.value)),P(b.value,f(b.value)),P(mix.value,f(mix.value))]
+ const reserved=[...lifted,P(a.value),P(b.value),P(mix.value,chord.value)].map(p=>({x:p[0]-10,y:p[1]-10,width:20,height:20}))
+ return placePointLabels([{key:'a',text:'A',point:lifted[0]},{key:'b',text:'B',point:lifted[1]},{key:'mix',text:'z',point:lifted[2]}],{width:400,height:340,reserved})
+})
 function preset(value){kind.value=value;a.value=value==='bowl'?[-1,-.5]:[0,-1.2];b.value=value==='bowl'?[.9,.7]:[0,1.2];theta.value=.45}
 </script>
 <template>

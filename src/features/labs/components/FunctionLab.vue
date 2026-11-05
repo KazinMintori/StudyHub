@@ -128,11 +128,11 @@ const titles = { chord: 'Đồ thị và dây cung', tangent: 'Tiếp tuyến t�
   <figure class="study-lab" :aria-label="titles[type]">
     <p class="lab-title">{{ titles[type] }}</p>
     <p class="lab-lead">Kéo trực tiếp chấm tím để đổi vị trí hoặc mức cắt. Nếu giá trị hàm ra ngoài khung hoặc không xác định, nút kéo nằm trên trục hoành để bạn vẫn đổi được đầu vào. Nút này không đại diện cho giá trị hàm khi ở trên trục.</p>
-    <svg ref="svg" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" :aria-label="`Đồ thị hàm ${fn.label}`">
+    <svg ref="svg" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end" :viewBox="`0 0 ${view.width} ${view.height + 30}`" role="group" :aria-label="`Đồ thị hàm ${fn.label}`">
       <defs><clipPath :id="clipId"><rect x="0" y="0" :width="view.width" :height="view.height" /></clipPath></defs>
       <line v-for="x in [-2, -1, 1, 2]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" /><line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" :y2="view.height" class="lab-axis" />
-      <text v-for="x in [-2, -1, 1, 2]" :key="`tx${x}`" :x="view.sx(x) - 5" :y="Math.min(view.height - 4, view.sy(0) + 16)" class="lab-small">{{ x }}</text>
+      <text v-for="x in [-2, -1, 1, 2]" :key="`tx${x}`" :x="view.sx(x)" :y="view.height + 20" text-anchor="middle" class="lab-small">{{ x }}</text>
       <g :clip-path="`url(#${clipId})`">
         <template v-if="type === 'epigraph'">
           <polygon v-for="(poly, i) in epiPolygons" :key="`e${i}`" :points="poly" class="lab-region-soft" />

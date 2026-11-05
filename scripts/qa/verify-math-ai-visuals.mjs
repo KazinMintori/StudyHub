@@ -50,6 +50,11 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['reading-lora','/toan-cho-ai/doc-them/lora-va-toi-uu-hang-thap.html'],
+  ['reading-flow','/toan-cho-ai/doc-them/he-dong-luc-va-dong-gradient.html'],
+  ['reading-sam','/toan-cho-ai/doc-them/loss-landscape-va-cuc-tieu-phang.html'],
+  ['reading-map','/toan-cho-ai/doc-them/hinh-hoc-tap-loi.html'],
+  ['reading-index','/toan-cho-ai/doc-them/index.html'],
   ['foundations-overview','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html'],
   ['review-hub','/toan-cho-ai/on-luyen/tong-hop.html'],
   ['review-cheatsheet','/toan-cho-ai/on-luyen/tong-hop.html#cheatsheet'],
@@ -151,6 +156,8 @@ async function sourceManifest() {
     ...['BellmanPotentialLab','LpBasisLab','MinimumNormFaceLab','NormApproximationLab','LPDirectionLab','LpCubeLab','ChebyshevCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['CenteredRegressionLab','MeanValueLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['ControlProjectionLab','ResourceLpLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    'src/features/labs/components/LowRankMapLab.vue',
+    ...['GradientFlowEulerLab','SamNeighborhoodLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['KktBalanceLab','KktAllocationLab','CosStationaryLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['ChainPathLab','ArmijoQuadraticLab','CubicConstraintLab','DualQuadraticLab','Restrict2DLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['bellman-potentials','lp-bases'].map(name=>`src/features/labs/services/${name}.mjs`),
@@ -398,6 +405,10 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'reading-lora':[[0,'Phổ 3 và 1'],[0,'Giữ một hướng'],[0,'Giữ hai hướng'],[0,'Hai trị kỳ dị bằng 1'],[0,'Giữ một hướng'],[0,'Đổi nghiệm khi phổ bằng nhau'],[0,'Xoay mặt phẳng']],
+  'reading-flow':[[0,'Ví dụ ổn định'],[0,'Đúng ngưỡng dao động'],[0,'Bước quá lớn'],[0,'Giảm bước còn 0,2'],[0,'Xuất phát tại nghiệm'],[1,'Khôi phục ví dụ'],[1,'Xem mặt trong R³'],[1,'Nesterov'],[1,'Xem bước 10']],
+  'reading-sam':[[0,'Yên ngựa vi phạm dây cung'],[0,'Cái bát lồi'],[1,'Tâm tại cực tiểu'],[1,'Độ cong 9'],[1,'ρ = 0,25'],[1,'Tâm lệch khỏi cực tiểu'],[1,'ρ = 0,5'],[1,'Độ cong 1']],
+  'reading-map':[[0,'Đưa x ra biên tương đối'],[0,'Đưa x về giữa'],[0,'Chọn r nhỏ vừa đủ'],[1,'Đích ở ngoài đĩa'],[1,'Đích ở trong đĩa'],[1,'Đích ngay trên biên'],[2,'Mặt đứng'],[2,'Mặt ngang'],[2,'Mặt nghiêng'],[3,'Chỉ phân tách không ngặt'],[3,'Ngặt, khoảng cách bằng 0'],[3,'Mạnh, có dải đệm']],
   'foundations-overview':[[0,'Ví dụ bị chặn'],[0,'Đưa điểm thử về nghiệm'],[0,'vmax = 1,5'],[0,'Đưa điểm thử về nghiệm'],[0,'λ = 2'],[0,'Đưa điểm thử về nghiệm'],[1,'Vector dự đoán trong R³'],[1,'Tìm w tối ưu'],[2,'Dữ liệu tách được, λ = 0'],[2,'Thêm ridge λ = 0.05'],[2,'Đặt (a, b) vào nghiệm'],[2,'Dữ liệu chồng lấn']],
   models:[[1,'c = (3, 2)'],[1,'Cả cạnh x + y = 4'],[1,'Mục tiêu bằng 0']],
   psd:[[1,'Ma trận đơn vị'],[1,'PSD có phần tử âm'],[1,'Có một hướng âm'],[1,'Mọi hướng đều âm']],
@@ -579,6 +590,23 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='reading-flow'&&index===0){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Bước quá lớn')assert(text.includes('−2.000')&&text.includes('24.00000')&&text.includes('1152.00000'))
+   if(label==='Đúng ngưỡng dao động')assert(text.includes('−1.000')&&text.includes('1.50000'))
+   if(label==='Xuất phát tại nghiệm')assert(text.includes('Euler xₖ = 0.00000'))
+  }
+  if(name==='reading-sam'&&index===1){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Độ cong 9')assert(text.includes('chính xác trên đoạn = 1.12500')&&text.includes('bước leo = 0.000'))
+   if(label==='ρ = 0,25')assert(text.includes('chính xác trên đoạn = 0.28125'))
+  }
+  if(name==='reading-lora'){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Giữ hai hướng')assert(text.includes('Frobenius = 0.000'))
+   if(label==='Đổi nghiệm khi phổ bằng nhau')assert(text.includes('Frobenius = 1.000')&&text.includes('50.0%')&&text.includes('Hai lựa chọn'))
+   if(label==='Xoay mặt phẳng')await interact(touch,index)
+  }
   if(name==='models'&&index===1){
    const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
    if(label==='c = (3, 2)')assert(text.includes('= 10.0000')&&text.includes('(2.000, 2.000)'))
@@ -984,7 +1012,7 @@ try {
         assert.equal(previousUrl.origin+previousUrl.pathname,targetUrl.origin+targetUrl.pathname,'Only same-page hash navigation may omit the HTTP response')
         assert.equal(page.url(),targetUrl.href,'Hash navigation did not reach the requested panel')
       }
-      const overview=['optimization-overview','duality-overview'].includes(name)
+      const overview=['optimization-overview','duality-overview','reading-index'].includes(name)
       const pageSelector=name==='review-cheatsheet'?'.lecture-cheatsheet .cheatsheet-card, vite-error-overlay':process.env.QA_LAYOUT_ONLY||overview?'.vp-doc, vite-error-overlay':'.study-lab .lab-handle, vite-error-overlay'
       await page.waitForSelector(pageSelector, { timeout: 60000 })
       assert(!await page.$('vite-error-overlay'),`Preview compilation failed at ${route}; inspect qa-dev.log`)
