@@ -20,13 +20,20 @@ for(const name of files){
  if(!resolved.startsWith(path.join(root,'docs')+path.sep))throw Error('Only workspace documentation can be inspected')
  const data=await readFile(resolved),source=data.toString('utf8')
  sources[name]=createHash('sha256').update(data).digest('hex')
- for(const token of mathTokens(pageRenderer.parse(source,{path:resolved,relativePath:name.slice(5)}))){
+ const parsed=pageRenderer.parse(source,{path:resolved,relativePath:name.slice(5)})
+ for(const token of mathTokens(parsed)){
   if(swallowedMarkdown(token))issues.push({file:name,type:'markdown-swallowed-by-math',line:(token.map?.[0]||0)+1})
   // List indentation can split a valid source expression into invalid parser
   // tokens. Validate the expression that the real Notes renderer receives too.
   try{validate(token.content,token.type==='math_block',name)}catch(error){issues.push({file:name,type:'markdown-invalid-tex',line:(token.map?.[0]||0)+1,message:error.message})}
  }
- for(const segment of mathSegments(source)){
+ // Literal TeX in Python/JS examples is code, not a rendered Notes formula.
+ // Use the Markdown parser's line ranges so escaped strings in fences do not
+ // generate false syntax or width failures. Keep all rendered math checks.
+ const codeLines=new Set(parsed.filter(token=>['fence','code_block'].includes(token.type)&&token.map)
+   .flatMap(token=>Array.from({length:token.map[1]-token.map[0]},(_,i)=>token.map[0]+i)))
+ const prose=source.split('\n').map((line,index)=>codeLines.has(index)?'':line).join('\n')
+ for(const segment of mathSegments(prose)){
   if(!segment.startsWith('$'))continue
   const display=segment.startsWith('$$'),delimiter=display?2:1,tex=segment.slice(delimiter,-delimiter)
   try{validate(tex,display,name)}catch(error){issues.push({file:name,type:'invalid-tex',message:error.message})}

@@ -52,7 +52,7 @@ const violated=computed(()=>active.value.filter(c=>dot(c.a,point.value)>c.b+1e-9
       </g>
       <g v-for="(v, i) in vertices" :key="i">
         <circle v-if="v[0] >= view.x0 && v[0] <= view.x1 && v[1] >= view.y0 && v[1] <= view.y1" :cx="P(v)[0]" :cy="P(v)[1]" r="6" class="lab-dot-accent" />
-        <text v-if="v[0] >= view.x0 && v[0] <= view.x1 && v[1] >= view.y0 && v[1] <= view.y1" :x="P(v)[0] + 8" :y="P(v)[1] - 8" class="lab-small">{{ fmtPoint(v, 1) }}</text>
+        <text v-if="v[0] >= view.x0 && v[0] <= view.x1 && v[1] >= view.y0 && v[1] <= view.y1" :x="P(v)[0] + 8" :y="P(v)[1] - 8" class="lab-small">V{{ i + 1 }}</text>
       </g>
       <circle :cx="P(point)[0]" :cy="P(point)[1]" r="8" :class="feasible?'lab-dot-accent':'lab-dot-bad'" pointer-events="none"/><text :x="Math.min(view.width-20,P(point)[0]+12)" :y="Math.max(20,P(point)[1]-12)">x</text>
       <circle :cx="P(point)[0]" :cy="P(point)[1]" r="32" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Điểm x để thử tính khả thi" :aria-valuetext="fmtPoint(point)" @pointerdown="drag.start('x',$event)" @keydown="drag.key('x',point,$event)"/>
@@ -66,7 +66,7 @@ const violated=computed(()=>active.value.filter(c=>dot(c.a,point.value)>c.b+1e-9
       <p v-if="empty" class="is-bad">Các ràng buộc đang bật mâu thuẫn nhau: đa diện rỗng. Bài toán tối ưu với miền khả thi này là bất khả thi.</p>
       <template v-else>
         <p>Đa diện là giao của {{ active.length }} nửa mặt phẳng{{ unbounded ? ' và không bị chặn: nó kéo dài ra vô hạn theo ít nhất một hướng.' : ', bị chặn, nên là một đa giác lồi.' }}</p>
-        <p v-if="vertices.length">Các đỉnh: <span v-for="(v, i) in vertices" :key="i">{{ fmtPoint(v, 2) }} (chặt: {{ tight(v).join(', ') }}){{ i < vertices.length - 1 ? '; ' : '.' }}</span></p>
+        <p v-if="vertices.length">Các đỉnh: <span v-for="(v, i) in vertices" :key="i">V{{ i + 1 }} = {{ fmtPoint(v, 2) }} (Chặt: {{ tight(v).join(', ') }}){{ i < vertices.length - 1 ? '; ' : '.' }}</span></p>
         <p v-else>Đa diện không có đỉnh nào: nó chứa trọn một đường thẳng.</p>
       </template>
     </div>
@@ -86,4 +86,5 @@ const violated=computed(()=>active.value.filter(c=>dot(c.a,point.value)>c.b+1e-9
 .point-hit{fill:transparent!important;stroke:transparent}
 .point-hit:focus-visible{stroke:var(--vang)}
 svg text{pointer-events:none}
+svg text, svg .lab-small { font-size: 20px; pointer-events: none; }
 </style>

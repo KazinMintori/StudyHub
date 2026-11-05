@@ -12,8 +12,8 @@ const P = p => view.point(p)
 const x = ref(2), y = ref(1), z = ref(1)
 const q = v => x.value * v[0] * v[0] + 2 * y.value * v[0] * v[1] + z.value * v[1] * v[1]
 const eig = computed(() => eigSym2(x.value, y.value, z.value))
-const bars = computed(() => Array.from({ length: 72 }, (_, i) => {
-  const t = (2 * Math.PI * i) / 72, v = [Math.cos(t), Math.sin(t)], value = q(v)
+const bars = computed(() => Array.from({ length: 36 }, (_, i) => {
+  const t = (2 * Math.PI * i) / 36, v = [Math.cos(t), Math.sin(t)], value = q(v)
   return { from: v, to: scale(1 + 0.22 * value, v), positive: value >= -1e-12 }
 }))
 const circle = Array.from({ length: 120 }, (_, i) => [Math.cos((2 * Math.PI * i) / 120), Math.sin((2 * Math.PI * i) / 120)])
@@ -28,15 +28,15 @@ const drag=createDragger(svg,dragView,(_,p)=>{const length=Math.hypot(...p);if(l
 <template>
   <figure class="study-lab" aria-label="Ma trận đối xứng 2x2 và dạng toàn phương của nó">
     <p class="lab-title">Dạng toàn phương vᵀXv trên mọi hướng</p>
-    <p class="lab-lead">Kéo v quanh đường tròn đơn vị để chọn một hướng thử. Mỗi vạch thể hiện giá trị vᵀXv theo một hướng. Một hướng có giá trị âm đã đủ để bác bỏ tính PSD.</p>
+    <p class="lab-lead">Kéo v quanh đường tròn đơn vị để chọn một hướng thử. Hình vẽ thêm 36 hướng cách đều để gợi hình dạng. Vạch xanh hướng ra ngoài khi vᵀXv dương, vạch đỏ hướng vào trong khi giá trị âm. Một hướng âm đã đủ để bác bỏ tính PSD.</p>
     <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Đường tròn đơn vị với các vạch thể hiện giá trị dạng toàn phương theo từng hướng và hai hướng riêng" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line :x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" /><line :y1="0" :y2="view.height" :x1="view.sx(0)" :x2="view.sx(0)" class="lab-axis" />
       <polygon :points="circle.map(p => P(p).join(',')).join(' ')" class="lab-guide" />
-      <line v-for="(b, i) in bars" :key="i" :x1="P(b.from)[0]" :y1="P(b.from)[1]" :x2="P(b.to)[0]" :y2="P(b.to)[1]" :class="b.positive ? 'lab-good' : 'lab-bad'" style="stroke-width: 2.5" />
+      <line v-for="(b, i) in bars" :key="i" :x1="P(b.from)[0]" :y1="P(b.from)[1]" :x2="P(b.to)[0]" :y2="P(b.to)[1]" :class="b.positive ? 'lab-good' : 'lab-bad'" style="stroke-width: 1.4" />
       <line :x1="P(scale(-1.9, eig.vectors[0]))[0]" :y1="P(scale(-1.9, eig.vectors[0]))[1]" :x2="P(scale(1.9, eig.vectors[0]))[0]" :y2="P(scale(1.9, eig.vectors[0]))[1]" class="lab-accent" style="stroke-width: 1.5" />
       <line :x1="P(scale(-1.9, eig.vectors[1]))[0]" :y1="P(scale(-1.9, eig.vectors[1]))[1]" :x2="P(scale(1.9, eig.vectors[1]))[0]" :y2="P(scale(1.9, eig.vectors[1]))[1]" class="lab-warn" style="stroke-width: 1.5" />
-      <text :x="P(scale(1.95, eig.vectors[0]))[0] + 4" :y="P(scale(1.95, eig.vectors[0]))[1]" class="lab-small">λ₁</text>
-      <text :x="P(scale(1.95, eig.vectors[1]))[0] + 4" :y="P(scale(1.95, eig.vectors[1]))[1]" class="lab-small">λ₂</text>
+      <text :x="P(scale(1.95, eig.vectors[0]))[0] + 4" :y="Math.max(28,P(scale(1.95, eig.vectors[0]))[1])" class="lab-small">λ₁</text>
+      <text :x="P(scale(1.95, eig.vectors[1]))[0] + 4" :y="Math.max(28,P(scale(1.95, eig.vectors[1]))[1])" class="lab-small">λ₂</text>
       <line :x1="P([0,0])[0]" :y1="P([0,0])[1]" :x2="P(direction)[0]" :y2="P(direction)[1]" class="lab-accent"/>
       <circle :cx="P(direction)[0]" :cy="P(direction)[1]" r="8" class="lab-dot-accent" pointer-events="none"/>
       <text :x="P(direction)[0]+12" :y="P(direction)[1]-12">v</text>
@@ -47,6 +47,12 @@ const drag=createDragger(svg,dragView,(_,p)=>{const length=Math.hypot(...p);if(l
       <label>x = {{ fmt(x, 1) }}<input v-model.number="x" type="range" min="-2" max="3" step="0.1" /></label>
       <label>y = {{ fmt(y, 1) }}<input v-model.number="y" type="range" min="-2.5" max="2.5" step="0.1" /></label>
       <label>z = {{ fmt(z, 1) }}<input v-model.number="z" type="range" min="-2" max="3" step="0.1" /></label>
+    </div>
+    <div class="lab-buttons">
+      <button type="button" @click="x=1;y=0;z=1">Ma trận đơn vị</button>
+      <button type="button" @click="x=1;y=-1;z=1">PSD có phần tử âm</button>
+      <button type="button" @click="x=1;y=1.5;z=1">Có một hướng âm</button>
+      <button type="button" @click="x=-1;y=0;z=-1">Mọi hướng đều âm</button>
     </div>
     <div class="lab-readout" role="status">
       <p>X = <MathMatrix :rows="[[x,y],[y,z]]" label="Ma trận đối xứng X"/> có trị riêng λ₁ = {{ fmt(eig.values[0]) }} và λ₂ = {{ fmt(eig.values[1]) }}, định thức xz − y² = {{ fmt(det) }}.</p>
@@ -71,4 +77,5 @@ const drag=createDragger(svg,dragView,(_,p)=>{const length=Math.hypot(...p);if(l
 .point-hit{fill:transparent!important;stroke:transparent}
 .point-hit:focus-visible{stroke:var(--vang)}
 svg text{pointer-events:none}
+svg text, svg .lab-small { font-size: 20px; pointer-events: none; }
 </style>

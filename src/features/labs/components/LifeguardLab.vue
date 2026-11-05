@@ -101,7 +101,6 @@ const plotDrag=createDragger(plotSvg,plotView,(_,p)=>{x.value=p[0]},{step:.5,sna
       <line x1="34" :x2="PW - 22" :y1="AXIS" :y2="AXIS" class="lab-axis" />
       <text v-for="g in [0, 20, 40, 60]" :key="`p${g}`" :x="plot.px(g) - 6" :y="AXIS + 18" class="lab-small">{{ g }}</text>
       <text x="8" y="22" class="lab-small">T(x), giây</text>
-      <text :x="PW / 2" :y="PH - 8" class="lab-small" text-anchor="middle">x, vị trí xuống nước (m)</text>
       <polyline :points="plot.pts" class="lab-line" />
       <line v-if="showBest" x1="34" :x2="PW - 22" :y1="plot.py(T(best))" :y2="plot.py(T(best))" class="lab-guide" />
       <circle v-if="showBest" :cx="plot.px(best)" :cy="plot.py(T(best))" r="6" class="lab-dot-hollow" />
@@ -147,4 +146,5 @@ const plotDrag=createDragger(plotSvg,plotView,(_,p)=>{x.value=p[0]},{step:.5,sna
 .point-hit:focus-visible{stroke:var(--vang)}
 svg text{pointer-events:none}
 svg .lab-small{font-size:19px}
+svg text, svg .lab-small { font-size: 20px; pointer-events: none; }
 </style>

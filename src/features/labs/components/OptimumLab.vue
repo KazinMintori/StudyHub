@@ -83,7 +83,7 @@ const onGraph=(x,value)=>Number.isFinite(value)&&x>=view.x0&&x<=view.x1&&value>=
       <line v-for="x in [-2, -1, 1, 2, 3, 4]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" class="lab-grid" />
       <line :x1="0" :x2="view.width" :y1="view.sy(0)" :y2="view.sy(0)" class="lab-axis" />
       <line :x1="view.sx(0)" :x2="view.sx(0)" y1="0" :y2="view.height" class="lab-axis" />
-      <text v-for="x in [-2, -1, 1, 2, 3, 4]" :key="`tx${x}`" :x="view.sx(x) - 5" :y="view.sy(0) + 18" class="lab-small">{{ x }}</text>
+      <text v-for="x in [-2, -1, 1, 2, 3, 4]" :key="`tx${x}`" :x="view.sx(x)" :y="view.height - 8" text-anchor="middle" class="lab-small">{{ x }}</text>
       <rect v-if="feasibleSeg" :x="view.sx(feasibleSeg[0])" :y="view.sy(0) - 6" :width="Math.max(0, view.sx(feasibleSeg[1]) - view.sx(feasibleSeg[0]))" height="12" class="lab-region" />
       <circle v-if="feasibleSeg && loOpen && lo >= view.x0" :cx="view.sx(lo)" :cy="view.sy(0)" r="6" class="lab-dot-hollow" />
       <polyline v-for="(pts, i) in curve" :key="i" :points="pts" class="lab-line" />
@@ -144,4 +144,5 @@ const onGraph=(x,value)=>Number.isFinite(value)&&x>=view.x0&&x<=view.x1&&value>=
 .point-hit{fill:transparent!important;stroke:transparent}
 .point-hit:focus-visible{stroke:var(--vang)}
 svg :is(text,line,polyline,rect){pointer-events:none}
+svg text, svg .lab-small { font-size: 20px; pointer-events: none; }
 </style>

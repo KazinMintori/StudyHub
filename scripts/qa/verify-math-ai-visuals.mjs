@@ -50,6 +50,7 @@ page.on('response', response => {
 await page.evaluateOnNewDocument(() => { try { sessionStorage.setItem('studyhub_welcome_seen', '1') } catch {} })
 await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }])
 const routes = [
+  ['foundations-overview','/toan-cho-ai/bai-giang/bai-01-nhap-mon-toi-uu.html'],
   ['review-hub','/toan-cho-ai/on-luyen/tong-hop.html'],
   ['review-cheatsheet','/toan-cho-ai/on-luyen/tong-hop.html#cheatsheet'],
   ['review-dual','/toan-cho-ai/on-luyen/doi-ngau-lagrange.html'],
@@ -149,6 +150,7 @@ async function sourceManifest() {
     ...['AdaptiveMemoryLab','ConjugateDirectionsLab','BfgsSecantLab','BatchNormScaleLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['BellmanPotentialLab','LpBasisLab','MinimumNormFaceLab','NormApproximationLab','LPDirectionLab','LpCubeLab','ChebyshevCenterLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['CenteredRegressionLab','MeanValueLab'].map(name=>`src/features/labs/components/${name}.vue`),
+    ...['ControlProjectionLab','ResourceLpLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['KktBalanceLab','KktAllocationLab','CosStationaryLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['ChainPathLab','ArmijoQuadraticLab','CubicConstraintLab','DualQuadraticLab','Restrict2DLab'].map(name=>`src/features/labs/components/${name}.vue`),
     ...['bellman-potentials','lp-bases'].map(name=>`src/features/labs/services/${name}.mjs`),
@@ -396,6 +398,9 @@ async function clickControl(button,touch){
 async function exercisePresets(name,touch){
  const labs=await page.$$('figure.study-lab')
  const cases={
+  'foundations-overview':[[0,'Ví dụ bị chặn'],[0,'Đưa điểm thử về nghiệm'],[0,'vmax = 1,5'],[0,'Đưa điểm thử về nghiệm'],[0,'λ = 2'],[0,'Đưa điểm thử về nghiệm'],[1,'Vector dự đoán trong R³'],[1,'Tìm w tối ưu'],[2,'Dữ liệu tách được, λ = 0'],[2,'Thêm ridge λ = 0.05'],[2,'Đặt (a, b) vào nghiệm'],[2,'Dữ liệu chồng lấn']],
+  models:[[1,'c = (3, 2)'],[1,'Cả cạnh x + y = 4'],[1,'Mục tiêu bằng 0']],
+  psd:[[1,'Ma trận đơn vị'],[1,'PSD có phần tử âm'],[1,'Có một hướng âm'],[1,'Mọi hướng đều âm']],
   'review-dual':[[0,'Một biến'],[0,'Nhân tử tối ưu'],[0,'Nhân tử bằng 0'],[0,'Hai biến'],[0,'Nhân tử tối ưu']],
   'review-constrained':[[0,'Gốc thỏa KKT'],[0,'Đi một đoạn âm nhỏ'],[0,'Nghiệm toàn cục trên trục'],[0,'Trục x2'],[0,'Trục x3']],
   'review-chain':[[0,'t = 0'],[0,'t = 0,5'],[0,'t = 1']],
@@ -574,6 +579,18 @@ async function exercisePresets(name,touch){
   for(const button of buttons)if(await button.evaluate((e,label)=>e.textContent.trim()===label,label)){found=button;break}
   assert(found,`Missing preset ${label}`)
   await clickControl(found,touch)
+  if(name==='models'&&index===1){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='c = (3, 2)')assert(text.includes('= 10.0000')&&text.includes('(2.000, 2.000)'))
+   if(label==='Cả cạnh x + y = 4')assert(text.includes('= 4.0000')&&text.includes('Toàn bộ cạnh'))
+   if(label==='Mục tiêu bằng 0')assert(text.includes('= 0.0000')&&text.includes('Mọi điểm'))
+  }
+  if(name==='foundations-overview'&&index===0){
+   const text=await labs[index].$eval('.lab-readout',e=>e.innerText)
+   if(label==='Ví dụ bị chặn')assert(text.includes('Nghiệm tự do 1.0000, nghiệm có ràng buộc 0.5000'))
+   if(label==='vmax = 1,5')assert(text.includes('nghiệm có ràng buộc 1.0000'))
+   if(label==='λ = 2')assert(text.includes('nghiệm có ràng buộc 0.6667'))
+  }
   if(name==='convex-hull-old'&&label==='Ngôi sao năm cánh')await interact(touch,index)
   if(name==='review-dual'&&label==='Nhân tử tối ưu')assert((await labs[index].$eval('.lab-readout',e=>e.innerText)).includes('Chênh lệch = 0.0000'))
   if(name==='review-chain'&&label==='t = 1')assert((await labs[index].$eval('.lab-readout',e=>e.innerText)).includes('g′(t) = 12.0000'))
@@ -939,7 +956,7 @@ async function exercisePresets(name,touch){
 }
 
 async function exerciseFunctionChoices(name,touch){
- if(!['convex-function','epigraph','first-order','second-order','function-operations','ml-models','robust'].includes(name))return
+ if(!['convex-function','epigraph','first-order','second-order','function-operations','ml-models','robust','foundations-overview','introduction','models'].includes(name))return
  const selects=await page.$$('figure.study-lab .lab-controls select')
  for(const [index,select]of selects.entries()){
   const original=await select.evaluate(e=>e.value)

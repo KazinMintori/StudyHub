@@ -62,7 +62,7 @@ const midOfImages = computed(() => lerp(f(pts.value.p), f(pts.value.q), midTheta
       <line :x1="R(f(pts.p))[0]" :y1="R(f(pts.p))[1]" :x2="R(f(pts.q))[0]" :y2="R(f(pts.q))[1]" class="lab-accent" />
       <circle :cx="R(fMid)[0]" :cy="R(fMid)[1]" r="7" class="lab-dot-warn" />
       <circle :cx="R(f(pts.p))[0]" :cy="R(f(pts.p))[1]" r="5" class="lab-dot" /><circle :cx="R(f(pts.q))[0]" :cy="R(f(pts.q))[1]" r="5" class="lab-dot" />
-      <text :x="R(f(pts.p))[0] - 40" :y="R(f(pts.p))[1] + 24">f(p)</text><text :x="R(f(pts.q))[0] + 8" :y="R(f(pts.q))[1] - 12">f(q)</text>
+      <text :x="R(f(pts.p))[0] - 20" :y="R(f(pts.p))[1] + 42" text-anchor="end">f(p)</text><text :x="R(f(pts.q))[0] + 8" :y="R(f(pts.q))[1] - 12">f(q)</text>
       <text x="12" y="23">Ảnh f(S)</text>
     </svg>
     </div>

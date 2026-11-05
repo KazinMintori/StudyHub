@@ -186,6 +186,7 @@ mjx-container[display=true]::-webkit-scrollbar,
 .mermaid svg foreignObject :is(div, span, p) { font-family: var(--font-ui); font-size: var(--fs-ui); line-height: 1.45; margin: 0; }
 .mermaid-zoom-btn { position: absolute; top: var(--space-2); right: var(--space-2); min-height: 36px; min-width: 44px; padding: 4px 10px; font-size: var(--fs-small); background: var(--paper); color: var(--tim); border: 1px solid var(--control); border-radius: var(--radius); cursor: pointer; z-index: 2; opacity: 0.85; transition: opacity var(--motion-fast) var(--ease), background var(--motion-fast) var(--ease); }
 .mermaid-zoom-btn:hover { opacity: 1; background: var(--canvas); }
+.foundations-course-map .mermaid { padding-top: calc(44px + var(--space-4)); }
 .vp-doc button.study-term { display: inline; margin: 0; padding: 0; border: 0; background: none; color: inherit; font: inherit; line-height: inherit; text-align: inherit; text-decoration: underline dotted var(--tim); text-decoration-thickness: 1.5px; text-underline-offset: 3px; cursor: help; }
 .vp-doc button.study-term:hover { color: var(--tim-hover); text-decoration-style: solid; }
 .vp-doc button.study-term:focus-visible { border-radius: 2px; outline: 2px solid var(--tim); outline-offset: 3px; }

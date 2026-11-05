@@ -30,7 +30,7 @@ const axes=[{p:[3.8,0,0],label:'x₁'},{p:[0,3.8,0],label:'x₂'},{p:[0,0,3.8],l
       <line :x1="P(x0)[0]" :y1="P(x0)[1]" :x2="P(firstPart)[0]" :y2="P(firstPart)[1]" class="lab-good"/>
       <line :x1="P(firstPart)[0]" :y1="P(firstPart)[1]" :x2="P(point)[0]" :y2="P(point)[1]" class="lab-warn"/>
       <circle :cx="P([0,0,0])[0]" :cy="P([0,0,0])[1]" r="4" class="lab-dot"/><text :x="P([0,0,0])[0]-24" :y="P([0,0,0])[1]+20">O</text>
-      <circle :cx="P(x0)[0]" :cy="P(x0)[1]" r="5" class="lab-dot"/><text :x="P(x0)[0]-28" :y="P(x0)[1]+25">x₀</text>
+      <circle :cx="P(x0)[0]" :cy="P(x0)[1]" r="5" class="lab-dot"/><text :x="P(x0)[0]+14" :y="P(x0)[1]+38">x₀</text>
       <circle :cx="P(point)[0]" :cy="P(point)[1]" r="8" class="lab-dot-accent" pointer-events="none"/><text :x="P(point)[0]+12" :y="P(point)[1]-10">x</text>
       <circle :cx="P(point)[0]" :cy="P(point)[1]" r="32" class="lab-handle point-hit" tabindex="0" role="slider" aria-label="Nghiệm x trên mặt phẳng" :aria-valuetext="`s = ${fmt(parameters[0])}, t = ${fmt(parameters[1])}, x = ${fmtPoint(point)}`" @pointerdown="drag.start('x',$event)" @keydown="drag.key('x',parameters,$event)"/>
     </svg>

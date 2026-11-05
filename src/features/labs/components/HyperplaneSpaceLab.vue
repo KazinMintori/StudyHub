@@ -25,6 +25,10 @@ const labels=computed(()=>{
  if(inBox(tip.value))specifications.push({key:'normal',text:'a',point:P(tip.value)})
  if(inBox(projection.value.foot)&&!onPlane.value)specifications.push({key:'foot',text:'h',point:P(projection.value.foot)})
  const reserved=axes.map(axis=>{const p=P(axis.p);return{x:p[0]+1,y:p[1]-21,width:34,height:30}})
+ for(const p of [point.value,...(inBox(projection.value.foot)&&!onPlane.value?[projection.value.foot]:[])]){
+  const center=P(p)
+  reserved.push({x:center[0]-10,y:center[1]-10,width:20,height:20})
+ }
  return placePointLabels(specifications,{width:400,height:340,reserved})
 })
 function preset(choice){normalChoice.value=choice;offset.value=choice==='tilted'?6:0}

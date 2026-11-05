@@ -36,8 +36,8 @@ const residualLine = computed(() => fits.value.find(f => f.key === residualsOf.v
     <svg ref="svg" :viewBox="`0 0 ${view.width} ${view.height}`" role="group" aria-label="Năm điểm dữ liệu kéo được và các đường khớp" @pointermove="drag.move" @pointerup="drag.end" @pointercancel="drag.end" @lostpointercapture="drag.end">
       <line v-for="x in [0, 1, 2, 3, 4]" :key="`gx${x}`" :x1="view.sx(x)" :x2="view.sx(x)" y1="0" :y2="view.height" :class="x === 0 ? 'lab-axis' : 'lab-grid'" />
       <line v-for="y in [0, 2, 4, 6, 8]" :key="`gy${y}`" :y1="view.sy(y)" :y2="view.sy(y)" x1="0" :x2="view.width" :class="y === 0 ? 'lab-axis' : 'lab-grid'" />
-      <text v-for="x in [1, 2, 3, 4]" :key="`tx${x}`" :x="view.sx(x) - 4" :y="view.sy(0) + 18" class="lab-small">{{ x }}</text>
-      <text v-for="y in [2, 4, 6]" :key="`ty${y}`" :x="view.sx(0) - 16" :y="view.sy(y) + 5" class="lab-small">{{ y }}</text>
+      <text v-for="x in [1, 2, 3, 4]" :key="`tx${x}`" :x="view.sx(x)" :y="view.height - 7" text-anchor="middle" class="lab-small">{{ x }}</text>
+      <text v-for="y in [2, 4, 6]" :key="`ty${y}`" :x="view.sx(0) - 16" :y="view.sy(y) + 5" text-anchor="end" class="lab-small">{{ y }}</text>
       <g v-if="residualLine">
         <line v-for="(p, i) in points" :key="`r${i}`" :x1="P(p)[0]" :y1="P(p)[1]" :x2="P(p)[0]" :y2="P([p[0], residualLine.a * p[0] + residualLine.c])[1]" class="lab-guide" />
       </g>
@@ -74,4 +74,5 @@ const residualLine = computed(() => fits.value.find(f => f.key === residualsOf.v
 .point-hit{fill:transparent!important;stroke:transparent}
 .point-hit:focus-visible{stroke:var(--vang)}
 svg text{font-size:19px;pointer-events:none}
+svg text, svg .lab-small { font-size: 20px; pointer-events: none; }
 </style>
