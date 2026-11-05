@@ -1,6 +1,6 @@
 # Bài 4–6 Giải thuật nền tảng của Khoa học dữ liệu
 
-Status: READY_FOR_AGY
+Status: REVIEWED_PENDING_CLOUD
 Created: 2026-11-05
 Task risk class: Reversible content authoring
 Authorization: User requested AGY authoring and explicitly granted all necessary AGY, computer and web permissions in this chat. Permission bypass is authorized solely for the trusted worktree and bounded task below.
@@ -56,3 +56,25 @@ Codex: Inspect owned paths and hashes, read all Notes, recompute mathematics ind
 ## Retention
 
 Do not delete the AGY worktree on timeout, failure, unknown status, unreviewed changes or incomplete integration. Preserve QA evidence. After review, copy only owned authored outputs to the installed course, export through the existing course repository script, and retain an audit record. Archive managed worktrees through the app when appropriate.
+
+## Review result, 2026-11-05
+
+AGY completed all eleven owned outputs through the installed CLI. The bridge could not request approval under its tool policy, so execution used a separately approved CLI command with the same ownership and permission settings. The first interrupted CLI session produced no usable output; the completed run is recorded in `tmp/agy-data-authoring-run2.log`. No unexpected tracked-file changes were found in its worktree.
+
+Codex reviewed the three Notes and summary modules, corrected mathematical and interpretive errors, and completed catalog, Wiki and simulation integration. Located substantive corrections and source sections are recorded in `raw_materials/giai-thuat-du-lieu/authoring-map-04-06.md`. Eight Wiki terms and three interactive labs were added. Existing Notes 1–3 were checked byte for byte against the pinned course baseline and are unchanged.
+
+Course source is committed and pushed at `KazinMintori/StudyHub-course-giai-thuat-du-lieu`, branch `codex/data-algorithms-04-06`, commit `3d924b66296f45b23ae1335fcfb8ad6251ebc6eb`. Its manifest validates all 134 source files. The site pin refers to this exact revision. The public production branch has not been changed.
+
+Verification so far:
+
+- Three lecture integration checks: Zero errors and zero warnings.
+- Skill tooling suite: 39 tests passed.
+- Site math suite: 37 tests passed, including the site-wide Markdown/include scan.
+- Simulation models: Five Node tests passed, plus independent Python Fraction calculations and exhaustive permutation/affine-family comparisons.
+- Wiki: 46 equations validated.
+- Interface token audit and 62 container cases passed.
+- Browser QA includes Notes with all solutions expanded, three panels, eight Wiki pages, and keyboard/form interactions. Evidence is retained under `qa/data-algorithms-04-06/`.
+
+The main workspace's temporary-dev helper encountered an unrelated dirty private-course checkout and stopped. That work was preserved. Browser QA therefore uses the existing installed sources and a lightweight VitePress dev server. No local site build was run.
+
+The manually created AGY worktree is retained as the original draft and audit evidence. It is not an app-managed worktree. No authored draft, source PDF or QA evidence was deleted.
