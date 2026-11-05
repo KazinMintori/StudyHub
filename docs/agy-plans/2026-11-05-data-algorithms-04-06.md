@@ -1,6 +1,6 @@
 # Bài 4–6 Giải thuật nền tảng của Khoa học dữ liệu
 
-Status: REVIEWED_PENDING_CLOUD
+Status: VERIFIED
 Created: 2026-11-05
 Task risk class: Reversible content authoring
 Authorization: User requested AGY authoring and explicitly granted all necessary AGY, computer and web permissions in this chat. Permission bypass is authorized solely for the trusted worktree and bounded task below.
@@ -80,3 +80,5 @@ The main workspace's temporary-dev helper encountered an unrelated dirty private
 The manually created AGY worktree is retained as the original draft and audit evidence. It is not an app-managed worktree. No authored draft, source PDF or QA evidence was deleted.
 
 The first cloud run, `42036606908`, found a course-level integration rule: Once a course supplies summary cards, each ready lesson must have at least one. The existing summary arrays for lessons 1–3 were empty. Codex added three plain-text summaries per existing lesson, derived from their unchanged Notes. This is an integration addition only. The content-model verifier now passes without weakening its assertion.
+
+Final cloud verification: [GitHub run 42037028563](https://github.com/KazinMintori/StudyHub/actions/runs/42037028563) completed successfully for site commit `585fbf42`. The fixture mode verified source assembly, architecture/content model, interface checks and the production-theme batched build fixture. It did not build the full site or deploy Pages. Final browser QA passed all 26 checks with no layout, math or runtime errors. A Vietnamese handoff report is retained at `qa/data-algorithms-04-06/ban-giao.md`.
