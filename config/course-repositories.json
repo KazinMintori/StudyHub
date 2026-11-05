@@ -955,7 +955,7 @@
     {
       "id": "giai-thuat-du-lieu",
       "repository": "KazinMintori/StudyHub-course-giai-thuat-du-lieu",
-      "revision": "3d924b66296f45b23ae1335fcfb8ad6251ebc6eb",
+      "revision": "7a371412f9651987da654877c63ddfe703985cad",
       "paths": [
         "docs/giai-thuat-du-lieu/**",
         "docs/public/img/**",
