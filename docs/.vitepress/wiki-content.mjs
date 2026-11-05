@@ -1,3 +1,4 @@
+import { dataAlgorithmsConcepts, dataAlgorithmsWikiDetails, dataAlgorithmsWikiConnections } from './data-algorithms-foundations.mjs'
 import { decisionWikiDetails } from './decision-foundations.mjs'
 import { predicateWikiDetails } from './predicate-foundations.mjs'
 import { localCspWikiDetails } from './local-csp-foundations.mjs'
@@ -10,6 +11,7 @@ import { dataProcessingConcepts, dataProcessingWikiDetails } from './data-proces
 import { xstkConcepts, xstkWikiDetails, xstkWikiConnections } from './xstk-foundations.mjs'
 import { propositionalWikiDetails } from './propositional-foundations.mjs'
 export const wikiGroups = [
+  { id:'data-algorithms', name:'Giải thuật dữ liệu và tìm tương đồng', ids:Object.keys(dataAlgorithmsConcepts) },
   { id:'optimization', name:'Tối ưu hóa', ids:['hessian','ma-tran-psd','he-phuong-trinh','binh-phuong-toi-thieu','tham-so-toan-hoc','tap-loi','ham-loi','mien-kha-thi','infimum','epigraph','noi-long-toi-uu','lagrangian','ham-doi-ngau','doi-ngau-manh','dieu-kien-slater','kkt','tap-affine','noi-tuong-doi','non-loi','sieu-phang','ellipsoid','da-dien','non-doi-ngau','sieu-phang-phan-tach','bat-dang-thuc-tong-quat','tap-muc-duoi','bat-dang-thuc-jensen','log-sum-exp','cuc-tieu-cuc-bo','phep-chieu','bai-toan-tuong-duong','ham-tua-loi','quy-hoach-tuyen-tinh','quy-hoach-toan-phuong','quy-hoach-non-bac-hai','quy-hoach-nua-xac-dinh','quy-hoach-hinh-hoc','phan-bu-schur','toi-uu-pareto','dieu-chuan'] },
   { id:'optimization-algorithms', name:'Thuật toán tối ưu', ids:['tim-kiem-duong','tu-tuong-hop','gradient-ngau-nhien','momentum-nesterov','adagrad','rmsprop','adam','gradient-lien-hop','bfgs'] },
   { id:'planning', name:'Quy hoạch', ids:['nghiem-co-so','quy-hoach-dong'] },
@@ -31,7 +33,7 @@ export const courseWikiScopes = {
   'xac-suat-thong-ke':['probability','data-analysis','mathematics','discrete-math','programming'],
   'vat-ly-2':['physics','mathematics'],
   'bieu-dien-tri-thuc':['discrete-math','algorithms','probability'],
-  'giai-thuat-du-lieu':['distributed','algorithms','mathematics','probability','data-analysis','programming'],
+  'giai-thuat-du-lieu':['data-algorithms','distributed','algorithms','mathematics','probability','data-analysis','programming'],
   dsa:['algorithms','discrete-math','programming'],
   'discrete-math':['discrete-math','algorithms']
 }
@@ -51,6 +53,7 @@ export function resolveConceptForCourse(ids, courseId) {
     .sort((a, b) => a.rank - b.rank)[0]?.id || null
 }
 const connections = {
+  ...dataAlgorithmsWikiConnections,
   ...xstkWikiConnections,
   ...physicsWikiConnections,
   'thong-ke-mo-ta':['mau-tong-the','suy-rong-thong-ke'],
@@ -145,7 +148,7 @@ export function relatedConcepts(id) {
 }
 // Object.assign + PURE lets bundlers drop article bodies (and their rendered
 // math) from client pages that only need the concept dictionary.
-export const wikiDetails = /*#__PURE__*/ Object.assign({}, decisionWikiDetails, physicsWikiDetails, mathAiWikiDetails, dataProcessingWikiDetails, xstkWikiDetails, propositionalWikiDetails, localCspWikiDetails, predicateWikiDetails, {
+export const wikiDetails = /*#__PURE__*/ Object.assign({}, dataAlgorithmsWikiDetails, decisionWikiDetails, physicsWikiDetails, mathAiWikiDetails, dataProcessingWikiDetails, xstkWikiDetails, propositionalWikiDetails, localCspWikiDetails, predicateWikiDetails, {
   'thong-ke-mo-ta':'**Giữ đúng phạm vi quan sát.** Khi một khảo sát có 10 người trả lời và 7 người chưa từng lập trình, tỷ lệ trong nhóm trả lời là $7/10=70\\%$. Một câu mô tả đúng phải nói rõ mẫu số ứng với nhóm đã trả lời. Thay nhóm ấy bằng toàn trường là một bước suy rộng cần căn cứ riêng.\n\nMô tả không chỉ gồm phép tính: Bảng, biểu đồ và lời văn đều có thể mô tả dữ liệu.',
   'suy-rong-thong-ke':'**Tập đối tượng trong kết luận rộng hơn tập đã quan sát.** Cùng con số 70%, câu về người trả lời khảo sát là mô tả, còn câu về toàn bộ sinh viên của trường là suy rộng. Muốn đánh giá kết luận sau, cần biết cách chọn mẫu, nhóm nào có cơ hội tham gia và ai được mời nhưng không trả lời.\n\nMột mẫu lớn vẫn có thể khác tổng thể một cách có hệ thống. Nhận diện phát biểu là suy rộng không chứng minh rằng bước suy rộng hợp lệ, và cũng không có nghĩa mọi bước suy rộng đều sai.',
   'ket-luan-nhan-qua':'**Phân biệt quan sát với can thiệp.** Nếu người tham gia câu lạc bộ có điểm cao hơn, dữ liệu mô tả khác biệt giữa các nhóm. Để nói việc tham gia làm điểm tăng, cần căn cứ về tác động của thay đổi này, thay vì chỉ dựa vào khác biệt đã thấy. Những người tham gia có thể đã có nhiều kinh nghiệm hơn từ trước.\n\nThí nghiệm ngẫu nhiên có đối chứng phân người tham gia ngẫu nhiên vào các nhóm để so sánh nhóm nhận can thiệp với nhóm đối chứng. Cách phân nhóm giúp hạn chế việc khác biệt có sẵn quyết định ai nhận can thiệp. Kết luận vẫn cần đi cùng thiết kế, cách đo và phạm vi nghiên cứu.',
