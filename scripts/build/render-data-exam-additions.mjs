@@ -26,8 +26,9 @@ export async function renderDataExamAdditions(root=fileURLToPath(new URL('../../
       const item=feedback.get(question.id)
       assert(item && ['confirmed','corrected'].includes(item.verdict),`Unresolved ${question.id}`)
       const context=item.promptContextMarkdown||question.promptContextMarkdown
-      const promptHtml=render((context?context+'\n\n':'')+question.promptMarkdown,true)
-      assertCodePreserved(question.promptMarkdown,promptHtml,question.id)
+      const prompt=question.displayPromptMarkdown||question.promptMarkdown
+      const promptHtml=render((context?context+'\n\n':'')+prompt,true)
+      assertCodePreserved(prompt,promptHtml,question.id)
       const correctKey=item.correctKey||question.correctKey
       const options=question.options.map(option=>{
         assert(item.optionExplanations[option.key]?.trim(),`${question.id}/${option.key}`)

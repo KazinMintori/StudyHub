@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises'
 import {fileURLToPath} from 'node:url'
 import path from 'node:path'
 import {createHash} from 'node:crypto'
-import {assertCodePreserved} from './build/exam-code-integrity.mjs'
+import {assertCodePreserved,htmlCodeText,renderedCodeLiterals} from './build/exam-code-integrity.mjs'
 
 const hash=value=>createHash('sha256').update(value).digest('hex')
 export async function verifyDataExamAdditions(root=fileURLToPath(new URL('../',import.meta.url))) {
@@ -35,7 +35,16 @@ export async function verifyDataExamAdditions(root=fileURLToPath(new URL('../',i
       const output=compiled.questions[qIndex],item=review.items.find(x=>x.id===question.id)
       assert(!ids.has(question.id));ids.add(question.id)
       assert(['confirmed','corrected'].includes(item.verdict),`${question.id}: unresolved`)
-      assertCodePreserved(question.promptMarkdown,output.promptHtml,question.id)
+      assertCodePreserved(question.displayPromptMarkdown||question.promptMarkdown,output.promptHtml,question.id)
+      const code=renderedCodeLiterals(output.promptHtml)
+      const jsonValues=[...code.inline,...code.blocks].flatMap(text=>{try{return [JSON.stringify(JSON.parse(text))]}catch{return []}})
+      const visible=htmlCodeText(output.promptHtml).replace(/\s+/g,'')
+      for(const match of question.promptMarkdown.matchAll(/\{[^{}\n]*\}/g)) {
+        let json
+        try{json=JSON.stringify(JSON.parse(match[0]))}catch{}
+        if(json&&question.displayPromptMarkdown)assert(jsonValues.includes(json),`${question.id}: complete visible JSON payload`)
+        else assert(visible.includes(match[0].replace(/\s+/g,'')),`${question.id}: visible brace-delimited data`)
+      }
       assert.equal(output.options.length,question.kind==='quiz'?4:0)
       assert(!/Hướng dẫn chấm|Chấm điểm|Kỹ năng:|Mức dự kiến|Thời gian.*giây/.test(output.answerHtml),question.id)
       assert(!/[\x00-\x08\x0b\x0c\x0e-\x1f\ufffd]/.test(output.promptHtml+output.answerHtml),question.id)

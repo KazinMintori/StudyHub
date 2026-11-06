@@ -10,6 +10,52 @@ BASE = ROOT / 'raw_materials/xu-ly-du-lieu/exam'
 HEADING = re.compile(r'^#{2,6}\s+(?:Đáp án\s+)?(B\d+-T[NL]-\d+)\s*$')
 
 
+def display_payloads(markdown):
+    """Make actual JSON data readable without changing the original source text."""
+    result, fence = [], False
+    decoder = json.JSONDecoder()
+    for line in markdown.splitlines():
+        if line.startswith('```'):
+            fence = not fence
+            result.append(line)
+            continue
+        if fence:
+            result.append(line)
+            continue
+        pieces = re.split(r'(`[^`]*`)', line)
+        for index in range(0, len(pieces), 2):
+            text, cursor, output = pieces[index], 0, ''
+            while cursor < len(text):
+                start = text.find('{', cursor)
+                if start < 0:
+                    output += text[cursor:]
+                    break
+                try:
+                    obj, end = decoder.raw_decode(text[start:])
+                except ValueError:
+                    output += text[cursor:start + 1]
+                    cursor = start + 1
+                    continue
+                if not isinstance(obj, dict):
+                    output += text[cursor:start + 1]
+                    cursor = start + 1
+                    continue
+                raw = text[start:start + end]
+                prefix, suffix = text[:start].strip(), text[start + end:].strip()
+                if not prefix and not suffix:
+                    output = '\n```json\n' + json.dumps(obj, ensure_ascii=False, indent=2) + '\n```\n'
+                    cursor = len(text)
+                elif re.fullmatch(r'\d+\.', prefix) and not suffix:
+                    output = '\nJSON ' + prefix[:-1] + ':\n\n```json\n' + json.dumps(obj, ensure_ascii=False, indent=2) + '\n```\n'
+                    cursor = len(text)
+                else:
+                    output += text[cursor:start] + '`' + raw + '`'
+                    cursor = start + end
+            pieces[index] = output
+        result.append(''.join(pieces))
+    return '\n'.join(result)
+
+
 def sections(text):
     headings, offset, fence = [], 0, False
     for line in text.splitlines(keepends=True):
@@ -76,6 +122,9 @@ def import_bank(number, question_file, answer_file):
                        'questionSha256': hashlib.sha256(body.encode()).hexdigest(),
                        'answerSha256': hashlib.sha256(answers[identifier].encode()).hexdigest()},
         })
+        formatted = display_payloads(rows[-1]['promptMarkdown'])
+        if formatted != rows[-1]['promptMarkdown']:
+            rows[-1]['displayPromptMarkdown'] = formatted
         if identifier == 'B11-TN-059':
             rows[-1]['promptContextMarkdown'] = 'Đã có `import re`.'
         if identifier == 'B10-TN-040':

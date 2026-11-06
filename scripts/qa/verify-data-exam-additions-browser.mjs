@@ -16,6 +16,7 @@ try {
     await page.setViewport({width,height:940})
     for(const lesson of ['10','11']) {
       const bank=JSON.parse(await readFile(`src/content/courses/xu-ly-du-lieu/exam/bai-${lesson}.json`,'utf8'))
+      const raw=JSON.parse(await readFile(`raw_materials/xu-ly-du-lieu/exam/banks/bai-${lesson}.json`,'utf8'))
       await page.goto(`${base}/xu-ly-du-lieu/on-thi/bai-${lesson}.html`,{waitUntil:'networkidle2',timeout:120000})
       await page.waitForSelector('.exam-question__id-tag')
       await page.evaluate(dark=>{
@@ -47,14 +48,19 @@ try {
           assert.equal(await page.$eval('.exam-essay__details',n=>n.open),false,q.id)
           await page.$eval('.exam-essay__details',n=>{n.open=true})
         }
-        const result=await page.evaluate(q=>{
+        const original=raw.questions.find(item=>item.id===q.id)
+        const result=await page.evaluate(({q,source})=>{
           const expected=document.createElement('div');expected.innerHTML=q.promptHtml
           const answer=document.createElement('div');answer.innerHTML=q.answerHtml
           const prompt=document.querySelector('.exam-question__prompt')
           const actualAnswer=document.querySelector(q.kind==='quiz'?'.exam-quiz-notes__content':'.exam-essay__answer')
           const code=node=>[...node.querySelectorAll('code')].map(n=>n.textContent)
           const visible=node=>Boolean(node.getClientRects().length)
+          const plain=prompt.textContent.replace(/\s+/g,'')
+          const missingBraceData=[...source.matchAll(/\{[^{}\n]*\}/g)]
+            .map(match=>match[0]).filter(literal=>!plain.includes(literal.replace(/\s+/g,'')))
           return {promptMatches:prompt.textContent===expected.textContent,
+            missingBraceData,
             promptCodeMatches:JSON.stringify(code(prompt))===JSON.stringify(code(expected)),
             answerCodeMatches:JSON.stringify(code(actualAnswer))===JSON.stringify(code(answer)),
             documentOverflow:document.documentElement.scrollWidth>innerWidth+2,
@@ -67,10 +73,13 @@ try {
               const b=n.getBoundingClientRect();return b.left<-1||b.right>innerWidth+1||n.scrollWidth>n.clientWidth+2
             }).length,
             brokenText:/\ufffd|\^M/.test(prompt.textContent+actualAnswer.textContent)}
-        },q)
+        },{q,source:original.promptMarkdown})
         const row={width,lesson,id:q.id,...result};report.pages.push(row)
-        if(!result.promptMatches||!result.promptCodeMatches||!result.answerCodeMatches||result.documentOverflow||result.mathErrors||result.badTables||result.mathOverflow||result.brokenText)report.failures.push(row)
-        if(['TN-001','TN-003','TL-002'].some(id=>q.id.endsWith(id)))await page.screenshot({path:`${output}/${q.id}-${width}.png`})
+        if(!result.promptMatches||!result.promptCodeMatches||!result.answerCodeMatches||result.missingBraceData.length||result.documentOverflow||result.mathErrors||result.badTables||result.mathOverflow||result.brokenText)report.failures.push(row)
+        if(['TN-001','TN-003','TN-004','TL-002'].some(id=>q.id.endsWith(id))) {
+          const target=await page.$('.exam-question__prompt')
+          await target.screenshot({path:`${output}/${q.id}-${width}.png`})
+        }
       }
       console.log(`Checked ${bank.questions.length} new questions, lesson ${lesson}, ${width}px`)
     }

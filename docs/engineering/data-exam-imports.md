@@ -12,6 +12,8 @@ Nguồn riêng của học phần nằm trong repo `StudyHub-course-xu-ly-du-lie
 
 Mỗi bộ có 60 câu trắc nghiệm và 30 câu tự luận. Thứ tự A–D và mọi ký tự mã phải được giữ nguyên. Các giả định quyết định đáp án được đặt trong đề tương ứng. Không tạo một bảng quy ước chung cho toàn ngân hàng.
 
+JSON và tập nhãn có dấu ngoặc nhọn là dữ liệu của đề. Bộ dựng cho các ngân hàng mới tắt quy tắc Markdown attributes để tránh biến dữ liệu đó thành thuộc tính HTML rồi làm mất chữ. Các payload JSON được đưa vào khối mã, giữ giá trị và thứ tự trường. Bộ kiểm tra so cả dữ liệu trong ngoặc nhọn với nguồn gốc, không chỉ so giao diện với HTML đã biên dịch.
+
 Các lệnh kiểm tra nguồn:
 
 ```powershell

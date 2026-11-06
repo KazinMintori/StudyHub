@@ -18,6 +18,9 @@ export async function createExamMarkdownRenderer(root, { preserveProse = false, 
     html:true,math:vietnameseMathOptions,lineNumbers:false,
     config:renderer=>configure(renderer,{base:'/'})
   })
+  // Braces in exam data are JSON/dictionaries/sets, never Markdown attributes.
+  // The VitePress attrs rule otherwise silently turns {host} into an HTML attr.
+  if(!linkConcepts)md.core.ruler.disable('curly_attributes')
   // VitePress shares one MarkdownIt instance. Set the prose policy per render,
   // so original exam wording stays literal while existing feedback keeps its style.
   if(!proseRenderers.has(md)){md.use(examProsePlugin);proseRenderers.add(md)}
