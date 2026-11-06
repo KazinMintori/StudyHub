@@ -89,3 +89,6 @@ for (let number = 1; number <= 8; number++) {
 if (!essaysOnly) await writeFile(path.join(output, 'catalog.json'), JSON.stringify(catalog, null, 2) + '\n')
 await writeFile(path.join(source, 'render-coverage.json'), JSON.stringify(audit, null, 2) + '\n')
 console.log(essaysOnly ? 'Updated all 184 essay answers; prompts and quiz content preserved.' : `Rendered ${catalog.reduce((n, row) => n + row.total, 0)} questions in 8 banks with current essay answers.`)
+// Independently sourced additions retain their own IDs, reviews and source audit.
+const {renderDataExamAdditions}=await import('./render-data-exam-additions.mjs')
+await renderDataExamAdditions(root)

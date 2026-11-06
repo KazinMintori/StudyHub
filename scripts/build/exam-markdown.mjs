@@ -1,14 +1,22 @@
-import {createMarkdownRenderer} from 'vitepress'
+import {createMarkdownRenderer,disposeMdItInstance} from 'vitepress'
 import path from 'node:path'
-import {configureStudyMarkdown} from './markdown-presentation.mjs'
 import {examProsePlugin} from './exam-prose.mjs'
 import {vietnameseMathOptions} from '../math-fonts/vietnamese.mjs'
+import {responsiveTablesPlugin} from './responsive-tables.mjs'
+import {staticMathPlugin} from '../static-math-plugin.mjs'
 const proseRenderers = new WeakSet()
 
-export async function createExamMarkdownRenderer(root, { preserveProse = false } = {}) {
+export async function createExamMarkdownRenderer(root, { preserveProse = false, linkConcepts = true } = {}) {
+  // A single bank can be compiled without downloading unrelated private courses.
+  const configure=linkConcepts
+    ? (await import('./markdown-presentation.mjs')).configureStudyMarkdown
+    : renderer=>{renderer.use(responsiveTablesPlugin);renderer.use(staticMathPlugin)}
+  // VitePress caches a process-wide renderer. This standalone compilation runs
+  // after the legacy banks, so discard their plugin configuration first.
+  if(!linkConcepts)disposeMdItInstance()
   const md=await createMarkdownRenderer(path.join(root,'docs'),{
     html:true,math:vietnameseMathOptions,lineNumbers:false,
-    config:renderer=>configureStudyMarkdown(renderer,{base:'/'})
+    config:renderer=>configure(renderer,{base:'/'})
   })
   // VitePress shares one MarkdownIt instance. Set the prose policy per render,
   // so original exam wording stays literal while existing feedback keeps its style.

@@ -297,10 +297,10 @@ test('loadStoredAnswers and saveStoredAnswers: safe in SSR and handles storage u
   assert.doesNotThrow(() => saveStoredAnswers('test-key', { Q1: { selectedKey: 'A' } }));
 });
 
-test('Integration with all 8 real banks: verifies schema, 548 total questions, and kinds', () => {
+test('Integration with all 10 real banks: verifies schema, 728 total questions, and kinds', () => {
   const banksDir = resolve('raw_materials/xu-ly-du-lieu/exam/banks');
   const files = readdirSync(banksDir).filter((f) => f.endsWith('.json')).sort();
-  assert.equal(files.length, 8, 'Must have exactly 8 bank files (bai-01.json to bai-08.json)');
+  assert.equal(files.length, 10, 'Eight original banks plus the two complete Drive additions');
 
   let grandTotal = 0;
   let totalQuiz = 0;
@@ -346,7 +346,7 @@ test('Integration with all 8 real banks: verifies schema, 548 total questions, a
     assert.equal(lastNav.hasNext, false);
   }
 
-  assert.equal(grandTotal, 548, 'Curriculum must contain exactly 548 questions across 8 lessons');
-  assert.equal(totalQuiz, 364, 'Must have exactly 364 quiz questions');
-  assert.equal(totalEssay, 184, 'Must have exactly 184 essay questions');
+  assert.equal(grandTotal, 728, 'Curriculum must contain all 728 questions across 10 lessons');
+  assert.equal(totalQuiz, 484, 'Must have exactly 484 quiz questions');
+  assert.equal(totalEssay, 244, 'Must have exactly 244 essay questions');
 });

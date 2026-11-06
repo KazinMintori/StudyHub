@@ -93,6 +93,7 @@ jobs:
           node scripts/verification/verify-course-workspace.mjs
           node scripts/verification/verify-lecture-usability.mjs
           node scripts/verification/verify-math-ai-homework.mjs
+          node scripts/qa/verify-data-exam-additions-browser.mjs
 
       - name: Save browser verification reports
         if: always()
@@ -105,6 +106,7 @@ jobs:
             qa/lecture-usability/
             qa/course-workspace/
             qa/toan-ai-homework/
+            qa/data-exam-additions/
             qa/batch-build-fixture/
             qa/philosophy-formats/
           if-no-files-found: ignore
