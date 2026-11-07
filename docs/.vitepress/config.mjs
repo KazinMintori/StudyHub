@@ -22,7 +22,7 @@ const colorToken = name => tokenSource.match(new RegExp(`--${name}:\\s*([^;]+)`)
 
 const base=process.env.BASE_PATH || (process.env.GITHUB_ACTIONS ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || 'StudyHub'}/` : '/')
 export default withMermaid(defineConfig({
-  srcExclude: ['agy-plans/**'],
+  srcExclude: ['agy-plans/**', 'xu-ly-du-lieu/bai-tap-lon/**'],
   buildConcurrency: 1,
   base, title:'UETệ', description:'Bài giảng UET và Wiki thuật ngữ', lang:'vi-VN',
   ignoreDeadLinks: true, lastUpdated: true,

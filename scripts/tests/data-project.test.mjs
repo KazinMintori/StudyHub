@@ -3,15 +3,18 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { buildThemeConfig } from '../../src/features/course/services/build-navigation.mjs'
 
-test('Data project follows review and all five exam papers with two distinct project sections', () => {
+test('Data project is unpublished while review and all five exam papers remain available', async () => {
   const theme=buildThemeConfig({courseCatalog:[{id:'xu-ly-du-lieu',name:'Dữ liệu',lessons:[]},{id:'other',name:'Khác',lessons:[]}],wikiGroups:[],concepts:{}})
   const items=theme.sidebar['/xu-ly-du-lieu/'][0].items
   const reviewIndex=items.findIndex(item=>item.text==='Ôn thi')
   const examIndex=items.findIndex(item=>item.text==='Đề thi')
-  const projectIndex=items.findIndex(item=>item.text==='Bài tập lớn')
-  assert.ok(reviewIndex>=0 && examIndex>reviewIndex && projectIndex>examIndex)
+  assert.ok(reviewIndex>=0 && examIndex>reviewIndex)
+  assert(!JSON.stringify(items).includes('/bai-tap-lon/'))
   assert.deepEqual(items[examIndex].items.map(item=>({text:item.text,link:item.link})),[1,2,3,4,5].map(number=>({text:`Đề ${number}`,link:`/xu-ly-du-lieu/de-thi/de-${number}`})))
-  assert.deepEqual(items.at(-1).items.map(item=>item.text),['Đề bài tập lớn','Ví dụ thực hành'])
+  const config=await readFile('docs/.vitepress/config.mjs','utf8')
+  assert(config.includes("'xu-ly-du-lieu/bai-tap-lon/**'"))
+  const overview=await readFile('src/features/course/components/CourseOverview.vue','utf8')
+  assert(!overview.includes('/bai-tap-lon/'))
   assert(!theme.sidebar['/other/'][0].items.some(item=>item.text==='Bài tập lớn'))
 })
 

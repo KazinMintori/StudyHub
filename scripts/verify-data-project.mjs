@@ -47,5 +47,5 @@ for(const file of ['index.md','thuc-hanh.md']){
  }
 }
 const sidebar=buildThemeConfig({courseCatalog:[{id:'xu-ly-du-lieu',name:'Dữ liệu',lessons:[]}],wikiGroups:[],concepts:{}}).sidebar['/xu-ly-du-lieu/'][0].items
-assert.equal(sidebar[sidebar.findIndex(item=>item.text==='Ôn thi')+1].text,'Bài tập lớn')
-console.log(`PASS preserved source hashes,${coverage.requirements.length} mapped requirements,2 pages and project navigation. Marker coverage does not prove semantic completeness.`)
+assert(!JSON.stringify(sidebar).includes('/bai-tap-lon/'))
+console.log(`PASS preserved source hashes,${coverage.requirements.length} mapped requirements and archived project sources. Project pages are excluded from publication.`)

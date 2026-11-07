@@ -181,6 +181,7 @@ jobs:
           npm run verify:navigation
 
           node scripts/verification/verify-assessment-navigation.mjs
+          node scripts/verification/verify-unpublished-data-project.mjs
 
       - name: Save built assessment and card verification
         if: always() && !inputs.fixture_only
