@@ -140,8 +140,8 @@ if __name__ == '__main__':
     inventory = json.loads(args.inventory.read_text(encoding='utf-8'))
     manifest = {'version': 1, 'folderId': '1OXMdS5xJ57Shd4UrBnpuQz0sLjmyqrA8', 'checkedOn': '2026-11-06', 'lessons': []}
     for number, qfile, title in [
-        (10, 'B10_CHI_DE.md', 'Kiểm tra và làm sạch dữ liệu Airbnb'),
-        (11, 'B11_BO_CAU_HOI.md', 'Xử lý văn bản và kiểm chứng đầu ra mô hình ngôn ngữ'),
+        (10, 'B10_CHI_DE.md', 'Làm sạch dữ liệu có cấu trúc'),
+        (11, 'B11_BO_CAU_HOI.md', 'Xử lý dữ liệu phi cấu trúc bằng LLM'),
     ]:
         afile = f'B{number}_DAP_AN.md'
         bank = import_bank(number, qfile, afile)
