@@ -52,7 +52,7 @@
     {
       "id": "xu-ly-du-lieu",
       "repository": "KazinMintori/StudyHub-course-xu-ly-du-lieu",
-      "revision": "44338699221ea7f96009b6243e4d74bb61dcc520",
+      "revision": "a7b342ef892634a6aca3c61a66a4632eb60de281",
       "paths": [
         "docs/.vitepress/data-processing-course.mjs",
         "docs/.vitepress/data-processing-foundations.mjs",
